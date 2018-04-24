@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="233,85">
+  <displayList>
+    <image id="n4_sz33" name="n4" src="sz3312" pkg="tis07nuv" xy="4,0" group="n5_jhex"/>
+    <text id="n1_qzgy" name="n1" xy="7,3" size="40,18" group="n5_jhex" font="方正准圆简体" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="奖励"/>
+    <group id="n5_jhex" name="n5" xy="4,0" size="47,24" collapsed="true"/>
+    <list id="n3_qzgy" name="lstRward" xy="0,31" size="233,54" layout="flow_hz" colGap="8" lineItemCount="4" defaultItem="ui://tis07nuvqzgyw" align="center" vAlign="middle">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

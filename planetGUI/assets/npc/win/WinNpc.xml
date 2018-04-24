@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,500">
+  <controller name="npcState" pages="0,defaul,1,acceptTask,2,finishTask" selected="2"/>
+  <displayList>
+    <image id="n19_ovpo" name="bg" src="ovpo14" xy="0,285" group="n16_ovpo"/>
+    <text id="n1_ctbh" name="tfWinTitle" xy="-1,299" size="135,32" group="n16_ovpo" font="方正准圆简体" fontSize="25" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="NPC"/>
+    <component id="n2_ctbh" name="btnClose" src="ctbht" xy="1091,291" group="n16_ovpo"/>
+    <image id="n21_ovpo" name="npcIconBg" src="ovpo17" xy="32,354" group="n6_ctbh"/>
+    <loader id="n4_ctbh" name="ladNpc" xy="43,365" size="114,117" group="n6_ctbh" url="ui://7xhwdeuzctbhb" align="center" vAlign="middle" fill="scale"/>
+    <group id="n6_ctbh" name="iconGroup" xy="32,354" size="135,138" group="n16_ovpo" collapsed="true"/>
+    <richtext id="n7_ctbh" name="rtfNpcSpeech" xy="176,360" size="850,71" group="n16_ovpo" font="方正准圆简体" fontSize="15" color="#84c9f9" ubb="true" autoSize="none" text="我是npc描述"/>
+    <component id="n8_qzgy" name="bntAcceptTask" src="qzgyu" xy="870,437" group="n16_ovpo">
+      <gearDisplay controller="npcState" pages="1,2"/>
+      <gearText controller="npcState" pages="1,2" values="接受任务|完成任务" default=""/>
+      <gearIcon controller="npcState" pages="1,2" values="ui://tis07nuvsz3310|ui://tis07nuvsz3311" default=""/>
+      <Button title="完成任务" icon="ui://tis07nuvsz3311"/>
+    </component>
+    <component id="n9_qzgy" name="comRewardList" src="qzgyv" xy="176,435" group="n16_ovpo">
+      <gearDisplay controller="npcState" pages="1,2"/>
+    </component>
+    <image id="n17_ovpo" name="n17" src="ovpo13" xy="929,27" group="n18_ovpo"/>
+    <list id="n15_sz33" name="lstSelectTask" xy="952,39" size="166,220" group="n18_ovpo" overflow="scroll" lineGap="5" colGap="10" defaultItem="ui://tis07nuvqzgyu" autoClearItems="true">
+      <item icon="ui://tis07nuvovpo15"/>
+      <item icon="ui://tis07nuvovpo15"/>
+      <item icon="ui://tis07nuvovpo15"/>
+      <item icon="ui://tis07nuvovpo15"/>
+    </list>
+    <group id="n18_ovpo" name="selectTaskGroup" xy="929,27" size="207,243" group="n16_ovpo" advanced="true">
+      <gearDisplay controller="npcState" pages=""/>
+    </group>
+    <group id="n16_ovpo" name="n16" xy="-1,27" size="1137,473"/>
+  </displayList>
+</component>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="450,290" overflow="scroll">
+  <displayList>
+    <text id="n0_sz33" name="tfTaskName" xy="0,0" size="79,24" font="方正准圆简体" fontSize="18" color="#84c9f7" align="center" vAlign="middle" autoSize="none" bold="true" text="任务名字"/>
+    <text id="n1_sz33" name="tfTaskDesc" xy="10,30" size="399,25" font="方正准圆简体" fontSize="16" color="#bdbdbd" autoSize="height" bold="true" text="任务描述&#xA;"/>
+    <image id="n2_sz33" name="ImgSplit" src="sz33f" xy="10,70">
+      <relation target="n1_sz33" sidePair="top-bottom"/>
+    </image>
+    <list id="n3_sz33" name="lstTaskCondition" xy="10,91" size="432,64" lineGap="7" defaultItem="ui://eunktclqjhexn">
+      <relation target="n2_sz33" sidePair="top-bottom"/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n5_jhex" name="ImgSplit" src="sz33f" xy="10,175">
+      <relation target="n3_sz33" sidePair="top-bottom"/>
+    </image>
+    <component id="n8_jhex" name="n8" src="jhexm" xy="10,190"/>
+  </displayList>
+</component>

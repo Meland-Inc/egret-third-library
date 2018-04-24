@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="430,361" overflow="scroll">
+  <displayList>
+    <image id="n0_stxa" name="n0" src="ctbh5" xy="30,0" group="n2_stxa"/>
+    <text id="n1_stxa" name="n1" xy="160,1" size="73,22" group="n2_stxa" font="方正准圆简体" fontSize="15" color="#ffffff" vAlign="middle" autoSize="none" bold="true" text="基本属性"/>
+    <group id="n2_stxa" name="basicTalentTitle" xy="30,0" size="364,24" collapsed="true"/>
+    <graph id="n3_stxa" name="n3" xy="30,46" size="40,20" group="n76_apmc" type="rect" lineSize="0" fillColor="#ff6bcbfe" corner="5"/>
+    <text id="n4_stxa" name="n4" xy="32,47" size="37,20" group="n76_apmc" font="方正准圆简体" fontSize="13" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="等级"/>
+    <text id="n75_apmc" name="lv" xy="83,46" size="45,21" group="n76_apmc" font="方正准圆简体" fontSize="15" color="#6bcbfe" vAlign="middle" autoSize="none" text="0"/>
+    <group id="n76_apmc" name="level" xy="30,46" size="99,21" collapsed="true"/>
+    <graph id="n12_stxa" name="n12" xy="30,80" size="40,20" group="n18_stxa" type="rect" lineSize="0" fillColor="#ff6bcbfe" corner="5"/>
+    <text id="n13_stxa" name="n13" xy="32,81" size="37,20" group="n18_stxa" font="方正准圆简体" fontSize="13" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="经验"/>
+    <image id="n14_stxa" name="expBarBg" src="ctbh6" xy="77,80" group="n18_stxa"/>
+    <component id="n78_kepv" name="expBar" src="ctbh7" xy="78,81" group="n18_stxa"/>
+    <text id="n17_stxa" name="tfExp" xy="78,83" size="291,18" group="n18_stxa" font="方正准圆简体" fontSize="12" color="#3366cc" align="center" vAlign="middle" autoSize="none" text="0/0"/>
+    <group id="n18_stxa" name="exp" xy="30,80" size="340,21"/>
+    <graph id="n6_stxa" name="n6" xy="30,115" size="67,20" group="n8_stxa" type="rect" lineSize="0" fillColor="#ff6bcbfe" corner="5"/>
+    <text id="n7_stxa" name="n7" xy="30,116" size="67,20" group="n8_stxa" font="方正准圆简体" fontSize="13" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="普通攻击"/>
+    <group id="n8_stxa" name="n8" xy="30,115" size="67,21" group="n77_apmc" collapsed="true"/>
+    <graph id="n9_stxa" name="n9" xy="260,115" size="67,20" group="n11_stxa" type="rect" lineSize="0" fillColor="#ff6bcbfe" corner="5"/>
+    <text id="n10_stxa" name="n10" xy="260,116" size="67,20" group="n11_stxa" font="方正准圆简体" fontSize="13" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="普通防御"/>
+    <group id="n11_stxa" name="n11" xy="260,115" size="67,21" group="n77_apmc" collapsed="true"/>
+    <text id="n73_apmc" name="att" xy="108,115" size="80,21" group="n77_apmc" font="方正准圆简体" fontSize="15" color="#6bcbfe" vAlign="middle" autoSize="none" text="0"/>
+    <text id="n74_apmc" name="def" xy="337,115" size="80,21" group="n77_apmc" font="方正准圆简体" fontSize="15" color="#6bcbfe" vAlign="middle" autoSize="none" text="0"/>
+    <group id="n77_apmc" name="basic" xy="30,115" size="387,21" collapsed="true"/>
+    <image id="n19_stxa" name="n19" src="ctbh5" xy="30,151" group="n21_stxa"/>
+    <text id="n20_stxa" name="n20" xy="160,152" size="73,22" group="n21_stxa" font="方正准圆简体" fontSize="15" color="#ffffff" vAlign="middle" autoSize="none" bold="true" text="高级属性"/>
+    <group id="n21_stxa" name="hignGradeTalentTitle" xy="30,151" size="364,24" collapsed="true"/>
+    <graph id="n22_stxa" name="n22" xy="30,190" size="67,20" group="n24_stxa" type="rect" lineSize="0" fillColor="#ff6bcbfe" corner="5"/>
+    <text id="n23_stxa" name="n23" xy="30,191" size="67,20" group="n24_stxa" font="方正准圆简体" fontSize="13" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="火攻击"/>
+    <group id="n24_stxa" name="fireAttGroup" xy="30,190" size="67,21" group="n57_apmc" collapsed="true"/>
+    <graph id="n28_stxa" name="n28" xy="260,190" size="67,20" group="n30_stxa" type="rect" lineSize="0" fillColor="#ff6bcbfe" corner="5"/>
+    <text id="n29_stxa" name="n29" xy="260,191" size="67,20" group="n30_stxa" font="方正准圆简体" fontSize="13" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="火防御"/>
+    <group id="n30_stxa" name="fireDefGroup" xy="260,190" size="67,21" group="n57_apmc" collapsed="true"/>
+    <text id="n55_apmc" name="fire_att" xy="108,190" size="80,21" group="n57_apmc" font="方正准圆简体" fontSize="15" color="#6bcbfe" vAlign="middle" autoSize="none" text="0"/>
+    <text id="n56_apmc" name="fir_def" xy="337,190" size="80,21" group="n57_apmc" font="方正准圆简体" fontSize="15" color="#6bcbfe" vAlign="middle" autoSize="none" text="0"/>
+    <group id="n57_apmc" name="fire" xy="30,190" size="387,21" collapsed="true"/>
+    <graph id="n31_stxa" name="n31" xy="30,225" size="67,20" group="n33_stxa" type="rect" lineSize="0" fillColor="#ff6bcbfe" corner="5"/>
+    <text id="n32_stxa" name="n32" xy="30,226" size="67,20" group="n33_stxa" font="方正准圆简体" fontSize="13" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="冰攻击"/>
+    <group id="n33_stxa" name="n33" xy="30,225" size="67,21" group="n67_apmc" collapsed="true"/>
+    <graph id="n34_stxa" name="n34" xy="260,225" size="67,20" group="n36_stxa" type="rect" lineSize="0" fillColor="#ff6bcbfe" corner="5"/>
+    <text id="n35_stxa" name="n35" xy="260,226" size="67,20" group="n36_stxa" font="方正准圆简体" fontSize="13" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="冰防御"/>
+    <group id="n36_stxa" name="n36" xy="260,225" size="67,21" group="n67_apmc" collapsed="true"/>
+    <text id="n59_apmc" name="ice_att" xy="108,225" size="80,21" group="n67_apmc" font="方正准圆简体" fontSize="15" color="#6bcbfe" vAlign="middle" autoSize="none" text="0"/>
+    <text id="n60_apmc" name="ice_def" xy="337,225" size="80,21" group="n67_apmc" font="方正准圆简体" fontSize="15" color="#6bcbfe" vAlign="middle" autoSize="none" text="0&#xA;"/>
+    <group id="n67_apmc" name="iceAtt" xy="30,225" size="387,21" collapsed="true"/>
+    <graph id="n43_stxa" name="n43" xy="30,295" size="67,20" group="n45_stxa" type="rect" lineSize="0" fillColor="#ff6bcbfe" corner="5"/>
+    <text id="n44_stxa" name="n44" xy="30,296" size="67,20" group="n45_stxa" font="方正准圆简体" fontSize="13" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="毒攻击"/>
+    <group id="n45_stxa" name="n45" xy="30,295" size="67,21" group="n69_apmc" collapsed="true"/>
+    <graph id="n46_stxa" name="n46" xy="259,295" size="67,20" group="n48_stxa" type="rect" lineSize="0" fillColor="#ff6bcbfe" corner="5"/>
+    <text id="n47_stxa" name="n47" xy="259,296" size="67,20" group="n48_stxa" font="方正准圆简体" fontSize="13" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="毒防御"/>
+    <group id="n48_stxa" name="n48" xy="259,295" size="67,21" group="n69_apmc" collapsed="true"/>
+    <text id="n63_apmc" name="poison_att" xy="108,295" size="80,21" group="n69_apmc" font="方正准圆简体" fontSize="15" color="#6bcbfe" vAlign="middle" autoSize="none" text="0"/>
+    <text id="n64_apmc" name="poison_def" xy="337,295" size="80,21" group="n69_apmc" font="方正准圆简体" fontSize="15" color="#6bcbfe" vAlign="middle" autoSize="none" text="0"/>
+    <group id="n69_apmc" name="poison" xy="30,295" size="387,21" collapsed="true"/>
+    <graph id="n37_stxa" name="n37" xy="30,260" size="67,20" group="n39_stxa" type="rect" lineSize="0" fillColor="#ff6bcbfe" corner="5"/>
+    <text id="n38_stxa" name="n38" xy="30,261" size="67,20" group="n39_stxa" font="方正准圆简体" fontSize="13" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="雷攻击"/>
+    <group id="n39_stxa" name="n39" xy="30,260" size="67,21" group="n68_apmc" collapsed="true"/>
+    <graph id="n40_stxa" name="n40" xy="260,260" size="67,20" group="n42_stxa" type="rect" lineSize="0" fillColor="#ff6bcbfe" corner="5"/>
+    <text id="n41_stxa" name="n41" xy="260,261" size="67,20" group="n42_stxa" font="方正准圆简体" fontSize="13" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="雷防御"/>
+    <group id="n42_stxa" name="n42" xy="260,260" size="67,21" group="n68_apmc" collapsed="true"/>
+    <text id="n61_apmc" name="thunder_att" xy="108,260" size="80,21" group="n68_apmc" font="方正准圆简体" fontSize="15" color="#6bcbfe" vAlign="middle" autoSize="none" text="0"/>
+    <text id="n62_apmc" name="thunder_def" xy="337,260" size="80,21" group="n68_apmc" font="方正准圆简体" fontSize="15" color="#6bcbfe" vAlign="middle" autoSize="none" text="0"/>
+    <group id="n68_apmc" name="thunder" xy="30,260" size="387,21" collapsed="true"/>
+    <graph id="n49_stxa" name="n49" xy="30,330" size="67,20" group="n51_stxa" type="rect" lineSize="0" fillColor="#ff6bcbfe" corner="5"/>
+    <text id="n50_stxa" name="n50" xy="30,331" size="67,20" group="n51_stxa" font="方正准圆简体" fontSize="13" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="暗攻击"/>
+    <group id="n51_stxa" name="n51" xy="30,330" size="67,21" group="n70_apmc" collapsed="true"/>
+    <graph id="n52_stxa" name="n52" xy="259,330" size="67,20" group="n54_stxa" type="rect" lineSize="0" fillColor="#ff6bcbfe" corner="5"/>
+    <text id="n53_stxa" name="n53" xy="259,331" size="67,20" group="n54_stxa" font="方正准圆简体" fontSize="13" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="暗御"/>
+    <group id="n54_stxa" name="n54" xy="259,330" size="67,21" group="n70_apmc" collapsed="true"/>
+    <text id="n65_apmc" name="dark_att" xy="108,330" size="80,21" group="n70_apmc" font="方正准圆简体" fontSize="15" color="#6bcbfe" vAlign="middle" autoSize="none" text="0"/>
+    <text id="n66_apmc" name="dark_def" xy="337,330" size="80,21" group="n70_apmc" font="方正准圆简体" fontSize="15" color="#6bcbfe" vAlign="middle" autoSize="none" text="0"/>
+    <group id="n70_apmc" name="dark" xy="30,330" size="387,21" collapsed="true"/>
+  </displayList>
+</component>

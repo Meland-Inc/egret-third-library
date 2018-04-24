@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="130,142">
+  <displayList>
+    <image id="n1_apmc" name="bg" src="ctbhd" xy="0,0"/>
+    <loader id="n6_apmc" name="creationImg" xy="5,6" size="119,69" align="center" vAlign="middle" fill="scaleMatchHeight" playing="false"/>
+    <image id="n3_apmc" name="tab" src="ctbhe" xy="0,0"/>
+    <text id="n5_apmc" name="tabLabel" xy="-7,22" size="40,15" rotation="-45" font="方正准圆简体" fontSize="10" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="星球&#xA;"/>
+    <image id="n8_apmc" name="n8" src="ctbhf" xy="75,57" group="n10_apmc"/>
+    <text id="n9_apmc" name="timeLabel" xy="76,58" size="45,15" group="n10_apmc" font="方正准圆简体" fontSize="10" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="n天前"/>
+    <group id="n10_apmc" name="time" xy="75,57" size="47,16" collapsed="true"/>
+    <text id="n11_apmc" name="nameLabel" xy="3,81" size="124,18" font="方正准圆简体" fontSize="13" color="#6b6b6b" align="center" vAlign="middle" autoSize="none" bold="true" text="XXX（已发布）"/>
+    <loader id="n12_apmc" name="praiseBtn" xy="14,105" size="11,10" group="n22_apmc" url="ui://7xhwdeuzctbhg"/>
+    <text id="n17_apmc" name="praiseNumLabel" xy="27,103" size="20,13" group="n22_apmc" font="方正准圆简体" fontSize="10" color="#6b6b6b" vAlign="middle" autoSize="none" text="99"/>
+    <group id="n22_apmc" name="praise" xy="14,103" size="33,13" group="n27_apmc" collapsed="true"/>
+    <loader id="n16_apmc" name="browseBtn" xy="49,124" size="12,7" group="n23_apmc" url="ui://7xhwdeuzctbhh"/>
+    <text id="n21_apmc" name="browseNumLabel" xy="62,120" size="20,13" group="n23_apmc" font="方正准圆简体" fontSize="10" color="#6b6b6b" vAlign="middle" autoSize="none" text="99"/>
+    <group id="n23_apmc" name="browse" xy="49,120" size="33,13" group="n27_apmc" collapsed="true"/>
+    <loader id="n15_apmc" name="commentBtn" xy="14,122" size="10,10" group="n24_apmc" url="ui://7xhwdeuzctbhi"/>
+    <text id="n20_apmc" name="commentNumLabel" xy="27,120" size="20,13" group="n24_apmc" font="方正准圆简体" fontSize="10" color="#6b6b6b" vAlign="middle" autoSize="none" text="99"/>
+    <group id="n24_apmc" name="comment" xy="14,120" size="33,13" group="n27_apmc" collapsed="true"/>
+    <loader id="n14_apmc" name="collectBtn" xy="49,105" size="11,10" group="n25_apmc" url="ui://7xhwdeuzctbhj"/>
+    <text id="n18_apmc" name="collectNumLabel" xy="62,103" size="20,13" group="n25_apmc" font="方正准圆简体" fontSize="10" color="#6b6b6b" vAlign="middle" autoSize="none" text="99"/>
+    <group id="n25_apmc" name="collect" xy="49,103" size="33,13" group="n27_apmc" collapsed="true"/>
+    <loader id="n13_apmc" name="shareBtn" xy="84,104" size="12,10" group="n26_apmc" url="ui://7xhwdeuzctbhk"/>
+    <text id="n19_apmc" name="shareNumLabel" xy="98,103" size="20,13" group="n26_apmc" font="方正准圆简体" fontSize="10" color="#6b6b6b" vAlign="middle" autoSize="none" text="99"/>
+    <group id="n26_apmc" name="share" xy="84,103" size="34,13" group="n27_apmc" collapsed="true"/>
+    <group id="n27_apmc" name="btns" xy="14,103" size="104,30"/>
+  </displayList>
+</component>

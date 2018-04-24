@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="7xhwdeuz" jpegQuality="80" compressPNG="true">
+  <resources>
+    <component id="ctbh0" name="btnUserDataRadio.xml" path="/btn/" exported="true"/>
+    <image id="ctbh1" name="btn_unselected_001.png" path="/img/" exported="true"/>
+    <component id="ctbh2" name="btnDetailClose.xml" path="/btn/" exported="true"/>
+    <image id="ctbh3" name="btn_bag_close.png" path="/img/" exported="true"/>
+    <component id="ctbh4" name="comTalent.xml" path="/com/" exported="true"/>
+    <image id="ctbh5" name="img_wordbg_001.png" path="/img/" exported="true"/>
+    <image id="ctbh6" name="img_progressbar_001.png" path="/img/" exported="true"/>
+    <component id="ctbh7" name="comExpBar.xml" path="/com/" exported="true"/>
+    <image id="ctbh8" name="img_progressbar_002.png" path="/img/" exported="true"/>
+    <component id="ctbh9" name="comDetail.xml" path="/com/" exported="true"/>
+    <image id="ctbha" name="img_avatarbg_001.png" path="/img/" exported="true"/>
+    <image id="ctbhb" name="icon_avatar_001.png" path="/img/" exported="true"/>
+    <component id="ctbhc" name="comCreation.xml" path="/com/" exported="true"/>
+    <image id="ctbhd" name="img_interfacebg_002.png" path="/img/" exported="true"/>
+    <image id="ctbhe" name="img_wordbg_004.png" path="/img/" exported="true"/>
+    <image id="ctbhf" name="img_wordbg_005.png" path="/img/" exported="true"/>
+    <image id="ctbhg" name="icon_thumbs.png" path="/img/" exported="true"/>
+    <image id="ctbhh" name="icon_browse.png" path="/img/" exported="true"/>
+    <image id="ctbhi" name="icon_chat.png" path="/img/" exported="true"/>
+    <image id="ctbhj" name="icon_collect.png" path="/img/" exported="true"/>
+    <image id="ctbhk" name="icon_forward.png" path="/img/" exported="true"/>
+    <component id="ctbhl" name="comScrollerBar.xml" path="/com/" exported="true"/>
+    <image id="ctbhm" name="bg_bag.png" path="/img/" exported="true" scale9grid="0,130,1253,614" gridTile="28"/>
+    <image id="ctbhn" name="btn_selected_001.png" path="/img/" exported="true"/>
+    <image id="ctbho" name="img_interfacebg_001.png" path="/img/" exported="true"/>
+    <image id="ctbhp" name="img_wordbg_002.png" path="/img/" exported="true"/>
+    <image id="ctbhq" name="img_wordbg_003.png" path="/img/" exported="true"/>
+    <component id="ctbhr" name="WinUserDetail.xml" path="/win/" exported="true"/>
+  </resources>
+  <publish name="userDetail"/>
+</packageDescription>

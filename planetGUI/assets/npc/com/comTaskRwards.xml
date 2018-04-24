@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="290,58">
+  <displayList>
+    <image id="n4_sz33" name="n4" src="sz3312" xy="0,0"/>
+    <text id="n1_qzgy" name="n1" xy="3,3" size="40,18" font="方正准圆简体" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="奖励"/>
+    <list id="n3_qzgy" name="lstReward" xy="51,3" size="233,54" layout="flow_hz" overflow="scroll" colGap="8" lineItemCount="4" defaultItem="ui://tis07nuvqzgyw" align="center" vAlign="middle">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

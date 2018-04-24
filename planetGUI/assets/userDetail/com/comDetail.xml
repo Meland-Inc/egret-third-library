@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="430,366">
+  <displayList>
+    <image id="n2_apmc" name="n2" src="ctbha" xy="20,11" group="n4_apmc"/>
+    <loader id="n3_apmc" name="iconAvatar" xy="25,16" size="51,50" group="n4_apmc" url="ui://7xhwdeuzctbhb" fill="scale"/>
+    <group id="n4_apmc" name="n4" xy="20,11" size="61,61" group="n7_apmc"/>
+    <text id="n5_apmc" name="usernameLabel" xy="88,13" size="191,22" group="n7_apmc" font="方正准圆简体" fontSize="16" color="#84c9f9" vAlign="middle" autoSize="none" bold="true" text="&#xA;"/>
+    <text id="n6_apmc" name="userIdLabel" xy="88,37" size="192,21" group="n7_apmc" font="方正准圆简体" fontSize="13" color="#acacac" vAlign="middle" autoSize="none" bold="true" text="&#xA;"/>
+    <group id="n7_apmc" name="iconGroup" xy="20,11" size="260,61"/>
+    <component id="n1_apmc" name="talent" src="ctbh4" xy="0,85" size="430,224"/>
+  </displayList>
+</component>

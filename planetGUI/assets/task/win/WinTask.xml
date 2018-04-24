@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="694,453">
+  <controller name="ctrlTaskDetail" pages="0,main,1,branch" selected="0"/>
+  <displayList>
+    <image id="n0_sz33" name="bg" src="sz330" xy="0,0"/>
+    <component id="n12_sz33" name="btnClose" src="sz33y" pkg="te1gxawo" xy="650,-9" size="58,55"/>
+    <text id="n1_sz33" name="title" xy="257,0" size="176,44" font="方正准圆简体" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="任务"/>
+    <component id="n4_sz33" name="btnShowMainTask" src="sz33j" xy="44,60">
+      <Button checked="true" icon="ui://eunktclqsz334" selectedIcon="ui://eunktclqsz332" controller="ctrlTaskDetail" page="0"/>
+    </component>
+    <component id="n5_sz33" name="btnShowBranchTask" src="sz33j" xy="174,60">
+      <Button title="支线任务" icon="ui://eunktclqsz334" selectedIcon="ui://eunktclqsz333" controller="ctrlTaskDetail" page="1"/>
+    </component>
+    <image id="n7_sz33" name="detailBg" src="sz33e" xy="23,106"/>
+    <list id="n9_sz33" name="lstMainTaskBtn" xy="35,105" size="130,308" overflow="scroll" margin="10,0,0,0" defaultItem="ui://eunktclqsz33k" align="center" autoClearItems="true">
+      <gearDisplay controller="ctrlTaskDetail" pages="0"/>
+      <item icon="ui://eunktclqsz336" selectedIcon="ui://eunktclqsz335"/>
+      <item icon="ui://eunktclqsz336" selectedIcon="ui://eunktclqsz335"/>
+      <item icon="ui://eunktclqsz336" selectedIcon="ui://eunktclqsz335"/>
+      <item icon="ui://eunktclqsz336" selectedIcon="ui://eunktclqsz335"/>
+      <item icon="ui://eunktclqsz336" selectedIcon="ui://eunktclqsz335"/>
+      <item icon="ui://eunktclqsz336" selectedIcon="ui://eunktclqsz335"/>
+    </list>
+    <list id="n15_sz33" name="lstBranchTaskBtn" xy="35,105" size="130,300" overflow="scroll" margin="10,0,0,0" defaultItem="ui://eunktclqsz33k" autoClearItems="true">
+      <gearDisplay controller="ctrlTaskDetail" pages="1"/>
+      <item icon="ui://eunktclqsz336" selectedIcon="ui://eunktclqsz335"/>
+      <item icon="ui://eunktclqsz336" selectedIcon="ui://eunktclqsz335"/>
+      <item icon="ui://eunktclqsz336" selectedIcon="ui://eunktclqsz335"/>
+      <item icon="ui://eunktclqsz336" selectedIcon="ui://eunktclqsz335"/>
+      <item icon="ui://eunktclqsz336" selectedIcon="ui://eunktclqsz335"/>
+      <item icon="ui://eunktclqsz336" selectedIcon="ui://eunktclqsz335"/>
+    </list>
+    <component id="n19_sz33" name="comTaskDetailPanel" src="sz33l" xy="208,120" size="450,290"/>
+  </displayList>
+</component>

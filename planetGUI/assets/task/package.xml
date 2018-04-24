@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="eunktclq" jpegQuality="80" compressPNG="true">
+  <resources>
+    <image id="sz330" name="bg_bag.png" path="/img/" exported="true"/>
+    <image id="sz331" name="btn_closed.png" path="/img/" exported="true"/>
+    <image id="sz332" name="btn_task_001.png" path="/img/" exported="true"/>
+    <image id="sz333" name="btn_task_002.png" path="/img/" exported="true"/>
+    <image id="sz334" name="btn_task_003.png" path="/img/" exported="true"/>
+    <image id="sz335" name="btn_task_004.png" path="/img/" exported="true"/>
+    <image id="sz336" name="btn_task_005.png" path="/img/" exported="true"/>
+    <image id="sz337" name="btn_task_storage.png" path="/img/" exported="true"/>
+    <image id="sz338" name="icon_task_OK.png" path="/img/" exported="true"/>
+    <image id="sz339" name="img_task_bg_001.png" path="/img/" exported="true"/>
+    <image id="sz33a" name="img_task_bg_002.png" path="/img/" exported="true" scale="9grid" scale9grid="13,12,167,34"/>
+    <image id="sz33b" name="img_task_bg_003.png" path="/img/" exported="true"/>
+    <image id="sz33c" name="img_task_bg_004.png" path="/img/" exported="true"/>
+    <image id="sz33d" name="img_task_bg_005.png" path="/img/" exported="true"/>
+    <image id="sz33e" name="img_task_bg_006.png" path="/img/" exported="true"/>
+    <image id="sz33f" name="img_task_bg_007.png" path="/img/" exported="true"/>
+    <image id="sz33g" name="img_task_item.png" path="/img/" exported="true"/>
+    <image id="sz33h" name="img_task_reward.png" path="/img/" exported="true"/>
+    <component id="sz33i" name="WinTask.xml" path="/win/" exported="true"/>
+    <component id="sz33j" name="btnMainBranchRd.xml" path="/btn/" exported="true"/>
+    <component id="sz33k" name="btnTaskDetailRd.xml" path="/btn/" exported="true"/>
+    <component id="sz33l" name="comTaskDetailPanel.xml" path="/com/" exported="true"/>
+    <component id="jhexm" name="comTaskRwards.xml" path="/com/" exported="true"/>
+    <component id="jhexn" name="comTaskCondition.xml" path="/com/" exported="true"/>
+    <component id="ovpoo" name="WinTaskTrace.xml" path="/win/" exported="true"/>
+    <component id="ovpop" name="comTaskTraceItem.xml" path="/com/" exported="true"/>
+  </resources>
+  <publish name="task"/>
+</packageDescription>
