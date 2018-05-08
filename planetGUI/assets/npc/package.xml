@@ -7,19 +7,20 @@
     <image id="ctbhr" name="img_npc_mark_3.png" path="/img/" exported="true"/>
     <component id="ctbhs" name="WinNpc.xml" path="/win/" exported="true"/>
     <component id="ctbht" name="btnNpcClose.xml" path="/btn/" exported="true"/>
-    <component id="qzgyu" name="btnCommon.xml" path="/btn/" exported="true"/>
+    <component id="qzgyu" name="btnCommonEffect.xml" path="/btn/" exported="true"/>
     <component id="qzgyv" name="comTaskRwards.xml" path="/com/" exported="true"/>
     <component id="qzgyw" name="comTaskRewardItem.xml" path="/com/" exported="true"/>
     <image id="sz3310" name="btn_task_accept.png" path="/img/" exported="true"/>
     <image id="sz3311" name="btn_task_complete.png" path="/img/" exported="true"/>
     <image id="sz3312" name="img_task_reward.png" path="/img/" exported="true"/>
-    <image id="ovpo13" name="bg_npc_2.png" path="/img/"/>
-    <image id="ovpo14" name="bg_npc_1.png" path="/img/"/>
-    <image id="ovpo15" name="btn_task_select.png" path="/img/"/>
-    <image id="ovpo16" name="icon_avatar_001.png" path="/img/"/>
-    <image id="ovpo17" name="img_avatarbg_1.png" path="/img/"/>
-    <image id="ovpo18" name="img_task_item.png" path="/img/"/>
-    <image id="ovpo19" name="img_avatarbg_001.png" path="/img/"/>
+    <image id="ovpo13" name="bg_npc_2.png" path="/img/" exported="true"/>
+    <image id="ovpo14" name="bg_npc_1.png" path="/img/" exported="true" scale="9grid" scale9grid="193,0,942,215"/>
+    <image id="ovpo15" name="btn_task_select.png" path="/img/" exported="true"/>
+    <image id="ovpo16" name="icon_avatar_001.png" path="/img/" exported="true"/>
+    <image id="ovpo17" name="img_avatarbg_1.png" path="/img/" exported="true"/>
+    <image id="ovpo18" name="img_task_item.png" path="/img/" exported="true"/>
+    <image id="ovpo19" name="img_avatarbg_001.png" path="/img/" exported="true"/>
+    <component id="td6e1a" name="btnCommon.xml" path="/btn/" exported="true"/>
   </resources>
   <publish name="npc"/>
 </packageDescription>
