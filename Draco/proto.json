@@ -1,0 +1,278 @@
+{
+    "package": null,
+    "options": {
+        "java_package": "com.qp.game.proto"
+    },
+    "messages": [
+        {
+            "name": "ReqTest",
+            "fields": [
+                {
+                    "rule": "optional",
+                    "type": "User",
+                    "name": "user",
+                    "id": 1
+                },
+                {
+                    "rule": "optional",
+                    "type": "int32",
+                    "name": "num",
+                    "id": 2
+                }
+            ]
+        },
+        {
+            "name": "ResTest",
+            "fields": [
+                {
+                    "rule": "optional",
+                    "type": "User",
+                    "name": "user",
+                    "id": 1
+                },
+                {
+                    "rule": "optional",
+                    "type": "int32",
+                    "name": "num",
+                    "id": 2
+                }
+            ]
+        },
+        {
+            "name": "User",
+            "fields": [
+                {
+                    "rule": "optional",
+                    "type": "string",
+                    "name": "username",
+                    "id": 1
+                }
+            ]
+        },
+        {
+            "name": "ReqLogin",
+            "fields": [
+                {
+                    "rule": "optional",
+                    "type": "string",
+                    "name": "token",
+                    "id": 1
+                }
+            ]
+        },
+        {
+            "name": "ResLogin",
+            "fields": [
+                {
+                    "rule": "optional",
+                    "type": "Actor",
+                    "name": "actor",
+                    "id": 1
+                }
+            ]
+        },
+        {
+            "name": "Actor",
+            "fields": [
+                {
+                    "rule": "optional",
+                    "type": "string",
+                    "name": "uid",
+                    "id": 1
+                },
+                {
+                    "rule": "optional",
+                    "type": "string",
+                    "name": "username",
+                    "id": 2
+                },
+                {
+                    "rule": "optional",
+                    "type": "int64",
+                    "name": "actorId",
+                    "id": 3
+                },
+                {
+                    "rule": "optional",
+                    "type": "int32",
+                    "name": "vip",
+                    "id": 4
+                },
+                {
+                    "rule": "optional",
+                    "type": "int64",
+                    "name": "gold",
+                    "id": 5
+                }
+            ]
+        },
+        {
+            "name": "ReqUserPass",
+            "fields": [
+                {
+                    "rule": "optional",
+                    "type": "string",
+                    "name": "userId",
+                    "id": 1
+                },
+                {
+                    "rule": "optional",
+                    "type": "string",
+                    "name": "password",
+                    "id": 2
+                }
+            ]
+        },
+        {
+            "name": "ResUserPass",
+            "fields": [
+                {
+                    "rule": "optional",
+                    "type": "string",
+                    "name": "token",
+                    "id": 1
+                }
+            ]
+        },
+        {
+            "name": "ReqRegister",
+            "fields": [
+                {
+                    "rule": "optional",
+                    "type": "string",
+                    "name": "phone",
+                    "id": 1
+                },
+                {
+                    "rule": "optional",
+                    "type": "string",
+                    "name": "code",
+                    "id": 2
+                },
+                {
+                    "rule": "optional",
+                    "type": "string",
+                    "name": "password",
+                    "id": 3
+                }
+            ]
+        },
+        {
+            "name": "ResRegister",
+            "fields": [
+                {
+                    "rule": "optional",
+                    "type": "string",
+                    "name": "token",
+                    "id": 1
+                }
+            ]
+        },
+        {
+            "name": "ReqCode",
+            "fields": [
+                {
+                    "rule": "optional",
+                    "type": "string",
+                    "name": "phone",
+                    "id": 1
+                }
+            ]
+        },
+        {
+            "name": "ReqModifyPassword",
+            "fields": [
+                {
+                    "rule": "optional",
+                    "type": "string",
+                    "name": "phone",
+                    "id": 1
+                },
+                {
+                    "rule": "optional",
+                    "type": "string",
+                    "name": "code",
+                    "id": 2
+                },
+                {
+                    "rule": "optional",
+                    "type": "string",
+                    "name": "password",
+                    "id": 3
+                }
+            ]
+        },
+        {
+            "name": "ResModifyPassword",
+            "fields": [
+                {
+                    "rule": "optional",
+                    "type": "string",
+                    "name": "token",
+                    "id": 1
+                }
+            ]
+        }
+    ],
+    "enums": [
+        {
+            "name": "PModule",
+            "values": [
+                {
+                    "name": "M_NONE",
+                    "id": 0
+                },
+                {
+                    "name": "M_TEST",
+                    "id": 1
+                },
+                {
+                    "name": "M_USER",
+                    "id": 2
+                }
+            ]
+        },
+        {
+            "name": "TestCMD",
+            "values": [
+                {
+                    "name": "TestCMD_NONE",
+                    "id": 0
+                },
+                {
+                    "name": "TestCMD_TEST",
+                    "id": 1
+                }
+            ]
+        },
+        {
+            "name": "UserCMD",
+            "values": [
+                {
+                    "name": "UserCMD_NONE",
+                    "id": 0
+                },
+                {
+                    "name": "UserCMD_LOGIN",
+                    "id": 1
+                },
+                {
+                    "name": "UserCMD_REGISTER",
+                    "id": 2
+                },
+                {
+                    "name": "UserCMD_USER_PASS",
+                    "id": 3
+                },
+                {
+                    "name": "UserCMD_CODE",
+                    "id": 4
+                },
+                {
+                    "name": "UserCMD_MODIFY_PASSWORD",
+                    "id": 5
+                }
+            ]
+        }
+    ]
+}
