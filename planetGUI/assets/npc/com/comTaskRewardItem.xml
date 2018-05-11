@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="50,50">
+<component size="53,52" extention="Label">
   <displayList>
-    <image id="n1_ovpo" name="n1" src="ovpo18" xy="0,0"/>
+    <loader id="n1_ovpo" name="icon" xy="0,0" size="53,52" url="ui://tis07nuvovpo18" align="center" vAlign="middle"/>
+    <text id="n2_nmg7" name="title" xy="0,0" size="53,52" fontSize="12" align="center" vAlign="middle" autoSize="none" bold="true" text=""/>
   </displayList>
 </component>
