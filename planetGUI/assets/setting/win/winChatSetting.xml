@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="434,153">
+  <displayList>
+    <component id="n0_rkpi" name="tgWorldMsg" src="rw7fg" xy="0,0" size="164,33">
+      <Label title="世界消息"/>
+    </component>
+    <component id="n1_rkpi" name="tgSysMsg" src="rw7fg" xy="272,0" size="162,33">
+      <Label title="系统消息"/>
+    </component>
+    <component id="n2_rkpi" name="tgLineMsg" src="rw7fg" xy="0,60" size="162,33">
+      <Label title="分线消息"/>
+    </component>
+    <component id="n3_rkpi" name="tgCreationMsg" src="rw7fg" xy="272,60" size="162,33">
+      <Label title="创作消息"/>
+    </component>
+    <component id="n4_rkpi" name="tgNearMsg" src="rw7fg" xy="0,120" size="162,33">
+      <Label title="附近消息"/>
+    </component>
+    <component id="n5_rkpi" name="tgFriendMsg" src="rw7fg" xy="272,120" size="162,33">
+      <Label title="私聊消息"/>
+    </component>
+  </displayList>
+</component>

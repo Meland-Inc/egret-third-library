@@ -33,9 +33,13 @@
     <component id="ua4xx" name="btnMainCreate.xml" path="/btn/"/>
     <component id="ua4xy" name="btnMainFormula.xml" path="/btn/"/>
     <component id="ua4xz" name="btnMainTask.xml" path="/btn/"/>
-    <image id="ua4x10" name="btn_main_task.png" path="/img/"/>
-    <component id="ur6s11" name="WinHomePointer.xml" path="/win/"/>
-    <image id="ur6s12" name="img_main_pointer.png" path="/img/"/>
+    <image id="ua4x10" name="btn_main_task.png" path="/img/" exported="true"/>
+    <image id="ss3y11" name="btn_main_chat.png" path="/img/" exported="true"/>
+    <image id="ss3y12" name="btn_main_felling.png" path="/img/" exported="true"/>
+    <image id="ss3y13" name="btn_main_fist.png" path="/img/" exported="true"/>
+    <image id="ss3y14" name="btn_main_mine.png" path="/img/" exported="true"/>
+    <image id="ss3y15" name="btn_main_pickup.png" path="/img/" exported="true"/>
+    <image id="ss3y16" name="btn_main_view.png" path="/img/" exported="true"/>
   </resources>
   <publish name="main"/>
 </packageDescription>

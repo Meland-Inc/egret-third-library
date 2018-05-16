@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="234,285">
+  <controller name="conAvatar" pages="0,equip,1,detail" selected="0"/>
+  <displayList>
+    <component id="n22_ozbm" name="labBasic" src="ozbms" xy="0,0" size="203,27" group="n32_ozbm">
+      <Label title="基本属性"/>
+    </component>
+    <text id="n23_ozbm" name="tfLv" xy="0,40" size="92,21" group="n32_ozbm" fontSize="15" color="#9e9e9e" autoSize="none" text="LV  50"/>
+    <text id="n26_ozbm" name="tfExp" xy="96,40" size="137,21" group="n32_ozbm" fontSize="15" color="#9e9e9e" autoSize="none" text="EXP 200/99999"/>
+    <component id="n25_ozbm" name="labFight" src="ozbms" xy="0,73" size="203,27" group="n32_ozbm">
+      <Label title="战斗属性"/>
+    </component>
+    <component id="n27_ozbm" name="labAtt" src="ozbmt" xy="15,110" size="50,24" group="n32_ozbm">
+      <Label title="50"/>
+    </component>
+    <component id="n28_ozbm" name="labDef" src="ozbmt" xy="120,110" size="50,24" group="n32_ozbm">
+      <Label title="50" icon="ui://ruc22gnttd6e9"/>
+    </component>
+    <component id="n29_ozbm" name="labBasic" src="ozbms" xy="0,147" size="203,27" group="n32_ozbm">
+      <Label title="战斗属性"/>
+    </component>
+    <list id="n30_ozbm" name="lstTalent" xy="0,179" size="202,105" group="n32_ozbm" layout="flow_hz" overflow="scroll" colGap="83" lineItemCount="2" defaultItem="ui://ruc22gntozbmu">
+      <item title="火   50"/>
+      <item title="火抗   50"/>
+      <item title="冰   50"/>
+      <item title="冰抗   50"/>
+      <item title="雷   50"/>
+      <item title="雷抗   50"/>
+      <item title="毒   50"/>
+      <item title="毒抗   50"/>
+      <item title="暗   50"/>
+      <item title="暗抗   50"/>
+    </list>
+    <component id="n31_ozbm" name="btnBack" src="td6ep" xy="50,300" size="110,41" group="n32_ozbm">
+      <Button title="返回" titleColor="#ad861c" controller="conAvatar" page="0"/>
+    </component>
+    <group id="n32_ozbm" name="grpDetail" xy="0,0" size="233,341" advanced="true" collapsed="true">
+      <gearDisplay controller="conAvatar" pages="1"/>
+    </group>
+    <component id="n33_ozbm" name="labBasic" src="ozbms" xy="15,0" size="203,27">
+      <Label title="基本属性"/>
+    </component>
+    <text id="n34_ozbm" name="tfLv" xy="17,40" size="43,21" fontSize="15" color="#9e9e9e" singleLine="true" text="LV  50"/>
+    <text id="n35_ozbm" name="tfExp" xy="103,40" size="111,21" fontSize="15" color="#9e9e9e" singleLine="true" text="EXP 200/999999">
+      <relation target="" sidePair="right-right"/>
+    </text>
+    <component id="n36_ozbm" name="labFight" src="ozbms" xy="15,73" size="203,27">
+      <Label title="战斗属性"/>
+    </component>
+    <component id="n37_ozbm" name="labAtt" src="ozbmt" xy="16,110" size="43,24">
+      <Label title="5"/>
+    </component>
+    <component id="n38_ozbm" name="labDef" src="ozbmt" xy="136,110" size="81,24">
+      <relation target="" sidePair="right-right"/>
+      <Label title="543210&#xD;" icon="ui://ruc22gnttd6e9"/>
+    </component>
+    <component id="n39_ozbm" name="labBasic" src="ozbms" xy="15,147" size="203,27">
+      <Label title="战斗属性"/>
+    </component>
+    <list id="n40_ozbm" name="lstTalent" xy="16,179" size="217,105" layout="flow_hz" overflow="scroll" colGap="83" lineItemCount="2" defaultItem="ui://ruc22gntozbmu">
+      <item title="火   50"/>
+      <item title="火抗   50"/>
+      <item title="冰   50"/>
+      <item title="冰抗   50"/>
+      <item title="雷   50"/>
+      <item title="雷抗   50"/>
+      <item title="毒   50"/>
+      <item title="毒抗   50"/>
+      <item title="暗   50"/>
+      <item title="暗抗   50"/>
+    </list>
+  </displayList>
+</component>

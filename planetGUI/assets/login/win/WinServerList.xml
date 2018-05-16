@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="254,129">
+  <displayList>
+    <component id="n6_rw7f" name="btnSelect" src="rw7fp" xy="0,0" size="254,23">
+      <Button title="选择服务器"/>
+    </component>
+    <graph id="n3_obf0" name="bg" xy="0,22" size="254,106" group="n5_obf0" type="rect"/>
+    <list id="n0_obf0" name="lstServer" xy="0,22" size="256,106" group="n5_obf0" overflow="scroll" margin="20,0,10,0" lineGap="15" defaultItem="ui://0n4pg0ophr2eg" align="center">
+      <item title="http://bian-api.stage01.wkcoding.com/1"/>
+      <item title="http://bian-api.dev-latest.wkcoding.com/1"/>
+    </list>
+    <group id="n5_obf0" name="grpServer" xy="0,22" size="256,107" advanced="true"/>
+  </displayList>
+</component>

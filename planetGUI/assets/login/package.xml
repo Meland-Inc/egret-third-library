@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="0n4pg0op" jpegQuality="80" compressPNG="true">
+  <resources>
+    <image id="kmol0" name="bg_roleselect_1.png" path="/img/" exported="true"/>
+    <image id="kmol1" name="bg_roleselect_2.png" path="/img/" exported="true"/>
+    <image id="kmol2" name="btn_roleselect_dice.png" path="/img/" exported="true"/>
+    <image id="kmol3" name="btn_roleselect_enter_1.png" path="/img/" exported="true"/>
+    <image id="kmol4" name="btn_roleselect_enter_2.png" path="/img/" exported="true"/>
+    <image id="kmol5" name="img_avatar_man.png" path="/img/" exported="true"/>
+    <image id="kmol6" name="img_avatar_woman.png" path="/img/" exported="true"/>
+    <image id="kmol7" name="img_man.png" path="/img/" exported="true"/>
+    <image id="kmol8" name="img_roleselect_name.png" path="/img/" exported="true"/>
+    <image id="kmol9" name="img_roleselect_select.png" path="/img/" exported="true"/>
+    <image id="kmola" name="img_roleselect_selected.png" path="/img/" exported="true"/>
+    <image id="kmolb" name="img_woman.png" path="/img/" exported="true"/>
+    <component id="kmolc" name="WinLogin.xml" path="/win/" exported="true"/>
+    <component id="kmold" name="btnMaleRid.xml" path="/btn/" exported="true"/>
+    <component id="kmole" name="btnFemaleRid.xml" path="/btn/" exported="true"/>
+    <component id="hr2ef" name="WinSelectServer.xml" path="/win/" exported="true"/>
+    <component id="hr2eg" name="combserverItem.xml" path="/comb/" exported="true"/>
+    <component id="hr2en" name="combServerPopup.xml" path="/comb/" exported="true"/>
+    <component id="obf0o" name="WinServerList.xml" path="/win/" exported="true"/>
+    <component id="rw7fp" name="btnSelectServer.xml" path="/btn/"/>
+  </resources>
+  <publish name="login"/>
+</packageDescription>

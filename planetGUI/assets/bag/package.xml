@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="ruc22gnt" jpegQuality="80" compressPNG="true">
+  <resources>
+    <image id="td6e0" name="bg_bag.png" path="/img/" exported="true"/>
+    <image id="td6e1" name="btn_bag_close.png" path="/img/" exported="true"/>
+    <image id="td6e2" name="btn_bag_item_1.png" path="/img/" exported="true"/>
+    <image id="td6e3" name="btn_bag_item_2.png" path="/img/" exported="true"/>
+    <image id="td6e4" name="btn_blue.png" path="/img/" exported="true"/>
+    <image id="td6e5" name="btn_gray.png" path="/img/" exported="true"/>
+    <image id="td6e6" name="btn_orange.png" path="/img/" exported="true"/>
+    <image id="td6e7" name="btn_yellow.png" path="/img/" exported="true"/>
+    <image id="td6e8" name="img_bag_attack.png" path="/img/" exported="true"/>
+    <image id="td6e9" name="img_bag_defense.png" path="/img/" exported="true"/>
+    <image id="td6ea" name="img_bag_equip_1.png" path="/img/" exported="true"/>
+    <image id="td6eb" name="img_bag_equip_2.png" path="/img/" exported="true"/>
+    <image id="td6ec" name="img_bag_equip_3.png" path="/img/" exported="true"/>
+    <image id="td6ed" name="img_bag_equip_4.png" path="/img/" exported="true"/>
+    <image id="td6ee" name="img_bag_equip_5.png" path="/img/" exported="true"/>
+    <image id="td6ef" name="img_bag_equip_6.png" path="/img/" exported="true"/>
+    <image id="td6eg" name="img_bag_item_1.png" path="/img/" exported="true"/>
+    <image id="td6eh" name="img_bag_item_2.png" path="/img/" exported="true"/>
+    <image id="td6ei" name="img_bag_item_3.png" path="/img/" exported="true"/>
+    <image id="td6ej" name="img_bag_item_4.png" path="/img/" exported="true"/>
+    <image id="td6ek" name="img_bag_property.png" path="/img/" exported="true"/>
+    <image id="td6el" name="img_bag_scrollbar_1.png" path="/img/" exported="true"/>
+    <image id="td6em" name="img_bag_scrollbar_2.png" path="/img/" exported="true"/>
+    <component id="td6en" name="WinBag.xml" path="/win/" exported="true"/>
+    <component id="td6eo" name="equipItem.xml" path="/com/"/>
+    <component id="td6ep" name="btnCommon.xml" path="/btn/"/>
+    <component id="ozbmq" name="bagItem.xml" path="/com/"/>
+    <component id="ozbmr" name="btnSortRid.xml" path="/btn/"/>
+    <component id="ozbms" name="comTalentTitle.xml" path="/com/"/>
+    <component id="ozbmt" name="labBasicTalent.xml" path="/lab/"/>
+    <component id="ozbmu" name="labElementTalent.xml" path="/lab/"/>
+    <component id="ozbmv" name="comTalentDetail.xml" path="/com/"/>
+    <component id="ozbmw" name="comEquip.xml" path="/com/"/>
+    <component id="hr2ex" name="comSelectServer.xml" path="/com/"/>
+    <component id="q5b2z" name="WinBag1.xml" path="/win/" exported="true"/>
+  </resources>
+  <publish name="bag"/>
+</packageDescription>
