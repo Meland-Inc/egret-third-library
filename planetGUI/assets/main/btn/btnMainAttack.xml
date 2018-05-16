@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="116,116" extention="Button">
   <displayList>
-    <image id="n4_w80l" name="n4" src="w80l1" xy="0,0"/>
+    <loader id="n4_w80l" name="icon" xy="0,0" size="115,115" url="ui://5hs1fuejw80l1"/>
   </displayList>
   <Button downEffect="scale" downEffectValue="0.90"/>
 </component>
