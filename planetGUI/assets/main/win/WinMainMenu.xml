@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="275,73">
   <displayList>
-    <component id="n1_ua4x" name="btnCity" src="ua4xw" xy="0,0"/>
-    <component id="n3_ua4x" name="btnFormula" src="ua4xy" xy="70,0"/>
-    <component id="n4_ua4x" name="btnTask" src="ua4xz" xy="140,0"/>
-    <component id="n2_ua4x" name="btnCreate" src="ua4xx" xy="210,0"/>
+    <component id="n1_ua4x" name="btnCity" src="ua4xw" xy="210,0" visible="false"/>
+    <component id="n3_ua4x" name="btnFormula" src="ua4xy" xy="0,0"/>
+    <component id="n4_ua4x" name="btnTask" src="ua4xz" xy="70,0"/>
+    <component id="n2_ua4x" name="btnCreate" src="ua4xx" xy="210,0" visible="false"/>
   </displayList>
 </component>

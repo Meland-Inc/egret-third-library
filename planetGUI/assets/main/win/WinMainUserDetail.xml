@@ -2,9 +2,9 @@
 <component size="267,112">
   <displayList>
     <image id="n0_w80l" name="n0" src="w80lc" xy="0,0"/>
-    <image id="n1_w80l" name="imgAvatar" src="w80lb" xy="5,19"/>
-    <text id="n2_w80l" name="labName" xy="102,22" size="159,28" fontSize="21" color="#6db0f5" bold="true" text="玩家名字七个字"/>
-    <text id="n4_w80l" name="labGold" xy="140,65" size="59,28" fontSize="21" color="#ffffff" bold="true" text="3,740"/>
+    <loader id="n1_w80l" name="ladAvatar" xy="0,10" size="100,91" url="ui://5hs1fuejw80lb" align="center" vAlign="middle"/>
+    <text id="n2_w80l" name="labName" xy="102,22" size="10,30" font="方正准圆简体" fontSize="21" color="#6db0f5" bold="true" text="&#xA;"/>
+    <text id="n4_w80l" name="labGold" xy="140,65" size="87,28" fontSize="21" color="#ffffff" autoSize="none" bold="true" singleLine="true" text="3,740"/>
     <component id="n6_ua4x" name="btnMail" src="ua4xt" xy="227,66"/>
   </displayList>
 </component>

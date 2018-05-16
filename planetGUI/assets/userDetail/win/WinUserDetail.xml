@@ -12,7 +12,7 @@
     <component id="n84_apmc" name="creationBtn" src="ctbh0" xy="24,155" group="n29_zsen">
       <Button title="创作作品" titleColor="#acacac" titleFontSize="20" icon="ui://7xhwdeuzctbh1" selectedIcon="ui://7xhwdeuzctbhn" controller="tab" page="1"/>
     </component>
-    <group id="n29_zsen" name="tabBtn" xy="14,70" size="146,330"/>
+    <group id="n29_zsen" name="tabBtn" xy="14,70" size="146,330" collapsed="true"/>
     <component id="n77_apmc" name="detail" src="ctbh9" xy="185,71" size="400,346">
       <gearDisplay controller="tab" pages="0"/>
     </component>
