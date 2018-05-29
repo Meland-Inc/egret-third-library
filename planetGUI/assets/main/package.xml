@@ -40,6 +40,22 @@
     <image id="ss3y14" name="btn_main_mine.png" path="/img/" exported="true"/>
     <image id="ss3y15" name="btn_main_pickup.png" path="/img/" exported="true"/>
     <image id="ss3y16" name="btn_main_view.png" path="/img/" exported="true"/>
+    <image id="dura17" name="img_main_avatar_1.png" path="/img/" exported="true"/>
+    <image id="dura18" name="img_main_avatar_10.png" path="/img/" exported="true"/>
+    <image id="dura19" name="img_main_avatar_11.png" path="/img/" exported="true" scale="9grid" scale9grid="34,4,68,8"/>
+    <image id="dura1a" name="img_main_avatar_12.png" path="/img/" exported="true"/>
+    <image id="dura1b" name="img_main_avatar_13.png" path="/img/" exported="true"/>
+    <image id="dura1c" name="img_main_avatar_2.png" path="/img/" exported="true"/>
+    <image id="dura1d" name="img_main_avatar_3.png" path="/img/" exported="true"/>
+    <image id="dura1e" name="img_main_avatar_4.png" path="/img/" exported="true"/>
+    <image id="dura1f" name="img_main_avatar_5.png" path="/img/" exported="true"/>
+    <image id="dura1g" name="img_main_avatar_6.png" path="/img/" exported="true"/>
+    <image id="dura1h" name="img_main_avatar_7.png" path="/img/" exported="true"/>
+    <image id="dura1i" name="img_main_avatar_8.png" path="/img/" exported="true"/>
+    <image id="dura1j" name="img_main_avatar_9.png" path="/img/" exported="true"/>
+    <component id="dura1k" name="WinMainNpcInfo.xml" path="/win/" exported="true"/>
+    <component id="dura1l" name="WinMainEnemyInfo.xml" path="/win/" exported="true"/>
+    <component id="dura1m" name="pbrMainHp.xml" path="/pbr/"/>
   </resources>
   <publish name="main"/>
 </packageDescription>
