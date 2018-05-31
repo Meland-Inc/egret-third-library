@@ -8,12 +8,9 @@
     <image id="w80l4" name="btn_main_city.png" path="/img/" exported="true"/>
     <image id="w80l5" name="btn_main_create.png" path="/img/" exported="true"/>
     <image id="w80l6" name="btn_main_formula.png" path="/img/" exported="true"/>
-    <image id="w80l7" name="btn_main_mail.png" path="/img/" exported="true"/>
     <image id="w80l8" name="btn_main_server.png" path="/img/" exported="true"/>
     <image id="w80l9" name="btn_main_setting.png" path="/img/" exported="true"/>
     <image id="w80la" name="btn_main_skill.png" path="/img/" exported="true"/>
-    <image id="w80lb" name="icon_avatar_1.png" path="/img/" exported="true"/>
-    <image id="w80lc" name="img_main_avatar.png" path="/img/" exported="true"/>
     <image id="w80ld" name="img_main_item_1.png" path="/img/" exported="true"/>
     <image id="w80le" name="img_main_rocker_1.png" path="/img/" exported="true"/>
     <image id="w80lf" name="img_main_rocker_2.png" path="/img/" exported="true"/>
@@ -27,7 +24,6 @@
     <component id="w80lp" name="btnMainBuild.xml" path="/btn/"/>
     <component id="w80lq" name="btnMainSkill.xml" path="/btn/"/>
     <component id="w80lr" name="btnMainRocker.xml" path="/btn/"/>
-    <component id="ua4xt" name="btnMainMail.xml" path="/btn/"/>
     <component id="ua4xu" name="WinMainMenu.xml" path="/win/" exported="true"/>
     <component id="ua4xw" name="btnMainCity.xml" path="/btn/"/>
     <component id="ua4xx" name="btnMainCreate.xml" path="/btn/"/>
@@ -56,6 +52,7 @@
     <component id="dura1k" name="WinMainNpcInfo.xml" path="/win/" exported="true"/>
     <component id="dura1l" name="WinMainEnemyInfo.xml" path="/win/" exported="true"/>
     <component id="dura1m" name="pbrMainHp.xml" path="/pbr/"/>
+    <component id="vmyf1n" name="pbrMainPlayerHp.xml" path="/pbr/"/>
   </resources>
   <publish name="main"/>
 </packageDescription>

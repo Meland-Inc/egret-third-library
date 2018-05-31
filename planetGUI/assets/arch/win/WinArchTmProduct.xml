@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="838,454">
+  <controller name="state" pages="0,premake,1,making" selected="1"/>
+  <displayList>
+    <image id="n0_lxnu" name="n0" src="lxnu3" fileName="img/bg_compose.png" xy="0,0"/>
+    <text id="n1_lxnu" name="n1" xy="391,10" size="55,30" fontSize="24" color="#ffffff" bold="true" text="配方"/>
+    <image id="n2_lxnu" name="n2" src="lxnuh" fileName="img/img_compose_1.png" xy="15,60"/>
+    <image id="n3_lxnu" name="n3" src="lxnus" fileName="img/img_compose_2.png" xy="560,60"/>
+    <image id="n4_lxnu" name="n4" src="lxnuu" fileName="img/img_compose_4.png" xy="565,66"/>
+    <image id="n5_lxnu" name="n5" src="lxnut" fileName="img/img_compose_3.png" xy="20,66"/>
+    <text id="n6_lxnu" name="n6" xy="257,68" size="48,28" fontSize="20" color="#57a7df" bold="true" text="物品"/>
+    <text id="n7_lxnu" name="n7" xy="665,68" size="48,28" fontSize="20" color="#57a7df" bold="true" text="配方"/>
+    <image id="n23_lxnu" name="n23" src="lxnum" fileName="img/img_compose_14.png" xy="671,148"/>
+    <component id="n9_lxnu" name="btnClose" src="sz33y" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="800,-10"/>
+    <list id="n11_lxnu" name="listItem" xy="43,108" size="475,300" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="10" colGap="10" lineItemCount="6" defaultItem="ui://kdeyuiwwlxnu14">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n24_lxnu" name="itemMat" src="lxnu1q" fileName="com/comArchItemNa70.xml" xy="580,130"/>
+    <component id="n25_lxnu" name="itemProduct" src="lxnu1q" fileName="com/comArchItemNa70.xml" xy="730,130"/>
+    <component id="n31_lxnu" name="itemFuel" src="lxnu1q" fileName="com/comArchItemNa70.xml" xy="656,231"/>
+    <image id="n29_lxnu" name="n29" src="lxnun" fileName="img/img_compose_15.png" xy="601,350" group="n32_lxnu"/>
+    <image id="n26_lxnu" name="n26" src="lxnuo" fileName="img/img_compose_16.png" xy="625,354" group="n32_lxnu"/>
+    <text id="n30_lxnu" name="tfTime" xy="655,351" size="78,28" group="n32_lxnu" fontSize="20" color="#57a7df" align="right" vAlign="middle" bold="true" text="24:00:00"/>
+    <group id="n32_lxnu" name="n32" xy="601,350" size="178,29" advanced="true">
+      <gearDisplay controller="state" pages="1"/>
+    </group>
+  </displayList>
+</component>
