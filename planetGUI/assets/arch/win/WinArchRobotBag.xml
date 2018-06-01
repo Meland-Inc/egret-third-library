@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="838,454">
+  <displayList>
+    <image id="n0_824h" name="n0" src="lxnu3" fileName="img/bg_compose.png" xy="0,0"/>
+    <text id="n1_824h" name="tfTitle" xy="344,9" size="150,30" fontSize="24" color="#ffffff" align="center" autoSize="none" bold="true" text="详情"/>
+    <component id="n2_824h" name="btnClose" src="sz33y" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="800,-10"/>
+    <image id="n3_824h" name="n3" src="lxnus" fileName="img/img_compose_2.png" xy="17,51"/>
+    <image id="n4_824h" name="n4" src="lxnuu" fileName="img/img_compose_4.png" xy="21,57"/>
+    <text id="n5_824h" name="n5" xy="100,61" size="89,27" fontSize="20" color="#57a7df" bold="true" text="我的背包"/>
+    <image id="n7_824h" name="n7" src="lxnus" fileName="img/img_compose_2.png" xy="556,59"/>
+    <image id="n8_824h" name="n8" src="lxnuu" fileName="img/img_compose_4.png" xy="560,65"/>
+    <image id="n18_824h" name="n18" src="lxnud" fileName="img/img_bag_attack.png" xy="345,350"/>
+    <image id="n19_824h" name="n19" src="lxnue" fileName="img/img_bag_defense.png" xy="430,350"/>
+    <list id="n6_824h" name="listBag" xy="19,100" size="260,285" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="5" colGap="5" lineItemCount="4" defaultItem="ui://kdeyuiwwlxnu1c">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n9_824h" name="tfRobotBag" xy="584,69" size="200,27" fontSize="20" color="#57a7df" align="center" autoSize="none" bold="true" text="方呆头的背包"/>
+    <list id="n10_824h" name="listRobotBag" xy="558,110" size="260,285" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="5" colGap="5" lineItemCount="4" defaultItem="ui://kdeyuiwwlxnu1c">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n11_824h" name="itemWeapon" src="lxnu19" fileName="com/comArchItemPu57.xml" xy="290,70">
+      <Label title="武器"/>
+    </component>
+    <component id="n12_824h" name="itemHelmet" src="lxnu19" fileName="com/comArchItemPu57.xml" xy="290,140">
+      <Label title="头盔"/>
+    </component>
+    <component id="n13_824h" name="itemPants" src="lxnu19" fileName="com/comArchItemPu57.xml" xy="290,210">
+      <Label title="裤子"/>
+    </component>
+    <component id="n14_824h" name="itemJewel1" src="lxnu19" fileName="com/comArchItemPu57.xml" xy="290,280">
+      <Label title="饰品"/>
+    </component>
+    <component id="n15_824h" name="itemCoat" src="lxnu19" fileName="com/comArchItemPu57.xml" xy="485,140">
+      <Label title="衣服"/>
+    </component>
+    <component id="n16_824h" name="itemShoe" src="lxnu19" fileName="com/comArchItemPu57.xml" xy="485,210">
+      <Label title="鞋子"/>
+    </component>
+    <component id="n17_824h" name="itemJewel2" src="lxnu19" fileName="com/comArchItemPu57.xml" xy="485,280">
+      <Label title="饰品"/>
+    </component>
+    <text id="n20_824h" name="tfName" xy="359,285" size="120,24" fontSize="18" color="#666666" align="center" vAlign="middle" autoSize="none" bold="true" text="方呆头"/>
+    <text id="n21_824h" name="tfLevel" xy="369,310" size="100,23" fontSize="16" color="#57a7df" align="center" autoSize="none" bold="true" text="LV.4"/>
+    <text id="n22_824h" name="tfAtk" xy="375,350" size="32,24" fontSize="18" color="#666666" vAlign="middle" bold="true" text="200"/>
+    <text id="n23_824h" name="tfDef" xy="455,350" size="32,24" fontSize="18" color="#666666" vAlign="middle" bold="true" text="200"/>
+    <component id="n24_824h" name="btnDetail" src="824h25" fileName="btn/btnArchYellow.xml" xy="364,385"/>
+  </displayList>
+</component>
