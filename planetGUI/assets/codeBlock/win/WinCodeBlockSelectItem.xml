@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="694,453">
+  <displayList>
+    <image id="n0_oe8k" name="n0" src="oe8k1" fileName="img/bg_bag.png" xy="0,0"/>
+    <component id="n1_oe8k" name="btnClose" src="sz33y" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="660,-10"/>
+    <image id="n5_oe8k" name="n5" src="oe8k6" fileName="img/img_code_1.png" xy="175,60"/>
+    <text id="n2_oe8k" name="n2" xy="269,10" size="155,30" fontSize="24" color="#ffffff" bold="true" text="选择一个道具"/>
+    <list id="n3_oe8k" name="listTab" xy="33,63" size="129,290" margin="2,2,2,2" lineGap="5" defaultItem="ui://4o62dubdoe8k9">
+      <item title="工具"/>
+      <item title="武器"/>
+      <item title="食物"/>
+      <item title="其他"/>
+    </list>
+    <list id="n4_oe8k" name="listItem" xy="183,66" size="475,280" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="10" colGap="10" lineItemCount="6" defaultItem="ui://4o62dubdoe8ka">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n6_oe8k" name="btnConfirm" src="obf018" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="478,383">
+      <Button title="确定" selectedTitle="确定"/>
+    </component>
+  </displayList>
+</component>

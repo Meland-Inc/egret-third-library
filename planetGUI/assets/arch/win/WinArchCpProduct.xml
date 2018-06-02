@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="838,454">
-  <controller name="state" pages="0,lock,1,premake,2,making" selected="1"/>
+  <controller name="state" pages="0,lock,1,premake,2,making" selected="0"/>
   <displayList>
     <image id="n0_lxnu" name="n0" src="lxnu3" fileName="img/bg_compose.png" xy="0,0"/>
-    <text id="n1_lxnu" name="n1" xy="391,14" size="55,30" fontSize="24" color="#ffffff" bold="true" text="配方"/>
+    <text id="n1_lxnu" name="n1" xy="391,10" size="55,30" fontSize="24" color="#ffffff" bold="true" text="配方"/>
     <image id="n3_lxnu" name="n3" src="lxnus" fileName="img/img_compose_2.png" xy="560,55"/>
     <image id="n23_lxnu" name="n23" src="lxnus" fileName="img/img_compose_2.png" xy="14,55"/>
     <image id="n24_lxnu" name="n24" src="lxnus" fileName="img/img_compose_2.png" xy="287,55"/>
