@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="273,15" extention="Slider">
+<component size="307,24" extention="Label">
   <displayList>
-    <image id="n1" name="n1" src="8zcx6" xy="0,0" size="273,15">
-      <relation target="" sidePair="width-width,height-height"/>
-    </image>
-    <image id="n2" name="bar" src="8zcx5" xy="0,0"/>
-    <component id="n3" name="grip" src="rw7fe" xy="257,-8">
-      <relation target="n2" sidePair="right-right"/>
+    <text id="n1_cf98" name="title" xy="0,0" size="10,24" fontSize="18" color="#9b9b9b" singleLine="true" text=""/>
+    <component id="n2_k8dt" name="sld" src="k8dtr" xy="17,4">
+      <relation target="n1_cf98" sidePair="left-right"/>
+      <Slider max="100"/>
     </component>
   </displayList>
-  <Slider/>
+  <relation target="n1_cf98" sidePair="rightext-right"/>
 </component>

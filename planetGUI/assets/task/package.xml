@@ -28,6 +28,9 @@
     <component id="ovpoo" name="WinTaskTrace.xml" path="/win/" exported="true"/>
     <component id="ovpop" name="comTaskTraceItem.xml" path="/com/" exported="true"/>
     <component id="jmgxr" name="btnWinSwitch.xml" path="/btn/"/>
+    <image id="lreqs" name="img_task_empty.png" path="/img/"/>
+    <image id="lreqt" name="btn_task_006.png" path="/img/"/>
+    <component id="lrequ" name="ladTaskTitle.xml" path="/com/"/>
   </resources>
   <publish name="task"/>
 </packageDescription>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="94,59" extention="Label">
+  <displayList>
+    <image id="n3_oy2m" name="iconBg" src="oy2mc" xy="0,20"/>
+    <loader id="n9_swb5" name="ladTitile" xy="1,0" size="35,16" url="ui://qagcvsbxoy2mr"/>
+    <loader id="n4_oy2m" name="ladIcon" xy="0,20" size="39,39" align="center" vAlign="middle" fill="scale"/>
+    <image id="n5_swb5" name="chatBg" src="oy2m3" xy="41,29" size="53,30">
+      <relation target="n7_swb5" sidePair="rightext-right,bottomext-bottom"/>
+    </image>
+    <richtext id="n7_swb5" name="rtfChatContent" xy="47,37" size="42,18" fontSize="12" color="#87c9f9" leading="2" ubb="true" bold="true" text="你好吗"/>
+    <text id="n10_swb5" name="tfName" xy="42,1" size="43,18" fontSize="12" color="#94c9f9" bold="true" singleLine="true" text="六月六"/>
+  </displayList>
+  <relation target="n5_swb5" sidePair="rightext-right,bottomext-bottom"/>
+</component>

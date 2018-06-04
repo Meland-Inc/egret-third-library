@@ -2,18 +2,18 @@
 <component size="266,292">
   <displayList>
     <list id="n2_td6e" name="equipmentList" xy="0,0" size="266,264" layout="flow_hz" overflow="hidden" lineGap="7" colGap="143" lineItemCount="2" defaultItem="ui://ruc22gnttd6eo">
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
+      <item title="武器" name="weapon"/>
+      <item name="tool"/>
+      <item title="头盔" name="head"/>
+      <item title="衣服" name="coat"/>
+      <item title="裤子" name="pant"/>
+      <item title="鞋子" name="shoe"/>
+      <item title="饰品" name="accessory0"/>
+      <item title="饰品" name="accessory1"/>
     </list>
     <loader id="n6_td6e" name="ladAvatar" xy="67,34" size="131,160" align="center" vAlign="middle" fill="scale"/>
     <text id="n36_ozbm" name="tfName" xy="67,195" size="131,27" fontSize="20" color="#6c6c6c" align="center" autoSize="none" bold="true" text="name"/>
-    <text id="n39_ozbm" name="tfLevel" xy="67,223" size="131,24" fontSize="18" color="#84c9f9" align="center" autoSize="none" bold="true" text="LV.0&#xA;"/>
+    <text id="n39_ozbm" name="tfLv" xy="67,223" size="131,24" fontSize="18" color="#84c9f9" align="center" autoSize="none" bold="true" text="LV.0&#xA;"/>
     <component id="n40_ozbm" name="labAtt" src="ozbmt" xy="71,268" size="50,24">
       <relation target="" sidePair="right-right"/>
       <Label title="99"/>

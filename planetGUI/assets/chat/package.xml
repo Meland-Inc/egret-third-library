@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="qagcvsbx" jpegQuality="80" compressPNG="true">
+  <resources>
+    <component id="oy2m0" name="WinChat.xml" path="/win/" exported="true"/>
+    <image id="oy2m1" name="btn_chat_down.png" path="/img/"/>
+    <image id="oy2m2" name="btn_chat_emoji.png" path="/img/"/>
+    <image id="oy2m3" name="btn_chat_mic.png" path="/img/" scale="9grid" scale9grid="9,5,32,18"/>
+    <image id="oy2m4" name="btn_chat_setting.png" path="/img/"/>
+    <image id="oy2m5" name="btn_chat_up.png" path="/img/"/>
+    <image id="oy2m7" name="btn_task_004.png" path="/img/"/>
+    <image id="oy2m8" name="btn_task_005.png" path="/img/"/>
+    <image id="oy2m9" name="btn_yellow.png" path="/img/"/>
+    <image id="oy2ma" name="icon_chat_mic_1.png" path="/img/"/>
+    <image id="oy2mb" name="icon_chat_mic_2.png" path="/img/"/>
+    <image id="oy2mc" name="img_chat_avatar.png" path="/img/"/>
+    <image id="oy2md" name="img_chat_bg.png" path="/img/"/>
+    <image id="oy2me" name="img_chat_bubble_1.png" path="/img/"/>
+    <image id="oy2mf" name="img_chat_bubble_2.png" path="/img/"/>
+    <image id="oy2mg" name="img_chat_create.png" path="/img/"/>
+    <image id="oy2mh" name="img_chat_emoji.png" path="/img/"/>
+    <image id="oy2mi" name="img_chat_friends_1.png" path="/img/"/>
+    <image id="oy2mj" name="img_chat_friends_2.png" path="/img/"/>
+    <image id="oy2mk" name="img_chat_friends_3.png" path="/img/"/>
+    <image id="oy2ml" name="img_chat_general.png" path="/img/"/>
+    <image id="oy2mm" name="img_chat_input_1.png" path="/img/"/>
+    <image id="oy2mn" name="img_chat_input_2.png" path="/img/"/>
+    <image id="oy2mo" name="img_chat_input_3.png" path="/img/"/>
+    <image id="oy2mp" name="img_chat_nearby.png" path="/img/"/>
+    <image id="oy2mq" name="img_chat_object.png" path="/img/" scale="9grid" scale9grid="10,0,103,22"/>
+    <image id="oy2mr" name="img_chat_private.png" path="/img/"/>
+    <image id="oy2ms" name="img_chat_subline.png" path="/img/"/>
+    <image id="oy2mt" name="img_chat_system.png" path="/img/"/>
+    <image id="oy2mu" name="img_chat_world.png" path="/img/"/>
+    <component id="oy2mv" name="radBtn.xml" path="/btn/"/>
+    <component id="oy2mx" name="btn.xml" path="/btn/"/>
+    <component id="oy2my" name="labFriendChating.xml" path="/com/"/>
+    <component id="oy2mz" name="ComDialog.xml" path="/com/" exported="true"/>
+    <component id="swb511" name="ComSelfDialog.xml" path="/com/" exported="true"/>
+    <image id="swb512" name="701.png" path="/emoji/" exported="true"/>
+    <image id="swb513" name="702.png" path="/emoji/" exported="true"/>
+    <image id="swb514" name="703.png" path="/emoji/" exported="true"/>
+    <image id="swb515" name="704.png" path="/emoji/" exported="true"/>
+    <image id="swb516" name="705.png" path="/emoji/" exported="true"/>
+    <image id="swb517" name="706.png" path="/emoji/" exported="true"/>
+    <image id="swb518" name="707.png" path="/emoji/" exported="true"/>
+    <image id="swb519" name="708.png" path="/emoji/" exported="true"/>
+    <image id="swb51a" name="709.png" path="/emoji/" exported="true"/>
+    <image id="swb51b" name="710.png" path="/emoji/" exported="true"/>
+    <image id="swb51c" name="711.png" path="/emoji/" exported="true"/>
+    <image id="swb51d" name="712.png" path="/emoji/" exported="true"/>
+    <image id="swb51e" name="713.png" path="/emoji/" exported="true"/>
+    <image id="swb51f" name="714.png" path="/emoji/" exported="true"/>
+    <image id="swb51g" name="715.png" path="/emoji/" exported="true"/>
+    <image id="swb51h" name="716.png" path="/emoji/" exported="true"/>
+    <image id="swb51i" name="717.png" path="/emoji/" exported="true"/>
+    <image id="swb51j" name="718.png" path="/emoji/" exported="true"/>
+    <image id="swb51k" name="719.png" path="/emoji/" exported="true"/>
+    <image id="swb51l" name="720.png" path="/emoji/" exported="true"/>
+    <image id="swb51m" name="721.png" path="/emoji/" exported="true"/>
+    <image id="swb51n" name="722.png" path="/emoji/" exported="true"/>
+    <image id="swb51o" name="723.png" path="/emoji/" exported="true"/>
+    <image id="swb51p" name="724.png" path="/emoji/" exported="true"/>
+    <image id="swb51q" name="725.png" path="/emoji/" exported="true"/>
+    <image id="swb51r" name="726.png" path="/emoji/" exported="true"/>
+    <image id="swb51s" name="727.png" path="/emoji/" exported="true"/>
+    <image id="swb51t" name="728.png" path="/emoji/" exported="true"/>
+    <image id="swb51u" name="729.png" path="/emoji/" exported="true"/>
+    <image id="swb51v" name="730.png" path="/emoji/" exported="true"/>
+    <image id="swb51w" name="731.png" path="/emoji/" exported="true"/>
+    <image id="swb51x" name="732.png" path="/emoji/" exported="true"/>
+    <image id="swb51y" name="733.png" path="/emoji/" exported="true"/>
+    <image id="swb51z" name="734.png" path="/emoji/" exported="true"/>
+    <image id="swb520" name="735.png" path="/emoji/" exported="true"/>
+    <image id="swb521" name="736.png" path="/emoji/" exported="true"/>
+    <image id="swb522" name="737.png" path="/emoji/" exported="true"/>
+    <image id="swb523" name="738.png" path="/emoji/" exported="true"/>
+    <image id="swb524" name="739.png" path="/emoji/" exported="true"/>
+    <image id="swb525" name="740.png" path="/emoji/" exported="true"/>
+    <image id="swb526" name="741.png" path="/emoji/" exported="true"/>
+    <image id="swb527" name="742.png" path="/emoji/" exported="true"/>
+    <image id="swb528" name="743.png" path="/emoji/" exported="true"/>
+    <image id="swb529" name="744.png" path="/emoji/" exported="true"/>
+    <image id="swb52a" name="745.png" path="/emoji/" exported="true"/>
+    <image id="swb52b" name="746.png" path="/emoji/" exported="true"/>
+    <image id="swb52c" name="747.png" path="/emoji/" exported="true"/>
+    <image id="swb52d" name="748.png" path="/emoji/" exported="true"/>
+    <image id="swb52e" name="749.png" path="/emoji/" exported="true"/>
+    <image id="swb52f" name="750.png" path="/emoji/" exported="true"/>
+    <image id="swb52g" name="751.png" path="/emoji/" exported="true"/>
+    <image id="swb52h" name="752.png" path="/emoji/" exported="true"/>
+    <image id="swb52i" name="753.png" path="/emoji/" exported="true"/>
+    <image id="swb52j" name="754.png" path="/emoji/" exported="true"/>
+    <image id="swb52k" name="755.png" path="/emoji/" exported="true"/>
+    <image id="swb52l" name="756.png" path="/emoji/" exported="true"/>
+    <image id="swb52m" name="757.png" path="/emoji/" exported="true"/>
+    <image id="swb52n" name="758.png" path="/emoji/" exported="true"/>
+    <image id="swb52o" name="759.png" path="/emoji/" exported="true"/>
+    <image id="swb52p" name="760.png" path="/emoji/" exported="true"/>
+    <image id="swb52q" name="761.png" path="/emoji/" exported="true"/>
+    <image id="swb52r" name="762.png" path="/emoji/" exported="true"/>
+    <image id="swb52s" name="763.png" path="/emoji/" exported="true"/>
+    <image id="swb52t" name="764.png" path="/emoji/" exported="true"/>
+    <image id="swb52u" name="765.png" path="/emoji/" exported="true"/>
+    <component id="swb52v" name="test.xml" path="/"/>
+  </resources>
+  <publish name="chat"/>
+</packageDescription>

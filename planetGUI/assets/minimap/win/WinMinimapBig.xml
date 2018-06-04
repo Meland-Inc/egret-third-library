@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="694,453">
+  <controller name="conMarkBtn" pages="0,put,1,delete,2,cancel" selected="0"/>
   <displayList>
-    <image id="n0_q5b2" name="n0" src="8zcx19" pkg="te1gxawo" xy="0,0"/>
-    <text id="n1_q5b2" name="n1" xy="258,1" size="174,43" font="方正准圆简体" fontSize="21" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="大地图"/>
+    <image id="n5_p85h" name="imgBg" src="p85h1" xy="0,0"/>
+    <text id="n1_q5b2" name="n1" xy="258,1" size="170,43" font="方正准圆简体" fontSize="21" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="大地图"/>
     <component id="n3_q5b2" name="btnClose" src="sz33y" pkg="te1gxawo" xy="650,-9"/>
+    <image id="n11_p85h" name="n11" src="p85hn" xy="1,47" group="n20_p85h"/>
+    <image id="n13_p85h" name="n13" src="p85hn" xy="1,448" group="n20_p85h" scale="1,-1"/>
+    <image id="n14_p85h" name="n14" src="p85hn" xy="691,448" group="n20_p85h" scale="-1,-1"/>
+    <image id="n15_p85h" name="n15" src="p85hn" xy="691,47" group="n20_p85h" scale="-1,1"/>
+    <image id="n8_p85h" name="n8" src="p85hf" xy="4,47" group="n20_p85h"/>
+    <group id="n20_p85h" name="btnCloseMark" xy="1,47" size="719,425" collapsed="true"/>
+    <component id="n16_p85h" name="winSelectMark" src="p85hp" xy="190,115"/>
+    <image id="n21_p85h" name="n21" src="p85hd" xy="636,291"/>
+    <component id="n35_ohl4" name="btnMark" src="ohl4r" xy="640,298">
+      <gearIcon controller="conMarkBtn" pages="0,1" values="ui://k08mtk0rp85h6|ui://k08mtk0rp85h8" default="ui://k08mtk0rp85h4"/>
+      <Button icon="ui://k08mtk0rp85h6"/>
+    </component>
+    <component id="n31_p85h" name="btnZoomIn" src="obf018" pkg="te1gxawo" xy="640,350" size="39,39">
+      <Button icon="ui://k08mtk0rp85h5"/>
+    </component>
+    <component id="n30_p85h" name="btnZoomOut" src="obf018" pkg="te1gxawo" xy="640,398" size="39,39">
+      <Button icon="ui://k08mtk0rp85h7"/>
+    </component>
+    <image id="n22_p85h" name="n22" src="p85he" xy="20,419" group="n33_ohl4"/>
+    <text id="n28_p85h" name="tfPos" xy="21,420" size="182,19" group="n33_ohl4" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="坐标点（999，999）"/>
+    <group id="n33_ohl4" name="posGroup" xy="20,419" size="184,20" visible="false" advanced="true" collapsed="true"/>
   </displayList>
 </component>

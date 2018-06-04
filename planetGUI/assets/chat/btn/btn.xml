@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="129,44" extention="Button">
+  <displayList>
+    <loader id="n0_oy2m" name="icon" xy="0,0" size="129,44" url="ui://qagcvsbxoy2m8" autoSize="true"/>
+    <text id="n3_oy2m" name="title" xy="59,9" size="10,28" fontSize="20" color="#9b9b9b" bold="true" text="&#xA;">
+      <relation target="n0_oy2m" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.90"/>
+  <relation target="n0_oy2m" sidePair="width-width,height-height"/>
+</component>

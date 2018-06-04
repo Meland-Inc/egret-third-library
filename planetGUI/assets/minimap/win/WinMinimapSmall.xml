@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="163,143">
+  <displayList>
+    <image id="n0_j0s6" name="n0" src="j0s610" xy="0,0"/>
+    <text id="n9_j0s6" name="ftOwnerInfo" xy="7,6" size="35,18" fontSize="12" color="#ffffff" align="center" vAlign="middle" singleLine="true" text="home"/>
+    <text id="n1_j0s6" name="tfLocation" xy="102,6" size="54,18" fontSize="12" color="#ffffff" align="center" vAlign="middle" singleLine="true" text="(300,200)">
+      <relation target="" sidePair="right-right"/>
+    </text>
+    <component id="n3_j0s6" name="comMainplayer" src="j0s611" xy="71,58" pivot="0.5,0.4"/>
+  </displayList>
+</component>

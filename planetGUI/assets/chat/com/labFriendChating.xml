@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="33,22" extention="Label">
+  <displayList>
+    <image id="n1_oy2m" name="bg" src="oy2mq" xy="0,0" size="33,22">
+      <relation target="n2_oy2m" sidePair="rightext-right"/>
+    </image>
+    <richtext id="n2_oy2m" name="title" xy="12,5" size="10,18" fontSize="12" color="#ffffff" vAlign="middle" ubb="true" singleLine="true" text=""/>
+  </displayList>
+  <relation target="n1_oy2m" sidePair="width-width"/>
+</component>
