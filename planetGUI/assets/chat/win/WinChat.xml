@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="694,453">
+  <displayList>
+    <image id="n0_oy2m" name="bg" src="8zcx19" pkg="te1gxawo" xy="0,0"/>
+    <image id="n3_oy2m" name="bg" src="oy2md" xy="163,68"/>
+    <image id="n5_oy2m" name="btnClose" src="ohl41c" pkg="te1gxawo" xy="647,-10"/>
+    <text id="n1_oy2m" name="title" xy="319,7" size="55,31" fontSize="24" color="#ffffff" bold="true" text="聊天"/>
+    <list id="n2_oy2m" name="lstBtn" xy="21,75" size="135,347" lineGap="6" defaultItem="ui://qagcvsbxoy2mv">
+      <item title="系统"/>
+      <item title="综合"/>
+      <item title="世界"/>
+      <item title="分线"/>
+      <item title="创作"/>
+      <item title="附近"/>
+      <item title="私聊"/>
+    </list>
+    <component id="n8_oy2m" name="btnSetting" src="oy2mx" xy="583,5" size="49,34">
+      <Button icon="ui://qagcvsbxoy2m4"/>
+    </component>
+    <component id="n9_oy2m" name="labChating" src="oy2my" xy="177,79" size="23,22"/>
+  </displayList>
+</component>

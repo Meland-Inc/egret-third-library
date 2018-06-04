@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="56,57" extention="Button">
   <displayList>
-    <loader id="n0_sz33" name="imgClose" xy="0,0" size="56,57" url="ui://eunktclqsz331" autoSize="true"/>
+    <loader id="n0_sz33" name="icon" xy="0,0" size="56,57" url="ui://eunktclqsz331" autoSize="true"/>
   </displayList>
   <Button downEffect="scale" downEffectValue="0.90"/>
   <relation target="n0_sz33" sidePair="width-width,height-height"/>

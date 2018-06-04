@@ -1,41 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,500">
-  <controller name="taskState" pages="0,default,1,acceptTask,2,finishTask" selected="0"/>
+<component size="1136,768">
+  <controller name="taskState" pages="0,default,1,acceptTask,2,finishTask" selected="1"/>
   <displayList>
-    <image id="n19_ovpo" name="bg" src="ovpo14" xy="0,285" size="1136,215" group="n16_ovpo">
-      <relation target="" sidePair="rightext-right"/>
-    </image>
-    <text id="n1_ctbh" name="tfWinTitle" xy="-1,299" size="135,32" group="n16_ovpo" font="方正准圆简体" fontSize="25" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="NPC"/>
-    <component id="n2_ctbh" name="btnClose" src="ctbht" xy="1095,291" group="n16_ovpo">
-      <relation target="" sidePair="right-right"/>
-    </component>
-    <image id="n21_ovpo" name="npcIconBg" src="ovpo17" xy="32,354" group="n6_ctbh"/>
-    <loader id="n4_ctbh" name="ladNpc" xy="43,365" size="113,117" group="n6_ctbh" url="ui://7xhwdeuzctbhb" align="center" vAlign="middle" fill="scaleMatchWidth"/>
-    <group id="n6_ctbh" name="iconGroup" xy="32,354" size="135,138" group="n16_ovpo"/>
-    <richtext id="n7_ctbh" name="rtfNpcSpeech" xy="196,369" size="854,66" group="n16_ovpo" font="方正准圆简体" fontSize="18" color="#64b4eb" ubb="true" autoSize="none" bold="true" text="我是npc描述&#xA;我是npc描述&#xA;我是npc描述&#xA;">
-      <relation target="" sidePair="rightext-right"/>
-    </richtext>
-    <component id="n9_qzgy" name="comRewardList" src="qzgyv" xy="196,437" group="n16_ovpo">
-      <gearDisplay controller="taskState" pages="1,2"/>
-    </component>
-    <image id="n17_ovpo" name="n17" src="ovpo13" xy="929,27" group="n18_ovpo"/>
-    <list id="n15_sz33" name="lstTask" xy="952,39" size="166,220" group="n18_ovpo" lineGap="5" colGap="10" defaultItem="ui://tis07nuvqzgyu" autoClearItems="true">
+    <graph id="n25_p8hk" name="gphBg" xy="0,0" size="1136,768" alpha="0.4" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <list id="n15_sz33" name="lstTask" xy="755,247" size="219,273" overflow="hidden" lineGap="9" colGap="10" defaultItem="ui://tis07nuvp8hk1d" autoClearItems="true">
+      <relation target="n24_p8hk" sidePair="bottom-bottom,left-right"/>
+      <item/>
+      <item/>
+      <item/>
       <item/>
     </list>
-    <group id="n18_ovpo" name="selectTaskGroup" xy="929,27" size="207,243" group="n16_ovpo" advanced="true" collapsed="true">
-      <gearDisplay controller="taskState" pages=""/>
-      <relation target="" sidePair="right-right"/>
-    </group>
-    <component id="n8_qzgy" name="btnAcceptTask" src="qzgyu" xy="945,437" group="n16_ovpo">
-      <gearDisplay controller="taskState" pages="1"/>
-      <relation target="" sidePair="right-right"/>
-      <Button title="接受任务" icon="ui://tis07nuvsz3311"/>
+    <image id="n19_ovpo" name="bg" src="ovpo14" xy="160,557" group="n24_p8hk"/>
+    <component id="n23_oy2m" name="btnClose" src="sz33y" pkg="te1gxawo" xy="934,552" size="42,43" group="n24_p8hk">
+      <Button icon="ui://te1gxawoohl41b"/>
     </component>
-    <component id="n22_ozbm" name="bntFnishTask" src="qzgyu" xy="945,437" group="n16_ovpo">
+    <text id="n1_ctbh" name="tfNpcName" xy="159,561" size="176,42" group="n24_p8hk" font="方正准圆简体" fontSize="25" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="NPC"/>
+    <image id="n21_ovpo" name="npcIconBg" src="ovpo17" xy="192,626" size="135,138" group="n6_ctbh"/>
+    <loader id="n4_ctbh" name="ladNpcIcon" xy="203,637" size="113,117" group="n6_ctbh" url="ui://7xhwdeuzctbhb" align="center" vAlign="middle" fill="scale"/>
+    <group id="n6_ctbh" name="iconGroup" xy="192,626" size="135,138" group="n24_p8hk" collapsed="true"/>
+    <richtext id="n7_ctbh" name="rtfNpcSpeech" xy="356,641" size="582,66" group="n24_p8hk" font="方正准圆简体" fontSize="18" color="#999999" ubb="true" autoSize="none" bold="true" text="默认对话"/>
+    <component id="n9_qzgy" name="comRewardContainer" src="qzgyv" xy="356,709" size="290,58" group="n24_p8hk">
+      <gearDisplay controller="taskState" pages="1,2"/>
+    </component>
+    <component id="n8_qzgy" name="btnAcceptTask" src="qzgyu" xy="770,709" size="166,52" group="n24_p8hk">
+      <gearDisplay controller="taskState" pages="1"/>
+      <Button title="接受任务" titleColor="#059c11" icon="ui://tis07nuvsz3311"/>
+    </component>
+    <component id="n22_ozbm" name="bntFnishTask" src="qzgyu" xy="770,709" size="166,52" group="n24_p8hk">
       <gearDisplay controller="taskState" pages="2"/>
-      <relation target="" sidePair="right-right"/>
       <Button title="完成任务" titleColor="#ad861c" icon="ui://tis07nuvsz3310"/>
     </component>
-    <group id="n16_ovpo" name="n16" xy="-1,27" size="1137,473"/>
+    <group id="n24_p8hk" name="grpDialog" xy="159,552" size="817,216" advanced="true">
+      <relation target="" sidePair="bottom-bottom,center-center"/>
+    </group>
   </displayList>
 </component>

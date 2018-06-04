@@ -2,17 +2,11 @@
 <packageDescription id="te1gxawo" jpegQuality="80" compressPNG="true">
   <resources>
     <component id="sz33y" name="btnClose.xml" path="/btn/" exported="true"/>
-    <component id="jhexz" name="comTest.xml" path="/"/>
-    <component id="ua4x11" name="comRect.xml" path="/"/>
-    <component id="ua4x12" name="comTest2.xml" path="/"/>
-    <component id="ua4x13" name="comTile.xml" path="/"/>
-    <image id="ua4x14" name="n4.png" path="/"/>
-    <image id="ua4x15" name="n38.png" path="/"/>
-    <image id="gfk816" name="n60.png" path="/"/>
-    <component id="r1bc17" name="bigBuilding.xml" path="/"/>
     <component id="obf018" name="btnCommon.xml" path="/btn/" exported="true"/>
     <image id="8zcx19" name="bg_bag.png" path="/img/" exported="true"/>
     <component id="rw7f1a" name="rbtnCommon.xml" path="/btn/" exported="true"/>
+    <image id="ohl41b" name="btn_close1.png" path="/img/" exported="true"/>
+    <image id="ohl41c" name="btn_close2.png" path="/img/" exported="true"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>

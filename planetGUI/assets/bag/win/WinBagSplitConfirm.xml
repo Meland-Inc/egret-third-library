@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="313,228">
+  <displayList>
+    <image id="n0_k8dt" name="n0" src="k8dt11" xy="0,0"/>
+    <text id="n1_k8dt" name="n1" xy="93,4" size="119,32" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="拆分数量"/>
+    <component id="n3_k8dt" name="btnClose" src="sz33y" pkg="te1gxawo" xy="279,-2" size="39,39">
+      <Button icon="ui://ruc22gntk8dt13"/>
+    </component>
+    <image id="n4_k8dt" name="n4" src="k8dt17" xy="131,56" group="n7_k8dt"/>
+    <text id="n8_k8dt" name="tfNum" xy="131,62" size="50,28" group="n7_k8dt" fontSize="20" color="#a7afaf" align="center" vAlign="middle" autoSize="none" bold="true" text="0&#xA;"/>
+    <component id="n16_k8dt" name="btnSub" src="k8dt1g" xy="106,66" group="n7_k8dt"/>
+    <component id="n18_k8dt" name="btnAdd" src="k8dt1g" xy="194,66" group="n7_k8dt">
+      <Button icon="ui://ruc22gntk8dt12"/>
+    </component>
+    <group id="n7_k8dt" name="n7" xy="106,56" size="100,35"/>
+    <component id="n9_k8dt" name="btnConfirm" src="td6ep" xy="101,164">
+      <Button title="确定" titleColor="#599c11" icon="ui://ruc22gntk8dt14"/>
+    </component>
+    <component id="n12_k8dt" name="sld" src="k8dt1d" xy="67,125">
+      <Slider value="1" max="10"/>
+    </component>
+    <text id="n19_lj6i" name="tfSplitMsg" xy="49,207" size="213,18" fontSize="12" color="#ff8f02" align="center" autoSize="none" text="没有空闲的位置摆放"/>
+  </displayList>
+</component>

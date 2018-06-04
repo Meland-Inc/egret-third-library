@@ -2,6 +2,44 @@
 <packageDescription id="k08mtk0r" jpegQuality="80" compressPNG="true">
   <resources>
     <component id="q5b20" name="WinMinimapBig.xml" path="/win/" exported="true"/>
+    <image id="p85h1" name="bg_bag.png" path="/img/"/>
+    <image id="p85h2" name="bg_map.png" path="/img/"/>
+    <image id="p85h3" name="btn_closed.png" path="/img/"/>
+    <image id="p85h4" name="btn_map_ban.png" path="/img/"/>
+    <image id="p85h5" name="btn_map_enlarge.png" path="/img/"/>
+    <image id="p85h6" name="btn_map_mark.png" path="/img/"/>
+    <image id="p85h7" name="btn_map_narrow.png" path="/img/"/>
+    <image id="p85h8" name="btn_map_rabbish.png" path="/img/"/>
+    <image id="p85h9" name="btn_yellow.png" path="/img/"/>
+    <image id="p85ha" name="img_map_1.png" path="/img/"/>
+    <image id="p85hb" name="img_map_2.png" path="/img/" exported="true"/>
+    <image id="p85hc" name="img_map_3.png" path="/img/" scale="9grid" scale9grid="4,0,67,19"/>
+    <image id="p85hd" name="img_map_4.png" path="/img/"/>
+    <image id="p85he" name="img_map_5.png" path="/img/"/>
+    <image id="p85hf" name="img_map_6.png" path="/img/"/>
+    <image id="p85hg" name="img_map_7.png" path="/img/"/>
+    <image id="p85hh" name="img_map_sign_4.png" path="/img/" exported="true"/>
+    <image id="p85hi" name="img_map_sign_5.png" path="/img/" exported="true"/>
+    <image id="p85hj" name="img_map_sign_6.png" path="/img/" exported="true"/>
+    <image id="p85hk" name="img_map_sign_7.png" path="/img/" exported="true"/>
+    <image id="p85hl" name="img_map_sign_8.png" path="/img/" exported="true"/>
+    <image id="p85hm" name="img_map_sign_9.png" path="/img/" exported="true"/>
+    <image id="p85hn" name="img_map_8.png" path="/img/"/>
+    <component id="p85ho" name="labMark.xml" path="/com/" exported="true"/>
+    <component id="p85hp" name="WinSelectMark.xml" path="/win/" exported="true"/>
+    <component id="p85hq" name="btnMark.xml" path="/btn/"/>
+    <component id="ohl4r" name="btn.xml" path="/btn/"/>
+    <image id="ohl4s" name="img_map_sign_town.png" path="/img/" exported="true"/>
+    <image id="ohl4t" name="img_map_sign_tp.png" path="/img/" exported="true"/>
+    <image id="ohl4u" name="img_map_sign_npc.png" path="/img/" exported="true"/>
+    <image id="ohl4v" name="img_map_sign_self.png" path="/img/" exported="true"/>
+    <image id="ohl4w" name="img_map_sign_home.png" path="/img/" exported="true"/>
+    <image id="ohl4x" name="img_map_sign_creation.png" path="/img/" exported="true"/>
+    <image id="ohl4y" name="img_map_sign_teaching.png" path="/img/" exported="true"/>
+    <component id="j0s6z" name="WinMinimapSmall.xml" path="/win/" exported="true"/>
+    <image id="j0s610" name="img_main_map_1.png" path="/img/"/>
+    <component id="j0s611" name="comMainPlayerIcon.xml" path="/com/" exported="true"/>
+    <image id="j0s612" name="img_task_bg_1.png" path="/img/"/>
   </resources>
   <publish name="minimap"/>
 </packageDescription>

@@ -20,7 +20,7 @@
     <image id="td6eg" name="img_bag_item_1.png" path="/img/" exported="true"/>
     <image id="td6eh" name="img_bag_item_2.png" path="/img/" exported="true"/>
     <image id="td6ei" name="img_bag_item_3.png" path="/img/" exported="true"/>
-    <image id="td6ej" name="img_bag_item_4.png" path="/img/" exported="true"/>
+    <image id="td6ej" name="img_bag_item_4.png" path="/img/" exported="true" scale="9grid" scale9grid="25,20,109,40"/>
     <image id="td6ek" name="img_bag_property.png" path="/img/" exported="true"/>
     <image id="td6el" name="img_bag_scrollbar_1.png" path="/img/" exported="true"/>
     <image id="td6em" name="img_bag_scrollbar_2.png" path="/img/" exported="true"/>
@@ -35,7 +35,24 @@
     <component id="ozbmv" name="comTalentDetail.xml" path="/com/"/>
     <component id="ozbmw" name="comEquip.xml" path="/com/"/>
     <component id="hr2ex" name="comSelectServer.xml" path="/com/"/>
-    <component id="q5b2z" name="WinBag1.xml" path="/win/" exported="true"/>
+    <component id="qcvi10" name="WinTips.xml" path="/win/" exported="true"/>
+    <image id="k8dt11" name="bg_bag_2.png" path="/img/"/>
+    <image id="k8dt12" name="btn_add.png" path="/img/"/>
+    <image id="k8dt13" name="btn_build_close.png" path="/img/"/>
+    <image id="k8dt14" name="btn_green.png" path="/img/"/>
+    <image id="k8dt15" name="btn_minus.png" path="/img/"/>
+    <image id="k8dt16" name="btn_red.png" path="/img/"/>
+    <image id="k8dt17" name="img_bag_number.png" path="/img/"/>
+    <image id="k8dt18" name="img_bag_slider_1.png" path="/img/" scale="9grid" scale9grid="8,0,162,13"/>
+    <image id="k8dt19" name="img_bag_slider_2.png" path="/img/"/>
+    <image id="k8dt1a" name="img_bag_slider_3.png" path="/img/"/>
+    <component id="k8dt1b" name="WinBagSplitConfirm.xml" path="/win/" exported="true"/>
+    <component id="k8dt1c" name="Slider1_grip.xml" path="/sld/"/>
+    <component id="k8dt1d" name="Slider1.xml" path="/sld/"/>
+    <component id="k8dt1e" name="Slider2_grip.xml" path="/sld/"/>
+    <component id="k8dt1f" name="Slider2.xml" path="/sld/"/>
+    <component id="k8dt1g" name="btnAddSub.xml" path="/btn/"/>
+    <component id="lj6i1h" name="WinBagAbandonConfirm.xml" path="/win/" exported="true"/>
   </resources>
   <publish name="bag"/>
 </packageDescription>

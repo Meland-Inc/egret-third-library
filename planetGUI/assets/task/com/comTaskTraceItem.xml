@@ -4,8 +4,7 @@
     <loader id="n5_ovpo" name="icon" xy="0,0" size="193,59" fill="scaleFree">
       <relation target="n4_ovpo" sidePair="bottomext-bottom"/>
     </loader>
-    <loader id="n1_ovpo" name="imgTitleBg" xy="14,9" size="42,21" url="ui://eunktclqsz33b"/>
-    <text id="n2_ovpo" name="tfTitle" xy="15,12" size="40,18" font="方正准圆简体" fontSize="12" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="主线"/>
+    <component id="n6_lreq" name="ladTitle" src="lrequ" xy="14,9"/>
     <text id="n3_ovpo" name="tfTaskName" xy="62,11" size="123,18" font="方正准圆简体" fontSize="13" color="#ffffff" vAlign="middle" autoSize="none" bold="true" text="任务名字"/>
     <richtext id="n4_ovpo" name="ftTaskDesc" xy="17,35" size="159,18" font="方正准圆简体" fontSize="13" color="#ffffff" ubb="true" autoSize="height" bold="true" text="任务描述"/>
   </displayList>

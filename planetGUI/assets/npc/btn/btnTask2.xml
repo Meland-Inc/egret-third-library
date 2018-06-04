@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="217,60" extention="Button">
+  <displayList>
+    <loader id="n10_sz33" name="icon" xy="0,0" size="217,60" url="ui://tis07nuvovpo15" align="center" autoSize="true"/>
+    <text id="n9_qzgy" name="title" xy="54,15" size="142,28" font="方正准圆简体" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="shrink" bold="true" singleLine="true" text="taskxxx">
+      <relation target="" sidePair="width-width,middle-middle"/>
+    </text>
+    <loader id="n11_p8hk" name="ladState" xy="18,11" size="32,38" url="ui://tis07nuvp8hk1f"/>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.90"/>
+  <relation target="n10_sz33" sidePair="width-width,height-height"/>
+</component>
