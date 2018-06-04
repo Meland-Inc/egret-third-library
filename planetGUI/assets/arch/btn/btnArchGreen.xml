@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="110,41" extention="Button">
+  <displayList>
+    <image id="n1" name="n1" src="lxnu8" fileName="img/btn_green.png" xy="0,0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n2" name="title" xy="0,0" size="110,41" fontSize="18" color="#599c11" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" text="制作">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.90"/>
+</component>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="186,18" extention="ProgressBar">
+  <displayList>
+    <image id="n1" name="n1" src="lxnuj" fileName="img/img_compose_11.png" xy="0,0" size="186,18">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n2" name="bar" src="lxnui" fileName="img/img_compose_10.png" xy="2,2" size="182,14"/>
+    <image id="n3_lxnu" name="n3" src="lxnu1k" fileName="img/img_compose_22.png" xy="69,0"/>
+  </displayList>
+  <ProgressBar/>
+</component>

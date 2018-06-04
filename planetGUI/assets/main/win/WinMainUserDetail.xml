@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="267,112">
+<component size="204,63">
   <displayList>
-    <image id="n0_w80l" name="n0" src="w80lc" xy="0,0"/>
-    <loader id="n1_w80l" name="ladAvatar" xy="0,10" size="100,91" url="ui://5hs1fuejw80lb" align="center" vAlign="middle"/>
-    <text id="n2_w80l" name="labName" xy="102,22" size="10,30" font="方正准圆简体" fontSize="21" color="#6db0f5" bold="true" text="&#xA;"/>
-    <text id="n4_w80l" name="labGold" xy="140,65" size="87,28" fontSize="21" color="#ffffff" autoSize="none" bold="true" singleLine="true" text="3,740"/>
-    <component id="n6_ua4x" name="btnMail" src="ua4xt" xy="227,66"/>
+    <image id="n18_oxrf" name="n18" src="dura17" xy="3,3"/>
+    <image id="n19_oxrf" name="n19" src="dura1d" xy="10,10"/>
+    <image id="n20_oxrf" name="n20" src="dura1f" xy="65,14"/>
+    <loader id="n21_oxrf" name="ladAvatarIcon" xy="9,12" size="50,43" url="ui://5hs1fuejdura1a"/>
+    <text id="n22_oxrf" name="tfLevel" xy="64,13" size="24,22" fontSize="15" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="45"/>
+    <text id="n23_oxrf" name="tfName" xy="84,13" size="120,22" fontSize="13" color="#656a6c" align="center" vAlign="middle" autoSize="none" bold="true" text="玩家名字七个字"/>
+    <component id="n24_oxrf" name="pbrHp" src="vmyf1n" xy="65,40">
+      <ProgressBar value="50" max="100"/>
+    </component>
   </displayList>
 </component>
