@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="25,50">
+  <displayList>
+    <image id="n2_ij1g" name="n2" src="ij1g1r" fileName="img/img_main_chatbubble_1.png" xy="0,0" size="25,40">
+      <relation target="n1_ij1g" sidePair="width-width"/>
+    </image>
+    <image id="n3_ij1g" name="n3" src="ij1g1s" fileName="img/img_main_chatbubble_2.png" xy="0,40">
+      <relation target="n1_ij1g" sidePair="center-center"/>
+    </image>
+    <text id="n1_ij1g" name="tfContent" xy="8,8" size="10,24" fontSize="18" color="#ffffff" bold="true" singleLine="true" text=""/>
+  </displayList>
+  <relation target="n1_ij1g" sidePair="width-width"/>
+</component>
