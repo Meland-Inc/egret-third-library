@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="694,453">
-  <controller name="conTaskDetail" pages="0,main,1,branch" selected="1"/>
+<component size="0,453">
+  <controller name="conTaskDetail" pages="0,main,1,branch" selected="0"/>
   <displayList>
     <image id="n20_8zcx" name="bg" src="8zcx19" pkg="te1gxawo" xy="0,0"/>
     <image id="n7_sz33" name="detailBg" src="sz33e" xy="23,106"/>
-    <image id="n21_lreq" name="imgNoTaskTips" src="lreqs" xy="200,232"/>
+    <image id="n21_lreq" name="imgNoTaskTips" src="lreqs" xy="185,238"/>
     <component id="n12_sz33" name="btnClose" src="sz33y" pkg="te1gxawo" xy="650,-9" size="58,55"/>
     <text id="n1_sz33" name="title" xy="257,0" size="176,44" font="方正准圆简体" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="任务"/>
     <component id="n4_sz33" name="btnShowMainTask" src="sz33j" xy="44,60">
-      <Button icon="ui://eunktclqsz334" selectedIcon="ui://eunktclqsz332" controller="conTaskDetail" page="0"/>
+      <Button checked="true" icon="ui://eunktclqsz334" selectedIcon="ui://eunktclqsz332" controller="conTaskDetail" page="0"/>
     </component>
     <component id="n5_sz33" name="btnShowBranchTask" src="sz33j" xy="174,60">
-      <Button checked="true" title="支线任务" icon="ui://eunktclqsz334" selectedIcon="ui://eunktclqsz333" controller="conTaskDetail" page="1"/>
+      <Button title="支线任务" icon="ui://eunktclqsz334" selectedIcon="ui://eunktclqsz333" controller="conTaskDetail" page="1"/>
     </component>
     <list id="n9_sz33" name="lstMainTaskBtn" xy="35,105" size="130,308" overflow="scroll" margin="10,0,0,0" defaultItem="ui://eunktclqsz33k" align="center" autoClearItems="true">
       <gearDisplay controller="conTaskDetail" pages="0"/>

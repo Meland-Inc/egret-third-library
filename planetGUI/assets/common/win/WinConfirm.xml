@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="313,228">
+  <displayList>
+    <image id="n1_kjpo" name="n1" src="kjpo1g" fileName="img/bg_bag_2.png" xy="0,0"/>
+    <graph id="n5_kjpo" name="dragArea" xy="0,0" size="313,36" alpha="0" type="rect"/>
+    <component id="n3_kjpo" name="btnClose" src="sz33y" fileName="btn/btnClose.xml" xy="276,-5" size="42,43">
+      <Button icon="ui://te1gxawoohl41b"/>
+    </component>
+    <text id="n6_kjpo" name="ftTitle" xy="93,4" size="119,32" font="方正准圆简体" fontSize="20" color="#ffffff" align="center" vAlign="middle" ubb="true" autoSize="none" bold="true" text="确认"/>
+    <component id="n8_kjpo" name="btnCancel" src="obf018" fileName="btn/btnCommon.xml" xy="32,168">
+      <Button title="取消" titleColor="#ffffff" titleFontSize="20" icon="ui://te1gxawokjpo1m"/>
+    </component>
+    <component id="n9_kjpo" name="btnConfirm" src="obf018" fileName="btn/btnCommon.xml" xy="174,168">
+      <Button title="确定" titleColor="#599c11" titleFontSize="20"/>
+    </component>
+    <text id="n11_kjpo" name="tfConfirmTips" xy="40,59" size="232,96" font="方正准圆简体" fontSize="18" color="#afafaf" align="center" vAlign="middle" ubb="true" autoSize="none" bold="true" singleLine="true" text="确认丢弃[color=#e58049]生命药水[/color]吗？">
+      <relation target="" sidePair="center-center"/>
+    </text>
+  </displayList>
+</component>

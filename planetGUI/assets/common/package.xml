@@ -7,6 +7,10 @@
     <component id="rw7f1a" name="rbtnCommon.xml" path="/btn/" exported="true"/>
     <image id="ohl41b" name="btn_close1.png" path="/img/" exported="true"/>
     <image id="ohl41c" name="btn_close2.png" path="/img/" exported="true"/>
+    <component id="kjpo1d" name="WinConfirm.xml" path="/win/" exported="true"/>
+    <image id="kjpo1g" name="bg_bag_2.png" path="/img/" exported="true"/>
+    <image id="kjpo1l" name="btn_green.png" path="/img/" exported="true"/>
+    <image id="kjpo1m" name="btn_red.png" path="/img/" exported="true"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>
