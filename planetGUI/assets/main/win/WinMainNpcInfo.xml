@@ -4,6 +4,6 @@
     <image id="n0_dura" name="n0" src="dura1c" fileName="img/img_main_avatar_2.png" xy="0,0"/>
     <image id="n3_dura" name="n3" src="dura1d" fileName="img/img_main_avatar_3.png" xy="1,1"/>
     <loader id="n4_dura" name="ladAvatar" xy="0,3" size="50,43" url="ui://5hs1fuejdura1a"/>
-    <text id="n5_dura" name="tfName" xy="45,5" size="105,20" fontSize="13" color="#656a6c" align="center" vAlign="middle" autoSize="none" bold="true" text="啊啊啊名字七个"/>
+    <text id="n5_dura" name="tfName" xy="45,5" size="105,20" fontSize="12" color="#656a6c" align="center" vAlign="middle" autoSize="none"  text="啊啊啊名字七个"/>
   </displayList>
 </component>

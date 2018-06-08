@@ -10,7 +10,7 @@
     <image id="n11_lxnu" name="n11" src="lxnu15" fileName="img/img_compose_20.png" xy="1,44" pkg="kdeyuiww">
       <gearDisplay controller="button" pages="8,9"/>
     </image>
-    <text id="n12_lxnu" name="tfLock" xy="19,45" size="30,19" fontSize="12" color="#d04126" align="center" bold="true" text="20级">
+    <text id="n12_lxnu" name="tfLock" xy="19,45" size="30,19" fontSize="12" color="#d04126" align="center"  text="20级">
       <gearDisplay controller="button" pages="8,9"/>
     </text>
     <image id="n13_lxnu" name="n13" src="lxnuv" fileName="img/img_compose_5.png" xy="48,9" pkg="kdeyuiww">

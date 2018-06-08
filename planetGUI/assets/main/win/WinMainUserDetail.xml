@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="204,63">
   <displayList>
-    <image id="n18_oxrf" name="n18" src="dura17" xy="3,3"/>
-    <image id="n19_oxrf" name="n19" src="dura1d" xy="10,10"/>
-    <image id="n20_oxrf" name="n20" src="dura1f" xy="65,14"/>
+    <image id="n18_oxrf" name="n18" src="dura17" fileName="img/img_main_avatar_1.png" xy="3,3"/>
+    <image id="n19_oxrf" name="n19" src="dura1d" fileName="img/img_main_avatar_3.png" xy="10,10"/>
+    <image id="n20_oxrf" name="n20" src="dura1f" fileName="img/img_main_avatar_5.png" xy="65,14"/>
     <loader id="n21_oxrf" name="ladAvatarIcon" xy="9,12" size="50,43" url="ui://5hs1fuejdura1a"/>
-    <text id="n22_oxrf" name="tfLevel" xy="64,13" size="24,22" fontSize="15" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="45"/>
-    <text id="n23_oxrf" name="tfName" xy="84,13" size="120,22" fontSize="13" color="#656a6c" align="center" vAlign="middle" autoSize="none" bold="true" text="玩家名字七个字"/>
-    <component id="n24_oxrf" name="pbrHp" src="vmyf1n" xy="65,40">
+    <text id="n22_oxrf" name="tfLevel" xy="64,13" size="24,22" fontSize="15" color="#ffffff" align="center" vAlign="middle" autoSize="none"  text="45"/>
+    <text id="n23_oxrf" name="tfName" xy="83,13" size="120,22" fontSize="14" color="#656a6c" align="center" vAlign="middle" leading="0" autoSize="none"  text="玩家名字七个字"/>
+    <component id="n24_oxrf" name="pbrHp" src="vmyf1n" fileName="pbr/pbrMainPlayerHp.xml" xy="65,40">
       <ProgressBar value="50" max="100"/>
     </component>
   </displayList>
