@@ -11,8 +11,11 @@
     <image id="kjpo1g" name="bg_bag_2.png" path="/img/" exported="true"/>
     <image id="kjpo1l" name="btn_green.png" path="/img/" exported="true"/>
     <image id="kjpo1m" name="btn_red.png" path="/img/" exported="true"/>
-    <image id="kjpo1n" name="bg_modal.png" path="/img/"/>
+    <image id="kjpo1n" name="bg_modal.png" path="/img/" exported="true"/>
     <component id="kjpo1o" name="CommonModal.xml" path="/com/" exported="true"/>
+    <component id="ij1g1p" name="CommonTalkBubble.xml" path="/com/" exported="true"/>
+    <image id="ij1g1r" name="img_main_chatbubble_1.png" path="/img/" exported="true" scale="9grid" scale9grid="25,10,50,20"/>
+    <image id="ij1g1s" name="img_main_chatbubble_2.png" path="/img/" exported="true"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>
