@@ -4,7 +4,7 @@
     <image id="n0_qcvi" name="imgBg" src="td6ej" xy="-1,0" size="157,78">
       <relation target="" sidePair="bottomext-bottom"/>
     </image>
-    <text id="n1_qcvi" name="tfName" xy="8,10" size="109,22" fontSize="16" color="#ffed4f" autoSize="none" bold="true" singleLine="true" text=""/>
+    <text id="n1_qcvi" name="tfName" xy="8,10" size="109,22" fontSize="16" color="#ffed4f" autoSize="none"  singleLine="true" text=""/>
     <text id="n2_qcvi" name="tfDesc" xy="8,42" size="129,35" fontSize="12" color="#ffffff" autoSize="none" text="&#xA;"/>
     <loader id="n3_qcvi" name="ladIcon" xy="124,8" size="28,31" fill="scale"/>
   </displayList>

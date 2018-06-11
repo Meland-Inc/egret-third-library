@@ -4,7 +4,7 @@
     <image id="n0_oe8k" name="n0" src="oe8k1" fileName="img/bg_bag.png" xy="0,0"/>
     <component id="n1_oe8k" name="btnClose" src="sz33y" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="660,-10"/>
     <image id="n5_oe8k" name="n5" src="oe8k6" fileName="img/img_code_1.png" xy="175,60"/>
-    <text id="n2_oe8k" name="n2" xy="269,10" size="155,30" fontSize="24" color="#ffffff" bold="true" text="选择一个道具"/>
+    <text id="n2_oe8k" name="n2" xy="269,10" size="155,30" fontSize="24" color="#ffffff"  text="选择一个道具"/>
     <list id="n3_oe8k" name="listTab" xy="33,63" size="129,290" margin="2,2,2,2" lineGap="5" defaultItem="ui://4o62dubdoe8k9">
       <item title="工具"/>
       <item title="武器"/>

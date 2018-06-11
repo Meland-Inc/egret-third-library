@@ -4,7 +4,7 @@
   <displayList>
     <image id="n0_td6e" name="imgBg" src="td6e0" xy="0,0"/>
     <component id="n5_td6e" name="btnClose" src="sz33y" pkg="te1gxawo" xy="653,-7"/>
-    <text id="n1_td6e" name="tfTitle" xy="261,-3" size="175,49" font="方正准圆简体" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="背包"/>
+    <text id="n1_td6e" name="tfTitle" xy="261,-3" size="175,49" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none"  text="背包"/>
     <component id="n40_ozbm" name="comTalentDetail" src="ozbmv" fileName="com/comTalentDetail.xml" xy="45,80">
       <gearDisplay controller="conAvatar" pages="1"/>
     </component>

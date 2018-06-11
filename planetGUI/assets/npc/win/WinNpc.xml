@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,768">
+<component size="976,768">
   <controller name="taskState" pages="0,default,1,acceptTask,2,finishTask" selected="0"/>
   <displayList>
-    <list id="n15_sz33" name="lstTask" xy="755,247" size="219,273" overflow="hidden" lineGap="9" colGap="10" defaultItem="ui://tis07nuvp8hk1d" autoClearItems="true">
+    <list id="n15_sz33" name="lstTask" xy="675,247" size="219,273" overflow="hidden" lineGap="9" colGap="10" defaultItem="ui://tis07nuvp8hk1d" vAlign="bottom" autoClearItems="true">
       <relation target="n24_p8hk" sidePair="bottom-bottom,left-right"/>
       <item/>
       <item/>
       <item/>
       <item/>
     </list>
-    <image id="n19_ovpo" name="bg" src="ovpo14" fileName="img/bg_npc_1.png" xy="160,557" group="n24_p8hk"/>
-    <component id="n23_oy2m" name="btnClose" src="sz33y" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="934,552" size="42,43" group="n24_p8hk">
+    <image id="n19_ovpo" name="bg" src="ovpo14" fileName="img/bg_npc_1.png" xy="80,557" group="n24_p8hk"/>
+    <component id="n23_oy2m" name="btnClose" src="sz33y" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="854,552" size="42,43" group="n24_p8hk">
       <Button icon="ui://te1gxawoohl41b"/>
     </component>
-    <text id="n1_ctbh" name="tfNpcName" xy="159,561" size="176,42" group="n24_p8hk" font="方正准圆简体" fontSize="25" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="NPC"/>
-    <image id="n21_ovpo" name="npcIconBg" src="ovpo17" fileName="img/img_avatarbg_1.png" xy="192,626" size="135,138" group="n6_ctbh"/>
-    <loader id="n4_ctbh" name="ladNpcIcon" xy="203,637" size="113,117" group="n6_ctbh" url="ui://7xhwdeuzctbhb" align="center" vAlign="middle" fill="scale"/>
-    <group id="n6_ctbh" name="iconGroup" xy="192,626" size="135,138" group="n24_p8hk" collapsed="true"/>
-    <richtext id="n7_ctbh" name="rtfNpcSpeech" xy="356,641" size="582,66" group="n24_p8hk" font="方正准圆简体" fontSize="18" color="#999999" ubb="true" autoSize="none" bold="true" text="默认对话"/>
-    <component id="n9_qzgy" name="comRewardContainer" src="qzgyv" fileName="com/comTaskRwards.xml" xy="356,709" size="290,58" group="n24_p8hk">
+    <text id="n1_ctbh" name="tfNpcName" xy="81,557" size="155,41" group="n24_p8hk" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="NPC"/>
+    <image id="n21_ovpo" name="npcIconBg" src="ovpo17" fileName="img/img_avatarbg_1.png" xy="112,626" size="135,138" group="n6_ctbh"/>
+    <loader id="n4_ctbh" name="ladNpcIcon" xy="123,637" size="113,117" group="n6_ctbh" url="ui://7xhwdeuzctbhb" align="center" vAlign="middle" fill="scale"/>
+    <group id="n6_ctbh" name="iconGroup" xy="112,626" size="135,138" group="n24_p8hk" collapsed="true"/>
+    <richtext id="n7_ctbh" name="rtfNpcSpeech" xy="276,628" size="582,66" group="n24_p8hk" fontSize="18" color="#a1a1a1" ubb="true" autoSize="none" text="默认对话"/>
+    <component id="n9_qzgy" name="comRewardContainer" src="qzgyv" fileName="com/comTaskRwards.xml" xy="276,697" size="290,58" group="n24_p8hk">
       <gearDisplay controller="taskState" pages="1,2"/>
     </component>
-    <component id="n8_qzgy" name="btnAcceptTask" src="qzgyu" fileName="btn/btnTask1.xml" xy="770,709" size="166,52" group="n24_p8hk">
+    <component id="n8_qzgy" name="btnAcceptTask" src="qzgyu" fileName="btn/btnTask1.xml" xy="690,709" size="166,52" group="n24_p8hk">
       <gearDisplay controller="taskState" pages="1"/>
-      <Button title="接受任务" titleColor="#059c11" icon="ui://tis07nuvsz3311"/>
+      <Button title="接受任务" titleColor="#059c11" titleFontSize="22" icon="ui://tis07nuvsz3311"/>
     </component>
-    <component id="n22_ozbm" name="bntFnishTask" src="qzgyu" fileName="btn/btnTask1.xml" xy="770,709" size="166,52" group="n24_p8hk">
+    <component id="n22_ozbm" name="bntFnishTask" src="qzgyu" fileName="btn/btnTask1.xml" xy="690,709" size="166,52" group="n24_p8hk">
       <gearDisplay controller="taskState" pages="2"/>
       <Button title="完成任务" titleColor="#ad861c" icon="ui://tis07nuvsz3310"/>
     </component>
-    <group id="n24_p8hk" name="grpDialog" xy="159,552" size="817,216" advanced="true">
+    <group id="n24_p8hk" name="grpDialog" xy="80,552" size="816,216" advanced="true">
       <relation target="" sidePair="bottom-bottom,center-center"/>
     </group>
   </displayList>

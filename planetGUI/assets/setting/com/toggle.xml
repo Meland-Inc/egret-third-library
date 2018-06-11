@@ -3,11 +3,11 @@
   <controller name="conToggle" pages="0,open,1,close" selected="0"/>
   <displayList>
     <image id="n0_rw7f" name="imgBg" src="8zcx9" xy="1,0" size="71,33"/>
-    <text id="n4_rw7f" name="tfClose" xy="42,8" size="24,24" fontSize="18" color="#ffffff" autoSize="none" bold="true" text="关"/>
+    <text id="n4_rw7f" name="tfClose" xy="42,8" size="24,24" fontSize="18" color="#ffffff" autoSize="none"  text="关"/>
     <image id="n1_rw7f" name="imgFg" src="8zcx8" xy="1,0" size="71,33">
       <relation target="n7_cf98" sidePair="rightext-right"/>
     </image>
-    <text id="n3_rw7f" name="tfOpen" xy="12,8" size="24,24" fontSize="18" color="#ffffff" autoSize="none" bold="true" text="开"/>
+    <text id="n3_rw7f" name="tfOpen" xy="12,8" size="24,24" fontSize="18" color="#ffffff" autoSize="none"  text="开"/>
     <image id="n7_cf98" name="grid" src="8zcxa" xy="40,2">
       <gearXY controller="conToggle" pages="0,1" values="40,2|0,2" tween="true"/>
     </image>

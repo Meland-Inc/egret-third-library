@@ -2,7 +2,7 @@
 <component size="217,60" extention="Button">
   <displayList>
     <loader id="n10_sz33" name="icon" xy="0,0" size="217,60" url="ui://tis07nuvovpo15" align="center" autoSize="true"/>
-    <text id="n9_qzgy" name="title" xy="0,16" size="217,28" font="方正准圆简体" fontSize="22" color="#3b86c2" align="center" vAlign="middle" autoSize="shrink" bold="true" singleLine="true" text="button">
+    <text id="n9_qzgy" name="title" xy="0,16" size="217,28" fontSize="22" color="#3b86c2" align="center" vAlign="middle" autoSize="shrink"  singleLine="true" text="button">
       <relation target="" sidePair="width-width,middle-middle"/>
     </text>
   </displayList>

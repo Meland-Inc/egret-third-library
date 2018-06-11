@@ -12,8 +12,8 @@
       <item title="饰品" name="accessory1"/>
     </list>
     <loader id="n6_td6e" name="ladAvatar" xy="67,34" size="131,160" align="center" vAlign="middle" fill="scale"/>
-    <text id="n36_ozbm" name="tfName" xy="67,195" size="131,27" fontSize="20" color="#6c6c6c" align="center" autoSize="none" bold="true" text="name"/>
-    <text id="n39_ozbm" name="tfLv" xy="67,223" size="131,24" fontSize="18" color="#84c9f9" align="center" autoSize="none" bold="true" text="LV.0&#xA;"/>
+    <text id="n36_ozbm" name="tfName" xy="67,195" size="131,27" fontSize="20" color="#6c6c6c" align="center" autoSize="none"  text="name"/>
+    <text id="n39_ozbm" name="tfLv" xy="67,223" size="131,24" fontSize="18" color="#84c9f9" align="center" autoSize="none"  text="LV.0&#xA;"/>
     <component id="n40_ozbm" name="labAtt" src="ozbmt" xy="71,268" size="50,24">
       <relation target="" sidePair="right-right"/>
       <Label title="99"/>

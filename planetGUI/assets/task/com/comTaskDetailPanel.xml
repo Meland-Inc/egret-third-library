@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="450,290" overflow="scroll">
   <displayList>
-    <text id="n0_sz33" name="tfTaskName" xy="10,0" size="80,24" font="方正准圆简体" fontSize="18" color="#84c9f7" vAlign="middle" ubb="true" bold="true" singleLine="true" text="任务名字"/>
-    <richtext id="n1_sz33" name="tfTaskDesc" xy="10,30" size="399,25" font="方正准圆简体" fontSize="16" color="#bdbdbd" ubb="true" autoSize="none" bold="true" text="任务描述&#xA;"/>
-    <image id="n2_sz33" name="ImgSplit" src="sz33f" xy="10,70">
+    <text id="n0_sz33" name="tfTaskName" xy="10,0" size="77,23" fontSize="18" color="#84c9f7" vAlign="middle" ubb="true" singleLine="true" text="任务名字"/>
+    <richtext id="n1_sz33" name="tfTaskDesc" xy="10,30" size="399,25" fontSize="16" color="#bdbdbd" ubb="true" autoSize="none" text="任务描述&#xA;"/>
+    <image id="n2_sz33" name="ImgSplit" src="sz33f" fileName="img/img_task_bg_007.png" xy="10,70">
       <relation target="n1_sz33" sidePair="top-bottom"/>
     </image>
     <list id="n3_sz33" name="lstTaskCondition" xy="10,91" size="432,64" lineGap="7" defaultItem="ui://eunktclqjhexn" autoClearItems="true">
@@ -11,11 +11,11 @@
       <item/>
       <item/>
     </list>
-    <image id="n5_jhex" name="ImgSplit" src="sz33f" xy="10,175">
+    <image id="n5_jhex" name="ImgSplit" src="sz33f" fileName="img/img_task_bg_007.png" xy="10,175">
       <relation target="n3_sz33" sidePair="top-bottom"/>
     </image>
-    <image id="n9_nmg7" name="n9" src="sz3312" pkg="tis07nuv" xy="14,201" group="n11_nmg7"/>
-    <text id="n10_nmg7" name="n10" xy="17,204" size="40,18" group="n11_nmg7" font="方正准圆简体" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="奖励"/>
+    <image id="n9_nmg7" name="n9" src="sz3312" fileName="img/img_task_reward.png" pkg="tis07nuv" xy="14,201" group="n11_nmg7"/>
+    <text id="n10_nmg7" name="n10" xy="17,204" size="40,18" group="n11_nmg7" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none"  text="奖励"/>
     <group id="n11_nmg7" name="rewardTitle" xy="14,201" size="47,24" group="n14_nmg7" collapsed="true"/>
     <list id="n13_nmg7" name="lstReward" xy="10,233" size="237,54" group="n14_nmg7" layout="flow_hz" colGap="8" lineItemCount="4" defaultItem="ui://tis07nuvqzgyw" vAlign="middle" autoClearItems="true">
       <item/>
