@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" adaptationTest="FitSize">
+  <displayList>
+    <image id="n0_no43" name="imgBG" src="no4325" fileName="img/bg_roleselect_1.png" xy="0,0" size="1136,640">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </image>
+    <image id="n2_no43" name="imgCreatBG" src="ptq41v" fileName="img/bg_roleselect_2.png" xy="329,147" size="478,351" group="n11_no43"/>
+    <list id="n1_no43" name="lstSexy" xy="387,216" size="450,225" group="n11_no43" scale="0.8,0.8" layout="row" colGap="44" align="center" vAlign="middle">
+      <item url="ui://0n4pg0opptq421"/>
+      <item url="ui://0n4pg0opno4323"/>
+    </list>
+    <image id="n10_no43" name="imgNameBG" src="ptq41t" fileName="img/img_roleselect_name.png" xy="477,413" size="182,39" group="n11_no43"/>
+    <text id="n3_no43" name="tfTitle" xy="329,145" size="148,41" group="n11_no43" aspect="true" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="角色选择"/>
+    <text id="n5_no43" name="tfRoleName" xy="485,418" size="136,30" group="n11_no43" input="true" maxLength="10" font="方正准圆简体" fontSize="23" color="#2e2e2e" vAlign="middle" autoSize="none" singleLine="true" text="long"/>
+    <text id="n6_no43" name="tfError" xy="468,452" size="200,31" group="n11_no43" visible="false" font="方正准圆简体" fontSize="24" color="#ff0000" align="center" vAlign="middle" autoSize="none" text="asdfasdfa"/>
+    <component id="n8_no43" name="btnStartGame" src="no4326" fileName="btn/btnStartGame.xml" xy="721,398" size="117,116" group="n11_no43"/>
+    <component id="n9_no43" name="btnDice" src="ptq41z" fileName="btn/btnDice.xml" xy="628,415" size="36,36" group="n11_no43"/>
+    <group id="n11_no43" name="creatRoleGroup" xy="329,145" size="509,369" advanced="true">
+      <relation target="" sidePair="center-center%,middle-middle%"/>
+    </group>
+  </displayList>
+</component>

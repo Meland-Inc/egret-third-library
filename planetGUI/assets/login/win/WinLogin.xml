@@ -1,27 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640">
-  <controller name="conLogin" pages="0,signup,1,signin" selected="0"/>
+<component size="1136,640" adaptationTest="FitSize">
   <displayList>
-    <image id="n0_kmol" name="imgBg" src="kmol0" xy="0,0" size="1136,640"/>
-    <image id="n1_kmol" name="imgPanel" src="kmol1" xy="303,127"/>
-    <text id="n2_kmol" name="tfTitle" xy="303,127" size="163,45" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="角色选择">
-      <gearText controller="conLogin" pages="0" values="角色选择" default="用户登陆"/>
+    <image id="n0_jddv" name="imgBG" src="jddv11" fileName="img/bg_code_1.png" xy="0,0">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </image>
+    <image id="n45_ptq4" name="imgloginBG" src="jddv12" fileName="img/bg_login.png" xy="347,114" group="n47_ptq4"/>
+    <image id="n46_ptq4" name="imgLoginLogo" src="jddvv" fileName="img/img_bellgame.png" xy="487,129" group="n47_ptq4"/>
+    <component id="n50_ptq4" name="btnUsernameSignup" src="ptq41m" fileName="btn/btnUsernameSignup.xml" xy="429,195" group="n47_ptq4"/>
+    <component id="n49_ptq4" name="btnEmailSignup" src="ptq41n" fileName="btn/btnEmailSignup.xml" xy="599,195" group="n47_ptq4"/>
+    <image id="n51_ptq4" name="imgSignupTypeLine" src="jddvy" fileName="img/img_login_5.png" xy="424,234" group="n47_ptq4"/>
+    <image id="n52_ptq4" name="imgSelectedSignupTypeLine" src="jddvx" fileName="img/img_login_3.png" xy="424,233" group="n47_ptq4"/>
+    <image id="n59_ptq4" name="imgLoginUserIcon" src="jddvs" fileName="img/icon_login_user.png" xy="414,267" group="n47_ptq4"/>
+    <image id="n60_ptq4" name="imgLoginEmailIcon" src="jddvq" fileName="img/icon_login_mail.png" xy="415,272" group="n47_ptq4" visible="false"/>
+    <text id="n63_ptq4" name="tfUsername" xy="459,266" size="259,30" group="n47_ptq4" input="true" prompt="请输入账号名" font="方正准圆简体" fontSize="24" color="#e9e9e9" vAlign="middle" ubb="true" autoSize="none" bold="true" singleLine="true" text=""/>
+    <text id="n66_ptq4" name="tfEmail" xy="459,266" size="259,30" group="n47_ptq4" visible="false" input="true" prompt="请输入邮箱地址" font="方正准圆简体" fontSize="24" color="#e9e9e9" vAlign="middle" ubb="true" autoSize="none" bold="true" singleLine="true" text=""/>
+    <image id="n53_ptq4" name="imgLine1" src="jddvz" fileName="img/img_login_6.png" xy="395,300" group="n47_ptq4"/>
+    <image id="n57_ptq4" name="imgLoginPasswordIcon" src="jddv18" fileName="img/icon_login_keyboard.png" xy="415,321" group="n47_ptq4"/>
+    <text id="n64_ptq4" name="tfLoginPassword" xy="459,316" size="259,30" group="n47_ptq4" input="true" prompt="请输入密码" password="true" font="方正准圆简体" fontSize="24" color="#e9e9e9" vAlign="middle" ubb="true" autoSize="none" bold="true" singleLine="true" text=""/>
+    <image id="n54_ptq4" name="imgLine2" src="jddvz" fileName="img/img_login_6.png" xy="395,350" group="n47_ptq4"/>
+    <image id="n61_ptq4" name="imgLoginRepeatIcon" src="jddvr" fileName="img/icon_login_password.png" xy="415,362" group="n47_ptq4"/>
+    <text id="n65_ptq4" name="tfRepeat" xy="459,366" size="259,30" group="n47_ptq4" input="true" prompt="请重复密码" password="true" font="方正准圆简体" fontSize="24" color="#e9e9e9" vAlign="middle" ubb="true" autoSize="none" bold="true" singleLine="true" text=""/>
+    <image id="n55_ptq4" name="imgLine3" src="jddvz" fileName="img/img_login_6.png" xy="395,400" group="n47_ptq4"/>
+    <component id="n48_ptq4" name="btnLogin" src="ptq41l" fileName="btn/btnLogin.xml" xy="390,435" group="n47_ptq4"/>
+    <component id="n71_hsrb" name="btnRetrunToSigninGroup" src="hsrb2c" fileName="btn/btnReturn.xml" xy="728,124" group="n47_ptq4"/>
+    <text id="n69_ptq4" name="tfErrorInLogin" xy="517,404" size="99,31" group="n47_ptq4" visible="false" font="方正准圆简体" fontSize="24" color="#ff0000" align="center" vAlign="middle" bold="true" singleLine="true" text="sadfasdf">
+      <relation target="n48_ptq4" sidePair="center-center"/>
     </text>
-    <list id="n5_kmol" name="lstSexy" xy="365,206" size="406,194" layout="row" overflow="scroll" colGap="65" defaultItem="ui://0n4pg0opkmold">
-      <item icon="ui://0n4pg0opkmol9" selectedIcon="ui://0n4pg0opkmola"/>
-      <item icon="ui://0n4pg0opkmol9" selectedIcon="ui://0n4pg0opkmola"/>
-    </list>
-    <image id="n6_kmol" name="n6" src="kmol8" xy="467,420"/>
-    <text id="n7_kmol" name="n7" xy="482,421" size="143,42" input="true" maxLength="10" fontSize="24" color="#2e2e2e" vAlign="middle" autoSize="none" text="long"/>
-    <loader id="n8_kmol" name="ladRandomName" xy="628,421" size="39,40" url="ui://0n4pg0opkmol2"/>
-    <text id="n9_kmol" name="n9" xy="482,470" size="143,34" fontSize="24" color="#2e2e2e" vAlign="middle" autoSize="none" text=""/>
-    <component id="n10_id1r" name="n10" src="hr2ef" xy="31,44">
-      <ComboBox title="请选择服务器" visibleItemCount="10">
-        <item title="server1"/>
-        <item title="server2"/>
-        <item title="server3"/>
-        <item title="server4"/>
-      </ComboBox>
-    </component>
+    <group id="n47_ptq4" name="loginGroup" xy="347,114" size="441,412" advanced="true" collapsed="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <image id="n30_ptq4" name="imgSigninBG" src="jddv12" fileName="img/bg_login.png" xy="347,114" group="n34_ptq4"/>
+    <image id="n31_ptq4" name="imgSigninLogo" src="jddvv" fileName="img/img_bellgame.png" xy="487,129" group="n34_ptq4"/>
+    <component id="n32_ptq4" name="btnSignin" src="ptq41j" fileName="btn/btnSignin.xml" xy="390,370" group="n34_ptq4"/>
+    <component id="n33_ptq4" name="btnSignup" src="ptq41k" fileName="btn/btnSignup.xml" xy="390,440" group="n34_ptq4"/>
+    <image id="n35_ptq4" name="imgPassword" src="jddvr" fileName="img/icon_login_password.png" xy="403,290" group="n34_ptq4"/>
+    <image id="n38_ptq4" name="imgPasswordlLine" src="jddvw" fileName="img/img_login_1.png" xy="378,329" size="378,2" group="n34_ptq4"/>
+    <image id="n36_ptq4" name="imgUser" src="jddvs" fileName="img/icon_login_user.png" xy="402,213" group="n34_ptq4"/>
+    <image id="n37_ptq4" name="imgUserLine" src="jddvw" fileName="img/img_login_1.png" xy="378,248" group="n34_ptq4"/>
+    <text id="n43_ptq4" name="tfAccount" xy="463,213" size="259,30" group="n34_ptq4" input="true" prompt="请输入账号/邮箱" font="方正准圆简体" fontSize="24" color="#e9e9e9" vAlign="middle" ubb="true" autoSize="none" bold="true" singleLine="true" text=""/>
+    <text id="n44_ptq4" name="tfPassword" xy="463,293" size="259,31" group="n34_ptq4" input="true" prompt="请输入密码" password="true" font="方正准圆简体" fontSize="24" color="#e9e9e9" vAlign="middle" ubb="true" autoSize="none" bold="true" singleLine="true" text=""/>
+    <component id="n70_hsrb" name="btnReturnToSelectModeGroup" src="hsrb2c" fileName="btn/btnReturn.xml" xy="729,124" group="n34_ptq4"/>
+    <text id="n67_ptq4" name="tfErrorInSignin" xy="471,336" size="180,31" group="n34_ptq4" visible="false" font="方正准圆简体" fontSize="24" color="#ff0000" vAlign="middle" bold="true" text="账号或密码错误"/>
+    <group id="n34_ptq4" name="signinGroup" xy="347,114" size="441,412" advanced="true" collapsed="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <image id="n7_jddv" name="imgSelectModeBG" src="jddv12" fileName="img/bg_login.png" xy="347,114" size="441,412" group="n9_jddv"/>
+    <image id="n8_jddv" name="imgSelectModeTop" src="jddv10" fileName="img/img_login_title.png" xy="348,114" group="n9_jddv"/>
+    <text id="n16_jddv" name="tfOr" xy="552,333" size="30,31" group="n9_jddv" font="方正准圆简体" fontSize="24" color="#e9e9e9" bold="true" text="或"/>
+    <component id="n24_jddv" name="btnVisitorLogin" src="jddv1i" fileName="btn/btnVisitorLogin.xml" xy="390,442" group="n9_jddv"/>
+    <component id="n25_jddv" name="btnQQLogin" src="jddv1g" fileName="btn/btnQQLogin.xml" xy="390,266" group="n9_jddv"/>
+    <component id="n27_jddv" name="btnAccountLogin" src="jddv1h" fileName="btn/btnAccountLogin.xml" xy="390,374" group="n9_jddv"/>
+    <text id="n28_jddv" name="tfTitle" xy="540,127" size="55,31" group="n9_jddv" font="方正准圆简体" fontSize="24" color="#5fa9dd" bold="true" text="登录">
+      <relation target="" sidePair="left-left,top-top"/>
+    </text>
+    <component id="n29_ptq4" name="btnWXLogin" src="jddv1f" fileName="btn/btnWXLogin.xml" xy="390,198" group="n9_jddv"/>
+    <group id="n9_jddv" name="selectModeGroup" xy="347,114" size="441,412" advanced="true" collapsed="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
   </displayList>
+  <transition name="toSignin" options="4">
+    <item time="0" type="Alpha" target="n34_ptq4" value="1"/>
+    <item time="0" type="Alpha" target="n9_jddv" tween="true" startValue="1" endValue="0" duration="12"/>
+    <item time="0" type="XY" target="n9_jddv" tween="true" startValue="347,114" endValue="-2000,114" duration="12" ease="Linear"/>
+    <item time="0" type="XY" target="n47_ptq4" value="2000,114"/>
+    <item time="0" type="XY" target="n34_ptq4" value="2000,114"/>
+    <item time="6" type="XY" target="n34_ptq4" tween="true" startValue="2000,114" endValue="347,114" duration="12" ease="Back.Out"/>
+    <item time="18" type="Alpha" target="n34_ptq4" value="1"/>
+  </transition>
+  <transition name="toLogin" options="4">
+    <item time="0" type="Alpha" target="n47_ptq4" value="1"/>
+    <item time="0" type="Alpha" target="n34_ptq4" tween="true" startValue="1" endValue="0" duration="12"/>
+    <item time="0" type="XY" target="n34_ptq4" tween="true" startValue="347,114" endValue="-2000,114" duration="12" ease="Linear"/>
+    <item time="0" type="XY" target="n47_ptq4" value="2000,114"/>
+    <item time="0" type="XY" target="n9_jddv" value="-2000,114"/>
+    <item time="6" type="XY" target="n47_ptq4" tween="true" startValue="2000,114" endValue="347,114" duration="12" ease="Back.Out"/>
+    <item time="18" type="Alpha" target="n47_ptq4" value="1"/>
+  </transition>
+  <transition name="returnToSignin" options="4">
+    <item time="0" type="Alpha" target="n34_ptq4" value="1"/>
+    <item time="0" type="Alpha" target="n47_ptq4" tween="true" startValue="1" endValue="0" duration="12" ease="Linear"/>
+    <item time="0" type="XY" target="n9_jddv" tween="true" startValue="-2000,114"/>
+    <item time="0" type="XY" target="n34_ptq4" value="-2000,114"/>
+    <item time="0" type="XY" target="n47_ptq4" tween="true" startValue="347,114" endValue="2000,114" duration="12" ease="Linear"/>
+    <item time="6" type="XY" target="n34_ptq4" tween="true" startValue="-2000,114" endValue="347,114" duration="12" ease="Back.Out"/>
+    <item time="18" type="Alpha" target="n34_ptq4" value="1"/>
+  </transition>
+  <transition name="returnToSelect" options="4">
+    <item time="0" type="Alpha" target="n9_jddv" value="1"/>
+    <item time="0" type="Alpha" target="n34_ptq4" tween="true" startValue="1" endValue="0" duration="12" ease="Linear"/>
+    <item time="0" type="XY" target="n9_jddv" value="-2000,114"/>
+    <item time="0" type="XY" target="n34_ptq4" tween="true" startValue="347,114" endValue="2000,114" duration="12" ease="Linear"/>
+    <item time="0" type="XY" target="n47_ptq4" value="-2000,114"/>
+    <item time="6" type="XY" target="n9_jddv" tween="true" startValue="-2000,114" endValue="347,114" duration="12" ease="Back.Out"/>
+    <item time="18" type="Alpha" target="n9_jddv" value="1"/>
+  </transition>
 </component>
