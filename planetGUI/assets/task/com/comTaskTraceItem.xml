@@ -4,9 +4,9 @@
     <loader id="n5_ovpo" name="icon" xy="0,0" size="193,59" fill="scaleFree">
       <relation target="n4_ovpo" sidePair="bottomext-bottom"/>
     </loader>
-    <component id="n6_lreq" name="ladTitle" src="lrequ" xy="14,9"/>
-    <text id="n3_ovpo" name="tfTaskName" xy="62,11" size="123,18" font="方正准圆简体" fontSize="13" color="#ffffff" vAlign="middle" autoSize="none" bold="true" text="任务名字"/>
-    <richtext id="n4_ovpo" name="ftTaskDesc" xy="17,35" size="159,18" font="方正准圆简体" fontSize="13" color="#ffffff" ubb="true" autoSize="height" bold="true" text="任务描述"/>
+    <component id="n6_lreq" name="ladTitle" src="lrequ" fileName="com/ladTaskTitle.xml" xy="14,9"/>
+    <text id="n3_ovpo" name="tfTaskName" xy="62,11" size="123,18" fontSize="13" color="#ffffff" vAlign="middle" autoSize="none" text="任务名字"/>
+    <richtext id="n4_ovpo" name="ftTaskDesc" xy="17,35" size="159,18" fontSize="13" color="#ffffff" ubb="true" autoSize="height" text="任务描述"/>
   </displayList>
   <Button mode="Radio"/>
   <relation target="n4_ovpo" sidePair="bottomext-bottom"/>

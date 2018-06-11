@@ -5,7 +5,7 @@
     <image id="n2_8zcx" name="bg" src="8zcx19" pkg="te1gxawo" xy="0,0"/>
     <image id="n4_rw7f" name="n4" src="8zcx3" xy="162,61"/>
     <component id="n8_rw7f" name="btnClose" src="sz33y" pkg="te1gxawo" xy="650,-7"/>
-    <text id="n3_8zcx" name="title" xy="257,0" size="176,44" font="方正准圆简体" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="设置"/>
+    <text id="n3_8zcx" name="title" xy="257,0" size="176,44" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none"  text="设置"/>
     <list id="n5_rw7f" name="lstSettingRbtn" xy="22,76" size="132,188" lineGap="4" defaultItem="ui://wu3n4vxqrw7fd">
       <item title="系统"/>
       <item title="声音"/>
@@ -18,7 +18,7 @@
     <component id="n17_rkpi" name="winChatSetting" src="rkpio" xy="200,132" size="434,153">
       <gearDisplay controller="conSetting" pages="2"/>
     </component>
-    <text id="n18_tt9l" name="n18" xy="341,201" size="138,53" fontSize="43" autoSize="none" bold="true" text="TO DO">
+    <text id="n18_tt9l" name="n18" xy="341,201" size="138,53" fontSize="43" autoSize="none"  text="TO DO">
       <gearDisplay controller="conSetting" pages="0,3"/>
     </text>
   </displayList>

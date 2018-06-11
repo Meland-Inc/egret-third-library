@@ -4,7 +4,7 @@
   <displayList>
     <image id="n0_kmol" name="imgBg" src="kmol0" xy="0,0" size="1136,640"/>
     <image id="n1_kmol" name="imgPanel" src="kmol1" xy="303,127"/>
-    <text id="n2_kmol" name="tfTitle" xy="303,127" size="163,45" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="角色选择">
+    <text id="n2_kmol" name="tfTitle" xy="303,127" size="163,45" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none"  text="角色选择">
       <gearText controller="conLogin" pages="0" values="角色选择" default="用户登陆"/>
     </text>
     <list id="n5_kmol" name="lstSexy" xy="365,206" size="406,194" layout="row" overflow="scroll" colGap="65" defaultItem="ui://0n4pg0opkmold">
