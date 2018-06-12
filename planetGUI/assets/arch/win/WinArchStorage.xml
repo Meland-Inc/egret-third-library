@@ -4,12 +4,11 @@
     <image id="n0_824h" name="n0" src="lxnu3" fileName="img/bg_compose.png" xy="0,0"/>
     <image id="n2_824h" name="n2" src="lxnup" fileName="img/img_compose_17.png" xy="15,55"/>
     <image id="n3_824h" name="n3" src="lxnup" fileName="img/img_compose_17.png" xy="425,55"/>
-    <text id="n4_824h" name="tfTitle" xy="344,10" size="150,30" fontSize="24" color="#ffffff" align="center" autoSize="none"  text="箱子(小)"/>
-    <component id="n5_824h" name="btnClose" src="sz33y" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="800,-10"/>
+    <text id="n4_824h" name="tfTitle" xy="344,10" size="150,30" fontSize="24" color="#ffffff" align="center" autoSize="none" text="箱子(小)"/>
     <image id="n8_824h" name="n8" src="lxnuq" fileName="img/img_compose_18.png" xy="22,60"/>
     <image id="n9_824h" name="n9" src="lxnuq" fileName="img/img_compose_18.png" xy="431,60"/>
-    <text id="n10_824h" name="n10" xy="168,62" size="89,27" fontSize="20" color="#57a7df"  text="我的背包"/>
-    <text id="n11_824h" name="n11" xy="588,62" size="68,27" fontSize="20" color="#57a7df"  text="储物格"/>
+    <text id="n10_824h" name="n10" xy="168,62" size="85,26" fontSize="20" color="#57a7df" text="我的背包"/>
+    <text id="n11_824h" name="n11" xy="588,62" size="65,26" fontSize="20" color="#57a7df" text="储物格"/>
     <list id="n12_824h" name="listBag" xy="20,100" size="385,322" layout="flow_hz" overflow="scroll" scrollBarFlags="4" margin="1,1,1,1" lineGap="8" colGap="8" lineItemCount="5" defaultItem="ui://kdeyuiwwlxnu14">
       <item/>
       <item/>
@@ -35,5 +34,6 @@
       <item/>
     </list>
     <component id="n14_824h" name="btnLock" src="824h2b" fileName="btn/btnLock.xml" xy="30,6"/>
+    <component id="n15_jlj8" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="800,-10"/>
   </displayList>
 </component>
