@@ -11,8 +11,9 @@
       <item title="img_map_sign_train" name="8"/>
       <item title="img_map_sign_triangle" name="9"/>
     </list>
-    <image id="n6_p85h" name="n6" src="p85ha" fileName="img/img_map_1.png" xy="92,112"/>
-    <text id="n5_p85h" name="inpMarkName" xy="92,114" size="128,25" input="true" fontSize="18" color="#5e5e5e" align="center" vAlign="middle" autoSize="none" singleLine="true" text=""/>
+    <image id="n6_p85h" name="inputBg" src="p85ha" fileName="img/img_map_1.png" xy="92,112" group="n10_pxns"/>
+    <text id="n5_p85h" name="inpMarkName" xy="92,113" size="128,25" group="n10_pxns" input="true" prompt="自定义标记" fontSize="18" color="#5e5e5e" align="center" vAlign="middle" autoSize="none" singleLine="true" text=""/>
+    <group id="n10_pxns" name="grpMarkInput" xy="92,112" size="128,26" advanced="true"/>
     <component id="n8_p85h" name="btnPutMark" src="obf018" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="101,148" size="110,41">
       <Button title="放置" titleColor="#cc6600" titleFontSize="20" icon="ui://k08mtk0rp85h9"/>
     </component>

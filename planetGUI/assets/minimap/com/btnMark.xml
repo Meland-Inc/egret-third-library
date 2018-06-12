@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="21,25" extention="Button">
-  <controller name="conSelect" pages="0,normal,1,selected,2,showTips" selected="2"/>
+  <controller name="conSelect" pages="0,normal,1,selected,2,showTips" selected="0"/>
   <displayList>
     <image id="n1_p85h" name="tfBg" src="p85hc" fileName="img/img_map_3.png" xy="-7,-18" size="36,20" group="n6_kjpo">
       <relation target="n0_p85h" sidePair="width-width,top-top"/>
       <relation target="" sidePair="center-center,top-top"/>
     </image>
-    <text id="n0_p85h" name="title" xy="-7,-17" size="36,20" group="n6_kjpo" fontSize="14" color="#ffffff" align="center" vAlign="middle" singleLine="true" text="mark">
+    <text id="n0_p85h" name="title" xy="-7,-17" size="37,18" group="n6_kjpo" fontSize="14" color="#ffffff" align="center" vAlign="middle" singleLine="true" text="mark">
       <relation target="" sidePair="top-top,center-center"/>
     </text>
     <group id="n6_kjpo" name="grpMarkName" xy="-7,-18" size="35,20" advanced="true" collapsed="true">
