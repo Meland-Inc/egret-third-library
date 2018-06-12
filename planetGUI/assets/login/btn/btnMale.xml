@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="200,225" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n1" name="n1" src="ptq41w" fileName="img/bg_unselected.png" xy="0,0" size="200,225" aspect="true">
+      <gearDisplay controller="button" pages="0,2"/>
+    </image>
+    <image id="n2" name="n2" src="ptq41u" fileName="img/img_roleselect_selected.png" xy="-2,-2" size="204,229">
+      <gearDisplay controller="button" pages="1,3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n3_meg5" name="n3" src="ptq41p" fileName="img/img_avatar_man.png" xy="37,31" size="124,161" aspect="true"/>
+    <image id="n4_no43" name="n4" src="ptq41s" fileName="img/img_male.png" xy="20,20"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

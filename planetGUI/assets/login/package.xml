@@ -1,26 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="0n4pg0op" jpegQuality="80" compressPNG="true">
   <resources>
-    <image id="kmol0" name="bg_roleselect_1.png" path="/img/" exported="true"/>
-    <image id="kmol1" name="bg_roleselect_2.png" path="/img/" exported="true"/>
-    <image id="kmol2" name="btn_roleselect_dice.png" path="/img/" exported="true"/>
-    <image id="kmol3" name="btn_roleselect_enter_1.png" path="/img/" exported="true"/>
-    <image id="kmol4" name="btn_roleselect_enter_2.png" path="/img/" exported="true"/>
-    <image id="kmol5" name="img_avatar_man.png" path="/img/" exported="true"/>
-    <image id="kmol6" name="img_avatar_woman.png" path="/img/" exported="true"/>
-    <image id="kmol7" name="img_man.png" path="/img/" exported="true"/>
-    <image id="kmol8" name="img_roleselect_name.png" path="/img/" exported="true"/>
-    <image id="kmol9" name="img_roleselect_select.png" path="/img/" exported="true"/>
-    <image id="kmola" name="img_roleselect_selected.png" path="/img/" exported="true"/>
-    <image id="kmolb" name="img_woman.png" path="/img/" exported="true"/>
-    <component id="kmolc" name="WinLogin.xml" path="/win/" exported="true"/>
-    <component id="kmold" name="btnMaleRid.xml" path="/btn/" exported="true"/>
-    <component id="kmole" name="btnFemaleRid.xml" path="/btn/" exported="true"/>
-    <component id="hr2ef" name="WinSelectServer.xml" path="/win/" exported="true"/>
-    <component id="hr2eg" name="combserverItem.xml" path="/comb/" exported="true"/>
-    <component id="hr2en" name="combServerPopup.xml" path="/comb/" exported="true"/>
-    <component id="obf0o" name="WinServerList.xml" path="/win/" exported="true"/>
-    <component id="rw7fp" name="btnSelectServer.xml" path="/btn/"/>
+    <image id="jddvq" name="icon_login_mail.png" path="/img/"/>
+    <image id="jddvr" name="icon_login_password.png" path="/img/"/>
+    <image id="jddvs" name="icon_login_user.png" path="/img/"/>
+    <image id="jddvt" name="icon_qq.png" path="/img/"/>
+    <image id="jddvu" name="icon_wechat.png" path="/img/"/>
+    <image id="jddvv" name="img_bellgame.png" path="/img/"/>
+    <image id="jddvw" name="img_login_1.png" path="/img/"/>
+    <image id="jddvx" name="img_login_3.png" path="/img/"/>
+    <image id="jddvy" name="img_login_5.png" path="/img/"/>
+    <image id="jddvz" name="img_login_6.png" path="/img/"/>
+    <image id="jddv10" name="img_login_title.png" path="/img/"/>
+    <image id="jddv11" name="bg_code_1.png" path="/img/"/>
+    <image id="jddv12" name="bg_login.png" path="/img/"/>
+    <image id="jddv13" name="btn_login_1.png" path="/img/"/>
+    <image id="jddv14" name="btn_login_2.png" path="/img/"/>
+    <image id="jddv15" name="btn_login_3.png" path="/img/"/>
+    <image id="jddv16" name="btn_login_4.png" path="/img/"/>
+    <image id="jddv17" name="btn_login_closed.png" path="/img/"/>
+    <image id="jddv18" name="icon_login_keyboard.png" path="/img/"/>
+    <component id="jddv19" name="WinLogin.xml" path="/win/" exported="true"/>
+    <component id="jddv1e" name="btnClose.xml" path="/btn/"/>
+    <component id="jddv1f" name="btnWXLogin.xml" path="/btn/"/>
+    <component id="jddv1g" name="btnQQLogin.xml" path="/btn/"/>
+    <component id="jddv1h" name="btnAccountLogin.xml" path="/btn/"/>
+    <component id="jddv1i" name="btnVisitorLogin.xml" path="/btn/"/>
+    <component id="ptq41j" name="btnSignin.xml" path="/btn/"/>
+    <component id="ptq41k" name="btnSignup.xml" path="/btn/"/>
+    <component id="ptq41l" name="btnLogin.xml" path="/btn/"/>
+    <component id="ptq41m" name="btnUsernameSignup.xml" path="/btn/"/>
+    <component id="ptq41n" name="btnEmailSignup.xml" path="/btn/"/>
+    <image id="ptq41p" name="img_avatar_man.png" path="/img/"/>
+    <image id="ptq41q" name="img_avatar_woman.png" path="/img/"/>
+    <image id="ptq41r" name="img_female.png" path="/img/"/>
+    <image id="ptq41s" name="img_male.png" path="/img/"/>
+    <image id="ptq41t" name="img_roleselect_name.png" path="/img/"/>
+    <image id="ptq41u" name="img_roleselect_selected.png" path="/img/"/>
+    <image id="ptq41v" name="bg_roleselect_2.png" path="/img/"/>
+    <image id="ptq41w" name="bg_unselected.png" path="/img/"/>
+    <image id="ptq41x" name="btn_roleselect_dice.png" path="/img/"/>
+    <image id="ptq41y" name="btn_roleselect_enter_1.png" path="/img/"/>
+    <component id="ptq41z" name="btnDice.xml" path="/btn/"/>
+    <component id="ptq421" name="btnMale.xml" path="/btn/"/>
+    <component id="no4323" name="btnFemale.xml" path="/btn/"/>
+    <component id="no4324" name="WinCreateRole.xml" path="/win/" exported="true"/>
+    <image id="no4325" name="bg_roleselect_1.png" path="/img/"/>
+    <component id="no4326" name="btnStartGame.xml" path="/btn/"/>
+    <image id="no4327" name="btn_roleselect_enter_2.png" path="/img/"/>
+    <component id="jgot28" name="WinClickContinue.xml" path="/win/" exported="true"/>
+    <image id="jgot29" name="btn_build_left.png" path="/img/"/>
+    <image id="jgot2a" name="btn_build_right.png" path="/img/"/>
+    <image id="hsrb2b" name="btn_login_return.png" path="/img/"/>
+    <component id="hsrb2c" name="btnReturn.xml" path="/btn/"/>
   </resources>
   <publish name="login"/>
 </packageDescription>

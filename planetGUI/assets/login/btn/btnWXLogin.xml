@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="354,58" extention="Button">
+  <displayList>
+    <image id="n0_jddv" name="n0" src="jddv13" fileName="img/btn_login_1.png" xy="0,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n2_jddv" name="n2" xy="140,13" size="117,31" group="n4_jddv" font="方正准圆简体" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="微信登录"/>
+    <image id="n3_jddv" name="n3" src="jddvu" fileName="img/icon_wechat.png" xy="94,12" group="n4_jddv"/>
+    <group id="n4_jddv" name="n4" xy="94,12" size="164,32" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.90"/>
+</component>

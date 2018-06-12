@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="354,58" extention="Button">
+  <displayList>
+    <image id="n0_jddv" name="n0" src="jddv14" fileName="img/btn_login_2.png" xy="0,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n1_jddv" name="n1" xy="143,14" size="103,31" group="n3_jddv" font="方正准圆简体" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="QQ登录"/>
+    <image id="n2_jddv" name="n2" src="jddvt" fileName="img/icon_qq.png" xy="97,12" group="n3_jddv"/>
+    <group id="n3_jddv" name="n3" xy="96,12" size="149,33" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.90"/>
+</component>

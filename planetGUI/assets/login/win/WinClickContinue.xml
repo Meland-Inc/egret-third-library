@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640">
+  <displayList>
+    <image id="n1_jgot" name="n1" src="no4325" fileName="img/bg_roleselect_1.png" xy="0,0" size="1136,640">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </image>
+    <text id="n2_jgot" name="n2" xy="515,304" size="101,31" group="n5_hsrb" font="方正准圆简体" fontSize="24" color="#ffffff" text="点击继续"/>
+    <image id="n3_jgot" name="n3" src="jgot2a" fileName="img/btn_build_right.png" xy="470,308" group="n5_hsrb"/>
+    <image id="n4_jgot" name="n4" src="jgot29" fileName="img/btn_build_left.png" xy="650,308" group="n5_hsrb"/>
+    <group id="n5_hsrb" name="n5" xy="470,304" size="195,31" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+  <transition name="t0" autoPlay="true" autoPlayRepeat="-1">
+    <item time="0" type="Alpha" target="n4_jgot" tween="true" startValue="1" endValue="0" duration="24" ease="Linear"/>
+    <item time="0" type="Alpha" target="n3_jgot" tween="true" startValue="1" endValue="0" duration="24" ease="Linear"/>
+    <item time="24" type="Alpha" target="n4_jgot" tween="true" startValue="0" endValue="1" duration="24" ease="Linear"/>
+    <item time="24" type="Alpha" target="n3_jgot" tween="true" startValue="0" endValue="1" duration="24" ease="Linear"/>
+  </transition>
+</component>
