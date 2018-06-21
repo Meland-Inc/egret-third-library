@@ -2,12 +2,9 @@
 <component size="313,228">
   <displayList>
     <image id="n0_k8dt" name="n0" src="k8dt11" fileName="img/bg_bag_2.png" xy="0,0"/>
-    <text id="n1_k8dt" name="n1" xy="93,4" size="119,32" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none"  text="拆分数量"/>
-    <component id="n3_k8dt" name="btnClose" src="sz33y" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="279,-2" size="39,39">
-      <Button icon="ui://ruc22gntk8dt13"/>
-    </component>
+    <text id="n1_k8dt" name="n1" xy="93,4" size="119,32" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="拆分数量"/>
     <image id="n4_k8dt" name="n4" src="k8dt17" fileName="img/img_bag_number.png" xy="131,56" group="n7_k8dt"/>
-    <text id="n8_k8dt" name="tfNum" xy="131,62" size="50,28" group="n7_k8dt" fontSize="20" color="#a7afaf" align="center" vAlign="middle" autoSize="none"  text="0&#xA;"/>
+    <text id="n8_k8dt" name="tfNum" xy="131,62" size="50,28" group="n7_k8dt" fontSize="20" color="#a7afaf" align="center" vAlign="middle" autoSize="none" text="0&#xA;"/>
     <component id="n16_k8dt" name="btnSub" src="k8dt1g" fileName="btn/btnAddSub.xml" xy="106,66" group="n7_k8dt"/>
     <component id="n18_k8dt" name="btnAdd" src="k8dt1g" fileName="btn/btnAddSub.xml" xy="194,66" group="n7_k8dt">
       <Button icon="ui://ruc22gntk8dt12"/>
@@ -20,5 +17,8 @@
       <Slider value="1" max="10"/>
     </component>
     <text id="n19_lj6i" name="tfSplitMsg" xy="49,207" size="213,18" fontSize="12" color="#ff8f02" align="center" autoSize="none" text="没有空闲的位置摆放"/>
+    <component id="n21_fyx8" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="279,-2" size="42,43">
+      <Button icon="ui://te1gxawoqn8o4"/>
+    </component>
   </displayList>
 </component>

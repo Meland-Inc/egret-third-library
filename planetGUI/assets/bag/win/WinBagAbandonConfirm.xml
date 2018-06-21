@@ -2,18 +2,18 @@
 <component size="313,228">
   <displayList>
     <image id="n1_lj6i" name="bg" src="k8dt11" fileName="img/bg_bag_2.png" xy="0,2"/>
-    <component id="n3_lj6i" name="btnClose" src="sz33y" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="279,0" size="39,39">
-      <Button icon="ui://ruc22gntk8dt13"/>
-    </component>
-    <text id="n2_lj6i" name="title" xy="93,6" size="119,32" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none"  text="丢弃物品"/>
+    <text id="n2_lj6i" name="title" xy="93,6" size="119,32" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="丢弃物品"/>
     <component id="n9_lj6i" name="btnConfirm" src="td6ep" fileName="btn/btnCommon.xml" xy="174,168">
       <Button title="确定" titleColor="#599c11" icon="ui://ruc22gntk8dt14"/>
     </component>
     <component id="n12_lj6i" name="btnCancel" src="td6ep" fileName="btn/btnCommon.xml" xy="32,168">
       <Button title="取消" titleColor="#ffffff" icon="ui://ruc22gntk8dt16"/>
     </component>
-    <text id="n13_lj6i" name="tfConfirmTips" xy="63,98" size="188,24" fontSize="18" color="#afafaf" ubb="true"  singleLine="true" text="确认丢弃[color=#e58049]生命药水[/color]吗？">
+    <text id="n13_lj6i" name="tfConfirmTips" xy="63,98" size="185,23" fontSize="18" color="#afafaf" ubb="true" singleLine="true" text="确认丢弃[color=#e58049]生命药水[/color]吗？">
       <relation target="" sidePair="center-center"/>
     </text>
+    <component id="n15_fyx8" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="279,0" size="42,43">
+      <Button icon="ui://te1gxawoqn8o4"/>
+    </component>
   </displayList>
 </component>

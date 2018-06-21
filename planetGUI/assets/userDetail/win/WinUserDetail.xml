@@ -3,7 +3,7 @@
   <controller name="tab" alias="detaiAndCreation" exported="true" pages="0,detail,1,creation" selected="0"/>
   <displayList>
     <image id="n9_zsen" name="panel" src="ctbhm" fileName="img/bg_bag.png" xy="0,11"/>
-    <component id="n85_apmc" name="btnClose" src="ctbh2" fileName="btn/btnDetailClose.xml" xy="591,0"/>
+    <component id="n92_fyx8" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="591,0"/>
     <text id="n11_zsen" name="title" xy="234,11" size="158,39" fontSize="22" color="#ffffff" align="center" vAlign="middle" leading="0" autoSize="none" text="个人详情"/>
     <image id="n28_zsen" name="tabBg" src="ctbho" fileName="img/img_interfacebg_001.png" xy="14,70" group="n29_zsen"/>
     <component id="n83_apmc" name="detailBtn" src="ctbh0" fileName="btn/btnUserDataRadio.xml" xy="24,87" group="n29_zsen">

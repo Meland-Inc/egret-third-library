@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="te1gxawo" jpegQuality="80" compressPNG="true">
   <resources>
-    <component id="qn8o0" name="WinConfirm.xml" path="/win/"/>
-    <image id="qn8o1" name="bg_bag.png" path="/img/"/>
-    <image id="qn8o2" name="bg_bag_2.png" path="/img/"/>
-    <image id="qn8o3" name="bg_modal.png" path="/img/"/>
-    <image id="qn8o4" name="btn_close1.png" path="/img/"/>
-    <image id="qn8o5" name="btn_close2.png" path="/img/"/>
-    <image id="qn8o6" name="btn_green.png" path="/img/"/>
-    <image id="qn8o7" name="btn_red.png" path="/img/"/>
-    <image id="qn8o8" name="img_main_chatbubble_1.png" path="/img/" scale="9grid" scale9grid="25,10,50,20"/>
-    <image id="qn8o9" name="img_main_chatbubble_2.png" path="/img/"/>
-    <component id="qn8oa" name="CommonModal.xml" path="/com/"/>
-    <component id="qn8ob" name="CommonBubbleText.xml" path="/com/"/>
-    <component id="qn8oc" name="btnClose.xml" path="/btn/"/>
-    <component id="qn8od" name="btnCommon.xml" path="/btn/"/>
-    <component id="qn8oe" name="rbtnCommon.xml" path="/btn/"/>
+    <component id="qn8o0" name="WinConfirm.xml" path="/win/" exported="true"/>
+    <image id="qn8o1" name="bg_bag.png" path="/img/" exported="true"/>
+    <image id="qn8o2" name="bg_bag_2.png" path="/img/" exported="true"/>
+    <image id="qn8o3" name="bg_modal.png" path="/img/" exported="true"/>
+    <image id="qn8o4" name="btn_close1.png" path="/img/" exported="true"/>
+    <image id="qn8o5" name="btn_close2.png" path="/img/" exported="true"/>
+    <image id="qn8o6" name="btn_green.png" path="/img/" exported="true"/>
+    <image id="qn8o7" name="btn_red.png" path="/img/" exported="true"/>
+    <image id="qn8o8" name="img_main_chatbubble_1.png" path="/img/" exported="true" scale="9grid" scale9grid="25,10,50,20"/>
+    <image id="qn8o9" name="img_main_chatbubble_2.png" path="/img/" exported="true"/>
+    <component id="qn8oa" name="CommonModal.xml" path="/com/" exported="true"/>
+    <component id="qn8ob" name="CommonBubbleText.xml" path="/com/" exported="true"/>
+    <component id="qn8oc" name="btnClose.xml" path="/btn/" exported="true"/>
+    <component id="qn8od" name="btnCommon.xml" path="/btn/" exported="true"/>
+    <component id="qn8oe" name="rbtnCommon.xml" path="/btn/" exported="true"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>

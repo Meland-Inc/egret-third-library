@@ -3,6 +3,9 @@
   <displayList>
     <image id="n1_p85h" name="n1" src="p85h2" fileName="img/bg_map.png" xy="0,0"/>
     <text id="n2_p85h" name="n2" xy="93,8" size="120,26" fontSize="22" color="#ffffff" align="center" autoSize="none" text="选择标记"/>
+    <component id="n16_fyx8" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="274,-5" size="42,43">
+      <Button icon="ui://te1gxawoqn8o4"/>
+    </component>
     <list id="n3_p85h" name="lstMarkBtn" xy="0,51" size="313,59" layout="row" scroll="horizontal" defaultItem="ui://k08mtk0rp85hq" align="center">
       <item title="img_map_sign_star" name="4"/>
       <item title="img_map_sign_anchor" name="5"/>
@@ -14,11 +17,8 @@
     <image id="n6_p85h" name="inputBg" src="p85ha" fileName="img/img_map_1.png" xy="92,112" group="n10_pxns"/>
     <text id="n5_p85h" name="inpMarkName" xy="92,113" size="128,25" group="n10_pxns" input="true" prompt="自定义标记" fontSize="18" color="#5e5e5e" align="center" vAlign="middle" autoSize="none" singleLine="true" text=""/>
     <group id="n10_pxns" name="grpMarkInput" xy="92,112" size="128,26" advanced="true"/>
-    <component id="n8_p85h" name="btnPutMark" src="obf018" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="101,148" size="110,41">
+    <component id="n13_fyx8" name="btnPutMark" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="101,148">
       <Button title="放置" titleColor="#cc6600" titleFontSize="20" icon="ui://k08mtk0rp85h9"/>
-    </component>
-    <component id="n9_ohl4" name="btnClose" src="sz33y" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="275,-5" size="42,43">
-      <Button icon="ui://te1gxawoohl41b"/>
     </component>
   </displayList>
 </component>
