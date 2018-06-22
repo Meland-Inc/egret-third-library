@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="103,29" extention="Button">
+  <displayList>
+    <image id="n0_xjj8" name="n0" src="xjj81u" fileName="img/btn_main_server.png" xy="0,0"/>
+    <text id="n1_xjj8" name="tfServer" xy="0,7" size="103,21" font="FZZhunYuan-M02S" fontSize="15" color="#656a6c" align="center" vAlign="middle" leading="0" autoSize="none" text="分线服务器1&#xA;"/>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.90"/>
+</component>
