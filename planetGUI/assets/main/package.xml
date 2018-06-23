@@ -59,6 +59,9 @@
     <component id="xjj81s" name="btnMainServer.xml" path="/btn/"/>
     <image id="xjj81u" name="btn_main_server.png" path="/img/"/>
     <component id="xjj81v" name="WinMainServer.xml" path="/win/" exported="true"/>
+    <component id="wfql1w" name="pbrMainPlayerHp(1).xml" path="/pbr/"/>
+    <component id="wfql1x" name="btnSetting.xml" path="/btn/"/>
+    <image id="wfql1y" name="btn_main_machine.png" path="/img/"/>
   </resources>
   <publish name="main"/>
 </packageDescription>

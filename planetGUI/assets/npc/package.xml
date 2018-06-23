@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="tis07nuv" jpegQuality="80" compressPNG="true">
-  <resources/>
+  <resources>
+    <component id="wfql0" name="WinNpc.xml" path="/win/"/>
+    <image id="wfql1" name="10003.png" path="/img/"/>
+    <image id="wfql2" name="10004.png" path="/img/"/>
+    <image id="wfql3" name="artgod.png" path="/img/"/>
+    <image id="wfql4" name="bg_npc_1.png" path="/img/"/>
+    <image id="wfql5" name="bg_npc_2.png" path="/img/"/>
+    <image id="wfql6" name="btn_build_close.png" path="/img/"/>
+    <image id="wfql7" name="btn_task_accept.png" path="/img/"/>
+    <image id="wfql8" name="btn_task_complete.png" path="/img/"/>
+    <image id="wfql9" name="btn_task_select.png" path="/img/"/>
+    <image id="wfqla" name="icon_avatar_001.png" path="/img/"/>
+    <image id="wfqlb" name="img_avatarbg_001.png" path="/img/"/>
+    <image id="wfqlc" name="img_avatarbg_1.png" path="/img/"/>
+    <image id="wfqld" name="img_npc_mark_1.png" path="/img/"/>
+    <image id="wfqle" name="img_npc_mark_2.png" path="/img/"/>
+    <image id="wfqlf" name="img_npc_mark_3.png" path="/img/"/>
+    <image id="wfqlg" name="img_npc_mark_4.png" path="/img/"/>
+    <image id="wfqlh" name="img_npc_mark_5.png" path="/img/"/>
+    <image id="wfqli" name="img_npc_mark_6.png" path="/img/"/>
+    <image id="wfqlj" name="img_npc_mark_7.png" path="/img/"/>
+    <image id="wfqlk" name="img_task_item.png" path="/img/"/>
+    <image id="wfqll" name="img_task_reward.png" path="/img/"/>
+    <image id="wfqlm" name="mathgod.png" path="/img/"/>
+    <image id="wfqln" name="sciencegod.png" path="/img/"/>
+    <component id="wfqlo" name="comTaskRewardItem.xml" path="/com/"/>
+    <component id="wfqlp" name="comTaskRwards.xml" path="/com/"/>
+    <component id="wfqlq" name="btnCommon.xml" path="/btn/"/>
+    <component id="wfqlr" name="btnTask1.xml" path="/btn/"/>
+    <component id="wfqls" name="btnTask2.xml" path="/btn/"/>
+  </resources>
   <publish name="npc"/>
 </packageDescription>
