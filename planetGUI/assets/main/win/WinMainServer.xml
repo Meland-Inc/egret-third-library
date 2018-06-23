@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="180,35" overflow="hidden">
+  <displayList>
+    <component id="n1_xjj8" name="btnShow" src="9prt1o" fileName="btn/btnMainShow.xml" xy="111,4"/>
+    <component id="n0_xjj8" name="btnMainServer" src="xjj81s" fileName="btn/btnMainServer.xml" xy="2,2"/>
+  </displayList>
+  <transition name="show">
+    <item time="0" type="XY" target="n0_xjj8" tween="true" startValue="2,2" endValue="180,2" duration="9"/>
+    <item time="0" type="XY" target="n1_xjj8" tween="true" startValue="111,4" endValue="180,4" duration="9"/>
+  </transition>
+  <transition name="hide">
+    <item time="0" type="XY" target="n0_xjj8" value="180,2"/>
+    <item time="0" type="XY" target="n1_xjj8" value="180,3"/>
+    <item time="9" type="XY" target="n0_xjj8" tween="true" startValue="180,2" endValue="2,2" duration="9"/>
+    <item time="9" type="XY" target="n1_xjj8" tween="true" startValue="180,4" endValue="111,4" duration="9"/>
+  </transition>
+</component>

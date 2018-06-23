@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="838,454">
-  <controller name="state" pages="0,normal,1,detail" selected="1"/>
+  <controller name="state" pages="0,normal,1,detail" selected="0"/>
   <displayList>
     <image id="n0_824h" name="n0" src="lxnu3" fileName="img/bg_compose.png" xy="-1,0"/>
-    <text id="n1_824h" name="tfTitle" xy="344,9" size="150,30" fontSize="24" color="#ffffff" align="center" autoSize="none"  text="详情"/>
-    <component id="n2_824h" name="btnClose" src="sz33y" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="800,-10"/>
+    <text id="n1_824h" name="tfTitle" xy="344,9" size="150,30" fontSize="24" color="#ffffff" align="center" autoSize="none" text="详情"/>
     <image id="n3_824h" name="n3" src="lxnus" fileName="img/img_compose_2.png" xy="17,51"/>
     <image id="n4_824h" name="n4" src="lxnuu" fileName="img/img_compose_4.png" xy="21,57"/>
-    <text id="n5_824h" name="n5" xy="100,61" size="89,27" fontSize="20" color="#57a7df"  text="我的背包"/>
+    <text id="n5_824h" name="n5" xy="100,61" size="85,26" fontSize="20" color="#57a7df" text="我的背包"/>
     <image id="n7_824h" name="n7" src="lxnus" fileName="img/img_compose_2.png" xy="556,59"/>
     <image id="n8_824h" name="n8" src="lxnuu" fileName="img/img_compose_4.png" xy="560,65"/>
     <list id="n6_824h" name="listBag" xy="19,100" size="260,285" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="5" colGap="5" lineItemCount="4" defaultItem="ui://kdeyuiwwlxnu1c">
@@ -22,7 +21,7 @@
       <item/>
       <item/>
     </list>
-    <text id="n9_824h" name="tfRobotBag" xy="584,69" size="200,27" fontSize="20" color="#57a7df" align="center" autoSize="none"  text="方呆头的背包"/>
+    <text id="n9_824h" name="tfRobotBag" xy="584,69" size="200,27" fontSize="20" color="#57a7df" align="center" autoSize="none" text="方呆头的背包"/>
     <list id="n10_824h" name="listRobotBag" xy="558,110" size="260,285" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="5" colGap="5" lineItemCount="4" defaultItem="ui://kdeyuiwwlxnu1c">
       <item/>
       <item/>
@@ -58,10 +57,10 @@
     <component id="n17_824h" name="itemJewel2" src="lxnu19" fileName="com/comArchItemPu57.xml" xy="485,280" group="n25_824h">
       <Label title="饰品"/>
     </component>
-    <text id="n20_824h" name="tfName" xy="359,285" size="120,24" group="n25_824h" fontSize="18" color="#666666" align="center" vAlign="middle" autoSize="none"  text="方呆头"/>
-    <text id="n21_824h" name="tfLevel" xy="369,310" size="100,23" group="n25_824h" fontSize="16" color="#57a7df" align="center" autoSize="none"  text="LV.4"/>
-    <text id="n22_824h" name="tfAtk" xy="375,350" size="32,24" group="n25_824h" fontSize="18" color="#666666" vAlign="middle"  text="200"/>
-    <text id="n23_824h" name="tfDef" xy="455,350" size="32,24" group="n25_824h" fontSize="18" color="#666666" vAlign="middle"  text="200"/>
+    <text id="n20_824h" name="tfName" xy="359,285" size="120,24" group="n25_824h" fontSize="18" color="#666666" align="center" vAlign="middle" autoSize="none" text="方呆头"/>
+    <text id="n21_824h" name="tfLevel" xy="369,310" size="100,23" group="n25_824h" fontSize="16" color="#57a7df" align="center" autoSize="none" text="LV.4"/>
+    <text id="n22_824h" name="tfAtk" xy="375,350" size="32,24" group="n25_824h" fontSize="18" color="#666666" vAlign="middle" text="200"/>
+    <text id="n23_824h" name="tfDef" xy="455,350" size="32,24" group="n25_824h" fontSize="18" color="#666666" vAlign="middle" text="200"/>
     <component id="n24_824h" name="btnDetail" src="824h25" fileName="btn/btnArchYellow.xml" xy="364,385" group="n25_824h">
       <Button controller="state" page="1"/>
     </component>
@@ -71,8 +70,8 @@
     <component id="n26_824h" name="labBasic" src="824h26" fileName="com/comTalentTitle.xml" xy="316,66" size="203,27" group="n39_824h">
       <Label title="基本属性"/>
     </component>
-    <text id="n27_824h" name="tfDetailLv" xy="304,106" size="92,21" group="n39_824h" fontSize="15" color="#9e9e9e" autoSize="none"  text="LV  50"/>
-    <text id="n28_824h" name="tfDetailExp" xy="400,106" size="137,21" group="n39_824h" fontSize="15" color="#9e9e9e" autoSize="none"  text="EXP 200/99999"/>
+    <text id="n27_824h" name="tfDetailLv" xy="304,106" size="92,21" group="n39_824h" fontSize="15" color="#9e9e9e" autoSize="none" text="LV  50"/>
+    <text id="n28_824h" name="tfDetailExp" xy="400,106" size="137,21" group="n39_824h" fontSize="15" color="#9e9e9e" autoSize="none" text="EXP 200/99999"/>
     <component id="n29_824h" name="labFight" src="824h26" fileName="com/comTalentTitle.xml" xy="316,144" size="203,27" group="n39_824h">
       <Label title="战斗属性"/>
     </component>
@@ -103,5 +102,6 @@
     <group id="n39_824h" name="n39" xy="304,66" size="233,360" advanced="true">
       <gearDisplay controller="state" pages="1"/>
     </group>
+    <component id="n40_jlj8" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="800,-10"/>
   </displayList>
 </component>

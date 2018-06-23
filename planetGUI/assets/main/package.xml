@@ -8,7 +8,6 @@
     <image id="w80l4" name="btn_main_city.png" path="/img/" exported="true"/>
     <image id="w80l5" name="btn_main_create.png" path="/img/" exported="true"/>
     <image id="w80l6" name="btn_main_formula.png" path="/img/" exported="true"/>
-    <image id="w80l8" name="btn_main_server.png" path="/img/" exported="true"/>
     <image id="w80l9" name="btn_main_setting.png" path="/img/" exported="true"/>
     <image id="w80la" name="btn_main_skill.png" path="/img/" exported="true"/>
     <image id="w80ld" name="img_main_item_1.png" path="/img/" exported="true"/>
@@ -53,6 +52,13 @@
     <component id="dura1l" name="WinMainEnemyInfo.xml" path="/win/" exported="true"/>
     <component id="dura1m" name="pbrMainHp.xml" path="/pbr/"/>
     <component id="vmyf1n" name="pbrMainPlayerHp.xml" path="/pbr/"/>
+    <component id="9prt1o" name="btnMainShow.xml" path="/btn/"/>
+    <component id="9prt1p" name="btnMainHide.xml" path="/btn/"/>
+    <image id="9prt1q" name="btn_main_storage_1.png" path="/img/"/>
+    <image id="9prt1r" name="btn_main_storage_2.png" path="/img/"/>
+    <component id="xjj81s" name="btnMainServer.xml" path="/btn/"/>
+    <image id="xjj81u" name="btn_main_server.png" path="/img/"/>
+    <component id="xjj81v" name="WinMainServer.xml" path="/win/" exported="true"/>
   </resources>
   <publish name="main"/>
 </packageDescription>
