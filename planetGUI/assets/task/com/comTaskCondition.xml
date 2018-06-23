@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="238,30" extention="Label">
+<component size="236,30" extention="Label">
   <displayList>
-    <text id="n0_jhex" name="title" xy="0,6" size="200,23" fontSize="18" color="#82da0f" vAlign="bottom" text="安装五个家具     （5/5）"/>
-    <loader id="n1_jhex" name="icon" xy="206,3" size="28,22">
+    <text id="n0_jhex" name="title" xy="0,6" size="201,23" fontSize="18" color="#82da0f" vAlign="bottom" singleLine="true" text="安装五个家具     （5/5）"/>
+    <image id="n2_gkgn" name="icon" src="sz338" fileName="img/icon_task_OK.png" xy="204,3">
       <relation target="n0_jhex" sidePair="left-right"/>
-    </loader>
+    </image>
   </displayList>
   <relation target="n0_jhex" sidePair="rightext-right"/>
 </component>

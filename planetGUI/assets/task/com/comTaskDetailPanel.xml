@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="450,290" overflow="scroll">
+<component size="446,297" overflow="scroll">
   <displayList>
     <text id="n0_sz33" name="tfTaskName" xy="10,0" size="77,23" fontSize="18" color="#84c9f7" vAlign="middle" ubb="true" singleLine="true" text="任务名字"/>
     <richtext id="n1_sz33" name="tfTaskDesc" xy="10,30" size="399,25" fontSize="16" color="#bdbdbd" ubb="true" autoSize="none" text="任务描述&#xA;"/>
     <image id="n2_sz33" name="ImgSplit" src="sz33f" fileName="img/img_task_bg_007.png" xy="10,70">
       <relation target="n1_sz33" sidePair="top-bottom"/>
     </image>
-    <list id="n3_sz33" name="lstTaskCondition" xy="10,91" size="432,64" lineGap="7" defaultItem="ui://eunktclqjhexn" autoClearItems="true">
+    <list id="n3_sz33" name="lstTaskCondition" xy="10,91" size="231,64" lineGap="7" defaultItem="ui://eunktclqjhexn" autoClearItems="true">
       <relation target="n2_sz33" sidePair="top-bottom"/>
       <item/>
       <item/>
@@ -14,13 +14,13 @@
     <image id="n5_jhex" name="ImgSplit" src="sz33f" fileName="img/img_task_bg_007.png" xy="10,175">
       <relation target="n3_sz33" sidePair="top-bottom"/>
     </image>
-    <image id="n9_nmg7" name="n9" src="sz3312" fileName="img/img_task_reward.png" pkg="tis07nuv" xy="14,201" group="n11_nmg7"/>
-    <text id="n10_nmg7" name="n10" xy="17,204" size="40,18" group="n11_nmg7" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none"  text="奖励"/>
-    <group id="n11_nmg7" name="rewardTitle" xy="14,201" size="47,24" group="n14_nmg7" collapsed="true"/>
-    <list id="n13_nmg7" name="lstReward" xy="10,233" size="237,54" group="n14_nmg7" layout="flow_hz" colGap="8" lineItemCount="4" defaultItem="ui://tis07nuvqzgyw" vAlign="middle" autoClearItems="true">
+    <image id="n9_nmg7" name="n9" src="sz3312" fileName="img/img_task_reward.png" pkg="tis07nuv" xy="17,201" group="n11_nmg7"/>
+    <text id="n10_nmg7" name="n10" xy="20,204" size="40,18" group="n11_nmg7" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="奖励"/>
+    <group id="n11_nmg7" name="rewardTitle" xy="17,201" size="47,24" group="n14_nmg7" collapsed="true"/>
+    <list id="n13_nmg7" name="lstReward" xy="10,233" size="237,64" group="n14_nmg7" layout="flow_hz" colGap="8" lineItemCount="4" defaultItem="ui://tis07nuvqzgyw" vAlign="middle" autoClearItems="true">
       <item/>
     </list>
-    <group id="n14_nmg7" name="grpReward" xy="10,201" size="237,86" advanced="true">
+    <group id="n14_nmg7" name="grpReward" xy="10,201" size="237,96" advanced="true">
       <relation target="n5_jhex" sidePair="top-bottom"/>
     </group>
   </displayList>

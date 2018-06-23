@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="53,52" extention="Label">
+<component size="64,64" extention="Label">
   <displayList>
-    <loader id="n1_ovpo" name="icon" xy="0,0" size="53,52" url="ui://tis07nuvovpo18" align="center" vAlign="middle"/>
-    <text id="n2_nmg7" name="name" xy="0,0" size="53,52" fontSize="12" align="center" vAlign="middle" autoSize="none"  text=""/>
-    <text id="n3_oy2m" name="title" xy="34,35" size="17,18" fontSize="12" align="center" autoSize="none" singleLine="true" text="1"/>
+    <image id="n4_gkgn" name="bg" src="sz33g" fileName="img/img_task_item.png" pkg="eunktclq" xy="0,0" size="64,64"/>
+    <loader id="n1_ovpo" name="icon" xy="7,7" size="50,51" align="center" vAlign="middle" fill="scale"/>
+    <text id="n2_nmg7" name="name" xy="0,0" size="64,64" fontSize="12" align="center" vAlign="middle" autoSize="none" text=""/>
+    <text id="n3_oy2m" name="title" xy="44,47" size="18,17" fontSize="12" align="center" vAlign="middle" autoSize="none" singleLine="true" text="1"/>
   </displayList>
 </component>

@@ -1,35 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="tis07nuv" jpegQuality="80" compressPNG="true">
-  <resources>
-    <image id="ctbhm" name="btn_build_close.png" path="/img/" exported="true"/>
-    <image id="ctbhp" name="img_npc_mark_1.png" path="/img/" exported="true"/>
-    <image id="ctbhq" name="img_npc_mark_2.png" path="/img/" exported="true"/>
-    <image id="ctbhr" name="img_npc_mark_3.png" path="/img/" exported="true"/>
-    <component id="ctbhs" name="WinNpc.xml" path="/win/" exported="true"/>
-    <component id="qzgyu" name="btnTask1.xml" path="/btn/" exported="true"/>
-    <component id="qzgyv" name="comTaskRwards.xml" path="/com/" exported="true"/>
-    <component id="qzgyw" name="comTaskRewardItem.xml" path="/com/" exported="true"/>
-    <image id="sz3310" name="btn_task_accept.png" path="/img/" exported="true"/>
-    <image id="sz3311" name="btn_task_complete.png" path="/img/" exported="true"/>
-    <image id="sz3312" name="img_task_reward.png" path="/img/" exported="true"/>
-    <image id="ovpo13" name="bg_npc_2.png" path="/img/"/>
-    <image id="ovpo14" name="bg_npc_1.png" path="/img/" scale9grid="193,0,615,211"/>
-    <image id="ovpo15" name="btn_task_select.png" path="/img/" exported="true"/>
-    <image id="ovpo16" name="icon_avatar_001.png" path="/img/" exported="true"/>
-    <image id="ovpo17" name="img_avatarbg_1.png" path="/img/" exported="true"/>
-    <image id="ovpo18" name="img_task_item.png" path="/img/" exported="true"/>
-    <image id="ovpo19" name="img_avatarbg_001.png" path="/img/" exported="true"/>
-    <component id="td6e1a" name="btnCommon.xml" path="/btn/" exported="true"/>
-    <image id="oy2m1b" name="10003.png" path="/img/" exported="true"/>
-    <image id="oy2m1c" name="10004.png" path="/img/" exported="true"/>
-    <component id="p8hk1d" name="btnTask2.xml" path="/btn/" exported="true"/>
-    <image id="p8hk1e" name="img_npc_mark_4.png" path="/img/" exported="true"/>
-    <image id="p8hk1f" name="img_npc_mark_5.png" path="/img/" exported="true"/>
-    <image id="p8hk1g" name="img_npc_mark_6.png" path="/img/" exported="true"/>
-    <image id="p8hk1h" name="img_npc_mark_7.png" path="/img/" exported="true"/>
-    <image id="q67x1i" name="artgod.png" path="/img/"/>
-    <image id="q67x1j" name="mathgod.png" path="/img/" exported="true"/>
-    <image id="q67x1k" name="sciencegod.png" path="/img/" exported="true"/>
-  </resources>
+  <resources/>
   <publish name="npc"/>
 </packageDescription>

@@ -3,7 +3,7 @@
   <displayList>
     <loader id="n1_ozbm" name="icon" xy="0,0" size="70,71" url="ui://ruc22gnttd6eg" align="center" vAlign="middle"/>
     <loader id="n3_igcl" name="img" xy="3,3" size="64,64" align="center" vAlign="middle" fill="scale"/>
-    <text id="n2_igcl" name="title" xy="46,49" size="23,22" fontSize="16" color="#916545" autoSize="none" text="99"/>
+    <text id="n2_igcl" name="title" xy="46,49" size="23,22" visible="false" fontSize="16" color="#916545" autoSize="none" text="99"/>
   </displayList>
   <Button mode="Radio"/>
 </component>

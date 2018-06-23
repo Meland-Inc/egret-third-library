@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="694,453">
-  <controller name="conTaskDetail" pages="0,main,1,branch" selected="0"/>
+  <controller name="conTaskDetail" pages="0,main,1,branch" selected="1"/>
   <displayList>
     <image id="n22_fyx8" name="bg" src="qn8o1" fileName="img/bg_bag.png" pkg="te1gxawo" xy="0,0"/>
     <component id="n23_fyx8" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="650,-9"/>
@@ -8,10 +8,10 @@
     <image id="n21_lreq" name="imgNoTaskTips" src="lreqs" fileName="img/img_task_empty.png" xy="185,238"/>
     <text id="n1_sz33" name="title" xy="257,0" size="176,44" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="任务"/>
     <component id="n4_sz33" name="btnShowMainTask" src="sz33j" fileName="btn/btnMainBranchRd.xml" xy="44,60">
-      <Button checked="true" icon="ui://eunktclqsz334" selectedIcon="ui://eunktclqsz332" controller="conTaskDetail" page="0"/>
+      <Button icon="ui://eunktclqsz334" selectedIcon="ui://eunktclqsz332" controller="conTaskDetail" page="0"/>
     </component>
     <component id="n5_sz33" name="btnShowBranchTask" src="sz33j" fileName="btn/btnMainBranchRd.xml" xy="174,60">
-      <Button title="支线任务" icon="ui://eunktclqsz334" selectedIcon="ui://eunktclqsz333" controller="conTaskDetail" page="1"/>
+      <Button checked="true" title="支线任务" icon="ui://eunktclqsz334" selectedIcon="ui://eunktclqsz333" controller="conTaskDetail" page="1"/>
     </component>
     <list id="n9_sz33" name="lstMainTaskBtn" xy="35,105" size="130,308" overflow="scroll" margin="10,0,0,0" defaultItem="ui://eunktclqsz33k" align="center" autoClearItems="true">
       <gearDisplay controller="conTaskDetail" pages="0"/>
@@ -31,6 +31,6 @@
       <item icon="ui://eunktclqsz336" selectedIcon="ui://eunktclqsz335"/>
       <item icon="ui://eunktclqsz336" selectedIcon="ui://eunktclqsz335"/>
     </list>
-    <component id="n19_sz33" name="comTaskDetailPanel" src="sz33l" fileName="com/comTaskDetailPanel.xml" xy="208,120" size="450,290"/>
+    <component id="n19_sz33" name="comTaskDetailPanel" src="sz33l" fileName="com/comTaskDetailPanel.xml" xy="208,120" size="450,301"/>
   </displayList>
 </component>

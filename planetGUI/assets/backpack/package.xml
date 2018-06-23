@@ -24,7 +24,7 @@
     <image id="td6ek" name="img_bag_property.png" path="/img/" exported="true"/>
     <image id="td6el" name="img_bag_scrollbar_1.png" path="/img/" exported="true"/>
     <image id="td6em" name="img_bag_scrollbar_2.png" path="/img/" exported="true"/>
-    <component id="td6en" name="WinBag.xml" path="/win/" exported="true"/>
+    <component id="td6en" name="WinBackpack.xml" path="/win/" exported="true"/>
     <component id="td6eo" name="equipItem.xml" path="/com/"/>
     <component id="td6ep" name="btnCommon.xml" path="/btn/"/>
     <component id="ozbmq" name="bagItem.xml" path="/com/"/>
@@ -35,7 +35,7 @@
     <component id="ozbmv" name="comTalentDetail.xml" path="/com/"/>
     <component id="ozbmw" name="comEquip.xml" path="/com/"/>
     <component id="hr2ex" name="comSelectServer.xml" path="/com/"/>
-    <component id="qcvi10" name="WinTips.xml" path="/win/" exported="true"/>
+    <component id="qcvi10" name="comTips.xml" path="/win/" exported="true"/>
     <image id="k8dt11" name="bg_bag_2.png" path="/img/"/>
     <image id="k8dt12" name="btn_add.png" path="/img/"/>
     <image id="k8dt13" name="btn_build_close.png" path="/img/"/>
@@ -54,5 +54,5 @@
     <component id="k8dt1g" name="btnAddSub.xml" path="/btn/"/>
     <component id="lj6i1h" name="WinBagAbandonConfirm.xml" path="/win/" exported="true"/>
   </resources>
-  <publish name="bag"/>
+  <publish name="backpack"/>
 </packageDescription>
