@@ -62,6 +62,10 @@
     <component id="wfql1w" name="pbrMainPlayerHp(1).xml" path="/pbr/"/>
     <component id="wfql1x" name="btnSetting.xml" path="/btn/"/>
     <image id="wfql1y" name="btn_main_machine.png" path="/img/"/>
+    <component id="uvm01z" name="labHitFlutterWord.xml" path="/lab/" exported="true"/>
+    <image id="uvm020" name="img_Blood volume_1.png" path="/img/"/>
+    <image id="uvm021" name="img_Blood volume_2.png" path="/img/"/>
+    <component id="uvm022" name="ComHeadInfo.xml" path="/com/" exported="true"/>
   </resources>
   <publish name="main"/>
 </packageDescription>
