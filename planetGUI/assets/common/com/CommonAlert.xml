@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="313,228">
+  <displayList>
+    <image id="n0_hxf8" name="n0" src="qn8o2" fileName="img/bg_bag_2.png" xy="0,0"/>
+    <text id="n3_hxf8" name="n3" xy="129,3" size="53,31" fontSize="24" color="#ffffff" text="确认"/>
+    <component id="n2_hxf8" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" xy="273,-2" size="42,43">
+      <Button icon="ui://te1gxawoqn8o4" selectedIcon="ui://te1gxawoqn8o4"/>
+    </component>
+    <component id="n4_hxf8" name="btnCancel" src="hxf8f" fileName="btn/btnCancel.xml" xy="20,170">
+      <Button title="取消"/>
+    </component>
+    <component id="n5_hxf8" name="btnConfirm" src="qn8od" fileName="btn/btnCommon.xml" xy="180,170">
+      <Button title="确定"/>
+    </component>
+    <text id="n6_hxf8" name="tfContent" xy="31,70" size="250,80" fontSize="18" color="#9a9a9a" autoSize="none" text="啊啊啊"/>
+  </displayList>
+</component>
