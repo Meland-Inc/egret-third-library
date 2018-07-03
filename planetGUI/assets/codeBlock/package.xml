@@ -12,6 +12,8 @@
     <image id="oe8k8" name="img_compose_8.png" path="/img/"/>
     <component id="oe8k9" name="btnArchFormulaTab.xml" path="/btn/"/>
     <component id="oe8ka" name="btnArchItemPu70.xml" path="/btn/"/>
+    <component id="hzryb" name="ToolTipCodeBlockItem.xml" path="/com/" exported="true"/>
+    <component id="hzryc" name="comCodeBlockItemPu70.xml" path="/btn/"/>
   </resources>
   <publish name="codeBlock"/>
 </packageDescription>
