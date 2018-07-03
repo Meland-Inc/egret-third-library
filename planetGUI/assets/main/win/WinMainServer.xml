@@ -9,9 +9,7 @@
     <item time="0" type="XY" target="n1_xjj8" tween="true" startValue="111,4" endValue="180,4" duration="9"/>
   </transition>
   <transition name="hide">
-    <item time="0" type="XY" target="n0_xjj8" value="180,2"/>
-    <item time="0" type="XY" target="n1_xjj8" value="180,3"/>
-    <item time="9" type="XY" target="n0_xjj8" tween="true" startValue="180,2" endValue="2,2" duration="9"/>
-    <item time="9" type="XY" target="n1_xjj8" tween="true" startValue="180,4" endValue="111,4" duration="9"/>
+    <item time="0" type="XY" target="n0_xjj8" tween="true" startValue="180,2" endValue="2,2" duration="9"/>
+    <item time="0" type="XY" target="n1_xjj8" tween="true" startValue="180,4" endValue="111,4" duration="9"/>
   </transition>
 </component>

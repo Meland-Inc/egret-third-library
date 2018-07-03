@@ -1,29 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="79,390" overflow="hidden">
+<component size="79,390">
   <displayList>
-    <component id="n1_ua4x" name="btnCity" src="ua4xw" fileName="btn/btnMainCity.xml" xy="8,71"/>
-    <component id="n3_ua4x" name="btnFormula" src="ua4xy" fileName="btn/btnMainFormula.xml" xy="7,153"/>
-    <component id="n4_ua4x" name="btnTask" src="ua4xz" fileName="btn/btnMainTask.xml" xy="7,235"/>
-    <component id="n2_ua4x" name="btnCreate" src="ua4xx" fileName="btn/btnMainCreate.xml" xy="7,317"/>
-    <component id="n5_9prt" name="btnHide" src="9prt1p" fileName="btn/btnMainHide.xml" xy="0,19"/>
+    <component id="n5_9prt" name="btnHide" src="9prt1p" fileName="btn/btnMainHide.xml" xy="0,-100"/>
+    <component id="n3_ua4x" name="btnFormula" src="ua4xy" fileName="btn/btnMainFormula.xml" xy="6,-100"/>
+    <component id="n4_ua4x" name="btnTask" src="ua4xz" fileName="btn/btnMainTask.xml" xy="6,-100"/>
+    <component id="n2_ua4x" name="btnCreate" src="ua4xx" fileName="btn/btnMainCreate.xml" xy="6,-100"/>
+    <component id="n10_wfql" name="btnSetting" src="wfql1x" fileName="btn/btnSetting.xml" xy="6,-100"/>
   </displayList>
   <transition name="show">
-    <item time="0" type="XY" target="n1_ua4x" value="8,-100"/>
-    <item time="0" type="XY" target="n2_ua4x" value="7,-100"/>
-    <item time="0" type="XY" target="n4_ua4x" value="7,-100"/>
-    <item time="0" type="XY" target="n3_ua4x" value="7,-100"/>
-    <item time="0" type="XY" target="n5_9prt" value="0,-100"/>
-    <item time="9" type="XY" target="n2_ua4x" tween="true" startValue="7,-100" endValue="7,317" duration="9"/>
-    <item time="9" type="XY" target="n4_ua4x" tween="true" startValue="7,-100" endValue="7,235" duration="9"/>
-    <item time="9" type="XY" target="n5_9prt" tween="true" startValue="0,-100" endValue="0,19" duration="9"/>
-    <item time="9" type="XY" target="n1_ua4x" tween="true" startValue="8,-100" endValue="8,71" duration="9"/>
-    <item time="9" type="XY" target="n3_ua4x" tween="true" startValue="7,-100" endValue="7,153" duration="9"/>
+    <item time="0" type="XY" target="n10_wfql" tween="true" startValue="6,-100" endValue="6,318" duration="9"/>
+    <item time="0" type="XY" target="n4_ua4x" tween="true" startValue="7,-100" endValue="7,153" duration="9"/>
+    <item time="0" type="XY" target="n3_ua4x" tween="true" startValue="7,-100" endValue="7,71" duration="9"/>
+    <item time="0" type="XY" target="n2_ua4x" tween="true" startValue="7,-100" endValue="7,235" duration="9"/>
+    <item time="0" type="XY" target="n5_9prt" tween="true" startValue="0,-100" endValue="0,19" duration="9"/>
   </transition>
   <transition name="hide">
+    <item time="0" type="XY" target="n10_wfql" tween="true" startValue="6,318" endValue="6,-100" duration="9"/>
+    <item time="0" type="XY" target="n3_ua4x" tween="true" startValue="7,71" endValue="7,-100" duration="9"/>
     <item time="0" type="XY" target="n5_9prt" tween="true" startValue="0,19" endValue="0,-100" duration="9"/>
-    <item time="0" type="XY" target="n3_ua4x" tween="true" startValue="7,153" endValue="7,-100" duration="9"/>
-    <item time="0" type="XY" target="n4_ua4x" tween="true" startValue="7,235" endValue="7,-100" duration="9"/>
-    <item time="0" type="XY" target="n1_ua4x" tween="true" startValue="8,71" endValue="8,-100" duration="9"/>
-    <item time="0" type="XY" target="n2_ua4x" tween="true" startValue="7,317" endValue="7,-100" duration="9"/>
+    <item time="0" type="XY" target="n2_ua4x" tween="true" startValue="7,235" endValue="7,-100" duration="9"/>
+    <item time="0" type="XY" target="n4_ua4x" tween="true" startValue="7,153" endValue="7,-100" duration="9"/>
   </transition>
 </component>
