@@ -2,9 +2,8 @@
 <component size="694,453">
   <displayList>
     <image id="n0_oe8k" name="n0" src="oe8k1" fileName="img/bg_bag.png" xy="0,0"/>
-    <component id="n1_oe8k" name="btnClose" src="sz33y" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="660,-10"/>
     <image id="n5_oe8k" name="n5" src="oe8k6" fileName="img/img_code_1.png" xy="175,60"/>
-    <text id="n2_oe8k" name="n2" xy="269,10" size="155,30" fontSize="24" color="#ffffff"  text="选择一个道具"/>
+    <text id="n2_oe8k" name="n2" xy="269,10" size="149,31" fontSize="24" color="#ffffff" text="选择一个道具"/>
     <list id="n3_oe8k" name="listTab" xy="33,63" size="129,290" margin="2,2,2,2" lineGap="5" defaultItem="ui://4o62dubdoe8k9">
       <item title="工具"/>
       <item title="武器"/>
@@ -23,8 +22,9 @@
       <item/>
       <item/>
     </list>
-    <component id="n6_oe8k" name="btnConfirm" src="obf018" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="478,383">
-      <Button title="确定" titleColor="#599c11" titleFontSize="20" selectedTitle="确定"/>
+    <component id="n7_hxf8" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="660,-10"/>
+    <component id="n8_hxf8" name="btnConfirm" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="478,383">
+      <Button title="确定" titleColor="#599c11" titleFontSize="20"/>
     </component>
   </displayList>
 </component>
