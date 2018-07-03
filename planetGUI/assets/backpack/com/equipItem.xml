@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="68,68" extention="Button">
+<component size="70,71" extention="Button">
+  <controller name="conSelect" pages="0,normal,1,selected" selected="0"/>
   <displayList>
-    <loader id="n0_td6e" name="icon" xy="0,0" size="68,68" url="ui://ruc22gnttd6eg" align="center" vAlign="middle" autoSize="true"/>
-    <text id="n3_igcl" name="title" xy="6,6" size="56,56" fontSize="15" color="#9e9e9e" align="center" vAlign="middle" autoSize="none" text=""/>
-    <loader id="n2_ozbm" name="img" xy="6,6" size="56,56" align="center" vAlign="middle" fill="scale"/>
+    <loader id="n0_td6e" name="bg" xy="1,1" size="68,68" url="ui://ruc22gnttd6eg" align="center" vAlign="middle" autoSize="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <image id="n8_grbn" name="imgSelected" src="td6eh" fileName="img/img_bag_item_2.png" xy="0,0">
+      <gearDisplay controller="conSelect" pages="1"/>
+    </image>
+    <loader id="n2_ozbm" name="icon" xy="1,1" size="68,68" url="ui://ruc22gntgrbn1i" align="center" vAlign="middle"/>
   </displayList>
   <Button mode="Radio"/>
 </component>
