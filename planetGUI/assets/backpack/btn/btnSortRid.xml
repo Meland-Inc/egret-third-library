@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="82,56" extention="Button">
+  <controller name="conSelect" pages="0,normal,1,selected" selected="0"/>
   <displayList>
-    <loader id="n0_ozbm" name="icon" xy="0,0" size="82,56" url="ui://ruc22gnttd6e2"/>
-    <text id="n1_ozbm" name="title" xy="11,0" size="70,56" fontSize="18" color="#9e9e9e" vAlign="middle" autoSize="none" text="全部"/>
+    <loader id="n0_ozbm" name="icon" xy="0,0" size="82,56" url="ui://ruc22gnttd6e2">
+      <gearIcon controller="conSelect" pages="1" values="ui://ruc22gnttd6e3" default="ui://ruc22gnttd6e2"/>
+    </loader>
+    <text id="n1_ozbm" name="title" xy="11,0" size="70,56" fontSize="18" color="#9e9e9e" vAlign="middle" autoSize="none" text="全部">
+      <gearColor controller="conSelect" pages="1" values="#ffffff,#000000" default="#9e9e9e,#000000"/>
+    </text>
   </displayList>
   <Button mode="Radio"/>
 </component>
