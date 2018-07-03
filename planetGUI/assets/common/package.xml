@@ -16,6 +16,8 @@
     <component id="qn8oc" name="btnClose.xml" path="/btn/" exported="true"/>
     <component id="qn8od" name="btnCommon.xml" path="/btn/" exported="true"/>
     <component id="qn8oe" name="rbtnCommon.xml" path="/btn/" exported="true"/>
+    <component id="cnpnf" name="CommonToast.xml" path="/com/" exported="true"/>
+    <image id="cnpng" name="img_common_prompt.png" path="/img/" scale="9grid" scale9grid="9,7,374,13"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>
