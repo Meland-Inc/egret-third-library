@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="125,53" extention="Button">
+<component size="210,80" extention="Button">
   <displayList>
-    <loader id="n0_apmc" name="icon" xy="0,0" size="125,53" url="ui://7xhwdeuzctbh1"/>
-    <text id="n1_apmc" name="title" xy="1,8" size="124,44" fontSize="25" color="#ffffff" align="center" vAlign="middle" leading="7" autoSize="none"  text=""/>
+    <loader id="n0_apmc" name="icon" xy="0,0" size="210,80" align="center" vAlign="middle"/>
+    <text id="n1_apmc" name="title" xy="43,18" size="124,44" font="FZZhunYuan-M02S" fontSize="28" color="#94a9c0" align="center" vAlign="middle" leading="7" autoSize="none" bold="true" text=""/>
   </displayList>
   <Button mode="Radio"/>
 </component>
