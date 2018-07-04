@@ -17,7 +17,7 @@
     <image id="td6ed" name="img_bag_equip_4.png" path="/img/"/>
     <image id="td6ee" name="img_bag_equip_5.png" path="/img/"/>
     <image id="td6ef" name="img_bag_equip_6.png" path="/img/"/>
-    <image id="td6eg" name="img_bag_item_1.png" path="/img/"/>
+    <image id="td6eg" name="img_bag_item_1.png" path="/img/" exported="true"/>
     <image id="td6eh" name="img_bag_item_2.png" path="/img/"/>
     <image id="td6ei" name="img_bag_item_3.png" path="/img/"/>
     <image id="td6ej" name="img_bag_item_4.png" path="/img/" scale="9grid" scale9grid="25,20,109,40"/>
@@ -59,7 +59,7 @@
     <image id="grbn1l" name="icon_bag_jewelry.png" path="/img/"/>
     <image id="grbn1m" name="icon_bag_underwear.png" path="/img/"/>
     <image id="grbn1n" name="icon_bag_weapon.png" path="/img/"/>
-    <image id="grbn1o" name="bg_bag_tips.png" path="/img/" scale="9grid" scale9grid="9,11,38,37" gridTile="3"/>
+    <image id="grbn1o" name="bg_bag_tips.png" path="/img/" exported="true" scale="9grid" scale9grid="9,11,38,37" gridTile="3"/>
     <component id="grbn1p" name="comObjectDetailPanel.xml" path="/com/" exported="true"/>
     <component id="fcaj1q" name="sortCutsItem.xml" path="/com/"/>
     <image id="fcaj1r" name="img_main_item_1.png" path="/img/"/>
@@ -67,6 +67,7 @@
     <image id="fcaj1t" name="btn_main_bag.png" path="/img/"/>
     <component id="fcaj1u" name="comBackpackPanel.xml" path="/com/"/>
     <image id="pkc81v" name="img_bag_item_5.png" path="/img/"/>
+    <movieclip id="tebw1w" name="MovieClip1.jta" path="/win/"/>
   </resources>
   <publish name="backpack"/>
 </packageDescription>
