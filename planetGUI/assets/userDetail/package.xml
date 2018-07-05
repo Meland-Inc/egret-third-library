@@ -29,6 +29,30 @@
     <image id="ctbhp" name="img_wordbg_002.png" path="/img/" exported="true"/>
     <image id="ctbhq" name="img_wordbg_003.png" path="/img/" exported="true"/>
     <component id="ctbhr" name="WinUserDetail.xml" path="/win/" exported="true"/>
+    <component id="f5tys" name="comSelectUserIconView.xml" path="/com/" exported="true"/>
+    <component id="f5tyt" name="btnChange.xml" path="/btn/" exported="true"/>
+    <image id="dj9qu" name="bg_idiopanal_1.png" path="/img/"/>
+    <image id="dj9qv" name="bg_idiopanal_2.png" path="/img/"/>
+    <component id="dj9qw" name="comIcon.xml" path="/com/" exported="true"/>
+    <image id="dj9qx" name="btn_idiopanal.png" path="/img/" exported="true"/>
+    <image id="dj9qy" name="btn_idiopanal_2.png" path="/img/" exported="true"/>
+    <image id="dj9qz" name="btn_idiopanal_3.png" path="/img/" exported="true"/>
+    <image id="dj9q10" name="btn_blue.png" path="/img/"/>
+    <image id="dj9q11" name="btn_login_closed.png" path="/img/"/>
+    <image id="dj9q13" name="img_robot_roleframe.png" path="/img/"/>
+    <image id="dj9q14" name="btn_robot_1.png" path="/img/" exported="true"/>
+    <component id="dj9q15" name="btnConfirm.xml" path="/btn/" exported="true"/>
+    <component id="lkft16" name="btnChangePage.xml" path="/btn/"/>
+    <image id="lkft17" name="btn_idiopanel_right.png" path="/img/"/>
+    <image id="lkft18" name="btn_idiopanel_left.png" path="/img/"/>
+    <component id="qbzr19" name="comConfirmView.xml" path="/com/"/>
+    <image id="qbzr1a" name="bg_subline.png" path="/img/"/>
+    <image id="cnpn1b" name="img_subline_1.png" path="/img/"/>
+    <image id="cnpn1c" name="btn_subline_1.png" path="/img/"/>
+    <image id="cnpn1d" name="img_subline_2.png" path="/img/"/>
+    <image id="cnpn1e" name="img_wordbg_1.png" path="/img/"/>
+    <image id="cnpn1f" name="img_progressbar_2.png" path="/img/"/>
+    <image id="cnpn1g" name="img_progressbar_1.png" path="/img/"/>
   </resources>
   <publish name="userDetail"/>
 </packageDescription>

@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="430,366">
+<component size="676,410">
   <displayList>
-    <image id="n2_apmc" name="n2" src="ctbha" xy="20,11" group="n4_apmc"/>
-    <loader id="n3_apmc" name="iconAvatar" xy="25,16" size="51,50" group="n4_apmc" url="ui://7xhwdeuzctbhb" fill="scale"/>
-    <group id="n4_apmc" name="n4" xy="20,11" size="61,61" group="n7_apmc"/>
-    <text id="n5_apmc" name="usernameLabel" xy="88,13" size="191,22" group="n7_apmc" fontSize="16" color="#84c9f9" vAlign="middle" autoSize="none"  text="&#xA;"/>
-    <text id="n6_apmc" name="userIdLabel" xy="88,37" size="192,21" group="n7_apmc" fontSize="13" color="#acacac" vAlign="middle" autoSize="none"  text="&#xA;"/>
-    <group id="n7_apmc" name="iconGroup" xy="20,11" size="260,61"/>
-    <component id="n1_apmc" name="talent" src="ctbh4" xy="0,85" size="430,224"/>
+    <image id="n8_cnpn" name="detailBG" src="cnpn1d" fileName="img/img_subline_2.png" xy="0,0"/>
+    <image id="n9_cnpn" name="iconbg" src="dj9q13" fileName="img/img_robot_roleframe.png" xy="16,15" size="84,84" group="n10_cnpn"/>
+    <loader id="n3_apmc" name="iconAvatar" xy="29,28" size="60,60" group="n10_cnpn" fill="scale"/>
+    <group id="n10_cnpn" name="icon" xy="16,15" size="84,84" group="n7_apmc"/>
+    <text id="n5_apmc" name="usernameLabel" xy="112,33" size="191,22" group="n7_apmc" font="FZZhunYuan-M02S" fontSize="20" color="#686c6e" vAlign="middle" autoSize="none" bold="true" text="&#xA;"/>
+    <text id="n6_apmc" name="userIdLabel" xy="112,64" size="192,21" group="n7_apmc" font="FZZhunYuan-M02S" fontSize="16" color="#acacac" vAlign="middle" autoSize="none" bold="true" text="&#xA;"/>
+    <group id="n7_apmc" name="iconGroup" xy="16,15" size="288,84"/>
+    <component id="n11_cnpn" name="btnChangeIcon" src="f5tyt" fileName="btn/btnChange.xml" xy="19,104">
+      <Button title="更换头像" titleColor="#ffffff" titleFontSize="16" icon="ui://7xhwdeuzdj9q14"/>
+    </component>
+    <component id="n1_apmc" name="talent" src="ctbh4" fileName="com/comTalent.xml" xy="16,145" size="640,246"/>
   </displayList>
 </component>

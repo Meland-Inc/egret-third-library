@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="50,30">
+  <displayList>
+    <image id="n3_cnpn" name="n3" src="cnpng" fileName="img/img_common_prompt.png" xy="0,0" size="50,30">
+      <relation target="n2_cnpn" sidePair="width-width"/>
+    </image>
+    <text id="n2_cnpn" name="tfContent" xy="14,6" size="21,21" font="FZZhunYuan-M02S" fontSize="15" color="#ffffff" align="center" vAlign="middle" leading="0" bold="true" singleLine="true" text="我"/>
+  </displayList>
+  <relation target="n2_cnpn" sidePair="width-width"/>
+</component>

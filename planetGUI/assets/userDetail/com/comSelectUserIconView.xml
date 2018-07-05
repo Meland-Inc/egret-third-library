@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="642,410">
+  <displayList>
+    <image id="n2_dj9q" name="bg" src="dj9qu" fileName="img/bg_idiopanal_1.png" xy="0,0"/>
+    <list id="n4_dj9q" name="lstIconFrame" xy="93,50" size="469,309" layout="pagination" overflow="scroll" scroll="horizontal" scrollBarFlags="256" lineGap="23" colGap="35" lineItemCount="4" defaultItem="ui://7xhwdeuzdj9qw" align="center" vAlign="middle" autoClearItems="true">
+      <item title="1"/>
+      <item title="2"/>
+      <item/>
+      <item title="3"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n5_dj9q" name="btnCloseSelectIconView" src="ctbh2" fileName="btn/btnDetailClose.xml" xy="591,21">
+      <relation target="" sidePair="right-right,top-top"/>
+    </component>
+    <component id="n6_lkft" name="btnLeft" src="lkft16" fileName="btn/btnChangePage.xml" xy="40,193">
+      <Button icon="ui://7xhwdeuzlkft18"/>
+    </component>
+    <component id="n7_lkft" name="btnRight" src="lkft16" fileName="btn/btnChangePage.xml" xy="587,193">
+      <Button icon="ui://7xhwdeuzlkft17"/>
+    </component>
+  </displayList>
+</component>
