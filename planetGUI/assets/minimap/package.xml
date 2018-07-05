@@ -25,7 +25,7 @@
     <image id="p85hl" name="img_map_sign_8.png" path="/img/" exported="true"/>
     <image id="p85hm" name="img_map_sign_9.png" path="/img/" exported="true"/>
     <image id="p85hn" name="img_map_8.png" path="/img/"/>
-    <component id="p85ho" name="btnMark.xml" path="/com/" exported="true"/>
+    <component id="p85ho" name="customMark.xml" path="/com/" exported="true"/>
     <component id="p85hp" name="WinSelectMark.xml" path="/win/" exported="true"/>
     <component id="p85hq" name="btnMark.xml" path="/btn/"/>
     <component id="ohl4r" name="btn.xml" path="/btn/"/>
@@ -41,9 +41,9 @@
     <component id="j0s611" name="comMainPlayerIcon.xml" path="/com/" exported="true"/>
     <image id="j0s612" name="img_task_bg_1.png" path="/img/"/>
     <image id="kjpo13" name="img_map_sign_14.png" path="/img/"/>
-    <image id="kjpo14" name="btn_map_1.png" path="/img/" exported="true" scale="9grid" scale9grid="20,11,128,18"/>
-    <image id="kjpo15" name="btn_map_2.png" path="/img/" exported="true" scale="9grid" scale9grid="16,10,134,20"/>
-    <component id="kjpo16" name="btnTransMark.xml" path="/com/" exported="true"/>
+    <image id="kjpo14" name="btn_map_1.png" path="/img/" scale="9grid" scale9grid="20,11,128,18"/>
+    <image id="kjpo15" name="btn_map_2.png" path="/img/" scale="9grid" scale9grid="16,10,134,20"/>
+    <component id="kjpo16" name="teleportMark.xml" path="/com/" exported="true"/>
   </resources>
   <publish name="minimap"/>
 </packageDescription>
