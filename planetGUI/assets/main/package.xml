@@ -4,12 +4,10 @@
     <component id="w80l0" name="WinMainRocker.xml" path="/win/" exported="true"/>
     <image id="w80l1" name="btn_main_attack.png" path="/img/" exported="true"/>
     <image id="w80l2" name="btn_main_bag.png" path="/img/" exported="true"/>
-    <image id="w80l3" name="btn_main_build.png" path="/img/" exported="true"/>
     <image id="w80l4" name="btn_main_city.png" path="/img/" exported="true"/>
     <image id="w80l5" name="btn_main_create.png" path="/img/" exported="true"/>
     <image id="w80l6" name="btn_main_formula.png" path="/img/" exported="true"/>
     <image id="w80l9" name="btn_main_setting.png" path="/img/" exported="true"/>
-    <image id="w80la" name="btn_main_skill.png" path="/img/" exported="true"/>
     <image id="w80ld" name="img_main_item_1.png" path="/img/" exported="true"/>
     <image id="w80le" name="img_main_rocker_1.png" path="/img/" exported="true"/>
     <image id="w80lf" name="img_main_rocker_2.png" path="/img/" exported="true"/>
@@ -20,8 +18,7 @@
     <component id="w80lm" name="btnMainBag.xml" path="/btn/"/>
     <component id="w80ln" name="WinMainJoystick.xml" path="/win/" exported="true"/>
     <component id="w80lo" name="btnMainAttack.xml" path="/btn/"/>
-    <component id="w80lp" name="btnMainBuild.xml" path="/btn/"/>
-    <component id="w80lq" name="btnMainSkill.xml" path="/btn/"/>
+    <component id="w80lq" name="btnMainTool.xml" path="/btn/"/>
     <component id="w80lr" name="btnMainRocker.xml" path="/btn/"/>
     <component id="ua4xu" name="WinMainMenu.xml" path="/win/" exported="true"/>
     <component id="ua4xw" name="btnMainCity.xml" path="/btn/"/>
@@ -29,12 +26,6 @@
     <component id="ua4xy" name="btnMainFormula.xml" path="/btn/"/>
     <component id="ua4xz" name="btnMainTask.xml" path="/btn/"/>
     <image id="ua4x10" name="btn_main_task.png" path="/img/" exported="true"/>
-    <image id="ss3y11" name="btn_main_chat.png" path="/img/" exported="true"/>
-    <image id="ss3y12" name="btn_main_felling.png" path="/img/" exported="true"/>
-    <image id="ss3y13" name="btn_main_fist.png" path="/img/" exported="true"/>
-    <image id="ss3y14" name="btn_main_mine.png" path="/img/" exported="true"/>
-    <image id="ss3y15" name="btn_main_pickup.png" path="/img/" exported="true"/>
-    <image id="ss3y16" name="btn_main_view.png" path="/img/" exported="true"/>
     <image id="dura17" name="img_main_avatar_1.png" path="/img/" exported="true"/>
     <image id="dura18" name="img_main_avatar_10.png" path="/img/" exported="true"/>
     <image id="dura19" name="img_main_avatar_11.png" path="/img/" exported="true" scale="9grid" scale9grid="34,4,68,8"/>
@@ -54,17 +45,28 @@
     <component id="vmyf1n" name="pbrMainPlayerHp.xml" path="/pbr/"/>
     <component id="9prt1o" name="btnMainShow.xml" path="/btn/"/>
     <component id="9prt1p" name="btnMainHide.xml" path="/btn/"/>
-    <image id="9prt1q" name="btn_main_storage_1.png" path="/img/"/>
-    <image id="9prt1r" name="btn_main_storage_2.png" path="/img/"/>
+    <image id="9prt1q" name="btn_main_storage_1.png" path="/img/" exported="true"/>
+    <image id="9prt1r" name="btn_main_storage_2.png" path="/img/" exported="true"/>
     <component id="xjj81s" name="btnMainServer.xml" path="/btn/"/>
-    <image id="xjj81u" name="btn_main_server.png" path="/img/"/>
+    <image id="xjj81u" name="btn_main_server.png" path="/img/" exported="true"/>
     <component id="xjj81v" name="WinMainServer.xml" path="/win/" exported="true"/>
     <component id="wfql1x" name="btnSetting.xml" path="/btn/"/>
-    <image id="wfql1y" name="btn_main_machine.png" path="/img/"/>
+    <image id="wfql1y" name="btn_main_machine.png" path="/img/" exported="true"/>
     <component id="uvm01z" name="labHitFlutterWord.xml" path="/lab/" exported="true"/>
-    <image id="uvm020" name="img_Blood volume_1.png" path="/img/"/>
-    <image id="uvm021" name="img_Blood volume_2.png" path="/img/"/>
+    <image id="uvm020" name="img_Blood volume_1.png" path="/img/" exported="true"/>
+    <image id="uvm021" name="img_Blood volume_2.png" path="/img/" exported="true"/>
     <component id="uvm022" name="ComHeadInfo.xml" path="/com/" exported="true"/>
+    <image id="7i8n23" name="btn_main_tool.png" path="/img/" exported="true"/>
+    <image id="7i8n24" name="icon_main_bow.png" path="/img/" exported="true"/>
+    <image id="7i8n25" name="icon_main_build.png" path="/img/" exported="true"/>
+    <image id="7i8n26" name="icon_main_chat.png" path="/img/" exported="true"/>
+    <image id="7i8n27" name="icon_main_felling.png" path="/img/" exported="true"/>
+    <image id="7i8n28" name="icon_main_fist.png" path="/img/" exported="true"/>
+    <image id="7i8n29" name="icon_main_mining.png" path="/img/" exported="true"/>
+    <image id="7i8n2a" name="icon_main_pickup.png" path="/img/" exported="true"/>
+    <image id="7i8n2b" name="icon_main_shoot.png" path="/img/" exported="true"/>
+    <image id="7i8n2c" name="icon_main_watch.png" path="/img/" exported="true"/>
+    <image id="7i8n2d" name="icon_main_work.png" path="/img/" exported="true"/>
   </resources>
   <publish name="main"/>
 </packageDescription>

@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="206,236">
   <displayList>
-    <component id="n3_w80l" name="btnBuild" src="w80lp" fileName="btn/btnMainBuild.xml" xy="120,0">
-      <Button icon="ui://5hs1fuejw80l3"/>
+    <component id="n2_w80l" name="btnAttack" src="w80lo" fileName="btn/btnMainAttack.xml" xy="90,120">
+      <Button icon="ui://5hs1fuej7i8n28"/>
     </component>
-    <component id="n2_w80l" name="btnAttack" src="w80lo" fileName="btn/btnMainAttack.xml" xy="90,120"/>
-    <component id="n1_w80l" name="btnOpera" src="w80lq" fileName="btn/btnMainSkill.xml" xy="0,70"/>
+    <component id="n1_w80l" name="btnOpera" src="w80lq" fileName="btn/btnMainTool.xml" xy="0,70">
+      <Button icon="ui://5hs1fuej7i8n26"/>
+    </component>
+    <component id="n4_7i8n" name="btnBuild" src="w80lq" fileName="btn/btnMainTool.xml" xy="120,0">
+      <Button icon="ui://5hs1fuej7i8n25"/>
+    </component>
   </displayList>
 </component>

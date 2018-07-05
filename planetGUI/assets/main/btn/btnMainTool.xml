@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="74,74" extention="Button">
+  <displayList>
+    <image id="n5_7i8n" name="n5" src="7i8n23" fileName="img/btn_main_tool.png" xy="0,0"/>
+    <loader id="n4_w80l" name="icon" xy="11,11" size="51,52" align="center" vAlign="middle" autoSize="true">
+      <relation target="n5_7i8n" sidePair="center-center,middle-middle"/>
+    </loader>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.90"/>
+</component>
