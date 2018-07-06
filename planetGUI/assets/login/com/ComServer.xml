@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="306,90" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <image id="n1_7s5l" name="n1" src="7s5l2m" fileName="img/btn_subline_2.png" xy="0,0"/>
+    <image id="n3_rhmg" name="select" src="7s5l2l" fileName="img/btn_subline_3.png" xy="-1,0">
+      <gearDisplay controller="button" pages="1"/>
+    </image>
+    <loader id="n4_rhmg" name="ladState" xy="48,39" size="16,16" url="ui://0n4pg0oprhmg2t" align="center" vAlign="middle" autoSize="true"/>
+    <text id="n5_rhmg" name="tfServer" xy="74,33" size="183,27" font="FZZhunYuan-M02S" fontSize="20" color="#94a9c0" align="center" vAlign="middle" leading="0" bold="true" text="服务器1   (102/200)"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>
