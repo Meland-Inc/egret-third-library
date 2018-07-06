@@ -58,6 +58,22 @@
     <image id="y3zw2f" name="btn_login_5.png" path="/img/" scale="9grid" scale9grid="10,8,51,18"/>
     <component id="y3zw2g" name="btnLogout.xml" path="/btn/"/>
     <image id="fyox2h" name="img_login_7.png" path="/img/" scale="9grid" scale9grid="11,11,204,20"/>
+    <component id="7s5l2i" name="WinSelectServer.xml" path="/win/" exported="true"/>
+    <component id="7s5l2j" name="WinSelectBirthPlace.xml" path="/win/" exported="true"/>
+    <component id="7s5l2k" name="ComServer.xml" path="/com/" exported="true"/>
+    <image id="7s5l2l" name="btn_subline_3.png" path="/img/"/>
+    <image id="7s5l2m" name="btn_subline_2.png" path="/img/"/>
+    <image id="7s5l2n" name="bg_subline.png" path="/img/"/>
+    <image id="7s5l2o" name="img_subline_1.png" path="/img/"/>
+    <image id="7s5l2p" name="img_subline_2.png" path="/img/"/>
+    <component id="7s5l2q" name="btnSelectServerType.xml" path="/btn/"/>
+    <image id="7s5l2r" name="btn_subline_1.png" path="/img/"/>
+    <image id="rhmg2t" name="img_subline_normal.png" path="/img/" exported="true"/>
+    <image id="rhmg2u" name="img_subline_busy.png" path="/img/" exported="true"/>
+    <component id="rhmg2v" name="ComWaiting.xml" path="/com/" exported="true"/>
+    <image id="rhmg2w" name="bg_waitinline.png" path="/img/"/>
+    <image id="rhmg2x" name="btn_build_close.png" path="/img/"/>
+    <image id="rhmg2y" name="img_waitinline.png" path="/img/"/>
   </resources>
   <publish name="login"/>
 </packageDescription>

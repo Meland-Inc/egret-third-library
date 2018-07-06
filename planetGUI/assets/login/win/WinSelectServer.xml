@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="920,564">
+  <controller name="state" pages="0,peace,1,chaos" selected="0"/>
+  <displayList>
+    <image id="n1_7s5l" name="bg" src="7s5l2n" fileName="img/bg_subline.png" xy="0,0"/>
+    <image id="n3_7s5l" name="serverBG" src="7s5l2p" fileName="img/img_subline_2.png" xy="234,83"/>
+    <image id="n2_7s5l" name="tabBG" src="7s5l2o" fileName="img/img_subline_1.png" xy="2,80" group="n6_7s5l"/>
+    <component id="n4_7s5l" name="btnPeace" src="7s5l2q" fileName="btn/btnSelectServerType.xml" xy="2,130" group="n6_7s5l">
+      <Button checked="true" title="和平分线" selectedIcon="ui://0n4pg0op7s5l2r" controller="state" page="0"/>
+    </component>
+    <component id="n5_7s5l" name="btnChaos" src="7s5l2q" fileName="btn/btnSelectServerType.xml" xy="2,217" group="n6_7s5l">
+      <Button title="混乱分线" selectedIcon="ui://0n4pg0op7s5l2r" controller="state" page="1"/>
+    </component>
+    <group id="n6_7s5l" name="tabBtn" xy="2,80" size="222,412"/>
+    <list id="n7_rhmg" name="lstServer" xy="254,93" size="636,390" layout="flow_hz" overflow="scroll" lineGap="10" colGap="21" lineItemCount="2" defaultItem="ui://0n4pg0op7s5l2k" align="center" vAlign="middle">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n8_rhmg" name="btnClose" src="jddv1e" fileName="btn/btnClose.xml" xy="868,17"/>
+    <text id="n9_rhmg" name="n9" xy="380,14" size="160,37" font="FZZhunYuan-M02S" fontSize="30" color="#ffffff" align="center" vAlign="middle" leading="0" bold="true" text="分线服务器"/>
+  </displayList>
+</component>
