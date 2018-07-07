@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="75,72" extention="Button">
-  <controller name="conSelect" pages="0,normal,1,selected" selected="0"/>
-  <controller name="conEquipMark" pages="0,hide,1,show" selected="0"/>
+<component size="75,82" extention="Button">
+  <controller name="conSelect" pages="0,normal,1,selected" selected="1"/>
+  <controller name="conEquipMark" pages="0,hide,1,show" selected="1"/>
   <displayList>
     <image id="n4_w80l" name="bg" src="w80ld" fileName="img/img_main_item_1.png" xy="0,8"/>
     <image id="n11_ft0q" name="imgSelectedBg" src="ft0q2e" fileName="img/img_main_item_3.png" xy="-5,2">
       <gearDisplay controller="conSelect" pages="1"/>
     </image>
-    <loader id="n6_w80l" name="icon" xy="3,11" size="58,57" align="center" vAlign="middle" fill="scale"/>
-    <image id="n5_w80l" name="n5" src="w80lk" fileName="img/img_main_item_2.png" xy="48,0"/>
-    <text id="n7_w80l" name="title" xy="50,1" size="22,25" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="1"/>
+    <loader id="n6_w80l" name="icon" xy="3,11" size="64,63" align="center" vAlign="middle" fill="scale"/>
+    <text id="n7_w80l" name="tfKeycode" xy="54,11" size="11,20" fontSize="16" color="#918070" align="center" vAlign="middle" text="1"/>
     <image id="n8_ft0q" name="tagBg" src="ft0q2f" fileName="img/img_main_item_4.png" xy="2,10" group="n10_ft0q"/>
-    <text id="n9_ft0q" name="tfTagName" xy="-1,27" size="29,17" group="n10_ft0q" rotation="-45" fontSize="12" color="#ffffff" text="装备"/>
-    <group id="n10_ft0q" name="n10" xy="-1,10" size="39,36" advanced="true" collapsed="true">
+    <text id="n9_ft0q" name="tfTagName" xy="-1,27" size="33,18" group="n10_ft0q" rotation="-45" fontSize="14" color="#916e4c" align="center" vAlign="middle" text="装备"/>
+    <group id="n10_ft0q" name="n10" xy="-1,10" size="45,38" advanced="true" collapsed="true">
       <gearDisplay controller="conEquipMark" pages="1"/>
     </group>
+    <text id="n12_tcc1" name="title" xy="42,53" size="26,24" fontSize="20" color="#8e4e0f" align="center" vAlign="middle" autoSize="none" text="99&#xA;"/>
   </displayList>
   <Button downEffect="scale" downEffectValue="0.90"/>
 </component>
