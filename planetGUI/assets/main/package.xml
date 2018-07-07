@@ -13,7 +13,6 @@
     <image id="w80lf" name="img_main_rocker_2.png" path="/img/" exported="true"/>
     <component id="w80lg" name="WinMainUserDetail.xml" path="/win/" exported="true"/>
     <component id="w80lh" name="WinMainItemField.xml" path="/win/" exported="true"/>
-    <component id="w80lj" name="btnMainItem.xml" path="/btn/"/>
     <image id="w80lk" name="img_main_item_2.png" path="/img/" exported="true"/>
     <component id="w80lm" name="btnMainBag.xml" path="/btn/"/>
     <component id="w80ln" name="WinMainJoystick.xml" path="/win/" exported="true"/>
@@ -67,6 +66,9 @@
     <image id="7i8n2b" name="icon_main_shoot.png" path="/img/" exported="true"/>
     <image id="7i8n2c" name="icon_main_watch.png" path="/img/" exported="true"/>
     <image id="7i8n2d" name="icon_main_work.png" path="/img/" exported="true"/>
+    <image id="ft0q2e" name="img_main_item_3.png" path="/img/"/>
+    <image id="ft0q2f" name="img_main_item_4.png" path="/img/"/>
+    <component id="ft0q2g" name="shortcutItem.xml" path="/btn/"/>
   </resources>
   <publish name="main"/>
 </packageDescription>
