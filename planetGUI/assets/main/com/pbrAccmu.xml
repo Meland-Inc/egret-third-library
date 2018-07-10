@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="128,10" extention="ProgressBar">
+  <displayList>
+    <image id="n1" name="n1" src="n7lz2h" fileName="img/img_main_chargeforce_1.png" xy="-112,-11" size="240,19"/>
+    <image id="n2" name="bar" src="n7lz2i" fileName="img/img_main_chargeforce_2.png" xy="-112,-9" size="240,15"/>
+    <image id="n6_n7lz" name="mask" src="n7lz2i" fileName="img/img_main_chargeforce_2.png" xy="-112,-9" size="240,15" visible="false"/>
+    <text id="n11_n7lz" name="n11" xy="-19,-12" size="53,22" fontSize="15" color="#ffffff" bold="true" strokeColor="#9a6510" strokeSize="2" text="蓄力中"/>
+  </displayList>
+  <ProgressBar/>
+</component>
