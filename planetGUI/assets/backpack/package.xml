@@ -33,7 +33,7 @@
     <component id="ozbmt" name="labBasicTalent.xml" path="/lab/"/>
     <component id="ozbmu" name="labElementTalent.xml" path="/lab/"/>
     <component id="ozbmv" name="comTalentDetail.xml" path="/com/"/>
-    <component id="ozbmw" name="comEquip.xml" path="/com/"/>
+    <component id="ozbmw" name="comEquipPanel.xml" path="/com/"/>
     <component id="hr2ex" name="comSelectServer.xml" path="/com/"/>
     <component id="qcvi10" name="comTips.xml" path="/win/"/>
     <image id="k8dt11" name="bg_bag_2.png" path="/img/"/>
@@ -60,7 +60,7 @@
     <image id="grbn1m" name="icon_bag_underwear.png" path="/img/"/>
     <image id="grbn1n" name="icon_bag_weapon.png" path="/img/"/>
     <image id="grbn1o" name="bg_bag_tips.png" path="/img/" exported="true" scale="9grid" scale9grid="9,11,38,37" gridTile="3"/>
-    <component id="grbn1p" name="comObjectDetailPanel.xml" path="/com/" exported="true"/>
+    <component id="grbn1p" name="ToolTipBackpackObjectItem.xml" path="/com/" exported="true"/>
     <component id="fcaj1q" name="sortCutsItem.xml" path="/com/"/>
     <image id="fcaj1r" name="img_main_item_1.png" path="/img/"/>
     <image id="fcaj1s" name="img_main_item_2.png" path="/img/"/>
@@ -68,6 +68,7 @@
     <component id="fcaj1u" name="comBackpackPanel.xml" path="/com/"/>
     <image id="pkc81v" name="img_bag_item_5.png" path="/img/"/>
     <movieclip id="tebw1w" name="MovieClip1.jta" path="/win/"/>
+    <component id="r2k31x" name="comObjectItemTip.xml" path="/com/" exported="true"/>
   </resources>
   <publish name="backpack"/>
 </packageDescription>

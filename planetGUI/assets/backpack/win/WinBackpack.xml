@@ -8,7 +8,7 @@
     <component id="n53_fcaj" name="comTalentDetail" src="ozbmv" fileName="com/comTalentDetail.xml" xy="45,87">
       <gearDisplay controller="conAvatar" pages="1"/>
     </component>
-    <component id="n54_fcaj" name="comEquip" src="ozbmw" fileName="com/comEquip.xml" xy="29,94" size="273,292">
+    <component id="n54_fcaj" name="comEquip" src="ozbmw" fileName="com/comEquipPanel.xml" xy="29,94" size="273,292">
       <gearDisplay controller="conAvatar" pages="0"/>
     </component>
     <component id="n55_fcaj" name="btnDetail" src="td6ep" fileName="btn/btnCommon.xml" xy="100,387">
@@ -51,7 +51,6 @@
       <item title="消耗品" name="consumables"/>
       <item title="建材" name="buildMat"/>
     </list>
-    <component id="n60_fcaj" name="comObjectDetailPanel" src="grbn1p" fileName="com/comObjectDetailPanel.xml" xy="316,85" group="n61_fcaj" visible="false"/>
     <group id="n61_fcaj" name="grpBackpack" xy="311,71" size="467,354"/>
   </displayList>
 </component>
