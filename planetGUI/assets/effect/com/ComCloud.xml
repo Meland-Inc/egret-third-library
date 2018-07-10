@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="624,283" pivot="0.5,0.5">
+  <displayList>
+    <loader id="n1_qdul" name="n1" xy="0,0" size="640,512" url="ui://22dg7xjqqdul9"/>
+  </displayList>
+  <transition name="t1">
+    <item time="0" type="XY" target="n1_qdul" tween="true" startValue="0,0" endValue="-140,0" duration="696" ease="Linear" repeat="-1" yoyo="true"/>
+  </transition>
+  <transition name="t2">
+    <item time="0" type="XY" target="n1_qdul" tween="true" startValue="0,0" endValue="140,0" duration="696" ease="Linear" repeat="-1" yoyo="true"/>
+  </transition>
+  <transition name="t3">
+    <item time="0" type="XY" target="n1_qdul" tween="true" startValue="0,0" endValue="0,100" duration="696" ease="Linear" repeat="-1" yoyo="true"/>
+  </transition>
+  <transition name="t4">
+    <item time="0" type="XY" target="n1_qdul" tween="true" startValue="0,0" endValue="0,-80" duration="696" ease="Linear" repeat="-1" yoyo="true"/>
+  </transition>
+  <transition name="t5">
+    <item time="0" type="XY" target="n1_qdul" tween="true" startValue="0,0" endValue="-140,-80" duration="696" ease="Linear" repeat="-1" yoyo="true"/>
+  </transition>
+  <transition name="t6">
+    <item time="0" type="XY" target="n1_qdul" tween="true" startValue="0,0" endValue="-140,80" duration="696" ease="Linear" repeat="-1" yoyo="true"/>
+  </transition>
+  <transition name="t7">
+    <item time="0" type="XY" target="n1_qdul" tween="true" startValue="0,0" endValue="140,80" duration="696" ease="Linear" repeat="-1" yoyo="true"/>
+  </transition>
+  <transition name="t8">
+    <item time="0" type="XY" target="n1_qdul" tween="true" startValue="0,0" endValue="140,-80" duration="696" ease="Linear" repeat="-1" yoyo="true"/>
+  </transition>
+</component>
