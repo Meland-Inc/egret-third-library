@@ -10,7 +10,7 @@
       <item title="饰品" icon="ui://ruc22gntgrbn1l" name="accessory"/>
     </list>
     <text id="n36_ozbm" name="tfName" xy="67,195" size="131,27" fontSize="20" color="#6c6c6c" align="center" autoSize="none" text="name"/>
-    <text id="n39_ozbm" name="tfLv" xy="67,223" size="131,24" fontSize="18" color="#84c9f9" align="center" autoSize="none" text="LV.0&#xA;"/>
+    <text id="n39_ozbm" name="tfLv" xy="67,223" size="131,24" fontSize="18" color="#84c9f9" align="center" autoSize="none" text="LV.0"/>
     <component id="n40_ozbm" name="labAtt" src="ozbmt" fileName="lab/labBasicTalent.xml" xy="71,254" size="50,24">
       <relation target="" sidePair="right-right"/>
       <Label title="99"/>

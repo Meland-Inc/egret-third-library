@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="976,768">
-  <controller name="taskState" pages="0,default,1,acceptTask,2,finishTask,3,acceptedTask" selected="1"/>
+  <controller name="taskState" pages="0,default,1,acceptTask,2,finishTask,3,acceptedTask" selected="0"/>
   <displayList>
     <list id="n15_sz33" name="lstTask" xy="675,247" size="219,273" overflow="hidden" lineGap="9" colGap="10" defaultItem="ui://tis07nuvxhg9s" vAlign="bottom" autoClearItems="true">
       <relation target="n24_p8hk" sidePair="bottom-bottom,left-right"/>
@@ -14,10 +14,12 @@
       <Button icon="ui://te1gxawoqn8o4"/>
     </component>
     <text id="n1_ctbh" name="tfNpcName" xy="81,557" size="155,41" group="n24_p8hk" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="NPC"/>
-    <image id="n29_bc3l" name="iconBg" src="xhg9c" fileName="img/img_avatarbg_1.png" xy="96,614" group="n6_ctbh"/>
+    <image id="n29_bc3l" name="iconBg" src="xhg9c" fileName="img/img_avatarbg_1.png" xy="96,614" size="135,138" group="n6_ctbh"/>
     <loader id="n4_ctbh" name="ladNpcIcon" xy="107,625" size="113,117" group="n6_ctbh" align="center" vAlign="middle" fill="scale"/>
-    <group id="n6_ctbh" name="iconGroup" xy="96,614" size="135,138" group="n24_p8hk"/>
-    <richtext id="n7_ctbh" name="rtfNpcSpeech" xy="236,622" size="611,66" group="n24_p8hk" fontSize="18" color="#a1a1a1" ubb="true" autoSize="none" text=""/>
+    <group id="n6_ctbh" name="grpIcon" xy="96,614" size="135,138" group="n24_p8hk" visible="false" advanced="true" collapsed="true"/>
+    <richtext id="n7_ctbh" name="rtfNpcSpeech" xy="236,622" size="611,66" group="n24_p8hk" fontSize="18" color="#a1a1a1" ubb="true" autoSize="none" text="">
+      <relation target="n6_ctbh" sidePair="leftext-right"/>
+    </richtext>
     <component id="n27_bc3l" name="comRewardContainer" src="xhg9p" fileName="com/comTaskRwards.xml" xy="236,687" group="n24_p8hk">
       <gearDisplay controller="taskState" pages="1,2,3"/>
     </component>
