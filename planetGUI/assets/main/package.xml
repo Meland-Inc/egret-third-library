@@ -70,6 +70,9 @@
     <image id="ft0q2f" name="img_main_item_4.png" path="/img/"/>
     <component id="ft0q2g" name="shortcutItem.xml" path="/btn/"/>
     <image id="q7z62e" name="icon_main_sword.png" path="/img/" exported="true"/>
+    <component id="ushb2h" name="WinMainPickTips.xml" path="/win/" exported="true"/>
+    <component id="ushb2i" name="ComPickObjectToast.xml" path="/com/" exported="true"/>
+    <image id="ushb2j" name="img_main_itemdrop.png" path="/img/"/>
   </resources>
   <publish name="main"/>
 </packageDescription>

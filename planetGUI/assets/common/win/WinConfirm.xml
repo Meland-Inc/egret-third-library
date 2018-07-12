@@ -10,11 +10,11 @@
     <text id="n11_kjpo" name="tfConfirmTips" xy="40,59" size="232,96" fontSize="18" color="#afafaf" align="center" vAlign="middle" ubb="true" autoSize="none" singleLine="true" text="">
       <relation target="" sidePair="center-center"/>
     </text>
-    <component id="n14_fyx8" name="btnCancel" src="qn8od" fileName="btn/btnCommon.xml" xy="31,168">
-      <Button title="取消" titleColor="#ffffff" titleFontSize="20" icon="ui://te1gxawoqn8o7"/>
-    </component>
     <component id="n15_fyx8" name="btnConfirm" src="qn8od" fileName="btn/btnCommon.xml" xy="174,168">
       <Button title="确定" titleColor="#599c11" titleFontSize="20" icon="ui://te1gxawoqn8o6"/>
+    </component>
+    <component id="n17_msfh" name="btnCancel" src="qn8od" fileName="btn/btnCommon.xml" xy="31,168">
+      <Button title="取消" titleColor="#ffffff" titleFontSize="20" icon="ui://te1gxawoqn8o7"/>
     </component>
   </displayList>
 </component>
