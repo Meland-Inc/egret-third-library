@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="838,454">
-  <controller name="state" pages="0,normal,1,detail" selected="0"/>
+  <controller name="state" pages="0,normal,1,detail" selected="1"/>
   <displayList>
     <image id="n0_824h" name="n0" src="lxnu3" fileName="img/bg_compose.png" xy="-1,0"/>
     <text id="n1_824h" name="tfTitle" xy="344,9" size="150,30" fontSize="24" color="#ffffff" align="center" autoSize="none" text="详情"/>
@@ -99,7 +99,7 @@
     <component id="n34_824h" name="btnBack" src="824h29" fileName="btn/btnCommon.xml" xy="364,385" size="110,41" group="n39_824h">
       <Button title="返回" titleColor="#ad861c" icon="ui://kdeyuiwwlxnuc" controller="state" page="0"/>
     </component>
-    <group id="n39_824h" name="n39" xy="304,66" size="233,360" advanced="true">
+    <group id="n39_824h" name="n39" xy="304,66" size="233,360" advanced="true" collapsed="true">
       <gearDisplay controller="state" pages="1"/>
     </group>
     <component id="n40_jlj8" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="800,-10"/>

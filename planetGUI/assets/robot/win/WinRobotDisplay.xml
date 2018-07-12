@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="838,454">
+  <controller name="bagCtrl" pages="0,bag,1,codeBlock,2,story" selected="0"/>
+  <controller name="detailCtrl" pages="0,equip,1,detail" selected="0"/>
+  <displayList>
+    <image id="n0_o7wx" name="n0" src="o7wx0" fileName="img/bg_compose.png" xy="0,0"/>
+    <text id="n2_o7wx" name="n2" xy="372,9" size="98,29" fontSize="22" color="#ffffff" bold="true" text="AI机器人"/>
+    <image id="n4_o7wx" name="n4" src="o7wxh" fileName="img/img_robot_1.png" xy="155,60"/>
+    <image id="n3_o7wx" name="n3" src="o7wxh" fileName="img/img_robot_1.png" xy="500,60"/>
+    <component id="n1_o7wx" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="796,-8"/>
+    <list id="n9_o7wx" name="listRobotTab" xy="15,71" size="110,350" overflow="hidden" lineGap="15" defaultItem="ui://asrl3zfro7wxm">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n10_o7wx" name="listBagTab" xy="511,70" size="297,30" layout="row" overflow="scroll" colGap="5" defaultItem="ui://asrl3zfro7wxn" selectionController="bagCtrl">
+      <item title="背包" name="背包" selectedTitle="背包"/>
+      <item title="特殊代码块" name="特殊代码块" selectedTitle="特殊代码块"/>
+      <item title="背景故事" name="背景故事" selectedTitle="背景故事"/>
+    </list>
+    <list id="n11_o7wx" name="listBagItem" xy="515,110" size="290,300" layout="flow_hz" overflow="scroll" lineGap="5" colGap="5" lineItemCount="4" defaultItem="ui://asrl3zfro7wxo">
+      <gearDisplay controller="bagCtrl" pages="0"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n36_o7wx" name="listCodeblock" xy="510,110" size="300,300" overflow="scroll" lineGap="10" defaultItem="ui://asrl3zfro7wxu">
+      <gearDisplay controller="bagCtrl" pages="1"/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n37_o7wx" name="tfStory" xy="510,110" size="300,300" fontSize="14" color="#acacac" autoSize="none" bold="true" text="">
+      <gearDisplay controller="bagCtrl" pages="2"/>
+    </text>
+    <image id="n8_o7wx" name="n8" src="o7wxi" fileName="img/img_robot_2.png" xy="172,75" group="n25_o7wx"/>
+    <text id="n12_o7wx" name="tfType" xy="187,77" size="61,24" group="n25_o7wx" fontSize="18" color="#ffffff" align="center" vAlign="middle" bold="true" text="家政型"/>
+    <component id="n14_o7wx" name="btnItemWeapon" src="o7wxp" fileName="com/btnRobotEquipItemPu68.xml" xy="180,115" group="n25_o7wx">
+      <Button icon="ui://asrl3zfro7wxg"/>
+    </component>
+    <component id="n15_o7wx" name="btnItemCoat" src="o7wxp" fileName="com/btnRobotEquipItemPu68.xml" xy="180,205" group="n25_o7wx">
+      <Button icon="ui://asrl3zfro7wxa"/>
+    </component>
+    <component id="n16_o7wx" name="btnItemGloves" src="o7wxp" fileName="com/btnRobotEquipItemPu68.xml" xy="180,295" group="n25_o7wx">
+      <Button icon="ui://asrl3zfro7wxb"/>
+    </component>
+    <component id="n17_o7wx" name="btnItemHelmet" src="o7wxp" fileName="com/btnRobotEquipItemPu68.xml" xy="380,115" group="n25_o7wx">
+      <Button icon="ui://asrl3zfro7wxc"/>
+    </component>
+    <component id="n18_o7wx" name="btnItemUnderwear" src="o7wxp" fileName="com/btnRobotEquipItemPu68.xml" xy="380,205" group="n25_o7wx">
+      <Button icon="ui://asrl3zfro7wxf"/>
+    </component>
+    <component id="n19_o7wx" name="btnItemJewelry" src="o7wxp" fileName="com/btnRobotEquipItemPu68.xml" xy="380,295" group="n25_o7wx">
+      <Button icon="ui://asrl3zfro7wxe"/>
+    </component>
+    <text id="n20_o7wx" name="tfRobotName" xy="287,280" size="56,23" group="n25_o7wx" fontSize="16" color="#6c6c6c" bold="true" text="方呆头">
+      <relation target="n4_o7wx" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n21_o7wx" name="tfRobotLocation" xy="250,310" size="130,21" group="n25_o7wx" fontSize="14" color="#acacac" bold="true" text="（位置:9999,9999）">
+      <relation target="n4_o7wx" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n22_o7wx" name="btnSummon" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="265,335" size="100,40" group="n25_o7wx">
+      <Button title="召唤" titleColor="#ffffff" titleFontSize="18" icon="ui://asrl3zfro7wx2" selectedTitle="召唤" selectedIcon="ui://asrl3zfro7wx2"/>
+    </component>
+    <component id="n24_o7wx" name="btnDetail" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="265,385" size="100,40" group="n25_o7wx">
+      <Button title="详细属性" titleColor="#cbab2f" titleFontSize="18" icon="ui://asrl3zfro7wx9" selectedTitle="详细属性" selectedIcon="ui://asrl3zfro7wx9" controller="detailCtrl" page="1"/>
+    </component>
+    <group id="n25_o7wx" name="groupEquip" xy="172,75" size="276,350" advanced="true">
+      <gearDisplay controller="detailCtrl" pages="0"/>
+    </group>
+    <component id="n26_o7wx" name="labBasic" src="o7wxq" fileName="com/comTalentTitle.xml" xy="210,66" size="203,27" group="n35_o7wx">
+      <Label title="基本属性"/>
+    </component>
+    <text id="n27_o7wx" name="tfDetailLv" xy="198,106" size="92,21" group="n35_o7wx" fontSize="16" color="#9e9e9e" autoSize="none" bold="true" text="LV  50"/>
+    <text id="n28_o7wx" name="tfDetailExp" xy="294,106" size="137,21" group="n35_o7wx" fontSize="16" color="#9e9e9e" autoSize="none" bold="true" text="EXP 200/99999"/>
+    <component id="n29_o7wx" name="labFight" src="o7wxq" fileName="com/comTalentTitle.xml" xy="210,144" size="203,27" group="n35_o7wx">
+      <Label title="战斗属性"/>
+    </component>
+    <component id="n30_o7wx" name="labDetailAtk" src="o7wxr" fileName="lab/labBasicTalent.xml" xy="213,181" size="51,24" group="n35_o7wx">
+      <Label title="50"/>
+    </component>
+    <component id="n31_o7wx" name="labDetailDef" src="o7wxr" fileName="lab/labBasicTalent.xml" xy="318,181" size="51,24" group="n35_o7wx">
+      <Label title="50" icon="ui://ruc22gnttd6e9"/>
+    </component>
+    <component id="n32_o7wx" name="labElement" src="o7wxq" fileName="com/comTalentTitle.xml" xy="211,218" size="203,27" group="n35_o7wx">
+      <Label title="元素属性"/>
+    </component>
+    <list id="n33_o7wx" name="lstTalent" xy="212,255" size="202,105" group="n35_o7wx" layout="flow_hz" overflow="scroll" colGap="83" lineItemCount="2" defaultItem="ui://asrl3zfro7wxs">
+      <item title="火   50"/>
+      <item title="火抗   50"/>
+      <item title="冰   50"/>
+      <item title="冰抗   50"/>
+      <item title="雷   50"/>
+      <item title="雷抗   50"/>
+      <item title="毒   50"/>
+      <item title="毒抗   50"/>
+      <item title="暗   50"/>
+      <item title="暗抗   50"/>
+    </list>
+    <component id="n34_o7wx" name="btnBack" src="o7wxt" fileName="btn/btnCommon.xml" xy="258,384" size="110,41" group="n35_o7wx">
+      <Button title="返回" titleColor="#ad861c" icon="ui://kdeyuiwwlxnuc" controller="detailCtrl" page="0"/>
+    </component>
+    <group id="n35_o7wx" name="groupDetail" xy="198,66" size="233,359" advanced="true">
+      <gearDisplay controller="detailCtrl" pages="1"/>
+    </group>
+  </displayList>
+</component>
