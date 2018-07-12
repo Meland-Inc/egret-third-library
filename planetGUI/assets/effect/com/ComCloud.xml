@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="624,283" pivot="0.5,0.5">
+<component size="50,30" pivot="0.5,0.5">
   <displayList>
-    <loader id="n1_qdul" name="n1" xy="0,0" size="640,512" url="ui://22dg7xjqqdul9"/>
+    <loader id="n1_qdul" name="texture" xy="0,0" pivot="0.5,0.5" size="50,30" url="ui://22dg7xjqhde7f" autoSize="true"/>
   </displayList>
+  <relation target="n1_qdul" sidePair="rightext-right,bottomext-bottom"/>
   <transition name="t1">
     <item time="0" type="XY" target="n1_qdul" tween="true" startValue="0,0" endValue="-140,0" duration="696" ease="Linear" repeat="-1" yoyo="true"/>
   </transition>
