@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="asrl3zfr" jpegQuality="80" compressPNG="true">
   <resources>
-    <image id="o7wx0" name="bg_compose.png" path="/img/"/>
-    <image id="o7wx1" name="btn_bag_close.png" path="/img/"/>
-    <image id="o7wx2" name="btn_blue.png" path="/img/"/>
-    <image id="o7wx3" name="btn_robot_1.png" path="/img/"/>
-    <image id="o7wx4" name="btn_robot_2.png" path="/img/"/>
-    <image id="o7wx5" name="btn_robot_3.png" path="/img/"/>
-    <image id="o7wx6" name="btn_robot_4.png" path="/img/"/>
-    <image id="o7wx7" name="btn_robot_5.png" path="/img/"/>
-    <image id="o7wx8" name="btn_robot_6.png" path="/img/"/>
-    <image id="o7wx9" name="btn_yellow.png" path="/img/"/>
-    <image id="o7wxa" name="img_bag_coat.png" path="/img/"/>
-    <image id="o7wxb" name="img_bag_gloves.png" path="/img/"/>
-    <image id="o7wxc" name="img_bag_helmet.png" path="/img/"/>
-    <image id="o7wxd" name="img_bag_item_1.png" path="/img/"/>
-    <image id="o7wxe" name="img_bag_jewelry.png" path="/img/"/>
-    <image id="o7wxf" name="img_bag_underwear.png" path="/img/"/>
-    <image id="o7wxg" name="img_bag_weapon.png" path="/img/"/>
-    <image id="o7wxh" name="img_robot_1.png" path="/img/"/>
-    <image id="o7wxi" name="img_robot_2.png" path="/img/"/>
-    <image id="o7wxj" name="img_robot_3.png" path="/img/"/>
-    <image id="o7wxk" name="img_robot_4.png" path="/img/"/>
+    <image id="o7wx0" name="bg_compose.png" path="/img/" exported="true"/>
+    <image id="o7wx1" name="btn_bag_close.png" path="/img/" exported="true"/>
+    <image id="o7wx2" name="btn_blue.png" path="/img/" exported="true"/>
+    <image id="o7wx3" name="btn_robot_1.png" path="/img/" exported="true"/>
+    <image id="o7wx4" name="btn_robot_2.png" path="/img/" exported="true"/>
+    <image id="o7wx5" name="btn_robot_3.png" path="/img/" exported="true"/>
+    <image id="o7wx6" name="btn_robot_4.png" path="/img/" exported="true"/>
+    <image id="o7wx7" name="btn_robot_5.png" path="/img/" exported="true"/>
+    <image id="o7wx8" name="btn_robot_6.png" path="/img/" exported="true"/>
+    <image id="o7wx9" name="btn_yellow.png" path="/img/" exported="true"/>
+    <image id="o7wxa" name="img_bag_coat.png" path="/img/" exported="true"/>
+    <image id="o7wxb" name="img_bag_gloves.png" path="/img/" exported="true"/>
+    <image id="o7wxc" name="img_bag_helmet.png" path="/img/" exported="true"/>
+    <image id="o7wxd" name="img_bag_item_1.png" path="/img/" exported="true"/>
+    <image id="o7wxe" name="img_bag_jewelry.png" path="/img/" exported="true"/>
+    <image id="o7wxf" name="img_bag_underwear.png" path="/img/" exported="true"/>
+    <image id="o7wxg" name="img_bag_weapon.png" path="/img/" exported="true"/>
+    <image id="o7wxh" name="img_robot_1.png" path="/img/" exported="true"/>
+    <image id="o7wxi" name="img_robot_2.png" path="/img/" exported="true"/>
+    <image id="o7wxj" name="img_robot_3.png" path="/img/" exported="true"/>
+    <image id="o7wxk" name="img_robot_4.png" path="/img/" exported="true"/>
     <component id="o7wxl" name="WinRobotDisplay.xml" path="/win/" exported="true"/>
     <component id="o7wxm" name="btnRobotTab.xml" path="/btn/"/>
     <component id="o7wxn" name="btnRobotBagTab.xml" path="/btn/"/>
     <component id="o7wxo" name="comRobotBagItemPu68.xml" path="/com/" exported="true"/>
-    <component id="o7wxp" name="comRobotEquipItemPu68.xml" path="/com/" exported="true"/>
+    <component id="o7wxp" name="btnRobotEquipItemPu68.xml" path="/com/" exported="true"/>
     <component id="o7wxq" name="comTalentTitle.xml" path="/com/"/>
     <component id="o7wxr" name="labBasicTalent.xml" path="/lab/"/>
     <component id="o7wxs" name="labElementTalent.xml" path="/lab/"/>
