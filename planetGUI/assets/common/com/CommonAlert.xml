@@ -2,7 +2,7 @@
 <component size="313,228">
   <displayList>
     <image id="n0_hxf8" name="n0" src="qn8o2" fileName="img/bg_bag_2.png" xy="0,0"/>
-    <text id="n3_hxf8" name="n3" xy="129,5" size="53,31" fontSize="24" color="#ffffff" text="确认"/>
+    <text id="n3_hxf8" name="tfTitle" xy="129,5" size="53,31" fontSize="24" color="#ffffff" text="确认"/>
     <component id="n2_hxf8" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" xy="273,-2" size="42,43">
       <Button icon="ui://te1gxawoqn8o4" selectedIcon="ui://te1gxawoqn8o4"/>
     </component>
