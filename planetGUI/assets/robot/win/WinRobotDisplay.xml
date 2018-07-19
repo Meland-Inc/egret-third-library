@@ -13,7 +13,7 @@
       <item/>
       <item/>
     </list>
-    <list id="n10_o7wx" name="listBagTab" xy="511,70" size="297,30" layout="row" overflow="scroll" colGap="5" defaultItem="ui://asrl3zfro7wxn" selectionController="bagCtrl">
+    <list id="n10_o7wx" name="listBagTab" xy="511,70" size="297,30" layout="row" colGap="5" defaultItem="ui://asrl3zfro7wxn" selectionController="bagCtrl">
       <item title="背包" name="背包" selectedTitle="背包"/>
       <item title="特殊代码块" name="特殊代码块" selectedTitle="特殊代码块"/>
       <item title="背景故事" name="背景故事" selectedTitle="背景故事"/>
@@ -58,33 +58,39 @@
       <gearDisplay controller="bagCtrl" pages="2"/>
     </text>
     <image id="n8_o7wx" name="n8" src="o7wxi" fileName="img/img_robot_2.png" xy="172,75" group="n25_o7wx"/>
-    <text id="n12_o7wx" name="tfType" xy="187,77" size="61,24" group="n25_o7wx" fontSize="18" color="#ffffff" align="center" vAlign="middle" bold="true" text="家政型"/>
-    <component id="n14_o7wx" name="btnItemWeapon" src="o7wxp" fileName="com/btnRobotEquipItemPu68.xml" xy="180,115" group="n25_o7wx">
+    <component id="n50_yk6x" name="comAvatar" src="yk6xz" fileName="com/comRobotAvatar.xml" xy="314,270" size="1,1" group="n25_o7wx">
+      <relation target="n38_yk6x" sidePair="center-center"/>
+    </component>
+    <text id="n12_o7wx" name="tfType" xy="187,77" size="62,24" group="n25_o7wx" fontSize="18" color="#ffffff" align="center" vAlign="middle" bold="true" text="家政型"/>
+    <component id="n14_o7wx" name="btnItemWeapon" src="o7wxp" fileName="btn/btnRobotEquipItemPu68.xml" xy="180,115" group="n25_o7wx">
       <Button icon="ui://asrl3zfro7wxg"/>
     </component>
-    <component id="n15_o7wx" name="btnItemCoat" src="o7wxp" fileName="com/btnRobotEquipItemPu68.xml" xy="180,205" group="n25_o7wx">
+    <component id="n15_o7wx" name="btnItemCoat" src="o7wxp" fileName="btn/btnRobotEquipItemPu68.xml" xy="180,205" group="n25_o7wx">
       <Button icon="ui://asrl3zfro7wxa"/>
     </component>
-    <component id="n16_o7wx" name="btnItemGloves" src="o7wxp" fileName="com/btnRobotEquipItemPu68.xml" xy="180,295" group="n25_o7wx">
+    <component id="n16_o7wx" name="btnItemGloves" src="o7wxp" fileName="btn/btnRobotEquipItemPu68.xml" xy="180,295" group="n25_o7wx">
       <Button icon="ui://asrl3zfro7wxb"/>
     </component>
-    <component id="n17_o7wx" name="btnItemHelmet" src="o7wxp" fileName="com/btnRobotEquipItemPu68.xml" xy="380,115" group="n25_o7wx">
+    <component id="n17_o7wx" name="btnItemHelmet" src="o7wxp" fileName="btn/btnRobotEquipItemPu68.xml" xy="380,115" group="n25_o7wx">
       <Button icon="ui://asrl3zfro7wxc"/>
     </component>
-    <component id="n18_o7wx" name="btnItemUnderwear" src="o7wxp" fileName="com/btnRobotEquipItemPu68.xml" xy="380,205" group="n25_o7wx">
+    <component id="n18_o7wx" name="btnItemUnderwear" src="o7wxp" fileName="btn/btnRobotEquipItemPu68.xml" xy="380,205" group="n25_o7wx">
       <Button icon="ui://asrl3zfro7wxf"/>
     </component>
-    <component id="n19_o7wx" name="btnItemJewelry" src="o7wxp" fileName="com/btnRobotEquipItemPu68.xml" xy="380,295" group="n25_o7wx">
+    <component id="n19_o7wx" name="btnItemJewelry" src="o7wxp" fileName="btn/btnRobotEquipItemPu68.xml" xy="380,295" group="n25_o7wx">
       <Button icon="ui://asrl3zfro7wxe"/>
     </component>
     <text id="n20_o7wx" name="tfRobotName" xy="287,280" size="56,23" group="n25_o7wx" fontSize="16" color="#6c6c6c" bold="true" text="方呆头">
       <relation target="n4_o7wx" sidePair="center-center,middle-middle"/>
     </text>
-    <text id="n21_o7wx" name="tfRobotLocation" xy="250,310" size="130,21" group="n25_o7wx" fontSize="14" color="#acacac" bold="true" text="（位置:9999,9999）">
+    <text id="n21_o7wx" name="tfRobotLocation" xy="250,310" size="130,21" group="n25_o7wx" fontSize="14" color="#acacac" ubb="true" vars="true" bold="true" text="（位置:{row=5000},{col=5000}）">
       <relation target="n4_o7wx" sidePair="center-center,middle-middle"/>
     </text>
     <component id="n22_o7wx" name="btnSummon" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="265,335" size="100,40" group="n25_o7wx">
       <Button title="召唤" titleColor="#ffffff" titleFontSize="18" icon="ui://asrl3zfro7wx2" selectedTitle="召唤" selectedIcon="ui://asrl3zfro7wx2"/>
+    </component>
+    <component id="n38_yk6x" name="btnRecall" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="265,335" size="100,40" group="n25_o7wx">
+      <Button title="召回" titleColor="#ffffff" titleFontSize="18" icon="ui://asrl3zfro7wx2" selectedTitle="召回" selectedIcon="ui://asrl3zfro7wx2"/>
     </component>
     <component id="n24_o7wx" name="btnDetail" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="265,385" size="100,40" group="n25_o7wx">
       <Button title="详细属性" titleColor="#cbab2f" titleFontSize="18" icon="ui://asrl3zfro7wx9" selectedTitle="详细属性" selectedIcon="ui://asrl3zfro7wx9" controller="detailCtrl" page="1"/>
@@ -95,8 +101,8 @@
     <component id="n26_o7wx" name="labBasic" src="o7wxq" fileName="com/comTalentTitle.xml" xy="210,66" size="203,27" group="n35_o7wx">
       <Label title="基本属性"/>
     </component>
-    <text id="n27_o7wx" name="tfDetailLv" xy="198,106" size="92,21" group="n35_o7wx" fontSize="16" color="#9e9e9e" autoSize="none" bold="true" text="LV  50"/>
-    <text id="n28_o7wx" name="tfDetailExp" xy="294,106" size="137,21" group="n35_o7wx" fontSize="16" color="#9e9e9e" autoSize="none" bold="true" text="EXP 200/99999"/>
+    <text id="n27_o7wx" name="tfDetailLv" xy="198,106" size="92,21" group="n35_o7wx" fontSize="16" color="#9e9e9e" vars="true" autoSize="none" bold="true" singleLine="true" text="LV  {lv=50}"/>
+    <text id="n28_o7wx" name="tfDetailExp" xy="294,106" size="137,21" group="n35_o7wx" fontSize="16" color="#9e9e9e" vars="true" autoSize="none" bold="true" singleLine="true" text="EXP {curExp=200}/{maxExp=999999}"/>
     <component id="n29_o7wx" name="labFight" src="o7wxq" fileName="com/comTalentTitle.xml" xy="210,144" size="203,27" group="n35_o7wx">
       <Label title="战斗属性"/>
     </component>
@@ -109,22 +115,21 @@
     <component id="n32_o7wx" name="labElement" src="o7wxq" fileName="com/comTalentTitle.xml" xy="211,218" size="203,27" group="n35_o7wx">
       <Label title="元素属性"/>
     </component>
-    <list id="n33_o7wx" name="lstTalent" xy="212,255" size="202,105" group="n35_o7wx" layout="flow_hz" overflow="scroll" colGap="83" lineItemCount="2" defaultItem="ui://asrl3zfro7wxs">
-      <item title="火   50"/>
-      <item title="火抗   50"/>
-      <item title="冰   50"/>
-      <item title="冰抗   50"/>
-      <item title="雷   50"/>
-      <item title="雷抗   50"/>
-      <item title="毒   50"/>
-      <item title="毒抗   50"/>
-      <item title="暗   50"/>
-      <item title="暗抗   50"/>
-    </list>
     <component id="n34_o7wx" name="btnBack" src="o7wxt" fileName="btn/btnCommon.xml" xy="258,384" size="110,41" group="n35_o7wx">
       <Button title="返回" titleColor="#ad861c" icon="ui://kdeyuiwwlxnuc" controller="detailCtrl" page="0"/>
     </component>
-    <group id="n35_o7wx" name="groupDetail" xy="198,66" size="233,359" advanced="true">
+    <text id="n39_yk6x" name="tfFireAtt" xy="213,256" size="46,21" group="n49_yk6x" fontSize="15" color="#9e9e9e" vars="true" singleLine="true" text="火   {value=50}"/>
+    <text id="n40_yk6x" name="tfIceAtt" xy="213,277" size="46,21" group="n49_yk6x" fontSize="15" color="#9e9e9e" vars="true" singleLine="true" text="冰   {value=50}"/>
+    <text id="n41_yk6x" name="tfThunderAtt" xy="213,298" size="46,21" group="n49_yk6x" fontSize="15" color="#9e9e9e" vars="true" singleLine="true" text="雷   {value=50}"/>
+    <text id="n42_yk6x" name="tfPoisonAtt" xy="213,319" size="46,21" group="n49_yk6x" fontSize="15" color="#9e9e9e" vars="true" singleLine="true" text="毒   {value=50}"/>
+    <text id="n43_yk6x" name="tfDarkAtt" xy="213,340" size="46,21" group="n49_yk6x" fontSize="15" color="#9e9e9e" vars="true" singleLine="true" text="暗   {value=50}"/>
+    <text id="n44_yk6x" name="tfFireDef" xy="352,256" size="61,21" group="n49_yk6x" fontSize="15" color="#9e9e9e" vars="true" singleLine="true" text="火抗   {value=50}"/>
+    <text id="n45_yk6x" name="tfIceDef" xy="352,276" size="61,21" group="n49_yk6x" fontSize="15" color="#9e9e9e" vars="true" singleLine="true" text="冰抗   {value=50}"/>
+    <text id="n46_yk6x" name="tfThunderDef" xy="352,297" size="61,21" group="n49_yk6x" fontSize="15" color="#9e9e9e" vars="true" singleLine="true" text="雷抗   {value=50}"/>
+    <text id="n47_yk6x" name="tfPoisonDef" xy="352,318" size="61,21" group="n49_yk6x" fontSize="15" color="#9e9e9e" vars="true" singleLine="true" text="毒抗   {value=50}"/>
+    <text id="n48_yk6x" name="tfDarkDef" xy="352,339" size="61,21" group="n49_yk6x" fontSize="15" color="#9e9e9e" vars="true" singleLine="true" text="暗抗   {value=50}"/>
+    <group id="n49_yk6x" name="n49" xy="213,256" size="200,105" group="n35_o7wx"/>
+    <group id="n35_o7wx" name="groupDetail" xy="198,66" size="233,359" advanced="true" collapsed="true">
       <gearDisplay controller="detailCtrl" pages="1"/>
     </group>
   </displayList>

@@ -9,7 +9,7 @@
     <text id="n5_o7wx" name="title" xy="50,18" size="56,23" fontSize="16" color="#d0d0d0" bold="true" text="未拥有">
       <gearColor controller="button" pages="0" values="#d0d0d0,#000000" default="#57a7df,#000000"/>
     </text>
-    <loader id="n6_o7wx" name="icon" xy="5,10" size="40,40"/>
+    <loader id="n6_o7wx" name="icon" xy="5,10" size="40,40" aspect="true" align="center" vAlign="middle" fill="scale"/>
   </displayList>
   <Button mode="Radio"/>
 </component>
