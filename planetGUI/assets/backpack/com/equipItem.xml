@@ -9,9 +9,9 @@
       <gearDisplay controller="conSelect" pages="1"/>
     </image>
     <loader id="n2_ozbm" name="icon" xy="1,1" size="68,68" url="ui://ruc22gntgrbn1i" align="center" vAlign="middle"/>
-    <graph id="n9_r2k3" name="gphDurabilityBg" xy="18,56" size="33,7" group="n12_r2k3" type="rect" lineSize="0" corner="5"/>
-    <graph id="n10_r2k3" name="gphDurabilityBar" xy="19,57" size="1,5" group="n12_r2k3" type="rect" lineSize="0" fillColor="#ff00ff00" corner="5"/>
-    <group id="n12_r2k3" name="grpDurability" xy="18,56" size="33,7"/>
+    <graph id="n9_r2k3" name="gphDurabilityBg" xy="19,56" size="32,7" group="n12_r2k3" type="rect" lineSize="0" corner="5"/>
+    <graph id="n10_r2k3" name="gphDurabilityBar" xy="20,57" size="30,5" group="n12_r2k3" type="rect" lineSize="0" fillColor="#ff00ff00" corner="5"/>
+    <group id="n12_r2k3" name="grpDurability" xy="19,56" size="32,7" advanced="true"/>
   </displayList>
   <Button mode="Radio"/>
 </component>

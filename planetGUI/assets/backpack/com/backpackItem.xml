@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="70,71" extention="Button">
+<component size="70,74" extention="Button">
   <controller name="conSelect" pages="0,normal,1,selected" selected="0"/>
   <controller name="conEquipMark" pages="0,hide,1,show" selected="0"/>
   <displayList>
-    <loader id="n4_pkc8" name="imgSelect" xy="0,0" size="70,71" url="ui://ruc22gnttd6eg">
+    <loader id="n4_pkc8" name="imgSelect" xy="0,3" size="70,71" url="ui://ruc22gnttd6eg">
       <gearIcon controller="conSelect" pages="0" values="ui://ruc22gnttd6eg" default="ui://ruc22gnttd6eh"/>
     </loader>
-    <loader id="n3_igcl" name="icon" xy="3,3" size="61,61" align="center" vAlign="middle" fill="scale"/>
-    <text id="n2_igcl" name="title" xy="46,49" size="23,22" visible="false" fontSize="16" color="#916545" autoSize="none" text="99"/>
+    <loader id="n3_igcl" name="icon" xy="3,6" size="61,61" align="center" vAlign="middle" fill="scale"/>
+    <text id="n2_igcl" name="title" xy="45,51" size="22,20" visible="false" fontSize="16" color="#916545" align="center" vAlign="middle" autoSize="none" text="99"/>
     <image id="n5_pkc8" name="n5" src="pkc81v" fileName="img/img_bag_item_5.png" xy="4,3" group="n9_pkc8"/>
     <text id="n6_pkc8" name="n6" xy="0,19" size="31,17" group="n9_pkc8" rotation="-45" fontSize="12" color="#ffffff" align="center" vAlign="middle" leading="0" bold="true" text="装备"/>
     <group id="n9_pkc8" name="grpEquipMark" xy="0,3" size="40,36" advanced="true" collapsed="true">
