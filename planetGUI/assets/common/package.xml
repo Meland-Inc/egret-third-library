@@ -35,6 +35,10 @@
     <component id="rk5gv" name="ComPickObjectToast.xml" path="/com/"/>
     <component id="rk5gz" name="btnDelOp.xml" path="/btn/" exported="true"/>
     <component id="rk5g10" name="btnSureOp.xml" path="/btn/" exported="true"/>
+    <sound id="tqc911" name="buttonTouch.wav" path="/sound/" exported="true"/>
+    <sound id="tqc912" name="close.wav" path="/sound/" exported="true"/>
+    <sound id="tqc913" name="success.wav" path="/sound/" exported="true"/>
+    <sound id="tqc914" name="unsuccess.wav" path="/sound/" exported="true"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>
