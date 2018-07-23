@@ -20,6 +20,7 @@
     <component id="hxf8f" name="btnCancel.xml" path="/btn/" exported="true"/>
     <component id="hxf8g" name="CommonAlert.xml" path="/com/" exported="true"/>
     <image id="d30ci" name="img_common_prompt.png" path="/img/"/>
+    <component id="ar63j" name="CommonInputAlert.xml" path="/com/" exported="true"/>
     <image id="q8x4j" name="img_line_on.png" path="/img/"/>
     <image id="q8x4k" name="bg_common_1.png" path="/img/"/>
     <image id="q8x4l" name="btn_common_1.png" path="/img/"/>
@@ -29,6 +30,11 @@
     <component id="q8x4q" name="CommonLoading.xml" path="/com/" exported="true"/>
     <movieclip id="q8x4r" name="重新连接.jta" path="/img/"/>
     <image id="exp3s" name="img_lineloading_back.png" path="/img/"/>
+    <image id="rk5gt" name="btn_build_define.png" path="/img/" exported="true"/>
+    <image id="rk5gu" name="btn_build_delete.png" path="/img/" exported="true"/>
+    <component id="rk5gv" name="ComPickObjectToast.xml" path="/com/"/>
+    <component id="rk5gz" name="btnDelOp.xml" path="/btn/" exported="true"/>
+    <component id="rk5g10" name="btnSureOp.xml" path="/btn/" exported="true"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>

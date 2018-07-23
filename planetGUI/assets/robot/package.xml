@@ -26,12 +26,15 @@
     <component id="o7wxm" name="btnRobotTab.xml" path="/btn/"/>
     <component id="o7wxn" name="btnRobotBagTab.xml" path="/btn/"/>
     <component id="o7wxo" name="comRobotBagItemPu68.xml" path="/com/" exported="true"/>
-    <component id="o7wxp" name="btnRobotEquipItemPu68.xml" path="/com/" exported="true"/>
+    <component id="o7wxp" name="btnRobotEquipItemPu68.xml" path="/btn/" exported="true"/>
     <component id="o7wxq" name="comTalentTitle.xml" path="/com/"/>
     <component id="o7wxr" name="labBasicTalent.xml" path="/lab/"/>
     <component id="o7wxs" name="labElementTalent.xml" path="/lab/"/>
     <component id="o7wxt" name="btnCommon.xml" path="/btn/"/>
     <component id="o7wxu" name="comRobotCodeblockItem.xml" path="/com/" exported="true"/>
+    <component id="wl73v" name="ToolTipRobotOpera.xml" path="/com/" exported="true"/>
+    <image id="wl73w" name="btn_robot_7.png" path="/img/"/>
+    <component id="yk6xz" name="comRobotAvatar.xml" path="/com/"/>
   </resources>
   <publish name="robot"/>
 </packageDescription>

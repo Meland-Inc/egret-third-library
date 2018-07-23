@@ -1,0 +1,16 @@
+====Wed Jul 18 18:17:48 GMT+0800 2018====
+Error in PublishHandler: (#1009)null has no properties.
+TypeError: Error #1009
+	at fairygui.editor.publish.gencode::TplEgretGenerator/createFile()
+	at fairygui.editor.publish.gencode::GenerateCodeBase/loadTemplate()
+	at fairygui.editor.publish.gencode::TplEgretGenerator/run()
+	at fairygui.editor.publish::PublishHandler/runStep()
+	at fairygui.editor.publish::PublishHandler/generateCode()
+	at fairygui.editor.utils::Callback/callOnSuccessImmediately()
+	at fairygui.editor.publish::CallPlugins/run()
+	at fairygui.editor.publish::PublishHandler/runStep()
+	at fairygui.editor.publish::PublishHandler/callPlugins()
+	at fairygui.editor.utils::Callback/callOnSuccessImmediately()
+	at fairygui.utils::GTimers/__timer()
+	at flash.utils::Timer/tick()
+
