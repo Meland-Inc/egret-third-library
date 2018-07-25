@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="694,453">
-  <controller name="conMarkBtn" pages="0,put,1,delete,2,cancel" selected="2"/>
+  <controller name="conMarkBtn" pages="0,put,1,delete,2,cancel" selected="0"/>
   <displayList>
     <image id="n5_p85h" name="imgBg" src="p85h1" fileName="img/bg_bag.png" xy="0,0"/>
     <component id="n36_fyx8" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="650,-9"/>
@@ -11,11 +11,11 @@
     <image id="n15_p85h" name="n15" src="p85hn" fileName="img/img_map_8.png" xy="691,47" group="n20_p85h" scale="-1,1"/>
     <image id="n8_p85h" name="n8" src="p85hf" fileName="img/img_map_6.png" xy="4,47" group="n20_p85h"/>
     <group id="n20_p85h" name="btnCloseMark" xy="1,47" size="719,425" collapsed="true"/>
-    <component id="n16_p85h" name="winSelectMark" src="p85hp" fileName="win/WinSelectMark.xml" xy="190,115"/>
+    <component id="n16_p85h" name="winSelectMark" src="p85hp" fileName="win/WinSelectMark.xml" xy="190,115" visible="false"/>
     <image id="n21_p85h" name="n21" src="p85hd" fileName="img/img_map_4.png" xy="636,291"/>
     <component id="n35_ohl4" name="btnMark" src="ohl4r" fileName="btn/btn.xml" xy="640,298">
       <gearIcon controller="conMarkBtn" pages="0,1" values="ui://k08mtk0rp85h6|ui://k08mtk0rp85h8" default="ui://k08mtk0rp85h4"/>
-      <Button icon="ui://k08mtk0rp85h4"/>
+      <Button icon="ui://k08mtk0rp85h6"/>
     </component>
     <component id="n38_fyx8" name="btnZoomIn" src="ohl4r" fileName="btn/btn.xml" xy="640,350">
       <Button icon="ui://k08mtk0rp85h5"/>
@@ -26,5 +26,8 @@
     <image id="n22_p85h" name="n22" src="p85he" fileName="img/img_map_5.png" xy="20,419" group="n33_ohl4"/>
     <text id="n28_p85h" name="tfPos" xy="21,419" size="182,19" group="n33_ohl4" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="坐标点（999，999）"/>
     <group id="n33_ohl4" name="posGroup" xy="20,419" size="184,19" advanced="true" collapsed="true"/>
+    <image id="n42_rlts" name="n42" src="d30ci" fileName="img/img_common_prompt.png" pkg="te1gxawo" xy="97,383" group="n44_rlts"/>
+    <text id="n43_rlts" name="tfPutMarkTips" xy="146,383" size="401,26" group="n44_rlts" fontSize="16" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="点击地图放置标记"/>
+    <group id="n44_rlts" name="grpPutMarkTips" xy="97,383" size="500,27" visible="false" advanced="true" collapsed="true"/>
   </displayList>
 </component>
