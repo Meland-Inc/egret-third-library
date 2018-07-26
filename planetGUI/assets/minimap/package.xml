@@ -44,6 +44,9 @@
     <image id="kjpo14" name="btn_map_1.png" path="/img/" scale="9grid" scale9grid="20,11,128,18"/>
     <image id="kjpo15" name="btn_map_2.png" path="/img/" scale="9grid" scale9grid="16,10,134,20"/>
     <component id="kjpo16" name="teleportMark.xml" path="/com/" exported="true"/>
+    <image id="c2lx17" name="img_map_title.png" path="/img/"/>
+    <image id="c2lx18" name="btn_yellow(1).png" path="/img/"/>
+    <image id="c2lx19" name="btn_blue.png" path="/img/"/>
   </resources>
   <publish name="minimap"/>
 </packageDescription>
