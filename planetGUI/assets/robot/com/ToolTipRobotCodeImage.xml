@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="300,181" extention="Button">
+  <displayList>
+    <image id="n2_dib9" name="n2" src="a5xh1n" fileName="img/bg_code_tips_2.png" xy="0,0" size="300,181">
+      <relation target="n3_dib9" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n3_dib9" name="tfContent" xy="12,12" size="276,25" fontSize="18" color="#ffffff" ubb="true" autoSize="height" text=""/>
+    <loader id="n5_dib9" name="ladTip" xy="12,59" size="276,110" align="center" vAlign="middle" fill="scale">
+      <relation target="n2_dib9" sidePair="left-left,bottom-bottom"/>
+    </loader>
+  </displayList>
+  <Button/>
+</component>

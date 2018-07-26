@@ -44,7 +44,7 @@
     <component id="lxnu19" name="comArchItemPu57.xml" path="/com/" exported="true"/>
     <component id="lxnu1a" name="WinArchCpProduct.xml" path="/win/" exported="true"/>
     <component id="lxnu1b" name="btnArchProductTab.xml" path="/btn/"/>
-    <component id="lxnu1c" name="btnArchItemNb57.xml" path="/btn/"/>
+    <component id="lxnu1c" name="btnArchItemNb57.xml" path="/btn/" exported="true"/>
     <component id="lxnu1d" name="pbrArchMaking.xml" path="/pbr/"/>
     <component id="lxnu1e" name="btnArchGreen.xml" path="/btn/"/>
     <image id="lxnu1f" name="bg_bag.png" path="/img/" exported="true"/>
@@ -69,7 +69,6 @@
     <component id="824h21" name="btnArchPassword.xml" path="/btn/"/>
     <component id="824h22" name="btnArchSetPass.xml" path="/btn/"/>
     <component id="824h23" name="btnArchOk.xml" path="/btn/"/>
-    <component id="824h24" name="WinArchRobotBag.xml" path="/win/" exported="true"/>
     <component id="824h25" name="btnArchYellow.xml" path="/btn/"/>
     <component id="824h26" name="comTalentTitle.xml" path="/com/"/>
     <component id="824h27" name="labBasicTalent.xml" path="/lab/"/>
@@ -77,6 +76,7 @@
     <component id="824h29" name="btnCommon.xml" path="/btn/"/>
     <image id="824h2a" name="btn_password_3.png" path="/img/"/>
     <component id="824h2b" name="btnLock.xml" path="/btn/"/>
+    <image id="bgib2c" name="img_bag_item_5.png" path="/img/"/>
   </resources>
   <publish name="arch"/>
 </packageDescription>

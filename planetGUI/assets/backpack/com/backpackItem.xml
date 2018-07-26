@@ -9,7 +9,7 @@
     <loader id="n3_igcl" name="icon" xy="3,6" size="61,61" align="center" vAlign="middle" fill="scale"/>
     <text id="n2_igcl" name="title" xy="45,51" size="22,20" visible="false" fontSize="16" color="#916545" align="center" vAlign="middle" autoSize="none" text="99"/>
     <image id="n5_pkc8" name="n5" src="pkc81v" fileName="img/img_bag_item_5.png" xy="4,3" group="n9_pkc8"/>
-    <text id="n6_pkc8" name="n6" xy="0,19" size="31,17" group="n9_pkc8" rotation="-45" fontSize="12" color="#ffffff" align="center" vAlign="middle" leading="0" bold="true" text="装备"/>
+    <text id="n6_pkc8" name="n6" xy="0,19" size="31,19" group="n9_pkc8" rotation="-45" fontSize="12" color="#ffffff" align="center" vAlign="middle" leading="0" bold="true" text="装备"/>
     <group id="n9_pkc8" name="grpEquipMark" xy="0,3" size="40,36" advanced="true" collapsed="true">
       <gearDisplay controller="conEquipMark" pages="1"/>
     </group>
