@@ -4,5 +4,5 @@
     <image id="n2_ptq4" name="n2" src="jddv15" fileName="img/btn_login_3.png" xy="0,0"/>
     <text id="n1_ptq4" name="n1" xy="87,20" size="180,31" font="方正准圆简体" fontSize="24" color="#ffffff" bold="true" text="注册并登录游戏"/>
   </displayList>
-  <Button downEffect="scale" downEffectValue="0.90"/>
+  <Button sound="ui://te1gxawotqc911" downEffect="scale" downEffectValue="0.90"/>
 </component>

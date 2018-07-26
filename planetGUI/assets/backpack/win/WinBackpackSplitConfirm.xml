@@ -14,7 +14,7 @@
       <Button title="确定" titleColor="#599c11" icon="ui://ruc22gntk8dt14"/>
     </component>
     <component id="n12_k8dt" name="sld" src="k8dt1d" fileName="sld/Slider1.xml" xy="67,125">
-      <Slider value="1" max="10"/>
+      <Slider value="50" max="100"/>
     </component>
     <text id="n19_lj6i" name="tfSplitMsg" xy="49,207" size="213,18" fontSize="12" color="#ff8f02" align="center" autoSize="none" text="没有空闲的位置摆放"/>
     <component id="n21_fyx8" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="279,-2" size="42,43">

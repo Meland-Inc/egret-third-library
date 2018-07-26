@@ -75,7 +75,8 @@
     <image id="ushb2j" name="img_main_itemdrop.png" path="/img/"/>
     <image id="n7lz2h" name="img_main_chargeforce_1.png" path="/img/"/>
     <image id="n7lz2i" name="img_main_chargeforce_2.png" path="/img/"/>
-    <component id="n7lz2j" name="pbrAccmu.xml" path="/com/" exported="true"/>
+    <component id="n7lz2j" name="pbrAccmu.xml" path="/pbr/"/>
+    <component id="snov2k" name="ComAccmu.xml" path="/com/" exported="true"/>
   </resources>
   <publish name="main"/>
 </packageDescription>
