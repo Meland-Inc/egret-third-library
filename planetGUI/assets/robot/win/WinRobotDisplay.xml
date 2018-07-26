@@ -8,7 +8,7 @@
     <image id="n4_o7wx" name="n4" src="o7wxh" fileName="img/img_robot_1.png" xy="155,60"/>
     <image id="n3_o7wx" name="n3" src="o7wxh" fileName="img/img_robot_1.png" xy="500,60"/>
     <component id="n1_o7wx" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="796,-8"/>
-    <list id="n9_o7wx" name="listRobotTab" xy="15,71" size="110,350" overflow="hidden" lineGap="15" defaultItem="ui://asrl3zfro7wxm">
+    <list id="n9_o7wx" name="listRobotTab" xy="15,71" size="115,350" overflow="hidden" lineGap="15" defaultItem="ui://asrl3zfro7wxm">
       <item/>
       <item/>
       <item/>
@@ -18,37 +18,10 @@
       <item title="特殊代码块" name="特殊代码块" selectedTitle="特殊代码块"/>
       <item title="背景故事" name="背景故事" selectedTitle="背景故事"/>
     </list>
-    <list id="n11_o7wx" name="listBagItem" xy="515,110" size="290,300" layout="flow_hz" overflow="scroll" lineGap="5" colGap="5" lineItemCount="4" defaultItem="ui://asrl3zfro7wxo">
+    <list id="n11_o7wx" name="listBagItem" xy="515,110" size="290,300" layout="flow_hz" overflow="scroll" lineGap="5" colGap="5" lineItemCount="4" defaultItem="ui://asrl3zfro7wxp">
       <gearDisplay controller="bagCtrl" pages="0"/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
     </list>
-    <list id="n36_o7wx" name="listCodeblock" xy="510,110" size="300,300" overflow="scroll" lineGap="10" defaultItem="ui://asrl3zfro7wxu">
+    <list id="n36_o7wx" name="listCodeblock" xy="510,110" size="300,300" overflow="scroll" scroll="both" margin="20,0,0,0" lineGap="30" defaultItem="ui://asrl3zfro7wxu" align="center">
       <gearDisplay controller="bagCtrl" pages="1"/>
       <item/>
       <item/>
@@ -58,34 +31,17 @@
       <gearDisplay controller="bagCtrl" pages="2"/>
     </text>
     <image id="n8_o7wx" name="n8" src="o7wxi" fileName="img/img_robot_2.png" xy="172,75" group="n25_o7wx"/>
-    <component id="n50_yk6x" name="comAvatar" src="yk6xz" fileName="com/comRobotAvatar.xml" xy="314,270" size="1,1" group="n25_o7wx">
+    <component id="n50_yk6x" name="comAvatar" src="yk6xz" fileName="com/comEmpty.xml" xy="314,270" size="1,1" group="n25_o7wx">
       <relation target="n38_yk6x" sidePair="center-center"/>
     </component>
     <text id="n12_o7wx" name="tfType" xy="187,77" size="62,24" group="n25_o7wx" fontSize="18" color="#ffffff" align="center" vAlign="middle" bold="true" text="家政型"/>
-    <component id="n14_o7wx" name="btnItemWeapon" src="o7wxp" fileName="btn/btnRobotEquipItemPu68.xml" xy="180,115" group="n25_o7wx">
-      <Button icon="ui://asrl3zfro7wxg"/>
-    </component>
-    <component id="n15_o7wx" name="btnItemCoat" src="o7wxp" fileName="btn/btnRobotEquipItemPu68.xml" xy="180,205" group="n25_o7wx">
-      <Button icon="ui://asrl3zfro7wxa"/>
-    </component>
-    <component id="n16_o7wx" name="btnItemGloves" src="o7wxp" fileName="btn/btnRobotEquipItemPu68.xml" xy="180,295" group="n25_o7wx">
-      <Button icon="ui://asrl3zfro7wxb"/>
-    </component>
-    <component id="n17_o7wx" name="btnItemHelmet" src="o7wxp" fileName="btn/btnRobotEquipItemPu68.xml" xy="380,115" group="n25_o7wx">
-      <Button icon="ui://asrl3zfro7wxc"/>
-    </component>
-    <component id="n18_o7wx" name="btnItemUnderwear" src="o7wxp" fileName="btn/btnRobotEquipItemPu68.xml" xy="380,205" group="n25_o7wx">
-      <Button icon="ui://asrl3zfro7wxf"/>
-    </component>
-    <component id="n19_o7wx" name="btnItemJewelry" src="o7wxp" fileName="btn/btnRobotEquipItemPu68.xml" xy="380,295" group="n25_o7wx">
-      <Button icon="ui://asrl3zfro7wxe"/>
-    </component>
     <text id="n20_o7wx" name="tfRobotName" xy="287,280" size="56,23" group="n25_o7wx" fontSize="16" color="#6c6c6c" bold="true" text="方呆头">
       <relation target="n4_o7wx" sidePair="center-center,middle-middle"/>
     </text>
     <text id="n21_o7wx" name="tfRobotLocation" xy="250,310" size="130,21" group="n25_o7wx" fontSize="14" color="#acacac" ubb="true" vars="true" bold="true" text="（位置:{row=5000},{col=5000}）">
       <relation target="n4_o7wx" sidePair="center-center,middle-middle"/>
     </text>
+    <text id="n54_hm31" name="tfFuel" xy="340,80" size="107,23" group="n25_o7wx" fontSize="16" color="#999a9d" vars="true" bold="true" text="燃料:{txtFuel=200/2000}"/>
     <component id="n22_o7wx" name="btnSummon" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="265,335" size="100,40" group="n25_o7wx">
       <Button title="召唤" titleColor="#ffffff" titleFontSize="18" icon="ui://asrl3zfro7wx2" selectedTitle="召唤" selectedIcon="ui://asrl3zfro7wx2"/>
     </component>
@@ -95,6 +51,14 @@
     <component id="n24_o7wx" name="btnDetail" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="265,385" size="100,40" group="n25_o7wx">
       <Button title="详细属性" titleColor="#cbab2f" titleFontSize="18" icon="ui://asrl3zfro7wx9" selectedTitle="详细属性" selectedIcon="ui://asrl3zfro7wx9" controller="detailCtrl" page="1"/>
     </component>
+    <list id="n53_9onp" name="listEquip" xy="182,113" size="266,237" group="n25_o7wx" layout="flow_hz" lineGap="10" colGap="125" lineItemCount="2" defaultItem="ui://asrl3zfri7ba1k" align="center" vAlign="middle">
+      <item title="头盔" icon="ui://asrl3zfri7ba1f" name="hair"/>
+      <item title="衣服" icon="ui://asrl3zfri7ba1g" name="coat"/>
+      <item title="裤子" icon="ui://asrl3zfri7ba1e" name="pants"/>
+      <item title="鞋子" icon="ui://asrl3zfri7ba1h" name="shoe"/>
+      <item title="手套" icon="ui://asrl3zfri7ba1i" name="glove"/>
+      <item title="饰品" icon="ui://asrl3zfri7ba1j" name="accessory"/>
+    </list>
     <group id="n25_o7wx" name="groupEquip" xy="172,75" size="276,350" advanced="true">
       <gearDisplay controller="detailCtrl" pages="0"/>
     </group>

@@ -34,7 +34,25 @@
     <component id="o7wxu" name="comRobotCodeblockItem.xml" path="/com/" exported="true"/>
     <component id="wl73v" name="ToolTipRobotOpera.xml" path="/com/" exported="true"/>
     <image id="wl73w" name="btn_robot_7.png" path="/img/"/>
-    <component id="yk6xz" name="comRobotAvatar.xml" path="/com/"/>
+    <component id="yk6xz" name="comEmpty.xml" path="/com/"/>
+    <component id="i7ba10" name="WinRobotBag.xml" path="/win/" exported="true"/>
+    <component id="i7ba16" name="btnRobotBagItemNb57.xml" path="/btn/" exported="true"/>
+    <image id="i7ba17" name="img_bag_item_5.png" path="/img/"/>
+    <component id="i7ba18" name="ToolTipRobotBagItem.xml" path="/com/" exported="true"/>
+    <image id="i7ba19" name="img_bag_item_3.png" path="/img/"/>
+    <image id="i7ba1d" name="img_bag_item_2.png" path="/img/"/>
+    <image id="i7ba1e" name="icon_bag_coat.png" path="/img/"/>
+    <image id="i7ba1f" name="icon_bag_weapon.png" path="/img/"/>
+    <image id="i7ba1g" name="icon_bag_helmet.png" path="/img/"/>
+    <image id="i7ba1h" name="icon_bag_underwear.png" path="/img/"/>
+    <image id="i7ba1i" name="icon_bag_gloves.png" path="/img/"/>
+    <image id="i7ba1j" name="icon_bag_jewelry.png" path="/img/"/>
+    <component id="i7ba1k" name="equipItem.xml" path="/com/"/>
+    <component id="a5xh1l" name="ToolTipRobotCode.xml" path="/com/" exported="true"/>
+    <image id="a5xh1m" name="btn_code_tips.png" path="/img/"/>
+    <image id="a5xh1n" name="bg_code_tips_2.png" path="/img/" scale="9grid" scale9grid="12,12,22,22"/>
+    <component id="a5xh1o" name="ToolTipRobotCodeImage.xml" path="/com/" exported="true"/>
+    <component id="a5xh1q" name="btnRobotTip.xml" path="/btn/"/>
   </resources>
   <publish name="robot"/>
 </packageDescription>
