@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="20,21">
+<component size="20,21" pivot="0.5,0.5" extention="Button">
+  <controller name="conSelect" pages="0,normal,1,selected" selected="0"/>
   <displayList>
     <loader id="n4_q11i" name="imgMainplayerIcon" xy="0,0" size="20,21" url="ui://k08mtk0rohl4v"/>
   </displayList>
+  <Button/>
 </component>
