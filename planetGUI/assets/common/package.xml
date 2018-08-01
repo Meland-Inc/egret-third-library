@@ -39,6 +39,10 @@
     <sound id="tqc912" name="close.wav" path="/sound/" exported="true"/>
     <sound id="tqc913" name="success.wav" path="/sound/" exported="true"/>
     <sound id="tqc914" name="unsuccess.wav" path="/sound/" exported="true"/>
+    <image id="zsdq15" name="btn_blue.png" path="/img/" exported="true"/>
+    <image id="zsdq16" name="btn_blue1.png" path="/img/" exported="true"/>
+    <image id="zsdq17" name="btn_yellow.png" path="/img/"/>
+    <image id="zsdq18" name="img_map_title.png" path="/img/"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>
