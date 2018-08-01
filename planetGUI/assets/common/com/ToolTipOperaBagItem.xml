@@ -6,7 +6,7 @@
       <relation target="n12_grbn" sidePair="bottomext-bottom"/>
     </image>
     <image id="n29_grbn" name="imgIconBg" src="td6eg" fileName="img/img_bag_item_1.png" pkg="ruc22gnt" xy="10,10"/>
-    <loader id="n30_grbn" name="ladIcon" xy="44,44" pivot="0.5,0.5" anchor="true" size="64,64" url="ui://asrl3zfri7ba19" align="center" vAlign="middle" fill="scale"/>
+    <loader id="n30_grbn" name="ladIcon" xy="44,44" pivot="0.5,0.5" anchor="true" size="64,64" url="ui://te1gxawolt5g16" align="center" vAlign="middle" fill="scale"/>
     <text id="n9_grbn" name="tfName" xy="80,16" size="99,20" fontSize="16" color="#feef44" align="right" vAlign="middle" autoSize="none" bold="true" text="name"/>
     <text id="n10_grbn" name="tfType" xy="95,37" size="85,20" fontSize="14" color="#ffffff" align="right" vAlign="middle" autoSize="height" text="type"/>
     <text id="n11_grbn" name="tfCanSell" xy="95,56" size="85,18" fontSize="14" color="#ffffff" align="right" vAlign="middle" autoSize="none" text="不可交易"/>

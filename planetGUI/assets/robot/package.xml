@@ -53,6 +53,7 @@
     <image id="a5xh1n" name="bg_code_tips_2.png" path="/img/" scale="9grid" scale9grid="12,12,22,22"/>
     <component id="a5xh1o" name="ToolTipRobotCodeImage.xml" path="/com/" exported="true"/>
     <component id="a5xh1q" name="btnRobotTip.xml" path="/btn/"/>
+    <component id="lt5g1s" name="ToolTipBagItem.xml" path="/com/" exported="true"/>
   </resources>
   <publish name="robot"/>
 </packageDescription>

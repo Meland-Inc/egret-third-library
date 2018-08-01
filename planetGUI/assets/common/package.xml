@@ -39,6 +39,12 @@
     <sound id="tqc912" name="close.wav" path="/sound/" exported="true"/>
     <sound id="tqc913" name="success.wav" path="/sound/" exported="true"/>
     <sound id="tqc914" name="unsuccess.wav" path="/sound/" exported="true"/>
+    <component id="lt5g15" name="ToolTipBagItem.xml" path="/com/" exported="true"/>
+    <image id="lt5g16" name="img_bag_item_3.png" path="/img/"/>
+    <component id="lt5g17" name="ToolTipOperaBagItem.xml" path="/com/" exported="true"/>
+    <image id="lt5g18" name="btn_blue.png" path="/img/"/>
+    <image id="lt5g19" name="btn_yellow.png" path="/img/"/>
+    <image id="lt5g1a" name="img_map_title.png" path="/img/"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>
