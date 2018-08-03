@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="838,454">
   <controller name="bagCtrl" pages="0,bag,1,codeBlock,2,story" selected="0"/>
-  <controller name="detailCtrl" pages="0,equip,1,detail" selected="0"/>
+  <controller name="detailCtrl" pages="0,equip,1,detail" selected="1"/>
   <displayList>
     <image id="n0_o7wx" name="n0" src="o7wx0" fileName="img/bg_compose.png" xy="0,0"/>
     <text id="n2_o7wx" name="n2" xy="372,9" size="98,29" fontSize="22" color="#ffffff" bold="true" text="AI机器人"/>
@@ -18,7 +18,7 @@
       <item title="特殊代码块" name="特殊代码块" selectedTitle="特殊代码块"/>
       <item title="背景故事" name="背景故事" selectedTitle="背景故事"/>
     </list>
-    <list id="n11_o7wx" name="listBagItem" xy="515,110" size="290,300" layout="flow_hz" overflow="scroll" lineGap="5" colGap="5" lineItemCount="4" defaultItem="ui://asrl3zfro7wxp">
+    <list id="n11_o7wx" name="listBagItem" xy="515,110" size="290,300" layout="flow_hz" overflow="scroll" lineGap="5" colGap="5" lineItemCount="4" defaultItem="ui://asrl3zfri7ba16">
       <gearDisplay controller="bagCtrl" pages="0"/>
     </list>
     <list id="n36_o7wx" name="listCodeblock" xy="510,110" size="300,300" overflow="scroll" scroll="both" margin="20,0,0,0" lineGap="30" defaultItem="ui://asrl3zfro7wxu" align="center">
@@ -41,7 +41,7 @@
     <text id="n21_o7wx" name="tfRobotLocation" xy="250,310" size="130,21" group="n25_o7wx" fontSize="14" color="#acacac" ubb="true" vars="true" bold="true" text="（位置:{row=5000},{col=5000}）">
       <relation target="n4_o7wx" sidePair="center-center,middle-middle"/>
     </text>
-    <text id="n54_hm31" name="tfFuel" xy="340,80" size="107,23" group="n25_o7wx" fontSize="16" color="#999a9d" vars="true" bold="true" text="燃料:{txtFuel=200/2000}"/>
+    <text id="n54_hm31" name="tfFuel" xy="340,80" size="104,23" group="n25_o7wx" fontSize="16" color="#999a9d" vars="true" bold="true" text="燃料:{txtFuel=200/2000}"/>
     <component id="n22_o7wx" name="btnSummon" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="265,335" size="100,40" group="n25_o7wx">
       <Button title="召唤" titleColor="#ffffff" titleFontSize="18" icon="ui://asrl3zfro7wx2" selectedTitle="召唤" selectedIcon="ui://asrl3zfro7wx2"/>
     </component>
@@ -93,7 +93,7 @@
     <text id="n47_yk6x" name="tfPoisonDef" xy="352,318" size="61,21" group="n49_yk6x" fontSize="15" color="#9e9e9e" vars="true" singleLine="true" text="毒抗   {value=50}"/>
     <text id="n48_yk6x" name="tfDarkDef" xy="352,339" size="61,21" group="n49_yk6x" fontSize="15" color="#9e9e9e" vars="true" singleLine="true" text="暗抗   {value=50}"/>
     <group id="n49_yk6x" name="n49" xy="213,256" size="200,105" group="n35_o7wx"/>
-    <group id="n35_o7wx" name="groupDetail" xy="198,66" size="233,359" advanced="true" collapsed="true">
+    <group id="n35_o7wx" name="groupDetail" xy="198,66" size="233,359" advanced="true">
       <gearDisplay controller="detailCtrl" pages="1"/>
     </group>
   </displayList>

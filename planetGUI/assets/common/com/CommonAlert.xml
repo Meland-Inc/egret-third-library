@@ -6,12 +6,12 @@
     <component id="n2_hxf8" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" xy="273,-2" size="42,43">
       <Button icon="ui://te1gxawoqn8o4" selectedIcon="ui://te1gxawoqn8o4"/>
     </component>
-    <component id="n4_hxf8" name="btnCancel" src="hxf8f" fileName="btn/btnCancel.xml" xy="20,170">
-      <Button title="取消"/>
-    </component>
     <component id="n5_hxf8" name="btnConfirm" src="qn8od" fileName="btn/btnCommon.xml" xy="180,170">
       <Button title="确定"/>
     </component>
-    <text id="n6_hxf8" name="tfContent" xy="31,70" size="250,80" fontSize="18" color="#9a9a9a" autoSize="none" text="啊啊啊"/>
+    <text id="n6_hxf8" name="tfContent" xy="31,70" size="250,80" fontSize="18" color="#9a9a9a" ubb="true" autoSize="none" text="啊啊啊"/>
+    <component id="n7_er20" name="btnCancel" src="qn8od" fileName="btn/btnCommon.xml" xy="20,170">
+      <Button title="取消" titleColor="#ffffff" icon="ui://te1gxawoqn8o7"/>
+    </component>
   </displayList>
 </component>
