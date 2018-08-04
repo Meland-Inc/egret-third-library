@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="60,60" extention="Button">
+  <controller name="button" pages="2,up,3,down" selected="0"/>
+  <controller name="conEquipMark" pages="0,hide,1,show" selected="0"/>
+  <displayList>
+    <image id="n6_lxnu" name="n6" src="lxnuw" pkg="kdeyuiww" xy="1,1"/>
+    <image id="n7_lxnu" name="n7" src="lxnuy" pkg="kdeyuiww" xy="0,0">
+      <gearDisplay controller="button" pages="3"/>
+    </image>
+    <loader id="n2_lxnu" name="ladIcon" xy="4,4" size="50,50" fill="scale"/>
+    <text id="n8_lxnu" name="tfNum" xy="7,38" size="45,19" fontSize="12" color="#916545" align="right" vAlign="middle" autoSize="none" text="5"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>
