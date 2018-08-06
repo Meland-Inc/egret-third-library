@@ -53,7 +53,7 @@
     <image id="jgot2a" name="btn_build_right.png" path="/img/"/>
     <image id="hsrb2b" name="btn_login_return.png" path="/img/"/>
     <component id="hsrb2c" name="btnReturn.xml" path="/btn/"/>
-    <image id="y3zw2e" name="bg_login_2.png" path="/img/"/>
+    <image id="y3zw2e" name="bg_login_2.png" path="/img/" scale="9grid" scale9grid="111,17,222,309"/>
     <image id="y3zw2f" name="btn_login_5.png" path="/img/" scale="9grid" scale9grid="10,8,51,18"/>
     <component id="y3zw2g" name="btnLogout.xml" path="/btn/"/>
     <image id="fyox2h" name="img_login_7.png" path="/img/" scale="9grid" scale9grid="11,11,204,20"/>
