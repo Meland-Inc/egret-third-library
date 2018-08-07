@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="ruc22gnt" jpegQuality="80" compressPNG="true">
   <resources>
-    <image id="td6e0" name="bg_bag.png" path="/img/"/>
+    <image id="td6e0" name="bg_bag.png" path="/img/" exported="true"/>
     <image id="td6e1" name="btn_bag_close.png" path="/img/"/>
     <image id="td6e2" name="btn_bag_item_1.png" path="/img/"/>
     <image id="td6e3" name="btn_bag_item_2.png" path="/img/"/>
@@ -46,13 +46,13 @@
     <image id="k8dt18" name="img_bag_slider_1.png" path="/img/" scale="9grid" scale9grid="8,0,162,13"/>
     <image id="k8dt19" name="img_bag_slider_2.png" path="/img/"/>
     <image id="k8dt1a" name="img_bag_slider_3.png" path="/img/"/>
-    <component id="k8dt1b" name="WinBagSplitConfirm.xml" path="/win/" exported="true"/>
+    <component id="k8dt1b" name="WinBackpackSplitConfirm.xml" path="/win/" exported="true"/>
     <component id="k8dt1c" name="Slider1_grip.xml" path="/sld/"/>
     <component id="k8dt1d" name="Slider1.xml" path="/sld/"/>
     <component id="k8dt1e" name="Slider2_grip.xml" path="/sld/"/>
     <component id="k8dt1f" name="Slider2.xml" path="/sld/"/>
     <component id="k8dt1g" name="btnAddSub.xml" path="/btn/"/>
-    <component id="lj6i1h" name="WinBagAbandonConfirm.xml" path="/win/" exported="true"/>
+    <component id="lj6i1h" name="WinBackpackDropConfirm.xml" path="/win/" exported="true"/>
     <image id="grbn1i" name="icon_bag_coat.png" path="/img/"/>
     <image id="grbn1j" name="icon_bag_gloves.png" path="/img/"/>
     <image id="grbn1k" name="icon_bag_helmet.png" path="/img/"/>
@@ -67,8 +67,8 @@
     <image id="fcaj1t" name="btn_main_bag.png" path="/img/"/>
     <component id="fcaj1u" name="comBackpackPanel.xml" path="/com/"/>
     <image id="pkc81v" name="img_bag_item_5.png" path="/img/"/>
-    <movieclip id="tebw1w" name="MovieClip1.jta" path="/win/"/>
     <component id="r2k31x" name="comObjectItemTip.xml" path="/com/" exported="true"/>
+    <component id="ti2i1y" name="comDurabilityBar.xml" path="/com/" exported="true"/>
   </resources>
   <publish name="backpack"/>
 </packageDescription>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="330,210">
+  <controller name="conType" pages="0,other,1,equip,2,comsumable" selected="0"/>
+  <displayList>
+    <image id="n2_grbn" name="bg" src="grbn1o" fileName="img/bg_bag_tips.png" pkg="ruc22gnt" xy="0,0" size="196,128">
+      <relation target="n12_grbn" sidePair="bottomext-bottom"/>
+    </image>
+    <image id="n29_grbn" name="imgIconBg" src="td6eg" fileName="img/img_bag_item_1.png" pkg="ruc22gnt" xy="10,10"/>
+    <loader id="n30_grbn" name="ladIcon" xy="44,44" pivot="0.5,0.5" anchor="true" size="64,64" url="ui://te1gxawolt5g16" align="center" vAlign="middle" fill="scale"/>
+    <text id="n9_grbn" name="tfName" xy="80,16" size="99,20" fontSize="16" color="#feef44" align="right" vAlign="middle" autoSize="none" bold="true" text="name"/>
+    <text id="n10_grbn" name="tfType" xy="95,37" size="85,20" fontSize="14" color="#ffffff" align="right" vAlign="middle" autoSize="height" text="type"/>
+    <text id="n11_grbn" name="tfCanSell" xy="95,56" size="85,18" fontSize="14" color="#ffffff" align="right" vAlign="middle" autoSize="none" text="不可交易"/>
+    <text id="n12_grbn" name="tfDesc" xy="16,99" size="162,19" fontSize="12" color="#fcfcfc" leading="5" autoSize="height" text="我是物品描述">
+      <gearXY controller="conType" pages="0,2" values="16,99|16,119" default="16,139"/>
+    </text>
+    <text id="n32_r2k3" name="tfAttribute" xy="16,90" size="79,20" fontSize="14" color="#feef44" vars="true" text="攻击力:  {value=100}">
+      <gearDisplay controller="conType" pages="1"/>
+    </text>
+    <text id="n33_r2k3" name="tfDurability" xy="16,114" size="104,20" fontSize="14" color="#feef44" vars="true" text="耐久度:  {value=100}/{maxValue=100}">
+      <gearDisplay controller="conType" pages="1"/>
+    </text>
+    <text id="n34_r2k3" name="tfCD" xy="16,90" size="67,20" fontSize="14" color="#feef44" vars="true" text="CD:   {value=10}秒">
+      <gearDisplay controller="conType" pages="2"/>
+      <relation target="n32_r2k3" sidePair="top-bottom"/>
+    </text>
+    <image id="n0_grbn" name="imgBtnBg" src="grbn1o" fileName="img/bg_bag_tips.png" pkg="ruc22gnt" xy="200,0" size="130,210" group="n8_grbn"/>
+    <component id="n21_grbn" name="btnUse" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="215,10" size="100,40" group="n8_grbn">
+      <Button title="使用" titleColor="#ad861c" titleFontSize="20" icon="ui://asrl3zfro7wx9"/>
+    </component>
+    <component id="n27_grbn" name="btnSplit" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="215,60" size="100,40" group="n8_grbn">
+      <Button title="拆分" titleColor="#ffffff" titleFontSize="20" icon="ui://asrl3zfro7wx2"/>
+    </component>
+    <component id="n28_grbn" name="btnDrop" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="215,110" size="100,40" group="n8_grbn">
+      <Button title="丢弃" titleColor="#ffffff" titleFontSize="20" icon="ui://asrl3zfro7wx2"/>
+    </component>
+    <component id="n31_a9pm" name="btnUnload" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="215,160" size="100,40" group="n8_grbn">
+      <Button title="卸下" titleColor="#ad861c" titleFontSize="20" icon="ui://asrl3zfro7wx9"/>
+    </component>
+    <group id="n8_grbn" name="grpOperate" xy="200,0" size="130,210" collapsed="true"/>
+  </displayList>
+  <relation target="n0_grbn" sidePair="bottomext-bottom"/>
+</component>

@@ -5,7 +5,6 @@
     <image id="w80l1" name="btn_main_attack.png" path="/img/" exported="true"/>
     <image id="w80l2" name="btn_main_bag.png" path="/img/" exported="true"/>
     <image id="w80l4" name="btn_main_city.png" path="/img/" exported="true"/>
-    <image id="w80l5" name="btn_main_create.png" path="/img/" exported="true"/>
     <image id="w80l6" name="btn_main_formula.png" path="/img/" exported="true"/>
     <image id="w80l9" name="btn_main_setting.png" path="/img/" exported="true"/>
     <image id="w80ld" name="img_main_item_1.png" path="/img/" exported="true"/>
@@ -21,7 +20,6 @@
     <component id="w80lr" name="btnMainRocker.xml" path="/btn/"/>
     <component id="ua4xu" name="WinMainMenu.xml" path="/win/" exported="true"/>
     <component id="ua4xw" name="btnMainCity.xml" path="/btn/"/>
-    <component id="ua4xx" name="btnMainCreate.xml" path="/btn/"/>
     <component id="ua4xy" name="btnMainFormula.xml" path="/btn/"/>
     <component id="ua4xz" name="btnMainTask.xml" path="/btn/"/>
     <image id="ua4x10" name="btn_main_task.png" path="/img/" exported="true"/>
@@ -70,6 +68,15 @@
     <image id="ft0q2f" name="img_main_item_4.png" path="/img/"/>
     <component id="ft0q2g" name="shortcutItem.xml" path="/btn/"/>
     <image id="q7z62e" name="icon_main_sword.png" path="/img/" exported="true"/>
+    <component id="ushb2h" name="WinMainPickTips.xml" path="/win/" exported="true"/>
+    <component id="ushb2i" name="ComPickObjectToast.xml" path="/com/" exported="true"/>
+    <image id="ushb2j" name="img_main_itemdrop.png" path="/img/"/>
+    <image id="n7lz2h" name="img_main_chargeforce_1.png" path="/img/"/>
+    <image id="n7lz2i" name="img_main_chargeforce_2.png" path="/img/"/>
+    <component id="n7lz2j" name="pbrAccmu.xml" path="/pbr/"/>
+    <component id="snov2k" name="ComAccmu.xml" path="/com/" exported="true"/>
+    <image id="9wog2l" name="btn_main_create.png" path="/img/"/>
+    <component id="9wog2m" name="btnMainCreate.xml" path="/btn/"/>
   </resources>
   <publish name="main"/>
 </packageDescription>

@@ -3,9 +3,15 @@
   <displayList>
     <component id="n5_9prt" name="btnHide" src="9prt1p" fileName="btn/btnMainHide.xml" xy="0,-100"/>
     <component id="n3_ua4x" name="btnFormula" src="ua4xy" fileName="btn/btnMainFormula.xml" xy="6,-100"/>
-    <component id="n4_ua4x" name="btnTask" src="ua4xz" fileName="btn/btnMainTask.xml" xy="6,-100"/>
-    <component id="n2_ua4x" name="btnCreate" src="ua4xx" fileName="btn/btnMainCreate.xml" xy="6,-100"/>
-    <component id="n10_wfql" name="btnSetting" src="wfql1x" fileName="btn/btnSetting.xml" xy="6,-100"/>
+    <component id="n4_ua4x" name="btnTask" src="ua4xz" fileName="btn/btnMainTask.xml" xy="6,-100">
+      <Button sound="ui://te1gxawotqc911"/>
+    </component>
+    <component id="n2_ua4x" name="btnCreate" src="9wog2m" fileName="btn/btnCreate.xml" xy="6,-100">
+      <Button sound="ui://te1gxawotqc911"/>
+    </component>
+    <component id="n10_wfql" name="btnSetting" src="wfql1x" fileName="btn/btnSetting.xml" xy="6,-100">
+      <Button sound="ui://te1gxawotqc911"/>
+    </component>
   </displayList>
   <transition name="show">
     <item time="0" type="XY" target="n10_wfql" tween="true" startValue="6,-100" endValue="6,318" duration="9"/>

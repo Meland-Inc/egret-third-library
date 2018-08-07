@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="694,510">
+  <displayList>
+    <image id="n1_ejib" name="imgBg" src="ejib1" xy="0,0"/>
+    <text id="n2_ejib" name="_tfTitle" xy="111,8" size="457,33" fontSize="24" color="#ffffff" align="center" autoSize="none" bold="true" text="orange的包裹"/>
+    <image id="n3_ejib" name="imgMyBagBg" src="lxnus" pkg="kdeyuiww" xy="29,60" size="308,377" group="n4_ejib"/>
+    <image id="n5_ejib" name="n5" src="lxnuu" pkg="kdeyuiww" xy="38,68" size="290,30" group="n4_ejib"/>
+    <text id="n6_ejib" name="_tfMyBagTitle" xy="79,70" size="203,27" group="n4_ejib" fontSize="18" color="#57a7df" align="center" vAlign="middle" autoSize="none" text="我的背包"/>
+    <list id="n7_ejib" name="_listMyBag" xy="52,109" size="260,321" group="n4_ejib" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="5" colGap="5" lineItemCount="4" defaultItem="ui://asrl3zfri7ba16" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n4_ejib" name="_grpMyBag" xy="29,60" size="308,377" advanced="true"/>
+    <image id="n8_ejib" name="imgFallingBagBg" src="lxnus" pkg="kdeyuiww" xy="352,60" size="308,377" group="n12_ejib"/>
+    <image id="n9_ejib" name="n9" src="lxnuu" pkg="kdeyuiww" xy="361,68" size="290,30" group="n12_ejib"/>
+    <text id="n10_ejib" name="_tfFallingBagTitle" xy="402,70" size="203,27" group="n12_ejib" fontSize="18" color="#57a7df" align="center" vAlign="middle" autoSize="none" text="我的背包"/>
+    <list id="n11_ejib" name="_listFallingBag" xy="375,109" size="260,321" group="n12_ejib" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="5" colGap="5" lineItemCount="4" defaultItem="ui://zgfm7sg2yofi5" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n12_ejib" name="_grpFallingBag" xy="352,60" size="334,377" advanced="true"/>
+    <component id="n14_zsdq" name="_btnQuickPickUp" src="zsdq4" xy="284,452">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </component>
+    <component id="n15_zsdq" name="btnClose" src="qn8oc" pkg="te1gxawo" xy="653,-10"/>
+  </displayList>
+</component>

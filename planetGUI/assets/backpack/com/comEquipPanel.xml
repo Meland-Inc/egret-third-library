@@ -2,15 +2,15 @@
 <component size="266,292">
   <displayList>
     <list id="n2_td6e" name="equipmentList" xy="0,0" size="266,237" layout="flow_hz" lineGap="10" colGap="125" lineItemCount="2" defaultItem="ui://ruc22gnttd6eo" align="center" vAlign="middle">
-      <item title="头盔" icon="ui://ruc22gntgrbn1n" name="hair"/>
-      <item title="衣服" icon="ui://ruc22gntgrbn1k" name="coat"/>
-      <item title="裤子" icon="ui://ruc22gntgrbn1i" name="pants"/>
-      <item title="鞋子" icon="ui://ruc22gntgrbn1m" name="shoe"/>
+      <item title="头盔" icon="ui://ruc22gntgrbn1k" name="hair"/>
+      <item title="衣服" icon="ui://ruc22gntgrbn1i" name="coat"/>
+      <item title="裤子" icon="ui://ruc22gntgrbn1m" name="pants"/>
+      <item title="鞋子" icon="ui://ruc22gntgrbn1j" name="shoe"/>
       <item title="手套" icon="ui://ruc22gntgrbn1j" name="glove"/>
       <item title="饰品" icon="ui://ruc22gntgrbn1l" name="accessory"/>
     </list>
     <text id="n36_ozbm" name="tfName" xy="67,195" size="131,27" fontSize="20" color="#6c6c6c" align="center" autoSize="none" text="name"/>
-    <text id="n39_ozbm" name="tfLv" xy="67,223" size="131,24" fontSize="18" color="#84c9f9" align="center" autoSize="none" text="LV.0"/>
+    <text id="n39_ozbm" name="tfLv" xy="67,223" size="131,24" fontSize="18" color="#84c9f9" align="center" vars="true" autoSize="none" text="LV.{lv=0}"/>
     <component id="n40_ozbm" name="labAtt" src="ozbmt" fileName="lab/labBasicTalent.xml" xy="71,254" size="50,24">
       <relation target="" sidePair="right-right"/>
       <Label title="99"/>

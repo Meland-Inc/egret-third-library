@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="75,82" extention="Button">
-  <controller name="conSelect" pages="0,normal,1,selected" selected="1"/>
+  <controller name="conSelect" pages="0,normal,1,selected" selected="0"/>
   <controller name="conEquipMark" pages="0,hide,1,show" selected="1"/>
   <displayList>
     <image id="n4_w80l" name="bg" src="w80ld" fileName="img/img_main_item_1.png" xy="0,8"/>
@@ -8,7 +8,11 @@
       <gearDisplay controller="conSelect" pages="1"/>
     </image>
     <loader id="n6_w80l" name="icon" xy="3,11" size="64,63" align="center" vAlign="middle" fill="scale"/>
-    <text id="n7_w80l" name="tfKeycode" xy="54,11" size="11,20" fontSize="16" color="#918070" align="center" vAlign="middle" text="1"/>
+    <text id="n7_w80l" name="tfKeycode" xy="54,11" size="10,20" fontSize="16" color="#918070" align="center" vAlign="middle" text="1"/>
+    <component id="n13_ti2i" name="durabilityBar" src="ti2i1y" fileName="com/comDurabilityBar.xml" pkg="ruc22gnt" xy="21,65">
+      <gearDisplay controller="conEquipMark" pages="1"/>
+      <ProgressBar value="100" max="100"/>
+    </component>
     <image id="n8_ft0q" name="tagBg" src="ft0q2f" fileName="img/img_main_item_4.png" xy="2,10" group="n10_ft0q"/>
     <text id="n9_ft0q" name="tfTagName" xy="-1,27" size="33,18" group="n10_ft0q" rotation="-45" fontSize="14" color="#916e4c" align="center" vAlign="middle" text="装备"/>
     <group id="n10_ft0q" name="n10" xy="-1,10" size="45,38" advanced="true" collapsed="true">

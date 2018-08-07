@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="694,453">
+  <controller name="chatChannel" alias="chatChannel" pages="0,common,1,priChat" selected="0"/>
   <displayList>
-    <image id="n0_oy2m" name="bg" src="8zcx19" pkg="te1gxawo" xy="0,0"/>
-    <image id="n3_oy2m" name="bg" src="oy2md" xy="163,68"/>
-    <image id="n5_oy2m" name="btnClose" src="ohl41c" pkg="te1gxawo" xy="647,-10"/>
-    <text id="n1_oy2m" name="title" xy="319,7" size="55,31" fontSize="24" color="#ffffff"  text="聊天"/>
-    <list id="n2_oy2m" name="lstBtn" xy="21,75" size="135,347" lineGap="6" defaultItem="ui://qagcvsbxoy2mv">
+    <image id="n13_hdi9" name="_imgBg" src="td6e0" pkg="ruc22gnt" xy="0,0"/>
+    <text id="n1_oy2m" name="_tfTitle" xy="261,7" size="170,31" fontSize="24" color="#ffffff" align="center" autoSize="none" text="聊天">
+      <relation target="" sidePair="center-center"/>
+    </text>
+    <component id="n27_hdi9" name="_btnSetting" src="hdi93a" xy="586,5"/>
+    <component id="n11_hdi9" name="btnClose" src="qn8oc" pkg="te1gxawo" xy="650,-11"/>
+    <list id="n2_oy2m" name="_listChannel" xy="21,75" size="135,347" lineGap="6" defaultItem="ui://qagcvsbxhdi93e">
       <item title="系统"/>
       <item title="综合"/>
       <item title="世界"/>
@@ -14,9 +17,33 @@
       <item title="附近"/>
       <item title="私聊"/>
     </list>
-    <component id="n8_oy2m" name="btnSetting" src="oy2mx" xy="583,5" size="49,34">
-      <Button icon="ui://qagcvsbxoy2m4"/>
+    <image id="n3_oy2m" name="_imgChatBg" src="oy2md" xy="163,68" group="n12_hdi9"/>
+    <list id="n26_hdi9" name="_lstChat" xy="180,81" size="480,298" group="n12_hdi9" overflow="scroll">
+      <gearXY controller="chatChannel" pages="1" values="180,114" default="180,81"/>
+      <gearSize controller="chatChannel" pages="1" values="480,264,1,1" default="480,298,1,1"/>
+      <relation target="" sidePair="center-center"/>
+    </list>
+    <component id="n16_hdi9" name="_btnVoice" src="hdi92y" xy="186,392" group="n25_hdi9">
+      <Button icon="ui://qagcvsbxoy2ma"/>
     </component>
-    <component id="n9_oy2m" name="labChating" src="oy2my" xy="177,79" size="23,22"/>
+    <component id="n23_hdi9" name="_btnFace" src="hdi934" xy="502,396" group="n25_hdi9"/>
+    <component id="n17_hdi9" name="_btnSend" src="hdi930" xy="546,386" group="n25_hdi9">
+      <Button title="发送" titleColor="#b49322" titleFontSize="18"/>
+    </component>
+    <image id="n18_hdi9" name="_imgInput" src="oy2mm" xy="241,392" group="n19_hdi9"/>
+    <text id="n20_hdi9" name="_tfInput" xy="248,396" size="214,23" group="n19_hdi9" input="true" prompt="[color=#BFBFBf[size=14]点击输入文字...[/size][/color]" fontSize="14" color="#bfbfbf" ubb="true" autoSize="none" singleLine="true" text="犯得上发射点犯得上范德萨范德萨范德萨发"/>
+    <component id="n24_hdi9" name="_btnHistory" src="hdi936" xy="465,391" group="n19_hdi9"/>
+    <group id="n19_hdi9" name="_grpInput" xy="241,392" size="245,30" group="n25_hdi9" advanced="true"/>
+    <group id="n25_hdi9" name="_grpBottom" xy="186,386" size="470,41" group="n12_hdi9" collapsed="true"/>
+    <group id="n12_hdi9" name="_grpChat" xy="163,68" size="515,366" advanced="true">
+      <relation target="" sidePair=""/>
+    </group>
+    <image id="n28_hdi9" name="" src="oy2mq" xy="186,82" size="101,22" group="n30_hdi9">
+      <relation target="n31_hdi9" sidePair="width-width"/>
+    </image>
+    <text id="n31_hdi9" name="_tfPriChatName" xy="188,85" size="95,19" group="n30_hdi9" aspect="true" fontSize="12" color="#ffffff" align="center" vAlign="middle" bold="true" text="与六月二私聊中"/>
+    <group id="n30_hdi9" name="_grpPriChat" xy="186,82" size="101,22" advanced="true">
+      <gearDisplay controller="chatChannel" pages="1"/>
+    </group>
   </displayList>
 </component>

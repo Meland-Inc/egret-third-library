@@ -4,7 +4,7 @@
     <image id="n0_dj9q" name="n0" src="dj9q13" fileName="img/img_robot_roleframe.png" xy="0,0"/>
     <text id="n3_dj9q" name="tfStatus" xy="17,86" size="50,19" font="FZZhunYuan-M02S" fontSize="14" color="#b1cbe1" align="center" vAlign="middle" leading="0" bold="true" singleLine="true" text="已解锁"/>
     <component id="n5_dj9q" name="btnClick" src="f5tyt" fileName="btn/btnChange.xml" xy="3,109">
-      <Button title="使用中" icon="ui://7xhwdeuzdj9qz"/>
+      <Button title="使用中" icon="ui://7xhwdeuzdj9qz" sound="ui://te1gxawotqc911"/>
     </component>
     <loader id="n6_lkft" name="avatarIcon" xy="10,10" size="66,66"/>
   </displayList>
