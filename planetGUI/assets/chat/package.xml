@@ -14,8 +14,8 @@
     <image id="oy2mb" name="icon_chat_mic_2.png" path="/img/"/>
     <image id="oy2mc" name="img_chat_avatar.png" path="/img/"/>
     <image id="oy2md" name="img_chat_bg.png" path="/img/"/>
-    <image id="oy2me" name="img_chat_bubble_1.png" path="/img/"/>
-    <image id="oy2mf" name="img_chat_bubble_2.png" path="/img/"/>
+    <image id="oy2me" name="img_chat_bubble_1.png" path="/img/" scale="9grid" scale9grid="40,11,80,9"/>
+    <image id="oy2mf" name="img_chat_bubble_2.png" path="/img/" scale="9grid" scale9grid="40,8,80,16"/>
     <image id="oy2mg" name="img_chat_create.png" path="/img/"/>
     <image id="oy2mh" name="img_chat_emoji.png" path="/img/"/>
     <image id="oy2mi" name="img_chat_friends_1.png" path="/img/"/>
@@ -26,16 +26,12 @@
     <image id="oy2mn" name="img_chat_input_2.png" path="/img/"/>
     <image id="oy2mo" name="img_chat_input_3.png" path="/img/"/>
     <image id="oy2mp" name="img_chat_nearby.png" path="/img/"/>
-    <image id="oy2mq" name="img_chat_object.png" path="/img/" scale="9grid" scale9grid="10,0,103,22"/>
+    <image id="oy2mq" name="img_chat_object.png" path="/img/" scale="9grid" scale9grid="54,7,13,9"/>
     <image id="oy2mr" name="img_chat_private.png" path="/img/"/>
     <image id="oy2ms" name="img_chat_subline.png" path="/img/"/>
     <image id="oy2mt" name="img_chat_system.png" path="/img/"/>
     <image id="oy2mu" name="img_chat_world.png" path="/img/"/>
-    <component id="oy2mv" name="radBtn.xml" path="/btn/"/>
-    <component id="oy2mx" name="btn.xml" path="/btn/"/>
-    <component id="oy2my" name="labFriendChating.xml" path="/com/"/>
-    <component id="oy2mz" name="ComDialog.xml" path="/com/" exported="true"/>
-    <component id="swb511" name="ComSelfDialog.xml" path="/com/" exported="true"/>
+    <component id="oy2mz" name="ComChatItem.xml" path="/com/" exported="true"/>
     <image id="swb512" name="701.png" path="/emoji/" exported="true"/>
     <image id="swb513" name="702.png" path="/emoji/" exported="true"/>
     <image id="swb514" name="703.png" path="/emoji/" exported="true"/>
@@ -101,7 +97,14 @@
     <image id="swb52s" name="763.png" path="/emoji/" exported="true"/>
     <image id="swb52t" name="764.png" path="/emoji/" exported="true"/>
     <image id="swb52u" name="765.png" path="/emoji/" exported="true"/>
-    <component id="swb52v" name="test.xml" path="/"/>
+    <component id="hdi92y" name="btnVoice.xml" path="/btn/"/>
+    <component id="hdi930" name="btnSend.xml" path="/btn/"/>
+    <component id="hdi934" name="btnFace.xml" path="/btn/"/>
+    <component id="hdi936" name="btnArrow1.xml" path="/btn/"/>
+    <component id="hdi93a" name="btnSetting.xml" path="/btn/"/>
+    <component id="hdi93e" name="btnChannel.xml" path="/btn/"/>
+    <component id="hdi93f" name="ComboBox1_item.xml" path="/btn/"/>
+    <component id="hdi93g" name="ComboBox1_popup.xml" path="/btn/"/>
   </resources>
   <publish name="chat"/>
 </packageDescription>

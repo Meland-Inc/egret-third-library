@@ -19,7 +19,7 @@
     <component id="cnpnf" name="CommonToast.xml" path="/com/" exported="true"/>
     <component id="hxf8f" name="btnCancel.xml" path="/btn/" exported="true"/>
     <component id="hxf8g" name="CommonAlert.xml" path="/com/" exported="true"/>
-    <image id="d30ci" name="img_common_prompt.png" path="/img/" exported="true"/>
+    <image id="d30ci" name="img_common_prompt.png" path="/img/" exported="true" scale="9grid" scale9grid="216,0,31,26"/>
     <component id="ar63j" name="CommonInputAlert.xml" path="/com/" exported="true"/>
     <image id="q8x4j" name="img_line_on.png" path="/img/"/>
     <image id="q8x4k" name="bg_common_1.png" path="/img/"/>
@@ -54,6 +54,8 @@
     <image id="er201e" name="icon_bag_coat.png" path="/img/"/>
     <component id="er201f" name="BtnCommonBagItem.xml" path="/btn/" exported="true"/>
     <image id="er201g" name="img_bag_item_5.png" path="/com/"/>
+    <image id="jr3d1h" name="btn_build_rotating.png" path="/img/" exported="true"/>
+    <component id="jr3d1j" name="btnRotateOp.xml" path="/btn/" exported="true"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>
