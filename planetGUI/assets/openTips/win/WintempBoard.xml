@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="500,400" bgColor="#33ffcc">
+  <displayList>
+    <image id="n0_8bhy" name="n0" src="8bhy0" fileName="img/bg_roleselect_2.png" xy="10,23"/>
+    <image id="n3_8bhy" name="n3" src="8bhy1" fileName="img/btn_login_2.png" xy="174,23" size="139,44"/>
+    <text id="n4_8bhy" name="n4" xy="193,27" size="104,37" fontSize="20" align="center" vAlign="middle" leading="5" letterSpacing="2" autoSize="none" text="临时公告"/>
+    <image id="n6_8bhy" name="n6" src="8bhy8" fileName="img/img_setting_logo.png" xy="31,80" size="438,274"/>
+    <text id="n8_8bhy" name="n8" xy="37,84" size="425,265" fontSize="20" align="center" vAlign="middle" leading="5" autoSize="none" text="sorry,the number you have dialed is busy now,please dail later"/>
+    <component id="n9_v0q5" name="btnClose" src="v0q5c" fileName="btn/ButtonClose.xml" xy="438,22" size="58,54"/>
+  </displayList>
+</component>
