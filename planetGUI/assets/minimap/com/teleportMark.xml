@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="67,62" pivot="0.5,0.3" anchor="true" extention="Button">
-  <controller name="conSelect" pages="0,normal,1,selected,2,showTips" selected="2"/>
+<component size="40,40" pivot="0.5,0.3" anchor="true" extention="Button">
+  <controller name="conSelect" pages="0,normal,1,selected,2,showTips" selected="0"/>
   <displayList>
     <image id="n4_mw87" name="ftTitleBg" src="mw871b" fileName="img/img_map_10.png" xy="0,42" size="67,20"/>
-    <text id="n1_kjpo" name="title" xy="1,44" size="65,17" fontSize="12" color="#ffffff" align="center" vAlign="middle" singleLine="true" text="传送点传送">
+    <text id="n1_kjpo" name="title" xy="-12,44" size="65,17" fontSize="12" color="#ffffff" align="center" vAlign="middle" singleLine="true" text="传送点传送">
       <relation target="" sidePair="center-center"/>
     </text>
-    <loader id="n9_jyp4" name="icon" xy="13,0" size="40,40" url="ui://k08mtk0rjyp41c" fill="scale">
+    <loader id="n9_jyp4" name="icon" xy="0,0" size="40,40" url="ui://k08mtk0rjyp41d" fill="scale">
       <gearIcon controller="conSelect" pages="0" values="ui://k08mtk0rjyp41d" default="ui://k08mtk0rjyp41c"/>
     </loader>
   </displayList>
