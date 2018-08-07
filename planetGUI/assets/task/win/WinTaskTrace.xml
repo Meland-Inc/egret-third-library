@@ -1,16 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="204,236" extention="Button">
+<component size="204,266" overflow="hidden" opaque="false">
+  <controller name="conShowHide" pages="0,show,1,hide" selected="1"/>
   <displayList>
-    <component id="n5_kmol" name="btnWinSwitch" src="jmgxr" xy="0,-33"/>
-    <image id="n1_ovpo" name="bg" src="sz339" xy="0,0" group="n8_jmgx"/>
-    <list id="n2_knpo" name="lstTask" xy="5,4" size="193,230" group="n8_jmgx" overflow="scroll" defaultItem="ui://eunktclqovpop" align="right" autoClearItems="true">
+    <image id="n1_ovpo" name="bg" src="sz339" fileName="img/img_task_bg_001.png" xy="-204,30" group="n8_jmgx"/>
+    <list id="n2_knpo" name="lstTask" xy="-199,34" size="193,230" group="n8_jmgx" overflow="scroll" defaultItem="ui://eunktclqovpop" align="right" autoClearItems="true">
       <item/>
       <item/>
       <item/>
       <item/>
     </list>
-    <group id="n8_jmgx" name="grpTaskPanel" xy="0,0" size="204,236" advanced="true" collapsed="true"/>
+    <group id="n8_jmgx" name="grpTaskPanel" xy="-204,30" size="204,236" advanced="true" collapsed="true">
+      <gearXY controller="conShowHide" pages="0,1" values="0,30|-204,30" tween="true"/>
+    </group>
+    <component id="n13_fzxx" name="btnHide" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="28,0" size="78,29">
+      <gearDisplay controller="conShowHide" pages="0"/>
+      <Button title="任务追踪" titleColor="#ffffff" titleFontSize="16" icon="ui://eunktclqsz33d" controller="conShowHide" page="1"/>
+    </component>
+    <component id="n14_fzxx" name="btnShow" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="28,0" size="78,29">
+      <gearDisplay controller="conShowHide" pages="1"/>
+      <Button title="任务追踪" titleColor="#ffffff" titleFontSize="16" icon="ui://eunktclqsz33d" controller="conShowHide" page="0"/>
+    </component>
+    <image id="n10_fzxx" name="showArrow" src="sz337" fileName="img/btn_task_storage.png" xy="0,3">
+      <gearDisplay controller="conShowHide" pages="0"/>
+    </image>
+    <image id="n15_fzxx" name="hideArrow" src="sz337" fileName="img/btn_task_storage.png" xy="25,4" scale="-1,1">
+      <gearDisplay controller="conShowHide" pages="1"/>
+    </image>
   </displayList>
-  <Button/>
   <transition name="t0"/>
 </component>

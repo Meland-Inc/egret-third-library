@@ -44,15 +44,16 @@
     <group id="n34_ptq4" name="signinGroup" xy="2000,114" size="441,412" advanced="true" collapsed="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <image id="n7_jddv" name="imgSelectModeBG" src="y3zw2e" fileName="img/bg_login_2.png" xy="347,144" size="441,352" group="n9_jddv"/>
-    <image id="n8_jddv" name="imgSelectModeTop" src="jddv10" fileName="img/img_login_title.png" xy="348,144" size="439,58" group="n9_jddv"/>
-    <text id="n16_jddv" name="tfOr" xy="552,363" size="30,31" group="n9_jddv" font="方正准圆简体" fontSize="24" color="#e9e9e9" bold="true" text="或"/>
-    <component id="n25_jddv" name="btnQQLogin" src="jddv1g" fileName="btn/btnQQLogin.xml" xy="390,296" size="354,58" group="n9_jddv"/>
-    <component id="n27_jddv" name="btnAccountLogin" src="jddv1h" fileName="btn/btnAccountLogin.xml" xy="390,404" size="354,58" group="n9_jddv"/>
-    <text id="n28_jddv" name="tfTitle" xy="540,157" size="55,31" group="n9_jddv" font="方正准圆简体" fontSize="24" color="#5fa9dd" bold="true" text="登录">
+    <image id="n72_9kka" name="frame" src="y3zw2e" fileName="img/bg_login_2.png" xy="347,144" group="n9_jddv" hideByEditor="true" visible="false"/>
+    <component id="n29_ptq4" name="btnWXLogin" src="jddv1f" fileName="btn/btnWXLogin.xml" xy="390,228" size="354,58" group="n9_jddv" hideByEditor="true" visible="false"/>
+    <component id="n25_jddv" name="btnQQLogin" src="jddv1g" fileName="btn/btnQQLogin.xml" xy="390,296" size="354,58" group="n9_jddv" hideByEditor="true" visible="false"/>
+    <text id="n16_jddv" name="tfOr" xy="552,363" size="30,31" group="n9_jddv" hideByEditor="true" visible="false" font="方正准圆简体" fontSize="24" color="#e9e9e9" bold="true" text="或"/>
+    <image id="n7_jddv" name="imgSelectModeBG" src="y3zw2e" fileName="img/bg_login_2.png" xy="347,225" size="441,190" group="n9_jddv"/>
+    <image id="n8_jddv" name="imgSelectModeTop" src="jddv10" fileName="img/img_login_title.png" xy="348,225" size="439,58" group="n9_jddv"/>
+    <text id="n28_jddv" name="tfTitle" xy="540,238" size="55,31" group="n9_jddv" font="方正准圆简体" fontSize="24" color="#5fa9dd" bold="true" text="登录">
       <relation target="" sidePair="left-left,top-top"/>
     </text>
-    <component id="n29_ptq4" name="btnWXLogin" src="jddv1f" fileName="btn/btnWXLogin.xml" xy="390,228" size="354,58" group="n9_jddv"/>
+    <component id="n27_jddv" name="btnAccountLogin" src="jddv1h" fileName="btn/btnAccountLogin.xml" xy="391,316" size="354,58" group="n9_jddv"/>
     <group id="n9_jddv" name="selectModeGroup" xy="347,144" size="441,352" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
