@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="694,453">
+  <displayList>
+    <image id="n0_xjjc" name="bg" src="qn8o1" fileName="img/bg_bag.png" pkg="te1gxawo" xy="0,0"/>
+    <text id="n1_xjjc" name="winTitle" xy="258,-1" size="175,45" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="使用需知"/>
+    <list id="n5_xjjc" name="lstGuideContent" xy="97,79" size="500,335" layout="flow_hz" overflow="scroll" lineGap="20" defaultItem="ui://mp92elpxxjjc4" align="center" autoClearItems="true">
+      <item url="ui://mp92elpxxjjc3" icon="ui://mp92elpxxjjc1"/>
+      <item title="撒啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊&#xD;dfgfsdfsdf&#xD;sdf&#xD;sd&#xD;fs&#xD;df&#xD;sdf&#xD;"/>
+      <item url="ui://mp92elpxxjjc3" icon="ui://mp92elpxxjjc2"/>
+    </list>
+    <component id="n6_xjjc" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="647,-7"/>
+  </displayList>
+</component>
