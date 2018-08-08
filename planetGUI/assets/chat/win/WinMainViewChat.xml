@@ -5,7 +5,7 @@
     <list id="n1_dg90" name="lstChatRecord" xy="0,0" size="500,149" overflow="scroll" autoClearItems="true">
       <item url="ui://qagcvsbxxjjc3i"/>
     </list>
-    <component id="n3_dg90" name="btnOpenChatWin" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="469,4" pivot="0.5,0.5" size="23,23">
+    <component id="n3_dg90" name="btnOpenChatWin" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="469,4" pivot="0.5,0.5" size="23,23" visible="false">
       <Button icon="ui://qagcvsbxdg903k"/>
     </component>
   </displayList>

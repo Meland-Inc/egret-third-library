@@ -9,9 +9,9 @@
     <component id="n27_hdi9" name="_btnSetting" src="hdi93a" fileName="btn/btnSetting.xml" xy="586,5"/>
     <component id="n11_hdi9" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="650,-11"/>
     <list id="n2_oy2m" name="_listChannel" xy="21,75" size="135,347" lineGap="6" defaultItem="ui://qagcvsbxhdi93e">
-      <item title="系统"/>
-      <item title="综合"/>
       <item title="世界"/>
+      <item title="综合"/>
+      <item title="系统"/>
       <item title="分线"/>
       <item title="创作"/>
       <item title="附近"/>
@@ -36,9 +36,9 @@
       <Button title="发送" titleColor="#b49322" titleFontSize="18"/>
     </component>
     <image id="n18_hdi9" name="_imgInput" src="oy2mm" fileName="img/img_chat_input_1.png" xy="241,392" group="n19_hdi9"/>
-    <text id="n20_hdi9" name="_inpSendText" xy="248,396" size="214,23" group="n19_hdi9" input="true" prompt="[color=#BFBFBf[size=14]点击输入文字...[/size][/color]" maxLength="200" fontSize="14" color="#bfbfbf" vAlign="middle" ubb="true" autoSize="none" singleLine="true" text=""/>
+    <text id="n20_hdi9" name="_inpSendText" xy="248,389" size="214,35" group="n19_hdi9" input="true" prompt="[color=#BFBFBf[size=14]点击输入文字...[/size][/color]" maxLength="200" fontSize="14" color="#bfbfbf" vAlign="middle" ubb="true" autoSize="none" singleLine="true" text=""/>
     <component id="n24_hdi9" name="_btnHistory" src="hdi936" fileName="btn/btnArrow1.xml" xy="465,391" group="n19_hdi9"/>
-    <group id="n19_hdi9" name="_grpInput" xy="241,392" size="245,30" group="n25_hdi9" advanced="true"/>
+    <group id="n19_hdi9" name="_grpInput" xy="241,389" size="245,36" group="n25_hdi9" advanced="true"/>
     <group id="n25_hdi9" name="_grpBottom" xy="186,386" size="470,41" group="n12_hdi9" collapsed="true"/>
     <group id="n12_hdi9" name="_grpChat" xy="163,68" size="515,366" advanced="true">
       <relation target="" sidePair=""/>

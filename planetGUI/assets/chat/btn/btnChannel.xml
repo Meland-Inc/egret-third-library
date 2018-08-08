@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="129,44" extention="Button">
-  <controller name="button" pages="0,up,4,down" selected="1"/>
+  <controller name="button" pages="0,up,4,down" selected="0"/>
   <displayList>
-    <loader id="n2" name="icon" xy="0,0" size="129,44" url="ui://qagcvsbxoy2m9" align="center" vAlign="middle" fill="scaleFree">
+    <loader id="n2" name="icon" xy="0,0" size="129,44" url="ui://qagcvsbxoy2m8" align="center" vAlign="middle" fill="scaleFree">
       <gearIcon controller="button" pages="4" values="ui://qagcvsbxoy2m9" default="ui://qagcvsbxoy2m8"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <text id="n3_hdi9" name="title" xy="5,7" size="117,29" fontSize="20" color="#eea21d" align="center" vAlign="middle" autoSize="none" text="系统">
+    <text id="n3_hdi9" name="title" xy="5,7" size="117,29" fontSize="20" color="#9b9b9b" align="center" vAlign="middle" autoSize="none" text="系统">
       <gearColor controller="button" pages="4" values="#eea21d,#000000" default="#9b9b9b,#000000"/>
     </text>
   </displayList>

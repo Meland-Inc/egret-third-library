@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="78,25">
-  <controller name="selfMark" pages="0,other,1,self" selected="0"/>
+<component size="78,27">
+  <controller name="selfMark" pages="0,other,1,self" selected="1"/>
   <displayList>
     <image id="n0_xjjc" name="n0" src="oy2mu" fileName="img/img_chat_world.png" xy="5,4"/>
-    <text id="n1_xjjc" name="title" xy="43,3" size="23,18" fontSize="14" color="#84c9f9" singleLine="true" text="我:"/>
-    <text id="n2_xjjc" name="_rtfContent" xy="65,3" size="10,18" fontSize="14" color="#ffffff" vars="true" text="">
+    <text id="n1_xjjc" name="title" xy="43,3" size="23,18" fontSize="14" color="#84c9f9" vAlign="middle" singleLine="true" text="我:"/>
+    <text id="n2_xjjc" name="_rtfContent" xy="65,5" size="10,18" fontSize="14" color="#ffffff" vars="true" text="">
       <relation target="n1_xjjc" sidePair="left-right"/>
     </text>
     <graph id="n3_tbq6" name="n3" xy="5,4" size="35,16" group="n5_tbq6" type="rect" lineSize="0" fillColor="#ffff0000" corner="5"/>
-    <text id="n4_tbq6" name="n4" xy="6,4" size="33,17" group="n5_tbq6" fontSize="12" color="#ffffff" align="center" autoSize="none" text="我"/>
+    <text id="n4_tbq6" name="n4" xy="6,4" size="33,17" group="n5_tbq6" fontSize="12" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="我"/>
     <group id="n5_tbq6" name="grpSelfMark" xy="5,4" size="35,17" advanced="true" collapsed="true">
       <gearDisplay controller="selfMark" pages="1"/>
     </group>
