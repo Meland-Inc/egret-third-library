@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="500,149">
+  <displayList>
+    <graph id="n0_dg90" name="n0" xy="0,0" size="500,150" alpha="0.4" type="rect" lineSize="0" fillColor="#ff000000" corner="10"/>
+    <list id="n1_dg90" name="lstChatRecord" xy="0,0" size="500,149" overflow="scroll" autoClearItems="true">
+      <item url="ui://qagcvsbxxjjc3i"/>
+    </list>
+    <component id="n3_dg90" name="btnOpenChatWin" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="469,4" pivot="0.5,0.5" size="23,23">
+      <Button icon="ui://qagcvsbxdg903k"/>
+    </component>
+  </displayList>
+</component>

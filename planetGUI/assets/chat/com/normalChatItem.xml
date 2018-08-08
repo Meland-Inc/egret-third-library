@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="304,41">
+  <displayList>
+    <image id="n0_xjjc" name="n0" src="oy2mu" fileName="img/img_chat_world.png" xy="5,4"/>
+    <text id="n1_xjjc" name="_tfName" xy="43,2" size="44,18" fontSize="14" color="#84c9f9" vars="true" singleLine="true" text="{name=name}:"/>
+    <text id="n2_xjjc" name="_rtfContent" xy="86,2" size="215,35" fontSize="14" color="#ffffff" vars="true" text="啊哈哈哈哈哈哈哈哈哈或或或或或&#xA;sdfsdfsdf">
+      <relation target="n1_xjjc" sidePair="left-right"/>
+    </text>
+  </displayList>
+  <relation target="n2_xjjc" sidePair="rightext-right,bottomext-bottom"/>
+</component>
