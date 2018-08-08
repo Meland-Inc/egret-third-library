@@ -70,6 +70,13 @@
     <image id="ft0q2f" name="img_main_item_4.png" path="/img/"/>
     <component id="ft0q2g" name="shortcutItem.xml" path="/btn/"/>
     <image id="q7z62e" name="icon_main_sword.png" path="/img/" exported="true"/>
+    <component id="oy0u2h" name="WinMainPickTips.xml" path="/win/"/>
+    <component id="oy0u2i" name="pbrAccmu.xml" path="/pbr/"/>
+    <image id="oy0u2j" name="img_main_chargeforce_1.png" path="/img/"/>
+    <image id="oy0u2k" name="img_main_chargeforce_2.png" path="/img/"/>
+    <image id="oy0u2l" name="img_main_itemdrop.png" path="/img/"/>
+    <component id="oy0u2m" name="ComAccmu.xml" path="/com/"/>
+    <component id="oy0u2n" name="ComPickObjectToast.xml" path="/com/"/>
   </resources>
-  <publish name="main"/>
+  <publish name="main" path="E:\Git\egret-planet\resource\assets\fairyGui"/>
 </packageDescription>
