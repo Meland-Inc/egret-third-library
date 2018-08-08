@@ -70,13 +70,13 @@
     <image id="ft0q2f" name="img_main_item_4.png" path="/img/"/>
     <component id="ft0q2g" name="shortcutItem.xml" path="/btn/"/>
     <image id="q7z62e" name="icon_main_sword.png" path="/img/" exported="true"/>
-    <component id="ushb2h" name="WinMainPickTips.xml" path="/win/" exported="true"/>
-    <component id="ushb2i" name="ComPickObjectToast.xml" path="/com/" exported="true"/>
-    <image id="ushb2j" name="img_main_itemdrop.png" path="/img/"/>
-    <image id="n7lz2h" name="img_main_chargeforce_1.png" path="/img/"/>
-    <image id="n7lz2i" name="img_main_chargeforce_2.png" path="/img/"/>
-    <component id="n7lz2j" name="pbrAccmu.xml" path="/pbr/"/>
-    <component id="snov2k" name="ComAccmu.xml" path="/com/" exported="true"/>
+    <component id="oy0u2i" name="pbrAccmu.xml" path="/pbr/"/>
+    <image id="oy0u2j" name="img_main_chargeforce_1.png" path="/img/"/>
+    <image id="oy0u2k" name="img_main_chargeforce_2.png" path="/img/"/>
+    <image id="oy0u2l" name="img_main_itemdrop.png" path="/img/"/>
+    <component id="oy0u2m" name="ComAccmu.xml" path="/com/"/>
+    <component id="oy0u2n" name="ComPickObjectToast.xml" path="/com/" exported="true"/>
+    <component id="tbq62o" name="WinMainPickTips.xml" path="/win/" exported="true"/>
   </resources>
-  <publish name="main" path="C:\bellcode\develop-debug\resource\assets\fairyGui"/>
+  <publish name="main"/>
 </packageDescription>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="58,58" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_v0q5" name="n0" src="8bhy8" fileName="img/img_setting_logo.png" xy="6,3" size="41,43" group="n4_v0q5">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_v0q5" name="n1" src="v0q5a" fileName="img/btn_login_closed.png" xy="12,8" size="29,30" group="n4_v0q5"/>
+    <group id="n4_v0q5" name="n4" xy="6,3" size="41,43" advanced="true"/>
+  </displayList>
+  <Button/>
+</component>
