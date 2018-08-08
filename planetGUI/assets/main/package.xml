@@ -74,9 +74,9 @@
     <image id="oy0u2j" name="img_main_chargeforce_1.png" path="/img/"/>
     <image id="oy0u2k" name="img_main_chargeforce_2.png" path="/img/"/>
     <image id="oy0u2l" name="img_main_itemdrop.png" path="/img/"/>
-    <component id="oy0u2m" name="ComAccmu.xml" path="/com/"/>
+    <component id="oy0u2m" name="ComAccmu.xml" path="/com/" exported="true"/>
     <component id="oy0u2n" name="ComPickObjectToast.xml" path="/com/" exported="true"/>
     <component id="tbq62o" name="WinMainPickTips.xml" path="/win/" exported="true"/>
   </resources>
-  <publish name="main"/>
+  <publish name="main" path="C:\bellcode\develop-debug\resource\assets\fairyGui"/>
 </packageDescription>
