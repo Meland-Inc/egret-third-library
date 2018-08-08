@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="694,453">
   <controller name="conMarkBtn" pages="0,put,1,delete,2,cancel" selected="0"/>
-  <controller name="conMapMode" pages="0,normal,1,selectBornPoint,2,selectRevivePoint" selected="0"/>
+  <controller name="conMapMode" pages="0,normal,1,selectBornPoint,2,selectRevivePoint" selected="1"/>
   <displayList>
     <image id="n5_p85h" name="imgBg" src="p85h1" xy="0,0"/>
-    <component id="n36_fyx8" name="btnClose" src="qn8oc" pkg="te1gxawo" xy="650,-9"/>
+    <component id="n36_fyx8" name="btnClose" src="qn8oc" pkg="te1gxawo" xy="650,-9">
+      <gearDisplay controller="conMapMode" pages="0"/>
+    </component>
     <text id="n1_q5b2" name="title" xy="258,1" size="170,43" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="大地图"/>
     <image id="n11_p85h" name="n11" src="p85hn" xy="1,47" group="n20_p85h"/>
     <image id="n13_p85h" name="n13" src="p85hn" xy="1,448" group="n20_p85h" scale="1,-1"/>
