@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="480,70" extention="Label">
+  <displayList>
+    <loader id="n12_hdi9" name="_iconChannel" xy="0,1" size="35,16" url="ui://qagcvsbxoy2mr"/>
+    <text id="n10_swb5" name="_tfName" xy="42,1" size="44,17" fontSize="12" color="#84c9f9" vAlign="middle" bold="true" singleLine="true" text="六月六"/>
+    <image id="n3_oy2m" name="iconBg" src="oy2mc" fileName="img/img_chat_avatar.png" xy="0,22" group="n11_hdi9"/>
+    <loader id="n4_oy2m" name="_icon" xy="0,22" size="39,39" group="n11_hdi9" align="center" vAlign="middle" fill="scale"/>
+    <group id="n11_hdi9" name="_grpIcon" xy="0,22" size="39,39" advanced="true" collapsed="true"/>
+    <loader id="n14_hdi9" name="_bubbleBg" xy="50,38" size="39,32" url="ui://qagcvsbxoy2mf" fill="scaleFree">
+      <relation target="n7_swb5" sidePair="rightext-right,bottomext-bottom"/>
+    </loader>
+    <richtext id="n7_swb5" name="_rtfContent" xy="60,46" size="18,17" restrictSize="0,410,0,0" fontSize="12" color="#68931d" vAlign="middle" leading="6" ubb="true" bold="true" text="猪"/>
+  </displayList>
+  <relation target="n7_swb5" sidePair="bottomext-bottom"/>
+</component>

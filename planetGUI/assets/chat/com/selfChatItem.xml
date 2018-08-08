@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="170,70" extention="Label">
+  <displayList>
+    <loader id="n14_hdi9" name="_bubbleBg" xy="0,38" size="119,32" url="ui://qagcvsbxoy2mf" fill="scaleFree">
+      <relation target="n7_swb5" sidePair="rightext-right,bottomext-bottom"/>
+    </loader>
+    <richtext id="n7_swb5" name="_rtfContent" xy="10,47" size="98,17" restrictSize="0,410,0,0" fontSize="12" color="#68931d" vAlign="middle" leading="6" ubb="true" bold="true" text="猪141111111111111111"/>
+    <loader id="n12_hdi9" name="_iconChannel" xy="134,1" size="35,16" group="n16_xjjc" url="ui://qagcvsbxoy2mr"/>
+    <text id="n10_swb5" name="_tfName" xy="111,1" size="18,17" group="n16_xjjc" fontSize="12" color="#84c9f9" bold="true" singleLine="true" text="我">
+      <relation target="n12_hdi9" sidePair="right-right"/>
+    </text>
+    <image id="n3_oy2m" name="iconBg" src="oy2mc" fileName="img/img_chat_avatar.png" xy="131,22" group="n11_hdi9"/>
+    <loader id="n4_oy2m" name="_icon" xy="131,22" size="39,39" group="n11_hdi9" align="center" vAlign="middle" fill="scale"/>
+    <group id="n11_hdi9" name="_grpIcon" xy="131,22" size="39,39" group="n16_xjjc" advanced="true" collapsed="true"/>
+    <group id="n16_xjjc" name="grpSelfInfo" xy="111,1" size="59,60" advanced="true" collapsed="true">
+      <relation target="" sidePair="right-right"/>
+    </group>
+  </displayList>
+  <relation target="n7_swb5" sidePair="rightext-right,bottomext-bottom"/>
+</component>
