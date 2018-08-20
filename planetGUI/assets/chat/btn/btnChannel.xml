@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="129,44" extention="Button">
-  <controller name="button" pages="0,up,4,down" selected="0"/>
+  <controller name="button" pages="0,up,4,down,5,disable" selected="0"/>
   <displayList>
     <loader id="n2" name="icon" xy="0,0" size="129,44" url="ui://qagcvsbxoy2m8" align="center" vAlign="middle" fill="scaleFree">
-      <gearIcon controller="button" pages="4" values="ui://qagcvsbxoy2m9" default="ui://qagcvsbxoy2m8"/>
+      <gearIcon controller="button" pages="4,5" values="ui://qagcvsbxoy2m9|ui://qagcvsbx84323m" default="ui://qagcvsbxoy2m8"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
     <text id="n3_hdi9" name="title" xy="5,7" size="117,29" fontSize="20" color="#9b9b9b" align="center" vAlign="middle" autoSize="none" text="系统">

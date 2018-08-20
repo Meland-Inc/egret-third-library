@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="21,25" pivot="0.5,0.5" anchor="true" extention="Button">
-  <controller name="conSelect" pages="0,normal,1,selected,2,showTips" selected="0"/>
+  <controller name="conSelect" pages="0,normal,1,selected,2,showTips" selected="2"/>
+  <controller name="conMarkType" pages="0,normal,1,home" selected="1"/>
   <displayList>
-    <image id="n1_p85h" name="tfBg" src="p85hc" fileName="img/img_map_3.png" xy="-7,-27" size="36,20" group="n6_kjpo">
+    <image id="n1_p85h" name="tfBg" src="p85hc" fileName="img/img_map_3.png" xy="-9,-31" size="41,20" group="n6_kjpo">
       <relation target="n0_p85h" sidePair="width-width,top-top"/>
       <relation target="" sidePair="center-center,top-top"/>
     </image>
-    <text id="n0_p85h" name="title" xy="-7,-26" size="37,18" group="n6_kjpo" fontSize="14" color="#ffffff" align="center" vAlign="middle" singleLine="true" text="mark">
+    <text id="n0_p85h" name="title" xy="-9,-30" size="42,20" group="n6_kjpo" fontSize="16" color="#ffffff" align="center" vAlign="middle" singleLine="true" text="mark">
       <relation target="" sidePair="top-top,center-center"/>
     </text>
-    <group id="n6_kjpo" name="grpMarkName" xy="-7,-27" size="35,20" advanced="true" collapsed="true">
+    <group id="n6_kjpo" name="grpMarkName" xy="-9,-31" size="41,21" advanced="true" collapsed="true">
       <gearDisplay controller="conSelect" pages="1,2"/>
+      <gearXY controller="conMarkType" pages="1" values="-9,-31" default="-7,-27"/>
       <relation target="n2_p85h" sidePair="top-top"/>
     </group>
-    <image id="n7_kjpo" name="imgSelected" src="kjpo13" fileName="img/img_map_sign_14.png" xy="10,11" pivot="0.5,0.5" anchor="true" size="53,56" scale="0.5,0.5">
+    <image id="n7_kjpo" name="imgSelected" src="kjpo13" fileName="img/img_map_sign_14.png" xy="10,11" pivot="0.5,0.5" anchor="true" size="53,55" scale="0.5,0.5">
       <gearDisplay controller="conSelect" pages="1"/>
       <relation target="" sidePair="center-center"/>
       <relation target="n2_p85h" sidePair="width-width%,height-height%"/>
     </image>
-    <loader id="n2_p85h" name="icon" xy="10,12" pivot="0.5,0.5" anchor="true" size="35,43" scale="0.5,0.5" url="ui://k08mtk0rohl4w" autoSize="true">
+    <loader id="n2_p85h" name="icon" xy="10,12" pivot="0.5,0.5" anchor="true" size="35,43" url="ui://k08mtk0rohl4w" autoSize="true">
+      <gearSize controller="conMarkType" pages="1" values="35,43,1,1" default="35,43,0.5,0.5"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
   </displayList>
