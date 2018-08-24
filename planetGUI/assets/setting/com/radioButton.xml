@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="400,33" extention="Label">
+  <displayList>
+    <text id="n0_9utn" name="title" xy="0,4" size="10,27" fontSize="18" color="#9b9b9b" singleLine="true" text="&#xA;">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+    <image id="n5_9utn" name="bg" src="8zcx9" fileName="img/img_setting_switch_2.png" xy="15,0" size="213,33" group="n8_9utn"/>
+    <component id="n7_9utn" name="toggle" src="9utnu" fileName="com/choose.xml" xy="15,0" group="n8_9utn"/>
+    <group id="n8_9utn" name="n8" xy="15,0" size="213,33" advanced="true">
+      <relation target="n0_9utn" sidePair="left-right"/>
+    </group>
+  </displayList>
+</component>

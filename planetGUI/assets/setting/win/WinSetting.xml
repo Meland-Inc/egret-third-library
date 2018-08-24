@@ -19,7 +19,10 @@
       <gearDisplay controller="conSetting" pages="2"/>
     </component>
     <text id="n18_tt9l" name="n18" xy="341,201" size="138,53" fontSize="43" autoSize="none" text="TO DO">
-      <gearDisplay controller="conSetting" pages="0,3"/>
+      <gearDisplay controller="conSetting" pages="3"/>
     </text>
+    <component id="n19_9utn" name="winSysSetting" src="cf98m" fileName="win/winSysSetting.xml" xy="175,75" size="489,340">
+      <gearDisplay controller="conSetting" pages="0"/>
+    </component>
   </displayList>
 </component>
