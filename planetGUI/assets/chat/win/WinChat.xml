@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="694,453">
-  <controller name="chatChannel" alias="chatChannel" pages="0,common,1,priChat" selected="1"/>
+  <controller name="chatChannel" alias="chatChannel" pages="0,common,1,priChat" selected="0"/>
+  <controller name="conShowSendHistory" pages="1,hide,0,show" selected="1"/>
   <displayList>
     <image id="n13_hdi9" name="_imgBg" src="td6e0" fileName="img/bg_bag.png" pkg="ruc22gnt" xy="0,0"/>
     <text id="n1_oy2m" name="_tfTitle" xy="261,7" size="170,31" fontSize="24" color="#ffffff" align="center" autoSize="none" text="聊天">
@@ -18,7 +19,7 @@
       <item title="私聊"/>
     </list>
     <image id="n3_oy2m" name="_imgChatBg" src="oy2md" fileName="img/img_chat_bg.png" xy="163,68" group="n12_hdi9"/>
-    <list id="n26_hdi9" name="_lstChatRecord" xy="180,114" size="480,264" group="n12_hdi9" overflow="scroll" defaultItem="ui://qagcvsbxon753n" autoClearItems="true">
+    <list id="n26_hdi9" name="_lstChatRecord" xy="180,81" size="480,298" group="n12_hdi9" overflow="scroll" defaultItem="ui://qagcvsbxon753n" autoClearItems="true">
       <gearXY controller="chatChannel" pages="1" values="180,114" default="180,81"/>
       <gearSize controller="chatChannel" pages="1" values="480,264,1,1" default="480,298,1,1"/>
       <relation target="" sidePair="center-center"/>
@@ -37,9 +38,14 @@
     </component>
     <image id="n18_hdi9" name="_imgInput" src="oy2mm" fileName="img/img_chat_input_1.png" xy="241,392" size="245,30" group="n19_hdi9"/>
     <text id="n20_hdi9" name="_inpSendText" xy="249,389" size="220,35" group="n19_hdi9" input="true" prompt="[color=#BFBFBf[size=14]点击输入文字...[/size][/color]" maxLength="200" fontSize="14" color="#bfbfbf" vAlign="middle" ubb="true" autoSize="none" singleLine="true" text=""/>
-    <component id="n24_hdi9" name="_btnHistory" src="hdi936" fileName="btn/btnArrow1.xml" xy="465,391" size="20,30" group="n19_hdi9"/>
-    <group id="n19_hdi9" name="_grpInput" xy="241,389" size="245,35" group="n25_hdi9" advanced="true"/>
-    <group id="n25_hdi9" name="_grpBottom" xy="186,386" size="470,41" group="n12_hdi9" collapsed="true"/>
+    <component id="n32_k59n" name="_btnHistory" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="470,403" size="10,7" group="n19_hdi9">
+      <Button icon="ui://qagcvsbxoy2m5"/>
+    </component>
+    <component id="n34_k59n" name="comSendHistory" src="k59n3o" fileName="com/comSendHistory.xml" xy="241,273" group="n19_hdi9">
+      <gearDisplay controller="conShowSendHistory" pages="0"/>
+    </component>
+    <group id="n19_hdi9" name="_grpInput" xy="241,273" size="245,151" group="n25_hdi9" advanced="true"/>
+    <group id="n25_hdi9" name="_grpBottom" xy="186,273" size="470,154" group="n12_hdi9"/>
     <group id="n12_hdi9" name="_grpChat" xy="163,68" size="515,366" advanced="true">
       <relation target="" sidePair=""/>
     </group>

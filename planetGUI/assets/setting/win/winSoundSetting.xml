@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="338,101">
   <displayList>
-    <component id="n0_rkpi" name="tgSound" src="rw7fg" xy="0,0" size="126,33">
+    <component id="n0_rkpi" name="tgSound" src="rw7fg" fileName="com/settingToggle.xml" xy="0,0" size="124,33" group="n3_o8k6">
       <Label title="音乐"/>
     </component>
-    <component id="n1_rkpi" name="tgSoundEffect" src="rw7fg" xy="211,0" size="126,33">
+    <component id="n1_rkpi" name="tgSoundEffect" src="rw7fg" fileName="com/settingToggle.xml" xy="211,0" size="124,33" group="n3_o8k6">
       <Label title="音效"/>
     </component>
-    <component id="n2_rkpi" name="sldSoundVolume" src="cf98j" xy="0,77" size="338,24">
+    <component id="n2_rkpi" name="sldSoundVolume" src="cf98j" fileName="com/soundSlider.xml" xy="0,77" size="338,24" group="n3_o8k6">
       <Label title="音量"/>
     </component>
+    <group id="n3_o8k6" name="n3" xy="0,0" size="338,101" advanced="true"/>
   </displayList>
 </component>

@@ -2,14 +2,14 @@
 <component size="213,33">
   <controller name="conToggle" pages="2,high,1,middle,0,low" selected="2"/>
   <displayList>
-    <component id="n0_9utn" name="n0" src="rw7fd" fileName="btn/btn.xml" xy="142,0">
-      <Button title="高" selectedIcon="ui://wu3n4vxq8zcx8" controller="conToggle" page="2"/>
+    <component id="n4_o8k6" name="n4" src="o8k6v" fileName="btn/btnSameScreen.xml" xy="0,0">
+      <Button checked="true" title="低" controller="conToggle" page="0"/>
     </component>
-    <component id="n1_9utn" name="n1" src="rw7fd" fileName="btn/btn.xml" xy="72,0">
-      <Button title="中" selectedIcon="ui://wu3n4vxq8zcx8" controller="conToggle" page="1"/>
+    <component id="n5_o8k6" name="n5" src="o8k6v" fileName="btn/btnSameScreen.xml" xy="71,0">
+      <Button title="中" controller="conToggle" page="1"/>
     </component>
-    <component id="n2_9utn" name="n2" src="rw7fd" fileName="btn/btn.xml" xy="0,0">
-      <Button checked="true" title="低" selectedIcon="ui://wu3n4vxq8zcx8" controller="conToggle" page="0"/>
+    <component id="n6_o8k6" name="n6" src="o8k6v" fileName="btn/btnSameScreen.xml" xy="142,1">
+      <Button title="高" controller="conToggle" page="2"/>
     </component>
   </displayList>
 </component>

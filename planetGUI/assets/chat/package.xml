@@ -106,12 +106,14 @@
     <component id="hdi93f" name="ComboBox1_item.xml" path="/btn/"/>
     <component id="hdi93g" name="ComboBox1_popup.xml" path="/btn/"/>
     <component id="xjjc3h" name="selfChatItem.xml" path="/com/" exported="true"/>
-    <component id="xjjc3i" name="normalChatItem.xml" path="/com/" exported="true"/>
+    <component id="xjjc3i" name="mainChatItem.xml" path="/com/" exported="true"/>
     <component id="dg903j" name="WinMainViewChat.xml" path="/win/" exported="true"/>
     <image id="dg903k" name="btn_main_chat_down.png" path="/img/"/>
     <image id="dg903l" name="btn_main_chat_up.png" path="/img/"/>
     <image id="84323m" name="btn_task_005_disable.png" path="/img/"/>
     <component id="on753n" name="chatItem.xml" path="/com/" exported="true"/>
+    <component id="k59n3o" name="comSendHistory.xml" path="/com/"/>
+    <component id="k59n3p" name="sendHistoryItem.xml" path="/com/"/>
   </resources>
   <publish name="chat"/>
 </packageDescription>

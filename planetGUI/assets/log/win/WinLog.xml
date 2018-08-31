@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="740,453">
+  <displayList>
+    <image id="n0_jtjd" name="bg" src="qn8o1" fileName="img/bg_bag.png" pkg="te1gxawo" xy="0,0" size="740,453"/>
+    <text id="n1_jtjd" name="tfTitle" xy="284,0" size="178,44" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="日志"/>
+    <list id="n2_jtjd" name="lstLogTitle" xy="89,45" size="650,393" overflow="scroll" lineGap="10" defaultItem="ui://7ryo7j79jtjd1" autoClearItems="true">
+      <item title="阿斯顿发送到发送到发送到发送到发送到发送到发送到发送到发送到发送到发送到发送到发送到发送到&#xD;&#xD;&#xD;&#xD;水电费"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n6_jtjd" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="694,-9"/>
+    <graph id="n9_tj4m" name="n9" xy="468,13" size="165,24" group="n10_tj4m" type="rect"/>
+    <text id="n8_tj4m" name="inpSearch" xy="469,12" size="138,25" group="n10_tj4m" input="true" fontSize="16" vAlign="middle" autoSize="none" singleLine="true" text=""/>
+    <image id="n7_tj4m" name="n7" src="tj4m2" fileName="img/img_build_search_2.png" xy="614,16" group="n10_tj4m"/>
+    <group id="n10_tj4m" name="n10" xy="468,12" size="165,26" collapsed="true"/>
+    <list id="n11_tj4m" name="lstLogTag" xy="2,48" size="87,392" overflow="scroll" lineGap="5" defaultItem="ui://7ryo7j79tj4m3" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n16_o8k6" name="btnSearchSetting" src="o8k65" fileName="btn/btnSearch.xml" xy="636,15">
+      <Button checked="true"/>
+    </component>
+  </displayList>
+</component>
