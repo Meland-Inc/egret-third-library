@@ -8,12 +8,12 @@
     <image id="n3_oy2m" name="iconBg" src="oy2mc" fileName="img/img_chat_avatar.png" xy="441,22" group="n11_hdi9"/>
     <loader id="n4_oy2m" name="_icon" xy="441,22" size="39,39" group="n11_hdi9" align="center" vAlign="middle" fill="scale"/>
     <group id="n11_hdi9" name="icon" xy="441,22" size="39,39" advanced="true" collapsed="true"/>
-    <loader id="n14_hdi9" name="_bubbleBg" xy="399,38" size="31,32" url="ui://qagcvsbxoy2mf" fill="scaleFree">
+    <loader id="n14_hdi9" name="_bubbleBg" xy="376,38" size="54,32" url="ui://qagcvsbxoy2mf" fill="scaleFree">
       <relation target="n7_swb5" sidePair="bottomext-bottom,leftext-left"/>
     </loader>
-    <richtext id="n7_swb5" name="_rtfContent" xy="409,47" size="10,17" restrictSize="0,410,0,0" fontSize="12" color="#68931d" vAlign="middle" leading="6" ubb="true" bold="true" text="">
+    <text id="n7_swb5" name="_rtfContent" xy="386,47" size="33,17" restrictSize="0,410,0,0" fontSize="12" color="#68931d" vAlign="middle" leading="6" bold="true" text="3200">
       <relation target="" sidePair="right-right"/>
-    </richtext>
+    </text>
   </displayList>
   <relation target="n7_swb5" sidePair="bottomext-bottom"/>
 </component>

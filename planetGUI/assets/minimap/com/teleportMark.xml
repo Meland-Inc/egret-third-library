@@ -2,7 +2,7 @@
 <component size="40,40" pivot="0.5,0.3" anchor="true" extention="Button">
   <controller name="conSelect" pages="0,normal,1,selected,2,showTips" selected="0"/>
   <displayList>
-    <image id="n4_mw87" name="ftTitleBg" src="mw871b" fileName="img/img_map_10.png" xy="0,42" size="67,20"/>
+    <image id="n4_mw87" name="ftTitleBg" src="mw871b" fileName="img/img_map_10.png" xy="-13,42" size="67,20"/>
     <text id="n1_kjpo" name="title" xy="-12,44" size="65,17" fontSize="12" color="#ffffff" align="center" vAlign="middle" singleLine="true" text="传送点传送">
       <relation target="" sidePair="center-center"/>
     </text>

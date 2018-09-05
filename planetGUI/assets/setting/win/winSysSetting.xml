@@ -1,2 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="72,33"/>
+<component size="490,340">
+  <displayList>
+    <component id="n0_9utn" name="tgPathFinding" src="rw7fg" fileName="com/settingToggle.xml" xy="58,52" size="160,33" group="n5_o8k6">
+      <Label title="点击寻路"/>
+    </component>
+    <component id="n3_9utn" name="rbImageQuality" src="9utnt" fileName="com/radioButton.xml" xy="58,108" size="295,33" group="n5_o8k6">
+      <Label title="同屏显示"/>
+    </component>
+    <component id="n2_9utn" name="btnLogout" src="cf98i" fileName="btn/btnNull.xml" xy="393,292" group="n5_o8k6">
+      <Button title="退出登陆" icon="ui://wu3n4vxq8zcx1"/>
+    </component>
+    <component id="n4_o8k6" name="btnOpenLog" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="16,292" group="n5_o8k6">
+      <Button title="查看日志"/>
+    </component>
+    <group id="n5_o8k6" name="n5" xy="16,52" size="409,281"/>
+  </displayList>
+</component>

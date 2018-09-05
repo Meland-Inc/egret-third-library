@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="54,20" extention="Button">
+  <controller name="search" pages="0,fuzzy,1,accurate" selected="0"/>
+  <displayList>
+    <graph id="n0_o8k6" name="n0" xy="0,0" size="54,20" type="rect"/>
+    <text id="n1_o8k6" name="titile" xy="0,0" size="54,20" fontSize="12" align="center" vAlign="middle" autoSize="none" text="模糊搜索">
+      <gearText controller="search" pages="0" values="模糊搜索" default="精准搜索"/>
+    </text>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.90"/>
+</component>

@@ -15,7 +15,7 @@
       <Button title="创作作品" selectedIcon="ui://7xhwdeuzcnpn1c" controller="tab" page="1"/>
     </component>
     <group id="n29_zsen" name="tabBtn" xy="2,80" size="224,412" collapsed="true"/>
-    <component id="n77_apmc" name="detail" src="ctbh9" fileName="com/comDetail.xml" xy="234,82" size="400,346">
+    <component id="n77_apmc" name="detail" src="ctbh9" fileName="com/comDetail.xml" xy="234,82">
       <gearDisplay controller="tab" pages="0,2"/>
     </component>
     <list id="n91_ctbh" name="lstCreation" xy="173,83" size="427,311" layout="flow_hz" overflow="scroll" lineGap="15" colGap="10" lineItemCount="3" defaultItem="ui://7xhwdeuzctbhc" align="center">

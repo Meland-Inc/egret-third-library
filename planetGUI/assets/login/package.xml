@@ -61,7 +61,7 @@
     <component id="7s5l2j" name="WinSelectBirthPlace.xml" path="/win/" exported="true"/>
     <component id="7s5l2k" name="ComServer.xml" path="/com/" exported="true"/>
     <image id="7s5l2l" name="btn_subline_3.png" path="/img/"/>
-    <image id="7s5l2m" name="btn_subline_2.png" path="/img/"/>
+    <image id="7s5l2m" name="btn_subline_2.png" path="/img/" scale="9grid" scale9grid="77,20,154,48"/>
     <image id="7s5l2n" name="bg_subline.png" path="/img/"/>
     <image id="7s5l2o" name="img_subline_1.png" path="/img/"/>
     <image id="7s5l2p" name="img_subline_2.png" path="/img/"/>
@@ -73,6 +73,10 @@
     <image id="rhmg2w" name="bg_waitinline.png" path="/img/"/>
     <image id="rhmg2x" name="btn_build_close.png" path="/img/"/>
     <image id="rhmg2y" name="img_waitinline.png" path="/img/"/>
+    <component id="mq6m3f" name="btnServer2.xml" path="/btn/"/>
+    <component id="govx3j" name="ComboBox2_item.xml" path="/com/"/>
+    <component id="govx3k" name="ComboBox2_popup.xml" path="/com/"/>
+    <component id="govx3l" name="ComboBox2.xml" path="/com/" exported="true"/>
   </resources>
-  <publish name="login"/>
+  <publish name="login" path="C:\Users\Mloong\Desktop\bell_planet\feature-jiahua\resource\assets\fairyGui"/>
 </packageDescription>

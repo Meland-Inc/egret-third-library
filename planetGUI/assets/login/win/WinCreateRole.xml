@@ -15,8 +15,11 @@
     <text id="n6_no43" name="tfError" xy="468,452" size="200,31" group="n11_no43" visible="false" font="方正准圆简体" fontSize="15" color="#ee7d61" align="center" vAlign="middle" autoSize="none" bold="true" text="角色名字重复"/>
     <component id="n8_no43" name="btnStartGame" src="no4326" fileName="btn/btnStartGame.xml" xy="721,398" size="117,116" group="n11_no43"/>
     <component id="n9_no43" name="btnDice" src="ptq41z" fileName="btn/btnDice.xml" xy="628,415" size="36,36" group="n11_no43"/>
-    <group id="n11_no43" name="creatRoleGroup" xy="329,146" size="509,368" advanced="true">
+    <group id="n11_no43" name="creatRoleGroup" xy="329,146" size="509,368" advanced="true" collapsed="true">
       <relation target="" sidePair="center-center%,middle-middle%"/>
     </group>
+    <component id="n12_tlkk" name="btnLogout" src="y3zw2g" fileName="btn/btnLogout.xml" xy="1035,25">
+      <relation target="" sidePair="right-right,top-top"/>
+    </component>
   </displayList>
 </component>
