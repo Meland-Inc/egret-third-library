@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="838,454">
-  <controller name="bagCtrl" pages="0,bag,1,codeBlock,2,story" selected="0"/>
+  <controller name="bagCtrl" pages="0,bag,1,codeBlock,2,story" selected="1"/>
   <controller name="detailCtrl" pages="0,equip,1,detail" selected="0"/>
   <displayList>
     <image id="n0_o7wx" name="n0" src="o7wx0" fileName="img/bg_compose.png" xy="0,0"/>
@@ -21,7 +21,7 @@
     <list id="n11_o7wx" name="listBagItem" xy="515,110" size="290,300" layout="flow_hz" overflow="scroll" lineGap="5" colGap="5" lineItemCount="4" defaultItem="ui://asrl3zfri7ba16">
       <gearDisplay controller="bagCtrl" pages="0"/>
     </list>
-    <list id="n36_o7wx" name="listCodeblock" xy="510,110" size="300,300" overflow="scroll" scroll="both" margin="20,0,0,0" lineGap="30" defaultItem="ui://asrl3zfro7wxu" align="center">
+    <list id="n36_o7wx" name="listCodeblock" xy="510,110" size="300,300" overflow="scroll" scroll="both" lineGap="30" defaultItem="ui://asrl3zfro7wxu" align="center">
       <gearDisplay controller="bagCtrl" pages="1"/>
       <item/>
       <item/>
