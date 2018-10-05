@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="49,30" extention="Button">
+  <displayList>
+    <loader id="n3_rvyy" name="icon" xy="-1,0" size="50,30" align="center" vAlign="middle" fill="scaleFree" autoSize="true"/>
+  </displayList>
+  <Button mode="Radio"/>
+  <relation target="n3_rvyy" sidePair="rightext-right,bottomext-bottom"/>
+</component>

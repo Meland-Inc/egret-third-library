@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="60,137">
+  <displayList>
+    <image id="n6_jj3j" name="imgBG" src="jj3jp" fileName="img/img_build_scale.png" xy="0,0" group="n7_lxiz"/>
+    <component id="n3_jj3j" name="btnMapScaleBig" src="jj3j1e" fileName="btn/CommonButton.xml" xy="5,5" size="52,52" group="n7_lxiz">
+      <Button icon="ui://32ieekgujj3j10"/>
+    </component>
+    <component id="n4_jj3j" name="btnMapScaleSmall" src="jj3j1e" fileName="btn/CommonButton.xml" xy="5,82" size="52,52" group="n7_lxiz">
+      <Button icon="ui://32ieekgujj3j12"/>
+    </component>
+    <group id="n7_lxiz" name="Scale" xy="0,0" size="60,137" advanced="true">
+      <relation target="" sidePair="left-left,top-top"/>
+    </group>
+  </displayList>
+</component>
