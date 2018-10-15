@@ -2,6 +2,9 @@
 <component size="49,30" extention="Button">
   <displayList>
     <loader id="n3_rvyy" name="icon" xy="-1,0" size="50,30" align="center" vAlign="middle" fill="scaleFree" autoSize="true"/>
+    <text id="n5_trkw" name="title" xy="19,8" size="10,19" fontSize="12" align="center" vAlign="middle" singleLine="true" text="">
+      <relation target="n3_rvyy" sidePair="center-center,middle-middle"/>
+    </text>
   </displayList>
   <Button mode="Radio"/>
   <relation target="n3_rvyy" sidePair="rightext-right,bottomext-bottom"/>
