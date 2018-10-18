@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="2249,640">
+  <displayList>
+    <image id="n0_no43" name="imgBG1" src="tm1s45" fileName="newImg/img_8.png" xy="0,0" size="1126,640">
+      <relation target="" sidePair="left-left,rightext-right"/>
+      <relation target="" sidePair="top-top,bottomext-bottom"/>
+    </image>
+    <image id="n65_bidp" name="imgBG2" src="tm1s45" fileName="newImg/img_8.png" xy="1123,0" size="1126,640">
+      <relation target="n0_no43" sidePair="left-right,rightext-right"/>
+      <relation target="" sidePair="top-top,bottomext-bottom"/>
+    </image>
+  </displayList>
+</component>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="mp92elpx" jpegQuality="80" compressPNG="true">
+  <resources>
+    <component id="xjjc0" name="WinCommonGuide.xml" path="/win/" exported="true"/>
+    <image id="xjjc1" name="help_01.png" path="/img/" exported="true"/>
+    <image id="xjjc2" name="help_02.png" path="/img/" exported="true"/>
+    <component id="xjjc3" name="comGuideImg.xml" path="/com/" exported="true"/>
+    <component id="xjjc4" name="comGuideText.xml" path="/com/"/>
+    <image id="84325" name="help_03.png" path="/img/"/>
+    <component id="npqs6" name="comNoviceDialog.xml" path="/com/" exported="true"/>
+    <component id="npqs7" name="noviceClick.xml" path="/win/" exported="true"/>
+    <movieclip id="h0lub" name="22.jta" path="/img/" atlas="0"/>
+    <image id="r7z3c" name="timg.jpg" path="/img/"/>
+    <image id="r7z3d" name="guideTipsBg.png" path="/img/" scale="9grid" scale9grid="20,14,98,49"/>
+    <image id="r7z3f" name="img_guide_line_1.png" path="/img/"/>
+    <image id="r7z3g" name="img_guide_line_2.png" path="/img/"/>
+    <component id="r7z3h" name="comClickTextTips.xml" path="/com/" exported="true"/>
+    <component id="q8vei" name="noviceDialog.xml" path="/win/" exported="true"/>
+    <component id="q8vej" name="noviceDrag.xml" path="/win/" exported="true"/>
+    <component id="bg8zk" name="basicNovice.xml" path="/win/" exported="true"/>
+  </resources>
+  <publish name="novice"/>
+</packageDescription>

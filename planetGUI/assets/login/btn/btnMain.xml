@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="84,84" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <image id="n5_bidp" name="n5" src="tm1s48" fileName="newImg/btn_3.png" xy="0,0">
+      <gearDisplay controller="button" pages="1"/>
+    </image>
+    <image id="n6_bidp" name="n6" src="tm1s49" fileName="newImg/btn_4.png" xy="0,0">
+      <gearDisplay controller="button" pages="0"/>
+    </image>
+    <loader id="n3_jj3j" name="icon" xy="17,27" size="50,30" align="center" vAlign="middle" fill="scaleFree" autoSize="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <text id="n4_o18j" name="title" xy="38,60" size="10,27" fontSize="20" color="#f6f6da" align="center" vAlign="middle" letterSpacing="2" strokeColor="#767066" strokeSize="2" text="">
+      <gearColor controller="button" pages="0,1" values="#f6f6da,#767066|#e9e98a,#6e5846"/>
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </text>
+  </displayList>
+  <Button mode="Radio" sound="ui://te1gxawotqc911"/>
+  <relation target="n5_bidp" sidePair="width-width,height-height"/>
+  <relation target="n6_bidp" sidePair="width-width,height-height"/>
+</component>

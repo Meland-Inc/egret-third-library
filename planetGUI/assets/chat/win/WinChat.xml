@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="694,453">
   <controller name="chatChannel" alias="chatChannel" pages="0,common,1,priChat" selected="0"/>
-  <controller name="conShowSendHistory" pages="1,hide,0,show" selected="1"/>
+  <controller name="conShowSendHistory" pages="1,hide,0,show" selected="0"/>
   <displayList>
     <image id="n13_hdi9" name="_imgBg" src="td6e0" fileName="img/bg_bag.png" pkg="ruc22gnt" xy="0,0"/>
     <text id="n1_oy2m" name="_tfTitle" xy="261,7" size="170,31" fontSize="24" color="#ffffff" align="center" autoSize="none" text="聊天">
@@ -37,7 +37,7 @@
       <Button title="发送" titleColor="#b49322" titleFontSize="18"/>
     </component>
     <image id="n18_hdi9" name="_imgInput" src="oy2mm" fileName="img/img_chat_input_1.png" xy="241,392" size="245,30" group="n19_hdi9"/>
-    <text id="n20_hdi9" name="_inpSendText" xy="249,389" size="220,35" group="n19_hdi9" input="true" prompt="[color=#BFBFBf[size=14]点击输入文字...[/size][/color]" maxLength="200" fontSize="14" color="#bfbfbf" vAlign="middle" ubb="true" autoSize="none" singleLine="true" text=""/>
+    <text id="n20_hdi9" name="_inpSendText" xy="249,389" size="220,35" group="n19_hdi9" input="true" prompt="[color=#BFBFBf[size=14]点击输入文字...[/size][/color]" maxLength="140" fontSize="14" color="#bfbfbf" vAlign="middle" ubb="true" autoSize="none" singleLine="true" text=""/>
     <component id="n32_k59n" name="_btnHistory" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="470,403" size="10,7" group="n19_hdi9">
       <Button icon="ui://qagcvsbxoy2m5"/>
     </component>

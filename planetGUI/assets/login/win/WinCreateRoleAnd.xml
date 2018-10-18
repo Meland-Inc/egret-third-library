@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1126,640" adaptationTest="FitSize">
+  <controller name="sort" pages="0,body,1,face,2,talent" selected="0"/>
+  <displayList>
+    <image id="n69_ifd7" name="imgBG1" src="tm1s45" fileName="newImg/img_8.png" xy="0,0" size="1126,640" group="n71_ifd7"/>
+    <image id="n70_ifd7" name="imgBG2" src="tm1s45" fileName="newImg/img_8.png" xy="1126,0" size="1126,640" group="n71_ifd7"/>
+    <group id="n71_ifd7" name="bg" xy="0,0" size="2252,640" advanced="true"/>
+    <component id="n12_tlkk" name="btnLogout" src="y3zw2g" fileName="btn/btnLogout.xml" xy="280,78">
+      <relation target="" sidePair="left-left,top-top"/>
+    </component>
+    <image id="n10_no43" name="imgNameBG" src="tm1s41" fileName="newImg/img_4.png" xy="435,456" group="n18_trkw"/>
+    <text id="n5_no43" name="tfRoleName" xy="461,457" size="195,31" group="n18_trkw" input="true" font="方正准圆简体" fontSize="24" color="#4a422f" align="center" vAlign="middle" letterSpacing="3" autoSize="none" singleLine="true" text="角色名字七个字"/>
+    <text id="n6_no43" name="tfError" xy="458,422" size="200,31" group="n18_trkw" visible="false" font="方正准圆简体" fontSize="15" color="#ee7d61" align="center" vAlign="middle" autoSize="none" bold="true" text="角色名字重复"/>
+    <component id="n9_no43" name="btnDice" src="ptq41z" fileName="btn/btnDice.xml" xy="690,452" size="44,44" group="n18_trkw"/>
+    <group id="n18_trkw" name="name" xy="435,422" size="299,74" advanced="true" collapsed="true">
+      <relation target="" sidePair="bottom-bottom,center-center"/>
+    </group>
+    <component id="n8_no43" name="btnStartGame" src="no4326" fileName="btn/btnStartGame.xml" xy="486,524" size="154,50">
+      <relation target="" sidePair="bottom-bottom,center-center"/>
+      <Button title="确定"/>
+    </component>
+    <component id="n27_trkw" name="avatar" src="trkw3p" fileName="com/comAvatar.xml" xy="459,126" size="154,235" scale="1.2,1.2">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n43_tm1s" name="imgBGBottom" src="tm1s43" fileName="newImg/img_6.png" xy="0,616" size="1126,24">
+      <relation target="" sidePair="bottom-bottom,rightext-right"/>
+    </image>
+    <image id="n44_tm1s" name="imgBGTop" src="tm1s42" fileName="newImg/img_5.png" xy="0,0" size="1126,24">
+      <relation target="" sidePair="top-top,rightext-right"/>
+    </image>
+    <image id="n45_tm1s" name="n45" src="tm1s40" fileName="newImg/img_3.png" xy="636,194" group="n47_tm1s"/>
+    <component id="n30_tm1s" name="btnRandomAvatar" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="32ieekgu" xy="606,190" size="40,40" group="n47_tm1s">
+      <Button icon="ui://0n4pg0optm1s4c"/>
+    </component>
+    <text id="n46_tm1s" name="n46" xy="647,201" size="81,25" group="n47_tm1s" fontSize="18" color="#857762" letterSpacing="1" singleLine="true" text="随机样貌"/>
+    <group id="n47_tm1s" name="randomAvatar" xy="606,190" size="124,40" advanced="true" collapsed="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <image id="n49_bidp" name="imgMainBG" src="tm1s3y" fileName="newImg/img_1.png" xy="0,164" size="130,320" group="n48_bidp"/>
+    <component id="n13_trkw" name="btnBody" src="bidp4t" fileName="btn/btnMain.xml" xy="23,186" group="n48_bidp">
+      <Button checked="true" title="身体" icon="ui://0n4pg0optm1s3s" selectedIcon="ui://0n4pg0optm1s3r" controller="sort" page="0"/>
+    </component>
+    <component id="n15_trkw" name="btnFace" src="bidp4t" fileName="btn/btnMain.xml" xy="23,284" group="n48_bidp">
+      <Button title="脸部" icon="ui://0n4pg0optm1s4o" selectedIcon="ui://0n4pg0optm1s4n" controller="sort" page="1"/>
+    </component>
+    <component id="n14_trkw" name="btnTalent" src="bidp4t" fileName="btn/btnMain.xml" xy="23,381" group="n48_bidp">
+      <Button title="特质" icon="ui://0n4pg0optm1s4q" selectedIcon="ui://0n4pg0optm1s4p" controller="sort" page="2"/>
+    </component>
+    <group id="n48_bidp" name="main" xy="0,164" size="130,320" advanced="true">
+      <relation target="" sidePair="middle-middle,left-left"/>
+    </group>
+    <image id="n51_bidp" name="imgSubclassBG" src="tm1s3y" fileName="newImg/img_1.png" xy="137,183" size="142,282" group="n50_bidp">
+      <gearDisplay controller="sort" pages="0,1"/>
+      <relation target="" sidePair="left-left,middle-middle"/>
+    </image>
+    <list id="n19_trkw" name="lstBodySubclass" xy="152,207" size="111,233" group="n50_bidp" lineGap="15" defaultItem="ui://0n4pg0optrkw3o">
+      <gearDisplay controller="sort" pages="0"/>
+      <relation target="" sidePair="left-left,middle-middle"/>
+      <item title="头部" icon="ui://0n4pg0optm1s3q" name="1" selectedIcon="ui://0n4pg0optm1s4r"/>
+      <item title="上衣" icon="ui://0n4pg0optm1s3s" name="2" selectedIcon="ui://0n4pg0optm1s3r"/>
+      <item title="手套" icon="ui://0n4pg0optm1s3u" name="3" selectedIcon="ui://0n4pg0optm1s3t"/>
+      <item title="裤子" icon="ui://0n4pg0optm1s3w" name="4" selectedIcon="ui://0n4pg0optm1s3v"/>
+    </list>
+    <list id="n28_jcdq" name="lstFaceSubclass" xy="152,207" size="111,233" group="n50_bidp" lineGap="15" defaultItem="ui://0n4pg0optrkw3o">
+      <gearDisplay controller="sort" pages="1"/>
+      <relation target="" sidePair="left-left,middle-middle"/>
+      <item title="脸型" name="5"/>
+      <item title="眼睛" name="6"/>
+      <item title="嘴巴" name="7"/>
+      <item title="眉毛" name="8"/>
+    </list>
+    <group id="n50_bidp" name="LeftSubClass" xy="137,183" size="142,282" advanced="true"/>
+    <image id="n68_nri0" name="n68" src="nri04v" fileName="newImg/img_9.png" xy="814,100" group="n55_bidp"/>
+    <image id="n67_nri0" name="n67" src="nri04v" fileName="newImg/img_9.png" xy="814,529" group="n55_bidp"/>
+    <image id="n56_bidp" name="imgSubclassBG" src="tm1s3y" fileName="newImg/img_1.png" xy="837,115" size="214,410" group="n55_bidp"/>
+    <list id="n17_trkw" name="lstRightSubclass" xy="851,132" size="185,375" group="n55_bidp" layout="flow_hz" overflow="scroll" scrollBarFlags="2" lineGap="7" colGap="7" lineItemCount="2" defaultItem="ui://0n4pg0opbidp4u" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n59_bidp" name="btnScrollUp" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="32ieekgu" xy="921,82" size="44,30" group="n55_bidp">
+      <Button icon="ui://0n4pg0optm1s4d"/>
+    </component>
+    <component id="n60_bidp" name="btnScrollDown" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="32ieekgu" xy="921,525" size="44,30" group="n55_bidp">
+      <Button icon="ui://0n4pg0optm1s4e"/>
+    </component>
+    <group id="n55_bidp" name="rghtSubclass" xy="814,82" size="257,473" advanced="true">
+      <relation target="" sidePair="right-right,middle-middle"/>
+    </group>
+    <image id="n61_bidp" name="imgTitleBg" src="tm1s44" fileName="newImg/img_7.png" xy="39,74" group="n64_bidp"/>
+    <image id="n62_bidp" name="ImgTitleLogo" src="tm1s3x" fileName="newImg/icon_17.png" xy="74,83" group="n64_bidp"/>
+    <text id="n63_bidp" name="tfTitle" xy="117,87" size="93,29" group="n64_bidp" fontSize="22" color="#ffffff" text="角色创建"/>
+    <group id="n64_bidp" name="title" xy="39,74" size="210,44" advanced="true" collapsed="true">
+      <relation target="" sidePair="left-left,top-top"/>
+    </group>
+    <list id="n1_no43" name="lstSexy" xy="476,132" size="213,48" scale="0.8,0.8" layout="row" colGap="27" defaultItem="ui://0n4pg0opbidp4s" align="center" vAlign="middle">
+      <relation target="" sidePair="center-center,top-top"/>
+      <item title="男" icon="ui://0n4pg0optm1s4k"/>
+      <item title="女" icon="ui://0n4pg0optm1s4j"/>
+    </list>
+  </displayList>
+  <transition name="t1" autoPlay="true">
+    <item time="0" type="XY" target="n48_bidp" tween="true" startValue="-300,164" endValue="0,164" duration="12" ease="Back.InOut"/>
+    <item time="0" type="XY" target="n50_bidp" tween="true" startValue="-163,183" endValue="137,183" duration="12" ease="Back.InOut"/>
+    <item time="0" type="XY" target="n55_bidp" tween="true" startValue="1190,82" endValue="890,82" duration="12" ease="Back.InOut"/>
+    <item time="0" type="XY" target="n64_bidp" tween="true" startValue="-261,74" endValue="39,74" duration="12" ease="Back.InOut"/>
+  </transition>
+</component>
