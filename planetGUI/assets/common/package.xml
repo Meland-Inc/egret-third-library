@@ -4,7 +4,7 @@
     <component id="qn8o0" name="WinConfirm.xml" path="/win/" exported="true"/>
     <image id="qn8o1" name="bg_bag.png" path="/img/" exported="true"/>
     <image id="qn8o2" name="bg_bag_2.png" path="/img/" exported="true"/>
-    <image id="qn8o3" name="bg_modal.png" path="/img/" exported="true"/>
+    <image id="qn8o3" name="bg_modal.png" path="/img/" exported="true" scale="9grid" scale9grid="14,29,238,58"/>
     <image id="qn8o4" name="btn_close1.png" path="/img/" exported="true"/>
     <image id="qn8o5" name="btn_close2.png" path="/img/" exported="true"/>
     <image id="qn8o6" name="btn_green.png" path="/img/" exported="true"/>
@@ -53,7 +53,7 @@
     <image id="er201d" name="img_bag_item_2.png" path="/img/"/>
     <image id="er201e" name="icon_bag_coat.png" path="/img/"/>
     <component id="er201f" name="BtnCommonBagItem.xml" path="/btn/" exported="true"/>
-    <image id="er201g" name="img_bag_item_5.png" path="/com/"/>
+    <image id="er201g" name="img_bag_item_5.png" path="/img/"/>
     <image id="jr3d1h" name="btn_build_rotating.png" path="/img/" exported="true"/>
     <component id="jr3d1j" name="btnRotateOp.xml" path="/btn/" exported="true"/>
   </resources>

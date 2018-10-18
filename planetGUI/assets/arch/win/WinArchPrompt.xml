@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1334,750">
+<component size="1136,640">
   <displayList>
-    <image id="n0_824h" name="n0" src="lxnu1" fileName="img/bg_billboard.png" xy="320,210" group="n10_mnl0"/>
-    <text id="n2_824h" name="n2" xy="627,219" size="77,31" group="n10_mnl0" fontSize="24" color="#ffffff" text="告示牌"/>
-    <text id="n3_824h" name="inpContent" xy="367,275" size="600,190" group="n10_mnl0" input="true" fontSize="20" color="#57a7df" autoSize="none" text=""/>
-    <graph id="n11_mnl0" name="dragArea" xy="320,210" size="690,48" group="n10_mnl0" alpha="0" type="rect"/>
-    <component id="n4_jlj8" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="980,200" group="n10_mnl0"/>
-    <group id="n10_mnl0" name="root" xy="320,200" size="716,285" advanced="true">
+    <image id="n0_824h" name="n0" src="lxnu1" fileName="img/bg_billboard.png" xy="221,155" size="694,275" group="n10_mnl0"/>
+    <text id="n2_824h" name="n2" xy="528,164" size="77,31" group="n10_mnl0" fontSize="24" color="#ffffff" text="告示牌"/>
+    <text id="n3_824h" name="inpContent" xy="268,220" size="600,190" group="n10_mnl0" input="true" fontSize="20" color="#57a7df" autoSize="none" text=""/>
+    <graph id="n11_mnl0" name="dragArea" xy="221,155" size="690,48" group="n10_mnl0" alpha="0" type="rect"/>
+    <component id="n4_jlj8" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="880,145" group="n10_mnl0"/>
+    <group id="n10_mnl0" name="root" xy="220,145" size="716,285" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>
