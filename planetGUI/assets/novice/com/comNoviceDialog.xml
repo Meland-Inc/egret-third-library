@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="550,200">
+  <controller name="conSelfOther" pages="0,self,1,other" selected="1"/>
+  <displayList>
+    <graph id="n0_npqs" name="bg" xy="0,0" size="550,200" type="rect" fillColor="#ffcccccc" corner="10"/>
+    <loader id="n1_npqs" name="ladOtherIcon" xy="29,74" pivot="0.5,1" size="68,66" url="ui://7xhwdeuzctbhb" autoSize="true">
+      <gearDisplay controller="conSelfOther" pages="1"/>
+    </loader>
+    <text id="n2_npqs" name="tfOtherName" xy="37,160" size="53,20" fontSize="16" text="机器人">
+      <gearDisplay controller="conSelfOther" pages="1"/>
+    </text>
+    <text id="n3_npqs" name="tfOtherSpeech" xy="113,52" size="415,112" fontSize="16" vAlign="middle" autoSize="none" text="">
+      <gearDisplay controller="conSelfOther" pages="1"/>
+      <relation target="n1_npqs" sidePair="leftext-right"/>
+    </text>
+    <text id="n4_r7z3" name="tfClickContinue" xy="473,171" size="53,17" fontSize="12" text="点击继续">
+      <gearXY controller="conSelfOther" pages="0,1" values="24,171|473,171"/>
+    </text>
+    <loader id="n5_r7z3" name="ladSelfIcon" xy="457,74" pivot="0.5,1" size="68,66" url="ui://7xhwdeuzctbhb" autoSize="true">
+      <gearDisplay controller="conSelfOther" pages="0"/>
+    </loader>
+    <text id="n6_r7z3" name="tfSelfSpeech" xy="24,52" size="416,112" fontSize="16" vAlign="middle" autoSize="none" text="">
+      <gearDisplay controller="conSelfOther" pages="0"/>
+      <relation target="n5_r7z3" sidePair="rightext-left"/>
+    </text>
+    <text id="n7_r7z3" name="tfSelfName" xy="466,160" size="31,20" fontSize="16" text="self">
+      <gearDisplay controller="conSelfOther" pages="0"/>
+    </text>
+  </displayList>
+</component>
