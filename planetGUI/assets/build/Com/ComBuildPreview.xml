@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="400,199" adaptationTest="FitSize">
+  <controller name="ctlOperate" alias="edit" exported="true" pages="0,preBuild,1,edit" selected="0"/>
+  <displayList>
+    <component id="n4_jr3d" name="grpTip" src="rvyy1h" fileName="grpTip.xml" xy="0,37"/>
+    <component id="n7_gkyg" name="grpBuildSelect" src="rvyy1i" fileName="grpBuildSelect.xml" xy="87,86" controller="ctlOperate,0"/>
+  </displayList>
+</component>

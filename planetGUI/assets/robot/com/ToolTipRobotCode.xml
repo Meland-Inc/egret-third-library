@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="300,43" extention="Button">
   <displayList>
-    <image id="n2_dib9" name="n2" src="a5xh1n" fileName="img/bg_code_tips_2.png" xy="0,0" size="300,43">
+    <image id="n2_dib9" name="n2" src="a5xh1n" fileName="img/bg_code_tips_2.png" xy="0,0" size="300,47">
       <relation target="n3_dib9" sidePair="width-width,height-height"/>
     </image>
-    <text id="n3_dib9" name="tfContent" xy="12,12" size="276,19" fontSize="12" color="#ffffff" ubb="true" autoSize="height" text=""/>
+    <text id="n3_dib9" name="tfContent" xy="12,12" size="276,23" fontSize="16" color="#ffffff" ubb="true" autoSize="height" text=""/>
   </displayList>
   <Button/>
+  <relation target="n3_dib9" sidePair="width-width,height-height"/>
 </component>

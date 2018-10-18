@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="400,25">
+  <displayList>
+    <image id="n4_jr3d" name="bg" src="d30ci" fileName="img/img_common_prompt.png" pkg="te1gxawo" xy="0,0" size="400,22" scale="1,1.32">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n5_jr3d" name="tfTip" xy="24,-2" size="352,29" fontSize="22" color="#ffffff" align="center" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="必须建在前置物件上&#xA;">
+      <relation target="n4_jr3d" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+</component>

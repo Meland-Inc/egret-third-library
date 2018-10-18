@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="94,42" extention="Button">
+  <controller name="button" pages="4,up,5,down" selected="0"/>
+  <displayList>
+    <image id="n3_bidp" name="n3" src="tm1s46" fileName="newImg/btn_1.png" xy="0,0" size="94,42">
+      <gearDisplay controller="button" pages="5"/>
+    </image>
+    <image id="n4_bidp" name="n4" src="tm1s47" fileName="newImg/btn_2.png" xy="0,0" size="94,42">
+      <gearDisplay controller="button" pages="4"/>
+    </image>
+    <loader id="n5_bidp" name="icon" xy="23,11" size="20,20" fill="scale" autoSize="true"/>
+    <text id="n6_bidp" name="title" xy="49,11" size="40,25" fontSize="18" color="#5b4b37" align="center" vAlign="middle" text=""/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

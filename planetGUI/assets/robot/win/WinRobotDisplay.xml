@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="838,454">
-  <controller name="bagCtrl" pages="0,bag,1,codeBlock,2,story" selected="0"/>
-  <controller name="detailCtrl" pages="0,equip,1,detail" selected="1"/>
+  <controller name="bagCtrl" pages="0,bag,1,codeBlock,2,story" selected="1"/>
+  <controller name="detailCtrl" pages="0,equip,1,detail" selected="0"/>
   <displayList>
     <image id="n0_o7wx" name="n0" src="o7wx0" fileName="img/bg_compose.png" xy="0,0"/>
     <text id="n2_o7wx" name="n2" xy="372,9" size="98,29" fontSize="22" color="#ffffff" bold="true" text="AI机器人"/>
@@ -21,7 +21,7 @@
     <list id="n11_o7wx" name="listBagItem" xy="515,110" size="290,300" layout="flow_hz" overflow="scroll" lineGap="5" colGap="5" lineItemCount="4" defaultItem="ui://asrl3zfri7ba16">
       <gearDisplay controller="bagCtrl" pages="0"/>
     </list>
-    <list id="n36_o7wx" name="listCodeblock" xy="510,110" size="300,300" overflow="scroll" scroll="both" margin="20,0,0,0" lineGap="30" defaultItem="ui://asrl3zfro7wxu" align="center">
+    <list id="n36_o7wx" name="listCodeblock" xy="510,110" size="300,300" overflow="scroll" scroll="both" lineGap="30" defaultItem="ui://asrl3zfro7wxu" align="center">
       <gearDisplay controller="bagCtrl" pages="1"/>
       <item/>
       <item/>
@@ -59,6 +59,9 @@
       <item title="手套" icon="ui://asrl3zfri7ba1i" name="glove"/>
       <item title="饰品" icon="ui://asrl3zfri7ba1j" name="accessory"/>
     </list>
+    <component id="n55_m8uu" name="btnCodeBlock" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="382,353" size="64,66" group="n25_o7wx">
+      <Button title="编程" titleColor="#ffffff" icon="ui://asrl3zfrwl73w" selectedTitle="编程" selectedIcon="ui://asrl3zfrwl73w"/>
+    </component>
     <group id="n25_o7wx" name="groupEquip" xy="172,75" size="276,350" advanced="true">
       <gearDisplay controller="detailCtrl" pages="0"/>
     </group>
@@ -93,7 +96,7 @@
     <text id="n47_yk6x" name="tfPoisonDef" xy="352,318" size="61,21" group="n49_yk6x" fontSize="15" color="#9e9e9e" vars="true" singleLine="true" text="毒抗   {value=50}"/>
     <text id="n48_yk6x" name="tfDarkDef" xy="352,339" size="61,21" group="n49_yk6x" fontSize="15" color="#9e9e9e" vars="true" singleLine="true" text="暗抗   {value=50}"/>
     <group id="n49_yk6x" name="n49" xy="213,256" size="200,105" group="n35_o7wx"/>
-    <group id="n35_o7wx" name="groupDetail" xy="198,66" size="233,359" advanced="true">
+    <group id="n35_o7wx" name="groupDetail" xy="198,66" size="233,359" advanced="true" collapsed="true">
       <gearDisplay controller="detailCtrl" pages="1"/>
     </group>
   </displayList>

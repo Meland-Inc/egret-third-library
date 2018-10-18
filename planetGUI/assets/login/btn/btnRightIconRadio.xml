@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="88,88" extention="Button">
+  <controller name="button" pages="4,up,5,down" selected="0"/>
+  <displayList>
+    <image id="n10_bidp" name="n10" src="tm1s4f" fileName="newImg/btn_10.png" xy="0,0">
+      <gearDisplay controller="button" pages="5"/>
+    </image>
+    <image id="n11_bidp" name="n11" src="tm1s4g" fileName="newImg/btn_11.png" xy="0,0">
+      <gearDisplay controller="button" pages="4"/>
+    </image>
+    <loader id="n6_trkw" name="icon" xy="11,10" size="66,66" align="center" vAlign="middle" fill="scale"/>
+    <text id="n4_trkw" name="title" xy="39,31" size="10,25" fontSize="18" color="#5b4b37" text="">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

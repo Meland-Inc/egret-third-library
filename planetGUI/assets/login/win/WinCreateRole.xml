@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" adaptationTest="FitSize">
   <displayList>
-    <image id="n0_no43" name="imgBG" src="no4325" fileName="img/bg_roleselect_1.png" xy="0,0" size="1136,640">
+    <image id="n0_no43" name="imgBG" src="no4325" fileName="img/bg_roleselect_1.png" xy="0,0" size="1136,640" locked="true">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </image>
-    <image id="n2_no43" name="imgCreatBG" src="ptq41v" fileName="img/bg_roleselect_2.png" xy="329,147" size="478,351" group="n11_no43"/>
-    <list id="n1_no43" name="lstSexy" xy="387,216" size="450,225" group="n11_no43" scale="0.8,0.8" layout="row" colGap="44" align="center" vAlign="middle">
+    <list id="n1_no43" name="lstSexy" xy="692,15" size="204,451" group="n11_no43" scale="0.8,0.8" colGap="44" align="center" vAlign="middle">
       <item url="ui://0n4pg0opptq421"/>
       <item url="ui://0n4pg0opno4323"/>
     </list>
-    <image id="n10_no43" name="imgNameBG" src="ptq41t" fileName="img/img_roleselect_name.png" xy="477,413" size="182,39" group="n11_no43"/>
-    <text id="n3_no43" name="tfTitle" xy="329,146" size="148,41" group="n11_no43" aspect="true" font="FZZhunYuan-M02S" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="角色选择"/>
-    <text id="n5_no43" name="tfRoleName" xy="485,418" size="136,30" group="n11_no43" input="true" maxLength="10" font="方正准圆简体" fontSize="24" color="#2e2e2e" vAlign="middle" autoSize="none" singleLine="true" text=""/>
-    <text id="n6_no43" name="tfError" xy="468,452" size="200,31" group="n11_no43" visible="false" font="方正准圆简体" fontSize="15" color="#ee7d61" align="center" vAlign="middle" autoSize="none" bold="true" text="角色名字重复"/>
-    <component id="n8_no43" name="btnStartGame" src="no4326" fileName="btn/btnStartGame.xml" xy="721,398" size="117,116" group="n11_no43"/>
-    <component id="n9_no43" name="btnDice" src="ptq41z" fileName="btn/btnDice.xml" xy="628,415" size="36,36" group="n11_no43"/>
-    <group id="n11_no43" name="creatRoleGroup" xy="329,146" size="509,368" advanced="true" collapsed="true">
+    <group id="n11_no43" name="creatRoleGroup" xy="692,14" size="205,452" advanced="true">
       <relation target="" sidePair="center-center%,middle-middle%"/>
     </group>
-    <component id="n12_tlkk" name="btnLogout" src="y3zw2g" fileName="btn/btnLogout.xml" xy="1035,25">
+    <component id="n12_tlkk" name="btnLogout" src="y3zw2g" fileName="btn/btnLogout.xml" xy="1035,25" locked="true" visible="false">
       <relation target="" sidePair="right-right,top-top"/>
+    </component>
+    <image id="n10_no43" name="imgNameBG" src="ptq41t" fileName="img/img_roleselect_name.png" xy="446,540" size="182,39" group="n14_trkw"/>
+    <text id="n5_no43" name="tfRoleName" xy="454,545" size="136,30" group="n14_trkw" input="true" maxLength="10" font="方正准圆简体" fontSize="24" color="#2e2e2e" vAlign="middle" autoSize="none" singleLine="true" text=""/>
+    <text id="n6_no43" name="tfError" xy="437,579" size="200,31" group="n14_trkw" visible="false" font="方正准圆简体" fontSize="15" color="#ee7d61" align="center" vAlign="middle" autoSize="none" bold="true" text="角色名字重复"/>
+    <component id="n9_no43" name="btnDice" src="ptq41z" fileName="btn/btnDice.xml" xy="597,542" size="36,36" group="n14_trkw"/>
+    <group id="n14_trkw" name="name" xy="446,540" size="187,39" collapsed="true"/>
+    <component id="n8_no43" name="btnStartGame" src="no4326" fileName="btn/btnStartGame.xml" xy="663,512" size="117,116"/>
+    <component id="n15_trkw" name="body" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="32ieekgu" xy="102,219" size="71,38">
+      <Button title="身体" icon="ui://0n4pg0opy3zw2f"/>
     </component>
   </displayList>
 </component>
