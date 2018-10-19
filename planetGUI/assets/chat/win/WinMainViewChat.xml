@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="350,100">
+  <controller name="conShrinkExpand" pages="0,expand,1,shrink" selected="0"/>
   <displayList>
-    <graph id="n0_dg90" name="n0" xy="0,0" size="350,100" alpha="0.4" type="rect" lineSize="0" fillColor="#ff000000" corner="10"/>
+    <graph id="n0_dg90" name="n0" xy="0,0" size="350,100" alpha="0.4" type="rect" lineSize="0" fillColor="#ff000000" corner="10">
+      <relation target="n1_dg90" sidePair="bottomext-bottom"/>
+    </graph>
     <list id="n1_dg90" name="lstChatRecord" xy="0,0" size="350,100" overflow="scroll" defaultItem="ui://qagcvsbxxjjc3i" autoClearItems="true">
+      <gearSize controller="conShrinkExpand" pages="1" values="350,32,1,1" default="350,100,1,1" tween="true"/>
       <item/>
     </list>
-    <component id="n3_dg90" name="btnOpenChatWin" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="319,4" pivot="0.5,0.5" size="23,23" visible="false">
-      <Button icon="ui://qagcvsbxdg903k"/>
+    <component id="n7_lh8i" name="btnShrink" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="321,4" size="23,23">
+      <gearDisplay controller="conShrinkExpand" pages="0"/>
+      <Button icon="ui://qagcvsbxdg903k" controller="conShrinkExpand" page="1"/>
+    </component>
+    <component id="n8_lh8i" name="btnExpand" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="321,4" size="23,23">
+      <gearDisplay controller="conShrinkExpand" pages="1"/>
+      <Button icon="ui://qagcvsbxdg903l" controller="conShrinkExpand" page="0"/>
     </component>
   </displayList>
+  <relation target="n1_dg90" sidePair="bottomext-bottom"/>
 </component>
