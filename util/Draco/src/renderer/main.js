@@ -1,5 +1,6 @@
 import 'muse-ui/dist/muse-ui.css'
 import 'muse-ui-loading/dist/muse-ui-loading.css'; // load css
+import 'material-icons/iconfont/material-icons.css';
 
 import Vue from 'vue'
 import axios from 'axios'
