@@ -6,6 +6,7 @@
         <mu-button v-loading="isMergeVersionLoading" data-mu-loading-size="24" color="orange500" @click="onMergetVersionClick">比较新旧版本</mu-button>
         <mu-button v-loading="isExportVersionLoading" data-mu-loading-size="24" color="cyan500" @click="onExportVersionClick">导出其他版本</mu-button>
         <mu-button v-loading="isExportApkLoading" data-mu-loading-size="24" color="blue500" @click="onExportApkClick">导出apk</mu-button>
+        <mu-button v-loading="isExportIpaLoading" data-mu-loading-size="24" color="blue500" @click="onExportIpaClick">导出ipa</mu-button>
       </div>
       <div class="button-wrapper">
         <mu-button full-width color="red" @click="oneForAll">One·for·All</mu-button>
@@ -106,6 +107,7 @@ export default {
       isMergeVersionLoading: false,
       isExportVersionLoading: false,
       isExportApkLoading: false,
+      isExportIpaLoading: false,
       publish_version: "",
       new_version: "",
       new_version_path: "",
@@ -117,6 +119,7 @@ export default {
       android_path: "",
       ios_path: "",
       wechat_path: "",
+      svn_path:"",
       versionType: "",
       versionTypes: ["强制更新", "选择更新", "静态更新"],
       checkBoxValues: ["Android端", "IOS端", "小游戏端"],
@@ -493,6 +496,91 @@ export default {
             if (showDialog) {
               ipcRenderer.send("client_show_dialog", "打包APK错误:" + code);
             }
+            reject();
+          }
+        });
+      });
+    },
+    async onExportIpaClick(showDialog = true){
+      return new Promise((resolve, reject)=>{
+        if (!this.ios_path) {
+          ipcRenderer.send("client_show_snack", "请先设置苹果发布目录");
+          return;
+        }
+
+        this.isExportIpaLoading = true;
+
+        let xcodeprojPath = this.ios_path+"/ios-template.xcodeproj";
+        let archivePath=this.svn_path+"/client/app/planet.xcarchive";
+        let appPath = this.svn_path+"/client/app/";
+        let plistPath = this.ios_path+"/ios-template/Info.plist";
+
+        let cleanCmd = "xcodebuild clean -project "+xcodeprojPath+"  -scheme planet -configuration Release";
+        let archiveCmd = "xcodebuild archive -project "+xcodeprojPath+" -scheme planet -archivePath "+archivePath;
+        let exportCmd = "xcodebuild -exportArchive -archivePath "+archivePath+" -exportPath "+appPath+" -exportOptionsPlist "+plistPath;
+
+        let cmdStr = cleanCmd+"\n"+archiveCmd+"\n"+exportCmd;
+
+        // try {
+        //   await this.excuteIpaCmd(cleanCmd, "clean");
+        //   await this.excuteIpaCmd(archiveCmd, "archive");
+        //   await this.excuteIpaCmd(exportCmd, "export");
+        //   ipcRenderer.send("client_show_message", "打包IPA成功");
+        //   if (showDialog) {
+        //     ipcRenderer.send("client_show_dialog", "打包IPA成功");
+        //   }
+        //   this.isExportIpaLoading = false;
+        // } catch (error) {
+        //   ipcRenderer.send("client_show_snack", "打包IPA错误:" + error);
+        //   if (showDialog) {
+        //     ipcRenderer.send("client_show_dialog", "打包IPA错误:" + error);
+        //   }
+        //   this.isExportIpaLoading = false;
+        // }
+
+        console.log(cmdStr);
+        let process = exec(cmdStr, { cwd: this.ios_path });
+
+        process.stdout.on("data", data => {
+          console.log("stdout: " + data);
+        });
+        process.stderr.on("data", data => {
+          console.log("stderr: " + data);
+        });
+        process.on("exit", code => {
+          if (code == 0) {
+            this.isExportIpaLoading = false;
+            ipcRenderer.send("client_show_message", "打包IPA成功");
+            if (showDialog) {
+              ipcRenderer.send("client_show_dialog", "打包IPA成功");
+            }
+          } else {
+            this.isExportIpaLoading = false;
+            ipcRenderer.send("client_show_snack", "打包IPA错误:" + code);
+            if (showDialog) {
+              ipcRenderer.send("client_show_dialog", "打包IPA错误:" + code);
+            }
+          }
+        });
+      })
+    },
+    excuteIpaCmd(cmdStr, tip){
+      return new Promise((resolve, reject)=>{
+        console.log(cmdStr);
+        let process = exec(cmdStr, { cwd: this.ios_path });
+
+        process.stdout.on("data", data => {
+          console.log("stdout: " + data);
+        });
+        process.stderr.on("data", data => {
+          console.log("stderr: " + data);
+        });
+        process.on("exit", code => {
+          if (code == 0) {
+            console.log(tip+"成功")
+            resolve();
+          } else {
+            ipcRenderer.send("client_show_snack", tip + code);
             reject();
           }
         });
@@ -1302,8 +1390,11 @@ export default {
 
     async refreshNewVersionList() {
       let path = this.project_path + "/bin-release/web";
-      let files = await fs.readdirSync(path);
-      this.newVersionList = files;
+      if(await fs.existsSync(path)){
+        this.newVersionList = await fs.readdirSync(path);;
+      }else{
+        this.newVersionList = [];
+      }
     },
 
     async refreshOldVersionList() {
@@ -1325,6 +1416,7 @@ export default {
     this.android_path = localStorage.getItem("client_android_path");
     this.ios_path = localStorage.getItem("client_ios_path");
     this.wechat_path = localStorage.getItem("client_wechat_path");
+    this.svn_path = localStorage.getItem("client_svn_path");
 
     if (!this.project_path) {
       this.project_path = "";
