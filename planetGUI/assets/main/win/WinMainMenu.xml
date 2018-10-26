@@ -12,18 +12,21 @@
     <component id="n10_wfql" name="btnSetting" src="wfql1x" fileName="btn/btnSetting.xml" xy="6,-100">
       <Button sound="ui://te1gxawotqc911"/>
     </component>
+    <component id="n11_efxp" name="btnGamePlatform" src="wfql1x" fileName="btn/btnSetting.xml" xy="-69,116">
+      <Button title="游戏平台" sound="ui://te1gxawotqc911"/>
+    </component>
   </displayList>
   <transition name="show">
-    <item time="0" type="XY" target="n10_wfql" tween="true" startValue="6,-100" endValue="6,318" duration="9"/>
-    <item time="0" type="XY" target="n4_ua4x" tween="true" startValue="7,-100" endValue="7,153" duration="9"/>
     <item time="0" type="XY" target="n3_ua4x" tween="true" startValue="7,-100" endValue="7,71" duration="9"/>
+    <item time="0" type="XY" target="n4_ua4x" tween="true" startValue="7,-100" endValue="7,153" duration="9"/>
+    <item time="0" type="XY" target="n10_wfql" tween="true" startValue="6,-100" endValue="6,318" duration="9"/>
     <item time="0" type="XY" target="n2_ua4x" tween="true" startValue="7,-100" endValue="7,235" duration="9"/>
     <item time="0" type="XY" target="n5_9prt" tween="true" startValue="0,-100" endValue="0,19" duration="9"/>
   </transition>
   <transition name="hide">
-    <item time="0" type="XY" target="n10_wfql" tween="true" startValue="6,318" endValue="6,-100" duration="9"/>
-    <item time="0" type="XY" target="n3_ua4x" tween="true" startValue="7,71" endValue="7,-100" duration="9"/>
     <item time="0" type="XY" target="n5_9prt" tween="true" startValue="0,19" endValue="0,-100" duration="9"/>
+    <item time="0" type="XY" target="n3_ua4x" tween="true" startValue="7,71" endValue="7,-100" duration="9"/>
+    <item time="0" type="XY" target="n10_wfql" tween="true" startValue="6,318" endValue="6,-100" duration="9"/>
     <item time="0" type="XY" target="n2_ua4x" tween="true" startValue="7,235" endValue="7,-100" duration="9"/>
     <item time="0" type="XY" target="n4_ua4x" tween="true" startValue="7,153" endValue="7,-100" duration="9"/>
   </transition>
