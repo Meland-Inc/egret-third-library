@@ -15,6 +15,8 @@ public class Main : MonoBehaviour
     private const string PATH_ELEMENT = "element";
 
     public Button BtnRefresh;
+    public Button BtnReplayAnim;//重播
+    public Toggle ToggleForceLoopAnim;//强制循环
     public Transform tsmAvatarPreview;
     public OptionMono RoleOption;
     public OptionMono ArmatureOption;
@@ -31,6 +33,13 @@ public class Main : MonoBehaviour
     private List<Slot> _curSlotList = new List<Slot>();
     private string _curArmatureName = "";
 
+    private string _lastSelectRole;
+    private string _lastSelectArmature;
+    private string _lastSelectAnimName;
+    private Dictionary<string, string> _lastSelectElementFileNameMap = new Dictionary<string, string>();
+
+    private float _buffAnimPlayLength = 0;
+    private string _buffAnimPlayName;
 
     // Use this for initialization
     void Start()
@@ -51,6 +60,8 @@ public class Main : MonoBehaviour
         RoleOption.OnChangeCB = OnRoleOptionChanged;
         ArmatureOption.OnChangeCB = OnAvatarOptionChanged;
         AnimOption.OnChangeCB = OnAnimOptionChanged;
+        BtnReplayAnim.onClick.AddListener(OnClickReplayAnim);
+        ToggleForceLoopAnim.onValueChanged.AddListener(OnToggleFroceLoopValueChanged);
 
         RefreshConfigAndFileInfo();
         RefreshView();
@@ -132,6 +143,7 @@ public class Main : MonoBehaviour
         RoleOption.gameObject.SetActive(true);
         var roleOptionStrData = _curConfig.RoleNameList.GetRange(0, _curConfig.RoleNameList.Count);
         RoleOption.ResetStrData(roleOptionStrData);
+        RoleOption.SetShowContent(_lastSelectRole);
 
         RefreshAvatarOption();
     }
@@ -156,6 +168,7 @@ public class Main : MonoBehaviour
         ArmatureOption.gameObject.SetActive(true);
         var roleArmatureFiles = _allAssetFileList.Where((file) => { return file.IsMainArmature && file.roleName == curRoleName; }).ToList();
         ArmatureOption.ResetFileInfoData(roleArmatureFiles);
+        ArmatureOption.SetShowContent(_lastSelectArmature);
 
         //部件
         for (int i = 0; i < _curConfig.PartNameList.Count; i++)
@@ -167,15 +180,34 @@ public class Main : MonoBehaviour
             OptionMono mono = go.GetComponent<OptionMono>();
             var files = _allAssetFileList.Where((file) => { return file.part == partName && (file.roleName == curRoleName || file.roleName == AvatarAssetFileInfo.ROLE_NAME_GENERAL); }).ToList();
             mono.ResetFileInfoData(files);
+            string selectElementFileName;
+            _lastSelectElementFileNameMap.TryGetValue(partName, out selectElementFileName);
             mono.Label.text = partName;
             mono.OnChangeCB = OnAvatarOptionChanged;
             _partOptionList.Add(mono);
+            mono.SetShowContent(selectElementFileName);
         }
+    }
+
+    private void OnToggleFroceLoopValueChanged(bool on)
+    {
+        OnClickReplayAnim();
+    }
+
+    private void OnClickReplayAnim()
+    {
+        if (string.IsNullOrEmpty(_buffAnimPlayName))
+        {
+            return;
+        }
+
+        PlayAnim(_buffAnimPlayName);
     }
 
     //选了角色
     private void OnRoleOptionChanged(OptionMono target, object value)
     {
+        _lastSelectRole = value as string;
         RefreshAvatarOption();
     }
 
@@ -183,17 +215,25 @@ public class Main : MonoBehaviour
     private void OnAvatarOptionChanged(OptionMono target, object value)
     {
         AvatarAssetFileInfo armatrueFile = ArmatureOption.GetCurValue() as AvatarAssetFileInfo;
-        if (armatrueFile == null || _curArmatureName != armatrueFile.key)
+        _lastSelectArmature = armatrueFile != null ? armatrueFile.key : null;
+        //强制清理 否则会出现 骨骼如果有镜像 出现很多地方 换装后被镜像回去 导致显示异常
+        // if (armatrueFile == null || _curArmatureName != armatrueFile.key)
+        // {
+        if (string.IsNullOrEmpty(_curArmatureName) == false)
         {
-            if (string.IsNullOrEmpty(_curArmatureName) == false)
+            //记录摧毁前的时间 到时候要还原回来
+            if (string.IsNullOrEmpty(AnimOption.GetCurValue() as string) == false)
             {
-                _curArmatureCpt.armature.Dispose();
-                GameObject.Destroy(_curArmatureCpt.gameObject);
-                _curArmatureCpt = null;
-                _curArmatureName = "";
-                AnimOption.gameObject.SetActive(false);
+                _buffAnimPlayLength = _curArmatureCpt.armature.animation.lastAnimationState.currentTime;
             }
+
+            _curArmatureCpt.armature.Dispose();
+            GameObject.Destroy(_curArmatureCpt.gameObject);
+            _curArmatureCpt = null;
+            _curArmatureName = "";
+            AnimOption.gameObject.SetActive(false);
         }
+        // }
 
         if (armatrueFile != null && string.IsNullOrEmpty(_curArmatureName))
         {
@@ -211,6 +251,13 @@ public class Main : MonoBehaviour
             slot.display = null;
         }
         _curSlotList.Clear();
+
+        //除了骨架选项 就会记录进去部件
+        if (target != ArmatureOption)
+        {
+            var file = target.GetCurValue() as AvatarAssetFileInfo;
+            _lastSelectElementFileNameMap[target.Label.text] = file != null ? file.key : null;
+        }
 
         //换上新的部件
         foreach (var optionMono in _partOptionList)
@@ -232,9 +279,33 @@ public class Main : MonoBehaviour
         }
 
         string animName = value as string;
+        _lastSelectAnimName = animName;
+
         if (string.IsNullOrEmpty(animName))
         {
             _curArmatureCpt.animation.Stop();
+            _buffAnimPlayName = null;
+        }
+        else
+        {
+            PlayAnim(animName);
+
+            //还原上次播放进度
+            if (!string.IsNullOrEmpty(_buffAnimPlayName) && _buffAnimPlayName == animName)
+            {
+                //减去一点点是 防止单次动画播完后 的时候会让这里重新播
+                _curArmatureCpt.animation.lastAnimationState.currentTime = _buffAnimPlayLength - 0.0001f;
+            }
+
+            _buffAnimPlayName = animName;
+        }
+    }
+
+    private void PlayAnim(string animName)
+    {
+        if (ToggleForceLoopAnim.isOn)
+        {
+            _curArmatureCpt.animation.FadeIn(animName, 0.1f, 0);
         }
         else
         {
@@ -276,6 +347,8 @@ public class Main : MonoBehaviour
                 _curSlotList.Add(mainSlot);
             }
         }
+
+        _curArmatureCpt.armature.InvalidUpdate();
     }
 
     //加载主骨架
@@ -296,10 +369,11 @@ public class Main : MonoBehaviour
         var animNameList = _curArmatureCpt.animation.animationNames.GetRange(0, _curArmatureCpt.animation.animationNames.Count);
         AnimOption.gameObject.SetActive(true);
         AnimOption.ResetStrData(animNameList);
-        if (animNameList.Count > 0)
-        {
-            AnimOption.OptionDropdown.value = 1;
-        }
+        AnimOption.SetShowContent(_lastSelectAnimName);
+        // if (animNameList.Count > 0)
+        // {
+        //     AnimOption.OptionDropdown.value = 1;
+        // }
     }
 
     //获取某个文件夹下所有正确命名的DB文件
