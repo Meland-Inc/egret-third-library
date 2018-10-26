@@ -29,7 +29,7 @@
       <relation target="" sidePair="top-top,rightext-right"/>
     </image>
     <image id="n45_tm1s" name="n45" src="tm1s40" fileName="newImg/img_3.png" xy="641,194" group="n47_tm1s"/>
-    <component id="n30_tm1s" name="btnRandomAvatar" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="32ieekgu" xy="611,190" size="40,40" group="n47_tm1s">
+    <component id="n30_tm1s" name="btnRandomAvatar" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="te1gxawo" xy="611,190" size="40,40" group="n47_tm1s">
       <Button icon="ui://0n4pg0optm1s4c"/>
     </component>
     <text id="n46_tm1s" name="n46" xy="652,201" size="81,25" group="n47_tm1s" fontSize="18" color="#857762" letterSpacing="1" singleLine="true" text="随机样貌"/>
@@ -108,10 +108,10 @@
       <item/>
       <item/>
     </list>
-    <component id="n59_bidp" name="btnScrollUp" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="32ieekgu" xy="931,82" size="44,30" group="n55_bidp">
+    <component id="n59_bidp" name="btnScrollUp" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="te1gxawo" xy="931,82" size="44,30" group="n55_bidp">
       <Button icon="ui://0n4pg0optm1s4d"/>
     </component>
-    <component id="n60_bidp" name="btnScrollDown" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="32ieekgu" xy="931,525" size="44,30" group="n55_bidp">
+    <component id="n60_bidp" name="btnScrollDown" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="te1gxawo" xy="931,525" size="44,30" group="n55_bidp">
       <Button icon="ui://0n4pg0optm1s4e"/>
     </component>
     <group id="n55_bidp" name="rghtSubclass" xy="824,82" size="257,473" advanced="true">
