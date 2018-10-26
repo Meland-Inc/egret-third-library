@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" opaque="false">
+  <displayList>
+    <image id="n6_p7yp" name="bgUp" src="c8lx29" fileName="newImg/img_10.png" xy="567,320" pivot="0.5,1" anchor="true" size="1065,300" group="n22_ne8m" aspect="true">
+      <relation target="" sidePair="left-left,top-top"/>
+      <relation target="" sidePair="rightext-right"/>
+      <relation target="n9_c8lx" sidePair="bottomext-bottom"/>
+    </image>
+    <image id="n7_c8lx" name="bgDown" src="c8lx2a" fileName="newImg/img_11.png" xy="567,320" pivot="0.5,0" anchor="true" size="1065,300" group="n22_ne8m" aspect="true">
+      <relation target="n9_c8lx" sidePair="left-left,top-top"/>
+      <relation target="" sidePair="rightext-right"/>
+      <relation target="n9_c8lx" sidePair="bottomext-bottom"/>
+    </image>
+    <group id="n22_ne8m" name="n22" xy="567,320" size="1065,300"/>
+    <graph id="n9_c8lx" name="upLine" xy="0,320" size="1136,1" visible="false" alpha="0" touchable="false" grayed="true" lineSize="0">
+      <relation target="" sidePair="middle-middle,rightext-right"/>
+    </graph>
+    <graph id="n21_ne8m" name="downLine" xy="0,639" size="1136,1" visible="false" touchable="false" grayed="true" lineSize="0">
+      <relation target="" sidePair="bottom-bottom,rightext-right"/>
+    </graph>
+    <image id="n11_c8lx" name="imgTitleBg" src="c8lx1z" fileName="newImg/img_1.png" xy="74,53" group="n13_c8lx">
+      <relation target="n6_p7yp" sidePair="left-left,top-top"/>
+    </image>
+    <image id="n14_c8lx" name="imgIcon" src="c8lx1u" fileName="newImg/icon_1.png" xy="86,61" group="n13_c8lx">
+      <relation target="n11_c8lx" sidePair="middle-middle,left-left"/>
+    </image>
+    <text id="n15_c8lx" name="tfTitle" xy="145,61" size="110,27" group="n13_c8lx" fontSize="20" color="#4f4745" letterSpacing="1" text="源码扫描仪">
+      <relation target="n11_c8lx" sidePair="right-right,middle-middle"/>
+    </text>
+    <group id="n13_c8lx" name="titlet" xy="74,53" size="200,40" collapsed="true"/>
+    <component id="n5_jj3j" name="btnClose" src="c8lx2b" fileName="btn/btnClose.xml" xy="961,485">
+      <relation target="n7_c8lx" sidePair="right-right,bottom-bottom"/>
+      <Button icon="ui://32ieekguc8lx1y"/>
+    </component>
+    <component id="n18_c8lx" name="comSelectBox" src="c8lx2d" fileName="Com/ComSelectBox.xml" xy="420,339"/>
+    <component id="n19_c8lx" name="comInfo" src="p7yp1o" fileName="Com/ComInfo.xml" xy="708,236" pivot="0.5,0.5" anchor="true"/>
+    <component id="n23_kqo8" name="comCompass" src="kqo82e" fileName="Com/ComCompass.xml" xy="420,339">
+      <relation target="n18_c8lx" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+  <transition name="open">
+    <item time="0" type="Size" target="n7_c8lx" tween="true" startValue="-,-" endValue="1136,320" duration="3" ease="Linear"/>
+    <item time="0" type="Size" target="n6_p7yp" tween="true" startValue="-,-" endValue="1136,320" duration="3" ease="Linear"/>
+    <item time="0" type="XY" target="n6_p7yp" tween="true" startValue="-,-" endValue="0,0" duration="3" ease="Linear"/>
+    <item time="0" type="XY" target="n7_c8lx" tween="true" startValue="-,-" endValue="0,320" duration="3" ease="Linear"/>
+    <item time="3" type="Size" target="n6_p7yp" tween="true" startValue="1136,320" endValue="906,255" duration="3" ease="Linear"/>
+    <item time="3" type="Size" target="n7_c8lx" tween="true" startValue="1136,320" endValue="906,255" duration="3" ease="Linear"/>
+    <item time="3" type="XY" target="n6_p7yp" tween="true" startValue="0,0" endValue="105,65" duration="3" ease="Linear"/>
+    <item time="3" type="XY" target="n7_c8lx" tween="true" startValue="0,320" endValue="105,320" duration="3" ease="Linear"/>
+    <item time="6" type="Size" target="n6_p7yp" tween="true" startValue="906,255" endValue="1065,300" duration="3" ease="Linear"/>
+    <item time="6" type="Size" target="n7_c8lx" tween="true" startValue="906,255" endValue="1065,300" duration="3" ease="Linear"/>
+    <item time="6" type="XY" target="n6_p7yp" tween="true" startValue="105,65" endValue="35,20" duration="3" ease="Linear"/>
+    <item time="6" type="XY" target="n7_c8lx" tween="true" startValue="105,320" endValue="35,-" duration="3" ease="Linear"/>
+  </transition>
+</component>

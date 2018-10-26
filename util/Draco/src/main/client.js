@@ -102,21 +102,21 @@ exports.init = (mainWindow) => {
         })
     })
 
-    ipcMain.on('open_new_version_path', (event) => {
-        dialog.showOpenDialog({
-            properties: ['openFile', 'openDirectory']
-        }, (files) => {
-            event.sender.send('selected_new_version_path', files);
-        })
-    })
+    // ipcMain.on('open_new_version_path', (event) => {
+    //     dialog.showOpenDialog({
+    //         properties: ['openFile', 'openDirectory']
+    //     }, (files) => {
+    //         event.sender.send('selected_new_version_path', files);
+    //     })
+    // })
 
-    ipcMain.on('open_old_version_path', (event) => {
-        dialog.showOpenDialog({
-            properties: ['openFile', 'openDirectory']
-        }, (files) => {
-            event.sender.send('selected_old_version_path', files);
-        })
-    })
+    // ipcMain.on('open_old_version_path', (event) => {
+    //     dialog.showOpenDialog({
+    //         properties: ['openFile', 'openDirectory']
+    //     }, (files) => {
+    //         event.sender.send('selected_old_version_path', files);
+    //     })
+    // })
 
     // ipcMain.on('open_client_csv_path', (event) => {
     //     dialog.showOpenDialog({
@@ -200,6 +200,10 @@ exports.init = (mainWindow) => {
 
     ipcMain.on('client_show_message', (event, msg) => {
         mainWindow.webContents.send("client_show_message", msg);
+    });
+
+    ipcMain.on('client_show_dialog', (event, msg) => {
+        mainWindow.webContents.send("client_show_dialog", msg);
     });
 
     ipcMain.on('client_show_snack', (event, msg) => {

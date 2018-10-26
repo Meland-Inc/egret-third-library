@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="225,95">
+  <controller name="ctlOperate" alias="edit" exported="true" pages="0,preBuild,1,edit" selected="0"/>
+  <displayList>
+    <graph id="n16_gkyg" name="imgReference" xy="0,0" size="225,90" type="rect" lineSize="0" fillColor="#00ffffff"/>
+    <component id="n7_gkyg" name="btnConfirm" src="jj3j1e" fileName="btn/CommonButton.xml" xy="11,0" size="64,66" pkg="te1gxawo">
+      <gearDisplay controller="ctlOperate" pages="0"/>
+      <relation target="n16_gkyg" sidePair="center-center,middle-middle"/>
+      <Button icon="ui://te1gxawork5gt"/>
+    </component>
+    <component id="n8_gkyg" name="btnMirror" src="jj3j1e" fileName="btn/CommonButton.xml" xy="81,47" size="64,66" pkg="te1gxawo">
+      <gearXY controller="ctlOperate" pages="0,1" values="81,47|31,0"/>
+      <relation target="n16_gkyg" sidePair="center-center,middle-middle"/>
+      <Button icon="ui://te1gxawojr3d1h"/>
+    </component>
+    <component id="n9_gkyg" name="btnCancel" src="jj3j1e" fileName="btn/CommonButton.xml" xy="151,0" size="64,66" pkg="te1gxawo">
+      <gearXY controller="ctlOperate" pages="0,1" values="151,0|131,0"/>
+      <relation target="n16_gkyg" sidePair="center-center,middle-middle"/>
+      <Button icon="ui://te1gxawork5gu"/>
+    </component>
+  </displayList>
+</component>
