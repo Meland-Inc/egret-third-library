@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="h1phs2w7" jpegQuality="80" compressPNG="true">
+  <resources>
+    <component id="vkti0" name="WinGamePlatform.xml" path="/win/" exported="true"/>
+    <component id="vkti2" name="gameLab.xml" path="/com/"/>
+    <component id="vkti4" name="ComGameInfo.xml" path="/com/"/>
+    <component id="efrsp" name="btnCreateGame.xml" path="/btn/"/>
+    <image id="efrsq" name="icon_game platform_1.png" path="/img/"/>
+    <image id="efrsr" name="img_manual_1.png" path="/img/" scale="9grid" scale9grid="18,18,36,36"/>
+    <image id="efrss" name="img_game platform_name1.png" path="/img/"/>
+    <image id="efrst" name="img_game platform_1.png" path="/img/"/>
+    <image id="efrsu" name="img_game platform_2.png" path="/img/"/>
+    <component id="efrsv" name="btnSort.xml" path="/btn/"/>
+    <image id="rx7uw" name="bg_cm_7.png" path="/img/" scale="9grid" scale9grid="22,44,44,22"/>
+    <component id="oezhx" name="comMainGamePlatform.xml" path="/win/"/>
+  </resources>
+  <publish name="gamePlatform" path="E:\Git\feature-felix\resource\assets\fairyGui"/>
+</packageDescription>

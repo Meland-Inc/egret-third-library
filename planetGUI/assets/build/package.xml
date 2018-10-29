@@ -51,14 +51,36 @@
     <image id="jj3j1b" name="icon_build_debris_2.png" path="/img/"/>
     <image id="jj3j1c" name="icon_build_decoration_1.png" path="/img/"/>
     <image id="jj3j1d" name="icon_build_decoration_2.png" path="/img/"/>
-    <component id="jj3j1e" name="CommonButton.xml" path="/btn/" exported="true"/>
     <component id="o18j1f" name="WinBuildThingInfo.xml" path="/win/" exported="true"/>
     <component id="rvyy1h" name="grpTip.xml" path="/Com/"/>
     <component id="rvyy1i" name="grpBuildSelect.xml" path="/Com/"/>
     <component id="rvyy1j" name="ComMapScaleView.xml" path="/Com/" exported="true"/>
     <component id="rvyy1k" name="WinBuildPanel.xml" path="/win/" exported="true"/>
-    <component id="rvyy1m" name="RadioButton.xml" path="/btn/" exported="true"/>
     <component id="rvyy1n" name="ComBuildGoodsBox.xml" path="/Com/" exported="true"/>
+    <component id="p7yp1o" name="ComInfo.xml" path="/Com/"/>
+    <component id="p7yp1p" name="ComDetail.xml" path="/Com/"/>
+    <image id="c8lx1r" name="btn_1.png" path="/newImg/"/>
+    <image id="c8lx1s" name="btn_2.png" path="/newImg/"/>
+    <image id="c8lx1t" name="btn_3.png" path="/newImg/"/>
+    <image id="c8lx1u" name="icon_1.png" path="/newImg/"/>
+    <image id="c8lx1v" name="icon_2.png" path="/newImg/"/>
+    <image id="c8lx1w" name="icon_3.png" path="/newImg/"/>
+    <image id="c8lx1x" name="icon_4.png" path="/newImg/"/>
+    <image id="c8lx1y" name="icon_5.png" path="/newImg/"/>
+    <image id="c8lx1z" name="img_1.png" path="/newImg/"/>
+    <image id="c8lx20" name="img_2.png" path="/newImg/" scale="9grid" scale9grid="21,21,6,6"/>
+    <image id="c8lx21" name="img_3.png" path="/newImg/" scale="9grid" scale9grid="12,12,24,24"/>
+    <image id="c8lx22" name="img_4.png" path="/newImg/"/>
+    <image id="c8lx23" name="img_5.png" path="/newImg/" scale="9grid" scale9grid="8,8,16,16"/>
+    <image id="c8lx24" name="img_6.png" path="/newImg/"/>
+    <image id="c8lx25" name="img_7.png" path="/newImg/"/>
+    <image id="c8lx26" name="img_8.png" path="/newImg/" scale="9grid" scale9grid="5,2,17,12"/>
+    <image id="c8lx27" name="img_9.png" path="/newImg/"/>
+    <image id="c8lx29" name="img_10.png" path="/newImg/" scale="9grid" scale9grid="118,98,19,38"/>
+    <image id="c8lx2a" name="img_11.png" path="/newImg/" scale="9grid" scale9grid="119,74,31,27"/>
+    <component id="c8lx2b" name="btnClose.xml" path="/btn/"/>
+    <component id="c8lx2d" name="ComSelectBox.xml" path="/Com/"/>
+    <component id="kqo82e" name="ComCompass.xml" path="/Com/"/>
   </resources>
-  <publish name="build"/>
+  <publish name="build" path="E:\Git\feature-felix\resource\assets\fairyGui"/>
 </packageDescription>

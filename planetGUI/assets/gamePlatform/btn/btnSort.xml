@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="180,50" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="1"/>
+  <displayList>
+    <loader id="n3_rvyy" name="icon" xy="0,0" size="180,50" url="ui://te1gxawoefrs1x" align="center" vAlign="middle" fill="scaleFree">
+      <gearIcon controller="button" pages="0,1" values="ui://te1gxawoefrs1u|ui://te1gxawoefrs1x"/>
+    </loader>
+    <text id="n5_trkw" name="title" xy="69,14" size="42,25" fontSize="18" color="#5b4b37" align="center" vAlign="middle" singleLine="true" text="冒险">
+      <relation target="n3_rvyy" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

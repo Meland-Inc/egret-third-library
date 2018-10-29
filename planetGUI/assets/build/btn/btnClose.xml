@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="74,74" extention="Button">
+  <displayList>
+    <image id="n5_c8lx" name="bg" src="c8lx1t" fileName="newImg/btn_3.png" xy="0,0"/>
+    <loader id="n6_c8lx" name="icon" xy="18,17" size="37,40" align="center" vAlign="middle" fill="scale" autoSize="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.90"/>
+  <relation target="n5_c8lx" sidePair="rightext-right,bottomext-bottom"/>
+</component>

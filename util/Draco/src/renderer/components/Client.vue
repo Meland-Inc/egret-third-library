@@ -36,6 +36,20 @@
                   <mu-list-item-title>Texture</mu-list-item-title>
                 </mu-list-item>
 
+                <mu-list-item button :ripple="false" value="ClientMapData">
+                  <mu-list-item-action>
+                    <mu-icon slot="left" value="map" />
+                  </mu-list-item-action>
+                  <mu-list-item-title>MapData</mu-list-item-title>
+                </mu-list-item>
+                
+                <mu-list-item button :ripple="false" value="ClientAsset">
+                  <mu-list-item-action>
+                    <mu-icon slot="left" value="apps" />
+                  </mu-list-item-action>
+                  <mu-list-item-title>Asset</mu-list-item-title>
+                </mu-list-item>
+
                 <mu-list-item button :ripple="false" value="ClientPublish">
                   <mu-list-item-action>
                     <mu-icon slot="left" value="timeline" />
@@ -72,6 +86,7 @@
         <mu-snackbar position="bottom-end" color="success" :open.sync="toast" @close="hideToast">
           <mu-icon left value="check_circle"></mu-icon>
           {{toastContent}}
+          <mu-button flat slot="action" color="#ffffff" @click="hideToast">关闭</mu-button>
         </mu-snackbar>
 
         <mu-snackbar position="bottom-end" color="error" :open.sync="snackbar" @close="hideSnackbar">
@@ -79,6 +94,11 @@
           {{snackContent}}
           <mu-button flat slot="action" color="#ffffff" @click="hideSnackbar">关闭</mu-button>
         </mu-snackbar>
+
+        <mu-dialog width="360" :open.sync="dialog">
+          {{dialogContent}}
+          <mu-button slot="actions" flat color="primary" @click="closeDialog">关闭</mu-button>
+        </mu-dialog>
     </div>
 </template>
 <script>
@@ -93,8 +113,10 @@ export default {
       toast: false,
       snackbar: false,
       alert1: false,
+      dialog: false,
       toastContent: "",
       snackContent: "",
+      dialogContent: "",
       // client_author: "",
       // client_project_path: "",
       // client_proto_path: "",
@@ -112,6 +134,8 @@ export default {
       this.currentView = val;
     },
     showSnackbar(content = "") {
+      this.hideSnackbar();
+
       this.snackContent = content;
       this.snackbar = true;
     },
@@ -119,6 +143,8 @@ export default {
       this.snackbar = false;
     },
     showToast(content = "") {
+      this.hideToast();
+
       this.toastContent = content;
       this.toast = true;
       if (this.toastTimer) {
@@ -144,6 +170,15 @@ export default {
 
     toggleAlert() {
       this.alert1 = !this.alert1;
+    },
+
+    showDialog(dialogContent = "") {
+      this.dialogContent = dialogContent;
+      this.dialog = true;
+    },
+
+    closeDialog() {
+      this.dialog = false;
     }
   },
   components: {
@@ -151,9 +186,11 @@ export default {
     ClientCsv: require("./Client/ClientCsv"),
     ClientProto: require("./Client/ClientProto"),
     ClientTexture: require("./Client/ClientTexture"),
+    ClientMapData: require("./Client/ClientMapData"),
     ClientSetting: require("./Client/ClientSetting"),
     ClientTest: require("./Client/ClientTest"),
-    ClientPublish: require("./Client/ClientPublish")
+    ClientPublish: require("./Client/ClientPublish"),
+    ClientAsset: require("./Client/ClientAsset")
   },
   mounted() {
     // this.client_author = localStorage.getItem("client_author");
@@ -191,6 +228,10 @@ export default {
 
     ipcRenderer.on("client_hide_loading", event => {
       this.hideLoading();
+    });
+
+    ipcRenderer.on("client_show_dialog", (event, msg) => {
+      this.showDialog(msg);
     });
 
     ipcRenderer.on("client_add_log", (event, msg) => {

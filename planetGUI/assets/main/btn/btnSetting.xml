@@ -2,7 +2,9 @@
 <component size="65,72" extention="Button">
   <displayList>
     <image id="n0_wfql" name="n0" src="wfql1y" fileName="img/btn_main_machine.png" xy="0,0" size="65,72"/>
-    <text id="n3_wfql" name="n3" xy="16,50" size="37,21" font="FZZhunYuan-M02S" fontSize="15" color="#ffffff" text="设置"/>
+    <text id="n3_wfql" name="title" xy="16,50" size="35,21" font="FZZhunYuan-M02S" fontSize="15" color="#ffffff" text="设置">
+      <relation target="" sidePair="center-center"/>
+    </text>
   </displayList>
   <Button downEffect="scale" downEffectValue="0.90"/>
 </component>
