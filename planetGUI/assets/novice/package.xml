@@ -9,15 +9,31 @@
     <image id="84325" name="help_03.png" path="/img/"/>
     <component id="npqs6" name="comNoviceDialog.xml" path="/com/" exported="true"/>
     <component id="npqs7" name="noviceClick.xml" path="/win/" exported="true"/>
-    <movieclip id="h0lub" name="22.jta" path="/img/" atlas="0"/>
-    <image id="r7z3c" name="timg.jpg" path="/img/"/>
     <image id="r7z3d" name="guideTipsBg.png" path="/img/" scale="9grid" scale9grid="20,14,98,49"/>
     <image id="r7z3f" name="img_guide_line_1.png" path="/img/"/>
-    <image id="r7z3g" name="img_guide_line_2.png" path="/img/"/>
+    <image id="r7z3g" name="img_guide_line_2.png" path="/img/" scale="tile" scale9grid="0,10,83,28"/>
     <component id="r7z3h" name="comClickTextTips.xml" path="/com/" exported="true"/>
     <component id="q8vei" name="noviceDialog.xml" path="/win/" exported="true"/>
     <component id="q8vej" name="noviceDrag.xml" path="/win/" exported="true"/>
     <component id="bg8zk" name="basicNovice.xml" path="/win/" exported="true"/>
+    <component id="132oil" name="WinNoviceManual.xml" path="/win/" exported="true"/>
+    <component id="132oim" name="btnTitle.xml" path="/btn/" exported="true"/>
+    <image id="132oip" name="novice_btn_1.png" path="/imgNew/"/>
+    <image id="132oiq" name="novice_btn_2.png" path="/imgNew/"/>
+    <image id="132oir" name="novice_icon_1.png" path="/imgNew/"/>
+    <image id="132ois" name="novice_icon_2.png" path="/imgNew/"/>
+    <image id="132oit" name="novice_icon_3.png" path="/imgNew/"/>
+    <image id="132oiu" name="novice_img_1.png" path="/imgNew/"/>
+    <image id="132oiv" name="novice_img_10.png" path="/imgNew/"/>
+    <image id="132oiw" name="novice_img_2.png" path="/imgNew/" scale="9grid" scale9grid="10,7,46,50"/>
+    <image id="132oix" name="novice_img_3.png" path="/imgNew/"/>
+    <image id="132oiy" name="novice_img_4.png" path="/imgNew/"/>
+    <image id="132oiz" name="novice_img_5.png" path="/imgNew/" scale="9grid" scale9grid="3,4,42,41"/>
+    <image id="132oi10" name="novice_img_6.png" path="/imgNew/"/>
+    <image id="132oi11" name="novice_img_7.png" path="/imgNew/"/>
+    <image id="132oi12" name="novice_img_8.png" path="/imgNew/"/>
+    <image id="132oi13" name="novice_img_9.png" path="/imgNew/"/>
+    <component id="132oi14" name="btnTitleChild.xml" path="/btn/"/>
   </resources>
   <publish name="novice"/>
 </packageDescription>

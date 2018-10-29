@@ -5,14 +5,11 @@
     <text id="n10_swb5" name="tfOtherName" xy="42,1" size="31,17" fontSize="12" color="#84c9f9" vAlign="middle" bold="true" singleLine="true" text="别人">
       <gearDisplay controller="selfOther" pages="1"/>
     </text>
-    <loader id="n14_hdi9" name="_bubbleBg" xy="50,38" size="30,30" url="ui://qagcvsbxoy2mf" fill="scaleFree">
+    <loader id="n14_hdi9" name="_bubbleBg" xy="50,31" size="30,30" url="ui://qagcvsbxoy2mf" fill="scaleFree">
       <gearDisplay controller="selfOther" pages="1"/>
       <relation target="n20_fvj8" sidePair="rightext-right,bottomext-bottom"/>
     </loader>
-    <text id="n7_swb5" name="tfOtherContent" xy="60,45" size="10,17" restrictSize="0,410,0,0" fontSize="12" color="#68931d" vAlign="middle" leading="6" bold="true" text="">
-      <gearDisplay controller="selfOther" pages="1"/>
-    </text>
-    <component id="n20_fvj8" name="comOtherRichText" src="fvj83q" fileName="com/richTextContainer.xml" xy="60,45" size="10,17"/>
+    <component id="n20_fvj8" name="comOtherRichText" src="fvj83q" fileName="com/richTextContainer.xml" xy="60,38" size="10,17"/>
     <loader id="n12_hdi9" name="_iconChannel" xy="444,1" size="35,16" group="n15_on75" url="ui://qagcvsbxoy2mu"/>
     <image id="n3_oy2m" name="iconBg" src="oy2mc" fileName="img/img_chat_avatar.png" xy="441,22" group="n11_hdi9"/>
     <loader id="n4_oy2m" name="_icon" xy="441,22" size="39,39" group="n11_hdi9" align="center" vAlign="middle" fill="scale"/>
@@ -24,15 +21,11 @@
       <gearDisplay controller="selfOther" pages="0"/>
       <relation target="" sidePair="right-right"/>
     </text>
-    <loader id="n17_on75" name="_bubbleBg" xy="398,38" size="31,32" url="ui://qagcvsbxoy2mf" fill="scaleFree">
+    <loader id="n17_on75" name="_bubbleBg" xy="398,29" size="31,32" url="ui://qagcvsbxoy2mf" fill="scaleFree">
       <gearDisplay controller="selfOther" pages="0"/>
       <relation target="n21_fvj8" sidePair="leftext-left,bottomext-bottom"/>
     </loader>
-    <text id="n18_on75" name="tfSelfContent" xy="408,46" size="10,17" restrictSize="0,410,0,0" fontSize="12" color="#68931d" vAlign="middle" leading="6" bold="true" text="">
-      <gearDisplay controller="selfOther" pages="0"/>
-      <relation target="" sidePair="right-right"/>
-    </text>
-    <component id="n21_fvj8" name="comSelfRichText" src="fvj83q" fileName="com/richTextContainer.xml" xy="408,46" size="10,17">
+    <component id="n21_fvj8" name="comSelfRichText" src="fvj83q" fileName="com/richTextContainer.xml" xy="408,37" size="10,17">
       <relation target="" sidePair="right-right"/>
     </component>
   </displayList>
