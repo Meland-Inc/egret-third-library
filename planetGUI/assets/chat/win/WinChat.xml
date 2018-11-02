@@ -9,15 +9,6 @@
     </text>
     <component id="n27_hdi9" name="_btnSetting" src="hdi93a" fileName="btn/btnSetting.xml" xy="586,5"/>
     <component id="n11_hdi9" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="650,-11"/>
-    <list id="n2_oy2m" name="_listChannel" xy="21,75" size="135,347" lineGap="6" defaultItem="ui://qagcvsbxhdi93e">
-      <item title="世界"/>
-      <item title="综合"/>
-      <item title="系统"/>
-      <item title="分线"/>
-      <item title="创作"/>
-      <item title="附近"/>
-      <item title="私聊"/>
-    </list>
     <image id="n3_oy2m" name="_imgChatBg" src="oy2md" fileName="img/img_chat_bg.png" xy="163,68" group="n12_hdi9"/>
     <list id="n26_hdi9" name="_lstChatRecord" xy="180,81" size="480,298" group="n12_hdi9" overflow="scroll" defaultItem="ui://qagcvsbxon753n" autoClearItems="true">
       <gearXY controller="chatChannel" pages="1" values="180,114" default="180,81"/>
@@ -46,9 +37,7 @@
     </component>
     <group id="n19_hdi9" name="_grpInput" xy="241,273" size="245,151" group="n25_hdi9" advanced="true"/>
     <group id="n25_hdi9" name="_grpBottom" xy="186,273" size="470,154" group="n12_hdi9"/>
-    <group id="n12_hdi9" name="_grpChat" xy="163,68" size="515,366" advanced="true">
-      <relation target="" sidePair=""/>
-    </group>
+    <group id="n12_hdi9" name="_grpChat" xy="163,68" size="515,366" advanced="true"/>
     <image id="n28_hdi9" name="n28" src="oy2mq" fileName="img/img_chat_object.png" xy="186,82" size="101,22" group="n30_hdi9">
       <relation target="n31_hdi9" sidePair="width-width"/>
     </image>
@@ -56,5 +45,27 @@
     <group id="n30_hdi9" name="_grpPriChat" xy="186,82" size="101,22" advanced="true" collapsed="true">
       <gearDisplay controller="chatChannel" pages="1"/>
     </group>
+    <component id="n35_zh9b" name="btnCW" src="hdi93e" fileName="btn/btnChannel.xml" xy="24,75" group="n37_zh9b">
+      <Button title="世界" controller="chatChannel" page="0"/>
+    </component>
+    <component id="n42_zh9b" name="btnCG" src="hdi93e" fileName="btn/btnChannel.xml" xy="24,125" group="n37_zh9b" touchable="false" grayed="true">
+      <Button checked="true" title="综合"/>
+    </component>
+    <component id="n38_zh9b" name="btnCS" src="hdi93e" fileName="btn/btnChannel.xml" xy="24,175" group="n37_zh9b" touchable="false" grayed="true">
+      <Button checked="true" title="系统"/>
+    </component>
+    <component id="n39_zh9b" name="btnCL" src="hdi93e" fileName="btn/btnChannel.xml" xy="24,225" group="n37_zh9b" touchable="false" grayed="true">
+      <Button checked="true" title="分线"/>
+    </component>
+    <component id="n40_zh9b" name="btnCC" src="hdi93e" fileName="btn/btnChannel.xml" xy="24,275" group="n37_zh9b" touchable="false" grayed="true">
+      <Button checked="true" title="创造"/>
+    </component>
+    <component id="n41_zh9b" name="btnCN" src="hdi93e" fileName="btn/btnChannel.xml" xy="24,325" group="n37_zh9b" touchable="false" grayed="true">
+      <Button checked="true" title="附近"/>
+    </component>
+    <component id="n36_zh9b" name="btnCP" src="hdi93e" fileName="btn/btnChannel.xml" xy="24,375" group="n37_zh9b">
+      <Button title="私聊" controller="chatChannel" page="1"/>
+    </component>
+    <group id="n37_zh9b" name="grpChannel" xy="24,75" size="129,344" advanced="true" layout="vt" lineGap="6"/>
   </displayList>
 </component>
