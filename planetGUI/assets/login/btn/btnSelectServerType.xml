@@ -3,9 +3,9 @@
   <controller name="button" pages="0,up,1,down" selected="0"/>
   <displayList>
     <loader id="n0_7s5l" name="icon" xy="0,0" size="210,80" align="center" vAlign="middle"/>
-    <text id="n1_7s5l" name="title" xy="48,25" size="113,33" font="FZZhunYuan-M02S" fontSize="26" color="#94a9c0" align="center" vAlign="middle" leading="0" bold="true" singleLine="true" text="和平分线">
+    <text id="n1_7s5l" name="title" xy="48,25" size="113,34" font="FZZhunYuan-M02S" fontSize="26" color="#94a9c0" align="center" vAlign="middle" leading="0" bold="true" singleLine="true" text="和平分线">
       <gearColor controller="button" pages="0,1" values="#94a9c0,#000000|#ffffff,#000000"/>
-      <relation target="" sidePair="left-left"/>
+      <relation target="" sidePair="center-center"/>
     </text>
   </displayList>
   <Button mode="Radio" sound="ui://te1gxawotqc911"/>
