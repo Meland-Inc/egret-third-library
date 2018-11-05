@@ -91,13 +91,20 @@
     <component id="efrs25" name="CanChangeCommonButton.xml" path="/btn/" exported="true"/>
     <image id="efrs26" name="icon_gameplatform_2.png" path="/newImg/" exported="true"/>
     <image id="rx7u27" name="img_cm_pattern.png" path="/newImg/" exported="true" scale="tile"/>
-    <image id="qo8vi1u" name="bg_cm_7.png" path="/newImg/" exported="true"/>
+    <image id="qo8vi1u" name="bg_cm_7.png" path="/newImg/" exported="true" scale="9grid" scale9grid="25,57,50,18"/>
     <image id="qo8vi1v" name="bg_cm_8.png" path="/newImg/" exported="true"/>
     <image id="qo8vi1w" name="btn_cm_closed_3.png" path="/newImg/" exported="true"/>
     <image id="qo8vi1x" name="img_cm_pattern2.png" path="/newImg/" exported="true" scale="tile"/>
     <image id="qo8vi1y" name="img_cm_pattern3.png" path="/newImg/" exported="true" scale="tile"/>
     <image id="qo8vi1z" name="btn_cm_back.png" path="/newImg/" exported="true"/>
     <image id="qo8vi21" name="btn_cm_white1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="15,7,10,24"/>
+    <image id="qo8vi22" name="btn_cm_rightturn.png" path="/newImg/" exported="true"/>
+    <image id="qo8vi23" name="btn_cm_leftturn.png" path="/newImg/" exported="true"/>
+    <image id="qo8vi24" name="icon_cm_dropdown.png" path="/newImg/" exported="true"/>
+    <image id="qo8vi25" name="icon_cm_pullup.png" path="/newImg/" exported="true"/>
+    <image id="qo8vi26" name="btn_cm_yellow4.png" path="/newImg/" exported="true"/>
+    <image id="pagbi27" name="img_inputbox_1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="9,9,18,18"/>
+    <image id="pagbi28" name="icon_cm_return.png" path="/newImg/" exported="true"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>
