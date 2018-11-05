@@ -75,7 +75,7 @@
     <component id="mq6m3f" name="btnServer2.xml" path="/btn/"/>
     <component id="govx3j" name="ComboBox2_item.xml" path="/com/"/>
     <component id="govx3k" name="ComboBox2_popup.xml" path="/com/"/>
-    <component id="govx3l" name="ComboBox2.xml" path="/com/" exported="true"/>
+    <component id="govx3l" name="ComboBox2.xml" path="/com/"/>
     <component id="trkw3m" name="WinCreateRole.xml" path="/win/" exported="true"/>
     <component id="trkw3o" name="btnLeftIconRadio.xml" path="/btn/"/>
     <component id="trkw3p" name="comAvatar.xml" path="/com/"/>
@@ -122,6 +122,16 @@
     <component id="bidp4u" name="btnRightIconRadio.xml" path="/btn/"/>
     <image id="nri04v" name="img_9.png" path="/newImg/"/>
     <component id="nri04w" name="bg.xml" path="/newImg/"/>
+    <image id="qo8v4x" name="icon_login_qq.png" path="/newImg/"/>
+    <image id="qo8v4y" name="icon_login_wechat.png" path="/newImg/"/>
+    <image id="qo8v4z" name="btn_login_1.png" path="/newImg/" scale="9grid" scale9grid="10,10,20,20"/>
+    <image id="qo8v50" name="btn_login_2.png" path="/newImg/" scale="9grid" scale9grid="10,10,20,20"/>
+    <image id="qo8v51" name="btn_login_3.png" path="/newImg/"/>
+    <image id="qo8v52" name="btn_login_4.png" path="/newImg/"/>
+    <image id="qo8v53" name="icon_login_account.png" path="/newImg/"/>
+    <image id="qo8v54" name="icon_login_account2.png" path="/newImg/"/>
+    <image id="qo8v55" name="icon_login_password.png" path="/newImg/"/>
+    <image id="qo8v56" name="icon_login_password2.png" path="/newImg/"/>
   </resources>
   <publish name="login"/>
 </packageDescription>

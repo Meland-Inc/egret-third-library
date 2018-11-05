@@ -76,8 +76,8 @@
     <image id="efrs1r" name="btn_cm_closed_2.png" path="/newImg/" exported="true"/>
     <image id="efrs1s" name="btn_cm_orange.png" path="/newImg/" exported="true" scale="9grid" scale9grid="16,8,17,30"/>
     <image id="efrs1t" name="btn_cm_talk.png" path="/newImg/" exported="true"/>
-    <image id="efrs1u" name="btn_cm_white1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="15,11,18,27"/>
-    <image id="efrs1v" name="btn_cm_white2.png" path="/newImg/" exported="true" scale="9grid" scale9grid="10,10,20,20"/>
+    <image id="efrs1u" name="btn_cm_white2.png" path="/newImg/" exported="true" scale="9grid" scale9grid="15,11,18,27"/>
+    <image id="efrs1v" name="btn_cm_white3.png" path="/newImg/" exported="true" scale="9grid" scale9grid="10,10,20,20"/>
     <image id="efrs1w" name="btn_cm_yellow1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="12,8,14,22"/>
     <image id="efrs1x" name="btn_cm_yellow2.png" path="/newImg/" exported="true" scale="9grid" scale9grid="15,11,19,25"/>
     <image id="efrs1y" name="btn_cm_yellow3.png" path="/newImg/" exported="true"/>
@@ -91,6 +91,13 @@
     <component id="efrs25" name="CanChangeCommonButton.xml" path="/btn/" exported="true"/>
     <image id="efrs26" name="icon_gameplatform_2.png" path="/newImg/" exported="true"/>
     <image id="rx7u27" name="img_cm_pattern.png" path="/newImg/" exported="true" scale="tile"/>
+    <image id="qo8vi1u" name="bg_cm_7.png" path="/newImg/" exported="true"/>
+    <image id="qo8vi1v" name="bg_cm_8.png" path="/newImg/" exported="true"/>
+    <image id="qo8vi1w" name="btn_cm_closed_3.png" path="/newImg/" exported="true"/>
+    <image id="qo8vi1x" name="img_cm_pattern2.png" path="/newImg/" exported="true" scale="tile"/>
+    <image id="qo8vi1y" name="img_cm_pattern3.png" path="/newImg/" exported="true" scale="tile"/>
+    <image id="qo8vi1z" name="btn_cm_back.png" path="/newImg/" exported="true"/>
+    <image id="qo8vi21" name="btn_cm_white1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="15,7,10,24"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>
