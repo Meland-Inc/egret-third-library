@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" opaque="false">
+<component size="1136,640" opaque="false" designImage="ui://n0e96ypxrdy4i2">
   <displayList>
-    <component id="n1_muc9" name="comJoystick" src="w80ln" fileName="win/ComMainJoystick.xml" xy="920,400">
+    <component id="n1_muc9" name="comMainJoystick" src="w80ln" fileName="win/ComMainJoystick.xml" xy="876,301">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
-    <component id="n2_muc9" name="comMenu" src="ua4xu" fileName="win/ComMainMenu.xml" xy="1040,0">
-      <relation target="" sidePair="right-right,top-top"/>
-    </component>
-    <component id="n3_muc9" name="comPickTips" src="tbq62o" fileName="win/ComMainPickTips.xml" xy="922,195" size="206,200"/>
-    <component id="n4_muc9" name="comRocker" src="w80l0" fileName="win/ComMainRocker.xml" xy="20,440">
+    <component id="n4_muc9" name="comMainRocker" src="w80l0" fileName="win/ComMainRocker.xml" xy="86,386">
       <relation target="" sidePair="left-left,bottom-bottom"/>
     </component>
-    <component id="n5_muc9" name="comServer" src="xjj81v" fileName="win/ComMainServer.xml" xy="946,10">
-      <relation target="" sidePair="right-right,top-top"/>
+    <component id="n10_rdy4" name="btnTask" src="rdy458" fileName="btn/btnMenu.xml" xy="810,10">
+      <Button title="任务" icon="ui://5hs1fuejrdy43j"/>
     </component>
-    <component id="n6_muc9" name="comUserInfo" src="w80lg" fileName="win/ComMainUserInfo.xml" xy="20,20">
+    <component id="n11_rdy4" name="btnRobot" src="rdy458" fileName="btn/btnMenu.xml" xy="757,10">
+      <Button title="机器" icon="ui://5hs1fuejrdy43d"/>
+    </component>
+    <component id="n12_rdy4" name="btnSetting" src="rdy458" fileName="btn/btnMenu.xml" xy="863,10">
+      <Button title="设置" icon="ui://5hs1fuejrdy43e"/>
+    </component>
+    <component id="n13_rdy4" name="btnFormula" src="rdy458" fileName="btn/btnMenu.xml" xy="703,10">
+      <Button title="配方" icon="ui://5hs1fuejrdy437"/>
+    </component>
+    <component id="n14_rdy4" name="btnStorage" src="rdy459" fileName="btn/btnStorage.xml" xy="925,16"/>
+    <component id="n16_rdy4" name="btnAvatar" src="rdy45b" fileName="btn/btnAvatar.xml" xy="8,6">
       <relation target="" sidePair="left-left,top-top"/>
     </component>
-    <component id="n9_syxc" name="comMinimapSmall" src="j0s6z" fileName="win/ComMinimapSmall.xml" xy="968,45"/>
   </displayList>
 </component>
