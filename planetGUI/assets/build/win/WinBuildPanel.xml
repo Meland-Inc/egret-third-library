@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1024,605" opaque="false" adaptationTest="FitSize">
-  <controller name="states" pages="0,normal,1,stretch" selected="0">
+<component size="1136,640" opaque="false" adaptationTest="FitSize">
+  <controller name="states" pages="0,normal,1,stretch" selected="1">
     <action type="play_transition" fromPage="0" toPage="1" transition="toStretch" stopOnExit="true"/>
   </controller>
   <displayList>
-    <image id="n1_rvyy" name="imgBG" src="jj3ju" fileName="img/bg_build_item_1.png" xy="0,433" size="1024,172">
+    <image id="n1_rvyy" name="imgBG" src="qo8vi1u" fileName="newImg/bg_cm_7.png" pkg="te1gxawo" xy="0,456" size="1136,184">
       <relation target="" sidePair="center-center,width-width"/>
       <relation target="" sidePair="bottom-bottom"/>
     </image>
-    <component id="n33_rvyy" name="btnLeft" src="jj3j1e" fileName="btn/CommonButton.xml" xy="20,545" size="14,22" group="n36_rvyy" pkg="te1gxawo">
+    <component id="n33_rvyy" name="btnLeft" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="te1gxawo" xy="20,560" size="18,26" group="n36_rvyy">
       <gearDisplay controller="states" pages="0"/>
       <relation target="n1_rvyy" sidePair="left-left,bottom-bottom"/>
-      <Button icon="ui://32ieekgujj3j11"/>
+      <Button icon="ui://te1gxawoqo8vi23"/>
     </component>
-    <component id="n34_rvyy" name="btnRight" src="jj3j1e" fileName="btn/CommonButton.xml" xy="923,545" size="14,22" group="n36_rvyy" pkg="te1gxawo">
+    <component id="n34_rvyy" name="btnRight" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="te1gxawo" xy="1006,560" size="18,26" group="n36_rvyy">
       <gearDisplay controller="states" pages="0"/>
       <relation target="n1_rvyy" sidePair="right-right,bottom-bottom"/>
-      <Button icon="ui://32ieekgujj3j14"/>
+      <Button icon="ui://te1gxawoqo8vi22"/>
     </component>
-    <group id="n36_rvyy" name="Left/Right" xy="20,545" size="917,22"/>
-    <component id="n28_rvyy" name="btnClose" src="jj3j1e" fileName="btn/CommonButton.xml" xy="945,521" size="63,69" pkg="te1gxawo">
+    <group id="n36_rvyy" name="Left/Right" xy="20,560" size="1004,26"/>
+    <component id="n28_rvyy" name="btnClose" src="c8lx2b" fileName="btn/btnClose.xml" xy="1049,536">
       <relation target="n1_rvyy" sidePair="right-right,middle-middle"/>
-      <Button icon="ui://32ieekgujj3j13"/>
+      <Button icon="ui://te1gxawopagbi28"/>
     </component>
-    <list id="n29_rvyy" name="lstTabBar" xy="20,464" size="295,40" layout="row" overflow="scroll" colGap="40" defaultItem="ui://te1gxaworvyy1m" align="center">
+    <list id="n29_rvyy" name="lstTabBar" xy="20,465" size="386,40" layout="row" overflow="scroll" colGap="50" defaultItem="ui://te1gxaworvyy1m" align="center">
       <relation target="n1_rvyy" sidePair="left-left,top-top"/>
-      <item icon="ui://32ieekgujj3j18" selectedIcon="ui://32ieekgujj3j19"/>
-      <item icon="ui://32ieekgujj3j4" selectedIcon="ui://32ieekgujj3j5"/>
-      <item icon="ui://32ieekgujj3j6" selectedIcon="ui://32ieekgujj3j7"/>
-      <item icon="ui://32ieekgujj3j2" selectedIcon="ui://32ieekgujj3j3"/>
-      <item icon="ui://32ieekgujj3j1c" selectedIcon="ui://32ieekgujj3j1d"/>
+      <item icon="ui://32ieekguqo8v2k" selectedIcon="ui://32ieekguqo8v2l"/>
+      <item icon="ui://32ieekguqo8v2t" selectedIcon="ui://32ieekguqo8v2u"/>
+      <item icon="ui://32ieekguqo8v2q" selectedIcon="ui://32ieekguqo8v2r"/>
+      <item icon="ui://32ieekguqo8v2m" selectedIcon="ui://32ieekguqo8v2n"/>
+      <item icon="ui://32ieekguqo8v2o" selectedIcon="ui://32ieekguqo8v2p"/>
     </list>
-    <list id="n32_rvyy" name="lstNormalScrollerGroup" xy="43,508" size="873,94" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="2" colGap="10" defaultItem="ui://32ieekgurvyy1n" vAlign="middle" autoClearItems="true">
+    <list id="n32_rvyy" name="lstNormalScrollerGroup" xy="55,521" size="938,105" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="2" colGap="10" defaultItem="ui://32ieekgurvyy1n" vAlign="middle" autoClearItems="true">
       <gearDisplay controller="states" pages="0"/>
       <relation target="n1_rvyy" sidePair="rightext-right,bottom-bottom"/>
       <item/>
@@ -128,7 +128,7 @@
       <item/>
       <item/>
     </list>
-    <list id="n43_p37m" name="lstStretchScrollerGroup" xy="30,508" size="909,94" layout="flow_hz" overflow="scroll" scrollBarFlags="2" margin="0,0,5,0" colGap="10" defaultItem="ui://32ieekgurvyy1n" autoItemSize="true" renderOrder="arch" apex="5" autoClearItems="true">
+    <list id="n43_p37m" name="lstStretchScrollerGroup" xy="54,531" size="959,71" layout="flow_hz" overflow="scroll" scrollBarFlags="2" margin="0,0,5,0" colGap="10" defaultItem="ui://32ieekgurvyy1n" autoItemSize="true" renderOrder="arch" apex="5" autoClearItems="true">
       <gearDisplay controller="states" pages="1"/>
       <relation target="n1_rvyy" sidePair="rightext-right,topext-top"/>
       <item/>
@@ -225,21 +225,21 @@
       <item/>
       <item/>
     </list>
-    <image id="n39_rvyy" name="imgSearchBG" src="jj3jq" fileName="img/img_build_search_1.png" xy="842,469" group="n41_rvyy">
+    <image id="n39_rvyy" name="imgSearchBG" src="pagbi27" fileName="newImg/img_inputbox_1.png" pkg="te1gxawo" xy="848,464" size="181,34" group="n41_rvyy">
       <relation target="n1_rvyy" sidePair="right-right,top-top"/>
     </image>
-    <image id="n40_rvyy" name="imgSearchIcon" src="jj3jr" fileName="img/img_build_search_2.png" xy="852,474" group="n41_rvyy">
+    <image id="n40_rvyy" name="imgSearchIcon" src="qo8v2s" fileName="newImg/WinBuildPannel/icon_build_search.png" xy="861,471" group="n41_rvyy">
       <relation target="n1_rvyy" sidePair="right-right,top-top"/>
     </image>
-    <text id="n37_rvyy" name="tfSearch" xy="879,475" size="131,29" group="n41_rvyy" input="true" prompt="[color=#9E9C9C]输入物品名[/color]" fontSize="18" autoSize="none" text="">
+    <text id="n37_rvyy" name="tfSearch" xy="890,473" size="131,29" group="n41_rvyy" input="true" prompt="[color=#D8CAB0]输入物品名[/color]" fontSize="18" autoSize="none" text="">
       <relation target="n1_rvyy" sidePair="right-right,top-top"/>
     </text>
-    <group id="n41_rvyy" name="grpSearch" xy="842,469" size="176,35" collapsed="true"/>
+    <group id="n41_rvyy" name="grpSearch" xy="848,464" size="182,38"/>
     <graph id="n35_rvyy" name="--------------------------------------------------" xy="-141,505" size="97,100" filter="color" filterData="0.08,0.00,0.00,0.00" type="rect" lineSize="0" lineColor="#00000000" fillColor="#8c0066ff"/>
-    <component id="n42_rvyy" name="btnStretch" src="jj3j1e" fileName="btn/CommonButton.xml" xy="989,442" size="22,14" pkg="te1gxawo">
-      <gearIcon controller="states" pages="0,1" values="ui://32ieekgujj3j16|ui://32ieekgujj3jz"/>
+    <component id="n42_rvyy" name="btnStretch" src="qo8v2y" fileName="btn/btnStretch.xml" xy="1050,462">
+      <gearIcon controller="states" pages="1" values="ui://te1gxawoqo8vi24" default="ui://te1gxawoqo8vi25"/>
       <relation target="n1_rvyy" sidePair="right-right,top-top"/>
-      <Button icon="ui://32ieekgujj3j16"/>
+      <Button icon="ui://te1gxawoqo8vi24"/>
     </component>
   </displayList>
   <transition name="toStretch">

@@ -15,16 +15,6 @@
     <image id="jj3jb" name="img_build_item_2.png" path="/img/"/>
     <image id="jj3jc" name="img_build_item_3.png" path="/img/"/>
     <image id="jj3jd" name="img_build_item_4.png" path="/img/"/>
-    <image id="jj3je" name="img_build_no_1.png" path="/img/"/>
-    <image id="jj3jf" name="img_build_no_2.png" path="/img/"/>
-    <image id="jj3jg" name="img_build_no_4.png" path="/img/"/>
-    <image id="jj3jh" name="img_build_no_8.png" path="/img/"/>
-    <image id="jj3ji" name="img_build_no_15.png" path="/img/"/>
-    <image id="jj3jj" name="img_build_ok_1.png" path="/img/"/>
-    <image id="jj3jk" name="img_build_ok_2.png" path="/img/"/>
-    <image id="jj3jl" name="img_build_ok_4.png" path="/img/"/>
-    <image id="jj3jm" name="img_build_ok_8.png" path="/img/"/>
-    <image id="jj3jn" name="img_build_ok_15.png" path="/img/"/>
     <image id="jj3jo" name="img_build_return.png" path="/img/"/>
     <image id="jj3jp" name="img_build_scale.png" path="/img/"/>
     <image id="jj3jq" name="img_build_search_1.png" path="/img/"/>
@@ -62,25 +52,42 @@
     <image id="c8lx1r" name="btn_1.png" path="/newImg/"/>
     <image id="c8lx1s" name="btn_2.png" path="/newImg/"/>
     <image id="c8lx1t" name="btn_3.png" path="/newImg/"/>
-    <image id="c8lx1u" name="icon_1.png" path="/newImg/"/>
-    <image id="c8lx1v" name="icon_2.png" path="/newImg/"/>
-    <image id="c8lx1w" name="icon_3.png" path="/newImg/"/>
-    <image id="c8lx1x" name="icon_4.png" path="/newImg/"/>
-    <image id="c8lx1y" name="icon_5.png" path="/newImg/"/>
-    <image id="c8lx1z" name="img_1.png" path="/newImg/"/>
-    <image id="c8lx20" name="img_2.png" path="/newImg/" scale="9grid" scale9grid="21,21,6,6"/>
-    <image id="c8lx21" name="img_3.png" path="/newImg/" scale="9grid" scale9grid="12,12,24,24"/>
-    <image id="c8lx22" name="img_4.png" path="/newImg/"/>
-    <image id="c8lx23" name="img_5.png" path="/newImg/" scale="9grid" scale9grid="8,8,16,16"/>
-    <image id="c8lx24" name="img_6.png" path="/newImg/"/>
+    <image id="c8lx1u" name="icon_1.png" path="/newImg/WinMapLook/"/>
+    <image id="c8lx1v" name="icon_2.png" path="/newImg/WinMapLook/"/>
+    <image id="c8lx1w" name="icon_3.png" path="/newImg/WinMapLook/"/>
+    <image id="c8lx1x" name="icon_4.png" path="/newImg/WinMapLook/"/>
+    <image id="c8lx1y" name="icon_5.png" path="/newImg/WinMapLook/"/>
+    <image id="c8lx1z" name="img_1.png" path="/newImg/WinMapLook/"/>
+    <image id="c8lx20" name="img_2.png" path="/newImg/WinMapLook/" scale="9grid" scale9grid="21,21,6,6"/>
+    <image id="c8lx21" name="img_3.png" path="/newImg/WinMapLook/" scale="9grid" scale9grid="12,12,24,24"/>
+    <image id="c8lx22" name="img_4.png" path="/newImg/WinMapLook/"/>
+    <image id="c8lx23" name="img_5.png" path="/newImg/WinMapLook/" scale="9grid" scale9grid="8,8,16,16"/>
+    <image id="c8lx24" name="img_6.png" path="/newImg/WinMapLook/"/>
     <image id="c8lx25" name="img_7.png" path="/newImg/"/>
-    <image id="c8lx26" name="img_8.png" path="/newImg/" scale="9grid" scale9grid="5,2,17,12"/>
-    <image id="c8lx27" name="img_9.png" path="/newImg/"/>
-    <image id="c8lx29" name="img_10.png" path="/newImg/" scale="9grid" scale9grid="118,98,19,38"/>
-    <image id="c8lx2a" name="img_11.png" path="/newImg/" scale="9grid" scale9grid="119,74,31,27"/>
+    <image id="c8lx26" name="img_8.png" path="/newImg/WinMapLook/" scale="9grid" scale9grid="5,2,17,12"/>
+    <image id="c8lx27" name="img_9.png" path="/newImg/WinMapLook/"/>
+    <image id="c8lx29" name="img_10.png" path="/newImg/WinMapLook/" scale="9grid" scale9grid="118,98,19,38"/>
+    <image id="c8lx2a" name="img_11.png" path="/newImg/WinMapLook/" scale="9grid" scale9grid="119,74,31,27"/>
     <component id="c8lx2b" name="btnClose.xml" path="/btn/"/>
     <component id="c8lx2d" name="ComSelectBox.xml" path="/Com/"/>
     <component id="kqo82e" name="ComCompass.xml" path="/Com/"/>
+    <image id="qo8v2f" name="img_build_item1.png" path="/newImg/WinBuildPannel/"/>
+    <image id="qo8v2g" name="img_build_item2.png" path="/newImg/WinBuildPannel/"/>
+    <image id="qo8v2h" name="btn_build_cancel.png" path="/newImg/WinBuildPannel/"/>
+    <image id="qo8v2i" name="btn_build_confirm.png" path="/newImg/WinBuildPannel/"/>
+    <image id="qo8v2j" name="btn_build_rotate.png" path="/newImg/WinBuildPannel/"/>
+    <image id="qo8v2k" name="icon_build_all_1.png" path="/newImg/WinBuildPannel/"/>
+    <image id="qo8v2l" name="icon_build_all_2.png" path="/newImg/WinBuildPannel/"/>
+    <image id="qo8v2m" name="icon_build_assemble_1.png" path="/newImg/WinBuildPannel/"/>
+    <image id="qo8v2n" name="icon_build_assemble_2.png" path="/newImg/WinBuildPannel/"/>
+    <image id="qo8v2o" name="icon_build_decoration_1.png" path="/newImg/WinBuildPannel/"/>
+    <image id="qo8v2p" name="icon_build_decoration_2.png" path="/newImg/WinBuildPannel/"/>
+    <image id="qo8v2q" name="icon_build_feature_1.png" path="/newImg/WinBuildPannel/"/>
+    <image id="qo8v2r" name="icon_build_feature_2.png" path="/newImg/WinBuildPannel/"/>
+    <image id="qo8v2s" name="icon_build_search.png" path="/newImg/WinBuildPannel/"/>
+    <image id="qo8v2t" name="icon_build_wall_1.png" path="/newImg/WinBuildPannel/"/>
+    <image id="qo8v2u" name="icon_build_wall_2.png" path="/newImg/WinBuildPannel/"/>
+    <component id="qo8v2y" name="btnStretch.xml" path="/btn/"/>
   </resources>
   <publish name="build" path="E:\Git\feature-felix\resource\assets\fairyGui"/>
 </packageDescription>
