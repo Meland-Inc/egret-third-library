@@ -3,8 +3,8 @@
   <displayList>
     <image id="n0_dura" name="n0" src="dura1c" fileName="img/img_main_avatar_2.png" xy="0,0"/>
     <image id="n1_dura" name="n1" src="dura1g" fileName="img/img_main_avatar_6.png" xy="5,5"/>
-    <text id="n2_dura" name="tfLevel" xy="5,5" size="24,22" fontSize="15" color="#ffffff" align="center" vAlign="middle" autoSize="none"  text="45"/>
-    <text id="n3_dura" name="tfName" xy="25,5" size="120,22" fontSize="13" color="#656a6c" align="center" vAlign="middle" autoSize="none"  text="玩家名字七个字"/>
+    <text id="n2_dura" name="tfLevel" xy="5,5" size="24,22" fontSize="15" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="45"/>
+    <text id="n3_dura" name="tfName" xy="25,5" size="120,22" fontSize="13" color="#656a6c" align="center" vAlign="middle" autoSize="none" text="玩家名字七个字"/>
     <component id="n4_dura" name="pbrHp" src="dura1m" fileName="pbr/pbrMainHp.xml" xy="6,32">
       <ProgressBar value="50" max="100"/>
     </component>
