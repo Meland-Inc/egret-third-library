@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="195,47" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n1_n6p2" name="n1" src="n6p21n" fileName="img/btn_mail_2.png" xy="0,0" size="195,47">
+      <gearDisplay controller="button" pages="1,3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n0_n6p2" name="n0" src="n6p21m" fileName="img/btn_mail_1.png" xy="0,0" size="195,47">
+      <gearDisplay controller="button" pages="0,2"/>
+    </image>
+    <image id="n5_cbcf" name="newMailTag" src="n6p21r" fileName="img/icon_mail_2.png" xy="187,0" size="8,8"/>
+    <text id="n3_n6p2" name="title" xy="9,14" size="164,22" fontSize="16" align="center" vAlign="middle" autoSize="none" singleLine="true" text="&#xA;"/>
+    <text id="n8_xev6" name="tfOverflowTips" xy="170,14" size="19,22" visible="false" fontSize="16" vAlign="middle" autoSize="none" singleLine="true" text="..."/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

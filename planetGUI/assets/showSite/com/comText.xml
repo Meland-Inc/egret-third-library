@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="350,150">
+  <displayList>
+    <image id="n0_y7ku" name="n0" src="y7ku1" fileName="image/img_location_1.png" xy="16,23" group="n2_y7ku"/>
+    <text id="n1_y7ku" name="tfSceneName" xy="98,26" size="153,30" group="n2_y7ku" fontSize="22" align="center" vAlign="middle" autoSize="none" bold="true" text="你好喵喵">
+      <relation target="n0_y7ku" sidePair="center-center,middle-middle"/>
+    </text>
+    <group id="n2_y7ku" name="grpSceneName" xy="16,23" size="317,33" advanced="true" collapsed="true"/>
+    <image id="n3_y7ku" name="n3" src="y7ku2" fileName="image/img_location_2.png" xy="78,58" size="192,21" group="n5_y7ku"/>
+    <text id="n4_y7ku" name="tfRemark" xy="99,59" size="151,19" group="n5_y7ku" fontSize="12" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="我是来拯救世界的"/>
+    <group id="n5_y7ku" name="grpRemark" xy="78,58" size="192,21" advanced="true"/>
+    <image id="n6_y7ku" name="n6" src="y7ku2" fileName="image/img_location_2.png" xy="75,81" size="200,26" group="n8_y7ku"/>
+    <text id="n7_y7ku" name="tfOtherName" xy="99,83" size="152,22" group="n8_y7ku" fontSize="16" color="#ffffff" align="center" vAlign="middle" letterSpacing="1" autoSize="none" text="我是喵喵"/>
+    <group id="n8_y7ku" name="grpOtherName" xy="75,81" size="200,26" advanced="true"/>
+  </displayList>
+</component>

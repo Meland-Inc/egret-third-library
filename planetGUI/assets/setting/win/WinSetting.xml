@@ -9,8 +9,11 @@
     <component id="n26_o8k6" name="tgPathFinding" src="rw7fg" fileName="com/settingToggle.xml" xy="232,127" size="160,33" group="n30_o8k6">
       <Label title="点击寻路"/>
     </component>
-    <component id="n27_o8k6" name="rbImageQuality" src="9utnt" fileName="com/radioButton.xml" xy="232,183" size="429,33" group="n30_o8k6">
+    <component id="n27_o8k6" name="rbImageQuality" src="9utnt" fileName="com/radioButton.xml" xy="232,183" size="697,33" group="n30_o8k6">
       <Label title="同屏显示"/>
+    </component>
+    <component id="n43_igxs" name="tgWeatherSystem" src="rw7fg" fileName="com/settingToggle.xml" xy="232,238" size="160,33" group="n30_o8k6">
+      <Label title="天气系统"/>
     </component>
     <component id="n28_o8k6" name="btnLogout" src="cf98i" fileName="btn/btnNull.xml" xy="567,367" group="n30_o8k6">
       <Button title="退出登陆" icon="ui://wu3n4vxq8zcx1"/>
@@ -21,7 +24,10 @@
     <component id="n42_o8k6" name="btnVconsole" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="316,367" group="n30_o8k6">
       <Button title="开启vconsole" titleFontSize="16"/>
     </component>
-    <group id="n30_o8k6" name="system" xy="190,127" size="409,281" advanced="true" collapsed="true">
+    <component id="n45_s7hp" name="tgDayNightSystem" src="rw7fg" fileName="com/settingToggle.xml" xy="232,289" size="160,33" group="n30_o8k6">
+      <Label title="昼夜系统"/>
+    </component>
+    <group id="n30_o8k6" name="system" xy="190,127" size="605,281" advanced="true">
       <gearDisplay controller="conSetting" pages="0"/>
     </group>
     <component id="n31_o8k6" name="tgSound" src="rw7fg" fileName="com/settingToggle.xml" xy="225,107" size="124,33" group="n34_o8k6">
@@ -33,7 +39,7 @@
     <component id="n33_o8k6" name="sldSoundVolume" src="cf98j" fileName="com/soundSlider.xml" xy="225,184" size="338,24" group="n34_o8k6">
       <Label title="音量"/>
     </component>
-    <group id="n34_o8k6" name="sound" xy="225,107" size="338,101" advanced="true" collapsed="true">
+    <group id="n34_o8k6" name="sound" xy="225,107" size="338,101" advanced="true">
       <gearDisplay controller="conSetting" pages="1"/>
     </group>
     <component id="n35_o8k6" name="tgWorldMsg" src="rw7fg" fileName="com/settingToggle.xml" xy="200,132" size="160,33" group="n41_o8k6">
