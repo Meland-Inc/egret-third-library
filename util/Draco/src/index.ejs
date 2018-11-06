@@ -5,17 +5,17 @@
   <meta charset="utf-8">
   <title>Draco</title>
   <% if (htmlWebpackPlugin.options.nodeModules) { %>
-    <!-- Add `node_modules/` to global paths so `require` works properly in development -->
-    <script>
-      require('module').globalPaths.push("<%= htmlWebpackPlugin.options.nodeModules.replace(/\\/g, '\\\\') %>")
-    </script>
-    <% } %>
+  <!-- Add `node_modules/` to global paths so `require` works properly in development -->
+  <script>
+    require('module').globalPaths.push("<%= htmlWebpackPlugin.options.nodeModules.replace(/\\/g, '\\\\') %>")
+  </script>
+  <% } %>
 
-      <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic"> -->
-      <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
-      <!-- <link rel="stylesheet" href="renderer/assets/Roboto-Regular.ttf" type="text/css"> -->
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic"> -->
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+  <!-- <link rel="stylesheet" href="renderer/assets/Roboto-Regular.ttf" type="text/css"> -->
 
-      <link rel="stylesheet" href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css">
+  <!-- <link rel="stylesheet" href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css"> -->
 </head>
 
 <body>

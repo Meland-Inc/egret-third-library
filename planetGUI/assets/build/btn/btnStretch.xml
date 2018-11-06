@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="76,38" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n3_qo8v" name="bg" src="qo8vi26" fileName="newImg/btn_cm_yellow4.png" pkg="te1gxawo" xy="0,0"/>
+    <loader id="n5_qo8v" name="icon" xy="13,4" size="50,30" align="center" vAlign="middle" autoSize="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+  </displayList>
+  <Button/>
+</component>

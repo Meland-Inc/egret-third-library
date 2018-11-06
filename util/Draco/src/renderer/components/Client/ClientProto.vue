@@ -201,7 +201,8 @@ export default {
           }
         }
 
-        let ppath = this.project_path + "/resource/proto/pbmessage.proto";
+        let ppath =
+          this.project_path + "/resource/assets/proto/pbmessage.proto";
         try {
           fs.writeFileSync(ppath, content);
           this.isComposeProtoLoading = false;
@@ -223,7 +224,7 @@ export default {
           this.proto_path +
           "/pbmessage.js " +
           this.project_path +
-          "/resource/proto/pbmessage.proto";
+          "/resource/assets/proto/pbmessage.proto";
         exec(cmdStr, (error, stdout, stderr) => {
           if (error) {
             this.isCreateJsLoading = false;
@@ -299,7 +300,6 @@ export default {
     },
 
     async oneForAll() {
-      let arr = [];
       ipcRenderer.send("client_show_loading");
       try {
         await this.updateGit();
@@ -310,6 +310,7 @@ export default {
 
         ipcRenderer.send("client_hide_loading");
         ipcRenderer.send("client_show_message", "One·for·All Success");
+        ipcRenderer.send("client_show_dialog", "One·for·All Success");
       } catch (e) {
         ipcRenderer.send("client_hide_loading");
         ipcRenderer.send("client_show_snack", "One·for·All Error:" + e);
@@ -322,7 +323,8 @@ export default {
         let content = fs.readFileSync(
           this.proto_path + "/" + "pbmessage.proto"
         );
-        let ppath = this.project_path + "/resource/proto/pbmessage.proto";
+        let ppath =
+          this.project_path + "/resource/assets/proto/pbmessage.proto";
 
         try {
           fs.writeFileSync(ppath, content);

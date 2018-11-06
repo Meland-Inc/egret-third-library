@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="650,42" extention="Button">
-  <controller name="button" pages="0,up,1,down" selected="1"/>
+<component size="961,47" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
   <displayList>
-    <graph id="n1_jtjd" name="n1" xy="0,0" size="650,42" type="rect" fillColor="#ffcccccc">
-      <gearDisplay controller="button" pages="1"/>
+    <graph id="n1_jtjd" name="n1" xy="0,0" size="960,47" type="rect" lineSize="0">
+      <gearColor controller="button" pages="0,1" values="#ffffff|#cccccc"/>
       <relation target="n0_jtjd" sidePair="bottomext-bottom,rightext-right"/>
     </graph>
-    <text id="n0_jtjd" name="title" xy="1,4" size="650,38" fontSize="15" color="#ff00ff" autoSize="height" text="日至系统个&#xA;&#xA;"/>
+    <text id="n0_jtjd" name="title" xy="1,4" size="960,42" fontSize="16" color="#ff00ff" autoSize="height" text="日至系统个&#xA;&#xA;"/>
   </displayList>
   <Button mode="Radio"/>
   <relation target="n0_jtjd" sidePair="bottomext-bottom"/>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="640,1136" pivot="0.5,0.5" anchor="true">
+  <displayList>
+    <image id="n5_935y" name="imgBG" src="935yj" fileName="img/bg_game1.png" xy="0,0" size="640,1136">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </image>
+    <image id="n4_935y" name="imgTopBG" src="935y5" fileName="img/img_game1_3.png" xy="0,0" size="640,40">
+      <relation target="" sidePair="rightext-right,top-top"/>
+    </image>
+    <list id="n11_935y" name="lstSudoku" xy="320,373" pivot="0.5,0.5" anchor="true" size="570,570" aspect="true" layout="flow_hz" overflow="hidden" lineItemCount="3" defaultItem="ui://zt3i7q2i935yt" autoItemSize="true">
+      <relation target="" sidePair="top-top,center-center"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n12_935y" name="btnClose" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="te1gxawo" xy="560,6" size="72,72">
+      <relation target="" sidePair="right-right,top-top"/>
+      <Button icon="ui://zt3i7q2i935y7"/>
+    </component>
+    <list id="n13_935y" name="lstNumber" xy="170,786" size="439,147" layout="flow_hz" lineGap="12" lineItemCount="5" defaultItem="ui://zt3i7q2i935yv">
+      <relation target="" sidePair="right-right%,bottom-bottom%"/>
+      <item title="1" icon="ui://zt3i7q2i935yn" name="1"/>
+      <item title="2" icon="ui://zt3i7q2i935yn" name="2"/>
+      <item title="3" icon="ui://zt3i7q2i935yn" name="3"/>
+      <item title="4" icon="ui://zt3i7q2i935yn" name="4"/>
+      <item title="5" icon="ui://zt3i7q2i935yn" name="5"/>
+      <item title="6" icon="ui://zt3i7q2i935yn" name="6"/>
+      <item title="7" icon="ui://zt3i7q2i935yn" name="7"/>
+      <item title="8" icon="ui://zt3i7q2i935yn" name="8"/>
+      <item title="9" icon="ui://zt3i7q2i935yn" name="9"/>
+      <item url="ui://zt3i7q2i935yw" name="0"/>
+    </list>
+    <component id="n15_935y" name="btnRedo" src="935yx" fileName="btn/btnIcon.xml" xy="49,786">
+      <relation target="n13_935y" sidePair="top-top%"/>
+      <relation target="" sidePair="left-left%"/>
+      <Button icon="ui://zt3i7q2i935y2"/>
+    </component>
+    <component id="n16_935y" name="btnUndo" src="935yx" fileName="btn/btnIcon.xml" xy="49,866">
+      <relation target="n13_935y" sidePair="bottom-bottom%"/>
+      <relation target="" sidePair="left-left%"/>
+      <Button icon="ui://zt3i7q2i935y3"/>
+    </component>
+    <component id="n17_935y" name="btnHint" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="te1gxawo" xy="53,987" size="74,76">
+      <relation target="" sidePair="center-center%,bottom-bottom%"/>
+      <Button title="?" titleColor="#898880" titleFontSize="40" icon="ui://zt3i7q2i935y1"/>
+    </component>
+    <component id="n18_935y" name="btnReplay" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="te1gxawo" xy="161,993" size="200,70">
+      <relation target="" sidePair="bottom-bottom%,center-center%"/>
+      <Button title="重玩" titleColor="#898880" titleFontSize="32" icon="ui://zt3i7q2i935yl"/>
+    </component>
+    <component id="n19_935y" name="btnNewGame" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="te1gxawo" xy="394,993" size="200,70">
+      <relation target="" sidePair="center-center%,bottom-bottom%"/>
+      <Button title="新的一局" titleColor="#689718" titleFontSize="32" icon="ui://zt3i7q2i935yo"/>
+    </component>
+    <component id="n20_935y" name="labClock" src="935yz" fileName="com/labClock.xml" xy="27,696">
+      <relation target="" sidePair="left-left,bottom-bottom%"/>
+    </component>
+    <component id="n21_935y" name="labReplayTime" src="935y10" fileName="com/labTime.xml" xy="226,696">
+      <relation target="" sidePair="center-center,bottom-bottom%"/>
+    </component>
+    <text id="n23_935y" name="tfReplayTime" xy="250,708" size="101,31" fontSize="24" color="#cedfef" text="重玩次数">
+      <relation target="n21_935y" sidePair="left-left,top-top"/>
+    </text>
+    <component id="n22_935y" name="labErrorTime" src="935y10" fileName="com/labTime.xml" xy="427,695">
+      <relation target="" sidePair="right-right,bottom-bottom%"/>
+    </component>
+    <text id="n25_935y" name="tfErrorTime" xy="449,708" size="101,31" fontSize="24" color="#cedfef" text="错误次数">
+      <relation target="n22_935y" sidePair="left-left,top-top"/>
+    </text>
+    <image id="n26_satp" name="BG" src="935y6" fileName="img/img_game1_4.png" xy="51,357" size="538,422" group="n27_satp"/>
+    <text id="n28_satp" name="n28" xy="102,406" size="435,254" group="n27_satp" fontSize="28" color="#ffffff" autoSize="none" text="数独游戏玩法：在空格内填入1-9，并且保证横向，纵向，小9宫格内都没有相同的数字则代表成功！&#xA;&#xA; （点击空格再点击下方的数字即可进行填入和替换，点击铅笔可以进行标记!)"/>
+    <component id="n29_satp" name="btnStart" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="te1gxawo" xy="220,675" size="200,70" group="n27_satp">
+      <Button title="开始游戏" titleColor="#ce9024" titleFontSize="32" icon="ui://zt3i7q2i935y0"/>
+    </component>
+    <group id="n27_satp" name="hint" xy="51,357" size="538,422" hideByEditor="true" advanced="true" collapsed="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <image id="n30_satp" name="imgGameOverBG" src="935y6" fileName="img/img_game1_4.png" xy="61,359" size="538,422" group="n33_satp"/>
+    <text id="n31_satp" name="tfJIFENBAN" xy="267,388" size="125,47" group="n33_satp" fontSize="38" color="#ffffff" autoSize="none" text="记分板"/>
+    <graph id="n34_satp" name="lime" xy="99,457" size="460,1" group="n33_satp" type="rect" lineSize="0"/>
+    <graph id="n35_satp" name="line" xy="100,666" size="460,1" group="n33_satp" type="rect" lineSize="0"/>
+    <text id="n36_satp" name="tfUseTime" xy="119,479" size="125,40" group="n33_satp" fontSize="32" color="#ffffff" autoSize="none" text="用时："/>
+    <text id="n41_satp" name="_tfUseTime" xy="236,479" size="155,40" group="n33_satp" fontSize="32" color="#ffffff" autoSize="none" text="0:00:00"/>
+    <text id="n37_satp" name="tfRepalyTime" xy="119,539" size="163,40" group="n33_satp" fontSize="32" color="#ffffff" autoSize="none" text="重玩次数："/>
+    <text id="n40_satp" name="_tfRepalyTime" xy="273,540" size="163,40" group="n33_satp" fontSize="32" color="#ffffff" autoSize="none" text="0"/>
+    <text id="n38_satp" name="tfErrorTime" xy="119,599" size="166,40" group="n33_satp" fontSize="32" color="#ffffff" autoSize="none" text="错误次数："/>
+    <text id="n42_satp" name="_tfErrorTime" xy="273,601" size="166,40" group="n33_satp" fontSize="32" color="#ffffff" autoSize="none" text="0"/>
+    <text id="n39_satp" name="tfEndScore" xy="119,694" size="188,40" group="n33_satp" fontSize="32" color="#ffffff" autoSize="none" text="最终评分："/>
+    <loader id="n43_mzli" name="ladGrade" xy="489,714" pivot="0.5,0.5" anchor="true" size="95,48" group="n33_satp" autoSize="true">
+      <relation target="n39_satp" sidePair="middle-middle,left-right"/>
+    </loader>
+    <group id="n33_satp" name="gameOver" xy="61,359" size="538,422" visible="false" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

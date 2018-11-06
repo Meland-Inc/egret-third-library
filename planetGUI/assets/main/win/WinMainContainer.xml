@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" opaque="false">
+  <displayList>
+    <component id="n1_muc9" name="comJoystick" src="w80ln" fileName="win/ComMainJoystick.xml" xy="920,400">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+    </component>
+    <component id="n2_muc9" name="comMenu" src="ua4xu" fileName="win/ComMainMenu.xml" xy="1040,0">
+      <relation target="" sidePair="right-right,top-top"/>
+    </component>
+    <component id="n3_muc9" name="comPickTips" src="tbq62o" fileName="win/ComMainPickTips.xml" xy="922,195" size="206,200"/>
+    <component id="n4_muc9" name="comRocker" src="w80l0" fileName="win/ComMainRocker.xml" xy="20,440">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+    </component>
+    <component id="n5_muc9" name="comServer" src="xjj81v" fileName="win/ComMainServer.xml" xy="946,10">
+      <relation target="" sidePair="right-right,top-top"/>
+    </component>
+    <component id="n6_muc9" name="comUserInfo" src="w80lg" fileName="win/ComMainUserInfo.xml" xy="20,20">
+      <relation target="" sidePair="left-left,top-top"/>
+    </component>
+    <component id="n9_syxc" name="comMinimapSmall" src="j0s6z" fileName="win/ComMinimapSmall.xml" xy="968,45"/>
+  </displayList>
+</component>

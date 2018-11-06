@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="5hs1fuej" jpegQuality="80" compressPNG="true">
   <resources>
-    <component id="w80l0" name="WinMainRocker.xml" path="/win/" exported="true"/>
+    <component id="w80l0" name="ComMainRocker.xml" path="/win/" exported="true"/>
     <image id="w80l1" name="btn_main_attack.png" path="/img/" exported="true"/>
     <image id="w80l2" name="btn_main_bag.png" path="/img/" exported="true"/>
     <image id="w80l4" name="btn_main_city.png" path="/img/" exported="true"/>
@@ -11,15 +11,15 @@
     <image id="w80ld" name="img_main_item_1.png" path="/img/" exported="true"/>
     <image id="w80le" name="img_main_rocker_1.png" path="/img/" exported="true"/>
     <image id="w80lf" name="img_main_rocker_2.png" path="/img/" exported="true"/>
-    <component id="w80lg" name="WinMainUserDetail.xml" path="/win/" exported="true"/>
+    <component id="w80lg" name="ComMainUserInfo.xml" path="/win/" exported="true"/>
     <component id="w80lh" name="WinMainItemField.xml" path="/win/" exported="true"/>
     <image id="w80lk" name="img_main_item_2.png" path="/img/" exported="true"/>
     <component id="w80lm" name="btnMainBag.xml" path="/btn/"/>
-    <component id="w80ln" name="WinMainJoystick.xml" path="/win/" exported="true"/>
+    <component id="w80ln" name="ComMainJoystick.xml" path="/win/" exported="true"/>
     <component id="w80lo" name="btnMainAttack.xml" path="/btn/"/>
     <component id="w80lq" name="btnMainTool.xml" path="/btn/"/>
     <component id="w80lr" name="btnMainRocker.xml" path="/btn/"/>
-    <component id="ua4xu" name="WinMainMenu.xml" path="/win/" exported="true"/>
+    <component id="ua4xu" name="ComMainMenu.xml" path="/win/" exported="true"/>
     <component id="ua4xw" name="btnMainCity.xml" path="/btn/"/>
     <component id="ua4xx" name="btnMainCreate.xml" path="/btn/"/>
     <component id="ua4xy" name="btnMainFormula.xml" path="/btn/"/>
@@ -48,7 +48,7 @@
     <image id="9prt1r" name="btn_main_storage_2.png" path="/img/" exported="true"/>
     <component id="xjj81s" name="btnMainServer.xml" path="/btn/"/>
     <image id="xjj81u" name="btn_main_server.png" path="/img/" exported="true"/>
-    <component id="xjj81v" name="WinMainServer.xml" path="/win/" exported="true"/>
+    <component id="xjj81v" name="ComMainServer.xml" path="/win/" exported="true"/>
     <component id="wfql1x" name="btnSetting.xml" path="/btn/"/>
     <image id="wfql1y" name="btn_main_machine.png" path="/img/" exported="true"/>
     <component id="uvm01z" name="labHitFlutterWord.xml" path="/lab/" exported="true"/>
@@ -76,7 +76,9 @@
     <image id="oy0u2l" name="img_main_itemdrop.png" path="/img/"/>
     <component id="oy0u2m" name="ComAccmu.xml" path="/com/" exported="true"/>
     <component id="oy0u2n" name="ComPickObjectToast.xml" path="/com/" exported="true"/>
-    <component id="tbq62o" name="WinMainPickTips.xml" path="/win/" exported="true"/>
+    <component id="tbq62o" name="ComMainPickTips.xml" path="/win/" exported="true"/>
+    <component id="muc92p" name="WinMainContainer.xml" path="/win/" exported="true"/>
+    <component id="j0s6z" name="ComMinimapSmall.xml" path="/win/" exported="true"/>
   </resources>
   <publish name="main"/>
 </packageDescription>

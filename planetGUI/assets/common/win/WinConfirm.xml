@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="313,228">
+<component size="1136,640">
   <displayList>
-    <image id="n12_fyx8" name="bg" src="qn8o2" fileName="img/bg_bag_2.png" xy="0,0"/>
-    <graph id="n5_kjpo" name="dragArea" xy="0,0" size="313,36" alpha="0" type="rect"/>
-    <component id="n13_fyx8" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" xy="276,-5" size="42,43">
+    <image id="n12_fyx8" name="bg" src="qn8o2" fileName="img/bg_bag_2.png" xy="409,208" group="n19_syxc"/>
+    <graph id="n5_kjpo" name="dragArea" xy="409,208" size="313,36" group="n19_syxc" alpha="0" type="rect"/>
+    <component id="n13_fyx8" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" xy="685,203" size="42,43" group="n19_syxc">
       <Button icon="ui://te1gxawoqn8o4"/>
     </component>
-    <text id="n6_kjpo" name="tfTitle" xy="93,4" size="119,32" fontSize="20" color="#ffffff" align="center" vAlign="middle" ubb="true" autoSize="none" text="确认"/>
-    <text id="n11_kjpo" name="tfConfirmTips" xy="40,59" size="232,96" fontSize="18" color="#afafaf" align="center" vAlign="middle" ubb="true" autoSize="none" singleLine="true" text="">
-      <relation target="" sidePair="center-center"/>
-    </text>
-    <component id="n15_fyx8" name="btnConfirm" src="qn8od" fileName="btn/btnCommon.xml" xy="174,168">
+    <text id="n6_kjpo" name="tfTitle" xy="502,212" size="119,32" group="n19_syxc" fontSize="20" color="#ffffff" align="center" vAlign="middle" ubb="true" autoSize="none" text="确认"/>
+    <text id="n11_kjpo" name="tfConfirmTips" xy="449,267" size="232,96" group="n19_syxc" fontSize="18" color="#afafaf" align="center" vAlign="middle" ubb="true" autoSize="none" singleLine="true" text=""/>
+    <component id="n15_fyx8" name="btnConfirm" src="qn8od" fileName="btn/btnCommon.xml" xy="583,376" group="n19_syxc">
       <Button title="确定" titleColor="#599c11" titleFontSize="20" icon="ui://te1gxawoqn8o6"/>
     </component>
-    <component id="n18_er20" name="btnCancel" src="qn8od" fileName="btn/btnCommon.xml" xy="31,168">
+    <component id="n18_er20" name="btnCancel" src="qn8od" fileName="btn/btnCommon.xml" xy="440,376" group="n19_syxc">
       <Button title="取消" titleColor="#ffffff" titleFontSize="20" icon="ui://te1gxawoqn8o7"/>
     </component>
+    <group id="n19_syxc" name="n19" xy="409,203" size="318,233"/>
   </displayList>
 </component>

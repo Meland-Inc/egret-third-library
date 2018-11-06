@@ -4,7 +4,7 @@
     <component id="qn8o0" name="WinConfirm.xml" path="/win/" exported="true"/>
     <image id="qn8o1" name="bg_bag.png" path="/img/" exported="true"/>
     <image id="qn8o2" name="bg_bag_2.png" path="/img/" exported="true"/>
-    <image id="qn8o3" name="bg_modal.png" path="/img/" exported="true"/>
+    <image id="qn8o3" name="bg_modal.png" path="/img/" exported="true" scale="9grid" scale9grid="14,29,238,58"/>
     <image id="qn8o4" name="btn_close1.png" path="/img/" exported="true"/>
     <image id="qn8o5" name="btn_close2.png" path="/img/" exported="true"/>
     <image id="qn8o6" name="btn_green.png" path="/img/" exported="true"/>
@@ -53,9 +53,58 @@
     <image id="er201d" name="img_bag_item_2.png" path="/img/"/>
     <image id="er201e" name="icon_bag_coat.png" path="/img/"/>
     <component id="er201f" name="BtnCommonBagItem.xml" path="/btn/" exported="true"/>
-    <image id="er201g" name="img_bag_item_5.png" path="/com/"/>
+    <image id="er201g" name="img_bag_item_5.png" path="/img/"/>
     <image id="jr3d1h" name="btn_build_rotating.png" path="/img/" exported="true"/>
     <component id="jr3d1j" name="btnRotateOp.xml" path="/btn/" exported="true"/>
+    <image id="132oi1k" name="common_bg_1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="10,47,92,55"/>
+    <image id="132oi1l" name="common_bg_2.png" path="/newImg/" exported="true"/>
+    <image id="132oi1m" name="common_btn_1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="15,0,21,50"/>
+    <image id="132oi1n" name="common_btn_2.png" path="/newImg/" exported="true" scale="9grid" scale9grid="15,0,20,50"/>
+    <image id="132oi1o" name="common_btn_3.png" path="/newImg/" exported="true" scale="9grid" scale9grid="10,10,20,20"/>
+    <image id="132oi1p" name="common_btn_4.png" path="/newImg/" exported="true" scale="9grid" scale9grid="10,10,20,20"/>
+    <image id="132oi1q" name="common_btn_5.png" path="/newImg/" exported="true"/>
+    <image id="132oi1r" name="common_img_1.png" path="/newImg/" exported="true"/>
+    <image id="132oi1s" name="common_img_2.png" path="/newImg/" exported="true" scale="tile"/>
+    <component id="132oi1t" name="btnClose1.xml" path="/btn/" exported="true"/>
+    <image id="efrs1k" name="bg_cm_1.png" path="/newImg/" exported="true"/>
+    <image id="efrs1l" name="bg_cm_2.png" path="/newImg/" exported="true"/>
+    <image id="efrs1m" name="bg_cm_3.png" path="/newImg/" exported="true" scale="9grid" scale9grid="22,42,44,24"/>
+    <image id="efrs1n" name="bg_cm_4.png" path="/newImg/" exported="true" scale="9grid" scale9grid="30,57,60,33"/>
+    <image id="efrs1o" name="bg_cm_5.png" path="/newImg/" exported="true" scale="9grid" scale9grid="30,68,60,22"/>
+    <image id="efrs1p" name="bg_cm_6.png" path="/newImg/" exported="true"/>
+    <image id="efrs1q" name="btn_cm_closed.png" path="/newImg/" exported="true"/>
+    <image id="efrs1r" name="btn_cm_closed_2.png" path="/newImg/" exported="true"/>
+    <image id="efrs1s" name="btn_cm_orange.png" path="/newImg/" exported="true" scale="9grid" scale9grid="16,8,17,30"/>
+    <image id="efrs1t" name="btn_cm_talk.png" path="/newImg/" exported="true"/>
+    <image id="efrs1u" name="btn_cm_white2.png" path="/newImg/" exported="true" scale="9grid" scale9grid="15,11,18,27"/>
+    <image id="efrs1v" name="btn_cm_white3.png" path="/newImg/" exported="true" scale="9grid" scale9grid="10,10,20,20"/>
+    <image id="efrs1w" name="btn_cm_yellow1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="12,8,14,22"/>
+    <image id="efrs1x" name="btn_cm_yellow2.png" path="/newImg/" exported="true" scale="9grid" scale9grid="15,11,19,25"/>
+    <image id="efrs1y" name="btn_cm_yellow3.png" path="/newImg/" exported="true"/>
+    <image id="efrs1z" name="img_cm_chat.png" path="/newImg/" exported="true" scale="9grid" scale9grid="4,3,26,28"/>
+    <image id="efrs20" name="img_cm_item_1.png" path="/newImg/" exported="true"/>
+    <image id="efrs22" name="img_cm_title1.png" path="/newImg/" exported="true"/>
+    <image id="efrs23" name="img_cm_title2.png" path="/newImg/" exported="true"/>
+    <image id="efrs24" name="img_cm_title3.png" path="/newImg/" exported="true"/>
+    <component id="jj3j1e" name="CommonButton.xml" path="/btn/" exported="true"/>
+    <component id="rvyy1m" name="RadioButton.xml" path="/btn/" exported="true"/>
+    <component id="efrs25" name="CanChangeCommonButton.xml" path="/btn/" exported="true"/>
+    <image id="efrs26" name="icon_gameplatform_2.png" path="/newImg/" exported="true"/>
+    <image id="rx7u27" name="img_cm_pattern.png" path="/newImg/" exported="true" scale="tile"/>
+    <image id="qo8vi1u" name="bg_cm_7.png" path="/newImg/" exported="true" scale="9grid" scale9grid="25,57,50,18"/>
+    <image id="qo8vi1v" name="bg_cm_8.png" path="/newImg/" exported="true"/>
+    <image id="qo8vi1w" name="btn_cm_closed_3.png" path="/newImg/" exported="true"/>
+    <image id="qo8vi1x" name="img_cm_pattern2.png" path="/newImg/" exported="true" scale="tile"/>
+    <image id="qo8vi1y" name="img_cm_pattern3.png" path="/newImg/" exported="true" scale="tile"/>
+    <image id="qo8vi1z" name="btn_cm_back.png" path="/newImg/" exported="true"/>
+    <image id="qo8vi21" name="btn_cm_white1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="15,7,10,24"/>
+    <image id="qo8vi22" name="btn_cm_rightturn.png" path="/newImg/" exported="true"/>
+    <image id="qo8vi23" name="btn_cm_leftturn.png" path="/newImg/" exported="true"/>
+    <image id="qo8vi24" name="icon_cm_dropdown.png" path="/newImg/" exported="true"/>
+    <image id="qo8vi25" name="icon_cm_pullup.png" path="/newImg/" exported="true"/>
+    <image id="qo8vi26" name="btn_cm_yellow4.png" path="/newImg/" exported="true"/>
+    <image id="pagbi27" name="img_inputbox_1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="9,9,18,18"/>
+    <image id="pagbi28" name="icon_cm_return.png" path="/newImg/" exported="true"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>
