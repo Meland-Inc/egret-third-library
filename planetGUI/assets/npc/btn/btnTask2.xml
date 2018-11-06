@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="217,60" extention="Button">
-  <controller name="conTaskState" pages="0,acceptable,1,accepted,2,completed" selected="1"/>
+  <controller name="conTaskState" pages="0,acceptable,1,accepted,2,completed" selected="0"/>
   <displayList>
     <loader id="n10_sz33" name="icon" xy="0,0" size="217,60" url="ui://tis07nuvxhg99" align="center" autoSize="true"/>
     <text id="n9_qzgy" name="title" xy="54,16" size="142,28" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="shrink" singleLine="true" text="taskxxx">
       <relation target="" sidePair="width-width,middle-middle"/>
     </text>
-    <loader id="n11_p8hk" name="ladState" xy="18,11" size="32,38" url="ui://tis07nuvxhg9j">
+    <loader id="n11_p8hk" name="ladState" xy="18,11" size="32,38" url="ui://tis07nuvxhg9g">
       <gearIcon controller="conTaskState" pages="0,1" values="ui://tis07nuvxhg9g|ui://tis07nuvxhg9j" default="ui://tis07nuvxhg9h"/>
     </loader>
   </displayList>
