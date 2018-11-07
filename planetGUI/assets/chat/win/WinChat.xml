@@ -4,14 +4,14 @@
   <controller name="conShowEmoj" pages="0,hide,1,show" selected="0"/>
   <controller name="conFrivateChat" pages="0,hide,1,show" selected="1"/>
   <displayList>
-    <image id="n3_q73n" name="bg" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="174,103" size="805,456"/>
-    <image id="n11_q73n" name="chatContentBg" src="q73ni1w" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="391,158" size="552,369"/>
-    <component id="n4_q73n" name="btnClose" src="132oi1t" fileName="btn/btnClose1.xml" pkg="te1gxawo" xy="944,95"/>
-    <image id="n8_q73n" name="titleBg" src="efrs22" fileName="newImg/img_cm_title1.png" pkg="te1gxawo" xy="480,106"/>
-    <text id="n9_q73n" name="title" xy="548,113" size="45,24" fontSize="20" color="#f5ebde" text="聊天"/>
-    <image id="n10_q73n" name="bottomBg" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="196,541" size="765,14"/>
-    <image id="n5_q73n" name="lstBtnBg" src="q73ni1u" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="219,160" size="166,366"/>
-    <list id="n6_q73n" name="lstBtnChannel" xy="238,179" size="132,335" layout="flow_hz" defaultItem="ui://te1gxawoq73ni1v">
+    <image id="n3_q73n" name="bg" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="174,96" size="805,456" group="n26_hrgt"/>
+    <image id="n11_q73n" name="chatContentBg" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="391,151" size="552,369" group="n26_hrgt"/>
+    <component id="n4_q73n" name="btnClose" src="132oi1t" fileName="btn/btnClose1.xml" pkg="te1gxawo" xy="944,88" size="52,52" group="n26_hrgt"/>
+    <image id="n8_q73n" name="titleBg" src="efrs22" fileName="newImg/img_cm_title1.png" pkg="te1gxawo" xy="480,99" group="n26_hrgt"/>
+    <text id="n9_q73n" name="title" xy="548,106" size="45,24" group="n26_hrgt" fontSize="20" color="#f5ebde" text="聊天"/>
+    <image id="n10_q73n" name="bottomBg" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="196,534" size="765,14" group="n26_hrgt"/>
+    <image id="n5_q73n" name="lstBtnBg" src="ot9si2v" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="219,153" size="166,366" group="n26_hrgt"/>
+    <list id="n6_q73n" name="lstBtnChannel" xy="238,172" size="132,335" group="n26_hrgt" layout="flow_hz" defaultItem="ui://te1gxawoq73ni1v">
       <item title="系统" name="system"/>
       <item title="综合" name="comprehensive"/>
       <item title="世界" name="world"/>
@@ -20,27 +20,27 @@
       <item title="附近" name="near"/>
       <item title="私聊" name="private"/>
     </list>
-    <list id="n12_q73n" name="lstChatContent" xy="411,200" size="520,252" overflow="scroll" defaultItem="ui://qagcvsbxq73n4p">
+    <list id="n12_q73n" name="lstChatContent" xy="411,193" size="520,252" group="n26_hrgt" overflow="scroll" defaultItem="ui://qagcvsbxq73n4p">
       <item/>
       <item/>
       <item/>
       <item/>
       <item/>
     </list>
-    <image id="n13_q73n" name="friendNameBg" src="q73ni1x" fileName="newImg/img_cm_name.png" pkg="te1gxawo" xy="411,169" size="81,22" group="n25_11e02">
+    <image id="n13_q73n" name="friendNameBg" src="ot9si35" fileName="newImg/img_cm_name.png" pkg="te1gxawo" xy="411,162" size="81,22" group="n25_11e02">
       <relation target="n14_q73n" sidePair="width-width"/>
     </image>
-    <text id="n14_q73n" name="tfFriendName" xy="413,171" size="81,18" group="n25_11e02" fontSize="14" color="#5b4b37" align="center" vAlign="middle" ubb="true" vars="true" text="与[color=#c88316]{name=xxx}[/color]聊天中"/>
-    <group id="n25_11e02" name="grpFriendChatTitle" xy="411,169" size="83,22" advanced="true">
+    <text id="n14_q73n" name="tfFriendName" xy="413,164" size="82,18" group="n25_11e02" fontSize="14" color="#5b4b37" align="center" vAlign="middle" ubb="true" vars="true" text="与[color=#c88316]{name=xxx}[/color]聊天中"/>
+    <group id="n25_11e02" name="grpFriendChatTitle" xy="411,162" size="84,22" group="n26_hrgt" advanced="true">
       <gearDisplay controller="conFrivateChat" pages="1"/>
     </group>
-    <component id="n15_q73n" name="btnVoice" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="409,486" size="54,28">
+    <component id="n15_q73n" name="btnVoice" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="409,479" size="54,28" group="n26_hrgt">
       <Button icon="ui://qagcvsbxq73n3u"/>
     </component>
-    <image id="n16_q73n" name="inputBg" src="q73ni1y" fileName="newImg/img_cm_inputbox_3.png" pkg="te1gxawo" xy="472,486" size="280,26"/>
-    <text id="n17_q73n" name="inpSendText" xy="478,482" size="244,35" input="true" prompt="[color=#BFBFBf[size=14]点击输入文字...[/size][/color]" fontSize="14" color="#9b8e72" vAlign="middle" autoSize="none" singleLine="true" text=""/>
-    <image id="n22_q73n" name="emojBg" src="q73n44" fileName="imgNew/img_chat_emoji.png" xy="471,323" size="327,191" group="n24_q73n"/>
-    <list id="n23_q73n" name="lstBtnEmoj" xy="473,325" size="323,148" group="n24_q73n" layout="flow_hz" overflow="scroll" lineGap="2" colGap="2" defaultItem="ui://qagcvsbxq73n4q" autoClearItems="true">
+    <image id="n16_q73n" name="inputBg" src="ot9si32" fileName="newImg/img_cm_inputbox_3.png" pkg="te1gxawo" xy="472,479" size="280,26" group="n26_hrgt"/>
+    <text id="n17_q73n" name="inpSendText" xy="478,475" size="244,35" group="n26_hrgt" input="true" prompt="[color=#BFBFBf[size=14]点击输入文字...[/size][/color]" fontSize="14" color="#9b8e72" vAlign="middle" autoSize="none" singleLine="true" text=""/>
+    <image id="n22_q73n" name="emojBg" src="q73n44" fileName="imgNew/img_chat_emoji.png" xy="471,316" size="327,191" group="n24_q73n"/>
+    <list id="n23_q73n" name="lstBtnEmoj" xy="473,318" size="323,148" group="n24_q73n" layout="flow_hz" overflow="scroll" lineGap="2" colGap="2" defaultItem="ui://qagcvsbxq73n4q" autoClearItems="true">
       <item/>
       <item/>
       <item/>
@@ -92,21 +92,24 @@
       <item/>
       <item/>
     </list>
-    <group id="n24_q73n" name="emoj" xy="471,323" size="328,192" advanced="true" collapsed="true">
+    <group id="n24_q73n" name="emoj" xy="471,316" size="328,192" group="n26_hrgt" advanced="true" collapsed="true">
       <gearDisplay controller="conShowEmoj" pages="1"/>
     </group>
-    <component id="n18_q73n" name="btnEmoj" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="764,488" size="22,22">
+    <component id="n18_q73n" name="btnEmoj" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="764,481" size="22,22" group="n26_hrgt">
       <Button icon="ui://qagcvsbxoy2m2"/>
     </component>
-    <component id="n19_q73n" name="btnSend" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="806,481" size="110,34">
+    <component id="n19_q73n" name="btnSend" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="806,474" size="110,34" group="n26_hrgt">
       <Button title="发送" titleColor="#ffffff" titleFontSize="18" icon="ui://qagcvsbxq73n3w"/>
     </component>
-    <component id="n21_q73n" name="comSendHistory" src="k59n3o" fileName="com/comSendHistory.xml" xy="472,367" size="278,117">
+    <component id="n21_q73n" name="comSendHistory" src="k59n3o" fileName="com/comSendHistory.xml" xy="472,360" size="278,117" group="n26_hrgt">
       <gearDisplay controller="conShowSendHistory" pages="1"/>
     </component>
-    <component id="n20_q73n" name="btnHistory" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="733,496" size="10,7">
-      <gearIcon controller="conShowSendHistory" pages="1" values="ui://te1gxawoq73ni1z" default="ui://te1gxawoq73ni20"/>
-      <Button icon="ui://te1gxawoq73ni20"/>
+    <component id="n20_q73n" name="btnHistory" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="733,489" size="10,7" group="n26_hrgt">
+      <gearIcon controller="conShowSendHistory" pages="0,1" values="ui://te1gxawoot9si37|ui://te1gxawoot9si36"/>
+      <Button icon="ui://te1gxawoot9si37"/>
     </component>
+    <group id="n26_hrgt" name="root" xy="174,88" size="822,464" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
   </displayList>
 </component>
