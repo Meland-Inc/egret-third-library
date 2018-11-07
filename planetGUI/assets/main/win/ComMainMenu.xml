@@ -1,33 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="79,390">
+<component size="414,63">
   <displayList>
-    <component id="n5_9prt" name="btnHide" src="9prt1p" fileName="btn/btnMainHide.xml" xy="0,-100"/>
-    <component id="n3_ua4x" name="btnFormula" src="ua4xy" fileName="btn/btnMainFormula.xml" xy="6,-100"/>
-    <component id="n4_ua4x" name="btnTask" src="ua4xz" fileName="btn/btnMainTask.xml" xy="6,-100">
-      <Button sound="ui://te1gxawotqc911"/>
+    <component id="n19_r2bf" name="btnManual" src="rdy458" fileName="btn/btnMenu.xml" xy="0,0">
+      <Button title="手册" icon="ui://5hs1fuejr2bf5x"/>
     </component>
-    <component id="n2_ua4x" name="btnCreate" src="ua4xx" fileName="btn/btnMainCreate.xml" xy="6,-100">
-      <Button sound="ui://te1gxawotqc911"/>
+    <component id="n18_r2bf" name="btnGamePlatform" src="rdy458" fileName="btn/btnMenu.xml" xy="58,0">
+      <Button title="游戏" icon="ui://5hs1fuejr2bf5y"/>
     </component>
-    <component id="n10_wfql" name="btnSetting" src="wfql1x" fileName="btn/btnSetting.xml" xy="6,-100">
-      <Button sound="ui://te1gxawotqc911"/>
+    <component id="n17_r2bf" name="btnMail" src="rdy458" fileName="btn/btnMenu.xml" xy="116,0">
+      <Button title="邮箱" icon="ui://5hs1fuejr2bf5w"/>
     </component>
-    <component id="n11_efxp" name="btnGamePlatform" src="wfql1x" fileName="btn/btnSetting.xml" xy="-69,116">
-      <Button title="游戏平台" sound="ui://te1gxawotqc911"/>
+    <component id="n15_r2bf" name="btnFormula" src="rdy458" fileName="btn/btnMenu.xml" xy="174,0">
+      <Button title="配方" icon="ui://5hs1fuejrdy437"/>
+    </component>
+    <component id="n13_r2bf" name="btnRobot" src="rdy458" fileName="btn/btnMenu.xml" xy="232,0">
+      <Button title="机器" icon="ui://5hs1fuejrdy43d"/>
+    </component>
+    <component id="n12_r2bf" name="btnTask" src="rdy458" fileName="btn/btnMenu.xml" xy="290,0">
+      <Button title="任务" icon="ui://5hs1fuejrdy43j"/>
+    </component>
+    <component id="n14_r2bf" name="btnSetting" src="rdy458" fileName="btn/btnMenu.xml" xy="348,0">
+      <Button title="设置" icon="ui://5hs1fuejrdy43e"/>
     </component>
   </displayList>
-  <transition name="show">
-    <item time="0" type="XY" target="n10_wfql" tween="true" startValue="6,-100" endValue="6,318" duration="9"/>
-    <item time="0" type="XY" target="n4_ua4x" tween="true" startValue="7,-100" endValue="7,153" duration="9"/>
-    <item time="0" type="XY" target="n3_ua4x" tween="true" startValue="7,-100" endValue="7,71" duration="9"/>
-    <item time="0" type="XY" target="n2_ua4x" tween="true" startValue="7,-100" endValue="7,235" duration="9"/>
-    <item time="0" type="XY" target="n5_9prt" tween="true" startValue="0,-100" endValue="0,19" duration="9"/>
-  </transition>
-  <transition name="hide">
-    <item time="0" type="XY" target="n10_wfql" tween="true" startValue="6,318" endValue="6,-100" duration="9"/>
-    <item time="0" type="XY" target="n3_ua4x" tween="true" startValue="7,71" endValue="7,-100" duration="9"/>
-    <item time="0" type="XY" target="n5_9prt" tween="true" startValue="0,19" endValue="0,-100" duration="9"/>
-    <item time="0" type="XY" target="n2_ua4x" tween="true" startValue="7,235" endValue="7,-100" duration="9"/>
-    <item time="0" type="XY" target="n4_ua4x" tween="true" startValue="7,153" endValue="7,-100" duration="9"/>
-  </transition>
 </component>

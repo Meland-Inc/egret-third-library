@@ -115,6 +115,12 @@
     <component id="k59n3o" name="comSendHistory.xml" path="/com/"/>
     <component id="k59n3p" name="sendHistoryItem.xml" path="/com/"/>
     <component id="fvj83q" name="richTextContainer.xml" path="/com/" exported="true"/>
+    <image id="rdy43q" name="img_chat_chuangzuo.png" path="/img/" exported="true"/>
+    <image id="rdy43r" name="img_chat_fenxian.png" path="/img/"/>
+    <image id="rdy43s" name="img_chat_fujin.png" path="/img/"/>
+    <image id="rdy43t" name="img_chat_shijie.png" path="/img/"/>
+    <image id="rdy43u" name="img_chat_siliao.png" path="/img/"/>
+    <image id="rdy43w" name="img_chat_zonghe.png" path="/img/"/>
   </resources>
   <publish name="chat"/>
 </packageDescription>

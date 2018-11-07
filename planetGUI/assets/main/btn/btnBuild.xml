@@ -2,7 +2,7 @@
 <component size="70,72" pivot="0.5,0.5" extention="Button">
   <controller name="button" pages="0,up,1,down" selected="0"/>
   <displayList>
-    <image id="n1_rdy4" name="n1" src="rdy42s" fileName="newImg/btn_cm_operating_3.png" xy="0,0" pivot="1,0.5">
+    <image id="n1_rdy4" name="n1" src="rdy42s" fileName="newImg/btn_cm_operating_3.png" xy="0,0" pivot="1,0.5" pkg="te1gxawo">
       <gearSize controller="button" pages="1" values="70,72,0.9,0.9" default="70,72,1,1"/>
     </image>
     <loader id="n2_rdy4" name="icon" xy="15,21" pivot="0.5,0.5" size="50,30" autoSize="true">

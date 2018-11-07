@@ -2,7 +2,7 @@
 <component size="1136,640" designImage="ui://n0e96ypx132oi1" designImageAlpha="0" designImageLayer="1">
   <displayList>
     <image id="n2_132oi" name="n2" src="132oi1k" fileName="newImg/common_bg_1.png" pkg="te1gxawo" xy="235,88" size="663,477" group="n9_132oi"/>
-    <component id="n5_132oi" name="n5" src="132oi1t" fileName="btn/btnClose1.xml" pkg="te1gxawo" xy="869,83" group="n9_132oi"/>
+    <component id="n5_132oi" name="btnClose" src="132oi1t" fileName="btn/btnClose1.xml" pkg="te1gxawo" xy="869,83" group="n9_132oi"/>
     <image id="n8_132oi" name="listBg" src="132oiw" fileName="imgNew/novice_img_2.png" xy="285,157" size="222,368" group="n9_132oi"/>
     <list id="n7_132oi" name="lstTitle" xy="306,177" size="180,331" group="n9_132oi" overflow="scroll" defaultItem="ui://mp92elpx132oim" autoClearItems="true">
       <item/>
@@ -20,7 +20,7 @@
     <image id="n17_guek" name="n17" src="132oi1s" fileName="newImg/common_img_2.png" pkg="te1gxawo" xy="232,547" size="661,16" group="n9_132oi"/>
     <graph id="n19_guek" name="n19" xy="536,177" size="2,325" group="n9_132oi" type="rect" lineSize="0" fillColor="#ffdad3b7"/>
     <image id="n20_guek" name="n20" src="132oi1r" fileName="newImg/common_img_1.png" pkg="te1gxawo" xy="466,98" group="n9_132oi"/>
-    <text id="n21_guek" name="n21" xy="524,101" size="93,27" group="n9_132oi" fontSize="22" color="#ffffff" vAlign="middle" strokeColor="#352e2c" strokeSize="2" text="新手手册"/>
+    <text id="n21_guek" name="n21" xy="524,101" size="93,29" group="n9_132oi" fontSize="22" color="#ffffff" vAlign="middle" strokeColor="#352e2c" strokeSize="2" text="新手手册"/>
     <group id="n9_132oi" name="n9" xy="232,83" size="687,482" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>

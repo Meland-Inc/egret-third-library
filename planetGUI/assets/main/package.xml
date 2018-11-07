@@ -34,7 +34,7 @@
     <image id="dura1i" name="img_main_avatar_8.png" path="/img/" exported="true"/>
     <image id="dura1j" name="img_main_avatar_9.png" path="/img/" exported="true"/>
     <component id="dura1k" name="WinMainNpcInfo.xml" path="/win/" exported="true"/>
-    <component id="dura1l" name="WinMainEnemyInfo.xml" path="/win/" exported="true"/>
+    <component id="dura1l" name="ComMainEnemyInfo.xml" path="/win/" exported="true"/>
     <component id="dura1m" name="pbrMainHp.xml" path="/pbr/"/>
     <component id="vmyf1n" name="pbrMainPlayerHp.xml" path="/pbr/"/>
     <image id="9prt1q" name="btn_main_storage_1.png" path="/img/" exported="true"/>
@@ -70,11 +70,6 @@
     <component id="tbq62o" name="ComMainPickTips.xml" path="/win/" exported="true"/>
     <component id="muc92p" name="WinMainContainer.xml" path="/win/" exported="true"/>
     <component id="j0s6z" name="ComMinimapSmall.xml" path="/win/" exported="true"/>
-    <image id="rdy42q" name="btn_cm_operating_1.png" path="/newImg/"/>
-    <image id="rdy42r" name="btn_cm_operating_2.png" path="/newImg/"/>
-    <image id="rdy42s" name="btn_cm_operating_3.png" path="/newImg/"/>
-    <image id="rdy42t" name="btn_cm_operating_4.png" path="/newImg/"/>
-    <image id="rdy42u" name="btn_cm_operating_5.png" path="/newImg/"/>
     <image id="rdy42v" name="btn_main_item_add.png" path="/newImg/"/>
     <image id="rdy42w" name="btn_main_mail.png" path="/newImg/"/>
     <image id="rdy42x" name="btn_main_menu.png" path="/newImg/"/>
@@ -106,17 +101,6 @@
     <image id="rdy43n" name="icon_main_watch.png" path="/newImg/"/>
     <image id="rdy43o" name="icon_main_wifi.png" path="/newImg/"/>
     <image id="rdy43p" name="icon_main_work.png" path="/newImg/"/>
-    <image id="rdy43q" name="img_chat_chuangzuo.png" path="/newImg/"/>
-    <image id="rdy43r" name="img_chat_fenxian.png" path="/newImg/"/>
-    <image id="rdy43s" name="img_chat_fujin.png" path="/newImg/"/>
-    <image id="rdy43t" name="img_chat_shijie.png" path="/newImg/"/>
-    <image id="rdy43u" name="img_chat_siliao.png" path="/newImg/"/>
-    <image id="rdy43v" name="img_chat_system.png" path="/newImg/"/>
-    <image id="rdy43w" name="img_chat_zonghe.png" path="/newImg/"/>
-    <image id="rdy43x" name="img_cm_avataryinying.png" path="/newImg/"/>
-    <image id="rdy43y" name="img_cm_item_3.png" path="/newImg/"/>
-    <image id="rdy43z" name="img_cm_item_4.png" path="/newImg/"/>
-    <image id="rdy440" name="img_cm_item_5.png" path="/newImg/"/>
     <image id="rdy441" name="img_main_announcement.png" path="/newImg/"/>
     <image id="rdy442" name="img_main_attacked.png" path="/newImg/"/>
     <image id="rdy443" name="img_main_avatar_1.png" path="/newImg/"/>
@@ -163,6 +147,11 @@
     <component id="rdy458" name="btnMenu.xml" path="/btn/"/>
     <component id="rdy459" name="btnStorage.xml" path="/btn/"/>
     <component id="rdy45b" name="btnAvatar.xml" path="/btn/"/>
+    <component id="r2bf5j" name="ComMainSaturation.xml" path="/win/"/>
+    <component id="r2bf5r" name="ComMainTemperature.xml" path="/win/"/>
+    <image id="r2bf5w" name="icon_main_email.png" path="/newImg/"/>
+    <image id="r2bf5x" name="icon_main_manual.png" path="/newImg/"/>
+    <image id="r2bf5y" name="icon_main_workshop.png" path="/newImg/"/>
   </resources>
   <publish name="main"/>
 </packageDescription>
