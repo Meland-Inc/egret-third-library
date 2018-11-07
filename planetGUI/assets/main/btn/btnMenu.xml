@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="66,63" pivot="0.5,0.5" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <image id="n0_rdy4" name="n0" src="rdy42x" fileName="newImg/btn_main_menu.png" xy="8,0" pivot="0.5,0.5" size="50,49">
+      <gearSize controller="button" pages="0" values="50,49,1,1" default="50,49,0.9,0.9"/>
+    </image>
+    <loader id="n3_rdy4" name="icon" xy="8,9" pivot="0.5,0.5" size="50,30" align="center" vAlign="middle" autoSize="true">
+      <gearSize controller="button" pages="0" values="50,30,1,1" default="50,30,0.9,0.9"/>
+    </loader>
+    <image id="n2_rdy4" name="n2" src="rdy44l" fileName="newImg/img_main_menu.png" xy="0,41" pivot="0.5,0.5" size="66,20">
+      <gearSize controller="button" pages="0" values="66,20,1,1" default="66,20,0.9,0.9"/>
+    </image>
+    <text id="n1_rdy4" name="title" xy="0,40" pivot="0.5,0.5" size="66,23" fontSize="16" color="#f5f5d2" align="center" vAlign="middle" autoSize="none" text="">
+      <gearSize controller="button" pages="0,1" values="66,23,1,1|66,23,0.9,0.9"/>
+    </text>
+  </displayList>
+  <Button/>
+</component>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="88,68" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <loader id="n4_935y" name="icon" xy="0,0" size="88,68" url="ui://zt3i7q2i935yn" align="center" vAlign="middle" autoSize="true"/>
+    <image id="n5_935y" name="n5" src="935y4" fileName="img/icon_game2_3.png" xy="26,16">
+      <relation target="n4_935y" sidePair="center-center,middle-middle"/>
+    </image>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.90"/>
+  <relation target="n4_935y" sidePair="rightext-right,bottomext-bottom"/>
+</component>

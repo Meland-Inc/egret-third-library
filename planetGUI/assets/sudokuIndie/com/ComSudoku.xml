@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="190,190">
+  <displayList>
+    <image id="n2_935y" name="n2" src="935yk" fileName="img/bg_game2_1.png" xy="0,0" size="190,190" aspect="true">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </image>
+    <list id="n1_935y" name="lstSmallSudoku" xy="3,3" size="184,184" aspect="true" layout="flow_hz" overflow="hidden" lineGap="2" colGap="2" lineItemCount="3" defaultItem="ui://zt3i7q2i935yu" autoItemSize="true">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

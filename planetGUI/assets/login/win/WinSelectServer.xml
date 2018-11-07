@@ -12,10 +12,10 @@
       <Button checked="true" title="进入服务器" selectedIcon="ui://0n4pg0op7s5l2r" controller="state" page="0"/>
     </component>
     <component id="n5_7s5l" name="btnChaos" src="7s5l2q" fileName="btn/btnSelectServerType.xml" xy="110,255" group="n6_7s5l">
-      <Button title="混乱分线" selectedIcon="ui://0n4pg0op7s5l2r" controller="state" page="1"/>
+      <Button title="刷新服务器列表" selectedIcon="ui://0n4pg0op7s5l2r" controller="state" page="1"/>
     </component>
     <group id="n6_7s5l" name="tabBtn" xy="110,118" size="222,412" group="n11_test"/>
-    <list id="n7_rhmg" name="lstServer" xy="362,131" size="636,390" group="n11_test" layout="flow_vt" overflow="scroll" lineGap="10" colGap="21" defaultItem="ui://0n4pg0op7s5l2k" autoClearItems="true">
+    <list id="n7_rhmg" name="lstServer" xy="362,131" size="636,390" group="n11_test" layout="flow_hz" overflow="scroll" lineGap="10" colGap="21" defaultItem="ui://0n4pg0op7s5l2k" autoClearItems="true">
       <item/>
       <item/>
       <item/>

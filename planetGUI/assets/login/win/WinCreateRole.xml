@@ -5,7 +5,7 @@
     <image id="n69_ifd7" name="imgBG1" src="tm1s45" fileName="newImg/img_8.png" xy="0,0" size="1136,640" group="n71_ifd7"/>
     <image id="n70_ifd7" name="imgBG2" src="tm1s45" fileName="newImg/img_8.png" xy="1126,0" size="1136,640" group="n71_ifd7"/>
     <group id="n71_ifd7" name="bg" xy="0,0" size="2262,640" advanced="true"/>
-    <component id="n12_tlkk" name="btnLogout" src="y3zw2g" fileName="btn/btnLogout.xml" xy="280,78" visible="false" touchable="false">
+    <component id="n12_tlkk" name="btnLogout" src="y3zw2g" fileName="btn/btnLogout.xml" xy="280,78">
       <relation target="" sidePair="left-left,top-top"/>
     </component>
     <image id="n10_no43" name="imgNameBG" src="tm1s41" fileName="newImg/img_4.png" xy="440,456" group="n18_trkw"/>
@@ -128,11 +128,17 @@
       <item title="男" icon="ui://0n4pg0optm1s4k"/>
       <item title="女" icon="ui://0n4pg0optm1s4j"/>
     </list>
+    <text id="n72_mzli" name="tfAccount" xy="89,35" size="132,36" fontSize="24" autoSize="none" text="">
+      <relation target="" sidePair="left-left,top-top"/>
+    </text>
+    <text id="n73_mzli" name="account" xy="31,34" size="132,36" fontSize="24" autoSize="none" text="账号：">
+      <relation target="" sidePair="left-left,top-top"/>
+    </text>
   </displayList>
   <transition name="t1" autoPlay="true">
-    <item time="0" type="XY" target="n48_bidp" tween="true" startValue="-300,164" endValue="0,164" duration="12" ease="Back.InOut"/>
-    <item time="0" type="XY" target="n50_bidp" tween="true" startValue="-163,183" endValue="137,183" duration="12" ease="Back.InOut"/>
     <item time="0" type="XY" target="n55_bidp" tween="true" startValue="1190,82" endValue="890,82" duration="12" ease="Back.InOut"/>
+    <item time="0" type="XY" target="n50_bidp" tween="true" startValue="-163,183" endValue="137,183" duration="12" ease="Back.InOut"/>
+    <item time="0" type="XY" target="n48_bidp" tween="true" startValue="-300,164" endValue="0,164" duration="12" ease="Back.InOut"/>
     <item time="0" type="XY" target="n64_bidp" tween="true" startValue="-261,74" endValue="39,74" duration="12" ease="Back.InOut"/>
   </transition>
 </component>

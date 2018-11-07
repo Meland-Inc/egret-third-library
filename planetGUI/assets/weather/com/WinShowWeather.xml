@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="200,140">
+  <controller name="weather" pages="0,night,1,day" selected="0"/>
+  <displayList>
+    <image id="n7_kzhu" name="n7" src="kzhuc" fileName="image/img_main_temperature.png" xy="133,99" group="n16_kzhu"/>
+    <image id="n14_kzhu" name="n14" src="kzhu9" fileName="image/icon_main_temperature.png" xy="139,102" group="n16_kzhu"/>
+    <text id="n15_kzhu" name="n15" xy="154,100" size="28,20" group="n16_kzhu" fontSize="11" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="15C"/>
+    <group id="n16_kzhu" name="n16" xy="133,99" size="56,21" collapsed="true"/>
+    <image id="n4_kzhu" name="n4" src="kzhuc" fileName="image/img_main_temperature.png" xy="133,71" group="n18_kzhu"/>
+    <image id="n10_kzhu" name="sun" src="kzhu8" fileName="image/icon_main_sun.png" xy="137,75" group="n18_kzhu">
+      <gearDisplay controller="weather" pages="1"/>
+    </image>
+    <image id="n11_kzhu" name="moon" src="kzhu7" fileName="image/icon_main_night.png" xy="137,75" group="n18_kzhu">
+      <gearDisplay controller="weather" pages="0"/>
+    </image>
+    <text id="n17_kzhu" name="tfTime" xy="152,72" size="34,20" group="n18_kzhu" fontSize="10" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" autoClearText="true" text=""/>
+    <group id="n18_kzhu" name="grpWeatherIcon" xy="133,71" size="56,21" collapsed="true"/>
+    <image id="n20_r9op" name="n20" src="r9opi" fileName="image/img_main_survive_1.png" xy="10,15" size="42,41" group="n21_r9op"/>
+    <image id="n19_r9op" name="n19" src="r9opf" fileName="image/icon_main_health.png" xy="19,26" size="24,20" group="n21_r9op"/>
+    <image id="n22_r9op" name="grpHealthy" src="r9opj" fileName="image/img_main_survive_2.png" xy="10,15" group="n21_r9op"/>
+    <group id="n21_r9op" name="n21" xy="10,15" size="42,41" collapsed="true"/>
+    <image id="n23_r9op" name="n23" src="r9opi" fileName="image/img_main_survive_1.png" xy="76,15" size="42,40" group="n26_r9op"/>
+    <image id="n24_r9op" name="n24" src="r9opg" fileName="image/icon_main_hunger.png" xy="86,24" size="21,21" group="n26_r9op"/>
+    <image id="n25_r9op" name="grpHungry" src="r9opk" fileName="image/img_main_survive_3.png" xy="76,14" size="42,40" group="n26_r9op"/>
+    <group id="n26_r9op" name="n26" xy="76,14" size="42,41" collapsed="true"/>
+    <image id="n27_r9op" name="n27" src="r9opi" fileName="image/img_main_survive_1.png" xy="146,14" size="42,40" group="n30_r9op"/>
+    <image id="n28_r9op" name="n28" src="r9oph" fileName="image/icon_main_thirst.png" xy="157,24" size="20,20" group="n30_r9op"/>
+    <image id="n29_r9op" name="grpThirsty" src="r9opl" fileName="image/img_main_survive_4.png" xy="146,15" size="42,40" group="n30_r9op"/>
+    <group id="n30_r9op" name="n30" xy="146,14" size="42,41" collapsed="true"/>
+  </displayList>
+  <transition name="hide">
+    <item time="0" type="XY" tween="true" startValue="0,0" endValue="300,0" duration="9"/>
+    <item time="9" type="XY" tween="true" startValue="300,0"/>
+  </transition>
+  <transition name="show">
+    <item time="0" type="XY" tween="true" startValue="300,0" endValue="0,0" duration="9"/>
+  </transition>
+</component>
