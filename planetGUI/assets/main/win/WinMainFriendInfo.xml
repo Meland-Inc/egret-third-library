@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="196,50">
+  <displayList>
+    <image id="n0_wp2g" name="bg" src="dura1c" fileName="img/img_main_avatar_2.png" xy="0,0" size="196,50"/>
+    <image id="n1_wp2g" name="n1" src="dura1g" fileName="img/img_main_avatar_6.png" xy="55,5"/>
+    <text id="n2_wp2g" name="tfLevel" xy="55,5" size="24,22" fontSize="15" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="45"/>
+    <text id="n3_wp2g" name="tfName" xy="75,5" size="120,22" fontSize="13" color="#656a6c" align="center" vAlign="middle" autoSize="none" text="玩家名字七个字"/>
+    <component id="n4_wp2g" name="pbrHp" src="dura1m" fileName="pbr/pbrMainHp.xml" xy="56,32">
+      <ProgressBar value="50" max="100"/>
+    </component>
+    <loader id="n5_wp2g" name="ladHeadIcon" xy="0,0" size="50,50"/>
+  </displayList>
+</component>

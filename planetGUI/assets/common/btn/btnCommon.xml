@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="110,41" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
   <displayList>
-    <loader id="n0_sz33" name="icon" xy="0,0" size="110,41" url="ui://te1gxawoqn8o6" autoSize="true"/>
-    <text id="n1_obf0" name="title" xy="50,8" size="10,24" fontSize="20" color="#599c11" align="center" vAlign="middle" bold="true" singleLine="true" text="">
+    <loader id="n0_sz33" name="icon" xy="0,0" pivot="0.5,0.5" size="110,41" touchable="false" url="ui://te1gxawoqn8o6" autoSize="true">
+      <gearSize controller="button" pages="0,1" values="110,41,1,1|110,41,0.9,0.9"/>
       <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <text id="n1_obf0" name="title" xy="9,5" pivot="0.5,0.5" size="90,30" fontSize="20" color="#599c11" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" text="">
+      <gearSize controller="button" pages="0,1" values="90,30,1,1|90,30,0.9,0.89"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <relation target="" sidePair="width-width,height-height"/>
     </text>
   </displayList>
-  <Button downEffect="scale" downEffectValue="1.10"/>
+  <Button/>
   <relation target="n0_sz33" sidePair="width-width,height-height"/>
 </component>

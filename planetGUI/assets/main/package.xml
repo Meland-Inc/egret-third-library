@@ -30,7 +30,7 @@
     <image id="dura19" name="img_main_avatar_11.png" path="/img/" exported="true" scale="9grid" scale9grid="34,4,68,8"/>
     <image id="dura1a" name="img_main_avatar_12.png" path="/img/" exported="true"/>
     <image id="dura1b" name="img_main_avatar_13.png" path="/img/" exported="true"/>
-    <image id="dura1c" name="img_main_avatar_2.png" path="/img/" exported="true"/>
+    <image id="dura1c" name="img_main_avatar_2.png" path="/img/" exported="true" scale="9grid" scale9grid="37,13,74,26"/>
     <image id="dura1d" name="img_main_avatar_3.png" path="/img/" exported="true"/>
     <image id="dura1e" name="img_main_avatar_4.png" path="/img/" exported="true"/>
     <image id="dura1f" name="img_main_avatar_5.png" path="/img/" exported="true"/>
@@ -78,6 +78,7 @@
     <component id="oy0u2n" name="ComPickObjectToast.xml" path="/com/" exported="true"/>
     <component id="tbq62o" name="WinMainPickTips.xml" path="/win/" exported="true"/>
     <component id="muc92p" name="WinMainContainer.xml" path="/win/" exported="true"/>
+    <component id="wp2g2q" name="WinMainFriendInfo.xml" path="/win/" exported="true"/>
   </resources>
   <publish name="main"/>
 </packageDescription>

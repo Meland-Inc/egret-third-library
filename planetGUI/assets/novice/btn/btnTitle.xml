@@ -2,13 +2,13 @@
 <component size="180,50" extention="Button">
   <controller name="button" pages="0,up,1,down" selected="1"/>
   <displayList>
-    <loader id="n0_132oi" name="icon" xy="0,0" size="180,50" url="ui://te1gxawo132oi1n" fill="scaleFree">
-      <gearIcon controller="button" pages="1" values="ui://te1gxawo132oi1n" default="ui://te1gxawo132oi1m"/>
+    <loader id="n0_132oi" name="icon" xy="0,0" size="180,50" url="ui://te1gxawoefrs1x" fill="scaleFree">
+      <gearIcon controller="button" pages="1" values="ui://te1gxawoefrs1x" default="ui://te1gxawoefrs1u"/>
     </loader>
-    <image id="n3_132oi" name="downArrow" src="132oir" fileName="imgNew/novice_icon_1.png" xy="145,20">
+    <image id="n3_132oi" name="downArrow" src="11e02i15" fileName="imgNew/novice_icon_1.png" xy="145,20">
       <gearDisplay controller="button" pages="0"/>
     </image>
-    <image id="n4_132oi" name="upArrow" src="132ois" fileName="imgNew/novice_icon_2.png" xy="145,20">
+    <image id="n4_132oi" name="upArrow" src="11e02i16" fileName="imgNew/novice_icon_2.png" xy="145,20">
       <gearDisplay controller="button" pages="1"/>
     </image>
     <text id="n2_132oi" name="title" xy="35,13" size="108,23" fontSize="18" color="#5b4b37" align="center" vAlign="middle" autoSize="none" singleLine="true" text="新手指引"/>
