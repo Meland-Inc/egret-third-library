@@ -152,13 +152,16 @@
     <image id="tjy5i3i" name="img_cm_pageup.png" path="/btn/"/>
     <component id="ise6i3j" name="ComBagItem.xml" path="/com/" exported="true"/>
     <component id="ise6i3k" name="ComEquipItem.xml" path="/com/" exported="true"/>
+
+    <image id="luqxi3l" name="btn_cm_yellow7.png" path="/newImg/" exported="true" scale="9grid" scale9grid="12,12,12,12"/>
+    <image id="luqxi3m" name="btn_cm_white7.png" path="/newImg/" exported="true" scale="9grid" scale9grid="11,12,13,9"/>
+    <image id="luqxi3n" name="img_manual_1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="18,18,36,36"/>
+    <component id="luqxi3p" name="CanChangeRadioButton.xml" path="/btn/" exported="true"/>
     <image id="j21fi3l" name="btn_cm_hide_1.png" path="/newImg/" exported="true"/>
     <image id="j21fi3m" name="btn_cm_hide_2.png" path="/newImg/" exported="true"/>
     <image id="j21fi3n" name="btn_cm_tips_1.png" path="/newImg/" exported="true"/>
     <image id="j21fi3o" name="btn_cm_tips_2.png" path="/newImg/" exported="true"/>
-    <image id="j21fi3p" name="btn_cm_white7.png" path="/newImg/" exported="true"/>
     <image id="j21fi3q" name="btn_cm_white8.png" path="/newImg/" exported="true"/>
-    <image id="j21fi3r" name="btn_cm_yellow7.png" path="/newImg/" exported="true"/>
     <image id="j21fi3s" name="btn_cm_yellow8.png" path="/newImg/" exported="true"/>
     <image id="j21fi3t" name="icon_cm_ruel.png" path="/newImg/" exported="true"/>
     <image id="j21fi3u" name="img_cm_bottom_6.png" path="/newImg/" exported="true" scale="9grid" scale9grid="7,7,14,14"/>

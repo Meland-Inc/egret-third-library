@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" adaptationTest="FitSize">
-  <controller name="status" pages="0,,1," selected="1"/>
+  <controller name="status" pages="0,,1," selected="0"/>
   <displayList>
     <text id="n2_jgot" name="n2" xy="515,524" size="101,31" group="n5_hsrb" font="方正准圆简体" fontSize="24" color="#ffffff" text="点击继续"/>
     <image id="n3_jgot" name="n3" src="jgot2a" fileName="newImg/img/btn_build_right.png" xy="470,528" group="n5_hsrb"/>
@@ -8,9 +8,9 @@
     <group id="n5_hsrb" name="n5" xy="470,524" size="195,31" hideByEditor="true" visible="false" advanced="true" collapsed="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <image id="n1_jgot" name="n1" src="tm1s45" fileName="newImg/img_8.png" xy="0,0" size="1136,640">
+    <loader id="n1_jgot" name="imgBG" xy="0,0" size="1136,640" url="ui://0n4pg0optm1s45" align="center" vAlign="middle" fill="scaleFree">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
-    </image>
+    </loader>
     <image id="n10_fyox" name="imgNameBG" src="kk6f57" fileName="newImg/img_login_5.png" xy="999,47" size="110,42" visible="false">
       <relation target="n11_fyox" sidePair="leftext-left,top-top"/>
       <relation target="n11_fyox" sidePair="rightext-right"/>
@@ -31,26 +31,27 @@
       <Button checked="true"/>
     </component>
     <text id="n15_kk6f" name="tfAgreement" xy="338,574" size="497,22" group="n19_kk6f" fontSize="16" ubb="true" text="我已经详细阅读并同意 [color=#FB6A23]腾语游戏使用许可及服务协议[/color] 和 [color=#FB6A23]腾语隐私政策[/color]"/>
+    <graph id="n29_hcdu" name="n29" xy="337,574" size="497,22" group="n19_kk6f" type="rect" lineSize="0" fillColor="#00ffffff"/>
     <group id="n19_kk6f" name="n19" xy="300,572" size="535,24" advanced="true">
       <relation target="" sidePair="bottom-bottom,center-center"/>
     </group>
-    <image id="n17_kk6f" name="n17" src="kk6f5c" fileName="newImg/img_login_2.png" xy="450,525" group="n20_c2vq"/>
+    <loader id="n17_kk6f" name="n17" xy="450,525" size="236,27" group="n20_c2vq" url="ui://0n4pg0opkk6f5c"/>
     <text id="n18_kk6f" name="n18" xy="478,530" size="189,30" group="n20_c2vq" fontSize="22" color="#523416" bold="true" text="点击屏幕进入游戏"/>
     <group id="n20_c2vq" name="n20" xy="450,525" size="236,35" advanced="true">
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </group>
-    <image id="n21_c2vq" name="n21" src="c2vq5d" fileName="newImg/img_login_1.png" xy="341,476" group="n28_c2vq"/>
+    <loader id="n21_c2vq" name="ladSelectServer" xy="341,476" size="453,35" group="n28_c2vq" url="ui://0n4pg0opc2vq5d"/>
     <image id="n22_c2vq" name="n22" src="c2vq5e" fileName="newImg/img_login_baoman.png" xy="373,483" group="n28_c2vq">
       <gearDisplay controller="status" pages="1"/>
     </image>
     <image id="n23_c2vq" name="n23" src="c2vq5f" fileName="newImg/img_login_changtong.png" xy="373,482" group="n28_c2vq">
       <gearDisplay controller="status" pages="0"/>
     </image>
-    <text id="n24_c2vq" name="n24" xy="428,484" size="49,29" group="n28_c2vq" fontSize="22" color="#ff5400" text="爆满">
+    <text id="n24_c2vq" name="n24" xy="428,484" size="49,29" group="n28_c2vq" fontSize="22" color="#20b311" text="畅通">
       <gearColor controller="status" pages="0,1" values="#20b311,#000000|#ff5400,#000000"/>
       <gearText controller="status" pages="0,1" values="畅通|爆满"/>
     </text>
-    <text id="n25_c2vq" name="n25" xy="487,480" size="188,29" group="n28_c2vq" fontSize="22" color="#4c422c" align="center" vAlign="middle" autoSize="none" text="外网Test服"/>
+    <text id="n25_c2vq" name="tfServerName" xy="487,480" size="188,29" group="n28_c2vq" fontSize="22" color="#4c422c" align="center" vAlign="middle" autoSize="none" text="外网Test服"/>
     <text id="n26_c2vq" name="n26" xy="697,482" size="49,29" group="n28_c2vq" fontSize="22" color="#8d573c" align="center" vAlign="middle" text="换区"/>
     <image id="n27_c2vq" name="n27" src="c2vq5g" fileName="newImg/btn_login_enter.png" xy="751,484" group="n28_c2vq"/>
     <group id="n28_c2vq" name="n28" xy="341,476" size="453,37" advanced="true">
