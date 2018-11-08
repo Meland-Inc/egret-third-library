@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="54,54" extention="Button">
+  <displayList>
+    <image id="n1_11e02" name="bg" src="ot9si2e" fileName="newImg/btn_cm_white4.png" pkg="te1gxawo" xy="0,0"/>
+    <loader id="n0_ohl4" name="icon" xy="11,12" size="31,30" url="ui://k08mtk0r11e021l" autoSize="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.90"/>
+</component>

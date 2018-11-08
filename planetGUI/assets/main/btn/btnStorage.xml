@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="38,38" pivot="0.5,0.5" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <image id="n0_rdy4" name="n0" src="rdy42y" fileName="newImg/btn_main_menu_2.png" xy="19,19" pivot="0.5,0.5" anchor="true">
+      <gearSize controller="button" pages="1" values="38,38,0.9,0.9" default="38,38,1,1" duration="0.2"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n1_rdy4" name="n1" src="rdy42z" fileName="newImg/btn_main_menu_3.png" xy="6,7" pivot="0.5,0.5" scale="1,0.9">
+      <gearSize controller="button" pages="0" values="25,24,1,0.9" default="25,24,0.9,0.9" duration="0.2"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+  </displayList>
+  <Button/>
+</component>

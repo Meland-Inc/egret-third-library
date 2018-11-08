@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="71,34" extention="Button">
+<component size="60,28" extention="Button">
   <displayList>
-    <image id="n1_y3zw" name="n1" src="y3zw2f" fileName="img/btn_login_5.png" xy="0,0"/>
-    <text id="n2_y3zw" name="n2" xy="13,6" size="54,31" font="FZZhunYuan-M02S" fontSize="24" color="#607bb1" autoSize="none" text="注销&#xA;"/>
+    <image id="n1_y3zw" name="n1" src="kk6f58" fileName="newImg/btn_login_5.png" xy="0,0"/>
+    <text id="n2_y3zw" name="n2" xy="12,6" size="43,26" font="FZZhunYuan-M02S" fontSize="18" color="#523416" bold="true" text="注销&#xA;"/>
   </displayList>
   <Button sound="ui://te1gxawotqc912" downEffect="scale" downEffectValue="0.90"/>
 </component>

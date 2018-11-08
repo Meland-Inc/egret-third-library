@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="qagcvsbx" jpegQuality="80" compressPNG="true">
   <resources>
-    <component id="oy2m0" name="WinChat.xml" path="/win/" exported="true"/>
+    <component id="oy2m0" name="WinChatOld.xml" path="/win/" exported="true"/>
     <image id="oy2m1" name="btn_chat_down.png" path="/img/"/>
     <image id="oy2m2" name="btn_chat_emoji.png" path="/img/"/>
     <image id="oy2m3" name="btn_chat_mic.png" path="/img/" scale="9grid" scale9grid="9,5,32,18"/>
@@ -115,6 +115,30 @@
     <component id="k59n3o" name="comSendHistory.xml" path="/com/"/>
     <component id="k59n3p" name="sendHistoryItem.xml" path="/com/"/>
     <component id="fvj83q" name="richTextContainer.xml" path="/com/" exported="true"/>
+    <component id="q73n3r" name="WinChat.xml" path="/win/" exported="true"/>
+    <image id="q73n3t" name="btn_chat_emoji.png" path="/imgNew/"/>
+    <image id="q73n3u" name="btn_chat_micphone.png" path="/imgNew/"/>
+    <image id="q73n3v" name="btn_chat_object.png" path="/imgNew/"/>
+    <image id="q73n3w" name="btn_chat_send.png" path="/imgNew/"/>
+    <image id="q73n40" name="img_chat_avatar.png" path="/imgNew/" scale="9grid" scale9grid="9,9,18,18"/>
+    <image id="q73n41" name="img_chat_bubble_1.png" path="/imgNew/" scale="9grid" scale9grid="7,18,14,5"/>
+    <image id="q73n42" name="img_chat_bubble_2.png" path="/imgNew/" scale="9grid" scale9grid="7,16,9,6"/>
+    <image id="q73n43" name="img_chat_chuangzuo.png" path="/imgNew/"/>
+    <image id="q73n44" name="img_chat_emoji.png" path="/imgNew/" scale="9grid" scale9grid="11,8,12,10"/>
+    <image id="q73n45" name="img_chat_fenxian.png" path="/imgNew/"/>
+    <image id="q73n46" name="img_chat_fujin.png" path="/imgNew/"/>
+    <image id="q73n47" name="img_chat_shijie.png" path="/imgNew/"/>
+    <image id="q73n48" name="img_chat_siliao.png" path="/imgNew/"/>
+    <image id="q73n49" name="img_chat_system.png" path="/imgNew/"/>
+    <image id="q73n4a" name="img_chat_zonghe.png" path="/imgNew/"/>
+    <component id="q73n4p" name="chatItemNew.xml" path="/com/" exported="true"/>
+    <component id="q73n4q" name="btnEmojItem.xml" path="/btn/"/>
+    <image id="w7uy4r" name="img_chat_chuangzuo.png" path="/img/"/>
+    <image id="w7uy4s" name="img_chat_fenxian.png" path="/img/"/>
+    <image id="w7uy4t" name="img_chat_fujin.png" path="/img/"/>
+    <image id="w7uy4u" name="img_chat_shijie.png" path="/img/"/>
+    <image id="w7uy4v" name="img_chat_siliao.png" path="/img/"/>
+    <image id="w7uy4w" name="img_chat_zonghe.png" path="/img/"/>
   </resources>
   <publish name="chat"/>
 </packageDescription>

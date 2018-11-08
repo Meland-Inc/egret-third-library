@@ -28,7 +28,7 @@
     <component id="p85ho" name="customMark.xml" path="/com/" exported="true"/>
     <component id="p85hp" name="WinSelectMark.xml" path="/win/" exported="true"/>
     <component id="p85hq" name="btnMark.xml" path="/btn/"/>
-    <component id="ohl4r" name="btn.xml" path="/btn/"/>
+    <component id="ohl4r" name="btnOperate.xml" path="/btn/"/>
     <image id="ohl4s" name="img_map_sign_town.png" path="/img/" exported="true"/>
     <image id="ohl4t" name="img_map_sign_tp.png" path="/img/" exported="true"/>
     <image id="ohl4u" name="img_map_sign_npc.png" path="/img/" exported="true"/>
@@ -49,6 +49,16 @@
     <image id="jyp41d" name="btn_map_1.png" path="/img/"/>
     <image id="i9oc1e" name="img_map_sign_15.png" path="/img/"/>
     <image id="g73b1i" name="img_map_sign_dead.png" path="/img/" exported="true"/>
+    <image id="11e021j" name="icon_map_daeth.png" path="/imgNew/"/>
+    <image id="11e021k" name="icon_map_home.png" path="/imgNew/"/>
+    <image id="11e021l" name="icon_map_sign_1.png" path="/imgNew/" exported="true"/>
+    <image id="11e021m" name="icon_map_sign_2.png" path="/imgNew/" exported="true"/>
+    <image id="11e021n" name="icon_map_sign_3.png" path="/imgNew/" exported="true"/>
+    <image id="11e021o" name="icon_map_sign_4.png" path="/imgNew/" exported="true"/>
+    <image id="11e021p" name="icon_map_sign_5.png" path="/imgNew/" exported="true"/>
+    <image id="11e021q" name="icon_map_sign_6.png" path="/imgNew/" exported="true"/>
+    <image id="11e021r" name="img_map_bottom.png" path="/imgNew/" scale="9grid" scale9grid="68,21,136,42"/>
+    <component id="11e021s" name="WinBigMap.xml" path="/win/" exported="true"/>
   </resources>
   <publish name="minimap"/>
 </packageDescription>
