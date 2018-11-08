@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="212,411" designImage="ui://i25v0ebkot9s4" designImageOffsetX="-234" designImageOffsetY="-162">
+  <controller name="own" pages="0,true,1,false" selected="0"/>
+  <controller name="state" pages="0,buy,1,use,2,using" selected="0"/>
+  <displayList>
+    <image id="n0_ot9s" name="n0" src="ot9s1z" fileName="newImg/img_robot_2.png" xy="0,0"/>
+    <text id="n3_ot9s" name="labName" xy="49,234" pivot="0.5,0.5" size="114,29" fontSize="22" color="#5f5238" align="center" vAlign="middle" text="机器人名字"/>
+    <text id="n4_ot9s" name="labDesc" xy="15,262" size="181,89" fontSize="14" color="#a79f89" autoSize="none" text="机器人名字"/>
+    <component id="n5_ot9s" name="btnUsing" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="51,356">
+      <gearDisplay controller="state" pages="2"/>
+      <Button title="使用中" titleColor="#ffffff" titleFontSize="22" icon="ui://te1gxawoot9si29"/>
+    </component>
+    <component id="n6_ot9s" name="btnUse" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="51,356">
+      <gearDisplay controller="state" pages="1"/>
+      <Button title="使用" titleColor="#ffffff" titleFontSize="22" icon="ui://te1gxawoot9si2b"/>
+    </component>
+    <component id="n7_ot9s" name="btnBuy" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="51,356">
+      <gearDisplay controller="state" pages="0"/>
+      <Button title="购买" titleColor="#ffffff" titleFontSize="22" icon="ui://te1gxawoot9si2a"/>
+    </component>
+    <image id="n1_ot9s" name="n1" src="ot9s20" fileName="newImg/img_robot_3.png" xy="0,0" group="n9_ot9s"/>
+    <text id="n2_ot9s" name="n2" xy="-5,34" size="53,23" group="n9_ot9s" rotation="-45" fontSize="16" color="#ffffff" text="已拥有"/>
+    <group id="n9_ot9s" name="gpOwn" xy="-5,0" size="75,66" advanced="true" collapsed="true">
+      <gearDisplay controller="own" pages="0"/>
+    </group>
+  </displayList>
+</component>
