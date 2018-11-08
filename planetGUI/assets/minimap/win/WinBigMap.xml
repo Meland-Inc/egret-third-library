@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" designImage="ui://i25v0ebkqv2f8" designImageAlpha="58">
+<component size="1136,640" designImage="ui://i25v0ebkqv2f8" designImageAlpha="0" designImageLayer="1">
   <controller name="conMapMode" pages="0,normal,1,born,2,revive" selected="0"/>
   <controller name="conMarkBtn" pages="0,put,1,delete,2,cancel" selected="0"/>
   <displayList>
     <image id="n1_11e02" name="headerBg" src="qo8vi1v" fileName="newImg/bg_cm_8.png" pkg="te1gxawo" xy="0,0" size="1136,48">
       <relation target="" sidePair="width-width"/>
     </image>
-    <image id="n2_11e02" name="titleBg" src="efrs23" fileName="newImg/img_cm_title2.png" pkg="te1gxawo" xy="463,8" group="n14_11e02"/>
-    <text id="n3_11e02" name="title" xy="500,10" size="134,27" group="n14_11e02" fontSize="22" color="#ffffff" align="center" autoSize="none" text="世界地图">
+    <image id="n2_11e02" name="titleBg" src="efrs23" fileName="newImg/img_cm_title2.png" pkg="te1gxawo" xy="462,8" group="n14_11e02"/>
+    <text id="n3_11e02" name="title" xy="499,11" size="134,27" group="n14_11e02" fontSize="22" color="#ffffff" align="center" autoSize="none" text="世界地图">
       <gearText controller="conMapMode" pages="0" values="世界地图" default="选择出生地"/>
     </text>
-    <group id="n14_11e02" name="grpTitle" xy="463,8" size="210,30" advanced="true" collapsed="true">
-      <relation target="" sidePair="center-center,top-top"/>
+    <group id="n14_11e02" name="grpTitle" xy="462,8" size="210,30" advanced="true" collapsed="true">
+      <relation target="" sidePair="center-center"/>
     </group>
     <component id="n13_11e02" name="btnClose" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="1043,4" size="80,42">
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://te1gxawoefrs1r"/>
     </component>
-    <image id="n11_11e02" name="bottom" src="qo8vi1x" fileName="newImg/img_cm_pattern2.png" pkg="te1gxawo" xy="0,619" size="1136,21"/>
+    <image id="n11_11e02" name="bottom" src="qo8vi1x" fileName="newImg/img_cm_pattern2.png" pkg="te1gxawo" xy="0,619" size="1136,21">
+      <relation target="" sidePair="width-width,top-bottom"/>
+    </image>
     <image id="n4_11e02" name="btnBg" src="11e021r" fileName="imgNew/img_map_bottom.png" xy="109,515" size="917,82" group="n12_11e02"/>
     <component id="n9_11e02" name="btnRandomBornPoint" src="tjy5i3e" fileName="btn/btnCommonScale.xml" pkg="te1gxawo" xy="369,533" size="142,50" group="n12_11e02">
       <Button title="随机出生地" titleColor="#81681c" icon="ui://te1gxawoot9si2h"/>
     </component>
-    <component id="n34_qv2f" name="btnRandomBornPoint" src="tjy5i3e" fileName="btn/btnCommonScale.xml" pkg="te1gxawo" xy="606,533" size="142,50" group="n12_11e02">
+    <component id="n34_qv2f" name="btnStartGame" src="tjy5i3e" fileName="btn/btnCommonScale.xml" pkg="te1gxawo" xy="606,533" size="142,50" group="n12_11e02">
       <Button title="开始游戏" titleColor="#ffffff" icon="ui://te1gxawoefrs1s"/>
     </component>
     <group id="n12_11e02" name="grpBornMode" xy="109,515" size="917,82" advanced="true" collapsed="true">
@@ -44,21 +46,25 @@
     <component id="n21_11e02" name="btnZoomOut" src="ohl4r" fileName="btn/btnOperate.xml" xy="1034,522" group="n22_11e02">
       <Button icon="ui://te1gxawoot9si2r"/>
     </component>
-    <group id="n22_11e02" name="grpMapOperateBtn" xy="1028,363" size="66,221" advanced="true">
+    <group id="n22_11e02" name="grpMapOperateBtn" xy="1028,363" size="66,221" advanced="true" collapsed="true">
       <gearDisplay controller="conMapMode" pages="0"/>
+      <relation target="" sidePair="right-right,bottom-bottom"/>
     </group>
-    <component id="n29_11e02" name="winSelectMark" src="p85hp" fileName="win/WinSelectMark.xml" xy="363,177" visible="false">
-      <gearDisplay controller="conMapMode" pages="0"/>
-    </component>
     <image id="n26_11e02" name="posBg" src="ot9si38" fileName="newImg/img_cm_prompt.png" pkg="te1gxawo" xy="53,577" size="182,20" group="n28_11e02"/>
     <text id="n27_11e02" name="tfPos" xy="53,578" size="182,19" group="n28_11e02" fontSize="14" color="#ffffff" align="center" vAlign="middle" vars="true" autoSize="none" text="分线:{line=0}, 坐标点  ({x=999},{y=999})"/>
     <group id="n28_11e02" name="posGroup" xy="53,577" size="182,20" advanced="true" collapsed="true">
       <gearDisplay controller="conMapMode" pages="0,2"/>
+      <relation target="" sidePair="bottom-bottom"/>
     </group>
-    <image id="n23_11e02" name="putMarksTipsBg" src="ot9si38" fileName="newImg/img_cm_prompt.png" pkg="te1gxawo" xy="407,553" size="338,31" group="n25_11e02"/>
-    <text id="n24_11e02" name="tfPutMarkTips" xy="408,556" size="337,26" group="n25_11e02" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="点击地图放置标记"/>
-    <group id="n25_11e02" name="grpPutMarkTips" xy="407,553" size="338,31" visible="false" advanced="true">
+    <image id="n23_11e02" name="putMarksTipsBg" src="ot9si38" fileName="newImg/img_cm_prompt.png" pkg="te1gxawo" xy="406,553" size="338,31" group="n25_11e02"/>
+    <text id="n24_11e02" name="tfPutMarkTips" xy="407,556" size="337,26" group="n25_11e02" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="点击地图放置标记"/>
+    <group id="n25_11e02" name="grpPutMarkTips" xy="406,553" size="338,31" visible="false" advanced="true" collapsed="true">
       <gearDisplay controller="conMapMode" pages="0"/>
+      <relation target="" sidePair="center-center,bottom-bottom"/>
     </group>
+    <component id="n29_11e02" name="winSelectMark" src="p85hp" fileName="win/WinSelectMark.xml" xy="362,190" visible="false">
+      <gearDisplay controller="conMapMode" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
   </displayList>
 </component>
