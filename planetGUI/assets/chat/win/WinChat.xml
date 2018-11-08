@@ -2,16 +2,16 @@
 <component size="1136,640" designImage="ui://n0e96ypxq73ni4" designImageAlpha="100">
   <controller name="conShowSendHistory" pages="0,hide,1,show" selected="0"/>
   <controller name="conShowEmoj" pages="0,hide,1,show" selected="0"/>
-  <controller name="conFrivateChat" pages="0,hide,1,show" selected="1"/>
+  <controller name="conFrivateChat" pages="0,hide,1,show" selected="0"/>
   <displayList>
     <image id="n3_q73n" name="bg" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="174,96" size="805,456" group="n26_hrgt"/>
     <image id="n11_q73n" name="chatContentBg" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="391,151" size="552,369" group="n26_hrgt"/>
     <component id="n4_q73n" name="btnClose" src="132oi1t" fileName="btn/btnClose1.xml" pkg="te1gxawo" xy="944,88" size="52,52" group="n26_hrgt"/>
     <image id="n8_q73n" name="titleBg" src="efrs22" fileName="newImg/img_cm_title1.png" pkg="te1gxawo" xy="480,99" group="n26_hrgt"/>
-    <text id="n9_q73n" name="title" xy="548,106" size="45,24" group="n26_hrgt" fontSize="20" color="#f5ebde" text="聊天"/>
+    <text id="n9_q73n" name="title" xy="548,106" size="45,26" group="n26_hrgt" fontSize="20" color="#f5ebde" text="聊天"/>
     <image id="n10_q73n" name="bottomBg" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="196,534" size="765,14" group="n26_hrgt"/>
     <image id="n5_q73n" name="lstBtnBg" src="ot9si2v" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="219,153" size="166,366" group="n26_hrgt"/>
-    <list id="n6_q73n" name="lstBtnChannel" xy="238,172" size="132,335" group="n26_hrgt" layout="flow_hz" defaultItem="ui://te1gxawoq73ni1v">
+    <list id="n6_q73n" name="lstBtnChannel" xy="238,172" size="132,335" group="n26_hrgt" layout="flow_hz" defaultItem="ui://te1gxawotjy5i3d">
       <item title="系统" name="system"/>
       <item title="综合" name="comprehensive"/>
       <item title="世界" name="world"/>
@@ -30,7 +30,7 @@
     <image id="n13_q73n" name="friendNameBg" src="ot9si35" fileName="newImg/img_cm_name.png" pkg="te1gxawo" xy="411,162" size="81,22" group="n25_11e02">
       <relation target="n14_q73n" sidePair="width-width"/>
     </image>
-    <text id="n14_q73n" name="tfFriendName" xy="413,164" size="82,18" group="n25_11e02" fontSize="14" color="#5b4b37" align="center" vAlign="middle" ubb="true" vars="true" text="与[color=#c88316]{name=xxx}[/color]聊天中"/>
+    <text id="n14_q73n" name="tfFriendName" xy="413,164" size="82,20" group="n25_11e02" fontSize="14" color="#5b4b37" align="center" vAlign="middle" ubb="true" vars="true" text="与[color=#c88316]{name=xxx}[/color]聊天中"/>
     <group id="n25_11e02" name="grpFriendChatTitle" xy="411,162" size="84,22" group="n26_hrgt" advanced="true">
       <gearDisplay controller="conFrivateChat" pages="1"/>
     </group>
