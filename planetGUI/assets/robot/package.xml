@@ -60,6 +60,14 @@
     <image id="ot9s1y" name="img_robot_1.png" path="/newImg/"/>
     <image id="ot9s1z" name="img_robot_2.png" path="/newImg/"/>
     <image id="ot9s20" name="img_robot_3.png" path="/newImg/"/>
+    <component id="irjz21" name="comBag.xml" path="/com/"/>
+    <component id="irjz22" name="comCodeBlock.xml" path="/com/"/>
+    <component id="irjz23" name="comCodeBlockItem.xml" path="/com/"/>
+    <component id="irjz24" name="comDesc.xml" path="/com/"/>
+    <component id="irjz25" name="comOverView.xml" path="/com/"/>
+    <component id="irjz26" name="comSkin.xml" path="/com/"/>
+    <component id="irjz27" name="comSkinItem.xml" path="/com/"/>
+    <component id="irjz28" name="comStory.xml" path="/com/"/>
   </resources>
   <publish name="robot"/>
 </packageDescription>

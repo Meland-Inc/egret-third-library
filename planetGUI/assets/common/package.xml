@@ -150,6 +150,8 @@
     <image id="tjy5i3g" name="img_cm_bottomframe_2.png" path="/btn/"/>
     <image id="tjy5i3h" name="img_cm_pagedown.png" path="/btn/"/>
     <image id="tjy5i3i" name="img_cm_pageup.png" path="/btn/"/>
+    <component id="ise6i3j" name="ComBagItem.xml" path="/com/" exported="true"/>
+    <component id="ise6i3k" name="ComEquipItem.xml" path="/com/" exported="true"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>
