@@ -2,21 +2,21 @@
 <component size="412,260" designImage="ui://n0e96ypx11e02i7" designImageOffsetX="-364" designImageOffsetY="-178" designImageAlpha="31" designImageLayer="1">
   <displayList>
     <image id="n1_p85h" name="bg" src="efrs1m" fileName="newImg/bg_cm_3.png" pkg="te1gxawo" xy="0,0" size="412,260"/>
-    <text id="n2_p85h" name="title" xy="146,5" size="120,26" fontSize="22" color="#ffffff" align="center" autoSize="none" text="选择标记"/>
-    <component id="n16_fyx8" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="364,2" size="32,32">
-      <Button icon="ui://te1gxawo11e02i28"/>
+    <text id="n2_p85h" name="title" xy="146,5" size="120,29" fontSize="22" color="#ffffff" align="center" autoSize="none" text="选择标记"/>
+    <component id="n16_fyx8" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="371,2" size="32,32">
+      <Button icon="ui://te1gxawoqo8vi1z"/>
     </component>
     <list id="n3_p85h" name="lstMarkBtn" xy="40,110" size="338,58" layout="flow_hz" scroll="horizontal" colGap="1" defaultItem="ui://k08mtk0rp85hq" align="center">
-      <item title="img_map_sign_star" icon="ui://k08mtk0r11e021l" name="4"/>
-      <item title="img_map_sign_anchor" icon="ui://k08mtk0r11e021m" name="5"/>
-      <item title="img_map_sign_heart" icon="ui://k08mtk0r11e021n" name="6"/>
-      <item title="img_map_sign_flag" icon="ui://k08mtk0r11e021o" name="7"/>
-      <item title="img_map_sign_train" icon="ui://k08mtk0r11e021p" name="8"/>
-      <item title="img_map_sign_triangle" icon="ui://k08mtk0r11e021q" name="9"/>
+      <item title="img_map_sign_star" icon="ui://k08mtk0r11e021l" name="1"/>
+      <item title="img_map_sign_anchor" icon="ui://k08mtk0r11e021m" name="2"/>
+      <item title="img_map_sign_heart" icon="ui://k08mtk0r11e021n" name="3"/>
+      <item title="img_map_sign_flag" icon="ui://k08mtk0r11e021o" name="4"/>
+      <item title="img_map_sign_train" icon="ui://k08mtk0r11e021p" name="5"/>
+      <item title="img_map_sign_triangle" icon="ui://k08mtk0r11e021q" name="6"/>
     </list>
     <image id="n20_11e02" name="inputBg" src="ot9si31" fileName="newImg/img_cm_inputbox_2.png" pkg="te1gxawo" xy="124,127" size="157,35" group="n10_pxns"/>
     <text id="n5_p85h" name="inpMarkName" xy="124,127" size="157,34" group="n10_pxns" input="true" prompt="自定义标记" fontSize="18" color="#5e5e5e" align="center" vAlign="middle" autoSize="none" singleLine="true" text=""/>
-    <group id="n10_pxns" name="grpMarkInput" xy="124,127" size="157,35" advanced="true"/>
+    <group id="n10_pxns" name="grpMarkInput" xy="124,127" size="157,35" advanced="true" collapsed="true"/>
     <image id="n18_11e02" name="n18" src="qo8vi1x" fileName="newImg/img_cm_pattern2.png" pkg="te1gxawo" xy="1,235" size="406,21"/>
     <component id="n22_11e02" name="btnPutMark" src="tjy5i3e" fileName="btn/btnCommonScale.xml" pkg="te1gxawo" xy="145,181" size="107,42">
       <Button title="放置" titleColor="#472f16" icon="ui://te1gxawoefrs1w"/>
