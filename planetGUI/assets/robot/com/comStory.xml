@@ -3,8 +3,8 @@
   <displayList>
     <image id="n0_ot9s" name="n0" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="0,0" size="890,460"/>
     <image id="n1_ot9s" name="n1" src="ot9si35" fileName="newImg/img_cm_name.png" pkg="te1gxawo" xy="55,50" size="95,30"/>
-    <text id="n2_ot9s" name="labName" xy="67,54" pivot="0.5,0.5" size="69,23" fontSize="16" color="#474545" align="center" vAlign="middle" autoClearText="true" text="圣枪游侠"/>
-    <text id="n3_ot9s" name="labName" xy="65,97" size="143,24" fontSize="18" color="#474545" bold="true" autoClearText="true" text="圣枪游侠,我现在"/>
-    <component id="n5_ise6" name="n5" src="irjz24" fileName="com/comDesc.xml" xy="67,138"/>
+    <text id="n2_ot9s" name="tfName" xy="67,54" pivot="0.5,0.5" size="69,23" fontSize="16" color="#474545" align="center" vAlign="middle" autoClearText="true" text="圣枪游侠"/>
+    <text id="n3_ot9s" name="tfTitle" xy="65,97" size="143,24" fontSize="18" color="#474545" bold="true" autoClearText="true" text="圣枪游侠,我现在"/>
+    <component id="n5_ise6" name="labDesc" src="irjz24" fileName="com/comDesc.xml" xy="67,138"/>
   </displayList>
 </component>

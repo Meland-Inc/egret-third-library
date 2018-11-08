@@ -3,13 +3,13 @@
   <controller name="summonCtrl" pages="0,true,1,false" selected="0"/>
   <displayList>
     <image id="n17_ot9s" name="n17" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="0,0" size="890,460"/>
-    <image id="n22_ot9s" name="n22" src="ot9s1y" fileName="newImg/img_robot_1.png" xy="36,34"/>
+    <image id="n22_ot9s" name="n22" src="ot9s1y" fileName="newImg/img_robot_1.png" xy="36,35"/>
     <image id="n28_ot9s" name="n28" src="ot9si3a" fileName="newImg/img_cm_title4.png" pkg="te1gxawo" xy="590,65" size="220,24"/>
-    <text id="n29_ot9s" name="n29" xy="656,64" size="87,26" fontSize="20" color="#584736" align="center" vAlign="middle" autoSize="none" text="基本属性"/>
+    <text id="n29_ot9s" name="n29" xy="655,64" size="87,26" fontSize="18" color="#584736" align="center" vAlign="middle" autoSize="none" text="基本属性"/>
     <image id="n30_ot9s" name="n30" src="ot9si3a" fileName="newImg/img_cm_title4.png" pkg="te1gxawo" xy="590,138" size="220,24"/>
-    <text id="n31_ot9s" name="n31" xy="656,137" size="87,26" fontSize="20" color="#584736" align="center" vAlign="middle" autoSize="none" text="战斗属性"/>
+    <text id="n31_ot9s" name="n31" xy="656,137" size="87,26" fontSize="18" color="#584736" align="center" vAlign="middle" autoSize="none" text="战斗属性"/>
     <image id="n32_ot9s" name="n32" src="ot9si3a" fileName="newImg/img_cm_title4.png" pkg="te1gxawo" xy="590,216" size="220,24"/>
-    <text id="n33_ot9s" name="n33" xy="656,215" size="87,26" fontSize="20" color="#584736" align="center" vAlign="middle" autoSize="none" text="元素属性"/>
+    <text id="n33_ot9s" name="n33" xy="656,215" size="87,26" fontSize="18" color="#584736" align="center" vAlign="middle" autoSize="none" text="元素属性"/>
     <image id="n38_ot9s" name="n38" src="ot9si2s" fileName="newImg/img_cm_attack.png" pkg="te1gxawo" xy="607,174"/>
     <image id="n39_ot9s" name="n39" src="ot9si2m" fileName="newImg/icon_cm_defende.png" pkg="te1gxawo" xy="720,174"/>
     <image id="n62_ot9s" name="n62" src="ot9si2z" fileName="newImg/img_cm_bottom_5.png" pkg="te1gxawo" xy="78,72" size="90,237"/>
@@ -25,40 +25,46 @@
     <text id="n48_ot9s" name="n48" xy="729,322" size="45,26" fontSize="20" color="#584736" align="center" vAlign="middle" text="毒抗"/>
     <text id="n49_ot9s" name="n49" xy="729,347" size="45,26" fontSize="20" color="#584736" align="center" vAlign="middle" text="暗抗"/>
     <text id="n26_ot9s" name="tfRobotName" xy="187,277" size="200,30" fontSize="24" color="#4c3f32" align="center" vAlign="middle" autoSize="none" bold="true" text="方呆头"/>
-    <text id="n27_ot9s" name="tfRobotLocation" xy="185,309" size="200,30" fontSize="24" color="#7a6a5a" align="center" vAlign="middle" autoSize="none" bold="true" text="(位置:9999,9999)"/>
-    <text id="n34_ot9s" name="tfLevel" xy="597,99" size="49,26" fontSize="20" color="#584736" align="center" vAlign="middle" text="LV50"/>
-    <text id="n35_ot9s" name="tfExp" xy="672,99" size="101,26" fontSize="20" color="#584736" align="center" vAlign="middle" text="200/999999"/>
-    <text id="n36_ot9s" name="tfAtk" xy="650,177" size="49,26" fontSize="20" color="#584736" align="center" vAlign="middle" text="LV50"/>
-    <text id="n37_ot9s" name="tfDef" xy="757,177" size="49,26" fontSize="20" color="#584736" align="center" vAlign="middle" text="LV50"/>
-    <text id="n50_ot9s" name="tfFire" xy="630,247" size="25,26" fontSize="20" color="#584736" align="center" vAlign="middle" text="50"/>
-    <text id="n51_ot9s" name="tfIce" xy="630,272" size="25,26" fontSize="20" color="#584736" align="center" vAlign="middle" text="50"/>
-    <text id="n52_ot9s" name="tfThunder" xy="630,297" size="25,26" fontSize="20" color="#584736" align="center" vAlign="middle" text="50"/>
-    <text id="n53_ot9s" name="tfPoison" xy="630,322" size="25,26" fontSize="20" color="#584736" align="center" vAlign="middle" text="50"/>
-    <text id="n54_ot9s" name="tfDark" xy="630,347" size="25,26" fontSize="20" color="#584736" align="center" vAlign="middle" text="50"/>
-    <text id="n55_ot9s" name="tfFireDef" xy="780,247" size="25,26" fontSize="20" color="#584736" align="center" vAlign="middle" text="50"/>
-    <text id="n56_ot9s" name="tfIceDef" xy="780,272" size="25,26" fontSize="20" color="#584736" align="center" vAlign="middle" text="50"/>
-    <text id="n57_ot9s" name="tfThunderDef" xy="780,297" size="25,26" fontSize="20" color="#584736" align="center" vAlign="middle" text="50"/>
-    <text id="n58_ot9s" name="tfPoisonDef" xy="780,322" size="25,26" fontSize="20" color="#584736" align="center" vAlign="middle" text="50"/>
-    <text id="n59_ot9s" name="tfDarkDef" xy="780,347" size="25,26" fontSize="20" color="#584736" align="center" vAlign="middle" text="50"/>
+    <text id="n27_ot9s" name="tfRobotLocation" xy="185,309" size="200,30" fontSize="24" color="#7a6a5a" align="center" vAlign="middle" vars="true" autoSize="none" text="(位置:{r=0},{c=0})">
+      <gearDisplay controller="summonCtrl" pages="0"/>
+    </text>
+    <text id="n34_ot9s" name="tfLevel" xy="597,99" size="40,26" fontSize="20" color="#584736" align="center" vAlign="middle" vars="true" text="LV{lv=0}"/>
+    <text id="n35_ot9s" name="tfExp" xy="672,99" size="30,26" fontSize="20" color="#584736" align="center" vAlign="middle" vars="true" text="{curExp=0}/{maxExp=0}"/>
+    <text id="n36_ot9s" name="tfAtk" xy="650,177" size="35,26" fontSize="20" color="#584736" align="center" vAlign="middle" autoClearText="true" text="200"/>
+    <text id="n37_ot9s" name="tfDef" xy="757,177" size="35,26" fontSize="20" color="#584736" align="center" vAlign="middle" autoClearText="true" text="200"/>
+    <text id="n50_ot9s" name="tfFire" xy="630,247" size="15,26" fontSize="20" color="#584736" align="center" vAlign="middle" text="0"/>
+    <text id="n51_ot9s" name="tfIce" xy="630,272" size="15,26" fontSize="20" color="#584736" align="center" vAlign="middle" text="0"/>
+    <text id="n52_ot9s" name="tfThunder" xy="630,297" size="15,26" fontSize="20" color="#584736" align="center" vAlign="middle" text="0"/>
+    <text id="n53_ot9s" name="tfPoison" xy="630,322" size="15,26" fontSize="20" color="#584736" align="center" vAlign="middle" text="0"/>
+    <text id="n54_ot9s" name="tfDark" xy="630,347" size="15,26" fontSize="20" color="#584736" align="center" vAlign="middle" text="0"/>
+    <text id="n55_ot9s" name="tfFireDef" xy="780,247" size="15,26" fontSize="20" color="#584736" align="center" vAlign="middle" text="0"/>
+    <text id="n56_ot9s" name="tfIceDef" xy="780,272" size="15,26" fontSize="20" color="#584736" align="center" vAlign="middle" text="0"/>
+    <text id="n57_ot9s" name="tfThunderDef" xy="780,297" size="15,26" fontSize="20" color="#584736" align="center" vAlign="middle" text="0"/>
+    <text id="n58_ot9s" name="tfPoisonDef" xy="780,322" size="15,26" fontSize="20" color="#584736" align="center" vAlign="middle" text="0"/>
+    <text id="n59_ot9s" name="tfDarkDef" xy="780,347" size="15,26" fontSize="20" color="#584736" align="center" vAlign="middle" text="0"/>
     <component id="n66_ot9s" name="itemCoat" src="ise6i3k" fileName="com/ComEquipItem.xml" pkg="te1gxawo" xy="90,160"/>
     <component id="n67_ot9s" name="itemGloves" src="ise6i3k" fileName="com/ComEquipItem.xml" pkg="te1gxawo" xy="90,235"/>
     <component id="n68_ot9s" name="itemHelmet" src="ise6i3k" fileName="com/ComEquipItem.xml" pkg="te1gxawo" xy="425,85"/>
     <component id="n69_ot9s" name="itemUnderwear" src="ise6i3k" fileName="com/ComEquipItem.xml" pkg="te1gxawo" xy="425,160"/>
     <component id="n70_ot9s" name="itemJewelry" src="ise6i3k" fileName="com/ComEquipItem.xml" pkg="te1gxawo" xy="425,235"/>
     <component id="n24_ot9s" name="btnSummon" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="110,367" size="138,50">
-      <gearDisplay controller="summonCtrl" pages="0"/>
+      <gearDisplay controller="summonCtrl" pages="1"/>
       <Button title="召唤" titleColor="#ffffff" titleFontSize="20" icon="ui://te1gxawoefrs1s"/>
     </component>
-    <text id="n23_ot9s" name="tfType" xy="47,36" size="59,24" fontSize="18" color="#ffffff" align="center" vAlign="middle" text="家政型">
+    <text id="n23_ot9s" name="tfType" xy="47,37" size="59,24" fontSize="18" color="#ffffff" align="center" vAlign="middle" text="家政型">
       <relation target="n22_ot9s" sidePair="center-center,middle-middle"/>
     </text>
     <component id="n71_no7e" name="btnRecall" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="110,367" size="138,50">
-      <gearDisplay controller="summonCtrl" pages="1"/>
+      <gearDisplay controller="summonCtrl" pages="0"/>
       <Button title="召回" titleColor="#ffffff" titleFontSize="20" icon="ui://te1gxawoefrs1s"/>
     </component>
     <component id="n25_ot9s" name="btnCodeBlock" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="340,367" size="140,50">
       <Button title="编程" titleColor="#81681c" titleFontSize="20" icon="ui://te1gxawoot9si2h"/>
     </component>
     <component id="n72_ise6" name="itemWeapon" src="ise6i3k" fileName="com/ComEquipItem.xml" pkg="te1gxawo" xy="90,85"/>
+    <image id="n73_j21f" name="n73" src="j21fi3u" fileName="newImg/img_cm_bottom_6.png" pkg="te1gxawo" xy="323,35" size="180,28"/>
+    <image id="n74_j21f" name="n74" src="j21fi3t" fileName="newImg/icon_cm_ruel.png" pkg="te1gxawo" xy="325,38"/>
+    <text id="n75_j21f" name="tfRule" xy="350,38" size="67,24" fontSize="18" color="#533f2e" align="center" vAlign="middle" vars="true" text="燃料:{cur=0}/{total=0}"/>
+    <component id="n76_j21f" name="comAvatar" src="j21fi3z" fileName="com/ComEmpty.xml" pkg="te1gxawo" xy="285,250" size="1,1"/>
   </displayList>
 </component>
