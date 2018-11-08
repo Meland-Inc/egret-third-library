@@ -14,9 +14,6 @@
     <image id="n15_p85h" name="n15" src="p85hn" fileName="img/img_map_8.png" xy="691,47" group="n20_p85h" scale="-1,1"/>
     <image id="n8_p85h" name="n8" src="p85hf" fileName="img/img_map_6.png" xy="4,47" group="n20_p85h"/>
     <group id="n20_p85h" name="btnCloseMark" xy="1,47" size="719,425" collapsed="true"/>
-    <component id="n16_p85h" name="winSelectMark" src="p85hp" fileName="win/WinSelectMark.xml" xy="190,115" visible="false">
-      <gearDisplay controller="conMapMode" pages="0"/>
-    </component>
     <image id="n21_p85h" name="n21" src="p85hd" fileName="img/img_map_4.png" xy="636,291" group="n51_c2lx"/>
     <component id="n35_ohl4" name="btnMark" src="ohl4r" fileName="btn/btnOperate.xml" xy="640,298" group="n51_c2lx">
       <gearIcon controller="conMarkBtn" pages="0,1" values="ui://k08mtk0rp85h6|ui://k08mtk0rp85h8" default="ui://k08mtk0rp85h4"/>
