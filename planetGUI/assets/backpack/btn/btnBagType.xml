@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="92,45" extention="Button">
-  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <controller name="button" pages="0,up,1,down" selected="1"/>
   <displayList>
     <image id="n2_ey2h" name="iconUp" src="qo8vi21" fileName="newImg/btn_cm_white1.png" pkg="te1gxawo" xy="0,0" size="92,40">
       <gearDisplay controller="button" pages="0"/>
     </image>
-    <image id="n1_ey2h" name="n1" src="hxqgi3n" fileName="newImg/btn_cm_yellow8.png" pkg="te1gxawo" xy="0,0" size="92,45">
+    <image id="n1_ey2h" name="iconDown" src="j21fi3s" fileName="newImg/btn_cm_yellow8.png" pkg="te1gxawo" xy="0,0" size="92,45">
       <gearDisplay controller="button" pages="1"/>
     </image>
     <text id="n3_ey2h" name="title" xy="14,6" size="63,28" fontSize="18" color="#5b4b37" align="center" vAlign="middle" autoSize="none" text="全部"/>

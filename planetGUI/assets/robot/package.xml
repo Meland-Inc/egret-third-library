@@ -23,7 +23,7 @@
     <image id="o7wxj" name="img_robot_3.png" path="/img/" exported="true"/>
     <image id="o7wxk" name="img_robot_4.png" path="/img/" exported="true"/>
     <component id="o7wxl" name="WinRobotDisplay.xml" path="/win/" exported="true"/>
-    <component id="o7wxm" name="btnRobotTab.xml" path="/btn/"/>
+    <component id="o7wxm" name="BtnRobotTab.xml" path="/btn/" exported="true"/>
     <component id="o7wxn" name="btnRobotBagTab.xml" path="/btn/"/>
     <component id="o7wxo" name="comRobotBagItemPu68.xml" path="/com/" exported="true"/>
     <component id="o7wxp" name="btnRobotEquipItemPu68.xml" path="/btn/" exported="true"/>
@@ -54,20 +54,20 @@
     <component id="a5xh1o" name="ToolTipRobotCodeImage.xml" path="/com/" exported="true"/>
     <component id="a5xh1q" name="btnRobotTip.xml" path="/btn/"/>
     <component id="lt5g1s" name="ToolTipBagItem.xml" path="/com/" exported="true"/>
-    <component id="ot9s1t" name="WinRobot.xml" path="/win/"/>
+    <component id="ot9s1t" name="WinRobot.xml" path="/win/" exported="true"/>
     <component id="ot9s1w" name="btnTab1.xml" path="/btn/"/>
     <image id="ot9s1x" name="btn_robot_detailed.png" path="/newImg/"/>
     <image id="ot9s1y" name="img_robot_1.png" path="/newImg/"/>
     <image id="ot9s1z" name="img_robot_2.png" path="/newImg/"/>
     <image id="ot9s20" name="img_robot_3.png" path="/newImg/"/>
-    <component id="irjz21" name="comBag.xml" path="/com/"/>
-    <component id="irjz22" name="comCodeBlock.xml" path="/com/"/>
-    <component id="irjz23" name="comCodeBlockItem.xml" path="/com/"/>
+    <component id="irjz21" name="ComBag.xml" path="/com/"/>
+    <component id="irjz22" name="ComCodeBlock.xml" path="/com/"/>
+    <component id="irjz23" name="ComCodeBlockItem.xml" path="/com/" exported="true"/>
     <component id="irjz24" name="comDesc.xml" path="/com/"/>
-    <component id="irjz25" name="comOverView.xml" path="/com/"/>
-    <component id="irjz26" name="comSkin.xml" path="/com/"/>
-    <component id="irjz27" name="comSkinItem.xml" path="/com/"/>
-    <component id="irjz28" name="comStory.xml" path="/com/"/>
+    <component id="irjz25" name="ComOverView.xml" path="/com/"/>
+    <component id="irjz26" name="ComSkin.xml" path="/com/"/>
+    <component id="irjz27" name="ComSkinItem.xml" path="/com/"/>
+    <component id="irjz28" name="ComStory.xml" path="/com/"/>
   </resources>
   <publish name="robot"/>
 </packageDescription>

@@ -102,7 +102,7 @@
     <component id="hdi934" name="btnFace.xml" path="/btn/"/>
     <component id="hdi936" name="btnArrow1.xml" path="/btn/"/>
     <component id="hdi93a" name="btnSetting.xml" path="/btn/"/>
-    <component id="hdi93e" name="btnChannel.xml" path="/btn/"/>
+    <component id="hdi93e" name="btnChannel1.xml" path="/btn/"/>
     <component id="hdi93f" name="ComboBox1_item.xml" path="/btn/"/>
     <component id="hdi93g" name="ComboBox1_popup.xml" path="/btn/"/>
     <component id="xjjc3h" name="selfChatItem.xml" path="/com/" exported="true"/>
@@ -139,6 +139,8 @@
     <image id="w7uy4u" name="img_chat_shijie.png" path="/img/"/>
     <image id="w7uy4v" name="img_chat_siliao.png" path="/img/"/>
     <image id="w7uy4w" name="img_chat_zonghe.png" path="/img/"/>
+    <component id="gpm04x" name="WinChat1.xml" path="/win/" exported="true"/>
+    <component id="gpm04y" name="btnChannel.xml" path="/btn/"/>
   </resources>
   <publish name="chat"/>
 </packageDescription>

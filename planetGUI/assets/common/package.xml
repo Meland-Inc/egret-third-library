@@ -24,7 +24,7 @@
     <image id="q8x4k" name="bg_common_1.png" path="/img/"/>
     <image id="q8x4l" name="btn_common_1.png" path="/img/"/>
     <image id="q8x4m" name="img_line_off.png" path="/img/"/>
-    <component id="q8x4n" name="btnReconnect.xml" path="/btn/"/>
+    <component id="q8x4n" name="btnReconnect.xml" path="/btn/" exported="true"/>
     <component id="q8x4o" name="CommonReconnect.xml" path="/com/" exported="true"/>
     <component id="q8x4q" name="CommonLoading.xml" path="/com/" exported="true"/>
     <movieclip id="q8x4r" name="重新连接.jta" path="/img/"/>
@@ -82,7 +82,7 @@
     <image id="efrs26" name="icon_gameplatform_2.png" path="/newImg/" exported="true"/>
     <image id="rx7u27" name="img_cm_pattern.png" path="/newImg/" exported="true" scale="tile"/>
     <image id="qo8vi1u" name="bg_cm_7.png" path="/newImg/" exported="true" scale="9grid" scale9grid="25,57,50,18"/>
-    <image id="qo8vi1v" name="bg_cm_8.png" path="/newImg/" exported="true"/>
+    <image id="qo8vi1v" name="bg_cm_8.png" path="/newImg/" exported="true" scale="9grid" scale9grid="12,12,24,24"/>
     <image id="qo8vi1w" name="btn_cm_closed_3.png" path="/newImg/" exported="true"/>
     <image id="qo8vi1x" name="img_cm_pattern2.png" path="/newImg/" exported="true" scale="tile"/>
     <image id="qo8vi1y" name="img_cm_pattern3.png" path="/newImg/" exported="true" scale="tile"/>
@@ -144,39 +144,37 @@
     <image id="ot9si3a" name="img_cm_title4.png" path="/newImg/" exported="true" scale="9grid" scale9grid="61,6,49,12"/>
     <image id="ot9si3b" name="img_cm_zoom.png" path="/newImg/" exported="true" scale="9grid" scale9grid="17,40,34,80"/>
     <component id="ot9si3c" name="btnTab.xml" path="/btn/" exported="true"/>
-    <component id="tjy5i3d" name="btnCommon1.xml" path="/btn/"/>
+    <component id="tjy5i3d" name="btnCommon1.xml" path="/btn/" exported="true"/>
     <component id="tjy5i3e" name="btnCommonScale.xml" path="/btn/" exported="true"/>
-    <image id="tjy5i3f" name="img_cm_bottomframe_1.png" path="/btn/" scale="9grid" scale9grid="8,8,14,14"/>
-    <image id="tjy5i3g" name="img_cm_bottomframe_2.png" path="/btn/"/>
-    <image id="tjy5i3h" name="img_cm_pagedown.png" path="/btn/"/>
-    <image id="tjy5i3i" name="img_cm_pageup.png" path="/btn/"/>
+    <image id="tjy5i3f" name="img_cm_bottomframe_1.png" path="/btn/" exported="true" scale="9grid" scale9grid="8,8,14,14"/>
+    <image id="tjy5i3g" name="img_cm_bottomframe_2.png" path="/btn/" exported="true"/>
+    <image id="tjy5i3h" name="img_cm_pagedown.png" path="/btn/" exported="true"/>
+    <image id="tjy5i3i" name="img_cm_pageup.png" path="/btn/" exported="true"/>
     <component id="ise6i3j" name="ComBagItem.xml" path="/com/" exported="true"/>
     <component id="ise6i3k" name="ComEquipItem.xml" path="/com/" exported="true"/>
-    <image id="hxqgi3l" name="btn_cm_tips_1.png" path="/newImg/" exported="true"/>
-    <image id="hxqgi3m" name="btn_cm_tips_2.png" path="/newImg/" exported="true"/>
-    <image id="hxqgi3n" name="btn_cm_yellow8.png" path="/newImg/" exported="true" scale="9grid" scale9grid="16,12,32,16"/>
-    <image id="hxqgi3o" name="icon_main_health.png" path="/newImg/" exported="true"/>
-    <image id="hxqgi3p" name="icon_main_hunger.png" path="/newImg/" exported="true"/>
-    <image id="hxqgi3q" name="icon_main_thirst.png" path="/newImg/" exported="true"/>
-    <image id="hxqgi3r" name="img_cm_item_6.png" path="/newImg/" exported="true"/>
-    <image id="hxqgi3s" name="img_cm_tips_1.png" path="/newImg/" exported="true"/>
-    <image id="hxqgi3t" name="img_cm_title5.png" path="/newImg/" exported="true"/>
-    <image id="hxqgi3u" name="img_cm_title6.png" path="/newImg/" exported="true"/>
-    <image id="hxqgi3v" name="img_main_item_1.png" path="/newImg/" exported="true"/>
-    <image id="hxqgi3w" name="img_main_item_2.png" path="/newImg/" exported="true"/>
-    <image id="hxqgi3x" name="img_main_item_3.png" path="/newImg/" exported="true"/>
-    <image id="hxqgi3y" name="img_main_item_4.png" path="/newImg/" exported="true"/>
-    <image id="hxqgi3z" name="img_main_item_5.png" path="/newImg/" exported="true"/>
-    <image id="hxqgi40" name="img_main_item_6.png" path="/newImg/" exported="true"/>
-    <image id="hxqgi41" name="img_main_item_7.png" path="/newImg/" exported="true"/>
-    <image id="hxqgi42" name="img_main_survive_1.png" path="/newImg/" exported="true"/>
-    <image id="hxqgi43" name="img_main_survive_2.png" path="/newImg/" exported="true"/>
-    <image id="hxqgi44" name="img_main_survive_3.png" path="/newImg/" exported="true"/>
-    <image id="hxqgi45" name="img_main_survive_4.png" path="/newImg/" exported="true"/>
-    <image id="hxqgi46" name="img_main_survive_5.png" path="/newImg/" exported="true"/>
-    <component id="ey2hi47" name="btnFix.xml" path="/btn/" exported="true"/>
-    <image id="ey2hi49" name="bg_cm_9.png" path="/newImg/" exported="true" scale="9grid" scale9grid="30,50,60,40"/>
-    <component id="ey2hi4a" name="btnScale.xml" path="/btn/" exported="true"/>
+    <image id="luqxi3l" name="btn_cm_yellow7.png" path="/newImg/" exported="true" scale="9grid" scale9grid="12,12,12,12"/>
+    <image id="luqxi3m" name="btn_cm_white7.png" path="/newImg/" exported="true" scale="9grid" scale9grid="11,12,13,9"/>
+    <image id="luqxi3n" name="img_manual_1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="18,18,36,36"/>
+    <component id="luqxi3p" name="CanChangeRadioButton.xml" path="/btn/" exported="true"/>
+    <image id="j21fi3l" name="btn_cm_hide_1.png" path="/newImg/" exported="true"/>
+    <image id="j21fi3m" name="btn_cm_hide_2.png" path="/newImg/" exported="true"/>
+    <image id="j21fi3n" name="btn_cm_tips_1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="17,11,8,22"/>
+    <image id="j21fi3o" name="btn_cm_tips_2.png" path="/newImg/" exported="true" scale="9grid" scale9grid="17,11,7,22"/>
+    <image id="j21fi3q" name="btn_cm_white8.png" path="/newImg/" exported="true"/>
+    <image id="j21fi3s" name="btn_cm_yellow8.png" path="/newImg/" exported="true"/>
+    <image id="j21fi3t" name="icon_cm_ruel.png" path="/newImg/" exported="true"/>
+    <image id="j21fi3u" name="img_cm_bottom_6.png" path="/newImg/" exported="true" scale="9grid" scale9grid="7,7,14,14"/>
+    <image id="j21fi3v" name="img_cm_item_6.png" path="/newImg/" exported="true" scale="9grid" scale9grid="18,18,36,36"/>
+    <image id="j21fi3w" name="img_cm_tips_1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="19,16,10,14"/>
+    <image id="j21fi3x" name="img_cm_title5.png" path="/newImg/" exported="true"/>
+    <image id="j21fi3y" name="img_cm_title6.png" path="/newImg/" exported="true"/>
+    <component id="j21fi3z" name="ComEmpty.xml" path="/com/" exported="true"/>
+    <image id="gpm0i40" name="bg_cm_9.png" path="/newImg/" exported="true" scale="9grid" scale9grid="30,52,60,38"/>
+    <image id="gpm0i41" name="icon_main_health.png" path="/newImg/" exported="true"/>
+    <image id="gpm0i42" name="icon_main_hunger.png" path="/newImg/" exported="true"/>
+    <image id="gpm0i43" name="icon_main_thirst.png" path="/newImg/" exported="true"/>
+    <component id="gpm0i4g" name="btnFix.xml" path="/btn/" exported="true"/>
+    <component id="gpm0i4h" name="btnScale.xml" path="/btn/" exported="true"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>

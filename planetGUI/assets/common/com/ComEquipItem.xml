@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="70,70" extention="Button">
-  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <controller name="button" pages="0,up,1,down" selected="1"/>
   <displayList>
     <image id="n0_ot9s" name="bg" src="ot9si33" fileName="newImg/img_cm_item_2.png" xy="0,0"/>
     <loader id="n1_ot9s" name="equipBgIcon" xy="0,0" pivot="0.5,0.5" size="68,68" url="ui://ruc22gnthxqg21" align="center" vAlign="middle" autoSize="true"/>
     <loader id="n2_ey2h" name="icon" xy="10,20" size="50,30" autoSize="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
-    <image id="n3_ey2h" name="selectedBg" src="hxqgi3r" fileName="newImg/img_cm_item_6.png" xy="-2,-2">
+    <image id="n3_ey2h" name="selectedBg" src="j21fi3v" fileName="newImg/img_cm_item_6.png" xy="-2,-2">
       <gearDisplay controller="button" pages="1"/>
     </image>
   </displayList>
