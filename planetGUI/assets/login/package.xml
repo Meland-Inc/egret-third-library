@@ -121,7 +121,6 @@
     <component id="bidp4t" name="btnMain.xml" path="/btn/"/>
     <component id="bidp4u" name="btnRightIconRadio.xml" path="/btn/"/>
     <image id="nri04v" name="img_9.png" path="/newImg/"/>
-    <component id="nri04w" name="bg.xml" path="/newImg/"/>
     <image id="qo8v4x" name="icon_login_qq.png" path="/newImg/"/>
     <image id="qo8v4y" name="icon_login_wechat.png" path="/newImg/"/>
     <image id="qo8v4z" name="btn_login_1.png" path="/newImg/" scale="9grid" scale9grid="10,10,20,20"/>
@@ -132,6 +131,16 @@
     <image id="qo8v54" name="icon_login_account2.png" path="/newImg/"/>
     <image id="qo8v55" name="icon_login_password.png" path="/newImg/"/>
     <image id="qo8v56" name="icon_login_password2.png" path="/newImg/"/>
+    <image id="kk6f57" name="img_login_5.png" path="/newImg/" scale="9grid" scale9grid="38,10,166,15"/>
+    <image id="kk6f58" name="btn_login_5.png" path="/newImg/"/>
+    <component id="kk6f59" name="btnSelect.xml" path="/btn/"/>
+    <image id="kk6f5a" name="img_login_3.png" path="/newImg/"/>
+    <image id="kk6f5b" name="img_login_4.png" path="/newImg/"/>
+    <image id="kk6f5c" name="img_login_2.png" path="/newImg/"/>
+    <image id="c2vq5d" name="img_login_1.png" path="/newImg/"/>
+    <image id="c2vq5e" name="img_login_baoman.png" path="/newImg/"/>
+    <image id="c2vq5f" name="img_login_changtong.png" path="/newImg/"/>
+    <image id="c2vq5g" name="btn_login_enter.png" path="/newImg/"/>
   </resources>
   <publish name="login"/>
 </packageDescription>
