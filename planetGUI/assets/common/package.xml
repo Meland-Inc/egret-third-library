@@ -152,6 +152,10 @@
     <image id="tjy5i3i" name="img_cm_pageup.png" path="/btn/"/>
     <component id="ise6i3j" name="ComBagItem.xml" path="/com/" exported="true"/>
     <component id="ise6i3k" name="ComEquipItem.xml" path="/com/" exported="true"/>
+    <image id="luqxi3l" name="btn_cm_yellow7.png" path="/newImg/" exported="true" scale="9grid" scale9grid="12,12,12,12"/>
+    <image id="luqxi3m" name="btn_cm_white7.png" path="/newImg/" exported="true" scale="9grid" scale9grid="11,12,13,9"/>
+    <image id="luqxi3n" name="img_manual_1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="18,18,36,36"/>
+    <component id="luqxi3p" name="CanChangeRadioButton.xml" path="/btn/" exported="true"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>

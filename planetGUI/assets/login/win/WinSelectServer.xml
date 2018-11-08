@@ -5,17 +5,26 @@
     <image id="n10_test" name="bg" src="tm1s45" fileName="newImg/img_8.png" xy="0,0" size="1136,640">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </image>
-    <image id="n1_7s5l" name="bg" src="7s5l2n" fileName="newImg/img/bg_subline.png" xy="108,38" group="n11_test"/>
-    <image id="n3_7s5l" name="serverBG" src="7s5l2p" fileName="newImg/img/img_subline_2.png" xy="342,121" group="n11_test"/>
-    <image id="n2_7s5l" name="tabBG" src="7s5l2o" fileName="newImg/img/img_subline_1.png" xy="110,118" group="n6_7s5l"/>
-    <component id="n4_7s5l" name="btnPeace" src="7s5l2q" fileName="btn/btnSelectServerType.xml" xy="110,168" group="n6_7s5l">
-      <Button checked="true" title="进入服务器" selectedIcon="ui://0n4pg0op7s5l2r" controller="state" page="0"/>
+    <image id="n1_7s5l" name="bg" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="158,95" size="800,456" group="n11_test"/>
+    <image id="n3_7s5l" name="serverBG" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="373,150" size="550,368" group="n11_test"/>
+    <image id="n2_7s5l" name="tabBG" src="luqxi3n" fileName="newImg/img_manual_1.png" pkg="te1gxawo" xy="194,150" size="166,366" group="n6_7s5l"/>
+    <component id="n4_7s5l" name="btnPeace" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="214,188" size="125,50" group="n6_7s5l">
+      <Button checked="true" title="和平分线" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawoefrs1u" selectedIcon="ui://te1gxawoefrs1x" controller="state" page="0"/>
     </component>
-    <component id="n5_7s5l" name="btnChaos" src="7s5l2q" fileName="btn/btnSelectServerType.xml" xy="110,255" group="n6_7s5l">
-      <Button title="刷新服务器列表" selectedIcon="ui://0n4pg0op7s5l2r" controller="state" page="1"/>
+    <component id="n5_7s5l" name="btnChaos" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="214,254" size="125,50" group="n6_7s5l">
+      <Button title="混乱分线" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawoefrs1u" selectedIcon="ui://te1gxawoefrs1x" controller="state" page="1"/>
     </component>
-    <group id="n6_7s5l" name="tabBtn" xy="110,118" size="222,412" group="n11_test"/>
-    <list id="n7_rhmg" name="lstServer" xy="362,131" size="636,390" group="n11_test" layout="flow_hz" overflow="scroll" lineGap="10" colGap="21" defaultItem="ui://0n4pg0op7s5l2k" autoClearItems="true">
+    <group id="n6_7s5l" name="tabBtn" xy="194,150" size="166,366" group="n11_test"/>
+    <list id="n7_rhmg" name="lstServer" xy="390,157" size="513,336" group="n11_test" layout="flow_hz" overflow="scroll" lineGap="8" colGap="28" defaultItem="ui://0n4pg0op7s5l2k" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
       <item/>
       <item/>
       <item/>
@@ -27,9 +36,12 @@
       <item/>
       <item/>
     </list>
-    <component id="n8_rhmg" name="btnClose" src="jddv1e" fileName="btn/btnClose.xml" xy="976,55" group="n11_test"/>
-    <text id="n9_rhmg" name="n9" xy="488,52" size="160,39" group="n11_test" font="FZZhunYuan-M02S" fontSize="30" color="#ffffff" align="center" vAlign="middle" leading="0" bold="true" text="分线服务器"/>
-    <group id="n11_test" name="comServerList" xy="108,38" size="920,564" advanced="true">
+    <component id="n8_rhmg" name="btnClose" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="te1gxawo" xy="925,89" size="52,52" group="n11_test">
+      <Button icon="ui://te1gxawoefrs1q"/>
+    </component>
+    <text id="n9_rhmg" name="n9" xy="503,105" size="110,28" group="n11_test" fontSize="20" color="#f5ebde" align="center" vAlign="middle" leading="0" bold="true" text="分线服务器"/>
+    <image id="n12_luqx" name="n12" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="181,533" size="759,14" group="n11_test"/>
+    <group id="n11_test" name="comServerList" xy="158,89" size="819,462" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>
