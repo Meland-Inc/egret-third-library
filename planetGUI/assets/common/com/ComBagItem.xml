@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="68,68">
+<component size="72,72" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <controller name="conEquiped" pages="1,no,0,yes" selected="0"/>
   <displayList>
-    <image id="n0_ot9s" name="n0" src="ot9si33" fileName="newImg/img_cm_item_2.png" xy="0,0"/>
-    <loader id="n1_ot9s" name="icon" xy="9,19" pivot="0.5,0.5" size="50,30" align="center" vAlign="middle" autoSize="true"/>
+    <image id="n5_ey2h" name="bg" src="ot9si33" fileName="newImg/img_cm_item_2.png" xy="2,2"/>
+    <loader id="n7_ey2h" name="icon" xy="11,21" size="50,30" autoSize="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <image id="n9_ey2h" name="equipedMark" src="rdy44e" fileName="newImg/img_main_item_3.png" pkg="5hs1fuej" xy="0,0" group="n11_ey2h"/>
+    <text id="n10_ey2h" name="tfE" xy="3,3" size="18,19" group="n11_ey2h" fontSize="12" align="center" vAlign="middle" autoSize="none" text="E"/>
+    <group id="n11_ey2h" name="grpEquipedMark" xy="0,0" size="34,32" advanced="true" collapsed="true">
+      <gearDisplay controller="conEquiped" pages="0"/>
+    </group>
+    <image id="n8_ey2h" name="selectedBg" src="j21fi3v" fileName="newImg/img_cm_item_6.png" xy="0,0">
+      <gearDisplay controller="button" pages="1"/>
+    </image>
+    <text id="n12_rstx" name="title" xy="51,52" size="16,19" fontSize="12" color="#74634c" align="center" vAlign="middle" autoSize="none" text=""/>
   </displayList>
+  <Button mode="Radio"/>
 </component>

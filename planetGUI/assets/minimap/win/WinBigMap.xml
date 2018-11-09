@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkqv2f8" designImageAlpha="0" designImageLayer="1">
   <controller name="conMapMode" pages="0,normal,1,born,2,revive" selected="0"/>
-  <controller name="conMarkBtn" pages="0,put,1,delete,2,cancel" selected="0"/>
+  <controller name="conMarkBtn" pages="0,put,1,delete,2,cancel" selected="2"/>
   <displayList>
     <image id="n1_11e02" name="headerBg" src="qo8vi1v" fileName="newImg/bg_cm_8.png" pkg="te1gxawo" xy="0,0" size="1136,48">
       <relation target="" sidePair="width-width"/>
@@ -29,7 +29,7 @@
     </component>
     <group id="n12_11e02" name="grpBornMode" xy="109,515" size="917,82" advanced="true" collapsed="true">
       <gearDisplay controller="conMapMode" pages="1,2"/>
-      <relation target="" sidePair="top-bottom"/>
+      <relation target="" sidePair="bottom-bottom,center-center"/>
     </group>
     <component id="n16_11e02" name="btnLineServer" src="tjy5i3e" fileName="btn/btnCommonScale.xml" pkg="te1gxawo" xy="16,0" size="147,50">
       <gearDisplay controller="conMapMode" pages="0"/>
@@ -38,7 +38,7 @@
     <image id="n18_11e02" name="operateBg" src="ot9si3b" fileName="newImg/img_cm_zoom.png" pkg="te1gxawo" xy="1028,363" size="66,221" group="n22_11e02"/>
     <component id="n19_11e02" name="btnMark" src="ohl4r" fileName="btn/btnOperate.xml" xy="1034,374" group="n22_11e02">
       <gearIcon controller="conMarkBtn" pages="0,1,2" values="ui://te1gxawoot9si2o|ui://te1gxawoot9si2n|ui://te1gxawopagbi28"/>
-      <Button icon="ui://te1gxawoot9si2o"/>
+      <Button icon="ui://te1gxawopagbi28"/>
     </component>
     <component id="n20_11e02" name="btnZoomIn" src="ohl4r" fileName="btn/btnOperate.xml" xy="1034,446" group="n22_11e02">
       <Button icon="ui://te1gxawoot9si2q"/>
@@ -51,7 +51,7 @@
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </group>
     <image id="n26_11e02" name="posBg" src="ot9si38" fileName="newImg/img_cm_prompt.png" pkg="te1gxawo" xy="53,577" size="182,20" group="n28_11e02"/>
-    <text id="n27_11e02" name="tfPos" xy="53,578" size="182,19" group="n28_11e02" fontSize="14" color="#ffffff" align="center" vAlign="middle" vars="true" autoSize="none" text="分线:{line=0}, 坐标点  ({x=999},{y=999})"/>
+    <text id="n27_11e02" name="tfPos" xy="53,578" size="182,19" group="n28_11e02" fontSize="14" color="#ffffff" align="center" vAlign="middle" vars="true" autoSize="none" text="分线:{line=0}, 坐标点  ({r=999},{c=999})"/>
     <group id="n28_11e02" name="posGroup" xy="53,577" size="182,20" advanced="true" collapsed="true">
       <gearDisplay controller="conMapMode" pages="0,2"/>
       <relation target="" sidePair="bottom-bottom"/>

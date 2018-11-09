@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://n0e96ypxq73ni4" designImageAlpha="100">
   <controller name="conShowSendHistory" pages="0,hide,1,show" selected="0"/>
-  <controller name="conShowEmoj" pages="0,hide,1,show" selected="1"/>
+  <controller name="conShowEmoj" pages="0,hide,1,show" selected="0"/>
   <controller name="conFrivateChat" pages="0,hide,1,show" selected="0"/>
   <displayList>
     <image id="n3_q73n" name="bg" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="174,96" size="805,456" group="n26_hrgt"/>
@@ -11,7 +11,7 @@
     <text id="n9_q73n" name="title" xy="548,106" size="45,26" group="n26_hrgt" fontSize="20" color="#f5ebde" text="聊天"/>
     <image id="n10_q73n" name="bottomBg" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="196,534" size="765,14" group="n26_hrgt"/>
     <image id="n5_q73n" name="lstBtnBg" src="ot9si2v" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="219,153" size="166,366" group="n26_hrgt"/>
-    <list id="n6_q73n" name="lstBtnChannel" xy="238,172" size="132,335" group="n26_hrgt" layout="flow_hz" defaultItem="ui://qagcvsbxgpm04y">
+    <list id="n6_q73n" name="lstBtnChannel" xy="238,172" size="132,335" group="n26_hrgt" layout="flow_hz" defaultItem="ui://te1gxawotjy5i3d" autoClearItems="true">
       <item title="系统" name="system"/>
       <item title="综合" name="comprehensive"/>
       <item title="世界" name="world"/>

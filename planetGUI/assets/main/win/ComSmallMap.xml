@@ -2,7 +2,7 @@
 <component size="148,172">
   <displayList>
     <image id="n11_qv2f" name="headerBg" src="rdy44j" fileName="newImg/img_main_map_1.png" xy="0,0"/>
-    <text id="n12_qv2f" name="tfHeaderInfo" xy="0,4" size="148,17" fontSize="12" color="#3e3620" align="center" vAlign="middle" vars="true" autoSize="none" text="{place=place}  ({x=999} , {y=999})"/>
+    <text id="n12_qv2f" name="tfHeaderInfo" xy="0,4" size="148,17" fontSize="12" color="#3e3620" align="center" vAlign="middle" vars="true" autoSize="none" text="{place=place}  ({r=999} , {c=999})"/>
     <image id="n10_qv2f" name="bg" src="rdy44k" fileName="newImg/img_main_map_2.png" xy="3,30"/>
     <component id="n14_qv2f" name="mapViewContainer" src="qv2f5z" fileName="com/SmallMapContainer.xml" xy="7,33" size="135,134"/>
     <component id="n3_j0s6" name="comMainPlayer" src="j0s611" fileName="com/comMainPlayerIcon.xml" pkg="k08mtk0r" xy="74,101" scale="0.5,0.5" touchable="false"/>
