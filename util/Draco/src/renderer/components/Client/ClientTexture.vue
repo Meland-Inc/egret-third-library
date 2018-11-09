@@ -3,11 +3,12 @@
         <mu-container>
           <div class="button-wrapper">
             <!-- <mu-button v-loading="isCheckTextureLoading" data-mu-loading-size="24" color="primary" @click="checkTexture">检查纹理</mu-button> -->
-            <mu-button v-loading="isClearTextureLoading" data-mu-loading-size="24" color="pink500" @click="clearTexture">清空纹理</mu-button>
-            <mu-button v-loading="isCopyTextureInLoading" data-mu-loading-size="24" color="orange500" @click="copyTextureIn">拷入纹理</mu-button>
-            <mu-button v-loading="isSplitTextureLoading" data-mu-loading-size="24" color="cyan500" @click="splitTexture">裁剪纹理</mu-button>
-            <mu-button v-loading="isPackerTextureLoading" data-mu-loading-size="24" color="blue500" @click="packerTexture">打包纹理</mu-button>
-            <mu-button v-loading="isCopyTextureOutLoading" data-mu-loading-size="24" color="purple500" @click="copyTextureOut">拷出纹理</mu-button>
+            <mu-button v-loading="isUpdateSvnLoading" data-mu-loading-size="24" color="pink500" @click="updateSvn">更新svn文件</mu-button>
+            <mu-button v-loading="isClearTextureLoading" data-mu-loading-size="24" color="orange500" @click="clearTexture">清空纹理</mu-button>
+            <mu-button v-loading="isCopyTextureInLoading" data-mu-loading-size="24" color="cyan500" @click="copyTextureIn">拷入纹理</mu-button>
+            <mu-button v-loading="isSplitTextureLoading" data-mu-loading-size="24" color="blue500" @click="splitTexture">裁剪纹理</mu-button>
+            <mu-button v-loading="isPackerTextureLoading" data-mu-loading-size="24" color="purple500" @click="packerTexture">打包纹理</mu-button>
+            <mu-button v-loading="isCopyTextureOutLoading" data-mu-loading-size="24" color="green500" @click="copyTextureOut">拷出纹理</mu-button>
           </div>
           <div class="button-wrapper">
             <mu-button full-width color="red500" @click="oneForAll">One·for·All</mu-button>
@@ -30,6 +31,7 @@
 let exec = require("child_process").exec;
 const ipcRenderer = require("electron").ipcRenderer;
 const remote = require("electron").remote;
+const spawn = require("child_process").spawn;
 const iconv = require("iconv-lite");
 const fs = require("fs");
 const path = require("path");
@@ -53,6 +55,7 @@ export default {
       art_path: "",
       texture_path: "",
       objectCells: [],
+      isUpdateSvnLoading: false,
       isCheckTextureLoading: false,
       isCopyTextureInLoading: false,
       isClearTextureLoading: false,
@@ -121,6 +124,31 @@ export default {
         isCheckTextureLoading = false;
         ipcRenderer.send("client_show_message", "检查图片成功");
         resolve();
+      });
+    },
+    updateSvn() {
+      return new Promise((resolve, reject) => {
+        this.isUpdateSvnLoading = true;
+        let resource_path = this.svn_path + "/settings/resource";
+        let process = spawn("svn", ["update"], { cwd: resource_path });
+        process.stdout.on("data", data => {
+          console.log("stdout: " + data);
+        });
+        process.stderr.on("data", data => {
+          console.log("stderr: " + data);
+        });
+
+        process.on("exit", code => {
+          if (code == 0) {
+            this.isUpdateSvnLoading = false;
+            ipcRenderer.send("client_show_message", "更新svn成功");
+            resolve();
+          } else {
+            this.isUpdateSvnLoading = false;
+            ipcRenderer.send("client_show_snack", "更新svn错误:" + code);
+            reject();
+          }
+        });
       });
     },
     clearTexture() {
@@ -207,15 +235,8 @@ export default {
           let ih = oimg.bitmap.height;
           let th = 60;
           let tw = 120;
-          // let high = element.objectHigh;
           let trow = area.length;
           let tcol = area[0].length;
-          let high = ih - ((trow + tcol) * th) / 2 + 10;
-          let lengthY = high + th;
-          let lengthX = 0;
-          let ox = iw - (trow * tw) / 2 - tw / 2;
-
-          let oy = ih - th - high;
 
           if (area.length == 1 && area[0].length == 1) {
             oimg.write(output_path + "/" + texture + ".png", (error, img) => {
@@ -236,34 +257,123 @@ export default {
 
           for (let m = area.length - 1; m >= 0; m--) {
             for (let n = area[m].length - 1; n >= 0; n--) {
+              /**
+               * type
+               * 1:
+               *  /\
+               *  \/
+               *
+               * 2:
+               *  ____
+               *  |  |
+               *  |  |
+               *  |  |
+               *   \/
+               *
+               * 3:
+               *  ____
+               *  ||
+               *  ||
+               *  | \
+               *   \/
+               *
+               * 4:
+               *  ____
+               *    ||
+               *    ||
+               *   / |
+               *   \/
+               */
+              let type;
+              let sx;
+              let sy;
+              let gridHeight;
+              let itemHigh;
+              let lengthX;
+              if (m != 0 && n != 0) {
+                type = 1;
+                sx = 0;
+                sy = 0;
+                itemHigh = 0;
+                gridHeight = ih - ((trow + tcol) * th) / 2 + 10;
+                lengthX = 0;
+              } else if (m == 0 && n == 0) {
+                type = 2;
+                sx = -tw / 2;
+                sy = (-(m + n) * th) / 2;
+                itemHigh = ((m + n) * th) / 2;
+                lengthX = tw / 2;
+              } else if (n == 0) {
+                type = 3;
+                sx = -tw / 2;
+                sy = (-(m + n) * th) / 2;
+                itemHigh = ((m + n) * th) / 2;
+                lengthX = 0;
+              } else if (m == 0) {
+                type = 4;
+                sx = 0;
+                sy = (-(m + n) * th) / 2;
+                itemHigh = ((m + n) * th) / 2;
+                lengthX = tw / 2;
+              } else {
+                //reserve
+              }
+
+              gridHeight = ih - ((trow + tcol) * th) / 2 + itemHigh + 10;
+              let ox = iw - (trow * tw) / 2 - tw / 2;
+              let oy = ih - th - gridHeight;
+              let lengthY = gridHeight + th;
               let cx =
                 ox +
                 ((area.length - 1 - m - (area[m].length - 1 - n)) * tw) / 2;
               let cy =
                 oy - ((area.length - 1 - m + area[m].length - 1 - n) * th) / 2;
 
-              let type = 1;
-              if (m == 0 || n == 0) {
-                //最高点 特殊处理 加初始y 加lengthY
-                cy = oy - ((area.length - 1 + area[m].length - 1) * th) / 2;
-                high = ih - ((trow + tcol) * th) / 2 + ((m + n) * th) / 2 + 10;
-                lengthY = high + th;
-                type = 2;
+              // if (m == 0 || n == 0) {
+              //   //最高点 特殊处理 加初始y 加lengthY
+              //   // cy = oy - ((area.length - 1 + area[m].length - 1) * th) / 2;
+              //   sx = -tw / 2;
+              //   sy = (-(m + n) * th) / 2;
+              //   gridHeight = ih - ((trow + tcol) * th) / 2 + ((m + n) * th) / 2 + 10;
+
+              //   type = 2;
+              // }
+
+              let aimg = new jimp(tw, th + gridHeight);
+              for (let m = sy; m <= lengthY; m++) {
+                for (let n = sx; n <= lengthX; n++) {
+                  let px = cx + n + tw / 2;
+                  let py = cy + m;
+                  let hex;
+                  if (px < 0 || px > iw || py < 0 || py > ih) {
+                    hex = 0;
+                  } else {
+                    hex = oimg.getPixelColor(px, py);
+                  }
+                  // hex = 3904926462;
+                  aimg.setPixelColor(hex, n + tw / 2, m);
+                }
+
+                if (type == 1 && m <= gridHeight + th / 2) {
+                  sx -= 2;
+                  lengthX = Math.abs(sx);
+                }
+
+                if (type == 3 && m > itemHigh) {
+                  lengthX += 2;
+                }
+
+                if (type == 4 && m > itemHigh) {
+                  sx -= 2;
+                }
+
+                if (m > gridHeight + th / 2) {
+                  sx += 2;
+                  lengthX = Math.abs(sx);
+                  // lengthX += 2;
+                }
               }
 
-              let aimg = this.createPng(
-                oimg,
-                iw,
-                ih,
-                tw,
-                th,
-                high,
-                lengthX,
-                lengthY,
-                cx,
-                cy,
-                type
-              );
               aimg.write(
                 output_path + "/" + texture + "_" + m + "_" + n + ".png"
               );
@@ -287,14 +397,54 @@ export default {
         resolve();
       }
     },
-    createPng(oimg, iw, ih, tw, th, high, lengthX, lengthY, cx, cy, type) {
-      let sx = 0;
-      let sy = 0;
+
+    /**
+     * @param type
+     * 1:
+     *  /\
+     *  \/
+     *
+     * 2:
+     *  ____
+     *  |  |
+     *  |  |
+     *  |  |
+     *   \/
+     *
+     * 3:
+     *  ____
+     *  ||
+     *  ||
+     *  | \
+     *   \/
+     *
+     * 4:
+     *  ____
+     *    ||
+     *   / |
+     *   \/
+     */
+    createPng(
+      oimg,
+      iw,
+      ih,
+      tw,
+      th,
+      gridHeight,
+      lengthX,
+      lengthY,
+      cx,
+      cy,
+      sx,
+      sy,
+      type
+    ) {
       if (type == 2) {
         sx = -tw / 2;
       }
 
-      let aimg = new jimp(tw, th + high);
+      let aimg = new jimp(tw, th + gridHeight);
+      let overHalf = false;
       for (let m = sy; m <= lengthY; m++) {
         for (let n = sx; n <= lengthX; n++) {
           let px = cx + n + tw / 2;
@@ -308,24 +458,31 @@ export default {
           // hex = 3904926462;
           aimg.setPixelColor(hex, n + tw / 2, m);
         }
-        switch (type) {
-          case 1:
-            sx -= 2;
-            if (sx <= -tw / 2) {
-              type = 2;
-            }
-            break;
-          case 2:
-            if (m > high + th / 2) {
-              type = 3;
-            }
-            break;
-          case 3:
-            sx += 2;
-            break;
-          default:
-            break;
+
+        if (m > gridHeight + th / 2) {
+          overHalf = true;
         }
+
+        if (overHalf) {
+          sx += 2;
+        }
+        // switch (type) {
+        //   case 1:
+        //     sx -= 2;
+        //     if (sx <= -tw / 2) {
+        //       type = 2;
+        //     }
+        //     break;
+        //   case 2:
+        //     if (m > gridHeight + th / 2) {
+        //       type = 3;
+        //     }
+        //     break;
+        //   case 3:
+        //     break;
+        //   default:
+        //     break;
+        // }
         lengthX = Math.abs(sx);
       }
 
@@ -471,6 +628,7 @@ export default {
     async oneForAll() {
       ipcRenderer.send("client_show_loading");
       try {
+        await this.updateSvn();
         if (this.checkBoxData.indexOf("object") != -1) {
           await this.clearTexture();
           await this.copyTextureIn();

@@ -3,7 +3,8 @@
     <div class="button-wrapper">
       <mu-button v-loading="isImportDefaultLoading" data-mu-loading-size="24" color="pink500" @click="importDefault">导入default配置</mu-button>
       <mu-button v-loading="isImportAsyncLoading" data-mu-loading-size="24" color="orange500" @click="importAsync">导入async配置</mu-button>
-      <mu-button v-loading="isImportMapDataLoading" data-mu-loading-size="24" color="cyan500" @click="importMapData">导入mapData配置</mu-button>
+      <mu-button v-loading="isImportIndieLoading" data-mu-loading-size="24" color="cyan500" @click="importIndie">导入indie配置</mu-button>
+      <mu-button v-loading="isImportMapDataLoading" data-mu-loading-size="24" color="blue500" @click="importMapData">导入mapData配置</mu-button>
     </div>
     <div class="button-wrapper">
       <mu-button full-width color="red" @click="oneForAll">One·for·All</mu-button>
@@ -23,6 +24,7 @@ export default {
       project_path: "",
       isImportDefaultLoading: false,
       isImportAsyncLoading: false,
+      isImportIndieLoading: false,
       isImportMapDataLoading: false
     };
   },
@@ -87,6 +89,47 @@ export default {
         ipcRenderer.send("client_show_snack", "导入async错误:" + error);
       }
     },
+    async importIndie() {
+      this.isImportIndieLoading = true;
+      try {
+        let indie_folder_path = this.project_path + "/resource/indie";
+        let indieConfig = {
+          groups: [],
+          resources: []
+        };
+        await this.importFolderFile(
+          indie_folder_path,
+          indieConfig,
+          "",
+          false,
+          true
+        );
+
+        for (const iterator of indieConfig.groups) {
+          let keys = "";
+          for (let i = 0; i < iterator.keyArr.length; i++) {
+            const element = iterator.keyArr[i];
+            if (i == iterator.keyArr.length - 1) {
+              keys += element;
+            } else {
+              keys += element + ",";
+            }
+            iterator.keys = keys;
+          }
+          delete iterator.keyArr;
+        }
+
+        let content = JSON.stringify(indieConfig);
+        let configPath = this.project_path + "/resource/indie.res.json";
+        await fs.writeFileSync(configPath, content);
+
+        this.isImportIndieLoading = false;
+        ipcRenderer.send("client_show_message", "导入indie成功");
+      } catch (error) {
+        this.isImportIndieLoading = false;
+        ipcRenderer.send("client_show_snack", "导入indie错误:" + error);
+      }
+    },
     async importMapData() {
       this.isImportMapDataLoading = true;
 
@@ -113,6 +156,7 @@ export default {
       try {
         await this.importDefault();
         await this.importAsync();
+        await this.importIndie();
         await this.importMapData();
 
         ipcRenderer.send("client_hide_loading");
@@ -123,29 +167,53 @@ export default {
         ipcRenderer.send("client_show_snack", "One·for·All Error:" + error);
       }
     },
-    async importFolderFile(folderPath, config, group = "", isSheet = false) {
+    async importFolderFile(
+      folderPath,
+      config,
+      group = "",
+      isSheet = false,
+      isRootGroupFolder = false,
+      useOrignGroup = false
+    ) {
       let files = await fs.readdirSync(folderPath);
       for (const file of files) {
         let curPath = folderPath + "/" + file;
         let stat = await fs.statSync(curPath);
         if (stat.isDirectory()) {
-          if (file == "preload" || file == "loading" || file == "fairyGui") {
-            group = file;
-          } else if (
-            group == "preload" ||
-            group == "loading" ||
-            group == "fairyGui"
-          ) {
-          } else {
-            group = "";
+          if (!useOrignGroup) {
+            if (file == "preload" || file == "loading" || file == "fairyGui") {
+              group = file;
+            } else if (
+              group == "preload" ||
+              group == "loading" ||
+              group == "fairyGui"
+            ) {
+            } else {
+              group = "";
+            }
+
+            if (isRootGroupFolder) {
+              group = file;
+            }
           }
+
+          console.log(
+            "---isRootGroupFolder:" + isRootGroupFolder + "---group:" + group
+          );
 
           if (file == "sheet") {
             isSheet = true;
           } else {
             isSheet = false;
           }
-          await this.importFolderFile(curPath, config, group, isSheet);
+          await this.importFolderFile(
+            curPath,
+            config,
+            group,
+            isSheet,
+            false,
+            isRootGroupFolder
+          );
         } else {
           await this.importSingleFile(curPath, config, group, isSheet);
         }
@@ -191,10 +259,17 @@ export default {
           case "":
             break;
           default:
+            let groupExist = false;
             for (const iterator of config.groups) {
               if (iterator.name == group) {
+                groupExist = true;
                 iterator.keyArr.push(name);
               }
+            }
+
+            if (!groupExist) {
+              let keyArr = { name: group, keyArr: [name], keys: "" };
+              config.groups.push(keyArr);
             }
             break;
         }
