@@ -69,6 +69,19 @@
     <image id="pkc81v" name="img_bag_item_5.png" path="/img/"/>
     <component id="r2k31x" name="comObjectItemTip.xml" path="/com/" exported="true"/>
     <component id="ti2i1y" name="comDurabilityBar.xml" path="/com/" exported="true"/>
+    <component id="hxqg1z" name="WinBag.xml" path="/win/" exported="true"/>
+    <image id="hxqg20" name="img_bag_upperbody.png" path="/imgNew/"/>
+    <image id="hxqg21" name="img_bag_weapon.png" path="/imgNew/"/>
+    <image id="hxqg22" name="icon_bag_title.png" path="/imgNew/"/>
+    <image id="hxqg23" name="img_bag_avatarinfo.png" path="/imgNew/"/>
+    <image id="hxqg24" name="img_bag_decoration.png" path="/imgNew/"/>
+    <image id="hxqg25" name="img_bag_equiting.png" path="/imgNew/"/>
+    <image id="hxqg26" name="img_bag_gloves.png" path="/imgNew/"/>
+    <image id="hxqg27" name="img_bag_helmet.png" path="/imgNew/"/>
+    <image id="hxqg28" name="img_bag_lowerbody.png" path="/imgNew/"/>
+    <component id="ey2h29" name="bagItem.xml" path="/com/"/>
+    <component id="ey2h2a" name="btnBagType.xml" path="/btn/"/>
+    <component id="ey2h2b" name="comAvatarContainer.xml" path="/com/"/>
   </resources>
   <publish name="backpack"/>
 </packageDescription>

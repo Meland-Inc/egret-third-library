@@ -6,7 +6,7 @@
         <mu-button v-loading="isMergeVersionLoading" data-mu-loading-size="24" color="orange500" @click="onMergetVersionClick">比较新旧版本</mu-button>
         <mu-button v-loading="isExportVersionLoading" data-mu-loading-size="24" color="cyan500" @click="onExportVersionClick">导出其他版本</mu-button>
         <mu-button v-loading="isExportApkLoading" data-mu-loading-size="24" color="blue500" @click="onExportApkClick">导出apk</mu-button>
-        <mu-button v-loading="isExportIpaLoading" data-mu-loading-size="24" color="blue500" @click="onExportIpaClick">导出ipa</mu-button>
+        <mu-button v-loading="isExportIpaLoading" data-mu-loading-size="24" color="purple500" @click="onExportIpaClick">导出ipa</mu-button>
       </div>
       <div class="button-wrapper">
         <mu-button full-width color="red" @click="oneForAll">One·for·All</mu-button>
@@ -97,6 +97,7 @@ const thmFilePath = "resource/default.thm.json";
 const defaultResPath = "resource/default.res.json";
 const mapDataResPath = "resource/mapData.res.json";
 const asyncResPath = "resource/async.res.json";
+const indieResPath = "resource/indie.res.json";
 
 export default {
   data() {
@@ -119,7 +120,7 @@ export default {
       android_path: "",
       ios_path: "",
       wechat_path: "",
-      svn_path:"",
+      svn_path: "",
       versionType: "",
       versionTypes: ["强制更新", "选择更新", "静态更新"],
       checkBoxValues: ["Android端", "IOS端", "小游戏端"],
@@ -253,7 +254,10 @@ export default {
         ipcRenderer.send("client_show_snack", "请先选择新版本号");
         return;
       }
-      if (this.old_version && this.old_version >= this.new_version) {
+      if (
+        this.old_version &&
+        parseInt(this.old_version) >= parseInt(this.new_version)
+      ) {
         ipcRenderer.send("client_show_snack", "新版本号应该比旧版本号大");
         return;
       }
@@ -482,9 +486,13 @@ export default {
         process.stderr.on("data", data => {
           console.log("stderr: " + data);
         });
-        process.on("exit", code => {
+        process.on("exit", async code => {
           if (code == 0) {
             this.isExportApkLoading = false;
+            await this.copyFile(
+              this.android_path + "/app/build/outputs/apk/app-release.apk",
+              this.svn_path + "/client/app/planet.apk"
+            );
             ipcRenderer.send("client_show_message", "打包APK成功");
             if (showDialog) {
               ipcRenderer.send("client_show_dialog", "打包APK成功");
@@ -501,8 +509,8 @@ export default {
         });
       });
     },
-    async onExportIpaClick(showDialog = true){
-      return new Promise((resolve, reject)=>{
+    async onExportIpaClick(showDialog = true) {
+      return new Promise((resolve, reject) => {
         if (!this.ios_path) {
           ipcRenderer.send("client_show_snack", "请先设置苹果发布目录");
           return;
@@ -510,16 +518,29 @@ export default {
 
         this.isExportIpaLoading = true;
 
-        let xcodeprojPath = this.ios_path+"/ios-template.xcodeproj";
-        let archivePath=this.svn_path+"/client/app/planet.xcarchive";
-        let appPath = this.svn_path+"/client/app/";
-        let plistPath = this.ios_path+"/ios-template/Info.plist";
+        let xcodeprojPath = this.ios_path + "/ios-template.xcodeproj";
+        let archivePath = this.svn_path + "/client/app/planet.xcarchive";
+        let appPath = this.svn_path + "/client/app/";
+        let plistPath = this.ios_path + "/ios-template/Info.plist";
 
-        let cleanCmd = "xcodebuild clean -project "+xcodeprojPath+"  -scheme planet -configuration Release";
-        let archiveCmd = "xcodebuild archive -project "+xcodeprojPath+" -scheme planet -archivePath "+archivePath;
-        let exportCmd = "xcodebuild -exportArchive -archivePath "+archivePath+" -exportPath "+appPath+" -exportOptionsPlist "+plistPath;
+        let cleanCmd =
+          "xcodebuild clean -project " +
+          xcodeprojPath +
+          "  -scheme planet -configuration Release";
+        let archiveCmd =
+          "xcodebuild archive -project " +
+          xcodeprojPath +
+          " -scheme planet -archivePath " +
+          archivePath;
+        let exportCmd =
+          "xcodebuild -exportArchive -archivePath " +
+          archivePath +
+          " -exportPath " +
+          appPath +
+          " -exportOptionsPlist " +
+          plistPath;
 
-        let cmdStr = cleanCmd+"\n"+archiveCmd+"\n"+exportCmd;
+        let cmdStr = cleanCmd + "\n" + archiveCmd + "\n" + exportCmd;
 
         // try {
         //   await this.excuteIpaCmd(cleanCmd, "clean");
@@ -562,10 +583,10 @@ export default {
             }
           }
         });
-      })
+      });
     },
-    excuteIpaCmd(cmdStr, tip){
-      return new Promise((resolve, reject)=>{
+    excuteIpaCmd(cmdStr, tip) {
+      return new Promise((resolve, reject) => {
         console.log(cmdStr);
         let process = exec(cmdStr, { cwd: this.ios_path });
 
@@ -577,7 +598,7 @@ export default {
         });
         process.on("exit", code => {
           if (code == 0) {
-            console.log(tip+"成功")
+            console.log(tip + "成功");
             resolve();
           } else {
             ipcRenderer.send("client_show_snack", tip + code);
@@ -715,6 +736,14 @@ export default {
             cdnReleasePath,
             cdnPatchPath
           );
+
+          //indie.res.json
+          await this.resFileHandle(
+            indieResPath,
+            newVersion,
+            cdnReleasePath,
+            cdnPatchPath
+          );
         } else {
           //default.thm.json
           let oldThmPath = "resource/default.thm" + "_v" + oldVersion + ".json";
@@ -751,6 +780,16 @@ export default {
           //async.res.json
           await this.resFileHandle(
             asyncResPath,
+            newVersion,
+            cdnReleasePath,
+            cdnPatchPath,
+            oldVersion,
+            oldCdnReleasePath
+          );
+
+          //indie.res.json
+          await this.resFileHandle(
+            indieResPath,
             newVersion,
             cdnReleasePath,
             cdnPatchPath,
@@ -1390,9 +1429,9 @@ export default {
 
     async refreshNewVersionList() {
       let path = this.project_path + "/bin-release/web";
-      if(await fs.existsSync(path)){
-        this.newVersionList = await fs.readdirSync(path);;
-      }else{
+      if (await fs.existsSync(path)) {
+        this.newVersionList = await fs.readdirSync(path);
+      } else {
         this.newVersionList = [];
       }
     },

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="55,56" extention="Button">
-  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <controller name="button" pages="0,up,1,down" selected="1"/>
   <displayList>
-    <loader id="n0_p85h" name="bg" xy="0,0" size="56,56" url="ui://te1gxawo11e02i3e" autoSize="true">
+    <loader id="n0_p85h" name="bg" xy="0,0" size="56,56" url="ui://te1gxawoot9si39" autoSize="true">
       <gearDisplay controller="button" pages="1"/>
     </loader>
     <loader id="n1_p85h" name="icon" xy="11,13" size="31,30" url="ui://k08mtk0r11e021l" align="center" vAlign="middle" autoSize="true">
