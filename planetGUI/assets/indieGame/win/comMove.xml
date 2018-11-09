@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="140,122">
+  <displayList>
+    <component id="n0_ryj3" name="containerFour" src="e2w1p" fileName="win/container.xml" xy="70,61" rotation="-120"/>
+    <component id="n1_ryj3" name="containerFive" src="e2w1p" fileName="win/container.xml" xy="70,61" rotation="-60"/>
+    <component id="n2_ryj3" name="containerSix" src="e2w1p" fileName="win/container.xml" xy="70,61"/>
+    <component id="n3_ryj3" name="containerOne" src="e2w1p" fileName="win/container.xml" xy="70,61" rotation="60"/>
+    <component id="n4_ryj3" name="containerTwo" src="e2w1p" fileName="win/container.xml" xy="70,61" rotation="120"/>
+    <component id="n5_ryj3" name="containerThi" src="e2w1p" fileName="win/container.xml" xy="70,61" rotation="180"/>
+    <image id="n6_ryj3" name="sixAngle" src="kogqg" fileName="img/img_game3_2.png" xy="70,61" pivot="0.5,0.5" anchor="true"/>
+    <text id="n7_ujdt" name="n7" xy="65,6" size="12,19" fontSize="12" text="0"/>
+    <text id="n8_ujdt" name="n8" xy="105,25" size="12,19" fontSize="12" text="1"/>
+    <text id="n9_ujdt" name="n9" xy="104,83" size="12,19" fontSize="12" autoSize="none" text="2"/>
+    <text id="n10_ujdt" name="n10" xy="66,97" size="12,19" fontSize="12" autoSize="none" text="3"/>
+    <text id="n11_ujdt" name="n11" xy="18,75" size="12,19" fontSize="12" autoSize="none" text="4"/>
+    <text id="n12_ujdt" name="n12" xy="23,22" size="12,19" fontSize="12" autoSize="none" text="5"/>
+  </displayList>
+</component>

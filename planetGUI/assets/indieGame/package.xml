@@ -15,11 +15,14 @@
     <image id="qcldc" name="img_game1_9.png" path="/img/"/>
     <component id="yfnyd" name="WinZNM.xml" path="/win/" exported="true"/>
     <image id="kogqe" name="img_game3_1.png" path="/img/"/>
-    <image id="kogqf" name="img_game3_10.png" path="/img/"/>
     <image id="kogqg" name="img_game3_2.png" path="/img/"/>
-    <image id="kogqh" name="img_game3_7.png" path="/img/"/>
-    <image id="kogqi" name="img_game3_8.png" path="/img/"/>
-    <image id="kogqj" name="img_game3_9.png" path="/img/"/>
+    <image id="liqpk" name="img_green .png" path="/img/" scale="9grid" scale9grid="13,0,62,12"/>
+    <image id="liqpl" name="img_purple.png" path="/img/" scale="9grid" scale9grid="12,0,63,12"/>
+    <image id="liqpm" name="img_red.png" path="/img/"/>
+    <image id="liqpn" name="img_yellow.png" path="/img/"/>
+    <component id="e2w1o" name="comPlayView.xml" path="/win/"/>
+    <component id="e2w1p" name="container.xml" path="/win/"/>
+    <component id="ryj3q" name="comMove.xml" path="/win/"/>
   </resources>
   <publish name="indieGame" path="C:\Users\Mloong\Desktop\bell_planet\feature-jiahua\resource\assets\fairyGui"/>
 </packageDescription>
