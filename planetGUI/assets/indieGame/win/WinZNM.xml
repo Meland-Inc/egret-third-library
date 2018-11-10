@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="600,800">
   <displayList>
-    <image id="n0_kogq" name="n0" src="ma630" fileName="img/bg_game1.png" xy="0,0" size="600,800"/>
+    <image id="n0_kogq" name="bg" src="ma630" fileName="img/bg_game1.png" xy="0,0" size="600,800"/>
     <image id="n3_kogq" name="n3" src="kogqe" fileName="img/img_game3_1.png" xy="112,238" group="n9_kogq"/>
-    <image id="n4_kogq" name="sixAngle" src="kogqg" fileName="img/img_game3_2.png" xy="230,339" pivot="0.5,0.5" group="n9_kogq"/>
-    <group id="n9_kogq" name="n9" xy="230,339" size="140,122" group="n5_kogq"/>
-    <image id="n6_kogq" name="red" src="kogqh" fileName="img/img_game3_7.png" xy="256,461" group="n5_kogq"/>
-    <image id="n7_kogq" name="n7" src="kogqi" fileName="img/img_game3_8.png" xy="213,325" group="n5_kogq"/>
-    <image id="n8_kogq" name="n8" src="kogqh" fileName="img/img_game3_7.png" xy="247,472" group="n5_kogq" scale="1.2,1"/>
-    <graph id="n10_kogq" name="n10" xy="290,350" size="16,15" group="n5_kogq" type="rect"/>
-    <group id="n5_kogq" name="n5" xy="213,325" size="157,161"/>
+    <component id="n33_e2w1" name="comPlayView" src="e2w1o" fileName="win/comPlayView.xml" xy="230,339" pivot="0.5,0.5" group="n9_kogq"/>
+    <component id="n43_ryj3" name="comMove" src="ryj3q" fileName="win/comMove.xml" xy="300,400" pivot="0.5,0.5" anchor="true" group="n9_kogq"/>
+    <group id="n9_kogq" name="n9" xy="112,238" size="376,324"/>
   </displayList>
 </component>
