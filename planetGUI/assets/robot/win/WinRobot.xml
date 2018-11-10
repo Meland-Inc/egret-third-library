@@ -4,12 +4,12 @@
   <displayList>
     <image id="n0_ot9s" name="n0" src="efrs1o" fileName="newImg/bg_cm_5.png" pkg="te1gxawo" xy="0,-2" size="1136,640" group="n19_ot9s"/>
     <image id="n2_ot9s" name="n2" src="efrs23" fileName="newImg/img_cm_title2.png" pkg="te1gxawo" xy="482,9" group="n19_ot9s"/>
-    <text id="n3_ot9s" name="n3" xy="540,10" size="93,29" group="n19_ot9s" fontSize="22" color="#ffffff" align="center" vAlign="middle" strokeColor="#352e2c" strokeSize="2" text="机器人AI"/>
+    <text id="n3_ot9s" name="n3" xy="540,10" size="92,29" group="n19_ot9s" fontSize="22" color="#ffffff" align="center" vAlign="middle" strokeColor="#352e2c" strokeSize="2" text="机器人AI"/>
     <graph id="n24_no7e" name="n24" xy="0,0" size="1136,50" group="n19_ot9s" alpha="0" type="rect"/>
     <component id="n5_ot9s" name="btnClose" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="1044,3" size="80,42" group="n19_ot9s">
       <Button icon="ui://te1gxawoefrs1r"/>
     </component>
-    <group id="n19_ot9s" name="gpBg" xy="0,-2" size="1136,640" group="n32_j21f"/>
+    <group id="n19_ot9s" name="gpBg" xy="0,-2" size="1136,640" group="n32_j21f" collapsed="true"/>
     <image id="n8_ot9s" name="n8" src="ot9si2x" fileName="newImg/img_cm_bottom_3.png" pkg="te1gxawo" xy="21,134" size="168,464" group="n9_ot9s"/>
     <list id="n7_ot9s" name="listRobotTab" xy="35,161" size="140,410" group="n9_ot9s" overflow="hidden" lineGap="15" defaultItem="ui://asrl3zfro7wxm">
       <item/>
@@ -24,19 +24,19 @@
       <item title="特有代码块" icon="ui://te1gxawoot9si2f" name="特有代码块" selectedIcon="ui://te1gxawoot9si2i" selectedTitle="特有代码块"/>
       <item title="背景故事" icon="ui://te1gxawoot9si2f" name="背景故事" selectedIcon="ui://te1gxawoot9si2i" selectedTitle="背景故事"/>
     </list>
-    <component id="n26_ise6" name="comOverView" src="irjz25" fileName="com/comOverView.xml" xy="218,133" group="n32_j21f">
+    <component id="n26_ise6" name="comOverView" src="irjz25" fileName="com/ComOverView.xml" xy="218,133" group="n32_j21f">
       <gearDisplay controller="robotCtrl" pages="0"/>
     </component>
-    <component id="n27_ise6" name="comSkin" src="irjz26" fileName="com/comSkin.xml" xy="218,133" group="n32_j21f">
+    <component id="n27_ise6" name="comSkin" src="irjz26" fileName="com/ComSkin.xml" xy="218,133" group="n32_j21f">
       <gearDisplay controller="robotCtrl" pages="1"/>
     </component>
-    <component id="n28_ise6" name="comBag" src="irjz21" fileName="com/comBag.xml" xy="218,133" group="n32_j21f">
+    <component id="n28_ise6" name="comBag" src="irjz21" fileName="com/ComBag.xml" xy="218,133" group="n32_j21f">
       <gearDisplay controller="robotCtrl" pages="2"/>
     </component>
-    <component id="n29_ise6" name="comCodeBlock" src="irjz22" fileName="com/comCodeBlock.xml" xy="218,133" group="n32_j21f">
+    <component id="n29_ise6" name="comCodeBlock" src="irjz22" fileName="com/ComCodeBlock.xml" xy="218,133" group="n32_j21f">
       <gearDisplay controller="robotCtrl" pages="3"/>
     </component>
-    <component id="n30_ise6" name="comStory" src="irjz28" fileName="com/comStory.xml" xy="218,133" group="n32_j21f">
+    <component id="n30_ise6" name="comStory" src="irjz28" fileName="com/ComStory.xml" xy="218,133" group="n32_j21f">
       <gearDisplay controller="robotCtrl" pages="4"/>
     </component>
     <group id="n32_j21f" name="root" xy="0,-2" size="1136,640" advanced="true">
