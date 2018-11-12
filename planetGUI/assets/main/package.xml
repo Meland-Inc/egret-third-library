@@ -153,6 +153,10 @@
     <image id="r2bf5x" name="icon_main_manual.png" path="/newImg/"/>
     <image id="r2bf5y" name="icon_main_workshop.png" path="/newImg/"/>
     <component id="qv2f5z" name="SmallMapContainer.xml" path="/com/"/>
+    <image id="rb9r60" name="icon_main_exp_2.png" path="/newImg/" exported="true"/>
+    <image id="rb9r61" name="icon_main_health_2.png" path="/newImg/" exported="true"/>
+    <image id="rb9r62" name="icon_main_hunger_2.png" path="/newImg/" exported="true"/>
+    <image id="rb9r63" name="icon_main_thirst_2.png" path="/newImg/" exported="true"/>
   </resources>
   <publish name="main"/>
 </packageDescription>
