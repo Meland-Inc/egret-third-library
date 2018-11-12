@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="313,228">
+<component size="413,260" designImage="ui://i25v0ebk5ccmd" designImageOffsetX="-369" designImageOffsetY="-185" designImageAlpha="13" designImageLayer="1">
   <displayList>
-    <image id="n0_k8dt" name="n0" src="k8dt11" fileName="img/bg_bag_2.png" xy="0,0"/>
-    <text id="n1_k8dt" name="n1" xy="93,4" size="119,32" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="拆分数量"/>
-    <image id="n4_k8dt" name="n4" src="k8dt17" fileName="img/img_bag_number.png" xy="131,56" group="n7_k8dt"/>
-    <text id="n8_k8dt" name="tfNum" xy="131,62" size="50,28" group="n7_k8dt" fontSize="20" color="#a7afaf" align="center" vAlign="middle" autoSize="none" text="0&#xA;"/>
-    <component id="n16_k8dt" name="btnSub" src="k8dt1g" fileName="btn/btnAddSub.xml" xy="106,66" group="n7_k8dt"/>
-    <component id="n18_k8dt" name="btnAdd" src="k8dt1g" fileName="btn/btnAddSub.xml" xy="194,66" group="n7_k8dt">
+    <image id="n0_k8dt" name="bg" src="efrs1m" fileName="newImg/bg_cm_3.png" pkg="te1gxawo" xy="0,0" size="413,260"/>
+    <component id="n21_fyx8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="376,0" size="30,30">
+      <Button icon="ui://te1gxawoqo8vi1w"/>
+    </component>
+    <text id="n1_k8dt" name="title" xy="140,2" size="119,32" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="拆分"/>
+    <image id="n4_k8dt" name="n4" src="k8dt17" fileName="img/img_bag_number.png" xy="172,65" size="60,35" group="n7_k8dt"/>
+    <text id="n8_k8dt" name="tfNum" xy="175,71" size="56,28" group="n7_k8dt" fontSize="20" color="#a7afaf" align="center" vAlign="middle" autoSize="none" text="0&#xA;"/>
+    <component id="n16_k8dt" name="btnSub" src="k8dt1g" fileName="btn/btnAddSub.xml" xy="117,75" group="n7_k8dt"/>
+    <component id="n18_k8dt" name="btnAdd" src="k8dt1g" fileName="btn/btnAddSub.xml" xy="275,75" group="n7_k8dt">
       <Button icon="ui://ruc22gntk8dt12"/>
     </component>
-    <group id="n7_k8dt" name="n7" xy="106,56" size="100,35"/>
-    <component id="n9_k8dt" name="btnConfirm" src="td6ep" fileName="btn/btnCommon.xml" xy="101,164">
-      <Button title="确定" titleColor="#599c11" icon="ui://ruc22gntk8dt14"/>
-    </component>
-    <component id="n12_k8dt" name="sld" src="k8dt1d" fileName="sld/Slider1.xml" xy="67,125">
+    <group id="n7_k8dt" name="n7" xy="117,65" size="170,35"/>
+    <component id="n12_k8dt" name="sld" src="k8dt1d" fileName="sld/Slider1.xml" xy="135,130">
       <Slider value="50" max="100"/>
     </component>
-    <text id="n19_lj6i" name="tfSplitMsg" xy="49,207" size="213,18" fontSize="12" color="#ff8f02" align="center" autoSize="none" text="没有空闲的位置摆放"/>
-    <component id="n21_fyx8" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="279,-2" size="42,43">
-      <Button icon="ui://te1gxawoqn8o4"/>
+    <text id="n19_lj6i" name="tfSplitMsg" xy="109,223" size="213,18" fontSize="12" color="#ff8f02" align="center" autoSize="none" text="没有空闲的位置摆放"/>
+    <component id="n22_5ccm" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="194,184" size="30,30">
+      <Button icon="ui://te1gxawoqo8vi1w"/>
     </component>
   </displayList>
 </component>

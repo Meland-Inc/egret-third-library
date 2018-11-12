@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="500,150" opaque="false">
+<component size="1136,640" opaque="false">
   <displayList>
-    <component id="n6_eh0y" name="_comTip" src="eh0yp" xy="0,0">
-      <relation target="" sidePair="top-top"/>
-    </component>
-    <component id="n9_rk5g" name="_btnSure" src="rk5g10" pkg="te1gxawo" xy="157,84">
-      <relation target="" sidePair="bottom-bottom"/>
-    </component>
-    <component id="n10_rk5g" name="_btnDel" src="rk5gz" pkg="te1gxawo" xy="279,84">
-      <relation target="" sidePair="bottom-bottom"/>
-    </component>
+    <component id="n6_eh0y" name="_comTip" src="eh0yp" fileName="com/comHomeTip.xml" xy="318,180" group="n11_kvvk"/>
+    <component id="n9_rk5g" name="_btnSure" src="rk5g10" fileName="btn/btnSureOp.xml" pkg="te1gxawo" xy="475,394" group="n11_kvvk"/>
+    <component id="n10_rk5g" name="_btnDel" src="rk5gz" fileName="btn/btnDelOp.xml" pkg="te1gxawo" xy="597,394" group="n11_kvvk"/>
+    <group id="n11_kvvk" name="root" xy="318,180" size="500,280" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
   </displayList>
 </component>
