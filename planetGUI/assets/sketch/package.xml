@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="i25v0ebk" jpegQuality="80" compressPNG="true">
-  <resources>
-    <image id="ot9s0" name="mainDesign.png" path="/img/"/>
-    <image id="ot9s1" name="noviceDialogDesign.png" path="/img/"/>
-    <image id="ot9s2" name="noviceManualDesign.png" path="/img/"/>
-    <image id="ot9s3" name="robotDesign1.png" path="/img/"/>
-    <image id="ot9s4" name="robotDesign2.png" path="/img/"/>
-    <image id="ot9s5" name="robotDesign3.png" path="/img/"/>
-    <image id="ot9s6" name="robotDesign4.png" path="/img/"/>
-    <image id="ot9s7" name="robotDesign5.png" path="/img/"/>
-    <image id="qv2f8" name="切图提示1.png" path="/minimap/"/>
-    <image id="qv2f9" name="切图提示2.png" path="/minimap/"/>
-    <image id="qv2fa" name="切图提示3.png" path="/minimap/"/>
-    <image id="hxqgb" name="切图提示1.png" path="/backpack/"/>
-    <image id="hxqgc" name="切图提示2.png" path="/backpack/"/>
-    <image id="5ccmd" name="切图提示3.png" path="/backpack/"/>
-    <image id="kvvke" name="切图提示.png" path="/novice/"/>
-  </resources>
-  <publish name=""/>
+    <resources>
+        <image id="ot9s0" name="mainDesign.png" path="/img/"/>
+        <image id="ot9s1" name="noviceDialogDesign.png" path="/img/"/>
+        <image id="ot9s2" name="noviceManualDesign.png" path="/img/"/>
+        <image id="ot9s3" name="robotDesign1.png" path="/img/"/>
+        <image id="ot9s4" name="robotDesign2.png" path="/img/"/>
+        <image id="ot9s5" name="robotDesign3.png" path="/img/"/>
+        <image id="ot9s6" name="robotDesign4.png" path="/img/"/>
+        <image id="ot9s7" name="robotDesign5.png" path="/img/"/>
+        <image id="qv2f8" name="切图提示1.png" path="/minimap/"/>
+        <image id="qv2f9" name="切图提示2.png" path="/minimap/"/>
+        <image id="qv2fa" name="切图提示3.png" path="/minimap/"/>
+        <image id="hxqgb" name="切图提示1.png" path="/backpack/"/>
+        <image id="hxqgc" name="切图提示2.png" path="/backpack/"/>
+        <image id="5ccmd" name="切图提示3.png" path="/backpack/"/>
+        <image id="kvvke" name="切图提示.png" path="/novice/"/>
+        <image id="pgixd" name="切图提示1.png" path="/formular/"/>
+        <image id="pgixe" name="切图提示10.png" path="/formular/"/>
+        <image id="pgixf" name="切图提示11.png" path="/formular/"/>
+        <image id="pgixg" name="切图提示2.png" path="/formular/"/>
+        <image id="pgixh" name="切图提示3.png" path="/formular/"/>
+        <image id="pgixi" name="切图提示4.png" path="/formular/"/>
+        <image id="pgixj" name="切图提示5.png" path="/formular/"/>
+        <image id="pgixk" name="切图提示6.png" path="/formular/"/>
+        <image id="pgixl" name="切图提示7.png" path="/formular/"/>
+        <image id="pgixm" name="切图提示8.png" path="/formular/"/>
+        <image id="pgixn" name="切图提示9.png" path="/formular/"/>
+    </resources>
+    <publish name=""/>
 </packageDescription>

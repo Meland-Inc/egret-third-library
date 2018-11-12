@@ -1,159 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="5hs1fuej" jpegQuality="80" compressPNG="true">
-  <resources>
-    <component id="w80l0" name="ComMainRocker.xml" path="/win/" exported="true"/>
-    <image id="w80l1" name="btn_main_attack.png" path="/img/" exported="true"/>
-    <image id="w80l2" name="btn_main_bag.png" path="/img/" exported="true"/>
-    <image id="w80l4" name="btn_main_city.png" path="/img/" exported="true"/>
-    <image id="w80l5" name="btn_main_create.png" path="/img/" exported="true"/>
-    <image id="w80l6" name="btn_main_formula.png" path="/img/" exported="true"/>
-    <image id="w80l9" name="btn_main_setting.png" path="/img/" exported="true"/>
-    <image id="w80ld" name="img_main_item_1.png" path="/img/" exported="true"/>
-    <image id="w80le" name="img_main_rocker_1.png" path="/img/" exported="true"/>
-    <image id="w80lf" name="img_main_rocker_2.png" path="/img/" exported="true"/>
-    <component id="w80lg" name="ComMainUserInfo.xml" path="/win/" exported="true"/>
-    <component id="w80lh" name="WinMainItemField.xml" path="/win/" exported="true"/>
-    <image id="w80lk" name="img_main_item_2.png" path="/img/" exported="true"/>
-    <component id="w80lm" name="btnMainBag.xml" path="/btn/"/>
-    <component id="w80ln" name="ComMainJoystick.xml" path="/win/" exported="true"/>
-    <component id="w80lo" name="btnAttack.xml" path="/btn/"/>
-    <component id="w80lr" name="btnRocker.xml" path="/btn/"/>
-    <component id="ua4xu" name="ComMainMenu.xml" path="/win/" exported="true"/>
-    <image id="ua4x10" name="btn_main_task.png" path="/img/" exported="true"/>
-    <image id="dura17" name="img_main_avatar_1.png" path="/img/" exported="true"/>
-    <image id="dura18" name="img_main_avatar_10.png" path="/img/" exported="true"/>
-    <image id="dura19" name="img_main_avatar_11.png" path="/img/" exported="true" scale="9grid" scale9grid="34,4,68,8"/>
-    <image id="dura1a" name="img_main_avatar_12.png" path="/img/" exported="true"/>
-    <image id="dura1b" name="img_main_avatar_13.png" path="/img/" exported="true"/>
-    <image id="dura1c" name="img_main_avatar_2.png" path="/img/" exported="true"/>
-    <image id="dura1d" name="img_main_avatar_3.png" path="/img/" exported="true"/>
-    <image id="dura1e" name="img_main_avatar_4.png" path="/img/" exported="true"/>
-    <image id="dura1f" name="img_main_avatar_5.png" path="/img/" exported="true"/>
-    <image id="dura1g" name="img_main_avatar_6.png" path="/img/" exported="true"/>
-    <image id="dura1h" name="img_main_avatar_7.png" path="/img/" exported="true"/>
-    <image id="dura1i" name="img_main_avatar_8.png" path="/img/" exported="true"/>
-    <image id="dura1j" name="img_main_avatar_9.png" path="/img/" exported="true"/>
-    <component id="dura1k" name="WinMainNpcInfo.xml" path="/win/" exported="true"/>
-    <component id="dura1l" name="ComMainEnemyInfo.xml" path="/win/" exported="true"/>
-    <component id="dura1m" name="pbrMainHp.xml" path="/pbr/"/>
-    <component id="vmyf1n" name="pbrMainPlayerHp.xml" path="/pbr/"/>
-    <image id="9prt1q" name="btn_main_storage_1.png" path="/img/" exported="true"/>
-    <image id="9prt1r" name="btn_main_storage_2.png" path="/img/" exported="true"/>
-    <image id="xjj81u" name="btn_main_server.png" path="/img/" exported="true"/>
-    <component id="xjj81v" name="ComMainServer.xml" path="/win/" exported="true"/>
-    <image id="wfql1y" name="btn_main_machine.png" path="/img/" exported="true"/>
-    <component id="uvm01z" name="labHitFlutterWord.xml" path="/lab/" exported="true"/>
-    <image id="uvm020" name="img_Blood volume_1.png" path="/img/" exported="true"/>
-    <image id="uvm021" name="img_Blood volume_2.png" path="/img/" exported="true"/>
-    <component id="uvm022" name="ComHeadInfo.xml" path="/com/" exported="true"/>
-    <image id="7i8n23" name="btn_main_tool.png" path="/img/" exported="true"/>
-    <image id="7i8n24" name="icon_main_bow.png" path="/img/" exported="true"/>
-    <image id="7i8n25" name="icon_main_build.png" path="/img/" exported="true"/>
-    <image id="7i8n26" name="icon_main_chat.png" path="/img/" exported="true"/>
-    <image id="7i8n27" name="icon_main_felling.png" path="/img/" exported="true"/>
-    <image id="7i8n28" name="icon_main_fist.png" path="/img/" exported="true"/>
-    <image id="7i8n29" name="icon_main_mining.png" path="/img/" exported="true"/>
-    <image id="7i8n2a" name="icon_main_pickup.png" path="/img/" exported="true"/>
-    <image id="7i8n2b" name="icon_main_shoot.png" path="/img/" exported="true"/>
-    <image id="7i8n2c" name="icon_main_watch.png" path="/img/" exported="true"/>
-    <image id="7i8n2d" name="icon_main_work.png" path="/img/" exported="true"/>
-    <image id="ft0q2e" name="img_main_item_3.png" path="/img/"/>
-    <image id="ft0q2f" name="img_main_item_4.png" path="/img/"/>
-    <component id="ft0q2g" name="shortcutItem.xml" path="/btn/"/>
-    <image id="q7z62e" name="icon_main_sword.png" path="/img/" exported="true"/>
-    <component id="oy0u2i" name="pbrAccmu.xml" path="/pbr/"/>
-    <image id="oy0u2j" name="img_main_chargeforce_1.png" path="/img/"/>
-    <image id="oy0u2k" name="img_main_chargeforce_2.png" path="/img/"/>
-    <image id="oy0u2l" name="img_main_itemdrop.png" path="/img/"/>
-    <component id="oy0u2m" name="ComAccmu.xml" path="/com/" exported="true"/>
-    <component id="oy0u2n" name="ComPickObjectToast.xml" path="/com/" exported="true"/>
-    <component id="tbq62o" name="WinMainPickUpTips.xml" path="/win/" exported="true"/>
-    <component id="muc92p" name="WinMainContainer.xml" path="/win/" exported="true"/>
-    <component id="j0s6z" name="ComSmallMap.xml" path="/win/" exported="true"/>
-    <image id="rdy42v" name="btn_main_item_add.png" path="/newImg/"/>
-    <image id="rdy42w" name="btn_main_mail.png" path="/newImg/"/>
-    <image id="rdy42x" name="btn_main_menu.png" path="/newImg/"/>
-    <image id="rdy42y" name="btn_main_menu_2.png" path="/newImg/"/>
-    <image id="rdy42z" name="btn_main_menu_3.png" path="/newImg/"/>
-    <image id="rdy430" name="icon_main_axe.png" path="/newImg/"/>
-    <image id="rdy431" name="icon_main_backpack.png" path="/newImg/"/>
-    <image id="rdy432" name="icon_main_battery.png" path="/newImg/"/>
-    <image id="rdy433" name="icon_main_bow.png" path="/newImg/"/>
-    <image id="rdy434" name="icon_main_building.png" path="/newImg/"/>
-    <image id="rdy435" name="icon_main_chat.png" path="/newImg/"/>
-    <image id="rdy436" name="icon_main_fist.png" path="/newImg/"/>
-    <image id="rdy437" name="icon_main_formula.png" path="/newImg/"/>
-    <image id="rdy438" name="icon_main_health.png" path="/newImg/"/>
-    <image id="rdy439" name="icon_main_hunger.png" path="/newImg/"/>
-    <image id="rdy43a" name="icon_main_mining.png" path="/newImg/"/>
-    <image id="rdy43b" name="icon_main_night.png" path="/newImg/"/>
-    <image id="rdy43c" name="icon_main_pickup.png" path="/newImg/"/>
-    <image id="rdy43d" name="icon_main_robot.png" path="/newImg/"/>
-    <image id="rdy43e" name="icon_main_setting.png" path="/newImg/"/>
-    <image id="rdy43f" name="icon_main_shoot.png" path="/newImg/"/>
-    <image id="rdy43g" name="icon_main_sun.png" path="/newImg/"/>
-    <image id="rdy43h" name="icon_main_sword.png" path="/newImg/"/>
-    <image id="rdy43i" name="icon_main_talk.png" path="/newImg/"/>
-    <image id="rdy43j" name="icon_main_task.png" path="/newImg/"/>
-    <image id="rdy43k" name="icon_main_temperature.png" path="/newImg/"/>
-    <image id="rdy43l" name="icon_main_thirst.png" path="/newImg/"/>
-    <image id="rdy43m" name="icon_main_time.png" path="/newImg/"/>
-    <image id="rdy43n" name="icon_main_watch.png" path="/newImg/"/>
-    <image id="rdy43o" name="icon_main_wifi.png" path="/newImg/"/>
-    <image id="rdy43p" name="icon_main_work.png" path="/newImg/"/>
-    <image id="rdy441" name="img_main_announcement.png" path="/newImg/"/>
-    <image id="rdy442" name="img_main_attacked.png" path="/newImg/"/>
-    <image id="rdy443" name="img_main_avatar_1.png" path="/newImg/"/>
-    <image id="rdy444" name="img_main_avatar_2.png" path="/newImg/"/>
-    <image id="rdy445" name="img_main_chat_1.png" path="/newImg/"/>
-    <image id="rdy446" name="img_main_chat_2.png" path="/newImg/"/>
-    <image id="rdy447" name="img_main_exp_1.png" path="/newImg/"/>
-    <image id="rdy448" name="img_main_exp_2.png" path="/newImg/"/>
-    <image id="rdy449" name="img_main_exp_3.png" path="/newImg/"/>
-    <image id="rdy44a" name="img_main_info.png" path="/newImg/"/>
-    <image id="rdy44b" name="img_main_itemdrop.png" path="/newImg/"/>
-    <image id="rdy44c" name="img_main_item_1.png" path="/newImg/"/>
-    <image id="rdy44d" name="img_main_item_2.png" path="/newImg/"/>
-    <image id="rdy44e" name="img_main_item_3.png" path="/newImg/" exported="true"/>
-    <image id="rdy44f" name="img_main_item_4.png" path="/newImg/"/>
-    <image id="rdy44g" name="img_main_item_5.png" path="/newImg/"/>
-    <image id="rdy44h" name="img_main_location.png" path="/newImg/"/>
-    <image id="rdy44i" name="img_main_mailprompt.png" path="/newImg/"/>
-    <image id="rdy44j" name="img_main_map_1.png" path="/newImg/"/>
-    <image id="rdy44k" name="img_main_map_2.png" path="/newImg/"/>
-    <image id="rdy44l" name="img_main_menu.png" path="/newImg/"/>
-    <image id="rdy44m" name="img_main_monster_1.png" path="/newImg/"/>
-    <image id="rdy44n" name="img_main_monster_2.png" path="/newImg/"/>
-    <image id="rdy44o" name="img_main_monster_3.png" path="/newImg/"/>
-    <image id="rdy44p" name="img_main_monster_4.png" path="/newImg/"/>
-    <image id="rdy44q" name="img_main_powerstorage_1.png" path="/newImg/"/>
-    <image id="rdy44r" name="img_main_powerstorage_2.png" path="/newImg/"/>
-    <image id="rdy44s" name="img_main_survive_1.png" path="/newImg/"/>
-    <image id="rdy44t" name="img_main_survive_2.png" path="/newImg/"/>
-    <image id="rdy44u" name="img_main_survive_3.png" path="/newImg/"/>
-    <image id="rdy44v" name="img_main_survive_4.png" path="/newImg/"/>
-    <image id="rdy44w" name="img_main_survive_5.png" path="/newImg/"/>
-    <image id="rdy44x" name="img_main_systeminfo.png" path="/newImg/"/>
-    <image id="rdy44y" name="img_main_task_1.png" path="/newImg/"/>
-    <image id="rdy44z" name="img_main_task_2.png" path="/newImg/"/>
-    <image id="rdy450" name="img_main_task_3.png" path="/newImg/"/>
-    <image id="rdy451" name="img_main_task_4.png" path="/newImg/"/>
-    <image id="rdy452" name="img_main_task_5.png" path="/newImg/"/>
-    <image id="rdy453" name="img_main_task_6.png" path="/newImg/"/>
-    <image id="rdy454" name="img_main_task_7.png" path="/newImg/"/>
-    <image id="rdy455" name="img_main_task_8.png" path="/newImg/"/>
-    <component id="rdy456" name="btnOperate.xml" path="/btn/"/>
-    <component id="rdy457" name="btnBuild.xml" path="/btn/"/>
-    <component id="rdy458" name="btnMenu.xml" path="/btn/"/>
-    <component id="rdy459" name="btnStorage.xml" path="/btn/"/>
-    <component id="rdy45b" name="btnAvatar.xml" path="/btn/"/>
-    <component id="r2bf5j" name="ComMainSaturation.xml" path="/win/"/>
-    <component id="r2bf5r" name="ComMainTemperature.xml" path="/win/"/>
-    <image id="r2bf5w" name="icon_main_email.png" path="/newImg/"/>
-    <image id="r2bf5x" name="icon_main_manual.png" path="/newImg/"/>
-    <image id="r2bf5y" name="icon_main_workshop.png" path="/newImg/"/>
-    <component id="qv2f5z" name="SmallMapContainer.xml" path="/com/"/>
-    <component id="tgrl60" name="ComMainChat.xml" path="/com/"/>
-  </resources>
-  <publish name="main"/>
+    <resources>
+        <component id="w80l0" name="ComMainRocker.xml" path="/win/" exported="true"/>
+        <image id="w80l1" name="btn_main_attack.png" path="/img/" exported="true"/>
+        <image id="w80l2" name="btn_main_bag.png" path="/img/" exported="true"/>
+        <image id="w80l4" name="btn_main_city.png" path="/img/" exported="true"/>
+        <image id="w80l5" name="btn_main_create.png" path="/img/" exported="true"/>
+        <image id="w80l6" name="btn_main_formula.png" path="/img/" exported="true"/>
+        <image id="w80l9" name="btn_main_setting.png" path="/img/" exported="true"/>
+        <image id="w80ld" name="img_main_item_1.png" path="/img/" exported="true"/>
+        <image id="w80le" name="img_main_rocker_1.png" path="/img/" exported="true"/>
+        <image id="w80lf" name="img_main_rocker_2.png" path="/img/" exported="true"/>
+        <component id="w80lg" name="ComMainUserInfo.xml" path="/win/" exported="true"/>
+        <component id="w80lh" name="WinMainItemField.xml" path="/win/" exported="true"/>
+        <image id="w80lk" name="img_main_item_2.png" path="/img/" exported="true"/>
+        <component id="w80lm" name="btnMainBag.xml" path="/btn/"/>
+        <component id="w80ln" name="ComMainJoystick.xml" path="/win/" exported="true"/>
+        <component id="w80lo" name="btnAttack.xml" path="/btn/"/>
+        <component id="w80lr" name="btnRocker.xml" path="/btn/"/>
+        <component id="ua4xu" name="ComMainMenu.xml" path="/win/" exported="true"/>
+        <image id="ua4x10" name="btn_main_task.png" path="/img/" exported="true"/>
+        <image id="dura17" name="img_main_avatar_1.png" path="/img/" exported="true"/>
+        <image id="dura18" name="img_main_avatar_10.png" path="/img/" exported="true"/>
+        <image id="dura19" name="img_main_avatar_11.png" path="/img/" exported="true" scale="9grid" scale9grid="34,4,68,8"/>
+        <image id="dura1a" name="img_main_avatar_12.png" path="/img/" exported="true"/>
+        <image id="dura1b" name="img_main_avatar_13.png" path="/img/" exported="true"/>
+        <image id="dura1c" name="img_main_avatar_2.png" path="/img/" exported="true"/>
+        <image id="dura1d" name="img_main_avatar_3.png" path="/img/" exported="true"/>
+        <image id="dura1e" name="img_main_avatar_4.png" path="/img/" exported="true"/>
+        <image id="dura1f" name="img_main_avatar_5.png" path="/img/" exported="true"/>
+        <image id="dura1g" name="img_main_avatar_6.png" path="/img/" exported="true"/>
+        <image id="dura1h" name="img_main_avatar_7.png" path="/img/" exported="true"/>
+        <image id="dura1i" name="img_main_avatar_8.png" path="/img/" exported="true"/>
+        <image id="dura1j" name="img_main_avatar_9.png" path="/img/" exported="true"/>
+        <component id="dura1k" name="WinMainNpcInfo.xml" path="/win/" exported="true"/>
+        <component id="dura1l" name="ComMainEnemyInfo.xml" path="/win/" exported="true"/>
+        <component id="dura1m" name="pbrMainHp.xml" path="/pbr/"/>
+        <component id="vmyf1n" name="pbrMainPlayerHp.xml" path="/pbr/"/>
+        <image id="9prt1q" name="btn_main_storage_1.png" path="/img/" exported="true"/>
+        <image id="9prt1r" name="btn_main_storage_2.png" path="/img/" exported="true"/>
+        <image id="xjj81u" name="btn_main_server.png" path="/img/" exported="true"/>
+        <component id="xjj81v" name="ComMainServer.xml" path="/win/" exported="true"/>
+        <image id="wfql1y" name="btn_main_machine.png" path="/img/" exported="true"/>
+        <component id="uvm01z" name="labHitFlutterWord.xml" path="/lab/" exported="true"/>
+        <image id="uvm020" name="img_Blood volume_1.png" path="/img/" exported="true"/>
+        <image id="uvm021" name="img_Blood volume_2.png" path="/img/" exported="true"/>
+        <component id="uvm022" name="ComHeadInfo.xml" path="/com/" exported="true"/>
+        <image id="7i8n23" name="btn_main_tool.png" path="/img/" exported="true"/>
+        <image id="7i8n24" name="icon_main_bow.png" path="/img/" exported="true"/>
+        <image id="7i8n25" name="icon_main_build.png" path="/img/" exported="true"/>
+        <image id="7i8n26" name="icon_main_chat.png" path="/img/" exported="true"/>
+        <image id="7i8n27" name="icon_main_felling.png" path="/img/" exported="true"/>
+        <image id="7i8n28" name="icon_main_fist.png" path="/img/" exported="true"/>
+        <image id="7i8n29" name="icon_main_mining.png" path="/img/" exported="true"/>
+        <image id="7i8n2a" name="icon_main_pickup.png" path="/img/" exported="true"/>
+        <image id="7i8n2b" name="icon_main_shoot.png" path="/img/" exported="true"/>
+        <image id="7i8n2c" name="icon_main_watch.png" path="/img/" exported="true"/>
+        <image id="7i8n2d" name="icon_main_work.png" path="/img/" exported="true"/>
+        <image id="ft0q2e" name="img_main_item_3.png" path="/img/"/>
+        <image id="ft0q2f" name="img_main_item_4.png" path="/img/"/>
+        <component id="ft0q2g" name="shortcutItem.xml" path="/btn/"/>
+        <image id="q7z62e" name="icon_main_sword.png" path="/img/" exported="true"/>
+        <component id="oy0u2i" name="pbrAccmu.xml" path="/pbr/"/>
+        <image id="oy0u2j" name="img_main_chargeforce_1.png" path="/img/"/>
+        <image id="oy0u2k" name="img_main_chargeforce_2.png" path="/img/"/>
+        <image id="oy0u2l" name="img_main_itemdrop.png" path="/img/"/>
+        <component id="oy0u2m" name="ComAccmu.xml" path="/com/" exported="true"/>
+        <component id="oy0u2n" name="ComPickObjectToast.xml" path="/com/" exported="true"/>
+        <component id="tbq62o" name="WinMainPickUpTips.xml" path="/win/" exported="true"/>
+        <component id="muc92p" name="WinMainContainer.xml" path="/win/" exported="true"/>
+        <component id="j0s6z" name="ComSmallMap.xml" path="/win/" exported="true"/>
+        <image id="rdy42v" name="btn_main_item_add.png" path="/newImg/"/>
+        <image id="rdy42w" name="btn_main_mail.png" path="/newImg/"/>
+        <image id="rdy42x" name="btn_main_menu.png" path="/newImg/"/>
+        <image id="rdy42y" name="btn_main_menu_2.png" path="/newImg/"/>
+        <image id="rdy42z" name="btn_main_menu_3.png" path="/newImg/"/>
+        <image id="rdy430" name="icon_main_axe.png" path="/newImg/"/>
+        <image id="rdy431" name="icon_main_backpack.png" path="/newImg/"/>
+        <image id="rdy432" name="icon_main_battery.png" path="/newImg/"/>
+        <image id="rdy433" name="icon_main_bow.png" path="/newImg/"/>
+        <image id="rdy434" name="icon_main_building.png" path="/newImg/"/>
+        <image id="rdy435" name="icon_main_chat.png" path="/newImg/"/>
+        <image id="rdy436" name="icon_main_fist.png" path="/newImg/"/>
+        <image id="rdy437" name="icon_main_formula.png" path="/newImg/"/>
+        <image id="rdy438" name="icon_main_health.png" path="/newImg/"/>
+        <image id="rdy439" name="icon_main_hunger.png" path="/newImg/"/>
+        <image id="rdy43a" name="icon_main_mining.png" path="/newImg/"/>
+        <image id="rdy43b" name="icon_main_night.png" path="/newImg/"/>
+        <image id="rdy43c" name="icon_main_pickup.png" path="/newImg/"/>
+        <image id="rdy43d" name="icon_main_robot.png" path="/newImg/"/>
+        <image id="rdy43e" name="icon_main_setting.png" path="/newImg/"/>
+        <image id="rdy43f" name="icon_main_shoot.png" path="/newImg/"/>
+        <image id="rdy43g" name="icon_main_sun.png" path="/newImg/"/>
+        <image id="rdy43h" name="icon_main_sword.png" path="/newImg/"/>
+        <image id="rdy43i" name="icon_main_talk.png" path="/newImg/"/>
+        <image id="rdy43j" name="icon_main_task.png" path="/newImg/"/>
+        <image id="rdy43k" name="icon_main_temperature.png" path="/newImg/"/>
+        <image id="rdy43l" name="icon_main_thirst.png" path="/newImg/"/>
+        <image id="rdy43m" name="icon_main_time.png" path="/newImg/"/>
+        <image id="rdy43n" name="icon_main_watch.png" path="/newImg/"/>
+        <image id="rdy43o" name="icon_main_wifi.png" path="/newImg/"/>
+        <image id="rdy43p" name="icon_main_work.png" path="/newImg/"/>
+        <image id="rdy441" name="img_main_announcement.png" path="/newImg/"/>
+        <image id="rdy442" name="img_main_attacked.png" path="/newImg/"/>
+        <image id="rdy443" name="img_main_avatar_1.png" path="/newImg/"/>
+        <image id="rdy444" name="img_main_avatar_2.png" path="/newImg/"/>
+        <image id="rdy445" name="img_main_chat_1.png" path="/newImg/"/>
+        <image id="rdy446" name="img_main_chat_2.png" path="/newImg/"/>
+        <image id="rdy447" name="img_main_exp_1.png" path="/newImg/"/>
+        <image id="rdy448" name="img_main_exp_2.png" path="/newImg/"/>
+        <image id="rdy449" name="img_main_exp_3.png" path="/newImg/"/>
+        <image id="rdy44a" name="img_main_info.png" path="/newImg/"/>
+        <image id="rdy44b" name="img_main_itemdrop.png" path="/newImg/"/>
+        <image id="rdy44c" name="img_main_item_1.png" path="/newImg/"/>
+        <image id="rdy44d" name="img_main_item_2.png" path="/newImg/"/>
+        <image id="rdy44e" name="img_main_item_3.png" path="/newImg/" exported="true"/>
+        <image id="rdy44f" name="img_main_item_4.png" path="/newImg/"/>
+        <image id="rdy44g" name="img_main_item_5.png" path="/newImg/"/>
+        <image id="rdy44h" name="img_main_location.png" path="/newImg/"/>
+        <image id="rdy44i" name="img_main_mailprompt.png" path="/newImg/"/>
+        <image id="rdy44j" name="img_main_map_1.png" path="/newImg/"/>
+        <image id="rdy44k" name="img_main_map_2.png" path="/newImg/"/>
+        <image id="rdy44l" name="img_main_menu.png" path="/newImg/"/>
+        <image id="rdy44m" name="img_main_monster_1.png" path="/newImg/"/>
+        <image id="rdy44n" name="img_main_monster_2.png" path="/newImg/"/>
+        <image id="rdy44o" name="img_main_monster_3.png" path="/newImg/"/>
+        <image id="rdy44p" name="img_main_monster_4.png" path="/newImg/"/>
+        <image id="rdy44q" name="img_main_powerstorage_1.png" path="/newImg/"/>
+        <image id="rdy44r" name="img_main_powerstorage_2.png" path="/newImg/"/>
+        <image id="rdy44s" name="img_main_survive_1.png" path="/newImg/"/>
+        <image id="rdy44t" name="img_main_survive_2.png" path="/newImg/"/>
+        <image id="rdy44u" name="img_main_survive_3.png" path="/newImg/"/>
+        <image id="rdy44v" name="img_main_survive_4.png" path="/newImg/"/>
+        <image id="rdy44w" name="img_main_survive_5.png" path="/newImg/"/>
+        <image id="rdy44x" name="img_main_systeminfo.png" path="/newImg/"/>
+        <image id="rdy44y" name="img_main_task_1.png" path="/newImg/"/>
+        <image id="rdy44z" name="img_main_task_2.png" path="/newImg/"/>
+        <image id="rdy450" name="img_main_task_3.png" path="/newImg/"/>
+        <image id="rdy451" name="img_main_task_4.png" path="/newImg/"/>
+        <image id="rdy452" name="img_main_task_5.png" path="/newImg/"/>
+        <image id="rdy453" name="img_main_task_6.png" path="/newImg/"/>
+        <image id="rdy454" name="img_main_task_7.png" path="/newImg/"/>
+        <image id="rdy455" name="img_main_task_8.png" path="/newImg/"/>
+        <component id="rdy456" name="btnOperate.xml" path="/btn/"/>
+        <component id="rdy457" name="btnBuild.xml" path="/btn/"/>
+        <component id="rdy458" name="btnMenu.xml" path="/btn/"/>
+        <component id="rdy459" name="btnStorage.xml" path="/btn/"/>
+        <component id="rdy45b" name="btnAvatar.xml" path="/btn/"/>
+        <component id="r2bf5j" name="ComMainSaturation.xml" path="/win/"/>
+        <component id="r2bf5r" name="ComMainTemperature.xml" path="/win/"/>
+        <image id="r2bf5w" name="icon_main_email.png" path="/newImg/"/>
+        <image id="r2bf5x" name="icon_main_manual.png" path="/newImg/"/>
+        <image id="r2bf5y" name="icon_main_workshop.png" path="/newImg/"/>
+        <component id="qv2f5z" name="SmallMapContainer.xml" path="/com/"/>
+        <component id="tgrl60" name="ComMainChat.xml" path="/com/"/>
+        <image id="rb9r60" name="icon_main_exp_2.png" path="/newImg/" exported="true"/>
+        <image id="rb9r61" name="icon_main_health_2.png" path="/newImg/" exported="true"/>
+        <image id="rb9r62" name="icon_main_hunger_2.png" path="/newImg/" exported="true"/>
+        <image id="rb9r63" name="icon_main_thirst_2.png" path="/newImg/" exported="true"/>
+    </resources>
+    <publish name="main"/>
 </packageDescription>
