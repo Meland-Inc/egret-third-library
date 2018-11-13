@@ -206,7 +206,7 @@
     <image id="pgixi5k" name="img_cm_bottom_15.png" path="/newImg/" exported="true"/>
     <image id="pgixi5l" name="img_cm_bottom_16.png" path="/newImg/" exported="true"/>
     <image id="pgixi5m" name="img_cm_bottom_17.png" path="/newImg/" exported="true"/>
-    <image id="pgixi5n" name="img_cm_bottom_7.png" path="/newImg/" exported="true"/>
+    <image id="pgixi5n" name="img_cm_bottom_7.png" path="/newImg/" exported="true" scale="9grid" scale9grid="7,7,14,14"/>
     <image id="pgixi5o" name="img_cm_bottom_8.png" path="/newImg/" exported="true"/>
     <image id="pgixi5p" name="img_cm_bottom_9.png" path="/newImg/" exported="true"/>
     <image id="pgixi5q" name="img_cm_bubble_1.png" path="/newImg/" exported="true"/>
@@ -248,6 +248,8 @@
     <component id="oliri6q" name="rbtnScale.xml" path="/btn/" exported="true"/>
     <component id="oliri6r" name="tbtnFix.xml" path="/btn/" exported="true"/>
     <component id="oliri6s" name="tbtnScale.xml" path="/btn/" exported="true"/>
+    <component id="j29zi6t" name="RBtnBpEquipRenderer.xml" path="/btn/" exported="true"/>
+    <component id="j29zi6u" name="RBtnBpItemRenderer.xml" path="/btn/" exported="true"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>
