@@ -3,7 +3,7 @@
   <controller name="tab" alias="detaiAndCreation" exported="true" pages="0,detail,1,creation" selected="0"/>
   <displayList>
     <image id="n95_qbzr" name="panel" src="qbzr1a" fileName="img/bg_subline.png" xy="0,0"/>
-    <component id="n92_fyx8" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="874,14" size="30,30">
+    <component id="n92_fyx8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="874,14" size="30,30">
       <Button icon="ui://7xhwdeuzdj9q11" sound="ui://te1gxawotqc912"/>
     </component>
     <text id="n11_zsen" name="title" xy="381,14" size="158,39" font="FZZhunYuan-M02S" fontSize="28" color="#ffffff" align="center" vAlign="middle" leading="0" autoSize="none" bold="true" text="个人详情"/>

@@ -2,8 +2,8 @@
 <component size="1334,750">
   <displayList>
     <image id="n0_hxf8" name="n0" src="qn8o2" fileName="img/bg_bag_2.png" xy="510,242" group="n8_mnl0"/>
-    <text id="n3_hxf8" name="tfTitle" xy="639,247" size="53,31" group="n8_mnl0" fontSize="24" color="#ffffff" text="确认"/>
-    <component id="n2_hxf8" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" xy="783,240" size="42,43" group="n8_mnl0">
+    <text id="n3_hxf8" name="tfTitle" xy="639,247" size="53,28" group="n8_mnl0" fontSize="24" color="#ffffff" text="确认"/>
+    <component id="n2_hxf8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" xy="783,240" size="42,43" group="n8_mnl0">
       <Button icon="ui://te1gxawoqn8o4" selectedIcon="ui://te1gxawoqn8o4"/>
     </component>
     <component id="n5_hxf8" name="btnConfirm" src="qn8od" fileName="btn/btnCommon.xml" xy="690,412" group="n8_mnl0">
