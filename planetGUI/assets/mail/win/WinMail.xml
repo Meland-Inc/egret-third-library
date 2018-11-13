@@ -5,7 +5,9 @@
     <image id="n20_n6p2" name="n20" src="n6p21l" fileName="img/bg_bag.png" xy="80,33" size="739,474" group="n26_n6p2"/>
     <text id="n1_govx" name="n1" xy="402,36" size="109,39" group="n26_n6p2" fontSize="30" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="邮件"/>
     <group id="n26_n6p2" name="n26" xy="80,33" size="739,474" locked="true" collapsed="true"/>
-    <component id="n38_n6p2" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="784,24"/>
+    <component id="n38_n6p2" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="784,24" size="56,57">
+      <Button icon="ui://eunktclqsz331"/>
+    </component>
     <image id="n24_n6p2" name="n24" src="n6p21t" fileName="img/img_mail_2.png" xy="346,99" size="448,381" group="n47_xev6"/>
     <image id="n33_n6p2" name="n33" src="n6p21x" fileName="img/img_login_1.png" xy="368,349" size="405,3" group="n47_xev6"/>
     <component id="n41_rn6h" name="labContent" src="cbcf24" fileName="com/comContent.xml" xy="368,144" size="412,197" group="n47_xev6">

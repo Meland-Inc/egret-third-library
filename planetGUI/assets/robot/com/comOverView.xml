@@ -61,7 +61,7 @@
     <image id="n74_j21f" name="n74" src="j21fi3t" fileName="newImg/icon_cm_ruel.png" pkg="te1gxawo" xy="325,38"/>
     <text id="n75_j21f" name="tfRule" xy="350,38" size="71,25" fontSize="18" color="#533f2e" align="center" vAlign="middle" vars="true" text="燃料:{cur=0}/{total=0}"/>
     <component id="n76_j21f" name="comAvatar" src="j21fi3z" fileName="com/ComEmpty.xml" pkg="te1gxawo" xy="285,250" size="1,1"/>
-    <list id="n77_pgix" name="listEquip" xy="88,82" size="410,217" layout="flow_hz" overflow="scroll" lineGap="5" colGap="265" lineItemCount="2" defaultItem="ui://te1gxawoise6i3k">
+    <list id="n77_pgix" name="listEquip" xy="88,82" size="410,226" layout="flow_hz" overflow="scroll" lineGap="5" colGap="265" lineItemCount="2" defaultItem="ui://te1gxawoj29zi6t">
       <item title="头盔" name="hair"/>
       <item title="衣服" name="coat"/>
       <item title="裤子" name="paints"/>

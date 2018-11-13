@@ -4,12 +4,14 @@
   <displayList>
     <image id="n2_8zcx" name="bg" src="qn8o1" fileName="img/bg_bag.png" pkg="te1gxawo" xy="1,0"/>
     <image id="n4_rw7f" name="n4" src="8zcx3" fileName="img/img_chat_bg.png" xy="162,61"/>
-    <component id="n8_rw7f" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="650,-7"/>
+    <component id="n8_rw7f" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="650,-7" size="56,57">
+      <Button icon="ui://eunktclqsz331"/>
+    </component>
     <text id="n3_8zcx" name="title" xy="257,0" size="176,44" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="设置"/>
     <component id="n26_o8k6" name="tgPathFinding" src="rw7fg" fileName="com/settingToggle.xml" xy="232,127" size="160,33" group="n30_o8k6">
       <Label title="点击寻路"/>
     </component>
-    <component id="n27_o8k6" name="rbImageQuality" src="9utnt" fileName="com/radioButton.xml" xy="232,183" size="697,33" group="n30_o8k6">
+    <component id="n27_o8k6" name="rbImageQuality" src="9utnt" fileName="com/radioButton.xml" xy="232,183" size="764,33" group="n30_o8k6">
       <Label title="同屏显示"/>
     </component>
     <component id="n43_igxs" name="tgWeatherSystem" src="rw7fg" fileName="com/settingToggle.xml" xy="232,238" size="160,33" group="n30_o8k6">

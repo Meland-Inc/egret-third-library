@@ -13,7 +13,9 @@
       <item/>
       <item/>
     </list>
-    <component id="n6_jtjd" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="1076,2"/>
+    <component id="n6_jtjd" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1078,1" size="56,57">
+      <Button icon="ui://eunktclqsz331"/>
+    </component>
     <graph id="n9_tj4m" name="n9" xy="762,17" size="165,24" group="n10_tj4m" type="rect"/>
     <text id="n8_tj4m" name="inpSearch" xy="763,16" size="138,25" group="n10_tj4m" input="true" fontSize="16" vAlign="middle" autoSize="none" singleLine="true" text=""/>
     <image id="n7_tj4m" name="n7" src="tj4m2" fileName="img/img_build_search_2.png" xy="908,20" group="n10_tj4m"/>
@@ -32,13 +34,13 @@
     </list>
     <component id="n16_o8k6" name="btnSearchSetting" src="o8k65" fileName="btn/btnSearch.xml" xy="946,15"/>
     <component id="n17_wbpe" name="btnDownLog" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="272,12">
-      <Button title="下载日志"/>
+      <Button title="下载日志" icon="ui://4o62dubdoe8k3"/>
     </component>
     <image id="n18_wbpe" name="bg" src="qn8o1" fileName="img/bg_bag.png" pkg="te1gxawo" xy="118,65" size="899,509" group="n24_wbpe"/>
     <text id="n20_wbpe" name="titleLogDetail" xy="477,69" size="175,42" group="n24_wbpe" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="日志详情"/>
     <list id="n22_wbpe" name="lstDetail" xy="147,123" size="842,439" group="n24_wbpe" overflow="scroll" scrollBarFlags="128"/>
-    <component id="n23_wbpe" name="btnCloseLogDetail" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="961,63" group="n24_wbpe">
-      <Button controller="conShowDetail" page="0"/>
+    <component id="n23_wbpe" name="btnCloseLogDetail" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="961,63" size="56,57" group="n24_wbpe">
+      <Button icon="ui://eunktclqsz331" controller="conShowDetail" page="0"/>
     </component>
     <group id="n24_wbpe" name="detail" xy="118,63" size="899,511" advanced="true">
       <gearDisplay controller="conShowDetail" pages="1"/>

@@ -3,16 +3,16 @@
   <controller name="state" pages="0,lock,1,premake,2,making" selected="0"/>
   <displayList>
     <image id="n0_lxnu" name="n0" src="lxnu3" fileName="img/bg_compose.png" xy="0,0"/>
-    <text id="n1_lxnu" name="n1" xy="391,10" size="55,30" fontSize="24" color="#ffffff" bold="true" text="配方"/>
+    <text id="n1_lxnu" name="n1" xy="391,10" size="55,28" fontSize="24" color="#ffffff" bold="true" text="配方"/>
     <image id="n3_lxnu" name="n3" src="lxnus" fileName="img/img_compose_2.png" xy="560,55"/>
     <image id="n23_lxnu" name="n23" src="lxnus" fileName="img/img_compose_2.png" xy="14,55"/>
     <image id="n24_lxnu" name="n24" src="lxnus" fileName="img/img_compose_2.png" xy="287,55"/>
     <image id="n22_lxnu" name="n22" src="lxnuu" fileName="img/img_compose_4.png" xy="18,61"/>
     <image id="n25_lxnu" name="n25" src="lxnuu" fileName="img/img_compose_4.png" xy="292,61"/>
     <image id="n4_lxnu" name="n4" src="lxnuu" fileName="img/img_compose_4.png" xy="565,61"/>
-    <text id="n6_lxnu" name="n6" xy="350,64" size="131,27" fontSize="20" color="#57a7df" bold="true" text="工作台物品栏"/>
-    <text id="n7_lxnu" name="n7" xy="665,63" size="47,27" fontSize="20" color="#57a7df" bold="true" text="合成"/>
-    <text id="n26_lxnu" name="n26" xy="97,65" size="89,27" fontSize="20" color="#57a7df" bold="true" text="我的背包"/>
+    <text id="n6_lxnu" name="n6" xy="350,64" size="131,24" fontSize="20" color="#57a7df" bold="true" text="工作台物品栏"/>
+    <text id="n7_lxnu" name="n7" xy="665,63" size="47,24" fontSize="20" color="#57a7df" bold="true" text="合成"/>
+    <text id="n26_lxnu" name="n26" xy="97,65" size="89,24" fontSize="20" color="#57a7df" bold="true" text="我的背包"/>
     <image id="n8_lxnu" name="n8" src="lxnux" fileName="img/img_compose_7.png" xy="569,180"/>
     <list id="n10_lxnu" name="listTab" xy="19,98" size="250,30" layout="row" margin="2,2,2,2" lineGap="5" defaultItem="ui://kdeyuiwwlxnu1b">
       <item title="全部"/>
@@ -34,7 +34,7 @@
       <item/>
     </list>
     <component id="n12_lxnu" name="comProductItem" src="lxnu19" fileName="com/comArchItemPu57.xml" xy="580,115"/>
-    <text id="n13_lxnu" name="tfProductName" xy="663,93" size="50,21" fontSize="14" color="#9b9b9b" bold="true" text="棉花糖"/>
+    <text id="n13_lxnu" name="tfProductName" xy="663,93" size="50,18" fontSize="14" color="#9b9b9b" bold="true" text="棉花糖"/>
     <text id="n14_lxnu" name="tfProductDesc" xy="647,118" size="160,60" fontSize="12" color="#9b9b9b" autoSize="none" bold="true" text="增加飞行系宠物100点经验，在料理冲由芒果星产物加工而成"/>
     <text id="n21_lxnu" name="tfLock" xy="652,375" size="75,21" fontSize="15" color="#dc6b3a" align="center" autoSize="none" bold="true" text="20级解锁">
       <gearDisplay controller="state" pages="0"/>
@@ -76,6 +76,8 @@
     <component id="n18_lxnu" name="comMatItem4" src="lxnu18" fileName="com/comArchItemNb57.xml" xy="599,277" scale="0.8,0.8"/>
     <component id="n19_lxnu" name="comMatItem5" src="lxnu18" fileName="com/comArchItemNb57.xml" xy="665,277" scale="0.8,0.8"/>
     <component id="n20_lxnu" name="comMatItem6" src="lxnu18" fileName="com/comArchItemNb57.xml" xy="734,277" scale="0.8,0.8"/>
-    <component id="n42_jlj8" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="809,-17"/>
+    <component id="n42_jlj8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="809,-17" size="56,57">
+      <Button icon="ui://eunktclqsz331"/>
+    </component>
   </displayList>
 </component>

@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="178,13" extention="Slider">
+<component size="181,17" extention="Slider">
   <displayList>
-    <image id="n1" name="n1" src="k8dt19" fileName="img/img_bag_slider_2.png" xy="0,0" size="178,13">
+    <image id="n1" name="n1" src="pgixi64" fileName="newImg/img_cm_slider_1.png" pkg="te1gxawo" xy="0,0" size="178,17">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n2" name="bar" src="k8dt18" fileName="img/img_bag_slider_1.png" xy="0,0" size="167,13"/>
-    <component id="n3" name="grip" src="k8dt1c" fileName="sld/Slider1_grip.xml" xy="153,-8">
+    <image id="n2" name="bar" src="pgixi65" fileName="newImg/img_cm_slider_2.png" pkg="te1gxawo" xy="3,2" size="167,13"/>
+    <component id="n3" name="grip" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="152,-11" size="29,34">
       <relation target="n2" sidePair="right-right"/>
+      <Button icon="ui://te1gxawopgixi66"/>
     </component>
   </displayList>
   <Slider titleType="valueAndmax"/>
