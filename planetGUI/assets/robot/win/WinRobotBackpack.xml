@@ -1,16 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkpgixn">
+  <controller name="state" pages="0,normal,1,detail" selected="0"/>
   <displayList>
-    <image id="n0_pgix" name="n0" src="efrs1o" fileName="newImg/bg_cm_5.png" pkg="te1gxawo" xy="0,0" size="1136,640" group="n5_pgix" hideByEditor="true"/>
-    <image id="n1_pgix" name="n1" src="efrs23" fileName="newImg/img_cm_title2.png" pkg="te1gxawo" xy="482,11" group="n5_pgix"/>
-    <text id="n2_pgix" name="n2" xy="529,13" size="115,29" group="n5_pgix" fontSize="22" color="#ffffff" align="center" vAlign="middle" strokeColor="#352e2c" strokeSize="2" text="机器人背包"/>
+    <image id="n0_pgix" name="n0" src="efrs1o" fileName="newImg/bg_cm_5.png" pkg="te1gxawo" xy="0,0" size="1136,640" group="n5_pgix"/>
+    <image id="n1_pgix" name="n1" src="efrs23" fileName="newImg/img_cm_title2.png" pkg="te1gxawo" xy="463,11" group="n5_pgix"/>
+    <text id="n2_pgix" name="n2" xy="510,13" size="115,29" group="n5_pgix" fontSize="22" color="#ffffff" align="center" vAlign="middle" strokeColor="#352e2c" strokeSize="2" text="机器人背包"/>
     <graph id="n3_pgix" name="n3" xy="0,2" size="1136,50" group="n5_pgix" alpha="0" type="rect"/>
     <component id="n4_pgix" name="btnClose" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="1044,5" size="80,42" group="n5_pgix">
       <Button icon="ui://te1gxawoefrs1r"/>
     </component>
-    <image id="n6_pgix" name="n6" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="48,145" size="300,420" group="n5_pgix"/>
-    <text id="n7_pgix" name="n7" xy="151,108" size="93,29" group="n5_pgix" fontSize="22" color="#5b4b37" text="我的背包"/>
-    <list id="n8_pgix" name="listBag" xy="48,156" size="300,400" group="n5_pgix" layout="flow_hz" overflow="scroll" lineItemCount="4" defaultItem="ui://te1gxawoise6i3j" align="center">
+    <group id="n5_pgix" name="gpBg" xy="0,0" size="1136,640" group="n76_pgix" collapsed="true"/>
+    <list id="n77_pgix" name="listEquip" xy="382,191" size="378,224" group="n39_pgix" layout="flow_hz" overflow="hidden" lineGap="5" colGap="235" lineItemCount="2" defaultItem="ui://te1gxawoj29zi6t">
+      <item title="头盔" name="hair"/>
+      <item title="衣服" name="coat"/>
+      <item title="裤子" name="paints"/>
+      <item title="鞋子" name="shoe"/>
+      <item title="手套" name="glove"/>
+      <item title="饰品" name="accessory"/>
+    </list>
+    <image id="n21_pgix" name="n21" src="ot9s1y" fileName="newImg/img_robot_1.png" xy="375,138" group="n39_pgix"/>
+    <image id="n23_pgix" name="n23" src="ot9si2z" fileName="newImg/img_cm_bottom_5.png" pkg="te1gxawo" xy="373,183" size="90,237" group="n39_pgix"/>
+    <image id="n24_pgix" name="n24" src="ot9si2z" fileName="newImg/img_cm_bottom_5.png" pkg="te1gxawo" xy="679,183" size="90,237" group="n39_pgix"/>
+    <text id="n25_pgix" name="tfRobotName" xy="468,377" size="200,30" group="n39_pgix" fontSize="24" color="#4c3f32" align="center" vAlign="middle" autoSize="none" bold="true" text="方呆头"/>
+    <text id="n26_pgix" name="tfMainLevel" xy="468,409" size="200,30" group="n39_pgix" fontSize="24" color="#7a6a5a" align="center" vAlign="middle" vars="true" autoSize="none" text="lv.{lv=0}"/>
+    <component id="n33_pgix" name="comAvatar" src="j21fi3z" fileName="com/ComEmpty.xml" pkg="te1gxawo" xy="560,350" size="1,1" group="n39_pgix"/>
+    <image id="n34_pgix" name="n34" src="ot9si2s" fileName="newImg/img_cm_attack.png" pkg="te1gxawo" xy="482,455" group="n39_pgix"/>
+    <image id="n35_pgix" name="n35" src="ot9si2m" fileName="newImg/icon_cm_defende.png" pkg="te1gxawo" xy="583,455" group="n39_pgix"/>
+    <text id="n22_pgix" name="tfType" xy="386,140" size="59,25" group="n39_pgix" fontSize="18" color="#ffffff" align="center" vAlign="middle" text="家政型">
+      <relation target="n21_pgix" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n36_pgix" name="tfMainAtk" xy="522,458" size="38,27" group="n39_pgix" fontSize="20" color="#584736" align="center" vAlign="middle" autoClearText="true" text="200"/>
+    <text id="n37_pgix" name="tfMainDef" xy="620,458" size="38,27" group="n39_pgix" fontSize="20" color="#584736" align="center" vAlign="middle" autoClearText="true" text="200"/>
+    <component id="n38_pgix" name="btnDetail" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="500,510" size="138,50" group="n39_pgix">
+      <Button title="详细属性" titleColor="#ffffff" titleFontSize="20" icon="ui://te1gxawoefrs1s" controller="state" page="1"/>
+    </component>
+    <group id="n39_pgix" name="grpNormal" xy="373,138" size="396,422" group="n76_pgix" advanced="true" collapsed="true">
+      <gearDisplay controller="state" pages="0"/>
+    </group>
+    <image id="n40_pgix" name="n40" src="ot9si3a" fileName="newImg/img_cm_title4.png" pkg="te1gxawo" xy="458,166" size="220,24" group="n73_pgix"/>
+    <text id="n41_pgix" name="n41" xy="524,165" size="87,26" group="n73_pgix" fontSize="18" color="#584736" align="center" vAlign="middle" autoSize="none" text="基本属性"/>
+    <image id="n42_pgix" name="n42" src="ot9si3a" fileName="newImg/img_cm_title4.png" pkg="te1gxawo" xy="458,239" size="220,24" group="n73_pgix"/>
+    <text id="n43_pgix" name="n43" xy="524,238" size="87,26" group="n73_pgix" fontSize="18" color="#584736" align="center" vAlign="middle" autoSize="none" text="战斗属性"/>
+    <image id="n44_pgix" name="n44" src="ot9si3a" fileName="newImg/img_cm_title4.png" pkg="te1gxawo" xy="458,317" size="220,24" group="n73_pgix"/>
+    <text id="n45_pgix" name="n45" xy="524,316" size="87,26" group="n73_pgix" fontSize="18" color="#584736" align="center" vAlign="middle" autoSize="none" text="元素属性"/>
+    <image id="n46_pgix" name="n46" src="ot9si2s" fileName="newImg/img_cm_attack.png" pkg="te1gxawo" xy="470,275" group="n73_pgix"/>
+    <image id="n47_pgix" name="n47" src="ot9si2m" fileName="newImg/icon_cm_defende.png" pkg="te1gxawo" xy="583,275" group="n73_pgix"/>
+    <text id="n48_pgix" name="n48" xy="470,348" size="25,27" group="n73_pgix" fontSize="20" color="#584736" align="center" vAlign="middle" text="火"/>
+    <text id="n49_pgix" name="n49" xy="470,373" size="25,27" group="n73_pgix" fontSize="20" color="#584736" align="center" vAlign="middle" text="冰"/>
+    <text id="n50_pgix" name="n50" xy="470,398" size="25,27" group="n73_pgix" fontSize="20" color="#584736" align="center" vAlign="middle" text="雷"/>
+    <text id="n51_pgix" name="n51" xy="470,423" size="25,27" group="n73_pgix" fontSize="20" color="#584736" align="center" vAlign="middle" text="毒"/>
+    <text id="n52_pgix" name="n52" xy="470,448" size="25,27" group="n73_pgix" fontSize="20" color="#584736" align="center" vAlign="middle" text="暗"/>
+    <text id="n53_pgix" name="n53" xy="600,348" size="45,27" group="n73_pgix" fontSize="20" color="#584736" align="center" vAlign="middle" text="火炕"/>
+    <text id="n54_pgix" name="n54" xy="600,373" size="45,27" group="n73_pgix" fontSize="20" color="#584736" align="center" vAlign="middle" text="冰抗"/>
+    <text id="n55_pgix" name="n55" xy="600,398" size="45,27" group="n73_pgix" fontSize="20" color="#584736" align="center" vAlign="middle" text="雷抗"/>
+    <text id="n56_pgix" name="n56" xy="600,423" size="45,27" group="n73_pgix" fontSize="20" color="#584736" align="center" vAlign="middle" text="毒抗"/>
+    <text id="n57_pgix" name="n57" xy="600,448" size="45,27" group="n73_pgix" fontSize="20" color="#584736" align="center" vAlign="middle" text="暗抗"/>
+    <text id="n58_pgix" name="tfLevel" xy="475,200" size="40,27" group="n73_pgix" fontSize="20" color="#584736" align="center" vAlign="middle" vars="true" text="LV{lv=0}"/>
+    <text id="n59_pgix" name="tfExp" xy="550,200" size="33,27" group="n73_pgix" fontSize="20" color="#584736" align="center" vAlign="middle" vars="true" text="{curExp=0}/{maxExp=0}"/>
+    <text id="n60_pgix" name="tfAtk" xy="513,278" size="38,27" group="n73_pgix" fontSize="20" color="#584736" align="center" vAlign="middle" autoClearText="true" text="200"/>
+    <text id="n61_pgix" name="tfDef" xy="620,278" size="38,27" group="n73_pgix" fontSize="20" color="#584736" align="center" vAlign="middle" autoClearText="true" text="200"/>
+    <text id="n62_pgix" name="tfFire" xy="503,348" size="16,27" group="n73_pgix" fontSize="20" color="#584736" align="center" vAlign="middle" text="0"/>
+    <text id="n63_pgix" name="tfIce" xy="503,373" size="16,27" group="n73_pgix" fontSize="20" color="#584736" align="center" vAlign="middle" text="0"/>
+    <text id="n64_pgix" name="tfThunder" xy="503,398" size="16,27" group="n73_pgix" fontSize="20" color="#584736" align="center" vAlign="middle" text="0"/>
+    <text id="n65_pgix" name="tfPoison" xy="503,423" size="16,27" group="n73_pgix" fontSize="20" color="#584736" align="center" vAlign="middle" text="0"/>
+    <text id="n66_pgix" name="tfDark" xy="503,448" size="16,27" group="n73_pgix" fontSize="20" color="#584736" align="center" vAlign="middle" text="0"/>
+    <text id="n67_pgix" name="tfFireDef" xy="651,348" size="16,27" group="n73_pgix" fontSize="20" color="#584736" align="center" vAlign="middle" text="0"/>
+    <text id="n68_pgix" name="tfIceDef" xy="651,373" size="16,27" group="n73_pgix" fontSize="20" color="#584736" align="center" vAlign="middle" text="0"/>
+    <text id="n69_pgix" name="tfThunderDef" xy="651,398" size="16,27" group="n73_pgix" fontSize="20" color="#584736" align="center" vAlign="middle" text="0"/>
+    <text id="n70_pgix" name="tfPoisonDef" xy="651,423" size="16,27" group="n73_pgix" fontSize="20" color="#584736" align="center" vAlign="middle" text="0"/>
+    <text id="n71_pgix" name="tfDarkDef" xy="651,448" size="16,27" group="n73_pgix" fontSize="20" color="#584736" align="center" vAlign="middle" text="0"/>
+    <component id="n72_pgix" name="btnBack" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="499,510" size="138,50" group="n73_pgix">
+      <Button title="返回" titleColor="#ffffff" titleFontSize="20" icon="ui://te1gxawoefrs1s" controller="state" page="0"/>
+    </component>
+    <group id="n73_pgix" name="grpDetail" xy="458,165" size="220,395" group="n76_pgix" advanced="true" collapsed="true">
+      <gearDisplay controller="state" pages="1"/>
+    </group>
+    <image id="n6_pgix" name="n6" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="48,145" size="300,420" group="n74_pgix"/>
+    <list id="n8_pgix" name="listBag" xy="48,156" size="300,400" group="n74_pgix" layout="flow_hz" overflow="scroll" lineItemCount="4" defaultItem="ui://te1gxawoj29zi6u" align="center">
       <item/>
       <item/>
       <item/>
@@ -52,9 +118,13 @@
       <item/>
       <item/>
     </list>
-    <image id="n11_pgix" name="n11" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="793,144" size="300,420" group="n5_pgix"/>
-    <text id="n12_pgix" name="tfRobotBag" xy="896,107" size="93,29" group="n5_pgix" fontSize="22" color="#5b4b37" text="我的背包"/>
-    <list id="n13_pgix" name="listRobotBag" xy="793,155" size="300,400" group="n5_pgix" layout="flow_hz" overflow="scroll" lineItemCount="4" defaultItem="ui://te1gxawoise6i3j" align="center">
+    <image id="n15_pgix" name="n15" src="pgixi5n" fileName="newImg/img_cm_bottom_7.png" pkg="te1gxawo" xy="50,107" size="296,28" group="n74_pgix"/>
+    <image id="n14_pgix" name="n14" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="77,115" group="n74_pgix"/>
+    <image id="n16_pgix" name="n16" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="314,115" group="n74_pgix" scale="-1,1"/>
+    <text id="n7_pgix" name="n7" xy="151,106" size="93,29" group="n74_pgix" fontSize="22" color="#5b4b37" align="center" vAlign="middle" text="我的背包"/>
+    <group id="n74_pgix" name="grpBag" xy="48,106" size="306,459" group="n76_pgix"/>
+    <image id="n11_pgix" name="n11" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="793,144" size="300,420" group="n75_pgix"/>
+    <list id="n13_pgix" name="listRobotBag" xy="793,155" size="300,400" group="n75_pgix" layout="flow_hz" overflow="scroll" lineItemCount="4" defaultItem="ui://te1gxawoj29zi6u" align="center">
       <item/>
       <item/>
       <item/>
@@ -96,6 +166,13 @@
       <item/>
       <item/>
     </list>
-    <group id="n5_pgix" name="gpBg" xy="0,0" size="1136,640"/>
+    <image id="n17_pgix" name="n17" src="pgixi5n" fileName="newImg/img_cm_bottom_7.png" pkg="te1gxawo" xy="793,107" size="296,28" group="n75_pgix"/>
+    <image id="n18_pgix" name="n18" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="820,115" group="n75_pgix"/>
+    <image id="n19_pgix" name="n19" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="1056,115" group="n75_pgix" scale="-1,1"/>
+    <text id="n20_pgix" name="tfRobotBag" xy="893,106" size="93,29" group="n75_pgix" fontSize="22" color="#5b4b37" align="center" vAlign="middle" text="我的背包"/>
+    <group id="n75_pgix" name="grpRobotBag" xy="793,106" size="303,458" group="n76_pgix" collapsed="true"/>
+    <group id="n76_pgix" name="root" xy="0,0" size="1136,640" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
   </displayList>
 </component>

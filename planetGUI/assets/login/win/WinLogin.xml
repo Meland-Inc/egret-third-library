@@ -50,10 +50,30 @@
     <text id="n43_ptq4" name="tfAccount" xy="2119,261" size="180,30" group="n34_ptq4" input="true" prompt="请输入账号/数字ID" font="方正准圆简体" fontSize="18" color="#e4e0cf" vAlign="middle" autoSize="none" bold="true" singleLine="true" text=""/>
     <text id="n44_ptq4" name="tfPassword" xy="2119,312" size="180,30" group="n34_ptq4" input="true" prompt="请输入密码" password="true" font="方正准圆简体" fontSize="18" color="#e4e0cf" vAlign="middle" autoSize="none" bold="true" singleLine="true" text=""/>
     <component id="n70_hsrb" name="btnReturnToSelectModeGroup" src="hsrb2c" fileName="btn/btnReturn.xml" xy="2327,192" group="n34_ptq4"/>
-    <text id="n67_ptq4" name="tfErrorInSignin" xy="2117,349" size="135,24" group="n34_ptq4" visible="false" font="方正准圆简体" fontSize="18" color="#ff0000" vAlign="middle" bold="true" text="账号或密码错误"/>
-    <text id="n76_qo8v" name="tfSigninGroupTitle" xy="2138,196" size="93,29" group="n34_ptq4" fontSize="22" color="#ffffff" text="账号登陆"/>
+    <text id="n67_ptq4" name="tfErrorInSignin" xy="2117,349" size="138,24" group="n34_ptq4" visible="false" font="方正准圆简体" fontSize="18" color="#ff0000" vAlign="middle" bold="true" text="账号或密码错误"/>
+    <text id="n76_qo8v" name="tfSigninGroupTitle" xy="2138,196" size="93,29" group="n34_ptq4" fontSize="22" color="#ffffff" text="账号登录"/>
     <image id="n77_qo8v" name="imgBottomBG" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="2000,432" size="370,14" group="n34_ptq4"/>
     <group id="n34_ptq4" name="signinGroup" xy="2000,189" size="370,262" advanced="true" collapsed="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <image id="n85_x0vt" name="imgSigninBG" src="efrs1m" fileName="newImg/bg_cm_3.png" pkg="te1gxawo" xy="2000,189" size="370,262" group="n98_x0vt"/>
+    <component id="n86_x0vt" name="btnTouristsSignin" src="efrs25" fileName="btn/CanChangeCommonButton.xml" pkg="te1gxawo" xy="2070,374" size="100,40" group="n98_x0vt">
+      <Button title="开始" titleColor="#5e4a34" titleFontSize="18" icon="ui://te1gxawoefrs1w"/>
+    </component>
+    <component id="n87_x0vt" name="btnTouristsSave" src="efrs25" fileName="btn/CanChangeCommonButton.xml" pkg="te1gxawo" xy="2200,374" size="100,40" group="n98_x0vt">
+      <Button title="截图保存" titleColor="#5e4a34" titleFontSize="18" icon="ui://te1gxawoqo8vi21"/>
+    </component>
+    <image id="n88_x0vt" name="imgPassword" src="qo8v55" fileName="newImg/icon_login_password.png" xy="2086,315" group="n98_x0vt"/>
+    <image id="n89_x0vt" name="imgPasswordlLine" src="jddvw" fileName="newImg/img/img_login_1.png" xy="2070,344" size="230,2" group="n98_x0vt"/>
+    <image id="n90_x0vt" name="imgUser" src="qo8v53" fileName="newImg/icon_login_account.png" xy="2085,266" group="n98_x0vt"/>
+    <image id="n91_x0vt" name="imgUserLine" src="jddvw" fileName="newImg/img/img_login_1.png" xy="2070,296" size="230,2" group="n98_x0vt"/>
+    <text id="n92_x0vt" name="tfTouristsAccount" xy="2119,261" size="180,30" group="n98_x0vt" input="true" prompt="[color=#e4e0cf]请输入账号/数字ID[/color]" font="方正准圆简体" fontSize="18" vAlign="middle" autoSize="none" bold="true" singleLine="true" text=""/>
+    <text id="n93_x0vt" name="tfTouristsPassword" xy="2119,312" size="180,30" group="n98_x0vt" input="true" prompt="[color=#e4e0cf]请输入密码[/color]" font="方正准圆简体" fontSize="18" vAlign="middle" autoSize="none" bold="true" singleLine="true" text=""/>
+    <component id="n94_x0vt" name="btnReturnToSelectModeGroup2" src="hsrb2c" fileName="btn/btnReturn.xml" xy="2327,192" group="n98_x0vt"/>
+    <text id="n95_x0vt" name="tfErrorInVouristsSignin" xy="2117,349" size="103,24" group="n98_x0vt" visible="false" font="方正准圆简体" fontSize="18" color="#ff0000" vAlign="middle" bold="true" text="账号已注册"/>
+    <text id="n96_x0vt" name="tfSigninGroupTitle" xy="2138,196" size="93,29" group="n98_x0vt" fontSize="22" color="#ffffff" text="游客登录"/>
+    <image id="n97_x0vt" name="imgBottomBG" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="2000,433" size="370,14" group="n98_x0vt"/>
+    <group id="n98_x0vt" name="touristsExperienceGroup" xy="2000,189" size="370,262" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
     <image id="n7_jddv" name="imgSelectModeBG" src="efrs1m" fileName="newImg/bg_cm_3.png" pkg="te1gxawo" xy="383,189" size="370,262" group="n9_jddv"/>
@@ -84,35 +104,47 @@
   <transition name="toSignin" options="4">
     <item time="0" type="Alpha" target="n34_ptq4" value="1"/>
     <item time="0" type="Alpha" target="n9_jddv" tween="true" startValue="1" endValue="0" duration="12"/>
+    <item time="0" type="Alpha" target="n98_x0vt" value="1"/>
     <item time="0" type="XY" target="n9_jddv" tween="true" startValue="383,-" endValue="-2000,-" duration="12" ease="Linear"/>
-    <item time="0" type="XY" target="n47_ptq4" value="2000,-"/>
     <item time="0" type="XY" target="n34_ptq4" value="2000,-"/>
+    <item time="0" type="XY" target="n98_x0vt" value="2000,-"/>
+    <item time="0" type="XY" target="n47_ptq4" value="2000,-"/>
     <item time="6" type="XY" target="n34_ptq4" tween="true" startValue="2000,-" endValue="383,-" duration="12" ease="Back.Out"/>
+    <item time="6" type="XY" target="n98_x0vt" tween="true" startValue="2000,-" endValue="383,-" duration="12" ease="Back.Out"/>
+    <item time="18" type="Alpha" target="n98_x0vt" value="1"/>
     <item time="18" type="Alpha" target="n34_ptq4" value="1"/>
   </transition>
   <transition name="toLogin" options="4">
-    <item time="0" type="Alpha" target="n47_ptq4" value="1"/>
     <item time="0" type="Alpha" target="n34_ptq4" tween="true" startValue="1" endValue="0" duration="12"/>
+    <item time="0" type="Alpha" target="n47_ptq4" value="1"/>
+    <item time="0" type="Alpha" target="n98_x0vt" tween="true" startValue="1" endValue="0" duration="12"/>
+    <item time="0" type="XY" target="n98_x0vt" tween="true" startValue="347,-" endValue="-2000,-" duration="12" ease="Linear"/>
     <item time="0" type="XY" target="n34_ptq4" tween="true" startValue="347,-" endValue="-2000,-" duration="12" ease="Linear"/>
-    <item time="0" type="XY" target="n47_ptq4" value="2000,-"/>
     <item time="0" type="XY" target="n9_jddv" value="-2000,-"/>
+    <item time="0" type="XY" target="n47_ptq4" value="2000,-"/>
     <item time="6" type="XY" target="n47_ptq4" tween="true" startValue="2000,-" endValue="383,-" duration="12" ease="Back.Out"/>
     <item time="18" type="Alpha" target="n47_ptq4" value="1"/>
   </transition>
   <transition name="returnToSignin" options="4">
+    <item time="0" type="Alpha" target="n98_x0vt" value="1"/>
     <item time="0" type="Alpha" target="n34_ptq4" value="1"/>
     <item time="0" type="Alpha" target="n47_ptq4" tween="true" startValue="1" endValue="0" duration="12" ease="Linear"/>
-    <item time="0" type="XY" target="n9_jddv" tween="true" startValue="-2000,-"/>
     <item time="0" type="XY" target="n34_ptq4" value="-2000,-"/>
+    <item time="0" type="XY" target="n98_x0vt" value="-2000,-"/>
+    <item time="0" type="XY" target="n9_jddv" tween="true" startValue="-2000,-"/>
     <item time="0" type="XY" target="n47_ptq4" tween="true" startValue="383,-" endValue="2000,-" duration="12" ease="Linear"/>
     <item time="6" type="XY" target="n34_ptq4" tween="true" startValue="-2000,-" endValue="383,-" duration="12" ease="Back.Out"/>
+    <item time="6" type="XY" target="n98_x0vt" tween="true" startValue="-2000,-" endValue="383,-" duration="12" ease="Back.Out"/>
     <item time="18" type="Alpha" target="n34_ptq4" value="1"/>
+    <item time="18" type="Alpha" target="n98_x0vt" value="1"/>
   </transition>
   <transition name="returnToSelect" options="4">
+    <item time="0" type="Alpha" target="n98_x0vt" tween="true" startValue="1" endValue="0" duration="12" ease="Linear"/>
     <item time="0" type="Alpha" target="n9_jddv" value="1"/>
     <item time="0" type="Alpha" target="n34_ptq4" tween="true" startValue="1" endValue="0" duration="12" ease="Linear"/>
-    <item time="0" type="XY" target="n9_jddv" value="-2000,-"/>
     <item time="0" type="XY" target="n34_ptq4" tween="true" startValue="383,-" endValue="2000,-" duration="12" ease="Linear"/>
+    <item time="0" type="XY" target="n98_x0vt" tween="true" startValue="383,-" endValue="2000,-" duration="12" ease="Linear"/>
+    <item time="0" type="XY" target="n9_jddv" value="-2000,-"/>
     <item time="0" type="XY" target="n47_ptq4" value="-2000,-"/>
     <item time="6" type="XY" target="n9_jddv" tween="true" startValue="-2000,-" endValue="383,-" duration="12" ease="Back.Out"/>
     <item time="18" type="Alpha" target="n9_jddv" value="1"/>

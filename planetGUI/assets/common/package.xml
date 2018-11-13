@@ -13,7 +13,6 @@
     <image id="qn8o9" name="img_main_chatbubble_2.png" path="/img/" exported="true"/>
     <component id="qn8oa" name="CommonModal.xml" path="/com/" exported="true"/>
     <component id="qn8ob" name="CommonBubbleText.xml" path="/com/" exported="true"/>
-    <component id="qn8oc" name="btnClose.xml" path="/btn/" exported="true"/>
     <component id="qn8od" name="btnCommon.xml" path="/btn/" exported="true"/>
     <component id="qn8oe" name="rbtnCommon.xml" path="/btn/" exported="true"/>
     <component id="cnpnf" name="CommonToast.xml" path="/com/" exported="true"/>
@@ -32,8 +31,6 @@
     <image id="rk5gt" name="btn_build_define.png" path="/img/" exported="true"/>
     <image id="rk5gu" name="btn_build_delete.png" path="/img/" exported="true"/>
     <component id="rk5gv" name="ComPickObjectToast.xml" path="/com/"/>
-    <component id="rk5gz" name="btnDelOp.xml" path="/btn/" exported="true"/>
-    <component id="rk5g10" name="btnSureOp.xml" path="/btn/" exported="true"/>
     <sound id="tqc911" name="buttonTouch.wav" path="/sound/" exported="true"/>
     <sound id="tqc912" name="close.wav" path="/sound/" exported="true"/>
     <sound id="tqc913" name="success.wav" path="/sound/" exported="true"/>
@@ -55,7 +52,6 @@
     <image id="er201g" name="img_bag_item_5.png" path="/img/"/>
     <image id="jr3d1h" name="btn_build_rotating.png" path="/img/" exported="true"/>
     <component id="jr3d1j" name="btnRotateOp.xml" path="/btn/" exported="true"/>
-    <component id="132oi1t" name="btnClose1.xml" path="/btn/" exported="true"/>
     <image id="efrs1k" name="bg_cm_1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="28,57,56,18"/>
     <image id="efrs1l" name="bg_cm_2.png" path="/newImg/" exported="true"/>
     <image id="efrs1m" name="bg_cm_3.png" path="/newImg/" exported="true" scale="9grid" scale9grid="22,42,44,24"/>
@@ -124,7 +120,7 @@
     <image id="ot9si2q" name="icon_cm_zoom1.png" path="/newImg/" exported="true"/>
     <image id="ot9si2r" name="icon_cm_zoom2.png" path="/newImg/" exported="true"/>
     <image id="ot9si2s" name="img_cm_attack.png" path="/newImg/" exported="true"/>
-    <image id="ot9si2t" name="img_cm_bottomframe_1.png" path="/newImg/" exported="true"/>
+    <image id="ot9si2t" name="img_cm_bottomframe_1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="8,6,13,17"/>
     <image id="ot9si2u" name="img_cm_bottomframe_2.png" path="/newImg/" exported="true"/>
     <image id="ot9si2v" name="img_cm_bottom_1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="18,18,36,36"/>
     <image id="ot9si2w" name="img_cm_bottom_2.png" path="/newImg/" exported="true"/>
@@ -144,12 +140,6 @@
     <image id="ot9si3a" name="img_cm_title4.png" path="/newImg/" exported="true" scale="9grid" scale9grid="61,6,49,12"/>
     <image id="ot9si3b" name="img_cm_zoom.png" path="/newImg/" exported="true" scale="9grid" scale9grid="17,40,34,80"/>
     <component id="ot9si3c" name="btnTab.xml" path="/btn/" exported="true"/>
-    <component id="tjy5i3d" name="btnCommon1.xml" path="/btn/" exported="true"/>
-    <component id="tjy5i3e" name="btnCommonScale.xml" path="/btn/" exported="true"/>
-    <image id="tjy5i3f" name="img_cm_bottomframe_1.png" path="/btn/" exported="true" scale="9grid" scale9grid="8,8,14,14"/>
-    <image id="tjy5i3g" name="img_cm_bottomframe_2.png" path="/btn/" exported="true"/>
-    <image id="tjy5i3h" name="img_cm_pagedown.png" path="/btn/" exported="true"/>
-    <image id="tjy5i3i" name="img_cm_pageup.png" path="/btn/" exported="true"/>
     <component id="ise6i3j" name="ComBagItem.xml" path="/com/" exported="true"/>
     <component id="ise6i3k" name="ComEquipItem.xml" path="/com/" exported="true"/>
     <image id="luqxi3l" name="btn_cm_yellow7.png" path="/newImg/" exported="true" scale="9grid" scale9grid="12,12,12,12"/>
@@ -216,7 +206,7 @@
     <image id="pgixi5k" name="img_cm_bottom_15.png" path="/newImg/" exported="true"/>
     <image id="pgixi5l" name="img_cm_bottom_16.png" path="/newImg/" exported="true"/>
     <image id="pgixi5m" name="img_cm_bottom_17.png" path="/newImg/" exported="true"/>
-    <image id="pgixi5n" name="img_cm_bottom_7.png" path="/newImg/" exported="true"/>
+    <image id="pgixi5n" name="img_cm_bottom_7.png" path="/newImg/" exported="true" scale="9grid" scale9grid="7,7,14,14"/>
     <image id="pgixi5o" name="img_cm_bottom_8.png" path="/newImg/" exported="true"/>
     <image id="pgixi5p" name="img_cm_bottom_9.png" path="/newImg/" exported="true"/>
     <image id="pgixi5q" name="img_cm_bubble_1.png" path="/newImg/" exported="true"/>
@@ -254,6 +244,12 @@
     <image id="pgixi6m" name="img_main_survive_4.png" path="/newImg/" exported="true"/>
     <image id="pgixi6n" name="img_main_survive_5.png" path="/newImg/" exported="true"/>
     <image id="tgrli6o" name="btn_cm_5.png" path="/newImg/"/>
+    <component id="oliri6p" name="rbtnFix.xml" path="/btn/" exported="true"/>
+    <component id="oliri6q" name="rbtnScale.xml" path="/btn/" exported="true"/>
+    <component id="oliri6r" name="tbtnFix.xml" path="/btn/" exported="true"/>
+    <component id="oliri6s" name="tbtnScale.xml" path="/btn/" exported="true"/>
+    <component id="j29zi6t" name="RBtnBpEquipRenderer.xml" path="/btn/" exported="true"/>
+    <component id="j29zi6u" name="RBtnBpItemRenderer.xml" path="/btn/" exported="true"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>

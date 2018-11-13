@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="890,460" designImage="ui://i25v0ebkot9s3" designImageOffsetX="-218" designImageOffsetY="-133">
-  <controller name="stateCtrl" pages="2,summon,3,recall,4,none" selected="2"/>
+  <controller name="stateCtrl" pages="2,summon,3,recall,4,none" selected="0"/>
   <displayList>
     <image id="n17_ot9s" name="n17" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="0,0" size="890,460"/>
     <image id="n22_ot9s" name="n22" src="ot9s1y" fileName="newImg/img_robot_1.png" xy="36,35"/>
@@ -26,7 +26,7 @@
     <text id="n49_ot9s" name="n49" xy="729,347" size="45,27" fontSize="20" color="#584736" align="center" vAlign="middle" text="暗抗"/>
     <text id="n26_ot9s" name="tfRobotName" xy="187,277" size="200,30" fontSize="24" color="#4c3f32" align="center" vAlign="middle" autoSize="none" bold="true" text="方呆头"/>
     <text id="n27_ot9s" name="tfRobotLocation" xy="185,309" size="200,30" fontSize="24" color="#7a6a5a" align="center" vAlign="middle" vars="true" autoSize="none" text="(位置:{r=0},{c=0})">
-      <gearDisplay controller="stateCtrl" pages="0"/>
+      <gearDisplay controller="stateCtrl" pages="3"/>
     </text>
     <text id="n34_ot9s" name="tfLevel" xy="597,99" size="40,27" fontSize="20" color="#584736" align="center" vAlign="middle" vars="true" text="LV{lv=0}"/>
     <text id="n35_ot9s" name="tfExp" xy="672,99" size="33,27" fontSize="20" color="#584736" align="center" vAlign="middle" vars="true" text="{curExp=0}/{maxExp=0}"/>
@@ -42,11 +42,6 @@
     <text id="n57_ot9s" name="tfThunderDef" xy="780,297" size="16,27" fontSize="20" color="#584736" align="center" vAlign="middle" text="0"/>
     <text id="n58_ot9s" name="tfPoisonDef" xy="780,322" size="16,27" fontSize="20" color="#584736" align="center" vAlign="middle" text="0"/>
     <text id="n59_ot9s" name="tfDarkDef" xy="780,347" size="16,27" fontSize="20" color="#584736" align="center" vAlign="middle" text="0"/>
-    <component id="n66_ot9s" name="itemCoat" src="ise6i3k" fileName="com/ComEquipItem.xml" pkg="te1gxawo" xy="90,160"/>
-    <component id="n67_ot9s" name="itemGloves" src="ise6i3k" fileName="com/ComEquipItem.xml" pkg="te1gxawo" xy="90,235"/>
-    <component id="n68_ot9s" name="itemHelmet" src="ise6i3k" fileName="com/ComEquipItem.xml" pkg="te1gxawo" xy="425,85"/>
-    <component id="n69_ot9s" name="itemUnderwear" src="ise6i3k" fileName="com/ComEquipItem.xml" pkg="te1gxawo" xy="425,160"/>
-    <component id="n70_ot9s" name="itemJewelry" src="ise6i3k" fileName="com/ComEquipItem.xml" pkg="te1gxawo" xy="425,235"/>
     <component id="n24_ot9s" name="btnSummon" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="110,367" size="138,50">
       <gearDisplay controller="stateCtrl" pages="2"/>
       <Button title="召唤" titleColor="#ffffff" titleFontSize="20" icon="ui://te1gxawoefrs1s"/>
@@ -62,10 +57,17 @@
       <gearDisplay controller="stateCtrl" pages="2,3"/>
       <Button title="编程" titleColor="#81681c" titleFontSize="20" icon="ui://te1gxawoot9si2h"/>
     </component>
-    <component id="n72_ise6" name="itemWeapon" src="ise6i3k" fileName="com/ComEquipItem.xml" pkg="te1gxawo" xy="90,85"/>
     <image id="n73_j21f" name="n73" src="j21fi3u" fileName="newImg/img_cm_bottom_6.png" pkg="te1gxawo" xy="323,35" size="180,28"/>
     <image id="n74_j21f" name="n74" src="j21fi3t" fileName="newImg/icon_cm_ruel.png" pkg="te1gxawo" xy="325,38"/>
     <text id="n75_j21f" name="tfRule" xy="350,38" size="71,25" fontSize="18" color="#533f2e" align="center" vAlign="middle" vars="true" text="燃料:{cur=0}/{total=0}"/>
     <component id="n76_j21f" name="comAvatar" src="j21fi3z" fileName="com/ComEmpty.xml" pkg="te1gxawo" xy="285,250" size="1,1"/>
+    <list id="n77_pgix" name="listEquip" xy="88,82" size="410,226" layout="flow_hz" overflow="scroll" lineGap="5" colGap="265" lineItemCount="2" defaultItem="ui://te1gxawoj29zi6t">
+      <item title="头盔" name="hair"/>
+      <item title="衣服" name="coat"/>
+      <item title="裤子" name="paints"/>
+      <item title="鞋子" name="shoe"/>
+      <item title="手套" name="glove"/>
+      <item title="饰品" name="accessory"/>
+    </list>
   </displayList>
 </component>

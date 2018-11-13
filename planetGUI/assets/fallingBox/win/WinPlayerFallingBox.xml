@@ -56,7 +56,9 @@
     </list>
     <group id="n12_ejib" name="_grpFallingBag" xy="573,125" size="334,377" group="n16_ojhl" advanced="true"/>
     <component id="n14_zsdq" name="_btnQuickPickUp" src="zsdq4" fileName="btn/btnBlue.xml" xy="505,517" group="n16_ojhl"/>
-    <component id="n15_zsdq" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="874,55" group="n16_ojhl"/>
+    <component id="n15_zsdq" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="874,55" size="56,57" group="n16_ojhl">
+      <Button icon="ui://eunktclqsz331"/>
+    </component>
     <group id="n16_ojhl" name="root" xy="221,55" size="709,520" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
