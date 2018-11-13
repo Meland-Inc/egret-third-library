@@ -3,8 +3,10 @@
   <displayList>
     <image id="n0_kogq" name="bg" src="ma630" fileName="img/bg_game1.png" xy="0,0" size="600,800"/>
     <image id="n3_kogq" name="n3" src="kogqe" fileName="img/img_game3_1.png" xy="112,238" group="n9_kogq"/>
-    <component id="n33_e2w1" name="comPlayView" src="e2w1o" fileName="win/comPlayView.xml" xy="230,339" pivot="0.5,0.5" group="n9_kogq"/>
     <component id="n43_ryj3" name="comMove" src="ryj3q" fileName="win/comMove.xml" xy="300,400" pivot="0.5,0.5" anchor="true" group="n9_kogq"/>
+    <component id="n33_e2w1" name="comPlayView" src="e2w1o" fileName="win/comPlayView.xml" xy="230,339" pivot="0.5,0.5" group="n9_kogq"/>
     <group id="n9_kogq" name="n9" xy="112,238" size="376,324"/>
+    <text id="n45_ec45" name="tfScore" xy="243,107" size="115,39" fontSize="30" color="#ffffff" align="center" vAlign="middle" autoSize="none" text=""/>
+    <text id="n46_ec45" name="n46" xy="235,63" size="158,39" fontSize="30" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="当前分数："/>
   </displayList>
 </component>
