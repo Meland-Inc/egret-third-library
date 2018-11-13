@@ -9,8 +9,8 @@
     <component id="n17_msfh" name="btnCancel" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="439,373" group="n19_cuwy">
       <Button title="取消" titleColor="#ffffff" icon="ui://ruc22gntk8dt16"/>
     </component>
-    <text id="n13_lj6i" name="tfConfirmTips" xy="471,303" size="185,24" group="n19_cuwy" fontSize="18" color="#afafaf" ubb="true" vars="true" singleLine="true" text="确认丢弃[color=#e58049]{name=生命药水}[/color]吗？"/>
-    <component id="n15_fyx8" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="686,205" size="42,43" group="n19_cuwy">
+    <text id="n13_lj6i" name="tfConfirmTips" xy="471,303" size="185,23" group="n19_cuwy" fontSize="18" color="#afafaf" ubb="true" vars="true" singleLine="true" text="确认丢弃[color=#e58049]{name=生命药水}[/color]吗？"/>
+    <component id="n15_fyx8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="686,205" size="42,43" group="n19_cuwy">
       <Button icon="ui://te1gxawoqn8o4"/>
     </component>
     <group id="n19_cuwy" name="root" xy="407,205" size="321,230" advanced="true">

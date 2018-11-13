@@ -55,7 +55,6 @@
     <image id="er201g" name="img_bag_item_5.png" path="/img/"/>
     <image id="jr3d1h" name="btn_build_rotating.png" path="/img/" exported="true"/>
     <component id="jr3d1j" name="btnRotateOp.xml" path="/btn/" exported="true"/>
-    <component id="132oi1t" name="btnClose1.xml" path="/btn/" exported="true"/>
     <image id="efrs1k" name="bg_cm_1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="28,57,56,18"/>
     <image id="efrs1l" name="bg_cm_2.png" path="/newImg/" exported="true"/>
     <image id="efrs1m" name="bg_cm_3.png" path="/newImg/" exported="true" scale="9grid" scale9grid="22,42,44,24"/>
@@ -254,6 +253,10 @@
     <image id="pgixi6m" name="img_main_survive_4.png" path="/newImg/" exported="true"/>
     <image id="pgixi6n" name="img_main_survive_5.png" path="/newImg/" exported="true"/>
     <image id="tgrli6o" name="btn_cm_5.png" path="/newImg/"/>
+    <component id="oliri6p" name="rbtnFix.xml" path="/btn/" exported="true"/>
+    <component id="oliri6q" name="rbtnScale.xml" path="/btn/" exported="true"/>
+    <component id="oliri6r" name="tbtnFix.xml" path="/btn/" exported="true"/>
+    <component id="oliri6s" name="tbtnScale.xml" path="/btn/" exported="true"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>

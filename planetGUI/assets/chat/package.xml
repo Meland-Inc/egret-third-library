@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="qagcvsbx" jpegQuality="80" compressPNG="true">
   <resources>
-    <component id="oy2m0" name="WinChatOld.xml" path="/win/" exported="true"/>
     <image id="oy2m1" name="btn_chat_down.png" path="/img/"/>
     <image id="oy2m2" name="btn_chat_emoji.png" path="/img/"/>
     <image id="oy2m3" name="btn_chat_mic.png" path="/img/" scale="9grid" scale9grid="9,5,32,18"/>
@@ -139,7 +138,6 @@
     <image id="w7uy4u" name="img_chat_shijie.png" path="/img/"/>
     <image id="w7uy4v" name="img_chat_siliao.png" path="/img/"/>
     <image id="w7uy4w" name="img_chat_zonghe.png" path="/img/"/>
-    <component id="gpm04x" name="WinChat1.xml" path="/win/" exported="true"/>
     <component id="gpm04y" name="btnChannel.xml" path="/btn/"/>
   </resources>
   <publish name="chat"/>

@@ -3,7 +3,7 @@
   <displayList>
     <image id="n1_p85h" name="bg" src="efrs1m" fileName="newImg/bg_cm_3.png" pkg="te1gxawo" xy="0,0" size="412,260"/>
     <text id="n2_p85h" name="title" xy="146,5" size="120,29" fontSize="22" color="#ffffff" align="center" autoSize="none" text="选择标记"/>
-    <component id="n16_fyx8" name="btnClose" src="qn8oc" fileName="btn/btnClose.xml" pkg="te1gxawo" xy="371,2" size="32,32">
+    <component id="n16_fyx8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="371,2" size="32,32">
       <Button icon="ui://te1gxawoqo8vi1z"/>
     </component>
     <list id="n3_p85h" name="lstMarkBtn" xy="40,110" size="338,58" layout="flow_hz" scroll="horizontal" colGap="1" defaultItem="ui://k08mtk0rp85hq" align="center">
