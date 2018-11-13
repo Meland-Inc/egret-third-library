@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" designImage="ui://i25v0ebkpgixn">
+  <displayList>
+    <image id="n0_pgix" name="n0" src="efrs1o" fileName="newImg/bg_cm_5.png" pkg="te1gxawo" xy="0,0" size="1136,640" group="n5_pgix" hideByEditor="true"/>
+    <image id="n1_pgix" name="n1" src="efrs23" fileName="newImg/img_cm_title2.png" pkg="te1gxawo" xy="482,11" group="n5_pgix"/>
+    <text id="n2_pgix" name="n2" xy="529,13" size="115,29" group="n5_pgix" fontSize="22" color="#ffffff" align="center" vAlign="middle" strokeColor="#352e2c" strokeSize="2" text="机器人背包"/>
+    <graph id="n3_pgix" name="n3" xy="0,2" size="1136,50" group="n5_pgix" alpha="0" type="rect"/>
+    <component id="n4_pgix" name="btnClose" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="1044,5" size="80,42" group="n5_pgix">
+      <Button icon="ui://te1gxawoefrs1r"/>
+    </component>
+    <image id="n6_pgix" name="n6" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="48,145" size="300,420" group="n5_pgix"/>
+    <text id="n7_pgix" name="n7" xy="151,108" size="93,29" group="n5_pgix" fontSize="22" color="#5b4b37" text="我的背包"/>
+    <list id="n8_pgix" name="listBag" xy="48,156" size="300,400" group="n5_pgix" layout="flow_hz" overflow="scroll" lineItemCount="4" defaultItem="ui://te1gxawoise6i3j" align="center">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n11_pgix" name="n11" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="793,144" size="300,420" group="n5_pgix"/>
+    <text id="n12_pgix" name="tfRobotBag" xy="896,107" size="93,29" group="n5_pgix" fontSize="22" color="#5b4b37" text="我的背包"/>
+    <list id="n13_pgix" name="listRobotBag" xy="793,155" size="300,400" group="n5_pgix" layout="flow_hz" overflow="scroll" lineItemCount="4" defaultItem="ui://te1gxawoise6i3j" align="center">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n5_pgix" name="gpBg" xy="0,0" size="1136,640"/>
+  </displayList>
+</component>
