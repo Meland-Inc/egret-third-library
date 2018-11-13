@@ -8,5 +8,9 @@
     <group id="n9_kogq" name="n9" xy="112,238" size="376,324"/>
     <text id="n45_ec45" name="tfScore" xy="243,107" size="115,39" fontSize="30" color="#ffffff" align="center" vAlign="middle" autoSize="none" text=""/>
     <text id="n46_ec45" name="n46" xy="235,63" size="158,39" fontSize="30" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="当前分数："/>
+    <component id="n51_n0gq" name="GameOverPanel" src="n0gqv" fileName="win/GameOverPanel.xml" xy="110,236" size="386,329" visible="false"/>
+    <component id="n52_n0gq" name="btnClose" src="cydra" fileName="win/btnClose.xml" xy="486,32">
+      <relation target="" sidePair="right-right,top-top"/>
+    </component>
   </displayList>
 </component>
