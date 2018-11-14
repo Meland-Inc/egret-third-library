@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="694,453">
+<component size="1136,640">
   <controller name="conTaskDetail" pages="0,main,1,branch" selected="0"/>
   <displayList>
-    <image id="n22_fyx8" name="bg" src="qn8o1" fileName="img/bg_bag.png" pkg="te1gxawo" xy="0,0"/>
-    <component id="n23_fyx8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="650,-9" size="56,57">
-      <Button icon="ui://eunktclqsz331"/>
+    <image id="n22_fyx8" name="bg" src="qn8o1" fileName="img/bg_bag.png" pkg="te1gxawo" xy="221,93" group="n24_kg0b"/>
+    <component id="n23_fyx8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="829,93" size="80,42" group="n24_kg0b">
+      <Button icon="ui://te1gxawoefrs1r"/>
     </component>
-    <image id="n7_sz33" name="detailBg" src="sz33e" fileName="img/img_task_bg_006.png" xy="23,106"/>
-    <image id="n21_lreq" name="imgNoTaskTips" src="lreqs" fileName="img/img_task_empty.png" xy="185,238"/>
-    <text id="n1_sz33" name="title" xy="257,0" size="176,44" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="任务"/>
-    <component id="n4_sz33" name="btnShowMainTask" src="sz33j" fileName="btn/btnMainBranchRd.xml" xy="44,60">
+    <image id="n7_sz33" name="detailBg" src="sz33e" fileName="img/img_task_bg_006.png" xy="244,199" group="n24_kg0b"/>
+    <image id="n21_lreq" name="imgNoTaskTips" src="lreqs" fileName="img/img_task_empty.png" xy="406,331" group="n24_kg0b"/>
+    <text id="n1_sz33" name="title" xy="478,93" size="176,44" group="n24_kg0b" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="任务"/>
+    <component id="n4_sz33" name="btnShowMainTask" src="sz33j" fileName="btn/btnMainBranchRd.xml" xy="265,153" group="n24_kg0b">
       <Button checked="true" icon="ui://eunktclqsz334" selectedIcon="ui://eunktclqsz332" controller="conTaskDetail" page="0"/>
     </component>
-    <component id="n5_sz33" name="btnShowBranchTask" src="sz33j" fileName="btn/btnMainBranchRd.xml" xy="174,60">
+    <component id="n5_sz33" name="btnShowBranchTask" src="sz33j" fileName="btn/btnMainBranchRd.xml" xy="395,153" group="n24_kg0b">
       <Button title="支线任务" icon="ui://eunktclqsz334" selectedIcon="ui://eunktclqsz333" controller="conTaskDetail" page="1"/>
     </component>
-    <list id="n9_sz33" name="lstMainTaskBtn" xy="35,105" size="130,308" overflow="scroll" margin="10,0,0,0" defaultItem="ui://eunktclqsz33k" align="center" autoClearItems="true">
+    <list id="n9_sz33" name="lstMainTaskBtn" xy="256,198" size="130,308" group="n24_kg0b" overflow="scroll" margin="10,0,0,0" defaultItem="ui://eunktclqsz33k" align="center" autoClearItems="true">
       <gearDisplay controller="conTaskDetail" pages="0"/>
       <item icon="ui://eunktclqsz336" selectedIcon="ui://eunktclqsz335"/>
       <item icon="ui://eunktclqsz336" selectedIcon="ui://eunktclqsz335"/>
@@ -24,7 +24,7 @@
       <item icon="ui://eunktclqsz336" selectedIcon="ui://eunktclqsz335"/>
       <item icon="ui://eunktclqsz336" selectedIcon="ui://eunktclqsz335"/>
     </list>
-    <list id="n15_sz33" name="lstBranchTaskBtn" xy="35,105" size="130,300" overflow="scroll" margin="10,0,0,0" defaultItem="ui://eunktclqsz33k" autoClearItems="true">
+    <list id="n15_sz33" name="lstBranchTaskBtn" xy="256,198" size="130,300" group="n24_kg0b" overflow="scroll" margin="10,0,0,0" defaultItem="ui://eunktclqsz33k" autoClearItems="true">
       <gearDisplay controller="conTaskDetail" pages="1"/>
       <item icon="ui://eunktclqsz336" selectedIcon="ui://eunktclqsz335"/>
       <item icon="ui://eunktclqsz336" selectedIcon="ui://eunktclqsz335"/>
@@ -33,6 +33,9 @@
       <item icon="ui://eunktclqsz336" selectedIcon="ui://eunktclqsz335"/>
       <item icon="ui://eunktclqsz336" selectedIcon="ui://eunktclqsz335"/>
     </list>
-    <component id="n19_sz33" name="comTaskDetailPanel" src="sz33l" fileName="com/comTaskDetailPanel.xml" xy="208,120" size="450,301"/>
+    <component id="n19_sz33" name="comTaskDetailPanel" src="sz33l" fileName="com/comTaskDetailPanel.xml" xy="429,213" size="450,301" group="n24_kg0b"/>
+    <group id="n24_kg0b" name="root" xy="221,93" size="694,453" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
   </displayList>
 </component>
