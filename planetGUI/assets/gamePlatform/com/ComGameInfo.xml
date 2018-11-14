@@ -4,7 +4,7 @@
     <graph id="n1_vkti" name="imgShieldBG" xy="0,0" size="1136,640" type="rect" lineSize="0" fillColor="#4d000000">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </graph>
-    <image id="n2_vkti" name="imgBG" src="rx7uw" fileName="img/bg_cm_7.png" xy="318,162" size="500,316">
+    <image id="n2_vkti" name="imgBG" src="rx7uw" fileName="img/bg_cm_7.png" xy="318,162" size="500,315">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
     <text id="n13_efrs" name="tfGameName" xy="451,166" size="233,32" fontSize="22" color="#ffffff" align="center" vAlign="middle" letterSpacing="1" autoSize="none" text="我要上西天">
@@ -29,18 +29,18 @@
     <text id="n6_vkti" name="tfID" xy="580,254" size="145,35" fontSize="18" color="#b4b0a9" vAlign="middle" autoSize="none" text="999999">
       <relation target="n5_vkti" sidePair="left-right,top-top"/>
     </text>
-    <graph id="n8_vkti" name="imgGameInfoBg" xy="347,307" size="442,74" type="rect" lineSize="0" fillColor="#1a4e4237">
+    <graph id="n8_vkti" name="imgGameInfoBg" xy="347,306" size="442,72" type="rect" lineSize="0" fillColor="#1a4e4237">
       <relation target="n2_vkti" sidePair="center-center,bottom-bottom"/>
     </graph>
-    <text id="n9_vkti" name="tfGameInfo" xy="347,307" size="442,74" fontSize="16" color="#544835" align="center" vAlign="middle" autoSize="none" text="游戏说明:点击右下角可以开灯">
+    <text id="n9_vkti" name="tfGameInfo" xy="353,306" size="430,74" fontSize="16" color="#544835" vAlign="middle" leading="0" autoSize="none" text="游戏说明:点击右下角可以开灯">
       <relation target="n8_vkti" sidePair="center-center,middle-middle"/>
       <relation target="n8_vkti" sidePair="width-width,height-height"/>
     </text>
-    <component id="n11_vkti" name="btnStart" src="efrs25" fileName="btn/CanChangeCommonButton.xml" pkg="te1gxawo" xy="498,397" size="140,50">
+    <component id="n11_vkti" name="btnStart" src="efrs25" fileName="btn/CanChangeCommonButton.xml" pkg="te1gxawo" xy="498,396" size="140,50">
       <relation target="n2_vkti" sidePair="bottom-bottom,center-center"/>
       <Button title="开始游戏" titleColor="#f6edc7" titleFontSize="20" icon="ui://te1gxawoefrs1s"/>
     </component>
-    <image id="n14_efrs" name="imgLowBg" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="318,459" size="500,16">
+    <image id="n14_efrs" name="imgLowBg" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="318,458" size="500,16">
       <relation target="n2_vkti" sidePair="bottom-bottom,left-left"/>
     </image>
   </displayList>
