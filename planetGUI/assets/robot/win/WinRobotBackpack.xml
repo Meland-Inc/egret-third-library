@@ -169,7 +169,9 @@
     <image id="n17_pgix" name="n17" src="pgixi5n" fileName="newImg/img_cm_bottom_7.png" pkg="te1gxawo" xy="793,107" size="296,28" group="n75_pgix"/>
     <image id="n18_pgix" name="n18" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="820,115" group="n75_pgix"/>
     <image id="n19_pgix" name="n19" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="1056,115" group="n75_pgix" scale="-1,1"/>
-    <text id="n20_pgix" name="tfRobotBag" xy="893,106" size="93,29" group="n75_pgix" fontSize="22" color="#5b4b37" align="center" vAlign="middle" text="我的背包"/>
+    <text id="n20_pgix" name="tfRobotBag" xy="871,106" size="140,29" group="n75_pgix" fontSize="22" color="#5b4b37" align="center" vAlign="middle" vars="true" text="{robotName=机器人}的背包">
+      <relation target="n17_pgix" sidePair="center-center,middle-middle"/>
+    </text>
     <group id="n75_pgix" name="grpRobotBag" xy="793,106" size="303,458" group="n76_pgix" collapsed="true"/>
     <group id="n76_pgix" name="root" xy="0,0" size="1136,640" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>

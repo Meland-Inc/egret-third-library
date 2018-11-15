@@ -38,7 +38,7 @@
     <component id="lt5g15" name="ToolTipBagItem.xml" path="/com/" exported="true"/>
     <image id="lt5g16" name="img_bag_item_3.png" path="/img/"/>
     <component id="lt5g17" name="ToolTipOperaBagItem.xml" path="/com/" exported="true"/>
-    <image id="lt5g18" name="btn_blue.png" path="/img/"/>
+    <image id="lt5g18" name="btn_blue.png" path="/img/" scale="9grid" scale9grid="37,14,74,28"/>
     <image id="lt5g19" name="btn_yellow.png" path="/img/"/>
     <image id="lt5g1a" name="img_map_title.png" path="/img/"/>
     <image id="zsdq15" name="btn_blue.png" path="/img/" exported="true"/>
@@ -260,9 +260,10 @@
     <image id="11bwyi72" name="img_cm_guidearrow_3.png" path="/newImg/" exported="true"/>
     <image id="11bwyi73" name="img_cm_guidearrow_4.png" path="/newImg/" exported="true"/>
     <image id="11bwyi74" name="img_cm_progressbar1.png" path="/newImg/" exported="true"/>
-    <image id="11bwyi75" name="img_cm_progressbar2.png" path="/newImg/" exported="true"/>
+    <image id="11bwyi75" name="img_cm_progressbar2.png" path="/newImg/" exported="true" scale="9grid" scale9grid="34,2,68,4"/>
     <image id="11bwyi76" name="img_cm_randombox_1.png" path="/newImg/" exported="true"/>
     <image id="11bwyi77" name="img_cm_randombox_2.png" path="/newImg/" exported="true"/>
+    <component id="11bwyi78" name="barCm2.xml" path="/bar/" exported="true"/>
   </resources>
   <publish name="common" path="C:\Users\Mloong\Desktop\bell_planet\feature-jiahua\resource\assets\fairyGui" square="true">
     <atlas name="默认" index="0"/>
