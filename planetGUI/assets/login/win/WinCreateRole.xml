@@ -19,7 +19,7 @@
       <relation target="" sidePair="bottom-bottom,center-center"/>
       <Button title="确定"/>
     </component>
-    <component id="n27_trkw" name="avatar" src="trkw3p" fileName="com/comAvatar.xml" xy="464,126" size="154,235" scale="1.2,1.2">
+    <component id="n27_trkw" name="avatar" src="trkw3p" fileName="com/comAvatar.xml" xy="423,126" size="259,235" scale="1.2,1.2">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
     <image id="n43_tm1s" name="imgBGBottom" src="tm1s43" fileName="newImg/img_6.png" xy="0,616" size="1136,24">
@@ -136,9 +136,9 @@
     </text>
   </displayList>
   <transition name="t1" autoPlay="true">
-    <item time="0" type="XY" target="n55_bidp" tween="true" startValue="1190,82" endValue="890,82" duration="12" ease="Back.InOut"/>
-    <item time="0" type="XY" target="n50_bidp" tween="true" startValue="-163,183" endValue="137,183" duration="12" ease="Back.InOut"/>
     <item time="0" type="XY" target="n48_bidp" tween="true" startValue="-300,164" endValue="0,164" duration="12" ease="Back.InOut"/>
+    <item time="0" type="XY" target="n50_bidp" tween="true" startValue="-163,183" endValue="137,183" duration="12" ease="Back.InOut"/>
+    <item time="0" type="XY" target="n55_bidp" tween="true" startValue="1190,82" endValue="890,82" duration="12" ease="Back.InOut"/>
     <item time="0" type="XY" target="n64_bidp" tween="true" startValue="-261,74" endValue="39,74" duration="12" ease="Back.InOut"/>
   </transition>
 </component>
