@@ -32,7 +32,7 @@
     <graph id="n8_vkti" name="imgGameInfoBg" xy="347,306" size="442,72" type="rect" lineSize="0" fillColor="#1a4e4237">
       <relation target="n2_vkti" sidePair="center-center,bottom-bottom"/>
     </graph>
-    <text id="n9_vkti" name="tfGameInfo" xy="353,306" size="430,74" fontSize="16" color="#544835" vAlign="middle" leading="0" autoSize="none" text="游戏说明:点击右下角可以开灯">
+    <text id="n9_vkti" name="tfGameInfo" xy="353,308" size="436,71" fontSize="16" color="#544835" vAlign="middle" leading="0" autoSize="none" text="游戏说明:点击右下角可以开灯">
       <relation target="n8_vkti" sidePair="center-center,middle-middle"/>
       <relation target="n8_vkti" sidePair="width-width,height-height"/>
     </text>
