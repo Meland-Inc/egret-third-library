@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="114,44" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_ewny" name="n0" src="ewnyi6z" fileName="img/btn_cm_orange.png" pkg="te1gxawo" xy="0,0" size="114,44">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n1_ewny" name="n1" xy="19,5" size="74,32" fontSize="20" color="#f6edc7" align="center" vAlign="middle" autoSize="none" bold="true" text="确定"/>
+  </displayList>
+  <Button/>
+</component>

@@ -36,7 +36,7 @@
     <sound id="tqc913" name="success.wav" path="/sound/" exported="true"/>
     <sound id="tqc914" name="unsuccess.wav" path="/sound/" exported="true"/>
     <component id="lt5g15" name="ToolTipBagItem.xml" path="/com/" exported="true"/>
-    <image id="lt5g16" name="img_bag_item_3.png" path="/img/"/>
+    <image id="lt5g16" name="img_bag_item_3.png" path="/img/" exported="true"/>
     <component id="lt5g17" name="ToolTipOperaBagItem.xml" path="/com/" exported="true"/>
     <image id="lt5g18" name="btn_blue.png" path="/img/"/>
     <image id="lt5g19" name="btn_yellow.png" path="/img/"/>
@@ -250,6 +250,17 @@
     <component id="oliri6s" name="tbtnScale.xml" path="/btn/" exported="true"/>
     <component id="j29zi6t" name="RBtnBpEquipRenderer.xml" path="/btn/" exported="true"/>
     <component id="j29zi6u" name="RBtnBpItemRenderer.xml" path="/btn/" exported="true"/>
+    <image id="ewnyi6v" name="bg_cm_1.png" path="/img/" exported="true" scale="9grid" scale9grid="28,49,56,26"/>
+    <image id="ewnyi6w" name="bg_cm_2.png" path="/img/" exported="true" scale="9grid" scale9grid="32,1,24,80"/>
+    <image id="ewnyi6x" name="bg_cm_3.png" path="/img/" exported="true" scale="9grid" scale9grid="22,39,44,27"/>
+    <image id="ewnyi6y" name="btn_cm_closed.png" path="/img/" exported="true"/>
+    <image id="ewnyi6z" name="btn_cm_orange.png" path="/img/" exported="true" scale="9grid" scale9grid="15,13,21,26"/>
+    <image id="ewnyi70" name="btn_cm_yellow.png" path="/img/"/>
+    <image id="ewnyi71" name="img_cm_pattern.png" path="/img/" exported="true"/>
+    <image id="ewnyi72" name="img_cm_title1.png" path="/img/"/>
+    <image id="ewnyi73" name="img_cm_item_7.png" path="/img/" exported="true"/>
+    <image id="ewnyi74" name="img_cm_location.png" path="/img/" exported="true"/>
+    <image id="ewnyi75" name="img_cm_item_2.png" path="/img/"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>
