@@ -36,7 +36,7 @@
     <sound id="tqc913" name="success.wav" path="/sound/" exported="true"/>
     <sound id="tqc914" name="unsuccess.wav" path="/sound/" exported="true"/>
     <component id="lt5g15" name="ToolTipBagItem.xml" path="/com/" exported="true"/>
-    <image id="lt5g16" name="img_bag_item_3.png" path="/img/" exported="true"/>
+    <image id="lt5g16" name="img_bag_item_3.png" path="/img/"/>
     <component id="lt5g17" name="ToolTipOperaBagItem.xml" path="/com/" exported="true"/>
     <image id="lt5g18" name="btn_blue.png" path="/img/"/>
     <image id="lt5g19" name="btn_yellow.png" path="/img/"/>
@@ -243,26 +243,28 @@
     <image id="pgixi6l" name="img_main_survive_3.png" path="/newImg/" exported="true"/>
     <image id="pgixi6m" name="img_main_survive_4.png" path="/newImg/" exported="true"/>
     <image id="pgixi6n" name="img_main_survive_5.png" path="/newImg/" exported="true"/>
-    <image id="tgrli6o" name="btn_cm_5.png" path="/newImg/"/>
+    <image id="tgrli6o" name="btn_cm_5.png" path="/newImg/" exported="true"/>
     <component id="oliri6p" name="rbtnFix.xml" path="/btn/" exported="true"/>
     <component id="oliri6q" name="rbtnScale.xml" path="/btn/" exported="true"/>
     <component id="oliri6r" name="tbtnFix.xml" path="/btn/" exported="true"/>
     <component id="oliri6s" name="tbtnScale.xml" path="/btn/" exported="true"/>
     <component id="j29zi6t" name="RBtnBpEquipRenderer.xml" path="/btn/" exported="true"/>
     <component id="j29zi6u" name="RBtnBpItemRenderer.xml" path="/btn/" exported="true"/>
-    <image id="ewnyi6v" name="bg_cm_1.png" path="/img/" exported="true" scale="9grid" scale9grid="28,49,56,26"/>
-    <image id="ewnyi6w" name="bg_cm_2.png" path="/img/" exported="true" scale="9grid" scale9grid="32,1,24,80"/>
-    <image id="ewnyi6x" name="bg_cm_3.png" path="/img/" exported="true" scale="9grid" scale9grid="22,39,44,27"/>
-    <image id="ewnyi6y" name="btn_cm_closed.png" path="/img/" exported="true"/>
-    <image id="ewnyi6z" name="btn_cm_orange.png" path="/img/" exported="true" scale="9grid" scale9grid="15,13,21,26"/>
-    <image id="ewnyi70" name="btn_cm_yellow.png" path="/img/"/>
-    <image id="ewnyi71" name="img_cm_pattern.png" path="/img/" exported="true"/>
-    <image id="ewnyi72" name="img_cm_title1.png" path="/img/"/>
-    <image id="ewnyi73" name="img_cm_item_7.png" path="/img/" exported="true"/>
-    <image id="ewnyi74" name="img_cm_location.png" path="/img/" exported="true"/>
-    <image id="ewnyi75" name="img_cm_item_2.png" path="/img/"/>
+    <image id="11bwyi6v" name="btn_cm_special_3.png" path="/newImg/" exported="true"/>
+    <image id="11bwyi6w" name="btn_cm_white12.png" path="/newImg/" exported="true"/>
+    <image id="11bwyi6x" name="btn_cm_yellow12.png" path="/newImg/" exported="true"/>
+    <image id="11bwyi6y" name="icon_cm_continue.png" path="/newImg/" exported="true"/>
+    <image id="11bwyi6z" name="icon_cm_pause.png" path="/newImg/" exported="true"/>
+    <image id="11bwyi70" name="img_cm_guidearrow_1.png" path="/newImg/" exported="true"/>
+    <image id="11bwyi71" name="img_cm_guidearrow_2.png" path="/newImg/" exported="true"/>
+    <image id="11bwyi72" name="img_cm_guidearrow_3.png" path="/newImg/" exported="true"/>
+    <image id="11bwyi73" name="img_cm_guidearrow_4.png" path="/newImg/" exported="true"/>
+    <image id="11bwyi74" name="img_cm_progressbar1.png" path="/newImg/" exported="true"/>
+    <image id="11bwyi75" name="img_cm_progressbar2.png" path="/newImg/" exported="true"/>
+    <image id="11bwyi76" name="img_cm_randombox_1.png" path="/newImg/" exported="true"/>
+    <image id="11bwyi77" name="img_cm_randombox_2.png" path="/newImg/" exported="true"/>
   </resources>
-  <publish name="common" square="true">
+  <publish name="common" path="C:\Users\Mloong\Desktop\bell_planet\feature-jiahua\resource\assets\fairyGui" square="true">
     <atlas name="默认" index="0"/>
   </publish>
 </packageDescription>

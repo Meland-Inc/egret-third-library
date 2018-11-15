@@ -57,11 +57,17 @@
     <group id="n28_c2vq" name="n28" xy="341,476" size="453,37" advanced="true">
       <relation target="" sidePair="bottom-bottom,center-center"/>
     </group>
+    <image id="n30_h03r" name="imgLoading" src="h03r5j" fileName="newImg/img_lineloading_1.png" xy="535,286" pivot="0.5,0.5">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
   </displayList>
   <transition name="t0" autoPlay="true" autoPlayRepeat="-1">
     <item time="0" type="Alpha" target="n4_jgot" tween="true" startValue="1" endValue="0" duration="24" ease="Linear"/>
     <item time="0" type="Alpha" target="n3_jgot" tween="true" startValue="1" endValue="0" duration="24" ease="Linear"/>
     <item time="24" type="Alpha" target="n4_jgot" tween="true" startValue="0" endValue="1" duration="24" ease="Linear"/>
     <item time="24" type="Alpha" target="n3_jgot" tween="true" startValue="0" endValue="1" duration="24" ease="Linear"/>
+  </transition>
+  <transition name="t1" autoPlay="true" autoPlayRepeat="-1">
+    <item time="0" type="Rotation" target="n30_h03r" tween="true" startValue="0" endValue="360" duration="24" ease="Linear"/>
   </transition>
 </component>
