@@ -76,22 +76,25 @@
     <group id="n98_x0vt" name="touristsExperienceGroup" xy="2000,189" size="370,262" advanced="true" collapsed="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <image id="n7_jddv" name="imgSelectModeBG" src="efrs1m" fileName="newImg/bg_cm_3.png" pkg="te1gxawo" xy="383,189" size="370,262" group="n9_jddv"/>
-    <component id="n29_ptq4" name="btnWXLogin" src="jddv1f" fileName="btn/btnWXLogin.xml" xy="468,252" size="200,40" group="n9_jddv"/>
-    <component id="n25_jddv" name="btnQQLogin" src="jddv1g" fileName="btn/btnQQLogin.xml" xy="468,310" size="200,40" group="n9_jddv">
-      <Button icon="ui://0n4pg0opqo8v50"/>
-    </component>
-    <text id="n28_jddv" name="tfTitle" xy="542,196" size="51,29" group="n9_jddv" font="方正准圆简体" fontSize="22" color="#ffffff" bold="true" text="登录">
+    <image id="n7_jddv" name="imgSelectModeBG" src="efrs1m" fileName="newImg/bg_cm_3.png" pkg="te1gxawo" xy="409,173" size="318,294" group="n9_jddv"/>
+    <text id="n28_jddv" name="tfTitle" xy="542,178" size="51,29" group="n9_jddv" font="方正准圆简体" fontSize="22" color="#ffffff" bold="true" text="登录">
       <relation target="" sidePair="left-left,top-top"/>
     </text>
-    <component id="n27_jddv" name="btnAccountLogin" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="te1gxawo" xy="468,373" size="90,30" group="n9_jddv">
-      <Button title="账号登陆" titleColor="#675a4c" titleFontSize="18" icon="ui://0n4pg0opqo8v51"/>
+    <component id="n27_jddv" name="btnAccountLogin" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="473,306" size="190,35" group="n9_jddv">
+      <Button title="账号登陆" titleColor="#675a4c" titleFontSize="18" icon="ui://te1gxawosmpoyi7a"/>
     </component>
-    <component id="n81_qo8v" name="btnVisitorLogin" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="te1gxawo" xy="578,373" size="90,30" group="n9_jddv">
-      <Button title="游客登陆" titleColor="#675a4c" titleFontSize="18" icon="ui://0n4pg0opqo8v51"/>
+    <component id="n81_qo8v" name="btnVisitorLogin" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="473,257" size="190,35" group="n9_jddv">
+      <Button title="快速开始游戏" titleColor="#447b92" titleFontSize="18" icon="ui://te1gxawosmpoyi79"/>
     </component>
-    <image id="n82_qo8v" name="imgBottomBG" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="383,433" size="370,14" group="n9_jddv"/>
-    <group id="n9_jddv" name="selectModeGroup" xy="383,189" size="370,262" advanced="true" collapsed="true">
+    <image id="n82_qo8v" name="imgBottomBG" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="409,450" size="318,14" group="n9_jddv"/>
+    <component id="n29_ptq4" name="btnWXLogin" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="583,382" size="46,46" group="n9_jddv">
+      <Button icon="ui://0n4pg0opsmpo5l"/>
+    </component>
+    <component id="n25_jddv" name="btnQQLogin" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="506,382" size="46,46" group="n9_jddv">
+      <Button icon="ui://0n4pg0opsmpo5k"/>
+    </component>
+    <text id="n99_smpo" name="n99" xy="506,354" size="123,22" group="n9_jddv" fontSize="16" color="#d1cebe" align="center" autoSize="none" text="或"/>
+    <group id="n9_jddv" name="selectModeGroup" xy="409,173" size="318,294" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
     <image id="n83_qo8v" name="n83" src="qo8vi1x" fileName="newImg/img_cm_pattern2.png" pkg="te1gxawo" xy="0,619" size="1136,21">
@@ -105,14 +108,14 @@
     <item time="0" type="Alpha" target="n34_ptq4" value="1"/>
     <item time="0" type="Alpha" target="n9_jddv" tween="true" startValue="1" endValue="0" duration="12"/>
     <item time="0" type="Alpha" target="n98_x0vt" value="1"/>
-    <item time="0" type="XY" target="n9_jddv" tween="true" startValue="383,-" endValue="-2000,-" duration="12" ease="Linear"/>
+    <item time="0" type="XY" target="n9_jddv" tween="true" startValue="409,-" endValue="-2000,-" duration="12" ease="Linear"/>
     <item time="0" type="XY" target="n34_ptq4" value="2000,-"/>
     <item time="0" type="XY" target="n98_x0vt" value="2000,-"/>
     <item time="0" type="XY" target="n47_ptq4" value="2000,-"/>
     <item time="6" type="XY" target="n34_ptq4" tween="true" startValue="2000,-" endValue="383,-" duration="12" ease="Back.Out"/>
     <item time="6" type="XY" target="n98_x0vt" tween="true" startValue="2000,-" endValue="383,-" duration="12" ease="Back.Out"/>
-    <item time="18" type="Alpha" target="n34_ptq4" value="1"/>
     <item time="18" type="Alpha" target="n98_x0vt" value="1"/>
+    <item time="18" type="Alpha" target="n34_ptq4" value="1"/>
   </transition>
   <transition name="toLogin" options="4">
     <item time="0" type="Alpha" target="n34_ptq4" tween="true" startValue="1" endValue="0" duration="12"/>
@@ -135,8 +138,8 @@
     <item time="0" type="XY" target="n47_ptq4" tween="true" startValue="383,-" endValue="2000,-" duration="12" ease="Linear"/>
     <item time="6" type="XY" target="n34_ptq4" tween="true" startValue="-2000,-" endValue="383,-" duration="12" ease="Back.Out"/>
     <item time="6" type="XY" target="n98_x0vt" tween="true" startValue="-2000,-" endValue="383,-" duration="12" ease="Back.Out"/>
-    <item time="18" type="Alpha" target="n98_x0vt" value="1"/>
     <item time="18" type="Alpha" target="n34_ptq4" value="1"/>
+    <item time="18" type="Alpha" target="n98_x0vt" value="1"/>
   </transition>
   <transition name="returnToSelect" options="4">
     <item time="0" type="Alpha" target="n98_x0vt" tween="true" startValue="1" endValue="0" duration="12" ease="Linear"/>
@@ -146,7 +149,7 @@
     <item time="0" type="XY" target="n98_x0vt" tween="true" startValue="383,-" endValue="2000,-" duration="12" ease="Linear"/>
     <item time="0" type="XY" target="n9_jddv" value="-2000,-"/>
     <item time="0" type="XY" target="n47_ptq4" value="-2000,-"/>
-    <item time="6" type="XY" target="n9_jddv" tween="true" startValue="-2000,-" endValue="383,-" duration="12" ease="Back.Out"/>
+    <item time="6" type="XY" target="n9_jddv" tween="true" startValue="-2000,-" endValue="409,-" duration="12" ease="Back.Out"/>
     <item time="18" type="Alpha" target="n9_jddv" value="1"/>
   </transition>
 </component>

@@ -264,8 +264,10 @@
     <image id="11bwyi76" name="img_cm_randombox_1.png" path="/newImg/" exported="true"/>
     <image id="11bwyi77" name="img_cm_randombox_2.png" path="/newImg/" exported="true"/>
     <component id="11bwyi78" name="barCm2.xml" path="/bar/" exported="true"/>
+    <image id="smpoyi79" name="btn_cm_blue.png" path="/newImg/" exported="true" scale="9grid" scale9grid="10,10,20,20"/>
+    <image id="smpoyi7a" name="btn_cm_empty.png" path="/newImg/" exported="true" scale="9grid" scale9grid="10,10,20,20"/>
   </resources>
-  <publish name="common" path="C:\Users\Mloong\Desktop\bell_planet\feature-jiahua\resource\assets\fairyGui" square="true">
+  <publish name="common" square="true">
     <atlas name="默认" index="0"/>
   </publish>
 </packageDescription>
