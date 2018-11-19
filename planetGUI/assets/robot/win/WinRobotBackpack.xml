@@ -10,10 +10,10 @@
       <Button icon="ui://te1gxawoefrs1r"/>
     </component>
     <group id="n5_pgix" name="gpBg" xy="0,0" size="1136,640" group="n76_pgix" collapsed="true"/>
-    <list id="n77_pgix" name="listEquip" xy="382,191" size="378,224" group="n39_pgix" layout="flow_hz" overflow="hidden" lineGap="5" colGap="235" lineItemCount="2" defaultItem="ui://te1gxawoj29zi6t">
+    <list id="n77_pgix" name="listEquip" xy="382,191" size="378,224" group="n39_pgix" layout="flow_hz" lineGap="5" colGap="235" lineItemCount="2" defaultItem="ui://te1gxawoj29zi6t">
       <item title="头盔" name="hair"/>
       <item title="衣服" name="coat"/>
-      <item title="裤子" name="paints"/>
+      <item title="裤子" name="pants"/>
       <item title="鞋子" name="shoe"/>
       <item title="手套" name="glove"/>
       <item title="饰品" name="accessory"/>
@@ -120,9 +120,9 @@
     </list>
     <image id="n15_pgix" name="n15" src="pgixi5n" fileName="newImg/img_cm_bottom_7.png" pkg="te1gxawo" xy="50,107" size="296,28" group="n74_pgix"/>
     <image id="n14_pgix" name="n14" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="77,115" group="n74_pgix"/>
-    <image id="n16_pgix" name="n16" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="314,115" group="n74_pgix" scale="-1,1"/>
+    <image id="n16_pgix" name="n16" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="274,115" size="40,14" group="n74_pgix" scale="-1,1"/>
     <text id="n7_pgix" name="n7" xy="151,106" size="93,29" group="n74_pgix" fontSize="22" color="#5b4b37" align="center" vAlign="middle" text="我的背包"/>
-    <group id="n74_pgix" name="grpBag" xy="48,106" size="306,459" group="n76_pgix"/>
+    <group id="n74_pgix" name="grpBag" xy="48,106" size="300,459" group="n76_pgix" collapsed="true"/>
     <image id="n11_pgix" name="n11" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="793,144" size="300,420" group="n75_pgix"/>
     <list id="n13_pgix" name="listRobotBag" xy="793,155" size="300,400" group="n75_pgix" layout="flow_hz" overflow="scroll" lineItemCount="4" defaultItem="ui://te1gxawoj29zi6u" align="center">
       <item/>
@@ -167,10 +167,12 @@
       <item/>
     </list>
     <image id="n17_pgix" name="n17" src="pgixi5n" fileName="newImg/img_cm_bottom_7.png" pkg="te1gxawo" xy="793,107" size="296,28" group="n75_pgix"/>
-    <image id="n18_pgix" name="n18" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="820,115" group="n75_pgix"/>
-    <image id="n19_pgix" name="n19" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="1056,115" group="n75_pgix" scale="-1,1"/>
-    <text id="n20_pgix" name="tfRobotBag" xy="893,106" size="93,29" group="n75_pgix" fontSize="22" color="#5b4b37" align="center" vAlign="middle" text="我的背包"/>
-    <group id="n75_pgix" name="grpRobotBag" xy="793,106" size="303,458" group="n76_pgix" collapsed="true"/>
+    <image id="n18_pgix" name="n18" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="800,115" group="n75_pgix"/>
+    <image id="n19_pgix" name="n19" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="1042,115" size="40,14" group="n75_pgix" scale="-1,1"/>
+    <text id="n20_pgix" name="tfRobotBag" xy="871,106" size="137,29" group="n75_pgix" fontSize="22" color="#5b4b37" align="center" vAlign="middle" vars="true" text="{robotName=机器人}的背包">
+      <relation target="n17_pgix" sidePair="center-center,middle-middle"/>
+    </text>
+    <group id="n75_pgix" name="grpRobotBag" xy="793,106" size="300,458" group="n76_pgix" collapsed="true"/>
     <group id="n76_pgix" name="root" xy="0,0" size="1136,640" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>

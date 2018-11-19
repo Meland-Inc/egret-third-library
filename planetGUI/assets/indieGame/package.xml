@@ -2,7 +2,7 @@
 <packageDescription id="fgnn93x0" jpegQuality="80" compressPNG="true">
   <resources>
     <image id="ma630" name="bg_game1.png" path="/img/" scale="" scale9grid="159,64,319,787"/>
-    <image id="ma631" name="img_game1_1.png" path="/img/" scale="" scale9grid="16,16,32,32"/>
+    <image id="ma631" name="img_game1_1.png" path="/img/" scale="9grid" scale9grid="36,38,50,45"/>
     <image id="ma632" name="img_game1_2.png" path="/img/" scale="9grid" scale9grid="13,13,26,26"/>
     <image id="ma633" name="img_game1_3.png" path="/img/"/>
     <image id="ma634" name="img_game1_4.png" path="/img/" scale="9grid" scale9grid="96,32,192,64"/>
@@ -23,6 +23,12 @@
     <component id="e2w1o" name="comPlayView.xml" path="/win/"/>
     <component id="e2w1p" name="container.xml" path="/win/"/>
     <component id="ryj3q" name="comMove.xml" path="/win/"/>
+    <image id="n0gqr" name="btn_robot_7.png" path="/img/"/>
+    <component id="n0gqs" name="ToolTipGameOpera.xml" path="/win/" exported="true"/>
+    <component id="n0gqu" name="btnGame.xml" path="/win/"/>
+    <component id="n0gqv" name="GameOverPanel.xml" path="/win/"/>
+    <component id="n0gqw" name="Button1.xml" path="/img/"/>
+    <component id="n0gqx" name="Button2.xml" path="/win/"/>
+    <component id="nro4y" name="GameStartPanel.xml" path="/win/"/>
   </resources>
-  <publish name="indieGame" path="C:\Users\Mloong\Desktop\bell_planet\feature-jiahua\resource\assets\fairyGui"/>
-</packageDescription>
+    <publish name="indieGame"/></packageDescription>

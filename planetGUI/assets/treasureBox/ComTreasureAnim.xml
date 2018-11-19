@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="400,400">
+  <displayList>
+    <image id="n1_m1va" name="n1" src="s81t0" fileName="image/img_night.png" pkg="kc286jl7" xy="0,0" size="400,400" color="#990000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n0_m1va" name="imgTreasure" src="11bwyi76" fileName="newImg/img_cm_randombox_1.png" pkg="te1gxawo" xy="198,199" pivot="0.48,0.64" anchor="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+  </displayList>
+  <transition name="playBoxAnim">
+    <item time="0" type="Rotation" target="n0_m1va" tween="true" startValue="0" endValue="15" duration="12"/>
+    <item time="12" type="Rotation" target="n0_m1va" tween="true" startValue="15" endValue="0" duration="12"/>
+    <item time="24" type="Rotation" target="n0_m1va" tween="true" startValue="0" endValue="15" duration="12"/>
+    <item time="36" type="Rotation" target="n0_m1va" tween="true" startValue="15" endValue="0" duration="12"/>
+    <item time="48" type="Rotation" target="n0_m1va" tween="true" startValue="0"/>
+  </transition>
+</component>
