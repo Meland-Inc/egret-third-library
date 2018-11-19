@@ -5,7 +5,6 @@
   <displayList>
     <image id="n0_ot9s" name="n0" src="ot9s1z" fileName="newImg/img_robot_2.png" xy="0,0"/>
     <text id="n3_ot9s" name="tfName" xy="48,234" pivot="0.5,0.5" size="115,29" fontSize="22" color="#5f5238" align="center" vAlign="middle" text="机器人名字"/>
-    <text id="n4_ot9s" name="tfDesc" xy="15,262" size="181,89" fontSize="14" color="#a79f89" autoSize="none" text="机器人名字"/>
     <component id="n5_ot9s" name="btnUsing" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="51,356">
       <gearDisplay controller="state" pages="2"/>
       <Button title="使用中" titleColor="#ffffff" titleFontSize="22" icon="ui://te1gxawoot9si29"/>
@@ -24,5 +23,6 @@
       <gearDisplay controller="own" pages="0"/>
     </group>
     <component id="n10_sko8" name="comAvatar" src="j21fi3z" fileName="com/ComEmpty.xml" pkg="te1gxawo" xy="105,210" size="1,1"/>
+    <component id="n11_faw4" name="labDesc" src="faw4yi79" fileName="lab/labVScroll.xml" pkg="te1gxawo" xy="15,265" size="180,80"/>
   </displayList>
 </component>

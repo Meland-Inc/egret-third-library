@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640">
-  <controller name="conShowDetail" pages="0,hide,1,show" selected="1"/>
+  <controller name="conShowDetail" pages="0,hide,1,show" selected="0"/>
   <displayList>
-    <image id="n0_jtjd" name="bg" src="qn8o1" fileName="img/bg_bag.png" pkg="te1gxawo" xy="0,0" size="1136,640"/>
-    <text id="n1_jtjd" name="tfTitle" xy="480,8" size="178,44" fontSize="35" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="日志"/>
-    <list id="n2_jtjd" name="lstLogTitle" xy="149,65" size="965,561" overflow="scroll" lineGap="10" defaultItem="ui://7ryo7j79jtjd1" autoClearItems="true">
+    <image id="n0_jtjd" name="bg" src="qn8o1" fileName="img/bg_bag.png" pkg="te1gxawo" xy="0,0" size="1136,640" group="n25_kg0b"/>
+    <text id="n1_jtjd" name="tfTitle" xy="480,8" size="178,44" group="n25_kg0b" fontSize="35" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="日志"/>
+    <list id="n2_jtjd" name="lstLogTitle" xy="149,65" size="965,561" group="n25_kg0b" overflow="scroll" lineGap="10" defaultItem="ui://7ryo7j79jtjd1" autoClearItems="true">
       <item title="阿斯顿发送到发送到发送到发送到发送到发送到发送到发送到发送到发送到发送到发送到发送到发送到&#xD;&#xD;&#xD;&#xD;水电费"/>
       <item/>
       <item/>
@@ -13,14 +13,14 @@
       <item/>
       <item/>
     </list>
-    <component id="n6_jtjd" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1078,1" size="56,57">
+    <component id="n6_jtjd" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1078,1" size="56,57" group="n25_kg0b">
       <Button icon="ui://eunktclqsz331"/>
     </component>
     <graph id="n9_tj4m" name="n9" xy="762,17" size="165,24" group="n10_tj4m" type="rect"/>
     <text id="n8_tj4m" name="inpSearch" xy="763,16" size="138,25" group="n10_tj4m" input="true" fontSize="16" vAlign="middle" autoSize="none" singleLine="true" text=""/>
     <image id="n7_tj4m" name="n7" src="tj4m2" fileName="img/img_build_search_2.png" xy="908,20" group="n10_tj4m"/>
-    <group id="n10_tj4m" name="n10" xy="762,16" size="165,26" collapsed="true"/>
-    <list id="n11_tj4m" name="lstLogTag" xy="18,71" size="107,493" overflow="scroll" lineGap="5" defaultItem="ui://7ryo7j79tj4m3" autoClearItems="true">
+    <group id="n10_tj4m" name="n10" xy="762,16" size="165,26" group="n25_kg0b" collapsed="true"/>
+    <list id="n11_tj4m" name="lstLogTag" xy="18,71" size="107,493" group="n25_kg0b" overflow="scroll" lineGap="5" defaultItem="ui://7ryo7j79tj4m3" autoClearItems="true">
       <item/>
       <item/>
       <item/>
@@ -32,8 +32,8 @@
       <item/>
       <item/>
     </list>
-    <component id="n16_o8k6" name="btnSearchSetting" src="o8k65" fileName="btn/btnSearch.xml" xy="946,15"/>
-    <component id="n17_wbpe" name="btnDownLog" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="272,12">
+    <component id="n16_o8k6" name="btnSearchSetting" src="o8k65" fileName="btn/btnSearch.xml" xy="946,15" group="n25_kg0b"/>
+    <component id="n17_wbpe" name="btnDownLog" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="272,12" group="n25_kg0b">
       <Button title="下载日志" icon="ui://4o62dubdoe8k3"/>
     </component>
     <image id="n18_wbpe" name="bg" src="qn8o1" fileName="img/bg_bag.png" pkg="te1gxawo" xy="118,65" size="899,509" group="n24_wbpe"/>
@@ -42,8 +42,11 @@
     <component id="n23_wbpe" name="btnCloseLogDetail" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="961,63" size="56,57" group="n24_wbpe">
       <Button icon="ui://eunktclqsz331" controller="conShowDetail" page="0"/>
     </component>
-    <group id="n24_wbpe" name="detail" xy="118,63" size="899,511" advanced="true">
+    <group id="n24_wbpe" name="detail" xy="118,63" size="899,511" group="n25_kg0b" advanced="true" collapsed="true">
       <gearDisplay controller="conShowDetail" pages="1"/>
+    </group>
+    <group id="n25_kg0b" name="root" xy="0,0" size="1136,640" advanced="true" collapsed="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>
 </component>
