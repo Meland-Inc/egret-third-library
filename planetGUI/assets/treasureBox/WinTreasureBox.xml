@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="400,320">
+  <controller name="isGetItem" pages="0,success,1,failure" selected="0"/>
+  <displayList>
+    <component id="n55_m1va" name="comCongrateGet" src="m1va7" fileName="ComCongraeGet.xml" xy="0,0" hideByEditor="true" visible="false"/>
+    <image id="n28_ewny" name="n28" src="efrs1l" fileName="newImg/bg_cm_2.png" pkg="te1gxawo" xy="54,77" size="291,116" group="n40_ewny"/>
+    <text id="n38_ewny" name="n38" xy="77,113" size="242,42" group="n40_ewny" fontSize="16" color="#584736" align="center" autoSize="none" bold="true" text="背包已经满了，物品将通过源码&#xA;宝箱传输，请及时查收！"/>
+    <component id="n46_m1va" name="btnClose" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="318,71" size="32,32" group="n40_ewny">
+      <Button icon="ui://te1gxawoefrs1q"/>
+    </component>
+    <image id="n29_ewny" name="n29" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="57,169" size="57,16" group="n48_m1va"/>
+    <image id="n33_ewny" name="n33" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="228,169" size="61,16" group="n48_m1va"/>
+    <image id="n34_ewny" name="n34" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="171,169" size="57,16" group="n48_m1va"/>
+    <image id="n35_ewny" name="n35" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="114,169" size="57,16" group="n48_m1va"/>
+    <image id="n39_ewny" name="n39" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="289,169" size="52,16" group="n48_m1va"/>
+    <group id="n48_m1va" name="n48" xy="57,169" size="284,16" group="n40_ewny" collapsed="true"/>
+    <group id="n40_ewny" name="n40" xy="54,71" size="296,122" locked="true" advanced="true">
+      <gearDisplay controller="isGetItem" pages="1"/>
+    </group>
+    <component id="n50_m1va" name="comBoxAnim" src="ewny6" fileName="ComTreasureAnim.xml" xy="0,0" size="400,320"/>
+  </displayList>
+</component>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="382,233" bgColor="#666666">
+  <displayList>
+    <image id="n0_n0gq" name="n0" src="ma634" fileName="img/img_game1_4.png" xy="0,0" size="382,233">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_n0gq" name="n1" src="ma635" fileName="img/img_game1_5.png" xy="37,4"/>
+    <component id="n7_n0gq" name="btnReStart" src="n0gqx" fileName="win/Button2.xml" xy="150,127"/>
+  </displayList>
+  <relation target="" sidePair="width-width,height-height"/>
+</component>

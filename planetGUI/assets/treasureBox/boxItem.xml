@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="78,110" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <controller name="conEquipMark" pages="0,hide,1,show" selected="0"/>
+  <displayList>
+    <loader id="n4_pkc8" name="imgSelect" xy="4,4" size="70,73" group="n15_ewny" url="ui://te1gxawoot9si33" align="center" vAlign="middle">
+      <gearIcon controller="button" pages="0" values="ui://te1gxawoot9si33" default="ui://qoip3oosewny3"/>
+    </loader>
+    <loader id="n3_igcl" name="icon" xy="9,10" size="60,59" group="n15_ewny" align="center" vAlign="middle" fill="scale"/>
+    <text id="n2_igcl" name="quantity" xy="49,54" size="23,22" group="n15_ewny" visible="false" fontSize="16" color="#916545" align="center" vAlign="middle" autoSize="none" text="99"/>
+    <group id="n15_ewny" name="n15" xy="4,4" size="70,73" advanced="true">
+      <relation target="" sidePair="width-width,height-height"/>
+    </group>
+    <image id="n16_m1va" name="n16" src="ot9si34" fileName="newImg/img_cm_location.png" pkg="te1gxawo" xy="6,77" size="65,22"/>
+    <text id="n17_m1va" name="name" xy="12,79" size="53,19" fontSize="16" color="#544835" align="center" vAlign="middle" autoSize="none" text=""/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

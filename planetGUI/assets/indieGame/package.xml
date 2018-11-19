@@ -23,6 +23,12 @@
     <component id="e2w1o" name="comPlayView.xml" path="/win/"/>
     <component id="e2w1p" name="container.xml" path="/win/"/>
     <component id="ryj3q" name="comMove.xml" path="/win/"/>
+    <image id="n0gqr" name="btn_robot_7.png" path="/img/"/>
+    <component id="n0gqs" name="ToolTipGameOpera.xml" path="/win/" exported="true"/>
+    <component id="n0gqu" name="btnGame.xml" path="/win/"/>
+    <component id="n0gqv" name="GameOverPanel.xml" path="/win/"/>
+    <component id="n0gqw" name="Button1.xml" path="/img/"/>
+    <component id="n0gqx" name="Button2.xml" path="/win/"/>
+    <component id="nro4y" name="GameStartPanel.xml" path="/win/"/>
   </resources>
-  <publish name="indieGame"/>
-</packageDescription>
+    <publish name="indieGame"/></packageDescription>

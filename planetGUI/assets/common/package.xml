@@ -265,6 +265,21 @@
     <image id="11bwyi77" name="img_cm_randombox_2.png" path="/newImg/" exported="true"/>
     <component id="11bwyi78" name="barCm2.xml" path="/bar/" exported="true"/>
     <component id="faw4yi79" name="labVScroll.xml" path="/lab/" exported="true"/>
+    <image id="smpoyi79" name="btn_cm_blue.png" path="/newImg/" exported="true" scale="9grid" scale9grid="10,10,20,20"/>
+    <image id="smpoyi7a" name="btn_cm_empty.png" path="/newImg/" exported="true" scale="9grid" scale9grid="10,10,20,20"/>
+    <image id="pu1zyi7b" name="bg_cm_1.png" path="/img/"/>
+    <image id="pu1zyi7c" name="bg_cm_2.png" path="/img/"/>
+    <image id="pu1zyi7d" name="bg_cm_3.png" path="/img/"/>
+    <image id="pu1zyi7e" name="btn_cm_closed.png" path="/img/"/>
+    <image id="pu1zyi7f" name="btn_cm_orange.png" path="/img/"/>
+    <image id="pu1zyi7g" name="btn_cm_yellow.png" path="/img/"/>
+    <image id="pu1zyi7h" name="img_cm_item_2.png" path="/img/"/>
+    <image id="pu1zyi7i" name="img_cm_item_7.png" path="/img/"/>
+    <image id="pu1zyi7j" name="img_cm_location.png" path="/img/"/>
+    <image id="pu1zyi7k" name="img_cm_pattern.png" path="/img/"/>
+    <image id="pu1zyi7l" name="img_cm_randombox_1.png" path="/img/"/>
+    <image id="pu1zyi7m" name="img_cm_randombox_2.png" path="/img/"/>
+    <image id="pu1zyi7n" name="img_cm_title1.png" path="/img/"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>
