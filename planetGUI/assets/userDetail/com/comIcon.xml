@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="84,142">
+<component size="68,103">
+  <controller name="state" pages="0,using,1,change,2,unlock" selected="2"/>
   <displayList>
-    <image id="n0_dj9q" name="n0" src="dj9q13" fileName="img/img_robot_roleframe.png" xy="0,0"/>
-    <text id="n3_dj9q" name="tfStatus" xy="17,86" size="50,19" font="FZZhunYuan-M02S" fontSize="14" color="#b1cbe1" align="center" vAlign="middle" leading="0" bold="true" singleLine="true" text="已解锁"/>
-    <component id="n5_dj9q" name="btnClick" src="f5tyt" fileName="btn/btnChange.xml" xy="3,109">
-      <Button title="使用中" icon="ui://7xhwdeuzdj9qz" sound="ui://te1gxawotqc911"/>
+    <image id="n0_dj9q" name="n0" src="ot9si33" fileName="newImg/img_cm_item_2.png" pkg="te1gxawo" xy="0,0"/>
+    <component id="n5_dj9q" name="btnClick" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="0,75" size="68,28">
+      <gearText controller="state" pages="0,1,2" values="使用中|更换|解锁"/>
+      <gearIcon controller="state" pages="0,1,2" values="ui://te1gxawopgixi4u|ui://te1gxawopgixi4x|ui://te1gxawopgixi4l"/>
+      <Button title="解锁" titleColor="#655645" titleFontSize="14" icon="ui://te1gxawopgixi4l"/>
     </component>
-    <loader id="n6_lkft" name="avatarIcon" xy="10,10" size="66,66"/>
+    <loader id="n6_lkft" name="avatarIcon" xy="4,4" size="59,60" fill="scaleFree"/>
   </displayList>
 </component>

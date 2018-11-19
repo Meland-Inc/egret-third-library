@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="252,256">
+<component size="1136,640">
   <displayList>
-    <image id="n2_qbzr" name="bg" src="dj9qv" fileName="img/bg_idiopanal_2.png" xy="0,0"/>
-    <image id="n4_qbzr" name="iconbg" src="dj9q13" fileName="img/img_robot_roleframe.png" xy="84,37" group="n5_qbzr"/>
-    <loader id="n1_qbzr" name="avatarIcon" xy="94,47" size="66,66" group="n5_qbzr"/>
-    <group id="n5_qbzr" name="n5" xy="84,37" size="84,84"/>
-    <text id="n6_qbzr" name="n6" xy="83,137" size="89,27" font="FZZhunYuan-M02S" fontSize="20" color="#b1cbe1" bold="true" text="更新成功"/>
-    <component id="n0_qbzr" name="btnConfime" src="dj9q15" fileName="btn/btnConfirm.xml" xy="76,178">
-      <Button title="确认"/>
+    <image id="n2_qbzr" name="bg" src="efrs1m" fileName="newImg/bg_cm_3.png" pkg="te1gxawo" xy="385,197" size="366,246" group="n9_myd4"/>
+    <image id="n4_qbzr" name="iconbg" src="ot9si33" fileName="newImg/img_cm_item_2.png" pkg="te1gxawo" xy="534,254" group="n5_qbzr"/>
+    <loader id="n1_qbzr" name="avatarIcon" xy="538,258" size="59,60" group="n5_qbzr" fill="scaleFree"/>
+    <group id="n5_qbzr" name="n5" xy="534,254" size="68,68" group="n9_myd4"/>
+    <text id="n6_qbzr" name="n6" xy="529,332" size="78,25" group="n9_myd4" fontSize="18" color="#635c51" bold="true" text="更新成功"/>
+    <component id="n0_qbzr" name="btnConfime" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="511,368" group="n9_myd4">
+      <Button title="确认" titleColor="#002f16" titleFontSize="18" icon="ui://te1gxawoefrs1w"/>
     </component>
+    <image id="n8_myd4" name="n8" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="385,427" size="366,14" group="n9_myd4"/>
+    <group id="n9_myd4" name="n9" xy="385,197" size="366,246"/>
   </displayList>
 </component>

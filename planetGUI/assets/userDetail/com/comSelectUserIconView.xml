@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="642,410">
+<component size="1136,640">
   <displayList>
-    <image id="n2_dj9q" name="bg" src="dj9qu" fileName="img/bg_idiopanal_1.png" xy="0,0"/>
-    <list id="n4_dj9q" name="lstIconFrame" xy="93,50" size="469,309" layout="pagination" overflow="scroll" scroll="horizontal" scrollBarFlags="256" lineGap="23" colGap="35" lineItemCount="4" defaultItem="ui://7xhwdeuzdj9qw" align="center" vAlign="middle" autoClearItems="true">
+    <image id="n2_dj9q" name="bg" src="efrs1m" fileName="newImg/bg_cm_3.png" pkg="te1gxawo" xy="320,162" size="496,315" group="n10_myd4"/>
+    <list id="n4_dj9q" name="lstIconFrame" xy="351,215" size="433,226" group="n10_myd4" layout="pagination" overflow="scroll" scroll="horizontal" scrollBarFlags="256" lineGap="16" colGap="53" lineItemCount="4" defaultItem="ui://7xhwdeuzdj9qw" align="center" vAlign="middle" autoClearItems="true">
       <item title="1"/>
       <item title="2"/>
       <item/>
@@ -28,14 +28,18 @@
       <item/>
       <item/>
     </list>
-    <component id="n5_dj9q" name="btnCloseSelectIconView" src="ctbh2" fileName="btn/btnDetailClose.xml" xy="591,21">
+    <component id="n6_lkft" name="btnLeft" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="321,305" size="30,46" group="n10_myd4">
+      <Button icon="ui://te1gxawopgixi4m"/>
+    </component>
+    <component id="n7_lkft" name="btnRight" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="784,305" size="30,46" group="n10_myd4">
+      <Button icon="ui://te1gxawopgixi4q"/>
+    </component>
+    <text id="n8_w5go" name="n8" xy="543,166" size="45,27" group="n10_myd4" fontSize="20" color="#f5ebde" text="头像"/>
+    <image id="n9_w5go" name="n9" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="320,460" size="496,14" group="n10_myd4"/>
+    <component id="n5_dj9q" name="btnCloseSelectIconView" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="775,167" size="30,30" group="n10_myd4">
       <relation target="" sidePair="right-right,top-top"/>
+      <Button icon="ui://te1gxawoqo8vi1w"/>
     </component>
-    <component id="n6_lkft" name="btnLeft" src="lkft16" fileName="btn/btnChangePage.xml" xy="40,193">
-      <Button icon="ui://7xhwdeuzlkft18"/>
-    </component>
-    <component id="n7_lkft" name="btnRight" src="lkft16" fileName="btn/btnChangePage.xml" xy="587,193">
-      <Button icon="ui://7xhwdeuzlkft17"/>
-    </component>
+    <group id="n10_myd4" name="n10" xy="320,162" size="496,315"/>
   </displayList>
 </component>

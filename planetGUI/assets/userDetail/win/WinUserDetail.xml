@@ -1,30 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="920,564" initName="userDetail">
-  <controller name="tab" alias="detaiAndCreation" exported="true" pages="0,detail,1,creation" selected="0"/>
+<component size="1136,640" initName="userDetail">
+  <controller name="tab" alias="detaiAndCreation" exported="true" pages="0,detail,1,creation" selected="1"/>
   <displayList>
-    <image id="n95_qbzr" name="panel" src="qbzr1a" fileName="img/bg_subline.png" xy="0,0"/>
-    <component id="n92_fyx8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="874,14" size="30,30">
-      <Button icon="ui://7xhwdeuzdj9q11" sound="ui://te1gxawotqc912"/>
+    <image id="n95_qbzr" name="panel" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="218,107" size="700,430" group="n98_kztp"/>
+    <component id="n92_fyx8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="884,99" size="52,52" group="n98_kztp">
+      <Button icon="ui://te1gxawoefrs1q" sound="ui://te1gxawotqc912"/>
     </component>
-    <text id="n11_zsen" name="title" xy="381,14" size="158,39" font="FZZhunYuan-M02S" fontSize="28" color="#ffffff" align="center" vAlign="middle" leading="0" autoSize="none" bold="true" text="个人详情"/>
-    <image id="n96_cnpn" name="tabBg" src="cnpn1b" fileName="img/img_subline_1.png" xy="4,80" group="n29_zsen"/>
-    <component id="n83_apmc" name="detailBtn" src="ctbh0" fileName="btn/btnUserDataRadio.xml" xy="2,130" group="n29_zsen">
-      <Button checked="true" title="基本资料" selectedIcon="ui://7xhwdeuzcnpn1c" controller="tab" page="0"/>
+    <text id="n11_zsen" name="title" xy="489,107" size="158,39" group="n98_kztp" fontSize="20" color="#f5ebde" align="center" vAlign="middle" leading="0" autoSize="none" text="个人详情"/>
+    <image id="n96_cnpn" name="tabBg" src="ot9si2v" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="238,155" size="166,350" group="n29_zsen"/>
+    <component id="n83_apmc" name="detailBtn" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="253,199" size="135,56" group="n29_zsen">
+      <Button title="基本资料" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="tab" page="0"/>
     </component>
-    <component id="n84_apmc" name="creationBtn" src="ctbh0" fileName="btn/btnUserDataRadio.xml" xy="2,217" group="n29_zsen">
-      <Button title="创作作品" selectedIcon="ui://7xhwdeuzcnpn1c" controller="tab" page="1"/>
+    <component id="n84_apmc" name="creationBtn" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="253,271" size="135,56" group="n29_zsen">
+      <Button checked="true" title="创作作品" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="tab" page="1"/>
     </component>
-    <group id="n29_zsen" name="tabBtn" xy="2,80" size="224,412" collapsed="true"/>
-    <component id="n77_apmc" name="detail" src="ctbh9" fileName="com/comDetail.xml" xy="234,82">
+    <group id="n29_zsen" name="tabBtn" xy="238,155" size="166,350" group="n98_kztp" collapsed="true"/>
+    <component id="n77_apmc" name="detail" src="ctbh9" fileName="com/comDetail.xml" xy="412,155" group="n98_kztp">
       <gearDisplay controller="tab" pages="0,2"/>
     </component>
-    <list id="n91_ctbh" name="lstCreation" xy="173,83" size="427,311" layout="flow_hz" overflow="scroll" lineGap="15" colGap="10" lineItemCount="3" defaultItem="ui://7xhwdeuzctbhc" align="center">
+    <list id="n91_ctbh" name="lstCreation" xy="425,160" size="456,339" group="n98_kztp" layout="flow_hz" overflow="scroll" lineGap="15" colGap="10" lineItemCount="3" defaultItem="ui://7xhwdeuzctbhc" align="center">
       <gearDisplay controller="tab" pages="1"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
     </list>
-    <component id="n93_f5ty" name="comSelectIconView" src="f5tys" fileName="com/comSelectUserIconView.xml" xy="139,77" hideByEditor="true" visible="false">
+    <image id="n97_myd4" name="n97" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="218,517" size="700,14" group="n98_kztp"/>
+    <component id="n93_f5ty" name="comSelectIconView" src="f5tys" fileName="com/comSelectUserIconView.xml" xy="0,0" group="n98_kztp" hideByEditor="true" visible="false">
       <gearDisplay controller="tab" pages="0,2"/>
     </component>
-    <component id="n94_qbzr" name="comConfirmView" src="qbzr19" fileName="com/comConfirmView.xml" xy="334,154" pivot="0.5,0.5" hideByEditor="true" visible="false"/>
+    <component id="n94_qbzr" name="comConfirmView" src="qbzr19" fileName="com/comConfirmView.xml" xy="0,0" pivot="0.5,0.5" group="n98_kztp" hideByEditor="true" visible="false"/>
+    <group id="n98_kztp" name="n98" xy="0,0" size="1136,640" advanced="true">
+      <relation target="" sidePair="center-center"/>
+    </group>
   </displayList>
   <transition name="showConfirm">
     <item time="0" type="Scale" target="n94_qbzr" tween="true" startValue="0,0" endValue="1,1" duration="12" ease="Back.Out"/>
