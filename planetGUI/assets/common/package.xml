@@ -283,6 +283,11 @@
     <image id="hpymyi7o" name="btn_cm_closed_4.png" path="/newImg/" exported="true"/>
     <image id="hpymyi7p" name="img_cm_ok_1.png" path="/newImg/" exported="true"/>
     <image id="hpymyi7q" name="img_cm_ok_2.png" path="/newImg/" exported="true"/>
+    <image id="r398yi7r" name="img_cm_switch1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="12,6,24,8"/>
+    <image id="r398yi7s" name="img_cm_switch2.png" path="/newImg/" exported="true" scale="9grid" scale9grid="12,6,24,8"/>
+    <image id="r398yi7t" name="img_cm_switch3.png" path="/newImg/" exported="true"/>
+    <image id="r398yi7u" name="img_cm_slider1.png" path="/newImg/" exported="true"/>
+    <image id="r398yi7v" name="img_cm_slider2.png" path="/newImg/" exported="true" scale="9grid" scale9grid="3,2,261,4"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>

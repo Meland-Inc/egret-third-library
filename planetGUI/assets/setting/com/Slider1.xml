@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="273,15" extention="Slider">
+<component size="271,32" extention="Slider">
   <displayList>
-    <image id="n1" name="n1" src="8zcx6" fileName="img/img_setting_slider_2.png" xy="0,0" size="273,15">
+    <image id="n1" name="n1" src="r398yi7u" fileName="newImg/img_cm_slider1.png" pkg="te1gxawo" xy="0,12" size="253,8">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n2" name="bar" src="8zcx5" fileName="img/img_setting_slider_1.png" xy="0,0" size="258,15"/>
-    <component id="n3" name="grip" src="k8dtq" fileName="com/Slider1_grip.xml" xy="242,-8">
+    <image id="n2" name="bar" src="r398yi7v" fileName="newImg/img_cm_slider2.png" pkg="te1gxawo" xy="0,12" size="270,8"/>
+    <component id="n3" name="grip" src="k8dtq" fileName="com/Slider1_grip.xml" xy="240,0">
       <relation target="n2" sidePair="right-right"/>
     </component>
   </displayList>
