@@ -1,61 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="640,404" overflow="scroll">
+<component size="440,414" overflow="scroll">
   <displayList>
-    <image id="n79_cnpn" name="n0" src="cnpn1e" fileName="img/img_wordbg_1.png" xy="0,0" group="n2_stxa"/>
-    <text id="n1_stxa" name="n1" xy="274,4" size="92,27" group="n2_stxa" font="FZZhunYuan-M02S" fontSize="20" color="#999999" vAlign="middle" leading="0" autoSize="none" bold="true" text="基本属性"/>
-    <group id="n2_stxa" name="basicTalentTitle" xy="0,0" size="640,31" collapsed="true"/>
-    <text id="n4_stxa" name="n4" xy="11,45" size="42,24" group="n76_apmc" font="FZZhunYuan-M02S" fontSize="18" color="#7a7d81" vAlign="middle" leading="0" autoSize="none" bold="true" text="等级"/>
-    <text id="n75_apmc" name="lv" xy="62,45" size="120,28" group="n76_apmc" font="FZZhunYuan-M02S" fontSize="22" color="#7a7d81" vAlign="middle" leading="0" autoSize="none" bold="true" text="0"/>
-    <group id="n76_apmc" name="level" xy="11,45" size="171,28"/>
-    <text id="n13_stxa" name="n13" xy="11,86" size="42,24" group="n18_stxa" font="FZZhunYuan-M02S" fontSize="18" color="#7a7d81" vAlign="middle" leading="0" autoSize="none" bold="true" text="经验"/>
-    <image id="n81_cnpn" name="expBarBg" src="cnpn1g" fileName="img/img_progressbar_1.png" xy="56,84" group="n18_stxa"/>
-    <component id="n78_kepv" name="expBar" src="ctbh7" fileName="com/comExpBar.xml" xy="60,88" group="n18_stxa"/>
-    <text id="n17_stxa" name="tfExp" xy="70,87" size="537,24" group="n18_stxa" font="FZZhunYuan-M02S" fontSize="18" color="#7a7d81" align="center" vAlign="middle" leading="0" autoSize="none" bold="true" text="0/0"/>
-    <group id="n18_stxa" name="exp" xy="11,84" size="611,28"/>
-    <text id="n7_stxa" name="n7" xy="11,126" size="80,24" group="n8_stxa" font="FZZhunYuan-M02S" fontSize="18" color="#7a7d81" vAlign="middle" leading="0" autoSize="none" bold="true" text="普通攻击"/>
-    <group id="n8_stxa" name="n8" xy="11,125" size="67,21" group="n77_apmc"/>
-    <text id="n10_stxa" name="n10" xy="340,125" size="80,24" group="n11_stxa" font="FZZhunYuan-M02S" fontSize="18" color="#7a7d81" vAlign="middle" leading="0" ubb="true" autoSize="none" bold="true" text="[b]普通防御[/b]"/>
-    <group id="n11_stxa" name="n11" xy="340,125" size="80,24" group="n77_apmc"/>
-    <text id="n73_apmc" name="att" xy="100,124" size="120,28" group="n77_apmc" font="FZZhunYuan-M02S" fontSize="22" color="#7a7d81" vAlign="middle" leading="0" autoSize="none" bold="true" text="0"/>
-    <text id="n74_apmc" name="def" xy="430,122" size="120,28" group="n77_apmc" font="FZZhunYuan-M02S" fontSize="22" color="#7a7d81" vAlign="middle" leading="0" autoSize="none" bold="true" text="0"/>
-    <group id="n77_apmc" name="basic" xy="11,122" size="539,30"/>
-    <image id="n80_cnpn" name="n19" src="cnpn1e" fileName="img/img_wordbg_1.png" xy="0,166" group="n21_stxa"/>
-    <text id="n20_stxa" name="n20" xy="274,170" size="92,27" group="n21_stxa" font="FZZhunYuan-M02S" fontSize="20" color="#999999" vAlign="middle" leading="0" bold="true" text="高级属性"/>
-    <group id="n21_stxa" name="hignGradeTalentTitle" xy="0,166" size="640,31" collapsed="true"/>
-    <text id="n23_stxa" name="n23" xy="11,211" size="80,24" group="n24_stxa" font="FZZhunYuan-M02S" fontSize="18" color="#7a7d81" vAlign="middle" leading="0" autoSize="none" bold="true" text="火攻击"/>
-    <group id="n24_stxa" name="fireAttGroup" xy="11,211" size="80,24" group="n57_apmc"/>
-    <text id="n29_stxa" name="n29" xy="340,213" size="80,24" group="n30_stxa" font="FZZhunYuan-M02S" fontSize="18" color="#7a7d81" vAlign="middle" autoSize="none" bold="true" text="火防御"/>
-    <group id="n30_stxa" name="fireDefGroup" xy="340,213" size="67,20" group="n57_apmc"/>
-    <text id="n55_apmc" name="fire_att" xy="100,210" size="120,28" group="n57_apmc" font="FZZhunYuan-M02S" fontSize="22" color="#7a7d81" vAlign="middle" autoSize="none" bold="true" text="0"/>
-    <text id="n56_apmc" name="fir_def" xy="430,210" size="120,28" group="n57_apmc" font="FZZhunYuan-M02S" fontSize="22" color="#7a7d81" vAlign="middle" autoSize="none" bold="true" text="0"/>
-    <group id="n57_apmc" name="fire" xy="11,211" size="539,24"/>
-    <text id="n32_stxa" name="n32" xy="11,251" size="80,24" group="n33_stxa" font="FZZhunYuan-M02S" fontSize="18" color="#7a7d81" vAlign="middle" leading="0" autoSize="none" bold="true" text="冰攻击"/>
-    <group id="n33_stxa" name="n33" xy="11,250" size="67,21" group="n67_apmc"/>
-    <text id="n35_stxa" name="n35" xy="340,250" size="80,24" group="n36_stxa" font="FZZhunYuan-M02S" fontSize="18" color="#7a7d81" vAlign="middle" leading="0" autoSize="none" bold="true" text="冰防御"/>
-    <group id="n36_stxa" name="n36" xy="241,250" size="67,20" group="n67_apmc"/>
-    <text id="n59_apmc" name="ice_att" xy="100,247" size="120,28" group="n67_apmc" font="FZZhunYuan-M02S" fontSize="22" color="#7a7d81" vAlign="middle" leading="0" autoSize="none" bold="true" text="0"/>
-    <text id="n60_apmc" name="ice_def" xy="430,247" size="120,28" group="n67_apmc" font="FZZhunYuan-M02S" fontSize="22" color="#7a7d81" vAlign="middle" leading="0" autoSize="none" bold="true" text="0&#xA;"/>
-    <group id="n67_apmc" name="iceAtt" xy="11,250" size="539,28"/>
-    <text id="n44_stxa" name="n44" xy="11,331" size="80,24" group="n45_stxa" font="FZZhunYuan-M02S" fontSize="18" color="#7a7d81" vAlign="middle" leading="0" autoSize="none" bold="true" text="毒攻击"/>
-    <group id="n45_stxa" name="n45" xy="11,330" size="67,21" group="n69_apmc"/>
-    <text id="n47_stxa" name="n47" xy="340,330" size="80,24" group="n48_stxa" font="FZZhunYuan-M02S" fontSize="18" color="#7a7d81" vAlign="middle" leading="0" autoSize="none" bold="true" text="毒防御"/>
-    <group id="n48_stxa" name="n48" xy="240,329" size="67,21" group="n69_apmc"/>
-    <text id="n63_apmc" name="poison_att" xy="100,327" size="120,28" group="n69_apmc" font="FZZhunYuan-M02S" fontSize="22" color="#7a7d81" vAlign="middle" leading="0" autoSize="none" bold="true" text="0"/>
-    <text id="n64_apmc" name="poison_def" xy="430,327" size="120,28" group="n69_apmc" font="FZZhunYuan-M02S" fontSize="22" color="#7a7d81" vAlign="middle" leading="0" autoSize="none" bold="true" text="0"/>
-    <group id="n69_apmc" name="poison" xy="11,327" size="539,28"/>
-    <text id="n38_stxa" name="n38" xy="11,291" size="80,24" group="n39_stxa" font="FZZhunYuan-M02S" fontSize="18" color="#7a7d81" vAlign="middle" leading="0" autoSize="none" bold="true" text="雷攻击"/>
-    <group id="n39_stxa" name="n39" xy="11,290" size="67,21" group="n68_apmc"/>
-    <text id="n41_stxa" name="n41" xy="340,290" size="80,24" group="n42_stxa" font="FZZhunYuan-M02S" fontSize="18" color="#7a7d81" vAlign="middle" leading="0" autoSize="none" bold="true" text="雷防御"/>
-    <group id="n42_stxa" name="n42" xy="241,289" size="67,21" group="n68_apmc"/>
-    <text id="n61_apmc" name="thunder_att" xy="100,287" size="120,28" group="n68_apmc" font="FZZhunYuan-M02S" fontSize="22" color="#7a7d81" vAlign="middle" leading="0" autoSize="none" bold="true" text="0"/>
-    <text id="n62_apmc" name="thunder_def" xy="430,287" size="120,28" group="n68_apmc" font="FZZhunYuan-M02S" fontSize="22" color="#7a7d81" vAlign="middle" leading="0" autoSize="none" bold="true" text="0"/>
-    <group id="n68_apmc" name="thunder" xy="11,290" size="387,21"/>
-    <text id="n50_stxa" name="n50" xy="11,370" size="80,24" group="n51_stxa" font="FZZhunYuan-M02S" fontSize="18" color="#7a7d81" vAlign="middle" leading="0" autoSize="none" bold="true" text="暗攻击"/>
-    <group id="n51_stxa" name="n51" xy="11,369" size="67,21" group="n70_apmc"/>
-    <text id="n53_stxa" name="n53" xy="340,369" size="80,24" group="n54_stxa" font="FZZhunYuan-M02S" fontSize="18" color="#7a7d81" vAlign="middle" leading="0" autoSize="none" bold="true" text="暗防御"/>
-    <group id="n54_stxa" name="n54" xy="340,369" size="80,24" group="n70_apmc"/>
-    <text id="n65_apmc" name="dark_att" xy="100,366" size="120,28" group="n70_apmc" font="FZZhunYuan-M02S" fontSize="22" color="#7a7d81" vAlign="middle" leading="0" autoSize="none" bold="true" text="0"/>
-    <text id="n66_apmc" name="dark_def" xy="430,366" size="120,28" group="n70_apmc" font="FZZhunYuan-M02S" fontSize="22" color="#7a7d81" vAlign="middle" leading="0" autoSize="none" bold="true" text="0"/>
-    <group id="n70_apmc" name="dark" xy="11,366" size="539,28"/>
+    <image id="n79_cnpn" name="n0" src="pgixi5h" fileName="newImg/img_cm_bottom_12.png" pkg="te1gxawo" xy="0,0" group="n2_stxa"/>
+    <text id="n1_stxa" name="n1" xy="6,-3" size="92,27" group="n2_stxa" font="FZZhunYuan-M02S" fontSize="15" color="#54452f" vAlign="middle" leading="0" autoSize="none" bold="true" text="基本属性"/>
+    <image id="n82_myd4" name="n82" src="pgixi5k" fileName="newImg/img_cm_bottom_15.png" pkg="te1gxawo" xy="0,24" size="440,1" group="n2_stxa"/>
+    <group id="n2_stxa" name="basicTalentTitle" xy="0,-3" size="440,28"/>
+    <component id="n83_myd4" name="n83" src="myd41n" fileName="com/ComTxtBG1.xml" xy="0,35" group="n76_apmc">
+      <Label title="等级"/>
+    </component>
+    <text id="n75_apmc" name="lv" xy="193,36" size="234,20" group="n76_apmc" fontSize="14" color="#584736" align="right" vAlign="middle" leading="0" autoSize="none" bold="true" text="0"/>
+    <group id="n76_apmc" name="level" xy="0,35" size="438,22"/>
+    <component id="n86_myd4" name="n86" src="myd41n" fileName="com/ComTxtBG1.xml" xy="0,59" group="n18_stxa">
+      <Label title="经验值"/>
+    </component>
+    <image id="n81_cnpn" name="expBarBg" src="cnpn1g" fileName="img/img_progressbar_1.png" xy="56,56" size="182,28" group="n18_stxa" hideByEditor="true" visible="false"/>
+    <component id="n78_kepv" name="expBar" src="ctbh7" fileName="com/comExpBar.xml" xy="60,60" size="283,20" group="n18_stxa" hideByEditor="true" visible="false"/>
+    <text id="n17_stxa" name="tfExp" xy="109,60" size="318,20" group="n18_stxa" fontSize="14" color="#584736" align="right" vAlign="middle" leading="0" autoSize="none" bold="true" text="0/0"/>
+    <group id="n18_stxa" name="exp" xy="0,56" size="438,28"/>
+    <component id="n84_myd4" name="n84" src="myd41n" fileName="com/ComTxtBG1.xml" xy="0,83" group="n8_stxa">
+      <Label title="攻击力"/>
+    </component>
+    <group id="n8_stxa" name="n8" xy="0,86" size="438,22" group="n77_apmc"/>
+    <component id="n85_myd4" name="n85" src="myd41n" fileName="com/ComTxtBG1.xml" xy="0,107" group="n11_stxa">
+      <Label title="防御力"/>
+    </component>
+    <group id="n11_stxa" name="n11" xy="0,107" size="438,22" group="n77_apmc"/>
+    <text id="n73_apmc" name="att" xy="308,84" size="120,21" group="n77_apmc" fontSize="14" color="#584736" align="right" vAlign="middle" leading="0" autoSize="none" bold="true" text="0"/>
+    <text id="n74_apmc" name="def" xy="308,107" size="120,21" group="n77_apmc" fontSize="14" color="#584736" align="right" vAlign="middle" leading="0" autoSize="none" bold="true" text="0"/>
+    <group id="n77_apmc" name="basic" xy="0,84" size="438,45"/>
+    <image id="n80_cnpn" name="n19" src="pgixi5h" fileName="newImg/img_cm_bottom_12.png" pkg="te1gxawo" xy="0,140" group="n21_stxa"/>
+    <text id="n20_stxa" name="n20" xy="6,139" size="69,22" group="n21_stxa" fontSize="15" color="#54452f" vAlign="middle" leading="0" bold="true" text="高级属性"/>
+    <image id="n87_myd4" name="n87" src="pgixi5k" fileName="newImg/img_cm_bottom_15.png" pkg="te1gxawo" xy="0,165" size="440,1" group="n21_stxa"/>
+    <group id="n21_stxa" name="hignGradeTalentTitle" xy="0,139" size="440,27"/>
+    <component id="n88_myd4" name="fireAttGroup" src="myd41n" fileName="com/ComTxtBG1.xml" xy="0,176" group="n57_apmc">
+      <Label title="火攻击"/>
+    </component>
+    <component id="n89_myd4" name="fireDefGroup" src="myd41n" fileName="com/ComTxtBG1.xml" xy="0,200" group="n57_apmc">
+      <Label title="火耐性"/>
+    </component>
+    <text id="n55_apmc" name="fire_att" xy="308,176" size="120,21" group="n57_apmc" fontSize="14" color="#584736" align="right" vAlign="middle" autoSize="none" bold="true" text="0"/>
+    <text id="n56_apmc" name="fir_def" xy="308,200" size="120,21" group="n57_apmc" fontSize="14" color="#584736" align="right" vAlign="middle" autoSize="none" bold="true" text="0"/>
+    <group id="n57_apmc" name="fire" xy="0,176" size="438,46"/>
+    <component id="n90_myd4" name="group" src="myd41n" fileName="com/ComTxtBG1.xml" xy="0,224" group="n67_apmc">
+      <Label title="冰攻击"/>
+    </component>
+    <component id="n91_myd4" name="group" src="myd41n" fileName="com/ComTxtBG1.xml" xy="0,248" group="n67_apmc">
+      <Label title="冰耐性"/>
+    </component>
+    <text id="n59_apmc" name="ice_att" xy="308,225" size="120,21" group="n67_apmc" fontSize="14" color="#584736" align="right" vAlign="middle" leading="0" autoSize="none" bold="true" text="0"/>
+    <text id="n60_apmc" name="ice_def" xy="308,249" size="120,21" group="n67_apmc" fontSize="14" color="#584736" align="right" vAlign="middle" leading="0" autoSize="none" bold="true" text="1"/>
+    <group id="n67_apmc" name="iceAtt" xy="0,224" size="438,46"/>
+    <component id="n92_myd4" name="group" src="myd41n" fileName="com/ComTxtBG1.xml" xy="0,272" group="n69_apmc">
+      <Label title="毒攻击"/>
+    </component>
+    <component id="n93_myd4" name="group" src="myd41n" fileName="com/ComTxtBG1.xml" xy="0,296" group="n69_apmc">
+      <Label title="毒耐性"/>
+    </component>
+    <text id="n63_apmc" name="poison_att" xy="308,273" size="120,21" group="n69_apmc" fontSize="14" color="#584736" align="right" vAlign="middle" leading="0" autoSize="none" bold="true" text="0"/>
+    <text id="n64_apmc" name="poison_def" xy="308,296" size="120,21" group="n69_apmc" fontSize="14" color="#584736" align="right" vAlign="middle" leading="0" autoSize="none" bold="true" text="0"/>
+    <group id="n69_apmc" name="poison" xy="0,272" size="438,46"/>
+    <component id="n94_myd4" name="group" src="myd41n" fileName="com/ComTxtBG1.xml" xy="0,320" group="n68_apmc">
+      <Label title="雷攻击"/>
+    </component>
+    <component id="n95_myd4" name="group" src="myd41n" fileName="com/ComTxtBG1.xml" xy="0,344" group="n68_apmc">
+      <Label title="雷耐性"/>
+    </component>
+    <text id="n61_apmc" name="thunder_att" xy="308,321" size="120,21" group="n68_apmc" fontSize="14" color="#584736" align="right" vAlign="middle" leading="0" autoSize="none" bold="true" text="0"/>
+    <text id="n62_apmc" name="thunder_def" xy="308,345" size="120,21" group="n68_apmc" fontSize="14" color="#584736" align="right" vAlign="middle" leading="0" autoSize="none" bold="true" text="0"/>
+    <group id="n68_apmc" name="thunder" xy="0,320" size="438,46"/>
+    <component id="n97_myd4" name="group" src="myd41n" fileName="com/ComTxtBG1.xml" xy="0,368" group="n70_apmc">
+      <Label title="暗攻击"/>
+    </component>
+    <component id="n96_myd4" name="group" src="myd41n" fileName="com/ComTxtBG1.xml" xy="0,392" group="n70_apmc">
+      <Label title="暗耐性"/>
+    </component>
+    <text id="n65_apmc" name="dark_att" xy="308,369" size="120,21" group="n70_apmc" fontSize="14" color="#584736" align="right" vAlign="middle" leading="0" autoSize="none" bold="true" text="0"/>
+    <text id="n66_apmc" name="dark_def" xy="308,393" size="120,21" group="n70_apmc" fontSize="14" color="#584736" align="right" vAlign="middle" leading="0" autoSize="none" bold="true" text="0"/>
+    <group id="n70_apmc" name="dark" xy="0,368" size="438,46"/>
   </displayList>
 </component>

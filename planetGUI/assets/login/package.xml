@@ -121,9 +121,6 @@
     <component id="bidp4t" name="btnMain.xml" path="/btn/"/>
     <component id="bidp4u" name="btnRightIconRadio.xml" path="/btn/"/>
     <image id="nri04v" name="img_9.png" path="/newImg/"/>
-    <image id="qo8v4x" name="icon_login_qq.png" path="/newImg/"/>
-    <image id="qo8v4y" name="icon_login_wechat.png" path="/newImg/"/>
-    <image id="qo8v4z" name="btn_login_1.png" path="/newImg/" scale="9grid" scale9grid="10,10,20,20"/>
     <image id="qo8v50" name="btn_login_2.png" path="/newImg/" scale="9grid" scale9grid="10,10,20,20"/>
     <image id="qo8v51" name="btn_login_3.png" path="/newImg/"/>
     <image id="qo8v52" name="btn_login_4.png" path="/newImg/"/>
@@ -144,6 +141,8 @@
     <image id="luqx5h" name="img_line_green.png" path="/newImg/"/>
     <image id="luqx5i" name="img_line_red.png" path="/newImg/"/>
     <image id="h03r5j" name="img_lineloading_1.png" path="/newImg/"/>
+    <image id="smpo5k" name="btn_login_wechat.png" path="/newImg/"/>
+    <image id="smpo5l" name="btn_login_qq.png" path="/newImg/"/>
   </resources>
   <publish name="login"/>
 </packageDescription>

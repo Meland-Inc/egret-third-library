@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="676,410">
+<component size="490,350">
   <displayList>
-    <image id="n8_cnpn" name="detailBG" src="cnpn1d" fileName="img/img_subline_2.png" xy="0,0"/>
-    <image id="n9_cnpn" name="iconbg" src="dj9q13" fileName="img/img_robot_roleframe.png" xy="16,15" size="84,84" group="n10_cnpn"/>
-    <loader id="n3_apmc" name="iconAvatar" xy="29,28" size="60,60" group="n10_cnpn" fill="scale"/>
-    <group id="n10_cnpn" name="icon" xy="16,15" size="84,84" group="n7_apmc"/>
-    <text id="n5_apmc" name="usernameLabel" xy="112,33" size="191,22" group="n7_apmc" font="FZZhunYuan-M02S" fontSize="20" color="#686c6e" vAlign="middle" autoSize="none" bold="true" text="&#xA;"/>
-    <text id="n6_apmc" name="userIdLabel" xy="112,64" size="192,21" group="n7_apmc" font="FZZhunYuan-M02S" fontSize="16" color="#acacac" vAlign="middle" autoSize="none" bold="true" text="&#xA;"/>
-    <group id="n7_apmc" name="iconGroup" xy="16,15" size="288,84"/>
-    <component id="n11_cnpn" name="btnChangeIcon" src="f5tyt" fileName="btn/btnChange.xml" xy="19,104">
-      <Button title="更换头像" titleColor="#ffffff" titleFontSize="16" icon="ui://7xhwdeuzdj9q14"/>
+    <image id="n8_cnpn" name="detailBG" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="0,0" size="490,350"/>
+    <image id="n9_cnpn" name="iconbg" src="pgixi5z" fileName="newImg/img_cm_item_16.png" pkg="te1gxawo" xy="26,16" size="84,84" group="n10_cnpn"/>
+    <loader id="n3_apmc" name="iconAvatar" xy="30,20" size="74,74" group="n10_cnpn" aspect="true" fill="scale"/>
+    <group id="n10_cnpn" name="icon" xy="26,16" size="84,84" group="n7_apmc"/>
+    <text id="n5_apmc" name="usernameLabel" xy="123,19" size="191,22" group="n7_apmc" fontSize="16" color="#54452f" vAlign="middle" autoSize="none" bold="true" text="&#xA;"/>
+    <text id="n6_apmc" name="userIdLabel" xy="123,45" size="192,21" group="n7_apmc" font="FZZhunYuan-M02S" fontSize="12" color="#bfb89c" vAlign="middle" autoSize="none" bold="true" text="&#xA;"/>
+    <group id="n7_apmc" name="iconGroup" xy="26,16" size="289,84"/>
+    <component id="n11_cnpn" name="btnChangeIcon" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="123,73" size="75,27">
+      <Button title="更换头像" titleColor="#656565" titleFontSize="12" icon="ui://te1gxawopgixi4s"/>
     </component>
-    <component id="n1_apmc" name="talent" src="ctbh4" fileName="com/comTalent.xml" xy="16,145" size="640,246"/>
+    <component id="n1_apmc" name="talent" src="ctbh4" fileName="com/comTalent.xml" xy="26,112" size="440,224"/>
   </displayList>
 </component>
