@@ -8,61 +8,61 @@
       <Button icon="ui://te1gxawohpymyi7o"/>
     </component>
     <text id="n3_8zcx" name="title" xy="480,110" size="176,34" group="n47_kg0b" fontSize="20" color="#f5ebde" align="center" vAlign="middle" autoSize="none" text="设置"/>
-    <component id="n26_o8k6" name="tgPathFinding" src="rw7fg" fileName="com/settingToggle.xml" xy="489,198" size="152,33" group="n30_o8k6">
+    <component id="n26_o8k6" name="tgPathFinding" src="rw7fg" fileName="com/settingToggle.xml" xy="481,198" size="148,33" group="n30_o8k6">
       <Label title="点击寻路"/>
     </component>
-    <component id="n27_o8k6" name="rbImageQuality" src="9utnt" fileName="com/radioButton.xml" xy="489,254" size="295,33" group="n30_o8k6">
+    <component id="n27_o8k6" name="rbImageQuality" src="9utnt" fileName="com/radioButton.xml" xy="481,244" size="320,33" group="n30_o8k6">
       <Label title="同屏显示"/>
     </component>
-    <component id="n43_igxs" name="tgWeatherSystem" src="rw7fg" fileName="com/settingToggle.xml" xy="489,309" size="152,33" group="n30_o8k6">
+    <component id="n43_igxs" name="tgWeatherSystem" src="rw7fg" fileName="com/settingToggle.xml" xy="481,312" size="148,33" group="n30_o8k6">
       <Label title="天气系统"/>
     </component>
-    <component id="n28_o8k6" name="btnLogout" src="cf98i" fileName="btn/btnNull.xml" xy="824,438" group="n30_o8k6">
-      <Button title="退出登陆" icon="ui://wu3n4vxq8zcx1"/>
+    <component id="n29_o8k6" name="btnOpenLog" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="441,436" size="125,40" group="n30_o8k6">
+      <Button title="查看日志" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoefrs1w"/>
     </component>
-    <component id="n29_o8k6" name="btnOpenLog" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="447,438" group="n30_o8k6">
-      <Button title="查看日志"/>
+    <component id="n42_o8k6" name="btnVconsole" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="595,436" size="125,40" group="n30_o8k6">
+      <Button title="开启vconsole" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoefrs1w"/>
     </component>
-    <component id="n42_o8k6" name="btnVconsole" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="573,438" group="n30_o8k6">
-      <Button title="开启vconsole" titleFontSize="16"/>
+    <component id="n28_o8k6" name="btnLogout" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="750,436" size="125,40" group="n30_o8k6">
+      <Button title="退出登陆" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoqo8vi21"/>
     </component>
-    <component id="n45_s7hp" name="tgDayNightSystem" src="rw7fg" fileName="com/settingToggle.xml" xy="489,360" size="152,33" group="n30_o8k6">
+    <component id="n45_s7hp" name="tgDayNightSystem" src="rw7fg" fileName="com/settingToggle.xml" xy="481,363" size="148,33" group="n30_o8k6">
       <Label title="昼夜系统"/>
     </component>
-    <group id="n30_o8k6" name="system" xy="447,198" size="409,281" group="n47_kg0b" advanced="true">
+    <group id="n30_o8k6" name="system" xy="441,198" size="434,278" group="n47_kg0b" advanced="true" collapsed="true">
       <gearDisplay controller="conSetting" pages="0"/>
     </group>
-    <component id="n31_o8k6" name="tgSound" src="rw7fg" fileName="com/settingToggle.xml" xy="473,215" size="120,33" group="n34_o8k6">
+    <component id="n31_o8k6" name="tgSound" src="rw7fg" fileName="com/settingToggle.xml" xy="472,215" size="116,33" group="n34_o8k6">
       <Label title="音乐"/>
     </component>
-    <component id="n32_o8k6" name="tgSoundEffect" src="rw7fg" fileName="com/settingToggle.xml" xy="682,215" size="120,33" group="n34_o8k6">
+    <component id="n32_o8k6" name="tgSoundEffect" src="rw7fg" fileName="com/settingToggle.xml" xy="686,215" size="116,33" group="n34_o8k6">
       <Label title="音效"/>
     </component>
-    <component id="n33_o8k6" name="sldSoundVolume" src="cf98j" fileName="com/soundSlider.xml" xy="473,292" size="314,32" group="n34_o8k6">
+    <component id="n33_o8k6" name="sldSoundVolume" src="cf98j" fileName="com/soundSlider.xml" xy="472,292" size="330,32" group="n34_o8k6">
       <Label title="音量"/>
     </component>
-    <group id="n34_o8k6" name="sound" xy="473,215" size="329,109" group="n47_kg0b" advanced="true" collapsed="true">
+    <group id="n34_o8k6" name="sound" xy="472,215" size="330,109" group="n47_kg0b" advanced="true" collapsed="true">
       <gearDisplay controller="conSetting" pages="1"/>
     </group>
-    <component id="n35_o8k6" name="tgWorldMsg" src="rw7fg" fileName="com/settingToggle.xml" xy="446,225" size="152,33" group="n41_o8k6">
+    <component id="n35_o8k6" name="tgWorldMsg" src="rw7fg" fileName="com/settingToggle.xml" xy="446,228" size="148,33" group="n41_o8k6">
       <Label title="世界消息"/>
     </component>
-    <component id="n36_o8k6" name="tgSysMsg" src="rw7fg" fileName="com/settingToggle.xml" xy="718,225" size="152,33" group="n41_o8k6">
+    <component id="n36_o8k6" name="tgSysMsg" src="rw7fg" fileName="com/settingToggle.xml" xy="710,228" size="148,33" group="n41_o8k6">
       <Label title="系统消息"/>
     </component>
-    <component id="n37_o8k6" name="tgLineMsg" src="rw7fg" fileName="com/settingToggle.xml" xy="446,285" size="152,33" group="n41_o8k6">
+    <component id="n37_o8k6" name="tgLineMsg" src="rw7fg" fileName="com/settingToggle.xml" xy="446,288" size="148,33" group="n41_o8k6">
       <Label title="分线消息"/>
     </component>
-    <component id="n38_o8k6" name="tgCreationMsg" src="rw7fg" fileName="com/settingToggle.xml" xy="718,285" size="152,33" group="n41_o8k6">
+    <component id="n38_o8k6" name="tgCreationMsg" src="rw7fg" fileName="com/settingToggle.xml" xy="710,288" size="148,33" group="n41_o8k6">
       <Label title="创作消息"/>
     </component>
-    <component id="n39_o8k6" name="tgNearMsg" src="rw7fg" fileName="com/settingToggle.xml" xy="446,345" size="152,33" group="n41_o8k6">
+    <component id="n39_o8k6" name="tgNearMsg" src="rw7fg" fileName="com/settingToggle.xml" xy="446,348" size="148,33" group="n41_o8k6">
       <Label title="附近消息"/>
     </component>
-    <component id="n40_o8k6" name="tgFriendMsg" src="rw7fg" fileName="com/settingToggle.xml" xy="718,345" size="152,33" group="n41_o8k6">
+    <component id="n40_o8k6" name="tgFriendMsg" src="rw7fg" fileName="com/settingToggle.xml" xy="710,348" size="148,33" group="n41_o8k6">
       <Label title="私聊消息"/>
     </component>
-    <group id="n41_o8k6" name="chat" xy="446,225" size="424,153" group="n47_kg0b" advanced="true">
+    <group id="n41_o8k6" name="chat" xy="446,228" size="412,153" group="n47_kg0b" advanced="true" collapsed="true">
       <gearDisplay controller="conSetting" pages="2"/>
     </group>
     <text id="n58_r398" name="n58" xy="541,235" size="70,25" group="n54_r398" fontSize="18" color="#5b4b37" text="1.2.01.3"/>
@@ -76,13 +76,13 @@
     <component id="n21_o8k6" name="btnSystem" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="256,182" size="125,56" group="n47_kg0b">
       <Button title="系统" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="0"/>
     </component>
-    <component id="n22_o8k6" name="btnSound" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="256,242" size="125,56" group="n47_kg0b">
+    <component id="n22_o8k6" name="btnSound" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="256,244" size="125,56" group="n47_kg0b">
       <Button title="声音" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="1"/>
     </component>
-    <component id="n23_o8k6" name="btnChat" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="256,303" size="125,56" group="n47_kg0b">
+    <component id="n23_o8k6" name="btnChat" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="256,307" size="125,56" group="n47_kg0b">
       <Button checked="true" title="聊天" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="2"/>
     </component>
-    <component id="n24_o8k6" name="btnAbout" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="256,366" size="125,56" group="n47_kg0b">
+    <component id="n24_o8k6" name="btnAbout" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="256,372" size="125,56" group="n47_kg0b">
       <Button title="关于" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="3"/>
     </component>
     <image id="n61_r398" name="n61" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="215,520" size="706,14" group="n47_kg0b"/>
