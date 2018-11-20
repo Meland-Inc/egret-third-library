@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="400,400">
+  <displayList>
+    <image id="n0_nrqi" name="n0" src="efrs1l" fileName="newImg/bg_cm_2.png" pkg="te1gxawo" xy="52,145" size="291,116" group="n9_nrqi"/>
+    <text id="n1_nrqi" name="n1" xy="75,182" size="242,42" group="n9_nrqi" fontSize="16" color="#584736" align="center" autoSize="none" bold="true" text="宝箱为空~"/>
+    <component id="n2_nrqi" name="btnClose" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="316,139" size="32,32" group="n9_nrqi">
+      <Button icon="ui://te1gxawoefrs1q"/>
+    </component>
+    <image id="n3_nrqi" name="n3" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="55,237" size="57,16" group="n8_nrqi"/>
+    <image id="n4_nrqi" name="n4" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="226,237" size="61,16" group="n8_nrqi"/>
+    <image id="n5_nrqi" name="n5" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="169,237" size="57,16" group="n8_nrqi"/>
+    <image id="n6_nrqi" name="n6" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="112,237" size="57,16" group="n8_nrqi"/>
+    <image id="n7_nrqi" name="n7" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="287,237" size="52,16" group="n8_nrqi"/>
+    <group id="n8_nrqi" name="n8" xy="55,237" size="284,16" group="n9_nrqi" collapsed="true"/>
+    <group id="n9_nrqi" name="n9" xy="52,139" size="296,122" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

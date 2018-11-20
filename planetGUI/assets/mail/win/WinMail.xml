@@ -2,13 +2,16 @@
 <component size="900,540">
   <controller name="showMail" pages="0,has,1,none" selected="0"/>
   <displayList>
-    <image id="n20_n6p2" name="n20" src="n6p21l" fileName="img/bg_bag.png" xy="80,33" size="739,474" group="n26_n6p2"/>
-    <text id="n1_govx" name="n1" xy="402,36" size="109,39" group="n26_n6p2" fontSize="30" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="邮件"/>
-    <group id="n26_n6p2" name="n26" xy="80,33" size="739,474" locked="true" collapsed="true"/>
-    <component id="n38_n6p2" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="784,24" size="56,57">
-      <Button icon="ui://eunktclqsz331"/>
+    <image id="n51_11syp" name="n51" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="74,32" size="749,474" group="n26_n6p2"/>
+    <text id="n1_govx" name="n1" xy="402,36" size="109,39" group="n26_n6p2" fontSize="20" color="#f5ebde" align="center" vAlign="middle" autoSize="none" text="邮件"/>
+    <group id="n26_n6p2" name="n26" xy="74,32" size="749,474" locked="true" collapsed="true"/>
+    <component id="n38_n6p2" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="784,24" size="52,52" locked="true">
+      <Button icon="ui://te1gxawoefrs1q"/>
     </component>
-    <image id="n24_n6p2" name="n24" src="n6p21t" fileName="img/img_mail_2.png" xy="346,99" size="448,381" group="n47_xev6"/>
+    <image id="n55_11syp" name="n55" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="347,98" size="446,383" group="n47_xev6"/>
+    <image id="n49_xev6" name="n49" src="n6p21t" fileName="img/img_mail_2.png" xy="-130,101" size="639,378" group="n47_xev6" locked="true">
+      <gearDisplay controller="showMail" pages="1"/>
+    </image>
     <image id="n33_n6p2" name="n33" src="n6p21x" fileName="img/img_login_1.png" xy="368,349" size="405,3" group="n47_xev6"/>
     <component id="n41_rn6h" name="labContent" src="cbcf24" fileName="com/comContent.xml" xy="368,144" size="412,197" group="n47_xev6">
       <Label title="&#xD;"/>
@@ -18,14 +21,11 @@
     <component id="n43_rn6h" name="comTitle" src="rn6h22" fileName="com/titlePanel.xml" xy="107,100" size="227,381" group="n47_xev6"/>
     <component id="n44_rn6h" name="comAttach" src="rn6h23" fileName="com/attachList.xml" xy="369,381" group="n47_xev6"/>
     <text id="n50_xev6" name="tfContentTitle" xy="368,104" size="405,31" group="n47_xev6" fontSize="16" color="#ff9999" align="center" vAlign="middle" ubb="true" autoSize="none" text=""/>
-    <group id="n47_xev6" name="n47" xy="107,99" size="687,382" advanced="true">
+    <group id="n47_xev6" name="n47" xy="-130,98" size="923,383" advanced="true">
       <gearDisplay controller="showMail" pages="0"/>
     </group>
     <text id="n48_xev6" name="n48" xy="387,249" size="125,42" fontSize="30" autoSize="none" text="邮件为空">
       <gearDisplay controller="showMail" pages="1"/>
     </text>
-    <image id="n49_xev6" name="n49" src="n6p21t" fileName="img/img_mail_2.png" xy="130,101" size="639,378">
-      <gearDisplay controller="showMail" pages="1"/>
-    </image>
   </displayList>
 </component>
