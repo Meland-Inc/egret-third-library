@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" initName="userDetail">
-  <controller name="tab" alias="detaiAndCreation" exported="true" pages="0,detail,1,creation" selected="1"/>
+  <controller name="tab" alias="detaiAndCreation" exported="true" pages="0,detail,1,creation" selected="0"/>
   <displayList>
     <image id="n95_qbzr" name="panel" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="218,107" size="700,430" group="n98_kztp"/>
     <component id="n92_fyx8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="884,99" size="52,52" group="n98_kztp">
@@ -9,10 +9,10 @@
     <text id="n11_zsen" name="title" xy="489,107" size="158,39" group="n98_kztp" fontSize="20" color="#f5ebde" align="center" vAlign="middle" leading="0" autoSize="none" text="个人详情"/>
     <image id="n96_cnpn" name="tabBg" src="ot9si2v" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="238,155" size="166,350" group="n29_zsen"/>
     <component id="n83_apmc" name="detailBtn" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="253,199" size="135,56" group="n29_zsen">
-      <Button title="基本资料" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="tab" page="0"/>
+      <Button checked="true" title="基本资料" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="tab" page="0"/>
     </component>
     <component id="n84_apmc" name="creationBtn" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="253,271" size="135,56" group="n29_zsen">
-      <Button checked="true" title="创作作品" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="tab" page="1"/>
+      <Button title="创作作品" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="tab" page="1"/>
     </component>
     <group id="n29_zsen" name="tabBtn" xy="238,155" size="166,350" group="n98_kztp" collapsed="true"/>
     <component id="n77_apmc" name="detail" src="ctbh9" fileName="com/comDetail.xml" xy="412,155" group="n98_kztp">
@@ -27,7 +27,7 @@
       <item/>
       <item/>
     </list>
-    <image id="n97_myd4" name="n97" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="218,517" size="700,14" group="n98_kztp"/>
+    <image id="n97_myd4" name="n97" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="226,517" size="686,14" group="n98_kztp"/>
     <component id="n93_f5ty" name="comSelectIconView" src="f5tys" fileName="com/comSelectUserIconView.xml" xy="0,0" group="n98_kztp" hideByEditor="true" visible="false">
       <gearDisplay controller="tab" pages="0,2"/>
     </component>
