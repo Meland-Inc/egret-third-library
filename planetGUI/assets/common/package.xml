@@ -168,7 +168,7 @@
     <image id="pgixi4i" name="bg_game1.png" path="/newImg/" exported="true"/>
     <image id="pgixi4j" name="btn_cm_add.png" path="/newImg/" exported="true"/>
     <image id="pgixi4k" name="btn_cm_circle_1.png" path="/newImg/" exported="true"/>
-    <image id="pgixi4l" name="btn_cm_gray_1.png" path="/newImg/" exported="true"/>
+    <image id="pgixi4l" name="btn_cm_gray_1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="7,3,14,19"/>
     <image id="pgixi4m" name="btn_cm_leftturn_2.png" path="/newImg/" exported="true"/>
     <image id="pgixi4n" name="btn_cm_minus.png" path="/newImg/" exported="true"/>
     <image id="pgixi4o" name="btn_cm_other_1.png" path="/newImg/" exported="true"/>
@@ -176,11 +176,11 @@
     <image id="pgixi4q" name="btn_cm_rightturn_2.png" path="/newImg/" exported="true"/>
     <image id="pgixi4r" name="btn_cm_special_1.png" path="/newImg/" exported="true"/>
     <image id="pgixi4s" name="btn_cm_special_2.png" path="/newImg/" exported="true"/>
-    <image id="pgixi4t" name="btn_cm_white10.png" path="/newImg/" exported="true"/>
-    <image id="pgixi4u" name="btn_cm_white11.png" path="/newImg/" exported="true"/>
+    <image id="pgixi4t" name="btn_cm_white10.png" path="/newImg/" exported="true" scale="9grid" scale9grid="20,13,40,23"/>
+    <image id="pgixi4u" name="btn_cm_white11.png" path="/newImg/" exported="true" scale="9grid" scale9grid="7,4,14,19"/>
     <image id="pgixi4v" name="btn_cm_white9.png" path="/newImg/" exported="true"/>
-    <image id="pgixi4w" name="btn_cm_yellow10.png" path="/newImg/" exported="true"/>
-    <image id="pgixi4x" name="btn_cm_yellow11.png" path="/newImg/" exported="true"/>
+    <image id="pgixi4w" name="btn_cm_yellow10.png" path="/newImg/" exported="true" scale="9grid" scale9grid="20,13,40,28"/>
+    <image id="pgixi4x" name="btn_cm_yellow11.png" path="/newImg/" exported="true" scale="9grid" scale9grid="7,4,12,19"/>
     <image id="pgixi4y" name="btn_game1.png" path="/newImg/" exported="true"/>
     <image id="pgixi4z" name="icon_cm_inputbox.png" path="/newImg/" exported="true"/>
     <image id="pgixi50" name="icon_cm_lock.png" path="/newImg/" exported="true"/>
@@ -201,11 +201,11 @@
     <image id="pgixi5f" name="img_cm_bottom_10.png" path="/newImg/" exported="true"/>
     <image id="pgixi5g" name="img_cm_bottom_11.png" path="/newImg/" exported="true"/>
     <image id="pgixi5h" name="img_cm_bottom_12.png" path="/newImg/" exported="true"/>
-    <image id="pgixi5i" name="img_cm_bottom_13.png" path="/newImg/" exported="true"/>
-    <image id="pgixi5j" name="img_cm_bottom_14.png" path="/newImg/" exported="true"/>
+    <image id="pgixi5i" name="img_cm_bottom_13.png" path="/newImg/" exported="true" scale="9grid" scale9grid="4,6,8,12"/>
+    <image id="pgixi5j" name="img_cm_bottom_14.png" path="/newImg/" exported="true" scale="9grid" scale9grid="3,6,1,12"/>
     <image id="pgixi5k" name="img_cm_bottom_15.png" path="/newImg/" exported="true"/>
-    <image id="pgixi5l" name="img_cm_bottom_16.png" path="/newImg/" exported="true"/>
-    <image id="pgixi5m" name="img_cm_bottom_17.png" path="/newImg/" exported="true"/>
+    <image id="pgixi5l" name="img_cm_bottom_16.png" path="/newImg/" exported="true" scale="9grid" scale9grid="5,5,10,10"/>
+    <image id="pgixi5m" name="img_cm_bottom_17.png" path="/newImg/" exported="true" scale="9grid" scale9grid="5,5,10,10"/>
     <image id="pgixi5n" name="img_cm_bottom_7.png" path="/newImg/" exported="true" scale="9grid" scale9grid="7,7,14,14"/>
     <image id="pgixi5o" name="img_cm_bottom_8.png" path="/newImg/" exported="true"/>
     <image id="pgixi5p" name="img_cm_bottom_9.png" path="/newImg/" exported="true"/>
@@ -283,6 +283,13 @@
     <image id="hpymyi7o" name="btn_cm_closed_4.png" path="/newImg/" exported="true"/>
     <image id="hpymyi7p" name="img_cm_ok_1.png" path="/newImg/" exported="true"/>
     <image id="hpymyi7q" name="img_cm_ok_2.png" path="/newImg/" exported="true"/>
+    <image id="r398yi7r" name="img_cm_switch1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="12,6,24,8"/>
+    <image id="r398yi7s" name="img_cm_switch2.png" path="/newImg/" exported="true" scale="9grid" scale9grid="12,6,24,8"/>
+    <image id="r398yi7t" name="img_cm_switch3.png" path="/newImg/" exported="true"/>
+    <image id="r398yi7u" name="img_cm_slider1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="68,2,136,4"/>
+    <image id="r398yi7v" name="img_cm_slider2.png" path="/newImg/" exported="true" scale="9grid" scale9grid="3,2,261,4"/>
+    <image id="e61eyi7r" name="img_cm_swim1.png" path="/img/" exported="true"/>
+    <image id="e61eyi7s" name="img_cm_swim5.png" path="/img/" exported="true"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>

@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="130,142">
+<component size="140,158">
   <displayList>
-    <image id="n1_apmc" name="bg" src="ctbhd" fileName="img/img_interfacebg_002.png" xy="0,0"/>
-    <loader id="n6_apmc" name="creationImg" xy="5,6" size="119,69" align="center" vAlign="middle" fill="scaleMatchHeight" playing="false"/>
-    <image id="n3_apmc" name="tab" src="ctbhe" fileName="img/img_wordbg_004.png" xy="0,0"/>
-    <text id="n5_apmc" name="tabLabel" xy="-7,22" size="40,15" rotation="-45" fontSize="10" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="星球&#xA;"/>
-    <image id="n8_apmc" name="n8" src="ctbhf" fileName="img/img_wordbg_005.png" xy="75,57" group="n10_apmc"/>
-    <text id="n9_apmc" name="timeLabel" xy="76,58" size="45,15" group="n10_apmc" fontSize="10" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="n天前"/>
-    <group id="n10_apmc" name="time" xy="75,57" size="47,16" collapsed="true"/>
-    <text id="n11_apmc" name="nameLabel" xy="3,81" size="124,18" fontSize="13" color="#6b6b6b" align="center" vAlign="middle" autoSize="none" text="XXX（已发布）"/>
-    <loader id="n12_apmc" name="praiseBtn" xy="14,105" size="11,10" group="n22_apmc" url="ui://7xhwdeuzctbhg"/>
-    <text id="n17_apmc" name="praiseNumLabel" xy="27,103" size="20,13" group="n22_apmc" fontSize="10" color="#6b6b6b" vAlign="middle" autoSize="none" text="99"/>
-    <group id="n22_apmc" name="praise" xy="14,103" size="33,13" group="n27_apmc"/>
-    <loader id="n16_apmc" name="browseBtn" xy="49,124" size="12,7" group="n23_apmc" url="ui://7xhwdeuzctbhh"/>
-    <text id="n21_apmc" name="browseNumLabel" xy="62,120" size="20,13" group="n23_apmc" fontSize="10" color="#6b6b6b" vAlign="middle" autoSize="none" text="99"/>
-    <group id="n23_apmc" name="browse" xy="49,120" size="33,13" group="n27_apmc" collapsed="true"/>
-    <loader id="n15_apmc" name="commentBtn" xy="14,122" size="10,10" group="n24_apmc" url="ui://7xhwdeuzctbhi"/>
-    <text id="n20_apmc" name="commentNumLabel" xy="27,120" size="20,13" group="n24_apmc" fontSize="10" color="#6b6b6b" vAlign="middle" autoSize="none" text="99"/>
-    <group id="n24_apmc" name="comment" xy="14,120" size="33,13" group="n27_apmc" collapsed="true"/>
-    <loader id="n14_apmc" name="collectBtn" xy="49,105" size="11,10" group="n25_apmc" url="ui://7xhwdeuzctbhj"/>
-    <text id="n18_apmc" name="collectNumLabel" xy="62,103" size="20,13" group="n25_apmc" fontSize="10" color="#6b6b6b" vAlign="middle" autoSize="none" text="99"/>
-    <group id="n25_apmc" name="collect" xy="49,103" size="33,13" group="n27_apmc" collapsed="true"/>
-    <loader id="n13_apmc" name="shareBtn" xy="84,104" size="12,10" group="n26_apmc" url="ui://7xhwdeuzctbhk"/>
-    <text id="n19_apmc" name="shareNumLabel" xy="98,103" size="20,13" group="n26_apmc" fontSize="10" color="#6b6b6b" vAlign="middle" autoSize="none" text="99"/>
-    <group id="n26_apmc" name="share" xy="84,103" size="34,13" group="n27_apmc" collapsed="true"/>
-    <group id="n27_apmc" name="btns" xy="14,103" size="104,30"/>
+    <image id="n1_apmc" name="bg" src="pgixi5l" fileName="newImg/img_cm_bottom_16.png" pkg="te1gxawo" xy="0,0" size="140,158"/>
+    <loader id="n6_apmc" name="creationImg" xy="5,6" size="130,82" align="center" vAlign="middle" fill="scaleMatchHeight" playing="false"/>
+    <image id="n3_apmc" name="tab" src="pgixi68" fileName="newImg/img_cm_title7.png" pkg="te1gxawo" xy="0,0"/>
+    <text id="n5_apmc" name="tabLabel" xy="-8,20" size="40,19" rotation="-45" fontSize="12" color="#52432e" align="center" vAlign="middle" leading="0" autoSize="none" bold="true" text="星球&#xA;"/>
+    <image id="n8_apmc" name="n8" src="pgixi5m" fileName="newImg/img_cm_bottom_17.png" pkg="te1gxawo" xy="87,69" size="45,16" group="n10_apmc"/>
+    <text id="n9_apmc" name="timeLabel" xy="88,70" size="45,15" group="n10_apmc" fontSize="12" color="#5b4b37" align="center" vAlign="middle" autoSize="none" text="n天前"/>
+    <group id="n10_apmc" name="time" xy="87,69" size="46,16"/>
+    <text id="n11_apmc" name="nameLabel" xy="8,93" size="124,18" fontSize="12" color="#5b4b37" align="center" vAlign="middle" autoSize="none" text="XXX（已发布）"/>
+    <loader id="n12_apmc" name="praiseBtn" xy="12,117" size="18,18" group="n22_apmc" url="ui://7xhwdeuzw5go1i" autoSize="true"/>
+    <text id="n17_apmc" name="praiseNumLabel" xy="30,117" size="20,19" group="n22_apmc" fontSize="12" color="#5b4b37" vAlign="middle" autoSize="none" text="99"/>
+    <group id="n22_apmc" name="praise" xy="12,116" size="33,13" group="n27_apmc"/>
+    <loader id="n16_apmc" name="browseBtn" xy="12,138" size="18,18" group="n23_apmc" url="ui://7xhwdeuzw5go1h" autoSize="true"/>
+    <text id="n21_apmc" name="browseNumLabel" xy="30,138" size="20,19" group="n23_apmc" fontSize="12" color="#5b4b37" vAlign="middle" autoSize="none" text="99"/>
+    <group id="n23_apmc" name="browse" xy="12,138" size="33,22" group="n27_apmc"/>
+    <loader id="n15_apmc" name="commentBtn" xy="54,117" size="18,18" group="n24_apmc" url="ui://7xhwdeuzw5go1l" autoSize="true"/>
+    <text id="n20_apmc" name="commentNumLabel" xy="72,117" size="20,19" group="n24_apmc" fontSize="12" color="#5b4b37" vAlign="middle" autoSize="none" text="99"/>
+    <group id="n24_apmc" name="comment" xy="54,117" size="34,21" group="n27_apmc"/>
+    <loader id="n14_apmc" name="collectBtn" xy="95,117" size="18,18" group="n25_apmc" url="ui://7xhwdeuzw5go1j" autoSize="true"/>
+    <text id="n18_apmc" name="collectNumLabel" xy="113,117" size="20,19" group="n25_apmc" fontSize="12" color="#5b4b37" vAlign="middle" autoSize="none" text="99"/>
+    <group id="n25_apmc" name="collect" xy="95,117" size="33,20" group="n27_apmc"/>
+    <loader id="n13_apmc" name="shareBtn" xy="53,138" size="18,18" group="n26_apmc" url="ui://7xhwdeuzw5go1k" autoSize="true"/>
+    <text id="n19_apmc" name="shareNumLabel" xy="71,138" size="20,19" group="n26_apmc" fontSize="12" color="#5b4b37" vAlign="middle" autoSize="none" text="99"/>
+    <group id="n26_apmc" name="share" xy="54,138" size="34,19" group="n27_apmc"/>
+    <group id="n27_apmc" name="btns" xy="12,116" size="116,44"/>
   </displayList>
 </component>
