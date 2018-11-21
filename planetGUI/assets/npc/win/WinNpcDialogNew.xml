@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" designImage="ui://i25v0ebkkvvke" designImageAlpha="100">
+  <displayList>
+    <list id="n2_r1t9" name="lstOptions" xy="824,289" size="227,156" layout="flow_hz" lineGap="7" defaultItem="ui://tis07nuvxhg9s" vAlign="bottom" autoClearItems="true">
+      <relation target="" sidePair="bottom-bottom,right-right"/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n14_r1t9" name="bg" src="efrs1p" fileName="newImg/bg_cm_6.png" pkg="te1gxawo" xy="152,466" size="850,140" group="n26_elis">
+      <relation target="" sidePair="width-width"/>
+    </image>
+    <component id="n25_k6h3" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="927,453" size="30,30" group="n26_elis">
+      <relation target="" sidePair="right-right"/>
+      <Button icon="ui://te1gxawoqo8vi1w"/>
+    </component>
+    <image id="n15_r1t9" name="nameBg" src="efrs24" fileName="newImg/img_cm_title3.png" pkg="te1gxawo" xy="223,452" group="n26_elis"/>
+    <text id="n16_r1t9" name="tfName" xy="244,460" size="126,19" group="n26_elis" fontSize="18" color="#ffffff" align="center" autoSize="none" text="名字"/>
+    <text id="n19_r1t9" name="tfSpeech" xy="352,507" size="515,70" group="n26_elis" fontSize="18" color="#4e4237" autoSize="none" text="你终于醒啦！等你很久啦">
+      <relation target="" sidePair="rightext-right"/>
+    </text>
+    <image id="n17_r1t9" name="headIconBg" src="kvvk2i1e" fileName="imgNew/img_guide_1.png" pkg="mp92elpx" xy="242,499" group="n24_r1t9"/>
+    <loader id="n18_r1t9" name="ladHeadIcon" xy="247,503" pivot="0.5,0.5" size="68,66" group="n24_r1t9" url="ui://7xhwdeuzctbhb" fill="scaleFree"/>
+    <group id="n24_r1t9" name="grpIcon" xy="242,499" size="76,76" group="n26_elis" advanced="true" collapsed="true"/>
+    <group id="n26_elis" name="grpDialog" xy="152,452" size="850,154" advanced="true" collapsed="true">
+      <relation target="" sidePair="bottom-bottom"/>
+    </group>
+  </displayList>
+</component>

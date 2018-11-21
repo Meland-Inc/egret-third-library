@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="217,60" extention="Button">
+<component size="230,46" extention="Button">
   <controller name="conTaskState" pages="0,acceptable,1,accepted,2,completed,3,normal" selected="0"/>
   <displayList>
-    <loader id="n10_sz33" name="icon" xy="0,0" size="217,60" url="ui://tis07nuvxhg99" align="center" autoSize="true"/>
-    <text id="n9_qzgy" name="title" xy="54,16" size="142,28" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="shrink" singleLine="true" text="taskxxx">
-      <relation target="" sidePair="width-width,middle-middle"/>
+    <loader id="n10_sz33" name="icon" xy="0,0" size="230,46" url="ui://te1gxawotgrli6o" align="center" autoSize="true"/>
+    <text id="n9_qzgy" name="title" xy="82,11" size="104,23" fontSize="18" color="#4e5237" align="center" vAlign="middle" singleLine="true" text="optionName">
+      <relation target="" sidePair="center-center"/>
     </text>
-    <loader id="n11_p8hk" name="ladState" xy="18,11" size="32,38" url="ui://tis07nuvxhg9g">
-      <gearIcon controller="conTaskState" pages="0,1" values="ui://tis07nuvxhg9g|ui://tis07nuvxhg9j" default="ui://tis07nuvxhg9h"/>
+    <loader id="n11_p8hk" name="ladState" xy="21,5" size="32,34" url="ui://eunktclqhpymw" autoSize="true">
+      <gearIcon controller="conTaskState" pages="0,1,2" values="ui://eunktclqhpymw|ui://tis07nuvxhg9j|ui://eunktclqhpymx" default="ui://tis07nuvxhg9h"/>
+      <relation target="" sidePair="middle-middle"/>
     </loader>
   </displayList>
   <Button downEffect="scale" downEffectValue="0.90"/>

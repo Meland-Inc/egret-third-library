@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" designImage="ui://i25v0ebkhpymq" designImageAlpha="31" designImageLayer="1" bgColor="#211d1a">
+  <displayList>
+    <image id="n0_r1t9" name="n0" src="hpym12" fileName="imgNew/img_task_banner1.png" xy="0,176"/>
+    <image id="n1_r1t9" name="n1" src="hpym11" fileName="imgNew/img_task_banner2.png" xy="387,195"/>
+    <text id="n2_r1t9" name="tfTaskName" xy="417,199" size="301,35" fontSize="26" color="#211d1a" align="center" vAlign="middle" vars="true" autoSize="none" text="完成任务：{taskName=采集麦子}"/>
+    <text id="n3_r1t9" name="n3" xy="508,243" size="119,24" fontSize="20" color="#211d1a" align="center" vAlign="middle" autoSize="none" text="任务奖励"/>
+    <list id="n5_r1t9" name="n5" xy="351,276" size="433,47" align="center"/>
+    <component id="n6_r1t9" name="n6" src="r1t914" fileName="com/comRewardItem.xml" xy="420,272"/>
+  </displayList>
+</component>
