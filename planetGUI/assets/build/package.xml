@@ -3,44 +3,8 @@
   <resources>
     <component id="jr3d0" name="ComBuildPreview.xml" path="/Com/" exported="true"/>
     <component id="jj3j1" name="WinMapLook.xml" path="/win/" exported="true"/>
-    <image id="jj3j2" name="icon_build_features_1.png" path="/img/"/>
-    <image id="jj3j3" name="icon_build_features_2.png" path="/img/"/>
-    <image id="jj3j4" name="icon_build_floor_1.png" path="/img/"/>
-    <image id="jj3j5" name="icon_build_floor_2.png" path="/img/"/>
-    <image id="jj3j6" name="icon_build_wall_1.png" path="/img/"/>
-    <image id="jj3j7" name="icon_build_wall_2.png" path="/img/"/>
-    <image id="jj3j8" name="img_build_explain_1.png" path="/img/"/>
-    <image id="jj3j9" name="img_build_explain_2.png" path="/img/"/>
-    <image id="jj3ja" name="img_build_item_1.png" path="/img/"/>
-    <image id="jj3jb" name="img_build_item_2.png" path="/img/"/>
-    <image id="jj3jc" name="img_build_item_3.png" path="/img/"/>
-    <image id="jj3jd" name="img_build_item_4.png" path="/img/"/>
-    <image id="jj3jo" name="img_build_return.png" path="/img/"/>
-    <image id="jj3jp" name="img_build_scale.png" path="/img/"/>
-    <image id="jj3jq" name="img_build_search_1.png" path="/img/"/>
-    <image id="jj3jr" name="img_build_search_2.png" path="/img/"/>
-    <image id="jj3js" name="img_common_prompt.png" path="/img/"/>
     <image id="jj3jt" name="bg_build.png" path="/img/"/>
-    <image id="jj3ju" name="bg_build_item_1.png" path="/img/" scale="9grid" scale9grid="0,75,945,92"/>
     <image id="jj3jv" name="btn_build_close.png" path="/img/"/>
-    <image id="jj3jw" name="btn_build_create.png" path="/img/"/>
-    <image id="jj3jx" name="btn_build_define.png" path="/img/"/>
-    <image id="jj3jy" name="btn_build_delete.png" path="/img/"/>
-    <image id="jj3jz" name="btn_build_down.png" path="/img/"/>
-    <image id="jj3j10" name="btn_build_enlarge.png" path="/img/"/>
-    <image id="jj3j11" name="btn_build_left.png" path="/img/"/>
-    <image id="jj3j12" name="btn_build_narrow.png" path="/img/"/>
-    <image id="jj3j13" name="btn_build_return.png" path="/img/"/>
-    <image id="jj3j14" name="btn_build_right.png" path="/img/"/>
-    <image id="jj3j15" name="btn_build_rotating.png" path="/img/"/>
-    <image id="jj3j16" name="btn_build_up.png" path="/img/"/>
-    <image id="jj3j17" name="btn_build_view.png" path="/img/"/>
-    <image id="jj3j18" name="icon_build_all_1.png" path="/img/"/>
-    <image id="jj3j19" name="icon_build_all_2.png" path="/img/"/>
-    <image id="jj3j1a" name="icon_build_debris_1.png" path="/img/"/>
-    <image id="jj3j1b" name="icon_build_debris_2.png" path="/img/"/>
-    <image id="jj3j1c" name="icon_build_decoration_1.png" path="/img/"/>
-    <image id="jj3j1d" name="icon_build_decoration_2.png" path="/img/"/>
     <component id="o18j1f" name="WinBuildThingInfo.xml" path="/win/" exported="true"/>
     <component id="rvyy1h" name="grpTip.xml" path="/Com/"/>
     <component id="rvyy1i" name="grpBuildSelect.xml" path="/Com/"/>
@@ -73,9 +37,6 @@
     <component id="kqo82e" name="ComCompass.xml" path="/Com/"/>
     <image id="qo8v2f" name="img_build_item1.png" path="/newImg/WinBuildPannel/"/>
     <image id="qo8v2g" name="img_build_item2.png" path="/newImg/WinBuildPannel/"/>
-    <image id="qo8v2h" name="btn_build_cancel.png" path="/newImg/WinBuildPannel/"/>
-    <image id="qo8v2i" name="btn_build_confirm.png" path="/newImg/WinBuildPannel/"/>
-    <image id="qo8v2j" name="btn_build_rotate.png" path="/newImg/WinBuildPannel/"/>
     <image id="qo8v2k" name="icon_build_all_1.png" path="/newImg/WinBuildPannel/"/>
     <image id="qo8v2l" name="icon_build_all_2.png" path="/newImg/WinBuildPannel/"/>
     <image id="qo8v2m" name="icon_build_assemble_1.png" path="/newImg/WinBuildPannel/"/>
@@ -89,6 +50,9 @@
     <image id="qo8v2u" name="icon_build_wall_2.png" path="/newImg/WinBuildPannel/"/>
     <component id="qo8v2y" name="btnStretch.xml" path="/btn/"/>
     <component id="qq3f2z" name="btnRadioButton.xml" path="/btn/"/>
+    <image id="lmzf30" name="btn_build_cancel.png" path="/newImg/WinBuildPannel/"/>
+    <image id="lmzf31" name="btn_build_confirm.png" path="/newImg/WinBuildPannel/"/>
+    <image id="lmzf32" name="btn_build_rotate.png" path="/newImg/WinBuildPannel/"/>
   </resources>
   <publish name="build"/>
 </packageDescription>
