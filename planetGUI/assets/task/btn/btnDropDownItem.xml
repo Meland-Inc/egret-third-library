@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="150,40" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="1"/>
+  <displayList>
+    <loader id="n0_132oi" name="imgUp" xy="0,0" size="150,40" url="ui://te1gxawoefrs1y" fill="scaleFree">
+      <gearIcon controller="button" pages="1" values="ui://te1gxawoefrs1y" default="ui://te1gxawoefrs1v"/>
+    </loader>
+    <text id="n3_132oi" name="title" xy="9,9" size="131,23" fontSize="18" color="#655739" align="center" vAlign="middle" autoSize="none" singleLine="true" text="taskName"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

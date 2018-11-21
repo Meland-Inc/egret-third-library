@@ -7,7 +7,7 @@
     <component id="xjjc3" name="comGuideImg.xml" path="/com/" exported="true"/>
     <component id="xjjc4" name="comGuideText.xml" path="/com/"/>
     <image id="84325" name="help_03.png" path="/img/"/>
-    <component id="npqs6" name="comNoviceDialog.xml" path="/com/" exported="true"/>
+    <component id="npqs6" name="ComDialog.xml" path="/com/" exported="true"/>
     <component id="npqs7" name="noviceClick.xml" path="/win/" exported="true"/>
     <image id="r7z3d" name="guideTipsBg.png" path="/img/" scale="9grid" scale9grid="20,14,98,49"/>
     <image id="r7z3f" name="img_guide_line_1.png" path="/img/"/>
@@ -17,8 +17,8 @@
     <component id="q8vej" name="noviceDrag.xml" path="/win/" exported="true"/>
     <component id="bg8zk" name="basicNovice.xml" path="/win/" exported="true"/>
     <component id="132oil" name="WinNoviceManual.xml" path="/win/" exported="true"/>
-    <component id="132oim" name="btnTitle.xml" path="/btn/" exported="true"/>
-    <component id="132oi14" name="btnTitleChild.xml" path="/btn/"/>
+    <component id="132oim" name="btnDropDown.xml" path="/btn/" exported="true"/>
+    <component id="132oi14" name="btnDropDownItem.xml" path="/btn/"/>
     <image id="11e02i15" name="icon_manual_1.png" path="/imgNew/"/>
     <image id="11e02i16" name="icon_manual_2.png" path="/imgNew/"/>
     <image id="11e02i17" name="icon_manual_3.png" path="/imgNew/"/>
@@ -28,8 +28,8 @@
     <image id="11e02i1b" name="img_manual_4.png" path="/imgNew/" scale="9grid" scale9grid="13,13,26,26"/>
     <image id="11e02i1c" name="img_manual_5.png" path="/imgNew/"/>
     <image id="11e02i1d" name="img_manual_6.png" path="/imgNew/"/>
-    <image id="kvvk2i1e" name="img_guide_1.png" path="/imgNew/"/>
-    <image id="kvvk2i1f" name="img_guide_2.png" path="/imgNew/"/>
+    <image id="kvvk2i1e" name="img_guide_1.png" path="/imgNew/" exported="true"/>
+    <image id="kvvk2i1f" name="img_guide_2.png" path="/imgNew/" exported="true"/>
   </resources>
   <publish name="novice"/>
 </packageDescription>
