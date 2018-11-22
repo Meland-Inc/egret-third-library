@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="195,47" extention="Button">
+<component size="170,60" extention="Button" remark="给房价过快">
   <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <controller name="isRead" pages="1,UnRead,0,Read" selected="0"/>
   <displayList>
-    <image id="n1_n6p2" name="n1" src="n6p21n" fileName="img/btn_mail_2.png" xy="0,0" size="195,47">
+    <image id="n9_11syp" name="n9" src="11bwyi6x" fileName="newImg/btn_cm_yellow12.png" pkg="te1gxawo" xy="0,5" size="166,50">
       <gearDisplay controller="button" pages="1,3"/>
-      <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n0_n6p2" name="n0" src="n6p21m" fileName="img/btn_mail_1.png" xy="0,0" size="195,47">
+    <image id="n11_11syp" name="n11" src="11syp26" fileName="img/icon_mail_letter.png" xy="6,16" size="25,25"/>
+    <image id="n10_11syp" name="n10" src="11bwyi6w" fileName="newImg/btn_cm_white12.png" pkg="te1gxawo" xy="0,5" size="166,50">
       <gearDisplay controller="button" pages="0,2"/>
     </image>
-    <image id="n5_cbcf" name="newMailTag" src="n6p21r" fileName="img/icon_mail_2.png" xy="187,0" size="8,8"/>
-    <text id="n3_n6p2" name="title" xy="9,14" size="164,22" fontSize="16" align="center" vAlign="middle" autoSize="none" singleLine="true" text="&#xA;"/>
-    <text id="n8_xev6" name="tfOverflowTips" xy="170,14" size="19,22" visible="false" fontSize="16" vAlign="middle" autoSize="none" singleLine="true" text="..."/>
+    <image id="n13_11syp" name="newMailTag" src="11syp25" fileName="img/icon_mail_clip.png" xy="149,3" visible="false"/>
+    <text id="n3_n6p2" name="title" xy="37,12" size="104,25" fontSize="14" color="#553639" align="center" vAlign="middle" autoSize="none" singleLine="true" text=""/>
+    <text id="n8_xev6" name="tfOverflowTips" xy="137,16" size="19,22" visible="false" fontSize="16" vAlign="middle" autoSize="none" singleLine="true" text="..."/>
+    <text id="n14_rl0t" name="tfIsRead" xy="123,35" size="30,19" fontSize="12" color="#655739" align="center" autoSize="none" text="已读">
+      <gearDisplay controller="isRead" pages="0"/>
+    </text>
+    <text id="n15_rl0t" name="tfUnRead" xy="123,38" size="30,19" fontSize="12" color="#655739" align="center" autoSize="none" text="未读">
+      <gearDisplay controller="isRead" pages="1"/>
+    </text>
   </displayList>
   <Button mode="Radio"/>
 </component>

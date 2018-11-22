@@ -8,7 +8,7 @@
     <image id="n6p21o" name="btn_orange.png" path="/img/"/>
     <image id="n6p21p" name="btn_red.png" path="/img/"/>
     <image id="n6p21q" name="icon_mail_1.png" path="/img/"/>
-    <image id="n6p21r" name="icon_mail_2.png" path="/img/"/>
+    <image id="n6p21r" name="icon_mail_2.png" path="/img/" exported="true"/>
     <image id="n6p21s" name="img_mail_1.png" path="/img/"/>
     <image id="n6p21t" name="img_mail_2.png" path="/img/"/>
     <image id="n6p21u" name="img_mail_item.png" path="/img/"/>
@@ -25,5 +25,5 @@
     <image id="11syp26" name="icon_mail_letter.png" path="/img/"/>
     <image id="11syp27" name="img_mail_nomail.png" path="/img/"/>
   </resources>
-  <publish name="mail"/>
+  <publish name="mail" path="C:\Users\Mloong\Desktop\bell_planet\feature-jiahua\resource\assets\fairyGui"/>
 </packageDescription>

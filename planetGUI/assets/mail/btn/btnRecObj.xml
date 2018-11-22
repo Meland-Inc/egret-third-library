@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="75,30" extention="Button">
+<component size="100,30" extention="Button">
   <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
   <controller name="taken" pages="0,Ntake,1,Taken" selected="0"/>
   <displayList>
-    <image id="n0_n6p2" name="n0" src="n6p21o" fileName="img/btn_orange.png" xy="0,0" size="75,30" group="n5_wqj8">
+    <image id="n6_11syp" name="n6" src="pgixi4o" fileName="newImg/btn_cm_other_1.png" pkg="te1gxawo" xy="0,0" size="100,30" group="n5_wqj8">
       <gearDisplay controller="taken" pages="0"/>
     </image>
-    <text id="n1_n6p2" name="n1" xy="0,0" size="75,30" group="n5_wqj8" fontSize="15" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="领取附件">
+    <text id="n1_n6p2" name="n1" xy="2,3" size="95,26" group="n5_wqj8" fontSize="18" color="#f6edc7" align="center" vAlign="middle" autoSize="none" bold="true" text="领取附件">
       <gearDisplay controller="taken" pages="0"/>
     </text>
-    <group id="n5_wqj8" name="n5" xy="0,0" size="75,30"/>
-    <image id="n2_wqj8" name="n2" src="n6p21o" fileName="img/btn_orange.png" xy="0,0" size="75,30" group="n4_wqj8" grayed="true">
+    <group id="n5_wqj8" name="n5" xy="0,0" size="100,30"/>
+    <image id="n7_11syp" name="n7" src="pgixi4o" fileName="newImg/btn_cm_other_1.png" pkg="te1gxawo" xy="0,0" size="100,30" group="n4_wqj8">
       <gearDisplay controller="taken" pages="1"/>
     </image>
-    <text id="n3_wqj8" name="n3" xy="0,0" size="75,30" group="n4_wqj8" fontSize="15" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="已领取">
+    <text id="n3_wqj8" name="n3" xy="12,0" size="75,30" group="n4_wqj8" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="已领取">
       <gearDisplay controller="taken" pages="1"/>
     </text>
-    <group id="n4_wqj8" name="n4" xy="0,0" size="75,30"/>
+    <group id="n4_wqj8" name="n4" xy="0,0" size="100,34"/>
   </displayList>
   <Button/>
 </component>
