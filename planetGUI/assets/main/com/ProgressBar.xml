@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="259,20" extention="ProgressBar">
+<component size="149,21">
   <displayList>
-    <image id="n0_9f2h" name="n0" src="r398yi7u" fileName="newImg/img_cm_slider1.png" pkg="te1gxawo" xy="59,0" size="200,20"/>
-    <image id="n1_9f2h" name="bar" src="r398yi7v" fileName="newImg/img_cm_slider2.png" pkg="te1gxawo" xy="59,0" size="200,20"/>
-    <text id="n5_9f2h" name="title" xy="59,-1" size="200,22" fontSize="16" color="#cc3333" align="center" vAlign="middle" autoSize="none" text=""/>
-    <text id="n9_ru0b" name="tfType" xy="0,0" size="52,22" fontSize="16" color="#ffffff" text="饥渴度"/>
+    <text id="n5_9f2h" name="tfValue" xy="73,0" size="36,20" fontSize="14" color="#ffffff" align="right" vAlign="middle" autoSize="none" text="9999"/>
+    <text id="n9_ru0b" name="tfType" xy="27,-1" size="47,20" fontSize="14" color="#ffffff" align="center" vAlign="middle" text="饥渴度">
+      <relation target="n10_rdh6" sidePair="middle-middle"/>
+    </text>
+    <loader id="n10_rdh6" name="ladIcon" xy="0,1" size="20,20" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <text id="n11_rdh6" name="tfMax" xy="120,-1" size="37,22" fontSize="14" color="#ffffff" vAlign="middle" autoSize="none" text="999"/>
+    <text id="n12_rdh6" name="n12" xy="113,-1" size="10,22" fontSize="16" color="#ffffff" vAlign="middle" text="/"/>
   </displayList>
-  <ProgressBar titleType="valueAndmax"/>
 </component>
