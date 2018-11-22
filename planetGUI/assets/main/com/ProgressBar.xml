@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="259,20" extention="ProgressBar">
+  <displayList>
+    <image id="n0_9f2h" name="n0" src="r398yi7u" fileName="newImg/img_cm_slider1.png" pkg="te1gxawo" xy="59,0" size="200,20"/>
+    <image id="n1_9f2h" name="bar" src="r398yi7v" fileName="newImg/img_cm_slider2.png" pkg="te1gxawo" xy="59,0" size="200,20"/>
+    <text id="n5_9f2h" name="title" xy="59,-1" size="200,22" fontSize="16" color="#cc3333" align="center" vAlign="middle" autoSize="none" text=""/>
+    <text id="n9_ru0b" name="tfType" xy="0,0" size="52,22" fontSize="16" color="#ffffff" text="饥渴度"/>
+  </displayList>
+  <ProgressBar titleType="valueAndmax"/>
+</component>

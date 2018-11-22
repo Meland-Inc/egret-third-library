@@ -12,7 +12,6 @@
     <image id="8zcx9" name="img_setting_switch_2.png" path="/img/" scale="9grid" scale9grid="11,8,49,16"/>
     <image id="8zcxa" name="img_setting_switch_3.png" path="/img/"/>
     <component id="8zcxb" name="WinSetting.xml" path="/win/" exported="true"/>
-    <component id="rw7fd" name="btn.xml" path="/btn/"/>
     <component id="rw7fg" name="settingToggle.xml" path="/com/"/>
     <component id="cf98i" name="btnNull.xml" path="/btn/"/>
     <component id="cf98j" name="soundSlider.xml" path="/com/"/>
@@ -26,7 +25,6 @@
     <font id="8bhys" name="Font1.fnt" path="/" exported="true"/>
     <component id="9utnt" name="radioButton.xml" path="/com/"/>
     <component id="9utnu" name="choose.xml" path="/com/"/>
-    <component id="o8k6v" name="btnSameScreen.xml" path="/btn/"/>
   </resources>
   <publish name="setting"/>
 </packageDescription>
