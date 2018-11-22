@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="162,38" bgColor="#ff0000">
+<component size="162,41" bgColor="#ff0000">
   <displayList>
-    <text id="n0_p7yp" name="tfLeft" xy="0,0" size="33,20" fontSize="14" color="#f2eabc" singleLine="true" text="说明"/>
-    <text id="n1_p7yp" name="tfRight" xy="44,0" size="118,38" fontSize="14" color="#f2eabc" autoSize="height" text="沙漠中野蛮生长的一类植物">
+    <text id="n0_p7yp" name="tfLeft" xy="0,3" size="33,20" fontSize="14" color="#f2eabc" singleLine="true" text="说明"/>
+    <text id="n1_p7yp" name="tfRight" xy="44,3" size="118,39" fontSize="14" color="#f2eabc" autoSize="height" text="沙漠中野蛮生长的一类植物">
       <relation target="n0_p7yp" sidePair="left-right"/>
     </text>
   </displayList>
