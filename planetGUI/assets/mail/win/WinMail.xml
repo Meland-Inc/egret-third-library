@@ -2,30 +2,46 @@
 <component size="900,540">
   <controller name="showMail" pages="0,has,1,none" selected="0"/>
   <displayList>
-    <image id="n20_n6p2" name="n20" src="n6p21l" fileName="img/bg_bag.png" xy="80,33" size="739,474" group="n26_n6p2"/>
-    <text id="n1_govx" name="n1" xy="402,36" size="109,39" group="n26_n6p2" fontSize="30" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="邮件"/>
-    <group id="n26_n6p2" name="n26" xy="80,33" size="739,474" locked="true" collapsed="true"/>
-    <component id="n38_n6p2" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="784,24" size="56,57">
-      <Button icon="ui://eunktclqsz331"/>
-    </component>
-    <image id="n24_n6p2" name="n24" src="n6p21t" fileName="img/img_mail_2.png" xy="346,99" size="448,381" group="n47_xev6"/>
-    <image id="n33_n6p2" name="n33" src="n6p21x" fileName="img/img_login_1.png" xy="368,349" size="405,3" group="n47_xev6"/>
-    <component id="n41_rn6h" name="labContent" src="cbcf24" fileName="com/comContent.xml" xy="368,144" size="412,197" group="n47_xev6">
-      <Label title="&#xD;"/>
-    </component>
-    <component id="n34_n6p2" name="btnRec" src="n6p21y" fileName="btn/btnRecObj.xml" xy="703,375" group="n47_xev6"/>
-    <component id="n40_rn6h" name="btnDelete" src="rn6h21" fileName="btn/btnDelete.xml" xy="703,413" group="n47_xev6"/>
-    <component id="n43_rn6h" name="comTitle" src="rn6h22" fileName="com/titlePanel.xml" xy="107,100" size="227,381" group="n47_xev6"/>
-    <component id="n44_rn6h" name="comAttach" src="rn6h23" fileName="com/attachList.xml" xy="369,381" group="n47_xev6"/>
-    <text id="n50_xev6" name="tfContentTitle" xy="368,104" size="405,31" group="n47_xev6" fontSize="16" color="#ff9999" align="center" vAlign="middle" ubb="true" autoSize="none" text=""/>
-    <group id="n47_xev6" name="n47" xy="107,99" size="687,382" advanced="true">
-      <gearDisplay controller="showMail" pages="0"/>
+    <image id="n51_11syp" name="n51" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="90,45" size="720,450" group="n26_n6p2"/>
+    <text id="n1_govx" name="n1" xy="395,52" size="109,32" group="n26_n6p2" fontSize="20" color="#f5ebde" align="center" vAlign="middle" autoSize="none" text="邮件"/>
+    <image id="n75_11syp" name="n75" src="ot9si2v" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="111,97" size="194,348" group="n26_n6p2"/>
+    <image id="n55_11syp" name="n55" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="310,95" size="480,350" group="n26_n6p2"/>
+    <image id="n62_11syp" name="n62" src="qo8vi1x" fileName="newImg/img_cm_pattern2.png" pkg="te1gxawo" xy="98,469" group="n26_n6p2"/>
+    <image id="n63_11syp" name="n63" src="qo8vi1x" fileName="newImg/img_cm_pattern2.png" pkg="te1gxawo" xy="167,469" group="n26_n6p2"/>
+    <image id="n64_11syp" name="n64" src="qo8vi1x" fileName="newImg/img_cm_pattern2.png" pkg="te1gxawo" xy="236,469" group="n26_n6p2"/>
+    <image id="n65_11syp" name="n65" src="qo8vi1x" fileName="newImg/img_cm_pattern2.png" pkg="te1gxawo" xy="305,469" group="n26_n6p2"/>
+    <image id="n66_11syp" name="n66" src="qo8vi1x" fileName="newImg/img_cm_pattern2.png" pkg="te1gxawo" xy="374,469" group="n26_n6p2"/>
+    <image id="n67_11syp" name="n67" src="qo8vi1x" fileName="newImg/img_cm_pattern2.png" pkg="te1gxawo" xy="443,469" group="n26_n6p2"/>
+    <image id="n68_11syp" name="n68" src="qo8vi1x" fileName="newImg/img_cm_pattern2.png" pkg="te1gxawo" xy="512,469" group="n26_n6p2"/>
+    <image id="n69_11syp" name="n69" src="qo8vi1x" fileName="newImg/img_cm_pattern2.png" pkg="te1gxawo" xy="581,469" group="n26_n6p2"/>
+    <image id="n70_11syp" name="n70" src="qo8vi1x" fileName="newImg/img_cm_pattern2.png" pkg="te1gxawo" xy="650,469" group="n26_n6p2"/>
+    <image id="n71_11syp" name="n71" src="qo8vi1x" fileName="newImg/img_cm_pattern2.png" pkg="te1gxawo" xy="719,469" group="n26_n6p2"/>
+    <image id="n72_11syp" name="n72" src="qo8vi1x" fileName="newImg/img_cm_pattern2.png" pkg="te1gxawo" xy="788,469" size="15,21" group="n26_n6p2"/>
+    <group id="n26_n6p2" name="n26" xy="90,45" size="720,450" advanced="true" collapsed="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <text id="n48_xev6" name="n48" xy="387,249" size="125,42" fontSize="30" autoSize="none" text="邮件为空">
+    <image id="n57_11syp" name="n57" src="ot9si2v" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="327,105" size="456,189" group="n47_xev6"/>
+    <image id="n58_11syp" name="n58" src="pgixi5h" fileName="newImg/img_cm_bottom_12.png" pkg="te1gxawo" xy="334,299" size="97,29" group="n61_11syp"/>
+    <image id="n33_n6p2" name="n33" src="n6p21x" fileName="img/img_login_1.png" xy="338,328" size="405,2" group="n61_11syp" color="#996633"/>
+    <text id="n59_11syp" name="n59" xy="338,303" size="73,22" group="n61_11syp" fontSize="16" color="#5b4b37" align="center" autoSize="none" text="邮件附件"/>
+    <group id="n61_11syp" name="n61" xy="334,299" size="409,31" group="n47_xev6"/>
+    <component id="n41_rn6h" name="labContent" src="cbcf24" fileName="com/comContent.xml" xy="341,140" size="412,143" group="n47_xev6"/>
+    <component id="n34_n6p2" name="btnRec" src="n6p21y" fileName="btn/btnRecObj.xml" xy="422,396" group="n47_xev6"/>
+    <component id="n40_rn6h" name="btnDelete" src="rn6h21" fileName="btn/btnDelete.xml" xy="595,395" group="n47_xev6"/>
+    <component id="n43_rn6h" name="comTitle" src="rn6h22" fileName="com/titlePanel.xml" xy="118,95" size="183,353" group="n47_xev6"/>
+    <component id="n44_rn6h" name="comAttach" src="rn6h23" fileName="com/attachList.xml" xy="351,329" group="n47_xev6"/>
+    <text id="n50_xev6" name="tfContentTitle" xy="342,109" size="405,31" group="n47_xev6" fontSize="16" color="#5b4b37" vAlign="middle" ubb="true" autoSize="none" text=""/>
+    <group id="n47_xev6" name="n47" xy="117,95" size="666,353" advanced="true">
+      <gearDisplay controller="showMail" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n38_n6p2" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="774,33" size="52,52">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button icon="ui://te1gxawoefrs1q"/>
+    </component>
+    <image id="n73_11syp" name="n73" src="11syp27" fileName="img/img_mail_nomail.png" xy="385,241">
       <gearDisplay controller="showMail" pages="1"/>
-    </text>
-    <image id="n49_xev6" name="n49" src="n6p21t" fileName="img/img_mail_2.png" xy="130,101" size="639,378">
-      <gearDisplay controller="showMail" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
     </image>
   </displayList>
 </component>

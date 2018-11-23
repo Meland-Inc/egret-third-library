@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="401,320">
+  <controller name="isOpen" pages="0,success,1,failure,2,null" selected="2"/>
   <displayList>
     <image id="n0_m1va" name="bg" src="efrs1m" fileName="newImg/bg_cm_3.png" pkg="te1gxawo" xy="1,0" size="400,320" group="n12_m1va"/>
     <text id="n1_m1va" name="title" xy="130,57" size="142,33" group="n12_m1va" fontSize="22" color="#584736" align="center" vAlign="middle" autoSize="none" bold="true" text="恭喜获得"/>
@@ -15,6 +16,15 @@
     <image id="n9_m1va" name="n9" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="119,300" size="60,16" group="n11_m1va"/>
     <image id="n10_m1va" name="n10" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="60,300" size="60,16" group="n11_m1va"/>
     <group id="n11_m1va" name="n11" xy="0,299" size="397,17" group="n12_m1va" collapsed="true"/>
-    <group id="n12_m1va" name="n12" xy="0,0" size="401,320" advanced="true" collapsed="true"/>
+    <group id="n12_m1va" name="n12" xy="0,0" size="401,320" advanced="true" collapsed="true">
+      <gearDisplay controller="isOpen" pages="0"/>
+    </group>
+    <component id="n13_nrqi" name="openFailurePanel" src="nrqi8" fileName="ComOpenFailure.xml" xy="0,0">
+      <gearDisplay controller="isOpen" pages="1"/>
+    </component>
+    <component id="n14_nrqi" name="boxNullPanel" src="nrqi9" fileName="ComBoxNull.xml" xy="0,-40">
+      <gearDisplay controller="isOpen" pages="2"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
   </displayList>
 </component>

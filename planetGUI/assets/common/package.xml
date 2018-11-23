@@ -171,8 +171,8 @@
     <image id="pgixi4l" name="btn_cm_gray_1.png" path="/newImg/" exported="true"/>
     <image id="pgixi4m" name="btn_cm_leftturn_2.png" path="/newImg/" exported="true"/>
     <image id="pgixi4n" name="btn_cm_minus.png" path="/newImg/" exported="true"/>
-    <image id="pgixi4o" name="btn_cm_other_1.png" path="/newImg/" exported="true"/>
-    <image id="pgixi4p" name="btn_cm_other_2.png" path="/newImg/" exported="true"/>
+    <image id="pgixi4o" name="btn_cm_other_1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="7,4,18,25"/>
+    <image id="pgixi4p" name="btn_cm_other_2.png" path="/newImg/" exported="true" scale="9grid" scale9grid="7,7,20,20"/>
     <image id="pgixi4q" name="btn_cm_rightturn_2.png" path="/newImg/" exported="true"/>
     <image id="pgixi4r" name="btn_cm_special_1.png" path="/newImg/" exported="true"/>
     <image id="pgixi4s" name="btn_cm_special_2.png" path="/newImg/" exported="true"/>
@@ -251,8 +251,8 @@
     <component id="j29zi6t" name="RBtnBpEquipRenderer.xml" path="/btn/" exported="true"/>
     <component id="j29zi6u" name="RBtnBpItemRenderer.xml" path="/btn/" exported="true"/>
     <image id="11bwyi6v" name="btn_cm_special_3.png" path="/newImg/" exported="true"/>
-    <image id="11bwyi6w" name="btn_cm_white12.png" path="/newImg/" exported="true"/>
-    <image id="11bwyi6x" name="btn_cm_yellow12.png" path="/newImg/" exported="true"/>
+    <image id="11bwyi6w" name="btn_cm_white12.png" path="/newImg/" exported="true" scale="9grid" scale9grid="6,6,23,25"/>
+    <image id="11bwyi6x" name="btn_cm_yellow12.png" path="/newImg/" exported="true" scale="9grid" scale9grid="4,4,27,27"/>
     <image id="11bwyi6y" name="icon_cm_continue.png" path="/newImg/" exported="true"/>
     <image id="11bwyi6z" name="icon_cm_pause.png" path="/newImg/" exported="true"/>
     <image id="11bwyi70" name="img_cm_guidearrow_1.png" path="/newImg/" exported="true"/>
@@ -283,6 +283,23 @@
     <image id="hpymyi7o" name="btn_cm_closed_4.png" path="/newImg/" exported="true"/>
     <image id="hpymyi7p" name="img_cm_ok_1.png" path="/newImg/" exported="true"/>
     <image id="hpymyi7q" name="img_cm_ok_2.png" path="/newImg/" exported="true"/>
+    <image id="r398yi7r" name="img_cm_switch1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="12,6,24,8"/>
+    <image id="r398yi7s" name="img_cm_switch2.png" path="/newImg/" exported="true" scale="9grid" scale9grid="12,6,24,8"/>
+    <image id="r398yi7t" name="img_cm_switch3.png" path="/newImg/" exported="true"/>
+    <image id="r398yi7u" name="img_cm_slider1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="4,3,261,2"/>
+    <image id="r398yi7v" name="img_cm_slider2.png" path="/newImg/" exported="true" scale="9grid" scale9grid="3,2,262,3"/>
+    <image id="e61eyi7r" name="img_cm_swim1.png" path="/img/" exported="true"/>
+    <image id="e61eyi7s" name="img_cm_swim5.png" path="/img/" exported="true"/>
+    <image id="rdh6yi7w" name="btn_cm_other_1.png" path="/img/"/>
+    <image id="rdh6yi7x" name="btn_cm_other_2.png" path="/img/"/>
+    <image id="rdh6yi7y" name="btn_cm_white12.png" path="/img/"/>
+    <image id="rdh6yi7z" name="btn_cm_yellow12.png" path="/img/"/>
+    <image id="rdh6yi80" name="img_cm_bottom_1.png" path="/img/"/>
+    <image id="rdh6yi81" name="img_cm_bottom_12.png" path="/img/"/>
+    <image id="rdh6yi82" name="img_cm_bottom_15.png" path="/img/"/>
+    <image id="rdh6yi83" name="img_cm_bottom_4.png" path="/img/"/>
+    <image id="rdh6yi84" name="img_cm_item_10.png" path="/img/"/>
+    <image id="alsjyi85" name="img_cm_tips_5.png" path="/newImg/" exported="true" scale="9grid" scale9grid="10,10,20,20"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="75,30" extention="Button">
+<component size="100,30" extention="Button">
   <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
   <displayList>
-    <image id="n0_rn6h" name="n0" src="n6p21p" fileName="img/btn_red.png" xy="0,0" size="75,30">
+    <image id="n2_11syp" name="n2" src="pgixi4p" fileName="newImg/btn_cm_other_2.png" pkg="te1gxawo" xy="0,0" size="100,30">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <text id="n1_rn6h" name="btnDelete" xy="0,0" size="75,30" fontSize="15" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="删除邮件"/>
+    <text id="n1_rn6h" name="btnDelete" xy="0,3" size="100,26" fontSize="18" color="#f6edc7" align="center" vAlign="middle" autoSize="none" bold="true" text="删除邮件"/>
   </displayList>
   <Button/>
 </component>

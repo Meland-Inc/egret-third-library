@@ -158,6 +158,9 @@
     <image id="rb9r61" name="icon_main_health_2.png" path="/newImg/" exported="true"/>
     <image id="rb9r62" name="icon_main_hunger_2.png" path="/newImg/" exported="true"/>
     <image id="rb9r63" name="icon_main_thirst_2.png" path="/newImg/" exported="true"/>
+    <component id="9f2h67" name="ProgressBar.xml" path="/com/"/>
+    <component id="9f2h69" name="ComSaturationDetail.xml" path="/com/" exported="true"/>
+    <component id="rdh66a" name="WinMainFriendInfo.xml" path="/win/"/>
   </resources>
   <publish name="main"/>
 </packageDescription>
