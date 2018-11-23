@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" opaque="false">
+<component size="1136,640" opaque="false" designImage="ui://i25v0ebkot9s0" designImageAlpha="100">
+  <controller name="ctrlShortcutList" pages="0,show1,1,show2" selected="0"/>
   <displayList>
-    <list id="n11_urxc" name="lstShortcut" xy="226,530" size="605,78" group="n13_z794" layout="flow_hz" defaultItem="ui://5hs1fuejft0q2g" autoClearItems="true">
+    <list id="n11_urxc" name="lstShortcut" xy="233,536" size="605,78" group="n13_z794" layout="flow_hz" defaultItem="ui://5hs1fuejft0q2g" autoClearItems="true">
       <item title="1"/>
       <item title="2"/>
       <item title="3"/>
@@ -11,11 +12,15 @@
       <item title="7"/>
       <item title="8"/>
     </list>
-    <component id="n12_tcc1" name="btnBackpack" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="835,535" size="74,74" group="n13_z794">
+    <component id="n12_tcc1" name="btnBackpack" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="842,541" size="74,74" group="n13_z794">
       <Button icon="ui://5hs1fuejw80l2"/>
     </component>
-    <group id="n13_z794" name="root" xy="226,530" size="683,79" advanced="true">
+    <group id="n13_z794" name="root" xy="233,536" size="683,79" advanced="true">
       <relation target="" sidePair="center-center,bottom-bottom%"/>
     </group>
+    <component id="n18_sec0" name="btnSwitch1" src="sec06b" fileName="btn/btnSwitchShortcuts.xml" xy="326,553" visible="false"/>
+    <component id="n19_sec0" name="btnSwitch2" src="sec06b" fileName="btn/btnSwitchShortcuts.xml" xy="326,553" visible="false">
+      <Button checked="true"/>
+    </component>
   </displayList>
 </component>
