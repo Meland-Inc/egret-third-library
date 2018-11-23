@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkhpymo" designImageAlpha="36" designImageLayer="1">
   <displayList>
-    <image id="n0_elis" name="bg" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="231,105" size="693,432"/>
-    <image id="n12_ey91" name="taskDetailBg" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="452,159" size="460,350">
-      <relation target="" sidePair="width-width,height-height"/>
-    </image>
-    <component id="n1_elis" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="881,107" size="36,36">
+    <image id="n0_elis" name="bg" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="231,105" size="693,432" group="n13_ey91"/>
+    <image id="n12_ey91" name="taskDetailBg" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="452,159" size="460,350" group="n13_ey91"/>
+    <component id="n1_elis" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="881,107" size="36,36" group="n13_ey91">
       <Button icon="ui://te1gxawohpymyi7o"/>
     </component>
-    <image id="n8_ey91" name="lstBg" src="ot9si2v" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="246,155" size="200,350"/>
-    <list id="n7_elis" name="lstTaskType" xy="263,169" size="171,324" overflow="scroll" defaultItem="ui://eunktclqelis1c">
+    <image id="n8_ey91" name="lstBg" src="ot9si2v" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="246,155" size="200,350" group="n13_ey91"/>
+    <list id="n7_elis" name="lstTaskType" xy="263,169" size="171,324" group="n13_ey91" overflow="scroll" defaultItem="ui://eunktclqelis1c">
       <item/>
       <item/>
       <item/>
     </list>
-    <component id="n10_ey91" name="comTaskDetailPanel" src="sz33l" fileName="com/comTaskDetailPanel.xml" xy="449,161" size="460,350"/>
+    <component id="n10_ey91" name="comTaskDetailPanel" src="sz33l" fileName="com/comTaskDetailPanel.xml" xy="449,161" size="460,350" group="n13_ey91"/>
+    <group id="n13_ey91" name="root" xy="231,105" size="693,432" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
   </displayList>
 </component>
