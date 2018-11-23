@@ -62,8 +62,6 @@
     <component id="ft0q2g" name="shortcutItem.xml" path="/btn/"/>
     <image id="q7z62e" name="icon_main_sword.png" path="/img/" exported="true"/>
     <component id="oy0u2i" name="pbrAccmu.xml" path="/pbr/"/>
-    <image id="oy0u2j" name="img_main_chargeforce_1.png" path="/img/"/>
-    <image id="oy0u2k" name="img_main_chargeforce_2.png" path="/img/"/>
     <image id="oy0u2l" name="img_main_itemdrop.png" path="/img/"/>
     <component id="oy0u2m" name="ComAccmu.xml" path="/com/" exported="true"/>
     <component id="oy0u2n" name="ComPickObjectToast.xml" path="/com/" exported="true"/>
@@ -162,6 +160,8 @@
     <component id="9f2h69" name="ComSaturationDetail.xml" path="/com/" exported="true"/>
     <component id="rdh66a" name="WinMainFriendInfo.xml" path="/win/"/>
     <component id="sec06b" name="btnSwitchShortcuts.xml" path="/btn/"/>
+    <image id="d0ut6c" name="img_main_powerstorage_2.png" path="/img/"/>
+    <image id="d0ut6d" name="img_main_powerstorage_1.png" path="/img/"/>
   </resources>
   <publish name="main"/>
 </packageDescription>
