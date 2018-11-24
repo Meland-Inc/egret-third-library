@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="30,68" extention="Button">
-  <controller name="button" pages="0,up,1,down" selected="1"/>
+  <controller name="button" pages="0,up,1,down" selected="0"/>
   <displayList>
     <image id="n0_sec0" name="bg" src="rdy44c" fileName="newImg/img_main_item_1.png" xy="0,0"/>
-    <image id="n1_sec0" name="itemBg" src="rdy44d" fileName="newImg/img_main_item_2.png" xy="3,35">
+    <image id="n1_sec0" name="itemBg" src="rdy44d" fileName="newImg/img_main_item_2.png" xy="3,3">
       <gearXY controller="button" pages="0,1" values="3,3|3,35"/>
     </image>
-    <text id="n2_sec0" name="n2" xy="2,4" size="24,27" fontSize="19" color="#c0be87" align="center" vAlign="middle" autoSize="none" text="1">
+    <text id="n2_sec0" name="n2" xy="2,4" size="24,27" fontSize="19" color="#363427" align="center" vAlign="middle" autoSize="none" text="1">
       <gearColor controller="button" pages="1" values="#c0be87,#000000" default="#363427,#000000"/>
     </text>
-    <text id="n3_sec0" name="n3" xy="2,36" size="24,27" fontSize="19" color="#363427" align="center" vAlign="middle" autoSize="none" text="2">
+    <text id="n3_sec0" name="n3" xy="2,36" size="24,27" fontSize="19" color="#c0be87" align="center" vAlign="middle" autoSize="none" text="2">
       <gearColor controller="button" pages="1" values="#363427,#000000" default="#c0be87,#000000"/>
     </text>
   </displayList>
-  <Button mode="Radio"/>
+  <Button mode="Check"/>
 </component>
