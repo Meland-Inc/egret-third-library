@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="400,28" extention="Label">
+  <displayList>
+    <image id="n1_w34u" name="n1" src="pgixi5n" fileName="newImg/img_cm_bottom_7.png" pkg="te1gxawo" xy="0,0" size="400,28" group="n5_w34u">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n3_w34u" name="n3" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="85,6" size="40,14" group="n5_w34u">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n4_w34u" name="n4" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="316,20" size="40,14" group="n5_w34u" rotation="180">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <group id="n5_w34u" name="tagMybag" xy="0,0" size="400,34"/>
+    <text id="n0_w34u" name="title" xy="130,0" size="141,28" fontSize="22" color="#5b4b37" align="center" vAlign="middle" autoSize="none" singleLine="true" text="">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+</component>
