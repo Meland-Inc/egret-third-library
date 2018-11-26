@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="300,401" designImage="ui://i25v0ebkpgixh" designImageOffsetX="-528" designImageOffsetY="-166" designImageAlpha="0">
+<component size="300,401" designImage="ui://i25v0ebkpgixh" designImageOffsetX="-481" designImageOffsetY="-128" designImageAlpha="100">
+  <controller name="ctrlStatus" pages="0,normal,1,select" selected="0"/>
   <displayList>
     <component id="n6_acec" name="title" src="w34u2h" fileName="com/ComTitle.xml" xy="0,0" size="301,28">
       <Label title="工作台物品栏"/>
     </component>
     <image id="n0_g7xw" name="imgSynthersisBG" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="0,37" size="300,364"/>
-    <image id="n2_g7xw" name="imgTimeBG" src="pgixi5f" fileName="newImg/img_cm_bottom_10.png" pkg="te1gxawo" xy="136,300" size="126,19" group="n5_g7xw"/>
-    <text id="n3_g7xw" name="tf1" xy="165,276" size="73,23" group="n5_g7xw" fontSize="17" color="#584736" text="燃烧时间"/>
-    <text id="n4_g7xw" name="tfTime" xy="160,297" size="83,27" group="n5_g7xw" fontSize="20" color="#584736" text="24:00:00"/>
-    <group id="n5_g7xw" name="time" xy="136,276" size="127,48"/>
+    <image id="n2_g7xw" name="imgTimeBG" src="pgixi5f" fileName="newImg/img_cm_bottom_10.png" pkg="te1gxawo" xy="125,328" size="126,19" group="n5_g7xw"/>
+    <text id="n3_g7xw" name="tf1" xy="154,304" size="73,23" group="n5_g7xw" fontSize="17" color="#584736" text="燃烧时间"/>
+    <text id="n4_g7xw" name="tfTime" xy="149,325" size="83,27" group="n5_g7xw" fontSize="20" color="#584736" text="24:00:00"/>
+    <group id="n5_g7xw" name="time" xy="125,304" size="127,48"/>
+    <image id="n8_acec" name="imgSeleBG" src="pgixi5x" fileName="newImg/img_cm_item_14.png" pkg="te1gxawo" xy="50,299" size="58,58">
+      <gearDisplay controller="ctrlStatus" pages="1"/>
+    </image>
+    <image id="n10_acec" name="imgIconBG" src="ot9si33" fileName="newImg/img_cm_item_2.png" pkg="te1gxawo" xy="51,300" size="56,56"/>
+    <loader id="n11_acec" name="ladIcon" xy="56,305" size="45,45" aspect="true"/>
   </displayList>
 </component>
