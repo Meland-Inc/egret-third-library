@@ -2,19 +2,10 @@
 <component size="270,400" designImage="ui://i25v0ebkpgixg" designImageOffsetX="-794" designImageOffsetY="-139" designImageAlpha="0">
   <controller name="ctrlStatus" pages="0,normal,1,make,2,lock" selected="0"/>
   <displayList>
-    <image id="n0_pqjb" name="imgTitleBG" src="pgixi5n" fileName="newImg/img_cm_bottom_7.png" pkg="te1gxawo" xy="0,0" size="270,28" group="n6_pqjb">
+    <component id="n25_acec" name="title" src="w34u2h" fileName="com/ComTitle.xml" xy="0,0" size="270,28">
       <relation target="" sidePair="rightext-right"/>
-    </image>
-    <text id="n2_pqjb" name="tfTitle" xy="111,0" size="47,28" group="n6_pqjb" fontSize="20" color="#5b4b37" bold="true" text="合成">
-      <relation target="" sidePair="center-center"/>
-    </text>
-    <image id="n3_pqjb" name="imgTitleLeftBG" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="30,7" pivot="0.5,0.5" group="n6_pqjb">
-      <relation target="n0_pqjb" sidePair="left-left"/>
-    </image>
-    <image id="n4_pqjb" name="imgTitleRightBG" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="200,7" pivot="0.5,0.5" group="n6_pqjb" rotation="180">
-      <relation target="n0_pqjb" sidePair="right-right"/>
-    </image>
-    <group id="n6_pqjb" name="title" xy="0,0" size="270,28"/>
+      <Label title="合成"/>
+    </component>
     <image id="n1_pqjb" name="imgSynthersisBG" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="0,37" size="270,364">
       <relation target="" sidePair="rightext-right"/>
     </image>
