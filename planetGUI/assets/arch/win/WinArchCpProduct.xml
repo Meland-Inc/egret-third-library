@@ -1,67 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" designImage="ui://i25v0ebkpgixg" designImageAlpha="100">
+<component size="1136,640" designImage="ui://i25v0ebkpgixg" designImageAlpha="0">
   <controller name="state" pages="0,lock,1,premake,2,making" selected="0"/>
   <displayList>
     <component id="n0_lxnu" name="comBG" src="pqjb2f" fileName="com/ComBG.xml" xy="27,60"/>
     <component id="n42_jlj8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1049,58" size="52,52">
       <Button icon="ui://te1gxawoefrs1q"/>
     </component>
-    <image id="n23_lxnu" name="n23" src="lxnus" fileName="img/img_compose_2.png" xy="149,168" size="260,379"/>
-    <image id="n24_lxnu" name="n24" src="lxnus" fileName="img/img_compose_2.png" xy="422,168" size="260,379"/>
-    <image id="n22_lxnu" name="n22" src="pgixi5n" fileName="newImg/img_cm_bottom_7.png" pkg="te1gxawo" xy="65,127" size="411,30"/>
-    <image id="n25_lxnu" name="n25" src="pgixi5n" fileName="newImg/img_cm_bottom_7.png" pkg="te1gxawo" xy="485,127" size="296,30"/>
-    <text id="n6_lxnu" name="n6" xy="485,177" size="131,28" fontSize="20" color="#5b4b37" bold="true" text="工作台物品栏"/>
-    <text id="n26_lxnu" name="n26" xy="232,178" size="89,28" fontSize="20" color="#5b4b37" bold="true" text="我的背包"/>
-    <list id="n10_lxnu" name="listTab" xy="154,211" size="250,30" layout="row" margin="2,2,2,2" lineGap="5" defaultItem="ui://kdeyuiwwlxnu1b">
-      <item title="全部"/>
-      <item title="装备"/>
-      <item title="材料"/>
-      <item title="消耗"/>
-      <item title="建材"/>
-    </list>
-    <list id="n11_lxnu" name="listItem" xy="422,218" size="260,315" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="5" colGap="5" lineItemCount="4" defaultItem="ui://kdeyuiwwlxnu1c">
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-    </list>
-    <list id="n27_lxnu" name="listBag" xy="150,247" size="260,285" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="5" colGap="5" lineItemCount="4" defaultItem="ui://kdeyuiwwlxnu1c">
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-    </list>
-    <component id="n30_lxnu" name="pbrMaking" src="lxnu1d" fileName="pbr/pbrArchMaking.xml" xy="597,351" size="186,18">
-      <gearDisplay controller="state" pages="2"/>
-      <ProgressBar value="50" max="100"/>
-    </component>
-    <component id="n31_lxnu" name="btnMake" src="lxnu1e" fileName="btn/btnArchGreen.xml" xy="645,387" size="80,29" aspect="true">
-      <gearDisplay controller="state" pages="1,2"/>
-      <gearXY controller="state" pages="0,2" values="645,387|605,387" default="645,387"/>
-    </component>
-    <image id="n33_lxnu" name="n33" src="lxnu1j" fileName="img/img_compose_21.png" xy="629,346" size="121,27" group="n40_lxnu"/>
-    <component id="n36_lxnu" name="btnSUb" src="lxnu1o" fileName="btn/btnArchSub.xml" xy="724,349" size="22,22" group="n40_lxnu"/>
-    <component id="n37_lxnu" name="btnPlus" src="lxnu1n" fileName="btn/btnArchPlus.xml" xy="632,349" size="22,22" group="n40_lxnu"/>
-    <text id="n38_lxnu" name="tfMakeNum" xy="654,350" size="70,21" group="n40_lxnu" fontSize="14" color="#57a7df" align="center" autoSize="none" bold="true" text="0/0"/>
-    <group id="n40_lxnu" name="n40" xy="629,346" size="121,27" advanced="true" collapsed="true">
-      <gearDisplay controller="state" pages="1"/>
-    </group>
-    <component id="n41_lxnu" name="btnCancelMake" src="lxnu1e" fileName="btn/btnArchGreen.xml" xy="700,386" size="80,29" aspect="true">
-      <gearDisplay controller="state" pages="2"/>
-      <Button title="取消"/>
-    </component>
     <component id="n43_nxks" name="n43" src="pqjb2g" fileName="com/ComSynthesis.xml" xy="790,127"/>
+    <component id="n44_g7xw" name="n44" src="g7xw2h" fileName="com/ComWorkbench.xml" xy="447,162"/>
   </displayList>
 </component>
