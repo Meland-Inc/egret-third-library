@@ -175,10 +175,10 @@
     <image id="pgixi4p" name="btn_cm_other_2.png" path="/newImg/" exported="true" scale="9grid" scale9grid="7,7,20,20"/>
     <image id="pgixi4q" name="btn_cm_rightturn_2.png" path="/newImg/" exported="true"/>
     <image id="pgixi4r" name="btn_cm_special_1.png" path="/newImg/" exported="true"/>
-  <image id="pgixi4s" name="btn_cm_special_2.png" path="/newImg/" exported="true" scale="9grid" scale9grid="15,5,30,10"/>
+    <image id="pgixi4s" name="btn_cm_special_2.png" path="/newImg/" exported="true" scale="9grid" scale9grid="15,5,30,10"/>
     <image id="pgixi4t" name="btn_cm_white10.png" path="/newImg/" exported="true" scale="9grid" scale9grid="20,13,40,23"/>
     <image id="pgixi4u" name="btn_cm_white11.png" path="/newImg/" exported="true" scale="9grid" scale9grid="7,4,14,19"/>
-  <image id="pgixi4v" name="btn_cm_white9.png" path="/newImg/" exported="true" scale="9grid" scale9grid="12,7,24,12"/>
+    <image id="pgixi4v" name="btn_cm_white9.png" path="/newImg/" exported="true" scale="9grid" scale9grid="12,7,24,12"/>
     <image id="pgixi4w" name="btn_cm_yellow10.png" path="/newImg/" exported="true" scale="9grid" scale9grid="20,14,40,28"/>
     <image id="pgixi4x" name="btn_cm_yellow11.png" path="/newImg/" exported="true" scale="9grid" scale9grid="7,7,14,14"/>
     <image id="pgixi4y" name="btn_game1.png" path="/newImg/" exported="true"/>
@@ -290,6 +290,16 @@
     <image id="r398yi7v" name="img_cm_slider2.png" path="/newImg/" exported="true" scale="9grid" scale9grid="3,2,262,3"/>
     <image id="e61eyi7r" name="img_cm_swim1.png" path="/img/" exported="true"/>
     <image id="e61eyi7s" name="img_cm_swim5.png" path="/img/" exported="true"/>
+    <image id="nxksyi7w" name="img_cm_tips_5.png" path="/newImg/"/>
+    <image id="nxksyi7x" name="btn_cm_other_1.png" path="/img/"/>
+    <image id="nxksyi7y" name="btn_cm_other_2.png" path="/img/"/>
+    <image id="nxksyi7z" name="btn_cm_white12.png" path="/img/"/>
+    <image id="nxksyi80" name="btn_cm_yellow12.png" path="/img/"/>
+    <image id="nxksyi81" name="img_cm_bottom_1.png" path="/img/"/>
+    <image id="nxksyi82" name="img_cm_bottom_12.png" path="/img/"/>
+    <image id="nxksyi83" name="img_cm_bottom_15.png" path="/img/"/>
+    <image id="nxksyi84" name="img_cm_bottom_4.png" path="/img/"/>
+    <image id="nxksyi85" name="img_cm_item_10.png" path="/img/"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>

@@ -6,15 +6,12 @@
     <component id="n42_jlj8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1049,58" size="52,52">
       <Button icon="ui://te1gxawoefrs1q"/>
     </component>
-    <image id="n3_lxnu" name="n3" src="lxnus" fileName="img/img_compose_2.png" xy="695,168" size="260,379"/>
     <image id="n23_lxnu" name="n23" src="lxnus" fileName="img/img_compose_2.png" xy="149,168" size="260,379"/>
     <image id="n24_lxnu" name="n24" src="lxnus" fileName="img/img_compose_2.png" xy="422,168" size="260,379"/>
     <image id="n22_lxnu" name="n22" src="pgixi5n" fileName="newImg/img_cm_bottom_7.png" pkg="te1gxawo" xy="65,127" size="411,30"/>
     <image id="n25_lxnu" name="n25" src="pgixi5n" fileName="newImg/img_cm_bottom_7.png" pkg="te1gxawo" xy="485,127" size="296,30"/>
     <text id="n6_lxnu" name="n6" xy="485,177" size="131,28" fontSize="20" color="#5b4b37" bold="true" text="工作台物品栏"/>
-    <text id="n7_lxnu" name="n7" xy="800,176" size="47,28" fontSize="20" color="#5b4b37" bold="true" text="合成"/>
     <text id="n26_lxnu" name="n26" xy="232,178" size="89,28" fontSize="20" color="#5b4b37" bold="true" text="我的背包"/>
-    <image id="n8_lxnu" name="n8" src="lxnux" fileName="img/img_compose_7.png" xy="704,293" size="239,25"/>
     <list id="n10_lxnu" name="listTab" xy="154,211" size="250,30" layout="row" margin="2,2,2,2" lineGap="5" defaultItem="ui://kdeyuiwwlxnu1b">
       <item title="全部"/>
       <item title="装备"/>
@@ -34,12 +31,6 @@
       <item/>
       <item/>
     </list>
-    <component id="n12_lxnu" name="comProductItem" src="lxnu19" fileName="com/comArchItemPu57.xml" xy="715,228" size="57,57"/>
-    <text id="n13_lxnu" name="tfProductName" xy="798,206" size="50,20" fontSize="14" color="#9b9b9b" bold="true" text="棉花糖"/>
-    <text id="n14_lxnu" name="tfProductDesc" xy="782,231" size="160,60" fontSize="12" color="#9b9b9b" autoSize="none" bold="true" text="增加飞行系宠物100点经验，在料理冲由芒果星产物加工而成"/>
-    <text id="n21_lxnu" name="tfLock" xy="787,488" size="75,22" fontSize="15" color="#dc6b3a" align="center" autoSize="none" bold="true" text="20级解锁">
-      <gearDisplay controller="state" pages="0"/>
-    </text>
     <list id="n27_lxnu" name="listBag" xy="150,247" size="260,285" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="5" colGap="5" lineItemCount="4" defaultItem="ui://kdeyuiwwlxnu1c">
       <item/>
       <item/>
@@ -71,11 +62,6 @@
       <gearDisplay controller="state" pages="2"/>
       <Button title="取消"/>
     </component>
-    <component id="n15_lxnu" name="comMatItem1" src="lxnu18" fileName="com/comArchItemNb57.xml" xy="734,323" size="58,78" scale="0.8,0.8"/>
-    <component id="n16_lxnu" name="comMatItem2" src="lxnu18" fileName="com/comArchItemNb57.xml" xy="800,323" size="58,78" scale="0.8,0.8"/>
-    <component id="n17_lxnu" name="comMatItem3" src="lxnu18" fileName="com/comArchItemNb57.xml" xy="869,323" size="58,78" scale="0.8,0.8"/>
-    <component id="n18_lxnu" name="comMatItem4" src="lxnu18" fileName="com/comArchItemNb57.xml" xy="734,390" size="58,78" scale="0.8,0.8"/>
-    <component id="n19_lxnu" name="comMatItem5" src="lxnu18" fileName="com/comArchItemNb57.xml" xy="800,390" size="58,78" scale="0.8,0.8"/>
-    <component id="n20_lxnu" name="comMatItem6" src="lxnu18" fileName="com/comArchItemNb57.xml" xy="869,390" size="58,78" scale="0.8,0.8"/>
+    <component id="n43_nxks" name="n43" src="pqjb2g" fileName="com/ComSynthesis.xml" xy="790,127"/>
   </displayList>
 </component>

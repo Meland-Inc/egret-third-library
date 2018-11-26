@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="270,397" designImage="ui://i25v0ebkkddks" designImageOffsetX="-759" designImageOffsetY="-143" designImageAlpha="0">
-  <controller name="ctrlStatus" pages="0,normal,1,make" selected="0"/>
+<component size="270,400" designImage="ui://i25v0ebkpgixg" designImageOffsetX="-794" designImageOffsetY="-139" designImageAlpha="0">
+  <controller name="ctrlStatus" pages="0,normal,1,make,2,lock" selected="0"/>
   <displayList>
     <image id="n0_pqjb" name="imgTitleBG" src="pgixi5n" fileName="newImg/img_cm_bottom_7.png" pkg="te1gxawo" xy="0,0" size="270,28" group="n6_pqjb">
       <relation target="" sidePair="rightext-right"/>
@@ -13,40 +13,52 @@
       <relation target="n0_pqjb" sidePair="right-right"/>
     </image>
     <group id="n6_pqjb" name="title" xy="0,0" size="270,28" locked="true" collapsed="true"/>
-    <image id="n1_pqjb" name="imgSynthersisBG" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="0,33" size="270,364">
+    <image id="n1_pqjb" name="imgSynthersisBG" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="0,37" size="270,362">
       <relation target="" sidePair="rightext-right"/>
     </image>
-    <image id="n7_pqjb" name="n7" src="kddk2d" fileName="newImg/img_formula_bottom_1.png" xy="19,139">
-      <relation target="" sidePair="center-center"/>
-    </image>
-    <image id="n5_pqjb" name="imgIntroductionBG" src="ot9si2v" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="13,52" size="242,83" group="n12_pqjb"/>
-    <text id="n8_pqjb" name="tfName" xy="88,56" size="139,23" group="n12_pqjb" fontSize="16" color="#5b4b37" leading="0" autoSize="none" bold="true" text="木质工作台"/>
-    <text id="n9_pqjb" name="tfIntroduction" xy="88,77" size="165,56" group="n12_pqjb" fontSize="14" color="#5b4b37" leading="0" autoSize="none" bold="true" text="制作木质工具不可或缺的物品，需要模板和常见金属加工。"/>
-    <image id="n10_pqjb" name="imgProductIconBG" src="pgixi5n" fileName="newImg/img_cm_bottom_7.png" pkg="te1gxawo" xy="27,66" size="52,52" group="n12_pqjb"/>
-    <loader id="n11_pqjb" name="ladProductIcon" xy="30,70" size="45,45" group="n12_pqjb" aspect="true"/>
-    <group id="n12_pqjb" name="product" xy="13,52" size="243,84" advanced="true" collapsed="true">
+    <image id="n5_pqjb" name="imgIntroductionBG" src="ot9si2v" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="13,55" size="242,83" group="n12_pqjb"/>
+    <text id="n8_pqjb" name="tfName" xy="88,59" size="139,23" group="n12_pqjb" fontSize="16" color="#5b4b37" leading="0" autoSize="none" bold="true" text="木质工作台"/>
+    <text id="n9_pqjb" name="tfIntroduction" xy="88,80" size="165,56" group="n12_pqjb" fontSize="14" color="#5b4b37" leading="0" autoSize="none" bold="true" text="制作木质工具不可或缺的物品，需要模板和常见金属加工。"/>
+    <image id="n10_pqjb" name="imgProductIconBG" src="pgixi5n" fileName="newImg/img_cm_bottom_7.png" pkg="te1gxawo" xy="27,69" size="52,52" group="n12_pqjb"/>
+    <loader id="n11_pqjb" name="ladProductIcon" xy="30,73" size="45,45" group="n12_pqjb" aspect="true"/>
+    <group id="n12_pqjb" name="product" xy="13,55" size="243,84" advanced="true" collapsed="true">
       <relation target="" sidePair="center-center"/>
     </group>
-    <image id="n20_pqjb" name="imgNumBG" src="pgixi5p" fileName="newImg/img_cm_bottom_9.png" pkg="te1gxawo" xy="98,304" size="88,22" group="n21_pqjb"/>
-    <component id="n15_pqjb" name="btnSub" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="80,300" size="30,31" group="n21_pqjb">
+    <image id="n7_pqjb" name="img1" src="kddk2d" fileName="newImg/img_formula_bottom_1.png" xy="19,142">
+      <relation target="" sidePair="center-center"/>
+    </image>
+    <image id="n20_pqjb" name="imgNumBG" src="pgixi5p" fileName="newImg/img_cm_bottom_9.png" pkg="te1gxawo" xy="98,307" size="88,22" group="n21_pqjb"/>
+    <component id="n15_pqjb" name="btnSub" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="80,303" size="30,31" group="n21_pqjb">
       <Button icon="ui://te1gxawopgixi4n"/>
     </component>
-    <component id="n16_pqjb" name="btnAdd" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="173,300" size="30,31" group="n21_pqjb">
+    <component id="n16_pqjb" name="btnAdd" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="173,303" size="30,31" group="n21_pqjb">
       <Button icon="ui://te1gxawopgixi4j"/>
     </component>
-    <component id="n17_pqjb" name="btnMax" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="214,302" size="46,28" group="n21_pqjb">
+    <component id="n17_pqjb" name="btnMax" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="214,305" size="46,28" group="n21_pqjb">
       <Button title="最大" titleColor="#584736" titleFontSize="14" icon="ui://te1gxawopgixi4v"/>
     </component>
-    <text id="n18_pqjb" name="tf" xy="18,307" size="59,20" group="n21_pqjb" fontSize="13" color="#5b4b37" leading="0" bold="true" text="选择数量"/>
-    <text id="n19_pqjb" name="tfNum" xy="98,304" size="89,22" group="n21_pqjb" fontSize="15" color="#5b4b37" align="center" vAlign="middle" leading="0" autoSize="none" bold="true" text="0/0"/>
-    <group id="n21_pqjb" name="num" xy="18,300" size="242,31" collapsed="true"/>
-    <component id="n13_pqjb" name="btnDo" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="83,340" size="110,35">
-      <gearXY controller="ctrlStatus" pages="0,1" values="83,340|19,340"/>
+    <text id="n18_pqjb" name="tf" xy="18,310" size="61,20" group="n21_pqjb" fontSize="13" color="#5b4b37" leading="0" bold="true" text="选择数量"/>
+    <text id="n19_pqjb" name="tfNum" xy="98,307" size="89,22" group="n21_pqjb" fontSize="15" color="#5b4b37" align="center" vAlign="middle" leading="0" autoSize="none" bold="true" text="0/0"/>
+    <group id="n21_pqjb" name="num" xy="18,303" size="242,31" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlStatus" pages="0,1"/>
+    </group>
+    <component id="n13_pqjb" name="btnDo" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="83,343" size="110,35">
+      <gearDisplay controller="ctrlStatus" pages="0,1"/>
+      <gearXY controller="ctrlStatus" pages="0,1" values="83,343|19,340" default="83,340"/>
       <Button title="制作" titleColor="#f7f4e8" titleFontSize="18" icon="ui://te1gxawopgixi4o"/>
     </component>
     <component id="n14_pqjb" name="btnUndo" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="143,340" size="110,35">
-      <gearDisplay controller="ctrlStatus" pages="1"/>
+      <gearDisplay controller="ctrlStatus" pages="1"/>
       <Button title="取消制作" titleColor="#f7f4e8" titleFontSize="18" icon="ui://te1gxawopgixi4p"/>
     </component>
+    <image id="n22_nxks" name="imgLockBG" src="kddk2e" fileName="newImg/img_formula_bottom_2.png" xy="-5,326" group="n24_nxks">
+      <gearDisplay controller="ctrlStatus" pages="2"/>
+      <relation target="" sidePair="center-center"/>
+    </image>
+    <text id="n23_nxks" name="tfLock" xy="102,327" size="65,20" group="n24_nxks" fontSize="14" color="#ff0000" leading="0" bold="true" text="20级解锁">
+      <gearDisplay controller="ctrlStatus" pages="2"/>
+      <relation target="" sidePair="center-center"/>
+    </text>
+    <group id="n24_nxks" name="lock" xy="-5,326" size="281,25"/>
   </displayList>
 </component>
