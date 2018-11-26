@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="48,33" extention="Button">
+<component size="62,35" extention="Button">
   <displayList>
-    <image id="n0_824h" name="n0" src="824h2a" fileName="img/btn_password_3.png" xy="0,0"/>
+    <image id="n1_hfz1" name="n1" src="pgixi4r" fileName="newImg/btn_cm_special_1.png" pkg="te1gxawo" xy="0,-1"/>
+    <image id="n3_hfz1" name="n3" src="pgixi50" fileName="newImg/icon_cm_lock.png" pkg="te1gxawo" xy="22,5"/>
   </displayList>
   <Button downEffect="scale" downEffectValue="0.90"/>
 </component>
