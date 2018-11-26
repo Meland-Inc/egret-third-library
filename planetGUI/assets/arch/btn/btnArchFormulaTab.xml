@@ -2,17 +2,16 @@
 <component size="129,44" extention="Button">
   <controller name="button" pages="0,up,1,down" selected="0"/>
   <displayList>
-    <image id="n1" name="n1" src="lxnub" fileName="img/btn_task_005.png" xy="0,0" size="129,44">
-      <gearDisplay controller="button" pages="0,2"/>
-      <relation target="" sidePair="width-width,height-height"/>
+    <image id="n5_w34u" name="n5" src="efrs1u" fileName="newImg/btn_cm_white2.png" pkg="te1gxawo" xy="0,0" size="129,44">
+      <gearDisplay controller="button" pages="0"/>
+      <relation target="" sidePair="rightext-right"/>
     </image>
-    <image id="n2" name="n2" src="lxnua" fileName="img/btn_task_004.png" xy="0,0" size="129,44">
-      <gearDisplay controller="button" pages="1,3"/>
-      <relation target="" sidePair="width-width,height-height"/>
+    <image id="n6_w34u" name="n6" src="efrs1x" fileName="newImg/btn_cm_yellow2.png" pkg="te1gxawo" xy="0,0" size="129,44">
+      <gearDisplay controller="button" pages="1"/>
+      <relation target="" sidePair="rightext-right"/>
     </image>
-    <text id="n3" name="title" xy="0,0" size="128,44" fontSize="20" color="#9b9b9b" align="center" vAlign="middle" autoSize="none"  singleLine="true" text="全部">
-      <gearColor controller="button" pages="0" values="#9b9b9b,#000000" default="#57a7df,#000000"/>
-      <relation target="" sidePair="width-width,height-height"/>
+    <text id="n3" name="title" xy="43,7" size="46,28" fontSize="20" color="#5b4b37" align="center" vAlign="middle" bold="true" singleLine="true" text="全部">
+      <relation target="n5_w34u" sidePair="center-center,middle-middle"/>
     </text>
   </displayList>
   <Button mode="Check"/>

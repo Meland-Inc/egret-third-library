@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="300,401" designImage="ui://i25v0ebkpgixh" designImageOffsetX="-528" designImageOffsetY="-166" designImageAlpha="0">
+  <displayList>
+    <component id="n6_acec" name="title" src="w34u2h" fileName="com/ComTitle.xml" xy="0,0" size="301,28">
+      <Label title="工作台物品栏"/>
+    </component>
+    <image id="n0_g7xw" name="imgSynthersisBG" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="0,37" size="300,364"/>
+    <image id="n2_g7xw" name="imgTimeBG" src="pgixi5f" fileName="newImg/img_cm_bottom_10.png" pkg="te1gxawo" xy="136,300" size="126,19" group="n5_g7xw"/>
+    <text id="n3_g7xw" name="tf1" xy="165,276" size="73,23" group="n5_g7xw" fontSize="17" color="#584736" text="燃烧时间"/>
+    <text id="n4_g7xw" name="tfTime" xy="160,297" size="83,27" group="n5_g7xw" fontSize="20" color="#584736" text="24:00:00"/>
+    <group id="n5_g7xw" name="time" xy="136,276" size="127,48"/>
+  </displayList>
+</component>
