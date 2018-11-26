@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1056,500">
+  <displayList>
+    <image id="n0_lxnu" name="imgBG" src="gpm0i40" fileName="newImg/bg_cm_9.png" pkg="te1gxawo" xy="20,10" size="1036,490"/>
+    <image id="n44_kddk" name="imgTitleBG" src="j21fi3x" fileName="newImg/img_cm_title5.png" pkg="te1gxawo" xy="20,6" size="216,44"/>
+    <text id="n1_lxnu" name="tfTitle" xy="94,12" size="71,33" fontSize="25" color="#ffffff" align="center" autoSize="none" bold="true" text="配 方"/>
+    <image id="n46_kddk" name="imgTitleIconBG" src="j21fi3y" fileName="newImg/img_cm_title6.png" pkg="te1gxawo" xy="0,0"/>
+    <image id="n48_pqjb" name="imgTitleIcon" src="hxqg22" fileName="imgNew/icon_bag_title.png" pkg="ruc22gnt" xy="15,12"/>
+    <image id="n53_pqjb" name="imgLowBG" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="20,483" size="1033,14"/>
+    <image id="n49_pqjb" name="imgSearchBG" src="pgixi5y" fileName="newImg/img_cm_item_15.png" pkg="te1gxawo" xy="281,13" size="178,30" group="n52_pqjb"/>
+    <image id="n50_pqjb" name="imgSearchIcon" src="pgixi4z" fileName="newImg/icon_cm_inputbox.png" pkg="te1gxawo" xy="291,19" group="n52_pqjb"/>
+    <text id="n51_pqjb" name="tfSearch" xy="317,14" size="136,29" group="n52_pqjb" input="true" prompt="[color=#C0B496]搜索名称...[/color]" fontSize="17" color="#5b4b37" vAlign="middle" autoSize="none" text=""/>
+    <group id="n52_pqjb" name="grpSearch" xy="281,13" size="179,31"/>
+  </displayList>
+</component>
