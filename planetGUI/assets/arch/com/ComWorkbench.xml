@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="300,401" designImage="ui://i25v0ebkpgixh" designImageOffsetX="-481" designImageOffsetY="-128" designImageAlpha="100">
-  <controller name="ctrlStatus" pages="0,normal,1,select" selected="0"/>
+  <controller name="ctrlStatus" pages="0,normal,1,select" selected="1"/>
   <displayList>
     <component id="n6_acec" name="title" src="w34u2h" fileName="com/ComTitle.xml" xy="0,0" size="301,28">
       <Label title="工作台物品栏"/>
@@ -15,7 +15,26 @@
     </image>
     <image id="n10_acec" name="imgIconBG" src="ot9si33" fileName="newImg/img_cm_item_2.png" pkg="te1gxawo" xy="51,300" size="56,56"/>
     <loader id="n11_acec" name="ladIcon" xy="56,305" size="45,45" aspect="true"/>
-    <image id="n12_sg4g" name="n12" src="sg4gyi87" fileName="newImg/img_cm_bottom_11_2.png" pkg="te1gxawo" xy="67,286"/>
-    <image id="n13_sg4g" name="n13" src="sg4gyi86" fileName="newImg/img_cm_bottom_11.png" pkg="te1gxawo" xy="60,236"/>
+    <image id="n12_sg4g" name="n12" src="sg4gyi87" fileName="newImg/img_cm_bottom_11_2.png" pkg="te1gxawo" xy="64,283">
+      <gearDisplay controller="ctrlStatus" pages="1"/>
+    </image>
+    <image id="n13_sg4g" name="n13" src="sg4gyi86" fileName="newImg/img_cm_bottom_11.png" pkg="te1gxawo" xy="-38,119" size="233,161">
+      <gearDisplay controller="ctrlStatus" pages="1"/>
+    </image>
+    <list id="n14_sg4g" name="n14" xy="-31,129" size="219,141" layout="flow_hz" overflow="scroll" defaultItem="ui://te1gxawoj29zi6u">
+      <gearDisplay controller="ctrlStatus" pages="1"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
   </displayList>
 </component>
