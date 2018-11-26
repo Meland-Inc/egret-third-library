@@ -39,7 +39,7 @@
     <image id="hpym10" name="img_task_banner3.png" path="/imgNew/"/>
     <image id="hpym11" name="img_task_banner2.png" path="/imgNew/"/>
     <image id="hpym12" name="img_task_banner1.png" path="/imgNew/" scale="9grid" scale9grid="507,39,125,80"/>
-    <component id="r1t913" name="ComTaskCompleteToast.xml" path="/com/"/>
+    <component id="r1t913" name="ComTaskCompletedToast.xml" path="/com/" exported="true"/>
     <component id="r1t914" name="comRewardItem.xml" path="/com/"/>
     <component id="elis15" name="WinTaskNew.xml" path="/win/" exported="true"/>
     <component id="elis1c" name="btnDropDown.xml" path="/btn/" exported="true"/>

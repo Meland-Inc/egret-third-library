@@ -3,6 +3,7 @@
   <controller name="tab" alias="detaiAndCreation" exported="true" pages="0,detail,1,creation" selected="0"/>
   <displayList>
     <image id="n95_qbzr" name="panel" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="218,107" size="700,430" group="n98_kztp"/>
+    <image id="n99_gkzy" name="n99" src="efrs22" fileName="newImg/img_cm_title1.png" pkg="te1gxawo" xy="479,108" group="n98_kztp"/>
     <component id="n92_fyx8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="884,99" size="52,52" group="n98_kztp">
       <Button icon="ui://te1gxawoefrs1q" sound="ui://te1gxawotqc912"/>
     </component>

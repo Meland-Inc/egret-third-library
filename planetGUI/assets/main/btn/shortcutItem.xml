@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="75,82" extention="Button">
-  <controller name="button" pages="2,up,3,down" selected="0"/>
-  <controller name="conEquipMark" pages="0,hide,1,show" selected="0"/>
+<component size="72,72" extention="Button">
+  <controller name="button" pages="2,up,3,down" selected="1"/>
+  <controller name="conEquiped" pages="0,no,1,yes" selected="1"/>
   <displayList>
-    <image id="n4_w80l" name="bg" src="w80ld" fileName="img/img_main_item_1.png" xy="0,8"/>
-    <image id="n11_ft0q" name="imgSelectedBg" src="ft0q2e" fileName="img/img_main_item_3.png" xy="-5,2">
+    <image id="n14_o6si" name="bg" src="rdy43y" fileName="newImg/img_cm_item_3.png" pkg="te1gxawo" xy="2,2"/>
+    <text id="n12_tcc1" name="title" xy="42,44" size="26,24" fontSize="20" color="#8e4e0f" align="center" vAlign="middle" autoSize="none" text=""/>
+    <loader id="n6_w80l" name="icon" xy="2,2" size="68,68" align="center" vAlign="middle" fill="scale"/>
+    <image id="n18_o6si" name="equipedMark" src="rdy44e" fileName="newImg/img_main_item_3.png" xy="0,0" group="n20_o6si"/>
+    <text id="n19_o6si" name="tfE" xy="3,3" size="18,19" group="n20_o6si" fontSize="12" align="center" vAlign="middle" autoSize="none" text="E"/>
+    <group id="n20_o6si" name="grpEquipedMark" xy="0,0" size="34,32" advanced="true" collapsed="true">
+      <gearDisplay controller="conEquiped" pages="1"/>
+    </group>
+    <image id="n11_ft0q" name="imgSelectedBg" src="j21fi3v" fileName="newImg/img_cm_item_6.png" pkg="te1gxawo" xy="0,0">
       <gearDisplay controller="button" pages="3"/>
     </image>
-    <loader id="n6_w80l" name="icon" xy="3,11" size="64,63" align="center" vAlign="middle" fill="scale"/>
-    <text id="n7_w80l" name="tfKeycode" xy="54,11" size="10,20" fontSize="16" color="#918070" align="center" vAlign="middle" text="1"/>
-    <component id="n13_ti2i" name="durabilityBar" src="ti2i1y" fileName="com/comDurabilityBar.xml" pkg="ruc22gnt" xy="21,65">
-      <gearDisplay controller="conEquipMark" pages="1"/>
+    <image id="n16_o6si" name="defaultIcon" src="rdy42v" fileName="newImg/btn_main_item_add.png" xy="20,20"/>
+    <component id="n13_ti2i" name="durabilityBar" src="ti2i1y" fileName="com/comDurabilityBar.xml" pkg="ruc22gnt" xy="20,58" hideByEditor="true" visible="false">
       <ProgressBar value="100" max="100"/>
     </component>
-    <image id="n8_ft0q" name="tagBg" src="ft0q2f" fileName="img/img_main_item_4.png" xy="2,10" group="n10_ft0q"/>
-    <text id="n9_ft0q" name="tfTagName" xy="-1,27" size="33,18" group="n10_ft0q" rotation="-45" fontSize="14" color="#916e4c" align="center" vAlign="middle" text="装备"/>
-    <group id="n10_ft0q" name="n10" xy="-1,10" size="45,38" advanced="true" collapsed="true">
-      <gearDisplay controller="conEquipMark" pages="1"/>
-    </group>
-    <text id="n12_tcc1" name="title" xy="42,53" size="26,24" fontSize="20" color="#8e4e0f" align="center" vAlign="middle" autoSize="none" text="99&#xA;"/>
   </displayList>
-  <Button mode="Radio" downEffect="scale" downEffectValue="0.90"/>
+  <Button mode="Radio"/>
 </component>

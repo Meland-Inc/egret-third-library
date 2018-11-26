@@ -14,7 +14,7 @@
     <image id="n11_kvvk" name="n11" src="kvvk2i1f" fileName="imgNew/img_guide_2.png" xy="703,86" group="n13_ojhl"/>
     <text id="n4_r7z3" name="tfClickContinue" xy="711,79" size="77,23" group="n13_ojhl" fontSize="18" color="#645849" text="点击继续"/>
     <image id="n12_kvvk" name="n12" src="kvvk2i1f" fileName="imgNew/img_guide_2.png" xy="789,86" group="n13_ojhl"/>
-    <group id="n13_ojhl" name="grpClickContinue" xy="703,79" size="93,24" advanced="true">
+    <group id="n13_ojhl" name="grpClickContinue" xy="703,79" size="93,24" advanced="true" collapsed="true">
       <relation target="" sidePair="right-right"/>
     </group>
   </displayList>

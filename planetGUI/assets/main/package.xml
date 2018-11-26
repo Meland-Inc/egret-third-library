@@ -62,8 +62,6 @@
     <component id="ft0q2g" name="shortcutItem.xml" path="/btn/"/>
     <image id="q7z62e" name="icon_main_sword.png" path="/img/" exported="true"/>
     <component id="oy0u2i" name="pbrAccmu.xml" path="/pbr/"/>
-    <image id="oy0u2j" name="img_main_chargeforce_1.png" path="/img/"/>
-    <image id="oy0u2k" name="img_main_chargeforce_2.png" path="/img/"/>
     <image id="oy0u2l" name="img_main_itemdrop.png" path="/img/"/>
     <component id="oy0u2m" name="ComAccmu.xml" path="/com/" exported="true"/>
     <component id="oy0u2n" name="ComPickObjectToast.xml" path="/com/" exported="true"/>
@@ -153,13 +151,17 @@
     <image id="r2bf5x" name="icon_main_manual.png" path="/newImg/"/>
     <image id="r2bf5y" name="icon_main_workshop.png" path="/newImg/"/>
     <component id="qv2f5z" name="SmallMapContainer.xml" path="/com/"/>
-    <component id="tgrl60" name="ComMainChat.xml" path="/com/"/>
     <image id="rb9r60" name="icon_main_exp_2.png" path="/newImg/" exported="true"/>
     <image id="rb9r61" name="icon_main_health_2.png" path="/newImg/" exported="true"/>
     <image id="rb9r62" name="icon_main_hunger_2.png" path="/newImg/" exported="true"/>
     <image id="rb9r63" name="icon_main_thirst_2.png" path="/newImg/" exported="true"/>
     <component id="9f2h67" name="ProgressBar.xml" path="/com/"/>
     <component id="9f2h69" name="ComSaturationDetail.xml" path="/com/" exported="true"/>
+    <component id="rdh66a" name="WinMainFriendInfo.xml" path="/win/"/>
+    <component id="sec06b" name="btnSwitchShortcuts.xml" path="/btn/"/>
+    <component id="o6si6c" name="spriteBag.xml" path="/sprite/"/>
+    <component id="x9um6d" name="ComMainChatView.xml" path="/win/" exported="true"/>
+    <component id="x9um6f" name="ComMainChatItem.xml" path="/com/" exported="true"/>
   </resources>
   <publish name="main" path="C:\Users\Mloong\Desktop\bell_planet\feature-jiahua\resource\assets\fairyGui"/>
 </packageDescription>

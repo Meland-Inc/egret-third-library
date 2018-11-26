@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="240,23">
+<component size="1136,640" designImage="ui://i25v0ebkd0utr">
   <displayList>
-    <image id="n2_snov" name="n2" src="oy0u2j" fileName="img/img_main_chargeforce_1.png" xy="0,0" pivot="0.5,0.5" anchor="true" size="240,19"/>
-    <component id="n0_snov" name="pbrAccmu" src="oy0u2i" fileName="pbr/pbrAccmu.xml" xy="-120,0" size="128,10">
-      <ProgressBar value="84" max="100"/>
+    <image id="n2_snov" name="n2" src="rdy44q" fileName="newImg/img_main_powerstorage_1.png" xy="574,517" pivot="0.5,0.5" anchor="true" size="231,20" group="n4_d0ut"/>
+    <component id="n0_snov" name="pbrAccmu" src="oy0u2i" fileName="pbr/pbrAccmu.xml" xy="460,517" pivot="0,0.5" anchor="true" size="227,16" group="n4_d0ut">
+      <ProgressBar value="100" max="100"/>
     </component>
-    <text id="n1_snov" name="n1" xy="0,1" pivot="0.5,0.5" anchor="true" size="53,22" fontSize="15" color="#ffffff" bold="true" strokeColor="#9a6510" strokeSize="2" text="蓄力中"/>
+    <text id="n1_snov" name="n1" xy="573,517" pivot="0.5,0.5" anchor="true" size="53,22" group="n4_d0ut" fontSize="15" color="#ffffff" vAlign="middle" bold="true" strokeColor="#916e4c" strokeSize="2" text="蓄力中"/>
+    <group id="n4_d0ut" name="root" xy="460,517" size="345,22" advanced="true">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </group>
   </displayList>
 </component>
