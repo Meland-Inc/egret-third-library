@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="838,454">
+<component size="1136,640">
   <displayList>
-    <image id="n0_lxnu" name="n0" src="lxnu3" fileName="img/bg_compose.png" xy="0,0"/>
-    <text id="n1_lxnu" name="n1" xy="391,10" size="53,28" fontSize="24" color="#ffffff" text="配方"/>
-    <image id="n3_lxnu" name="n3" src="lxnuh" fileName="img/img_compose_1.png" xy="15,60"/>
-    <image id="n5_lxnu" name="n5" src="lxnus" fileName="img/img_compose_2.png" xy="560,60"/>
-    <image id="n6_lxnu" name="n6" src="lxnuu" fileName="img/img_compose_4.png" xy="565,66"/>
-    <image id="n7_lxnu" name="n7" src="lxnut" fileName="img/img_compose_3.png" xy="20,66"/>
-    <text id="n8_lxnu" name="n8" xy="257,68" size="45,24" fontSize="20" color="#57a7df" text="配方"/>
-    <text id="n9_lxnu" name="n9" xy="665,68" size="45,24" fontSize="20" color="#57a7df" text="合成"/>
-    <image id="n11_lxnu" name="n11" src="lxnux" fileName="img/img_compose_7.png" xy="569,208"/>
-    <list id="n19_lxnu" name="listTab" xy="32,110" size="129,290" margin="2,2,2,2" lineGap="5" defaultItem="ui://kdeyuiwwlxnu13">
+    <image id="n0_lxnu" name="n0" src="lxnu3" fileName="img/bg_compose.png" xy="149,93" group="n40_e8kh"/>
+    <text id="n1_lxnu" name="n1" xy="540,103" size="53,31" group="n40_e8kh" fontSize="24" color="#ffffff" text="配方"/>
+    <image id="n3_lxnu" name="n3" src="lxnuh" fileName="img/img_compose_1.png" xy="164,153" group="n40_e8kh"/>
+    <image id="n5_lxnu" name="n5" src="lxnus" fileName="img/img_compose_2.png" xy="709,153" group="n40_e8kh"/>
+    <image id="n6_lxnu" name="n6" src="lxnuu" fileName="img/img_compose_4.png" xy="714,159" group="n40_e8kh"/>
+    <image id="n7_lxnu" name="n7" src="lxnut" fileName="img/img_compose_3.png" xy="169,159" group="n40_e8kh"/>
+    <text id="n8_lxnu" name="n8" xy="406,161" size="45,27" group="n40_e8kh" fontSize="20" color="#57a7df" text="配方"/>
+    <text id="n9_lxnu" name="n9" xy="814,161" size="45,27" group="n40_e8kh" fontSize="20" color="#57a7df" text="合成"/>
+    <image id="n11_lxnu" name="n11" src="lxnux" fileName="img/img_compose_7.png" xy="718,301" group="n40_e8kh"/>
+    <list id="n19_lxnu" name="listTab" xy="181,203" size="129,290" group="n40_e8kh" margin="2,2,2,2" lineGap="5" defaultItem="ui://kdeyuiwwlxnu13">
       <item title="全部"/>
       <item title="装饰"/>
       <item title="建筑"/>
@@ -18,7 +18,7 @@
       <item title="杂物"/>
       <item title="其他"/>
     </list>
-    <list id="n21_lxnu" name="listItem" xy="170,108" size="370,300" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="5" colGap="5" lineItemCount="5" defaultItem="ui://kdeyuiwwlxnu14">
+    <list id="n21_lxnu" name="listItem" xy="319,201" size="370,300" group="n40_e8kh" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="5" colGap="5" lineItemCount="5" defaultItem="ui://kdeyuiwwlxnu14">
       <item/>
       <item/>
       <item/>
@@ -30,18 +30,19 @@
       <item/>
       <item/>
     </list>
-    <component id="n38_lxnu" name="comProductItem" src="lxnu19" fileName="com/comArchItemPu57.xml" xy="580,135"/>
-    <text id="n23_lxnu" name="tfProductName" xy="663,108" size="47,18" fontSize="14" color="#9b9b9b" text="棉花糖"/>
-    <text id="n24_lxnu" name="tfProductDesc" xy="647,138" size="160,60" fontSize="12" color="#9b9b9b" autoSize="none" text="增加飞行系宠物100点经验，在料理冲由芒果星产物加工而成"/>
-    <component id="n33_lxnu" name="comMatItem1" src="lxnu18" fileName="com/comArchItemNb57.xml" xy="583,245"/>
-    <component id="n34_lxnu" name="comMatItem2" src="lxnu18" fileName="com/comArchItemNb57.xml" xy="659,245"/>
-    <component id="n35_lxnu" name="comMatItem3" src="lxnu18" fileName="com/comArchItemNb57.xml" xy="738,245"/>
-    <component id="n36_lxnu" name="comMatItem4" src="lxnu18" fileName="com/comArchItemNb57.xml" xy="583,325"/>
-    <component id="n37_lxnu" name="comMatItem5" src="lxnu18" fileName="com/comArchItemNb57.xml" xy="659,325"/>
-    <component id="n32_lxnu" name="comMatItem6" src="lxnu18" fileName="com/comArchItemNb57.xml" xy="738,325"/>
-    <text id="n31_lxnu" name="tfLock" xy="652,410" size="75,21" fontSize="15" color="#dc6b3a" align="center" autoSize="none" text="20级解锁"/>
-    <component id="n39_jlj8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="790,2" size="42,43">
+    <component id="n38_lxnu" name="comProductItem" src="lxnu19" fileName="com/comArchItemPu57.xml" xy="729,228" group="n40_e8kh"/>
+    <text id="n23_lxnu" name="tfProductName" xy="812,201" size="47,20" group="n40_e8kh" fontSize="14" color="#9b9b9b" text="棉花糖"/>
+    <text id="n24_lxnu" name="tfProductDesc" xy="796,231" size="160,60" group="n40_e8kh" fontSize="12" color="#9b9b9b" autoSize="none" text="增加飞行系宠物100点经验，在料理冲由芒果星产物加工而成"/>
+    <component id="n33_lxnu" name="comMatItem1" src="lxnu18" fileName="com/comArchItemNb57.xml" xy="732,338" group="n40_e8kh"/>
+    <component id="n34_lxnu" name="comMatItem2" src="lxnu18" fileName="com/comArchItemNb57.xml" xy="808,338" group="n40_e8kh"/>
+    <component id="n35_lxnu" name="comMatItem3" src="lxnu18" fileName="com/comArchItemNb57.xml" xy="887,338" group="n40_e8kh"/>
+    <component id="n36_lxnu" name="comMatItem4" src="lxnu18" fileName="com/comArchItemNb57.xml" xy="732,418" group="n40_e8kh"/>
+    <component id="n37_lxnu" name="comMatItem5" src="lxnu18" fileName="com/comArchItemNb57.xml" xy="808,418" group="n40_e8kh"/>
+    <component id="n32_lxnu" name="comMatItem6" src="lxnu18" fileName="com/comArchItemNb57.xml" xy="887,418" group="n40_e8kh"/>
+    <text id="n31_lxnu" name="tfLock" xy="801,503" size="75,21" group="n40_e8kh" fontSize="15" color="#dc6b3a" align="center" autoSize="none" text="20级解锁"/>
+    <component id="n39_jlj8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="939,95" size="42,43" group="n40_e8kh">
       <Button icon="ui://kdeyuiwwlxnu5"/>
     </component>
+    <group id="n40_e8kh" name="root" xy="149,93" size="838,454" advanced="true"/>
   </displayList>
 </component>
