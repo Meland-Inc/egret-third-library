@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="230,46" extention="Button">
-  <controller name="conTaskState" pages="0,acceptable,1,accepted,2,completed,3,normal" selected="0"/>
+  <controller name="conTaskState" pages="0,acceptable,1,accepted,2,completed,3,submitted" selected="3"/>
   <displayList>
     <loader id="n10_sz33" name="icon" xy="0,0" size="230,46" url="ui://te1gxawotgrli6o" align="center" autoSize="true"/>
     <text id="n9_qzgy" name="title" xy="82,11" size="104,23" fontSize="18" color="#4e5237" align="center" vAlign="middle" singleLine="true" text="optionName">
       <relation target="" sidePair="center-center"/>
     </text>
-    <loader id="n11_p8hk" name="ladState" xy="21,5" size="32,34" url="ui://eunktclqhpymw" autoSize="true">
-      <gearIcon controller="conTaskState" pages="0,1,2" values="ui://eunktclqhpymw|ui://tis07nuvxhg9j|ui://eunktclqhpymx" default="ui://tis07nuvxhg9h"/>
+    <loader id="n11_p8hk" name="ladState" xy="21,3" size="32,38" autoSize="true">
+      <gearIcon controller="conTaskState" pages="0,1,2,3" values="ui://eunktclqhpymw|ui://tis07nuvxhg9j|ui://eunktclqhpymx|"/>
       <relation target="" sidePair="middle-middle"/>
     </loader>
   </displayList>

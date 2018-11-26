@@ -62,6 +62,8 @@
     <component id="ft0q2g" name="shortcutItem.xml" path="/btn/"/>
     <image id="q7z62e" name="icon_main_sword.png" path="/img/" exported="true"/>
     <component id="oy0u2i" name="pbrAccmu.xml" path="/pbr/"/>
+    <image id="oy0u2j" name="img_main_chargeforce_1.png" path="/img/"/>
+    <image id="oy0u2k" name="img_main_chargeforce_2.png" path="/img/"/>
     <image id="oy0u2l" name="img_main_itemdrop.png" path="/img/"/>
     <component id="oy0u2m" name="ComAccmu.xml" path="/com/" exported="true"/>
     <component id="oy0u2n" name="ComPickObjectToast.xml" path="/com/" exported="true"/>
@@ -162,6 +164,11 @@
     <component id="o6si6c" name="spriteBag.xml" path="/sprite/"/>
     <component id="x9um6d" name="ComMainChatView.xml" path="/win/" exported="true"/>
     <component id="x9um6f" name="ComMainChatItem.xml" path="/com/" exported="true"/>
+    <component id="c3x26i" name="taskCondition.xml" path="/com/"/>
+    <component id="c3x26k" name="ComTaskTraceItem.xml" path="/com/" exported="true"/>
+    <component id="c3x26l" name="ComMainTaskTrace.xml" path="/win/" exported="true"/>
+    <component id="c3x26m" name="ComTaskTrace.xml" path="/win/" exported="true"/>
+    <component id="c3x26n" name="spriteTaskTrace.xml" path="/sprite/"/>
   </resources>
   <publish name="main"/>
 </packageDescription>

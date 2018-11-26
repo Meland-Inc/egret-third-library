@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="193,104" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <image id="n6_c3x2" name="bg" src="rdy453" fileName="newImg/img_main_task_6.png" xy="0,0" size="193,104">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <loader id="n1_c3x2" name="titleBg" xy="3,3" size="187,24" url="ui://5hs1fuejrdy450">
+      <gearIcon controller="button" pages="1" values="ui://5hs1fuejrdy44z" default="ui://5hs1fuejrdy450"/>
+    </loader>
+    <image id="n2_c3x2" name="icon" src="rdy451" fileName="newImg/img_main_task_4.png" xy="6,6"/>
+    <text id="n4_c3x2" name="title" xy="28,3" size="157,24" fontSize="16" color="#585956" align="center" vAlign="middle" autoSize="none" text="taskName">
+      <gearColor controller="button" pages="1" values="#f8fa38,#000000" default="#585956,#000000"/>
+    </text>
+    <list id="n5_c3x2" name="lstTaskCondition" xy="14,27" size="171,75" defaultItem="ui://5hs1fuejc3x26i">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+  <Button mode="Radio"/>
+  <relation target="n5_c3x2" sidePair="bottomext-bottom"/>
+</component>

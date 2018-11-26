@@ -8,7 +8,7 @@
     <text id="n9_kvvk" name="tfName" xy="92,8" size="126,19" fontSize="18" color="#ffffff" align="center" autoSize="none" text="名字"/>
     <image id="n14_cuwy" name="headIconBg" src="kvvk2i1e" fileName="imgNew/img_guide_1.png" xy="90,47"/>
     <loader id="n1_npqs" name="ladHeadIcon" xy="95,51" pivot="0.5,0.5" size="68,66" url="ui://7xhwdeuzctbhb" fill="scaleFree"/>
-    <text id="n6_r7z3" name="tfSpeech" xy="200,55" size="483,70" fontSize="18" color="#4e4237" autoSize="none" text="你终于醒啦！等你很久啦">
+    <text id="n6_r7z3" name="tfSpeech" xy="200,55" size="483,70" fontSize="18" color="#4e4237" autoSize="none" text="">
       <relation target="" sidePair="rightext-right"/>
     </text>
     <image id="n11_kvvk" name="n11" src="kvvk2i1f" fileName="imgNew/img_guide_2.png" xy="703,86" group="n13_ojhl"/>
