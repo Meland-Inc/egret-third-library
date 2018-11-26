@@ -69,7 +69,7 @@
     <image id="efrs1y" name="btn_cm_yellow3.png" path="/newImg/" exported="true" scale="9grid" scale9grid="10,10,20,20"/>
     <image id="efrs1z" name="img_cm_chat.png" path="/newImg/" exported="true" scale="9grid" scale9grid="4,3,26,28"/>
     <image id="efrs20" name="img_cm_item_1.png" path="/newImg/" exported="true"/>
-    <image id="efrs22" name="img_cm_title1.png" path="/newImg/" exported="true"/>
+    <image id="efrs22" name="img_cm_title1.png" path="/newImg/" exported="true" scale="" scale9grid="45,9,90,18"/>
     <image id="efrs23" name="img_cm_title2.png" path="/newImg/" exported="true"/>
     <image id="efrs24" name="img_cm_title3.png" path="/newImg/" exported="true"/>
     <component id="jj3j1e" name="CommonButton.xml" path="/btn/" exported="true"/>
@@ -168,7 +168,7 @@
     <image id="pgixi4i" name="bg_game1.png" path="/newImg/" exported="true"/>
     <image id="pgixi4j" name="btn_cm_add.png" path="/newImg/" exported="true"/>
     <image id="pgixi4k" name="btn_cm_circle_1.png" path="/newImg/" exported="true"/>
-    <image id="pgixi4l" name="btn_cm_gray_1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="7,4,14,19"/>
+    <image id="pgixi4l" name="btn_cm_gray_1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="7,7,14,14"/>
     <image id="pgixi4m" name="btn_cm_leftturn_2.png" path="/newImg/" exported="true"/>
     <image id="pgixi4n" name="btn_cm_minus.png" path="/newImg/" exported="true"/>
     <image id="pgixi4o" name="btn_cm_other_1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="7,4,18,25"/>
@@ -176,11 +176,11 @@
     <image id="pgixi4q" name="btn_cm_rightturn_2.png" path="/newImg/" exported="true"/>
     <image id="pgixi4r" name="btn_cm_special_1.png" path="/newImg/" exported="true"/>
     <image id="pgixi4s" name="btn_cm_special_2.png" path="/newImg/" exported="true" scale="9grid" scale9grid="15,5,30,10"/>
-    <image id="pgixi4t" name="btn_cm_white10.png" path="/newImg/" exported="true" scale="9grid" scale9grid="20,13,40,23"/>
-    <image id="pgixi4u" name="btn_cm_white11.png" path="/newImg/" exported="true" scale="9grid" scale9grid="7,4,14,19"/>
+    <image id="pgixi4t" name="btn_cm_white10.png" path="/newImg/" exported="true" scale="9grid" scale9grid="20,14,40,26"/>
+    <image id="pgixi4u" name="btn_cm_white11.png" path="/newImg/" exported="true"/>
     <image id="pgixi4v" name="btn_cm_white9.png" path="/newImg/" exported="true"/>
-    <image id="pgixi4w" name="btn_cm_yellow10.png" path="/newImg/" exported="true" scale="9grid" scale9grid="20,14,40,24"/>
-    <image id="pgixi4x" name="btn_cm_yellow11.png" path="/newImg/" exported="true" scale="9grid" scale9grid="7,3,14,19"/>
+    <image id="pgixi4w" name="btn_cm_yellow10.png" path="/newImg/" exported="true" scale="9grid" scale9grid="20,14,40,28"/>
+    <image id="pgixi4x" name="btn_cm_yellow11.png" path="/newImg/" exported="true" scale="9grid" scale9grid="7,7,14,14"/>
     <image id="pgixi4y" name="btn_game1.png" path="/newImg/" exported="true"/>
     <image id="pgixi4z" name="icon_cm_inputbox.png" path="/newImg/" exported="true"/>
     <image id="pgixi50" name="icon_cm_lock.png" path="/newImg/" exported="true"/>
@@ -201,8 +201,8 @@
     <image id="pgixi5f" name="img_cm_bottom_10.png" path="/newImg/" exported="true"/>
     <image id="pgixi5g" name="img_cm_bottom_11.png" path="/newImg/" exported="true"/>
     <image id="pgixi5h" name="img_cm_bottom_12.png" path="/newImg/" exported="true"/>
-    <image id="pgixi5i" name="img_cm_bottom_13.png" path="/newImg/" exported="true" scale="9grid" scale9grid="4,6,7,12"/>
-    <image id="pgixi5j" name="img_cm_bottom_14.png" path="/newImg/" exported="true" scale="9grid" scale9grid="2,6,2,12"/>
+    <image id="pgixi5i" name="img_cm_bottom_13.png" path="/newImg/" exported="true" scale="9grid" scale9grid="5,6,7,12"/>
+    <image id="pgixi5j" name="img_cm_bottom_14.png" path="/newImg/" exported="true" scale="9grid" scale9grid="3,6,2,12"/>
     <image id="pgixi5k" name="img_cm_bottom_15.png" path="/newImg/" exported="true"/>
     <image id="pgixi5l" name="img_cm_bottom_16.png" path="/newImg/" exported="true"/>
     <image id="pgixi5m" name="img_cm_bottom_17.png" path="/newImg/" exported="true"/>

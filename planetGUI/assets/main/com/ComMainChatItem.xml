@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="190,25" extention="Label">
+  <controller name="conChannelTitle" pages="0,unknown,1,system,2,world,3,map,4,instance,5,near,6,private" selected="0"/>
+  <displayList>
+    <loader id="n12_hdi9" name="ladChanelBg" xy="1,5" size="40,20" url="ui://qagcvsbxq73n45" autoSize="true">
+      <gearIcon controller="conChannelTitle" pages="1,2,5,6" values="ui://qagcvsbxq73n49|ui://qagcvsbxq73n47|ui://qagcvsbxq73n46|ui://qagcvsbxq73n48" default="ui://qagcvsbxq73n45"/>
+    </loader>
+    <text id="n25_q73n" name="tfChannel" xy="0,5" size="40,20" fontSize="12" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="未知">
+      <gearText controller="conChannelTitle" pages="0,1,3,4,5,6" values="未知|系统|map|野外|附近|私聊" default="世界"/>
+    </text>
+    <text id="n10_swb5" name="tfContent" xy="43,7" size="145,17" fontSize="12" color="#00ff00" vAlign="middle" ubb="true" vars="true" autoSize="none" bold="true" singleLine="true" text="{sender=sender}:[color=#ffffff]{content=content}[/color]"/>
+  </displayList>
+</component>
