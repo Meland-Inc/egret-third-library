@@ -5,10 +5,10 @@
   <displayList>
     <image id="n0_g7xw" name="imgSynthersisBG" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="0,37" size="300,364"/>
     <component id="n17_sg4g" name="btnBag" src="oliri6q" fileName="btn/rbtnScale.xml" pkg="te1gxawo" xy="15,0" size="130,37">
-      <Button checked="true" title="背包栏" icon="ui://te1gxawosg4gyi88" selectedIcon="ui://te1gxawosg4gyi89" controller="ctrlType" page="0"/>
+      <Button checked="true" title="背包栏" icon="ui://te1gxawojjanyi86" selectedIcon="ui://te1gxawojjanyi87" controller="ctrlType" page="0"/>
     </component>
     <component id="n18_sg4g" name="btnFormula" src="oliri6q" fileName="btn/rbtnScale.xml" pkg="te1gxawo" xy="155,0" size="130,37">
-      <Button title="配方栏" icon="ui://te1gxawosg4gyi88" selectedIcon="ui://te1gxawosg4gyi89" controller="ctrlType" page="1"/>
+      <Button title="配方栏" icon="ui://te1gxawojjanyi86" selectedIcon="ui://te1gxawojjanyi87" controller="ctrlType" page="1"/>
     </component>
     <list id="n22_twvn" name="lstBag" xy="3,49" size="293,218" layout="flow_hz" overflow="scroll" defaultItem="ui://te1gxawoj29zi6u">
       <gearDisplay controller="ctrlType" pages="0"/>
@@ -40,7 +40,7 @@
     </image>
     <image id="n10_acec" name="imgIconBG" src="ot9si33" fileName="newImg/img_cm_item_2.png" pkg="te1gxawo" xy="51,303" size="56,56" group="n20_twvn"/>
     <loader id="n11_acec" name="ladIcon" xy="56,308" size="45,45" group="n20_twvn" aspect="true"/>
-    <image id="n12_sg4g" name="n12" src="sg4gyi87" fileName="newImg/img_cm_bottom_11_2.png" pkg="te1gxawo" xy="64,286" group="n20_twvn">
+    <image id="n12_sg4g" name="n12" src="jjanyi88" fileName="newImg/img_cm_bottom_11_2.png" pkg="te1gxawo" xy="64,286" group="n20_twvn">
       <gearDisplay controller="ctrlStatus" pages="1"/>
     </image>
     <image id="n13_sg4g" name="n13" src="twvnyi8c" fileName="newImg/img_cm_bottom_11.png" pkg="te1gxawo" xy="-38,122" size="233,161" group="n20_twvn">
@@ -61,6 +61,6 @@
       <item/>
       <item/>
     </list>
-    <group id="n20_twvn" name="open" xy="-38,122" size="233,238" collapsed="true"/>
+    <group id="n20_twvn" name="open" xy="-38,122" size="233,238"/>
   </displayList>
 </component>

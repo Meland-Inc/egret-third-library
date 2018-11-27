@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="270,400" designImage="ui://i25v0ebktwvnt" designImageOffsetX="-789" designImageOffsetY="-129" designImageAlpha="0">
-  <controller name="ctrlStatus" pages="0,normal,1,make,2,lock" selected="2"/>
+  <controller name="ctrlStatus" pages="0,normal,1,make,2,lock" selected="1"/>
   <displayList>
     <component id="n25_acec" name="title" src="w34u2h" fileName="com/ComTitle.xml" xy="0,0" size="270,28">
       <relation target="" sidePair="rightext-right"/>
@@ -50,7 +50,7 @@
       <relation target="" sidePair="center-center"/>
     </text>
     <group id="n24_nxks" name="lock" xy="-5,334" size="281,25"/>
-    <image id="n28_twvn" name="n28" src="twvnyi8a" fileName="newImg/img_cm_schedule_1.png" pkg="te1gxawo" xy="42,324" size="186,18" group="n30_twvn"/>
+    <image id="n28_twvn" name="n28" src="jjanyi89" fileName="newImg/img_cm_schedule_1.png" pkg="te1gxawo" xy="42,324" size="186,18" group="n30_twvn"/>
     <component id="n26_twvn" name="n26" src="lxnu1d" fileName="pbr/pbrArchMaking.xml" xy="44,326" group="n30_twvn"/>
     <text id="n29_twvn" name="n29" xy="111,323" size="47,20" group="n30_twvn" fontSize="14" color="#ffffff" leading="0" strokeColor="#584736" strokeSize="2" text="制作中"/>
     <group id="n30_twvn" name="pbr" xy="42,323" size="186,20" advanced="true">
