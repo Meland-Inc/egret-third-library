@@ -57,8 +57,8 @@
       <gearDisplay controller="stateCtrl" pages="2,3"/>
       <Button title="编程" titleColor="#81681c" titleFontSize="20" icon="ui://te1gxawoot9si2h"/>
     </component>
-    <image id="n73_j21f" name="n73" src="j21fi3u" fileName="newImg/img_cm_bottom_6.png" pkg="te1gxawo" xy="323,35" size="180,28"/>
-    <image id="n74_j21f" name="n74" src="j21fi3t" fileName="newImg/icon_cm_ruel.png" pkg="te1gxawo" xy="325,38"/>
+    <image id="n73_j21f" name="n73" src="j21fi3u" fileName="newImg/img_cm_bottom_6.png" pkg="te1gxawo" xy="323,35" size="180,28" visible="false"/>
+    <image id="n74_j21f" name="n74" src="j21fi3t" fileName="newImg/icon_cm_ruel.png" pkg="te1gxawo" xy="325,38" visible="false"/>
     <text id="n75_j21f" name="tfRule" xy="350,38" size="71,25" fontSize="18" color="#533f2e" align="center" vAlign="middle" vars="true" text="燃料:{cur=0}/{total=0}"/>
     <component id="n76_j21f" name="comAvatar" src="j21fi3z" fileName="com/ComEmpty.xml" pkg="te1gxawo" xy="285,250" size="1,1"/>
     <list id="n77_pgix" name="listEquip" xy="88,82" size="410,226" layout="flow_hz" lineGap="5" colGap="265" lineItemCount="2" defaultItem="ui://te1gxawoj29zi6t">
@@ -69,5 +69,7 @@
       <item title="手套" name="glove"/>
       <item title="饰品" name="accessory"/>
     </list>
+    <component id="n78_p5lw" name="comSaturationDetail" src="9f2h69" fileName="com/ComSaturationDetail.xml" pkg="5hs1fuej" xy="376,71" visible="false"/>
+    <component id="n79_p5lw" name="comRobotSaturation" src="qljx2i" fileName="com/ComRobotSaturation.xml" xy="404,21"/>
   </displayList>
 </component>

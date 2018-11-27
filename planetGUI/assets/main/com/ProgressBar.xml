@@ -2,7 +2,7 @@
 <component size="149,21">
   <displayList>
     <text id="n5_9f2h" name="tfValue" xy="73,0" size="36,20" fontSize="14" color="#ffffff" align="right" vAlign="middle" autoSize="none" text="9999"/>
-    <text id="n9_ru0b" name="tfType" xy="27,-1" size="47,20" fontSize="14" color="#ffffff" align="center" vAlign="middle" text="饥渴度">
+    <text id="n9_ru0b" name="tfType" xy="27,0" size="47,20" fontSize="14" color="#ffffff" align="center" vAlign="middle" text="饥渴度">
       <relation target="n10_rdh6" sidePair="middle-middle"/>
     </text>
     <loader id="n10_rdh6" name="ladIcon" xy="0,1" size="20,20" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
