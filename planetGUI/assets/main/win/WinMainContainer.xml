@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" opaque="false" designImage="ui://i25v0ebkot9s0" designImageAlpha="100">
+<component size="1136,640" opaque="false" designImage="ui://i25v0ebkot9s0" designImageAlpha="100" designImageLayer="1">
   <displayList>
     <component id="n16_rdy4" name="btnAvatar" src="rdy45b" fileName="btn/btnAvatar.xml" xy="8,6" size="48,48">
       <relation target="" sidePair="left-left,top-top"/>
@@ -29,8 +29,9 @@
     <component id="n36_ru0b" name="ComSaturationDetail" src="9f2h69" fileName="com/ComSaturationDetail.xml" xy="185,56" visible="false">
       <relation target="" sidePair="left-left,top-top"/>
     </component>
-    <component id="n37_x9um" name="n37" src="x9um6d" fileName="win/ComMainChat.xml" xy="3,555">
+    <component id="n37_x9um" name="comChat" src="x9um6d" fileName="win/ComMainChatView.xml" xy="3,555">
       <relation target="" sidePair="bottom-bottom"/>
     </component>
+    <component id="n39_c3x2" name="comTaskTrace" src="c3x26m" fileName="win/ComTaskTrace.xml" xy="7,69"/>
   </displayList>
 </component>

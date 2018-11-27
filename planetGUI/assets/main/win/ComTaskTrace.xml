@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="193,201" overflow="hidden">
+  <controller name="ctrlShowHide" pages="0,show,1,hide" selected="0"/>
+  <displayList>
+    <list id="n0_c3x2" name="lstTask" xy="0,31" size="193,170" overflow="scroll" scrollBarFlags="128" defaultItem="ui://5hs1fuejc3x26k">
+      <gearXY controller="ctrlShowHide" pages="1" values="-193,31" default="0,31" tween="true"/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n3_c3x2" name="n3" src="rdy453" fileName="newImg/img_main_task_6.png" xy="2,2"/>
+    <loader id="n4_c3x2" name="n4" xy="6,6" size="14,16" url="ui://5hs1fuejrdy454">
+      <gearIcon controller="ctrlShowHide" pages="1" values="ui://5hs1fuejrdy455" default="ui://5hs1fuejrdy454"/>
+    </loader>
+    <component id="n5_c3x2" name="btnShow" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="28,0" size="78,28">
+      <gearDisplay controller="ctrlShowHide" pages="1"/>
+      <Button icon="ui://5hs1fuejc3x26n" controller="ctrlShowHide" page="0"/>
+    </component>
+    <component id="n6_c3x2" name="btnHide" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="28,0" size="78,28">
+      <gearDisplay controller="ctrlShowHide" pages="0"/>
+      <Button icon="ui://5hs1fuejc3x26n" controller="ctrlShowHide" page="1"/>
+    </component>
+  </displayList>
+</component>
