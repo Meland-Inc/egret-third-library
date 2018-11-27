@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="300,401" designImage="ui://i25v0ebkpgixh" designImageOffsetX="-481" designImageOffsetY="-128" designImageAlpha="0">
-  <controller name="ctrlStatus" pages="0,normal,1,select" selected="0"/>
+  <controller name="ctrlStatus" pages="0,normal,1,select" selected="1"/>
   <controller name="ctrlType" pages="0,bag,1,formula" selected="0"/>
   <displayList>
     <image id="n0_g7xw" name="imgSynthersisBG" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="0,37" size="300,364"/>
@@ -40,10 +40,10 @@
     </image>
     <image id="n10_acec" name="imgIconBG" src="ot9si33" fileName="newImg/img_cm_item_2.png" pkg="te1gxawo" xy="51,303" size="56,56" group="n20_twvn"/>
     <loader id="n11_acec" name="ladIcon" xy="56,308" size="45,45" group="n20_twvn" aspect="true"/>
-    <image id="n12_sg4g" name="n12" src="sg4gyi87" fileName="newImg/img_cm_bottom_11_2.png" xy="64,286" group="n20_twvn">
+    <image id="n12_sg4g" name="n12" src="jjanyi88" fileName="newImg/img_cm_bottom_11_2.png" pkg="te1gxawo" xy="64,286" group="n20_twvn">
       <gearDisplay controller="ctrlStatus" pages="1"/>
     </image>
-    <image id="n13_sg4g" name="n13" src="twvnyi8c" fileName="newImg/img_cm_bottom_11.png" xy="-38,122" size="233,161" group="n20_twvn">
+    <image id="n13_sg4g" name="n13" src="twvnyi8c" fileName="newImg/img_cm_bottom_11.png" pkg="te1gxawo" xy="-38,122" size="233,161" group="n20_twvn">
       <gearDisplay controller="ctrlStatus" pages="1"/>
     </image>
     <list id="n14_sg4g" name="lstFuel" xy="-29,128" size="220,146" group="n20_twvn" layout="flow_hz" overflow="scroll" defaultItem="ui://te1gxawoj29zi6u">
@@ -61,6 +61,6 @@
       <item/>
       <item/>
     </list>
-    <group id="n20_twvn" name="open" xy="-38,122" size="233,238" collapsed="true"/>
+    <group id="n20_twvn" name="open" xy="-38,122" size="233,238"/>
   </displayList>
 </component>

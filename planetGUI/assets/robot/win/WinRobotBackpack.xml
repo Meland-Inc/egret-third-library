@@ -34,7 +34,7 @@
     <component id="n38_pgix" name="btnDetail" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="500,510" size="138,50" group="n39_pgix">
       <Button title="详细属性" titleColor="#ffffff" titleFontSize="20" icon="ui://te1gxawoefrs1s" controller="state" page="1"/>
     </component>
-    <group id="n39_pgix" name="grpNormal" xy="373,138" size="396,422" group="n76_pgix" advanced="true" collapsed="true">
+    <group id="n39_pgix" name="grpNormal" xy="373,128" size="454,432" group="n76_pgix" advanced="true">
       <gearDisplay controller="state" pages="0"/>
     </group>
     <image id="n40_pgix" name="n40" src="ot9si3a" fileName="newImg/img_cm_title4.png" pkg="te1gxawo" xy="458,166" size="220,24" group="n73_pgix"/>
@@ -173,7 +173,9 @@
       <relation target="n17_pgix" sidePair="center-center,middle-middle"/>
     </text>
     <group id="n75_pgix" name="grpRobotBag" xy="793,106" size="300,458" group="n76_pgix" collapsed="true"/>
-    <group id="n76_pgix" name="root" xy="0,0" size="1136,640" advanced="true">
+    <component id="n78_p5lw" name="comSaturationDetail" src="9f2h69" fileName="com/ComSaturationDetail.xml" pkg="5hs1fuej" xy="642,183" group="n76_pgix" visible="false"/>
+    <component id="n79_p5lw" name="comRobotSaturation" src="qljx2i" fileName="com/ComRobotSaturation.xml" xy="670,128" group="n76_pgix"/>
+    <group id="n76_pgix" name="root" xy="0,0" size="1136,640" advanced="true" collapsed="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>

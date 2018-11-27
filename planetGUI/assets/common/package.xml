@@ -290,7 +290,7 @@
     <image id="r398yi7v" name="img_cm_slider2.png" path="/newImg/" exported="true" scale="9grid" scale9grid="3,2,262,3"/>
     <image id="e61eyi7r" name="img_cm_swim1.png" path="/img/" exported="true"/>
     <image id="e61eyi7s" name="img_cm_swim5.png" path="/img/" exported="true"/>
-    <image id="nxksyi7w" name="img_cm_tips_5.png" path="/newImg/" scale="9grid" scale9grid="10,10,20,20"/>
+    <image id="nxksyi7w" name="img_cm_tips_5.png" path="/newImg/" exported="true" scale="9grid" scale9grid="10,10,20,20"/>
     <image id="nxksyi7x" name="btn_cm_other_1.png" path="/img/"/>
     <image id="nxksyi7y" name="btn_cm_other_2.png" path="/img/"/>
     <image id="nxksyi7z" name="btn_cm_white12.png" path="/img/"/>
@@ -300,11 +300,13 @@
     <image id="nxksyi83" name="img_cm_bottom_15.png" path="/img/"/>
     <image id="nxksyi84" name="img_cm_bottom_4.png" path="/img/"/>
     <image id="nxksyi85" name="img_cm_item_10.png" path="/img/"/>
+    <image id="qljxyi8d" name="icon_robot_energy.png" path="/newImg/" exported="true"/>
+    <image id="twvnyi8c" name="img_cm_bottom_11.png" path="/newImg/" exported="true" scale="9grid" scale9grid="10,10,20,20"/>
     <image id="jjanyi86" name="btn_cm_special_4.png" path="/newImg/" exported="true" scale="9grid" scale9grid="10,10,20,20"/>
     <image id="jjanyi87" name="btn_cm_special_5.png" path="/newImg/" exported="true" scale="9grid" scale9grid="16,10,8,20"/>
-    <image id="jjanyi88" name="img_cm_bottom_11_2.png" path="/newImg/"/>
+    <image id="jjanyi88" name="img_cm_bottom_11_2.png" path="/newImg/" exported="true"/>
     <image id="jjanyi89" name="img_cm_schedule_1.png" path="/newImg/" exported="true"/>
-    <image id="jjanyi8a" name="img_cm_schedule_2.png" path="/newImg/" exported="true"/>
+    <image id="jjanyi8a" name="img_cm_schedule_2.png" path="/newImg/" exported="true" scale="" scale9grid="10,0,13,12" gridTile="16"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>
