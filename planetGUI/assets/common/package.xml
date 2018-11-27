@@ -303,8 +303,8 @@
     <image id="jjanyi86" name="btn_cm_special_4.png" path="/newImg/" exported="true" scale="9grid" scale9grid="10,10,20,20"/>
     <image id="jjanyi87" name="btn_cm_special_5.png" path="/newImg/" exported="true" scale="9grid" scale9grid="16,10,8,20"/>
     <image id="jjanyi88" name="img_cm_bottom_11_2.png" path="/newImg/"/>
-    <image id="jjanyi89" name="img_cm_schedule_1.png" path="/newImg/"/>
-    <image id="jjanyi8a" name="img_cm_schedule_2.png" path="/newImg/"/>
+    <image id="jjanyi89" name="img_cm_schedule_1.png" path="/newImg/" exported="true"/>
+    <image id="jjanyi8a" name="img_cm_schedule_2.png" path="/newImg/" exported="true"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>
