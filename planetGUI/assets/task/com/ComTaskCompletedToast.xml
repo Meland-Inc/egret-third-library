@@ -5,7 +5,7 @@
     <image id="n1_r1t9" name="taskNameBg" src="hpym11" fileName="imgNew/img_task_banner2.png" xy="387,19" group="n7_ey91"/>
     <text id="n2_r1t9" name="tfTitle" xy="417,25" size="301,35" group="n7_ey91" fontSize="26" color="#211d1a" align="center" vAlign="middle" vars="true" autoSize="none" text="{toperate=接到}任务：{taskName=taskName}"/>
     <text id="n3_r1t9" name="tfRewardTitle" xy="508,67" size="119,24" group="n7_ey91" fontSize="20" color="#211d1a" align="center" vAlign="middle" autoSize="none" text="任务奖励"/>
-    <list id="n5_r1t9" name="lstReward" xy="351,100" size="433,41" group="n7_ey91" layout="flow_hz" colGap="15" defaultItem="ui://eunktclqr1t914" align="center">
+    <list id="n5_r1t9" name="lstReward" xy="351,100" size="433,41" group="n7_ey91" touchable="false" layout="flow_hz" colGap="15" defaultItem="ui://eunktclqr1t914" align="center">
       <item/>
       <item/>
     </list>
