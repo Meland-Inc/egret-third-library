@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<component size="110,41" extention="Button">
-  <controller name="button" pages="0,up,1,down" selected="0"/>
-  <displayList>
-    <image id="n4_824h" name="n4" src="lxnuc" fileName="img/btn_yellow.png" xy="0,0"/>
-    <text id="n5_824h" name="n5" xy="0,0" size="110,41" fontSize="18" color="#ab7801" align="center" vAlign="middle" autoSize="none"  text="详细属性"/>
-  </displayList>
-  <Button downEffect="scale" downEffectValue="0.90"/>
-</component>

@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="838,454">
-  <controller name="state" pages="0,premake,1,making" selected="0"/>
+<component size="1136,640" designImage="ui://i25v0ebkkddks" designImageAlpha="0">
   <displayList>
-    <image id="n0_lxnu" name="n0" src="lxnu3" fileName="img/bg_compose.png" xy="0,0"/>
-    <text id="n1_lxnu" name="n1" xy="391,10" size="53,28" fontSize="24" color="#ffffff" text="配方"/>
-    <image id="n2_lxnu" name="n2" src="lxnuh" fileName="img/img_compose_1.png" xy="15,60"/>
-    <image id="n3_lxnu" name="n3" src="lxnus" fileName="img/img_compose_2.png" xy="560,60"/>
-    <image id="n4_lxnu" name="n4" src="lxnuu" fileName="img/img_compose_4.png" xy="565,66"/>
-    <image id="n5_lxnu" name="n5" src="lxnut" fileName="img/img_compose_3.png" xy="20,66"/>
-    <text id="n6_lxnu" name="n6" xy="257,68" size="45,24" fontSize="20" color="#57a7df" text="物品"/>
-    <text id="n7_lxnu" name="n7" xy="665,68" size="45,24" fontSize="20" color="#57a7df" text="配方"/>
-    <image id="n23_lxnu" name="n23" src="lxnum" fileName="img/img_compose_14.png" xy="671,148"/>
-    <list id="n11_lxnu" name="listItem" xy="43,108" size="475,300" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="10" colGap="10" lineItemCount="6" defaultItem="ui://kdeyuiwwlxnu14">
+    <component id="n41_w34u" name="BG" src="pqjb2f" fileName="com/ComBG.xml" xy="27,61" group="n40_e8kh"/>
+    <component id="n39_jlj8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1048,59" size="52,52" group="n40_e8kh">
+      <Button icon="ui://te1gxawoefrs1q"/>
+    </component>
+    <image id="n47_w34u" name="n47" src="ot9si2v" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="60,164" size="168,364" group="n48_w34u"/>
+    <image id="n45_w34u" name="n45" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="237,163" size="486,364" group="n48_w34u"/>
+    <list id="n19_lxnu" name="listTab" xy="78,184" size="133,302" group="n48_w34u" margin="2,2,2,2" lineGap="7" defaultItem="ui://kdeyuiwwlxnu13">
+      <item title="全部"/>
+      <item title="装饰"/>
+      <item title="建筑"/>
+      <item title="道具"/>
+      <item title="杂物"/>
+      <item title="其他"/>
+    </list>
+    <list id="n21_lxnu" name="listItem" xy="249,176" size="460,320" group="n48_w34u" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="5" colGap="2" lineItemCount="6" defaultItem="ui://te1gxawoj29zi6u">
+      <item/>
+      <item/>
       <item/>
       <item/>
       <item/>
@@ -23,17 +29,11 @@
       <item/>
       <item/>
     </list>
-    <component id="n24_lxnu" name="itemMat" src="lxnu1q" fileName="com/comArchItemNa70.xml" xy="580,130"/>
-    <component id="n25_lxnu" name="itemProduct" src="lxnu1q" fileName="com/comArchItemNa70.xml" xy="730,130"/>
-    <component id="n31_lxnu" name="itemFuel" src="lxnu1q" fileName="com/comArchItemNa70.xml" xy="656,231"/>
-    <image id="n29_lxnu" name="n29" src="lxnun" fileName="img/img_compose_15.png" xy="601,350" group="n32_lxnu"/>
-    <image id="n26_lxnu" name="n26" src="lxnuo" fileName="img/img_compose_16.png" xy="625,354" group="n32_lxnu"/>
-    <text id="n30_lxnu" name="tfTime" xy="655,351" size="84,24" group="n32_lxnu" fontSize="20" color="#57a7df" align="right" vAlign="middle" text="24:00:00"/>
-    <group id="n32_lxnu" name="n32" xy="601,350" size="178,29" advanced="true">
-      <gearDisplay controller="state" pages="1"/>
-    </group>
-    <component id="n33_jlj8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="800,-10" size="56,57">
-      <Button icon="ui://eunktclqsz331"/>
+    <component id="n43_w34u" name="n43" src="w34u2h" fileName="com/ComTitle.xml" xy="66,126" size="654,28" group="n48_w34u">
+      <Label title="配方"/>
     </component>
+    <group id="n48_w34u" name="n48" xy="60,126" size="663,402" group="n40_e8kh"/>
+    <component id="n50_acec" name="n50" src="pqjb2g" fileName="com/ComSynthesis.xml" xy="734,126" size="330,400" group="n40_e8kh"/>
+    <group id="n40_e8kh" name="root" xy="27,59" size="1073,502" advanced="true"/>
   </displayList>
 </component>

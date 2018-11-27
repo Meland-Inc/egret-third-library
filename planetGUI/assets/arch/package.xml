@@ -36,44 +36,25 @@
     <image id="lxnux" name="img_compose_7.png" path="/img/" exported="true"/>
     <image id="lxnuy" name="img_compose_8.png" path="/img/" exported="true"/>
     <image id="lxnuz" name="img_compose_9.png" path="/img/" exported="true"/>
-    <component id="lxnu10" name="WinArchFormula.xml" path="/win/" exported="true"/>
+    <component id="lxnu10" name="WinArchTmProduct.xml" path="/win/" exported="true"/>
     <component id="lxnu13" name="btnArchFormulaTab.xml" path="/btn/"/>
-    <component id="lxnu14" name="btnArchItemLk70.xml" path="/btn/"/>
     <image id="lxnu15" name="img_compose_20.png" path="/img/" exported="true"/>
-    <component id="lxnu18" name="comArchItemNb57.xml" path="/com/" exported="true"/>
-    <component id="lxnu19" name="comArchItemPu57.xml" path="/com/" exported="true"/>
     <component id="lxnu1a" name="WinArchCpProduct.xml" path="/win/" exported="true"/>
-    <component id="lxnu1b" name="btnArchProductTab.xml" path="/btn/"/>
-    <component id="lxnu1c" name="btnArchItemNb57.xml" path="/btn/" exported="true"/>
     <component id="lxnu1d" name="pbrArchMaking.xml" path="/pbr/"/>
-    <component id="lxnu1e" name="btnArchGreen.xml" path="/btn/"/>
     <image id="lxnu1f" name="bg_bag.png" path="/img/" exported="true"/>
     <image id="lxnu1g" name="btn_compose_3.png" path="/img/" exported="true"/>
     <image id="lxnu1h" name="btn_compose_4.png" path="/img/" exported="true"/>
     <image id="lxnu1i" name="btn_compose_5.png" path="/img/" exported="true"/>
     <image id="lxnu1j" name="img_compose_21.png" path="/img/" exported="true"/>
     <image id="lxnu1k" name="img_compose_22.png" path="/img/" exported="true"/>
-    <component id="lxnu1n" name="btnArchPlus.xml" path="/btn/"/>
-    <component id="lxnu1o" name="btnArchSub.xml" path="/btn/"/>
-    <component id="lxnu1p" name="WinArchTmProduct.xml" path="/win/" exported="true"/>
-    <component id="lxnu1q" name="comArchItemNa70.xml" path="/com/" exported="true"/>
     <component id="824h1r" name="WinArchPrompt.xml" path="/win/" exported="true"/>
     <component id="824h1s" name="WinArchStorage.xml" path="/win/" exported="true"/>
-    <component id="824h1t" name="WinArchStoragePassword.xml" path="/win/" exported="true"/>
     <image id="824h1u" name="bg_password.png" path="/img/" exported="true"/>
     <image id="824h1v" name="btn_password_1.png" path="/img/" exported="true"/>
     <image id="824h1w" name="btn_password_2.png" path="/img/" exported="true"/>
     <image id="824h1x" name="img_compose_23.png" path="/img/" exported="true"/>
     <image id="824h1y" name="img_compose_24.png" path="/img/" exported="true"/>
     <image id="824h1z" name="img_password.png" path="/img/" exported="true"/>
-    <component id="824h21" name="btnArchPassword.xml" path="/btn/"/>
-    <component id="824h22" name="btnArchSetPass.xml" path="/btn/"/>
-    <component id="824h23" name="btnArchOk.xml" path="/btn/"/>
-    <component id="824h25" name="btnArchYellow.xml" path="/btn/"/>
-    <component id="824h26" name="comTalentTitle.xml" path="/com/"/>
-    <component id="824h27" name="labBasicTalent.xml" path="/lab/"/>
-    <component id="824h28" name="labElementTalent.xml" path="/lab/"/>
-    <component id="824h29" name="btnCommon.xml" path="/btn/"/>
     <image id="824h2a" name="btn_password_3.png" path="/img/"/>
     <component id="824h2b" name="btnLock.xml" path="/btn/"/>
     <image id="bgib2c" name="img_bag_item_5.png" path="/img/"/>
@@ -84,7 +65,6 @@
     <component id="pqjb2g" name="ComSynthesis.xml" path="/com/"/>
     <component id="g7xw2h" name="ComWorkbench.xml" path="/com/"/>
     <component id="acec2i" name="ComFormula.xml" path="/com/"/>
-    <component id="twvn2j" name="CanChangeRadioButton.xml" path="/btn/"/>
   </resources>
   <publish name="arch"/>
 </packageDescription>
