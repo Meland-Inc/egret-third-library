@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="125,18">
-  <controller name="weather" pages="1,night,0,day" selected="0"/>
+  <controller name="weather" pages="1,night,0,day,2,dusk,3,dawn" selected="0">
+    <remark page="0" value="夜晚"/>
+    <remark page="1" value="白天"/>
+    <remark page="2" value="黄昏"/>
+    <remark page="3" value="黎明"/>
+  </controller>
   <displayList>
     <image id="n14_r2bf" name="n14" src="rdy44a" fileName="newImg/img_main_info.png" xy="65,0" group="n3_r2bf"/>
     <image id="n13_r2bf" name="n13" src="rdy43k" fileName="newImg/icon_main_temperature.png" xy="72,2" group="n3_r2bf"/>
     <text id="n2_r2bf" name="n2" xy="90,0" size="28,18" group="n3_r2bf" fontSize="11" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="15C"/>
-    <group id="n3_r2bf" name="n3" xy="65,0" size="60,18"/>
+    <group id="n3_r2bf" name="n3" xy="65,0" size="60,18" collapsed="true"/>
     <image id="n15_r2bf" name="n15" src="rdy44a" fileName="newImg/img_main_info.png" xy="0,0" group="n8_r2bf"/>
     <image id="n12_r2bf" name="n12" src="rdy43b" fileName="newImg/icon_main_night.png" xy="5,3" group="n8_r2bf">
       <gearDisplay controller="weather" pages="1"/>
@@ -14,6 +19,12 @@
       <gearDisplay controller="weather" pages="0"/>
     </image>
     <text id="n7_r2bf" name="tfTime" xy="25,0" size="34,18" group="n8_r2bf" fontSize="10" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" autoClearText="true" text=""/>
-    <group id="n8_r2bf" name="grpWeatherIcon" xy="0,0" size="60,18"/>
+    <image id="n16_a2ml" name="n16" src="a2ml6p" fileName="newImg/icon_main_dusk.png" xy="5,3" group="n8_r2bf">
+      <gearDisplay controller="weather" pages="2"/>
+    </image>
+    <image id="n17_a2ml" name="n17" src="a2ml6o" fileName="newImg/icon_main_dawn.png" xy="5,3" group="n8_r2bf">
+      <gearDisplay controller="weather" pages="3"/>
+    </image>
+    <group id="n8_r2bf" name="grpWeatherIcon" xy="0,0" size="60,18" collapsed="true"/>
   </displayList>
 </component>
