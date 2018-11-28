@@ -214,8 +214,8 @@
     <image id="pgixi5s" name="img_cm_delete.png" path="/newImg/" exported="true"/>
     <image id="pgixi5t" name="img_cm_item_10.png" path="/newImg/" exported="true" scale="9grid" scale9grid="14,14,28,28"/>
     <image id="pgixi5u" name="img_cm_item_11.png" path="/newImg/" exported="true"/>
-    <image id="pgixi5v" name="img_cm_item_12.png" path="/newImg/" exported="true"/>
-    <image id="pgixi5w" name="img_cm_item_13.png" path="/newImg/" exported="true"/>
+    <image id="pgixi5v" name="img_cm_item_12.png" path="/newImg/" exported="true" scale="9grid" scale9grid="10,2,20,4"/>
+    <image id="pgixi5w" name="img_cm_item_13.png" path="/newImg/" exported="true" scale="9grid" scale9grid="10,2,20,2"/>
     <image id="pgixi5x" name="img_cm_item_14.png" path="/newImg/" exported="true"/>
     <image id="pgixi5y" name="img_cm_item_15.png" path="/newImg/" exported="true" scale="9grid" scale9grid="13,13,26,26"/>
     <image id="pgixi5z" name="img_cm_item_16.png" path="/newImg/" exported="true"/>
@@ -307,6 +307,8 @@
     <image id="jjanyi88" name="img_cm_bottom_11_2.png" path="/newImg/" exported="true"/>
     <image id="jjanyi89" name="img_cm_schedule_1.png" path="/newImg/" exported="true"/>
     <image id="jjanyi8a" name="img_cm_schedule_2.png" path="/newImg/" exported="true" scale="" scale9grid="10,0,13,12" gridTile="16"/>
+    <component id="11slcyi8e" name="RBtnFormulaRenderer.xml" path="/btn/" exported="true"/>
+    <component id="11slcyi8f" name="barItem1.xml" path="/bar/" exported="true"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>
