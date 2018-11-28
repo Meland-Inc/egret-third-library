@@ -58,6 +58,7 @@
     <image id="11e021q" name="icon_map_sign_6.png" path="/imgNew/" exported="true"/>
     <image id="11e021r" name="img_map_bottom.png" path="/imgNew/" scale="9grid" scale9grid="68,21,136,42"/>
     <component id="11e021s" name="WinBigMap.xml" path="/win/" exported="true"/>
+    <component id="hocd21t" name="comTaskMark.xml" path="/com/" exported="true"/>
   </resources>
   <publish name="minimap"/>
 </packageDescription>
