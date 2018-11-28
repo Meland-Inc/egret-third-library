@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" adaptationTest="FitSize">
-  <controller name="states" pages="0,normal,1,stretch" selected="0">
+  <controller name="states" pages="0,normal,1,stretch" selected="1">
     <action type="play_transition" fromPage="0" toPage="1" transition="toStretch" stopOnExit="true"/>
   </controller>
   <displayList>
@@ -239,7 +239,7 @@
     <component id="n42_rvyy" name="btnStretch" src="qo8v2y" fileName="btn/btnStretch.xml" xy="1050,462" group="n45_kas2">
       <gearIcon controller="states" pages="1" values="ui://te1gxawoqo8vi24" default="ui://te1gxawoqo8vi25"/>
       <relation target="n1_rvyy" sidePair="right-right,top-top"/>
-      <Button icon="ui://te1gxawoqo8vi25"/>
+      <Button icon="ui://te1gxawoqo8vi24"/>
     </component>
     <component id="n46_kas2" name="mapScaleButton" src="rvyy1j" fileName="Com/ComMapScaleView.xml" xy="28,278" group="n45_kas2">
       <relation target="n1_rvyy" sidePair="bottom-top,left-left"/>
