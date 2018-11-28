@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="72,72" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <controller name="ctrlShedule" pages="1,false,0,true" selected="0"/>
+  <controller name="ctrlLock" pages="0,true,1,false" selected="0"/>
+  <displayList>
+    <image id="n4_11slc" name="bg" src="ot9si33" fileName="newImg/img_cm_item_2.png" xy="2,2"/>
+    <loader id="n5_11slc" name="icon" xy="6,6" size="60,60" align="center" vAlign="middle" fill="scale">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <image id="n6_11slc" name="imgSelected" src="j21fi3v" fileName="newImg/img_cm_item_6.png" xy="0,0">
+      <gearDisplay controller="button" pages="1"/>
+    </image>
+    <component id="n8_11slc" name="barShedule" src="11slcyi8f" fileName="bar/barItem1.xml" xy="11,55" size="50,8">
+      <gearDisplay controller="ctrlShedule" pages="0"/>
+      <ProgressBar value="50" max="100"/>
+    </component>
+    <image id="n13_11slc" name="n13" src="pgixi62" fileName="newImg/img_cm_item_9.png" xy="4,53" group="n12_11slc"/>
+    <image id="n15_11slc" name="n15" src="pgixi61" fileName="newImg/img_cm_item_8.png" xy="6,6" group="n12_11slc"/>
+    <text id="n11_11slc" name="tfLock" xy="8,50" size="55,19" group="n12_11slc" fontSize="12" color="#ffffff" align="center" vAlign="middle" strokeColor="#ac471a" autoClearText="true" text="20级解锁">
+      <relation target="" sidePair="center-center"/>
+    </text>
+    <group id="n12_11slc" name="grpLock" xy="4,6" size="64,63" advanced="true">
+      <gearDisplay controller="ctrlLock" pages="0"/>
+    </group>
+  </displayList>
+  <Button mode="Radio"/>
+</component>
