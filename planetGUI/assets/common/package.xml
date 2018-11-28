@@ -226,7 +226,7 @@
     <image id="pgixi64" name="img_cm_slider_1.png" path="/newImg/" exported="true"/>
     <image id="pgixi65" name="img_cm_slider_2.png" path="/newImg/" exported="true"/>
     <image id="pgixi66" name="img_cm_slider_3.png" path="/newImg/" exported="true"/>
-    <image id="pgixi67" name="img_cm_tips_2.png" path="/newImg/" exported="true"/>
+    <image id="pgixi67" name="img_cm_tips_2.png" path="/newImg/" exported="true" scale="9grid" scale9grid="9,9,18,18"/>
     <image id="pgixi68" name="img_cm_title7.png" path="/newImg/" exported="true"/>
     <image id="pgixi69" name="img_game1_3.png" path="/newImg/" exported="true"/>
     <image id="pgixi6a" name="img_game1_4.png" path="/newImg/" exported="true"/>
@@ -309,6 +309,7 @@
     <image id="jjanyi8a" name="img_cm_schedule_2.png" path="/newImg/" exported="true" scale="" scale9grid="10,0,13,12" gridTile="16"/>
     <component id="11slcyi8e" name="RBtnFormulaRenderer.xml" path="/btn/" exported="true"/>
     <component id="11slcyi8f" name="barItem1.xml" path="/bar/" exported="true"/>
+    <component id="11slcyi8g" name="ToolTipFormulaItem.xml" path="/com/"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>
