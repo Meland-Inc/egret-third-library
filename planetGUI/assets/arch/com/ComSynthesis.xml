@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="270,400" designImage="ui://i25v0ebktwvnt" designImageOffsetX="-789" designImageOffsetY="-129" designImageAlpha="0">
-  <controller name="ctrlStatus" pages="0,normal,1,make,2,lock" selected="1"/>
+  <controller name="ctrlStatus" pages="0,normal,1,make,2,lock" selected="0"/>
   <displayList>
     <component id="n25_acec" name="title" src="w34u2h" fileName="com/ComTitle.xml" xy="0,0" size="270,28">
       <relation target="" sidePair="rightext-right"/>
@@ -13,7 +13,9 @@
     <text id="n8_pqjb" name="tfName" xy="88,59" size="139,23" group="n12_pqjb" fontSize="16" color="#5b4b37" leading="0" autoSize="none" bold="true" text="木质工作台"/>
     <text id="n9_pqjb" name="tfIntroduction" xy="88,80" size="165,56" group="n12_pqjb" fontSize="14" color="#5b4b37" leading="0" autoSize="none" bold="true" text="制作木质工具不可或缺的物品，需要模板和常见金属加工。"/>
     <image id="n10_pqjb" name="imgProductIconBG" src="pgixi5n" fileName="newImg/img_cm_bottom_7.png" pkg="te1gxawo" xy="27,69" size="52,52" group="n12_pqjb"/>
-    <loader id="n11_pqjb" name="ladProductIcon" xy="30,73" size="45,45" group="n12_pqjb" aspect="true"/>
+    <loader id="n11_pqjb" name="ladProductIcon" xy="30,73" size="45,45" group="n12_pqjb" aspect="true" align="center" vAlign="middle" fill="scale">
+      <relation target="n10_pqjb" sidePair="center-center,middle-middle"/>
+    </loader>
     <group id="n12_pqjb" name="product" xy="13,55" size="243,84" advanced="true" collapsed="true">
       <relation target="" sidePair="center-center"/>
     </group>
@@ -51,7 +53,9 @@
     </text>
     <group id="n24_nxks" name="lock" xy="-5,334" size="281,25"/>
     <image id="n28_twvn" name="n28" src="jjanyi89" fileName="newImg/img_cm_schedule_1.png" pkg="te1gxawo" xy="42,324" size="186,18" group="n30_twvn"/>
-    <component id="n26_twvn" name="n26" src="lxnu1d" fileName="pbr/pbrArchMaking.xml" xy="44,326" group="n30_twvn"/>
+    <component id="n26_twvn" name="n26" src="lxnu1d" fileName="pbr/pbrArchMaking.xml" xy="44,326" group="n30_twvn">
+      <ProgressBar max="100"/>
+    </component>
     <text id="n29_twvn" name="n29" xy="111,323" size="47,20" group="n30_twvn" fontSize="14" color="#ffffff" leading="0" strokeColor="#584736" strokeSize="2" text="制作中"/>
     <group id="n30_twvn" name="pbr" xy="42,323" size="186,20" advanced="true">
       <gearDisplay controller="ctrlStatus" pages="1"/>
