@@ -60,11 +60,11 @@
     <image id="bgib2c" name="img_bag_item_5.png" path="/img/"/>
     <image id="kddk2d" name="img_formula_bottom_1.png" path="/newImg/"/>
     <image id="kddk2e" name="img_formula_bottom_2.png" path="/newImg/"/>
-    <component id="pqjb2f" name="ComBG.xml" path="/com/"/>
-    <component id="w34u2h" name="ComTitle.xml" path="/com/"/>
-    <component id="pqjb2g" name="ComSynthesis.xml" path="/com/"/>
-    <component id="g7xw2h" name="ComWorkbench.xml" path="/com/"/>
-    <component id="acec2i" name="ComFormula.xml" path="/com/"/>
+    <component id="pqjb2f" name="ComBG.xml" path="/img/com/"/>
+    <component id="w34u2h" name="ComTitle.xml" path="/img/com/"/>
+    <component id="pqjb2g" name="ComSynthesis.xml" path="/img/com/"/>
+    <component id="g7xw2h" name="ComWorkbench.xml" path="/img/com/"/>
+    <component id="acec2i" name="ComFormula.xml" path="/img/com/"/>
   </resources>
   <publish name="arch"/>
 </packageDescription>
