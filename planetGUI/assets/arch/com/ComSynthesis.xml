@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="270,400" designImage="ui://i25v0ebktwvnt" designImageOffsetX="-789" designImageOffsetY="-129" designImageAlpha="0">
-  <controller name="ctrlStatus" pages="0,normal,1,make,2,lock" selected="0"/>
+  <controller name="ctrlStatus" pages="0,normal,1,make,2,lock" selected="1"/>
   <displayList>
     <component id="n25_acec" name="title" src="w34u2h" fileName="com/ComTitle.xml" xy="0,0" size="270,28">
       <relation target="" sidePair="rightext-right"/>
@@ -55,8 +55,8 @@
       <Button title="最大" titleColor="#584736" titleFontSize="14" icon="ui://te1gxawopgixi4v"/>
     </component>
     <text id="n18_pqjb" name="tf" xy="18,317" size="61,20" group="n21_pqjb" fontSize="13" color="#5b4b37" leading="0" bold="true" text="选择数量"/>
-    <text id="n19_pqjb" name="tfNum" xy="98,314" size="89,22" group="n21_pqjb" fontSize="15" color="#5b4b37" align="center" vAlign="middle" leading="0" vars="true" autoSize="none" bold="true" text="{cur = 0}/{total = 0}"/>
-    <group id="n21_pqjb" name="num" xy="18,310" size="242,31" advanced="true" collapsed="true">
+    <text id="n19_pqjb" name="tfNum" xy="98,314" size="89,22" group="n21_pqjb" fontSize="15" color="#5b4b37" align="center" vAlign="middle" leading="0" vars="true" autoSize="none" bold="true" text="{cur=0}/{total=0}"/>
+    <group id="n21_pqjb" name="num" xy="18,310" size="242,31" advanced="true">
       <gearDisplay controller="ctrlStatus" pages="0"/>
       <relation target="" sidePair="center-center"/>
     </group>
@@ -75,20 +75,15 @@
       <relation target="" sidePair="center-center"/>
     </text>
     <group id="n24_nxks" name="lock" xy="-10,334" size="290,25" collapsed="true"/>
-    <image id="n28_twvn" name="n28" src="jjanyi89" fileName="newImg/img_cm_schedule_1.png" pkg="te1gxawo" xy="42,324" size="186,18" group="n30_twvn"/>
-    <component id="n26_twvn" name="n26" src="lxnu1d" fileName="pbr/pbrArchMaking.xml" xy="44,326" group="n30_twvn">
+    <component id="n26_twvn" name="pbrArchMaking" src="lxnu1d" fileName="pbr/pbrArchMaking.xml" xy="42,323">
+      <relation target="" sidePair="center-center"/>
       <ProgressBar value="100" max="100"/>
     </component>
-    <text id="n29_twvn" name="n29" xy="111,323" size="47,20" group="n30_twvn" fontSize="14" color="#ffffff" leading="0" strokeColor="#584736" strokeSize="2" text="制作中"/>
-    <group id="n30_twvn" name="pbr" xy="42,323" size="186,20" advanced="true" collapsed="true">
-      <gearDisplay controller="ctrlStatus" pages="1"/>
-      <relation target="" sidePair="center-center"/>
-    </group>
     <loader id="n31_twvn" name="ladMakeIcon" xy="47,346" size="35,35">
       <gearDisplay controller="ctrlStatus" pages="1"/>
       <relation target="" sidePair="center-center"/>
     </loader>
-    <text id="n32_twvn" name="tfMakeNum" xy="97,352" size="37,22" fontSize="16" color="#584736" leading="0" vars="true" text="{cur = 0}/{total = 0}">
+    <text id="n32_twvn" name="tfMakeNum" xy="97,352" size="35,22" fontSize="16" color="#584736" leading="0" vars="true" text="{cur = 0}/{total = 0}">
       <gearDisplay controller="ctrlStatus" pages="1"/>
       <relation target="" sidePair="center-center"/>
     </text>
