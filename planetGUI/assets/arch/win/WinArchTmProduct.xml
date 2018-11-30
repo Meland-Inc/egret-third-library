@@ -8,14 +8,14 @@
     <image id="n47_w34u" name="n47" src="ot9si2v" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="60,164" size="168,364" group="n48_w34u"/>
     <image id="n45_w34u" name="n45" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="237,163" size="486,364" group="n48_w34u"/>
     <list id="n19_lxnu" name="listTab" xy="78,184" size="133,302" group="n48_w34u" margin="2,2,2,2" lineGap="7" defaultItem="ui://kdeyuiwwlxnu13">
-      <item title="全部"/>
+      <item title="自身"/>
       <item title="装饰"/>
       <item title="建筑"/>
       <item title="道具"/>
       <item title="杂物"/>
       <item title="其他"/>
     </list>
-    <list id="n21_lxnu" name="listItem" xy="249,176" size="460,320" group="n48_w34u" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="5" colGap="2" lineItemCount="6" defaultItem="ui://te1gxawoj29zi6u">
+    <list id="n21_lxnu" name="listItem" xy="249,176" size="460,320" group="n48_w34u" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="5" colGap="2" lineItemCount="6" defaultItem="ui://kdeyuiwwfi7r2l">
       <item/>
       <item/>
       <item/>
