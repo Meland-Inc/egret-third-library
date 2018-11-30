@@ -59,12 +59,15 @@
     <component id="824h2b" name="btnLock.xml" path="/btn/"/>
     <image id="bgib2c" name="img_bag_item_5.png" path="/img/"/>
     <image id="kddk2d" name="img_formula_bottom_1.png" path="/newImg/"/>
-    <image id="kddk2e" name="img_formula_bottom_2.png" path="/newImg/"/>
-    <component id="pqjb2f" name="ComBG.xml" path="/img/com/"/>
-    <component id="w34u2h" name="ComTitle.xml" path="/img/com/"/>
-    <component id="pqjb2g" name="ComSynthesis.xml" path="/img/com/"/>
-    <component id="g7xw2h" name="ComWorkbench.xml" path="/img/com/"/>
-    <component id="acec2i" name="ComFormula.xml" path="/img/com/"/>
+    <image id="kddk2e" name="img_formula_bottom_2.png" path="/newImg/" scale="9grid" scale9grid="118,7,42,14"/>
+    <component id="pqjb2f" name="ComBG.xml" path="/com/"/>
+    <component id="w34u2h" name="ComTitle.xml" path="/com/"/>
+    <component id="pqjb2g" name="ComSynthesis.xml" path="/com/"/>
+    <component id="g7xw2h" name="ComWorkbench.xml" path="/com/"/>
+    <component id="acec2i" name="ComMyBag.xml" path="/com/"/>
+    <component id="d6dh2j" name="ComSynthesisDetail.xml" path="/com/"/>
+    <image id="fi7r2k" name="img_formula_bottom_3.png" path="/newImg/"/>
+    <component id="fi7r2l" name="comFormulaCommentRenderer.xml" path="/btn/"/>
   </resources>
   <publish name="arch"/>
 </packageDescription>

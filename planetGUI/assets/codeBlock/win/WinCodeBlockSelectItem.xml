@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="694,453">
+<component size="1136,640">
   <displayList>
-    <image id="n0_oe8k" name="n0" src="oe8k1" fileName="img/bg_bag.png" xy="0,0"/>
-    <image id="n5_oe8k" name="n5" src="oe8k6" fileName="img/img_code_1.png" xy="175,60"/>
-    <text id="n2_oe8k" name="n2" xy="269,10" size="149,28" fontSize="24" color="#ffffff" text="选择一个道具"/>
-    <list id="n3_oe8k" name="listTab" xy="33,63" size="129,290" margin="2,2,2,2" lineGap="5" defaultItem="ui://4o62dubdoe8k9">
+    <image id="n0_oe8k" name="n0" src="oe8k1" fileName="img/bg_bag.png" xy="210,98" group="n11_11slc"/>
+    <image id="n5_oe8k" name="n5" src="oe8k6" fileName="img/img_code_1.png" xy="385,158" group="n11_11slc"/>
+    <text id="n2_oe8k" name="n2" xy="479,108" size="149,31" group="n11_11slc" fontSize="24" color="#ffffff" text="选择一个道具"/>
+    <list id="n3_oe8k" name="listTab" xy="243,161" size="129,290" group="n11_11slc" margin="2,2,2,2" lineGap="5" defaultItem="ui://4o62dubdoe8k9">
       <item title="工具"/>
       <item title="武器"/>
       <item title="食物"/>
       <item title="其他"/>
     </list>
-    <list id="n4_oe8k" name="listItem" xy="183,66" size="475,280" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="10" colGap="10" lineItemCount="6" defaultItem="ui://4o62dubdoe8ka">
+    <list id="n4_oe8k" name="listItem" xy="393,164" size="475,280" group="n11_11slc" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="10" colGap="10" lineItemCount="6" defaultItem="ui://4o62dubdoe8ka">
       <item/>
       <item/>
       <item/>
@@ -22,11 +22,14 @@
       <item/>
       <item/>
     </list>
-    <component id="n7_hxf8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="660,-10" size="56,57">
+    <component id="n7_hxf8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="870,88" size="56,57" group="n11_11slc">
       <Button icon="ui://eunktclqsz331"/>
     </component>
-    <component id="n8_hxf8" name="btnConfirm" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="478,383">
-      <Button title="确定" titleColor="#599c11" titleFontSize="20"/>
+    <component id="n10_11slc" name="btnConfirm" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="688,481" size="110,40" group="n11_11slc">
+      <Button title="确定" titleColor="#999999" icon="ui://te1gxawopgixi4u"/>
     </component>
+    <group id="n11_11slc" name="n11" xy="210,88" size="716,463" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
   </displayList>
 </component>

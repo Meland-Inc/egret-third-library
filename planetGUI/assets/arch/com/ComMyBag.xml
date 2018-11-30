@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="419,402">
+  <displayList>
+    <component id="n49_acec" name="title" src="w34u2h" fileName="com/ComTitle.xml" xy="3,0" size="412,28">
+      <relation target="" sidePair="rightext-right"/>
+      <Label title="我的背包"/>
+    </component>
+    <image id="n45_acec" name="n45" src="ot9si2v" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="0,38" size="114,364"/>
+    <image id="n46_acec" name="n46" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="119,37" size="300,364"/>
+    <list id="n47_acec" name="lstTab" xy="6,62" size="100,309" margin="2,2,2,2" lineGap="7" defaultItem="ui://kdeyuiwwlxnu13">
+      <item title="全部" icon="ui://te1gxawoefrs1u" name="all" selectedIcon="ui://te1gxawoefrs1x"/>
+      <item title="装备" icon="ui://te1gxawoefrs1u" name="equip" selectedIcon="ui://te1gxawoefrs1x"/>
+      <item title="材料" icon="ui://te1gxawoefrs1u" name="mat" selectedIcon="ui://te1gxawoefrs1x"/>
+      <item title="消耗品" icon="ui://te1gxawoefrs1u" name="consumables" selectedIcon="ui://te1gxawoefrs1x"/>
+      <item title="建材" icon="ui://te1gxawoefrs1u" name="buildMat" selectedIcon="ui://te1gxawoefrs1x"/>
+    </list>
+    <list id="n48_acec" name="lstItem" xy="125,49" size="310,361" scale="0.95,0.95" layout="flow_hz" overflow="scroll" scrollBarFlags="4" colGap="5" lineItemCount="4" defaultItem="ui://te1gxawoj29zi6u">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

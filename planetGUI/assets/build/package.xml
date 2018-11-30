@@ -53,8 +53,8 @@
     <image id="lmzf30" name="btn_build_cancel.png" path="/newImg/WinBuildPannel/"/>
     <image id="lmzf31" name="btn_build_confirm.png" path="/newImg/WinBuildPannel/"/>
     <image id="lmzf32" name="btn_build_rotate.png" path="/newImg/WinBuildPannel/"/>
-    <component id="99a233" name="Slider1_grip.xml" path="/win/"/>
-    <component id="99a234" name="Slider1.xml" path="/win/" exported="true"/>
+    <component id="99a233" name="Slider1_grip.xml" path="/Slide/"/>
+    <component id="99a234" name="Slider1.xml" path="/Slide/" exported="true"/>
   </resources>
   <publish name="build"/>
 </packageDescription>

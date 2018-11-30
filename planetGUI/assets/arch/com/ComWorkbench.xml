@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="300,401" designImage="ui://i25v0ebkpgixh" designImageOffsetX="-481" designImageOffsetY="-128" designImageAlpha="0">
+  <controller name="ctrlStatus" pages="0,normal,1,select" selected="0"/>
+  <controller name="ctrlType" pages="0,bag,1,formula" selected="0"/>
+  <controller name="ctrlIsNeedFuel" pages="0,yes,1,no" selected="0"/>
+  <displayList>
+    <image id="n0_g7xw" name="imgSynthersisBG" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="0,37" size="300,364"/>
+    <component id="n17_sg4g" name="btnBag" src="oliri6q" fileName="btn/rbtnScale.xml" pkg="te1gxawo" xy="15,0" size="130,37">
+      <Button checked="true" title="物品栏" icon="ui://te1gxawojjanyi86" selectedIcon="ui://te1gxawojjanyi87" controller="ctrlType" page="0"/>
+    </component>
+    <component id="n18_sg4g" name="btnFormula" src="oliri6q" fileName="btn/rbtnScale.xml" pkg="te1gxawo" xy="155,0" size="130,37">
+      <Button title="配方栏" icon="ui://te1gxawojjanyi86" selectedIcon="ui://te1gxawojjanyi87" controller="ctrlType" page="1"/>
+    </component>
+    <list id="n22_twvn" name="lstBag" xy="6,49" size="288,218" layout="flow_hz" overflow="scroll" defaultItem="ui://te1gxawoj29zi6u">
+      <gearDisplay controller="ctrlType" pages="0"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n19_twvn" name="lstFormula" xy="6,49" size="288,218" layout="flow_hz" overflow="scroll" defaultItem="ui://te1gxawo11slcyi8e">
+      <gearDisplay controller="ctrlType" pages="1"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n2_g7xw" name="imgTimeBG" src="pgixi5f" fileName="newImg/img_cm_bottom_10.png" pkg="te1gxawo" xy="125,331" size="126,19" group="n5_g7xw"/>
+    <text id="n3_g7xw" name="tf1" xy="154,307" size="73,23" group="n5_g7xw" fontSize="17" color="#584736" text="燃烧时间"/>
+    <text id="n4_g7xw" name="tfTime" xy="149,328" size="83,27" group="n5_g7xw" fontSize="20" color="#584736" text="24:00:00"/>
+    <group id="n5_g7xw" name="time" xy="125,307" size="126,48" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlIsNeedFuel" pages="0"/>
+    </group>
+    <image id="n8_acec" name="imgSeleBG" src="pgixi5x" fileName="newImg/img_cm_item_14.png" pkg="te1gxawo" xy="50,302" size="58,58" group="n20_twvn">
+      <gearDisplay controller="ctrlStatus" pages="1"/>
+    </image>
+    <image id="n10_acec" name="imgIconBG" src="ot9si33" fileName="newImg/img_cm_item_2.png" pkg="te1gxawo" xy="51,303" size="56,56" group="n20_twvn"/>
+    <loader id="n11_acec" name="ladIcon" xy="56,308" size="45,45" group="n20_twvn" aspect="true"/>
+    <image id="n12_sg4g" name="n12" src="jjanyi88" fileName="newImg/img_cm_bottom_11_2.png" pkg="te1gxawo" xy="64,286" group="n20_twvn">
+      <gearDisplay controller="ctrlStatus" pages="1"/>
+    </image>
+    <image id="n13_sg4g" name="n13" src="twvnyi8c" fileName="newImg/img_cm_bottom_11.png" pkg="te1gxawo" xy="-38,122" size="233,161" group="n20_twvn">
+      <gearDisplay controller="ctrlStatus" pages="1"/>
+    </image>
+    <list id="n14_sg4g" name="lstFuel" xy="-29,128" size="220,146" group="n20_twvn" layout="flow_hz" overflow="scroll" defaultItem="ui://te1gxawoj29zi6u">
+      <gearDisplay controller="ctrlStatus" pages="1"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n20_twvn" name="open" xy="-38,122" size="233,238" advanced="true">
+      <gearDisplay controller="ctrlIsNeedFuel" pages="0"/>
+    </group>
+  </displayList>
+</component>

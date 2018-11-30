@@ -82,7 +82,7 @@
     <image id="rdy435" name="icon_main_chat.png" path="/newImg/"/>
     <image id="rdy436" name="icon_main_fist.png" path="/newImg/"/>
     <image id="rdy437" name="icon_main_formula.png" path="/newImg/"/>
-    <image id="rdy438" name="icon_main_health.png" path="/newImg/" exported="true"/>
+    <image id="rdy438" name="icon_main_health.png" path="/newImg/"/>
     <image id="rdy439" name="icon_main_hunger.png" path="/newImg/"/>
     <image id="rdy43a" name="icon_main_mining.png" path="/newImg/"/>
     <image id="rdy43b" name="icon_main_night.png" path="/newImg/"/>
@@ -127,9 +127,9 @@
     <image id="rdy44p" name="img_main_monster_4.png" path="/newImg/"/>
     <image id="rdy44q" name="img_main_powerstorage_1.png" path="/newImg/"/>
     <image id="rdy44r" name="img_main_powerstorage_2.png" path="/newImg/"/>
-    <image id="rdy44s" name="img_main_survive_1.png" path="/newImg/" exported="true"/>
-    <image id="rdy44t" name="img_main_survive_2.png" path="/newImg/" exported="true"/>
-    <image id="rdy44u" name="img_main_survive_3.png" path="/newImg/" exported="true"/>
+    <image id="rdy44s" name="img_main_survive_1.png" path="/newImg/"/>
+    <image id="rdy44t" name="img_main_survive_2.png" path="/newImg/"/>
+    <image id="rdy44u" name="img_main_survive_3.png" path="/newImg/"/>
     <image id="rdy44v" name="img_main_survive_4.png" path="/newImg/"/>
     <image id="rdy44w" name="img_main_survive_5.png" path="/newImg/"/>
     <image id="rdy44x" name="img_main_systeminfo.png" path="/newImg/"/>
@@ -168,8 +168,9 @@
     <component id="c3x26l" name="ComMainTaskTrace.xml" path="/win/" exported="true"/>
     <component id="c3x26m" name="ComTaskTrace.xml" path="/win/" exported="true"/>
     <component id="c3x26n" name="spriteTaskTrace.xml" path="/sprite/"/>
-    <image id="a2ml6o" name="icon_main_dawn.png" path="/newImg/"/>
-    <image id="a2ml6p" name="icon_main_dusk.png" path="/newImg/"/>
+    <component id="snq96o" name="WinMainRevive.xml" path="/win/" exported="true"/>
+    <image id="hocd6p" name="icon_main_dawn.png" path="/newImg/"/>
+    <image id="hocd6q" name="icon_main_dusk.png" path="/newImg/"/>
   </resources>
   <publish name="main"/>
 </packageDescription>

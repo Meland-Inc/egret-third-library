@@ -2,14 +2,18 @@
 <component size="1136,640" designImage="ui://i25v0ebkpgixg" designImageAlpha="0">
   <controller name="state" pages="0,lock,1,premake,2,making" selected="0"/>
   <displayList>
-    <component id="n0_lxnu" name="comBG" src="pqjb2f" fileName="com/ComBG.xml" xy="34,68">
+    <component id="n0_lxnu" name="ComBG" src="pqjb2f" fileName="com/ComBG.xml" xy="34,68" group="n52_s487">
       <Label title="配方"/>
     </component>
-    <component id="n42_jlj8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1056,66" size="52,52">
+    <component id="n42_jlj8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1056,66" size="52,52" group="n52_s487">
       <Button icon="ui://te1gxawoefrs1q"/>
     </component>
-    <component id="n43_nxks" name="ComSynthesis" src="pqjb2g" fileName="com/ComSynthesis.xml" xy="803,134"/>
-    <component id="n44_g7xw" name="ComWorkbench" src="g7xw2h" fileName="com/ComWorkbench.xml" xy="496,134"/>
-    <component id="n51_acec" name="n51" src="acec2i" fileName="com/ComFormula.xml" xy="68,134"/>
+    <component id="n43_nxks" name="ComSynthesis" src="pqjb2g" fileName="com/ComSynthesis.xml" xy="803,134" group="n52_s487"/>
+    <component id="n44_g7xw" name="ComWorkbench" src="g7xw2h" fileName="com/ComWorkbench.xml" xy="496,134" group="n52_s487"/>
+    <component id="n51_acec" name="ComMyBag" src="acec2i" fileName="com/ComMyBag.xml" xy="68,134" group="n52_s487"/>
+    <component id="n53_fi7r" name="ComSynthesisDetail" src="d6dh2j" fileName="com/ComSynthesisDetail.xml" xy="362,174" group="n52_s487" visible="false"/>
+    <group id="n52_s487" name="root" xy="34,66" size="1074,502" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
   </displayList>
 </component>

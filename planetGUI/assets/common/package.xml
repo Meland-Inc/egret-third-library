@@ -201,8 +201,8 @@
     <image id="pgixi5f" name="img_cm_bottom_10.png" path="/newImg/" exported="true" scale="9grid" scale9grid="32,7,64,6"/>
     <image id="pgixi5g" name="img_cm_bottom_11.png" path="/newImg/" exported="true"/>
     <image id="pgixi5h" name="img_cm_bottom_12.png" path="/newImg/" exported="true"/>
-    <image id="pgixi5i" name="img_cm_bottom_13.png" path="/newImg/" exported="true"/>
-    <image id="pgixi5j" name="img_cm_bottom_14.png" path="/newImg/" exported="true"/>
+    <image id="pgixi5i" name="img_cm_bottom_13.png" path="/newImg/" exported="true" scale="9grid" scale9grid="5,6,6,12"/>
+    <image id="pgixi5j" name="img_cm_bottom_14.png" path="/newImg/" exported="true" scale="9grid" scale9grid="0,6,4,12"/>
     <image id="pgixi5k" name="img_cm_bottom_15.png" path="/newImg/" exported="true"/>
     <image id="pgixi5l" name="img_cm_bottom_16.png" path="/newImg/" exported="true"/>
     <image id="pgixi5m" name="img_cm_bottom_17.png" path="/newImg/" exported="true"/>
@@ -214,8 +214,8 @@
     <image id="pgixi5s" name="img_cm_delete.png" path="/newImg/" exported="true"/>
     <image id="pgixi5t" name="img_cm_item_10.png" path="/newImg/" exported="true" scale="9grid" scale9grid="14,14,28,28"/>
     <image id="pgixi5u" name="img_cm_item_11.png" path="/newImg/" exported="true"/>
-    <image id="pgixi5v" name="img_cm_item_12.png" path="/newImg/" exported="true"/>
-    <image id="pgixi5w" name="img_cm_item_13.png" path="/newImg/" exported="true"/>
+    <image id="pgixi5v" name="img_cm_item_12.png" path="/newImg/" exported="true" scale="9grid" scale9grid="10,2,20,4"/>
+    <image id="pgixi5w" name="img_cm_item_13.png" path="/newImg/" exported="true" scale="9grid" scale9grid="10,2,20,2"/>
     <image id="pgixi5x" name="img_cm_item_14.png" path="/newImg/" exported="true"/>
     <image id="pgixi5y" name="img_cm_item_15.png" path="/newImg/" exported="true" scale="9grid" scale9grid="13,13,26,26"/>
     <image id="pgixi5z" name="img_cm_item_16.png" path="/newImg/" exported="true"/>
@@ -226,7 +226,7 @@
     <image id="pgixi64" name="img_cm_slider_1.png" path="/newImg/" exported="true"/>
     <image id="pgixi65" name="img_cm_slider_2.png" path="/newImg/" exported="true"/>
     <image id="pgixi66" name="img_cm_slider_3.png" path="/newImg/" exported="true"/>
-    <image id="pgixi67" name="img_cm_tips_2.png" path="/newImg/" exported="true"/>
+    <image id="pgixi67" name="img_cm_tips_2.png" path="/newImg/" exported="true" scale="9grid" scale9grid="9,9,18,18"/>
     <image id="pgixi68" name="img_cm_title7.png" path="/newImg/" exported="true"/>
     <image id="pgixi69" name="img_game1_3.png" path="/newImg/" exported="true"/>
     <image id="pgixi6a" name="img_game1_4.png" path="/newImg/" exported="true"/>
@@ -307,6 +307,11 @@
     <image id="jjanyi88" name="img_cm_bottom_11_2.png" path="/newImg/" exported="true"/>
     <image id="jjanyi89" name="img_cm_schedule_1.png" path="/newImg/" exported="true"/>
     <image id="jjanyi8a" name="img_cm_schedule_2.png" path="/newImg/" exported="true" scale="" scale9grid="10,0,13,12" gridTile="16"/>
+    <component id="11slcyi8e" name="RBtnFormulaRenderer.xml" path="/btn/" exported="true"/>
+    <component id="11slcyi8f" name="barItem1.xml" path="/bar/" exported="true"/>
+    <component id="11slcyi8g" name="ToolTipFormulaItem.xml" path="/com/" exported="true"/>
+    <image id="e8y1cyi8h" name="img_cm_slider4.png" path="/newImg/" exported="true" scale="9grid" scale9grid="7,10,14,20"/>
+    <image id="e8y1cyi8i" name="img_cm_slider3.png" path="/newImg/" exported="true" scale="" scale9grid="0,68,3,136"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>

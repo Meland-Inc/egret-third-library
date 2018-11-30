@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" designImage="ui://i25v0ebkd0utr" designImageAlpha="0">
+  <displayList>
+    <image id="n0_snq9" name="bg" src="efrs1m" fileName="newImg/bg_cm_3.png" pkg="te1gxawo" xy="384,162" size="366,230" group="n7_hocd"/>
+    <image id="n1_hocd" name="bottom" src="qo8vi1x" fileName="newImg/img_cm_pattern2.png" pkg="te1gxawo" xy="385,368" size="362,21" group="n7_hocd"/>
+    <text id="n5_hocd" name="title" xy="543,166" size="49,27" group="n7_hocd" fontSize="22" color="#ebe6df" text="复活"/>
+    <text id="n2_hocd" name="tfTips" xy="391,199" size="352,54" group="n7_hocd" fontSize="20" color="#635c51" align="center" vAlign="bottom" autoSize="none" text="胜败乃兵家常事啊！">
+      <relation target="" sidePair="center-center"/>
+    </text>
+    <text id="n3_hocd" name="tfReviveTime" xy="501,270" size="133,24" group="n7_hocd" fontSize="20" align="center" ubb="true" vars="true" autoSize="none" text="[color=#DB661D]{time=600}[/color]秒后随机复活">
+      <relation target="" sidePair=""/>
+    </text>
+    <component id="n6_hocd" name="btnSelectRevive" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="512,310" size="110,40" group="n7_hocd">
+      <Button title="选择复活" titleColor="#472f16" titleFontSize="18" icon="ui://te1gxawoefrs1w"/>
+    </component>
+    <group id="n7_hocd" name="root" xy="384,162" size="366,230" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

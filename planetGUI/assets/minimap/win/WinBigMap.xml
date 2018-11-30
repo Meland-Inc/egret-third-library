@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkqv2f8" designImageAlpha="0" designImageLayer="1">
-  <controller name="conMapMode" pages="0,normal,1,born,2,revive" selected="0"/>
+  <controller name="conMapMode" pages="0,normal,1,born,2,revive" selected="2"/>
   <controller name="conMarkBtn" pages="0,put,1,delete,2,cancel" selected="0"/>
   <displayList>
     <image id="n1_11e02" name="headerBg" src="qo8vi1v" fileName="newImg/bg_cm_8.png" pkg="te1gxawo" xy="0,0" size="1136,48">
       <relation target="" sidePair="width-width"/>
     </image>
     <image id="n2_11e02" name="titleBg" src="efrs23" fileName="newImg/img_cm_title2.png" pkg="te1gxawo" xy="462,8" group="n14_11e02"/>
-    <text id="n3_11e02" name="title" xy="499,11" size="134,27" group="n14_11e02" fontSize="22" color="#ffffff" align="center" autoSize="none" text="世界地图">
+    <text id="n3_11e02" name="title" xy="499,11" size="134,27" group="n14_11e02" fontSize="22" color="#ffffff" align="center" autoSize="none" text="选择出生地">
       <gearText controller="conMapMode" pages="0" values="世界地图" default="选择出生地"/>
     </text>
     <group id="n14_11e02" name="grpTitle" xy="462,8" size="210,30" advanced="true" collapsed="true">
       <relation target="" sidePair="center-center"/>
     </group>
     <component id="n13_11e02" name="btnClose" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="1043,4" size="80,42">
-      <gearDisplay controller="conMapMode" pages="0"/>
+      <gearDisplay controller="conMapMode" pages="0,2"/>
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://te1gxawoefrs1r"/>
     </component>
