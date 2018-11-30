@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="852,430">
   <displayList>
-    <image id="n16_xg0e" name="n16" src="pu1zyi7b" fileName="img/bg_cm_1.png" pkg="te1gxawo" xy="0,0" size="830,430"/>
-    <text id="n4_824h" name="tfTitle" xy="344,5" size="150,30" fontSize="22" color="#ffffff" align="center" autoSize="none" text="箱子(小)"/>
+    <image id="n16_xg0e" name="n16" src="pu1zyi7b" fileName="img/bg_cm_1.png" pkg="te1gxawo" xy="0,0" size="830,430" group="n50_ihek"/>
+    <text id="n4_824h" name="tfTitle" xy="344,5" size="150,30" group="n50_ihek" fontSize="22" color="#ffffff" align="center" autoSize="none" text="箱子(小)"/>
     <image id="n29_xg0e" name="n29" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="8,412" group="n46_xg0e"/>
     <image id="n30_xg0e" name="n30" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="56,412" group="n46_xg0e"/>
     <image id="n31_xg0e" name="n31" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="104,412" group="n46_xg0e"/>
@@ -20,19 +20,19 @@
     <image id="n43_xg0e" name="n43" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="680,412" group="n46_xg0e"/>
     <image id="n44_xg0e" name="n44" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="728,412" group="n46_xg0e"/>
     <image id="n45_xg0e" name="n45" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="776,412" group="n46_xg0e"/>
-    <group id="n46_xg0e" name="n46" xy="8,412" size="816,14" collapsed="true"/>
+    <group id="n46_xg0e" name="n46" xy="8,412" size="816,14" group="n50_ihek" collapsed="true"/>
     <image id="n17_xg0e" name="n17" src="pgixi5n" fileName="newImg/img_cm_bottom_7.png" pkg="te1gxawo" xy="34,48" size="364,29" group="n22_xg0e"/>
     <text id="n10_824h" name="n10" xy="171,48" size="98,29" group="n22_xg0e" fontSize="22" color="#5b4b37" autoSize="none" text="我的背包"/>
     <image id="n19_xg0e" name="n19" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="113,57" group="n22_xg0e"/>
     <image id="n21_xg0e" name="n21" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="322,72" group="n22_xg0e" rotation="180"/>
-    <group id="n22_xg0e" name="tagMybag" xy="34,48" size="364,38" collapsed="true"/>
+    <group id="n22_xg0e" name="tagMybag" xy="34,48" size="364,38" group="n50_ihek" collapsed="true"/>
     <image id="n23_xg0e" name="n23" src="pgixi5n" fileName="newImg/img_cm_bottom_7.png" pkg="te1gxawo" xy="431,47" size="364,29" group="n27_xg0e"/>
     <text id="n24_xg0e" name="n24" xy="568,47" size="93,29" group="n27_xg0e" fontSize="22" color="#5b4b37" align="center" autoSize="none" text="储物格"/>
     <image id="n25_xg0e" name="n25" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="510,56" group="n27_xg0e"/>
     <image id="n26_xg0e" name="n26" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="719,71" group="n27_xg0e" rotation="180"/>
-    <group id="n27_xg0e" name="tagStorage" xy="431,47" size="364,38" collapsed="true"/>
-    <component id="n14_824h" name="btnLock" src="824h2b" fileName="btn/btnLock.xml" xy="30,4"/>
-    <component id="n15_jlj8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="800,-10" size="52,52">
+    <group id="n27_xg0e" name="tagStorage" xy="431,47" size="364,38" group="n50_ihek" collapsed="true"/>
+    <component id="n14_824h" name="btnLock" src="824h2b" fileName="btn/btnLock.xml" xy="30,4" group="n50_ihek"/>
+    <component id="n15_jlj8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="800,-10" size="52,52" group="n50_ihek">
       <Button icon="ui://te1gxawopu1zyi7e"/>
     </component>
     <image id="n18_xg0e" name="n18" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="34,85" size="364,306" group="n48_xg0e"/>
@@ -48,7 +48,7 @@
       <item/>
       <item/>
     </list>
-    <group id="n48_xg0e" name="n48" xy="34,85" size="364,306"/>
+    <group id="n48_xg0e" name="n48" xy="34,85" size="364,306" group="n50_ihek" collapsed="true"/>
     <image id="n28_xg0e" name="n28" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="433,86" size="364,306" group="n49_xg0e"/>
     <list id="n13_824h" name="listBox" xy="436,89" size="360,293" group="n49_xg0e" layout="flow_hz" overflow="scroll" scrollBarFlags="4" margin="1,1,1,1" lineGap="1" colGap="-1" lineItemCount="5" defaultItem="ui://te1gxawoj29zi6u">
       <item/>
@@ -62,6 +62,9 @@
       <item/>
       <item/>
     </list>
-    <group id="n49_xg0e" name="n49" xy="433,86" size="364,306" collapsed="true"/>
+    <group id="n49_xg0e" name="n49" xy="433,86" size="364,306" group="n50_ihek" collapsed="true"/>
+    <group id="n50_ihek" name="root" xy="0,-10" size="852,440" advanced="true" collapsed="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
   </displayList>
 </component>
