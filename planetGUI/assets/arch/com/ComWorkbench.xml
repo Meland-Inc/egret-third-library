@@ -11,7 +11,7 @@
     <component id="n18_sg4g" name="btnFormula" src="oliri6q" fileName="btn/rbtnScale.xml" pkg="te1gxawo" xy="155,0" size="130,37">
       <Button title="配方栏" icon="ui://te1gxawojjanyi86" selectedIcon="ui://te1gxawojjanyi87" controller="ctrlType" page="1"/>
     </component>
-    <list id="n22_twvn" name="lstBag" xy="6,49" size="288,218" layout="flow_hz" overflow="scroll" defaultItem="ui://te1gxawoj29zi6u">
+    <list id="n22_twvn" name="lstBench" xy="6,49" size="288,218" layout="flow_hz" overflow="scroll" defaultItem="ui://te1gxawoj29zi6u">
       <gearDisplay controller="ctrlType" pages="0"/>
       <item/>
       <item/>
