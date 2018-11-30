@@ -40,7 +40,7 @@
     <component id="lxnu13" name="btnArchFormulaTab.xml" path="/btn/"/>
     <image id="lxnu15" name="img_compose_20.png" path="/img/" exported="true"/>
     <component id="lxnu1a" name="WinArchCpProduct.xml" path="/win/" exported="true"/>
-    <component id="lxnu1d" name="pbrArchMaking.xml" path="/pbr/"/>
+    <component id="lxnu1d" name="pbrArchMaking.xml" path="/win/pbr/"/>
     <image id="lxnu1f" name="bg_bag.png" path="/img/" exported="true"/>
     <image id="lxnu1g" name="btn_compose_3.png" path="/img/" exported="true"/>
     <image id="lxnu1h" name="btn_compose_4.png" path="/img/" exported="true"/>
@@ -68,6 +68,7 @@
     <component id="d6dh2j" name="ComSynthesisDetail.xml" path="/com/"/>
     <image id="fi7r2k" name="img_formula_bottom_3.png" path="/newImg/"/>
     <component id="fi7r2l" name="comFormulaCommentRenderer.xml" path="/btn/"/>
+    <component id="oee32m" name="WinArchBackpack.xml" path="/win/"/>
   </resources>
-  <publish name="arch" path="C:\Users\Mloong\Desktop\bell_planet\feature-jiahua\resource\assets\fairyGui"/>
+  <publish name="arch"/>
 </packageDescription>
