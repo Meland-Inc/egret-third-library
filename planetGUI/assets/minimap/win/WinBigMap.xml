@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkqv2f8" designImageAlpha="0" designImageLayer="1">
-  <controller name="conMapMode" pages="0,normal,1,born,2,revive" selected="2"/>
+  <controller name="conMapMode" pages="0,normal,1,born,2,revive" selected="0"/>
   <controller name="conMarkBtn" pages="0,put,1,delete,2,cancel" selected="0"/>
   <displayList>
+    <component id="n35_trc2" name="comMap" src="trc221u" fileName="win/ComMiniMap.xml" xy="0,0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <graph id="n36_qghb" name="lineH" xy="0,289" size="1136,5" visible="false" alpha="0.5" touchable="false" type="rect" lineSize="0" fillColor="#ff333333">
+      <gearDisplay controller="conMapMode" pages="0"/>
+    </graph>
+    <graph id="n37_qghb" name="lineV" xy="426,0" size="5,640" visible="false" alpha="0.5" touchable="false" type="rect" lineSize="0" fillColor="#ff333333">
+      <gearDisplay controller="conMapMode" pages="0"/>
+    </graph>
     <image id="n1_11e02" name="headerBg" src="qo8vi1v" fileName="newImg/bg_cm_8.png" pkg="te1gxawo" xy="0,0" size="1136,48">
       <relation target="" sidePair="width-width"/>
     </image>
     <image id="n2_11e02" name="titleBg" src="efrs23" fileName="newImg/img_cm_title2.png" pkg="te1gxawo" xy="462,8" group="n14_11e02"/>
-    <text id="n3_11e02" name="title" xy="499,11" size="134,27" group="n14_11e02" fontSize="22" color="#ffffff" align="center" autoSize="none" text="选择出生地">
+    <text id="n3_11e02" name="title" xy="499,9" size="134,29" group="n14_11e02" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="世界地图">
       <gearText controller="conMapMode" pages="0" values="世界地图" default="选择出生地"/>
     </text>
     <group id="n14_11e02" name="grpTitle" xy="462,8" size="210,30" advanced="true" collapsed="true">
@@ -28,7 +37,7 @@
     <component id="n34_qv2f" name="btnStartGame" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="606,533" size="142,50" group="n12_11e02">
       <Button title="开始游戏" titleColor="#ffffff" icon="ui://te1gxawoefrs1s"/>
     </component>
-    <group id="n12_11e02" name="grpBornMode" xy="109,515" size="917,82" advanced="true">
+    <group id="n12_11e02" name="grpBornMode" xy="109,515" size="917,82" advanced="true" collapsed="true">
       <gearDisplay controller="conMapMode" pages="1,2"/>
       <relation target="" sidePair="bottom-bottom,center-center"/>
     </group>

@@ -38,7 +38,7 @@
     <image id="j0s610" name="img_main_map_1.png" path="/img/"/>
     <component id="j0s611" name="comMainPlayerIcon.xml" path="/com/" exported="true"/>
     <image id="j0s612" name="img_task_bg_1.png" path="/img/"/>
-    <image id="kjpo13" name="img_map_sign_14.png" path="/img/"/>
+    <image id="kjpo13" name="img_map_sign_14.png" path="/img/" scale="9grid" scale9grid="12,11,24,22"/>
     <component id="kjpo16" name="teleportMark.xml" path="/com/" exported="true"/>
     <image id="c2lx17" name="img_map_title.png" path="/img/"/>
     <image id="c2lx18" name="btn_yellow(1).png" path="/img/"/>
@@ -59,6 +59,11 @@
     <image id="11e021r" name="img_map_bottom.png" path="/imgNew/" scale="9grid" scale9grid="68,21,136,42"/>
     <component id="11e021s" name="WinBigMap.xml" path="/win/" exported="true"/>
     <component id="hocd21t" name="comTaskMark.xml" path="/com/" exported="true"/>
+    <component id="trc221u" name="ComMiniMap.xml" path="/win/" exported="true"/>
+    <component id="trc221v" name="mapRoot.xml" path="/win/"/>
+    <component id="trc221w" name="ComMarkLayer.xml" path="/com/" exported="true"/>
+    <component id="trc221x" name="comHomeMark.xml" path="/com/" exported="true"/>
+    <component id="trc221y" name="comMarkCtnr.xml" path="/com/"/>
   </resources>
   <publish name="minimap"/>
 </packageDescription>

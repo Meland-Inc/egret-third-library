@@ -11,7 +11,7 @@
     <component id="n18_sg4g" name="btnFormula" src="oliri6q" fileName="btn/rbtnScale.xml" pkg="te1gxawo" xy="155,0" size="130,37">
       <Button title="配方栏" icon="ui://te1gxawojjanyi86" selectedIcon="ui://te1gxawojjanyi87" controller="ctrlType" page="1"/>
     </component>
-    <list id="n22_twvn" name="lstBag" xy="6,49" size="288,218" layout="flow_hz" overflow="scroll" defaultItem="ui://te1gxawoj29zi6u">
+    <list id="n22_twvn" name="lstBench" xy="6,49" size="288,218" layout="flow_hz" overflow="scroll" defaultItem="ui://te1gxawoj29zi6u">
       <gearDisplay controller="ctrlType" pages="0"/>
       <item/>
       <item/>
@@ -47,7 +47,7 @@
     <image id="n2_g7xw" name="imgTimeBG" src="pgixi5f" fileName="newImg/img_cm_bottom_10.png" pkg="te1gxawo" xy="125,331" size="126,19" group="n5_g7xw"/>
     <text id="n3_g7xw" name="tf1" xy="154,307" size="73,23" group="n5_g7xw" fontSize="17" color="#584736" text="燃烧时间"/>
     <text id="n4_g7xw" name="tfTime" xy="149,328" size="83,27" group="n5_g7xw" fontSize="20" color="#584736" text="24:00:00"/>
-    <group id="n5_g7xw" name="time" xy="125,307" size="126,48" advanced="true" collapsed="true">
+    <group id="n5_g7xw" name="time" xy="125,307" size="126,48" advanced="true">
       <gearDisplay controller="ctrlIsNeedFuel" pages="0"/>
     </group>
     <image id="n8_acec" name="imgSeleBG" src="pgixi5x" fileName="newImg/img_cm_item_14.png" pkg="te1gxawo" xy="50,302" size="58,58" group="n20_twvn">
