@@ -2,7 +2,7 @@
 <component size="270,400" designImage="ui://i25v0ebktwvnt" designImageOffsetX="-789" designImageOffsetY="-129" designImageAlpha="0">
   <controller name="ctrlStatus" pages="0,normal,1,make,2,lock" selected="2"/>
   <displayList>
-    <component id="n25_acec" name="title" src="w34u2h" fileName="com/ComTitle.xml" xy="0,0" size="270,28">
+    <component id="n25_acec" name="title" src="w34u2h" fileName="com/ComTitle.xml" xy="0,0" size="270,28" pkg="te1gxawo">
       <relation target="" sidePair="rightext-right"/>
       <Label title="合成"/>
     </component>

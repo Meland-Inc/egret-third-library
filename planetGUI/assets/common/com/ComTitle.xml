@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="400,28" extention="Label">
   <displayList>
-    <image id="n1_w34u" name="n1" src="pgixi5n" fileName="newImg/img_cm_bottom_7.png" pkg="te1gxawo" xy="0,0" size="400,28" group="n5_w34u">
+    <image id="n1_w34u" name="n1" src="pgixi5n" fileName="newImg/img_cm_bottom_7.png" xy="0,0" size="400,28" group="n5_w34u">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n3_w34u" name="n3" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="130,7" size="40,14" group="n5_w34u">
+    <image id="n3_w34u" name="n3" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" xy="132,7" size="40,14" group="n5_w34u">
       <relation target="n0_w34u" sidePair="right-left,middle-middle"/>
     </image>
-    <image id="n4_w34u" name="n4" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="270,21" size="40,14" group="n5_w34u" rotation="180">
+    <image id="n4_w34u" name="n4" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" xy="268,21" size="40,14" group="n5_w34u" rotation="180">
       <relation target="n0_w34u" sidePair="left-right,middle-middle"/>
     </image>
     <group id="n5_w34u" name="tagMybag" xy="0,0" size="400,35"/>

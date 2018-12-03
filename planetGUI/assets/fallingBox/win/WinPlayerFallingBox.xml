@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640">
   <displayList>
-    <image id="n1_ejib" name="imgBg" src="ejib1" fileName="img/img_diaoluo_1.png" xy="221,65" group="n16_ojhl"/>
-    <text id="n2_ejib" name="_tfTitle" xy="332,73" size="457,33" group="n16_ojhl" fontSize="24" color="#ffffff" align="center" autoSize="none" bold="true" text="orange的包裹"/>
-    <image id="n3_ejib" name="imgMyBagBg" src="lxnus" fileName="img/img_compose_2.png" pkg="kdeyuiww" xy="250,125" size="308,377" group="n4_ejib"/>
-    <image id="n5_ejib" name="n5" src="lxnuu" fileName="img/img_compose_4.png" pkg="kdeyuiww" xy="259,133" size="290,30" group="n4_ejib"/>
-    <text id="n6_ejib" name="_tfMyBagTitle" xy="300,135" size="203,27" group="n4_ejib" fontSize="18" color="#57a7df" align="center" vAlign="middle" autoSize="none" text="我的背包"/>
-    <list id="n7_ejib" name="_listMyBag" xy="273,174" size="260,321" group="n4_ejib" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="5" colGap="5" lineItemCount="4" defaultItem="ui://asrl3zfri7ba16" autoClearItems="true">
+    <image id="n1_ejib" name="imgBg" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="234,105" size="668,430" group="n16_ojhl"/>
+    <image id="n17_jn1p" name="n17" src="efrs22" fileName="newImg/img_cm_title1.png" pkg="te1gxawo" xy="489,107" group="n16_ojhl"/>
+    <text id="n18_jn1p" name="title" xy="499,105" size="158,39" group="n16_ojhl" fontSize="20" color="#f5ebde" align="center" vAlign="middle" leading="0" autoSize="none" text="背包拾取"/>
+    <image id="n23_jn1p" name="n23" src="pgixi5n" fileName="newImg/img_cm_bottom_7.png" pkg="te1gxawo" xy="256,160" size="300,28" group="n16_ojhl"/>
+    <text id="n6_ejib" name="_tfMyBagTitle" xy="256,160" size="300,28" group="n16_ojhl" fontSize="20" color="#5b4b37" align="center" vAlign="middle" autoSize="none" bold="true" text="我的背包"/>
+    <image id="n24_jn1p" name="n24" src="pgixi5n" fileName="newImg/img_cm_bottom_7.png" pkg="te1gxawo" xy="580,160" size="300,28" group="n16_ojhl"/>
+    <text id="n10_ejib" name="_tfFallingBagTitle" xy="580,160" size="300,28" group="n16_ojhl" fontSize="20" color="#5b4b37" align="center" vAlign="middle" autoSize="none" bold="true" text="我的背包"/>
+    <image id="n3_ejib" name="imgMyBagBg" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="256,201" size="300,236" group="n4_ejib"/>
+    <list id="n7_ejib" name="_listMyBag" xy="261,205" size="290,226" group="n4_ejib" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="5" lineItemCount="4" defaultItem="ui://te1gxawoj29zi6u" autoClearItems="true">
       <item/>
       <item/>
       <item/>
@@ -28,11 +31,9 @@
       <item/>
       <item/>
     </list>
-    <group id="n4_ejib" name="_grpMyBag" xy="250,125" size="308,377" group="n16_ojhl" advanced="true"/>
-    <image id="n8_ejib" name="imgFallingBagBg" src="lxnus" fileName="img/img_compose_2.png" pkg="kdeyuiww" xy="573,125" size="308,377" group="n12_ejib"/>
-    <image id="n9_ejib" name="n9" src="lxnuu" fileName="img/img_compose_4.png" pkg="kdeyuiww" xy="582,133" size="290,30" group="n12_ejib"/>
-    <text id="n10_ejib" name="_tfFallingBagTitle" xy="623,135" size="203,27" group="n12_ejib" fontSize="18" color="#57a7df" align="center" vAlign="middle" autoSize="none" text="我的背包"/>
-    <list id="n11_ejib" name="_listFallingBag" xy="596,174" size="260,321" group="n12_ejib" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="5" colGap="5" lineItemCount="4" defaultItem="ui://asrl3zfri7ba16" autoClearItems="true">
+    <group id="n4_ejib" name="_grpMyBag" xy="256,201" size="300,236" group="n16_ojhl" advanced="true"/>
+    <image id="n8_ejib" name="imgFallingBagBg" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="580,201" size="300,236" group="n12_ejib"/>
+    <list id="n11_ejib" name="_listFallingBag" xy="585,207" size="290,223" group="n12_ejib" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="5" lineItemCount="4" defaultItem="ui://te1gxawoj29zi6u" autoClearItems="true">
       <item/>
       <item/>
       <item/>
@@ -54,12 +55,15 @@
       <item/>
       <item/>
     </list>
-    <group id="n12_ejib" name="_grpFallingBag" xy="573,125" size="334,377" group="n16_ojhl" advanced="true"/>
-    <component id="n14_zsdq" name="_btnQuickPickUp" src="zsdq4" fileName="btn/btnBlue.xml" xy="505,517" group="n16_ojhl"/>
-    <component id="n15_zsdq" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="874,55" size="56,57" group="n16_ojhl">
-      <Button icon="ui://eunktclqsz331"/>
+    <group id="n12_ejib" name="_grpFallingBag" xy="580,201" size="300,236" group="n16_ojhl" advanced="true"/>
+    <component id="n14_zsdq" name="_btnQuickPickUp" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="493,450" size="150,50" group="n16_ojhl">
+      <Button title="一键拾取" titleColor="#ffffff" titleFontSize="20" icon="ui://te1gxawoefrs1s"/>
     </component>
-    <group id="n16_ojhl" name="root" xy="221,55" size="709,520" advanced="true">
+    <component id="n15_zsdq" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="869,97" size="52,52" group="n16_ojhl">
+      <Button icon="ui://te1gxawoefrs1q"/>
+    </component>
+    <image id="n19_jn1p" name="n19" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="242,516" size="652,14" group="n16_ojhl"/>
+    <group id="n16_ojhl" name="root" xy="234,97" size="687,438" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>
