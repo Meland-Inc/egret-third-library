@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" opaque="false" designImage="ui://i25v0ebkot9s0" designImageAlpha="100" designImageLayer="1">
+<component size="1136,640" opaque="false" designImage="ui://i25v0ebkot9s0" designImageAlpha="0" designImageLayer="1">
   <displayList>
     <component id="n16_rdy4" name="btnAvatar" src="rdy45b" fileName="btn/btnAvatar.xml" xy="8,6" size="48,48">
       <relation target="" sidePair="left-left,top-top"/>
@@ -33,5 +33,8 @@
       <relation target="" sidePair="bottom-bottom"/>
     </component>
     <component id="n39_c3x2" name="comTaskTrace" src="c3x26m" fileName="win/ComTaskTrace.xml" xy="7,69"/>
+    <component id="n40_c994" name="comExperience" src="ncv76r" fileName="win/ComExperience.xml" xy="4,612">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+    </component>
   </displayList>
 </component>

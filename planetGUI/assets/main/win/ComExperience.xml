@@ -1,2 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="400,200"/>
+<component size="200,17">
+  <controller name="battery" pages="0,green,1,red" selected="0"/>
+  <controller name="net" pages="0,quick,1,slow" selected="0"/>
+  <displayList>
+    <image id="n0_c994" name="n0" src="rdy44x" fileName="newImg/img_main_systeminfo.png" xy="0,0" size="200,17" group="n18_mjrt"/>
+    <image id="n8_c994" name="n8" src="c9946s" fileName="newImg/icon_main_battery_1.png" xy="179,6" group="n12_c994"/>
+    <image id="n10_c994" name="n10" src="c9946t" fileName="newImg/icon_main_battery_2.png" xy="180,7" group="n12_c994">
+      <gearDisplay controller="battery" pages="0"/>
+    </image>
+    <image id="n11_c994" name="n11" src="c9946u" fileName="newImg/icon_main_battery_3.png" xy="180,7" group="n12_c994">
+      <gearDisplay controller="battery" pages="1"/>
+    </image>
+    <group id="n12_c994" name="n12" xy="179,6" size="15,8" group="n18_mjrt" collapsed="true"/>
+    <image id="n7_c994" name="n7" src="c9946w" fileName="newImg/icon_main_wifi_2.png" xy="123,3" group="n13_c994">
+      <gearDisplay controller="net" pages="1"/>
+    </image>
+    <image id="n5_c994" name="n5" src="c9946v" fileName="newImg/icon_main_wifi_1.png" xy="123,3" group="n13_c994">
+      <gearDisplay controller="net" pages="0"/>
+    </image>
+    <text id="n6_c994" name="tfnetSpeed" xy="134,1" size="39,16" group="n13_c994" fontSize="10" color="#b7ff69" align="center" vAlign="middle" bold="true" strokeColor="#000000" text="100MS"/>
+    <group id="n13_c994" name="n13" xy="123,1" size="44,16" group="n18_mjrt"/>
+    <image id="n3_c994" name="n3" src="rdy43m" fileName="newImg/icon_main_time.png" xy="74,3" group="n15_c994"/>
+    <text id="n4_c994" name="tfTime" xy="86,0" size="32,16" group="n15_c994" fontSize="10" color="#b7ff69" align="center" vAlign="middle" bold="true" strokeColor="#000000" text="12:51"/>
+    <group id="n15_c994" name="n15" xy="74,0" size="44,16" group="n18_mjrt" collapsed="true"/>
+    <text id="n1_c994" name="n1" xy="0,0" size="33,16" group="n17_c994" fontSize="10" color="#b7ff69" align="center" vAlign="middle" autoSize="none" bold="true" strokeColor="#000000" text="经验:"/>
+    <text id="n2_c994" name="tfExperience" xy="31,0" size="42,16" group="n17_c994" fontSize="10" color="#b7ff69" vAlign="middle" autoSize="none" bold="true" strokeColor="#000000" text="55.55%"/>
+    <group id="n17_c994" name="n17" xy="0,0" size="68,16" group="n18_mjrt" collapsed="true"/>
+    <group id="n18_mjrt" name="n18" xy="0,0" size="200,17"/>
+  </displayList>
+</component>
