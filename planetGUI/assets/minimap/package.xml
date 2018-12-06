@@ -59,7 +59,7 @@
     <image id="11e021r" name="img_map_bottom.png" path="/imgNew/" scale="9grid" scale9grid="68,21,136,42"/>
     <component id="11e021s" name="WinBigMap.xml" path="/win/" exported="true"/>
     <component id="hocd21t" name="comTaskMark.xml" path="/com/" exported="true"/>
-    <component id="trc221u" name="ComMiniMap.xml" path="/win/" exported="true"/>
+    <component id="trc221u" name="ComMiniMapContainer.xml" path="/com/" exported="true"/>
     <component id="trc221v" name="mapRoot.xml" path="/win/"/>
     <component id="trc221w" name="ComMarkLayer.xml" path="/com/" exported="true"/>
     <component id="trc221x" name="comHomeMark.xml" path="/com/" exported="true"/>

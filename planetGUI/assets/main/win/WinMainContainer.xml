@@ -26,13 +26,13 @@
       <relation target="" sidePair="top-top,right-right"/>
     </component>
     <component id="n35_5ccm" name="comMainAddTips" src="tbq62o" fileName="win/WinMainPickUpTips.xml" xy="930,201" size="206,100"/>
-    <component id="n36_ru0b" name="ComSaturationDetail" src="9f2h69" fileName="com/ComSaturationDetail.xml" xy="185,56" visible="false">
-      <relation target="" sidePair="left-left,top-top"/>
-    </component>
     <component id="n37_x9um" name="comChat" src="x9um6d" fileName="win/ComMainChatView.xml" xy="3,555">
       <relation target="" sidePair="bottom-bottom"/>
     </component>
     <component id="n39_c3x2" name="comTaskTrace" src="c3x26m" fileName="win/ComTaskTrace.xml" xy="7,69"/>
+    <component id="n36_ru0b" name="ComSaturationDetail" src="9f2h69" fileName="com/ComSaturationDetail.xml" xy="185,56" visible="false">
+      <relation target="" sidePair="left-left,top-top"/>
+    </component>
     <component id="n40_c994" name="comExperience" src="ncv76r" fileName="win/ComExperience.xml" xy="4,612">
       <relation target="" sidePair="left-left,bottom-bottom"/>
     </component>

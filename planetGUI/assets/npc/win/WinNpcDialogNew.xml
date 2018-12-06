@@ -16,12 +16,12 @@
     </component>
     <image id="n15_r1t9" name="nameBg" src="efrs24" fileName="newImg/img_cm_title3.png" pkg="te1gxawo" xy="223,452" group="n26_elis"/>
     <text id="n16_r1t9" name="tfName" xy="244,460" size="126,19" group="n26_elis" fontSize="18" color="#ffffff" align="center" autoSize="none" text="名字"/>
-    <text id="n19_r1t9" name="tfSpeech" xy="352,507" size="515,70" group="n26_elis" fontSize="18" color="#4e4237" autoSize="none" text="">
+    <text id="n19_r1t9" name="tfSpeech" xy="352,507" size="515,70" group="n26_elis" fontSize="18" color="#4e4237" ubb="true" autoSize="none" text="">
       <relation target="" sidePair="rightext-right"/>
     </text>
     <image id="n17_r1t9" name="headIconBg" src="kvvk2i1e" fileName="imgNew/img_guide_1.png" pkg="mp92elpx" xy="242,499" group="n24_r1t9"/>
     <loader id="n18_r1t9" name="ladHeadIcon" xy="247,503" pivot="0.5,0.5" size="68,66" group="n24_r1t9" url="ui://7xhwdeuzctbhb" fill="scaleFree"/>
-    <group id="n24_r1t9" name="grpIcon" xy="242,499" size="76,76" group="n26_elis" advanced="true" collapsed="true"/>
+    <group id="n24_r1t9" name="grpIcon" xy="242,499" size="76,76" group="n26_elis" advanced="true"/>
     <group id="n26_elis" name="grpDialog" xy="152,452" size="889,154" advanced="true" collapsed="true">
       <relation target="" sidePair="bottom-bottom"/>
     </group>
