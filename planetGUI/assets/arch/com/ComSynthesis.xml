@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="270,400" designImage="ui://i25v0ebktwvnt" designImageOffsetX="-789" designImageOffsetY="-129" designImageAlpha="0">
-  <controller name="ctrlStatus" pages="0,normal,1,make,2,lock" selected="2"/>
+  <controller name="ctrlStatus" pages="0,normal,1,make,2,lock" selected="1"/>
   <displayList>
-    <component id="n25_acec" name="title" src="w34u2h" fileName="com/ComTitle.xml" xy="0,0" size="270,28" pkg="te1gxawo">
+    <component id="n25_acec" name="title" src="w34u2h" fileName="com/ComTitle.xml" pkg="te1gxawo" xy="0,0" size="270,28">
       <relation target="" sidePair="rightext-right"/>
       <Label title="合成"/>
     </component>
@@ -75,7 +75,7 @@
       <gearDisplay controller="ctrlStatus" pages="2"/>
       <relation target="" sidePair="center-center"/>
     </text>
-    <group id="n24_nxks" name="lock" xy="-10,339" size="290,25" collapsed="true"/>
+    <group id="n24_nxks" name="lock" xy="-10,339" size="290,25"/>
     <component id="n26_twvn" name="pbrArchMaking" src="lxnu1d" fileName="pbr/pbrArchMaking.xml" xy="42,328">
       <gearDisplay controller="ctrlStatus" pages="1"/>
       <relation target="" sidePair="center-center"/>

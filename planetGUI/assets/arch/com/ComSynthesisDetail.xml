@@ -7,14 +7,14 @@
     <component id="n2_d6dh" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="368,2" size="36,36">
       <Button icon="ui://te1gxawohpymyi7o"/>
     </component>
-    <component id="n3_d6dh" name="n3" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="153,223" size="102,34">
-      <Button title="跳转合成" titleColor="#f7f4e8" titleFontSize="18" icon="ui://te1gxawopgixi4o"/>
-    </component>
-    <component id="n5_d6dh" name="n5" src="11slcyi8e" fileName="btn/RBtnFormulaRenderer.xml" pkg="te1gxawo" xy="169,40"/>
-    <list id="n6_d6dh" name="n6" xy="24,134" size="362,79" layout="row" colGap="40" defaultItem="ui://te1gxawo11slcyi8e" align="center" vAlign="middle">
+    <component id="n5_d6dh" name="btnTop" src="11slcyi8e" fileName="btn/RBtnFormulaRenderer.xml" pkg="te1gxawo" xy="169,40" touchable="false"/>
+    <list id="n6_d6dh" name="lstDown" xy="24,134" size="362,79" layout="row" colGap="40" defaultItem="ui://te1gxawo11slcyi8e" align="center" vAlign="middle">
       <item/>
       <item/>
     </list>
+    <component id="n3_d6dh" name="btnGoto" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="153,223" size="102,34">
+      <Button title="跳转合成" titleColor="#f7f4e8" titleFontSize="18" icon="ui://te1gxawopgixi4o"/>
+    </component>
     <image id="n7_fi7r" name="n7" src="qo8vi1x" fileName="newImg/img_cm_pattern2.png" pkg="te1gxawo" xy="2,267" size="404,21"/>
     <image id="n8_fi7r" name="n8" src="fi7r2k" fileName="newImg/img_formula_bottom_3.png" xy="198,113"/>
   </displayList>
