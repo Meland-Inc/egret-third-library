@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="125,18">
-  <controller name="weather" pages="1,night,0,day,2,dusk,3,dawn" selected="0">
+  <controller name="weather" pages="1,night,0,day,2,dusk,3,dawn" selected="3">
     <remark page="0" value="夜晚"/>
     <remark page="1" value="白天"/>
     <remark page="2" value="黄昏"/>
@@ -16,16 +16,16 @@
     <image id="n12_r2bf" name="n12" src="rdy43b" fileName="newImg/icon_main_night.png" xy="5,3" group="n8_r2bf">
       <gearDisplay controller="weather" pages="1"/>
     </image>
-    <image id="n11_r2bf" name="n11" src="rdy43g" fileName="newImg/icon_main_sun.png" xy="5,2" group="n8_r2bf">
+    <image id="n11_r2bf" name="n11" src="rdy43g" fileName="newImg/icon_main_sun.png" xy="5,2" size="12,12" group="n8_r2bf">
       <gearDisplay controller="weather" pages="0"/>
     </image>
-    <image id="n17_a2ml" name="n17" src="a2ml6o" fileName="newImg/icon_main_dawn.png" xy="5,3" group="n8_r2bf">
-      <gearDisplay controller="weather" pages="3"/>
-    </image>
-    <image id="n16_a2ml" name="n16" src="a2ml6p" fileName="newImg/icon_main_dusk.png" xy="5,3" group="n8_r2bf">
+    <image id="n19_c994" name="n19" src="hocd6q" fileName="newImg/icon_main_dusk.png" xy="5,2" size="12,12" group="n8_r2bf">
       <gearDisplay controller="weather" pages="2"/>
     </image>
+    <image id="n20_c994" name="n20" src="hocd6p" fileName="newImg/icon_main_dawn.png" xy="5,2" group="n8_r2bf">
+      <gearDisplay controller="weather" pages="3"/>
+    </image>
     <text id="n7_r2bf" name="tfTime" xy="25,0" size="34,18" group="n8_r2bf" fontSize="10" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" autoClearText="true" text=""/>
-    <group id="n8_r2bf" name="grpWeatherIcon" xy="0,0" size="60,18" collapsed="true"/>
+    <group id="n8_r2bf" name="grpWeatherIcon" xy="0,0" size="60,18"/>
   </displayList>
 </component>

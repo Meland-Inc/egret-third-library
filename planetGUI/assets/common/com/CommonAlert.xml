@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1334,750">
+<component size="1136,640">
   <displayList>
-    <image id="n0_hxf8" name="n0" src="qn8o2" fileName="img/bg_bag_2.png" xy="510,242" group="n8_mnl0"/>
-    <text id="n3_hxf8" name="tfTitle" xy="639,247" size="53,28" group="n8_mnl0" fontSize="24" color="#ffffff" text="确认"/>
-    <component id="n2_hxf8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" xy="783,240" size="42,43" group="n8_mnl0">
-      <Button icon="ui://te1gxawoqn8o4" selectedIcon="ui://te1gxawoqn8o4"/>
+    <image id="n18_jn1p" name="bg" src="efrs1m" fileName="newImg/bg_cm_3.png" xy="385,205" size="366,230" group="n26_jn1p"/>
+    <graph id="n19_jn1p" name="dragArea" xy="409,208" size="313,36" group="n26_jn1p" alpha="0" type="rect"/>
+    <component id="n20_jn1p" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" xy="704,207" size="36,36" group="n26_jn1p">
+      <Button icon="ui://te1gxawohpymyi7o"/>
     </component>
-    <component id="n5_hxf8" name="btnConfirm" src="qn8od" fileName="btn/btnCommon.xml" xy="690,412" group="n8_mnl0">
-      <Button title="确定" icon="ui://te1gxawoqn8o6"/>
+    <text id="n21_jn1p" name="tfTitle" xy="502,212" size="119,32" group="n26_jn1p" hideByEditor="true" visible="false" fontSize="20" color="#ffffff" align="center" vAlign="middle" ubb="true" autoSize="none" text="确认"/>
+    <text id="n22_jn1p" name="tfContent" xy="416,250" size="307,96" group="n26_jn1p" fontSize="18" color="#635c51" align="center" vAlign="middle" ubb="true" autoSize="none" bold="true" singleLine="true" text=""/>
+    <component id="n23_jn1p" name="btnConfirm" src="qn8od" fileName="btn/btnCommon.xml" xy="591,360" size="120,40" group="n26_jn1p">
+      <Button title="确定" titleColor="#472f16" titleFontSize="20" icon="ui://te1gxawoefrs1w"/>
     </component>
-    <text id="n6_hxf8" name="tfContent" xy="541,312" size="250,80" group="n8_mnl0" fontSize="18" color="#9a9a9a" ubb="true" autoSize="none" text="啊啊啊"/>
-    <component id="n7_er20" name="btnCancel" src="qn8od" fileName="btn/btnCommon.xml" xy="530,412" group="n8_mnl0">
-      <Button title="取消" titleColor="#ffffff" icon="ui://te1gxawoqn8o7"/>
+    <component id="n24_jn1p" name="btnCancel" src="qn8od" fileName="btn/btnCommon.xml" xy="432,360" size="120,40" group="n26_jn1p">
+      <Button title="取消" titleColor="#472f16" titleFontSize="20" icon="ui://te1gxawoqo8vi21"/>
     </component>
-    <group id="n8_mnl0" name="root" xy="510,240" size="315,230" advanced="true">
+    <image id="n25_jn1p" name="n25" src="rx7u27" fileName="newImg/img_cm_pattern.png" xy="387,417" size="358,14" group="n26_jn1p"/>
+    <group id="n26_jn1p" name="root" xy="385,205" size="366,230" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>
