@@ -8,10 +8,12 @@
     <component id="n4_trc2" name="comCustom" src="trc221y" fileName="com/comMarkCtnr.xml" xy="0,0" size="0,0">
       <gearDisplay controller="ctrMapMode" pages="0"/>
     </component>
+    <component id="n10_eksv" name="comNpc" src="trc221y" fileName="com/comMarkCtnr.xml" xy="243,48" size="0,0">
+      <gearDisplay controller="ctrMapMode" pages="0"/>
+    </component>
     <component id="n5_trc2" name="comTask" src="trc221y" fileName="com/comMarkCtnr.xml" xy="0,0" size="0,0">
       <gearDisplay controller="ctrMapMode" pages="0"/>
     </component>
-    <component id="n8_trc2" name="comHomeMark" src="trc221x" fileName="com/comHomeMark.xml" xy="567,319"/>
     <component id="n7_trc2" name="comMainPlayerIcon" src="j0s611" fileName="com/comMainPlayerIcon.xml" xy="568,319" touchable="false"/>
   </displayList>
 </component>
