@@ -1,69 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="852,430">
   <displayList>
-    <image id="n16_xg0e" name="n16" src="pu1zyi7b" fileName="img/bg_cm_1.png" pkg="te1gxawo" xy="0,0" size="830,430" group="n50_ihek"/>
-    <text id="n4_824h" name="tfTitle" xy="344,5" size="150,30" group="n50_ihek" fontSize="22" color="#ffffff" align="center" autoSize="none" text="箱子(小)"/>
-    <image id="n29_xg0e" name="n29" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="8,412" group="n46_xg0e"/>
-    <image id="n30_xg0e" name="n30" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="56,412" group="n46_xg0e"/>
-    <image id="n31_xg0e" name="n31" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="104,412" group="n46_xg0e"/>
-    <image id="n32_xg0e" name="n32" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="152,412" group="n46_xg0e"/>
-    <image id="n33_xg0e" name="n33" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="200,412" group="n46_xg0e"/>
-    <image id="n34_xg0e" name="n34" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="248,412" group="n46_xg0e"/>
-    <image id="n35_xg0e" name="n35" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="296,412" group="n46_xg0e"/>
-    <image id="n36_xg0e" name="n36" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="344,412" group="n46_xg0e"/>
-    <image id="n37_xg0e" name="n37" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="392,412" group="n46_xg0e"/>
-    <image id="n38_xg0e" name="n38" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="440,412" group="n46_xg0e"/>
-    <image id="n39_xg0e" name="n39" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="488,412" group="n46_xg0e"/>
-    <image id="n40_xg0e" name="n40" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="536,412" group="n46_xg0e"/>
-    <image id="n41_xg0e" name="n41" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="584,412" group="n46_xg0e"/>
-    <image id="n42_xg0e" name="n42" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="632,412" group="n46_xg0e"/>
-    <image id="n43_xg0e" name="n43" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="680,412" group="n46_xg0e"/>
-    <image id="n44_xg0e" name="n44" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="728,412" group="n46_xg0e"/>
-    <image id="n45_xg0e" name="n45" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="776,412" group="n46_xg0e"/>
-    <group id="n46_xg0e" name="n46" xy="8,412" size="816,14" group="n50_ihek" collapsed="true"/>
-    <image id="n17_xg0e" name="n17" src="pgixi5n" fileName="newImg/img_cm_bottom_7.png" pkg="te1gxawo" xy="34,48" size="364,29" group="n22_xg0e"/>
-    <text id="n10_824h" name="n10" xy="171,48" size="98,29" group="n22_xg0e" fontSize="22" color="#5b4b37" autoSize="none" text="我的背包"/>
-    <image id="n19_xg0e" name="n19" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="113,57" group="n22_xg0e"/>
-    <image id="n21_xg0e" name="n21" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="322,72" group="n22_xg0e" rotation="180"/>
-    <group id="n22_xg0e" name="tagMybag" xy="34,48" size="364,38" group="n50_ihek" collapsed="true"/>
-    <image id="n23_xg0e" name="n23" src="pgixi5n" fileName="newImg/img_cm_bottom_7.png" pkg="te1gxawo" xy="431,47" size="364,29" group="n27_xg0e"/>
-    <text id="n24_xg0e" name="n24" xy="568,47" size="93,29" group="n27_xg0e" fontSize="22" color="#5b4b37" align="center" autoSize="none" text="储物格"/>
-    <image id="n25_xg0e" name="n25" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="510,56" group="n27_xg0e"/>
-    <image id="n26_xg0e" name="n26" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="719,71" group="n27_xg0e" rotation="180"/>
-    <group id="n27_xg0e" name="tagStorage" xy="431,47" size="364,38" group="n50_ihek" collapsed="true"/>
-    <component id="n14_824h" name="btnLock" src="824h2b" fileName="btn/btnLock.xml" xy="30,4" group="n50_ihek"/>
-    <component id="n15_jlj8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="800,-10" size="52,52" group="n50_ihek">
+    <image id="n16_xg0e" name="n16" src="pu1zyi7b" fileName="img/bg_cm_1.png" pkg="te1gxawo" xy="4,0" size="830,430" group="n50_ihek"/>
+    <text id="n4_824h" name="tfTitle" xy="348,10" size="150,30" group="n50_ihek" fontSize="22" color="#ffffff" align="center" autoSize="none" text="箱子(小)"/>
+    <image id="n29_xg0e" name="n29" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="12,412" group="n46_xg0e"/>
+    <image id="n30_xg0e" name="n30" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="60,412" group="n46_xg0e"/>
+    <image id="n31_xg0e" name="n31" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="108,412" group="n46_xg0e"/>
+    <image id="n32_xg0e" name="n32" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="156,412" group="n46_xg0e"/>
+    <image id="n33_xg0e" name="n33" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="204,412" group="n46_xg0e"/>
+    <image id="n34_xg0e" name="n34" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="252,412" group="n46_xg0e"/>
+    <image id="n35_xg0e" name="n35" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="300,412" group="n46_xg0e"/>
+    <image id="n36_xg0e" name="n36" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="348,412" group="n46_xg0e"/>
+    <image id="n37_xg0e" name="n37" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="396,412" group="n46_xg0e"/>
+    <image id="n38_xg0e" name="n38" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="444,412" group="n46_xg0e"/>
+    <image id="n39_xg0e" name="n39" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="492,412" group="n46_xg0e"/>
+    <image id="n40_xg0e" name="n40" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="540,412" group="n46_xg0e"/>
+    <image id="n41_xg0e" name="n41" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="588,412" group="n46_xg0e"/>
+    <image id="n42_xg0e" name="n42" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="636,412" group="n46_xg0e"/>
+    <image id="n43_xg0e" name="n43" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="684,412" group="n46_xg0e"/>
+    <image id="n44_xg0e" name="n44" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="732,412" group="n46_xg0e"/>
+    <image id="n45_xg0e" name="n45" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="780,412" group="n46_xg0e"/>
+    <group id="n46_xg0e" name="n46" xy="12,412" size="816,14" group="n50_ihek" collapsed="true"/>
+    <image id="n17_xg0e" name="n17" src="pgixi5n" fileName="newImg/img_cm_bottom_7.png" pkg="te1gxawo" xy="38,48" size="364,29" group="n22_xg0e"/>
+    <text id="n10_824h" name="n10" xy="178,53" size="98,29" group="n22_xg0e" fontSize="22" color="#5b4b37" autoSize="none" text="我的背包"/>
+    <image id="n19_xg0e" name="n19" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="117,57" group="n22_xg0e"/>
+    <image id="n21_xg0e" name="n21" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="326,72" group="n22_xg0e" rotation="180"/>
+    <group id="n22_xg0e" name="tagMybag" xy="38,48" size="364,38" group="n50_ihek" collapsed="true"/>
+    <image id="n23_xg0e" name="n23" src="pgixi5n" fileName="newImg/img_cm_bottom_7.png" pkg="te1gxawo" xy="435,47" size="364,29" group="n27_xg0e"/>
+    <text id="n24_xg0e" name="n24" xy="572,51" size="93,29" group="n27_xg0e" fontSize="22" color="#5b4b37" align="center" autoSize="none" text="储物格"/>
+    <image id="n25_xg0e" name="n25" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="514,56" group="n27_xg0e"/>
+    <image id="n26_xg0e" name="n26" src="pgixi5o" fileName="newImg/img_cm_bottom_8.png" pkg="te1gxawo" xy="723,71" group="n27_xg0e" rotation="180"/>
+    <group id="n27_xg0e" name="tagStorage" xy="435,47" size="364,38" group="n50_ihek" collapsed="true"/>
+    <image id="n18_xg0e" name="n18" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="38,85" size="364,306" group="n48_xg0e"/>
+    <list id="n12_824h" name="listBag" xy="40,89" size="360,293" group="n48_xg0e" layout="flow_hz" overflow="scroll" scrollBarFlags="4" margin="1,1,1,1" lineGap="2" colGap="-1" lineItemCount="5" defaultItem="ui://te1gxawoj29zi6u">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n48_xg0e" name="n48" xy="38,85" size="364,306" group="n50_ihek" collapsed="true"/>
+    <image id="n28_xg0e" name="n28" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="437,86" size="364,306" group="n49_xg0e"/>
+    <list id="n13_824h" name="listBox" xy="440,89" size="360,293" group="n49_xg0e" layout="flow_hz" overflow="scroll" scrollBarFlags="4" margin="1,1,1,1" lineGap="1" colGap="-1" lineItemCount="5" defaultItem="ui://te1gxawoj29zi6u">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n49_xg0e" name="n49" xy="436,-7" size="411,401" group="n50_ihek" collapsed="true"/>
+    <component id="n15_jlj8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="795,-7" size="52,52" group="n50_ihek">
       <Button icon="ui://te1gxawopu1zyi7e"/>
     </component>
-    <image id="n18_xg0e" name="n18" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="34,85" size="364,306" group="n48_xg0e"/>
-    <list id="n12_824h" name="listBag" xy="36,89" size="360,293" group="n48_xg0e" layout="flow_hz" overflow="scroll" scrollBarFlags="4" margin="1,1,1,1" lineGap="2" colGap="-1" lineItemCount="5" defaultItem="ui://te1gxawoj29zi6u">
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-    </list>
-    <group id="n48_xg0e" name="n48" xy="34,85" size="364,306" group="n50_ihek" collapsed="true"/>
-    <image id="n28_xg0e" name="n28" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="433,86" size="364,306" group="n49_xg0e"/>
-    <list id="n13_824h" name="listBox" xy="436,89" size="360,293" group="n49_xg0e" layout="flow_hz" overflow="scroll" scrollBarFlags="4" margin="1,1,1,1" lineGap="1" colGap="-1" lineItemCount="5" defaultItem="ui://te1gxawoj29zi6u">
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-    </list>
-    <group id="n49_xg0e" name="n49" xy="433,86" size="364,306" group="n50_ihek" collapsed="true"/>
-    <group id="n50_ihek" name="root" xy="0,-10" size="852,440" advanced="true" collapsed="true">
+    <group id="n50_ihek" name="root" xy="4,-7" size="843,438" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>

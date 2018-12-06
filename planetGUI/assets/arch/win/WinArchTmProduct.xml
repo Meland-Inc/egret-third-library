@@ -15,8 +15,7 @@
       <item title="杂物"/>
       <item title="其他"/>
     </list>
-    <list id="n21_lxnu" name="listFormula" xy="249,176" size="460,320" group="n48_w34u" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="5" colGap="2" lineItemCount="6" defaultItem="ui://kdeyuiwwfi7r2l">
-      <item/>
+    <list id="n21_lxnu" name="listFormula" xy="258,184" size="445,317" group="n48_w34u" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="6" colGap="2" lineItemCount="6" defaultItem="ui://te1gxawo11slcyi8e">
       <item/>
       <item/>
       <item/>
@@ -34,6 +33,8 @@
     </component>
     <group id="n48_w34u" name="n48" xy="60,126" size="663,402" group="n40_e8kh"/>
     <component id="n50_acec" name="n50" src="pqjb2g" fileName="com/ComSynthesis.xml" xy="734,126" size="330,400" group="n40_e8kh"/>
-    <group id="n40_e8kh" name="root" xy="27,59" size="1073,502" advanced="true"/>
+    <group id="n40_e8kh" name="root" xy="27,59" size="1073,502" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
   </displayList>
 </component>
