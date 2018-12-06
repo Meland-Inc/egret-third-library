@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="270,400" designImage="ui://i25v0ebktwvnt" designImageOffsetX="-789" designImageOffsetY="-129" designImageAlpha="0">
-  <controller name="ctrlStatus" pages="0,normal,1,make,2,lock" selected="1"/>
+  <controller name="ctrlStatus" pages="0,normal,1,make,2,lock" selected="0"/>
   <displayList>
     <component id="n25_acec" name="title" src="w34u2h" fileName="com/ComTitle.xml" pkg="te1gxawo" xy="0,0" size="270,28">
       <relation target="" sidePair="rightext-right"/>
@@ -9,7 +9,7 @@
     <image id="n1_pqjb" name="imgSynthersisBG" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="0,37" size="270,364">
       <relation target="" sidePair="rightext-right"/>
     </image>
-    <list id="n33_npan" name="lstComponent" xy="2,165" size="331,184" scale="0.8,0.8" layout="flow_hz" overflow="scroll" colGap="28" defaultItem="ui://kdeyuiwwfi7r2l" align="center" vAlign="middle">
+    <list id="n33_npan" name="lstComponent" xy="2,165" size="331,184" scale="0.8,0.8" layout="flow_hz" overflow="scroll" colGap="28" defaultItem="ui://kdeyuiwwfi7r2l" align="center" vAlign="middle" autoClearItems="true">
       <relation target="" sidePair="center-center"/>
       <item/>
       <item/>
@@ -39,7 +39,7 @@
     <loader id="n11_pqjb" name="ladProductIcon" xy="30,73" size="45,45" group="n12_pqjb" aspect="true" align="center" vAlign="middle" fill="scale">
       <relation target="n10_pqjb" sidePair="center-center,middle-middle"/>
     </loader>
-    <group id="n12_pqjb" name="product" xy="13,55" size="243,84" advanced="true" collapsed="true">
+    <group id="n12_pqjb" name="product" xy="13,55" size="243,84" advanced="true">
       <relation target="" sidePair="center-center"/>
     </group>
     <image id="n7_pqjb" name="img1" src="kddk2d" fileName="newImg/img_formula_bottom_1.png" xy="19,138">
