@@ -172,6 +172,8 @@
     <image id="hocd6p" name="icon_main_dawn.png" path="/newImg/"/>
     <image id="hocd6q" name="icon_main_dusk.png" path="/newImg/"/>
     <component id="ncv76r" name="ComExperience.xml" path="/win/"/>
+    <component id="yogx6s" name="comTaskTarget.xml" path="/com/"/>
+    <component id="ft296t" name="comTaskTargetCtnr.xml" path="/com/"/>
   </resources>
   <publish name="main"/>
 </packageDescription>
