@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640">
+<component size="1136,640" designImage="ui://i25v0ebkpgixk" designImageAlpha="0" designImageLayer="1">
   <displayList>
-    <image id="n0_824h" name="n0" src="lxnu1" fileName="img/bg_billboard.png" xy="221,155" size="694,275" group="n10_mnl0"/>
-    <text id="n2_824h" name="n2" xy="528,164" size="77,28" group="n10_mnl0" fontSize="24" color="#ffffff" text="告示牌"/>
-    <text id="n3_824h" name="inpContent" xy="268,220" size="600,190" group="n10_mnl0" input="true" fontSize="20" color="#57a7df" autoSize="none" text=""/>
-    <graph id="n11_mnl0" name="dragArea" xy="221,155" size="690,48" group="n10_mnl0" alpha="0" type="rect"/>
-    <component id="n4_jlj8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="880,145" size="56,57" group="n10_mnl0">
-      <Button icon="ui://eunktclqsz331"/>
+    <image id="n0_824h" name="n0" src="pu1zyi7b" fileName="img/bg_cm_1.png" pkg="te1gxawo" xy="216,178" size="703,285" group="n15_ileq"/>
+    <image id="n14_ileq" name="textBg" src="ot9si2v" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="236,233" size="662,201" group="n15_ileq"/>
+    <image id="n12_ileq" name="titleBg" src="efrs22" fileName="newImg/img_cm_title1.png" pkg="te1gxawo" xy="472,180" group="n15_ileq"/>
+    <text id="n2_824h" name="title" xy="472,190" size="177,28" group="n15_ileq" fontSize="20" color="#f5ebde" align="center" autoSize="none" text="告示牌"/>
+    <text id="n3_824h" name="inpContent" xy="268,243" size="600,190" group="n15_ileq" input="true" fontSize="16" color="#53432f" autoSize="none" text="我是告示板内容"/>
+    <component id="n4_jlj8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="871,174" size="52,52" group="n15_ileq">
+      <Button icon="ui://te1gxawopu1zyi7e"/>
     </component>
-    <group id="n10_mnl0" name="root" xy="221,145" size="715,285" advanced="true">
+    <image id="n13_ileq" name="" src="qo8vi1x" fileName="newImg/img_cm_pattern2.png" pkg="te1gxawo" xy="222,437" size="689,21" group="n15_ileq"/>
+    <group id="n15_ileq" name="root" xy="216,174" size="707,289" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>
