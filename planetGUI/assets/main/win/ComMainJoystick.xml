@@ -4,14 +4,14 @@
     <component id="n5_rdy4" name="btnAttack" src="w80lo" fileName="btn/btnAttack.xml" xy="90,168">
       <Button icon="ui://5hs1fuejrdy43h"/>
     </component>
-    <component id="n6_rdy4" name="btnOperate" src="rdy456" fileName="btn/btnOperate.xml" xy="0,108">
+    <component id="n6_rdy4" name="btnOperate" src="rdy456" fileName="btn/btnOperate.xml" xy="0,108" visible="false">
       <Button icon="ui://5hs1fuejrdy43i"/>
     </component>
     <component id="n7_rdy4" name="btnBuild" src="rdy457" fileName="btn/btnBuild.xml" xy="189,0">
       <Button icon="ui://5hs1fuejrdy434"/>
     </component>
-    <component id="n8_lhu4" name="btnOpen" src="rdy456" fileName="btn/btnOperate.xml" xy="82,29">
-      <Button icon="ui://5hs1fuejrdy43c"/>
+    <component id="n8_lhu4" name="btnWorkbench" src="rdy456" fileName="btn/btnOperate.xml" xy="82,29" visible="false">
+      <Button icon="ui://5hs1fuejr2bf5y"/>
     </component>
   </displayList>
 </component>
