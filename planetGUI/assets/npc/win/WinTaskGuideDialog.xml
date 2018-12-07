@@ -4,10 +4,12 @@
     <image id="n0_gxw3" name="bg" src="efrs1p" fileName="newImg/bg_cm_6.png" pkg="te1gxawo" xy="152,466" size="850,140" group="n8_gxw3">
       <relation target="" sidePair="width-width"/>
     </image>
-    <image id="n2_gxw3" name="nameBg" src="efrs24" fileName="newImg/img_cm_title3.png" pkg="te1gxawo" xy="223,452" group="n8_gxw3"/>
-    <text id="n3_gxw3" name="tfName" xy="244,460" size="126,19" group="n8_gxw3" fontSize="18" color="#ffffff" align="center" autoSize="none" text="名字"/>
+    <image id="n2_gxw3" name="nameBg" src="efrs24" fileName="newImg/img_cm_title3.png" pkg="te1gxawo" xy="223,452" group="n14_r43m"/>
+    <text id="n3_gxw3" name="tfName" xy="244,460" size="126,23" group="n14_r43m" fontSize="18" color="#ffffff" align="center" autoSize="height" text="名字"/>
+    <group id="n14_r43m" name="grpName" xy="223,452" size="170,36" group="n8_gxw3" advanced="true" collapsed="true"/>
     <text id="n4_gxw3" name="tfSpeech" xy="352,507" size="515,70" group="n8_gxw3" fontSize="18" color="#4e4237" ubb="true" autoSize="none" text="">
       <relation target="" sidePair="rightext-right"/>
+      <relation target="n6_gxw3" sidePair="leftext-right"/>
     </text>
     <image id="n10_tikl" name="n10" src="kvvk2i1f" fileName="imgNew/img_guide_2.png" pkg="mp92elpx" xy="867,538" group="n13_tikl"/>
     <text id="n11_tikl" name="tfClickContinue" xy="875,531" size="77,23" group="n13_tikl" fontSize="18" color="#645849" text="点击继续"/>
@@ -16,8 +18,8 @@
       <relation target="" sidePair="right-right"/>
     </group>
     <image id="n5_gxw3" name="headIconBg" src="kvvk2i1e" fileName="imgNew/img_guide_1.png" pkg="mp92elpx" xy="242,499" group="n7_gxw3"/>
-    <loader id="n6_gxw3" name="ladHeadIcon" xy="247,503" pivot="0.5,0.5" size="68,66" group="n7_gxw3" url="ui://7xhwdeuzctbhb" fill="scaleFree"/>
-    <group id="n7_gxw3" name="grpIcon" xy="242,499" size="76,76" group="n8_gxw3" advanced="true" collapsed="true"/>
+    <loader id="n6_gxw3" name="ladHeadIcon" xy="247,503" size="68,66" group="n7_gxw3" url="ui://7xhwdeuzctbhb" align="center" vAlign="middle" fill="scale"/>
+    <group id="n7_gxw3" name="grpIcon" xy="242,499" size="76,76" group="n8_gxw3" advanced="true"/>
     <group id="n8_gxw3" name="grpDialog" xy="152,452" size="850,154" advanced="true">
       <relation target="" sidePair="bottom-bottom"/>
     </group>
