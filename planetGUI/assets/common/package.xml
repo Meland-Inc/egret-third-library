@@ -313,15 +313,21 @@
     <image id="e8y1cyi8h" name="img_cm_slider4.png" path="/newImg/" exported="true" scale="9grid" scale9grid="7,10,14,20"/>
     <image id="e8y1cyi8i" name="img_cm_slider3.png" path="/newImg/" exported="true" scale="" scale9grid="0,68,3,136"/>
     <component id="w34u2h" name="ComTitle.xml" path="/com/" exported="true"/>
-    <image id="lhu4cyi8j" name="icon_cm_itemwork.png" path="/newImg/"/>
-    <image id="lhu4cyi8k" name="img_cm_swim1.png" path="/newImg/"/>
-    <image id="lhu4cyi8l" name="img_cm_swim2.png" path="/newImg/"/>
-    <image id="lhu4cyi8m" name="img_cm_swim3.png" path="/newImg/"/>
-    <image id="lhu4cyi8n" name="img_cm_swim4.png" path="/newImg/"/>
-    <image id="lhu4cyi8o" name="img_cm_swim5.png" path="/newImg/"/>
-    <image id="lhu4cyi8p" name="img_cm_title8.png" path="/newImg/"/>
+    <image id="lhu4cyi8j" name="icon_cm_itemwork.png" path="/newImg/" exported="true"/>
+    <image id="lhu4cyi8k" name="img_cm_swim1.png" path="/newImg/" exported="true"/>
+    <image id="lhu4cyi8l" name="img_cm_swim2.png" path="/newImg/" exported="true"/>
+    <image id="lhu4cyi8m" name="img_cm_swim3.png" path="/newImg/" exported="true"/>
+    <image id="lhu4cyi8n" name="img_cm_swim4.png" path="/newImg/" exported="true"/>
+    <image id="lhu4cyi8o" name="img_cm_swim5.png" path="/newImg/" exported="true"/>
+    <image id="lhu4cyi8p" name="img_cm_title8.png" path="/newImg/" exported="true"/>
     <image id="edsmcyi8q" name="icon_cm_return2.png" path="/newImg/" exported="true"/>
     <image id="edsmcyi8r" name="icon_cm_zoom3.png" path="/newImg/" exported="true"/>
+    <image id="edsmcyi8s" name="img_cm_bottom_18.png" path="/newImg/" exported="true" scale="9grid" scale9grid="18,18,36,36"/>
+    <image id="edsmcyi8t" name="img_cm_bottom_19.png" path="/newImg/" exported="true" scale="9grid" scale9grid="1,1,9,4"/>
+    <image id="edsmcyi8u" name="img_cm_bottom_20.png" path="/newImg/" exported="true" scale="9grid" scale9grid="18,18,36,36"/>
+    <image id="edsmcyi8v" name="img_cm_doubtprompt.png" path="/newImg/" exported="true"/>
+    <image id="edsmcyi8w" name="img_cm_tips_3.png" path="/newImg/" exported="true"/>
+    <image id="edsmcyi8x" name="img_cm_tips_4.png" path="/newImg/" exported="true"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>

@@ -1,30 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkedsmu">
   <displayList>
-    <image id="n10_flp7" name="n10" src="flp75m" fileName="img/bg_code_1(1).png" xy="0,0" size="1136,640" hideByEditor="true">
-      <relation target="" sidePair="width-width,height-height"/>
-    </image>
-    <image id="n14_edsm" name="n14" src="efrs1o" fileName="newImg/bg_cm_5.png" pkg="te1gxawo" xy="0,0" size="1136,640" hideByEditor="true"/>
-    <component id="n6_n1c0" name="CategoryList" src="n1c01l" fileName="com/CategoryList.xml" xy="0,56" size="157,584" hideByEditor="true" controller="deleteLayer,0">
+    <image id="n14_edsm" name="n14" src="efrs1o" fileName="newImg/bg_cm_5.png" pkg="te1gxawo" xy="0,0" size="1136,640"/>
+    <component id="n6_n1c0" name="CategoryList" src="n1c01l" fileName="com/CategoryList.xml" xy="7,53" size="165,560" controller="deleteLayer,0">
       <relation target="" sidePair="height-height,top-top"/>
     </component>
-    <component id="n5_n1c0" name="Stage" src="n1c01j" fileName="com/Stage.xml" xy="157,56" size="979,584" hideByEditor="true">
+    <component id="n5_n1c0" name="Stage" src="n1c01j" fileName="com/Stage.xml" xy="157,56" size="979,584">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
-    <component id="n4_y583" name="Codeblocks" src="y583d" fileName="com/CodeblockPool.xml" xy="157,56" size="375,584" hideByEditor="true" blend="none">
+    <component id="n4_y583" name="Codeblocks" src="y583d" fileName="com/CodeblockPool.xml" xy="164,56" size="437,556" blend="none">
       <relation target="" sidePair="height-height"/>
     </component>
-    <component id="n12_k1p2" name="mask" src="k1p26w" fileName="com/RunningState.xml" xy="0,56" size="1136,584" hideByEditor="true"/>
-    <component id="n8_n1c0" name="Header" src="n1c01o" fileName="com/Header.xml" xy="0,0" size="1136,56" hideByEditor="true">
-      <relation target="" sidePair="width-width"/>
-    </component>
-    <component id="n13_sdqn" name="templatePanel" src="sdqn71" fileName="com/TemplatePanel.xml" xy="220,103" hideByEditor="true">
+    <component id="n12_k1p2" name="mask" src="k1p26w" fileName="com/RunningState.xml" xy="0,56" size="1136,584"/>
+    <component id="n13_sdqn" name="templatePanel" src="sdqn71" fileName="com/TemplatePanel.xml" xy="220,103">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
-    <component id="n15_edsm" name="n15" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="40,5" size="126,40">
+    <component id="n15_edsm" name="btnReset" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="40,5" size="126,40">
       <Button title="恢复默认" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawoqo8vi21" selectedIcon="ui://te1gxawoqo8vi21"/>
     </component>
-    <component id="n16_edsm" name="n16" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="180,5" size="136,40">
+    <component id="n16_edsm" name="btnTemplate" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="180,5" size="136,40">
       <Button title="代码块模版" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawoefrs1w" selectedIcon="ui://te1gxawoefrs1w"/>
     </component>
     <image id="n17_edsm" name="n17" src="efrs23" fileName="newImg/img_cm_title2.png" pkg="te1gxawo" xy="482,9"/>

@@ -31,37 +31,33 @@
     <component id="t09yv" name="VerticalScrollComponent.xml" path="/com/"/>
     <image id="n1c0x" name="btn_blue_1.png" path="/img/"/>
     <image id="n1c0y" name="btn_blue_2.png" path="/img/"/>
-    <component id="n1c0z" name="Category_Control.xml" path="/com/"/>
+    <component id="n1c0z" name="btnCatControl.xml" path="/btn/"/>
     <image id="n1c010" name="btn_green_1.png" path="/img/"/>
     <image id="n1c011" name="btn_green_2.png" path="/img/"/>
-    <component id="n1c012" name="Category_Operation.xml" path="/com/"/>
+    <component id="n1c012" name="btnCatOperation.xml" path="/btn/"/>
     <image id="n1c013" name="btn_lemon_1.png" path="/img/"/>
     <image id="n1c014" name="btn_lemon_2.png" path="/img/"/>
-    <component id="n1c015" name="Category_Move.xml" path="/com/"/>
+    <component id="n1c015" name="btnCatMove.xml" path="/btn/"/>
     <image id="n1c016" name="btn_orange_1.png" path="/img/"/>
     <image id="n1c017" name="btn_orange_2.png" path="/img/"/>
-    <component id="n1c018" name="Category_Function.xml" path="/com/"/>
+    <component id="n1c018" name="btnCatFunction.xml" path="/btn/"/>
     <image id="n1c019" name="btn_purple_1.png" path="/img/"/>
     <image id="n1c01a" name="btn_purple_2.png" path="/img/"/>
-    <component id="n1c01b" name="Category_Event.xml" path="/com/"/>
+    <component id="n1c01b" name="btnCatEvent.xml" path="/btn/"/>
     <image id="n1c01c" name="btn_red_1.png" path="/img/"/>
     <image id="n1c01d" name="btn_red_2.png" path="/img/"/>
-    <component id="n1c01e" name="Category_Prop.xml" path="/com/"/>
+    <component id="n1c01e" name="btnCatProp.xml" path="/btn/"/>
     <image id="n1c01f" name="btn_yellow_1.png" path="/img/"/>
     <image id="n1c01g" name="btn_yellow_2.png" path="/img/"/>
-    <component id="n1c01h" name="Category_Detect.xml" path="/com/"/>
+    <component id="n1c01h" name="btnCatDetect.xml" path="/btn/"/>
     <component id="n1c01j" name="Stage.xml" path="/com/"/>
     <component id="n1c01l" name="CategoryList.xml" path="/com/"/>
     <image id="n1c01m" name="bg_code_5.png" path="/img/"/>
-    <component id="n1c01o" name="Header.xml" path="/com/"/>
     <image id="n1c01p" name="icon_edit.png" path="/img/"/>
     <image id="n1c01q" name="btn_restore.png" path="/img/"/>
-    <component id="n1c01r" name="Restore.xml" path="/com/"/>
     <image id="n1c01s" name="img_check_1.png" path="/img/"/>
     <image id="n1c01t" name="img_check_2.png" path="/img/"/>
-    <component id="n1c01u" name="Checkbox.xml" path="/com/"/>
     <image id="n1c01v" name="btn_return.png" path="/img/"/>
-    <component id="n1c01w" name="Return.xml" path="/com/"/>
     <image id="n1c01x" name="bg_code_4.png" path="/img/"/>
     <image id="n1c01y" name="common_4.png" path="/img/" scale="9grid" scale9grid="12,9,29,6"/>
     <image id="n1c01z" name="btn_purple_1(1).png" path="/img/"/>
@@ -70,19 +66,18 @@
     <image id="t3y122" name="bg_code_2.png" path="/img/"/>
     <image id="t3y123" name="bg_code_3.png" path="/img/"/>
     <image id="t3y124" name="btn_undo.png" path="/img/"/>
-    <component id="t3y125" name="Undo.xml" path="/com/"/>
-    <component id="t3y126" name="StageButtons.xml" path="/com/"/>
+    <component id="t3y125" name="btnUndo.xml" path="/btn/"/>
     <image id="t3y127" name="btn_rotating.png" path="/img/"/>
-    <component id="t3y128" name="Reset.xml" path="/com/"/>
+    <component id="t3y128" name="btnReset.xml" path="/btn/"/>
     <image id="t3y129" name="btn_enarge.png" path="/img/"/>
-    <component id="t3y12a" name="ZoomOut.xml" path="/com/"/>
+    <component id="t3y12a" name="btnZoomOut.xml" path="/btn/"/>
     <image id="t3y12b" name="btn_narrow.png" path="/img/"/>
-    <component id="t3y12c" name="ZoomIn.xml" path="/com/"/>
+    <component id="t3y12c" name="btnZoomIn.xml" path="/btn/"/>
     <image id="t3y12d" name="img_edit_bg.png" path="/img/" scale="9grid" scale9grid="15,52,30,104"/>
     <image id="t3y12e" name="btn_share.png" path="/img/"/>
-    <component id="t3y12f" name="Share.xml" path="/com/"/>
+    <component id="t3y12f" name="btnShare.xml" path="/btn/"/>
     <image id="t3y12g" name="btn_run.png" path="/img/"/>
-    <component id="t3y12h" name="Run.xml" path="/com/"/>
+    <component id="t3y12h" name="btnRun.xml" path="/btn/"/>
     <component id="e8uu2i" name="ForkableStartBGBlue.xml" path="/codeBlock/"/>
     <image id="e8uu2j" name="1.png" path="/img/" scale="9grid" scale9grid="61,10,2,36" gridTile="3"/>
     <image id="e8uu2k" name="2.png" path="/img/" scale="9grid" scale9grid="1,10,2,31" gridTile="3"/>
@@ -221,8 +216,8 @@
     <image id="dib96k" name="btn_code_tips.png" path="/img/"/>
     <image id="dib96l" name="bg_code_tips_2.png" path="/img/" scale="9grid" scale9grid="12,12,22,22"/>
     <image id="dib96n" name="bg_code_tips_1.png" path="/img/" scale="9grid" scale9grid="12,12,264,86"/>
-    <component id="dib96o" name="Tips.xml" path="/com/" exported="true"/>
-    <component id="dib96p" name="TipsWithImage.xml" path="/com/" exported="true"/>
+    <component id="dib96o" name="btnTips.xml" path="/btn/" exported="true"/>
+    <component id="dib96p" name="btnTipsWithImage.xml" path="/btn/" exported="true"/>
     <component id="dib96r" name="RunnintMask.xml" path="/com/"/>
     <image id="dib96s" name="bg_code_6.png" path="/img/"/>
     <image id="dib96t" name="btn_orange.png" path="/img/"/>
@@ -230,22 +225,20 @@
     <image id="dib96v" name="frame_codeloading.png" path="/img/"/>
     <component id="k1p26w" name="RunningState.xml" path="/com/"/>
     <image id="k1p26x" name="bg_code_6(1).png" path="/img/"/>
-    <component id="k1p26z" name="StoppingButton.xml" path="/com/"/>
-    <component id="k1p270" name="TemplateSaver.xml" path="/com/"/>
+    <component id="k1p26z" name="btnStopping.xml" path="/btn/"/>
     <component id="sdqn71" name="TemplatePanel.xml" path="/com/"/>
     <component id="sdqn72" name="Template.xml" path="/com/" exported="true"/>
     <image id="sdqn73" name="img_code_11(1).png" path="/img/"/>
     <image id="sdqn74" name="btn_code_name.png" path="/img/"/>
-    <component id="sdqn76" name="EditButton.xml" path="/com/"/>
+    <component id="sdqn76" name="btnEdit.xml" path="/btn/"/>
     <component id="sdqn77" name="NewLabel.xml" path="/com/"/>
     <image id="sdqn78" name="img_code_new.png" path="/img/"/>
     <image id="sdqn79" name="img_code_sigh.png" path="/img/" exported="true"/>
     <image id="sdqn7a" name="img_code_add.png" path="/img/" exported="true"/>
     <image id="sdqn7b" name="bg_bag.png" path="/img/" scale="9grid" scale9grid="20,50,654,383"/>
     <image id="sdqn7c" name="btn_code_stencil.png" path="/img/"/>
-    <component id="sdqn7d" name="TemplateButton.xml" path="/com/"/>
     <image id="sdqn7e" name="btn_code_save.png" path="/img/"/>
-    <component id="sdqn7f" name="SaveButton.xml" path="/com/"/>
+    <component id="sdqn7f" name="btnSave.xml" path="/btn/"/>
     <image id="8sek7g" name="orange_10_1(1).png" path="/img/" scale="9grid" scale9grid="93,17,2,26"/>
     <image id="8sek7h" name="img_code_hexagon.png" path="/img/"/>
     <component id="azxf7i" name="CodeblockTemplateContainer.xml" path="/com/"/>
