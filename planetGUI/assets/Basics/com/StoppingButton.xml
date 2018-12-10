@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="110,41" extention="Button">
-  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+<component size="120,40" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
   <displayList>
-    <image id="n1" name="n1" src="dib96t" fileName="btn_orange.png" xy="0,0">
-      <relation target="" sidePair="width-width,height-height"/>
-    </image>
-    <text id="n2_k1p2" name="n2" xy="12,5" size="85,28" fontSize="20" color="#af7b38" align="center" vAlign="middle" leading="0" autoSize="none" text="停止运行"/>
+    <image id="n4_edsm" name="n4" src="efrs1x" fileName="newImg/btn_cm_yellow2.png" pkg="te1gxawo" xy="0,0" size="120,40"/>
+    <text id="n5_edsm" name="n5" xy="12,5" size="95,29" fontSize="22" color="#672f16" text="停止运行"/>
   </displayList>
   <Button/>
 </component>
