@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" designImage="ui://i25v0ebkkvvke" designImageAlpha="100">
+<component size="1136,640" designImage="ui://i25v0ebkkvvke" designImageAlpha="0">
   <displayList>
     <list id="n2_r1t9" name="lstOptions" xy="824,289" size="227,156" layout="flow_hz" lineGap="7" defaultItem="ui://tis07nuvxhg9s" vAlign="bottom" autoClearItems="true">
       <relation target="" sidePair="bottom-bottom,right-right"/>
@@ -16,13 +16,14 @@
     </component>
     <image id="n15_r1t9" name="nameBg" src="efrs24" fileName="newImg/img_cm_title3.png" pkg="te1gxawo" xy="223,452" group="n26_elis"/>
     <text id="n16_r1t9" name="tfName" xy="244,460" size="126,19" group="n26_elis" fontSize="18" color="#ffffff" align="center" autoSize="none" text="名字"/>
-    <text id="n19_r1t9" name="tfSpeech" xy="352,507" size="515,70" group="n26_elis" fontSize="18" color="#4e4237" ubb="true" autoSize="none" text="">
+    <text id="n19_r1t9" name="tfSpeech" xy="352,507" size="514,70" group="n26_elis" fontSize="18" color="#4e4237" ubb="true" autoSize="none" text="">
       <relation target="" sidePair="rightext-right"/>
+      <relation target="n18_r1t9" sidePair="leftext-right"/>
     </text>
     <image id="n17_r1t9" name="headIconBg" src="kvvk2i1e" fileName="imgNew/img_guide_1.png" pkg="mp92elpx" xy="242,499" group="n24_r1t9"/>
-    <loader id="n18_r1t9" name="ladHeadIcon" xy="247,503" pivot="0.5,0.5" size="68,66" group="n24_r1t9" url="ui://7xhwdeuzctbhb" fill="scaleFree"/>
+    <loader id="n18_r1t9" name="ladHeadIcon" xy="247,503" size="68,66" group="n24_r1t9" url="ui://7xhwdeuzctbhb" align="center" vAlign="middle" fill="scale"/>
     <group id="n24_r1t9" name="grpIcon" xy="242,499" size="76,76" group="n26_elis" advanced="true"/>
-    <group id="n26_elis" name="grpDialog" xy="152,452" size="889,154" advanced="true" collapsed="true">
+    <group id="n26_elis" name="grpDialog" xy="152,452" size="889,154" advanced="true">
       <relation target="" sidePair="bottom-bottom"/>
     </group>
   </displayList>
