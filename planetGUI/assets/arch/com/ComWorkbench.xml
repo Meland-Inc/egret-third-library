@@ -6,10 +6,10 @@
   <displayList>
     <image id="n0_g7xw" name="imgSynthersisBG" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="0,37" size="300,364"/>
     <component id="n17_sg4g" name="btnBag" src="oliri6q" fileName="btn/rbtnScale.xml" pkg="te1gxawo" xy="15,0" size="130,37">
-      <Button checked="true" title="物品栏" icon="ui://te1gxawojjanyi86" selectedIcon="ui://te1gxawojjanyi87" controller="ctrlType" page="0"/>
+      <Button checked="true" title="物品栏" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawojjanyi86" selectedIcon="ui://te1gxawojjanyi87" controller="ctrlType" page="0"/>
     </component>
     <component id="n18_sg4g" name="btnFormula" src="oliri6q" fileName="btn/rbtnScale.xml" pkg="te1gxawo" xy="155,0" size="130,37">
-      <Button title="配方栏" icon="ui://te1gxawojjanyi86" selectedIcon="ui://te1gxawojjanyi87" controller="ctrlType" page="1"/>
+      <Button title="配方栏" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawojjanyi86" selectedIcon="ui://te1gxawojjanyi87" controller="ctrlType" page="1"/>
     </component>
     <list id="n22_twvn" name="lstBench" xy="6,49" size="288,218" layout="flow_hz" overflow="scroll" defaultItem="ui://te1gxawoj29zi6u">
       <gearDisplay controller="ctrlType" pages="0"/>

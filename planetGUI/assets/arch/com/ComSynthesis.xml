@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="270,400" designImage="ui://i25v0ebktwvnt" designImageOffsetX="-789" designImageOffsetY="-129" designImageAlpha="0">
-  <controller name="ctrlStatus" pages="0,normal,1,make,2,lock" selected="0"/>
+  <controller name="ctrlStatus" pages="0,normal,1,make,2,lock" selected="1"/>
   <displayList>
     <component id="n25_acec" name="title" src="w34u2h" fileName="com/ComTitle.xml" pkg="te1gxawo" xy="0,0" size="270,28">
       <relation target="" sidePair="rightext-right"/>
@@ -76,16 +76,24 @@
       <relation target="" sidePair="center-center"/>
     </text>
     <group id="n24_nxks" name="lock" xy="-10,339" size="290,25"/>
+    <image id="n35_gem0" name="n35" src="jjanyi89" fileName="newImg/img_cm_schedule_1.png" pkg="te1gxawo" xy="42,328" size="186,18">
+      <gearDisplay controller="ctrlStatus" pages="1"/>
+      <relation target="" sidePair="center-center"/>
+    </image>
     <component id="n26_twvn" name="pbrArchMaking" src="lxnu1d" fileName="pbr/pbrArchMaking.xml" xy="42,328">
       <gearDisplay controller="ctrlStatus" pages="1"/>
       <relation target="" sidePair="center-center"/>
-      <ProgressBar value="100" max="100"/>
+      <ProgressBar value="75" max="100"/>
     </component>
+    <text id="n34_gem0" name="n34" xy="112,327" size="47,20" fontSize="14" color="#ffffff" leading="0" strokeColor="#584736" strokeSize="2" text="制作中">
+      <gearDisplay controller="ctrlStatus" pages="1"/>
+      <relation target="" sidePair="center-center"/>
+    </text>
     <loader id="n31_twvn" name="ladMakeIcon" xy="47,351" size="35,35">
       <gearDisplay controller="ctrlStatus" pages="1"/>
       <relation target="" sidePair="center-center"/>
     </loader>
-    <text id="n32_twvn" name="tfMakeNum" xy="97,357" size="35,22" fontSize="16" color="#584736" vAlign="middle" leading="0" vars="true" text="{cur = 0}/{total = 0}">
+    <text id="n32_twvn" name="tfMakeNum" xy="100,357" size="28,22" fontSize="16" color="#584736" vAlign="middle" leading="0" vars="true" text="{cur=0}/{total=0}">
       <gearDisplay controller="ctrlStatus" pages="1"/>
       <relation target="" sidePair="center-center"/>
     </text>
