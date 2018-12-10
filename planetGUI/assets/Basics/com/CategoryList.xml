@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="161,300" overflow="scroll">
+  <controller name="deleteLayer" alias="deleteLayer" exported="true" pages="0,normal,1,deleteTip,2,delete" selected="0"/>
+  <displayList>
+    <image id="n14_javv" name="n14" src="javv63" fileName="bg_code_2(2).png" xy="0,0" size="161,300">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n2_n1c0" name="n2" src="n1c015" fileName="Category_Move.xml" xy="14,97" group="n9_flp7" customData="move"/>
+    <component id="n3_n1c0" name="n3" src="n1c018" fileName="Category_Function.xml" xy="14,169" group="n9_flp7" customData="function"/>
+    <component id="n4_n1c0" name="n4" src="n1c01h" fileName="Category_Detect.xml" xy="14,241" group="n9_flp7" customData="detect"/>
+    <component id="n5_n1c0" name="n5" src="n1c01e" fileName="Category_Prop.xml" xy="14,313" group="n9_flp7" customData="prop"/>
+    <component id="n6_n1c0" name="n6" src="n1c012" fileName="Category_Operation.xml" xy="14,385" group="n9_flp7" customData="operator"/>
+    <component id="n7_n1c0" name="n7" src="n1c0z" fileName="Category_Control.xml" xy="14,457" group="n9_flp7" customData="control"/>
+    <component id="n8_n1c0" name="n8" src="n1c01b" fileName="Category_Event.xml" xy="15,25" group="n9_flp7" customData="event"/>
+    <group id="n9_flp7" name="n9" xy="14,25" size="132,484" advanced="true" collapsed="true">
+      <relation target="" sidePair="center-center"/>
+    </group>
+    <image id="n11_r3nk" name="n11" src="r3nk5n" fileName="img_code_rubbish.png" xy="0,0" size="161,300">
+      <gearDisplay controller="deleteLayer" pages="1,2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n12_r3nk" name="n12" src="r3nk5o" fileName="img_code_rubbish_1.png" xy="46,252">
+      <gearDisplay controller="deleteLayer" pages="1"/>
+      <relation target="n11_r3nk" sidePair="center-center,top-top"/>
+    </image>
+    <image id="n13_r3nk" name="n13" src="r3nk5p" fileName="img_code_rubbish_2.png" xy="47,248">
+      <gearDisplay controller="deleteLayer" pages="2"/>
+      <relation target="n11_r3nk" sidePair="center-center,top-top"/>
+    </image>
+  </displayList>
+</component>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640">
+  <displayList>
+    <image id="n10_flp7" name="n10" src="flp75m" fileName="bg_code_1(1).png" xy="0,0" size="1136,640">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n6_n1c0" name="CategoryList" src="n1c01l" fileName="CategoryList.xml" xy="0,56" size="157,584" controller="deleteLayer,0">
+      <relation target="" sidePair="height-height,top-top"/>
+    </component>
+    <component id="n5_n1c0" name="Stage" src="n1c01j" fileName="Stage.xml" xy="157,56" size="979,584">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <component id="n4_y583" name="Codeblocks" src="y583d" fileName="CodeblockPool.xml" xy="157,56" size="375,584" blend="none">
+      <relation target="" sidePair="height-height"/>
+    </component>
+    <component id="n12_k1p2" name="mask" src="k1p26w" fileName="RunningState.xml" xy="0,56" size="1136,584"/>
+    <component id="n8_n1c0" name="Header" src="n1c01o" fileName="Header.xml" xy="0,0" size="1136,56">
+      <relation target="" sidePair="width-width"/>
+    </component>
+    <component id="n13_sdqn" name="templatePanel" src="sdqn71" fileName="TemplatePanel.xml" xy="0,0" size="1136,640">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+  </displayList>
+</component>

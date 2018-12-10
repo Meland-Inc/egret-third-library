@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,56">
+  <displayList>
+    <image id="n6_n1c0" name="n6" src="n1c01x" fileName="bg_code_4.png" xy="0,0">
+      <relation target="" sidePair=""/>
+    </image>
+    <image id="n0_n1c0" name="n0" src="n1c01p" fileName="icon_edit.png" xy="19,12"/>
+    <text id="n1_n1c0" name="n1" xy="59,10" size="125,38" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="代码块编辑"/>
+    <component id="n2_n1c0" name="Recovery" src="n1c01r" fileName="Restore.xml" xy="216,9"/>
+    <text id="n3_n1c0" name="n3" xy="360,15" size="119,28" visible="false" fontSize="19" color="#fcfbff" align="center" vAlign="middle" text="运行缩略模式"/>
+    <component id="n4_n1c0" name="Abbreviate" src="n1c01u" fileName="Checkbox.xml" xy="502,14" visible="false"/>
+    <component id="n5_n1c0" name="Quit" src="n1c01w" fileName="Return.xml" xy="1038,15">
+      <relation target="" sidePair="right-right"/>
+    </component>
+    <component id="n7_sdqn" name="template" src="sdqn7d" fileName="TemplateButton.xml" xy="360,9"/>
+  </displayList>
+</component>

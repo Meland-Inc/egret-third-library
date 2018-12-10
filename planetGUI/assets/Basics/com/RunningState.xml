@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="400,400">
+  <displayList>
+    <graph id="n0_k1p2" name="n0" xy="0,0" size="400,400" type="rect" fillColor="#80000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <text id="n5_k1p2" name="fuel" xy="137,266" size="125,23" group="n10_k1p2" fontSize="16" color="#ffffff" ubb="true" singleLine="true" text="当前剩余燃料：0">
+      <relation target="n9_k1p2" sidePair="center-center"/>
+    </text>
+    <component id="n11_k1p2" name="stoppingButton" src="k1p26z" fileName="StoppingButton.xml" xy="145,299" group="n10_k1p2"/>
+    <image id="n1_k1p2" name="n1" src="k1p26x" fileName="bg_code_6(1).png" xy="98,76" group="n9_k1p2"/>
+    <movieclip id="n3_k1p2" name="n3" src="dib96u" fileName="Running.jta" xy="98,59" group="n9_k1p2"/>
+    <text id="n8_k1p2" name="n8" xy="149,211" size="101,23" group="n9_k1p2" fontSize="16" color="#d8d8d8" text="机器人运行中"/>
+    <group id="n9_k1p2" name="n9" xy="98,59" size="204,199" group="n10_k1p2" advanced="true" collapsed="true"/>
+    <group id="n10_k1p2" name="n10" xy="98,59" size="204,281" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>
