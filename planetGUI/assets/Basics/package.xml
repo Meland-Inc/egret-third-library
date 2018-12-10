@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="rnqj1l77" jpegQuality="80" compressPNG="true">
   <resources>
-    <component id="f4hr0" name="BlockCodeblock.xml" path="/com/" exported="true"/>
-    <component id="e13y1" name="InputShape.xml" path="/com/" exported="true"/>
+    <component id="f4hr0" name="BlockCodeblock.xml" path="/codeBlock/" exported="true"/>
+    <component id="e13y1" name="InputShape.xml" path="/codeBlock/" exported="true"/>
     <component id="e13y2" name="Main.xml" path="/com/" exported="true"/>
-    <component id="o3b93" name="DropdownMessageArgShape_item.xml" path="/com/"/>
-    <component id="o3b94" name="DropdownMessageArgShape_popup.xml" path="/com/"/>
-    <component id="o3b95" name="DropdownMessageArgShape.xml" path="/com/" exported="true"/>
+    <component id="o3b93" name="DropdownMessageArgShape_item.xml" path="/codeBlock/"/>
+    <component id="o3b94" name="DropdownMessageArgShape_popup.xml" path="/codeBlock/"/>
+    <component id="o3b95" name="DropdownMessageArgShape.xml" path="/codeBlock/" exported="true"/>
     <image id="kesa6" name="operators.png" path="/img/" scale="9grid" scale9grid="57,0,9,66"/>
     <image id="kesa7" name="events.png" path="/img/" scale="9grid" scale9grid="176,0,2,96"/>
     <component id="kesa9" name="Container.xml" path="/com/"/>
     <component id="kesaa" name="Text.xml" path="/com/" exported="true"/>
-    <component id="kesab" name="Value.xml" path="/com/" exported="true"/>
+    <component id="kesab" name="Value.xml" path="/codeBlock/" exported="true"/>
     <component id="fzxxc" name="Category.xml" path="/com/" exported="true"/>
     <component id="y583d" name="CodeblockPool.xml" path="/com/"/>
-    <component id="y583e" name="Boolean.xml" path="/com/" exported="true"/>
+    <component id="y583e" name="Boolean.xml" path="/codeBlock/" exported="true"/>
     <image id="y583f" name="control3.png" path="/img/" scale="9grid" scale9grid="60,0,58,66"/>
-    <component id="heu0g" name="BooleanMessageArgShape.xml" path="/com/" exported="true"/>
+    <component id="heu0g" name="BooleanMessageArgShape.xml" path="/codeBlock/" exported="true"/>
     <image id="heu0h" name="chatbox.png" path="/img/" scale="9grid" scale9grid="10,2,72,30"/>
-    <component id="heu0i" name="ForkableMiddle.xml" path="/com/" exported="true"/>
-    <component id="heu0k" name="ForkableStartBlue.xml" path="/com/" exported="true"/>
-    <component id="heu0m" name="ForkableEnd.xml" path="/com/" exported="true"/>
+    <component id="heu0i" name="ForkableMiddle.xml" path="/codeBlock/" exported="true"/>
+    <component id="heu0k" name="ForkableStartBlue.xml" path="/codeBlock/" exported="true"/>
+    <component id="heu0m" name="ForkableEnd.xml" path="/codeBlock/" exported="true"/>
     <image id="heu0n" name="forkable-end.png" path="/img/" scale="9grid" scale9grid="198,0,3,65"/>
-    <component id="heu0o" name="ForkableContainer.xml" path="/com/" exported="true"/>
+    <component id="heu0o" name="ForkableContainer.xml" path="/codeBlock/" exported="true"/>
     <image id="heu0q" name="forkable-container.png" path="/img/"/>
     <image id="mvfsr" name="forkable-start.png" path="/img/" scale="9grid" scale9grid="403,0,8,102"/>
     <image id="mvfss" name="forkable-middle.png" path="/img/" scale="9grid" scale9grid="299,0,3,57"/>
@@ -78,112 +78,112 @@
     <component id="t3y12a" name="ZoomOut.xml" path="/com/"/>
     <image id="t3y12b" name="btn_narrow.png" path="/img/"/>
     <component id="t3y12c" name="ZoomIn.xml" path="/com/"/>
-    <image id="t3y12d" name="img_edit_bg.png" path="/img/" scale="" scale9grid="15,52,30,104"/>
+    <image id="t3y12d" name="img_edit_bg.png" path="/img/" scale="9grid" scale9grid="15,52,30,104"/>
     <image id="t3y12e" name="btn_share.png" path="/img/"/>
     <component id="t3y12f" name="Share.xml" path="/com/"/>
     <image id="t3y12g" name="btn_run.png" path="/img/"/>
     <component id="t3y12h" name="Run.xml" path="/com/"/>
-    <component id="e8uu2i" name="ForkableStartBGBlue.xml" path="/com/"/>
+    <component id="e8uu2i" name="ForkableStartBGBlue.xml" path="/codeBlock/"/>
     <image id="e8uu2j" name="1.png" path="/img/" scale="9grid" scale9grid="61,10,2,36" gridTile="3"/>
     <image id="e8uu2k" name="2.png" path="/img/" scale="9grid" scale9grid="1,10,2,31" gridTile="3"/>
     <image id="e8uu2l" name="3.png" path="/img/" scale="9grid" scale9grid="0,10,2,31" gridTile="3"/>
-    <component id="kgcg2m" name="ForkableMiddleBGBlue.xml" path="/com/"/>
+    <component id="kgcg2m" name="ForkableMiddleBGBlue.xml" path="/codeBlock/"/>
     <image id="kgcg2n" name="blue_2_1.png" path="/img/" scale="9grid" scale9grid="62,10,2,12"/>
     <image id="kgcg2o" name="blue_2_2.png" path="/img/" scale="9grid" scale9grid="1,8,2,13"/>
     <image id="kgcg2p" name="blue_2_3.png" path="/img/" scale="9grid" scale9grid="0,10,2,9"/>
-    <component id="kgcg2q" name="ForkableMiddleBlue.xml" path="/com/" exported="true"/>
-    <component id="kgcg2r" name="ForkableEndBGBlue.xml" path="/com/"/>
+    <component id="kgcg2q" name="ForkableMiddleBlue.xml" path="/codeBlock/" exported="true"/>
+    <component id="kgcg2r" name="ForkableEndBGBlue.xml" path="/codeBlock/"/>
     <image id="kgcg2s" name="blue_3_1.png" path="/img/" scale="9grid" scale9grid="62,10,3,16"/>
     <image id="kgcg2t" name="blue_3_2.png" path="/img/" scale="9grid" scale9grid="1,8,2,16"/>
     <image id="kgcg2u" name="blue_3_3.png" path="/img/" scale="9grid" scale9grid="0,8,2,16"/>
-    <component id="kgcg2v" name="ForkableEndBlue.xml" path="/com/" exported="true"/>
-    <component id="kgcg2w" name="BlockCodeblockBGBlue.xml" path="/com/"/>
-    <component id="kgcg2x" name="ForkableContainerBGBlue.xml" path="/com/"/>
+    <component id="kgcg2v" name="ForkableEndBlue.xml" path="/codeBlock/" exported="true"/>
+    <component id="kgcg2w" name="BlockCodeblockBGBlue.xml" path="/codeBlock/"/>
+    <component id="kgcg2x" name="ForkableContainerBGBlue.xml" path="/codeBlock/"/>
     <image id="kgcg2y" name="blue_4.png" path="/img/" scale="9grid" scale9grid="6,0,12,2" gridTile="12"/>
-    <component id="kgcg2z" name="ForkableContainerBlue.xml" path="/com/" exported="true"/>
+    <component id="kgcg2z" name="ForkableContainerBlue.xml" path="/codeBlock/" exported="true"/>
     <image id="kgcg30" name="blue_5_1.png" path="/img/" scale="9grid" scale9grid="48,10,2,36"/>
     <image id="kgcg31" name="blue_5_2.png" path="/img/" scale="9grid" scale9grid="1,7,2,37"/>
     <image id="kgcg32" name="blue_5_3.png" path="/img/" scale="9grid" scale9grid="0,7,1,37"/>
-    <component id="kgcg33" name="BlockCodeblockBlue.xml" path="/com/" exported="true"/>
-    <component id="kgcg34" name="BooleanBGBlue.xml" path="/com/"/>
-    <component id="kgcg35" name="ValueBGBlue.xml" path="/com/"/>
+    <component id="kgcg33" name="BlockCodeblockBlue.xml" path="/codeBlock/" exported="true"/>
+    <component id="kgcg34" name="BooleanBGBlue.xml" path="/codeBlock/"/>
+    <component id="kgcg35" name="ValueBGBlue.xml" path="/codeBlock/"/>
     <image id="kgcg36" name="blue_6_1.png" path="/img/" scale="9grid" scale9grid="0,0,20,37"/>
     <image id="kgcg37" name="blue_6_2.png" path="/img/" scale="9grid" scale9grid="1,5,2,27"/>
     <image id="kgcg38" name="blue_6_3.png" path="/img/"/>
-    <component id="kgcg39" name="ValueBlue.xml" path="/com/" exported="true"/>
+    <component id="kgcg39" name="ValueBlue.xml" path="/codeBlock/" exported="true"/>
     <image id="kgcg3a" name="blue_7_1.png" path="/img/"/>
     <image id="kgcg3b" name="blue_7_2.png" path="/img/" scale="9grid" scale9grid="1,5,2,29"/>
     <image id="kgcg3c" name="blue_7_3.png" path="/img/"/>
-    <component id="kgcg3d" name="BooleanBlue.xml" path="/com/" exported="true"/>
+    <component id="kgcg3d" name="BooleanBlue.xml" path="/codeBlock/" exported="true"/>
     <image id="kgcg3e" name="blue_8_1.png" path="/img/" scale="9grid" scale9grid="0,8,8,22"/>
     <image id="kgcg3f" name="blue_8_2.png" path="/img/" scale="9grid" scale9grid="1,8,2,22" gridTile="3"/>
     <image id="kgcg3g" name="blue_8_3.png" path="/img/" scale="9grid" scale9grid="0,8,8,22"/>
     <image id="kgcg3h" name="blue_8_4.png" path="/img/" scale9grid="5,3,10,6"/>
-    <component id="kgcg3i" name="DropDownBGBlue.xml" path="/com/"/>
+    <component id="kgcg3i" name="DropDownBGBlue.xml" path="/codeBlock/"/>
     <component id="kgcg3m" name="FreeContainer.xml" path="/com/"/>
-    <component id="flp73n" name="PropMessageArgShape.xml" path="/com/" exported="true"/>
+    <component id="flp73n" name="PropMessageArgShape.xml" path="/codeBlock/" exported="true"/>
     <image id="flp73o" name="common_1.png" path="/img/" scale="9grid" scale9grid="20,3,72,29"/>
     <image id="flp73p" name="common_2.png" path="/img/" scale="9grid" scale9grid="15,0,17,27"/>
     <image id="flp73q" name="common_3.png" path="/img/"/>
     <image id="flp73r" name="orange_9.png" path="/img/"/>
-    <component id="flp73s" name="BlockCodeblockBGOrange.xml" path="/com/"/>
+    <component id="flp73s" name="BlockCodeblockBGOrange.xml" path="/codeBlock/"/>
     <image id="flp73t" name="orange_10_1.png" path="/img/" scale="9grid" scale9grid="92,17,3,39"/>
     <image id="flp73u" name="orange_10_2.png" path="/img/" scale="9grid" scale9grid="1,7,2,37"/>
     <image id="flp73v" name="orange_10_3.png" path="/img/" scale="9grid" scale9grid="0,7,1,37"/>
-    <component id="flp73w" name="BlockCodeblockOrange.xml" path="/com/" exported="true"/>
+    <component id="flp73w" name="BlockCodeblockOrange.xml" path="/codeBlock/" exported="true"/>
     <image id="flp73x" name="img_code_8.png" path="/img/" scale="9grid" scale9grid="10,8,23,7"/>
     <image id="flp73y" name="img_code_10.png" path="/img/"/>
     <image id="flp73z" name="blue_4(1).png" path="/img/" scale="9grid" scale9grid="6,1,12,8"/>
-    <component id="flp740" name="BlockCodeblockBGYellow.xml" path="/com/"/>
+    <component id="flp740" name="BlockCodeblockBGYellow.xml" path="/codeBlock/"/>
     <image id="flp741" name="lemon_5_1.png" path="/img/" scale="9grid" scale9grid="48,10,2,36"/>
     <image id="flp742" name="lemon_5_3.png" path="/img/" scale="9grid" scale9grid="0,7,2,37"/>
     <image id="flp743" name="lemon_5_2.png" path="/img/" scale="9grid" scale9grid="1,7,2,37"/>
-    <component id="flp744" name="BlockCodeblockYellow.xml" path="/com/" exported="true"/>
-    <component id="flp745" name="BlockCodeblockBGPurple.xml" path="/com/"/>
+    <component id="flp744" name="BlockCodeblockYellow.xml" path="/codeBlock/" exported="true"/>
+    <component id="flp745" name="BlockCodeblockBGPurple.xml" path="/codeBlock/"/>
     <image id="flp746" name="purple_5_1.png" path="/img/" scale="9grid" scale9grid="48,10,2,36"/>
     <image id="flp747" name="purple_5_2.png" path="/img/" scale="9grid" scale9grid="1,7,2,37"/>
     <image id="flp748" name="purple_5_3.png" path="/img/" scale="9grid" scale9grid="0,7,2,37"/>
-    <component id="flp749" name="BlockCodeblockPurple.xml" path="/com/" exported="true"/>
-    <component id="flp74a" name="ValueBGPurple.xml" path="/com/"/>
+    <component id="flp749" name="BlockCodeblockPurple.xml" path="/codeBlock/" exported="true"/>
+    <component id="flp74a" name="ValueBGPurple.xml" path="/codeBlock/"/>
     <image id="flp74b" name="purple_6_1.png" path="/img/" scale="9grid" scale9grid="0,0,20,37"/>
     <image id="flp74c" name="purple_6_2.png" path="/img/" scale="9grid" scale9grid="1,5,2,27"/>
     <image id="flp74d" name="purple_6_3.png" path="/img/" scale="9grid" scale9grid="0,0,20,37"/>
-    <component id="flp74e" name="ValuePurple.xml" path="/com/" exported="true"/>
-    <component id="flp74f" name="ValueBGShitYellow.xml" path="/com/"/>
+    <component id="flp74e" name="ValuePurple.xml" path="/codeBlock/" exported="true"/>
+    <component id="flp74f" name="ValueBGShitYellow.xml" path="/codeBlock/"/>
     <image id="flp74g" name="yellow_6_1.png" path="/img/" scale="9grid" scale9grid="0,0,20,37"/>
     <image id="flp74h" name="yellow_6_2.png" path="/img/" scale="9grid" scale9grid="1,5,2,27"/>
     <image id="flp74i" name="yellow_6_3.png" path="/img/" scale="9grid" scale9grid="0,0,20,37"/>
-    <component id="flp74j" name="ValueShitYellow.xml" path="/com/" exported="true"/>
-    <component id="flp74k" name="BooleanBGShitYellow.xml" path="/com/"/>
+    <component id="flp74j" name="ValueShitYellow.xml" path="/codeBlock/" exported="true"/>
+    <component id="flp74k" name="BooleanBGShitYellow.xml" path="/codeBlock/"/>
     <image id="flp74l" name="yellow_7_1.png" path="/img/"/>
     <image id="flp74m" name="yellow_7_2.png" path="/img/" scale="9grid" scale9grid="1,5,2,29"/>
     <image id="flp74n" name="yellow_7_3.png" path="/img/"/>
-    <component id="flp74o" name="BooleanShitYellow.xml" path="/com/" exported="true"/>
-    <component id="flp74p" name="BlockCodeblockShitYellow.xml" path="/com/" exported="true"/>
-    <component id="flp74q" name="BlockCodeblockBGShitYellow.xml" path="/com/"/>
+    <component id="flp74o" name="BooleanShitYellow.xml" path="/codeBlock/" exported="true"/>
+    <component id="flp74p" name="BlockCodeblockShitYellow.xml" path="/codeBlock/" exported="true"/>
+    <component id="flp74q" name="BlockCodeblockBGShitYellow.xml" path="/codeBlock/"/>
     <image id="flp74r" name="yellow_5_1.png" path="/img/" scale="9grid" scale9grid="48,10,2,36"/>
     <image id="flp74s" name="yellow_5_2.png" path="/img/" scale="9grid" scale9grid="1,7,2,37"/>
     <image id="flp74t" name="yellow_5_3.png" path="/img/" scale="9grid" scale9grid="0,7,2,37"/>
-    <component id="flp74u" name="ValueBGRed.xml" path="/com/"/>
+    <component id="flp74u" name="ValueBGRed.xml" path="/codeBlock/"/>
     <image id="flp74v" name="red_6_1.png" path="/img/"/>
     <image id="flp74w" name="red_6_2.png" path="/img/" scale="9grid" scale9grid="1,5,2,27"/>
     <image id="flp74x" name="red_6_3.png" path="/img/"/>
-    <component id="flp74y" name="ValueRed.xml" path="/com/" exported="true"/>
-    <component id="flp74z" name="ValueBGGreen.xml" path="/com/"/>
+    <component id="flp74y" name="ValueRed.xml" path="/codeBlock/" exported="true"/>
+    <component id="flp74z" name="ValueBGGreen.xml" path="/codeBlock/"/>
     <image id="flp750" name="green_6_1.png" path="/img/" scale="9grid" scale9grid="0,0,20,37"/>
     <image id="flp751" name="green_6_2.png" path="/img/" scale="9grid" scale9grid="1,5,2,27"/>
     <image id="flp752" name="green_6_3.png" path="/img/" scale="9grid" scale9grid="0,0,20,37"/>
-    <component id="flp753" name="ValueGreen.xml" path="/com/" exported="true"/>
-    <component id="flp754" name="BooleanBGGreen.xml" path="/com/"/>
+    <component id="flp753" name="ValueGreen.xml" path="/codeBlock/" exported="true"/>
+    <component id="flp754" name="BooleanBGGreen.xml" path="/codeBlock/"/>
     <image id="flp755" name="green_7_1.png" path="/img/"/>
     <image id="flp756" name="green_7_2.png" path="/img/" scale="9grid" scale9grid="1,5,2,29"/>
     <image id="flp757" name="green_7_3.png" path="/img/"/>
-    <component id="flp758" name="BooleanGreen.xml" path="/com/" exported="true"/>
-    <component id="flp759" name="BlockCodeblockBGGreen.xml" path="/com/"/>
+    <component id="flp758" name="BooleanGreen.xml" path="/codeBlock/" exported="true"/>
+    <component id="flp759" name="BlockCodeblockBGGreen.xml" path="/codeBlock/"/>
     <image id="flp75a" name="green_5_1.png" path="/img/" scale="9grid" scale9grid="48,10,2,36"/>
     <image id="flp75b" name="green_5_2.png" path="/img/" scale="9grid" scale9grid="1,7,2,37"/>
     <image id="flp75c" name="green_5_3.png" path="/img/" scale="9grid" scale9grid="0,7,2,37"/>
-    <component id="flp75d" name="BlockCodeblockGreen.xml" path="/com/" exported="true"/>
+    <component id="flp75d" name="BlockCodeblockGreen.xml" path="/codeBlock/" exported="true"/>
     <image id="flp75h" name="btn_orange_2(1).png" path="/img/"/>
     <image id="flp75i" name="btn_purple_2(1).png" path="/img/"/>
     <image id="flp75j" name="bg_code_2(1).png" path="/img/" scale="9grid" scale9grid="41,147,82,294"/>
@@ -207,7 +207,7 @@
     <image id="l2b665" name="img_code_diamond_4.png" path="/img/"/>
     <image id="l2b666" name="img_code_diamond_5.png" path="/img/" scale="9grid" scale9grid="3,5,4,14" smoothing="false"/>
     <image id="l2b667" name="img_code_diamond_6.png" path="/img/"/>
-    <component id="l2b668" name="BlankShape.xml" path="/com/" exported="true"/>
+    <component id="l2b668" name="BlankShape.xml" path="/codeBlock/" exported="true"/>
     <image id="l2b669" name="img_code_oval_4.png" path="/img/"/>
     <image id="l2b66a" name="img_code_oval_5.png" path="/img/" scale="9grid" scale9grid="3,5,4,14" smoothing="false"/>
     <image id="l2b66b" name="img_code_oval_6.png" path="/img/"/>
@@ -249,6 +249,33 @@
     <image id="8sek7g" name="orange_10_1(1).png" path="/img/" scale="9grid" scale9grid="93,17,2,26"/>
     <image id="8sek7h" name="img_code_hexagon.png" path="/img/"/>
     <component id="azxf7i" name="CodeblockTemplateContainer.xml" path="/com/"/>
+    <image id="edsm7j" name="img_code_buttonmark2.png" path="/newImg/"/>
+    <image id="edsm7k" name="img_code_buttonmark3.png" path="/newImg/"/>
+    <image id="edsm7l" name="img_code_buttonmark4.png" path="/newImg/"/>
+    <image id="edsm7m" name="img_code_buttonmark5.png" path="/newImg/"/>
+    <image id="edsm7n" name="img_code_buttonmark6.png" path="/newImg/"/>
+    <image id="edsm7o" name="img_code_buttonmark7.png" path="/newImg/"/>
+    <image id="edsm7p" name="img_code_empty.png" path="/newImg/"/>
+    <image id="edsm7q" name="img_code_new.png" path="/newImg/"/>
+    <image id="edsm7r" name="img_code_stencil1.png" path="/newImg/"/>
+    <image id="edsm7s" name="img_code_stencil2.png" path="/newImg/"/>
+    <image id="edsm7t" name="img_code_trashcan1.png" path="/newImg/"/>
+    <image id="edsm7u" name="img_code_trashcan2.png" path="/newImg/"/>
+    <image id="edsm7v" name="btn_code_white.png" path="/newImg/"/>
+    <image id="edsm7w" name="btn_code_yellow.png" path="/newImg/"/>
+    <image id="edsm7x" name="icon_code_name.png" path="/newImg/"/>
+    <image id="edsm7y" name="icon_code_run.png" path="/newImg/"/>
+    <image id="edsm7z" name="icon_code_save.png" path="/newImg/"/>
+    <image id="edsm80" name="icon_code_share.png" path="/newImg/"/>
+    <image id="edsm81" name="icon_code_sign1.png" path="/newImg/"/>
+    <image id="edsm82" name="icon_code_sign2.png" path="/newImg/"/>
+    <image id="edsm83" name="icon_code_sign3.png" path="/newImg/"/>
+    <image id="edsm84" name="icon_code_sign4.png" path="/newImg/"/>
+    <image id="edsm85" name="icon_code_sign5.png" path="/newImg/"/>
+    <image id="edsm86" name="icon_code_sign6.png" path="/newImg/"/>
+    <image id="edsm87" name="icon_code_sign7.png" path="/newImg/"/>
+    <image id="edsm88" name="img_code_add.png" path="/newImg/"/>
+    <image id="edsm89" name="img_code_buttonmark1.png" path="/newImg/"/>
   </resources>
   <publish name="Basics" path="/Users/startan/Documents/EgretProjects/codeblocks_lib_tester/resource/assets"/>
 </packageDescription>

@@ -1,27 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="981,587" overflow="hidden" scroll="both" scrollBarRes="ui://rnqj1l77j7co5v,ui://rnqj1l77j7co5x">
   <displayList>
-    <image id="n12_javv" name="n12" src="javv61" fileName="bg_code_5(1).png" xy="0,0" size="981,587">
-      <relation target="" sidePair="width-width,height-height"/>
-    </image>
-    <component id="n9_j7co" name="stageContainer" src="j7co5y" fileName="CodeblockStage.xml" xy="0,0" size="981,587">
+    <component id="n9_j7co" name="stageContainer" src="j7co5y" fileName="com/CodeblockStage.xml" xy="0,0" size="981,587">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
-    <component id="n3_t3y1" name="undo" src="t3y125" fileName="Undo.xml" xy="909,306">
+    <component id="n4_t3y1" name="scales" src="t3y126" fileName="com/StageButtons.xml" xy="890,270">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
-    <component id="n4_t3y1" name="scales" src="t3y126" fileName="StageButtons.xml" xy="904,371">
+    <component id="n5_t3y1" name="run" src="t3y12h" fileName="com/Run.xml" xy="740,508" group="n14_sdqn">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
-    <component id="n5_t3y1" name="run" src="t3y12h" fileName="Run.xml" xy="756,508" size="100,34" group="n14_sdqn" aspect="true">
+    <component id="n6_t3y1" name="share" src="t3y12f" fileName="com/Share.xml" xy="590,508" size="120,40" group="n14_sdqn">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
-    <component id="n6_t3y1" name="share" src="t3y12f" fileName="Share.xml" xy="606,508" size="100,34" group="n14_sdqn" aspect="true">
+    <component id="n13_sdqn" name="save" src="sdqn7f" fileName="com/SaveButton.xml" xy="440,508" size="120,40" group="n14_sdqn">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
-    <component id="n13_sdqn" name="save" src="sdqn7f" fileName="SaveButton.xml" xy="456,508" size="100,35" group="n14_sdqn" aspect="true">
-      <relation target="" sidePair="right-right,bottom-bottom"/>
-    </component>
-    <group id="n14_sdqn" name="n14" xy="456,508" size="400,35"/>
+    <group id="n14_sdqn" name="n14" xy="440,508" size="420,40" collapsed="true"/>
   </displayList>
 </component>
