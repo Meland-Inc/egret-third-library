@@ -806,33 +806,37 @@ namespace egret {
             if (this.$mask && !this.$mask.$hitTest(stageX, stageY)) {
                 return null
             }
-            const children = this.$children;
-            let found = false;
-            let target: DisplayObject = null;
-            for (let i = children.length - 1; i >= 0; i--) {
-                const child = children[i];
-                if (child.$maskedObject) {
-                    continue;
+
+            //如果不能触摸子直接跳过 游戏显示对象太多 节省性能  modify by xiangqian 2018.11.30
+            if (this.$touchChildren) {
+                const children = this.$children;
+                let found = false;
+                let target: DisplayObject = null;
+                for (let i = children.length - 1; i >= 0; i--) {
+                    const child = children[i];
+                    if (child.$maskedObject) {
+                        continue;
+                    }
+                    target = child.$hitTest(stageX, stageY);
+                    if (target) {
+                        found = true;
+                        if (target.$touchEnabled) {
+                            break;
+                        }
+                        else {
+                            target = null;
+                        }
+                    }
                 }
-                target = child.$hitTest(stageX, stageY);
                 if (target) {
-                    found = true;
-                    if (target.$touchEnabled) {
-                        break;
+                    if (this.$touchChildren) {
+                        return target;
                     }
-                    else {
-                        target = null;
-                    }
+                    return this;
                 }
-            }
-            if (target) {
-                if (this.$touchChildren) {
-                    return target;
+                if (found) {
+                    return this;
                 }
-                return this;
-            }
-            if (found) {
-                return this;
             }
             return super.$hitTest(stageX, stageY);
         }
