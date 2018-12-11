@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="60,37">
+  <displayList>
+    <component id="n0_flp7" name="n0" src="flp74a" fileName="ValueBGPurple.xml" xy="0,0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <component id="n1_flp7" name="container" src="kesa9" fileName="Container.xml" xy="15,6" size="30,25"/>
+  </displayList>
+  <relation target="n1_flp7" sidePair="width-width,height-height"/>
+</component>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="80,56">
+  <displayList>
+    <image id="n1_flp7" name="n1" src="flp74s" fileName="yellow_5_2.png" xy="48,0" size="26,51">
+      <relation target="" sidePair="leftext-left,rightext-right"/>
+      <relation target="" sidePair="bottomext-bottom"/>
+    </image>
+    <image id="n0_flp7" name="n0" src="flp74r" fileName="yellow_5_1.png" xy="0,0">
+      <relation target="" sidePair="left-left,height-height"/>
+    </image>
+    <image id="n2_flp7" name="n2" src="flp74t" fileName="yellow_5_3.png" xy="73,0">
+      <relation target="" sidePair="right-right,bottomext-bottom"/>
+    </image>
+  </displayList>
+</component>

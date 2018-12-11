@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="146,166">
+  <displayList>
+    <image id="n0_sdqn" name="n0" src="sdqn73" fileName="img_code_11(1).png" xy="0,0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n1_sdqn" name="title" xy="15,6" size="117,26" fontSize="18" color="#6b6b6b" align="center" vAlign="middle" leading="0" autoSize="shrink" singleLine="true" text="作品名">
+      <relation target="" sidePair="top-top,center-center"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+    <component id="n2_sdqn" name="edit" src="sdqn76" fileName="EditButton.xml" xy="116,6">
+      <relation target="" sidePair="right-right,top-top"/>
+    </component>
+    <component id="n3_sdqn" name="newLabel" src="sdqn77" fileName="NewLabel.xml" xy="-9,-8">
+      <relation target="" sidePair="left-left,top-top"/>
+    </component>
+    <loader id="n4_sdqn" name="image" xy="15,43" size="115,115" url="ui://rnqj1l77sdqn79" align="center" vAlign="middle" fill="scale">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+  </displayList>
+</component>
