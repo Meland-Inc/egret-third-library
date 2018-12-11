@@ -7,19 +7,19 @@
     <image id="n2_gxw3" name="nameBg" src="efrs24" fileName="newImg/img_cm_title3.png" pkg="te1gxawo" xy="223,452" group="n14_r43m"/>
     <text id="n3_gxw3" name="tfName" xy="244,460" size="126,23" group="n14_r43m" fontSize="18" color="#ffffff" align="center" autoSize="height" text="名字"/>
     <group id="n14_r43m" name="grpName" xy="223,452" size="170,36" group="n8_gxw3" advanced="true" collapsed="true"/>
-    <text id="n4_gxw3" name="tfSpeech" xy="352,507" size="515,70" group="n8_gxw3" fontSize="18" color="#4e4237" ubb="true" autoSize="none" text="">
+    <text id="n4_gxw3" name="tfSpeech" xy="348,507" size="519,70" group="n8_gxw3" fontSize="18" color="#4e4237" ubb="true" autoSize="none" text="">
       <relation target="" sidePair="rightext-right"/>
       <relation target="n6_gxw3" sidePair="leftext-right"/>
     </text>
-    <image id="n10_tikl" name="n10" src="kvvk2i1f" fileName="imgNew/img_guide_2.png" pkg="mp92elpx" xy="867,538" group="n13_tikl"/>
-    <text id="n11_tikl" name="tfClickContinue" xy="875,531" size="77,23" group="n13_tikl" fontSize="18" color="#645849" text="点击继续"/>
-    <image id="n12_tikl" name="n12" src="kvvk2i1f" fileName="imgNew/img_guide_2.png" pkg="mp92elpx" xy="953,538" group="n13_tikl"/>
-    <group id="n13_tikl" name="grpClickContinue" xy="867,531" size="93,24" group="n8_gxw3" advanced="true" collapsed="true">
+    <image id="n10_tikl" name="n10" src="kvvk2i1f" fileName="imgNew/img_guide_2.png" pkg="mp92elpx" xy="876,538" group="n13_tikl"/>
+    <text id="n11_tikl" name="tfClickContinue" xy="884,531" size="77,23" group="n13_tikl" fontSize="18" color="#645849" text="点击继续"/>
+    <image id="n12_tikl" name="n12" src="kvvk2i1f" fileName="imgNew/img_guide_2.png" pkg="mp92elpx" xy="962,538" group="n13_tikl"/>
+    <group id="n13_tikl" name="grpClickContinue" xy="876,531" size="93,24" group="n8_gxw3" advanced="true" collapsed="true">
       <relation target="" sidePair="right-right"/>
     </group>
-    <image id="n5_gxw3" name="headIconBg" src="kvvk2i1e" fileName="imgNew/img_guide_1.png" pkg="mp92elpx" xy="242,499" group="n7_gxw3"/>
-    <loader id="n6_gxw3" name="ladHeadIcon" xy="247,503" size="68,66" group="n7_gxw3" url="ui://7xhwdeuzctbhb" align="center" vAlign="middle" fill="scale"/>
-    <group id="n7_gxw3" name="grpIcon" xy="242,499" size="76,76" group="n8_gxw3" advanced="true"/>
+    <image id="n5_gxw3" name="headIconBg" src="kvvk2i1e" fileName="imgNew/img_guide_1.png" pkg="mp92elpx" xy="238,499" group="n7_gxw3"/>
+    <loader id="n6_gxw3" name="ladHeadIcon" xy="243,503" size="68,66" group="n7_gxw3" url="ui://7xhwdeuzctbhb" align="center" vAlign="middle" fill="scale"/>
+    <group id="n7_gxw3" name="grpIcon" xy="238,499" size="76,76" group="n8_gxw3" advanced="true"/>
     <group id="n8_gxw3" name="grpDialog" xy="152,452" size="850,154" advanced="true">
       <relation target="" sidePair="bottom-bottom"/>
     </group>
