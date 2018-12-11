@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="130,48" extention="Button">
+  <controller name="button" pages="6,up,7,down" selected="0"/>
+  <displayList>
+    <image id="n5_edsm" name="n5" src="edsm7v" fileName="newImg/btn_code_white.png" xy="0,0">
+      <gearDisplay controller="button" pages="6"/>
+    </image>
+    <image id="n7_edsm" name="n7" src="edsm7w" fileName="newImg/btn_code_yellow.png" xy="0,0">
+      <gearDisplay controller="button" pages="7"/>
+    </image>
+    <image id="n4_edsm" name="n4" src="edsm7n" fileName="newImg/img_code_buttonmark6.png" xy="2,2"/>
+    <image id="n6_edsm" name="n6" src="edsm86" fileName="newImg/icon_code_sign6.png" xy="20,9"/>
+    <text id="n8_edsm" name="n8" xy="55,12" size="44,25" fontSize="18" color="#6a5441" align="center" vAlign="middle" bold="true" text="控制"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

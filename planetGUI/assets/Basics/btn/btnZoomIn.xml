@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="53,54" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <image id="n2_edsm" name="n2" src="ot9si2e" fileName="newImg/btn_cm_white4.png" pkg="te1gxawo" xy="0,0"/>
+    <image id="n3_edsm" name="n3" src="ot9si2r" fileName="newImg/icon_cm_zoom2.png" pkg="te1gxawo" xy="9,22"/>
+  </displayList>
+  <Button downEffect="dark" downEffectValue="0.80"/>
+</component>

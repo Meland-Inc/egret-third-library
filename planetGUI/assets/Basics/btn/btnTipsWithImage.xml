@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="32,32" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n1" name="n1" src="dib96k" fileName="btn_code_tips.png" xy="0,0"/>
+    <image id="n2_dib9" name="n2" src="dib96l" fileName="bg_code_tips_2.png" xy="30,33" size="300,181">
+      <gearDisplay controller="button" pages="1"/>
+      <relation target="n3_dib9" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n3_dib9" name="text" xy="42,45" size="276,25" fontSize="18" color="#ffffff" ubb="true" autoSize="height" text="">
+      <gearDisplay controller="button" pages="1"/>
+    </text>
+    <loader id="n5_dib9" name="loader" xy="42,92" size="276,110" align="center" vAlign="middle" fill="scale">
+      <gearDisplay controller="button" pages="1"/>
+      <relation target="n2_dib9" sidePair="left-left,bottom-bottom"/>
+    </loader>
+  </displayList>
+  <Button/>
+</component>

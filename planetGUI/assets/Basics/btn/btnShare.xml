@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="140,50" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <image id="n3_edsm" name="n3" src="efrs1x" fileName="newImg/btn_cm_yellow2.png" pkg="te1gxawo" xy="0,0" size="140,50"/>
+    <text id="n4_edsm" name="n4" xy="65,10" size="49,29" fontSize="22" color="#672f16" text="分享"/>
+    <image id="n5_edsm" name="n5" src="edsm80" fileName="newImg/icon_code_share.png" xy="20,13"/>
+  </displayList>
+  <Button downEffect="dark" downEffectValue="0.80"/>
+</component>

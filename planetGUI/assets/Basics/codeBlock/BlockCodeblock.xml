@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="100,48" extention="Button" bgColor="#006fa3">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="3"/>
+  <displayList>
+    <image id="n6_kesa" name="n6" src="kesa7" fileName="events.png" xy="0,0" size="100,48">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n8_kesa" name="n8" src="kesa9" fileName="Container.xml" xy="12,10" size="79,25"/>
+  </displayList>
+  <Button/>
+  <relation target="n8_kesa" sidePair="width-width,height-height"/>
+</component>

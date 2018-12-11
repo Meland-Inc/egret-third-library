@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="60,22" clipSoftness="5,5" extention="Button" designImageAlpha="100">
+  <displayList>
+    <image id="n5_n1c0" name="n5" src="n1c01y" fileName="common_4.png" xy="0,0" size="60,22">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n6_n1c0" name="n0" xy="10,1" size="40,20" restrictSize="40,0,20,0" input="true" fontSize="14" align="center" vAlign="middle" singleLine="true" text=""/>
+  </displayList>
+  <Button/>
+  <relation target="n6_n1c0" sidePair="width-width,height-height"/>
+</component>

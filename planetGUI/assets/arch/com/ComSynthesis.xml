@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="270,400" designImage="ui://i25v0ebktwvnt" designImageOffsetX="-789" designImageOffsetY="-129" designImageAlpha="0">
-  <controller name="ctrlStatus" pages="0,normal,1,make,2,lock" selected="1"/>
+<component size="270,400" overflow="hidden" designImage="ui://i25v0ebktwvnt" designImageOffsetX="-789" designImageOffsetY="-129" designImageAlpha="0">
+  <controller name="ctrlStatus" pages="0,normal,1,make,2,lock" selected="0"/>
   <displayList>
     <component id="n25_acec" name="title" src="w34u2h" fileName="com/ComTitle.xml" pkg="te1gxawo" xy="0,0" size="270,28">
       <relation target="" sidePair="rightext-right"/>
@@ -33,13 +33,13 @@
       <item/>
     </list>
     <image id="n5_pqjb" name="imgIntroductionBG" src="ot9si2v" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="13,55" size="242,83" group="n12_pqjb"/>
-    <text id="n8_pqjb" name="tfName" xy="88,59" size="139,23" group="n12_pqjb" fontSize="16" color="#5b4b37" vAlign="middle" leading="0" autoSize="none" bold="true" text="木质工作台"/>
+    <text id="n8_pqjb" name="tfName" xy="88,61" size="139,29" group="n12_pqjb" fontSize="16" color="#5b4b37" vAlign="middle" leading="0" autoSize="none" bold="true" text="木质工作台"/>
     <text id="n9_pqjb" name="tfIntroduction" xy="88,80" size="165,56" group="n12_pqjb" fontSize="14" color="#5b4b37" vAlign="middle" leading="0" autoSize="none" bold="true" text="制作木质工具不可或缺的物品，需要模板和常见金属加工。"/>
     <image id="n10_pqjb" name="imgProductIconBG" src="pgixi5n" fileName="newImg/img_cm_bottom_7.png" pkg="te1gxawo" xy="27,69" size="52,52" group="n12_pqjb"/>
-    <loader id="n11_pqjb" name="ladProductIcon" xy="30,73" size="45,45" group="n12_pqjb" aspect="true" align="center" vAlign="middle" fill="scale">
+    <loader id="n11_pqjb" name="ladProductIcon" xy="31,73" size="45,45" group="n12_pqjb" aspect="true" align="center" vAlign="middle" fill="scale">
       <relation target="n10_pqjb" sidePair="center-center,middle-middle"/>
     </loader>
-    <group id="n12_pqjb" name="product" xy="13,55" size="243,84" advanced="true">
+    <group id="n12_pqjb" name="product" xy="13,55" size="242,83" advanced="true">
       <relation target="" sidePair="center-center"/>
     </group>
     <image id="n7_pqjb" name="img1" src="kddk2d" fileName="newImg/img_formula_bottom_1.png" xy="19,138">
@@ -89,15 +89,15 @@
       <gearDisplay controller="ctrlStatus" pages="1"/>
       <relation target="" sidePair="center-center"/>
     </text>
-    <loader id="n31_twvn" name="ladMakeIcon" xy="47,351" size="35,35">
+    <loader id="n31_twvn" name="ladMakeIcon" xy="55,350" size="35,35" aspect="true" align="center" vAlign="middle" fill="scale">
       <gearDisplay controller="ctrlStatus" pages="1"/>
       <relation target="" sidePair="center-center"/>
     </loader>
-    <text id="n32_twvn" name="tfMakeNum" xy="100,357" size="28,22" fontSize="16" color="#584736" vAlign="middle" leading="0" vars="true" text="{cur=0}/{total=0}">
+    <text id="n32_twvn" name="tfMakeNum" xy="114,357" size="27,22" fontSize="16" color="#584736" vAlign="middle" leading="0" vars="true" text="{cur=0}/{total=0}">
       <gearDisplay controller="ctrlStatus" pages="1"/>
       <relation target="" sidePair="center-center"/>
     </text>
-    <component id="n14_pqjb" name="btnUndo" src="efrs25" fileName="btn/CanChangeCommonButton.xml" pkg="te1gxawo" xy="155,351" size="72,33">
+    <component id="n14_pqjb" name="btnUndo" src="efrs25" fileName="btn/CanChangeCommonButton.xml" pkg="te1gxawo" xy="158,351" size="72,33">
       <gearDisplay controller="ctrlStatus" pages="1"/>
       <relation target="" sidePair="center-center"/>
       <Button title="取消" titleColor="#f7f4e8" titleFontSize="14" icon="ui://te1gxawopgixi4p"/>
