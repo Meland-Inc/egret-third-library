@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="696,433">
+  <displayList>
+    <image id="n16_edsm" name="n16" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="0,0" size="694,432"/>
+    <text id="n2_sdqn" name="title" xy="301,7" size="91,27" fontSize="20" color="#f5ebde" align="center" vAlign="middle" singleLine="true" text="代码模版"/>
+    <component id="n15_azxf" name="container" src="azxf7i" fileName="com/CodeblockTemplateContainer.xml" xy="2,66" size="694,351"/>
+    <component id="n18_edsm" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="643,2" size="36,36">
+      <Button icon="ui://te1gxawohpymyi7o" selectedIcon="ui://te1gxawohpymyi7o"/>
+    </component>
+  </displayList>
+</component>

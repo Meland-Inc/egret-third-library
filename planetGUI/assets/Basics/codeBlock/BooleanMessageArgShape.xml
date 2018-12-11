@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="60,23">
+  <displayList>
+    <image id="n5_l2b6" name="n5" src="l2b666" fileName="img_code_diamond_5.png" xy="12,0" size="36,23">
+      <relation target="" sidePair="leftext-left,rightext-right"/>
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <image id="n4_l2b6" name="n4" src="l2b665" fileName="img_code_diamond_4.png" xy="0,0" size="12,23">
+      <relation target="" sidePair="left-left,height-height"/>
+    </image>
+    <image id="n6_l2b6" name="n6" src="l2b667" fileName="img_code_diamond_6.png" xy="48,0" size="12,23">
+      <relation target="" sidePair="right-right,height-height"/>
+    </image>
+  </displayList>
+</component>

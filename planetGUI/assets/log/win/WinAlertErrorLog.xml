@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640">
   <displayList>
-    <image id="n2_lh8i" name="bg" src="qn8o1" fileName="img/bg_bag.png" pkg="te1gxawo" xy="194,98" size="740,453" group="n6_r43m"/>
-    <text id="n3_lh8i" name="title" xy="469,97" size="185,45" group="n6_r43m" fontSize="31" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="报错弹窗"/>
-    <text id="n4_lh8i" name="tfContent" xy="199,150" size="727,394" group="n6_r43m" fontSize="16" color="#ff0000" autoSize="none" text=""/>
-    <component id="n5_lh8i" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="885,88" size="56,57" group="n6_r43m">
+    <image id="n2_lh8i" name="bg" src="qn8o1" fileName="img/bg_bag.png" pkg="te1gxawo" xy="194,99" size="740,453" group="n6_r43m"/>
+    <text id="n3_lh8i" name="title" xy="469,98" size="185,45" group="n6_r43m" fontSize="31" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="报错弹窗"/>
+    <text id="n4_lh8i" name="tfContent" xy="199,151" size="727,394" group="n6_r43m" fontSize="16" color="#ff0000" autoSize="none" text=""/>
+    <component id="n5_lh8i" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="885,89" size="56,57" group="n6_r43m">
       <Button icon="ui://eunktclqsz331"/>
     </component>
-    <group id="n6_r43m" name="n6" xy="194,88" size="747,463" advanced="true">
+    <group id="n6_r43m" name="n6" xy="194,89" size="747,463" advanced="true" collapsed="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>
