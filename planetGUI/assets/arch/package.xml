@@ -68,7 +68,11 @@
     <component id="fi7r2l" name="comFormulaCommentRenderer.xml" path="/com/"/>
     <component id="oee32m" name="WinArchBackpack.xml" path="/win/" exported="true"/>
     <component id="mx3y6r" name="ToolTipArchBpOpera.xml" path="/com/"/>
-    <component id="f89o6s" name="btnFuel.xml" path="/btn/"/>
+    <component id="fbul6t" name="btnFuel.xml" path="/btn/"/>
+    <image id="bgz46u" name="icon_formula_add.png" path="/newImg/"/>
+    <image id="bgz46v" name="icon_formula_arrange.png" path="/newImg/"/>
+    <component id="bgz46w" name="btnArrange.xml" path="/btn/"/>
+    <image id="bgz46x" name="btn_formula_arrange.png" path="/newImg/" scale="" scale9grid="24,10,48,20"/>
   </resources>
   <publish name="arch"/>
 </packageDescription>
