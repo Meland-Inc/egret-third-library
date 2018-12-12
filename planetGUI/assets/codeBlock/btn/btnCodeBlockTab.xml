@@ -8,7 +8,7 @@
     <image id="n4_f89o" name="n4" src="efrs1x" fileName="newImg/btn_cm_yellow2.png" pkg="te1gxawo" xy="0,0" size="130,44">
       <gearDisplay controller="button" pages="1"/>
     </image>
-    <text id="n5_f89o" name="title" xy="65,22" pivot="0.5,0.5" anchor="true" size="89,28" fontSize="20" color="#5b4b37" align="center" vAlign="middle" bold="true" singleLine="true" text="玩家建筑">
+    <text id="n5_f89o" name="title" xy="65,22" pivot="0.5,0.5" anchor="true" size="73,23" fontSize="16" color="#5b4b37" align="center" vAlign="middle" bold="true" singleLine="true" text="玩家建筑">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
   </displayList>

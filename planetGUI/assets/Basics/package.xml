@@ -143,9 +143,6 @@
     <component id="j7co5x" name="ScrollBarH.xml" path="/com/" exported="true"/>
     <component id="j7co5y" name="comMainContainer.xml" path="/com/"/>
     <image id="l2b664" name="icon_start.png" path="/img/"/>
-    <image id="l2b665" name="img_code_diamond_4.png" path="/img/"/>
-    <image id="l2b666" name="img_code_diamond_5.png" path="/img/" scale="9grid" scale9grid="3,5,4,14" smoothing="false"/>
-    <image id="l2b667" name="img_code_diamond_6.png" path="/img/"/>
     <component id="l2b668" name="BlankShape.xml" path="/codeBlock/" exported="true"/>
     <component id="dib96o" name="btnTips.xml" path="/btn/" exported="true"/>
     <component id="dib96p" name="btnTipsWithImage.xml" path="/btn/" exported="true"/>
@@ -160,12 +157,12 @@
     <image id="8sek7g" name="event_10_1.png" path="/img/" scale="9grid" scale9grid="93,17,2,26"/>
     <image id="8sek7h" name="img_code_hexagon.png" path="/img/"/>
     <component id="azxf7i" name="CodeblockTemplateContainer.xml" path="/com/"/>
-    <image id="edsm7j" name="img_code_buttonmark2.png" path="/newImg/"/>
-    <image id="edsm7k" name="img_code_buttonmark3.png" path="/newImg/"/>
-    <image id="edsm7l" name="img_code_buttonmark4.png" path="/newImg/"/>
-    <image id="edsm7m" name="img_code_buttonmark5.png" path="/newImg/"/>
-    <image id="edsm7n" name="img_code_buttonmark6.png" path="/newImg/"/>
-    <image id="edsm7o" name="img_code_buttonmark7.png" path="/newImg/"/>
+    <image id="edsm7j" name="img_code_mark_motion.png" path="/newImg/"/>
+    <image id="edsm7k" name="img_code_mark_control.png" path="/newImg/"/>
+    <image id="edsm7l" name="img_code_mark_material.png" path="/newImg/"/>
+    <image id="edsm7m" name="img_code_mark_event.png" path="/newImg/"/>
+    <image id="edsm7n" name="img_code_mark_detection.png" path="/newImg/"/>
+    <image id="edsm7o" name="img_code_mark_function.png" path="/newImg/"/>
     <image id="edsm7p" name="img_code_empty.png" path="/newImg/" exported="true"/>
     <image id="edsm7q" name="img_code_new.png" path="/newImg/"/>
     <image id="edsm7r" name="img_code_stencil1.png" path="/newImg/"/>
@@ -178,15 +175,15 @@
     <image id="edsm7y" name="icon_code_run.png" path="/newImg/"/>
     <image id="edsm7z" name="icon_code_save.png" path="/newImg/"/>
     <image id="edsm80" name="icon_code_share.png" path="/newImg/"/>
-    <image id="edsm81" name="icon_code_sign1.png" path="/newImg/"/>
-    <image id="edsm82" name="icon_code_sign2.png" path="/newImg/"/>
-    <image id="edsm83" name="icon_code_sign3.png" path="/newImg/"/>
-    <image id="edsm84" name="icon_code_sign4.png" path="/newImg/"/>
-    <image id="edsm85" name="icon_code_sign5.png" path="/newImg/"/>
-    <image id="edsm86" name="icon_code_sign6.png" path="/newImg/"/>
-    <image id="edsm87" name="icon_code_sign7.png" path="/newImg/"/>
+    <image id="edsm81" name="icon_code_sign_operation.png" path="/newImg/"/>
+    <image id="edsm82" name="icon_code_sign_motion.png" path="/newImg/"/>
+    <image id="edsm83" name="icon_code_sign_detection.png" path="/newImg/"/>
+    <image id="edsm84" name="icon_code_sign_material.png" path="/newImg/"/>
+    <image id="edsm85" name="icon_code_sign_event.png" path="/newImg/"/>
+    <image id="edsm86" name="icon_code_sign_control.png" path="/newImg/"/>
+    <image id="edsm87" name="icon_code_sign_function.png" path="/newImg/"/>
     <image id="edsm88" name="img_code_add.png" path="/newImg/"/>
-    <image id="edsm89" name="img_code_buttonmark1.png" path="/newImg/"/>
+    <image id="edsm89" name="img_code_mark_operation.png" path="/newImg/"/>
     <image id="j1n28a" name="img_codeblock_frame_1.png" path="/newImg/" scale="9grid" scale9grid="12,6,24,12"/>
     <image id="j1n28b" name="img_codeblock_white_1.png" path="/newImg/" scale="9grid" scale9grid="12,7,24,14"/>
     <image id="j1n28c" name="img_codeblock_white_2.png" path="/newImg/"/>
@@ -194,6 +191,7 @@
     <image id="j1n28e" name="event_9_1.png" path="/img/"/>
     <image id="j1n28f" name="event_9_2.png" path="/img/"/>
     <image id="j1n28g" name="event_9_3.png" path="/img/"/>
+    <image id="r4qp8h" name="img_code_diamond_7.png" path="/img/" scale="9grid" scale9grid="16,6,20,12"/>
   </resources>
   <publish name="Basics"/>
 </packageDescription>
