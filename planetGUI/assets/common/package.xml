@@ -298,7 +298,7 @@
     <image id="nxksyi81" name="img_cm_bottom_1.png" path="/img/"/>
     <image id="nxksyi82" name="img_cm_bottom_12.png" path="/img/"/>
     <image id="nxksyi83" name="img_cm_bottom_15.png" path="/img/"/>
-    <image id="nxksyi84" name="img_cm_bottom_4.png" path="/img/"/>
+    <image id="nxksyi84" name="img_cm_bottom_4.png" path="/img/" exported="true" scale="9grid" scale9grid="16,16,32,32"/>
     <image id="nxksyi85" name="img_cm_item_10.png" path="/img/"/>
     <image id="qljxyi8d" name="icon_robot_energy.png" path="/newImg/" exported="true"/>
     <image id="twvnyi8c" name="img_cm_bottom_11.png" path="/newImg/" exported="true" scale="9grid" scale9grid="10,10,20,20"/>
@@ -326,8 +326,9 @@
     <image id="edsmcyi8t" name="img_cm_bottom_19.png" path="/newImg/" exported="true" scale="9grid" scale9grid="1,1,9,4"/>
     <image id="edsmcyi8u" name="img_cm_bottom_20.png" path="/newImg/" exported="true" scale="9grid" scale9grid="18,18,36,36"/>
     <image id="edsmcyi8v" name="img_cm_doubtprompt.png" path="/newImg/" exported="true"/>
-    <image id="edsmcyi8w" name="img_cm_tips_3.png" path="/newImg/" exported="true"/>
-    <image id="edsmcyi8x" name="img_cm_tips_4.png" path="/newImg/" exported="true"/>
+    <image id="edsmcyi8w" name="img_cm_tips_3.png" path="/newImg/" exported="true" scale="9grid" scale9grid="22,25,53,50"/>
+    <image id="edsmcyi8x" name="img_cm_tips_4.png" path="/newImg/" exported="true" scale="9grid" scale9grid="23,23,46,46"/>
+    <component id="j1n2cyi8y" name="RBtnObjectRenderer.xml" path="/btn/" exported="true"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>

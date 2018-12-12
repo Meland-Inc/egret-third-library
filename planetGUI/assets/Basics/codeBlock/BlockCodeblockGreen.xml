@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="80,56">
   <displayList>
-    <component id="n0_flp7" name="n0" src="flp759" fileName="BlockCodeblockBGGreen.xml" xy="0,0">
+    <component id="n0_flp7" name="n0" src="flp759" fileName="codeBlock/BlockCodeblockBGGreen.xml" xy="0,0" size="80,56">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
-    <component id="n1_flp7" name="container" src="kesa9" fileName="Container.xml" xy="12,10" size="56,30"/>
+    <component id="n1_flp7" name="container" src="kesa9" fileName="com/Container.xml" xy="12,10" size="56,30"/>
   </displayList>
   <relation target="n1_flp7" sidePair="width-width,height-height"/>
 </component>

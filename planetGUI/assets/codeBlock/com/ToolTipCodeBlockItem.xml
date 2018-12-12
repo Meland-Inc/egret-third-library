@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="196,160">
+<component size="196,125">
   <displayList>
-    <image id="n13_tebw" name="bg" src="grbn1o" fileName="img/bg_bag_tips.png" pkg="ruc22gnt" xy="0,0" size="196,160"/>
+    <image id="n13_tebw" name="bg" src="grbn1o" fileName="img/bg_bag_tips.png" pkg="ruc22gnt" xy="0,0" size="196,125">
+      <relation target="n12_tebw" sidePair="height-height"/>
+    </image>
     <image id="n14_tebw" name="n14" src="td6eg" fileName="img/img_bag_item_1.png" pkg="ruc22gnt" xy="10,10"/>
     <loader id="n8_tebw" name="ladIcon" xy="44,44" pivot="0.5,0.5" anchor="true" size="64,64" url="ui://4o62dubdtebwf" align="center" vAlign="middle" fill="scale"/>
     <text id="n9_tebw" name="tfName" xy="95,16" size="85,23" fontSize="16" color="#feef44" align="right" vAlign="middle" autoSize="height" bold="true" text="name"/>
     <text id="n10_tebw" name="tfType" xy="95,37" size="85,20" fontSize="14" color="#ffffff" align="right" vAlign="middle" autoSize="height" text="type"/>
     <text id="n11_tebw" name="tfCanSell" xy="95,56" size="85,18" fontSize="14" color="#ffffff" align="right" vAlign="middle" autoSize="none" text="不可交易"/>
-    <text id="n12_tebw" name="tfDesc" xy="16,131" size="162,19" fontSize="12" color="#ffffff" leading="5" autoSize="height" text="我是物品描述"/>
+    <text id="n12_tebw" name="tfDesc" xy="16,96" size="162,19" fontSize="12" color="#ffffff" leading="5" autoSize="height" text="我是物品描述"/>
   </displayList>
+  <relation target="n13_tebw" sidePair="width-width,height-height"/>
 </component>

@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="32,32" extention="Button">
-  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+<component size="30,30" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="1"/>
   <displayList>
-    <image id="n1" name="n1" src="dib96k" fileName="btn_code_tips.png" xy="0,0"/>
-    <image id="n2_dib9" name="n2" src="dib96l" fileName="bg_code_tips_2.png" xy="30,33" size="300,181">
+    <image id="n1" name="n1" src="edsmcyi8v" fileName="newImg/img_cm_doubtprompt.png" pkg="te1gxawo" xy="-5,-5"/>
+    <image id="n2_dib9" name="n2" src="edsmcyi8w" fileName="newImg/img_cm_tips_3.png" pkg="te1gxawo" xy="30,-5" size="299,176">
       <gearDisplay controller="button" pages="1"/>
       <relation target="n3_dib9" sidePair="width-width,height-height"/>
     </image>
-    <text id="n3_dib9" name="text" xy="42,45" size="276,25" fontSize="18" color="#ffffff" ubb="true" autoSize="height" text="">
+    <image id="n6_j1n2" name="n6" src="edsmcyi8x" fileName="newImg/img_cm_tips_4.png" pkg="te1gxawo" xy="37,43" size="285,122">
+      <gearDisplay controller="button" pages="1"/>
+      <relation target="n2_dib9" sidePair="left-left,bottom-bottom"/>
+    </image>
+    <text id="n3_dib9" name="text" xy="39,6" size="280,20" fontSize="14" color="#efefef" ubb="true" autoSize="none" bold="true" text="">
       <gearDisplay controller="button" pages="1"/>
     </text>
-    <loader id="n5_dib9" name="loader" xy="42,92" size="276,110" align="center" vAlign="middle" fill="scale">
+    <loader id="n5_dib9" name="loader" xy="42,49" size="276,110" align="center" vAlign="middle" fill="scale">
       <gearDisplay controller="button" pages="1"/>
       <relation target="n2_dib9" sidePair="left-left,bottom-bottom"/>
     </loader>

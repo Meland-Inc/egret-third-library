@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640">
+<component size="1136,640" designImage="ui://i25v0ebkedsmw">
   <displayList>
-    <image id="n0_oe8k" name="n0" src="oe8k1" fileName="img/bg_bag.png" xy="210,98" group="n11_11slc"/>
-    <image id="n5_oe8k" name="n5" src="oe8k6" fileName="img/img_code_1.png" xy="385,158" group="n11_11slc"/>
-    <text id="n2_oe8k" name="n2" xy="479,108" size="149,31" group="n11_11slc" fontSize="24" color="#ffffff" text="选择一个道具"/>
-    <list id="n3_oe8k" name="listTab" xy="243,161" size="129,290" group="n11_11slc" margin="2,2,2,2" lineGap="5" defaultItem="ui://4o62dubdoe8k9">
-      <item title="工具"/>
+    <image id="n0_oe8k" name="n0" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="248,93" size="695,430" group="n16_j1n2"/>
+    <image id="n14_j1n2" name="n14" src="edsmcyi8s" fileName="newImg/img_cm_bottom_18.png" pkg="te1gxawo" xy="262,140" size="168,366" group="n16_j1n2"/>
+    <image id="n15_j1n2" name="n15" src="nxksyi84" fileName="img/img_cm_bottom_4.png" pkg="te1gxawo" xy="438,138" size="488,308" group="n16_j1n2"/>
+    <text id="n2_oe8k" name="n2" xy="543,100" size="85,27" group="n16_j1n2" fontSize="20" color="#f5ebde" text="选择道具"/>
+    <list id="n3_oe8k" name="listTab" xy="280,158" size="132,290" group="n16_j1n2" margin="2,2,2,2" lineGap="5" defaultItem="ui://4o62dubdf89oh">
+      <item title="玩家建筑物品"/>
       <item title="武器"/>
       <item title="食物"/>
       <item title="其他"/>
     </list>
-    <list id="n4_oe8k" name="listItem" xy="393,164" size="475,280" group="n11_11slc" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="10" colGap="10" lineItemCount="6" defaultItem="ui://4o62dubdoe8ka">
+    <list id="n4_oe8k" name="listItem" xy="462,149" size="434,289" group="n16_j1n2" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="1" colGap="1" lineItemCount="6" defaultItem="ui://te1gxawoj1n2cyi8y">
       <item/>
       <item/>
       <item/>
@@ -22,13 +23,13 @@
       <item/>
       <item/>
     </list>
-    <component id="n7_hxf8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="870,88" size="56,57" group="n11_11slc">
-      <Button icon="ui://eunktclqsz331"/>
+    <component id="n10_11slc" name="btnConfirm" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="778,450" size="110,40" group="n16_j1n2">
+      <Button title="确定" titleColor="#472f16" titleFontSize="18" icon="ui://te1gxawoefrs1w"/>
     </component>
-    <component id="n10_11slc" name="btnConfirm" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="688,481" size="110,40" group="n11_11slc">
-      <Button title="确定" titleColor="#999999" icon="ui://te1gxawopgixi4u"/>
+    <component id="n13_j1n2" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="892,95" size="36,36" group="n16_j1n2">
+      <Button icon="ui://te1gxawohpymyi7o" selectedIcon="ui://te1gxawohpymyi7o"/>
     </component>
-    <group id="n11_11slc" name="n11" xy="210,88" size="716,463" advanced="true">
+    <group id="n16_j1n2" name="n16" xy="248,93" size="695,430" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>
