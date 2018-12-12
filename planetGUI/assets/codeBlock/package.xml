@@ -10,13 +10,12 @@
     <image id="oe8k6" name="img_code_1.png" path="/img/"/>
     <image id="oe8k7" name="img_compose_6.png" path="/img/"/>
     <image id="oe8k8" name="img_compose_8.png" path="/img/"/>
-    <component id="oe8k9" name="btnArchFormulaTab.xml" path="/btn/"/>
     <component id="oe8ka" name="btnArchItemPu70.xml" path="/btn/" exported="true"/>
     <component id="hzryb" name="ToolTipCodeBlockItem.xml" path="/com/" exported="true"/>
-    <component id="hzryc" name="comCodeBlockItemPu70.xml" path="/btn/" exported="true"/>
     <image id="tebwe" name="img_bag_item_1.png" path="/img/"/>
     <image id="tebwf" name="img_bag_item_3.png" path="/img/"/>
     <component id="gy78g" name="WinCodeBlock.xml" path="/win/" exported="true"/>
+    <component id="f89oh" name="btnCodeBlockTab.xml" path="/btn/"/>
   </resources>
   <publish name="codeBlock"/>
 </packageDescription>

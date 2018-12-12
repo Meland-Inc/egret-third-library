@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="80,56">
   <displayList>
-    <image id="n4_8sek" name="n4" src="8sek7g" fileName="orange_10_1(1).png" xy="-45,-10" size="95,66">
+    <image id="n4_8sek" name="n4" src="8sek7g" fileName="img/event_10_1.png" xy="-45,-10" size="95,66">
       <relation target="" sidePair="height-height,left-left"/>
       <relation target="" sidePair="top-top"/>
     </image>
-    <image id="n1_flp7" name="n1" src="flp73u" fileName="orange_10_2.png" xy="49,0" size="27,51">
+    <image id="n1_flp7" name="n1" src="flp73u" fileName="img/event_10_2.png" xy="47,0" size="27,50">
       <relation target="" sidePair="leftext-left,rightext-right"/>
       <relation target="" sidePair="bottomext-bottom,topext-top"/>
     </image>
-    <image id="n2_flp7" name="n2" src="flp73v" fileName="orange_10_3.png" xy="74,0" size="7,51">
+    <image id="n2_flp7" name="n2" src="flp73v" fileName="img/event_10_3.png" xy="73,0" size="7,50">
       <relation target="" sidePair="right-right"/>
       <relation target="" sidePair="topext-top,bottomext-bottom"/>
     </image>
-    <image id="n5_8sek" name="n5" src="8sek7h" fileName="img_code_hexagon.png" xy="-39,-3">
+    <image id="n5_8sek" name="n5" src="8sek7h" fileName="img/img_code_hexagon.png" xy="-39,-3">
       <relation target="n4_8sek" sidePair="middle-middle,left-left"/>
     </image>
-    <image id="n3_l2b6" name="n3" src="l2b664" fileName="icon_start.png" xy="-22,13">
+    <image id="n3_l2b6" name="n3" src="l2b664" fileName="img/icon_start.png" xy="-22,13">
       <relation target="n5_8sek" sidePair="left-left,top-top"/>
     </image>
   </displayList>
