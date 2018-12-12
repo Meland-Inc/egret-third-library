@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="80,36">
+<component size="81,33">
   <displayList>
-    <component id="n0_kgcg" name="n0" src="kgcg2r" fileName="ForkableEndBGBlue.xml" xy="0,0"/>
-    <component id="n1_kgcg" name="container" src="kesa9" fileName="Container.xml" xy="12,10" size="58,16"/>
+    <component id="n0_kgcg" name="n0" src="kgcg2r" fileName="codeBlock/ForkableEndBGBlue.xml" xy="0,0"/>
+    <component id="n1_kgcg" name="container" src="kesa9" fileName="com/Container.xml" xy="0,8" size="64,24"/>
   </displayList>
   <relation target="n1_kgcg" sidePair="width-width,height-height"/>
 </component>

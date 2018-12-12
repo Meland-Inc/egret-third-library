@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="900,183" overflow="hidden">
+<component size="1136,640" overflow="hidden" opaque="false">
   <displayList>
-    <image id="n0_p02c" name="bg" src="xo0g2" fileName="img/img_main_announcement.png" xy="-1,77" size="902,26">
+    <image id="n0_p02c" name="bg" src="xo0g2" fileName="img/img_main_announcement.png" xy="-1,108" size="1138,26">
       <relation target="" sidePair="width-width,middle-middle"/>
     </image>
-    <component id="n1_p02c" name="ComContext" src="xo0g5" fileName="com/ComContext.xml" xy="22,74" size="855,35">
+    <component id="n1_p02c" name="ComContext" src="xo0g5" fileName="com/ComContext.xml" xy="22,105" size="1091,35">
       <relation target="" sidePair="width-width,middle-middle"/>
     </component>
   </displayList>

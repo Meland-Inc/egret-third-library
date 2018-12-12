@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="300,401" designImage="ui://i25v0ebkpgixh" designImageOffsetX="-481" designImageOffsetY="-128" designImageAlpha="0">
-  <controller name="ctrlStatus" pages="0,normal,1,select" selected="1"/>
+  <controller name="ctrlStatus" pages="0,normal,1,select" selected="0"/>
   <controller name="ctrlType" pages="0,bag,1,formula" selected="0"/>
   <controller name="ctrlIsNeedFuel" pages="0,yes,1,no" selected="0"/>
   <displayList>
@@ -56,7 +56,7 @@
       <gearDisplay controller="ctrlStatus" pages="1"/>
     </image>
     <image id="n10_acec" name="imgIconBG" src="ot9si33" fileName="newImg/img_cm_item_2.png" pkg="te1gxawo" xy="51,303" size="56,56" group="n20_twvn"/>
-    <loader id="n11_acec" name="ladIcon" xy="56,308" size="45,45" group="n20_twvn" aspect="true"/>
+    <loader id="n11_acec" name="ladIcon" xy="69,321" size="21,21" group="n20_twvn" aspect="true" url="ui://kdeyuiwwbgz46u" align="center" vAlign="middle" fill="scale" autoSize="true"/>
     <image id="n12_sg4g" name="n12" src="jjanyi88" fileName="newImg/img_cm_bottom_11_2.png" pkg="te1gxawo" xy="64,286" group="n20_twvn">
       <gearDisplay controller="ctrlStatus" pages="1"/>
     </image>
@@ -78,7 +78,6 @@
       <item/>
       <item/>
     </list>
-    <text id="n23_fbul" name="n23" xy="57,308" size="48,46" group="n20_twvn" fontSize="20" color="#5b4b37" autoSize="none" text="添加燃料"/>
     <group id="n20_twvn" name="open" xy="-38,122" size="233,238" advanced="true">
       <gearDisplay controller="ctrlIsNeedFuel" pages="0"/>
     </group>

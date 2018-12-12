@@ -3,8 +3,8 @@
   <displayList>
     <image id="n0_lxnu" name="imgBG" src="gpm0i40" fileName="newImg/bg_cm_9.png" pkg="te1gxawo" xy="20,10" size="1036,490"/>
     <image id="n44_kddk" name="imgTitleBG" src="j21fi3x" fileName="newImg/img_cm_title5.png" pkg="te1gxawo" xy="20,6" size="216,44"/>
-    <text id="n1_lxnu" name="title" xy="107,12" size="68,34" fontSize="25" color="#ffffff" align="center" bold="true" text="配 方">
-      <relation target="n44_kddk" sidePair="center-center"/>
+    <text id="n1_lxnu" name="title" xy="111,11" size="64,34" fontSize="25" color="#ffffff" align="center" vAlign="middle" bold="true" text="配 方">
+      <relation target="n44_kddk" sidePair="center-center,middle-middle"/>
     </text>
     <image id="n46_kddk" name="imgTitleIconBG" src="j21fi3y" fileName="newImg/img_cm_title6.png" pkg="te1gxawo" xy="0,0"/>
     <image id="n48_pqjb" name="imgTitleIcon" src="hxqg22" fileName="imgNew/icon_bag_title.png" pkg="ruc22gnt" xy="15,12"/>
