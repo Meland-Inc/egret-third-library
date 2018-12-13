@@ -16,7 +16,7 @@
       <relation target="" sidePair="width-width,height-height"/>
     </component>
     <image id="n17_edsm" name="n17" src="efrs23" fileName="newImg/img_cm_title2.png" pkg="te1gxawo" xy="482,9"/>
-    <text id="n18_edsm" name="n18" xy="518,9" size="139,29" fontSize="22" color="#ffffff" align="center" vAlign="middle" strokeColor="#352e2c" strokeSize="2" text="代码块编辑器"/>
+    <text id="n18_edsm" name="n18" xy="518,9" size="137,29" fontSize="22" color="#ffffff" align="center" vAlign="middle" strokeColor="#352e2c" strokeSize="2" text="代码块编辑器"/>
     <component id="n15_edsm" name="btnReset" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="40,5" size="126,40">
       <Button title="恢复默认" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawoqo8vi21" selectedIcon="ui://te1gxawoqo8vi21"/>
     </component>
@@ -25,6 +25,9 @@
     </component>
     <component id="n20_edsm" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1044,3" size="80,42">
       <Button icon="ui://te1gxawoefrs1r" selectedIcon="ui://te1gxawoefrs1r"/>
+    </component>
+    <component id="n21_f89o" name="btnUserGuide" src="oliri6p" fileName="btn/rbtnFix.xml" pkg="te1gxawo" xy="350,8" size="37,38">
+      <Button icon="ui://te1gxawoedsmcyi8v" selectedIcon="ui://te1gxawoedsmcyi8v"/>
     </component>
   </displayList>
 </component>
