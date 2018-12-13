@@ -2,10 +2,12 @@
 <component size="72,72" extention="Button">
   <controller name="button" pages="0,up,1,down" selected="0"/>
   <controller name="ctrlSchedule" pages="1,false,0,true" selected="0"/>
-  <controller name="ctrlLock" pages="0,true,1,false" selected="0"/>
+  <controller name="ctrlLock" pages="0,true,1,false" selected="1"/>
   <displayList>
     <image id="n4_11slc" name="bg" src="ot9si33" fileName="newImg/img_cm_item_2.png" xy="2,2"/>
+    <image id="n16_b7ci" name="n16" src="b7cicyi8z" fileName="newImg/img_formula_bottom_4.png" xy="7,7"/>
     <loader id="n5_11slc" name="icon" xy="6,6" size="60,60" align="center" vAlign="middle" fill="scale">
+      <gearLook controller="ctrlLock" pages="0" values="1,0,1,1" default="1,0,0,1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
     <image id="n6_11slc" name="imgSelected" src="j21fi3v" fileName="newImg/img_cm_item_6.png" xy="0,0">
