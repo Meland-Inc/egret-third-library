@@ -2,12 +2,8 @@
 <component size="1136,640" opaque="false">
   <displayList>
     <component id="n6_eh0y" name="_comTip" src="eh0yp" fileName="com/comHomeTip.xml" xy="318,180" group="n11_kvvk"/>
-    <component id="n9_rk5g" name="_btnSure" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="475,394" size="64,66" group="n11_kvvk">
-      <Button icon="ui://te1gxawork5gt"/>
-    </component>
-    <component id="n10_rk5g" name="_btnDel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="597,394" size="64,66" group="n11_kvvk">
-      <Button icon="ui://te1gxawork5gu"/>
-    </component>
+    <image id="n9_rk5g" name="_btnSure" src="lmzf31" fileName="newImg/WinBuildPannel/btn_build_confirm.png" pkg="32ieekgu" xy="475,394" size="64,66" group="n11_kvvk"/>
+    <image id="n10_rk5g" name="_btnDel" src="lmzf30" fileName="newImg/WinBuildPannel/btn_build_cancel.png" pkg="32ieekgu" xy="597,394" size="64,66" group="n11_kvvk"/>
     <group id="n11_kvvk" name="root" xy="318,180" size="500,280" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
