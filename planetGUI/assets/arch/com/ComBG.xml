@@ -11,7 +11,7 @@
     <image id="n53_pqjb" name="imgLowBG" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="20,483" size="1033,14"/>
     <image id="n49_pqjb" name="imgSearchBG" src="pgixi5y" fileName="newImg/img_cm_item_15.png" pkg="te1gxawo" xy="281,13" size="178,30" group="n52_pqjb"/>
     <image id="n50_pqjb" name="imgSearchIcon" src="pgixi4z" fileName="newImg/icon_cm_inputbox.png" pkg="te1gxawo" xy="291,19" group="n52_pqjb"/>
-    <text id="n51_pqjb" name="tfSearch" xy="317,14" size="136,29" group="n52_pqjb" input="true" prompt="[color=#C0B496]搜索名称...[/color]" fontSize="17" color="#5b4b37" vAlign="middle" autoSize="none" text=""/>
+    <text id="n51_pqjb" name="tfSearch" xy="317,14" size="136,29" group="n52_pqjb" input="true" prompt="[color=#C0B496]搜索名称...[/color]" fontSize="17" color="#5b4b37" vAlign="middle" leading="0" autoSize="none" singleLine="true" text=""/>
     <group id="n52_pqjb" name="grpSearch" xy="281,13" size="179,31"/>
   </displayList>
 </component>
