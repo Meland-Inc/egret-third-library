@@ -4,7 +4,7 @@
   <controller name="conEquiped" pages="0,no,1,yes" selected="0"/>
   <displayList>
     <image id="n14_o6si" name="bg" src="rdy43y" fileName="newImg/img_cm_item_3.png" pkg="te1gxawo" xy="2,2"/>
-    <loader id="n6_w80l" name="icon" xy="2,2" size="68,68" align="center" vAlign="middle" fill="scale"/>
+    <loader id="n6_w80l" name="icon" xy="2,2" size="68,68" url="ui://5hs1fuejrdy42v" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
     <text id="n12_tcc1" name="title" xy="45,51" size="26,21" fontSize="14" color="#8e4e0f" align="center" vAlign="middle" autoSize="none" text="99"/>
     <image id="n18_o6si" name="equipedMark" src="rdy44e" fileName="newImg/img_main_item_3.png" xy="0,0" group="n20_o6si"/>
     <text id="n19_o6si" name="tfE" xy="3,3" size="18,19" group="n20_o6si" fontSize="12" align="center" vAlign="middle" autoSize="none" text="E"/>
@@ -14,7 +14,6 @@
     <image id="n11_ft0q" name="imgSelectedBg" src="j21fi3v" fileName="newImg/img_cm_item_6.png" pkg="te1gxawo" xy="0,0">
       <gearDisplay controller="button" pages="3"/>
     </image>
-    <image id="n16_o6si" name="defaultIcon" src="rdy42v" fileName="newImg/btn_main_item_add.png" xy="20,20"/>
     <component id="n13_ti2i" name="durabilityBar" src="ti2i1y" fileName="com/comDurabilityBar.xml" pkg="ruc22gnt" xy="20,58" hideByEditor="true" visible="false">
       <ProgressBar value="100" max="100"/>
     </component>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="342,160" designImage="ui://i25v0ebkhxqgb" designImageOffsetX="-637" designImageOffsetY="-210" designImageAlpha="0" designImageLayer="1">
+<component size="342,160" opaque="false" designImage="ui://i25v0ebkhxqgb" designImageOffsetX="-637" designImageOffsetY="-210" designImageAlpha="0" designImageLayer="1">
   <controller name="conType" pages="0,other,1,equip,2,comsumable" selected="0"/>
   <displayList>
-    <image id="n2_grbn" name="bg" src="j21fi3w" fileName="newImg/img_cm_tips_1.png" xy="0,0" size="226,137">
+    <image id="n2_grbn" name="bg" src="j21fi3w" fileName="newImg/img_cm_tips_1.png" xy="0,0" size="226,131">
       <relation target="n12_grbn" sidePair="bottomext-bottom"/>
     </image>
     <loader id="n30_grbn" name="ladIcon" xy="10,10" pivot="0.5,0.5" size="64,64" align="center" vAlign="middle" fill="scale"/>
