@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkqv2f8" designImageAlpha="0" designImageLayer="1">
   <controller name="conMapMode" pages="0,normal,1,born,2,revive" selected="0"/>
-  <controller name="conMarkBtn" pages="0,put,1,delete,2,cancel" selected="0"/>
+  <controller name="ctrlMarkOperate" pages="0,normal,1,selectMark,2,puttingMark,3,deleteMark,4,editMarkName" selected="2"/>
   <displayList>
-    <component id="n35_trc2" name="comMap" src="trc221u" fileName="win/ComMiniMap.xml" xy="0,0">
+    <component id="n35_trc2" name="comMap" src="trc221u" fileName="com/ComMiniMapContainer.xml" xy="0,0">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
     <graph id="n36_qghb" name="lineH" xy="0,289" size="1136,5" visible="false" alpha="0.5" touchable="false" type="rect" lineSize="0" fillColor="#ff333333">
@@ -16,7 +16,7 @@
       <relation target="" sidePair="width-width"/>
     </image>
     <image id="n2_11e02" name="titleBg" src="efrs23" fileName="newImg/img_cm_title2.png" pkg="te1gxawo" xy="462,8" group="n14_11e02"/>
-    <text id="n3_11e02" name="title" xy="499,9" size="134,29" group="n14_11e02" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="世界地图">
+    <text id="n3_11e02" name="title" xy="499,9" size="134,27" group="n14_11e02" fontSize="22" color="#fffffe" align="center" vAlign="middle" autoSize="height" strokeColor="#686252" strokeSize="2" text="世界地图">
       <gearText controller="conMapMode" pages="0" values="世界地图" default="选择出生地"/>
     </text>
     <group id="n14_11e02" name="grpTitle" xy="462,8" size="210,30" advanced="true" collapsed="true">
@@ -43,20 +43,28 @@
     </group>
     <component id="n16_11e02" name="btnLineServer" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="16,0" size="147,50">
       <gearDisplay controller="conMapMode" pages="0"/>
-      <Button title="分线服务器" titleColor="#5b4b37" icon="ui://te1gxawoefrs1v"/>
+      <Button title="分线服务器" titleColor="#5b4b37" icon="ui://te1gxawoefrs1u"/>
     </component>
     <image id="n18_11e02" name="operateBg" src="ot9si3b" fileName="newImg/img_cm_zoom.png" pkg="te1gxawo" xy="1028,363" size="66,221" group="n22_11e02"/>
-    <component id="n19_11e02" name="btnMark" src="ohl4r" fileName="btn/btnOperate.xml" xy="1034,374" group="n22_11e02">
-      <gearIcon controller="conMarkBtn" pages="0,1,2" values="ui://te1gxawoot9si2o|ui://te1gxawoot9si2n|ui://te1gxawopagbi28"/>
-      <Button icon="ui://te1gxawoot9si2o"/>
-    </component>
     <component id="n20_11e02" name="btnZoomIn" src="ohl4r" fileName="btn/btnOperate.xml" xy="1034,446" group="n22_11e02">
       <Button icon="ui://te1gxawoot9si2q"/>
     </component>
     <component id="n21_11e02" name="btnZoomOut" src="ohl4r" fileName="btn/btnOperate.xml" xy="1034,522" group="n22_11e02">
       <Button icon="ui://te1gxawoot9si2r"/>
     </component>
-    <group id="n22_11e02" name="grpMapOperateBtn" xy="1028,363" size="66,221" advanced="true" collapsed="true">
+    <component id="n19_11e02" name="btnShowSelectMark" src="ohl4r" fileName="btn/btnOperate.xml" xy="1034,374" group="n22_11e02">
+      <gearDisplay controller="ctrlMarkOperate" pages="0,1,4"/>
+      <Button icon="ui://te1gxawoot9si2o" controller="ctrlMarkOperate" page="1"/>
+    </component>
+    <component id="n38_mr86" name="btnDeleteMark" src="ohl4r" fileName="btn/btnOperate.xml" xy="1034,374" group="n22_11e02">
+      <gearDisplay controller="ctrlMarkOperate" pages="3"/>
+      <Button icon="ui://te1gxawoot9si2n" controller="ctrlMarkOperate" page="0"/>
+    </component>
+    <component id="n39_mr86" name="btnCancelPutMark" src="ohl4r" fileName="btn/btnOperate.xml" xy="1034,374" group="n22_11e02">
+      <gearDisplay controller="ctrlMarkOperate" pages="2"/>
+      <Button icon="ui://te1gxawopagbi28" controller="ctrlMarkOperate" page="0"/>
+    </component>
+    <group id="n22_11e02" name="grpMapOperateBtn" xy="1028,363" size="66,221" advanced="true">
       <gearDisplay controller="conMapMode" pages="0"/>
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </group>
@@ -66,15 +74,40 @@
       <gearDisplay controller="conMapMode" pages="0,2"/>
       <relation target="" sidePair="bottom-bottom"/>
     </group>
-    <image id="n23_11e02" name="putMarksTipsBg" src="ot9si38" fileName="newImg/img_cm_prompt.png" pkg="te1gxawo" xy="406,553" size="338,31" group="n25_11e02"/>
-    <text id="n24_11e02" name="tfPutMarkTips" xy="407,556" size="337,26" group="n25_11e02" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="点击地图放置标记"/>
-    <group id="n25_11e02" name="grpPutMarkTips" xy="406,553" size="338,31" visible="false" advanced="true" collapsed="true">
-      <gearDisplay controller="conMapMode" pages="0"/>
+    <image id="n23_11e02" name="putMarksTipsBg" src="ot9si38" fileName="newImg/img_cm_prompt.png" pkg="te1gxawo" xy="399,553" size="338,31" group="n25_11e02"/>
+    <text id="n24_11e02" name="tfPutMarkTips" xy="400,556" size="337,26" group="n25_11e02" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="点击地图放置标记"/>
+    <group id="n25_11e02" name="grpPutMarkTips" xy="399,553" size="338,31" visible="false" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlMarkOperate" pages="2"/>
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </group>
-    <component id="n29_11e02" name="winSelectMark" src="p85hp" fileName="win/WinSelectMark.xml" xy="362,190" visible="false">
-      <gearDisplay controller="conMapMode" pages="0"/>
-      <relation target="" sidePair="center-center,middle-middle"/>
+    <graph id="n50_mr86" name="block" xy="0,0" size="1136,640" group="n60_mr86" alpha="0" type="rect">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <image id="n51_mr86" name="bg" src="efrs1m" fileName="newImg/bg_cm_3.png" pkg="te1gxawo" xy="362,190" size="412,260" group="n80_mr86"/>
+    <text id="n52_mr86" name="selectMarkTitle" xy="508,195" size="120,29" group="n80_mr86" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="选择标记"/>
+    <list id="n54_mr86" name="lstMarkBtn" xy="399,250" size="338,58" group="n80_mr86" layout="flow_hz" scroll="horizontal" colGap="1" defaultItem="ui://k08mtk0rp85hq" align="center">
+      <item title="img_map_sign_star" icon="ui://k08mtk0r11e021l" name="1"/>
+      <item title="img_map_sign_anchor" icon="ui://k08mtk0r11e021m" name="2"/>
+      <item title="img_map_sign_heart" icon="ui://k08mtk0r11e021n" name="3"/>
+      <item title="img_map_sign_flag" icon="ui://k08mtk0r11e021o" name="4"/>
+      <item title="img_map_sign_train" icon="ui://k08mtk0r11e021p" name="5"/>
+      <item title="img_map_sign_triangle" icon="ui://k08mtk0r11e021q" name="6"/>
+    </list>
+    <component id="n53_mr86" name="btnCloseSelectMark" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="733,192" size="32,32" group="n80_mr86">
+      <Button icon="ui://te1gxawoqo8vi1z" controller="ctrlMarkOperate" page="0"/>
     </component>
+    <image id="n55_mr86" name="inputBg" src="ot9si31" fileName="newImg/img_cm_inputbox_2.png" pkg="te1gxawo" xy="489,317" size="157,35" group="n57_mr86"/>
+    <text id="n56_mr86" name="inpMarkName" xy="489,317" size="157,34" group="n57_mr86" input="true" prompt="自定义标记" fontSize="18" color="#5e5e5e" align="center" vAlign="middle" autoSize="none" singleLine="true" text=""/>
+    <group id="n57_mr86" name="grpMarkInput" xy="489,317" size="157,35" group="n80_mr86" advanced="true" collapsed="true"/>
+    <image id="n58_mr86" name="n58" src="qo8vi1x" fileName="newImg/img_cm_pattern2.png" pkg="te1gxawo" xy="363,425" size="406,21" group="n80_mr86"/>
+    <component id="n59_mr86" name="btnPutMark" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="514,371" size="107,42" group="n80_mr86">
+      <Button title="放置" titleColor="#472f16" icon="ui://te1gxawoefrs1w" controller="ctrlMarkOperate" page="2"/>
+    </component>
+    <group id="n80_mr86" name="grpSelectMarkPanel" xy="362,190" size="412,260" group="n60_mr86" advanced="true" collapsed="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <group id="n60_mr86" name="grpSelectMark" xy="0,0" size="1136,640" advanced="true">
+      <gearDisplay controller="ctrlMarkOperate" pages="1,4"/>
+    </group>
   </displayList>
 </component>
