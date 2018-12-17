@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640">
-  <displayList/>
+<component size="1136,640" designImage="ui://i25v0ebknsh415" designImageAlpha="0">
+  <displayList>
+    <image id="n0_nsh4" name="bg" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="273,105" size="601,435" group="n4_nsh4"/>
+    <image id="n1_nsh4" name="titleBg" src="efrs22" fileName="newImg/img_cm_title1.png" pkg="te1gxawo" xy="482,107" size="178,36" group="n4_nsh4"/>
+    <text id="n2_nsh4" name="title" xy="550,113" size="45,24" group="n4_nsh4" fontSize="20" color="#ffffff" text="提示"/>
+    <loader id="n5_nsh4" name="ladTips" xy="319,167" size="511,289" group="n4_nsh4" url="ui://mp92elpxnsh42i1j" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <image id="n6_nsh4" name="tipsTextBg" src="nsh4cyi90" fileName="newImg/img_cm_bottom_21.png" pkg="te1gxawo" xy="332,180" size="189,29" group="n4_nsh4">
+      <relation target="n7_nsh4" sidePair="bottomext-bottom"/>
+    </image>
+    <text id="n7_nsh4" name="tfTips" xy="340,188" size="172,18" group="n4_nsh4" fontSize="14" color="#433016" autoSize="none" text="tips"/>
+    <component id="n3_nsh4" name="btnIKnow" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="501,461" size="138,50" group="n4_nsh4">
+      <Button title="我知道了" titleColor="#ffffff" icon="ui://te1gxawoefrs1s"/>
+    </component>
+    <group id="n4_nsh4" name="root" xy="273,105" size="602,435" advanced="true" collapsed="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
 </component>

@@ -29,7 +29,9 @@
     <image id="kvvk2i1e" name="img_guide_1.png" path="/imgNew/" exported="true"/>
     <image id="kvvk2i1f" name="img_guide_2.png" path="/imgNew/" exported="true"/>
     <component id="dsze2i1g" name="btnSkip.xml" path="/btn/" exported="true"/>
-    <component id="nsh42i1h" name="NoviceImgTips.xml" path="/win/"/>
+    <component id="nsh42i1h" name="NoviceImgTips.xml" path="/win/" exported="true"/>
+    <image id="nsh42i1i" name="img_prompt_1.png" path="/imgNew/" exported="true"/>
+    <image id="nsh42i1j" name="img_prompt_2.png" path="/imgNew/" exported="true"/>
   </resources>
   <publish name="novice"/>
 </packageDescription>
