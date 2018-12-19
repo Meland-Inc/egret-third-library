@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="850,154" designImage="ui://i25v0ebkkvvke" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlSelfOther" pages="0,other,1,self" selected="1"/>
   <displayList>
     <image id="n0_npqs" name="bg" src="efrs1p" fileName="newImg/bg_cm_6.png" pkg="te1gxawo" xy="0,14" size="850,140">
       <relation target="" sidePair="width-width"/>
     </image>
-    <image id="n8_kvvk" name="nameBg" src="efrs24" fileName="newImg/img_cm_title3.png" pkg="te1gxawo" xy="71,0"/>
-    <text id="n9_kvvk" name="tfName" xy="92,8" size="126,19" fontSize="18" color="#ffffff" align="center" autoSize="none" text="名字"/>
-    <image id="n14_cuwy" name="headIconBg" src="kvvk2i1e" fileName="imgNew/img_guide_1.png" xy="90,47"/>
-    <loader id="n1_npqs" name="ladHeadIcon" xy="95,51" pivot="0.5,0.5" size="68,66" url="ui://7xhwdeuzctbhb" fill="scaleFree"/>
-    <text id="n6_r7z3" name="tfSpeech" xy="200,55" size="483,70" fontSize="18" color="#4e4237" autoSize="none" text="">
-      <relation target="" sidePair="rightext-right"/>
-    </text>
+    <text id="n6_r7z3" name="tfSpeech" xy="182,55" size="484,70" fontSize="18" color="#4e4237" autoSize="none" text=""/>
     <image id="n11_kvvk" name="n11" src="kvvk2i1f" fileName="imgNew/img_guide_2.png" xy="703,86" group="n13_ojhl"/>
     <text id="n4_r7z3" name="tfClickContinue" xy="711,79" size="77,23" group="n13_ojhl" fontSize="18" color="#645849" text="点击继续"/>
     <image id="n12_kvvk" name="n12" src="kvvk2i1f" fileName="imgNew/img_guide_2.png" xy="789,86" group="n13_ojhl"/>
-    <group id="n13_ojhl" name="grpClickContinue" xy="703,79" size="93,24" advanced="true" collapsed="true">
-      <relation target="" sidePair="right-right"/>
+    <group id="n13_ojhl" name="grpClickContinue" xy="703,79" size="93,24" advanced="true" collapsed="true"/>
+    <image id="n8_kvvk" name="nameBg" src="efrs24" fileName="newImg/img_cm_title3.png" pkg="te1gxawo" xy="601,0" group="n16_hw0p"/>
+    <text id="n9_kvvk" name="tfName" xy="622,8" size="126,19" group="n16_hw0p" fontSize="18" color="#ffffff" align="center" autoSize="none" text="我">
+      <gearText controller="ctrlSelfOther" pages="1" values="我" default="名字"/>
+    </text>
+    <group id="n16_hw0p" name="grpName" xy="601,0" size="170,36" advanced="true" collapsed="true">
+      <gearXY controller="ctrlSelfOther" pages="0" values="81,0" default="601,0"/>
+    </group>
+    <image id="n14_cuwy" name="headIconBg" src="kvvk2i1e" fileName="imgNew/img_guide_1.png" xy="90,47" group="n24_hw0p"/>
+    <loader id="n1_npqs" name="ladHeadIcon" xy="95,51" pivot="0.5,0.5" size="68,66" group="n24_hw0p" url="ui://7xhwdeuzctbhb" fill="scale" shrinkOnly="true"/>
+    <group id="n24_hw0p" name="grpOtherIcon" xy="90,47" size="76,76" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlSelfOther" pages="0"/>
     </group>
   </displayList>
 </component>
