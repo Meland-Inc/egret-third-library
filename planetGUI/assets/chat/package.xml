@@ -136,7 +136,8 @@
     <image id="w7uy4v" name="img_chat_siliao.png" path="/img/"/>
     <image id="w7uy4w" name="img_chat_zonghe.png" path="/img/"/>
     <component id="gpm04y" name="btnChannel.xml" path="/btn/"/>
-    <component id="q9ya4z" name="comFriendList.xml" path="/com/"/>
+    <component id="q9ya4z" name="btnFriendList.xml" path="/btn/"/>
+    <component id="scpq50" name="btnFriendItem.xml" path="/btn/"/>
   </resources>
   <publish name="chat"/>
 </packageDescription>

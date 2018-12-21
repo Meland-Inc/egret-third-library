@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" designImage="ui://i25v0ebkq9ya11" designImageAlpha="33" designImageLayer="1">
-  <controller name="conShowSendHistory" pages="0,hide,1,show" selected="1"/>
+<component size="1136,640" designImage="ui://i25v0ebkq9ya11" designImageAlpha="0" designImageLayer="1">
+  <controller name="conShowSendHistory" pages="0,hide,1,show" selected="0"/>
   <controller name="conShowEmoj" pages="0,hide,1,show" selected="1"/>
-  <controller name="conFrivateChat" pages="0,hide,1,show" selected="0"/>
+  <controller name="conFrivateChat" pages="0,hide,1,show" selected="1"/>
   <displayList>
     <image id="n3_q73n" name="bg" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="189,103" size="779,456" group="n26_hrgt"/>
     <image id="n11_q73n" name="chatContentBg" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="393,158" size="552,369" group="n26_hrgt"/>
@@ -29,11 +29,11 @@
       <item/>
       <item/>
     </list>
-    <image id="n13_q73n" name="friendNameBg" src="ot9si35" fileName="newImg/img_cm_name.png" pkg="te1gxawo" xy="413,169" size="81,22" group="n25_11e02">
+    <image id="n13_q73n" name="friendNameBg" src="ot9si35" fileName="newImg/img_cm_name.png" pkg="te1gxawo" xy="413,169" size="80,22" group="n25_11e02">
       <relation target="n14_q73n" sidePair="width-width"/>
     </image>
-    <text id="n14_q73n" name="tfFriendName" xy="415,171" size="82,18" group="n25_11e02" fontSize="14" color="#5b4b37" align="center" vAlign="middle" ubb="true" vars="true" text="与[color=#c88316]{name=xxx}[/color]聊天中"/>
-    <group id="n25_11e02" name="grpFriendChatTitle" xy="413,169" size="84,22" group="n26_hrgt" advanced="true" collapsed="true">
+    <text id="n14_q73n" name="tfFriendName" xy="413,170" size="81,18" group="n25_11e02" fontSize="14" color="#5b4b37" align="center" vAlign="middle" ubb="true" vars="true" text="与[color=#c88316]{name=xxx}[/color]聊天中"/>
+    <group id="n25_11e02" name="grpFriendChatTitle" xy="413,169" size="81,22" group="n26_hrgt" advanced="true" collapsed="true">
       <gearDisplay controller="conFrivateChat" pages="1"/>
     </group>
     <component id="n15_q73n" name="btnVoice" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="409,486" size="54,28" group="n26_hrgt">
@@ -108,9 +108,9 @@
     </component>
     <component id="n20_q73n" name="btnHistory" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="732,497" size="10,7" group="n26_hrgt">
       <gearIcon controller="conShowSendHistory" pages="0,1" values="ui://te1gxawoot9si37|ui://te1gxawoot9si36"/>
-      <Button icon="ui://te1gxawoot9si36"/>
+      <Button icon="ui://te1gxawoot9si37"/>
     </component>
-    <component id="n28_q9ya" name="n28" src="q9ya4z" fileName="com/comFriendList.xml" xy="819,168" group="n26_hrgt">
+    <component id="n28_q9ya" name="btnFriendList" src="q9ya4z" fileName="btn/btnFriendList.xml" xy="819,164" group="n26_hrgt">
       <gearDisplay controller="conFrivateChat" pages="1"/>
     </component>
     <group id="n26_hrgt" name="root" xy="189,95" size="802,464" advanced="true" collapsed="true">
