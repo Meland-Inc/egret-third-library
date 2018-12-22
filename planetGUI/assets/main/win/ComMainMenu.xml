@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="406,63">
   <displayList>
-    <component id="n19_r2bf" name="btnManual" src="rdy458" fileName="btn/btnMenu.xml" xy="0,0">
-      <Button title="手册" icon="ui://5hs1fuejr2bf5x"/>
-    </component>
-    <component id="n18_r2bf" name="btnGamePlatform" src="rdy458" fileName="btn/btnMenu.xml" xy="58,0">
+    <component id="n18_r2bf" name="btnGamePlatform" src="rdy458" fileName="btn/btnMenu.xml" xy="0,0">
       <Button title="游戏" icon="ui://5hs1fuejr2bf5y"/>
+    </component>
+    <component id="n15_r2bf" name="btnFormula" src="rdy458" fileName="btn/btnMenu.xml" xy="58,0">
+      <Button title="配方" icon="ui://5hs1fuejrdy437"/>
     </component>
     <component id="n17_r2bf" name="btnMail" src="rdy458" fileName="btn/btnMenu.xml" xy="116,0">
       <Button title="邮箱" icon="ui://5hs1fuejr2bf5w"/>
     </component>
-    <component id="n15_r2bf" name="btnFormula" src="rdy458" fileName="btn/btnMenu.xml" xy="174,0">
-      <Button title="配方" icon="ui://5hs1fuejrdy437"/>
+    <component id="n19_r2bf" name="btnManual" src="rdy458" fileName="btn/btnMenu.xml" xy="174,0">
+      <Button title="手册" icon="ui://5hs1fuejr2bf5x"/>
     </component>
     <component id="n13_r2bf" name="btnRobot" src="rdy458" fileName="btn/btnMenu.xml" xy="232,0">
       <Button title="机器" icon="ui://5hs1fuejrdy43d"/>
