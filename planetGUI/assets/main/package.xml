@@ -45,21 +45,9 @@
     <image id="uvm020" name="img_Blood volume_1.png" path="/img/" exported="true"/>
     <image id="uvm021" name="img_Blood volume_2.png" path="/img/" exported="true"/>
     <component id="uvm022" name="ComHeadInfo.xml" path="/com/" exported="true"/>
-    <image id="7i8n23" name="btn_main_tool.png" path="/img/" exported="true"/>
-    <image id="7i8n24" name="icon_main_bow.png" path="/img/" exported="true"/>
-    <image id="7i8n25" name="icon_main_build.png" path="/img/" exported="true"/>
-    <image id="7i8n26" name="icon_main_chat.png" path="/img/" exported="true"/>
-    <image id="7i8n27" name="icon_main_felling.png" path="/img/" exported="true"/>
-    <image id="7i8n28" name="icon_main_fist.png" path="/img/" exported="true"/>
-    <image id="7i8n29" name="icon_main_mining.png" path="/img/" exported="true"/>
-    <image id="7i8n2a" name="icon_main_pickup.png" path="/img/" exported="true"/>
-    <image id="7i8n2b" name="icon_main_shoot.png" path="/img/" exported="true"/>
-    <image id="7i8n2c" name="icon_main_watch.png" path="/img/" exported="true"/>
-    <image id="7i8n2d" name="icon_main_work.png" path="/img/" exported="true"/>
     <image id="ft0q2e" name="img_main_item_3.png" path="/img/"/>
     <image id="ft0q2f" name="img_main_item_4.png" path="/img/"/>
-    <component id="ft0q2g" name="ShortcutItem.xml" path="/btn/"/>
-    <image id="q7z62e" name="icon_main_sword.png" path="/img/" exported="true"/>
+    <component id="ft0q2g" name="ShortcutItem.xml" path="/btn/" exported="true"/>
     <component id="oy0u2i" name="pbrAccmu.xml" path="/pbr/"/>
     <image id="oy0u2l" name="img_main_itemdrop.png" path="/img/"/>
     <component id="oy0u2m" name="ComAccmu.xml" path="/com/" exported="true"/>
@@ -72,30 +60,30 @@
     <image id="rdy42x" name="btn_main_menu.png" path="/newImg/"/>
     <image id="rdy42y" name="btn_main_menu_2.png" path="/newImg/"/>
     <image id="rdy42z" name="btn_main_menu_3.png" path="/newImg/"/>
-    <image id="rdy430" name="icon_main_axe.png" path="/newImg/"/>
+    <image id="rdy430" name="icon_main_axe.png" path="/newImg/" exported="true"/>
     <image id="rdy431" name="icon_main_backpack.png" path="/newImg/"/>
     <image id="rdy432" name="icon_main_battery.png" path="/newImg/"/>
-    <image id="rdy433" name="icon_main_bow.png" path="/newImg/"/>
-    <image id="rdy434" name="icon_main_building.png" path="/newImg/"/>
+    <image id="rdy433" name="icon_main_bow.png" path="/newImg/" exported="true"/>
+    <image id="rdy434" name="icon_main_building.png" path="/newImg/" exported="true"/>
     <image id="rdy435" name="icon_main_chat.png" path="/newImg/"/>
-    <image id="rdy436" name="icon_main_fist.png" path="/newImg/"/>
+    <image id="rdy436" name="icon_main_fist.png" path="/newImg/" exported="true"/>
     <image id="rdy437" name="icon_main_formula.png" path="/newImg/"/>
     <image id="rdy438" name="icon_main_health.png" path="/newImg/"/>
     <image id="rdy439" name="icon_main_hunger.png" path="/newImg/"/>
-    <image id="rdy43a" name="icon_main_mining.png" path="/newImg/"/>
+    <image id="rdy43a" name="icon_main_mining.png" path="/newImg/" exported="true"/>
     <image id="rdy43b" name="icon_main_night.png" path="/newImg/"/>
-    <image id="rdy43c" name="icon_main_pickup.png" path="/newImg/"/>
+    <image id="rdy43c" name="icon_main_pickup.png" path="/newImg/" exported="true"/>
     <image id="rdy43d" name="icon_main_robot.png" path="/newImg/"/>
     <image id="rdy43e" name="icon_main_setting.png" path="/newImg/"/>
-    <image id="rdy43f" name="icon_main_shoot.png" path="/newImg/"/>
+    <image id="rdy43f" name="icon_main_shoot.png" path="/newImg/" exported="true"/>
     <image id="rdy43g" name="icon_main_sun.png" path="/newImg/"/>
-    <image id="rdy43h" name="icon_main_sword.png" path="/newImg/"/>
-    <image id="rdy43i" name="icon_main_talk.png" path="/newImg/"/>
+    <image id="rdy43h" name="icon_main_sword.png" path="/newImg/" exported="true"/>
+    <image id="rdy43i" name="icon_main_talk.png" path="/newImg/" exported="true"/>
     <image id="rdy43j" name="icon_main_task.png" path="/newImg/"/>
     <image id="rdy43k" name="icon_main_temperature.png" path="/newImg/"/>
     <image id="rdy43l" name="icon_main_thirst.png" path="/newImg/"/>
     <image id="rdy43m" name="icon_main_time.png" path="/newImg/"/>
-    <image id="rdy43n" name="icon_main_watch.png" path="/newImg/"/>
+    <image id="rdy43n" name="icon_main_watch.png" path="/newImg/" exported="true"/>
     <image id="rdy43o" name="icon_main_wifi.png" path="/newImg/"/>
     <image id="rdy43p" name="icon_main_work.png" path="/newImg/"/>
     <image id="rdy441" name="img_main_announcement.png" path="/newImg/"/>
@@ -180,8 +168,13 @@
     <image id="r43m6y" name="img_main_task_9.png" path="/newImg/"/>
     <component id="r43m6z" name="comTaskTargetItem.xml" path="/com/" exported="true"/>
     <component id="r43m70" name="ToolTipTaskTargetItem.xml" path="/ToolTip/" exported="true"/>
-    <image id="xk0v71" name="icon_main_treasure.png" path="/img/" exported="true"/>
+    <component id="luyr70" name="btnOpenWorkbench.xml" path="/btn/"/>
+    <component id="luyr71" name="btnCircle.xml" path="/btn/"/>
+    <component id="luyr6z" name="ToolTipWorkbench.xml" path="/com/" exported="true"/>
+    <component id="p1o872" name="ToolTipWbPet.xml" path="/com/" exported="true"/>
+    <image id="6rqz73" name="icon_main_treasure.png" path="/img/"/>
     <component id="xles73" name="btnRobotViewReturn.xml" path="/btn/"/>
+    <component id="ij7r74" name="ToolTipWbPlant.xml" path="/com/" exported="true"/>
   </resources>
   <publish name="main"/>
 </packageDescription>

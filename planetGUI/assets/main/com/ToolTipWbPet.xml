@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="151,62" pivot="0.5,0.5" anchor="true">
+  <controller name="ctrlWorkbench" pages="0,true,1,false" selected="0"/>
+  <displayList>
+    <component id="n0_p1o8" name="btnKill" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="0,0" size="61,62">
+      <gearXY controller="ctrlWorkbench" pages="1" values="45,0" default="0,0"/>
+      <Button title="宰杀" titleColor="#3b2e17" titleFontSize="20" icon="ui://te1gxawopgixi4k"/>
+    </component>
+    <component id="n2_6rqz" name="btnOpen" src="luyr71" fileName="btn/btnCircle.xml" xy="90,0">
+      <gearDisplay controller="ctrlWorkbench" pages="0"/>
+      <Button icon="ui://te1gxawolhu4cyi8j"/>
+    </component>
+  </displayList>
+</component>
