@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="342,160" opaque="false" designImage="ui://i25v0ebkhxqgb" designImageOffsetX="-637" designImageOffsetY="-210" designImageAlpha="0" designImageLayer="1">
   <controller name="conType" pages="0,other,1,equip,2,comsumable" selected="0"/>
+  <controller name="ctrlArchPath" pages="0,show,1,hide" selected="0"/>
+  <controller name="ctrlWorkbench" pages="0,show,1,hide" selected="0"/>
   <displayList>
-    <image id="n2_grbn" name="bg" src="j21fi3w" fileName="newImg/img_cm_tips_1.png" xy="0,0" size="226,131">
-      <relation target="n12_grbn" sidePair="bottomext-bottom"/>
+    <image id="n2_grbn" name="tipsBg" src="j21fi3w" fileName="newImg/img_cm_tips_1.png" xy="0,0" size="226,320">
+      <relation target="n38_lbex" sidePair="bottomext-bottom"/>
     </image>
-    <loader id="n30_grbn" name="ladIcon" xy="10,10" pivot="0.5,0.5" size="64,64" align="center" vAlign="middle" fill="scale"/>
+    <loader id="n30_grbn" name="ladIcon" xy="10,10" pivot="0.5,0.5" size="64,64" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
     <image id="n29_grbn" name="imgIconBg" src="j21fi3v" fileName="newImg/img_cm_item_6.png" xy="10,10" size="64,64"/>
     <text id="n9_grbn" name="tfName" xy="80,16" size="99,20" fontSize="16" color="#ffffff" vAlign="middle" autoSize="none" bold="true" text="name"/>
     <text id="n10_grbn" name="tfType" xy="80,37" size="85,17" fontSize="12" color="#f0eedc" vAlign="middle" autoSize="height" text="type"/>
@@ -35,6 +37,22 @@
     <component id="n31_a9pm" name="btnUnload" src="qn8od" fileName="btn/btnCommon.xml" xy="242,145" size="100,40" group="n8_grbn">
       <Button title="卸下" titleColor="#ffffff" titleFontSize="18" icon="ui://te1gxawoj21fi3n"/>
     </component>
-    <group id="n8_grbn" name="grpOperate" xy="242,4" size="100,181"/>
+    <group id="n8_grbn" name="grpOperate" xy="242,4" size="100,181" collapsed="true"/>
+    <text id="n35_lbex" name="tfArchMat" xy="16,124" size="85,18" group="n39_lbex" fontSize="14" color="#fbd62a" vAlign="middle" autoSize="none" bold="true" text="合成材料："/>
+    <list id="n36_lbex" name="lstArchMat" xy="16,153" size="121,102" group="n39_lbex" overflow="scroll" lineGap="5" defaultItem="ui://te1gxawolbexcyi94" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n37_lbex" name="tfWorkbench" xy="16,258" size="85,18" group="n40_lbex" fontSize="14" color="#fbb42a" vAlign="middle" autoSize="none" bold="true" text="制作需要："/>
+    <component id="n38_lbex" name="comWorkbench" src="lbexcyi97" fileName="lab/comWorkbench.xml" xy="16,280" size="126,30" group="n40_lbex"/>
+    <group id="n40_lbex" name="grpWorkbench" xy="16,258" size="126,52" group="n39_lbex" advanced="true">
+      <gearDisplay controller="ctrlWorkbench" pages="0"/>
+      <relation target="n36_lbex" sidePair="top-bottom"/>
+    </group>
+    <group id="n39_lbex" name="grpArchPath" xy="16,124" size="126,186" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlArchPath" pages="0"/>
+      <relation target="n12_grbn" sidePair="top-bottom"/>
+    </group>
   </displayList>
 </component>
