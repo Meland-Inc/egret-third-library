@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="125,30">
+  <displayList>
+    <image id="n3_lbex" name="iconBg" src="nxksyi7w" fileName="newImg/img_cm_tips_5.png" xy="0,0" size="30,30"/>
+    <loader id="n0_lbex" name="icon" xy="0,0" size="30,30" fill="scale" shrinkOnly="true"/>
+    <text id="n2_lbex" name="title" xy="37,6" size="85,18" fontSize="12" color="#ffffff" vAlign="middle" vars="true" autoSize="none" text="{name=铁}*{num=5}"/>
+  </displayList>
+</component>

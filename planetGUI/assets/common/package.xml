@@ -35,7 +35,6 @@
     <sound id="tqc912" name="close.wav" path="/sound/" exported="true"/>
     <sound id="tqc913" name="success.wav" path="/sound/" exported="true"/>
     <sound id="tqc914" name="unsuccess.wav" path="/sound/" exported="true"/>
-    <component id="lt5g15" name="ToolTipBagItem.xml" path="/com/" exported="true"/>
     <image id="lt5g16" name="img_bag_item_3.png" path="/img/"/>
     <component id="lt5g17" name="ToolTipOperaBagItem.xml" path="/com/" exported="true"/>
     <image id="lt5g18" name="btn_blue.png" path="/img/" scale="9grid" scale9grid="37,14,74,28"/>
@@ -327,6 +326,11 @@
     <component id="j1n2cyi8y" name="RBtnObjectRenderer.xml" path="/btn/" exported="true"/>
     <image id="b7cicyi8z" name="img_formula_bottom_4.png" path="/newImg/" exported="true"/>
     <image id="nsh4cyi90" name="img_cm_bottom_21.png" path="/newImg/" exported="true" scale="9grid" scale9grid="13,13,26,26"/>
+    <component id="lbexcyi91" name="ToolTipObjectItem.xml" path="/toolTip/" exported="true"/>
+    <component id="lbexcyi93" name="ToolTipBagItem1.xml" path="/com/" exported="true"/>
+    <component id="lbexcyi94" name="comArchMat.xml" path="/lab/"/>
+    <component id="lbexcyi97" name="comWorkbench.xml" path="/lab/"/>
+    <component id="lbexcyi98" name="ToolTipBagItem.xml" path="/com/" exported="true"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>
