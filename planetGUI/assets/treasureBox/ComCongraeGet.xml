@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="401,320">
-  <controller name="isOpen" pages="0,success,1,failure,2,null" selected="2"/>
+  <controller name="isOpen" pages="0,success,1,failure,2,null" selected="0"/>
   <displayList>
     <image id="n0_m1va" name="bg" src="efrs1m" fileName="newImg/bg_cm_3.png" pkg="te1gxawo" xy="1,0" size="400,320" group="n12_m1va"/>
     <text id="n1_m1va" name="title" xy="130,57" size="142,33" group="n12_m1va" fontSize="22" color="#584736" align="center" vAlign="middle" autoSize="none" bold="true" text="恭喜获得"/>
-    <list id="n2_m1va" name="lstItem" xy="15,104" size="370,101" group="n12_m1va" layout="flow_hz" overflow="scroll" scroll="horizontal" lineGap="10" colGap="18" defaultItem="ui://qoip3oosewny2" align="center" vAlign="middle"/>
+    <list id="n2_m1va" name="lstItem" xy="15,104" size="370,101" group="n12_m1va" layout="row" overflow="scroll" scroll="horizontal" lineGap="10" colGap="18" defaultItem="ui://qoip3oosewny2" align="center" vAlign="middle"/>
     <component id="n3_m1va" name="btnConfirm" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="147,221" group="n12_m1va">
       <Button title="确定" titleColor="#f6edc7" icon="ui://te1gxawoefrs1s"/>
     </component>
@@ -16,7 +16,7 @@
     <image id="n9_m1va" name="n9" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="119,300" size="60,16" group="n11_m1va"/>
     <image id="n10_m1va" name="n10" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="60,300" size="60,16" group="n11_m1va"/>
     <group id="n11_m1va" name="n11" xy="0,299" size="397,17" group="n12_m1va" collapsed="true"/>
-    <group id="n12_m1va" name="n12" xy="0,0" size="401,320" advanced="true" collapsed="true">
+    <group id="n12_m1va" name="n12" xy="0,0" size="401,320" advanced="true">
       <gearDisplay controller="isOpen" pages="0"/>
     </group>
     <component id="n13_nrqi" name="openFailurePanel" src="nrqi8" fileName="ComOpenFailure.xml" xy="0,0">
