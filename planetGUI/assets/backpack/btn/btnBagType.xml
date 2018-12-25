@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="92,45" extention="Button">
-  <controller name="button" pages="0,up,1,down" selected="1"/>
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <controller name="ctrlIsRead" pages="0,yes,1,no" selected="0"/>
   <displayList>
     <image id="n2_ey2h" name="iconUp" src="qo8vi21" fileName="newImg/btn_cm_white1.png" pkg="te1gxawo" xy="0,0" size="92,40">
       <gearDisplay controller="button" pages="0"/>
@@ -9,6 +10,10 @@
       <gearDisplay controller="button" pages="1"/>
     </image>
     <text id="n3_ey2h" name="title" xy="14,6" size="63,28" fontSize="18" color="#5b4b37" align="center" vAlign="middle" autoSize="none" text="全部"/>
+    <image id="n4_hdqr" name="imgRedPoint" src="n6p21r" fileName="img/icon_mail_2.png" pkg="ueqz7xc0" xy="84,0">
+      <gearDisplay controller="ctrlIsRead" pages="1"/>
+      <relation target="" sidePair="right-right,top-top"/>
+    </image>
   </displayList>
   <Button mode="Radio"/>
 </component>
