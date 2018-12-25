@@ -6,7 +6,7 @@
     <loader id="n3_apmc" name="iconAvatar" xy="30,20" size="74,74" group="n10_cnpn" aspect="true" fill="scale"/>
     <group id="n10_cnpn" name="icon" xy="26,16" size="84,84" group="n7_apmc"/>
     <text id="n5_apmc" name="usernameLabel" xy="123,19" size="191,22" group="n7_apmc" fontSize="16" color="#54452f" vAlign="middle" autoSize="none" bold="true" text="&#xA;"/>
-    <text id="n6_apmc" name="userIdLabel" xy="123,45" size="192,21" group="n7_apmc" font="FZZhunYuan-M02S" fontSize="12" color="#bfb89c" vAlign="middle" autoSize="none" bold="true" text="&#xA;"/>
+    <text id="n6_apmc" name="userIdLabel" xy="123,45" size="192,21" group="n7_apmc" font="FZZhunYuan-M02S" fontSize="12" color="#736045" vAlign="middle" autoSize="none" bold="true" text="&#xA;"/>
     <group id="n7_apmc" name="iconGroup" xy="26,16" size="289,84"/>
     <component id="n11_cnpn" name="btnChangeIcon" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="123,73" size="75,27">
       <Button title="更换头像" titleColor="#656565" titleFontSize="12" icon="ui://te1gxawopgixi4s"/>
