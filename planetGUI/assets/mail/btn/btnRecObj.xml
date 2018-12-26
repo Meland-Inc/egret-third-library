@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="100,30" extention="Button">
   <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
-  <controller name="taken" pages="0,Ntake,1,Taken" selected="0"/>
+  <controller name="taken" pages="0,Ntake,1,Taken" selected="1"/>
   <displayList>
     <image id="n6_11syp" name="n6" src="pgixi4o" fileName="newImg/btn_cm_other_1.png" pkg="te1gxawo" xy="0,0" size="100,30" group="n5_wqj8">
       <gearDisplay controller="taken" pages="0"/>
@@ -10,7 +10,7 @@
       <gearDisplay controller="taken" pages="0"/>
     </text>
     <group id="n5_wqj8" name="n5" xy="0,0" size="100,30"/>
-    <image id="n7_11syp" name="n7" src="pgixi4o" fileName="newImg/btn_cm_other_1.png" pkg="te1gxawo" xy="0,0" size="100,30" group="n4_wqj8">
+    <image id="n7_11syp" name="n7" src="pgixi4o" fileName="newImg/btn_cm_other_1.png" pkg="te1gxawo" xy="0,0" size="100,30" group="n4_wqj8" grayed="true">
       <gearDisplay controller="taken" pages="1"/>
     </image>
     <text id="n3_wqj8" name="n3" xy="12,0" size="75,30" group="n4_wqj8" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="已领取">
