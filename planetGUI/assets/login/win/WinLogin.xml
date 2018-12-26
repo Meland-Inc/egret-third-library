@@ -34,7 +34,7 @@
     </text>
     <text id="n78_qo8v" name="tfTitle" xy="2138,162" size="93,29" group="n47_ptq4" fontSize="22" color="#ffffff" text="账号登录"/>
     <image id="n79_qo8v" name="imgBottomBG" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="2000,467" size="370,14" group="n47_ptq4"/>
-    <group id="n47_ptq4" name="loginGroup" xy="2000,155" size="370,330" advanced="true">
+    <group id="n47_ptq4" name="loginGroup" xy="2000,155" size="370,330" advanced="true" collapsed="true">
       <gearDisplay controller="c1" pages="1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
@@ -55,7 +55,7 @@
     <text id="n67_ptq4" name="tfErrorInSignin" xy="2117,344" size="138,24" group="n34_ptq4" visible="false" font="方正准圆简体" fontSize="18" color="#ff0000" vAlign="middle" bold="true" text="账号或密码错误"/>
     <text id="n76_qo8v" name="tfSigninGroupTitle" xy="2138,196" size="93,29" group="n34_ptq4" fontSize="22" color="#ffffff" text="账号登录"/>
     <image id="n77_qo8v" name="imgBottomBG" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="2000,432" size="370,14" group="n34_ptq4"/>
-    <group id="n34_ptq4" name="signinGroup" xy="2000,189" size="370,262" hideByEditor="true" advanced="true" collapsed="true">
+    <group id="n34_ptq4" name="signinGroup" xy="2000,189" size="370,262" advanced="true" collapsed="true">
       <gearDisplay controller="c1" pages="1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
@@ -76,7 +76,7 @@
     <text id="n95_x0vt" name="tfErrorInVouristsSignin" xy="2130,346" size="100,24" group="n98_x0vt" visible="false" font="方正准圆简体" fontSize="18" color="#ff0000" align="center" vAlign="middle" leading="0" bold="true" text="账号已注册"/>
     <text id="n96_x0vt" name="tfSigninGroupTitle" xy="2138,196" size="93,29" group="n98_x0vt" fontSize="22" color="#ffffff" text="游客登录"/>
     <image id="n97_x0vt" name="imgBottomBG" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="2000,433" size="370,14" group="n98_x0vt"/>
-    <group id="n98_x0vt" name="touristsExperienceGroup" xy="2000,189" size="370,262" hideByEditor="true" advanced="true" collapsed="true">
+    <group id="n98_x0vt" name="touristsExperienceGroup" xy="2000,189" size="370,262" advanced="true" collapsed="true">
       <gearDisplay controller="c1" pages="1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
@@ -97,8 +97,8 @@
     <component id="n25_jddv" name="btnQQLogin" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="506,382" size="46,46" group="n9_jddv">
       <Button icon="ui://0n4pg0opsmpo5k"/>
     </component>
-    <text id="n99_smpo" name="n99" xy="506,354" size="123,22" group="n9_jddv" fontSize="16" color="#d1cebe" align="center" autoSize="none" text="或"/>
-    <group id="n9_jddv" name="selectModeGroup" xy="409,173" size="318,294" hideByEditor="true" advanced="true" collapsed="true">
+    <text id="n99_smpo" name="n99" xy="506,354" size="123,22" group="n9_jddv" fontSize="16" color="#a19c8d" align="center" autoSize="none" text="或"/>
+    <group id="n9_jddv" name="selectModeGroup" xy="409,173" size="318,294" advanced="true" collapsed="true">
       <gearDisplay controller="c1" pages="1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>

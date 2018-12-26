@@ -9,7 +9,7 @@
       <relation target="" sidePair="left-left,top-top"/>
     </component>
     <image id="n10_no43" name="imgNameBG" src="tm1s41" fileName="newImg/img_4.png" xy="440,456" group="n18_trkw"/>
-    <text id="n5_no43" name="tfRoleName" xy="466,457" size="195,31" group="n18_trkw" input="true" font="方正准圆简体" fontSize="24" color="#4a422f" align="center" vAlign="middle" letterSpacing="3" autoSize="none" singleLine="true" text="角色名字七个字"/>
+    <text id="n5_no43" name="tfRoleName" xy="466,459" size="195,31" group="n18_trkw" input="true" font="方正准圆简体" fontSize="24" color="#4a422f" align="center" vAlign="middle" leading="0" letterSpacing="3" autoSize="none" singleLine="true" text="角色名字七个字"/>
     <text id="n6_no43" name="tfError" xy="463,422" size="200,31" group="n18_trkw" visible="false" font="方正准圆简体" fontSize="15" color="#ee7d61" align="center" vAlign="middle" autoSize="none" bold="true" text="角色名字重复"/>
     <component id="n9_no43" name="btnDice" src="ptq41z" fileName="btn/btnDice.xml" xy="695,452" size="44,44" group="n18_trkw"/>
     <group id="n18_trkw" name="name" xy="440,422" size="299,74" advanced="true" collapsed="true">

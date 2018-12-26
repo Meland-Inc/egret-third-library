@@ -3,7 +3,7 @@
   <displayList>
     <image id="n22_11e02" name="bg" src="efrs1n" fileName="newImg/bg_cm_4.png" pkg="te1gxawo" xy="226,84" size="663,477" group="n9_132oi"/>
     <image id="n20_guek" name="titleBg" src="efrs23" fileName="newImg/img_cm_title2.png" pkg="te1gxawo" xy="457,94" group="n9_132oi"/>
-    <text id="n21_guek" name="title" xy="515,97" size="93,27" group="n9_132oi" fontSize="22" color="#ffffff" vAlign="middle" strokeColor="#352e2c" text="新手手册"/>
+    <text id="n21_guek" name="title" xy="515,96" size="94,29" group="n9_132oi" fontSize="22" color="#ffffff" vAlign="middle" leading="0" autoSize="none" strokeColor="#352e2c" text="新手手册"/>
     <component id="n5_132oi" name="btnClose" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="860,79" size="52,52" group="n9_132oi">
       <Button icon="ui://te1gxawoefrs1q"/>
     </component>
