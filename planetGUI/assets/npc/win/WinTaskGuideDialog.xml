@@ -18,7 +18,7 @@
       <relation target="" sidePair="right-right"/>
     </group>
     <image id="n5_gxw3" name="headIconBg" src="kvvk2i1e" fileName="imgNew/img_guide_1.png" pkg="mp92elpx" xy="238,499" group="n7_gxw3"/>
-    <loader id="n6_gxw3" name="ladHeadIcon" xy="243,503" size="68,66" group="n7_gxw3" url="ui://7xhwdeuzctbhb" align="center" vAlign="middle" fill="scale"/>
+    <loader id="n6_gxw3" name="ladHeadIcon" xy="241,502" size="70,70" group="n7_gxw3" url="ui://7xhwdeuzctbhb" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
     <group id="n7_gxw3" name="grpIcon" xy="238,499" size="76,76" group="n8_gxw3" advanced="true"/>
     <group id="n8_gxw3" name="grpDialog" xy="152,452" size="850,154" advanced="true">
       <relation target="" sidePair="bottom-bottom"/>

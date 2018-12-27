@@ -28,7 +28,7 @@
     <image id="hpymy" name="img_task_npc.png" path="/imgNew/"/>
     <image id="hpymz" name="img_task_notask.png" path="/imgNew/"/>
     <image id="hpym10" name="img_task_banner3.png" path="/imgNew/"/>
-    <image id="hpym11" name="img_task_banner2.png" path="/imgNew/"/>
+    <image id="hpym11" name="img_task_banner2.png" path="/imgNew/" scale="9grid" scale9grid="56,11,253,22"/>
     <image id="hpym12" name="img_task_banner1.png" path="/imgNew/" scale="9grid" scale9grid="507,39,125,80"/>
     <component id="r1t913" name="ComTaskCompletedToast.xml" path="/com/" exported="true"/>
     <component id="r1t914" name="ComTaskRewardItem.xml" path="/com/" exported="true"/>

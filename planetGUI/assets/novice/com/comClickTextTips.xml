@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="160,152">
+<component size="160,152" opaque="false">
   <controller name="conDirection" pages="0,leftTop,1,rightTop,2,leftBottom,3,rightBottom" selected="0"/>
   <displayList>
     <image id="n5_r7z3" name="lineRightTop" src="r7z3f" fileName="img/img_guide_line_1.png" xy="0,114" pivot="0.5,0.5">
@@ -19,7 +19,7 @@
     <image id="n0_r7z3" name="contentBg" src="r7z3d" fileName="img/guideTipsBg.png" xy="3,37" size="153,77">
       <relation target="n10_r7z3" sidePair="bottomext-bottom"/>
     </image>
-    <text id="n10_r7z3" name="tfContent" xy="7,43" size="144,66" fontSize="18" color="#ffffff" vAlign="middle" vars="true" autoSize="height" text="首先你需要占领一个领地，点击背包&#xA;"/>
+    <text id="n10_r7z3" name="tfContent" xy="7,43" size="144,67" fontSize="18" color="#ffffff" vAlign="middle" vars="true" autoSize="height" text="首先你需要占领一个领地，点击背包&#xA;"/>
   </displayList>
   <relation target="n10_r7z3" sidePair="bottomext-bottom"/>
 </component>

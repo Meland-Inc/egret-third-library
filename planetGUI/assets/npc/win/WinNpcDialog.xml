@@ -22,8 +22,8 @@
     </text>
     <component id="n27_q9ya" name="ladSpeech" src="faw4yi79" fileName="lab/labVScroll.xml" pkg="te1gxawo" xy="352,507" size="514,70" group="n26_elis"/>
     <image id="n17_r1t9" name="headIconBg" src="kvvk2i1e" fileName="imgNew/img_guide_1.png" pkg="mp92elpx" xy="242,499" group="n24_r1t9"/>
-    <loader id="n18_r1t9" name="ladHeadIcon" xy="247,503" size="68,66" group="n24_r1t9" url="ui://7xhwdeuzctbhb" align="center" vAlign="middle" fill="scale"/>
-    <group id="n24_r1t9" name="grpIcon" xy="242,499" size="76,76" group="n26_elis" advanced="true" collapsed="true"/>
+    <loader id="n18_r1t9" name="ladHeadIcon" xy="245,502" size="70,70" group="n24_r1t9" url="ui://7xhwdeuzctbhb" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <group id="n24_r1t9" name="grpIcon" xy="242,499" size="76,76" group="n26_elis" advanced="true"/>
     <group id="n26_elis" name="grpDialog" xy="152,452" size="889,154" advanced="true">
       <relation target="" sidePair="bottom-bottom"/>
     </group>
