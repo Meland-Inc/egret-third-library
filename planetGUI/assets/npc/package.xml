@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="tis07nuv" jpegQuality="80" compressPNG="true">
   <resources>
-    <component id="xhg90" name="WinNpc.xml" path="/win/" exported="true"/>
     <image id="xhg94" name="bg_npc_1.png" path="/img/"/>
     <image id="xhg95" name="bg_npc_2.png" path="/img/"/>
     <image id="xhg96" name="btn_build_close.png" path="/img/"/>
@@ -26,8 +25,7 @@
     <component id="xhg9s" name="btnTalkOption.xml" path="/btn/"/>
     <component id="nuhbt" name="btnChat.xml" path="/btn/" exported="true"/>
     <component id="s9e5u" name="tfNpcTalkContent.xml" path="/com/"/>
-    <component id="jlgpv" name="WinNpcDialog.xml" path="/win/" exported="true"/>
-    <component id="r1t9w" name="WinNpcDialogNew.xml" path="/win/" exported="true"/>
+    <component id="r1t9w" name="WinNpcDialog.xml" path="/win/" exported="true"/>
     <component id="gxw3x" name="WinTaskGuideDialog.xml" path="/win/" exported="true"/>
   </resources>
   <publish name="npc"/>

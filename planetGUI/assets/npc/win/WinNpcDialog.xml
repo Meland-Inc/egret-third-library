@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640">
+<component size="1136,640" designImage="ui://i25v0ebkkvvke" designImageAlpha="0">
   <displayList>
-    <list id="n15_sz33" name="lstOptions" xy="755,169" size="219,222" overflow="hidden" lineGap="9" colGap="10" defaultItem="ui://tis07nuvxhg9s" vAlign="bottom" autoClearItems="true">
-      <relation target="n24_p8hk" sidePair="bottom-bottom,right-right"/>
-      <item/>
+    <list id="n2_r1t9" name="lstOptions" xy="824,289" size="227,156" layout="flow_hz" lineGap="7" defaultItem="ui://tis07nuvxhg9s" vAlign="bottom" autoClearItems="true">
+      <relation target="" sidePair="bottom-bottom,right-right"/>
       <item/>
       <item/>
       <item/>
     </list>
-    <image id="n26_bc3l" name="bg" src="xhg94" fileName="img/bg_npc_1.png" xy="160,429" group="n24_p8hk"/>
-    <component id="n25_fyx8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="934,424" size="42,43" group="n24_p8hk">
-      <Button icon="ui://te1gxawoqn8o4"/>
+    <image id="n14_r1t9" name="bg" src="efrs1p" fileName="newImg/bg_cm_6.png" pkg="te1gxawo" xy="152,466" size="850,140" group="n26_elis">
+      <relation target="" sidePair="width-width"/>
+    </image>
+    <component id="n25_k6h3" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1011,453" size="30,30" group="n26_elis">
+      <relation target="" sidePair="right-right"/>
+      <Button icon="ui://te1gxawoqo8vi1w"/>
     </component>
-    <text id="n1_ctbh" name="tfNpcName" xy="161,429" size="155,41" group="n24_p8hk" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="NPC"/>
-    <image id="n29_bc3l" name="iconBg" src="xhg9c" fileName="img/img_avatarbg_1.png" xy="176,486" size="135,138" group="n6_ctbh"/>
-    <loader id="n4_ctbh" name="ladNpcIcon" xy="187,497" size="113,117" group="n6_ctbh" align="center" vAlign="middle" fill="scale"/>
-    <group id="n6_ctbh" name="grpIcon" xy="176,486" size="135,138" group="n24_p8hk" visible="false" advanced="true" collapsed="true"/>
-    <richtext id="n7_ctbh" name="rtfNpcSpeech" xy="316,494" size="611,116" group="n24_p8hk" fontSize="18" color="#a1a1a1" vAlign="middle" ubb="true" autoSize="none" text="">
-      <relation target="n6_ctbh" sidePair="leftext-right"/>
-    </richtext>
-    <group id="n24_p8hk" name="grpDialog" xy="160,424" size="816,216" advanced="true">
-      <relation target="" sidePair="bottom-bottom,center-center"/>
+    <image id="n15_r1t9" name="nameBg" src="efrs24" fileName="newImg/img_cm_title3.png" pkg="te1gxawo" xy="223,452" group="n26_elis"/>
+    <text id="n16_r1t9" name="tfName" xy="244,460" size="126,19" group="n26_elis" fontSize="18" color="#ffffff" align="center" autoSize="none" text="名字"/>
+    <text id="n19_r1t9" name="tfSpeech" xy="352,507" size="514,70" group="n26_elis" fontSize="18" color="#4e4237" ubb="true" autoSize="none" text="">
+      <relation target="" sidePair="rightext-right"/>
+      <relation target="n18_r1t9" sidePair="leftext-right"/>
+    </text>
+    <component id="n27_q9ya" name="ladSpeech" src="faw4yi79" fileName="lab/labVScroll.xml" pkg="te1gxawo" xy="352,507" size="514,70" group="n26_elis"/>
+    <image id="n17_r1t9" name="headIconBg" src="kvvk2i1e" fileName="imgNew/img_guide_1.png" pkg="mp92elpx" xy="242,499" group="n24_r1t9"/>
+    <loader id="n18_r1t9" name="ladHeadIcon" xy="245,502" size="70,70" group="n24_r1t9" url="ui://7xhwdeuzctbhb" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <group id="n24_r1t9" name="grpIcon" xy="242,499" size="76,76" group="n26_elis" advanced="true"/>
+    <group id="n26_elis" name="grpDialog" xy="152,452" size="889,154" advanced="true">
+      <relation target="" sidePair="bottom-bottom"/>
     </group>
   </displayList>
 </component>

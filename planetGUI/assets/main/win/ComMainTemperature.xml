@@ -25,7 +25,7 @@
     <image id="n20_c994" name="dawn" src="hocd6p" fileName="newImg/icon_main_dawn.png" xy="5,2" group="n8_r2bf">
       <gearDisplay controller="weather" pages="3"/>
     </image>
-    <text id="n7_r2bf" name="tfTime" xy="25,0" size="34,18" group="n8_r2bf" fontSize="10" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" autoClearText="true" text=""/>
+    <text id="n7_r2bf" name="tfTime" xy="25,0" size="34,18" group="n8_r2bf" fontSize="10" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="12:00"/>
     <group id="n8_r2bf" name="grpWeatherIcon" xy="0,0" size="60,18"/>
   </displayList>
 </component>

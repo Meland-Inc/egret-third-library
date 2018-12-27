@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="230,46" extention="Button">
-  <controller name="conTaskState" pages="0,acceptable,1,accepted,2,completed,3,submitted,4,other" selected="4"/>
+  <controller name="conTaskState" pages="0,acceptable,1,accepted,2,completed,3,submitted,4,other" selected="0"/>
   <displayList>
     <loader id="n10_sz33" name="icon" xy="0,0" size="230,46" url="ui://te1gxawotgrli6o" align="center" autoSize="true"/>
-    <text id="n9_qzgy" name="title" xy="63,10" size="104,23" fontSize="18" color="#4e5237" align="center" vAlign="middle" singleLine="true" text="optionName">
-      <gearXY controller="conTaskState" pages="3,4" values="63,11|63,10" default="82,11"/>
+    <text id="n9_qzgy" name="title" xy="56,11" size="156,19" fontSize="15" color="#4e5237" align="center" vAlign="middle" singleLine="true" text="是是是是是是是是是是">
+      <gearXY controller="conTaskState" pages="0,3,4" values="56,11|37,11|37,10" default="56,11"/>
       <relation target="" sidePair="center-center"/>
     </text>
-    <loader id="n11_p8hk" name="ladState" xy="21,3" size="32,38" autoSize="true">
+    <loader id="n11_p8hk" name="ladState" xy="21,5" size="32,34" url="ui://eunktclqhpymw" autoSize="true">
       <gearIcon controller="conTaskState" pages="0,1,2,3" values="ui://eunktclqhpymw|ui://tis07nuvxhg9j|ui://eunktclqhpymx|" default=""/>
       <relation target="" sidePair="middle-middle"/>
     </loader>

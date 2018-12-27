@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640">
-  <controller name="conSetting" pages="0,system,1,sound,2,chating,3,about" selected="0"/>
+  <controller name="conSetting" pages="0,system,1,sound,2,chating,3,about" selected="3"/>
   <displayList>
     <image id="n2_8zcx" name="bg" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="215,106" size="706,430" group="n47_kg0b"/>
     <image id="n62_r398" name="n62" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="413,159" size="490,350" group="n47_kg0b"/>
@@ -48,7 +48,7 @@
     <group id="n34_o8k6" name="sound" xy="472,215" size="344,109" group="n47_kg0b" advanced="true" collapsed="true">
       <gearDisplay controller="conSetting" pages="1"/>
     </group>
-    <text id="n63_r398" name="n63" xy="465,200" size="133,22" group="n41_o8k6" fontSize="16" color="#b8b096" text="主界面消息框提示">
+    <text id="n63_r398" name="n63" xy="465,200" size="133,22" group="n41_o8k6" fontSize="16" color="#5b4b37" text="主界面消息框提示">
       <gearDisplay controller="conSetting" pages="2"/>
     </text>
     <component id="n35_o8k6" name="tgWorldMsg" src="rw7fg" fileName="com/settingToggle.xml" xy="465,237" size="148,33" group="n41_o8k6">
@@ -72,16 +72,15 @@
     <group id="n41_o8k6" name="chat" xy="465,200" size="377,190" group="n47_kg0b" advanced="true" collapsed="true">
       <gearDisplay controller="conSetting" pages="2"/>
     </group>
-    <text id="n58_r398" name="n58" xy="541,235" size="70,25" group="n54_r398" fontSize="18" color="#5b4b37" text="1.2.01.3"/>
-    <text id="n55_r398" name="n55" xy="453,274" size="186,64" group="n54_r398" fontSize="14" color="#b8b096" autoSize="none" text="@2016-2020腾语科技&#xA;ALL RIGHTS RESERVED&#xA;贝尔教育平台官网"/>
-    <text id="n56_r398" name="n56" xy="453,348" size="157,24" group="n54_r398" fontSize="14" color="#5b4b37" autoSize="none" text="www.bellcode.com"/>
-    <image id="n57_r398" name="n57" src="ot9si33" fileName="newImg/img_cm_item_2.png" pkg="te1gxawo" xy="453,194" group="n54_r398"/>
-    <group id="n54_r398" name="about" xy="453,193" size="186,179" group="n47_kg0b" advanced="true">
+    <text id="n58_r398" name="n58" xy="453,187" size="70,25" group="n54_r398" fontSize="18" color="#5b4b37" text="1.2.01.3"/>
+    <text id="n55_r398" name="n55" xy="453,227" size="186,64" group="n54_r398" fontSize="14" color="#755f44" autoSize="none" text="@2016-2020腾语科技&#xA;ALL RIGHTS RESERVED&#xA;贝尔教育平台官网"/>
+    <text id="n56_r398" name="n56" xy="453,291" size="157,24" group="n54_r398" fontSize="14" color="#5b4b37" autoSize="none" text="www.bellcode.com"/>
+    <group id="n54_r398" name="about" xy="453,187" size="186,128" group="n47_kg0b" advanced="true">
       <gearDisplay controller="conSetting" pages="3"/>
     </group>
     <image id="n60_r398" name="n60" src="ot9si2v" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="235,160" size="168,350" group="n47_kg0b"/>
     <component id="n21_o8k6" name="btnSystem" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="256,182" size="125,56" group="n47_kg0b">
-      <Button checked="true" title="系统" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="0"/>
+      <Button title="系统" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="0"/>
     </component>
     <component id="n22_o8k6" name="btnSound" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="256,244" size="125,56" group="n47_kg0b">
       <Button title="声音" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="1"/>
@@ -90,7 +89,7 @@
       <Button title="聊天" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="2"/>
     </component>
     <component id="n24_o8k6" name="btnAbout" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="256,372" size="125,56" group="n47_kg0b">
-      <Button title="关于" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="3"/>
+      <Button checked="true" title="关于" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="3"/>
     </component>
     <image id="n61_r398" name="n61" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="223,520" size="691,14" group="n47_kg0b"/>
     <group id="n47_kg0b" name="root" xy="215,106" size="706,430" advanced="true">

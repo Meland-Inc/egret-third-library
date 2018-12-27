@@ -19,27 +19,20 @@
     <image id="sz33f" name="img_task_bg_007.png" path="/img/" exported="true"/>
     <image id="sz33g" name="img_task_item.png" path="/img/" exported="true"/>
     <image id="sz33h" name="img_task_reward.png" path="/img/" exported="true"/>
-    <component id="sz33i" name="WinTask.xml" path="/win/" exported="true"/>
-    <component id="sz33j" name="btnMainBranchRd.xml" path="/btn/" exported="true"/>
-    <component id="sz33k" name="btnTaskDetailRd.xml" path="/btn/" exported="true"/>
     <component id="sz33l" name="comTaskDetailPanel.xml" path="/com/" exported="true"/>
-    <component id="jhexm" name="comTaskRwards.xml" path="/com/" exported="true"/>
     <component id="jhexn" name="comTaskObjectItem.xml" path="/com/" exported="true"/>
-    <component id="ovpoo" name="WinTaskTrace.xml" path="/win/" exported="true"/>
-    <component id="jmgxr" name="btnWinSwitch.xml" path="/btn/"/>
     <image id="lreqs" name="img_task_empty.png" path="/img/"/>
     <image id="lreqt" name="btn_task_006.png" path="/img/"/>
-    <component id="gkgnv" name="comTaskConditionSmall.xml" path="/com/" exported="true"/>
     <image id="hpymw" name="img_task_talk2.png" path="/imgNew/" exported="true"/>
     <image id="hpymx" name="img_task_talk1.png" path="/imgNew/" exported="true"/>
     <image id="hpymy" name="img_task_npc.png" path="/imgNew/"/>
     <image id="hpymz" name="img_task_notask.png" path="/imgNew/"/>
     <image id="hpym10" name="img_task_banner3.png" path="/imgNew/"/>
-    <image id="hpym11" name="img_task_banner2.png" path="/imgNew/"/>
+    <image id="hpym11" name="img_task_banner2.png" path="/imgNew/" scale="9grid" scale9grid="56,11,253,22"/>
     <image id="hpym12" name="img_task_banner1.png" path="/imgNew/" scale="9grid" scale9grid="507,39,125,80"/>
     <component id="r1t913" name="ComTaskCompletedToast.xml" path="/com/" exported="true"/>
     <component id="r1t914" name="ComTaskRewardItem.xml" path="/com/" exported="true"/>
-    <component id="elis15" name="WinTaskNew.xml" path="/win/" exported="true"/>
+    <component id="elis15" name="WinTask.xml" path="/win/" exported="true"/>
     <component id="elis1c" name="btnDropDown.xml" path="/btn/" exported="true"/>
     <image id="elis1d" name="icon_manual_1.png" path="/btn/"/>
     <image id="elis1e" name="icon_manual_2.png" path="/btn/"/>

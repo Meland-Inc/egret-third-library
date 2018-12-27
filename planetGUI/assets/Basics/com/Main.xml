@@ -1,36 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkedsmu">
   <displayList>
-    <image id="n14_edsm" name="n14" src="efrs1o" fileName="newImg/bg_cm_5.png" pkg="te1gxawo" xy="0,0" size="1136,640"/>
-    <component id="n6_n1c0" name="CategoryList" src="n1c01l" fileName="com/CategoryList.xml" xy="7,53" size="165,560" controller="deleteLayer,0">
-      <relation target="" sidePair="height-height,top-top"/>
-    </component>
-    <component id="n5_n1c0" name="codeBlockContainer" src="n1c01j" fileName="com/CodeblockContainer.xml" xy="157,56" size="979,584">
+    <image id="n14_edsm" name="n14" src="efrs1o" fileName="newImg/bg_cm_5.png" pkg="te1gxawo" xy="0,0" size="1136,640" group="n23_hn4b"/>
+    <component id="n6_n1c0" name="CategoryList" src="n1c01l" fileName="com/CategoryList.xml" xy="2,54" size="165,560" group="n23_hn4b" controller="deleteLayer,0"/>
+    <component id="n5_n1c0" name="codeBlockContainer" src="n1c01j" fileName="com/CodeblockContainer.xml" xy="157,56" size="979,584" group="n23_hn4b">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
-    <component id="n4_y583" name="Codeblocks" src="y583d" fileName="com/CodeblockPool.xml" xy="164,56" size="437,556" blend="none">
-      <relation target="" sidePair="height-height"/>
+    <component id="n4_y583" name="Codeblocks" src="y583d" fileName="com/CodeblockPool.xml" xy="166,56" size="437,556" group="n23_hn4b" blend="none">
+      <relation target="n6_n1c0" sidePair="left-right"/>
     </component>
-    <component id="n12_k1p2" name="mask" src="k1p26w" fileName="com/RunningState.xml" xy="0,56" size="1136,584"/>
-    <component id="n13_sdqn" name="templatePanel" src="sdqn71" fileName="com/TemplatePanel.xml" xy="220,103">
+    <component id="n12_k1p2" name="mask" src="k1p26w" fileName="com/RunningState.xml" xy="0,56" size="1136,584" group="n23_hn4b" hideByEditor="true"/>
+    <component id="n13_sdqn" name="templatePanel" src="sdqn71" fileName="com/TemplatePanel.xml" xy="220,103" group="n23_hn4b" hideByEditor="true">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
-    <image id="n17_edsm" name="n17" src="efrs23" fileName="newImg/img_cm_title2.png" pkg="te1gxawo" xy="482,9"/>
-    <text id="n18_edsm" name="n18" xy="518,9" size="137,27" fontSize="22" color="#ffffff" align="center" vAlign="middle" strokeColor="#352e2c" strokeSize="2" text="代码块编辑器"/>
-    <component id="n15_edsm" name="btnReset" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="40,5" size="126,40">
+    <image id="n17_edsm" name="n17" src="efrs23" fileName="newImg/img_cm_title2.png" pkg="te1gxawo" xy="482,9" group="n23_hn4b"/>
+    <text id="n18_edsm" name="n18" xy="518,10" size="137,29" group="n23_hn4b" fontSize="22" color="#ffffff" align="center" vAlign="middle" leading="0" autoSize="none" strokeColor="#352e2c" strokeSize="2" text="代码块编辑器"/>
+    <component id="n15_edsm" name="btnReset" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="40,5" size="126,40" group="n23_hn4b">
       <Button title="恢复默认" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawoqo8vi21" selectedIcon="ui://te1gxawoqo8vi21"/>
     </component>
-    <component id="n16_edsm" name="btnTemplate" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="180,5" size="136,40">
+    <component id="n16_edsm" name="btnTemplate" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="180,5" size="136,40" group="n23_hn4b">
       <Button title="代码块模版" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawoefrs1w" selectedIcon="ui://te1gxawoefrs1w"/>
     </component>
-    <component id="n20_edsm" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1044,3" size="80,42">
+    <component id="n20_edsm" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1044,3" size="80,42" group="n23_hn4b">
       <Button icon="ui://te1gxawoefrs1r" selectedIcon="ui://te1gxawoefrs1r"/>
     </component>
-    <component id="n21_f89o" name="btnUserGuide" src="oliri6p" fileName="btn/rbtnFix.xml" pkg="te1gxawo" xy="350,8" size="37,38">
+    <component id="n21_f89o" name="btnUserGuide" src="oliri6p" fileName="btn/rbtnFix.xml" pkg="te1gxawo" xy="350,8" size="37,38" group="n23_hn4b">
       <Button icon="ui://te1gxawoedsmcyi8v" selectedIcon="ui://te1gxawoedsmcyi8v"/>
     </component>
-    <graph id="n22_foyo" name="noviceHeaderBlockRect" xy="0,0" size="1136,53" visible="false" alpha="0" touchable="false" type="rect">
+    <graph id="n22_foyo" name="noviceHeaderBlockRect" xy="0,0" size="1136,53" group="n23_hn4b" hideByEditor="true" visible="false" alpha="0" touchable="false" type="rect">
       <relation target="" sidePair="width-width"/>
     </graph>
+    <group id="n23_hn4b" name="n23" xy="0,0" size="1136,640" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
   </displayList>
 </component>

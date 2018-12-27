@@ -8,8 +8,8 @@
     <image id="n4_bidp" name="n4" src="tm1s47" fileName="newImg/btn_2.png" xy="0,0" size="94,42">
       <gearDisplay controller="button" pages="4"/>
     </image>
-    <loader id="n5_bidp" name="icon" xy="23,11" size="20,20" fill="scale" autoSize="true"/>
-    <text id="n6_bidp" name="title" xy="49,11" size="40,25" fontSize="18" color="#5b4b37" align="center" vAlign="middle" text=""/>
+    <loader id="n5_bidp" name="icon" xy="24,11" size="20,20" fill="scale" autoSize="true"/>
+    <text id="n6_bidp" name="title" xy="51,8" size="40,25" fontSize="18" color="#5b4b37" vAlign="middle" autoSize="none" text=""/>
   </displayList>
   <Button mode="Radio"/>
 </component>
