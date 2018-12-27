@@ -376,7 +376,7 @@ public class Main : MonoBehaviour
         _curArmatureName = assetFile.key;
         _curArmatureCpt.transform.parent = tsmAvatarPreview;
         _curArmatureCpt.transform.localPosition = Vector3.zero;
-        _curArmatureCpt.transform.localScale = Vector2.one;
+        _curArmatureCpt.transform.localScale = Vector3.one;
 
         var animNameList = _curArmatureCpt.animation.animationNames.GetRange(0, _curArmatureCpt.animation.animationNames.Count);
         AnimOption.gameObject.SetActive(true);
@@ -430,6 +430,6 @@ public class Main : MonoBehaviour
     //更新avatar缩放
     private void UpdateAvatarScale()
     {
-        tsmAvatarPreview.localScale = Vector2.one * SdAvatarScale.value;
+        tsmAvatarPreview.localScale = Vector3.one * SdAvatarScale.value;
     }
 }
