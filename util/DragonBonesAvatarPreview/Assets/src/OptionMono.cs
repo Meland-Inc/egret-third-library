@@ -8,6 +8,8 @@ using System;
 /// </summary>
 public class OptionMono : MonoBehaviour
 {
+    public Button BtnLeft;
+    public Button BtnRight;
     public Dropdown OptionDropdown;
     public Text Label;
     public Action<OptionMono, object> OnChangeCB;
@@ -17,6 +19,8 @@ public class OptionMono : MonoBehaviour
     void Start()
     {
         OptionDropdown.onValueChanged.AddListener(OnChange);
+        BtnLeft.onClick.AddListener(OnClickBtnLeft);
+        BtnRight.onClick.AddListener(OnClickBtnRight);
     }
 
     //设置显示内容 找不到就不管
@@ -59,6 +63,28 @@ public class OptionMono : MonoBehaviour
         {
             OnChangeCB(this, GetCurValue());
         }
+    }
+
+    private void OnClickBtnLeft()
+    {
+        int index = OptionDropdown.value;
+        index--;
+        if (index < 0)
+        {
+            index = OptionDropdown.options.Count - 1;
+        }
+        OptionDropdown.value = index;
+    }
+
+    private void OnClickBtnRight()
+    {
+        int index = OptionDropdown.value;
+        index++;
+        if (index >= OptionDropdown.options.Count)
+        {
+            index = 0;
+        }
+        OptionDropdown.value = index;
     }
 
     public void ResetStrData(List<string> strDatas)
