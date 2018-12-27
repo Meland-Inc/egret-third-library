@@ -72,11 +72,10 @@
     <group id="n41_o8k6" name="chat" xy="465,200" size="377,190" group="n47_kg0b" advanced="true" collapsed="true">
       <gearDisplay controller="conSetting" pages="2"/>
     </group>
-    <text id="n58_r398" name="n58" xy="541,235" size="70,25" group="n54_r398" fontSize="18" color="#5b4b37" text="1.2.01.3"/>
-    <text id="n55_r398" name="n55" xy="453,274" size="186,64" group="n54_r398" fontSize="14" color="#5b4b37" autoSize="none" text="@2016-2020腾语科技&#xA;ALL RIGHTS RESERVED&#xA;贝尔教育平台官网"/>
-    <text id="n56_r398" name="n56" xy="453,348" size="157,24" group="n54_r398" fontSize="14" color="#5b4b37" autoSize="none" text="www.bellcode.com"/>
-    <image id="n57_r398" name="n57" src="ot9si33" fileName="newImg/img_cm_item_2.png" pkg="te1gxawo" xy="453,194" group="n54_r398"/>
-    <group id="n54_r398" name="about" xy="453,193" size="186,179" group="n47_kg0b" advanced="true">
+    <text id="n58_r398" name="n58" xy="453,187" size="70,25" group="n54_r398" fontSize="18" color="#5b4b37" text="1.2.01.3"/>
+    <text id="n55_r398" name="n55" xy="453,227" size="186,64" group="n54_r398" fontSize="14" color="#755f44" autoSize="none" text="@2016-2020腾语科技&#xA;ALL RIGHTS RESERVED&#xA;贝尔教育平台官网"/>
+    <text id="n56_r398" name="n56" xy="453,291" size="157,24" group="n54_r398" fontSize="14" color="#5b4b37" autoSize="none" text="www.bellcode.com"/>
+    <group id="n54_r398" name="about" xy="453,187" size="186,128" group="n47_kg0b" advanced="true">
       <gearDisplay controller="conSetting" pages="3"/>
     </group>
     <image id="n60_r398" name="n60" src="ot9si2v" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="235,160" size="168,350" group="n47_kg0b"/>
