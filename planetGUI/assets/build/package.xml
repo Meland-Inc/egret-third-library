@@ -55,6 +55,8 @@
     <image id="lmzf32" name="btn_build_rotate.png" path="/newImg/WinBuildPannel/"/>
     <component id="99a233" name="Slider1_grip.xml" path="/Slide/"/>
     <component id="99a234" name="Slider1.xml" path="/Slide/" exported="true"/>
+    <image id="ddnk35" name="btn_build_delete.png" path="/newImg/WinBuildPannel/"/>
+    <image id="ddnk36" name="btn_build_move.png" path="/newImg/WinBuildPannel/"/>
   </resources>
   <publish name="build"/>
 </packageDescription>
