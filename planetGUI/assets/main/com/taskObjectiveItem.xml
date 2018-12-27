@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="186,27" extention="Label">
   <displayList>
-    <text id="n0_c3x2" name="title" xy="0,5" size="186,17" fontSize="12" color="#ffffff" vAlign="bottom" ubb="true" autoSize="none" singleLine="true" text=""/>
+    <text id="n0_c3x2" name="title" xy="0,5" size="145,17" fontSize="12" color="#ffffff" vAlign="bottom" ubb="true" singleLine="true" text="ffffffffffffffffffffffffffff"/>
+    <text id="n2_b4ke" name="tfRate" xy="147,5" size="37,17" fontSize="12" color="#ffffff" vAlign="bottom" ubb="true" singleLine="true" text="(完成)">
+      <relation target="n0_c3x2" sidePair="right-right"/>
+    </text>
   </displayList>
+  <relation target="n0_c3x2" sidePair="bottomext-bottom"/>
 </component>
