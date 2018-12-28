@@ -16,13 +16,15 @@ public class Main : MonoBehaviour
 
     public Button BtnRefresh;
     public Button BtnReplayAnim;//重播
-    public Toggle ToggleForceLoopAnim;//强制循环
+    public Dropdown DdForceLoopAnim;//强制循环
     public Transform tsmAvatarPreview;
     public OptionMono RoleOption;
     public OptionMono ArmatureOption;
     public OptionMono AnimOption;
     public Transform tsmPartOptionContainer;
     public int PartOptionSpace = 30;
+    public Slider SdAvatarScale;
+    public Button BtnAvatarScaleReset;
 
     private string _resRootPath;
     private Config _curConfig;
@@ -61,7 +63,14 @@ public class Main : MonoBehaviour
         ArmatureOption.OnChangeCB = OnAvatarOptionChanged;
         AnimOption.OnChangeCB = OnAnimOptionChanged;
         BtnReplayAnim.onClick.AddListener(OnClickReplayAnim);
-        ToggleForceLoopAnim.onValueChanged.AddListener(OnToggleFroceLoopValueChanged);
+        DdForceLoopAnim.ClearOptions();
+        DdForceLoopAnim.AddOptions(new List<string> { "默认循环", "强制循环", "强制不循环" });
+        DdForceLoopAnim.onValueChanged.AddListener(OnToggleFroceLoopValueChanged);
+        SdAvatarScale.onValueChanged.AddListener(OnSdAvatarScaleChanged);
+        SdAvatarScale.minValue = 0.1f;
+        SdAvatarScale.maxValue = 4;
+        ResetAvatarScale();
+        BtnAvatarScaleReset.onClick.AddListener(ResetAvatarScale);
 
         RefreshConfigAndFileInfo();
         RefreshView();
@@ -73,6 +82,7 @@ public class Main : MonoBehaviour
         //清理
         _curConfig = null;
         _allAssetFileList.Clear();
+        PraseDragonBonesAsset.Clear();
 
         string path = Path.Combine(_resRootPath, PATH_CONFIG);
         //读配置
@@ -189,7 +199,7 @@ public class Main : MonoBehaviour
         }
     }
 
-    private void OnToggleFroceLoopValueChanged(bool on)
+    private void OnToggleFroceLoopValueChanged(int index)
     {
         OnClickReplayAnim();
     }
@@ -208,6 +218,12 @@ public class Main : MonoBehaviour
     private void OnRoleOptionChanged(OptionMono target, object value)
     {
         _lastSelectRole = value as string;
+
+        //选了角色所有记录数据清空
+        _lastSelectArmature = null;
+        _lastSelectAnimName = null;
+        _lastSelectElementFileNameMap.Clear();
+
         RefreshAvatarOption();
     }
 
@@ -303,14 +319,16 @@ public class Main : MonoBehaviour
 
     private void PlayAnim(string animName)
     {
-        if (ToggleForceLoopAnim.isOn)
+        int playerTimes = -1;
+        if (DdForceLoopAnim.value == 1)//强制循环
         {
-            _curArmatureCpt.animation.FadeIn(animName, 0.1f, 0);
+            playerTimes = 0;
         }
-        else
+        else if (DdForceLoopAnim.value == 2)//强制不循环
         {
-            _curArmatureCpt.animation.FadeIn(animName, 0.1f);
+            playerTimes = 1;
         }
+        _curArmatureCpt.animation.FadeIn(animName, 0.1f, playerTimes);
     }
 
     //加载某个部件
@@ -365,6 +383,7 @@ public class Main : MonoBehaviour
         _curArmatureName = assetFile.key;
         _curArmatureCpt.transform.parent = tsmAvatarPreview;
         _curArmatureCpt.transform.localPosition = Vector3.zero;
+        _curArmatureCpt.transform.localScale = Vector3.one;
 
         var animNameList = _curArmatureCpt.animation.animationNames.GetRange(0, _curArmatureCpt.animation.animationNames.Count);
         AnimOption.gameObject.SetActive(true);
@@ -400,5 +419,24 @@ public class Main : MonoBehaviour
             infos.Add(info);
         }
         return infos;
+    }
+
+    private void OnSdAvatarScaleChanged(float value)
+    {
+        UpdateAvatarScale();
+    }
+
+    //重置avatar缩放
+    private void ResetAvatarScale()
+    {
+        SdAvatarScale.value = 1;
+        //防止没有初始化 不会调到OnSdAvatarScaleChanged
+        UpdateAvatarScale();
+    }
+
+    //更新avatar缩放
+    private void UpdateAvatarScale()
+    {
+        tsmAvatarPreview.localScale = Vector3.one * SdAvatarScale.value;
     }
 }
