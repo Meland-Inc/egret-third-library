@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkq9ya11" designImageAlpha="0" designImageLayer="1">
   <controller name="conShowSendHistory" pages="0,hide,1,show" selected="0"/>
-  <controller name="conShowEmoj" pages="0,hide,1,show" selected="1"/>
-  <controller name="conFrivateChat" pages="0,hide,1,show" selected="1"/>
+  <controller name="conShowEmoj" pages="0,hide,1,show" selected="0"/>
+  <controller name="conFrivateChat" pages="0,hide,1,show" selected="0"/>
   <displayList>
     <image id="n3_q73n" name="bg" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="189,103" size="779,456" group="n26_hrgt"/>
     <image id="n11_q73n" name="chatContentBg" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="393,158" size="552,369" group="n26_hrgt"/>
@@ -17,7 +17,7 @@
       <item title="系统" name="system"/>
       <item title="综合" name="comprehensive"/>
       <item title="世界" name="world"/>
-      <item title="分线" name="line"/>
+      <item title="机器人" name="robot"/>
       <item title="创造" name="create"/>
       <item title="附近" name="near"/>
       <item title="私聊" name="private"/>
@@ -32,7 +32,7 @@
     <image id="n13_q73n" name="friendNameBg" src="ot9si35" fileName="newImg/img_cm_name.png" pkg="te1gxawo" xy="413,169" size="80,22" group="n25_11e02">
       <relation target="n14_q73n" sidePair="width-width"/>
     </image>
-    <text id="n14_q73n" name="tfFriendName" xy="413,170" size="81,18" group="n25_11e02" fontSize="14" color="#5b4b37" align="center" vAlign="middle" ubb="true" vars="true" text="与[color=#c88316]{name=xxx}[/color]聊天中"/>
+    <text id="n14_q73n" name="tfFriendName" xy="413,170" size="82,18" group="n25_11e02" fontSize="14" color="#5b4b37" align="center" vAlign="middle" ubb="true" vars="true" text="与[color=#c88316]{name=xxx}[/color]聊天中"/>
     <group id="n25_11e02" name="grpFriendChatTitle" xy="413,169" size="81,22" group="n26_hrgt" advanced="true" collapsed="true">
       <gearDisplay controller="conFrivateChat" pages="1"/>
     </group>
