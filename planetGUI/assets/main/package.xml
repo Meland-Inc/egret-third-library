@@ -58,7 +58,6 @@
     <image id="rdy42v" name="btn_main_item_add.png" path="/newImg/"/>
     <image id="rdy42w" name="btn_main_mail.png" path="/newImg/"/>
     <image id="rdy42x" name="btn_main_menu.png" path="/newImg/"/>
-    <image id="rdy42y" name="btn_main_menu_2.png" path="/newImg/"/>
     <image id="rdy42z" name="btn_main_menu_3.png" path="/newImg/"/>
     <image id="rdy430" name="icon_main_axe.png" path="/newImg/" exported="true"/>
     <image id="rdy431" name="icon_main_backpack.png" path="/newImg/"/>
@@ -174,6 +173,15 @@
     <component id="xles73" name="btnRobotViewReturn.xml" path="/btn/"/>
     <component id="ij7r74" name="ToolTipWbPlant.xml" path="/com/" exported="true"/>
     <component id="b4ke75" name="btnShowHideTaskTrace.xml" path="/btn/"/>
+    <image id="b4ke76" name="btn_main_formula.png" path="/newImg/"/>
+    <image id="b4ke77" name="btn_main_menu_1.png" path="/newImg/"/>
+    <image id="b4ke78" name="btn_main_menu_2.png" path="/newImg/"/>
+    <component id="b4ke79" name="btnFormula.xml" path="/btn/"/>
+    <image id="b4ke7a" name="icon_main_more.png" path="/newImg/"/>
+    <component id="b4ke7b" name="btnStorageMenu.xml" path="/btn/"/>
+    <image id="b4ke7c" name="img_main_menu_1.png" path="/newImg/" scale="9grid" scale9grid="22,22,44,44"/>
+    <component id="b4ke7d" name="comArchPathItem.xml" path="/lab/"/>
+    <image id="b4ke7e" name="icon_main_formulaOK.png" path="/newImg/"/>
   </resources>
   <publish name="main"/>
 </packageDescription>
