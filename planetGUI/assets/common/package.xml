@@ -330,11 +330,12 @@
     <component id="lbexcyi94" name="comArchMat.xml" path="/lab/"/>
     <component id="lbexcyi97" name="comWorkbench.xml" path="/lab/"/>
     <component id="lbexcyi98" name="ToolTipBagItem.xml" path="/com/" exported="true"/>
-    <image id="z45zcyi99" name="img_bag_grade_1.png" path="/newImg/"/>
-    <image id="z45zcyi9a" name="img_bag_grade_2.png" path="/newImg/"/>
-    <image id="z45zcyi9b" name="img_bag_grade_3.png" path="/newImg/"/>
-    <image id="z45zcyi9c" name="img_bag_grade_4.png" path="/newImg/"/>
-    <image id="z45zcyi9d" name="img_bag_grade_5.png" path="/newImg/"/>
+    <image id="z45zcyi99" name="img_bag_grade_1.png" path="/newImg/" exported="true"/>
+    <image id="z45zcyi9a" name="img_bag_grade_2.png" path="/newImg/" exported="true"/>
+    <image id="z45zcyi9b" name="img_bag_grade_3.png" path="/newImg/" exported="true"/>
+    <image id="z45zcyi9c" name="img_bag_grade_4.png" path="/newImg/" exported="true"/>
+    <image id="z45zcyi9d" name="img_bag_grade_5.png" path="/newImg/" exported="true"/>
+    <component id="tg9wcyi9e" name="ComItemIconTemplate.xml" path="/com/"/>
   </resources>
   <publish name="common" square="true">
     <atlas name="默认" index="0"/>

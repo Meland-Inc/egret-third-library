@@ -8,20 +8,20 @@
       <relation target="n38_lbex" sidePair="bottomext-bottom"/>
     </image>
     <loader id="n30_grbn" name="ladIcon" xy="10,10" pivot="0.5,0.5" size="64,64" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
-    <image id="n29_grbn" name="imgIconBg" src="j21fi3v" fileName="newImg/img_cm_item_6.png" xy="10,10" size="64,64"/>
+    <image id="n29_grbn" name="imgIconBg" src="j21fi3v" fileName="newImg/img_cm_item_6.png" xy="10,10" size="64,64" hideByEditor="true" visible="false"/>
     <text id="n9_grbn" name="tfName" xy="80,16" size="99,20" fontSize="16" color="#ffffff" vAlign="middle" autoSize="none" bold="true" text="name"/>
-    <text id="n10_grbn" name="tfType" xy="80,37" size="85,17" fontSize="12" color="#f0eedc" vAlign="middle" autoSize="height" text="type"/>
+    <text id="n10_grbn" name="tfType" xy="80,37" size="85,19" fontSize="12" color="#f0eedc" vAlign="middle" autoSize="height" text="type"/>
     <text id="n11_grbn" name="tfCanSell" xy="80,56" size="85,18" fontSize="12" color="#f0eedc" vAlign="middle" autoSize="none" text="不可交易"/>
-    <text id="n12_grbn" name="tfDesc" xy="16,99" size="190,18" fontSize="14" color="#ffffff" leading="5" autoSize="height" bold="true" text="我是物品描述">
+    <text id="n12_grbn" name="tfDesc" xy="16,99" size="190,20" fontSize="14" color="#ffffff" leading="5" autoSize="height" bold="true" text="我是物品描述">
       <gearXY controller="conType" pages="0,1,2" values="16,99|16,131|16,119"/>
     </text>
-    <text id="n32_r2k3" name="tfAttribute" xy="16,79" size="77,17" fontSize="12" color="#f0eedc" vars="true" bold="true" text="攻击力:  {value=100}">
+    <text id="n32_r2k3" name="tfAttribute" xy="16,79" size="74,19" fontSize="12" color="#f0eedc" vars="true" bold="true" text="攻击力:  {value=100}">
       <gearDisplay controller="conType" pages="1"/>
     </text>
-    <text id="n33_r2k3" name="tfDurability" xy="16,99" size="105,17" fontSize="12" color="#f0eedc" vars="true" bold="true" text="耐久度:  {value=100}/{maxValue=100}">
+    <text id="n33_r2k3" name="tfDurability" xy="16,99" size="98,19" fontSize="12" color="#f0eedc" vars="true" bold="true" text="耐久度:  {value=100}/{maxValue=100}">
       <gearDisplay controller="conType" pages="1"/>
     </text>
-    <text id="n34_r2k3" name="tfCD" xy="16,78" size="55,17" fontSize="12" color="#f0eedc" vars="true" text="CD:   {value=10}秒">
+    <text id="n34_r2k3" name="tfCD" xy="16,78" size="61,19" fontSize="12" color="#f0eedc" vars="true" text="CD:   {value=10}秒">
       <gearDisplay controller="conType" pages="2"/>
       <relation target="n32_r2k3" sidePair="top-bottom"/>
     </text>
