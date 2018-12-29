@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkpgixg" designImageAlpha="0">
   <controller name="state" pages="0,lock,1,premake,2,making" selected="0"/>
+  <controller name="ctrlClickTips" pages="2,hide,0,clickObject,1,clickFormula" selected="2"/>
   <displayList>
     <component id="n0_lxnu" name="ComBG" src="pqjb2f" fileName="com/ComBG.xml" xy="34,68" group="n52_s487">
       <Label title="配方"/>
@@ -15,5 +16,11 @@
     <group id="n52_s487" name="root" xy="34,66" size="1074,502" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
+    <component id="n54_lzw3" name="n54" src="lzw32i1m" fileName="com/comTextTipsNew.xml" pkg="mp92elpx" xy="716,152" size="160,156">
+      <gearDisplay controller="ctrlClickTips" pages="0,1"/>
+      <gearXY controller="ctrlClickTips" pages="0,1" values="578,148|716,152" default="551,-1"/>
+      <gearText controller="ctrlClickTips" pages="0,1" values="合成物品会被优先放置到工作台物品栏|配方栏内可以看到此工作台可以合成那些东西" default=""/>
+      <Label title="配方栏内可以看到此工作台可以合成那些东西"/>
+    </component>
   </displayList>
 </component>
