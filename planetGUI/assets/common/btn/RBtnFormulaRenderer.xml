@@ -2,14 +2,17 @@
 <component size="72,72" extention="Button">
   <controller name="button" pages="0,up,1,down" selected="0"/>
   <controller name="ctrlSchedule" pages="1,false,0,true" selected="0"/>
-  <controller name="ctrlLock" pages="0,true,1,false" selected="1"/>
+  <controller name="ctrlLock" pages="0,true,1,false" selected="0"/>
   <displayList>
     <image id="n4_11slc" name="bg" src="ot9si33" fileName="newImg/img_cm_item_2.png" xy="2,2"/>
     <image id="n16_b7ci" name="n16" src="b7cicyi8z" fileName="newImg/img_formula_bottom_4.png" xy="7,7"/>
-    <loader id="n5_11slc" name="icon" xy="6,6" size="60,60" align="center" vAlign="middle" fill="scale">
-      <gearLook controller="ctrlLock" pages="0" values="1,0,1,1" default="1,0,0,1"/>
-      <relation target="" sidePair="center-center,middle-middle"/>
+    <loader id="n17_ww3a" name="quality" xy="6,6" pivot="0.5,0.5" size="60,60" group="n20_ww3a" visible="false" grayed="true" url="ui://te1gxawoz45zcyi99">
+      <gearLook controller="ctrlLock" pages="0,1" values="1,0,1,1|1,0,0,1"/>
     </loader>
+    <loader id="n18_ww3a" name="icon" xy="6,6" pivot="0.5,0.5" size="60,60" group="n20_ww3a" grayed="true" align="center" vAlign="middle" fill="scale">
+      <gearLook controller="ctrlLock" pages="0,1" values="1,0,1,1|1,0,0,1"/>
+    </loader>
+    <group id="n20_ww3a" name="grpItemIcon" xy="7,6" size="60,60" advanced="true" collapsed="true"/>
     <image id="n6_11slc" name="imgSelected" src="j21fi3v" fileName="newImg/img_cm_item_6.png" xy="0,0">
       <gearDisplay controller="button" pages="1"/>
     </image>

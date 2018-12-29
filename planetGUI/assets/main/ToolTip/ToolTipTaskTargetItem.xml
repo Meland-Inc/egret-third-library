@@ -5,9 +5,9 @@
       <relation target="n6_r43m" sidePair="bottomext-bottom"/>
     </image>
     <loader id="n1_r43m" name="ladIcon" xy="10,10" pivot="0.5,0.5" size="64,64" align="center" vAlign="middle" fill="scale"/>
-    <image id="n2_r43m" name="imgIconFg" src="j21fi3v" fileName="newImg/img_cm_item_6.png" pkg="te1gxawo" xy="10,10" size="64,64"/>
+    <image id="n2_r43m" name="imgIconFg" src="j21fi3v" fileName="newImg/img_cm_item_6.png" pkg="te1gxawo" xy="10,10" size="64,64" hideByEditor="true" visible="false"/>
     <text id="n3_r43m" name="tfName" xy="80,16" size="99,20" fontSize="16" color="#ffffff" vAlign="middle" autoSize="none" bold="true" text="name"/>
-    <text id="n6_r43m" name="tfDesc" xy="81,44" size="137,18" fontSize="14" color="#ffffff" leading="5" autoSize="height" bold="true" text="我是物品描述"/>
+    <text id="n6_r43m" name="tfDesc" xy="81,44" size="137,20" fontSize="14" color="#ffffff" leading="5" autoSize="height" bold="true" text="我是物品描述"/>
   </displayList>
   <relation target="n6_r43m" sidePair="bottomext-bottom"/>
 </component>
