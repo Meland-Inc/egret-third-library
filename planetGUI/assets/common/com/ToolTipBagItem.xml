@@ -7,8 +7,11 @@
     <image id="n2_grbn" name="tipsBg" src="j21fi3w" fileName="newImg/img_cm_tips_1.png" xy="0,0" size="226,320">
       <relation target="n38_lbex" sidePair="bottomext-bottom"/>
     </image>
-    <loader id="n30_grbn" name="ladIcon" xy="10,10" pivot="0.5,0.5" size="64,64" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
-    <image id="n29_grbn" name="imgIconBg" src="j21fi3v" fileName="newImg/img_cm_item_6.png" xy="10,10" size="64,64" hideByEditor="true" visible="false"/>
+    <loader id="n41_ue72" name="quality" xy="12,12" pivot="0.5,0.5" size="60,60" group="n44_ue72" visible="false" url="ui://te1gxawoz45zcyi99"/>
+    <loader id="n42_ue72" name="icon" xy="12,12" pivot="0.5,0.5" size="60,60" group="n44_ue72" align="center" vAlign="middle" fill="scale">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <group id="n44_ue72" name="grpItemIcon" xy="12,12" size="60,60" advanced="true" collapsed="true"/>
     <text id="n9_grbn" name="tfName" xy="80,16" size="99,20" fontSize="16" color="#ffffff" vAlign="middle" autoSize="none" bold="true" text="name"/>
     <text id="n10_grbn" name="tfType" xy="80,37" size="85,19" fontSize="12" color="#f0eedc" vAlign="middle" autoSize="height" text="type"/>
     <text id="n11_grbn" name="tfCanSell" xy="80,56" size="85,18" fontSize="12" color="#f0eedc" vAlign="middle" autoSize="none" text="不可交易"/>
@@ -37,7 +40,7 @@
       <gearDisplay controller="ctrlWorkbench" pages="0"/>
       <relation target="n36_lbex" sidePair="top-bottom"/>
     </group>
-    <group id="n39_lbex" name="grpArchPath" xy="16,124" size="126,186" advanced="true">
+    <group id="n39_lbex" name="grpArchPath" xy="16,124" size="126,186" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlArchPath" pages="0"/>
       <relation target="n12_grbn" sidePair="top-bottom"/>
     </group>
