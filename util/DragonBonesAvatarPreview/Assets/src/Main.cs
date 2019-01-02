@@ -82,6 +82,7 @@ public class Main : MonoBehaviour
         //清理
         _curConfig = null;
         _allAssetFileList.Clear();
+        PraseDragonBonesAsset.Clear();
 
         string path = Path.Combine(_resRootPath, PATH_CONFIG);
         //读配置
@@ -217,6 +218,12 @@ public class Main : MonoBehaviour
     private void OnRoleOptionChanged(OptionMono target, object value)
     {
         _lastSelectRole = value as string;
+
+        //选了角色所有记录数据清空
+        _lastSelectArmature = null;
+        _lastSelectAnimName = null;
+        _lastSelectElementFileNameMap.Clear();
+
         RefreshAvatarOption();
     }
 

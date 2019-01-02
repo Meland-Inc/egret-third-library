@@ -33,6 +33,15 @@
     <image id="nsh42i1i" name="img_prompt_1.png" path="/imgNew/" exported="true"/>
     <image id="nsh42i1j" name="img_prompt_2.png" path="/imgNew/" exported="true"/>
     <image id="h68z2i1k" name="noviceRobotIcon.jpg" path="/imgNew/"/>
+    <component id="lzw32i1m" name="comTextTipsNew.xml" path="/com/" exported="true"/>
+    <image id="lzw32i1o" name="1.png" path="/imgNew/"/>
+    <image id="lzw32i1p" name="2.png" path="/imgNew/"/>
+    <image id="lzw32i1q" name="3.png" path="/imgNew/"/>
+    <image id="lzw32i1r" name="4.png" path="/imgNew/" scale="" scale9grid="66,68,27,23"/>
+    <image id="lzw32i1s" name="5.png" path="/imgNew/"/>
+    <image id="lzw32i1t" name="6.png" path="/imgNew/"/>
+    <component id="lzw32i1u" name="comClickEffect.xml" path="/com/"/>
+    <image id="lzw32i1v" name="img_novice_arrow.png" path="/imgNew/"/>
   </resources>
   <publish name="novice"/>
 </packageDescription>

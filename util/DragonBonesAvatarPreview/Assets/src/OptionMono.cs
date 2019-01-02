@@ -28,7 +28,14 @@ public class OptionMono : MonoBehaviour
     {
         if (string.IsNullOrEmpty(content))
         {
-            OptionDropdown.value = 0;
+            if (OptionDropdown.options.Count > 1)
+            {
+                OptionDropdown.value = 1;//默认选择一个
+            }
+            else
+            {
+                OptionDropdown.value = 0;
+            }
             OnChange(OptionDropdown.value);
             return;
         }
@@ -91,6 +98,8 @@ public class OptionMono : MonoBehaviour
     {
         Clear();
 
+        strDatas.Sort();
+
         _curStrData = strDatas;
         List<string> lables = strDatas.GetRange(0, strDatas.Count);//显示的直接是数据
 
@@ -104,6 +113,8 @@ public class OptionMono : MonoBehaviour
     public void ResetFileInfoData(List<AvatarAssetFileInfo> fileDatas)
     {
         Clear();
+
+        fileDatas.Sort((a, b) => string.Compare(a.key, b.key));
 
         _curFileInfoData = fileDatas;
         List<string> lables = new List<string>();

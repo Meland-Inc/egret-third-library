@@ -1,27 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="406,63">
+<component size="350,161" opaque="false" designImage="ui://i25v0ebkb4ke16" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlStorage" pages="0,hide,1,show" selected="0"/>
+  <controller name="ctrlClickTips" pages="0,hide,1,clickGame,3,clickFormula,2,clickRobot" selected="3"/>
   <displayList>
-    <component id="n18_r2bf" name="btnGamePlatform" src="rdy458" fileName="btn/btnMenu.xml" xy="0,0">
+    <component id="n18_r2bf" name="btnGamePlatform" src="rdy458" fileName="btn/btnMenu.xml" xy="147,0">
       <Button title="游戏" icon="ui://5hs1fuejr2bf5y"/>
     </component>
-    <component id="n15_r2bf" name="btnFormula" src="rdy458" fileName="btn/btnMenu.xml" xy="58,0">
-      <Button title="配方" icon="ui://5hs1fuejrdy437"/>
-    </component>
-    <component id="n17_r2bf" name="btnMail" src="rdy458" fileName="btn/btnMenu.xml" xy="116,0">
-      <Button title="邮箱" icon="ui://5hs1fuejr2bf5w"/>
-    </component>
-    <component id="n19_r2bf" name="btnManual" src="rdy458" fileName="btn/btnMenu.xml" xy="174,0">
-      <Button title="手册" icon="ui://5hs1fuejr2bf5x"/>
-    </component>
-    <component id="n13_r2bf" name="btnRobot" src="rdy458" fileName="btn/btnMenu.xml" xy="232,0">
+    <component id="n13_r2bf" name="btnRobot" src="rdy458" fileName="btn/btnMenu.xml" xy="210,0">
       <Button title="机器" icon="ui://5hs1fuejrdy43d"/>
     </component>
-    <component id="n12_r2bf" name="btnTask" src="rdy458" fileName="btn/btnMenu.xml" xy="290,0">
+    <component id="n21_b4ke" name="btnShowStorage" src="rdy458" fileName="btn/btnMenu.xml" xy="86,0">
+      <gearDisplay controller="ctrlStorage" pages="0"/>
+      <Button title="更多" icon="ui://5hs1fuejb4ke7a" controller="ctrlStorage" page="1"/>
+    </component>
+    <component id="n28_b4ke" name="btnHideStorage" src="rdy458" fileName="btn/btnMenu.xml" xy="86,0">
+      <gearDisplay controller="ctrlStorage" pages="1"/>
+      <Button title="更多" icon="ui://5hs1fuejb4ke7a" controller="ctrlStorage" page="0"/>
+    </component>
+    <component id="n22_b4ke" name="btnFormula" src="b4ke79" fileName="btn/btnFormula.xml" xy="277,1">
+      <Button title="配方"/>
+    </component>
+    <image id="n25_b4ke" name="storageBg" src="b4ke7c" fileName="newImg/img_main_menu_1.png" xy="0,75" size="228,86" group="n24_b4ke"/>
+    <component id="n19_r2bf" name="btnManual" src="b4ke7b" fileName="btn/btnStorageMenu.xml" xy="19,94" group="n24_b4ke">
+      <Button title="手册" icon="ui://5hs1fuejr2bf5x"/>
+    </component>
+    <component id="n17_r2bf" name="btnMail" src="b4ke7b" fileName="btn/btnStorageMenu.xml" xy="70,94" group="n24_b4ke">
+      <Button title="邮件" icon="ui://5hs1fuejr2bf5w"/>
+    </component>
+    <component id="n12_r2bf" name="btnTask" src="b4ke7b" fileName="btn/btnStorageMenu.xml" xy="121,94" group="n24_b4ke">
       <Button title="任务" icon="ui://5hs1fuejrdy43j"/>
     </component>
-    <component id="n14_r2bf" name="btnSetting" src="rdy458" fileName="btn/btnMenu.xml" xy="348,0">
+    <component id="n14_r2bf" name="btnSetting" src="b4ke7b" fileName="btn/btnStorageMenu.xml" xy="172,94" group="n24_b4ke">
       <Button title="设置" icon="ui://5hs1fuejrdy43e"/>
     </component>
-    <image id="n20_11syp" name="grpMailTag" src="n6p21r" fileName="img/icon_mail_2.png" pkg="ueqz7xc0" xy="156,12" visible="false"/>
+    <image id="n20_11syp" name="grpMailTag" src="n6p21r" fileName="img/icon_mail_2.png" pkg="ueqz7xc0" xy="87,111" group="n24_b4ke" visible="false"/>
+    <group id="n24_b4ke" name="grpStorageBtn" xy="0,75" size="228,86" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlStorage" pages="1"/>
+    </group>
+    <list id="n29_b4ke" name="lstFromulaMat" xy="281,68" size="60,93" touchable="false" defaultItem="ui://5hs1fuejb4ke7d" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n31_lzw3" name="n31" src="lzw32i1m" fileName="com/comTextTipsNew.xml" pkg="mp92elpx" xy="307,30" size="160,156">
+      <gearDisplay controller="ctrlClickTips" pages="1,3,2"/>
+      <gearXY controller="ctrlClickTips" pages="1,3,2" values="173,25|237,25|307,30" default="14,-126"/>
+      <gearText controller="ctrlClickTips" pages="1,3,2" values="除开游戏本身，还能玩到其他玩家创作的游戏，点击这里可以看看（目前玩家自创游戏还没开放）|“简易石斧”材料已经足够，快来合成吧|机器人能够帮你采集资源，不要忘记使用哦！" default=""/>
+      <Label title="机器人能够帮你采集资源，不要忘记使用哦！"/>
+    </component>
   </displayList>
 </component>

@@ -84,4 +84,11 @@ public class PraseDragonBonesAsset
 
         _processedAssetPath.Add(noExsionPath);
     }
+
+    //清空龙骨数据
+    public static void Clear()
+    {
+        _processedAssetPath.Clear();
+        UnityFactory.factory.Clear();
+    }
 }
