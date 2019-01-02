@@ -2,9 +2,9 @@
 <component size="48,23" extention="Label">
   <controller name="ctrlIsOK" pages="1,no,0,yes" selected="0"/>
   <displayList>
-    <text id="n0_b4ke" name="title" xy="0,6" size="25,12" fontSize="8" color="#f5f5d2" bold="true" text="998/1"/>
+    <text id="n0_b4ke" name="title" xy="0,4" size="30,15" fontSize="10" color="#f5f5d2" bold="true" text="998/1"/>
     <loader id="n2_b4ke" name="icon" xy="28,0" size="20,20" url="ui://5hs1fuejb4ke7e" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
-    <image id="n3_b4ke" name="imgIsOK" src="b4ke7e" fileName="newImg/icon_main_formulaOK.png" xy="19,8">
+    <image id="n3_b4ke" name="imgIsOK" src="b4ke7e" fileName="newImg/icon_main_formulaOK.png" xy="24,8">
       <gearDisplay controller="ctrlIsOK" pages="0"/>
       <relation target="n0_b4ke" sidePair="left-right"/>
     </image>
