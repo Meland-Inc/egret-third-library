@@ -20,18 +20,19 @@
     <group id="n26_n6p2" name="n26" xy="90,45" size="720,450" advanced="true" collapsed="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <image id="n57_11syp" name="n57" src="ot9si2v" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="327,105" size="456,189" group="n47_xev6"/>
-    <image id="n58_11syp" name="n58" src="pgixi5h" fileName="newImg/img_cm_bottom_12.png" pkg="te1gxawo" xy="334,299" size="97,29" group="n61_11syp"/>
-    <image id="n33_n6p2" name="n33" src="n6p21x" fileName="img/img_login_1.png" xy="338,328" size="405,2" group="n61_11syp" color="#996633"/>
-    <text id="n59_11syp" name="n59" xy="338,303" size="73,22" group="n61_11syp" fontSize="16" color="#5b4b37" align="center" autoSize="none" text="邮件附件"/>
-    <group id="n61_11syp" name="n61" xy="334,299" size="409,31" group="n47_xev6"/>
-    <component id="n41_rn6h" name="labContent" src="cbcf24" fileName="com/comContent.xml" xy="341,140" size="412,143" group="n47_xev6"/>
-    <component id="n34_n6p2" name="btnRec" src="n6p21y" fileName="btn/btnRecObj.xml" xy="422,396" group="n47_xev6"/>
-    <component id="n40_rn6h" name="btnDelete" src="rn6h21" fileName="btn/btnDelete.xml" xy="595,395" group="n47_xev6"/>
-    <component id="n43_rn6h" name="comTitle" src="rn6h22" fileName="com/titlePanel.xml" xy="118,95" size="183,353" group="n47_xev6"/>
-    <component id="n44_rn6h" name="comAttach" src="rn6h23" fileName="com/attachList.xml" xy="351,329" group="n47_xev6"/>
-    <text id="n50_xev6" name="tfContentTitle" xy="342,109" size="405,31" group="n47_xev6" fontSize="16" color="#5b4b37" vAlign="middle" ubb="true" autoSize="none" text=""/>
-    <group id="n47_xev6" name="n47" xy="117,95" size="666,353" advanced="true">
+    <image id="n57_11syp" name="n57" src="ot9si2v" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="327,93" size="456,189" group="n47_xev6"/>
+    <image id="n58_11syp" name="n58" src="pgixi5h" fileName="newImg/img_cm_bottom_12.png" pkg="te1gxawo" xy="334,287" size="97,29" group="n61_11syp"/>
+    <image id="n33_n6p2" name="n33" src="n6p21x" fileName="img/img_login_1.png" xy="338,316" size="405,2" group="n61_11syp" color="#996633"/>
+    <text id="n59_11syp" name="n59" xy="338,291" size="73,22" group="n61_11syp" fontSize="16" color="#5b4b37" align="center" autoSize="none" text="邮件附件"/>
+    <group id="n61_11syp" name="n61" xy="334,287" size="409,31" group="n47_xev6"/>
+    <component id="n41_rn6h" name="labContent" src="cbcf24" fileName="com/comContent.xml" xy="341,128" size="412,143" group="n47_xev6"/>
+    <component id="n34_n6p2" name="btnRec" src="n6p21y" fileName="btn/btnRecObj.xml" xy="422,384" group="n47_xev6"/>
+    <component id="n40_rn6h" name="btnDelete" src="rn6h21" fileName="btn/btnDelete.xml" xy="595,383" group="n47_xev6"/>
+    <component id="n43_rn6h" name="comTitle" src="rn6h22" fileName="com/titlePanel.xml" xy="118,83" size="183,353" group="n47_xev6"/>
+    <component id="n44_rn6h" name="comAttach" src="rn6h23" fileName="com/attachList.xml" xy="351,317" group="n47_xev6"/>
+    <text id="n50_xev6" name="tfContentTitle" xy="342,97" size="405,31" group="n47_xev6" fontSize="16" color="#5b4b37" vAlign="middle" ubb="true" autoSize="none" text=""/>
+    <component id="n76_ugkp" name="comOpenFailure" src="ugkpp28" fileName="com/ComTakeFailure.xml" xy="259,60" group="n47_xev6" visible="false"/>
+    <group id="n47_xev6" name="n47" xy="118,60" size="665,376" advanced="true">
       <gearDisplay controller="showMail" pages="0"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>

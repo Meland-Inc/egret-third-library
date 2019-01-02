@@ -3,9 +3,7 @@
   <controller name="button" pages="0,up,1,down" selected="0"/>
   <controller name="conEquipMark" pages="0,hide,1,show" selected="0"/>
   <displayList>
-    <loader id="n4_pkc8" name="imgSelect" xy="4,4" size="70,73" group="n15_ewny" url="ui://te1gxawoot9si33" align="center" vAlign="middle">
-      <gearIcon controller="button" pages="0" values="ui://te1gxawoot9si33" default="ui://qoip3oosewny3"/>
-    </loader>
+    <loader id="n4_pkc8" name="imgSelect" xy="4,4" size="70,73" group="n15_ewny" url="ui://te1gxawoot9si33" align="center" vAlign="middle"/>
     <loader id="n3_igcl" name="icon" xy="9,10" size="60,59" group="n15_ewny" align="center" vAlign="middle" fill="scale"/>
     <text id="n2_igcl" name="quantity" xy="49,54" size="23,22" group="n15_ewny" visible="false" fontSize="16" color="#916545" align="center" vAlign="middle" autoSize="none" text="99"/>
     <group id="n15_ewny" name="n15" xy="4,4" size="70,73" advanced="true">
