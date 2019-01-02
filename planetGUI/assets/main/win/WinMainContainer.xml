@@ -16,13 +16,13 @@
     <component id="n4_muc9" name="comMainRocker" src="w80l0" fileName="win/ComMainRocker.xml" xy="86,386" size="130,130">
       <relation target="" sidePair="left-left,bottom-bottom"/>
     </component>
-    <component id="n32_r2bf" name="comMainMenu" src="ua4xu" fileName="win/ComMainMenu.xml" xy="631,10">
-      <relation target="" sidePair="right-right"/>
-    </component>
     <component id="n33_r2bf" name="comMainTemperature" src="r2bf5r" fileName="win/ComMainTemperature.xml" xy="989,182" size="125,18">
       <relation target="" sidePair="right-right,top-top"/>
     </component>
     <component id="n34_qv2f" name="comSamallMap" src="j0s6z" fileName="win/ComSmallMap.xml" xy="977,9">
+      <relation target="" sidePair="right-right"/>
+    </component>
+    <component id="n32_r2bf" name="comMainMenu" src="ua4xu" fileName="win/ComMainMenu.xml" xy="631,10">
       <relation target="" sidePair="right-right"/>
     </component>
     <component id="n37_x9um" name="comChat" src="x9um6d" fileName="win/ComMainChatView.xml" xy="3,555">
