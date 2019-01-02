@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkedsmu">
-  <controller name="ctrlClickTips" pages="0,hide,1,show" selected="1"/>
+  <controller name="ctrlClickTips" pages="0,hide,1,show" selected="0"/>
   <displayList>
     <image id="n14_edsm" name="n14" src="efrs1o" fileName="newImg/bg_cm_5.png" pkg="te1gxawo" xy="0,0" size="1136,640" group="n23_hn4b"/>
     <component id="n6_n1c0" name="CategoryList" src="n1c01l" fileName="com/CategoryList.xml" xy="2,54" size="165,560" group="n23_hn4b" controller="deleteLayer,0"/>
@@ -31,7 +31,7 @@
     <graph id="n22_foyo" name="noviceHeaderBlockRect" xy="0,0" size="1136,53" group="n23_hn4b" hideByEditor="true" visible="false" alpha="0" touchable="false" type="rect">
       <relation target="" sidePair="width-width"/>
     </graph>
-    <group id="n23_hn4b" name="n23" xy="0,0" size="1136,640" locked="true" advanced="true" collapsed="true">
+    <group id="n23_hn4b" name="n23" xy="0,0" size="1136,640" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
     <component id="n24_lzw3" name="comClickTips" src="lzw32i1m" fileName="com/comTextTipsNew.xml" pkg="mp92elpx" xy="250,27" size="160,175">
