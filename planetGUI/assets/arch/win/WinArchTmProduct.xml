@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkkddks" designImageAlpha="0">
-  <controller name="ctrlClickTips" pages="0,hide,1,clickAxe,2,clickCreate,3,clickSelf" selected="3"/>
   <displayList>
     <component id="n41_w34u" name="comBg" src="pqjb2f" fileName="com/ComBG.xml" xy="27,61" group="n40_e8kh"/>
     <component id="n39_jlj8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1048,59" size="52,52" group="n40_e8kh">
@@ -37,11 +36,5 @@
     <group id="n40_e8kh" name="root" xy="27,59" size="1073,502" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <component id="n51_lzw3" name="n51" src="lzw32i1m" fileName="com/comTextTipsNew.xml" pkg="mp92elpx" xy="140,205" size="160,108">
-      <gearDisplay controller="ctrlClickTips" pages="1,2,3"/>
-      <gearXY controller="ctrlClickTips" pages="1,2,3" values="293,212|904,494|140,205" default="747,341"/>
-      <gearText controller="ctrlClickTips" pages="1,3" values="选择“简易石斧”配方|点击自身工作台" default="点击制作"/>
-      <Label title="点击自身工作台"/>
-    </component>
   </displayList>
 </component>
