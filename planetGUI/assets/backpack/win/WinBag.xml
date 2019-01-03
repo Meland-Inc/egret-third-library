@@ -13,7 +13,7 @@
     </component>
     <image id="n22_ey2h" name="equipLstBg" src="ot9si2z" fileName="newImg/img_cm_bottom_5.png" pkg="te1gxawo" xy="339,215" size="168,237" group="n23_ey2h"/>
     <list id="n20_ey2h" name="lstEquip" xy="345,222" size="156,223" group="n23_ey2h" layout="flow_hz" lineGap="5" colGap="11" defaultItem="ui://te1gxawoj29zi6t">
-      <item/>
+      <item name="111111"/>
       <item icon="ui://ruc22gnthxqg27" name="hair"/>
       <item icon="ui://ruc22gnthxqg20" name="coat"/>
       <item icon="ui://ruc22gnthxqg28" name="pants"/>
@@ -72,8 +72,8 @@
     <component id="n31_ey2h" name="labBasic" src="ozbms" fileName="com/comTalentTitle.xml" xy="94,148" size="193,24" group="n52_ey2h">
       <Label title="基本属性"/>
     </component>
-    <text id="n34_ey2h" name="tfDetailLv" xy="99,182" size="53,24" group="n52_ey2h" fontSize="20" color="#584736" vars="true" text="LV {lv=50}"/>
-    <text id="n35_ey2h" name="tfDetailExp" xy="173,182" size="88,24" group="n52_ey2h" fontSize="20" color="#584736" vars="true" text="{curExp=200}/{nextExp=9999}"/>
+    <text id="n34_ey2h" name="tfDetailLv" xy="99,182" size="51,27" group="n52_ey2h" fontSize="20" color="#584736" vars="true" text="LV {lv=50}"/>
+    <text id="n35_ey2h" name="tfDetailExp" xy="173,182" size="90,27" group="n52_ey2h" fontSize="20" color="#584736" vars="true" text="{curExp=200}/{nextExp=9999}"/>
     <component id="n32_ey2h" name="labFight" src="ozbms" fileName="com/comTalentTitle.xml" xy="94,221" size="193,24" group="n52_ey2h">
       <Label title="基本属性"/>
     </component>
@@ -86,17 +86,17 @@
     <component id="n33_ey2h" name="labElement" src="ozbms" fileName="com/comTalentTitle.xml" xy="94,297" size="193,24" group="n52_ey2h">
       <Label title="基本属性"/>
     </component>
-    <text id="n40_ey2h" name="fireAtt" xy="97,327" size="62,24" group="n50_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="火   {value=50}"/>
-    <text id="n41_ey2h" name="iceAtt" xy="97,353" size="62,24" group="n50_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="冰   {value=50}"/>
-    <text id="n42_ey2h" name="thunderAtt" xy="97,379" size="62,24" group="n50_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="雷   {value=50}"/>
-    <text id="n43_ey2h" name="poisonAtt" xy="97,405" size="62,24" group="n50_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="毒   {value=50}"/>
-    <text id="n44_ey2h" name="darkAtt" xy="97,431" size="62,24" group="n50_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="暗   {value=50}"/>
+    <text id="n40_ey2h" name="fireAtt" xy="97,327" size="62,27" group="n50_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="火   {value=50}"/>
+    <text id="n41_ey2h" name="iceAtt" xy="97,353" size="62,27" group="n50_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="冰   {value=50}"/>
+    <text id="n42_ey2h" name="thunderAtt" xy="97,379" size="62,27" group="n50_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="雷   {value=50}"/>
+    <text id="n43_ey2h" name="poisonAtt" xy="97,405" size="62,27" group="n50_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="毒   {value=50}"/>
+    <text id="n44_ey2h" name="darkAtt" xy="97,431" size="62,27" group="n50_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="暗   {value=50}"/>
     <group id="n50_ey2h" name="grpElementAtt" xy="97,327" size="61,130" group="n52_ey2h" advanced="true" collapsed="true" layout="vt"/>
-    <text id="n45_ey2h" name="fireDef" xy="208,327" size="82,24" group="n51_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="火抗   {value=50}"/>
-    <text id="n46_ey2h" name="iceDef" xy="208,353" size="82,24" group="n51_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="冰抗   {value=50}"/>
-    <text id="n47_ey2h" name="thunderDef" xy="208,379" size="82,24" group="n51_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="雷抗   {value=50}"/>
-    <text id="n48_ey2h" name="poisonDef" xy="208,405" size="82,24" group="n51_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="毒抗   {value=50}"/>
-    <text id="n49_ey2h" name="darkDef" xy="208,431" size="82,24" group="n51_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="暗抗   {value=50}"/>
+    <text id="n45_ey2h" name="fireDef" xy="208,327" size="82,27" group="n51_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="火抗   {value=50}"/>
+    <text id="n46_ey2h" name="iceDef" xy="208,353" size="82,27" group="n51_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="冰抗   {value=50}"/>
+    <text id="n47_ey2h" name="thunderDef" xy="208,379" size="82,27" group="n51_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="雷抗   {value=50}"/>
+    <text id="n48_ey2h" name="poisonDef" xy="208,405" size="82,27" group="n51_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="毒抗   {value=50}"/>
+    <text id="n49_ey2h" name="darkDef" xy="208,431" size="82,27" group="n51_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="暗抗   {value=50}"/>
     <group id="n51_ey2h" name="grpElementDef" xy="208,327" size="81,130" group="n52_ey2h" advanced="true" collapsed="true" layout="vt"/>
     <component id="n19_ey2h" name="btnBack" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="129,482" size="138,46" group="n52_ey2h">
       <Button title="返回" titleColor="#ffffff" icon="ui://te1gxawoefrs1s" controller="conDetail" page="0"/>
