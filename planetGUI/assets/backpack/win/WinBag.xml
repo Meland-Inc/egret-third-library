@@ -2,34 +2,34 @@
 <component size="1136,640" designImage="ui://i25v0ebkhxqgb" designImageAlpha="0" designImageLayer="1">
   <controller name="conDetail" pages="0,normal,1,detail" selected="0"/>
   <displayList>
-    <image id="n5_ey2h" name="bg" src="gpm0i40" fileName="newImg/bg_cm_9.png" pkg="te1gxawo" xy="47,71" size="1035,488" group="n57_rstx"/>
-    <image id="n2_ey2h" name="n2" src="j21fi3x" fileName="newImg/img_cm_title5.png" pkg="te1gxawo" xy="54,66" group="n4_ey2h"/>
-    <image id="n0_ey2h" name="n0" src="j21fi3y" fileName="newImg/img_cm_title6.png" pkg="te1gxawo" xy="26,60" group="n4_ey2h"/>
-    <image id="n1_ey2h" name="n1" src="hxqg22" fileName="imgNew/icon_bag_title.png" xy="42,72" group="n4_ey2h"/>
-    <text id="n3_ey2h" name="tfTitle" xy="129,76" size="66,29" group="n4_ey2h" fontSize="22" color="#ffffff" autoSize="none" text="背  包"/>
-    <group id="n4_ey2h" name="grpTitle" xy="26,60" size="238,56" group="n57_rstx" advanced="true" collapsed="true"/>
-    <component id="n56_rstx" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1048,60" size="52,52" group="n57_rstx">
+    <image id="n5_ey2h" name="bg" src="gpm0i40" fileName="newImg/bg_cm_9.png" pkg="te1gxawo" xy="45,71" size="1035,488" group="n57_rstx"/>
+    <image id="n2_ey2h" name="n2" src="j21fi3x" fileName="newImg/img_cm_title5.png" pkg="te1gxawo" xy="52,66" group="n4_ey2h"/>
+    <image id="n0_ey2h" name="n0" src="j21fi3y" fileName="newImg/img_cm_title6.png" pkg="te1gxawo" xy="24,60" group="n4_ey2h"/>
+    <image id="n1_ey2h" name="n1" src="hxqg22" fileName="imgNew/icon_bag_title.png" xy="40,72" group="n4_ey2h"/>
+    <text id="n3_ey2h" name="tfTitle" xy="127,76" size="66,29" group="n4_ey2h" fontSize="22" color="#ffffff" autoSize="none" text="背  包"/>
+    <group id="n4_ey2h" name="grpTitle" xy="24,60" size="238,56" group="n57_rstx" advanced="true" collapsed="true"/>
+    <component id="n56_rstx" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1046,60" size="52,52" group="n57_rstx">
       <Button icon="ui://te1gxawoefrs1q"/>
     </component>
-    <image id="n22_ey2h" name="equipLstBg" src="ot9si2z" fileName="newImg/img_cm_bottom_5.png" pkg="te1gxawo" xy="339,215" size="168,237" group="n23_ey2h"/>
-    <list id="n20_ey2h" name="lstEquip" xy="345,222" size="156,223" group="n23_ey2h" layout="flow_hz" lineGap="5" colGap="11" defaultItem="ui://te1gxawoj29zi6t">
-      <item name="111111"/>
+    <image id="n22_ey2h" name="equipLstBg" src="ot9si2z" fileName="newImg/img_cm_bottom_5.png" pkg="te1gxawo" xy="337,215" size="168,237" group="n23_ey2h"/>
+    <list id="n20_ey2h" name="lstEquip" xy="343,222" size="156,223" group="n23_ey2h" layout="flow_hz" lineGap="5" colGap="11" defaultItem="ui://te1gxawoj29zi6t">
+      <item/>
       <item icon="ui://ruc22gnthxqg27" name="hair"/>
       <item icon="ui://ruc22gnthxqg20" name="coat"/>
       <item icon="ui://ruc22gnthxqg28" name="pants"/>
       <item icon="ui://ruc22gnthxqg26" name="glove"/>
       <item icon="ui://ruc22gntn2yb2d" name="shoe"/>
     </list>
-    <group id="n23_ey2h" name="grpEquipLst" xy="339,215" size="168,237" group="n57_rstx" collapsed="true"/>
-    <list id="n24_ey2h" name="lstBagTypeBtn" xy="550,126" size="478,44" group="n53_ey2h" layout="flow_hz" colGap="4" defaultItem="ui://ruc22gntey2h2a">
+    <group id="n23_ey2h" name="grpEquipLst" xy="337,215" size="168,237" group="n57_rstx" collapsed="true"/>
+    <list id="n24_ey2h" name="lstBagTypeBtn" xy="548,126" size="478,44" group="n53_ey2h" layout="flow_hz" colGap="4" defaultItem="ui://ruc22gntey2h2a">
       <item title="全部" name="all"/>
       <item title="装备" name="equip"/>
       <item title="材料" name="mat"/>
       <item title="消耗品" name="consumables"/>
       <item title="建材" name="buildMat"/>
     </list>
-    <image id="n28_ey2h" name="bagLstBg" src="ot9si2z" fileName="newImg/img_cm_bottom_5.png" pkg="te1gxawo" xy="546,173" size="480,301" group="n53_ey2h"/>
-    <list id="n27_ey2h" name="lstBagItem" xy="557,179" size="457,295" group="n53_ey2h" layout="flow_hz" overflow="scroll" colGap="5" defaultItem="ui://te1gxawoj29zi6u" autoClearItems="true">
+    <image id="n28_ey2h" name="bagLstBg" src="ot9si2z" fileName="newImg/img_cm_bottom_5.png" pkg="te1gxawo" xy="544,173" size="480,301" group="n53_ey2h"/>
+    <list id="n27_ey2h" name="lstBagItem" xy="555,179" size="457,295" group="n53_ey2h" layout="flow_hz" overflow="scroll" colGap="5" defaultItem="ui://te1gxawoj29zi6u" autoClearItems="true">
       <item/>
       <item/>
       <item/>
@@ -65,67 +65,67 @@
       <item/>
       <item/>
     </list>
-    <component id="n29_ey2h" name="btnArrange" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="715,483" size="138,46" group="n53_ey2h">
+    <component id="n29_ey2h" name="btnArrange" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="713,483" size="138,46" group="n53_ey2h">
       <Button title="整理" titleColor="#ffffff" icon="ui://te1gxawoefrs1s"/>
     </component>
-    <group id="n53_ey2h" name="grpBagItemLst" xy="546,126" size="482,403" group="n57_rstx" collapsed="true"/>
-    <component id="n31_ey2h" name="labBasic" src="ozbms" fileName="com/comTalentTitle.xml" xy="94,148" size="193,24" group="n52_ey2h">
+    <group id="n53_ey2h" name="grpBagItemLst" xy="544,126" size="482,403" group="n57_rstx" collapsed="true"/>
+    <component id="n31_ey2h" name="labBasic" src="ozbms" fileName="com/comTalentTitle.xml" xy="92,148" size="193,24" group="n52_ey2h">
       <Label title="基本属性"/>
     </component>
-    <text id="n34_ey2h" name="tfDetailLv" xy="99,182" size="51,27" group="n52_ey2h" fontSize="20" color="#584736" vars="true" text="LV {lv=50}"/>
-    <text id="n35_ey2h" name="tfDetailExp" xy="173,182" size="90,27" group="n52_ey2h" fontSize="20" color="#584736" vars="true" text="{curExp=200}/{nextExp=9999}"/>
-    <component id="n32_ey2h" name="labFight" src="ozbms" fileName="com/comTalentTitle.xml" xy="94,221" size="193,24" group="n52_ey2h">
+    <text id="n34_ey2h" name="tfDetailLv" xy="97,182" size="51,27" group="n52_ey2h" fontSize="20" color="#584736" vars="true" text="LV {lv=50}"/>
+    <text id="n35_ey2h" name="tfDetailExp" xy="171,182" size="90,27" group="n52_ey2h" fontSize="20" color="#584736" vars="true" text="{curExp=200}/{nextExp=9999}"/>
+    <component id="n32_ey2h" name="labFight" src="ozbms" fileName="com/comTalentTitle.xml" xy="92,221" size="193,24" group="n52_ey2h">
       <Label title="基本属性"/>
     </component>
-    <component id="n37_ey2h" name="labDetailAtt" src="ozbmt" fileName="lab/labBasicTalent.xml" xy="95,256" size="85,33" group="n52_ey2h">
+    <component id="n37_ey2h" name="labDetailAtt" src="ozbmt" fileName="lab/labBasicTalent.xml" xy="93,256" size="85,33" group="n52_ey2h">
       <Label title="200" titleColor="#847c68" titleFontSize="20" icon="ui://te1gxawoot9si2s"/>
     </component>
-    <component id="n38_ey2h" name="labDetailDef" src="ozbmt" fileName="lab/labBasicTalent.xml" xy="208,255" size="85,33" group="n52_ey2h">
+    <component id="n38_ey2h" name="labDetailDef" src="ozbmt" fileName="lab/labBasicTalent.xml" xy="206,255" size="85,33" group="n52_ey2h">
       <Label title="200" titleColor="#847c68" titleFontSize="20" icon="ui://te1gxawoot9si2m"/>
     </component>
-    <component id="n33_ey2h" name="labElement" src="ozbms" fileName="com/comTalentTitle.xml" xy="94,297" size="193,24" group="n52_ey2h">
+    <component id="n33_ey2h" name="labElement" src="ozbms" fileName="com/comTalentTitle.xml" xy="92,297" size="193,24" group="n52_ey2h">
       <Label title="基本属性"/>
     </component>
-    <text id="n40_ey2h" name="fireAtt" xy="97,327" size="62,27" group="n50_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="火   {value=50}"/>
-    <text id="n41_ey2h" name="iceAtt" xy="97,353" size="62,27" group="n50_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="冰   {value=50}"/>
-    <text id="n42_ey2h" name="thunderAtt" xy="97,379" size="62,27" group="n50_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="雷   {value=50}"/>
-    <text id="n43_ey2h" name="poisonAtt" xy="97,405" size="62,27" group="n50_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="毒   {value=50}"/>
-    <text id="n44_ey2h" name="darkAtt" xy="97,431" size="62,27" group="n50_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="暗   {value=50}"/>
-    <group id="n50_ey2h" name="grpElementAtt" xy="97,327" size="61,130" group="n52_ey2h" advanced="true" collapsed="true" layout="vt"/>
-    <text id="n45_ey2h" name="fireDef" xy="208,327" size="82,27" group="n51_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="火抗   {value=50}"/>
-    <text id="n46_ey2h" name="iceDef" xy="208,353" size="82,27" group="n51_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="冰抗   {value=50}"/>
-    <text id="n47_ey2h" name="thunderDef" xy="208,379" size="82,27" group="n51_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="雷抗   {value=50}"/>
-    <text id="n48_ey2h" name="poisonDef" xy="208,405" size="82,27" group="n51_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="毒抗   {value=50}"/>
-    <text id="n49_ey2h" name="darkDef" xy="208,431" size="82,27" group="n51_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="暗抗   {value=50}"/>
-    <group id="n51_ey2h" name="grpElementDef" xy="208,327" size="81,130" group="n52_ey2h" advanced="true" collapsed="true" layout="vt"/>
-    <component id="n19_ey2h" name="btnBack" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="129,482" size="138,46" group="n52_ey2h">
+    <text id="n40_ey2h" name="fireAtt" xy="95,327" size="62,27" group="n50_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="火   {value=50}"/>
+    <text id="n41_ey2h" name="iceAtt" xy="95,353" size="62,27" group="n50_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="冰   {value=50}"/>
+    <text id="n42_ey2h" name="thunderAtt" xy="95,379" size="62,27" group="n50_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="雷   {value=50}"/>
+    <text id="n43_ey2h" name="poisonAtt" xy="95,405" size="62,27" group="n50_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="毒   {value=50}"/>
+    <text id="n44_ey2h" name="darkAtt" xy="95,431" size="62,27" group="n50_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="暗   {value=50}"/>
+    <group id="n50_ey2h" name="grpElementAtt" xy="95,327" size="61,130" group="n52_ey2h" advanced="true" collapsed="true" layout="vt"/>
+    <text id="n45_ey2h" name="fireDef" xy="206,327" size="82,27" group="n51_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="火抗   {value=50}"/>
+    <text id="n46_ey2h" name="iceDef" xy="206,353" size="82,27" group="n51_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="冰抗   {value=50}"/>
+    <text id="n47_ey2h" name="thunderDef" xy="206,379" size="82,27" group="n51_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="雷抗   {value=50}"/>
+    <text id="n48_ey2h" name="poisonDef" xy="206,405" size="82,27" group="n51_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="毒抗   {value=50}"/>
+    <text id="n49_ey2h" name="darkDef" xy="206,431" size="82,27" group="n51_ey2h" fontSize="20" color="#584736" vars="true" singleLine="true" text="暗抗   {value=50}"/>
+    <group id="n51_ey2h" name="grpElementDef" xy="206,327" size="81,130" group="n52_ey2h" advanced="true" collapsed="true" layout="vt"/>
+    <component id="n19_ey2h" name="btnBack" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="127,482" size="138,46" group="n52_ey2h">
       <Button title="返回" titleColor="#ffffff" icon="ui://te1gxawoefrs1s" controller="conDetail" page="0"/>
     </component>
-    <group id="n52_ey2h" name="grpDetail" xy="94,148" size="196,380" group="n57_rstx" advanced="true" collapsed="true">
+    <group id="n52_ey2h" name="grpDetail" xy="92,148" size="196,380" group="n57_rstx" advanced="true" collapsed="true">
       <gearDisplay controller="conDetail" pages="1"/>
     </group>
-    <component id="n58_mnxk" name="comStatus" src="r2bf5j" fileName="win/ComMainSaturation.xml" pkg="5hs1fuej" xy="348,136" group="n57_rstx"/>
-    <image id="n12_ey2h" name="lvAndNameBg" src="hxqg23" fileName="imgNew/img_bag_avatarinfo.png" xy="87,144" group="n30_ey2h"/>
-    <text id="n13_ey2h" name="tfLv" xy="87,154" size="46,29" group="n30_ey2h" fontSize="22" color="#472f16" align="center" vAlign="middle" leading="0" autoSize="none" text="10&#xA;"/>
-    <text id="n14_ey2h" name="tfName" xy="136,154" size="145,29" group="n30_ey2h" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="playerName"/>
-    <group id="n30_ey2h" name="grpLvAndName" xy="87,144" size="215,47" group="n54_ey2h" advanced="true" collapsed="true">
+    <component id="n58_mnxk" name="comStatus" src="r2bf5j" fileName="win/ComMainSaturation.xml" pkg="5hs1fuej" xy="346,136" group="n57_rstx"/>
+    <image id="n12_ey2h" name="lvAndNameBg" src="hxqg23" fileName="imgNew/img_bag_avatarinfo.png" xy="85,144" group="n30_ey2h"/>
+    <text id="n13_ey2h" name="tfLv" xy="85,154" size="46,29" group="n30_ey2h" fontSize="22" color="#472f16" align="center" vAlign="middle" leading="0" autoSize="none" text="10&#xA;"/>
+    <text id="n14_ey2h" name="tfName" xy="134,154" size="145,29" group="n30_ey2h" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="playerName"/>
+    <group id="n30_ey2h" name="grpLvAndName" xy="85,144" size="215,47" group="n54_ey2h" advanced="true" collapsed="true">
       <gearDisplay controller="conDetail" pages="0"/>
     </group>
-    <component id="n15_ey2h" name="labAtt" src="ozbmt" fileName="lab/labBasicTalent.xml" xy="117,424" size="85,33" group="n54_ey2h">
+    <component id="n15_ey2h" name="labAtt" src="ozbmt" fileName="lab/labBasicTalent.xml" xy="115,424" size="85,33" group="n54_ey2h">
       <Label title="200" titleColor="#847c68" titleFontSize="20" icon="ui://te1gxawoot9si2s"/>
     </component>
-    <component id="n16_ey2h" name="labDef" src="ozbmt" fileName="lab/labBasicTalent.xml" xy="218,424" size="85,33" group="n54_ey2h">
+    <component id="n16_ey2h" name="labDef" src="ozbmt" fileName="lab/labBasicTalent.xml" xy="216,424" size="85,33" group="n54_ey2h">
       <Label title="200" titleColor="#847c68" titleFontSize="20" icon="ui://te1gxawoot9si2m"/>
     </component>
-    <component id="n18_ey2h" name="btnDetail" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="129,482" size="138,46" group="n54_ey2h">
+    <component id="n18_ey2h" name="btnDetail" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="127,482" size="138,46" group="n54_ey2h">
       <Button title="详细属性" titleColor="#ffffff" icon="ui://te1gxawoefrs1s" controller="conDetail" page="1"/>
     </component>
-    <component id="n55_ey2h" name="comAvatarCtnr" src="ey2h2b" fileName="com/comAvatarContainer.xml" xy="199,397" size="34,23" group="n54_ey2h"/>
-    <group id="n54_ey2h" name="grpNormal" xy="87,144" size="216,384" group="n57_rstx" advanced="true" collapsed="true">
+    <component id="n55_ey2h" name="comAvatarCtnr" src="ey2h2b" fileName="com/comAvatarContainer.xml" xy="197,397" size="34,23" group="n54_ey2h"/>
+    <group id="n54_ey2h" name="grpNormal" xy="85,144" size="216,384" group="n57_rstx" advanced="true" collapsed="true">
       <gearDisplay controller="conDetail" pages="0"/>
     </group>
-    <component id="n59_ru0b" name="ComSaturationDetail" src="9f2h69" fileName="com/ComSaturationDetail.xml" pkg="5hs1fuej" xy="345,185" group="n57_rstx" visible="false"/>
-    <group id="n57_rstx" name="root" xy="26,60" size="1074,499" advanced="true">
+    <component id="n59_ru0b" name="ComSaturationDetail" src="9f2h69" fileName="com/ComSaturationDetail.xml" pkg="5hs1fuej" xy="343,185" group="n57_rstx" visible="false"/>
+    <group id="n57_rstx" name="root" xy="24,60" size="1074,499" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>
