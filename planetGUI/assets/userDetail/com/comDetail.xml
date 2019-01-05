@@ -3,7 +3,7 @@
   <displayList>
     <image id="n8_cnpn" name="detailBG" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="0,0" size="490,350"/>
     <image id="n9_cnpn" name="iconbg" src="pgixi5z" fileName="newImg/img_cm_item_16.png" pkg="te1gxawo" xy="26,16" size="84,84" group="n10_cnpn"/>
-    <loader id="n3_apmc" name="iconAvatar" xy="30,20" size="74,74" group="n10_cnpn" aspect="true" fill="scale"/>
+    <loader id="n3_apmc" name="iconAvatar" xy="31,21" size="74,74" group="n10_cnpn" aspect="true" fill="scale"/>
     <group id="n10_cnpn" name="icon" xy="26,16" size="84,84" group="n7_apmc"/>
     <text id="n5_apmc" name="usernameLabel" xy="123,19" size="191,22" group="n7_apmc" fontSize="16" color="#54452f" vAlign="middle" autoSize="none" bold="true" text="&#xA;"/>
     <text id="n6_apmc" name="userIdLabel" xy="123,45" size="192,21" group="n7_apmc" font="FZZhunYuan-M02S" fontSize="12" color="#736045" vAlign="middle" autoSize="none" bold="true" text="&#xA;"/>
