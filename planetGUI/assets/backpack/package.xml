@@ -75,6 +75,8 @@
     <component id="ey2h2a" name="btnBagType.xml" path="/btn/"/>
     <component id="ey2h2b" name="comAvatarContainer.xml" path="/com/"/>
     <image id="n2yb2d" name="img_bag_shoes.png" path="/imgNew/"/>
+    <component id="k8wc2e" name="WinRepair.xml" path="/win/" exported="true"/>
+    <component id="k8wc2f" name="comRepairMatItem.xml" path="/com/"/>
   </resources>
   <publish name="backpack"/>
 </packageDescription>

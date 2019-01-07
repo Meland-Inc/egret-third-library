@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="350,161" opaque="false" designImage="ui://i25v0ebkb4ke16" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlStorage" pages="0,hide,1,show" selected="0"/>
+  <controller name="ctrlStorage" pages="0,hide,1,show" selected="1"/>
   <displayList>
     <component id="n18_r2bf" name="btnGamePlatform" src="rdy458" fileName="btn/btnMenu.xml" xy="147,0">
       <Button title="游戏" icon="ui://5hs1fuejr2bf5y"/>
@@ -32,7 +32,7 @@
     <component id="n14_r2bf" name="btnSetting" src="b4ke7b" fileName="btn/btnStorageMenu.xml" xy="172,94" group="n24_b4ke">
       <Button title="设置" icon="ui://5hs1fuejrdy43e"/>
     </component>
-    <image id="n20_11syp" name="grpMailTag" src="n6p21r" fileName="img/icon_mail_2.png" pkg="ueqz7xc0" xy="87,111" group="n24_b4ke" visible="false"/>
+    <image id="n20_11syp" name="grpMailTag" src="n6p21r" fileName="img/icon_mail_2.png" pkg="ueqz7xc0" xy="94,104" group="n24_b4ke" visible="false"/>
     <group id="n24_b4ke" name="grpStorageBtn" xy="0,75" size="228,86" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlStorage" pages="1"/>
     </group>
