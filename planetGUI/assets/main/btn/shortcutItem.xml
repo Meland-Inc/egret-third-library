@@ -11,7 +11,7 @@
     <image id="n26_jb5g" name="n26" src="pgixi6f" fileName="newImg/img_main_item_4.png" pkg="te1gxawo" xy="13,57" group="n28_jb5g"/>
     <image id="n27_jb5g" name="imgDurability" src="pgixi6g" fileName="newImg/img_main_item_5.png" pkg="te1gxawo" xy="14,58" group="n28_jb5g"/>
     <group id="n28_jb5g" name="grpDurability" xy="13,57" size="46,6" group="n24_ww3a" visible="false" advanced="true" collapsed="true"/>
-    <text id="n23_ww3a" name="num" xy="64,57" pivot="1,0.5" anchor="true" size="19,19" group="n24_ww3a" visible="false" fontSize="14" color="#8e4e0f" align="right" vAlign="middle" text="99"/>
+    <text id="n23_ww3a" name="num" xy="64,57" pivot="1,0.5" anchor="true" size="19,19" group="n24_ww3a" fontSize="14" color="#8e4e0f" align="right" vAlign="middle" text="99"/>
     <group id="n24_ww3a" name="grpItemIcon" xy="6,6" size="77,70" advanced="true"/>
     <image id="n18_o6si" name="equipedMark" src="rdy44e" fileName="newImg/img_main_item_3.png" xy="0,0" group="n20_o6si"/>
     <text id="n19_o6si" name="tfE" xy="3,3" size="18,19" group="n20_o6si" fontSize="12" align="center" vAlign="middle" autoSize="none" text="E"/>
