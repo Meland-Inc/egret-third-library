@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640">
-  <controller name="conSetting" pages="0,system,1,sound,2,chating,3,about" selected="3"/>
+  <controller name="conSetting" pages="0,system,1,sound,2,chating,3,about" selected="0"/>
   <displayList>
     <image id="n2_8zcx" name="bg" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="215,106" size="706,430" group="n47_kg0b"/>
     <image id="n62_r398" name="n62" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="413,159" size="490,350" group="n47_kg0b"/>
@@ -12,7 +12,7 @@
       <Label title="点击寻路"/>
     </component>
     <component id="n27_o8k6" name="sldImageQuality" src="9utnt" fileName="com/radioButton.xml" xy="481,244" size="320,33" group="n30_o8k6">
-      <Label title="同屏显示"/>
+      <Label title="画面质量"/>
     </component>
     <component id="n43_igxs" name="tgWeatherSystem" src="rw7fg" fileName="com/settingToggle.xml" xy="481,312" size="148,33" group="n30_o8k6">
       <Label title="天气系统"/>
@@ -80,7 +80,7 @@
     </group>
     <image id="n60_r398" name="n60" src="ot9si2v" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="235,160" size="168,350" group="n47_kg0b"/>
     <component id="n21_o8k6" name="btnSystem" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="256,182" size="125,56" group="n47_kg0b">
-      <Button title="系统" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="0"/>
+      <Button checked="true" title="系统" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="0"/>
     </component>
     <component id="n22_o8k6" name="btnSound" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="256,244" size="125,56" group="n47_kg0b">
       <Button title="声音" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="1"/>
@@ -89,7 +89,7 @@
       <Button title="聊天" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="2"/>
     </component>
     <component id="n24_o8k6" name="btnAbout" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="256,372" size="125,56" group="n47_kg0b">
-      <Button checked="true" title="关于" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="3"/>
+      <Button title="关于" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="3"/>
     </component>
     <image id="n61_r398" name="n61" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="223,520" size="691,14" group="n47_kg0b"/>
     <group id="n47_kg0b" name="root" xy="215,106" size="706,430" advanced="true">
