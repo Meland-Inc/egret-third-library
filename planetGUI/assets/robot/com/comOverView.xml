@@ -24,12 +24,11 @@
     <text id="n47_ot9s" name="n47" xy="729,297" size="45,27" fontSize="20" color="#584736" align="center" vAlign="middle" text="雷抗"/>
     <text id="n48_ot9s" name="n48" xy="729,322" size="45,27" fontSize="20" color="#584736" align="center" vAlign="middle" text="毒抗"/>
     <text id="n49_ot9s" name="n49" xy="729,347" size="45,27" fontSize="20" color="#584736" align="center" vAlign="middle" text="暗抗"/>
-    <text id="n26_ot9s" name="tfRobotName" xy="187,277" size="200,30" fontSize="24" color="#4c3f32" align="center" vAlign="middle" autoSize="none" bold="true" text="方呆头"/>
     <text id="n27_ot9s" name="tfRobotLocation" xy="185,309" size="200,30" fontSize="24" color="#7a6a5a" align="center" vAlign="middle" vars="true" autoSize="none" text="(位置:{r=0},{c=0})">
       <gearDisplay controller="stateCtrl" pages="3"/>
     </text>
-    <text id="n34_ot9s" name="tfLevel" xy="597,99" size="40,27" fontSize="20" color="#584736" align="center" vAlign="middle" vars="true" text="LV{lv=0}"/>
-    <text id="n35_ot9s" name="tfExp" xy="672,99" size="33,27" fontSize="20" color="#584736" align="center" vAlign="middle" vars="true" text="{curExp=0}/{maxExp=0}"/>
+    <text id="n34_ot9s" name="tfLevel" xy="597,99" size="35,27" fontSize="20" color="#584736" align="center" vAlign="middle" vars="true" text="LV{lv=0}"/>
+    <text id="n35_ot9s" name="tfExp" xy="672,99" size="35,27" fontSize="20" color="#584736" align="center" vAlign="middle" vars="true" text="{curExp=0}/{maxExp=0}"/>
     <text id="n36_ot9s" name="tfAtk" xy="650,177" size="38,27" fontSize="20" color="#584736" align="center" vAlign="middle" autoClearText="true" text="200"/>
     <text id="n37_ot9s" name="tfDef" xy="757,177" size="38,27" fontSize="20" color="#584736" align="center" vAlign="middle" autoClearText="true" text="200"/>
     <text id="n50_ot9s" name="tfFire" xy="630,247" size="16,27" fontSize="20" color="#584736" align="center" vAlign="middle" text="0"/>
@@ -46,7 +45,7 @@
       <gearDisplay controller="stateCtrl" pages="2"/>
       <Button title="召唤" titleColor="#ffffff" titleFontSize="20" icon="ui://te1gxawoefrs1s"/>
     </component>
-    <text id="n23_ot9s" name="tfType" xy="47,37" size="59,25" fontSize="18" color="#ffffff" align="center" vAlign="middle" text="家政型">
+    <text id="n23_ot9s" name="tfType" xy="47,37" size="59,24" fontSize="18" color="#ffffff" align="center" vAlign="middle" text="家政型">
       <relation target="n22_ot9s" sidePair="center-center,middle-middle"/>
     </text>
     <component id="n71_no7e" name="btnRecall" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="110,367" size="138,50">
@@ -59,7 +58,7 @@
     </component>
     <image id="n73_j21f" name="n73" src="j21fi3u" fileName="newImg/img_cm_bottom_6.png" pkg="te1gxawo" xy="323,35" size="180,28" visible="false"/>
     <image id="n74_j21f" name="n74" src="j21fi3t" fileName="newImg/icon_cm_ruel.png" pkg="te1gxawo" xy="325,38" visible="false"/>
-    <text id="n75_j21f" name="tfRule" xy="351,38" size="71,25" visible="false" fontSize="18" color="#533f2e" align="center" vAlign="middle" vars="true" text="燃料:{cur=0}/{total=0}"/>
+    <text id="n75_j21f" name="tfRule" xy="351,38" size="73,24" visible="false" fontSize="18" color="#533f2e" align="center" vAlign="middle" vars="true" text="燃料:{cur=0}/{total=0}"/>
     <component id="n76_j21f" name="comAvatar" src="j21fi3z" fileName="com/ComEmpty.xml" pkg="te1gxawo" xy="285,250" size="1,1"/>
     <list id="n77_pgix" name="listEquip" xy="88,82" size="410,226" layout="flow_hz" lineGap="5" colGap="265" lineItemCount="2" defaultItem="ui://te1gxawoj29zi6t">
       <item title="头盔" name="hair"/>
@@ -69,8 +68,15 @@
       <item title="手套" name="glove"/>
       <item title="饰品" name="accessory"/>
     </list>
+    <text id="n26_ot9s" name="tfRobotName" xy="192,277" size="201,28" fontSize="22" color="#4c3f32" align="center" vAlign="middle" bold="true" autoClearText="true" text="运输原型机(未开放)">
+      <relation target="n77_pgix" sidePair="center-center"/>
+    </text>
     <component id="n78_p5lw" name="comSaturationDetail" src="9f2h69" fileName="com/ComSaturationDetail.xml" pkg="5hs1fuej" xy="376,71" visible="false"/>
     <component id="n79_p5lw" name="comRobotSaturation" src="qljx2i" fileName="com/ComRobotSaturation.xml" xy="404,21"/>
     <component id="n81_xles" name="btnRobotView" src="xles2m" fileName="btn/btnRobotView.xml" xy="335,18"/>
+    <component id="n84_cxkj" name="btnChangeName" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="396,279" size="29,24">
+      <relation target="n26_ot9s" sidePair="right-right"/>
+      <Button icon="ui://te1gxawocxkjcyi9g"/>
+    </component>
   </displayList>
 </component>
