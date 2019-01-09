@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="150,40" extention="Button">
   <controller name="button" pages="0,up,1,down" selected="0"/>
-  <controller name="ctrlIsCompleted" pages="0,yes,1,no" selected="0"/>
+  <controller name="ctrlIsCompleted" pages="0,yes,1,no" selected="1"/>
   <displayList>
     <loader id="n0_132oi" name="imgUp" xy="0,0" size="150,40" url="ui://te1gxawoefrs1v" fill="scaleFree">
       <gearIcon controller="button" pages="1" values="ui://te1gxawoefrs1y" default="ui://te1gxawoefrs1v"/>
     </loader>
-    <text id="n3_132oi" name="title" xy="9,9" size="131,23" fontSize="18" color="#655739" align="center" vAlign="middle" autoSize="none" singleLine="true" text="taskName"/>
-    <image id="n4_lbbg" name="n4" src="hpymyi7p" fileName="newImg/img_cm_ok_1.png" pkg="te1gxawo" xy="122,2"/>
+    <text id="n3_132oi" name="title" xy="2,9" size="145,23" fontSize="16" color="#655739" align="center" vAlign="middle" autoSize="none" singleLine="true" text="taskName"/>
+    <image id="n4_lbbg" name="n4" src="hpymyi7p" fileName="newImg/img_cm_ok_1.png" pkg="te1gxawo" xy="122,2">
+      <gearDisplay controller="ctrlIsCompleted" pages="0"/>
+    </image>
   </displayList>
   <Button mode="Radio"/>
 </component>

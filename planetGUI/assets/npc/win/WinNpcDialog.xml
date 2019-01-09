@@ -16,7 +16,7 @@
     </component>
     <image id="n15_r1t9" name="nameBg" src="efrs24" fileName="newImg/img_cm_title3.png" pkg="te1gxawo" xy="223,452" group="n26_elis"/>
     <text id="n16_r1t9" name="tfName" xy="244,460" size="126,19" group="n26_elis" fontSize="18" color="#ffffff" align="center" autoSize="none" text="名字"/>
-    <text id="n19_r1t9" name="tfSpeech" xy="352,507" size="514,70" group="n26_elis" fontSize="18" color="#4e4237" ubb="true" autoSize="none" text="">
+    <text id="n19_r1t9" name="tfSpeech" xy="352,507" size="514,70" group="n26_elis" fontSize="18" color="#4e4237" ubb="true" vars="true" autoSize="none" text="">
       <relation target="" sidePair="rightext-right"/>
       <relation target="n18_r1t9" sidePair="leftext-right"/>
     </text>
