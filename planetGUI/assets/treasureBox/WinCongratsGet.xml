@@ -18,6 +18,7 @@
     <group id="n11_m1va" name="n11" xy="0,299" size="397,17" group="n12_m1va" collapsed="true"/>
     <group id="n12_m1va" name="n12" xy="0,0" size="401,320" advanced="true">
       <gearDisplay controller="isOpen" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
     </group>
     <component id="n13_nrqi" name="openFailurePanel" src="nrqi8" fileName="ComOpenFailure.xml" xy="0,0">
       <gearDisplay controller="isOpen" pages="1"/>
