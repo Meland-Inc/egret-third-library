@@ -1,29 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkqv2f8" designImageAlpha="0" designImageLayer="1">
-  <controller name="conMapMode" pages="0,normal,1,born,2,revive" selected="2"/>
+  <controller name="ctrlMapMode" pages="0,normal,1,born,2,revive" selected="0"/>
   <controller name="ctrlMarkOperate" pages="0,normal,1,selectMark,2,puttingMark,3,deleteMark,4,editMarkName" selected="0"/>
   <displayList>
     <component id="n35_trc2" name="comMap" src="trc221u" fileName="com/ComMiniMapContainer.xml" xy="0,0">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
-    <graph id="n36_qghb" name="lineH" xy="0,289" size="1136,5" visible="false" alpha="0.5" touchable="false" type="rect" lineSize="0" fillColor="#ff333333">
-      <gearDisplay controller="conMapMode" pages="0"/>
-    </graph>
-    <graph id="n37_qghb" name="lineV" xy="426,0" size="5,640" visible="false" alpha="0.5" touchable="false" type="rect" lineSize="0" fillColor="#ff333333">
-      <gearDisplay controller="conMapMode" pages="0"/>
-    </graph>
+    <image id="n81_ljyy" name="n81" src="ljyy21z" fileName="imgNew/img_map_coordinate_1.png" xy="0,322" size="515,8" group="n86_ljyy" alpha="0.8">
+      <relation target="n82_ljyy" sidePair="rightext-left,middle-middle"/>
+    </image>
+    <image id="n83_ljyy" name="n83" src="ljyy21z" fileName="imgNew/img_map_coordinate_1.png" xy="581,322" size="554,8" group="n86_ljyy" alpha="0.8">
+      <relation target="n82_ljyy" sidePair="leftext-right,middle-middle"/>
+      <relation target="" sidePair="rightext-right"/>
+    </image>
+    <image id="n84_ljyy" name="n84" src="ljyy21z" fileName="imgNew/img_map_coordinate_1.png" xy="543,0" size="8,294" group="n86_ljyy" alpha="0.8">
+      <relation target="n82_ljyy" sidePair="bottomext-top,center-center"/>
+    </image>
+    <image id="n85_ljyy" name="n85" src="ljyy21z" fileName="imgNew/img_map_coordinate_1.png" xy="543,358" size="8,281" group="n86_ljyy" alpha="0.8">
+      <relation target="n82_ljyy" sidePair="topext-bottom,center-center"/>
+      <relation target="" sidePair="bottomext-bottom"/>
+    </image>
+    <image id="n82_ljyy" name="imgTargetPos" src="ljyy220" fileName="imgNew/img_map_coordinate_2.png" xy="547,326" pivot="0.5,0.5" anchor="true" group="n86_ljyy"/>
+    <group id="n86_ljyy" name="grpMapPos" xy="0,0" size="1135,640" visible="false" advanced="true"/>
     <image id="n1_11e02" name="headerBg" src="qo8vi1v" fileName="newImg/bg_cm_8.png" pkg="te1gxawo" xy="0,0" size="1136,48">
       <relation target="" sidePair="width-width"/>
     </image>
     <image id="n2_11e02" name="titleBg" src="efrs23" fileName="newImg/img_cm_title2.png" pkg="te1gxawo" xy="462,8" group="n14_11e02"/>
-    <text id="n3_11e02" name="title" xy="499,9" size="134,28" group="n14_11e02" fontSize="22" color="#fffffe" align="center" vAlign="middle" autoSize="height" strokeColor="#686252" strokeSize="2" text="选择出生地">
-      <gearText controller="conMapMode" pages="0" values="世界地图" default="选择出生地"/>
+    <text id="n3_11e02" name="title" xy="499,9" size="134,28" group="n14_11e02" fontSize="22" color="#fffffe" align="center" vAlign="middle" autoSize="height" strokeColor="#686252" strokeSize="2" text="世界地图">
+      <gearText controller="ctrlMapMode" pages="0" values="世界地图" default="选择出生地"/>
     </text>
     <group id="n14_11e02" name="grpTitle" xy="462,8" size="210,30" advanced="true" collapsed="true">
       <relation target="" sidePair="center-center"/>
     </group>
     <component id="n13_11e02" name="btnClose" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="1043,4" size="80,42">
-      <gearDisplay controller="conMapMode" pages="0,2"/>
+      <gearDisplay controller="ctrlMapMode" pages="0,2"/>
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://te1gxawoefrs1r"/>
     </component>
@@ -35,15 +45,15 @@
       <Button title="随机出生地" titleColor="#81681c" icon="ui://te1gxawoot9si2h"/>
     </component>
     <component id="n34_qv2f" name="btnStartGame" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="606,533" size="142,50" group="n12_11e02">
-      <gearText controller="conMapMode" pages="2" values="复活" default="开始游戏"/>
-      <Button title="复活" titleColor="#ffffff" icon="ui://te1gxawoefrs1s"/>
+      <gearText controller="ctrlMapMode" pages="2" values="复活" default="开始游戏"/>
+      <Button title="开始游戏" titleColor="#ffffff" icon="ui://te1gxawoefrs1s"/>
     </component>
     <group id="n12_11e02" name="grpBornMode" xy="109,515" size="917,82" advanced="true" collapsed="true">
-      <gearDisplay controller="conMapMode" pages="1,2"/>
+      <gearDisplay controller="ctrlMapMode" pages="1,2"/>
       <relation target="" sidePair="bottom-bottom,center-center"/>
     </group>
     <component id="n16_11e02" name="btnLineServer" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="16,0" size="147,50">
-      <gearDisplay controller="conMapMode" pages="0"/>
+      <gearDisplay controller="ctrlMapMode" pages="0"/>
       <Button title="分线服务器" titleColor="#5b4b37" icon="ui://te1gxawoefrs1u"/>
     </component>
     <image id="n18_11e02" name="operateBg" src="ot9si3b" fileName="newImg/img_cm_zoom.png" pkg="te1gxawo" xy="1028,363" size="66,221" group="n22_11e02"/>
@@ -65,14 +75,14 @@
       <gearDisplay controller="ctrlMarkOperate" pages="2"/>
       <Button icon="ui://te1gxawopagbi28" controller="ctrlMarkOperate" page="0"/>
     </component>
-    <group id="n22_11e02" name="grpMapOperateBtn" xy="1028,363" size="66,221" advanced="true">
-      <gearDisplay controller="conMapMode" pages="0"/>
+    <group id="n22_11e02" name="grpMapOperateBtn" xy="1028,363" size="66,221" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlMapMode" pages="0"/>
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </group>
     <image id="n26_11e02" name="posBg" src="ot9si38" fileName="newImg/img_cm_prompt.png" pkg="te1gxawo" xy="53,577" size="182,20" group="n28_11e02"/>
     <text id="n27_11e02" name="tfPos" xy="53,578" size="182,19" group="n28_11e02" fontSize="14" color="#ffffff" align="center" vAlign="middle" vars="true" autoSize="none" text="分线:{line=0}, 坐标点  ({r=999},{c=999})"/>
     <group id="n28_11e02" name="posGroup" xy="53,577" size="182,20" advanced="true" collapsed="true">
-      <gearDisplay controller="conMapMode" pages="0,2"/>
+      <gearDisplay controller="ctrlMapMode" pages="0,2"/>
       <relation target="" sidePair="bottom-bottom"/>
     </group>
     <image id="n23_11e02" name="putMarksTipsBg" src="ot9si38" fileName="newImg/img_cm_prompt.png" pkg="te1gxawo" xy="399,553" size="338,31" group="n25_11e02"/>
@@ -107,7 +117,7 @@
     <group id="n80_mr86" name="grpSelectMarkPanel" xy="362,190" size="412,260" group="n60_mr86" advanced="true" collapsed="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <group id="n60_mr86" name="grpSelectMark" xy="0,0" size="1136,640" advanced="true">
+    <group id="n60_mr86" name="grpSelectMark" xy="0,0" size="1136,640" hideByEditor="true" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlMarkOperate" pages="1,4"/>
     </group>
   </displayList>
