@@ -16,11 +16,10 @@
     </component>
     <image id="n15_r1t9" name="nameBg" src="efrs24" fileName="newImg/img_cm_title3.png" pkg="te1gxawo" xy="223,452" group="n26_elis"/>
     <text id="n16_r1t9" name="tfName" xy="244,460" size="126,19" group="n26_elis" fontSize="18" color="#ffffff" align="center" autoSize="none" text="名字"/>
-    <text id="n19_r1t9" name="tfSpeech" xy="352,507" size="514,70" group="n26_elis" fontSize="18" color="#4e4237" ubb="true" vars="true" autoSize="none" text="">
+    <component id="n19_r1t9" name="tfSpeech" src="faw4yi79" fileName="lab/labVScroll.xml" pkg="te1gxawo" xy="352,507" size="514,70" group="n26_elis">
       <relation target="" sidePair="rightext-right"/>
       <relation target="n18_r1t9" sidePair="leftext-right"/>
-    </text>
-    <component id="n27_q9ya" name="ladSpeech" src="faw4yi79" fileName="lab/labVScroll.xml" pkg="te1gxawo" xy="352,507" size="514,70" group="n26_elis"/>
+    </component>
     <image id="n17_r1t9" name="headIconBg" src="kvvk2i1e" fileName="imgNew/img_guide_1.png" pkg="mp92elpx" xy="242,499" group="n24_r1t9"/>
     <loader id="n18_r1t9" name="ladHeadIcon" xy="245,502" size="70,70" group="n24_r1t9" url="ui://7xhwdeuzctbhb" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
     <group id="n24_r1t9" name="grpIcon" xy="242,499" size="76,76" group="n26_elis" advanced="true"/>

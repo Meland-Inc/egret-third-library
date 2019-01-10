@@ -21,7 +21,9 @@
       <relation target="" sidePair="bottomext-bottom"/>
     </image>
     <image id="n82_ljyy" name="imgTargetPos" src="ljyy220" fileName="imgNew/img_map_coordinate_2.png" xy="547,326" pivot="0.5,0.5" anchor="true" group="n86_ljyy"/>
-    <group id="n86_ljyy" name="grpMapPos" xy="0,0" size="1135,640" visible="false" advanced="true"/>
+    <group id="n86_ljyy" name="grpMapPos" xy="0,0" size="1135,640" visible="false" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlMapMode" pages="0"/>
+    </group>
     <image id="n1_11e02" name="headerBg" src="qo8vi1v" fileName="newImg/bg_cm_8.png" pkg="te1gxawo" xy="0,0" size="1136,48">
       <relation target="" sidePair="width-width"/>
     </image>
