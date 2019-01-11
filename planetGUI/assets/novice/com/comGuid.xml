@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="606,124" extention="Label">
+  <displayList>
+    <image id="n5_guek" name="n5" src="11e02i1b" fileName="imgNew/img_manual_4.png" xy="0,0" size="606,123">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <loader id="n4_xjjc" name="icon" xy="3,3" size="600,30" url="ui://mp92elpxxjjc1" fill="scaleMatchWidth" playing="false"/>
+  </displayList>
+  <relation target="n4_xjjc" sidePair="bottomext-bottom"/>
+</component>

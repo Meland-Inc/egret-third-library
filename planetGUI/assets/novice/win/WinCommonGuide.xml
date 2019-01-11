@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="694,453">
+<component size="1136,640">
   <displayList>
-    <image id="n0_xjjc" name="bg" src="qn8o1" fileName="img/bg_bag.png" pkg="te1gxawo" xy="0,0"/>
-    <text id="n1_xjjc" name="winTitle" xy="258,-1" size="175,45" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="使用需知"/>
-    <list id="n5_xjjc" name="lstGuideContent" xy="97,79" size="500,335" layout="flow_hz" overflow="scroll" lineGap="20" defaultItem="ui://mp92elpxxjjc4" align="center">
-      <item url="ui://mp92elpxxjjc3" icon="ui://mp92elpxxjjc1"/>
-      <item url="ui://mp92elpxxjjc3" icon="ui://mp92elpxxjjc2"/>
-      <item url="ui://mp92elpxxjjc3" icon="ui://mp92elpx84325"/>
-      <item title="1.点击运行后，机器人将会按照编程的代码执行&#xD;2.机器人运行中会每秒消耗[COLOR=#0000FF]1单位[/COLOR]的燃料，只要处于运行中即会消耗&#xD;3.有些代码块的执行是需要额外消耗燃料的，具体需要消耗多少燃料，可查看代码前方的“问号”&#xD;4.在[COLOR=#0000FF]机器人背包[/COLOR]中使用诸如“树枝”之类的燃料，则会给机器人充能燃料，燃料为0时，机器人将停止运行"/>
+    <image id="n0_xjjc" name="bg" src="efrs1n" fileName="newImg/bg_cm_4.png" pkg="te1gxawo" xy="238,95" size="660,450" group="n8_f5ut"/>
+    <text id="n1_xjjc" name="winTitle" xy="496,94" size="175,45" group="n8_f5ut" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="使用需知"/>
+    <list id="n5_xjjc" name="lstGuideContent" xy="260,171" size="615,335" group="n8_f5ut" layout="flow_hz" overflow="scroll" lineGap="10" defaultItem="ui://mp92elpxf5ut2i1x" align="center">
+      <item icon="ui://mp92elpxxjjc1"/>
+      <item icon="ui://mp92elpxxjjc2"/>
+      <item icon="ui://mp92elpx84325"/>
+      <item url="ui://mp92elpxxjjc4" title="&#xD;1.点击运行后，机器人将会按照编程的代码执行&#xD;2.机器人运行中会每秒消耗[COLOR=#0000FF]1单位[/COLOR]的燃料，只要处于运行中即会消耗&#xD;3.有些代码块的执行是需要额外消耗燃料的，具体需要消耗多少燃料，可查看代码前方的“问号”&#xD;4.在[COLOR=#0000FF]机器人背包[/COLOR]中使用诸如“树枝”之类的燃料，则会给机器人充能燃料，燃料为0时，机器人将停止运行"/>
     </list>
-    <component id="n6_xjjc" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="647,-7" size="56,57">
-      <Button icon="ui://eunktclqsz331"/>
+    <component id="n6_xjjc" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="862,87" size="52,52" group="n8_f5ut">
+      <Button icon="ui://te1gxawoefrs1q"/>
     </component>
+    <image id="n7_f5ut" name="n7" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="238,529" size="658,14" group="n8_f5ut"/>
+    <group id="n8_f5ut" name="n8" xy="238,88" size="676,457" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
   </displayList>
 </component>

@@ -4,9 +4,9 @@
     <component id="xjjc0" name="WinCommonGuide.xml" path="/win/" exported="true"/>
     <image id="xjjc1" name="help_01.png" path="/img/" exported="true"/>
     <image id="xjjc2" name="help_02.png" path="/img/" exported="true"/>
-    <component id="xjjc3" name="comGuideImg.xml" path="/com/" exported="true"/>
+    <component id="xjjc3" name="comGuideImg.xml" path="/com/"/>
     <component id="xjjc4" name="comGuideText.xml" path="/com/"/>
-    <image id="84325" name="help_03.png" path="/img/"/>
+    <image id="84325" name="help_03.png" path="/img/" exported="true"/>
     <component id="npqs6" name="ComDialog.xml" path="/com/" exported="true"/>
     <image id="r7z3d" name="guideTipsBg.png" path="/img/" scale="9grid" scale9grid="20,14,98,49"/>
     <image id="r7z3f" name="img_guide_line_1.png" path="/img/"/>
@@ -43,6 +43,7 @@
     <component id="lzw32i1u" name="comClickEffect.xml" path="/com/"/>
     <image id="lzw32i1v" name="img_novice_arrow.png" path="/imgNew/"/>
     <image id="plek2i1w" name="img_guide_avatar.png" path="/imgNew/"/>
+    <component id="f5ut2i1x" name="comGuid.xml" path="/com/"/>
   </resources>
   <publish name="novice"/>
 </packageDescription>
