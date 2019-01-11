@@ -2,7 +2,7 @@
 <component size="1136,640" designImage="ui://i25v0ebkedsmu">
   <displayList>
     <image id="n14_edsm" name="n14" src="efrs1o" fileName="newImg/bg_cm_5.png" pkg="te1gxawo" xy="0,0" size="1136,640" group="n23_hn4b"/>
-    <component id="n6_n1c0" name="CategoryList" src="n1c01l" fileName="com/CategoryList.xml" xy="2,54" size="165,560" group="n23_hn4b" controller="deleteLayer,0"/>
+    <component id="n6_n1c0" name="CategoryList" src="n1c01l" fileName="com/CategoryList.xml" xy="2,55" size="165,560" group="n23_hn4b" controller="deleteLayer,0"/>
     <component id="n5_n1c0" name="codeBlockContainer" src="n1c01j" fileName="com/CodeblockContainer.xml" xy="157,56" size="979,584" group="n23_hn4b">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
