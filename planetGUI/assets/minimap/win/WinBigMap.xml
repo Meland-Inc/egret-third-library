@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkqv2f8" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlMapMode" pages="0,normal,1,born,2,revive" selected="0"/>
-  <controller name="ctrlMarkOperate" pages="0,normal,1,selectMark,2,puttingMark,3,deleteMark,4,editMarkName" selected="0"/>
+  <controller name="ctrlMarkOperate" pages="0,normal,1,selectMark,2,puttingMark,3,deleteMark,4,editMarkName" selected="2"/>
   <displayList>
     <component id="n35_trc2" name="comMap" src="trc221u" fileName="com/ComMiniMapContainer.xml" xy="0,0">
       <relation target="" sidePair="width-width,height-height"/>
@@ -119,8 +119,11 @@
     <group id="n80_mr86" name="grpSelectMarkPanel" xy="362,190" size="412,260" group="n60_mr86" advanced="true" collapsed="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <group id="n60_mr86" name="grpSelectMark" xy="0,0" size="1136,640" hideByEditor="true" advanced="true" collapsed="true">
+    <group id="n60_mr86" name="grpSelectMark" xy="0,0" size="1136,640" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlMarkOperate" pages="1,4"/>
     </group>
+    <component id="n87_xf9r" name="curPuttingMark" src="p85hq" fileName="btn/btnMark.xml" xy="567,320" pivot="0.5,0.5" anchor="true" scale="0.5,0.5" visible="false" touchable="false">
+      <gearDisplay controller="ctrlMarkOperate" pages="2"/>
+    </component>
   </displayList>
 </component>
