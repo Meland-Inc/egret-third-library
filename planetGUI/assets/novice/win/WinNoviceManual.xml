@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://n0e96ypx132oi1" designImageAlpha="0" designImageLayer="1">
   <displayList>
-    <image id="n22_11e02" name="bg" src="efrs1n" fileName="newImg/bg_cm_4.png" pkg="te1gxawo" xy="226,84" size="663,477" group="n9_132oi"/>
+    <image id="n22_11e02" name="bg" src="efrs1n" fileName="newImg/bg_cm_4.png" pkg="te1gxawo" xy="226,84" size="663,477" group="n9_132oi" color="#dbd9d0"/>
     <image id="n20_guek" name="titleBg" src="efrs23" fileName="newImg/img_cm_title2.png" pkg="te1gxawo" xy="457,94" group="n9_132oi"/>
     <text id="n21_guek" name="title" xy="515,96" size="94,29" group="n9_132oi" fontSize="22" color="#ffffff" vAlign="middle" leading="0" autoSize="none" strokeColor="#352e2c" text="新手手册"/>
     <component id="n5_132oi" name="btnClose" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="860,79" size="52,52" group="n9_132oi">
@@ -22,7 +22,7 @@
       <item/>
     </list>
     <image id="n17_guek" name="bottom" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="223,543" size="661,16" group="n9_132oi"/>
-    <graph id="n19_guek" name="n19" xy="527,173" size="2,325" group="n9_132oi" type="rect" lineSize="0" fillColor="#ffdad3b7"/>
+    <graph id="n19_guek" name="n19" xy="527,173" size="2,325" group="n9_132oi" type="rect" lineSize="0" fillColor="#ffbfbcaf"/>
     <group id="n9_132oi" name="root" xy="223,79" size="689,482" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>

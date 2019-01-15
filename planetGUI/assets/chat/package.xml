@@ -127,7 +127,7 @@
     <image id="q73n48" name="img_chat_siliao.png" path="/imgNew/" exported="true"/>
     <image id="q73n49" name="img_chat_system.png" path="/imgNew/" exported="true"/>
     <image id="q73n4a" name="img_chat_zonghe.png" path="/imgNew/" exported="true"/>
-    <component id="q73n4p" name="chatItemNew.xml" path="/com/" exported="true"/>
+    <component id="q73n4p" name="ChatItem.xml" path="/com/" exported="true"/>
     <component id="q73n4q" name="btnEmojItem.xml" path="/btn/"/>
     <image id="w7uy4r" name="img_chat_chuangzuo.png" path="/img/"/>
     <image id="w7uy4s" name="img_chat_fenxian.png" path="/img/"/>
@@ -138,6 +138,8 @@
     <component id="gpm04y" name="btnChannel.xml" path="/btn/"/>
     <component id="q9ya4z" name="btnFriendList.xml" path="/btn/"/>
     <component id="scpq50" name="btnFriendItem.xml" path="/btn/"/>
+    <image id="mbd751" name="icon_chat_private.png" path="/imgNew/"/>
+    <image id="mbd752" name="img_chat_private.png" path="/imgNew/" scale="9grid" scale9grid="5,5,10,10"/>
   </resources>
   <publish name="chat"/>
 </packageDescription>
