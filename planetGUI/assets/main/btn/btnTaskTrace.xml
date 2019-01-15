@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="105,28" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="1"/>
+  <displayList>
+    <component id="n1_gbq9" name="n1" src="c3x26n" fileName="sprite/spriteTaskTrace.xml" xy="-252,0">
+      <gearXY controller="button" pages="1" values="-252,0" default="27,0" tween="true"/>
+    </component>
+    <component id="n0_gbq9" name="n0" src="gbq97j" fileName="sprite/spriteArrow.xml" xy="0,2">
+      <gearIcon controller="button" pages="1" values="ui://5hs1fuejrdy455" default="ui://5hs1fuejrdy454"/>
+      <Label icon="ui://5hs1fuejrdy455"/>
+    </component>
+  </displayList>
+  <Button mode="Check"/>
+</component>

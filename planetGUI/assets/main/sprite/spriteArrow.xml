@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="24,24" extention="Label">
+  <controller name="ctrlShowHide" pages="0,show,1,hide" selected="0"/>
+  <displayList>
+    <image id="n3_c3x2" name="imgArrowBg" src="rdy453" fileName="newImg/img_main_task_6.png" xy="0,0"/>
+    <loader id="n4_c3x2" name="icon" xy="5,4" size="14,16" url="ui://5hs1fuejrdy454">
+      <gearIcon controller="ctrlShowHide" pages="1" values="ui://5hs1fuejrdy455" default="ui://5hs1fuejrdy454"/>
+    </loader>
+  </displayList>
+</component>

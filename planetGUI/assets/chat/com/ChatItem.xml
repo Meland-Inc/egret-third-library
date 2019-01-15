@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="520,64" extention="Label">
+  <controller name="selfOther" pages="1,other,0,self" selected="0"/>
+  <controller name="conChannelTitle" pages="0,unknown,1,system,2,world,3,map,4,instance,5,near,6,private,7,comprehensive,8,robot" selected="0"/>
+  <controller name="ctrlAt" pages="0,none,2,atMe,1,atOther" selected="1"/>
+  <displayList>
+    <image id="n26_mbd7" name="privateBg1" src="mbd752" fileName="imgNew/img_chat_private.png" xy="41,1" size="70,18" group="n30_mbd7">
+      <relation target="n29_mbd7" sidePair="rightext-right"/>
+    </image>
+    <image id="n27_mbd7" name="imgAtMe" src="mbd751" fileName="imgNew/icon_chat_private.png" xy="74,3" group="n30_mbd7">
+      <relation target="n10_swb5" sidePair="left-right"/>
+    </image>
+    <text id="n29_mbd7" name="tfMe" xy="92,1" size="18,18" group="n30_mbd7" fontSize="12" color="#c88316" vAlign="middle" bold="true" singleLine="true" text="我">
+      <relation target="n10_swb5" sidePair="left-right"/>
+    </text>
+    <group id="n30_mbd7" name="grpAtMe" xy="41,1" size="70,18" advanced="true">
+      <gearDisplay controller="ctrlAt" pages="2"/>
+    </group>
+    <text id="n10_swb5" name="tfOtherName" xy="43,1" size="30,18" fontSize="12" color="#c88316" vAlign="middle" bold="true" singleLine="true" text="别人">
+      <gearDisplay controller="selfOther" pages="1"/>
+    </text>
+    <image id="n23_q73n" name="bubbleBg1" src="q73n41" fileName="imgNew/img_chat_bubble_1.png" xy="44,28" size="35,32">
+      <gearDisplay controller="selfOther" pages="1"/>
+      <relation target="n20_fvj8" sidePair="rightext-right,bottomext-bottom"/>
+    </image>
+    <component id="n20_fvj8" name="comOtherRichText" src="fvj83q" fileName="com/richTextContainer.xml" xy="60,36" size="10,17"/>
+    <loader id="n12_hdi9" name="ladChanelBg" xy="0,0" size="40,20" group="n15_on75" url="ui://qagcvsbxq73n45" autoSize="true">
+      <gearIcon controller="conChannelTitle" pages="1,2,5,6,7" values="ui://qagcvsbxq73n49|ui://qagcvsbxq73n47|ui://qagcvsbxq73n46|ui://qagcvsbxq73n48|ui://qagcvsbxq73n4a" default="ui://qagcvsbxq73n45"/>
+    </loader>
+    <image id="n22_q73n" name="iconBg" src="q73n40" fileName="imgNew/img_chat_avatar.png" xy="1,22" size="38,39" group="n11_hdi9"/>
+    <loader id="n4_oy2m" name="_icon" xy="1,22" size="39,39" group="n11_hdi9" align="center" vAlign="middle" fill="scale"/>
+    <group id="n11_hdi9" name="icon" xy="1,22" size="39,39" group="n15_on75" advanced="true" collapsed="true"/>
+    <text id="n25_q73n" name="tfChannel" xy="0,1" size="40,20" group="n15_on75" fontSize="12" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="未知">
+      <gearText controller="conChannelTitle" pages="0,1,3,4,5,6,7,8" values="未知|系统|map|野外|附近|私聊|综合|机器人" default="世界"/>
+    </text>
+    <group id="n15_on75" name="grpInfo" xy="0,0" size="40,61" advanced="true" collapsed="true">
+      <gearXY controller="selfOther" pages="1,0" values="0,0|479,1"/>
+    </group>
+    <image id="n35_mbd7" name="privateBg2" src="mbd752" fileName="imgNew/img_chat_private.png" xy="456,1" size="71,18" group="n38_mbd7">
+      <relation target="n36_mbd7" sidePair="leftext-left"/>
+    </image>
+    <image id="n36_mbd7" name="imgAtOther" src="mbd751" fileName="imgNew/icon_chat_private.png" xy="478,3" group="n38_mbd7">
+      <relation target="n37_mbd7" sidePair="left-left"/>
+    </image>
+    <text id="n37_mbd7" name="tfOther" xy="497,1" size="31,18" group="n38_mbd7" fontSize="12" color="#c88316" vAlign="middle" bold="true" singleLine="true" text="别人">
+      <relation target="" sidePair="right-right"/>
+    </text>
+    <group id="n38_mbd7" name="grpAtOther" xy="456,1" size="72,18" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlAt" pages="1"/>
+      <gearXY controller="ctrlAt" pages="1" values="405,1" default="456,1"/>
+    </group>
+    <text id="n16_on75" name="tfSelfName" xy="458,1" size="18,18" fontSize="12" color="#c88316" vAlign="middle" bold="true" singleLine="true" text="我">
+      <gearDisplay controller="selfOther" pages="0"/>
+      <relation target="n36_mbd7" sidePair="right-right"/>
+    </text>
+    <image id="n24_q73n" name="bubbleBg2" src="q73n42" fileName="imgNew/img_chat_bubble_2.png" xy="438,28" size="36,32">
+      <gearDisplay controller="selfOther" pages="0"/>
+      <relation target="n21_fvj8" sidePair="leftext-left,bottomext-bottom"/>
+    </image>
+    <component id="n21_fvj8" name="comSelfRichText" src="fvj83q" fileName="com/richTextContainer.xml" xy="448,36" size="10,17">
+      <relation target="" sidePair="right-right"/>
+    </component>
+  </displayList>
+  <relation target="n20_fvj8" sidePair="bottomext-bottom"/>
+  <relation target="n21_fvj8" sidePair="bottomext-bottom"/>
+</component>
