@@ -3,7 +3,7 @@
   <displayList>
     <image id="n0_sdqn" name="n0" src="edsm7r" fileName="newImg/img_code_stencil1.png" xy="0,0" size="138,154"/>
     <image id="n5_f3zf" name="n5" src="edsm7s" fileName="newImg/img_code_stencil2.png" xy="7,37"/>
-    <text id="n1_sdqn" name="title" xy="14,6" size="109,25" fontSize="18" color="#52432e" align="center" vAlign="middle" leading="0" autoSize="shrink" bold="true" singleLine="true" text="作品名">
+    <text id="n1_sdqn" name="title" xy="12,12" size="99,18" fontSize="13" color="#52432e" align="center" vAlign="middle" leading="0" autoSize="none" bold="true" singleLine="true" text="作品名作品名一">
       <relation target="" sidePair="top-top,center-center"/>
       <relation target="" sidePair="width-width,height-height"/>
     </text>
@@ -14,7 +14,7 @@
       <relation target="" sidePair="center-center,bottom-bottom"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <component id="n6_f3zf" name="btnEdit" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="110,6" size="22,22">
+    <component id="n6_f3zf" name="btnEdit" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="111,8" size="22,22">
       <Button icon="ui://rnqj1l77edsm7x"/>
     </component>
   </displayList>
