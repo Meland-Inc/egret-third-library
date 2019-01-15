@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="192,201" opaque="false">
+<component size="192,109" opaque="false">
   <controller name="ctrlShowHide" pages="0,show,1,hide" selected="0"/>
   <displayList>
-    <list id="n0_c3x2" name="lstTask" xy="0,31" size="272,170" overflow="scroll" scrollBarFlags="128" defaultItem="ui://5hs1fuejc3x26k">
-      <gearXY controller="ctrlShowHide" pages="1" values="-273,31" default="0,31" tween="true"/>
+    <list id="n0_c3x2" name="lstTask" xy="0,32" size="220,78" overflow="scroll" scrollBarFlags="128" defaultItem="ui://5hs1fuejc3x26k" autoClearItems="true">
+      <gearXY controller="ctrlShowHide" pages="0,1" values="0,32|-273,31" tween="true"/>
       <item/>
       <item/>
     </list>
@@ -11,4 +11,5 @@
       <Button controller="ctrlShowHide" page="1"/>
     </component>
   </displayList>
+  <relation target="n0_c3x2" sidePair="bottomext-bottom"/>
 </component>
