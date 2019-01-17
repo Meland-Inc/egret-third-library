@@ -126,5 +126,8 @@
     <component id="n87_xf9r" name="curPuttingMark" src="p85hq" fileName="btn/btnMark.xml" xy="567,320" pivot="0.5,0.5" anchor="true" scale="0.5,0.5" visible="false" touchable="false">
       <gearDisplay controller="ctrlMarkOperate" pages="2"/>
     </component>
+    <component id="n88_eotb" name="comSelectSpTips" src="eotb222" fileName="com/comSelectTips.xml" xy="557,319" pivot="0.39,0.9" anchor="true" visible="false">
+      <gearDisplay controller="ctrlMapMode" pages="1,2"/>
+    </component>
   </displayList>
 </component>
