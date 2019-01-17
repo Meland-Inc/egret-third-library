@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="72,72" extention="Button">
   <controller name="button" pages="0,up,1,down" selected="0"/>
-  <controller name="ctrlMark" pages="1,normal,0,equip,2,broken" selected="2"/>
+  <controller name="ctrlMark" pages="1,normal,0,equip,2,broken" selected="0"/>
   <displayList>
     <image id="n0_sntq" name="bg" src="ot9si33" fileName="newImg/img_cm_item_2.png" xy="2,2"/>
     <loader id="n7_fene" name="quality" xy="6,6" pivot="0.5,0.5" size="60,60" group="n10_fene" visible="false" url="ui://te1gxawoz45zcyi99"/>
+    <loader id="n16_mmm4" name="formulaBG" xy="6,6" pivot="0.5,0.5" size="60,60" group="n10_fene" url="ui://te1gxawob7cicyi8z" align="center" vAlign="middle" playing="false">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
     <loader id="n8_fene" name="icon" xy="6,6" pivot="0.5,0.5" size="60,60" group="n10_fene" align="center" vAlign="middle" fill="scale">
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
