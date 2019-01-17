@@ -16,7 +16,7 @@
       <gearDisplay controller="ctrlStorage" pages="1"/>
       <Button title="更多" icon="ui://5hs1fuejb4ke7a" controller="ctrlStorage" page="0"/>
     </component>
-    <image id="n31_nln9" name="grpStorageTag" src="n6p21r" fileName="img/icon_mail_2.png" pkg="ueqz7xc0" xy="121,11"/>
+    <image id="n31_nln9" name="grpStorageTag" src="n6p21r" fileName="img/icon_mail_2.png" pkg="ueqz7xc0" xy="121,11" visible="false"/>
     <component id="n22_b4ke" name="btnFormula" src="b4ke79" fileName="btn/btnFormula.xml" xy="277,1">
       <Button title="配方"/>
     </component>
@@ -34,7 +34,7 @@
       <Button title="设置" icon="ui://5hs1fuejrdy43e"/>
     </component>
     <image id="n20_11syp" name="grpMailTag" src="n6p21r" fileName="img/icon_mail_2.png" pkg="ueqz7xc0" xy="94,104" group="n24_b4ke" visible="false"/>
-    <group id="n24_b4ke" name="grpStorageBtn" xy="0,75" size="228,86" advanced="true" collapsed="true">
+    <group id="n24_b4ke" name="grpStorageBtn" xy="0,75" size="228,86" advanced="true">
       <gearDisplay controller="ctrlStorage" pages="1"/>
     </group>
     <list id="n29_b4ke" name="lstFromulaMat" xy="281,68" size="60,93" touchable="false" defaultItem="ui://5hs1fuejb4ke7d" autoClearItems="true">
