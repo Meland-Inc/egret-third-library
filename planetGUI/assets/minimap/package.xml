@@ -67,6 +67,7 @@
     <image id="ljyy21z" name="img_map_coordinate_1.png" path="/imgNew/" scale="9grid" scale9grid="3,2,5,1"/>
     <image id="ljyy220" name="img_map_coordinate_2.png" path="/imgNew/"/>
     <component id="ljyy221" name="ComPos.xml" path="/com/"/>
+    <component id="eotb222" name="comSelectTips.xml" path="/com/"/>
   </resources>
   <publish name="minimap"/>
 </packageDescription>
