@@ -4,6 +4,8 @@
     <component id="n0_j7co" name="freeCtnr" src="kgcg3m" fileName="com/FreeContainer.xml" xy="0,0" size="800,800">
       <relation target="" sidePair="width-width%,height-height%"/>
     </component>
-    <component id="n4_ofjd" name="placeCtnr" src="kesa9" fileName="com/Container.xml" xy="0,0" touchable="false"/>
+    <component id="n4_ofjd" name="placeCtnr" src="kesa9" fileName="com/Container.xml" xy="0,0" touchable="false">
+      <relation target="" sidePair="bottomext-bottom,rightext-right"/>
+    </component>
   </displayList>
 </component>
