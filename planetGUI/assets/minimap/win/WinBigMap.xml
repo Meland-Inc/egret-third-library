@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkqv2f8" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlMapMode" pages="0,normal,1,born,2,revive" selected="0"/>
-  <controller name="ctrlMarkOperate" pages="0,normal,1,selectMark,2,puttingMark,3,deleteMark,4,editMarkName" selected="2"/>
+  <controller name="ctrlMapMode" pages="0,normal,1,born,2,revive" selected="1"/>
+  <controller name="ctrlMarkOperate" pages="0,normal,1,selectMark,2,puttingMark,3,deleteMark,4,editMarkName" selected="0"/>
   <displayList>
     <component id="n35_trc2" name="comMap" src="trc221u" fileName="com/ComMiniMapContainer.xml" xy="0,0">
       <relation target="" sidePair="width-width,height-height"/>
@@ -28,7 +28,7 @@
       <relation target="" sidePair="width-width"/>
     </image>
     <image id="n2_11e02" name="titleBg" src="efrs23" fileName="newImg/img_cm_title2.png" pkg="te1gxawo" xy="462,8" group="n14_11e02"/>
-    <text id="n3_11e02" name="title" xy="499,9" size="134,28" group="n14_11e02" fontSize="22" color="#fffffe" align="center" vAlign="middle" autoSize="height" strokeColor="#686252" strokeSize="2" text="世界地图">
+    <text id="n3_11e02" name="title" xy="499,9" size="134,28" group="n14_11e02" fontSize="22" color="#fffffe" align="center" vAlign="middle" autoSize="height" strokeColor="#686252" strokeSize="2" text="选择出生地">
       <gearText controller="ctrlMapMode" pages="0" values="世界地图" default="选择出生地"/>
     </text>
     <group id="n14_11e02" name="grpTitle" xy="462,8" size="210,30" advanced="true" collapsed="true">
@@ -44,7 +44,8 @@
     </image>
     <image id="n4_11e02" name="btnBg" src="11e021r" fileName="imgNew/img_map_bottom.png" xy="109,515" size="917,82" group="n12_11e02"/>
     <component id="n9_11e02" name="btnRandomBornPoint" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="369,533" size="142,50" group="n12_11e02">
-      <Button title="随机出生地" titleColor="#81681c" icon="ui://te1gxawoot9si2h"/>
+      <gearText controller="ctrlMapMode" pages="2" values="随机复活" default="随机出生"/>
+      <Button title="随机出生" titleColor="#81681c" icon="ui://te1gxawoot9si2h"/>
     </component>
     <component id="n34_qv2f" name="btnStartGame" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="606,533" size="142,50" group="n12_11e02">
       <gearText controller="ctrlMapMode" pages="2" values="复活" default="开始游戏"/>

@@ -15,7 +15,7 @@
       <gearDisplay controller="ctrlMapMode" pages="0"/>
     </component>
     <component id="n11_ljyy" name="comHomeMark" src="trc221x" fileName="com/comHomeMark.xml" xy="568,320" visible="false">
-      <gearDisplay controller="ctrlMapMode" pages="0"/>
+      <gearDisplay controller="ctrlMapMode" pages="0,2"/>
       <Button title="家"/>
     </component>
     <component id="n7_trc2" name="comMainPlayerMark" src="j0s611" fileName="com/comMainPlayerIcon.xml" xy="568,319" touchable="false">

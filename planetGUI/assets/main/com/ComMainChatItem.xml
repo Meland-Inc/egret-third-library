@@ -11,7 +11,7 @@
     <component id="n26_xf9r" name="richTextCtnr" src="j21fi3z" fileName="com/ComEmpty.xml" pkg="te1gxawo" xy="87,8" size="100,16">
       <relation target="n27_xf9r" sidePair="leftext-right"/>
     </component>
-    <text id="n27_xf9r" name="tfSenderName" xy="42,9" size="45,18" fontSize="12" color="#00ff00" bold="true" text="sender:"/>
+    <text id="n27_xf9r" name="tfSenderName" xy="42,8" size="49,18" fontSize="12" color="#00ff00" bold="true" text="sender:"/>
   </displayList>
   <relation target="n26_xf9r" sidePair="bottomext-bottom"/>
 </component>
