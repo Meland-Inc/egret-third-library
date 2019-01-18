@@ -70,14 +70,6 @@ exports.init = (mainWindow) => {
         })
     })
 
-    ipcMain.on('open_client_publish_path', (event) => {
-        dialog.showOpenDialog({
-            properties: ['openFile', 'openDirectory']
-        }, (files) => {
-            event.sender.send('selected_client_publish_path', files);
-        })
-    })
-
     ipcMain.on('open_client_android_path', (event) => {
         dialog.showOpenDialog({
             properties: ['openFile', 'openDirectory']
@@ -198,8 +190,8 @@ exports.init = (mainWindow) => {
         createWindow(event, window_name, window_cn_name, window_module_name);
     });
 
-    ipcMain.on('client_show_message', (event, msg) => {
-        mainWindow.webContents.send("client_show_message", msg);
+    ipcMain.on('client_show_toast', (event, msg) => {
+        mainWindow.webContents.send("client_show_toast", msg);
     });
 
     ipcMain.on('client_show_dialog', (event, msg) => {
@@ -216,6 +208,19 @@ exports.init = (mainWindow) => {
 
     ipcMain.on('client_hide_loading', (event) => {
         mainWindow.webContents.send("client_hide_loading");
+    });
+
+    ipcMain.on('client_show_region_loading', (event) => {
+        mainWindow.webContents.send("client_show_region_loading");
+    });
+
+    ipcMain.on('client_hide_region_loading', (event) => {
+        mainWindow.webContents.send("client_hide_region_loading");
+    });
+
+    ipcMain.on('client_show_alert', (event, content, cb, resolve) => {
+        console.log(`----------- content:${content} cb:${cb} resolve:${resolve}`)
+        mainWindow.webContents.send("client_show_alert", content, cb, resolve);
     });
 
     ipcMain.on('client_select_proto_file', (event, file_name) => {
@@ -300,7 +305,7 @@ exports.init = (mainWindow) => {
         let exists = fs.existsSync(module_path);
         if (exists) {
             let msg = "模块" + module_name + "路径已存在";
-            mainWindow.webContents.send("client_show_message", msg);
+            mainWindow.webContents.send("client_show_toast", msg);
             return;
         }
 
@@ -319,7 +324,7 @@ exports.init = (mainWindow) => {
             if (fs.exists(screenPath, (exists) => {
                 if (exists) {
                     let msg = toStudlyCaps(module_name) + "Screen.ts" + "已存在";
-                    mainWindow.webContents.send("client_show_message", msg);
+                    mainWindow.webContents.send("client_show_toast", msg);
                 } else {
                     let screenContent = "const { ccclass, property } = cc._decorator;\r\nimport BScreen from '../../../../framework/mvc/screen/BScreen';\r\nimport { IScreen } from '../../../../framework/mvc/screen/IScreen';\r\nimport WindowConst from '../../../constant/WindowConst';\r\n\r\n/**\r\n * @author " + author + "\r\n * @desc " + module_cn_name + "屏幕\r\n * @date " + dateFormat(new Date(), "yyyy-MM-dd hh:mm:ss") + " \r\n * @last modified by   " + author + " \r\n * @last modified time " + dateFormat(new Date(), "yyyy-MM-dd hh:mm:ss") + " \r\n */\r\n@ccclass\r\nexport default class " + toStudlyCaps(module_name) + "Screen extends BScreen implements IScreen {\r\n\tpublic constructor(screenName: string) {\r\n\t\tsuper(screenName);\r\n\t}\r\n\r\n\tpublic onEnter(args: any): void {\r\n\t\tthis.openWindow(WindowConst." + toStudlyCaps(module_name) + "Window);\r\n\r\n\t\tsuper.onEnter(args);\r\n\t}\r\n}";
                     fs.writeFile(screenPath, screenContent, (err) => {
@@ -337,7 +342,7 @@ exports.init = (mainWindow) => {
         if (fs.exists(ctrlPath, (exists) => {
             if (exists) {
                 let msg = toStudlyCaps(module_name) + "Controller.ts" + "已存在";
-                mainWindow.webContents.send("client_show_message", msg);
+                mainWindow.webContents.send("client_show_toast", msg);
             } else {
                 let ctrlContent = "import BController from '../../../../framework/mvc/controller/BController';\r\n"
                 ctrlContent += "import CmdDispatchManager from '../../../../freedom/manager/CmdDispatchManager';\r\n";
@@ -362,7 +367,7 @@ exports.init = (mainWindow) => {
         if (fs.exists(modelPath, (exists) => {
             if (exists) {
                 let msg = toStudlyCaps(module_name) + "Model.ts" + "已存在";
-                mainWindow.webContents.send("client_show_message", msg);
+                mainWindow.webContents.send("client_show_toast", msg);
             } else {
                 let modelContent = "import BModel from '../../../../framework/mvc/model/BModel'; \r\n\r\n/**\r\n * @author " + author + "\r\n * @desc " + module_cn_name + " 数据模型\r\n * @date " + dateFormat(new Date(), "yyyy-MM-dd hh:mm:ss") + " \r\n * @last modified by   " + author + "  \r\n * @last modified time " + dateFormat(new Date(), "yyyy-MM-dd hh:mm:ss") + "\r\n */\r\nexport default class " + toStudlyCaps(module_name) + "Model extends BModel {\t\r\n\tpublic constructor() {\t\r\n\t\tsuper();\t\r\n\t}\r\n}";
                 fs.writeFile(modelPath, modelContent, (err) => {
@@ -379,7 +384,7 @@ exports.init = (mainWindow) => {
         if (fs.exists(windowPath, (exists) => {
             if (exists) {
                 let msg = toStudlyCaps(module_name) + "Window.ts" + "已存在";
-                mainWindow.webContents.send("client_show_message", msg);
+                mainWindow.webContents.send("client_show_toast", msg);
             } else {
                 let windowContent = "import BWindow from '../../../../framework/mvc/view/BWindow';\r\n\r\nconst { ccclass, property } = cc._decorator;\r\n/**\r\n * @author " + author + " \r\n * @desc " + module_cn_name + " 窗体\r\n * @date " + dateFormat(new Date(), "yyyy-MM - dd hh: mm:ss") + " \r\n * @last modified by   " + author + " \r\n * @last modified time " + dateFormat(new Date(), "yyyy-MM - dd hh: mm:ss") + " \r\n */\r\n@ccclass\r\nexport default class " + toStudlyCaps(module_name) + "Window extends BWindow {\r\n\tpublic constructor() {\r\n\t\tsuper();\r\n\t}\r\n\r\n\tpublic show(data?: any): void {\r\n\t\tsuper.show();\r\n\t}\r\n\r\n\tpublic hide(data?: any): void {\r\n\t\tsuper.hide();\r\n\t}\r\n\r\n\tpublic onDestroy(): void {\r\n\t\tsuper.onDestroy();\r\n\t}\r\n}";
                 fs.writeFile(windowPath, windowContent, (err) => {
@@ -514,7 +519,7 @@ exports.init = (mainWindow) => {
         }, 500);
 
         let msg = "创建" + toStudlyCaps(module_name) + "模块完毕";
-        mainWindow.webContents.send("client_show_message", msg);
+        mainWindow.webContents.send("client_show_toast", msg);
     }
 
     function createWindow(event, window_name, window_cn_name, window_module_name) {
@@ -525,7 +530,7 @@ exports.init = (mainWindow) => {
         if (fs.exists(windowPath, (exists) => {
             if (exists) {
                 let msg = toStudlyCaps(window_name) + "Window.ts" + "已存在";
-                mainWindow.webContents.send("client_show_message", msg);
+                mainWindow.webContents.send("client_show_toast", msg);
             } else {
                 let windowContent = "import BWindow from '../../../../framework/mvc/view/BWindow';\r\n\r\nconst { ccclass, property } = cc._decorator;\r\n/**\r\n * @author " + author + " \r\n * @desc " + window_cn_name + " 窗体\r\n * @date " + dateFormat(new Date(), "yyyy-MM - dd hh: mm:ss") + " \r\n * @last modified by   " + author + " \r\n * @last modified time " + dateFormat(new Date(), "yyyy-MM - dd hh: mm:ss") + " \r\n */\r\n@ccclass\r\nexport default class " + toStudlyCaps(window_name) + "Window extends BWindow {\r\n\tpublic constructor() {\r\n\t\tsuper();\r\n\t}\r\n\r\n\tpublic show(data?: any): void {\r\n\t\tsuper.show();\r\n\t}\r\n\r\n\tpublic hide(data?: any): void {\r\n\t\tsuper.hide();\r\n\t}\r\n\r\n\tpublic onDestroy(): void {\r\n\t\tsuper.onDestroy();\r\n\t}\r\n}";
                 fs.writeFile(windowPath, windowContent, (err) => {
@@ -592,7 +597,7 @@ exports.init = (mainWindow) => {
         }, 500);
 
         let msg = "创建" + toStudlyCaps(window_name) + "Window.ts" + "窗体完毕";
-        mainWindow.webContents.send("client_show_message", msg);
+        mainWindow.webContents.send("client_show_toast", msg);
     }
 
     function refreshProto(event) {
@@ -853,7 +858,7 @@ exports.init = (mainWindow) => {
         });
 
         let msg = "设置协议完毕";
-        mainWindow.webContents.send("client_show_message", msg);
+        mainWindow.webContents.send("client_show_toast", msg);
 
         event.sender.send('client_setting_proto_complete');
     }
@@ -886,7 +891,7 @@ exports.init = (mainWindow) => {
         fs.writeFile(jsPath, jsContent, (err) => {
             if (!err) {
                 let msg = "生成Proto2TypeScript.js成功";
-                mainWindow.webContents.send("client_show_message", msg);
+                mainWindow.webContents.send("client_show_toast", msg);
             }
         });
     }
@@ -1008,7 +1013,7 @@ exports.init = (mainWindow) => {
         fs.writeFile(jsPath, jsContent, (err) => {
             if (!err) {
                 let msg = "生成Proto2TypeScript.js成功";
-                mainWindow.webContents.send("client_show_message", msg);
+                mainWindow.webContents.send("client_show_toast", msg);
             }
         });
     }
