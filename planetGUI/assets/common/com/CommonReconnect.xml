@@ -2,26 +2,26 @@
 <component size="1136,640">
   <controller name="state" pages="0,reconnect,1,fail,2,success" selected="0"/>
   <displayList>
-    <graph id="n8_exp3" name="obstructBG" xy="0,0" size="1136,640" alpha="0.5" type="rect" fillColor="#ff000000">
-      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
-    </graph>
-    <image id="n0_q8x4" name="bg" src="q8x4k" fileName="newImg/bg_common_1.png" xy="388,205">
+    <image id="n0_q8x4" name="bg" src="q8x4k" fileName="newImg/bg_common_1.png" xy="388,205" group="n10_n88c">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <image id="n6_exp3" name="success" src="q8x4j" fileName="img/img_line_on.png" xy="545,288">
+    <image id="n6_exp3" name="success" src="q8x4j" fileName="newImg/img_line_on.png" xy="545,288" group="n10_n88c">
       <gearDisplay controller="state" pages="2"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <image id="n5_exp3" name="fail" src="q8x4m" fileName="img/img_line_off.png" xy="546,288">
+    <image id="n5_exp3" name="fail" src="q8x4m" fileName="newImg/img_line_off.png" xy="546,288" group="n10_n88c">
       <gearDisplay controller="state" pages="1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <text id="n3_q8x4" name="tfContent" xy="423,260" size="288,81" font="FZZhunYuan-M02S" fontSize="18" color="#946d30" align="center" autoSize="none" bold="true" text="重新连接失败次数过多，将返回登录界面！">
+    <text id="n3_q8x4" name="tfContent" xy="423,260" size="288,81" group="n10_n88c" font="FZZhunYuan-M02S" fontSize="18" color="#946d30" align="center" autoSize="none" bold="true" text="重新连接失败次数过多，将返回登录界面！">
       <gearXY controller="state" pages="0,1,2" values="423,260|423,257|423,257"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <component id="n9_v0n2" name="btnConfirm" src="gpm0i4h" fileName="btn/btnScale.xml" xy="511,370">
+    <component id="n9_v0n2" name="btnConfirm" src="gpm0i4h" fileName="btn/btnScale.xml" xy="511,370" group="n10_n88c">
       <Button title="重新选择" titleColor="#946d30" icon="ui://te1gxawoot9si2b"/>
     </component>
+    <group id="n10_n88c" name="n10" xy="388,205" size="360,230" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
   </displayList>
 </component>

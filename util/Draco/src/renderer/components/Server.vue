@@ -75,7 +75,7 @@ export default {
     var proto_path = localStorage.getItem("client_proto_path");
 
     ipcRenderer.on(
-      "client_show_message",
+      "client_show_toast",
       function(event, msg) {
         this.showToast(msg);
       }.bind(this)

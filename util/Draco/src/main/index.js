@@ -123,6 +123,7 @@ let template = [{
     label: '关于',
     click: () => {
       // electron.shell.openExternal('http://electron.atom.io')
+      mainWindow.webContents.send("client_show_version");
     }
   }]
 }]
