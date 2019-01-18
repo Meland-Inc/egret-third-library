@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="460,350" overflow="scroll" scrollBarFlags="128">
   <displayList>
-    <text id="n0_sz33" name="tfTaskName" xy="28,13" size="77,23" fontSize="18" color="#655739" vAlign="middle" ubb="true" singleLine="true" text="任务名字"/>
-    <richtext id="n1_sz33" name="tfTaskDesc" xy="28,41" size="399,20" fontSize="16" color="#655739" ubb="true" autoSize="height" text="任务描述"/>
+    <text id="n0_sz33" name="tfTaskName" xy="28,13" size="77,24" fontSize="18" color="#655739" vAlign="middle" ubb="true" singleLine="true" text="任务名字"/>
+    <richtext id="n1_sz33" name="tfTaskDesc" xy="28,41" size="399,22" fontSize="16" color="#655739" ubb="true" autoSize="height" text="任务描述"/>
     <image id="n16_ey91" name="n16" src="pgixi5h" fileName="newImg/img_cm_bottom_12.png" pkg="te1gxawo" xy="26,82" group="n17_ey91"/>
-    <text id="n15_ey91" name="tfTaskTarget" xy="30,82" size="69,20" group="n17_ey91" fontSize="16" color="#655739" vAlign="middle" ubb="true" singleLine="true" text="任务目标"/>
+    <text id="n15_ey91" name="tfTaskTarget" xy="30,82" size="69,22" group="n17_ey91" fontSize="16" color="#655739" vAlign="middle" ubb="true" singleLine="true" text="任务目标"/>
     <group id="n17_ey91" name="grpTaskTarget" xy="26,82" size="91,22" advanced="true" collapsed="true">
       <relation target="n1_sz33" sidePair="top-bottom"/>
     </group>
@@ -14,7 +14,7 @@
       <item/>
     </list>
     <image id="n18_ey91" name="n18" src="pgixi5h" fileName="newImg/img_cm_bottom_12.png" pkg="te1gxawo" xy="26,197" group="n20_ey91"/>
-    <text id="n19_ey91" name="tfTaskReward" xy="30,197" size="69,20" group="n20_ey91" fontSize="16" color="#655739" vAlign="middle" ubb="true" singleLine="true" text="任务奖励"/>
+    <text id="n19_ey91" name="tfTaskReward" xy="30,197" size="69,22" group="n20_ey91" fontSize="16" color="#655739" vAlign="middle" ubb="true" singleLine="true" text="任务奖励"/>
     <group id="n20_ey91" name="grpTaskReward" xy="26,197" size="91,22" advanced="true">
       <relation target="n3_sz33" sidePair="top-bottom"/>
     </group>
