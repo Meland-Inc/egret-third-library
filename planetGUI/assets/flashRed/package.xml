@@ -7,5 +7,5 @@
     <component id="qcld3" name="RedHorizontal.xml" path="/com/" exported="true"/>
     <image id="urd54" name="img_main_attacked1.png" path="/img/" scale="9grid" scale9grid="63,64,41,38"/>
   </resources>
-  <publish name="flashRed"/>
+  <publish name="flashRed" npot="true"/>
 </packageDescription>

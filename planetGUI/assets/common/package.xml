@@ -2,55 +2,26 @@
 <packageDescription id="te1gxawo" jpegQuality="80" compressPNG="true">
   <resources>
     <component id="qn8o0" name="WinConfirm.xml" path="/win/" exported="true"/>
-    <image id="qn8o1" name="bg_bag.png" path="/img/" exported="true"/>
-    <image id="qn8o2" name="bg_bag_2.png" path="/img/" exported="true"/>
-    <image id="qn8o3" name="bg_modal.png" path="/img/" exported="true" scale="9grid" scale9grid="14,29,238,58"/>
-    <image id="qn8o4" name="btn_close1.png" path="/img/" exported="true"/>
-    <image id="qn8o5" name="btn_close2.png" path="/img/" exported="true"/>
-    <image id="qn8o6" name="btn_green.png" path="/img/" exported="true"/>
-    <image id="qn8o7" name="btn_red.png" path="/img/" exported="true"/>
-    <image id="qn8o8" name="img_main_chatbubble_1.png" path="/img/" exported="true" scale="9grid" scale9grid="25,10,50,20"/>
-    <image id="qn8o9" name="img_main_chatbubble_2.png" path="/img/" exported="true"/>
+    <image id="qn8o3" name="bg_modal.png" path="/newImg/" exported="true" scale="9grid" scale9grid="14,29,238,58"/>
+    <image id="qn8o8" name="img_main_chatbubble_1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="25,10,50,20"/>
+    <image id="qn8o9" name="img_main_chatbubble_2.png" path="/newImg/" exported="true"/>
     <component id="qn8oa" name="CommonModal.xml" path="/com/" exported="true"/>
     <component id="qn8ob" name="CommonBubbleText.xml" path="/com/" exported="true"/>
     <component id="qn8od" name="btnCommon.xml" path="/btn/" exported="true"/>
-    <component id="qn8oe" name="rbtnCommon.xml" path="/btn/" exported="true"/>
     <component id="cnpnf" name="CommonToast.xml" path="/com/" exported="true"/>
     <component id="hxf8g" name="CommonAlert.xml" path="/com/" exported="true"/>
-    <image id="d30ci" name="img_common_prompt.png" path="/img/" exported="true" scale="9grid" scale9grid="216,0,31,26"/>
+    <image id="d30ci" name="img_common_prompt.png" path="/newImg/" exported="true" scale="9grid" scale9grid="216,0,31,26"/>
     <component id="ar63j" name="CommonInputAlert.xml" path="/com/" exported="true"/>
-    <image id="q8x4j" name="img_line_on.png" path="/img/"/>
-    <image id="q8x4k" name="bg_common_1.png" path="/img/"/>
-    <image id="q8x4l" name="btn_common_1.png" path="/img/"/>
-    <image id="q8x4m" name="img_line_off.png" path="/img/"/>
+    <image id="q8x4j" name="img_line_on.png" path="/newImg/"/>
+    <image id="q8x4k" name="bg_common_1.png" path="/newImg/"/>
+    <image id="q8x4m" name="img_line_off.png" path="/newImg/"/>
     <component id="q8x4n" name="btnReconnect.xml" path="/btn/" exported="true"/>
     <component id="q8x4o" name="CommonReconnect.xml" path="/com/" exported="true"/>
     <component id="q8x4q" name="CommonLoading.xml" path="/com/" exported="true"/>
-    <movieclip id="q8x4r" name="重新连接.jta" path="/img/"/>
-    <image id="exp3s" name="img_lineloading_back.png" path="/img/"/>
-    <image id="rk5gt" name="btn_build_define.png" path="/img/" exported="true"/>
-    <image id="rk5gu" name="btn_build_delete.png" path="/img/" exported="true"/>
-    <component id="rk5gv" name="ComPickObjectToast.xml" path="/com/"/>
-    <sound id="tqc911" name="buttonTouch.wav" path="/sound/" exported="true"/>
-    <sound id="tqc912" name="close.wav" path="/sound/" exported="true"/>
-    <sound id="tqc913" name="success.wav" path="/sound/" exported="true"/>
-    <sound id="tqc914" name="unsuccess.wav" path="/sound/" exported="true"/>
-    <image id="lt5g16" name="img_bag_item_3.png" path="/img/"/>
+    <image id="exp3s" name="img_lineloading_back.png" path="/newImg/"/>
     <component id="lt5g17" name="ToolTipOperaBagItem.xml" path="/com/" exported="true"/>
-    <image id="lt5g18" name="btn_blue.png" path="/img/" scale="9grid" scale9grid="37,14,74,28"/>
-    <image id="lt5g19" name="btn_yellow.png" path="/img/"/>
-    <image id="lt5g1a" name="img_map_title.png" path="/img/"/>
-    <image id="zsdq15" name="btn_blue.png" path="/img/" exported="true"/>
-    <image id="zsdq16" name="btn_blue1.png" path="/img/" exported="true"/>
-    <image id="zsdq17" name="btn_yellow.png" path="/img/"/>
-    <image id="zsdq18" name="img_map_title.png" path="/img/"/>
-    <image id="er201d" name="img_bag_item_2.png" path="/img/"/>
-    <image id="er201e" name="icon_bag_coat.png" path="/img/"/>
-    <image id="er201g" name="img_bag_item_5.png" path="/img/"/>
-    <image id="jr3d1h" name="btn_build_rotating.png" path="/img/" exported="true"/>
-    <component id="jr3d1j" name="btnRotateOp.xml" path="/btn/" exported="true"/>
     <image id="efrs1k" name="bg_cm_1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="28,57,56,18"/>
-    <image id="efrs1l" name="bg_cm_2.png" path="/newImg/" exported="true"/>
+    <image id="efrs1l" name="bg_cm_2.png" path="/newImg/" exported="true" scale="9grid" scale9grid="22,22,44,44"/>
     <image id="efrs1m" name="bg_cm_3.png" path="/newImg/" exported="true" scale="9grid" scale9grid="22,42,44,24"/>
     <image id="efrs1n" name="bg_cm_4.png" path="/newImg/" exported="true" scale="9grid" scale9grid="30,57,60,33"/>
     <image id="efrs1o" name="bg_cm_5.png" path="/newImg/" exported="true" scale="9grid" scale9grid="30,68,60,22"/>
@@ -262,19 +233,6 @@
     <component id="faw4yi79" name="labVScroll.xml" path="/lab/" exported="true"/>
     <image id="smpoyi79" name="btn_cm_blue.png" path="/newImg/" exported="true" scale="9grid" scale9grid="10,10,20,20"/>
     <image id="smpoyi7a" name="btn_cm_empty.png" path="/newImg/" exported="true" scale="9grid" scale9grid="10,10,20,20"/>
-    <image id="pu1zyi7b" name="bg_cm_1.png" path="/img/" exported="true" scale="9grid" scale9grid="25,41,50,34"/>
-    <image id="pu1zyi7c" name="bg_cm_2.png" path="/img/"/>
-    <image id="pu1zyi7d" name="bg_cm_3.png" path="/img/" exported="true" scale="9grid" scale9grid="22,47,44,19"/>
-    <image id="pu1zyi7e" name="btn_cm_closed.png" path="/img/" exported="true"/>
-    <image id="pu1zyi7f" name="btn_cm_orange.png" path="/img/"/>
-    <image id="pu1zyi7g" name="btn_cm_yellow.png" path="/img/"/>
-    <image id="pu1zyi7h" name="img_cm_item_2.png" path="/img/"/>
-    <image id="pu1zyi7i" name="img_cm_item_7.png" path="/img/"/>
-    <image id="pu1zyi7j" name="img_cm_location.png" path="/img/"/>
-    <image id="pu1zyi7k" name="img_cm_pattern.png" path="/img/"/>
-    <image id="pu1zyi7l" name="img_cm_randombox_1.png" path="/img/"/>
-    <image id="pu1zyi7m" name="img_cm_randombox_2.png" path="/img/"/>
-    <image id="pu1zyi7n" name="img_cm_title1.png" path="/img/"/>
     <image id="hpymyi7o" name="btn_cm_closed_4.png" path="/newImg/" exported="true"/>
     <image id="hpymyi7p" name="img_cm_ok_1.png" path="/newImg/" exported="true"/>
     <image id="hpymyi7q" name="img_cm_ok_2.png" path="/newImg/" exported="true"/>
@@ -283,18 +241,7 @@
     <image id="r398yi7t" name="img_cm_switch3.png" path="/newImg/" exported="true"/>
     <image id="r398yi7u" name="img_cm_slider1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="4,3,261,2"/>
     <image id="r398yi7v" name="img_cm_slider2.png" path="/newImg/" exported="true" scale="9grid" scale9grid="3,2,262,3"/>
-    <image id="e61eyi7r" name="img_cm_swim1.png" path="/img/" exported="true"/>
-    <image id="e61eyi7s" name="img_cm_swim5.png" path="/img/" exported="true"/>
     <image id="nxksyi7w" name="img_cm_tips_5.png" path="/newImg/" exported="true" scale="9grid" scale9grid="10,10,20,20"/>
-    <image id="nxksyi7x" name="btn_cm_other_1.png" path="/img/" exported="true" scale="9grid" scale9grid="9,9,18,18"/>
-    <image id="nxksyi7y" name="btn_cm_other_2.png" path="/img/"/>
-    <image id="nxksyi7z" name="btn_cm_white12.png" path="/img/"/>
-    <image id="nxksyi80" name="btn_cm_yellow12.png" path="/img/"/>
-    <image id="nxksyi81" name="img_cm_bottom_1.png" path="/img/"/>
-    <image id="nxksyi82" name="img_cm_bottom_12.png" path="/img/"/>
-    <image id="nxksyi83" name="img_cm_bottom_15.png" path="/img/"/>
-    <image id="nxksyi84" name="img_cm_bottom_4.png" path="/img/" exported="true" scale="9grid" scale9grid="16,16,32,32"/>
-    <image id="nxksyi85" name="img_cm_item_10.png" path="/img/"/>
     <image id="qljxyi8d" name="icon_robot_energy.png" path="/newImg/" exported="true"/>
     <image id="twvnyi8c" name="img_cm_bottom_11.png" path="/newImg/" exported="true" scale="9grid" scale9grid="10,10,20,20"/>
     <image id="jjanyi86" name="btn_cm_special_4.png" path="/newImg/" exported="true" scale="9grid" scale9grid="10,10,20,20"/>
@@ -326,7 +273,7 @@
     <component id="j1n2cyi8y" name="RBtnObjectRenderer.xml" path="/btn/" exported="true"/>
     <image id="b7cicyi8z" name="img_formula_bottom_4.png" path="/newImg/" exported="true"/>
     <image id="nsh4cyi90" name="img_cm_bottom_21.png" path="/newImg/" exported="true" scale="9grid" scale9grid="13,13,26,26"/>
-    <component id="lbexcyi91" name="ToolTipObjectItem.xml" path="/toolTip/" exported="true"/>
+    <component id="lbexcyi91" name="ToolTipObjectItem.xml" path="/com/" exported="true"/>
     <component id="lbexcyi94" name="comArchMat.xml" path="/lab/"/>
     <component id="lbexcyi97" name="comWorkbench.xml" path="/lab/"/>
     <image id="z45zcyi99" name="img_bag_grade_1.png" path="/newImg/" exported="true"/>
@@ -334,13 +281,12 @@
     <image id="z45zcyi9b" name="img_bag_grade_3.png" path="/newImg/" exported="true"/>
     <image id="z45zcyi9c" name="img_bag_grade_4.png" path="/newImg/" exported="true"/>
     <image id="z45zcyi9d" name="img_bag_grade_5.png" path="/newImg/" exported="true"/>
-    <component id="tg9wcyi9e" name="ComItemIconTemplate.xml" path="/com/"/>
     <component id="tgdycyi9f" name="ToolTipBagItem.xml" path="/com/" exported="true"/>
     <image id="cxkjcyi9g" name="icon_cm_rename.png" path="/newImg/" exported="true"/>
     <image id="eotbcyi9h" name="img_cm_pointup.png" path="/newImg/" exported="true"/>
-    <image id="qxzjcyi9k" name="n5.png" path="/img/" scale="9grid"/>
+    <image id="qxzjcyi9k" name="n5.png" path="/newImg/" scale="9grid"/>
   </resources>
-  <publish name="common" square="true">
+  <publish name="common" npot="true">
     <atlas name="默认" index="0"/>
   </publish>
 </packageDescription>

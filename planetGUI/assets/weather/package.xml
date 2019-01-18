@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="kc286jl7" jpegQuality="80" compressPNG="true">
   <resources>
-    <image id="s81t0" name="img_night.png" path="/image/"/>
     <component id="s81t1" name="WinMaskRender.xml" path="/com/" exported="true"/>
     <image id="lj3i3" name="img_yewan.png" path="/image/" exported="true"/>
     <component id="lj3i4" name="ComMask.xml" path="/com/" exported="true"/>
@@ -10,10 +9,7 @@
     <image id="kzhu7" name="icon_main_night.png" path="/image/"/>
     <image id="kzhu8" name="icon_main_sun.png" path="/image/"/>
     <image id="kzhu9" name="icon_main_temperature.png" path="/image/"/>
-    <image id="kzhua" name="img_main_health.png" path="/image/"/>
-    <image id="kzhub" name="img_main_hungry.png" path="/image/"/>
     <image id="kzhuc" name="img_main_temperature.png" path="/image/"/>
-    <image id="kzhud" name="img_main_water.png" path="/image/"/>
     <component id="kzhue" name="WinShowWeather.xml" path="/com/" exported="true"/>
     <image id="r9opf" name="icon_main_health.png" path="/image/"/>
     <image id="r9opg" name="icon_main_hunger.png" path="/image/"/>
@@ -23,5 +19,5 @@
     <image id="r9opk" name="img_main_survive_3.png" path="/image/"/>
     <image id="r9opl" name="img_main_survive_4.png" path="/image/"/>
   </resources>
-  <publish name="weather" path="C:\Users\Mloong\Desktop\bell_planet\feature-jiahua\resource\assets\fairyGui"/>
+  <publish name="weather" path="C:\Users\Mloong\Desktop\bell_planet\feature-jiahua\resource\assets\fairyGui" npot="true"/>
 </packageDescription>

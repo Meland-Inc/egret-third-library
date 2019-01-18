@@ -1,28 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="eunktclq" jpegQuality="80" compressPNG="true">
   <resources>
-    <image id="sz330" name="bg_bag.png" path="/img/" exported="true"/>
-    <image id="sz331" name="btn_closed.png" path="/img/" exported="true"/>
-    <image id="sz332" name="btn_task_001.png" path="/img/" exported="true"/>
-    <image id="sz333" name="btn_task_002.png" path="/img/" exported="true"/>
-    <image id="sz334" name="btn_task_003.png" path="/img/" exported="true"/>
-    <image id="sz335" name="btn_task_004.png" path="/img/" exported="true"/>
-    <image id="sz336" name="btn_task_005.png" path="/img/" exported="true"/>
-    <image id="sz337" name="btn_task_storage.png" path="/img/" exported="true"/>
     <image id="sz338" name="icon_task_OK.png" path="/img/" exported="true"/>
-    <image id="sz339" name="img_task_bg_001.png" path="/img/" exported="true"/>
-    <image id="sz33a" name="img_task_bg_002.png" path="/img/" exported="true" scale="9grid" scale9grid="13,12,167,34"/>
-    <image id="sz33b" name="img_task_bg_003.png" path="/img/" exported="true"/>
-    <image id="sz33c" name="img_task_bg_004.png" path="/img/" exported="true"/>
-    <image id="sz33d" name="img_task_bg_005.png" path="/img/" exported="true"/>
-    <image id="sz33e" name="img_task_bg_006.png" path="/img/" exported="true"/>
-    <image id="sz33f" name="img_task_bg_007.png" path="/img/" exported="true"/>
-    <image id="sz33g" name="img_task_item.png" path="/img/" exported="true"/>
-    <image id="sz33h" name="img_task_reward.png" path="/img/" exported="true"/>
     <component id="sz33l" name="comTaskDetailPanel.xml" path="/com/" exported="true"/>
     <component id="jhexn" name="comTaskObjectItem.xml" path="/com/" exported="true"/>
-    <image id="lreqs" name="img_task_empty.png" path="/img/"/>
-    <image id="lreqt" name="btn_task_006.png" path="/img/"/>
     <image id="hpymw" name="img_task_talk2.png" path="/imgNew/" exported="true"/>
     <image id="hpymx" name="img_task_talk1.png" path="/imgNew/" exported="true"/>
     <image id="hpymy" name="img_task_npc.png" path="/imgNew/"/>
@@ -34,10 +15,8 @@
     <component id="r1t914" name="ComTaskRewardItem.xml" path="/com/" exported="true"/>
     <component id="elis15" name="WinTask.xml" path="/win/" exported="true"/>
     <component id="elis1c" name="btnDropDown.xml" path="/btn/" exported="true"/>
-    <image id="elis1d" name="icon_manual_1.png" path="/btn/"/>
-    <image id="elis1e" name="icon_manual_2.png" path="/btn/"/>
     <component id="elis1f" name="btnDropDownItem.xml" path="/btn/"/>
     <image id="mfa41g" name="img_task_talk3.png" path="/imgNew/" exported="true"/>
   </resources>
-  <publish name="task"/>
+  <publish name="task" npot="true"/>
 </packageDescription>

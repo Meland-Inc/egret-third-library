@@ -3,7 +3,7 @@
   <displayList>
     <image id="n0_ptq4" name="n0" src="tm1s4i" fileName="newImg/btn_13.png" xy="0,0"/>
   </displayList>
-  <Button sound="ui://te1gxawotqc911" downEffect="scale" downEffectValue="0.95"/>
+  <Button sound="ui://fknoioovtqc911" downEffect="scale" downEffectValue="0.95"/>
   <transition name="t0" autoPlay="true" autoPlayRepeat="-1">
     <item time="0" type="Pivot" target="n0_ptq4" value="0.5,0.5"/>
     <item time="0" type="Rotation" target="n0_ptq4" tween="true" startValue="0" endValue="15" duration="6"/>

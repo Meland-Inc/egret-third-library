@@ -1,58 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="7xhwdeuz" jpegQuality="80" compressPNG="true">
   <resources>
-    <component id="ctbh0" name="btnUserDataRadio.xml" path="/btn/" exported="true"/>
-    <image id="ctbh1" name="btn_unselected_001.png" path="/img/" exported="true"/>
-    <component id="ctbh2" name="btnDetailClose.xml" path="/btn/" exported="true"/>
-    <image id="ctbh3" name="btn_bag_close.png" path="/img/" exported="true"/>
     <component id="ctbh4" name="comTalent.xml" path="/com/" exported="true"/>
-    <image id="ctbh5" name="img_wordbg_001.png" path="/img/" exported="true"/>
-    <image id="ctbh6" name="img_progressbar_001.png" path="/img/" exported="true"/>
-    <component id="ctbh7" name="comExpBar.xml" path="/com/" exported="true"/>
-    <image id="ctbh8" name="img_progressbar_002.png" path="/img/" exported="true"/>
     <component id="ctbh9" name="comDetail.xml" path="/com/" exported="true"/>
-    <image id="ctbha" name="img_avatarbg_001.png" path="/img/" exported="true"/>
-    <image id="ctbhb" name="icon_avatar_001.png" path="/img/" exported="true"/>
+    <image id="ctbhb" name="icon_avatar_001.png" path="/newImg/" exported="true"/>
     <component id="ctbhc" name="comCreation.xml" path="/com/" exported="true"/>
-    <image id="ctbhd" name="img_interfacebg_002.png" path="/img/" exported="true"/>
-    <image id="ctbhe" name="img_wordbg_004.png" path="/img/" exported="true"/>
-    <image id="ctbhf" name="img_wordbg_005.png" path="/img/" exported="true"/>
-    <image id="ctbhg" name="icon_thumbs.png" path="/img/" exported="true"/>
-    <image id="ctbhh" name="icon_browse.png" path="/img/" exported="true"/>
-    <image id="ctbhi" name="icon_chat.png" path="/img/" exported="true"/>
-    <image id="ctbhj" name="icon_collect.png" path="/img/" exported="true"/>
-    <image id="ctbhk" name="icon_forward.png" path="/img/" exported="true"/>
     <component id="ctbhl" name="comScrollerBar.xml" path="/com/" exported="true"/>
-    <image id="ctbhm" name="bg_bag.png" path="/img/" exported="true" scale9grid="0,130,1253,614" gridTile="28"/>
-    <image id="ctbhn" name="btn_selected_001.png" path="/img/" exported="true"/>
-    <image id="ctbho" name="img_interfacebg_001.png" path="/img/" exported="true"/>
-    <image id="ctbhp" name="img_wordbg_002.png" path="/img/" exported="true"/>
-    <image id="ctbhq" name="img_wordbg_003.png" path="/img/" exported="true"/>
     <component id="ctbhr" name="WinUserDetail.xml" path="/win/" exported="true"/>
     <component id="f5tys" name="comSelectUserIconView.xml" path="/com/" exported="true"/>
-    <component id="f5tyt" name="btnChange.xml" path="/btn/" exported="true"/>
-    <image id="dj9qu" name="bg_idiopanal_1.png" path="/img/"/>
-    <image id="dj9qv" name="bg_idiopanal_2.png" path="/img/"/>
     <component id="dj9qw" name="comIcon.xml" path="/com/" exported="true"/>
-    <image id="dj9qx" name="btn_idiopanal.png" path="/img/" exported="true"/>
-    <image id="dj9qy" name="btn_idiopanal_2.png" path="/img/" exported="true"/>
-    <image id="dj9qz" name="btn_idiopanal_3.png" path="/img/" exported="true"/>
-    <image id="dj9q10" name="btn_blue.png" path="/img/"/>
-    <image id="dj9q11" name="btn_login_closed.png" path="/img/"/>
-    <image id="dj9q13" name="img_robot_roleframe.png" path="/img/"/>
-    <image id="dj9q14" name="btn_robot_1.png" path="/img/" exported="true"/>
-    <component id="dj9q15" name="btnConfirm.xml" path="/btn/" exported="true"/>
-    <component id="lkft16" name="btnChangePage.xml" path="/btn/"/>
-    <image id="lkft17" name="btn_idiopanel_right.png" path="/img/"/>
-    <image id="lkft18" name="btn_idiopanel_left.png" path="/img/"/>
     <component id="qbzr19" name="comConfirmView.xml" path="/com/"/>
-    <image id="qbzr1a" name="bg_subline.png" path="/img/"/>
-    <image id="cnpn1b" name="img_subline_1.png" path="/img/"/>
-    <image id="cnpn1c" name="btn_subline_1.png" path="/img/"/>
-    <image id="cnpn1d" name="img_subline_2.png" path="/img/"/>
-    <image id="cnpn1e" name="img_wordbg_1.png" path="/img/"/>
-    <image id="cnpn1f" name="img_progressbar_2.png" path="/img/"/>
-    <image id="cnpn1g" name="img_progressbar_1.png" path="/img/"/>
     <image id="w5go1h" name="icon_avatar_5.png" path="/newImg/"/>
     <image id="w5go1i" name="icon_avatar_1.png" path="/newImg/"/>
     <image id="w5go1j" name="icon_avatar_2.png" path="/newImg/"/>
@@ -61,5 +18,5 @@
     <component id="myd41n" name="ComTxtBG1.xml" path="/com/"/>
     <component id="myd41o" name="ComTxtBG2.xml" path="/com/"/>
   </resources>
-  <publish name="userDetail"/>
+  <publish name="userDetail" npot="true"/>
 </packageDescription>

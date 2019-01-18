@@ -3,8 +3,6 @@
   <resources>
     <component id="jr3d0" name="ComBuildPreview.xml" path="/Com/" exported="true"/>
     <component id="jj3j1" name="WinMapLook.xml" path="/win/" exported="true"/>
-    <image id="jj3jt" name="bg_build.png" path="/img/"/>
-    <image id="jj3jv" name="btn_build_close.png" path="/img/"/>
     <component id="o18j1f" name="WinBuildThingInfo.xml" path="/win/" exported="true"/>
     <component id="rvyy1h" name="grpTip.xml" path="/Com/"/>
     <component id="rvyy1i" name="grpBuildSelect.xml" path="/Com/"/>
@@ -58,5 +56,5 @@
     <image id="ddnk35" name="btn_build_delete.png" path="/newImg/WinBuildPannel/"/>
     <image id="ddnk36" name="btn_build_move.png" path="/newImg/WinBuildPannel/"/>
   </resources>
-  <publish name="build"/>
+  <publish name="build" npot="true"/>
 </packageDescription>

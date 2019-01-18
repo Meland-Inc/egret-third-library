@@ -1,35 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="qagcvsbx" jpegQuality="80" compressPNG="true">
   <resources>
-    <image id="oy2m1" name="btn_chat_down.png" path="/img/"/>
-    <image id="oy2m2" name="btn_chat_emoji.png" path="/img/"/>
-    <image id="oy2m3" name="btn_chat_mic.png" path="/img/" scale="9grid" scale9grid="9,5,32,18"/>
-    <image id="oy2m4" name="btn_chat_setting.png" path="/img/"/>
-    <image id="oy2m5" name="btn_chat_up.png" path="/img/"/>
-    <image id="oy2m7" name="btn_task_004.png" path="/img/"/>
-    <image id="oy2m8" name="btn_task_005.png" path="/img/"/>
-    <image id="oy2m9" name="btn_yellow.png" path="/img/"/>
-    <image id="oy2ma" name="icon_chat_mic_1.png" path="/img/"/>
-    <image id="oy2mb" name="icon_chat_mic_2.png" path="/img/"/>
-    <image id="oy2mc" name="img_chat_avatar.png" path="/img/"/>
-    <image id="oy2md" name="img_chat_bg.png" path="/img/"/>
-    <image id="oy2me" name="img_chat_bubble_1.png" path="/img/" scale="9grid" scale9grid="40,11,80,9"/>
-    <image id="oy2mf" name="img_chat_bubble_2.png" path="/img/" scale="9grid" scale9grid="15,8,130,13"/>
-    <image id="oy2mg" name="img_chat_create.png" path="/img/"/>
-    <image id="oy2mh" name="img_chat_emoji.png" path="/img/"/>
-    <image id="oy2mi" name="img_chat_friends_1.png" path="/img/"/>
-    <image id="oy2mj" name="img_chat_friends_2.png" path="/img/"/>
-    <image id="oy2mk" name="img_chat_friends_3.png" path="/img/"/>
-    <image id="oy2ml" name="img_chat_general.png" path="/img/"/>
-    <image id="oy2mm" name="img_chat_input_1.png" path="/img/"/>
-    <image id="oy2mn" name="img_chat_input_2.png" path="/img/"/>
-    <image id="oy2mo" name="img_chat_input_3.png" path="/img/"/>
-    <image id="oy2mp" name="img_chat_nearby.png" path="/img/"/>
-    <image id="oy2mq" name="img_chat_object.png" path="/img/" scale="9grid" scale9grid="54,7,13,9"/>
-    <image id="oy2mr" name="img_chat_private.png" path="/img/"/>
-    <image id="oy2ms" name="img_chat_subline.png" path="/img/"/>
-    <image id="oy2mt" name="img_chat_system.png" path="/img/"/>
-    <image id="oy2mu" name="img_chat_world.png" path="/img/"/>
     <image id="swb512" name="701.png" path="/emoji/" exported="true"/>
     <image id="swb513" name="702.png" path="/emoji/" exported="true"/>
     <image id="swb514" name="703.png" path="/emoji/" exported="true"/>
@@ -95,19 +66,6 @@
     <image id="swb52s" name="763.png" path="/emoji/" exported="true"/>
     <image id="swb52t" name="764.png" path="/emoji/" exported="true"/>
     <image id="swb52u" name="765.png" path="/emoji/" exported="true"/>
-    <component id="hdi92y" name="btnVoice.xml" path="/btn/"/>
-    <component id="hdi930" name="btnSend.xml" path="/btn/"/>
-    <component id="hdi934" name="btnFace.xml" path="/btn/"/>
-    <component id="hdi936" name="btnArrow1.xml" path="/btn/"/>
-    <component id="hdi93a" name="btnSetting.xml" path="/btn/"/>
-    <component id="hdi93e" name="btnChannel1.xml" path="/btn/"/>
-    <component id="hdi93f" name="ComboBox1_item.xml" path="/btn/"/>
-    <component id="hdi93g" name="ComboBox1_popup.xml" path="/btn/"/>
-    <component id="xjjc3i" name="mainChatItem.xml" path="/com/" exported="true"/>
-    <component id="dg903j" name="WinMainViewChat.xml" path="/win/" exported="true"/>
-    <image id="dg903k" name="btn_main_chat_down.png" path="/img/"/>
-    <image id="dg903l" name="btn_main_chat_up.png" path="/img/"/>
-    <image id="84323m" name="btn_task_005_disable.png" path="/img/"/>
     <component id="k59n3o" name="comSendHistory.xml" path="/com/"/>
     <component id="k59n3p" name="sendHistoryItem.xml" path="/com/"/>
     <component id="fvj83q" name="richTextContainer.xml" path="/com/" exported="true"/>
@@ -129,17 +87,11 @@
     <image id="q73n4a" name="img_chat_zonghe.png" path="/imgNew/" exported="true"/>
     <component id="q73n4p" name="ChatItem.xml" path="/com/" exported="true"/>
     <component id="q73n4q" name="btnEmojItem.xml" path="/btn/"/>
-    <image id="w7uy4r" name="img_chat_chuangzuo.png" path="/img/"/>
-    <image id="w7uy4s" name="img_chat_fenxian.png" path="/img/"/>
-    <image id="w7uy4t" name="img_chat_fujin.png" path="/img/"/>
-    <image id="w7uy4u" name="img_chat_shijie.png" path="/img/"/>
-    <image id="w7uy4v" name="img_chat_siliao.png" path="/img/"/>
-    <image id="w7uy4w" name="img_chat_zonghe.png" path="/img/"/>
     <component id="gpm04y" name="btnChannel.xml" path="/btn/"/>
     <component id="q9ya4z" name="btnFriendList.xml" path="/btn/"/>
     <component id="scpq50" name="btnFriendItem.xml" path="/btn/"/>
     <image id="mbd751" name="icon_chat_private.png" path="/imgNew/"/>
     <image id="mbd752" name="img_chat_private.png" path="/imgNew/" scale="9grid" scale9grid="5,5,10,10"/>
   </resources>
-  <publish name="chat"/>
+  <publish name="chat" npot="true"/>
 </packageDescription>

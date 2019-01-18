@@ -1,30 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="wu3n4vxq" jpegQuality="80" compressPNG="true">
   <resources>
-    <image id="8zcx1" name="btn_task_004.png" path="/img/" exported="true"/>
-    <image id="8zcx2" name="btn_task_005.png" path="/img/"/>
-    <image id="8zcx3" name="img_chat_bg.png" path="/img/"/>
-    <image id="8zcx4" name="img_setting_logo.png" path="/img/"/>
-    <image id="8zcx5" name="img_setting_slider_1.png" path="/img/" scale="9grid" scale9grid="8,4,257,8"/>
-    <image id="8zcx6" name="img_setting_slider_2.png" path="/img/" scale="9grid" scale9grid="9,0,253,15"/>
-    <image id="8zcx7" name="img_setting_slider_3.png" path="/img/"/>
-    <image id="8zcx8" name="img_setting_switch_1.png" path="/img/" scale="9grid" scale9grid="11,9,48,13"/>
-    <image id="8zcx9" name="img_setting_switch_2.png" path="/img/" scale="9grid" scale9grid="11,8,49,16"/>
-    <image id="8zcxa" name="img_setting_switch_3.png" path="/img/"/>
     <component id="8zcxb" name="WinSetting.xml" path="/win/" exported="true"/>
     <component id="rw7fg" name="settingToggle.xml" path="/com/"/>
     <component id="cf98i" name="btnNull.xml" path="/btn/"/>
     <component id="cf98j" name="soundSlider.xml" path="/com/"/>
     <component id="cf98l" name="toggle.xml" path="/com/"/>
-    <component id="cf98m" name="winSysSetting.xml" path="/win/"/>
-    <component id="cf98n" name="winSoundSetting.xml" path="/win/"/>
-    <component id="rkpio" name="winChatSetting.xml" path="/win/"/>
-    <component id="rkpip" name="winAbout.xml" path="/win/"/>
     <component id="k8dtq" name="Slider1_grip.xml" path="/com/"/>
     <component id="k8dtr" name="Slider1.xml" path="/com/"/>
-    <font id="8bhys" name="Font1.fnt" path="/" exported="true"/>
     <component id="9utnt" name="radioButton.xml" path="/com/"/>
-    <component id="9utnu" name="choose.xml" path="/com/"/>
   </resources>
-  <publish name="setting"/>
+  <publish name="setting" npot="true"/>
 </packageDescription>

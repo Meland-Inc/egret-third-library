@@ -10,7 +10,7 @@
       <Button icon="ui://te1gxawoefrs1q"/>
     </component>
     <image id="n8_q73n" name="titleBg" src="efrs22" fileName="newImg/img_cm_title1.png" pkg="te1gxawo" xy="481,106" group="n26_hrgt"/>
-    <text id="n9_q73n" name="title" xy="547,113" size="45,24" group="n26_hrgt" fontSize="20" color="#f5ebde" text="聊天"/>
+    <text id="n9_q73n" name="title" xy="547,113" size="45,27" group="n26_hrgt" fontSize="20" color="#f5ebde" text="聊天"/>
     <image id="n10_q73n" name="bottomBg" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="211,541" size="751,14" group="n26_hrgt"/>
     <image id="n5_q73n" name="lstBtnBg" src="ot9si2v" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="220,161" size="166,366" group="n26_hrgt"/>
     <list id="n6_q73n" name="lstBtnChannel" xy="238,175" size="132,335" group="n26_hrgt" layout="flow_hz" defaultItem="ui://qagcvsbxgpm04y">
@@ -32,7 +32,7 @@
     <image id="n13_q73n" name="friendNameBg" src="ot9si35" fileName="newImg/img_cm_name.png" pkg="te1gxawo" xy="413,169" size="80,22" group="n25_11e02">
       <relation target="n14_q73n" sidePair="width-width"/>
     </image>
-    <text id="n14_q73n" name="tfFriendName" xy="413,170" size="82,18" group="n25_11e02" fontSize="14" color="#5b4b37" align="center" vAlign="middle" ubb="true" vars="true" text="与[color=#c88316]{name=xxx}[/color]聊天中"/>
+    <text id="n14_q73n" name="tfFriendName" xy="413,170" size="79,19" group="n25_11e02" fontSize="14" color="#5b4b37" align="center" vAlign="middle" ubb="true" vars="true" text="与[color=#c88316]{name=xxx}[/color]聊天中"/>
     <group id="n25_11e02" name="grpFriendChatTitle" xy="413,169" size="81,22" group="n26_hrgt" advanced="true" collapsed="true">
       <gearDisplay controller="conFrivateChat" pages="1"/>
     </group>
@@ -98,7 +98,7 @@
       <gearDisplay controller="conShowEmoj" pages="1"/>
     </group>
     <component id="n18_q73n" name="btnEmoj" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="766,488" size="22,22" group="n26_hrgt">
-      <Button icon="ui://qagcvsbxoy2m2"/>
+      <Button icon="ui://qagcvsbxq73n3t"/>
     </component>
     <component id="n19_q73n" name="btnSend" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="806,481" size="110,34" group="n26_hrgt">
       <Button title="发送" titleColor="#ffffff" titleFontSize="18" icon="ui://qagcvsbxq73n3w"/>

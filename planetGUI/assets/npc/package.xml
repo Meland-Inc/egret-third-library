@@ -1,29 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="tis07nuv" jpegQuality="80" compressPNG="true">
   <resources>
-    <image id="xhg94" name="bg_npc_1.png" path="/img/"/>
-    <image id="xhg95" name="bg_npc_2.png" path="/img/"/>
-    <image id="xhg96" name="btn_build_close.png" path="/img/"/>
-    <image id="xhg97" name="btn_task_accept.png" path="/img/"/>
-    <image id="xhg98" name="btn_task_complete.png" path="/img/"/>
-    <image id="xhg99" name="btn_task_select.png" path="/img/"/>
-    <image id="xhg9a" name="icon_avatar_001.png" path="/img/"/>
-    <image id="xhg9b" name="img_avatarbg_001.png" path="/img/"/>
-    <image id="xhg9c" name="img_avatarbg_1.png" path="/img/"/>
-    <image id="xhg9d" name="img_npc_mark_1.png" path="/img/"/>
-    <image id="xhg9e" name="img_npc_mark_2.png" path="/img/"/>
-    <image id="xhg9f" name="img_npc_mark_3.png" path="/img/"/>
-    <image id="xhg9g" name="img_npc_mark_4.png" path="/img/"/>
-    <image id="xhg9h" name="img_npc_mark_5.png" path="/img/"/>
-    <image id="xhg9i" name="img_npc_mark_6.png" path="/img/"/>
-    <image id="xhg9j" name="img_npc_mark_7.png" path="/img/"/>
-    <image id="xhg9k" name="img_task_item.png" path="/img/"/>
-    <image id="xhg9l" name="img_task_reward.png" path="/img/" exported="true"/>
     <component id="xhg9o" name="comTaskRewardItem.xml" path="/com/" exported="true"/>
-    <component id="xhg9p" name="comTaskRwards.xml" path="/com/"/>
-    <component id="xhg9q" name="btnCommon.xml" path="/btn/"/>
     <component id="xhg9s" name="btnTalkOption.xml" path="/btn/"/>
-    <component id="nuhbt" name="btnChat.xml" path="/btn/" exported="true"/>
     <component id="s9e5u" name="tfNpcTalkContent.xml" path="/com/"/>
     <component id="r1t9w" name="WinNpcDialog.xml" path="/win/" exported="true"/>
     <component id="gxw3x" name="WinTaskGuideDialog.xml" path="/win/" exported="true"/>

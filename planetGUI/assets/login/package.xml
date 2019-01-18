@@ -1,81 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="0n4pg0op" jpegQuality="80" compressPNG="true">
   <resources>
-    <image id="jddvq" name="icon_login_mail.png" path="/newImg/img/"/>
-    <image id="jddvr" name="icon_login_password.png" path="/newImg/img/"/>
-    <image id="jddvs" name="icon_login_user.png" path="/newImg/img/"/>
-    <image id="jddvt" name="icon_qq.png" path="/newImg/img/"/>
-    <image id="jddvu" name="icon_wechat.png" path="/newImg/img/"/>
-    <image id="jddvv" name="img_bellgame.png" path="/newImg/img/"/>
     <image id="jddvw" name="img_login_1.png" path="/newImg/img/"/>
-    <image id="jddvx" name="img_login_3.png" path="/newImg/img/"/>
-    <image id="jddvy" name="img_login_5.png" path="/newImg/img/"/>
     <image id="jddvz" name="img_login_6.png" path="/newImg/img/"/>
-    <image id="jddv10" name="img_login_title.png" path="/newImg/img/"/>
-    <image id="jddv11" name="bg_code_1.png" path="/newImg/img/"/>
-    <image id="jddv12" name="bg_login.png" path="/newImg/img/"/>
-    <image id="jddv13" name="btn_login_1.png" path="/newImg/img/"/>
-    <image id="jddv14" name="btn_login_2.png" path="/newImg/img/"/>
-    <image id="jddv15" name="btn_login_3.png" path="/newImg/img/"/>
-    <image id="jddv16" name="btn_login_4.png" path="/newImg/img/"/>
-    <image id="jddv17" name="btn_login_closed.png" path="/newImg/img/"/>
-    <image id="jddv18" name="icon_login_keyboard.png" path="/newImg/img/"/>
     <component id="jddv19" name="WinLogin.xml" path="/win/" exported="true"/>
-    <component id="jddv1e" name="btnClose.xml" path="/btn/"/>
-    <component id="jddv1f" name="btnWXLogin.xml" path="/btn/"/>
-    <component id="jddv1g" name="btnQQLogin.xml" path="/btn/"/>
-    <component id="jddv1h" name="btnAccountLogin.xml" path="/btn/"/>
-    <component id="jddv1i" name="btnVisitorLogin.xml" path="/btn/"/>
-    <component id="ptq41j" name="btnSignin.xml" path="/btn/"/>
-    <component id="ptq41k" name="btnSignup.xml" path="/btn/"/>
-    <component id="ptq41l" name="btnLogin.xml" path="/btn/"/>
-    <component id="ptq41m" name="btnUsernameSignup.xml" path="/btn/"/>
-    <component id="ptq41n" name="btnEmailSignup.xml" path="/btn/"/>
-    <image id="ptq41p" name="img_avatar_man.png" path="/newImg/img/"/>
-    <image id="ptq41q" name="img_avatar_woman.png" path="/newImg/img/"/>
-    <image id="ptq41r" name="img_female.png" path="/newImg/img/"/>
-    <image id="ptq41s" name="img_male.png" path="/newImg/img/"/>
-    <image id="ptq41t" name="img_roleselect_name.png" path="/newImg/img/"/>
-    <image id="ptq41u" name="img_roleselect_selected.png" path="/newImg/img/"/>
-    <image id="ptq41v" name="bg_roleselect_2.png" path="/newImg/img/"/>
-    <image id="ptq41w" name="bg_unselected.png" path="/newImg/img/"/>
-    <image id="ptq41x" name="btn_roleselect_dice.png" path="/newImg/img/"/>
-    <image id="ptq41y" name="btn_roleselect_enter_1.png" path="/newImg/img/"/>
     <component id="ptq41z" name="btnDice.xml" path="/btn/"/>
-    <component id="ptq421" name="btnMale.xml" path="/btn/"/>
-    <component id="no4323" name="btnFemale.xml" path="/btn/"/>
-    <image id="no4325" name="bg_roleselect_1.png" path="/newImg/img/"/>
     <component id="no4326" name="btnStartGame.xml" path="/btn/"/>
-    <image id="no4327" name="btn_roleselect_enter_2.png" path="/newImg/img/"/>
     <component id="jgot28" name="WinClickContinue.xml" path="/win/" exported="true"/>
     <image id="jgot29" name="btn_build_left.png" path="/newImg/img/"/>
     <image id="jgot2a" name="btn_build_right.png" path="/newImg/img/"/>
-    <image id="hsrb2b" name="btn_login_return.png" path="/newImg/img/"/>
     <component id="hsrb2c" name="btnReturn.xml" path="/btn/"/>
-    <image id="y3zw2e" name="bg_login_2.png" path="/newImg/img/" scale="9grid" scale9grid="111,17,222,309"/>
-    <image id="y3zw2f" name="btn_login_5.png" path="/newImg/img/" scale="9grid" scale9grid="10,8,51,18"/>
     <component id="y3zw2g" name="btnLogout.xml" path="/btn/"/>
-    <image id="fyox2h" name="img_login_7.png" path="/newImg/img/" scale="9grid" scale9grid="11,11,204,20"/>
     <component id="7s5l2i" name="WinSelectServer.xml" path="/win/" exported="true"/>
     <component id="7s5l2j" name="WinSelectBirthPlace.xml" path="/win/" exported="true"/>
     <component id="7s5l2k" name="ComServer.xml" path="/com/" exported="true"/>
-    <image id="7s5l2l" name="btn_subline_3.png" path="/newImg/img/"/>
-    <image id="7s5l2m" name="btn_subline_2.png" path="/newImg/img/" scale="9grid" scale9grid="77,20,154,48"/>
-    <image id="7s5l2n" name="bg_subline.png" path="/newImg/img/"/>
-    <image id="7s5l2o" name="img_subline_1.png" path="/newImg/img/"/>
-    <image id="7s5l2p" name="img_subline_2.png" path="/newImg/img/"/>
-    <component id="7s5l2q" name="btnSelectServerType.xml" path="/btn/"/>
-    <image id="7s5l2r" name="btn_subline_1.png" path="/newImg/img/"/>
-    <image id="rhmg2t" name="img_subline_normal.png" path="/newImg/img/" exported="true"/>
-    <image id="rhmg2u" name="img_subline_busy.png" path="/newImg/img/" exported="true"/>
-    <component id="rhmg2v" name="ComWaiting.xml" path="/com/" exported="true"/>
-    <image id="rhmg2w" name="bg_waitinline.png" path="/newImg/img/"/>
-    <image id="rhmg2x" name="btn_build_close.png" path="/newImg/img/"/>
-    <image id="rhmg2y" name="img_waitinline.png" path="/newImg/img/"/>
-    <component id="mq6m3f" name="btnServer2.xml" path="/btn/"/>
     <component id="govx3j" name="ComboBox2_item.xml" path="/com/"/>
-    <component id="govx3k" name="ComboBox2_popup.xml" path="/com/"/>
-    <component id="govx3l" name="ComboBox2.xml" path="/com/"/>
     <component id="trkw3m" name="WinCreateRole.xml" path="/win/" exported="true"/>
     <component id="trkw3o" name="btnLeftIconRadio.xml" path="/btn/"/>
     <component id="trkw3p" name="comAvatar.xml" path="/com/"/>
@@ -95,8 +34,6 @@
     <image id="tm1s43" name="img_6.png" path="/newImg/"/>
     <image id="tm1s44" name="img_7.png" path="/newImg/"/>
     <image id="tm1s45" name="img_8.png" path="/newImg/"/>
-    <image id="tm1s46" name="btn_1.png" path="/newImg/" scale="9grid" scale9grid="15,0,2,42"/>
-    <image id="tm1s47" name="btn_2.png" path="/newImg/" scale="9grid" scale9grid="15,0,2,42"/>
     <image id="tm1s48" name="btn_3.png" path="/newImg/"/>
     <image id="tm1s49" name="btn_4.png" path="/newImg/"/>
     <image id="tm1s4a" name="btn_5.png" path="/newImg/"/>
@@ -106,7 +43,6 @@
     <image id="tm1s4e" name="btn_9.png" path="/newImg/"/>
     <image id="tm1s4f" name="btn_10.png" path="/newImg/"/>
     <image id="tm1s4g" name="btn_11.png" path="/newImg/"/>
-    <image id="tm1s4h" name="btn_12.png" path="/newImg/" scale="9grid" scale9grid="17,0,12,50"/>
     <image id="tm1s4i" name="btn_13.png" path="/newImg/"/>
     <image id="tm1s4j" name="icon_1.png" path="/newImg/"/>
     <image id="tm1s4k" name="icon_2.png" path="/newImg/"/>
@@ -121,15 +57,12 @@
     <component id="bidp4t" name="btnMain.xml" path="/btn/"/>
     <component id="bidp4u" name="btnRightIconRadio.xml" path="/btn/"/>
     <image id="nri04v" name="img_9.png" path="/newImg/"/>
-    <image id="qo8v50" name="btn_login_2.png" path="/newImg/" scale="9grid" scale9grid="10,10,20,20"/>
-    <image id="qo8v51" name="btn_login_3.png" path="/newImg/"/>
     <image id="qo8v52" name="btn_login_4.png" path="/newImg/"/>
     <image id="qo8v53" name="icon_login_account.png" path="/newImg/"/>
     <image id="qo8v54" name="icon_login_account2.png" path="/newImg/"/>
     <image id="qo8v55" name="icon_login_password.png" path="/newImg/"/>
     <image id="qo8v56" name="icon_login_password2.png" path="/newImg/"/>
     <image id="kk6f57" name="img_login_5.png" path="/newImg/" scale="9grid" scale9grid="38,10,166,15"/>
-    <image id="kk6f58" name="btn_login_5.png" path="/newImg/"/>
     <component id="kk6f59" name="btnSelect.xml" path="/btn/"/>
     <image id="kk6f5a" name="img_login_3.png" path="/newImg/"/>
     <image id="kk6f5b" name="img_login_4.png" path="/newImg/"/>
@@ -143,7 +76,7 @@
     <image id="h03r5j" name="img_lineloading_1.png" path="/newImg/"/>
     <image id="smpo5k" name="btn_login_wechat.png" path="/newImg/"/>
     <image id="smpo5l" name="btn_login_qq.png" path="/newImg/"/>
-    <image id="dg995m" name="newgameBG.jpg" path="/win/"/>
+    <image id="dg995m" name="newgameBG.jpg" path="/newImg/"/>
   </resources>
-  <publish name="login"/>
+  <publish name="login" npot="true"/>
 </packageDescription>

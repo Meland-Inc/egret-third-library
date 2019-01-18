@@ -6,5 +6,5 @@
     <image id="y7ku2" name="img_location_2.png" path="/image/"/>
     <component id="y7ku3" name="comText.xml" path="/com/"/>
   </resources>
-  <publish name="showSite"/>
+  <publish name="showSite" npot="true"/>
 </packageDescription>

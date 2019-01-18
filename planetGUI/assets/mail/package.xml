@@ -4,8 +4,6 @@
     <component id="govx1c" name="WinMail.xml" path="/win/" exported="true"/>
     <image id="n6p21q" name="icon_mail_1.png" path="/img/"/>
     <image id="n6p21r" name="icon_mail_2.png" path="/img/" exported="true"/>
-    <image id="n6p21s" name="img_mail_1.png" path="/img/"/>
-    <image id="n6p21t" name="img_mail_2.png" path="/img/"/>
     <component id="n6p21v" name="WinMailButton.xml" path="/win/" exported="true"/>
     <component id="n6p21w" name="mailTitle.xml" path="/com/"/>
     <image id="n6p21x" name="img_login_1.png" path="/img/"/>
@@ -20,5 +18,5 @@
     <image id="11syp27" name="img_mail_nomail.png" path="/img/"/>
     <component id="ugkpp28" name="ComTakeFailure.xml" path="/com/"/>
   </resources>
-  <publish name="mail"/>
+  <publish name="mail" npot="true"/>
 </packageDescription>

@@ -13,10 +13,8 @@
     <component id="n86_myd4" name="n86" src="myd41n" fileName="com/ComTxtBG1.xml" xy="0,59" group="n18_stxa">
       <Label title="经验值"/>
     </component>
-    <image id="n81_cnpn" name="expBarBg" src="cnpn1g" fileName="img/img_progressbar_1.png" xy="56,56" size="182,28" group="n18_stxa" hideByEditor="true" visible="false"/>
-    <component id="n78_kepv" name="expBar" src="ctbh7" fileName="com/comExpBar.xml" xy="60,60" size="283,20" group="n18_stxa" hideByEditor="true" visible="false"/>
     <text id="n17_stxa" name="tfExp" xy="109,60" size="318,20" group="n18_stxa" fontSize="14" color="#584736" align="right" vAlign="middle" leading="0" autoSize="none" bold="true" text="0/0"/>
-    <group id="n18_stxa" name="exp" xy="0,56" size="438,28"/>
+    <group id="n18_stxa" name="exp" xy="0,59" size="438,22"/>
     <component id="n84_myd4" name="n84" src="myd41n" fileName="com/ComTxtBG1.xml" xy="0,83" group="n8_stxa">
       <Label title="攻击力"/>
     </component>
@@ -29,7 +27,7 @@
     <text id="n74_apmc" name="def" xy="308,107" size="120,21" group="n77_apmc" fontSize="14" color="#584736" align="right" vAlign="middle" leading="0" autoSize="none" bold="true" text="0"/>
     <group id="n77_apmc" name="basic" xy="0,84" size="438,45"/>
     <image id="n80_cnpn" name="n19" src="pgixi5h" fileName="newImg/img_cm_bottom_12.png" pkg="te1gxawo" xy="0,141" group="n21_stxa"/>
-    <text id="n20_stxa" name="n20" xy="6,140" size="69,22" group="n21_stxa" fontSize="15" color="#54452f" vAlign="middle" leading="0" bold="true" text="高级属性"/>
+    <text id="n20_stxa" name="n20" xy="6,140" size="73,21" group="n21_stxa" fontSize="15" color="#54452f" vAlign="middle" leading="0" bold="true" text="高级属性"/>
     <image id="n87_myd4" name="n87" src="pgixi5k" fileName="newImg/img_cm_bottom_15.png" pkg="te1gxawo" xy="0,166" size="440,1" group="n21_stxa"/>
     <group id="n21_stxa" name="hignGradeTalentTitle" xy="0,140" size="440,27"/>
     <component id="n88_myd4" name="fireAttGroup" src="myd41n" fileName="com/ComTxtBG1.xml" xy="0,178" group="n57_apmc">

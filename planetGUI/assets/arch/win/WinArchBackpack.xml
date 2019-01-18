@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="852,430">
   <displayList>
-    <image id="n16_xg0e" name="n16" src="pu1zyi7b" fileName="img/bg_cm_1.png" pkg="te1gxawo" xy="4,0" size="830,430" group="n50_ihek"/>
+    <image id="n16_xg0e" name="n16" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="4,0" size="830,430" group="n50_ihek"/>
     <text id="n4_824h" name="tfTitle" xy="348,10" size="150,30" group="n50_ihek" fontSize="22" color="#ffffff" align="center" autoSize="none" text="箱子(小)"/>
     <image id="n29_xg0e" name="n29" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="12,412" group="n46_xg0e"/>
     <image id="n30_xg0e" name="n30" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="60,412" group="n46_xg0e"/>
@@ -58,11 +58,11 @@
       <item/>
       <item/>
     </list>
-    <group id="n49_xg0e" name="n49" xy="436,-7" size="411,401" group="n50_ihek" collapsed="true"/>
-    <component id="n15_jlj8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="795,-7" size="52,52" group="n50_ihek">
-      <Button icon="ui://te1gxawopu1zyi7e"/>
+    <group id="n49_xg0e" name="n49" xy="436,-6" size="411,401" group="n50_ihek" collapsed="true"/>
+    <component id="n15_jlj8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="795,-6" size="52,52" group="n50_ihek">
+      <Button icon="ui://te1gxawoefrs1q"/>
     </component>
-    <group id="n50_ihek" name="root" xy="4,-7" size="843,438" advanced="true">
+    <group id="n50_ihek" name="root" xy="4,-6" size="843,437" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>
