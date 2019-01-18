@@ -11,9 +11,8 @@
     <image id="efrst" name="img_game platform_1.png" path="/img/"/>
     <image id="efrsu" name="img_game platform_2.png" path="/img/"/>
     <component id="efrsv" name="btnSort.xml" path="/btn/"/>
-    <image id="rx7uw" name="bg_cm_7.png" path="/img/" scale="9grid" scale9grid="22,44,44,22"/>
     <component id="oezhx" name="comMainGamePlatform.xml" path="/win/"/>
     <component id="11bwy10" name="ComIgpRenderer.xml" path="/com/"/>
   </resources>
-  <publish name="gamePlatform"/>
+  <publish name="gamePlatform" npot="true"/>
 </packageDescription>

@@ -8,5 +8,5 @@
     <image id="q8x4j" name="资源-3@3x.png" path="/img/" exported="true"/>
     <image id="q8x4k" name="资源-4@3x.png" path="/img/" exported="true"/>
   </resources>
-  <publish name="effect"/>
+  <publish name="effect" npot="true"/>
 </packageDescription>

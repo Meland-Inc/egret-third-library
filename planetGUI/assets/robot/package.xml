@@ -1,54 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="asrl3zfr" jpegQuality="80" compressPNG="true">
   <resources>
-    <image id="o7wx0" name="bg_compose.png" path="/img/" exported="true"/>
-    <image id="o7wx1" name="btn_bag_close.png" path="/img/" exported="true"/>
-    <image id="o7wx2" name="btn_blue.png" path="/img/" exported="true"/>
-    <image id="o7wx3" name="btn_robot_1.png" path="/img/" exported="true"/>
-    <image id="o7wx4" name="btn_robot_2.png" path="/img/" exported="true"/>
-    <image id="o7wx5" name="btn_robot_3.png" path="/img/" exported="true"/>
-    <image id="o7wx6" name="btn_robot_4.png" path="/img/" exported="true"/>
-    <image id="o7wx7" name="btn_robot_5.png" path="/img/" exported="true"/>
-    <image id="o7wx8" name="btn_robot_6.png" path="/img/" exported="true"/>
-    <image id="o7wx9" name="btn_yellow.png" path="/img/" exported="true"/>
-    <image id="o7wxa" name="img_bag_coat.png" path="/img/" exported="true"/>
-    <image id="o7wxb" name="img_bag_gloves.png" path="/img/" exported="true"/>
-    <image id="o7wxc" name="img_bag_helmet.png" path="/img/" exported="true"/>
-    <image id="o7wxd" name="img_bag_item_1.png" path="/img/" exported="true"/>
-    <image id="o7wxe" name="img_bag_jewelry.png" path="/img/" exported="true"/>
-    <image id="o7wxf" name="img_bag_underwear.png" path="/img/" exported="true"/>
-    <image id="o7wxg" name="img_bag_weapon.png" path="/img/" exported="true"/>
-    <image id="o7wxh" name="img_robot_1.png" path="/img/" exported="true"/>
-    <image id="o7wxi" name="img_robot_2.png" path="/img/" exported="true"/>
-    <image id="o7wxj" name="img_robot_3.png" path="/img/" exported="true"/>
-    <image id="o7wxk" name="img_robot_4.png" path="/img/" exported="true"/>
     <component id="o7wxm" name="BtnRobotTab.xml" path="/btn/" exported="true"/>
-    <component id="o7wxn" name="btnRobotBagTab.xml" path="/btn/"/>
-    <component id="o7wxq" name="comTalentTitle.xml" path="/com/"/>
-    <component id="o7wxr" name="labBasicTalent.xml" path="/lab/"/>
-    <component id="o7wxs" name="labElementTalent.xml" path="/lab/"/>
-    <component id="o7wxt" name="btnCommon.xml" path="/btn/"/>
     <component id="o7wxu" name="comRobotCodeblockItem.xml" path="/com/" exported="true"/>
     <component id="wl73v" name="ToolTipRobotOpera.xml" path="/com/" exported="true"/>
-    <image id="wl73w" name="btn_robot_7.png" path="/img/"/>
     <component id="yk6xz" name="comEmpty.xml" path="/com/"/>
-    <image id="i7ba17" name="img_bag_item_5.png" path="/img/"/>
-    <component id="i7ba18" name="ToolTipRobotBagItem.xml" path="/com/" exported="true"/>
-    <image id="i7ba19" name="img_bag_item_3.png" path="/img/"/>
-    <image id="i7ba1d" name="img_bag_item_2.png" path="/img/"/>
-    <image id="i7ba1e" name="icon_bag_coat.png" path="/img/"/>
-    <image id="i7ba1f" name="icon_bag_weapon.png" path="/img/"/>
-    <image id="i7ba1g" name="icon_bag_helmet.png" path="/img/"/>
-    <image id="i7ba1h" name="icon_bag_underwear.png" path="/img/"/>
-    <image id="i7ba1i" name="icon_bag_gloves.png" path="/img/"/>
-    <image id="i7ba1j" name="icon_bag_jewelry.png" path="/img/"/>
     <component id="a5xh1l" name="ToolTipRobotCode.xml" path="/com/" exported="true"/>
-    <image id="a5xh1m" name="btn_code_tips.png" path="/img/"/>
-    <image id="a5xh1n" name="bg_code_tips_2.png" path="/img/" scale="9grid" scale9grid="12,12,22,22"/>
+    <image id="a5xh1n" name="bg_code_tips_2.png" path="/newImg/" scale="9grid" scale9grid="12,12,22,22"/>
     <component id="a5xh1o" name="ToolTipRobotCodeImage.xml" path="/com/" exported="true"/>
-    <component id="a5xh1q" name="btnRobotTip.xml" path="/btn/"/>
     <component id="ot9s1t" name="WinRobot.xml" path="/win/" exported="true"/>
-    <component id="ot9s1w" name="btnTab1.xml" path="/btn/"/>
     <image id="ot9s1x" name="btn_robot_detailed.png" path="/newImg/"/>
     <image id="ot9s1y" name="img_robot_1.png" path="/newImg/"/>
     <image id="ot9s1z" name="img_robot_2.png" path="/newImg/"/>
@@ -67,5 +27,5 @@
     <image id="xles2k" name="icon_robot_view.png" path="/newImg/"/>
     <component id="xles2m" name="btnRobotView.xml" path="/btn/"/>
   </resources>
-  <publish name="robot"/>
+  <publish name="robot" npot="true"/>
 </packageDescription>

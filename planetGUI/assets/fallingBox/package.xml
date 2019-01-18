@@ -2,8 +2,6 @@
 <packageDescription id="zgfm7sg2" jpegQuality="80" compressPNG="true">
   <resources>
     <component id="ejib0" name="WinPlayerFallingBox.xml" path="/win/" exported="true"/>
-    <image id="ejib1" name="img_diaoluo_1.png" path="/img/"/>
-    <component id="zsdq4" name="btnBlue.xml" path="/btn/"/>
   </resources>
-  <publish name="fallingBox"/>
+  <publish name="fallingBox" npot="true"/>
 </packageDescription>

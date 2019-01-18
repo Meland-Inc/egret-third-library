@@ -4,13 +4,15 @@
     <graph id="n1_q8x4" name="n1" xy="0,0" size="1136,640" alpha="0.5" type="rect" fillColor="#ff000000">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </graph>
-    <loader id="n0_q8x4" name="n0" xy="0,0" size="1136,640" url="ui://te1gxawoq8x4r" align="center" vAlign="middle" autoSize="true">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </loader>
+    <image id="n5_qxzj" name="n5" src="qxzjcyi9k" fileName="img/n5.png" xy="567,267" pivot="0.5,0.5" anchor="true" size="61,61" rotation="-45.3"/>
     <image id="n2_exp3" name="textBG" src="exp3s" fileName="img/img_lineloading_back.png" xy="384,135" group="n4_exp3"/>
     <text id="n3_exp3" name="tfTitle" xy="509,157" size="118,24" group="n4_exp3" font="FZZhunYuan-M02S" fontSize="18" color="#6b4523" bold="true" text="断线重连中..."/>
     <group id="n4_exp3" name="n4" xy="384,135" size="368,65" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>
+  <transition name="t0" autoPlay="true" autoPlayRepeat="-1">
+    <item time="0" type="Rotation" target="n5_qxzj" tween="true" startValue="120" endValue="480" duration="24" ease="Linear"/>
+    <item time="24" type="Rotation" target="n5_qxzj" tween="true" startValue="480" repeat="-1"/>
+  </transition>
 </component>
