@@ -4,7 +4,7 @@
     <image id="n11_qv2f" name="headerBg" src="rdy44j" fileName="newImg/img_main_map_1.png" xy="-1,0" size="157,24"/>
     <text id="n12_qv2f" name="tfHeaderInfo" xy="75,4" size="76,19" fontSize="8" color="#3e3620" vAlign="middle" vars="true" autoSize="none" text="({r=-9999},{c=9999})"/>
     <image id="n10_qv2f" name="bg" src="rdy44k" fileName="newImg/img_main_map_2.png" xy="7,30"/>
-    <component id="n14_qv2f" name="mapViewContainer" src="qv2f5z" fileName="com/SmallMapContainer.xml" xy="10,33" size="135,135"/>
+    <component id="n14_qv2f" name="mapViewCtnr" src="qv2f5z" fileName="com/SmallMapContainer.xml" xy="10,33" size="135,135"/>
     <text id="n18_evr9" name="tfHomeName" xy="7,2" size="73,23" font="Arial" fontSize="8" align="center" vAlign="middle" leading="1" autoSize="none" text="Place"/>
     <component id="n3_j0s6" name="comMainPlayer" src="j0s611" fileName="com/comMainPlayerIcon.xml" pkg="k08mtk0r" xy="78,101" scale="0.5,0.5" touchable="false"/>
   </displayList>

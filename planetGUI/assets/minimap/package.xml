@@ -33,7 +33,7 @@
     <image id="ljyy220" name="img_map_coordinate_2.png" path="/imgNew/"/>
     <component id="ljyy221" name="ComPos.xml" path="/com/"/>
     <component id="eotb222" name="comSelectTips.xml" path="/com/"/>
-    <image id="v0n2223" name="img_map_10.png" path="/img/"/>
+    <image id="v0n2223" name="img_map_10.png" path="/img/" scale="9grid" scale9grid="29,9,58,18"/>
     <image id="v0n2224" name="img_map_sign_dead.png" path="/img/" exported="true"/>
   </resources>
   <publish name="minimap" npot="true"/>

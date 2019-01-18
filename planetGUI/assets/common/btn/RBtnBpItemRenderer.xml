@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="72,72" extention="Button">
+<component size="72,72" extention="Button" bgColor="#00ff00">
   <controller name="button" pages="0,up,1,down" selected="0"/>
   <controller name="ctrlMark" pages="1,normal,0,equip,2,broken" selected="0"/>
   <displayList>
@@ -12,8 +12,8 @@
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
     <image id="n11_jb5g" name="n11" src="pgixi6f" fileName="newImg/img_main_item_4.png" xy="13,58" group="n13_jb5g"/>
-    <image id="n12_jb5g" name="imgDurability" src="pgixi6g" fileName="newImg/img_main_item_5.png" xy="14,59" group="n13_jb5g"/>
-    <group id="n13_jb5g" name="grpDurability" xy="13,58" size="46,6" group="n10_fene" visible="false" advanced="true" collapsed="true"/>
+    <graph id="n12_jb5g" name="gphDurability" xy="14,59" size="44,4" group="n13_jb5g" type="rect" lineSize="0" fillColor="#ff00ff00"/>
+    <group id="n13_jb5g" name="grpDurability" xy="13,58" size="46,6" group="n10_fene" visible="false" advanced="true"/>
     <text id="n9_fene" name="num" xy="59,57" pivot="1,0.5" anchor="true" size="17,18" group="n10_fene" visible="false" fontSize="12" color="#74634c" align="right" vAlign="middle" text="99"/>
     <group id="n10_fene" name="grpItemIcon" xy="6,6" size="70,69" advanced="true"/>
     <image id="n2_sntq" name="equipedMark" src="rdy44e" fileName="newImg/img_main_item_3.png" pkg="5hs1fuej" xy="1,1" group="n4_sntq"/>
