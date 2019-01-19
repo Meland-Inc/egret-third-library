@@ -8,11 +8,11 @@
       <relation target="n2_r1t9" sidePair="width-width"/>
       <relation target="" sidePair="center-center"/>
     </image>
-    <text id="n2_r1t9" name="tfTitle" xy="440,26" size="252,30" fontSize="26" color="#211d1a" align="center" vAlign="middle" vars="true" text="{operate=接到}任务：{taskName=taskName}">
+    <text id="n2_r1t9" name="tfTitle" xy="440,26" size="246,33" fontSize="26" color="#211d1a" align="center" vAlign="middle" vars="true" text="{operate=接到}任务：{taskName=taskName}">
       <relation target="" sidePair="center-center"/>
     </text>
     <text id="n3_r1t9" name="tfRewardTitle" xy="508,67" size="119,24" group="n7_ey91" fontSize="20" color="#211d1a" align="center" vAlign="middle" autoSize="none" text="任务奖励"/>
-    <list id="n5_r1t9" name="lstReward" xy="351,100" size="433,41" group="n7_ey91" touchable="false" layout="flow_hz" colGap="15" defaultItem="ui://eunktclqr1t914" align="center">
+    <list id="n5_r1t9" name="lstReward" xy="351,100" size="433,41" group="n7_ey91" touchable="false" layout="flow_hz" colGap="15" defaultItem="ui://eunktclqr1t914" align="center" autoClearItems="true">
       <item/>
       <item/>
     </list>

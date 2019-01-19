@@ -27,7 +27,7 @@
     <component id="trc221u" name="ComMiniMapContainer.xml" path="/com/" exported="true"/>
     <component id="trc221v" name="mapRoot.xml" path="/win/"/>
     <component id="trc221w" name="ComMarkLayer.xml" path="/com/" exported="true"/>
-    <component id="trc221x" name="comHomeMark.xml" path="/com/" exported="true"/>
+    <component id="trc221x" name="comMark.xml" path="/com/" exported="true"/>
     <component id="trc221y" name="comMarkCtnr.xml" path="/com/"/>
     <image id="ljyy21z" name="img_map_coordinate_1.png" path="/imgNew/" scale="9grid" scale9grid="3,2,5,1"/>
     <image id="ljyy220" name="img_map_coordinate_2.png" path="/imgNew/"/>
@@ -36,6 +36,7 @@
     <image id="v0n2223" name="img_map_10.png" path="/img/" scale="9grid" scale9grid="29,9,58,18"/>
     <image id="v0n2224" name="img_map_sign_dead.png" path="/img/" exported="true"/>
     <image id="lsbl225" name="img_map_3.png" path="/img/"/>
+    <image id="lsbl226" name="icon_robot_avatar_1.png" path="/imgNew/" exported="true"/>
   </resources>
   <publish name="minimap" npot="true"/>
 </packageDescription>
