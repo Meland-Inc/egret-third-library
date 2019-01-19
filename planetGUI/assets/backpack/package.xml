@@ -19,6 +19,8 @@
     <image id="n2yb2d" name="img_bag_shoes.png" path="/imgNew/"/>
     <component id="k8wc2e" name="WinRepair.xml" path="/win/" exported="true"/>
     <component id="k8wc2f" name="comRepairMatItem.xml" path="/com/"/>
+    <component id="lsbl2n" name="Slider1.xml" path="/sld/"/>
+    <component id="lsbl2o" name="Slider1_grip.xml" path="/sld/"/>
   </resources>
   <publish name="backpack" npot="true"/>
 </packageDescription>
