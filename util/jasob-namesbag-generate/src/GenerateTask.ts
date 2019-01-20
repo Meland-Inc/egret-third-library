@@ -47,7 +47,7 @@ export class GenerateTask {
 
         this._needSymbolKindList = [];
         if ((this._curTaskType & eTaskType.class) != 0) {
-            this._needSymbolKindList.push(SymbolKind.Class);
+            // this._needSymbolKindList.push(SymbolKind.Class);//类名现在风险太大 主要集中在GUI上面
             this._needSymbolKindList.push(SymbolKind.Interface);
             this._needSymbolKindList.push(SymbolKind.Enum);
             this._needSymbolKindList.push(SymbolKind.Variable);
