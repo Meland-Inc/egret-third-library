@@ -14,9 +14,13 @@
     <component id="n5_trc2" name="comTask" src="trc221y" fileName="com/comMarkCtnr.xml" xy="0,0" size="0,0">
       <gearDisplay controller="ctrlMapMode" pages="0"/>
     </component>
-    <component id="n11_ljyy" name="comHomeMark" src="trc221x" fileName="com/comHomeMark.xml" xy="568,320" visible="false">
+    <component id="n11_ljyy" name="comHomeMark" src="trc221x" fileName="com/comMark.xml" xy="568,320" visible="false">
       <gearDisplay controller="ctrlMapMode" pages="0,2"/>
       <Button title="家"/>
+    </component>
+    <component id="n12_lsbl" name="comRobotMark" src="trc221x" fileName="com/comMark.xml" xy="472,324" pivot="0.5,0.5" anchor="true" scale="0.5,0.5" visible="false">
+      <gearDisplay controller="ctrlMapMode" pages="0"/>
+      <Button title="家" icon="ui://k08mtk0rlsbl226"/>
     </component>
     <component id="n7_trc2" name="comMainPlayerMark" src="j0s611" fileName="com/comMainPlayerIcon.xml" xy="568,319" touchable="false">
       <gearDisplay controller="ctrlMapMode" pages="0"/>

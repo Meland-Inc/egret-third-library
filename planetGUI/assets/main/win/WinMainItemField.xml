@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" opaque="false" designImage="ui://i25v0ebkot9s0" designImageAlpha="18">
-  <controller name="ctrlShortcutList" pages="0,show1,1,show2" selected="0"/>
+<component size="1136,640" opaque="false" designImage="ui://i25v0ebkhxqgb" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlShortcutList" pages="0,show1,1,show2" selected="1"/>
+  <controller name="ctrlOpenBag" pages="0,close,1,open" selected="1"/>
   <displayList>
-    <list id="n11_urxc" name="lstShortcut" xy="361,552" size="442,70" group="n23_o6si" layout="flow_hz" defaultItem="ui://5hs1fuejft0q2g" autoClearItems="true">
+    <list id="n28_e7wr" name="lstShortcut3" xy="347,560" size="442,70" group="n29_e7wr" layout="flow_hz" defaultItem="ui://5hs1fuejft0q2g" autoClearItems="true">
       <item title="3"/>
       <item title="4"/>
       <item title="5"/>
@@ -10,11 +11,36 @@
       <item title="7"/>
       <item title="8"/>
     </list>
-    <component id="n18_sec0" name="btnSwitch" src="sec06b" fileName="btn/btnSwitchShortcuts.xml" xy="326,553" group="n23_o6si"/>
-    <component id="n22_o6si" name="btnBackpack" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="806,555" size="68,68" group="n23_o6si">
+    <component id="n18_sec0" name="btnSwitch" src="sec06b" fileName="btn/btnSwitchShortcuts.xml" xy="307,561" group="n29_e7wr"/>
+    <component id="n22_o6si" name="btnBackpack" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="800,561" size="68,68" group="n29_e7wr">
       <Button icon="ui://5hs1fuejo6si6c"/>
     </component>
-    <group id="n23_o6si" name="root" xy="326,552" size="548,71" advanced="true">
+    <group id="n29_e7wr" name="grpClosedShortcut" xy="307,560" size="561,70" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlOpenBag" pages="0"/>
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </group>
+    <component id="n25_e7wr" name="shortcutLab1" src="e7wr2p" fileName="com/shortcutLab.xml" xy="88,583" group="n32_e7wr"/>
+    <list id="n11_urxc" name="lstShortcut1" xy="125,560" size="442,70" group="n32_e7wr" layout="flow_hz" defaultItem="ui://5hs1fuejft0q2g" autoClearItems="true">
+      <item title="3"/>
+      <item title="4"/>
+      <item title="5"/>
+      <item title="6"/>
+      <item title="7"/>
+      <item title="8"/>
+    </list>
+    <component id="n26_e7wr" name="shortcutLab2" src="e7wr2p" fileName="com/shortcutLab.xml" xy="571,583" group="n32_e7wr">
+      <Label title="2"/>
+    </component>
+    <list id="n24_e7wr" name="lstShortcut2" xy="605,560" size="442,70" group="n32_e7wr" layout="flow_hz" defaultItem="ui://5hs1fuejft0q2g" autoClearItems="true">
+      <item title="3"/>
+      <item title="4"/>
+      <item title="5"/>
+      <item title="6"/>
+      <item title="7"/>
+      <item title="8"/>
+    </list>
+    <group id="n32_e7wr" name="grpOpeningShortcut" xy="88,560" size="959,70" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlOpenBag" pages="1"/>
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </group>
   </displayList>
