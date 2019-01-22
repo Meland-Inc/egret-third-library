@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1072,576" scroll="both">
+  <displayList>
+    <graph id="n13_e7wr" name="imgLeftEdge" xy="0,0" pivot="1,0" anchor="true" size="64,512" type="rect" lineSize="0" fillColor="#ffe3edf8"/>
+    <graph id="n14_e7wr" name="imgRightEdge" xy="1008,0" size="64,512" type="rect" lineSize="0" fillColor="#ffe3edf8"/>
+    <graph id="n15_e7wr" name="imgTopEdge" xy="-64,0" pivot="0,1" anchor="true" size="1136,64" type="rect" lineSize="0" fillColor="#ffe3edf8"/>
+    <graph id="n16_e7wr" name="imgBottomEdge" xy="-64,512" size="1136,64" type="rect" lineSize="0" fillColor="#ffe3edf8"/>
+    <component id="n4_trc2" name="root" src="trc221v" fileName="win/mapRoot.xml" xy="0,0" size="1008,512"/>
+  </displayList>
+</component>

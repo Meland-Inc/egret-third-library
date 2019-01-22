@@ -24,7 +24,7 @@
     <image id="11e021r" name="img_map_bottom.png" path="/imgNew/" scale="9grid" scale9grid="68,21,136,42"/>
     <component id="11e021s" name="WinBigMap.xml" path="/win/" exported="true"/>
     <component id="hocd21t" name="comTaskMark.xml" path="/com/" exported="true"/>
-    <component id="trc221u" name="ComMiniMapContainer.xml" path="/com/" exported="true"/>
+    <component id="trc221u" name="ComMiniMapCtnr.xml" path="/com/" exported="true"/>
     <component id="trc221v" name="mapRoot.xml" path="/win/"/>
     <component id="trc221w" name="ComMarkLayer.xml" path="/com/" exported="true"/>
     <component id="trc221x" name="comMark.xml" path="/com/" exported="true"/>
@@ -37,6 +37,8 @@
     <image id="v0n2224" name="img_map_sign_dead.png" path="/img/" exported="true"/>
     <image id="lsbl225" name="img_map_3.png" path="/img/"/>
     <image id="lsbl226" name="icon_robot_avatar_1.png" path="/imgNew/" exported="true"/>
+    <image id="e7wr227" name="fogWhite0.png" path="/imgNew/" scale="9grid" scale9grid="26,26,52,52"/>
+    <image id="e7wr228" name="mapEdge.png" path="/imgNew/" scale="9grid" scale9grid="95,84,926,482"/>
   </resources>
   <publish name="minimap" npot="true"/>
 </packageDescription>
