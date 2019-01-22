@@ -18,7 +18,7 @@
       <gearDisplay controller="ctrlMapMode" pages="0,2"/>
       <Button title="家"/>
     </component>
-    <component id="n12_lsbl" name="comRobotMark" src="trc221x" fileName="com/comMark.xml" xy="472,324" pivot="0.5,0.5" anchor="true" scale="0.5,0.5" visible="false">
+    <component id="n12_lsbl" name="comRobotMark" src="trc221x" fileName="com/comMark.xml" xy="472,324" scale="0.5,0.5" visible="false">
       <gearDisplay controller="ctrlMapMode" pages="0"/>
       <Button title="家" icon="ui://k08mtk0rlsbl226"/>
     </component>
