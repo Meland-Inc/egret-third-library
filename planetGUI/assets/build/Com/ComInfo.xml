@@ -1,35 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="200,200">
-  <controller name="ctrlInfoType" pages="0,other,1,player" selected="1"/>
+<component size="216,200">
+  <controller name="ctrlInfoType" pages="0,other,1,player" selected="0"/>
   <displayList>
-    <image id="n1_p7yp" name="bg" src="c8lx21" fileName="newImg/WinMapLook/img_3.png" xy="0,0" size="200,200">
+    <image id="n1_p7yp" name="bg" src="c8lx21" fileName="newImg/WinMapLook/img_3.png" xy="0,0" size="216,200">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n7_c8lx" name="imgTitleBG" src="c8lx22" fileName="newImg/WinMapLook/img_4.png" xy="22,15" group="n8_c8lx">
-      <relation target="" sidePair="top-top,center-center"/>
+    <image id="n7_c8lx" name="imgTitleBG" src="c8lx22" fileName="newImg/WinMapLook/img_4.png" xy="27,15" size="162,24" group="n8_c8lx">
+      <relation target="" sidePair="top-top,width-width"/>
     </image>
-    <text id="n5_p7yp" name="tfName" xy="21,16" size="151,25" group="n8_c8lx" fontSize="18" color="#f9f2c9" align="center" vAlign="middle" autoSize="none" strokeColor="#513e32" strokeSize="2" singleLine="true" text="沙漠红花">
+    <text id="n5_p7yp" name="tfName" xy="30,16" size="151,25" group="n8_c8lx" fontSize="18" color="#f9f2c9" align="center" vAlign="middle" autoSize="none" strokeColor="#513e32" strokeSize="2" singleLine="true" text="沙漠红花">
       <relation target="n7_c8lx" sidePair="center-center,middle-middle"/>
     </text>
-    <group id="n8_c8lx" name="title" xy="21,15" size="155,26" collapsed="true"/>
-    <image id="n9_c8lx" name="imgTypeBG" src="c8lx23" fileName="newImg/WinMapLook/img_5.png" xy="27,50" size="30,30" group="n4_p7yp">
-      <relation target="n2_p7yp" sidePair="rightext-right,bottomext-bottom"/>
+    <group id="n8_c8lx" name="title" xy="27,15" size="162,26"/>
+    <image id="n9_c8lx" name="imgTypeBG" src="c8lx23" fileName="newImg/WinMapLook/img_5.png" xy="26,50" size="30,30" group="n11_plek">
+      <relation target="n7_c8lx" sidePair="left-left"/>
     </image>
-    <loader id="n2_p7yp" name="ladType" xy="27,50" size="30,30" group="n4_p7yp" url="ui://32ieekguc8lx1v" fill="scale" autoSize="true">
+    <loader id="n2_p7yp" name="ladType" xy="26,50" size="30,30" group="n11_plek" fill="scale">
       <relation target="n9_c8lx" sidePair="center-center,middle-middle"/>
     </loader>
-    <image id="n10_c8lx" name="imgTf" src="c8lx24" fileName="newImg/WinMapLook/img_6.png" xy="69,54" size="90,22" group="n4_p7yp"/>
-    <text id="n3_p7yp" name="tfType" xy="74,58" size="82,22" group="n4_p7yp" fontSize="16" color="#ffffff" autoSize="none" text="植物系">
-      <relation target="" sidePair="right-right,top-top"/>
+    <image id="n10_c8lx" name="imgTf" src="c8lx24" fileName="newImg/WinMapLook/img_6.png" xy="68,54" size="90,22" group="n11_plek">
+      <relation target="n6_p7yp" sidePair="right-right"/>
+    </image>
+    <text id="n3_p7yp" name="tfType" xy="73,58" size="82,22" group="n11_plek" fontSize="16" color="#ffffff" autoSize="none" text="植物系">
+      <relation target="n10_c8lx" sidePair="left-left,top-top"/>
     </text>
-    <group id="n4_p7yp" name="type" xy="27,50" size="132,30" group="n11_plek" collapsed="true"/>
     <list id="n6_p7yp" name="lstDetails" xy="27,90" size="162,100" group="n11_plek" selectionMode="none" overflow="hidden" defaultItem="ui://32ieekgup7yp1p" align="center" vAlign="middle" autoClearItems="true">
+      <relation target="" sidePair="center-center"/>
       <item/>
       <item/>
       <item/>
       <item/>
     </list>
-    <group id="n11_plek" name="grpOtherInfo" xy="27,50" size="162,140" advanced="true">
+    <group id="n11_plek" name="grpOtherInfo" xy="26,50" size="163,140" advanced="true">
       <gearDisplay controller="ctrlInfoType" pages="0"/>
     </group>
     <loader id="n12_plek" name="ladPlayerIcon" xy="24,51" size="40,40" group="n17_plek"/>
@@ -38,10 +40,10 @@
       <Button title="聊天" titleColor="#655645" titleFontSize="14" icon="ui://te1gxawopgixi4u"/>
     </component>
     <text id="n21_plek" name="tfPlayerLv" xy="24,96" size="67,19" group="n17_plek" fontSize="14" color="#e2eabc" vars="true" text="等级  {lv=15}级"/>
-    <text id="n23_plek" name="tfPlayerHp" xy="24,122" size="102,19" group="n17_plek" fontSize="14" color="#e2eabc" vars="true" text="生命值  {hpCur=100}/{hpLimited=200}"/>
+    <text id="n23_plek" name="tfPlayerHp" xy="24,122" size="101,19" group="n17_plek" fontSize="14" color="#e2eabc" vars="true" text="生命值  {hpCur=100}/{hpLimited=200}"/>
     <group id="n17_plek" name="grpPlayerInfo" xy="22,51" size="173,133" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlInfoType" pages="1"/>
     </group>
   </displayList>
-  <relation target="n6_p7yp" sidePair="bottomext-bottom"/>
+  <relation target="n6_p7yp" sidePair="bottomext-bottom,rightext-right"/>
 </component>
