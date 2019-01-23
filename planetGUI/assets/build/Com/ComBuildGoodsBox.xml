@@ -10,15 +10,15 @@
     <image id="n0_rvyy" name="imgBG_0" src="qo8v2f" fileName="newImg/WinBuildPannel/img_build_item1.png" xy="0,4" pivot="0.5,0.5">
       <gearDisplay controller="button" pages="0"/>
     </image>
-    <loader id="n5_rvyy" name="ladGoodsIcon" xy="7,20" pivot="0.5,0.5" size="70,71" align="center" vAlign="middle" fill="scaleMatchHeight"/>
-    <text id="n3_rvyy" name="tfNumLabel" xy="84,97" pivot="1,1" anchor="true" size="28,27" fontSize="20" color="#68572f" align="center" vAlign="middle" autoSize="none" text="1">
+    <loader id="n5_rvyy" name="icon" xy="7,20" pivot="0.5,0.5" size="70,71" align="center" vAlign="middle" fill="scaleMatchHeight"/>
+    <text id="n3_rvyy" name="title" xy="84,97" pivot="1,1" anchor="true" size="28,27" fontSize="20" color="#68572f" align="center" vAlign="middle" autoSize="none" text="1">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </text>
   </displayList>
   <Button mode="Radio"/>
   <transition name="t0">
-    <item time="0" type="Scale" target="n1_rvyy" tween="true" startValue="1,1" endValue="0.95,0.95" duration="3"/>
     <item time="0" type="Scale" target="n0_rvyy" tween="true" startValue="1,1" endValue="0.95,0.95" duration="3"/>
+    <item time="0" type="Scale" target="n1_rvyy" tween="true" startValue="1,1" endValue="0.95,0.95" duration="3"/>
     <item time="3" type="Scale" target="n0_rvyy" tween="true" startValue="0.95,0.95" endValue="1,1" duration="3"/>
     <item time="3" type="Scale" target="n1_rvyy" tween="true" startValue="0.95,0.95" endValue="1,1" duration="3"/>
   </transition>
