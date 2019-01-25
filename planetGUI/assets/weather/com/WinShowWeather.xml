@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="200,200">
+<component size="200,200" opaque="false">
   <controller name="weather" pages="0,night,1,day" selected="0"/>
   <displayList>
-    <image id="n32_uzyq" name="n32" src="uzyq7w" fileName="newImg/img_weather_bg.png" pkg="5hs1fuej" xy="13,39" group="n39_uzyq"/>
-    <loader id="n33_uzyq" name="weatherIcon" xy="17,45" size="50,50" group="n39_uzyq"/>
-    <loader id="n35_uzyq" name="effectIcon" xy="96,55" size="30,30" group="n39_uzyq"/>
-    <text id="n36_uzyq" name="tfEffect" xy="126,54" size="36,31" group="n39_uzyq" fontSize="24" color="#ffffff" text="5C"/>
-    <group id="n39_uzyq" name="n39" xy="13,39" size="173,61" advanced="true">
+    <component id="n40_w5fx" name="comShowWeather" src="w5fxm" fileName="com/ComShowWeather.xml" xy="0,0">
       <relation target="" sidePair="center-center,top-top"/>
-    </group>
+    </component>
   </displayList>
   <transition name="hide">
     <item time="0" type="XY" tween="true" startValue="0,0" endValue="300,0" duration="9"/>
