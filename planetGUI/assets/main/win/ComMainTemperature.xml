@@ -28,6 +28,6 @@
     <text id="n7_r2bf" name="tfTime" xy="64,9" size="34,18" group="n8_r2bf" fontSize="10" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="12:00"/>
     <group id="n8_r2bf" name="grpWeatherIcon" xy="39,9" size="60,18"/>
     <image id="n21_t8is" name="n21" src="uzyq7x" fileName="newImg/img_weather_bg_2.png" xy="0,0"/>
-    <loader id="n22_t8is" name="n22" xy="4,4" size="30,30" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <loader id="n22_t8is" name="weatherIcon" xy="4,4" size="30,30" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
   </displayList>
 </component>
