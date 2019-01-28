@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="200,200">
+  <displayList>
+    <image id="n0_w5fx" name="n0" src="uzyq7w" fileName="newImg/img_weather_bg.png" pkg="5hs1fuej" xy="13,37" group="n4_w5fx"/>
+    <loader id="n1_w5fx" name="weatherIcon" xy="17,43" size="50,50" group="n4_w5fx"/>
+    <loader id="n2_w5fx" name="effectIcon" xy="96,53" size="30,30" group="n4_w5fx"/>
+    <text id="n3_w5fx" name="tfEffect" xy="126,52" size="35,31" group="n4_w5fx" fontSize="24" color="#ffffff" vAlign="middle" text="5C"/>
+    <text id="n5_w5fx" name="tfDescribe" xy="81,52" size="81,31" group="n4_w5fx" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text=""/>
+    <group id="n4_w5fx" name="n4" xy="13,37" size="173,61" advanced="true">
+      <relation target="" sidePair="center-center,top-top"/>
+    </group>
+  </displayList>
+</component>
