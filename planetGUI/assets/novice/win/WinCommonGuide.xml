@@ -3,7 +3,7 @@
   <displayList>
     <image id="n0_xjjc" name="bg" src="efrs1n" fileName="newImg/bg_cm_4.png" pkg="te1gxawo" xy="238,95" size="660,450" group="n8_f5ut"/>
     <text id="n1_xjjc" name="winTitle" xy="496,94" size="175,45" group="n8_f5ut" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="使用需知"/>
-    <list id="n5_xjjc" name="lstGuideContent" xy="260,171" size="615,335" group="n8_f5ut" layout="flow_hz" overflow="scroll" lineGap="10" defaultItem="ui://mp92elpxf5ut2i1x" align="center">
+    <list id="n5_xjjc" name="lstGuideContent" xy="260,171" size="615,335" group="n8_f5ut" layout="flow_hz" overflow="scroll" lineGap="10" defaultItem="ui://mp92elpxf5ut2i1x" align="center" autoClearItems="true">
       <item icon="ui://mp92elpxxjjc1"/>
       <item icon="ui://mp92elpxxjjc2"/>
       <item icon="ui://mp92elpx84325"/>

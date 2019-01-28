@@ -18,6 +18,7 @@
     <image id="r9opj" name="img_main_survive_2.png" path="/image/"/>
     <image id="r9opk" name="img_main_survive_3.png" path="/image/"/>
     <image id="r9opl" name="img_main_survive_4.png" path="/image/"/>
+    <component id="w5fxm" name="ComShowWeather.xml" path="/com/"/>
   </resources>
-  <publish name="weather" path="C:\Users\Mloong\Desktop\bell_planet\feature-jiahua\resource\assets\fairyGui" npot="true"/>
+  <publish name="weather" npot="true"/>
 </packageDescription>

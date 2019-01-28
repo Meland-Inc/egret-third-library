@@ -160,6 +160,19 @@
     <component id="gbq97k" name="btnTaskTrace.xml" path="/btn/"/>
     <image id="8r797l" name="icon_main_treasure.png" path="/newImg/" exported="true"/>
     <component id="e7wr2p" name="shortcutLab.xml" path="/com/"/>
+    <image id="uzyq7m" name="icon_weather_fire.png" path="/newImg/" exported="true"/>
+    <image id="uzyq7n" name="icon_weather_gas.png" path="/newImg/" exported="true"/>
+    <image id="uzyq7o" name="icon_weather_health.png" path="/newImg/" exported="true"/>
+    <image id="uzyq7p" name="icon_weather_rain.png" path="/newImg/" exported="true"/>
+    <image id="uzyq7q" name="icon_weather_snow.png" path="/newImg/" exported="true"/>
+    <image id="uzyq7r" name="icon_weather_sun.png" path="/newImg/" exported="true"/>
+    <image id="uzyq7s" name="icon_weather_temperature.png" path="/newImg/" exported="true"/>
+    <image id="uzyq7t" name="icon_weather_walk.png" path="/newImg/" exported="true"/>
+    <image id="uzyq7u" name="icon_weather_water.png" path="/newImg/" exported="true"/>
+    <image id="uzyq7v" name="icon_weather_wind.png" path="/newImg/" exported="true"/>
+    <image id="uzyq7w" name="img_weather_bg.png" path="/newImg/" exported="true"/>
+    <image id="uzyq7x" name="img_weather_bg_2.png" path="/newImg/" exported="true"/>
+    <component id="t8is7y" name="ComWeatherDetail.xml" path="/com/" exported="true"/>
   </resources>
   <publish name="main" npot="true"/>
 </packageDescription>
