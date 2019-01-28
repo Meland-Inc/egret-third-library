@@ -8,8 +8,8 @@
     <group id="n5_hsrb" name="n5" xy="470,524" size="195,31" hideByEditor="true" visible="false" advanced="true" collapsed="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <loader id="n1_jgot" name="imgBG" xy="0,0" size="1136,640" url="ui://0n4pg0opdg995m" fill="scaleFree">
-      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    <loader id="n1_jgot" name="imgBG" xy="0,0" size="1136,640" fill="scaleFree">
+      <relation target="" sidePair="width-width,height-height"/>
     </loader>
     <image id="n10_fyox" name="imgNameBG" src="kk6f57" fileName="newImg/img_login_5.png" xy="999,47" size="110,42" visible="false">
       <relation target="n11_fyox" sidePair="leftext-left,top-top"/>
@@ -21,12 +21,6 @@
     <text id="n11_fyox" name="tfName" xy="1013,57" size="10,24" font="FZZhunYuan-M02S" fontSize="18" color="#523416" vAlign="middle" bold="true" singleLine="true" text="">
       <relation target="n8_y3zw" sidePair="right-left,top-top"/>
     </text>
-    <image id="n12_kk6f" name="imgBottomBG" src="qo8vi1x" fileName="newImg/img_cm_pattern2.png" pkg="te1gxawo" xy="0,619" size="1136,21" visible="false">
-      <relation target="" sidePair="bottom-bottom,rightext-right"/>
-    </image>
-    <image id="n13_kk6f" name="imgTopBG" src="qo8vi1x" fileName="newImg/img_cm_pattern2.png" pkg="te1gxawo" xy="0,0" size="1136,21" visible="false">
-      <relation target="" sidePair="top-top,rightext-right"/>
-    </image>
     <component id="n14_kk6f" name="btnAgreement" src="kk6f59" fileName="btn/btnSelect.xml" xy="300,572" group="n19_kk6f">
       <Button checked="true"/>
     </component>
@@ -47,7 +41,7 @@
     <image id="n23_c2vq" name="n23" src="c2vq5f" fileName="newImg/img_login_changtong.png" xy="373,475" group="n28_c2vq">
       <gearDisplay controller="status" pages="0"/>
     </image>
-    <text id="n24_c2vq" name="n24" xy="428,473" size="51,28" group="n28_c2vq" fontSize="22" color="#20b311" vAlign="middle" text="畅通">
+    <text id="n24_c2vq" name="n24" xy="428,473" size="50,28" group="n28_c2vq" fontSize="22" color="#20b311" vAlign="middle" text="畅通">
       <gearColor controller="status" pages="0,1" values="#20b311,#000000|#ff5400,#000000"/>
       <gearText controller="status" pages="0,1" values="畅通|爆满"/>
     </text>
