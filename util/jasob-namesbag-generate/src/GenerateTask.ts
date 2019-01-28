@@ -28,7 +28,7 @@ export class GenerateTask {
     //排除的符号
     private excludeSymbolList: string[] = ["info", "log", "group", "groupEnd", "warn", "error", "trace", "chunks", "BaseTab"];
     //找文件会排除文件夹中文件 给相对路径 包括第三方库
-    private excludeDirList: string[] = ["libs", "mixLibs", "src\\csv"];//, "src\\module\\codeBlock\\core"
+    private excludeDirList: string[] = ["libs", "mixLibs", "src\\csv", "src\\module\\codeBlock"];//, "src\\module\\codeBlock\\core"
     //排除文件 直接给文件名
     private excludeFiles: string[] = ["AssetAdapter.ts", "LoadingUI.ts", "Main.ts", "Platform.ts", "ThemeAdapter.ts", "HttpMgr.ts", "pbmessage.d.ts"];
 
