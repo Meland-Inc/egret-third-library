@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" adaptationTest="FitSize">
-  <controller name="c1" pages="0,wait,1,normal" selected="1"/>
+  <controller name="c1" pages="0,wait,1,normal" selected="0"/>
   <displayList>
-    <image id="n0_jddv" name="imgBG" src="dg995m" fileName="newImg/newgameBG.jpg" xy="0,0" size="1136,640">
-      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
-    </image>
+    <loader id="n0_jddv" name="imgBG" xy="0,0" size="1136,640" fill="scaleFree">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
     <image id="n45_ptq4" name="imgloginBG" src="efrs1m" fileName="newImg/bg_cm_3.png" pkg="te1gxawo" xy="2000,155" size="370,330" group="n47_ptq4"/>
     <component id="n50_ptq4" name="btnUsernameSignup" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="te1gxawo" xy="2082,211" size="96,32" group="n47_ptq4" customData="ui://0n4pg0opqo8v52">
       <Button title="普通注册" titleColor="#ffffff" titleFontSize="18" icon="ui://0n4pg0opqo8v52"/>
@@ -34,7 +34,7 @@
     </text>
     <text id="n78_qo8v" name="tfTitle" xy="2138,162" size="93,28" group="n47_ptq4" fontSize="22" color="#ffffff" text="账号登录"/>
     <image id="n79_qo8v" name="imgBottomBG" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="2000,467" size="370,14" group="n47_ptq4"/>
-    <group id="n47_ptq4" name="loginGroup" xy="2000,155" size="370,330" advanced="true">
+    <group id="n47_ptq4" name="loginGroup" xy="2000,155" size="370,330" advanced="true" collapsed="true">
       <gearDisplay controller="c1" pages="1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
@@ -55,7 +55,7 @@
     <text id="n67_ptq4" name="tfErrorInSignin" xy="2117,344" size="138,24" group="n34_ptq4" visible="false" font="方正准圆简体" fontSize="18" color="#ff0000" vAlign="middle" bold="true" text="账号或密码错误"/>
     <text id="n76_qo8v" name="tfSigninGroupTitle" xy="2138,196" size="93,28" group="n34_ptq4" fontSize="22" color="#ffffff" text="账号登录"/>
     <image id="n77_qo8v" name="imgBottomBG" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="2000,432" size="370,14" group="n34_ptq4"/>
-    <group id="n34_ptq4" name="signinGroup" xy="2000,189" size="370,262" advanced="true">
+    <group id="n34_ptq4" name="signinGroup" xy="2000,189" size="370,262" advanced="true" collapsed="true">
       <gearDisplay controller="c1" pages="1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
@@ -76,7 +76,7 @@
     <text id="n95_x0vt" name="tfErrorInVouristsSignin" xy="2130,346" size="100,24" group="n98_x0vt" visible="false" font="方正准圆简体" fontSize="18" color="#ff0000" align="center" vAlign="middle" leading="0" bold="true" text="账号已注册"/>
     <text id="n96_x0vt" name="tfSigninGroupTitle" xy="2138,196" size="93,28" group="n98_x0vt" fontSize="22" color="#ffffff" text="游客登录"/>
     <image id="n97_x0vt" name="imgBottomBG" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="2000,433" size="370,14" group="n98_x0vt"/>
-    <group id="n98_x0vt" name="touristsExperienceGroup" xy="2000,189" size="370,262" advanced="true">
+    <group id="n98_x0vt" name="touristsExperienceGroup" xy="2000,189" size="370,262" advanced="true" collapsed="true">
       <gearDisplay controller="c1" pages="1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
@@ -98,16 +98,10 @@
       <Button icon="ui://0n4pg0opsmpo5k"/>
     </component>
     <text id="n99_smpo" name="n99" xy="506,354" size="123,22" group="n9_jddv" fontSize="16" color="#a19c8d" align="center" autoSize="none" text="或"/>
-    <group id="n9_jddv" name="selectModeGroup" xy="409,173" size="318,294" advanced="true">
+    <group id="n9_jddv" name="selectModeGroup" xy="409,173" size="318,294" advanced="true" collapsed="true">
       <gearDisplay controller="c1" pages="1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <image id="n83_qo8v" name="n83" src="qo8vi1x" fileName="newImg/img_cm_pattern2.png" pkg="te1gxawo" xy="0,619" size="1136,21" visible="false">
-      <relation target="" sidePair="bottom-bottom,rightext-right"/>
-    </image>
-    <image id="n84_qo8v" name="n84" src="qo8vi1x" fileName="newImg/img_cm_pattern2.png" pkg="te1gxawo" xy="0,0" size="1136,21" visible="false">
-      <relation target="" sidePair="top-top,rightext-right"/>
-    </image>
     <image id="n101_mdql" name="imgLoading" src="h03r5j" fileName="newImg/img_lineloading_1.png" xy="535,286" pivot="0.5,0.5">
       <gearDisplay controller="c1" pages="0"/>
       <relation target="" sidePair="center-center,middle-middle"/>
