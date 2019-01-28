@@ -2,28 +2,28 @@
 <component size="460,350" overflow="scroll" scrollBarFlags="128">
   <displayList>
     <text id="n0_sz33" name="tfTaskName" xy="28,13" size="77,24" fontSize="18" color="#655739" vAlign="middle" ubb="true" singleLine="true" text="任务名字"/>
-    <richtext id="n1_sz33" name="tfTaskDesc" xy="28,41" size="399,22" fontSize="16" color="#655739" ubb="true" autoSize="height" text="任务描述"/>
-    <image id="n16_ey91" name="n16" src="pgixi5h" fileName="newImg/img_cm_bottom_12.png" pkg="te1gxawo" xy="26,82" group="n17_ey91"/>
-    <text id="n15_ey91" name="tfTaskTarget" xy="30,82" size="69,22" group="n17_ey91" fontSize="16" color="#655739" vAlign="middle" ubb="true" singleLine="true" text="任务目标"/>
-    <group id="n17_ey91" name="grpTaskTarget" xy="26,82" size="91,22" advanced="true" collapsed="true">
+    <richtext id="n1_sz33" name="tfTaskDesc" xy="28,41" size="399,25" fontSize="16" color="#655739" ubb="true" autoSize="height" text="任务描述&#xA;"/>
+    <image id="n16_ey91" name="n16" src="pgixi5h" fileName="newImg/img_cm_bottom_12.png" pkg="te1gxawo" xy="26,85" group="n17_ey91"/>
+    <text id="n15_ey91" name="tfTaskTarget" xy="30,85" size="69,22" group="n17_ey91" fontSize="16" color="#655739" vAlign="middle" ubb="true" singleLine="true" text="任务目标"/>
+    <group id="n17_ey91" name="grpTaskObjectiveTitle" xy="26,85" size="91,22" group="n21_xhia" collapsed="true"/>
+    <list id="n3_sz33" name="lstTaskObjective" xy="33,115" size="400,64" group="n21_xhia" lineGap="7" defaultItem="ui://eunktclqjhexn" autoClearItems="true">
+      <item/>
+      <item/>
+    </list>
+    <group id="n21_xhia" name="grpTaskObjective" xy="26,85" size="407,94" advanced="true" collapsed="true">
       <relation target="n1_sz33" sidePair="top-bottom"/>
     </group>
-    <list id="n3_sz33" name="lstTaskObjective" xy="33,112" size="400,64" lineGap="7" defaultItem="ui://eunktclqjhexn" autoClearItems="true">
-      <relation target="n17_ey91" sidePair="top-bottom"/>
+    <image id="n18_ey91" name="n18" src="pgixi5h" fileName="newImg/img_cm_bottom_12.png" pkg="te1gxawo" xy="26,200" group="n20_ey91"/>
+    <text id="n19_ey91" name="tfTaskReward" xy="30,200" size="69,22" group="n20_ey91" fontSize="16" color="#655739" vAlign="middle" ubb="true" singleLine="true" text="任务奖励"/>
+    <group id="n20_ey91" name="grpTaskRewardTitle" xy="26,200" size="91,22" group="n22_xhia" collapsed="true"/>
+    <list id="n13_nmg7" name="lstReward" xy="44,234" size="245,58" group="n22_xhia" layout="flow_hz" colGap="10" lineItemCount="4" defaultItem="ui://tis07nuvxhg9o" vAlign="middle" autoClearItems="true">
+      <item/>
+      <item/>
       <item/>
       <item/>
     </list>
-    <image id="n18_ey91" name="n18" src="pgixi5h" fileName="newImg/img_cm_bottom_12.png" pkg="te1gxawo" xy="26,197" group="n20_ey91"/>
-    <text id="n19_ey91" name="tfTaskReward" xy="30,197" size="69,22" group="n20_ey91" fontSize="16" color="#655739" vAlign="middle" ubb="true" singleLine="true" text="任务奖励"/>
-    <group id="n20_ey91" name="grpTaskReward" xy="26,197" size="91,22" advanced="true">
+    <group id="n22_xhia" name="grpTaskReward" xy="26,200" size="263,92" advanced="true" collapsed="true">
       <relation target="n3_sz33" sidePair="top-bottom"/>
     </group>
-    <list id="n13_nmg7" name="lstReward" xy="44,231" size="245,58" layout="flow_hz" colGap="10" lineItemCount="4" defaultItem="ui://tis07nuvxhg9o" vAlign="middle" autoClearItems="true">
-      <relation target="n3_sz33" sidePair="top-bottom"/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-    </list>
   </displayList>
 </component>
