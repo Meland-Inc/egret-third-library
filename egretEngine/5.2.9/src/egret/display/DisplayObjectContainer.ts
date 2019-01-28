@@ -807,37 +807,38 @@ namespace egret {
                 return null
             }
 
-            //如果不能触摸子直接跳过 游戏显示对象太多 节省性能  modify by xiangqian 2018.11.30
-            if (this.$touchChildren) {
-                const children = this.$children;
-                let found = false;
-                let target: DisplayObject = null;
-                for (let i = children.length - 1; i >= 0; i--) {
-                    const child = children[i];
-                    if (child.$maskedObject) {
-                        continue;
-                    }
-                    target = child.$hitTest(stageX, stageY);
-                    if (target) {
-                        found = true;
-                        if (target.$touchEnabled) {
-                            break;
-                        }
-                        else {
-                            target = null;
-                        }
-                    }
+            //游戏中太多场景的东西需要触摸 会有异常 保留了按下时搜索所有 不过move时不会再重新寻找 也就不需要这里优化了
+            // //如果不能触摸子直接跳过 游戏显示对象太多 节省性能  modify by xiangqian 2018.11.30
+            // if (this.$touchChildren) {
+            const children = this.$children;
+            let found = false;
+            let target: DisplayObject = null;
+            for (let i = children.length - 1; i >= 0; i--) {
+                const child = children[i];
+                if (child.$maskedObject) {
+                    continue;
                 }
+                target = child.$hitTest(stageX, stageY);
                 if (target) {
-                    if (this.$touchChildren) {
-                        return target;
+                    found = true;
+                    if (target.$touchEnabled) {
+                        break;
                     }
-                    return this;
-                }
-                if (found) {
-                    return this;
+                    else {
+                        target = null;
+                    }
                 }
             }
+            if (target) {
+                if (this.$touchChildren) {
+                    return target;
+                }
+                return this;
+            }
+            if (found) {
+                return this;
+            }
+            // }
             return super.$hitTest(stageX, stageY);
         }
     }
