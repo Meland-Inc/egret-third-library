@@ -29,9 +29,9 @@
     <group id="n19_kk6f" name="n19" xy="300,572" size="535,24" advanced="true">
       <relation target="" sidePair="bottom-bottom,center-center"/>
     </group>
-    <loader id="n17_kk6f" name="n17" xy="438,519" size="247,37" group="n20_c2vq" touchable="false" url="ui://0n4pg0opkk6f5c" fill="scaleFree"/>
-    <text id="n18_kk6f" name="tfStatus" xy="462,523" size="198,30" group="n20_c2vq" fontSize="22" color="#ffffff" align="center" vAlign="middle" leading="0" autoSize="none" bold="true" text="搜索服务器列表..."/>
-    <group id="n20_c2vq" name="n20" xy="438,519" size="247,37" advanced="true">
+    <loader id="n17_kk6f" name="n17" xy="437,519" size="247,37" group="n20_c2vq" touchable="false" url="ui://0n4pg0opkk6f5c" fill="scaleFree"/>
+    <text id="n18_kk6f" name="tfStatus" xy="436,519" size="247,37" group="n20_c2vq" fontSize="22" color="#ffffff" align="center" vAlign="middle" leading="0" autoSize="none" bold="true" text="搜索服务器列表..."/>
+    <group id="n20_c2vq" name="n20" xy="436,519" size="248,37" advanced="true">
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </group>
     <loader id="n21_c2vq" name="ladSelectServer" xy="341,465" size="453,35" group="n28_c2vq" url="ui://0n4pg0opc2vq5d"/>
@@ -41,7 +41,7 @@
     <image id="n23_c2vq" name="n23" src="c2vq5f" fileName="newImg/img_login_changtong.png" xy="373,475" group="n28_c2vq">
       <gearDisplay controller="status" pages="0"/>
     </image>
-    <text id="n24_c2vq" name="n24" xy="428,473" size="50,28" group="n28_c2vq" fontSize="22" color="#20b311" vAlign="middle" text="畅通">
+    <text id="n24_c2vq" name="n24" xy="428,473" size="49,28" group="n28_c2vq" fontSize="22" color="#20b311" vAlign="middle" text="畅通">
       <gearColor controller="status" pages="0,1" values="#20b311,#000000|#ff5400,#000000"/>
       <gearText controller="status" pages="0,1" values="畅通|爆满"/>
     </text>
