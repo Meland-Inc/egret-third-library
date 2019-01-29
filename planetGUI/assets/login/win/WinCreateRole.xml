@@ -4,7 +4,7 @@
   <displayList>
     <image id="n69_ifd7" name="imgBG1" src="tm1s45" fileName="newImg/img_8.png" xy="0,0" size="1136,640" group="n71_ifd7"/>
     <image id="n70_ifd7" name="imgBG2" src="tm1s45" fileName="newImg/img_8.png" xy="1126,0" size="1136,640" group="n71_ifd7"/>
-    <group id="n71_ifd7" name="bg" xy="0,0" size="2262,640" advanced="true"/>
+    <group id="n71_ifd7" name="bg" xy="0,0" size="2262,640" advanced="true" collapsed="true"/>
     <component id="n12_tlkk" name="btnLogout" src="y3zw2g" fileName="btn/btnLogout.xml" xy="280,78">
       <relation target="" sidePair="left-left,top-top"/>
     </component>
@@ -32,7 +32,7 @@
     <component id="n30_tm1s" name="btnRandomAvatar" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="te1gxawo" xy="611,190" size="40,40" group="n47_tm1s">
       <Button icon="ui://0n4pg0optm1s4c"/>
     </component>
-    <text id="n46_tm1s" name="n46" xy="652,201" size="81,25" group="n47_tm1s" fontSize="18" color="#857762" letterSpacing="1" singleLine="true" text="随机样貌"/>
+    <text id="n46_tm1s" name="n46" xy="652,201" size="81,24" group="n47_tm1s" fontSize="18" color="#857762" letterSpacing="1" singleLine="true" text="随机样貌"/>
     <group id="n47_tm1s" name="randomAvatar" xy="611,190" size="124,40" advanced="true" collapsed="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
@@ -46,7 +46,7 @@
     <component id="n14_trkw" name="btnTalent" src="bidp4t" fileName="btn/btnMain.xml" xy="23,381" group="n48_bidp">
       <Button title="特质" icon="ui://0n4pg0optm1s4q" selectedIcon="ui://0n4pg0optm1s4p" controller="sort" page="2"/>
     </component>
-    <group id="n48_bidp" name="main" xy="0,164" size="130,320" advanced="true">
+    <group id="n48_bidp" name="main" xy="0,164" size="130,320" advanced="true" collapsed="true">
       <relation target="" sidePair="middle-middle,left-left"/>
     </group>
     <image id="n51_bidp" name="imgSubclassBG" src="tm1s3y" fileName="newImg/img_1.png" xy="137,183" size="142,282" group="n50_bidp">
@@ -69,7 +69,7 @@
       <item title="嘴巴" name="7"/>
       <item title="眉毛" name="8"/>
     </list>
-    <group id="n50_bidp" name="LeftSubClass" xy="137,183" size="142,282" advanced="true"/>
+    <group id="n50_bidp" name="LeftSubClass" xy="137,183" size="142,282" advanced="true" collapsed="true"/>
     <image id="n68_nri0" name="n68" src="nri04v" fileName="newImg/img_9.png" xy="824,100" group="n55_bidp"/>
     <image id="n67_nri0" name="n67" src="nri04v" fileName="newImg/img_9.png" xy="824,529" group="n55_bidp"/>
     <image id="n56_bidp" name="imgSubclassBG" src="tm1s3y" fileName="newImg/img_1.png" xy="847,115" size="214,410" group="n55_bidp"/>
@@ -114,12 +114,12 @@
     <component id="n60_bidp" name="btnScrollDown" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="te1gxawo" xy="931,525" size="44,30" group="n55_bidp">
       <Button icon="ui://0n4pg0optm1s4e"/>
     </component>
-    <group id="n55_bidp" name="rghtSubclass" xy="824,82" size="257,473" advanced="true">
+    <group id="n55_bidp" name="rghtSubclass" xy="824,82" size="257,473" advanced="true" collapsed="true">
       <relation target="" sidePair="right-right,middle-middle"/>
     </group>
     <image id="n61_bidp" name="imgTitleBg" src="tm1s44" fileName="newImg/img_7.png" xy="39,74" group="n64_bidp"/>
     <image id="n62_bidp" name="ImgTitleLogo" src="tm1s3x" fileName="newImg/icon_17.png" xy="74,83" group="n64_bidp"/>
-    <text id="n63_bidp" name="tfTitle" xy="117,87" size="93,29" group="n64_bidp" fontSize="22" color="#ffffff" text="角色创建"/>
+    <text id="n63_bidp" name="tfTitle" xy="117,87" size="93,28" group="n64_bidp" fontSize="22" color="#ffffff" text="角色创建"/>
     <group id="n64_bidp" name="title" xy="39,74" size="210,44" advanced="true" collapsed="true">
       <relation target="" sidePair="left-left,top-top"/>
     </group>
@@ -134,11 +134,20 @@
     <text id="n73_mzli" name="account" xy="31,34" size="132,36" fontSize="24" autoSize="none" text="账号：">
       <relation target="" sidePair="left-left,top-top"/>
     </text>
+    <image id="n74_fya6" name="imgLoading" src="h03r5j" fileName="newImg/img_lineloading_1.png" xy="535,286" pivot="0.5,0.5">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <loader id="n75_fya6" name="lock" xy="0,0" size="1136,640">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
   </displayList>
   <transition name="t1" autoPlay="true">
     <item time="0" type="XY" target="n48_bidp" tween="true" startValue="-300,164" endValue="0,164" duration="12" ease="Back.InOut"/>
     <item time="0" type="XY" target="n50_bidp" tween="true" startValue="-163,183" endValue="137,183" duration="12" ease="Back.InOut"/>
     <item time="0" type="XY" target="n55_bidp" tween="true" startValue="1190,82" endValue="890,82" duration="12" ease="Back.InOut"/>
     <item time="0" type="XY" target="n64_bidp" tween="true" startValue="-261,74" endValue="39,74" duration="12" ease="Back.InOut"/>
+  </transition>
+  <transition name="t2" autoPlay="true">
+    <item time="0" type="Rotation" target="n74_fya6" tween="true" startValue="0" endValue="360" duration="24" ease="Linear" repeat="-1"/>
   </transition>
 </component>
