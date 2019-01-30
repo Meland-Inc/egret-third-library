@@ -3,23 +3,24 @@
   <controller name="ctlOperate" alias="edit" exported="true" pages="0,preBuild,1,edit" selected="0"/>
   <displayList>
     <graph id="n16_gkyg" name="imgReference" xy="0,0" size="225,90" type="rect" lineSize="0" fillColor="#00ffffff"/>
-    <component id="n7_gkyg" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="165,-5" size="80,80">
+    <component id="n7_gkyg" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="215,-5" size="80,80">
       <gearDisplay controller="ctlOperate" pages="0"/>
       <relation target="n16_gkyg" sidePair="center-center,middle-middle"/>
       <Button icon="ui://32ieekgulmzf31"/>
     </component>
-    <component id="n9_gkyg" name="btnCancel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="-20,-5" size="80,80">
-      <gearXY controller="ctlOperate" pages="0,1" values="-20,-5|-20,-5"/>
+    <component id="n9_gkyg" name="btnCancel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="-70,-5" size="80,80">
+      <gearXY controller="ctlOperate" pages="0,1" values="-70,-5|-20,-5"/>
       <gearIcon controller="ctlOperate" pages="1" values="ui://32ieekguddnk35" default="ui://32ieekgulmzf30"/>
       <relation target="n16_gkyg" sidePair="center-center,middle-middle"/>
       <Button icon="ui://32ieekgulmzf30"/>
     </component>
-    <component id="n18_ddnk" name="btnMove" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="72,40" size="80,80">
+    <component id="n18_ddnk" name="btnMove" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="25,40" size="80,80">
+      <gearXY controller="ctlOperate" pages="0,1" values="25,40|72,40"/>
       <relation target="n16_gkyg" sidePair="center-center,middle-middle"/>
       <Button icon="ui://32ieekguddnk36"/>
     </component>
-    <component id="n19_ddnk" name="btnMirror" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="72,-112" size="80,80">
-      <gearXY controller="ctlOperate" pages="0,1" values="72,-112|165,-5"/>
+    <component id="n19_ddnk" name="btnMirror" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="118,40" size="80,80">
+      <gearXY controller="ctlOperate" pages="0,1" values="118,40|165,-5"/>
       <relation target="n16_gkyg" sidePair="center-center,middle-middle"/>
       <Button icon="ui://32ieekgulmzf32"/>
     </component>
