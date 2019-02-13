@@ -2,7 +2,7 @@
 <component size="60,30" extention="Button">
   <displayList>
     <image id="n1_y3zw" name="n1" src="11bwyi6x" fileName="newImg/btn_cm_yellow12.png" pkg="te1gxawo" xy="0,0" size="60,30"/>
-    <text id="n2_y3zw" name="n2" xy="8,1" size="43,28" fontSize="18" color="#523416" align="center" vAlign="middle" autoSize="height" bold="true" text="注销&#xA;"/>
+    <text id="n2_y3zw" name="n2" xy="8,3" size="43,27" fontSize="18" color="#523416" align="center" vAlign="middle" autoSize="height" bold="true" text="注销&#xA;"/>
   </displayList>
   <Button sound="ui://fknoioovtqc912" downEffect="scale" downEffectValue="0.90"/>
 </component>
