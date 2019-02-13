@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" adaptationTest="FitSize">
-  <controller name="c1" pages="0,wait,1,normal" selected="0"/>
+  <controller name="c1" pages="0,wait,1,normal" selected="1"/>
   <displayList>
     <loader id="n0_jddv" name="imgBG" xy="0,0" size="1136,640" fill="scaleFree">
       <relation target="" sidePair="width-width,height-height"/>
@@ -103,7 +103,6 @@
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
     <image id="n101_mdql" name="imgLoading" src="h03r5j" fileName="newImg/img_lineloading_1.png" xy="535,286" pivot="0.5,0.5">
-      <gearDisplay controller="c1" pages="0"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
   </displayList>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkhxqgb" designImageAlpha="0" designImageLayer="1">
-  <controller name="conDetail" pages="0,normal,1,detail" selected="0"/>
+  <controller name="conDetail" pages="0,normal,1,detail" selected="1"/>
   <displayList>
     <image id="n5_ey2h" name="bg" src="gpm0i40" fileName="newImg/bg_cm_9.png" pkg="te1gxawo" xy="45,66" size="1035,488" group="n57_rstx"/>
     <image id="n2_ey2h" name="n2" src="j21fi3x" fileName="newImg/img_cm_title5.png" pkg="te1gxawo" xy="52,61" group="n4_ey2h"/>
@@ -73,7 +73,7 @@
       <Label title="基本属性"/>
     </component>
     <text id="n34_ey2h" name="tfDetailLv" xy="97,177" size="51,27" group="n52_ey2h" fontSize="20" color="#584736" vars="true" text="LV {lv=50}"/>
-    <text id="n35_ey2h" name="tfDetailExp" xy="171,177" size="90,27" group="n52_ey2h" fontSize="20" color="#584736" vars="true" text="{curExp=200}/{nextExp=9999}"/>
+    <text id="n35_ey2h" name="tfDetailExp" xy="171,177" size="130,27" group="n52_ey2h" fontSize="20" color="#584736" vars="true" text="EXP. {curExp=200}/{nextExp=9999}"/>
     <component id="n32_ey2h" name="labFight" src="ozbms" fileName="com/comTalentTitle.xml" xy="92,216" size="193,24" group="n52_ey2h">
       <Label title="基本属性"/>
     </component>
@@ -101,7 +101,7 @@
     <component id="n19_ey2h" name="btnBack" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="127,477" size="138,46" group="n52_ey2h">
       <Button title="返回" titleColor="#ffffff" icon="ui://te1gxawoefrs1s" controller="conDetail" page="0"/>
     </component>
-    <group id="n52_ey2h" name="grpDetail" xy="92,143" size="196,380" group="n57_rstx" advanced="true" collapsed="true">
+    <group id="n52_ey2h" name="grpDetail" xy="92,143" size="209,380" group="n57_rstx" advanced="true" collapsed="true">
       <gearDisplay controller="conDetail" pages="1"/>
     </group>
     <component id="n58_mnxk" name="comStatus" src="r2bf5j" fileName="win/ComMainSaturation.xml" pkg="5hs1fuej" xy="346,131" group="n57_rstx"/>
