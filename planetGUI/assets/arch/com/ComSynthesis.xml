@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="270,400" overflow="hidden" designImage="ui://i25v0ebktwvnt" designImageOffsetX="-789" designImageOffsetY="-129" designImageAlpha="0">
-  <controller name="ctrlStatus" pages="0,normal,1,make,2,lock" selected="0"/>
-  <controller name="default" pages="0,normal,1,plant,2,farm" selected="2"/>
+  <controller name="ctrlStatus" pages="0,normal,1,make,2,lock" selected="2"/>
+  <controller name="default" pages="0,normal,1,plant,2,farm" selected="0"/>
   <displayList>
     <component id="n25_acec" name="title" src="w34u2h" fileName="com/ComTitle.xml" pkg="te1gxawo" xy="0,0" size="270,28">
       <gearText controller="default" pages="1,2" values="种植|养殖" default="合成"/>
       <relation target="" sidePair="rightext-right"/>
-      <Label title="养殖"/>
+      <Label title="合成"/>
     </component>
     <image id="n1_pqjb" name="imgSynthersisBG" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="0,37" size="270,364">
       <relation target="" sidePair="rightext-right"/>
@@ -67,14 +67,14 @@
       <gearDisplay controller="ctrlStatus" pages="0"/>
       <gearText controller="default" pages="1,2" values="种植|养殖" default="制作"/>
       <relation target="" sidePair="center-center"/>
-      <Button title="养殖" titleColor="#f7f4e8" titleFontSize="18" icon="ui://te1gxawopgixi4o"/>
+      <Button title="制作" titleColor="#f7f4e8" titleFontSize="18" icon="ui://te1gxawopgixi4o"/>
     </component>
     <image id="n22_nxks" name="imgLockBG" src="kddk2e" fileName="newImg/img_formula_bottom_2.png" xy="-10,339" size="290,25" group="n24_nxks">
       <gearDisplay controller="ctrlStatus" pages="2"/>
       <relation target="" sidePair="center-center"/>
       <relation target="n23_nxks" sidePair="width-width"/>
     </image>
-    <text id="n23_nxks" name="tfLock" xy="105,340" size="66,19" group="n24_nxks" fontSize="14" color="#ff0000" align="center" vAlign="middle" leading="0" bold="true" text="20级解锁">
+    <text id="n23_nxks" name="tfLock" xy="105,340" size="66,19" group="n24_nxks" fontSize="14" color="#ff0000" align="center" vAlign="middle" leading="0" vars="true" bold="true" text="{txt}{source=20级解锁}">
       <gearDisplay controller="ctrlStatus" pages="2"/>
       <relation target="" sidePair="center-center"/>
     </text>
