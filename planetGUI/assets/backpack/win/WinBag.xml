@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkhxqgb" designImageAlpha="0" designImageLayer="1">
-  <controller name="conDetail" pages="0,normal,1,detail" selected="1"/>
+  <controller name="conDetail" pages="0,normal,1,detail" selected="0"/>
   <displayList>
     <image id="n5_ey2h" name="bg" src="gpm0i40" fileName="newImg/bg_cm_9.png" pkg="te1gxawo" xy="45,66" size="1035,488" group="n57_rstx"/>
     <image id="n2_ey2h" name="n2" src="j21fi3x" fileName="newImg/img_cm_title5.png" pkg="te1gxawo" xy="52,61" group="n4_ey2h"/>
@@ -73,7 +73,7 @@
       <Label title="基本属性"/>
     </component>
     <text id="n34_ey2h" name="tfDetailLv" xy="97,177" size="51,27" group="n52_ey2h" fontSize="20" color="#584736" vars="true" text="LV {lv=50}"/>
-    <text id="n35_ey2h" name="tfDetailExp" xy="171,177" size="130,27" group="n52_ey2h" fontSize="20" color="#584736" vars="true" text="EXP. {curExp=200}/{nextExp=9999}"/>
+    <text id="n35_ey2h" name="tfDetailExp" xy="171,177" size="131,27" group="n52_ey2h" fontSize="20" color="#584736" vars="true" text="EXP. {curExp=200}/{nextExp=9999}"/>
     <component id="n32_ey2h" name="labFight" src="ozbms" fileName="com/comTalentTitle.xml" xy="92,216" size="193,24" group="n52_ey2h">
       <Label title="基本属性"/>
     </component>
@@ -125,7 +125,7 @@
       <gearDisplay controller="conDetail" pages="0"/>
     </group>
     <component id="n59_ru0b" name="ComSaturationDetail" src="9f2h69" fileName="com/ComSaturationDetail.xml" pkg="5hs1fuej" xy="343,180" group="n57_rstx" visible="false"/>
-    <group id="n57_rstx" name="root" xy="24,55" size="1074,499" advanced="true">
+    <group id="n57_rstx" name="root" xy="24,55" size="1074,499" advanced="true" collapsed="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>

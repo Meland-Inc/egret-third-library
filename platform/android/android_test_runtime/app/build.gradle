@@ -5,7 +5,7 @@ android {
         bellcode {
             keyAlias 'bellcode'
             keyPassword 'bellcode'
-            storeFile file('../../bellcodeKey.jks')
+            storeFile file('../../../bellcodeKey.jks')
             storePassword 'bellcode'
         }
     }
