@@ -16,17 +16,17 @@
     <group id="n13_jb5g" name="grpDurability" xy="13,58" size="46,6" group="n10_fene" visible="false" advanced="true"/>
     <text id="n9_fene" name="num" xy="59,57" pivot="1,0.5" anchor="true" size="19,19" group="n10_fene" visible="false" fontSize="12" color="#74634c" align="right" vAlign="middle" text="99"/>
     <group id="n10_fene" name="grpItemIcon" xy="6,6" size="70,69" advanced="true"/>
-    <image id="n2_sntq" name="equipedMark" src="rdy44e" fileName="newImg/img_main_item_3.png" pkg="5hs1fuej" xy="1,1" group="n4_sntq"/>
+    <image id="n2_sntq" name="equipedMark" src="rdy44e" fileName="ToolTip/newImg/img_main_item_3.png" pkg="5hs1fuej" xy="1,1" group="n4_sntq"/>
     <text id="n3_sntq" name="tfE" xy="4,4" size="18,19" group="n4_sntq" fontSize="12" align="center" vAlign="middle" autoSize="none" text="E"/>
     <group id="n4_sntq" name="grpEquipedMark" xy="1,1" size="34,32" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlMark" pages="0"/>
     </group>
-    <image id="n15_k8wc" name="imgBrokenMark" src="k8wc7g" fileName="newImg/img_main_item_8.png" pkg="5hs1fuej" xy="5,6">
+    <image id="n15_k8wc" name="imgBrokenMark" src="k8wc7g" fileName="ToolTip/newImg/img_main_item_8.png" pkg="5hs1fuej" xy="5,6">
       <gearDisplay controller="ctrlMark" pages="2"/>
     </image>
     <image id="n5_sntq" name="selectedBg" src="j21fi3v" fileName="newImg/img_cm_item_6.png" xy="0,0">
       <gearDisplay controller="button" pages="1"/>
     </image>
   </displayList>
-  <Button mode="Radio" sound="ui://fknoioovqy4416"/>
+  <Button mode="Radio"/>
 </component>

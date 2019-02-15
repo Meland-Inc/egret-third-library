@@ -8,8 +8,8 @@
     <image id="n9_ot9s" name="n9" src="efrs1w" fileName="newImg/btn_cm_yellow1.png" pkg="te1gxawo" xy="0,0" size="140,50">
       <gearDisplay controller="button" pages="1"/>
     </image>
-    <text id="n5_o7wx" name="title" xy="58,12" size="56,27" fontSize="20" color="#5b4b37" align="center" vAlign="middle" text=" LV.99"/>
+    <text id="n5_o7wx" name="title" xy="58,12" size="63,27" fontSize="20" color="#5b4b37" align="center" vAlign="middle" text=" LV.99"/>
     <loader id="n6_o7wx" name="icon" xy="28,11" size="28,28" aspect="true" align="center" vAlign="middle" fill="scale"/>
   </displayList>
-  <Button mode="Radio"/>
+  <Button mode="Radio" sound="ui://fknoioovtqc911"/>
 </component>

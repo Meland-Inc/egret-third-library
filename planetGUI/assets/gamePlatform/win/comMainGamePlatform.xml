@@ -6,7 +6,7 @@
     </image>
     <component id="n1_vkti" name="btnClose" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="te1gxawo" xy="1038,6" size="80,42">
       <relation target="" sidePair="right-right,top-top"/>
-      <Button icon="ui://te1gxawoefrs1r"/>
+      <Button icon="ui://te1gxawoefrs1r" sound="ui://fknoioovtqc912"/>
     </component>
     <list id="n5_vkti" name="lstGameList" xy="273,168" size="840,304" layout="row" overflow="scroll" scroll="horizontal" colGap="10" defaultItem="ui://h1phs2w711bwy10" vAlign="middle" autoClearItems="true">
       <relation target="" sidePair="center-center,middle-middle"/>

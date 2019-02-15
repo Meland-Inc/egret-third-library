@@ -28,7 +28,7 @@
       <relation target="" sidePair="width-width"/>
     </image>
     <image id="n2_11e02" name="titleBg" src="efrs23" fileName="newImg/img_cm_title2.png" pkg="te1gxawo" xy="462,8" group="n14_11e02"/>
-    <text id="n3_11e02" name="title" xy="499,9" size="134,28" group="n14_11e02" fontSize="22" color="#fffffe" align="center" vAlign="middle" autoSize="height" strokeColor="#686252" strokeSize="2" text="世界地图">
+    <text id="n3_11e02" name="title" xy="499,9" size="134,29" group="n14_11e02" fontSize="22" color="#fffffe" align="center" vAlign="middle" autoSize="height" strokeColor="#686252" strokeSize="2" text="世界地图">
       <gearText controller="ctrlMapMode" pages="0,2" values="世界地图|选择复活地" default="选择出生地"/>
     </text>
     <group id="n14_11e02" name="grpTitle" xy="462,8" size="210,30" advanced="true" collapsed="true">
@@ -78,7 +78,7 @@
       <gearDisplay controller="ctrlMarkOperate" pages="2"/>
       <Button icon="ui://te1gxawopagbi28" controller="ctrlMarkOperate" page="0"/>
     </component>
-    <group id="n22_11e02" name="grpMapOperateBtn" xy="1028,363" size="66,221" advanced="true" collapsed="true">
+    <group id="n22_11e02" name="grpMapOperateBtn" xy="1028,363" size="66,221" advanced="true">
       <gearDisplay controller="ctrlMapMode" pages="0"/>
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </group>
