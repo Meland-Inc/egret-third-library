@@ -73,7 +73,7 @@
       <Label title="基本属性"/>
     </component>
     <text id="n34_ey2h" name="tfDetailLv" xy="97,177" size="51,27" group="n52_ey2h" fontSize="20" color="#584736" vars="true" text="LV {lv=50}"/>
-    <text id="n35_ey2h" name="tfDetailExp" xy="171,177" size="90,27" group="n52_ey2h" fontSize="20" color="#584736" vars="true" text="{curExp=200}/{nextExp=9999}"/>
+    <text id="n35_ey2h" name="tfDetailExp" xy="171,177" size="131,27" group="n52_ey2h" fontSize="20" color="#584736" vars="true" text="EXP. {curExp=200}/{nextExp=9999}"/>
     <component id="n32_ey2h" name="labFight" src="ozbms" fileName="com/comTalentTitle.xml" xy="92,216" size="193,24" group="n52_ey2h">
       <Label title="基本属性"/>
     </component>
@@ -101,7 +101,7 @@
     <component id="n19_ey2h" name="btnBack" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="127,477" size="138,46" group="n52_ey2h">
       <Button title="返回" titleColor="#ffffff" icon="ui://te1gxawoefrs1s" controller="conDetail" page="0"/>
     </component>
-    <group id="n52_ey2h" name="grpDetail" xy="92,143" size="196,380" group="n57_rstx" advanced="true" collapsed="true">
+    <group id="n52_ey2h" name="grpDetail" xy="92,143" size="209,380" group="n57_rstx" advanced="true" collapsed="true">
       <gearDisplay controller="conDetail" pages="1"/>
     </group>
     <component id="n58_mnxk" name="comStatus" src="r2bf5j" fileName="win/ComMainSaturation.xml" pkg="5hs1fuej" xy="346,131" group="n57_rstx"/>
@@ -125,7 +125,7 @@
       <gearDisplay controller="conDetail" pages="0"/>
     </group>
     <component id="n59_ru0b" name="ComSaturationDetail" src="9f2h69" fileName="com/ComSaturationDetail.xml" pkg="5hs1fuej" xy="343,180" group="n57_rstx" visible="false"/>
-    <group id="n57_rstx" name="root" xy="24,55" size="1074,499" advanced="true">
+    <group id="n57_rstx" name="root" xy="24,55" size="1074,499" advanced="true" collapsed="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="100,30" extention="Button">
   <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
-  <controller name="taken" pages="0,Ntake,1,Taken" selected="1"/>
+  <controller name="taken" pages="0,Ntake,1,Taken" selected="0"/>
   <displayList>
     <image id="n6_11syp" name="n6" src="pgixi4o" fileName="newImg/btn_cm_other_1.png" pkg="te1gxawo" xy="0,0" size="100,30" group="n5_wqj8">
       <gearDisplay controller="taken" pages="0"/>
@@ -18,5 +18,5 @@
     </text>
     <group id="n4_wqj8" name="n4" xy="0,0" size="100,34"/>
   </displayList>
-  <Button/>
+  <Button sound="ui://fknoioovtqc913"/>
 </component>

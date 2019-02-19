@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkhxqgb" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlShortcutList" pages="0,show1,1,show2" selected="1"/>
-  <controller name="ctrlOpenBag" pages="0,close,1,open" selected="1"/>
+  <controller name="ctrlShortcutList" pages="0,show1,1,show2" selected="0"/>
+  <controller name="ctrlOpenBag" pages="0,close,1,open" selected="0"/>
   <displayList>
     <list id="n28_e7wr" name="lstShortcut3" xy="347,560" size="442,70" group="n29_e7wr" layout="flow_hz" defaultItem="ui://5hs1fuejft0q2g" autoClearItems="true">
       <item title="3"/>
@@ -11,11 +11,13 @@
       <item title="7"/>
       <item title="8"/>
     </list>
-    <component id="n18_sec0" name="btnSwitch" src="sec06b" fileName="btn/btnSwitchShortcuts.xml" xy="307,561" group="n29_e7wr"/>
-    <component id="n22_o6si" name="btnBackpack" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="800,561" size="68,68" group="n29_e7wr">
-      <Button icon="ui://5hs1fuejo6si6c"/>
+    <component id="n18_sec0" name="btnSwitch" src="sec06b" fileName="btn/btnSwitchShortcuts.xml" xy="307,561" group="n29_e7wr">
+      <Button sound="ui://fknoioovtqc911"/>
     </component>
-    <group id="n29_e7wr" name="grpClosedShortcut" xy="307,560" size="561,70" advanced="true" collapsed="true">
+    <component id="n22_o6si" name="btnBackpack" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="800,561" size="68,68" group="n29_e7wr">
+      <Button icon="ui://5hs1fuejo6si6c" sound="ui://fknoioovtqc911"/>
+    </component>
+    <group id="n29_e7wr" name="grpClosedShortcut" xy="307,560" size="561,70" advanced="true">
       <gearDisplay controller="ctrlOpenBag" pages="0"/>
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </group>
@@ -39,7 +41,7 @@
       <item title="7"/>
       <item title="8"/>
     </list>
-    <group id="n32_e7wr" name="grpOpeningShortcut" xy="88,560" size="959,70" advanced="true" collapsed="true">
+    <group id="n32_e7wr" name="grpOpeningShortcut" xy="88,560" size="959,70" advanced="true">
       <gearDisplay controller="ctrlOpenBag" pages="1"/>
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </group>

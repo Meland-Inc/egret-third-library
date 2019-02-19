@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkhpymo" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlTaskDetail" pages="0,normal,1,empty,2,noSelect" selected="2"/>
+  <controller name="ctrlTaskDetail" pages="0,normal,1,empty,2,noSelect" selected="0"/>
   <displayList>
-    <image id="n0_elis" name="bg" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="231,105" size="693,432" group="n13_ey91"/>
-    <image id="n12_ey91" name="taskDetailBg" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="452,159" size="460,350" group="n13_ey91"/>
-    <component id="n1_elis" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="881,107" size="36,36" group="n13_ey91">
+    <image id="n0_elis" name="bg" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="230,105" size="693,432" group="n13_ey91"/>
+    <image id="n12_ey91" name="taskDetailBg" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="451,159" size="460,350" group="n13_ey91"/>
+    <component id="n1_elis" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="880,107" size="36,36" group="n13_ey91">
       <Button icon="ui://te1gxawohpymyi7o"/>
     </component>
-    <image id="n8_ey91" name="lstBg" src="ot9si2v" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="246,155" size="200,350" group="n13_ey91"/>
-    <list id="n7_elis" name="lstTaskType" xy="263,169" size="171,324" group="n13_ey91" overflow="scroll" defaultItem="ui://eunktclqelis1c" autoClearItems="true">
+    <image id="n8_ey91" name="lstBg" src="ot9si2v" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="245,155" size="200,350" group="n13_ey91"/>
+    <list id="n7_elis" name="lstTaskType" xy="262,169" size="171,324" group="n13_ey91" overflow="scroll" defaultItem="ui://eunktclqelis1c" autoClearItems="true">
       <item/>
       <item/>
       <item/>
     </list>
-    <component id="n10_ey91" name="comTaskDetailPanel" src="sz33l" fileName="com/comTaskDetailPanel.xml" xy="449,161" size="460,340" group="n13_ey91">
+    <component id="n10_ey91" name="comTaskDetailPanel" src="sz33l" fileName="com/comTaskDetailPanel.xml" xy="448,161" size="460,340" group="n13_ey91">
       <gearDisplay controller="ctrlTaskDetail" pages="0"/>
     </component>
-    <text id="n15_xhia" name="tfFinalTaskName" xy="473,174" size="167,27" group="n17_xhia" fontSize="18" color="#655739" vAlign="middle" ubb="true" singleLine="true" text="终极探索·石碑之谜&#xA;"/>
-    <component id="n16_xhia" name="labFinalTaskDesc" src="faw4yi79" fileName="lab/labVScroll.xml" pkg="te1gxawo" xy="473,207" size="399,276" group="n17_xhia">
+    <text id="n15_xhia" name="tfFinalTaskName" xy="472,174" size="155,27" group="n17_xhia" fontSize="18" color="#655739" vAlign="middle" ubb="true" singleLine="true" text="终极探索·石碑之谜&#xA;"/>
+    <component id="n16_xhia" name="labFinalTaskDesc" src="faw4yi79" fileName="lab/labVScroll.xml" pkg="te1gxawo" xy="472,207" size="399,276" group="n17_xhia">
       <Label title="&quot;您好，亲爱的世界开拓者，构建者：&#xD;这里是阿尔法生命公司的一封提醒信，虽然我们重新开发了这个世界，并将其定名为源码部落，但是其实这个由虚拟人构建的世界仍然有很多连我们都不曾了解的秘密，我们发现世界各地有很多巨大的石碑，它们蕴含着巨大的能量，我们从零零碎碎的信息中发现，它们似乎有着非常重大的秘密，根据描述来看，似乎发现所有石碑并获得它们宝藏的人将会在源码部落乃至现实世界中无往而不胜呢。&#xD;所以，开拓者，构建者，伟大的冒险者们，去探索，去发现，去不断战斗吧！&#xD;我们安排了位于初始传送点的法尔智能机器人给你们提供消息。&quot;&#xD;" titleColor="#655739"/>
     </component>
-    <group id="n17_xhia" name="grpFinalTask" xy="473,174" size="399,309" group="n13_ey91" advanced="true">
+    <group id="n17_xhia" name="grpFinalTask" xy="472,174" size="399,309" group="n13_ey91" advanced="true">
       <gearDisplay controller="ctrlTaskDetail" pages="1,2"/>
     </group>
-    <group id="n13_ey91" name="root" xy="231,105" size="693,432" advanced="true">
+    <group id="n13_ey91" name="root" xy="230,105" size="693,432" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>

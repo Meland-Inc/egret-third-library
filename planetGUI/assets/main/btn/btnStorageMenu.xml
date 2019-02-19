@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="42,53" extention="Button">
-  <controller name="button" pages="0,up,1,down" selected="1"/>
+  <controller name="button" pages="0,up,1,down" selected="0"/>
   <displayList>
-    <image id="n0_rdy4" name="bg" src="b4ke78" fileName="newImg/btn_main_menu_2.png" xy="0,0" pivot="0.5,0.5" size="42,42" scale="0.9,0.9">
+    <image id="n0_rdy4" name="bg" src="b4ke78" fileName="newImg/btn_main_menu_2.png" xy="0,0" pivot="0.5,0.5" size="42,42">
       <gearSize controller="button" pages="0,1" values="42,42,1,1|42,42,0.9,0.9"/>
     </image>
-    <loader id="n3_rdy4" name="icon" xy="7,6" pivot="0.5,0.5" size="28,28" scale="0.9,0.9" url="ui://5hs1fuejr2bf5x" align="center" vAlign="middle" fill="scale" shrinkOnly="true">
+    <loader id="n3_rdy4" name="icon" xy="7,6" pivot="0.5,0.5" size="28,28" url="ui://5hs1fuejr2bf5x" align="center" vAlign="middle" fill="scale" shrinkOnly="true">
       <gearSize controller="button" pages="0,1" values="28,28,1,1|28,28,0.9,0.9"/>
     </loader>
-    <text id="n1_rdy4" name="title" xy="-12,32" pivot="0.5,0.5" size="66,23" scale="0.9,0.9" fontSize="16" color="#f5f5d2" align="center" vAlign="middle" autoSize="none" bold="true" strokeColor="#675130" strokeSize="2" text="按钮">
+    <text id="n1_rdy4" name="title" xy="0,32" pivot="0.5,0.5" size="42,23" fontSize="16" color="#f5f5d2" align="center" vAlign="middle" autoSize="none" bold="true" strokeColor="#675130" strokeSize="2" text="按钮">
       <gearSize controller="button" pages="0,1" values="42,20,1,1|66,23,0.9,0.9"/>
     </text>
   </displayList>
-  <Button/>
+  <Button sound="ui://fknoioovtqc911"/>
 </component>
