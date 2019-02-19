@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="129,44" extention="Button">
   <controller name="button" pages="0,up,1,down" selected="0"/>
-  <controller name="ctrlIsRead" pages="0,yes,1,no" selected="1"/>
+  <controller name="ctrlIsRead" pages="0,yes,1,no" selected="0"/>
   <displayList>
     <image id="n5_w34u" name="n5" src="efrs1u" fileName="newImg/btn_cm_white2.png" pkg="te1gxawo" xy="0,0" size="129,44">
       <gearDisplay controller="button" pages="0"/>
@@ -19,5 +19,5 @@
       <relation target="" sidePair="right-right,top-top"/>
     </image>
   </displayList>
-  <Button mode="Check"/>
+  <Button mode="Check" sound="ui://fknoioovtqc911"/>
 </component>

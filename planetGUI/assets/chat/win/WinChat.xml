@@ -32,7 +32,7 @@
     <image id="n13_q73n" name="friendNameBg" src="ot9si35" fileName="newImg/img_cm_name.png" pkg="te1gxawo" xy="413,169" size="80,22" group="n25_11e02">
       <relation target="n14_q73n" sidePair="width-width"/>
     </image>
-    <text id="n14_q73n" name="tfFriendName" xy="413,170" size="79,19" group="n25_11e02" fontSize="14" color="#5b4b37" align="center" vAlign="middle" ubb="true" vars="true" text="与[color=#c88316]{name=xxx}[/color]聊天中"/>
+    <text id="n14_q73n" name="tfFriendName" xy="413,170" size="79,20" group="n25_11e02" fontSize="14" color="#5b4b37" align="center" vAlign="middle" ubb="true" vars="true" text="与[color=#c88316]{name=xxx}[/color]聊天中"/>
     <group id="n25_11e02" name="grpFriendChatTitle" xy="413,169" size="81,22" group="n26_hrgt" advanced="true" collapsed="true">
       <gearDisplay controller="conFrivateChat" pages="1"/>
     </group>
@@ -98,17 +98,17 @@
       <gearDisplay controller="conShowEmoj" pages="1"/>
     </group>
     <component id="n18_q73n" name="btnEmoj" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="766,488" size="22,22" group="n26_hrgt">
-      <Button icon="ui://qagcvsbxq73n3t"/>
+      <Button icon="ui://qagcvsbxq73n3t" sound="ui://fknoioovqy4416"/>
     </component>
     <component id="n19_q73n" name="btnSend" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="806,481" size="110,34" group="n26_hrgt">
-      <Button title="发送" titleColor="#ffffff" titleFontSize="18" icon="ui://qagcvsbxq73n3w"/>
+      <Button title="发送" titleColor="#ffffff" titleFontSize="18" icon="ui://qagcvsbxq73n3w" sound="ui://fknoioovtqc911"/>
     </component>
     <component id="n21_q73n" name="comSendHistory" src="k59n3o" fileName="com/comSendHistory.xml" xy="470,367" size="278,117" group="n26_hrgt">
       <gearDisplay controller="conShowSendHistory" pages="1"/>
     </component>
     <component id="n20_q73n" name="btnHistory" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="732,497" size="10,7" group="n26_hrgt">
       <gearIcon controller="conShowSendHistory" pages="0,1" values="ui://te1gxawoot9si37|ui://te1gxawoot9si36"/>
-      <Button icon="ui://te1gxawoot9si37"/>
+      <Button icon="ui://te1gxawoot9si37" sound="ui://fknoioovtqc911"/>
     </component>
     <component id="n28_q9ya" name="btnFriendList" src="q9ya4z" fileName="btn/btnFriendList.xml" xy="819,164" group="n26_hrgt">
       <gearDisplay controller="conFrivateChat" pages="1"/>
