@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" adaptationTest="FitSize">
   <controller name="c1" pages="0,wait,1,normal" selected="1"/>
+  <controller name="c2" pages="0,,1," selected="0"/>
   <displayList>
     <loader id="n0_jddv" name="imgBG" xy="0,0" size="1136,640" fill="scaleFree">
       <relation target="" sidePair="width-width,height-height"/>
@@ -80,29 +81,41 @@
       <gearDisplay controller="c1" pages="1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <image id="n7_jddv" name="imgSelectModeBG" src="efrs1m" fileName="newImg/bg_cm_3.png" pkg="te1gxawo" xy="409,173" size="318,294" group="n9_jddv"/>
-    <text id="n28_jddv" name="tfTitle" xy="542,178" size="51,28" group="n9_jddv" font="方正准圆简体" fontSize="22" color="#ffffff" bold="true" text="登录">
+    <image id="n7_jddv" name="imgSelectModeBG" src="efrs1m" fileName="newImg/bg_cm_3.png" pkg="te1gxawo" xy="409,210" size="318,233" group="n9_jddv">
+      <gearXY controller="c2" pages="0" values="409,210" default="409,173"/>
+      <gearSize controller="c2" pages="0" values="318,233,1,1" default="318,294,1,1"/>
+    </image>
+    <text id="n28_jddv" name="tfTitle" xy="542,215" size="51,28" group="n9_jddv" font="方正准圆简体" fontSize="22" color="#ffffff" bold="true" text="登录">
+      <gearXY controller="c2" pages="0" values="542,215" default="542,178"/>
       <relation target="" sidePair="left-left,top-top"/>
     </text>
-    <component id="n27_jddv" name="btnAccountLogin" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="473,306" size="190,35" group="n9_jddv">
+    <component id="n27_jddv" name="btnAccountLogin" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="473,343" size="190,35" group="n9_jddv">
+      <gearXY controller="c2" pages="0" values="473,343" default="473,306"/>
       <Button title="账号登陆" titleColor="#675a4c" titleFontSize="18" icon="ui://te1gxawosmpoyi7a"/>
     </component>
-    <component id="n81_qo8v" name="btnVisitorLogin" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="473,257" size="190,35" group="n9_jddv">
+    <component id="n81_qo8v" name="btnVisitorLogin" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="473,294" size="190,35" group="n9_jddv">
+      <gearXY controller="c2" pages="0" values="473,294" default="473,257"/>
       <Button title="快速开始游戏" titleColor="#447b92" titleFontSize="18" icon="ui://te1gxawosmpoyi79"/>
     </component>
-    <image id="n82_qo8v" name="imgBottomBG" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="409,450" size="318,14" group="n9_jddv"/>
-    <component id="n29_ptq4" name="btnWXLogin" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="583,382" size="46,46" group="n9_jddv">
+    <image id="n82_qo8v" name="imgBottomBG" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="409,425" size="318,14" group="n9_jddv">
+      <gearXY controller="c2" pages="0" values="409,425" default="409,450"/>
+    </image>
+    <component id="n29_ptq4" name="btnWXLogin" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="583,419" size="46,46" group="n9_jddv">
+      <gearDisplay controller="c2" pages="1"/>
       <Button icon="ui://0n4pg0opsmpo5l"/>
     </component>
-    <component id="n25_jddv" name="btnQQLogin" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="506,382" size="46,46" group="n9_jddv">
+    <component id="n25_jddv" name="btnQQLogin" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="506,419" size="46,46" group="n9_jddv">
+      <gearDisplay controller="c2" pages="1"/>
       <Button icon="ui://0n4pg0opsmpo5k"/>
     </component>
-    <text id="n99_smpo" name="n99" xy="506,354" size="123,22" group="n9_jddv" fontSize="16" color="#a19c8d" align="center" autoSize="none" text="或"/>
-    <group id="n9_jddv" name="selectModeGroup" xy="409,173" size="318,294" advanced="true" collapsed="true">
+    <text id="n99_smpo" name="n99" xy="506,391" size="123,22" group="n9_jddv" fontSize="16" color="#a19c8d" align="center" autoSize="none" text="或">
+      <gearDisplay controller="c2" pages="1"/>
+    </text>
+    <group id="n9_jddv" name="selectModeGroup" xy="409,210" size="318,255" advanced="true">
       <gearDisplay controller="c1" pages="1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <image id="n101_mdql" name="imgLoading" src="h03r5j" fileName="newImg/img_lineloading_1.png" xy="535,286" pivot="0.5,0.5">
+    <image id="n101_mdql" name="imgLoading" src="h03r5j" fileName="newImg/img_lineloading_1.png" xy="535,286" pivot="0.5,0.5" locked="true" hideByEditor="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
   </displayList>
