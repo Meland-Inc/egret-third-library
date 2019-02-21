@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="375,587" overflow="scroll">
+<component size="375,587" restrictSize="630,0,0,0" overflow="scroll">
   <displayList>
     <image id="n10_dib9" name="n10" src="edsmcyi8t" fileName="newImg/img_cm_bottom_19.png" pkg="te1gxawo" xy="0,0" size="375,587">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
     <component id="n5_t09y" name="n1" src="t09yv" fileName="com/VerticalScrollComponent.xml" xy="0,0" size="375,587">
-      <relation target="" sidePair="width-width,height-height"/>
+      <relation target="" sidePair="height-height,width-width"/>
     </component>
   </displayList>
 </component>

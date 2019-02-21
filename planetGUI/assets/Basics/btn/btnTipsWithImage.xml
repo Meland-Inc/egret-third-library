@@ -3,20 +3,21 @@
   <controller name="button" pages="0,up,1,down" selected="1"/>
   <displayList>
     <image id="n1" name="n1" src="edsmcyi8v" fileName="newImg/img_cm_doubtprompt.png" pkg="te1gxawo" xy="-5,-5"/>
-    <image id="n2_dib9" name="n2" src="edsmcyi8w" fileName="newImg/img_cm_tips_3.png" pkg="te1gxawo" xy="30,-5" size="299,175">
+    <image id="n2_dib9" name="n2" src="edsmcyi8w" fileName="newImg/img_cm_tips_3.png" pkg="te1gxawo" xy="40,-5" size="558,281">
       <gearDisplay controller="button" pages="1"/>
-      <relation target="n3_dib9" sidePair="width-width,height-height"/>
+      <relation target="n3_dib9" sidePair="height-height"/>
     </image>
-    <image id="n6_j1n2" name="n6" src="edsmcyi8x" fileName="newImg/img_cm_tips_4.png" pkg="te1gxawo" xy="37,42" size="285,122">
+    <image id="n6_j1n2" name="n6" src="edsmcyi8x" fileName="newImg/img_cm_tips_4.png" pkg="te1gxawo" xy="47,38" size="542,232" aspect="true">
       <gearDisplay controller="button" pages="1"/>
       <relation target="n2_dib9" sidePair="left-left,bottom-bottom"/>
     </image>
-    <text id="n3_dib9" name="text" xy="39,6" size="280,19" fontSize="14" color="#efefef" vAlign="middle" ubb="true" autoSize="height" bold="true" text="">
+    <text id="n3_dib9" name="text" xy="52,7" size="537,24" fontSize="18" color="#efefef" vAlign="middle" ubb="true" autoSize="height" bold="true" text="">
       <gearDisplay controller="button" pages="1"/>
     </text>
-    <loader id="n5_dib9" name="loader" xy="42,48" size="276,110" align="center" vAlign="middle" fill="scale">
+    <loader id="n5_dib9" name="loader" xy="52,43" size="533,220" aspect="true" align="center" vAlign="middle" fill="scale">
       <gearDisplay controller="button" pages="1"/>
       <relation target="n2_dib9" sidePair="left-left,bottom-bottom"/>
+      <relation target="n6_j1n2" sidePair="width-width,height-height"/>
     </loader>
   </displayList>
   <Button/>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="32,32" extention="Button">
-  <controller name="button" pages="0,up,1,down" selected="1"/>
+  <controller name="button" pages="0,up,1,down" selected="0"/>
   <displayList>
     <image id="n1" name="n1" src="edsmcyi8v" fileName="newImg/img_cm_doubtprompt.png" pkg="te1gxawo" xy="-5,-5"/>
-    <image id="n2_dib9" name="n2" src="edsmcyi8w" fileName="newImg/img_cm_tips_3.png" pkg="te1gxawo" xy="29,-5" size="300,44">
+    <image id="n2_dib9" name="n2" src="edsmcyi8w" fileName="newImg/img_cm_tips_3.png" pkg="te1gxawo" xy="39,-5" size="558,48">
       <gearDisplay controller="button" pages="1"/>
-      <relation target="n3_dib9" sidePair="width-width,height-height"/>
+      <relation target="n3_dib9" sidePair="height-height"/>
     </image>
-    <text id="n3_dib9" name="text" xy="41,7" size="276,20" fontSize="14" color="#efefef" ubb="true" autoSize="height" bold="true" text="">
+    <text id="n3_dib9" name="text" xy="52,7" size="537,24" fontSize="18" color="#efefef" vAlign="middle" ubb="true" autoSize="height" bold="true" text="">
       <gearDisplay controller="button" pages="1"/>
     </text>
   </displayList>
