@@ -18,6 +18,7 @@
       <item/>
     </list>
     <list id="n8_gd5k" name="lstTaskTarget" xy="193,27" size="0,24" layout="flow_hz" colGap="3" defaultItem="ui://5hs1fuejr43m6z" autoClearItems="true"/>
+    <component id="n9_pv2f" name="comTaskTipsItem" src="pv2f81" fileName="com/ComTaskTipsItem.xml" xy="193,27" visible="false"/>
   </displayList>
   <Button mode="Radio"/>
   <relation target="n5_c3x2" sidePair="bottomext-bottom"/>
