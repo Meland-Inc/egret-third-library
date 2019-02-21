@@ -6,13 +6,13 @@
     <component id="n7_gkyg" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="215,-5" size="80,80">
       <gearDisplay controller="ctlOperate" pages="0"/>
       <relation target="n16_gkyg" sidePair="center-center,middle-middle"/>
-      <Button icon="ui://32ieekgulmzf31"/>
+      <Button icon="ui://32ieekgulmzf31" sound="ui://fknoioovtqc913"/>
     </component>
     <component id="n9_gkyg" name="btnCancel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="-70,-5" size="80,80">
       <gearXY controller="ctlOperate" pages="0,1" values="-70,-5|-20,-5"/>
       <gearIcon controller="ctlOperate" pages="1" values="ui://32ieekguddnk35" default="ui://32ieekgulmzf30"/>
       <relation target="n16_gkyg" sidePair="center-center,middle-middle"/>
-      <Button icon="ui://32ieekgulmzf30"/>
+      <Button icon="ui://32ieekgulmzf30" sound="ui://fknoioovtqc914"/>
     </component>
     <component id="n18_ddnk" name="btnMove" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="25,40" size="80,80">
       <gearXY controller="ctlOperate" pages="0,1" values="25,40|72,40"/>
