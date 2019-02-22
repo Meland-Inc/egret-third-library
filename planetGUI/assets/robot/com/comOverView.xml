@@ -73,7 +73,9 @@
     </text>
     <component id="n78_p5lw" name="comSaturationDetail" src="9f2h69" fileName="com/ComSaturationDetail.xml" pkg="5hs1fuej" xy="376,71" visible="false"/>
     <component id="n79_p5lw" name="comRobotSaturation" src="qljx2i" fileName="com/ComRobotSaturation.xml" xy="404,21"/>
-    <component id="n81_xles" name="btnRobotView" src="xles2m" fileName="btn/btnRobotView.xml" xy="335,18"/>
+    <component id="n81_xles" name="btnRobotView" src="xles2m" fileName="btn/btnRobotView.xml" xy="335,18">
+      <Button sound="ui://fknoioovtqc911"/>
+    </component>
     <component id="n84_cxkj" name="btnChangeName" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="396,279" size="29,24">
       <relation target="n26_ot9s" sidePair="right-right"/>
       <Button icon="ui://te1gxawocxkjcyi9g" sound="ui://fknoioovtqc911"/>

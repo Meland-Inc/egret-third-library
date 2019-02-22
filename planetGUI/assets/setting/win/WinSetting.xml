@@ -14,7 +14,7 @@
     <component id="n27_o8k6" name="sldImageQuality" src="9utnt" fileName="com/radioButton.xml" xy="481,244" size="320,33" group="n30_o8k6">
       <Label title="画面质量"/>
     </component>
-    <component id="n43_igxs" name="tgWeatherSystem" src="rw7fg" fileName="com/settingToggle.xml" xy="481,312" size="148,33" group="n30_o8k6">
+    <component id="n43_igxs" name="tgWeatherSystem" src="rw7fg" fileName="com/settingToggle.xml" xy="481,312" size="148,33" group="n30_o8k6" visible="false">
       <Label title="天气系统"/>
     </component>
     <component id="n29_o8k6" name="btnOpenLog" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="463,420" size="125,40" group="n30_o8k6">
@@ -26,7 +26,7 @@
     <component id="n28_o8k6" name="btnLogout" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="737,436" size="125,40" group="n30_o8k6">
       <Button title="退出登陆" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoqo8vi21"/>
     </component>
-    <component id="n45_s7hp" name="tgDayNightSystem" src="rw7fg" fileName="com/settingToggle.xml" xy="481,363" size="148,33" group="n30_o8k6">
+    <component id="n45_s7hp" name="tgDayNightSystem" src="rw7fg" fileName="com/settingToggle.xml" xy="481,363" size="148,33" group="n30_o8k6" visible="false">
       <Label title="昼夜系统"/>
     </component>
     <component id="n64_epn8" name="btnUploadLog" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="463,464" size="125,40" group="n30_o8k6">
