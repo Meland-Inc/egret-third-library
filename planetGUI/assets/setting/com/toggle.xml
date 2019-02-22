@@ -11,11 +11,11 @@
     </image>
     <component id="n8_cf98" name="n8" src="cf98i" fileName="btn/btnNull.xml" xy="1,0" size="55,33">
       <gearDisplay controller="conToggle" pages="1"/>
-      <Button controller="conToggle" page="0"/>
+      <Button sound="ui://fknoioovtqc913" controller="conToggle" page="0"/>
     </component>
     <component id="n9_cf98" name="n9" src="cf98i" fileName="btn/btnNull.xml" xy="1,0" size="55,33">
       <gearDisplay controller="conToggle" pages="0"/>
-      <Button controller="conToggle" page="1"/>
+      <Button sound="ui://fknoioovtqc911" controller="conToggle" page="1"/>
     </component>
   </displayList>
 </component>

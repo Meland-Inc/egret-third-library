@@ -17,10 +17,18 @@
       <relation target="" sidePair="bottom-bottom,right-right"/>
     </group>
     <image id="n15_edsm" name="btnOperateBg" src="t3y12d" fileName="img/img_edit_bg.png" xy="885,247" size="59,290" group="n20_edsm"/>
-    <component id="n16_edsm" name="btnReset" src="t3y128" fileName="btn/btnReset.xml" xy="887,329" group="n20_edsm"/>
-    <component id="n17_edsm" name="btnZoomOut" src="t3y12a" fileName="btn/btnZoomOut.xml" xy="887,401" group="n20_edsm"/>
-    <component id="n18_edsm" name="btnZoomIn" src="t3y12c" fileName="btn/btnZoomIn.xml" xy="887,473" group="n20_edsm"/>
-    <component id="n19_edsm" name="btnUndo" src="t3y125" fileName="btn/btnUndo.xml" xy="887,257" group="n20_edsm"/>
+    <component id="n16_edsm" name="btnReset" src="t3y128" fileName="btn/btnReset.xml" xy="887,329" group="n20_edsm">
+      <Button sound="ui://fknoioovtqc911"/>
+    </component>
+    <component id="n17_edsm" name="btnZoomOut" src="t3y12a" fileName="btn/btnZoomOut.xml" xy="887,401" group="n20_edsm">
+      <Button sound="ui://fknoioovtqc911"/>
+    </component>
+    <component id="n18_edsm" name="btnZoomIn" src="t3y12c" fileName="btn/btnZoomIn.xml" xy="887,473" group="n20_edsm">
+      <Button sound="ui://fknoioovtqc911"/>
+    </component>
+    <component id="n19_edsm" name="btnUndo" src="t3y125" fileName="btn/btnUndo.xml" xy="887,257" group="n20_edsm">
+      <Button sound="ui://fknoioovtqc911"/>
+    </component>
     <group id="n20_edsm" name="n20" xy="885,247" size="59,290" advanced="true">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </group>

@@ -27,7 +27,9 @@
     <group id="n61_11syp" name="n61" xy="334,287" size="409,31" group="n47_xev6"/>
     <component id="n41_rn6h" name="labContent" src="cbcf24" fileName="com/comContent.xml" xy="341,128" size="412,143" group="n47_xev6"/>
     <component id="n34_n6p2" name="btnRec" src="n6p21y" fileName="btn/btnRecObj.xml" xy="422,384" group="n47_xev6"/>
-    <component id="n40_rn6h" name="btnDelete" src="rn6h21" fileName="btn/btnDelete.xml" xy="595,383" group="n47_xev6"/>
+    <component id="n40_rn6h" name="btnDelete" src="rn6h21" fileName="btn/btnDelete.xml" xy="595,383" group="n47_xev6">
+      <Button sound="ui://fknoioovtqc914"/>
+    </component>
     <component id="n43_rn6h" name="comTitle" src="rn6h22" fileName="com/titlePanel.xml" xy="118,83" size="183,353" group="n47_xev6"/>
     <component id="n44_rn6h" name="comAttach" src="rn6h23" fileName="com/attachList.xml" xy="351,317" group="n47_xev6"/>
     <text id="n50_xev6" name="tfContentTitle" xy="342,97" size="405,31" group="n47_xev6" fontSize="16" color="#5b4b37" vAlign="middle" ubb="true" autoSize="none" text=""/>
