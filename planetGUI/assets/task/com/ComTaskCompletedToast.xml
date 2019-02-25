@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,160" designImage="ui://i25v0ebkhpymq" designImageAlpha="0" designImageLayer="1" bgColor="#211d1a">
+  <controller name="ctrlReward" pages="0,hasReward,1,noReward" selected="1"/>
   <displayList>
     <image id="n0_r1t9" name="bg" src="hpym12" fileName="imgNew/img_task_banner1.png" xy="0,0">
       <relation target="" sidePair="width-width"/>
     </image>
-    <image id="n1_r1t9" name="taskNameBg" src="hpym11" fileName="imgNew/img_task_banner2.png" xy="388,19" size="360,44">
-      <relation target="n2_r1t9" sidePair="width-width"/>
-      <relation target="" sidePair="center-center"/>
-    </image>
-    <text id="n2_r1t9" name="tfTitle" xy="440,26" size="246,33" fontSize="26" color="#211d1a" align="center" vAlign="middle" vars="true" text="{operate=接到}任务：{taskName=taskName}">
-      <relation target="" sidePair="center-center"/>
-    </text>
     <text id="n3_r1t9" name="tfRewardTitle" xy="508,67" size="119,24" group="n7_ey91" fontSize="20" color="#211d1a" align="center" vAlign="middle" autoSize="none" text="任务奖励"/>
     <list id="n5_r1t9" name="lstReward" xy="351,100" size="433,41" group="n7_ey91" touchable="false" layout="flow_hz" colGap="15" defaultItem="ui://eunktclqr1t914" align="center" autoClearItems="true">
       <item/>
       <item/>
     </list>
     <group id="n7_ey91" name="root" xy="351,67" size="433,74" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlReward" pages="0"/>
       <relation target="" sidePair="center-center"/>
+    </group>
+    <image id="n1_r1t9" name="taskNameBg" src="hpym11" fileName="imgNew/img_task_banner2.png" xy="388,58" size="360,44" group="n9_py6t">
+      <relation target="n2_r1t9" sidePair="width-width"/>
+      <relation target="" sidePair="center-center"/>
+    </image>
+    <text id="n2_r1t9" name="tfTitle" xy="440,65" size="246,33" group="n9_py6t" fontSize="26" color="#211d1a" align="center" vAlign="middle" vars="true" text="{operate=接到}任务：{taskName=taskName}">
+      <relation target="" sidePair="center-center"/>
+    </text>
+    <group id="n9_py6t" name="grpTitle" xy="388,58" size="360,44" advanced="true" collapsed="true">
+      <gearXY controller="ctrlReward" pages="1" values="388,58" default="388,19"/>
     </group>
   </displayList>
 </component>
