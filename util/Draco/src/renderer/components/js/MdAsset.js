@@ -16,15 +16,23 @@ const indieResSuffix = '/resource/indie.res.json';
 const mapDataSuffix = '/resource/mapData';
 const mapDataResSuffix = '/resource/mapData.res.json'
 
+const groupArr = ['preload', 'loading', 'fairyGui', 'fairySound', 'boyAni', 'girlAni', 'regSheet'];
+
+const groupFile = {
+  'common.fui': 'login',
+  'common@atlas0.png': 'login',
+  'common@atlas1.png': 'login',
+  'login.fui': 'login',
+  'login@atlas0.png': 'login'
+}
+
+const sheetArr = ['sheet', 'regSheet'];
+
 export async function importDefault() {
   try {
     let default_folder_path = Global.projPath + assetSuffix;
     let defaultConfig = {
-      groups: [
-        { name: 'preload', keyArr: [], keys: '' },
-        { name: 'fairyGui', keyArr: [], keys: '' },
-        { name: 'loading', keyArr: [], keys: '' }
-      ],
+      groups: [],
       resources: []
     };
     await importFolderFile(default_folder_path, defaultConfig);
@@ -57,10 +65,7 @@ export async function importAsync() {
   try {
     let async_folder_path = Global.projPath + asyncSuffix;
     let asyncConfig = {
-      groups: [
-        { name: 'boyAni', keyArr: [], keys: '' },
-        { name: 'girlAni', keyArr: [], keys: '' }
-      ],
+      groups: [],
       resources: []
     };
     await importFolderFile(async_folder_path, asyncConfig);
@@ -149,18 +154,15 @@ export async function oneForAll() {
 
 async function importFolderFile(folderPath, config, group = '', isSheet = false, isRootGroupFolder = false, useOriginGroup = false) {
   let files = await fsExc.readDir(folderPath);
+  let originGroup = group;
   for (const file of files) {
     let curPath = folderPath + '/' + file;
+    group = originGroup;
     if (await fsExc.isDirectory(curPath)) {
       if (!useOriginGroup) {
-        if (file == 'preload' || file == 'loading' || file == 'fairyGui' || file == 'boyAni' || file == 'girlAni') {
+        if (groupArr.some(value => { return value === file })) {
           group = file;
-        } else if (
-          group == 'preload' ||
-          group == 'loading' ||
-          group == 'fairyGui' ||
-          group == 'boyAni' ||
-          group == 'girlAni') {
+        } else if (groupArr.some(value => { return value === group })) {
         } else {
           group = '';
         }
@@ -172,13 +174,16 @@ async function importFolderFile(folderPath, config, group = '', isSheet = false,
 
       console.log(`--> isRootGroupFolder:${isRootGroupFolder} group:${group}`);
 
-      if (file == 'sheet') {
+      if (sheetArr.some(value => { return value === file })) {
         isSheet = true;
       } else {
         isSheet = false;
       }
       await importFolderFile(curPath, config, group, isSheet, false, isRootGroupFolder);
     } else {
+      if (groupFile[file]) {
+        group = groupFile[file];
+      }
       await importSingleFile(curPath, config, group, isSheet);
     }
   }

@@ -46,6 +46,22 @@
     </mu-container>
     <mu-container>
       <div class="select-control-group">
+        <!-- <mu-flex class="select-control-row">
+          <mu-checkbox :value="sheetMode" v-model="sheetMode" label="图集模式"></mu-checkbox>
+        </mu-flex>-->
+        <mu-flex class="flex-wrapper" align-items="center">
+          <mu-col span="12" lg="2" sm="2">
+            <mu-radio :value="false" v-model="sheetMode" label="非图集模式"></mu-radio>
+          </mu-col>
+          <mu-col span="12" lg="2" sm="2">
+            <mu-radio :value="true" v-model="sheetMode" label="图集模式"></mu-radio>
+          </mu-col>
+        </mu-flex>
+      </div>
+    </mu-container>
+    <mu-divider/>
+    <mu-container>
+      <div class="select-control-group">
         <mu-flex class="select-control-row">
           <mu-checkbox
             label="全选"
@@ -81,16 +97,18 @@ export default {
       isPackerTextureLoading: false,
       isCopyTextureOutLoading: false,
 
+      sheetMode: mdTexture.getSheetMode(),
       checkBoxValues: mdTexture.getCheckBoxValues(),
       checkBoxData: mdTexture.getCheckBoxData(),
       checkAll: true
     };
   },
   watch: {
-    checkBoxData: function(val, oldVal) {
-      if (val != oldVal) {
-        mdTexture.setCheckBoxData(val);
-      }
+    sheetMode: val => {
+      mdTexture.setSheetMode(val);
+    },
+    checkBoxData: val => {
+      mdTexture.setCheckBoxData(val);
     }
   },
   methods: {
