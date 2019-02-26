@@ -54,41 +54,13 @@
           <mu-list-item-content>
             <mu-text-field
               class="text-setting"
-              label="设置Android项目目录"
-              v-model="client_android_path"
+              label="设置Client git目录"
+              v-model="client_client_path"
               label-float
             />
           </mu-list-item-content>
           <mu-list-item-action>
-            <mu-button color="purple500" @click="onAndroidPathClick">选择</mu-button>
-          </mu-list-item-action>
-        </mu-list-item>
-
-        <mu-list-item>
-          <mu-list-item-content>
-            <mu-text-field
-              class="text-setting"
-              label="设置IOS项目目录"
-              v-model="client_ios_path"
-              label-float
-            />
-          </mu-list-item-content>
-          <mu-list-item-action>
-            <mu-button color="green500" @click="onIOSPathClick">选择</mu-button>
-          </mu-list-item-action>
-        </mu-list-item>
-
-        <mu-list-item>
-          <mu-list-item-content>
-            <mu-text-field
-              class="text-setting"
-              label="设置微信小游戏项目目录"
-              v-model="client_wechat_path"
-              label-float
-            />
-          </mu-list-item-content>
-          <mu-list-item-action>
-            <mu-button color="lime500" @click="onWechatPathClick">选择</mu-button>
+            <mu-button color="purple500" @click="onClientPathClick">选择</mu-button>
           </mu-list-item-action>
         </mu-list-item>
 
@@ -125,9 +97,7 @@ export default {
             client_project_path: "",
             client_proto_path:"",
             client_svn_path:"",
-            client_android_path:"",
-            client_ios_path:"",
-            client_wechat_path:""
+            client_client_path:"",
         }
     },
     methods: {
@@ -140,14 +110,8 @@ export default {
         onSvnPathClick(){
             ipcRenderer.send('open_client_svn_path');
         },
-        onAndroidPathClick(){
-            ipcRenderer.send('open_client_android_path');
-        },
-        onIOSPathClick(){
-            ipcRenderer.send('open_client_ios_path');
-        },
-        onWechatPathClick(){
-            ipcRenderer.send('open_client_wechat_path');
+        onClientPathClick(){
+            ipcRenderer.send('open_client_client_path');
         },
     },
     watch: {
@@ -171,19 +135,9 @@ export default {
                 localStorage.setItem("client_svn_path", val);
             }
         },
-        client_android_path: (val,oldVal) => {
+        client_client_path: (val,oldVal) => {
             if (val != oldVal) {
-                localStorage.setItem("client_android_path", val);
-            }
-        },
-        client_ios_path: (val,oldVal) => {
-            if (val != oldVal) {
-                localStorage.setItem("client_ios_path", val);
-            }
-        },
-        client_wechat_path: (val,oldVal) => {
-            if (val != oldVal) {
-                localStorage.setItem("client_wechat_path", val);
+                localStorage.setItem("client_client_path", val);
             }
         },
     },
@@ -192,18 +146,13 @@ export default {
         this.client_project_path = localStorage.getItem("client_project_path");
         this.client_proto_path = localStorage.getItem("client_proto_path");
         this.client_svn_path = localStorage.getItem("client_svn_path");
-
-        this.client_android_path = localStorage.getItem("client_android_path");
-        this.client_ios_path = localStorage.getItem("client_ios_path");
-        this.client_wechat_path = localStorage.getItem("client_wechat_path");
+        this.client_client_path = localStorage.getItem("client_client_path");
 
         ipcRenderer.removeAllListeners([
             'selected_client_project_path', 
             'selected_client_proto_path', 
             'selected_client_svn_path', 
-            'selected_client_android_path',
-            'selected_client_ios_path',
-            'selected_client_wechat_path'
+            'selected_client_client_path',
         ]);
 
         ipcRenderer.on('selected_client_project_path', (event, path) => {
@@ -224,21 +173,9 @@ export default {
             }
         });
 
-        ipcRenderer.on('selected_client_android_path', (event, path) => {
+        ipcRenderer.on('selected_client_client_path', (event, path) => {
             if(path){
-                this.client_android_path = path[0];
-            }
-        });
-
-        ipcRenderer.on('selected_client_ios_path', (event, path) => {
-            if(path){
-                this.client_ios_path = path[0];
-            }
-        });
-
-        ipcRenderer.on('selected_client_wechat_path', (event, path) => {
-            if(path){
-                this.client_wechat_path = path[0];
+                this.client_client_path = path[0];
             }
         });
     }

@@ -70,61 +70,13 @@ exports.init = (mainWindow) => {
         })
     })
 
-    ipcMain.on('open_client_android_path', (event) => {
+    ipcMain.on('open_client_client_path', (event) => {
         dialog.showOpenDialog({
             properties: ['openFile', 'openDirectory']
         }, (files) => {
-            event.sender.send('selected_client_android_path', files);
+            event.sender.send('selected_client_client_path', files);
         })
     })
-
-    ipcMain.on('open_client_ios_path', (event) => {
-        dialog.showOpenDialog({
-            properties: ['openFile', 'openDirectory']
-        }, (files) => {
-            event.sender.send('selected_client_ios_path', files);
-        })
-    })
-
-    ipcMain.on('open_client_wechat_path', (event) => {
-        dialog.showOpenDialog({
-            properties: ['openFile', 'openDirectory']
-        }, (files) => {
-            event.sender.send('selected_client_wechat_path', files);
-        })
-    })
-
-    // ipcMain.on('open_new_version_path', (event) => {
-    //     dialog.showOpenDialog({
-    //         properties: ['openFile', 'openDirectory']
-    //     }, (files) => {
-    //         event.sender.send('selected_new_version_path', files);
-    //     })
-    // })
-
-    // ipcMain.on('open_old_version_path', (event) => {
-    //     dialog.showOpenDialog({
-    //         properties: ['openFile', 'openDirectory']
-    //     }, (files) => {
-    //         event.sender.send('selected_old_version_path', files);
-    //     })
-    // })
-
-    // ipcMain.on('open_client_csv_path', (event) => {
-    //     dialog.showOpenDialog({
-    //         properties: ['openFile', 'openDirectory']
-    //     }, (files) => {
-    //         event.sender.send('selected_client_csv_path', files);
-    //     })
-    // })
-
-    // ipcMain.on('open_client_texture_path', (event) => {
-    //     dialog.showOpenDialog({
-    //         properties: ['openFile', 'openDirectory']
-    //     }, (files) => {
-    //         event.sender.send('selected_client_texture_path', files);
-    //     })
-    // })
 
     ipcMain.on('open_client_modify_edition_path', (event) => {
         dialog.showOpenDialog({

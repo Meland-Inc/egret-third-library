@@ -7,14 +7,16 @@ import { error } from 'util';
 // global.svnPublishPath = global.svnPath + '/client/publish';
 
 export class Global {
-    static currentVersion = "1.9.0 beta3";
+    static currentVersion = "1.9.0 beta6";
     static projPath = localStorage.getItem('client_project_path');
     static projPath = localStorage.getItem('client_project_path');
     static protoPath = localStorage.getItem('client_proto_path');
     static svnPath = localStorage.getItem('client_svn_path');
-    static androidPath = localStorage.getItem('client_android_path');
-    static iosPath = localStorage.getItem('client_ios_path');
-    static weChatPath = localStorage.getItem('client_wechat_path');
+    static clientPath = localStorage.getItem('client_client_path');
+
+    static get androidPath() {
+        return Global.clientPath + '/platform/android';
+    }
 
     static get svnCsvPath() {
         return Global.svnPath + '/settings/csv';
@@ -36,6 +38,11 @@ export class Global {
     static get pbMessagePath() {
         return Global.protoPath + '/pbmessage';
     }
+
+    static get releasePath() {
+        return Global.projPath + '/bin-release/web';
+    }
+
 
     static objectCells = [];
     static variaCells = [];
@@ -123,20 +130,8 @@ ipcRenderer.on('selected_client_svn_path', (event, path) => {
     }
 });
 
-ipcRenderer.on('selected_client_android_path', (event, path) => {
+ipcRenderer.on('selected_client_client_path', (event, path) => {
     if (path) {
-        Global.androidPath = path[0];
-    }
-});
-
-ipcRenderer.on('selected_client_ios_path', (event, path) => {
-    if (path) {
-        Global.iosPath = path[0];
-    }
-});
-
-ipcRenderer.on('selected_client_wechat_path', (event, path) => {
-    if (path) {
-        Global.weChatPath = path[0];
+        Global.clientPath = path[0];
     }
 });

@@ -1,6 +1,7 @@
 import { Global } from "./Global.js";
 import * as spawnExc from "./SpawnExecute.js";
 import * as fsExc from "./FsExecute.js";
+import * as tableExc from "./TableExecute";
 
 import * as archiver from "archiver";
 import * as fs from "fs";
@@ -23,9 +24,15 @@ export function zipCsv() {
         for (let i = 0; i < pa.length; i++) {
             const element = pa[i];
             if (element.indexOf(".csv") != -1) {
-                archive.append(fs.createReadStream(Global.svnCsvPath + "/" + element), {
+                let csvContent = await tableExc.readCsvContent(Global.svnCsvPath + "/" + element);
+                archive.append(csvContent, {
                     name: element
                 });
+
+
+                // archive.append(fs.createReadStream(Global.svnCsvPath + "/" + element), {
+                //     name: element
+                // });
             }
         }
 
@@ -39,6 +46,19 @@ export function zipCsv() {
         });
         archive.finalize();
     })
+}
+
+/** arrayBuffer 转换为utf8 */
+function arrayBuff2utf8(buf, encoding = "gbk") {
+    return new Promise((resolve, reject) => {
+        let bb = new Blob([buf]);
+        let f = new FileReader();
+        f.onload = (evt) => {
+            // callback(args, evt.target["result"])
+            resolve(evt.target["result"]);
+        }
+        f.readAsText(bb, encoding);
+    });
 }
 
 export async function createTs() {
@@ -161,18 +181,22 @@ function createTable(name) {
 function createCell(name, data) {
     data = data.toString();
 
-    let preContent =
-        "/**\r\n" +
-        " * @author 雪糕\r\n" +
-        " * @desc " +
-        name +
-        "表结构体\r\n" +
-        " *\r\n" +
-        " */\r\n" +
-        "class " +
-        name +
-        "Cell {\r\n";
-    let endContent = "\tpublic constructor() {\r\n" + "\t}\r\n" + "}";
+    let preContent = `
+/**
+ * @author 雪糕
+ * @desc ${name} 表结构体
+ *
+ */
+class ${name}Cell {`
+
+    let funcContent = `
+
+    public static is(data: Object): boolean {
+        if (`
+
+    let endContent = `
+
+}`;
     let centerContent = "";
     let rows = data.split("\r\n");
     if (rows.length < 3) {
@@ -196,10 +220,13 @@ function createCell(name, data) {
         throw content;
     }
 
+
     for (let i = 0; i < attrs.length; i++) {
-        if (attrs[i] === "") {
+        const attr = attrs[i];
+        if (attr === "") {
             continue;
         }
+
         let desc = descs[i] ? descs[i] : "";
         let type = "";
         if (types[i]) {
@@ -243,7 +270,6 @@ function createCell(name, data) {
                     let content = `${name} 表里有未知类型:${types[i]} -- 字段名: ${descs[i]}`;
                     alert(content);
                     throw content;
-                    return;
                     type = "any";
                     break;
             }
@@ -251,12 +277,28 @@ function createCell(name, data) {
             type = "any";
         }
 
-        if (attrs[i] != "null") {
-            centerContent += "\t/** " + desc + " */\r\n";
-            centerContent += "\tpublic " + attrs[i] + ": " + type + ";\r\n";
+        if (attr != "null") {
+            centerContent += `
+    /** ${desc} */`;
+            centerContent += `
+    public ${attr}: ${type};`;
+
+            if (i == 0) {
+                funcContent += `data.hasOwnProperty("${attr}")
+            `
+            } else {
+                funcContent += `&& data.hasOwnProperty("${attr}")
+            `
+            }
         }
     }
 
-    let content = preContent + centerContent + endContent;
+    funcContent += `){
+            return true;
+        }
+        return false;
+    }`
+
+    let content = preContent + centerContent + funcContent + endContent;
     return content;
 }

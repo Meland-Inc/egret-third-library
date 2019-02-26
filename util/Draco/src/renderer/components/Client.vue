@@ -62,6 +62,13 @@
             <mu-list-item-title>Publish</mu-list-item-title>
           </mu-list-item>
 
+          <mu-list-item button :ripple="false" value="ClientApp">
+            <mu-list-item-action>
+              <mu-icon slot="left" value="weekend"/>
+            </mu-list-item-action>
+            <mu-list-item-title>App</mu-list-item-title>
+          </mu-list-item>
+
           <!-- <mu-list-item button :ripple="false" value="ClientTest">
                   <mu-list-item-action>
                     <mu-icon slot="left" value="crop_original" />
@@ -83,7 +90,7 @@
         </div>
       </div>
     </div>
-    <div class="footer">Draco ©2018 Created by Muse-UI</div>
+    <div class="footer">Draco ©2019 Created by Muse-UI</div>
 
     <mu-snackbar position="bottom-end" color="success" :open.sync="toastVisible" @close="hideToast">
       <mu-icon left value="check_circle"></mu-icon>
@@ -252,7 +259,8 @@ export default {
     ClientMapData: require("./Client/ClientMapData"),
     ClientSetting: require("./Client/ClientSetting"),
     ClientPublish: require("./Client/ClientPublish"),
-    ClientAsset: require("./Client/ClientAsset")
+    ClientAsset: require("./Client/ClientAsset"),
+    ClientApp: require("./Client/ClientApp")
     // ClientModule: require("./backup/ClientModule"),
     // ClientTest: require("./backup/ClientTest")
   },
@@ -335,14 +343,16 @@ export default {
   width: 20%;
   float: left;
   background-color: white;
-  margin-bottom: -4000px;
-  padding-bottom: 4000px;
+  min-height: 80vh;
+  // margin-bottom: -4000px;
+  // padding-bottom: 4000px;
 }
 
 .content-right {
   width: 80%;
   display: inline-block;
-  padding: 10px 10px;
+  padding-left: 10px;
+
   background-color: rgba(0, 0, 0, 0);
 }
 
@@ -352,12 +362,14 @@ export default {
 
 .body {
   background-color: white;
-  border-radius: 5px;
-  min-height: 860px;
+
+  display: flex;
+  min-height: 80vh;
+  flex-direction: column;
 }
 
 .footer {
-  padding: 20px 0;
+  // padding: 20px 0;
   text-align: center;
 }
 
