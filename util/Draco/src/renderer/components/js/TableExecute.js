@@ -1,11 +1,18 @@
 import * as iconv from 'iconv-lite';
 import * as fsExc from "./FsExecute.js";
 
-export async function getCsvCells(path) {
+export async function readCsvContent(path) {
     let content = await fsExc.readFile(path, null);
     let buffer = new Buffer(content, 'gbk');
-    content = iconv.decode(buffer, 'gbk');
+    return iconv.decode(buffer, 'gbk');
+}
 
+export async function getCsvCells(path) {
+    // let content = await fsExc.readFile(path, null);
+    // let buffer = new Buffer(content, 'gbk');
+    // content = iconv.decode(buffer, 'gbk');
+
+    let content = await readCsvContent(path);
     return csvToArray(content);
 }
 

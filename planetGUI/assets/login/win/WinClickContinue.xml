@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" adaptationTest="FitSize">
-  <controller name="status" pages="0,,1," selected="0"/>
+  <controller name="status" pages="0,,1,full ,2,close" selected="1"/>
   <displayList>
-    <text id="n2_jgot" name="n2" xy="515,524" size="101,31" group="n5_hsrb" font="方正准圆简体" fontSize="24" color="#ffffff" text="点击继续"/>
-    <image id="n3_jgot" name="n3" src="jgot2a" fileName="newImg/img/btn_build_right.png" xy="470,528" group="n5_hsrb"/>
-    <image id="n4_jgot" name="n4" src="jgot29" fileName="newImg/img/btn_build_left.png" xy="650,528" group="n5_hsrb"/>
-    <group id="n5_hsrb" name="n5" xy="470,524" size="195,31" hideByEditor="true" visible="false" advanced="true" collapsed="true">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </group>
     <loader id="n1_jgot" name="imgBG" xy="0,0" size="1136,640" fill="scaleFree">
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
@@ -26,41 +20,39 @@
     </component>
     <text id="n15_kk6f" name="tfAgreement" xy="338,574" size="497,22" group="n19_kk6f" fontSize="16" color="#ffffff" ubb="true" text="我已经详细阅读并同意 [color=#FB6A23]腾语游戏使用许可及服务协议[/color] 和 [color=#FB6A23]腾语隐私政策[/color]"/>
     <graph id="n29_hcdu" name="n29" xy="337,574" size="497,22" group="n19_kk6f" type="rect" lineSize="0" fillColor="#00ffffff"/>
-    <group id="n19_kk6f" name="n19" xy="300,572" size="535,24" advanced="true">
+    <group id="n19_kk6f" name="n19" xy="300,572" size="535,24" advanced="true" collapsed="true">
       <relation target="" sidePair="bottom-bottom,center-center"/>
     </group>
     <loader id="n17_kk6f" name="n17" xy="437,519" size="247,37" group="n20_c2vq" touchable="false" url="ui://0n4pg0opkk6f5c" fill="scaleFree"/>
     <text id="n18_kk6f" name="tfStatus" xy="436,519" size="247,37" group="n20_c2vq" fontSize="22" color="#ffffff" align="center" vAlign="middle" leading="0" autoSize="none" bold="true" text="搜索服务器列表..."/>
-    <group id="n20_c2vq" name="n20" xy="436,519" size="248,37" advanced="true">
+    <group id="n20_c2vq" name="n20" xy="436,519" size="248,37" advanced="true" collapsed="true">
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </group>
     <loader id="n21_c2vq" name="ladSelectServer" xy="341,465" size="453,35" group="n28_c2vq" url="ui://0n4pg0opc2vq5d"/>
     <image id="n22_c2vq" name="n22" src="c2vq5e" fileName="newImg/img_login_baoman.png" xy="373,476" group="n28_c2vq">
-      <gearDisplay controller="status" pages="1"/>
+      <gearDisplay controller="status" pages="1,2"/>
+      <gearLook controller="status" pages="2" values="1,0,1,1" default="1,0,0,1"/>
     </image>
     <image id="n23_c2vq" name="n23" src="c2vq5f" fileName="newImg/img_login_changtong.png" xy="373,475" group="n28_c2vq">
       <gearDisplay controller="status" pages="0"/>
     </image>
-    <text id="n24_c2vq" name="n24" xy="428,473" size="49,28" group="n28_c2vq" fontSize="22" color="#20b311" vAlign="middle" text="畅通">
-      <gearColor controller="status" pages="0,1" values="#20b311,#000000|#ff5400,#000000"/>
-      <gearText controller="status" pages="0,1" values="畅通|爆满"/>
+    <text id="n24_c2vq" name="n24" xy="428,473" size="49,28" group="n28_c2vq" fontSize="22" color="#ff5400" vAlign="middle" text="爆满">
+      <gearColor controller="status" pages="0,1,2" values="#20b311,#000000|#ff5400,#000000|#666666,#000000"/>
+      <gearText controller="status" pages="0,1,2" values="畅通|爆满|维护"/>
     </text>
     <text id="n25_c2vq" name="tfServerName" xy="487,472" size="188,29" group="n28_c2vq" fontSize="22" color="#4c422c" align="center" vAlign="middle" autoSize="none" text=""/>
     <text id="n26_c2vq" name="n26" xy="697,472" size="49,28" group="n28_c2vq" fontSize="22" color="#8d573c" align="center" vAlign="middle" text="换区"/>
     <image id="n27_c2vq" name="n27" src="c2vq5g" fileName="newImg/btn_login_enter.png" xy="751,477" group="n28_c2vq"/>
-    <group id="n28_c2vq" name="n28" xy="341,465" size="453,36" advanced="true">
+    <group id="n28_c2vq" name="n28" xy="341,465" size="453,36" advanced="true" collapsed="true">
       <relation target="" sidePair="bottom-bottom,center-center"/>
     </group>
     <image id="n30_h03r" name="imgLoading" src="h03r5j" fileName="newImg/img_lineloading_1.png" xy="535,286" pivot="0.5,0.5">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
+    <component id="n31_rjim" name="comQueue" src="rjim5m" fileName="com/ComQueue.xml" xy="384,217">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
   </displayList>
-  <transition name="t0" autoPlay="true" autoPlayRepeat="-1">
-    <item time="0" type="Alpha" target="n3_jgot" tween="true" startValue="1" endValue="0" duration="24" ease="Linear"/>
-    <item time="0" type="Alpha" target="n4_jgot" tween="true" startValue="1" endValue="0" duration="24" ease="Linear"/>
-    <item time="24" type="Alpha" target="n3_jgot" tween="true" startValue="0" endValue="1" duration="24" ease="Linear"/>
-    <item time="24" type="Alpha" target="n4_jgot" tween="true" startValue="0" endValue="1" duration="24" ease="Linear"/>
-  </transition>
   <transition name="t1" autoPlay="true" autoPlayRepeat="-1">
     <item time="0" type="Rotation" target="n30_h03r" tween="true" startValue="0" endValue="360" duration="24" ease="Linear"/>
   </transition>

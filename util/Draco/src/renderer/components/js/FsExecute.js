@@ -3,6 +3,18 @@ import * as del from 'delete';
 import * as fs from 'fs';
 import * as cpy from 'cpy';
 
+export async function delAndCopyFile(fromPath, toPath, needLoop) {
+    if (await exists(toPath)) {
+        if (await isDirectory(toPath)) {
+            delFolder(toPath);
+        } else {
+            delFile(toPath);
+        }
+    }
+
+    await copyFile(fromPath, toPath, needLoop);
+}
+
 /**
  * 拷贝指定路径的文件
  * @param {*} fromPath 来源路径 可以是文件路径,也可以是文件夹路径
@@ -10,7 +22,8 @@ import * as cpy from 'cpy';
  * @param needLoop 是否循环文件夹拷贝
  */
 export async function copyFile(fromPath, toPath, needLoop) {
-    if (!needLoop) {
+    let isFolder = await isDirectory(fromPath);
+    if (!needLoop || !isFolder) {
         await cpy(fromPath, toPath);
         return;
     }
