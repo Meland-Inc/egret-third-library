@@ -299,7 +299,7 @@ namespace egret.sys {
         updateError(info: string): void;
     }
 
-    declare let FPS: { new (stage: Stage, showFPS: boolean, showLog: boolean, logFilter: string, styles: Object): FPS };
+    declare let FPS: { new(stage: Stage, showFPS: boolean, showLog: boolean, logFilter: string, styles: Object): FPS };
 
     /**
      * @private
@@ -500,7 +500,9 @@ module egret {
     /**
      * @private
      */
-    export var nativeRender: boolean = __global.nativeRender;
+    export var nativeRender: boolean = false;
+    //微端全量包也不使用native模式 现在强制走网页模式 避免很多兼容性问题 比如cacheAsBitmap不更新问题
+    // export var nativeRender: boolean = __global.nativeRender;
 
     //检测版本是否匹配，不匹配改用非原生加速渲染方式
     if (nativeRender) {

@@ -5076,6 +5076,9 @@ var egret;
             if (this.$mask && !this.$mask.$hitTest(stageX, stageY)) {
                 return null;
             }
+            //游戏中太多场景的东西需要触摸 会有异常 保留了按下时搜索所有 不过move时不会再重新寻找 也就不需要这里优化了
+            // //如果不能触摸子直接跳过 游戏显示对象太多 节省性能  modify by xiangqian 2018.11.30
+            // if (this.$touchChildren) {
             var children = this.$children;
             var found = false;
             var target = null;
@@ -5104,6 +5107,7 @@ var egret;
             if (found) {
                 return this;
             }
+            // }
             return _super.prototype.$hitTest.call(this, stageX, stageY);
         };
         /**
@@ -13457,7 +13461,9 @@ var egret;
     /**
      * @private
      */
-    egret.nativeRender = __global.nativeRender;
+    egret.nativeRender = false;
+    //微端全量包也不使用native模式 现在强制走网页模式 避免很多兼容性问题 比如cacheAsBitmap不更新问题
+    // export var nativeRender: boolean = __global.nativeRender;
     //检测版本是否匹配，不匹配改用非原生加速渲染方式
     if (egret.nativeRender) {
         var nrABIVersion = egret_native.nrABIVersion;
@@ -14496,8 +14502,9 @@ var egret;
                 }
                 this.lastTouchX = x;
                 this.lastTouchY = y;
-                var target = this.findTarget(x, y);
-                egret.TouchEvent.dispatchTouchEvent(target, egret.TouchEvent.TOUCH_MOVE, true, true, x, y, touchPointID, true);
+                //直接用begin按下的目标 没必要再去搜寻 而且目标还可能会变化 业务层应该不想 modify by xiangqian 2019.1.28
+                // let target = this.findTarget(x, y);
+                egret.TouchEvent.dispatchTouchEvent(this.touchDownTarget[touchPointID], egret.TouchEvent.TOUCH_MOVE, true, true, x, y, touchPointID, true);
             };
             /**
              * @private
