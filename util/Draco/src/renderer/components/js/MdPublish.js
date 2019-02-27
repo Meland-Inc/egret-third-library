@@ -13,12 +13,9 @@ const mapDataResSuffix = 'resource/mapData.res.json';
 const asyncResSuffix = 'resource/async.res.json';
 const indieResSuffix = 'resource/indie.res.json';
 
-export var releasePath = Global.projPath + releaseSuffix;
-
 export var svnPublishPath = Global.svnPath + '/client/publish';
 
 var projNewVersionPath = Global.projPath + releaseSuffix + newVersion;
-export function getProjNewVersionPath() { return projNewVersionPath; }
 
 var releaseVersion;
 export function getReleaseVersion() { return releaseVersion; }
@@ -51,7 +48,7 @@ var checkBoxData = [];
 export function getCheckBoxData() { return checkBoxData; }
 export function setCheckBoxData(value) { checkBoxData = value; }
 
-var needCover;
+var needCover = true;
 export function setNeedCover(value) { needCover = value; }
 export function getNeedCover() { return needCover; }
 
@@ -72,6 +69,10 @@ export async function publishProject() {
     if (!versionType) {
         Global.snack('请先选择版本更新类型');
         return;
+    }
+
+    if (needCover) {
+        await checkClearRelease(releaseVersion);
     }
 
     try {
@@ -346,6 +347,13 @@ export async function checkExistVersion(version) {
     let versionList = JSON.parse(versionListContent);
     let index = versionList.versionList.indexOf(version);
     return index != -1;
+}
+
+export async function checkClearRelease(version) {
+    let releasePath = `${Global.projPath}/bin-release/web/${version}`;
+    if (await fsExc.exists(releasePath)) {
+        await fsExc.delFolder(releasePath);
+    }
 }
 
 /**
