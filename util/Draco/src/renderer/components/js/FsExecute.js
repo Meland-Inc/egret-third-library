@@ -138,18 +138,8 @@ export function writeFile(path, content) {
 }
 
 //获取文件所在目录
-export function getFileFolder(filePath) {
-    filePath = path.normalize(filePath);
-    let filePathArr = filePath.split('/');
-    let fileFolder = '';
-    for (let i = 0; i < filePathArr.length; i++) {
-        const element = filePathArr[i];
-        if (i != filePathArr.length - 1) {
-            fileFolder += element + '/';
-        }
-    }
-
-    return fileFolder;
+export function dirname(filePath) {
+    return path.dirname(filePath);
 }
 
 /**
@@ -158,4 +148,20 @@ export function getFileFolder(filePath) {
  */
 export async function exists(path) {
     return await fs.existsSync(path);
+}
+
+//比较两个文件的MD5
+export async function mergeFileByMd5(oldFilePath, newFilePath) {
+    let oldFile = await fsExc.readFile(oldFilePath);
+    let newFile = await fsExc.readFile(newFilePath);
+    const oldFileMd5 = crypto
+        .createHash('md5')
+        .update(oldFile)
+        .digest('hex');
+    const newFileMd5 = crypto
+        .createHash('md5')
+        .update(newFile)
+        .digest('hex');
+
+    return oldFileMd5 == newFileMd5;
 }
