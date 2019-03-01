@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="170,52" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <loader id="n0_132oi" name="icon" xy="0,3" size="170,50" url="ui://te1gxawoefrs1u" fill="scaleFree">
+      <gearIcon controller="button" pages="1" values="ui://te1gxawoefrs1x" default="ui://te1gxawoefrs1u"/>
+    </loader>
+    <loader id="n3_132oi" name="arrow" xy="149,24" size="10,7" url="ui://te1gxawoot9si36">
+      <gearIcon controller="button" pages="0" values="ui://te1gxawoot9si36" default="ui://te1gxawoot9si37"/>
+    </loader>
+    <text id="n2_132oi" name="title" xy="20,16" size="125,24" fontSize="18" color="#655739" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" text="终极任务"/>
+    <list id="n5_132oi" name="lstDropDown" xy="10,50" size="150,0" overflow="hidden" defaultItem="ui://eunktclqelis1f" align="center" autoClearItems="true">
+      <gearDisplay controller="button" pages="1"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+  <Button mode="Radio" sound="ui://fknoioovtqc911"/>
+  <relation target="n5_132oi" sidePair="bottomext-bottom"/>
+</component>
