@@ -1,14 +1,23 @@
 package org.egret.launcher.ymbl;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
+import android.util.Base64;
 import android.util.Log;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import org.egret.launcher.egret_android_launcher.NativeActivity;
 import org.egret.launcher.egret_android_launcher.NativeCallback;
 import org.egret.launcher.egret_android_launcher.NativeLauncher;
 import org.egret.runtime.launcherInterface.INativePlayer;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
 
 public class MainActivity extends NativeActivity {
     private final String token = "ab4ba7991c8f1d27daf5ca3a3036b9c1d9b8d35d5ac36b3cf33540c4f6c66868";
@@ -109,13 +118,51 @@ public class MainActivity extends NativeActivity {
         launcher.loadRuntime(token);
     }
 
-    private void setExternalInterfaces() {
-        launcher.setExternalInterface("callNative", new INativePlayer.INativeInterface() {
+       private void setExternalInterfaces() {
+        launcher.setExternalInterface("sendToNative", new INativePlayer.INativeInterface() {
             @Override
             public void callback(String s) {
                 Log.d("Egret Launcher", s);
+                savePicture(s);
                 launcher.callExternalInterface("callJS", "message from native");
             }
         });
+    }
+    /**保存账号密码 */
+    private boolean savePicture(String base64DataStr) {
+        // 1.去掉base64中的前缀
+        String base64Str = base64DataStr;
+        // 获取手机相册的路径地址
+        String galleryPath= Environment.getExternalStorageDirectory()
+                + File.separator + Environment.DIRECTORY_DCIM
+                +File.separator+"Camera"+File.separator;
+        //创建文件来保存，第二个参数是文件名称，可以根据自己来命名
+        File file = new File(galleryPath, System.currentTimeMillis() + ".png");
+        String fileName = file.toString();
+        // 3. 解析保存图片
+        byte[] data = Base64.decode(base64Str, Base64.DEFAULT);
+
+        for (int i = 0; i < data.length; i++) {
+            if (data[i] < 0) {
+                data[i] += 256;
+            }
+        }
+        OutputStream os = null;
+        try {
+            os = new FileOutputStream(fileName);
+            os.write(data);
+            os.flush();
+            os.close();
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        } finally {
+            //通知相册更新
+            Intent intent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+            Uri uri = Uri.fromFile(file);
+            intent.setData(uri);
+            Toast.makeText(getApplicationContext(), "图片已保存在相册中", Toast.LENGTH_SHORT).show();
+        }
     }
 }
