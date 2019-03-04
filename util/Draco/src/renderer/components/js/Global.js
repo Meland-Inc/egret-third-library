@@ -34,7 +34,6 @@ export class Global {
         return Global.svnPath + '/client/publish';
     }
 
-
     static get pbMessagePath() {
         return Global.protoPath + '/pbmessage';
     }
@@ -43,6 +42,21 @@ export class Global {
         return Global.projPath + '/bin-release/web';
     }
 
+    // static get compressPath() {
+    //     return Global.projPath + '/rawResource/asset/compress';
+    // }
+
+    static get originalPicPath() {
+        return Global.projPath + '/rawResource/resource/originalPic';
+    }
+
+    static get compressResourcePath() {
+        return Global.projPath + '/rawResource/resource/compress'
+    }
+
+    static get resourcePath() {
+        return Global.projPath + '/resource';
+    }
 
     static objectCells = [];
     static variaCells = [];
@@ -105,7 +119,7 @@ export class Global {
 
     static async waitTime(time) {
         return new Promise((resolve, reject) => {
-            let timeIndex = egret.setTimeout(() => {
+            let timeIndex = setTimeout(() => {
                 resolve(timeIndex);
             }, this, time);
         });
@@ -135,3 +149,4 @@ ipcRenderer.on('selected_client_client_path', (event, path) => {
         Global.clientPath = path[0];
     }
 });
+

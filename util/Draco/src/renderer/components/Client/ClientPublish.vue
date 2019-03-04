@@ -3,6 +3,12 @@
     <mu-container>
       <div class="button-wrapper">
         <mu-button
+          v-loading="isCompressPicturesLoading"
+          data-mu-loading-size="24"
+          color="green500"
+          @click="onCompressPicturesClick"
+        >压缩图片</mu-button>
+        <mu-button
           v-loading="isPublishProjectLoading"
           data-mu-loading-size="24"
           color="pink500"
@@ -88,7 +94,7 @@
 
 <script>
 import * as mdPublish from "../js/MdPublish.js";
-
+import * as mdCompress from "../js/MdCompress.js";
 import * as fsExc from "../js/FsExecute.js";
 import { Global } from "../js/Global.js";
 import { version } from "punycode";
@@ -112,6 +118,7 @@ export default {
     return {
       isPublishProjectLoading: false,
       isMergeVersionLoading: false,
+      isCompressPicturesLoading: false,
       isExportVersionLoading: false,
       isExportApkLoading: false,
       isExportIpaLoading: false,
@@ -213,6 +220,44 @@ export default {
           Global.hideRegionLoading();
         });
     },
+
+    async onCompressPicturesClick(showDialog = true) {
+      this.isCompressPicturesLoading = true;
+      Global.showRegionLoading();
+
+      await mdCompress
+        .compareFile(Global.resourcePath, Global.originalPicPath)
+        .then(value => {
+          this.isCompressPicturesLoading = false;
+          Global.hideRegionLoading();
+          if (showDialog) {
+            Global.dialog("压缩成功");
+          }
+        })
+        .catch(reason => {
+          this.isCompressPicturesLoading = false;
+          Global.hideRegionLoading();
+        });
+    },
+
+    // async onCopyPicturesClick(showDialog = true) {
+    //   this.isCopyCompressPicLoading = true;
+    //   Global.showRegionLoading();
+
+    //   await mdPublish
+    //     .clearNcopyResource()
+    //     .then(value => {
+    //       this.isCopyCompressPicLoading = false;
+    //       Global.hideRegionLoading();
+    //       if (showDialog) {
+    //         Global.dialog("拷贝压缩图片成功");
+    //       }
+    //     })
+    //     .catch(reason => {
+    //       this.isCopyCompressPicLoading = false;
+    //       Global.hideRegionLoading();
+    //     });
+    // },
 
     async oneForAll() {
       ipcRenderer.send("client_show_loading");

@@ -18,7 +18,7 @@ export async function delAndCopyFile(fromPath, toPath, needLoop) {
 /**
  * 拷贝指定路径的文件
  * @param {*} fromPath 来源路径 可以是文件路径,也可以是文件夹路径
- * @param {*} toPath 目标路径
+ * @param {*} toPath 目标文件夹路径
  * @param needLoop 是否循环文件夹拷贝
  */
 export async function copyFile(fromPath, toPath, needLoop) {
@@ -28,11 +28,12 @@ export async function copyFile(fromPath, toPath, needLoop) {
         return;
     }
 
-    let files = await fs.readdirSync(fromPath);
+    let files = await readDir(fromPath);
 
     for (const file of files) {
         let pathName = path.join(fromPath, file);
-        if (await isDirectory(pathName)) {
+        let isFolder = await isDirectory(pathName);
+        if (isFolder) {
             await copyFile(pathName, toPath + "/" + file, needLoop);
         } else {
             await copyFile(pathName, toPath);
@@ -71,7 +72,8 @@ export async function delFolder(path) {
  * @param {*} path 
  */
 export async function isDirectory(path) {
-    return await fs.statSync(path).isDirectory();
+    let stat = await fs.statSync(path);
+    return stat.isDirectory();
 }
 
 /**
@@ -133,6 +135,21 @@ export function writeFile(path, content) {
             }
         });
     })
+}
+
+//获取文件所在目录
+export function getFileFolder(filePath) {
+    filePath = path.normalize(filePath);
+    let filePathArr = filePath.split('/');
+    let fileFolder = '';
+    for (let i = 0; i < filePathArr.length; i++) {
+        const element = filePathArr[i];
+        if (i != filePathArr.length - 1) {
+            fileFolder += element + '/';
+        }
+    }
+
+    return fileFolder;
 }
 
 /**

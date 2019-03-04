@@ -4,6 +4,7 @@ import * as fsExc from './FsExecute';
 import * as path from 'path';
 import * as crypto from 'crypto';
 import * as fs from 'fs';
+import { load } from 'protobufjs';
 
 
 const releaseSuffix = '/bin-release/web/';
@@ -12,6 +13,25 @@ const defaultResSuffix = 'resource/default.res.json';
 const mapDataResSuffix = 'resource/mapData.res.json';
 const asyncResSuffix = 'resource/async.res.json';
 const indieResSuffix = 'resource/indie.res.json';
+
+//resource里的文件
+const assetsSfx = "assets";
+const asyncSfx = "async";
+const indieSfx = "indie";
+const loaderSfx = "loader";
+
+const assets_suffix_path = '/resource/assets';
+const async_suffix_path = '/resource/async';
+const indie_suffix_path = '/resource/indie';
+const loader_suffix_path = '/resource/loader';
+// const assetsPath = Global.projPath + assets_suffix_path;
+// const asyncPath = Global.projPath + async_suffix_path;
+// const indiePath = Global.projPath + indie_suffix_path;
+// const loaderPath = Global.projPath + loader_suffix_path;
+
+var _checkBoxValues = [assetsSfx, asyncSfx, indieSfx, loaderSfx];
+export function getCheckBoxValue() { return _checkBoxValues; }
+export function setCheckBoxValue(value) { _checkBoxValues = value; }
 
 export var svnPublishPath = Global.svnPath + '/client/publish';
 
@@ -93,9 +113,10 @@ export async function publishProject() {
     await fsExc.makeDir(Global.projPath + releaseSuffix);
 
     let versionPath = Global.projPath + releaseSuffix + releaseVersion + '/version.json';
-
+    let releasePath = Global.projPath + releaseSuffix + releaseVersion;
     try {
         await fsExc.writeFile(versionPath, content);
+        await clearNcopyResource(releasePath);
         Global.toast('发布当前项目成功');
         newVersion = releaseVersion;
     } catch (error) {
@@ -509,7 +530,7 @@ async function mergeFileInVersion(oldFileSuffix, newFileSuffix, svnCdnRlsPath, s
     if (fileEqual) {
         if (svnCdnRlsPath) {
             //相等,拷贝旧的文件到新目录
-            await fsExc.makeDir(svnCdnRlsPath + '/' + getFileFolder(oldFileSuffix));
+            await fsExc.makeDir(svnCdnRlsPath + '/' + fsExc.getFileFolder(oldFileSuffix));
             await copyFile(oldSvnCdnRlsPath + '/' + oldFileSuffix, svnCdnRlsPath + '/' + oldFileSuffix);
         }
     } else {
@@ -567,7 +588,7 @@ async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, ol
                     //是图集,比较图集配置文件中的图片是否相同
                     let newConfigContent = await fsExc.readFile(projNewVersionPath + '/' + newPath);
                     let newConfigObj = JSON.parse(newConfigContent);
-                    let newFilePath = 'resource/' + getFileFolder(newResIterator.url) + '/' + newConfigObj.file;
+                    let newFilePath = 'resource/' + fsExc.getFileFolder(newResIterator.url) + '/' + newConfigObj.file;
 
                     let oldFilePath = '';
                     if (oldPath) {
@@ -575,9 +596,9 @@ async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, ol
                         let oldConfigPath = oldVersionPath + '/' + oldPath;
                         let oldConfigContent = await fsExc.readFile(oldConfigPath);
                         let oldConfigObj = JSON.parse(oldConfigContent);
-                        oldFilePath = 'resource/' + getFileFolder(newResIterator.url) + oldConfigObj.file;
+                        oldFilePath = 'resource/' + fsExc.getFileFolder(newResIterator.url) + oldConfigObj.file;
                     } else {
-                        oldFilePath = 'resource/' + getFileFolder(newResIterator.url) + newConfigObj.file;
+                        oldFilePath = 'resource/' + fsExc.getFileFolder(newResIterator.url) + newConfigObj.file;
                     }
 
                     //判断图集是否相同
@@ -615,7 +636,7 @@ async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, ol
                 let newPath = 'resource/' + iterator.url;
                 let newConfigContent = await fsExc.readFile(projNewVersionPath + '/' + newPath);
                 let newConfigObj = JSON.parse(newConfigContent);
-                let filePath = 'resource/' + getFileFolder(iterator.url) + newConfigObj.file;
+                let filePath = 'resource/' + fsExc.getFileFolder(iterator.url) + newConfigObj.file;
                 //拷贝图集中的图片
                 if (releasePath) {
                     await copyFileCheckDir(filePath, releasePath, newVersion);
@@ -645,20 +666,6 @@ async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, ol
         await fsExc.writeFile(releasePath + '/' + resUrl, newResContent);
     }
     await fsExc.writeFile(patchPath + '/' + resUrl, newResContent);
-}
-
-//获取文件所在目录
-function getFileFolder(filePath) {
-    let filePathArr = filePath.split('/');
-    let fileFolder = '';
-    for (let i = 0; i < filePathArr.length; i++) {
-        const element = filePathArr[i];
-        if (i != filePathArr.length - 1) {
-            fileFolder += element + '/';
-        }
-    }
-
-    return fileFolder;
 }
 
 async function sheetConfigHandle(resFileEqual, releasePath, patchPath, oldPath, newPath, oldVersion, newVersion, sheetUrl, oldVersionPath) {
@@ -693,4 +700,80 @@ async function sheetConfigHandle(resFileEqual, releasePath, patchPath, oldPath, 
         patchFileContent = JSON.stringify(patchFileObj);
         await fsExc.writeFile(patchPath + '/resource/' + addVersionToPath(sheetUrl, newVersion), patchFileContent);
     }
+}
+
+/**
+ * 清空resource
+ */
+export async function clearResource(releasePath) {
+
+    let assetsPath = releasePath + assets_suffix_path;
+    let asyncPath = releasePath + async_suffix_path;
+    let indiePath = releasePath + indie_suffix_path;
+    let loaderPath = releasePath + loader_suffix_path;
+    try {
+        for (const iterator of _checkBoxValues) {
+            switch (iterator) {
+                case 'assets':
+                    await fsExc.delFiles(assetsPath);
+                    break;
+                case 'async':
+                    await fsExc.delFiles(asyncPath);
+                    break;
+                case 'indie':
+                    await fsExc.delFiles(indiePath);
+                    break;
+                case 'loader':
+                    await fsExc.delFiles(loaderPath);
+                    break;
+            }
+        }
+    } catch (error) {
+        Global.snack('清空resource文件失败', error);
+    }
+}
+
+
+export async function copyResource(releasePath) {
+    let compressAssetsPath = Global.compressResourcePath + '/' + assetsSfx;
+    let compressAsyncPath = Global.compressResourcePath + '/' + asyncSfx;
+    let compressIndiePath = Global.compressResourcePath + '/' + indieSfx;
+    let compressLoaderPath = Global.compressResourcePath + '/' + loaderSfx;
+
+    let assetsPath = releasePath + assets_suffix_path;
+    let asyncPath = releasePath + async_suffix_path;
+    let indiePath = releasePath + indie_suffix_path;
+    let loaderPath = releasePath + loader_suffix_path;
+    try {
+        for (const iterator of _checkBoxValues) {
+            switch (iterator) {
+                case 'assets':
+                    await fsExc.makeDir(assetsPath);
+                    await fsExc.copyFile(compressAssetsPath, assetsPath, true);
+                    break;
+                case 'async':
+                    await fsExc.makeDir(asyncPath);
+                    await fsExc.copyFile(compressAsyncPath, asyncPath, true);
+                    break;
+                case 'indie':
+                    await fsExc.makeDir(indiePath);
+                    await fsExc.copyFile(compressIndiePath, indiePath, true);
+                    break;
+                case 'loader':
+                    await fsExc.makeDir(loaderPath);
+                    await fsExc.copyFile(compressLoaderPath, loaderPath, true);
+                    break;
+            }
+        }
+
+        Global.toast('拷贝压缩文件成功');
+    } catch (error) {
+        Global.snack('拷贝压缩文件错误', error);
+    }
+}
+
+export async function clearNcopyResource() {
+    // let projNewVersionPath = Global.projPath + releaseSuffix + 110;
+    await clearResource(projNewVersionPath);
+    await copyResource(projNewVersionPath);
 }
