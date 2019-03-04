@@ -14210,7 +14210,7 @@ var egret;
                 var callBackList = this.callBackList;
                 var thisObjectList = this.thisObjectList;
                 var length = callBackList.length;
-                var requestRenderingFlag = sys.$requestRenderingFlag;
+                // let requestRenderingFlag = $requestRenderingFlag;
                 var timeStamp = egret.getTimer();
                 var contexts = egret.lifecycle.contexts;
                 for (var _i = 0, contexts_1 = contexts; _i < contexts_1.length; _i++) {
@@ -14224,11 +14224,6 @@ var egret;
                     return;
                 }
                 this.callLaterAsyncs();
-                for (var i = 0; i < length; i++) {
-                    if (callBackList[i].call(thisObjectList[i], timeStamp)) {
-                        requestRenderingFlag = true;
-                    }
-                }
                 var t2 = egret.getTimer();
                 var deltaTime = timeStamp - this.lastTimeStamp;
                 this.lastTimeStamp = timeStamp;
@@ -14238,12 +14233,19 @@ var egret;
                 else {
                     this.lastCount -= 1000;
                     if (this.lastCount > 0) {
-                        if (requestRenderingFlag) {
-                            this.render(false, this.costEnterFrame + t2 - t1);
-                        }
+                        //发热优化 把其他地方的渲染都停掉 统一按照帧率渲染
+                        // if (requestRenderingFlag) {
+                        //     this.render(false, this.costEnterFrame + t2 - t1);
+                        // }
                         return;
                     }
                     this.lastCount += this.frameInterval;
+                }
+                //所有的其他帧处理都需要遵从统一征率 否则没有渲染也没有意义 统一管理
+                for (var i = 0; i < length; i++) {
+                    if (callBackList[i].call(thisObjectList[i], timeStamp)) {
+                        // requestRenderingFlag = true;
+                    }
                 }
                 this.render(true, this.costEnterFrame + t2 - t1);
                 var t3 = egret.getTimer();
