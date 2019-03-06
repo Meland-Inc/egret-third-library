@@ -47,6 +47,7 @@ namespace egret.sys {
      * Egret心跳计时器
      */
     export class SystemTicker {
+        public animTickerProcess: SystemTickerAnimProcess;
         /**
          * @private
          */
@@ -57,6 +58,8 @@ namespace egret.sys {
             $START_TIME = Date.now();
             this.frameDeltaTime = 1000 / this.$frameRate;
             this.lastCount = this.frameInterval = Math.round(60000 / this.$frameRate);
+
+            this.animTickerProcess = new SystemTickerAnimProcess(this.$frameRate);
         }
 
         /**
@@ -109,6 +112,11 @@ namespace egret.sys {
          * @private
          */
         $startTick(callBack: (timeStamp: number) => boolean, thisObject: any): void {
+            //动画相关的计时器自己处理 不走系统回调
+            if (this.animTickerProcess.$checkAnimTicker(callBack, thisObject)) {
+                return;
+            }
+
             let index = this.getTickIndex(callBack, thisObject);
             if (index != -1) {
                 return;
@@ -270,6 +278,27 @@ namespace egret.sys {
             let t2 = egret.getTimer();
             let deltaTime = timeStamp - this.lastTimeStamp;
             this.lastTimeStamp = timeStamp;
+
+            //只有动作系统帧率比总帧率低才自己处理  否则按照总帧率一起走
+            if (this.animTickerProcess.$frameRate < this.$frameRate) {
+                let needExecute: boolean = false;
+                if (deltaTime >= this.animTickerProcess.$frameDeltaTime) {
+                    this.animTickerProcess.$lastCount = this.animTickerProcess.$frameInterval;
+                    needExecute = true;
+                }
+                else {
+                    this.animTickerProcess.$lastCount -= 1000;
+                    if (this.animTickerProcess.$lastCount <= 0) {
+                        needExecute = true;
+                        this.animTickerProcess.$lastCount += this.animTickerProcess.$frameInterval;
+                    }
+                }
+
+                if (needExecute) {
+                    this.animTickerProcess.$executeCallBack(timeStamp);
+                }
+            }
+
             if (deltaTime >= this.frameDeltaTime) {
                 this.lastCount = this.frameInterval;
             }
@@ -290,6 +319,11 @@ namespace egret.sys {
                 if (callBackList[i].call(thisObjectList[i], timeStamp)) {
                     // requestRenderingFlag = true;
                 }
+            }
+
+            //系统统一处理情况
+            if (this.animTickerProcess.$frameRate >= this.$frameRate) {
+                this.animTickerProcess.$executeCallBack(timeStamp);
             }
 
             this.render(true, this.costEnterFrame + t2 - t1);
