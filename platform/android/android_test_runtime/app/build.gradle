@@ -9,8 +9,8 @@ android {
             storePassword 'bellcode'
         }
     }
-    compileSdkVersion 23
-    buildToolsVersion "26.0.2"
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
     defaultConfig {
         applicationId "org.egret.launcher.ymblTestRuntime"
         minSdkVersion 15

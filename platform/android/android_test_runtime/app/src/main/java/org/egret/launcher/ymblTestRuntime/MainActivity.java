@@ -39,10 +39,12 @@ public class MainActivity extends NativeActivity {
 
     private Handler handler = new Handler();
 
+    private int screenCutoutHeight = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        NotchScreenUtil.showFullScreen(this);
+        AdapterUtil.showFullScreen(this);
         setContentView(R.layout.activity_main);
         rootLayout = (FrameLayout) findViewById(R.id.rootLayout);
 
@@ -120,17 +122,21 @@ public class MainActivity extends NativeActivity {
             }
         };
         launcher.loadRuntime(token);
-//        if(android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT_WATCH){//Build.VERSION_CODES.KITKAT_WATCH == 20
-//            getWindow().getDecorView().setOnApplyWindowInsetsListener( new View.OnApplyWindowInsetsListener() {
-//                @Override
-//                public WindowInsets onApplyWindowInsets(View v, WindowInsets insets) {
-//                    int cutoutHeight = NotchScreenUtil.getCutoutHeight(insets,getApplicationContext());
-//                    Log.d("longD",cutoutHeight+"");
-//                    getWindow().getDecorView().setOnApplyWindowInsetsListener(null);
-//                    return v.onApplyWindowInsets(insets);
-//                }
-//            });
-//        }
+        this.calcScreenCutoutHeight();
+    }
+
+    private void calcScreenCutoutHeight() {
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT_WATCH) {//Build.VERSION_CODES.KITKAT_WATCH == 20
+            getWindow().getDecorView().setOnApplyWindowInsetsListener(new View.OnApplyWindowInsetsListener() {
+                @Override
+                public WindowInsets onApplyWindowInsets(View v, WindowInsets insets) {
+                    screenCutoutHeight = AdapterUtil.getCutoutHeight(insets, getApplicationContext());
+                    Log.d("longD", "cutout: "+screenCutoutHeight + "");
+                    getWindow().getDecorView().setOnApplyWindowInsetsListener(null);
+                    return v.onApplyWindowInsets(insets);
+                }
+            });
+        }
     }
 
     private void setExternalInterfaces() {
@@ -146,7 +152,10 @@ public class MainActivity extends NativeActivity {
         launcher.setExternalInterface("adapterInited", new INativePlayer.INativeInterface() {
             @Override
             public void callback(String s) {
-                launcher.callExternalInterface("receiveCutoutData", "20");
+                if (screenCutoutHeight > 0) {
+                    launcher.callExternalInterface("receiveCutoutData", screenCutoutHeight + "");
+                    Log.d("longD",""+screenCutoutHeight);
+                }
             }
         });
     }
