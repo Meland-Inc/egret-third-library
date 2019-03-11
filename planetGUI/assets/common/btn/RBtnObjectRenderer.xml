@@ -7,7 +7,8 @@
     <loader id="n15_ww3a" name="icon" xy="6,6" pivot="0.5,0.5" size="60,60" group="n17_ww3a" align="center" vAlign="middle" fill="scale">
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
-    <group id="n17_ww3a" name="grpItemIcon" xy="6,6" size="60,60" advanced="true" collapsed="true"/>
+    <text id="n18_i7sy" name="num" xy="63,58" pivot="1,0.5" anchor="true" size="19,19" group="n17_ww3a" visible="false" fontSize="12" color="#74634c" align="right" vAlign="middle" text="99"/>
+    <group id="n17_ww3a" name="grpItemIcon" xy="6,6" size="76,71" advanced="true"/>
     <image id="n12_j1n2" name="selectedBg" src="j21fi3v" fileName="newImg/img_cm_item_6.png" xy="0,0">
       <gearDisplay controller="button" pages="1"/>
     </image>

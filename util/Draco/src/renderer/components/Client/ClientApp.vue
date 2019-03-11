@@ -28,14 +28,22 @@
 
     <mu-container>
       <div class="select-control-group">
-        <mu-auto-complete
+        <!-- <mu-auto-complete
           :data="newVersionList"
           label="新版本号"
-          v-model="newVersion"
+          v-model="gameVersion"
           open-on-focus
           label-float
           full-width
-        ></mu-auto-complete>
+        ></mu-auto-complete>-->
+        <mu-select label="游戏版本号" filterable v-model="gameVersion" label-float full-width>
+          <mu-option
+            v-for="value,index in gameVersionList"
+            :key="value"
+            :label="value"
+            :value="value"
+          ></mu-option>
+        </mu-select>
 
         <mu-flex class="select-control-row">
           <mu-checkbox
@@ -84,16 +92,16 @@ export default {
       checkAll: true,
       appProjs: [],
       appPaths: [],
-      newVersion: "",
-      newVersionList: []
+      gameVersion: "",
+      gameVersionList: []
     };
   },
   watch: {
     checkBoxData: val => {
       mdApp.setCheckBoxData(val);
     },
-    newVersion: val => {
-      mdApp.setNewVersion(val);
+    gameVersion: val => {
+      mdApp.setGameVersion(val);
     },
     appProjs: val => {
       mdApp.setAppProjs(val);
@@ -110,11 +118,16 @@ export default {
     },
     async refreshNewVersionList() {
       if (await fsExc.exists(Global.releasePath)) {
-        this.newVersionList = await fsExc.readDir(
-          Global.svnPublishPath + "/web/"
+        let versionListContent = await fsExc.readFile(
+          Global.svnPublishPath + "/versionList.json"
         );
+        let versionList = JSON.parse(versionListContent);
+        this.gameVersionList = versionList.versionList;
+        this.gameVersion = this.gameVersionList[
+          this.gameVersionList.length - 1
+        ];
       } else {
-        this.newVersionList = [];
+        this.gameVersionList = [];
       }
     },
     async onExportVersion(showDialog = true) {

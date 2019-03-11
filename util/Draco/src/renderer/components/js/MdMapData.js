@@ -12,11 +12,14 @@ var svnMapM0OutPath = svnMapPath + '/out';
 var svnMapM1OutPath = svnMapPath + '/xinshoumapOut';
 var svnMapEmptyM1OutPath = svnMapPath + '/xinshouEmptyData';
 
-var _checkBoxData = ["m0", "m1"];
+const m0Sfx = "m0";
+const m1Sfx = "m1";
+
+var _checkBoxData = [m0Sfx, m1Sfx];
 export function getCheckBoxData() { return _checkBoxData; }
 export function setCheckBoxData(value) { _checkBoxData = value; }
 
-var _checkBoxValues = ["m0", "m1"];
+var _checkBoxValues = [m0Sfx, m1Sfx];
 export function getCheckBoxValues() { return _checkBoxValues; }
 export function setCheckBoxValues(value) { _checkBoxValues = value; }
 
@@ -28,10 +31,10 @@ export async function executeBatFile() {
     try {
         for (const iterator of _checkBoxData) {
             switch (iterator) {
-                case 'm0':
+                case m0Sfx:
                     await spawnExc.runSpawn(m0Bat, [], svnMapPath, null, '执行m0bat错误');
                     break;
-                case 'm1':
+                case m1Sfx:
                     await spawnExc.runSpawn(m1Bat, [], svnMapPath, null, '执行m1bat错误');
                     break;
             }
@@ -46,10 +49,10 @@ export async function clearMapData() {
     try {
         for (const iterator of _checkBoxData) {
             switch (iterator) {
-                case 'm0':
+                case m0Sfx:
                     await fsExc.delFiles(projMapM0Path);
                     break;
-                case 'm1':
+                case m1Sfx:
                     await fsExc.delFiles(projMapM1Path);
                     break;
             }
@@ -65,11 +68,11 @@ export async function copyMapData() {
     try {
         for (const iterator of _checkBoxData) {
             switch (iterator) {
-                case 'm0':
+                case m0Sfx:
                     await fsExc.makeDir(projMapM0Path);
                     await fsExc.copyFile(svnMapM0OutPath, projMapM0Path);
                     break;
-                case 'm1':
+                case m1Sfx:
                     await fsExc.makeDir(projMapM1Path);
                     await fsExc.copyFile(svnMapM1OutPath, projMapM1Path);
                     await fsExc.copyFile(svnMapEmptyM1OutPath, projMapM1Path);

@@ -1,10 +1,4 @@
 import { ipcRenderer } from 'electron';
-import { error } from 'util';
-
-// global.getSvnCsvPath() = global.svnPath + '/settings/csv';
-// global.getSvnResPath() = global.svnPath + '/settings/resource';
-// global.svnArtPath = global.svnPath + '/art';
-// global.svnPublishPath = global.svnPath + '/client/publish';
 
 export class Global {
     static currentVersion = "1.9.0 beta6";
@@ -40,6 +34,10 @@ export class Global {
 
     static get releasePath() {
         return Global.projPath + '/bin-release/web';
+    }
+
+    static get rawResourcePath() {
+        return Global.projPath + '/rawResource';
     }
 
     // static get compressPath() {
