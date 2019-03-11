@@ -2,6 +2,7 @@ import * as path from "path";
 import * as del from 'delete';
 import * as fs from 'fs';
 import * as cpy from 'cpy';
+import * as crypto from 'crypto';
 
 export async function delAndCopyFile(fromPath, toPath, needLoop) {
     if (await exists(toPath)) {
@@ -42,12 +43,11 @@ export async function copyFile(fromPath, toPath, needLoop) {
 }
 
 /**
- * 删除指定文件夹下所有文件
+ * 删除指定文件
  * @param {*} path 
  */
 export async function delFile(path) {
     await fs.unlinkSync(path);
-    // await del.sync(path, { force: true });
 }
 
 
@@ -152,8 +152,8 @@ export async function exists(path) {
 
 //比较两个文件的MD5
 export async function mergeFileByMd5(oldFilePath, newFilePath) {
-    let oldFile = await fsExc.readFile(oldFilePath);
-    let newFile = await fsExc.readFile(newFilePath);
+    let oldFile = await readFile(oldFilePath);
+    let newFile = await readFile(newFilePath);
     const oldFileMd5 = crypto
         .createHash('md5')
         .update(oldFile)

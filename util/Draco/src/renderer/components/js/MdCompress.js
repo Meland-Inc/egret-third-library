@@ -9,6 +9,7 @@ import * as uniq from "array-uniq";
 import * as chalk from "chalk";
 import * as pretty from "prettysize";
 // import * as argv from "minimist";
+import * as path from "path"
 
 var keyArray = [
     "TDhV2CFvsryHrvp8mnvbzFY2hSzlCHjp",

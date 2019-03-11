@@ -26,12 +26,6 @@
           color="blue500"
           @click="onMergetVersionClick"
         >比较新旧版本</mu-button>
-        <mu-button
-          v-loading="isMergeVersionLoading"
-          data-mu-loading-size="24"
-          color="blue500"
-          @click="onMergetVersionClick"
-        >上传版本号</mu-button>
       </div>
       <div class="button-wrapper">
         <mu-button full-width color="red" @click="oneForAll">One·for·All</mu-button>
@@ -76,13 +70,14 @@
     </mu-container>
     <mu-divider/>
     <mu-container>
-      <mu-button @click="onOpenWhiteDialog">
-        <mu-icon left color="red" value="edit"></mu-icon>编辑白名单
-      </mu-button>
-
-      <mu-button @click="onOpenCdnDialog">
-        <mu-icon left color="blue" value="text_format"></mu-icon>编辑cdn路径
-      </mu-button>
+      <mu-flex class="flex-wrapper" align-items="center">
+        <mu-button @click="onOpenWhiteDialog">
+          <mu-icon left color="red" value="edit"></mu-icon>编辑白名单
+        </mu-button>
+        <mu-button @click="onOpenCdnDialog">
+          <mu-icon left color="blue" value="text_format"></mu-icon>编辑cdn路径
+        </mu-button>
+      </mu-flex>
     </mu-container>
     <mu-container>
       <mu-dialog
@@ -159,6 +154,8 @@ export default {
       oldVersion: "",
       releaseVersion: "",
       displayVersion: "",
+      whiteVersion: "",
+
       versionType: "",
       versionTypes: mdPublish.versionTypes,
 
@@ -194,16 +191,22 @@ export default {
     async onOldVersionChange() {
       this.releaseVersion = parseInt(this.oldVersion) + 1 + "";
       if (this.oldVersion != "0") {
-        let versionPath = `${mdPublish.svnPublishPath}/web/release_v${
+        let releaseDirPath = `${Global.svnPublishPath}/web/release_v${
           this.oldVersion
-        }s/version.json`;
-        if (await fsExc.exists(versionPath)) {
-          let versionContent = await fsExc.readFile(versionPath);
-          let versionObj = JSON.parse(versionContent);
-          this.displayVersion = versionObj.displayVersion;
-        } else {
-          this.oldVersion = "0";
+        }s`;
+        let releaseDir = await fsExc.readDir(releaseDirPath);
+        for (const iterator of releaseDir) {
+          if (iterator.indexOf(`policyFile`) != -1) {
+            let policyContent = await fsExc.readFile(
+              releaseDirPath + "/" + iterator
+            );
+            let policyObj = JSON.parse(policyContent);
+            this.displayVersion = policyObj.displayVersion;
+            return;
+          }
         }
+
+        this.oldVersion = "0";
       }
     },
     onAddWhite() {
@@ -227,7 +230,7 @@ export default {
     },
     onCancelWhiteDialog() {
       this.whiteVisible = false;
-      this.whiteList = mdPublish.getWhiteList().concat();
+      this.whiteList = this.policyObj.whiteList.concat();
       this.addWhite = "";
     },
     onOpenCdnDialog() {
@@ -235,11 +238,12 @@ export default {
     },
     onConfirmCdnDialog() {
       this.cdnVisible = false;
-      mdPublish.setCdnPath(this.cdnUrl);
+      this.policyObj.cdnUrl = this.cdnUrl;
+      mdPublish.setPolicyObj(this.policyObj);
     },
     onCancelCdnDialog() {
       this.cdnVisible = false;
-      this.cdnUrl = mdPublish.getCdnPath();
+      this.cdnUrl = this.policyObj.cdnUrl;
     },
     async onCompressPicturesClick(showDialog = true) {
       this.isCompressPicturesLoading = true;
@@ -326,7 +330,7 @@ export default {
     },
     async refreshOldVersionList() {
       let versionListContent = await fsExc.readFile(
-        mdPublish.svnPublishPath + "/versionList.json"
+        Global.svnPublishPath + "/versionList.json"
       );
       let versionList = JSON.parse(versionListContent);
       this.oldVersionList = versionList.versionList;
@@ -337,9 +341,7 @@ export default {
     async refreshPolicyFile() {
       this.policyObj = await mdPublish.getPolicyObj();
       this.cdnUrl = this.policyObj.cdnUrl;
-      mdPublish.setCdnPath(this.cdnUrl);
       this.whiteList = this.policyObj.whiteList.concat();
-      mdPublish.setWhiteList(this.whiteList.concat());
     }
   },
   mounted() {

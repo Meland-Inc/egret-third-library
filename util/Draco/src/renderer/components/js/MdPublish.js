@@ -2,10 +2,7 @@ import { Global } from './Global.js';
 import * as spawnExc from './SpawnExecute.js';
 import * as fsExc from './FsExecute';
 import * as path from 'path';
-import * as crypto from 'crypto';
 import * as fs from 'fs';
-import { load } from 'protobufjs';
-
 
 const releaseSuffix = '/bin-release/web/';
 const thmFileSuffix = 'resource/default.thm.json';
@@ -31,7 +28,7 @@ const loader_suffix_path = '/resource/loader';
 
 const assetSfxValues = [assetsSfx, asyncSfx, indieSfx, loaderSfx];
 
-export var svnPublishPath = Global.svnPath + '/client/publish';
+var svnPublishPath = Global.svnPublishPath;
 
 var projNewVersionPath = Global.projPath + releaseSuffix + newVersion;
 
@@ -46,14 +43,6 @@ export function setDisplayVersion(value) { displayVersion = value; }
 var versionType;
 export function getVersionType() { return versionType; }
 export function setVersionType(value) { versionType = value; }
-
-var cdnPath;
-export function getCdnPath() { return cdnPath; }
-export function setCdnPath(value) { cdnPath = value; }
-
-var whiteList;
-export function getWhiteList() { return whiteList; }
-export function setWhiteList(value) { whiteList = value; }
 
 var newVersion;
 export function getNewVersion() { return newVersion; }
@@ -124,19 +113,25 @@ export async function publishProject() {
         Global.snack('发布当前项目错误', error);
     }
 
-    let content = JSON.stringify({
-        gameVersion: releaseVersion,
-        displayVersion: displayVersion,
-        tag: false,
-        versionType: versionTypes.indexOf(versionType),
-        cdnPath: cdnPath
-    });
+    let rawPolicyPath = `${Global.projPath}/rawResource/policyFile.json`;
+    let content = await fsExc.readFile(rawPolicyPath);
+    let policyObj = JSON.parse(content);
+    policyObj["whiteGameVersion"] = releaseVersion;
+    policyObj["displayVersion"] = displayVersion;
+    policyObj["versionType"] = versionTypes.indexOf(versionType);
+    // let content = JSON.stringify({
+    //     gameVersion: releaseVersion,
+    //     displayVersion: displayVersion,
+    //     versionType: versionTypes.indexOf(versionType),
+    //     cdnPath: cdnPath
+    // });
+    content = JSON.stringify(policyObj);
 
     await fsExc.makeDir(Global.projPath + releaseSuffix);
 
-    let versionPath = Global.projPath + releaseSuffix + releaseVersion + '/version.json';
+    let policyFilePath = Global.projPath + releaseSuffix + releaseVersion + '/policyFile.json';
     try {
-        await fsExc.writeFile(versionPath, content);
+        await fsExc.writeFile(policyFilePath, content);
         Global.toast('发布当前项目成功');
         newVersion = releaseVersion;
     } catch (error) {
@@ -265,15 +260,14 @@ async function mergeSingleVersion(newVersion, oldVersion, isRelease) {
         }
         await copyFileCheckDir('manifest.json', svnWebPatchPath, newVersion);
 
-        let versionContent = await fsExc.readFile(projNewVersionPath + '/version.json');
-        let versionObj = JSON.parse(versionContent);
-        versionObj.tag = true;
-        versionContent = JSON.stringify(versionObj);
-
+        // let versionContent = await fsExc.readFile(projNewVersionPath + '/policyFile.json');
         if (svnWebRlsPath) {
-            await fsExc.writeFile(svnWebRlsPath + '/version.json', versionContent);
+            // await fsExc.writeFile(`${svnWebRlsPath}/policyFile.json`, versionContent);
+            await fsExc.copyFile(projNewVersionPath + '/policyFile.json', `${svnWebRlsPath}`)
         }
-        await fsExc.writeFile(svnWebPatchPath + '/version.json', versionContent);
+        await fsExc.copyFile(projNewVersionPath + '/policyFile.json', `${svnWebPatchPath}`)
+        // await fsExc.writeFile(`${svnWebPatchPath}/policyFile.json`, versionContent);
+
 
         if (svnWebRlsPath) {
             await folderCopyFile(projNewVersionPath + '/js', svnWebRlsPath + '/js');
@@ -544,7 +538,7 @@ async function mergeFileInVersion(oldFileSuffix, newFileSuffix, svnCdnRlsPath, s
 
     let fileEqual = false;
     if (oldFileExist) {
-        fileEqual = await mergeFileByMd5(oldSvnCdnRlsPath + '/' + oldFileSuffix, projNewVersionPath + '/' + newFileSuffix);
+        fileEqual = await fsExc.mergeFileByMd5(oldSvnCdnRlsPath + '/' + oldFileSuffix, projNewVersionPath + '/' + newFileSuffix);
     }
 
     if (fileEqual) {
@@ -562,21 +556,7 @@ async function mergeFileInVersion(oldFileSuffix, newFileSuffix, svnCdnRlsPath, s
     return fileEqual;
 }
 
-//比较两个文件的MD5
-async function mergeFileByMd5(oldFilePath, newFilePath) {
-    let oldFile = await fsExc.readFile(oldFilePath);
-    let newFile = await fsExc.readFile(newFilePath);
-    const oldFileMd5 = crypto
-        .createHash('md5')
-        .update(oldFile)
-        .digest('hex');
-    const newFileMd5 = crypto
-        .createHash('md5')
-        .update(newFile)
-        .digest('hex');
-
-    return oldFileMd5 == newFileMd5;
-}//根据res配置文件,添加版本号到文件和配置中
+//根据res配置文件,添加版本号到文件和配置中
 async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, oldVersion, oldVersionPath) {
     let useNew = false;
     let newResContent = await fsExc.readFile(projNewVersionPath + '/' + resFilePath);

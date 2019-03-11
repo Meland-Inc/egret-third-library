@@ -1,10 +1,5 @@
 import { ipcRenderer } from 'electron';
 
-// global.getSvnCsvPath() = global.svnPath + '/settings/csv';
-// global.getSvnResPath() = global.svnPath + '/settings/resource';
-// global.svnArtPath = global.svnPath + '/art';
-// global.svnPublishPath = global.svnPath + '/client/publish';
-
 export class Global {
     static currentVersion = "1.9.0 beta6";
     static projPath = localStorage.getItem('client_project_path');

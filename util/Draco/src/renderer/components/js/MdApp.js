@@ -20,27 +20,26 @@ export async function getAndroidPaths() {
     return paths;
 }
 export function getIosPaths() {
-    return ["4", "5", "6"];
+    return [];
 }
 
 export function getWechatPaths() {
-    return ["7", "8", "9"];
+    return [];
 }
 
-var newVersion;
-export function getNewVersion() { return newVersion; }
-export function setNewVersion(value) {
-    newVersion = value;
+var gameVersion;
+export function getNewVersion() { return gameVersion; }
+export function setGameVersion(value) {
+    gameVersion = value;
 }
 
-var appProjs
+var appProjs;
 export function setAppProjs(value) {
     appProjs = value;
 }
 
-
 export async function exportVersion() {
-    if (!newVersion) {
+    if (!gameVersion) {
         Global.snack('请先设置新版本目录');
         return;
     }
@@ -77,25 +76,30 @@ async function exportAndroid() {
     }
 
     let gamePath = `${Global.androidPath}/${appProjs[0]}/app/src/main/assets/game`;
-    let webReleasePath = `${Global.svnPublishPath}/web/${newVersion}`;
-    let cdnReleasePath = `${Global.svnPublishPath}/cdn/${newVersion}`;
+    let webReleasePath = `${Global.svnPublishPath}/web/${gameVersion}`;
+    let cdnReleasePath = `${Global.svnPublishPath}/cdn/${gameVersion}`;
 
     try {
-        //js
-        await fsExc.delAndCopyFile(webReleasePath + "/js", gamePath + "/js", true);
+        await fsExc.delFiles(gamePath);
 
-        //resource
-        await fsExc.delAndCopyFile(cdnReleasePath + "/resource", gamePath + "/resource", true);
+        await fsExc.copyFile(webReleasePath, gamePath, true);
+        await fsExc.copyFile(cdnReleasePath, gamePath, true);
+
+        // //js
+        // await fsExc.delAndCopyFile(webReleasePath + "/js", gamePath + "/js", true);
+
+        // //resource
+        // await fsExc.delAndCopyFile(cdnReleasePath + "/resource", gamePath + "/resource", true);
 
 
-        //index.html
-        await fsExc.copyFile(webReleasePath + "/index.html", gamePath);
+        // //index.html
+        // await fsExc.copyFile(webReleasePath + "/index.html", gamePath);
 
-        //manifest.json
-        await fsExc.copyFile(webReleasePath + "/manifest.json", gamePath);
+        // //manifest.json
+        // await fsExc.copyFile(webReleasePath + "/manifest.json", gamePath);
 
-        //version.json
-        await fsExc.copyFile(webReleasePath + "/version.json", gamePath);
+        // //policyFile.json
+        // await fsExc.copyFile(webReleasePath + "/policyFile.json", gamePath);
         Global.toast('导出安卓成功');
     } catch (e) {
         Global.snack('导出安卓失败', e);
@@ -109,29 +113,40 @@ async function exportIOS() {
     }
 
     let gamePath = Global.iosPath + "/assets/game";
-    let webReleasePath = `${Global.svnPublishPath}/web/${newVersion}`;
-    let cdnReleasePath = `${Global.svnPublishPath}/cdn/${newVersion}`;
+    let webReleasePath = `${Global.svnPublishPath}/web/${gameVersion}`;
+    let cdnReleasePath = `${Global.svnPublishPath}/cdn/${gameVersion}`;
 
-    //js
-    await fsExc.delFolder(gamePath + '/js')
-    await fsExc.copyFile(webReleasePath + "/js", gamePath + "/js");
+    try {
+        await fsExc.delFiles(gamePath);
 
-    //resource
-    await fsExc.delFolder(gamePath + '/resource')
-    await fsExc.copyFile(cdnReleasePath + "/resource", gamePath + "/resource");
+        await fsExc.copyFile(webReleasePath, gamePath, true);
+        await fsExc.copyFile(cdnReleasePath, gamePath, true);
 
-    //index.html
-    await fsExc.delFile(gamePath + "/index.html");
-    await fsExc.copyFile(webReleasePath + "/index.html", gamePath + "/index.html");
+        Global.toast('导出IOS成功');
+    } catch (e) {
+        Global.snack('导出IOS失败', e);
+    }
 
-    //manifest.json
-    await fsExc.delFile(gamePath + "/manifest.json");
-    await fsExc.copyFile(webReleasePath + "/manifest.json", gamePath + "/manifest.json");
+    // //js
+    // await fsExc.delFolder(gamePath + '/js')
+    // await fsExc.copyFile(webReleasePath + "/js", gamePath + "/js");
+
+    // //resource
+    // await fsExc.delFolder(gamePath + '/resource')
+    // await fsExc.copyFile(cdnReleasePath + "/resource", gamePath + "/resource");
+
+    // //index.html
+    // await fsExc.delFile(gamePath + "/index.html");
+    // await fsExc.copyFile(webReleasePath + "/index.html", gamePath + "/index.html");
+
+    // //manifest.json
+    // await fsExc.delFile(gamePath + "/manifest.json");
+    // await fsExc.copyFile(webReleasePath + "/manifest.json", gamePath + "/manifest.json");
 
 
-    //version.json
-    await fsExc.delFile(gamePath + "/version.json");
-    await fsExc.copyFile(webReleasePath + "/version.json", gamePath + "/version.json");
+    // //policyFile.json
+    // await fsExc.delFile(gamePath + "/policyFile.json");
+    // await fsExc.copyFile(webReleasePath + "/policyFile.json", gamePath + "/policyFile.json");
 }
 
 async function exportWeChat() {
@@ -144,7 +159,7 @@ async function exportWeChat() {
     await spawnExc.runCmd(cmdStr, Global.projPath, null, '发布项目错误');
 
     //version.js
-    let versionContent = await fsExc.readFile(`${mdPublish.svnPublishPath}/web/${newVersion}/version.json`);
+    let versionContent = await fsExc.readFile(`${mdPublish.svnPublishPath}/web/${gameVersion}/policyFile.json`);
     versionContent = "export default " + versionContent;
     fs.writeFileSync(Global.weChatPath + "/version.js", versionContent);
 
