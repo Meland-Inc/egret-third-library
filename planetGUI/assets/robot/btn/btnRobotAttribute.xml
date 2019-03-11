@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="660,40" extention="Button">
-  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="2"/>
   <displayList>
     <image id="n3_nn7n" name="n3" src="ot9si2z" fileName="newImg/img_cm_bottom_5.png" pkg="te1gxawo" xy="0,0" size="660,40"/>
-    <text id="n4_nn7n" name="n4" xy="8,7" size="41,25" fontSize="18" color="#5b4b37" vAlign="middle" text="等级"/>
+    <text id="n4_nn7n" name="attribute" xy="8,7" size="95,25" fontSize="18" color="#5b4b37" vAlign="middle" text="燃料消耗值"/>
   </displayList>
   <Button/>
 </component>

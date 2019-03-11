@@ -26,7 +26,7 @@
     <image id="xles2j" name="btn_robot_1.png" path="/newImg/"/>
     <image id="xles2k" name="icon_robot_view.png" path="/newImg/"/>
     <component id="xles2m" name="btnRobotView.xml" path="/btn/"/>
-    <component id="i8oz2n" name="WinRobotOfflineReward.xml" path="/win/"/>
+    <component id="i8oz2n" name="WinRobotOfflineReward.xml" path="/win/" exported="true"/>
     <image id="i8oz2o" name="切图提示.png" path="/newImg/"/>
     <component id="i8oz2p" name="btnRobotAttribute.xml" path="/btn/"/>
   </resources>

@@ -1,26 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="800,600" designImage="ui://asrl3zfri8oz2o" designImageOffsetX="-180" designImageOffsetY="-20" bgColor="#5b4b37">
+<component size="800,600" designImage="ui://asrl3zfri8oz2o" designImageOffsetX="-180" designImageOffsetY="-20" designImageAlpha="97" bgColor="#5b4b37">
+  <controller name="isGain" pages="2,reward,3,nothing" selected="0"/>
   <displayList>
-    <image id="n0_nn7n" name="n0" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="50,83" size="698,433"/>
-    <text id="n1_nn7n" name="n1" xy="366,94" size="50,28" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="概览&#xA;"/>
-    <component id="n6_nn7n" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="711,76" size="52,52">
+    <image id="n0_nn7n" name="n0" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="50,83" size="698,433" group="n11_bhzp"/>
+    <text id="n1_nn7n" name="n1" xy="366,94" size="50,28" group="n11_bhzp" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="概览&#xA;"/>
+    <component id="n6_nn7n" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="711,76" size="52,52" group="n11_bhzp">
       <Button icon="ui://te1gxawoefrs1q"/>
     </component>
     <text id="n2_nn7n" name="tfObject" xy="283,137" size="239,25" group="n10_nn7n" fontSize="18" color="#5b4b37" align="center" vAlign="middle" text="离线后帮您获取了如下物品："/>
     <image id="n4_nn7n" name="n4" src="ot9si2z" fileName="newImg/img_cm_bottom_5.png" pkg="te1gxawo" xy="68,166" size="665,161" group="n10_nn7n"/>
-    <list id="n7_nn7n" name="lstOfflineAward" xy="72,175" size="655,143" group="n10_nn7n" layout="flow_hz" overflow="scroll" defaultItem="ui://te1gxawoj1n2cyi8y">
+    <list id="n7_nn7n" name="lstOfflineAward" xy="72,175" size="655,143" group="n10_nn7n" layout="flow_hz" overflow="scroll" defaultItem="ui://te1gxawoj1n2cyi8y" autoClearItems="true">
       <item/>
       <item/>
       <item/>
       <item/>
     </list>
-    <text id="n8_nn7n" name="tfAttribute" xy="302,354" size="185,25" group="n10_nn7n" fontSize="18" color="#5b4b37" align="center" vAlign="middle" singleLine="true" text="离线后机器人属性变化"/>
-    <list id="n9_nn7n" name="lstAttribute" xy="72,385" size="659,91" group="n10_nn7n" overflow="scroll" lineGap="4" defaultItem="ui://asrl3zfri8oz2p" autoClearItems="true">
+    <group id="n10_nn7n" name="n10" xy="68,137" size="665,190" group="n11_bhzp" advanced="true">
+      <gearDisplay controller="isGain" pages="2"/>
+    </group>
+    <text id="n8_nn7n" name="tfAttribute" xy="302,354" size="185,25" group="n17_gxud" fontSize="18" color="#5b4b37" align="center" vAlign="middle" singleLine="true" text="离线后机器人属性变化"/>
+    <list id="n9_nn7n" name="lstAttribute" xy="72,385" size="659,85" group="n17_gxud" overflow="scroll" lineGap="4" defaultItem="ui://asrl3zfri8oz2p" autoClearItems="true">
       <item/>
       <item/>
       <item/>
       <item/>
     </list>
-    <group id="n10_nn7n" name="n10" xy="68,137" size="666,339" advanced="true"/>
+    <group id="n17_gxud" name="grpAttribute" xy="72,354" size="659,116" group="n11_bhzp" advanced="true">
+      <gearDisplay controller="isGain" pages="2,3"/>
+    </group>
+    <group id="n11_bhzp" name="n11" xy="50,76" size="713,440" locked="true" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
   </displayList>
 </component>
