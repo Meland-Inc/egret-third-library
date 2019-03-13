@@ -17,7 +17,7 @@
       <relation target="n5_d38r" sidePair="bottom-bottom"/>
       <Button title="保存" titleColor="#000000" titleFontSize="16" sound="ui://fknoioovtqc913"/>
     </component>
-    <component id="n16_d38r" name="n16" src="d38r0" fileName="com/comAttrubiteEdit.xml" xy="866,181" size="250,388" group="n5_d38r"/>
+    <component id="n16_d38r" name="comAttrubiteEdit" src="d38r0" fileName="com/comAttrubiteEdit.xml" xy="866,181" size="250,388" group="n5_d38r"/>
     <group id="n5_d38r" name="root" xy="841,0" size="298,640" advanced="true">
       <relation target="" sidePair="right-right,height-height"/>
     </group>
