@@ -6,7 +6,7 @@
       <relation target="n0_o18j" sidePair="center-center"/>
     </text>
     <text id="n8_o18j" name="tfEntityId" xy="946,67" size="72,19" group="n17_jipr" fontSize="14" color="#635c51" align="center" vAlign="middle" leading="0" vars="true" text="场景ID: {entityId=100}"/>
-    <component id="n16_jipr" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1088,10" size="36,36" group="n17_jipr" visible="false">
+    <component id="n16_jipr" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1088,10" size="36,36" group="n17_jipr">
       <Button icon="ui://te1gxawohpymyi7o"/>
     </component>
     <component id="n15_xng3" name="btnCoding" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="962,106" size="135,34" group="n17_jipr">
