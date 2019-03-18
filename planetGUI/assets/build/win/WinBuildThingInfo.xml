@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" opaque="false" designImage="ui://i25v0ebkxng317">
+<component size="1136,640" opaque="false" designImage="ui://i25v0ebkgu6037" designImageAlpha="82">
   <displayList>
-    <image id="n0_o18j" name="bg" src="efrs1m" fileName="newImg/bg_cm_3.png" pkg="te1gxawo" xy="930,11" size="200,232" group="n17_jipr"/>
-    <text id="n4_o18j" name="tfName" xy="982,18" size="95,24" group="n17_jipr" fontSize="18" color="#ffffff" align="center" vAlign="middle" leading="0" text="普通木地板">
+    <image id="n0_o18j" name="bg" src="gu60cyial" fileName="UI2_Img/bg_cm_1.png" pkg="te1gxawo" xy="887,0" size="248,282" group="n17_jipr" hideByEditor="true"/>
+    <image id="n20_wc8q" name="IDBG" src="gu60cyiac" fileName="UI2_Img/img_cm_bg2.png" pkg="te1gxawo" xy="914,42" size="80,20" group="n17_jipr">
+      <relation target="n8_o18j" sidePair="rightext-right"/>
+    </image>
+    <text id="n4_o18j" name="tfName" xy="909,15" size="100,24" group="n17_jipr" fontSize="18" color="#3a5659" align="center" vAlign="middle" leading="0" bold="true" text="普通木地板">
       <relation target="n0_o18j" sidePair="center-center"/>
     </text>
-    <text id="n8_o18j" name="tfEntityId" xy="946,67" size="72,19" group="n17_jipr" fontSize="14" color="#635c51" align="center" vAlign="middle" leading="0" vars="true" text="场景ID: {entityId=100}"/>
-    <component id="n16_jipr" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1088,10" size="36,36" group="n17_jipr">
+    <text id="n8_o18j" name="tfEntityId" xy="921,44" size="66,18" group="n17_jipr" fontSize="12" color="#3a5659" align="center" vAlign="middle" leading="0" vars="true" bold="true" text="建筑ID: {entityId=100}"/>
+    <component id="n16_jipr" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1087,10" size="36,36" group="n17_jipr" visible="false">
       <Button icon="ui://te1gxawohpymyi7o"/>
     </component>
-    <component id="n15_xng3" name="btnCoding" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="962,106" size="135,34" group="n17_jipr">
-      <Button title="编辑代码" titleColor="#f8ecc2" titleFontSize="18" icon="ui://te1gxawopgixi4o"/>
+    <component id="n15_xng3" name="btnCoding" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="910,73" size="203,54" group="n17_jipr">
+      <Button title="编辑代码" titleColor="#ffffff" titleFontSize="24" icon="ui://te1gxawogu60cyia2"/>
     </component>
-    <component id="n18_tmit" name="btnEditProperties" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="962,150" size="135,34" group="n17_jipr">
-      <Button title="编辑属性" titleColor="#f8ecc2" titleFontSize="18" icon="ui://te1gxawopgixi4o"/>
+    <component id="n18_tmit" name="btnEditProperties" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="910,139" size="203,54" group="n17_jipr">
+      <Button title="编辑属性" titleColor="#ffffff" titleFontSize="24" icon="ui://te1gxawogu60cyia2"/>
     </component>
-    <component id="n19_tmit" name="btnSaveTemplate" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="962,194" size="135,34" group="n17_jipr" grayed="true">
-      <Button title="保存物件模板" titleColor="#f8ecc2" titleFontSize="18" icon="ui://te1gxawopgixi4o"/>
+    <component id="n19_tmit" name="btnSaveTemplate" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="910,204" size="203,54" group="n17_jipr" grayed="true">
+      <Button title="保存物件模板" titleColor="#ffffff" titleFontSize="24" icon="ui://te1gxawogu60cyia2"/>
     </component>
-    <group id="n17_jipr" name="root" xy="930,10" size="200,233" advanced="true">
+    <group id="n17_jipr" name="root" xy="887,0" size="249,282" advanced="true">
       <relation target="" sidePair="right-right,top-top"/>
     </group>
   </displayList>
