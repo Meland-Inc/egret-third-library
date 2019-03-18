@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="198,20">
   <displayList>
-    <image id="n4_d38r" name="imgBg" src="ot9si2b" fileName="newImg/btn_cm_1_yellow.png" pkg="te1gxawo" xy="77,0" size="122,23">
+    <image id="n4_d38r" name="imgBg" src="ot9si2b" fileName="newImg/btn_cm_1_yellow.png" pkg="te1gxawo" xy="77,0" size="122,24">
       <relation target="n2_d38r" sidePair="width-width,height-height"/>
     </image>
     <text id="n0_d38r" name="labTitle" xy="21,2" pivot="1,0" size="33,20" fontSize="14" text="标题"/>
-    <text id="n2_d38r" name="labContent" xy="78,2" size="120,19" input="true" fontSize="12" autoSize="height" text="猜猜我是谁"/>
+    <text id="n2_d38r" name="labContent" xy="78,2" size="120,20" input="true" fontSize="12" autoSize="none" text="猜猜我是谁大双方都打算发大水发"/>
   </displayList>
 </component>
