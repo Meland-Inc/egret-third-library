@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="981,587" overflow="hidden" scroll="both" scrollBarRes="ui://rnqj1l77j7co5v,ui://rnqj1l77j7co5x">
+<component size="981,587" overflow="hidden" scroll="both" scrollBarRes="ui://rnqj1l77j7co5v,ui://rnqj1l77j7co5x" adaptationTest="FitSize">
+  <controller name="codeType" pages="0,robot,1,entity" selected="0"/>
   <displayList>
     <component id="n9_j7co" name="mainContainer" src="j7co5y" fileName="com/comMainContainer.xml" xy="0,0" size="981,587">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </component>
-    <component id="n5_t3y1" name="btnRun" src="t3y12h" fileName="btn/btnRun.xml" xy="675,490" size="140,55" group="n14_sdqn">
+    <component id="n5_t3y1" name="btnRun" src="t3y12h" fileName="btn/btnRun.xml" xy="709,490" size="140,55">
+      <gearText controller="codeType" pages="0" values="运行" default="保存"/>
+      <relation target="" sidePair="bottom-bottom,left-left%"/>
+      <Button title="运行" sound="ui://fknoioovtqc911"/>
+    </component>
+    <component id="n6_t3y1" name="btnShare" src="t3y12f" fileName="btn/btnShare.xml" xy="547,490" size="140,55">
+      <gearDisplay controller="codeType" pages="0"/>
+      <gearText controller="codeType" default=""/>
+      <relation target="" sidePair="bottom-bottom,left-left%"/>
       <Button sound="ui://fknoioovtqc911"/>
     </component>
-    <component id="n6_t3y1" name="btnShare" src="t3y12f" fileName="btn/btnShare.xml" xy="490,490" size="140,55" group="n14_sdqn">
-      <Button sound="ui://fknoioovtqc911"/>
+    <component id="n13_sdqn" name="btnSave" src="sdqn7f" fileName="btn/btnSave.xml" xy="385,490" size="140,55">
+      <gearXY controller="codeType" pages="0,1" values="385,490|501,490"/>
+      <gearText controller="codeType" pages="0" values="保存" default="保存模板"/>
+      <relation target="" sidePair="bottom-bottom,left-left%"/>
+      <Button title="保存" sound="ui://fknoioovtqc911"/>
     </component>
-    <component id="n13_sdqn" name="btnSave" src="sdqn7f" fileName="btn/btnSave.xml" xy="293,490" size="140,55" group="n14_sdqn">
-      <Button sound="ui://fknoioovtqc911"/>
-    </component>
-    <group id="n14_sdqn" name="n14" xy="293,490" size="522,55" advanced="true">
-      <relation target="" sidePair="bottom-bottom,right-right"/>
-    </group>
     <image id="n15_edsm" name="btnOperateBg" src="t3y12d" fileName="img/img_edit_bg.png" xy="885,247" size="59,290" group="n20_edsm"/>
     <component id="n16_edsm" name="btnReset" src="t3y128" fileName="btn/btnReset.xml" xy="887,329" group="n20_edsm">
       <Button sound="ui://fknoioovtqc911"/>
