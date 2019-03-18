@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640">
+<component size="1136,640" designImage="ui://i25v0ebkgu601b" designImageAlpha="3" designImageLayer="1">
   <controller name="deviceState" pages="0,wait,1,running" selected="1"/>
   <displayList>
-    <graph id="n2_unrk" name="bg" xy="382,101" size="371,437" group="n4_dy7k" type="rect" fillColor="#ff00cc66">
+    <image id="n2_unrk" name="bg" src="gu60cyian" fileName="UI2_Img/bg_cm_3.png" pkg="te1gxawo" xy="350,155" size="281,324" group="n4_dy7k">
       <relation target="" sidePair="center-center,middle-middle"/>
-    </graph>
-    <component id="n0_unrk" name="fuelPanel" src="unrk6z" fileName="com/fuel.xml" xy="378,156" group="n4_dy7k"/>
-    <component id="n3_unrk" name="btnStart" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="508,432" group="n4_dy7k">
-      <gearText controller="deviceState" pages="1" values="停止" default="启动"/>
-      <Button title="停止"/>
+    </image>
+    <image id="n8_wc8q" name="n8" src="gu60cyiam" fileName="UI2_Img/bg_cm_2.png" pkg="te1gxawo" xy="367,230" size="250,165" group="n4_dy7k"/>
+    <text id="n5_wc8q" name="tfTitle" xy="373,170" size="131,24" group="n4_dy7k" fontSize="18" color="#38211b" autoSize="none" bold="true" text="源码能源装置 "/>
+    <image id="n6_wc8q" name="n6" src="gu60cyiac" fileName="UI2_Img/img_cm_bg2.png" pkg="te1gxawo" xy="375,197" group="n4_dy7k"/>
+    <text id="n7_wc8q" name="n7" xy="384,198" size="31,18" group="n4_dy7k" fontSize="12" color="#3a5659" bold="true" text="建筑"/>
+    <component id="n0_unrk" name="fuelPanel" src="unrk6z" fileName="com/fuel.xml" xy="345,164" group="n4_dy7k"/>
+    <component id="n3_unrk" name="btnStart" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="425,403" size="128,55" group="n4_dy7k">
+      <gearText controller="deviceState" pages="1" values="暂停" default="启动"/>
+      <gearIcon controller="deviceState" pages="1" values="ui://te1gxawogu60cyia5" default="ui://te1gxawogu60cyi9z"/>
+      <Button title="暂停" titleColor="#ffffff" titleFontSize="24" icon="ui://te1gxawogu60cyia5"/>
     </component>
-    <group id="n4_dy7k" name="n4" xy="378,101" size="375,437"/>
+    <group id="n4_dy7k" name="n4" xy="345,155" size="289,325"/>
   </displayList>
 </component>
