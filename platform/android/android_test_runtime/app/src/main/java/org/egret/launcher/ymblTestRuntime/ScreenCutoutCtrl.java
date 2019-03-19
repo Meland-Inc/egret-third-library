@@ -5,8 +5,6 @@ import android.os.Build;
 import android.view.WindowInsets;
 import android.view.DisplayCutout;
 
-import javax.sql.RowSetMetaData;
-
 public class ScreenCutoutCtrl {
     public final static int DEVICE_BRAND_OPPO = 0x0001;
     public final static int DEVICE_BRAND_HUAWEI = 0x0002;
@@ -23,20 +21,20 @@ public class ScreenCutoutCtrl {
 
     private static int getCutoutHeight(WindowInsets winInsets, Context context) {
         if (winInsets == null || context == null) return 0;
-        switch (NotchScreenUtil.getDeviceBrand()) {
+        switch (AdapterUtil.getDeviceBrand()) {
             case DEVICE_BRAND_HUAWEI:
-                if (NotchScreenUtil.hasNotchInScreenAtHuawei(context)) {
-                    return NotchScreenUtil.getNotchSizeAtHuawei(context);
+                if (AdapterUtil.hasNotchInScreenAtHuawei(context)) {
+                    return AdapterUtil.getNotchSizeAtHuawei(context);
                 }
                 return 0;
             case DEVICE_BRAND_OPPO:
-                if (NotchScreenUtil.hasNotchInScreenAtOppo(context)) {
-                    return NotchScreenUtil.getNotchSizeAtOppo();
+                if (AdapterUtil.hasNotchInScreenAtOppo(context)) {
+                    return AdapterUtil.getNotchSizeAtOppo();
                 }
                 return 0;
             case DEVICE_BRAND_VIVO:
-                if (NotchScreenUtil.hasNotchInScreenAtVivo(context)) {
-                    return NotchScreenUtil.getNotchSizeAtVivo(context);
+                if (AdapterUtil.hasNotchInScreenAtVivo(context)) {
+                    return AdapterUtil.getNotchSizeAtVivo(context);
                 }
                 return 0;
             default:
@@ -46,20 +44,20 @@ public class ScreenCutoutCtrl {
                 return cutout.getSafeInsetTop();
         }
 //        if(Rom.isOppo()){
-//            if(NotchScreenUtil.hasNotchInScreenAtOppo(context)){
-//                return NotchScreenUtil.getNotchSizeAtOppo();
+//            if(AdapterUtil.hasNotchInScreenAtOppo(context)){
+//                return AdapterUtil.getNotchSizeAtOppo();
 //            }
 //            return 0;
 //        }else if(Rom.isVivo()){
-//            if(NotchScreenUtil.hasNotchInScreenAtVivo(context)){
-//                return NotchScreenUtil.getNotchSizeAtVivo(context);
+//            if(AdapterUtil.hasNotchInScreenAtVivo(context)){
+//                return AdapterUtil.getNotchSizeAtVivo(context);
 //            }
 //            return 0;
 //        }else if(Rom.isMiui()){
 //
 //        }else if(Rom.isEmui()){
-//            if(NotchScreenUtil.hasNotchInScreenAtHuawei(context)){
-//                NotchScreenUtil.getNotchSizeAtHuawei(context);
+//            if(AdapterUtil.hasNotchInScreenAtHuawei(context)){
+//                AdapterUtil.getNotchSizeAtHuawei(context);
 //            }
 //        }else if(Rom.isFlyme()){
 //

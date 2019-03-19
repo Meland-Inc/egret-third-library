@@ -2,9 +2,12 @@
 <component size="140,50" extention="Button">
   <controller name="button" pages="0,up,1,down" selected="0"/>
   <displayList>
-    <image id="n2_edsm" name="n2" src="efrs1x" fileName="newImg/btn_cm_yellow2.png" pkg="te1gxawo" xy="0,0" size="140,50"/>
-    <text id="n3_edsm" name="n3" xy="65,10" size="50,29" fontSize="22" color="#672f16" align="center" vAlign="middle" text="保存"/>
+    <image id="n2_edsm" name="n2" src="efrs1x" fileName="newImg/btn_cm_yellow2.png" pkg="te1gxawo" xy="0,0" size="140,50">
+      <relation target="" sidePair="rightext-right"/>
+    </image>
+    <text id="n3_edsm" name="title" xy="65,10" size="49,28" fontSize="22" color="#672f16" align="center" vAlign="middle" text="保存"/>
     <image id="n4_edsm" name="n4" src="edsm7z" fileName="newImg/icon_code_save.png" xy="20,12"/>
   </displayList>
   <Button downEffect="dark" downEffectValue="0.80"/>
+  <relation target="n3_edsm" sidePair="rightext-right"/>
 </component>

@@ -3,7 +3,7 @@
   <controller name="ctrlStatus" pages="0,normal,1,select" selected="0"/>
   <controller name="ctrlType" pages="0,bag,1,formula" selected="0"/>
   <controller name="ctrlIsNeedFuel" pages="0,yes,1,no" selected="0"/>
-  <controller name="ctrlIsRead" pages="0,yes,1,no" selected="1"/>
+  <controller name="ctrlIsRead" pages="0,yes,1,no" selected="0"/>
   <displayList>
     <image id="n0_g7xw" name="imgSynthersisBG" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="0,37" size="300,364"/>
     <component id="n17_sg4g" name="btnBag" src="oliri6q" fileName="btn/rbtnScale.xml" pkg="te1gxawo" xy="15,0" size="130,37">
@@ -91,7 +91,7 @@
     <image id="n26_gul5" name="contentBg" src="nxksyi7w" fileName="newImg/img_cm_tips_5.png" pkg="te1gxawo" xy="0,-44" size="153,32" group="n30_gul5"/>
     <text id="n27_gul5" name="tfContent" xy="4,-40" size="144,25" group="n30_gul5" fontSize="16" color="#ffffff" align="center" vAlign="middle" vars="true" autoSize="height" text="合成了新物品!&#xA;"/>
     <image id="n29_gul5" name="n29" src="qn8o9" fileName="newImg/img_main_chatbubble_2.png" pkg="te1gxawo" xy="64,-12" group="n30_gul5"/>
-    <group id="n30_gul5" name="n30" xy="0,-44" size="153,58" advanced="true">
+    <group id="n30_gul5" name="new" xy="0,-44" size="153,58" advanced="true">
       <gearDisplay controller="ctrlIsRead" pages="1"/>
     </group>
   </displayList>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="348,48">
+  <displayList>
+    <image id="n4_d38r" name="imgBg" src="gu60cyiai" fileName="UI2_Img/img_cm_text1.png" pkg="te1gxawo" xy="94,0" size="254,48">
+      <relation target="n2_d38r" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n0_d38r" name="labTitle" xy="19,9" pivot="0.5,0" size="53,31" fontSize="24" color="#38211b" text="标题"/>
+    <text id="n2_d38r" name="labContent" xy="110,12" size="225,25" input="true" fontSize="18" color="#38211b" autoSize="none" text="猜猜我是谁"/>
+    <image id="n5_gjd5" name="n5" src="gu60cyiaa" fileName="UI2_Img/icon_cm_edit.png" pkg="te1gxawo" xy="305,8">
+      <relation target="n2_d38r" sidePair="right-right,bottom-bottom"/>
+    </image>
+  </displayList>
+</component>

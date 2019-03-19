@@ -26,7 +26,7 @@ export class GenerateTask {
 
     private scriptDirPath = "src";
     //排除的符号
-    private excludeSymbolList: string[] = ["info", "log", "group", "groupEnd", "warn", "error", "trace", "chunks", "BaseTab"];
+    private excludeSymbolList: string[] = ["info", "log", "group", "groupEnd", "warn", "error", "trace", "chunks", "BaseTab", "getResource"];
     //找文件会排除文件夹中文件 给相对路径 包括第三方库
     private excludeDirList: string[] = ["libs", "mixLibs", "src\\csv", "src\\module\\codeBlock"];//, "src\\module\\codeBlock\\core"
     //排除文件 直接给文件名
@@ -35,7 +35,7 @@ export class GenerateTask {
     //排除符号 包括直接继承这些的子类符号 游戏用到了反射
     private excludeChildClass: string[] = ["GuiAlert", "GuiComponent", "GuiError", "GuiLayer", "GuiLoader", "GuiModal", "GuiObject"
         , "GuiSubLayer", "GuiToast", "GuiToolTip", "GuiWindow"];
-    private egretEuiSkinDir: string = "resource\\skins";//白鹭中的EUI皮肤  用到了反射 去掉skin为类文件
+    private egretEuiSkinDir: string = "";//"resource\\skins";//白鹭中的EUI皮肤  用到了反射 去掉skin为类文件
     private egretEuiChildClass: string = "eui.";//白鹭Eui中子类符号都要排除
     private excludeKeyWordSymbols: string[] = ["generateCodeblock"];//需要排除带有关键字的符号
 

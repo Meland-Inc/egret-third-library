@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640">
+  <controller name="deviceState" pages="0,wait,1,running" selected="1"/>
+  <displayList>
+    <graph id="n2_unrk" name="bg" xy="382,101" size="371,437" group="n4_dy7k" type="rect" fillColor="#ff00cc66">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </graph>
+    <component id="n0_unrk" name="fuelPanel" src="unrk6z" fileName="com/fuel.xml" xy="378,156" group="n4_dy7k"/>
+    <component id="n3_unrk" name="btnStart" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="508,432" group="n4_dy7k">
+      <gearText controller="deviceState" pages="1" values="停止" default="启动"/>
+      <Button title="停止"/>
+    </component>
+    <group id="n4_dy7k" name="n4" xy="378,101" size="375,437"/>
+  </displayList>
+</component>

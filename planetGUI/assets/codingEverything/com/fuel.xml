@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="289,238">
+  <controller name="ctrlStatus" pages="0,normal,1,select" selected="0"/>
+  <controller name="ctrlIsNeedFuel" pages="0,yes,1,no" selected="0"/>
+  <displayList>
+    <image id="n2_g7xw" name="imgTimeBG" src="pgixi5f" fileName="newImg/img_cm_bottom_10.png" pkg="te1gxawo" xy="163,209" size="126,19" group="n5_g7xw"/>
+    <text id="n3_g7xw" name="tf1" xy="192,185" size="77,23" group="n5_g7xw" fontSize="17" color="#584736" text="燃烧时间"/>
+    <text id="n4_g7xw" name="tfTime" xy="184,206" size="81,27" group="n5_g7xw" fontSize="20" color="#584736" vAlign="middle" vars="true" text="{hour=00}:{minute=00}:{second=00}">
+      <relation target="n2_g7xw" sidePair="center-center"/>
+    </text>
+    <group id="n5_g7xw" name="time" xy="163,185" size="126,48" advanced="true">
+      <gearDisplay controller="ctrlIsNeedFuel" pages="0"/>
+    </group>
+    <image id="n8_acec" name="imgSeleBG" src="pgixi5x" fileName="newImg/img_cm_item_14.png" pkg="te1gxawo" xy="88,180" size="58,58" group="n20_twvn">
+      <gearDisplay controller="ctrlStatus" pages="1"/>
+    </image>
+    <image id="n10_acec" name="imgIconBG" src="ot9si33" fileName="newImg/img_cm_item_2.png" pkg="te1gxawo" xy="89,181" size="56,56" group="n20_twvn"/>
+    <loader id="n11_acec" name="ladIcon" xy="89,181" size="56,56" group="n20_twvn" aspect="true" url="ui://kdeyuiwwbgz46u" align="center" vAlign="middle"/>
+    <image id="n12_sg4g" name="n12" src="jjanyi88" fileName="newImg/img_cm_bottom_11_2.png" pkg="te1gxawo" xy="102,164" group="n20_twvn">
+      <gearDisplay controller="ctrlStatus" pages="1"/>
+    </image>
+    <image id="n13_sg4g" name="n13" src="twvnyi8c" fileName="newImg/img_cm_bottom_11.png" pkg="te1gxawo" xy="0,0" size="233,161" group="n20_twvn">
+      <gearDisplay controller="ctrlStatus" pages="1"/>
+    </image>
+    <list id="n14_sg4g" name="lstFuel" xy="9,6" size="220,146" group="n20_twvn" layout="flow_hz" overflow="scroll" defaultItem="ui://kdeyuiwwfbul6t">
+      <gearDisplay controller="ctrlStatus" pages="1"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n23_b7ci" name="btnAddFuel" src="b7ci6y" fileName="btn/btnTransparent.xml" pkg="kdeyuiww" xy="89,181" size="56,56" group="n20_twvn"/>
+    <group id="n20_twvn" name="open" xy="0,0" size="233,238" advanced="true">
+      <gearDisplay controller="ctrlIsNeedFuel" pages="0"/>
+    </group>
+  </displayList>
+</component>
