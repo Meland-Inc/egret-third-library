@@ -289,6 +289,39 @@
     <image id="t1mdcyi9o" name="img_status_flee.png" path="/newImg/" exported="true"/>
     <image id="t1mdcyi9p" name="img_status_hungry.png" path="/newImg/" exported="true"/>
     <image id="t1mdcyi9q" name="img_status_thirsty.png" path="/newImg/" exported="true"/>
+    <image id="gu60cyi9r" name="bg_cm_bag.png" path="/UI2_Img/" exported="true" scale="9grid" scale9grid="15,15,18,18"/>
+    <image id="gu60cyi9s" name="bg_cm_items.png" path="/UI2_Img/" exported="true" scale="9grid" scale9grid="21,25,42,50"/>
+    <image id="gu60cyi9t" name="btn_cm_.png" path="/UI2_Img/" exported="true"/>
+    <image id="gu60cyi9u" name="btn_cm_choose.png" path="/UI2_Img/" exported="true"/>
+    <image id="gu60cyi9v" name="btn_cm_closed.png" path="/UI2_Img/" exported="true"/>
+    <image id="gu60cyi9w" name="btn_cm_closed2.png" path="/UI2_Img/" exported="true"/>
+    <image id="gu60cyi9x" name="btn_cm_downturn.png" path="/UI2_Img/" exported="true"/>
+    <image id="gu60cyi9y" name="btn_cm_gray.png" path="/UI2_Img/" exported="true" scale="9grid" scale9grid="25,25,30,30"/>
+    <image id="gu60cyi9z" name="btn_cm_green.png" path="/UI2_Img/" exported="true" scale="9grid" scale9grid="25,25,30,30"/>
+    <image id="gu60cyia0" name="btn_cm_items.png" path="/UI2_Img/" exported="true" scale="9grid" scale9grid="30,30,36,55"/>
+    <image id="gu60cyia1" name="btn_cm_leftturn.png" path="/UI2_Img/" exported="true"/>
+    <image id="gu60cyia2" name="btn_cm_list.png" path="/UI2_Img/" exported="true" scale="9grid" scale9grid="20,20,8,8"/>
+    <image id="gu60cyia3" name="btn_cm_off.png" path="/UI2_Img/" exported="true"/>
+    <image id="gu60cyia4" name="btn_cm_on.png" path="/UI2_Img/" exported="true"/>
+    <image id="gu60cyia5" name="btn_cm_red.png" path="/UI2_Img/" exported="true" scale="9grid" scale9grid="20,20,40,40"/>
+    <image id="gu60cyia6" name="btn_cm_rightturn.png" path="/UI2_Img/" exported="true"/>
+    <image id="gu60cyia7" name="btn_cm_slider.png" path="/UI2_Img/" exported="true"/>
+    <image id="gu60cyia8" name="btn_cm_upturn.png" path="/UI2_Img/" exported="true"/>
+    <image id="gu60cyia9" name="icon_cm_add.png" path="/UI2_Img/" exported="true"/>
+    <image id="gu60cyiaa" name="icon_cm_edit.png" path="/UI2_Img/" exported="true"/>
+    <image id="gu60cyiab" name="icon_cm_gear.png" path="/UI2_Img/" exported="true"/>
+    <image id="gu60cyiac" name="img_cm_bg2.png" path="/UI2_Img/" exported="true"/>
+    <image id="gu60cyiad" name="img_cm_bg3.png" path="/UI2_Img/" exported="true"/>
+    <image id="gu60cyiae" name="img_cm_bg4.png" path="/UI2_Img/" exported="true"/>
+    <image id="gu60cyiaf" name="img_cm_dividing.png" path="/UI2_Img/" exported="true"/>
+    <image id="gu60cyiag" name="img_cm_progressbar1.png" path="/UI2_Img/" exported="true"/>
+    <image id="gu60cyiah" name="img_cm_progressbar2.png" path="/UI2_Img/" exported="true"/>
+    <image id="gu60cyiai" name="img_cm_text1.png" path="/UI2_Img/" exported="true" scale="9grid" scale9grid="12,12,24,24"/>
+    <image id="gu60cyiaj" name="img_cm_title1.png" path="/UI2_Img/" exported="true" scale="9grid" scale9grid="12,12,24,24"/>
+    <image id="gu60cyiak" name="img_cm_vertical.png" path="/UI2_Img/" exported="true" scale="9grid" scale9grid="0,10,8,28"/>
+    <image id="gu60cyial" name="bg_cm_1.png" path="/UI2_Img/" exported="true" scale="9grid" scale9grid="30,30,20,20"/>
+    <image id="gu60cyiam" name="bg_cm_2.png" path="/UI2_Img/" exported="true" scale="9grid" scale9grid="20,20,40,40"/>
+    <image id="gu60cyian" name="bg_cm_3.png" path="/UI2_Img/" exported="true" scale="9grid" scale9grid="30,30,20,20"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>

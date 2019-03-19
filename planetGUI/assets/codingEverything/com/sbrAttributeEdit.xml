@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="0,200" extention="ScrollBar">
+  <displayList>
+    <graph id="n0_gjd5" name="n0" xy="-25,0" size="0,200" visible="false" touchable="false" type="rect" lineSize="0" fillColor="#fff0f0f0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <graph id="n1_gjd5" name="bar" xy="-25,0" size="17,200" visible="false">
+      <relation target="" sidePair="height-height"/>
+    </graph>
+    <component id="n2_gjd5" name="grip" src="gjd578" fileName="com/sbrAttributeEdit_grip.xml" xy="-25,20"/>
+  </displayList>
+  <ScrollBar/>
+</component>
