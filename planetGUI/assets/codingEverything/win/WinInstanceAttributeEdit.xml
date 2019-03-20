@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640">
+<component size="1136,640" designImage="ui://i25v0ebkgjd51d" adaptationTest="FitSize">
   <displayList>
-    <image id="n1_d38r" name="imgBg" src="pgixi4i" fileName="newImg/bg_game1.png" pkg="te1gxawo" xy="841,0" size="298,640" group="n5_d38r"/>
-    <component id="n6_d38r" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1086,7" size="44,44" group="n5_d38r">
-      <relation target="n5_d38r" sidePair="top-top"/>
-      <Button icon="ui://te1gxawoq8x4m"/>
+    <image id="n1_d38r" name="n1" src="gu60cyial" fileName="UI2_Img/bg_cm_1.png" pkg="te1gxawo" xy="663,0" size="475,640" group="n5_d38r">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <image id="n17_gjd5" name="n17" src="gu60cyiaj" fileName="UI2_Img/img_cm_title1.png" pkg="te1gxawo" xy="764,15" size="272,54" group="n21_gjd5"/>
+    <text id="n18_gjd5" name="n18" xy="847,24" size="105,33" group="n21_gjd5" fontSize="24" color="#ffffff" bold="true" text="编辑属性"/>
+    <group id="n21_gjd5" name="titile" xy="764,15" size="272,54" group="n5_d38r" advanced="true" collapsed="true"/>
+    <component id="n6_d38r" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1081,1" size="50,53" group="n5_d38r">
+      <Button icon="ui://te1gxawogu60cyi9v"/>
     </component>
-    <loader id="n7_d38r" name="ladIcon" xy="924,73" size="135,103" group="n5_d38r" url="ui://te1gxawordy42r" fill="scaleFree">
-      <relation target="n5_d38r" sidePair="top-top"/>
-    </loader>
-    <component id="n8_d38r" name="btnEditCode" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="869,579" group="n5_d38r">
-      <relation target="n5_d38r" sidePair="bottom-bottom"/>
-      <Button title="编辑脚本" titleColor="#000000" titleFontSize="16" sound="ui://fknoioovtqc913"/>
+    <image id="n22_gjd5" name="n22" src="gu60cyiam" fileName="UI2_Img/bg_cm_2.png" pkg="te1gxawo" xy="689,84" size="420,460" group="n5_d38r">
+      <relation target="n16_d38r" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n16_d38r" name="comAttrubiteEdit" src="d38r0" fileName="com/comAttrubiteEdit.xml" xy="690,84" size="420,460" group="n5_d38r">
+      <relation target="" sidePair="height-height"/>
     </component>
-    <component id="n11_d38r" name="btnSave" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="999,579" group="n5_d38r">
-      <relation target="n5_d38r" sidePair="bottom-bottom"/>
-      <Button title="保存" titleColor="#000000" titleFontSize="16" sound="ui://fknoioovtqc913"/>
+    <component id="n19_gjd5" name="btnEditCode" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="702,556" size="190,70" group="n5_d38r">
+      <relation target="" sidePair="bottom-bottom"/>
+      <Button title="编辑脚本" titleColor="#ffffff" titleFontSize="24" icon="ui://te1gxawogu60cyi9z" sound="ui://fknoioovtqc913"/>
     </component>
-    <component id="n16_d38r" name="comAttrubiteEdit" src="d38r0" fileName="com/comAttrubiteEdit.xml" xy="866,181" size="250,388" group="n5_d38r"/>
-    <group id="n5_d38r" name="root" xy="841,0" size="298,640" advanced="true">
-      <relation target="" sidePair="right-right,height-height"/>
+    <component id="n20_gjd5" name="btnSave" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="911,556" size="190,70" group="n5_d38r">
+      <relation target="" sidePair="bottom-bottom"/>
+      <Button title="保存" titleColor="#ffffff" titleFontSize="24" icon="ui://te1gxawogu60cyi9z" sound="ui://fknoioovtqc913"/>
+    </component>
+    <group id="n5_d38r" name="root" xy="663,0" size="475,640" advanced="true">
+      <relation target="" sidePair="right-right"/>
     </group>
   </displayList>
 </component>
