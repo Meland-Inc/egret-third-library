@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkgjd51d" designImageAlpha="10" adaptationTest="FitSize">
   <displayList>
-    <image id="n1_d38r" name="n1" src="gu60cyial" fileName="UI2_Img/bg_cm_1.png" pkg="te1gxawo" xy="663,0" size="475,640" group="n5_d38r">
+    <loader id="n1_d38r" name="n1" xy="663,0" size="475,640" group="n5_d38r" url="ui://te1gxawogu60cyial" fill="scaleFree">
       <relation target="" sidePair="height-height"/>
-    </image>
+    </loader>
     <image id="n17_gjd5" name="n17" src="gu60cyiaj" fileName="UI2_Img/img_cm_title1.png" pkg="te1gxawo" xy="764,15" size="272,54" group="n21_gjd5"/>
     <text id="n18_gjd5" name="n18" xy="846,24" pivot="0.5,0.5" size="105,33" group="n21_gjd5" fontSize="24" color="#ffffff" align="center" vAlign="middle" bold="true" text="编辑属性"/>
     <group id="n21_gjd5" name="titile" xy="764,15" size="272,54" group="n5_d38r" advanced="true" collapsed="true"/>
