@@ -16,7 +16,7 @@
     <image id="n13_sg4g" name="n13" src="gu60cyi9r" fileName="UI2_Img/bg_cm_bag.png" pkg="te1gxawo" xy="299,17" size="311,269" group="n20_twvn">
       <gearDisplay controller="ctrlStatus" pages="1"/>
     </image>
-    <list id="n14_sg4g" name="lstFuel" xy="318,40" size="278,218" group="n20_twvn" layout="flow_hz" overflow="scroll" lineGap="16" colGap="17" defaultItem="ui://kdeyuiwwwc8q6z">
+    <list id="n14_sg4g" name="lstFuel" xy="318,40" size="278,218" group="n20_twvn" layout="flow_hz" overflow="scroll" lineGap="16" colGap="17" defaultItem="ui://kdeyuiwwwc8q6z" autoClearItems="true">
       <gearDisplay controller="ctrlStatus" pages="1"/>
       <item/>
       <item/>
