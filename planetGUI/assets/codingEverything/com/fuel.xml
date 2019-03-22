@@ -1,28 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="289,238">
-  <controller name="ctrlStatus" pages="0,normal,1,select" selected="0"/>
+<component size="289,238" designImage="ui://i25v0ebkgu601b" designImageOffsetX="-492" designImageOffsetY="-122" designImageAlpha="0">
+  <controller name="ctrlStatus" pages="0,normal,1,select" selected="1"/>
   <controller name="ctrlIsNeedFuel" pages="0,yes,1,no" selected="0"/>
   <displayList>
-    <image id="n2_g7xw" name="imgTimeBG" src="pgixi5f" fileName="newImg/img_cm_bottom_10.png" pkg="te1gxawo" xy="163,209" size="126,19" group="n5_g7xw"/>
-    <text id="n3_g7xw" name="tf1" xy="192,185" size="77,23" group="n5_g7xw" fontSize="17" color="#584736" text="燃烧时间"/>
-    <text id="n4_g7xw" name="tfTime" xy="184,206" size="81,27" group="n5_g7xw" fontSize="20" color="#584736" vAlign="middle" vars="true" text="{hour=00}:{minute=00}:{second=00}">
+    <image id="n2_g7xw" name="imgTimeBG" src="gu60cyiae" fileName="UI2_Img/img_cm_bg4.png" pkg="te1gxawo" xy="40,135" size="101,30" group="n5_g7xw"/>
+    <text id="n3_g7xw" name="tf1" xy="52,101" size="77,24" group="n5_g7xw" fontSize="18" color="#38211b" text="燃烧时间"/>
+    <text id="n4_g7xw" name="tfTime" xy="47,136" size="89,28" group="n5_g7xw" fontSize="22" color="#38211b" vAlign="middle" vars="true" text="{hour=00}:{minute=00}:{second=00}">
       <relation target="n2_g7xw" sidePair="center-center"/>
     </text>
-    <group id="n5_g7xw" name="time" xy="163,185" size="126,48" advanced="true">
+    <group id="n5_g7xw" name="time" xy="40,101" size="101,64" advanced="true">
       <gearDisplay controller="ctrlIsNeedFuel" pages="0"/>
     </group>
-    <image id="n8_acec" name="imgSeleBG" src="pgixi5x" fileName="newImg/img_cm_item_14.png" pkg="te1gxawo" xy="88,180" size="58,58" group="n20_twvn">
+    <image id="n10_acec" name="imgIconBG" src="gu60cyia0" fileName="UI2_Img/btn_cm_items.png" pkg="te1gxawo" xy="160,81" size="96,114" group="n20_twvn"/>
+    <loader id="n11_acec" name="ladIcon" xy="184,116" size="47,46" group="n20_twvn" aspect="true" url="ui://te1gxawogu60cyia9" align="center" vAlign="middle" autoSize="true"/>
+    <image id="n13_sg4g" name="n13" src="gu60cyi9r" fileName="UI2_Img/bg_cm_bag.png" pkg="te1gxawo" xy="299,17" size="311,269" group="n20_twvn">
       <gearDisplay controller="ctrlStatus" pages="1"/>
     </image>
-    <image id="n10_acec" name="imgIconBG" src="ot9si33" fileName="newImg/img_cm_item_2.png" pkg="te1gxawo" xy="89,181" size="56,56" group="n20_twvn"/>
-    <loader id="n11_acec" name="ladIcon" xy="89,181" size="56,56" group="n20_twvn" aspect="true" url="ui://kdeyuiwwbgz46u" align="center" vAlign="middle"/>
-    <image id="n12_sg4g" name="n12" src="jjanyi88" fileName="newImg/img_cm_bottom_11_2.png" pkg="te1gxawo" xy="102,164" group="n20_twvn">
-      <gearDisplay controller="ctrlStatus" pages="1"/>
-    </image>
-    <image id="n13_sg4g" name="n13" src="twvnyi8c" fileName="newImg/img_cm_bottom_11.png" pkg="te1gxawo" xy="0,0" size="233,161" group="n20_twvn">
-      <gearDisplay controller="ctrlStatus" pages="1"/>
-    </image>
-    <list id="n14_sg4g" name="lstFuel" xy="9,6" size="220,146" group="n20_twvn" layout="flow_hz" overflow="scroll" defaultItem="ui://kdeyuiwwfbul6t">
+    <list id="n14_sg4g" name="lstFuel" xy="318,40" size="278,218" group="n20_twvn" layout="flow_hz" overflow="scroll" lineGap="16" colGap="17" defaultItem="ui://kdeyuiwwwc8q6z" autoClearItems="true">
       <gearDisplay controller="ctrlStatus" pages="1"/>
       <item/>
       <item/>
@@ -37,8 +31,16 @@
       <item/>
       <item/>
     </list>
-    <component id="n23_b7ci" name="btnAddFuel" src="b7ci6y" fileName="btn/btnTransparent.xml" pkg="kdeyuiww" xy="89,181" size="56,56" group="n20_twvn"/>
-    <group id="n20_twvn" name="open" xy="0,0" size="233,238" advanced="true">
+    <component id="n23_b7ci" name="btnAddFuel" src="b7ci6y" fileName="btn/btnTransparent.xml" pkg="kdeyuiww" xy="160,81" size="96,114" group="n20_twvn"/>
+    <component id="n24_wc8q" name="btnUpTurn" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="433,5" size="46,25" group="n20_twvn">
+      <gearDisplay controller="ctrlStatus" pages="1"/>
+      <Button icon="ui://te1gxawogu60cyia8"/>
+    </component>
+    <component id="n25_wc8q" name="btnDownTurn" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="433,276" size="46,25" group="n20_twvn">
+      <gearDisplay controller="ctrlStatus" pages="1"/>
+      <Button icon="ui://te1gxawogu60cyi9x"/>
+    </component>
+    <group id="n20_twvn" name="open" xy="160,5" size="450,296" advanced="true">
       <gearDisplay controller="ctrlIsNeedFuel" pages="0"/>
     </group>
   </displayList>
