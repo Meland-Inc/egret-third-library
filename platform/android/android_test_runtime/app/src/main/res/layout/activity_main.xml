@@ -8,6 +8,8 @@
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
     android:paddingTop="0dp"
+    android:theme="@style/AppTheme"
+    android:background="#ffffff"
     tools:context="org.egret.launcher.ymblTestRuntime.MainActivity">
 
     <FrameLayout
