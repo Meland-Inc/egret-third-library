@@ -2,13 +2,13 @@
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkgu6037" designImageAlpha="82" adaptationTest="FitSize">
   <displayList>
     <image id="n0_o18j" name="bg" src="gu60cyial" fileName="UI2_Img/bg_cm_1.png" pkg="te1gxawo" xy="888,0" size="248,282" group="n17_jipr" hideByEditor="true"/>
-    <image id="n20_wc8q" name="IDBG" src="gu60cyiac" fileName="UI2_Img/img_cm_bg2.png" pkg="te1gxawo" xy="915,42" size="73,20" group="n17_jipr">
+    <image id="n20_wc8q" name="IDBG" src="gu60cyiac" fileName="UI2_Img/img_cm_bg2.png" pkg="te1gxawo" xy="915,42" size="74,20" group="n17_jipr">
       <relation target="n8_o18j" sidePair="rightext-right"/>
     </image>
-    <text id="n4_o18j" name="tfName" xy="910,15" size="100,24" group="n17_jipr" fontSize="18" color="#3a5659" align="center" vAlign="middle" leading="0" bold="true" text="普通木地板">
-      <relation target="n0_o18j" sidePair="center-center"/>
+    <text id="n4_o18j" name="tfName" xy="911,15" size="97,24" group="n17_jipr" fontSize="18" color="#3a5659" vAlign="middle" leading="0" bold="true" text="普通木地板">
+      <relation target="n0_o18j" sidePair="left-left"/>
     </text>
-    <text id="n8_o18j" name="tfEntityId" xy="921,42" size="64,18" group="n17_jipr" fontSize="12" color="#3a5659" align="center" vAlign="middle" leading="0" vars="true" bold="true" text="建筑ID: {entityId=10}"/>
+    <text id="n8_o18j" name="tfEntityId" xy="925,43" size="58,18" group="n17_jipr" fontSize="12" color="#3a5659" vAlign="middle" leading="0" vars="true" bold="true" autoClearText="true" text="建筑ID: {entityId=10}"/>
     <component id="n16_jipr" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1088,10" size="36,36" group="n17_jipr" visible="false">
       <Button icon="ui://te1gxawohpymyi7o"/>
     </component>
