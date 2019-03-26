@@ -2,12 +2,18 @@
 <component size="80,100" pivot="0.5,0.5" extention="Button" designImage="ui://i25v0ebkgu601b" designImageOffsetX="-907" designImageOffsetY="-164" designImageAlpha="0">
   <displayList>
     <image id="n0_sntq" name="bg" src="gu60cyi9s" fileName="UI2_Img/bg_cm_items.png" pkg="te1gxawo" xy="0,0" size="80,100"/>
-    <image id="n8_wc8q" name="n8" src="gu60cyiad" fileName="UI2_Img/img_cm_bg3.png" pkg="te1gxawo" xy="31,79"/>
-    <loader id="n1_sntq" name="icon" xy="15,29" size="60,60" align="center" vAlign="middle" fill="scale">
+    <image id="n8_wc8q" name="n8" src="gu60cyiad" fileName="UI2_Img/img_cm_bg3.png" pkg="te1gxawo" xy="31,79" size="46,20">
+      <relation target="n6_sntq" sidePair="leftext-left"/>
+    </image>
+    <loader id="n1_sntq" name="icon" xy="10,16" size="60,60" align="center" vAlign="middle" fill="scale">
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
-    <text id="n6_sntq" name="title" xy="48,78" size="29,22" fontSize="16" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="10"/>
-    <text id="n7_wc8q" name="n7" xy="39,78" size="15,22" fontSize="16" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="X"/>
+    <text id="n6_sntq" name="title" xy="48,78" size="22,22" fontSize="16" color="#ffffff" align="right" vAlign="middle" bold="true" text="10">
+      <relation target="n8_wc8q" sidePair="right-right"/>
+    </text>
+    <text id="n7_wc8q" name="n7" xy="37,79" size="15,22" fontSize="16" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="X">
+      <relation target="n8_wc8q" sidePair="left-left"/>
+    </text>
   </displayList>
   <Button downEffect="scale" downEffectValue="0.90"/>
 </component>
