@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkq9ya11" designImageAlpha="0" designImageLayer="1">
-  <controller name="conShowSendHistory" pages="0,hide,1,show" selected="1"/>
+  <controller name="conShowSendHistory" pages="0,hide,1,show" selected="0"/>
   <controller name="conShowEmoj" pages="0,hide,1,show" selected="0"/>
   <controller name="conFrivateChat" pages="0,hide,1,show" selected="0"/>
   <displayList>
@@ -17,7 +17,7 @@
       <item title="系统" name="system"/>
       <item title="综合" name="comprehensive"/>
       <item title="世界" name="world"/>
-      <item title="机器人" name="robot"/>
+      <item title="代码块广播" name="robot"/>
       <item title="创造" name="create"/>
       <item title="附近" name="near"/>
       <item title="私聊" name="private"/>
@@ -108,7 +108,7 @@
     </component>
     <component id="n20_q73n" name="btnHistory" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="732,497" size="10,7" group="n26_hrgt">
       <gearIcon controller="conShowSendHistory" pages="0,1" values="ui://te1gxawoot9si37|ui://te1gxawoot9si36"/>
-      <Button icon="ui://te1gxawoot9si36" sound="ui://fknoioovtqc911"/>
+      <Button icon="ui://te1gxawoot9si37" sound="ui://fknoioovtqc911"/>
     </component>
     <component id="n28_q9ya" name="btnFriendList" src="q9ya4z" fileName="btn/btnFriendList.xml" xy="819,164" group="n26_hrgt">
       <gearDisplay controller="conFrivateChat" pages="1"/>
