@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="368,95">
+  <controller name="showStatus" alias="showStatus" pages="0,single,1,multiple" selected="1">
+    <remark page="0" value="多项"/>
+    <remark page="1" value="单项"/>
+  </controller>
+  <displayList>
+    <text id="n0_d38r" name="labTitle" xy="20,9" size="77,31" fontSize="24" color="#38211b" text="选择类">
+      <gearXY controller="showStatus" pages="0" values="20,36" default="20,9"/>
+    </text>
+    <component id="n24_fw0w" name="btnAdd" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="322,-3" size="46,46">
+      <gearDisplay controller="showStatus" pages="1"/>
+      <Button icon="ui://te1gxawofw0wcyiap" sound="ui://fknoioovtqc911"/>
+    </component>
+    <list id="n26_fw0w" name="lstTag" xy="15,70" size="200,57" layout="pagination" lineGap="22" colGap="19" lineItemCount="2" defaultItem="ui://kzio97vufw0w7i">
+      <gearXY controller="showStatus" pages="0" values="127,22" default="15,70"/>
+      <item/>
+    </list>
+  </displayList>
+</component>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" opaque="false" designImage="ui://i25v0ebkfw0w38" adaptationTest="FitSize">
+  <displayList>
+    <image id="n23_fw0w" name="n23" src="gu60cyial" fileName="UI2_Img/bg_cm_1.png" pkg="te1gxawo" xy="337,153" size="300,334" group="n26_fw0w">
+      <relation target="n25_fw0w" sidePair="topext-top,bottomext-bottom"/>
+    </image>
+    <text id="n24_fw0w" name="labTitle" xy="453,174" size="67,39" group="n26_fw0w" fontSize="30" color="#30575a" vAlign="middle" bold="true" text="选择">
+      <relation target="n25_fw0w" sidePair="top-top"/>
+    </text>
+    <list id="n25_fw0w" name="lstOption" xy="389,323" pivot="0,0.5" anchor="true" size="200,177" group="n26_fw0w" lineGap="22" defaultItem="ui://kzio97vufw0w7i">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n26_fw0w" name="root" xy="337,153" size="300,347" advanced="true">
+      <relation target="" sidePair="middle-middle,right-right"/>
+    </group>
+  </displayList>
+</component>
