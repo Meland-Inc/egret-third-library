@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="160,560" overflow="scroll">
+<component size="160,560" overflow="scroll" adaptationTest="FitSize">
   <controller name="deleteLayer" alias="deleteLayer" exported="true" pages="0,normal,1,deleteTip,2,delete" selected="0"/>
+  <controller name="openFrom" pages="0,bot,1,build" selected="0"/>
   <displayList>
-    <image id="n15_edsm" name="n15" src="edsmcyi8s" fileName="newImg/img_cm_bottom_18.png" pkg="te1gxawo" xy="0,0" size="160,560"/>
-    <component id="n2_n1c0" name="btnMovement" src="n1c015" fileName="btn/btnCatMove.xml" xy="15,128" size="130,48" group="n9_flp7" customData="move"/>
+    <image id="n15_edsm" name="n15" src="edsmcyi8s" fileName="newImg/img_cm_bottom_18.png" pkg="te1gxawo" xy="0,0" size="160,560">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n8_n1c0" name="btnEvent" src="n1c01b" fileName="btn/btnCatEvent.xml" xy="16,70" size="130,48" group="n9_flp7" customData="event">
+      <gearDisplay controller="openFrom" pages="0"/>
+    </component>
+    <component id="n17_j5co" name="btnBuildEvent" src="n1c01b" fileName="btn/btnCatEvent.xml" xy="15,128" size="130,48" group="n9_flp7" customData="event">
+      <gearDisplay controller="openFrom" pages="1"/>
+    </component>
+    <component id="n2_n1c0" name="btnMovement" src="n1c015" fileName="btn/btnCatMove.xml" xy="15,128" size="130,48" group="n9_flp7" customData="move">
+      <gearDisplay controller="openFrom" pages="0"/>
+      <gearXY controller="openFrom" pages="0,1" values="15,128|15,70"/>
+    </component>
     <component id="n3_n1c0" name="btnFunction" src="n1c018" fileName="btn/btnCatFunction.xml" xy="15,186" size="130,48" group="n9_flp7" customData="function"/>
     <component id="n4_n1c0" name="btnCheck" src="n1c01h" fileName="btn/btnCatDetect.xml" xy="15,244" size="130,48" group="n9_flp7" customData="detect"/>
     <component id="n5_n1c0" name="btnObject" src="n1c01e" fileName="btn/btnCatProp.xml" xy="15,302" size="130,48" group="n9_flp7" customData="prop"/>
     <component id="n6_n1c0" name="btnCalculate" src="n1c012" fileName="btn/btnCatOperation.xml" xy="15,360" size="130,48" group="n9_flp7" customData="operator"/>
     <component id="n7_n1c0" name="btnControl" src="n1c0z" fileName="btn/btnCatControl.xml" xy="15,418" size="130,48" group="n9_flp7" customData="control"/>
-    <component id="n8_n1c0" name="btnEvent" src="n1c01b" fileName="btn/btnCatEvent.xml" xy="16,70" size="130,48" group="n9_flp7" customData="event"/>
-    <group id="n9_flp7" name="n9" xy="14,70" size="131,396" advanced="true" collapsed="true">
+    <group id="n9_flp7" name="n9" xy="15,70" size="131,396" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
     <image id="n11_r3nk" name="n11" src="edsmcyi8u" fileName="newImg/img_cm_bottom_20.png" pkg="te1gxawo" xy="0,0" size="160,560">

@@ -80,6 +80,8 @@ public class MainActivity extends NativeActivity {
         * */
         launcher.logLevel = 2;
 
+        launcher.launchPageUrl = "http://47.107.73.43/outside/business/logo.jpg";
+
         progressCallback = new NativeCallback() {
             @Override
             public void onCallback(String msg, int val) {

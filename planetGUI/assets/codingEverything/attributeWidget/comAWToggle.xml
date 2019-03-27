@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="247,37">
+  <controller name="toggle" alias="toggle" pages="0,on,1,off" selected="0"/>
   <displayList>
-    <text id="n0_d38r" name="labTitle" xy="21,6" pivot="0.5,0" size="77,31" fontSize="24" text="是否类"/>
-    <image id="n13_gjd5" name="n13" src="gu60cyia4" fileName="UI2_Img/btn_cm_on.png" pkg="te1gxawo" xy="139,1"/>
+    <text id="n0_d38r" name="labTitle" xy="20,6" size="77,31" fontSize="24" color="#38211b" text="是否类"/>
+    <loader id="n13_gjd5" name="ladToggle" xy="139,1" size="108,36" url="ui://te1gxawogu60cyia4" fill="scaleFree" autoSize="true">
+      <gearIcon controller="toggle" pages="1" values="ui://te1gxawogu60cyia3" default="ui://te1gxawogu60cyia4"/>
+    </loader>
   </displayList>
 </component>
