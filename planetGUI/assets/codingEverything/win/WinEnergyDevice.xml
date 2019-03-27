@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkgu601b" designImageAlpha="100">
-  <controller name="deviceState" pages="0,wait,1,running" selected="0"/>
+  <controller name="deviceState" pages="0,wait,1,running,2,gray" selected="2"/>
   <displayList>
     <image id="n2_unrk" name="bg" src="gu60cyian" fileName="UI2_Img/bg_cm_3.png" pkg="te1gxawo" xy="427,153" size="281,324" group="n4_dy7k"/>
     <image id="n8_wc8q" name="n8" src="gu60cyiam" fileName="UI2_Img/bg_cm_2.png" pkg="te1gxawo" xy="444,228" size="250,165" group="n4_dy7k"/>
     <text id="n5_wc8q" name="tfTitle" xy="450,168" size="131,24" group="n4_dy7k" fontSize="18" color="#38211b" vAlign="middle" autoSize="none" bold="true" text="源码能源装置 "/>
     <image id="n6_wc8q" name="n6" src="gu60cyiac" fileName="UI2_Img/img_cm_bg2.png" pkg="te1gxawo" xy="452,199" group="n4_dy7k"/>
-    <text id="n7_wc8q" name="n7" xy="460,200" size="32,18" group="n4_dy7k" fontSize="12" color="#3a5659" align="center" vAlign="middle" bold="true" text="建筑"/>
+    <text id="n7_wc8q" name="n7" xy="460,200" size="31,18" group="n4_dy7k" fontSize="12" color="#3a5659" align="center" vAlign="middle" bold="true" text="建筑"/>
     <component id="n0_unrk" name="fuelPanel" src="unrk6z" fileName="com/fuel.xml" xy="422,173" group="n4_dy7k"/>
     <component id="n3_unrk" name="btnStart" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="502,401" size="128,55" group="n4_dy7k">
       <gearText controller="deviceState" pages="1" values="暂停" default="启动"/>
-      <gearIcon controller="deviceState" pages="1" values="ui://te1gxawogu60cyia5" default="ui://te1gxawogu60cyi9z"/>
-      <Button title="启动" titleColor="#ffffff" titleFontSize="24" icon="ui://te1gxawogu60cyi9z"/>
+      <gearIcon controller="deviceState" pages="1,2" values="ui://te1gxawogu60cyia5|ui://te1gxawogu60cyi9y" default="ui://te1gxawogu60cyi9z"/>
+      <Button title="启动" titleColor="#ffffff" titleFontSize="24" icon="ui://te1gxawogu60cyi9y"/>
     </component>
     <component id="n9_gdfz" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="660,145" size="50,53" group="n4_dy7k">
       <Button icon="ui://te1gxawogu60cyi9w"/>
