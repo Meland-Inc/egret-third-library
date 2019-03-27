@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="244,28" extention="Slider">
+  <displayList>
+    <image id="n0_pzcq" name="n0" src="gu60cyiag" fileName="UI2_Img/img_cm_progressbar1.png" pkg="te1gxawo" xy="0,0" size="244,28">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_pzcq" name="bar" src="gu60cyiah" fileName="UI2_Img/img_cm_progressbar2.png" pkg="te1gxawo" xy="0,0" size="244,28"/>
+    <component id="n2_pzcq" name="grip" src="pzcq7e" fileName="com/sldAWValue_grip.xml" xy="219,-12">
+      <relation target="n1_pzcq" sidePair="right-right"/>
+    </component>
+  </displayList>
+  <Slider/>
+</component>
