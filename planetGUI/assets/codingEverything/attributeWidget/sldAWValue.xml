@@ -4,8 +4,11 @@
     <image id="n0_pzcq" name="n0" src="gu60cyiag" fileName="UI2_Img/img_cm_progressbar1.png" pkg="te1gxawo" xy="0,0" size="244,28">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n1_pzcq" name="bar" src="gu60cyiah" fileName="UI2_Img/img_cm_progressbar2.png" pkg="te1gxawo" xy="0,0" size="244,28"/>
-    <component id="n2_pzcq" name="grip" src="pzcq7e" fileName="com/sldAWValue_grip.xml" xy="219,-12">
+    <image id="n1_pzcq" name="bar" src="gu60cyiah" fileName="UI2_Img/img_cm_progressbar2.png" pkg="te1gxawo" xy="20,0" size="204,28" hideByEditor="true" visible="false"/>
+    <image id="n3_sgwy" name="barShow" src="gu60cyiah" fileName="UI2_Img/img_cm_progressbar2.png" pkg="te1gxawo" xy="0,0" size="249,28">
+      <relation target="n1_pzcq" sidePair="rightext-right"/>
+    </image>
+    <component id="n2_pzcq" name="grip" src="pzcq7e" fileName="attributeWidget/sldAWValue_grip.xml" xy="224,14" pivot="0.5,0.5" anchor="true">
       <relation target="n1_pzcq" sidePair="right-right"/>
     </component>
   </displayList>
