@@ -12,7 +12,7 @@
       <gearDisplay controller="showStatus" pages="1"/>
       <Button icon="ui://te1gxawofw0wcyiap" sound="ui://fknoioovtqc911"/>
     </component>
-    <list id="n26_fw0w" name="lstTag" xy="15,70" size="200,57" layout="pagination" lineGap="22" colGap="19" lineItemCount="2" defaultItem="ui://kzio97vufw0w7i">
+    <list id="n26_fw0w" name="lstTag" xy="15,70" size="214,61" layout="flow_hz" lineGap="22" colGap="19" lineItemCount="2" defaultItem="ui://kzio97vufw0w7i" autoClearItems="true">
       <gearXY controller="showStatus" pages="0" values="127,22" default="15,70"/>
       <item/>
     </list>
