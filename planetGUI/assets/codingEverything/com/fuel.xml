@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="289,238" designImage="ui://i25v0ebkgu601b" designImageOffsetX="-492" designImageOffsetY="-122" designImageAlpha="0">
-  <controller name="ctrlStatus" pages="0,normal,1,select" selected="1"/>
+  <controller name="ctrlStatus" pages="0,normal,1,select" selected="0"/>
   <controller name="ctrlIsNeedFuel" pages="0,yes,1,no" selected="0"/>
   <displayList>
     <image id="n2_g7xw" name="imgTimeBG" src="gu60cyiae" fileName="UI2_Img/img_cm_bg4.png" pkg="te1gxawo" xy="40,135" size="101,30" group="n5_g7xw"/>
-    <text id="n3_g7xw" name="tf1" xy="52,101" size="77,24" group="n5_g7xw" fontSize="18" color="#38211b" text="燃烧时间"/>
+    <text id="n3_g7xw" name="tf1" xy="43,101" size="95,24" group="n5_g7xw" fontSize="18" color="#38211b" text="运行倒计时"/>
     <text id="n4_g7xw" name="tfTime" xy="47,136" size="89,28" group="n5_g7xw" fontSize="22" color="#38211b" vAlign="middle" vars="true" text="{hour=00}:{minute=00}:{second=00}">
       <relation target="n2_g7xw" sidePair="center-center"/>
     </text>
