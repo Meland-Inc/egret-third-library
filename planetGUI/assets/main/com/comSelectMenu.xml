@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="100,200" overflow="hidden">
+  <controller name="ctrlSelected" pages="0,normal,1,build,2,watch,3,delete" selected="3"/>
+  <displayList>
+    <graph id="n10_jx9r" name="sectorBg" xy="100,100" pivot="0.5,0.5" anchor="true" size="200,200" type="eclipse" fillColor="#ff33ccff"/>
+    <image id="n11_jx9r" name="imgBuild" src="rdy434" fileName="newImg/icon_main_building.png" xy="62,35" pivot="0.5,0.5" anchor="true">
+      <gearSize controller="ctrlSelected" pages="1" values="39,40,1.2,1.2" default="39,40,1,1" tween="true"/>
+    </image>
+    <image id="n12_jx9r" name="imgWatch" src="rdy43n" fileName="newImg/icon_main_watch.png" xy="24,100" pivot="0.5,0.5" anchor="true">
+      <gearSize controller="ctrlSelected" pages="0,1,3" values="74,74,1,1|74,74,1,1|74,74,1,1" default="74,74,1.2,1.2" tween="true"/>
+    </image>
+    <image id="n13_jx9r" name="imgDelete" src="ddnk35" fileName="newImg/WinBuildPannel/btn_build_delete.png" pkg="32ieekgu" xy="62,165" pivot="0.5,0.5" anchor="true" size="40,40" scale="1.2,1.2">
+      <gearSize controller="ctrlSelected" pages="3" values="40,40,1.2,1.2" default="40,40,1,1" tween="true"/>
+    </image>
+  </displayList>
+</component>
