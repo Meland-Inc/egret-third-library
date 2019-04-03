@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" overflow="hidden" opaque="false" adaptationTest="FitSize">
+  <controller name="ctrlMode" pages="0,default,1,delete,2,hide" selected="2"/>
   <displayList>
     <image id="n6_p7yp" name="bgUp" src="c8lx29" fileName="newImg/WinMapLook/img_10.png" xy="18,11" pivot="0.5,1" size="1100,309" group="n28_iewq">
       <relation target="" sidePair="left-left,top-top"/>
@@ -14,10 +15,16 @@
     <graph id="n9_c8lx" name="upLine" xy="18,320" size="1100,1" group="n28_iewq" hideByEditor="true" visible="false" alpha="0" touchable="false" grayed="true" lineSize="0">
       <relation target="" sidePair="middle-middle,rightext-right"/>
     </graph>
-    <image id="n11_c8lx" name="imgTitleBg" src="c8lx1z" fileName="newImg/WinMapLook/img_1.png" xy="59,45" size="200,40" group="n13_c8lx"/>
-    <image id="n14_c8lx" name="imgIcon" src="c8lx1u" fileName="newImg/WinMapLook/icon_1.png" xy="71,53" size="32,24" group="n13_c8lx"/>
-    <text id="n15_c8lx" name="tfTitle" xy="129,53" size="110,27" group="n13_c8lx" fontSize="20" color="#4f4745" letterSpacing="1" text="源码扫描仪"/>
-    <group id="n13_c8lx" name="titlet" xy="59,45" size="200,40" group="n28_iewq" advanced="true" collapsed="true">
+    <image id="n11_c8lx" name="imgTitleBg" src="c8lx1z" fileName="newImg/WinMapLook/img_1.png" xy="59,45" size="210,40" group="n13_c8lx">
+      <relation target="n15_c8lx" sidePair="rightext-right"/>
+    </image>
+    <loader id="n14_c8lx" name="imgIcon" xy="67,49" size="40,32" group="n13_c8lx" url="ui://te1gxawoj21fi3l" align="center" vAlign="middle" fill="scale" shrinkOnly="true">
+      <gearIcon controller="ctrlMode" pages="1,2" values="ui://te1gxawop2iecyiaq|ui://te1gxawoj21fi3l" default="ui://32ieekguc8lx1u"/>
+    </loader>
+    <text id="n15_c8lx" name="tfTitle" xy="129,53" size="133,27" group="n13_c8lx" fontSize="20" color="#4f4745" letterSpacing="1" text="源码隐藏设备">
+      <gearText controller="ctrlMode" pages="1,2" values="源码删除设备|源码隐藏设备" default="源码扫描仪"/>
+    </text>
+    <group id="n13_c8lx" name="titlet" xy="59,45" size="210,40" group="n28_iewq" advanced="true">
       <relation target="n6_p7yp" sidePair="left-left,top-top"/>
     </group>
     <component id="n5_jj3j" name="btnClose" src="c8lx2b" fileName="btn/btnClose.xml" xy="979,495" group="n28_iewq">
@@ -32,7 +39,7 @@
     <component id="n24_iewq" name="mapScaleButton" src="rvyy1j" fileName="Com/ComMapScaleView.xml" xy="59,428" size="70,160" group="n28_iewq">
       <relation target="n7_c8lx" sidePair="left-left,bottom-bottom"/>
     </component>
-    <group id="n28_iewq" name="n28" xy="18,11" size="1100,618" advanced="true">
+    <group id="n28_iewq" name="root" xy="18,11" size="1100,618" advanced="true">
       <relation target="" sidePair="left-left,top-top"/>
     </group>
   </displayList>
