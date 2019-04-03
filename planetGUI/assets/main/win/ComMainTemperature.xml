@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="170,150">
+<component size="170,150" opaque="false">
   <controller name="weather" pages="1,night,0,day,2,dusk,3,dawn" selected="0">
     <remark page="0" value="夜晚"/>
     <remark page="1" value="白天"/>

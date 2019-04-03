@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="259,278" opaque="false">
+<component size="268,278" opaque="false">
   <displayList>
     <graph id="n9_xf9r" name="n9" xy="0,108" size="74,74" alpha="0" type="rect"/>
-    <graph id="n10_xf9r" name="n10" xy="82,29" size="74,74" alpha="0" type="rect"/>
+    <graph id="n10_xf9r" name="n10" xy="109,182" size="80,80" alpha="0" type="rect"/>
     <component id="n5_rdy4" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="109,182" size="80,80">
       <Button icon="ui://32ieekgulmzf31"/>
     </component>
     <component id="n6_rdy4" name="btnRemove" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="0,198" size="80,80">
       <Button icon="ui://32ieekguddnk35"/>
     </component>
-    <component id="n11_9wxv" name="btnCancel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="179,0" size="80,80">
+    <component id="n11_9wxv" name="btnCancel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="188,0" size="80,80">
       <Button icon="ui://32ieekgulmzf30"/>
     </component>
-    <component id="n8_lhu4" name="btnMirror" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="5,75" size="80,80">
+    <component id="n8_lhu4" name="btnMirror" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="-1,83" size="80,80">
       <Button icon="ui://32ieekgulmzf32"/>
     </component>
     <component id="n15_d2gn" name="comMoveRocker" src="d2gncyiar" fileName="com/ComRocker.xml" pkg="te1gxawo" xy="60,-1" pivot="0.5,0.5"/>
