@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="54,22" extention="ComboBox">
+<component size="65,22" extention="ComboBox">
   <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
   <displayList>
-    <image id="n6_flp7" name="n6" src="j1n28c" fileName="newImg/img_codeblock_white_2.png" xy="0,0" size="53,22">
+    <image id="n6_flp7" name="n6" src="j1n28c" fileName="newImg/img_codeblock_white_2.png" xy="5,0" size="54,22">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <text id="n4" name="title" xy="7,1" size="30,20" restrictSize="30,0,20,0" fontSize="14" color="#666666" align="center" vAlign="middle" ubb="true" singleLine="true" text=""/>
-    <image id="n7_flp7" name="n7" src="flp73y" fileName="img/img_code_10.png" xy="42,8">
+    <text id="n4" name="title" xy="12,1" size="30,20" restrictSize="30,0,20,0" fontSize="14" color="#666666" align="center" vAlign="middle" ubb="true" singleLine="true" text=""/>
+    <image id="n7_flp7" name="n7" src="flp73y" fileName="img/img_code_10.png" xy="48,8">
       <relation target="" sidePair="middle-middle,right-right"/>
     </image>
   </displayList>
