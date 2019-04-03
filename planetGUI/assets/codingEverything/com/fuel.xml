@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="289,238" designImage="ui://i25v0ebkgu601b" designImageOffsetX="-492" designImageOffsetY="-122" designImageAlpha="0">
+<component size="289,238" opaque="false" designImage="ui://i25v0ebkgu601b" designImageOffsetX="-492" designImageOffsetY="-122" designImageAlpha="0">
   <controller name="ctrlStatus" pages="0,normal,1,select" selected="0"/>
   <controller name="ctrlIsNeedFuel" pages="0,yes,1,no" selected="0"/>
   <displayList>
