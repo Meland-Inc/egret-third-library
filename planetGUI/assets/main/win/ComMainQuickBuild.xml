@@ -16,5 +16,6 @@
       <Button icon="ui://32ieekgulmzf32"/>
     </component>
     <component id="n15_d2gn" name="comMoveRocker" src="d2gncyiar" fileName="com/ComRocker.xml" pkg="te1gxawo" xy="60,-1" pivot="0.5,0.5"/>
+    <text id="n16_uvbh" name="tfDeleteTime" xy="-13,180" size="107,15" fontSize="10" color="#ffffff" align="center" vars="true" autoSize="none" text="{day=10}天{hour=10}小时{minute=10}分{second=10}秒"/>
   </displayList>
 </component>
