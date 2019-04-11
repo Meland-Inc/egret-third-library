@@ -2,97 +2,97 @@
 <component size="1136,640">
   <controller name="conSetting" pages="0,system,1,sound,2,chating,3,about" selected="0"/>
   <displayList>
-    <image id="n2_8zcx" name="bg" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="215,106" size="706,430" group="n47_kg0b"/>
-    <image id="n62_r398" name="n62" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="413,159" size="490,350" group="n47_kg0b"/>
-    <component id="n8_rw7f" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="867,109" size="36,36" group="n47_kg0b">
-      <Button icon="ui://te1gxawohpymyi7o"/>
+    <image id="n2_8zcx" name="bg" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="215,102" size="706,430" group="n47_kg0b"/>
+    <image id="n62_r398" name="n62" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="413,155" size="490,350" group="n47_kg0b"/>
+    <component id="n8_rw7f" name="btnClose" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="857,95" size="56,56" group="n47_kg0b">
+      <Button icon="ui://te1gxawohpymyi7o" sound="ui://fknoioovtqc912"/>
     </component>
-    <text id="n3_8zcx" name="title" xy="480,110" size="176,34" group="n47_kg0b" fontSize="20" color="#f5ebde" align="center" vAlign="middle" autoSize="none" text="设置"/>
-    <component id="n26_o8k6" name="tgPathFinding" src="rw7fg" fileName="com/settingToggle.xml" xy="481,198" size="148,33" group="n30_o8k6">
+    <text id="n3_8zcx" name="title" xy="480,106" size="176,34" group="n47_kg0b" fontSize="20" color="#f5ebde" align="center" vAlign="middle" autoSize="none" text="设置"/>
+    <component id="n26_o8k6" name="tgPathFinding" src="rw7fg" fileName="com/settingToggle.xml" xy="481,194" size="148,33" group="n30_o8k6">
       <Label title="点击寻路"/>
     </component>
-    <component id="n27_o8k6" name="sldImageQuality" src="9utnt" fileName="com/radioButton.xml" xy="481,244" size="320,33" group="n30_o8k6">
+    <component id="n27_o8k6" name="sldImageQuality" src="9utnt" fileName="com/radioButton.xml" xy="481,240" size="320,33" group="n30_o8k6">
       <Label title="画面质量"/>
     </component>
-    <component id="n43_igxs" name="tgWeatherSystem" src="rw7fg" fileName="com/settingToggle.xml" xy="481,312" size="148,33" group="n30_o8k6" visible="false">
+    <component id="n43_igxs" name="tgWeatherSystem" src="rw7fg" fileName="com/settingToggle.xml" xy="481,308" size="148,33" group="n30_o8k6" visible="false">
       <Label title="天气系统"/>
     </component>
-    <component id="n29_o8k6" name="btnOpenLog" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="463,420" size="125,40" group="n30_o8k6">
+    <component id="n29_o8k6" name="btnOpenLog" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="463,416" size="125,40" group="n30_o8k6">
       <Button title="查看日志" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoefrs1w"/>
     </component>
-    <component id="n42_o8k6" name="btnVconsole" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="595,436" size="125,40" group="n30_o8k6">
+    <component id="n42_o8k6" name="btnVconsole" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="595,432" size="125,40" group="n30_o8k6">
       <Button title="开启vconsole" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoefrs1w"/>
     </component>
-    <component id="n28_o8k6" name="btnLogout" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="737,436" size="125,40" group="n30_o8k6">
+    <component id="n28_o8k6" name="btnLogout" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="737,432" size="125,40" group="n30_o8k6">
       <Button title="退出登陆" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoqo8vi21"/>
     </component>
-    <component id="n45_s7hp" name="tgDayNightSystem" src="rw7fg" fileName="com/settingToggle.xml" xy="481,363" size="148,33" group="n30_o8k6" visible="false">
+    <component id="n45_s7hp" name="tgDayNightSystem" src="rw7fg" fileName="com/settingToggle.xml" xy="481,359" size="148,33" group="n30_o8k6" visible="false">
       <Label title="昼夜系统"/>
     </component>
-    <component id="n64_epn8" name="btnUploadLog" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="463,464" size="125,40" group="n30_o8k6">
+    <component id="n64_epn8" name="btnUploadLog" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="463,460" size="125,40" group="n30_o8k6">
       <Button title="上传日志" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoefrs1w"/>
     </component>
-    <group id="n30_o8k6" name="system" xy="463,198" size="399,306" group="n47_kg0b" advanced="true">
+    <group id="n30_o8k6" name="system" xy="463,194" size="399,306" group="n47_kg0b" advanced="true">
       <gearDisplay controller="conSetting" pages="0"/>
     </group>
-    <component id="n31_o8k6" name="tgSound" src="rw7fg" fileName="com/settingToggle.xml" xy="472,215" size="116,33" group="n34_o8k6">
+    <component id="n31_o8k6" name="tgSound" src="rw7fg" fileName="com/settingToggle.xml" xy="472,211" size="116,33" group="n34_o8k6">
       <Label title="音乐"/>
     </component>
-    <component id="n32_o8k6" name="tgSoundEffect" src="rw7fg" fileName="com/settingToggle.xml" xy="700,215" size="116,33" group="n34_o8k6">
+    <component id="n32_o8k6" name="tgSoundEffect" src="rw7fg" fileName="com/settingToggle.xml" xy="700,211" size="116,33" group="n34_o8k6">
       <relation target="n33_o8k6" sidePair="right-right"/>
       <Label title="音效"/>
     </component>
-    <component id="n33_o8k6" name="sldSoundVolume" src="cf98j" fileName="com/soundSlider.xml" xy="472,292" size="330,32" group="n34_o8k6">
+    <component id="n33_o8k6" name="sldSoundVolume" src="cf98j" fileName="com/soundSlider.xml" xy="472,288" size="330,32" group="n34_o8k6">
       <Label title="音量"/>
     </component>
-    <group id="n34_o8k6" name="sound" xy="472,215" size="344,109" group="n47_kg0b" advanced="true" collapsed="true">
+    <group id="n34_o8k6" name="sound" xy="472,211" size="344,109" group="n47_kg0b" advanced="true" collapsed="true">
       <gearDisplay controller="conSetting" pages="1"/>
     </group>
-    <text id="n63_r398" name="n63" xy="465,200" size="133,22" group="n41_o8k6" fontSize="16" color="#5b4b37" text="主界面消息框提示">
+    <text id="n63_r398" name="n63" xy="465,196" size="133,22" group="n41_o8k6" fontSize="16" color="#5b4b37" text="主界面消息框提示">
       <gearDisplay controller="conSetting" pages="2"/>
     </text>
-    <component id="n35_o8k6" name="tgWorldMsg" src="rw7fg" fileName="com/settingToggle.xml" xy="465,237" size="148,33" group="n41_o8k6">
+    <component id="n35_o8k6" name="tgWorldMsg" src="rw7fg" fileName="com/settingToggle.xml" xy="465,233" size="148,33" group="n41_o8k6">
       <Label title="世界消息"/>
     </component>
-    <component id="n36_o8k6" name="tgSysMsg" src="rw7fg" fileName="com/settingToggle.xml" xy="694,237" size="148,33" group="n41_o8k6">
+    <component id="n36_o8k6" name="tgSysMsg" src="rw7fg" fileName="com/settingToggle.xml" xy="694,233" size="148,33" group="n41_o8k6">
       <Label title="系统消息"/>
     </component>
-    <component id="n37_o8k6" name="tgLineMsg" src="rw7fg" fileName="com/settingToggle.xml" xy="465,297" size="148,33" group="n41_o8k6">
+    <component id="n37_o8k6" name="tgLineMsg" src="rw7fg" fileName="com/settingToggle.xml" xy="465,293" size="148,33" group="n41_o8k6">
       <Label title="分线消息"/>
     </component>
-    <component id="n38_o8k6" name="tgCreationMsg" src="rw7fg" fileName="com/settingToggle.xml" xy="694,297" size="148,33" group="n41_o8k6">
+    <component id="n38_o8k6" name="tgCreationMsg" src="rw7fg" fileName="com/settingToggle.xml" xy="694,293" size="148,33" group="n41_o8k6">
       <Label title="创作消息"/>
     </component>
-    <component id="n39_o8k6" name="tgNearMsg" src="rw7fg" fileName="com/settingToggle.xml" xy="465,357" size="148,33" group="n41_o8k6">
+    <component id="n39_o8k6" name="tgNearMsg" src="rw7fg" fileName="com/settingToggle.xml" xy="465,353" size="148,33" group="n41_o8k6">
       <Label title="附近消息"/>
     </component>
-    <component id="n40_o8k6" name="tgFriendMsg" src="rw7fg" fileName="com/settingToggle.xml" xy="694,357" size="148,33" group="n41_o8k6">
+    <component id="n40_o8k6" name="tgFriendMsg" src="rw7fg" fileName="com/settingToggle.xml" xy="694,353" size="148,33" group="n41_o8k6">
       <Label title="私聊消息"/>
     </component>
-    <group id="n41_o8k6" name="chat" xy="465,200" size="377,190" group="n47_kg0b" advanced="true" collapsed="true">
+    <group id="n41_o8k6" name="chat" xy="465,196" size="377,190" group="n47_kg0b" advanced="true" collapsed="true">
       <gearDisplay controller="conSetting" pages="2"/>
     </group>
-    <text id="n58_r398" name="n58" xy="453,187" size="70,25" group="n54_r398" fontSize="18" color="#5b4b37" text="1.2.01.3"/>
-    <text id="n55_r398" name="n55" xy="453,227" size="186,64" group="n54_r398" fontSize="14" color="#755f44" autoSize="none" text="@2016-2020腾语科技&#xA;ALL RIGHTS RESERVED&#xA;贝尔教育平台官网"/>
-    <text id="n56_r398" name="n56" xy="453,291" size="157,24" group="n54_r398" fontSize="14" color="#5b4b37" autoSize="none" text="www.bellcode.com"/>
-    <group id="n54_r398" name="about" xy="453,187" size="186,128" group="n47_kg0b" advanced="true">
+    <text id="n58_r398" name="n58" xy="453,183" size="70,25" group="n54_r398" fontSize="18" color="#5b4b37" text="1.2.01.3"/>
+    <text id="n55_r398" name="n55" xy="453,223" size="186,64" group="n54_r398" fontSize="14" color="#755f44" autoSize="none" text="@2016-2020腾语科技&#xA;ALL RIGHTS RESERVED&#xA;贝尔教育平台官网"/>
+    <text id="n56_r398" name="n56" xy="453,287" size="157,24" group="n54_r398" fontSize="14" color="#5b4b37" autoSize="none" text="www.bellcode.com"/>
+    <group id="n54_r398" name="about" xy="453,183" size="186,128" group="n47_kg0b" advanced="true">
       <gearDisplay controller="conSetting" pages="3"/>
     </group>
-    <image id="n60_r398" name="n60" src="ot9si2v" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="235,160" size="168,350" group="n47_kg0b"/>
-    <component id="n21_o8k6" name="btnSystem" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="256,182" size="125,56" group="n47_kg0b">
+    <image id="n60_r398" name="n60" src="ot9si2v" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="235,156" size="168,350" group="n47_kg0b"/>
+    <component id="n21_o8k6" name="btnSystem" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="256,178" size="125,56" group="n47_kg0b">
       <Button checked="true" title="系统" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="0"/>
     </component>
-    <component id="n22_o8k6" name="btnSound" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="256,244" size="125,56" group="n47_kg0b">
+    <component id="n22_o8k6" name="btnSound" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="256,240" size="125,56" group="n47_kg0b">
       <Button title="声音" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="1"/>
     </component>
-    <component id="n23_o8k6" name="btnChat" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="256,307" size="125,56" group="n47_kg0b">
+    <component id="n23_o8k6" name="btnChat" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="256,303" size="125,56" group="n47_kg0b">
       <Button title="聊天" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="2"/>
     </component>
-    <component id="n24_o8k6" name="btnAbout" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="256,372" size="125,56" group="n47_kg0b">
+    <component id="n24_o8k6" name="btnAbout" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="256,368" size="125,56" group="n47_kg0b">
       <Button title="关于" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="3"/>
     </component>
-    <image id="n61_r398" name="n61" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="223,520" size="691,14" group="n47_kg0b"/>
-    <group id="n47_kg0b" name="root" xy="215,106" size="706,430" advanced="true">
+    <image id="n61_r398" name="n61" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="223,516" size="691,14" group="n47_kg0b"/>
+    <group id="n47_kg0b" name="root" xy="215,95" size="706,437" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>

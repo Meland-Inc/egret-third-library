@@ -4,7 +4,7 @@
     <image id="n0_vkti" name="bg" src="efrs1o" fileName="newImg/bg_cm_5.png" pkg="te1gxawo" xy="0,0" size="1136,640">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </image>
-    <component id="n1_vkti" name="btnClose" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="te1gxawo" xy="1038,6" size="80,42">
+    <component id="n1_vkti" name="btnClose" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1028,-4" size="100,62">
       <relation target="" sidePair="right-right,top-top"/>
       <Button icon="ui://te1gxawoefrs1r" sound="ui://fknoioovtqc912"/>
     </component>

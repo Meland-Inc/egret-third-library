@@ -38,9 +38,9 @@
       <gearDisplay controller="showMail" pages="0"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <component id="n38_n6p2" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="774,33" size="52,52">
+    <component id="n38_n6p2" name="btnClose" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="764,22" size="72,72">
       <relation target="" sidePair="center-center,middle-middle"/>
-      <Button icon="ui://te1gxawoefrs1q"/>
+      <Button icon="ui://te1gxawoefrs1q" sound="ui://fknoioovtqc912"/>
     </component>
     <image id="n73_11syp" name="n73" src="11syp27" fileName="img/img_mail_nomail.png" xy="385,241">
       <gearDisplay controller="showMail" pages="1"/>
