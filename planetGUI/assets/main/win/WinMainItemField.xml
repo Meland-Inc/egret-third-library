@@ -11,15 +11,14 @@
       <item title="7"/>
       <item title="8"/>
     </list>
-    <component id="n18_sec0" name="btnSwitch" src="sec06b" fileName="btn/btnSwitchShortcuts.xml" xy="307,561" group="n29_e7wr">
+    <component id="n18_sec0" name="btnSwitch" src="sec06b" fileName="btn/btnSwitchShortcuts.xml" xy="297,551" group="n29_e7wr">
       <Button sound="ui://fknoioovtqc911"/>
     </component>
-    <component id="n22_o6si" name="btnBackpack" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="800,561" size="68,68" group="n29_e7wr">
+    <component id="n22_o6si" name="btnBackpack" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="774,548" size="120,94" group="n29_e7wr">
       <Button icon="ui://5hs1fuejo6si6c" sound="ui://fknoioovtqc911"/>
     </component>
-    <group id="n29_e7wr" name="grpClosedShortcut" xy="307,560" size="561,70" advanced="true">
+    <group id="n29_e7wr" name="grpClosedShortcut" xy="297,548" size="597,94" advanced="true">
       <gearDisplay controller="ctrlOpenBag" pages="0"/>
-      <relation target="" sidePair="center-center,bottom-bottom"/>
     </group>
     <component id="n25_e7wr" name="shortcutLab1" src="e7wr2p" fileName="com/shortcutLab.xml" xy="88,583" group="n32_e7wr"/>
     <list id="n11_urxc" name="lstShortcut1" xy="125,560" size="442,70" group="n32_e7wr" layout="flow_hz" defaultItem="ui://5hs1fuejft0q2g" autoClearItems="true">

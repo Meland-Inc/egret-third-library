@@ -2,7 +2,7 @@
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkb4ke16" designImageAlpha="0">
   <controller name="ctrlMapMode" pages="0,normal,1,build,2,quickBuild,3,quickEdit" selected="0"/>
   <displayList>
-    <component id="n16_rdy4" name="btnAvatar" src="rdy45b" fileName="btn/btnAvatar.xml" xy="8,6" size="48,48">
+    <component id="n16_rdy4" name="btnAvatar" src="rdy45b" fileName="btn/btnAvatar.xml" xy="8,6" size="68,58">
       <relation target="" sidePair="left-left,top-top"/>
       <Button sound="ui://fknoioovtqc911"/>
     </component>

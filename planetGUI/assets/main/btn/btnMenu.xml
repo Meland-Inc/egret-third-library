@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="53,65" pivot="0.5,0.5" extention="Button">
+<component size="61,65" pivot="0.5,0.5" extention="Button">
   <controller name="button" pages="0,up,1,down" selected="0"/>
   <displayList>
-    <image id="n0_rdy4" name="bg" src="b4ke77" fileName="newImg/btn_main_menu_1.png" xy="0,0" pivot="0.5,0.5" size="53,52">
+    <image id="n0_rdy4" name="bg" src="b4ke77" fileName="newImg/btn_main_menu_1.png" xy="4,0" pivot="0.5,0.5" size="53,52">
       <gearSize controller="button" pages="0" values="53,52,1,1" default="50,49,0.9,0.9"/>
     </image>
-    <loader id="n3_rdy4" name="icon" xy="7,6" pivot="0.5,0.5" size="38,38" url="ui://5hs1fuejr2bf5x" align="center" vAlign="middle" autoSize="true">
+    <loader id="n3_rdy4" name="icon" xy="11,6" pivot="0.5,0.5" size="38,38" url="ui://5hs1fuejr2bf5x" align="center" vAlign="middle" autoSize="true">
       <gearSize controller="button" pages="0" values="38,38,1,1" default="50,30,0.9,0.9"/>
     </loader>
-    <text id="n1_rdy4" name="title" xy="4,45" pivot="0.5,0.5" size="45,20" fontSize="16" color="#f5f5d2" align="center" vAlign="middle" autoSize="none" bold="true" strokeColor="#675130" strokeSize="2" text="按钮">
+    <text id="n1_rdy4" name="title" xy="8,45" pivot="0.5,0.5" size="45,20" fontSize="16" color="#f5f5d2" align="center" vAlign="middle" autoSize="none" bold="true" strokeColor="#675130" strokeSize="2" text="按钮">
       <gearSize controller="button" pages="0,1" values="45,20,1,1|66,23,0.9,0.9"/>
     </text>
   </displayList>
