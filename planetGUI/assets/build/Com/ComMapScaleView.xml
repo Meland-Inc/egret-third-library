@@ -2,13 +2,13 @@
 <component size="70,160">
   <displayList>
     <image id="n6_jj3j" name="imgBG" src="c8lx25" fileName="newImg/img_7.png" xy="0,0" group="n7_lxiz"/>
-    <component id="n3_jj3j" name="btnMapScaleBig" src="jj3j1e" fileName="btn/CommonButton.xml" xy="7,8" size="56,56" group="n7_lxiz" pkg="te1gxawo">
+    <component id="n3_jj3j" name="btnMapScaleBig" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="-3,-8" size="76,88" group="n7_lxiz">
       <Button icon="ui://32ieekguc8lx1r"/>
     </component>
-    <component id="n4_jj3j" name="btnMapScaleSmall" src="jj3j1e" fileName="btn/CommonButton.xml" xy="7,96" size="56,56" group="n7_lxiz" pkg="te1gxawo">
+    <component id="n4_jj3j" name="btnMapScaleSmall" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="-3,80" size="76,88" group="n7_lxiz">
       <Button icon="ui://32ieekguc8lx1s"/>
     </component>
-    <group id="n7_lxiz" name="Scale" xy="0,0" size="70,160" advanced="true">
+    <group id="n7_lxiz" name="Scale" xy="-3,-8" size="76,176" advanced="true">
       <relation target="" sidePair="left-left,top-top"/>
     </group>
   </displayList>

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="61,62" extention="Button">
+<component size="81,82" extention="Button">
   <displayList>
-    <image id="n0_luyr" name="n0" src="pgixi4k" fileName="newImg/btn_cm_circle_1.png" pkg="te1gxawo" xy="0,0"/>
-    <loader id="n2_luyr" name="icon" xy="5,16" size="50,30" align="center" vAlign="middle" autoSize="true">
+    <image id="n0_luyr" name="n0" src="pgixi4k" fileName="newImg/btn_cm_circle_1.png" pkg="te1gxawo" xy="10,10">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <loader id="n2_luyr" name="icon" xy="15,26" size="50,30" align="center" vAlign="middle" autoSize="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
   </displayList>

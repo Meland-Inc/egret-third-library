@@ -11,18 +11,18 @@
       <relation target="" sidePair="center-center,width-width"/>
       <relation target="" sidePair="bottom-bottom"/>
     </image>
-    <component id="n33_rvyy" name="btnLeft" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="te1gxawo" xy="21,561" size="18,26" group="n36_rvyy">
+    <component id="n33_rvyy" name="btnLeft" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1,541" size="58,66" group="n36_rvyy">
       <gearDisplay controller="states" pages="0"/>
       <relation target="n1_rvyy" sidePair="left-left,bottom-bottom"/>
       <Button icon="ui://te1gxawoqo8vi23"/>
     </component>
-    <component id="n34_rvyy" name="btnRight" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="te1gxawo" xy="1007,561" size="18,26" group="n36_rvyy">
+    <component id="n34_rvyy" name="btnRight" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="987,541" size="58,66" group="n36_rvyy">
       <gearDisplay controller="states" pages="0"/>
       <relation target="n1_rvyy" sidePair="right-right,bottom-bottom"/>
       <Button icon="ui://te1gxawoqo8vi22"/>
     </component>
-    <group id="n36_rvyy" name="Left/Right" xy="21,561" size="1004,26" group="n47_q9kn" collapsed="true"/>
-    <component id="n28_rvyy" name="btnClose" src="c8lx2b" fileName="btn/btnClose.xml" xy="1049,536" group="n47_q9kn">
+    <group id="n36_rvyy" name="Left/Right" xy="1,541" size="1044,66" group="n47_q9kn" collapsed="true"/>
+    <component id="n28_rvyy" name="btnClose" src="c8lx2b" fileName="btn/btnClose.xml" xy="1039,526" group="n47_q9kn">
       <relation target="n1_rvyy" sidePair="right-right,middle-middle"/>
       <Button icon="ui://te1gxawopagbi28"/>
     </component>
@@ -239,12 +239,12 @@
       <relation target="n1_rvyy" sidePair="right-right,top-top"/>
     </text>
     <group id="n41_rvyy" name="grpSearch" xy="849,464" size="181,38" group="n47_q9kn" collapsed="true"/>
-    <component id="n42_rvyy" name="btnStretch" src="qo8v2y" fileName="btn/btnStretch.xml" xy="1050,462" group="n47_q9kn">
+    <component id="n42_rvyy" name="btnStretch" src="qo8v2y" fileName="btn/btnStretch.xml" xy="1040,452" group="n47_q9kn">
       <gearIcon controller="states" pages="1" values="ui://te1gxawoqo8vi24" default="ui://te1gxawoqo8vi25"/>
       <relation target="n1_rvyy" sidePair="right-right,top-top"/>
       <Button icon="ui://te1gxawoqo8vi25"/>
     </component>
-    <group id="n47_q9kn" name="grpPackage" xy="0,456" size="1136,184" group="n45_kas2" advanced="true"/>
+    <group id="n47_q9kn" name="grpPackage" xy="0,452" size="1136,188" group="n45_kas2" advanced="true"/>
     <group id="n45_kas2" name="n45" xy="0,278" size="1136,362" advanced="true"/>
   </displayList>
   <transition name="toStretch">
