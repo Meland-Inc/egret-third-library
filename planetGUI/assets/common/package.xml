@@ -328,6 +328,14 @@
     <component id="d2gncyiar" name="ComRocker.xml" path="/com/" exported="true"/>
     <image id="g2xbcyias" name="btn_cm_1.png" path="/newImg/"/>
     <component id="jg6rcyiau" name="btnFixClickArea.xml" path="/btn/" exported="true"/>
+    <image id="z45ocyiav" name="bg_cm_1.jpg" path="/img_UI3/" exported="true"/>
+    <image id="z45ocyiaw" name="bg_cm_1.png" path="/img_UI3/" exported="true" scale="9grid" scale9grid="40,87,80,33"/>
+    <image id="z45ocyiax" name="btn_cm_back_1.png" path="/img_UI3/" exported="true"/>
+    <image id="z45ocyiay" name="btn_cm_close_1.png" path="/img_UI3/" exported="true"/>
+    <image id="z45ocyiaz" name="btn_cm_green.png" path="/img_UI3/" exported="true"/>
+    <image id="z45ocyib0" name="icon_cm_tick_1.png" path="/img_UI3/" exported="true"/>
+    <image id="z45ocyib1" name="img_cm_item_1.png" path="/img_UI3/" exported="true"/>
+    <image id="z45ocyib2" name="img_cm_title_1.png" path="/img_UI3/" exported="true" scale="9grid" scale9grid="15,15,30,30"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>
