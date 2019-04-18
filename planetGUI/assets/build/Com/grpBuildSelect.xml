@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="225,95" opaque="false">
-  <controller name="ctlOperate" alias="edit" exported="true" pages="0,preBuild,1,edit" selected="0"/>
+  <controller name="ctlOperate" alias="edit" exported="true" pages="0,preBuild,1,edit,2,editNotDel" selected="2"/>
   <displayList>
     <graph id="n16_gkyg" name="imgReference" xy="0,0" size="225,90" type="rect" lineSize="0" fillColor="#00ffffff"/>
     <component id="n7_gkyg" name="btnConfirm" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="199,-25" size="112,120">
@@ -8,16 +8,17 @@
       <Button icon="ui://32ieekgulmzf31"/>
     </component>
     <component id="n9_gkyg" name="btnCancel" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="-86,-26" size="112,120">
-      <gearXY controller="ctlOperate" pages="0,1" values="-86,-26|-20,-5"/>
+      <gearDisplay controller="ctlOperate" pages="0,1"/>
+      <gearXY controller="ctlOperate" pages="0,1" values="-86,-26|-20,-5" default="-86,-26"/>
       <gearIcon controller="ctlOperate" pages="1" values="ui://32ieekguddnk35" default="ui://32ieekgulmzf30"/>
       <Button icon="ui://32ieekgulmzf30"/>
     </component>
     <component id="n18_ddnk" name="btnMove" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="9,20" size="112,120">
-      <gearXY controller="ctlOperate" pages="0,1" values="9,20|72,40"/>
+      <gearXY controller="ctlOperate" pages="0,1" values="9,20|72,40" default="9,20"/>
       <Button icon="ui://32ieekguddnk36"/>
     </component>
     <component id="n19_ddnk" name="btnMirror" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="102,20" size="112,120">
-      <gearXY controller="ctlOperate" pages="0,1" values="102,20|165,-5"/>
+      <gearXY controller="ctlOperate" pages="0,1" values="102,20|165,-5" default="102,20"/>
       <Button icon="ui://32ieekgulmzf32"/>
     </component>
   </displayList>
