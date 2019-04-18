@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="268,278" opaque="false">
+<component size="268,278">
   <displayList>
     <graph id="n9_xf9r" name="n9" xy="0,108" size="74,74" alpha="0" type="rect"/>
     <graph id="n10_xf9r" name="n10" xy="109,182" size="80,80" alpha="0" type="rect"/>
@@ -16,6 +16,6 @@
       <Button icon="ui://32ieekgulmzf32"/>
     </component>
     <component id="n15_d2gn" name="comMoveRocker" src="d2gncyiar" fileName="com/ComRocker.xml" pkg="te1gxawo" xy="60,-1" pivot="0.5,0.5"/>
-    <text id="n16_uvbh" name="tfDeleteTime" xy="-13,180" size="107,15" fontSize="10" color="#ffffff" align="center" vars="true" autoSize="none" text="{day=10}天{hour=10}小时{minute=10}分{second=10}秒"/>
+    <text id="n16_uvbh" name="tfOverdueTime" xy="-13,180" size="107,15" fontSize="10" color="#ffffff" align="center" vars="true" autoSize="none" text="{day=10}天{hour=10}小时{minute=10}分{second=10}秒"/>
   </displayList>
 </component>

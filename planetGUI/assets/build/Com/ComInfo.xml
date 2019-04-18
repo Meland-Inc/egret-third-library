@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="216,200">
-  <controller name="ctrlInfoType" pages="0,other,1,player" selected="0"/>
+<component size="216,245">
+  <controller name="ctrlInfoType" pages="0,other,1,player,2,product" selected="2"/>
   <displayList>
-    <image id="n1_p7yp" name="bg" src="c8lx21" fileName="newImg/WinMapLook/img_3.png" xy="0,0" size="216,200">
+    <image id="n1_p7yp" name="bg" src="c8lx21" fileName="newImg/WinMapLook/img_3.png" xy="0,0" size="216,245">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
     <image id="n7_c8lx" name="imgTitleBG" src="c8lx22" fileName="newImg/WinMapLook/img_4.png" xy="27,15" size="162,24" group="n8_c8lx">
       <relation target="" sidePair="top-top,width-width"/>
     </image>
-    <text id="n5_p7yp" name="tfName" xy="30,16" size="151,25" group="n8_c8lx" fontSize="18" color="#f9f2c9" align="center" vAlign="middle" autoSize="none" strokeColor="#513e32" strokeSize="2" singleLine="true" text="沙漠红花">
+    <text id="n5_p7yp" name="tfName" xy="30,16" size="151,25" group="n8_c8lx" fontSize="18" color="#f9f2c9" align="center" vAlign="middle" autoSize="none" strokeColor="#513e32" strokeSize="2" singleLine="true" text="玩家资料">
       <relation target="n7_c8lx" sidePair="center-center,middle-middle"/>
     </text>
-    <group id="n8_c8lx" name="title" xy="27,15" size="162,26"/>
+    <group id="n8_c8lx" name="title" xy="27,15" size="162,26" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlInfoType" pages="0,1"/>
+    </group>
     <image id="n9_c8lx" name="imgTypeBG" src="c8lx23" fileName="newImg/WinMapLook/img_5.png" xy="26,50" size="30,30" group="n11_plek">
       <relation target="n7_c8lx" sidePair="left-left"/>
     </image>
@@ -31,7 +33,7 @@
       <item/>
       <item/>
     </list>
-    <group id="n11_plek" name="grpOtherInfo" xy="26,50" size="163,140" advanced="true">
+    <group id="n11_plek" name="grpOtherInfo" xy="26,50" size="163,140" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlInfoType" pages="0"/>
     </group>
     <loader id="n12_plek" name="ladPlayerIcon" xy="24,51" size="40,40" group="n17_plek"/>
@@ -44,6 +46,19 @@
     <group id="n17_plek" name="grpPlayerInfo" xy="22,51" size="173,133" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlInfoType" pages="1"/>
     </group>
+    <text id="n25_mo50" name="tfProductLoc" xy="10,7" size="46,18" group="n31_mo50" fontSize="12" color="#f2eabc" vars="true" text="({r=100},{c=100})"/>
+    <text id="n34_ip1v" name="tfProductFrom" xy="68,5" size="138,18" group="n31_mo50" fontSize="12" color="#f2eabc" align="right" autoSize="none" text="官方"/>
+    <loader id="n24_mo50" name="ladProductIcon" xy="5,25" size="205,77" group="n31_mo50" touchable="false" url="ui://te1gxawogu60cyi9z" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <text id="n27_mo50" name="tfProductOverdueTime" xy="20,107" size="175,15" group="n31_mo50" fontSize="10" color="#ff9900" align="center" vars="true" autoSize="none" text="拆除倒计时：{day=10}天{hour=10}小时{minute=10}分{second=10}秒"/>
+    <text id="n28_mo50" name="tfProductName" xy="20,131" size="175,18" group="n31_mo50" fontSize="12" color="#f2eabc" vars="true" autoSize="none" text="名称：{name=name}"/>
+    <text id="n29_mo50" name="tfProductAuthor" xy="20,158" size="174,18" group="n31_mo50" fontSize="12" color="#f2eabc" vars="true" autoSize="none" text="作者：{author=author}"/>
+    <text id="n30_mo50" name="tfProductDesc" xy="20,184" size="173,18" group="n31_mo50" fontSize="12" color="#f2eabc" vars="true" autoSize="height" text="描述：{desc=描述}"/>
+    <component id="n33_o68g" name="btnMoreProduct" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="64,212" size="87,23" group="n31_mo50">
+      <relation target="n30_mo50" sidePair="top-bottom"/>
+      <Button title="更多作品" titleColor="#000000" titleFontSize="10"/>
+    </component>
+    <group id="n31_mo50" name="tfProductInfo" xy="5,5" size="205,230" advanced="true">
+      <gearDisplay controller="ctrlInfoType" pages="2"/>
+    </group>
   </displayList>
-  <relation target="n6_p7yp" sidePair="bottomext-bottom,rightext-right"/>
 </component>

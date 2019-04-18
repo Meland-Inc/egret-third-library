@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" overflow="hidden" opaque="false" adaptationTest="FitSize">
-  <controller name="ctrlMode" pages="0,default,1,delete,2,hide" selected="2"/>
+  <controller name="ctrlMode" pages="0,default,1,delete,2,hide" selected="0"/>
   <displayList>
     <image id="n6_p7yp" name="bgUp" src="c8lx29" fileName="newImg/WinMapLook/img_10.png" xy="18,11" pivot="0.5,1" size="1100,309" group="n28_iewq">
       <relation target="" sidePair="left-left,top-top"/>
@@ -15,29 +15,44 @@
     <graph id="n9_c8lx" name="upLine" xy="18,320" size="1100,1" group="n28_iewq" hideByEditor="true" visible="false" alpha="0" touchable="false" grayed="true" lineSize="0">
       <relation target="" sidePair="middle-middle,rightext-right"/>
     </graph>
-    <image id="n11_c8lx" name="imgTitleBg" src="c8lx1z" fileName="newImg/WinMapLook/img_1.png" xy="59,45" size="210,40" group="n13_c8lx">
+    <image id="n11_c8lx" name="imgTitleBg" src="c8lx1z" fileName="newImg/WinMapLook/img_1.png" xy="59,45" size="191,40" group="n13_c8lx">
       <relation target="n15_c8lx" sidePair="rightext-right"/>
     </image>
-    <loader id="n14_c8lx" name="imgIcon" xy="67,49" size="40,32" group="n13_c8lx" url="ui://te1gxawoj21fi3l" align="center" vAlign="middle" fill="scale" shrinkOnly="true">
+    <loader id="n14_c8lx" name="imgIcon" xy="67,49" size="40,32" group="n13_c8lx" url="ui://32ieekguc8lx1u" align="center" vAlign="middle" fill="scale" shrinkOnly="true">
       <gearIcon controller="ctrlMode" pages="1,2" values="ui://te1gxawop2iecyiaq|ui://te1gxawoj21fi3l" default="ui://32ieekguc8lx1u"/>
     </loader>
-    <text id="n15_c8lx" name="tfTitle" xy="129,53" size="133,27" group="n13_c8lx" fontSize="20" color="#4f4745" letterSpacing="1" text="源码隐藏设备">
+    <text id="n15_c8lx" name="tfTitle" xy="129,53" size="110,27" group="n13_c8lx" fontSize="20" color="#4f4745" vAlign="middle" letterSpacing="1" text="源码扫描仪">
       <gearText controller="ctrlMode" pages="1,2" values="源码删除设备|源码隐藏设备" default="源码扫描仪"/>
     </text>
-    <group id="n13_c8lx" name="titlet" xy="59,45" size="210,40" group="n28_iewq" advanced="true">
+    <group id="n13_c8lx" name="titlet" xy="59,45" size="191,40" group="n28_iewq" advanced="true" collapsed="true">
       <relation target="n6_p7yp" sidePair="left-left,top-top"/>
     </group>
     <component id="n5_jj3j" name="btnClose" src="c8lx2b" fileName="btn/btnClose.xml" xy="979,495" group="n28_iewq">
+      <gearDisplay controller="ctrlMode" pages="0,1"/>
       <relation target="n7_c8lx" sidePair="right-right,bottom-bottom"/>
       <Button icon="ui://32ieekguc8lx1y"/>
     </component>
-    <component id="n18_c8lx" name="comSelectBox" src="c8lx2d" fileName="Com/ComSelectBox.xml" xy="164,202" size="231,84" group="n28_iewq"/>
+    <component id="n18_c8lx" name="comSelectBox" src="c8lx2d" fileName="Com/ComSelectBox.xml" xy="405,179" size="230,230" group="n28_iewq"/>
     <component id="n19_c8lx" name="comInfo" src="p7yp1o" fileName="Com/ComInfo.xml" xy="154,258" pivot="0.5,0.5" anchor="true" group="n28_iewq"/>
-    <component id="n23_kqo8" name="comCompass" src="kqo82e" fileName="Com/ComCompass.xml" xy="164,202" size="20,20" group="n28_iewq">
+    <component id="n23_kqo8" name="comCompass" src="kqo82e" fileName="Com/ComCompass.xml" xy="405,179" size="20,20" group="n28_iewq">
       <relation target="n18_c8lx" sidePair="center-center,middle-middle"/>
     </component>
     <component id="n24_iewq" name="mapScaleButton" src="rvyy1j" fileName="Com/ComMapScaleView.xml" xy="59,428" size="70,160" group="n28_iewq">
       <relation target="n7_c8lx" sidePair="left-left,bottom-bottom"/>
+    </component>
+    <component id="n32_o68g" name="btnEnterHide" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1042,32" size="50,32" group="n28_iewq">
+      <gearDisplay controller="ctrlMode" pages="0"/>
+      <relation target="" sidePair="right-right"/>
+      <Button icon="ui://32ieekguo68g3e" controller="ctrlMode" page="2"/>
+    </component>
+    <component id="n33_o68g" name="comHideJoystick" src="o68g3g" fileName="Com/ComHideJoystick.xml" xy="870,413" group="n28_iewq">
+      <gearDisplay controller="ctrlMode" pages="2"/>
+      <relation target="" sidePair="bottom-bottom,right-right"/>
+    </component>
+    <component id="n34_o68g" name="btnExitHide" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1042,32" size="50,38" group="n28_iewq">
+      <gearDisplay controller="ctrlMode" pages="2"/>
+      <relation target="" sidePair="right-right"/>
+      <Button icon="ui://32ieekguo68g3d" controller="ctrlMode" page="0"/>
     </component>
     <group id="n28_iewq" name="root" xy="18,11" size="1100,618" advanced="true">
       <relation target="" sidePair="left-left,top-top"/>
