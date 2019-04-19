@@ -202,6 +202,8 @@
     <image id="qfz98q" name="frame_codeloading_8.png" path="/newImg/"/>
     <image id="qfz98r" name="frame_codeloading_9.png" path="/newImg/"/>
     <image id="qfz98s" name="frame_codeloading_10.png" path="/newImg/"/>
+    <image id="iie28t" name="startPoint.PNG" path="/newImg/" scale="9grid" scale9grid="11,0,5,8"/>
+    <component id="iie28u" name="ComStartPoint.xml" path="/com/" exported="true"/>
   </resources>
   <publish name="Basics"/>
 </packageDescription>
