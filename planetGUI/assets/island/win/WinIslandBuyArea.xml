@@ -5,7 +5,7 @@
     <loader id="n0_z45o" name="n0" xy="0,0" size="1136,640" url="ui://te1gxawoz45ocyiav" fill="scaleFree">
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <component id="n19_z45o" name="comGridShow" src="z45ob" fileName="com/comGridShow.xml" xy="0,60" size="1136,580">
+    <component id="n19_z45o" name="comGridShow" src="z45ob" fileName="com/comIslandGridShow.xml" xy="0,60" size="1136,580">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
     <image id="n4_z45o" name="n4" src="z45ocyib2" fileName="img_UI3/img_cm_title_1.png" pkg="te1gxawo" xy="0,0" size="1136,60">
@@ -17,17 +17,17 @@
     </component>
     <image id="n5_z45o" name="n5" src="z45o2" fileName="img/icon_territory_1.png" xy="4,4" group="n17_z45o"/>
     <image id="n8_z45o" name="n8" src="z45o1" fileName="img/font_territory_1.png" xy="73,11" group="n17_z45o"/>
-    <group id="n17_z45o" name="leftTop" xy="4,4" size="205,46" advanced="true" collapsed="true">
+    <group id="n17_z45o" name="leftTop" xy="4,4" size="205,46" advanced="true">
       <relation target="" sidePair="left-left,top-top"/>
     </group>
     <text id="n9_z45o" name="n9" xy="319,10" size="125,36" group="n16_z45o" fontSize="28" text="拥有领地:"/>
     <text id="n10_z45o" name="n10" xy="598,10" size="153,36" group="n16_z45o" fontSize="28" text="可购买地块:"/>
-    <text id="n11_z45o" name="labOwnNum" xy="440,10" size="68,36" group="n16_z45o" fontSize="28" letterSpacing="5" text="225"/>
-    <text id="n12_z45o" name="labCanBuy" xy="748,10" size="102,36" group="n16_z45o" fontSize="28" letterSpacing="5" text="12/60"/>
-    <group id="n16_z45o" name="top" xy="319,10" size="531,36" advanced="true" collapsed="true">
+    <text id="n11_z45o" name="labOwnNum" xy="440,10" size="68,36" group="n16_z45o" fontSize="28" letterSpacing="5" autoClearText="true" text="225"/>
+    <text id="n12_z45o" name="labCanBuy" xy="748,10" size="102,36" group="n16_z45o" fontSize="28" letterSpacing="5" autoClearText="true" text="12/60"/>
+    <group id="n16_z45o" name="top" xy="319,10" size="531,36" advanced="true">
       <relation target="" sidePair="center-center,top-top"/>
     </group>
-    <component id="n18_z45o" name="comSubmitAssetView" src="z45oa" fileName="com/comSubmitAssetView.xml" xy="0,0" size="1136,640">
+    <component id="n18_z45o" name="comSubmitAssetView" src="z45oa" fileName="com/comIslandSubmitAssetView.xml" xy="0,0" size="1136,640">
       <gearDisplay controller="readySubmit" pages="1"/>
       <relation target="" sidePair="width-width,height-height"/>
     </component>

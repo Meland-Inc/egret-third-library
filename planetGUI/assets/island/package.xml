@@ -11,9 +11,9 @@
     <image id="z45o7" name="xx_1_1_09.PNG" path="/img/"/>
     <image id="z45o8" name="xx_1_1_10.PNG" path="/img/"/>
     <component id="z45o9" name="WinIslandBuyArea.xml" path="/win/" exported="true"/>
-    <component id="z45oa" name="comSubmitAssetView.xml" path="/com/"/>
-    <component id="z45ob" name="comGridShow.xml" path="/com/"/>
-    <component id="z45oc" name="comGridItem.xml" path="/com/"/>
+    <component id="z45oa" name="comIslandSubmitAssetView.xml" path="/com/"/>
+    <component id="z45ob" name="comIslandGridShow.xml" path="/com/"/>
+    <component id="z45oc" name="comIslandGridItem.xml" path="/com/"/>
   </resources>
   <publish name="island"/>
 </packageDescription>
