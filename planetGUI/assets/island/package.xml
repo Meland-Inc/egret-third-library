@@ -13,7 +13,7 @@
     <component id="z45o9" name="WinIslandBuyArea.xml" path="/win/" exported="true"/>
     <component id="z45oa" name="comIslandSubmitAssetView.xml" path="/com/"/>
     <component id="z45ob" name="comIslandGridShow.xml" path="/com/"/>
-    <component id="z45oc" name="comIslandGridItem.xml" path="/com/"/>
+    <component id="z45oc" name="comIslandGridItem.xml" path="/com/" exported="true"/>
   </resources>
   <publish name="island"/>
 </packageDescription>
