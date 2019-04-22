@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="350,161" opaque="false" designImage="ui://i25v0ebkb4ke16" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlStorage" pages="0,hide,1,show" selected="1"/>
+  <controller name="ctrlStorage" pages="0,hide,1,show" selected="0"/>
   <displayList>
+    <component id="n32_110nb" name="btnBuyHomeArea" src="rdy458" fileName="btn/btnMenu.xml" xy="86,0">
+      <Button title="领地" icon="ui://5hs1fuejrdy43e"/>
+    </component>
     <component id="n18_r2bf" name="btnGamePlatform" src="rdy458" fileName="btn/btnMenu.xml" xy="147,0">
       <Button title="游戏" icon="ui://5hs1fuejr2bf5y"/>
     </component>
-    <component id="n21_b4ke" name="btnShowStorage" src="rdy458" fileName="btn/btnMenu.xml" xy="86,0">
+    <component id="n21_b4ke" name="btnShowStorage" src="rdy458" fileName="btn/btnMenu.xml" xy="26,0">
       <gearDisplay controller="ctrlStorage" pages="0"/>
       <Button title="更多" icon="ui://5hs1fuejb4ke7a" controller="ctrlStorage" page="1"/>
     </component>
     <component id="n30_cjhf" name="btnRobot" src="cjhf7h" fileName="btn/btnRobot.xml" xy="205,-5">
       <Button title="机器人"/>
     </component>
-    <component id="n28_b4ke" name="btnHideStorage" src="rdy458" fileName="btn/btnMenu.xml" xy="86,0">
+    <component id="n28_b4ke" name="btnHideStorage" src="rdy458" fileName="btn/btnMenu.xml" xy="26,0">
       <gearDisplay controller="ctrlStorage" pages="1"/>
       <Button title="更多" icon="ui://5hs1fuejb4ke7a" controller="ctrlStorage" page="0"/>
     </component>
-    <image id="n31_nln9" name="grpStorageTag" src="n6p21r" fileName="img/icon_mail_2.png" pkg="ueqz7xc0" xy="121,11" visible="false"/>
+    <image id="n31_nln9" name="grpStorageTag" src="n6p21r" fileName="img/icon_mail_2.png" pkg="ueqz7xc0" xy="61,11" visible="false"/>
     <component id="n22_b4ke" name="btnFormula" src="b4ke79" fileName="btn/btnFormula.xml" xy="270,-4">
       <Button title="配方"/>
     </component>
@@ -34,7 +37,7 @@
       <Button title="设置" icon="ui://5hs1fuejrdy43e"/>
     </component>
     <image id="n20_11syp" name="grpMailTag" src="n6p21r" fileName="img/icon_mail_2.png" pkg="ueqz7xc0" xy="89,99" group="n24_b4ke" visible="false"/>
-    <group id="n24_b4ke" name="grpStorageBtn" xy="0,75" size="228,86" advanced="true">
+    <group id="n24_b4ke" name="grpStorageBtn" xy="0,75" size="228,86" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlStorage" pages="1"/>
     </group>
     <list id="n29_b4ke" name="lstFromulaMat" xy="281,68" size="60,93" touchable="false" defaultItem="ui://5hs1fuejb4ke7d" autoClearItems="true">
