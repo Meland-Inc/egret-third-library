@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="130,130">
   <displayList>
-    <loader id="n0_d2gn" name="ladBg" xy="0,0" size="130,130" url="ui://te1gxawordy42t" autoSize="true"/>
+    <loader id="n0_d2gn" name="ladBg" xy="0,0" size="130,130" url="ui://te1gxawordy42t" fill="scaleFree">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
     <loader id="n1_d2gn" name="ladRocker" xy="65,65" pivot="0.5,0.5" anchor="true" size="60,60" url="ui://te1gxawordy42u" autoSize="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
   </displayList>
-  <relation target="n0_d2gn" sidePair="width-width,height-height"/>
 </component>
