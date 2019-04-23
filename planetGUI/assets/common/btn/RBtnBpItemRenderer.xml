@@ -2,7 +2,6 @@
 <component size="72,72" extention="Button" bgColor="#00ff00">
   <controller name="button" pages="0,up,1,down" selected="0"/>
   <controller name="ctrlMark" pages="1,normal,0,equip,2,broken,3,shadow" selected="3"/>
-  <controller name="ctrlSchedule" pages="0,true,1,false" selected="0"/>
   <displayList>
     <image id="n0_sntq" name="bg" src="ot9si33" fileName="newImg/img_cm_item_2.png" xy="2,2"/>
     <loader id="n7_fene" name="quality" xy="6,6" pivot="0.5,0.5" size="60,60" group="n10_fene" visible="false" url="ui://te1gxawoz45zcyi99"/>
@@ -18,17 +17,16 @@
     <text id="n9_fene" name="num" xy="59,57" pivot="1,0.5" anchor="true" size="17,19" group="n10_fene" visible="false" fontSize="12" color="#74634c" align="right" vAlign="middle" text="99">
       <gearDisplay controller="ctrlMark" pages="1,0,2"/>
     </text>
-    <group id="n10_fene" name="grpItemIcon" xy="6,6" size="70,69" advanced="true" collapsed="true"/>
+    <group id="n10_fene" name="grpItemIcon" xy="6,6" size="70,69" advanced="true"/>
     <image id="n2_sntq" name="equipedMark" src="rdy44e" fileName="newImg/img_main_item_3.png" pkg="5hs1fuej" xy="1,1" group="n4_sntq"/>
     <text id="n3_sntq" name="tfE" xy="4,4" size="18,19" group="n4_sntq" fontSize="12" align="center" vAlign="middle" autoSize="none" text="E"/>
     <group id="n4_sntq" name="grpEquipedMark" xy="1,1" size="34,32" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlMark" pages="0"/>
     </group>
-    <component id="n17_w9v6" name="barSchedule" src="11slcyi8f" fileName="bar/barItem1.xml" xy="11,55" size="50,8" group="n19_w9v6">
-      <gearDisplay controller="ctrlSchedule" pages="0"/>
+    <component id="n21_w9v6" name="barSchedule" src="11slcyi8f" fileName="bar/barItem1.xml" xy="11,55" size="50,8" group="n19_w9v6">
       <ProgressBar value="50" max="100"/>
     </component>
-    <text id="n18_w9v6" name="tfDepleted" xy="15,47" size="41,19" group="n19_w9v6" fontSize="12" color="#ffffff" align="center" vAlign="middle" strokeColor="#ac471a" autoClearText="true" text="已耗尽">
+    <text id="n18_w9v6" name="tfDepleted" xy="15,47" size="41,19" group="n19_w9v6" fontSize="12" color="#ffffff" align="center" vAlign="middle" strokeColor="#ac471a" text="已耗尽">
       <relation target="" sidePair="center-center"/>
     </text>
     <text id="n20_w9v6" name="tfArchNum" xy="26,6" size="20,19" group="n19_w9v6" fontSize="12" color="#584736" align="center" vAlign="middle" autoClearText="true" text="5/7">
