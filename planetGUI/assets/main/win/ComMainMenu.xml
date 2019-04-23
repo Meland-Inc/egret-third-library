@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="350,161" opaque="false" designImage="ui://i25v0ebkb4ke16" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlStorage" pages="0,hide,1,show" selected="1"/>
+  <controller name="ctrlStorage" pages="0,hide,1,show" selected="0"/>
   <displayList>
     <component id="n32_110nb" name="btnBuyHomeArea" src="rdy458" fileName="btn/btnMenu.xml" xy="86,0">
-      <Button title="领地" icon="ui://5hs1fuejrdy43p"/>
+      <Button title="领地" icon="ui://5hs1fuejrdy43e"/>
     </component>
     <component id="n18_r2bf" name="btnGamePlatform" src="rdy458" fileName="btn/btnMenu.xml" xy="147,0">
       <Button title="游戏" icon="ui://5hs1fuejr2bf5y"/>
