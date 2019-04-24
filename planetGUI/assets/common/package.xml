@@ -336,6 +336,10 @@
     <image id="z45ocyib0" name="icon_cm_tick_1.png" path="/img_UI3/" exported="true"/>
     <image id="z45ocyib1" name="img_cm_item_1.png" path="/img_UI3/" exported="true"/>
     <image id="z45ocyib2" name="img_cm_title_1.png" path="/img_UI3/" exported="true" scale="9grid" scale9grid="15,15,30,30"/>
+    <image id="pojgcyib3" name="icon_cm_down.png" path="/img_UI3/" exported="true"/>
+    <image id="pojgcyib4" name="icon_cm_left.png" path="/img_UI3/" exported="true"/>
+    <image id="pojgcyib5" name="icon_cm_right.png" path="/img_UI3/" exported="true"/>
+    <image id="pojgcyib6" name="icon_cm_up.png" path="/img_UI3/" exported="true"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>

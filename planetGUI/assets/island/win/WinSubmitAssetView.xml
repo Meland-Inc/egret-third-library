@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" designImage="ui://i25v0ebkz45o3a">
+  <controller name="submitStatus" pages="1,false,0,true" selected="0"/>
+  <displayList>
+    <loader id="n1_z45o" name="n1" xy="0,0" size="1136,640" visible="false" touchable="false">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <image id="n0_z45o" name="n0" src="z45ocyiaw" fileName="img_UI3/bg_cm_1.png" pkg="te1gxawo" xy="326,162" size="500,349" group="n7_z45o"/>
+    <component id="n2_z45o" name="btnClose" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="759,161" size="72,72" group="n7_z45o">
+      <Button icon="ui://te1gxawoz45ocyiay"/>
+    </component>
+    <text id="n3_z45o" name="n3" xy="513,177" size="129,39" group="n7_z45o" fontSize="30" color="#ffffff" bold="true" text="提交资源"/>
+    <text id="n4_z45o" name="labCantTips" xy="527,458" size="101,31" group="n7_z45o" fontSize="24" color="#ef4542" text="材料不足">
+      <gearDisplay controller="submitStatus" pages="1"/>
+    </text>
+    <text id="n5_z45o" name="n5" xy="343,236" size="221,25" group="n7_z45o" fontSize="18" color="#2d5b98" text="购买此地块，需要如下资源"/>
+    <component id="n6_z45o" name="btnSubmit" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="472,458" size="206,84" group="n7_z45o">
+      <gearDisplay controller="submitStatus" pages="0"/>
+      <Button title="提交" titleColor="#ffffff" titleFontSize="34" icon="ui://te1gxawoz45ocyiaz" sound="ui://fknoioovqy4415"/>
+    </component>
+    <list id="n11_sdvq" name="lstItem" xy="361,280" size="440,143" group="n7_z45o" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="128" colGap="42" defaultItem="ui://issf8dvbsdvqd" align="center" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n7_z45o" name="center" xy="326,161" size="505,381" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>
