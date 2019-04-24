@@ -53,7 +53,7 @@
     <image id="n36_p6jr" name="textBg" src="p6jr4j" fileName="newImg1/WinMapLook/img_mode_11.png" xy="20,223" size="287,121" group="n31_mo50">
       <relation target="n30_mo50" sidePair="bottomext-bottom"/>
     </image>
-    <text id="n27_mo50" name="tfProductOverdueTime" xy="28,198" size="270,25" group="n31_mo50" fontSize="18" color="#ff9900" align="center" vars="true" autoSize="none" text="拆除倒计时：{day=10}天{hour=10}小时{minute=10}分{second=10}秒"/>
+    <text id="n27_mo50" name="tfProductOverdueTime" xy="28,198" size="270,25" group="n31_mo50" fontSize="18" color="#ff9900" align="center" vars="true" autoSize="none" text="{desc=拆除倒计时：}{day=10}天{hour=10}小时{minute=10}分{second=10}秒"/>
     <text id="n28_mo50" name="tfProductName" xy="31,236" size="175,24" group="n31_mo50" fontSize="18" color="#25f2ff" vars="true" autoSize="none" text="名称：{name=name}"/>
     <text id="n29_mo50" name="tfProductAuthor" xy="30,267" size="174,24" group="n31_mo50" fontSize="18" color="#25f2ff" vars="true" autoSize="none" text="作者：{author=author}"/>
     <text id="n30_mo50" name="tfProductDesc" xy="30,300" size="173,24" group="n31_mo50" fontSize="18" color="#25f2ff" vars="true" autoSize="height" text="描述：{desc=描述}"/>
@@ -61,6 +61,7 @@
       <relation target="n30_mo50" sidePair="top-bottom"/>
       <Button icon="ui://32ieekgup6jr3x"/>
     </component>
+    <text id="n37_p6jr" name="tfCanDelete" xy="133,197" size="60,24" group="n31_mo50" visible="false" fontSize="18" color="#ff9900" align="center" vars="true" text="可拆除"/>
     <group id="n31_mo50" name="tfProductInfo" xy="20,14" size="287,381" advanced="true">
       <gearDisplay controller="ctrlInfoType" pages="2"/>
     </group>
