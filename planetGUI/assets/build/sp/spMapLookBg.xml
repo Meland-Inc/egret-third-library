@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1094,600">
+  <displayList>
+    <image id="n4_p6jr" name="bgUp" src="p6jr4n" fileName="img_UI3/WinMapLook/bg_mode_0.png" xy="0,0" size="1094,299">
+      <relation target="" sidePair="width-width,height-height%"/>
+    </image>
+    <image id="n0_p6jr" name="bgDown" src="p6jr3n" fileName="img_UI3/WinMapLook/bg_mode_1.png" xy="0,299" pivot="0.5,0" size="1094,300">
+      <relation target="" sidePair="width-width,bottomext-bottom"/>
+      <relation target="n4_p6jr" sidePair="topext-bottom"/>
+    </image>
+  </displayList>
+</component>
