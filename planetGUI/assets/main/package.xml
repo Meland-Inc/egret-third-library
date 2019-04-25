@@ -177,8 +177,12 @@
     <component id="pv2f81" name="ComTaskTipsItem.xml" path="/com/"/>
     <component id="pv2f82" name="ToolTipTaskPic.xml" path="/com/" exported="true"/>
     <component id="ndxt83" name="ComMainQuickBuild.xml" path="/win/" exported="true"/>
-    <component id="hvpi84" name="comMultiOperate.xml" path="/com/"/>
-    <component id="jx9r85" name="comSelectMenu.xml" path="/com/"/>
+    <component id="jx9r85" name="ComMainOperateCorona.xml" path="/com/"/>
+    <image id="p6jr86" name="btn_roulette_1.png" path="/img_UI3/"/>
+    <image id="p6jr87" name="btn_roulette_2.png" path="/img_UI3/"/>
+    <image id="p6jr88" name="btn_roulette_3.png" path="/img_UI3/"/>
+    <image id="p6jr89" name="btn_roulette_4.png" path="/img_UI3/"/>
+    <image id="p6jr8a" name="img_roulette_1.png" path="/img_UI3/"/>
   </resources>
   <publish name="main" npot="true"/>
 </packageDescription>
