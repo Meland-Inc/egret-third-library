@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="66,15" extention="Button">
+<component size="115,27" extention="Button">
   <controller name="button" pages="0,up,1,down" selected="1"/>
   <displayList>
-    <text id="n20_uvbh" name="title" xy="20,0" size="46,15" fontSize="10" vAlign="middle" text="不再提示"/>
-    <graph id="n24_uvbh" name="n24" xy="0,0" size="15,15" type="rect"/>
-    <image id="n22_uvbh" name="n22" src="sz338" fileName="img/icon_task_OK.png" pkg="eunktclq" xy="1,3" size="14,11">
+    <text id="n20_uvbh" name="title" xy="30,0" size="85,27" fontSize="20" color="#29ffc5" vAlign="middle" text="不再提示"/>
+    <image id="n25_p6jr" name="n25" src="p6jr4h" fileName="newImg1/WinMapLook/img_mode_9.png" xy="0,2"/>
+    <image id="n22_uvbh" name="n22" src="p6jr4a" fileName="newImg1/WinMapLook/img_mode_10.png" xy="1,3">
       <gearDisplay controller="button" pages="1"/>
     </image>
   </displayList>

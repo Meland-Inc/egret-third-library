@@ -14,22 +14,13 @@
     <image id="c8lx1r" name="btn_1.png" path="/newImg/"/>
     <image id="c8lx1s" name="btn_2.png" path="/newImg/"/>
     <image id="c8lx1t" name="btn_3.png" path="/newImg/"/>
-    <image id="c8lx1u" name="icon_1.png" path="/newImg/WinMapLook/"/>
-    <image id="c8lx1v" name="icon_2.png" path="/newImg/WinMapLook/"/>
-    <image id="c8lx1w" name="icon_3.png" path="/newImg/WinMapLook/"/>
-    <image id="c8lx1x" name="icon_4.png" path="/newImg/WinMapLook/"/>
-    <image id="c8lx1y" name="icon_5.png" path="/newImg/WinMapLook/"/>
-    <image id="c8lx1z" name="img_1.png" path="/newImg/WinMapLook/" scale="9grid" scale9grid="87,10,63,20"/>
     <image id="c8lx20" name="img_2.png" path="/newImg/WinMapLook/" scale="9grid" scale9grid="21,21,6,6"/>
-    <image id="c8lx21" name="img_3.png" path="/newImg/WinMapLook/" scale="9grid" scale9grid="12,12,24,24"/>
     <image id="c8lx22" name="img_4.png" path="/newImg/WinMapLook/"/>
     <image id="c8lx23" name="img_5.png" path="/newImg/WinMapLook/" scale="9grid" scale9grid="8,8,16,16"/>
     <image id="c8lx24" name="img_6.png" path="/newImg/WinMapLook/"/>
     <image id="c8lx25" name="img_7.png" path="/newImg/"/>
     <image id="c8lx26" name="img_8.png" path="/newImg/WinMapLook/" scale="9grid" scale9grid="5,2,17,12"/>
     <image id="c8lx27" name="img_9.png" path="/newImg/WinMapLook/"/>
-    <image id="c8lx29" name="img_10.png" path="/newImg/WinMapLook/" scale="9grid" scale9grid="118,98,19,38"/>
-    <image id="c8lx2a" name="img_11.png" path="/newImg/WinMapLook/" scale="9grid" scale9grid="119,74,31,27"/>
     <component id="c8lx2b" name="btnClose.xml" path="/btn/"/>
     <component id="c8lx2d" name="ComSelectBox.xml" path="/Com/"/>
     <component id="kqo82e" name="ComCompass.xml" path="/Com/"/>
@@ -57,18 +48,43 @@
     <image id="ddnk36" name="btn_build_move.png" path="/newImg/WinBuildPannel/" exported="true"/>
     <component id="uvbh37" name="WinDeleteBuildingConfirm.xml" path="/win/" exported="true"/>
     <component id="uvbh38" name="btnNoTips.xml" path="/btn/"/>
-    <image id="o68g3c" name="851541B8-3FD1-45e6-ADCE-0E86617A5CA4.png" path="/newImg/WinMapLook/"/>
-    <image id="o68g3d" name="look_eye3.png" path="/newImg/WinMapLook/"/>
-    <image id="o68g3e" name="look_eye2.png" path="/newImg/WinMapLook/"/>
-    <image id="o68g3f" name="look_eye1.png" path="/newImg/WinMapLook/"/>
     <component id="o68g3g" name="ComHideJoystick.xml" path="/Com/" exported="true"/>
-    <image id="ip1v3h" name="btn_exit.png" path="/newImg/WinMapLook/"/>
-    <image id="ip1v3i" name="btn_comment.png" path="/newImg/WinMapLook/"/>
-    <image id="ip1v3j" name="btn_collect.png" path="/newImg/WinMapLook/"/>
-    <image id="ip1v3k" name="btn_share.png" path="/newImg/WinMapLook/"/>
-    <image id="ip1v3l" name="btn_like.png" path="/newImg/WinMapLook/"/>
-    <component id="f5wb3m" name="RBtnBuildRenderer.xml" path="/btn/" exported="true"/>
     <component id="lxr13m" name="spBack.xml" path="/sp/"/>
+    <image id="p6jr3n" name="bg_mode_1.png" path="/img_UI3/WinMapLook/" scale="9grid" scale9grid="274,137,548,88" duplicatePadding="true"/>
+    <image id="p6jr3o" name="btn_mode_1.png" path="/img_UI3/"/>
+    <image id="p6jr3p" name="btn_mode_2.png" path="/img_UI3/"/>
+    <image id="p6jr3q" name="btn_mode_back.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr3r" name="btn_mode_13.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr3s" name="btn_mode_12.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr3t" name="btn_mode_14.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr3u" name="img_mode_2.png" path="/img_UI3/WinMapLook/" scale="9grid" scale9grid="46,50,63,62"/>
+    <image id="p6jr3v" name="img_mode_1.png" path="/img_UI3/WinMapLook/" scale="9grid" scale9grid="29,29,24,25"/>
+    <image id="p6jr3x" name="btn_mode_10.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr3y" name="btn_mode_1.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr3z" name="btn_mode_11.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr40" name="btn_mode_15.png" path="/img_UI3/WinMapLook/" exported="true"/>
+    <image id="p6jr41" name="btn_mode_16.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr42" name="btn_mode_2.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr43" name="btn_mode_3.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr44" name="btn_mode_4.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr45" name="btn_mode_5.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr46" name="btn_mode_6.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr47" name="btn_mode_7.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr48" name="btn_mode_8.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr49" name="btn_mode_9.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr4a" name="img_mode_10.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr4b" name="img_mode_3.png" path="/img_UI3/WinMapLook/" scale="9grid" scale9grid="20,20,40,40"/>
+    <image id="p6jr4c" name="img_mode_4.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr4d" name="img_mode_5.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr4e" name="img_mode_6.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr4f" name="img_mode_7.png" path="/img_UI3/WinMapLook/" exported="true"/>
+    <image id="p6jr4g" name="img_mode_8.png" path="/img_UI3/WinMapLook/" exported="true"/>
+    <image id="p6jr4h" name="img_mode_9.png" path="/img_UI3/WinMapLook/"/>
+    <component id="p6jr4i" name="btnModeChange.xml" path="/btn/"/>
+    <image id="p6jr4j" name="img_mode_11.png" path="/img_UI3/WinMapLook/" scale="9grid" scale9grid="20,20,40,40"/>
+    <component id="p6jr4k" name="RBtnBuildRenderer.xml" path="/btn/"/>
+    <component id="p6jr4l" name="spMapLookBg.xml" path="/sp/"/>
+    <image id="p6jr4n" name="bg_mode_0.png" path="/img_UI3/WinMapLook/" scale="9grid" scale9grid="274,75,548,88" duplicatePadding="true"/>
   </resources>
   <publish name="build" npot="true"/>
 </packageDescription>

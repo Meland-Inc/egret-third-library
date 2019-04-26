@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="226,184">
+<component size="194,210" designImage="ui://i25v0ebkp6jr3j" designImageOffsetX="-866" designImageOffsetY="-362" designImageAlpha="100">
   <displayList>
-    <component id="n2_o68g" name="btnHide" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="120,137" size="60,45">
-      <Button titleColor="#ffffff" icon="ui://32ieekguo68g3d"/>
+    <component id="n2_o68g" name="btnHide" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="115,0" size="79,68">
+      <Button titleColor="#ffffff" icon="ui://32ieekgup6jr49"/>
     </component>
-    <component id="n4_o68g" name="btnCancel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="146,0" size="80,80" visible="false">
-      <Button icon="ui://32ieekgulmzf30"/>
-    </component>
-    <component id="n6_o68g" name="comMoveRocker" src="d2gncyiar" fileName="com/ComRocker.xml" pkg="te1gxawo" xy="0,0" pivot="0.5,0.5" size="140,140"/>
-    <component id="n7_lxr1" name="btnUnhide" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="25,144" size="50,35">
-      <Button titleColor="#ffffff" icon="ui://32ieekguo68g3e"/>
+    <component id="n6_o68g" name="comMoveRocker" src="d2gncyiar" fileName="com/ComRocker.xml" pkg="te1gxawo" xy="28,72" pivot="0.5,0.5" size="140,140"/>
+    <component id="n7_lxr1" name="btnUnhide" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="0,8" size="79,50">
+      <Button titleColor="#ffffff" icon="ui://32ieekgup6jr48"/>
     </component>
   </displayList>
 </component>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" adaptationTest="FitSize">
-  <controller name="states" pages="0,normal,1,stretch" selected="0">
+  <controller name="states" pages="0,normal,1,stretch" selected="1">
     <action type="play_transition" fromPage="0" toPage="1" transition="toStretch" stopOnExit="true"/>
   </controller>
   <displayList>
@@ -34,7 +34,7 @@
       <item icon="ui://32ieekguqo8v2m" selectedIcon="ui://32ieekguqo8v2n"/>
       <item icon="ui://32ieekguqo8v2o" selectedIcon="ui://32ieekguqo8v2p"/>
     </list>
-    <list id="n32_rvyy" name="lstNormalScrollerGroup" xy="55,522" size="938,105" group="n47_q9kn" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="2" colGap="10" defaultItem="ui://32ieekguf5wb3m" vAlign="middle" autoClearItems="true">
+    <list id="n32_rvyy" name="lstNormalScrollerGroup" xy="55,522" size="938,105" group="n47_q9kn" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="2" colGap="10" defaultItem="ui://32ieekgup6jr4k" vAlign="middle" autoClearItems="true">
       <gearDisplay controller="states" pages="0"/>
       <relation target="n1_rvyy" sidePair="rightext-right,bottom-bottom"/>
       <item/>
@@ -131,103 +131,10 @@
       <item/>
       <item/>
     </list>
-    <list id="n43_p37m" name="lstStretchScrollerGroup" xy="54,516" size="959,112" group="n47_q9kn" layout="flow_hz" overflow="scroll" scrollBarFlags="6" scrollBar="visible" margin="0,0,5,0" scrollBarRes="ui://32ieekgu99a234," colGap="10" defaultItem="ui://32ieekguf5wb3m" autoItemSize="true" renderOrder="arch" apex="5" autoClearItems="true">
+    <list id="n43_p37m" name="lstStretchScrollerGroup" xy="54,516" size="959,112" group="n47_q9kn" layout="flow_hz" overflow="scroll" scrollBarFlags="6" scrollBar="visible" margin="0,0,5,0" scrollBarRes="ui://32ieekgu99a234," colGap="10" defaultItem="ui://32ieekgup6jr4k" autoItemSize="true" renderOrder="arch" apex="5" autoClearItems="true">
       <gearDisplay controller="states" pages="1"/>
       <relation target="n1_rvyy" sidePair="rightext-right,topext-top"/>
       <relation target="n1_rvyy" sidePair="bottomext-bottom"/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
     </list>
     <image id="n39_rvyy" name="imgSearchBG" src="pagbi27" fileName="newImg/img_inputbox_1.png" pkg="te1gxawo" xy="849,464" size="181,34" group="n41_rvyy">
       <relation target="n1_rvyy" sidePair="right-right,top-top"/>
@@ -242,7 +149,7 @@
     <component id="n42_rvyy" name="btnStretch" src="qo8v2y" fileName="btn/btnStretch.xml" xy="1040,452" group="n47_q9kn">
       <gearIcon controller="states" pages="1" values="ui://te1gxawoqo8vi24" default="ui://te1gxawoqo8vi25"/>
       <relation target="n1_rvyy" sidePair="right-right,top-top"/>
-      <Button icon="ui://te1gxawoqo8vi25"/>
+      <Button icon="ui://te1gxawoqo8vi24"/>
     </component>
     <component id="n48_lxr1" name="btnOpenFormula" src="oliri6s" fileName="btn/tbtnScale.xml" pkg="te1gxawo" xy="448,460" group="n47_q9kn">
       <relation target="n1_rvyy" sidePair="top-top"/>

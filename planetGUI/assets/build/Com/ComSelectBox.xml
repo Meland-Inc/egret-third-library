@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="230,230" pivot="0.5,0.5" anchor="true">
   <displayList>
-    <image id="n1_c8lx" name="bg" src="c8lx20" fileName="newImg/WinMapLook/img_2.png" xy="0,-1" pivot="0.5,0.5" size="230,230">
+    <image id="n1_c8lx" name="bg" src="c8lx20" fileName="newImg/WinMapLook/img_2.png" xy="0,-1" pivot="0.5,0.5" size="230,230" visible="false">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </image>
-    <component id="n5_ip1v" name="btnCollect" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="89,18" size="50,50" group="n12_ip1v">
+    <component id="n5_ip1v" name="btnCollect" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="81,1" size="65,83" group="n12_ip1v">
       <relation target="" sidePair="center-center,middle-middle"/>
-      <Button icon="ui://32ieekguip1v3j"/>
+      <Button icon="ui://32ieekgup6jr47"/>
     </component>
-    <component id="n6_ip1v" name="btnLike" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="89,168" size="50,45" group="n12_ip1v">
+    <component id="n6_ip1v" name="btnLike" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="77,154" size="73,72" group="n12_ip1v">
       <relation target="" sidePair="center-center,middle-middle"/>
-      <Button icon="ui://32ieekguip1v3l"/>
+      <Button icon="ui://32ieekgup6jr44"/>
     </component>
-    <component id="n8_ip1v" name="btnComment" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="10,140" size="50,45" group="n12_ip1v">
+    <component id="n8_ip1v" name="btnComment" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="-3,128" size="76,69" group="n12_ip1v">
       <relation target="" sidePair="center-center,middle-middle"/>
-      <Button icon="ui://32ieekguip1v3i"/>
+      <Button icon="ui://32ieekgup6jr46"/>
     </component>
-    <component id="n10_ip1v" name="btnShare" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="10,48" size="50,45" group="n12_ip1v">
+    <component id="n10_ip1v" name="btnShare" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="0,35" size="71,71" group="n12_ip1v">
       <relation target="" sidePair="center-center,middle-middle"/>
-      <Button icon="ui://32ieekguip1v3k"/>
+      <Button icon="ui://32ieekgup6jr45"/>
     </component>
-    <component id="n11_ip1v" name="btnExit" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="170,90" size="50,50" group="n12_ip1v">
+    <component id="n11_ip1v" name="btnExit" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="159,79" size="71,71" group="n12_ip1v">
       <relation target="" sidePair="center-center,middle-middle"/>
-      <Button icon="ui://32ieekguip1v3h"/>
+      <Button icon="ui://32ieekgup6jr43"/>
     </component>
-    <group id="n12_ip1v" name="grpOperateBtns" xy="10,18" size="210,195" advanced="true" collapsed="true"/>
+    <group id="n12_ip1v" name="grpOperateBtns" xy="-3,1" size="233,225" advanced="true" collapsed="true"/>
   </displayList>
 </component>
