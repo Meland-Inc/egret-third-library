@@ -19,11 +19,11 @@
     <group id="n17_z45o" name="leftTop" xy="4,4" size="205,46" advanced="true">
       <relation target="" sidePair="left-left,top-top"/>
     </group>
-    <text id="n9_z45o" name="n9" xy="319,10" size="125,36" group="n16_z45o" fontSize="28" text="拥有领地:"/>
-    <text id="n10_z45o" name="n10" xy="598,10" size="153,36" group="n16_z45o" fontSize="28" text="可购买地块:"/>
-    <text id="n11_z45o" name="labOwnNum" xy="440,10" size="68,36" group="n16_z45o" fontSize="28" letterSpacing="5" autoClearText="true" text="225"/>
-    <text id="n12_z45o" name="labCanBuy" xy="748,10" size="102,36" group="n16_z45o" fontSize="28" letterSpacing="5" autoClearText="true" text="12/60"/>
-    <group id="n16_z45o" name="top" xy="319,10" size="531,36" advanced="true">
+    <text id="n9_z45o" name="n9" xy="319,12" size="125,36" group="n16_z45o" fontSize="28" vAlign="middle" text="拥有领地:"/>
+    <text id="n10_z45o" name="n10" xy="598,12" size="153,36" group="n16_z45o" fontSize="28" vAlign="middle" text="可购买地块:"/>
+    <text id="n11_z45o" name="labOwnNum" xy="440,12" size="68,36" group="n16_z45o" fontSize="28" vAlign="middle" letterSpacing="5" autoClearText="true" text="225"/>
+    <text id="n12_z45o" name="labCanBuy" xy="748,12" size="102,36" group="n16_z45o" fontSize="28" vAlign="middle" letterSpacing="5" autoClearText="true" text="12/60"/>
+    <group id="n16_z45o" name="top" xy="319,12" size="531,36" advanced="true">
       <relation target="" sidePair="center-center,top-top"/>
     </group>
   </displayList>
