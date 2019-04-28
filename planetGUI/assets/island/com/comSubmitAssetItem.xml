@@ -6,7 +6,7 @@
     <image id="n1_sdvq" name="n1" src="z45ocyib0" fileName="img_UI3/icon_cm_tick_1.png" pkg="te1gxawo" xy="20,113">
       <gearDisplay controller="enough" pages="1"/>
     </image>
-    <loader id="n5_sdvq" name="quality" xy="0,0" pivot="0.5,0.5" size="70,70" group="n12_sdvq" hideByEditor="true" visible="false" url="ui://te1gxawoz45zcyi99" fill="scaleFree"/>
+    <loader id="n5_sdvq" name="quality" xy="0,0" pivot="0.5,0.5" size="70,70" group="n12_sdvq" hideByEditor="true" visible="false" touchable="false" url="ui://te1gxawoz45zcyi99" fill="scaleFree"/>
     <loader id="n7_sdvq" name="icon" xy="0,0" pivot="0.5,0.5" size="70,70" group="n12_sdvq" align="center" vAlign="middle" fill="scaleFree">
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
