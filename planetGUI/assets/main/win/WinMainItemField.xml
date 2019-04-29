@@ -19,9 +19,12 @@
     <component id="n22_o6si" name="btnBackpack" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="774,548" size="120,94">
       <gearDisplay controller="ctrlOpenBag" pages="0"/>
       <relation target="n11_urxc" sidePair="left-right"/>
+      <relation target="" sidePair="bottom-bottom"/>
       <Button icon="ui://5hs1fuejo6si6c" sound="ui://fknoioovtqc911"/>
     </component>
     <list id="n11_urxc" name="lstShortcut1" xy="347,560" size="442,70" layout="flow_hz" defaultItem="ui://5hs1fuejft0q2g" autoClearItems="true">
+      <gearXY controller="ctrlOpenBag" pages="1" values="125,560" default="347,560"/>
+      <relation target="" sidePair="bottom-bottom"/>
       <item title="3"/>
       <item title="4"/>
       <item title="5"/>
@@ -32,6 +35,7 @@
     <list id="n24_e7wr" name="lstShortcut2" xy="825,560" size="442,70" layout="flow_hz" defaultItem="ui://5hs1fuejft0q2g" autoClearItems="true">
       <gearDisplay controller="ctrlOpenBag" pages="1"/>
       <relation target="n11_urxc" sidePair="left-right"/>
+      <relation target="" sidePair="bottom-bottom"/>
       <item title="3"/>
       <item title="4"/>
       <item title="5"/>
