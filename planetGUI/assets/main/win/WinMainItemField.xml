@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkhxqgb" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlOpenBag" pages="0,close,1,open" selected="0"/>
+  <controller name="ctrlOpenBag" pages="0,close,1,open" selected="1"/>
   <displayList>
-    <component id="n18_sec0" name="btnSwitch" src="sec06b" fileName="btn/btnSwitchShortcuts.xml" xy="298,551">
+    <component id="n18_sec0" name="btnSwitch" src="sec06b" fileName="btn/btnSwitchShortcuts.xml" xy="76,551">
       <gearDisplay controller="ctrlOpenBag" pages="0"/>
-      <relation target="n11_urxc" sidePair="left-left"/>
+      <relation target="n11_urxc" sidePair="left-left,bottom-bottom"/>
       <Button sound="ui://fknoioovtqc911"/>
     </component>
-    <component id="n25_e7wr" name="shortcutLab1" src="e7wr2p" fileName="com/shortcutLab.xml" xy="310,583">
+    <component id="n25_e7wr" name="shortcutLab1" src="e7wr2p" fileName="com/shortcutLab.xml" xy="88,583">
       <gearDisplay controller="ctrlOpenBag" pages="1"/>
-      <relation target="n11_urxc" sidePair="left-left"/>
+      <relation target="n11_urxc" sidePair="left-left,bottom-bottom"/>
     </component>
-    <component id="n26_e7wr" name="shortcutLab2" src="e7wr2p" fileName="com/shortcutLab.xml" xy="791,583">
+    <component id="n26_e7wr" name="shortcutLab2" src="e7wr2p" fileName="com/shortcutLab.xml" xy="569,583">
       <gearDisplay controller="ctrlOpenBag" pages="1"/>
-      <relation target="n11_urxc" sidePair="left-right"/>
+      <relation target="n11_urxc" sidePair="left-right,bottom-bottom"/>
       <Label title="2"/>
     </component>
-    <component id="n22_o6si" name="btnBackpack" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="774,548" size="120,94">
+    <component id="n22_o6si" name="btnBackpack" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="552,548" size="120,94">
       <gearDisplay controller="ctrlOpenBag" pages="0"/>
       <relation target="n11_urxc" sidePair="left-right"/>
       <relation target="" sidePair="bottom-bottom"/>
       <Button icon="ui://5hs1fuejo6si6c" sound="ui://fknoioovtqc911"/>
     </component>
-    <list id="n11_urxc" name="lstShortcut1" xy="347,560" size="442,70" layout="flow_hz" defaultItem="ui://5hs1fuejft0q2g" autoClearItems="true">
+    <list id="n11_urxc" name="lstShortcut1" xy="125,560" size="442,70" layout="flow_hz" defaultItem="ui://5hs1fuejft0q2g" autoClearItems="true">
       <gearXY controller="ctrlOpenBag" pages="1" values="125,560" default="347,560"/>
       <relation target="" sidePair="bottom-bottom"/>
       <item title="3"/>
@@ -32,7 +32,7 @@
       <item title="7"/>
       <item title="8"/>
     </list>
-    <list id="n24_e7wr" name="lstShortcut2" xy="825,560" size="442,70" layout="flow_hz" defaultItem="ui://5hs1fuejft0q2g" autoClearItems="true">
+    <list id="n24_e7wr" name="lstShortcut2" xy="603,560" size="442,70" layout="flow_hz" defaultItem="ui://5hs1fuejft0q2g" autoClearItems="true">
       <gearDisplay controller="ctrlOpenBag" pages="1"/>
       <relation target="n11_urxc" sidePair="left-right"/>
       <relation target="" sidePair="bottom-bottom"/>
