@@ -2,7 +2,7 @@
 <component size="327,405" designImage="ui://i25v0ebkp6jr3i" designImageOffsetX="-376" designImageOffsetY="-100" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlInfoType" pages="0,other,1,player,2,product" selected="2"/>
   <displayList>
-    <image id="n1_p7yp" name="bg" src="p6jr3u" fileName="newImg1/WinMapLook/img_mode_2.png" xy="0,0" size="327,405">
+    <image id="n1_p7yp" name="bg" src="p6jr3u" fileName="img_UI3/WinMapLook/img_mode_2.png" xy="0,0" size="327,405">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
     <image id="n7_c8lx" name="imgTitleBG" src="c8lx22" fileName="newImg/WinMapLook/img_4.png" xy="64,15" size="199,24" group="n8_c8lx">
@@ -46,14 +46,15 @@
     <group id="n17_plek" name="grpPlayerInfo" xy="77,51" size="172,133" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlInfoType" pages="1"/>
     </group>
-    <image id="n35_p6jr" name="iconBg" src="p6jr3v" fileName="newImg1/WinMapLook/img_mode_1.png" xy="69,39" size="192,157" group="n31_mo50"/>
+    <image id="n35_p6jr" name="iconBg" src="p6jr3v" fileName="img_UI3/WinMapLook/img_mode_1.png" xy="69,39" size="192,157" group="n31_mo50"/>
     <loader id="n24_mo50" name="ladProductIcon" xy="70,42" size="188,119" group="n31_mo50" touchable="false" url="ui://te1gxawogu60cyi9z" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
     <text id="n25_mo50" name="tfProductLoc" xy="102,169" size="121,18" group="n31_mo50" fontSize="16" color="#06192c" align="center" vars="true" autoSize="none" text="{r=100},{c=100}"/>
     <text id="n34_ip1v" name="tfProductFrom" xy="94,14" size="138,24" group="n31_mo50" fontSize="18" color="#ffffff" align="center" vars="true" autoSize="height" text="原作者:{author=官方}"/>
-    <image id="n36_p6jr" name="textBg" src="p6jr4j" fileName="newImg1/WinMapLook/img_mode_11.png" xy="20,223" size="287,121" group="n31_mo50">
+    <image id="n36_p6jr" name="textBg" src="p6jr4j" fileName="img_UI3/WinMapLook/img_mode_11.png" xy="20,223" size="287,121" group="n31_mo50">
       <relation target="n30_mo50" sidePair="bottomext-bottom"/>
     </image>
-    <text id="n27_mo50" name="tfProductOverdueTime" xy="28,198" size="270,25" group="n31_mo50" fontSize="18" color="#ff9900" align="center" vars="true" autoSize="none" text="{desc=拆除倒计时：}{day=10}天{hour=10}小时{minute=10}分{second=10}秒"/>
+    <text id="n27_mo50" name="tfProductOverdueTime" xy="28,198" size="270,25" group="n31_mo50" hideByEditor="true" visible="false" fontSize="18" color="#ff9900" align="center" vars="true" autoSize="none" text="{desc=拆除倒计时：}{day=10}天{hour=10}小时{minute=10}分{second=10}秒"/>
+    <component id="n38_jtn8" name="labBuildingCountdown" src="jtn84o" fileName="Com/LabBuildingCountdown.xml" xy="28,198" size="270,27" group="n31_mo50"/>
     <text id="n28_mo50" name="tfProductName" xy="31,236" size="175,24" group="n31_mo50" fontSize="18" color="#25f2ff" vars="true" autoSize="none" text="名称：{name=name}"/>
     <text id="n29_mo50" name="tfProductAuthor" xy="30,267" size="174,24" group="n31_mo50" fontSize="18" color="#25f2ff" vars="true" autoSize="none" text="作者：{author=author}"/>
     <text id="n30_mo50" name="tfProductDesc" xy="30,300" size="173,24" group="n31_mo50" fontSize="18" color="#25f2ff" vars="true" autoSize="height" text="描述：{desc=描述}"/>
@@ -61,7 +62,7 @@
       <relation target="n30_mo50" sidePair="top-bottom"/>
       <Button icon="ui://32ieekgup6jr3x"/>
     </component>
-    <text id="n37_p6jr" name="tfCanDelete" xy="133,197" size="60,24" group="n31_mo50" visible="false" fontSize="18" color="#ff9900" align="center" vars="true" text="可拆除"/>
+    <text id="n37_p6jr" name="tfCanDelete" xy="133,197" size="59,24" group="n31_mo50" visible="false" fontSize="18" color="#ff9900" align="center" vars="true" text="可拆除"/>
     <group id="n31_mo50" name="tfProductInfo" xy="20,14" size="287,381" advanced="true">
       <gearDisplay controller="ctrlInfoType" pages="2"/>
     </group>
