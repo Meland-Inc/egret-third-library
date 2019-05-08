@@ -107,7 +107,7 @@
     <group id="n52_ey2h" name="grpDetail" xy="87,138" size="209,380" group="n57_rstx" advanced="true" collapsed="true">
       <gearDisplay controller="conDetail" pages="1"/>
     </group>
-    <component id="n58_mnxk" name="comStatus" src="r2bf5j" fileName="win/ComMainSaturation.xml" pkg="5hs1fuej" xy="341,126" group="n57_rstx"/>
+    <component id="n58_mnxk" name="comStatus" src="r2bf5j" fileName="win/ComMainSaturation.xml" pkg="5hs1fuej" xy="365,126" size="105,47" group="n57_rstx"/>
     <image id="n12_ey2h" name="lvAndNameBg" src="hxqg23" fileName="imgNew/img_bag_avatarinfo.png" xy="80,134" group="n30_ey2h"/>
     <text id="n13_ey2h" name="tfLv" xy="80,144" size="46,29" group="n30_ey2h" fontSize="22" color="#472f16" align="center" vAlign="middle" leading="0" autoSize="none" text="10&#xA;"/>
     <text id="n14_ey2h" name="tfName" xy="129,144" size="145,29" group="n30_ey2h" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="playerName"/>

@@ -12,6 +12,6 @@
     <image id="n37_r2bf" name="n37" src="rdy44s" fileName="newImg/img_main_survive_1.png" xy="104,0" group="n23_r2bf"/>
     <loader id="n29_r2bf" name="grpThirsty" xy="106,2" size="44,43" group="n23_r2bf" url="ui://5hs1fuejrdy44v"/>
     <image id="n30_r2bf" name="n30" src="rdy43l" fileName="newImg/icon_main_thirst.png" xy="116,12" group="n23_r2bf"/>
-    <group id="n23_r2bf" name="n23" xy="104,0" size="48,47"/>
+    <group id="n23_r2bf" name="n23" xy="104,0" size="48,47" visible="false" advanced="true"/>
   </displayList>
 </component>
