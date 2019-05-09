@@ -45,6 +45,9 @@
     <graph id="n22_foyo" name="noviceHeaderBlockRect" xy="0,0" size="1136,53" group="n23_hn4b" hideByEditor="true" visible="false" alpha="0" touchable="false" type="rect">
       <relation target="" sidePair="width-width"/>
     </graph>
-    <group id="n23_hn4b" name="n23" xy="0,0" size="1136,640"/>
+    <component id="n24_tcu2" name="comCodeBlockExclusiveChoiceList" src="tcu290" fileName="newCom/ComCodeBlockExclusiveChoiceList.xml" xy="784,7" group="n23_hn4b">
+      <relation target="" sidePair="right-right,height-height"/>
+    </component>
+    <group id="n23_hn4b" name="n23" xy="0,0" size="1146,640"/>
   </displayList>
 </component>
