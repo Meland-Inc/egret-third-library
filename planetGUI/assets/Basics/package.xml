@@ -12,7 +12,6 @@
     <component id="kesa9" name="Container.xml" path="/com/"/>
     <component id="kesaa" name="Text.xml" path="/com/" exported="true"/>
     <component id="kesab" name="Value.xml" path="/codeBlock/" exported="true"/>
-    <component id="fzxxc" name="Category.xml" path="/com/" exported="true"/>
     <component id="y583d" name="CodeblockPool.xml" path="/com/"/>
     <component id="y583e" name="Boolean.xml" path="/codeBlock/"/>
     <image id="y583f" name="control3.png" path="/img/" scale="9grid" scale9grid="60,0,58,66"/>
@@ -34,7 +33,7 @@
     <component id="n1c01e" name="btnCatProp.xml" path="/btn/"/>
     <component id="n1c01h" name="btnCatDetect.xml" path="/btn/"/>
     <component id="n1c01j" name="CodeblockContainer.xml" path="/com/"/>
-    <component id="n1c01l" name="CategoryList.xml" path="/com/"/>
+    <component id="n1c01l" name="ComCategoryList.xml" path="/newCom/"/>
     <component id="t3y125" name="btnUndo.xml" path="/btn/"/>
     <component id="t3y128" name="btnReset.xml" path="/btn/"/>
     <component id="t3y12a" name="btnZoomOut.xml" path="/btn/"/>
@@ -247,11 +246,13 @@
     <image id="tcu29z" name="btn_code_b4.png" path="/newImg2/"/>
     <image id="tcu2a0" name="btn_code_b5.png" path="/newImg2/"/>
     <image id="tcu2a1" name="btn_code_b6.png" path="/newImg2/"/>
-    <image id="tcu2a2" name="btn_code_b7.png" path="/newImg2/"/>
-    <image id="tcu2a3" name="btn_code_b8.png" path="/newImg2/"/>
+    <image id="tcu2a2" name="btn_code_b7.png" path="/newImg2/" scale="9grid" scale9grid="21,16,65,38"/>
+    <image id="tcu2a3" name="btn_code_b8.png" path="/newImg2/" scale="9grid" scale9grid="16,13,74,41"/>
     <image id="tcu2a4" name="img_code_1.png" path="/newImg2/"/>
     <image id="tcu2a5" name="img_code_2.png" path="/newImg2/"/>
     <image id="tcu2a6" name="img_code_3.png" path="/newImg2/" scale="9grid" scale9grid="20,20,40,40"/>
+    <component id="hoexa7" name="ComVariateEdit.xml" path="/newCom/" exported="true"/>
+    <component id="hoexa8" name="btnCategory.xml" path="/newBtn/"/>
   </resources>
   <publish name="Basics"/>
 </packageDescription>

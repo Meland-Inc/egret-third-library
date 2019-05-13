@@ -4,15 +4,9 @@
     <image id="n14_edsm" name="n14" src="efrs1o" fileName="newImg/bg_cm_5.png" pkg="te1gxawo" xy="0,0" size="1136,640" group="n23_hn4b">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </image>
-    <component id="n6_n1c0" name="CategoryList" src="n1c01l" fileName="com/CategoryList.xml" xy="2,55" size="165,560" group="n23_hn4b" controller="deleteLayer,0">
-      <relation target="" sidePair="left-left,bottomext-bottom"/>
-    </component>
-    <component id="n5_n1c0" name="codeBlockContainer" src="n1c01j" fileName="com/CodeblockContainer.xml" xy="164,55" size="972,584" group="n23_hn4b">
+    <component id="n5_n1c0" name="codeBlockContainer" src="n1c01j" fileName="com/CodeblockContainer.xml" xy="161,53" size="972,584" group="n23_hn4b">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
       <relation target="n6_n1c0" sidePair="left-left,top-top"/>
-    </component>
-    <component id="n4_y583" name="Codeblocks" src="y583d" fileName="com/CodeblockPool.xml" xy="166,56" size="630,556" group="n23_hn4b" blend="none">
-      <relation target="n6_n1c0" sidePair="left-right,bottomext-bottom"/>
     </component>
     <component id="n12_k1p2" name="mask" src="k1p26w" fileName="com/RunningState.xml" xy="0,56" size="1136,584" group="n23_hn4b" hideByEditor="true">
       <relation target="" sidePair="width-width,bottomext-bottom"/>
@@ -45,8 +39,11 @@
     <graph id="n22_foyo" name="noviceHeaderBlockRect" xy="0,0" size="1136,53" group="n23_hn4b" hideByEditor="true" visible="false" alpha="0" touchable="false" type="rect">
       <relation target="" sidePair="width-width"/>
     </graph>
-    <component id="n24_tcu2" name="comCodeBlockExclusiveChoiceList" src="tcu290" fileName="newCom/ComCodeBlockExclusiveChoiceList.xml" xy="784,7" group="n23_hn4b">
+    <component id="n24_tcu2" name="comCodeBlockExclusiveChoiceList" src="tcu290" fileName="newCom/ComCodeBlockExclusiveChoiceList.xml" xy="784,7" group="n23_hn4b" hideByEditor="true">
       <relation target="" sidePair="right-right,height-height"/>
+    </component>
+    <component id="n6_n1c0" name="comCategoryList" src="n1c01l" fileName="newCom/ComCategoryList.xml" xy="0,53" size="807,584" group="n23_hn4b" controller="deleteLayer,0">
+      <relation target="" sidePair="left-left,bottomext-bottom"/>
     </component>
     <group id="n23_hn4b" name="n23" xy="0,0" size="1146,640"/>
   </displayList>
