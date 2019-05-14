@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" adaptationTest="FitSize">
-  <controller name="states" pages="0,normal,1,stretch" selected="1">
+  <controller name="states" pages="0,normal,1,stretch" selected="0">
     <action type="play_transition" fromPage="0" toPage="1" transition="toStretch" stopOnExit="true"/>
   </controller>
   <displayList>
@@ -26,12 +26,13 @@
       <relation target="n1_rvyy" sidePair="right-right,middle-middle"/>
       <Button icon="ui://32ieekgulxr13m"/>
     </component>
-    <list id="n29_rvyy" name="lstTabBar" xy="20,460" size="399,40" group="n47_q9kn" layout="row" defaultItem="ui://32ieekguqq3f2z" align="center">
+    <list id="n29_rvyy" name="lstTabBar" xy="20,460" size="470,40" group="n47_q9kn" layout="row" defaultItem="ui://32ieekguqq3f2z" align="center">
       <relation target="n1_rvyy" sidePair="left-left,top-top"/>
       <item icon="ui://32ieekguqo8v2k" selectedIcon="ui://32ieekguqo8v2l"/>
       <item icon="ui://32ieekguqo8v2t" selectedIcon="ui://32ieekguqo8v2u"/>
       <item icon="ui://32ieekguqo8v2q" selectedIcon="ui://32ieekguqo8v2r"/>
       <item icon="ui://32ieekguqo8v2m" selectedIcon="ui://32ieekguqo8v2n"/>
+      <item icon="ui://32ieekguqo8v2o" selectedIcon="ui://32ieekguqo8v2p"/>
       <item icon="ui://32ieekguqo8v2o" selectedIcon="ui://32ieekguqo8v2p"/>
     </list>
     <list id="n32_rvyy" name="lstNormalScrollerGroup" xy="55,522" size="938,105" group="n47_q9kn" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="2" colGap="10" defaultItem="ui://32ieekgup6jr4k" vAlign="middle" autoClearItems="true">
@@ -149,9 +150,9 @@
     <component id="n42_rvyy" name="btnStretch" src="qo8v2y" fileName="btn/btnStretch.xml" xy="1040,452" group="n47_q9kn">
       <gearIcon controller="states" pages="1" values="ui://te1gxawoqo8vi24" default="ui://te1gxawoqo8vi25"/>
       <relation target="n1_rvyy" sidePair="right-right,top-top"/>
-      <Button icon="ui://te1gxawoqo8vi24"/>
+      <Button icon="ui://te1gxawoqo8vi25"/>
     </component>
-    <component id="n48_lxr1" name="btnOpenFormula" src="oliri6s" fileName="btn/tbtnScale.xml" pkg="te1gxawo" xy="448,460" group="n47_q9kn">
+    <component id="n48_lxr1" name="btnOpenFormula" src="oliri6s" fileName="btn/tbtnScale.xml" pkg="te1gxawo" xy="498,460" group="n47_q9kn">
       <relation target="n1_rvyy" sidePair="top-top"/>
       <Button title="打开配方" titleColor="#000000" icon="ui://te1gxawoqo8vi26"/>
     </component>
