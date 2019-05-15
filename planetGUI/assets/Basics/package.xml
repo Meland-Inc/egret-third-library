@@ -3,7 +3,7 @@
   <resources>
     <component id="f4hr0" name="BlockCodeblock.xml" path="/codeBlock/"/>
     <component id="e13y1" name="InputShape.xml" path="/codeBlock/" exported="true"/>
-    <component id="e13y2" name="Main.xml" path="/com/" exported="true"/>
+    <component id="e13y2" name="Main.xml" path="/win/" exported="true"/>
     <component id="o3b93" name="DropdownMessageArgShape_item.xml" path="/codeBlock/"/>
     <component id="o3b94" name="DropdownMessageArgShape_popup.xml" path="/codeBlock/"/>
     <component id="o3b95" name="DropdownMessageArgShape.xml" path="/codeBlock/" exported="true"/>
@@ -12,7 +12,6 @@
     <component id="kesa9" name="Container.xml" path="/com/"/>
     <component id="kesaa" name="Text.xml" path="/com/" exported="true"/>
     <component id="kesab" name="Value.xml" path="/codeBlock/" exported="true"/>
-    <component id="fzxxc" name="Category.xml" path="/com/" exported="true"/>
     <component id="y583d" name="CodeblockPool.xml" path="/com/"/>
     <component id="y583e" name="Boolean.xml" path="/codeBlock/"/>
     <image id="y583f" name="control3.png" path="/img/" scale="9grid" scale9grid="60,0,58,66"/>
@@ -34,7 +33,7 @@
     <component id="n1c01e" name="btnCatProp.xml" path="/btn/"/>
     <component id="n1c01h" name="btnCatDetect.xml" path="/btn/"/>
     <component id="n1c01j" name="CodeblockContainer.xml" path="/com/"/>
-    <component id="n1c01l" name="CategoryList.xml" path="/com/"/>
+    <component id="n1c01l" name="ComCategoryList.xml" path="/newCom/"/>
     <component id="t3y125" name="btnUndo.xml" path="/btn/"/>
     <component id="t3y128" name="btnReset.xml" path="/btn/"/>
     <component id="t3y12a" name="btnZoomOut.xml" path="/btn/"/>
@@ -209,6 +208,51 @@
     <component id="j2ug8x" name="ComBlankHint.xml" path="/com/" exported="true"/>
     <image id="t2ui8y" name="11.png" path="/newImg/"/>
     <image id="t2ui8z" name="10.png" path="/newImg/" scale="9grid" scale9grid="14,7,28,14"/>
+    <component id="tcu290" name="ComCodeBlockExclusiveChoiceList.xml" path="/newCom/" exported="true"/>
+    <component id="tcu291" name="btnOtion.xml" path="/newBtn/"/>
+    <image id="tcu292" name="img_code_4.png" path="/newImg2/"/>
+    <image id="tcu293" name="img_code_5.png" path="/newImg2/"/>
+    <image id="tcu294" name="img_code_6.png" path="/newImg2/"/>
+    <image id="tcu295" name="img_code_a1.png" path="/newImg2/"/>
+    <image id="tcu296" name="img_code_a2.png" path="/newImg2/"/>
+    <image id="tcu297" name="img_code_a3.png" path="/newImg2/"/>
+    <image id="tcu298" name="img_code_n0.png" path="/newImg2/"/>
+    <image id="tcu299" name="img_code_n1.png" path="/newImg2/"/>
+    <image id="tcu29a" name="img_code_n2.png" path="/newImg2/"/>
+    <image id="tcu29b" name="img_code_n3.png" path="/newImg2/"/>
+    <image id="tcu29c" name="img_code_n4.png" path="/newImg2/"/>
+    <image id="tcu29d" name="img_code_n5.png" path="/newImg2/"/>
+    <image id="tcu29e" name="img_code_n6.png" path="/newImg2/"/>
+    <image id="tcu29f" name="img_code_n7.png" path="/newImg2/"/>
+    <image id="tcu29g" name="img_code_n8.png" path="/newImg2/"/>
+    <image id="tcu29h" name="img_code_n9.png" path="/newImg2/"/>
+    <image id="tcu29i" name="img_code_na.png" path="/newImg2/"/>
+    <image id="tcu29j" name="bg_code_1.png" path="/newImg2/"/>
+    <image id="tcu29k" name="btn_code_1.png" path="/newImg2/" scale="9grid" scale9grid="20,20,40,40"/>
+    <image id="tcu29l" name="btn_code_2.png" path="/newImg2/" scale="9grid" scale9grid="12,12,24,24"/>
+    <image id="tcu29m" name="btn_code_3.png" path="/newImg2/" scale="9grid" scale9grid="12,12,24,24"/>
+    <image id="tcu29n" name="btn_code_4.png" path="/newImg2/"/>
+    <image id="tcu29o" name="btn_code_5.png" path="/newImg2/"/>
+    <image id="tcu29p" name="btn_code_6.png" path="/newImg2/"/>
+    <image id="tcu29q" name="btn_code_7.png" path="/newImg2/"/>
+    <image id="tcu29r" name="btn_code_8.png" path="/newImg2/"/>
+    <image id="tcu29s" name="btn_code_a1.png" path="/newImg2/"/>
+    <image id="tcu29t" name="btn_code_a2.png" path="/newImg2/"/>
+    <image id="tcu29u" name="btn_code_a3.png" path="/newImg2/"/>
+    <image id="tcu29v" name="btn_code_a4.png" path="/newImg2/"/>
+    <image id="tcu29w" name="btn_code_b1.png" path="/newImg2/"/>
+    <image id="tcu29x" name="btn_code_b2.png" path="/newImg2/"/>
+    <image id="tcu29y" name="btn_code_b3.png" path="/newImg2/"/>
+    <image id="tcu29z" name="btn_code_b4.png" path="/newImg2/"/>
+    <image id="tcu2a0" name="btn_code_b5.png" path="/newImg2/"/>
+    <image id="tcu2a1" name="btn_code_b6.png" path="/newImg2/"/>
+    <image id="tcu2a2" name="btn_code_b7.png" path="/newImg2/" scale="9grid" scale9grid="21,16,65,38"/>
+    <image id="tcu2a3" name="btn_code_b8.png" path="/newImg2/" scale="9grid" scale9grid="16,13,74,41"/>
+    <image id="tcu2a4" name="img_code_1.png" path="/newImg2/"/>
+    <image id="tcu2a5" name="img_code_2.png" path="/newImg2/"/>
+    <image id="tcu2a6" name="img_code_3.png" path="/newImg2/" scale="9grid" scale9grid="20,20,40,40"/>
+    <component id="hoexa7" name="ComVariateEdit.xml" path="/newCom/" exported="true"/>
+    <component id="hoexa8" name="btnCategory.xml" path="/newBtn/"/>
   </resources>
   <publish name="Basics"/>
 </packageDescription>
