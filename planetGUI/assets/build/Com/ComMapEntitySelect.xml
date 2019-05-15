@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="425,643" opaque="false" designImage="ui://i25v0ebkdf6n3j">
+  <controller name="ctrlState" pages="2,fold,3,open" selected="0"/>
+  <displayList>
+    <image id="n0_df6n" name="n0" src="df6n5a" fileName="img_UI3/ide/img_ide_1.png" xy="0,1" size="140,642">
+      <gearSize controller="ctrlState" pages="3" values="425,642,1,1" default="140,642,1,1"/>
+    </image>
+    <list id="n3_df6n" name="lstFold" xy="15,115" size="100,520" overflow="scroll" defaultItem="ui://32ieekgudf6n5m" align="center" autoClearItems="true">
+      <gearDisplay controller="ctrlState" pages="2"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n5_df6n" name="lstOpen" xy="15,115" size="389,513" layout="flow_hz" overflow="scroll" lineItemCount="4" defaultItem="ui://32ieekgudf6n5m" align="center" autoClearItems="true">
+      <gearDisplay controller="ctrlState" pages="3"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n1_df6n" name="btnOpen" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="116,287" size="41,68">
+      <gearDisplay controller="ctrlState" pages="2"/>
+      <Button icon="ui://32ieekgudf6n4w" selectedIcon="ui://32ieekgudf6n4w" controller="ctrlState" page="3"/>
+    </component>
+    <component id="n6_df6n" name="btnFold" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="408,288" size="41,68">
+      <gearDisplay controller="ctrlState" pages="3"/>
+      <Button icon="ui://32ieekgudf6n4v" selectedIcon="ui://32ieekgudf6n4v" controller="ctrlState" page="2"/>
+    </component>
+    <component id="n2_df6n" name="btnBackpack" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="16,9" size="101,103">
+      <Button icon="ui://32ieekgudf6n56" selectedIcon="ui://32ieekgudf6n56"/>
+    </component>
+  </displayList>
+</component>
