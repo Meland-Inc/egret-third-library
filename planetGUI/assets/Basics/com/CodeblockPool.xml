@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="375,587" restrictSize="630,0,0,0">
-  <controller name="poolType" pages="0,,1,,2," selected="1"/>
+  <controller name="poolType" pages="0,,1,,2," selected="2"/>
   <displayList>
     <image id="n10_dib9" name="imgBG" src="tcu2a6" fileName="newImg2/img_code_3.png" xy="0,0" size="375,587">
       <relation target="" sidePair="width-width,height-height"/>
@@ -9,21 +9,22 @@
       <gearDisplay controller="poolType" pages="0"/>
       <relation target="" sidePair="height-height,width-width"/>
     </component>
-    <component id="n12_mkhl" name="variatePool" src="t09yv" fileName="com/VerticalScrollComponent.xml" xy="8,68" size="829,429">
+    <component id="n12_mkhl" name="variatePool" src="t09yv" fileName="com/VerticalScrollComponent.xml" xy="8,68" size="358,429">
       <gearDisplay controller="poolType" pages="1,2"/>
       <relation target="" sidePair="height-height,width-width"/>
       <relation target="" sidePair="top-top,left-left"/>
     </component>
-    <component id="n15_mkhl" name="btnSetVariate" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="307,19" pivot="1,0" size="46,48">
+    <component id="n15_mkhl" name="btnSetVariate" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="318,19" pivot="1,0" size="35,37">
       <gearDisplay controller="poolType" pages="1,2"/>
       <gearIcon controller="poolType" pages="1,2" values="ui://rnqj1l77tcu29u|ui://rnqj1l77tcu29t" default=""/>
       <relation target="" sidePair="right-right,top-top"/>
-      <Button icon="ui://rnqj1l77tcu29u"/>
+      <Button icon="ui://rnqj1l77tcu29t"/>
     </component>
     <component id="n17_hoex" name="btnCreateVariate" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="112,507" size="150,56">
       <gearDisplay controller="poolType" pages="1,2"/>
       <relation target="" sidePair="center-center,bottom-bottom"/>
       <Button icon="ui://rnqj1l77tcu29n"/>
     </component>
+    <component id="n18_p3g7" name="comEditVariate" src="p3g7a9" fileName="newCom/ComEditVariate.xml" xy="0,0" hideByEditor="true" visible="false"/>
   </displayList>
 </component>
