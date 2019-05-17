@@ -8,7 +8,7 @@
     </image>
     <component id="n3_p3g7" name="btnCloseEdit" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="326,20" size="56,56">
       <relation target="" sidePair="right-right,top-top"/>
-      <Button icon="ui://te1gxawop3g7cyib7"/>
+      <Button icon="ui://te1gxawoqouocyib8"/>
     </component>
     <text id="n8_p3g7" name="tfValue" xy="-180,123" size="761,42" input="true" prompt="请输入变量名称" maxLength="20" fontSize="34" color="#ffffff" align="center" autoSize="none" singleLine="true" autoClearText="true" text="一二三四五一二三四五一二三四五一二三四五">
       <relation target="" sidePair="center-center,top-top"/>
@@ -25,7 +25,7 @@
     </component>
     <component id="n9_mqhs" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="128,414" size="144,52">
       <relation target="" sidePair="center-center,top-top"/>
-      <Button title="确定" titleColor="#ffffff" titleFontSize="28" icon="ui://te1gxawomqhscyib8"/>
+      <Button title="确定" titleColor="#ffffff" titleFontSize="28" icon="ui://te1gxawoqouocyib9"/>
     </component>
   </displayList>
 </component>

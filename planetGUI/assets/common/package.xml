@@ -275,7 +275,7 @@
     <component id="lbexcyi91" name="ToolTipObjectItem.xml" path="/com/" exported="true"/>
     <component id="lbexcyi94" name="comArchMat.xml" path="/lab/"/>
     <component id="lbexcyi97" name="comWorkbench.xml" path="/lab/"/>
-    <image id="z45zcyi99" name="img_bag_grade_1.png" path="/newImg/" exported="true"/>
+    <image id="z45zcyi99" name="img_bag_grade_1.png" path="/newImg/" exported="true" scale="9grid" scale9grid="15,15,30,30"/>
     <image id="z45zcyi9a" name="img_bag_grade_2.png" path="/newImg/" exported="true"/>
     <image id="z45zcyi9b" name="img_bag_grade_3.png" path="/newImg/" exported="true"/>
     <image id="z45zcyi9c" name="img_bag_grade_4.png" path="/newImg/" exported="true"/>
@@ -340,8 +340,25 @@
     <image id="pojgcyib4" name="icon_cm_left.png" path="/img_UI3/" exported="true"/>
     <image id="pojgcyib5" name="icon_cm_right.png" path="/img_UI3/" exported="true"/>
     <image id="pojgcyib6" name="icon_cm_up.png" path="/img_UI3/" exported="true"/>
-    <image id="p3g7cyib7" name="btn_cm_close1.png" path="/img_UI3/" exported="true"/>
-    <image id="mqhscyib8" name="btn_cm_green1.png" path="/img_UI3/" exported="true" scale="9grid" scale9grid="36,13,72,26"/>
+    <image id="qouocyib7" name="btn_cm_back.png" path="/img_UI3/" exported="true"/>
+    <image id="qouocyib8" name="btn_cm_close1.png" path="/img_UI3/" exported="true"/>
+    <image id="qouocyib9" name="btn_cm_green1.png" path="/img_UI3/" exported="true" scale="9grid" scale9grid="36,13,72,26"/>
+    <image id="qouocyiba" name="btn_cm_label_1.png" path="/img_UI3/" exported="true"/>
+    <image id="qouocyibb" name="btn_cm_label_2.png" path="/img_UI3/" exported="true"/>
+    <image id="qouocyibc" name="btn_cm_label_3.png" path="/img_UI3/" exported="true"/>
+    <image id="qouocyibd" name="btn_cm_label_4.png" path="/img_UI3/" exported="true"/>
+    <image id="qouocyibe" name="btn_cm_label_5.png" path="/img_UI3/" exported="true"/>
+    <image id="qouocyibf" name="img_cm_slider_1.png" path="/img_UI3/" exported="true" scale="9grid" scale9grid="4,12,7,517"/>
+    <image id="qouocyibg" name="img_cm_slider_2.png" path="/img_UI3/" exported="true" scale="9grid" scale9grid="4,14,10,517"/>
+    <image id="qouocyibh" name="img_cm_tips1.png" path="/img_UI3/" exported="true"/>
+    <image id="qouocyibi" name="img_cm_warning.png" path="/img_UI3/" exported="true"/>
+    <component id="qouocyibn" name="ScrollBarV1_grip.xml" path="/bar/"/>
+    <component id="qouocyibo" name="ScrollBarV1.xml" path="/bar/" exported="true"/>
+    <image id="qouocyibp" name="btn_cm_label_1a.png" path="/img_UI3/" exported="true"/>
+    <image id="qouocyibq" name="btn_cm_label_2a.png" path="/img_UI3/" exported="true"/>
+    <image id="qouocyibr" name="btn_cm_label_3a.png" path="/img_UI3/" exported="true"/>
+    <image id="qouocyibs" name="btn_cm_label_4a.png" path="/img_UI3/" exported="true"/>
+    <image id="qouocyibt" name="btn_cm_label_5a.png" path="/img_UI3/" exported="true"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>

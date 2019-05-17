@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="100,100" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <loader id="n0_df6n" name="icon" xy="10,10" size="80,80" url="ui://32ieekgudf6n4z" align="center" vAlign="middle" fill="scale">
+      <gearXY controller="button" pages="0,1" values="10,10|5,5"/>
+      <gearSize controller="button" pages="0,1" values="80,80,1,1|90,90,1,1"/>
+    </loader>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

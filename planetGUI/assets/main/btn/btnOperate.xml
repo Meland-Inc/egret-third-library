@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="74,74" pivot="0.5,0.5" extention="Button">
+<component size="66,66" pivot="0.5,0.5" extention="Button">
   <controller name="button" pages="0,up,1,down" selected="0"/>
+  <controller name="ctrlOperate" pages="0,workbench,1,talk,2,pick,3,openBox" selected="3"/>
   <displayList>
-    <image id="n0_rdy4" name="n0" src="rdy42q" fileName="newImg/btn_cm_operating_1.png" xy="0,0" pivot="0.5,0.5" pkg="te1gxawo">
-      <gearSize controller="button" pages="1" values="74,74,0.9,0.9" default="74,74,1,1"/>
-    </image>
-    <loader id="n3_rdy4" name="icon" xy="12,22" pivot="0.5,0.5" size="50,30" align="center" vAlign="middle" autoSize="true">
-      <gearSize controller="button" pages="1" values="50,30,0.9,0.9" default="50,30,1,1"/>
-      <relation target="" sidePair="center-center,middle-middle"/>
+    <loader id="n0_rdy4" name="icon" xy="0,0" pivot="0.5,0.5" size="66,66" url="ui://5hs1fuejuvgl8l" align="center" vAlign="middle" fill="scale" shrinkOnly="true">
+      <gearSize controller="button" pages="0,1" values="66,66,1,1|74,74,0.9,0.9"/>
+      <gearIcon controller="ctrlOperate" pages="0,1" values="ui://5hs1fuejuvgl8k|ui://5hs1fuejuvgl8j" default="ui://5hs1fuejuvgl8l"/>
     </loader>
   </displayList>
   <Button/>

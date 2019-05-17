@@ -51,8 +51,8 @@
     <component id="o68g3g" name="ComHideJoystick.xml" path="/Com/" exported="true"/>
     <component id="lxr13m" name="spBack.xml" path="/sp/"/>
     <image id="p6jr3n" name="bg_mode_1.png" path="/img_UI3/WinMapLook/" scale="9grid" scale9grid="274,137,548,88" duplicatePadding="true"/>
-    <image id="p6jr3o" name="btn_mode_1.png" path="/img_UI3/"/>
-    <image id="p6jr3p" name="btn_mode_2.png" path="/img_UI3/"/>
+    <image id="p6jr3o" name="btn_mode_1.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr3p" name="btn_mode_2.png" path="/img_UI3/WinMapLook/"/>
     <image id="p6jr3q" name="btn_mode_back.png" path="/img_UI3/WinMapLook/"/>
     <image id="p6jr3r" name="btn_mode_13.png" path="/img_UI3/WinMapLook/"/>
     <image id="p6jr3s" name="btn_mode_12.png" path="/img_UI3/WinMapLook/"/>
@@ -60,11 +60,9 @@
     <image id="p6jr3u" name="img_mode_2.png" path="/img_UI3/WinMapLook/" scale="9grid" scale9grid="46,50,63,62"/>
     <image id="p6jr3v" name="img_mode_1.png" path="/img_UI3/WinMapLook/" scale="9grid" scale9grid="29,29,24,25"/>
     <image id="p6jr3x" name="btn_mode_10.png" path="/img_UI3/WinMapLook/"/>
-    <image id="p6jr3y" name="btn_mode_1.png" path="/img_UI3/WinMapLook/"/>
     <image id="p6jr3z" name="btn_mode_11.png" path="/img_UI3/WinMapLook/"/>
     <image id="p6jr40" name="btn_mode_15.png" path="/img_UI3/WinMapLook/" exported="true"/>
     <image id="p6jr41" name="btn_mode_16.png" path="/img_UI3/WinMapLook/"/>
-    <image id="p6jr42" name="btn_mode_2.png" path="/img_UI3/WinMapLook/"/>
     <image id="p6jr43" name="btn_mode_3.png" path="/img_UI3/WinMapLook/"/>
     <image id="p6jr44" name="btn_mode_4.png" path="/img_UI3/WinMapLook/"/>
     <image id="p6jr45" name="btn_mode_5.png" path="/img_UI3/WinMapLook/"/>
@@ -86,6 +84,41 @@
     <component id="p6jr4l" name="spMapLookBg.xml" path="/sp/"/>
     <image id="p6jr4n" name="bg_mode_0.png" path="/img_UI3/WinMapLook/" scale="9grid" scale9grid="274,75,548,88" duplicatePadding="true"/>
     <component id="jtn84o" name="LabBuildingCountdown.xml" path="/Com/" exported="true"/>
+    <image id="df6n4p" name="btn_ide_1.png" path="/img_UI3/ide/"/>
+    <image id="df6n4q" name="btn_ide_10.png" path="/img_UI3/ide/"/>
+    <image id="df6n4r" name="btn_ide_11.png" path="/img_UI3/ide/"/>
+    <image id="df6n4s" name="btn_ide_12.png" path="/img_UI3/ide/"/>
+    <image id="df6n4t" name="btn_ide_13.png" path="/img_UI3/ide/"/>
+    <image id="df6n4u" name="btn_ide_14.png" path="/img_UI3/ide/"/>
+    <image id="df6n4v" name="btn_ide_15.png" path="/img_UI3/ide/"/>
+    <image id="df6n4w" name="btn_ide_16.png" path="/img_UI3/ide/"/>
+    <image id="df6n4x" name="btn_ide_2.png" path="/img_UI3/ide/"/>
+    <image id="df6n4y" name="btn_ide_3.png" path="/img_UI3/ide/"/>
+    <image id="df6n4z" name="btn_ide_4.png" path="/img_UI3/ide/"/>
+    <image id="df6n50" name="btn_ide_5.png" path="/img_UI3/ide/"/>
+    <image id="df6n51" name="btn_ide_6.png" path="/img_UI3/ide/"/>
+    <image id="df6n52" name="btn_ide_7.png" path="/img_UI3/ide/"/>
+    <image id="df6n53" name="btn_ide_8.png" path="/img_UI3/ide/"/>
+    <image id="df6n54" name="btn_ide_9.png" path="/img_UI3/ide/"/>
+    <image id="df6n55" name="btn_ide_back.png" path="/img_UI3/ide/"/>
+    <image id="df6n56" name="btn_ide_bag.png" path="/img_UI3/ide/"/>
+    <image id="df6n57" name="btn_ide_play.png" path="/img_UI3/ide/"/>
+    <image id="df6n58" name="fnt_ide_1.png" path="/img_UI3/ide/"/>
+    <image id="df6n59" name="img_ide_9.png" path="/img_UI3/ide/"/>
+    <image id="df6n5a" name="img_ide_1.png" path="/img_UI3/ide/" scale="9grid" scale9grid="20,20,40,40"/>
+    <image id="df6n5b" name="img_ide_2.png" path="/img_UI3/ide/"/>
+    <image id="df6n5c" name="img_ide_3.png" path="/img_UI3/ide/"/>
+    <image id="df6n5d" name="img_ide_4.png" path="/img_UI3/ide/"/>
+    <image id="df6n5e" name="img_ide_5.png" path="/img_UI3/ide/"/>
+    <image id="df6n5f" name="img_ide_6.png" path="/img_UI3/ide/"/>
+    <image id="df6n5g" name="img_ide_7.png" path="/img_UI3/ide/"/>
+    <image id="df6n5h" name="img_ide_8.png" path="/img_UI3/ide/"/>
+    <image id="df6n5i" name="img_ide_bag_1.png" path="/img_UI3/ide/"/>
+    <image id="df6n5j" name="img_ide_item_1.png" path="/img_UI3/ide/"/>
+    <image id="df6n5k" name="img_ide_title.png" path="/img_UI3/ide/"/>
+    <component id="df6n5l" name="ComMapEntitySelect.xml" path="/Com/" exported="true"/>
+    <component id="df6n5m" name="BtnEntitySelect.xml" path="/btn/" exported="true"/>
+    <component id="uvgl4p" name="ComSelectToHideRocker.xml" path="/Com/"/>
   </resources>
   <publish name="build" npot="true"/>
 </packageDescription>
