@@ -6,7 +6,7 @@
     <component id="w80lh" name="WinMainItemField.xml" path="/win/" exported="true"/>
     <component id="w80ln" name="ComMainJoystick.xml" path="/win/" exported="true"/>
     <component id="w80lo" name="btnAttack.xml" path="/btn/"/>
-    <component id="ua4xu" name="ComMainMenu.xml" path="/win/" exported="true"/>
+    <component id="ua4xu" name="ComMainMenuOld.xml" path="/win/" exported="true"/>
     <image id="dura17" name="img_main_avatar_1.png" path="/img/" exported="true"/>
     <image id="dura1a" name="img_main_avatar_12.png" path="/img/" exported="true"/>
     <image id="dura1c" name="img_main_avatar_2.png" path="/img/" exported="true"/>
@@ -229,7 +229,7 @@
     <image id="uvgl9i" name="img_main_yidonglunpanwaiyuan_toumingdu80%_17.png" path="/img_UI3/"/>
     <image id="uvgl9j" name="img_main_yitianjiawupin_6.png" path="/img_UI3/"/>
     <image id="uvgl9l" name="img_main_zhuangtailanyuanxing_26.png" path="/img_UI3/"/>
-    <component id="uvgl9m" name="ComMainMenuNew.xml" path="/win/" exported="true"/>
+    <component id="uvgl9m" name="ComMainMenu.xml" path="/win/" exported="true"/>
     <component id="uvgl9n" name="ComMainSaturation.xml" path="/win/" exported="true"/>
     <image id="uvgl9o" name="img_main_zhuangtailandikuang_25.png" path="/img_UI3/"/>
     <component id="uvgl9q" name="ComMainJoystickNew.xml" path="/win/" exported="true"/>
@@ -243,7 +243,7 @@
     <image id="uvgl9z" name="icon_main_caozuianniu_jian_49.png" path="/img_UI3/"/>
     <image id="uvgla0" name="icon_main_caozuianniu_quantou_51.png" path="/img_UI3/"/>
     <component id="uvgla1" name="ComMainRockerNew.xml" path="/win/" exported="true"/>
-    <component id="uvgla2" name="ComMainTemperatureNew.xml" path="/win/"/>
+    <component id="uvgla2" name="ComMainInfo.xml" path="/win/"/>
     <component id="uvgla3" name="WinMainItemFieldNew.xml" path="/win/" exported="true"/>
     <component id="uvgla4" name="ShortcutItemNew.xml" path="/btn/" exported="true"/>
     <image id="uvgla5" name="img_main_+_61.png" path="/img_UI3/"/>

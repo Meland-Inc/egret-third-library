@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkuvgl3t" designImageAlpha="39">
-  <controller name="ctrlMapMode" pages="0,normal,1,build,2,quickBuild,3,quickEdit" selected="2"/>
+  <controller name="ctrlMapMode" pages="0,normal,1,build,2,quickBuild,3,quickEdit" selected="0"/>
   <displayList>
     <component id="n31_r2bf" name="comMainEnemyInfo" src="dura1l" fileName="win/ComMainEnemyInfo.xml" xy="233,7" size="152,45">
       <relation target="" sidePair="left-left,top-top"/>
@@ -16,7 +16,7 @@
     <component id="n4_muc9" name="comMainRocker" src="uvgla1" fileName="win/ComMainRockerNew.xml" xy="0,256">
       <relation target="" sidePair="left-left,bottom-bottom"/>
     </component>
-    <component id="n33_r2bf" name="comMainTemperature" src="uvgla2" fileName="win/ComMainTemperatureNew.xml" xy="401,0">
+    <component id="n33_r2bf" name="comMainInfo" src="uvgla2" fileName="win/ComMainInfo.xml" xy="409,0">
       <relation target="" sidePair="center-center"/>
     </component>
     <component id="n37_x9um" name="comChat" src="x9um6d" fileName="win/ComMainChatView.xml" xy="3,555">
@@ -37,7 +37,7 @@
     <component id="n46_uvgl" name="comMainSaturation" src="r2bf5j" fileName="win/ComMainSaturationNew.xml" xy="907,11">
       <relation target="" sidePair="right-right"/>
     </component>
-    <component id="n44_uvgl" name="comMainMenu" src="uvgl9m" fileName="win/ComMainMenuNew.xml" xy="1053,4" size="83,71">
+    <component id="n44_uvgl" name="comMainMenu" src="uvgl9m" fileName="win/ComMainMenu.xml" xy="1053,4" size="83,71">
       <relation target="" sidePair="right-right"/>
     </component>
   </displayList>
