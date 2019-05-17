@@ -3,9 +3,6 @@
   <controller name="ctrlMode" pages="0,repair,1,equip" selected="0"/>
   <displayList>
     <image id="n2_k8wc" name="bg" src="efrs1m" fileName="newImg/bg_cm_3.png" pkg="te1gxawo" xy="368,169" size="400,300" group="n6_k8wc"/>
-    <component id="n11_k8wc" name="btnClose" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="726,169" size="36,36" group="n6_k8wc">
-      <Button icon="ui://te1gxawohpymyi7o"/>
-    </component>
     <text id="n3_k8wc" name="title" xy="477,174" size="180,31" group="n6_k8wc" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="装备维修"/>
     <component id="n4_k8wc" name="btnRepairItem" src="j29zi6u" fileName="btn/RBtnBpItemRenderer.xml" pkg="te1gxawo" xy="532,217" group="n6_k8wc" touchable="false"/>
     <image id="n9_k8wc" name="arrow" src="fi7r2k" fileName="newImg/img_formula_bottom_3.png" pkg="kdeyuiww" xy="561,290" group="n6_k8wc"/>
@@ -24,7 +21,10 @@
       <gearDisplay controller="ctrlMode" pages="0"/>
       <Button title="修理" titleColor="#f7f4e8" titleFontSize="18" icon="ui://te1gxawopgixi4o"/>
     </component>
-    <group id="n6_k8wc" name="root" xy="368,168" size="400,301" advanced="true">
+    <component id="n15_qouo" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="726,169" size="36,36" group="n6_k8wc">
+      <Button icon="ui://te1gxawohpymyi7o"/>
+    </component>
+    <group id="n6_k8wc" name="root" xy="368,169" size="400,300" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>
