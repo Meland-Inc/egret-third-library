@@ -1,17 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="266,275" opaque="false">
+<component size="274,287" opaque="false" designImage="ui://i25v0ebkuvgl3i" designImageOffsetX="-863" designImageOffsetY="-262" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlShowHide" pages="0,hide,1,show" selected="0"/>
   <displayList>
-    <graph id="n9_xf9r" name="n9" xy="0,105" size="74,74" alpha="0" type="rect"/>
-    <graph id="n10_xf9r" name="n10" xy="82,26" size="74,74" alpha="0" type="rect"/>
-    <component id="n5_rdy4" name="btnAttack" src="w80lo" fileName="btn/btnAttack.xml" xy="90,165">
-      <Button icon="ui://5hs1fuejrdy43h"/>
+    <image id="n15_uvgl" name="imgBg" src="uvgl8f" fileName="img_UI3/btn_main_cebianlanzhankai 20.png" xy="221,0" size="274,82" group="n23_uvgl"/>
+    <component id="n17_uvgl" name="btnDelete" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="275,8" size="70,60" group="n23_uvgl">
+      <Button icon="ui://5hs1fuejuvgl8v"/>
     </component>
-    <component id="n6_rdy4" name="btnOperate" src="rdy456" fileName="btn/btnOperate.xml" xy="0,105" visible="false">
-      <Button icon="ui://5hs1fuejrdy43i"/>
+    <component id="n18_uvgl" name="btnBuild" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="345,7" size="70,60" group="n23_uvgl">
+      <Button icon="ui://5hs1fuejuvgl8m"/>
     </component>
-    <component id="n8_lhu4" name="btnWorkbench" src="rdy456" fileName="btn/btnOperate.xml" xy="82,26" visible="false">
-      <Button icon="ui://5hs1fuejrdy43p"/>
+    <component id="n19_uvgl" name="btnLook" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="415,8" size="70,60" group="n23_uvgl">
+      <Button icon="ui://5hs1fuejuvgl8x"/>
     </component>
-    <component id="n14_p6jr" name="comOperateCorana" src="jx9r85" fileName="com/ComMainOperateCorona.xml" xy="100,-83"/>
+    <component id="n22_uvgl" name="btnHide" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="229,9" size="46,60" group="n23_uvgl">
+      <gearDisplay controller="ctrlShowHide" pages="1"/>
+      <Button icon="ui://5hs1fuejuvgl9v" controller="ctrlShowHide" page="0"/>
+    </component>
+    <component id="n21_uvgl" name="btnShow" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="229,9" size="46,60" group="n23_uvgl">
+      <gearDisplay controller="ctrlShowHide" pages="0"/>
+      <Button icon="ui://5hs1fuejuvgl9s" controller="ctrlShowHide" page="1"/>
+    </component>
+    <group id="n23_uvgl" name="n23" xy="221,0" size="274,82" advanced="true" collapsed="true">
+      <gearXY controller="ctrlShowHide" pages="1" values="0,0" default="221,0" tween="true"/>
+    </group>
+    <component id="n24_uvgl" name="btnAttack" src="w80lo" fileName="btn/btnAttack.xml" xy="115,188" alpha="0.7">
+      <Button icon="ui://5hs1fuejuvgla0"/>
+    </component>
+    <component id="n27_uvgl" name="btnOperate" src="rdy456" fileName="btn/btnOperate.xml" xy="70,117" visible="false" alpha="0.7">
+      <Button icon="ui://5hs1fuejuvgl8l"/>
+    </component>
+    <component id="n28_uvgl" name="btnWorkbench" src="rdy456" fileName="btn/btnOperate.xml" xy="167,108" visible="false" alpha="0.7">
+      <Button icon="ui://5hs1fuejuvgl8k"/>
+    </component>
+    <component id="n29_uvgl" name="btnTalk" src="rdy456" fileName="btn/btnOperate.xml" xy="27,204" visible="false" alpha="0.7">
+      <Button icon="ui://5hs1fuejuvgl8j"/>
+    </component>
   </displayList>
 </component>

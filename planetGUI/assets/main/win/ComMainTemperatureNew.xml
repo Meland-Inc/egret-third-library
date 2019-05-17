@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="333,63" opaque="false" designImage="ui://i25v0ebkuvgl3i" designImageOffsetX="-384" designImageAlpha="0" designImageLayer="1">
+  <controller name="weather" pages="1,night,0,day,2,dusk,3,dawn" selected="3">
+    <remark page="0" value="夜晚"/>
+    <remark page="1" value="白天"/>
+    <remark page="2" value="黄昏"/>
+    <remark page="3" value="黎明"/>
+  </controller>
+  <displayList>
+    <image id="n24_uvgl" name="imgBg" src="uvgl99" fileName="img_UI3/img_main_tianqiyuyue_48.png" xy="16,0" size="317,63"/>
+    <image id="n13_r2bf" name="n13" src="uvgl9d" fileName="img_UI3/img_main_wenduji_15.png" xy="256,28"/>
+    <text id="n18_qfn3" name="tfTemperature" xy="267,28" size="33,28" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="27&#xA;"/>
+    <text id="n7_r2bf" name="tfTime" xy="246,2" size="61,27" group="n8_r2bf" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="12:00"/>
+    <loader id="n25_uvgl" name="ladTimeIcon" xy="39,0" size="56,54" group="n8_r2bf" url="ui://5hs1fuejuvgla6" align="center" vAlign="middle" fill="scale" shrinkOnly="true">
+      <gearIcon controller="weather" pages="1,0,2,3" values="ui://5hs1fuejuvgla6|ui://5hs1fuejuvgl95|ui://5hs1fuejuvgla6|ui://5hs1fuejuvgla6"/>
+    </loader>
+    <text id="n27_uvgl" name="tfAreaInfo" xy="100,12" size="143,40" group="n8_r2bf" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="六月二的家"/>
+    <group id="n8_r2bf" name="grpWeatherIcon" xy="39,0" size="269,54"/>
+  </displayList>
+</component>

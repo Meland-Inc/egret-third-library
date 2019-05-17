@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="83,71" opaque="false" designImage="ui://i25v0ebkuvgl3h" designImageOffsetX="-1054" designImageOffsetY="-18" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlStorage" pages="0,hide,1,show" selected="0"/>
+  <displayList>
+    <image id="n33_uvgl" name="imgBg" src="uvgl8h" fileName="img_UI3/btn_main_gengduoxialai _32.png" xy="4,20" size="76,51">
+      <gearSize controller="ctrlStorage" pages="0,1" values="76,51,1,1|76,400,1,1" tween="true"/>
+    </image>
+    <component id="n35_uvgl" name="btnRobot" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="0,0" size="83,65" group="n41_uvgl">
+      <gearXY controller="ctrlStorage" pages="0" values="0,0" default="0,83" tween="true"/>
+      <Button icon="ui://5hs1fuejuvgl8o"/>
+    </component>
+    <component id="n36_uvgl" name="btnFormula" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="0,0" size="83,65" group="n41_uvgl">
+      <gearXY controller="ctrlStorage" pages="0,1" values="0,0|0,148" tween="true"/>
+      <Button icon="ui://5hs1fuejuvgl8t"/>
+    </component>
+    <component id="n37_uvgl" name="btnChat" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="0,0" size="83,65" group="n41_uvgl">
+      <gearXY controller="ctrlStorage" pages="0,1" values="0,0|0,213" tween="true"/>
+      <Button icon="ui://5hs1fuejuvgl8w"/>
+    </component>
+    <component id="n38_uvgl" name="btnTask" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="11,0" size="70,65" group="n41_uvgl">
+      <gearXY controller="ctrlStorage" pages="0,1" values="11,0|11,278" tween="true"/>
+      <Button icon="ui://5hs1fuejuvgl8u"/>
+    </component>
+    <component id="n39_uvgl" name="btnMinimap" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="0,0" size="83,65" group="n41_uvgl">
+      <gearXY controller="ctrlStorage" pages="0,1" values="0,0|0,343" tween="true"/>
+      <Button icon="ui://5hs1fuejuvgl8n"/>
+    </component>
+    <group id="n41_uvgl" name="grpBtns" xy="0,0" size="83,65"/>
+    <component id="n34_uvgl" name="btnMoreShow" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="0,0" size="83,93">
+      <gearDisplay controller="ctrlStorage" pages="0"/>
+      <Button icon="ui://5hs1fuejuvgl8g" controller="ctrlStorage" page="1"/>
+    </component>
+    <component id="n43_uvgl" name="btnMoreHide" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="0,0" size="83,93">
+      <gearDisplay controller="ctrlStorage" pages="1"/>
+      <Button icon="ui://5hs1fuejuvgl8g" controller="ctrlStorage" page="0"/>
+    </component>
+  </displayList>
+  <relation target="n33_uvgl" sidePair="bottomext-bottom"/>
+</component>

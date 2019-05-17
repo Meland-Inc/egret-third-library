@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="257,55" designImageLayer="1">
+<component size="233,88" designImage="ui://i25v0ebkuvgl3s" designImageAlpha="0" designImageLayer="1">
   <displayList>
-    <loader id="n1_x9um" name="btnOpenChatWin" xy="0,0" size="50,54" url="ui://5hs1fuejrdy445"/>
-    <image id="n3_x9um" name="n3" src="rdy435" fileName="newImg/icon_main_chat.png" xy="11,18"/>
-    <image id="n4_x9um" name="n4" src="rdy453" fileName="newImg/img_main_task_6.png" xy="55,0" size="201,54"/>
-    <list id="n5_x9um" name="lstChatRecord" xy="59,0" size="197,53" overflow="scroll" defaultItem="ui://5hs1fuejx9um6f" autoClearItems="true">
+    <image id="n6_eonl" name="bg" src="uvgl94" fileName="img_UI3/img_main_liaotianquyu_10.png" xy="0,0" size="233,88"/>
+    <list id="n5_x9um" name="lstChatRecord" xy="5,2" size="224,85" overflow="scroll" defaultItem="ui://5hs1fuejx9um6f" autoClearItems="true">
       <item/>
       <item/>
     </list>

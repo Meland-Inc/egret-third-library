@@ -1,49 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" opaque="false" designImage="ui://i25v0ebkb4ke16" designImageAlpha="0">
-  <controller name="ctrlMapMode" pages="0,normal,1,build,2,quickBuild,3,quickEdit" selected="0"/>
+<component size="1136,640" opaque="false" designImage="ui://i25v0ebkuvgl3t" designImageAlpha="39">
+  <controller name="ctrlMapMode" pages="0,normal,1,build,2,quickBuild,3,quickEdit" selected="2"/>
   <displayList>
-    <component id="n16_rdy4" name="btnAvatar" src="rdy45b" fileName="btn/btnAvatar.xml" xy="8,6" size="68,58">
-      <relation target="" sidePair="left-left,top-top"/>
-      <Button sound="ui://fknoioovtqc911"/>
-    </component>
-    <component id="n30_r2bf" name="comMainSaturation" src="r2bf5j" fileName="win/ComMainSaturation.xml" xy="70,5" size="152,47">
-      <relation target="" sidePair="top-top,left-left"/>
-    </component>
     <component id="n31_r2bf" name="comMainEnemyInfo" src="dura1l" fileName="win/ComMainEnemyInfo.xml" xy="233,7" size="152,45">
       <relation target="" sidePair="left-left,top-top"/>
     </component>
-    <component id="n1_muc9" name="comMainJoystick" src="w80ln" fileName="win/ComMainJoystick.xml" xy="876,312">
+    <component id="n1_muc9" name="comMainJoystick" src="w80ln" fileName="win/ComMainJoystick.xml" xy="862,262">
       <gearDisplay controller="ctrlMapMode" pages="0"/>
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
-    <component id="n42_w0g2" name="comMainQuickBuild" src="ndxt83" fileName="win/ComMainQuickBuild.xml" xy="876,301">
+    <component id="n42_w0g2" name="comMainQuickBuild" src="ndxt83" fileName="win/ComMainQuickBuild.xml" xy="796,353">
       <gearDisplay controller="ctrlMapMode" pages="2,3"/>
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
-    <component id="n4_muc9" name="comMainRocker" src="w80l0" fileName="win/ComMainRocker.xml" xy="0,270">
+    <component id="n4_muc9" name="comMainRocker" src="uvgla1" fileName="win/ComMainRockerNew.xml" xy="0,256">
       <relation target="" sidePair="left-left,bottom-bottom"/>
     </component>
-    <component id="n33_r2bf" name="comMainTemperature" src="r2bf5r" fileName="win/ComMainTemperature.xml" xy="962,182" size="170,40">
-      <relation target="" sidePair="right-right,top-top"/>
-    </component>
-    <component id="n34_qv2f" name="comSamallMap" src="j0s6z" fileName="win/ComSmallMap.xml" xy="977,9" customData="xOffset,-1">
-      <relation target="" sidePair="right-right"/>
-    </component>
-    <component id="n32_r2bf" name="comMainMenu" src="ua4xu" fileName="win/ComMainMenu.xml" xy="631,10">
-      <relation target="" sidePair="right-right"/>
+    <component id="n33_r2bf" name="comMainTemperature" src="uvgla2" fileName="win/ComMainTemperatureNew.xml" xy="401,0">
+      <relation target="" sidePair="center-center"/>
     </component>
     <component id="n37_x9um" name="comChat" src="x9um6d" fileName="win/ComMainChatView.xml" xy="3,555">
       <relation target="" sidePair="bottom-bottom"/>
     </component>
-    <component id="n39_c3x2" name="comTaskTrace" src="c3x26m" fileName="win/ComTaskTrace.xml" xy="7,69" customData="xOffset,1"/>
-    <component id="n36_ru0b" name="ComSaturationDetail" src="9f2h69" fileName="com/ComSaturationDetail.xml" xy="185,56" visible="false">
+    <component id="n39_c3x2" name="comTaskTrace" src="c3x26m" fileName="win/ComTaskTrace.xml" xy="940,100" customData="xOffset,1">
+      <relation target="" sidePair="right-right"/>
+    </component>
+    <component id="n36_ru0b" name="ComSaturationDetail" src="9f2h69" fileName="com/ComSaturationDetail.xml" xy="922,86" hideByEditor="true" visible="false">
       <relation target="" sidePair="left-left,top-top"/>
     </component>
-    <component id="n40_c994" name="comExperience" src="ncv76r" fileName="win/ComExperience.xml" xy="4,612">
+    <component id="n40_c994" name="comExperience" src="ncv76r" fileName="win/ComExperience.xml" xy="4,538">
       <relation target="" sidePair="left-left,bottom-bottom"/>
     </component>
     <component id="n41_xles" name="btnRobotViewReturn" src="xles73" fileName="btn/btnRobotViewReturn.xml" xy="1030,547">
       <relation target="" sidePair="right-right,bottom-bottom"/>
+    </component>
+    <component id="n46_uvgl" name="comMainSaturation" src="r2bf5j" fileName="win/ComMainSaturationNew.xml" xy="907,11">
+      <relation target="" sidePair="right-right"/>
+    </component>
+    <component id="n44_uvgl" name="comMainMenu" src="uvgl9m" fileName="win/ComMainMenuNew.xml" xy="1053,4" size="83,71">
+      <relation target="" sidePair="right-right"/>
     </component>
   </displayList>
 </component>
