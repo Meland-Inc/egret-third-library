@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="152,47">
+<component size="139,76" designImage="ui://i25v0ebkuvgl3i" designImageOffsetX="-905" designImageOffsetY="-11" designImageAlpha="0" designImageLayer="1">
   <displayList>
-    <image id="n40_r2bf" name="n40" src="rdy44s" fileName="newImg/img_main_survive_1.png" xy="0,0" group="n15_r2bf"/>
-    <loader id="n39_r2bf" name="grpHealthy" xy="2,2" size="43,42" group="n15_r2bf" url="ui://5hs1fuejrdy44t"/>
-    <image id="n25_r2bf" name="n25" src="rdy438" fileName="newImg/icon_main_health.png" xy="10,12" group="n15_r2bf"/>
-    <group id="n15_r2bf" name="n15" xy="0,0" size="48,47"/>
-    <image id="n36_r2bf" name="n36" src="rdy44s" fileName="newImg/img_main_survive_1.png" xy="52,0" group="n19_r2bf"/>
-    <loader id="n27_r2bf" name="grpHungry" xy="54,2" size="43,42" group="n19_r2bf" url="ui://5hs1fuejrdy44u"/>
-    <image id="n28_r2bf" name="n28" src="rdy439" fileName="newImg/icon_main_hunger.png" xy="63,11" group="n19_r2bf"/>
-    <group id="n19_r2bf" name="n19" xy="52,0" size="48,47"/>
-    <image id="n37_r2bf" name="n37" src="rdy44s" fileName="newImg/img_main_survive_1.png" xy="104,0" group="n23_r2bf"/>
-    <loader id="n29_r2bf" name="grpThirsty" xy="106,2" size="44,43" group="n23_r2bf" url="ui://5hs1fuejrdy44v"/>
-    <image id="n30_r2bf" name="n30" src="rdy43l" fileName="newImg/icon_main_thirst.png" xy="116,12" group="n23_r2bf"/>
-    <group id="n23_r2bf" name="n23" xy="104,0" size="48,47" visible="false" advanced="true"/>
+    <image id="n41_uvgl" name="imgBg" src="uvgl9o" fileName="img_UI3/img_main_zhuangtailandikuang_25.png" xy="0,0"/>
+    <image id="n42_uvgl" name="bg1" src="uvgl9l" fileName="img_UI3/img_main_zhuangtailanyuanxing_26.png" xy="10,7"/>
+    <image id="n43_uvgl" name="bg2" src="uvgl9l" fileName="img_UI3/img_main_zhuangtailanyuanxing_26.png" xy="76,7"/>
+    <component id="n50_uvgl" name="labHp" src="uvglae" fileName="lab/labProgress.xml" xy="61,58" rotation="180">
+      <relation target="" sidePair=""/>
+      <Label icon="ui://5hs1fuejuvgl8z"/>
+    </component>
+    <component id="n45_uvgl" name="labHunger" src="uvglae" fileName="lab/labProgress.xml" xy="127,58" rotation="180">
+      <Label icon="ui://5hs1fuejuvgl9c"/>
+    </component>
+    <image id="n47_uvgl" name="n47" src="uvgl8y" fileName="img_UI3/img_main_aixin_28.png" xy="18,20"/>
+    <image id="n48_uvgl" name="n48" src="uvgl9b" fileName="img_UI3/img_main_tili_27.png" xy="92,15"/>
   </displayList>
 </component>
