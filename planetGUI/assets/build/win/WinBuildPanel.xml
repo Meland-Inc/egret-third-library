@@ -153,12 +153,12 @@
       <relation target="n1_rvyy" sidePair="right-right,top-top"/>
       <Button icon="ui://te1gxawoqo8vi25"/>
     </component>
-    <component id="n48_lxr1" name="btnOpenFormula" src="oliri6s" fileName="btn/tbtnScale.xml" pkg="te1gxawo" xy="498,460" group="n47_q9kn">
+    <component id="n48_lxr1" name="btnOpenFormula" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="498,460" group="n47_q9kn">
       <relation target="n1_rvyy" sidePair="top-top"/>
       <Button title="打开配方" titleColor="#000000" icon="ui://te1gxawoqo8vi26"/>
     </component>
     <group id="n47_q9kn" name="grpPackage" xy="0,452" size="1136,188" group="n45_kas2" advanced="true"/>
-    <group id="n45_kas2" name="n45" xy="0,0" size="1136,643" advanced="true"/>
+    <group id="n45_kas2" name="n45" xy="0,0" size="1136,640" advanced="true"/>
   </displayList>
   <transition name="toStretch">
     <item time="0" type="Size" target="n1_rvyy" tween="true" startValue="-,172" endValue="-,370" duration="6" ease="Linear"/>
