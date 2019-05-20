@@ -21,7 +21,6 @@
     <image id="c8lx25" name="img_7.png" path="/newImg/"/>
     <image id="c8lx26" name="img_8.png" path="/newImg/WinMapLook/" scale="9grid" scale9grid="5,2,17,12"/>
     <image id="c8lx27" name="img_9.png" path="/newImg/WinMapLook/"/>
-    <component id="c8lx2b" name="btnClose.xml" path="/btn/"/>
     <component id="c8lx2d" name="ComSelectBox.xml" path="/Com/"/>
     <component id="kqo82e" name="ComCompass.xml" path="/Com/"/>
     <image id="qo8v2f" name="img_build_item1.png" path="/newImg/WinBuildPannel/"/>
@@ -104,20 +103,21 @@
     <image id="df6n56" name="btn_ide_bag.png" path="/img_UI3/ide/"/>
     <image id="df6n57" name="btn_ide_play.png" path="/img_UI3/ide/"/>
     <image id="df6n58" name="fnt_ide_1.png" path="/img_UI3/ide/"/>
-    <image id="df6n59" name="img_ide_9.png" path="/img_UI3/ide/"/>
+    <image id="df6n59" name="img_ide_9.png" path="/img_UI3/ide/" scale="9grid" scale9grid="40,25,80,50"/>
     <image id="df6n5a" name="img_ide_1.png" path="/img_UI3/ide/" scale="9grid" scale9grid="20,20,40,40"/>
     <image id="df6n5b" name="img_ide_2.png" path="/img_UI3/ide/"/>
-    <image id="df6n5c" name="img_ide_3.png" path="/img_UI3/ide/"/>
-    <image id="df6n5d" name="img_ide_4.png" path="/img_UI3/ide/"/>
-    <image id="df6n5e" name="img_ide_5.png" path="/img_UI3/ide/"/>
+    <image id="df6n5c" name="img_ide_3.png" path="/img_UI3/ide/" scale="9grid" scale9grid="31,94,181,39"/>
+    <image id="df6n5d" name="img_ide_4.png" path="/img_UI3/ide/" scale="9grid" scale9grid="20,20,40,40"/>
+    <image id="df6n5e" name="img_ide_5.png" path="/img_UI3/ide/" scale="9grid" scale9grid="20,20,40,40"/>
     <image id="df6n5f" name="img_ide_6.png" path="/img_UI3/ide/"/>
     <image id="df6n5g" name="img_ide_7.png" path="/img_UI3/ide/"/>
     <image id="df6n5h" name="img_ide_8.png" path="/img_UI3/ide/"/>
-    <image id="df6n5i" name="img_ide_bag_1.png" path="/img_UI3/ide/"/>
+    <image id="df6n5i" name="img_ide_bag_1.png" path="/img_UI3/ide/" scale="9grid" scale9grid="50,100,64,50"/>
     <image id="df6n5j" name="img_ide_item_1.png" path="/img_UI3/ide/"/>
     <image id="df6n5k" name="img_ide_title.png" path="/img_UI3/ide/"/>
     <component id="df6n5l" name="ComMapEntitySelect.xml" path="/Com/" exported="true"/>
     <component id="df6n5m" name="BtnEntitySelect.xml" path="/btn/" exported="true"/>
+    <component id="qouo5n" name="WinBuildIde.xml" path="/win/" exported="true"/>
     <component id="uvgl4p" name="ComSelectToHideRocker.xml" path="/Com/"/>
   </resources>
   <publish name="build" npot="true"/>
