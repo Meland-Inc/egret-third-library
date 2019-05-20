@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="70,70" extention="Button">
   <controller name="button" pages="2,up,3,down" selected="0"/>
-  <controller name="ctrlMark" pages="0,normal,1,equip,2,broken,3,shadow" selected="2"/>
+  <controller name="ctrlMark" pages="0,normal,1,equip,2,broken,3,shadow" selected="0"/>
   <displayList>
     <loader id="n14_o6si" name="bg" xy="0,0" size="70,70" url="ui://5hs1fuejuvgl9j" align="center" vAlign="middle" fill="scaleFree" shrinkOnly="true">
       <gearIcon controller="button" pages="2,3" values="ui://5hs1fuejuvgl9j|ui://5hs1fuejuvgla7"/>
@@ -19,7 +19,7 @@
     <image id="n37_uvgl" name="imgNumBg" src="uvgl97" fileName="img_UI3/img_main_shuliangkuang_10.png" xy="27,54" group="n38_uvgl"/>
     <text id="n23_ww3a" name="num" xy="27,51" size="43,24" group="n38_uvgl" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="99"/>
     <group id="n38_uvgl" name="grpNum" xy="27,51" size="44,24" group="n24_ww3a" advanced="true" collapsed="true"/>
-    <group id="n24_ww3a" name="grpItemIcon" xy="0,0" size="71,75" advanced="true"/>
+    <group id="n24_ww3a" name="grpItemIcon" xy="0,0" size="71,75" advanced="true" collapsed="true"/>
     <component id="n31_w9v6" name="barSchedule" src="11slcyi8f" fileName="bar/barItem1.xml" pkg="te1gxawo" xy="10,55" size="49,8" group="n34_w9v6">
       <ProgressBar value="50" max="100"/>
     </component>
