@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="5hs1fuej" jpegQuality="80" compressPNG="true">
   <resources>
-    <component id="w80l0" name="ComMainRocker.xml" path="/win/" exported="true"/>
     <component id="w80lg" name="ComMainUserInfo.xml" path="/win/" exported="true"/>
     <component id="w80lh" name="WinMainItemField.xml" path="/win/" exported="true"/>
     <component id="w80ln" name="ComMainJoystick.xml" path="/win/" exported="true"/>
@@ -23,7 +22,7 @@
     <image id="uvm020" name="img_Blood volume_1.png" path="/img/" exported="true"/>
     <image id="uvm021" name="img_Blood volume_2.png" path="/img/" exported="true"/>
     <component id="uvm022" name="ComHeadInfo.xml" path="/com/" exported="true"/>
-    <component id="ft0q2g" name="ShortcutItem.xml" path="/btn/" exported="true"/>
+    <component id="ft0q2g" name="ShortcutItemOld.xml" path="/btn/" exported="true"/>
     <component id="oy0u2i" name="pbrAccmu.xml" path="/pbr/"/>
     <image id="oy0u2l" name="img_main_itemdrop.png" path="/img/"/>
     <component id="oy0u2m" name="ComAccmu.xml" path="/com/" exported="true"/>
@@ -106,7 +105,6 @@
     <component id="rdy457" name="btnBuild.xml" path="/btn/"/>
     <component id="rdy458" name="btnMenu.xml" path="/btn/"/>
     <component id="rdy45b" name="btnAvatar.xml" path="/btn/"/>
-    <component id="r2bf5j" name="ComMainSaturationNew.xml" path="/win/" exported="true"/>
     <component id="r2bf5r" name="ComMainTemperature.xml" path="/win/"/>
     <image id="r2bf5w" name="icon_main_email.png" path="/newImg/"/>
     <image id="r2bf5x" name="icon_main_manual.png" path="/newImg/"/>
@@ -230,9 +228,7 @@
     <image id="uvgl9j" name="img_main_yitianjiawupin_6.png" path="/img_UI3/"/>
     <image id="uvgl9l" name="img_main_zhuangtailanyuanxing_26.png" path="/img_UI3/"/>
     <component id="uvgl9m" name="ComMainMenu.xml" path="/win/" exported="true"/>
-    <component id="uvgl9n" name="ComMainSaturation.xml" path="/win/" exported="true"/>
     <image id="uvgl9o" name="img_main_zhuangtailandikuang_25.png" path="/img_UI3/"/>
-    <component id="uvgl9q" name="ComMainJoystickNew.xml" path="/win/" exported="true"/>
     <image id="uvgl9r" name="btn_main_beibaozhankaianniu_4 _1.png" path="/img_UI3/"/>
     <image id="uvgl9s" name="btn_main_cebianlananniu 19_1.png" path="/img_UI3/"/>
     <image id="uvgl9u" name="btn_main_beibaoshouqianniu_3_1.png" path="/img_UI3/"/>
@@ -242,10 +238,10 @@
     <image id="uvgl9y" name="icon_main_caozuianniu_gaotou_52.png" path="/img_UI3/"/>
     <image id="uvgl9z" name="icon_main_caozuianniu_jian_49.png" path="/img_UI3/"/>
     <image id="uvgla0" name="icon_main_caozuianniu_quantou_51.png" path="/img_UI3/"/>
-    <component id="uvgla1" name="ComMainRockerNew.xml" path="/win/" exported="true"/>
+    <component id="uvgla1" name="ComMainRocker.xml" path="/win/" exported="true"/>
     <component id="uvgla2" name="ComMainInfo.xml" path="/win/"/>
-    <component id="uvgla3" name="WinMainItemFieldNew.xml" path="/win/" exported="true"/>
-    <component id="uvgla4" name="ShortcutItemNew.xml" path="/btn/" exported="true"/>
+    <component id="uvgla3" name="WinMainItemFieldOld.xml" path="/win/" exported="true"/>
+    <component id="uvgla4" name="ShortcutItem.xml" path="/btn/" exported="true"/>
     <image id="uvgla5" name="img_main_+_61.png" path="/img_UI3/"/>
     <image id="uvgla6" name="img_main_moon_50.png" path="/img_UI3/"/>
     <image id="uvgla7" name="img_main_xuanzhong_61.png" path="/img_UI3/"/>
@@ -253,13 +249,14 @@
     <image id="uvgla9" name="img_main_zaishiyong_63.png" path="/img_UI3/"/>
     <image id="uvglaa" name="img_main_tilitianchongse_60.png" path="/img_UI3/"/>
     <component id="uvglab" name="comExpBar.xml" path="/progressBar/"/>
-    <component id="uvglac" name="ComTaskTraceNew.xml" path="/win/" exported="true"/>
-    <component id="uvglad" name="ComTaskTraceItemNew.xml" path="/com/" exported="true"/>
+    <component id="uvglac" name="ComTaskTraceOld.xml" path="/win/" exported="true"/>
+    <component id="uvglad" name="ComTaskTraceItemOld.xml" path="/com/" exported="true"/>
     <component id="uvglae" name="labProgress.xml" path="/lab/"/>
     <image id="uvglaf" name="img_main_posun_65.png" path="/img_UI3/"/>
     <image id="uvglag" name="img_main_yujin_64.png" path="/img_UI3/"/>
     <component id="uvglah" name="ComBuildRocker.xml" path="/com/"/>
     <image id="uvglai" name="img_main_kuaisujianzao_toumingdu_42.png" path="/img_UI3/"/>
+    <component id="pcuyaj" name="ComMainSaturation.xml" path="/win/" exported="true"/>
   </resources>
   <publish name="main" npot="true"/>
 </packageDescription>

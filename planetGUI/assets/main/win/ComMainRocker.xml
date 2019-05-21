@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="320,280">
+<component size="320,280" designImage="ui://i25v0ebkuvgl3i" designImageAlpha="0">
   <displayList>
-    <image id="n3_rdy4" name="n3" src="rdy42t" fileName="newImg/btn_cm_operating_4.png" pkg="te1gxawo" xy="90,75" group="n7_pus6"/>
-    <component id="n6_rdy4" name="btnRocker" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="125,110" size="60,60" group="n7_pus6">
-      <Button icon="ui://te1gxawordy42u"/>
+    <image id="n9_uvgl" name="n9" src="uvgl9i" fileName="img_UI3/img_main_yidonglunpanwaiyuan_toumingdu80%_17.png" xy="16,119" group="n7_pus6" alpha="0.8"/>
+    <image id="n8_uvgl" name="n8" src="uvgl9g" fileName="img_UI3/img_main_yidonglunpan_toumingdu20%_16.png" xy="23,128" group="n7_pus6" alpha="0.2"/>
+    <component id="n6_rdy4" name="btnRocker" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="65,170" size="60,60" group="n7_pus6" alpha="0.7">
+      <Button icon="ui://5hs1fuejuvgl9h"/>
     </component>
-    <group id="n7_pus6" name="grpRocker" xy="90,75" size="130,130" advanced="true" collapsed="true"/>
+    <group id="n7_pus6" name="grpRocker" xy="16,119" size="157,158" advanced="true" collapsed="true"/>
   </displayList>
 </component>

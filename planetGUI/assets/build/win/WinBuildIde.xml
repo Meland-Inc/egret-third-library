@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" designImage="ui://i25v0ebkdf6n3l">
+  <controller name="ctrlBuild" pages="0,add,1,edit" selected="0"/>
+  <controller name="ctrlRightView" pages="0,energy,1,backpack,2,attr" selected="2">
+    <action type="change_page" fromPage="" toPage="1,2" objectId="n0_qouo" controller="ctrlState" targetPage="2"/>
+    <action type="change_page" fromPage="" toPage="1,2" controller="ctrlOperate" targetPage="0"/>
+  </controller>
+  <controller name="ctrlOperate" pages="0,left,1,center,2,right" selected="0"/>
+  <controller name="ctrlEnergy" pages="0,enough,1,none" selected="0"/>
+  <displayList>
+    <component id="n0_qouo" name="comEntitySelect" src="df6n5l" fileName="Com/ComMapEntitySelect.xml" xy="0,0" size="425,640" controller="ctrlState,2">
+      <relation target="" sidePair="left-left,height-height"/>
+    </component>
+    <image id="n47_py50" name="bgAdd" src="df6n59" fileName="img_UI3/ide/img_ide_9.png" xy="270,541" size="290,99" group="n48_py50"/>
+    <component id="n46_py50" name="btnAddMirror" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="376,560" size="56,69" group="n48_py50">
+      <Button icon="ui://32ieekgudf6n4y"/>
+    </component>
+    <component id="n9_qouo" name="btnAddConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="461,566" size="68,56" group="n48_py50">
+      <Button icon="ui://32ieekgudf6n4p"/>
+    </component>
+    <component id="n7_qouo" name="btnAddCancel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="296,565" size="52,58" group="n48_py50">
+      <Button icon="ui://32ieekgudf6n4x"/>
+    </component>
+    <group id="n48_py50" name="grpAdd" xy="270,541" size="290,99" group="n16_py50" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlBuild" pages="0"/>
+      <relation target="" sidePair="bottom-bottom"/>
+    </group>
+    <image id="n6_qouo" name="bgEdit" src="df6n59" fileName="img_UI3/ide/img_ide_9.png" xy="218,541" size="371,99" group="n49_py50"/>
+    <component id="n8_qouo" name="btnEditMirror" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="309,561" size="56,69" group="n49_py50">
+      <Button icon="ui://32ieekgudf6n4y"/>
+    </component>
+    <component id="n10_qouo" name="btnEditDelete" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="243,563" size="48,65" group="n49_py50">
+      <Button icon="ui://32ieekgudf6n4z"/>
+    </component>
+    <component id="n12_py50" name="btnEditAttr" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="387,558" size="88,72" group="n49_py50">
+      <Button icon="ui://32ieekgudf6n50" page="0"/>
+    </component>
+    <component id="n13_py50" name="btnEditCoding" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="477,558" size="88,72" group="n49_py50">
+      <Button icon="ui://32ieekgudf6n51"/>
+    </component>
+    <group id="n49_py50" name="grpEdit" xy="218,541" size="371,99" group="n16_py50" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlBuild" pages="1"/>
+      <relation target="" sidePair="bottom-bottom"/>
+    </group>
+    <image id="n14_py50" name="n14" src="df6n5k" fileName="img_UI3/ide/img_ide_title.png" xy="321,0" size="165,40" group="n51_io8v"/>
+    <text id="n15_py50" name="tfObjName" xy="331,5" size="140,29" group="n51_io8v" fontSize="22" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="物品名称"/>
+    <group id="n51_io8v" name="grpName" xy="321,0" size="165,40" group="n16_py50" advanced="true" collapsed="true">
+      <relation target="" sidePair="top-top"/>
+    </group>
+    <group id="n16_py50" name="grpOperate" xy="218,0" size="371,640" advanced="true" collapsed="true">
+      <gearXY controller="ctrlOperate" pages="0,1,2" values="218,0|406,0|491,0"/>
+    </group>
+    <image id="n21_py50" name="n21" src="df6n5i" fileName="img_UI3/ide/img_ide_bag_1.png" xy="663,0" size="473,640" group="n25_py50"/>
+    <list id="n22_py50" name="lstBpTabBar" xy="684,19" size="220,30" group="n25_py50" layout="pagination" colGap="18" defaultItem="ui://te1gxawogpm0i4g" autoItemSize="true">
+      <relation target="n25_py50" sidePair="left-left"/>
+      <item url="ui://te1gxawooliri6p" icon="ui://te1gxawoqouocyibd" selectedIcon="ui://te1gxawoqouocyibs"/>
+      <item url="ui://te1gxawooliri6p" icon="ui://te1gxawoqouocyibc" selectedIcon="ui://te1gxawoqouocyibr"/>
+      <item url="ui://te1gxawooliri6p" icon="ui://te1gxawoqouocyibb" selectedIcon="ui://te1gxawoqouocyibq"/>
+      <item url="ui://te1gxawooliri6p" icon="ui://te1gxawoqouocyiba" selectedIcon="ui://te1gxawoqouocyibp"/>
+      <item url="ui://te1gxawooliri6p" icon="ui://te1gxawoqouocyibe" selectedIcon="ui://te1gxawoqouocyibt"/>
+    </list>
+    <component id="n23_py50" name="n25" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1053,5" size="76,56" group="n25_py50">
+      <Button icon="ui://te1gxawoqouocyib7" controller="ctrlRightView" page="0"/>
+    </component>
+    <list id="n24_py50" name="lstBackpack" xy="683,77" size="421,535" group="n25_py50" layout="flow_hz" overflow="scroll" scrollBar="visible" margin="5,5,15,0" scrollBarRes="ui://te1gxawoqouocyibo," lineGap="2" colGap="10" defaultItem="ui://32ieekgup6jr4k" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n25_py50" name="grpBackpack" xy="663,0" size="473,640" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlRightView" pages="1"/>
+      <relation target="" sidePair="right-right,height-height"/>
+    </group>
+    <component id="n26_py50" name="btnEnergyPlay" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="945,530" size="85,87" group="n31_py50">
+      <Button icon="ui://32ieekgudf6n57"/>
+    </component>
+    <component id="n27_py50" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1040,530" size="85,87" group="n31_py50">
+      <Button icon="ui://32ieekgudf6n55"/>
+    </component>
+    <image id="n28_py50" name="n28" src="qouocyibh" fileName="img_UI3/img_cm_tips1.png" pkg="te1gxawo" xy="864,442" group="n50_py50"/>
+    <image id="n29_py50" name="n29" src="qouocyibi" fileName="img_UI3/img_cm_warning.png" pkg="te1gxawo" xy="898,457" group="n50_py50"/>
+    <text id="n30_py50" name="n30" xy="925,457" size="125,26" group="n50_py50" fontSize="20" align="center" vAlign="middle" text="源码能源不足"/>
+    <group id="n50_py50" name="n50" xy="864,442" size="211,98" group="n31_py50" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlEnergy" pages="1"/>
+    </group>
+    <group id="n31_py50" name="grpEnergy" xy="864,442" size="261,175" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlRightView" pages="0"/>
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+    </group>
+    <image id="n32_py50" name="n32" src="df6n5c" fileName="img_UI3/ide/img_ide_3.png" xy="670,0" size="466,640" group="n45_py50">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <text id="n33_py50" name="tfAttrName" xy="700,22" size="175,43" group="n45_py50" fontSize="34" color="#ffffff" align="center" vAlign="middle" autoClearText="true" text="打地鼠物件"/>
+    <component id="n35_py50" name="btnAttrName" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="889,24" size="37,37" group="n45_py50">
+      <relation target="n33_py50" sidePair="left-right"/>
+      <Button icon="ui://32ieekgudf6n5g"/>
+    </component>
+    <component id="n36_py50" name="btnAttrClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1053,10" size="76,56" group="n45_py50">
+      <Button icon="ui://te1gxawoqouocyib7" controller="ctrlRightView" page="0"/>
+    </component>
+    <image id="n37_py50" name="n37" src="df6n5d" fileName="img_UI3/ide/img_ide_4.png" xy="768,95" size="300,184" group="n45_py50"/>
+    <component id="n38_py50" name="btnAttrVisible" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1011,105" size="47,47" group="n45_py50">
+      <Button icon="ui://32ieekgudf6n4t" selectedIcon="ui://32ieekgudf6n4u"/>
+    </component>
+    <loader id="n39_py50" name="ladAttrObj" xy="868,144" size="100,100" group="n45_py50"/>
+    <image id="n41_py50" name="n41" src="df6n5e" fileName="img_UI3/ide/img_ide_5.png" xy="707,290" size="400,240" group="n45_py50">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <text id="n42_py50" name="tfAttrDesc" xy="715,297" size="385,225" group="n45_py50" fontSize="34" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="">
+      <relation target="" sidePair="height-height"/>
+    </text>
+    <component id="n43_py50" name="btnAttrDesc" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1056,488" size="50,40" group="n45_py50">
+      <relation target="n42_py50" sidePair="bottom-bottom"/>
+      <Button icon="ui://32ieekgudf6n5g"/>
+    </component>
+    <component id="n44_py50" name="btnAttrCoding" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="828,570" size="150,56" group="n45_py50">
+      <relation target="" sidePair="bottom-bottom"/>
+      <Button icon="ui://32ieekgudf6n4q"/>
+    </component>
+    <group id="n45_py50" name="grpAttr" xy="670,0" size="466,640" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlRightView" pages="2"/>
+      <relation target="" sidePair="right-right"/>
+    </group>
+  </displayList>
+</component>
