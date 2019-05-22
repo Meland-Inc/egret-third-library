@@ -256,6 +256,11 @@
     <component id="p3g7a9" name="ComEditVariate.xml" path="/newCom/"/>
     <image id="p3g7aa" name="img_bg_translucent.png" path="/newImg2/" exported="true"/>
     <component id="x8ztab" name="btnVariateScope.xml" path="/newBtn/"/>
+    <image id="mcvlac" name="icon_code_queding_02.png" path="/newImg2/"/>
+    <image id="mcvlad" name="img_code_tishi_04.png" path="/newImg2/"/>
+    <image id="mcvlae" name="img_code_tishik_01.png" path="/newImg2/"/>
+    <image id="mcvlaf" name="icon_code_fanhui_03.png" path="/newImg2/"/>
+    <component id="mcvlag" name="WinCodeblockSelectEntity.xml" path="/win/" exported="true"/>
   </resources>
   <publish name="Basics"/>
 </packageDescription>
