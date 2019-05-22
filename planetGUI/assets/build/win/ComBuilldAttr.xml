@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="466,640">
+  <displayList>
+    <image id="n32_py50" name="n32" src="df6n5c" fileName="img_UI3/ide/img_ide_3.png" xy="0,0" size="466,640" group="n45_py50">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <text id="n33_py50" name="tfAttrName" xy="30,22" size="175,43" group="n45_py50" fontSize="34" color="#ffffff" align="center" vAlign="middle" autoClearText="true" text="打地鼠物件"/>
+    <component id="n35_py50" name="btnAttrName" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="219,24" size="37,37" group="n45_py50">
+      <relation target="n33_py50" sidePair="left-right"/>
+      <Button icon="ui://32ieekgudf6n5g"/>
+    </component>
+    <component id="n36_py50" name="btnAttrClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="383,10" size="76,56" group="n45_py50">
+      <Button icon="ui://te1gxawoqouocyib7" page="0"/>
+    </component>
+    <image id="n37_py50" name="n37" src="df6n5d" fileName="img_UI3/ide/img_ide_4.png" xy="98,95" size="300,184" group="n45_py50"/>
+    <component id="n38_py50" name="btnAttrVisible" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="341,105" size="47,47" group="n45_py50">
+      <Button icon="ui://32ieekgudf6n4t" selectedIcon="ui://32ieekgudf6n4u"/>
+    </component>
+    <loader id="n39_py50" name="ladAttrObj" xy="198,144" size="100,100" group="n45_py50"/>
+    <image id="n41_py50" name="n41" src="df6n5e" fileName="img_UI3/ide/img_ide_5.png" xy="37,290" size="400,240" group="n45_py50">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <text id="n42_py50" name="tfAttrDesc" xy="45,297" size="385,225" group="n45_py50" fontSize="34" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="">
+      <relation target="" sidePair="height-height"/>
+    </text>
+    <component id="n43_py50" name="btnAttrDesc" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="386,488" size="50,40" group="n45_py50">
+      <relation target="n42_py50" sidePair="bottom-bottom"/>
+      <Button icon="ui://32ieekgudf6n5g"/>
+    </component>
+    <component id="n44_py50" name="btnAttrCoding" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="158,570" size="150,56" group="n45_py50">
+      <relation target="" sidePair="bottom-bottom"/>
+      <Button icon="ui://32ieekgudf6n4q"/>
+    </component>
+    <group id="n45_py50" name="grpAttr" xy="0,0" size="466,640" advanced="true" collapsed="true">
+      <relation target="" sidePair="right-right"/>
+    </group>
+  </displayList>
+</component>
