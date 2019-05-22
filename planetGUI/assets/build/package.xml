@@ -8,7 +8,6 @@
     <component id="rvyy1i" name="grpBuildSelect.xml" path="/Com/"/>
     <component id="rvyy1j" name="ComMapScaleView.xml" path="/Com/" exported="true"/>
     <component id="rvyy1k" name="WinBuildPanel.xml" path="/win/" exported="true"/>
-    <component id="rvyy1n" name="ComBuildGoodsBox.xml" path="/Com/" exported="true"/>
     <component id="p7yp1o" name="ComInfo.xml" path="/Com/"/>
     <component id="p7yp1p" name="ComDetail.xml" path="/Com/"/>
     <image id="c8lx1r" name="btn_1.png" path="/newImg/"/>
@@ -119,6 +118,9 @@
     <component id="df6n5m" name="BtnEntitySelect.xml" path="/btn/" exported="true"/>
     <component id="qouo5n" name="WinBuildIde.xml" path="/win/" exported="true"/>
     <component id="uvgl4p" name="ComSelectToHideRocker.xml" path="/Com/"/>
+    <component id="w5h85o" name="ComOldBuildPreview.xml" path="/Com/" exported="true"/>
+    <component id="p6hg5p" name="ComBuildOperate.xml" path="/Com/"/>
+    <component id="1194t5r" name="ComBuilldAttr.xml" path="/win/"/>
   </resources>
   <publish name="build" npot="true"/>
 </packageDescription>
