@@ -4,7 +4,8 @@
     <component id="oe8k0" name="WinCodeBlockSelectItem.xml" path="/win/" exported="true"/>
     <component id="gy78g" name="WinCodeBlock.xml" path="/win/" exported="true"/>
     <component id="f89oh" name="btnCodeBlockTab.xml" path="/btn/"/>
-    <component id="j5jvi" name="WinCodeBlockDialog.xml" path="/win/"/>
+    <component id="j5jvi" name="WinCodeBlockDialog.xml" path="/win/" exported="true"/>
+    <component id="j5jvj" name="btnSelection.xml" path="/btn/"/>
   </resources>
   <publish name="codeBlock" npot="true"/>
 </packageDescription>

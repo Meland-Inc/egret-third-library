@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="230,46" pivot="0.5,0.5" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="1"/>
+  <displayList>
+    <image id="n0_j5jv" name="icon" src="tgrli6o" fileName="newImg/btn_cm_5.png" pkg="te1gxawo" xy="0,0" pivot="0.5,0.5" color="#ffff00">
+      <gearColor controller="button" pages="0,1" values="#ffffff|#ffff00"/>
+    </image>
+    <text id="n1_j5jv" name="title" xy="0,0" pivot="0.5,0.5" size="230,43" fontSize="18" align="center" vAlign="middle" autoSize="none" text="selection"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>
