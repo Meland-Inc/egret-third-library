@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkdf6n3l">
-  <controller name="ctrlRightView" pages="0,energy,1,backpack,2,attr" selected="2">
+  <controller name="ctrlRightView" pages="0,energy,1,backpack,2,attr" selected="0">
     <action type="change_page" fromPage="" toPage="1,2" objectId="n0_qouo" controller="ctrlState" targetPage="2"/>
   </controller>
   <controller name="ctrlOperate" pages="3,none,0,left,1,center,2,right" selected="0"/>
@@ -76,7 +76,7 @@
       <gearDisplay controller="ctrlRightView" pages="1"/>
       <relation target="" sidePair="right-right,height-height"/>
     </group>
-    <component id="n26_py50" name="btnEnergyPlay" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="945,530" size="85,87" group="n31_py50">
+    <component id="n26_py50" name="btnEnergyPlay" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="945,530" size="85,87" group="n31_py50" visible="false">
       <Button icon="ui://32ieekgudf6n57"/>
     </component>
     <component id="n27_py50" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1040,530" size="85,87" group="n31_py50">

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="425,640" opaque="false" designImage="ui://i25v0ebkdf6n3j">
-  <controller name="ctrlState" exported="true" pages="2,fold,3,open" selected="0"/>
+  <controller name="ctrlState" exported="true" pages="2,fold,3,open" selected="1"/>
   <displayList>
-    <image id="n0_df6n" name="n0" src="df6n5a" fileName="img_UI3/ide/img_ide_1.png" xy="0,0" size="140,640">
+    <image id="n0_df6n" name="n0" src="df6n5a" fileName="img_UI3/ide/img_ide_1.png" xy="0,0" size="425,642">
       <gearSize controller="ctrlState" pages="2,3" values="140,640,1,1|425,642,1,1"/>
       <relation target="" sidePair="height-height"/>
     </image>
@@ -17,7 +17,7 @@
       <item/>
       <item/>
     </list>
-    <list id="n5_df6n" name="lstOpen" xy="15,110" size="389,513" layout="flow_hz" overflow="scroll" lineItemCount="4" defaultItem="ui://32ieekgudf6n5m" align="center" autoClearItems="true">
+    <list id="n5_df6n" name="lstOpen" xy="15,110" size="389,513" layout="flow_hz" overflow="scroll" lineItemCount="4" defaultItem="ui://32ieekgudf6n5m" autoClearItems="true">
       <gearDisplay controller="ctrlState" pages="3"/>
       <relation target="" sidePair="height-height"/>
       <item/>

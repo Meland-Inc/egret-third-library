@@ -210,7 +210,7 @@
     <image id="t2ui8z" name="10.png" path="/newImg/" scale="9grid" scale9grid="14,7,28,14"/>
     <component id="tcu290" name="ComCodeBlockExclusiveChoiceList.xml" path="/newCom/" exported="true"/>
     <component id="tcu291" name="btnOtion.xml" path="/newBtn/"/>
-    <image id="tcu292" name="img_code_4.png" path="/newImg2/"/>
+    <image id="tcu292" name="img_code_4.png" path="/newImg2/" scale="9grid" scale9grid="12,16,21,20"/>
     <image id="tcu293" name="img_code_5.png" path="/newImg2/" scale="9grid" scale9grid="12,12,24,24"/>
     <image id="tcu294" name="img_code_6.png" path="/newImg2/" scale="9grid" scale9grid="12,12,24,24"/>
     <image id="tcu295" name="img_code_a1.png" path="/newImg2/"/>
@@ -249,7 +249,7 @@
     <image id="tcu2a2" name="btn_code_b7.png" path="/newImg2/" scale="9grid" scale9grid="21,16,65,38"/>
     <image id="tcu2a3" name="btn_code_b8.png" path="/newImg2/" scale="9grid" scale9grid="16,13,74,41"/>
     <image id="tcu2a4" name="img_code_1.png" path="/newImg2/"/>
-    <image id="tcu2a5" name="img_code_2.png" path="/newImg2/"/>
+    <image id="tcu2a5" name="img_code_2.png" path="/newImg2/" scale="9grid" scale9grid="20,20,40,40"/>
     <image id="tcu2a6" name="img_code_3.png" path="/newImg2/" scale="9grid" scale9grid="20,20,40,40"/>
     <component id="hoexa7" name="ComVariateEdit.xml" path="/newCom/" exported="true"/>
     <component id="hoexa8" name="btnCategory.xml" path="/newBtn/"/>
@@ -260,6 +260,8 @@
     <image id="mcvlad" name="img_code_tishi_04.png" path="/newImg2/"/>
     <image id="mcvlae" name="img_code_tishik_01.png" path="/newImg2/"/>
     <image id="mcvlaf" name="icon_code_fanhui_03.png" path="/newImg2/"/>
+    <component id="1194tac" name="ComCodeCalculator.xml" path="/newCom/" exported="true"/>
+    <component id="1194tad" name="btnCalculator.xml" path="/newBtn/"/>
     <component id="mcvlag" name="WinCodeblockSelectEntity.xml" path="/win/" exported="true"/>
     <component id="r5zoah" name="InputShapeSingle.xml" path="/codeBlock/" exported="true"/>
   </resources>
