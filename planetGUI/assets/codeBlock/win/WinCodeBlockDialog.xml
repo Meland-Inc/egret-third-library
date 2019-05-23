@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640">
-  <controller name="ctrlType" pages="0,select,1,show,2,question" selected="2"/>
+  <controller name="ctrlType" pages="3,none,1,show,2,question,0,select" selected="1"/>
   <displayList>
     <list id="n2_j5jv" name="lstSelection" xy="740,47" size="236,363" overflow="scroll" lineGap="5" defaultItem="ui://4o62dubdj5jvj" vAlign="bottom">
       <gearDisplay controller="ctrlType" pages="0"/>
