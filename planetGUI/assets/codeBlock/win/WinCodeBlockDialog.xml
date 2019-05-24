@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640">
-  <controller name="ctrlType" pages="3,none,1,show,2,question,0,select" selected="1"/>
+  <controller name="ctrlType" pages="0,select,1,show,2,question" selected="0"/>
   <displayList>
-    <list id="n2_j5jv" name="lstSelection" xy="740,47" size="236,363" overflow="scroll" lineGap="5" defaultItem="ui://4o62dubdj5jvj" vAlign="bottom">
+    <list id="n2_j5jv" name="lstSelection" xy="740,77" size="236,363" overflow="scroll" lineGap="5" defaultItem="ui://4o62dubdj5jvj" vAlign="bottom">
       <gearDisplay controller="ctrlType" pages="0"/>
-      <relation target="" sidePair="bottom-bottom,right-right"/>
+      <relation target="n11_qlcu" sidePair="bottom-bottom,right-right"/>
       <item/>
       <item/>
       <item/>
@@ -25,7 +25,7 @@
       <Button icon="ui://te1gxawoefrs1q"/>
     </component>
     <component id="n10_qlcu" name="btnSubmit" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="567,406" size="73,54" group="n11_qlcu">
-      <gearDisplay controller="ctrlType" pages="0,2"/>
+      <gearDisplay controller="ctrlType" pages="2"/>
       <Button title="提交" titleColor="#000000" icon="ui://te1gxawopgixi4t"/>
     </component>
     <group id="n11_qlcu" name="root" xy="143,403" size="850,202" advanced="true">
