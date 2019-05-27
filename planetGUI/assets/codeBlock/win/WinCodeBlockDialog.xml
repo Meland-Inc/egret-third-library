@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkfzlu3y" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlType" pages="3,unknow,1,showText,2,question,0,selection" selected="3"/>
+  <controller name="ctrlType" pages="3,unknow,1,showText,2,question,0,selection" selected="2"/>
   <displayList>
     <list id="n2_j5jv" name="lstSelection" xy="544,77" size="464,402" layout="flow_hz" overflow="scroll" lineGap="10" colGap="10" defaultItem="ui://4o62dubdj5jvj" align="right" vAlign="bottom">
       <gearDisplay controller="ctrlType" pages="0"/>
@@ -19,8 +19,8 @@
       <Label title="身体白又胖" titleColor="#333333" titleFontSize="24"/>
     </component>
     <image id="n17_fzlu" name="imgInputBg" src="fzlucyibx" fileName="img_UI3/dialog/btn_Dialog_shurukuang_2.png" pkg="te1gxawo" xy="475,413" size="371,67" group="n9_j5jv"/>
-    <text id="n6_j5jv" name="inpAnswer" xy="483,418" size="355,56" group="n9_j5jv" input="true" prompt="[size=24]输入答案[/size]" fontSize="24" color="#999999" vAlign="middle" autoSize="none" text=""/>
-    <group id="n9_j5jv" name="grpAnswer" xy="475,413" size="371,67" group="n11_qlcu" advanced="true" collapsed="true">
+    <text id="n6_j5jv" name="inpAnswer" xy="483,418" size="355,56" group="n9_j5jv" input="true" prompt="[size=24]输入答案[/size]" fontSize="24" color="#999999" vAlign="middle" autoSize="none" singleLine="true" text=""/>
+    <group id="n9_j5jv" name="grpAnswer" xy="475,413" size="371,67" group="n11_qlcu" advanced="true">
       <gearDisplay controller="ctrlType" pages="2"/>
     </group>
     <component id="n3_j5jv" name="btnClose" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="934,480" size="73,71" group="n11_qlcu">
