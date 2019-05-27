@@ -361,6 +361,14 @@
     <image id="qouocyibt" name="btn_cm_label_5a.png" path="/img_UI3/" exported="true"/>
     <component id="oyy0cyibu" name="ToolTipStatusBar.xml" path="/tooltip/" exported="true"/>
     <component id="oyy0cyibv" name="comStatusBarItem.xml" path="/tooltip/"/>
+    <image id="fzlucyibw" name="btn_Dialog_guanbi_5.png" path="/img_UI3/dialog/" exported="true"/>
+    <image id="fzlucyibx" name="btn_Dialog_shurukuang_2.png" path="/img_UI3/dialog/" exported="true" scale="9grid" scale9grid="29,17,58,34"/>
+    <image id="fzlucyiby" name="btn_Dialog_tijiao_1.png" path="/img_UI3/dialog/" exported="true"/>
+    <image id="fzlucyibz" name="img_Dialog_dikuang_6.png" path="/img_UI3/dialog/" exported="true" scale="9grid" scale9grid="36,37,72,74"/>
+    <image id="fzlucyic0" name="img_Dialog_duixiangkuang_3.png" path="/img_UI3/dialog/" exported="true"/>
+    <image id="fzlucyic1" name="img_Dialog_duixiangkuang_4.png" path="/img_UI3/dialog/" exported="true"/>
+    <image id="fzlucyic2" name="img_Dialog_xiaosanjiao_7.png" path="/img_UI3/dialog/" exported="true"/>
+    <component id="fzlucyic3" name="LabClickNextTf.xml" path="/lab/" exported="true"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>
