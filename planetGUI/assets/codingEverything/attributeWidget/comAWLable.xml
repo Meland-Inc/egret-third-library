@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="348,48">
   <displayList>
-    <image id="n4_d38r" name="imgBg" src="gu60cyiai" fileName="UI2_Img/img_cm_text1.png" pkg="te1gxawo" xy="94,0" size="254,48">
+    <image id="n4_d38r" name="imgBg" src="df6n5e" fileName="img_UI3/ide/img_ide_5.png" pkg="32ieekgu" xy="94,1" size="256,53">
       <relation target="n2_d38r" sidePair="width-width,height-height"/>
     </image>
-    <text id="n0_d38r" name="labTitle" xy="20,9" size="53,31" fontSize="24" color="#38211b" text="标题"/>
-    <text id="n2_d38r" name="labContent" xy="110,16" size="225,25" input="true" fontSize="18" color="#38211b" autoSize="none" text="猜猜我是谁"/>
-    <image id="n5_gjd5" name="n5" src="gu60cyiaa" fileName="UI2_Img/icon_cm_edit.png" pkg="te1gxawo" xy="352,12">
+    <text id="n0_d38r" name="labTitle" xy="20,9" size="57,35" fontSize="26" color="#456681" text="标题"/>
+    <text id="n2_d38r" name="labContent" xy="109,14" size="227,30" input="true" fontSize="22" color="#456681" leading="8" autoSize="none" text="猜猜我是谁"/>
+    <image id="n5_gjd5" name="n5" src="df6n5h" fileName="img_UI3/ide/img_ide_8.png" pkg="32ieekgu" xy="353,19">
       <relation target="n2_d38r" sidePair="right-right,bottom-bottom"/>
     </image>
   </displayList>

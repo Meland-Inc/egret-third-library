@@ -24,11 +24,7 @@
       <relation target="n42_py50" sidePair="bottom-bottom"/>
       <Button icon="ui://32ieekgudf6n5g"/>
     </component>
-    <image id="n41_py50" name="n41" src="df6n5e" fileName="img_UI3/ide/img_ide_5.png" xy="15,77" size="438,471" group="n45_py50">
-      <relation target="n46_rb1c" sidePair="width-width,height-height"/>
-      <relation target="n46_rb1c" sidePair="left-left,top-top"/>
-    </image>
-    <component id="n46_rb1c" name="comAttrubiteEdit" src="d38r0" fileName="com/comAttrubiteEdit.xml" pkg="kzio97vu" xy="15,77" size="438,471" group="n45_py50">
+    <component id="n46_rb1c" name="comAttrubiteEdit" src="d38r0" fileName="com/comAttrubiteEdit.xml" pkg="kzio97vu" xy="15,82" size="436,464" group="n45_py50">
       <relation target="" sidePair="height-height,top-top"/>
     </component>
     <component id="n44_py50" name="btnAttrCoding" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="158,570" size="150,56" group="n45_py50">
