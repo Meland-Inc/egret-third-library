@@ -4,8 +4,8 @@
     <image id="n32_py50" name="n32" src="df6n5c" fileName="img_UI3/ide/img_ide_3.png" xy="-11,-4" size="473,649" group="n45_py50">
       <relation target="" sidePair="height-height"/>
     </image>
-    <text id="n33_py50" name="tfAttrName" xy="21,21" size="175,43" group="n45_py50" fontSize="34" color="#ffffff" align="center" vAlign="middle" autoClearText="true" text="打地鼠物件"/>
-    <component id="n35_py50" name="btnAttrName" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="207,25" size="37,37" group="n45_py50">
+    <text id="n33_py50" name="tfAttrName" xy="21,21" size="175,43" group="n45_py50" input="true" fontSize="34" color="#ffffff" vAlign="middle" singleLine="true" autoClearText="true" text="打地鼠物件"/>
+    <component id="n35_py50" name="btnAttrName" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="207,25" size="37,37" group="n45_py50" touchable="false">
       <relation target="n33_py50" sidePair="left-right"/>
       <Button icon="ui://32ieekgudf6n5g"/>
     </component>
