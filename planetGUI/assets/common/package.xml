@@ -359,6 +359,8 @@
     <image id="qouocyibr" name="btn_cm_label_3a.png" path="/img_UI3/" exported="true"/>
     <image id="qouocyibs" name="btn_cm_label_4a.png" path="/img_UI3/" exported="true"/>
     <image id="qouocyibt" name="btn_cm_label_5a.png" path="/img_UI3/" exported="true"/>
+    <component id="oyy0cyibu" name="ToolTipStatusBar.xml" path="/tooltip/" exported="true"/>
+    <component id="oyy0cyibv" name="comStatusBarItem.xml" path="/tooltip/"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>

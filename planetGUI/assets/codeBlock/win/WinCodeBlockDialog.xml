@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640">
+  <controller name="ctrlType" pages="3,unknow,1,showText,2,question,0,selection" selected="0"/>
+  <displayList>
+    <list id="n2_j5jv" name="lstSelection" xy="740,77" size="236,363" overflow="scroll" lineGap="5" defaultItem="ui://4o62dubdj5jvj" vAlign="bottom">
+      <gearDisplay controller="ctrlType" pages="0"/>
+      <relation target="n11_qlcu" sidePair="bottom-bottom,right-right"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n0_j5jv" name="bg" src="efrs1p" fileName="newImg/bg_cm_6.png" pkg="te1gxawo" xy="143,465" size="850,140" group="n11_qlcu"/>
+    <component id="n5_j5jv" name="labContent" src="faw4yi79" fileName="lab/labVScroll.xml" pkg="te1gxawo" xy="199,483" size="741,106" group="n11_qlcu">
+      <Label titleColor="#000000" titleFontSize="20"/>
+    </component>
+    <graph id="n8_j5jv" name="inpBg" xy="191,403" size="352,59" group="n9_j5jv" type="rect" lineSize="0" fillColor="#fff4edc9" corner="10"/>
+    <text id="n6_j5jv" name="inpAnswer" xy="202,408" size="332,50" group="n9_j5jv" input="true" prompt="[size=18]输入答案[/size]" fontSize="18" vAlign="middle" autoSize="none" text=""/>
+    <group id="n9_j5jv" name="grpAnswer" xy="191,403" size="352,59" group="n11_qlcu" advanced="true">
+      <gearDisplay controller="ctrlType" pages="2"/>
+    </group>
+    <component id="n3_j5jv" name="btnClose" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="915,430" size="73,71" group="n11_qlcu">
+      <Button icon="ui://te1gxawoefrs1q"/>
+    </component>
+    <component id="n10_qlcu" name="btnSubmit" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="567,406" size="73,54" group="n11_qlcu">
+      <gearDisplay controller="ctrlType" pages="2"/>
+      <Button title="提交" titleColor="#000000" icon="ui://te1gxawopgixi4t"/>
+    </component>
+    <group id="n11_qlcu" name="root" xy="143,403" size="850,202" advanced="true">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </group>
+  </displayList>
+</component>
