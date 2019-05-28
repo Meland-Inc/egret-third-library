@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkuvgl3t" designImageAlpha="39">
-  <controller name="ctrlMapMode" pages="0,normal,1,build,2,quickBuild,3,quickEdit" selected="0"/>
+  <controller name="ctrlMapMode" pages="0,normal,1,build,2,quickBuild,3,quickEdit" selected="3"/>
   <displayList>
     <component id="n31_r2bf" name="comMainEnemyInfo" src="dura1l" fileName="win/ComMainEnemyInfo.xml" xy="233,7" size="152,45">
       <relation target="" sidePair="left-left,top-top"/>
@@ -9,11 +9,11 @@
       <gearDisplay controller="ctrlMapMode" pages="0"/>
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
-    <component id="n42_w0g2" name="comMainQuickBuild" src="ndxt83" fileName="win/ComMainQuickBuild.xml" xy="796,353">
+    <component id="n42_w0g2" name="comMainQuickBuild" src="ndxt83" fileName="win/ComMainQuickBuild.xml" xy="890,355">
       <gearDisplay controller="ctrlMapMode" pages="2,3"/>
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
-    <component id="n4_muc9" name="comMainRocker" src="uvgla1" fileName="win/ComMainRockerNew.xml" xy="0,256">
+    <component id="n4_muc9" name="comMainRocker" src="uvgla1" fileName="win/ComMainRocker.xml" xy="0,256">
       <relation target="" sidePair="left-left,bottom-bottom"/>
     </component>
     <component id="n33_r2bf" name="comMainInfo" src="uvgla2" fileName="win/ComMainInfo.xml" xy="409,0">

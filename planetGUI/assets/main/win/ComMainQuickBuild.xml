@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="299,194" opaque="false" designImage="ui://i25v0ebkuvgl3t" designImageAlpha="0">
+<component size="227,195" opaque="false" designImage="ui://i25v0ebkuvgl3t" designImageAlpha="0">
   <displayList>
-    <graph id="n9_xf9r" name="n9" xy="0,108" size="74,74" alpha="0" type="rect"/>
-    <graph id="n10_xf9r" name="n10" xy="109,182" size="80,80" alpha="0" type="rect"/>
-    <component id="n5_rdy4" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="181,96" size="98,98">
+    <component id="n5_rdy4" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="88,95" size="98,98">
       <Button icon="ui://5hs1fuejuvgl8r"/>
     </component>
-    <component id="n6_rdy4" name="btnRemove" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="0,104" size="80,80">
+    <component id="n6_rdy4" name="btnRemove" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="31,19" size="80,80">
       <Button icon="ui://32ieekguddnk35"/>
     </component>
-    <component id="n11_9wxv" name="btnCancel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="233,15" size="66,66">
+    <component id="n11_9wxv" name="btnCancel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="140,14" size="66,66">
       <Button icon="ui://5hs1fuejuvgl8p"/>
     </component>
-    <component id="n8_lhu4" name="btnMirror" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="93,113" size="66,66">
+    <component id="n8_lhu4" name="btnMirror" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="0,112" size="66,66">
       <Button icon="ui://5hs1fuejuvgl8q"/>
     </component>
     <text id="n16_uvbh" name="tfOverdueTime" xy="-13,180" size="107,15" hideByEditor="true" visible="false" fontSize="10" color="#ffffff" align="center" vars="true" autoSize="none" text="{day=10}天{hour=10}小时{minute=10}分{second=10}秒"/>
-    <component id="n17_jtn8" name="labBuildingCountdown" src="jtn84o" fileName="Com/LabBuildingCountdown.xml" pkg="32ieekgu" xy="-14,85" size="107,15">
+    <component id="n17_jtn8" name="labBuildingCountdown" src="jtn84o" fileName="Com/LabBuildingCountdown.xml" pkg="32ieekgu" xy="17,0" size="107,15">
       <Label title="{day=10}天{hour=10}小时{minute=10}分{second=10}秒" titleColor="#ffffff" titleFontSize="10"/>
     </component>
-    <component id="n18_uvgl" name="comBuildRocker" src="uvglah" fileName="com/ComBuildRocker.xml" xy="110,0"/>
+    <component id="n18_uvgl" name="comBuildRocker" src="uvglah" fileName="com/ComBuildRocker.xml" xy="110,0" hideByEditor="true" visible="false"/>
   </displayList>
 </component>
