@@ -5,38 +5,27 @@
     <component id="n9_j7co" name="mainContainer" src="j7co5y" fileName="com/comMainContainer.xml" xy="0,0" size="981,587">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </component>
-    <component id="n5_t3y1" name="btnRun" src="t3y12h" fileName="btn/btnRun.xml" xy="709,490" size="140,55">
-      <gearText controller="codeType" pages="0" values="运行" default="保存"/>
-      <relation target="" sidePair="bottom-bottom,left-left%"/>
-      <Button title="运行" sound="ui://fknoioovtqc911"/>
+    <component id="n21_8tz6" name="btnUndo" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="28,11" size="85,87" locked="true" visible="false">
+      <relation target="" sidePair="left-left,top-top"/>
+      <Button icon="ui://rnqj1l77tcu29q"/>
     </component>
-    <component id="n6_t3y1" name="btnShare" src="t3y12f" fileName="btn/btnShare.xml" xy="547,490" size="140,55">
-      <gearDisplay controller="codeType" pages="0"/>
-      <gearText controller="codeType" default=""/>
-      <relation target="" sidePair="bottom-bottom,left-left%"/>
-      <Button sound="ui://fknoioovtqc911"/>
+    <component id="n22_8tz6" name="btnRedo" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="129,11" size="85,87" locked="true" visible="false">
+      <relation target="" sidePair="left-left,top-top"/>
+      <Button icon="ui://rnqj1l77tcu29r"/>
     </component>
-    <component id="n13_sdqn" name="btnSave" src="sdqn7f" fileName="btn/btnSave.xml" xy="385,490" size="140,55">
-      <gearXY controller="codeType" pages="0,1" values="385,490|501,490"/>
-      <gearText controller="codeType" pages="0" values="保存" default="保存模板"/>
-      <relation target="" sidePair="bottom-bottom,left-left%"/>
-      <Button title="保存" sound="ui://fknoioovtqc911"/>
-    </component>
-    <image id="n15_edsm" name="btnOperateBg" src="t3y12d" fileName="img/img_edit_bg.png" xy="885,247" size="59,290" group="n20_edsm"/>
-    <component id="n16_edsm" name="btnReset" src="t3y128" fileName="btn/btnReset.xml" xy="887,329" group="n20_edsm">
-      <Button sound="ui://fknoioovtqc911"/>
-    </component>
-    <component id="n17_edsm" name="btnZoomOut" src="t3y12a" fileName="btn/btnZoomOut.xml" xy="887,401" group="n20_edsm">
-      <Button sound="ui://fknoioovtqc911"/>
-    </component>
-    <component id="n18_edsm" name="btnZoomIn" src="t3y12c" fileName="btn/btnZoomIn.xml" xy="887,473" group="n20_edsm">
-      <Button sound="ui://fknoioovtqc911"/>
-    </component>
-    <component id="n19_edsm" name="btnUndo" src="t3y125" fileName="btn/btnUndo.xml" xy="887,257" group="n20_edsm">
-      <Button sound="ui://fknoioovtqc911"/>
-    </component>
-    <group id="n20_edsm" name="n20" xy="885,247" size="59,290" advanced="true">
-      <relation target="" sidePair="right-right,bottom-bottom"/>
+    <image id="n25_8tz6" name="imgDelete" src="tcu297" fileName="newImg2/img_code_a3.png" xy="834,438">
+      <relation target="" sidePair="bottom-bottom,right-right"/>
+    </image>
+    <image id="n24_8tz6" name="imgCopy" src="tcu296" fileName="newImg2/img_code_a2.png" xy="687,438" visible="false">
+      <relation target="" sidePair="bottom-bottom,right-right"/>
+    </image>
+    <image id="n23_8tz6" name="imgQuestion" src="tcu295" fileName="newImg2/img_code_a1.png" xy="540,438" locked="true" visible="false">
+      <relation target="" sidePair="bottom-bottom,right-right"/>
+    </image>
+    <image id="n26_8tz6" name="imgTipsBG" src="qouocyibh" fileName="img_UI3/img_cm_tips1.png" pkg="te1gxawo" xy="459,338" group="n28_8tz6" locked="true"/>
+    <text id="n27_8tz6" name="tfTips" xy="496,339" size="138,57" group="n28_8tz6" locked="true" fontSize="18" align="center" vAlign="middle" autoSize="none" text="拖拽指令到这里了解更多"/>
+    <group id="n28_8tz6" name="tips" xy="459,338" size="211,98" visible="false" advanced="true">
+      <relation target="n23_8tz6" sidePair="bottom-top,left-left"/>
     </group>
   </displayList>
 </component>

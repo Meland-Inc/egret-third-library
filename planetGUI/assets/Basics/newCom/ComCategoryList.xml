@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="816,596" opaque="false" adaptationTest="FitSize">
-  <controller name="deleteLayer" alias="deleteLayer" exported="true" pages="0,normal,1,deleteTip,2,delete" selected="0"/>
-  <controller name="openFrom" pages="0,bot,1,build" selected="0"/>
+<component size="1136,640" opaque="false" designImage="ui://i25v0ebktcu23b" designImageAlpha="100" adaptationTest="FitSize">
   <displayList>
-    <image id="n15_edsm" name="n15" src="edsmcyi8s" fileName="newImg/img_cm_bottom_18.png" pkg="te1gxawo" xy="0,0" size="162,596" color="#000000">
-      <relation target="n25_hoex" sidePair="width-width,height-height"/>
-    </image>
-    <component id="n27_hoex" name="comCodeblocksPool" src="y583d" fileName="com/CodeblockPool.xml" xy="176,7" size="630,578" blend="none">
-      <relation target="" sidePair="left-left,bottomext-bottom"/>
+    <component id="n27_hoex" name="comCodeblocksPool" src="y583d" fileName="com/CodeblockPool.xml" xy="398,0" size="630,640" blend="none">
+      <relation target="" sidePair="right-right,bottomext-bottom"/>
     </component>
-    <list id="n25_hoex" name="lstCategory" xy="1,3" size="155,585" defaultItem="ui://rnqj1l77hoexa8" align="center" vAlign="middle">
-      <relation target="" sidePair="bottomext-bottom"/>
+    <image id="n28_8tz6" name="imgListBG" src="tcu2a4" fileName="newImg2/img_code_1.png" xy="1016,0" size="125,640">
+      <relation target="" sidePair="bottomext-bottom,right-right"/>
+    </image>
+    <list id="n25_hoex" name="lstCategory" xy="969,67" size="168,561" lineGap="-3" defaultItem="ui://rnqj1l77hoexa8" align="center" vAlign="middle">
+      <relation target="" sidePair="bottomext-bottom,right-right"/>
       <item icon="ui://rnqj1l77tcu29w" name="event"/>
       <item icon="ui://rnqj1l77tcu29x" name="control"/>
       <item icon="ui://rnqj1l778tz6tag" name="prop"/>
@@ -20,17 +18,12 @@
       <item icon="ui://rnqj1l77tcu2a2" name="operator"/>
       <item icon="ui://rnqj1l77tcu2a3" name="variable"/>
     </list>
-    <image id="n11_r3nk" name="n11" src="edsmcyi8u" fileName="newImg/img_cm_bottom_20.png" pkg="te1gxawo" xy="0,0" size="162,596">
-      <gearDisplay controller="deleteLayer" pages="1,2"/>
-      <relation target="n25_hoex" sidePair="width-width,height-height"/>
-    </image>
-    <image id="n12_r3nk" name="n12" src="edsm7t" fileName="newImg/img_code_trashcan1.png" xy="26,230">
-      <gearDisplay controller="deleteLayer" pages="1"/>
-      <relation target="n25_hoex" sidePair="center-center,top-top"/>
-    </image>
-    <image id="n13_r3nk" name="n13" src="edsm7u" fileName="newImg/img_code_trashcan2.png" xy="26,230">
-      <gearDisplay controller="deleteLayer" pages="2"/>
-      <relation target="n11_r3nk" sidePair="center-center,top-top"/>
-    </image>
+    <component id="n29_8tz6" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1047,5" size="65,59">
+      <relation target="" sidePair="right-right,top-top"/>
+      <Button icon="ui://rnqj1l77tcu29s"/>
+    </component>
+    <component id="n30_nx0y" name="comEditVariate" src="p3g7a9" fileName="newCom/ComEditVariate.xml" xy="0,0">
+      <relation target="" sidePair="left-left,top-top"/>
+    </component>
   </displayList>
 </component>

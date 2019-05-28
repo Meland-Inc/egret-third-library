@@ -1,51 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" opaque="false" designImage="ui://i25v0ebkedsmu" adaptationTest="FitSize">
+<component size="1136,640" opaque="false" designImage="ui://i25v0ebktcu23b" designImageAlpha="100" adaptationTest="FitSize">
   <displayList>
-    <image id="n14_edsm" name="n14" src="efrs1o" fileName="newImg/bg_cm_5.png" pkg="te1gxawo" xy="0,0" size="1136,640" group="n23_hn4b">
+    <image id="n14_edsm" name="imgBG" src="tcu29j" fileName="newImg2/bg_code_1.png" xy="0,0" size="1136,640" group="n23_hn4b">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </image>
-    <component id="n5_n1c0" name="codeBlockContainer" src="n1c01j" fileName="com/CodeblockContainer.xml" xy="161,53" size="972,584" group="n23_hn4b">
+    <component id="n5_n1c0" name="codeBlockContainer" src="n1c01j" fileName="com/CodeblockContainer.xml" xy="135,0" size="887,640" group="n23_hn4b">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
-      <relation target="n6_n1c0" sidePair="left-left,top-top"/>
+      <relation target="" sidePair="left-left,top-top"/>
     </component>
     <component id="n12_k1p2" name="mask" src="k1p26w" fileName="com/RunningState.xml" xy="0,56" size="1136,584" group="n23_hn4b" hideByEditor="true">
       <relation target="" sidePair="width-width,bottomext-bottom"/>
     </component>
-    <component id="n13_sdqn" name="templatePanel" src="sdqn71" fileName="com/TemplatePanel.xml" xy="220,103" group="n23_hn4b" hideByEditor="true">
+    <component id="n13_sdqn" name="templatePanel" src="sdqn71" fileName="com/TemplatePanel.xml" xy="220,103" group="n23_hn4b" locked="true" hideByEditor="true" visible="false">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <image id="n17_edsm" name="n17" src="efrs23" fileName="newImg/img_cm_title2.png" pkg="te1gxawo" xy="482,9" group="n23_hn4b">
+    <image id="n17_edsm" name="n17" src="efrs23" fileName="newImg/img_cm_title2.png" pkg="te1gxawo" xy="482,9" group="n23_hn4b" locked="true" hideByEditor="true" visible="false">
       <relation target="" sidePair="center-center,top-top"/>
     </image>
-    <text id="n18_edsm" name="n18" xy="518,10" size="137,29" group="n23_hn4b" fontSize="22" color="#ffffff" align="center" vAlign="middle" leading="0" autoSize="none" strokeColor="#352e2c" strokeSize="2" text="代码块编辑器">
+    <text id="n18_edsm" name="n18" xy="518,10" size="137,29" group="n23_hn4b" locked="true" hideByEditor="true" visible="false" fontSize="22" color="#ffffff" align="center" vAlign="middle" leading="0" autoSize="none" strokeColor="#352e2c" strokeSize="2" text="代码块编辑器">
       <relation target="n17_edsm" sidePair="center-center,middle-middle"/>
     </text>
-    <component id="n15_edsm" name="btnReset" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="40,5" size="126,40" group="n23_hn4b">
+    <component id="n15_edsm" name="btnReset" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="40,5" size="126,40" group="n23_hn4b" locked="true" hideByEditor="true" visible="false">
       <relation target="" sidePair="left-left%,top-top"/>
       <Button title="恢复默认" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawoqo8vi21" selectedIcon="ui://te1gxawoqo8vi21"/>
     </component>
-    <component id="n16_edsm" name="btnTemplate" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="180,5" size="136,40" group="n23_hn4b">
+    <component id="n16_edsm" name="btnTemplate" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="180,5" size="136,40" group="n23_hn4b" locked="true" hideByEditor="true" visible="false">
       <relation target="" sidePair="left-left%,top-top"/>
       <Button title="代码块模版" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawoefrs1w" selectedIcon="ui://te1gxawoefrs1w"/>
     </component>
-    <component id="n20_edsm" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1044,3" size="80,42" group="n23_hn4b">
-      <relation target="" sidePair="right-right,top-top"/>
-      <Button icon="ui://te1gxawoefrs1r" selectedIcon="ui://te1gxawoefrs1r"/>
-    </component>
-    <component id="n21_f89o" name="btnUserGuide" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="350,8" size="37,38" group="n23_hn4b">
+    <component id="n21_f89o" name="btnUserGuide" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="350,8" size="37,38" group="n23_hn4b" locked="true" hideByEditor="true" visible="false">
       <relation target="" sidePair="left-left%,top-top"/>
       <Button icon="ui://te1gxawoedsmcyi8v" selectedIcon="ui://te1gxawoedsmcyi8v"/>
     </component>
-    <graph id="n22_foyo" name="noviceHeaderBlockRect" xy="0,0" size="1136,53" group="n23_hn4b" hideByEditor="true" visible="false" alpha="0" touchable="false" type="rect">
+    <graph id="n22_foyo" name="noviceHeaderBlockRect" xy="0,0" size="1136,53" group="n23_hn4b" locked="true" hideByEditor="true" visible="false" alpha="0" touchable="false" type="rect">
       <relation target="" sidePair="width-width"/>
     </graph>
-    <component id="n24_tcu2" name="comCodeBlockExclusiveChoiceList" src="tcu290" fileName="newCom/ComCodeBlockExclusiveChoiceList.xml" xy="784,7" group="n23_hn4b" hideByEditor="true">
-      <relation target="" sidePair="right-right,height-height"/>
-    </component>
-    <component id="n6_n1c0" name="comCategoryList" src="n1c01l" fileName="newCom/ComCategoryList.xml" xy="0,53" size="807,584" group="n23_hn4b" controller="deleteLayer,0">
+    <component id="n26_oiwy" name="comEntitySelect" src="df6n5l" fileName="Com/ComMapEntitySelect.xml" pkg="32ieekgu" xy="-1,-1" size="425,643" group="n23_hn4b" controller="ctrlState,2">
       <relation target="" sidePair="left-left,bottomext-bottom"/>
     </component>
-    <component id="n25_1194t" name="comCalculator" src="1194tac" fileName="newCom/ComCodeCalculator.xml" xy="734,9" group="n23_hn4b" hideByEditor="true"/>
-    <group id="n23_hn4b" name="n23" xy="0,0" size="1146,640"/>
+    <component id="n6_n1c0" name="comCategoryList" src="n1c01l" fileName="newCom/ComCategoryList.xml" xy="0,0" size="1136,640" group="n23_hn4b">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </component>
+    <component id="n24_tcu2" name="comCodeBlockExclusiveChoiceList" src="tcu290" fileName="newCom/ComCodeBlockExclusiveChoiceList.xml" xy="662,0" size="362,640" group="n23_hn4b">
+      <relation target="" sidePair="right-right,height-height"/>
+    </component>
+    <component id="n25_1194t" name="comCalculator" src="1194tac" fileName="newCom/ComCodeCalculator.xml" xy="609,9" group="n23_hn4b" hideByEditor="true"/>
+    <group id="n23_hn4b" name="n23" xy="-1,-1" size="1137,643"/>
   </displayList>
 </component>

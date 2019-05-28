@@ -204,7 +204,7 @@
     <component id="tcu290" name="ComCodeBlockExclusiveChoiceList.xml" path="/newCom/" exported="true"/>
     <component id="tcu291" name="btnOtion.xml" path="/newBtn/"/>
     <image id="tcu292" name="img_code_4.png" path="/newImg2/" scale="9grid" scale9grid="12,16,21,20"/>
-    <image id="tcu293" name="img_code_5.png" path="/newImg2/" scale="9grid" scale9grid="12,12,24,24"/>
+    <image id="tcu293" name="img_code_5.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="12,12,24,24"/>
     <image id="tcu294" name="img_code_6.png" path="/newImg2/" scale="9grid" scale9grid="12,12,24,24"/>
     <image id="tcu295" name="img_code_a1.png" path="/newImg2/"/>
     <image id="tcu296" name="img_code_a2.png" path="/newImg2/"/>
@@ -241,13 +241,13 @@
     <image id="tcu2a1" name="btn_code_b6.png" path="/newImg2/"/>
     <image id="tcu2a2" name="btn_code_b7.png" path="/newImg2/" scale="9grid" scale9grid="21,16,65,38"/>
     <image id="tcu2a3" name="btn_code_b8.png" path="/newImg2/" scale="9grid" scale9grid="16,13,74,41"/>
-    <image id="tcu2a4" name="img_code_1.png" path="/newImg2/"/>
+    <image id="tcu2a4" name="img_code_1.png" path="/newImg2/" scale="9grid" scale9grid="20,20,40,40"/>
     <image id="tcu2a5" name="img_code_2.png" path="/newImg2/" scale="9grid" scale9grid="20,20,40,40"/>
     <image id="tcu2a6" name="img_code_3.png" path="/newImg2/" scale="9grid" scale9grid="20,20,40,40"/>
     <component id="hoexa7" name="ComVariateEdit.xml" path="/newCom/" exported="true"/>
     <component id="hoexa8" name="btnCategory.xml" path="/newBtn/"/>
     <component id="p3g7a9" name="ComEditVariate.xml" path="/newCom/"/>
-    <image id="p3g7aa" name="img_bg_translucent.png" path="/newImg2/" exported="true"/>
+    <image id="p3g7aa" name="img_bg_translucent.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="16,16,32,32"/>
     <component id="x8ztab" name="btnVariateScope.xml" path="/newBtn/"/>
     <image id="mcvlac" name="icon_code_queding_02.png" path="/newImg2/"/>
     <image id="mcvlad" name="img_code_tishi_04.png" path="/newImg2/"/>
@@ -261,6 +261,16 @@
     <image id="ptzjtae" name="img_code_tongyong_jiahao_5.png" path="/newImg2/"/>
     <image id="ptzjtaf" name="img_code_tongyong_jianhao_6.png" path="/newImg2/"/>
     <image id="8tz6tag" name="iocn_code_shiti_5.png" path="/newImg2/"/>
+    <image id="oiwytah" name="img_code_xuanzedaoju_5.png" path="/newImg2/" exported="true"/>
+    <image id="oiwytai" name="img_code_zhezhao_10.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="27,29,54,58"/>
+    <image id="oiwytaj" name="img_code_wupindikuang_9.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="30,29,60,58"/>
+    <image id="oiwytak" name="img_code_laidi_8.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="25,25,50,50"/>
+    <image id="oiwytal" name="img_code_landi_7.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="25,24,50,48"/>
+    <image id="oiwytam" name="btn_code_xuanzhong_1.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="50,15,100,30"/>
+    <image id="oiwytan" name="btn_code_weixuanzhong_2.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="50,15,100,30"/>
+    <image id="oiwytao" name="btn_code_queding_3.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="35,8,70,31"/>
+    <image id="oiwytap" name="img_code_wupingkuang_6.png" path="/newImg2/" exported="true"/>
+    <image id="oiwytaq" name="img_code_wupingkuang_6 _1.png" path="/newImg2/" exported="true"/>
   </resources>
   <publish name="Basics"/>
 </packageDescription>

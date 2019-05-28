@@ -1,18 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" designImage="ui://i25v0ebkedsmw">
+<component size="1136,640" designImage="ui://i25v0ebkoiwy3y">
   <displayList>
-    <image id="n0_oe8k" name="n0" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="248,93" size="695,430" group="n16_j1n2"/>
-    <image id="n14_j1n2" name="n14" src="edsmcyi8s" fileName="newImg/img_cm_bottom_18.png" pkg="te1gxawo" xy="262,140" size="168,353" group="n16_j1n2"/>
-    <image id="n15_j1n2" name="n15" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="438,138" size="488,308" group="n16_j1n2"/>
-    <image id="n18_f5ut" name="n18" src="efrs22" fileName="newImg/img_cm_title1.png" pkg="te1gxawo" xy="506,95" group="n16_j1n2"/>
-    <text id="n2_oe8k" name="n2" xy="552,100" size="85,27" group="n16_j1n2" fontSize="20" color="#f5ebde" align="center" vAlign="middle" text="选择道具"/>
-    <list id="n3_oe8k" name="listTab" xy="280,158" size="132,290" group="n16_j1n2" margin="2,2,2,2" lineGap="5" defaultItem="ui://4o62dubdf89oh">
+    <image id="n21_oiwy" name="imgBG" src="oiwytai" fileName="newImg2/img_code_zhezhao_10.png" pkg="rnqj1l77" xy="0,0" size="1136,640">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </image>
+    <image id="n0_oe8k" name="imgBG" src="oiwytal" fileName="newImg2/img_code_landi_7.png" pkg="rnqj1l77" xy="60,75" size="980,506">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n15_j1n2" name="imgMainBG" src="oiwytak" fileName="newImg2/img_code_laidi_8.png" pkg="rnqj1l77" xy="301,143" size="718,418">
+      <relation target="n0_oe8k" sidePair="right-right,bottom-bottom"/>
+    </image>
+    <component id="n10_11slc" name="btnConfirm" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="858,497" size="140,50">
+      <relation target="n0_oe8k" sidePair="right-right,bottom-bottom"/>
+      <Button titleColor="#472f16" titleFontSize="18" icon="ui://rnqj1l77oiwytao"/>
+    </component>
+    <component id="n13_j1n2" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="970,80" size="56,56">
+      <relation target="n0_oe8k" sidePair="right-right,top-top"/>
+      <Button icon="ui://te1gxawoqouocyib8"/>
+    </component>
+    <image id="n19_oiwy" name="imgTitle" src="oiwytah" fileName="newImg2/img_code_xuanzedaoju_5.png" pkg="rnqj1l77" xy="483,86">
+      <relation target="n0_oe8k" sidePair="center-center,top-top"/>
+    </image>
+    <image id="n20_oiwy" name="imgItemBG" src="oiwytaj" fileName="newImg2/img_code_wupindikuang_9.png" pkg="rnqj1l77" xy="322,163" size="678,323">
+      <relation target="n0_oe8k" sidePair="right-right,bottom-bottom"/>
+    </image>
+    <list id="n3_oe8k" name="listTab" xy="78,141" size="209,425" margin="2,2,2,2" lineGap="13" defaultItem="ui://4o62dubdf89oh">
+      <relation target="n0_oe8k" sidePair="left-left,top-top"/>
       <item title="玩家建筑物品"/>
       <item title="武器"/>
       <item title="食物"/>
       <item title="其他"/>
     </list>
-    <list id="n4_oe8k" name="listItem" xy="462,149" size="434,289" group="n16_j1n2" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="1" colGap="1" lineItemCount="6" defaultItem="ui://te1gxawoj1n2cyi8y">
+    <list id="n4_oe8k" name="listItem" xy="350,182" size="620,289" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="11" colGap="18" lineItemCount="6" defaultItem="ui://te1gxawoj1n2cyi8y">
+      <relation target="n0_oe8k" sidePair="right-right,top-top"/>
       <item/>
       <item/>
       <item/>
@@ -24,15 +44,5 @@
       <item/>
       <item/>
     </list>
-    <component id="n10_11slc" name="btnConfirm" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="778,450" size="110,40" group="n16_j1n2">
-      <Button title="确定" titleColor="#472f16" titleFontSize="18" icon="ui://te1gxawoefrs1w"/>
-    </component>
-    <component id="n13_j1n2" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="892,95" size="36,36" group="n16_j1n2" visible="false">
-      <Button icon="ui://te1gxawohpymyi7o" selectedIcon="ui://te1gxawohpymyi7o"/>
-    </component>
-    <image id="n17_f5ut" name="n17" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="255,504" size="680,14" group="n16_j1n2"/>
-    <group id="n16_j1n2" name="n16" xy="248,93" size="695,430" advanced="true">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </group>
   </displayList>
 </component>

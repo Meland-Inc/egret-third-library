@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="72,72" extention="Button">
+<component size="88,88" extention="Button">
   <controller name="button" pages="0,up,1,down" selected="0"/>
+  <controller name="btnType" pages="0,common ,1,codeBlock" selected="1"/>
   <displayList>
-    <image id="n7_j1n2" name="bg" src="ot9si33" fileName="newImg/img_cm_item_2.png" xy="2,2"/>
-    <loader id="n14_ww3a" name="quality" xy="6,6" pivot="0.5,0.5" size="60,60" group="n17_ww3a" visible="false" url="ui://te1gxawoz45zcyi99"/>
-    <loader id="n15_ww3a" name="icon" xy="6,6" pivot="0.5,0.5" size="60,60" group="n17_ww3a" align="center" vAlign="middle" fill="scale">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </loader>
-    <text id="n18_i7sy" name="num" xy="63,58" pivot="1,0.5" anchor="true" size="19,19" group="n17_ww3a" visible="false" fontSize="12" color="#74634c" align="right" vAlign="middle" text="99"/>
-    <group id="n17_ww3a" name="grpItemIcon" xy="6,6" size="76,71" advanced="true"/>
-    <image id="n12_j1n2" name="selectedBg" src="j21fi3v" fileName="newImg/img_cm_item_6.png" xy="0,0">
+    <image id="n19_oiwy" name="propBG" src="oiwytap" fileName="newImg2/img_code_wupingkuang_6.png" pkg="rnqj1l77" xy="0,0">
+      <gearDisplay controller="btnType" pages="1"/>
+    </image>
+    <image id="n20_oiwy" name="propSelectBG" src="oiwytaq" fileName="newImg2/img_code_wupingkuang_6 _1.png" pkg="rnqj1l77" xy="0,0">
       <gearDisplay controller="button" pages="1"/>
+      <gearLook controller="btnType" pages="0" values="0,0,0,1" default="1,0,0,1"/>
+    </image>
+    <image id="n7_j1n2" name="bg" src="ot9si33" fileName="newImg/img_cm_item_2.png" xy="2,2">
+      <gearDisplay controller="btnType" pages="0"/>
+    </image>
+    <loader id="n14_ww3a" name="quality" xy="14,14" pivot="0.5,0.5" size="60,60" group="n17_ww3a" visible="false" url="ui://te1gxawoz45zcyi99">
+      <gearXY controller="btnType" pages="1" values="14,14" default="6,6"/>
+    </loader>
+    <loader id="n15_ww3a" name="icon" xy="14,14" pivot="0.5,0.5" size="60,60" group="n17_ww3a" align="center" vAlign="middle" fill="scale">
+      <relation target="n14_ww3a" sidePair="center-center,middle-middle"/>
+    </loader>
+    <text id="n18_i7sy" name="num" xy="63,58" pivot="1,0.5" anchor="true" size="17,18" group="n17_ww3a" visible="false" fontSize="12" color="#74634c" align="right" vAlign="middle" text="99"/>
+    <group id="n17_ww3a" name="grpItemIcon" xy="14,14" size="60,60" advanced="true"/>
+    <image id="n12_j1n2" name="selectedBg" src="j21fi3v" fileName="newImg/img_cm_item_6.png" xy="0,0" size="88,88" alpha="0">
+      <gearDisplay controller="button" pages="1"/>
+      <gearSize controller="btnType" pages="1" values="88,88,1,1" default="72,72,1,1"/>
+      <gearLook controller="btnType" pages="1" values="0,0,0,1" default="1,0,0,1"/>
     </image>
   </displayList>
   <Button mode="Radio"/>
+  <relation target="n12_j1n2" sidePair="width-width,height-height"/>
 </component>
