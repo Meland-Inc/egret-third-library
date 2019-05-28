@@ -1,34 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640">
-  <controller name="ctrlType" pages="0,select,1,show,2,question" selected="0"/>
+<component size="1136,640" designImage="ui://i25v0ebkfzlu3y" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlType" pages="3,unknow,1,showText,2,question,0,selection" selected="2"/>
   <displayList>
-    <list id="n2_j5jv" name="lstSelection" xy="740,77" size="236,363" overflow="scroll" lineGap="5" defaultItem="ui://4o62dubdj5jvj" vAlign="bottom">
+    <list id="n2_j5jv" name="lstSelection" xy="544,77" size="464,402" layout="flow_hz" overflow="scroll" lineGap="10" colGap="10" defaultItem="ui://4o62dubdj5jvj" align="right" vAlign="bottom">
       <gearDisplay controller="ctrlType" pages="0"/>
       <relation target="n11_qlcu" sidePair="bottom-bottom,right-right"/>
       <item/>
       <item/>
       <item/>
       <item/>
-      <item/>
-      <item/>
     </list>
-    <image id="n0_j5jv" name="bg" src="efrs1p" fileName="newImg/bg_cm_6.png" pkg="te1gxawo" xy="143,465" size="850,140" group="n11_qlcu"/>
-    <component id="n5_j5jv" name="labContent" src="faw4yi79" fileName="lab/labVScroll.xml" pkg="te1gxawo" xy="199,483" size="741,106" group="n11_qlcu">
-      <Label titleColor="#000000" titleFontSize="20"/>
+    <image id="n0_j5jv" name="bg" src="fzlucyibz" fileName="img_UI3/dialog/img_Dialog_dikuang_6.png" pkg="te1gxawo" xy="133,479" size="872,148" group="n11_qlcu"/>
+    <image id="n13_fzlu" name="imgTitleBg" src="fzlucyic1" fileName="img_UI3/dialog/img_Dialog_duixiangkuang_4.png" pkg="te1gxawo" xy="91,451" group="n11_qlcu"/>
+    <image id="n15_fzlu" name="imgPoint" src="fzlucyic0" fileName="img_UI3/dialog/img_Dialog_duixiangkuang_3.png" pkg="te1gxawo" xy="103,475" group="n11_qlcu"/>
+    <text id="n14_fzlu" name="tfTitle" xy="118,471" size="157,31" group="n11_qlcu" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" singleLine="true" text="神秘大门"/>
+    <image id="n16_fzlu" name="imgDown" src="fzlucyic2" fileName="img_UI3/dialog/img_Dialog_xiaosanjiao_7.png" pkg="te1gxawo" xy="562,608" group="n11_qlcu" visible="false"/>
+    <component id="n18_fzlu" name="labContent" src="faw4yi79" fileName="lab/labVScroll.xml" pkg="te1gxawo" xy="177,531" size="724,75" group="n11_qlcu">
+      <Label title="身体白又胖" titleColor="#333333" titleFontSize="24"/>
     </component>
-    <graph id="n8_j5jv" name="inpBg" xy="191,403" size="352,59" group="n9_j5jv" type="rect" lineSize="0" fillColor="#fff4edc9" corner="10"/>
-    <text id="n6_j5jv" name="inpAnswer" xy="202,408" size="332,50" group="n9_j5jv" input="true" prompt="[size=18]输入答案[/size]" fontSize="18" vAlign="middle" autoSize="none" text=""/>
-    <group id="n9_j5jv" name="grpAnswer" xy="191,403" size="352,59" group="n11_qlcu" advanced="true">
+    <image id="n17_fzlu" name="imgInputBg" src="fzlucyibx" fileName="img_UI3/dialog/btn_Dialog_shurukuang_2.png" pkg="te1gxawo" xy="475,413" size="371,67" group="n9_j5jv"/>
+    <text id="n6_j5jv" name="inpAnswer" xy="483,418" size="355,56" group="n9_j5jv" input="true" prompt="[size=24]输入答案[/size]" fontSize="24" color="#999999" vAlign="middle" autoSize="none" singleLine="true" text=""/>
+    <group id="n9_j5jv" name="grpAnswer" xy="475,413" size="371,67" group="n11_qlcu" advanced="true">
       <gearDisplay controller="ctrlType" pages="2"/>
     </group>
-    <component id="n3_j5jv" name="btnClose" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="915,430" size="73,71" group="n11_qlcu">
-      <Button icon="ui://te1gxawoefrs1q"/>
+    <component id="n3_j5jv" name="btnClose" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="934,480" size="73,71" group="n11_qlcu">
+      <Button icon="ui://te1gxawofzlucyibw"/>
     </component>
-    <component id="n10_qlcu" name="btnSubmit" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="567,406" size="73,54" group="n11_qlcu">
+    <component id="n10_qlcu" name="btnSubmit" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="875,411" size="143,69" group="n11_qlcu">
       <gearDisplay controller="ctrlType" pages="2"/>
-      <Button title="提交" titleColor="#000000" icon="ui://te1gxawopgixi4t"/>
+      <Button titleColor="#000000" icon="ui://te1gxawofzlucyiby"/>
     </component>
-    <group id="n11_qlcu" name="root" xy="143,403" size="850,202" advanced="true">
+    <group id="n11_qlcu" name="root" xy="91,411" size="926,217" advanced="true">
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </group>
   </displayList>

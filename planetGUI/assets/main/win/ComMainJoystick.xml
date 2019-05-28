@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="274,287" opaque="false" designImage="ui://i25v0ebkuvgl3i" designImageOffsetX="-863" designImageOffsetY="-262" designImageAlpha="0" designImageLayer="1">
+<component size="274,287" opaque="false" designImage="ui://i25v0ebkuvgl3i" designImageOffsetX="-863" designImageOffsetY="-262" designImageAlpha="72" designImageLayer="1">
   <controller name="ctrlShowHide" pages="0,hide,1,show" selected="0"/>
   <displayList>
     <image id="n15_uvgl" name="imgBg" src="uvgl8f" fileName="img_UI3/btn_main_cebianlanzhankai 20.png" xy="221,0" size="274,82" group="n23_uvgl"/>
@@ -26,13 +26,13 @@
     <component id="n24_uvgl" name="btnAttack" src="w80lo" fileName="btn/btnAttack.xml" xy="115,188" alpha="0.7">
       <Button icon="ui://5hs1fuejuvgla0"/>
     </component>
-    <component id="n27_uvgl" name="btnOperate" src="rdy456" fileName="btn/btnOperate.xml" xy="70,117" visible="false" alpha="0.7">
+    <component id="n27_uvgl" name="btnOperate" src="rdy456" fileName="btn/btnOperate.xml" xy="58,105" visible="false" alpha="0.7">
       <Button icon="ui://5hs1fuejuvgl8l"/>
     </component>
-    <component id="n28_uvgl" name="btnWorkbench" src="rdy456" fileName="btn/btnOperate.xml" xy="167,108" visible="false" alpha="0.7">
+    <component id="n28_uvgl" name="btnWorkbench" src="rdy456" fileName="btn/btnOperate.xml" xy="157,100" size="89,82" visible="false" alpha="0.7">
       <Button icon="ui://5hs1fuejuvgl8k"/>
     </component>
-    <component id="n29_uvgl" name="btnTalk" src="rdy456" fileName="btn/btnOperate.xml" xy="27,204" visible="false" alpha="0.7">
+    <component id="n29_uvgl" name="btnTalk" src="rdy456" fileName="btn/btnOperate.xml" xy="23,197" size="77,80" visible="false" alpha="0.7">
       <Button icon="ui://5hs1fuejuvgl8j"/>
     </component>
   </displayList>

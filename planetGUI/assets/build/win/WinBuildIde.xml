@@ -84,7 +84,7 @@
     </component>
     <image id="n28_py50" name="n28" src="qouocyibh" fileName="img_UI3/img_cm_tips1.png" pkg="te1gxawo" xy="864,442" group="n50_py50"/>
     <image id="n29_py50" name="n29" src="qouocyibi" fileName="img_UI3/img_cm_warning.png" pkg="te1gxawo" xy="898,457" group="n50_py50"/>
-    <text id="n30_py50" name="n30" xy="925,457" size="125,26" group="n50_py50" fontSize="20" align="center" vAlign="middle" text="源码能源不足"/>
+    <text id="n30_py50" name="n30" xy="925,457" size="125,27" group="n50_py50" fontSize="20" align="center" vAlign="middle" text="源码能源不足"/>
     <group id="n50_py50" name="n50" xy="864,442" size="211,98" group="n31_py50" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlEnergy" pages="1"/>
     </group>
@@ -92,7 +92,7 @@
       <gearDisplay controller="ctrlRightView" pages="0"/>
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </group>
-    <component id="n32_py50" name="comAttr" src="1194t5r" fileName="win/ComBuilldAttr.xml" xy="670,0" size="466,640">
+    <component id="n32_py50" name="comAttr" src="1194t5r" fileName="win/ComBuildAttr.xml" xy="670,0" size="466,640">
       <gearDisplay controller="ctrlRightView" pages="2"/>
       <relation target="" sidePair="right-right,height-height"/>
     </component>
