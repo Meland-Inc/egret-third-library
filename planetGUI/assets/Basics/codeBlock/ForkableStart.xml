@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="152,67">
+  <displayList>
+    <image id="n5_liab" name="n5" src="liabte9" fileName="newImg2/img_code_kongzhi_1-1.png" xy="0,0" size="152,82">
+      <relation target="" sidePair="width-width"/>
+    </image>
+    <component id="n2_heu0" name="container" src="kesa9" fileName="com/Container.xml" xy="36,3" size="102,60" restrictSize="102,0,60,60"/>
+  </displayList>
+  <relation target="n2_heu0" sidePair="width-width,height-height"/>
+</component>

@@ -208,7 +208,6 @@
     <image id="tcu294" name="img_code_6.png" path="/newImg2/" scale="9grid" scale9grid="12,12,24,24"/>
     <image id="tcu295" name="img_code_a1.png" path="/newImg2/"/>
     <image id="tcu296" name="img_code_a2.png" path="/newImg2/"/>
-    <image id="tcu297" name="img_code_a3.png" path="/newImg2/"/>
     <image id="tcu298" name="img_code_n0.png" path="/newImg2/"/>
     <image id="tcu299" name="img_code_n1.png" path="/newImg2/"/>
     <image id="tcu29a" name="img_code_n2.png" path="/newImg2/"/>
@@ -341,7 +340,10 @@
     <image id="h5gvtco" name="img_code_yunsuan_10.png" path="/newImg2/"/>
     <image id="h5gvtcp" name="img_code_yunsuan_lingxing_5.png" path="/newImg2/"/>
     <image id="h5gvtcq" name="img_code_yunsuan_tuoyan_6.png" path="/newImg2/"/>
-    <component id="wdqftcr" name="ValueYellow.xml" path="/codeBlock/" exported="true"/>
+    <image id="pydetcr" name="img_code_a3-1.png" path="/newImg2/"/>
+    <image id="pydetcs" name="img_code_a3.png" path="/newImg2/"/>
+    <image id="pydetct" name="btn_code_bf_88.png" path="/newImg2/"/>
+    <component id="pydetcu" name="ValueYellow.xml" path="/codeBlock/" exported="true"/>
   </resources>
   <publish name="Basics"/>
 </packageDescription>

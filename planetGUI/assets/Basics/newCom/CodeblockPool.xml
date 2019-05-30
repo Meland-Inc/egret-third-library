@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="375,587" restrictSize="630,0,0,0">
+  <controller name="poolType" pages="0,,1,,2," selected="2"/>
+  <displayList>
+    <image id="n10_dib9" name="imgBG" src="tcu2a6" fileName="newImg2/img_code_3.png" xy="0,0" size="375,587">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n5_t09y" name="normalPool" src="t09yv" fileName="com/VerticalScrollComponent.xml" xy="7,10" size="361,566">
+      <gearDisplay controller="poolType" pages="0"/>
+      <relation target="" sidePair="height-height,width-width"/>
+    </component>
+    <component id="n12_mkhl" name="variatePool" src="t09yv" fileName="com/VerticalScrollComponent.xml" xy="8,68" size="358,429">
+      <gearDisplay controller="poolType" pages="1,2"/>
+      <relation target="" sidePair="height-height,width-width"/>
+      <relation target="" sidePair="top-top,left-left"/>
+    </component>
+    <component id="n15_mkhl" name="btnSetVariate" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="285,34" size="46,48">
+      <gearDisplay controller="poolType" pages="1"/>
+      <relation target="" sidePair="right-right,top-top"/>
+      <Button icon="ui://rnqj1l77tcu29u"/>
+    </component>
+    <component id="n18_nx0y" name="btnUnSetVariate" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="290,39" size="35,37">
+      <gearDisplay controller="poolType" pages="2"/>
+      <relation target="" sidePair="right-right,top-top"/>
+      <Button icon="ui://rnqj1l77tcu29t"/>
+    </component>
+    <component id="n17_hoex" name="btnCreateVariate" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="112,507" size="150,56">
+      <gearDisplay controller="poolType" pages="1,2"/>
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+      <Button icon="ui://rnqj1l77tcu29n"/>
+    </component>
+  </displayList>
+</component>
