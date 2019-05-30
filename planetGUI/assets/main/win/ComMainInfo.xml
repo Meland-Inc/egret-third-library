@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="317,63" designImage="ui://i25v0ebkuvgl3i" designImageOffsetX="-384" designImageAlpha="0" designImageLayer="1">
-  <controller name="weather" pages="1,night,0,day,2,dusk,3,dawn" selected="0">
+  <controller name="weather" pages="1,night,0,day,2,dusk,3,dawn" selected="3">
     <remark page="0" value="夜晚"/>
     <remark page="1" value="白天"/>
     <remark page="2" value="黄昏"/>

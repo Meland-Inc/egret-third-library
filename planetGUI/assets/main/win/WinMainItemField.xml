@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" opaque="false" designImage="ui://i25v0ebkuvgl3i" designImageAlpha="0" designImageLayer="1">
+<component size="1136,640" opaque="false" designImage="ui://i25v0ebke46z3z" designImageAlpha="31" designImageLayer="1">
   <controller name="ctrlStrech" pages="0,strech,1,normal" selected="0"/>
   <displayList>
-    <image id="n28_uvgl" name="bg1" src="uvgl90" fileName="img_UI3/img_main_beibaodise_13.png" xy="815,544" group="n30_uvgl"/>
-    <image id="n27_uvgl" name="bg2" src="uvgl8d" fileName="img_UI3/btn_main_beibaozhankai_4 .png" xy="229,511" group="n30_uvgl"/>
-    <component id="n22_o6si" name="btnBackpack" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="838,545" size="120,94" group="n30_uvgl">
+    <image id="n28_uvgl" name="bg2" src="uvgl90" fileName="img_UI3/img_main_beibaodise_13.png" xy="772,550" group="n30_uvgl"/>
+    <image id="n27_uvgl" name="bg1" src="uvgl8d" fileName="img_UI3/btn_main_beibaozhankai_4 .png" xy="229,530" group="n30_uvgl"/>
+    <component id="n22_o6si" name="btnBackpack" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="835,549" size="113,90" group="n30_uvgl">
       <Button icon="ui://5hs1fuejuvgl8b" sound="ui://fknoioovtqc911"/>
     </component>
-    <list id="n11_urxc" name="lstItem" xy="240,564" size="605,70" group="n30_uvgl" layout="flow_hz" colGap="5" defaultItem="ui://5hs1fuejuvgla4" autoClearItems="true">
+    <component id="n31_uvgl" name="btnStrech" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="497,529" size="84,32" group="n30_uvgl">
+      <gearIcon controller="ctrlStrech" pages="0" values="ui://5hs1fuejuvgl9r" default="ui://5hs1fuejuvgl9u"/>
+      <Button icon="ui://5hs1fuejuvgl9r"/>
+    </component>
+    <list id="n11_urxc" name="lstItem" xy="238,562" size="605,70" group="n30_uvgl" layout="flow_hz" colGap="6" defaultItem="ui://5hs1fuejuvgla4" autoClearItems="true">
       <item title="3"/>
       <item title="4"/>
       <item title="5"/>
@@ -17,14 +21,7 @@
       <item/>
       <item/>
     </list>
-    <component id="n31_uvgl" name="btnStrech" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="497,515" size="84,35" group="n30_uvgl">
-      <gearIcon controller="ctrlStrech" pages="0" values="ui://5hs1fuejuvgl9r" default="ui://5hs1fuejuvgl9u"/>
-      <Button icon="ui://5hs1fuejuvgl9r"/>
-    </component>
-    <component id="n37_uvgl" name="comExpBar" src="uvglab" fileName="progressBar/comExpBar.xml" xy="243,547" group="n30_uvgl">
-      <ProgressBar max="100"/>
-    </component>
-    <group id="n30_uvgl" name="root" xy="229,511" size="729,130" advanced="true" collapsed="true">
+    <group id="n30_uvgl" name="root" xy="229,529" size="719,111" advanced="true">
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </group>
   </displayList>

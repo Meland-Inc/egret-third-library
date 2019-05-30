@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="196,140" restrictSize="0,0,0,140" opaque="false">
-  <controller name="ctrlShowHide" pages="0,show,1,hide" selected="0"/>
   <displayList>
     <list id="n0_c3x2" name="lstTask" xy="0,0" size="196,140" overflow="scroll" scrollBarFlags="128" lineGap="1" defaultItem="ui://5hs1fuejc3x26k" autoClearItems="true">
-      <gearXY controller="ctrlShowHide" pages="0,1" values="0,0|-273,31" tween="true"/>
-      <item/>
-      <item/>
-      <item/>
       <item/>
     </list>
   </displayList>

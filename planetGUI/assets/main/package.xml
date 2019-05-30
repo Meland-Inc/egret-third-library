@@ -22,7 +22,6 @@
     <image id="uvm020" name="img_Blood volume_1.png" path="/img/" exported="true"/>
     <image id="uvm021" name="img_Blood volume_2.png" path="/img/" exported="true"/>
     <component id="uvm022" name="ComHeadInfo.xml" path="/com/" exported="true"/>
-    <component id="ft0q2g" name="ShortcutItemOld.xml" path="/btn/" exported="true"/>
     <component id="oy0u2i" name="pbrAccmu.xml" path="/pbr/"/>
     <image id="oy0u2l" name="img_main_itemdrop.png" path="/img/"/>
     <component id="oy0u2m" name="ComAccmu.xml" path="/com/" exported="true"/>
@@ -102,8 +101,6 @@
     <image id="rdy454" name="img_main_task_7.png" path="/newImg/"/>
     <image id="rdy455" name="img_main_task_8.png" path="/newImg/"/>
     <component id="rdy456" name="btnOperate.xml" path="/btn/"/>
-    <component id="rdy457" name="btnBuild.xml" path="/btn/"/>
-    <component id="rdy458" name="btnMenu.xml" path="/btn/"/>
     <component id="rdy45b" name="btnAvatar.xml" path="/btn/"/>
     <component id="r2bf5r" name="ComMainTemperature.xml" path="/win/"/>
     <image id="r2bf5w" name="icon_main_email.png" path="/newImg/"/>
@@ -117,7 +114,6 @@
     <component id="9f2h67" name="ProgressBar.xml" path="/com/"/>
     <component id="9f2h69" name="ComSaturationDetail.xml" path="/com/" exported="true"/>
     <component id="rdh66a" name="WinMainFriendInfo.xml" path="/win/"/>
-    <component id="sec06b" name="btnSwitchShortcuts.xml" path="/btn/"/>
     <component id="o6si6c" name="spriteBag.xml" path="/sprite/"/>
     <component id="x9um6d" name="ComMainChatView.xml" path="/win/" exported="true"/>
     <component id="x9um6f" name="ComMainChatItem.xml" path="/com/" exported="true"/>
@@ -146,16 +142,12 @@
     <image id="b4ke76" name="btn_main_formula.png" path="/newImg/"/>
     <image id="b4ke77" name="btn_main_menu_1.png" path="/newImg/"/>
     <image id="b4ke78" name="btn_main_menu_2.png" path="/newImg/"/>
-    <component id="b4ke79" name="btnFormula.xml" path="/btn/"/>
     <image id="b4ke7a" name="icon_main_more.png" path="/newImg/"/>
-    <component id="b4ke7b" name="btnStorageMenu.xml" path="/btn/"/>
     <image id="b4ke7c" name="img_main_menu_1.png" path="/newImg/" scale="9grid" scale9grid="22,22,44,44"/>
     <component id="b4ke7d" name="comArchPathItem.xml" path="/lab/"/>
     <image id="b4ke7e" name="icon_main_formulaOK.png" path="/newImg/"/>
     <image id="k8wc7g" name="img_main_item_8.png" path="/newImg/" exported="true"/>
-    <component id="cjhf7h" name="btnRobot.xml" path="/btn/"/>
     <component id="gbq97j" name="spriteArrow.xml" path="/sprite/"/>
-    <component id="gbq97k" name="btnTaskTrace.xml" path="/btn/"/>
     <image id="8r797l" name="icon_main_treasure.png" path="/newImg/" exported="true"/>
     <component id="e7wr2p" name="shortcutLab.xml" path="/com/"/>
     <image id="uzyq7m" name="icon_weather_fire.png" path="/newImg/" exported="true"/>
@@ -187,7 +179,7 @@
     <image id="uvgl8e" name="btn_main_cebianlan 19.png" path="/img_UI3/"/>
     <image id="uvgl8f" name="btn_main_cebianlanzhankai 20.png" path="/img_UI3/" scale="9grid" scale9grid="62,21,31,42"/>
     <image id="uvgl8g" name="btn_main_gengduo _31.png" path="/img_UI3/"/>
-    <image id="uvgl8h" name="btn_main_gengduoxialai _32.png" path="/img_UI3/" scale="9grid" scale9grid="19,39,38,46"/>
+    <image id="uvgl8h" name="btn_main_gengduoxialai _32.png" path="/img_UI3/" scale="9grid" scale9grid="19,26,21,59"/>
     <image id="uvgl8i" name="icon_main_caozuianniu_pugong_47.png" path="/img_UI3/"/>
     <image id="uvgl8j" name="icon_main_caozuoanniu_duihua _44.png" path="/img_UI3/"/>
     <image id="uvgl8k" name="icon_main_caozuoanniu_shezhi_46.png" path="/img_UI3/"/>
@@ -205,7 +197,7 @@
     <image id="uvgl8w" name="icon_main_shejiao_35.png" path="/img_UI3/"/>
     <image id="uvgl8x" name="icon_main_yingcang_23.png" path="/img_UI3/"/>
     <image id="uvgl8y" name="img_main_aixin_28.png" path="/img_UI3/"/>
-    <image id="uvgl8z" name="img_main_aixintianchong_29.png" path="/img_UI3/"/>
+    <image id="uvgl8z" name="img_main_aixintianchong_29.png" path="/img_UI3/" scale="9grid" scale9grid="9,4,18,8"/>
     <image id="uvgl90" name="img_main_beibaodise_13.png" path="/img_UI3/"/>
     <image id="uvgl91" name="img_main_EXP_7.png" path="/img_UI3/"/>
     <image id="uvgl92" name="img_main_kuaisujianzao_toumingdu20%_41.png" path="/img_UI3/"/>
@@ -218,7 +210,7 @@
     <image id="uvgl99" name="img_main_tianqiyuyue_48.png" path="/img_UI3/" scale="9grid" scale9grid="35,16,70,32"/>
     <image id="uvgl9a" name="img_main_tiaotianquyu_11.png" path="/img_UI3/"/>
     <image id="uvgl9b" name="img_main_tili_27.png" path="/img_UI3/"/>
-    <image id="uvgl9c" name="img_main_tilitianchongse_30.png" path="/img_UI3/"/>
+    <image id="uvgl9c" name="img_main_tilitianchongse_30.png" path="/img_UI3/" scale="9grid" scale9grid="9,4,18,8"/>
     <image id="uvgl9d" name="img_main_wenduji_15.png" path="/img_UI3/"/>
     <image id="uvgl9e" name="img_main_xuetiaodikuang_8.png" path="/img_UI3/" scale="9grid" scale9grid="8,2,16,4"/>
     <image id="uvgl9f" name="img_main_xuetiaotianchongse_9.png" path="/img_UI3/" scale="9grid" scale9grid="5,2,10,4"/>
@@ -256,7 +248,41 @@
     <image id="uvglag" name="img_main_yujin_64.png" path="/img_UI3/"/>
     <component id="uvglah" name="ComBuildRocker.xml" path="/com/"/>
     <image id="uvglai" name="img_main_kuaisujianzao_toumingdu_42.png" path="/img_UI3/"/>
-    <component id="pcuyaj" name="ComMainSaturation.xml" path="/win/" exported="true"/>
+    <component id="pcuyaj" name="ComStatus.xml" path="/win/" exported="true"/>
+    <image id="e46zak" name="btn_main_cebianlanzhankaianniu 20_1.png" path="/img_UI3/"/>
+    <image id="e46zal" name="btn_main_liaotian _77.png" path="/img_UI3/"/>
+    <image id="e46zam" name="btn_main_suoxiao _78.png" path="/img_UI3/"/>
+    <image id="e46zax" name="icon_main_hongdian_68.png" path="/img_UI3/"/>
+    <image id="e46zay" name="icon_main_map_66.png" path="/img_UI3/"/>
+    <image id="e46zaz" name="icon_main_shezhi_67.png" path="/img_UI3/"/>
+    <image id="e46zb0" name="icon_main_suoxiaoi_69.png" path="/img_UI3/"/>
+    <image id="e46zb1" name="icon_main_xinxiang_67.png" path="/img_UI3/"/>
+    <image id="e46zb2" name="img_main_dengjizezhao_75.png" path="/img_UI3/"/>
+    <image id="e46zb3" name="img_main_jingyanzhi_76.png" path="/img_UI3/"/>
+    <image id="e46zb4" name="img_main_qingtian_14.png" path="/img_UI3/"/>
+    <image id="e46zb5" name="img_main_topuxiangkuang_74.png" path="/img_UI3/"/>
+    <image id="e46zb6" name="img_main_xitiaodikuang_73.png" path="/img_UI3/"/>
+    <image id="e46zb7" name="img_main_zhezhao_71.png" path="/img_UI3/" scale="9grid" scale9grid="25,25,50,50"/>
+    <image id="e46zb8" name="img_main_zhuangtailanyuanxing_26_1.png" path="/img_UI3/"/>
+    <image id="e46zb9" name="img_main_zuobiao_70.png" path="/img_UI3/" exported="true"/>
+    <component id="e46zcyic4" name="btnMenu.xml" path="/btn/"/>
+    <component id="wdqfcyic6" name="pbrHp.xml" path="/pbr/"/>
+    <component id="wdqfcyic7" name="pbrHunger.xml" path="/pbr/"/>
+    <image id="wdqfcyic8" name="img_main_touxiangi_81.png" path="/img_UI3/"/>
+    <component id="wdqfcyic9" name="ComArtNums.xml" path="/com/"/>
+    <component id="wdqfcyica" name="comArtNum.xml" path="/com/"/>
+    <image id="wdqfcyic4" name="fnt_shortcutNum_0.png" path="/img_UI3/fnts/" exported="true"/>
+    <image id="wdqfcyic5" name="fnt_shortcutNum_1.png" path="/img_UI3/fnts/" exported="true"/>
+    <image id="wdqfcyicb" name="fnt_shortcutNum_2.png" path="/img_UI3/fnts/" exported="true"/>
+    <image id="wdqfcyicc" name="fnt_shortcutNum_3.png" path="/img_UI3/fnts/" exported="true"/>
+    <image id="wdqfcyicd" name="fnt_shortcutNum_4.png" path="/img_UI3/fnts/" exported="true"/>
+    <image id="wdqfcyice" name="fnt_shortcutNum_5.png" path="/img_UI3/fnts/" exported="true"/>
+    <image id="wdqfcyicf" name="fnt_shortcutNum_6.png" path="/img_UI3/fnts/" exported="true"/>
+    <image id="wdqfcyicg" name="fnt_shortcutNum_7.png" path="/img_UI3/fnts/" exported="true"/>
+    <image id="wdqfcyich" name="fnt_shortcutNum_8.png" path="/img_UI3/fnts/" exported="true"/>
+    <image id="wdqfcyici" name="fnt_shortcutNum_9.png" path="/img_UI3/fnts/" exported="true"/>
+    <component id="wdqfcyicj" name="ComMainLeftTopUICtnr.xml" path="/com/" exported="true"/>
+    <image id="wdqfcyick" name="img_main_zhezhao_71-1.png" path="/img_UI3/" scale="9grid" scale9grid="40,40,80,80"/>
   </resources>
   <publish name="main" npot="true"/>
 </packageDescription>
