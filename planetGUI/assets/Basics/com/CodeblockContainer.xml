@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="981,587" overflow="hidden" scroll="both" scrollBarRes="ui://rnqj1l77j7co5v,ui://rnqj1l77j7co5x" adaptationTest="FitSize">
   <controller name="codeType" pages="0,robot,1,entity" selected="0"/>
-  <controller name="dustbinState" pages="0,hide,1,show,2,execute" selected="2"/>
+  <controller name="dustbinState" pages="0,hide,1,show,2,execute" selected="0"/>
   <displayList>
     <component id="n9_j7co" name="mainContainer" src="j7co5y" fileName="com/comMainContainer.xml" xy="0,0" size="981,587">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
@@ -14,7 +14,7 @@
       <relation target="" sidePair="left-left,top-top"/>
       <Button icon="ui://rnqj1l77tcu29r"/>
     </component>
-    <loader id="n25_8tz6" name="ladDelete" xy="823,24" size="115,115" url="ui://rnqj1l77pydetcr">
+    <loader id="n25_8tz6" name="ladDelete" xy="823,24" size="115,115" touchable="false">
       <gearIcon controller="dustbinState" pages="0,2" values="|ui://rnqj1l77pydetcr" default="ui://rnqj1l77pydetcs"/>
       <relation target="" sidePair="top-top,right-right"/>
     </loader>
