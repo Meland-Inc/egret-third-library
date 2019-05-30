@@ -8,9 +8,6 @@
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
       <relation target="" sidePair="left-left,top-top"/>
     </component>
-    <component id="n12_k1p2" name="mask" src="k1p26w" fileName="com/RunningState.xml" xy="0,56" size="1136,584" group="n23_hn4b" hideByEditor="true">
-      <relation target="" sidePair="width-width,bottomext-bottom"/>
-    </component>
     <component id="n13_sdqn" name="templatePanel" src="sdqn71" fileName="com/TemplatePanel.xml" xy="220,103" group="n23_hn4b" locked="true" hideByEditor="true" visible="false">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
@@ -45,6 +42,9 @@
       <relation target="" sidePair="right-right,height-height"/>
     </component>
     <component id="n25_1194t" name="comCalculator" src="1194tac" fileName="newCom/ComCodeCalculator.xml" xy="609,9" group="n23_hn4b" hideByEditor="true"/>
+    <component id="n12_k1p2" name="mask" src="k1p26w" fileName="com/RunningState.xml" xy="0,0" size="1136,640" group="n23_hn4b" hideByEditor="true">
+      <relation target="" sidePair="width-width,bottomext-bottom"/>
+    </component>
     <group id="n23_hn4b" name="n23" xy="-1,-1" size="1137,643"/>
   </displayList>
 </component>
