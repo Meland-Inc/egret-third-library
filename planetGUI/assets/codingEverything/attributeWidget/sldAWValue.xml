@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="244,28" extention="Slider">
   <displayList>
-    <image id="n0_pzcq" name="n0" src="gu60cyiag" fileName="UI2_Img/img_cm_progressbar1.png" pkg="te1gxawo" xy="0,0" size="244,28">
+    <image id="n0_pzcq" name="n0" src="qki68a" fileName="img_UI3/img_ide_szt_24.png" xy="0,0" size="234,24">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n1_pzcq" name="bar" src="gu60cyiah" fileName="UI2_Img/img_cm_progressbar2.png" pkg="te1gxawo" xy="20,0" size="204,28" hideByEditor="true" visible="false"/>
-    <image id="n3_sgwy" name="barShow" src="gu60cyiah" fileName="UI2_Img/img_cm_progressbar2.png" pkg="te1gxawo" xy="0,0" size="249,28">
+    <image id="n1_pzcq" name="bar" src="qki68b" fileName="img_UI3/img_ide_szt_24_1.png" xy="22,1" size="204,21" hideByEditor="true" visible="false"/>
+    <image id="n3_sgwy" name="barShow" src="qki68b" fileName="img_UI3/img_ide_szt_24_1.png" xy="2,1" size="239,21">
       <relation target="n1_pzcq" sidePair="rightext-right"/>
     </image>
-    <component id="n2_pzcq" name="grip" src="pzcq7e" fileName="attributeWidget/sldAWValue_grip.xml" xy="224,14" pivot="0.5,0.5" anchor="true">
+    <image id="n2_pzcq" name="grip" src="qki67u" fileName="img_UI3/btn_ide_hdan_23.png" xy="226,12" pivot="0.5,0.5" anchor="true" size="40,41">
       <relation target="n1_pzcq" sidePair="right-right"/>
-    </component>
+    </image>
   </displayList>
   <Slider/>
 </component>

@@ -86,8 +86,6 @@
     <image id="df6n4q" name="btn_ide_10.png" path="/img_UI3/ide/"/>
     <image id="df6n4r" name="btn_ide_11.png" path="/img_UI3/ide/"/>
     <image id="df6n4s" name="btn_ide_12.png" path="/img_UI3/ide/"/>
-    <image id="df6n4t" name="btn_ide_13.png" path="/img_UI3/ide/" exported="true"/>
-    <image id="df6n4u" name="btn_ide_14.png" path="/img_UI3/ide/" exported="true"/>
     <image id="df6n4v" name="btn_ide_15.png" path="/img_UI3/ide/"/>
     <image id="df6n4w" name="btn_ide_16.png" path="/img_UI3/ide/"/>
     <image id="df6n4x" name="btn_ide_2.png" path="/img_UI3/ide/"/>
@@ -105,12 +103,8 @@
     <image id="df6n59" name="img_ide_9.png" path="/img_UI3/ide/" scale="9grid" scale9grid="40,25,80,50"/>
     <image id="df6n5a" name="img_ide_1.png" path="/img_UI3/ide/" scale="9grid" scale9grid="20,20,40,40"/>
     <image id="df6n5b" name="img_ide_2.png" path="/img_UI3/ide/"/>
-    <image id="df6n5c" name="img_ide_3.png" path="/img_UI3/ide/" scale="9grid" scale9grid="31,94,181,39"/>
-    <image id="df6n5d" name="img_ide_4.png" path="/img_UI3/ide/" exported="true" scale="9grid" scale9grid="20,20,40,40"/>
-    <image id="df6n5e" name="img_ide_5.png" path="/img_UI3/ide/" exported="true" scale="9grid" scale9grid="20,20,40,40"/>
     <image id="df6n5f" name="img_ide_6.png" path="/img_UI3/ide/"/>
     <image id="df6n5g" name="img_ide_7.png" path="/img_UI3/ide/"/>
-    <image id="df6n5h" name="img_ide_8.png" path="/img_UI3/ide/" exported="true"/>
     <image id="df6n5i" name="img_ide_bag_1.png" path="/img_UI3/ide/" scale="9grid" scale9grid="50,100,64,50"/>
     <image id="df6n5j" name="img_ide_item_1.png" path="/img_UI3/ide/"/>
     <image id="df6n5k" name="img_ide_title.png" path="/img_UI3/ide/"/>
@@ -121,6 +115,9 @@
     <component id="w5h85o" name="ComOldBuildPreview.xml" path="/Com/" exported="true"/>
     <component id="p6hg5p" name="ComBuildOperate.xml" path="/Com/"/>
     <component id="1194t5r" name="ComBuildAttr.xml" path="/win/"/>
+    <image id="qki6t5s" name="img_ide_ddk_10.png" path="/img_UI3/" scale="9grid" scale9grid="30,28,60,56"/>
+    <image id="qki6t5t" name="img_ide_xdk_8.png" path="/img_UI3/" scale="9grid" scale9grid="29,29,58,58"/>
+    <image id="qki6t5u" name="img_ide_ds_11.png" path="/img_UI3/ide/" scale="9grid" scale9grid="37,35,74,70"/>
   </resources>
   <publish name="build" npot="true"/>
 </packageDescription>
