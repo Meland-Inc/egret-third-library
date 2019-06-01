@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="60,25">
+<component size="90,64" opaque="false">
+  <controller name="color" pages="0,Event,1,DeepYellow,2,Red,3,Purple,4,DeepBlue,5,LightBlue,6,DeepGreen,7,LightGreen" selected="0"/>
+  <controller name="isAlone" pages="0,true,1,false" selected="0"/>
+  <controller name="isInteractive" pages="1,false,0,true" selected="0"/>
   <displayList>
-    <image id="n0_kesa" name="n0" src="kesa6" fileName="operators.png" xy="0,0" size="60,25">
-      <relation target="" sidePair="width-width,height-height"/>
-    </image>
-    <component id="n1_kesa" name="n1" src="kesa9" fileName="Container.xml" xy="10,4" size="40,16"/>
+    <loader id="n2_emrm" name="ladBG" xy="0,0" size="90,64" url="ui://rnqj1l77h5gvtbh" fill="scaleFree">
+      <gearDisplay controller="isAlone" pages="1"/>
+      <gearIcon controller="color" pages="2,3,4,6,7" values="ui://rnqj1l77h5gvtby|ui://rnqj1l77liabtd9|ui://rnqj1l77pwfmtej|ui://rnqj1l77h5gvtci|ui://rnqj1l77liabtde" default="ui://rnqj1l77h5gvtbh"/>
+      <relation target="n1_flp7" sidePair="width-width,height-height"/>
+    </loader>
+    <loader id="n3_yrfu" name="ladAloneBG" xy="0,0" size="90,68" url="ui://rnqj1l77h5gvtbh" fill="scaleFree">
+      <gearDisplay controller="isAlone" pages="0"/>
+      <gearIcon controller="color" pages="2,3,4,5,6,7" values="ui://rnqj1l77h5gvtbx|ui://rnqj1l77liabtda|ui://rnqj1l77pwfmtei|ui://rnqj1l77h5gvtbg|ui://rnqj1l77h5gvtch|ui://rnqj1l77liabtdd" default="ui://rnqj1l77h5gvtbh"/>
+      <relation target="n1_flp7" sidePair="width-width,height-height"/>
+    </loader>
+    <component id="n1_flp7" name="container" src="kesa9" fileName="com/Container.xml" xy="20,0" size="50,64" restrictSize="50,0,64,64"/>
+    <loader id="n4_kt4s" name="btnInteractive" xy="33,12" size="40,40" url="ui://rnqj1l77kt4sten">
+      <gearDisplay controller="isInteractive" pages="0"/>
+      <relation target="n3_yrfu" sidePair="left-right"/>
+    </loader>
   </displayList>
-  <relation target="n1_kesa" sidePair="width-width,height-height"/>
+  <relation target="n1_flp7" sidePair="width-width,height-height"/>
 </component>

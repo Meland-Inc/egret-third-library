@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebktcu23b" designImageAlpha="100" adaptationTest="FitSize">
   <displayList>
-    <component id="n27_hoex" name="comCodeblocksPool" src="y583d" fileName="com/CodeblockPool.xml" xy="398,0" size="630,640" blend="none">
+    <component id="n27_hoex" name="comCodeblocksPool" src="y583d" fileName="newCom/CodeblockPool.xml" xy="398,0" size="630,640" blend="none">
       <relation target="" sidePair="right-right,bottomext-bottom"/>
     </component>
     <image id="n28_8tz6" name="imgListBG" src="tcu2a4" fileName="newImg2/img_code_1.png" xy="1016,0" size="125,640">
       <relation target="" sidePair="bottomext-bottom,right-right"/>
     </image>
-    <list id="n25_hoex" name="lstCategory" xy="969,67" size="168,561" lineGap="-3" defaultItem="ui://rnqj1l77hoexa8" align="center" vAlign="middle">
+    <list id="n25_hoex" name="lstCategory" xy="954,62" size="178,561" margin="0,0,48,0" lineGap="-3" defaultItem="ui://rnqj1l77hoexa8" align="center" vAlign="middle">
       <relation target="" sidePair="bottomext-bottom,right-right"/>
       <item icon="ui://rnqj1l77tcu29w" name="event"/>
       <item icon="ui://rnqj1l77tcu29x" name="control"/>

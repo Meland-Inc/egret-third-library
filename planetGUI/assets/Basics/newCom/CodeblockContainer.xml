@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="981,587" overflow="hidden" scroll="both" scrollBarRes="ui://rnqj1l77j7co5v,ui://rnqj1l77j7co5x" adaptationTest="FitSize">
   <controller name="codeType" pages="0,robot,1,entity" selected="0"/>
+  <controller name="dustbinState" pages="0,hide,1,show,2,execute" selected="0"/>
   <displayList>
-    <component id="n9_j7co" name="mainContainer" src="j7co5y" fileName="com/comMainContainer.xml" xy="0,0" size="981,587">
+    <component id="n9_j7co" name="mainContainer" src="j7co5y" fileName="com/comMainContainer.xml" xy="0,0" size="998,604">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </component>
     <component id="n21_8tz6" name="btnUndo" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="28,11" size="85,87" locked="true" visible="false">
@@ -13,9 +14,10 @@
       <relation target="" sidePair="left-left,top-top"/>
       <Button icon="ui://rnqj1l77tcu29r"/>
     </component>
-    <image id="n25_8tz6" name="imgDelete" src="tcu297" fileName="newImg2/img_code_a3.png" xy="834,438">
-      <relation target="" sidePair="bottom-bottom,right-right"/>
-    </image>
+    <loader id="n25_8tz6" name="ladDelete" xy="823,24" size="115,115" touchable="false">
+      <gearIcon controller="dustbinState" pages="0,2" values="|ui://rnqj1l77pydetcr" default="ui://rnqj1l77pydetcs"/>
+      <relation target="" sidePair="top-top,right-right"/>
+    </loader>
     <image id="n24_8tz6" name="imgCopy" src="tcu296" fileName="newImg2/img_code_a2.png" xy="687,438" visible="false">
       <relation target="" sidePair="bottom-bottom,right-right"/>
     </image>
@@ -27,5 +29,10 @@
     <group id="n28_8tz6" name="tips" xy="459,338" size="211,98" visible="false" advanced="true">
       <relation target="n23_8tz6" sidePair="bottom-top,left-left"/>
     </group>
+    <component id="n29_pyde" name="btnRun" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="858,464" size="86,87">
+      <gearDisplay controller="codeType" pages="0"/>
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+      <Button icon="ui://rnqj1l77pydetct"/>
+    </component>
   </displayList>
 </component>
