@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" opaque="false" designImage="ui://i25v0ebkuvgl3t" designImageAlpha="39">
-  <controller name="ctrlMapMode" pages="0,normal,1,build,2,quickBuild,3,quickEdit" selected="3"/>
+<component size="1136,640" opaque="false" designImage="ui://i25v0ebke46z3z" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlMapMode" pages="0,normal,1,build,2,quickBuild,3,quickEdit" selected="0"/>
   <displayList>
     <component id="n31_r2bf" name="comMainEnemyInfo" src="dura1l" fileName="win/ComMainEnemyInfo.xml" xy="233,7" size="152,45">
       <relation target="" sidePair="left-left,top-top"/>
@@ -15,9 +15,6 @@
     </component>
     <component id="n4_muc9" name="comMainRocker" src="uvgla1" fileName="win/ComMainRocker.xml" xy="0,256">
       <relation target="" sidePair="left-left,bottom-bottom"/>
-    </component>
-    <component id="n33_r2bf" name="comMainInfo" src="uvgla2" fileName="win/ComMainInfo.xml" xy="409,0">
-      <relation target="" sidePair="center-center"/>
     </component>
     <component id="n37_x9um" name="comChat" src="x9um6d" fileName="win/ComMainChatView.xml" xy="3,555">
       <relation target="" sidePair="bottom-bottom"/>
@@ -34,11 +31,15 @@
     <component id="n41_xles" name="btnRobotViewReturn" src="xles73" fileName="btn/btnRobotViewReturn.xml" xy="1030,547">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
-    <component id="n46_uvgl" name="comMainSaturation" src="pcuyaj" fileName="win/ComMainSaturation.xml" xy="907,11">
+    <component id="n46_uvgl" name="comStatus" src="pcuyaj" fileName="win/ComStatus.xml" xy="831,9">
       <relation target="" sidePair="right-right"/>
     </component>
-    <component id="n44_uvgl" name="comMainMenu" src="uvgl9m" fileName="win/ComMainMenu.xml" xy="1053,4" size="83,71">
+    <component id="n44_uvgl" name="comMainMenu" src="uvgl9m" fileName="win/ComMainMenu.xml" xy="1060,6">
       <relation target="" sidePair="right-right"/>
     </component>
+    <component id="n47_wdqf" name="comUserInfo" src="w80lg" fileName="win/ComMainUserInfo.xml" xy="966,6">
+      <relation target="" sidePair="right-right"/>
+    </component>
+    <component id="n48_wdqf" name="comMainLeftTopUICtnr" src="wdqfcyicj" fileName="com/ComMainLeftTopUICtnr.xml" xy="0,0"/>
   </displayList>
 </component>

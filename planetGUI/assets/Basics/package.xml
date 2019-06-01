@@ -1,31 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="rnqj1l77" jpegQuality="80" compressPNG="true">
   <resources>
-    <component id="f4hr0" name="BlockCodeblock.xml" path="/codeBlock/"/>
     <component id="e13y1" name="InputShape.xml" path="/codeBlock/" exported="true"/>
     <component id="e13y2" name="Main.xml" path="/win/" exported="true"/>
-    <component id="o3b93" name="DropdownMessageArgShape_item.xml" path="/codeBlock/"/>
-    <component id="o3b94" name="DropdownMessageArgShape_popup.xml" path="/codeBlock/"/>
     <component id="o3b95" name="DropdownMessageArgShape.xml" path="/codeBlock/" exported="true"/>
     <image id="kesa6" name="operators.png" path="/img/" scale="9grid" scale9grid="57,0,9,66"/>
     <image id="kesa7" name="events.png" path="/img/" scale="9grid" scale9grid="176,0,2,96"/>
     <component id="kesa9" name="Container.xml" path="/com/"/>
     <component id="kesaa" name="Text.xml" path="/com/" exported="true"/>
-    <component id="kesab" name="Value.xml" path="/codeBlock/" exported="true"/>
-    <component id="y583d" name="CodeblockPool.xml" path="/com/"/>
-    <component id="y583e" name="Boolean.xml" path="/codeBlock/"/>
+    <component id="y583d" name="CodeblockPool.xml" path="/newCom/"/>
     <image id="y583f" name="control3.png" path="/img/" scale="9grid" scale9grid="60,0,58,66"/>
     <component id="heu0g" name="BooleanMessageArgShape.xml" path="/codeBlock/" exported="true"/>
-    <component id="heu0i" name="ForkableMiddle.xml" path="/codeBlock/"/>
-    <component id="heu0k" name="ForkableStartBlue.xml" path="/codeBlock/" exported="true"/>
-    <component id="heu0m" name="ForkableEnd.xml" path="/codeBlock/"/>
     <image id="heu0n" name="forkable-end.png" path="/img/" scale="9grid" scale9grid="198,0,3,65"/>
-    <component id="heu0o" name="ForkableContainer.xml" path="/codeBlock/"/>
     <image id="heu0q" name="forkable-container.png" path="/img/"/>
     <image id="mvfsr" name="forkable-start.png" path="/img/" scale="9grid" scale9grid="403,0,8,102"/>
     <image id="mvfss" name="forkable-middle.png" path="/img/" scale="9grid" scale9grid="299,0,3,57"/>
     <component id="t09yv" name="VerticalScrollComponent.xml" path="/com/"/>
-    <component id="n1c01j" name="CodeblockContainer.xml" path="/com/"/>
+    <component id="n1c01j" name="CodeblockContainer.xml" path="/newCom/"/>
     <component id="n1c01l" name="ComCategoryList.xml" path="/newCom/"/>
     <component id="t3y125" name="btnUndo.xml" path="/btn/"/>
     <component id="t3y128" name="btnReset.xml" path="/btn/"/>
@@ -34,101 +25,67 @@
     <image id="t3y12d" name="img_edit_bg.png" path="/img/" scale="9grid" scale9grid="15,52,30,104"/>
     <component id="t3y12f" name="btnShare.xml" path="/btn/"/>
     <component id="t3y12h" name="btnRun.xml" path="/btn/"/>
-    <component id="e8uu2i" name="ForkableStartBGBlue.xml" path="/codeBlock/"/>
     <image id="e8uu2j" name="control_1_1.png" path="/img/" scale="9grid" scale9grid="61,10,2,36" gridTile="3"/>
     <image id="e8uu2k" name="control_1_2.png" path="/img/" scale="9grid" scale9grid="1,10,2,31" gridTile="3"/>
     <image id="e8uu2l" name="control_1_3.png" path="/img/" scale="9grid" scale9grid="0,10,2,31" gridTile="3"/>
-    <component id="kgcg2m" name="ForkableMiddleBGBlue.xml" path="/codeBlock/"/>
     <image id="kgcg2n" name="control_2_1.png" path="/img/" scale="9grid" scale9grid="62,10,2,12"/>
     <image id="kgcg2o" name="control_2_2.png" path="/img/" scale="9grid" scale9grid="1,8,2,13"/>
     <image id="kgcg2p" name="control_2_3.png" path="/img/" scale="9grid" scale9grid="0,10,2,9"/>
-    <component id="kgcg2q" name="ForkableMiddleBlue.xml" path="/codeBlock/" exported="true"/>
-    <component id="kgcg2r" name="ForkableEndBGBlue.xml" path="/codeBlock/"/>
     <image id="kgcg2s" name="control_3_1.png" path="/img/" scale="9grid" scale9grid="12,7,51,1"/>
     <image id="kgcg2t" name="control_3_2.png" path="/img/" scale="9grid" scale9grid="1,8,2,16"/>
     <image id="kgcg2u" name="control_3_3.png" path="/img/" scale="9grid" scale9grid="0,8,2,16"/>
-    <component id="kgcg2v" name="ForkableEndBlue.xml" path="/codeBlock/" exported="true"/>
-    <component id="kgcg2w" name="BlockCodeblockBGBlue.xml" path="/codeBlock/"/>
-    <component id="kgcg2x" name="ForkableContainerBGBlue.xml" path="/codeBlock/"/>
-    <component id="kgcg2z" name="ForkableContainerBlue.xml" path="/codeBlock/" exported="true"/>
     <image id="kgcg30" name="control_5_1.png" path="/img/" scale="9grid" scale9grid="48,10,2,36"/>
     <image id="kgcg31" name="control_5_2.png" path="/img/" scale="9grid" scale9grid="1,7,2,37"/>
     <image id="kgcg32" name="control_5_3.png" path="/img/" scale="9grid" scale9grid="0,7,1,37"/>
-    <component id="kgcg33" name="BlockCodeblockBlue.xml" path="/codeBlock/" exported="true"/>
-    <component id="kgcg34" name="BooleanBGBlue.xml" path="/codeBlock/"/>
-    <component id="kgcg35" name="ValueBGBlue.xml" path="/codeBlock/"/>
     <image id="kgcg36" name="control_6_1.png" path="/img/" scale="9grid" scale9grid="0,0,20,37"/>
     <image id="kgcg37" name="control_6_2.png" path="/img/" scale="9grid" scale9grid="1,5,2,27"/>
     <image id="kgcg38" name="control_6_3.png" path="/img/"/>
-    <component id="kgcg39" name="ValueBlue.xml" path="/codeBlock/" exported="true"/>
     <image id="kgcg3a" name="control_7_1.png" path="/img/"/>
     <image id="kgcg3b" name="control_7_2.png" path="/img/" scale="9grid" scale9grid="1,5,2,29"/>
     <image id="kgcg3c" name="control_7_3.png" path="/img/"/>
-    <component id="kgcg3d" name="BooleanBlue.xml" path="/codeBlock/" exported="true"/>
     <image id="kgcg3e" name="control_8_1.png" path="/img/" scale="9grid" scale9grid="0,8,8,22"/>
     <image id="kgcg3f" name="control_8_2.png" path="/img/" scale="9grid" scale9grid="1,8,2,22" gridTile="3"/>
     <image id="kgcg3g" name="control_8_3.png" path="/img/" scale="9grid" scale9grid="0,8,8,22"/>
     <image id="kgcg3h" name="control_8_4.png" path="/img/" scale9grid="5,3,10,6"/>
-    <component id="kgcg3i" name="DropDownBGBlue.xml" path="/codeBlock/"/>
     <component id="kgcg3m" name="FreeContainer.xml" path="/com/"/>
     <component id="flp73n" name="PropMessageArgShape.xml" path="/codeBlock/" exported="true"/>
     <image id="flp73q" name="common_3.png" path="/img/"/>
-    <component id="flp73s" name="BlockCodeblockBGOrange.xml" path="/codeBlock/"/>
     <image id="flp73u" name="event_10_2.png" path="/img/" scale="9grid" scale9grid="1,7,2,37"/>
     <image id="flp73v" name="event_10_3.png" path="/img/" scale="9grid" scale9grid="0,7,1,37"/>
-    <component id="flp73w" name="BlockCodeblockOrange.xml" path="/codeBlock/" exported="true"/>
     <image id="flp73y" name="img_code_10.png" path="/img/"/>
     <image id="flp73z" name="control_4.png" path="/img/" scale="9grid" scale9grid="6,1,12,6"/>
-    <component id="flp740" name="BlockCodeblockBGYellow.xml" path="/codeBlock/"/>
     <image id="flp741" name="motion_5_1.png" path="/img/" scale="9grid" scale9grid="48,10,2,36"/>
     <image id="flp742" name="motion_5_3.png" path="/img/" scale="9grid" scale9grid="0,7,2,37"/>
     <image id="flp743" name="motion_5_2.png" path="/img/" scale="9grid" scale9grid="1,7,2,37"/>
-    <component id="flp744" name="BlockCodeblockYellow.xml" path="/codeBlock/" exported="true"/>
-    <component id="flp745" name="BlockCodeblockBGPurple.xml" path="/codeBlock/"/>
     <image id="flp746" name="function_5_1.png" path="/img/" scale="9grid" scale9grid="48,10,2,36"/>
     <image id="flp747" name="function_5_2.png" path="/img/" scale="9grid" scale9grid="1,7,2,37"/>
     <image id="flp748" name="function_5_3.png" path="/img/" scale="9grid" scale9grid="0,7,2,37"/>
-    <component id="flp749" name="BlockCodeblockPurple.xml" path="/codeBlock/" exported="true"/>
-    <component id="flp74a" name="ValueBGPurple.xml" path="/codeBlock/"/>
     <image id="flp74b" name="function_6_1.png" path="/img/" scale="9grid" scale9grid="0,0,20,37"/>
     <image id="flp74c" name="function_6_2.png" path="/img/" scale="9grid" scale9grid="1,5,2,27"/>
     <image id="flp74d" name="function_6_3.png" path="/img/" scale="9grid" scale9grid="0,0,20,37"/>
-    <component id="flp74e" name="ValuePurple.xml" path="/codeBlock/" exported="true"/>
-    <component id="flp74f" name="ValueBGShitYellow.xml" path="/codeBlock/"/>
     <image id="flp74g" name="detection_6_1.png" path="/img/" scale="9grid" scale9grid="0,0,20,37"/>
     <image id="flp74h" name="detection_6_2.png" path="/img/" scale="9grid" scale9grid="1,5,2,27"/>
     <image id="flp74i" name="detection_6_3.png" path="/img/" scale="9grid" scale9grid="0,0,20,37"/>
-    <component id="flp74j" name="ValueShitYellow.xml" path="/codeBlock/" exported="true"/>
-    <component id="flp74k" name="BooleanBGShitYellow.xml" path="/codeBlock/"/>
+    <component id="flp74j" name="Value.xml" path="/codeBlock/" exported="true"/>
     <image id="flp74l" name="detection_7_1.png" path="/img/"/>
     <image id="flp74m" name="detection_7_2.png" path="/img/" scale="9grid" scale9grid="1,5,2,29"/>
     <image id="flp74n" name="detection_7_3.png" path="/img/"/>
-    <component id="flp74o" name="BooleanShitYellow.xml" path="/codeBlock/" exported="true"/>
-    <component id="flp74p" name="BlockCodeblockShitYellow.xml" path="/codeBlock/" exported="true"/>
-    <component id="flp74q" name="BlockCodeblockBGShitYellow.xml" path="/codeBlock/"/>
+    <component id="flp74o" name="Boolean.xml" path="/codeBlock/" exported="true"/>
     <image id="flp74r" name="detection_5_1.png" path="/img/" scale="9grid" scale9grid="48,10,2,36"/>
     <image id="flp74s" name="detection_5_2.png" path="/img/" scale="9grid" scale9grid="1,7,2,37"/>
     <image id="flp74t" name="detection_5_3.png" path="/img/" scale="9grid" scale9grid="0,7,2,37"/>
-    <component id="flp74u" name="ValueBGRed.xml" path="/codeBlock/"/>
     <image id="flp74v" name="material_6_1.png" path="/img/"/>
     <image id="flp74w" name="material_6_2.png" path="/img/" scale="9grid" scale9grid="1,5,2,27"/>
     <image id="flp74x" name="material_6_3.png" path="/img/"/>
-    <component id="flp74y" name="ValueRed.xml" path="/codeBlock/" exported="true"/>
-    <component id="flp74z" name="ValueBGGreen.xml" path="/codeBlock/"/>
     <image id="flp750" name="operation_6_1.png" path="/img/" scale="9grid" scale9grid="0,0,20,37"/>
     <image id="flp751" name="operation_6_2.png" path="/img/" scale="9grid" scale9grid="1,5,2,27"/>
     <image id="flp752" name="operation_6_3.png" path="/img/" scale="9grid" scale9grid="0,0,20,37"/>
-    <component id="flp753" name="ValueGreen.xml" path="/codeBlock/" exported="true"/>
-    <component id="flp754" name="BooleanBGGreen.xml" path="/codeBlock/"/>
     <image id="flp755" name="operation_7_1.png" path="/img/"/>
     <image id="flp756" name="operation_7_2.png" path="/img/" scale="9grid" scale9grid="1,5,2,29"/>
     <image id="flp757" name="operation_7_3.png" path="/img/"/>
-    <component id="flp758" name="BooleanGreen.xml" path="/codeBlock/" exported="true"/>
-    <component id="flp759" name="BlockCodeblockBGGreen.xml" path="/codeBlock/"/>
     <image id="flp75a" name="operation_5_1.png" path="/img/" scale="9grid" scale9grid="48,10,2,36"/>
     <image id="flp75b" name="operation_5_2.png" path="/img/" scale="9grid" scale9grid="1,7,2,37"/>
     <image id="flp75c" name="operation_5_3.png" path="/img/" scale="9grid" scale9grid="0,7,2,37"/>
-    <component id="flp75d" name="BlockCodeblockGreen.xml" path="/codeBlock/" exported="true"/>
     <component id="j7co5u" name="ScrollBarV_grip.xml" path="/com/"/>
     <component id="j7co5v" name="ScrollBarV.xml" path="/com/" exported="true"/>
     <component id="j7co5w" name="ScrollBarH_grip.xml" path="/com/"/>
@@ -208,7 +165,6 @@
     <image id="tcu294" name="img_code_6.png" path="/newImg2/" scale="9grid" scale9grid="12,12,24,24"/>
     <image id="tcu295" name="img_code_a1.png" path="/newImg2/"/>
     <image id="tcu296" name="img_code_a2.png" path="/newImg2/"/>
-    <image id="tcu297" name="img_code_a3.png" path="/newImg2/"/>
     <image id="tcu298" name="img_code_n0.png" path="/newImg2/"/>
     <image id="tcu299" name="img_code_n1.png" path="/newImg2/"/>
     <image id="tcu29a" name="img_code_n2.png" path="/newImg2/"/>
@@ -266,81 +222,105 @@
     <image id="oiwytaj" name="img_code_wupindikuang_9.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="30,29,60,58"/>
     <image id="oiwytak" name="img_code_laidi_8.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="25,25,50,50"/>
     <image id="oiwytal" name="img_code_landi_7.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="25,24,50,48"/>
-    <image id="oiwytam" name="btn_code_xuanzhong_1.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="50,15,100,30"/>
-    <image id="oiwytan" name="btn_code_weixuanzhong_2.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="50,15,100,30"/>
     <image id="oiwytao" name="btn_code_queding_3.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="35,8,70,31"/>
     <image id="oiwytap" name="img_code_wupingkuang_6.png" path="/newImg2/" exported="true"/>
     <image id="oiwytaq" name="img_code_wupingkuang_6 _1.png" path="/newImg2/" exported="true"/>
-    <image id="h5gvtar" name="img_code_kongzhi_1-1.png" path="/newImg2/"/>
-    <image id="h5gvtas" name="img_code_kongzhi_2.png" path="/newImg2/"/>
-    <image id="h5gvtat" name="img_code_kongzhi_2-1.png" path="/newImg2/"/>
-    <image id="h5gvtau" name="img_code_kongzhi_3.png" path="/newImg2/"/>
-    <image id="h5gvtav" name="img_code_kongzhi_3-1.png" path="/newImg2/"/>
-    <image id="h5gvtaw" name="img_code_kongzhi_6.png" path="/newImg2/"/>
-    <image id="h5gvtax" name="img_code_kongzhi_7.png" path="/newImg2/"/>
-    <image id="h5gvtay" name="img_code_kongzhi_8.png" path="/newImg2/"/>
-    <image id="h5gvtaz" name="img_code_kongzhi_9.png" path="/newImg2/"/>
-    <image id="h5gvtb0" name="img_code_kongzhi_10.png" path="/newImg2/"/>
-    <image id="h5gvtb1" name="img_code_kongzhi_11.png" path="/newImg2/"/>
     <image id="h5gvtb2" name="img_code_kongzhi_lingxing_4.png" path="/newImg2/"/>
-    <image id="h5gvtb3" name="img_code_kongzhi_tuoyan_5.png" path="/newImg2/"/>
-    <image id="h5gvtb4" name="img_code_bianliang_1.png" path="/newImg2/"/>
-    <image id="h5gvtb5" name="img_code_bianliang_2.png" path="/newImg2/"/>
+    <image id="h5gvtb3" name="img_code_kongzhi_tuoyan_5.png" path="/newImg2/" scale="9grid" scale9grid="17,14,34,6"/>
+    <image id="h5gvtb4" name="img_code_bianliang_1.png" path="/newImg2/" scale="9grid" scale9grid="73,20,29,26"/>
+    <image id="h5gvtb5" name="img_code_bianliang_2.png" path="/newImg2/" scale="9grid" scale9grid="76,21,44,32"/>
     <image id="h5gvtb6" name="img_code_bianliang_5.png" path="/newImg2/"/>
     <image id="h5gvtb7" name="img_code_bianliang_6.png" path="/newImg2/"/>
     <image id="h5gvtb8" name="img_code_bianliang_lingxing_3.png" path="/newImg2/"/>
-    <image id="h5gvtb9" name="img_code_bianliang_tuoyan_4.png" path="/newImg2/"/>
-    <image id="h5gvtba" name="img_code_gongnneg_1.png" path="/newImg2/"/>
-    <image id="h5gvtbb" name="img_code_gongnneg_2.png" path="/newImg2/"/>
+    <image id="h5gvtb9" name="img_code_bianliang_tuoyan_4.png" path="/newImg2/" scale="9grid" scale9grid="17,17,34,2"/>
+    <image id="h5gvtba" name="img_code_gongnneg_1.png" path="/newImg2/" scale="9grid" scale9grid="80,20,35,22"/>
+    <image id="h5gvtbb" name="img_code_gongnneg_2.png" path="/newImg2/" scale="9grid" scale9grid="80,21,33,30"/>
     <image id="h5gvtbc" name="img_code_gongnneg_5.png" path="/newImg2/"/>
     <image id="h5gvtbd" name="img_code_gongnneg_6.png" path="/newImg2/"/>
     <image id="h5gvtbe" name="img_code_gongnneg_lingxing_3.png" path="/newImg2/"/>
-    <image id="h5gvtbf" name="img_code_gongnneg_tuoyan_4.png" path="/newImg2/"/>
-    <image id="h5gvtbg" name="img_code_jiance_1.png" path="/newImg2/"/>
-    <image id="h5gvtbh" name="img_code_jiance_2.png" path="/newImg2/"/>
-    <image id="h5gvtbi" name="img_code_jiance_3.png" path="/newImg2/"/>
-    <image id="h5gvtbj" name="img_code_jiance_4.png" path="/newImg2/"/>
+    <image id="h5gvtbf" name="img_code_gongnneg_tuoyan_4.png" path="/newImg2/" scale="9grid" scale9grid="17,14,34,6"/>
+    <image id="h5gvtbg" name="img_code_jiance_1.png" path="/newImg2/" scale="9grid" scale9grid="36,17,72,34"/>
+    <image id="h5gvtbh" name="img_code_jiance_2.png" path="/newImg2/" scale="9grid" scale9grid="36,16,73,32"/>
+    <image id="h5gvtbi" name="img_code_jiance_3.png" path="/newImg2/" scale="9grid" scale9grid="33,17,66,34"/>
+    <image id="h5gvtbj" name="img_code_jiance_4.png" path="/newImg2/" scale="9grid" scale9grid="33,16,66,32"/>
     <image id="h5gvtbk" name="img_code_jiance_7.png" path="/newImg2/"/>
     <image id="h5gvtbl" name="img_code_jiance_8.png" path="/newImg2/"/>
     <image id="h5gvtbm" name="img_code_jiance_9.png" path="/newImg2/"/>
     <image id="h5gvtbn" name="img_code_jiance_10.png" path="/newImg2/"/>
     <image id="h5gvtbo" name="img_code_jiance_lingxing_5.png" path="/newImg2/"/>
-    <image id="h5gvtbp" name="img_code_jiance_tuoyan_6.png" path="/newImg2/"/>
-    <image id="h5gvtbq" name="img_code_kongzhi_1.png" path="/newImg2/"/>
+    <image id="h5gvtbp" name="img_code_jiance_tuoyan_6.png" path="/newImg2/" scale="9grid" scale9grid="17,15,34,5"/>
     <image id="h5gvtbr" name="img_code_shijian_8.png" path="/newImg2/"/>
     <image id="h5gvtbs" name="img_code_shijian_9.png" path="/newImg2/"/>
     <image id="h5gvtbt" name="img_code_shijian_10.png" path="/newImg2/"/>
-    <image id="h5gvtbu" name="img_code_shijian_anniu_5.png" path="/newImg2/"/>
     <image id="h5gvtbv" name="img_code_shijian_lingxing_6.png" path="/newImg2/"/>
-    <image id="h5gvtbw" name="img_code_shijian_tuoyan_7.png" path="/newImg2/"/>
-    <image id="h5gvtbx" name="img_code_shiti_1.png" path="/newImg2/"/>
-    <image id="h5gvtby" name="img_code_shiti_2.png" path="/newImg2/"/>
+    <image id="h5gvtbw" name="img_code_shijian_tuoyan_7.png" path="/newImg2/" scale="9grid" scale9grid="17,14,34,5"/>
+    <image id="h5gvtbx" name="img_code_shiti_1.png" path="/newImg2/" scale="9grid" scale9grid="36,17,72,34"/>
+    <image id="h5gvtby" name="img_code_shiti_2.png" path="/newImg2/" scale="9grid" scale9grid="36,16,72,32"/>
     <image id="h5gvtbz" name="img_code_shiti_6.png" path="/newImg2/"/>
     <image id="h5gvtc0" name="img_code_shiti_7.png" path="/newImg2/"/>
     <image id="h5gvtc1" name="img_code_shiti_lingxing_3.png" path="/newImg2/"/>
-    <image id="h5gvtc2" name="img_code_shiti_tuoyan_4.png" path="/newImg2/"/>
-    <image id="h5gvtc4" name="img_code_shijian_1.png" path="/newImg2/"/>
+    <image id="h5gvtc2" name="img_code_shiti_tuoyan_4.png" path="/newImg2/" scale="9grid" scale9grid="17,16,34,6"/>
     <image id="h5gvtc5" name="img_code_shijian_2.png" path="/newImg2/"/>
-    <image id="h5gvtc6" name="img_code_shijian_3.png" path="/newImg2/"/>
-    <image id="h5gvtc7" name="img_code_shijian_4.png" path="/newImg2/"/>
-    <image id="h5gvtc9" name="img_code_tongyong_1.png" path="/newImg2/"/>
+    <image id="h5gvtc6" name="img_code_shijian_3.png" path="/newImg2/" scale="9grid" scale9grid="86,20,26,29"/>
+    <image id="h5gvtc9" name="img_code_tongyong_1.png" path="/newImg2/" scale="9grid" scale9grid="31,12,21,24"/>
     <image id="h5gvtca" name="img_code_tongyong_2.png" path="/newImg2/"/>
-    <image id="h5gvtcb" name="img_code_yundong_1.png" path="/newImg2/"/>
-    <image id="h5gvtcc" name="img_code_yundong_2.png" path="/newImg2/"/>
+    <image id="h5gvtcb" name="img_code_yundong_1.png" path="/newImg2/" scale="9grid" scale9grid="82,20,20,26"/>
+    <image id="h5gvtcc" name="img_code_yundong_2.png" path="/newImg2/" scale="9grid" scale9grid="74,21,28,29"/>
     <image id="h5gvtcd" name="img_code_yundong_5.png" path="/newImg2/"/>
     <image id="h5gvtce" name="img_code_yundong_6.png" path="/newImg2/"/>
     <image id="h5gvtcf" name="img_code_yundong_lingxing_3.png" path="/newImg2/"/>
-    <image id="h5gvtcg" name="img_code_yundong_tuoyan_4.png" path="/newImg2/"/>
-    <image id="h5gvtch" name="img_code_yunsuan_1.png" path="/newImg2/"/>
-    <image id="h5gvtci" name="img_code_yunsuan_2.png" path="/newImg2/"/>
-    <image id="h5gvtcj" name="img_code_yunsuan_3.png" path="/newImg2/"/>
-    <image id="h5gvtck" name="img_code_yunsuan_4.png" path="/newImg2/"/>
+    <image id="h5gvtcg" name="img_code_yundong_tuoyan_4.png" path="/newImg2/" scale="9grid" scale9grid="17,16,34,4"/>
+    <image id="h5gvtch" name="img_code_yunsuan_1.png" path="/newImg2/" scale="9grid" scale9grid="36,17,72,34"/>
+    <image id="h5gvtci" name="img_code_yunsuan_2.png" path="/newImg2/" scale="9grid" scale9grid="36,16,72,32"/>
+    <image id="h5gvtcj" name="img_code_yunsuan_3.png" path="/newImg2/" scale="9grid" scale9grid="33,17,66,34"/>
+    <image id="h5gvtck" name="img_code_yunsuan_4.png" path="/newImg2/" scale="9grid" scale9grid="33,16,66,32"/>
     <image id="h5gvtcl" name="img_code_yunsuan_7.png" path="/newImg2/"/>
     <image id="h5gvtcm" name="img_code_yunsuan_8.png" path="/newImg2/"/>
     <image id="h5gvtcn" name="img_code_yunsuan_9.png" path="/newImg2/"/>
     <image id="h5gvtco" name="img_code_yunsuan_10.png" path="/newImg2/"/>
     <image id="h5gvtcp" name="img_code_yunsuan_lingxing_5.png" path="/newImg2/"/>
-    <image id="h5gvtcq" name="img_code_yunsuan_tuoyan_6.png" path="/newImg2/"/>
+    <image id="pydetcr" name="img_code_a3-1.png" path="/newImg2/"/>
+    <image id="pydetcs" name="img_code_a3.png" path="/newImg2/"/>
+    <image id="pydetct" name="btn_code_bf_88.png" path="/newImg2/"/>
+    <image id="h5gvtcq" name="img_code_yunsuan_tuoyan_6.png" path="/newImg2/" scale="9grid" scale9grid="17,14,34,6"/>
+    <component id="h5gvtcr" name="BlockCodeblock.xml" path="/codeBlock/" exported="true"/>
+    <image id="liabtd7" name="img_code_tongyong_anniu_4.png" path="/newImg2/"/>
+    <image id="liabtd8" name="img_code_tongyong_tuoyan_3.png" path="/newImg2/" scale="9grid" scale9grid="30,9,60,18"/>
+    <image id="liabtd9" name="img_code_gongnneg_8.png" path="/newImg2/" scale="9grid" scale9grid="36,16,72,32"/>
+    <image id="liabtda" name="img_code_gongnneg_7.png" path="/newImg2/" scale="9grid" scale9grid="37,17,74,34"/>
+    <image id="liabtdb" name="img_code_gongnneg_10.png" path="/newImg2/"/>
+    <image id="liabtdc" name="img_code_gongnneg_9.png" path="/newImg2/"/>
+    <image id="liabtdd" name="img_code_bianliang_7.png" path="/newImg2/" scale="9grid" scale9grid="37,17,74,34"/>
+    <image id="liabtde" name="img_code_bianliang_8.png" path="/newImg2/" scale="9grid" scale9grid="36,16,72,32"/>
+    <image id="liabtdf" name="img_code_bianliang_9.png" path="/newImg2/"/>
+    <image id="liabtdg" name="img_code_bianliang_10.png" path="/newImg2/"/>
+    <component id="liabtdi" name="BlockCodeblockEvent.xml" path="/codeBlock/" exported="true"/>
+    <component id="liabtdj" name="ForkableContainer.xml" path="/codeBlock/" exported="true"/>
+    <component id="liabtdk" name="ForkableEnd.xml" path="/codeBlock/" exported="true"/>
+    <component id="liabtdl" name="ForkableMiddle.xml" path="/codeBlock/" exported="true"/>
+    <component id="liabtdm" name="ForkableStart.xml" path="/codeBlock/" exported="true"/>
+    <image id="liabte5" name="img_code_kongzhi_3-1.png" path="/newImg2/" scale="9grid" scale9grid="112,24,33,48"/>
+    <image id="liabte6" name="img_code_kongzhi_12.png" path="/newImg2/" scale="9grid" scale9grid="83,20,25,30"/>
+    <image id="liabte7" name="img_code_kongzhi_13.png" path="/newImg2/" scale="9grid" scale9grid="78,21,24,32"/>
+    <image id="liabte8" name="img_code_kongzhi_1.png" path="/newImg2/" scale="9grid" scale9grid="113,21,20,27"/>
+    <image id="liabte9" name="img_code_kongzhi_1-1.png" path="/newImg2/" scale="9grid" scale9grid="111,29,23,15"/>
+    <image id="liabtea" name="img_code_kongzhi_2.png" path="/newImg2/" scale="9grid" scale9grid="116,34,35,33"/>
+    <image id="liabteb" name="img_code_kongzhi_2-1.png" path="/newImg2/" scale="9grid" scale9grid="116,28,23,28"/>
+    <image id="liabtec" name="img_code_kongzhi_3.png" path="/newImg2/" scale="9grid" scale9grid="113,39,38,36"/>
+    <image id="liabtef" name="img_code_kongzhi_16.png" path="/newImg2/" scale="9grid" scale9grid="9,16,18,32"/>
+    <image id="pwfmteg" name="btn_code_weixuanzhong_2.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="30,15,60,30"/>
+    <image id="pwfmteh" name="btn_code_xuanzhong_1.png" path="/newImg2/" exported="true"/>
+    <image id="pwfmtei" name="img_code_yundong_7.png" path="/newImg2/" scale="9grid" scale9grid="37,17,74,34"/>
+    <image id="pwfmtej" name="img_code_yundong_8.png" path="/newImg2/" scale="9grid" scale9grid="36,17,72,34"/>
+    <image id="pwfmtek" name="img_code_shijian_1.png" path="/newImg2/" scale="9grid" scale9grid="135,30,63,60"/>
+    <image id="kt4stel" name="img_code_shijian_4.png" path="/newImg2/"/>
+    <image id="kt4stem" name="img_code_shijian_anniu_5.png" path="/newImg2/"/>
+    <image id="kt4sten" name="btn_code_xftb_1.png" path="/newImg2/"/>
+    <image id="vavpteo" name="img_code_xfy_2.png" path="/newImg2/"/>
+    <image id="vavptep" name="img_code_xfx_1.png" path="/newImg2/" scale="9grid" scale9grid="77,5,30,12"/>
+    <image id="vavpteq" name="img_code_gdt_1.png" path="/newImg2/" scale="9grid" scale9grid="25,3,50,6"/>
+    <image id="vavpter" name="img_code_gdt_2.png" path="/newImg2/" scale="9grid" scale9grid="3,25,6,50"/>
+    <component id="vavptet" name="ComStar.xml" path="/com/" exported="true"/>
   </resources>
   <publish name="Basics"/>
 </packageDescription>

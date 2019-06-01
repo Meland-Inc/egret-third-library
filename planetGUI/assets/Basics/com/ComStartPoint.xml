@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="29,8" overflow="hidden">
+<component size="114,17" overflow="hidden">
   <displayList>
-    <graph id="n2_iie2" name="leftLine" xy="0,0" size="2,3" type="rect" lineSize="5" lineColor="#00ff3621" fillColor="#ffff3621">
-      <relation target="" sidePair="left-left"/>
-    </graph>
-    <image id="n0_iie2" name="Outlet" src="iie28t" fileName="newImg/startPoint.PNG" xy="1,0" size="31,8">
-      <relation target="n2_iie2" sidePair="left-right"/>
-    </image>
-    <graph id="n1_iie2" name="rightLine" xy="31,0" size="10,3" type="rect" lineSize="5" lineColor="#00ff3621" fillColor="#ffff3621">
-      <relation target="n0_iie2" sidePair="left-left"/>
-    </graph>
+    <image id="n3_vavp" name="imgHint" src="vavptep" fileName="newImg2/img_code_xfx_1.png" xy="0,0"/>
   </displayList>
 </component>

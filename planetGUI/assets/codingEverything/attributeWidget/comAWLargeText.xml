@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="348,48">
+<component size="373,69">
   <displayList>
-    <image id="n4_d38r" name="imgBg" src="df6n5e" fileName="img_UI3/ide/img_ide_5.png" pkg="32ieekgu" xy="23,1" size="400,53">
-      <relation target="n2_d38r" sidePair="width-width,height-height"/>
-      <relation target="n2_d38r" sidePair="left-left,top-top"/>
+    <image id="n6_qki6" name="imgBg" src="qki68d" fileName="img_UI3/img_ide_wbk_7.png" xy="15,23" size="358,46">
+      <relation target="n8_qki6" sidePair="leftext-left,rightext-right"/>
+      <relation target="n8_qki6" sidePair="topext-top,bottomext-bottom"/>
     </image>
-    <text id="n2_d38r" name="labContent" xy="34,14" size="376,30" input="true" fontSize="22" color="#456681" leading="8" autoSize="none" text="猜猜我是谁"/>
-    <image id="n5_gjd5" name="n5" src="df6n5h" fileName="img_UI3/ide/img_ide_8.png" pkg="32ieekgu" xy="377,12">
-      <relation target="n2_d38r" sidePair="right-right,bottom-bottom"/>
-    </image>
+    <text id="n8_qki6" name="labContent" xy="29,40" size="329,27" input="true" fontSize="20" color="#45668e" leading="8" autoSize="none" text="猜猜我是谁"/>
   </displayList>
 </component>
