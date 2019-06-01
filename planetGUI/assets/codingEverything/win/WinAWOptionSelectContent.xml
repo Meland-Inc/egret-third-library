@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" opaque="false" designImage="ui://i25v0ebkfw0w38" adaptationTest="FitSize">
+<component size="1136,640" opaque="false" designImage="ui://i25v0ebkqki641" designImageLayer="1" adaptationTest="FitSize">
   <displayList>
-    <loader id="n28_i55w" name="bg" xy="0,0" size="1136,640" url="ui://te1gxawopgixi5z" fill="scaleFree">
+    <loader id="n28_i55w" name="ladWinBg" xy="0,0" size="1136,640" url="ui://te1gxawopgixi5z" fill="scaleFree">
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <loader id="n23_fw0w" name="n23" xy="337,153" size="300,334" group="n26_fw0w" url="ui://te1gxawogu60cyial" fill="scaleFree">
+    <loader id="n23_fw0w" name="ladOptionBg" xy="347,259" size="238,335" group="n26_fw0w" url="ui://kzio97vuqki68g" fill="scaleFree">
       <relation target="n25_fw0w" sidePair="topext-top,bottomext-bottom"/>
     </loader>
-    <text id="n24_fw0w" name="labTitle" xy="453,174" size="67,39" group="n26_fw0w" fontSize="30" color="#30575a" vAlign="middle" bold="true" text="选择">
+    <text id="n24_fw0w" name="labTitle" xy="433,269" size="67,39" group="n26_fw0w" fontSize="30" color="#45668e" vAlign="middle" bold="true" text="选择">
       <relation target="n25_fw0w" sidePair="top-top"/>
     </text>
-    <list id="n25_fw0w" name="lstOption" xy="389,323" pivot="0,0.5" anchor="true" size="200,177" group="n26_fw0w" lineGap="22" defaultItem="ui://kzio97vufw0w7i" autoClearItems="true">
+    <list id="n25_fw0w" name="lstOption" xy="367,414" pivot="0,0.5" anchor="true" size="200,177" group="n26_fw0w" lineGap="14" defaultItem="ui://kzio97vufw0w7i" autoClearItems="true">
       <item/>
       <item/>
       <item/>
     </list>
-    <component id="n27_p2ie" name="btnDelete" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="574,423" size="50,53" group="n26_fw0w">
+    <component id="n27_p2ie" name="btnDelete" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="392,521" size="150,56" group="n26_fw0w">
       <relation target="n25_fw0w" sidePair="bottom-bottom"/>
-      <Button icon="ui://te1gxawop2iecyiaq"/>
+      <Button icon="ui://kzio97vuqki67t"/>
     </component>
-    <group id="n26_fw0w" name="root" xy="337,153" size="300,347" advanced="true">
+    <image id="n29_qki6" name="n29" src="qki68c" fileName="img_UI3/img_ide_yd_18.png" xy="373,281" group="n26_fw0w">
+      <relation target="n25_fw0w" sidePair="top-top"/>
+    </image>
+    <group id="n26_fw0w" name="root" xy="347,259" size="238,335" advanced="true">
       <relation target="" sidePair="middle-middle,right-right"/>
     </group>
   </displayList>

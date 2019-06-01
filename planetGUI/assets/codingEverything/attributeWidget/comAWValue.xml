@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="398,111">
   <displayList>
-    <text id="n0_d38r" name="labTitle" xy="20,9" size="77,31" fontSize="24" color="#38211b" text="数值类"/>
-    <component id="n14_pzcq" name="sldValue" src="pzcq7f" fileName="attributeWidget/sldAWValue.xml" xy="120,68">
+    <text id="n21_qki6" name="labTitle" xy="11,28" size="77,31" fontSize="24" color="#2d5b98" vAlign="middle" text="数值类"/>
+    <component id="n14_pzcq" name="sldValue" src="pzcq7f" fileName="attributeWidget/sldAWValue.xml" xy="81,87" size="256,28">
       <Slider value="50" max="100"/>
     </component>
-    <component id="n19_o731" name="btnLeft" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="87,59" size="21,52">
-      <Button icon="ui://te1gxawogu60cyia1" sound="ui://fknoioovtqc911"/>
+    <component id="n19_o731" name="btnLeft" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="38,80" size="22,36">
+      <Button icon="ui://kzio97vuqki682" sound="ui://fknoioovtqc911"/>
     </component>
-    <component id="n20_o731" name="btnRight" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="377,59" size="21,52">
-      <Button icon="ui://te1gxawogu60cyia6" sound="ui://fknoioovtqc911"/>
+    <component id="n20_o731" name="btnRight" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="349,80" size="22,36">
+      <Button icon="ui://kzio97vuqki683" sound="ui://fknoioovtqc911"/>
     </component>
-    <image id="n17_pzcq" name="imgValueBg" src="gu60cyia2" fileName="UI2_Img/btn_cm_list.png" pkg="te1gxawo" xy="241,25" pivot="0.5,0.5" anchor="true" size="72,55"/>
-    <text id="n18_pzcq" name="labValue" xy="228,9" pivot="0.5,0" size="27,27" fontSize="20" color="#ffffff" align="center" vAlign="middle" text="50">
-      <relation target="n17_pzcq" sidePair="center-center"/>
-    </text>
   </displayList>
 </component>
