@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="370,99" designImage="ui://i25v0ebkdf6n3m" designImageOffsetX="-220" designImageOffsetY="-540">
-  <controller name="ctrlBuild" exported="true" pages="0,add,1,edit,2,editNotDel" selected="0"/>
+  <controller name="ctrlBuild" exported="true" pages="0,add,1,edit,2,editNotDel,3,editOther" selected="3"/>
   <displayList>
-    <image id="n47_py50" name="bg" src="df6n59" fileName="img_UI3/ide/img_ide_9.png" xy="45,0" size="284,99">
-      <gearXY controller="ctrlBuild" pages="1,2" values="0,0|45,0" default="45,0"/>
-      <gearSize controller="ctrlBuild" pages="0,1,2" values="284,99,1,1|370,99,1,1|284,99,1,1"/>
+    <image id="n47_py50" name="bg" src="df6n59" fileName="img_UI3/ide/img_ide_9.png" xy="135,0" size="100,99">
+      <gearXY controller="ctrlBuild" pages="1,2,3" values="0,0|45,0|135,0" default="45,0"/>
+      <gearSize controller="ctrlBuild" pages="0,1,2,3" values="284,99,1,1|370,99,1,1|284,99,1,1|100,99,1,1"/>
     </image>
     <component id="n46_py50" name="btnMirror" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="158,20" size="56,69">
+      <gearDisplay controller="ctrlBuild" pages="0,1,2"/>
       <gearXY controller="ctrlBuild" pages="1,2" values="89,21|60,20" default="158,20"/>
       <Button icon="ui://32ieekgudf6n4y"/>
     </component>
@@ -18,8 +19,9 @@
       <gearDisplay controller="ctrlBuild" pages="0"/>
       <Button icon="ui://32ieekgudf6n4x"/>
     </component>
-    <component id="n51_p6hg" name="btnDelete" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="24,24" size="48,65">
-      <gearDisplay controller="ctrlBuild" pages="1"/>
+    <component id="n51_p6hg" name="btnDelete" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="161,24" size="48,65">
+      <gearDisplay controller="ctrlBuild" pages="1,3"/>
+      <gearXY controller="ctrlBuild" pages="3" values="161,24" default="24,24"/>
       <Button icon="ui://32ieekgudf6n4z"/>
     </component>
     <component id="n52_p6hg" name="btnAttr" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="125,17" size="88,72">
