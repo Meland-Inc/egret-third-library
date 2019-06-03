@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="163,73" opaque="false" extention="Button">
+<component size="108,73" opaque="false" extention="Button">
   <controller name="button" pages="0,up,1,down" selected="0"/>
   <displayList>
-    <loader id="n0_hoex" name="icon" xy="55,1" size="108,72" url="ui://rnqj1l77tcu2a3" autoSize="true">
-      <gearXY controller="button" pages="0,1" values="55,1|0,1"/>
+    <loader id="n0_hoex" name="icon" xy="0,1" size="108,72" url="ui://rnqj1l77tcu2a3" autoSize="true">
+      <gearXY controller="button" pages="0,1" values="0,1|-20,1"/>
     </loader>
   </displayList>
   <Button mode="Radio"/>

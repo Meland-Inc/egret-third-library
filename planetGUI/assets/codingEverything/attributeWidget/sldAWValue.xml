@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="244,28" extention="Slider">
+<component size="234,28" extention="Slider">
   <displayList>
-    <image id="n0_pzcq" name="n0" src="gu60cyiag" fileName="UI2_Img/img_cm_progressbar1.png" pkg="te1gxawo" xy="0,0" size="244,28">
+    <image id="n0_pzcq" name="n0" src="qki68a" fileName="img_UI3/img_ide_szt_24.png" xy="0,0" size="245,24">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n1_pzcq" name="bar" src="gu60cyiah" fileName="UI2_Img/img_cm_progressbar2.png" pkg="te1gxawo" xy="20,0" size="204,28" hideByEditor="true" visible="false"/>
-    <image id="n3_sgwy" name="barShow" src="gu60cyiah" fileName="UI2_Img/img_cm_progressbar2.png" pkg="te1gxawo" xy="0,0" size="249,28">
+    <image id="n1_pzcq" name="bar" src="qki68b" fileName="img_UI3/img_ide_szt_24_1.png" xy="20,1" size="205,21" hideByEditor="true" visible="false"/>
+    <image id="n3_sgwy" name="barShow" src="qki68b" fileName="img_UI3/img_ide_szt_24_1.png" xy="2,1" size="238,21">
       <relation target="n1_pzcq" sidePair="rightext-right"/>
     </image>
-    <component id="n2_pzcq" name="grip" src="pzcq7e" fileName="attributeWidget/sldAWValue_grip.xml" xy="224,14" pivot="0.5,0.5" anchor="true">
+    <component id="n2_pzcq" name="grip" src="pzcq7e" fileName="attributeWidget/sldAWValue_grip.xml" xy="225,12" pivot="0.5,0.5" anchor="true" size="40,41">
       <relation target="n1_pzcq" sidePair="right-right"/>
     </component>
+    <image id="n4_wkbh" name="imgValueBg" src="qki689" fileName="img_UI3/img_ide_szk_21.png" xy="225,-44" pivot="0.5,0.5" anchor="true" size="63,44">
+      <relation target="n5_wkbh" sidePair="width-width"/>
+      <relation target="n2_pzcq" sidePair="left-left"/>
+    </image>
+    <text id="n5_wkbh" name="labValue" xy="205,-60" pivot="0.5,0" size="38,27" fontSize="20" color="#45668e" align="center" vAlign="middle" text="100">
+      <relation target="n4_wkbh" sidePair="center-center,middle-middle"/>
+    </text>
   </displayList>
   <Slider/>
 </component>

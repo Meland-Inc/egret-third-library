@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkdf6n3k">
-  <controller name="ctrlRightView" pages="0,energy,1,backpack,2,attr" selected="1">
+  <controller name="ctrlRightView" pages="0,energy,1,backpack,2,attr" selected="2">
     <action type="change_page" fromPage="" toPage="1,2" objectId="n0_qouo" controller="ctrlState" targetPage="2"/>
   </controller>
   <controller name="ctrlOperate" pages="3,none,0,left,1,center,2,right" selected="0"/>
@@ -87,7 +87,7 @@
     </component>
     <image id="n28_py50" name="n28" src="qouocyibh" fileName="img_UI3/img_cm_tips1.png" pkg="te1gxawo" xy="864,442" group="n50_py50"/>
     <image id="n29_py50" name="n29" src="qouocyibi" fileName="img_UI3/img_cm_warning.png" pkg="te1gxawo" xy="898,457" group="n50_py50"/>
-    <text id="n30_py50" name="n30" xy="925,457" size="125,26" group="n50_py50" fontSize="20" align="center" vAlign="middle" text="源码能源不足"/>
+    <text id="n30_py50" name="n30" xy="925,457" size="125,27" group="n50_py50" fontSize="20" align="center" vAlign="middle" text="源码能源不足"/>
     <group id="n50_py50" name="n50" xy="864,442" size="211,98" group="n31_py50" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlEnergy" pages="1"/>
     </group>
