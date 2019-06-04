@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" opaque="false" designImage="ui://i25v0ebkdf6n3k">
-  <controller name="ctrlRightView" pages="0,energy,1,backpack,2,attr" selected="2">
+<component size="1136,640" opaque="false" designImage="ui://i25v0ebkdf6n3k" adaptationTest="FitSize">
+  <controller name="ctrlRightView" pages="0,energy,1,backpack,2,attr" selected="0">
     <action type="change_page" fromPage="" toPage="1,2" objectId="n0_qouo" controller="ctrlState" targetPage="2"/>
   </controller>
   <controller name="ctrlOperate" pages="3,none,0,left,1,center,2,right" selected="0"/>
