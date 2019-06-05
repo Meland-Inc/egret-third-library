@@ -6,11 +6,11 @@
     <component id="n9_j7co" name="mainContainer" src="j7co5y" fileName="com/comMainContainer.xml" xy="0,0" size="998,604">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </component>
-    <component id="n21_8tz6" name="btnUndo" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="28,11" size="85,87" locked="true" visible="false">
+    <component id="n21_8tz6" name="btnUndo" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="28,11" size="85,87">
       <relation target="" sidePair="left-left,top-top"/>
       <Button icon="ui://rnqj1l77tcu29q"/>
     </component>
-    <component id="n22_8tz6" name="btnRedo" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="129,11" size="85,87" locked="true" visible="false">
+    <component id="n22_8tz6" name="btnRedo" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="129,11" size="85,87">
       <relation target="" sidePair="left-left,top-top"/>
       <Button icon="ui://rnqj1l77tcu29r"/>
     </component>
