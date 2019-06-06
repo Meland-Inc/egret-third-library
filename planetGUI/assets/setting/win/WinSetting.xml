@@ -102,7 +102,9 @@
     <component id="n70_o31t" name="btnDel" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="435,350" size="125,40" group="n71_o31t">
       <Button title="删除" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoqo8vi21"/>
     </component>
-    <group id="n71_o31t" name="manor" xy="435,213" size="405,177" group="n47_kg0b" advanced="true">
+    <text id="n72_ppgn" name="n72" xy="488,172" size="85,22" group="n71_o31t" fontSize="16" color="#5b4b37" text="当前领地："/>
+    <text id="n73_ppgn" name="tfCurManorID" xy="586,172" size="50,22" group="n71_o31t" fontSize="16" color="#5b4b37" autoClearText="true" text="aaaaa"/>
+    <group id="n71_o31t" name="manor" xy="435,172" size="405,218" group="n47_kg0b" advanced="true">
       <gearDisplay controller="conSetting" pages="4"/>
     </group>
     <image id="n60_r398" name="n60" src="ot9si2v" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="235,156" size="168,350" group="n47_kg0b"/>
