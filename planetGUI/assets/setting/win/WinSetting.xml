@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640">
-  <controller name="conSetting" pages="0,system,1,sound,2,chating,3,about" selected="0"/>
+<component size="1136,640" adaptationTest="FitSize">
+  <controller name="conSetting" pages="0,system,1,sound,2,chating,3,about,4,manor" selected="4"/>
+  <controller name="ctrlGameMode" pages="0,game,1,lessons" selected="0"/>
   <displayList>
     <image id="n2_8zcx" name="bg" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="215,102" size="706,430" group="n47_kg0b"/>
     <image id="n62_r398" name="n62" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="413,155" size="490,350" group="n47_kg0b"/>
@@ -32,7 +33,7 @@
     <component id="n64_epn8" name="btnUploadLog" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="463,460" size="125,40" group="n30_o8k6">
       <Button title="上传日志" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoefrs1w"/>
     </component>
-    <group id="n30_o8k6" name="system" xy="463,194" size="399,306" group="n47_kg0b" advanced="true">
+    <group id="n30_o8k6" name="system" xy="463,194" size="399,306" group="n47_kg0b" advanced="true" collapsed="true">
       <gearDisplay controller="conSetting" pages="0"/>
     </group>
     <component id="n31_o8k6" name="tgSound" src="rw7fg" fileName="com/settingToggle.xml" xy="472,211" size="116,33" group="n34_o8k6">
@@ -75,12 +76,38 @@
     <text id="n58_r398" name="n58" xy="453,183" size="70,25" group="n54_r398" fontSize="18" color="#5b4b37" text="1.2.01.3"/>
     <text id="n55_r398" name="n55" xy="453,223" size="186,64" group="n54_r398" fontSize="14" color="#755f44" autoSize="none" text="@2016-2020腾语科技&#xA;ALL RIGHTS RESERVED&#xA;贝尔教育平台官网"/>
     <text id="n56_r398" name="n56" xy="453,287" size="157,24" group="n54_r398" fontSize="14" color="#5b4b37" autoSize="none" text="www.bellcode.com"/>
-    <group id="n54_r398" name="about" xy="453,183" size="186,128" group="n47_kg0b" advanced="true">
+    <group id="n54_r398" name="about" xy="453,183" size="186,128" group="n47_kg0b" advanced="true" collapsed="true">
       <gearDisplay controller="conSetting" pages="3"/>
+    </group>
+    <component id="n66_o31t" name="cbManorID" src="o31tw" fileName="com/comManorList.xml" xy="586,213" size="205,20" group="n71_o31t">
+      <ComboBox visibleItemCount="10" autoClearItems="true">
+        <item title="aaaaa"/>
+        <item title="bbbbb"/>
+        <item title="ccccccc"/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+      </ComboBox>
+    </component>
+    <text id="n67_o31t" name="n67" xy="488,213" size="69,22" group="n71_o31t" fontSize="16" color="#5b4b37" text="领地名字"/>
+    <component id="n68_o31t" name="btnLoad" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="575,350" size="125,40" group="n71_o31t">
+      <Button title="下载" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoefrs1w"/>
+    </component>
+    <component id="n69_o31t" name="btnUpload" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="715,350" size="125,40" group="n71_o31t">
+      <Button title="上传" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoefrs1w"/>
+    </component>
+    <component id="n70_o31t" name="btnDel" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="435,350" size="125,40" group="n71_o31t">
+      <Button title="删除" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoqo8vi21"/>
+    </component>
+    <group id="n71_o31t" name="manor" xy="435,213" size="405,177" group="n47_kg0b" advanced="true">
+      <gearDisplay controller="conSetting" pages="4"/>
     </group>
     <image id="n60_r398" name="n60" src="ot9si2v" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="235,156" size="168,350" group="n47_kg0b"/>
     <component id="n21_o8k6" name="btnSystem" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="256,178" size="125,56" group="n47_kg0b">
-      <Button checked="true" title="系统" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="0"/>
+      <Button title="系统" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="0"/>
     </component>
     <component id="n22_o8k6" name="btnSound" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="256,240" size="125,56" group="n47_kg0b">
       <Button title="声音" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="1"/>
@@ -90,6 +117,10 @@
     </component>
     <component id="n24_o8k6" name="btnAbout" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="256,368" size="125,56" group="n47_kg0b">
       <Button title="关于" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="3"/>
+    </component>
+    <component id="n65_o31t" name="btnManor" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="256,434" size="125,56" group="n47_kg0b">
+      <gearDisplay controller="ctrlGameMode" pages="1"/>
+      <Button checked="true" title="领地" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="4"/>
     </component>
     <image id="n61_r398" name="n61" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="223,516" size="691,14" group="n47_kg0b"/>
     <group id="n47_kg0b" name="root" xy="215,95" size="706,437" advanced="true">
