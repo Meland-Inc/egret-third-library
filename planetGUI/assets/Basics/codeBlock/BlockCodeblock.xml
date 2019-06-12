@@ -8,12 +8,12 @@
       <gearIcon controller="color" pages="0,3,4,5,8" values="ui://rnqj1l77liabte6|ui://rnqj1l77h5gvtcb|ui://rnqj1l77h5gvtcb|ui://rnqj1l77h5gvtb4|ui://rnqj1l77h5gvtb4" default="ui://rnqj1l77h5gvtba"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <loader id="n3_yrfu" name="lagAloneBG" xy="0,0" size="113,92" url="ui://rnqj1l77h5gvtbb" fill="scaleFree">
+    <loader id="n3_yrfu" name="lagAloneBG" xy="0,0" size="113,96" url="ui://rnqj1l77h5gvtbb" fill="scaleFree">
       <gearDisplay controller="isAlone" pages="0"/>
       <gearIcon controller="color" pages="7,0,1,2,3,4,5,8" values="ui://rnqj1l77h5gvtbb|ui://rnqj1l77liabte7|ui://rnqj1l77h5gvtbb|ui://rnqj1l77h5gvtbb|ui://rnqj1l77h5gvtcc|ui://rnqj1l77h5gvtcc|ui://rnqj1l77h5gvtb5|ui://rnqj1l77h5gvtb5"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <component id="n1_flp7" name="container" src="kesa9" fileName="com/Container.xml" xy="20,2" size="75,69" restrictSize="75,0,69,69"/>
+    <component id="n1_flp7" name="container" src="kesa9" fileName="com/Container.xml" xy="20,4" size="75,69" restrictSize="75,0,69,69"/>
   </displayList>
   <relation target="n1_flp7" sidePair="width-width,height-height"/>
 </component>

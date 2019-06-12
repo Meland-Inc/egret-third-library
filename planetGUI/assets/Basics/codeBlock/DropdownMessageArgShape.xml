@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="78,46" restrictSize="0,0,46,46" extention="ComboBox">
+<component size="78,36" restrictSize="0,0,36,36" extention="ComboBox">
   <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
   <displayList>
-    <image id="n6_flp7" name="n6" src="h5gvtc9" fileName="newImg2/img_code_tongyong_1.png" xy="0,0" size="78,46">
+    <image id="n6_flp7" name="n6" src="liabtd8" fileName="newImg2/img_code_tongyong_tuoyan_3.png" xy="0,0" size="78,36">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <text id="n4" name="title" xy="14,8" size="30,31" restrictSize="30,0,20,0" fontSize="24" color="#666666" align="center" vAlign="middle" ubb="true" singleLine="true" text=""/>
-    <image id="n7_flp7" name="n7" src="liabtd7" fileName="newImg2/img_code_tongyong_anniu_4.png" xy="49,18">
+    <text id="n4" name="title" xy="14,5" size="30,31" restrictSize="30,0,20,0" fontSize="24" color="#666666" align="center" vAlign="middle" ubb="true" singleLine="true" text=""/>
+    <image id="n7_flp7" name="n7" src="liabtd7" fileName="newImg2/img_code_tongyong_anniu_4.png" xy="49,13">
       <relation target="" sidePair="middle-middle,right-right"/>
     </image>
   </displayList>
