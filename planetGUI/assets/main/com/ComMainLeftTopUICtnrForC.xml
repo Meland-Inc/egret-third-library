@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="220,184" overflow="hidden" designImage="ui://i25v0ebke46z40" designImageAlpha="100" designImageLayer="1">
+<component size="220,184" overflow="hidden" designImage="ui://i25v0ebke46z40" designImageAlpha="3" designImageLayer="1">
   <controller name="ctrlStatus" pages="0,strech,1,shrink" selected="0"/>
-  <controller name="ctrlAreaInfo" pages="0,public,1,private" selected="0"/>
-  <controller name="weather" pages="0,night,1,day,2,dusk,3,morning" selected="1"/>
   <displayList>
     <component id="n8_wdqf" name="btnSetting" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="162,38" size="58,48">
       <gearXY controller="ctrlStatus" pages="1" values="11,82" default="162,38" tween="true"/>
@@ -15,7 +13,7 @@
     <component id="n10_wdqf" name="btnShrink" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="162,136" size="58,48">
       <Button icon="ui://5hs1fueje46zb0" controller="ctrlStatus" page="1"/>
     </component>
-    <component id="n11_wdqf" name="btnStrech" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1,11" size="80,66" hideByEditor="true" visible="false">
+    <component id="n11_wdqf" name="btnStrech" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1,11" size="80,66" visible="false">
       <Button icon="ui://5hs1fueje46zay" controller="ctrlStatus" page="0"/>
     </component>
     <image id="n13_wdqf" name="imgMailRedPoint" src="e46zax" fileName="img_UI3/icon_main_hongdian_68.png" xy="195,101">

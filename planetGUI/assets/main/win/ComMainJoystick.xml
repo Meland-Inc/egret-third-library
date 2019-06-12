@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="274,287" opaque="false" designImage="ui://i25v0ebkuvgl3i" designImageOffsetX="-863" designImageOffsetY="-262" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlShowHide" pages="0,hide,1,show" selected="0"/>
+  <controller name="ctrlGameMode" pages="1,game,0,lessons,2,creation" selected="0"/>
   <displayList>
     <image id="n15_uvgl" name="imgBg" src="uvgl8f" fileName="img_UI3/btn_main_cebianlanzhankai 20.png" xy="221,0" size="274,82" group="n23_uvgl"/>
     <component id="n17_uvgl" name="btnDelete" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="275,8" size="70,60" group="n23_uvgl">

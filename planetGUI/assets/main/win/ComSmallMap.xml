@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="160,160" designImage="ui://i25v0ebke46z40" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlAreaInfo" pages="0,public,1,private" selected="0"/>
+  <controller name="ctrlGameMode" pages="0,game,1,lessons,2,creation" selected="0"/>
   <displayList>
     <image id="n19_wdqf" name="bg" src="e46zb7" fileName="img_UI3/img_main_zhezhao_71.png" xy="0,0" size="160,160"/>
     <component id="n14_qv2f" name="mapViewCtnr" src="qv2f5z" fileName="com/SmallMapContainer.xml" xy="3,3" size="154,154"/>
     <image id="n27_wdqf" name="mapEdge" src="wdqfcyick" fileName="img_UI3/img_main_zhezhao_71-1.png" xy="0,0"/>
-    <component id="n3_j0s6" name="comMainPlayer" src="j0s611" fileName="com/comMainPlayerIcon.xml" pkg="k08mtk0r" xy="80,80" pivot="0.5,0.5" anchor="true" touchable="false"/>
+    <component id="n3_j0s6" name="comMainPlayer" src="j0s611" fileName="com/comMainPlayerIcon.xml" pkg="k08mtk0r" xy="80,80" touchable="false"/>
     <text id="n20_wdqf" name="tfLocTitle" xy="12,118" size="53,18" fontSize="12" color="#ffffff" text="坐标信息"/>
     <text id="n21_wdqf" name="tfHeaderInfo" xy="12,134" size="140,18" fontSize="12" color="#ffffff" vars="true" autoSize="none" text="({r=333},  {c=333})"/>
-    <loader id="n22_wdqf" name="ladTimeIcon" xy="13,9" size="20,20" url="ui://5hs1fueje46zb4" align="center" vAlign="middle" fill="scaleNoBorder" shrinkOnly="true"/>
+    <loader id="n22_wdqf" name="ladTimeIcon" xy="13,9" size="20,20" url="ui://5hs1fueje46zb4" align="center" vAlign="middle" fill="scaleNoBorder" shrinkOnly="true">
+      <gearDisplay controller="ctrlGameMode" pages="0"/>
+    </loader>
     <text id="n23_wdqf" name="tfHomeName" xy="35,10" size="117,22" fontSize="16" color="#ffffff" vAlign="middle" vars="true" autoSize="none" singleLine="true" text="公共区域">
       <gearText controller="ctrlAreaInfo" pages="0" values="公共区域" default="{name=六月二}的家"/>
     </text>
     <text id="n24_wdqf" name="tfTemperature" xy="4,34" size="37,22" group="n26_wdqf" fontSize="16" color="#ffffff" align="right" ubb="true" vars="true" autoSize="none" text="{value=27}°"/>
     <text id="n25_wdqf" name="tfC" xy="36,34" size="14,22" group="n26_wdqf" fontSize="16" color="#ffffff" align="right" text="C"/>
-    <group id="n26_wdqf" name="grpTemperature" xy="4,34" size="46,22" advanced="true" collapsed="true"/>
+    <group id="n26_wdqf" name="grpTemperature" xy="4,34" size="46,22" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlGameMode" pages="0"/>
+    </group>
   </displayList>
 </component>

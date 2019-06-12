@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="48,48" extention="Button">
+  <controller name="button" pages="2,up,3,down" selected="0"/>
+  <controller name="ctrlMark" pages="0,normal,1,equip" selected="0"/>
+  <displayList>
+    <loader id="n14_o6si" name="bg" xy="0,0" size="48,48" url="ui://5hs1fuejwq4dcyicm" align="center" vAlign="middle" fill="scaleFree" shrinkOnly="true">
+      <gearIcon controller="button" pages="2,3" values="ui://5hs1fuejwq4dcyicm|ui://5hs1fuejuvgla7"/>
+    </loader>
+    <loader id="n22_ww3a" name="icon" xy="6,6" size="35,35" group="n41_ltu2" url="ui://5hs1fuejwq4dcyicn" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <group id="n41_ltu2" name="grpItemIcon" xy="6,6" size="35,35" advanced="true"/>
+    <image id="n40_uvgl" name="imgEquipMark" src="wq4dcyico" fileName="img_UI3/bTerminal/img_main_wpk_3.png" xy="2,2">
+      <gearDisplay controller="ctrlMark" pages="1"/>
+    </image>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

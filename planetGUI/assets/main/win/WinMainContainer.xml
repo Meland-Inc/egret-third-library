@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" opaque="false" designImage="ui://i25v0ebke46z3z" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlMapMode" pages="0,normal,1,build,2,quickBuild,3,quickEdit" selected="0"/>
+<component size="1136,640" opaque="false" designImage="ui://i25v0ebkwq4d42" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlMapMode" pages="0,normal,1,build,2,quickBuild,3,quickEdit" selected="2"/>
+  <controller name="ctrlGameMode" pages="1,game,0,lessons,2,creation" selected="0"/>
   <displayList>
     <component id="n31_r2bf" name="comMainEnemyInfo" src="dura1l" fileName="win/ComMainEnemyInfo.xml" xy="233,7" size="152,45">
       <relation target="" sidePair="left-left,top-top"/>
@@ -32,14 +33,19 @@
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
     <component id="n46_uvgl" name="comStatus" src="pcuyaj" fileName="win/ComStatus.xml" xy="831,9">
+      <gearDisplay controller="ctrlGameMode" pages="1"/>
       <relation target="" sidePair="right-right"/>
     </component>
-    <component id="n44_uvgl" name="comMainMenu" src="uvgl9m" fileName="win/ComMainMenu.xml" xy="1060,6">
+    <component id="n44_uvgl" name="comMainStorageForC" src="uvgl9m" fileName="win/ComMainStorageForC.xml" xy="1060,6">
+      <gearDisplay controller="ctrlGameMode" pages="1"/>
       <relation target="" sidePair="right-right"/>
     </component>
     <component id="n47_wdqf" name="comUserInfo" src="w80lg" fileName="win/ComMainUserInfo.xml" xy="966,6">
+      <gearDisplay controller="ctrlGameMode" pages="1"/>
       <relation target="" sidePair="right-right"/>
     </component>
-    <component id="n48_wdqf" name="comMainLeftTopUICtnr" src="wdqfcyicj" fileName="com/ComMainLeftTopUICtnr.xml" xy="0,0"/>
+    <component id="n49_wq4d" name="comMainStorageForB" src="wq4dcyidf" fileName="win/ComMainStorageForB.xml" xy="9,170" size="53,51">
+      <gearDisplay controller="ctrlGameMode" pages="0"/>
+    </component>
   </displayList>
 </component>
