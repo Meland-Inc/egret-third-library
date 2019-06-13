@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" opaque="false" designImage="ui://i25v0ebkhbwi42" designImageAlpha="100" adaptationTest="FitSize">
+  <displayList>
+    <component id="n27_hoex" name="comCodeblocksPool" src="y583d" fileName="newCom/CodeblockPool.xml" xy="427,0" size="630,640" restrictSize="630,0,0,0" blend="none" controller="ctrlGameModel,1">
+      <relation target="" sidePair="right-right,bottomext-bottom"/>
+    </component>
+    <image id="n28_8tz6" name="imgListBG" src="gg8mtgo" fileName="B-PlatformImg/img_code_dk_2.png" xy="1052,-5" size="85,651">
+      <relation target="" sidePair="bottomext-bottom,right-right"/>
+    </image>
+    <list id="n25_hoex" name="lstCategory" xy="1056,14" size="84,561" defaultItem="ui://rnqj1l77hbwitg9" align="center">
+      <relation target="" sidePair="bottomext-bottom,right-right"/>
+      <item title="事件" icon="ui://rnqj1l77hbwitfb" name="event" selectedIcon="ui://rnqj1l77hbwitfc" controllers="c1,0"/>
+      <item title="控制" icon="ui://rnqj1l77hbwitf7" name="control" selectedIcon="ui://rnqj1l77hbwitf9" controllers="c1,1"/>
+      <item title="实体" icon="ui://rnqj1l77hbwitfd" name="prop" selectedIcon="ui://rnqj1l77hbwitfe" controllers="c1,2"/>
+      <item title="功能" icon="ui://rnqj1l77hbwitez" name="function" selectedIcon="ui://rnqj1l77hbwitf0" controllers="c1,3"/>
+      <item title="运动" icon="ui://rnqj1l77hbwitfh" name="move" selectedIcon="ui://rnqj1l77hbwitfi" controllers="c1,4"/>
+      <item title="检测" icon="ui://rnqj1l77hbwitf3" name="detect" selectedIcon="ui://rnqj1l77hbwitf4" controllers="c1,5"/>
+      <item title="运算" icon="ui://rnqj1l77hbwitfl" name="operator" selectedIcon="ui://rnqj1l77hbwitfm" controllers="c1,6"/>
+      <item title="变量" icon="ui://rnqj1l77hbwitev" name="variable" selectedIcon="ui://rnqj1l77hbwitew" controllers="c1,7"/>
+    </list>
+    <component id="n29_8tz6" name="btnAction" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1079,579" size="44,44">
+      <relation target="" sidePair="right-right,top-top"/>
+      <Button icon="ui://rnqj1l77hbwitg7"/>
+    </component>
+    <component id="n30_nx0y" name="comEditVariate" src="p3g7a9" fileName="newCom/ComEditVariate.xml" xy="0,0">
+      <relation target="" sidePair="left-left,top-top"/>
+    </component>
+  </displayList>
+</component>
