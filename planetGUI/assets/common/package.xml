@@ -376,8 +376,8 @@
     <image id="nl0rcyicc" name="img_cm_bg_dk_1.png" path="/imgB/" exported="true"/>
     <image id="nl0rcyicd" name="img_cm_db_1.png" path="/imgB/" exported="true"/>
     <image id="nl0rcyice" name="img_cm_db_2.png" path="/imgB/" exported="true"/>
-    <image id="nl0rcyicf" name="img_cm_dk_1.png" path="/imgB/" exported="true"/>
-    <image id="nl0rcyicg" name="img_cm_dk_2.png" path="/imgB/" exported="true"/>
+    <image id="nl0rcyicf" name="img_cm_dk_1.png" path="/imgB/" exported="true" scale="9grid" scale9grid="33,33,66,66"/>
+    <image id="nl0rcyicg" name="img_cm_dk_2.png" path="/imgB/" exported="true" scale="9grid" scale9grid="21,26,42,52"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>
