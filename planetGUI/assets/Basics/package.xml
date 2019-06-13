@@ -21,11 +21,10 @@
     <component id="flp73n" name="PropMessageArgShape.xml" path="/codeBlock/" exported="true"/>
     <component id="flp74j" name="Value.xml" path="/codeBlock/" exported="true"/>
     <component id="flp74o" name="Boolean.xml" path="/codeBlock/" exported="true"/>
-    <component id="j7co5u" name="ScrollBarV_grip.xml" path="/com/"/>
-    <component id="j7co5v" name="ScrollBarV.xml" path="/com/" exported="true"/>
+    <component id="j7co5v" name="ScrollBarVB.xml" path="/com/" exported="true"/>
     <component id="j7co5w" name="ScrollBarH_grip.xml" path="/com/"/>
     <component id="j7co5x" name="ScrollBarH.xml" path="/com/" exported="true"/>
-    <component id="j7co5y" name="comMainContainer.xml" path="/com/"/>
+    <component id="j7co5y" name="comMainContainer.xml" path="/newCom/"/>
     <component id="l2b668" name="BlankShape.xml" path="/codeBlock/" exported="true"/>
     <component id="dib96o" name="btnTips.xml" path="/btn/" exported="true"/>
     <component id="dib96p" name="btnTipsWithImage.xml" path="/btn/" exported="true"/>
@@ -246,8 +245,70 @@
     <image id="vavpteo" name="img_code_xfy_2.png" path="/newImg2/"/>
     <image id="vavptep" name="img_code_xfx_1.png" path="/newImg2/" scale="9grid" scale9grid="77,5,30,12"/>
     <image id="vavpteq" name="img_code_gdt_1.png" path="/newImg2/" scale="9grid" scale9grid="25,3,50,6"/>
-    <image id="vavpter" name="img_code_gdt_2.png" path="/newImg2/" scale="9grid" scale9grid="3,25,6,50"/>
+    <image id="vavpter" name="img_code_gdt_2.png" path="/newImg2/" scale="9grid" scale9grid="3,25,4,50"/>
     <component id="vavptet" name="ComStar.xml" path="/com/" exported="true"/>
+    <image id="hbwitev" name="icon_code_dm_bl_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitew" name="icon_code_dm_bl_1_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitex" name="icon_code_dm_bl_2.png" path="/B-PlatformImg/" scale="9grid" scale9grid="1,10,2,20"/>
+    <image id="hbwitey" name="icon_code_dm_bl_2_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitez" name="icon_code_dm_gn_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitf0" name="icon_code_dm_gn_1_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitf1" name="icon_code_dm_gn_2.png" path="/B-PlatformImg/" scale="9grid" scale9grid="1,10,2,20"/>
+    <image id="hbwitf2" name="icon_code_dm_gn_2_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitf3" name="icon_code_dm_jc_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitf4" name="icon_code_dm_jc_1_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitf5" name="icon_code_dm_jc_2.png" path="/B-PlatformImg/" scale="9grid" scale9grid="1,10,2,20"/>
+    <image id="hbwitf6" name="icon_code_dm_jc_2_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitf7" name="icon_code_dm_kz_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitf8" name="icon_code_dm_kz_1_1.png" path="/B-PlatformImg/" scale="9grid" scale9grid="1,10,2,20"/>
+    <image id="hbwitf9" name="icon_code_dm_kz_2.png" path="/B-PlatformImg/"/>
+    <image id="hbwitfa" name="icon_code_dm_kz_2_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitfb" name="icon_code_dm_sj_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitfc" name="icon_code_dm_sj_1_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitfd" name="icon_code_dm_st_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitfe" name="icon_code_dm_st_1_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitff" name="icon_code_dm_st_2.png" path="/B-PlatformImg/" scale="9grid" scale9grid="1,10,2,20"/>
+    <image id="hbwitfg" name="icon_code_dm_st_2_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitfh" name="icon_code_dm_yd_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitfi" name="icon_code_dm_yd_1_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitfj" name="icon_code_dm_yd_2.png" path="/B-PlatformImg/" scale="9grid" scale9grid="1,10,2,20"/>
+    <image id="hbwitfk" name="icon_code_dm_yd_2_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitfl" name="icon_code_dm_ys_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitfm" name="icon_code_dm_ys_1_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitfn" name="icon_code_dm_ys_2.png" path="/B-PlatformImg/" scale="9grid" scale9grid="1,10,2,20"/>
+    <image id="hbwitfo" name="icon_code_dm_ys_2_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitfp" name="icon_code_fd_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitfq" name="icon_code_sx_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitfr" name="icon_code_yt_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitfu" name="img_code_dm_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitfv" name="img_code_dm_2.png" path="/B-PlatformImg/"/>
+    <image id="hbwitfw" name="img_code_dm_2_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitfx" name="img_code_gdt_1.png" path="/B-PlatformImg/" scale="9grid" scale9grid="23,2,46,4"/>
+    <image id="hbwitfy" name="img_code_gdt_2.png" path="/B-PlatformImg/" scale="9grid" scale9grid="2,23,4,46"/>
+    <image id="hbwitfz" name="img_code_ljt_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitg0" name="img_code_ljt_2.png" path="/B-PlatformImg/"/>
+    <image id="hbwitg1" name="img_code_qh_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitg2" name="img_code_qh_2.png" path="/B-PlatformImg/"/>
+    <image id="hbwitg3" name="img_code_qh_3.png" path="/B-PlatformImg/"/>
+    <image id="hbwitg4" name="img_code_qh_3_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitg5" name="img_code_qh_4.png" path="/B-PlatformImg/"/>
+    <image id="hbwitg6" name="img_code_qh_4_1.png" path="/B-PlatformImg/"/>
+    <image id="hbwitg7" name="btn_code_bf_1.png" path="/B-PlatformImg/"/>
+    <component id="hbwitg9" name="btnCategoryB.xml" path="/newBtn/"/>
+    <component id="hbwitga" name="ComCategoryListB.xml" path="/newCom/"/>
+    <component id="hbwitgb" name="MainB.xml" path="/win/" exported="true"/>
+    <component id="hbwitgc" name="CodeblockContainerB.xml" path="/newCom/"/>
+    <component id="czortgg" name="comMainContainerB.xml" path="/newCom/"/>
+    <component id="czortgh" name="ScrollBarHB.xml" path="/com/" exported="true"/>
+    <component id="czortgj" name="ScrollBarV_grip.xml" path="/com/"/>
+    <component id="czortgk" name="ScrollBarV.xml" path="/com/" exported="true"/>
+    <component id="czortgl" name="ScrollBarV_gripB.xml" path="/com/"/>
+    <component id="czortgm" name="ScrollBarH_gripB.xml" path="/com/"/>
+    <image id="gg8mtgn" name="img_code_dk_1.png" path="/B-PlatformImg/" scale="9grid" scale9grid="33,33,66,66"/>
+    <image id="gg8mtgo" name="img_code_dk_2.png" path="/B-PlatformImg/" scale="9grid" scale9grid="21,26,42,52"/>
+    <image id="gg8mtgp" name="img_code_dm_3.png" path="/B-PlatformImg/"/>
+    <image id="gg8mtgq" name="btn_code_lk_1.png" path="/B-PlatformImg/"/>
+    <image id="gg8mtgr" name="btn_code_lk_2.png" path="/B-PlatformImg/"/>
   </resources>
   <publish name="Basics"/>
 </packageDescription>
