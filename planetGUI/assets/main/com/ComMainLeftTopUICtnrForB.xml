@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="226,164" overflow="hidden" designImage="ui://i25v0ebkwq4d43" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlStatus" pages="0,strech,1,shrink" selected="1"/>
+  <displayList>
+    <component id="n8_wdqf" name="btnSetting" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="67,12" size="50,48">
+      <gearXY controller="ctrlStatus" pages="0,1" values="170,66|67,12" tween="true"/>
+      <Button icon="ui://5hs1fueje46zaz"/>
+    </component>
+    <component id="n10_wdqf" name="btnShrink" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="169,116" size="51,48">
+      <Button icon="ui://5hs1fueje46zb0" controller="ctrlStatus" page="1"/>
+    </component>
+    <component id="n11_wdqf" name="btnStrech" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="0,4" size="72,66" visible="false">
+      <Button icon="ui://5hs1fuejwq4dcyicw" controller="ctrlStatus" page="0"/>
+    </component>
+    <component id="n15_wdqf" name="comSmallMap" src="j0s6z" fileName="win/ComSmallMap.xml" xy="-160,0">
+      <gearXY controller="ctrlStatus" pages="1" values="-160,0" default="0,0" tween="true"/>
+    </component>
+    <component id="n16_wq4d" name="btnUpload" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="6,83" size="59,66">
+      <gearXY controller="ctrlStatus" pages="0,1" values="166,4|6,83" tween="true"/>
+      <Button icon="ui://5hs1fuejwq4dcyid1"/>
+    </component>
+  </displayList>
+</component>

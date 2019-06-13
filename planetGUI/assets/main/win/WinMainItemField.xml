@@ -1,27 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" opaque="false" designImage="ui://i25v0ebke46z3z" designImageAlpha="31" designImageLayer="1">
-  <controller name="ctrlStrech" pages="0,strech,1,normal" selected="0"/>
+<component size="1136,640" opaque="false" designImage="ui://i25v0ebkwq4d42" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlStatus" pages="0,normal,1,hide" selected="1"/>
+  <controller name="ctrlGameMode" pages="1,game,0,lessons,2,creation" selected="0"/>
   <displayList>
-    <image id="n28_uvgl" name="bg2" src="uvgl90" fileName="img_UI3/img_main_beibaodise_13.png" xy="772,550" group="n30_uvgl"/>
-    <image id="n27_uvgl" name="bg1" src="uvgl8d" fileName="img_UI3/btn_main_beibaozhankai_4 .png" xy="229,530" group="n30_uvgl"/>
-    <component id="n22_o6si" name="btnBackpack" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="835,549" size="113,90" group="n30_uvgl">
+    <image id="n28_uvgl" name="bg2" src="uvgl90" fileName="img_UI3/img_main_beibaodise_13.png" xy="751,637" group="n30_uvgl"/>
+    <image id="n27_uvgl" name="bg1" src="uvgl8d" fileName="img_UI3/btn_main_beibaozhankai_4 .png" xy="208,617" group="n30_uvgl"/>
+    <component id="n22_o6si" name="btnBagForC" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="814,636" size="113,90" group="n30_uvgl">
       <Button icon="ui://5hs1fuejuvgl8b" sound="ui://fknoioovtqc911"/>
     </component>
-    <component id="n31_uvgl" name="btnStrech" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="497,529" size="84,32" group="n30_uvgl">
-      <gearIcon controller="ctrlStrech" pages="0" values="ui://5hs1fuejuvgl9r" default="ui://5hs1fuejuvgl9u"/>
-      <Button icon="ui://5hs1fuejuvgl9r"/>
-    </component>
-    <list id="n11_urxc" name="lstItem" xy="238,562" size="605,70" group="n30_uvgl" layout="flow_hz" colGap="6" defaultItem="ui://5hs1fuejuvgla4" autoClearItems="true">
-      <item title="3"/>
-      <item title="4"/>
-      <item title="5"/>
-      <item title="6"/>
-      <item title="7"/>
-      <item title="8"/>
+    <list id="n40_ltu2" name="lstItemForC" xy="217,649" size="605,70" group="n30_uvgl" layout="flow_hz" overflow="scroll" colGap="6" defaultItem="ui://5hs1fuejwq4dcyidh" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
       <item/>
       <item/>
     </list>
-    <group id="n30_uvgl" name="root" xy="229,529" size="719,111" advanced="true">
+    <component id="n31_uvgl" name="btnStrechForC" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="476,615" size="84,32" group="n30_uvgl">
+      <gearDisplay controller="ctrlStatus" pages="0"/>
+      <Button icon="ui://5hs1fuejuvgl9r" controller="ctrlStatus" page="1"/>
+    </component>
+    <component id="n37_wq4d" name="btnNormalForC" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="476,615" size="84,32" group="n30_uvgl">
+      <gearDisplay controller="ctrlStatus" pages="1"/>
+      <Button icon="ui://5hs1fuejuvgl9u" controller="ctrlStatus" page="0"/>
+    </component>
+    <group id="n30_uvgl" name="rootForC" xy="208,615" size="719,112" advanced="true">
+      <gearDisplay controller="ctrlGameMode" pages="1"/>
+      <gearXY controller="ctrlStatus" pages="0,1" values="208,529|208,615" tween="true"/>
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </group>
+    <image id="n32_wq4d" name="bg3" src="wq4dcyics" fileName="img_UI3/lesson/btn_main_dl_1.png" xy="316,615" group="n35_wq4d"/>
+    <component id="n38_wq4d" name="bthNormalForB" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="534,618" size="68,24" group="n35_wq4d">
+      <gearDisplay controller="ctrlStatus" pages="0"/>
+      <Button icon="ui://5hs1fuejwq4dcyict" controller="ctrlStatus" page="1"/>
+    </component>
+    <component id="n39_wq4d" name="bthStrechForA" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="534,618" size="68,24" group="n35_wq4d">
+      <gearDisplay controller="ctrlStatus" pages="1"/>
+      <Button icon="ui://5hs1fuejwq4dcyicv" controller="ctrlStatus" page="0"/>
+    </component>
+    <list id="n33_wq4d" name="lstItemForB" xy="327,639" size="430,48" group="n35_wq4d" layout="flow_hz" colGap="6" defaultItem="ui://5hs1fuejuvgla4" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n34_wq4d" name="btnBagForB" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="758,632" size="50,61" group="n35_wq4d">
+      <Button icon="ui://5hs1fuejwq4dcyicp"/>
+    </component>
+    <group id="n35_wq4d" name="rootForB" xy="316,615" size="503,79" advanced="true">
+      <gearDisplay controller="ctrlGameMode" pages="0"/>
+      <gearXY controller="ctrlStatus" pages="0,1" values="316,561|316,615" tween="true"/>
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </group>
   </displayList>

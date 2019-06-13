@@ -219,7 +219,7 @@
     <image id="uvgl9i" name="img_main_yidonglunpanwaiyuan_toumingdu80%_17.png" path="/img_UI3/"/>
     <image id="uvgl9j" name="img_main_yitianjiawupin_6.png" path="/img_UI3/"/>
     <image id="uvgl9l" name="img_main_zhuangtailanyuanxing_26.png" path="/img_UI3/"/>
-    <component id="uvgl9m" name="ComMainMenu.xml" path="/win/" exported="true"/>
+    <component id="uvgl9m" name="ComMainStorageForC.xml" path="/win/" exported="true"/>
     <image id="uvgl9o" name="img_main_zhuangtailandikuang_25.png" path="/img_UI3/"/>
     <image id="uvgl9r" name="btn_main_beibaozhankaianniu_4 _1.png" path="/img_UI3/"/>
     <image id="uvgl9s" name="btn_main_cebianlananniu 19_1.png" path="/img_UI3/"/>
@@ -233,7 +233,7 @@
     <component id="uvgla1" name="ComMainRocker.xml" path="/win/" exported="true"/>
     <component id="uvgla2" name="ComMainInfo.xml" path="/win/"/>
     <component id="uvgla3" name="WinMainItemFieldOld.xml" path="/win/" exported="true"/>
-    <component id="uvgla4" name="ShortcutItem.xml" path="/btn/" exported="true"/>
+    <component id="uvgla4" name="ShortcutItemForB.xml" path="/btn/" exported="true"/>
     <image id="uvgla5" name="img_main_+_61.png" path="/img_UI3/"/>
     <image id="uvgla6" name="img_main_moon_50.png" path="/img_UI3/"/>
     <image id="uvgla7" name="img_main_xuanzhong_61.png" path="/img_UI3/"/>
@@ -281,8 +281,41 @@
     <image id="wdqfcyicg" name="fnt_shortcutNum_7.png" path="/img_UI3/fnts/" exported="true"/>
     <image id="wdqfcyich" name="fnt_shortcutNum_8.png" path="/img_UI3/fnts/" exported="true"/>
     <image id="wdqfcyici" name="fnt_shortcutNum_9.png" path="/img_UI3/fnts/" exported="true"/>
-    <component id="wdqfcyicj" name="ComMainLeftTopUICtnr.xml" path="/com/" exported="true"/>
+    <component id="wdqfcyicj" name="ComMainLeftTopUICtnrForC.xml" path="/com/" exported="true"/>
     <image id="wdqfcyick" name="img_main_zhezhao_71-1.png" path="/img_UI3/" scale="9grid" scale9grid="40,40,80,80"/>
+    <image id="qq9scyicl" name="icon_main_kuaisujianzao_shanchu_80.png" path="/img_UI3/"/>
+    <image id="wq4dcyicm" name="img_main_wpk_1.png" path="/img_UI3/lesson/"/>
+    <image id="wq4dcyicn" name="img_main_wpk_2.png" path="/img_UI3/lesson/"/>
+    <image id="wq4dcyico" name="img_main_wpk_3.png" path="/img_UI3/lesson/"/>
+    <image id="wq4dcyicp" name="btn_main_bb_1.png" path="/img_UI3/lesson/"/>
+    <image id="wq4dcyicq" name="btn_main_cl_1.png" path="/img_UI3/lesson/"/>
+    <image id="wq4dcyicr" name="btn_main_cl_2.png" path="/img_UI3/lesson/"/>
+    <image id="wq4dcyics" name="btn_main_dl_1.png" path="/img_UI3/lesson/"/>
+    <image id="wq4dcyict" name="btn_main_dl_2.png" path="/img_UI3/lesson/"/>
+    <image id="wq4dcyicu" name="btn_main_dl_3.png" path="/img_UI3/lesson/"/>
+    <image id="wq4dcyicv" name="btn_main_dl_4.png" path="/img_UI3/lesson/"/>
+    <image id="wq4dcyicw" name="icon_main_dt_1.png" path="/img_UI3/lesson/"/>
+    <image id="wq4dcyicx" name="icon_main_gd_1.png" path="/img_UI3/lesson/"/>
+    <image id="wq4dcyicy" name="icon_main_gd_2.png" path="/img_UI3/lesson/"/>
+    <image id="wq4dcyicz" name="icon_main_gd_3.png" path="/img_UI3/lesson/"/>
+    <image id="wq4dcyid0" name="icon_main_gd_4.png" path="/img_UI3/lesson/" scale="9grid" scale9grid="14,23,28,119"/>
+    <image id="wq4dcyid1" name="icon_main_sc_1.png" path="/img_UI3/lesson/"/>
+    <component id="wq4dcyid4" name="ComMainLeftTopUICtnrForB.xml" path="/com/" exported="true"/>
+    <image id="wq4dcyid5" name="fnt_shortcutNum_0.png" path="/img_UI3/"/>
+    <image id="wq4dcyid6" name="fnt_shortcutNum_1.png" path="/img_UI3/"/>
+    <image id="wq4dcyid7" name="fnt_shortcutNum_2.png" path="/img_UI3/"/>
+    <image id="wq4dcyid8" name="fnt_shortcutNum_3.png" path="/img_UI3/"/>
+    <image id="wq4dcyid9" name="fnt_shortcutNum_4.png" path="/img_UI3/"/>
+    <image id="wq4dcyida" name="fnt_shortcutNum_5.png" path="/img_UI3/"/>
+    <image id="wq4dcyidb" name="fnt_shortcutNum_6.png" path="/img_UI3/"/>
+    <image id="wq4dcyidc" name="fnt_shortcutNum_7.png" path="/img_UI3/"/>
+    <image id="wq4dcyidd" name="fnt_shortcutNum_8.png" path="/img_UI3/"/>
+    <image id="wq4dcyide" name="fnt_shortcutNum_9.png" path="/img_UI3/"/>
+    <component id="wq4dcyidf" name="ComMainStorageForB.xml" path="/win/" exported="true"/>
+    <component id="wq4dcyidg" name="btnShowEditor.xml" path="/btn/"/>
+    <component id="wq4dcyidh" name="ShortcutItemForC.xml" path="/btn/" exported="true"/>
+    <image id="nl0rcyidi" name="btn_main_zh_1.png" path="/img_UI3/"/>
+    <image id="nl0rcyidj" name="btn_main_zh_2.png" path="/img_UI3/"/>
   </resources>
   <publish name="main" npot="true"/>
 </packageDescription>
