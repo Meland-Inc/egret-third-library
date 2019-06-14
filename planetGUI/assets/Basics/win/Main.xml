@@ -2,7 +2,7 @@
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebktcu23b" designImageAlpha="100" adaptationTest="FitSize">
   <controller name="codeType" pages="0,robot,1,entity" selected="0"/>
   <displayList>
-    <loader id="n14_edsm" name="ladBG" xy="0,0" size="1136,640" group="n23_hn4b" url="ui://rnqj1l77tcu29j">
+    <loader id="n14_edsm" name="ladBG" xy="0,0" size="1136,640" group="n23_hn4b" url="ui://rnqj1l77tcu29j" fill="scaleFree">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </loader>
     <component id="n5_n1c0" name="codeBlockContainer" src="n1c01j" fileName="newCom/CodeblockContainer.xml" xy="135,0" size="887,640" group="n23_hn4b">
