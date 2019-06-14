@@ -112,7 +112,7 @@
     <component id="n74_hj15" name="btnRestoreScene" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="475,413" size="125,40" group="n76_hj15">
       <Button title="还原场景" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoqo8vi21"/>
     </component>
-    <group id="n76_hj15" name="teacher" xy="475,173" size="325,280" group="n71_o31t" advanced="true" collapsed="true">
+    <group id="n76_hj15" name="teacher" xy="475,173" size="325,280" group="n71_o31t" advanced="true">
       <gearDisplay controller="ctrlManorView" pages="0"/>
     </group>
     <group id="n71_o31t" name="manor" xy="475,173" size="325,280" group="n47_kg0b" advanced="true" collapsed="true">
@@ -132,13 +132,13 @@
       </ComboBox>
     </component>
     <text id="n83_opya" name="n83" xy="488,214" size="85,22" group="n91_opya" fontSize="16" color="#5b4b37" text="机器人代码"/>
-    <component id="n84_opya" name="btnLoad" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="604,368" size="125,40" group="n91_opya">
+    <component id="n84_opya" name="btnCodeLoad" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="604,368" size="125,40" group="n91_opya">
       <Button title="下载" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoefrs1w"/>
     </component>
-    <component id="n85_opya" name="btnUpload" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="760,368" size="125,40" group="n91_opya">
+    <component id="n85_opya" name="btnCodeUpload" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="760,368" size="125,40" group="n91_opya">
       <Button title="上传" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoefrs1w"/>
     </component>
-    <component id="n86_opya" name="btnDel" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="446,368" size="125,40" group="n91_opya">
+    <component id="n86_opya" name="btnCodeDel" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="446,368" size="125,40" group="n91_opya">
       <Button title="删除" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoqo8vi21"/>
     </component>
     <text id="n87_opya" name="n87" xy="488,173" size="85,22" group="n91_opya" fontSize="16" color="#5b4b37" text="当前代码："/>

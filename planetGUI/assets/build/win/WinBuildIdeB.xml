@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" designImage="ui://i25v0ebkr0y94a" designImageAlpha="100">
+  <controller name="ctrlRightView" pages="1,backpack,2,attr" selected="0">
+    <action type="change_page" fromPage="" toPage="1,2" objectId="n9_r0y9" controller="ctrlState" targetPage="2"/>
+  </controller>
+  <displayList>
+    <image id="n0_r0y9" name="n0" src="nl0rcyicf" fileName="imgB/img_cm_dk_1.png" pkg="te1gxawo" xy="615,-1" size="445,642" group="n4_r0y9">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <image id="n5_r0y9" name="n5" src="nl0rcyicg" fileName="imgB/img_cm_dk_2.png" pkg="te1gxawo" xy="1056,-2" size="88,644" group="n4_r0y9"/>
+    <list id="n1_r0y9" name="lstBpTabBar" xy="1061,45" size="77,231" group="n4_r0y9" layout="flow_hz" overflow="hidden" colGap="17" defaultItem="ui://32ieekgur0y9t7j" autoItemSize="true">
+      <item title="植物" icon="ui://32ieekgur0y9t6a"/>
+      <item title="生物" icon="ui://32ieekgur0y9t6b"/>
+      <item title="武器" icon="ui://32ieekgur0y9t6c"/>
+      <item title="机关" icon="ui://32ieekgur0y9t6d"/>
+      <item title="电路" icon="ui://32ieekgur0y9t6e"/>
+      <item title="雕塑" icon="ui://32ieekgur0y9t6f"/>
+    </list>
+    <component id="n2_r0y9" name="n25" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1088,10" size="33,27" group="n4_r0y9">
+      <Button icon="ui://32ieekgur0y9t60" page="0"/>
+    </component>
+    <list id="n3_r0y9" name="lstBackpack" xy="631,50" size="421,545" group="n4_r0y9" layout="flow_hz" overflow="scroll" scrollBar="visible" margin="5,5,15,0" scrollBarRes="ui://te1gxawoqouocyibo," lineGap="2" colGap="10" defaultItem="ui://32ieekgup6jr4k" autoClearItems="true">
+      <relation target="" sidePair="height-height"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n6_r0y9" name="n6" src="r0y9t70" fileName="img_UI3/b/ide/img_ide_ssk_1.png" xy="625,10" size="410,28" group="n4_r0y9"/>
+    <image id="n7_r0y9" name="n7" src="r0y9t71" fileName="img_UI3/b/ide/img_ide_ssk_2.png" xy="635,17" group="n4_r0y9"/>
+    <text id="n8_r0y9" name="tfSearch" xy="659,13" size="370,24" group="n4_r0y9" input="true" fontSize="14" color="#ffffff" vAlign="middle" autoSize="none" text="垃圾"/>
+    <group id="n4_r0y9" name="grpBackpack" xy="615,-2" size="529,644" advanced="true">
+      <gearDisplay controller="ctrlRightView" pages="1"/>
+      <relation target="" sidePair="right-right"/>
+    </group>
+    <component id="n9_r0y9" name="comEntitySelect" src="df6n5l" fileName="Com/ComMapEntitySelect.xml" xy="0,0" size="425,640" hideByEditor="true" controller="ctrlState,2">
+      <relation target="" sidePair="left-left,height-height"/>
+    </component>
+    <component id="n27_r0y9" name="comAttr" src="1194t5r" fileName="win/ComBuildAttr.xml" xy="670,0" size="466,640" hideByEditor="true">
+      <relation target="" sidePair="right-right,height-height"/>
+    </component>
+    <component id="n28_yhf8" name="comOperate" src="r0y9t7l" fileName="Com/ComBuildOperaB.xml" xy="300,570"/>
+  </displayList>
+</component>
