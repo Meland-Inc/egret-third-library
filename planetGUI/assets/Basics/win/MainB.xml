@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkhbwi42" designImageAlpha="100" adaptationTest="FitSize">
-  <controller name="codeType" pages="0,robot,1,entity" selected="0"/>
+  <controller name="codeType" pages="0,robot,1,entity" selected="1"/>
   <displayList>
-    <loader id="n14_edsm" name="ladBG" xy="0,0" size="1136,640" group="n23_hn4b" hideByEditor="true">
+    <loader id="n14_edsm" name="ladBG" xy="44,0" size="1136,640" group="n23_hn4b" hideByEditor="true" visible="false">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
       <relation target="n5_n1c0" sidePair="left-left"/>
     </loader>
-    <component id="n5_n1c0" name="codeBlockContainer" src="hbwitgc" fileName="newCom/CodeblockContainerB.xml" xy="496,0" size="560,640" group="n23_hn4b">
-      <relation target="" sidePair="bottomext-bottom,rightext-right"/>
-      <relation target="" sidePair="left-left,top-top"/>
+    <component id="n5_n1c0" name="codeBlockContainer" src="hbwitgc" fileName="newCom/CodeblockContainerB.xml" xy="540,0" size="516,640" group="n23_hn4b">
+      <relation target="" sidePair="top-top,left-left"/>
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </component>
     <component id="n13_sdqn" name="templatePanel" src="sdqn71" fileName="com/TemplatePanel.xml" xy="220,103" group="n23_hn4b" locked="true" hideByEditor="true" visible="false">
       <relation target="" sidePair="center-center,middle-middle"/>
@@ -34,7 +34,7 @@
     <graph id="n22_foyo" name="noviceHeaderBlockRect" xy="0,0" size="1136,53" group="n23_hn4b" locked="true" hideByEditor="true" visible="false" alpha="0" touchable="false" type="rect">
       <relation target="" sidePair="width-width"/>
     </graph>
-    <component id="n26_oiwy" name="comEntitySelect" src="df6n5l" fileName="Com/ComMapEntitySelect.xml" pkg="32ieekgu" xy="-1,-1" size="425,643" group="n23_hn4b" hideByEditor="true" controller="ctrlState,2">
+    <component id="n26_oiwy" name="comEntitySelect" src="df6n5l" fileName="Com/ComMapEntitySelect.xml" pkg="32ieekgu" xy="-1,-1" size="425,643" group="n23_hn4b" hideByEditor="true" visible="false" controller="ctrlState,2">
       <relation target="" sidePair="left-left,bottomext-bottom"/>
     </component>
     <component id="n6_n1c0" name="comCategoryList" src="hbwitga" fileName="newCom/ComCategoryListB.xml" xy="0,0" size="1136,640" group="n23_hn4b" hideByEditor="true">
@@ -49,6 +49,6 @@
     <component id="n12_k1p2" name="mask" src="k1p26w" fileName="com/RunningState.xml" xy="0,0" size="1136,640" group="n23_hn4b" hideByEditor="true">
       <relation target="" sidePair="width-width,bottomext-bottom"/>
     </component>
-    <group id="n23_hn4b" name="n23" xy="-1,-1" size="1137,643"/>
+    <group id="n23_hn4b" name="n23" xy="-1,-1" size="1181,643"/>
   </displayList>
 </component>
