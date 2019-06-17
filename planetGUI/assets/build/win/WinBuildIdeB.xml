@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkr0y94a">
-  <controller name="ctrlRightView" pages="1,backpack,2,attr" selected="0">
+  <controller name="ctrlRightView" pages="1,backpack,2,attr,3,none" selected="0">
     <action type="change_page" fromPage="" toPage="1,2" objectId="n9_r0y9" controller="ctrlState" targetPage="2"/>
   </controller>
   <controller name="ctrlOperate" pages="0,none,1,center" selected="0"/>
@@ -86,7 +86,7 @@
     <component id="n30_m0i3" name="btnClose" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="559,271" size="49,98" group="n4_r0y9">
       <Button icon="ui://rnqj1l77gg8mtgq" page="0"/>
     </component>
-    <group id="n4_r0y9" name="grpBackpack" xy="559,-2" size="577,644" advanced="true" collapsed="true">
+    <group id="n4_r0y9" name="grpBackpack" xy="559,-2" size="577,644" advanced="true">
       <gearDisplay controller="ctrlRightView" pages="1"/>
       <relation target="" sidePair="right-right"/>
     </group>
