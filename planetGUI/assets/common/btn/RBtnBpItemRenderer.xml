@@ -14,7 +14,7 @@
     <image id="n11_jb5g" name="n11" src="pgixi6f" fileName="newImg/img_main_item_4.png" xy="13,58" group="n13_jb5g"/>
     <graph id="n12_jb5g" name="gphDurability" xy="14,59" size="44,4" group="n13_jb5g" type="rect" lineSize="0" fillColor="#ff00ff00"/>
     <group id="n13_jb5g" name="grpDurability" xy="13,58" size="46,6" group="n10_fene" visible="false" advanced="true" collapsed="true"/>
-    <text id="n9_fene" name="num" xy="59,57" pivot="1,0.5" anchor="true" size="17,19" group="n10_fene" visible="false" fontSize="12" color="#74634c" align="right" vAlign="middle" text="99">
+    <text id="n9_fene" name="num" xy="59,57" pivot="1,0.5" anchor="true" size="17,18" group="n10_fene" visible="false" fontSize="12" color="#74634c" align="right" vAlign="middle" text="99">
       <gearDisplay controller="ctrlMark" pages="1,0,2"/>
     </text>
     <group id="n10_fene" name="grpItemIcon" xy="6,6" size="70,69" advanced="true"/>
@@ -26,13 +26,13 @@
     <component id="n21_w9v6" name="barSchedule" src="11slcyi8f" fileName="bar/barItem1.xml" xy="11,55" size="50,8" group="n19_w9v6">
       <ProgressBar value="50" max="100"/>
     </component>
-    <text id="n18_w9v6" name="tfDepleted" xy="15,47" size="41,19" group="n19_w9v6" fontSize="12" color="#ffffff" align="center" vAlign="middle" strokeColor="#ac471a" text="已耗尽">
+    <text id="n18_w9v6" name="tfDepleted" xy="15,47" size="41,18" group="n19_w9v6" fontSize="12" color="#ffffff" align="center" vAlign="middle" strokeColor="#ac471a" text="已耗尽">
       <relation target="" sidePair="center-center"/>
     </text>
-    <text id="n20_w9v6" name="tfArchNum" xy="26,6" size="20,19" group="n19_w9v6" fontSize="12" color="#584736" align="center" vAlign="middle" autoClearText="true" text="5/7">
+    <text id="n20_w9v6" name="tfArchNum" xy="26,6" size="22,18" group="n19_w9v6" fontSize="12" color="#584736" align="center" vAlign="middle" autoClearText="true" text="5/7">
       <relation target="" sidePair="center-center"/>
     </text>
-    <group id="n19_w9v6" name="grpShadowMark" xy="11,6" size="50,60" advanced="true">
+    <group id="n19_w9v6" name="grpShadowMark" xy="11,6" size="50,60" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlMark" pages="3"/>
     </group>
     <image id="n15_k8wc" name="imgBrokenMark" src="k8wc7g" fileName="newImg/img_main_item_8.png" pkg="5hs1fuej" xy="5,6">

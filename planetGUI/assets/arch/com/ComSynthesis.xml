@@ -57,13 +57,13 @@
     <component id="n17_pqjb" name="btnMax" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="214,317" size="46,28" group="n21_pqjb">
       <Button title="最大" titleColor="#584736" titleFontSize="14" icon="ui://te1gxawopgixi4v"/>
     </component>
-    <text id="n18_pqjb" name="tf" xy="18,322" size="61,20" group="n21_pqjb" fontSize="13" color="#5b4b37" vAlign="middle" leading="0" bold="true" text="选择数量"/>
+    <text id="n18_pqjb" name="tf" xy="18,322" size="65,18" group="n21_pqjb" fontSize="13" color="#5b4b37" vAlign="middle" leading="0" bold="true" text="选择数量"/>
     <text id="n19_pqjb" name="tfNum" xy="98,319" size="89,22" group="n21_pqjb" fontSize="15" color="#5b4b37" align="center" vAlign="middle" leading="0" vars="true" autoSize="none" bold="true" text="{cur=0}/{total=0}"/>
     <group id="n21_pqjb" name="num" xy="18,315" size="242,31" advanced="true">
       <gearDisplay controller="ctrlStatus" pages="0"/>
       <relation target="" sidePair="center-center"/>
     </group>
-    <component id="n13_pqjb" name="btnDo" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="86,353" size="110,35">
+    <component id="n13_pqjb" name="btnDo" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="80,353" size="110,35">
       <gearDisplay controller="ctrlStatus" pages="0"/>
       <gearText controller="default" pages="1,2" values="种植|养殖" default="制作"/>
       <relation target="" sidePair="center-center"/>
@@ -74,7 +74,7 @@
       <relation target="" sidePair="center-center"/>
       <relation target="n23_nxks" sidePair="width-width"/>
     </image>
-    <text id="n23_nxks" name="tfLock" xy="105,340" size="66,20" group="n24_nxks" fontSize="14" color="#ff0000" align="center" vAlign="middle" leading="0" vars="true" bold="true" text="{txt}{source=20级解锁}">
+    <text id="n23_nxks" name="tfLock" xy="105,340" size="66,19" group="n24_nxks" fontSize="14" color="#ff0000" align="center" vAlign="middle" leading="0" vars="true" bold="true" text="{txt}{source=20级解锁}">
       <gearDisplay controller="ctrlStatus" pages="2"/>
       <relation target="" sidePair="center-center"/>
     </text>
@@ -88,7 +88,7 @@
       <relation target="" sidePair="center-center"/>
       <ProgressBar value="75" max="100"/>
     </component>
-    <text id="n34_gem0" name="tfTime" xy="82,327" size="123,20" fontSize="14" color="#ffffff" vAlign="middle" leading="0" vars="true" strokeColor="#584736" strokeSize="2" text="制作中     {hour=00}:{minute=00}:{second=00}">
+    <text id="n34_gem0" name="tfTime" xy="82,327" size="117,19" fontSize="14" color="#ffffff" vAlign="middle" leading="0" vars="true" strokeColor="#584736" strokeSize="2" text="制作中     {hour=00}:{minute=00}:{second=00}">
       <gearDisplay controller="ctrlStatus" pages="1"/>
       <relation target="" sidePair="center-center"/>
     </text>
@@ -96,7 +96,7 @@
       <gearDisplay controller="ctrlStatus" pages="1"/>
       <relation target="" sidePair="center-center"/>
     </loader>
-    <text id="n32_twvn" name="tfMakeNum" xy="114,357" size="27,22" fontSize="16" color="#584736" vAlign="middle" leading="0" vars="true" text="{cur=0}/{total=0}">
+    <text id="n32_twvn" name="tfMakeNum" xy="114,357" size="30,22" fontSize="16" color="#584736" vAlign="middle" leading="0" vars="true" text="{cur=0}/{total=0}">
       <gearDisplay controller="ctrlStatus" pages="1"/>
       <relation target="" sidePair="center-center"/>
     </text>
@@ -104,6 +104,12 @@
       <gearDisplay controller="ctrlStatus" pages="1"/>
       <relation target="" sidePair="center-center"/>
       <Button title="取消" titleColor="#f7f4e8" titleFontSize="14" icon="ui://te1gxawopgixi4p"/>
+    </component>
+    <component id="n36_nl0r" name="btnGmGet" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="192,353" size="77,35">
+      <gearDisplay controller="ctrlStatus" pages="0"/>
+      <gearText controller="default" pages="0,1,2" values="gm获取|种植|养殖"/>
+      <relation target="" sidePair="center-center"/>
+      <Button title="gm获取" titleColor="#f7f4e8" titleFontSize="15" icon="ui://te1gxawopgixi4o" sound="ui://fknoioovtqc911"/>
     </component>
   </displayList>
 </component>

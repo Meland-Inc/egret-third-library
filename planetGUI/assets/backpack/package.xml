@@ -4,7 +4,7 @@
     <component id="ozbms" name="comTalentTitle.xml" path="/com/"/>
     <component id="ozbmt" name="labBasicTalent.xml" path="/lab/"/>
     <component id="k8dt1b" name="WinBagSplit.xml" path="/win/" exported="true"/>
-    <component id="hxqg1z" name="WinBag.xml" path="/win/" exported="true"/>
+    <component id="hxqg1z" name="WinGameBag.xml" path="/win/" exported="true"/>
     <image id="hxqg20" name="img_bag_upperbody.png" path="/imgNew/"/>
     <image id="hxqg21" name="img_bag_weapon.png" path="/imgNew/"/>
     <image id="hxqg22" name="icon_bag_title.png" path="/imgNew/" exported="true"/>
@@ -14,13 +14,27 @@
     <image id="hxqg26" name="img_bag_gloves.png" path="/imgNew/"/>
     <image id="hxqg27" name="img_bag_helmet.png" path="/imgNew/"/>
     <image id="hxqg28" name="img_bag_lowerbody.png" path="/imgNew/"/>
-    <component id="ey2h2a" name="btnBagType.xml" path="/btn/"/>
+    <component id="ey2h2a" name="btnBagTypeB.xml" path="/btn/"/>
     <component id="ey2h2b" name="comAvatarContainer.xml" path="/com/"/>
     <image id="n2yb2d" name="img_bag_shoes.png" path="/imgNew/"/>
     <component id="k8wc2e" name="WinRepair.xml" path="/win/" exported="true"/>
     <component id="k8wc2f" name="comRepairMatItem.xml" path="/com/"/>
     <component id="lsbl2n" name="Slider1.xml" path="/sld/"/>
     <component id="lsbl2o" name="Slider1_grip.xml" path="/sld/"/>
+    <component id="nl0r2p" name="WinLessonBag.xml" path="/win/" exported="true"/>
+    <image id="nl0r37" name="btn_bp_wpxx_1.png" path="/lessonModeImg/"/>
+    <image id="nl0r38" name="icon_bp_db_4.png" path="/lessonModeImg/"/>
+    <image id="nl0r39" name="img_bp_mck_1.png" path="/lessonModeImg/" scale="9grid" scale9grid="24,12,48,24"/>
+    <image id="nl0r3a" name="img_bp_wpxx_1.png" path="/lessonModeImg/"/>
+    <image id="nl0r3b" name="img_bp_wpxx_3.png" path="/lessonModeImg/"/>
+    <image id="e0c23c" name="img_bp_zbk_3.png" path="/lessonModeImg/"/>
+    <image id="e0c23d" name="img_bp_zbk_4.png" path="/lessonModeImg/"/>
+    <image id="e0c23e" name="img_bp_zbk_5.png" path="/lessonModeImg/"/>
+    <image id="e0c23f" name="img_bp_zbk_6.png" path="/lessonModeImg/"/>
+    <image id="e0c23l" name="img_bp_zbk_1.png" path="/lessonModeImg/"/>
+    <image id="e0c23m" name="img_bp_zbk_2.png" path="/lessonModeImg/"/>
+    <component id="x5ue3n" name="btnBagTypeC.xml" path="/btn/"/>
+    <component id="dv923o" name="ComLessonBagShortcuts.xml" path="/com/"/>
   </resources>
   <publish name="backpack" npot="true"/>
 </packageDescription>

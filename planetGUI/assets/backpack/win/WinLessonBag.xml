@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" designImage="ui://i25v0ebknl0r45" designImageLayer="1">
+  <controller name="ctrlDetail" pages="0,normal,1,detail" selected="0"/>
+  <controller name="ctrlGameMode" pages="1,game,0,lessons,2,creation" selected="0"/>
+  <displayList>
+    <image id="n65_nl0r" name="imgBgCenter" src="nl0rcyic7" fileName="imgB/bg_cm_1.png" pkg="te1gxawo" xy="0,0" size="1136,640">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n64_nl0r" name="imgLeftBg" src="nl0rcyicb" fileName="imgB/img_cm__bg_cbl_1.png" pkg="te1gxawo" xy="0,48" size="95,597">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <image id="n61_nl0r" name="imgTopBg" src="nl0rcyicd" fileName="imgB/img_cm_db_1.png" pkg="te1gxawo" xy="0,0" size="1136,62">
+      <relation target="" sidePair="width-width"/>
+    </image>
+    <component id="n56_rstx" name="btnClose" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1077,3" size="57,51">
+      <relation target="" sidePair="right-right"/>
+      <Button icon="ui://te1gxawonl0rcyica" sound="ui://fknoioovtqc912"/>
+    </component>
+    <image id="n62_nl0r" name="imgTitileBg" src="nl0rcyice" fileName="imgB/img_cm_db_2.png" pkg="te1gxawo" xy="0,0"/>
+    <image id="n63_nl0r" name="imgBagIcon" src="nl0r38" fileName="lessonModeImg/icon_bp_db_4.png" xy="40,13"/>
+    <list id="n24_ey2h" name="lstBagTypeBtn" xy="0,81" size="109,296" lineGap="5" colGap="4" defaultItem="ui://ruc22gntey2h2a">
+      <item title="全部" name="all"/>
+      <item title="装备" name="equip"/>
+      <item title="材料" name="mat"/>
+      <item title="消耗品" name="consumables"/>
+      <item title="建材" name="buildMat"/>
+    </list>
+    <text id="n3_ey2h" name="tfTitle" xy="87,15" size="66,29" fontSize="22" color="#ffffff" autoSize="none" bold="true" text="背包"/>
+    <image id="n67_apfp" name="imgLstItemBg" src="nl0rcyicc" fileName="imgB/img_cm_bg_dk_1.png" pkg="te1gxawo" xy="120,78" size="692,443">
+      <relation target="" sidePair="bottomext-bottom,rightext-right"/>
+    </image>
+    <list id="n27_ey2h" name="lstBagItem" xy="140,92" size="660,419" layout="flow_hz" overflow="scroll" lineGap="9" colGap="20" defaultItem="ui://te1gxawop2t3cyid7" autoClearItems="true">
+      <relation target="n67_apfp" sidePair="width-width,height-height"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n68_apfp" name="imgAvatarBg" src="nl0rcyicc" fileName="imgB/img_cm_bg_dk_1.png" pkg="te1gxawo" xy="837,78" size="288,544" group="n70_e0c2">
+      <relation target="" sidePair="bottomext-bottom"/>
+    </image>
+    <image id="n69_apfp" name="n69" src="nl0r39" fileName="lessonModeImg/img_bp_mck_1.png" xy="828,99" size="265,46" group="n30_ey2h"/>
+    <text id="n13_ey2h" name="tfLv" xy="847,107" size="46,29" group="n30_ey2h" fontSize="18" color="#365989" align="center" vAlign="middle" leading="0" vars="true" autoSize="none" bold="true" text="LV.{lv=10}"/>
+    <text id="n14_ey2h" name="tfName" xy="922,106" size="145,29" group="n30_ey2h" fontSize="18" color="#365989" align="center" vAlign="middle" autoSize="none" text="playerName"/>
+    <group id="n30_ey2h" name="grpLvAndName" xy="828,99" size="265,46" group="n70_e0c2" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlDetail" pages="0"/>
+    </group>
+    <component id="n55_ey2h" name="comAvatarCtnr" src="ey2h2b" fileName="com/comAvatarContainer.xml" xy="969,364" size="81,60" group="n70_e0c2" touchable="false"/>
+    <list id="n20_ey2h" name="lstEquip" xy="865,472" size="241,147" group="n70_e0c2" layout="flow_hz" lineGap="10" colGap="20" defaultItem="ui://te1gxawop2t3cyid7">
+      <relation target="" sidePair="bottom-bottom"/>
+      <item icon="ui://ruc22gnte0c23l"/>
+      <item icon="ui://ruc22gnte0c23f" name="hair"/>
+      <item icon="ui://ruc22gnte0c23c" name="coat"/>
+      <item icon="ui://ruc22gnte0c23m" name="pants"/>
+      <item icon="ui://ruc22gnte0c23d" name="glove"/>
+      <item icon="ui://ruc22gnte0c23e" name="shoe"/>
+    </list>
+    <group id="n70_e0c2" name="grpAvatar" xy="828,78" size="297,544" advanced="true" collapsed="true">
+      <relation target="" sidePair="right-right"/>
+    </group>
+    <image id="n71_e0c2" name="imgShortcutBg" src="nl0rcyicc" fileName="imgB/img_cm_bg_dk_1.png" pkg="te1gxawo" xy="120,531" size="692,91" group="n73_e0c2">
+      <relation target="n67_apfp" sidePair="width-width"/>
+    </image>
+    <component id="n72_e0c2" name="comShortcuts" src="dv923o" fileName="com/ComLessonBagShortcuts.xml" xy="139,546" size="660,64" group="n73_e0c2">
+      <relation target="n71_e0c2" sidePair="center-center"/>
+    </component>
+    <group id="n73_e0c2" name="grpShortcut" xy="120,531" size="692,91" advanced="true" collapsed="true">
+      <relation target="n67_apfp" sidePair="top-bottom"/>
+    </group>
+  </displayList>
+  <transition name="t0"/>
+</component>
