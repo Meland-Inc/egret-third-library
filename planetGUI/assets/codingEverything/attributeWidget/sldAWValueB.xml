@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="224,20" extention="Slider">
+  <displayList>
+    <image id="n0_pzcq" name="n0" src="vulycyid1" fileName="imgB/img_cm_szl_5.png" pkg="te1gxawo" xy="0,0" size="224,20">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_pzcq" name="bar" src="qki68b" fileName="img_UI3/img_ide_szt_24_1.png" xy="20,1" size="205,18" hideByEditor="true" visible="false"/>
+    <image id="n3_sgwy" name="barShow" src="vulycyid2" fileName="imgB/img_cm_szl_6.png" pkg="te1gxawo" xy="2,1" size="220,17">
+      <relation target="n1_pzcq" sidePair="rightext-right"/>
+    </image>
+    <component id="n2_pzcq" name="grip" src="vuly8s" fileName="attributeWidget/sldAWValue_gripB.xml" xy="207,10" pivot="0.5,0.5" anchor="true" size="32,34">
+      <relation target="n1_pzcq" sidePair="right-right"/>
+    </component>
+    <image id="n4_wkbh" name="imgValueBg" src="vulycyid0" fileName="imgB/img_cm_szl_4.png" pkg="te1gxawo" xy="207,-25" pivot="0.5,0.5" anchor="true">
+      <relation target="n5_wkbh" sidePair="width-width"/>
+      <relation target="n2_pzcq" sidePair="left-left"/>
+    </image>
+    <text id="n5_wkbh" name="labValue" xy="192,-37" pivot="0.5,0" size="28,20" fontSize="14" color="#45668e" align="center" vAlign="middle" text="100">
+      <relation target="n4_wkbh" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+  <Slider/>
+</component>

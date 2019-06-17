@@ -42,6 +42,18 @@
     <image id="qki68g" name="img_ide_xzdk_19.png" path="/img_UI3/" scale="9grid" scale9grid="40,35,80,70"/>
     <image id="qki68h" name="img_ide_ddk_10.png" path="/img_UI3/" scale="9grid" scale9grid="30,28,60,56"/>
     <image id="qki68i" name="img_ide_xdk_8.png" path="/img_UI3/" scale="9grid" scale9grid="29,29,58,58"/>
+    <component id="vuly8j" name="btnAWOptionSelectOptionB.xml" path="/attributeWidget/"/>
+    <component id="vuly8k" name="comAWColorB.xml" path="/attributeWidget/" exported="true"/>
+    <component id="vuly8l" name="comAWLableB.xml" path="/attributeWidget/" exported="true"/>
+    <component id="vuly8m" name="comAWLargeTextB.xml" path="/attributeWidget/" exported="true"/>
+    <component id="vuly8n" name="comAWModelB.xml" path="/attributeWidget/" exported="true"/>
+    <component id="vuly8o" name="comAWOptionSelectB.xml" path="/attributeWidget/" exported="true"/>
+    <component id="vuly8p" name="comAWToggleB.xml" path="/attributeWidget/" exported="true"/>
+    <component id="vuly8q" name="comAWValueB.xml" path="/attributeWidget/" exported="true"/>
+    <component id="vuly8r" name="sldAWValueB.xml" path="/attributeWidget/"/>
+    <component id="vuly8s" name="sldAWValue_gripB.xml" path="/attributeWidget/"/>
+    <component id="vuly8t" name="comAttrubiteEditB.xml" path="/com/" exported="true"/>
+    <component id="vuly8u" name="WinAWOptionSelectContentB.xml" path="/win/" exported="true"/>
   </resources>
   <publish name="codingEverything"/>
 </packageDescription>

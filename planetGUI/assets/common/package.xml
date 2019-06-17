@@ -387,7 +387,7 @@
     <image id="vulycyicn" name="btn_cm_xzl_1.png" path="/imgB/" exported="true"/>
     <image id="vulycyico" name="btn_cm_xzl_2.png" path="/imgB/" exported="true"/>
     <image id="vulycyicp" name="btn_cm_xzl_3.png" path="/imgB/" exported="true"/>
-    <image id="vulycyicq" name="btn_cm_xzl_4.png" path="/imgB/" exported="true"/>
+    <image id="vulycyicq" name="btn_cm_xzl_4.png" path="/imgB/" exported="true" scale="9grid" scale9grid="30,30,60,60"/>
     <image id="vulycyicr" name="btn_cm_xzl_5.png" path="/imgB/" exported="true"/>
     <image id="vulycyics" name="img_cm_gdt_1.png" path="/imgB/" exported="true" scale="9grid" scale9grid="1,11,3,68"/>
     <image id="vulycyict" name="img_cm_quantity_1.png" path="/imgB/" exported="true"/>
@@ -398,12 +398,12 @@
     <image id="vulycyicy" name="img_cm_szl_2.png" path="/imgB/" exported="true"/>
     <image id="vulycyicz" name="img_cm_szl_3.png" path="/imgB/" exported="true"/>
     <image id="vulycyid0" name="img_cm_szl_4.png" path="/imgB/" exported="true"/>
-    <image id="vulycyid1" name="img_cm_szl_5.png" path="/imgB/" exported="true"/>
-    <image id="vulycyid2" name="img_cm_szl_6.png" path="/imgB/" exported="true"/>
+    <image id="vulycyid1" name="img_cm_szl_5.png" path="/imgB/" exported="true" scale="9grid" scale9grid="15,5,189,10"/>
+    <image id="vulycyid2" name="img_cm_szl_6.png" path="/imgB/" exported="true" scale="9grid" scale9grid="11,5,105,8"/>
     <image id="vulycyid3" name="img_cm_wpk_3.png" path="/imgB/" exported="true"/>
     <component id="vulycyid4" name="ScrollBarV2.xml" path="/bar/" exported="true"/>
     <component id="vulycyid5" name="ScrollBarV2_grip.xml" path="/bar/"/>
-    <image id="vulycyid6" name="img_cm_wb_1.png" path="/imgB/" exported="true"/>
+    <image id="vulycyid6" name="img_cm_wb_1.png" path="/imgB/" exported="true" scale="9grid" scale9grid="25,14,50,28"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>
