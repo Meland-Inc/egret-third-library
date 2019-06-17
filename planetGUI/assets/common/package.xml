@@ -389,7 +389,7 @@
     <image id="vulycyicp" name="btn_cm_xzl_3.png" path="/imgB/" exported="true"/>
     <image id="vulycyicq" name="btn_cm_xzl_4.png" path="/imgB/" exported="true"/>
     <image id="vulycyicr" name="btn_cm_xzl_5.png" path="/imgB/" exported="true"/>
-    <image id="vulycyics" name="img_cm_gdt_1.png" path="/imgB/" exported="true"/>
+    <image id="vulycyics" name="img_cm_gdt_1.png" path="/imgB/" exported="true" scale="9grid" scale9grid="1,11,3,68"/>
     <image id="vulycyict" name="img_cm_quantity_1.png" path="/imgB/" exported="true"/>
     <image id="vulycyicu" name="img_cm_quantity_2.png" path="/imgB/" exported="true"/>
     <image id="vulycyicv" name="img_cm_quantity_3.png" path="/imgB/" exported="true"/>
@@ -401,6 +401,9 @@
     <image id="vulycyid1" name="img_cm_szl_5.png" path="/imgB/" exported="true"/>
     <image id="vulycyid2" name="img_cm_szl_6.png" path="/imgB/" exported="true"/>
     <image id="vulycyid3" name="img_cm_wpk_3.png" path="/imgB/" exported="true"/>
+    <component id="vulycyid4" name="ScrollBarV2.xml" path="/bar/" exported="true"/>
+    <component id="vulycyid5" name="ScrollBarV2_grip.xml" path="/bar/"/>
+    <image id="vulycyid6" name="img_cm_wb_1.png" path="/imgB/" exported="true"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>
