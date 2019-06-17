@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="117,34" extention="Button" designImageOffsetX="-843" designImageOffsetY="-288">
+  <controller name="button" pages="0,up,1,down" selected="1"/>
+  <displayList>
+    <loader id="n0_sz33" name="icon" xy="0,0" pivot="0.5,0.5" size="117,34" scale="0.9,0.9" touchable="false" url="ui://te1gxawovulycyicn" autoSize="true">
+      <gearSize controller="button" pages="0,1" values="117,34,1,1|110,41,0.9,0.9"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <text id="n1_obf0" name="title" xy="7,5" pivot="0.5,0.5" size="103,21" scale="0.9,0.9" fontSize="14" color="#45668e" align="center" vAlign="middle" autoSize="none" singleLine="true" text="猜猜我是谁">
+      <gearSize controller="button" pages="0,1" values="117,35,1,1|103,21,0.9,0.9"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button sound="ui://fknoioovtqc911"/>
+  <relation target="n0_sz33" sidePair="width-width,height-height"/>
+</component>

@@ -22,8 +22,25 @@
     <component id="n2_r0y9" name="btnBpReturn" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1080,10" size="33,27" group="n4_r0y9">
       <Button icon="ui://32ieekgur0y9t60" page="0"/>
     </component>
-    <list id="n3_r0y9" name="lstBackpack" xy="618,49" size="421,545" group="n4_r0y9" layout="flow_hz" overflow="scroll" scrollBar="visible" margin="5,5,0,0" scrollBarRes="ui://te1gxawoqouocyibo," lineGap="12" colGap="12" defaultItem="ui://32ieekgur0y9t7k" autoClearItems="true">
+    <list id="n3_r0y9" name="lstBackpack" xy="618,55" size="421,545" group="n4_r0y9" layout="flow_hz" overflow="scroll" scrollBar="visible" scrollBarMargin="5,5,0,0" scrollBarRes="ui://te1gxawovulycyid4," lineGap="12" colGap="12" defaultItem="ui://32ieekgur0y9t7k" autoClearItems="true">
       <relation target="" sidePair="height-height"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
       <item/>
       <item/>
       <item/>
@@ -69,7 +86,7 @@
     <component id="n30_m0i3" name="btnClose" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="559,271" size="49,98" group="n4_r0y9">
       <Button icon="ui://rnqj1l77gg8mtgq" page="0"/>
     </component>
-    <group id="n4_r0y9" name="grpBackpack" xy="559,-2" size="577,644" advanced="true">
+    <group id="n4_r0y9" name="grpBackpack" xy="559,-2" size="577,644" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlRightView" pages="1"/>
       <relation target="" sidePair="right-right"/>
     </group>
