@@ -12,7 +12,7 @@
     <loader id="n18_ww3a" name="icon" xy="6,6" pivot="0.5,0.5" size="60,60" group="n20_ww3a" grayed="true" align="center" vAlign="middle" fill="scale">
       <gearLook controller="ctrlLock" pages="0,1" values="1,0,1,1|1,0,0,1"/>
     </loader>
-    <group id="n20_ww3a" name="grpItemIcon" xy="7,6" size="60,60" advanced="true" collapsed="true"/>
+    <group id="n20_ww3a" name="grpItemIcon" xy="7,6" size="60,60" advanced="true"/>
     <image id="n6_11slc" name="imgSelected" src="j21fi3v" fileName="newImg/img_cm_item_6.png" xy="0,0">
       <gearDisplay controller="button" pages="1"/>
     </image>
@@ -22,7 +22,7 @@
     </component>
     <image id="n13_11slc" name="n13" src="pgixi62" fileName="newImg/img_cm_item_9.png" xy="4,53" group="n12_11slc"/>
     <image id="n15_11slc" name="n15" src="pgixi61" fileName="newImg/img_cm_item_8.png" xy="6,6" group="n12_11slc"/>
-    <text id="n11_11slc" name="tfLock" xy="8,50" size="55,19" group="n12_11slc" fontSize="12" color="#ffffff" align="center" vAlign="middle" strokeColor="#ac471a" autoClearText="true" text="20级解锁">
+    <text id="n11_11slc" name="tfLock" xy="8,50" size="53,18" group="n12_11slc" fontSize="12" color="#ffffff" align="center" vAlign="middle" strokeColor="#ac471a" autoClearText="true" text="20级解锁">
       <relation target="" sidePair="center-center"/>
     </text>
     <group id="n12_11slc" name="grpLock" xy="4,6" size="64,63" advanced="true" collapsed="true">
