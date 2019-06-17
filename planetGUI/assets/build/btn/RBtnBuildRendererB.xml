@@ -1,2 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640"/>
+<component size="58,58" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <image id="n13_j0zc" name="imgBG_0" src="nl0rcyic4" fileName="imgB/img_cm_wpk_1.png" pkg="te1gxawo" xy="0,0" pivot="0.5,0.5" size="58,58">
+      <gearDisplay controller="button" pages="0"/>
+    </image>
+    <image id="n14_j0zc" name="imgBG_1" src="nl0rcyic5" fileName="imgB/img_cm_wpk_2.png" pkg="te1gxawo" xy="0,0" pivot="0.5,0.5" size="58,58">
+      <gearDisplay controller="button" pages="1"/>
+    </image>
+    <loader id="n15_j0zc" name="formulaBG" xy="3,3" size="52,52" group="n21_j0zc" url="ui://te1gxawob7cicyi8z" align="center" vAlign="middle" fill="scale"/>
+    <loader id="n16_j0zc" name="icon" xy="3,3" pivot="0.5,0.5" size="52,52" group="n21_j0zc" align="center" vAlign="middle" fill="scaleMatchHeight"/>
+    <group id="n21_j0zc" name="grpItemIcon" xy="3,3" size="52,52" advanced="true"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

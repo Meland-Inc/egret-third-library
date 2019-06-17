@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="400,400" designImage="ui://i25v0ebkr0y949">
+<component size="279,640" opaque="false" designImage="ui://i25v0ebkr0y949">
   <controller name="ctrlState" exported="true" pages="0,fold,1,open" selected="0"/>
   <displayList>
-    <image id="n0_yhf8" name="n0" src="nl0rcyicf" fileName="imgB/img_cm_dk_1.png" pkg="te1gxawo" xy="0,0" size="72,640" hideByEditor="true"/>
-    <list id="n1_yhf8" name="lstFold" xy="0,63" size="100,520" overflow="scroll" defaultItem="ui://32ieekgudf6n5m" align="center" autoClearItems="true">
+    <image id="n0_yhf8" name="n0" src="nl0rcyicf" fileName="imgB/img_cm_dk_1.png" pkg="te1gxawo" xy="0,0" size="72,640">
+      <gearSize controller="ctrlState" pages="0,1" values="72,640,1,1|250,640,1,1"/>
       <relation target="" sidePair="height-height"/>
+    </image>
+    <list id="n1_yhf8" name="lstFold" xy="10,65" size="52,570" overflow="scroll" lineGap="4" defaultItem="ui://32ieekguyhf8t7o" align="center" autoClearItems="true">
+      <gearDisplay controller="ctrlState" pages="0"/>
       <item/>
       <item/>
       <item/>
@@ -13,8 +16,34 @@
       <item/>
       <item/>
     </list>
-    <list id="n2_yhf8" name="lstOpen" xy="0,63" size="389,513" layout="flow_hz" overflow="scroll" lineItemCount="4" defaultItem="ui://32ieekgudf6n5m" autoClearItems="true">
-      <relation target="" sidePair="height-height"/>
+    <list id="n2_yhf8" name="lstOpen" xy="11,65" size="230,570" layout="flow_hz" overflow="scroll" lineGap="4" colGap="4" lineItemCount="4" defaultItem="ui://32ieekguyhf8t7o" autoClearItems="true">
+      <gearDisplay controller="ctrlState" pages="1"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
       <item/>
       <item/>
       <item/>
@@ -52,17 +81,22 @@
       <item/>
       <item/>
     </list>
-    <component id="n3_yhf8" name="btnOpen" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="101,278" size="41,68">
-      <relation target="" sidePair="middle-middle"/>
-      <Button icon="ui://32ieekgudf6n4w" selectedIcon="ui://32ieekgudf6n4w" page="3"/>
+    <component id="n3_yhf8" name="btnOpen" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="72,590" size="30,28">
+      <gearDisplay controller="ctrlState" pages="0"/>
+      <relation target="" sidePair="bottom-bottom"/>
+      <Button icon="ui://32ieekgur0y9t6v" controller="ctrlState" page="1"/>
     </component>
-    <component id="n4_yhf8" name="btnFold" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="393,280" size="41,68">
-      <relation target="" sidePair="middle-middle"/>
-      <Button icon="ui://32ieekgudf6n4v" selectedIcon="ui://32ieekgudf6n4v" page="2"/>
+    <component id="n4_yhf8" name="btnFold" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="250,590" size="30,28">
+      <gearDisplay controller="ctrlState" pages="1"/>
+      <relation target="" sidePair="bottom-bottom"/>
+      <Button icon="ui://32ieekgur0y9t6w" controller="ctrlState" page="0"/>
     </component>
     <component id="n5_yhf8" name="btnBackpack" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="11,12" size="49,48">
-      <relation target="" sidePair="top-top"/>
       <Button icon="ui://32ieekgur0y9t5v" page="2"/>
+    </component>
+    <component id="n6_j0zc" name="comScaleView" src="j0zct7p" fileName="Com/ComMapScaleViewB.xml" xy="82,493">
+      <gearXY controller="ctrlState" pages="0" values="82,493" default="255,493"/>
+      <relation target="" sidePair="bottom-bottom"/>
     </component>
   </displayList>
 </component>

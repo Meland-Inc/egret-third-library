@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="84,102" extention="Button">
-  <controller name="button" pages="0,up,1,down" selected="1"/>
+  <controller name="button" pages="0,up,1,down" selected="0"/>
   <controller name="ctrlMark" pages="0,normal,1,shadow" selected="0"/>
   <displayList>
     <image id="n1_f5wb" name="imgBG_0" src="df6n5j" fileName="img_UI3/ide/img_ide_item_1.png" xy="0,0" pivot="0.5,0.5">
@@ -13,7 +13,7 @@
     <loader id="n2_f5wb" name="icon" xy="7,16" pivot="0.5,0.5" size="70,71" group="n11_f5wb" align="center" vAlign="middle" fill="scaleMatchHeight"/>
     <image id="n18_jyqv" name="n18" src="pgixi6f" fileName="newImg/img_main_item_4.png" pkg="te1gxawo" xy="19,70" group="n20_jyqv"/>
     <graph id="n19_jyqv" name="gphDurability" xy="20,71" size="44,4" group="n20_jyqv" type="rect" lineSize="0" fillColor="#ff00ff00"/>
-    <group id="n20_jyqv" name="grpDurability" xy="19,70" size="46,6" group="n11_f5wb" visible="false" advanced="true" collapsed="true"/>
+    <group id="n20_jyqv" name="grpDurability" xy="19,70" size="46,6" group="n11_f5wb" visible="false" advanced="true"/>
     <text id="n3_f5wb" name="num" xy="84,93" pivot="1,1" anchor="true" size="28,27" group="n11_f5wb" fontSize="20" color="#45668e" align="center" vAlign="middle" autoSize="none" text="1">
       <gearDisplay controller="ctrlMark" pages="0"/>
       <relation target="" sidePair="right-right,bottom-bottom"/>
@@ -25,10 +25,10 @@
     <text id="n15_f5wb" name="tfDepleted" xy="22,65" size="41,19" group="n17_f5wb" fontSize="12" color="#ffffff" align="center" vAlign="middle" strokeColor="#ac471a" text="已耗尽">
       <relation target="" sidePair="center-center"/>
     </text>
-    <text id="n16_f5wb" name="tfArchNum" xy="33,16" size="20,19" group="n17_f5wb" fontSize="12" color="#45668e" align="center" vAlign="middle" autoClearText="true" text="5/7">
+    <text id="n16_f5wb" name="tfArchNum" xy="33,16" size="22,19" group="n17_f5wb" fontSize="12" color="#45668e" align="center" vAlign="middle" autoClearText="true" text="5/7">
       <relation target="" sidePair="center-center"/>
     </text>
-    <group id="n17_f5wb" name="grpShadowMark" xy="18,16" size="50,68" advanced="true" collapsed="true">
+    <group id="n17_f5wb" name="grpShadowMark" xy="18,16" size="50,68" advanced="true">
       <gearDisplay controller="ctrlMark" pages="1"/>
     </group>
   </displayList>

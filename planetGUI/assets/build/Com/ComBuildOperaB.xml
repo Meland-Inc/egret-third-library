@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="210,60" designImage="ui://i25v0ebkr0y94b" designImageOffsetX="-224" designImageOffsetY="-570">
-  <controller name="ctrlBuild" pages="0,add,1,edit,2,editNotDel,3,editOther,4,editNotMove" selected="0"/>
+  <controller name="ctrlBuild" exported="true" pages="0,add,1,edit,2,editNotDel,3,editOther,4,editNotMove" selected="0"/>
   <displayList>
     <image id="n0_r0y9" name="bg" src="r0y9t78" fileName="img_UI3/b/ide/img_ide_tck_1.png" xy="28,0" size="148,60">
       <gearXY controller="ctrlBuild" pages="0,2,3" values="28,0|15,0|80,0" default="0,0"/>
@@ -35,7 +35,7 @@
     <component id="n12_r0y9" name="btnMirror" src="r0y9t7m" fileName="btn/btnOpera.xml" xy="37,6" size="33,52">
       <gearDisplay controller="ctrlBuild" pages="0,1,2,4"/>
       <gearXY controller="ctrlBuild" pages="0,2" values="37,6|22,4" default="49,4"/>
-      <gearLook controller="ctrlBuild" pages="4" values="1,0,1,0" default="1,0,0,1"/>
+      <gearLook controller="ctrlBuild" pages="0,4" values="1,0,0,1|1,0,1,0" default="1,0,0,1"/>
       <Button title="镜像" icon="ui://32ieekgur0y9t6i"/>
     </component>
     <component id="n14_r0y9" name="btnAttr" src="r0y9t7m" fileName="btn/btnOpera.xml" xy="89,5">
