@@ -232,8 +232,7 @@
     <image id="uvgla0" name="icon_main_caozuianniu_quantou_51.png" path="/img_UI3/"/>
     <component id="uvgla1" name="ComMainRocker.xml" path="/win/" exported="true"/>
     <component id="uvgla2" name="ComMainInfo.xml" path="/win/"/>
-    <component id="uvgla3" name="WinMainItemFieldOld.xml" path="/win/" exported="true"/>
-    <component id="uvgla4" name="ShortcutItemForB.xml" path="/btn/" exported="true"/>
+    <component id="uvgla4" name="ObjectShortcutItem.xml" path="/btn/" exported="true"/>
     <image id="uvgla5" name="img_main_+_61.png" path="/img_UI3/"/>
     <image id="uvgla6" name="img_main_moon_50.png" path="/img_UI3/"/>
     <image id="uvgla7" name="img_main_xuanzhong_61.png" path="/img_UI3/"/>
@@ -313,9 +312,11 @@
     <image id="wq4dcyide" name="fnt_shortcutNum_9.png" path="/img_UI3/"/>
     <component id="wq4dcyidf" name="ComMainStorageForB.xml" path="/win/" exported="true"/>
     <component id="wq4dcyidg" name="btnShowEditor.xml" path="/btn/"/>
-    <component id="wq4dcyidh" name="ShortcutItemForC.xml" path="/btn/" exported="true"/>
+    <component id="wq4dcyidh" name="ShortcutItem.xml" path="/btn/" exported="true"/>
     <image id="nl0rcyidi" name="btn_main_zh_1.png" path="/img_UI3/"/>
     <image id="nl0rcyidj" name="btn_main_zh_2.png" path="/img_UI3/"/>
+    <component id="x5uecyidk" name="ComMainGameShortcuts.xml" path="/com/" exported="true"/>
+    <component id="x5uecyidl" name="ComMainLessonShortcuts.xml" path="/com/" exported="true"/>
   </resources>
   <publish name="main" npot="true"/>
 </packageDescription>

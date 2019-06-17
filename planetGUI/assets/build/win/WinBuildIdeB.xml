@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkr0y94a">
-  <controller name="ctrlRightView" pages="1,backpack,2,attr" selected="1"/>
+  <controller name="ctrlRightView" pages="1,backpack,2,attr,3,none" selected="0"/>
   <controller name="ctrlOperate" pages="0,none,1,center" selected="0"/>
   <displayList>
     <image id="n0_r0y9" name="n0" src="nl0rcyicf" fileName="imgB/img_cm_dk_1.png" pkg="te1gxawo" xy="607,-1" size="445,642" group="n4_r0y9">
