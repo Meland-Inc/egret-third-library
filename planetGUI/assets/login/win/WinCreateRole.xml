@@ -1,79 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" adaptationTest="FitSize">
+<component size="1136,640" designImage="ui://i25v0ebktxgs4d" designImageAlpha="21" designImageLayer="1" adaptationTest="FitSize">
   <controller name="sort" pages="0,body,1,face,2,talent" selected="0"/>
   <displayList>
-    <image id="n69_ifd7" name="imgBG1" src="tm1s45" fileName="newImg/img_8.png" xy="0,0" size="1136,640" group="n71_ifd7"/>
-    <image id="n70_ifd7" name="imgBG2" src="tm1s45" fileName="newImg/img_8.png" xy="1126,0" size="1136,640" group="n71_ifd7"/>
-    <group id="n71_ifd7" name="bg" xy="0,0" size="2262,640" advanced="true" collapsed="true"/>
-    <component id="n12_tlkk" name="btnLogout" src="y3zw2g" fileName="btn/btnLogout.xml" xy="280,78">
-      <relation target="" sidePair="left-left,top-top"/>
+    <component id="n76_txgs" name="comBg" src="txgscyid8" fileName="com/comCommonWinBg.xml" pkg="te1gxawo" xy="0,0">
+      <relation target="" sidePair="width-width,height-height"/>
+      <Label title="创建角色" icon="ui://0n4pg0optxgs5y"/>
     </component>
-    <image id="n10_no43" name="imgNameBG" src="tm1s41" fileName="newImg/img_4.png" xy="451,456" group="n18_trkw"/>
-    <text id="n5_no43" name="tfRoleName" xy="477,459" size="195,31" group="n18_trkw" input="true" font="方正准圆简体" fontSize="24" color="#4a422f" align="center" vAlign="middle" leading="0" letterSpacing="3" autoSize="none" singleLine="true" text="角色名字七个字"/>
-    <text id="n6_no43" name="tfError" xy="443,422" size="260,31" group="n18_trkw" visible="false" font="方正准圆简体" fontSize="15" color="#ee7d61" align="center" vAlign="middle" autoSize="none" bold="true" text="角色名字重复"/>
-    <component id="n9_no43" name="btnDice" src="ptq41z" fileName="btn/btnDice.xml" xy="706,452" size="44,44" group="n18_trkw"/>
-    <group id="n18_trkw" name="name" xy="443,422" size="307,74" advanced="true" collapsed="true">
-      <relation target="" sidePair="bottom-bottom,center-center"/>
-    </group>
-    <component id="n8_no43" name="btnStartGame" src="no4326" fileName="btn/btnStartGame.xml" xy="496,524" size="154,50">
-      <relation target="" sidePair="bottom-bottom,center-center"/>
-      <Button title="确定"/>
+    <component id="n13_trkw" name="btnBody" src="txgscyida" fileName="btn/rbtnCommonTab.xml" pkg="te1gxawo" xy="0,83">
+      <Button checked="true" title="身体" controller="sort" page="0"/>
     </component>
-    <component id="n27_trkw" name="avatar" src="trkw3p" fileName="com/comAvatar.xml" xy="423,126" size="259,235" scale="1.2,1.2">
-      <relation target="" sidePair="center-center,middle-middle"/>
+    <component id="n15_trkw" name="btnFace" src="txgscyida" fileName="btn/rbtnCommonTab.xml" pkg="te1gxawo" xy="0,143">
+      <Button title="脸部" controller="sort" page="1"/>
     </component>
-    <image id="n43_tm1s" name="imgBGBottom" src="tm1s43" fileName="newImg/img_6.png" xy="0,616" size="1136,24">
-      <relation target="" sidePair="bottom-bottom,rightext-right"/>
-    </image>
-    <image id="n44_tm1s" name="imgBGTop" src="tm1s42" fileName="newImg/img_5.png" xy="0,0" size="1136,24">
-      <relation target="" sidePair="top-top,rightext-right"/>
-    </image>
-    <image id="n45_tm1s" name="n45" src="tm1s40" fileName="newImg/img_3.png" xy="641,194" group="n47_tm1s"/>
-    <component id="n30_tm1s" name="btnRandomAvatar" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="te1gxawo" xy="611,190" size="40,40" group="n47_tm1s">
-      <Button icon="ui://0n4pg0optm1s4c"/>
+    <component id="n14_trkw" name="btnTalent" src="txgscyida" fileName="btn/rbtnCommonTab.xml" pkg="te1gxawo" xy="0,203">
+      <Button title="特质" controller="sort" page="2"/>
     </component>
-    <text id="n46_tm1s" name="n46" xy="652,201" size="81,24" group="n47_tm1s" fontSize="18" color="#857762" letterSpacing="1" singleLine="true" text="随机样貌"/>
-    <group id="n47_tm1s" name="randomAvatar" xy="611,190" size="124,40" advanced="true" collapsed="true">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </group>
-    <image id="n49_bidp" name="imgMainBG" src="tm1s3y" fileName="newImg/img_1.png" xy="0,164" size="130,320" group="n48_bidp"/>
-    <component id="n13_trkw" name="btnBody" src="bidp4t" fileName="btn/btnMain.xml" xy="23,186" group="n48_bidp">
-      <Button checked="true" title="身体" icon="ui://0n4pg0optm1s3s" selectedIcon="ui://0n4pg0optm1s3r" controller="sort" page="0"/>
-    </component>
-    <component id="n15_trkw" name="btnFace" src="bidp4t" fileName="btn/btnMain.xml" xy="23,284" group="n48_bidp">
-      <Button title="脸部" icon="ui://0n4pg0optm1s4o" selectedIcon="ui://0n4pg0optm1s4n" controller="sort" page="1"/>
-    </component>
-    <component id="n14_trkw" name="btnTalent" src="bidp4t" fileName="btn/btnMain.xml" xy="23,381" group="n48_bidp">
-      <Button title="特质" icon="ui://0n4pg0optm1s4q" selectedIcon="ui://0n4pg0optm1s4p" controller="sort" page="2"/>
-    </component>
-    <group id="n48_bidp" name="main" xy="0,164" size="130,320" advanced="true" collapsed="true">
-      <relation target="" sidePair="middle-middle,left-left"/>
-    </group>
-    <image id="n51_bidp" name="imgSubclassBG" src="tm1s3y" fileName="newImg/img_1.png" xy="137,183" size="142,282" group="n50_bidp">
-      <gearDisplay controller="sort" pages="0,1"/>
-      <relation target="" sidePair="left-left,middle-middle"/>
-    </image>
-    <list id="n19_trkw" name="lstBodySubclass" xy="152,207" size="111,233" group="n50_bidp" lineGap="15" defaultItem="ui://0n4pg0optrkw3o">
+    <list id="n19_trkw" name="lstBodySubclass" xy="139,150" size="111,275" lineGap="32" defaultItem="ui://0n4pg0optrkw3o">
       <gearDisplay controller="sort" pages="0"/>
       <relation target="" sidePair="left-left,middle-middle"/>
-      <item title="头部" icon="ui://0n4pg0optm1s3q" name="1" selectedIcon="ui://0n4pg0optm1s4r"/>
-      <item title="上衣" icon="ui://0n4pg0optm1s3s" name="2" selectedIcon="ui://0n4pg0optm1s3r"/>
-      <item title="手套" icon="ui://0n4pg0optm1s3u" name="3" selectedIcon="ui://0n4pg0optm1s3t"/>
-      <item title="裤子" icon="ui://0n4pg0optm1s3w" name="4" selectedIcon="ui://0n4pg0optm1s3v"/>
+      <item title="头部" icon="ui://0n4pg0optxgs68" name="1" selectedIcon="ui://0n4pg0optxgs67"/>
+      <item title="上衣" icon="ui://0n4pg0optxgs5p" name="2" selectedIcon="ui://0n4pg0optxgs5o"/>
+      <item title="手套" icon="ui://0n4pg0optxgs66" name="3" selectedIcon="ui://0n4pg0optxgs65"/>
+      <item title="裤子" icon="ui://0n4pg0optxgs60" name="4" selectedIcon="ui://0n4pg0optxgs5z"/>
     </list>
-    <list id="n28_jcdq" name="lstFaceSubclass" xy="152,207" size="111,233" group="n50_bidp" lineGap="15" defaultItem="ui://0n4pg0optrkw3o">
+    <list id="n28_jcdq" name="lstFaceSubclass" xy="139,150" size="111,275" lineGap="32" defaultItem="ui://0n4pg0optrkw3o">
       <gearDisplay controller="sort" pages="1"/>
       <relation target="" sidePair="left-left,middle-middle"/>
-      <item title="脸型" name="5"/>
-      <item title="眼睛" name="6"/>
-      <item title="嘴巴" name="7"/>
-      <item title="眉毛" name="8"/>
+      <item title="脸型" icon="ui://0n4pg0optxgs62" name="5" selectedIcon="ui://0n4pg0optxgs61"/>
+      <item title="眼睛" icon="ui://0n4pg0optxgs6a" name="6" selectedIcon="ui://0n4pg0optxgs69"/>
+      <item title="嘴巴" icon="ui://0n4pg0optxgs5r" name="7" selectedIcon="ui://0n4pg0optxgs5q"/>
+      <item title="眉毛" icon="ui://0n4pg0optxgs64" name="8" selectedIcon="ui://0n4pg0optxgs63"/>
     </list>
-    <group id="n50_bidp" name="LeftSubClass" xy="137,183" size="142,282" advanced="true" collapsed="true"/>
-    <image id="n68_nri0" name="n68" src="nri04v" fileName="newImg/img_9.png" xy="824,100" group="n55_bidp"/>
-    <image id="n67_nri0" name="n67" src="nri04v" fileName="newImg/img_9.png" xy="824,529" group="n55_bidp"/>
-    <image id="n56_bidp" name="imgSubclassBG" src="tm1s3y" fileName="newImg/img_1.png" xy="847,115" size="214,410" group="n55_bidp"/>
-    <list id="n17_trkw" name="lstRightSubclass" xy="861,132" size="185,375" group="n55_bidp" layout="flow_hz" overflow="scroll" scrollBarFlags="2" lineGap="7" colGap="7" lineItemCount="2" defaultItem="ui://0n4pg0opbidp4u" autoClearItems="true">
+    <list id="n17_trkw" name="lstRightSubclass" xy="278,144" size="185,391" layout="flow_hz" overflow="scroll" scrollBarFlags="2" lineGap="20" colGap="21" lineItemCount="2" defaultItem="ui://0n4pg0opbidp4u" autoClearItems="true">
       <item/>
       <item/>
       <item/>
@@ -108,46 +66,50 @@
       <item/>
       <item/>
     </list>
-    <component id="n59_bidp" name="btnScrollUp" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="te1gxawo" xy="931,82" size="44,30" group="n55_bidp">
-      <Button icon="ui://0n4pg0optm1s4d"/>
+    <component id="n8_no43" name="btnStartGame" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="681,564" size="106,36">
+      <relation target="" sidePair="bottom-bottom,center-center"/>
+      <Button icon="ui://0n4pg0optxgs5x"/>
     </component>
-    <component id="n60_bidp" name="btnScrollDown" src="jj3j1e" fileName="btn/CommonButton.xml" pkg="te1gxawo" xy="931,525" size="44,30" group="n55_bidp">
-      <Button icon="ui://0n4pg0optm1s4e"/>
+    <image id="n10_no43" name="imgNameBG" src="txgs5u" fileName="imgB/img_cr_wb_1.png" xy="631,516" size="201,31" group="n18_trkw"/>
+    <text id="n5_no43" name="tfRoleName" xy="634,516" size="195,31" group="n18_trkw" input="true" font="方正准圆简体" fontSize="18" color="#365989" align="center" vAlign="middle" leading="0" letterSpacing="3" autoSize="none" singleLine="true" text="角色名字七个字"/>
+    <text id="n6_no43" name="tfError" xy="593,487" size="260,31" group="n18_trkw" visible="false" font="方正准圆简体" fontSize="15" color="#ff0000" align="center" vAlign="middle" autoSize="none" bold="true" text="角色名字重复"/>
+    <component id="n9_no43" name="btnDice" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="834,509" pivot="0.5,0.5" size="44,44" group="n18_trkw">
+      <Button icon="ui://0n4pg0optxgs5w"/>
     </component>
-    <group id="n55_bidp" name="rghtSubclass" xy="824,82" size="257,473" advanced="true" collapsed="true">
-      <relation target="" sidePair="right-right,middle-middle"/>
+    <group id="n18_trkw" name="nameInput" xy="593,487" size="285,66" advanced="true" collapsed="true">
+      <relation target="" sidePair="bottom-bottom,center-center"/>
     </group>
-    <image id="n61_bidp" name="imgTitleBg" src="tm1s44" fileName="newImg/img_7.png" xy="39,74" group="n64_bidp"/>
-    <image id="n62_bidp" name="ImgTitleLogo" src="tm1s3x" fileName="newImg/icon_17.png" xy="74,83" group="n64_bidp"/>
-    <text id="n63_bidp" name="tfTitle" xy="117,87" size="93,28" group="n64_bidp" fontSize="22" color="#ffffff" text="角色创建"/>
-    <group id="n64_bidp" name="title" xy="39,74" size="210,44" advanced="true" collapsed="true">
-      <relation target="" sidePair="left-left,top-top"/>
-    </group>
-    <list id="n1_no43" name="lstSexy" xy="481,132" size="213,48" scale="0.8,0.8" layout="row" colGap="27" defaultItem="ui://0n4pg0opbidp4s" align="center" vAlign="middle">
-      <relation target="" sidePair="center-center,top-top"/>
-      <item title="男" icon="ui://0n4pg0optm1s4k"/>
-      <item title="女" icon="ui://0n4pg0optm1s4j"/>
+    <list id="n1_no43" name="lstSexy" xy="598,89" size="292,45" layout="row" colGap="33" defaultItem="ui://0n4pg0opbidp4s">
+      <relation target="" sidePair="center-center"/>
+      <item title="男"/>
+      <item title="女"/>
     </list>
-    <text id="n72_mzli" name="tfAccount" xy="89,35" size="132,36" fontSize="24" autoSize="none" text="">
-      <relation target="" sidePair="left-left,top-top"/>
-    </text>
-    <text id="n73_mzli" name="account" xy="31,34" size="132,36" fontSize="24" autoSize="none" text="账号：">
-      <relation target="" sidePair="left-left,top-top"/>
-    </text>
+    <component id="n27_trkw" name="avatar" src="trkw3p" fileName="com/comAvatar.xml" xy="573,139" size="259,235" scale="1.2,1.2" touchable="false">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
     <image id="n74_fya6" name="imgLoading" src="h03r5j" fileName="newImg/img_lineloading_1.png" xy="535,286" pivot="0.5,0.5">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <loader id="n75_fya6" name="lock" xy="0,0" size="1136,640" locked="true">
+    <component id="n12_tlkk" name="btnLogout" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="994,88">
+      <relation target="" sidePair="right-right"/>
+      <Button icon="ui://0n4pg0optxgs6b"/>
+    </component>
+    <component id="n30_tm1s" name="btnRandomAvatar" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="744,140" size="40,40" group="n47_tm1s">
+      <Button icon="ui://0n4pg0optxgs5v"/>
+    </component>
+    <text id="n46_tm1s" name="n46" xy="785,150" size="61,23" group="n47_tm1s" fontSize="14" color="#365989" vAlign="middle" singleLine="true" text="随机样貌"/>
+    <group id="n47_tm1s" name="randomAvatar" xy="744,140" size="102,40" advanced="true" collapsed="true">
+      <relation target="" sidePair="center-center"/>
+    </group>
+    <loader id="n75_fya6" name="lock" xy="0,0" size="1136,640" locked="true" align="center" vAlign="middle">
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
   </displayList>
-  <transition name="t1" autoPlay="true">
-    <item time="0" type="XY" target="n48_bidp" tween="true" startValue="-300,164" endValue="0,164" duration="12" ease="Back.InOut"/>
-    <item time="0" type="XY" target="n50_bidp" tween="true" startValue="-163,183" endValue="137,183" duration="12" ease="Back.InOut"/>
-    <item time="0" type="XY" target="n55_bidp" tween="true" startValue="1190,82" endValue="890,82" duration="12" ease="Back.InOut"/>
-    <item time="0" type="XY" target="n64_bidp" tween="true" startValue="-261,74" endValue="39,74" duration="12" ease="Back.InOut"/>
-  </transition>
   <transition name="t2" autoPlay="true">
     <item time="0" type="Rotation" target="n74_fya6" tween="true" startValue="0" endValue="360" duration="24" ease="Linear" repeat="-1"/>
+  </transition>
+  <transition name="t3" autoPlay="true" autoPlayRepeat="-1">
+    <item time="0" type="Rotation" target="n9_no43" tween="true" startValue="0" endValue="15" duration="6"/>
+    <item time="6" type="Rotation" target="n9_no43" tween="true" startValue="15" endValue="0" duration="6"/>
   </transition>
 </component>

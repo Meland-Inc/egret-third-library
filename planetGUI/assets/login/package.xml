@@ -15,7 +15,7 @@
     <component id="7s5l2j" name="WinSelectBirthPlace.xml" path="/win/" exported="true"/>
     <component id="7s5l2k" name="ComServer.xml" path="/com/" exported="true"/>
     <component id="govx3j" name="ComboBox2_item.xml" path="/com/"/>
-    <component id="trkw3m" name="WinCreateRole.xml" path="/win/" exported="true"/>
+    <component id="trkw3m" name="WinCreateRoleOld.xml" path="/win/" exported="true"/>
     <component id="trkw3o" name="btnLeftIconRadio.xml" path="/btn/"/>
     <component id="trkw3p" name="comAvatar.xml" path="/com/"/>
     <image id="tm1s3q" name="icon_10.png" path="/newImg/"/>
@@ -77,6 +77,31 @@
     <image id="smpo5k" name="btn_login_wechat.png" path="/newImg/"/>
     <image id="smpo5l" name="btn_login_qq.png" path="/newImg/"/>
     <component id="rjim5m" name="ComQueue.xml" path="/com/"/>
+    <component id="txgs5n" name="WinCreateRole.xml" path="/win/" exported="true"/>
+    <image id="txgs5o" name="icon_cr_yf_1.png" path="/imgB/"/>
+    <image id="txgs5p" name="icon_cr_yf_1_1.png" path="/imgB/"/>
+    <image id="txgs5q" name="icon_cr_z_1.png" path="/imgB/"/>
+    <image id="txgs5r" name="icon_cr_z_1_1.png" path="/imgB/"/>
+    <image id="txgs5s" name="img_cr_an_1.png" path="/imgB/" scale="9grid" scale9grid="25,10,50,20"/>
+    <image id="txgs5t" name="img_cr_an_2.png" path="/imgB/" scale="9grid" scale9grid="25,10,50,20"/>
+    <image id="txgs5u" name="img_cr_wb_1.png" path="/imgB/" scale="9grid" scale9grid="16,8,32,16"/>
+    <image id="txgs5v" name="btn_cr_1.png" path="/imgB/"/>
+    <image id="txgs5w" name="btn_cr_2.png" path="/imgB/"/>
+    <image id="txgs5x" name="btn_cr_3.png" path="/imgB/"/>
+    <image id="txgs5y" name="icon_cr_js_1.png" path="/imgB/"/>
+    <image id="txgs5z" name="icon_cr_kz_1.png" path="/imgB/"/>
+    <image id="txgs60" name="icon_cr_kz_1_1.png" path="/imgB/"/>
+    <image id="txgs61" name="icon_cr_l_1.png" path="/imgB/"/>
+    <image id="txgs62" name="icon_cr_l_1_1.png" path="/imgB/"/>
+    <image id="txgs63" name="icon_cr_m_1.png" path="/imgB/"/>
+    <image id="txgs64" name="icon_cr_m_1_1.png" path="/imgB/"/>
+    <image id="txgs65" name="icon_cr_st_1.png" path="/imgB/"/>
+    <image id="txgs66" name="icon_cr_st_1_1.png" path="/imgB/"/>
+    <image id="txgs67" name="icon_cr_t_1.png" path="/imgB/"/>
+    <image id="txgs68" name="icon_cr_t_1_1.png" path="/imgB/"/>
+    <image id="txgs69" name="icon_cr_y_1.png" path="/imgB/"/>
+    <image id="txgs6a" name="icon_cr_y_1_1.png" path="/imgB/"/>
+    <image id="txgs6b" name="btn_cr_4.png" path="/imgB/"/>
   </resources>
   <publish name="login" npot="true"/>
 </packageDescription>
