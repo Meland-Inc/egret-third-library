@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="347,207">
+<component size="237,176">
   <displayList>
-    <image id="n37_py50" name="n37" src="vulycyicq" fileName="imgB/btn_cm_xzl_4.png" pkg="te1gxawo" xy="37,26" size="310,181"/>
-    <component id="n38_py50" name="btnAttrVisible" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="286,36" size="47,47" hideByEditor="true" visible="false">
-      <Button icon="ui://kzio97vuqki67y" selectedIcon="ui://kzio97vuqki681"/>
+    <image id="n37_py50" name="n37" src="vulycyicq" fileName="imgB/btn_cm_xzl_4.png" pkg="te1gxawo" xy="37,26" size="200,150"/>
+    <component id="n38_py50" name="btnAttrVisible" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="200,40" size="22,22" visible="false">
+      <Button icon="ui://32ieekgur0y9t6q" selectedIcon="ui://32ieekgur0y9t6r"/>
     </component>
-    <loader id="n39_py50" name="ladAttrObj" xy="142,65" size="100,100" fill="scale"/>
+    <loader id="n39_py50" name="ladAttrObj" xy="107,71" size="60,60" fill="scale"/>
   </displayList>
 </component>

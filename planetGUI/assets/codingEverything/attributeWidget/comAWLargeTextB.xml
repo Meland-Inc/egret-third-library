@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="373,44">
+<component size="274,44" designImageOffsetX="-828" designImageOffsetY="-250">
   <displayList>
-    <image id="n6_qki6" name="imgBg" src="vulycyid6" fileName="imgB/img_cm_wb_1.png" pkg="te1gxawo" xy="15,14" size="358,30">
+    <image id="n6_qki6" name="imgBg" src="vulycyid6" fileName="imgB/img_cm_wb_1.png" pkg="te1gxawo" xy="15,14" size="259,30">
       <relation target="n8_qki6" sidePair="leftext-left,rightext-right"/>
       <relation target="n8_qki6" sidePair="topext-top,bottomext-bottom"/>
     </image>
-    <text id="n8_qki6" name="labContent" xy="29,20" size="329,20" input="true" fontSize="14" color="#45668e" leading="8" autoSize="none" text="猜猜我是谁"/>
+    <text id="n8_qki6" name="labContent" xy="29,20" size="230,20" input="true" fontSize="14" color="#45668e" leading="8" autoSize="none" text="猜猜我是谁"/>
   </displayList>
 </component>

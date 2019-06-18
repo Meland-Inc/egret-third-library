@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkr0y94a">
-  <controller name="ctrlRightView" pages="1,backpack,2,attr,3,none" selected="0">
-    <action type="change_page" fromPage="" toPage="1,2" objectId="n9_r0y9" controller="ctrlState" targetPage="2"/>
-  </controller>
+  <controller name="ctrlRightView" pages="1,backpack,2,attr,3,none" selected="0"/>
   <controller name="ctrlOperate" pages="0,none,1,center" selected="0"/>
   <displayList>
     <image id="n0_r0y9" name="n0" src="nl0rcyicf" fileName="imgB/img_cm_dk_1.png" pkg="te1gxawo" xy="607,-1" size="445,642" group="n4_r0y9">
@@ -81,19 +79,19 @@
       <item/>
     </list>
     <image id="n6_r0y9" name="n6" src="r0y9t70" fileName="img_UI3/b/ide/img_ide_ssk_1.png" xy="617,10" size="410,28" group="n4_r0y9"/>
-    <image id="n7_r0y9" name="n7" src="r0y9t71" fileName="img_UI3/b/ide/img_ide_ssk_2.png" xy="627,17" group="n4_r0y9"/>
+    <image id="n7_r0y9" name="n7" src="r0y9t71" fileName="img_UI3/b/ide/img_ide_ssk_2.png" xy="627,17" size="14,14" group="n4_r0y9"/>
     <text id="n8_r0y9" name="tfSearch" xy="651,13" size="370,24" group="n4_r0y9" input="true" fontSize="14" color="#ffffff" vAlign="middle" autoSize="none" autoClearText="true" text="垃圾"/>
     <component id="n30_m0i3" name="btnClose" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="559,271" size="49,98" group="n4_r0y9">
       <Button icon="ui://rnqj1l77gg8mtgq" page="0"/>
     </component>
-    <group id="n4_r0y9" name="grpBackpack" xy="559,-2" size="577,644" advanced="true">
+    <group id="n4_r0y9" name="grpBackpack" xy="559,-2" size="577,644" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlRightView" pages="1"/>
       <relation target="" sidePair="right-right"/>
     </group>
     <component id="n9_r0y9" name="comEntitySelect" src="yhf8t7n" fileName="Com/ComMapEntitySelectB.xml" xy="0,0" size="425,640" controller="ctrlState,0">
       <relation target="" sidePair="left-left,height-height"/>
     </component>
-    <component id="n27_r0y9" name="comAttr" src="1194t5r" fileName="win/ComBuildAttr.xml" xy="670,0" size="466,640">
+    <component id="n27_r0y9" name="comAttr" src="vulyt7s" fileName="win/ComBuildAttrB.xml" xy="670,0" size="466,640">
       <gearDisplay controller="ctrlRightView" pages="2"/>
       <relation target="" sidePair="right-right,height-height"/>
     </component>

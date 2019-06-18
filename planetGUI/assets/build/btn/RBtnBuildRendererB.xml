@@ -2,9 +2,7 @@
 <component size="58,58" extention="Button">
   <controller name="button" pages="0,up,1,down" selected="0"/>
   <displayList>
-    <image id="n13_j0zc" name="imgBG_0" src="nl0rcyic4" fileName="imgB/img_cm_wpk_1.png" pkg="te1gxawo" xy="0,0" pivot="0.5,0.5" size="58,58">
-      <gearDisplay controller="button" pages="0"/>
-    </image>
+    <image id="n13_j0zc" name="imgBG_0" src="nl0rcyic4" fileName="imgB/img_cm_wpk_1.png" pkg="te1gxawo" xy="0,0" pivot="0.5,0.5" size="58,58"/>
     <image id="n14_j0zc" name="imgBG_1" src="nl0rcyic5" fileName="imgB/img_cm_wpk_2.png" pkg="te1gxawo" xy="0,0" pivot="0.5,0.5" size="58,58">
       <gearDisplay controller="button" pages="1"/>
     </image>
