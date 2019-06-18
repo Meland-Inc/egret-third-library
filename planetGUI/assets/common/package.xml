@@ -410,6 +410,12 @@
     <component id="txgscyida" name="rbtnCommonTab.xml" path="/btn/" exported="true"/>
     <image id="nxmwcyid8" name="bg_cm_1_1.png" path="/img_UI3/" exported="true" scale="9grid" scale9grid="50,100,100,52"/>
     <image id="qd2ccyidb" name="bg_cm_1_2.png" path="/img_UI3/" exported="true"/>
+    <component id="o89ocyidf" name="sldCommon_grip.xml" path="/sld/"/>
+    <component id="o89ocyidg" name="sldCommon.xml" path="/sld/" exported="true"/>
+    <component id="o89ocyidh" name="rbtnFixNoScale.xml" path="/btn/" exported="true"/>
+    <image id="o89ocyidi" name="btn_cm_an_1.png" path="/imgB/" exported="true"/>
+    <image id="o89ocyidj" name="btn_cm_an_2.png" path="/imgB/" exported="true"/>
+    <image id="o89ocyidk" name="btn_cm_an_3.png" path="/imgB/" exported="true"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>

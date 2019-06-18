@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" adaptationTest="FitSize">
-  <controller name="conSetting" pages="0,system,1,sound,2,chating,3,about,4,manor,5,robotCode" selected="5"/>
-  <controller name="ctrlGameMode" pages="0,game,1,lessons" selected="1"/>
-  <controller name="ctrlManorView" pages="1,student,0,teacher" selected="1"/>
+  <controller name="conSetting" pages="0,system,1,sound,2,chating,3,about,4,manor,5,robotCode" selected="1"/>
+  <controller name="ctrlGameMode" pages="0,game,1,lessons" selected="0"/>
+  <controller name="ctrlManorView" pages="1,student,0,teacher" selected="0"/>
   <displayList>
     <image id="n2_8zcx" name="bg" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="215,102" size="706,430" group="n47_kg0b"/>
     <image id="n62_r398" name="n62" src="ot9si2y" fileName="newImg/img_cm_bottom_4.png" pkg="te1gxawo" xy="413,155" size="490,350" group="n47_kg0b"/>
@@ -47,10 +47,10 @@
     <component id="n33_o8k6" name="sldSoundVolume" src="cf98j" fileName="com/soundSlider.xml" xy="472,288" size="330,32" group="n34_o8k6">
       <Label title="音量"/>
     </component>
-    <group id="n34_o8k6" name="sound" xy="472,211" size="344,109" group="n47_kg0b" advanced="true" collapsed="true">
+    <group id="n34_o8k6" name="sound" xy="472,211" size="344,109" group="n47_kg0b" advanced="true">
       <gearDisplay controller="conSetting" pages="1"/>
     </group>
-    <text id="n63_r398" name="n63" xy="465,196" size="133,22" group="n41_o8k6" fontSize="16" color="#5b4b37" text="主界面消息框提示">
+    <text id="n63_r398" name="n63" xy="465,196" size="133,26" group="n41_o8k6" fontSize="16" color="#5b4b37" text="主界面消息框提示">
       <gearDisplay controller="conSetting" pages="2"/>
     </text>
     <component id="n35_o8k6" name="tgWorldMsg" src="rw7fg" fileName="com/settingToggle.xml" xy="465,233" size="148,33" group="n41_o8k6">
@@ -74,7 +74,7 @@
     <group id="n41_o8k6" name="chat" xy="465,196" size="377,190" group="n47_kg0b" advanced="true" collapsed="true">
       <gearDisplay controller="conSetting" pages="2"/>
     </group>
-    <text id="n58_r398" name="n58" xy="453,183" size="70,25" group="n54_r398" fontSize="18" color="#5b4b37" text="1.2.01.3"/>
+    <text id="n58_r398" name="n58" xy="453,183" size="70,29" group="n54_r398" fontSize="18" color="#5b4b37" text="1.2.01.3"/>
     <text id="n55_r398" name="n55" xy="453,223" size="186,64" group="n54_r398" fontSize="14" color="#755f44" autoSize="none" text="@2016-2020腾语科技&#xA;ALL RIGHTS RESERVED&#xA;贝尔教育平台官网"/>
     <text id="n56_r398" name="n56" xy="453,287" size="157,24" group="n54_r398" fontSize="14" color="#5b4b37" autoSize="none" text="www.bellcode.com"/>
     <group id="n54_r398" name="about" xy="453,183" size="186,128" group="n47_kg0b" hideByEditor="true" visible="false" advanced="true" collapsed="true">
@@ -97,7 +97,7 @@
         <item/>
       </ComboBox>
     </component>
-    <text id="n67_o31t" name="n67" xy="488,214" size="69,22" group="n76_hj15" fontSize="16" color="#5b4b37" text="领地名字"/>
+    <text id="n67_o31t" name="n67" xy="488,214" size="69,26" group="n76_hj15" fontSize="16" color="#5b4b37" text="领地名字"/>
     <component id="n68_o31t" name="btnLoad" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="675,413" size="125,40" group="n76_hj15">
       <Button title="下载" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoefrs1w"/>
     </component>
@@ -107,8 +107,8 @@
     <component id="n70_o31t" name="btnDel" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="475,351" size="125,40" group="n76_hj15">
       <Button title="删除" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoqo8vi21"/>
     </component>
-    <text id="n72_ppgn" name="n72" xy="488,173" size="85,22" group="n76_hj15" fontSize="16" color="#5b4b37" text="当前领地："/>
-    <text id="n73_ppgn" name="tfCurManorID" xy="586,173" size="50,22" group="n76_hj15" fontSize="16" color="#5b4b37" autoClearText="true" text="aaaaa"/>
+    <text id="n72_ppgn" name="n72" xy="488,173" size="85,26" group="n76_hj15" fontSize="16" color="#5b4b37" text="当前领地："/>
+    <text id="n73_ppgn" name="tfCurManorID" xy="586,173" size="50,26" group="n76_hj15" fontSize="16" color="#5b4b37" autoClearText="true" text="aaaaa"/>
     <component id="n74_hj15" name="btnRestoreScene" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="475,413" size="125,40" group="n76_hj15">
       <Button title="还原场景" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoqo8vi21"/>
     </component>
@@ -131,7 +131,7 @@
         <item/>
       </ComboBox>
     </component>
-    <text id="n83_opya" name="n83" xy="488,214" size="85,22" group="n91_opya" fontSize="16" color="#5b4b37" text="机器人代码"/>
+    <text id="n83_opya" name="n83" xy="488,214" size="85,26" group="n91_opya" fontSize="16" color="#5b4b37" text="机器人代码"/>
     <component id="n84_opya" name="btnCodeLoad" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="604,368" size="125,40" group="n91_opya">
       <Button title="下载" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoefrs1w"/>
     </component>
@@ -141,8 +141,8 @@
     <component id="n86_opya" name="btnCodeDel" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="446,368" size="125,40" group="n91_opya">
       <Button title="删除" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoqo8vi21"/>
     </component>
-    <text id="n87_opya" name="n87" xy="488,173" size="85,22" group="n91_opya" fontSize="16" color="#5b4b37" text="当前代码："/>
-    <text id="n88_opya" name="tfCurCodeID" xy="586,173" size="50,22" group="n91_opya" fontSize="16" color="#5b4b37" autoClearText="true" text="aaaaa"/>
+    <text id="n87_opya" name="n87" xy="488,173" size="85,26" group="n91_opya" fontSize="16" color="#5b4b37" text="当前代码："/>
+    <text id="n88_opya" name="tfCurCodeID" xy="586,173" size="50,26" group="n91_opya" fontSize="16" color="#5b4b37" autoClearText="true" text="aaaaa"/>
     <group id="n91_opya" name="robotCode" xy="446,173" size="439,235" group="n47_kg0b" advanced="true">
       <gearDisplay controller="conSetting" pages="5"/>
     </group>
@@ -151,7 +151,7 @@
       <Button title="系统" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="0"/>
     </component>
     <component id="n22_o8k6" name="btnSound" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="256,240" size="125,56" group="n47_kg0b">
-      <Button title="声音" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="1"/>
+      <Button checked="true" title="声音" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="1"/>
     </component>
     <component id="n23_o8k6" name="btnChat" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="256,303" size="125,56" group="n47_kg0b">
       <Button title="聊天" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="2"/>
@@ -165,7 +165,7 @@
     </component>
     <component id="n80_opya" name="btnRobotCode" src="luqxi3p" fileName="btn/CanChangeRadioButton.xml" pkg="te1gxawo" xy="256,428" size="125,56" group="n47_kg0b">
       <gearDisplay controller="ctrlGameMode" pages="1"/>
-      <Button checked="true" title="机器人" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="5"/>
+      <Button title="机器人" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawopgixi4t" selectedIcon="ui://te1gxawopgixi4w" controller="conSetting" page="5"/>
     </component>
     <image id="n61_r398" name="n61" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="223,516" size="691,14" group="n47_kg0b"/>
     <group id="n47_kg0b" name="root" xy="215,95" size="706,437" advanced="true">

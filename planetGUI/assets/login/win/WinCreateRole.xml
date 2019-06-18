@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" designImage="ui://i25v0ebktxgs4d" designImageAlpha="21" designImageLayer="1" adaptationTest="FitSize">
+<component size="1136,640" designImage="ui://i25v0ebktxgs4d" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
   <controller name="sort" pages="0,body,1,face,2,talent" selected="0"/>
   <displayList>
     <component id="n76_txgs" name="comBg" src="txgscyid8" fileName="com/comCommonWinBg.xml" pkg="te1gxawo" xy="0,0">
       <relation target="" sidePair="width-width,height-height"/>
-      <Label title="创建角色" icon="ui://0n4pg0optxgs5y"/>
+      <Label title="角色创建" icon="ui://0n4pg0optxgs5y"/>
     </component>
     <component id="n13_trkw" name="btnBody" src="txgscyida" fileName="btn/rbtnCommonTab.xml" pkg="te1gxawo" xy="0,83">
       <Button checked="true" title="身体" controller="sort" page="0"/>
