@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="97,55" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <controller name="ctrlIsRead" pages="0,yes,1,no" selected="0"/>
+  <displayList>
+    <loader id="n6_nl0r" name="icon" xy="0,0" size="91,55" url="ui://te1gxawonl0rcyic9" autoSize="true">
+      <gearIcon controller="button" pages="1" values="ui://te1gxawonl0rcyic8" default="ui://te1gxawonl0rcyic9"/>
+    </loader>
+    <text id="n3_ey2h" name="title" xy="14,9" size="63,28" fontSize="18" color="#365989" align="center" vAlign="middle" autoSize="none" bold="true" text="tab">
+      <gearColor controller="button" pages="1" values="#ffffff,#000000" default="#365989,#000000"/>
+    </text>
+  </displayList>
+  <Button mode="Radio" sound="ui://fknoioovtqc911"/>
+</component>
