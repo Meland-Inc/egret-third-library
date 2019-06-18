@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkcxfq4e" designImageAlpha="36" designImageLayer="1" adaptationTest="FitSize">
   <controller name="conSetting" pages="0,system,1,sound,2,chating,3,about,4,manor,5,robotCode" selected="0"/>
-  <controller name="ctrlGameMode" pages="0,game,1,lessons" selected="1"/>
+  <controller name="ctrlGameMode" pages="0,game,1,lessons" selected="0"/>
   <controller name="ctrlManorView" pages="1,student,0,teacher" selected="0"/>
   <displayList>
     <component id="n92_cxfq" name="comBg" src="txgscyid8" fileName="com/comCommonWinBg.xml" pkg="te1gxawo" xy="0,0" locked="true">
@@ -46,7 +46,7 @@
       <Button title="查看日志" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoefrs1w"/>
     </component>
     <component id="n28_o8k6" name="btnLogout" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="978,557" size="106,36" group="n30_o8k6">
-      <Button title="退出登陆" titleColor="#ffffff" titleFontSize="16" icon="ui://te1gxawoo89ocyidi"/>
+      <Button title="退出登陆" titleColor="#ffffff" titleFontSize="16" icon="ui://te1gxawom3dicyida"/>
     </component>
     <component id="n64_epn8" name="btnUploadLog" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="200,496" size="125,40" group="n30_o8k6">
       <Button title="上传日志" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoefrs1w"/>
@@ -54,7 +54,7 @@
     <component id="n42_o8k6" name="btnVconsole" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="200,555" size="125,40" group="n30_o8k6">
       <Button title="开启vconsole" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoefrs1w"/>
     </component>
-    <group id="n30_o8k6" name="system" xy="200,152" size="884,443" advanced="true">
+    <group id="n30_o8k6" name="system" xy="200,152" size="884,443" advanced="true" collapsed="true">
       <gearDisplay controller="conSetting" pages="0"/>
     </group>
     <component id="n115_o89o" name="btnBgm" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="297,153" size="80,34" group="n116_o89o">
