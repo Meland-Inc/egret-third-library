@@ -365,17 +365,17 @@
     <image id="fzlucyic1" name="img_Dialog_duixiangkuang_4.png" path="/img_UI3/dialog/" exported="true"/>
     <image id="fzlucyic2" name="img_Dialog_xiaosanjiao_7.png" path="/img_UI3/dialog/" exported="true"/>
     <component id="fzlucyic3" name="LabClickNextTf.xml" path="/lab/" exported="true"/>
-    <image id="nl0rcyic4" name="img_cm_wpk_1.png" path="/imgB/" exported="true" scale="9grid" scale9grid="16,16,32,32"/>
-    <image id="nl0rcyic5" name="img_cm_wpk_2.png" path="/imgB/" exported="true" scale="9grid" scale9grid="16,16,32,32"/>
+    <image id="nl0rcyic4" name="img_cm_wpk_1.png" path="/imgB/" exported="true"/>
+    <image id="nl0rcyic5" name="img_cm_wpk_2.png" path="/imgB/" exported="true"/>
     <image id="nl0rcyic6" name="img_cm_wpk_3.png" path="/imgB/" exported="true"/>
-    <image id="nl0rcyic7" name="bg_cm_1.png" path="/imgB/" exported="true" scale="9grid" scale9grid="26,30,52,60"/>
+    <image id="nl0rcyic7" name="bg_cm_1.png" path="/imgB/" exported="true"/>
     <image id="nl0rcyic8" name="btn_cm_cbl_1.png" path="/imgB/" exported="true"/>
     <image id="nl0rcyic9" name="btn_cm_cbl_2.png" path="/imgB/" exported="true"/>
     <image id="nl0rcyica" name="btn_cm_db_3.png" path="/imgB/" exported="true"/>
-    <image id="nl0rcyicb" name="img_cm__bg_cbl_1.png" path="/imgB/" exported="true" scale="9grid" scale9grid="24,28,48,56"/>
+    <image id="nl0rcyicb" name="img_cm__bg_cbl_1.png" path="/imgB/" exported="true"/>
     <image id="nl0rcyicc" name="img_cm_bg_dk_1.png" path="/imgB/" exported="true" scale="9grid" scale9grid="31,23,62,46"/>
-    <image id="nl0rcyicd" name="img_cm_db_1.png" path="/imgB/" exported="true" scale="9grid" scale9grid="22,16,44,32"/>
-    <image id="nl0rcyice" name="img_cm_db_2.png" path="/imgB/" exported="true" scale="9grid" scale9grid="53,15,106,30"/>
+    <image id="nl0rcyicd" name="img_cm_db_1.png" path="/imgB/" exported="true"/>
+    <image id="nl0rcyice" name="img_cm_db_2.png" path="/imgB/" exported="true"/>
     <image id="nl0rcyicf" name="img_cm_dk_1.png" path="/imgB/" exported="true" scale="9grid" scale9grid="33,33,66,66"/>
     <image id="nl0rcyicg" name="img_cm_dk_2.png" path="/imgB/" exported="true" scale="9grid" scale9grid="21,26,42,52"/>
     <image id="vulycyich" name="btn_cm_bc_1.png" path="/imgB/" exported="true"/>
@@ -406,10 +406,10 @@
     <component id="vulycyid4" name="ScrollBarV2.xml" path="/bar/" exported="true"/>
     <component id="vulycyid5" name="ScrollBarV2_grip.xml" path="/bar/"/>
     <image id="vulycyid6" name="img_cm_wb_1.png" path="/imgB/" exported="true" scale="9grid" scale9grid="25,14,50,28"/>
-    <component id="txgscyid8" name="comCommonWinBg.xml" path="/com/" exported="true"/>
-    <component id="txgscyida" name="rbtnCommonTab.xml" path="/btn/" exported="true"/>
-    <image id="nxmwcyid8" name="bg_cm_1_1.png" path="/img_UI3/" exported="true" scale="9grid" scale9grid="50,100,100,52"/>
-    <image id="qd2ccyidb" name="bg_cm_1_2.png" path="/img_UI3/" exported="true"/>
+    <image id="nxmwcyid8" name="bg_cm_1_1.png" path="/img_UI3/" exported="true"/>
+    <image id="m3dicyid9" name="btn_cm_an_3.png" path="/imgB/" exported="true"/>
+    <image id="m3dicyida" name="btn_cm_an_1.png" path="/imgB/" exported="true"/>
+    <image id="m3dicyidb" name="btn_cm_an_2.png" path="/imgB/" exported="true"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>
