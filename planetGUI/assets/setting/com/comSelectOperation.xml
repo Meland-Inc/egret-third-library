@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="341,198" designImage="ui://i25v0ebkcxfq4f" designImageOffsetX="-293" designImageOffsetY="-370" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlOperation" pages="0,rocker,1,keyboard" selected="0"/>
+  <controller name="ctrlShowHide" pages="0,hide,1,show" selected="1"/>
+  <displayList>
+    <component id="n0_o89o" name="btnOperation" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="0,0" size="117,34">
+      <gearText controller="ctrlOperation" pages="0" values="摇杆操作" default="WASD操作"/>
+      <Button title="摇杆操作" titleColor="#365989" titleFontSize="16" icon="ui://te1gxawovulycyicn" controller="ctrlShowHide" page="1"/>
+    </component>
+    <image id="n1_o89o" name="imgBg" src="vulycyicq" fileName="imgB/btn_cm_xzl_4.png" pkg="te1gxawo" xy="161,8" size="180,190" group="n9_o89o"/>
+    <text id="n2_o89o" name="tfOperation1" xy="217,14" size="69,26" group="n9_o89o" fontSize="16" color="#365989" text="操作方式"/>
+    <image id="n3_o89o" name="imgPoint" src="vulycyicr" fileName="imgB/btn_cm_xzl_5.png" pkg="te1gxawo" xy="184,22" group="n9_o89o"/>
+    <component id="n4_o89o" name="btnRockerOperation" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="192,54" size="116,34" group="n9_o89o">
+      <Button checked="true" title="摇杆操作" titleColor="#365989" titleFontSize="16" icon="ui://te1gxawovulycyicn" selectedIcon="ui://te1gxawovulycyico" controller="ctrlOperation" page="0"/>
+    </component>
+    <component id="n5_o89o" name="btnKeyboardOperation" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="192,98" size="117,34" group="n9_o89o">
+      <Button title="WASD操作" titleColor="#365989" titleFontSize="16" icon="ui://te1gxawovulycyicn" selectedIcon="ui://te1gxawovulycyico" controller="ctrlOperation" page="1"/>
+    </component>
+    <component id="n8_o89o" name="btnConfirmOperation" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="199,145" size="106,36" group="n9_o89o">
+      <Button title="确定" icon="ui://te1gxawom3dicyidb" controller="ctrlShowHide" page="0"/>
+    </component>
+    <group id="n9_o89o" name="grpSelection" xy="161,8" size="180,190" advanced="true">
+      <gearDisplay controller="ctrlShowHide" pages="1"/>
+    </group>
+  </displayList>
+</component>

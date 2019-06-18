@@ -12,6 +12,16 @@
     <component id="o31tu" name="comManorList_item.xml" path="/com/"/>
     <component id="o31tv" name="comManorList_popup.xml" path="/com/"/>
     <component id="o31tw" name="comManorList.xml" path="/com/"/>
+    <image id="cxfqx" name="btn_st_1.png" path="/imgB/"/>
+    <image id="cxfqy" name="btn_st_2.png" path="/imgB/"/>
+    <image id="cxfqz" name="btn_st_3.png" path="/imgB/"/>
+    <image id="cxfq10" name="btn_st_4.png" path="/imgB/"/>
+    <image id="cxfq11" name="btn_st_5.png" path="/imgB/"/>
+    <image id="cxfq12" name="img_st_1.png" path="/imgB/"/>
+    <image id="cxfq13" name="img_st_2.png" path="/imgB/"/>
+    <image id="cxfq14" name="img_st_3.png" path="/imgB/"/>
+    <component id="o89o15" name="WinSettingOld.xml" path="/win/" exported="true"/>
+    <component id="o89o16" name="comSelectOperation.xml" path="/com/"/>
   </resources>
   <publish name="setting" npot="true"/>
 </packageDescription>
