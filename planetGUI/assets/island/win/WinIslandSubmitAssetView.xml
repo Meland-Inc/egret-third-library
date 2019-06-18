@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="0,0" opaque="false">
+  <controller name="submitStatus" pages="1,false,0,true" selected="0"/>
+  <controller name="submitDelStatus" pages="0,submit,1,delete" selected="0"/>
+  <displayList>
+    <loader id="n0_z45o" name="n0" xy="-247,-340" size="500,322" group="n7_z45o" url="ui://te1gxawonxmwcyid8" fill="scaleFree">
+      <relation target="n11_sdvq" sidePair="width-width,left-left"/>
+    </loader>
+    <image id="n12_qd2c" name="n12" src="qd2ccyidb" fileName="img_UI3/bg_cm_1_2.png" pkg="te1gxawo" xy="-17,-27" group="n7_z45o"/>
+    <component id="n2_z45o" name="btnClose" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="186,-341" size="72,72" group="n7_z45o">
+      <relation target="n0_z45o" sidePair="right-right"/>
+      <Button icon="ui://te1gxawoz45ocyiay"/>
+    </component>
+    <text id="n3_z45o" name="n3" xy="-60,-324" pivot="0.5,0" size="129,39" group="n7_z45o" fontSize="30" color="#ffffff" vAlign="middle" bold="true" text="提交资源">
+      <gearText controller="submitDelStatus" pages="1" values="删除" default="提交资源"/>
+    </text>
+    <text id="n4_z45o" name="labCantTips" xy="-46,-94" size="101,31" group="n7_z45o" fontSize="24" color="#ef4542" vAlign="middle" text="材料不足">
+      <gearDisplay controller="submitStatus" pages="1"/>
+    </text>
+    <component id="n6_z45o" name="btnSubmit" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="-101,-114" size="206,84" group="n7_z45o">
+      <gearDisplay controller="submitStatus" pages="0"/>
+      <gearText controller="submitDelStatus" pages="1" values="删除" default="提交"/>
+      <Button title="提交" titleColor="#ffffff" titleFontSize="34" icon="ui://te1gxawoz45ocyiaz" sound="ui://fknoioovqy4415"/>
+    </component>
+    <list id="n11_sdvq" name="lstItem" xy="-212,-263" pivot="0.5,0" size="440,143" group="n7_z45o" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="128" colGap="42" defaultItem="ui://issf8dvbsdvqd" align="center" autoClearItems="true">
+      <gearDisplay controller="submitDelStatus" pages="0"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n7_z45o" name="center" xy="-247,-341" size="505,338" advanced="true"/>
+  </displayList>
+</component>
