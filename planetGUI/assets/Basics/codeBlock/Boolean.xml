@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="90,64" restrictSize="0,0,64,64">
   <controller name="color" pages="0,Event,1,DeepYellow,2,Red,3,Purple,4,DeepBlue,5,LightBlue,6,DeepGreen,7,LightGreen" selected="0"/>
-  <controller name="isAlone" pages="0,true,1,false" selected="1"/>
+  <controller name="isAlone" pages="0,true,1,false" selected="0"/>
   <displayList>
     <loader id="n2_h5gv" name="ladBG" xy="0,0" size="90,64" url="ui://rnqj1l77h5gvtbj" fill="scaleFree">
       <gearDisplay controller="isAlone" pages="1"/>
       <gearIcon controller="color" pages="6" values="ui://rnqj1l77h5gvtck" default="ui://rnqj1l77h5gvtbj"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <loader id="n3_yrfu" name="ladAloneBG" xy="0,0" size="90,68" hideByEditor="true" url="ui://rnqj1l77h5gvtbi" fill="scaleFree">
+    <loader id="n3_yrfu" name="ladAloneBG" xy="0,0" size="90,68" url="ui://rnqj1l77h5gvtbi" fill="scaleFree">
       <gearDisplay controller="isAlone" pages="0"/>
       <gearIcon controller="color" pages="0,1,2,3,4,5,6,7" values="ui://rnqj1l77h5gvtbi|ui://rnqj1l77h5gvtbi|ui://rnqj1l77h5gvtbi|ui://rnqj1l77h5gvtbi|ui://rnqj1l77h5gvtbi|ui://rnqj1l77h5gvtbi|ui://rnqj1l77h5gvtcj|ui://rnqj1l77h5gvtbi"/>
       <relation target="" sidePair="width-width,height-height"/>
