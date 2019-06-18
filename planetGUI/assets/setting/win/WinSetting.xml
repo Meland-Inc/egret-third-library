@@ -46,6 +46,7 @@
       <Button title="查看日志" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoefrs1w"/>
     </component>
     <component id="n28_o8k6" name="btnLogout" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="978,557" size="106,36" group="n30_o8k6">
+      <relation target="" sidePair="right-right"/>
       <Button title="退出登陆" titleColor="#ffffff" titleFontSize="16" icon="ui://te1gxawom3dicyida"/>
     </component>
     <component id="n64_epn8" name="btnUploadLog" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="200,496" size="125,40" group="n30_o8k6">
