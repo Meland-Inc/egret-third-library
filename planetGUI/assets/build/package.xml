@@ -154,13 +154,13 @@
     <component id="r0y9t7j" name="rbtnType.xml" path="/btn/"/>
     <component id="r0y9t7k" name="RBtnBuildRendererB.xml" path="/btn/" exported="true"/>
     <component id="r0y9t7l" name="ComBuildOperaB.xml" path="/Com/"/>
-    <component id="r0y9t7m" name="btnOpera.xml" path="/btn/"/>
+    <component id="r0y9t7m" name="BtnOpera.xml" path="/btn/" exported="true"/>
     <component id="yhf8t7n" name="ComMapEntitySelectB.xml" path="/Com/"/>
     <component id="yhf8t7o" name="BtnEntitySelectB.xml" path="/btn/"/>
     <component id="j0zct7p" name="ComMapScaleViewB.xml" path="/Com/"/>
-    <image id="vulyt7q" name="icon_ide_tck_5 _1.png" path="/img_UI3/b/ide/"/>
-    <image id="vulyt7r" name="icon_ide_tck_6_1.png" path="/img_UI3/b/ide/"/>
     <component id="vulyt7s" name="ComBuildAttrB.xml" path="/win/"/>
+    <image id="phs5t7t" name="icon_ide_lx_7.png" path="/img_UI3/b/ide/"/>
+    <image id="phs5t7u" name="icon_ide_lx_8.png" path="/img_UI3/b/ide/"/>
   </resources>
   <publish name="build" npot="true"/>
 </packageDescription>

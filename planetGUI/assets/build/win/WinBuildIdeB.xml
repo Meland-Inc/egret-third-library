@@ -3,24 +3,26 @@
   <controller name="ctrlRightView" pages="1,backpack,2,attr,3,none" selected="0"/>
   <controller name="ctrlOperate" pages="0,none,1,center" selected="0"/>
   <displayList>
-    <image id="n0_r0y9" name="n0" src="nl0rcyicf" fileName="imgB/img_cm_dk_1.png" pkg="te1gxawo" xy="607,-1" size="445,642" group="n4_r0y9">
+    <image id="n0_r0y9" name="n0" src="nl0rcyicf" fileName="imgB/img_cm_dk_1.png" pkg="te1gxawo" xy="608,-1" size="445,642" group="n4_r0y9">
       <relation target="" sidePair="height-height"/>
     </image>
-    <image id="n5_r0y9" name="n5" src="nl0rcyicg" fileName="imgB/img_cm_dk_2.png" pkg="te1gxawo" xy="1048,-2" size="88,644" group="n4_r0y9">
+    <image id="n5_r0y9" name="n5" src="nl0rcyicg" fileName="imgB/img_cm_dk_2.png" pkg="te1gxawo" xy="1049,-2" size="88,644" group="n4_r0y9">
       <relation target="" sidePair="height-height"/>
     </image>
-    <list id="n1_r0y9" name="lstBpTabBar" xy="1053,45" size="77,231" group="n4_r0y9" layout="flow_hz" overflow="hidden" colGap="17" defaultItem="ui://32ieekgur0y9t7j" autoItemSize="true">
-      <item title="植物" icon="ui://32ieekgur0y9t6a"/>
+    <list id="n1_r0y9" name="lstBpTabBar" xy="1054,45" size="77,322" group="n4_r0y9" layout="flow_hz" overflow="hidden" colGap="17" defaultItem="ui://32ieekgur0y9t7j" autoItemSize="true">
+      <item title="全部" icon="ui://32ieekguphs5t7t"/>
+      <item title="地板" icon="ui://32ieekgur0y9t6d"/>
+      <item title="墙面" icon="ui://32ieekguphs5t7u"/>
+      <item title="功能" icon="ui://32ieekgur0y9t6e"/>
+      <item title="装饰" icon="ui://32ieekgur0y9t6f"/>
       <item title="生物" icon="ui://32ieekgur0y9t6b"/>
       <item title="武器" icon="ui://32ieekgur0y9t6c"/>
-      <item title="机关" icon="ui://32ieekgur0y9t6d"/>
-      <item title="电路" icon="ui://32ieekgur0y9t6e"/>
-      <item title="雕塑" icon="ui://32ieekgur0y9t6f"/>
+      <item title="植物" icon="ui://32ieekgur0y9t6a"/>
     </list>
-    <component id="n2_r0y9" name="btnBpReturn" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1080,10" size="33,27" group="n4_r0y9">
+    <component id="n2_r0y9" name="btnBpReturn" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1081,10" size="33,27" group="n4_r0y9">
       <Button icon="ui://32ieekgur0y9t60" page="0"/>
     </component>
-    <list id="n3_r0y9" name="lstBackpack" xy="618,55" size="421,545" group="n4_r0y9" layout="flow_hz" overflow="scroll" scrollBar="visible" scrollBarMargin="5,5,0,0" scrollBarRes="ui://te1gxawovulycyid4," lineGap="12" colGap="12" defaultItem="ui://32ieekgur0y9t7k" autoClearItems="true">
+    <list id="n3_r0y9" name="lstBackpack" xy="619,55" size="421,545" group="n4_r0y9" layout="flow_hz" overflow="scroll" scrollBar="visible" scrollBarMargin="5,5,0,0" scrollBarRes="ui://te1gxawovulycyid4," lineGap="12" colGap="12" defaultItem="ui://32ieekgur0y9t7k" autoClearItems="true">
       <relation target="" sidePair="height-height"/>
       <item/>
       <item/>
@@ -78,13 +80,13 @@
       <item/>
       <item/>
     </list>
-    <image id="n6_r0y9" name="n6" src="r0y9t70" fileName="img_UI3/b/ide/img_ide_ssk_1.png" xy="617,10" size="410,28" group="n4_r0y9"/>
-    <image id="n7_r0y9" name="n7" src="r0y9t71" fileName="img_UI3/b/ide/img_ide_ssk_2.png" xy="627,17" size="14,14" group="n4_r0y9"/>
-    <text id="n8_r0y9" name="tfSearch" xy="651,13" size="370,24" group="n4_r0y9" input="true" fontSize="14" color="#ffffff" vAlign="middle" autoSize="none" autoClearText="true" text="垃圾"/>
-    <component id="n30_m0i3" name="btnClose" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="559,271" size="49,98" group="n4_r0y9">
+    <image id="n6_r0y9" name="n6" src="r0y9t70" fileName="img_UI3/b/ide/img_ide_ssk_1.png" xy="618,10" size="410,28" group="n4_r0y9"/>
+    <image id="n7_r0y9" name="n7" src="r0y9t71" fileName="img_UI3/b/ide/img_ide_ssk_2.png" xy="628,17" size="14,14" group="n4_r0y9"/>
+    <text id="n8_r0y9" name="tfSearch" xy="652,13" size="370,24" group="n4_r0y9" input="true" fontSize="14" color="#ffffff" vAlign="middle" autoSize="none" autoClearText="true" text="垃圾"/>
+    <component id="n30_m0i3" name="btnClose" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="561,271" size="49,98" group="n4_r0y9">
       <Button icon="ui://rnqj1l77gg8mtgq" page="0"/>
     </component>
-    <group id="n4_r0y9" name="grpBackpack" xy="559,-2" size="577,644" advanced="true" collapsed="true">
+    <group id="n4_r0y9" name="grpBackpack" xy="561,-2" size="576,644" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlRightView" pages="1"/>
       <relation target="" sidePair="right-right"/>
     </group>

@@ -66,6 +66,7 @@
       <gearDisplay controller="ctrlGameMode" pages="1"/>
     </component>
     <component id="n55_omrq" name="btnIde" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="1087,271" size="49,98">
+      <gearDisplay controller="ctrlGameMode" pages="0"/>
       <relation target="" sidePair="right-right,middle-middle"/>
       <Button icon="ui://rnqj1l77gg8mtgr" page="0"/>
     </component>
