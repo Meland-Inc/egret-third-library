@@ -407,9 +407,9 @@
     <component id="vulycyid5" name="ScrollBarV2_grip.xml" path="/bar/"/>
     <image id="vulycyid6" name="img_cm_wb_1.png" path="/imgB/" exported="true" scale="9grid" scale9grid="25,14,50,28"/>
     <image id="nxmwcyid8" name="bg_cm_1_1.png" path="/img_UI3/" exported="true"/>
-    <image id="m3dicyid9" name="btn_cm_an_3.png" path="/imgB/" exported="true"/>
-    <image id="m3dicyida" name="btn_cm_an_1.png" path="/imgB/" exported="true"/>
-    <image id="m3dicyidb" name="btn_cm_an_2.png" path="/imgB/" exported="true"/>
+    <image id="m3dicyid9" name="btn_cm_an_3.png" path="/imgB/" exported="true" scale="9grid" scale9grid="27,10,54,20"/>
+    <image id="m3dicyida" name="btn_cm_an_1.png" path="/imgB/" exported="true" scale="9grid" scale9grid="27,9,54,18"/>
+    <image id="m3dicyidb" name="btn_cm_an_2.png" path="/imgB/" exported="true" scale="9grid" scale9grid="27,9,54,18"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>
