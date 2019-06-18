@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="400,400" opaque="false">
+  <displayList>
+    <image id="n0_k1p2" name="n0" src="edsmcyi8u" fileName="newImg/img_cm_bottom_20.png" pkg="te1gxawo" xy="0,0" size="400,400">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n11_k1p2" name="btnStopping" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="146,225">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button title="停止" titleColor="#ffffff" titleFontSize="24" icon="ui://te1gxawom3dicyida"/>
+    </component>
+    <text id="n12_k3kg" name="n12" xy="81,161" size="245,31" fontSize="24" color="#ffffff" text="代码运行中，点击停止">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n13_m3di" name="fuel" xy="147,297" size="126,22" group="n19_m3di" fontSize="16" color="#ffffff" ubb="true" singleLine="true" text="当前剩余燃料：0">
+      <relation target="n18_m3di" sidePair="center-center"/>
+    </text>
+    <image id="n15_m3di" name="n15" src="edsmcyi8w" fileName="newImg/img_cm_tips_3.png" pkg="te1gxawo" xy="108,107" size="204,182" group="n18_m3di"/>
+    <component id="n16_m3di" name="n16" src="qfz98i" fileName="Component1.xml" xy="108,90" group="n18_m3di"/>
+    <text id="n17_m3di" name="n17" xy="159,242" size="101,22" group="n18_m3di" fontSize="16" color="#d8d8d8" text="机器人运行中"/>
+    <group id="n18_m3di" name="n18" xy="108,90" size="204,199" group="n19_m3di" advanced="true"/>
+    <group id="n19_m3di" name="n19" xy="108,90" size="204,229" locked="true" hideByEditor="true" visible="false" advanced="true" collapsed="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

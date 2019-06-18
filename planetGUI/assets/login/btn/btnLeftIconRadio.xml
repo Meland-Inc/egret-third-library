@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="114,47" extention="Button">
+<component size="100,40" extention="Button">
   <controller name="button" pages="4,up,5,down" selected="0"/>
   <displayList>
-    <image id="n9_bidp" name="n9" src="tm1s3z" fileName="newImg/img_2.png" xy="31,10"/>
-    <image id="n7_bidp" name="n7" src="tm1s4a" fileName="newImg/btn_5.png" xy="0,0">
-      <gearDisplay controller="button" pages="5"/>
-    </image>
-    <image id="n8_bidp" name="n8" src="tm1s4b" fileName="newImg/btn_6.png" xy="0,0">
-      <gearDisplay controller="button" pages="4"/>
-    </image>
-    <loader id="n6_trkw" name="icon" xy="7,8" size="30,30" url="ui://0n4pg0optm1s3u" align="center" vAlign="middle" fill="scale">
-      <relation target="n8_bidp" sidePair="center-center,middle-middle"/>
-      <relation target="n7_bidp" sidePair="center-center,middle-middle"/>
+    <loader id="n10_txgs" name="bg" xy="0,0" size="100,40" url="ui://0n4pg0optxgs5t">
+      <gearIcon controller="button" pages="5" values="ui://0n4pg0optxgs5s" default="ui://0n4pg0optxgs5t"/>
     </loader>
-    <text id="n4_trkw" name="title" xy="55,12" size="41,25" fontSize="18" color="#5b4b37" vAlign="middle" text="头部">
-      <relation target="" sidePair="center-center,middle-middle"/>
+    <loader id="n6_trkw" name="icon" xy="10,5" size="30,30" url="ui://0n4pg0optxgs62" align="center" vAlign="middle" fill="scale"/>
+    <text id="n4_trkw" name="title" xy="47,8" size="43,29" fontSize="18" color="#365989" vAlign="middle" bold="true" text="头部">
+      <gearColor controller="button" pages="4,5" values="#365989,#000000|#ffffff,#000000"/>
     </text>
   </displayList>
   <Button mode="Radio" sound="ui://fknoioovtqc912"/>

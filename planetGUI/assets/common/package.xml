@@ -406,8 +406,16 @@
     <component id="vulycyid4" name="ScrollBarV2.xml" path="/bar/" exported="true"/>
     <component id="vulycyid5" name="ScrollBarV2_grip.xml" path="/bar/"/>
     <image id="vulycyid6" name="img_cm_wb_1.png" path="/imgB/" exported="true" scale="9grid" scale9grid="25,14,50,28"/>
-    <image id="nxmwcyid8" name="bg_cm_1_1.png" path="/img_UI3/" exported="true" scale="9grid" scale9grid="50,100,100,52"/>
+    <component id="txgscyid8" name="comCommonWinBg.xml" path="/com/" exported="true"/>
+    <component id="txgscyida" name="rbtnCommonTab.xml" path="/btn/" exported="true"/>
     <image id="qd2ccyidb" name="bg_cm_1_2.png" path="/img_UI3/" exported="true"/>
+    <component id="o89ocyidf" name="sldCommon_grip.xml" path="/sld/"/>
+    <component id="o89ocyidg" name="sldCommon.xml" path="/sld/" exported="true"/>
+    <component id="o89ocyidh" name="rbtnFixNoScale.xml" path="/btn/" exported="true"/>
+    <image id="nxmwcyid8" name="bg_cm_1_1.png" path="/img_UI3/" exported="true"/>
+    <image id="m3dicyid9" name="btn_cm_an_3.png" path="/imgB/" exported="true" scale="9grid" scale9grid="27,10,54,20"/>
+    <image id="m3dicyida" name="btn_cm_an_1.png" path="/imgB/" exported="true" scale="9grid" scale9grid="27,9,54,18"/>
+    <image id="m3dicyidb" name="btn_cm_an_2.png" path="/imgB/" exported="true" scale="9grid" scale9grid="27,9,54,18"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>

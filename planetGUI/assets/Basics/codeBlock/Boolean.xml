@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="90,64" restrictSize="0,0,64,64">
-  <controller name="color" pages="0,Event,1,DeepYellow,2,Red,3,Purple,4,DeepBlue,5,LightBlue,6,DeepGreen,7,LightGreen" selected="0"/>
-  <controller name="isAlone" pages="0,true,1,false" selected="1"/>
+  <controller name="color" pages="0,Event,1,DeepYellow,2,Red,3,Purple,4,DeepBlue,5,LightBlue,6,DeepGreen,7,LightGreen" selected="7"/>
+  <controller name="isAlone" pages="0,true,1,false" selected="0"/>
   <displayList>
-    <loader id="n2_h5gv" name="ladBG" xy="0,0" size="90,64" url="ui://rnqj1l77h5gvtbj" fill="scaleFree">
+    <loader id="n2_h5gv" name="ladBG" xy="0,0" size="90,64" url="ui://rnqj1l77k3kgthe" fill="scaleFree">
       <gearDisplay controller="isAlone" pages="1"/>
-      <gearIcon controller="color" pages="6" values="ui://rnqj1l77h5gvtck" default="ui://rnqj1l77h5gvtbj"/>
+      <gearIcon controller="color" pages="0,1,2,3,4,6,7" values="ui://rnqj1l77k3kgth4|ui://rnqj1l77k3kgth6|ui://rnqj1l77k3kgth8|ui://rnqj1l77k3kgtha|ui://rnqj1l77k3kgthc|ui://rnqj1l77h5gvtck|ui://rnqj1l77k3kgthe" default="ui://rnqj1l77h5gvtbj"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <loader id="n3_yrfu" name="ladAloneBG" xy="0,0" size="90,68" hideByEditor="true" url="ui://rnqj1l77h5gvtbi" fill="scaleFree">
+    <loader id="n3_yrfu" name="ladAloneBG" xy="0,0" size="90,68" url="ui://rnqj1l77k3kgthd" fill="scaleFree">
       <gearDisplay controller="isAlone" pages="0"/>
-      <gearIcon controller="color" pages="0,1,2,3,4,5,6,7" values="ui://rnqj1l77h5gvtbi|ui://rnqj1l77h5gvtbi|ui://rnqj1l77h5gvtbi|ui://rnqj1l77h5gvtbi|ui://rnqj1l77h5gvtbi|ui://rnqj1l77h5gvtbi|ui://rnqj1l77h5gvtcj|ui://rnqj1l77h5gvtbi"/>
+      <gearIcon controller="color" pages="0,1,2,3,4,5,6,7" values="ui://rnqj1l77k3kgth3|ui://rnqj1l77k3kgth5|ui://rnqj1l77k3kgth7|ui://rnqj1l77k3kgth9|ui://rnqj1l77k3kgthb|ui://rnqj1l77h5gvtbi|ui://rnqj1l77h5gvtcj|ui://rnqj1l77k3kgthd"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
     <component id="n1_flp7" name="container" src="kesa9" fileName="com/Container.xml" xy="20,0" size="50,64" restrictSize="50,0,64,64" tooltips="123" customData="123"/>

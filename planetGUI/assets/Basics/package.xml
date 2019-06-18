@@ -30,7 +30,6 @@
     <component id="dib96p" name="btnTipsWithImage.xml" path="/btn/" exported="true"/>
     <component id="dib96r" name="RunnintMask.xml" path="/com/"/>
     <component id="k1p26w" name="RunningState.xml" path="/com/"/>
-    <component id="k1p26z" name="btnStopping.xml" path="/btn/"/>
     <component id="sdqn71" name="TemplatePanel.xml" path="/com/"/>
     <component id="sdqn72" name="Template.xml" path="/com/" exported="true"/>
     <component id="sdqn7f" name="btnSave.xml" path="/btn/"/>
@@ -309,6 +308,32 @@
     <image id="gg8mtgp" name="img_code_dm_3.png" path="/B-PlatformImg/"/>
     <image id="gg8mtgq" name="btn_code_lk_1.png" path="/B-PlatformImg/"/>
     <image id="gg8mtgr" name="btn_code_lk_2.png" path="/B-PlatformImg/"/>
+    <image id="qq8dtgs" name="icon_code_dw_5.png" path="/newImg2/"/>
+    <image id="qq8dtgt" name="icon_code_dw_4.png" path="/newImg2/"/>
+    <image id="qq8dtgu" name="icon_code_dw_3.png" path="/newImg2/"/>
+    <image id="qq8dtgv" name="icon_code_dw_2.png" path="/newImg2/"/>
+    <image id="qq8dtgw" name="icon_code_dw_1.png" path="/newImg2/"/>
+    <image id="k3kgtgx" name="img_code_fhz_1.png" path="/newImg2/" scale="9grid" scale9grid="39,17,78,34"/>
+    <image id="k3kgtgy" name="img_code_fhz_1_1.png" path="/newImg2/" scale="9grid" scale9grid="37,16,74,32"/>
+    <image id="k3kgtgz" name="img_code_fhz_2.png" path="/newImg2/" scale="9grid" scale9grid="39,17,78,34"/>
+    <image id="k3kgth0" name="img_code_fhz_2_1.png" path="/newImg2/" scale="9grid" scale9grid="37,16,74,32"/>
+    <image id="k3kgth1" name="img_code_fhz_3.png" path="/newImg2/" scale="9grid" scale9grid="39,17,78,34"/>
+    <image id="k3kgth2" name="img_code_fhz_3_1.png" path="/newImg2/" scale="9grid" scale9grid="37,16,74,32"/>
+    <image id="k3kgth3" name="img_code_fhz_4.png" path="/newImg2/" scale="9grid" scale9grid="33,17,66,34"/>
+    <image id="k3kgth4" name="img_code_fhz_4_1.png" path="/newImg2/" scale="9grid" scale9grid="33,16,66,32"/>
+    <image id="k3kgth5" name="img_code_fhz_5.png" path="/newImg2/" scale="9grid" scale9grid="33,17,66,34"/>
+    <image id="k3kgth6" name="img_code_fhz_5_1.png" path="/newImg2/" scale="9grid" scale9grid="33,16,66,32"/>
+    <image id="k3kgth7" name="img_code_fhz_6.png" path="/newImg2/" scale="9grid" scale9grid="33,17,66,34"/>
+    <image id="k3kgth8" name="img_code_fhz_6_1.png" path="/newImg2/" scale="9grid" scale9grid="33,16,66,32"/>
+    <image id="k3kgth9" name="img_code_fhz_7.png" path="/newImg2/" scale="9grid" scale9grid="33,17,66,34"/>
+    <image id="k3kgtha" name="img_code_fhz_7_1.png" path="/newImg2/" scale="9grid" scale9grid="33,16,66,32"/>
+    <image id="k3kgthb" name="img_code_fhz_8.png" path="/newImg2/" scale="9grid" scale9grid="33,17,66,34"/>
+    <image id="k3kgthc" name="img_code_fhz_8_1.png" path="/newImg2/" scale="9grid" scale9grid="33,16,66,32"/>
+    <image id="k3kgthd" name="img_code_fhz_9.png" path="/newImg2/" scale="9grid" scale9grid="33,17,66,34"/>
+    <image id="k3kgthe" name="img_code_fhz_9_1.png" path="/newImg2/" scale="9grid" scale9grid="33,16,66,32"/>
+    <component id="k3kgthf" name="RunningStateB.xml" path="/newCom/"/>
+    <component id="m3dithg" name="btnStopping.xml" path="/btn/"/>
+    <image id="m3dithh" name="icon_code_dw_6.png" path="/newImg2/"/>
   </resources>
   <publish name="Basics"/>
 </packageDescription>

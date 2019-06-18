@@ -8,8 +8,8 @@
     <component id="n35_py50" name="btnAttrName" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="168,17" size="24,21" group="n45_py50" touchable="false">
       <Button icon="ui://32ieekgur0y9t6j"/>
     </component>
-    <component id="n36_py50" name="btnAttrReturn" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="420,8" size="42,43" group="n45_py50">
-      <Button icon="ui://te1gxawonl0rcyica" page="0"/>
+    <component id="n36_py50" name="btnAttrReturn" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="420,13" size="33,27" group="n45_py50">
+      <Button icon="ui://32ieekgur0y9t60" page="0"/>
     </component>
     <component id="n44_py50" name="btnAttrCoding" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="260,595" size="106,36" group="n45_py50">
       <relation target="" sidePair="bottom-bottom"/>
@@ -17,9 +17,9 @@
     </component>
     <image id="n47_qki6" name="n47" src="r0y9t6t" fileName="img_UI3/b/ide/img_ide_dk_2.png" xy="166,55" size="294,530" group="n45_py50"/>
     <component id="n46_rb1c" name="comAttrubiteEdit" src="vuly8t" fileName="com/comAttrubiteEditB.xml" pkg="kzio97vu" xy="166,55" size="294,530" group="n45_py50"/>
-    <component id="n49_vuly" name="btnAttrClose" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="103,271" size="49,98" group="n45_py50">
+    <component id="n49_vuly" name="btnAttrClose" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="104,271" size="49,98" group="n45_py50">
       <Button icon="ui://rnqj1l77gg8mtgq" page="1"/>
     </component>
-    <group id="n45_py50" name="grpAttr" xy="103,-2" size="369,644" advanced="true"/>
+    <group id="n45_py50" name="grpAttr" xy="104,-2" size="368,644" advanced="true"/>
   </displayList>
 </component>

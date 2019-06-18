@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="400,400">
+<component size="400,400" opaque="false">
   <displayList>
     <image id="n0_k1p2" name="n0" src="edsmcyi8u" fileName="newImg/img_cm_bottom_20.png" pkg="te1gxawo" xy="0,0" size="400,400">
       <relation target="" sidePair="width-width,height-height"/>
@@ -7,7 +7,7 @@
     <text id="n5_k1p2" name="fuel" xy="137,266" size="126,22" group="n10_k1p2" fontSize="16" color="#ffffff" ubb="true" singleLine="true" text="当前剩余燃料：0">
       <relation target="n9_k1p2" sidePair="center-center"/>
     </text>
-    <component id="n11_k1p2" name="btnStopping" src="k1p26z" fileName="btn/btnStopping.xml" xy="140,299" group="n10_k1p2"/>
+    <component id="n11_k1p2" name="btnStopping" src="m3dithg" fileName="btn/btnStopping.xml" xy="140,299" group="n10_k1p2"/>
     <image id="n1_k1p2" name="n1" src="edsmcyi8w" fileName="newImg/img_cm_tips_3.png" pkg="te1gxawo" xy="98,76" size="204,182" group="n9_k1p2"/>
     <component id="n3_k1p2" name="n3" src="qfz98i" fileName="Component1.xml" xy="98,59" group="n9_k1p2"/>
     <text id="n8_k1p2" name="n8" xy="149,211" size="101,22" group="n9_k1p2" fontSize="16" color="#d8d8d8" text="机器人运行中"/>
