@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="60,46" opaque="false">
   <controller name="ownStatus" pages="0,false,1,true" selected="0"/>
-  <controller name="assetStatus" pages="0,none,1,material,2,building,3,center" selected="1"/>
-  <controller name="selectStatus" pages="0,false,1,true" selected="0"/>
+  <controller name="assetStatus" pages="0,none,1,material,2,building,3,center" selected="0"/>
+  <controller name="selectStatus" pages="0,false,1,true" selected="1"/>
   <displayList>
-    <loader id="n0_z45o" name="ladGrid" xy="-60,-30" size="120,76" group="n3_z45o" touchable="false" url="ui://issf8dvbz45o5" autoSize="true">
+    <loader id="n0_z45o" name="ladGrid" xy="-60,-39" size="120,76" group="n3_z45o" touchable="false" url="ui://issf8dvbz45o5" autoSize="true">
       <gearIcon controller="ownStatus" pages="1" values="ui://issf8dvbz45o6" default="ui://issf8dvbz45o5"/>
     </loader>
-    <loader id="n1_z45o" name="ladAssetTips" xy="-32,-60" size="62,62" group="n3_z45o" touchable="false" url="ui://issf8dvbz45o3" autoSize="true">
+    <loader id="n1_z45o" name="ladAssetTips" xy="-32,-69" size="62,62" group="n3_z45o" alpha="0" autoSize="true">
       <gearDisplay controller="assetStatus" pages="1,2,3"/>
       <gearLook controller="selectStatus" pages="0,1" values="1,0,0,0|0,0,0,1"/>
       <gearIcon controller="assetStatus" pages="0,2,3" values="|ui://issf8dvbz45o4|ui://issf8dvbz45o4" default="ui://issf8dvbz45o3"/>
     </loader>
-    <component id="n2_z45o" name="btnBuy" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="-48,-83" size="90,95" group="n3_z45o">
+    <component id="n2_z45o" name="btnBuy" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="-48,-92" size="90,95" group="n3_z45o" hideByEditor="true" visible="false">
       <gearDisplay controller="selectStatus" pages="1"/>
       <Button icon="ui://issf8dvbz45o0" sound="ui://fknoioovqy4415"/>
     </component>
-    <group id="n3_z45o" name="root" xy="-60,-83" size="120,129" advanced="true">
+    <group id="n3_z45o" name="root" xy="-60,-92" size="120,129" advanced="true">
       <gearXY controller="selectStatus" pages="1" values="-60,-92" default="-60,-83" tween="true"/>
     </group>
   </displayList>
