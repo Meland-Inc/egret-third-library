@@ -19,6 +19,7 @@
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
     <component id="n4_muc9" name="comMainRocker" src="uvgla1" fileName="win/ComMainRocker.xml" xy="0,256">
+      <gearDisplay controller="ctrlGameMode" pages="1"/>
       <relation target="" sidePair="left-left,bottom-bottom"/>
     </component>
     <component id="n37_x9um" name="comChat" src="x9um6d" fileName="win/ComMainChatView.xml" xy="3,555">
@@ -48,8 +49,12 @@
       <gearDisplay controller="ctrlGameMode" pages="1"/>
       <relation target="" sidePair="right-right"/>
     </component>
-    <component id="n49_wq4d" name="comMainStorageForB" src="wq4dcyidf" fileName="win/ComMainStorageForB.xml" xy="9,247" size="53,51">
+    <component id="n49_wq4d" name="comMainStorageForB" src="wq4dcyidf" fileName="win/ComMainStorageForB.xml" xy="9,319" size="53,51">
       <gearDisplay controller="ctrlGameMode" pages="0"/>
+    </component>
+    <component id="n59_ugid" name="btnResetManor" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="2,243" size="68,60">
+      <gearDisplay controller="ctrlGameMode" pages="0"/>
+      <Button icon="ui://5hs1fuejugidcyidm"/>
     </component>
     <component id="n52_nl0r" name="btnRecall" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="2,166" size="68,60">
       <gearDisplay controller="ctrlGameMode" pages="0"/>
@@ -74,7 +79,7 @@
       <gearDisplay controller="ctrlGameMode" pages="1"/>
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </component>
-    <component id="n56_dv92" name="n56" src="x5uecyidl" fileName="com/ComMainLessonShortcuts.xml" xy="316,561">
+    <component id="n56_dv92" name="comMainLessonShortcuts" src="x5uecyidl" fileName="com/ComMainLessonShortcuts.xml" xy="316,561">
       <gearDisplay controller="ctrlGameMode" pages="0"/>
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </component>
