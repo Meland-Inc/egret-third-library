@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="560,587" overflow="hidden" scroll="both" scrollBarRes="ui://rnqj1l77j7co5v,ui://rnqj1l77j7co5x" adaptationTest="FitSize">
+<component size="560,587" overflow="hidden" opaque="false" scroll="both" scrollBarRes="ui://rnqj1l77j7co5v,ui://rnqj1l77j7co5x" adaptationTest="FitSize">
   <controller name="codeType" pages="0,robot,1,entity" selected="0"/>
   <controller name="dustbinState" pages="0,hide,1,show,2,execute" selected="0"/>
   <controller name="ctrlIsHide" pages="0,show,1,hide" selected="0"/>
