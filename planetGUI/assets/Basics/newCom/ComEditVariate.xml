@@ -21,7 +21,7 @@
     <component id="n5_p3g7" name="btnLocal" src="x8ztab" fileName="newBtn/btnVariateScope.xml" xy="215,224">
       <gearDisplay controller="ctrlEditType" pages="0"/>
       <relation target="" sidePair="center-center,top-top"/>
-      <Button title="角色变量" icon="ui://rnqj1l77tcu294" selectedIcon="ui://rnqj1l77tcu293" controller="selectScope" page="1"/>
+      <Button title="实体变量" icon="ui://rnqj1l77tcu294" selectedIcon="ui://rnqj1l77tcu293" controller="selectScope" page="1"/>
     </component>
     <component id="n9_mqhs" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="128,414" size="144,52">
       <relation target="" sidePair="center-center,top-top"/>
