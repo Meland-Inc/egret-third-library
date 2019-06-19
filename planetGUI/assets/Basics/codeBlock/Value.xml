@@ -2,7 +2,7 @@
 <component size="90,64">
   <controller name="color" pages="0,Event,1,DeepYellow,2,Red,3,Purple,4,DeepBlue,5,LightBlue,6,DeepGreen,7,LightGreen" selected="0"/>
   <controller name="isAlone" pages="0,true,1,false" selected="0"/>
-  <controller name="ctrlValueType" pages="1,none,0,interactive,2,entity,3,output,4,question,5,xy,6,class" selected="1"/>
+  <controller name="ctrlValueType" pages="1,none,0,interactive,2,entity,3,output,4,question,5,xy,6,class" selected="2"/>
   <displayList>
     <loader id="n2_emrm" name="ladBG" xy="0,0" size="90,64" url="ui://rnqj1l77k3kgtgy" fill="scaleFree">
       <gearDisplay controller="isAlone" pages="1"/>
@@ -15,8 +15,8 @@
       <relation target="n1_flp7" sidePair="width-width,height-height"/>
     </loader>
     <component id="n1_flp7" name="container" src="kesa9" fileName="com/Container.xml" xy="20,0" size="50,64" restrictSize="50,0,64,64"/>
-    <loader id="n4_kt4s" name="btnHint" xy="33,12" size="40,40" touchable="false" url="ui://rnqj1l77kt4sten">
-      <gearIcon controller="ctrlValueType" pages="1,2,3,4,5,6" values="|ui://rnqj1l77qq8dtgs|ui://rnqj1l77qq8dtgt|ui://rnqj1l77hlththj|ui://rnqj1l77hlththk|ui://rnqj1l77hlththi" default="ui://rnqj1l77kt4sten"/>
+    <loader id="n4_kt4s" name="btnHint" xy="33,12" size="40,40" touchable="false" url="ui://rnqj1l77hlththu">
+      <gearIcon controller="ctrlValueType" pages="1,0,2,3,4,5,6" values="|ui://rnqj1l77hlthths|ui://rnqj1l77hlththu|ui://rnqj1l77hlththt|ui://rnqj1l77hlththq|ui://rnqj1l77hlththr|ui://rnqj1l77hlththp"/>
       <relation target="n3_yrfu" sidePair="left-right"/>
     </loader>
   </displayList>
