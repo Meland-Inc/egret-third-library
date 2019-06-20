@@ -2,7 +2,6 @@
 <component size="1136,640" designImage="ui://i25v0ebkcxfq4e" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
   <controller name="conSetting" pages="0,system,1,sound,2,chating,3,about,4,manor,5,robotCode" selected="4"/>
   <controller name="ctrlGameMode" pages="0,game,1,lessons" selected="0"/>
-  <controller name="ctrlManorView" pages="1,student,0,teacher" selected="1"/>
   <displayList>
     <component id="n92_cxfq" name="comBg" src="txgscyid8" fileName="com/comCommonWinBg.xml" pkg="te1gxawo" xy="0,0" locked="true">
       <relation target="" sidePair="width-width,height-height"/>
@@ -76,11 +75,7 @@
     <group id="n34_o8k6" name="sound" xy="200,153" size="605,127" advanced="true" collapsed="true">
       <gearDisplay controller="conSetting" pages="1"/>
     </group>
-    <component id="n79_hj15" name="btnRestoreManor" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="341,253" size="125,40" group="n71_o31t">
-      <gearDisplay controller="ctrlManorView" pages="1"/>
-      <Button title="还原领地" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoqo8vi21"/>
-    </component>
-    <component id="n66_o31t" name="cbManorID" src="o31tw" fileName="com/comManorList.xml" xy="344,215" size="205,20" group="n76_hj15">
+    <component id="n66_o31t" name="cbManorName" src="o31tw" fileName="com/comManorList.xml" xy="344,215" size="205,20" group="n71_o31t">
       <ComboBox visibleItemCount="10" autoClearItems="true">
         <item title="aaaaa"/>
         <item title="bbbbb"/>
@@ -93,39 +88,37 @@
         <item/>
       </ComboBox>
     </component>
-    <text id="n67_o31t" name="n67" xy="246,215" size="69,26" group="n76_hj15" fontSize="16" color="#5b4b37" vAlign="middle" text="领地名字"/>
-    <text id="n72_ppgn" name="n72" xy="246,174" size="85,26" group="n76_hj15" fontSize="16" color="#5b4b37" vAlign="middle" text="当前领地："/>
-    <text id="n73_ppgn" name="tfCurManorID" xy="344,174" size="50,26" group="n76_hj15" fontSize="16" color="#5b4b37" vAlign="middle" autoClearText="true" text="aaaaa"/>
-    <text id="n123_xljy" name="tfCurManorBuyRow" xy="548,174" size="39,26" group="n76_hj15" fontSize="16" color="#5b4b37" vAlign="middle" autoSize="shrink" autoClearText="true" text="17"/>
-    <text id="n124_xljy" name="tfCurManorBuyCol" xy="598,174" size="39,26" group="n76_hj15" fontSize="16" color="#5b4b37" vAlign="middle" autoSize="shrink" autoClearText="true" text="17"/>
-    <text id="n125_xljy" name="n125" xy="246,256" size="69,26" group="n76_hj15" fontSize="16" color="#5b4b37" vAlign="middle" text="领地大小"/>
-    <graph id="n130_xljy" name="n130" xy="344,256" size="40,26" group="n76_hj15" type="rect"/>
-    <graph id="n131_xljy" name="n131" xy="404,256" size="40,26" group="n76_hj15" type="rect"/>
-    <text id="n127_xljy" name="tfSelectManorBuyRow" xy="344,256" size="40,26" group="n76_hj15" input="true" keyboardType="4" fontSize="16" color="#5b4b37" vAlign="middle" autoSize="shrink" autoClearText="true" text="17"/>
-    <text id="n128_xljy" name="tfSelectManorBuyCol" xy="404,256" size="40,26" group="n76_hj15" input="true" keyboardType="4" fontSize="16" color="#5b4b37" vAlign="middle" autoSize="shrink" autoClearText="true" text="17"/>
-    <text id="n129_xljy" name="n129" xy="387,256" size="13,26" group="n76_hj15" fontSize="16" color="#5b4b37" vAlign="middle" text="x"/>
-    <component id="n68_o31t" name="btnLoad" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="433,414" size="125,40" group="n76_hj15">
+    <text id="n67_o31t" name="n67" xy="246,215" size="69,26" group="n71_o31t" fontSize="16" color="#5b4b37" vAlign="middle" text="领地名字"/>
+    <text id="n72_ppgn" name="n72" xy="247,114" size="85,26" group="n71_o31t" fontSize="16" color="#5b4b37" vAlign="middle" text="当前领地："/>
+    <text id="n73_ppgn" name="tfCurManorName" xy="438,114" size="50,26" group="n71_o31t" fontSize="16" color="#5b4b37" vAlign="middle" autoClearText="true" text="aaaaa"/>
+    <text id="n123_xljy" name="tfCurManorBuyRow" xy="344,148" size="39,26" group="n71_o31t" fontSize="16" color="#5b4b37" vAlign="middle" autoSize="shrink" autoClearText="true" text="17"/>
+    <text id="n124_xljy" name="tfCurManorBuyCol" xy="394,148" size="39,26" group="n71_o31t" fontSize="16" color="#5b4b37" vAlign="middle" autoSize="shrink" autoClearText="true" text="17"/>
+    <text id="n125_xljy" name="n125" xy="246,256" size="69,26" group="n71_o31t" fontSize="16" color="#5b4b37" vAlign="middle" text="领地大小"/>
+    <graph id="n130_xljy" name="n130" xy="344,256" size="40,26" group="n71_o31t" type="rect"/>
+    <graph id="n131_xljy" name="n131" xy="404,256" size="40,26" group="n71_o31t" type="rect"/>
+    <text id="n127_xljy" name="tfSelectManorBuyRow" xy="344,256" size="40,26" group="n71_o31t" input="true" keyboardType="4" fontSize="16" color="#5b4b37" vAlign="middle" autoSize="shrink" autoClearText="true" text="17"/>
+    <text id="n128_xljy" name="tfSelectManorBuyCol" xy="404,256" size="40,26" group="n71_o31t" input="true" keyboardType="4" fontSize="16" color="#5b4b37" vAlign="middle" autoSize="shrink" autoClearText="true" text="17"/>
+    <text id="n129_xljy" name="n129" xy="387,256" size="13,26" group="n71_o31t" fontSize="16" color="#5b4b37" vAlign="middle" text="x"/>
+    <text id="n136_tb0j" name="tfCurManorID" xy="344,114" size="72,26" group="n71_o31t" fontSize="16" color="#990066" vAlign="middle" autoSize="none" autoClearText="true" text="11"/>
+    <component id="n68_o31t" name="btnLoad" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="433,414" size="125,40" group="n71_o31t">
       <Button title="下载" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoefrs1w"/>
     </component>
-    <component id="n69_o31t" name="btnUpload" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="433,352" size="125,40" group="n76_hj15">
+    <component id="n69_o31t" name="btnUpload" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="433,352" size="125,40" group="n71_o31t">
       <Button title="上传" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoefrs1w"/>
     </component>
-    <component id="n70_o31t" name="btnDel" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="233,352" size="125,40" group="n76_hj15">
+    <component id="n70_o31t" name="btnDel" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="233,352" size="125,40" group="n71_o31t">
       <Button title="删除" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoqo8vi21"/>
     </component>
-    <component id="n74_hj15" name="btnRestoreScene" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="233,414" size="125,40" group="n76_hj15">
+    <component id="n74_hj15" name="btnRestoreScene" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="233,414" size="125,40" group="n71_o31t">
       <Button title="还原场景" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoqo8vi21"/>
     </component>
-    <component id="n133_xljy" name="btnUpdateSize" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="466,249" size="86,40" group="n76_hj15">
+    <component id="n133_xljy" name="btnUpdateSize" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="466,249" size="86,40" group="n71_o31t">
       <Button title="更新" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoefrs1w"/>
     </component>
-    <component id="n134_xljy" name="btnClearBuyMark" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="565,249" size="120,40" group="n76_hj15">
+    <component id="n134_xljy" name="btnClearBuyMark" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="565,249" size="120,40" group="n71_o31t">
       <Button title="清除已购买" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoefrs1w"/>
     </component>
-    <group id="n76_hj15" name="teacher" xy="233,174" size="452,280" group="n71_o31t" advanced="true">
-      <gearDisplay controller="ctrlManorView" pages="0"/>
-    </group>
-    <group id="n71_o31t" name="manor" xy="233,174" size="452,280" advanced="true">
+    <group id="n71_o31t" name="manor" xy="233,114" size="452,340" advanced="true">
       <gearDisplay controller="conSetting" pages="4"/>
     </group>
     <component id="n82_opya" name="cbCodeID" src="o31tw" fileName="com/comManorList.xml" xy="373,215" size="205,20" group="n91_opya">
