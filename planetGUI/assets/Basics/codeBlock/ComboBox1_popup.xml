@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="150,188">
+  <displayList>
+    <image id="n0_ilo1" name="n0" src="ilo1thy" fileName="newImg2/img_code_xl_1.png" xy="0,0" size="150,188">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <list id="n1_ilo1" name="list" xy="4,13" size="142,171" overflow="scroll" defaultItem="ui://rnqj1l77ilo1ti7" autoItemSize="false"/>
+  </displayList>
+  <relation target="n1_ilo1" sidePair="height-height,width-width"/>
+</component>
