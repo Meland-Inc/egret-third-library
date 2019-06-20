@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkdf6n3k" adaptationTest="FitSize">
-  <controller name="ctrlRightView" pages="0,energy,1,backpack,2,attr" selected="0">
+  <controller name="ctrlRightView" pages="0,energy,1,backpack,2,attr" selected="1">
     <action type="change_page" fromPage="" toPage="1,2" objectId="n0_qouo" controller="ctrlState" targetPage="2"/>
   </controller>
   <controller name="ctrlOperate" pages="3,none,0,left,1,center,2,right" selected="0"/>
@@ -17,7 +17,7 @@
     <group id="n51_io8v" name="grpName" xy="318,0" size="165,40" group="n16_py50" advanced="true" collapsed="true">
       <relation target="" sidePair="top-top"/>
     </group>
-    <group id="n16_py50" name="grpOperate" xy="218,0" size="370,640" advanced="true" collapsed="true">
+    <group id="n16_py50" name="grpOperate" xy="218,0" size="370,640" advanced="true">
       <gearDisplay controller="ctrlOperate" pages="0,1,2"/>
       <gearXY controller="ctrlOperate" pages="0,1,2" values="221,0|406,0|491,0" default="218,0"/>
     </group>
@@ -75,7 +75,7 @@
       <item/>
       <item/>
     </list>
-    <group id="n25_py50" name="grpBackpack" xy="660,-5" size="480,650" advanced="true" collapsed="true">
+    <group id="n25_py50" name="grpBackpack" xy="660,-5" size="480,650" advanced="true">
       <gearDisplay controller="ctrlRightView" pages="1"/>
       <relation target="" sidePair="right-right"/>
     </group>
