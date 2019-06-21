@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" opaque="false" designImage="ui://i25v0ebke46z3z" designImageAlpha="0" designImageLayer="1">
+<component size="1136,640" opaque="false" designImage="ui://i25v0ebke46z3z" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
   <controller name="ctrlMapMode" pages="0,normal,1,build,2,quickBuild,3,quickEdit" selected="0"/>
   <controller name="ctrlGameMode" pages="1,game,0,lessons,2,creation" selected="1">
     <action type="change_page" fromPage="" toPage="1" objectId="n1_muc9" controller="ctrlGameMode" targetPage="1"/>
@@ -18,8 +18,8 @@
       <gearDisplay controller="ctrlMapMode" pages="2,3"/>
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
-    <component id="n4_muc9" name="comMainRocker" src="uvgla1" fileName="win/ComMainRocker.xml" xy="0,256">
-      <gearDisplay controller="ctrlGameMode" pages="1"/>
+    <component id="n4_muc9" name="comMainRocker" src="uvgla1" fileName="win/ComMainRocker.xml" xy="70,256">
+      <gearXY controller="ctrlGameMode" pages="0" values="70,256" default="0,256"/>
       <relation target="" sidePair="left-left,bottom-bottom"/>
     </component>
     <component id="n37_x9um" name="comChat" src="x9um6d" fileName="win/ComMainChatView.xml" xy="3,555">

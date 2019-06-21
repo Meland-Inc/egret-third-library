@@ -91,8 +91,8 @@
     <text id="n67_o31t" name="n67" xy="246,215" size="69,26" group="n71_o31t" fontSize="16" color="#5b4b37" vAlign="middle" text="领地名字"/>
     <text id="n72_ppgn" name="n72" xy="247,114" size="85,26" group="n71_o31t" fontSize="16" color="#5b4b37" vAlign="middle" text="当前领地："/>
     <text id="n73_ppgn" name="tfCurManorName" xy="438,114" size="50,26" group="n71_o31t" fontSize="16" color="#5b4b37" vAlign="middle" autoClearText="true" text="aaaaa"/>
-    <text id="n123_xljy" name="tfCurManorBuyRow" xy="344,148" size="39,26" group="n71_o31t" fontSize="16" color="#5b4b37" vAlign="middle" autoSize="shrink" autoClearText="true" text="17"/>
-    <text id="n124_xljy" name="tfCurManorBuyCol" xy="394,148" size="39,26" group="n71_o31t" fontSize="16" color="#5b4b37" vAlign="middle" autoSize="shrink" autoClearText="true" text="17"/>
+    <text id="n123_xljy" name="tfCurManorBuyRow" xy="344,148" size="39,26" group="n71_o31t" hideByEditor="true" visible="false" fontSize="16" color="#5b4b37" vAlign="middle" autoSize="shrink" autoClearText="true" text="17"/>
+    <text id="n124_xljy" name="tfCurManorBuyCol" xy="394,148" size="39,26" group="n71_o31t" hideByEditor="true" visible="false" fontSize="16" color="#5b4b37" vAlign="middle" autoSize="shrink" autoClearText="true" text="17"/>
     <text id="n125_xljy" name="n125" xy="246,256" size="69,26" group="n71_o31t" fontSize="16" color="#5b4b37" vAlign="middle" text="领地大小"/>
     <graph id="n130_xljy" name="n130" xy="344,256" size="40,26" group="n71_o31t" type="rect"/>
     <graph id="n131_xljy" name="n131" xy="404,256" size="40,26" group="n71_o31t" type="rect"/>
@@ -121,7 +121,7 @@
     <group id="n71_o31t" name="manor" xy="233,114" size="452,340" advanced="true">
       <gearDisplay controller="conSetting" pages="4"/>
     </group>
-    <component id="n82_opya" name="cbCodeID" src="o31tw" fileName="com/comManorList.xml" xy="373,215" size="205,20" group="n91_opya">
+    <component id="n82_opya" name="cbCodeName" src="o31tw" fileName="com/comManorList.xml" xy="373,215" size="205,20" group="n91_opya">
       <ComboBox visibleItemCount="10" autoClearItems="true">
         <item title="aaaaa"/>
         <item title="bbbbb"/>
@@ -144,9 +144,10 @@
     <component id="n86_opya" name="btnCodeDel" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="233,369" size="125,40" group="n91_opya">
       <Button title="删除" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoqo8vi21"/>
     </component>
-    <text id="n87_opya" name="n87" xy="275,174" size="85,26" group="n91_opya" fontSize="16" color="#5b4b37" vAlign="middle" text="当前代码："/>
-    <text id="n88_opya" name="tfCurCodeID" xy="373,174" size="50,26" group="n91_opya" fontSize="16" color="#5b4b37" vAlign="middle" autoClearText="true" text="aaaaa"/>
-    <group id="n91_opya" name="robotCode" xy="233,174" size="439,235" advanced="true" collapsed="true">
+    <text id="n87_opya" name="n87" xy="275,154" size="85,26" group="n91_opya" fontSize="16" color="#5b4b37" vAlign="middle" text="当前代码："/>
+    <text id="n137_ewse" name="tfCurCodeID" xy="374,154" size="72,26" group="n91_opya" fontSize="16" color="#990066" vAlign="middle" autoSize="none" autoClearText="true" text="11"/>
+    <text id="n88_opya" name="tfCurCodeName" xy="459,154" size="50,26" group="n91_opya" fontSize="16" color="#5b4b37" vAlign="middle" autoClearText="true" text="aaaaa"/>
+    <group id="n91_opya" name="robotCode" xy="233,154" size="439,255" advanced="true">
       <gearDisplay controller="conSetting" pages="5"/>
     </group>
   </displayList>
