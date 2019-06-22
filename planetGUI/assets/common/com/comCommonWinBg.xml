@@ -14,9 +14,9 @@
       <relation target="" sidePair="width-width"/>
     </image>
     <image id="n1_txgs" name="imgTitileBg" src="nl0rcyice" fileName="imgB/img_cm_db_2.png" xy="0,0" size="250,57"/>
-    <loader id="n4_txgs" name="icon" xy="40,15" size="26,28" autoSize="true">
+    <loader id="n4_txgs" name="icon" xy="43,18" size="26,28" autoSize="true">
       <relation target="n6_txgs" sidePair="middle-middle"/>
     </loader>
-    <text id="n6_txgs" name="title" xy="82,10" size="54,37" fontSize="24" color="#ffffff" vAlign="middle" bold="true" text="title"/>
+    <text id="n6_txgs" name="title" xy="84,13" size="53,37" fontSize="24" color="#ffffff" vAlign="middle" bold="true" text="title"/>
   </displayList>
 </component>
