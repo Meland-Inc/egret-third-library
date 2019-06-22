@@ -348,7 +348,7 @@
     <image id="hlththt" name="icon_code_dw_4(1).png" path="/newImg2/"/>
     <image id="hlththu" name="icon_code_dw_5(1).png" path="/newImg2/"/>
     <image id="hlththv" name="btn_code_xzdj_3.png" path="/newImg2/" exported="true"/>
-    <image id="ilo1thy" name="img_code_xl_1.png" path="/newImg2/" scale="9grid" scale9grid="31,28,46,56"/>
+    <image id="ilo1thy" name="img_code_xl_1.png" path="/newImg2/" scale="9grid" scale9grid="9,16,68,90"/>
     <image id="ilo1thz" name="img_code_xl_2.png" path="/newImg2/"/>
     <component id="ilo1ti7" name="ComboBox1_item.xml" path="/codeBlock/"/>
     <component id="ilo1ti8" name="ComboBox1_popup.xml" path="/codeBlock/"/>
@@ -374,6 +374,15 @@
     <image id="ilo1tis" name="img_code_dh_6.png" path="/B-PlatformImg/"/>
     <image id="ilo1tit" name="img_code_dh_7.png" path="/B-PlatformImg/"/>
     <component id="ilo1tiu" name="runingAnim.xml" path="/newCom/"/>
+    <image id="ilo1tiv" name="img_code_ljt_1(1).png" path="/B-PlatformImg/"/>
+    <image id="ilo1tiw" name="img_code_ljt_2(1).png" path="/B-PlatformImg/"/>
+    <component id="ilo1tix" name="ComDustbin.xml" path="/newCom/"/>
+    <image id="ilo1tiy" name="img_cpde_yx_1.png" path="/B-PlatformImg/"/>
+    <component id="ilo1tiz" name="ComDustbinB.xml" path="/newCom/"/>
+    <component id="ilo1tj0" name="ComEditVariateB.xml" path="/newCom/"/>
+    <image id="ilo1tj1" name="btn_code_bl_3.png" path="/B-PlatformImg/"/>
+    <image id="ilo1tj2" name="btn_code_bl_4.png" path="/B-PlatformImg/"/>
+    <image id="ilo1tj3" name="btn_code_bf_1(1).png" path="/B-PlatformImg/"/>
   </resources>
   <publish name="Basics"/>
 </packageDescription>

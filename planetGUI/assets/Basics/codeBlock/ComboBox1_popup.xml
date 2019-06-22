@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="150,188">
+<component size="80,188" restrictSize="80,0,0,0">
   <displayList>
-    <image id="n0_ilo1" name="n0" src="ilo1thy" fileName="newImg2/img_code_xl_1.png" xy="0,0" size="150,188">
+    <image id="n0_ilo1" name="n0" src="ilo1thy" fileName="newImg2/img_code_xl_1.png" xy="0,0" size="80,188">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <list id="n1_ilo1" name="list" xy="4,13" size="142,171" overflow="scroll" defaultItem="ui://rnqj1l77ilo1ti7" autoItemSize="false"/>
+    <list id="n1_ilo1" name="list" xy="4,13" size="72,171" overflow="scroll" defaultItem="ui://rnqj1l77ilo1ti7" autoItemSize="false" align="center">
+      <relation target="" sidePair="width-width"/>
+    </list>
   </displayList>
-  <relation target="n1_ilo1" sidePair="height-height,width-width"/>
 </component>

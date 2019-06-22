@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="560,587" overflow="hidden" opaque="false" scroll="both" scrollBarRes="ui://rnqj1l77j7co5v,ui://rnqj1l77j7co5x" adaptationTest="FitSize">
   <controller name="codeType" pages="0,robot,1,entity" selected="0"/>
-  <controller name="dustbinState" pages="0,hide,1,show,2,execute" selected="0"/>
   <controller name="ctrlIsHide" pages="0,show,1,hide" selected="0"/>
   <controller name="ctrlShowType" pages="0,scratch,1,python" selected="0"/>
   <controller name="ctrlRecordHint" pages="0,none,1,left,2,right,3,all" selected="0"/>
@@ -31,10 +30,6 @@
       <relation target="n31_hbwi" sidePair="right-right,bottom-bottom"/>
       <Button icon="ui://rnqj1l77hbwitg6"/>
     </component>
-    <loader id="n25_8tz6" name="ladDelete" xy="505,8" size="36,36" touchable="false" autoSize="true">
-      <gearIcon controller="dustbinState" pages="0,1,2" values="|ui://rnqj1l77hbwitfz|ui://rnqj1l77hbwitg0"/>
-      <relation target="n9_j7co" sidePair="top-top,right-right"/>
-    </loader>
     <component id="n30_hbwi" name="btnDoor" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="0,244" size="49,98">
       <gearIcon controller="ctrlIsHide" pages="0,1" values="ui://rnqj1l77gg8mtgq|ui://rnqj1l77gg8mtgr"/>
       <relation target="" sidePair="middle-middle,left-left"/>

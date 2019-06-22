@@ -10,7 +10,7 @@
     <loader id="n0_hoex" name="icon" xy="5,10" size="27,18" url="ui://rnqj1l77hbwitfb" align="center" vAlign="middle">
       <gearIcon controller="button" pages="0" values="ui://rnqj1l77hbwitfb" default="ui://rnqj1l77hbwitfc"/>
     </loader>
-    <text id="n1_hbwi" name="title" xy="36,13" size="33,19" fontSize="14" color="#ffffff" text="事件">
+    <text id="n1_hbwi" name="title" xy="36,13" size="33,20" fontSize="14" color="#ffffff" text="事件">
       <gearColor controller="button" pages="0,1" values="#ffffff,#000000|#1e2c3e,#000000"/>
     </text>
   </displayList>
