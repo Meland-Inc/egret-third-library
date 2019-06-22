@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" adaptationTest="FitSize">
-  <controller name="c1" pages="0,wait,1,normal" selected="1"/>
+  <controller name="c1" pages="0,wait,1,normal" selected="0"/>
   <controller name="c2" pages="0,,1," selected="0"/>
   <displayList>
+    <graph id="n102_sjod" name="n102" xy="0,0" size="1137,640" type="rect">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
     <loader id="n0_jddv" name="imgBG" xy="0,0" size="1136,640" fill="scaleFree">
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
@@ -33,7 +36,7 @@
     <text id="n69_ptq4" name="tfErrorInLogin" xy="2099,375" size="176,24" group="n47_ptq4" visible="false" font="方正准圆简体" fontSize="18" color="#ff0000" align="center" vAlign="middle" bold="true" singleLine="true" text="两次密码输入不一致">
       <relation target="n48_ptq4" sidePair="center-center"/>
     </text>
-    <text id="n78_qo8v" name="tfTitle" xy="2138,162" size="93,28" group="n47_ptq4" fontSize="22" color="#ffffff" text="账号登录"/>
+    <text id="n78_qo8v" name="tfTitle" xy="2138,162" size="93,29" group="n47_ptq4" fontSize="22" color="#ffffff" text="账号登录"/>
     <image id="n79_qo8v" name="imgBottomBG" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="2000,467" size="370,14" group="n47_ptq4"/>
     <group id="n47_ptq4" name="loginGroup" xy="2000,155" size="370,330" advanced="true" collapsed="true">
       <gearDisplay controller="c1" pages="1"/>
@@ -54,7 +57,7 @@
     <text id="n44_ptq4" name="tfPassword" xy="2119,306" size="180,30" group="n34_ptq4" input="true" prompt="[color=#A19C8D]请输入密码[/color]" password="true" font="方正准圆简体" fontSize="18" color="#4f4238" vAlign="middle" autoSize="none" bold="true" singleLine="true" text=""/>
     <component id="n70_hsrb" name="btnReturnToSelectModeGroup" src="hsrb2c" fileName="btn/btnReturn.xml" xy="2327,192" group="n34_ptq4"/>
     <text id="n67_ptq4" name="tfErrorInSignin" xy="2117,344" size="138,24" group="n34_ptq4" visible="false" font="方正准圆简体" fontSize="18" color="#ff0000" vAlign="middle" bold="true" text="账号或密码错误"/>
-    <text id="n76_qo8v" name="tfSigninGroupTitle" xy="2138,196" size="93,28" group="n34_ptq4" fontSize="22" color="#ffffff" text="账号登录"/>
+    <text id="n76_qo8v" name="tfSigninGroupTitle" xy="2138,196" size="93,29" group="n34_ptq4" fontSize="22" color="#ffffff" text="账号登录"/>
     <image id="n77_qo8v" name="imgBottomBG" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="2000,432" size="370,14" group="n34_ptq4"/>
     <group id="n34_ptq4" name="signinGroup" xy="2000,189" size="370,262" advanced="true" collapsed="true">
       <gearDisplay controller="c1" pages="1"/>
@@ -75,7 +78,7 @@
     <text id="n93_x0vt" name="tfTouristsPassword" xy="2119,312" size="180,30" group="n98_x0vt" input="true" prompt="[color=#A19C8D]请输入密码[/color]" font="方正准圆简体" fontSize="18" color="#4f4238" vAlign="middle" autoSize="none" bold="true" singleLine="true" text="2546"/>
     <component id="n94_x0vt" name="btnReturnToSelectModeGroup2" src="hsrb2c" fileName="btn/btnReturn.xml" xy="2327,192" group="n98_x0vt"/>
     <text id="n95_x0vt" name="tfErrorInVouristsSignin" xy="2130,346" size="100,24" group="n98_x0vt" visible="false" font="方正准圆简体" fontSize="18" color="#ff0000" align="center" vAlign="middle" leading="0" bold="true" text="账号已注册"/>
-    <text id="n96_x0vt" name="tfSigninGroupTitle" xy="2138,196" size="93,28" group="n98_x0vt" fontSize="22" color="#ffffff" text="游客登录"/>
+    <text id="n96_x0vt" name="tfSigninGroupTitle" xy="2138,196" size="93,29" group="n98_x0vt" fontSize="22" color="#ffffff" text="游客登录"/>
     <image id="n97_x0vt" name="imgBottomBG" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="2000,433" size="370,14" group="n98_x0vt"/>
     <group id="n98_x0vt" name="touristsExperienceGroup" xy="2000,189" size="370,262" advanced="true" collapsed="true">
       <gearDisplay controller="c1" pages="1"/>
@@ -85,7 +88,7 @@
       <gearXY controller="c2" pages="0" values="409,210" default="409,173"/>
       <gearSize controller="c2" pages="0" values="318,233,1,1" default="318,294,1,1"/>
     </image>
-    <text id="n28_jddv" name="tfTitle" xy="542,215" size="51,28" group="n9_jddv" font="方正准圆简体" fontSize="22" color="#ffffff" bold="true" text="登录">
+    <text id="n28_jddv" name="tfTitle" xy="542,215" size="51,29" group="n9_jddv" font="方正准圆简体" fontSize="22" color="#ffffff" bold="true" text="登录">
       <gearXY controller="c2" pages="0" values="542,215" default="542,178"/>
       <relation target="" sidePair="left-left,top-top"/>
     </text>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" designImage="ui://i25v0ebkcxfq4e" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
+<component size="1136,640" designImage="ui://i25v0ebkcxfq4e" designImageAlpha="13" designImageLayer="1" adaptationTest="FitSize">
   <controller name="conSetting" pages="0,system,1,sound,2,chating,3,about,4,manor,5,robotCode" selected="0"/>
-  <controller name="ctrlGameMode" pages="0,game,1,lessons" selected="1"/>
+  <controller name="ctrlGameMode" pages="0,game,1,lessons" selected="0"/>
   <displayList>
     <component id="n92_cxfq" name="comBg" src="txgscyid8" fileName="com/comCommonWinBg.xml" pkg="te1gxawo" xy="0,0">
       <relation target="" sidePair="width-width,height-height"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" opaque="false" designImage="ui://i25v0ebke46z3z" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
+<component size="1136,640" opaque="false" designImage="ui://i25v0ebkylfh4k" designImageAlpha="96" designImageLayer="1" adaptationTest="FitSize">
   <controller name="ctrlMapMode" pages="0,normal,1,build,2,quickBuild,3,quickEdit" selected="0"/>
-  <controller name="ctrlGameMode" pages="1,game,0,lessons,2,creation" selected="0">
+  <controller name="ctrlGameMode" pages="1,game,0,lessons,2,creation" selected="1">
     <action type="change_page" fromPage="" toPage="1" objectId="n1_muc9" controller="ctrlGameMode" targetPage="1"/>
     <action type="change_page" fromPage="" toPage="0" objectId="n1_muc9" controller="ctrlGameMode" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="2" objectId="n1_muc9" controller="ctrlGameMode" targetPage="2"/>
@@ -10,7 +10,7 @@
     <component id="n31_r2bf" name="comMainEnemyInfo" src="dura1l" fileName="win/ComMainEnemyInfo.xml" xy="233,7" size="152,45">
       <relation target="" sidePair="left-left,top-top"/>
     </component>
-    <component id="n1_muc9" name="comMainJoystick" src="w80ln" fileName="win/ComMainJoystick.xml" xy="862,262" controller="ctrlGameMode,1">
+    <component id="n1_muc9" name="comMainJoystick" src="w80ln" fileName="win/ComMainJoystick.xml" xy="862,262" controller="ctrlGameMode,0">
       <gearDisplay controller="ctrlMapMode" pages="0"/>
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
@@ -18,7 +18,7 @@
       <gearDisplay controller="ctrlMapMode" pages="2,3"/>
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
-    <component id="n4_muc9" name="comMainRocker" src="uvgla1" fileName="win/ComMainRocker.xml" xy="0,256">
+    <component id="n4_muc9" name="comMainRocker" src="uvgla1" fileName="win/ComMainRocker.xml" xy="70,256">
       <gearXY controller="ctrlGameMode" pages="0" values="70,256" default="0,256"/>
       <relation target="" sidePair="left-left,bottom-bottom"/>
     </component>
@@ -41,7 +41,7 @@
       <gearDisplay controller="ctrlGameMode" pages="1"/>
       <relation target="" sidePair="right-right"/>
     </component>
-    <component id="n44_uvgl" name="comMainStorageForC" src="uvgl9m" fileName="win/ComMainStorageForC.xml" xy="1060,6">
+    <component id="n44_uvgl" name="comMainStorage" src="uvgl9m" fileName="win/ComMainStorage.xml" xy="1060,6">
       <gearDisplay controller="ctrlGameMode" pages="1"/>
       <relation target="" sidePair="right-right"/>
     </component>
@@ -49,27 +49,23 @@
       <gearDisplay controller="ctrlGameMode" pages="1"/>
       <relation target="" sidePair="right-right"/>
     </component>
-    <component id="n49_wq4d" name="comMainStorageForB" src="wq4dcyidf" fileName="win/ComMainStorageForB.xml" xy="9,319" size="53,51">
-      <gearDisplay controller="ctrlGameMode" pages="0"/>
+    <component id="n60_ylfh" name="btnUpload" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="988,3" size="59,66" group="n67_ylfh">
+      <Button icon="ui://5hs1fuejwq4dcyid1"/>
     </component>
-    <component id="n59_ugid" name="btnResetManor" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="2,243" size="68,60">
+    <image id="n61_ylfh" name="imgTfUpload" src="ylfhcyidn" fileName="img_UI3/lesson/img_main_zt_1.png" xy="998,69" group="n67_ylfh"/>
+    <group id="n67_ylfh" name="grpBtnUpload" xy="988,3" size="59,83" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlGameMode" pages="0"/>
+      <relation target="" sidePair="right-right"/>
+    </group>
+    <component id="n59_ugid" name="btnResetManor" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1056,7" size="68,60" group="n68_ylfh">
       <gearDisplay controller="ctrlGameMode" pages="0"/>
       <Button icon="ui://5hs1fuejugidcyidm"/>
     </component>
-    <component id="n52_nl0r" name="btnRecall" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="2,166" size="68,60">
+    <image id="n62_ylfh" name="imgTfReset" src="ylfhcyidq" fileName="img_UI3/lesson/img_main_zt_4.png" xy="1069,69" group="n68_ylfh"/>
+    <group id="n68_ylfh" name="grpBtnResetManor" xy="1056,7" size="68,79" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlGameMode" pages="0"/>
-      <Button icon="ui://5hs1fuejnl0rcyidj"/>
-    </component>
-    <component id="n53_nl0r" name="btnSummon" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="2,166" size="68,60">
-      <gearDisplay controller="ctrlGameMode" pages="0"/>
-      <Button icon="ui://5hs1fuejnl0rcyidi"/>
-    </component>
-    <component id="n50_nl0r" name="comMainLeftTopUICtnrForB" src="wq4dcyid4" fileName="com/ComMainLeftTopUICtnrForB.xml" xy="0,0">
-      <gearDisplay controller="ctrlGameMode" pages="0"/>
-    </component>
-    <component id="n51_nl0r" name="comMainLeftTopUICtnrForC" src="wdqfcyicj" fileName="com/ComMainLeftTopUICtnrForC.xml" xy="0,0">
-      <gearDisplay controller="ctrlGameMode" pages="1"/>
-    </component>
+      <relation target="" sidePair="right-right"/>
+    </group>
     <component id="n55_omrq" name="btnIde" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="1087,271" size="49,98">
       <gearDisplay controller="ctrlGameMode" pages="0"/>
       <relation target="" sidePair="right-right,middle-middle"/>
