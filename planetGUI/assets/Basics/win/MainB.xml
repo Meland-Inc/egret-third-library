@@ -2,13 +2,13 @@
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkhbwi42" designImageAlpha="100" adaptationTest="FitSize">
   <controller name="codeType" pages="0,robot,1,entity" selected="0"/>
   <displayList>
-    <loader id="n14_edsm" name="ladBG" xy="44,2" size="1136,640" hideByEditor="true" visible="false">
+    <loader id="n14_edsm" name="ladBG" xy="90,2" size="1136,640" hideByEditor="true" visible="false">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
       <relation target="n5_n1c0" sidePair="left-left"/>
     </loader>
-    <component id="n5_n1c0" name="codeBlockContainer" src="hbwitgc" fileName="newCom/CodeblockContainerB.xml" xy="540,2" size="516,640" hideByEditor="true">
-      <relation target="" sidePair="top-top,left-left"/>
-      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    <component id="n5_n1c0" name="codeBlockContainer" src="hbwitgc" fileName="newCom/CodeblockContainerB.xml" xy="586,-1" size="469,642">
+      <relation target="" sidePair="bottomext-bottom,rightext-right"/>
+      <relation target="" sidePair="left-left%,top-top"/>
     </component>
     <component id="n13_sdqn" name="templatePanel" src="sdqn71" fileName="com/TemplatePanel.xml" xy="220,105" locked="true" hideByEditor="true" visible="false">
       <relation target="" sidePair="center-center,middle-middle"/>
@@ -46,11 +46,11 @@
     <component id="n25_1194t" name="comCalculator" src="1194tac" fileName="newCom/ComCodeCalculator.xml" xy="640,11" hideByEditor="true">
       <relation target="" sidePair="right-right,top-top"/>
     </component>
-    <component id="n12_k1p2" name="mask" src="k3kgthf" fileName="newCom/RunningStateB.xml" xy="587,0" size="557,640" hideByEditor="true">
+    <component id="n12_k1p2" name="mask" src="k3kgthf" fileName="newCom/RunningStateB.xml" xy="633,0" size="598,640" hideByEditor="true">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
       <relation target="n5_n1c0" sidePair="left-left"/>
     </component>
-    <component id="n27_ilo1" name="comDustbin" src="ilo1tiz" fileName="newCom/ComDustbinB.xml" xy="1056,0" size="81,640" touchable="false" controller="dustbinState,0">
+    <component id="n27_ilo1" name="comDustbin" src="ilo1tiz" fileName="newCom/ComDustbinB.xml" xy="1055,-2" size="83,645" touchable="false" controller="dustbinState,0">
       <relation target="" sidePair="right-right,bottomext-bottom"/>
     </component>
   </displayList>

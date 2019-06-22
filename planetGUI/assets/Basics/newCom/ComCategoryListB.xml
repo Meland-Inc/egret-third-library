@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkhbwi42" designImageAlpha="100" adaptationTest="FitSize">
   <displayList>
-    <component id="n27_hoex" name="comCodeblocksPool" src="hlththn" fileName="newCom/CodeblockPoolB.xml" xy="427,0" size="630,640" restrictSize="330,700,0,0" blend="none" controller="ctrlGameModel,1">
+    <component id="n27_hoex" name="comCodeblocksPool" src="hlththn" fileName="newCom/CodeblockPoolB.xml" xy="427,0" size="630,640" restrictSize="0,700,0,0" blend="none" controller="ctrlGameModel,1">
       <relation target="" sidePair="right-right,bottomext-bottom"/>
     </component>
     <image id="n28_8tz6" name="imgListBG" src="gg8mtgo" fileName="B-PlatformImg/img_code_dk_2.png" xy="1052,-5" size="85,651">
