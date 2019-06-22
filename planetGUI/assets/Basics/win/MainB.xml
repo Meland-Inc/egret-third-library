@@ -2,11 +2,11 @@
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkhbwi42" designImageAlpha="100" adaptationTest="FitSize">
   <controller name="codeType" pages="0,robot,1,entity" selected="0"/>
   <displayList>
-    <loader id="n14_edsm" name="ladBG" xy="77,2" size="1136,640" hideByEditor="true" visible="false">
+    <loader id="n14_edsm" name="ladBG" xy="83,2" size="1136,640" hideByEditor="true" visible="false">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
       <relation target="n5_n1c0" sidePair="left-left"/>
     </loader>
-    <component id="n5_n1c0" name="codeBlockContainer" src="hbwitgc" fileName="newCom/CodeblockContainerB.xml" xy="573,-1" size="482,642">
+    <component id="n5_n1c0" name="codeBlockContainer" src="hbwitgc" fileName="newCom/CodeblockContainerB.xml" xy="579,-1" size="479,642">
       <relation target="" sidePair="top-top,right-right"/>
       <relation target="" sidePair="width-width,height-height"/>
     </component>
@@ -46,7 +46,7 @@
     <component id="n25_1194t" name="comCalculator" src="1194tac" fileName="newCom/ComCodeCalculator.xml" xy="640,11" hideByEditor="true">
       <relation target="" sidePair="right-right,top-top"/>
     </component>
-    <component id="n12_k1p2" name="mask" src="k3kgthf" fileName="newCom/RunningStateB.xml" xy="620,0" size="598,640" hideByEditor="true">
+    <component id="n12_k1p2" name="mask" src="k3kgthf" fileName="newCom/RunningStateB.xml" xy="626,0" size="516,640" hideByEditor="true">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
       <relation target="n5_n1c0" sidePair="left-left"/>
     </component>

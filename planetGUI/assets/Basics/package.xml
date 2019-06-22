@@ -337,7 +337,7 @@
     <image id="hlththi" name="icon_code_dw_7.png" path="/newImg2/"/>
     <image id="hlththj" name="icon_code_dw_8.png" path="/newImg2/"/>
     <image id="hlththk" name="icon_code_dw_9.png" path="/newImg2/"/>
-    <image id="hlththl" name="btn_code_bl_1.png" path="/newImg2/"/>
+    <image id="hlththl" name="btn_code_bl_1.png" path="/newImg2/" scale="9grid" scale9grid="13,7,26,11"/>
     <image id="hlththm" name="icon_code_bl_2.png" path="/newImg2/"/>
     <component id="hlththn" name="CodeblockPoolB.xml" path="/newCom/"/>
     <component id="hlththo" name="ComVariateEditB.xml" path="/newCom/" exported="true"/>
@@ -383,6 +383,26 @@
     <image id="ilo1tj1" name="btn_code_bl_3.png" path="/B-PlatformImg/"/>
     <image id="ilo1tj2" name="btn_code_bl_4.png" path="/B-PlatformImg/"/>
     <image id="ilo1tj3" name="btn_code_bf_1(1).png" path="/B-PlatformImg/"/>
+    <component id="rjdctj4" name="ComCodeblockCopyB.xml" path="/newCom/" exported="true"/>
+    <image id="rjdctj5" name="img_code_dh_8(1).png" path="/B-PlatformImg/"/>
+    <image id="rjdctj6" name="img_code_dh_9(1).png" path="/B-PlatformImg/"/>
+    <image id="rjdctj7" name="img_code_dh_10(1).png" path="/B-PlatformImg/"/>
+    <image id="rjdctj8" name="img_code_dh_11(1).png" path="/B-PlatformImg/"/>
+    <image id="rjdctj9" name="img_code_dh_12(1).png" path="/B-PlatformImg/"/>
+    <image id="rjdctja" name="img_code_dh_13(1).png" path="/B-PlatformImg/"/>
+    <image id="rjdctjb" name="img_code_dh_14(1).png" path="/B-PlatformImg/"/>
+    <image id="rjdctjc" name="img_code_dh_15(1).png" path="/B-PlatformImg/"/>
+    <image id="rjdctjd" name="img_code_dh_16(1).png" path="/B-PlatformImg/"/>
+    <image id="rjdctje" name="img_code_dh_17(1).png" path="/B-PlatformImg/"/>
+    <image id="rjdctjf" name="img_code_dh_18(1).png" path="/B-PlatformImg/"/>
+    <image id="rjdctjg" name="img_code_dh_19(1).png" path="/B-PlatformImg/"/>
+    <image id="rjdctjh" name="img_code_dh_1 (1).png" path="/B-PlatformImg/"/>
+    <image id="rjdctji" name="img_code_dh_2(1).png" path="/B-PlatformImg/"/>
+    <image id="rjdctjj" name="img_code_dh_3(1).png" path="/B-PlatformImg/"/>
+    <image id="rjdctjk" name="img_code_dh_4(1).png" path="/B-PlatformImg/"/>
+    <image id="rjdctjl" name="img_code_dh_5(1).png" path="/B-PlatformImg/"/>
+    <image id="rjdctjm" name="img_code_dh_6(1).png" path="/B-PlatformImg/"/>
+    <image id="rjdctjn" name="img_code_dh_7(1).png" path="/B-PlatformImg/"/>
   </resources>
   <publish name="Basics"/>
 </packageDescription>

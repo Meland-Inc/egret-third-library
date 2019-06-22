@@ -7,11 +7,11 @@
       <gearIcon controller="ctrlGameModel" pages="1" values="ui://rnqj1l77gg8mtgo" default="ui://rnqj1l77tcu2a6"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <component id="n5_t09y" name="normalPool" src="t09yv" fileName="com/VerticalScrollComponent.xml" xy="7,10" size="369,566">
+    <component id="n5_t09y" name="normalPool" src="t09yv" fileName="com/VerticalScrollComponent.xml" xy="7,10" size="372,566">
       <gearDisplay controller="poolType" pages="0"/>
       <relation target="" sidePair="height-height,width-width"/>
     </component>
-    <component id="n12_mkhl" name="variatePool" src="t09yv" fileName="com/VerticalScrollComponent.xml" xy="8,68" size="369,429">
+    <component id="n12_mkhl" name="variatePool" src="t09yv" fileName="com/VerticalScrollComponent.xml" xy="8,68" size="372,429">
       <gearDisplay controller="poolType" pages="1,2"/>
       <relation target="" sidePair="height-height,width-width"/>
       <relation target="" sidePair="top-top,left-left"/>
