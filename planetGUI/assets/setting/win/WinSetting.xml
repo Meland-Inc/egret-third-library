@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkcxfq4e" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
-  <controller name="conSetting" pages="0,system,1,sound,2,chating,3,about,4,manor,5,robotCode" selected="4"/>
-  <controller name="ctrlGameMode" pages="0,game,1,lessons" selected="0"/>
+  <controller name="conSetting" pages="0,system,1,sound,2,chating,3,about,4,manor,5,robotCode" selected="0"/>
+  <controller name="ctrlGameMode" pages="0,game,1,lessons" selected="1"/>
   <displayList>
-    <component id="n92_cxfq" name="comBg" src="txgscyid8" fileName="com/comCommonWinBg.xml" pkg="te1gxawo" xy="0,0" locked="true">
+    <component id="n92_cxfq" name="comBg" src="txgscyid8" fileName="com/comCommonWinBg.xml" pkg="te1gxawo" xy="0,0">
       <relation target="" sidePair="width-width,height-height"/>
       <Label title="设置" icon="ui://wu3n4vxqcxfq14"/>
     </component>
@@ -12,14 +12,14 @@
       <Button icon="ui://te1gxawonl0rcyica" sound="ui://fknoioovtqc912"/>
     </component>
     <component id="n21_o8k6" name="btnSystem" src="txgscyida" fileName="btn/rbtnCommonTab.xml" pkg="te1gxawo" xy="0,83" group="n94_o89o">
-      <Button title="系统" controller="conSetting" page="0"/>
+      <Button checked="true" title="系统" controller="conSetting" page="0"/>
     </component>
     <component id="n22_o8k6" name="btnSound" src="txgscyida" fileName="btn/rbtnCommonTab.xml" pkg="te1gxawo" xy="0,143" group="n94_o89o">
       <Button title="声音" controller="conSetting" page="1"/>
     </component>
     <component id="n65_o31t" name="btnManor" src="txgscyida" fileName="btn/rbtnCommonTab.xml" pkg="te1gxawo" xy="0,203" group="n94_o89o">
       <gearDisplay controller="ctrlGameMode" pages="0"/>
-      <Button checked="true" title="领地" titleColor="#365989" controller="conSetting" page="4"/>
+      <Button title="领地" titleColor="#365989" controller="conSetting" page="4"/>
     </component>
     <component id="n80_opya" name="btnRobotCode" src="txgscyida" fileName="btn/rbtnCommonTab.xml" pkg="te1gxawo" xy="0,263" group="n94_o89o">
       <gearDisplay controller="ctrlGameMode" pages="0"/>
@@ -45,6 +45,7 @@
       <Button title="查看日志" titleColor="#5b4b37" titleFontSize="16" icon="ui://te1gxawoefrs1w"/>
     </component>
     <component id="n28_o8k6" name="btnLogout" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="978,557" size="106,36" group="n30_o8k6">
+      <gearDisplay controller="ctrlGameMode" pages="0"/>
       <relation target="" sidePair="right-right"/>
       <Button title="退出登陆" titleColor="#ffffff" titleFontSize="16" icon="ui://te1gxawom3dicyida"/>
     </component>

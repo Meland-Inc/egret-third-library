@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebke46z3z" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
   <controller name="ctrlMapMode" pages="0,normal,1,build,2,quickBuild,3,quickEdit" selected="0"/>
-  <controller name="ctrlGameMode" pages="1,game,0,lessons,2,creation" selected="1">
+  <controller name="ctrlGameMode" pages="1,game,0,lessons,2,creation" selected="0">
     <action type="change_page" fromPage="" toPage="1" objectId="n1_muc9" controller="ctrlGameMode" targetPage="1"/>
     <action type="change_page" fromPage="" toPage="0" objectId="n1_muc9" controller="ctrlGameMode" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="2" objectId="n1_muc9" controller="ctrlGameMode" targetPage="2"/>
@@ -10,7 +10,7 @@
     <component id="n31_r2bf" name="comMainEnemyInfo" src="dura1l" fileName="win/ComMainEnemyInfo.xml" xy="233,7" size="152,45">
       <relation target="" sidePair="left-left,top-top"/>
     </component>
-    <component id="n1_muc9" name="comMainJoystick" src="w80ln" fileName="win/ComMainJoystick.xml" xy="862,262" controller="ctrlGameMode,0">
+    <component id="n1_muc9" name="comMainJoystick" src="w80ln" fileName="win/ComMainJoystick.xml" xy="862,262" controller="ctrlGameMode,1">
       <gearDisplay controller="ctrlMapMode" pages="0"/>
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
@@ -18,7 +18,7 @@
       <gearDisplay controller="ctrlMapMode" pages="2,3"/>
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
-    <component id="n4_muc9" name="comMainRocker" src="uvgla1" fileName="win/ComMainRocker.xml" xy="70,256">
+    <component id="n4_muc9" name="comMainRocker" src="uvgla1" fileName="win/ComMainRocker.xml" xy="0,256">
       <gearXY controller="ctrlGameMode" pages="0" values="70,256" default="0,256"/>
       <relation target="" sidePair="left-left,bottom-bottom"/>
     </component>

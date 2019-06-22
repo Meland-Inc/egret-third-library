@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" designImage="ui://i25v0ebknl0r45" designImageAlpha="100" designImageLayer="1">
+<component size="1136,640" designImage="ui://i25v0ebknl0r45" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlDetail" pages="0,normal,1,detail" selected="0"/>
   <controller name="ctrlGameMode" pages="1,game,0,lessons,2,creation" selected="0"/>
   <displayList>
@@ -29,7 +29,7 @@
     <image id="n67_apfp" name="imgLstItemBg" src="nl0rcyicc" fileName="imgB/img_cm_bg_dk_1.png" pkg="te1gxawo" xy="120,78" size="692,443">
       <relation target="" sidePair="bottomext-bottom,rightext-right"/>
     </image>
-    <list id="n27_ey2h" name="lstBagItem" xy="140,92" size="660,419" layout="flow_hz" overflow="scroll" lineGap="9" colGap="20" defaultItem="ui://te1gxawop2t3cyid7" autoClearItems="true">
+    <list id="n27_ey2h" name="lstBagItem" xy="140,92" size="654,419" layout="flow_hz" overflow="scroll" lineGap="9" colGap="20" defaultItem="ui://te1gxawop2t3cyid7" autoClearItems="true">
       <relation target="n67_apfp" sidePair="width-width,height-height"/>
       <item/>
       <item/>

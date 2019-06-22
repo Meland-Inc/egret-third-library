@@ -374,7 +374,7 @@
     <image id="nl0rcyica" name="btn_cm_db_3.png" path="/imgB/" exported="true"/>
     <image id="nl0rcyicb" name="img_cm__bg_cbl_1.png" path="/imgB/" exported="true"/>
     <image id="nl0rcyicc" name="img_cm_bg_dk_1.png" path="/imgB/" exported="true" scale="9grid" scale9grid="31,23,62,46"/>
-    <image id="nl0rcyicd" name="img_cm_db_1.png" path="/imgB/" exported="true"/>
+    <image id="nl0rcyicd" name="img_cm_db_1.png" path="/imgB/" exported="true" scale="9grid" scale9grid="22,16,44,32"/>
     <image id="nl0rcyice" name="img_cm_db_2.png" path="/imgB/" exported="true"/>
     <image id="nl0rcyicf" name="img_cm_dk_1.png" path="/imgB/" exported="true" scale="9grid" scale9grid="33,33,66,66"/>
     <image id="nl0rcyicg" name="img_cm_dk_2.png" path="/imgB/" exported="true" scale="9grid" scale9grid="21,26,42,52"/>
@@ -417,6 +417,8 @@
     <image id="m3dicyida" name="btn_cm_an_1.png" path="/imgB/" exported="true" scale="9grid" scale9grid="27,9,54,18"/>
     <image id="m3dicyidb" name="btn_cm_an_2.png" path="/imgB/" exported="true" scale="9grid" scale9grid="27,9,54,18"/>
     <component id="ilo1cyidi" name="btnScaleNoEffect.xml" path="/btn/" exported="true"/>
+    <image id="ylfhcyidj" name="img_cm_tck_2.png" path="/imgB/" exported="true" scale="9grid" scale9grid="43,67,86,62"/>
+    <image id="ylfhcyidk" name="img_cm_xmk_1.png" path="/imgB/" exported="true" scale="9grid" scale9grid="18,8,36,16"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>
