@@ -12,7 +12,7 @@
     <image id="n24_qfz9" name="n24" src="qfz98q" fileName="newImg/frame_codeloading_8.png" xy="0,0"/>
     <image id="n25_qfz9" name="n25" src="qfz98r" fileName="newImg/frame_codeloading_9.png" xy="0,0"/>
   </displayList>
-  <transition name="movie" autoPlay="true" autoPlayRepeat="-1">
+  <transition name="running" options="2" autoPlayRepeat="-1">
     <item time="0" type="Alpha" target="n16_qfz9" value="1"/>
     <item time="0" type="Alpha" target="n17_qfz9" value="0"/>
     <item time="0" type="Alpha" target="n18_qfz9" value="0"/>
