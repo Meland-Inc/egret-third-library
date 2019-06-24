@@ -36,8 +36,8 @@
       <Slider value="50" max="100"/>
     </component>
     <text id="n100_o89o" name="tfQualityLow" xy="298,286" size="23,29" group="n103_o89o" fontSize="18" color="#365989" leading="0" text="低"/>
-    <text id="n101_o89o" name="tfQualityMid" xy="541,286" size="23,29" group="n103_o89o" fontSize="18" color="#365989" leading="0" text="低"/>
-    <text id="n102_o89o" name="tfQualityHigh" xy="784,286" size="23,29" group="n103_o89o" fontSize="18" color="#365989" leading="0" text="低"/>
+    <text id="n101_o89o" name="tfQualityMid" xy="541,286" size="23,29" group="n103_o89o" fontSize="18" color="#365989" leading="0" text="中"/>
+    <text id="n102_o89o" name="tfQualityHigh" xy="784,286" size="23,29" group="n103_o89o" fontSize="18" color="#365989" leading="0" text="高"/>
     <group id="n103_o89o" name="grpImgQuality" xy="200,252" size="607,63" group="n30_o8k6" collapsed="true"/>
     <text id="n107_o89o" name="tfOperation" xy="201,373" size="77,29" group="n30_o8k6" fontSize="18" color="#365989" text="操作方式"/>
     <component id="n113_o89o" name="comSelectOperation" src="o89o16" fileName="com/comSelectOperation.xml" xy="294,370" group="n30_o8k6"/>
