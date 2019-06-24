@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="398,111">
   <displayList>
-    <text id="n21_qki6" name="labTitle" xy="11,28" size="77,31" fontSize="24" color="#2d5b98" vAlign="middle" text="数值类"/>
-    <component id="n14_pzcq" name="sldValue" src="pzcq7f" fileName="attributeWidget/sldAWValue.xml" xy="81,87" size="256,28">
+    <text id="n21_qki6" name="labTitle" xy="11,28" size="77,37" fontSize="24" color="#2d5b98" vAlign="middle" text="数值类"/>
+    <component id="n14_pzcq" name="sldValue" src="pzcq7f" fileName="attributeWidget/sldAWValue.xml" xy="81,87" size="238,28">
       <Slider value="50" max="100"/>
     </component>
     <component id="n19_o731" name="btnLeft" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="38,80" size="22,36">
