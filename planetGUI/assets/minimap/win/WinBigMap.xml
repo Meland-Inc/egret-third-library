@@ -43,8 +43,8 @@
       <Button title="随机出生" titleColor="#81681c" icon="ui://te1gxawoot9si2h"/>
     </component>
     <component id="n34_qv2f" name="btnStartGame" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="606,533" size="142,50" group="n12_11e02">
-      <gearText controller="ctrlMapMode" pages="2" values="复活" default="开始游戏"/>
-      <Button title="开始游戏" titleColor="#ffffff" icon="ui://te1gxawoefrs1s"/>
+      <gearText controller="ctrlMapMode" pages="2" values="复活" default="进入场景"/>
+      <Button title="进入场景" titleColor="#ffffff" icon="ui://te1gxawoefrs1s"/>
     </component>
     <group id="n12_11e02" name="grpBornMode" xy="109,515" size="917,82" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlMapMode" pages="1,2"/>
