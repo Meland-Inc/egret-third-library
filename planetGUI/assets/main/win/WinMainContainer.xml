@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" opaque="false" designImage="ui://i25v0ebkylfh4k" designImageAlpha="96" adaptationTest="FitSize">
-  <controller name="ctrlMapMode" pages="0,normal,1,build,2,quickBuild,3,quickEdit" selected="3"/>
+<component size="1136,640" opaque="false" designImage="ui://i25v0ebkylfh4k" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
+  <controller name="ctrlMapMode" pages="0,normal,1,build,2,quickBuild,3,quickEdit" selected="0"/>
   <controller name="ctrlGameMode" pages="1,game,0,lessons,2,creation" selected="1">
     <action type="change_page" fromPage="" toPage="1" objectId="n1_muc9" controller="ctrlGameMode" targetPage="1"/>
     <action type="change_page" fromPage="" toPage="0" objectId="n1_muc9" controller="ctrlGameMode" targetPage="0"/>

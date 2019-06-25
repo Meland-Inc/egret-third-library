@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" designImage="ui://i25v0ebkugid4h" designImageAlpha="0" designImageLayer="1">
+<component size="1136,640" designImage="ui://i25v0ebkugid4h" designImageAlpha="90" designImageLayer="1">
   <controller name="ctrlMapMode" pages="0,normal,1,born,2,revive" selected="0"/>
-  <controller name="ctrlMarkOperate" pages="0,normal,1,selectMark,2,puttingMark,3,deleteMark,4,editMarkName" selected="1"/>
+  <controller name="ctrlMarkOperate" pages="0,normal,1,selectMark,2,puttingMark,3,deleteMark,4,editMarkName" selected="0"/>
   <displayList>
     <component id="n35_trc2" name="comMap" src="trc221u" fileName="com/ComMiniMapCtnr.xml" xy="0,0" hideByEditor="true">
       <relation target="" sidePair="width-width,height-height"/>
@@ -29,7 +29,7 @@
     </image>
     <image id="n90_ugid" name="titleBg" src="nl0rcyice" fileName="imgB/img_cm_db_2.png" pkg="te1gxawo" xy="0,0" size="254,57"/>
     <image id="n91_ugid" name="winIcon" src="ugid22e" fileName="imgB/icon_map_1.png" xy="40,15"/>
-    <text id="n92_ugid" name="winTitle" xy="91,14" size="99,37" fontSize="24" color="#ffffff" vAlign="middle" bold="true" text="世界地图">
+    <text id="n92_ugid" name="winTitle" xy="91,14" size="105,37" fontSize="24" color="#ffffff" vAlign="middle" bold="true" text="世界地图">
       <gearText controller="ctrlMapMode" pages="1,2" values="选择出生地|选择复地" default="世界地图"/>
     </text>
     <component id="n13_11e02" name="btnClose" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1061,0" size="89,62">
@@ -43,8 +43,8 @@
       <Button title="随机出生" titleColor="#81681c" icon="ui://te1gxawoot9si2h"/>
     </component>
     <component id="n34_qv2f" name="btnStartGame" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="606,533" size="142,50" group="n12_11e02">
-      <gearText controller="ctrlMapMode" pages="2" values="复活" default="开始游戏"/>
-      <Button title="开始游戏" titleColor="#ffffff" icon="ui://te1gxawoefrs1s"/>
+      <gearText controller="ctrlMapMode" pages="2" values="复活" default="进入场景"/>
+      <Button title="进入场景" titleColor="#ffffff" icon="ui://te1gxawoefrs1s"/>
     </component>
     <group id="n12_11e02" name="grpBornMode" xy="109,515" size="917,82" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlMapMode" pages="1,2"/>
