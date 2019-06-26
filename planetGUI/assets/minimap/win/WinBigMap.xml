@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" designImage="ui://i25v0ebkugid4h" designImageAlpha="90" designImageLayer="1">
+<component size="1136,640" designImage="ui://i25v0ebkugid4h" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlMapMode" pages="0,normal,1,born,2,revive" selected="0"/>
   <controller name="ctrlMarkOperate" pages="0,normal,1,selectMark,2,puttingMark,3,deleteMark,4,editMarkName" selected="0"/>
   <displayList>
-    <component id="n35_trc2" name="comMap" src="trc221u" fileName="com/ComMiniMapCtnr.xml" xy="0,0" hideByEditor="true">
+    <component id="n35_trc2" name="comMap" src="trc221u" fileName="com/ComMiniMapCtnr.xml" xy="0,0" size="1136,640" hideByEditor="true">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
     <image id="n81_ljyy" name="n81" src="ljyy21z" fileName="imgNew/img_map_coordinate_1.png" xy="0,322" size="515,8" group="n86_ljyy" alpha="0.8">
