@@ -57,6 +57,11 @@
       <gearDisplay controller="ctrlGameMode" pages="0"/>
       <relation target="" sidePair="right-right"/>
     </group>
+    <component id="n69_t4ko" name="btnFakeIslandBuy" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="915,3" size="59,66" visible="false">
+      <gearDisplay controller="ctrlGameMode" pages="0"/>
+      <relation target="" sidePair="right-right"/>
+      <Button icon="ui://5hs1fuejuvgl8n"/>
+    </component>
     <component id="n59_ugid" name="btnResetManor" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1056,7" size="68,60" group="n68_ylfh">
       <gearDisplay controller="ctrlGameMode" pages="0"/>
       <Button icon="ui://5hs1fuejugidcyidm"/>
