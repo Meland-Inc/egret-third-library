@@ -5,7 +5,7 @@
   <controller name="ctrlShowType" pages="0,scratch,1,python" selected="0"/>
   <controller name="ctrlRecordHint" pages="0,none,1,left,2,right,3,all" selected="0"/>
   <displayList>
-    <image id="n42_gg8m" name="imgBG" src="gg8mtgn" fileName="B-PlatformImg/img_code_dk_1.png" xy="48,0" size="516,589">
+    <image id="n42_gg8m" name="imgBG" src="nl0rcyicf" fileName="imgB/img_cm_dk_1.png" pkg="te1gxawo" xy="48,0" size="516,589">
       <relation target="n9_j7co" sidePair="left-left,rightext-right"/>
       <relation target="" sidePair="height-height"/>
     </image>
@@ -20,12 +20,12 @@
       <relation target="n31_hbwi" sidePair="center-center,middle-middle"/>
     </image>
     <group id="n33_czor" name="imgBtnBG" xy="479,535" size="60,28" collapsed="true"/>
-    <component id="n21_8tz6" name="btnUndo" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="484,542" size="16,14">
+    <component id="n21_8tz6" name="btnUndo" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="485,542" size="16,14">
       <gearIcon controller="ctrlRecordHint" pages="1,3" values="ui://rnqj1l77hbwitg3|ui://rnqj1l77hbwitg3" default="ui://rnqj1l77hbwitg4"/>
       <relation target="n31_hbwi" sidePair="left-left,bottom-bottom"/>
       <Button icon="ui://rnqj1l77hbwitg4"/>
     </component>
-    <component id="n22_8tz6" name="btnRedo" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="516,542" size="16,14">
+    <component id="n22_8tz6" name="btnRedo" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="517,542" size="16,14">
       <gearIcon controller="ctrlRecordHint" pages="2,3" values="ui://rnqj1l77hbwitg5|ui://rnqj1l77hbwitg5" default="ui://rnqj1l77hbwitg6"/>
       <relation target="n31_hbwi" sidePair="right-right,bottom-bottom"/>
       <Button icon="ui://rnqj1l77hbwitg6"/>
