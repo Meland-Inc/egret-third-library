@@ -403,6 +403,12 @@
     <image id="rjdctjl" name="img_code_dh_5(1).png" path="/B-PlatformImg/"/>
     <image id="rjdctjm" name="img_code_dh_6(1).png" path="/B-PlatformImg/"/>
     <image id="rjdctjn" name="img_code_dh_7(1).png" path="/B-PlatformImg/"/>
+    <component id="vrc4tjo" name="ComKeyTip.xml" path="/newCom/" exported="true"/>
+    <image id="vrc4tjp" name="img_select_keybg.png" path="/newImg2/"/>
+    <image id="vrc4tjq" name="img_select_keybg2.png" path="/newImg2/"/>
+    <component id="vrc4tjr" name="ComPythonIDE.xml" path="/newCom/"/>
+    <image id="rfebtjx" name="btn_cm_xf_1.png" path="/newImg/" exported="true"/>
+    <image id="rfebtjy" name="btn_cm_xf_3.png" path="/newImg/" exported="true"/>
   </resources>
   <publish name="Basics"/>
 </packageDescription>

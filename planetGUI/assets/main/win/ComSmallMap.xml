@@ -6,8 +6,7 @@
     <image id="n19_wdqf" name="bg" src="e46zb7" fileName="img_UI3/img_main_zhezhao_71.png" xy="0,0" size="160,160"/>
     <component id="n14_qv2f" name="mapViewCtnr" src="qv2f5z" fileName="com/SmallMapContainer.xml" xy="3,3" size="154,154"/>
     <image id="n27_wdqf" name="mapEdge" src="wdqfcyick" fileName="img_UI3/img_main_zhezhao_71-1.png" xy="0,0"/>
-    <component id="n3_j0s6" name="comMainPlayer" src="j0s611" fileName="com/comMainPlayerIcon.xml" pkg="k08mtk0r" xy="80,80" touchable="false"/>
-    <text id="n20_wdqf" name="tfLocTitle" xy="12,118" size="54,21" fontSize="12" color="#ffffff" text="场景坐标"/>
+    <text id="n20_wdqf" name="tfLocTitle" xy="12,118" size="53,21" fontSize="12" color="#ffffff" text="场景坐标"/>
     <text id="n21_wdqf" name="tfHeaderInfo" xy="12,134" size="140,18" fontSize="12" color="#ffffff" vars="true" autoSize="none" text="({r=333},  {c=333})"/>
     <loader id="n22_wdqf" name="ladTimeIcon" xy="13,9" size="20,20" url="ui://5hs1fueje46zb4" align="center" vAlign="middle" fill="scaleNoBorder" shrinkOnly="true">
       <gearDisplay controller="ctrlGameMode" pages="0"/>

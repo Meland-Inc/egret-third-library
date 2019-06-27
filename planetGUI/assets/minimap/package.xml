@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="k08mtk0r" jpegQuality="80" compressPNG="true">
   <resources>
-    <component id="p85ho" name="customMark.xml" path="/com/" exported="true"/>
     <component id="p85hp" name="WinSelectMark.xml" path="/win/" exported="true"/>
     <component id="p85hq" name="btnMark.xml" path="/btn/"/>
     <component id="ohl4r" name="btnOperate.xml" path="/btn/"/>
@@ -9,7 +8,7 @@
     <image id="ohl4w" name="img_map_sign_home.png" path="/img/" exported="true"/>
     <component id="j0s611" name="comMainPlayerIcon.xml" path="/com/" exported="true"/>
     <image id="kjpo13" name="img_map_sign_14.png" path="/img/" scale="9grid" scale9grid="12,11,24,22"/>
-    <component id="kjpo16" name="teleportMark.xml" path="/com/" exported="true"/>
+    <component id="kjpo16" name="SpawnPointMark.xml" path="/com/" exported="true"/>
     <image id="jyp41c" name="btn_map_2.png" path="/img/"/>
     <image id="jyp41d" name="btn_map_1.png" path="/img/"/>
     <image id="i9oc1e" name="img_map_sign_15.png" path="/img/"/>
@@ -27,7 +26,7 @@
     <component id="trc221u" name="ComMiniMapCtnr.xml" path="/com/" exported="true"/>
     <component id="trc221v" name="mapRoot.xml" path="/win/"/>
     <component id="trc221w" name="ComMarkLayer.xml" path="/com/" exported="true"/>
-    <component id="trc221x" name="comMark.xml" path="/com/" exported="true"/>
+    <component id="trc221x" name="ComMinimapMark.xml" path="/com/" exported="true"/>
     <component id="trc221y" name="comMarkCtnr.xml" path="/com/"/>
     <image id="ljyy21z" name="img_map_coordinate_1.png" path="/imgNew/" scale="9grid" scale9grid="3,2,5,1"/>
     <image id="ljyy220" name="img_map_coordinate_2.png" path="/imgNew/"/>
@@ -35,7 +34,7 @@
     <component id="eotb222" name="comSelectTips.xml" path="/com/"/>
     <image id="v0n2223" name="img_map_10.png" path="/img/" scale="9grid" scale9grid="29,9,58,18"/>
     <image id="v0n2224" name="img_map_sign_dead.png" path="/img/" exported="true"/>
-    <image id="lsbl225" name="img_map_3.png" path="/img/"/>
+    <image id="lsbl225" name="img_map_3.png" path="/img/" scale="9grid" scale9grid="19,5,38,10"/>
     <image id="lsbl226" name="icon_robot_avatar_1.png" path="/imgNew/" exported="true"/>
     <image id="e7wr227" name="fogWhite0.png" path="/imgNew/" scale="9grid" scale9grid="26,26,52,52"/>
     <image id="e7wr228" name="mapEdge.png" path="/imgNew/" scale="9grid" scale9grid="95,84,926,482"/>
@@ -59,6 +58,8 @@
     <image id="ugid22q" name="icon_map_bj_6_1.png" path="/imgB/"/>
     <image id="ugid22r" name="icon_map_tbk_1.png" path="/imgB/"/>
     <image id="ugid22s" name="icon_map_tbk_2.png" path="/imgB/"/>
+    <component id="jphw22t" name="ComAreaMark.xml" path="/com/" exported="true"/>
+    <component id="jphw22u" name="CustomMark.xml" path="/com/" exported="true"/>
   </resources>
   <publish name="minimap" npot="true"/>
 </packageDescription>
