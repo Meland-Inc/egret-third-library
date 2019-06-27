@@ -19,9 +19,9 @@
       <item title="运算" icon="ui://rnqj1l77hbwitfl" name="operator" selectedIcon="ui://rnqj1l77hbwitfm" controllers="c1,6"/>
       <item title="变量" icon="ui://rnqj1l77hbwitev" name="variable" selectedIcon="ui://rnqj1l77hbwitew" controllers="c1,7"/>
     </list>
-    <component id="n29_8tz6" name="btnAction" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1068,564" size="55,59">
+    <component id="n29_8tz6" name="btnAction" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1069,564" size="55,59">
       <gearIcon controller="ctrlType" pages="1" values="" default="ui://rnqj1l77ilo1tj3"/>
-      <relation target="" sidePair="left-left%,bottom-bottom"/>
+      <relation target="" sidePair="right-right,bottom-bottom"/>
       <Button icon="ui://rnqj1l77ilo1tj3"/>
     </component>
     <component id="n30_nx0y" name="comEditVariate" src="ilo1tj0" fileName="newCom/ComEditVariateB.xml" xy="0,0">
