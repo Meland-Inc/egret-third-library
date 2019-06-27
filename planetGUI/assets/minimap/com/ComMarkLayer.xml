@@ -17,11 +17,11 @@
     <component id="n13_jphw" name="comArea" src="trc221y" fileName="com/comMarkCtnr.xml" xy="0,0" size="0,0">
       <gearDisplay controller="ctrlMapMode" pages="0"/>
     </component>
-    <component id="n11_ljyy" name="comHomeMark" src="trc221x" fileName="com/comMark.xml" xy="568,320" visible="false">
+    <component id="n11_ljyy" name="comHomeMark" src="trc221x" fileName="com/ComMinimapMark.xml" xy="568,320" visible="false">
       <gearDisplay controller="ctrlMapMode" pages="0,2"/>
       <Button title="家"/>
     </component>
-    <component id="n12_lsbl" name="comRobotMark" src="trc221x" fileName="com/comMark.xml" xy="472,324" visible="false">
+    <component id="n12_lsbl" name="comRobotMark" src="trc221x" fileName="com/ComMinimapMark.xml" xy="472,324" visible="false">
       <gearDisplay controller="ctrlMapMode" pages="0"/>
       <Button title="家" icon="ui://k08mtk0rlsbl226"/>
     </component>
