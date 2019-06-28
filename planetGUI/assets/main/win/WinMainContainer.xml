@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkylfh4k" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
-  <controller name="ctrlMapMode" pages="0,normal,1,build,2,quickBuild,3,quickEdit,4,editB" selected="4"/>
+  <controller name="ctrlMapMode" pages="0,normal,1,build,2,quickBuild,3,quickEdit,4,editB,5,buildB" selected="2"/>
   <controller name="ctrlGameMode" pages="1,game,0,lessons,2,creation" selected="1">
     <action type="change_page" fromPage="" toPage="1" objectId="n1_muc9" controller="ctrlGameMode" targetPage="1"/>
     <action type="change_page" fromPage="" toPage="0" objectId="n1_muc9" controller="ctrlGameMode" targetPage="0"/>
@@ -85,8 +85,8 @@
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </component>
     <component id="n70_k177" name="comShortCut" src="uhu6t7w" fileName="Com/ComBuildShortCut.xml" pkg="32ieekgu" xy="475,496">
-      <gearDisplay controller="ctrlMapMode" pages="1,2,3,4"/>
-      <relation target="" sidePair="center-center"/>
+      <gearDisplay controller="ctrlMapMode" pages="1,2,3,4,5"/>
+      <relation target="" sidePair="center-center,bottom-bottom"/>
     </component>
   </displayList>
 </component>
