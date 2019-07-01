@@ -5,9 +5,9 @@
     <component id="n27_hoex" name="comCodeblocksPool" src="hlththn" fileName="newCom/CodeblockPoolB.xml" xy="427,0" size="630,640" restrictSize="0,700,0,0" blend="none" controller="ctrlGameModel,1">
       <relation target="" sidePair="right-right,bottomext-bottom"/>
     </component>
-    <image id="n28_8tz6" name="imgListBG" src="nl0rcyicg" fileName="imgB/img_cm_dk_2.png" pkg="te1gxawo" xy="1052,-5" size="85,651">
+    <loader id="n28_8tz6" name="imgListBG" xy="1052,-5" size="85,651" url="ui://te1gxawonl0rcyicg" fill="scaleFree">
       <relation target="" sidePair="bottomext-bottom,right-right"/>
-    </image>
+    </loader>
     <list id="n25_hoex" name="lstCategory" xy="1056,14" size="84,561" defaultItem="ui://rnqj1l77hbwitg9" align="center">
       <relation target="" sidePair="bottomext-bottom,right-right"/>
       <item title="事件" icon="ui://rnqj1l77hbwitfb" name="event" selectedIcon="ui://rnqj1l77hbwitfc" controllers="c1,0"/>
@@ -20,6 +20,7 @@
       <item title="变量" icon="ui://rnqj1l77hbwitev" name="variable" selectedIcon="ui://rnqj1l77hbwitew" controllers="c1,7"/>
     </list>
     <component id="n29_8tz6" name="btnAction" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1069,564" size="55,59">
+      <gearDisplay controller="ctrlType" pages="0"/>
       <gearIcon controller="ctrlType" pages="1" values="" default="ui://rnqj1l77ilo1tj3"/>
       <relation target="" sidePair="right-right,bottom-bottom"/>
       <Button icon="ui://rnqj1l77ilo1tj3"/>
