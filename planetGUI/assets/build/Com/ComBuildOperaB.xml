@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="210,60" designImage="ui://i25v0ebkr0y94b" designImageOffsetX="-224" designImageOffsetY="-570">
-  <controller name="ctrlBuild" exported="true" pages="0,add,1,edit,2,editNotDel,3,editOther,4,editNotMove,5,notcode" selected="0"/>
+  <controller name="ctrlBuild" exported="true" pages="0,add,1,edit,2,editNotDel,3,editOther,4,editNotMove,5,notcode" selected="2"/>
   <displayList>
-    <image id="n0_r0y9" name="bg" src="r0y9t78" fileName="img_UI3/b/ide/img_ide_tck_1.png" xy="28,0" size="166,60">
-      <gearXY controller="ctrlBuild" pages="0,2,3,5" values="28,0|15,0|80,0|18,0" default="0,0"/>
-      <gearSize controller="ctrlBuild" pages="0,1,2,3,5" values="166,60,1,1|209,60,1,1|180,60,1,1|50,60,1,1|150,60,1,1" default="209,60,1,1"/>
+    <image id="n0_r0y9" name="bg" src="r0y9t78" fileName="img_UI3/b/ide/img_ide_tck_1.png" xy="44,0" size="120,60">
+      <gearXY controller="ctrlBuild" pages="0,2,3,5" values="28,0|44,0|80,0|18,0" default="0,0"/>
+      <gearSize controller="ctrlBuild" pages="0,1,2,3,5" values="166,60,1,1|209,60,1,1|120,60,1,1|50,60,1,1|150,60,1,1" default="209,60,1,1"/>
     </image>
-    <image id="n11_r0y9" name="line1" src="r0y9t79" fileName="img_UI3/b/ide/img_ide_tck_2.png" xy="76,10">
+    <image id="n11_r0y9" name="line1" src="r0y9t79" fileName="img_UI3/b/ide/img_ide_tck_2.png" xy="89,10">
       <gearDisplay controller="ctrlBuild" pages="0,1,2,4,5"/>
-      <gearXY controller="ctrlBuild" pages="0,1,4,5" values="76,10|42,10|42,10|57,11" default="60,10"/>
+      <gearXY controller="ctrlBuild" pages="0,1,2,4,5" values="76,10|42,10|89,10|42,10|57,11" default="60,10"/>
     </image>
-    <image id="n9_r0y9" name="line2" src="r0y9t79" fileName="img_UI3/b/ide/img_ide_tck_2.png" xy="130,10">
-      <gearDisplay controller="ctrlBuild" pages="0,1,2,4,5"/>
+    <image id="n9_r0y9" name="line2" src="r0y9t79" fileName="img_UI3/b/ide/img_ide_tck_2.png" xy="122,10">
+      <gearDisplay controller="ctrlBuild" pages="0,1,4,5"/>
       <gearXY controller="ctrlBuild" pages="0,1,2,4,5" values="130,10|88,10|122,10|88,10|103,11" default="42,10"/>
     </image>
     <image id="n10_r0y9" name="line3" src="r0y9t79" fileName="img_UI3/b/ide/img_ide_tck_2.png" xy="88,10">
@@ -32,19 +32,19 @@
       <gearLook controller="ctrlBuild" pages="4" values="1,0,0,0" default="1,0,0,1"/>
       <Button title="删除" icon="ui://32ieekgur0y9t6l" selectedIcon="ui://32ieekgur0y9t6k"/>
     </component>
-    <component id="n12_r0y9" name="btnMirror" src="r0y9t7m" fileName="btn/BtnOpera.xml" xy="37,6" size="33,52">
+    <component id="n12_r0y9" name="btnMirror" src="r0y9t7m" fileName="btn/BtnOpera.xml" xy="51,4" size="33,52">
       <gearDisplay controller="ctrlBuild" pages="0,1,2,4,5"/>
-      <gearXY controller="ctrlBuild" pages="0,2,5" values="37,6|22,4|64,5" default="49,4"/>
+      <gearXY controller="ctrlBuild" pages="0,2,5" values="37,6|51,4|64,5" default="49,4"/>
       <gearLook controller="ctrlBuild" pages="0,4" values="1,0,0,1|1,0,0,0" default="1,0,0,1"/>
       <Button title="镜像" icon="ui://32ieekgur0y9t6i"/>
     </component>
-    <component id="n14_r0y9" name="btnAttr" src="r0y9t7m" fileName="btn/BtnOpera.xml" xy="89,5">
+    <component id="n14_r0y9" name="btnAttr" src="r0y9t7m" fileName="btn/BtnOpera.xml" xy="95,5">
       <gearDisplay controller="ctrlBuild" pages="1,2,4,5"/>
-      <gearXY controller="ctrlBuild" pages="2,5" values="60,5|104,6" default="89,5"/>
+      <gearXY controller="ctrlBuild" pages="2,5" values="95,5|104,6" default="89,5"/>
       <Button title="编辑属性" icon="ui://32ieekgur0y9t6j"/>
     </component>
-    <component id="n15_r0y9" name="btnCoding" src="r0y9t7m" fileName="btn/BtnOpera.xml" xy="149,5">
-      <gearDisplay controller="ctrlBuild" pages="1,2,4"/>
+    <component id="n15_r0y9" name="btnCoding" src="r0y9t7m" fileName="btn/BtnOpera.xml" xy="125,5">
+      <gearDisplay controller="ctrlBuild" pages="1,4"/>
       <gearXY controller="ctrlBuild" pages="2,4,5" values="125,5|149,5|164,6" default="149,5"/>
       <Button title="编辑代码" icon="ui://32ieekgur0y9t6m"/>
     </component>

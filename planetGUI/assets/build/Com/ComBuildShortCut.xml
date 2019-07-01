@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="186,67" opaque="false" extention="Button" designImage="ui://i25v0ebkuhu64p" designImageAlpha="0">
-  <controller name="ctrlMode" pages="0,build,1,edit" selected="0"/>
+  <controller name="ctrlMode" pages="0,build,1,edit,2,editNotDel" selected="0"/>
   <displayList>
     <component id="n8_k177" name="btnR" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="30,0">
-      <gearXY controller="ctrlMode" pages="0,1" values="30,0|0,0"/>
+      <gearXY controller="ctrlMode" pages="0,1" values="30,0|0,0" default="30,0"/>
     </component>
     <component id="n9_k177" name="btnEsc" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="102,0">
-      <gearXY controller="ctrlMode" pages="0,1" values="102,0|65,0"/>
+      <gearXY controller="ctrlMode" pages="0,1" values="102,0|65,0" default="102,0"/>
       <Button title="Esc" icon="ui://32ieekguuhu6t80"/>
     </component>
     <component id="n10_k177" name="btnDelete" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="130,1">
