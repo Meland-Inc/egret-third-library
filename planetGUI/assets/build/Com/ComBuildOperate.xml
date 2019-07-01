@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="370,99" designImage="ui://i25v0ebkdf6n3m" designImageOffsetX="-220" designImageOffsetY="-540">
-  <controller name="ctrlBuild" exported="true" pages="0,add,1,edit,2,editNotDel,3,editOther,4,editNotMove,5,notcode" selected="5"/>
+  <controller name="ctrlBuild" exported="true" pages="0,add,1,edit,2,editNotDel,3,editOther,4,editNotMove,5,notcode" selected="2"/>
   <displayList>
-    <image id="n47_py50" name="bg" src="df6n59" fileName="img_UI3/ide/img_ide_9.png" xy="45,0" size="284,99">
-      <gearXY controller="ctrlBuild" pages="1,2,3,4" values="0,0|45,0|135,0|0,0" default="45,0"/>
-      <gearSize controller="ctrlBuild" pages="0,1,2,3,4,5" values="284,99,1,1|370,99,1,1|284,99,1,1|100,99,1,1|370,99,1,1|284,99,1,1"/>
+    <image id="n47_py50" name="bg" src="df6n59" fileName="img_UI3/ide/img_ide_9.png" xy="80,0" size="200,99">
+      <gearXY controller="ctrlBuild" pages="1,2,3,4" values="0,0|80,0|135,0|0,0" default="45,0"/>
+      <gearSize controller="ctrlBuild" pages="0,1,2,3,4,5" values="284,99,1,1|370,99,1,1|200,99,1,1|100,99,1,1|370,99,1,1|284,99,1,1"/>
     </image>
-    <component id="n46_py50" name="btnMirror" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="150,20" size="56,69">
+    <component id="n46_py50" name="btnMirror" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="95,20" size="56,69">
       <gearDisplay controller="ctrlBuild" pages="0,1,2,4,5"/>
-      <gearXY controller="ctrlBuild" pages="1,2,4,5" values="89,21|60,20|89,21|150,20" default="158,20"/>
+      <gearXY controller="ctrlBuild" pages="1,2,4,5" values="89,21|95,20|89,21|150,20" default="158,20"/>
       <gearLook controller="ctrlBuild" pages="4" values="1,0,1,0" default="1,0,0,1"/>
       <Button icon="ui://32ieekgudf6n4y"/>
     </component>
@@ -20,19 +20,19 @@
       <gearDisplay controller="ctrlBuild" pages="0"/>
       <Button icon="ui://32ieekgudf6n4x"/>
     </component>
-    <component id="n51_p6hg" name="btnDelete" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="80,24" size="48,65">
+    <component id="n51_p6hg" name="btnDelete" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="24,24" size="48,65">
       <gearDisplay controller="ctrlBuild" pages="1,3,4,5"/>
       <gearXY controller="ctrlBuild" pages="3,5" values="161,24|80,24" default="24,24"/>
       <gearLook controller="ctrlBuild" pages="4" values="1,0,1,0" default="1,0,0,1"/>
       <Button icon="ui://32ieekgudf6n4z"/>
     </component>
-    <component id="n52_p6hg" name="btnAttr" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="222,17" size="88,72">
+    <component id="n52_p6hg" name="btnAttr" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="160,17" size="88,72">
       <gearDisplay controller="ctrlBuild" pages="1,2,4,5"/>
-      <gearXY controller="ctrlBuild" pages="1,4,5" values="166,17|166,17|222,17" default="125,17"/>
+      <gearXY controller="ctrlBuild" pages="1,2,4,5" values="166,17|160,17|166,17|222,17" default="125,17"/>
       <Button icon="ui://32ieekgudf6n50" page="0"/>
     </component>
     <component id="n53_p6hg" name="btnCoding" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="225,17" size="88,72">
-      <gearDisplay controller="ctrlBuild" pages="1,2,4"/>
+      <gearDisplay controller="ctrlBuild" pages="1,4"/>
       <gearXY controller="ctrlBuild" pages="1,4" values="257,17|257,17" default="225,17"/>
       <Button icon="ui://32ieekgudf6n51"/>
     </component>
