@@ -12019,6 +12019,10 @@ declare namespace egret {
          */
         static default_textColor: number;
         /**
+         * 当前焦点所在输入文本 没有焦点时为null
+         */
+        static curFocusInput: TextField;
+        /**
          * @version Egret 2.4
          * @platform Web,Native
          */
