@@ -52,5 +52,8 @@
     <component id="n27_ilo1" name="comDustbin" src="ilo1tix" fileName="newCom/ComDustbin.xml" xy="850,28" size="122,124" touchable="false" controller="dustbinState,2">
       <relation target="" sidePair="top-top,right-right"/>
     </component>
+    <component id="n28_gllu" name="comEditVariate" src="p3g7a9" fileName="newCom/ComEditVariate.xml" xy="0,0" size="1136,640">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
   </displayList>
 </component>

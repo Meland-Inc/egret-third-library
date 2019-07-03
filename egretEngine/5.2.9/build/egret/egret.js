@@ -19028,6 +19028,7 @@ var egret;
             //不再显示竖线，并且输入框显示最开始
             if (!this._isFocus) {
                 this._isFocus = true;
+                egret.TextField.curFocusInput = this._text;
                 if (!event["showing"]) {
                     this._text.$setIsTyping(true);
                 }
@@ -19043,6 +19044,7 @@ var egret;
             if (this._isFocus) {
                 //不再显示竖线，并且输入框显示最开始
                 this._isFocus = false;
+                egret.TextField.curFocusInput = null;
                 this.tempStage.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onStageDownHandler, this);
                 this._text.$setIsTyping(false);
                 //失去焦点后调用
