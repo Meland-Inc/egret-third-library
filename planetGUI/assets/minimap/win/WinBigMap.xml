@@ -4,7 +4,7 @@
   <controller name="ctrlMarkOperate" pages="0,normal,1,selectMark,2,puttingMark,3,deleteMark,4,editMarkName" selected="0"/>
   <displayList>
     <component id="n35_trc2" name="comMap" src="trc221u" fileName="com/ComMiniMapCtnr.xml" xy="0,57" size="1136,583" hideByEditor="true">
-      <relation target="" sidePair="width-width,height-height"/>
+      <relation target="" sidePair="width-width,bottomext-bottom"/>
       <relation target="" sidePair="top-top"/>
     </component>
     <image id="n81_ljyy" name="n81" src="ljyy21z" fileName="imgNew/img_map_coordinate_1.png" xy="0,322" size="515,8" group="n86_ljyy" alpha="0.8">
