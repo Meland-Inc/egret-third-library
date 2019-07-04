@@ -11736,6 +11736,7 @@ declare namespace egret {
          * @param event
          */
         private updateTextHandler(event);
+        private onClickInput(event);
         /**
          * @private
          *
@@ -11823,6 +11824,7 @@ declare namespace egret {
          *
          */
         $onBlur(): void;
+        $getFocusIndex(): number;
     }
     /**
      * @version Egret 2.4
@@ -12066,6 +12068,11 @@ declare namespace egret {
          * 当前焦点所在输入文本 没有焦点时为null
          */
         static curFocusInput: TextField;
+        /**
+         * ide模式，由于dom的input不支持富文本，所以需要特殊处理
+         * 该模式下，隐藏input，显示egret的textfield，并监听各种事件
+         */
+        isIDEMode: boolean;
         /**
          * @version Egret 2.4
          * @platform Web,Native
@@ -12768,6 +12775,8 @@ declare namespace egret {
         private addEvent();
         private removeEvent();
         private onTapHandler(e);
+        setIDEMode(flag: boolean): void;
+        getFocusIndex(): number;
     }
     interface TextField {
         addEventListener<Z>(type: "link", listener: (this: Z, e: TextEvent) => void, thisObject: Z, useCapture?: boolean, priority?: number): any;

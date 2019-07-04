@@ -18973,6 +18973,7 @@ var egret;
             this.tempStage = this._text.stage;
             this.stageText.$addToStage();
             this.stageText.addEventListener("updateText", this.updateTextHandler, this);
+            this.stageText.addEventListener("onclickinput", this.onClickInput, this);
             this._text.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onMouseDownHandler, this);
             this.stageText.addEventListener("blur", this.blurHandler, this);
             this.stageText.addEventListener("focus", this.focusHandler, this);
@@ -18991,6 +18992,7 @@ var egret;
             }
             this.stageText.$removeFromStage();
             this.stageText.removeEventListener("updateText", this.updateTextHandler, this);
+            this.stageText.removeEventListener("onclickinput", this.onClickInput, this);
             this._text.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onMouseDownHandler, this);
             this.tempStage.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onStageDownHandler, this);
             this.stageText.removeEventListener("blur", this.blurHandler, this);
@@ -19120,6 +19122,9 @@ var egret;
             this.resetText();
             //抛出change事件
             this._text.dispatchEvent(new egret.Event(egret.Event.CHANGE, true));
+        };
+        InputController.prototype.onClickInput = function (event) {
+            this._text.dispatchEvent(new egret.Event("onclickinput", true, false, event.data));
         };
         /**
          * @private
@@ -19273,6 +19278,11 @@ var egret;
          */
         function TextField() {
             var _this = _super.call(this) || this;
+            /**
+             * ide模式，由于dom的input不支持富文本，所以需要特殊处理
+             * 该模式下，隐藏input，显示egret的textfield，并监听各种事件
+             */
+            _this.isIDEMode = false;
             _this.$inputEnabled = false;
             /**
              * @private
@@ -21121,8 +21131,11 @@ var egret;
          * @private
          */
         TextField.prototype.$setIsTyping = function (value) {
+            return;
             this.$isTyping = value;
-            this.$invalidateTextField();
+            if (!this.isIDEMode) {
+                this.$invalidateTextField();
+            }
             if (egret.nativeRender) {
                 this.$nativeDisplayObject.setIsTyping(value);
             }
@@ -21212,6 +21225,17 @@ var egret;
                 else {
                     open(style.href, style.target || "_blank");
                 }
+            }
+        };
+        TextField.prototype.setIDEMode = function (flag) {
+            this.isIDEMode = flag;
+        };
+        TextField.prototype.getFocusIndex = function () {
+            if (this.inputUtils && this.inputUtils.stageText) {
+                return this.inputUtils.stageText.$getFocusIndex();
+            }
+            else {
+                return 0;
             }
         };
         /**
