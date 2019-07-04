@@ -10,8 +10,9 @@
       <relation target="" sidePair="right-right,top-top"/>
       <Button icon="ui://te1gxawonl0rcyica"/>
     </component>
-    <text id="n8_p3g7" name="tfValue" xy="-180,123" size="761,42" input="true" prompt="请输入变量名称" maxLength="20" fontSize="18" color="#ffffff" align="center" autoSize="none" singleLine="true" autoClearText="true" text="一二三四五一二三四五一二三四五一二三四五">
+    <text id="n8_p3g7" name="tfValue" xy="0,123" size="400,42" input="true" prompt="请输入变量名称" maxLength="20" fontSize="18" color="#ffffff" align="center" autoSize="none" autoClearText="true" text="一二三四五一二三四五一二三四五一二三四五">
       <relation target="" sidePair="center-center,top-top"/>
+      <relation target="" sidePair="width-width"/>
     </text>
     <component id="n4_p3g7" name="btnGlobal" src="x8ztab" fileName="newBtn/btnVariateScope.xml" xy="68,198" size="100,30">
       <gearDisplay controller="ctrlEditType" pages="0"/>
