@@ -2327,6 +2327,15 @@ namespace egret {
         public setIDEMode(flag: boolean) {
             this.isIDEMode = flag;
         }
+
+        public getFocusIndex() {
+            if (this.inputUtils && this.inputUtils.stageText) {
+                return this.inputUtils.stageText.$getFocusIndex();
+            } else {
+                return 0;
+            }
+
+        }
     }
 
     export interface TextField {
