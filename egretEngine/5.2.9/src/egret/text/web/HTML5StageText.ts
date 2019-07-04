@@ -92,6 +92,9 @@ namespace egret.web {
             this.htmlInput = egret.web.$getTextAdapter(this.$textfield);
         }
 
+        public $getFocusIndex(): number {
+            return this.inputElement ? this.inputElement.selectionStart : 0;
+        }
         /**
          * @private
          * 
