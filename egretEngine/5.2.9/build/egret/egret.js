@@ -21131,13 +21131,12 @@ var egret;
          * @private
          */
         TextField.prototype.$setIsTyping = function (value) {
-            return;
-            this.$isTyping = value;
             if (!this.isIDEMode) {
+                this.$isTyping = value;
                 this.$invalidateTextField();
-            }
-            if (egret.nativeRender) {
-                this.$nativeDisplayObject.setIsTyping(value);
+                if (egret.nativeRender) {
+                    this.$nativeDisplayObject.setIsTyping(value);
+                }
             }
         };
         /**

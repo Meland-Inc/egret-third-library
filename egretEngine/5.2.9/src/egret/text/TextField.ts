@@ -2211,13 +2211,12 @@ namespace egret {
          * @private
          */
         public $setIsTyping(value: boolean): void {
-            return
-            this.$isTyping = value;
             if (!this.isIDEMode) {
+                this.$isTyping = value;
                 this.$invalidateTextField();
-            }
-            if (nativeRender) {
-                this.$nativeDisplayObject.setIsTyping(value);
+                if (nativeRender) {
+                    this.$nativeDisplayObject.setIsTyping(value);
+                }
             }
         }
 
