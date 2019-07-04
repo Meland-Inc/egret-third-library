@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="52,52" extention="Button">
   <controller name="button" pages="0,up,1,down" selected="0"/>
-  <controller name="ctrlData" pages="0,none,1,item" selected="0"/>
+  <controller name="ctrlData" pages="0,none,1,item" selected="0">
+    <action type="change_page" fromPage="" toPage="0" controller="button" targetPage="0"/>
+  </controller>
   <displayList>
     <image id="n3_ghyn" name="n3" src="r0y9t7f" fileName="img_UI3/b/ide/img_ide_wp_3.png" xy="0,0">
       <gearDisplay controller="ctrlData" pages="0"/>
