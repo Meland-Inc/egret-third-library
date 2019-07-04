@@ -282,7 +282,11 @@ namespace egret {
          * 当前焦点所在输入文本 没有焦点时为null
          */
         public static curFocusInput: TextField;
-
+        /**
+         * ide模式，由于dom的input不支持富文本，所以需要特殊处理
+         * 该模式下，隐藏input，显示egret的textfield，并监听各种事件
+         */
+        public isIDEMode: boolean = false;
         /**
          * @version Egret 2.4
          * @platform Web,Native
@@ -2204,8 +2208,11 @@ namespace egret {
          * @private
          */
         public $setIsTyping(value: boolean): void {
+            return
             this.$isTyping = value;
-            this.$invalidateTextField();
+            if (!this.isIDEMode) {
+                this.$invalidateTextField();
+            }
             if (nativeRender) {
                 this.$nativeDisplayObject.setIsTyping(value);
             }
@@ -2315,6 +2322,10 @@ namespace egret {
                     open(style.href, style.target || "_blank");
                 }
             }
+        }
+
+        public setIDEMode(flag: boolean) {
+            this.isIDEMode = flag;
         }
     }
 

@@ -334,7 +334,24 @@ namespace egret.web {
                 this.executeShow();
 
                 this.dispatchEvent(new egret.Event("focus"));
+            } else if (this.$textfield.isIDEMode) {
+                this.dispatchEvent(new egret.Event("focus"));
             }
+        }
+        /**
+         * @private
+         * 
+         */
+
+        public _onClickInput(): void {
+            let self = this;
+            window.setTimeout(function () {
+                if (self.inputElement) {
+                    let e = new egret.Event("onclickinput");
+                    e.data = self.inputElement.selectionStart
+                    self.dispatchEvent(e);
+                }
+            }, 0);
         }
 
         /**
@@ -631,6 +648,13 @@ namespace egret.web {
                     self._stageText._onInput();
                 }
             };
+
+            inputElement.onclick = function () {
+
+                if (self._stageText) {
+                    self._stageText._onClickInput();
+                }
+            };
         }
 
         /**
@@ -641,9 +665,11 @@ namespace egret.web {
             let self = this;
             let inputElement = self._inputElement;
             //隐藏输入框
-            egret.$callAsync(function () {
-                inputElement.style.opacity = 1;
-            }, self);
+            if (!this._stageText.$textfield.isIDEMode) {
+                egret.$callAsync(function () {
+                    inputElement.style.opacity = 1;
+                }, self);
+            }
         }
 
         /**
