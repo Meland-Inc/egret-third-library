@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebktxgs4d" designImageAlpha="39" designImageLayer="1" adaptationTest="FitSize">
-  <controller name="sort" pages="0,body,1,face,2,talent" selected="0"/>
+  <controller name="sort" pages="0,body,1,face,2,talent" selected="1"/>
   <displayList>
     <component id="n76_txgs" name="comBg" src="txgscyid8" fileName="com/comCommonWinBg.xml" pkg="te1gxawo" xy="0,0">
       <relation target="" sidePair="width-width,height-height"/>
       <Label title="角色创建" icon="ui://0n4pg0optxgs5y"/>
     </component>
     <component id="n13_trkw" name="btnBody" src="txgscyida" fileName="btn/rbtnCommonTab.xml" pkg="te1gxawo" xy="0,83">
-      <Button checked="true" title="身体" controller="sort" page="0"/>
+      <Button title="身体" controller="sort" page="0"/>
     </component>
     <component id="n15_trkw" name="btnFace" src="txgscyida" fileName="btn/rbtnCommonTab.xml" pkg="te1gxawo" xy="0,143">
-      <Button title="脸部" controller="sort" page="1"/>
+      <Button checked="true" title="脸部" controller="sort" page="1"/>
     </component>
     <component id="n14_trkw" name="btnTalent" src="txgscyida" fileName="btn/rbtnCommonTab.xml" pkg="te1gxawo" xy="0,203">
       <Button title="特质" controller="sort" page="2"/>
     </component>
-    <list id="n19_trkw" name="lstBodySubclass" xy="139,150" size="111,275" lineGap="32" defaultItem="ui://0n4pg0optrkw3o">
+    <list id="n19_trkw" name="lstBodySubclass" xy="139,150" size="111,372" lineGap="32" defaultItem="ui://0n4pg0optrkw3o">
       <gearDisplay controller="sort" pages="0"/>
       <relation target="" sidePair="left-left,middle-middle"/>
       <item title="头部" icon="ui://0n4pg0optxgs68" name="1" selectedIcon="ui://0n4pg0optxgs67"/>
       <item title="上衣" icon="ui://0n4pg0optxgs5p" name="2" selectedIcon="ui://0n4pg0optxgs5o"/>
       <item title="手套" icon="ui://0n4pg0optxgs66" name="3" selectedIcon="ui://0n4pg0optxgs65"/>
       <item title="裤子" icon="ui://0n4pg0optxgs60" name="4" selectedIcon="ui://0n4pg0optxgs5z"/>
+      <item title="鞋子" icon="ui://0n4pg0opemc46d" name="14" selectedIcon="ui://0n4pg0opemc46c"/>
     </list>
     <list id="n28_jcdq" name="lstFaceSubclass" xy="139,150" size="111,275" lineGap="32" defaultItem="ui://0n4pg0optrkw3o">
       <gearDisplay controller="sort" pages="1"/>
@@ -97,7 +98,7 @@
     <component id="n30_tm1s" name="btnRandomAvatar" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="744,140" size="40,40" group="n47_tm1s">
       <Button icon="ui://0n4pg0optxgs5v"/>
     </component>
-    <text id="n46_tm1s" name="n46" xy="785,150" size="61,23" group="n47_tm1s" fontSize="14" color="#365989" vAlign="middle" singleLine="true" text="随机样貌"/>
+    <text id="n46_tm1s" name="n46" xy="785,150" size="61,20" group="n47_tm1s" fontSize="14" color="#365989" vAlign="middle" singleLine="true" text="随机样貌"/>
     <group id="n47_tm1s" name="randomAvatar" xy="744,140" size="102,40" advanced="true" collapsed="true">
       <relation target="" sidePair="center-center"/>
     </group>
