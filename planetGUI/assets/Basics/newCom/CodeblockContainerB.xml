@@ -67,12 +67,14 @@
       <relation target="n9_j7co" sidePair="center-center,top-top"/>
     </image>
     <component id="n38_czor" name="btnToScratch" src="oliri6q" fileName="btn/rbtnScale.xml" pkg="te1gxawo" xy="221,12" size="90,28">
+      <gearIcon controller="ctrlShowType" pages="1" values="ui://rnqj1l77gg8mtgp" default=""/>
       <relation target="n39_czor" sidePair="top-top,left-left"/>
-      <Button checked="true" title="Scratch" titleColor="#ffffff" titleFontSize="14" selectedIcon="ui://rnqj1l77gg8mtgp" controller="ctrlShowType" page="0"/>
+      <Button checked="true" title="Scratch" titleColor="#ffffff" titleFontSize="14" controller="ctrlShowType" page="0"/>
     </component>
     <component id="n40_czor" name="btnToPython" src="oliri6q" fileName="btn/rbtnScale.xml" pkg="te1gxawo" xy="311,12" size="90,28">
+      <gearIcon controller="ctrlShowType" pages="0" values="ui://rnqj1l77hbwitfv" default=""/>
       <relation target="n39_czor" sidePair="right-right,top-top"/>
-      <Button title="python" titleColor="#ffffff" titleFontSize="14" selectedIcon="ui://rnqj1l77hbwitfv" controller="ctrlShowType" page="1"/>
+      <Button title="python" titleColor="#ffffff" titleFontSize="14" icon="ui://rnqj1l77hbwitfv" controller="ctrlShowType" page="1"/>
     </component>
   </displayList>
 </component>
