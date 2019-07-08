@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="186,67" opaque="false" extention="Button" designImage="ui://i25v0ebkuhu64p" designImageAlpha="0">
-  <controller name="ctrlMode" pages="0,build,1,edit,2,editNotDel" selected="0"/>
+<component size="316,67" opaque="false" extention="Button" designImage="ui://i25v0ebkuhu64p" designImageAlpha="0">
+  <controller name="ctrlMode" pages="0,build,1,edit,2,editNotDel" selected="1"/>
   <displayList>
-    <component id="n8_k177" name="btnR" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="30,0">
-      <gearXY controller="ctrlMode" pages="0,1" values="30,0|0,0" default="30,0"/>
+    <component id="n8_k177" name="btnR" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="0,0">
+      <gearXY controller="ctrlMode" pages="0,1,2" values="94,0|0,0|25,0"/>
     </component>
-    <component id="n9_k177" name="btnEsc" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="102,0">
-      <gearXY controller="ctrlMode" pages="0,1" values="102,0|65,0" default="102,0"/>
+    <component id="n9_k177" name="btnEsc" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="65,0">
+      <gearXY controller="ctrlMode" pages="0,1,2" values="166,0|65,0|95,0"/>
       <Button title="Esc" icon="ui://32ieekguuhu6t80"/>
     </component>
     <component id="n10_k177" name="btnDelete" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="130,1">
       <gearDisplay controller="ctrlMode" pages="1"/>
       <Button title="Delete" icon="ui://32ieekgur0y9t6l"/>
+    </component>
+    <component id="n11_xvfa" name="btnAttr" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="195,1">
+      <gearDisplay controller="ctrlMode" pages="1,2"/>
+      <gearXY controller="ctrlMode" pages="1" values="195,1" default="165,1"/>
+      <Button title="Z" icon="ui://32ieekguxvfat84"/>
+    </component>
+    <component id="n12_xvfa" name="btnCopy" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="260,1">
+      <gearDisplay controller="ctrlMode" pages="1,2"/>
+      <gearXY controller="ctrlMode" pages="1" values="260,1" default="235,1"/>
+      <Button title="V" icon="ui://32ieekguxvfat85"/>
     </component>
   </displayList>
   <Button/>
