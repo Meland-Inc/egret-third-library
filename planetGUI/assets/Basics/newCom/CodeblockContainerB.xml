@@ -10,6 +10,7 @@
       <relation target="" sidePair="height-height"/>
     </image>
     <component id="n9_j7co" name="mainContainer" src="czortgg" fileName="newCom/comMainContainerB.xml" xy="48,0" size="514,591">
+      <gearDisplay controller="ctrlShowType" pages="0"/>
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
       <relation target="n30_hbwi" sidePair="left-left"/>
     </component>
@@ -75,6 +76,9 @@
       <gearIcon controller="ctrlShowType" pages="0" values="ui://rnqj1l77hbwitfv" default=""/>
       <relation target="n39_czor" sidePair="right-right,top-top"/>
       <Button title="python" titleColor="#ffffff" titleFontSize="14" icon="ui://rnqj1l77hbwitfv" controller="ctrlShowType" page="1"/>
+    </component>
+    <component id="n43_sjjo" name="ideContainer" src="sjjotk1" fileName="newCom/comIDEContainerB.xml" xy="49,53" size="514,538">
+      <gearDisplay controller="ctrlShowType" pages="1"/>
     </component>
   </displayList>
 </component>
