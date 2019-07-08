@@ -984,13 +984,13 @@ var eui;
 /// <reference path="Validator.ts" />
 var eui;
 (function (eui) {
-    function getAssets(source, callback) {
+    function getAssets(source, callback, thisObject) {
         var adapter = egret.getImplementation("eui.IAssetAdapter");
         if (!adapter) {
             adapter = new eui.DefaultAssetAdapter();
         }
         adapter.getAsset(source, function (content) {
-            callback(content);
+            callback.call(thisObject, content);
         }, this);
     }
     eui.getAssets = getAssets;
@@ -4113,7 +4113,7 @@ var eui;
                     this.itemUpdatedHandler(event.items[0], event.location);
                     break;
                 case eui.CollectionEventKind.RESET:
-                case eui.CollectionEventKind.REFRESH:
+                case eui.CollectionEventKind.REFRESH: {
                     if (this.$layout && this.$layout.$useVirtualLayout) {
                         var indexToRenderer = this.$indexToRenderer;
                         var keys = Object.keys(indexToRenderer);
@@ -4126,6 +4126,11 @@ var eui;
                     this.$dataProviderChanged = true;
                     this.invalidateProperties();
                     break;
+                }
+                default: {
+                    egret.$warn(2204, event.kind);
+                    break;
+                }
             }
             this.invalidateSize();
             this.invalidateDisplayList();
@@ -10464,7 +10469,7 @@ var eui;
                 if (value == this.$fillMode) {
                     return;
                 }
-                this.$fillMode = value;
+                _super.prototype.$setFillMode.call(this, value);
                 this.invalidateDisplayList();
             },
             enumerable: true,
@@ -10528,24 +10533,23 @@ var eui;
          * 解析source
          */
         Image.prototype.parseSource = function () {
-            var _this = this;
             this.sourceChanged = false;
             var source = this._source;
             if (source && typeof source == "string") {
                 eui.getAssets(this._source, function (data) {
-                    if (source !== _this._source)
+                    if (source !== this._source)
                         return;
                     if (!egret.is(data, "egret.Texture")) {
                         return;
                     }
-                    _this.$setTexture(data);
+                    this.$setTexture(data);
                     if (data) {
-                        _this.dispatchEventWith(egret.Event.COMPLETE);
+                        this.dispatchEventWith(egret.Event.COMPLETE);
                     }
                     else if (true) {
                         egret.$warn(2301, source);
                     }
-                });
+                }, this);
             }
             else {
                 this.$setTexture(source);
@@ -14652,7 +14656,10 @@ var eui;
          * @param scrollPos
          */
         Scroller.prototype.horizontalUpdateHandler = function (scrollPos) {
-            this.$Scroller[10 /* viewport */].scrollH = scrollPos;
+            var viewport = this.$Scroller[10 /* viewport */];
+            if (viewport) {
+                viewport.scrollH = scrollPos;
+            }
             this.dispatchEventWith(egret.Event.CHANGE);
         };
         /**
@@ -14661,7 +14668,10 @@ var eui;
          * @param scrollPos
          */
         Scroller.prototype.verticalUpdateHandler = function (scrollPos) {
-            this.$Scroller[10 /* viewport */].scrollV = scrollPos;
+            var viewport = this.$Scroller[10 /* viewport */];
+            if (viewport) {
+                viewport.scrollV = scrollPos;
+            }
             this.dispatchEventWith(egret.Event.CHANGE);
         };
         /**
@@ -17739,6 +17749,10 @@ var eui;
              * @private
              */
             _this.$isFocusIn = false;
+            /**
+             * @private
+             */
+            _this.$isTouchCancle = false;
             _this.initializeUIValues();
             _this.type = egret.TextFieldType.INPUT;
             _this.$EditableText = {
@@ -17822,6 +17836,8 @@ var eui;
             eui.sys.UIComponentImpl.prototype["$onAddToStage"].call(this, stage, nestLevel);
             this.addEventListener(egret.FocusEvent.FOCUS_IN, this.onfocusIn, this);
             this.addEventListener(egret.FocusEvent.FOCUS_OUT, this.onfocusOut, this);
+            this.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onTouchBegin, this);
+            this.addEventListener(egret.TouchEvent.TOUCH_CANCEL, this.onTouchCancle, this);
         };
         /**
          * @private
@@ -17831,6 +17847,8 @@ var eui;
             _super.prototype.$onRemoveFromStage.call(this);
             this.removeEventListener(egret.FocusEvent.FOCUS_IN, this.onfocusIn, this);
             this.removeEventListener(egret.FocusEvent.FOCUS_OUT, this.onfocusOut, this);
+            this.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onTouchBegin, this);
+            this.removeEventListener(egret.TouchEvent.TOUCH_CANCEL, this.onTouchCancle, this);
         };
         Object.defineProperty(EditableText.prototype, "prompt", {
             /**
@@ -17911,7 +17929,23 @@ var eui;
         /**
          * @private
          */
+        EditableText.prototype.onTouchBegin = function () {
+            this.$isTouchCancle = false;
+        };
+        /**
+         * @private
+         */
+        EditableText.prototype.onTouchCancle = function () {
+            this.$isTouchCancle = true;
+        };
+        /**
+         * @private
+         */
         EditableText.prototype.onfocusIn = function () {
+            if (!egret.Capabilities.isMobile && this.$isTouchCancle) {
+                this.inputUtils.stageText.$hide();
+                return;
+            }
             this.$isFocusIn = true;
             this.$isShowPrompt = false;
             this.displayAsPassword = this.$EditableText[2 /* asPassword */];
@@ -20807,13 +20841,12 @@ var eui;
          * 解析source
          */
         BitmapLabel.prototype.$parseFont = function () {
-            var _this = this;
             this.$fontChanged = false;
             var font = this.$fontForBitmapLabel;
             if (typeof font == "string") {
                 eui.getAssets(font, function (bitmapFont) {
-                    _this.$setFontData(bitmapFont, font);
-                });
+                    this.$setFontData(bitmapFont, font);
+                }, this);
             }
             else {
                 this.$setFontData(font);
@@ -21597,6 +21630,7 @@ var eui;
     locale_strings[2201] = "BasicLayout doesn't support virtualization.";
     locale_strings[2202] = "parse skinName error，the parsing result of skinName must be a instance of eui.Skin.";
     locale_strings[2203] = "Could not find the skin class '{0}'。";
+    locale_strings[2204] = "Undefined event.kind type (CollectionEventKind) = '{0}'.";
     locale_strings[2301] = "parse source failed，could not find asset from URL：{0} .";
 })(eui || (eui = {}));
 //////////////////////////////////////////////////////////////////////////////////////
@@ -21665,6 +21699,7 @@ var eui;
     locale_strings[2201] = "BasicLayout 不支持虚拟化。";
     locale_strings[2202] = "皮肤解析出错，属性 skinName 的值必须要能够解析为一个 eui.Skin 的实例。";
     locale_strings[2203] = "找不到指定的皮肤类 '{0}'。";
+    locale_strings[2204] = "未定义的event.kind类型(CollectionEventKind) = '{0}'.";
     locale_strings[2301] = "素材解析失败，找不到URL：{0} 所对应的资源。";
 })(eui || (eui = {}));
 //////////////////////////////////////////////////////////////////////////////////////

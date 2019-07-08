@@ -38,72 +38,70 @@ namespace egret {
         /**
          * @private
          */
-        $textfield: egret.TextField;
+        $textfield:egret.TextField;
         /**
          * @private
          * 
          * @param textfield 
          */
-        $setTextField(textfield: egret.TextField): boolean;
+        $setTextField(textfield:egret.TextField):boolean;
 
         /**
          * @private
          * 
          */
-        $resetStageText(): void;
+        $resetStageText():void;
 
         /**
          * @private
          * 
          * @returns 
          */
-        $getText(): string;
+        $getText():string;
         /**
          * @private
          * 
          * @param value 
          */
-        $setText(value: string): boolean;
+        $setText(value:string):boolean;
         /**
          * @private
          *
          * @param value
          */
-        $setColor(value: number): boolean;
+        $setColor(value:number):boolean;
         /**
          * @private
          * 
          */
-        $show(): void;
+        $show():void;
         /**
          * @private
          * 
          */
-        $hide(): void;
+        $hide():void;
 
         /**
          * @private
          * 
          */
-        $addToStage(): void;
+        $addToStage():void;
         /**
          * @private
          * 
          */
-        $removeFromStage(): void;
+        $removeFromStage():void;
 
         /**
          * @private
          *
          */
-        $onBlur(): void;
-
-        $getFocusIndex(): number;
+        $onBlur():void;
     }
 
     /**
      * @version Egret 2.4
      * @platform Web,Native
      */
-    export let StageText: { new(): StageText };
+    export let StageText:{new():StageText};
 }

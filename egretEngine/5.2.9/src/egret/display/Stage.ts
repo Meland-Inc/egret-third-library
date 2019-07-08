@@ -88,26 +88,18 @@ namespace egret {
          * @platform Web,Native
          * @language zh_CN
          */
-        public get frameRate(): number {
+        public get frameRate():number {
             return ticker.$frameRate;
         }
 
-        public set frameRate(value: number) {
+        public set frameRate(value:number) {
             ticker.$setFrameRate(value);
-        }
-
-        public get animSystemFrameRate(): number {
-            return ticker.animTickerProcess.getFrameRate();
-        }
-
-        public set animSystemFrameRate(value: number) {
-            ticker.animTickerProcess.$setFrameRate(value);
         }
 
         /**
          * @private
          */
-        $stageWidth: number = 0;
+        $stageWidth:number = 0;
 
         /**
          * Indicates the width of the stage, in pixels.
@@ -121,14 +113,14 @@ namespace egret {
          * @platform Web,Native
          * @language zh_CN
          */
-        public get stageWidth(): number {
+        public get stageWidth():number {
             return this.$stageWidth;
         }
 
         /**
          * @private
          */
-        $stageHeight: number = 0;
+        $stageHeight:number = 0;
 
         /**
          * Indicates the height of the stage, in pixels.
@@ -142,7 +134,7 @@ namespace egret {
          * @platform Web,Native
          * @language zh_CN
          */
-        public get stageHeight(): number {
+        public get stageHeight():number {
             return this.$stageHeight;
         }
 
@@ -161,21 +153,21 @@ namespace egret {
          * @platform Web,Native
          * @language zh_CN
          */
-        public invalidate(): void {
+        public invalidate():void {
             sys.$invalidateRenderFlag = true;
         }
 
         /**
          * @deprecated
          */
-        public registerImplementation(interfaceName: string, instance: any): void {
+        public registerImplementation(interfaceName:string, instance:any):void {
             egret.registerImplementation(interfaceName, instance);
         }
 
         /**
          * @deprecated
          */
-        public getImplementation(interfaceName: string): any {
+        public getImplementation(interfaceName:string):any {
             return egret.getImplementation(interfaceName);
         }
 
@@ -183,9 +175,9 @@ namespace egret {
          * @private
          * 设备屏幕引用
          */
-        $screen: egret.sys.Screen;
+        $screen:egret.sys.Screen;
 
-        $scaleMode: string = egret.StageScaleMode.SHOW_ALL;
+        $scaleMode:string = egret.StageScaleMode.SHOW_ALL;
         /**
          * A StageScaleMode class that specifies which scale mode to use. The following are valid values:<br/>
          * <ul>
@@ -212,11 +204,11 @@ namespace egret {
          * @default egret.StageScaleMode.SHOW_ALL
          * @language zh_CN
          */
-        public get scaleMode(): string {
+        public get scaleMode():string {
             return this.$scaleMode;
         }
 
-        public set scaleMode(value: string) {
+        public set scaleMode(value:string) {
             if (this.$scaleMode == value) {
                 return;
             }
@@ -224,8 +216,8 @@ namespace egret {
             this.$screen.updateScreenSize();
         }
 
-        $orientation: string = egret.OrientationMode.AUTO;
-        public set orientation(value: string) {
+        $orientation:string = egret.OrientationMode.AUTO;
+        public set orientation(value:string) {
             if (this.$orientation == value) {
                 return;
             }
@@ -257,7 +249,7 @@ namespace egret {
          * @version 2.4
          * @language zh_CN
          */
-        public get orientation(): string {
+        public get orientation():string {
             return this.$orientation;
         }
 
@@ -271,15 +263,15 @@ namespace egret {
          * @default 1
          * @language zh_CN
          */
-        public get textureScaleFactor(): number {
+        public get textureScaleFactor():number {
             return egret.$TextureScaleFactor;
         }
 
-        public set textureScaleFactor(value: number) {
+        public set textureScaleFactor(value:number) {
             egret.$TextureScaleFactor = value;
         }
 
-        $maxTouches: number = 99;
+        $maxTouches:number = 99;
         /**
          * Set the number of screens can simultaneously touch. Above this amount will not be triggered in response.
          * @default 99
@@ -290,11 +282,11 @@ namespace egret {
          * @default 99
          * @language zh_CN
          */
-        public get maxTouches(): number {
+        public get maxTouches():number {
             return this.$maxTouches;
         }
 
-        public set maxTouches(value: number) {
+        public set maxTouches(value:number) {
             if (this.$maxTouches == value) {
                 return;
             }
@@ -318,7 +310,7 @@ namespace egret {
          * @platform Web,Native
          * @language zh_CN
          */
-        public setContentSize(width: number, height: number): void {
+        public setContentSize(width:number, height:number):void {
             this.$screen.setContentSize(width, height);
         }
     }

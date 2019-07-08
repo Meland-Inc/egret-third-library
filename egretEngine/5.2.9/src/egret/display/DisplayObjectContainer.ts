@@ -806,10 +806,6 @@ namespace egret {
             if (this.$mask && !this.$mask.$hitTest(stageX, stageY)) {
                 return null
             }
-
-            //游戏中太多场景的东西需要触摸 会有异常 保留了按下时搜索所有 不过move时不会再重新寻找 也就不需要这里优化了
-            // //如果不能触摸子直接跳过 游戏显示对象太多 节省性能  modify by xiangqian 2018.11.30
-            // if (this.$touchChildren) {
             const children = this.$children;
             let found = false;
             let target: DisplayObject = null;
@@ -838,7 +834,6 @@ namespace egret {
             if (found) {
                 return this;
             }
-            // }
             return super.$hitTest(stageX, stageY);
         }
     }

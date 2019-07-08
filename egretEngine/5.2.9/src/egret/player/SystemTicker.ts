@@ -47,7 +47,6 @@ namespace egret.sys {
      * Egret心跳计时器
      */
     export class SystemTicker {
-        public animTickerProcess: SystemTickerAnimProcess;
         /**
          * @private
          */
@@ -58,8 +57,6 @@ namespace egret.sys {
             $START_TIME = Date.now();
             this.frameDeltaTime = 1000 / this.$frameRate;
             this.lastCount = this.frameInterval = Math.round(60000 / this.$frameRate);
-
-            this.animTickerProcess = new SystemTickerAnimProcess(this.$frameRate);
         }
 
         /**
@@ -112,11 +109,6 @@ namespace egret.sys {
          * @private
          */
         $startTick(callBack: (timeStamp: number) => boolean, thisObject: any): void {
-            //动画相关的计时器自己处理 不走系统回调
-            if (this.animTickerProcess.$checkAnimTicker(callBack, thisObject)) {
-                return;
-            }
-
             let index = this.getTickIndex(callBack, thisObject);
             if (index != -1) {
                 return;
@@ -256,12 +248,12 @@ namespace egret.sys {
          * @private
          * 执行一次刷新
          */
-        public update(): void {
+        public update(forceUpdate?: boolean): void {
             let t1 = egret.getTimer();
             let callBackList = this.callBackList;
             let thisObjectList = this.thisObjectList;
             let length = callBackList.length;
-            // let requestRenderingFlag = $requestRenderingFlag;
+            let requestRenderingFlag = $requestRenderingFlag;
             let timeStamp = egret.getTimer();
             let contexts = lifecycle.contexts;
             for (let c of contexts) {
@@ -274,58 +266,27 @@ namespace egret.sys {
                 return;
             }
             this.callLaterAsyncs();
-
+            for (let i = 0; i < length; i++) {
+                if (callBackList[i].call(thisObjectList[i], timeStamp)) {
+                    requestRenderingFlag = true;
+                }
+            }
             let t2 = egret.getTimer();
             let deltaTime = timeStamp - this.lastTimeStamp;
             this.lastTimeStamp = timeStamp;
-
-            //只有动作系统帧率比总帧率低才自己处理  否则按照总帧率一起走
-            if (this.animTickerProcess.$frameRate < this.$frameRate) {
-                let needExecute: boolean = false;
-                if (deltaTime >= this.animTickerProcess.$frameDeltaTime) {
-                    this.animTickerProcess.$lastCount = this.animTickerProcess.$frameInterval;
-                    needExecute = true;
-                }
-                else {
-                    this.animTickerProcess.$lastCount -= 1000;
-                    if (this.animTickerProcess.$lastCount <= 0) {
-                        needExecute = true;
-                        this.animTickerProcess.$lastCount += this.animTickerProcess.$frameInterval;
-                    }
-                }
-
-                if (needExecute) {
-                    this.animTickerProcess.$executeCallBack(timeStamp);
-                }
-            }
-
-            if (deltaTime >= this.frameDeltaTime) {
+            if (deltaTime >= this.frameDeltaTime || forceUpdate) {
                 this.lastCount = this.frameInterval;
             }
             else {
                 this.lastCount -= 1000;
                 if (this.lastCount > 0) {
-                    //发热优化 把其他地方的渲染都停掉 统一按照帧率渲染
-                    // if (requestRenderingFlag) {
-                    //     this.render(false, this.costEnterFrame + t2 - t1);
-                    // }
+                    if (requestRenderingFlag) {
+                        this.render(false, this.costEnterFrame + t2 - t1);
+                    }
                     return;
                 }
                 this.lastCount += this.frameInterval;
             }
-
-            //所有的其他帧处理都需要遵从统一征率 否则没有渲染也没有意义 统一管理
-            for (let i = 0; i < length; i++) {
-                if (callBackList[i].call(thisObjectList[i], timeStamp)) {
-                    // requestRenderingFlag = true;
-                }
-            }
-
-            //系统统一处理情况
-            if (this.animTickerProcess.$frameRate >= this.$frameRate) {
-                this.animTickerProcess.$executeCallBack(timeStamp);
-            }
-
             this.render(true, this.costEnterFrame + t2 - t1);
             let t3 = egret.getTimer();
             this.broadcastEnterFrame();
