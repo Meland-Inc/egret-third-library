@@ -270,6 +270,9 @@ module RES.processor {
                         }
                         host.save(r as ResourceInfo, bitmapData);
                         return spriteSheet;
+                    }, function (e) {
+                        host.remove(r!);
+                        throw e;
                     })
             })
         },
@@ -352,6 +355,9 @@ module RES.processor {
                     // todo refactor
                     host.save(r as ResourceInfo, texture);
                     return font;
+                }, function (e) {
+                    host.remove(r!);
+                    throw e;
                 })
             })
         },
@@ -387,7 +393,7 @@ module RES.processor {
                     mcData = value;
                     let jsonPath = resource.name;
                     let imagePath = jsonPath.substring(0, jsonPath.lastIndexOf(".")) + ".png";
-                    imageResource = host.resourceConfig.getResource(imagePath, true);
+                    imageResource = host.resourceConfig.getResource(imagePath) as ResourceInfo;
                     if (!imageResource) {
                         throw new ResourceManagerError(1001, imagePath);
                     }
@@ -406,8 +412,10 @@ module RES.processor {
             // refactor
             let jsonPath = resource.name;
             let imagePath = jsonPath.substring(0, jsonPath.lastIndexOf(".")) + ".png";
-            let imageResource = host.resourceConfig.getResource(imagePath, true);
-            host.unload(imageResource);
+            let imageResource = host.resourceConfig.getResource(imagePath);
+            if (imageResource) {
+                host.unload(imageResource);
+            }
         }
     }
     /**
@@ -484,12 +492,12 @@ module RES.processor {
                             return fsData[filename]
                         },
 
-                        addFile: (filename, type, root, extra) => {
-                            if (!type) type = "";
+                        addFile: (data: { name: string, type: string, url: string, root?: string, extra?: 1 | undefined }) => {
+                            if (!data.type) data.type = "";
                             if (root == undefined) {
-                                root = "";
+                                data.root = "";
                             }
-                            fsData[filename] = { name: filename, type, url: filename, root, extra };
+                            fsData[data.name] = data;
                         },
 
                         profile: () => {
