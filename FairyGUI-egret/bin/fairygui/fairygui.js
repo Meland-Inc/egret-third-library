@@ -15769,6 +15769,8 @@ var fairygui;
             if (!descData) {
                 descData = RES.getRes(resKey);
                 if (!descData)
+                    descData = RES.getRes(resKey + "_fui");
+                if (!descData)
                     throw "Resource '" + resKey + "' not found, please check default.res.json!";
             }
             var pkg = new UIPackage();
@@ -16087,6 +16089,10 @@ var fairygui;
                         item.decoded = true;
                         item.texture = RES.getRes(item.file);
                         if (!item.texture)
+                            item.texture = RES.getRes(item.file + "_png");
+                        if (!item.texture)
+                            item.texture = RES.getRes(item.file + "_jpg");
+                        if (!item.texture)
                             console.log("Resource '" + item.file + "' not found, please check default.res.json!");
                     }
                     return item.texture;
@@ -16094,6 +16100,10 @@ var fairygui;
                     if (!item.decoded) {
                         item.decoded = true;
                         item.sound = RES.getRes(item.file);
+                        if (!item.sound)
+                            item.sound = RES.getRes(item.file + "_mp3");
+                        if (!item.sound)
+                            item.sound = RES.getRes(item.file + "_wav");
                         if (!item.sound)
                             console.log("Resource '" + item.file + "' not found, please check default.res.json!");
                     }
