@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkylfh4k" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
-  <controller name="ctrlGameMode" pages="1,game,0,lessons,2,creation" selected="0">
+  <controller name="ctrlGameMode" pages="1,game,0,lessons,2,creation" selected="1">
     <action type="change_page" fromPage="" toPage="1" objectId="n1_muc9" controller="ctrlGameMode" targetPage="1"/>
     <action type="change_page" fromPage="" toPage="0" objectId="n1_muc9" controller="ctrlGameMode" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="2" objectId="n1_muc9" controller="ctrlGameMode" targetPage="2"/>
@@ -9,13 +9,13 @@
     <component id="n31_r2bf" name="comMainEnemyInfo" src="dura1l" fileName="win/ComMainEnemyInfo.xml" xy="492,7" size="152,45">
       <relation target="" sidePair="center-center,top-top"/>
     </component>
-    <component id="n1_muc9" name="comMainJoystick" src="w80ln" fileName="win/ComMainJoystick.xml" xy="862,262" controller="ctrlGameMode,1">
+    <component id="n1_muc9" name="comMainJoystick" src="w80ln" fileName="win/ComMainJoystick.xml" xy="862,262" controller="ctrlGameMode,0">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
     <component id="n42_w0g2" name="comMainQuickBuild" src="ndxt83" fileName="win/ComMainQuickBuild.xml" xy="890,355" hideByEditor="true" visible="false">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
-    <component id="n4_muc9" name="comMainRocker" src="uvgla1" fileName="win/ComMainRocker.xml" xy="0,256">
+    <component id="n4_muc9" name="comMainRocker" src="uvgla1" fileName="win/ComMainRocker.xml" xy="70,256">
       <gearXY controller="ctrlGameMode" pages="0" values="70,256" default="0,256"/>
       <relation target="" sidePair="left-left,bottom-bottom"/>
     </component>
@@ -81,7 +81,7 @@
       <gearDisplay controller="ctrlGameMode" pages="0"/>
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </component>
-    <component id="n70_k177" name="comShortCut" src="uhu6t7w" fileName="Com/ComBuildShortCut.xml" pkg="32ieekgu" xy="475,496" hideByEditor="true" visible="false">
+    <component id="n70_k177" name="comShortCut" src="uhu6t7w" fileName="Com/ComBuildShortCut.xml" pkg="32ieekgu" xy="408,496" hideByEditor="true" visible="false">
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </component>
   </displayList>
