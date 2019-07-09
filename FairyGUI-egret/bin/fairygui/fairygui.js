@@ -50,6 +50,7 @@ var fairygui;
             _this._rawWidth = 0;
             _this._rawHeight = 0;
             _this._sizePercentInGroup = 0;
+            _this._touchPointID = 0;
             _this._id = "" + GObject._gInstanceCounter++;
             _this._name = "";
             _this.createDisplayObject();
@@ -949,10 +950,10 @@ var fairygui;
             configurable: true
         });
         GObject.prototype.startDrag = function (touchPointID) {
-            if (touchPointID === void 0) { touchPointID = -1; }
+            if (touchPointID === void 0) { touchPointID = 0; }
             if (this._displayObject.stage == null)
                 return;
-            this.dragBegin(null);
+            this.dragBegin(touchPointID);
         };
         GObject.prototype.stopDrag = function () {
             this.dragEnd();
@@ -1203,7 +1204,7 @@ var fairygui;
         GObject.prototype.dragBegin = function (evt) {
             if (GObject.draggingObject != null)
                 GObject.draggingObject.stopDrag();
-            if (evt != null) {
+            if (evt != null && typeof evt != 'number') {
                 GObject.sGlobalDragStart.x = evt.stageX;
                 GObject.sGlobalDragStart.y = evt.stageY;
             }
@@ -1213,6 +1214,14 @@ var fairygui;
             }
             this.localToGlobalRect(0, 0, this.width, this.height, GObject.sGlobalRect);
             GObject.draggingObject = this;
+            if (evt || typeof evt == 'number') {
+                if (typeof evt == 'number') {
+                    this._touchPointID = evt;
+                }
+                else {
+                    this._touchPointID = evt.touchPointID;
+                }
+            }
             fairygui.GRoot.inst.nativeStage.addEventListener(egret.TouchEvent.TOUCH_MOVE, this.__moving2, this);
             fairygui.GRoot.inst.nativeStage.addEventListener(egret.TouchEvent.TOUCH_END, this.__end2, this);
         };
@@ -1232,6 +1241,9 @@ var fairygui;
                 this._touchDownPoint = new egret.Point();
             this._touchDownPoint.x = evt.stageX;
             this._touchDownPoint.y = evt.stageY;
+            if (evt) {
+                this._touchPointID = evt.touchPointID;
+            }
             fairygui.GRoot.inst.nativeStage.addEventListener(egret.TouchEvent.TOUCH_MOVE, this.__moving, this);
             fairygui.GRoot.inst.nativeStage.addEventListener(egret.TouchEvent.TOUCH_END, this.__end, this);
         };
@@ -1245,46 +1257,50 @@ var fairygui;
                 && Math.abs(this._touchDownPoint.y - evt.stageY) < sensitivity)
                 return;
             this.reset();
-            var dragEvent = new fairygui.DragEvent(fairygui.DragEvent.DRAG_START);
-            dragEvent.stageX = evt.stageX;
-            dragEvent.stageY = evt.stageY;
-            dragEvent.touchPointID = evt.touchPointID;
-            this.dispatchEvent(dragEvent);
-            if (!dragEvent.isDefaultPrevented())
-                this.dragBegin(evt);
+            if (evt.touchPointID == this._touchPointID) {
+                var dragEvent = new fairygui.DragEvent(fairygui.DragEvent.DRAG_START);
+                dragEvent.stageX = evt.stageX;
+                dragEvent.stageY = evt.stageY;
+                dragEvent.touchPointID = evt.touchPointID;
+                this.dispatchEvent(dragEvent);
+                if (!dragEvent.isDefaultPrevented())
+                    this.dragBegin(evt);
+            }
         };
         GObject.prototype.__moving2 = function (evt) {
-            var xx = evt.stageX - GObject.sGlobalDragStart.x + GObject.sGlobalRect.x;
-            var yy = evt.stageY - GObject.sGlobalDragStart.y + GObject.sGlobalRect.y;
-            if (this._dragBounds != null) {
-                var rect = fairygui.GRoot.inst.localToGlobalRect(this._dragBounds.x, this._dragBounds.y, this._dragBounds.width, this._dragBounds.height, GObject.sDragHelperRect);
-                if (xx < rect.x)
-                    xx = rect.x;
-                else if (xx + GObject.sGlobalRect.width > rect.right) {
-                    xx = rect.right - GObject.sGlobalRect.width;
+            if (this._touchPointID == evt.touchPointID) {
+                var xx = evt.stageX - GObject.sGlobalDragStart.x + GObject.sGlobalRect.x;
+                var yy = evt.stageY - GObject.sGlobalDragStart.y + GObject.sGlobalRect.y;
+                if (this._dragBounds != null) {
+                    var rect = fairygui.GRoot.inst.localToGlobalRect(this._dragBounds.x, this._dragBounds.y, this._dragBounds.width, this._dragBounds.height, GObject.sDragHelperRect);
                     if (xx < rect.x)
                         xx = rect.x;
-                }
-                if (yy < rect.y)
-                    yy = rect.y;
-                else if (yy + GObject.sGlobalRect.height > rect.bottom) {
-                    yy = rect.bottom - GObject.sGlobalRect.height;
+                    else if (xx + GObject.sGlobalRect.width > rect.right) {
+                        xx = rect.right - GObject.sGlobalRect.width;
+                        if (xx < rect.x)
+                            xx = rect.x;
+                    }
                     if (yy < rect.y)
                         yy = rect.y;
+                    else if (yy + GObject.sGlobalRect.height > rect.bottom) {
+                        yy = rect.bottom - GObject.sGlobalRect.height;
+                        if (yy < rect.y)
+                            yy = rect.y;
+                    }
                 }
+                GObject.sUpdateInDragging = true;
+                var pt = this.parent.globalToLocal(xx, yy, GObject.sHelperPoint);
+                this.setXY(Math.round(pt.x), Math.round(pt.y));
+                GObject.sUpdateInDragging = false;
+                var dragEvent = new fairygui.DragEvent(fairygui.DragEvent.DRAG_MOVING);
+                dragEvent.stageX = evt.stageX;
+                dragEvent.stageY = evt.stageY;
+                dragEvent.touchPointID = evt.touchPointID;
+                this.dispatchEvent(dragEvent);
             }
-            GObject.sUpdateInDragging = true;
-            var pt = this.parent.globalToLocal(xx, yy, GObject.sHelperPoint);
-            this.setXY(Math.round(pt.x), Math.round(pt.y));
-            GObject.sUpdateInDragging = false;
-            var dragEvent = new fairygui.DragEvent(fairygui.DragEvent.DRAG_MOVING);
-            dragEvent.stageX = evt.stageX;
-            dragEvent.stageY = evt.stageY;
-            dragEvent.touchPointID = evt.touchPointID;
-            this.dispatchEvent(dragEvent);
         };
         GObject.prototype.__end2 = function (evt) {
-            if (GObject.draggingObject == this) {
+            if (GObject.draggingObject == this && this._touchPointID == evt.touchPointID) {
                 this.stopDrag();
                 var dragEvent = new fairygui.DragEvent(fairygui.DragEvent.DRAG_END);
                 dragEvent.stageX = evt.stageX;
@@ -3227,10 +3243,10 @@ var fairygui;
             this.updateTextFieldText();
             this._textWidth = Math.ceil(this._textField.textWidth);
             if (this._textWidth > 0)
-                this._textWidth += 4;
+                this._textWidth += 5;
             this._textHeight = Math.ceil(this._textField.textHeight);
             if (this._textHeight > 0)
-                this._textHeight += 4;
+                this._textHeight += 7;
             var w, h = 0;
             if (this._widthAutoSize) {
                 w = this._textWidth;
@@ -9156,6 +9172,13 @@ var fairygui;
             this._pool.clear();
             _super.prototype.dispose.call(this);
         };
+        Object.defineProperty(GList.prototype, "curLineItemCount", {
+            get: function () {
+                return this._curLineItemCount;
+            },
+            enumerable: true,
+            configurable: true
+        });
         Object.defineProperty(GList.prototype, "layout", {
             get: function () {
                 return this._layout;
@@ -11543,7 +11566,12 @@ var fairygui;
                 this.setErrorState();
         };
         GLoader.prototype.loadExternal = function () {
-            RES.getResAsync(this._url, this.__getResCompleted, this);
+            if (RES.hasRes(this._url)) {
+                RES.getResAsync(this._url, this.__getResCompleted, this);
+            }
+            else {
+                this.onExternalLoadFailed();
+            }
         };
         GLoader.prototype.freeExternal = function (texture) {
         };
@@ -13116,6 +13144,10 @@ var fairygui;
                 this._textField.displayAsPassword = false;
                 this._textField.textFlow = (new egret.HtmlTextParser).parser(fairygui.ToolSet.parseUBB(fairygui.ToolSet.encodeHTML(this._promptText)));
             }
+        };
+        //修复拖动输入框会锁死代码块编辑界面    Felix June 4th, 2019 3:24pm
+        GTextInput.prototype.requestFocus = function () {
+            this._textField.setFocus();
         };
         return GTextInput;
     }(fairygui.GTextField));
@@ -15737,6 +15769,8 @@ var fairygui;
             if (!descData) {
                 descData = RES.getRes(resKey);
                 if (!descData)
+                    descData = RES.getRes(resKey + "_fui");
+                if (!descData)
                     throw "Resource '" + resKey + "' not found, please check default.res.json!";
             }
             var pkg = new UIPackage();
@@ -16055,6 +16089,10 @@ var fairygui;
                         item.decoded = true;
                         item.texture = RES.getRes(item.file);
                         if (!item.texture)
+                            item.texture = RES.getRes(item.file + "_png");
+                        if (!item.texture)
+                            item.texture = RES.getRes(item.file + "_jpg");
+                        if (!item.texture)
                             console.log("Resource '" + item.file + "' not found, please check default.res.json!");
                     }
                     return item.texture;
@@ -16062,6 +16100,10 @@ var fairygui;
                     if (!item.decoded) {
                         item.decoded = true;
                         item.sound = RES.getRes(item.file);
+                        if (!item.sound)
+                            item.sound = RES.getRes(item.file + "_mp3");
+                        if (!item.sound)
+                            item.sound = RES.getRes(item.file + "_wav");
                         if (!item.sound)
                             console.log("Resource '" + item.file + "' not found, please check default.res.json!");
                     }
@@ -16899,89 +16941,6 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var ByteBuffer = (function (_super) {
-        __extends(ByteBuffer, _super);
-        function ByteBuffer(buffer, bufferExtSize) {
-            var _this = _super.call(this, buffer, bufferExtSize) || this;
-            _this.stringTable = null;
-            _this.version = 0;
-            return _this;
-        }
-        ByteBuffer.prototype.skip = function (count) {
-            this.position += count;
-        };
-        ByteBuffer.prototype.readBool = function () {
-            return this.readByte() == 1;
-        };
-        ByteBuffer.prototype.readS = function () {
-            var index = this.readUnsignedShort();
-            if (index == 65534)
-                return null;
-            else if (index == 65533)
-                return "";
-            else
-                return this.stringTable[index];
-        };
-        ByteBuffer.prototype.writeS = function (value) {
-            var index = this.readUnsignedShort();
-            if (index != 65534 && index != 65533)
-                this.stringTable[index] = value;
-        };
-        ByteBuffer.prototype.readColor = function (hasAlpha) {
-            if (hasAlpha === void 0) { hasAlpha = false; }
-            var r = this.readUnsignedByte();
-            var g = this.readUnsignedByte();
-            var b = this.readUnsignedByte();
-            var a = this.readUnsignedByte();
-            return (hasAlpha ? (a << 24) : 0) + (r << 16) + (g << 8) + b;
-        };
-        ByteBuffer.prototype.readChar = function () {
-            var i = this.readUnsignedShort();
-            return String.fromCharCode(i);
-        };
-        ByteBuffer.prototype.readBuffer = function () {
-            var count = this.readUnsignedInt();
-            var ba = new ByteBuffer(new Uint8Array(this.buffer, this.position, count));
-            ba.stringTable = this.stringTable;
-            ba.version = this.version;
-            return ba;
-        };
-        ByteBuffer.prototype.seek = function (indexTablePos, blockIndex) {
-            var tmp = this.position;
-            this.position = indexTablePos;
-            var segCount = this.readByte();
-            if (blockIndex < segCount) {
-                var useShort = this.readByte() == 1;
-                var newPos;
-                if (useShort) {
-                    this.position += 2 * blockIndex;
-                    newPos = this.readUnsignedShort();
-                }
-                else {
-                    this.position += 4 * blockIndex;
-                    newPos = this.readUnsignedInt();
-                }
-                if (newPos > 0) {
-                    this.position = indexTablePos + newPos;
-                    return true;
-                }
-                else {
-                    this.position = tmp;
-                    return false;
-                }
-            }
-            else {
-                this.position = tmp;
-                return false;
-            }
-        };
-        return ByteBuffer;
-    }(egret.ByteArray));
-    fairygui.ByteBuffer = ByteBuffer;
-    __reflect(ByteBuffer.prototype, "fairygui.ByteBuffer");
-})(fairygui || (fairygui = {}));
-var fairygui;
-(function (fairygui) {
     var GraphicsHelper = (function () {
         function GraphicsHelper() {
         }
@@ -17155,4 +17114,87 @@ var fairygui;
     }());
     fairygui.GraphicsHelper = GraphicsHelper;
     __reflect(GraphicsHelper.prototype, "fairygui.GraphicsHelper");
+})(fairygui || (fairygui = {}));
+var fairygui;
+(function (fairygui) {
+    var ByteBuffer = (function (_super) {
+        __extends(ByteBuffer, _super);
+        function ByteBuffer(buffer, bufferExtSize) {
+            var _this = _super.call(this, buffer, bufferExtSize) || this;
+            _this.stringTable = null;
+            _this.version = 0;
+            return _this;
+        }
+        ByteBuffer.prototype.skip = function (count) {
+            this.position += count;
+        };
+        ByteBuffer.prototype.readBool = function () {
+            return this.readByte() == 1;
+        };
+        ByteBuffer.prototype.readS = function () {
+            var index = this.readUnsignedShort();
+            if (index == 65534)
+                return null;
+            else if (index == 65533)
+                return "";
+            else
+                return this.stringTable[index];
+        };
+        ByteBuffer.prototype.writeS = function (value) {
+            var index = this.readUnsignedShort();
+            if (index != 65534 && index != 65533)
+                this.stringTable[index] = value;
+        };
+        ByteBuffer.prototype.readColor = function (hasAlpha) {
+            if (hasAlpha === void 0) { hasAlpha = false; }
+            var r = this.readUnsignedByte();
+            var g = this.readUnsignedByte();
+            var b = this.readUnsignedByte();
+            var a = this.readUnsignedByte();
+            return (hasAlpha ? (a << 24) : 0) + (r << 16) + (g << 8) + b;
+        };
+        ByteBuffer.prototype.readChar = function () {
+            var i = this.readUnsignedShort();
+            return String.fromCharCode(i);
+        };
+        ByteBuffer.prototype.readBuffer = function () {
+            var count = this.readUnsignedInt();
+            var ba = new ByteBuffer(new Uint8Array(this.buffer, this.position, count));
+            ba.stringTable = this.stringTable;
+            ba.version = this.version;
+            return ba;
+        };
+        ByteBuffer.prototype.seek = function (indexTablePos, blockIndex) {
+            var tmp = this.position;
+            this.position = indexTablePos;
+            var segCount = this.readByte();
+            if (blockIndex < segCount) {
+                var useShort = this.readByte() == 1;
+                var newPos;
+                if (useShort) {
+                    this.position += 2 * blockIndex;
+                    newPos = this.readUnsignedShort();
+                }
+                else {
+                    this.position += 4 * blockIndex;
+                    newPos = this.readUnsignedInt();
+                }
+                if (newPos > 0) {
+                    this.position = indexTablePos + newPos;
+                    return true;
+                }
+                else {
+                    this.position = tmp;
+                    return false;
+                }
+            }
+            else {
+                this.position = tmp;
+                return false;
+            }
+        };
+        return ByteBuffer;
+    }(egret.ByteArray));
+    fairygui.ByteBuffer = ByteBuffer;
+    __reflect(ByteBuffer.prototype, "fairygui.ByteBuffer");
 })(fairygui || (fairygui = {}));
