@@ -256,7 +256,7 @@ namespace egret.sys {
          * @private
          * 执行一次刷新
          */
-        public update(): void {
+        public update(forceUpdate?: boolean): void {
             let t1 = egret.getTimer();
             let callBackList = this.callBackList;
             let thisObjectList = this.thisObjectList;
@@ -299,7 +299,7 @@ namespace egret.sys {
                 }
             }
 
-            if (deltaTime >= this.frameDeltaTime) {
+            if (deltaTime >= this.frameDeltaTime || forceUpdate) {
                 this.lastCount = this.frameInterval;
             }
             else {
