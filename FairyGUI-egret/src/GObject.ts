@@ -853,10 +853,11 @@ module fairygui {
         }
 
         public startDrag(touchPointID: number = -1): void {
+            if (touchPointID === void 0) { touchPointID = 0; }
             if (this._displayObject.stage == null)
                 return;
 
-            this.dragBegin(null);
+            this.dragBegin(touchPointID);
         }
 
         public stopDrag(): void {
@@ -1135,6 +1136,7 @@ module fairygui {
         private static sDragHelperRect: egret.Rectangle = new egret.Rectangle();
         private static sUpdateInDragging: boolean;
         private _touchDownPoint: egret.Point;
+        public touchPointID = 0;
 
         private initDrag(): void {
             if (this._draggable)
@@ -1143,11 +1145,11 @@ module fairygui {
                 this.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.__begin, this);
         }
 
-        private dragBegin(evt: egret.TouchEvent): void {
+        private dragBegin(evt: egret.TouchEvent | number): void {
             if (GObject.draggingObject != null)
                 GObject.draggingObject.stopDrag();
 
-            if (evt != null) {
+            if (evt != null && typeof evt != 'number') {
                 GObject.sGlobalDragStart.x = evt.stageX;
                 GObject.sGlobalDragStart.y = evt.stageY;
             }
@@ -1157,6 +1159,13 @@ module fairygui {
             }
             this.localToGlobalRect(0, 0, this.width, this.height, GObject.sGlobalRect);
             GObject.draggingObject = this;
+            if (evt || typeof evt == 'number') {
+                if (typeof evt == 'number') {
+                    this.touchPointID = evt;
+                } else {
+                    this.touchPointID = evt.touchPointID;
+                }
+            }
 
             GRoot.inst.nativeStage.addEventListener(egret.TouchEvent.TOUCH_MOVE, this.__moving2, this);
             GRoot.inst.nativeStage.addEventListener(egret.TouchEvent.TOUCH_END, this.__end2, this);
@@ -1180,6 +1189,9 @@ module fairygui {
                 this._touchDownPoint = new egret.Point();
             this._touchDownPoint.x = evt.stageX;
             this._touchDownPoint.y = evt.stageY;
+            if (evt) {
+                this.touchPointID = evt.touchPointID;
+            }
 
             GRoot.inst.nativeStage.addEventListener(egret.TouchEvent.TOUCH_MOVE, this.__moving, this);
             GRoot.inst.nativeStage.addEventListener(egret.TouchEvent.TOUCH_END, this.__end, this);
@@ -1197,55 +1209,58 @@ module fairygui {
                 return;
 
             this.reset();
+            if (evt.touchPointID == this.touchPointID) {
+                var dragEvent: DragEvent = new DragEvent(DragEvent.DRAG_START);
+                dragEvent.stageX = evt.stageX;
+                dragEvent.stageY = evt.stageY;
+                dragEvent.touchPointID = evt.touchPointID;
+                this.dispatchEvent(dragEvent);
 
-            var dragEvent: DragEvent = new DragEvent(DragEvent.DRAG_START);
-            dragEvent.stageX = evt.stageX;
-            dragEvent.stageY = evt.stageY;
-            dragEvent.touchPointID = evt.touchPointID;
-            this.dispatchEvent(dragEvent);
-
-            if (!dragEvent.isDefaultPrevented())
-                this.dragBegin(evt);
+                if (!dragEvent.isDefaultPrevented())
+                    this.dragBegin(evt);
+            }
         }
 
         private __moving2(evt: egret.TouchEvent): void {
-            var xx: number = evt.stageX - GObject.sGlobalDragStart.x + GObject.sGlobalRect.x;
-            var yy: number = evt.stageY - GObject.sGlobalDragStart.y + GObject.sGlobalRect.y;
+            if (this.touchPointID == evt.touchPointID) {
+                var xx: number = evt.stageX - GObject.sGlobalDragStart.x + GObject.sGlobalRect.x;
+                var yy: number = evt.stageY - GObject.sGlobalDragStart.y + GObject.sGlobalRect.y;
 
-            if (this._dragBounds != null) {
-                var rect: egret.Rectangle = GRoot.inst.localToGlobalRect(this._dragBounds.x, this._dragBounds.y,
-                    this._dragBounds.width, this._dragBounds.height, GObject.sDragHelperRect);
-                if (xx < rect.x)
-                    xx = rect.x;
-                else if (xx + GObject.sGlobalRect.width > rect.right) {
-                    xx = rect.right - GObject.sGlobalRect.width;
+                if (this._dragBounds != null) {
+                    var rect: egret.Rectangle = GRoot.inst.localToGlobalRect(this._dragBounds.x, this._dragBounds.y,
+                        this._dragBounds.width, this._dragBounds.height, GObject.sDragHelperRect);
                     if (xx < rect.x)
                         xx = rect.x;
-                }
+                    else if (xx + GObject.sGlobalRect.width > rect.right) {
+                        xx = rect.right - GObject.sGlobalRect.width;
+                        if (xx < rect.x)
+                            xx = rect.x;
+                    }
 
-                if (yy < rect.y)
-                    yy = rect.y;
-                else if (yy + GObject.sGlobalRect.height > rect.bottom) {
-                    yy = rect.bottom - GObject.sGlobalRect.height;
                     if (yy < rect.y)
                         yy = rect.y;
+                    else if (yy + GObject.sGlobalRect.height > rect.bottom) {
+                        yy = rect.bottom - GObject.sGlobalRect.height;
+                        if (yy < rect.y)
+                            yy = rect.y;
+                    }
                 }
+
+                GObject.sUpdateInDragging = true;
+                var pt: egret.Point = this.parent.globalToLocal(xx, yy, GObject.sHelperPoint);
+                this.setXY(Math.round(pt.x), Math.round(pt.y));
+                GObject.sUpdateInDragging = false;
+
+                var dragEvent: DragEvent = new DragEvent(DragEvent.DRAG_MOVING);
+                dragEvent.stageX = evt.stageX;
+                dragEvent.stageY = evt.stageY;
+                dragEvent.touchPointID = evt.touchPointID;
+                this.dispatchEvent(dragEvent);
             }
-
-            GObject.sUpdateInDragging = true;
-            var pt: egret.Point = this.parent.globalToLocal(xx, yy, GObject.sHelperPoint);
-            this.setXY(Math.round(pt.x), Math.round(pt.y));
-            GObject.sUpdateInDragging = false;
-
-            var dragEvent: DragEvent = new DragEvent(DragEvent.DRAG_MOVING);
-            dragEvent.stageX = evt.stageX;
-            dragEvent.stageY = evt.stageY;
-            dragEvent.touchPointID = evt.touchPointID;
-            this.dispatchEvent(dragEvent);
         }
 
         private __end2(evt: egret.TouchEvent): void {
-            if (GObject.draggingObject == this) {
+            if (GObject.draggingObject == this && this.touchPointID == evt.touchPointID) {
                 this.stopDrag();
 
                 var dragEvent: DragEvent = new DragEvent(DragEvent.DRAG_END);
