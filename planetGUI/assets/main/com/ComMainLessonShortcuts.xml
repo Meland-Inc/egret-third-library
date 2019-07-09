@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="503,79" opaque="false" designImage="ui://i25v0ebkwq4d42" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlStatus" pages="0,normal,1,hide" selected="1"/>
-  <controller name="ctrlGameMode" pages="1,game,0,lessons,2,creation" selected="0"/>
+  <controller name="ctrlStatus" pages="0,normal,1,hide" selected="0"/>
   <displayList>
-    <image id="n42_x5ue" name="bg3" src="wq4dcyics" fileName="img_UI3/lesson/btn_main_dl_1.png" xy="0,63" group="n47_x5ue"/>
-    <component id="n43_x5ue" name="btnHide" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="217,66" size="68,24" group="n47_x5ue">
+    <image id="n42_x5ue" name="bg3" src="wq4dcyics" fileName="img_UI3/lesson/btn_main_dl_1.png" xy="0,0" group="n47_x5ue"/>
+    <component id="n43_x5ue" name="btnHide" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="217,3" size="68,24" group="n47_x5ue">
       <gearDisplay controller="ctrlStatus" pages="0"/>
       <Button icon="ui://5hs1fuejwq4dcyict" controller="ctrlStatus" page="1"/>
     </component>
-    <component id="n44_x5ue" name="btnShow" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="217,66" size="68,24" group="n47_x5ue">
+    <component id="n44_x5ue" name="btnShow" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="217,3" size="68,24" group="n47_x5ue">
       <gearDisplay controller="ctrlStatus" pages="1"/>
       <Button icon="ui://5hs1fuejwq4dcyicv" controller="ctrlStatus" page="0"/>
     </component>
-    <list id="n45_x5ue" name="lstItem" xy="11,87" size="430,48" group="n47_x5ue" layout="flow_hz" colGap="6" defaultItem="ui://5hs1fuejuvgla4">
+    <list id="n45_x5ue" name="lstItem" xy="11,24" size="430,48" group="n47_x5ue" layout="flow_hz" colGap="6" defaultItem="ui://5hs1fuejuvgla4">
       <item/>
       <item/>
       <item/>
@@ -22,10 +21,10 @@
       <item/>
       <item/>
     </list>
-    <component id="n46_x5ue" name="btnBag" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="442,80" size="50,61" group="n47_x5ue">
+    <component id="n46_x5ue" name="btnBag" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="442,17" size="50,61" group="n47_x5ue">
       <Button icon="ui://5hs1fuejwq4dcyicp"/>
     </component>
-    <group id="n47_x5ue" name="rootForB" xy="0,63" size="503,79" advanced="true">
+    <group id="n47_x5ue" name="rootForB" xy="0,0" size="503,79" advanced="true">
       <gearXY controller="ctrlStatus" pages="0,1" values="0,0|0,63" tween="true"/>
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </group>
