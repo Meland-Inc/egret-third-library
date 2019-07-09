@@ -178,6 +178,7 @@ declare module fairygui {
         private static sDragHelperRect;
         private static sUpdateInDragging;
         private _touchDownPoint;
+        private _touchPointID;
         private initDrag();
         private dragBegin(evt);
         private dragEnd();
@@ -1405,6 +1406,7 @@ declare module fairygui {
         private itemInfoVer;
         constructor();
         dispose(): void;
+        readonly curLineItemCount: number;
         layout: ListLayoutType;
         lineCount: number;
         columnCount: number;
@@ -1770,6 +1772,7 @@ declare module fairygui {
         private __textChanged(evt);
         private __focusIn(evt);
         private __focusOut(evt);
+        requestFocus(): void;
     }
 }
 declare module fairygui {
@@ -2196,6 +2199,11 @@ declare module fairygui {
     }
 }
 declare module fairygui {
+    class GraphicsHelper {
+        static fillImage(method: FillMethod, amount: number, origin: FillOrigin | FillOrigin90, clockwise: boolean, graphics: egret.Graphics, width: number, height: number): void;
+    }
+}
+declare module fairygui {
     class ByteBuffer extends egret.ByteArray {
         stringTable: Array<string>;
         version: number;
@@ -2208,10 +2216,5 @@ declare module fairygui {
         readChar(): string;
         readBuffer(): ByteBuffer;
         seek(indexTablePos: number, blockIndex: number): boolean;
-    }
-}
-declare module fairygui {
-    class GraphicsHelper {
-        static fillImage(method: FillMethod, amount: number, origin: FillOrigin | FillOrigin90, clockwise: boolean, graphics: egret.Graphics, width: number, height: number): void;
     }
 }
