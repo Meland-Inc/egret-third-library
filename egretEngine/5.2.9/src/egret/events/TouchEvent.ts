@@ -33,15 +33,15 @@ namespace egret {
 
     export interface DisplayObject {
 
-        addEventListener<Z>(type:   "touchMove"   |
-                                    "touchBegin"  |
-                                    "touchEnd"    |
-                                    "touchCancel" |
-                                    "touchTap"    |
-                                    "touchReleaseOutside" |
-                                    "touchRollOut"|
-                                    "touchRollOver"
-                                   , listener: (this: Z, e: TouchEvent) => void, thisObject: Z, useCapture?: boolean, priority?: number);
+        addEventListener<Z>(type: "touchMove" |
+            "touchBegin" |
+            "touchEnd" |
+            "touchCancel" |
+            "touchTap" |
+            "touchReleaseOutside" |
+            "touchRollOut" |
+            "touchRollOver"
+            , listener: (this: Z, e: TouchEvent) => void, thisObject: Z, useCapture?: boolean, priority?: number);
         addEventListener(type: string, listener: Function, thisObject: any, useCapture?: boolean, priority?: number);
     }
 
@@ -190,18 +190,19 @@ namespace egret {
          * @language zh_CN
          */
         public constructor(type: string, bubbles?: boolean, cancelable?: boolean, stageX?: number,
-            stageY?: number, touchPointID?: number) {
+            stageY?: number, touchPointID?: number, button?: number) {
             super(type, bubbles, cancelable);
-            this.$initTo(stageX, stageY, touchPointID);
+            this.$initTo(stageX, stageY, touchPointID, button);
         }
 
         /**
          * @private
          */
-        $initTo(stageX: number, stageY: number, touchPointID: number): void {
+        $initTo(stageX: number, stageY: number, touchPointID: number, button: number): void {
             this.touchPointID = +touchPointID || 0;
             this.$stageX = +stageX || 0;
             this.$stageY = +stageY || 0;
+            this.$button = +button || 0;
         }
 
         /**
@@ -287,6 +288,18 @@ namespace egret {
         }
 
         private targetChanged: boolean = true;
+
+        /**
+         * @private
+         */
+        $button: number
+        /**
+         * 点击事件鼠标左中右键
+         * long
+         */
+        public get button(): number {
+            return this.$button;
+        }
 
         /**
          * @private
@@ -385,12 +398,12 @@ namespace egret {
          * @language zh_CN
          */
         public static dispatchTouchEvent(target: IEventDispatcher, type: string, bubbles?: boolean, cancelable?: boolean,
-            stageX?: number, stageY?: number, touchPointID?: number, touchDown: boolean = false): boolean {
+            stageX?: number, stageY?: number, touchPointID?: number, touchDown: boolean = false, button: number = 0): boolean {
             if (!bubbles && !target.hasEventListener(type)) {
                 return true;
             }
             let event: TouchEvent = Event.create(TouchEvent, type, bubbles, cancelable);
-            event.$initTo(stageX, stageY, touchPointID);
+            event.$initTo(stageX, stageY, touchPointID, button);
             event.touchDown = touchDown;
             let result = target.dispatchEvent(event);
             Event.release(event);

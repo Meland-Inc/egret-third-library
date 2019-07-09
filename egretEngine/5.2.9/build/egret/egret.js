@@ -8527,7 +8527,7 @@ var egret;
          * @platform Web,Native
          * @language zh_CN
          */
-        function TouchEvent(type, bubbles, cancelable, stageX, stageY, touchPointID) {
+        function TouchEvent(type, bubbles, cancelable, stageX, stageY, touchPointID, button) {
             var _this = _super.call(this, type, bubbles, cancelable) || this;
             _this.targetChanged = true;
             /**
@@ -8543,16 +8543,17 @@ var egret;
              * @language zh_CN
              */
             _this.touchDown = false;
-            _this.$initTo(stageX, stageY, touchPointID);
+            _this.$initTo(stageX, stageY, touchPointID, button);
             return _this;
         }
         /**
          * @private
          */
-        TouchEvent.prototype.$initTo = function (stageX, stageY, touchPointID) {
+        TouchEvent.prototype.$initTo = function (stageX, stageY, touchPointID, button) {
             this.touchPointID = +touchPointID || 0;
             this.$stageX = +stageX || 0;
             this.$stageY = +stageY || 0;
+            this.$button = +button || 0;
         };
         Object.defineProperty(TouchEvent.prototype, "stageX", {
             /**
@@ -8636,6 +8637,17 @@ var egret;
             enumerable: true,
             configurable: true
         });
+        Object.defineProperty(TouchEvent.prototype, "button", {
+            /**
+             * 点击事件鼠标左中右键
+             * long
+             */
+            get: function () {
+                return this.$button;
+            },
+            enumerable: true,
+            configurable: true
+        });
         /**
          * @private
          */
@@ -8701,13 +8713,14 @@ var egret;
          * @platform Web,Native
          * @language zh_CN
          */
-        TouchEvent.dispatchTouchEvent = function (target, type, bubbles, cancelable, stageX, stageY, touchPointID, touchDown) {
+        TouchEvent.dispatchTouchEvent = function (target, type, bubbles, cancelable, stageX, stageY, touchPointID, touchDown, button) {
             if (touchDown === void 0) { touchDown = false; }
+            if (button === void 0) { button = 0; }
             if (!bubbles && !target.hasEventListener(type)) {
                 return true;
             }
             var event = egret.Event.create(TouchEvent, type, bubbles, cancelable);
-            event.$initTo(stageX, stageY, touchPointID);
+            event.$initTo(stageX, stageY, touchPointID, button);
             event.touchDown = touchDown;
             var result = target.dispatchEvent(event);
             egret.Event.release(event);
@@ -14489,8 +14502,9 @@ var egret;
              * @param x 事件发生处相对于舞台的坐标x
              * @param y 事件发生处相对于舞台的坐标y
              * @param touchPointID 分配给触摸点的唯一标识号
+             * @param button 鼠标左中右键
              */
-            TouchHandler.prototype.onTouchBegin = function (x, y, touchPointID) {
+            TouchHandler.prototype.onTouchBegin = function (x, y, touchPointID, button) {
                 if (this.useTouchesCount >= this.maxTouches) {
                     return;
                 }
@@ -14501,7 +14515,7 @@ var egret;
                     this.touchDownTarget[touchPointID] = target;
                     this.useTouchesCount++;
                 }
-                egret.TouchEvent.dispatchTouchEvent(target, egret.TouchEvent.TOUCH_BEGIN, true, true, x, y, touchPointID, true);
+                egret.TouchEvent.dispatchTouchEvent(target, egret.TouchEvent.TOUCH_BEGIN, true, true, x, y, touchPointID, true, button);
             };
             /**
              * @private
@@ -14510,7 +14524,7 @@ var egret;
              * @param y 事件发生处相对于舞台的坐标y
              * @param touchPointID 分配给触摸点的唯一标识号
              */
-            TouchHandler.prototype.onTouchMove = function (x, y, touchPointID) {
+            TouchHandler.prototype.onTouchMove = function (x, y, touchPointID, button) {
                 if (this.touchDownTarget[touchPointID] == null) {
                     return;
                 }
@@ -14521,7 +14535,7 @@ var egret;
                 this.lastTouchY = y;
                 //直接用begin按下的目标 没必要再去搜寻 而且目标还可能会变化 业务层应该不想 modify by xiangqian 2019.1.28
                 // let target = this.findTarget(x, y);
-                egret.TouchEvent.dispatchTouchEvent(this.touchDownTarget[touchPointID], egret.TouchEvent.TOUCH_MOVE, true, true, x, y, touchPointID, true);
+                egret.TouchEvent.dispatchTouchEvent(this.touchDownTarget[touchPointID], egret.TouchEvent.TOUCH_MOVE, true, true, x, y, touchPointID, true, button);
             };
             /**
              * @private
@@ -14530,7 +14544,7 @@ var egret;
              * @param y 事件发生处相对于舞台的坐标y
              * @param touchPointID 分配给触摸点的唯一标识号
              */
-            TouchHandler.prototype.onTouchEnd = function (x, y, touchPointID) {
+            TouchHandler.prototype.onTouchEnd = function (x, y, touchPointID, button) {
                 if (this.touchDownTarget[touchPointID] == null) {
                     return;
                 }
@@ -14538,12 +14552,12 @@ var egret;
                 var oldTarget = this.touchDownTarget[touchPointID];
                 delete this.touchDownTarget[touchPointID];
                 this.useTouchesCount--;
-                egret.TouchEvent.dispatchTouchEvent(target, egret.TouchEvent.TOUCH_END, true, true, x, y, touchPointID, false);
+                egret.TouchEvent.dispatchTouchEvent(target, egret.TouchEvent.TOUCH_END, true, true, x, y, touchPointID, false, button);
                 if (oldTarget == target) {
-                    egret.TouchEvent.dispatchTouchEvent(target, egret.TouchEvent.TOUCH_TAP, true, true, x, y, touchPointID, false);
+                    egret.TouchEvent.dispatchTouchEvent(target, egret.TouchEvent.TOUCH_TAP, true, true, x, y, touchPointID, false, button);
                 }
                 else {
-                    egret.TouchEvent.dispatchTouchEvent(oldTarget, egret.TouchEvent.TOUCH_RELEASE_OUTSIDE, true, true, x, y, touchPointID, false);
+                    egret.TouchEvent.dispatchTouchEvent(oldTarget, egret.TouchEvent.TOUCH_RELEASE_OUTSIDE, true, true, x, y, touchPointID, false, button);
                 }
             };
             /**
