@@ -2996,8 +2996,8 @@ var egret;
          * 获取指定像素区域的颜色值
          * @param x  像素区域的X轴坐标
          * @param y  像素区域的Y轴坐标
-         * @param width  像素点的Y轴坐标
-         * @param height  像素点的Y轴坐标
+         * @param width  像素区域的宽度
+         * @param height  像素区域的高度
          * @returns  指定像素区域的颜色值
          * @version Egret 3.2.1
          * @platform Web
@@ -3070,9 +3070,6 @@ var egret;
                     this.$bitmapData.$dispose();
                 }
                 this.$bitmapData = null;
-            }
-            if (egret.nativeRender) {
-                egret_native.NativeDisplayObject.disposeTexture(this);
             }
         };
         return Texture;
@@ -5611,7 +5608,7 @@ var egret;
          * @private
          */
         Bitmap.prototype.setBitmapDataToWasm = function (data) {
-            this.$nativeDisplayObject.setBitmapData(data);
+            this.$nativeDisplayObject.setTexture(data);
         };
         /**
          * @private
@@ -8271,11 +8268,29 @@ var egret;
              * webgl纹理生成后，是否删掉原始图像数据
              */
             _this.$deleteSource = true;
+            if (egret.nativeRender) {
+                var nativeBitmapData = new egret_native.NativeBitmapData();
+                nativeBitmapData.$init();
+                _this.$nativeBitmapData = nativeBitmapData;
+            }
             _this.source = source;
             _this.width = source.width;
             _this.height = source.height;
             return _this;
         }
+        Object.defineProperty(BitmapData.prototype, "source", {
+            get: function () {
+                return this.$source;
+            },
+            set: function (value) {
+                this.$source = value;
+                if (egret.nativeRender) {
+                    egret_native.NativeDisplayObject.setSourceToNativeBitmapData(this.$nativeBitmapData, value);
+                }
+            },
+            enumerable: true,
+            configurable: true
+        });
         BitmapData.create = function (type, data, callback) {
             var base64 = "";
             if (type === "arraybuffer") {
@@ -8319,6 +8334,9 @@ var egret;
                 this.source.dispose();
             }
             this.source = null;
+            if (egret.nativeRender) {
+                egret_native.NativeDisplayObject.disposeNativeBitmapData(this.$nativeBitmapData);
+            }
             BitmapData.$dispose(this);
         };
         BitmapData.$addDisplayObject = function (displayObject, bitmapData) {
@@ -8413,9 +8431,6 @@ var egret;
                     maskedObject.$cacheDirty = true;
                     maskedObject.$cacheDirtyUp();
                 }
-            }
-            if (egret.nativeRender) {
-                egret_native.NativeDisplayObject.disposeBitmapData(bitmapData);
             }
             delete BitmapData._displayList[hashCode];
         };
@@ -12154,6 +12169,7 @@ var egret;
     locale_strings[1049] = "In the absence of sound is not allowed to play after loading";
     locale_strings[1050] = "ExternalInterface calls the method without js registration: {0}";
     locale_strings[1051] = "runtime only support webgl render mode";
+    locale_strings[1052] = "network request timeout{0}";
     //gui  3000-3099
     locale_strings[3000] = "Theme configuration file failed to load: {0}";
     locale_strings[3001] = "Cannot find the skin name which is configured in Theme: {0}";
@@ -12174,11 +12190,15 @@ var egret;
     locale_strings[3100] = "Current browser does not support WebSocket";
     locale_strings[3101] = "Please connect Socket firstly";
     locale_strings[3102] = "Please set the type of binary type";
+    //RES 3200-3299
+    locale_strings[3200] = "getResByUrl must be called after loadConfig";
     //db 4000-4299
     locale_strings[4000] = "An Bone cannot be added as a child to itself or one of its children (or children's children, etc.)";
     locale_strings[4001] = "Abstract class can not be instantiated!";
     locale_strings[4002] = "Unnamed data!";
     locale_strings[4003] = "Nonsupport version!";
+    //4500-5000 platform
+    locale_strings[4500] = "The platform does not support {0} adapter mode and has been automatically replaced with {1} mode, please modify your code adapter logic";
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
@@ -12272,8 +12292,7 @@ var egret;
     egret.$locale_strings = egret.$locale_strings || {};
     egret.$locale_strings["zh_CN"] = egret.$locale_strings["zh_CN"] || {};
     var locale_strings = egret.$locale_strings["zh_CN"];
-    //eui 2000-2999
-    //RES 3200-3299
+    //eui 2000-2999    
     //core  1000-1999
     locale_strings[1001] = "找不到Egret入口类: {0}。";
     locale_strings[1002] = "Egret入口类 {0} 必须继承自egret.DisplayObject。";
@@ -12322,6 +12341,7 @@ var egret;
     locale_strings[1049] = "声音在没有加载完之前不允许播放";
     locale_strings[1050] = "ExternalInterface调用了js没有注册的方法: {0}";
     locale_strings[1051] = "runtime 只支持 webgl 渲染模式";
+    locale_strings[1052] = "网络请求超时:{0}";
     //gui  3000-3099
     locale_strings[3000] = "主题配置文件加载失败: {0}";
     locale_strings[3001] = "找不到主题中所配置的皮肤类名: {0}";
@@ -12342,11 +12362,15 @@ var egret;
     locale_strings[3100] = "当前浏览器不支持WebSocket";
     locale_strings[3101] = "请先连接WebSocket";
     locale_strings[3102] = "请先设置type为二进制类型";
+    //RES 3200-3299
+    locale_strings[3200] = "getResByUrl 必须在 loadConfig 之后调用";
     //db 4000-4299
     locale_strings[4000] = "An Bone cannot be added as a child to itself or one of its children (or children's children, etc.)";
     locale_strings[4001] = "Abstract class can not be instantiated!";
     locale_strings[4002] = "Unnamed data!";
     locale_strings[4003] = "Nonsupport version!";
+    //4500-5000 platform
+    locale_strings[4500] = "该平台不支持 {0} 适配模式，已经自动替换为 {1} 模式，请修改您的代码适配逻辑";
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
@@ -13374,10 +13398,10 @@ var egret;
     if (egret.nativeRender) {
         var nrABIVersion = egret_native.nrABIVersion;
         var nrMinEgretVersion = egret_native.nrMinEgretVersion;
-        var requiredNrABIVersion = 4;
+        var requiredNrABIVersion = 5;
         if (nrABIVersion < requiredNrABIVersion) {
             egret.nativeRender = false;
-            var msg = "需要升级微端版本到 0.1.8 才可以开启原生渲染加速";
+            var msg = "需要升级微端版本到 0.1.14 才可以开启原生渲染加速";
             egret.sys.$warnToFPS(msg);
             egret.warn(msg);
         }
@@ -14122,7 +14146,7 @@ var egret;
              * @private
              * 执行一次刷新
              */
-            SystemTicker.prototype.update = function () {
+            SystemTicker.prototype.update = function (forceUpdate) {
                 var t1 = egret.getTimer();
                 var callBackList = this.callBackList;
                 var thisObjectList = this.thisObjectList;
@@ -14162,7 +14186,7 @@ var egret;
                         this.animTickerProcess.$executeCallBack(timeStamp);
                     }
                 }
-                if (deltaTime >= this.frameDeltaTime) {
+                if (deltaTime >= this.frameDeltaTime || forceUpdate) {
                     this.lastCount = this.frameInterval;
                 }
                 else {
@@ -17095,6 +17119,32 @@ var egret;
          * @language zh_CN
          */
         RuntimeType.WXGAME = "wxgame";
+        /**
+         * Running on Baidu mini game
+         * @version Egret 5.2.13
+         * @platform All
+         * @language en_US
+         */
+        /**
+         * 运行在百度小游戏上
+         * @version Egret 5.2.13
+         * @platform All
+         * @language zh_CN
+         */
+        RuntimeType.BAIDUGAME = "baidugame";
+        /**
+         * Running on Xiaomi quick game
+         * @version Egret 5.2.14
+         * @platform All
+         * @language en_US
+         */
+        /**
+         * 运行在小米快游戏上
+         * @version Egret 5.2.14
+         * @platform All
+         * @language zh_CN
+         */
+        RuntimeType.QGAME = "qgame";
     })(RuntimeType = egret.RuntimeType || (egret.RuntimeType = {}));
     /**
      * The Capabilities class provides properties that describe the system and runtime that are hosting the application.
@@ -17211,7 +17261,7 @@ var egret;
          * @platform Web,Native
          * @language zh_CN
          */
-        Capabilities.engineVersion = "5.2.9";
+        Capabilities.engineVersion = "5.2.16";
         /***
          * current render mode.
          * @type {string}
@@ -18375,11 +18425,11 @@ var egret;
                     }
                     if (isFirstChar) {
                         isFirstChar = false;
-                        textOffsetX = Math.min(offsetX, textOffsetX);
+                        // textOffsetX = Math.min(offsetX, textOffsetX);
                     }
                     if (isFirstLine) {
                         isFirstLine = false;
-                        textOffsetY = Math.min(offsetY, textOffsetY);
+                        // textOffsetY = Math.min(offsetY, textOffsetY);
                     }
                     if (hasWidthSet && j > 0 && xPos + texureWidth > textFieldWidth) {
                         if (!setLineData(line.substring(0, j)))
@@ -19284,9 +19334,6 @@ var egret;
              */
             _this.isIDEMode = false;
             _this.$inputEnabled = false;
-            /**
-             * @private
-             */
             _this.inputUtils = null;
             /**
              * @private
@@ -24306,7 +24353,9 @@ var egret;
             this.lastTimeStamp = timeStamp;
             this._currentCount++;
             var complete = (this.repeatCount > 0 && this._currentCount >= this.repeatCount);
-            egret.TimerEvent.dispatchTimerEvent(this, egret.TimerEvent.TIMER);
+            if (this._currentCount <= this.repeatCount) {
+                egret.TimerEvent.dispatchTimerEvent(this, egret.TimerEvent.TIMER);
+            }
             if (complete) {
                 this.stop();
                 egret.TimerEvent.dispatchTimerEvent(this, egret.TimerEvent.TIMER_COMPLETE);
