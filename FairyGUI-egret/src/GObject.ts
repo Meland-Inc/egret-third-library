@@ -852,8 +852,7 @@ module fairygui {
             this._dragBounds = value;
         }
 
-        public startDrag(touchPointID: number = -1): void {
-            if (touchPointID === void 0) { touchPointID = 0; }
+        public startDrag(touchPointID: number = 0): void {
             if (this._displayObject.stage == null)
                 return;
 
