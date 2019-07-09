@@ -1136,7 +1136,7 @@ module fairygui {
         private static sDragHelperRect: egret.Rectangle = new egret.Rectangle();
         private static sUpdateInDragging: boolean;
         private _touchDownPoint: egret.Point;
-        public touchPointID = 0;
+        private _touchPointID = 0;
 
         private initDrag(): void {
             if (this._draggable)
@@ -1161,9 +1161,9 @@ module fairygui {
             GObject.draggingObject = this;
             if (evt || typeof evt == 'number') {
                 if (typeof evt == 'number') {
-                    this.touchPointID = evt;
+                    this._touchPointID = evt;
                 } else {
-                    this.touchPointID = evt.touchPointID;
+                    this._touchPointID = evt.touchPointID;
                 }
             }
 
@@ -1190,7 +1190,7 @@ module fairygui {
             this._touchDownPoint.x = evt.stageX;
             this._touchDownPoint.y = evt.stageY;
             if (evt) {
-                this.touchPointID = evt.touchPointID;
+                this._touchPointID = evt.touchPointID;
             }
 
             GRoot.inst.nativeStage.addEventListener(egret.TouchEvent.TOUCH_MOVE, this.__moving, this);
@@ -1209,7 +1209,7 @@ module fairygui {
                 return;
 
             this.reset();
-            if (evt.touchPointID == this.touchPointID) {
+            if (evt.touchPointID == this._touchPointID) {
                 var dragEvent: DragEvent = new DragEvent(DragEvent.DRAG_START);
                 dragEvent.stageX = evt.stageX;
                 dragEvent.stageY = evt.stageY;
@@ -1222,7 +1222,7 @@ module fairygui {
         }
 
         private __moving2(evt: egret.TouchEvent): void {
-            if (this.touchPointID == evt.touchPointID) {
+            if (this._touchPointID == evt.touchPointID) {
                 var xx: number = evt.stageX - GObject.sGlobalDragStart.x + GObject.sGlobalRect.x;
                 var yy: number = evt.stageY - GObject.sGlobalDragStart.y + GObject.sGlobalRect.y;
 
@@ -1260,7 +1260,7 @@ module fairygui {
         }
 
         private __end2(evt: egret.TouchEvent): void {
-            if (GObject.draggingObject == this && this.touchPointID == evt.touchPointID) {
+            if (GObject.draggingObject == this && this._touchPointID == evt.touchPointID) {
                 this.stopDrag();
 
                 var dragEvent: DragEvent = new DragEvent(DragEvent.DRAG_END);
