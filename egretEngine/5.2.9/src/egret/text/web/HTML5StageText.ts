@@ -95,6 +95,10 @@ namespace egret.web {
         public $getFocusIndex(): number {
             return this.inputElement ? this.inputElement.selectionStart : 0;
         }
+
+        public $setSelectionRange(start: number, end: number) {
+            this.inputElement.setSelectionRange(start, end);
+        }
         /**
          * @private
          * 
@@ -350,13 +354,56 @@ namespace egret.web {
             let self = this;
             window.setTimeout(function () {
                 if (self.inputElement) {
-                    let e = new egret.Event("onclickinput");
-                    e.data = self.inputElement.selectionStart
+                    let e = new egret.Event("updatefocus");
+                    e.data = [self.inputElement.selectionStart, self.inputElement.selectionEnd];
                     self.dispatchEvent(e);
                 }
             }, 0);
         }
 
+        /**
+         * @private
+         * 
+         */
+
+        public _onMouseMove(): void {
+            let self = this;
+            window.setTimeout(function () {
+                if (self.inputElement && self.inputElement.selectionStart != self.inputElement.selectionEnd) {
+                    let e = new egret.Event("updatefocus");
+                    e.data = [self.inputElement.selectionStart, self.inputElement.selectionEnd];
+                    self.dispatchEvent(e);
+                }
+            }, 0);
+        }
+        /**
+         * @private
+         * 
+         */
+
+        public _onDragEnd(): void {
+            let self = this;
+            window.setTimeout(function () {
+                if (self.inputElement) {
+                    self.textValue = self.inputElement.value;
+                    let e = new egret.Event("updatefocus");
+                    e.data = [self.inputElement.selectionStart, self.inputElement.selectionEnd];
+                    self.dispatchEvent(e);
+                    egret.Event.dispatchEvent(self, "updateText", false);
+                }
+            }, 0);
+        }
+
+        public _onKeyPress(): void {
+            let self = this;
+            window.setTimeout(function () {
+                if (self.inputElement) {
+                    let e = new egret.Event("updatefocus");
+                    e.data = [self.inputElement.selectionStart, self.inputElement.selectionEnd];
+                    self.dispatchEvent(e);
+                }
+            }, 0);
+        }
         /**
          * @private
          * 
@@ -653,11 +700,40 @@ namespace egret.web {
             };
 
             inputElement.onclick = function () {
-
                 if (self._stageText) {
                     self._stageText._onClickInput();
                 }
             };
+
+            inputElement.onmousemove = function () {
+                if (self._stageText) {
+                    self._stageText._onMouseMove();
+                }
+            };
+
+
+            inputElement.ondragend = function () {
+                if (self._stageText) {
+                    self._stageText._onDragEnd();
+                }
+            }
+
+            inputElement.onkeypress = function () {
+                if (self._stageText) {
+                    self._stageText._onKeyPress();
+                }
+            }
+
+            inputElement.onkeydown = function () {
+                if (self._stageText.$textfield.isIDETip) {
+                    if ([13, 38, 40].indexOf((event as KeyboardEvent).which) >= 0) {
+                        (event as KeyboardEvent).returnValue = false;
+                    }
+                }
+                if (self._stageText) {
+                    self._stageText._onKeyPress();
+                }
+            }
         }
 
         /**

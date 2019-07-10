@@ -89,7 +89,7 @@ namespace egret {
             this.stageText.$addToStage();
 
             this.stageText.addEventListener("updateText", this.updateTextHandler, this);
-            this.stageText.addEventListener("onclickinput", this.onClickInput, this);
+            this.stageText.addEventListener("updatefocus", this.onUpdateFocus, this);
             this._text.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onMouseDownHandler, this);
 
             this.stageText.addEventListener("blur", this.blurHandler, this);
@@ -113,7 +113,7 @@ namespace egret {
             this.stageText.$removeFromStage();
 
             this.stageText.removeEventListener("updateText", this.updateTextHandler, this);
-            this.stageText.removeEventListener("onclickinput", this.onClickInput, this);
+            this.stageText.removeEventListener("updatefocus", this.onUpdateFocus, this);
             this._text.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onMouseDownHandler, this);
             this.tempStage.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onStageDownHandler, this);
 
@@ -266,8 +266,10 @@ namespace egret {
             this._text.dispatchEvent(new egret.Event(egret.Event.CHANGE, true));
         }
 
-        private onClickInput(event: Event) {
-            this._text.dispatchEvent(new egret.Event("onclickinput", true, false, event.data));
+        private onUpdateFocus(event: Event) {
+            if (this._text.isIDEMode) {
+                this._text.dispatchEvent(new egret.Event("updatefocus", true, false, event.data));
+            }
         }
         /**
          * @private
