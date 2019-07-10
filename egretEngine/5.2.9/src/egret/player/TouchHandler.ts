@@ -70,8 +70,9 @@ namespace egret.sys {
          * @param x 事件发生处相对于舞台的坐标x
          * @param y 事件发生处相对于舞台的坐标y
          * @param touchPointID 分配给触摸点的唯一标识号
+         * @param button 鼠标左中右键
          */
-        public onTouchBegin(x: number, y: number, touchPointID: number): void {
+        public onTouchBegin(x: number, y: number, touchPointID: number, button: number): void {
             if (this.useTouchesCount >= this.maxTouches) {
                 return;
             }
@@ -83,7 +84,7 @@ namespace egret.sys {
                 this.touchDownTarget[touchPointID] = target;
                 this.useTouchesCount++;
             }
-            TouchEvent.dispatchTouchEvent(target, TouchEvent.TOUCH_BEGIN, true, true, x, y, touchPointID, true);
+            TouchEvent.dispatchTouchEvent(target, TouchEvent.TOUCH_BEGIN, true, true, x, y, touchPointID, true, button);
         }
 
         /**
@@ -102,7 +103,7 @@ namespace egret.sys {
          * @param y 事件发生处相对于舞台的坐标y
          * @param touchPointID 分配给触摸点的唯一标识号
          */
-        public onTouchMove(x: number, y: number, touchPointID: number): void {
+        public onTouchMove(x: number, y: number, touchPointID: number, button: number): void {
             if (this.touchDownTarget[touchPointID] == null) {
                 return;
             }
@@ -116,7 +117,7 @@ namespace egret.sys {
 
             //直接用begin按下的目标 没必要再去搜寻 而且目标还可能会变化 业务层应该不想 modify by xiangqian 2019.1.28
             // let target = this.findTarget(x, y);
-            TouchEvent.dispatchTouchEvent(this.touchDownTarget[touchPointID], TouchEvent.TOUCH_MOVE, true, true, x, y, touchPointID, true);
+            TouchEvent.dispatchTouchEvent(this.touchDownTarget[touchPointID], TouchEvent.TOUCH_MOVE, true, true, x, y, touchPointID, true, button);
         }
 
         /**
@@ -126,7 +127,7 @@ namespace egret.sys {
          * @param y 事件发生处相对于舞台的坐标y
          * @param touchPointID 分配给触摸点的唯一标识号
          */
-        public onTouchEnd(x: number, y: number, touchPointID: number): void {
+        public onTouchEnd(x: number, y: number, touchPointID: number, button: number): void {
             if (this.touchDownTarget[touchPointID] == null) {
                 return;
             }
@@ -136,12 +137,12 @@ namespace egret.sys {
             delete this.touchDownTarget[touchPointID];
             this.useTouchesCount--;
 
-            TouchEvent.dispatchTouchEvent(target, TouchEvent.TOUCH_END, true, true, x, y, touchPointID, false);
+            TouchEvent.dispatchTouchEvent(target, TouchEvent.TOUCH_END, true, true, x, y, touchPointID, false, button);
             if (oldTarget == target) {
-                TouchEvent.dispatchTouchEvent(target, TouchEvent.TOUCH_TAP, true, true, x, y, touchPointID, false);
+                TouchEvent.dispatchTouchEvent(target, TouchEvent.TOUCH_TAP, true, true, x, y, touchPointID, false, button);
             }
             else {
-                TouchEvent.dispatchTouchEvent(oldTarget, TouchEvent.TOUCH_RELEASE_OUTSIDE, true, true, x, y, touchPointID, false);
+                TouchEvent.dispatchTouchEvent(oldTarget, TouchEvent.TOUCH_RELEASE_OUTSIDE, true, true, x, y, touchPointID, false, button);
             }
         }
 

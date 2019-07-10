@@ -5567,11 +5567,11 @@ declare namespace egret {
          * @platform Web,Native
          * @language zh_CN
          */
-        constructor(type: string, bubbles?: boolean, cancelable?: boolean, stageX?: number, stageY?: number, touchPointID?: number);
+        constructor(type: string, bubbles?: boolean, cancelable?: boolean, stageX?: number, stageY?: number, touchPointID?: number, button?: number);
         /**
          * @private
          */
-        $initTo(stageX: number, stageY: number, touchPointID: number): void;
+        $initTo(stageX: number, stageY: number, touchPointID: number, button: number): void;
         /**
          * @private
          */
@@ -5635,6 +5635,15 @@ declare namespace egret {
          */
         readonly localY: number;
         private targetChanged;
+        /**
+         * @private
+         */
+        $button: number;
+        /**
+         * 点击事件鼠标左中右键
+         * long
+         */
+        readonly button: number;
         /**
          * @private
          */
@@ -5714,7 +5723,7 @@ declare namespace egret {
          * @platform Web,Native
          * @language zh_CN
          */
-        static dispatchTouchEvent(target: IEventDispatcher, type: string, bubbles?: boolean, cancelable?: boolean, stageX?: number, stageY?: number, touchPointID?: number, touchDown?: boolean): boolean;
+        static dispatchTouchEvent(target: IEventDispatcher, type: string, bubbles?: boolean, cancelable?: boolean, stageX?: number, stageY?: number, touchPointID?: number, touchDown?: boolean, button?: number): boolean;
     }
 }
 declare namespace egret {
@@ -9525,8 +9534,9 @@ declare namespace egret.sys {
          * @param x 事件发生处相对于舞台的坐标x
          * @param y 事件发生处相对于舞台的坐标y
          * @param touchPointID 分配给触摸点的唯一标识号
+         * @param button 鼠标左中右键
          */
-        onTouchBegin(x: number, y: number, touchPointID: number): void;
+        onTouchBegin(x: number, y: number, touchPointID: number, button: number): void;
         /**
          * @private
          */
@@ -9542,7 +9552,7 @@ declare namespace egret.sys {
          * @param y 事件发生处相对于舞台的坐标y
          * @param touchPointID 分配给触摸点的唯一标识号
          */
-        onTouchMove(x: number, y: number, touchPointID: number): void;
+        onTouchMove(x: number, y: number, touchPointID: number, button: number): void;
         /**
          * @private
          * 触摸结束（弹起）
@@ -9550,7 +9560,7 @@ declare namespace egret.sys {
          * @param y 事件发生处相对于舞台的坐标y
          * @param touchPointID 分配给触摸点的唯一标识号
          */
-        onTouchEnd(x: number, y: number, touchPointID: number): void;
+        onTouchEnd(x: number, y: number, touchPointID: number, button: number): void;
         /**
          * @private
          * 获取舞台坐标下的触摸对象

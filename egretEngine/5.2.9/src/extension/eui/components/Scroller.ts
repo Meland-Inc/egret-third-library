@@ -30,7 +30,7 @@
 
 namespace eui {
 
-    let scrollerThrowEvent:ScrollerThrowEvent;
+    let scrollerThrowEvent: ScrollerThrowEvent;
 
     /**
      * @private
@@ -129,7 +129,7 @@ namespace eui {
          * @platform Web,Native
          * @language zh_CN
          */
-        public static scrollThreshold:number = 5;
+        public static scrollThreshold: number = 5;
 
         /**
          * Constructor.
@@ -168,7 +168,7 @@ namespace eui {
             };
         }
 
-        private $bounces:boolean = true;
+        private $bounces: boolean = true;
 
         /**
          * Whether to enable rebound, rebound When enabled, ScrollView contents allowed to continue to drag the border after arriving at the end user drag operation, and then bounce back boundary position
@@ -182,11 +182,11 @@ namespace eui {
          * @version Egret 2.5.6
          * @language zh_CN
          */
-        public get bounces():boolean {
+        public get bounces(): boolean {
             return this.$bounces;
         }
 
-        public set bounces(value:boolean) {
+        public set bounces(value: boolean) {
             this.$bounces = !!value;
             let touchScrollH = this.$Scroller[Keys.touchScrollH];
             if (touchScrollH) {
@@ -212,14 +212,14 @@ namespace eui {
          * @platform Web,Native
          * @language zh_CN
          */
-        public set throwSpeed(val:number) {
+        public set throwSpeed(val: number) {
             val = +val;
             if (val < 0) val = 0;
             this.$Scroller[Keys.touchScrollH].$scrollFactor = val;
             this.$Scroller[Keys.touchScrollV].$scrollFactor = val;
         }
 
-        public get throwSpeed():number {
+        public get throwSpeed(): number {
             return this.$Scroller[Keys.touchScrollH].$scrollFactor;
         }
 
@@ -227,7 +227,7 @@ namespace eui {
         /**
          * @private
          */
-        $getThrowInfo(currentPos:number, toPos:number):eui.ScrollerThrowEvent {
+        $getThrowInfo(currentPos: number, toPos: number): eui.ScrollerThrowEvent {
             if (!scrollerThrowEvent) {
                 scrollerThrowEvent = new eui.ScrollerThrowEvent(ScrollerThrowEvent.THROW, false, false, currentPos, toPos);
             }
@@ -241,7 +241,7 @@ namespace eui {
         /**
          * @private
          */
-        $Scroller:Object;
+        $Scroller: Object;
         /**
          * the horizontal scroll bar
          *
@@ -262,7 +262,7 @@ namespace eui {
          * @platform Web,Native
          * @language zh_CN
          */
-        public horizontalScrollBar:eui.HScrollBar = null;
+        public horizontalScrollBar: eui.HScrollBar = null;
         /**
          * the vertical scroll bar
          *
@@ -283,7 +283,7 @@ namespace eui {
          * @platform Web,Native
          * @language zh_CN
          */
-        public verticalScrollBar:eui.VScrollBar = null;
+        public verticalScrollBar: eui.VScrollBar = null;
 
         /**
          * Indicates under what conditions the scroller can be moved and the vertical scroll bar is displayed.
@@ -312,11 +312,11 @@ namespace eui {
          * @platform Web,Native
          * @language zh_CN
          */
-        public get scrollPolicyV():string {
+        public get scrollPolicyV(): string {
             return this.$Scroller[Keys.scrollPolicyV];
         }
 
-        public set scrollPolicyV(value:string) {
+        public set scrollPolicyV(value: string) {
             let values = this.$Scroller;
             if (values[Keys.scrollPolicyV] == value) {
                 return;
@@ -352,11 +352,11 @@ namespace eui {
          * @platform Web,Native
          * @language zh_CN
          */
-        public get scrollPolicyH():string {
+        public get scrollPolicyH(): string {
             return this.$Scroller[Keys.scrollPolicyH];
         }
 
-        public set scrollPolicyH(value:string) {
+        public set scrollPolicyH(value: string) {
             let values = this.$Scroller;
             if (values[Keys.scrollPolicyH] == value) {
                 return;
@@ -380,7 +380,7 @@ namespace eui {
          * @platform Web,Native
          * @language zh_CN
          */
-        public stopAnimation():void {
+        public stopAnimation(): void {
             let values = this.$Scroller;
             let scrollV = values[Keys.touchScrollV];
             let scrollH = values[Keys.touchScrollH];
@@ -417,11 +417,11 @@ namespace eui {
          * @platform Web,Native
          * @language zh_CN
          */
-        public get viewport():IViewport {
+        public get viewport(): IViewport {
             return this.$Scroller[Keys.viewport];
         }
 
-        public set viewport(value:IViewport) {
+        public set viewport(value: IViewport) {
             let values = this.$Scroller;
             if (value == values[Keys.viewport])
                 return;
@@ -435,7 +435,7 @@ namespace eui {
          * @private
          * 安装并初始化视域组件
          */
-        private installViewport():void {
+        private installViewport(): void {
             let viewport = this.viewport;
             if (viewport) {
                 this.addChildAt(viewport, 0);
@@ -457,7 +457,7 @@ namespace eui {
          * @private
          * 卸载视域组件
          */
-        private uninstallViewport():void {
+        private uninstallViewport(): void {
             if (this.horizontalScrollBar) {
                 this.horizontalScrollBar.viewport = null;
             }
@@ -477,7 +477,7 @@ namespace eui {
             }
         }
 
-        private onViewPortRemove(event:egret.Event):void {
+        private onViewPortRemove(event: egret.Event): void {
             if (event.target == this.viewport) {
                 this.$Scroller[Keys.viewprotRemovedEvent] = true;
                 this.viewport = null;
@@ -491,7 +491,7 @@ namespace eui {
          * @version eui 1.0
          * @platform Web,Native
          */
-        protected setSkin(skin:Skin):void {
+        protected setSkin(skin: Skin): void {
             super.setSkin(skin);
             let viewport = this.viewport;
             if (viewport) {
@@ -503,12 +503,12 @@ namespace eui {
          * @private
          * @param event
          */
-        private onTouchBeginCapture(event:egret.TouchEvent):void {
-            if(!this.$stage) {
+        private onTouchBeginCapture(event: egret.TouchEvent): void {
+            if (!this.$stage) {
                 return;
             }
             this.$Scroller[Keys.touchCancle] = false;
-            let canScroll:boolean = this.checkScrollPolicy();
+            let canScroll: boolean = this.checkScrollPolicy();
             if (!canScroll) {
                 return;
             }
@@ -519,7 +519,7 @@ namespace eui {
          * @private
          * @param event
          */
-        private onTouchEndCapture(event:egret.TouchEvent):void {
+        private onTouchEndCapture(event: egret.TouchEvent): void {
             if (this.$Scroller[Keys.touchCancle]) {
                 event.$bubbles = false;
                 this.dispatchBubbleEvent(event);
@@ -534,7 +534,7 @@ namespace eui {
          * @private
          * @param event
          */
-        private onTouchTapCapture(event:egret.TouchEvent):void {
+        private onTouchTapCapture(event: egret.TouchEvent): void {
             if (this.$Scroller[Keys.touchCancle]) {
                 event.$bubbles = false;
                 this.dispatchBubbleEvent(event);
@@ -549,13 +549,13 @@ namespace eui {
          * @private
          * 检查当前滚动策略，若有一个方向可以滚动，返回true。
          */
-        private checkScrollPolicy():boolean {
+        private checkScrollPolicy(): boolean {
             let values = this.$Scroller;
-            let viewport:IViewport = values[Keys.viewport];
+            let viewport: IViewport = values[Keys.viewport];
             if (!viewport) {
                 return false;
             }
-            let hCanScroll:boolean;
+            let hCanScroll: boolean;
             let uiValues = viewport.$UIComponent;
             switch (values[Keys.scrollPolicyH]) {
                 case "auto":
@@ -575,7 +575,7 @@ namespace eui {
             }
             values[Keys.horizontalCanScroll] = hCanScroll;
 
-            let vCanScroll:boolean;
+            let vCanScroll: boolean;
             switch (values[Keys.scrollPolicyV]) {
                 case "auto":
                     if (viewport.contentHeight > uiValues[sys.UIKeys.height] || viewport.scrollV !== 0) {
@@ -600,16 +600,16 @@ namespace eui {
          * @private
          * 记录按下的对象，touchCancle时使用
          */
-        private downTarget:egret.DisplayObject;
+        private downTarget: egret.DisplayObject;
 
-        private tempStage:egret.Stage;
+        private tempStage: egret.Stage;
 
         /**
          * @private
          *
          * @param event
          */
-        private onTouchBegin(event:egret.TouchEvent):void {
+        private onTouchBegin(event: egret.TouchEvent): void {
             if (event.isDefaultPrevented()) {
                 return;
             }
@@ -641,19 +641,19 @@ namespace eui {
          *
          * @param event
          */
-        private onTouchMove(event:egret.TouchEvent):void {
+        private onTouchMove(event: egret.TouchEvent): void {
             if (event.isDefaultPrevented()) {
                 return;
             }
             let values = this.$Scroller;
             if (!values[Keys.touchMoved]) {
-                let outX:boolean;
+                let outX: boolean;
                 if (Math.abs(values[Keys.touchStartX] - event.$stageX) < Scroller.scrollThreshold) {
                     outX = false;
                 } else {
                     outX = true;
                 }
-                let outY:boolean;
+                let outY: boolean;
                 if (Math.abs(values[Keys.touchStartY] - event.$stageY) < Scroller.scrollThreshold) {
                     outY = false;
                 } else {
@@ -704,7 +704,7 @@ namespace eui {
          * @private
          * @param event
          */
-        private onTouchCancel(event:egret.TouchEvent):void {
+        private onTouchCancel(event: egret.TouchEvent): void {
             if (!this.$Scroller[Keys.touchMoved]) {
                 this.onRemoveListeners();
             }
@@ -714,14 +714,14 @@ namespace eui {
          * @private
          * @param event
          */
-        private dispatchBubbleEvent(event:egret.TouchEvent) {
+        private dispatchBubbleEvent(event: egret.TouchEvent) {
             let viewport = this.$Scroller[Keys.viewport];
             if (!viewport) {
                 return;
             }
             let cancelEvent = egret.Event.create(egret.TouchEvent, event.type, event.bubbles, event.cancelable);
-            cancelEvent.$initTo(event.$stageX,event.$stageY,event.touchPointID);
-            let target:egret.DisplayObject = this.downTarget;
+            cancelEvent.$initTo(event.$stageX, event.$stageY, event.touchPointID, event.button);
+            let target: egret.DisplayObject = this.downTarget;
             cancelEvent.$setTarget(target);
             let list = this.$getPropagationList(target);
             let length = list.length;
@@ -746,14 +746,14 @@ namespace eui {
          * @private
          * @param event
          */
-        private dispatchCancelEvent(event:egret.TouchEvent) {
+        private dispatchCancelEvent(event: egret.TouchEvent) {
             let viewport = this.$Scroller[Keys.viewport];
             if (!viewport) {
                 return;
             }
             let cancelEvent = egret.Event.create(egret.TouchEvent, egret.TouchEvent.TOUCH_CANCEL, event.bubbles, event.cancelable);
-            cancelEvent.$initTo(event.$stageX,event.$stageY,event.touchPointID);
-            let target:egret.DisplayObject = this.downTarget;
+            cancelEvent.$initTo(event.$stageX, event.$stageY, event.touchPointID, event.button);
+            let target: egret.DisplayObject = this.downTarget;
             cancelEvent.$setTarget(target);
             let list = this.$getPropagationList(target);
             let length = list.length;
@@ -779,13 +779,13 @@ namespace eui {
          * @private
          * @param event
          */
-        private onTouchEnd(event:egret.Event):void {
+        private onTouchEnd(event: egret.Event): void {
             let values = this.$Scroller;
             values[Keys.touchMoved] = false;
 
             this.onRemoveListeners();
 
-            let viewport:IViewport = values[Keys.viewport];
+            let viewport: IViewport = values[Keys.viewport];
             let uiValues = viewport.$UIComponent;
             if (values[Keys.touchScrollH].isStarted()) {
                 values[Keys.touchScrollH].finish(viewport.scrollH, viewport.contentWidth - uiValues[sys.UIKeys.width]);
@@ -798,7 +798,7 @@ namespace eui {
         /**
          * @private
          */
-        private onRemoveListeners():void {
+        private onRemoveListeners(): void {
             let stage = this.tempStage || this.$stage;
             this.removeEventListener(egret.TouchEvent.TOUCH_MOVE, this.onTouchMove, this);
             stage.removeEventListener(egret.TouchEvent.TOUCH_END, this.onTouchEnd, this, true);
@@ -837,7 +837,7 @@ namespace eui {
          * @private
          *
          */
-        private horizontalEndHandler():void {
+        private horizontalEndHandler(): void {
             if (!this.$Scroller[Keys.touchScrollV].isPlaying()) {
                 this.onChangeEnd();
             }
@@ -847,7 +847,7 @@ namespace eui {
          * @private
          *
          */
-        private verticalEndHanlder():void {
+        private verticalEndHanlder(): void {
             if (!this.$Scroller[Keys.touchScrollH].isPlaying()) {
                 this.onChangeEnd();
             }
@@ -857,7 +857,7 @@ namespace eui {
          * @private
          *
          */
-        private onChangeEnd():void {
+        private onChangeEnd(): void {
             let values = this.$Scroller;
             let horizontalBar = this.horizontalScrollBar;
             let verticalBar = this.verticalScrollBar;
@@ -879,7 +879,7 @@ namespace eui {
          *
          * @param event
          */
-        private onAutoHideTimer(event:egret.TimerEvent):void {
+        private onAutoHideTimer(event: egret.TimerEvent): void {
             let horizontalBar = this.horizontalScrollBar;
             let verticalBar = this.verticalScrollBar;
             if (horizontalBar && horizontalBar.autoVisibility) {
@@ -897,7 +897,7 @@ namespace eui {
          * @version eui 1.0
          * @platform Web,Native
          */
-        protected updateDisplayList(unscaledWidth:number, unscaledHeight:number):void {
+        protected updateDisplayList(unscaledWidth: number, unscaledHeight: number): void {
             super.updateDisplayList(unscaledWidth, unscaledHeight);
             let viewport = this.viewport;
             if (viewport) {
@@ -914,7 +914,7 @@ namespace eui {
          * @version eui 1.0
          * @platform Web,Native
          */
-        protected partAdded(partName:string, instance:any):void {
+        protected partAdded(partName: string, instance: any): void {
             super.partAdded(partName, instance);
             if (instance == this.horizontalScrollBar) {
                 this.horizontalScrollBar.touchChildren = false;
@@ -931,7 +931,7 @@ namespace eui {
                 if (this.verticalScrollBar.autoVisibility) {
                     this.verticalScrollBar.visible = false;
                 }
-                
+
             }
         }
     }

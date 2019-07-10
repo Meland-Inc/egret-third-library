@@ -3017,7 +3017,7 @@ var egret;
                  */
                 _this.onTouchBegin = function (event) {
                     var location = _this.getLocation(event);
-                    _this.touch.onTouchBegin(location.x, location.y, event.identifier);
+                    _this.touch.onTouchBegin(location.x, location.y, event.identifier, event.button);
                 };
                 _this.onMouseMove = function (event) {
                     if (event.buttons == 0) {
@@ -3032,14 +3032,14 @@ var egret;
                  */
                 _this.onTouchMove = function (event) {
                     var location = _this.getLocation(event);
-                    _this.touch.onTouchMove(location.x, location.y, event.identifier);
+                    _this.touch.onTouchMove(location.x, location.y, event.identifier, event.button);
                 };
                 /**
                  * @private
                  */
                 _this.onTouchEnd = function (event) {
                     var location = _this.getLocation(event);
-                    _this.touch.onTouchEnd(location.x, location.y, event.identifier);
+                    _this.touch.onTouchEnd(location.x, location.y, event.identifier, event.button);
                 };
                 /**
                  * @private
@@ -3898,6 +3898,7 @@ var egret;
                     all.style.left = this.panelX + 'px';
                     all.style.top = this.panelY + 'px';
                     all.style.pointerEvents = 'none';
+                    all.id = 'egret-fps-panel';
                     document.body.appendChild(all);
                     var container = document.createElement('div');
                     container.style.color = this.fontColor;
