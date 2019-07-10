@@ -5350,6 +5350,7 @@ var fairygui;
                 this._tweenConfig._displayLockToken = 0;
             }
             this._tweenConfig._tweener = null;
+            this._owner.dispatchEventWith(fairygui.GObject.GEAR_STOP, false);
         };
         GearSize.prototype.updateState = function () {
             var gv = this._storage[this._controller.selectedPageId];
@@ -5456,6 +5457,7 @@ var fairygui;
                 this._tweenConfig._displayLockToken = 0;
             }
             this._tweenConfig._tweener = null;
+            this._owner.dispatchEventWith(fairygui.GObject.GEAR_STOP, false);
         };
         GearXY.prototype.updateState = function () {
             var pt = this._storage[this._controller.selectedPageId];
@@ -5788,6 +5790,7 @@ var fairygui;
                 this._tweenConfig._displayLockToken = 0;
             }
             this._tweenConfig._tweener = null;
+            this._owner.dispatchEventWith(fairygui.GObject.GEAR_STOP, false);
         };
         GearLook.prototype.updateState = function () {
             var gv = this._storage[this._controller.selectedPageId];
