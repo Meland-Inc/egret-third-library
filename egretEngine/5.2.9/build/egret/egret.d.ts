@@ -11746,7 +11746,7 @@ declare namespace egret {
          * @param event
          */
         private updateTextHandler(event);
-        private onClickInput(event);
+        private onUpdateFocus(event);
         /**
          * @private
          *
@@ -11835,6 +11835,7 @@ declare namespace egret {
          */
         $onBlur(): void;
         $getFocusIndex(): number;
+        $setSelectionRange(start: number, end: number): void;
     }
     /**
      * @version Egret 2.4
@@ -12083,6 +12084,11 @@ declare namespace egret {
          * 该模式下，隐藏input，显示egret的textfield，并监听各种事件
          */
         isIDEMode: boolean;
+        /**
+         * ide模式是否显示keyword tip中
+         * 该模式下，input不接受enter等键盘事件，由tip监听
+         */
+        isIDETip: boolean;
         /**
          * @version Egret 2.4
          * @platform Web,Native
@@ -12787,6 +12793,8 @@ declare namespace egret {
         private onTapHandler(e);
         setIDEMode(flag: boolean): void;
         getFocusIndex(): number;
+        setIDETip(flag: boolean): void;
+        setSelectionRange(start: number, end: number): void;
     }
     interface TextField {
         addEventListener<Z>(type: "link", listener: (this: Z, e: TextEvent) => void, thisObject: Z, useCapture?: boolean, priority?: number): any;

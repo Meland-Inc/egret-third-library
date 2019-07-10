@@ -2145,6 +2145,9 @@ var egret;
             HTML5StageText.prototype.$getFocusIndex = function () {
                 return this.inputElement ? this.inputElement.selectionStart : 0;
             };
+            HTML5StageText.prototype.$setSelectionRange = function (start, end) {
+                this.inputElement.setSelectionRange(start, end);
+            };
             /**
              * @private
              *
@@ -2353,8 +2356,48 @@ var egret;
                 var self = this;
                 window.setTimeout(function () {
                     if (self.inputElement) {
-                        var e = new egret.Event("onclickinput");
-                        e.data = self.inputElement.selectionStart;
+                        var e = new egret.Event("updatefocus");
+                        e.data = [self.inputElement.selectionStart, self.inputElement.selectionEnd];
+                        self.dispatchEvent(e);
+                    }
+                }, 0);
+            };
+            /**
+             * @private
+             *
+             */
+            HTML5StageText.prototype._onMouseMove = function () {
+                var self = this;
+                window.setTimeout(function () {
+                    if (self.inputElement && self.inputElement.selectionStart != self.inputElement.selectionEnd) {
+                        var e = new egret.Event("updatefocus");
+                        e.data = [self.inputElement.selectionStart, self.inputElement.selectionEnd];
+                        self.dispatchEvent(e);
+                    }
+                }, 0);
+            };
+            /**
+             * @private
+             *
+             */
+            HTML5StageText.prototype._onDragEnd = function () {
+                var self = this;
+                window.setTimeout(function () {
+                    if (self.inputElement) {
+                        self.textValue = self.inputElement.value;
+                        var e = new egret.Event("updatefocus");
+                        e.data = [self.inputElement.selectionStart, self.inputElement.selectionEnd];
+                        self.dispatchEvent(e);
+                        egret.Event.dispatchEvent(self, "updateText", false);
+                    }
+                }, 0);
+            };
+            HTML5StageText.prototype._onKeyPress = function () {
+                var self = this;
+                window.setTimeout(function () {
+                    if (self.inputElement) {
+                        var e = new egret.Event("updatefocus");
+                        e.data = [self.inputElement.selectionStart, self.inputElement.selectionEnd];
                         self.dispatchEvent(e);
                     }
                 }, 0);
@@ -2592,6 +2635,31 @@ var egret;
                 inputElement.onclick = function () {
                     if (self._stageText) {
                         self._stageText._onClickInput();
+                    }
+                };
+                inputElement.onmousemove = function () {
+                    if (self._stageText) {
+                        self._stageText._onMouseMove();
+                    }
+                };
+                inputElement.ondragend = function () {
+                    if (self._stageText) {
+                        self._stageText._onDragEnd();
+                    }
+                };
+                inputElement.onkeypress = function () {
+                    if (self._stageText) {
+                        self._stageText._onKeyPress();
+                    }
+                };
+                inputElement.onkeydown = function () {
+                    if (self._stageText.$textfield.isIDETip) {
+                        if ([13, 38, 40].indexOf(event.which) >= 0) {
+                            event.returnValue = false;
+                        }
+                    }
+                    if (self._stageText) {
+                        self._stageText._onKeyPress();
                     }
                 };
             };

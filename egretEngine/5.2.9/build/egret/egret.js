@@ -19037,7 +19037,7 @@ var egret;
             this.tempStage = this._text.stage;
             this.stageText.$addToStage();
             this.stageText.addEventListener("updateText", this.updateTextHandler, this);
-            this.stageText.addEventListener("onclickinput", this.onClickInput, this);
+            this.stageText.addEventListener("updatefocus", this.onUpdateFocus, this);
             this._text.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onMouseDownHandler, this);
             this.stageText.addEventListener("blur", this.blurHandler, this);
             this.stageText.addEventListener("focus", this.focusHandler, this);
@@ -19056,7 +19056,7 @@ var egret;
             }
             this.stageText.$removeFromStage();
             this.stageText.removeEventListener("updateText", this.updateTextHandler, this);
-            this.stageText.removeEventListener("onclickinput", this.onClickInput, this);
+            this.stageText.removeEventListener("updatefocus", this.onUpdateFocus, this);
             this._text.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onMouseDownHandler, this);
             this.tempStage.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onStageDownHandler, this);
             this.stageText.removeEventListener("blur", this.blurHandler, this);
@@ -19187,8 +19187,10 @@ var egret;
             //抛出change事件
             this._text.dispatchEvent(new egret.Event(egret.Event.CHANGE, true));
         };
-        InputController.prototype.onClickInput = function (event) {
-            this._text.dispatchEvent(new egret.Event("onclickinput", true, false, event.data));
+        InputController.prototype.onUpdateFocus = function (event) {
+            if (this._text.isIDEMode) {
+                this._text.dispatchEvent(new egret.Event("updatefocus", true, false, event.data));
+            }
         };
         /**
          * @private
@@ -19347,6 +19349,11 @@ var egret;
              * 该模式下，隐藏input，显示egret的textfield，并监听各种事件
              */
             _this.isIDEMode = false;
+            /**
+             * ide模式是否显示keyword tip中
+             * 该模式下，input不接受enter等键盘事件，由tip监听
+             */
+            _this.isIDETip = false;
             _this.$inputEnabled = false;
             _this.inputUtils = null;
             /**
@@ -21296,6 +21303,14 @@ var egret;
             }
             else {
                 return 0;
+            }
+        };
+        TextField.prototype.setIDETip = function (flag) {
+            this.isIDETip = flag;
+        };
+        TextField.prototype.setSelectionRange = function (start, end) {
+            if (this.inputUtils && this.inputUtils.stageText) {
+                return this.inputUtils.stageText.$setSelectionRange(start, start);
             }
         };
         /**
