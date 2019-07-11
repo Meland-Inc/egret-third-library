@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkqvmf4r" designImageAlpha="100">
-  <controller name="ctrlWindowState" pages="0,normal,1,maximize" selected="1"/>
+  <controller name="ctrlWindowState" pages="0,normal,1,maximize" selected="0"/>
   <displayList>
     <image id="n0_qvmf" name="imgBG" src="qvmfcyidl" fileName="imgB/img_cm_jak_4.png" pkg="te1gxawo" xy="0,0" size="1136,640" hideByEditor="true">
       <relation target="" sidePair="width-width,height-height"/>
@@ -8,24 +8,24 @@
     <text id="n1_qvmf" name="tfClassName" xy="17,15" size="180,24" fontSize="18" color="#ffffff" text="欧拉七桥课（default）">
       <relation target="" sidePair="left-left,top-top"/>
     </text>
-    <graph id="n11_id84" name="bar" xy="0,0" size="1136,47" type="rect" lineSize="0" lineColor="#00000000" fillColor="#ff33ff00">
+    <graph id="n11_id84" name="bar" xy="0,0" size="1136,47" type="rect" lineSize="0" lineColor="#00000000" fillColor="#0033ff00">
       <relation target="" sidePair="top-top,width-width"/>
     </graph>
     <component id="n4_qvmf" name="btnClose" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1097,9" size="31,31">
       <relation target="" sidePair="right-right,top-top"/>
       <Button icon="ui://te1gxawonl0rcyica"/>
     </component>
-    <component id="n5_qvmf" name="btnToNormal" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1062,14" size="26,18">
+    <component id="n5_qvmf" name="btnToNormal" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1062,17" size="26,18">
       <gearDisplay controller="ctrlWindowState" pages="1"/>
       <relation target="" sidePair="right-right,top-top"/>
       <Button icon="ui://7tmp5etxqvmf2"/>
     </component>
-    <component id="n6_qvmf" name="btnToMax" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1062,14" size="26,18">
+    <component id="n6_qvmf" name="btnToMax" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1062,17" size="26,18">
       <gearDisplay controller="ctrlWindowState" pages="0"/>
       <relation target="" sidePair="top-top,right-right"/>
       <Button icon="ui://7tmp5etxqvmf1"/>
     </component>
-    <loader id="n8_fp4h" name="sign" xy="2,51" size="1132,586" url="ui://7tmp5etxfp4h7" fill="scaleFree">
+    <loader id="n8_fp4h" name="sign" xy="0,49" size="1137,592" fill="scaleFree">
       <relation target="" sidePair="width-width,bottomext-bottom"/>
       <relation target="" sidePair="top-top"/>
     </loader>
