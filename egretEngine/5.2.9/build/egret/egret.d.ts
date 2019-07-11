@@ -1333,11 +1333,6 @@ declare namespace egret {
          */
         constructor();
         /**
-         * @private
-         * 纹理id
-         */
-        $textureId: number;
-        /**
          * Whether to destroy the corresponding BitmapData when the texture is destroyed
          * @version Egret 5.0.8
          * @platform Web,Native
@@ -1498,8 +1493,8 @@ declare namespace egret {
          * 获取指定像素区域的颜色值
          * @param x  像素区域的X轴坐标
          * @param y  像素区域的Y轴坐标
-         * @param width  像素点的Y轴坐标
-         * @param height  像素点的Y轴坐标
+         * @param width  像素区域的宽度
+         * @param height  像素区域的高度
          * @returns  指定像素区域的颜色值
          * @version Egret 3.2.1
          * @platform Web
@@ -3646,6 +3641,8 @@ declare namespace egret_native {
     function nrUpdateCallbackList(dt: number): void;
     function nrActiveBuffer(id: number, width: number, height: number): void;
     function nrGetPixels(x: number, y: number, width: number, height: number, pixels: Uint8Array): void;
+    function nrGetCustomImageId(type: number): number;
+    function nrSetCustomImageData(customImageId: number, pvrtcData: any, width: any, height: any, mipmapsCount: any, format: any): void;
     class NrNode {
         constructor(id: number, type: number);
     }
@@ -3679,6 +3676,13 @@ declare namespace egret_native {
     /**
      * @private
      */
+    class NativeBitmapData {
+        $init(): any;
+        $id: any;
+    }
+    /**
+     * @private
+     */
     class NativeDisplayObject {
         id: number;
         constructor(type: number);
@@ -3703,11 +3707,10 @@ declare namespace egret_native {
         static createFilter(filter: egret.Filter): void;
         static setFilterPadding(filterId: number, paddingTop: number, paddingBottom: number, paddingLeft: number, paddingRight: number): void;
         setMask(value: number): void;
-        setBitmapData(value: egret.Texture): void;
-        setBitmapDataToMesh(value: egret.Texture): void;
-        setBitmapDataToParticle(value: egret.Texture): void;
-        setStopToParticle(value: boolean): void;
-        setCustomData(config: any): void;
+        static setSourceToNativeBitmapData(nativeBitmapData: egret_native.NativeBitmapData, source: any): any;
+        setTexture(texture: egret.Texture): void;
+        setBitmapDataToMesh(texture: egret.Texture): void;
+        setBitmapDataToParticle(texture: egret.Texture): void;
         setWidth(value: number): void;
         setHeight(value: number): void;
         setCacheAsBitmap(value: boolean): void;
@@ -3718,8 +3721,7 @@ declare namespace egret_native {
         setDataToBitmapNode(id: number, texture: egret.Texture, arr: number[]): void;
         setDataToMesh(vertexArr: number[], indiceArr: number[], uvArr: number[]): void;
         static setDataToFilter(currFilter: egret.Filter): void;
-        static disposeTexture(texture: egret.Texture): void;
-        static disposeBitmapData(bitmapData: egret.BitmapData): void;
+        static disposeNativeBitmapData(nativeBitmapData: egret_native.NativeBitmapData): void;
         static disposeTextData(node: egret.TextField): void;
         static disposeGraphicData(graphic: egret.Graphics): void;
         setFontSize(value: number): void;
@@ -5358,7 +5360,7 @@ declare namespace egret {
          * @private
          * @language zh_CN
          */
-        source: any;
+        $source: any;
         /**
          * WebGL texture.
          * @version Egret 2.4
@@ -5396,7 +5398,7 @@ declare namespace egret {
          * @private
          * id
          */
-        $bitmapDataId: number;
+        $nativeBitmapData: egret_native.NativeBitmapData;
         /**
          * Initializes a BitmapData object to refer to the specified source object.
          * @param source The source object being referenced.
@@ -5412,6 +5414,7 @@ declare namespace egret {
          * @language zh_CN
          */
         constructor(source: any);
+        source: any;
         static create(type: "arraybuffer", data: ArrayBuffer, callback?: (bitmapData: BitmapData) => void): BitmapData;
         static create(type: "base64", data: string, callback?: (bitmapData: BitmapData) => void): BitmapData;
         $dispose(): void;
@@ -5564,11 +5567,11 @@ declare namespace egret {
          * @platform Web,Native
          * @language zh_CN
          */
-        constructor(type: string, bubbles?: boolean, cancelable?: boolean, stageX?: number, stageY?: number, touchPointID?: number);
+        constructor(type: string, bubbles?: boolean, cancelable?: boolean, stageX?: number, stageY?: number, touchPointID?: number, button?: number);
         /**
          * @private
          */
-        $initTo(stageX: number, stageY: number, touchPointID: number): void;
+        $initTo(stageX: number, stageY: number, touchPointID: number, button: number): void;
         /**
          * @private
          */
@@ -5632,6 +5635,15 @@ declare namespace egret {
          */
         readonly localY: number;
         private targetChanged;
+        /**
+         * @private
+         */
+        $button: number;
+        /**
+         * 点击事件鼠标左中右键
+         * long
+         */
+        readonly button: number;
         /**
          * @private
          */
@@ -5711,7 +5723,7 @@ declare namespace egret {
          * @platform Web,Native
          * @language zh_CN
          */
-        static dispatchTouchEvent(target: IEventDispatcher, type: string, bubbles?: boolean, cancelable?: boolean, stageX?: number, stageY?: number, touchPointID?: number, touchDown?: boolean): boolean;
+        static dispatchTouchEvent(target: IEventDispatcher, type: string, bubbles?: boolean, cancelable?: boolean, stageX?: number, stageY?: number, touchPointID?: number, touchDown?: boolean, button?: number): boolean;
     }
 }
 declare namespace egret {
@@ -8353,6 +8365,21 @@ declare namespace egret {
          */
         responseType: string;
         /**
+         * Can be set to a time in milliseconds.When set to a non-zero value will cause fetching to terminate after the given time has passed.
+         * @default egret.HttpResponseType.TEXT
+         * @version Egret 5.2.15
+         * @platform Web,Native
+         * @language en_US
+         */
+        /**
+         * 代表着一个请求在被自动终止前所消耗的毫秒数。默认值为 0，意味着没有超时。
+         * @default egret.HttpResponseType.TEXT
+         * @version Egret 5.2.15
+         * @platform Web,Native
+         * @language zh_CN
+         */
+        timeout: number;
+        /**
          * indicates whether or not cross-site Access-Control requests should be made using credentials such as cookies
          * or authorization headers. (This never affects same-site requests.)
          * @default false
@@ -9410,7 +9437,7 @@ declare namespace egret.sys {
          * @private
          * 执行一次刷新
          */
-        update(): void;
+        update(forceUpdate?: boolean): void;
         /**
          * @private
          * 执行一次屏幕渲染
@@ -9507,8 +9534,9 @@ declare namespace egret.sys {
          * @param x 事件发生处相对于舞台的坐标x
          * @param y 事件发生处相对于舞台的坐标y
          * @param touchPointID 分配给触摸点的唯一标识号
+         * @param button 鼠标左中右键
          */
-        onTouchBegin(x: number, y: number, touchPointID: number): void;
+        onTouchBegin(x: number, y: number, touchPointID: number, button: number): void;
         /**
          * @private
          */
@@ -9524,7 +9552,7 @@ declare namespace egret.sys {
          * @param y 事件发生处相对于舞台的坐标y
          * @param touchPointID 分配给触摸点的唯一标识号
          */
-        onTouchMove(x: number, y: number, touchPointID: number): void;
+        onTouchMove(x: number, y: number, touchPointID: number, button: number): void;
         /**
          * @private
          * 触摸结束（弹起）
@@ -9532,7 +9560,7 @@ declare namespace egret.sys {
          * @param y 事件发生处相对于舞台的坐标y
          * @param touchPointID 分配给触摸点的唯一标识号
          */
-        onTouchEnd(x: number, y: number, touchPointID: number): void;
+        onTouchEnd(x: number, y: number, touchPointID: number, button: number): void;
         /**
          * @private
          * 获取舞台坐标下的触摸对象
@@ -10523,6 +10551,32 @@ declare namespace egret {
          * @language zh_CN
          */
         const WXGAME = "wxgame";
+        /**
+         * Running on Baidu mini game
+         * @version Egret 5.2.13
+         * @platform All
+         * @language en_US
+         */
+        /**
+         * 运行在百度小游戏上
+         * @version Egret 5.2.13
+         * @platform All
+         * @language zh_CN
+         */
+        const BAIDUGAME = "baidugame";
+        /**
+         * Running on Xiaomi quick game
+         * @version Egret 5.2.14
+         * @platform All
+         * @language en_US
+         */
+        /**
+         * 运行在小米快游戏上
+         * @version Egret 5.2.14
+         * @platform All
+         * @language zh_CN
+         */
+        const QGAME = "qgame";
     }
     /**
      * The Capabilities class provides properties that describe the system and runtime that are hosting the application.
@@ -11692,7 +11746,7 @@ declare namespace egret {
          * @param event
          */
         private updateTextHandler(event);
-        private onClickInput(event);
+        private onUpdateFocus(event);
         /**
          * @private
          *
@@ -11781,6 +11835,7 @@ declare namespace egret {
          */
         $onBlur(): void;
         $getFocusIndex(): number;
+        $setSelectionRange(start: number, end: number): void;
     }
     /**
      * @version Egret 2.4
@@ -12030,6 +12085,11 @@ declare namespace egret {
          */
         isIDEMode: boolean;
         /**
+         * ide模式是否显示keyword tip中
+         * 该模式下，input不接受enter等键盘事件，由tip监听
+         */
+        isIDETip: boolean;
+        /**
          * @version Egret 2.4
          * @platform Web,Native
          */
@@ -12196,10 +12256,7 @@ declare namespace egret {
          */
         wordWrap: boolean;
         $setWordWrap(value: boolean): void;
-        /**
-         * @private
-         */
-        private inputUtils;
+        protected inputUtils: InputController;
         /**
          * @version Egret 2.4
          * @platform Web,Native
@@ -12736,6 +12793,8 @@ declare namespace egret {
         private onTapHandler(e);
         setIDEMode(flag: boolean): void;
         getFocusIndex(): number;
+        setIDETip(flag: boolean): void;
+        setSelectionRange(start: number, end: number): void;
     }
     interface TextField {
         addEventListener<Z>(type: "link", listener: (this: Z, e: TextEvent) => void, thisObject: Z, useCapture?: boolean, priority?: number): any;

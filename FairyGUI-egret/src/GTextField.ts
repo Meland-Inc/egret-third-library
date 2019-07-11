@@ -362,10 +362,10 @@ module fairygui {
             this.updateTextFieldText();
             this._textWidth = Math.ceil(this._textField.textWidth);
             if (this._textWidth > 0)
-                this._textWidth += 4;
+                this._textWidth += 5;
             this._textHeight = Math.ceil(this._textField.textHeight);
             if (this._textHeight > 0)
-                this._textHeight += 4;
+                this._textHeight += 7;
 
             var w: number, h: number = 0;
             if (this._widthAutoSize) {

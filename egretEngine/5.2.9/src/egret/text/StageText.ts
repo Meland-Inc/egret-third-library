@@ -99,6 +99,8 @@ namespace egret {
         $onBlur(): void;
 
         $getFocusIndex(): number;
+
+        $setSelectionRange(start: number, end: number): void;
     }
 
     /**

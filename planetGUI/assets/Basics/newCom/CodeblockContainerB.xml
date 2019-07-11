@@ -77,8 +77,9 @@
       <relation target="n39_czor" sidePair="right-right,top-top"/>
       <Button title="python" titleColor="#ffffff" titleFontSize="14" icon="ui://rnqj1l77hbwitfv" controller="ctrlShowType" page="1"/>
     </component>
-    <component id="n43_sjjo" name="ideContainer" src="sjjotk1" fileName="newCom/comIDEContainerB.xml" xy="49,53" size="514,538">
+    <component id="n43_sjjo" name="ideContainer" src="sjjotk1" fileName="newCom/comIDEContainerB.xml" xy="49,50" size="514,541">
       <gearDisplay controller="ctrlShowType" pages="1"/>
+      <relation target="" sidePair="bottomext-bottom,rightext-right"/>
     </component>
   </displayList>
 </component>

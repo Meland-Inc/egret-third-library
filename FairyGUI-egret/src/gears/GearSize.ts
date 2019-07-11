@@ -85,6 +85,7 @@ module fairygui {
                 this._tweenConfig._displayLockToken = 0;
             }
             this._tweenConfig._tweener = null;
+            this._owner.dispatchEventWith(fairygui.GObject.GEAR_STOP, false);
         }
 
         public updateState(): void {
