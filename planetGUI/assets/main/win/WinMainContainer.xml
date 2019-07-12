@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" opaque="false" designImage="ui://i25v0ebkylfh4k" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
-  <controller name="ctrlGameMode" pages="1,game,0,lessons,2,creation" selected="0">
+<component size="1136,640" opaque="false" designImage="ui://i25v0ebkskn64t" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
+  <controller name="ctrlGameMode" pages="1,game,0,lessons,2,creation" selected="1">
     <action type="change_page" fromPage="" toPage="1" objectId="n1_muc9" controller="ctrlGameMode" targetPage="1"/>
     <action type="change_page" fromPage="" toPage="0" objectId="n1_muc9" controller="ctrlGameMode" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="2" objectId="n1_muc9" controller="ctrlGameMode" targetPage="2"/>
@@ -9,13 +9,13 @@
     <component id="n31_r2bf" name="comMainEnemyInfo" src="dura1l" fileName="win/ComMainEnemyInfo.xml" xy="492,7" size="152,45">
       <relation target="" sidePair="center-center,top-top"/>
     </component>
-    <component id="n1_muc9" name="comMainJoystick" src="w80ln" fileName="win/ComMainJoystick.xml" xy="862,262" controller="ctrlGameMode,1">
+    <component id="n1_muc9" name="comMainJoystick" src="w80ln" fileName="win/ComMainJoystick.xml" xy="862,262" controller="ctrlGameMode,0">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
     <component id="n42_w0g2" name="comMainQuickBuild" src="ndxt83" fileName="win/ComMainQuickBuild.xml" xy="890,355" hideByEditor="true" visible="false">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
-    <component id="n4_muc9" name="comMainRocker" src="uvgla1" fileName="win/ComMainRocker.xml" xy="0,256">
+    <component id="n4_muc9" name="comMainRocker" src="uvgla1" fileName="win/ComMainRocker.xml" xy="70,256">
       <gearXY controller="ctrlGameMode" pages="0" values="70,256" default="0,256"/>
       <relation target="" sidePair="left-left,bottom-bottom"/>
     </component>
@@ -27,9 +27,6 @@
     </component>
     <component id="n36_ru0b" name="ComSaturationDetail" src="9f2h69" fileName="com/ComSaturationDetail.xml" xy="922,86" hideByEditor="true" visible="false">
       <relation target="" sidePair="left-left,top-top"/>
-    </component>
-    <component id="n40_c994" name="comExperience" src="ncv76r" fileName="win/ComExperience.xml" xy="1082,623">
-      <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
     <component id="n41_xles" name="btnRobotViewReturn" src="xles73" fileName="btn/btnRobotViewReturn.xml" xy="1030,547">
       <relation target="" sidePair="right-right,bottom-bottom"/>
@@ -54,7 +51,7 @@
       <gearDisplay controller="ctrlGameMode" pages="0"/>
       <relation target="" sidePair="right-right"/>
     </group>
-    <component id="n69_t4ko" name="btnFakeIslandBuy" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="915,3" size="59,66" visible="false">
+    <component id="n69_t4ko" name="btnFakeIslandBuy" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="757,9" size="59,66" visible="false">
       <gearDisplay controller="ctrlGameMode" pages="0"/>
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://5hs1fuejuvgl8n"/>
@@ -65,6 +62,22 @@
     </component>
     <image id="n62_ylfh" name="imgTfReset" src="ylfhcyidq" fileName="imgB/img_main_zt_4.png" xy="1069,69" group="n68_ylfh"/>
     <group id="n68_ylfh" name="grpBtnResetManor" xy="1056,7" size="68,79" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlGameMode" pages="0"/>
+      <relation target="" sidePair="right-right"/>
+    </group>
+    <component id="n74_hbdr" name="btnLessonPlan" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="917,4" size="59,66" group="n76_hbdr">
+      <Button icon="ui://5hs1fuejskn6cyidv"/>
+    </component>
+    <image id="n75_hbdr" name="imgTfLessonPlan" src="skn6cyidt" fileName="imgB/img_main_zt_5.png" xy="926,69" group="n76_hbdr"/>
+    <group id="n76_hbdr" name="grpBtnLessonPlan" xy="916,3" size="59,83" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlGameMode" pages="0"/>
+      <relation target="" sidePair="right-right"/>
+    </group>
+    <component id="n77_hbdr" name="btnShowStudenMgr" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="844,4" size="59,66" group="n79_hbdr">
+      <Button icon="ui://5hs1fuejskn6cyids" page="1"/>
+    </component>
+    <image id="n78_hbdr" name="imgTfStudentMgr" src="skn6cyidu" fileName="imgB/img_main_zt_6.png" xy="834,69" group="n79_hbdr"/>
+    <group id="n79_hbdr" name="grpBtnShowStudentMgr" xy="834,4" size="80,82" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlGameMode" pages="0"/>
       <relation target="" sidePair="right-right"/>
     </group>
@@ -84,8 +97,11 @@
     <component id="n70_k177" name="comShortCut" src="uhu6t7w" fileName="Com/ComBuildShortCut.xml" pkg="32ieekgu" xy="408,496" hideByEditor="true" visible="false">
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </component>
-    <component id="n71_skn6" name="comStudentMgr" src="skn6cyidr" fileName="com/ComStudentMgr.xml" pkg="ct340yhv" xy="892,0">
+    <component id="n71_skn6" name="comStudentMgr" src="skn6cyidr" fileName="com/ComStudentMgr.xml" pkg="ct340yhv" xy="892,0" hideByEditor="true" controller="ctrlStatus,0">
       <relation target="" sidePair="right-right,bottomext-bottom"/>
+    </component>
+    <component id="n40_c994" name="comExperience" src="ncv76r" fileName="win/ComExperience.xml" xy="1082,623">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
   </displayList>
 </component>
