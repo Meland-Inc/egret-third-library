@@ -2,10 +2,10 @@
 <component size="1136,640" designImage="ui://i25v0ebkqvmf4r" designImageAlpha="100">
   <controller name="ctrlWindowState" pages="0,normal,1,maximize" selected="0"/>
   <displayList>
-    <image id="n0_qvmf" name="imgBG" src="qvmfcyidl" fileName="imgB/img_cm_jak_4.png" pkg="te1gxawo" xy="0,0" size="1136,640" hideByEditor="true">
+    <image id="n0_qvmf" name="imgBG" src="qvmfcyidl" fileName="imgB/img_cm_jak_4.png" pkg="te1gxawo" xy="0,0" size="1136,640">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <text id="n1_qvmf" name="tfClassName" xy="17,15" size="180,24" fontSize="18" color="#ffffff" text="欧拉七桥课（default）">
+    <text id="n1_qvmf" name="tfClassName" xy="17,15" size="180,24" fontSize="18" color="#ffffff" autoClearText="true" text="欧拉七桥课（default）">
       <relation target="" sidePair="left-left,top-top"/>
     </text>
     <graph id="n11_id84" name="bar" xy="0,0" size="1136,47" type="rect" lineSize="0" lineColor="#00000000" fillColor="#0033ff00">
@@ -25,10 +25,10 @@
       <relation target="" sidePair="top-top,right-right"/>
       <Button icon="ui://7tmp5etxqvmf1"/>
     </component>
-    <loader id="n8_fp4h" name="sign" xy="0,49" size="1137,592" fill="scaleFree">
+    <graph id="n8_fp4h" name="sign" xy="1,48" size="1134,591" type="rect" lineSize="2" fillColor="#ff000000" corner="00">
       <relation target="" sidePair="width-width,bottomext-bottom"/>
-      <relation target="" sidePair="top-top"/>
-    </loader>
+      <relation target="n11_id84" sidePair="top-bottom"/>
+    </graph>
     <list id="n9_fp4h" name="lstSelect" xy="143,19" size="850,13" layout="row" colGap="6" defaultItem="ui://7tmp5etxfp4h8" autoItemSize="false" align="center" vAlign="middle" autoClearItems="true">
       <relation target="" sidePair="top-top,center-center"/>
       <item/>
