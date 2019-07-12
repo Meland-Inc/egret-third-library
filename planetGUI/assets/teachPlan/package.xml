@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="7tmp5etx" jpegQuality="80" compressPNG="true">
   <resources>
-    <component id="qvmf0" name="WinTeachPlan.xml" path="/win/"/>
+    <component id="qvmf0" name="WinTeachPlan.xml" path="/win/" exported="true"/>
     <image id="qvmf1" name="icon_main_ja_2.png" path="/img/"/>
     <image id="qvmf2" name="icon_main_ja_3.png" path="/img/"/>
     <image id="qvmf3" name="img_main_ja_1 _1.png" path="/img/"/>
     <image id="qvmf4" name="img_main_ja_1.png" path="/img/"/>
     <image id="qvmf5" name="img_main_ja_7.png" path="/img/"/>
     <image id="qvmf6" name="img_main_ja_7_1.png" path="/img/"/>
+    <image id="fp4h7" name="icon_code_dm_gn_2_1.png" path="/"/>
+    <component id="fp4h8" name="ComSelect.xml" path="/com/" exported="true"/>
   </resources>
-  <publish name=""/>
+  <publish name="teachPlan"/>
 </packageDescription>
