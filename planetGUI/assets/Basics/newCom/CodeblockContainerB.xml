@@ -15,12 +15,14 @@
       <relation target="n30_hbwi" sidePair="left-left"/>
     </component>
     <image id="n31_hbwi" name="imgBtnBG" src="hbwitg1" fileName="B-PlatformImg/img_code_qh_1.png" xy="479,535" group="n33_czor">
+      <gearDisplay controller="ctrlShowType" pages="0"/>
       <relation target="n9_j7co" sidePair="right-right,bottom-bottom"/>
     </image>
     <image id="n32_czor" name="imgBtnBG2" src="hbwitg2" fileName="B-PlatformImg/img_code_qh_2.png" xy="508,539" group="n33_czor">
+      <gearDisplay controller="ctrlShowType" pages="0"/>
       <relation target="n31_hbwi" sidePair="center-center,middle-middle"/>
     </image>
-    <group id="n33_czor" name="imgBtnBG" xy="479,535" size="60,28" collapsed="true"/>
+    <group id="n33_czor" name="imgBtnBG" xy="479,535" size="60,28"/>
     <component id="n21_8tz6" name="btnUndo" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="485,542" size="16,14">
       <gearIcon controller="ctrlRecordHint" pages="1,3" values="ui://rnqj1l77hbwitg3|ui://rnqj1l77hbwitg3" default="ui://rnqj1l77hbwitg4"/>
       <relation target="n31_hbwi" sidePair="left-left,bottom-bottom"/>
@@ -37,14 +39,17 @@
       <Button icon="ui://rnqj1l77gg8mtgq"/>
     </component>
     <component id="n34_czor" name="btnReset" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="513,410" size="20,20">
+      <gearDisplay controller="ctrlShowType" pages="0"/>
       <relation target="n9_j7co" sidePair="right-right,bottom-bottom"/>
       <Button icon="ui://rnqj1l77hbwitfr"/>
     </component>
     <component id="n35_czor" name="btnZoomIn" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="513,449" size="20,20">
+      <gearDisplay controller="ctrlShowType" pages="0"/>
       <relation target="n9_j7co" sidePair="right-right,bottom-bottom"/>
       <Button icon="ui://rnqj1l77hbwitfq"/>
     </component>
     <component id="n36_czor" name="btnZoomOut" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="513,488" size="20,20">
+      <gearDisplay controller="ctrlShowType" pages="0"/>
       <relation target="n9_j7co" sidePair="right-right,bottom-bottom"/>
       <Button icon="ui://rnqj1l77hbwitfp"/>
     </component>
