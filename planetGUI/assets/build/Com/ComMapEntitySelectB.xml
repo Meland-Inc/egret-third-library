@@ -91,8 +91,8 @@
       <relation target="" sidePair="bottom-bottom"/>
       <Button icon="ui://32ieekgur0y9t6w" controller="ctrlState" page="0"/>
     </component>
-    <component id="n5_yhf8" name="btnBackpack" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="11,12" size="49,48">
-      <Button icon="ui://32ieekgur0y9t5v" page="2"/>
+    <component id="n5_yhf8" name="btnBackpack" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="9,5" size="54,55">
+      <Button icon="ui://32ieekguxvfat83" page="2"/>
     </component>
     <component id="n6_j0zc" name="comScaleView" src="j0zct7p" fileName="Com/ComMapScaleViewB.xml" xy="82,493">
       <gearXY controller="ctrlState" pages="0" values="82,493" default="255,493"/>
