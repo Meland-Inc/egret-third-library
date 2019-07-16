@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="400,400" overflow="scroll" scroll="both" scrollBarFlags="68" scrollBar="visible" scrollBarRes="ui://rnqj1l77j7co5v,ui://rnqj1l77czortgh">
   <displayList>
-    <loader id="n5_lxfn" name="imgBG" xy="-1,0" size="401,482" url="ui://rnqj1l77hheqtko" fill="scaleFree">
+    <loader id="n5_lxfn" name="imgBGBlue" xy="-1,0" size="401,482" url="ui://rnqj1l77hheqtko" fill="scaleFree">
+      <relation target="" sidePair="rightext-right"/>
+      <relation target="n0_j7co" sidePair="bottomext-bottom"/>
+    </loader>
+    <loader id="n7_iaoi" name="imgBGBlack" xy="-2,0" size="402,486" url="ui://rnqj1l77iaoitkw" fill="scaleFree">
       <relation target="" sidePair="rightext-right"/>
       <relation target="n0_j7co" sidePair="bottomext-bottom"/>
     </loader>

@@ -4,6 +4,7 @@
   <controller name="ctrlIsHide" pages="0,show,1,hide" selected="0"/>
   <controller name="ctrlShowType" pages="0,scratch,1,python" selected="1"/>
   <controller name="ctrlRecordHint" pages="0,none,1,left,2,right,3,all" selected="0"/>
+  <controller name="ctrlStyle" pages="0,black,1,blue" selected="0"/>
   <displayList>
     <image id="n42_gg8m" name="imgBG" src="nl0rcyicf" fileName="imgB/img_cm_dk_1.png" pkg="te1gxawo" xy="48,0" size="516,589">
       <relation target="n9_j7co" sidePair="left-left,rightext-right"/>
@@ -95,5 +96,23 @@
       <relation target="n40_czor" sidePair="center-center,middle-middle"/>
     </text>
     <group id="n46_dx4v" name="n46" xy="221,12" size="180,28"/>
+    <component id="n59_iaoi" name="n59" src="oliri6p" fileName="btn/rbtnFix.xml" pkg="te1gxawo" xy="424,20" size="14,14" group="n54_iaoi">
+      <gearIcon controller="ctrlStyle" default="ui://rnqj1l77iaoitkt"/>
+      <Button checked="true" icon="ui://rnqj1l77iaoitkt" selectedIcon="ui://rnqj1l77iaoitkt" controller="ctrlStyle" page="0"/>
+    </component>
+    <component id="n60_iaoi" name="n60" src="oliri6p" fileName="btn/rbtnFix.xml" pkg="te1gxawo" xy="448,20" size="14,14" group="n54_iaoi">
+      <gearIcon controller="ctrlStyle" default="ui://rnqj1l77iaoitks"/>
+      <Button icon="ui://rnqj1l77iaoitks" selectedIcon="ui://rnqj1l77iaoitks" controller="ctrlStyle" page="1"/>
+    </component>
+    <image id="n57_iaoi" name="n57" src="iaoitku" fileName="newImg2/img_code_py_2-1.png" xy="447,19" group="n54_iaoi">
+      <gearDisplay controller="ctrlStyle" pages="1"/>
+    </image>
+    <image id="n58_iaoi" name="n58" src="iaoitku" fileName="newImg2/img_code_py_2-1.png" xy="423,20" group="n54_iaoi">
+      <gearDisplay controller="ctrlStyle" pages="0"/>
+    </image>
+    <group id="n54_iaoi" name="n54" xy="422,19" size="41,16" advanced="true">
+      <gearDisplay controller="ctrlShowType" pages="1"/>
+      <relation target="n40_czor" sidePair="left-right,top-top"/>
+    </group>
   </displayList>
 </component>
