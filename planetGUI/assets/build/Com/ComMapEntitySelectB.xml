@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="279,640" opaque="false" designImage="ui://i25v0ebkr0y949">
-  <controller name="ctrlState" exported="true" pages="0,fold,1,open" selected="0"/>
+<component size="279,640" opaque="false" designImage="ui://i25v0ebkr0y949" designImageAlpha="0">
+  <controller name="ctrlState" exported="true" pages="0,fold,1,open,2,info" selected="0"/>
   <displayList>
     <image id="n0_yhf8" name="n0" src="nl0rcyicf" fileName="imgB/img_cm_dk_1.png" pkg="te1gxawo" xy="0,0" size="72,640">
-      <gearSize controller="ctrlState" pages="0,1" values="72,640,1,1|250,640,1,1"/>
+      <gearSize controller="ctrlState" pages="0,1,2" values="72,640,1,1|250,640,1,1|195,640,1,1"/>
       <relation target="" sidePair="height-height"/>
     </image>
     <list id="n1_yhf8" name="lstFold" xy="10,65" size="52,570" overflow="scroll" lineGap="4" defaultItem="ui://32ieekguyhf8t7o" align="center" autoClearItems="true">
@@ -81,22 +81,96 @@
       <item/>
       <item/>
     </list>
-    <component id="n3_yhf8" name="btnOpen" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="72,590" size="30,28">
+    <list id="n8_mte0" name="lstInfo" xy="11,65" size="172,570" layout="flow_hz" overflow="scroll" lineGap="4" colGap="4" lineItemCount="1" defaultItem="ui://32ieekgumte0t8b" autoClearItems="true">
+      <gearDisplay controller="ctrlState" pages="2"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n3_yhf8" name="btnOpen" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="71,590" size="30,28">
       <gearDisplay controller="ctrlState" pages="0"/>
       <relation target="" sidePair="bottom-bottom"/>
       <Button icon="ui://32ieekgur0y9t6v" controller="ctrlState" page="1"/>
     </component>
-    <component id="n4_yhf8" name="btnFold" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="250,590" size="30,28">
-      <gearDisplay controller="ctrlState" pages="1"/>
+    <component id="n4_yhf8" name="btnFold" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="194,590" size="30,28">
+      <gearDisplay controller="ctrlState" pages="1,2"/>
+      <gearXY controller="ctrlState" pages="1" values="249,590" default="194,590"/>
       <relation target="" sidePair="bottom-bottom"/>
       <Button icon="ui://32ieekgur0y9t6w" controller="ctrlState" page="0"/>
     </component>
-    <component id="n5_yhf8" name="btnBackpack" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="11,12" size="49,48">
-      <Button icon="ui://32ieekgur0y9t5v" page="2"/>
+    <component id="n5_yhf8" name="btnBackpack" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="9,5" size="54,55">
+      <Button icon="ui://32ieekguxvfat83" page="2"/>
     </component>
     <component id="n6_j0zc" name="comScaleView" src="j0zct7p" fileName="Com/ComMapScaleViewB.xml" xy="82,493">
-      <gearXY controller="ctrlState" pages="0" values="82,493" default="255,493"/>
+      <gearXY controller="ctrlState" pages="0,2" values="82,493|199,493" default="255,493"/>
       <relation target="" sidePair="bottom-bottom"/>
+    </component>
+    <component id="n7_mte0" name="btnLstInfo" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="215,22" size="22,20">
+      <gearDisplay controller="ctrlState" pages="1"/>
+      <Button icon="ui://32ieekgumte0t88" controller="ctrlState" page="2"/>
+    </component>
+    <component id="n9_mte0" name="btnLstOpen" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="165,22" size="20,21">
+      <gearDisplay controller="ctrlState" pages="2"/>
+      <Button icon="ui://32ieekgumte0t89" controller="ctrlState" page="1"/>
     </component>
   </displayList>
 </component>

@@ -2,16 +2,16 @@
 <component size="180,28">
   <controller name="ctrlScope" pages="0,私有,1,公有" selected="1"/>
   <displayList>
-    <image id="n0_rx4o" name="imgRbtnBG" src="rx4otk0" fileName="B-PlatformImg/img_code_dm_4.png" xy="0,0"/>
+    <image id="n0_rx4o" name="imgRbtnBG" src="dx4vtke" fileName="B-PlatformImg/img_code_dm_1(1).png" xy="0,0"/>
     <component id="n1_rx4o" name="btnToScratch" src="oliri6q" fileName="btn/rbtnScale.xml" pkg="te1gxawo" xy="0,0" size="90,28">
-      <gearIcon controller="ctrlScope" pages="1" values="ui://rnqj1l77gg8mtgp" default=""/>
+      <gearIcon controller="ctrlScope" pages="0,1" values="ui://rnqj1l77dx4vtkh|ui://rnqj1l77gg8mtgp"/>
       <relation target="n0_rx4o" sidePair="top-top,left-left"/>
       <Button title="私有" titleColor="#ffffff" titleFontSize="14" icon="ui://rnqj1l77gg8mtgp" controller="ctrlScope" page="0"/>
     </component>
     <component id="n2_rx4o" name="btnToPython" src="oliri6q" fileName="btn/rbtnScale.xml" pkg="te1gxawo" xy="90,0" size="90,28">
-      <gearIcon controller="ctrlScope" pages="1" values="" default="ui://rnqj1l77hbwitfv"/>
+      <gearIcon controller="ctrlScope" pages="1" values="ui://rnqj1l77dx4vtki" default="ui://rnqj1l77hbwitfv"/>
       <relation target="n0_rx4o" sidePair="right-right,top-top"/>
-      <Button checked="true" title="公有" titleColor="#ffffff" titleFontSize="14" controller="ctrlScope" page="1"/>
+      <Button checked="true" title="公有" titleColor="#ffffff" titleFontSize="14" icon="ui://rnqj1l77dx4vtki" controller="ctrlScope" page="1"/>
     </component>
   </displayList>
 </component>
