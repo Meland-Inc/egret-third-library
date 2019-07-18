@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkfzlu3y" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlType" pages="3,unknow,1,showText,2,question,0,selection" selected="2"/>
+  <controller name="ctrlType" pages="3,unknow,1,showText,2,question,0,selection" selected="0"/>
   <displayList>
     <list id="n2_j5jv" name="lstSelection" xy="544,77" size="464,402" layout="flow_hz" overflow="scroll" lineGap="10" colGap="10" defaultItem="ui://4o62dubdj5jvj" align="right" vAlign="bottom">
       <gearDisplay controller="ctrlType" pages="0"/>
@@ -10,27 +10,30 @@
       <item/>
       <item/>
     </list>
-    <image id="n0_j5jv" name="bg" src="fzlucyibz" fileName="img_UI3/dialog/img_Dialog_dikuang_6.png" pkg="te1gxawo" xy="133,479" size="872,148" group="n11_qlcu"/>
-    <image id="n13_fzlu" name="imgTitleBg" src="fzlucyic1" fileName="img_UI3/dialog/img_Dialog_duixiangkuang_4.png" pkg="te1gxawo" xy="91,451" group="n11_qlcu"/>
-    <image id="n15_fzlu" name="imgPoint" src="fzlucyic0" fileName="img_UI3/dialog/img_Dialog_duixiangkuang_3.png" pkg="te1gxawo" xy="103,475" group="n11_qlcu"/>
-    <text id="n14_fzlu" name="tfTitle" xy="118,471" size="157,31" group="n11_qlcu" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" singleLine="true" text="神秘大门"/>
-    <image id="n16_fzlu" name="imgDown" src="fzlucyic2" fileName="img_UI3/dialog/img_Dialog_xiaosanjiao_7.png" pkg="te1gxawo" xy="562,608" group="n11_qlcu" visible="false"/>
-    <component id="n18_fzlu" name="labContent" src="faw4yi79" fileName="lab/labVScroll.xml" pkg="te1gxawo" xy="177,531" size="724,75" group="n11_qlcu">
+    <image id="n0_j5jv" name="bg" src="fzlucyibz" fileName="img_UI3/dialog/img_Dialog_dikuang_6.png" pkg="te1gxawo" xy="132,480" size="872,148" group="n11_qlcu"/>
+    <image id="n13_fzlu" name="imgTitleBg" src="fzlucyic1" fileName="img_UI3/dialog/img_Dialog_duixiangkuang_4.png" pkg="te1gxawo" xy="90,452" group="n11_qlcu"/>
+    <image id="n15_fzlu" name="imgPoint" src="fzlucyic0" fileName="img_UI3/dialog/img_Dialog_duixiangkuang_3.png" pkg="te1gxawo" xy="102,476" group="n11_qlcu"/>
+    <text id="n14_fzlu" name="tfTitle" xy="117,472" size="157,31" group="n11_qlcu" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" singleLine="true" text="神秘大门"/>
+    <image id="n19_u5yf" name="iconBg" src="nl0rcyic4" fileName="imgB/img_cm_wpk_1.png" pkg="te1gxawo" xy="147,533" group="n21_u5yf"/>
+    <loader id="n20_u5yf" name="ladIcon" xy="151,537" size="56,56" group="n21_u5yf" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <group id="n21_u5yf" name="grpIcon" xy="147,533" size="64,64" group="n11_qlcu" advanced="true" collapsed="true"/>
+    <image id="n16_fzlu" name="imgDown" src="fzlucyic2" fileName="img_UI3/dialog/img_Dialog_xiaosanjiao_7.png" pkg="te1gxawo" xy="561,609" group="n11_qlcu" visible="false"/>
+    <component id="n18_fzlu" name="labContent" src="faw4yi79" fileName="lab/labVScroll.xml" pkg="te1gxawo" xy="228,532" size="672,75" group="n11_qlcu">
       <Label title="身体白又胖" titleColor="#333333" titleFontSize="24"/>
     </component>
-    <image id="n17_fzlu" name="imgInputBg" src="fzlucyibx" fileName="img_UI3/dialog/btn_Dialog_shurukuang_2.png" pkg="te1gxawo" xy="475,413" size="371,67" group="n9_j5jv"/>
-    <text id="n6_j5jv" name="inpAnswer" xy="483,418" size="355,56" group="n9_j5jv" input="true" prompt="[size=24]输入答案[/size]" fontSize="24" color="#999999" vAlign="middle" autoSize="none" singleLine="true" text=""/>
-    <group id="n9_j5jv" name="grpAnswer" xy="475,413" size="371,67" group="n11_qlcu" advanced="true">
+    <image id="n17_fzlu" name="imgInputBg" src="fzlucyibx" fileName="img_UI3/dialog/btn_Dialog_shurukuang_2.png" pkg="te1gxawo" xy="474,414" size="371,67" group="n9_j5jv"/>
+    <text id="n6_j5jv" name="inpAnswer" xy="482,419" size="355,56" group="n9_j5jv" input="true" prompt="[size=24]输入答案[/size]" fontSize="24" color="#999999" vAlign="middle" autoSize="none" singleLine="true" text=""/>
+    <group id="n9_j5jv" name="grpAnswer" xy="474,414" size="371,67" group="n11_qlcu" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlType" pages="2"/>
     </group>
-    <component id="n3_j5jv" name="btnClose" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="934,480" size="73,71" group="n11_qlcu">
+    <component id="n3_j5jv" name="btnClose" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="933,481" size="73,71" group="n11_qlcu">
       <Button icon="ui://te1gxawofzlucyibw"/>
     </component>
-    <component id="n10_qlcu" name="btnSubmit" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="875,411" size="143,69" group="n11_qlcu">
+    <component id="n10_qlcu" name="btnSubmit" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="874,412" size="143,69" group="n11_qlcu">
       <gearDisplay controller="ctrlType" pages="2"/>
       <Button titleColor="#000000" icon="ui://te1gxawofzlucyiby"/>
     </component>
-    <group id="n11_qlcu" name="root" xy="91,411" size="926,217" advanced="true">
+    <group id="n11_qlcu" name="root" xy="90,412" size="927,216" advanced="true">
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </group>
   </displayList>
