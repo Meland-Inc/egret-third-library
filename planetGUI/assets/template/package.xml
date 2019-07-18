@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="4wr0elnx" jpegQuality="80" compressPNG="true">
+  <resources>
+    <image id="p3zl0" name="icon_stencil_1.png" path="/img/"/>
+    <image id="p3zl1" name="icon_stencil_2.png" path="/img/"/>
+    <image id="p3zl2" name="img_stencil_dt_1.png" path="/img/"/>
+    <image id="p3zl3" name="img_stencil_dt_2.png" path="/img/"/>
+    <image id="p3zl4" name="img_stencil_dt_3.png" path="/img/"/>
+    <image id="p3zl5" name="img_stencil_dt_4.png" path="/img/"/>
+    <image id="p3zl6" name="img_stencil_dt_5.png" path="/img/"/>
+    <image id="p3zl7" name="img_stencil_dt_6.png" path="/img/"/>
+    <component id="p3zl8" name="ComCreateTemplateMap.xml" path="/com/"/>
+    <component id="p3zl9" name="WinCreateTemplate.xml" path="/win/" exported="true"/>
+    <component id="p3zla" name="ComMapTemplate.xml" path="/com/"/>
+  </resources>
+  <publish name="template"/>
+</packageDescription>

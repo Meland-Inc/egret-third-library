@@ -375,7 +375,7 @@
     <image id="nl0rcyicb" name="img_cm__bg_cbl_1.png" path="/imgB/" exported="true"/>
     <image id="nl0rcyicc" name="img_cm_bg_dk_1.png" path="/imgB/" exported="true" scale="9grid" scale9grid="31,23,62,46"/>
     <image id="nl0rcyicd" name="img_cm_db_1.png" path="/imgB/" exported="true" scale="9grid" scale9grid="22,16,44,32"/>
-    <image id="nl0rcyice" name="img_cm_db_2.png" path="/imgB/" exported="true"/>
+    <image id="nl0rcyice" name="img_cm_db_2.png" path="/imgB/" exported="true" scale="9grid" scale9grid="53,15,106,30"/>
     <image id="nl0rcyicf" name="img_cm_dk_1.png" path="/imgB/" exported="true" scale="9grid" scale9grid="33,33,66,66"/>
     <image id="nl0rcyicg" name="img_cm_dk_2.png" path="/imgB/" exported="true" scale="9grid" scale9grid="21,26,42,52"/>
     <image id="vulycyich" name="btn_cm_bc_1.png" path="/imgB/" exported="true"/>
@@ -432,6 +432,9 @@
     <image id="skn6cyidv" name="icon_cm_xsgl_10_1.png" path="/imgB/" exported="true"/>
     <image id="skn6cyidw" name="icon_cm_xsgl_10.png" path="/imgB/" exported="true"/>
     <image id="m4pfcyidx" name="img_cm_py_1.png" path="/img_UI3/" exported="true" scale="9grid" scale9grid="19,16,38,32"/>
+    <component id="p3zlcyidy" name="comCommonWinBgSimplified.xml" path="/com/" exported="true"/>
+    <image id="p3zlcyidz" name="img_cm_cjk_1.png" path="/imgB/" exported="true" scale="9grid" scale9grid="9,39,195,137"/>
+    <image id="p3zlcyie0" name="img_cm_srk_2.png" path="/imgB/" exported="true" scale="9grid" scale9grid="18,7,36,14"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>
