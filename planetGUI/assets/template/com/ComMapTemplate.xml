@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" opaque="false" designImage="ui://i25v0ebkp3zl4w">
+  <controller name="isShowCreateView" exported="true" pages="0,false,1,true" selected="0"/>
+  <displayList>
+    <component id="n0_p3zl" name="comCreateTemplateMap" src="p3zl8" fileName="com/ComCreateTemplateMap.xml" xy="92,60" size="1042,579">
+      <gearDisplay controller="isShowCreateView" pages="1"/>
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </component>
+  </displayList>
+</component>

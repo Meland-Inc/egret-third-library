@@ -27,7 +27,7 @@
     <component id="oy0u2m" name="ComAccmu.xml" path="/com/" exported="true"/>
     <component id="oy0u2n" name="ComPickObjectToast.xml" path="/com/" exported="true"/>
     <component id="tbq62o" name="WinMainPickUpTips.xml" path="/win/" exported="true"/>
-    <component id="muc92p" name="WinMainContainer.xml" path="/win/" exported="true"/>
+    <component id="muc92p" name="WinMainContainer（deprecated).xml" path="/win/" exported="true"/>
     <component id="j0s6z" name="ComSmallMap.xml" path="/win/" exported="true"/>
     <image id="rdy42v" name="btn_main_item_add.png" path="/newImg/"/>
     <image id="rdy42w" name="btn_main_mail.png" path="/newImg/"/>
@@ -240,7 +240,6 @@
     <image id="uvgla9" name="img_main_zaishiyong_63.png" path="/img_UI3/"/>
     <image id="uvglaa" name="img_main_tilitianchongse_60.png" path="/img_UI3/"/>
     <component id="uvglab" name="comExpBar.xml" path="/progressBar/"/>
-    <component id="uvglac" name="ComTaskTraceOld.xml" path="/win/" exported="true"/>
     <component id="uvglad" name="ComTaskTraceItemOld.xml" path="/com/" exported="true"/>
     <component id="uvglae" name="labProgress.xml" path="/lab/"/>
     <image id="uvglaf" name="img_main_posun_65.png" path="/img_UI3/"/>
@@ -280,7 +279,7 @@
     <image id="wdqfcyicg" name="fnt_shortcutNum_7.png" path="/img_UI3/fnts/" exported="true"/>
     <image id="wdqfcyich" name="fnt_shortcutNum_8.png" path="/img_UI3/fnts/" exported="true"/>
     <image id="wdqfcyici" name="fnt_shortcutNum_9.png" path="/img_UI3/fnts/" exported="true"/>
-    <component id="wdqfcyicj" name="ComMainLeftTopUICtnrToC.xml" path="/com/" exported="true"/>
+    <component id="wdqfcyicj" name="ComMainGameLeftTopUICtnr.xml" path="/com/" exported="true"/>
     <image id="wdqfcyick" name="img_main_zhezhao_71-1.png" path="/img_UI3/" scale="9grid" scale9grid="40,40,80,80"/>
     <image id="qq9scyicl" name="icon_main_kuaisujianzao_shanchu_80.png" path="/img_UI3/"/>
     <image id="wq4dcyicm" name="img_main_wpk_1.png" path="/imgB/"/>
@@ -299,7 +298,7 @@
     <image id="wq4dcyicz" name="icon_main_gd_3.png" path="/imgB/"/>
     <image id="wq4dcyid0" name="icon_main_gd_4.png" path="/imgB/" scale="9grid" scale9grid="14,23,28,119"/>
     <image id="wq4dcyid1" name="icon_main_sc_1.png" path="/imgB/"/>
-    <component id="wq4dcyid4" name="ComMainLeftTopUICtnrToB.xml" path="/com/" exported="true"/>
+    <component id="wq4dcyid4" name="ComMainLessonLeftTopUICtnr.xml" path="/com/" exported="true"/>
     <image id="wq4dcyid5" name="fnt_shortcutNum_0.png" path="/img_UI3/"/>
     <image id="wq4dcyid6" name="fnt_shortcutNum_1.png" path="/img_UI3/"/>
     <image id="wq4dcyid7" name="fnt_shortcutNum_2.png" path="/img_UI3/"/>
@@ -328,6 +327,14 @@
     <image id="skn6cyidx" name="icon_main_ja_3.png" path="/imgB/"/>
     <image id="skn6cyids" name="btn_main_xslb_1.png" path="/imgB/"/>
     <image id="q29ocyidy" name="img_main_xdt_zb_3.png" path="/img_UI3/" exported="true"/>
+    <component id="u5yfcyidz" name="ComMainMapOperate.xml" path="/com/" exported="true"/>
+    <component id="u5yfcyie0" name="WinGameMain.xml" path="/win/" exported="true"/>
+    <component id="u5yfcyie1" name="WinLessonMain.xml" path="/win/" exported="true"/>
+    <component id="u5yfcyie2" name="WinEditMain.xml" path="/win/" exported="true"/>
+    <image id="u5yfcyie3" name="btn_main_dtgj_1.png" path="/imgB/"/>
+    <image id="u5yfcyie4" name="btn_main_fh_1.png" path="/imgB/"/>
+    <image id="u5yfcyie5" name="btn_main_dtgj_1_1.png" path="/imgB/"/>
+    <image id="u5yfcyie6" name="btn_main_fh_1_1.png" path="/imgB/"/>
   </resources>
   <publish name="main" npot="true"/>
 </packageDescription>

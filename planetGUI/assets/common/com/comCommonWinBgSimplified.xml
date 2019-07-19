@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" extention="Label" designImage="ui://i25v0ebktxgs4d" designImageAlpha="0" designImageLayer="1">
+  <displayList>
+    <image id="n3_txgs" name="imgBgCenter1" src="nl0rcyic7" fileName="imgB/bg_cm_1.png" xy="0,0" size="1136,640">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n2_txgs" name="imgLeftBg" src="nl0rcyicb" fileName="imgB/img_cm__bg_cbl_1.png" xy="0,48" size="95,597">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <image id="n0_txgs" name="topBg" src="nl0rcyicd" fileName="imgB/img_cm_db_1.png" xy="0,0" size="1136,62">
+      <relation target="" sidePair="width-width"/>
+    </image>
+    <image id="n1_txgs" name="imgTitileBg" src="nl0rcyice" fileName="imgB/img_cm_db_2.png" xy="0,0" size="189,57">
+      <relation target="n6_txgs" sidePair="rightext-right"/>
+    </image>
+    <loader id="n4_txgs" name="icon" xy="43,17" size="26,28" autoSize="true">
+      <relation target="n6_txgs" sidePair="middle-middle"/>
+    </loader>
+    <text id="n6_txgs" name="title" xy="85,12" size="46,30" fontSize="24" color="#ffffff" vAlign="middle" bold="true" text="title">
+      <relation target="n4_txgs" sidePair="left-left"/>
+    </text>
+  </displayList>
+</component>
