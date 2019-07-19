@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="400,400" designImage="ui://i25v0ebktcu23e" designImageOffsetX="-357" designImageOffsetY="19" designImageAlpha="0" adaptationTest="FitSize">
+<component size="400,400" designImage="ui://i25v0ebkv32m51" designImageOffsetX="-568" designImageOffsetY="19" designImageAlpha="100" adaptationTest="FitSize">
   <controller name="selectScope" pages="0,,1," selected="0"/>
   <controller name="ctrlEditType" pages="0,add,1,edit" selected="0"/>
   <displayList>
-    <image id="n7_p3g7" name="img_bg" src="oiwytai" fileName="newImg2/img_code_zhezhao_10.png" xy="0,0" size="400,400">
+    <image id="n7_p3g7" name="img_bg" src="oiwytai" fileName="newImg2/img_code_zhezhao_10.png" xy="0,0" size="400,400" hideByEditor="true">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <component id="n3_p3g7" name="btnCloseEdit" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="89,278" size="106,37">
+    <component id="n3_p3g7" name="btnCloseEdit" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="119,367" size="106,37">
       <relation target="" sidePair="right-right,top-top"/>
       <Button title="取消" titleFontSize="18" icon="ui://te1gxawom3dicyid9"/>
     </component>
@@ -24,9 +24,11 @@
       <relation target="" sidePair="center-center,top-top"/>
       <Button title="实体变量" titleColor="#ffffff" titleFontSize="18" icon="ui://rnqj1l77ilo1tj2" selectedIcon="ui://rnqj1l77ilo1tj1" controller="selectScope" page="1"/>
     </component>
-    <component id="n9_mqhs" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="227,276" size="106,36">
+    <component id="n9_mqhs" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="249,369" size="106,36">
       <relation target="" sidePair="center-center,top-top"/>
       <Button title="确定" titleColor="#ffffff" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
     </component>
+    <image id="n10_v32m" name="n10" src="v32mcyie1" fileName="imgB/img_cm_dtgj_1.png" pkg="te1gxawo" xy="97,248" size="281,129"/>
+    <image id="n11_v32m" name="n11" src="v32mcyie2" fileName="imgB/img_cm_xzd_3.png" pkg="te1gxawo" xy="118,328"/>
   </displayList>
 </component>
