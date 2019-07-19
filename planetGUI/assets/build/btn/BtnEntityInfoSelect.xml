@@ -23,7 +23,7 @@
       <gearDisplay controller="button" pages="1"/>
     </image>
     <loader id="n2_wsvg" name="icon" xy="7,5" size="39,39" align="center" vAlign="middle" fill="scaleMatchWidth"/>
-    <text id="n6_mte0" name="title" xy="52,15" size="100,19" fontSize="14" color="#ffffff" autoSize="none" autoClearText="true" text="#33金制工作台">
+    <text id="n6_mte0" name="title" xy="52,16" size="100,19" fontSize="14" color="#ffffff" vAlign="middle" autoSize="none" autoClearText="true" text="#33金制工作台">
       <gearDisplay controller="ctrlData" pages="1"/>
     </text>
   </displayList>

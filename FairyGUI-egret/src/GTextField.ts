@@ -332,6 +332,10 @@ module fairygui {
         }
 
         protected render(): void {
+            if (this.isDisposed) {
+                return;
+            }
+
             if (!this._requireRender) {
                 this._requireRender = true;
                 egret.callLater(this.__render, this);
