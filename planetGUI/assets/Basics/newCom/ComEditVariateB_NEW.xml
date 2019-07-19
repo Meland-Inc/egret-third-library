@@ -1,34 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="400,400" designImage="ui://i25v0ebkv32m51" designImageOffsetX="-568" designImageOffsetY="19" designImageAlpha="100" adaptationTest="FitSize">
-  <controller name="selectScope" pages="0,,1," selected="0"/>
+  <controller name="selectScope" pages="0,,1," selected="1"/>
   <controller name="ctrlEditType" pages="0,add,1,edit" selected="0"/>
+  <controller name="ctrlEditTitle" pages="0,var,1,list" selected="1"/>
   <displayList>
-    <image id="n7_p3g7" name="img_bg" src="oiwytai" fileName="newImg2/img_code_zhezhao_10.png" xy="0,0" size="400,400" hideByEditor="true">
+    <image id="n7_p3g7" name="img_bg" src="oiwytai" fileName="newImg2/img_code_zhezhao_10.png" xy="0,0" size="400,400">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <component id="n3_p3g7" name="btnCloseEdit" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="119,367" size="106,37">
-      <relation target="" sidePair="right-right,top-top"/>
-      <Button title="取消" titleFontSize="18" icon="ui://te1gxawom3dicyid9"/>
-    </component>
-    <text id="n8_p3g7" name="tfValue" xy="0,123" size="400,42" input="true" prompt="请输入变量名称" maxLength="20" fontSize="18" color="#ffffff" align="center" autoSize="none" autoClearText="true" text="一二三四五一二三四五一二三四五一二三四五">
-      <relation target="" sidePair="center-center,top-top"/>
-      <relation target="" sidePair="width-width"/>
+    <image id="n10_v32m" name="imgBG" src="v32mcyie1" fileName="imgB/img_cm_dtgj_1.png" pkg="te1gxawo" xy="60,116" size="278,168" group="n18_v32m"/>
+    <text id="n12_v32m" name="tfOperate" xy="153,121" size="52,24" group="n18_v32m" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="创建">
+      <gearText controller="ctrlEditType" pages="0,1" values="创建|编辑"/>
     </text>
-    <component id="n4_p3g7" name="btnGlobal" src="x8ztab" fileName="newBtn/btnVariateScope.xml" xy="68,198" size="100,30">
-      <gearDisplay controller="ctrlEditType" pages="0"/>
-      <relation target="" sidePair="top-top,center-center"/>
-      <Button checked="true" title="全局变量" titleColor="#ffffff" titleFontSize="18" icon="ui://rnqj1l77ilo1tj2" selectedIcon="ui://rnqj1l77ilo1tj1" controller="selectScope" page="0"/>
+    <text id="n13_v32m" name="tfTitle" xy="191,121" size="55,24" group="n18_v32m" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="列表">
+      <gearText controller="ctrlEditTitle" pages="1" values="列表" default="变量"/>
+    </text>
+    <text id="n8_p3g7" name="tfValue" xy="78,166" size="235,25" group="n18_v32m" input="true" prompt="请输入变量名称" maxLength="20" fontSize="14" color="#333333" vAlign="middle" autoSize="none" autoClearText="true" text="请输入"/>
+    <component id="n4_p3g7" name="btnGlobal" src="x8ztab" fileName="newBtn/btnVariateScope.xml" xy="80,203" size="14,14" group="n18_v32m">
+      <gearLook controller="ctrlEditType" pages="1" values="1,0,0,0" default="1,0,0,1"/>
+      <Button titleColor="#ffffff" titleFontSize="18" icon="ui://te1gxawov32mcyie3" selectedIcon="ui://te1gxawov32mcyie4" controller="selectScope" page="0"/>
     </component>
-    <component id="n5_p3g7" name="btnLocal" src="x8ztab" fileName="newBtn/btnVariateScope.xml" xy="235,198" size="100,30">
-      <gearDisplay controller="ctrlEditType" pages="0"/>
-      <relation target="" sidePair="center-center,top-top"/>
-      <Button title="实体变量" titleColor="#ffffff" titleFontSize="18" icon="ui://rnqj1l77ilo1tj2" selectedIcon="ui://rnqj1l77ilo1tj1" controller="selectScope" page="1"/>
+    <text id="n14_v32m" name="tfGlobal" xy="101,200" size="34,20" group="n18_v32m" fontSize="14" align="center" vAlign="middle" text="全局"/>
+    <text id="n16_v32m" name="tfGlobalTitle" xy="128,200" size="33,20" group="n18_v32m" fontSize="14" align="center" vAlign="middle" text="列表">
+      <gearText controller="ctrlEditTitle" pages="1" values="列表" default="变量"/>
+    </text>
+    <component id="n5_p3g7" name="btnLocal" src="x8ztab" fileName="newBtn/btnVariateScope.xml" xy="178,203" size="14,14" group="n18_v32m">
+      <gearLook controller="ctrlEditType" pages="1" values="1,0,0,0" default="1,0,0,1"/>
+      <Button checked="true" titleColor="#ffffff" titleFontSize="18" icon="ui://te1gxawov32mcyie3" selectedIcon="ui://te1gxawov32mcyie4" controller="selectScope" page="1"/>
     </component>
-    <component id="n9_mqhs" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="249,369" size="106,36">
-      <relation target="" sidePair="center-center,top-top"/>
+    <text id="n15_v32m" name="tfLocal" xy="199,200" size="34,20" group="n18_v32m" fontSize="14" align="center" vAlign="middle" text="实体"/>
+    <text id="n17_v32m" name="tfLocalTitle" xy="227,200" size="33,20" group="n18_v32m" fontSize="14" align="center" vAlign="middle" text="列表">
+      <gearText controller="ctrlEditTitle" pages="1" values="列表" default="变量"/>
+    </text>
+    <component id="n9_mqhs" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="210,237" size="106,36" group="n18_v32m">
       <Button title="确定" titleColor="#ffffff" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
     </component>
-    <image id="n10_v32m" name="n10" src="v32mcyie1" fileName="imgB/img_cm_dtgj_1.png" pkg="te1gxawo" xy="97,248" size="281,129"/>
-    <image id="n11_v32m" name="n11" src="v32mcyie2" fileName="imgB/img_cm_xzd_3.png" pkg="te1gxawo" xy="118,328"/>
+    <component id="n3_p3g7" name="btnCloseEdit" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="80,235" size="106,37" group="n18_v32m">
+      <Button title="取消" titleFontSize="18" icon="ui://te1gxawom3dicyid9"/>
+    </component>
+    <image id="n11_v32m" name="imgLine" src="v32mcyie2" fileName="imgB/img_cm_xzd_3.png" pkg="te1gxawo" xy="80,192" group="n18_v32m"/>
+    <group id="n18_v32m" name="n18" xy="60,116" size="279,168" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
   </displayList>
 </component>
