@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640">
+  <controller name="ctrlTemplateType" pages="0,map,1,manor,2,robot" selected="0"/>
+  <displayList>
+    <component id="n9_p3zl" name="comBG" src="p3zlcyidy" fileName="com/comCommonWinBgSimplified.xml" pkg="te1gxawo" xy="0,0">
+      <relation target="" sidePair="width-width,height-height"/>
+      <Label title="创作模板" icon="ui://4wr0elnxp3zl1"/>
+    </component>
+    <component id="n11_p3zl" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1080,9" size="42,43">
+      <relation target="" sidePair="top-top,right-right"/>
+      <Button icon="ui://te1gxawonl0rcyica"/>
+    </component>
+    <component id="n12_p3zl" name="comMapTemplate" src="p3zla" fileName="com/ComMapTemplate.xml" xy="0,0" size="1136,640" controller="isCreate,1">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+  </displayList>
+</component>
