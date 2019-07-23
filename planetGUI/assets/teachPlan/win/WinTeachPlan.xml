@@ -11,9 +11,10 @@
     <graph id="n11_id84" name="bar" xy="0,0" size="1136,47" type="rect" lineSize="0" lineColor="#00000000" fillColor="#0033ff00">
       <relation target="" sidePair="top-top,width-width"/>
     </graph>
-    <image id="n4_qvmf" name="btnClose" src="ui82cyie5" fileName="imgB/btn_cm_gban_1.png" pkg="te1gxawo" xy="1097,9" size="31,31">
+    <component id="n4_qvmf" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1102,12" size="26,26">
       <relation target="" sidePair="right-right,top-top"/>
-    </image>
+      <Button icon="ui://te1gxawoui82cyie5"/>
+    </component>
     <component id="n5_qvmf" name="btnToNormal" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1062,17" size="26,18">
       <gearDisplay controller="ctrlWindowState" pages="1"/>
       <relation target="" sidePair="right-right,top-top"/>
