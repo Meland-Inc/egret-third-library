@@ -12,6 +12,11 @@
     <component id="p3zl8" name="ComCreateTemplateMap.xml" path="/com/"/>
     <component id="p3zl9" name="WinCreateTemplate.xml" path="/win/" exported="true"/>
     <component id="p3zla" name="ComMapTemplate.xml" path="/com/"/>
+    <component id="hams0" name="ComMapTemplateList.xml" path="/com/" exported="true"/>
+    <component id="hams1" name="MapItem.xml" path="/com/"/>
+    <component id="uov9b" name="btnCreateMap.xml" path="/btn/"/>
+    <component id="ui82c" name="WinMapPreview.xml" path="/win/" exported="true"/>
+    <component id="ui82d" name="prbUpdate.xml" path="/prb/"/>
   </resources>
   <publish name="template"/>
 </packageDescription>
