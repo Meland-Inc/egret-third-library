@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkr0y94a" designImageAlpha="0">
-  <controller name="ctrlRightView" pages="1,backpack,2,attr,3,none" selected="0">
+  <controller name="ctrlRightView" pages="1,backpack,2,attr,3,none" selected="2">
     <action type="play_transition" fromPage="" toPage="1" transition="transBpShow"/>
   </controller>
   <controller name="ctrlOperate" pages="0,none,1,center,2,shortcut" selected="2"/>
@@ -92,7 +92,7 @@
       <gearDisplay controller="ctrlRightView" pages="1"/>
       <relation target="" sidePair="right-right"/>
     </group>
-    <component id="n9_r0y9" name="comEntitySelect" src="yhf8t7n" fileName="Com/ComMapEntitySelectB.xml" xy="0,0" size="425,640" controller="ctrlState,0">
+    <component id="n9_r0y9" name="comEntitySelect" src="yhf8t7n" fileName="Com/ComMapEntitySelectB.xml" xy="0,0" size="280,640" controller="ctrlState,1">
       <relation target="" sidePair="left-left,height-height"/>
     </component>
     <component id="n27_r0y9" name="comAttr" src="vulyt7s" fileName="win/ComBuildAttrB.xml" xy="670,0" size="466,640">
@@ -103,9 +103,9 @@
       <gearDisplay controller="ctrlOperate" pages="1"/>
       <relation target="" sidePair="bottom-bottom"/>
     </component>
-    <component id="n31_k177" name="comShortCut" src="uhu6t7w" fileName="Com/ComBuildShortCut.xml" xy="200,560">
+    <component id="n31_k177" name="comShortCut" src="uhu6t7w" fileName="Com/ComBuildShortCut.xml" xy="284,560">
       <gearDisplay controller="ctrlOperate" pages="2"/>
-      <relation target="" sidePair="center-center,bottom-bottom"/>
+      <relation target="n9_r0y9" sidePair="right-left,bottom-bottom"/>
     </component>
   </displayList>
   <transition name="transBpHide">
