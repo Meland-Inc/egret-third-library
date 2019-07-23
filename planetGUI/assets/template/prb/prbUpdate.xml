@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="88,16" extention="ProgressBar">
+  <displayList>
+    <image id="n0_ui82" name="n0" src="ui82cyiea" fileName="imgB/img_cm_dtgj_6.png" pkg="te1gxawo" xy="0,0" size="88,16">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_ui82" name="bar" src="ui82cyie9" fileName="imgB/img_cm_dtgj_7.png" pkg="te1gxawo" xy="0,0" size="88,16">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <text id="n2_ui82" name="title" xy="0,-2" size="88,16" fontSize="12" align="center" vAlign="middle" autoSize="none" text="">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <ProgressBar/>
+</component>
