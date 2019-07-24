@@ -70,7 +70,11 @@
       <Button title="一键脱离" titleColor="#ffffff" titleFontSize="16" icon="ui://te1gxawom3dicyidb"/>
     </component>
     <text id="n149_jd08" name="n148" xy="124,83" size="65,23" group="n30_o8k6" fontSize="14" color="#365989" vAlign="middle" text="服务器ID:"/>
-    <text id="n150_jd08" name="tfGameServerHost" xy="200,83" size="33,23" group="n30_o8k6" fontSize="14" color="#365989" vAlign="middle" autoClearText="true" text="xxxx"/>
+    <text id="n150_jd08" name="tfGameServerHost" xy="200,83" size="33,23" group="n30_o8k6" input="true" fontSize="14" color="#365989" vAlign="middle" singleLine="true" autoClearText="true" text="xxxx"/>
+    <component id="n151_f5wz" name="btnResetAll" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="734,559" size="106,36" group="n30_o8k6">
+      <relation target="" sidePair="right-right"/>
+      <Button title="重置所有" titleColor="#ffffff" titleFontSize="16" icon="ui://te1gxawom3dicyidb"/>
+    </component>
     <group id="n30_o8k6" name="system" xy="124,83" size="960,512" advanced="true">
       <gearDisplay controller="conSetting" pages="0"/>
     </group>
