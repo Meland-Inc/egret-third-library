@@ -2,6 +2,7 @@
 <component size="400,400" designImage="ui://i25v0ebktcu23e" designImageOffsetX="-357" designImageOffsetY="19" designImageAlpha="0" adaptationTest="FitSize">
   <controller name="selectScope" pages="0,,1," selected="0"/>
   <controller name="ctrlEditType" pages="0,add,1,edit" selected="0"/>
+  <controller name="ctrlEditTitle" pages="0,var,1,list" selected="0"/>
   <displayList>
     <image id="n7_p3g7" name="img_bg" src="oiwytai" fileName="newImg2/img_code_zhezhao_10.png" xy="0,0" size="400,400">
       <relation target="" sidePair="width-width,height-height"/>
