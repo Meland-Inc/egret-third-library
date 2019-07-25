@@ -3,8 +3,11 @@
   <controller name="ctrlUpdate" pages="0,normal,1,updating" selected="0"/>
   <displayList>
     <image id="n0_ui82" name="imgBg" src="v32mcyie1" fileName="imgB/img_cm_dtgj_1.png" pkg="te1gxawo" xy="270,124" size="609,394" group="n13_ui82"/>
-    <text id="n3_ui82" name="title" xy="290,128" size="77,29" group="n13_ui82" fontSize="18" color="#ffffff" text="地图工具"/>
-    <loader id="n12_ui82" name="ladMap" xy="290,182" size="568,280" group="n13_ui82" url="ui://te1gxawoui82cyieb" fill="scaleFree"/>
+    <graph id="n14_ui82" name="dragArea" xy="271,124" size="604,38" group="n13_ui82" alpha="0" type="rect"/>
+    <text id="n3_ui82" name="title" xy="290,128" size="77,29" group="n13_ui82" fontSize="18" color="#ffffff" vAlign="bottom" text="地图工具"/>
+    <component id="n16_ui82" name="labMapCtnr" src="ui82f" fileName="com/ladMapCtnr.xml" xy="290,182" size="568,268" group="n13_ui82">
+      <Label icon="ui://te1gxawoui82cyieb"/>
+    </component>
     <component id="n2_ui82" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="842,130" size="26,26" group="n13_ui82">
       <Button icon="ui://te1gxawoui82cyie5"/>
     </component>
@@ -17,7 +20,7 @@
     <component id="n8_ui82" name="btnZoomOut" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="806,478" size="20,20" group="n10_ui82">
       <Button icon="ui://te1gxawoui82cyie6"/>
     </component>
-    <component id="n9_ui82" name="btnSearch" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="836,478" size="20,20" group="n10_ui82">
+    <component id="n9_ui82" name="btnRestore" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="836,478" size="20,20" group="n10_ui82">
       <Button icon="ui://te1gxawoui82cyie8"/>
     </component>
     <group id="n10_ui82" name="grpBottom" xy="521,470" size="335,36" group="n13_ui82" advanced="true" collapsed="true">
