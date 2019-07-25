@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" designImage="ui://i25v0ebkqvmf4r" designImageAlpha="100">
+<component size="1136,640" designImage="ui://i25v0ebkqvmf4r" designImageAlpha="0">
   <controller name="ctrlWindowState" pages="0,normal,1,maximize" selected="0"/>
   <displayList>
-    <image id="n0_qvmf" name="imgBG" src="qvmfcyidl" fileName="imgB/img_cm_jak_4.png" pkg="te1gxawo" xy="0,0" size="1136,640">
+    <image id="n0_qvmf" name="imgBG" src="jq63cyiec" fileName="imgB/img_cm_jak_1.png" pkg="te1gxawo" xy="-8,-3" size="1153,655">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
     <text id="n1_qvmf" name="tfClassName" xy="17,15" size="180,24" fontSize="18" color="#ffffff" autoClearText="true" text="欧拉七桥课（default）">
@@ -25,7 +25,7 @@
       <relation target="" sidePair="top-top,right-right"/>
       <Button icon="ui://7tmp5etxqvmf1"/>
     </component>
-    <graph id="n8_fp4h" name="sign" xy="0,46" size="1136,594" type="rect" lineSize="0" lineColor="#00000000" fillColor="#ff000000" corner="00">
+    <graph id="n8_fp4h" name="sign" xy="0,48" size="1137,592" lineSize="0" lineColor="#00000000" fillColor="#ff000000" corner="00">
       <relation target="" sidePair="width-width,bottomext-bottom"/>
       <relation target="n11_id84" sidePair="top-bottom"/>
     </graph>
