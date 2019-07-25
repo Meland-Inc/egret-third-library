@@ -4,7 +4,7 @@
     <component id="n1_muc9" name="comMainJoystick" src="w80ln" fileName="win/ComMainJoystick.xml" xy="865,362" controller="ctrlGameMode,0">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
-    <component id="n42_w0g2" name="comMainQuickBuild" src="ndxt83" fileName="win/ComMainQuickBuild.xml" xy="890,355" hideByEditor="true" visible="false">
+    <component id="n42_w0g2" name="comMainQuickBuild" src="ndxt83" fileName="win/ComMainQuickBuild.xml" xy="890,355" visible="false">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
     <component id="n4_muc9" name="comMainRocker" src="uvgla1" fileName="win/ComMainRocker.xml" xy="70,256">
@@ -42,20 +42,27 @@
       <Button icon="ui://5hs1fuejskn6cyids" page="1"/>
     </component>
     <image id="n78_hbdr" name="imgTfStudentMgr" src="skn6cyidu" fileName="imgB/img_main_zt_6.png" xy="834,69" group="n79_hbdr"/>
-    <group id="n79_hbdr" name="grpBtnShowStudentMgr" xy="834,4" size="80,82" advanced="true" collapsed="true">
+    <group id="n79_hbdr" name="grpBtnShowStudentMgr" xy="834,4" size="80,82" advanced="true">
+      <relation target="" sidePair="right-right"/>
+    </group>
+    <component id="n82_o7or" name="btnTemplate" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="847,11" size="53,52" group="n84_o7or">
+      <Button icon="ui://5hs1fuejo7orcyie7"/>
+    </component>
+    <image id="n83_o7or" name="imgTfTemplate" src="o7orcyie8" fileName="imgB/img_main_mbcz_1_1.png" xy="833,70" group="n84_o7or"/>
+    <group id="n84_o7or" name="grpBtnTemplate" xy="833,11" size="80,76" visible="false" advanced="true" collapsed="true">
       <relation target="" sidePair="right-right"/>
     </group>
     <component id="n55_omrq" name="btnIde" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="1087,271" size="49,98">
       <relation target="" sidePair="right-right,middle-middle"/>
       <Button icon="ui://rnqj1l77gg8mtgr" page="0"/>
     </component>
-    <component id="n56_dv92" name="comMainLessonShortcuts" src="x5uecyidl" fileName="com/ComMainLessonShortcuts.xml" xy="316,561">
+    <component id="n56_dv92" name="comMainLessonShortcuts" src="v3m6cyie9" fileName="com/ComMainLessonShortcuts.xml" xy="568,561" size="80,79">
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </component>
     <component id="n70_k177" name="comShortCut" src="uhu6t7w" fileName="Com/ComBuildShortCut.xml" pkg="32ieekgu" xy="408,496" visible="false">
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </component>
-    <component id="n71_skn6" name="comStudentMgr" src="skn6cyidr" fileName="com/ComStudentMgr.xml" pkg="ct340yhv" xy="892,0" hideByEditor="true" controller="ctrlStatus,0">
+    <component id="n71_skn6" name="comStudentMgr" src="skn6cyidr" fileName="com/ComStudentMgr.xml" pkg="ct340yhv" xy="892,0" controller="ctrlStatus,0">
       <relation target="" sidePair="right-right,bottomext-bottom"/>
     </component>
     <component id="n40_c994" name="comExperience" src="ncv76r" fileName="win/ComExperience.xml" xy="1082,623">

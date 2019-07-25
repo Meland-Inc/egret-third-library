@@ -315,7 +315,7 @@
     <image id="nl0rcyidi" name="btn_main_zh_1.png" path="/img_UI3/"/>
     <image id="nl0rcyidj" name="btn_main_zh_2.png" path="/img_UI3/"/>
     <component id="x5uecyidk" name="ComMainGameShortcuts.xml" path="/com/" exported="true"/>
-    <component id="x5uecyidl" name="ComMainLessonShortcuts.xml" path="/com/" exported="true"/>
+    <component id="x5uecyidl" name="ComMainLessonShortcutsOld.xml" path="/com/" exported="true"/>
     <image id="ugidcyidm" name="icon_main_czld_1.png" path="/imgB/"/>
     <image id="ylfhcyidn" name="img_main_zt_1.png" path="/imgB/"/>
     <image id="ylfhcyido" name="img_main_zt_2.png" path="/imgB/"/>
@@ -335,6 +335,22 @@
     <image id="u5yfcyie4" name="btn_main_fh_1.png" path="/imgB/"/>
     <image id="u5yfcyie5" name="btn_main_dtgj_1_1.png" path="/imgB/"/>
     <image id="u5yfcyie6" name="btn_main_fh_1_1.png" path="/imgB/"/>
+    <image id="o7orcyie7" name="btn_main_mbcz_1.png" path="/imgB/"/>
+    <image id="o7orcyie8" name="img_main_mbcz_1_1.png" path="/imgB/"/>
+    <component id="v3m6cyie9" name="ComMainLessonShortcuts.xml" path="/com/" exported="true"/>
+    <image id="v3m6cyiea" name="img_main_kjld_1.png" path="/imgB/" scale="9grid" scale9grid="21,17,42,34"/>
+    <image id="v3m6cyieb" name="img_main_kjld_2.png" path="/imgB/"/>
+    <component id="v3m6cyiec" name="labKeyBoardIndex.xml" path="/com/"/>
+    <image id="pzqfcyie9" name="img_Dialog_dk_1.png" path="/img_UI3/" exported="true"/>
+    <image id="pzqfcyiea" name="img_Dialog_dk_2.png" path="/img_UI3/" exported="true"/>
+    <image id="pzqfcyieb" name="img_Dialog_dk_3.png" path="/img_UI3/" exported="true"/>
+    <image id="pzqfcyiec" name="img_Dialog_dk_4.png" path="/img_UI3/" exported="true"/>
+    <image id="pzqfcyied" name="img_Dialog_dk_5.png" path="/img_UI3/" exported="true"/>
+    <image id="pzqfcyiee" name="img_Dialog_dk_6.png" path="/img_UI3/" exported="true"/>
+    <image id="pzqfcyief" name="img_Dialog_dk_7.png" path="/img_UI3/" exported="true"/>
+    <component id="pzqfcyieg" name="btnCodeQuestion.xml" path="/com/" exported="true"/>
+    <component id="pzqfcyieh" name="btnSelection.xml" path="/com/"/>
+    <component id="pzqfcyiei" name="ToolTipCodeQuestion.xml" path="/com/" exported="true"/>
   </resources>
   <publish name="main" npot="true"/>
 </packageDescription>

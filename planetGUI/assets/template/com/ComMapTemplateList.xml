@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1019,580" designImage="ui://i25v0ebkp3zl4y" designImageOffsetY="-59" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlSpawnType" pages="0,hide,1,show" selected="1"/>
+  <controller name="ctrlSpawnType" pages="0,hide,1,show" selected="0"/>
   <controller name="ctrlManorType" pages="0,palindrome,1,horizontal,2,vertical" selected="0"/>
   <displayList>
     <image id="n3_f203" name="imgBgLst" src="nl0rcyicc" fileName="imgB/img_cm_bg_dk_1.png" pkg="te1gxawo" xy="0,20" size="703,541">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <list id="n1_uov9" name="lstMapItem" xy="30,46" size="647,488" layout="flow_hz" overflow="scroll" lineGap="20" colGap="10" defaultItem="ui://4wr0elnxhams1">
+    <list id="n1_uov9" name="lstMapItem" xy="30,46" size="647,488" layout="flow_hz" overflow="scroll" lineGap="20" colGap="10" defaultItem="ui://4wr0elnxhams1" autoClearItems="true">
       <relation target="" sidePair="width-width,height-height"/>
       <item url="ui://4wr0elnxuov9b"/>
       <item/>
@@ -51,7 +51,7 @@
     <component id="n22_f203" name="btnOperation" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="866,94" size="117,34" group="n23_f203">
       <Button title="回字型" titleColor="#365989" titleFontSize="16" icon="ui://te1gxawovulycyicn" controller="ctrlSpawnType" page="1"/>
     </component>
-    <group id="n23_f203" name="grpDetail" xy="719,0" size="300,580" advanced="true">
+    <group id="n23_f203" name="grpDetail" xy="719,0" size="300,580" advanced="true" collapsed="true">
       <relation target="" sidePair="right-right"/>
     </group>
   </displayList>
