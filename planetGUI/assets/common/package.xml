@@ -366,7 +366,7 @@
     <image id="fzlucyic2" name="img_Dialog_xiaosanjiao_7.png" path="/img_UI3/dialog/" exported="true"/>
     <component id="fzlucyic3" name="LabClickNextTf.xml" path="/lab/" exported="true"/>
     <image id="nl0rcyic4" name="img_cm_wpk_1.png" path="/imgB/" exported="true"/>
-    <image id="nl0rcyic5" name="img_cm_wpk_2.png" path="/imgB/" exported="true"/>
+    <image id="nl0rcyic5" name="img_cm_wpk_2.png" path="/imgB/" exported="true" scale="9grid" scale9grid="16,16,32,32"/>
     <image id="nl0rcyic6" name="img_cm_wpk_3.png" path="/imgB/" exported="true"/>
     <image id="nl0rcyic7" name="bg_cm_1.png" path="/imgB/" exported="true"/>
     <image id="nl0rcyic8" name="btn_cm_cbl_1.png" path="/imgB/" exported="true"/>
@@ -449,6 +449,8 @@
     <image id="ui82cyiea" name="img_cm_dtgj_6.png" path="/imgB/" exported="true" scale="9grid" scale9grid="22,4,44,8"/>
     <image id="ui82cyieb" name="img_cm_dtgj_2.png" path="/imgB/" exported="true" scale="9grid" scale9grid="142,67,284,134"/>
     <image id="jq63cyiec" name="img_cm_jak_1.png" path="/imgB/" exported="true" scale="9grid" scale9grid="19,52,203,190"/>
+    <image id="v3m6cyied" name="btn_cm_tj_1.png" path="/imgB/" exported="true"/>
+    <image id="v3m6cyiee" name="img_cm_kjan_1.png" path="/imgB/" exported="true"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>
