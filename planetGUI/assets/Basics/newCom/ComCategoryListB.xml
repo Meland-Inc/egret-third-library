@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkhbwi42" designImageAlpha="100" adaptationTest="FitSize">
-  <controller name="ctrlType" pages="0,Private,1,Public" selected="1"/>
+  <controller name="ctrlType" pages="0,Private,1,Public" selected="0"/>
   <displayList>
     <component id="n27_hoex" name="comCodeblocksPool" src="hlththn" fileName="newCom/CodeblockPoolB.xml" xy="427,0" size="630,640" restrictSize="0,700,0,0" blend="none" controller="ctrlGameModel,1">
       <relation target="" sidePair="right-right,bottomext-bottom"/>
@@ -18,11 +18,12 @@
       <item title="检测" icon="ui://rnqj1l77hbwitf3" name="detect" selectedIcon="ui://rnqj1l77hbwitf4" controllers="c1,5"/>
       <item title="运算" icon="ui://rnqj1l77hbwitfl" name="operator" selectedIcon="ui://rnqj1l77hbwitfm" controllers="c1,6"/>
       <item title="变量" icon="ui://rnqj1l77hbwitev" name="variable" selectedIcon="ui://rnqj1l77hbwitew" controllers="c1,7"/>
+      <item title="函数" icon="ui://rnqj1l77w7botl2" name="diyfunction" selectedIcon="ui://rnqj1l77w7botl3" controllers="c1,8"/>
     </list>
     <component id="n29_8tz6" name="btnAction" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1069,564" size="55,59">
       <gearIcon controller="ctrlType" pages="1" values="ui://rnqj1l77dx4vtkj" default="ui://rnqj1l77ilo1tj3"/>
       <relation target="" sidePair="right-right,bottom-bottom"/>
-      <Button icon="ui://rnqj1l77dx4vtkj"/>
+      <Button icon="ui://rnqj1l77ilo1tj3"/>
     </component>
   </displayList>
 </component>

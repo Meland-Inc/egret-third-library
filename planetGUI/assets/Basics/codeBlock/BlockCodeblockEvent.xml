@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="123,63">
-  <controller name="color" pages="7,Event,0,DeepYellow,1,Red,2,Purple,3,DeepBlue,4,LightBlue,5,DeepGreen,8,LightGreen" selected="0"/>
-  <controller name="isAlone" pages="0,true,1,false" selected="0"/>
+  <controller name="color" pages="7,Event,0,DeepYellow,1,Red,2,Purple,3,DeepBlue,4,LightBlue,5,DeepGreen,8,LightGreen,9,Pink" selected="0"/>
+  <controller name="isAlone" pages="0,true,1,false" selected="1"/>
   <displayList>
     <image id="n2_h5gv" name="lagBG" src="pwfmtek" fileName="newImg2/img_code_shijian_1.png" xy="-51,-35" size="174,118">
       <relation target="" sidePair="width-width,height-height"/>

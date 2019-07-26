@@ -62,5 +62,9 @@
     </component>
     <component id="n33_m9k1" name="comRadioSelect" src="ox4vtk4" fileName="newCom/ComRadioSelect.xml" xy="392,264" hideByEditor="true"/>
     <component id="n34_m9k1" name="comRadioSelectScene" src="m9k1tk5" fileName="newCom/ComRadioSelectScene.xml" xy="386,267" hideByEditor="true"/>
+    <component id="n37_w7bo" name="comCreateArg" src="w7botli" fileName="newCom/ComCreateArg.xml" xy="624,0" size="513,640" hideByEditor="true" visible="false">
+      <relation target="" sidePair="bottomext-bottom,rightext-right"/>
+      <relation target="n5_n1c0" sidePair="left-left,top-top"/>
+    </component>
   </displayList>
 </component>

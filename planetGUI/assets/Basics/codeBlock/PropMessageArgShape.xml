@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="160,36" opaque="false">
-  <controller name="color" pages="0,Event,1,DeepYellow,2,Red,3,Purple,4,DeepBlue,5,LightBlue,6,DeepGreen,7,LightGreen" selected="7"/>
+  <controller name="color" pages="0,Event,1,DeepYellow,2,Red,3,Purple,4,DeepBlue,5,LightBlue,6,DeepGreen,7,LightGreen,8,Pink" selected="8"/>
   <displayList>
-    <loader id="n0_flp7" name="n0" xy="0,0" size="161,36" url="ui://rnqj1l77h5gvtb9" fill="scaleFree">
-      <gearIcon controller="color" pages="0,1,3,4,5,6,7" values="ui://rnqj1l77h5gvtbw|ui://rnqj1l77h5gvtb3|ui://rnqj1l77h5gvtbf|ui://rnqj1l77h5gvtcg|ui://rnqj1l77h5gvtbp|ui://rnqj1l77h5gvtcq|ui://rnqj1l77h5gvtb9" default="ui://rnqj1l77h5gvtc2"/>
+    <loader id="n0_flp7" name="n0" xy="0,0" size="161,36" url="ui://rnqj1l77w7botlh" fill="scaleFree">
+      <gearIcon controller="color" pages="0,1,3,4,5,6,7,8" values="ui://rnqj1l77h5gvtbw|ui://rnqj1l77h5gvtb3|ui://rnqj1l77h5gvtbf|ui://rnqj1l77h5gvtcg|ui://rnqj1l77h5gvtbp|ui://rnqj1l77h5gvtcq|ui://rnqj1l77h5gvtb9|ui://rnqj1l77w7botlh" default="ui://rnqj1l77h5gvtc2"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
     <text id="n1_flp7" name="propName" xy="17,4" size="53,31" restrictSize="20,0,18,0" fontSize="24" color="#003333" align="center" vAlign="middle" singleLine="true" text="道具"/>
