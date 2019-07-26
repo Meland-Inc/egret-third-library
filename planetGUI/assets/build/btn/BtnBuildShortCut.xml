@@ -13,5 +13,7 @@
   <transition name="spread">
     <item time="0" type="Alpha" target="n1_uhu6" tween="true" startValue="1" endValue="0" duration="12"/>
     <item time="0" type="Scale" target="n1_uhu6" tween="true" startValue="1,1" endValue="1.5,1.5" duration="12"/>
+    <item time="13" type="Alpha" target="n1_uhu6" value="0"/>
+    <item time="13" type="Scale" target="n1_uhu6" value="1,1"/>
   </transition>
 </component>
