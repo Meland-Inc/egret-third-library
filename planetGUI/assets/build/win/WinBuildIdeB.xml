@@ -107,6 +107,9 @@
       <gearDisplay controller="ctrlOperate" pages="2"/>
       <relation target="n9_r0y9" sidePair="right-left,bottom-bottom"/>
     </component>
+    <component id="n32_jt5f" name="comSelectScope" src="rx4otjz" fileName="newCom/ComSelectScope.xml" pkg="rnqj1l77" xy="260,7">
+      <relation target="" sidePair="top-top,left-left%"/>
+    </component>
   </displayList>
   <transition name="transBpHide">
     <item time="0" type="XY" target="n4_r0y9" tween="true" startValue="561,-2" endValue="1136,-2" duration="3"/>
