@@ -159,6 +159,8 @@ var mouse;
     var currentTarget;
     var stageObj;
     var isPC;
+    var isTouchHitTest; //是否在touch事件中已经检测过 hitTest 帧事件中没必要再重新检测 hitTest很耗
+    var touchHitTestResult; //touch事件检测hitTest的结果
     var dispatch = function (type, bubbles, x, y) {
         if (type == mouse.MouseEvent.ROLL_OVER && currentTarget.isRollOver) {
             return;
@@ -209,7 +211,15 @@ var mouse;
                 dispatch(mouse.MouseEvent.ROLL_OUT, false, x, y);
                 currentTarget = null;
             }
-            var result = stage.$hitTest(x, y);
+            var result;
+            if (isTouchHitTest) {
+                result = touchHitTestResult;
+                isTouchHitTest = false;
+                touchHitTestResult = null;
+            }
+            else {
+                result = stage.$hitTest(x, y);
+            }
             if (result != null && result != stage) {
                 if (!currentTarget) {
                     currentTarget = result;
@@ -218,9 +228,11 @@ var mouse;
                 }
                 else if (result != currentTarget) {
                     dispatch(mouse.MouseEvent.MOUSE_OUT, true, x, y);
-                    if (!currentTarget.$getConcatenatedVisible() || !currentTarget.hitTestPoint(x, y, true)) {
-                        dispatch(mouse.MouseEvent.ROLL_OUT, false, x, y);
-                    }
+                    //严重影响性能 强制像素检测 感觉也没意义
+                    // if (!currentTarget.$getConcatenatedVisible() || !currentTarget.hitTestPoint(x, y, true)) {
+                    //     dispatch(MouseEvent.ROLL_OUT, false, x, y);
+                    // }
+                    dispatch(mouse.MouseEvent.ROLL_OUT, false, x, y);
                     currentTarget = result;
                     dispatch(mouse.MouseEvent.ROLL_OVER, false, x, y);
                     dispatch(mouse.MouseEvent.MOUSE_OVER, true, x, y);
@@ -243,17 +255,19 @@ var mouse;
             onTouchMove.call(this, x, y, touchPointID, button);
             if (mouseMoveEnabled) {
                 var target = stageObj.$hitTest(x, y);
+                isTouchHitTest = true;
+                touchHitTestResult = target;
                 if (!target) {
                     target = stageObj;
                 }
                 egret.TouchEvent.dispatchTouchEvent(target, mouse.MouseEvent.MOUSE_MOVE, true, true, x, y, touchPointID, true, button);
             }
-            check(x, y);
+            // check(x, y);
         };
         var onTouchBegin = egret.sys.TouchHandler.prototype.onTouchBegin;
         egret.sys.TouchHandler.prototype.onTouchBegin = function (x, y, touchPointID, button) {
             onTouchBegin.call(this, x, y, touchPointID, button);
-            check(x, y);
+            // check(x, y);
         };
         var isMove = false;
         var getLocation = egret["web"].WebTouchHandler.prototype.getLocation;
@@ -272,6 +286,8 @@ var mouse;
                 onTouchEnd.call(this, x, y, touchPointID, button);
                 if (mouseMoveEnabled) {
                     var target = stageObj.$hitTest(x, y);
+                    isTouchHitTest = true;
+                    touchHitTestResult = target;
                     if (!target) {
                         target = stageObj;
                     }
@@ -280,7 +296,7 @@ var mouse;
                 return;
             }
             onTouchEnd.call(this, x, y, touchPointID, button);
-            check(x, y);
+            // check(x, y);
         };
         stage.addEventListener(egret.Event.ENTER_FRAME, function () {
             if (mouseX != NaN && mouseY != NaN) {
