@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="80,40" extention="Button">
   <controller name="button" pages="0,up,1,down" selected="0"/>
-  <controller name="c1" exported="true" pages="0,event,1,control,2,prop,3,function,4,move,5,detect,6,operator,7,variable" selected="0"/>
+  <controller name="c1" exported="true" pages="0,event,1,control,2,prop,3,function,4,move,5,detect,6,operator,7,variable,8,diyfunction" selected="8"/>
   <displayList>
-    <loader id="n6_hbwi" name="bg" xy="80,40" pivot="1,1" anchor="true" size="4,40" url="ui://rnqj1l77hbwitfw" fill="scaleFree">
+    <loader id="n6_hbwi" name="bg" xy="80,40" pivot="1,1" anchor="true" size="4,40" url="ui://rnqj1l77w7botlm" fill="scaleFree">
       <gearSize controller="button" pages="0,1" values="4,40,1,1|80,40,1,1" tween="true" ease="Linear" duration="0.05"/>
-      <gearIcon controller="c1" pages="0,1,2,3,4,5,6,7" values="ui://rnqj1l77hbwitfw|ui://rnqj1l77hbwitf8|ui://rnqj1l77hbwitff|ui://rnqj1l77hbwitf1|ui://rnqj1l77hbwitfj|ui://rnqj1l77hbwitf5|ui://rnqj1l77hbwitfn|ui://rnqj1l77hbwitex"/>
+      <gearIcon controller="c1" pages="0,1,2,3,4,5,6,7,8" values="ui://rnqj1l77hbwitfw|ui://rnqj1l77hbwitf8|ui://rnqj1l77hbwitff|ui://rnqj1l77hbwitf1|ui://rnqj1l77hbwitfj|ui://rnqj1l77hbwitf5|ui://rnqj1l77hbwitfn|ui://rnqj1l77hbwitex|ui://rnqj1l77w7botlm"/>
     </loader>
     <loader id="n0_hoex" name="icon" xy="5,10" size="27,18" url="ui://rnqj1l77hbwitfb" align="center" vAlign="middle">
       <gearIcon controller="button" pages="0" values="ui://rnqj1l77hbwitfb" default="ui://rnqj1l77hbwitfc"/>
