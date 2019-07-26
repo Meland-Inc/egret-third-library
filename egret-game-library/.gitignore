@@ -11,6 +11,6 @@ tools/nodejs/buildTS.local
 *.local
 *.map
 .idea
-**/*/libs/
+#**/*/libs/
 
 socket.io/demo/node_modules
