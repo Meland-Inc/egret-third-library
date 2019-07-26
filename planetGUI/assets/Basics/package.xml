@@ -448,6 +448,28 @@
     <image id="v32mtkz" name="icon_code_cjbl_4.png" path="/B-PlatformImg/"/>
     <image id="v32mtl0" name="icon_code_cjbl_1.png" path="/B-PlatformImg/"/>
     <image id="v32mtl1" name="icon_code_cjbl_2.png" path="/B-PlatformImg/"/>
+    <image id="w7botl2" name="icon_code_dm_hs_1.png" path="/newImg2/"/>
+    <image id="w7botl3" name="icon_code_dm_hs_1_1.png" path="/newImg2/"/>
+    <image id="w7botl4" name="img_cm_dtgj_1.png" path="/newImg2/"/>
+    <image id="w7botl5" name="img_cm_xzd_1.png" path="/newImg2/" exported="true"/>
+    <image id="w7botl6" name="img_cm_xzd_2.png" path="/newImg2/" exported="true"/>
+    <image id="w7botl7" name="img_code_hs_1.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="124,30,58,60"/>
+    <image id="w7botl8" name="img_code_hs_10.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="33,16,63,32"/>
+    <image id="w7botl9" name="img_code_hs_11.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="68,18,57,41"/>
+    <image id="w7botla" name="img_code_hs_2.png" path="/newImg2/" exported="true"/>
+    <image id="w7botlb" name="img_code_hs_3.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="69,18,56,41"/>
+    <image id="w7botlc" name="img_code_hs_4.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="67,20,58,40"/>
+    <image id="w7botld" name="img_code_hs_7.png" path="/newImg2/" exported="true"/>
+    <image id="w7botle" name="img_code_hs_8.png" path="/newImg2/" exported="true"/>
+    <image id="w7botlf" name="img_code_hs_9.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="33,17,65,34"/>
+    <image id="w7botlg" name="img_code_hs_lx_5.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="22,9,34,18"/>
+    <image id="w7botlh" name="img_code_hs_ty_6.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="20,16,40,5"/>
+    <component id="w7botli" name="ComCreateArg.xml" path="/newCom/" exported="true"/>
+    <component id="w7botlj" name="BlockCodeblockFunction.xml" path="/codeBlock/"/>
+    <component id="w7botlk" name="BlockCodeblockReturn.xml" path="/codeBlock/"/>
+    <component id="w7botll" name="InputArgsShape.xml" path="/codeBlock/"/>
+    <image id="w7botlm" name="icon_code_dm_hs_2.png" path="/B-PlatformImg/" exported="true" scale="9grid" scale9grid="1,10,2,20"/>
+    <image id="w7botln" name="icon_code_dm_hs_2_1.png" path="/B-PlatformImg/" exported="true"/>
   </resources>
   <publish name="Basics"/>
 </packageDescription>
