@@ -237,22 +237,22 @@ var mouse;
         var mouseX = NaN;
         var mouseY = NaN;
         var onTouchMove = egret.sys.TouchHandler.prototype.onTouchMove;
-        egret.sys.TouchHandler.prototype.onTouchMove = function (x, y, touchPointID) {
+        egret.sys.TouchHandler.prototype.onTouchMove = function (x, y, touchPointID, button) {
             mouseX = x;
             mouseY = y;
-            onTouchMove.call(this, x, y, touchPointID);
+            onTouchMove.call(this, x, y, touchPointID, button);
             if (mouseMoveEnabled) {
                 var target = stageObj.$hitTest(x, y);
                 if (!target) {
                     target = stageObj;
                 }
-                egret.TouchEvent.dispatchTouchEvent(target, mouse.MouseEvent.MOUSE_MOVE, true, true, x, y, touchPointID, true);
+                egret.TouchEvent.dispatchTouchEvent(target, mouse.MouseEvent.MOUSE_MOVE, true, true, x, y, touchPointID, true, button);
             }
             check(x, y);
         };
         var onTouchBegin = egret.sys.TouchHandler.prototype.onTouchBegin;
-        egret.sys.TouchHandler.prototype.onTouchBegin = function (x, y, touchPointID) {
-            onTouchBegin.call(this, x, y, touchPointID);
+        egret.sys.TouchHandler.prototype.onTouchBegin = function (x, y, touchPointID, button) {
+            onTouchBegin.call(this, x, y, touchPointID, button);
             check(x, y);
         };
         var isMove = false;
@@ -264,22 +264,22 @@ var mouse;
             return getLocation.call(this, event);
         };
         var onTouchEnd = egret.sys.TouchHandler.prototype.onTouchEnd;
-        egret.sys.TouchHandler.prototype.onTouchEnd = function (x, y, touchPointID) {
+        egret.sys.TouchHandler.prototype.onTouchEnd = function (x, y, touchPointID, button) {
             if (isMove) {
                 isMove = false;
                 mouseX = x;
                 mouseY = y;
-                onTouchEnd.call(this, x, y, touchPointID);
+                onTouchEnd.call(this, x, y, touchPointID, button);
                 if (mouseMoveEnabled) {
                     var target = stageObj.$hitTest(x, y);
                     if (!target) {
                         target = stageObj;
                     }
-                    egret.TouchEvent.dispatchTouchEvent(target, mouse.MouseEvent.MOUSE_MOVE, true, true, x, y, touchPointID, true);
+                    egret.TouchEvent.dispatchTouchEvent(target, mouse.MouseEvent.MOUSE_MOVE, true, true, x, y, touchPointID, true, button);
                 }
                 return;
             }
-            onTouchEnd.call(this, x, y, touchPointID);
+            onTouchEnd.call(this, x, y, touchPointID, button);
             check(x, y);
         };
         stage.addEventListener(egret.Event.ENTER_FRAME, function () {
