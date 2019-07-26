@@ -75,24 +75,6 @@ var particle;
     }());
     particle.Particle = Particle;
     __reflect(Particle.prototype, "particle.Particle");
-    var requireParticleABIVersion = 1;
-    if (egret.nativeRender) {
-        if (!egret_native['nrParticleABIVersion']) {
-            egret.warn('需要升级粒子库版本才能开启原生渲染加速');
-            egret.nativeRender = false;
-        }
-        else {
-            var nrParticleABIVersion = egret_native['nrParticleABIVersion'];
-            if (nrParticleABIVersion < requireParticleABIVersion) {
-                egret.warn('需要升级runtime版本才能开启原生渲染加速');
-                egret.nativeRender = false;
-            }
-            else if (nrParticleABIVersion > requireParticleABIVersion) {
-                egret.warn('需要升级粒子库版本才能开启原生渲染加速');
-                egret.nativeRender = false;
-            }
-        }
-    }
 })(particle || (particle = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
@@ -263,7 +245,7 @@ var particle;
             configurable: true
         });
         ParticleSystem.prototype.onPropertyChanges = function () {
-            this.$nativeDisplayObject.setParticleConfig(this.$particleConfig);
+            this.$nativeDisplayObject.setCustomData(this.$particleConfig);
         };
         Object.defineProperty(ParticleSystem.prototype, "emitterX", {
             get: function () {
@@ -313,7 +295,7 @@ var particle;
                 this.emissionTime = duration;
                 if (egret.nativeRender) {
                     this.$particleConfig[3] = duration;
-                    this.$nativeDisplayObject.setStartToParticle(this.$particleConfig);
+                    this.$nativeDisplayObject.setCustomData(this.$particleConfig);
                 }
                 else {
                     this.timeStamp = egret.getTimer();
@@ -786,7 +768,7 @@ var particle;
                     configArray.push(i++);
                     configArray.push(this.$particleConfig[key]);
                 }
-                this.$nativeDisplayObject.setStartToParticle(configArray);
+                this.$nativeDisplayObject.setCustomData(configArray);
             }
             else {
                 _super.prototype.start.call(this, duration);
@@ -799,7 +781,7 @@ var particle;
             var configArray = [];
             configArray.push(35 /* currentParticles */);
             configArray.push(num);
-            this.$nativeDisplayObject.setParticleConfig(configArray);
+            this.$nativeDisplayObject.setCustomData(configArray);
         };
         GravityParticleSystem.prototype.onPropertyChanges = function () {
             if (this.$init == false) {
@@ -826,7 +808,7 @@ var particle;
                 this.$particleConfig[34 /* emitterBoundsHeight */] = this.relativeContentBounds.height;
                 configArray.push(this.relativeContentBounds.height);
             }
-            this.$nativeDisplayObject.setParticleConfig(configArray);
+            this.$nativeDisplayObject.setCustomData(configArray);
         };
         GravityParticleSystem.prototype.parseConfig = function (config) {
             if (egret.nativeRender) {

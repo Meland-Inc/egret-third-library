@@ -1,3 +1,6 @@
+var __reflect = (this && this.__reflect) || function (p, c, t) {
+    p.__class__ = c, t ? t.push(c) : t = [c], p.__types__ = p.__types__ ? t.concat(p.__types__) : t;
+};
 //////////////////////////////////////////////////////////////////////////////////////
 //
 //  Copyright (c) 2014-present, Egret Technology.
@@ -28,7 +31,7 @@
 //////////////////////////////////////////////////////////////////////////////////////
 var mouse;
 (function (mouse) {
-    var MouseEvent = /** @class */ (function () {
+    var MouseEvent = (function () {
         function MouseEvent() {
         }
         /**
@@ -112,6 +115,7 @@ var mouse;
         return MouseEvent;
     }());
     mouse.MouseEvent = MouseEvent;
+    __reflect(MouseEvent.prototype, "mouse.MouseEvent");
 })(mouse || (mouse = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
@@ -233,22 +237,22 @@ var mouse;
         var mouseX = NaN;
         var mouseY = NaN;
         var onTouchMove = egret.sys.TouchHandler.prototype.onTouchMove;
-        egret.sys.TouchHandler.prototype.onTouchMove = function (x, y, touchPointID, button) {
+        egret.sys.TouchHandler.prototype.onTouchMove = function (x, y, touchPointID) {
             mouseX = x;
             mouseY = y;
-            onTouchMove.call(this, x, y, touchPointID, button);
+            onTouchMove.call(this, x, y, touchPointID);
             if (mouseMoveEnabled) {
                 var target = stageObj.$hitTest(x, y);
                 if (!target) {
                     target = stageObj;
                 }
-                egret.TouchEvent.dispatchTouchEvent(target, mouse.MouseEvent.MOUSE_MOVE, true, true, x, y, touchPointID, true, button);
+                egret.TouchEvent.dispatchTouchEvent(target, mouse.MouseEvent.MOUSE_MOVE, true, true, x, y, touchPointID, true);
             }
             check(x, y);
         };
         var onTouchBegin = egret.sys.TouchHandler.prototype.onTouchBegin;
-        egret.sys.TouchHandler.prototype.onTouchBegin = function (x, y, touchPointID, button) {
-            onTouchBegin.call(this, x, y, touchPointID, button);
+        egret.sys.TouchHandler.prototype.onTouchBegin = function (x, y, touchPointID) {
+            onTouchBegin.call(this, x, y, touchPointID);
             check(x, y);
         };
         var isMove = false;
@@ -260,22 +264,22 @@ var mouse;
             return getLocation.call(this, event);
         };
         var onTouchEnd = egret.sys.TouchHandler.prototype.onTouchEnd;
-        egret.sys.TouchHandler.prototype.onTouchEnd = function (x, y, touchPointID, button) {
+        egret.sys.TouchHandler.prototype.onTouchEnd = function (x, y, touchPointID) {
             if (isMove) {
                 isMove = false;
                 mouseX = x;
                 mouseY = y;
-                onTouchEnd.call(this, x, y, touchPointID, button);
+                onTouchEnd.call(this, x, y, touchPointID);
                 if (mouseMoveEnabled) {
                     var target = stageObj.$hitTest(x, y);
                     if (!target) {
                         target = stageObj;
                     }
-                    egret.TouchEvent.dispatchTouchEvent(target, mouse.MouseEvent.MOUSE_MOVE, true, true, x, y, touchPointID, true, button);
+                    egret.TouchEvent.dispatchTouchEvent(target, mouse.MouseEvent.MOUSE_MOVE, true, true, x, y, touchPointID, true);
                 }
                 return;
             }
-            onTouchEnd.call(this, x, y, touchPointID, button);
+            onTouchEnd.call(this, x, y, touchPointID);
             check(x, y);
         };
         stage.addEventListener(egret.Event.ENTER_FRAME, function () {
