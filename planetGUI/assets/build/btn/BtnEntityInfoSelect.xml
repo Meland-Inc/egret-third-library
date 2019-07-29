@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="170,50" extention="Button" designImage="ui://i25v0ebkmte04v" designImageOffsetX="-11" designImageOffsetY="-73">
   <controller name="button" pages="0,up,1,down" selected="0"/>
-  <controller name="ctrlData" pages="0,none,1,item" selected="1">
+  <controller name="ctrlData" pages="0,none,1,item,2,narrow,3,expand" selected="2">
     <action type="change_page" fromPage="" toPage="0" controller="button" targetPage="0"/>
   </controller>
   <displayList>
@@ -23,8 +23,17 @@
       <gearDisplay controller="button" pages="1"/>
     </image>
     <loader id="n2_wsvg" name="icon" xy="7,5" size="39,39" align="center" vAlign="middle" fill="scaleMatchWidth"/>
-    <text id="n6_mte0" name="title" xy="52,16" size="100,19" fontSize="14" color="#ffffff" vAlign="middle" autoSize="none" autoClearText="true" text="#33金制工作台">
-      <gearDisplay controller="ctrlData" pages="1"/>
+    <text id="n6_mte0" name="title" xy="50,16" size="100,19" fontSize="14" color="#ffffff" vAlign="middle" autoSize="none" autoClearText="true" text="金制工作台">
+      <gearDisplay controller="ctrlData" pages="1,2,3"/>
+    </text>
+    <image id="n7_shu1" name="n7" src="shu1cyief" fileName="imgB/icon_cm_sq_1.png" pkg="te1gxawo" xy="155,24">
+      <gearDisplay controller="ctrlData" pages="2"/>
+    </image>
+    <image id="n8_shu1" name="n8" src="shu1cyieg" fileName="imgB/icon_cm_zk_1.png" pkg="te1gxawo" xy="155,24">
+      <gearDisplay controller="ctrlData" pages="3"/>
+    </image>
+    <text id="n9_shu1" name="tfNum" xy="112,19" size="40,16" fontSize="10" color="#ffffff" align="right" vAlign="middle" autoSize="none" text="1234">
+      <gearDisplay controller="ctrlData" pages="2"/>
     </text>
   </displayList>
   <Button mode="Radio"/>
