@@ -2193,6 +2193,7 @@ var egret;
             HTML5StageText.prototype.$show = function () {
                 if (!this.htmlInput.isCurrentStageText(this)) {
                     this.inputElement = this.htmlInput.getInputElement(this);
+                    this.inputElement.autocomplete = 'off';
                     if (!this.$textfield.multiline) {
                         this.inputElement.type = this.$textfield.inputType;
                     }

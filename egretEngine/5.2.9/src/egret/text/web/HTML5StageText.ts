@@ -154,6 +154,7 @@ namespace egret.web {
         $show(): void {
             if (!this.htmlInput.isCurrentStageText(this)) {
                 this.inputElement = this.htmlInput.getInputElement(this);
+                this.inputElement.autocomplete = 'off'
                 if (!this.$textfield.multiline) {
                     this.inputElement.type = this.$textfield.inputType;
                 }
