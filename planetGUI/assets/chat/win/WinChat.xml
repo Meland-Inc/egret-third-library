@@ -10,7 +10,7 @@
       <Button icon="ui://te1gxawoefrs1q" sound="ui://fknoioovtqc912"/>
     </component>
     <image id="n8_q73n" name="titleBg" src="efrs22" fileName="newImg/img_cm_title1.png" pkg="te1gxawo" xy="476,101" group="n26_hrgt"/>
-    <text id="n9_q73n" name="title" xy="542,108" size="45,27" group="n26_hrgt" fontSize="20" color="#f5ebde" text="聊天"/>
+    <text id="n9_q73n" name="title" xy="542,108" size="45,32" group="n26_hrgt" fontSize="20" color="#f5ebde" text="聊天"/>
     <image id="n10_q73n" name="bottomBg" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="206,536" size="751,14" group="n26_hrgt"/>
     <image id="n5_q73n" name="lstBtnBg" src="ot9si2v" fileName="newImg/img_cm_bottom_1.png" pkg="te1gxawo" xy="215,156" size="166,366" group="n26_hrgt"/>
     <list id="n6_q73n" name="lstBtnChannel" xy="233,170" size="132,335" group="n26_hrgt" layout="flow_hz" defaultItem="ui://qagcvsbxgpm04y">
@@ -32,7 +32,7 @@
     <image id="n13_q73n" name="friendNameBg" src="ot9si35" fileName="newImg/img_cm_name.png" pkg="te1gxawo" xy="408,164" size="80,22" group="n25_11e02">
       <relation target="n14_q73n" sidePair="width-width"/>
     </image>
-    <text id="n14_q73n" name="tfFriendName" xy="408,165" size="79,19" group="n25_11e02" fontSize="14" color="#5b4b37" align="center" vAlign="middle" ubb="true" vars="true" text="与[color=#c88316]{name=xxx}[/color]聊天中"/>
+    <text id="n14_q73n" name="tfFriendName" xy="408,165" size="82,23" group="n25_11e02" fontSize="14" color="#5b4b37" align="center" vAlign="middle" ubb="true" vars="true" text="与[color=#c88316]{name=xxx}[/color]聊天中"/>
     <group id="n25_11e02" name="grpFriendChatTitle" xy="408,164" size="81,22" group="n26_hrgt" advanced="true" collapsed="true">
       <gearDisplay controller="conFrivateChat" pages="1"/>
     </group>
@@ -40,7 +40,7 @@
       <Button icon="ui://qagcvsbxq73n3u"/>
     </component>
     <image id="n16_q73n" name="inputBg" src="ot9si32" fileName="newImg/img_cm_inputbox_3.png" pkg="te1gxawo" xy="464,481" size="280,26" group="n26_hrgt"/>
-    <text id="n17_q73n" name="inpSendText" xy="470,477" size="244,35" group="n26_hrgt" input="true" prompt="[size=14]点击输入文字...[/size]" fontSize="14" color="#9b8e72" vAlign="middle" autoSize="none" singleLine="true" text=""/>
+    <text id="n17_q73n" name="inpSendText" xy="470,477" size="244,35" group="n26_hrgt" input="true" prompt="[size=14]点击输入文字...[/size]" maxLength="200" fontSize="14" color="#9b8e72" vAlign="middle" autoSize="none" singleLine="true" text=""/>
     <image id="n22_q73n" name="emojBg" src="q73n44" fileName="imgNew/img_chat_emoji.png" xy="466,318" size="327,191" group="n24_q73n"/>
     <list id="n23_q73n" name="lstBtnEmoj" xy="468,320" size="323,148" group="n24_q73n" layout="flow_hz" overflow="scroll" lineGap="2" colGap="2" defaultItem="ui://qagcvsbxq73n4q" autoClearItems="true">
       <item/>
