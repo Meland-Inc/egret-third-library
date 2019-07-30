@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="93,36" restrictSize="68,0,0,0">
-  <controller name="color" pages="0,Event,1,DeepYellow,2,Red,3,Purple,4,DeepBlue,5,LightBlue,6,DeepGreen,7,LightGreen" selected="0"/>
-  <controller name="ctrlHint" pages="0,none,1,xy,2,entity,3,question,4,class" selected="1"/>
+<component size="68,36" restrictSize="68,0,0,0">
+  <controller name="color" pages="0,Event,1,DeepYellow,2,Red,3,Purple,4,DeepBlue,5,LightBlue,6,DeepGreen,7,LightGreen,8,Pink" selected="8"/>
+  <controller name="ctrlHint" pages="0,none,1,xy,2,entity,3,question,4,class" selected="0"/>
   <displayList>
-    <loader id="n9_j1n2" name="n9" xy="0,0" size="93,36" url="ui://rnqj1l77h5gvtbw" align="center" vAlign="middle" fill="scaleFree">
-      <gearIcon controller="color" pages="0,1,2,3,4,5,6,7" values="ui://rnqj1l77h5gvtbw|ui://rnqj1l77h5gvtb3|ui://rnqj1l77h5gvtc2|ui://rnqj1l77h5gvtbf|ui://rnqj1l77h5gvtcg|ui://rnqj1l77h5gvtbp|ui://rnqj1l77h5gvtcq|ui://rnqj1l77h5gvtb9"/>
+    <loader id="n9_j1n2" name="n9" xy="0,0" size="68,36" url="ui://rnqj1l77w7botlh" align="center" vAlign="middle" fill="scaleFree">
+      <gearIcon controller="color" pages="0,1,2,3,4,5,6,7,8" values="ui://rnqj1l77h5gvtbw|ui://rnqj1l77h5gvtb3|ui://rnqj1l77h5gvtc2|ui://rnqj1l77h5gvtbf|ui://rnqj1l77h5gvtcg|ui://rnqj1l77h5gvtbp|ui://rnqj1l77h5gvtcq|ui://rnqj1l77h5gvtb9|ui://rnqj1l77w7botlh"/>
       <relation target="" sidePair="rightext-right"/>
     </loader>
-    <text id="n10_qq8d" name="n10" xy="32,4" size="53,31" alpha="0.5" fontSize="24" color="#333333" vAlign="middle" text="坐标">
+    <text id="n10_qq8d" name="n10" xy="32,4" size="10,31" alpha="0.5" fontSize="24" color="#333333" vAlign="middle" text="">
       <gearText controller="ctrlHint" pages="0,1,2,4" values="|坐标|实体|类别" default="问题"/>
     </text>
     <loader id="n11_qq8d" name="n11" xy="6,5" size="28,28" url="ui://rnqj1l77qq8dtgw" align="center" vAlign="middle">

@@ -53,13 +53,13 @@
     <group id="n11_qlcu" name="root" xy="0,0" size="572,282" advanced="true">
       <relation target="" sidePair="left-left,top-top"/>
     </group>
-    <list id="n2_j5jv" name="lstSelection" xy="25,100" size="465,155" layout="flow_hz" overflow="scroll" lineGap="20" colGap="24" defaultItem="ui://5hs1fuejpzqfcyieg" align="right" vAlign="bottom">
+    <list id="n2_j5jv" name="lstSelection" xy="25,91" size="465,163" layout="flow_hz" overflow="scroll" lineGap="20" colGap="24" defaultItem="ui://5hs1fuejpzqfcyieg" align="right" vAlign="bottom">
       <gearDisplay controller="ctrlType" pages="0"/>
       <relation target="n0_j5jv" sidePair="center-center,bottom-bottom"/>
-      <item icon="ui://5hs1fuejpzqfcyied" selectedIcon="ui://5hs1fuejpzqfcyieg"/>
-      <item icon="ui://5hs1fuejpzqfcyied" selectedIcon="ui://5hs1fuejpzqfcyieg"/>
-      <item icon="ui://5hs1fuejpzqfcyied" selectedIcon="ui://5hs1fuejpzqfcyieg"/>
-      <item icon="ui://5hs1fuejpzqfcyied" selectedIcon="ui://5hs1fuejpzqfcyieg"/>
+      <item icon="ui://5hs1fuejpzqfcyied" selectedIcon="ui://5hs1fuejpzqfcyiee"/>
+      <item icon="ui://5hs1fuejpzqfcyied" selectedIcon="ui://5hs1fuejpzqfcyiee"/>
+      <item icon="ui://5hs1fuejpzqfcyied" selectedIcon="ui://5hs1fuejpzqfcyiee"/>
+      <item icon="ui://5hs1fuejpzqfcyied" selectedIcon="ui://5hs1fuejpzqfcyiee"/>
     </list>
   </displayList>
 </component>
