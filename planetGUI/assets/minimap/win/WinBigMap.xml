@@ -25,9 +25,9 @@
     <group id="n86_ljyy" name="grpMapPos" xy="0,0" size="1135,640" hideByEditor="true" visible="false" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlMapMode" pages="0"/>
     </group>
-    <image id="n89_ugid" name="headerBg" src="nl0rcyicd" fileName="imgB/img_cm_db_1.png" pkg="te1gxawo" xy="0,0" size="1136,62">
+    <loader id="n89_ugid" name="headerBg" xy="0,0" size="1136,62" url="ui://te1gxawonl0rcyicd" fill="scaleFree">
       <relation target="" sidePair="width-width"/>
-    </image>
+    </loader>
     <image id="n90_ugid" name="titleBg" src="nl0rcyice" fileName="imgB/img_cm_db_2.png" pkg="te1gxawo" xy="0,0" size="254,57"/>
     <image id="n91_ugid" name="winIcon" src="ugid22e" fileName="imgB/icon_map_1.png" xy="40,15"/>
     <text id="n92_ugid" name="winTitle" xy="91,14" size="105,37" fontSize="24" color="#ffffff" vAlign="middle" bold="true" text="世界地图">
