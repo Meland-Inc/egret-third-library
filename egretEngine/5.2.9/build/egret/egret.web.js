@@ -3093,7 +3093,10 @@ var egret;
                         _this.onTouchEnd(event);
                     }
                     else {
-                        _this.onTouchMove(event);
+                        if (!_this.dealMouseMoveEvent) {
+                            _this.dealMouseMoveEvent = true;
+                            _this.onTouchMove(event);
+                        }
                     }
                 };
                 /**
@@ -3156,6 +3159,7 @@ var egret;
                     }
                     this.addTouchListener();
                 }
+                egret.ticker.$startTick(this.$update, this);
             };
             /**
              * @private
@@ -3209,6 +3213,11 @@ var egret;
                 if (event["isScroll"] != true && !this.canvas['userTyping']) {
                     event.preventDefault();
                 }
+            };
+            //每次帧循环 会支持降帧 在enterFrame之前
+            WebTouchHandler.prototype.$update = function (timeStamp) {
+                this.dealMouseMoveEvent = false;
+                return false;
             };
             /**
              * @private
