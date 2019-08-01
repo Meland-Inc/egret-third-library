@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkp3zl4w" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlView" exported="true" pages="0,list,1,create" selected="1"/>
-  <controller name="ctrlManorType" pages="0,palindrome,1,horizontal,2,vertical" selected="0"/>
-  <controller name="ctrlShowHideManorType" pages="0,hide,1,show" selected="0"/>
   <displayList>
-    <image id="n49_o7or" name="imgBG" src="p3zlcyidz" fileName="imgB/img_cm_cjk_1.png" pkg="te1gxawo" xy="222,83" size="770,542" group="n70_o7or"/>
-    <loader id="n50_o7or" name="ladIcon" xy="245,90" size="24,24" group="n70_o7or" url="ui://4wr0elnxp3zl0" autoSize="true"/>
-    <text id="n51_o7or" name="tfTitle" xy="279,91" size="89,24" group="n70_o7or" fontSize="18" color="#ffffff" autoSize="none" bold="true" text="创建地图"/>
-    <text id="n52_o7or" name="tf" xy="280,155" size="81,24" group="n70_o7or" fontSize="18" color="#365989" bold="true" text="地图名字"/>
-    <text id="n53_o7or" name="tf" xy="280,216" size="119,24" group="n70_o7or" fontSize="18" color="#365989" bold="true" text="领地生成方式"/>
-    <text id="n54_o7or" name="tf" xy="667,155" size="81,24" group="n70_o7or" fontSize="18" color="#365989" bold="true" text="地图大小"/>
-    <image id="n55_o7or" name="imgNameBG" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="366,154" size="178,24" group="n70_o7or"/>
-    <image id="n56_o7or" name="imgWidthBG" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="754,154" size="69,24" group="n70_o7or"/>
-    <image id="n57_o7or" name="imgHeightBG" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="863,154" size="69,24" group="n70_o7or"/>
-    <text id="n58_o7or" name="tfMapName" xy="371,156" size="166,21" group="n70_o7or" input="true" prompt="七桥问题地图" fontSize="14" color="#ffffff" vAlign="middle" autoSize="none" bold="true" text=""/>
-    <text id="n59_o7or" name="tfMapWidth" xy="757,155" size="63,21" group="n70_o7or" input="true" prompt="1920" restrict="0-9" keyboardType="4" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" text=""/>
-    <text id="n60_o7or" name="tfMapHeight" xy="865,155" size="66,22" group="n70_o7or" input="true" prompt="1080" restrict="0-9" keyboardType="4" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" text=""/>
-    <component id="n61_o7or" name="btnOperation" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="284,255" size="117,34" group="n70_o7or">
-      <Button title="回字型" titleColor="#365989" titleFontSize="16" icon="ui://te1gxawovulycyicn" controller="ctrlShowHideManorType" page="1"/>
-    </component>
-    <component id="n47_o7or" name="btnCreateMap" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="676,554" size="106,36" group="n70_o7or">
+    <image id="n49_o7or" name="imgBG" src="p3zlcyidz" fileName="imgB/img_cm_cjk_1.png" pkg="te1gxawo" xy="224,82" size="770,542" group="n70_o7or"/>
+    <loader id="n50_o7or" name="ladIcon" xy="247,89" size="24,24" group="n70_o7or" url="ui://4wr0elnxp3zl0" autoSize="true"/>
+    <text id="n51_o7or" name="tfTitle" xy="281,90" size="89,24" group="n70_o7or" fontSize="18" color="#ffffff" autoSize="none" bold="true" text="创建地图"/>
+    <text id="n52_o7or" name="tf" xy="282,154" size="77,29" group="n70_o7or" fontSize="18" color="#365989" vAlign="middle" bold="true" text="地图名字"/>
+    <text id="n53_o7or" name="tf" xy="282,215" size="113,29" group="n70_o7or" fontSize="18" color="#365989" bold="true" text="领地生成方式"/>
+    <image id="n55_o7or" name="imgNameBG" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="368,153" size="178,24" group="n70_o7or"/>
+    <text id="n58_o7or" name="tfMapName" xy="373,155" size="166,21" group="n70_o7or" alpha="0.6" input="true" fontSize="14" color="#ffffff" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text=""/>
+    <text id="n94_mwli" name="tfMapSize" xy="669,153" size="77,29" group="n99_mwli" fontSize="18" color="#365989" vAlign="bottom" bold="true" text="地图大小"/>
+    <image id="n95_mwli" name="imgWidthBG" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="756,155" size="69,24" group="n99_mwli"/>
+    <image id="n96_mwli" name="imgHeightBG" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="865,155" size="69,24" group="n99_mwli"/>
+    <text id="n97_mwli" name="tfMapWidth" xy="759,156" size="63,21" group="n99_mwli" alpha="0.6" input="true" restrict="0-9" keyboardType="4" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text=""/>
+    <text id="n98_mwli" name="tfMapHeight" xy="867,156" size="66,22" group="n99_mwli" alpha="0.6" input="true" restrict="0-9" keyboardType="4" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text=""/>
+    <image id="n113_qlmt" name="imgMutil" src="qlmti" fileName="img/img_stencil_c_1.png" xy="839,161" group="n99_mwli"/>
+    <group id="n99_mwli" name="grpMapSizeInCreate" xy="669,153" size="265,29" group="n70_o7or" advanced="true" collapsed="true">
+      <gearXY controller="ctrlView" pages="0,1" values="729,190|669,153"/>
+    </group>
+    <component id="n47_o7or" name="btnCreateMap" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="678,553" size="106,36" group="n70_o7or">
       <gearDisplay controller="ctrlView" pages="1"/>
       <Button title="创建" icon="ui://te1gxawom3dicyidb" controller="ctrlView" page="0"/>
     </component>
-    <component id="n48_o7or" name="btnCancel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="828,553" size="106,37" group="n70_o7or">
+    <component id="n48_o7or" name="btnCancel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="830,552" size="106,37" group="n70_o7or">
       <gearDisplay controller="ctrlView" pages="1"/>
       <Button title="取消" icon="ui://te1gxawom3dicyid9" controller="ctrlView" page="0"/>
     </component>
-    <group id="n70_o7or" name="grpCreate" xy="222,84" size="770,541" advanced="true">
+    <component id="n114_batc" name="comSelectManorTypeInCreate" src="mwlih" fileName="com/comSelectManorTypeInCreate.xml" xy="282,242" group="n70_o7or" controller="ctrlShowHide,1"/>
+    <group id="n70_o7or" name="grpCreate" xy="223,82" size="770,542" advanced="true">
       <gearDisplay controller="ctrlView" pages="1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
@@ -47,47 +47,37 @@
       <gearDisplay controller="ctrlView" pages="0"/>
       <Button icon="ui://4wr0elnxp3zl2" controller="ctrlView" page="1"/>
     </component>
-    <image id="n73_o7or" name="imgDetailBg" src="f203cyie1" fileName="imgB/img_cm_xxk_1.png" pkg="te1gxawo" xy="834,57" size="300,580" group="n89_o7or">
+    <image id="n73_o7or" name="imgDetailBg" src="f203cyie1" fileName="imgB/img_cm_xxk_1.png" pkg="te1gxawo" xy="836,57" size="300,583" group="n89_o7or">
       <relation target="" sidePair="height-height"/>
     </image>
-    <image id="n74_o7or" name="imgInputBg" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="852,78" size="268,31" group="n89_o7or"/>
-    <image id="n75_o7or" name="imgPen" src="f203cyie2" fileName="imgB/img_cm_bjtb_2.png" pkg="te1gxawo" xy="1093,86" group="n89_o7or"/>
-    <text id="n76_o7or" name="inpEditMapName" xy="860,78" size="210,29" group="n89_o7or" input="true" fontSize="18" color="#ffffff" vAlign="middle" autoSize="none" text="七桥问题地图"/>
-    <component id="n77_o7or" name="btnCopy" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="867,561" size="106,36" group="n89_o7or">
+    <image id="n74_o7or" name="imgInputBg" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="854,78" size="268,31" group="n89_o7or"/>
+    <image id="n75_o7or" name="imgPen" src="f203cyie2" fileName="imgB/img_cm_bjtb_2.png" pkg="te1gxawo" xy="1095,86" group="n89_o7or"/>
+    <text id="n76_o7or" name="inpEditMapName" xy="862,78" size="210,29" group="n89_o7or" alpha="0.6" input="true" fontSize="18" color="#ffffff" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="七桥问题地图"/>
+    <text id="n54_o7or" name="tf" xy="850,221" size="77,29" group="n93_mwli" fontSize="18" color="#365989" vAlign="bottom" bold="true" text="地图大小"/>
+    <image id="n112_qlmt" name="imgMutil" src="qlmti" fileName="img/img_stencil_c_1.png" xy="987,230" group="n93_mwli"/>
+    <image id="n56_o7or" name="imgWidthBG" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="931,224" size="53,24" group="n93_mwli"/>
+    <image id="n57_o7or" name="imgHeightBG" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="1003,224" size="52,24" group="n93_mwli"/>
+    <text id="n59_o7or" name="inpEditMapWidth" xy="931,224" size="52,23" group="n93_mwli" alpha="0.5" input="true" prompt="1920" restrict="0-9" keyboardType="4" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text="1000"/>
+    <text id="n60_o7or" name="inpEditMapHeight" xy="1003,224" size="52,23" group="n93_mwli" alpha="0.6" input="true" prompt="1080" restrict="0-9" keyboardType="4" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text="1000"/>
+    <group id="n93_mwli" name="grpEditMapSize" xy="850,221" size="205,29" group="n89_o7or" advanced="true" collapsed="true"/>
+    <component id="n77_o7or" name="btnCopy" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="869,561" size="106,36" group="n89_o7or">
       <relation target="" sidePair="bottom-bottom"/>
       <Button title="复制地图" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
     </component>
-    <component id="n78_o7or" name="btnDelete" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1001,561" size="106,37" group="n89_o7or">
+    <component id="n78_o7or" name="btnDelete" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1003,561" size="106,37" group="n89_o7or">
       <relation target="" sidePair="bottom-bottom"/>
       <Button title="删除地图" titleFontSize="18" icon="ui://te1gxawom3dicyid9"/>
     </component>
     <text id="n79_o7or" name="tfManorGenerateType" xy="850,151" size="112,29" group="n89_o7or" fontSize="18" color="#365989" vAlign="middle" autoSize="none" text="领地生成方式"/>
-    <component id="n88_o7or" name="btnOperation" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="981,151" size="117,34" group="n89_o7or">
-      <Button title="回字型" titleColor="#365989" titleFontSize="16" icon="ui://te1gxawovulycyicn" controller="ctrlShowHideManorType" page="1"/>
+    <component id="n110_mwli" name="btnUpdateMap" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1058,215" size="66,40" group="n89_o7or">
+      <Button title="更新" titleColor="#ffffff" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
     </component>
-    <group id="n89_o7or" name="grpDetail" xy="834,57" size="300,580" group="n90_o7or" advanced="true" collapsed="true">
+    <component id="n109_mwli" name="comSelectManorTypeInInList" src="mwlig" fileName="com/comSelectManorTypeInList.xml" xy="953,152" group="n89_o7or" locked="true"/>
+    <group id="n89_o7or" name="grpDetail" xy="836,57" size="300,583" group="n90_o7or" advanced="true" collapsed="true">
       <relation target="" sidePair="right-right"/>
     </group>
-    <group id="n90_o7or" name="grpList" xy="115,57" size="1019,580" advanced="true" collapsed="true">
+    <group id="n90_o7or" name="grpList" xy="115,57" size="1021,583" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlView" pages="0"/>
-    </group>
-    <image id="n80_o7or" name="imgBg" src="vulycyicq" fileName="imgB/btn_cm_xzl_4.png" pkg="te1gxawo" xy="918,212" size="180,239" group="n87_o7or"/>
-    <text id="n81_o7or" name="tfOperation1" xy="990,223" size="37,23" group="n87_o7or" fontSize="16" color="#365989" text="选择"/>
-    <image id="n82_o7or" name="imgPoint" src="vulycyicr" fileName="imgB/btn_cm_xzl_5.png" pkg="te1gxawo" xy="941,226" group="n87_o7or"/>
-    <component id="n83_o7or" name="btnPalindrome" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="949,258" size="116,34" group="n87_o7or">
-      <Button checked="true" title="回字型" titleColor="#365989" titleFontSize="16" icon="ui://te1gxawovulycyicn" selectedIcon="ui://te1gxawovulycyico" controller="ctrlManorType" page="0"/>
-    </component>
-    <component id="n84_o7or" name="btnHorizontal" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="949,302" size="117,34" group="n87_o7or">
-      <Button title="横向排列" titleColor="#365989" titleFontSize="16" icon="ui://te1gxawovulycyicn" selectedIcon="ui://te1gxawovulycyico" controller="ctrlManorType" page="1"/>
-    </component>
-    <component id="n85_o7or" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="955,396" size="106,36" group="n87_o7or">
-      <Button title="确定" icon="ui://te1gxawom3dicyidb" controller="ctrlShowHideManorType" page="0"/>
-    </component>
-    <component id="n86_o7or" name="btnVertical" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="949,347" size="117,34" group="n87_o7or">
-      <Button title="纵向排列" titleColor="#365989" titleFontSize="16" icon="ui://te1gxawovulycyicn" selectedIcon="ui://te1gxawovulycyico" controller="ctrlManorType" page="2"/>
-    </component>
-    <group id="n87_o7or" name="grpSelection" xy="918,212" size="180,239" advanced="true" collapsed="true">
-      <gearDisplay controller="ctrlShowHideManorType" pages="1"/>
     </group>
   </displayList>
 </component>

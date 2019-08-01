@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="180,308" opaque="false">
+  <controller name="ctrlManorType" pages="0,palindrome,1,horizontal,2,vertical" selected="1"/>
+  <controller name="ctrlShowHide" pages="1,hide,0,show" selected="0"/>
+  <displayList>
+    <component id="n9_mwli" name="btnOperation" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="31,0" size="117,34">
+      <gearText controller="ctrlManorType" pages="1,2" values="横向排列|纵向排列" default="回字型"/>
+      <Button title="纵向排列" titleColor="#365989" titleFontSize="16" icon="ui://te1gxawovulycyicn" controller="ctrlShowHide" page="0"/>
+    </component>
+    <image id="n0_mwli" name="imgBg" src="vulycyicq" fileName="imgB/btn_cm_xzl_4.png" pkg="te1gxawo" xy="0,69" size="180,239" group="n10_mwli"/>
+    <text id="n1_mwli" name="tfOperation1" xy="72,80" size="37,26" group="n10_mwli" fontSize="16" color="#365989" text="选择"/>
+    <image id="n2_mwli" name="imgPoint" src="vulycyicr" fileName="imgB/btn_cm_xzl_5.png" pkg="te1gxawo" xy="23,83" group="n10_mwli"/>
+    <component id="n3_mwli" name="btnPalindrome" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="31,115" size="117,34" group="n10_mwli">
+      <Button title="回字型" titleColor="#365989" titleFontSize="16" icon="ui://te1gxawovulycyicn" selectedIcon="ui://te1gxawovulycyico" controller="ctrlManorType" page="0"/>
+    </component>
+    <component id="n4_mwli" name="btnHorizontal" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="31,159" size="116,34" group="n10_mwli">
+      <Button checked="true" title="横向排列" titleColor="#365989" titleFontSize="16" icon="ui://te1gxawovulycyicn" selectedIcon="ui://te1gxawovulycyico" controller="ctrlManorType" page="1"/>
+    </component>
+    <component id="n5_mwli" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="37,253" size="106,36" group="n10_mwli">
+      <Button title="确定" icon="ui://te1gxawom3dicyidb" controller="ctrlShowHide" page="1"/>
+    </component>
+    <component id="n6_mwli" name="btnVertical" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="31,204" size="117,34" group="n10_mwli">
+      <Button title="纵向排列" titleColor="#365989" titleFontSize="16" icon="ui://te1gxawovulycyicn" selectedIcon="ui://te1gxawovulycyico" controller="ctrlManorType" page="2"/>
+    </component>
+    <group id="n10_mwli" name="root" xy="0,69" size="180,239" advanced="true">
+      <gearDisplay controller="ctrlShowHide" pages="0"/>
+    </group>
+  </displayList>
+</component>
