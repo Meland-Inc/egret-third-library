@@ -43,5 +43,8 @@
       <item icon="ui://tcbadh8nbatc3"/>
       <item icon="ui://tcbadh8nbatc4"/>
     </list>
+    <component id="n18_d1ba" name="comAnimEditingArea" src="d1ba1c" fileName="com/ComAnimEditingArea.xml" xy="231,580">
+      <relation target="n13_batc" sidePair="width-width,bottom-bottom"/>
+    </component>
   </displayList>
 </component>
