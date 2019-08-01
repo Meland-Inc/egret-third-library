@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="tcbadh8n" jpegQuality="80" compressPNG="true">
   <resources>
-    <component id="batc0" name="WinDrawngPad.xml" path="/com/"/>
+    <component id="batc0" name="WinDrawingPad.xml" path="/win/" exported="true"/>
     <image id="batc1" name="btn_sket_bc_1.png" path="/img/"/>
     <image id="batc2" name="btn_sket_hbcz_1.png" path="/img/"/>
     <image id="batc3" name="btn_sket_hbcz_2.png" path="/img/"/>
@@ -27,13 +27,13 @@
     <image id="batcn" name="img_sket_hbdx_4.png" path="/img/"/>
     <image id="batco" name="img_sket_hbdx_5.png" path="/img/"/>
     <image id="batcp" name="img_sket_hbdx_5_1.png" path="/img/"/>
-    <image id="batcq" name="img_sket_mnk_1.png" path="/img/"/>
+    <image id="batcq" name="img_sket_mnk_1.png" path="/img/" scale="9grid" scale9grid="17,7,34,14"/>
     <image id="batcr" name="img_sket_sk_1.png" path="/img/"/>
     <image id="batcs" name="img_sket_tab_1.png" path="/img/"/>
     <image id="batct" name="img_sket_tab_2.png" path="/img/"/>
     <image id="batcu" name="img_sket_tbk_1.png" path="/img/"/>
     <image id="batcv" name="img_sket_tbk_2.png" path="/img/"/>
-    <image id="batcw" name="img_sket_zhqy_1.png" path="/img/"/>
+    <image id="batcw" name="img_sket_zhqy_1.png" path="/img/" scale="9grid" scale9grid="29,28,58,56"/>
     <image id="batcx" name="img_sket_zhqy_2.png" path="/img/" scale="9grid" scale9grid="11,11,22,22"/>
     <image id="batcy" name="img_sket_zhqy_3.png" path="/img/"/>
     <image id="batcz" name="img_sket_zhqy_4.png" path="/img/"/>
@@ -47,6 +47,7 @@
     <image id="batc17" name="img_sket_zhqy_11.png" path="/img/"/>
     <image id="batc18" name="img_sket_zhqy_12.png" path="/img/"/>
     <component id="batc19" name="DrawingToolItem.xml" path="/com/"/>
+    <component id="batc1b" name="btnOperate.xml" path="/btn/"/>
   </resources>
-  <publish name=""/>
+  <publish name="drawingPad"/>
 </packageDescription>
