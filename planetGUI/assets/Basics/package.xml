@@ -465,9 +465,9 @@
     <image id="w7botlg" name="img_code_hs_lx_5.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="22,9,34,18"/>
     <image id="w7botlh" name="img_code_hs_ty_6.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="20,16,40,5"/>
     <component id="w7botli" name="ComCreateArg.xml" path="/newCom/" exported="true"/>
-    <component id="w7botlj" name="BlockCodeblockFunction.xml" path="/codeBlock/"/>
-    <component id="w7botlk" name="BlockCodeblockReturn.xml" path="/codeBlock/"/>
-    <component id="w7botll" name="InputArgsShape.xml" path="/codeBlock/"/>
+    <component id="w7botlj" name="BlockCodeblockFunction.xml" path="/codeBlock/" exported="true"/>
+    <component id="w7botlk" name="BlockCodeblockReturn.xml" path="/codeBlock/" exported="true"/>
+    <component id="w7botll" name="InputArgsShape.xml" path="/codeBlock/" exported="true"/>
     <image id="w7botlm" name="icon_code_dm_hs_2.png" path="/B-PlatformImg/" exported="true" scale="9grid" scale9grid="1,10,2,20"/>
     <image id="w7botln" name="icon_code_dm_hs_2_1.png" path="/B-PlatformImg/" exported="true"/>
   </resources>

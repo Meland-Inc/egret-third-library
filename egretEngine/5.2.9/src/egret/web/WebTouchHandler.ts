@@ -52,6 +52,11 @@ namespace egret.web {
          * @private
          */
         private touch: egret.sys.TouchHandler;
+        /**
+         * @private
+         * 已经处理过mouseMove事件 一帧只处理一次mouseMove事件  实践发现 鼠标移动时 按住按键  会在一帧触发很多次mouseMove影响性能
+         */
+        private dealMouseMoveEvent: boolean;
 
         /**
          * @private
@@ -81,6 +86,8 @@ namespace egret.web {
                 }
                 this.addTouchListener();
             }
+
+            egret.ticker.$startTick(this.$update, this);
         }
 
         /**
@@ -150,7 +157,10 @@ namespace egret.web {
             if (event.buttons == 0) {//在外面松开按键
                 this.onTouchEnd(event);
             } else {
-                this.onTouchMove(event);
+                if (!this.dealMouseMoveEvent) {
+                    this.dealMouseMoveEvent = true;
+                    this.onTouchMove(event);
+                }
             }
         }
 
@@ -169,6 +179,12 @@ namespace egret.web {
         private onTouchEnd = (event: any): void => {
             let location = this.getLocation(event);
             this.touch.onTouchEnd(location.x, location.y, event.identifier, event.button);
+        }
+
+        //每次帧循环 会支持降帧 在enterFrame之前
+        private $update(timeStamp: number): boolean {
+            this.dealMouseMoveEvent = false;
+            return false;
         }
 
         /**
