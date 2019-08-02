@@ -1,27 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkqvmf4r" designImageAlpha="0">
-  <controller name="ctrlWindowState" pages="0,normal,1,maximize" selected="0"/>
+  <controller name="ctrlBarType" pages="0,show,1,hide" selected="0"/>
   <displayList>
+    <graph id="n12_n762" name="n12" xy="-72,-58" size="1280,761" type="rect" fillColor="#ff000000">
+      <gearDisplay controller="ctrlBarType" pages="1"/>
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </graph>
     <image id="n0_qvmf" name="imgBG" src="jq63cyiec" fileName="imgB/img_cm_jak_1.png" pkg="te1gxawo" xy="-8,-3" size="1153,655">
+      <gearDisplay controller="ctrlBarType" pages="0"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
     <text id="n1_qvmf" name="tfClassName" xy="17,15" size="180,24" fontSize="18" color="#ffffff" autoClearText="true" text="欧拉七桥课（default）">
+      <gearDisplay controller="ctrlBarType" pages="0"/>
       <relation target="" sidePair="left-left,top-top"/>
     </text>
     <graph id="n11_id84" name="bar" xy="0,0" size="1136,47" type="rect" lineSize="0" lineColor="#00000000" fillColor="#0033ff00">
+      <gearDisplay controller="ctrlBarType" pages="0"/>
       <relation target="" sidePair="top-top,width-width"/>
     </graph>
     <component id="n4_qvmf" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1102,12" size="26,26">
+      <gearDisplay controller="ctrlBarType" pages="0"/>
       <relation target="" sidePair="right-right,top-top"/>
       <Button icon="ui://te1gxawoui82cyie5"/>
     </component>
     <component id="n5_qvmf" name="btnToNormal" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1062,17" size="26,18">
-      <gearDisplay controller="ctrlWindowState" pages="1"/>
+      <gearDisplay controller="ctrlBarType" pages="0"/>
       <relation target="" sidePair="right-right,top-top"/>
       <Button icon="ui://7tmp5etxqvmf2"/>
     </component>
     <component id="n6_qvmf" name="btnToMax" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1062,17" size="26,18">
-      <gearDisplay controller="ctrlWindowState" pages="0"/>
+      <gearDisplay controller="ctrlBarType" pages="0"/>
       <relation target="" sidePair="top-top,right-right"/>
       <Button icon="ui://7tmp5etxqvmf1"/>
     </component>
@@ -30,6 +38,7 @@
       <relation target="n11_id84" sidePair="top-bottom"/>
     </graph>
     <list id="n9_fp4h" name="lstSelect" xy="143,19" size="850,13" layout="row" colGap="6" defaultItem="ui://7tmp5etxfp4h8" autoItemSize="false" align="center" vAlign="middle" autoClearItems="true">
+      <gearDisplay controller="ctrlBarType" pages="0"/>
       <relation target="" sidePair="top-top,center-center"/>
       <item/>
       <item/>
