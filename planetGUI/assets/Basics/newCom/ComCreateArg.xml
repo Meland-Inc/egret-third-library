@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="400,400">
-  <controller name="ctrlArgType" alias="ctrlArgType" pages="0,number,1,boolean,2,text" selected="0"/>
+  <controller name="ctrlArgType" alias="ctrlArgType" pages="0,number,1,boolean,2,text" selected="2"/>
   <displayList>
     <image id="n23_z1hj" name="img_bg" src="oiwytai" fileName="newImg2/img_code_zhezhao_10.png" xy="0,0" size="399,399">
       <relation target="" sidePair="width-width,height-height"/>
@@ -11,13 +11,13 @@
     <text id="n14_q5wk" name="n14" xy="165,200" size="59,24" group="n10_q5wk" fontSize="18" text="布尔型"/>
     <text id="n15_q5wk" name="n15" xy="256,199" size="77,24" group="n10_q5wk" fontSize="18" autoSize="none" text="文本标签&#xA;"/>
     <component id="n17_q5wk" name="n17" src="ot9si3c" fileName="btn/btnTab.xml" pkg="te1gxawo" xy="239,205" size="14,14" group="n10_q5wk">
-      <Button checked="true" icon="ui://rnqj1l77w7botl6" selectedIcon="ui://rnqj1l77w7botl5" controller="ctrlArgType" page="0"/>
+      <Button icon="ui://rnqj1l77w7botl6" selectedIcon="ui://rnqj1l77w7botl5" controller="ctrlArgType" page="2"/>
     </component>
     <component id="n18_q5wk" name="n18" src="ot9si3c" fileName="btn/btnTab.xml" pkg="te1gxawo" xy="148,205" size="14,14" group="n10_q5wk">
       <Button icon="ui://rnqj1l77w7botl6" selectedIcon="ui://rnqj1l77w7botl5" controller="ctrlArgType" page="1"/>
     </component>
     <component id="n19_q5wk" name="n19" src="ot9si3c" fileName="btn/btnTab.xml" pkg="te1gxawo" xy="55,205" size="14,14" group="n10_q5wk">
-      <Button icon="ui://rnqj1l77w7botl5" selectedIcon="ui://rnqj1l77w7botl6" controller="ctrlArgType" page="2"/>
+      <Button checked="true" icon="ui://rnqj1l77w7botl6" selectedIcon="ui://rnqj1l77w7botl5" controller="ctrlArgType" page="0"/>
     </component>
     <group id="n10_q5wk" name="n10" xy="55,199" size="278,25" group="n24_z1hj"/>
     <text id="n16_q5wk" name="n16" xy="106,94" size="189,37" group="n24_z1hj" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="创建参数"/>

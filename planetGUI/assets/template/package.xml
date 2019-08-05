@@ -18,6 +18,9 @@
     <component id="ui82c" name="WinMapPreview.xml" path="/win/" exported="true"/>
     <component id="ui82d" name="prbUpdate.xml" path="/prb/"/>
     <component id="ui82f" name="ladMapCtnr.xml" path="/com/"/>
+    <component id="mwlig" name="comSelectManorTypeInList.xml" path="/com/"/>
+    <component id="mwlih" name="comSelectManorTypeInCreate.xml" path="/com/"/>
+    <image id="qlmti" name="img_stencil_c_1.png" path="/img/"/>
   </resources>
   <publish name="template"/>
 </packageDescription>
