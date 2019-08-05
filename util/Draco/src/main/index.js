@@ -19,35 +19,6 @@ const winURL = process.env.NODE_ENV === 'development'
   : `file://${__dirname}/index.html`
 
 let template = [{
-  label: '编辑',
-  submenu: [{
-    label: '撤销',
-    accelerator: 'CmdOrCtrl+Z',
-    role: 'undo'
-  }, {
-    label: '重做',
-    accelerator: 'Shift+CmdOrCtrl+Z',
-    role: 'redo'
-  }, {
-    type: 'separator'
-  }, {
-    label: '剪切',
-    accelerator: 'CmdOrCtrl+X',
-    role: 'cut'
-  }, {
-    label: '复制',
-    accelerator: 'CmdOrCtrl+C',
-    role: 'copy'
-  }, {
-    label: '粘贴',
-    accelerator: 'CmdOrCtrl+V',
-    role: 'paste'
-  }, {
-    label: '全选',
-    accelerator: 'CmdOrCtrl+A',
-    role: 'selectall'
-  }]
-}, {
   label: '查看',
   submenu: [{
     label: '重载',
@@ -105,17 +76,19 @@ let template = [{
     label: '关闭',
     accelerator: 'CmdOrCtrl+W',
     role: 'close'
-  }, {
-    type: 'separator'
-  }, {
-    label: '重新打开窗口',
-    accelerator: 'CmdOrCtrl+Shift+T',
-    enabled: false,
-    key: 'reopenMenuItem',
-    click: () => {
-      app.emit('activate')
-    }
-  }]
+  }
+    // , {
+    // type: 'separator'
+    // }, {
+    //   label: '重新打开窗口',
+    //   accelerator: 'CmdOrCtrl+Shift+T',
+    //   enabled: false,
+    //   key: 'reopenMenuItem',
+    //   click: () => {
+    //     app.emit('activate')
+    // }
+    // }
+  ]
 }, {
   label: '帮助',
   role: 'help',

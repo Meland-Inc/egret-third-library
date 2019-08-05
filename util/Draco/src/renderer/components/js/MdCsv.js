@@ -192,6 +192,9 @@ class ${name}Cell {`
     let funcContent = `
 
     public static is(data: Object): boolean {
+        if(!data){
+            return false;
+        }
         if (`
 
     let endContent = `
