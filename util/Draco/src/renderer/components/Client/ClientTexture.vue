@@ -56,6 +56,14 @@
           <mu-col span="12" lg="2" sm="2">
             <mu-radio :value="true" v-model="sheetMode" label="图集模式"></mu-radio>
           </mu-col>
+          <mu-col span="12">
+            <mu-text-field
+              placeholder="(itemIcon,avatarIcon,ground,floor此选项无效,永远都是图集模式)"
+              :disabled="true"
+              :solo="true"
+              full-width
+            ></mu-text-field>
+          </mu-col>
         </mu-flex>
       </div>
     </mu-container>

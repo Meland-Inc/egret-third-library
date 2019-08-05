@@ -20,10 +20,10 @@ const groupArr = ['preload', 'loading', 'fairyGui', 'fairySound', 'boyAni', 'gir
 
 const groupFile = {
   'common.fui': 'login',
-  'common@atlas0.png': 'login',
-  'common@atlas1.png': 'login',
+  'common_atlas0.png': 'login',
+  'common_atlas1.png': 'login',
   'login.fui': 'login',
-  'login@atlas0.png': 'login'
+  'login_atlas0.png': 'login'
 }
 
 const sheetArr = ['sheet', 'regSheet'];

@@ -36,14 +36,6 @@ var releaseVersion;
 export function getReleaseVersion() { return releaseVersion; }
 export function setReleaseVersion(value) { releaseVersion = value; }
 
-var displayVersion;
-export function getDisplayVersion() { return displayVersion; }
-export function setDisplayVersion(value) { displayVersion = value; }
-
-var versionType;
-export function getVersionType() { return versionType; }
-export function setVersionType(value) { versionType = value; }
-
 var newVersion;
 export function getNewVersion() { return newVersion; }
 export function setNewVersion(value) {
@@ -62,6 +54,10 @@ export function setCheckBoxData(value) { checkBoxData = value; }
 var needCover = true;
 export function setNeedCover(value) { needCover = value; }
 export function getNeedCover() { return needCover; }
+
+var needCompress = false;
+export function setNeedCompress(value) { needCompress = value; }
+export function getNeedCompress() { return needCompress }
 
 var policyObj;
 export async function setPolicyObj(value) {
@@ -83,8 +79,34 @@ export async function getPolicyObj() {
     return policyObj;
 }
 
+var oldVersionList;
+export async function initOldVersionList() {
+    oldVersionList = [];
+    let webDir = await fsExc.readDir(Global.svnPublishPath + "/web/");
+    let reg = /[A-Za-z]_*/g;
+    for (const iterator of webDir) {
+        if (iterator.indexOf("release") != -1) {
+            let version = parseInt(iterator.replace(reg, ""));
+            oldVersionList.push(version);
+        }
+    }
 
-export const versionTypes = ['强制更新', '选择更新', '静态更新'];
+    oldVersionList = oldVersionList.sort((a, b) => {
+        return a - b;
+    });
+
+    if (oldVersionList.length > 0) {
+        oldVersion = oldVersionList[oldVersionList.length - 1];
+    }
+}
+
+export async function getVersionList() {
+    if (!oldVersion) {
+        await initOldVersionList();
+    }
+    return oldVersionList;
+}
+
 
 export async function publishProject() {
     if (!releaseVersion) {
@@ -92,15 +114,15 @@ export async function publishProject() {
         return;
     }
 
-    if (!displayVersion) {
-        Global.snack('请先设置显示版本号');
-        return;
-    }
+    // if (!displayVersion) {
+    //     Global.snack('请先设置显示版本号');
+    //     return;
+    // }
 
-    if (!versionType) {
-        Global.snack('请先选择版本更新类型');
-        return;
-    }
+    // if (!versionType) {
+    //     Global.snack('请先选择版本更新类型');
+    //     return;
+    // }
 
     if (needCover) {
         await checkClearRelease(releaseVersion);
@@ -117,25 +139,26 @@ export async function publishProject() {
     let content = await fsExc.readFile(rawPolicyPath);
     let policyObj = JSON.parse(content);
     policyObj["whiteGameVersion"] = releaseVersion;
-    policyObj["displayVersion"] = displayVersion;
-    policyObj["versionType"] = versionTypes.indexOf(versionType);
+    // policyObj["versionType"] = versionTypes.indexOf(versionType);
     // let content = JSON.stringify({
     //     gameVersion: releaseVersion,
     //     displayVersion: displayVersion,
     //     versionType: versionTypes.indexOf(versionType),
     //     cdnPath: cdnPath
     // });
-    content = JSON.stringify(policyObj);
+    // content = JSON.stringify(policyObj);
 
-    await fsExc.makeDir(Global.projPath + releaseSuffix);
+    // let policyFilePath = `${Global.projPath}/rawResource/policyFile.json`;
 
-    let policyFilePath = Global.projPath + releaseSuffix + releaseVersion + '/policyFile.json';
+    // await fsExc.makeDir(Global.projPath + releaseSuffix);
+    // let releasePolicyPath = Global.projPath + releaseSuffix + releaseVersion + '/policyFile.json';
     try {
-        await fsExc.writeFile(policyFilePath, content);
+        // await fsExc.writeFile(policyFilePath, content);
+        // await fsExc.writeFile(releasePolicyPath, content);
         Global.toast('发布当前项目成功');
         newVersion = releaseVersion;
     } catch (error) {
-        Global.snack('写入版本文件错误', error);
+        Global.snack('发布当前项目错误', error);
     }
 }
 
@@ -203,7 +226,11 @@ export async function mergeVersion() {
 }
 
 async function mergeSingleVersion(newVersion, oldVersion, isRelease) {
-    console.log(`--> start merge version v${oldVersion}s-v${newVersion}s`);
+    if (oldVersion) {
+        console.log(`--> start merge version v${oldVersion}s-v${newVersion}s`);
+    } else {
+        console.log(`--> start generate version v${newVersion}s`);
+    }
     let svnWebRlsPath;
     let svnCdnRlsPath;
     if (isRelease) {
@@ -263,9 +290,9 @@ async function mergeSingleVersion(newVersion, oldVersion, isRelease) {
         // let versionContent = await fsExc.readFile(projNewVersionPath + '/policyFile.json');
         if (svnWebRlsPath) {
             // await fsExc.writeFile(`${svnWebRlsPath}/policyFile.json`, versionContent);
-            await fsExc.copyFile(projNewVersionPath + '/policyFile.json', `${svnWebRlsPath}`)
+            // await fsExc.copyFile(projNewVersionPath + '/policyFile.json', `${svnWebRlsPath}`)
         }
-        await fsExc.copyFile(projNewVersionPath + '/policyFile.json', `${svnWebPatchPath}`)
+        // await fsExc.copyFile(projNewVersionPath + '/policyFile.json', `${svnWebPatchPath}`)
         // await fsExc.writeFile(`${svnWebPatchPath}/policyFile.json`, versionContent);
 
 
@@ -303,6 +330,7 @@ async function mergeSingleVersion(newVersion, oldVersion, isRelease) {
 
             //indie.res.json
             await resFileHandle(indieResSuffix, newVersion, svnCdnRlsPath, svnCdnPatchPath);
+            console.log(`--> merge success version v0s-v${newVersion}s`);
         } else {
             // //default.thm.json
             // let oldThmPath = 'resource/default.thm' + '_v' + oldVersion + '.json';
@@ -319,8 +347,8 @@ async function mergeSingleVersion(newVersion, oldVersion, isRelease) {
 
             //indie.res.json
             await resFileHandle(indieResSuffix, newVersion, svnCdnRlsPath, svnCdnPatchPath, oldVersion, oldSvnCdnRlsPath);
+            console.log(`--> merge success version v${oldVersion}s-v${newVersion}s`);
         }
-        console.log(`--> merge success version v${oldVersion}s-v${newVersion}s`);
     } catch (error) {
         Global.snack(`比较版本 v${oldVersion}s-v${newVersion}s 错误`, error);
     }
@@ -358,7 +386,6 @@ async function copyFileCheckDir(fileName, targetPath, version, fromPath) {
         if (i != fileNameArr.length - 1) {
             checkPath += fileNameArr[i] + '/';
             let filePath = fromPath + '/' + checkPath;
-
             if (await fsExc.exists(filePath)) {
                 if (await fsExc.isDirectory(filePath)) {
                     await fsExc.makeDir(targetPath + '/' + checkPath);
@@ -369,6 +396,12 @@ async function copyFileCheckDir(fileName, targetPath, version, fromPath) {
             }
         }
     }
+
+    // folder = await fsExc.dirname(filePath)
+    // let isExists = await fsExc.exists(folder);
+    // if (!isExists) {
+    //     await fsExc.makeDir(folder);
+    // }
 
     await copyFile(fromPath + '/' + fileName, targetPath + '/' + fileName, version);
 }
@@ -587,7 +620,7 @@ async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, ol
                     //是图集,比较图集配置文件中的图片是否相同
                     let newConfigContent = await fsExc.readFile(projNewVersionPath + '/' + newPath);
                     let newConfigObj = JSON.parse(newConfigContent);
-                    let newFilePath = 'resource/' + fsExc.dirname(newResIterator.url) + '/' + newConfigObj.file;
+                    let newFilePath = `resource/${fsExc.dirname(newResIterator.url)}/${newConfigObj.file}`;
 
                     let oldFilePath = '';
                     if (oldPath) {
@@ -595,9 +628,9 @@ async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, ol
                         let oldConfigPath = oldVersionPath + '/' + oldPath;
                         let oldConfigContent = await fsExc.readFile(oldConfigPath);
                         let oldConfigObj = JSON.parse(oldConfigContent);
-                        oldFilePath = 'resource/' + fsExc.dirname(newResIterator.url) + oldConfigObj.file;
+                        oldFilePath = `resource/${fsExc.dirname(newResIterator.url)}/${oldConfigObj.file}`;
                     } else {
-                        oldFilePath = 'resource/' + fsExc.dirname(newResIterator.url) + newConfigObj.file;
+                        oldFilePath = `resource/${fsExc.dirname(newResIterator.url)}/${newConfigObj.file}`;
                     }
 
                     //判断图集是否相同
@@ -635,7 +668,7 @@ async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, ol
                 let newPath = 'resource/' + iterator.url;
                 let newConfigContent = await fsExc.readFile(projNewVersionPath + '/' + newPath);
                 let newConfigObj = JSON.parse(newConfigContent);
-                let filePath = 'resource/' + fsExc.dirname(iterator.url) + newConfigObj.file;
+                let filePath = `resource/${fsExc.dirname(iterator.url)}/${newConfigObj.file}`;
                 //拷贝图集中的图片
                 if (releasePath) {
                     await copyFileCheckDir(filePath, releasePath, newVersion);
@@ -667,6 +700,7 @@ async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, ol
     await fsExc.writeFile(patchPath + '/' + resUrl, newResContent);
 }
 
+/** 处理图集配置 */
 async function sheetConfigHandle(resFileEqual, releasePath, patchPath, oldPath, newPath, oldVersion, newVersion, sheetUrl, oldVersionPath) {
     if (resFileEqual) {
         //相等

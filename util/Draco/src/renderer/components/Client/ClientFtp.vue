@@ -3,27 +3,39 @@
     <mu-container>
       <div class="button-wrapper">
         <mu-button
-          v-loading="isCreateEntranceLoading"
+          v-loading="isZipVersionLoading"
           data-mu-loading-size="24"
-          color="orange500"
-          @click="onCreateEntrance"
-        >生成入口文件</mu-button>
-        <mu-button
-          v-loading="isModifyPolicyNumLoading"
-          data-mu-loading-size="24"
-          color="orange500"
-          @click="onModifyPolicyFile"
-        >修改策略文件</mu-button>
+          color="pink500"
+          @click="onZipVersion"
+        >压缩游戏版本</mu-button>
         <mu-button
           v-loading="isUploadVersionLoading"
           data-mu-loading-size="24"
-          color="pink500"
+          color="orange500"
           @click="onUploadVersionFile"
         >上传游戏版本</mu-button>
         <mu-button
+          v-loading="isCreatePolicyFileLoading"
+          data-mu-loading-size="24"
+          color="cyan500"
+          @click="onCreatePolicyFile"
+        >生成策略文件</mu-button>
+        <mu-button
+          v-loading="isModifyPolicyNumLoading"
+          data-mu-loading-size="24"
+          color="blue500"
+          @click="onModifyPolicyFile"
+        >修改策略文件</mu-button>
+        <mu-button
+          v-loading="isUploadPolicyLoading"
+          data-mu-loading-size="24"
+          color="purple500"
+          @click="onUploadPolicyFile"
+        >上传策略文件</mu-button>
+        <mu-button
           v-loading="isApplyPolicyNumLoading"
           data-mu-loading-size="24"
-          color="orange500"
+          color="green500"
           @click="onApplyPolicyNum"
         >应用策略版本</mu-button>
         <!-- <mu-button
@@ -48,6 +60,14 @@
           </mu-col>
           <mu-col span="12" lg="2" sm="2">
             <mu-text-field class="text-game" v-model="normalVersion" label="常规游戏版本" label-float/>
+          </mu-col>
+          <mu-col span="12" lg="2" sm="2">
+            <mu-text-field class="text-game" v-model="displayVersion" label="显示版本号" label-float/>
+          </mu-col>
+          <mu-col span="12" lg="2" sm="2">
+            <mu-select label="选择类型" filterable v-model="versionType" label-float full-width>
+              <mu-option v-for="type,index in versionTypes" :key="type" :label="type" :value="type"></mu-option>
+            </mu-select>
           </mu-col>
           <mu-col span="12" lg="2" sm="2">
             <mu-select label="选择渠道号" filterable v-model="channel" label-float full-width>
@@ -75,7 +95,14 @@
             </mu-select>
           </mu-col>
           <mu-col span="12" lg="2" sm="2">
-            <mu-select label="资源服务器" filterable v-model="serverInfo" label-float full-width>
+            <mu-select
+              label="资源服务器"
+              @change="serverInfoChange"
+              filterable
+              v-model="serverInfo"
+              label-float
+              full-width
+            >
               <mu-option
                 v-for="value,index in serverList"
                 :key="value.value"
@@ -100,33 +127,33 @@ import * as mdFtp from "../js/MdFtp.js";
 export default {
   data() {
     return {
+      isZipVersionLoading: false,
       isUploadVersionLoading: false,
-      isCreateEntranceLoading: false,
+      isCreatePolicyFileLoading: false,
       isModifyPolicyNumLoading: false,
+      isUploadPolicyLoading: false,
       isApplyPolicyNumLoading: false,
       policyNum: null,
       gameVersionList: [],
       uploadVersion: null,
       whiteVersion: null,
       normalVersion: null,
+      displayVersion: null,
       serverList: [],
       serverInfo: null,
       releaseList: [],
       patchList: [],
       needPatch: true,
       channelList: [],
-      channel: null
+      channel: null,
+      versionTypes: null,
+      versionType: ""
     };
   },
   watch: {
-    // needPatch: value => {
-    //   if (value) {
-    //     this.gameVersionList = this.patchList;
-    //   } else {
-    //     this.gameVersionList = this.releaseList;
-    //   }
-    //   console.log(this.gameVersionList);
-    // },
+    displayVersion: val => {
+      mdFtp.setDisplayVersion(val);
+    },
     policyNum: value => {
       mdFtp.setPolicyNum(value);
     },
@@ -139,14 +166,21 @@ export default {
     normalVersion: value => {
       mdFtp.setNormalVersion(value);
     },
-    serverInfo: value => {
-      mdFtp.setServerInfo(value);
-    },
     channel: value => {
       mdFtp.setChannel(value);
+    },
+    needPatch: value => {
+      mdFtp.setNeedPatch(value);
+    },
+    versionType: val => {
+      mdFtp.setVersionType(val);
     }
   },
   methods: {
+    serverInfoChange() {
+      mdFtp.setServerInfo(this.serverInfo);
+      this.refreshPolicyNum();
+    },
     needPatchChange() {
       if (this.needPatch) {
         this.gameVersionList = this.patchList;
@@ -157,27 +191,42 @@ export default {
         this.gameVersionList.length - 1
       ];
     },
-    async onCreateEntrance() {
-      this.isCreateEntranceLoading = true;
+    async onZipVersion() {
+      this.isZipVersionLoading = true;
       Global.showRegionLoading();
       try {
-        await mdFtp.createEntrance();
-        this.isCreateEntranceLoading = false;
+        await mdFtp.zipVersion();
+        this.isZipVersionLoading = false;
         Global.hideRegionLoading();
       } catch (error) {
-        this.isCreateEntranceLoading = false;
+        this.isZipVersionLoading = false;
         Global.hideRegionLoading();
       }
     },
-    async onUploadVersionFile() {
+    async onUploadVersionFile(showDialog = true) {
       this.isUploadVersionLoading = true;
       Global.showRegionLoading();
       try {
         await mdFtp.uploadVersionFile();
         this.isUploadVersionLoading = false;
         Global.hideRegionLoading();
+        if (showDialog) {
+          Global.dialog("上传游戏版本成功");
+        }
       } catch (error) {
         this.isUploadVersionLoading = false;
+        Global.hideRegionLoading();
+      }
+    },
+    async onCreatePolicyFile() {
+      this.isCreatePolicyFileLoading = true;
+      Global.showRegionLoading();
+      try {
+        await mdFtp.createPolicyFile();
+        this.isCreatePolicyFileLoading = false;
+        Global.hideRegionLoading();
+      } catch (error) {
+        this.isCreatePolicyFileLoading = false;
         Global.hideRegionLoading();
       }
     },
@@ -190,6 +239,21 @@ export default {
         Global.hideRegionLoading();
       } catch (error) {
         this.isModifyPolicyNumLoading = false;
+        Global.hideRegionLoading();
+      }
+    },
+    async onUploadPolicyFile() {
+      this.isUploadPolicyLoading = true;
+      Global.showRegionLoading();
+      try {
+        await mdFtp.uploadPolicyFile();
+        this.isUploadPolicyLoading = false;
+        Global.hideRegionLoading();
+        if (showDialog) {
+          Global.dialog("上传游戏版本成功");
+        }
+      } catch (error) {
+        this.isUploadPolicyLoading = false;
         Global.hideRegionLoading();
       }
     },
@@ -218,8 +282,14 @@ export default {
     async oneForAll() {
       Global.showLoading();
       try {
+        await this.onZipVersion();
+        await this.onUploadVersionFile(false);
+        await this.onCreatePolicyFile();
+        await this.onModifyPolicyFile();
+        await this.onUploadPolicyFile();
+        await this.onApplyPolicyNum();
         Global.hideLoading();
-        Global.toast("One·for·All Success");
+        Global.dialog("One·for·All Success");
       } catch (error) {
         Global.hideLoading();
         Global.snack("One·for·All Error", error);
@@ -251,22 +321,23 @@ export default {
       });
 
       this.gameVersionList = this.patchList;
-      this.uploadVersion = this.patchList[this.releaseList.length - 1];
+      this.uploadVersion = this.patchList[this.patchList.length - 1];
       let versionInfo = this.uploadVersion.split("-v");
-      this.whiteVersion = this.normalVersion = versionInfo[
+      this.whiteVersion = this.normalVersion = this.displayVersion = versionInfo[
         versionInfo.length - 1
       ].replace(reg, "");
     },
     refreshServerList() {
       this.serverList = mdFtp.serverList;
       this.serverInfo = this.serverList[this.serverList.length - 1];
+      mdFtp.setServerInfo(this.serverInfo);
     },
-    async refreshPolicyList() {
-      let policyListContent = await fsExc.readFile(
-        Global.svnPublishPath + "/policyList.json"
-      );
-      let policyList = JSON.parse(policyListContent).policy;
-      this.policyNum = +policyList[policyList.length - 1] + 1;
+    async refreshPolicyNum() {
+      let value = await mdFtp.checkPolicyNum();
+      let data = JSON.parse(value);
+      if (data.Code == 0) {
+        this.policyNum = +data.Data.Version + 1;
+      }
     },
     async refreshChannelList() {
       this.channelList = mdFtp.channelList;
@@ -276,8 +347,11 @@ export default {
   async mounted() {
     await this.refreshVersionList();
     this.refreshServerList();
-    await this.refreshPolicyList();
     this.refreshChannelList();
+    mdFtp.setNeedPatch(this.needPatch);
+    this.versionTypes = mdFtp.versionTypes;
+    this.versionType = this.versionTypes[0];
+    await this.refreshPolicyNum();
   }
 };
 </script>
