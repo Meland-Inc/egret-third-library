@@ -5,7 +5,7 @@
     <graph id="n1_batc" name="gphBg" xy="0,0" size="1136,640" type="rect" lineSize="0">
       <relation target="" sidePair="width-width,height-height"/>
     </graph>
-    <loader id="n13_batc" name="imgCanvasBg" xy="231,19" size="886,603" url="ui://tcbadh8nbatcw" fill="scaleFree">
+    <loader id="n13_batc" name="ladCanvasBg" xy="231,19" size="886,603" url="ui://tcbadh8nbatcw" fill="scaleFree">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </loader>
     <graph id="n21_ljuf" name="gphDrawingBotBoard" xy="231,19" size="886,561" alpha="0.3" fillColor="#ff66cc33">
@@ -40,13 +40,13 @@
       <Button title="保存" titleFontSize="18" icon="ui://tcbadh8nbatc1"/>
     </component>
     <component id="n12_batc" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="132,582" size="78,28" group="n17_batc">
-      <Button title="退出" icon="ui://tcbadh8nbatc7"/>
+      <Button title="退出" titleFontSize="18" icon="ui://tcbadh8nbatc7"/>
     </component>
     <group id="n17_batc" name="grpBottom" xy="32,544" size="178,66" group="n14_batc" advanced="true" collapsed="true">
       <relation target="" sidePair="bottom-bottom"/>
     </group>
-    <group id="n14_batc" name="grpLeft" xy="20,20" size="202,602"/>
-    <list id="n16_batc" name="lstOperateBtn" xy="1048,63" size="45,164" lineGap="15" defaultItem="ui://tcbadh8nbatc1b">
+    <group id="n14_batc" name="grpLeft" xy="20,20" size="202,602" collapsed="true"/>
+    <list id="n16_batc" name="lstOperateBtn" xy="1048,63" size="44,164" lineGap="15" defaultItem="ui://tcbadh8nbatc1b">
       <relation target="" sidePair="right-right"/>
       <item icon="ui://tcbadh8nbatc2"/>
       <item icon="ui://tcbadh8nbatc3"/>
