@@ -11,6 +11,14 @@ export function setCheckBoxData(value) { checkBoxData = value; }
 
 export const checkBoxValues = ['安卓', '苹果', '微信'];
 
+
+export const androidList = [
+    { name: "business_webview", path: "android_business_webview" },
+    { name: "test_webview", path: "android_test_webview" },
+    { name: "business_runtime", path: "android_business_runtime" },
+    { name: "test_runtime", path: "android_test_runtime" },
+];
+
 export async function getAndroidPaths() {
     let paths = []
     if (await fsExc.exists(Global.androidPath)) {

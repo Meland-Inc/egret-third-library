@@ -1,7 +1,7 @@
 import { ipcRenderer } from 'electron';
 
 export class Global {
-    static currentVersion = "1.9.0 beta6";
+    static currentVersion = "1.9.2 beta7";
     static projPath = localStorage.getItem('client_project_path');
     static projPath = localStorage.getItem('client_project_path');
     static protoPath = localStorage.getItem('client_proto_path');
@@ -59,6 +59,7 @@ export class Global {
     static objectCells = [];
     static variaCells = [];
     static materialCells = [];
+    static objectStateCells = [];
 
     static toast(value) {
         console.log(value);

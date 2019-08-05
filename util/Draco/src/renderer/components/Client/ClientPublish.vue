@@ -38,16 +38,19 @@
             <mu-checkbox v-model="needCover" label="覆盖"></mu-checkbox>
           </mu-col>
           <mu-col span="12" lg="2" sm="2">
-            <mu-text-field class="text-version" v-model="releaseVersion" label="发布版本号" label-float/>
+            <mu-checkbox v-model="needCompress" label="压缩"></mu-checkbox>
           </mu-col>
           <mu-col span="12" lg="2" sm="2">
+            <mu-text-field class="text-version" v-model="releaseVersion" label="发布版本号" label-float />
+          </mu-col>
+          <!-- <mu-col span="12" lg="2" sm="2">
             <mu-text-field class="text-version" v-model="displayVersion" label="显示版本号" label-float/>
           </mu-col>
           <mu-col span="12" lg="2" sm="2">
             <mu-select label="选择类型" filterable v-model="versionType" label-float full-width>
               <mu-option v-for="type,index in versionTypes" :key="type" :label="type" :value="type"></mu-option>
             </mu-select>
-          </mu-col>
+          </mu-col>-->
           <mu-col span="12" lg="2" sm="2">
             <mu-select
               label="旧版本号"
@@ -68,7 +71,7 @@
         </mu-flex>
       </div>
     </mu-container>
-    <mu-divider/>
+    <mu-divider />
     <mu-container>
       <mu-flex class="flex-wrapper" align-items="center">
         <mu-button @click="onOpenWhiteDialog">
@@ -102,8 +105,8 @@
               </mu-button>
             </mu-list-item-action>
           </mu-list-item>
-          <mu-divider/>
-          <br>
+          <mu-divider />
+          <br />
           <mu-list-item>
             <mu-list-item-action>
               <mu-text-field
@@ -151,13 +154,14 @@ export default {
       isCompressPicturesLoading: false,
       isCopyCompressPicLoading: false,
       needCover: mdPublish.getNeedCover(),
+      needCompress: mdPublish.getNeedCompress(),
       oldVersion: "",
       releaseVersion: "",
-      displayVersion: "",
-      whiteVersion: "",
+      // displayVersion: "",
+      // whiteVersion: "",
 
-      versionType: "",
-      versionTypes: mdPublish.versionTypes,
+      // versionType: "",
+      // versionTypes: null,
 
       cdnUrl: "",
       whiteList: [],
@@ -174,40 +178,48 @@ export default {
       mdPublish.setReleaseVersion(val);
       mdPublish.setNewVersion(val);
     },
-    displayVersion: val => {
-      mdPublish.setDisplayVersion(val);
-    },
-    versionType: val => {
-      mdPublish.setVersionType(val);
-    },
+    // displayVersion: val => {
+    //   mdPublish.setDisplayVersion(val);
+    // },
     oldVersion: val => {
       mdPublish.setOldVersion(val);
     },
     needCover: val => {
       mdPublish.setNeedCover(val);
+    },
+    needCompress: val => {
+      mdPublish.setNeedCompress(val);
     }
   },
   methods: {
     async onOldVersionChange() {
-      this.releaseVersion = parseInt(this.oldVersion) + 1 + "";
       if (this.oldVersion != "0") {
-        let releaseDirPath = `${Global.svnPublishPath}/web/release_v${
-          this.oldVersion
-        }s`;
-        let releaseDir = await fsExc.readDir(releaseDirPath);
-        for (const iterator of releaseDir) {
-          if (iterator.indexOf(`policyFile`) != -1) {
-            let policyContent = await fsExc.readFile(
-              releaseDirPath + "/" + iterator
-            );
-            let policyObj = JSON.parse(policyContent);
-            this.displayVersion = policyObj.displayVersion;
-            return;
-          }
-        }
+        // let releaseDirPath = `${Global.svnPublishPath}/web/release_v${
+        //   this.oldVersion
+        // }s`;
+        // if (await fsExc.exists(releaseDirPath)) {
+        //   let releaseDir = await fsExc.readDir(releaseDirPath);
+        //   for (const iterator of releaseDir) {
+        //     if (iterator.indexOf(`policyFile`) != -1) {
+        //       let policyContent = await fsExc.readFile(
+        //         releaseDirPath + "/" + iterator
+        //       );
+        //       let policyObj = JSON.parse(policyContent);
+        //       // this.displayVersion = policyObj.displayVersion;
+        //       return;
+        //     }
+        //   }
+        // } else {
+        //   // this.displayVersion = this.releaseVersion;
 
-        this.oldVersion = "0";
+        this.releaseVersion = (parseInt(this.oldVersion) + 1).toString();
+        return;
       }
+
+      this.oldVersion = "0";
+      this.releaseVersion = (
+        parseInt(this.oldVersionList[this.oldVersionList.length - 1]) + 1
+      ).toString();
     },
     onAddWhite() {
       if (this.addWhite == "") {
@@ -317,9 +329,13 @@ export default {
     async oneForAll() {
       Global.showLoading();
       try {
-        await this.onCompressPicturesClick(false);
+        if (this.needCompress) {
+          await this.onCompressPicturesClick(false);
+        }
         await this.onPublishProjectClick(false);
-        await this.onCopyPicturesClick(false);
+        if (this.needCompress) {
+          await this.onCopyPicturesClick(false);
+        }
         await this.onMergetVersionClick(false);
         Global.hideLoading();
         Global.dialog("One·for·All Success");
@@ -335,7 +351,16 @@ export default {
       let versionList = JSON.parse(versionListContent);
       this.oldVersionList = versionList.versionList;
 
-      this.oldVersion = this.oldVersionList[this.oldVersionList.length - 1];
+      let tempVersion = this.oldVersionList[this.oldVersionList.length - 1];
+      let exists = await fsExc.exists(
+        `${Global.svnPublishPath}/web/release_v${tempVersion}s`
+      );
+      if (!exists) {
+        this.oldVersion = "0";
+      } else {
+        this.oldVersion = tempVersion;
+      }
+
       this.onOldVersionChange();
     },
     async refreshPolicyFile() {
@@ -347,6 +372,9 @@ export default {
   mounted() {
     this.refreshOldVersionList();
     this.refreshPolicyFile();
+
+    // this.versionTypes = mdPublish.versionTypes;
+    // this.versionType = this.versionTypes[0];
   }
 };
 </script>
