@@ -52,7 +52,9 @@
       <item icon="ui://tcbadh8nbatc3"/>
       <item icon="ui://tcbadh8nbatc4"/>
     </list>
-    <graph id="n23_fekj" name="gphMask" xy="0,0" size="1136,640" locked="true" hideByEditor="true" visible="false" type="rect" lineSize="0" lineColor="#00000000" fillColor="#00ffffff"/>
+    <graph id="n23_fekj" name="gphMask" xy="0,0" size="1136,640" locked="true" hideByEditor="true" visible="false" type="rect" lineSize="0" lineColor="#00000000" fillColor="#00ffffff">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </graph>
     <component id="n18_d1ba" name="comAnimEditingArea" src="d1ba1c" fileName="com/ComAnimEditingArea.xml" xy="231,580">
       <relation target="n13_batc" sidePair="width-width,bottom-bottom"/>
     </component>
