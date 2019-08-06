@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkbatc58" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlLeft" pages="0,drawing,1,layer" selected="1"/>
+  <controller name="ctrlLeft" pages="0,drawing,1,layer" selected="0"/>
   <displayList>
     <graph id="n1_batc" name="gphBg" xy="0,0" size="1136,640" type="rect" lineSize="0">
       <relation target="" sidePair="width-width,height-height"/>
@@ -21,10 +21,10 @@
       <relation target="" sidePair="height-height"/>
     </image>
     <component id="n5_batc" name="tbtnDrawing" src="oliri6s" fileName="btn/tbtnScale.xml" pkg="te1gxawo" xy="21,20" size="100,36" group="n14_batc" touchable="false">
-      <Button title="画图" titleColor="#333333" titleFontSize="14" icon="ui://tcbadh8nbatcs" selectedIcon="ui://tcbadh8nbatct" controller="ctrlLeft" page="0"/>
+      <Button checked="true" title="画图" titleColor="#333333" titleFontSize="14" icon="ui://tcbadh8nbatcs" selectedIcon="ui://tcbadh8nbatct" controller="ctrlLeft" page="0"/>
     </component>
     <component id="n6_batc" name="tbtnLayer" src="oliri6s" fileName="btn/tbtnScale.xml" pkg="te1gxawo" xy="121,20" size="100,36" group="n14_batc" touchable="false" grayed="true">
-      <Button checked="true" title="图层" titleColor="#333333" titleFontSize="14" icon="ui://tcbadh8nbatcs" selectedIcon="ui://tcbadh8nbatct" controller="ctrlLeft" page="1"/>
+      <Button title="图层" titleColor="#333333" titleFontSize="14" icon="ui://tcbadh8nbatcs" selectedIcon="ui://tcbadh8nbatct" controller="ctrlLeft" page="1"/>
     </component>
     <list id="n7_batc" name="lstTool" xy="30,76" size="184,82" group="n14_batc" layout="flow_hz" overflow="hidden" lineGap="4" colGap="3" defaultItem="ui://tcbadh8nbatc19">
       <item icon="ui://tcbadh8nbatce" selectedIcon="ui://tcbadh8nbatcf"/>
@@ -52,6 +52,7 @@
       <item icon="ui://tcbadh8nbatc3"/>
       <item icon="ui://tcbadh8nbatc4"/>
     </list>
+    <graph id="n23_fekj" name="gphMask" xy="0,0" size="1136,640" locked="true" hideByEditor="true" visible="false" type="rect" lineSize="0" lineColor="#00000000" fillColor="#00ffffff"/>
     <component id="n18_d1ba" name="comAnimEditingArea" src="d1ba1c" fileName="com/ComAnimEditingArea.xml" xy="231,580">
       <relation target="n13_batc" sidePair="width-width,bottom-bottom"/>
     </component>
