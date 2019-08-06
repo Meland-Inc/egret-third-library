@@ -53,6 +53,11 @@
     <component id="wdtr1e" name="ComPenSetting.xml" path="/com/"/>
     <component id="wdtr1f" name="ComPenColorItem.xml" path="/com/" exported="true"/>
     <component id="wdtr1h" name="sldDrawSize.xml" path="/com/"/>
+    <component id="vdhh1i" name="ComIsometric.xml" path="/com/"/>
+    <image id="vdhh1j" name="img_sket_gc_1.png" path="/img/"/>
+    <image id="vdhh1k" name="img_sket_gc_2.png" path="/img/"/>
+    <image id="vdhh1l" name="img_sket_gc_3.png" path="/img/"/>
+    <image id="vdhh1o" name="img_sket_gc_1.png" path="/com/"/>
   </resources>
   <publish name="drawingPad"/>
 </packageDescription>
