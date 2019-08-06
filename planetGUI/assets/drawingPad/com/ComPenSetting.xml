@@ -25,7 +25,7 @@
       <item/>
       <item/>
     </list>
-    <text id="n6_wdtr" name="tfFontSize" xy="144,176" size="57,20" input="true" maxLength="3" restrict="0-9" keyboardType="4" fontSize="14" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" text="56"/>
+    <text id="n6_wdtr" name="tfFontSize" xy="144,176" size="57,20" input="true" restrict="0-9" keyboardType="4" fontSize="14" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" text="56"/>
     <component id="n7_wdtr" name="sldFontSize" src="wdtr1h" fileName="com/sldDrawSize.xml" xy="74,206">
       <Slider value="50" max="100"/>
     </component>
