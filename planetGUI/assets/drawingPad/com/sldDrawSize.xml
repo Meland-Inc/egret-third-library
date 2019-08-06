@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="128,14" extention="Slider">
+  <displayList>
+    <image id="n0_wdtr" name="n0" src="batco" fileName="img/img_sket_hbdx_5.png" xy="0,5" size="128,4">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <graph id="n4_wdtr" name="bar" xy="0,5" size="128,4" hideByEditor="true" visible="false" type="rect">
+      <relation target="" sidePair="rightext-right"/>
+    </graph>
+    <component id="n2_wdtr" name="grip" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="120,0" size="14,14">
+      <relation target="n4_wdtr" sidePair="right-right"/>
+      <Button icon="ui://tcbadh8nbatcp"/>
+    </component>
+  </displayList>
+  <Slider/>
+</component>

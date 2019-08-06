@@ -21,7 +21,7 @@
     <image id="batch" name="icon_sket_yqt_2.png" path="/img/"/>
     <image id="batci" name="icon_sket_zx_1.png" path="/img/"/>
     <image id="batcj" name="icon_sket_zx_2.png" path="/img/"/>
-    <image id="batck" name="img_sket_hbdx_1.png" path="/img/"/>
+    <image id="batck" name="img_sket_hbdx_1.png" path="/img/" scale="9grid" scale9grid="15,15,30,30"/>
     <image id="batcl" name="img_sket_hbdx_2.png" path="/img/"/>
     <image id="batcm" name="img_sket_hbdx_3.png" path="/img/"/>
     <image id="batcn" name="img_sket_hbdx_4.png" path="/img/"/>
@@ -50,6 +50,9 @@
     <component id="batc1b" name="btnOperate.xml" path="/btn/"/>
     <component id="d1ba1c" name="ComAnimEditingArea.xml" path="/com/"/>
     <component id="d1ba1d" name="btnFrame.xml" path="/btn/"/>
+    <component id="wdtr1e" name="ComPenSetting.xml" path="/com/"/>
+    <component id="wdtr1f" name="ComPenColorItem.xml" path="/com/" exported="true"/>
+    <component id="wdtr1h" name="sldDrawSize.xml" path="/com/"/>
   </resources>
   <publish name="drawingPad"/>
 </packageDescription>

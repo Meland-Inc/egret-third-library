@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkbatc58" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlLeft" pages="0,drawing,1,layer" selected="0"/>
+  <controller name="ctrlTool" pages="0,pen,1,none" selected="0"/>
   <displayList>
     <graph id="n1_batc" name="gphBg" xy="0,0" size="1136,640" type="rect" lineSize="0">
       <relation target="" sidePair="width-width,height-height"/>
@@ -45,14 +46,19 @@
     <group id="n17_batc" name="grpBottom" xy="32,544" size="178,66" group="n14_batc" advanced="true" collapsed="true">
       <relation target="" sidePair="bottom-bottom"/>
     </group>
-    <group id="n14_batc" name="grpLeft" xy="20,20" size="202,602" collapsed="true"/>
+    <component id="n23_wdtr" name="comPenSetting" src="wdtr1e" fileName="com/ComPenSetting.xml" xy="0,0" group="n14_batc">
+      <gearDisplay controller="ctrlTool" pages="0"/>
+    </component>
+    <group id="n14_batc" name="grpLeft" xy="0,0" size="222,622" collapsed="true"/>
     <list id="n16_batc" name="lstOperateBtn" xy="1048,63" size="44,164" lineGap="15" defaultItem="ui://tcbadh8nbatc1b">
       <relation target="" sidePair="right-right"/>
       <item icon="ui://tcbadh8nbatc2"/>
       <item icon="ui://tcbadh8nbatc3"/>
       <item icon="ui://tcbadh8nbatc4"/>
     </list>
-    <graph id="n23_fekj" name="gphMask" xy="0,0" size="1136,640" locked="true" hideByEditor="true" visible="false" type="rect" lineSize="0" lineColor="#00000000" fillColor="#00ffffff"/>
+    <graph id="n23_fekj" name="gphMask" xy="0,0" size="1136,640" locked="true" hideByEditor="true" visible="false" type="rect" lineSize="0" lineColor="#00000000" fillColor="#00ffffff">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </graph>
     <component id="n18_d1ba" name="comAnimEditingArea" src="d1ba1c" fileName="com/ComAnimEditingArea.xml" xy="231,580">
       <relation target="n13_batc" sidePair="width-width,bottom-bottom"/>
     </component>
