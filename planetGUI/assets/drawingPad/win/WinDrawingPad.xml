@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkbatc58" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlLeft" pages="0,drawing,1,layer" selected="0"/>
-  <controller name="ctrlTool" pages="0,pen,1,none" selected="0"/>
+  <controller name="ctrlTool" pages="0,pen,1,none,2,isometric" selected="2"/>
   <displayList>
     <graph id="n1_batc" name="gphBg" xy="0,0" size="1136,640" type="rect" lineSize="0">
       <relation target="" sidePair="width-width,height-height"/>
@@ -18,6 +18,10 @@
     <graph id="n19_ljuf" name="gphDrawingTopBoard" xy="231,19" size="886,561" type="rect" lineColor="#ffffffff">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </graph>
+    <component id="n24_vdhh" name="comIsometric" src="vdhh1i" fileName="com/ComIsometric.xml" xy="231,19" size="886,561" touchable="false">
+      <gearDisplay controller="ctrlTool" pages="2"/>
+      <relation target="" sidePair="bottomext-bottom,rightext-right"/>
+    </component>
     <image id="n0_batc" name="imgLeftBg" src="batcx" fileName="img/img_sket_zhqy_2.png" xy="20,20" size="202,602" group="n14_batc">
       <relation target="" sidePair="height-height"/>
     </image>
@@ -47,7 +51,7 @@
       <relation target="" sidePair="bottom-bottom"/>
     </group>
     <component id="n23_wdtr" name="comPenSetting" src="wdtr1e" fileName="com/ComPenSetting.xml" xy="0,0" group="n14_batc">
-      <gearDisplay controller="ctrlTool" pages="0"/>
+      <gearDisplay controller="ctrlTool" pages="0,2"/>
     </component>
     <group id="n14_batc" name="grpLeft" xy="0,0" size="222,622" collapsed="true"/>
     <list id="n16_batc" name="lstOperateBtn" xy="1048,63" size="44,164" lineGap="15" defaultItem="ui://tcbadh8nbatc1b">

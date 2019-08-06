@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="500,500" overflow="hidden">
+  <displayList>
+    <graph id="n4_vdhh" name="grpRight" xy="250,250" pivot="0.5,0.5" anchor="true" size="2,1000" group="n7_vdhh" rotation="60" type="rect" lineSize="0" lineColor="#ffb3a36f" fillColor="#ff7ab19f"/>
+    <graph id="n5_vdhh" name="grpLeft" xy="250,250" pivot="0.5,0.5" anchor="true" size="2,1000" group="n7_vdhh" rotation="-60" type="rect" lineSize="0" lineColor="#ffb3a36f" fillColor="#ffada279"/>
+    <graph id="n3_vdhh" name="grpCenter" xy="250,250" pivot="0.5,0.5" anchor="true" size="2,1000" group="n7_vdhh" type="rect" lineSize="0" lineColor="#ffb3a36f" fillColor="#ffb28189"/>
+    <group id="n7_vdhh" name="root" xy="249,-250" size="2,1000" advanced="true">
+      <relation target="n8_vdhh" sidePair="center-center,middle-middle"/>
+    </group>
+    <image id="n8_vdhh" name="imgCenter" src="batc8" fileName="img/icon_sket_gc_1.png" xy="240,239">
+      <relation target="" sidePair="center-center,bottom-top"/>
+    </image>
+  </displayList>
+</component>
