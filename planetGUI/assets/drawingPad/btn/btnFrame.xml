@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="42,42" extention="Button">
-  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <controller name="button" pages="0,up,1,down" selected="1"/>
   <displayList>
-    <loader id="n0_d1ba" name="bigBg" xy="0,0" size="42,42" url="ui://tcbadh8nbatc14" autoSize="true">
+    <loader id="n0_d1ba" name="bigBg" xy="0,0" size="42,42" url="ui://tcbadh8nbatc15" autoSize="true">
       <gearIcon controller="button" pages="1" values="ui://tcbadh8nbatc15" default="ui://tcbadh8nbatc14"/>
     </loader>
-    <loader id="n4_d1ba" name="icon" xy="0,0" size="42,42"/>
-    <loader id="n1_d1ba" name="topBg" xy="0,0" size="12,12" url="ui://tcbadh8nbatc17" autoSize="true">
+    <loader id="n4_d1ba" name="icon" xy="0,0" size="42,42" fill="scaleFree"/>
+    <loader id="n1_d1ba" name="topBg" xy="1,1" size="13,13" url="ui://tcbadh8nbatc16" fill="scaleFree">
       <gearIcon controller="button" pages="0,1" values="ui://tcbadh8nbatc17|ui://tcbadh8nbatc16"/>
+      <relation target="n2_d1ba" sidePair="rightext-right"/>
     </loader>
-    <text id="n2_d1ba" name="title" xy="0,0" size="11,12" fontSize="13" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="1"/>
+    <text id="n2_d1ba" name="title" xy="1,-2" size="12,19" fontSize="13" color="#ffffff" align="center" vAlign="middle" text="1"/>
   </displayList>
   <Button mode="Radio"/>
 </component>
