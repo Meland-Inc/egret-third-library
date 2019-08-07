@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="225,445" overflow="hidden" opaque="false" designImage="ui://i25v0ebkylfh4k" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlStatus" pages="0,strech,1,shrink" selected="0"/>
+  <controller name="ctrlRobotEnable" pages="0,true,1,false" selected="0"/>
   <displayList>
     <component id="n8_wdqf" name="btnSetting" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="176,66" size="50,48">
       <gearXY controller="ctrlStatus" pages="0,1" values="176,66|67,12" tween="true"/>
@@ -18,14 +19,14 @@
     <component id="n18_ylfh" name="btnRecall" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="3,176" size="68,60" group="n20_ylfh">
       <Button icon="ui://5hs1fuejnl0rcyidj"/>
     </component>
-    <image id="n19_ylfh" name="imgTfRecall" src="ylfhcyidp" fileName="img_UI3/lesson/img_main_zt_3.png" xy="17,237" group="n20_ylfh"/>
+    <image id="n19_ylfh" name="imgTfRecall" src="ylfhcyidp" fileName="imgB/img_main_zt_3.png" xy="17,237" group="n20_ylfh"/>
     <group id="n20_ylfh" name="grpBtnRecall" xy="3,176" size="68,78" visible="false" advanced="true" collapsed="true">
       <gearXY controller="ctrlStatus" pages="1" values="3,80" default="3,176" tween="true"/>
     </group>
     <component id="n21_ylfh" name="btnSummon" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="3,176" size="68,60" group="n23_ylfh">
       <Button icon="ui://5hs1fuejnl0rcyidi"/>
     </component>
-    <image id="n22_ylfh" name="imgTfSummon" src="ylfhcyido" fileName="img_UI3/lesson/img_main_zt_2.png" xy="17,239" group="n23_ylfh"/>
+    <image id="n22_ylfh" name="imgTfSummon" src="ylfhcyido" fileName="imgB/img_main_zt_2.png" xy="17,239" group="n23_ylfh"/>
     <group id="n23_ylfh" name="grpBtnSummon" xy="2,176" size="68,78" visible="false" advanced="true" collapsed="true">
       <gearXY controller="ctrlStatus" pages="1" values="2,80" default="2,176" tween="true"/>
     </group>

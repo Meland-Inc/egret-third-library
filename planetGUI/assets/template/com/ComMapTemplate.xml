@@ -15,19 +15,17 @@
     <text id="n97_mwli" name="tfMapWidth" xy="759,156" size="63,21" group="n99_mwli" alpha="0.6" input="true" restrict="0-9" keyboardType="4" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text=""/>
     <text id="n98_mwli" name="tfMapHeight" xy="867,156" size="66,22" group="n99_mwli" alpha="0.6" input="true" restrict="0-9" keyboardType="4" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text=""/>
     <image id="n113_qlmt" name="imgMutil" src="qlmti" fileName="img/img_stencil_c_1.png" xy="839,161" group="n99_mwli"/>
-    <group id="n99_mwli" name="grpMapSizeInCreate" xy="669,153" size="265,29" group="n70_o7or" advanced="true" collapsed="true">
-      <gearXY controller="ctrlView" pages="0,1" values="729,190|669,153"/>
-    </group>
+    <group id="n99_mwli" name="grpMapSizeInCreate" xy="669,153" size="265,29" group="n70_o7or" advanced="true" collapsed="true"/>
     <component id="n47_o7or" name="btnCreateMap" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="678,553" size="106,36" group="n70_o7or">
       <gearDisplay controller="ctrlView" pages="1"/>
-      <Button title="创建" icon="ui://te1gxawom3dicyidb" controller="ctrlView" page="0"/>
+      <Button title="创建" icon="ui://te1gxawom3dicyidb"/>
     </component>
     <component id="n48_o7or" name="btnCancel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="830,552" size="106,37" group="n70_o7or">
       <gearDisplay controller="ctrlView" pages="1"/>
       <Button title="取消" icon="ui://te1gxawom3dicyid9" controller="ctrlView" page="0"/>
     </component>
     <component id="n114_batc" name="comSelectManorTypeInCreate" src="mwlih" fileName="com/comSelectManorTypeInCreate.xml" xy="282,242" group="n70_o7or" controller="ctrlShowHide,1"/>
-    <group id="n70_o7or" name="grpCreate" xy="223,82" size="770,542" advanced="true">
+    <group id="n70_o7or" name="grpCreate" xy="224,82" size="770,542" advanced="true">
       <gearDisplay controller="ctrlView" pages="1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
