@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" overflow="hidden" opaque="false" designImage="ui://i25v0ebkp6jr3h" designImageAlpha="3" adaptationTest="FitSize">
-  <controller name="ctrlMode" pages="0,default,1,delete,2,hide" selected="2"/>
+  <controller name="ctrlMode" pages="0,default,1,delete,2,hide" selected="0"/>
   <displayList>
-    <component id="n45_p6jr" name="spBg" src="p6jr4l" fileName="sp/spMapLookBg.xml" xy="21,20" pivot="0.5,0.5" group="n28_iewq" touchable="false">
-      <relation target="" sidePair="width-width,height-height"/>
-    </component>
     <image id="n44_p6jr" name="imgTitle" src="p6jr4c" fileName="img_UI3/WinMapLook/img_mode_4.png" xy="463,39" group="n28_iewq">
       <gearDisplay controller="ctrlMode" pages="1"/>
       <relation target="" sidePair="center-center"/>
@@ -13,7 +10,6 @@
       <relation target="" sidePair="middle-middle,rightext-right"/>
     </graph>
     <component id="n5_jj3j" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1020,33" size="80,88" group="n28_iewq">
-      <gearDisplay controller="ctrlMode" pages="0,1"/>
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://32ieekgup6jr3q"/>
     </component>
@@ -24,15 +20,15 @@
       <gearDisplay controller="ctrlMode" pages="2"/>
       <relation target="" sidePair="bottom-bottom,right-right"/>
     </component>
-    <component id="n32_o68g" name="btnEnterHide" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="53,50" size="75,61" group="n28_iewq">
+    <component id="n32_o68g" name="btnEnterHide" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="53,50" size="75,61" group="n28_iewq" hideByEditor="true" visible="false">
       <gearDisplay controller="ctrlMode" pages="0"/>
       <Button icon="ui://32ieekgup6jr3r" controller="ctrlMode" page="2"/>
     </component>
-    <component id="n34_o68g" name="btnExitHide" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="53,50" size="75,61" group="n28_iewq">
+    <component id="n34_o68g" name="btnExitHide" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="53,50" size="75,61" group="n28_iewq" hideByEditor="true" visible="false">
       <gearDisplay controller="ctrlMode" pages="2"/>
       <Button icon="ui://32ieekgup6jr3r" controller="ctrlMode" page="0"/>
     </component>
-    <component id="n41_p6jr" name="btnModeChange" src="p6jr4i" fileName="btn/btnModeChange.xml" xy="124,49" group="n28_iewq">
+    <component id="n41_p6jr" name="btnModeChange" src="p6jr4i" fileName="btn/btnModeChange.xml" xy="124,49" group="n28_iewq" hideByEditor="true" visible="false">
       <gearDisplay controller="ctrlMode" pages="0,2"/>
     </component>
     <component id="n43_p6jr" name="btnBackToViewMode" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="447,524" size="180,61" group="n28_iewq">
@@ -54,7 +50,7 @@
     <component id="n18_c8lx" name="comSelectBox" src="c8lx2d" fileName="Com/ComSelectBox.xml" xy="645,316" size="230,230" group="n28_iewq" visible="false">
       <gearDisplay controller="ctrlMode" pages="0,2"/>
     </component>
-    <group id="n28_iewq" name="root" xy="18,20" size="1100,803" advanced="true">
+    <group id="n28_iewq" name="root" xy="18,33" size="1100,790" advanced="true">
       <relation target="" sidePair="left-left,top-top"/>
     </group>
   </displayList>
