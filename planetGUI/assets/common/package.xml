@@ -460,6 +460,13 @@
     <image id="n762cyieo" name="img_cm_jak_1_1.png" path="/imgB/" exported="true" scale="9grid" scale9grid="18,11,136,16"/>
     <image id="n762cyiep" name="img_cm_jak_1_2.png" path="/imgB/" exported="true" scale="9grid" scale9grid="15,9,131,18"/>
     <component id="n762cyieq" name="WinCursor.xml" path="/win/" exported="true"/>
+    <component id="dbgdcyiej" name="CommonForceTip.xml" path="/com/" exported="true"/>
+    <image id="dbgdcyier" name="icon_cm_qbs_1.png" path="/img_UI3/" exported="true"/>
+    <image id="dbgdcyies" name="icon_cm_qbs_2.png" path="/img_UI3/" exported="true"/>
+    <image id="dbgdcyiet" name="icon_cm_qbs_3.png" path="/img_UI3/" exported="true"/>
+    <image id="dbgdcyieu" name="icon_cm_qbs_4.png" path="/img_UI3/" exported="true"/>
+    <image id="dbgdcyiev" name="icon_cm_qbs_5.png" path="/img_UI3/" exported="true"/>
+    <image id="dbgdcyiew" name="icon_cm_qbs_6.png" path="/img_UI3/" exported="true"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>
