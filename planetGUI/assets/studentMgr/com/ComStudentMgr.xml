@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="244,640" opaque="false" designImage="ui://i25v0ebkskn64s" designImageOffsetX="-892" designImageAlpha="0" designImageLayer="1">
+<component size="244,640" opaque="false" designImage="ui://i25v0ebkskn64s" designImageOffsetX="-892" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
   <controller name="ctrlStatus" exported="true" pages="1,show,0,hide" selected="0"/>
+  <controller name="ctrlLockStatus" pages="0,unlock,1,lock" selected="0"/>
   <displayList>
     <loader id="n0_skn6" name="bg" xy="0,0" size="244,640" group="n13_hbdr" url="ui://te1gxawoskn6cyidm" fill="scaleFree">
       <relation target="" sidePair="bottomext-bottom"/>
@@ -33,17 +34,23 @@
       <item/>
       <item/>
     </list>
-    <component id="n11_skn6" name="btnLockAll" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="8,581" size="106,36" group="n13_hbdr">
+    <component id="n11_skn6" name="btnLockAll" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="123,581" size="106,36" group="n13_hbdr">
+      <gearDisplay controller="ctrlLockStatus" pages="0"/>
       <relation target="" sidePair="bottom-bottom"/>
       <Button title="全部锁屏" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
     </component>
-    <component id="n12_skn6" name="btnConsole" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="122,581" size="106,36" group="n13_hbdr" visible="false" touchable="false" grayed="true">
+    <component id="n14_okp9" name="btnUnlockAll" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="123,581" size="106,36" group="n13_hbdr">
+      <gearDisplay controller="ctrlLockStatus" pages="1"/>
+      <relation target="" sidePair="bottom-bottom"/>
+      <Button title="全部解锁" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
+    </component>
+    <component id="n12_skn6" name="btnConsole" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="122,581" size="106,36" group="n13_hbdr" hideByEditor="true" visible="false" touchable="false" grayed="true">
       <relation target="" sidePair="bottom-bottom"/>
       <Button title="控制台" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
     </component>
-    <component id="n14_okp9" name="btnUnlockAll" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="123,581" size="106,36" group="n13_hbdr">
+    <component id="n15_j0dl" name="btnAllSubmit" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="12,581" size="106,36" group="n13_hbdr">
       <relation target="" sidePair="bottom-bottom"/>
-      <Button title="全部解锁" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
+      <Button title="全部提交" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
     </component>
     <group id="n13_hbdr" name="root" xy="0,0" size="244,640" advanced="true">
       <gearXY controller="ctrlStatus" pages="1,0" values="0,0|244,0" tween="true"/>
