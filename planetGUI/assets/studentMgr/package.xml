@@ -5,6 +5,12 @@
     <image id="skn6cyidw" name="icon_main_xsgl_2.png" path="/img/"/>
     <component id="skn60" name="ComStudentItem.xml" path="/com/"/>
     <component id="r737cyidx" name="WinStudentInfo.xml" path="/win/" exported="true"/>
+    <image id="lls7cyidy" name="img_sd_xsxq_1.png" path="/img/" scale="9grid" scale9grid="31,35,62,70"/>
+    <image id="lls7cyidz" name="img_sd_xsxq_2.png" path="/img/"/>
+    <image id="lls7cyie0" name="img_sd_xsxq_3.png" path="/img/"/>
+    <image id="lls7cyie1" name="img_sd_xsxq_4.png" path="/img/"/>
+    <image id="lls7cyie2" name="img_sd_xsxq_5.png" path="/img/"/>
+    <image id="n15scyie3" name="学生详情.png" path="/img/"/>
   </resources>
   <publish name="studentMgr"/>
 </packageDescription>
