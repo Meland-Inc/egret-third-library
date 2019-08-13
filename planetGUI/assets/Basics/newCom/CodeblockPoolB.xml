@@ -1,40 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="375,587" restrictSize="630,0,0,0">
   <controller name="poolType" pages="0,,1,,2," selected="2"/>
-  <controller name="ctrlGameModel" exported="true" pages="0,game,1,lessons,2,creation" selected="0"/>
+  <controller name="ctrlGameModel" exported="true" pages="0,game,1,lessons,2,creation" selected="1"/>
   <displayList>
-    <loader id="n10_dib9" name="imgBG" xy="0,0" size="375,587" url="ui://rnqj1l77tcu2a6" fill="scaleFree">
+    <loader id="n10_dib9" name="imgBG" xy="0,0" size="375,587" url="ui://te1gxawonl0rcyicg" fill="scaleFree">
       <gearIcon controller="ctrlGameModel" pages="1" values="ui://te1gxawonl0rcyicg" default="ui://rnqj1l77tcu2a6"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <component id="n5_t09y" name="normalPool" src="t09yv" fileName="com/VerticalScrollComponent.xml" xy="7,10" size="372,566">
+    <component id="n5_t09y" name="normalPool" src="t09yv" fileName="com/VerticalScrollComponent.xml" xy="7,8" size="372,566">
       <gearDisplay controller="poolType" pages="0"/>
       <relation target="" sidePair="height-height,width-width"/>
     </component>
-    <component id="n12_mkhl" name="variatePool" src="t09yv" fileName="com/VerticalScrollComponent.xml" xy="8,68" size="372,429">
+    <component id="n12_mkhl" name="variatePool" src="t09yv" fileName="com/VerticalScrollComponent.xml" xy="8,68" size="372,429" locked="true" hideByEditor="true" visible="false" touchable="false">
       <gearDisplay controller="poolType" pages="1,2"/>
       <relation target="" sidePair="height-height,width-width"/>
       <relation target="" sidePair="top-top,left-left"/>
-    </component>
-    <component id="n15_mkhl" name="btnSetVariate" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="321,25" size="28,28">
-      <gearDisplay controller="poolType" pages="1"/>
-      <relation target="" sidePair="right-right,top-top"/>
-      <Button icon="ui://rnqj1l77hlththm"/>
-    </component>
-    <component id="n18_nx0y" name="btnUnSetVariate" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="321,25" size="28,28">
-      <gearDisplay controller="poolType" pages="2"/>
-      <relation target="" sidePair="right-right,top-top"/>
-      <Button icon="ui://rnqj1l77tcu29t"/>
-    </component>
-    <component id="n17_hoex" name="btnCreateVariate" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="78,531" size="103,33">
-      <gearDisplay controller="poolType" pages="1,2"/>
-      <relation target="" sidePair="center-center,bottom-bottom"/>
-      <Button title="创建变量" titleColor="#ffffff" titleFontSize="14" icon="ui://te1gxawom3dicyidb"/>
-    </component>
-    <component id="n19_v32m" name="btnCreateList" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="201,531" size="103,33">
-      <gearDisplay controller="poolType" pages="1,2"/>
-      <relation target="" sidePair="center-center,bottom-bottom"/>
-      <Button title="创建列表" titleColor="#ffffff" titleFontSize="14" icon="ui://te1gxawom3dicyidb"/>
     </component>
   </displayList>
 </component>
