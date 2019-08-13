@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="215,44" extention="Button" designImage="ui://i25v0ebkskn64u" designImageOffsetX="-902" designImageOffsetY="-98" designImageAlpha="0">
-  <controller name="button" pages="0,up,1,down,2,over" selected="2"/>
+  <controller name="button" pages="0,up,1,down,2,over" selected="0"/>
   <controller name="ctrlSex" pages="0,male,1,female" selected="0"/>
   <controller name="ctrlLock" pages="0,locked,1,unlocked" selected="0"/>
   <displayList>
-    <loader id="n0_skn6" name="bg" xy="0,0" size="215,44" url="ui://te1gxawoskn6cyidt" fill="scaleFree">
+    <loader id="n0_skn6" name="bg" xy="0,0" size="215,44" url="ui://te1gxawoskn6cyids" fill="scaleFree">
       <gearIcon controller="button" pages="0,1" values="ui://te1gxawoskn6cyids|ui://te1gxawoskn6cyids" default="ui://te1gxawoskn6cyidt"/>
     </loader>
     <image id="n1_skn6" name="imgNumBg" src="skn6cyidu" fileName="imgB/img_cm_xsgl_9.png" pkg="te1gxawo" xy="0,0"/>
@@ -14,9 +14,12 @@
     <loader id="n5_skn6" name="ladSexIcon" xy="139,7" size="10,14" url="ui://te1gxawoskn6cyidp">
       <gearIcon controller="ctrlSex" pages="1" values="ui://te1gxawoskn6cyidq" default="ui://te1gxawoskn6cyidp"/>
     </loader>
-    <loader id="n6_skn6" name="ladLock" xy="175,8" size="20,24" url="ui://te1gxawoskn6cyidw" autoSize="true">
+    <loader id="n6_skn6" name="ladLock" xy="192,8" size="16,19" url="ui://te1gxawoskn6cyidw" autoSize="true">
       <gearIcon controller="ctrlLock" pages="0" values="ui://te1gxawoskn6cyidw" default="ui://te1gxawoskn6cyidv"/>
     </loader>
+    <component id="n8_fs03" name="btnGoToStudent" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="160,7" size="19,20">
+      <Button icon="ui://te1gxawofs03cyiez"/>
+    </component>
   </displayList>
   <Button mode="Radio"/>
 </component>
