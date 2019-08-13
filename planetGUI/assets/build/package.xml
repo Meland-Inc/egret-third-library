@@ -174,6 +174,12 @@
     <image id="mte0t89" name="icon_ide_lb_2.png" path="/img_UI3/b/ide/"/>
     <component id="mte0t8b" name="BtnEntityInfoSelect.xml" path="/btn/" exported="true"/>
     <component id="m4pft8c" name="ToolTipBuildCopy.xml" path="/Com/" exported="true"/>
+    <component id="coont8d" name="WinMapLookB.xml" path="/win/" exported="true"/>
+    <image id="coont8e" name="btn_hid_ms_1.png" path="/img_UI3/b/maplook/"/>
+    <image id="coont8h" name="icon_hid_ms_3.png" path="/img_UI3/b/maplook/" scale="" scale9grid="21,11,42,22"/>
+    <image id="coont8i" name="icon_hid_ms_4.png" path="/img_UI3/b/maplook/"/>
+    <image id="coont8j" name="icon_hid_ms_5.png" path="/img_UI3/b/maplook/"/>
+    <component id="coont8k" name="ComMapScaleViewMapLookB.xml" path="/Com/"/>
   </resources>
   <publish name="build" npot="true"/>
 </packageDescription>

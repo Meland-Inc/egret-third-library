@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkbatc58" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlLeft" pages="0,drawing,1,layer" selected="0"/>
-  <controller name="ctrlTool" pages="0,pen,1,none,2,isometric" selected="2"/>
+  <controller name="ctrlTool" pages="0,pen,1,none,2,isometric" selected="0"/>
   <displayList>
     <graph id="n1_batc" name="gphBg" xy="0,0" size="1136,640" type="rect" lineSize="0">
       <relation target="" sidePair="width-width,height-height"/>
@@ -18,7 +18,7 @@
     <graph id="n19_ljuf" name="gphDrawingTopBoard" xy="231,19" size="886,561" type="rect" lineColor="#ffffffff">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </graph>
-    <component id="n24_vdhh" name="comIsometric" src="vdhh1i" fileName="com/ComIsometric.xml" xy="231,19" size="886,561" touchable="false">
+    <component id="n24_vdhh" name="comIsometricHelpLineCtrn" src="vdhh1i" fileName="com/ComIsometric.xml" xy="231,19" size="886,561" touchable="false">
       <gearDisplay controller="ctrlTool" pages="2"/>
       <relation target="" sidePair="bottomext-bottom,rightext-right"/>
     </component>

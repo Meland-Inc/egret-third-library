@@ -62,8 +62,8 @@
     <component id="n70_k177" name="comShortCut" src="uhu6t7w" fileName="Com/ComBuildShortCut.xml" pkg="32ieekgu" xy="408,496" visible="false">
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </component>
-    <component id="n71_skn6" name="comStudentMgr" src="skn6cyidr" fileName="com/ComStudentMgr.xml" pkg="ct340yhv" xy="892,0" controller="ctrlStatus,0">
-      <relation target="" sidePair="right-right,bottomext-bottom"/>
+    <component id="n71_skn6" name="comStudentMgr" src="skn6cyidr" fileName="com/ComStudentMgr.xml" pkg="ct340yhv" xy="0,0" controller="ctrlStatus,0">
+      <relation target="" sidePair="width-width,height-height"/>
     </component>
     <component id="n40_c994" name="comExperience" src="ncv76r" fileName="win/ComExperience.xml" xy="1082,623">
       <relation target="" sidePair="right-right,bottom-bottom"/>
