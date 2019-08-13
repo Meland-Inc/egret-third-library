@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" opaque="false" designImage="ui://i25v0ebkuvgl3t" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
+<component size="1136,640" opaque="false" designImage="ui://i25v0ebkbb895b" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
+  <controller name="ctrlIsFakeLessonMode" pages="1,no,0,yes" selected="1"/>
   <displayList>
     <component id="n1_muc9" name="comMainJoystick" src="w80ln" fileName="win/ComMainJoystick.xml" xy="865,362" controller="ctrlGameMode,0">
       <relation target="" sidePair="right-right,bottom-bottom"/>
@@ -10,46 +11,35 @@
     <component id="n4_muc9" name="comMainRocker" src="uvgla1" fileName="win/ComMainRocker.xml" xy="70,256">
       <relation target="" sidePair="left-left,bottom-bottom"/>
     </component>
-    <component id="n37_x9um" name="comChat" src="x9um6d" fileName="win/ComMainChatView.xml" xy="3,555">
+    <component id="n37_x9um" name="comChat" src="x9um6d" fileName="win/ComMainChatView.xml" xy="0,552">
+      <gearDisplay controller="ctrlIsFakeLessonMode" pages="0"/>
       <relation target="" sidePair="bottom-bottom"/>
     </component>
-    <component id="n60_ylfh" name="btnUpload" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="988,3" size="59,66" group="n67_ylfh">
+    <component id="n60_ylfh" name="btnUpload" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1060,4" size="59,66" group="n67_ylfh">
       <Button icon="ui://5hs1fuejwq4dcyid1"/>
     </component>
-    <image id="n61_ylfh" name="imgTfUpload" src="ylfhcyidn" fileName="imgB/img_main_zt_1.png" xy="998,69" group="n67_ylfh"/>
-    <group id="n67_ylfh" name="grpBtnUpload" xy="988,3" size="59,83" advanced="true" collapsed="true">
+    <image id="n61_ylfh" name="imgTfUpload" src="ylfhcyidn" fileName="imgB/img_main_zt_1.png" xy="1070,70" group="n67_ylfh"/>
+    <group id="n67_ylfh" name="grpBtnUpload" xy="1060,4" size="59,83" advanced="true" collapsed="true">
       <relation target="" sidePair="right-right"/>
     </group>
-    <component id="n69_t4ko" name="btnFakeIslandBuy" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="757,9" size="59,66" visible="false">
+    <component id="n69_t4ko" name="btnFakeIslandBuy" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="876,9" size="59,66" visible="false">
+      <gearDisplay controller="ctrlIsFakeLessonMode" pages="0"/>
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://5hs1fuejuvgl8n"/>
     </component>
-    <component id="n59_ugid" name="btnResetManor" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1056,7" size="68,60" group="n68_ylfh">
-      <Button icon="ui://5hs1fuejugidcyidm"/>
-    </component>
-    <image id="n62_ylfh" name="imgTfReset" src="ylfhcyidq" fileName="imgB/img_main_zt_4.png" xy="1069,69" group="n68_ylfh"/>
-    <group id="n68_ylfh" name="grpBtnResetManor" xy="1056,7" size="68,79" advanced="true" collapsed="true">
-      <relation target="" sidePair="right-right"/>
-    </group>
-    <component id="n74_hbdr" name="btnLessonPlan" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="917,4" size="59,66" group="n76_hbdr">
-      <Button icon="ui://5hs1fuejskn6cyidv"/>
-    </component>
-    <image id="n75_hbdr" name="imgTfLessonPlan" src="skn6cyidt" fileName="imgB/img_main_zt_5.png" xy="926,69" group="n76_hbdr"/>
-    <group id="n76_hbdr" name="grpBtnLessonPlan" xy="916,3" size="59,83" advanced="true" collapsed="true">
-      <relation target="" sidePair="right-right"/>
-    </group>
-    <component id="n77_hbdr" name="btnShowStudentMgr" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="844,4" size="59,66" group="n79_hbdr">
+    <component id="n77_hbdr" name="btnShowStudentMgr" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="967,4" size="59,66" group="n79_hbdr">
       <Button icon="ui://5hs1fuejskn6cyids" page="1"/>
     </component>
-    <image id="n78_hbdr" name="imgTfStudentMgr" src="skn6cyidu" fileName="imgB/img_main_zt_6.png" xy="834,69" group="n79_hbdr"/>
-    <group id="n79_hbdr" name="grpBtnShowStudentMgr" xy="834,4" size="80,82" advanced="true">
+    <image id="n78_hbdr" name="imgTfStudentMgr" src="skn6cyidu" fileName="imgB/img_main_zt_6.png" xy="956,70" group="n79_hbdr"/>
+    <group id="n79_hbdr" name="grpBtnShowStudentMgr" xy="956,4" size="80,83" advanced="true" collapsed="true">
       <relation target="" sidePair="right-right"/>
     </group>
-    <component id="n82_o7or" name="btnTemplate" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="847,11" size="53,52" group="n84_o7or">
+    <component id="n82_o7or" name="btnTemplate" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="970,11" size="53,52" group="n84_o7or">
       <Button icon="ui://5hs1fuejo7orcyie7"/>
     </component>
-    <image id="n83_o7or" name="imgTfTemplate" src="o7orcyie8" fileName="imgB/img_main_mbcz_1_1.png" xy="833,70" group="n84_o7or"/>
-    <group id="n84_o7or" name="grpBtnTemplate" xy="833,11" size="80,76" visible="false" advanced="true" collapsed="true">
+    <image id="n83_o7or" name="imgTfTemplate" src="o7orcyie8" fileName="imgB/img_main_mbcz_1_1.png" xy="956,70" group="n84_o7or"/>
+    <group id="n84_o7or" name="grpBtnTemplate" xy="956,11" size="80,76" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlIsFakeLessonMode" pages="0"/>
       <relation target="" sidePair="right-right"/>
     </group>
     <component id="n55_omrq" name="btnIde" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="1087,271" size="49,98">
@@ -69,5 +59,8 @@
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
     <component id="n81_u5yf" name="comLeftTopUICtnr" src="wq4dcyid4" fileName="com/ComMainLessonLeftTopUICtnr.xml" xy="0,0"/>
+    <component id="n85_bb89" name="comLessonGuide" src="bb89cyiej" fileName="com/ComLessonGuide.xml" xy="440,0">
+      <relation target="" sidePair="center-center"/>
+    </component>
   </displayList>
 </component>
