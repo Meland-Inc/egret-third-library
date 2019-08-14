@@ -18,7 +18,10 @@
     <graph id="n19_ljuf" name="gphDrawingTopBoard" xy="231,19" size="886,561" type="rect" lineColor="#ffffffff">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </graph>
-    <component id="n24_vdhh" name="comIsometricHelpLineCtrn" src="vdhh1i" fileName="com/ComIsometric.xml" xy="231,19" size="886,561" touchable="false">
+    <component id="n25_mqcq" name="comDrawSelectBoxContainer" src="mqcq2c" fileName="com/ComDrawSelectBoxContainer.xml" xy="231,19" size="886,561" locked="true" hideByEditor="true" touchable="false">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </component>
+    <component id="n24_vdhh" name="comIsometricHelpLineCtnr" src="vdhh1i" fileName="com/ComIsometric.xml" xy="231,19" size="886,561" touchable="false">
       <gearDisplay controller="ctrlTool" pages="2"/>
       <relation target="" sidePair="bottomext-bottom,rightext-right"/>
     </component>

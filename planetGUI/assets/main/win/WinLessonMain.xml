@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkbb895b" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
-  <controller name="ctrlIsFakeLessonMode" pages="1,no,0,yes" selected="0"/>
+  <controller name="ctrlViewStatus" pages="0,student,1,teacher,2,fakeStudent,5,fakeTeacher" selected="0"/>
   <displayList>
     <component id="n1_muc9" name="comMainJoystick" src="w80ln" fileName="win/ComMainJoystick.xml" xy="865,362" controller="ctrlGameMode,0">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
-    <component id="n42_w0g2" name="comMainQuickBuild" src="ndxt83" fileName="win/ComMainQuickBuild.xml" xy="890,355" visible="false">
+    <component id="n42_w0g2" name="comMainQuickBuild" src="ndxt83" fileName="win/ComMainQuickBuild.xml" xy="890,355" hideByEditor="true" visible="false">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
-    <component id="n4_muc9" name="comMainRocker" src="uvgla1" fileName="win/ComMainRocker.xml" xy="70,256">
+    <component id="n4_muc9" name="comMainRocker" src="uvgla1" fileName="win/ComMainRocker.xml" xy="70,256" hideByEditor="true">
       <relation target="" sidePair="left-left,bottom-bottom"/>
     </component>
     <component id="n37_x9um" name="comChat" src="x9um6d" fileName="win/ComMainChatView.xml" xy="0,552">
-      <gearDisplay controller="ctrlIsFakeLessonMode" pages="0"/>
+      <gearDisplay controller="ctrlViewStatus" pages="2,5"/>
       <relation target="" sidePair="bottom-bottom"/>
     </component>
     <component id="n60_ylfh" name="btnUpload" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1060,4" size="59,66" group="n67_ylfh">
@@ -22,24 +22,35 @@
     <group id="n67_ylfh" name="grpBtnUpload" xy="1060,4" size="59,83" advanced="true" collapsed="true">
       <relation target="" sidePair="right-right"/>
     </group>
-    <component id="n69_t4ko" name="btnFakeIslandBuy" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="876,9" size="59,66" visible="false">
-      <gearDisplay controller="ctrlIsFakeLessonMode" pages="0"/>
+    <component id="n69_t4ko" name="btnFakeIslandBuy" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="789,10" size="59,66" visible="false">
+      <gearDisplay controller="ctrlViewStatus" pages="2,5"/>
+      <gearXY controller="ctrlViewStatus" pages="2,5" values="889,10|704,10" default="789,10"/>
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://5hs1fuejuvgl8n"/>
     </component>
-    <component id="n77_hbdr" name="btnShowStudentMgr" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="967,4" size="59,66" group="n79_hbdr">
+    <component id="n77_hbdr" name="btnShowStudentMgr" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="877,6" size="59,66" group="n79_hbdr">
       <Button icon="ui://5hs1fuejskn6cyids" page="1"/>
     </component>
-    <image id="n78_hbdr" name="imgTfStudentMgr" src="skn6cyidu" fileName="imgB/img_main_zt_6.png" xy="956,70" group="n79_hbdr"/>
-    <group id="n79_hbdr" name="grpBtnShowStudentMgr" xy="956,4" size="80,83" advanced="true" collapsed="true">
+    <image id="n78_hbdr" name="imgTfStudentMgr" src="skn6cyidu" fileName="imgB/img_main_zt_6.png" xy="866,72" group="n79_hbdr"/>
+    <group id="n79_hbdr" name="grpBtnShowStudentMgr" xy="866,6" size="80,83" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlViewStatus" pages="1,5"/>
       <relation target="" sidePair="right-right"/>
     </group>
-    <component id="n82_o7or" name="btnTemplate" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="970,11" size="53,52" group="n84_o7or">
+    <component id="n86_unom" name="btnTeachPlan" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="967,6" size="59,66" group="n88_unom">
+      <Button icon="ui://5hs1fuejskn6cyidv" page="1"/>
+    </component>
+    <image id="n87_unom" name="imgTfTeachPlan" src="skn6cyidt" fileName="imgB/img_main_zt_5.png" xy="977,71" group="n88_unom"/>
+    <group id="n88_unom" name="grpBtnTeachPlan" xy="967,6" size="59,82" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlViewStatus" pages="1,5"/>
+      <relation target="" sidePair="right-right"/>
+    </group>
+    <component id="n82_o7or" name="btnTemplate" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="871,12" size="53,52" group="n84_o7or">
       <Button icon="ui://5hs1fuejo7orcyie7"/>
     </component>
-    <image id="n83_o7or" name="imgTfTemplate" src="o7orcyie8" fileName="imgB/img_main_mbcz_1_1.png" xy="956,70" group="n84_o7or"/>
-    <group id="n84_o7or" name="grpBtnTemplate" xy="956,11" size="80,76" advanced="true" collapsed="true">
-      <gearDisplay controller="ctrlIsFakeLessonMode" pages="0"/>
+    <image id="n83_o7or" name="imgTfTemplate" src="o7orcyie8" fileName="imgB/img_main_mbcz_1_1.png" xy="857,72" group="n84_o7or"/>
+    <group id="n84_o7or" name="grpBtnTemplate" xy="857,12" size="80,76" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlViewStatus" pages="2,5"/>
+      <gearXY controller="ctrlViewStatus" pages="2,5" values="957,12|775,13" default="857,12"/>
       <relation target="" sidePair="right-right"/>
     </group>
     <component id="n55_omrq" name="btnIde" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="1087,271" size="49,98">
@@ -49,10 +60,10 @@
     <component id="n56_dv92" name="comMainLessonShortcuts" src="v3m6cyie9" fileName="com/ComMainLessonShortcuts.xml" xy="568,561" size="80,79">
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </component>
-    <component id="n70_k177" name="comShortCut" src="uhu6t7w" fileName="Com/ComBuildShortCut.xml" pkg="32ieekgu" xy="463,496" visible="false">
+    <component id="n70_k177" name="comShortCut" src="uhu6t7w" fileName="Com/ComBuildShortCut.xml" pkg="32ieekgu" xy="463,520" visible="false">
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </component>
-    <component id="n71_skn6" name="comStudentMgr" src="skn6cyidr" fileName="com/ComStudentMgr.xml" pkg="ct340yhv" xy="0,0" hideByEditor="true" controller="ctrlStatus,0">
+    <component id="n71_skn6" name="comStudentMgr" src="skn6cyidr" fileName="win/WinStudentMgr.xml" pkg="ct340yhv" xy="0,0" hideByEditor="true" controller="ctrlStatus,0">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
     <component id="n40_c994" name="comExperience" src="ncv76r" fileName="win/ComExperience.xml" xy="1082,623">
@@ -60,6 +71,7 @@
     </component>
     <component id="n81_u5yf" name="comLeftTopUICtnr" src="wq4dcyid4" fileName="com/ComMainLessonLeftTopUICtnr.xml" xy="0,0"/>
     <component id="n85_bb89" name="comLessonGuide" src="bb89cyiej" fileName="com/ComLessonGuide.xml" xy="440,0">
+      <gearDisplay controller="ctrlViewStatus" pages="0,2"/>
       <relation target="" sidePair="center-center"/>
     </component>
   </displayList>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="618,348">
+  <controller name="ctrlStudentStatus" pages="0,unlocked,1,locken" selected="0"/>
+  <displayList>
+    <image id="n8_p84a" name="imgPanelBg" src="lls7cyidy" fileName="img/img_sd_xsxq_1.png" xy="26,0" size="570,348"/>
+    <component id="n9_p84a" name="btnClosePanel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="558,4" size="26,26">
+      <Button icon="ui://te1gxawoui82cyie5"/>
+    </component>
+    <text id="n10_p84a" name="tfTitle" xy="46,2" size="77,29" fontSize="18" color="#ffffff" align="center" vAlign="middle" text="学生详情"/>
+    <text id="n11_p84a" name="tfPlayerName" xy="84,49" size="89,23" fontSize="14" color="#333333" vAlign="middle" text="不听话的小段"/>
+    <text id="n12_p84a" name="tfRealName" xy="84,69" size="65,18" fontSize="10" color="#333333" vAlign="middle" text="东风破南风起"/>
+    <image id="n13_p84a" name="imgHeadIcon" src="lls7cyidz" fileName="img/img_sd_xsxq_2.png" xy="48,51"/>
+    <component id="n14_p84a" name="btnPrevious" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="0,146" size="58,58">
+      <Button icon="ui://te1gxawon15scyiex"/>
+    </component>
+    <component id="n15_p84a" name="btnNext" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="560,143" size="58,58">
+      <Button icon="ui://te1gxawon15scyiey"/>
+    </component>
+    <component id="n16_p84a" name="btnLockUnlock" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="90,284" size="102,33">
+      <gearText controller="ctrlStudentStatus" pages="0" values="锁屏" default="解锁"/>
+      <Button title="锁屏" titleFontSize="18" icon="ui://ct340yhvlls7cyie0"/>
+    </component>
+    <component id="n17_p84a" name="btnGoToStudent" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="229,284" size="162,33">
+      <Button title="传送到学生位置" titleFontSize="18" icon="ui://ct340yhvlls7cyie2"/>
+    </component>
+    <component id="n18_p84a" name="btnSubmit" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="430,284" size="102,33">
+      <Button title="提交" titleFontSize="18" icon="ui://ct340yhvlls7cyie1"/>
+    </component>
+  </displayList>
+</component>
