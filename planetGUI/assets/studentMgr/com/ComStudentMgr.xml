@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://ct340yhvn15scyie3" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
   <controller name="ctrlStatus" exported="true" pages="1,show,0,hide" selected="0"/>
-  <controller name="ctrlLockStatus" pages="0,unlock,1,lock" selected="1"/>
+  <controller name="ctrlLockStatus" pages="0,unlock,1,lock" selected="0"/>
+  <controller name="ctrlStudentStatus" pages="0,locked,1,unlocked" selected="0"/>
   <displayList>
     <loader id="n0_skn6" name="bg" xy="892,0" size="244,640" group="n13_hbdr" url="ui://te1gxawoskn6cyidm" fill="scaleFree">
       <relation target="" sidePair="bottomext-bottom"/>
@@ -52,7 +53,7 @@
       <relation target="" sidePair="bottom-bottom"/>
       <Button title="全部提交" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
     </component>
-    <group id="n13_hbdr" name="root" xy="892,0" size="244,640" advanced="true">
+    <group id="n13_hbdr" name="root" xy="892,0" size="244,640" advanced="true" collapsed="true">
       <gearXY controller="ctrlStatus" pages="1,0" values="892,0|1136,0" tween="true"/>
       <relation target="" sidePair="right-right"/>
     </group>
@@ -71,7 +72,7 @@
       <Button icon="ui://te1gxawon15scyiey"/>
     </component>
     <component id="n27_n15s" name="btnLockUnlock" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="256,439" size="102,33" group="n34_n15s">
-      <gearText controller="ctrlLockStatus" pages="1" values="解锁" default="锁屏"/>
+      <gearText controller="ctrlStudentStatus" pages="0" values="解锁" default="锁屏"/>
       <Button title="解锁" titleFontSize="18" icon="ui://ct340yhvlls7cyie0"/>
     </component>
     <component id="n28_n15s" name="btnGoToStudent" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="395,439" size="162,33" group="n34_n15s">
@@ -80,7 +81,7 @@
     <component id="n29_n15s" name="btnSubmit" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="596,439" size="102,33" group="n34_n15s">
       <Button title="提交" titleFontSize="18" icon="ui://ct340yhvlls7cyie1"/>
     </component>
-    <group id="n34_n15s" name="grpDetailPanel" xy="166,155" size="618,348" advanced="true" collapsed="true">
+    <group id="n34_n15s" name="grpDetailPanel" xy="166,155" size="618,348" visible="false" advanced="true" collapsed="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>
