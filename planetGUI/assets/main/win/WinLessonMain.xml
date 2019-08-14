@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkbb895b" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
-  <controller name="ctrlIsFakeLessonMode" pages="1,no,0,yes" selected="1"/>
+  <controller name="ctrlIsFakeLessonMode" pages="1,no,0,yes" selected="0"/>
   <displayList>
     <component id="n1_muc9" name="comMainJoystick" src="w80ln" fileName="win/ComMainJoystick.xml" xy="865,362" controller="ctrlGameMode,0">
       <relation target="" sidePair="right-right,bottom-bottom"/>
@@ -49,7 +49,7 @@
     <component id="n56_dv92" name="comMainLessonShortcuts" src="v3m6cyie9" fileName="com/ComMainLessonShortcuts.xml" xy="568,561" size="80,79">
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </component>
-    <component id="n70_k177" name="comShortCut" src="uhu6t7w" fileName="Com/ComBuildShortCut.xml" pkg="32ieekgu" xy="408,496" visible="false">
+    <component id="n70_k177" name="comShortCut" src="uhu6t7w" fileName="Com/ComBuildShortCut.xml" pkg="32ieekgu" xy="463,496" visible="false">
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </component>
     <component id="n71_skn6" name="comStudentMgr" src="skn6cyidr" fileName="com/ComStudentMgr.xml" pkg="ct340yhv" xy="0,0" hideByEditor="true" controller="ctrlStatus,0">

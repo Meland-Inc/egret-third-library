@@ -3,7 +3,7 @@
   <controller name="ctrlRightView" pages="1,backpack,2,attr,3,none" selected="0">
     <action type="play_transition" fromPage="" toPage="1" transition="transBpShow"/>
   </controller>
-  <controller name="ctrlOperate" pages="0,none,1,center,2,shortcut" selected="0"/>
+  <controller name="ctrlOperate" pages="0,none,1,center,2,shortcut" selected="2"/>
   <displayList>
     <image id="n0_r0y9" name="n0" src="nl0rcyicf" fileName="imgB/img_cm_dk_1.png" pkg="te1gxawo" xy="613,-1" size="450,642" group="n4_r0y9">
       <relation target="" sidePair="height-height"/>
@@ -103,11 +103,12 @@
       <gearDisplay controller="ctrlOperate" pages="1"/>
       <relation target="" sidePair="bottom-bottom"/>
     </component>
-    <component id="n31_k177" name="comShortCut" src="uhu6t7w" fileName="Com/ComBuildShortCut.xml" xy="284,560">
+    <component id="n31_k177" name="comShortCut" src="uhu6t7w" fileName="Com/ComBuildShortCut.xml" xy="300,594">
       <gearDisplay controller="ctrlOperate" pages="2"/>
-      <relation target="n9_r0y9" sidePair="right-left,bottom-bottom"/>
+      <relation target="" sidePair="bottom-bottom"/>
+      <relation target="n32_jt5f" sidePair="center-center"/>
     </component>
-    <component id="n32_jt5f" name="comSelectScope" src="rx4otjz" fileName="newCom/ComSelectScope.xml" pkg="rnqj1l77" xy="260,7">
+    <component id="n32_jt5f" name="comSelectScope" src="rx4otjz" fileName="newCom/ComSelectScope.xml" pkg="rnqj1l77" xy="315,7">
       <relation target="" sidePair="top-top,left-left%"/>
     </component>
   </displayList>
