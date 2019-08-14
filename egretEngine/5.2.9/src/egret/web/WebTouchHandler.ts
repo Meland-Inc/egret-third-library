@@ -33,7 +33,7 @@ namespace egret.web {
      * @private
      */
     export class WebTouchHandler extends HashObject {
-
+        private _curButton:number;
         /**
          * @private
          */
@@ -151,6 +151,7 @@ namespace egret.web {
         private onTouchBegin = (event: any): void => {
             let location = this.getLocation(event);
             this.touch.onTouchBegin(location.x, location.y, event.identifier, event.button);
+            this._curButton = event.button;
         }
 
         private onMouseMove = (event: MouseEvent) => {
@@ -169,7 +170,7 @@ namespace egret.web {
          */
         private onTouchMove = (event: any): void => {
             let location = this.getLocation(event);
-            this.touch.onTouchMove(location.x, location.y, event.identifier, event.button);
+            this.touch.onTouchMove(location.x, location.y, event.identifier, this._curButton);
 
         }
 
@@ -179,6 +180,9 @@ namespace egret.web {
         private onTouchEnd = (event: any): void => {
             let location = this.getLocation(event);
             this.touch.onTouchEnd(location.x, location.y, event.identifier, event.button);
+            if(this._curButton){
+                this._curButton = undefined;
+            }
         }
 
         //每次帧循环 会支持降帧 在enterFrame之前

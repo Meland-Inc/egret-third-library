@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="255,74" designImage="ui://i25v0ebkbb895b" designImageOffsetX="-440" designImageAlpha="25">
+  <displayList>
+    <image id="n2_bb89" name="imgBg" src="bb89cyiek" fileName="imgB/btn_main_rwl_3.png" xy="0,0" size="255,74">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n3_bb89" name="btnTeachPlan" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="184,11" size="50,52">
+      <relation target="" sidePair="middle-middle,right-right"/>
+      <Button icon="ui://5hs1fuejbb89cyiem"/>
+    </component>
+    <list id="n4_bb89" name="lstLessonGuide" xy="10,3" size="168,70" defaultItem="ui://5hs1fuejbb89cyien" vAlign="middle" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+  <relation target="n4_bb89" sidePair="bottomext-bottom,rightext-right"/>
+</component>

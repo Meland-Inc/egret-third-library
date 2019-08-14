@@ -3087,6 +3087,7 @@ var egret;
                 _this.onTouchBegin = function (event) {
                     var location = _this.getLocation(event);
                     _this.touch.onTouchBegin(location.x, location.y, event.identifier, event.button);
+                    _this._curButton = event.button;
                 };
                 _this.onMouseMove = function (event) {
                     if (event.buttons == 0) {
@@ -3104,7 +3105,7 @@ var egret;
                  */
                 _this.onTouchMove = function (event) {
                     var location = _this.getLocation(event);
-                    _this.touch.onTouchMove(location.x, location.y, event.identifier, event.button);
+                    _this.touch.onTouchMove(location.x, location.y, event.identifier, _this._curButton);
                 };
                 /**
                  * @private
@@ -3112,6 +3113,9 @@ var egret;
                 _this.onTouchEnd = function (event) {
                     var location = _this.getLocation(event);
                     _this.touch.onTouchEnd(location.x, location.y, event.identifier, event.button);
+                    if (_this._curButton) {
+                        _this._curButton = undefined;
+                    }
                 };
                 /**
                  * @private

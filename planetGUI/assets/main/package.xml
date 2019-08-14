@@ -351,6 +351,13 @@
     <component id="pzqfcyieg" name="btnCodeQuestion.xml" path="/com/" exported="true"/>
     <component id="pzqfcyieh" name="btnSelection.xml" path="/com/"/>
     <component id="pzqfcyiei" name="ToolTipCodeQuestion.xml" path="/com/" exported="true"/>
+    <component id="bb89cyiej" name="ComLessonGuide.xml" path="/com/"/>
+    <image id="bb89cyiek" name="btn_main_rwl_3.png" path="/imgB/" scale="9grid" scale9grid="22,19,44,38"/>
+    <image id="bb89cyiel" name="btn_main_rwl_2.png" path="/imgB/"/>
+    <image id="bb89cyiem" name="btn_main_rwl_1.png" path="/imgB/"/>
+    <component id="bb89cyien" name="labLessonGuideItem.xml" path="/com/"/>
+    <image id="fs03cyier" name="btn_main_zsj_2.png" path="/imgB/"/>
+    <image id="fs03cyies" name="btn_main_zsj_1.png" path="/imgB/"/>
   </resources>
   <publish name="main" npot="true"/>
 </packageDescription>
