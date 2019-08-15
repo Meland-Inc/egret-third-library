@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" overflow="hidden" designImage="ui://i25v0ebku1c95d">
+  <controller name="ctrlPojectionType" exported="true" pages="0,grid,1,side,2,noProjection" selected="0"/>
+  <controller name="ctrlProjectionNum" exported="true" pages="0,1,1,2,2,3,3,4,4,5" selected="2"/>
+  <displayList>
+    <component id="n10_pa6b" name="comProjection" src="mvn32i" fileName="com/ComProjection.xml" xy="483,345" controller="ctrlProjectionType,0,ctrlProjectionNum,1"/>
+    <component id="n11_pa6b" name="comCanvasBox" src="u1c92o" fileName="com/ComCanvasBox.xml" xy="480,100" size="63,333" skew="0,-26.5"/>
+  </displayList>
+</component>
