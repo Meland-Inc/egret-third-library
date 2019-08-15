@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkbb895b" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
-  <controller name="ctrlViewStatus" pages="0,student,1,teacher,2,fakeStudent,5,fakeTeacher" selected="2"/>
+  <controller name="ctrlViewStatus" pages="0,student,1,teacher,2,fakeStudent,5,fakeTeacher" selected="0"/>
   <displayList>
     <component id="n1_muc9" name="comMainJoystick" src="w80ln" fileName="win/ComMainJoystick.xml" xy="865,362" controller="ctrlGameMode,0">
       <relation target="" sidePair="right-right,bottom-bottom"/>
@@ -22,7 +22,7 @@
     <group id="n67_ylfh" name="grpBtnUpload" xy="1060,4" size="59,83" advanced="true" collapsed="true">
       <relation target="" sidePair="right-right"/>
     </group>
-    <component id="n69_t4ko" name="btnFakeIslandBuy" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="889,10" size="59,66" visible="false">
+    <component id="n69_t4ko" name="btnFakeIslandBuy" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="789,10" size="59,66" visible="false">
       <gearDisplay controller="ctrlViewStatus" pages="2,5"/>
       <gearXY controller="ctrlViewStatus" pages="2,5" values="889,10|704,10" default="789,10"/>
       <relation target="" sidePair="right-right"/>
@@ -44,11 +44,11 @@
       <gearDisplay controller="ctrlViewStatus" pages="1,5"/>
       <relation target="" sidePair="right-right"/>
     </group>
-    <component id="n82_o7or" name="btnTemplate" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="971,12" size="53,52" group="n84_o7or">
+    <component id="n82_o7or" name="btnTemplate" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="871,12" size="53,52" group="n84_o7or">
       <Button icon="ui://5hs1fuejo7orcyie7"/>
     </component>
-    <image id="n83_o7or" name="imgTfTemplate" src="o7orcyie8" fileName="imgB/img_main_mbcz_1_1.png" xy="957,72" group="n84_o7or"/>
-    <group id="n84_o7or" name="grpBtnTemplate" xy="957,12" size="80,76" advanced="true" collapsed="true">
+    <image id="n83_o7or" name="imgTfTemplate" src="o7orcyie8" fileName="imgB/img_main_mbcz_1_1.png" xy="857,72" group="n84_o7or"/>
+    <group id="n84_o7or" name="grpBtnTemplate" xy="857,12" size="80,76" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlViewStatus" pages="2,5"/>
       <gearXY controller="ctrlViewStatus" pages="2,5" values="957,12|775,13" default="857,12"/>
       <relation target="" sidePair="right-right"/>
@@ -60,7 +60,7 @@
     <component id="n56_dv92" name="comMainLessonShortcuts" src="v3m6cyie9" fileName="com/ComMainLessonShortcuts.xml" xy="568,561" size="80,79">
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </component>
-    <component id="n70_k177" name="comShortCut" src="uhu6t7w" fileName="Com/ComBuildShortCut.xml" pkg="32ieekgu" xy="408,496" visible="false">
+    <component id="n70_k177" name="comShortCut" src="uhu6t7w" fileName="Com/ComBuildShortCut.xml" pkg="32ieekgu" xy="463,520" visible="false">
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </component>
     <component id="n71_skn6" name="comStudentMgr" src="skn6cyidr" fileName="win/WinStudentMgr.xml" pkg="ct340yhv" xy="0,0" hideByEditor="true" controller="ctrlStatus,0">
