@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="145,58">
+  <displayList>
+    <image id="n0_wdtr" name="n0" src="o8md21" fileName="img/img_sket_tck_1.png" xy="0,0" size="144,58"/>
+    <text id="n2_wdtr" name="n2" xy="5,7" size="33,20" fontSize="14" color="#333333" text="高度"/>
+    <image id="n3_wdtr" name="n3" src="batcl" fileName="img/img_sket_hbdx_2.png" xy="77,7"/>
+    <text id="n6_wdtr" name="tfCanvasHeight" xy="77,7" size="57,20" input="true" restrict="0-9" keyboardType="4" fontSize="14" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" text="50"/>
+    <component id="n7_wdtr" name="sldCanvasHeight" src="wdtr1h" fileName="com/sldDrawSize.xml" xy="10,37" size="124,14">
+      <Slider value="50" max="100"/>
+    </component>
+  </displayList>
+</component>

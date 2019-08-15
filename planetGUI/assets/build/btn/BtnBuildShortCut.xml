@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="56,66" extention="Button">
+<component size="42,46" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="1"/>
   <displayList>
-    <image id="n0_uhu6" name="n0" src="uhu6t7x" fileName="img_UI3/b/ide/btn_ide_zm_1.png" xy="4,4"/>
-    <image id="n1_uhu6" name="imgKeySelectBg" src="uhu6t7z" fileName="img_UI3/b/ide/btn_ide_zm_3.png" xy="0,0" pivot="0.5,0.5" size="56,66" alpha="0"/>
-    <image id="n2_uhu6" name="n2" src="uhu6t7y" fileName="img_UI3/b/ide/btn_ide_zm_2.png" xy="4,43" size="48,19"/>
-    <text id="n5_uhu6" name="title" xy="0,43" size="56,20" fontSize="14" color="#161616" align="center" vAlign="middle" autoSize="none" text="R"/>
-    <loader id="n7_uhu6" name="icon" xy="16,15" size="24,21" url="ui://32ieekgur0y9t6i" autoSize="true">
-      <relation target="" sidePair="center-center"/>
+    <loader id="n8_loxg" name="icon" xy="0,4" size="42,42" url="ui://32ieekguuhu6t7x" fill="scaleFree">
+      <gearXY controller="button" pages="1" values="0,4" default="0,0"/>
+      <gearSize controller="button" pages="1" values="42,42,1,1" default="42,46,1,1"/>
     </loader>
+    <image id="n10_loxg" name="n10" src="xvfat85" fileName="img_UI3/b/ide/btn_ide_zm_6.png" xy="0,42">
+      <gearDisplay controller="button" pages="0"/>
+    </image>
   </displayList>
   <Button/>
-  <transition name="spread">
-    <item time="0" type="Alpha" target="n1_uhu6" tween="true" startValue="1" endValue="0" duration="12"/>
-    <item time="0" type="Scale" target="n1_uhu6" tween="true" startValue="1,1" endValue="1.5,1.5" duration="12"/>
-    <item time="13" type="Alpha" target="n1_uhu6" value="0"/>
-    <item time="13" type="Scale" target="n1_uhu6" value="1,1"/>
-  </transition>
 </component>
