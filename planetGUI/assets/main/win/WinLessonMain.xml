@@ -48,7 +48,7 @@
       <Button icon="ui://5hs1fuejo7orcyie7"/>
     </component>
     <image id="n83_o7or" name="imgTfTemplate" src="o7orcyie8" fileName="imgB/img_main_mbcz_1_1.png" xy="957,72" group="n84_o7or"/>
-    <group id="n84_o7or" name="grpBtnTemplate" xy="957,12" size="80,76" advanced="true" collapsed="true">
+    <group id="n84_o7or" name="grpBtnTemplate" xy="957,12" size="80,76" advanced="true">
       <gearDisplay controller="ctrlViewStatus" pages="2,5"/>
       <gearXY controller="ctrlViewStatus" pages="2,5" values="957,12|775,13" default="857,12"/>
       <relation target="" sidePair="right-right"/>
