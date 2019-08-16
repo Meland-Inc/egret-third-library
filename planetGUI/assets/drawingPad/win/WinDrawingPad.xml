@@ -9,16 +9,19 @@
     <loader id="n13_batc" name="ladCanvasBg" xy="231,19" size="886,603" url="ui://tcbadh8nbatcw" fill="scaleFree">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </loader>
+    <component id="n29_u1c9" name="comProjectionDrawing" src="pa6b2k" fileName="com/ComProjectionDrawing.xml" xy="231,19" size="886,561" controller="ctrlPojectionType,0,ctrlProjectionNum,0">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </component>
     <graph id="n21_ljuf" name="gphDrawingBotBoard" xy="231,19" size="886,561" alpha="0.3" fillColor="#ff66cc33">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </graph>
     <graph id="n22_ljuf" name="gphDrawingMidBoard" xy="231,19" size="886,561" alpha="0.6" fillColor="#ff66cc33">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </graph>
-    <graph id="n19_ljuf" name="gphDrawingTopBoard" xy="231,19" size="886,561" type="rect" lineColor="#ffffffff">
+    <graph id="n19_ljuf" name="gphDrawingTopBoard" xy="231,19" size="886,561" hideByEditor="true" type="rect" lineColor="#ffffffff">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </graph>
-    <component id="n25_mqcq" name="comDrawSelectBoxContainer" src="mqcq2c" fileName="com/ComDrawSelectBoxContainer.xml" xy="231,19" size="886,561" locked="true" hideByEditor="true" touchable="false">
+    <component id="n25_mqcq" name="comDrawSelectBoxContainer" src="mqcq2c" fileName="com/ComDrawSelectBoxContainer.xml" xy="231,19" size="886,561" hideByEditor="true" touchable="false">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </component>
     <component id="n24_vdhh" name="comIsometricHelpLineCtnr" src="vdhh1i" fileName="com/ComIsometric.xml" xy="231,19" size="886,561" touchable="false">
@@ -56,7 +59,7 @@
     <component id="n23_wdtr" name="comPenSetting" src="wdtr1e" fileName="com/ComPenSetting.xml" xy="0,0" group="n14_batc">
       <gearDisplay controller="ctrlTool" pages="0,2"/>
     </component>
-    <group id="n14_batc" name="grpLeft" xy="0,0" size="222,622" collapsed="true"/>
+    <group id="n14_batc" name="grpLeft" xy="0,0" size="222,622"/>
     <list id="n16_batc" name="lstOperateBtn" xy="1048,63" size="44,164" lineGap="15" defaultItem="ui://tcbadh8nbatc1b">
       <relation target="" sidePair="right-right"/>
       <item icon="ui://tcbadh8nbatc2"/>
@@ -69,5 +72,21 @@
     <component id="n18_d1ba" name="comAnimEditingArea" src="d1ba1c" fileName="com/ComAnimEditingArea.xml" xy="231,580">
       <relation target="n13_batc" sidePair="width-width,bottom-bottom"/>
     </component>
+    <list id="n26_pa6b" name="lstProjectionBtn" xy="1048,268" size="44,225" lineGap="15" defaultItem="ui://tcbadh8nbatc1b">
+      <relation target="" sidePair="right-right"/>
+      <item icon="ui://tcbadh8no8md1s"/>
+      <item icon="ui://tcbadh8no8md1r"/>
+      <item icon="ui://tcbadh8no8md1q"/>
+      <item icon="ui://tcbadh8no8md1p"/>
+    </list>
+    <component id="n28_pa6b" name="comProjectionSetting" src="pa6b2m" fileName="com/ComProjectionSetting.xml" xy="935,362">
+      <relation target="n26_pa6b" sidePair="right-left,bottom-bottom"/>
+    </component>
+    <component id="n27_pa6b" name="comHeightSetting" src="pa6b2l" fileName="com/ComHeightSetting.xml" xy="881,437">
+      <relation target="n26_pa6b" sidePair="right-left,bottom-bottom"/>
+    </component>
+    <image id="n30_u1c9" name="img" src="o8md20" fileName="img/img_sket_qy_2.png" xy="1056,246">
+      <relation target="" sidePair="right-right"/>
+    </image>
   </displayList>
 </component>

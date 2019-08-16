@@ -18,9 +18,8 @@
     </component>
     <image id="n62_nl0r" name="imgTitileBg" src="nl0rcyice" fileName="imgB/img_cm_db_2.png" pkg="te1gxawo" xy="0,0"/>
     <image id="n63_nl0r" name="imgBagIcon" src="nl0r38" fileName="lessonModeImg/icon_bp_db_4.png" xy="40,13"/>
-    <list id="n24_ey2h" name="lstBagTypeBtn" xy="0,81" size="109,239" lineGap="5" colGap="4" defaultItem="ui://ruc22gntey2h2a">
+    <list id="n24_ey2h" name="lstBagTypeBtn" xy="0,81" size="109,185" lineGap="5" colGap="4" defaultItem="ui://ruc22gntey2h2a">
       <item title="全部" name="all"/>
-      <item title="材料" name="mat"/>
       <item title="消耗品" name="consumables"/>
       <item title="建材" name="buildMat"/>
     </list>

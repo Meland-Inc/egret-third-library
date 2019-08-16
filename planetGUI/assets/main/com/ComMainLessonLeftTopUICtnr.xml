@@ -2,6 +2,7 @@
 <component size="225,445" overflow="hidden" opaque="false" designImage="ui://i25v0ebkbb895b" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlStatus" pages="0,strech,1,shrink" selected="0"/>
   <controller name="ctrlRobotEnable" pages="0,true,1,false" selected="0"/>
+  <controller name="ctrlGodView" pages="0,false,1,true" selected="1"/>
   <displayList>
     <component id="n8_wdqf" name="btnSetting" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="165,67" size="50,48">
       <gearXY controller="ctrlStatus" pages="0,1" values="165,67|76,13" tween="true"/>
@@ -38,9 +39,15 @@
     <group id="n26_fs03" name="grpBtnResetManor" xy="12,270" size="68,79" advanced="true" collapsed="true">
       <gearXY controller="ctrlStatus" pages="0,1" values="12,270|13,173" tween="true"/>
     </group>
-    <component id="n31_fs03" name="btnChangeView" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="11,367" size="73,75">
+    <component id="n31_fs03" name="btnToFreeView" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="11,367" size="73,75">
+      <gearDisplay controller="ctrlGodView" pages="0"/>
       <gearXY controller="ctrlStatus" pages="1" values="11,269" default="11,367" tween="true"/>
       <Button icon="ui://5hs1fuejfs03cyier"/>
+    </component>
+    <component id="n32_qg7t" name="btnToRoleView" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="6,367" size="82,75">
+      <gearDisplay controller="ctrlGodView" pages="1"/>
+      <gearXY controller="ctrlStatus" pages="0,1" values="6,367|6,269" tween="true"/>
+      <Button icon="ui://5hs1fuejfs03cyies"/>
     </component>
   </displayList>
 </component>

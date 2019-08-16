@@ -25,7 +25,7 @@
       <Button title="取消" icon="ui://te1gxawom3dicyid9" controller="ctrlView" page="0"/>
     </component>
     <component id="n114_batc" name="comSelectManorTypeInCreate" src="mwlih" fileName="com/comSelectManorTypeInCreate.xml" xy="282,242" group="n70_o7or" controller="ctrlShowHide,1"/>
-    <group id="n70_o7or" name="grpCreate" xy="224,82" size="770,542" advanced="true">
+    <group id="n70_o7or" name="grpCreate" xy="224,82" size="770,542" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlView" pages="1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
@@ -40,10 +40,6 @@
       <item/>
       <item/>
     </list>
-    <component id="n46_o7or" name="btnAddMapTemplate" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="145,103" size="140,150" group="n90_o7or" visible="false">
-      <gearDisplay controller="ctrlView" pages="0"/>
-      <Button icon="ui://4wr0elnxp3zl2" controller="ctrlView" page="1"/>
-    </component>
     <image id="n73_o7or" name="imgDetailBg" src="f203cyie1" fileName="imgB/img_cm_xxk_1.png" pkg="te1gxawo" xy="836,57" size="300,583" group="n89_o7or">
       <relation target="" sidePair="height-height"/>
     </image>
@@ -69,8 +65,8 @@
     <component id="n110_mwli" name="btnUpdateMap" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1058,215" size="66,40" group="n115_lls7">
       <Button title="更新" titleColor="#ffffff" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
     </component>
-    <component id="n109_mwli" name="comSelectManorTypeInInList" src="mwlig" fileName="com/comSelectManorTypeInList.xml" xy="953,152" group="n115_lls7" locked="true"/>
-    <group id="n115_lls7" name="grpDetailContent" xy="850,78" size="283,520" group="n89_o7or" advanced="true" collapsed="true"/>
+    <component id="n109_mwli" name="comSelectManorTypeInList" src="mwlig" fileName="com/comSelectManorTypeInList.xml" xy="953,152" group="n115_lls7"/>
+    <group id="n115_lls7" name="grpDetailContent" xy="850,78" size="283,520" group="n89_o7or" advanced="true"/>
     <group id="n89_o7or" name="grpDetail" xy="836,57" size="300,583" group="n90_o7or" advanced="true">
       <relation target="" sidePair="right-right"/>
     </group>

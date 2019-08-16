@@ -70,10 +70,10 @@
     <image id="o8md1y" name="icon_sket_ydgj_6.png" path="/img/" exported="true"/>
     <image id="o8md1z" name="img_sket_qy_1.png" path="/img/"/>
     <image id="o8md20" name="img_sket_qy_2.png" path="/img/"/>
-    <image id="o8md21" name="img_sket_tck_1.png" path="/img/"/>
-    <image id="o8md22" name="img_sket_tck_2.png" path="/img/"/>
-    <image id="o8md23" name="img_sket_tck_3.png" path="/img/"/>
-    <image id="o8md24" name="img_sket_tck_4.png" path="/img/"/>
+    <image id="o8md21" name="img_sket_tck_1.png" path="/img/" scale="9grid" scale9grid="18,15,36,30"/>
+    <image id="o8md22" name="img_sket_tck_2.png" path="/img/" scale="9grid" scale9grid="13,8,26,16"/>
+    <image id="o8md23" name="img_sket_tck_3.png" path="/img/" scale="9grid" scale9grid="13,8,26,16"/>
+    <image id="o8md24" name="img_sket_tck_4.png" path="/img/" scale="9grid" scale9grid="13,8,26,16"/>
     <image id="o8md25" name="img_sket_ty_1.png" path="/img/"/>
     <image id="o8md26" name="img_sket_ty_2.png" path="/img/"/>
     <image id="o8md27" name="img_sket_ty_3.png" path="/img/" scale="tile" duplicatePadding="true"/>
@@ -83,9 +83,13 @@
     <image id="o8md2b" name="img_sket_ydgj_3.png" path="/img/" scale="tile" duplicatePadding="true"/>
     <component id="mqcq2c" name="ComDrawSelectBoxContainer.xml" path="/com/"/>
     <component id="mqcq2d" name="ComDrawSelectBox.xml" path="/com/"/>
-    <image id="mqcq2f" name="n1.png" path="/"/>
-    <image id="mqcq2g" name="n3.png" path="/"/>
     <image id="mqcq2h" name="img_sket_ydgj_3_1.png" path="/img/" scale="tile" duplicatePadding="true"/>
+    <component id="mvn32i" name="ComProjection.xml" path="/com/"/>
+    <component id="pa6b2k" name="ComProjectionDrawing.xml" path="/com/"/>
+    <component id="pa6b2l" name="ComHeightSetting.xml" path="/com/"/>
+    <component id="pa6b2m" name="ComProjectionSetting.xml" path="/com/"/>
+    <component id="pa6b2n" name="btnProjection.xml" path="/btn/"/>
+    <component id="u1c92o" name="ComCanvasBox.xml" path="/com/"/>
   </resources>
   <publish name="drawingPad"/>
 </packageDescription>
