@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="113,75" opaque="false">
   <controller name="color" pages="7,Event,0,DeepYellow,1,Red,2,Purple,3,DeepBlue,4,LightBlue,5,DeepGreen,8,LightGreen,9,Pink" selected="0"/>
-  <controller name="isAlone" pages="0,true,1,false" selected="0"/>
+  <controller name="isAlone" pages="0,true,1,false" selected="1"/>
   <displayList>
-    <loader id="n2_h5gv" name="lagBG" xy="0,0" size="113,92" url="ui://rnqj1l77w7botl9" fill="scaleFree">
+    <loader id="n2_h5gv" name="lagBG" xy="0,0" size="113,92" url="ui://rnqj1l77n3oitlp" fill="scaleFree">
       <gearDisplay controller="isAlone" pages="1"/>
-      <gearIcon controller="color" pages="7,0,1,2,3,4,5,8,9" values="ui://rnqj1l77w7botl9|ui://rnqj1l77pwmetlo|ui://rnqj1l77pwmetlo|ui://rnqj1l77pwmetlo|ui://rnqj1l77pwmetlo|ui://rnqj1l77pwmetlo|ui://rnqj1l77pwmetlo|ui://rnqj1l77w7botl9|ui://rnqj1l77pwmetlo"/>
+      <gearIcon controller="color" pages="7,0,1,2,3,4,5,8,9" values="ui://rnqj1l77n3oitlp|ui://rnqj1l77pwmetlo|ui://rnqj1l77pwmetlo|ui://rnqj1l77pwmetlo|ui://rnqj1l77pwmetlo|ui://rnqj1l77pwmetlo|ui://rnqj1l77pwmetlo|ui://rnqj1l77w7botl9|ui://rnqj1l77pwmetlo"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <loader id="n3_yrfu" name="lagAloneBG" xy="0,0" size="113,96" url="ui://rnqj1l77n3oitlp" fill="scaleFree">
+    <loader id="n3_yrfu" name="lagAloneBG" xy="0,0" size="113,96" url="ui://rnqj1l77w7botl9" fill="scaleFree">
       <gearDisplay controller="isAlone" pages="0"/>
-      <gearIcon controller="color" pages="7,8" values="ui://rnqj1l77n3oitlp|ui://rnqj1l77w7botl9" default="ui://rnqj1l77pwmetlo"/>
+      <gearIcon controller="color" pages="7,8" values="ui://rnqj1l77w7botl9|ui://rnqj1l77w7botl9" default="ui://rnqj1l77pwmetlo"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
     <component id="n1_flp7" name="container" src="kesa9" fileName="com/Container.xml" xy="20,19" size="75,69" restrictSize="75,0,69,69"/>
