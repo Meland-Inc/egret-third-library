@@ -21,6 +21,9 @@
     <component id="mwlig" name="comSelectManorTypeInList.xml" path="/com/"/>
     <component id="mwlih" name="comSelectManorTypeInCreate.xml" path="/com/"/>
     <image id="qlmti" name="img_stencil_c_1.png" path="/img/"/>
+    <image id="uic4j" name="img_stencil_jdt_1.png" path="/img/" scale="9grid" scale9grid="10,2,20,4"/>
+    <image id="uic4k" name="img_stencil_jdt_2.png" path="/img/" scale="9grid" scale9grid="10,2,20,4"/>
+    <component id="uic4m" name="pbrLoadMapTemplate.xml" path="/prb/"/>
   </resources>
   <publish name="template"/>
 </packageDescription>
