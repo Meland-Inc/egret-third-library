@@ -6,7 +6,7 @@
       <relation target="" sidePair="width-width,height-height"/>
     </image>
     <loader id="n2_vc6z" name="imgBG" xy="30,94" size="342,197" group="n24_z1hj" url="ui://te1gxawov32mcyie1" fill="scaleFree"/>
-    <text id="n8_q5wk" name="textArgName" xy="59,144" size="287,33" group="n24_z1hj" input="true" prompt="请输入参数名称" fontSize="14" vAlign="bottom" autoSize="none" text=""/>
+    <text id="n8_q5wk" name="textArgName" xy="66,144" size="287,33" group="n24_z1hj" input="true" prompt="请输入参数名称" fontSize="14" vAlign="bottom" leading="0" autoSize="none" singleLine="true" text=""/>
     <component id="n17_q5wk" name="n17" src="ot9si3c" fileName="btn/btnTab.xml" pkg="te1gxawo" xy="239,205" size="14,14" group="n10_q5wk">
       <Button icon="ui://rnqj1l77w7botl6" selectedIcon="ui://rnqj1l77w7botl5" controller="ctrlArgType" page="2"/>
     </component>
