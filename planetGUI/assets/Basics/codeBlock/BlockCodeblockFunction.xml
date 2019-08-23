@@ -3,7 +3,7 @@
   <controller name="color" pages="7,Event,0,DeepYellow,1,Red,2,Purple,3,DeepBlue,4,LightBlue,5,DeepGreen,8,LightGreen,9,Pink" selected="0"/>
   <controller name="isAlone" pages="0,true,1,false" selected="0"/>
   <displayList>
-    <image id="n7_z1hj" name="lagBG" src="w7botl7" fileName="newImg2/img_code_hs_1.png" xy="-58,-32">
+    <image id="n7_z1hj" name="lagBG" src="w7botl7" fileName="newImg2/img_code_hs_1.png" xy="-56,-33">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
     <component id="n1_flp7" name="container" src="kesa9" fileName="com/Container.xml" xy="53,-5" size="57,60" restrictSize="57,0,60,60"/>
