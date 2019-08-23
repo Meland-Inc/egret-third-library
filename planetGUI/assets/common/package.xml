@@ -471,9 +471,10 @@
     <image id="n15scyiey" name="btn_cm_zy_2.png" path="/imgB/" exported="true"/>
     <image id="fs03cyiez" name="icon_cm_xsgl_11.png" path="/imgB/" exported="true"/>
     <image id="loxgcyif0" name="icon_cm_ca_3.png" path="/imgB/" exported="true"/>
-    <image id="s3a3cyif1" name="img_cm_bc_1.png" path="/img_UI3/"/>
-    <image id="s3a3cyif2" name="img_cm_jdt_1.png" path="/img_UI3/"/>
-    <image id="s3a3cyif3" name="img_cm_jdt_2.png" path="/img_UI3/"/>
+    <image id="s3a3cyif1" name="img_cm_bc_1.png" path="/img_UI3/" exported="true"/>
+    <image id="s3a3cyif2" name="img_cm_jdt_1.png" path="/img_UI3/" exported="true" scale="9grid" scale9grid="10,1,20,3"/>
+    <image id="s3a3cyif3" name="img_cm_jdt_2.png" path="/img_UI3/" exported="true" scale="9grid" scale9grid="10,1,20,3"/>
+    <component id="s3a3cyif4" name="barCm3.xml" path="/bar/" exported="true"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>
