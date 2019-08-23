@@ -283,7 +283,7 @@
     <component id="tgdycyi9f" name="ToolTipBagItem.xml" path="/com/" exported="true"/>
     <image id="cxkjcyi9g" name="icon_cm_rename.png" path="/newImg/" exported="true"/>
     <image id="eotbcyi9h" name="img_cm_pointup.png" path="/newImg/" exported="true"/>
-    <image id="mpqgcyi9l" name="img_lineloading_1.png" path="/newImg/"/>
+    <image id="mpqgcyi9l" name="img_lineloading_1.png" path="/newImg/" exported="true"/>
     <component id="o7flcyi9m" name="CommonInfoIcon.xml" path="/com/" exported="true"/>
     <image id="t1mdcyi9n" name="img_status_angry.png" path="/newImg/" exported="true"/>
     <image id="t1mdcyi9o" name="img_status_flee.png" path="/newImg/" exported="true"/>
@@ -471,6 +471,9 @@
     <image id="n15scyiey" name="btn_cm_zy_2.png" path="/imgB/" exported="true"/>
     <image id="fs03cyiez" name="icon_cm_xsgl_11.png" path="/imgB/" exported="true"/>
     <image id="loxgcyif0" name="icon_cm_ca_3.png" path="/imgB/" exported="true"/>
+    <image id="s3a3cyif1" name="img_cm_bc_1.png" path="/img_UI3/"/>
+    <image id="s3a3cyif2" name="img_cm_jdt_1.png" path="/img_UI3/"/>
+    <image id="s3a3cyif3" name="img_cm_jdt_2.png" path="/img_UI3/"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>
