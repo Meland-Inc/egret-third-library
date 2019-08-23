@@ -18,10 +18,13 @@
     </component>
     <image id="n62_nl0r" name="imgTitileBg" src="nl0rcyice" fileName="imgB/img_cm_db_2.png" pkg="te1gxawo" xy="0,0"/>
     <image id="n63_nl0r" name="imgBagIcon" src="nl0r38" fileName="lessonModeImg/icon_bp_db_4.png" xy="40,13"/>
-    <list id="n24_ey2h" name="lstBagTypeBtn" xy="0,81" size="109,185" lineGap="5" colGap="4" defaultItem="ui://ruc22gntey2h2a">
+    <list id="n24_ey2h" name="lstBagTypeBtn" xy="0,81" size="109,357" lineGap="5" colGap="4" defaultItem="ui://ruc22gntey2h2a">
       <item title="全部" name="all"/>
       <item title="消耗品" name="consumables"/>
       <item title="建材" name="buildMat"/>
+      <item title="城堡1" name="castle1"/>
+      <item title="城堡2" name="castle2"/>
+      <item title="城堡3" name="castle3"/>
     </list>
     <text id="n3_ey2h" name="tfTitle" xy="87,15" size="66,29" fontSize="22" color="#ffffff" vAlign="middle" autoSize="none" bold="true" text="背包"/>
     <image id="n67_apfp" name="imgLstItemBg" src="nl0rcyicc" fileName="imgB/img_cm_bg_dk_1.png" pkg="te1gxawo" xy="120,78" size="692,443">
