@@ -5,7 +5,8 @@
       <relation target="" sidePair="width-width,height-height"/>
     </image>
     <component id="n3_bb89" name="btnTeachPlan" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="192,18" size="36,38">
-      <relation target="" sidePair="middle-middle,right-right"/>
+      <relation target="" sidePair="middle-middle"/>
+      <relation target="n4_bb89" sidePair="left-right"/>
       <Button icon="ui://5hs1fuejbb89cyiem"/>
     </component>
     <list id="n4_bb89" name="lstLessonGuide" xy="10,3" size="168,70" defaultItem="ui://5hs1fuejbb89cyien" vAlign="middle" autoClearItems="true">
@@ -14,5 +15,6 @@
       <item/>
     </list>
   </displayList>
-  <relation target="n4_bb89" sidePair="bottomext-bottom,rightext-right"/>
+  <relation target="n4_bb89" sidePair="bottomext-bottom"/>
+  <relation target="n3_bb89" sidePair="rightext-right"/>
 </component>
