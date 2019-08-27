@@ -14,7 +14,7 @@
     <text id="n2_skn6" name="tfNum" xy="0,0" size="21,18" fontSize="10" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="1"/>
     <text id="n3_skn6" name="tfPlayerName" xy="25,1" size="89,23" fontSize="14" color="#ffffff" vAlign="bottom" text="不听话的小段"/>
     <text id="n4_skn6" name="tfRealName" xy="25,21" size="65,18" hideByEditor="true" visible="false" fontSize="10" color="#ffffff" vAlign="bottom" text="东风破南风起"/>
-    <text id="n9_m1ux" name="tfLessonsStatus" xy="25,21" size="35,18" fontSize="10" color="#cccccc" vAlign="bottom" text="关卡中">
+    <text id="n9_m1ux" name="tfLessonsStatus" xy="25,21" size="35,18" alpha="0.5" fontSize="10" color="#ffffff" vAlign="bottom" text="关卡中">
       <gearText controller="ctrlLessonsStatus" pages="0,2" values="未进入|已提交" default="关卡中"/>
     </text>
     <loader id="n5_skn6" name="ladSexIcon" xy="139,7" size="10,14" url="ui://te1gxawoskn6cyidp">

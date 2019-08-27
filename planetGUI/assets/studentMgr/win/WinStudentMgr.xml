@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://ct340yhvn15scyie3" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
   <controller name="ctrlStatus" exported="true" pages="0,hide,1,show" selected="1"/>
-  <controller name="ctrlLockStatus" pages="0,unlock,1,lock" selected="0"/>
   <displayList>
-    <image id="n37_m1ux" name="n37" src="nl0rcyicg" fileName="imgB/img_cm_dk_2.png" pkg="te1gxawo" xy="758,-1" size="68,642" group="n13_hbdr"/>
-    <list id="n38_m1ux" name="n38" xy="768,49" size="60,300" group="n13_hbdr" overflow="scroll" lineGap="4" defaultItem="ui://ct340yhvm1uxcyie8" autoClearItems="true">
+    <image id="n37_m1ux" name="n37" src="nl0rcyicg" fileName="imgB/img_cm_dk_2.png" pkg="te1gxawo" xy="762,-1" size="66,642" group="n13_hbdr"/>
+    <list id="n38_m1ux" name="n38" xy="766,49" size="60,332" group="n13_hbdr" overflow="scroll" lineGap="4" defaultItem="ui://ct340yhvm1uxcyie8" autoClearItems="true">
       <item/>
       <item/>
       <item/>
       <item/>
     </list>
-    <loader id="n0_skn6" name="bg" xy="825,0" size="244,640" group="n13_hbdr" url="ui://te1gxawoskn6cyidm" fill="scaleFree">
+    <loader id="n0_skn6" name="bg" xy="827,0" size="244,640" group="n13_hbdr" url="ui://te1gxawoskn6cyidm" fill="scaleFree">
       <relation target="" sidePair="bottomext-bottom"/>
     </loader>
-    <image id="n1_skn6" name="icon" src="skn6cyidw" fileName="img/icon_main_xsgl_2.png" xy="836,12" group="n13_hbdr"/>
-    <text id="n2_skn6" name="title" xy="878,13" size="77,29" group="n13_hbdr" fontSize="18" color="#ffffff" vAlign="bottom" text="学生管理"/>
-    <component id="n4_skn6" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="780,12" size="33,27" group="n13_hbdr">
+    <image id="n1_skn6" name="icon" src="skn6cyidw" fileName="img/icon_main_xsgl_2.png" xy="838,12" group="n13_hbdr"/>
+    <text id="n2_skn6" name="title" xy="880,13" size="77,29" group="n13_hbdr" fontSize="18" color="#ffffff" vAlign="bottom" text="学生管理"/>
+    <component id="n4_skn6" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="776,13" size="33,27" group="n13_hbdr">
       <Button icon="ui://te1gxawoskn6cyido" controller="ctrlStatus" page="0"/>
     </component>
-    <image id="n5_skn6" name="inputBg" src="skn6cyidn" fileName="imgB/img_cm_xsgl_4.png" pkg="te1gxawo" xy="835,50" size="214,28" group="n13_hbdr"/>
-    <text id="n6_skn6" name="inpSearch" xy="864,53" size="186,23" group="n13_hbdr" input="true" prompt="[size=14]请输入搜索内容[/size]" maxLength="10" fontSize="14" color="#ffffff" vAlign="middle" autoSize="none" singleLine="true" text=""/>
-    <image id="n8_skn6" name="imgSearch" src="skn6cyidr" fileName="imgB/icon_cm_xsgl_5.png" pkg="te1gxawo" xy="845,57" group="n13_hbdr"/>
-    <list id="n10_skn6" name="lstStudent" xy="837,98" size="217,460" group="n13_hbdr" overflow="scroll" lineGap="2" defaultItem="ui://ct340yhvskn60" autoClearItems="true">
+    <image id="n5_skn6" name="inputBg" src="skn6cyidn" fileName="imgB/img_cm_xsgl_4.png" pkg="te1gxawo" xy="837,50" size="214,28" group="n13_hbdr"/>
+    <text id="n6_skn6" name="inpSearch" xy="866,53" size="186,23" group="n13_hbdr" input="true" prompt="[size=14]请输入搜索内容[/size]" maxLength="10" fontSize="14" color="#ffffff" vAlign="middle" autoSize="none" singleLine="true" text=""/>
+    <image id="n8_skn6" name="imgSearch" src="skn6cyidr" fileName="imgB/icon_cm_xsgl_5.png" pkg="te1gxawo" xy="847,57" group="n13_hbdr"/>
+    <list id="n10_skn6" name="lstStudent" xy="839,98" size="217,460" group="n13_hbdr" overflow="scroll" lineGap="2" defaultItem="ui://ct340yhvskn60" autoClearItems="true">
       <relation target="" sidePair="bottomext-bottom"/>
       <item/>
       <item/>
@@ -41,26 +40,24 @@
       <item/>
       <item/>
     </list>
-    <component id="n11_skn6" name="btnLockAll" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="948,581" size="106,36" group="n13_hbdr">
-      <gearDisplay controller="ctrlLockStatus" pages="0"/>
+    <component id="n11_skn6" name="btnLockAll" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="837,576" size="69,28" group="n13_hbdr">
       <relation target="" sidePair="bottom-bottom"/>
-      <Button title="全部锁屏" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
+      <Button title="全部锁屏" titleFontSize="14" icon="ui://te1gxawokuezcyif9"/>
     </component>
-    <component id="n14_okp9" name="btnUnlockAll" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="948,581" size="106,36" group="n13_hbdr">
-      <gearDisplay controller="ctrlLockStatus" pages="1"/>
+    <component id="n14_okp9" name="btnUnlockAll" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="916,577" size="69,28" group="n13_hbdr">
       <relation target="" sidePair="bottom-bottom"/>
-      <Button title="全部解锁" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
+      <Button title="全部解锁" titleFontSize="14" icon="ui://te1gxawokuezcyif9"/>
     </component>
-    <component id="n12_skn6" name="btnConsole" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="947,581" size="106,36" group="n13_hbdr" hideByEditor="true" visible="false" touchable="false" grayed="true">
+    <component id="n12_skn6" name="btnConsole" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="949,581" size="106,36" group="n13_hbdr" hideByEditor="true" visible="false" touchable="false" grayed="true">
       <relation target="" sidePair="bottom-bottom"/>
       <Button title="控制台" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
     </component>
-    <component id="n15_j0dl" name="btnAllSubmit" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="837,581" size="106,36" group="n13_hbdr">
+    <component id="n15_j0dl" name="btnAllSubmit" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="993,576" size="69,28" group="n13_hbdr">
       <relation target="" sidePair="bottom-bottom"/>
-      <Button title="全部提交" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
+      <Button title="全部提交" titleFontSize="14" icon="ui://te1gxawokuezcyif9"/>
     </component>
-    <group id="n13_hbdr" name="root" xy="758,-1" size="311,642" advanced="true">
-      <gearXY controller="ctrlStatus" pages="0,1" values="1069,0|758,-1" tween="true"/>
+    <group id="n13_hbdr" name="root" xy="762,-1" size="309,642" advanced="true">
+      <gearXY controller="ctrlStatus" pages="0,1" values="1071,0|762,-1" tween="true"/>
       <relation target="" sidePair="right-right"/>
     </group>
     <component id="n36_p84a" name="comStudentDetail" src="qg7tcyie4" fileName="com/ComStudentDetail.xml" xy="189,155" visible="false">
