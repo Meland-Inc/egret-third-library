@@ -17,7 +17,7 @@
     <text id="n9_m1ux" name="tfLessonsStatus" xy="25,21" size="35,18" alpha="0.5" fontSize="10" color="#ffffff" vAlign="bottom" text="关卡中">
       <gearText controller="ctrlLessonsStatus" pages="0,2" values="未进入|已提交" default="关卡中"/>
     </text>
-    <loader id="n5_skn6" name="ladSexIcon" xy="139,7" size="10,14" url="ui://te1gxawoskn6cyidp">
+    <loader id="n5_skn6" name="ladSexIcon" xy="139,7" size="10,14" hideByEditor="true" visible="false" url="ui://te1gxawoskn6cyidp">
       <gearIcon controller="ctrlSex" pages="1" values="ui://te1gxawoskn6cyidq" default="ui://te1gxawoskn6cyidp"/>
     </loader>
     <component id="n6_skn6" name="btnLockUnlock" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="190,11" size="16,19">

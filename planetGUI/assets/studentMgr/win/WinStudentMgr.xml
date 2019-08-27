@@ -3,11 +3,11 @@
   <controller name="ctrlStatus" exported="true" pages="0,hide,1,show" selected="1"/>
   <displayList>
     <image id="n37_m1ux" name="n37" src="nl0rcyicg" fileName="imgB/img_cm_dk_2.png" pkg="te1gxawo" xy="762,-1" size="66,642" group="n13_hbdr"/>
-    <list id="n38_m1ux" name="n38" xy="766,49" size="60,332" group="n13_hbdr" overflow="scroll" lineGap="4" defaultItem="ui://ct340yhvm1uxcyie8" autoClearItems="true">
-      <item/>
-      <item/>
-      <item/>
-      <item/>
+    <list id="n38_m1ux" name="lstTag" xy="766,49" size="60,332" group="n13_hbdr" overflow="scroll" lineGap="4" defaultItem="ui://ct340yhvm1uxcyie8">
+      <item title="全部"/>
+      <item title="已提交"/>
+      <item title="关卡中"/>
+      <item title="未进入"/>
     </list>
     <loader id="n0_skn6" name="bg" xy="827,0" size="244,640" group="n13_hbdr" url="ui://te1gxawoskn6cyidm" fill="scaleFree">
       <relation target="" sidePair="bottomext-bottom"/>
