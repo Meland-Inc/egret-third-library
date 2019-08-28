@@ -3,7 +3,7 @@
   <controller name="ctrlRightView" pages="1,backpack,2,attr,3,none" selected="0">
     <action type="play_transition" fromPage="" toPage="1" transition="transBpShow"/>
   </controller>
-  <controller name="ctrlOperate" pages="0,none,1,center,2,shortcut" selected="2"/>
+  <controller name="ctrlOperate" pages="0,none,1,center,2,shortcut" selected="0"/>
   <displayList>
     <image id="n0_r0y9" name="n0" src="nl0rcyicf" fileName="imgB/img_cm_dk_1.png" pkg="te1gxawo" xy="613,-1" size="450,642" group="n4_r0y9">
       <relation target="" sidePair="height-height"/>
@@ -87,6 +87,7 @@
     <image id="n7_r0y9" name="n7" src="r0y9t71" fileName="img_UI3/b/ide/img_ide_ssk_2.png" xy="627,17" group="n4_r0y9"/>
     <text id="n8_r0y9" name="tfSearch" xy="650,13" size="281,24" group="n4_r0y9" input="true" fontSize="14" color="#ffffff" vAlign="middle" autoSize="none" autoClearText="true" text="垃圾"/>
     <component id="n30_m0i3" name="btnClose" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="565,271" size="49,98" group="n4_r0y9">
+      <relation target="" sidePair="middle-middle"/>
       <Button icon="ui://rnqj1l77gg8mtgq" page="0"/>
     </component>
     <component id="n33_unom" name="btnDrawingPad" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="959,12" size="76,32" group="n4_r0y9">
