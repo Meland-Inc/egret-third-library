@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" opaque="false" designImage="ui://i25v0ebkdf6n3k" adaptationTest="FitSize">
+<component size="1136,640" opaque="false" designImage="ui://i25v0ebkdf6n3k" designImageAlpha="0" adaptationTest="FitSize">
   <controller name="ctrlRightView" pages="0,energy,1,backpack,2,attr" selected="1">
     <action type="change_page" fromPage="" toPage="1,2" objectId="n0_qouo" controller="ctrlState" targetPage="2"/>
   </controller>
@@ -25,11 +25,11 @@
       <relation target="" sidePair="height-height"/>
     </image>
     <list id="n22_py50" name="lstBpTabBar" xy="678,16" size="220,40" group="n25_py50" layout="pagination" colGap="17" defaultItem="ui://te1gxawogpm0i4g" autoItemSize="true">
-      <item url="ui://te1gxawooliri6p" icon="ui://te1gxawoqouocyibd" selectedIcon="ui://te1gxawoqouocyibs"/>
-      <item url="ui://te1gxawooliri6p" icon="ui://te1gxawoqouocyibc" selectedIcon="ui://te1gxawoqouocyibr"/>
-      <item url="ui://te1gxawooliri6p" icon="ui://te1gxawoqouocyibb" selectedIcon="ui://te1gxawoqouocyibq"/>
-      <item url="ui://te1gxawooliri6p" icon="ui://te1gxawoqouocyiba" selectedIcon="ui://te1gxawoqouocyibp"/>
-      <item url="ui://te1gxawooliri6p" icon="ui://te1gxawoqouocyibe" selectedIcon="ui://te1gxawoqouocyibt"/>
+      <item url="ui://te1gxawooliri6p" icon="ui://te1gxawoqouocyibd" name="all" selectedIcon="ui://te1gxawoqouocyibs"/>
+      <item url="ui://te1gxawooliri6p" icon="ui://te1gxawoqouocyibc" name="floor" selectedIcon="ui://te1gxawoqouocyibr"/>
+      <item url="ui://te1gxawooliri6p" icon="ui://te1gxawoqouocyibb" name="wall" selectedIcon="ui://te1gxawoqouocyibq"/>
+      <item url="ui://te1gxawooliri6p" icon="ui://te1gxawoqouocyiba" name="func" selectedIcon="ui://te1gxawoqouocyibp"/>
+      <item url="ui://te1gxawooliri6p" icon="ui://te1gxawoqouocyibe" name="puppet" selectedIcon="ui://te1gxawoqouocyibt"/>
     </list>
     <component id="n23_py50" name="n25" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1046,1" size="76,56" group="n25_py50">
       <Button icon="ui://te1gxawoqouocyib7" controller="ctrlRightView" page="0"/>
@@ -87,7 +87,7 @@
     </component>
     <image id="n28_py50" name="n28" src="qouocyibh" fileName="img_UI3/img_cm_tips1.png" pkg="te1gxawo" xy="864,442" group="n50_py50"/>
     <image id="n29_py50" name="n29" src="qouocyibi" fileName="img_UI3/img_cm_warning.png" pkg="te1gxawo" xy="898,457" group="n50_py50"/>
-    <text id="n30_py50" name="n30" xy="925,457" size="125,26" group="n50_py50" fontSize="20" align="center" vAlign="middle" text="源码能源不足"/>
+    <text id="n30_py50" name="n30" xy="925,457" size="125,32" group="n50_py50" fontSize="20" align="center" vAlign="middle" text="源码能源不足"/>
     <group id="n50_py50" name="n50" xy="864,442" size="211,98" group="n31_py50" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlEnergy" pages="1"/>
     </group>

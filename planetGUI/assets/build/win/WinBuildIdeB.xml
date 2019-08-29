@@ -12,15 +12,15 @@
       <relation target="" sidePair="height-height"/>
     </image>
     <list id="n1_r0y9" name="lstBpTabBar" xy="1061,44" size="80,360" group="n4_r0y9" layout="flow_hz" overflow="hidden" colGap="17" defaultItem="ui://32ieekgur0y9t7j" autoItemSize="true">
-      <item title="全部" icon="ui://32ieekguphs5t7t"/>
-      <item title="地板" icon="ui://32ieekgur0y9t6d"/>
-      <item title="墙面" icon="ui://32ieekguphs5t7u"/>
-      <item title="功能" icon="ui://32ieekgur0y9t6e"/>
-      <item title="装饰" icon="ui://32ieekgur0y9t6f"/>
-      <item title="生物" icon="ui://32ieekgur0y9t6b"/>
-      <item title="武器" icon="ui://32ieekgur0y9t6c"/>
-      <item title="植物" icon="ui://32ieekgur0y9t6a"/>
-      <item title="自定义" icon="ui://32ieekguunomt8m"/>
+      <item title="全部" icon="ui://32ieekguphs5t7t" name="all"/>
+      <item title="地板" icon="ui://32ieekgur0y9t6d" name="floor"/>
+      <item title="墙面" icon="ui://32ieekguphs5t7u" name="wall"/>
+      <item title="功能" icon="ui://32ieekgur0y9t6e" name="func"/>
+      <item title="装饰" icon="ui://32ieekgur0y9t6f" name="decoration"/>
+      <item title="生物" icon="ui://32ieekgur0y9t6b" name="puppet"/>
+      <item title="武器" icon="ui://32ieekgur0y9t6c" name="weapon"/>
+      <item title="植物" icon="ui://32ieekgur0y9t6a" name="plant"/>
+      <item title="自定义" icon="ui://32ieekguunomt8m" name="custom"/>
     </list>
     <component id="n2_r0y9" name="btnBpReturn" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1081,10" size="33,27" group="n4_r0y9">
       <Button icon="ui://32ieekgur0y9t60" page="0"/>
