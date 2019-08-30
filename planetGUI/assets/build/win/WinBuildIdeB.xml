@@ -85,7 +85,7 @@
     </list>
     <image id="n6_r0y9" name="n6" src="r0y9t70" fileName="img_UI3/b/ide/img_ide_ssk_1.png" xy="620,10" size="321,28" group="n4_r0y9"/>
     <image id="n7_r0y9" name="n7" src="r0y9t71" fileName="img_UI3/b/ide/img_ide_ssk_2.png" xy="627,17" group="n4_r0y9"/>
-    <text id="n8_r0y9" name="tfSearch" xy="650,13" size="281,24" group="n4_r0y9" input="true" fontSize="14" color="#ffffff" vAlign="middle" autoSize="none" autoClearText="true" text="垃圾"/>
+    <text id="n8_r0y9" name="tfSearch" xy="650,13" size="281,24" group="n4_r0y9" input="true" fontSize="14" color="#ffffff" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="垃圾"/>
     <component id="n30_m0i3" name="btnClose" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="565,271" size="49,98" group="n4_r0y9">
       <relation target="" sidePair="middle-middle"/>
       <Button icon="ui://rnqj1l77gg8mtgq" page="0"/>
