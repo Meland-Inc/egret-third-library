@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="215,44" extention="Button" designImage="ui://i25v0ebkskn64u" designImageOffsetX="-902" designImageOffsetY="-98" designImageAlpha="0">
-  <controller name="button" pages="0,up,1,down,2,over" selected="0"/>
+  <controller name="button" pages="0,up,1,down,2,over" selected="2"/>
   <controller name="ctrlSex" pages="0,male,1,female" selected="0"/>
   <controller name="ctrlLock" pages="0,locked,1,unlocked" selected="0"/>
   <controller name="ctrlLessonsStatus" pages="1,going,0,notEnter,2,finished" selected="0"/>
+  <controller name="ctrlCanTransfer" pages="0,true,1,false" selected="0"/>
   <displayList>
-    <loader id="n0_skn6" name="bg" xy="0,0" size="215,44" url="ui://te1gxawoskn6cyids" fill="scaleFree">
-      <gearIcon controller="button" pages="0,1" values="ui://te1gxawoskn6cyids|ui://te1gxawoskn6cyids" default="ui://te1gxawoskn6cyidt"/>
+    <loader id="n0_skn6" name="bg" xy="0,0" size="215,44" url="ui://te1gxawoskn6cyidt" fill="scaleFree">
+      <gearIcon controller="button" pages="0" values="ui://te1gxawoskn6cyids" default="ui://te1gxawoskn6cyidt"/>
     </loader>
     <loader id="n1_skn6" name="imgNumBg" xy="0,0" size="21,15" url="ui://te1gxawoskn6cyidu" fill="scale" autoSize="true">
       <gearIcon controller="ctrlLessonsStatus" pages="0,2" values="ui://te1gxawom1uxcyif8|ui://te1gxawom1uxcyif7" default="ui://te1gxawoskn6cyidu"/>
@@ -25,9 +26,9 @@
       <Button icon="ui://te1gxawoskn6cyidw"/>
     </component>
     <component id="n8_fs03" name="btnGoToStudent" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="160,10" size="19,20">
-      <gearLook controller="ctrlLessonsStatus" pages="0,2" values="1,0,1,0|1,0,1,0" default="1,0,0,1"/>
+      <gearLook controller="ctrlCanTransfer" pages="1" values="0.4,0,1,0" default="1,0,0,1"/>
       <Button icon="ui://te1gxawofs03cyiez"/>
     </component>
   </displayList>
-  <Button mode="Radio"/>
+  <Button mode="Check"/>
 </component>

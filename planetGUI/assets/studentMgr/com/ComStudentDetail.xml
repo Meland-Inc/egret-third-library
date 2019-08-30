@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="618,348">
   <controller name="ctrlStudentStatus" pages="0,unlocked,1,locken" selected="0"/>
+  <controller name="ctrlOnlineStatus" pages="0,true,1,false" selected="0"/>
   <displayList>
     <image id="n8_p84a" name="imgPanelBg" src="lls7cyidy" fileName="img/img_sd_xsxq_1.png" xy="26,0" size="570,348"/>
     <component id="n9_p84a" name="btnClosePanel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="558,4" size="26,26">
@@ -21,9 +22,11 @@
       <Button title="锁屏" titleFontSize="18" icon="ui://ct340yhvlls7cyie0"/>
     </component>
     <component id="n17_p84a" name="btnGoToStudent" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="229,284" size="162,33">
+      <gearLook controller="ctrlOnlineStatus" pages="1" values="1,0,1,0" default="1,0,0,1"/>
       <Button title="传送到学生位置" titleFontSize="18" icon="ui://ct340yhvlls7cyie2"/>
     </component>
     <component id="n18_p84a" name="btnSubmit" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="430,284" size="102,33">
+      <gearLook controller="ctrlOnlineStatus" pages="1" values="1,0,1,0" default="1,0,0,1"/>
       <Button title="提交" titleFontSize="18" icon="ui://ct340yhvlls7cyie1"/>
     </component>
   </displayList>
