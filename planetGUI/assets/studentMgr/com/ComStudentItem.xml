@@ -1,26 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="215,44" extention="Button" designImage="ui://i25v0ebkskn64u" designImageOffsetX="-902" designImageOffsetY="-98" designImageAlpha="0">
-  <controller name="button" pages="0,up,1,down,2,over" selected="0"/>
+  <controller name="button" pages="0,up,1,down,2,over" selected="2"/>
   <controller name="ctrlSex" pages="0,male,1,female" selected="0"/>
-  <controller name="ctrlLock" pages="0,locked,1,unlocked" selected="1"/>
+  <controller name="ctrlLock" pages="0,locked,1,unlocked" selected="0"/>
+  <controller name="ctrlLessonsStatus" pages="1,going,0,notEnter,2,finished" selected="0"/>
+  <controller name="ctrlCanTransfer" pages="0,true,1,false" selected="0"/>
   <displayList>
-    <loader id="n0_skn6" name="bg" xy="0,0" size="215,44" url="ui://te1gxawoskn6cyids" fill="scaleFree">
-      <gearIcon controller="button" pages="0,1" values="ui://te1gxawoskn6cyids|ui://te1gxawoskn6cyids" default="ui://te1gxawoskn6cyidt"/>
+    <loader id="n0_skn6" name="bg" xy="0,0" size="215,44" url="ui://te1gxawoskn6cyidt" fill="scaleFree">
+      <gearIcon controller="button" pages="0" values="ui://te1gxawoskn6cyids" default="ui://te1gxawoskn6cyidt"/>
     </loader>
-    <image id="n1_skn6" name="imgNumBg" src="skn6cyidu" fileName="imgB/img_cm_xsgl_9.png" pkg="te1gxawo" xy="0,0"/>
+    <loader id="n1_skn6" name="imgNumBg" xy="0,0" size="21,15" url="ui://te1gxawoskn6cyidu" fill="scale" autoSize="true">
+      <gearIcon controller="ctrlLessonsStatus" pages="0,2" values="ui://te1gxawom1uxcyif8|ui://te1gxawom1uxcyif7" default="ui://te1gxawoskn6cyidu"/>
+    </loader>
     <text id="n2_skn6" name="tfNum" xy="0,0" size="21,18" fontSize="10" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="1"/>
     <text id="n3_skn6" name="tfPlayerName" xy="25,1" size="89,23" fontSize="14" color="#ffffff" vAlign="bottom" text="不听话的小段"/>
-    <text id="n4_skn6" name="tfRealName" xy="25,21" size="65,18" fontSize="10" color="#ffffff" vAlign="bottom" text="东风破南风起"/>
-    <loader id="n5_skn6" name="ladSexIcon" xy="139,7" size="10,14" url="ui://te1gxawoskn6cyidp">
+    <text id="n4_skn6" name="tfRealName" xy="25,21" size="65,18" hideByEditor="true" visible="false" fontSize="10" color="#ffffff" vAlign="bottom" text="东风破南风起"/>
+    <text id="n9_m1ux" name="tfLessonsStatus" xy="25,21" size="35,18" alpha="0.5" fontSize="10" color="#ffffff" vAlign="bottom" text="关卡中">
+      <gearText controller="ctrlLessonsStatus" pages="0,2" values="未进入|已提交" default="关卡中"/>
+    </text>
+    <loader id="n5_skn6" name="ladSexIcon" xy="139,7" size="10,14" hideByEditor="true" visible="false" url="ui://te1gxawoskn6cyidp">
       <gearIcon controller="ctrlSex" pages="1" values="ui://te1gxawoskn6cyidq" default="ui://te1gxawoskn6cyidp"/>
     </loader>
-    <component id="n6_skn6" name="btnLockUnlock" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="190,11" size="23,20">
+    <component id="n6_skn6" name="btnLockUnlock" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="190,11" size="16,19">
       <gearIcon controller="ctrlLock" pages="0" values="ui://te1gxawoskn6cyidw" default="ui://te1gxawoskn6cyidv"/>
-      <Button icon="ui://te1gxawoskn6cyidv"/>
+      <Button icon="ui://te1gxawoskn6cyidw"/>
     </component>
     <component id="n8_fs03" name="btnGoToStudent" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="160,10" size="19,20">
+      <gearLook controller="ctrlCanTransfer" pages="1" values="0.4,0,1,0" default="1,0,0,1"/>
       <Button icon="ui://te1gxawofs03cyiez"/>
     </component>
   </displayList>
-  <Button mode="Radio"/>
+  <Button mode="Check"/>
 </component>
