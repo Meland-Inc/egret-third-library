@@ -12,15 +12,15 @@
       <relation target="" sidePair="height-height"/>
     </image>
     <list id="n1_r0y9" name="lstBpTabBar" xy="1061,44" size="80,360" group="n4_r0y9" layout="flow_hz" overflow="hidden" colGap="17" defaultItem="ui://32ieekgur0y9t7j" autoItemSize="true">
-      <item title="全部" icon="ui://32ieekguphs5t7t"/>
-      <item title="地板" icon="ui://32ieekgur0y9t6d"/>
-      <item title="墙面" icon="ui://32ieekguphs5t7u"/>
-      <item title="功能" icon="ui://32ieekgur0y9t6e"/>
-      <item title="装饰" icon="ui://32ieekgur0y9t6f"/>
-      <item title="生物" icon="ui://32ieekgur0y9t6b"/>
-      <item title="武器" icon="ui://32ieekgur0y9t6c"/>
-      <item title="植物" icon="ui://32ieekgur0y9t6a"/>
-      <item title="自定义" icon="ui://32ieekguunomt8m"/>
+      <item title="全部" icon="ui://32ieekguphs5t7t" name="all"/>
+      <item title="地板" icon="ui://32ieekgur0y9t6d" name="floor"/>
+      <item title="墙面" icon="ui://32ieekguphs5t7u" name="wall"/>
+      <item title="功能" icon="ui://32ieekgur0y9t6e" name="func"/>
+      <item title="装饰" icon="ui://32ieekgur0y9t6f" name="decoration"/>
+      <item title="生物" icon="ui://32ieekgur0y9t6b" name="puppet"/>
+      <item title="武器" icon="ui://32ieekgur0y9t6c" name="weapon"/>
+      <item title="植物" icon="ui://32ieekgur0y9t6a" name="plant"/>
+      <item title="自定义" icon="ui://32ieekguunomt8m" name="custom"/>
     </list>
     <component id="n2_r0y9" name="btnBpReturn" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1081,10" size="33,27" group="n4_r0y9">
       <Button icon="ui://32ieekgur0y9t60" page="0"/>
@@ -85,7 +85,7 @@
     </list>
     <image id="n6_r0y9" name="n6" src="r0y9t70" fileName="img_UI3/b/ide/img_ide_ssk_1.png" xy="620,10" size="321,28" group="n4_r0y9"/>
     <image id="n7_r0y9" name="n7" src="r0y9t71" fileName="img_UI3/b/ide/img_ide_ssk_2.png" xy="627,17" group="n4_r0y9"/>
-    <text id="n8_r0y9" name="tfSearch" xy="650,13" size="281,24" group="n4_r0y9" input="true" fontSize="14" color="#ffffff" vAlign="middle" autoSize="none" autoClearText="true" text="垃圾"/>
+    <text id="n8_r0y9" name="tfSearch" xy="650,13" size="281,24" group="n4_r0y9" input="true" fontSize="14" color="#ffffff" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="垃圾"/>
     <component id="n30_m0i3" name="btnClose" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="565,271" size="49,98" group="n4_r0y9">
       <relation target="" sidePair="middle-middle"/>
       <Button icon="ui://rnqj1l77gg8mtgq" page="0"/>
