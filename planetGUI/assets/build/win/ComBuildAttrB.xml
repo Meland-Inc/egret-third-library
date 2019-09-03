@@ -11,7 +11,11 @@
     <component id="n36_py50" name="btnAttrReturn" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="416,13" size="33,27" group="n45_py50">
       <Button icon="ui://32ieekgur0y9t60" page="0"/>
     </component>
-    <component id="n44_py50" name="btnAttrCoding" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="256,595" size="106,36" group="n45_py50">
+    <component id="n44_py50" name="btnAttrCoding" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="256,595" size="106,36" group="n45_py50" visible="false">
+      <relation target="" sidePair="bottom-bottom"/>
+      <Button title="编辑脚本" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
+    </component>
+    <component id="n50_kca4" name="btnSaveAsTemplate" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="256,595" size="106,36" group="n45_py50">
       <relation target="" sidePair="bottom-bottom"/>
       <Button title="保存物件" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
     </component>
