@@ -4,7 +4,7 @@
     <image id="n32_py50" name="n32" src="nl0rcyicf" fileName="imgB/img_cm_dk_1.png" pkg="te1gxawo" xy="148,-2" size="320,644" group="n45_py50">
       <relation target="" sidePair="height-height"/>
     </image>
-    <text id="n33_py50" name="tfAttrName" xy="201,14" size="105,26" group="n45_py50" input="true" fontSize="20" color="#ffffff" vAlign="middle" singleLine="true" autoClearText="true" text="打地鼠物件"/>
+    <text id="n33_py50" name="tfAttrName" xy="201,14" size="105,32" group="n45_py50" input="true" fontSize="20" color="#ffffff" vAlign="middle" singleLine="true" autoClearText="true" text="打地鼠物件"/>
     <component id="n35_py50" name="btnAttrName" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="164,17" size="24,21" group="n45_py50" touchable="false">
       <Button icon="ui://32ieekgur0y9t6j"/>
     </component>
@@ -13,7 +13,7 @@
     </component>
     <component id="n44_py50" name="btnAttrCoding" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="256,595" size="106,36" group="n45_py50">
       <relation target="" sidePair="bottom-bottom"/>
-      <Button icon="ui://te1gxawovulycyici"/>
+      <Button title="保存物件" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
     </component>
     <image id="n47_qki6" name="n47" src="r0y9t6t" fileName="img_UI3/b/ide/img_ide_dk_2.png" xy="162,55" size="294,530" group="n45_py50"/>
     <component id="n46_rb1c" name="comAttrubiteEdit" src="vuly8t" fileName="com/comAttrubiteEditB.xml" pkg="kzio97vu" xy="162,55" size="294,530" group="n45_py50"/>
