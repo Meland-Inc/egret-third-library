@@ -21,9 +21,9 @@
       <item title="函数" icon="ui://rnqj1l77w7botl2" name="diyfunction" selectedIcon="ui://rnqj1l77w7botl3" controllers="c1,8"/>
     </list>
     <component id="n29_8tz6" name="btnAction" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1069,564" size="55,59">
-      <gearIcon controller="ctrlType" pages="0,1" values="ui://te1gxawocw9mcyifb|ui://rnqj1l77dx4vtkj"/>
+      <gearIcon controller="ctrlType" pages="1" values="ui://rnqj1l77dx4vtkj" default="ui://rnqj1l77ilo1tj3"/>
       <relation target="" sidePair="right-right,bottom-bottom"/>
-      <Button icon="ui://te1gxawocw9mcyifb"/>
+      <Button icon="ui://rnqj1l77ilo1tj3"/>
     </component>
   </displayList>
 </component>
