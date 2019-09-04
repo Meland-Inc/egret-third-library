@@ -20,7 +20,7 @@ export class GenerateTask {
     private static readonly KEY_WORD_DECLARE: string = "declare";//声明的符号排除掉
     private static readonly KEY_WORD_EXTENDS: string = "extends";
 
-    private static readonly OUT_FILE_PATH = "jasobNamesbag\\jasobNamesbag.jsbb";
+    private static readonly OUT_FILE_PATH = "rawResource\\jasobObfuscator\\jasobNamesbag.jsbb";
     private static readonly EXTENSION_TS = ".ts";
     private static readonly EXCLUDE_EXTENSION = ".d.ts";//在找符号的时候需要排除申明文件 库中不排除
 
