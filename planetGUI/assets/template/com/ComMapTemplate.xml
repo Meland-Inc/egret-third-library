@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkp3zl4w" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlView" exported="true" pages="0,list,1,create" selected="1"/>
+  <controller name="ctrlView" exported="true" pages="0,list,1,create" selected="0"/>
   <displayList>
     <image id="n49_o7or" name="imgBG" src="p3zlcyidz" fileName="imgB/img_cm_cjk_1.png" pkg="te1gxawo" xy="224,82" size="770,542" group="n70_o7or"/>
     <loader id="n50_o7or" name="ladIcon" xy="247,89" size="24,24" group="n70_o7or" url="ui://4wr0elnxp3zl0" autoSize="true"/>
@@ -45,7 +45,7 @@
     </image>
     <image id="n74_o7or" name="imgInputBg" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="854,78" size="268,31" group="n115_lls7"/>
     <image id="n75_o7or" name="imgPen" src="f203cyie2" fileName="imgB/img_cm_bjtb_2.png" pkg="te1gxawo" xy="1095,86" group="n115_lls7"/>
-    <text id="n76_o7or" name="inpEditMapName" xy="862,78" size="210,29" group="n115_lls7" alpha="0.6" input="true" fontSize="18" color="#ffffff" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="七桥问题地图"/>
+    <text id="n76_o7or" name="inpEditMapName" xy="862,79" size="210,29" group="n115_lls7" alpha="0.6" input="true" fontSize="18" color="#ffffff" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="七桥问题地图"/>
     <text id="n54_o7or" name="tf" xy="850,221" size="77,29" group="n93_mwli" fontSize="18" color="#365989" vAlign="bottom" bold="true" text="地图大小"/>
     <image id="n112_qlmt" name="imgMutil" src="qlmti" fileName="img/img_stencil_c_1.png" xy="987,230" group="n93_mwli"/>
     <image id="n56_o7or" name="imgWidthBG" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="931,224" size="53,24" group="n93_mwli"/>
