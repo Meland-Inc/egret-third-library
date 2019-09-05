@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="42,46" extention="Button">
-  <controller name="button" pages="0,up,1,down" selected="1"/>
+  <controller name="button" pages="0,up,1,down" selected="0"/>
   <displayList>
-    <loader id="n8_loxg" name="icon" xy="0,4" size="42,42" url="ui://32ieekguuhu6t7x" fill="scaleFree">
-      <gearXY controller="button" pages="1" values="0,4" default="0,0"/>
+    <loader id="n8_loxg" name="icon" xy="0,0" size="42,46" url="ui://32ieekguzefit8w" fill="scaleFree">
+      <gearXY controller="button" pages="0,1" values="0,0|0,6"/>
       <gearSize controller="button" pages="1" values="42,42,1,1" default="42,46,1,1"/>
     </loader>
-    <image id="n10_loxg" name="n10" src="xvfat85" fileName="img_UI3/b/ide/btn_ide_zm_6.png" xy="0,42">
-      <gearDisplay controller="button" pages="0"/>
-    </image>
+    <text id="n11_7slt" name="title" xy="0,4" size="41,38" fontSize="14" color="#ffffff" align="center" vAlign="middle" leading="0" autoSize="none" text="R     旋转"/>
   </displayList>
   <Button/>
 </component>
