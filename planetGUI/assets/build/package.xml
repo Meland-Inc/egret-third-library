@@ -109,7 +109,6 @@
     <component id="df6n5m" name="BtnEntitySelect.xml" path="/btn/" exported="true"/>
     <component id="qouo5n" name="WinBuildIde.xml" path="/win/" exported="true"/>
     <component id="uvgl4p" name="ComSelectToHideRocker.xml" path="/Com/"/>
-    <component id="w5h85o" name="ComOldBuildPreview.xml" path="/Com/" exported="true"/>
     <component id="p6hg5p" name="ComBuildOperate.xml" path="/Com/"/>
     <component id="1194t5r" name="ComBuildAttr.xml" path="/win/"/>
     <image id="qki6t5s" name="img_ide_ddk_10.png" path="/img_UI3/" scale="9grid" scale9grid="30,28,60,56"/>
@@ -192,6 +191,9 @@
     <component id="jnb2t96" name="BtnBuildMode.xml" path="/btn/"/>
     <component id="jnb2t97" name="WinBuildIdeBOld.xml" path="/win/"/>
     <component id="7sltt98" name="ComBuildLibrary.xml" path="/win/"/>
+    <component id="kt9nt99" name="SaveTemplateAlert.xml" path="/win/"/>
+    <component id="kt9nt9a" name="ComSelectScope.xml" path="/Com/"/>
+    <image id="kt9nt9b" name="img_ide_sy_1.png" path="/img_UI3/b/ide/"/>
   </resources>
   <publish name="build" npot="true"/>
 </packageDescription>
