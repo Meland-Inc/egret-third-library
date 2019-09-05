@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="170,33" extention="Button" designImage="ui://i25v0ebkkl4w5f" designImageOffsetX="-11" designImageOffsetY="-68" designImageAlpha="100">
+<component size="170,33" extention="Button" designImage="ui://i25v0ebkkl4w5f" designImageOffsetX="-11" designImageOffsetY="-68" designImageAlpha="0">
   <controller name="button" pages="0,up,1,down" selected="0"/>
-  <controller name="ctrlData" pages="0,none,1,item,2,narrow,3,expand" selected="2">
+  <controller name="ctrlData" pages="0,none,1,item,2,narrow,3,expand" selected="3">
     <action type="change_page" fromPage="" toPage="0" controller="button" targetPage="0"/>
   </controller>
+  <controller name="ctrlIsShow" pages="0,true,1,false" selected="0"/>
   <displayList>
     <image id="n4_mte0" name="n4" src="skn6cyids" fileName="imgB/img_cm_xsgl_6.png" pkg="te1gxawo" xy="0,0" size="170,33">
       <gearDisplay controller="button" pages="0"/>
@@ -38,6 +39,12 @@
     <text id="n9_shu1" name="tfNum" xy="112,9" size="40,16" fontSize="10" color="#ffffff" align="right" vAlign="middle" autoSize="none" text="1234">
       <gearDisplay controller="ctrlData" pages="2"/>
     </text>
+    <image id="n11_10awa" name="n11" src="cw9mcyifr" fileName="imgB/img_cm_ys_1_1.png" pkg="te1gxawo" xy="4,4">
+      <gearDisplay controller="ctrlIsShow" pages="1"/>
+    </image>
+    <image id="n12_10awa" name="n12" src="cw9mcyifs" fileName="imgB/img_cm_ys_2.png" pkg="te1gxawo" xy="6,7">
+      <gearDisplay controller="ctrlIsShow" pages="1"/>
+    </image>
   </displayList>
   <Button mode="Radio"/>
 </component>
