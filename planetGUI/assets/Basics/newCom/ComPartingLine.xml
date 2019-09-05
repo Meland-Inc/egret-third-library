@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="568,31" extention="Label">
-  <controller name="c1" pages="8,event,0,control,1,prop,2,function,3,move,4,detect,5,operator,6,variable,7,diyfunction" selected="8"/>
+<component size="333,24" extention="Label">
+  <controller name="c1" pages="8,event,0,control,1,prop,2,function,3,move,4,detect,5,operator,6,variable,7,diyfunction" selected="0"/>
   <displayList>
-    <image id="n0_puoe" name="n0" src="o8md28" fileName="img/img_sket_ty_4.png" pkg="tcbadh8n" xy="0,14" size="255,1">
-      <relation target="n1_puoe" sidePair="rightext-left"/>
+    <image id="n0_puoe" name="n0" src="qr01cyifx" fileName="imgB/img_cm_fgx_1.png" pkg="te1gxawo" xy="111,12">
+      <relation target="n1_puoe" sidePair="right-left"/>
     </image>
-    <text id="n1_puoe" name="title" xy="257,2" size="53,31" fontSize="24" color="#ffffff" text="函数">
+    <text id="n1_puoe" name="title" xy="149,2" size="33,20" fontSize="14" color="#ffffff" vAlign="middle" text="事件">
       <gearText controller="c1" pages="8,0,1,2,3,4,5,6,7" values="事件|控制|实体|功能|运动|检测|运算|变量|函数"/>
       <relation target="" sidePair="center-center"/>
     </text>
-    <image id="n2_puoe" name="n2" src="o8md28" fileName="img/img_sket_ty_4.png" pkg="tcbadh8n" xy="311,14" size="256,1">
-      <relation target="n1_puoe" sidePair="leftext-right"/>
-      <relation target="" sidePair="rightext-right"/>
+    <image id="n2_puoe" name="n2" src="qr01cyifx" fileName="imgB/img_cm_fgx_1.png" pkg="te1gxawo" xy="183,12">
+      <relation target="n1_puoe" sidePair="left-right"/>
     </image>
   </displayList>
 </component>
