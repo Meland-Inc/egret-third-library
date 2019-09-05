@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" opaque="false" designImage="ui://i25v0ebkjnb25o" designImageForTest="true">
+<component size="1136,640" opaque="false" designImage="ui://i25v0ebkjnb25o">
   <controller name="ctrlOperate" pages="" selected="-1"/>
-  <controller name="ctrlIdeMode" pages="0,create,1,move,2,code,3,attr" selected="3"/>
+  <controller name="ctrlIdeMode" pages="0,create,1,move,2,code,3,attr" selected="0"/>
   <displayList>
-    <component id="n9_r0y9" name="comEntitySelect" src="yhf8t7n" fileName="Com/ComMapEntitySelectB.xml" xy="0,0" size="280,640" hideByEditor="true" controller="ctrlState,1">
+    <component id="n9_r0y9" name="comEntitySelect" src="yhf8t7n" fileName="Com/ComMapEntitySelectB.xml" xy="0,0" size="280,640" controller="ctrlState,1">
       <relation target="" sidePair="left-left,height-height"/>
     </component>
-    <component id="n27_r0y9" name="comAttr" src="vulyt7s" fileName="win/ComBuildAttrB.xml" xy="668,0" size="466,640" hideByEditor="true">
+    <component id="n27_r0y9" name="comAttr" src="vulyt7s" fileName="win/ComBuildAttrB.xml" xy="668,0" size="466,640">
       <gearDisplay controller="ctrlIdeMode" pages="3"/>
       <relation target="" sidePair="right-right,height-height"/>
     </component>
-    <list id="n35_7slt" name="lstMode" xy="484,587" size="168,54" layout="row" overflow="scroll" defaultItem="ui://32ieekgujnb2t96">
-      <item icon="ui://32ieekguuhu6t7x" name="btnCreate"/>
-      <item icon="ui://32ieekguuhu6t7y" name="btnMove"/>
-      <item icon="ui://32ieekguuhu6t7z" name="btnCode"/>
-      <item icon="ui://32ieekguuhu6t80" name="btnAttr"/>
+    <list id="n35_7slt" name="lstIdeMode" xy="484,587" size="168,54" layout="row" overflow="scroll" defaultItem="ui://32ieekgujnb2t96">
+      <item title="创造" icon="ui://32ieekguuhu6t7x" name="create"/>
+      <item title="移动" icon="ui://32ieekguuhu6t7y" name="move"/>
+      <item title="代码块" icon="ui://32ieekguuhu6t7z" name="code"/>
+      <item title="属性" icon="ui://32ieekguuhu6t80" name="attr"/>
     </list>
     <component id="n36_7slt" name="comLibrary" src="7sltt98" fileName="win/ComBuildLibrary.xml" xy="755,0">
       <gearDisplay controller="ctrlIdeMode" pages="0"/>
+      <relation target="" sidePair="right-right,height-height"/>
     </component>
   </displayList>
-  <transition name="transBpHide"/>
-  <transition name="transBpShow"/>
 </component>

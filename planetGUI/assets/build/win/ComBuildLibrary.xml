@@ -88,11 +88,11 @@
     <component id="n9_7slt" name="btnDrawingPad" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="294,9" size="76,32">
       <Button icon="ui://32ieekguunomt8l"/>
     </component>
-    <component id="n13_7slt" name="btnMirror" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="27,49" size="42,42">
-      <Button title="R旋转" titleFontSize="14" icon="ui://32ieekguzefit8w"/>
+    <component id="n13_7slt" name="btnMirror" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="27,49" size="42,42">
+      <Button title="旋转" titleFontSize="14" icon="ui://32ieekguzefit8w"/>
     </component>
-    <component id="n15_7slt" name="btnCancel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="27,98" size="42,42">
-      <Button title="Esc取消" titleFontSize="14" icon="ui://32ieekguzefit8v"/>
+    <component id="n15_7slt" name="btnCancel" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="27,98" size="42,42">
+      <Button title="取消" titleFontSize="14" icon="ui://32ieekguzefit8v"/>
     </component>
   </displayList>
 </component>

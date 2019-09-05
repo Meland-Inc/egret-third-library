@@ -11,6 +11,9 @@
       <gearXY controller="button" pages="1" values="0,42" default="0,48"/>
       <gearSize controller="button" pages="1" values="42,12,1,1" default="42,6,1,1"/>
     </image>
+    <text id="n12_p64h" name="title" xy="0,28" size="42,21" fontSize="12" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="创造">
+      <gearXY controller="button" pages="0,1" values="0,28|0,22"/>
+    </text>
   </displayList>
   <Button mode="Radio"/>
 </component>
