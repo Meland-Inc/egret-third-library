@@ -53,10 +53,16 @@
     <component id="n12_batc" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="132,582" size="78,28" group="n17_batc">
       <Button title="退出" titleFontSize="18" icon="ui://tcbadh8nbatc7"/>
     </component>
-    <group id="n17_batc" name="grpBottom" xy="32,544" size="178,66" group="n14_batc" advanced="true" collapsed="true">
+    <component id="n31_drcq" name="btnImport" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="33,500" size="78,28" group="n17_batc">
+      <Button title="导入" titleFontSize="18" icon="ui://tcbadh8nbatc7"/>
+    </component>
+    <component id="n32_drcq" name="btnDownload" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="132,500" size="78,28" group="n17_batc">
+      <Button title="下载" titleFontSize="18" icon="ui://tcbadh8nbatc7"/>
+    </component>
+    <group id="n17_batc" name="grpBottom" xy="32,500" size="178,110" group="n14_batc" advanced="true" collapsed="true">
       <relation target="" sidePair="bottom-bottom"/>
     </group>
-    <component id="n23_wdtr" name="comPenSetting" src="wdtr1e" fileName="com/ComPenSetting.xml" xy="0,0" group="n14_batc">
+    <component id="n23_wdtr" name="comPenSetting" src="wdtr1e" fileName="com/ComPenSetting.xml" xy="0,0" size="215,487" group="n14_batc">
       <gearDisplay controller="ctrlTool" pages="0,2"/>
     </component>
     <group id="n14_batc" name="grpLeft" xy="0,0" size="222,622"/>

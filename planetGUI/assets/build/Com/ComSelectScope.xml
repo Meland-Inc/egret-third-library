@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="172,30">
+  <controller name="ctrlScope" pages="0,私有,1,公有" selected="0"/>
+  <controller name="ctrlType" exported="true" pages="0,all,1,alone" selected="1"/>
+  <displayList>
+    <image id="n0_rx4o" name="imgRbtnBG" src="cw9mcyifp" fileName="imgB/img_cm_gsy_3.png" pkg="te1gxawo" xy="0,0" locked="true">
+      <gearDisplay controller="ctrlType" pages="0"/>
+    </image>
+    <component id="n1_rx4o" name="btnToScratch" src="oliri6q" fileName="btn/rbtnScale.xml" pkg="te1gxawo" xy="0,0" size="86,28">
+      <gearDisplay controller="ctrlType" pages="0"/>
+      <gearIcon controller="ctrlScope" pages="0" values="ui://te1gxawocw9mcyifo" default=""/>
+      <relation target="n0_rx4o" sidePair="top-top,left-left"/>
+      <Button checked="true" title="私有" titleColor="#ffffff" titleFontSize="14" icon="ui://te1gxawocw9mcyifo" controller="ctrlScope" page="0"/>
+    </component>
+    <component id="n2_rx4o" name="btnToPython" src="oliri6q" fileName="btn/rbtnScale.xml" pkg="te1gxawo" xy="86,0" size="86,28">
+      <gearDisplay controller="ctrlType" pages="0"/>
+      <gearIcon controller="ctrlScope" pages="0,1" values="|ui://te1gxawocw9mcyifn"/>
+      <relation target="n0_rx4o" sidePair="right-right,top-top"/>
+      <Button title="公有" titleColor="#ffffff" titleFontSize="14" controller="ctrlScope" page="1"/>
+    </component>
+    <component id="n3_r6n0" name="btnToScratch" src="oliri6q" fileName="btn/rbtnScale.xml" pkg="te1gxawo" xy="0,0" size="72,30">
+      <gearDisplay controller="ctrlType" pages="1"/>
+      <gearXY controller="ctrlScope" pages="1" values="-77,0" default="0,0"/>
+      <gearText controller="ctrlScope" pages="1" values="" default="私有"/>
+      <gearIcon controller="ctrlScope" pages="1" values="" default="ui://32ieekgur6n0t93"/>
+      <relation target="n0_rx4o" sidePair="top-top,left-left"/>
+      <Button title="私有" titleColor="#ffffff" titleFontSize="14" icon="ui://32ieekgur6n0t93" controller="ctrlScope" page="1"/>
+    </component>
+    <component id="n4_r6n0" name="btnToScratch" src="oliri6q" fileName="btn/rbtnScale.xml" pkg="te1gxawo" xy="-80,0" size="72,30">
+      <gearDisplay controller="ctrlType" pages="1"/>
+      <gearXY controller="ctrlScope" pages="0" values="-80,0" default="0,0"/>
+      <gearText controller="ctrlScope" pages="1" values="公有" default=""/>
+      <gearIcon controller="ctrlScope" pages="0" values="" default="ui://32ieekgur6n0t93"/>
+      <relation target="n0_rx4o" sidePair="top-top,left-left"/>
+      <Button checked="true" titleColor="#ffffff" titleFontSize="14" controller="ctrlScope" page="0"/>
+    </component>
+  </displayList>
+</component>

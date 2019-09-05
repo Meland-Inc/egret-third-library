@@ -111,10 +111,6 @@
     <component id="n31_k177" name="comShortCut" src="uhu6t7w" fileName="Com/ComBuildShortCut.xml" xy="300,594">
       <gearDisplay controller="ctrlOperate" pages="2"/>
       <relation target="" sidePair="bottom-bottom"/>
-      <relation target="n32_jt5f" sidePair="center-center"/>
-    </component>
-    <component id="n32_jt5f" name="comSelectScope" src="rx4otjz" fileName="newCom/ComSelectScope.xml" pkg="rnqj1l77" xy="315,7">
-      <relation target="" sidePair="top-top,left-left%"/>
     </component>
   </displayList>
   <transition name="transBpHide">
