@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="279,640" opaque="false" designImage="ui://i25v0ebkr0y949" designImageAlpha="0">
-  <controller name="ctrlState" exported="true" pages="0,fold,1,open,2,info" selected="1"/>
+  <controller name="ctrlState" exported="true" pages="0,fold,1,open,2,info" selected="0"/>
   <displayList>
-    <image id="n0_yhf8" name="n0" src="nl0rcyicf" fileName="imgB/img_cm_dk_1.png" pkg="te1gxawo" xy="0,0" size="195,640">
+    <image id="n0_yhf8" name="n0" src="nl0rcyicf" fileName="imgB/img_cm_dk_1.png" pkg="te1gxawo" xy="0,0" size="72,640">
       <gearSize controller="ctrlState" pages="0,1,2" values="72,640,1,1|195,640,1,1|195,640,1,1"/>
       <relation target="" sidePair="height-height"/>
     </image>
-    <list id="n1_yhf8" name="lstFold" xy="10,70" size="52,564" overflow="scroll" lineGap="4" defaultItem="ui://32ieekguyhf8t7o" align="center" autoClearItems="true">
+    <list id="n1_yhf8" name="lstFold" xy="10,37" size="52,597" overflow="scroll" lineGap="4" defaultItem="ui://32ieekguyhf8t7o" align="center" autoClearItems="true">
       <gearDisplay controller="ctrlState" pages="0"/>
       <relation target="" sidePair="height-height"/>
       <relation target="n10_r6n0" sidePair="topext-bottom"/>
@@ -164,7 +164,7 @@
     <component id="n5_yhf8" name="btnBackpack" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="9,5" size="54,55" locked="true" hideByEditor="true" visible="false">
       <Button icon="ui://32ieekguxvfat83" page="2"/>
     </component>
-    <component id="n6_j0zc" name="comScaleView" src="j0zct7p" fileName="Com/ComMapScaleViewB.xml" xy="199,493">
+    <component id="n6_j0zc" name="comScaleView" src="j0zct7p" fileName="Com/ComMapScaleViewB.xml" xy="82,493">
       <gearXY controller="ctrlState" pages="0,1,2" values="82,493|199,493|199,493"/>
       <relation target="" sidePair="bottom-bottom"/>
     </component>
@@ -176,13 +176,13 @@
       <gearDisplay controller="ctrlState" pages="2"/>
       <Button icon="ui://32ieekgumte0t89" controller="ctrlState" page="1"/>
     </component>
-    <component id="n10_r6n0" name="comSelectScope" src="rx4otjz" fileName="Com/ComSelectScope.xml" xy="13,33" controller="ctrlType,1">
+    <component id="n10_r6n0" name="comSelectScope" src="rx4otjz" fileName="Com/ComSelectScope.xml" xy="0,0" controller="ctrlType,1">
       <gearXY controller="ctrlState" pages="0" values="0,0" default="13,33"/>
     </component>
     <image id="n12_r6n0" name="imgIcon" src="cw9mcyiff" fileName="imgB/icon_cm_gjl_7.png" pkg="te1gxawo" xy="11,7">
       <gearDisplay controller="ctrlState" pages="1,2"/>
     </image>
-    <text id="n11_r6n0" name="tfTitle" xy="33,6" size="47,20" fontSize="14" color="#ffffff" vAlign="middle" text="实体栏">
+    <text id="n11_r6n0" name="tfTitle" xy="33,6" size="47,23" fontSize="14" color="#ffffff" vAlign="middle" text="实体栏">
       <gearDisplay controller="ctrlState" pages="1,2"/>
       <relation target="n12_r6n0" sidePair="middle-middle"/>
     </text>

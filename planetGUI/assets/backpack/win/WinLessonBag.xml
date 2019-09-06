@@ -18,14 +18,15 @@
     </component>
     <image id="n62_nl0r" name="imgTitileBg" src="nl0rcyice" fileName="imgB/img_cm_db_2.png" pkg="te1gxawo" xy="0,0"/>
     <image id="n63_nl0r" name="imgBagIcon" src="nl0r38" fileName="lessonModeImg/icon_bp_db_4.png" xy="40,13"/>
-    <list id="n24_ey2h" name="lstBagTypeBtn" xy="0,81" size="109,477" lineGap="5" colGap="4" defaultItem="ui://ruc22gntey2h2a">
+    <list id="n24_ey2h" name="lstBagTypeBtn" xy="0,59" size="109,534" lineGap="3" colGap="4" defaultItem="ui://ruc22gntey2h2a">
       <item title="全部" name="all"/>
-      <item title="消耗品" name="consumables"/>
-      <item title="建材" name="buildMat"/>
-      <item title="城堡1" name="castle1"/>
-      <item title="城堡2" name="castle2"/>
-      <item title="城堡3" name="castle3"/>
-      <item title="新地块" name="newGround"/>
+      <item title="地板" name="floor"/>
+      <item title="墙面" name="wall"/>
+      <item title="功能" name="func"/>
+      <item title="装饰" name="decoration"/>
+      <item title="生物" name="puppet"/>
+      <item title="武器" name="weapon"/>
+      <item title="植物" name="plant"/>
       <item title="自定义" name="custom"/>
     </list>
     <text id="n3_ey2h" name="tfTitle" xy="87,15" size="66,29" fontSize="22" color="#ffffff" vAlign="middle" autoSize="none" bold="true" text="背包"/>
@@ -49,7 +50,7 @@
       <relation target="" sidePair="bottomext-bottom"/>
     </image>
     <image id="n69_apfp" name="n69" src="nl0r39" fileName="lessonModeImg/img_bp_mck_1.png" xy="828,99" size="265,46" group="n30_ey2h"/>
-    <text id="n13_ey2h" name="tfLv" xy="847,107" size="46,29" group="n30_ey2h" fontSize="18" color="#365989" align="center" vAlign="middle" leading="0" vars="true" autoSize="none" bold="true" text="LV.{lv=10}"/>
+    <text id="n13_ey2h" name="tfLv" xy="847,107" size="46,29" group="n30_ey2h" visible="false" fontSize="18" color="#365989" align="center" vAlign="middle" leading="0" vars="true" autoSize="none" bold="true" text="LV.{lv=10}"/>
     <text id="n14_ey2h" name="tfName" xy="922,106" size="145,29" group="n30_ey2h" fontSize="18" color="#365989" align="center" vAlign="middle" autoSize="none" text="playerName"/>
     <group id="n30_ey2h" name="grpLvAndName" xy="828,99" size="265,46" group="n70_e0c2" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlDetail" pages="0"/>
