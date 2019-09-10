@@ -10,8 +10,8 @@
     <image id="p3zl6" name="img_stencil_dt_5.png" path="/img/"/>
     <image id="p3zl7" name="img_stencil_dt_6.png" path="/img/"/>
     <component id="p3zl8" name="ComCreateTemplateMap.xml" path="/com/"/>
-    <component id="p3zl9" name="WinCreateTemplate.xml" path="/win/" exported="true"/>
-    <component id="p3zla" name="ComMapTemplate.xml" path="/com/"/>
+    <component id="p3zl9" name="WinMapTemplate.xml" path="/win/" exported="true"/>
+    <component id="p3zla" name="ComMapTemplateOld.xml" path="/com/"/>
     <component id="hams0" name="ComMapTemplateList.xml" path="/com/" exported="true"/>
     <component id="hams1" name="BtnMapTemplateItem.xml" path="/com/"/>
     <component id="uov9b" name="btnCreateMap.xml" path="/btn/"/>
@@ -24,6 +24,9 @@
     <image id="uic4j" name="img_stencil_jdt_1.png" path="/img/" scale="9grid" scale9grid="10,2,20,4"/>
     <image id="uic4k" name="img_stencil_jdt_2.png" path="/img/" scale="9grid" scale9grid="10,2,20,4"/>
     <component id="uic4m" name="pbrLoadMapTemplate.xml" path="/prb/"/>
+    <component id="f4tnn" name="ComMapTemplate.xml" path="/com/"/>
+    <component id="f4tno" name="comMapTemplateDetail.xml" path="/com/"/>
+    <component id="f4tnp" name="ComCreateTemplateNew.xml" path="/com/"/>
   </resources>
   <publish name="template"/>
 </packageDescription>
