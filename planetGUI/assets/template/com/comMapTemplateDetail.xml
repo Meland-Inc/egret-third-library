@@ -4,28 +4,29 @@
     <image id="n0_f4tn" name="imgDetailBg" src="f203cyie1" fileName="imgB/img_cm_xxk_1.png" pkg="te1gxawo" xy="0,0" size="300,583">
       <relation target="" sidePair="height-height"/>
     </image>
-    <image id="n1_f4tn" name="imgInputBg" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="18,21" size="268,31"/>
-    <image id="n2_f4tn" name="imgPen" src="f203cyie2" fileName="imgB/img_cm_bjtb_2.png" pkg="te1gxawo" xy="259,29"/>
-    <text id="n3_f4tn" name="inpMapName" xy="26,22" size="210,29" alpha="0.6" input="true" fontSize="18" color="#ffffff" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="七桥问题地图"/>
+    <image id="n1_f4tn" name="imgInputBg" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="18,21" size="268,31" group="n18_f4tn"/>
+    <image id="n2_f4tn" name="imgPen" src="f203cyie2" fileName="imgB/img_cm_bjtb_2.png" pkg="te1gxawo" xy="259,29" group="n18_f4tn"/>
+    <text id="n3_f4tn" name="inpMapName" xy="26,22" size="210,29" group="n18_f4tn" alpha="0.6" input="true" fontSize="18" color="#ffffff" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="七桥问题地图"/>
     <text id="n4_f4tn" name="tf" xy="14,164" size="77,29" group="n10_f4tn" fontSize="18" color="#365989" vAlign="bottom" bold="true" text="地图大小"/>
     <image id="n5_f4tn" name="imgMutil" src="qlmti" fileName="img/img_stencil_c_1.png" xy="151,173" group="n10_f4tn"/>
     <image id="n6_f4tn" name="imgWidthBG" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="95,167" size="53,24" group="n10_f4tn"/>
     <image id="n7_f4tn" name="imgHeightBG" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="167,167" size="52,24" group="n10_f4tn"/>
     <text id="n8_f4tn" name="inpMapWidth" xy="95,167" size="52,23" group="n10_f4tn" alpha="0.5" input="true" prompt="1920" restrict="0-9" keyboardType="4" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text="1000"/>
     <text id="n9_f4tn" name="inpMapHeight" xy="167,167" size="52,23" group="n10_f4tn" alpha="0.6" input="true" prompt="1080" restrict="0-9" keyboardType="4" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text="1000"/>
-    <group id="n10_f4tn" name="grpEditMapSize" xy="14,164" size="205,29" advanced="true" collapsed="true"/>
-    <component id="n11_f4tn" name="btnCopy" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="33,504" size="106,36">
+    <group id="n10_f4tn" name="grpEditMapSize" xy="14,164" size="205,29" group="n18_f4tn" advanced="true" collapsed="true"/>
+    <component id="n11_f4tn" name="btnCopy" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="33,504" size="106,36" group="n18_f4tn">
       <relation target="" sidePair="bottom-bottom"/>
       <Button title="复制地图" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
     </component>
-    <component id="n12_f4tn" name="btnDelete" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="167,504" size="106,37">
+    <component id="n12_f4tn" name="btnDelete" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="167,504" size="106,37" group="n18_f4tn">
       <relation target="" sidePair="bottom-bottom"/>
       <Button title="删除地图" titleFontSize="18" icon="ui://te1gxawom3dicyid9"/>
     </component>
-    <text id="n13_f4tn" name="tfManorGenerateType" xy="14,94" size="112,29" fontSize="18" color="#365989" vAlign="middle" autoSize="none" text="领地生成方式"/>
-    <component id="n14_f4tn" name="btnUpdateMap" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="222,158" size="66,40">
+    <text id="n13_f4tn" name="tfManorGenerateType" xy="14,94" size="112,29" group="n18_f4tn" fontSize="18" color="#365989" vAlign="middle" autoSize="none" text="领地生成方式"/>
+    <component id="n14_f4tn" name="btnUpdateMap" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="222,158" size="66,40" group="n18_f4tn">
       <Button title="更新" titleColor="#ffffff" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
     </component>
-    <component id="n15_f4tn" name="comSelectManorType" src="mwlig" fileName="com/comSelectManorTypeInList.xml" xy="117,95"/>
+    <component id="n15_f4tn" name="comSelectManorType" src="mwlig" fileName="com/comSelectManorTypeInList.xml" xy="117,95" group="n18_f4tn"/>
+    <group id="n18_f4tn" name="root" xy="14,21" size="283,520" advanced="true" collapsed="true"/>
   </displayList>
 </component>
