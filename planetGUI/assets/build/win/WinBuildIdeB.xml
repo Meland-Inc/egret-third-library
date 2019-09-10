@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkjnb25p">
   <controller name="ctrlOperate" pages="" selected="-1"/>
-  <controller name="ctrlIdeMode" pages="0,create,1,move,2,code,3,attr" selected="3"/>
+  <controller name="ctrlIdeMode" pages="0,create,1,move,2,code,3,attr" selected="0"/>
   <displayList>
-    <component id="n9_r0y9" name="comEntitySelect" src="yhf8t7n" fileName="Com/ComMapEntitySelectB.xml" xy="0,0" size="280,640" controller="ctrlState,1">
+    <graph id="n39_e7dh" name="shapeOffset" xy="774,0" size="362,640" visible="false" alpha="0.1" touchable="false" type="rect">
+      <gearXY controller="ctrlIdeMode" pages="0,1,2,3" values="774,0|774,0|792,0|777,0"/>
+      <gearSize controller="ctrlIdeMode" pages="0,1,3" values="362,640,1,1|55,641,1,1|321,640,1,1" default="344,640,1,1"/>
+      <relation target="" sidePair="right-right,height-height"/>
+    </graph>
+    <component id="n9_r0y9" name="comEntitySelect" src="yhf8t7n" fileName="Com/ComMapEntitySelectB.xml" xy="0,0" size="110,640" controller="ctrlState,0">
       <relation target="" sidePair="left-left,height-height"/>
     </component>
     <component id="n36_7slt" name="comCreate" src="7sltt98" fileName="win/ComBuildCreate.xml" xy="755,0" size="381,640">
@@ -26,6 +31,10 @@
       <item title="代码块" icon="ui://32ieekguuhu6t7z" name="code"/>
       <item title="属性" icon="ui://32ieekguuhu6t80" name="attr"/>
     </list>
-    <component id="n38_si0u" name="comToolBar" src="zefit91" fileName="Com/ComIdeTopToolBar.xml" xy="195,0"/>
+    <component id="n38_si0u" name="comToolBar" src="zefit91" fileName="Com/ComIdeTopToolBar.xml" xy="72,0" size="702,36">
+      <gearSize controller="ctrlIdeMode" pages="0,1,2,3" values="702,36,1,1|1009,36,1,1|738,36,1,1|746,36,1,1"/>
+      <relation target="n9_r0y9" sidePair="leftext-right"/>
+      <relation target="n39_e7dh" sidePair="rightext-left"/>
+    </component>
   </displayList>
 </component>

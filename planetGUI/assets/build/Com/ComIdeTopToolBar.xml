@@ -22,7 +22,7 @@
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://te1gxawocw9mcyifg"/>
     </component>
-    <component id="n6_cw9m" name="btnEntity" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="777,10" size="16,16">
+    <component id="n6_cw9m" name="btnEntity" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="777,10" size="16,16" tooltips="地图">
       <gearXY controller="ctrlMode" pages="0,1" values="777,10|720,10"/>
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://te1gxawocw9mcyiff"/>
