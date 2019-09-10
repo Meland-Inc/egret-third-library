@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="279,640" opaque="false" designImage="ui://i25v0ebkr0y949" designImageAlpha="0">
-  <controller name="ctrlState" exported="true" pages="0,fold,1,open,2,info" selected="1">
+  <controller name="ctrlState" exported="true" pages="0,fold,1,open,2,info" selected="0">
     <action type="change_page" fromPage="" toPage="0" objectId="n10_r6n0" controller="ctrlType" targetPage="1"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n10_r6n0" controller="ctrlType" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="2" objectId="n10_r6n0" controller="ctrlType" targetPage="0"/>
@@ -180,7 +180,7 @@
       <gearDisplay controller="ctrlState" pages="2"/>
       <Button icon="ui://32ieekgumte0t89" controller="ctrlState" page="1"/>
     </component>
-    <component id="n10_r6n0" name="comSelectScope" src="kt9nt9a" fileName="Com/ComSelectScope.xml" xy="13,33" controller="ctrlType,0">
+    <component id="n10_r6n0" name="comSelectScope" src="kt9nt9a" fileName="Com/ComSelectScope.xml" xy="0,0" controller="ctrlType,1">
       <gearXY controller="ctrlState" pages="0" values="0,0" default="13,33"/>
     </component>
     <image id="n12_r6n0" name="imgIcon" src="cw9mcyiff" fileName="imgB/icon_cm_gjl_7.png" pkg="te1gxawo" xy="11,7">

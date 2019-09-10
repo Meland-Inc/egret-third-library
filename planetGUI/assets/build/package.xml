@@ -154,7 +154,7 @@
     <component id="yhf8t7n" name="ComMapEntitySelectB.xml" path="/Com/" exported="true"/>
     <component id="yhf8t7o" name="BtnEntitySelectB.xml" path="/btn/" exported="true"/>
     <component id="j0zct7p" name="ComMapScaleViewB.xml" path="/Com/"/>
-    <component id="vulyt7s" name="ComBuildAttrB.xml" path="/win/"/>
+    <component id="vulyt7s" name="ComBuildAttrB.xml" path="/win/" exported="true"/>
     <image id="phs5t7t" name="icon_ide_lx_7.png" path="/img_UI3/b/ide/"/>
     <image id="phs5t7u" name="icon_ide_lx_8.png" path="/img_UI3/b/ide/"/>
     <component id="q2s3t7v" name="ComBuildPreviewB.xml" path="/Com/" exported="true"/>
@@ -190,10 +190,11 @@
     <component id="cw9mt92" name="BtnIdeToolItem.xml" path="/btn/"/>
     <component id="jnb2t96" name="BtnBuildMode.xml" path="/btn/"/>
     <component id="jnb2t97" name="WinBuildIdeBOld.xml" path="/win/"/>
-    <component id="7sltt98" name="ComBuildLibrary.xml" path="/win/"/>
+    <component id="7sltt98" name="ComBuildCreate.xml" path="/win/" exported="true"/>
     <component id="kt9nt99" name="SaveTemplateAlert.xml" path="/win/" exported="true"/>
     <component id="kt9nt9a" name="ComSelectScope.xml" path="/Com/"/>
     <image id="kt9nt9b" name="img_ide_sy_1.png" path="/img_UI3/b/ide/"/>
+    <component id="jm8lt9c" name="ComBuildMove.xml" path="/win/" exported="true"/>
   </resources>
   <publish name="build" npot="true"/>
 </packageDescription>
