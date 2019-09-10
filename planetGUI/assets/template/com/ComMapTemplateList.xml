@@ -1,58 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1019,580" designImage="ui://i25v0ebkp3zl4y" designImageOffsetY="-59" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlSpawnType" pages="0,hide,1,show" selected="0"/>
-  <controller name="ctrlManorType" pages="0,palindrome,1,horizontal,2,vertical" selected="0"/>
+<component size="1021,583" designImage="ui://i25v0ebkp3zl4y" designImageOffsetY="-59" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlShowDetail" pages="1,show,0,hide" selected="0"/>
   <displayList>
-    <image id="n3_f203" name="imgBgLst" src="nl0rcyicc" fileName="imgB/img_cm_bg_dk_1.png" pkg="te1gxawo" xy="0,20" size="703,541">
+    <image id="n24_f4tn" name="imgBgLst" src="nl0rcyicc" fileName="imgB/img_cm_bg_dk_1.png" pkg="te1gxawo" xy="0,20" size="703,541">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <list id="n1_uov9" name="lstMapItem" xy="30,46" size="647,488" layout="flow_hz" overflow="scroll" lineGap="20" colGap="10" defaultItem="ui://4wr0elnxhams1" autoClearItems="true">
+    <list id="n25_f4tn" name="lstMapItem" xy="30,46" size="647,488" layout="flow_hz" overflow="scroll" lineGap="20" colGap="10" defaultItem="ui://4wr0elnxhams1" autoClearItems="true">
       <relation target="" sidePair="width-width,height-height"/>
-      <item url="ui://4wr0elnxuov9b"/>
       <item/>
       <item/>
       <item/>
       <item/>
       <item/>
     </list>
-    <image id="n4_f203" name="imgDetailBg" src="f203cyie1" fileName="imgB/img_cm_xxk_1.png" pkg="te1gxawo" xy="719,0" size="300,580" group="n23_f203">
-      <relation target="" sidePair="height-height"/>
-    </image>
-    <image id="n8_f203" name="imgInputBg" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="737,21" size="268,31" group="n23_f203"/>
-    <image id="n7_f203" name="imgPen" src="f203cyie2" fileName="imgB/img_cm_bjtb_2.png" pkg="te1gxawo" xy="978,29" group="n23_f203"/>
-    <text id="n9_f203" name="inpMapName" xy="745,21" size="210,29" group="n23_f203" input="true" fontSize="18" color="#ffffff" vAlign="middle" autoSize="none" text="七桥问题地图"/>
-    <component id="n5_f203" name="btnCopy" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="752,504" size="106,36" group="n23_f203">
-      <relation target="" sidePair="bottom-bottom"/>
-      <Button title="复制地图" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
+    <component id="n45_f4tn" name="comDetail" src="f4tno" fileName="com/comMapTemplateDetail.xml" xy="721,0">
+      <relation target="" sidePair="height-height,right-right"/>
     </component>
-    <component id="n6_f203" name="btnDelete" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="886,504" size="106,37" group="n23_f203">
-      <relation target="" sidePair="bottom-bottom"/>
-      <Button title="删除地图" titleFontSize="18" icon="ui://te1gxawom3dicyid9"/>
-    </component>
-    <text id="n10_f203" name="tfManorGenerateType" xy="735,94" size="112,29" group="n23_f203" fontSize="18" color="#365989" vAlign="middle" autoSize="none" text="领地生成方式"/>
-    <image id="n13_f203" name="imgBg" src="vulycyicq" fileName="imgB/btn_cm_xzl_4.png" pkg="te1gxawo" xy="803,155" size="180,239" group="n20_f203"/>
-    <text id="n14_f203" name="tfOperation1" xy="875,166" size="37,26" group="n20_f203" fontSize="16" color="#365989" text="选择"/>
-    <image id="n15_f203" name="imgPoint" src="vulycyicr" fileName="imgB/btn_cm_xzl_5.png" pkg="te1gxawo" xy="826,169" group="n20_f203"/>
-    <component id="n16_f203" name="btnPalindrome" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="834,201" size="116,34" group="n20_f203">
-      <Button checked="true" title="回字型" titleColor="#365989" titleFontSize="16" icon="ui://te1gxawovulycyicn" selectedIcon="ui://te1gxawovulycyico" controller="ctrlManorType" page="0"/>
-    </component>
-    <component id="n17_f203" name="btnHorizontal" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="834,245" size="117,34" group="n20_f203">
-      <Button title="横向排列" titleColor="#365989" titleFontSize="16" icon="ui://te1gxawovulycyicn" selectedIcon="ui://te1gxawovulycyico" controller="ctrlManorType" page="1"/>
-    </component>
-    <component id="n18_f203" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="840,339" size="106,36" group="n20_f203">
-      <Button title="确定" icon="ui://te1gxawom3dicyidb" controller="ctrlSpawnType" page="0"/>
-    </component>
-    <component id="n19_f203" name="btnVertical" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="834,290" size="117,34" group="n20_f203">
-      <Button title="纵向排列" titleColor="#365989" titleFontSize="16" icon="ui://te1gxawovulycyicn" selectedIcon="ui://te1gxawovulycyico" controller="ctrlManorType" page="2"/>
-    </component>
-    <group id="n20_f203" name="grpSelection" xy="803,155" size="180,239" group="n23_f203" advanced="true" collapsed="true">
-      <gearDisplay controller="ctrlSpawnType" pages="1"/>
-    </group>
-    <component id="n22_f203" name="btnOperation" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="866,94" size="117,34" group="n23_f203">
-      <Button title="回字型" titleColor="#365989" titleFontSize="16" icon="ui://te1gxawovulycyicn" controller="ctrlSpawnType" page="1"/>
-    </component>
-    <group id="n23_f203" name="grpDetail" xy="719,0" size="300,580" advanced="true" collapsed="true">
-      <relation target="" sidePair="right-right"/>
-    </group>
   </displayList>
 </component>

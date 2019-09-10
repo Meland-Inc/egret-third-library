@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="770,542" designImage="ui://i25v0ebkp3zl4w" designImageAlpha="0">
+  <controller name="ctrlOperation" pages="0,,1,,2," selected="0"/>
+  <controller name="ctrlShowHide" pages="0,hide,1,show" selected="0"/>
+  <displayList>
+    <image id="n26_f4tn" name="imgBG" src="p3zlcyidz" fileName="imgB/img_cm_cjk_1.png" pkg="te1gxawo" xy="0,0" size="770,542"/>
+    <loader id="n27_f4tn" name="ladIcon" xy="23,7" size="24,24" url="ui://4wr0elnxp3zl0" autoSize="true"/>
+    <text id="n28_f4tn" name="tfTitle" xy="57,8" size="89,24" fontSize="18" color="#ffffff" vAlign="middle" autoSize="none" bold="true" text="创建地图"/>
+    <text id="n29_f4tn" name="tfMapName" xy="58,72" size="77,29" fontSize="18" color="#365989" vAlign="middle" bold="true" text="地图名字"/>
+    <text id="n30_f4tn" name="tfManorType" xy="58,133" size="113,29" fontSize="18" color="#365989" bold="true" text="领地生成方式"/>
+    <image id="n31_f4tn" name="imgNameBG" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="144,71" size="178,24"/>
+    <text id="n32_f4tn" name="inpMapName" xy="149,73" size="166,21" alpha="0.6" input="true" fontSize="14" color="#ffffff" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text=""/>
+    <text id="n33_f4tn" name="tfMapSize" xy="445,71" size="77,29" fontSize="18" color="#365989" vAlign="bottom" bold="true" text="地图大小"/>
+    <image id="n34_f4tn" name="imgWidthBG" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="532,73" size="69,24"/>
+    <image id="n35_f4tn" name="imgHeightBG" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="641,73" size="69,24"/>
+    <text id="n36_f4tn" name="inpMapWidth" xy="535,74" size="63,21" alpha="0.6" input="true" restrict="0-9" keyboardType="4" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text=""/>
+    <text id="n37_f4tn" name="inpMapHeight" xy="643,74" size="66,22" alpha="0.6" input="true" restrict="0-9" keyboardType="4" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text=""/>
+    <image id="n38_f4tn" name="imgMutil" src="qlmti" fileName="img/img_stencil_c_1.png" xy="615,79"/>
+    <component id="n40_f4tn" name="btnCreateMap" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="454,471" size="106,36">
+      <Button title="创建" icon="ui://te1gxawom3dicyidb"/>
+    </component>
+    <component id="n41_f4tn" name="btnCancel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="606,470" size="106,37">
+      <Button title="取消" icon="ui://te1gxawom3dicyid9" page="0"/>
+    </component>
+    <component id="n42_f4tn" name="comSelectManorType" src="mwlih" fileName="com/comSelectManorTypeInCreate.xml" xy="58,160" controller="ctrlShowHide,1"/>
+  </displayList>
+</component>
