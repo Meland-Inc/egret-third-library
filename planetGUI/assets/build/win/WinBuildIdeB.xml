@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkjnb25p">
   <controller name="ctrlOperate" pages="" selected="-1"/>
-  <controller name="ctrlIdeMode" pages="0,create,1,move,2,code,3,attr" selected="2"/>
+  <controller name="ctrlIdeMode" pages="0,create,1,move,2,code,3,attr" selected="3"/>
   <displayList>
     <component id="n9_r0y9" name="comEntitySelect" src="yhf8t7n" fileName="Com/ComMapEntitySelectB.xml" xy="0,0" size="280,640" controller="ctrlState,1">
       <relation target="" sidePair="left-left,height-height"/>
@@ -18,7 +18,7 @@
       <gearDisplay controller="ctrlIdeMode" pages="3"/>
       <relation target="" sidePair="right-right,height-height"/>
     </component>
-    <list id="n35_7slt" name="lstIdeMode" xy="284,587" size="168,54" layout="row" overflow="scroll" defaultItem="ui://32ieekgujnb2t96">
+    <list id="n35_7slt" name="lstIdeMode" xy="484,587" size="168,54" layout="row" overflow="scroll" defaultItem="ui://32ieekgujnb2t96">
       <gearXY controller="ctrlIdeMode" pages="2" values="284,587" default="484,587"/>
       <relation target="" sidePair="bottom-bottom"/>
       <item title="创造" icon="ui://32ieekguuhu6t7x" name="create"/>
@@ -26,6 +26,6 @@
       <item title="代码块" icon="ui://32ieekguuhu6t7z" name="code"/>
       <item title="属性" icon="ui://32ieekguuhu6t80" name="attr"/>
     </list>
-    <component id="n38_si0u" name="comToolBar" src="zefit91" fileName="Com/ComIdeTopToolBar.xml" xy="205,0"/>
+    <component id="n38_si0u" name="comToolBar" src="zefit91" fileName="Com/ComIdeTopToolBar.xml" xy="195,0"/>
   </displayList>
 </component>

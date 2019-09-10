@@ -21,7 +21,7 @@
     <component id="n54_v3m6" name="btnBag" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="15,25" size="50,51" group="n55_v3m6">
       <Button icon="ui://te1gxawov3m6cyied"/>
     </component>
-    <list id="n56_v3m6" name="lstKeyboardIndex" xy="48,59" size="0,13" group="n55_v3m6" layout="flow_hz" overflow="scroll" colGap="40" defaultItem="ui://5hs1fuejv3m6cyiec">
+    <list id="n56_v3m6" name="lstKeyboardIndex" xy="48,59" size="0,13" group="n55_v3m6" touchable="false" layout="flow_hz" overflow="scroll" colGap="40" defaultItem="ui://5hs1fuejv3m6cyiec">
       <relation target="n45_x5ue" sidePair="rightext-right,left-left"/>
     </list>
     <group id="n55_v3m6" name="root" xy="0,0" size="79,79" advanced="true">
