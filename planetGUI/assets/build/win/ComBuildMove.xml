@@ -2,7 +2,9 @@
 <component size="84,641" designImage="ui://i25v0ebkjnb25p" designImageOffsetX="-1052">
   <controller name="ctrlEnable" pages="0,enable,1,disable" selected="0"/>
   <displayList>
-    <image id="n0_jm8l" name="n0" src="cw9mcyifj" fileName="imgB/img_cm_cbl_1.png" pkg="te1gxawo" xy="30,0" size="54,640"/>
+    <image id="n0_jm8l" name="n0" src="cw9mcyifj" fileName="imgB/img_cm_cbl_1.png" pkg="te1gxawo" xy="30,0" size="54,640">
+      <relation target="" sidePair="height-height"/>
+    </image>
     <image id="n1_jm8l" name="n1" src="7sltcyifx" fileName="imgB/img_cm_lk_1.png" pkg="te1gxawo" xy="0,573">
       <relation target="" sidePair="bottom-bottom"/>
     </image>
