@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" designImage="ui://i25v0ebkp3zl4y" designImageAlpha="6" designImageLayer="1">
+<component size="1136,640" designImage="ui://i25v0ebkp3zl4y" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlTemplateType" pages="0,map,1,manor,2,robot" selected="0"/>
   <displayList>
     <component id="n9_p3zl" name="comBG" src="p3zlcyidy" fileName="com/comCommonWinBgSimplified.xml" pkg="te1gxawo" xy="0,0">
@@ -17,13 +17,13 @@
     <component id="n13_v32m" name="btnShowMapTemplate" src="txgscyida" fileName="btn/rbtnCommonTab.xml" pkg="te1gxawo" xy="0,83">
       <Button checked="true" title="地图" controller="ctrlTemplateType" page="0"/>
     </component>
-    <component id="n14_v32m" name="btnShowManorTemplate" src="txgscyida" fileName="btn/rbtnCommonTab.xml" pkg="te1gxawo" xy="0,203">
+    <component id="n14_v32m" name="btnShowManorTemplate" src="txgscyida" fileName="btn/rbtnCommonTab.xml" pkg="te1gxawo" xy="0,203" locked="true" hideByEditor="true" visible="false">
       <Button title="机器人" controller="ctrlTemplateType" page="2"/>
     </component>
-    <component id="n15_v32m" name="btnShowRobotTemplate" src="txgscyida" fileName="btn/rbtnCommonTab.xml" pkg="te1gxawo" xy="0,143">
+    <component id="n15_v32m" name="btnShowRobotTemplate" src="txgscyida" fileName="btn/rbtnCommonTab.xml" pkg="te1gxawo" xy="0,143" locked="true" hideByEditor="true" visible="false">
       <Button title="领地" controller="ctrlTemplateType" page="1"/>
     </component>
-    <component id="n16_uic4" name="comEnterMapBlock" src="q8x4q" fileName="com/CommonLoading.xml" pkg="te1gxawo" xy="0,0" hideByEditor="true" visible="false">
+    <component id="n16_uic4" name="comEnterMapBlock" src="q8x4q" fileName="com/CommonLoading.xml" pkg="te1gxawo" xy="0,0" locked="true" hideByEditor="true" visible="false">
       <relation target="" sidePair="width-width,height-height"/>
       <Label title="进入地图中"/>
     </component>

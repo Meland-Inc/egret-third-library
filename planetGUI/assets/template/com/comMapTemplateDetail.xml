@@ -1,32 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="300,583">
+<component size="336,583" designImage="ui://i25v0ebkjeto5r" designImageOffsetX="-801" designImageOffsetY="-59" designImageAlpha="0">
+  <controller name="ctrlType" pages="0,config,1,custom" selected="0"/>
   <displayList>
-    <image id="n0_f4tn" name="imgDetailBg" src="f203cyie1" fileName="imgB/img_cm_xxk_1.png" pkg="te1gxawo" xy="0,0" size="300,583">
+    <image id="n0_f4tn" name="imgDetailBg" src="f203cyie1" fileName="imgB/img_cm_xxk_1.png" pkg="te1gxawo" xy="0,0" size="336,583">
       <relation target="" sidePair="height-height"/>
     </image>
-    <image id="n1_f4tn" name="imgInputBg" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="18,21" size="268,31" group="n18_f4tn"/>
-    <image id="n2_f4tn" name="imgPen" src="f203cyie2" fileName="imgB/img_cm_bjtb_2.png" pkg="te1gxawo" xy="259,29" group="n18_f4tn"/>
-    <text id="n3_f4tn" name="inpMapName" xy="26,22" size="210,29" group="n18_f4tn" alpha="0.6" input="true" fontSize="18" color="#ffffff" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="七桥问题地图"/>
-    <text id="n4_f4tn" name="tf" xy="14,164" size="77,29" group="n10_f4tn" fontSize="18" color="#365989" vAlign="bottom" bold="true" text="地图大小"/>
-    <image id="n5_f4tn" name="imgMutil" src="qlmti" fileName="img/img_stencil_c_1.png" xy="151,173" group="n10_f4tn"/>
-    <image id="n6_f4tn" name="imgWidthBG" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="95,167" size="53,24" group="n10_f4tn"/>
-    <image id="n7_f4tn" name="imgHeightBG" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="167,167" size="52,24" group="n10_f4tn"/>
-    <text id="n8_f4tn" name="inpMapWidth" xy="95,167" size="52,23" group="n10_f4tn" alpha="0.5" input="true" prompt="1920" restrict="0-9" keyboardType="4" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text="1000"/>
-    <text id="n9_f4tn" name="inpMapHeight" xy="167,167" size="52,23" group="n10_f4tn" alpha="0.6" input="true" prompt="1080" restrict="0-9" keyboardType="4" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text="1000"/>
-    <group id="n10_f4tn" name="grpEditMapSize" xy="14,164" size="205,29" group="n18_f4tn" advanced="true" collapsed="true"/>
-    <component id="n11_f4tn" name="btnCopy" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="33,504" size="106,36" group="n18_f4tn">
+    <image id="n1_f4tn" name="imgInputBg" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="18,21" size="285,31" group="n18_f4tn"/>
+    <image id="n2_f4tn" name="imgPen" src="f203cyie2" fileName="imgB/img_cm_bjtb_2.png" pkg="te1gxawo" xy="277,29" group="n18_f4tn"/>
+    <text id="n3_f4tn" name="inpMapName" xy="26,22" size="241,29" group="n18_f4tn" alpha="0.6" input="true" fontSize="18" color="#ffffff" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="七桥问题地图"/>
+    <text id="n4_f4tn" name="tf" xy="18,97" size="81,24" group="n18_f4tn" fontSize="18" color="#365989" vAlign="bottom" bold="true" text="地图大小"/>
+    <image id="n5_f4tn" name="imgMutil" src="qlmti" fileName="img/img_stencil_c_1.png" xy="113,159" group="n18_f4tn">
+      <gearDisplay controller="ctrlType" pages="1"/>
+    </image>
+    <image id="n6_f4tn" name="imgWidthBG" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="24,151" size="65,24" group="n18_f4tn">
+      <gearDisplay controller="ctrlType" pages="1"/>
+    </image>
+    <image id="n7_f4tn" name="imgHeightBG" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="144,148" size="68,24" group="n18_f4tn">
+      <gearDisplay controller="ctrlType" pages="1"/>
+    </image>
+    <text id="n8_f4tn" name="inpMapWidth" xy="24,151" size="64,23" group="n18_f4tn" alpha="0.5" input="true" prompt="1920" restrict="0-9" keyboardType="4" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text="1000">
+      <gearDisplay controller="ctrlType" pages="1"/>
+    </text>
+    <text id="n9_f4tn" name="inpMapHeight" xy="144,148" size="68,23" group="n18_f4tn" alpha="0.6" input="true" prompt="1080" restrict="0-9" keyboardType="4" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text="1000">
+      <gearDisplay controller="ctrlType" pages="1"/>
+    </text>
+    <component id="n14_f4tn" name="btnUpdateMap" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="238,84" size="66,40" group="n18_f4tn">
+      <gearDisplay controller="ctrlType" pages="1"/>
+      <gearXY controller="ctrlType" pages="0" values="238,84" default="238,139"/>
+      <Button title="更新" titleColor="#ffffff" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
+    </component>
+    <component id="n11_f4tn" name="btnCopy" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="113,525" size="106,36" group="n18_f4tn">
       <relation target="" sidePair="bottom-bottom"/>
       <Button title="复制地图" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
     </component>
-    <component id="n12_f4tn" name="btnDelete" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="167,504" size="106,37" group="n18_f4tn">
+    <component id="n12_f4tn" name="btnDelete" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="222,524" size="106,37" group="n18_f4tn">
       <relation target="" sidePair="bottom-bottom"/>
       <Button title="删除地图" titleFontSize="18" icon="ui://te1gxawom3dicyid9"/>
     </component>
-    <text id="n13_f4tn" name="tfManorGenerateType" xy="14,94" size="112,29" group="n18_f4tn" fontSize="18" color="#365989" vAlign="middle" autoSize="none" text="领地生成方式"/>
-    <component id="n14_f4tn" name="btnUpdateMap" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="222,158" size="66,40" group="n18_f4tn">
-      <Button title="更新" titleColor="#ffffff" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
+    <text id="n13_f4tn" name="tfManorGenerateType" xy="19,261" size="121,29" group="n18_f4tn" fontSize="18" color="#365989" vAlign="middle" autoSize="none" bold="true" text="领地生成方式">
+      <relation target="n14_f4tn" sidePair="top-top"/>
+    </text>
+    <component id="n19_jeto" name="btnPublish" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="5,525" size="106,36" group="n18_f4tn">
+      <relation target="" sidePair="bottom-bottom"/>
+      <Button title="发布地图" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
     </component>
-    <component id="n15_f4tn" name="comSelectManorType" src="mwlig" fileName="com/comSelectManorTypeInList.xml" xy="117,95" group="n18_f4tn"/>
-    <group id="n18_f4tn" name="root" xy="14,21" size="283,520" advanced="true" collapsed="true"/>
+    <text id="n21_jeto" name="tfIsOpen" xy="19,147" size="121,29" group="n18_f4tn" fontSize="18" color="#365989" vAlign="middle" autoSize="none" bold="true" text="是否开源">
+      <relation target="n14_f4tn" sidePair="top-top"/>
+    </text>
+    <text id="n22_jeto" name="tfIsCanEdit" xy="19,201" size="147,29" group="n18_f4tn" fontSize="18" color="#365989" vAlign="middle" autoSize="none" bold="true" text="编辑器是否可用">
+      <relation target="n14_f4tn" sidePair="top-top"/>
+    </text>
+    <component id="n23_jeto" name="btnIsOpen" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="225,143" size="80,34" group="n18_f4tn">
+      <relation target="n14_f4tn" sidePair="top-top"/>
+      <Button checked="true" icon="ui://te1gxawovulycyicl" selectedIcon="ui://te1gxawovulycyick"/>
+    </component>
+    <component id="n24_jeto" name="btnIsCanEdit" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="224,198" size="80,34" group="n18_f4tn">
+      <relation target="n14_f4tn" sidePair="top-top"/>
+      <Button checked="true" icon="ui://te1gxawovulycyicl" selectedIcon="ui://te1gxawovulycyick"/>
+    </component>
+    <component id="n15_f4tn" name="comSelectManorType" src="ssksq" fileName="com/comSelectManorTypeInList.xml" xy="131,259" group="n18_f4tn">
+      <relation target="n14_f4tn" sidePair="top-top"/>
+    </component>
+    <component id="n20_jeto" name="comSelectMapSize" src="mwlig" fileName="com/comSelectMapSizeInLIst.xml" xy="111,93" group="n18_f4tn" locked="true"/>
+    <group id="n18_f4tn" name="root" xy="5,21" size="323,546" advanced="true"/>
   </displayList>
 </component>
