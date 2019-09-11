@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="981,587" overflow="hidden" scroll="both" scrollBarRes="ui://rnqj1l77j7co5v,ui://rnqj1l77j7co5x" adaptationTest="FitSize">
   <controller name="codeType" pages="0,robot,1,entity" selected="0"/>
-  <controller name="ctrlIsHide" pages="0,show,1,hide" selected="0"/>
   <controller name="ctrlShowType" pages="0,scratch,1,python" selected="0"/>
   <controller name="ctrlRecordHint" pages="0,none,1,left,2,right,3,all" selected="0"/>
   <displayList>
@@ -15,11 +14,6 @@
     <component id="n22_8tz6" name="btnRedo" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="129,11" size="85,87">
       <relation target="" sidePair="left-left,top-top"/>
       <Button icon="ui://rnqj1l77tcu29r"/>
-    </component>
-    <component id="n30_kvpv" name="btnDoor" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="240,208" size="49,98" locked="true" hideByEditor="true" visible="false">
-      <gearIcon controller="ctrlIsHide" pages="0,1" values="ui://rnqj1l77gg8mtgq|ui://rnqj1l77gg8mtgr"/>
-      <relation target="" sidePair="middle-middle,left-left"/>
-      <Button icon="ui://rnqj1l77gg8mtgq"/>
     </component>
     <component id="n31_kvpv" name="btnReset" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="753,374" size="20,20" locked="true" hideByEditor="true" visible="false">
       <relation target="n9_j7co" sidePair="right-right,bottom-bottom"/>
