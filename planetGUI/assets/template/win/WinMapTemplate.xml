@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebkp3zl4y" designImageAlpha="6" designImageLayer="1">
-  <controller name="ctrlTemplateType" pages="0,map,1,manor,2,robot" selected="0"/>
+  <controller name="ctrlMapList" pages="0,all,1,aboutMe" selected="0">
+    <action type="change_page" fromPage="" toPage="0" objectId="n12_p3zl" controller="ctrlList" targetPage="0"/>
+    <action type="change_page" fromPage="" toPage="1" objectId="n12_p3zl" controller="ctrlList" targetPage="1"/>
+  </controller>
   <displayList>
     <component id="n9_p3zl" name="comBG" src="p3zlcyidy" fileName="com/comCommonWinBgSimplified.xml" pkg="te1gxawo" xy="0,0">
       <relation target="" sidePair="width-width,height-height"/>
       <Label title="创作模板" icon="ui://4wr0elnxp3zl1"/>
     </component>
-    <component id="n12_p3zl" name="comMapTemplate" src="f4tnn" fileName="com/ComMapTemplate.xml" xy="0,0" size="1136,640" controller="ctrlView,0">
-      <gearDisplay controller="ctrlTemplateType" pages="0"/>
+    <component id="n12_p3zl" name="comMapTemplate" src="f4tnn" fileName="com/ComMapTemplate.xml" xy="0,0" size="1136,640" controller="ctrlView,0,ctrlList,0">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
     <component id="n11_p3zl" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1080,9" size="42,43">
@@ -15,13 +17,10 @@
       <Button icon="ui://te1gxawonl0rcyica"/>
     </component>
     <component id="n13_v32m" name="btnShowMapTemplate" src="txgscyida" fileName="btn/rbtnCommonTab.xml" pkg="te1gxawo" xy="0,83">
-      <Button checked="true" title="地图" controller="ctrlTemplateType" page="0"/>
-    </component>
-    <component id="n14_v32m" name="btnShowManorTemplate" src="txgscyida" fileName="btn/rbtnCommonTab.xml" pkg="te1gxawo" xy="0,203">
-      <Button title="机器人" controller="ctrlTemplateType" page="2"/>
+      <Button checked="true" title="地图列表" titleFontSize="16" controller="ctrlMapList" page="0"/>
     </component>
     <component id="n15_v32m" name="btnShowRobotTemplate" src="txgscyida" fileName="btn/rbtnCommonTab.xml" pkg="te1gxawo" xy="0,143">
-      <Button title="领地" controller="ctrlTemplateType" page="1"/>
+      <Button title="我的地图" titleFontSize="16" controller="ctrlMapList" page="1"/>
     </component>
     <component id="n16_uic4" name="comEnterMapBlock" src="q8x4q" fileName="com/CommonLoading.xml" pkg="te1gxawo" xy="0,0" hideByEditor="true" visible="false">
       <relation target="" sidePair="width-width,height-height"/>
