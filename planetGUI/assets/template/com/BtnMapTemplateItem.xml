@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="142,156" extention="Button" designImage="ui://i25v0ebkp3zl4z" designImageOffsetX="-297" designImageOffsetY="-102" designImageAlpha="0" designImageLayer="1">
+<component size="142,156" extention="Button" designImage="ui://i25v0ebkssks5t" designImageOffsetX="-297" designImageOffsetY="-102" designImageAlpha="0" designImageLayer="1">
   <controller name="button" pages="0,up,1,down" selected="0"/>
-  <controller name="ctrlMode" pages="1,normal,0,addBtn" selected="1"/>
+  <controller name="ctrlMode" pages="1,normal,0,addBtn" selected="0"/>
   <displayList>
     <image id="n0_uov9" name="imgBg" src="p3zl5" fileName="img/img_stencil_dt_4.png" xy="0,4" group="n7_o7or"/>
-    <image id="n2_uov9" name="imgSelecte" src="p3zl6" fileName="img/img_stencil_dt_5.png" xy="1,4" group="n7_o7or">
-      <gearDisplay controller="button" pages="1,3"/>
-    </image>
     <image id="n1_uov9" name="mapBg" src="p3zl7" fileName="img/img_stencil_dt_6.png" xy="7,13" group="n7_o7or"/>
     <loader id="n6_uov9" name="ladMap" xy="7,13" size="128,100" group="n7_o7or" fill="scale" shrinkOnly="true"/>
     <text id="n3_uov9" name="tfName" xy="5,114" size="130,37" group="n7_o7or" fontSize="14" color="#365989" align="center" vAlign="middle" autoSize="none" text="七桥问题地图"/>
-    <component id="n5_uov9" name="btnEnterMap" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="18,57" size="106,36" group="n7_o7or">
-      <gearDisplay controller="button" pages="1,2,3"/>
-      <Button title="进入地图" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
-    </component>
     <group id="n7_o7or" name="root" xy="0,4" size="142,152" advanced="true">
       <gearDisplay controller="ctrlMode" pages="1"/>
     </group>
