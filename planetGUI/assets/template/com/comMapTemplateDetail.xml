@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="336,583" designImage="ui://i25v0ebkjeto5r" designImageOffsetX="-801" designImageOffsetY="-59" designImageAlpha="0">
   <controller name="ctrlType" pages="0,config,1,custom" selected="0"/>
+  <controller name="ctrlIsPublish" pages="0,false,1,true" selected="1"/>
   <displayList>
     <image id="n0_f4tn" name="imgDetailBg" src="f203cyie1" fileName="imgB/img_cm_xxk_1.png" pkg="te1gxawo" xy="0,0" size="336,583">
       <relation target="" sidePair="height-height"/>
@@ -41,8 +42,9 @@
       <relation target="n14_f4tn" sidePair="top-top"/>
     </text>
     <component id="n19_jeto" name="btnPublish" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="5,525" size="106,36" group="n18_f4tn">
+      <gearText controller="ctrlIsPublish" pages="1" values="更新地图" default="发布地图"/>
       <relation target="" sidePair="bottom-bottom"/>
-      <Button title="发布地图" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
+      <Button title="更新地图" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
     </component>
     <text id="n21_jeto" name="tfIsOpen" xy="19,147" size="121,29" group="n18_f4tn" fontSize="18" color="#365989" vAlign="middle" autoSize="none" bold="true" text="是否开源">
       <relation target="n14_f4tn" sidePair="top-top"/>
@@ -61,7 +63,7 @@
     <component id="n15_f4tn" name="comSelectManorType" src="ssksq" fileName="com/comSelectManorTypeInList.xml" xy="131,259" group="n18_f4tn">
       <relation target="n14_f4tn" sidePair="top-top"/>
     </component>
-    <component id="n20_jeto" name="comSelectMapSize" src="mwlig" fileName="com/comSelectMapSizeInLIst.xml" xy="111,93" group="n18_f4tn" locked="true"/>
+    <component id="n20_jeto" name="comSelectMapSize" src="mwlig" fileName="com/comSelectMapSizeInLIst.xml" xy="111,93" group="n18_f4tn" locked="true" controller="ctrlMapSize,0"/>
     <group id="n18_f4tn" name="root" xy="5,21" size="323,546" advanced="true"/>
   </displayList>
 </component>
