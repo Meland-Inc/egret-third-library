@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="298,104" opaque="false">
+  <controller name="ctrlOperate" pages="0,edit,1,subscribe,2,enter" selected="2"/>
+  <displayList>
+    <image id="n0_l9al" name="imgSelecte" src="p3zl6" fileName="img/img_stencil_dt_5.png" xy="0,4" size="295,100">
+      <gearSize controller="ctrlOperate" pages="0,1,2" values="142,152,1,1|295,100,1,1|295,100,1,1"/>
+    </image>
+    <component id="n1_l9al" name="btnOperate" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="17,32" size="106,36">
+      <gearText controller="ctrlOperate" pages="1" values="订阅地图" default="编辑地图"/>
+      <relation target="" sidePair="middle-middle"/>
+      <Button title="编辑地图" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
+    </component>
+  </displayList>
+  <relation target="n0_l9al" sidePair="width-width,height-height"/>
+</component>
