@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="381,640" designImage="ui://i25v0ebkjnb25o" designImageOffsetX="-755">
-  <controller name="ctrlState" pages="1,open,0,fold" selected="0"/>
+<component size="381,640" designImage="ui://i25v0ebkjnb25o" designImageOffsetX="-755" designImageAlpha="0">
+  <controller name="ctrlState" exported="true" pages="1,open,0,fold" selected="0"/>
   <controller name="ctrlEnable" pages="0,enable,1,disable" selected="0"/>
   <displayList>
+    <graph id="n19_n83g" name="n19" xy="0,0" size="381,640" visible="false" alpha="0" touchable="false" type="rect">
+      <gearXY controller="ctrlState" pages="0" values="0,0" default="0,0"/>
+      <gearSize controller="ctrlState" pages="0" values="76,640,1,1" default="381,640,1,1"/>
+    </graph>
     <image id="n0_7slt" name="n0" src="nl0rcyic7" fileName="imgB/bg_cm_1.png" pkg="te1gxawo" xy="76,0" size="305,640" group="n16_jm8l">
       <relation target="" sidePair="height-height"/>
     </image>
@@ -111,7 +115,8 @@
       <Button title="取消" titleFontSize="14" icon="ui://32ieekguzefit8v"/>
     </component>
     <group id="n17_jm8l" name="grpOperate" xy="0,0" size="76,640" advanced="true" collapsed="true">
-      <gearXY controller="ctrlState" pages="0" values="305,0" default="0,0"/>
+      <gearXY controller="ctrlState" pages="0" values="0,0" default="0,0"/>
     </group>
   </displayList>
+  <relation target="n19_n83g" sidePair="width-width"/>
 </component>
