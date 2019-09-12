@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="282,48">
+  <displayList>
+    <image id="n0_ssks" name="n0" src="ssksz" fileName="img/img_stencil_fj_1.png" xy="0,0" size="282,48" alpha="0.59"/>
+    <text id="n1_ssks" name="tfText" xy="13,12" size="43,24" fontSize="18" color="#365989" vAlign="middle" bold="true" text="房间"/>
+    <text id="n3_ssks" name="tfText" xy="52,12" size="14,24" fontSize="18" color="#365989" vAlign="middle" bold="true" text="1"/>
+    <component id="n4_ssks" name="btnEnterMap" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="205,4" size="66,40">
+      <Button title="加入" titleColor="#ffffff" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
+    </component>
+  </displayList>
+</component>

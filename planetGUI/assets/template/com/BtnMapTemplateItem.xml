@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="142,156" extention="Button" designImage="ui://i25v0ebkp3zl4z" designImageOffsetX="-297" designImageOffsetY="-102" designImageAlpha="0" designImageLayer="1">
   <controller name="button" pages="0,up,1,down" selected="0"/>
-  <controller name="ctrlMode" pages="1,normal,0,addBtn" selected="0"/>
+  <controller name="ctrlMode" pages="1,normal,0,addBtn" selected="1"/>
   <displayList>
     <image id="n0_uov9" name="imgBg" src="p3zl5" fileName="img/img_stencil_dt_4.png" xy="0,4" group="n7_o7or"/>
     <image id="n2_uov9" name="imgSelecte" src="p3zl6" fileName="img/img_stencil_dt_5.png" xy="1,4" group="n7_o7or">
@@ -14,7 +14,7 @@
       <gearDisplay controller="button" pages="1,2,3"/>
       <Button title="进入地图" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
     </component>
-    <group id="n7_o7or" name="root" xy="0,4" size="142,152" advanced="true" collapsed="true">
+    <group id="n7_o7or" name="root" xy="0,4" size="142,152" advanced="true">
       <gearDisplay controller="ctrlMode" pages="1"/>
     </group>
     <image id="n8_lls7" name="imgAdd" src="p3zl2" fileName="img/img_stencil_dt_1.png" xy="0,6" pivot="0.5,0.5">
