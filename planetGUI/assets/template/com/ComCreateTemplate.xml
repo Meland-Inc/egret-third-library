@@ -40,7 +40,7 @@
       <Button checked="true" icon="ui://te1gxawovulycyicl" selectedIcon="ui://te1gxawovulycyick"/>
     </component>
     <text id="n48_ssks" name="tfMapPrototype" xy="56,243" size="121,29" fontSize="18" color="#365989" vAlign="middle" autoSize="none" bold="true" text="地图模板"/>
-    <list id="n55_ssks" name="lstPrototype" xy="58,276" size="387,114" layout="row" overflow="scroll" colGap="11" defaultItem="ui://4wr0elnxssksw">
+    <list id="n55_ssks" name="lstPrototype" xy="58,276" size="387,114" layout="row" colGap="11" defaultItem="ui://4wr0elnxssksw">
       <item/>
       <item/>
       <item/>
