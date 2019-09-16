@@ -10,6 +10,7 @@
     <loader id="n29_ssks" name="ladMap" xy="152,58" size="152,109" group="n32_x8d1"/>
     <list id="n30_ssks" name="lstRoom" xy="22,177" size="308,276" group="n32_x8d1" selectionMode="none" overflow="scroll" scrollBarFlags="6" scrollBar="visible" margin="8,0,0,0" scrollBarRes="ui://rnqj1l77j7co5v," lineGap="6" defaultItem="ui://4wr0elnxssksy">
       <relation target="n31_ssks" sidePair="bottomext-top"/>
+      <relation target="n28_ssks" sidePair="top-top"/>
       <item/>
       <item/>
       <item/>

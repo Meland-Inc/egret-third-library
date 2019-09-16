@@ -16,7 +16,7 @@
     </loader>
     <image id="n1_skn6" name="icon" src="skn6cyidw" fileName="img/icon_main_xsgl_2.png" xy="904,12" group="n13_hbdr"/>
     <text id="n2_skn6" name="title" xy="946,13" size="77,29" group="n13_hbdr" fontSize="18" color="#ffffff" vAlign="bottom" text="学生管理"/>
-    <component id="n4_skn6" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="842,13" size="33,27" group="n13_hbdr">
+    <component id="n4_skn6" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="880,13" size="33,27" group="n13_hbdr" scale="-1,1">
       <Button icon="ui://te1gxawoskn6cyido" controller="ctrlStatus" page="0"/>
     </component>
     <image id="n5_skn6" name="inputBg" src="skn6cyidn" fileName="imgB/img_cm_xsgl_4.png" pkg="te1gxawo" xy="903,50" size="214,28" group="n13_hbdr"/>
