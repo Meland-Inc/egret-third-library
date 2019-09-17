@@ -20,7 +20,7 @@
     <component id="n47_o3c2" name="templateSelector" src="l9al11" fileName="com/templateSelector.xml" xy="31,46" hideByEditor="true" visible="false">
       <gearDisplay controller="ctrlList" pages=""/>
     </component>
-    <component id="n45_f4tn" name="comDetail" src="f4tno" fileName="com/comMapTemplateDetail.xml" xy="682,0">
+    <component id="n45_f4tn" name="comDetail" src="f4tno" fileName="com/comMapTemplateDetail.xml" xy="682,0" hideByEditor="true">
       <relation target="" sidePair="height-height,right-right"/>
     </component>
     <component id="n48_7dav" name="comMapTemplateLobby" src="ssksx" fileName="com/comMapTemplateLobby.xml" xy="682,0">

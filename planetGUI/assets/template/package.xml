@@ -32,7 +32,7 @@
     <image id="ssksu" name="img_stencil_ld_2.png" path="/img/"/>
     <image id="ssksv" name="img_stencil_ld_4.png" path="/img/" scale="9grid" scale9grid="25,25,50,50"/>
     <component id="ssksw" name="BtnMapPrototypeItem.xml" path="/btn/"/>
-    <component id="ssksx" name="comMapTemplateLobby.xml" path="/com/"/>
+    <component id="ssksx" name="comMapTemplateLobby.xml" path="/com/" exported="true"/>
     <component id="ssksy" name="comRoom.xml" path="/com/"/>
     <image id="ssksz" name="img_stencil_fj_1.png" path="/img/" scale="9grid" scale9grid="26,12,52,24"/>
     <image id="ssks10" name="img_stencil_fj_2.png" path="/img/"/>
