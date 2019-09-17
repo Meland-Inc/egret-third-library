@@ -6,7 +6,7 @@
     <loader id="n27_f4tn" name="ladIcon" xy="23,7" size="24,24" url="ui://4wr0elnxp3zl0" autoSize="true"/>
     <text id="n28_f4tn" name="tfTitle" xy="57,8" size="89,24" fontSize="18" color="#ffffff" vAlign="middle" autoSize="none" bold="true" text="创建地图"/>
     <text id="n29_f4tn" name="tfMapName" xy="58,62" size="81,24" fontSize="18" color="#365989" vAlign="middle" bold="true" text="地图名字"/>
-    <text id="n30_f4tn" name="tfManorType" xy="57,415" size="119,24" fontSize="18" color="#365989" bold="true" text="领地生成方式"/>
+    <text id="n30_f4tn" name="tfManorType" xy="57,381" size="119,24" fontSize="18" color="#365989" bold="true" text="领地生成方式"/>
     <image id="n31_f4tn" name="imgNameBG" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="144,61" size="178,24"/>
     <text id="n32_f4tn" name="inpMapName" xy="149,63" size="166,21" alpha="0.6" input="true" fontSize="14" color="#ffffff" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text=""/>
     <text id="n33_f4tn" name="tfMapSize" xy="57,110" size="81,24" fontSize="18" color="#365989" vAlign="bottom" bold="true" text="地图大小"/>
@@ -40,12 +40,8 @@
       <Button checked="true" icon="ui://te1gxawovulycyicl" selectedIcon="ui://te1gxawovulycyick"/>
     </component>
     <text id="n48_ssks" name="tfMapPrototype" xy="56,243" size="121,29" fontSize="18" color="#365989" vAlign="middle" autoSize="none" bold="true" text="地图模板"/>
-    <list id="n55_ssks" name="lstPrototype" xy="58,276" size="387,114" layout="row" colGap="11" defaultItem="ui://4wr0elnxssksw">
-      <item/>
-      <item/>
-      <item/>
-    </list>
-    <component id="n42_f4tn" name="comSelectManorType" src="mwlih" fileName="com/comSelectManorTypeInCreate.xml" xy="186,395" controller="ctrlShowHide,1"/>
-    <component id="n47_ssks" name="comSelectMapSize" src="mwlig" fileName="com/comSelectMapSizeInLIst.xml" xy="121,105" controller="ctrlMapSize,0"/>
+    <component id="n55_ssks" name="comSelectMapPrototype" src="n08cn18" fileName="com/comSelectMapPrototype.xml" xy="155,243" size="387,114" controller="ctrlShowHide,1"/>
+    <component id="n42_f4tn" name="comSelectManorType" src="mwlih" fileName="com/comSelectManorTypeInCreate.xml" xy="190,383" controller="ctrlShowHide,1"/>
+    <component id="n47_ssks" name="comSelectMapSize" src="mwlig" fileName="com/comSelectMapSizeInLIst.xml" xy="122,105" controller="ctrlMapSize,0"/>
   </displayList>
 </component>

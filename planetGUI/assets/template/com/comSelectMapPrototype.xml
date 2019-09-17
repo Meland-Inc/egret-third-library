@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="120,109" opaque="false">
+  <controller name="ctrlShowHide" exported="true" pages="1,hide,0,show" selected="1"/>
+  <displayList>
+    <component id="n9_mwli" name="btnOperation" src="ssksw" fileName="btn/BtnMapPrototypeItem.xml" xy="0,0" size="120,109" touchable="false">
+      <Button titleColor="#365989" titleFontSize="16"/>
+    </component>
+    <component id="n15_n08c" name="btnClick" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="0,0" size="120,109">
+      <Button controller="ctrlShowHide" page="0"/>
+    </component>
+    <image id="n0_mwli" name="imgBg" src="vulycyicq" fileName="imgB/btn_cm_xzl_4.png" pkg="te1gxawo" xy="142,-122" size="403,352" group="n10_mwli"/>
+    <text id="n1_mwli" name="tfOperation1" xy="292,-112" size="101,23" group="n10_mwli" fontSize="16" color="#365989" text="选择地图模板"/>
+    <image id="n2_mwli" name="imgPoint" src="vulycyicr" fileName="imgB/btn_cm_xzl_5.png" pkg="te1gxawo" xy="165,-109" group="n10_mwli"/>
+    <component id="n5_mwli" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="290,172" size="106,36" group="n10_mwli">
+      <relation target="n0_mwli" sidePair="bottom-bottom"/>
+      <Button title="确定" icon="ui://te1gxawom3dicyidb" controller="ctrlShowHide" page="1"/>
+    </component>
+    <list id="n14_n08c" name="lstPrototype" xy="152,-71" size="381,228" group="n10_mwli" layout="flow_hz" overflow="scroll" colGap="10" lineItemCount="3" defaultItem="ui://4wr0elnxssksw" autoClearItems="true">
+      <relation target="n0_mwli" sidePair="bottomext-bottom"/>
+      <item title="45" icon="ui://4wr0elnxssksu" name="123"/>
+      <item title="65" icon="ui://4wr0elnxsskss" name="234"/>
+      <item title="45" icon="ui://4wr0elnxsskst" name="345"/>
+      <item title="123"/>
+      <item title="5420"/>
+      <item title=".0"/>
+      <item title="7854"/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n10_mwli" name="root" xy="142,-122" size="403,352" advanced="true">
+      <gearDisplay controller="ctrlShowHide" pages="0"/>
+    </group>
+  </displayList>
+</component>
