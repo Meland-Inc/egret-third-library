@@ -32,7 +32,7 @@
     <image id="ssksu" name="img_stencil_ld_2.png" path="/img/"/>
     <image id="ssksv" name="img_stencil_ld_4.png" path="/img/" scale="9grid" scale9grid="25,25,50,50"/>
     <component id="ssksw" name="BtnMapPrototypeItem.xml" path="/btn/"/>
-    <component id="ssksx" name="comMapTemplateLobby.xml" path="/com/" exported="true"/>
+    <component id="ssksx" name="comMapTemplateLobby.xml" path="/com/"/>
     <component id="ssksy" name="comRoom.xml" path="/com/"/>
     <image id="ssksz" name="img_stencil_fj_1.png" path="/img/" scale="9grid" scale9grid="26,12,52,24"/>
     <image id="ssks10" name="img_stencil_fj_2.png" path="/img/"/>
@@ -43,8 +43,11 @@
     <image id="o3c214" name="img_stencil_dty_2.png" path="/img/"/>
     <image id="o3c215" name="img_stencil_dty_3.png" path="/img/"/>
     <image id="10gnn16" name="icon_stencil_bq_1.png" path="/img/"/>
-    <image id="n08cn17" name="img_stencil_gdt.png" path="/img/"/>
+    <image id="n08cn17" name="img_stencil_gdt.png" path="/img/" scale="9grid" scale9grid="2,6,4,86"/>
     <component id="n08cn18" name="comSelectMapPrototype.xml" path="/com/"/>
+    <component id="n08cn1b" name="ScrollBarV_gripB.xml" path="/sld/"/>
+    <image id="n08cn1c" name="img_code_gdt_2(1).png" path="/sld/" scale="9grid" scale9grid="2,23,4,46"/>
+    <component id="n08cn1d" name="ScrollBarVB.xml" path="/sld/" exported="true"/>
   </resources>
   <publish name="template"/>
 </packageDescription>
