@@ -8,7 +8,7 @@
     <image id="p3zl4" name="img_stencil_dt_3.png" path="/img/"/>
     <image id="p3zl5" name="img_stencil_dt_4.png" path="/img/" scale="9grid" scale9grid="36,38,72,76"/>
     <image id="p3zl6" name="img_stencil_dt_5.png" path="/img/" scale="9grid" scale9grid="35,38,70,76"/>
-    <image id="p3zl7" name="img_stencil_dt_6.png" path="/img/"/>
+    <image id="p3zl7" name="img_stencil_dt_6.png" path="/img/" scale="9grid" scale9grid="32,25,64,50"/>
     <component id="p3zl9" name="WinMapTemplate.xml" path="/win/" exported="true"/>
     <component id="hams0" name="ComMapTemplateList.xml" path="/com/" exported="true"/>
     <component id="hams1" name="BtnMapTemplateItemDetail.xml" path="/com/"/>
@@ -43,6 +43,7 @@
     <image id="o3c214" name="img_stencil_dty_2.png" path="/img/"/>
     <image id="o3c215" name="img_stencil_dty_3.png" path="/img/"/>
     <image id="10gnn16" name="icon_stencil_bq_1.png" path="/img/"/>
+    <component id="lj6jn17" name="comLstTitle.xml" path="/com/"/>
   </resources>
   <publish name="template"/>
 </packageDescription>

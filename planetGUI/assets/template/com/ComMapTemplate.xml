@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkp3zl4w" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlView" exported="true" pages="0,list,1,create" selected="0"/>
-  <controller name="ctrlList" exported="true" pages="0,all,1,aboutMe" selected="0">
+  <controller name="ctrlView" exported="true" pages="0,list,1,create" selected="1"/>
+  <controller name="ctrlList" exported="true" pages="0,all,1,aboutMe" selected="1">
     <action type="change_page" fromPage="" toPage="0" objectId="n116_f4tn" controller="ctrlList" targetPage="1"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n116_f4tn" controller="ctrlList" targetPage="0"/>
   </controller>
   <displayList>
-    <component id="n116_f4tn" name="comMapList" src="hams0" fileName="com/ComMapTemplateList.xml" xy="116,58" size="1021,583" controller="ctrlList,1">
+    <component id="n116_f4tn" name="comMapList" src="hams0" fileName="com/ComMapTemplateList.xml" xy="116,58" size="1021,583" controller="ctrlList,0">
       <gearDisplay controller="ctrlView" pages="0"/>
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </component>
-    <component id="n117_f4tn" name="comCreateMap" src="f4tnp" fileName="com/ComCreateTemplate.xml" xy="223,82">
+    <component id="n117_f4tn" name="comCreateMap" src="f4tnp" fileName="com/ComCreateTemplate.xml" xy="0,0">
       <gearDisplay controller="ctrlView" pages="1"/>
-      <relation target="" sidePair="center-center,middle-middle"/>
+      <relation target="" sidePair="width-width,height-height"/>
     </component>
   </displayList>
 </component>

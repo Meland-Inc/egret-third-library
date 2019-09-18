@@ -9,18 +9,18 @@
       <relation target="" sidePair="width-width,height-height"/>
       <Label title="创作模板" icon="ui://4wr0elnxp3zl1"/>
     </component>
+    <component id="n13_v32m" name="btnShowMapTemplate" src="txgscyida" fileName="btn/rbtnCommonTab.xml" pkg="te1gxawo" xy="0,83">
+      <Button checked="true" title="地图列表" titleFontSize="16" controller="ctrlMapList" page="0"/>
+    </component>
+    <component id="n15_v32m" name="btnShowRobotTemplate" src="txgscyida" fileName="btn/rbtnCommonTab.xml" pkg="te1gxawo" xy="0,143">
+      <Button title="我的地图" titleFontSize="16" controller="ctrlMapList" page="1"/>
+    </component>
     <component id="n12_p3zl" name="comMapTemplate" src="f4tnn" fileName="com/ComMapTemplate.xml" xy="0,0" size="1136,640" controller="ctrlView,0,ctrlList,0">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
     <component id="n11_p3zl" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1080,9" size="42,43">
       <relation target="" sidePair="top-top,right-right"/>
       <Button icon="ui://te1gxawonl0rcyica"/>
-    </component>
-    <component id="n13_v32m" name="btnShowMapTemplate" src="txgscyida" fileName="btn/rbtnCommonTab.xml" pkg="te1gxawo" xy="0,83">
-      <Button checked="true" title="地图列表" titleFontSize="16" controller="ctrlMapList" page="0"/>
-    </component>
-    <component id="n15_v32m" name="btnShowRobotTemplate" src="txgscyida" fileName="btn/rbtnCommonTab.xml" pkg="te1gxawo" xy="0,143">
-      <Button title="我的地图" titleFontSize="16" controller="ctrlMapList" page="1"/>
     </component>
     <component id="n16_uic4" name="comEnterMapBlock" src="q8x4q" fileName="com/CommonLoading.xml" pkg="te1gxawo" xy="0,0" locked="true" hideByEditor="true" visible="false">
       <relation target="" sidePair="width-width,height-height"/>

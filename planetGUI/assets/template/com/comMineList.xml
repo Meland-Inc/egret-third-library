@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="606,615" overflow="scroll">
+<component size="606,615" overflow="scroll" scrollBarFlags="128">
   <displayList>
     <text id="n2_j0td" name="tfSelfCreation" xy="3,2" size="77,29" group="n9_j0td" fontSize="18" color="#365989" bold="true" text="我创建的"/>
     <list id="n1_j0td" name="lstSelfCreate" xy="0,42" size="606,160" group="n9_j0td" layout="flow_hz" overflow="scroll" scrollBarFlags="128" lineGap="20" colGap="10" defaultItem="ui://4wr0elnxo3c212" autoClearItems="true">
@@ -18,9 +18,7 @@
       <item/>
       <item/>
     </list>
-    <group id="n7_j0td" name="grpEditable" xy="0,214" size="606,197" advanced="true" collapsed="true">
-      <relation target="n1_j0td" sidePair="top-bottom"/>
-    </group>
+    <group id="n7_j0td" name="grpEditable" xy="0,214" size="606,197" advanced="true" collapsed="true"/>
     <text id="n5_j0td" name="tfSubscribed" xy="3,426" size="77,29" group="n8_j0td" fontSize="18" color="#365989" bold="true" text="我订阅的"/>
     <list id="n6_j0td" name="lstSubscribed" xy="0,466" size="606,155" group="n8_j0td" layout="flow_hz" overflow="scroll" scrollBarFlags="128" lineGap="20" colGap="10" defaultItem="ui://4wr0elnxhams1" autoClearItems="true">
       <relation target="" sidePair="width-width"/>
@@ -29,8 +27,6 @@
       <item/>
       <item/>
     </list>
-    <group id="n8_j0td" name="grpSubscribed" xy="0,426" size="606,195" advanced="true" collapsed="true">
-      <relation target="n4_j0td" sidePair="top-bottom"/>
-    </group>
+    <group id="n8_j0td" name="grpSubscribed" xy="0,426" size="606,195" advanced="true" collapsed="true"/>
   </displayList>
 </component>

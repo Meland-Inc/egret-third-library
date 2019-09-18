@@ -5,7 +5,7 @@
     <image id="n24_f4tn" name="imgBgLst" src="nl0rcyicc" fileName="imgB/img_cm_bg_dk_1.png" pkg="te1gxawo" xy="0,20" size="676,541">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <list id="n25_f4tn" name="lstAll" xy="30,46" size="647,488" layout="flow_hz" overflow="scroll" lineGap="20" colGap="10" defaultItem="ui://4wr0elnxhams1" autoClearItems="true">
+    <list id="n25_f4tn" name="lstAll" xy="30,46" size="647,488" layout="flow_hz" overflow="scroll" scrollBarFlags="128" lineGap="20" colGap="10" defaultItem="ui://4wr0elnxhams1" autoClearItems="true">
       <gearDisplay controller="ctrlList" pages="1"/>
       <relation target="" sidePair="width-width,height-height"/>
       <item/>
@@ -20,7 +20,7 @@
     <component id="n47_o3c2" name="templateSelector" src="l9al11" fileName="com/templateSelector.xml" xy="31,46" hideByEditor="true" visible="false">
       <gearDisplay controller="ctrlList" pages=""/>
     </component>
-    <component id="n45_f4tn" name="comDetail" src="f4tno" fileName="com/comMapTemplateDetail.xml" xy="682,0" hideByEditor="true">
+    <component id="n45_f4tn" name="comDetail" src="f4tno" fileName="com/comMapTemplateDetail.xml" xy="682,0">
       <relation target="" sidePair="height-height,right-right"/>
     </component>
     <component id="n48_7dav" name="comMapTemplateLobby" src="ssksx" fileName="com/comMapTemplateLobby.xml" xy="682,0">
