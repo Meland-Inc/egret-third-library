@@ -17,37 +17,33 @@
     <image id="n38_f4tn" name="imgMutil" src="qlmti" fileName="img/img_stencil_c_1.png" xy="395,117">
       <gearDisplay controller="ctrlType" pages="1"/>
     </image>
-    <image id="n26_f4tn" name="imgBG" src="p3zlcyidz" fileName="imgB/img_cm_cjk_1.png" pkg="te1gxawo" xy="173,45" size="790,504" group="n56_osf7"/>
-    <loader id="n27_f4tn" name="ladIcon" xy="196,52" size="24,24" group="n56_osf7" url="ui://4wr0elnxp3zl0" autoSize="true"/>
-    <text id="n28_f4tn" name="tfTitle" xy="230,53" size="89,24" group="n56_osf7" fontSize="18" color="#ffffff" vAlign="middle" autoSize="none" bold="true" text="创建地图"/>
-    <text id="n29_f4tn" name="tfMapName" xy="231,107" size="77,29" group="n56_osf7" fontSize="18" color="#365989" vAlign="middle" bold="true" text="地图名字"/>
-    <text id="n30_f4tn" name="tfManorType" xy="230,460" size="113,29" group="n56_osf7" fontSize="18" color="#365989" bold="true" text="领地生成方式"/>
-    <image id="n31_f4tn" name="imgNameBG" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="317,106" size="178,24" group="n56_osf7"/>
-    <text id="n32_f4tn" name="inpMapName" xy="322,108" size="166,21" group="n56_osf7" alpha="0.6" input="true" fontSize="14" color="#ffffff" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text=""/>
-    <text id="n33_f4tn" name="tfMapSize" xy="230,155" size="77,29" group="n56_osf7" fontSize="18" color="#365989" vAlign="bottom" bold="true" text="地图大小"/>
-    <component id="n40_f4tn" name="btnCreateMap" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="430,557" size="106,36" group="n56_osf7">
+    <image id="n26_f4tn" name="imgBG" src="p3zlcyidz" fileName="imgB/img_cm_cjk_1.png" pkg="te1gxawo" xy="173,66" size="790,504" group="n56_spq9"/>
+    <loader id="n27_f4tn" name="ladIcon" xy="196,73" size="24,24" group="n56_spq9" url="ui://4wr0elnxp3zl0" autoSize="true"/>
+    <text id="n28_f4tn" name="tfTitle" xy="230,74" size="89,24" group="n56_spq9" fontSize="18" color="#ffffff" vAlign="middle" autoSize="none" bold="true" text="创建地图"/>
+    <text id="n29_f4tn" name="tfMapName" xy="231,128" size="77,29" group="n56_spq9" fontSize="18" color="#365989" vAlign="middle" bold="true" text="地图名字"/>
+    <text id="n30_f4tn" name="tfManorType" xy="230,447" size="113,29" group="n56_spq9" fontSize="18" color="#365989" bold="true" text="领地生成方式"/>
+    <image id="n31_f4tn" name="imgNameBG" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="317,127" size="178,24" group="n56_spq9"/>
+    <text id="n32_f4tn" name="inpMapName" xy="322,129" size="166,21" group="n56_spq9" alpha="0.6" input="true" fontSize="14" color="#ffffff" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text=""/>
+    <text id="n33_f4tn" name="tfMapSize" xy="230,176" size="77,29" group="n56_spq9" fontSize="18" color="#365989" vAlign="bottom" bold="true" text="地图大小"/>
+    <component id="n40_f4tn" name="btnCreateMap" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="430,578" size="106,36" group="n56_spq9">
       <Button title="创建" icon="ui://te1gxawom3dicyidb"/>
     </component>
-    <component id="n41_f4tn" name="btnCancel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="583,557" size="106,37" group="n56_osf7">
+    <component id="n41_f4tn" name="btnCancel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="583,578" size="106,37" group="n56_spq9">
       <Button title="取消" icon="ui://te1gxawom3dicyid9" page="0"/>
     </component>
-    <text id="n43_jeto" name="tfIsOpen" xy="230,204" size="121,29" group="n56_osf7" fontSize="18" color="#365989" vAlign="middle" autoSize="none" bold="true" text="是否开源"/>
-    <text id="n44_jeto" name="tfIsCanEdit" xy="229,246" size="147,29" group="n56_osf7" fontSize="18" color="#365989" vAlign="middle" autoSize="none" bold="true" text="编辑器是否可用"/>
-    <component id="n45_jeto" name="btnIsOpen" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="473,200" size="80,34" group="n56_osf7">
+    <text id="n43_jeto" name="tfIsOpen" xy="230,225" size="121,29" group="n56_spq9" fontSize="18" color="#365989" vAlign="middle" autoSize="none" bold="true" text="是否开源"/>
+    <text id="n44_jeto" name="tfIsCanEdit" xy="229,267" size="147,29" group="n56_spq9" fontSize="18" color="#365989" vAlign="middle" autoSize="none" bold="true" text="编辑器是否可用"/>
+    <component id="n45_jeto" name="btnIsOpen" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="473,221" size="80,34" group="n56_spq9">
       <Button checked="true" icon="ui://te1gxawovulycyicl" selectedIcon="ui://te1gxawovulycyick"/>
     </component>
-    <component id="n46_jeto" name="btnIsCanEdit" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="473,243" size="80,34" group="n56_osf7">
+    <component id="n46_jeto" name="btnIsCanEdit" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="473,264" size="80,34" group="n56_spq9">
       <Button checked="true" icon="ui://te1gxawovulycyicl" selectedIcon="ui://te1gxawovulycyick"/>
     </component>
-    <text id="n48_ssks" name="tfMapPrototype" xy="229,288" size="121,29" group="n56_osf7" fontSize="18" color="#365989" vAlign="middle" autoSize="none" bold="true" text="地图模板"/>
-    <list id="n55_ssks" name="lstPrototype" xy="231,321" size="387,114" group="n56_osf7" layout="row" colGap="11" defaultItem="ui://4wr0elnxssksw">
-      <item/>
-      <item/>
-      <item/>
-    </list>
-    <component id="n42_f4tn" name="comSelectManorType" src="mwlih" fileName="com/comSelectManorTypeInCreate.xml" xy="359,440" group="n56_osf7" controller="ctrlShowHide,1"/>
-    <component id="n47_ssks" name="comSelectMapSize" src="mwlig" fileName="com/comSelectMapSizeInLIst.xml" xy="294,150" group="n56_osf7" controller="ctrlMapSize,0"/>
-    <group id="n56_osf7" name="root" xy="173,45" size="790,549" advanced="true">
+    <text id="n48_ssks" name="tfMapPrototype" xy="229,309" size="121,29" group="n56_spq9" fontSize="18" color="#365989" vAlign="middle" autoSize="none" bold="true" text="地图模板"/>
+    <component id="n55_ssks" name="comSelectMapPrototype" src="n08cn18" fileName="com/comSelectMapPrototype.xml" xy="328,309" size="387,114" group="n56_spq9" controller="ctrlShowHide,1"/>
+    <component id="n42_f4tn" name="comSelectManorType" src="mwlih" fileName="com/comSelectManorTypeInCreate.xml" xy="363,449" group="n56_spq9" controller="ctrlShowHide,1"/>
+    <component id="n47_ssks" name="comSelectMapSize" src="mwlig" fileName="com/comSelectMapSizeInLIst.xml" xy="295,171" group="n56_spq9" controller="ctrlMapSize,0"/>
+    <group id="n56_spq9" name="root" xy="173,66" size="790,549" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>
