@@ -5,7 +5,7 @@
     <image id="n24_f4tn" name="imgBgLst" src="nl0rcyicc" fileName="imgB/img_cm_bg_dk_1.png" pkg="te1gxawo" xy="0,20" size="676,541">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <list id="n25_f4tn" name="lstAll" xy="30,46" size="647,488" hideByEditor="true" visible="false" layout="flow_hz" overflow="scroll" scrollBarFlags="128" lineGap="20" colGap="10" defaultItem="ui://4wr0elnxhams1" autoClearItems="true">
+    <list id="n25_f4tn" name="lstAll" xy="30,46" size="647,488" layout="flow_hz" overflow="scroll" scrollBarFlags="128" lineGap="20" colGap="10" defaultItem="ui://4wr0elnxhams1" autoClearItems="true">
       <gearDisplay controller="ctrlList" pages="1"/>
       <relation target="" sidePair="width-width,height-height"/>
       <item/>
@@ -13,7 +13,7 @@
       <item/>
       <item/>
     </list>
-    <component id="n46_j0td" name="comTemplateAboutMe" src="j0tdq" fileName="com/comMineList.xml" xy="16,35" size="667,515" hideByEditor="true" visible="false">
+    <component id="n46_j0td" name="comTemplateAboutMe" src="j0tdq" fileName="com/comMineList.xml" xy="16,35" size="667,515">
       <gearDisplay controller="ctrlList" pages="0"/>
       <relation target="" sidePair="width-width,height-height"/>
     </component>
@@ -23,6 +23,5 @@
     <component id="n48_7dav" name="comMapTemplateLobby" src="ssksx" fileName="com/comMapTemplateLobby.xml" xy="682,0">
       <relation target="" sidePair="height-height,right-right"/>
     </component>
-    <list id="n51_spq9" name="lstTest" xy="33,43" size="524,338" layout="flow_hz" overflow="scroll" defaultItem="ui://4wr0elnxspq9n1e" autoItemSize="true"/>
   </displayList>
 </component>
