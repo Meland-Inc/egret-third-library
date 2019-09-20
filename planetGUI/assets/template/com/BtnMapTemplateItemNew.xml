@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,40" extention="Button" designImage="ui://i25v0ebkssks5t" designImageOffsetX="-297" designImageOffsetY="-102" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlMode" pages="1,small,2,big,3,title,0,addBtn" selected="2"/>
+<component size="142,156" extention="Button" designImage="ui://i25v0ebkssks5t" designImageOffsetX="-297" designImageOffsetY="-102" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlMode" pages="1,small,2,big,3,title,0,addBtn" selected="0"/>
   <controller name="ctrlPublish" pages="1,no,0,yes" selected="0"/>
   <displayList>
-    <graph id="n18_spq9" name="gphSizeCtrl" xy="0,0" size="1136,40" touchable="false">
+    <graph id="n18_spq9" name="gphSizeCtrl" xy="0,0" size="142,156" touchable="false">
       <gearSize controller="ctrlMode" pages="2,3" values="295,104,1,1|1136,40,1,1" default="142,156,1,1"/>
     </graph>
     <image id="n0_uov9" name="imgBg" src="p3zl5" fileName="img/img_stencil_dt_4.png" xy="0,4" size="142,152" group="n7_o7or">
@@ -13,10 +13,10 @@
       <gearXY controller="ctrlMode" pages="2" values="4,8" default="7,13"/>
       <gearSize controller="ctrlMode" pages="2" values="135,90,1,1" default="128,100,1,1"/>
     </image>
-    <loader id="n6_uov9" name="ladMap" xy="7,13" size="127,88" group="n7_o7or" align="center" vAlign="middle" fill="scale" shrinkOnly="true">
+    <component id="n6_uov9" name="ladMap" src="er8nn1q" fileName="com/ComAutoClipLad.xml" xy="7,13" size="127,88" group="n7_o7or">
       <gearDisplay controller="ctrlMode" pages=""/>
       <gearXY controller="ctrlMode" pages="2" values="8,9" default="7,13"/>
-    </loader>
+    </component>
     <text id="n3_uov9" name="tfName" xy="5,114" size="130,37" group="n7_o7or" fontSize="15" color="#365989" align="center" vAlign="middle" autoSize="none" singleLine="true" text="七桥问题地图">
       <gearXY controller="ctrlMode" pages="2" values="145,8" default="5,114"/>
       <gearSize controller="ctrlMode" pages="2" values="147,25,1,1" default="130,37,1,1"/>
@@ -30,7 +30,7 @@
     <group id="n16_spq9" name="grpAuthor" xy="148,52" size="145,25" group="n7_o7or" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlMode" pages="2"/>
     </group>
-    <group id="n7_o7or" name="root" xy="0,4" size="293,152" advanced="true" collapsed="true">
+    <group id="n7_o7or" name="root" xy="0,4" size="293,152" advanced="true">
       <gearDisplay controller="ctrlMode" pages="1,2"/>
     </group>
     <image id="n8_lls7" name="imgAdd" src="p3zl2" fileName="img/img_stencil_dt_1.png" xy="0,6" pivot="0.5,0.5">

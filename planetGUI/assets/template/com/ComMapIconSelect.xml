@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" designImage="ui://i25v0ebker8n5w" designImageAlpha="48">
+  <displayList>
+    <image id="n0_er8n" name="imgBg" src="er8nn1h" fileName="img/img_stencil_fm_2.png" xy="336,149" size="604,399"/>
+    <text id="n1_er8n" name="tfTitle" xy="599,156" size="81,24" fontSize="18" color="#ffffff" align="center" vAlign="middle" bold="true" text="封面设置"/>
+    <text id="n2_er8n" name="tf" xy="346,203" size="61,20" fontSize="14" color="#365989" align="center" vAlign="middle" text="地图封面"/>
+    <list id="n3_er8n" name="lstIcons" xy="504,201" size="435,296" layout="flow_hz" overflow="scroll" scrollBarFlags="4" margin="2,0,0,0" scrollBarRes="ui://4wr0elnxn08cn1d," lineGap="8" colGap="8" defaultItem="ui://4wr0elnxer8nn1n">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n4_er8n" name="img" src="er8nn1j" fileName="img/img_stencil_fm_4.png" xy="490,185" size="7,316"/>
+    <image id="n5_er8n" name="img" src="er8nn1i" fileName="img/img_stencil_fm_3.png" xy="335,498" size="606,7"/>
+    <image id="n10_er8n" name="mapBg" src="p3zl7" fileName="img/img_stencil_dt_6.png" xy="347,260" size="132,92"/>
+    <component id="n6_er8n" name="ladSelectIcon" src="er8nn1q" fileName="com/ComAutoClipLad.xml" xy="347,260" size="132,92" touchable="false"/>
+    <component id="n8_er8n" name="btn" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="367,456" size="85,31">
+      <Button icon="ui://4wr0elnxer8nn1f"/>
+    </component>
+    <component id="n7_er8n" name="btnConfirm" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="593,505">
+      <Button title="确定" titleColor="#ffffff" icon="ui://te1gxawom3dicyidb"/>
+    </component>
+    <component id="n9_er8n" name="btnCancel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="720,507" size="106,37">
+      <Button title="取消" icon="ui://te1gxawom3dicyid9" page="0"/>
+    </component>
+  </displayList>
+</component>
