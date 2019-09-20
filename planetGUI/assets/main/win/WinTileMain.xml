@@ -7,9 +7,12 @@
     <component id="n4_muc9" name="comMainRocker" src="uvgla1" fileName="win/ComMainRocker.xml" xy="70,256">
       <relation target="" sidePair="left-left,bottom-bottom"/>
     </component>
-    <component id="n55_omrq" name="btnIde" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="1087,271" size="49,98">
-      <relation target="" sidePair="right-right,middle-middle"/>
-      <Button icon="ui://rnqj1l77gg8mtgr" page="0"/>
+    <image id="n101_ofir" name="imgBtnIde" src="fe8jcyign" fileName="imgB/img_cm_ztj_1.png" pkg="te1gxawo" xy="1070,571">
+      <relation target="n55_omrq" sidePair="bottom-bottom,right-right"/>
+    </image>
+    <component id="n55_omrq" name="btnIde" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="1081,578" size="55,57">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+      <Button icon="ui://te1gxawofe8jcyigm" page="0"/>
     </component>
     <component id="n56_dv92" name="comMainLessonShortcuts" src="v3m6cyie9" fileName="com/ComMainLessonShortcuts.xml" xy="568,561">
       <relation target="" sidePair="center-center,bottom-bottom"/>
