@@ -17,9 +17,6 @@
       <gearDisplay controller="ctrlList" pages="0"/>
       <relation target="" sidePair="width-width,height-height"/>
     </component>
-    <component id="n47_o3c2" name="templateSelector" src="l9al11" fileName="com/comTemplateSelector.xml" xy="31,46" hideByEditor="true" visible="false" controller="ctrlOperate,0">
-      <gearDisplay controller="ctrlList" pages=""/>
-    </component>
     <component id="n45_f4tn" name="comDetail" src="f4tno" fileName="com/comMapTemplateDetail.xml" xy="682,0">
       <relation target="" sidePair="height-height,right-right"/>
     </component>
