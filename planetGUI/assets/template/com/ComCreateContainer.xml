@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,323" overflow="scroll" scrollBar="visible" scrollBarRes="ui://4wr0elnxn08cn1d," designImage="ui://i25v0ebker8n5z" designImageOffsetX="-276" designImageOffsetY="-139" designImageAlpha="27">
+  <controller name="ctrlType" pages="0,config,1,custom" selected="0"/>
+  <displayList>
+    <text id="n0_er8n" name="tfMapName" xy="3,4" size="81,24" fontSize="18" color="#365989" vAlign="middle" bold="true" text="地图名字"/>
+    <image id="n1_er8n" name="imgNameBG" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="91,3" size="178,24"/>
+    <text id="n2_er8n" name="inpMapName" xy="96,5" size="166,21" alpha="0.6" input="true" fontSize="14" color="#ffffff" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text=""/>
+    <text id="n3_er8n" name="tfMapSize" xy="2,52" size="81,24" fontSize="18" color="#365989" vAlign="bottom" bold="true" text="地图大小"/>
+    <image id="n6_er8n" name="imgWidthBG" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="96,104" size="69,24" group="n22_er8n"/>
+    <image id="n7_er8n" name="imgHeightBG" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="205,104" size="69,24" group="n22_er8n"/>
+    <text id="n8_er8n" name="inpMapWidth" xy="99,105" size="63,21" group="n22_er8n" alpha="0.6" input="true" restrict="0-9" keyboardType="4" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text=""/>
+    <text id="n9_er8n" name="inpMapHeight" xy="207,105" size="66,22" group="n22_er8n" alpha="0.6" input="true" restrict="0-9" keyboardType="4" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text=""/>
+    <image id="n10_er8n" name="imgMutil" src="qlmti" fileName="img/img_stencil_c_1.png" xy="179,110" group="n22_er8n"/>
+    <group id="n22_er8n" name="customInput" xy="96,104" size="178,24" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlType" pages="1"/>
+    </group>
+    <text id="n16_er8n" name="tfMapIcon" xy="431,0" size="121,29" fontSize="18" color="#365989" vAlign="middle" autoSize="none" bold="true" text="地图封面"/>
+    <component id="n17_er8n" name="BtnSelectMapIcon" src="er8nn1o" fileName="btn/BtnSelectMapIcon.xml" xy="433,44"/>
+    <text id="n11_er8n" name="tfIsOpen" xy="2,99" size="121,29" group="n23_er8n" fontSize="18" color="#365989" vAlign="middle" autoSize="none" bold="true" text="是否开源"/>
+    <text id="n12_er8n" name="tfIsCanEdit" xy="1,153" size="147,29" group="n23_er8n" fontSize="18" color="#365989" vAlign="middle" autoSize="none" bold="true" text="编辑器是否可用"/>
+    <component id="n13_er8n" name="btnIsOpen" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="247,97" size="80,34" group="n23_er8n">
+      <Button checked="true" icon="ui://te1gxawovulycyicl" selectedIcon="ui://te1gxawovulycyick"/>
+    </component>
+    <component id="n14_er8n" name="btnIsCanEdit" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="247,150" size="80,34" group="n23_er8n">
+      <Button checked="true" icon="ui://te1gxawovulycyicl" selectedIcon="ui://te1gxawovulycyick"/>
+    </component>
+    <text id="n15_er8n" name="tfMapPrototype" xy="1,206" size="121,29" group="n23_er8n" fontSize="18" color="#365989" vAlign="middle" autoSize="none" bold="true" text="地图模板"/>
+    <text id="n18_er8n" name="tfManorType" xy="2,338" size="119,24" group="n23_er8n" fontSize="18" color="#365989" bold="true" text="领地生成方式"/>
+    <component id="n19_er8n" name="comSelectMapPrototype" src="n08cn18" fileName="com/comSelectMapPrototype.xml" xy="99,208" size="387,114" group="n23_er8n" controller="ctrlShowHide,1"/>
+    <component id="n20_er8n" name="comSelectManorType" src="mwlih" fileName="com/comSelectManorTypeInCreate.xml" xy="133,343" size="485,123" group="n23_er8n" controller="ctrlShowHide,1"/>
+    <group id="n23_er8n" name="customOffset" xy="1,97" size="617,369" advanced="true">
+      <gearXY controller="ctrlType" pages="0" values="1,97" default="1,147"/>
+    </group>
+    <component id="n21_er8n" name="comSelectMapSize" src="mwlig" fileName="com/comSelectMapSizeInLIst.xml" xy="68,47" controller="ctrlMapSize,0"/>
+  </displayList>
+</component>

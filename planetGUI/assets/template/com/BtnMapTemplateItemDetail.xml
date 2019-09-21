@@ -4,7 +4,7 @@
   <displayList>
     <image id="n0_uov9" name="imgBg" src="p3zl5" fileName="img/img_stencil_dt_4.png" xy="0,4" size="295,100"/>
     <image id="n1_uov9" name="mapBg" src="p3zl7" fileName="img/img_stencil_dt_6.png" xy="4,8" size="135,90"/>
-    <loader id="n6_uov9" name="ladMap" xy="8,9" size="127,88" fill="scale" shrinkOnly="true"/>
+    <component id="n6_uov9" name="ladMap" src="er8nn1q" fileName="com/ComAutoClipLad.xml" xy="4,8" size="135,90"/>
     <text id="n3_uov9" name="tfName" xy="145,8" size="147,25" fontSize="15" color="#365989" vAlign="middle" ubb="true" autoSize="none" singleLine="true" text="七桥问题地图"/>
     <image id="n14_o3c2" name="imgAuthor" src="o3c213" fileName="img/img_stencil_dty_1.png" xy="148,58"/>
     <text id="n13_o3c2" name="tfAuthor" xy="164,52" size="129,25" fontSize="15" color="#365989" vAlign="middle" autoSize="none" singleLine="true" text="Author"/>

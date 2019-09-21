@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="152,104" extention="Button">
+  <displayList>
+    <image id="n4_er8n" name="mapBg" src="p3zl7" fileName="img/img_stencil_dt_6.png" xy="0,0" size="152,104"/>
+    <component id="n1_er8n" name="icon" src="er8nn1q" fileName="com/ComAutoClipLad.xml" xy="0,0" size="152,104"/>
+    <image id="n2_er8n" name="n2" src="er8nn1g" fileName="img/img_stencil_fm_1.png" xy="0,78"/>
+    <text id="n3_er8n" name="tf" xy="45,82" size="61,20" fontSize="14" color="#ffffff" align="center" vAlign="middle" text="更换封面"/>
+  </displayList>
+  <Button/>
+</component>
