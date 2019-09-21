@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,323" overflow="scroll" scrollBar="visible" scrollBarRes="ui://4wr0elnxn08cn1d," designImage="ui://i25v0ebker8n5z" designImageOffsetX="-276" designImageOffsetY="-139" designImageAlpha="27">
+<component size="1136,323" overflow="scroll" scrollBar="visible" scrollBarRes="ui://4wr0elnxn08cn1d," designImage="ui://i25v0ebker8n5z" designImageOffsetX="-276" designImageOffsetY="-139" designImageAlpha="0">
   <controller name="ctrlType" pages="0,config,1,custom" selected="0"/>
   <displayList>
-    <text id="n0_er8n" name="tfMapName" xy="3,4" size="81,24" fontSize="18" color="#365989" vAlign="middle" bold="true" text="地图名字"/>
+    <text id="n0_er8n" name="tfMapName" xy="3,4" size="77,29" fontSize="18" color="#365989" vAlign="middle" bold="true" text="地图名字"/>
     <image id="n1_er8n" name="imgNameBG" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="91,3" size="178,24"/>
     <text id="n2_er8n" name="inpMapName" xy="96,5" size="166,21" alpha="0.6" input="true" fontSize="14" color="#ffffff" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text=""/>
-    <text id="n3_er8n" name="tfMapSize" xy="2,52" size="81,24" fontSize="18" color="#365989" vAlign="bottom" bold="true" text="地图大小"/>
+    <text id="n3_er8n" name="tfMapSize" xy="2,52" size="77,29" fontSize="18" color="#365989" vAlign="bottom" bold="true" text="地图大小"/>
     <image id="n6_er8n" name="imgWidthBG" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="96,104" size="69,24" group="n22_er8n"/>
     <image id="n7_er8n" name="imgHeightBG" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="205,104" size="69,24" group="n22_er8n"/>
     <text id="n8_er8n" name="inpMapWidth" xy="99,105" size="63,21" group="n22_er8n" alpha="0.6" input="true" restrict="0-9" keyboardType="4" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text=""/>
@@ -25,7 +25,7 @@
       <Button checked="true" icon="ui://te1gxawovulycyicl" selectedIcon="ui://te1gxawovulycyick"/>
     </component>
     <text id="n15_er8n" name="tfMapPrototype" xy="1,206" size="121,29" group="n23_er8n" fontSize="18" color="#365989" vAlign="middle" autoSize="none" bold="true" text="地图模板"/>
-    <text id="n18_er8n" name="tfManorType" xy="2,338" size="119,24" group="n23_er8n" fontSize="18" color="#365989" bold="true" text="领地生成方式"/>
+    <text id="n18_er8n" name="tfManorType" xy="2,338" size="113,29" group="n23_er8n" fontSize="18" color="#365989" bold="true" text="领地生成方式"/>
     <component id="n19_er8n" name="comSelectMapPrototype" src="n08cn18" fileName="com/comSelectMapPrototype.xml" xy="99,208" size="387,114" group="n23_er8n" controller="ctrlShowHide,1"/>
     <component id="n20_er8n" name="comSelectManorType" src="mwlih" fileName="com/comSelectManorTypeInCreate.xml" xy="133,343" size="485,123" group="n23_er8n" controller="ctrlShowHide,1"/>
     <group id="n23_er8n" name="customOffset" xy="1,97" size="617,369" advanced="true">

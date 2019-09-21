@@ -2,7 +2,6 @@
 <component size="1136,640" designImage="ui://i25v0ebkneku5l" designImageAlpha="0" designImageLayer="1">
   <displayList>
     <image id="n0_neku" name="imgBg" src="v32mcyie1" fileName="imgB/img_cm_dtgj_1.png" pkg="te1gxawo" xy="428,225" size="279,189" group="n10_neku"/>
-    <text id="n7_neku" name="tfTitle" xy="529,233" size="77,29" group="n10_neku" fontSize="18" color="#ffffff" vAlign="middle" text="保存物件"/>
     <text id="n6_neku" name="tfName" xy="449,297" size="75,23" group="n10_neku" fontSize="14" color="#45668e" vAlign="middle" text="物件名字："/>
     <image id="n9_neku" name="imgInpBg" src="ylfhcyidk" fileName="imgB/img_cm_xmk_1.png" pkg="te1gxawo" xy="522,294" size="160,31" group="n10_neku"/>
     <text id="n8_neku" name="tfInput" xy="522,295" size="159,30" group="n10_neku" alpha="0.5" input="true" fontSize="14" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" text="自定义名字"/>
