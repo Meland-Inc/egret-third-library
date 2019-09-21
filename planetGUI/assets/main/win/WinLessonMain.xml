@@ -62,13 +62,10 @@
       <gearXY controller="ctrlViewStatus" pages="2,5" values="957,12|775,13" default="857,12"/>
       <relation target="" sidePair="right-right"/>
     </group>
-    <image id="n89_fe8j" name="imgBtnIde" src="fe8jcyign" fileName="imgB/img_cm_ztj_1.png" pkg="te1gxawo" xy="1070,571">
-      <relation target="n55_omrq" sidePair="top-top,right-right"/>
-    </image>
-    <component id="n55_omrq" name="btnIde" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="1081,579" size="55,57">
+    <component id="n55_omrq" name="btnIde" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="1070,571" size="66,69">
       <gearDisplay controller="ctrlGodView" pages="0"/>
       <relation target="" sidePair="right-right,bottom-bottom"/>
-      <Button icon="ui://te1gxawofe8jcyigm" page="0"/>
+      <Button icon="ui://5hs1fuejjdabcyieu" page="0"/>
     </component>
     <component id="n56_dv92" name="comMainLessonShortcuts" src="v3m6cyie9" fileName="com/ComMainLessonShortcuts.xml" xy="568,561" size="80,79">
       <gearDisplay controller="ctrlGodView" pages="0"/>
