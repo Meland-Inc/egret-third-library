@@ -63,5 +63,8 @@
       <relation target="" sidePair="bottomext-bottom,rightext-right"/>
       <relation target="n5_n1c0" sidePair="left-left,top-top"/>
     </component>
+    <component id="n38_wp52" name="btnExit" src="wp52tlt" fileName="btn/btnExit.xml" xy="555,580">
+      <relation target="n5_n1c0" sidePair="left-left,bottom-bottom"/>
+    </component>
   </displayList>
 </component>

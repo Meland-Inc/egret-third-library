@@ -28,7 +28,33 @@
       <item title="食物"/>
       <item title="其他"/>
     </list>
-    <list id="n4_oe8k" name="listItem" xy="414,219" size="620,287" scale="0.73,0.73" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="10" colGap="6" lineItemCount="6" defaultItem="ui://te1gxawoj1n2cyi8y">
+    <list id="n4_oe8k" name="listItem0" xy="414,219" size="620,287" scale="0.73,0.73" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="10" colGap="6" lineItemCount="6" defaultItem="ui://te1gxawoj1n2cyi8y">
+      <relation target="n0_oe8k" sidePair="right-right,top-top"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n23_c2w2" name="listItem1" xy="414,219" size="620,287" scale="0.73,0.73" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="10" colGap="6" lineItemCount="6" defaultItem="ui://te1gxawoj1n2cyi8y">
+      <relation target="n0_oe8k" sidePair="right-right,top-top"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n24_c2w2" name="listItem2" xy="414,219" size="620,287" scale="0.73,0.73" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="10" colGap="6" lineItemCount="6" defaultItem="ui://te1gxawoj1n2cyi8y">
       <relation target="n0_oe8k" sidePair="right-right,top-top"/>
       <item/>
       <item/>
