@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" overflow="hidden" opaque="false" designImage="ui://i25v0ebku5yf4w" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
   <controller name="ctrlGodView" pages="0,false,1,true" selected="0"/>
-  <controller name="ctrlViewMode" pages="0,share,1,editSelf,2,editOther,3,roomPlayCanEdit,4,roomPlayCanNotEdit" selected="4"/>
+  <controller name="ctrlViewMode" pages="0,share,1,editSelf,2,editOther,3,roomPlayCanEdit,4,roomPlayCanNotEdit" selected="0"/>
   <controller name="ctrlSmallStatus" pages="0,strech,1,shrink" selected="0"/>
   <displayList>
     <component id="n42_w0g2" name="comMainQuickBuild" src="ndxt83" fileName="win/ComMainQuickBuild.xml" xy="890,355" hideByEditor="true" visible="false">
@@ -21,8 +21,8 @@
     <component id="n70_k177" name="comShortCut" src="uhu6t7w" fileName="Com/ComBuildShortCut.xml" pkg="32ieekgu" xy="463,520" hideByEditor="true" visible="false">
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </component>
-    <component id="n40_c994" name="comExperience" src="ncv76r" fileName="win/ComExperience.xml" xy="1082,623">
-      <relation target="" sidePair="right-right,bottom-bottom"/>
+    <component id="n40_c994" name="comExperience" src="ncv76r" fileName="win/ComExperience.xml" xy="0,623">
+      <relation target="" sidePair="bottom-bottom"/>
     </component>
     <component id="n91_u5yf" name="btnBack" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1089,5" pivot="0.49,0" anchor="true" size="59,66" group="n93_u5yf">
       <Button icon="ui://5hs1fueju5yfcyie4" page="1"/>
@@ -35,7 +35,7 @@
     <component id="n99_u5yf" name="comMainJoystick" src="w80ln" fileName="win/ComMainJoystick.xml" xy="865,362" controller="ctrlGameMode,1">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
-    <component id="n100_oxve" name="btnInvite" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="901,10" pivot="0.49,0" anchor="true" size="56,79">
+    <component id="n100_oxve" name="btnInvite" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="993,10" pivot="0.49,0" anchor="true" size="56,79">
       <gearDisplay controller="ctrlViewMode" pages="1"/>
       <gearXY controller="ctrlViewMode" pages="0,1" values="993,10|987,10" default="901,10"/>
       <relation target="" sidePair="right-right,top-top"/>
