@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,400" overflow="scroll" scrollBar="visible" scrollBarRes="ui://4wr0elnxn08cn1d,ui://4wr0elnxn08cn1d" designImage="ui://i25v0ebker8n5y" designImageOffsetX="-823" designImageOffsetY="-78">
+<component size="1136,400" overflow="scroll" scrollBar="visible" scrollBarRes="ui://4wr0elnxn08cn1d,ui://4wr0elnxn08cn1d" designImage="ui://i25v0ebkg06r65" designImageOffsetX="-723" designImageOffsetY="-78">
   <controller name="ctrlType" pages="0,config,1,custom" selected="0"/>
   <displayList>
     <image id="n0_er8n" name="imgInputBg" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="100,0" size="285,31"/>
@@ -35,11 +35,11 @@
       <relation target="n9_er8n" sidePair="top-top"/>
       <Button checked="true" icon="ui://te1gxawovulycyicl" selectedIcon="ui://te1gxawovulycyick"/>
     </component>
-    <component id="n15_er8n" name="comSelectManorType" src="ssksq" fileName="com/comSelectManorTypeInList.xml" xy="188,371" size="208,256">
+    <component id="n15_er8n" name="comSelectManorType" src="ssksq" fileName="com/comSelectManorTypeInList.xml" xy="243,371" size="208,256" controller="ctrlShowHide,1">
       <relation target="n9_er8n" sidePair="top-top"/>
     </component>
-    <component id="n16_er8n" name="comSelectMapSize" src="mwlig" fileName="com/comSelectMapSizeInLIst.xml" xy="190,200" controller="ctrlMapSize,0"/>
+    <component id="n16_er8n" name="comSelectMapSize" src="ssksr" fileName="com/comSelectMapSizeInCreate.xml" xy="235,200"/>
     <text id="n18_er8n" name="tf" xy="97,41" size="147,29" fontSize="18" color="#365989" vAlign="middle" autoSize="none" bold="true" text="地图封面"/>
-    <component id="n17_er8n" name="btnSelectMapIcon" src="er8nn1o" fileName="btn/BtnSelectMapIcon.xml" xy="100,81"/>
+    <component id="n17_er8n" name="btnSelectMapIcon" src="er8nn1o" fileName="btn/BtnSelectMapIcon.xml" xy="100,74" size="152,114"/>
   </displayList>
 </component>

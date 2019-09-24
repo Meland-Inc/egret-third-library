@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="395,311" opaque="false">
   <controller name="ctrlMapSize" pages="0,UnknownSize,1,Big,2,Middle,3,Small" selected="0"/>
-  <controller name="ctrlShowHide" pages="1,hide,0,show" selected="1"/>
+  <controller name="ctrlShowHide" pages="1,hide,0,show" selected="0"/>
   <displayList>
     <component id="n9_mwli" name="btnOperation" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="31,0" size="117,34">
       <gearText controller="ctrlMapSize" pages="0,1,2,3" values="其他|大|中|小"/>
       <Button title="其他" titleColor="#365989" titleFontSize="16" icon="ui://te1gxawovulycyicn" controller="ctrlShowHide" page="0"/>
     </component>
-    <image id="n0_mwli" name="imgBg" src="vulycyicq" fileName="imgB/btn_cm_xzl_4.png" pkg="te1gxawo" xy="215,48" size="180,263" group="n10_mwli"/>
-    <text id="n1_mwli" name="tfOperation1" xy="287,58" size="37,23" group="n10_mwli" fontSize="16" color="#365989" text="选择"/>
-    <image id="n2_mwli" name="imgPoint" src="vulycyicr" fileName="imgB/btn_cm_xzl_5.png" pkg="te1gxawo" xy="238,61" group="n10_mwli"/>
-    <component id="n3_mwli" name="btnPalindrome" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="246,93" size="117,34" group="n10_mwli">
+    <image id="n0_mwli" name="imgBg" src="vulycyicq" fileName="imgB/btn_cm_xzl_4.png" pkg="te1gxawo" xy="-19,48" size="180,263" group="n10_mwli"/>
+    <text id="n1_mwli" name="tfOperation1" xy="53,58" size="37,23" group="n10_mwli" fontSize="16" color="#365989" text="选择"/>
+    <image id="n2_mwli" name="imgPoint" src="vulycyicr" fileName="imgB/btn_cm_xzl_5.png" pkg="te1gxawo" xy="4,61" group="n10_mwli"/>
+    <component id="n3_mwli" name="btnPalindrome" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="12,93" size="117,34" group="n10_mwli">
       <Button title="大" titleColor="#365989" titleFontSize="16" icon="ui://te1gxawovulycyicn" selectedIcon="ui://te1gxawovulycyico" controller="ctrlMapSize" page="1"/>
     </component>
-    <component id="n11_ssks" name="btnVertical" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="246,135" size="117,34" group="n10_mwli">
+    <component id="n11_ssks" name="btnVertical" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="12,135" size="117,34" group="n10_mwli">
       <Button title="中" titleColor="#365989" titleFontSize="16" icon="ui://te1gxawovulycyicn" selectedIcon="ui://te1gxawovulycyico" controller="ctrlMapSize" page="2"/>
     </component>
-    <component id="n4_mwli" name="btnHorizontal" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="246,177" size="117,34" group="n10_mwli">
+    <component id="n4_mwli" name="btnHorizontal" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="12,177" size="117,34" group="n10_mwli">
       <Button title="小" titleColor="#365989" titleFontSize="16" icon="ui://te1gxawovulycyicn" selectedIcon="ui://te1gxawovulycyico" controller="ctrlMapSize" page="3"/>
     </component>
-    <component id="n6_mwli" name="btnVertical" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="246,219" size="116,34" group="n10_mwli">
+    <component id="n6_mwli" name="btnVertical" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="12,219" size="116,34" group="n10_mwli">
       <Button checked="true" title="其他" titleColor="#365989" titleFontSize="16" icon="ui://te1gxawovulycyicn" selectedIcon="ui://te1gxawovulycyico" controller="ctrlMapSize" page="0"/>
     </component>
-    <component id="n5_mwli" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="252,261" size="106,36" group="n10_mwli">
+    <component id="n5_mwli" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="18,261" size="106,36" group="n10_mwli">
       <Button title="确定" icon="ui://te1gxawom3dicyidb" controller="ctrlShowHide" page="1"/>
     </component>
-    <group id="n10_mwli" name="root" xy="215,48" size="180,263" advanced="true">
+    <group id="n10_mwli" name="root" xy="-19,48" size="180,263" advanced="true">
       <gearDisplay controller="ctrlShowHide" pages="0"/>
     </group>
   </displayList>
