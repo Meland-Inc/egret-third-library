@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="381,640" designImage="ui://i25v0ebkjnb25o" designImageOffsetX="-755" designImageAlpha="0">
   <controller name="ctrlState" exported="true" pages="1,open,0,fold" selected="0"/>
-  <controller name="ctrlEnable" pages="0,enable,1,disable" selected="0"/>
+  <controller name="ctrlEnable" pages="0,enable,1,disable" selected="1"/>
   <displayList>
     <graph id="n19_n83g" name="n19" xy="0,0" size="381,640" visible="false" alpha="0" touchable="false" type="rect">
       <gearXY controller="ctrlState" pages="0" values="0,0" default="0,0"/>
@@ -91,7 +91,7 @@
     <image id="n1_7slt" name="n1" src="cw9mcyifj" fileName="imgB/img_cm_cbl_1.png" pkg="te1gxawo" xy="18,0" size="58,640" group="n17_jm8l">
       <relation target="" sidePair="height-height"/>
     </image>
-    <image id="n12_7slt" name="n12" src="7sltcyifx" fileName="imgB/img_cm_lk_1.png" pkg="te1gxawo" xy="0,571" group="n17_jm8l">
+    <image id="n12_7slt" name="n12" src="7sltcyifx" fileName="imgB/img_cm_lk_1.png" pkg="te1gxawo" xy="-10,571" group="n17_jm8l">
       <relation target="" sidePair="bottom-bottom"/>
     </image>
     <component id="n3_7slt" name="btnFold" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="39,11" size="20,20" group="n17_jm8l">
@@ -106,16 +106,16 @@
       <relation target="" sidePair="bottom-bottom"/>
       <Button icon="ui://te1gxawocw9mcyifb" page="0"/>
     </component>
-    <component id="n13_7slt" name="btnMirror" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="27,49" size="42,42" group="n17_jm8l">
+    <component id="n13_7slt" name="btnMirror" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="27,49" size="42,42" group="n17_jm8l" touchable="false" grayed="true">
       <gearLook controller="ctrlEnable" pages="1" values="1,0,1,0" default="1,0,0,1"/>
       <Button title="旋转" titleFontSize="14" icon="ui://32ieekguzefit8w"/>
     </component>
-    <component id="n15_7slt" name="btnCancel" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="27,98" size="42,42" group="n17_jm8l">
+    <component id="n15_7slt" name="btnCancel" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="27,98" size="42,42" group="n17_jm8l" touchable="false" grayed="true">
       <gearLook controller="ctrlEnable" pages="0" values="1,0,0,1" default="1,0,1,0"/>
       <Button title="取消" titleFontSize="14" icon="ui://32ieekguzefit8v"/>
     </component>
-    <group id="n17_jm8l" name="grpOperate" xy="0,0" size="76,640" advanced="true" collapsed="true">
-      <gearXY controller="ctrlState" pages="0" values="0,0" default="0,0"/>
+    <group id="n17_jm8l" name="grpOperate" xy="-10,0" size="86,640" advanced="true" collapsed="true">
+      <gearXY controller="ctrlState" pages="1,0" values="-10,0|0,0"/>
     </group>
   </displayList>
   <relation target="n19_n83g" sidePair="width-width"/>
