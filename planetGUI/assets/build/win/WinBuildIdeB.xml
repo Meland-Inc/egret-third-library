@@ -3,19 +3,25 @@
   <controller name="ctrlOperate" pages="" selected="-1"/>
   <controller name="ctrlIdeMode" pages="0,create,1,move,4,terrain,3,attr,2,code" selected="1"/>
   <displayList>
-    <graph id="n39_e7dh" name="shapeOffset" xy="1082,0" size="57,641" visible="false" alpha="0.1" touchable="false" type="rect">
-      <gearXY controller="ctrlIdeMode" pages="0,1,4,3,2" values="1082,0|1082,0|1079,0|1083,0|1085,0"/>
+    <graph id="n39_e7dh" name="shapeOffset" xy="776,0" size="363,640" visible="false" alpha="0.1" touchable="false" type="rect">
+      <gearXY controller="ctrlIdeMode" pages="0,1,4,3,2" values="776,0|776,0|773,0|777,0|779,0"/>
       <gearSize controller="ctrlIdeMode" pages="0,1,4,3" values="363,640,1,1|57,641,1,1|360,640,1,1|321,640,1,1" default="344,640,1,1"/>
       <relation target="" sidePair="right-right,height-height"/>
     </graph>
+    <component id="n38_si0u" name="comToolBar" src="zefit91" fileName="Com/ComIdeTopToolBar.xml" xy="72,0" size="1009,36">
+      <gearXY controller="ctrlIdeMode" default="72,0"/>
+      <gearSize controller="ctrlIdeMode" pages="0,1,4,3,2" values="703,36,1,1|1009,36,1,1|703,36,1,1|746,36,1,1|725,36,1,1"/>
+      <relation target="n9_r0y9" sidePair="leftext-right"/>
+      <relation target="n39_e7dh" sidePair="rightext-left"/>
+    </component>
     <component id="n9_r0y9" name="comEntitySelect" src="yhf8t7n" fileName="Com/ComMapEntitySelectB.xml" xy="0,0" size="110,640" controller="ctrlState,0">
       <relation target="" sidePair="left-left,height-height"/>
     </component>
-    <component id="n36_7slt" name="comCreate" src="7sltt98" fileName="Com/ComBuildCreate.xml" xy="755,0" size="381,640" controller="ctrlState,1">
+    <component id="n36_7slt" name="comCreate" src="7sltt98" fileName="Com/ComBuildCreate.xml" xy="755,0" size="390,640" controller="ctrlState,1">
       <gearDisplay controller="ctrlIdeMode" pages="0"/>
       <relation target="" sidePair="right-right,height-height"/>
     </component>
-    <component id="n41_m5hn" name="comTerrain" src="m5hnt9l" fileName="Com/ComBuildTerrain.xml" xy="745,0" size="87,640" controller="ctrlState,1">
+    <component id="n41_m5hn" name="comTerrain" src="m5hnt9l" fileName="Com/ComBuildTerrain.xml" xy="745,0" size="391,640" controller="ctrlState,1">
       <gearDisplay controller="ctrlIdeMode" pages="4"/>
       <relation target="" sidePair="right-right,height-height"/>
     </component>
@@ -36,29 +42,23 @@
       <item title="属性" icon="ui://32ieekguuhu6t80" name="attr"/>
       <item title="代码块" icon="ui://32ieekguuhu6t7z" name="code"/>
     </list>
-    <component id="n38_si0u" name="comToolBar" src="zefit91" fileName="Com/ComIdeTopToolBar.xml" xy="72,0" size="1009,36">
-      <gearXY controller="ctrlIdeMode" default="72,0"/>
-      <gearSize controller="ctrlIdeMode" pages="0,1,4,3,2" values="703,36,1,1|1009,36,1,1|703,36,1,1|746,36,1,1|725,36,1,1"/>
-      <relation target="n9_r0y9" sidePair="leftext-right"/>
-      <relation target="n39_e7dh" sidePair="rightext-left"/>
-    </component>
   </displayList>
   <transition name="transBpShow">
     <item time="0" type="Alpha" target="n38_si0u" tween="true" startValue="0" endValue="1" duration="9"/>
-    <item time="0" type="XY" target="n27_r0y9" tween="true" startValue="1136,0" endValue="792,0" duration="9"/>
-    <item time="0" type="XY" target="n35_7slt" tween="true" startValue="484,640" endValue="484,587" duration="9"/>
-    <item time="0" type="XY" target="n36_7slt" tween="true" startValue="1136,0" endValue="755,0" duration="9"/>
-    <item time="0" type="XY" target="n37_jm8l" tween="true" startValue="1136,0" endValue="1052,0" duration="9"/>
-    <item time="0" type="XY" target="n41_m5hn" tween="true" startValue="1136,0" endValue="745,0" duration="9"/>
-    <item time="0" type="XY" target="n9_r0y9" tween="true" startValue="-223,0" endValue="0,0" duration="9"/>
+    <item time="0" type="XY" target="n27_r0y9" tween="true" startValue="1136,-" endValue="792,-" duration="9"/>
+    <item time="0" type="XY" target="n35_7slt" tween="true" startValue="-,640" endValue="-,587" duration="9"/>
+    <item time="0" type="XY" target="n36_7slt" tween="true" startValue="1136,-" endValue="755,-" duration="9"/>
+    <item time="0" type="XY" target="n37_jm8l" tween="true" startValue="1136,-" endValue="1052,-" duration="9"/>
+    <item time="0" type="XY" target="n41_m5hn" tween="true" startValue="1136,-" endValue="745,-" duration="9"/>
+    <item time="0" type="XY" target="n9_r0y9" tween="true" startValue="-223,-" endValue="0,-" duration="9"/>
   </transition>
   <transition name="transBpHide">
     <item time="0" type="Alpha" target="n38_si0u" tween="true" startValue="1" endValue="0" duration="9"/>
-    <item time="0" type="XY" target="n27_r0y9" tween="true" startValue="792,0" endValue="1136,0" duration="9"/>
-    <item time="0" type="XY" target="n35_7slt" tween="true" startValue="484,587" endValue="484,640" duration="9"/>
-    <item time="0" type="XY" target="n36_7slt" tween="true" startValue="755,0" endValue="1136,0" duration="9"/>
-    <item time="0" type="XY" target="n37_jm8l" tween="true" startValue="1052,0" endValue="1136,0" duration="9"/>
-    <item time="0" type="XY" target="n41_m5hn" tween="true" startValue="745,0" endValue="1136,0" duration="9"/>
-    <item time="0" type="XY" target="n9_r0y9" tween="true" startValue="0,0" endValue="-223,0" duration="9"/>
+    <item time="0" type="XY" target="n27_r0y9" tween="true" startValue="792,-" endValue="1136,-" duration="9"/>
+    <item time="0" type="XY" target="n35_7slt" tween="true" startValue="-,587" endValue="-,640" duration="9"/>
+    <item time="0" type="XY" target="n36_7slt" tween="true" startValue="755,-" endValue="1136,-" duration="9"/>
+    <item time="0" type="XY" target="n37_jm8l" tween="true" startValue="1052,-" endValue="1136,-" duration="9"/>
+    <item time="0" type="XY" target="n41_m5hn" tween="true" startValue="745,-" endValue="1136,-" duration="9"/>
+    <item time="0" type="XY" target="n9_r0y9" tween="true" startValue="0,-" endValue="-223,-" duration="9"/>
   </transition>
 </component>

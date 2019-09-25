@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="336,583" opaque="false" designImage="ui://i25v0ebkssks5t" designImageOffsetX="-801" designImageOffsetY="-59" designImageAlpha="36">
+<component size="336,583" opaque="false" designImage="ui://i25v0ebkg06r66" designImageOffsetX="-801" designImageOffsetY="-59" designImageAlpha="36">
   <displayList>
-    <image id="n0_f4tn" name="imgDetailBg" src="f203cyie1" fileName="imgB/img_cm_xxk_1.png" pkg="te1gxawo" xy="0,0" size="336,583" group="n32_x8d1">
+    <image id="n0_f4tn" name="imgDetailBg" src="f203cyie1" fileName="imgB/img_cm_xxk_1.png" pkg="te1gxawo" xy="0,0" size="336,583" group="n32_x8d1" hideByEditor="true">
       <relation target="" sidePair="height-height"/>
     </image>
     <text id="n26_ssks" name="tfText" xy="18,16" size="48,24" group="n32_x8d1" fontSize="18" color="#365989" vAlign="middle" bold="true" text="房主:"/>
     <text id="n27_ssks" name="tfCreater" xy="73,16" size="237,24" group="n32_x8d1" fontSize="18" color="#365989" vAlign="middle" autoSize="none" bold="true" text="青青河边草"/>
     <text id="n28_ssks" name="tfMapName" xy="18,54" size="125,24" group="n32_x8d1" fontSize="18" color="#365989" vAlign="middle" autoSize="none" bold="true" text="七桥问题地图"/>
-    <list id="n30_ssks" name="lstRoom" xy="22,177" size="308,276" group="n32_x8d1" selectionMode="none" overflow="scroll" scrollBarFlags="6" scrollBar="visible" margin="8,0,0,0" scrollBarRes="ui://rnqj1l77j7co5v," lineGap="6" defaultItem="ui://4wr0elnxssksy">
+    <list id="n30_ssks" name="lstRoom" xy="22,214" size="308,238" group="n32_x8d1" selectionMode="none" overflow="scroll" scrollBarFlags="6" scrollBar="visible" margin="8,0,0,0" scrollBarRes="ui://rnqj1l77j7co5v," lineGap="6" defaultItem="ui://4wr0elnxssksy">
       <relation target="n31_ssks" sidePair="bottomext-top"/>
       <relation target="n28_ssks" sidePair="top-top"/>
       <item/>
@@ -29,8 +29,8 @@
       <relation target="" sidePair="bottom-bottom"/>
       <Button title="快速进入" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
     </component>
-    <image id="n33_imu4" name="mapBg" src="p3zl7" fileName="img/img_stencil_dt_6.png" xy="152,58" size="152,109" group="n32_x8d1"/>
-    <component id="n29_ssks" name="ladMap" src="er8nn1q" fileName="com/ComAutoClipLad.xml" xy="152,58" size="152,109" group="n32_x8d1">
+    <image id="n33_imu4" name="mapBg" src="p3zl7" fileName="img/img_stencil_dt_6.png" xy="22,87" size="152,114" group="n32_x8d1"/>
+    <component id="n29_ssks" name="ladMap" src="er8nn1q" fileName="com/ComAutoClipLad.xml" xy="22,87" size="152,114" group="n32_x8d1">
       <relation target="n33_imu4" sidePair="width-width,height-height"/>
     </component>
     <group id="n32_x8d1" name="root" xy="0,0" size="336,583" advanced="true"/>
