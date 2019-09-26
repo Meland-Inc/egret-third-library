@@ -4,10 +4,10 @@
   <controller name="ctrlViewMode" pages="0,share,1,editSelf,2,editOther,3,roomPlayCanEdit,4,roomPlayCanNotEdit" selected="2"/>
   <controller name="ctrlSmallStatus" pages="0,strech,1,shrink" selected="0"/>
   <displayList>
-    <component id="n4_muc9" name="comMainRocker" src="uvgla1" fileName="win/ComMainRocker.xml" xy="70,256" group="n120_jkth" hideByEditor="true">
+    <component id="n4_muc9" name="comMainRocker" src="uvgla1" fileName="win/ComMainRocker.xml" xy="70,256" hideByEditor="true">
       <relation target="" sidePair="left-left,bottom-bottom"/>
     </component>
-    <component id="n40_c994" name="comExperience" src="ncv76r" fileName="win/ComExperience.xml" xy="0,623" group="n120_jkth">
+    <component id="n40_c994" name="comExperience" src="ncv76r" fileName="win/ComExperience.xml" xy="0,623" customData="bottom">
       <relation target="" sidePair="bottom-bottom"/>
     </component>
     <component id="n119_saev" name="btnStrechSmallMap" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="10,4" size="72,66" group="n118_saev">
@@ -42,41 +42,37 @@
       <gearDisplay controller="ctrlGodView" pages="1"/>
       <Button icon="ui://5hs1fuejfs03cyies"/>
     </component>
-    <group id="n118_saev" name="grpLeftTopUI" xy="0,0" size="216,352" group="n120_jkth" advanced="true" collapsed="true"/>
-    <group id="n120_jkth" name="grpLeft" xy="0,0" size="390,640" advanced="true" collapsed="true"/>
+    <group id="n118_saev" name="grpLeftTopUI" xy="0,0" size="216,352" customData="left" advanced="true" collapsed="true"/>
     <component id="n91_u5yf" name="btnBack" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1089,5" pivot="0.49,0" anchor="true" size="59,66" group="n93_u5yf">
       <Button icon="ui://5hs1fueju5yfcyie4" page="1"/>
     </component>
     <image id="n92_u5yf" name="imgTfBack" src="u5yfcyie6" fileName="imgB/btn_main_fh_1_1.png" xy="1089,69" pivot="0.5,0" anchor="true" group="n93_u5yf"/>
-    <group id="n93_u5yf" name="grpBtnBack" xy="1060,5" size="59,81" group="n121_jkth" advanced="true" collapsed="true">
+    <group id="n93_u5yf" name="grpBtnBack" xy="1060,5" size="59,81" customData="top" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlViewMode" pages="1,2,3,4"/>
       <relation target="" sidePair="right-right"/>
     </group>
-    <component id="n100_oxve" name="btnInvite" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="901,10" pivot="0.49,0" anchor="true" size="56,79" group="n121_jkth">
+    <component id="n100_oxve" name="btnInvite" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="901,10" pivot="0.49,0" anchor="true" size="56,79" customData="top">
       <gearDisplay controller="ctrlViewMode" pages="1"/>
       <gearXY controller="ctrlViewMode" pages="0,1" values="993,10|987,10" default="901,10"/>
-      <relation target="" sidePair="right-right,top-top"/>
+      <relation target="" sidePair="right-right"/>
       <Button icon="ui://5hs1fuejoxvecyiet" page="1"/>
     </component>
-    <group id="n121_jkth" name="grpTop" xy="873,5" size="246,84" advanced="true" collapsed="true"/>
-    <component id="n42_w0g2" name="comMainQuickBuild" src="ndxt83" fileName="win/ComMainQuickBuild.xml" xy="890,355" group="n122_jkth" hideByEditor="true" visible="false">
+    <component id="n42_w0g2" name="comMainQuickBuild" src="ndxt83" fileName="win/ComMainQuickBuild.xml" xy="890,355" hideByEditor="true" visible="false" customData="right">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
-    <component id="n99_u5yf" name="comMainJoystick" src="w80ln" fileName="win/ComMainJoystick.xml" xy="865,362" group="n122_jkth" hideByEditor="true" controller="ctrlGameMode,1">
+    <component id="n99_u5yf" name="comMainJoystick" src="w80ln" fileName="win/ComMainJoystick.xml" xy="865,362" hideByEditor="true" tooltips="right" controller="ctrlGameMode,1">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
-    <component id="n55_omrq" name="btnIde" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="1070,571" size="66,69" group="n122_jkth">
+    <component id="n55_omrq" name="btnIde" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="1070,571" size="66,69" customData="right">
       <gearDisplay controller="ctrlViewMode" pages="0,1,2,3"/>
       <relation target="" sidePair="right-right,bottom-bottom"/>
       <Button icon="ui://5hs1fuejjdabcyieu" page="0"/>
     </component>
-    <group id="n122_jkth" name="grpRight" xy="865,355" size="271,285" advanced="true" collapsed="true"/>
-    <component id="n56_dv92" name="comMainLessonShortcuts" src="v3m6cyie9" fileName="com/ComMainLessonShortcuts.xml" xy="568,561" group="n123_jkth">
+    <component id="n56_dv92" name="comMainLessonShortcuts" src="v3m6cyie9" fileName="com/ComMainLessonShortcuts.xml" xy="568,561" customData="bottom">
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </component>
-    <component id="n70_k177" name="comShortCut" src="uhu6t7w" fileName="Com/ComBuildShortCut.xml" pkg="32ieekgu" xy="463,520" group="n123_jkth" visible="false">
+    <component id="n70_k177" name="comShortCut" src="uhu6t7w" fileName="Com/ComBuildShortCut.xml" pkg="32ieekgu" xy="463,520" visible="false" customData="bottom">
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </component>
-    <group id="n123_jkth" name="grpBottom" xy="463,520" size="210,120" advanced="true" collapsed="true"/>
   </displayList>
 </component>
