@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,323" overflow="scroll" scrollBar="visible" scrollBarRes="ui://4wr0elnxn08cn1d," designImage="ui://i25v0ebker8n5z" designImageOffsetX="-276" designImageOffsetY="-139" designImageAlpha="0">
+<component size="1136,323" overflow="scroll" scrollBarFlags="4" scrollBar="visible" scrollBarRes="ui://4wr0elnxn08cn1d," designImage="ui://i25v0ebker8n5z" designImageOffsetX="-276" designImageOffsetY="-139" designImageAlpha="0">
   <controller name="ctrlType" pages="0,config,1,custom" selected="0"/>
   <displayList>
     <text id="n0_er8n" name="tfMapName" xy="3,4" size="81,24" fontSize="18" color="#365989" vAlign="middle" bold="true" text="地图名字"/>
@@ -16,6 +16,7 @@
     </group>
     <text id="n16_er8n" name="tfMapIcon" xy="421,0" size="121,29" fontSize="18" color="#365989" vAlign="middle" autoSize="none" bold="true" text="地图封面"/>
     <component id="n17_er8n" name="BtnSelectMapIcon" src="er8nn1o" fileName="btn/BtnSelectMapIcon.xml" xy="423,44" size="152,114"/>
+    <component id="n21_er8n" name="comSelectMapSize" src="mwlig" fileName="com/comSelectMapSizeInLIst.xml" xy="159,47" controller="ctrlMapSize,0"/>
     <text id="n11_er8n" name="tfIsOpen" xy="2,99" size="121,29" group="n23_er8n" fontSize="18" color="#365989" vAlign="middle" autoSize="none" bold="true" text="是否开源"/>
     <text id="n12_er8n" name="tfIsCanEdit" xy="1,153" size="147,29" group="n23_er8n" fontSize="18" color="#365989" vAlign="middle" autoSize="none" bold="true" text="编辑器是否可用"/>
     <component id="n13_er8n" name="btnIsOpen" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="227,97" size="80,34" group="n23_er8n">
@@ -31,6 +32,5 @@
     <group id="n23_er8n" name="customOffset" xy="1,97" size="692,369" advanced="true">
       <gearXY controller="ctrlType" pages="0" values="1,97" default="1,147"/>
     </group>
-    <component id="n21_er8n" name="comSelectMapSize" src="mwlig" fileName="com/comSelectMapSizeInLIst.xml" xy="159,47" controller="ctrlMapSize,0"/>
   </displayList>
 </component>
