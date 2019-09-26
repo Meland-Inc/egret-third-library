@@ -37,7 +37,7 @@
     <component id="n6_batc" name="tbtnLayer" src="oliri6s" fileName="btn/tbtnScale.xml" pkg="te1gxawo" xy="121,20" size="100,36" group="n14_batc" touchable="false" grayed="true">
       <Button title="图层" titleColor="#333333" titleFontSize="14" icon="ui://tcbadh8nbatcs" selectedIcon="ui://tcbadh8nbatct" controller="ctrlLeft" page="1"/>
     </component>
-    <list id="n7_batc" name="lstTool" xy="30,76" size="184,82" group="n14_batc" layout="flow_hz" overflow="hidden" lineGap="4" colGap="3" defaultItem="ui://tcbadh8nbatc19">
+    <list id="n7_batc" name="lstTool" xy="30,76" size="184,82" group="n14_batc" layout="flow_hz" overflow="hidden" margin="5,0,0,0" lineGap="4" colGap="3" defaultItem="ui://tcbadh8nbatc19">
       <item icon="ui://tcbadh8nbatce" name="SELECTOR" selectedIcon="ui://tcbadh8nbatcf"/>
       <item icon="ui://tcbadh8nbatca" name="BRUSH" selectedIcon="ui://tcbadh8nbatcb"/>
       <item icon="ui://tcbadh8nbatci" name="LINEPEN" selectedIcon="ui://tcbadh8nbatcj"/>
@@ -45,7 +45,7 @@
       <item icon="ui://tcbadh8nbatc8" name="ISOMETRIC" selectedIcon="ui://tcbadh8nbatc9"/>
     </list>
     <image id="n8_batc" name="imgInpNameBg" src="batcq" fileName="img/img_sket_mnk_1.png" xy="32,544" size="178,28" group="n17_batc"/>
-    <text id="n9_batc" name="inpCanvasName" xy="42,545" size="156,26" group="n17_batc" input="true" fontSize="14" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="新名称"/>
+    <text id="n9_batc" name="inpCanvasName" xy="42,545" size="156,26" group="n17_batc" alpha="0.6" input="true" fontSize="14" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="新名称"/>
     <component id="n10_batc" name="btnSave" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="33,582" size="78,28" group="n17_batc">
       <Button title="保存" titleFontSize="18" icon="ui://tcbadh8nbatc1"/>
     </component>
@@ -64,7 +64,7 @@
     <component id="n23_wdtr" name="comPenSetting" src="wdtr1e" fileName="com/ComPenSetting.xml" xy="0,0" size="215,487" group="n14_batc">
       <gearDisplay controller="ctrlTool" pages="0,2"/>
     </component>
-    <group id="n14_batc" name="grpLeft" xy="0,0" size="222,622"/>
+    <group id="n14_batc" name="grpLeft" xy="0,0" size="222,622" collapsed="true"/>
     <list id="n16_batc" name="lstOperateBtn" xy="1048,63" size="44,164" lineGap="15" defaultItem="ui://tcbadh8nbatc1b">
       <relation target="" sidePair="right-right"/>
       <item icon="ui://tcbadh8nbatc2"/>
