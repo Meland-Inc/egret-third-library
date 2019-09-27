@@ -44,21 +44,23 @@
     </list>
   </displayList>
   <transition name="transBpShow">
-    <item time="0" type="Alpha" target="n38_si0u" tween="true" startValue="0" endValue="1" duration="9"/>
+    <item time="0" type="Alpha" target="n38_si0u" value="0"/>
     <item time="0" type="XY" target="n27_r0y9" tween="true" startValue="1136,-" endValue="792,-" duration="9"/>
     <item time="0" type="XY" target="n35_7slt" tween="true" startValue="-,640" endValue="-,587" duration="9"/>
     <item time="0" type="XY" target="n36_7slt" tween="true" startValue="1136,-" endValue="755,-" duration="9"/>
     <item time="0" type="XY" target="n37_jm8l" tween="true" startValue="1136,-" endValue="1052,-" duration="9"/>
     <item time="0" type="XY" target="n41_m5hn" tween="true" startValue="1136,-" endValue="745,-" duration="9"/>
     <item time="0" type="XY" target="n9_r0y9" tween="true" startValue="-223,-" endValue="0,-" duration="9"/>
+    <item time="9" type="Alpha" target="n38_si0u" value="1"/>
   </transition>
   <transition name="transBpHide">
-    <item time="0" type="Alpha" target="n38_si0u" tween="true" startValue="1" endValue="0" duration="9"/>
+    <item time="0" type="Alpha" target="n38_si0u" value="0"/>
     <item time="0" type="XY" target="n27_r0y9" tween="true" startValue="792,-" endValue="1136,-" duration="9"/>
     <item time="0" type="XY" target="n35_7slt" tween="true" startValue="-,587" endValue="-,640" duration="9"/>
     <item time="0" type="XY" target="n36_7slt" tween="true" startValue="755,-" endValue="1136,-" duration="9"/>
     <item time="0" type="XY" target="n37_jm8l" tween="true" startValue="1052,-" endValue="1136,-" duration="9"/>
     <item time="0" type="XY" target="n41_m5hn" tween="true" startValue="745,-" endValue="1136,-" duration="9"/>
     <item time="0" type="XY" target="n9_r0y9" tween="true" startValue="0,-" endValue="-223,-" duration="9"/>
+    <item time="9" type="Alpha" target="n38_si0u" value="0"/>
   </transition>
 </component>
