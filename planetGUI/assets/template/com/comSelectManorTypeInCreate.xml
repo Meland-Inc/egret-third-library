@@ -1,31 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="485,50" opaque="false">
-  <controller name="ctrlManorType" pages="0,palindrome,1,horizontal,2,vertical" selected="2"/>
-  <controller name="ctrlShowHide" exported="true" pages="1,hide,0,show" selected="1"/>
+  <controller name="ctrlManorType" pages="0,palindrome,1,horizontal,2,vertical" selected="0"/>
+  <controller name="ctrlShowHide" exported="true" pages="1,hide,0,show" selected="0"/>
   <displayList>
     <component id="n9_mwli" name="btnOperation" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="0,-4" size="100,114">
       <gearIcon controller="ctrlManorType" pages="0,1,2" values="ui://4wr0elnxsskst|ui://4wr0elnxssksu|ui://4wr0elnxsskss"/>
-      <Button titleColor="#365989" titleFontSize="16" icon="ui://4wr0elnxsskss" controller="ctrlShowHide" page="0"/>
+      <Button titleColor="#365989" titleFontSize="16" icon="ui://4wr0elnxsskst" controller="ctrlShowHide" page="0"/>
     </component>
-    <image id="n0_mwli" name="imgBg" src="vulycyicq" fileName="imgB/btn_cm_xzl_4.png" pkg="te1gxawo" xy="132,-189" size="355,239" group="n10_mwli"/>
-    <text id="n1_mwli" name="tfOperation1" xy="258,-178" size="101,23" group="n10_mwli" fontSize="16" color="#365989" text="领地生成方式"/>
-    <image id="n2_mwli" name="imgPoint" src="vulycyicr" fileName="imgB/btn_cm_xzl_5.png" pkg="te1gxawo" xy="155,-175" group="n10_mwli"/>
-    <image id="n11_ssks" name="n11" src="sskst" fileName="img/img_stencil_ld_1.png" xy="151,-129" group="n10_mwli"/>
-    <image id="n12_ssks" name="n12" src="ssksu" fileName="img/img_stencil_ld_2.png" xy="258,-130" group="n10_mwli"/>
-    <image id="n13_ssks" name="n13" src="sskss" fileName="img/img_stencil_ld_3.png" xy="365,-130" group="n10_mwli"/>
-    <component id="n3_mwli" name="btnPalindrome" src="oliri6q" fileName="btn/rbtnScale.xml" pkg="te1gxawo" xy="151,-129" size="100,115" group="n10_mwli">
-      <Button titleColor="#365989" titleFontSize="16" selectedIcon="ui://4wr0elnxssksv" controller="ctrlManorType" page="0"/>
+    <image id="n0_mwli" name="imgBg" src="vulycyicq" fileName="imgB/btn_cm_xzl_4.png" pkg="te1gxawo" xy="107,-133" size="355,176" group="n10_mwli"/>
+    <text id="n1_mwli" name="tfOperation1" xy="233,-120" size="101,23" group="n10_mwli" fontSize="16" color="#365989" text="领地生成方式"/>
+    <image id="n2_mwli" name="imgPoint" src="vulycyicr" fileName="imgB/btn_cm_xzl_5.png" pkg="te1gxawo" xy="130,-119" group="n10_mwli"/>
+    <component id="n3_mwli" name="btnPalindrome" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="126,-90" size="100,115" group="n10_mwli">
+      <Button titleColor="#365989" titleFontSize="16" icon="ui://4wr0elnxsskst" controller="ctrlManorType" page="0"/>
     </component>
-    <component id="n4_mwli" name="btnHorizontal" src="oliri6q" fileName="btn/rbtnScale.xml" pkg="te1gxawo" xy="258,-130" size="100,115" group="n10_mwli">
-      <Button titleColor="#365989" titleFontSize="16" selectedIcon="ui://4wr0elnxssksv" controller="ctrlManorType" page="1"/>
+    <component id="n4_mwli" name="btnHorizontal" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="234,-90" size="100,115" group="n10_mwli">
+      <Button titleColor="#365989" titleFontSize="16" icon="ui://4wr0elnxssksu" controller="ctrlManorType" page="1"/>
     </component>
-    <component id="n6_mwli" name="btnVertical" src="oliri6q" fileName="btn/rbtnScale.xml" pkg="te1gxawo" xy="365,-130" size="100,115" group="n10_mwli">
-      <Button checked="true" titleColor="#365989" titleFontSize="16" selectedIcon="ui://4wr0elnxssksv" controller="ctrlManorType" page="2"/>
+    <component id="n6_mwli" name="btnVertical" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="342,-90" size="100,115" group="n10_mwli">
+      <Button titleColor="#365989" titleFontSize="16" icon="ui://4wr0elnxsskss" controller="ctrlManorType" page="2"/>
     </component>
-    <component id="n5_mwli" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="255,-7" size="106,36" group="n10_mwli">
-      <Button title="确定" icon="ui://te1gxawom3dicyidb" controller="ctrlShowHide" page="1"/>
-    </component>
-    <group id="n10_mwli" name="root" xy="132,-189" size="355,239" advanced="true">
+    <group id="n10_mwli" name="root" xy="107,-133" size="355,176" advanced="true">
       <gearDisplay controller="ctrlShowHide" pages="0"/>
     </group>
   </displayList>

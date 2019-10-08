@@ -360,6 +360,9 @@
     <image id="fs03cyies" name="btn_main_zsj_1.png" path="/imgB/"/>
     <image id="oxvecyiet" name="btn_main_zsj_3.png" path="/imgB/"/>
     <component id="jdabcyieu" name="spriteBtnIde.xml" path="/sprite/"/>
+    <component id="saevcyiev" name="spriteSummonBot.xml" path="/sprite/"/>
+    <component id="saevcyiew" name="spriteRecallBot.xml" path="/sprite/"/>
+    <component id="saevcyiex" name="spriteResetManor.xml" path="/sprite/"/>
   </resources>
   <publish name="main" npot="true"/>
 </packageDescription>

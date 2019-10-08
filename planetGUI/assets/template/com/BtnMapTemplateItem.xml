@@ -4,9 +4,9 @@
   <controller name="button" pages="0,up,1,down" selected="0"/>
   <displayList>
     <image id="n0_uov9" name="imgBg" src="p3zl5" fileName="img/img_stencil_dt_4.png" xy="0,4" group="n7_o7or"/>
-    <image id="n1_uov9" name="mapBg" src="p3zl7" fileName="img/img_stencil_dt_6.png" xy="7,13" group="n7_o7or"/>
-    <component id="n6_uov9" name="ladMap" src="er8nn1q" fileName="com/ComAutoClipLad.xml" xy="7,13" size="127,100" group="n7_o7or"/>
-    <text id="n3_uov9" name="tfName" xy="5,114" size="130,37" group="n7_o7or" fontSize="14" color="#365989" align="center" vAlign="middle" autoSize="none" text="七桥问题地图"/>
+    <image id="n1_uov9" name="mapBg" src="p3zl7" fileName="img/img_stencil_dt_6.png" xy="7,13" size="128,96" group="n7_o7or"/>
+    <component id="n6_uov9" name="ladMap" src="er8nn1q" fileName="com/ComAutoClipLad.xml" xy="7,13" size="128,96" group="n7_o7or"/>
+    <text id="n3_uov9" name="tfName" xy="5,112" size="130,37" group="n7_o7or" fontSize="14" color="#365989" align="center" vAlign="middle" autoSize="none" text="七桥问题地图"/>
     <component id="n12_uic4" name="pbrConnectServer" src="uic4m" fileName="prb/pbrLoadMapTemplate.xml" xy="11,142" size="120,6" group="n7_o7or" visible="false">
       <ProgressBar max="100"/>
     </component>

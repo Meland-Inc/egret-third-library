@@ -2,31 +2,19 @@
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkbb895b" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
   <controller name="ctrlViewStatus" pages="0,student,1,teacher,2,fakeStudent,5,fakeTeacher" selected="0"/>
   <controller name="ctrlGodView" pages="0,false,1,true" selected="0"/>
+  <controller name="ctrlSmallStatus" pages="0,strech,1,shrink" selected="0"/>
   <displayList>
-    <component id="n1_muc9" name="comMainJoystick" src="w80ln" fileName="win/ComMainJoystick.xml" xy="865,362" controller="ctrlGameMode,0">
-      <gearDisplay controller="ctrlGodView" pages="0"/>
-      <relation target="" sidePair="right-right,bottom-bottom"/>
-    </component>
-    <component id="n42_w0g2" name="comMainQuickBuild" src="ndxt83" fileName="win/ComMainQuickBuild.xml" xy="890,355" hideByEditor="true" visible="false">
-      <relation target="" sidePair="right-right,bottom-bottom"/>
-    </component>
-    <component id="n4_muc9" name="comMainRocker" src="uvgla1" fileName="win/ComMainRocker.xml" xy="70,256" hideByEditor="true">
-      <gearDisplay controller="ctrlGodView" pages="0"/>
-      <relation target="" sidePair="left-left,bottom-bottom"/>
-    </component>
-    <component id="n37_x9um" name="comChat" src="x9um6d" fileName="win/ComMainChatView.xml" xy="0,552">
-      <gearDisplay controller="ctrlViewStatus" pages="2,5"/>
-      <gearXY controller="ctrlGodView" pages="1" values="1,762" default="0,552"/>
-      <relation target="" sidePair="bottom-bottom"/>
+    <component id="n71_skn6" name="comStudentMgr" src="skn6cyidr" fileName="win/WinStudentMgr.xml" pkg="ct340yhv" xy="0,0" hideByEditor="true" controller="ctrlStatus,0">
+      <relation target="" sidePair="width-width,height-height"/>
     </component>
     <component id="n60_ylfh" name="btnUpload" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1060,4" size="59,66" group="n67_ylfh">
       <Button icon="ui://5hs1fuejwq4dcyid1"/>
     </component>
     <image id="n61_ylfh" name="imgTfUpload" src="ylfhcyidn" fileName="imgB/img_main_zt_1.png" xy="1070,70" group="n67_ylfh"/>
-    <group id="n67_ylfh" name="grpBtnUpload" xy="1060,4" size="59,83" advanced="true" collapsed="true">
+    <group id="n67_ylfh" name="grpBtnUpload" xy="1060,4" size="59,83" customData="top" advanced="true" collapsed="true">
       <relation target="" sidePair="right-right"/>
     </group>
-    <component id="n69_t4ko" name="btnFakeIslandBuy" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="789,10" size="59,66" visible="false">
+    <component id="n69_t4ko" name="btnFakeIslandBuy" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="789,10" size="59,66" visible="false" customData="top">
       <gearDisplay controller="ctrlViewStatus" pages="2,5"/>
       <gearXY controller="ctrlViewStatus" pages="2,5" values="889,10|704,10" default="789,10"/>
       <gearSize controller="ctrlGodView" pages="1" values="59,66,0.01,0.01" default="59,66,1,1"/>
@@ -37,7 +25,7 @@
       <Button icon="ui://5hs1fuejskn6cyids" page="1"/>
     </component>
     <image id="n78_hbdr" name="imgTfStudentMgr" src="skn6cyidu" fileName="imgB/img_main_zt_6.png" xy="866,72" group="n79_hbdr"/>
-    <group id="n79_hbdr" name="grpBtnShowStudentMgr" xy="866,6" size="80,83" advanced="true" collapsed="true">
+    <group id="n79_hbdr" name="grpBtnShowStudentMgr" xy="866,6" size="80,83" customData="top" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlViewStatus" pages="1,5"/>
       <relation target="" sidePair="right-right"/>
     </group>
@@ -45,46 +33,94 @@
       <Button icon="ui://5hs1fuejskn6cyidv" page="1"/>
     </component>
     <image id="n87_unom" name="imgTfTeachPlan" src="skn6cyidt" fileName="imgB/img_main_zt_5.png" xy="977,71" group="n88_unom"/>
-    <group id="n88_unom" name="grpBtnTeachPlan" xy="967,6" size="59,82" advanced="true">
+    <group id="n88_unom" name="grpBtnTeachPlan" xy="967,6" size="59,82" customData="top" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlViewStatus" pages="0,1,2,5"/>
       <gearXY controller="ctrlViewStatus" pages="2" values="833,6" default="967,6"/>
       <relation target="" sidePair="right-right"/>
     </group>
-    <component id="n82_o7or" name="btnTemplate" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="871,12" size="53,52" group="n84_o7or">
+    <component id="n82_o7or" name="btnTemplate" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="880,12" size="53,52" group="n84_o7or">
       <gearDisplay controller="ctrlGodView" pages="0"/>
       <Button icon="ui://5hs1fuejo7orcyie7"/>
     </component>
-    <image id="n83_o7or" name="imgTfTemplate" src="o7orcyie8" fileName="imgB/img_main_mbcz_1_1.png" xy="857,72" size="80,17" group="n84_o7or">
+    <image id="n83_o7or" name="imgTfTemplate" src="o7orcyie8" fileName="imgB/img_main_mbcz_1_1.png" xy="866,72" size="80,17" group="n84_o7or">
       <gearDisplay controller="ctrlGodView" pages="0"/>
     </image>
-    <group id="n84_o7or" name="grpBtnTemplate" xy="857,12" size="80,76" advanced="true" collapsed="true">
+    <group id="n84_o7or" name="grpBtnTemplate" xy="866,12" size="80,76" customData="top" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlViewStatus" pages="2,5"/>
-      <gearXY controller="ctrlViewStatus" pages="2,5" values="957,12|775,13" default="857,12"/>
+      <gearXY controller="ctrlViewStatus" pages="0,2,5" values="866,12|957,12|775,13" default="857,12"/>
       <relation target="" sidePair="right-right"/>
     </group>
-    <component id="n55_omrq" name="btnIde" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="1070,571" size="66,69">
-      <gearDisplay controller="ctrlGodView" pages="0"/>
-      <relation target="" sidePair="right-right,bottom-bottom"/>
-      <Button icon="ui://5hs1fuejjdabcyieu" page="0"/>
-    </component>
-    <component id="n56_dv92" name="comMainLessonShortcuts" src="v3m6cyie9" fileName="com/ComMainLessonShortcuts.xml" xy="568,561" size="80,79">
-      <gearDisplay controller="ctrlGodView" pages="0"/>
-      <relation target="" sidePair="center-center,bottom-bottom"/>
-    </component>
-    <component id="n70_k177" name="comShortCut" src="uhu6t7w" fileName="Com/ComBuildShortCut.xml" pkg="32ieekgu" xy="463,520" hideByEditor="true" visible="false">
-      <gearDisplay controller="ctrlGodView" pages="0"/>
-      <relation target="" sidePair="center-center,bottom-bottom"/>
-    </component>
-    <component id="n71_skn6" name="comStudentMgr" src="skn6cyidr" fileName="win/WinStudentMgr.xml" pkg="ct340yhv" xy="0,0" hideByEditor="true" controller="ctrlStatus,0">
-      <relation target="" sidePair="width-width,height-height"/>
-    </component>
-    <component id="n40_c994" name="comExperience" src="ncv76r" fileName="win/ComExperience.xml" xy="1082,623">
-      <relation target="" sidePair="right-right,bottom-bottom"/>
-    </component>
-    <component id="n81_u5yf" name="comLeftTopUICtnr" src="wq4dcyid4" fileName="com/ComMainLessonLeftTopUICtnr.xml" xy="0,0"/>
-    <component id="n85_bb89" name="comLessonGuide" src="bb89cyiej" fileName="com/ComLessonGuide.xml" xy="440,0">
+    <component id="n85_bb89" name="comLessonGuide" src="bb89cyiej" fileName="com/ComLessonGuide.xml" xy="440,0" customData="top">
       <gearDisplay controller="ctrlViewStatus" pages="0,2"/>
       <relation target="" sidePair="center-center"/>
+    </component>
+    <component id="n4_muc9" name="comMainRocker" src="uvgla1" fileName="win/ComMainRocker.xml" xy="70,256" hideByEditor="true">
+      <gearDisplay controller="ctrlGodView" pages="0"/>
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+    </component>
+    <component id="n98_saev" name="btnSetting" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="165,66" size="50,48" group="n97_saev">
+      <gearXY controller="ctrlSmallStatus" pages="0,1" values="165,66|76,13" tween="true"/>
+      <Button icon="ui://5hs1fueje46zaz"/>
+    </component>
+    <component id="n99_saev" name="btnShrinkSmallMap" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="165,115" size="51,48" group="n97_saev">
+      <gearDisplay controller="ctrlSmallStatus" pages="0"/>
+      <Button icon="ui://5hs1fueje46zb0" controller="ctrlSmallStatus" page="1"/>
+    </component>
+    <component id="n102_saev" name="btnStrechSmallMap" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="10,4" size="72,66" group="n97_saev">
+      <gearDisplay controller="ctrlSmallStatus" pages="1"/>
+      <Button icon="ui://5hs1fuejwq4dcyicw" controller="ctrlSmallStatus" page="0"/>
+    </component>
+    <component id="n100_saev" name="comSmallMap" src="j0s6z" fileName="win/ComSmallMap.xml" xy="0,0" group="n97_saev">
+      <gearXY controller="ctrlSmallStatus" pages="0,1" values="0,0|-160,0" tween="true"/>
+    </component>
+    <component id="n92_saev" name="btnSummon" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="20,179" size="53,75" group="n101_saev" visible="false">
+      <Button icon="ui://5hs1fuejsaevcyiev"/>
+    </component>
+    <component id="n93_saev" name="btnRecall" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="20,179" size="53,75" group="n101_saev" visible="false">
+      <Button icon="ui://5hs1fuejsaevcyiew"/>
+    </component>
+    <component id="n94_saev" name="btnResetManor" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="19,273" size="53,75" group="n101_saev">
+      <Button icon="ui://5hs1fuejsaevcyiex"/>
+    </component>
+    <component id="n95_saev" name="btnToFreeView" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="11,366" size="73,75" group="n101_saev">
+      <gearDisplay controller="ctrlGodView" pages="0"/>
+      <Button icon="ui://5hs1fuejfs03cyier"/>
+    </component>
+    <component id="n96_saev" name="btnToRoleView" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="6,366" size="82,75" group="n101_saev">
+      <gearDisplay controller="ctrlGodView" pages="1"/>
+      <Button icon="ui://5hs1fuejfs03cyies"/>
+    </component>
+    <group id="n101_saev" name="grpBtns" xy="6,179" size="82,262" group="n97_saev" advanced="true" collapsed="true">
+      <gearXY controller="ctrlSmallStatus" pages="0,1" values="6,179|6,85" tween="true"/>
+    </group>
+    <group id="n97_saev" name="leftTop" xy="0,0" size="216,441" customData="left" advanced="true" collapsed="true"/>
+    <component id="n37_x9um" name="comChat" src="x9um6d" fileName="win/ComMainChatView.xml" xy="0,552" customData="bottom">
+      <gearDisplay controller="ctrlViewStatus" pages="2,5"/>
+      <gearXY controller="ctrlGodView" pages="1" values="1,762" default="0,552"/>
+      <relation target="" sidePair="bottom-bottom"/>
+    </component>
+    <component id="n40_c994" name="comExperience" src="ncv76r" fileName="win/ComExperience.xml" xy="0,623" customData="bottom">
+      <relation target="" sidePair="bottom-bottom"/>
+    </component>
+    <component id="n1_muc9" name="comMainJoystick" src="w80ln" fileName="win/ComMainJoystick.xml" xy="865,362" hideByEditor="true" customData="right" controller="ctrlGameMode,0">
+      <gearDisplay controller="ctrlGodView" pages="0"/>
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+    </component>
+    <component id="n42_w0g2" name="comMainQuickBuild" src="ndxt83" fileName="win/ComMainQuickBuild.xml" xy="890,355" hideByEditor="true" visible="false" customData="right">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+    </component>
+    <component id="n55_omrq" name="btnIde" src="jktht9p" fileName="btn/btnIde.xml" pkg="32ieekgu" xy="1070,571" size="66,69" customData="right">
+      <gearDisplay controller="ctrlGodView" pages="0"/>
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+      <Button icon="ui://te1gxawofe8jcyigm" page="0"/>
+    </component>
+    <component id="n56_dv92" name="comMainLessonShortcuts" src="v3m6cyie9" fileName="com/ComMainLessonShortcuts.xml" xy="568,561" size="80,79" customData="bottom">
+      <gearDisplay controller="ctrlGodView" pages="0"/>
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </component>
+    <component id="n70_k177" name="comShortCut" src="uhu6t7w" fileName="Com/ComBuildShortCut.xml" pkg="32ieekgu" xy="463,520" visible="false" customData="bottom">
+      <gearDisplay controller="ctrlGodView" pages="0"/>
+      <relation target="" sidePair="center-center,bottom-bottom"/>
     </component>
   </displayList>
 </component>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="344,640" designImage="ui://i25v0ebkneku5l" designImageOffsetX="-795">
-  <controller name="ctrlState" pages="0,none,1,elem" selected="0"/>
+<component size="344,640" opaque="false" designImage="ui://i25v0ebkneku5l" designImageOffsetX="-795">
+  <controller name="ctrlState" pages="0,none,1,elem" selected="1"/>
   <displayList>
     <image id="n32_py50" name="n32" src="nl0rcyic7" fileName="imgB/bg_cm_1.png" pkg="te1gxawo" xy="24,0" size="320,640">
       <relation target="" sidePair="height-height"/>
     </image>
-    <text id="n33_py50" name="tfAttrName" xy="39,11" size="105,32" input="true" fontSize="20" color="#ffffff" vAlign="middle" singleLine="true" autoClearText="true" text="打地鼠物件">
+    <text id="n33_py50" name="tfAttrName" xy="39,11" size="105,26" input="true" fontSize="20" color="#ffffff" vAlign="middle" singleLine="true" autoClearText="true" text="打地鼠物件">
       <gearDisplay controller="ctrlState" pages="1"/>
     </text>
-    <component id="n35_py50" name="btnAttrName" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="144,19" size="20,18" touchable="false">
+    <component id="n35_py50" name="btnAttrName" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="144,19" size="20,18">
       <gearDisplay controller="ctrlState" pages="1"/>
       <relation target="n33_py50" sidePair="left-right"/>
       <Button icon="ui://32ieekgur0y9t6o"/>

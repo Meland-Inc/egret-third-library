@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="160,160" designImage="ui://i25v0ebke46z40" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlAreaInfo" pages="0,public,1,private" selected="0"/>
+  <controller name="ctrlAreaInfo" pages="0,public,1,private" selected="1"/>
   <controller name="ctrlGameMode" pages="0,game,1,lessons,2,creation" selected="0"/>
   <displayList>
     <image id="n19_wdqf" name="bg" src="e46zb7" fileName="img_UI3/img_main_zhezhao_71.png" xy="0,0" size="160,160"/>
@@ -11,7 +11,7 @@
     <loader id="n22_wdqf" name="ladTimeIcon" xy="13,9" size="20,20" url="ui://5hs1fueje46zb4" align="center" vAlign="middle" fill="scaleNoBorder" shrinkOnly="true">
       <gearDisplay controller="ctrlGameMode" pages="0"/>
     </loader>
-    <text id="n23_wdqf" name="tfHomeName" xy="35,10" size="117,22" fontSize="16" color="#ffffff" vAlign="middle" vars="true" autoSize="none" singleLine="true" text="公共区域">
+    <text id="n23_wdqf" name="tfHomeName" xy="35,10" size="117,22" fontSize="16" color="#ffffff" vAlign="middle" vars="true" autoSize="none" singleLine="true" text="{name=六月二}的家">
       <gearText controller="ctrlAreaInfo" pages="0" values="公共区域" default="{name=六月二}的家"/>
     </text>
     <text id="n24_wdqf" name="tfTemperature" xy="4,34" size="37,22" group="n26_wdqf" fontSize="16" color="#ffffff" align="right" ubb="true" vars="true" autoSize="none" text="{value=27}°"/>

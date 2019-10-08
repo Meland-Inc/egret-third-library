@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="225,445" overflow="hidden" opaque="false" designImage="ui://i25v0ebkbb895b" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlStatus" pages="0,strech,1,shrink" selected="0"/>
-  <controller name="ctrlRobotEnable" pages="0,true,1,false" selected="0"/>
+  <controller name="ctrlRobotEnable" pages="0,true,1,false" selected="1"/>
   <controller name="ctrlGodView" pages="0,false,1,true" selected="1"/>
   <displayList>
     <component id="n8_wdqf" name="btnSetting" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="165,67" size="50,48">
@@ -15,30 +15,21 @@
     <component id="n11_wdqf" name="btnStrech" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="10,4" size="72,66" visible="false">
       <Button icon="ui://5hs1fuejwq4dcyicw" controller="ctrlStatus" page="0"/>
     </component>
-    <component id="n15_wdqf" name="comSmallMap" src="j0s6z" fileName="win/ComSmallMap.xml" xy="0,0">
+    <component id="n15_wdqf" name="comSmallMap" src="j0s6z" fileName="win/ComSmallMap.xml" xy="0,0" controller="ctrlStatus,0">
       <gearXY controller="ctrlStatus" pages="1" values="-160,0" default="0,0" tween="true"/>
     </component>
-    <component id="n18_ylfh" name="btnRecall" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="12,177" size="68,60" group="n20_ylfh">
-      <Button icon="ui://5hs1fuejnl0rcyidj"/>
+    <component id="n23_ylfh" name="btnSummon" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="20,180" size="53,75" visible="false">
+      <gearXY controller="ctrlStatus" pages="0,1" values="20,180|11,79" tween="true"/>
+      <Button icon="ui://5hs1fuejsaevcyiev"/>
     </component>
-    <image id="n19_ylfh" name="imgTfRecall" src="ylfhcyidp" fileName="imgB/img_main_zt_3.png" xy="29,240" group="n20_ylfh"/>
-    <group id="n20_ylfh" name="grpBtnRecall" xy="12,177" size="68,80" visible="false" advanced="true">
-      <gearXY controller="ctrlStatus" pages="0,1" values="12,177|12,79" tween="true"/>
-    </group>
-    <component id="n21_ylfh" name="btnSummon" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="13,176" size="68,60" group="n23_ylfh">
-      <Button icon="ui://5hs1fuejnl0rcyidi"/>
+    <component id="n20_ylfh" name="btnRecall" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="20,180" size="53,75" visible="false">
+      <gearXY controller="ctrlStatus" pages="0,1" values="20,180|12,79" tween="true"/>
+      <Button icon="ui://5hs1fuejsaevcyiew"/>
     </component>
-    <image id="n22_ylfh" name="imgTfSummon" src="ylfhcyido" fileName="imgB/img_main_zt_2.png" xy="29,240" group="n23_ylfh"/>
-    <group id="n23_ylfh" name="grpBtnSummon" xy="13,176" size="68,80" visible="false" advanced="true">
-      <gearXY controller="ctrlStatus" pages="0,1" values="13,176|11,79" tween="true"/>
-    </group>
-    <component id="n24_fs03" name="btnResetManor" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="12,270" size="68,60" group="n26_fs03">
-      <Button icon="ui://5hs1fuejugidcyidm"/>
+    <component id="n33_saev" name="btnResetManor" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="19,274" size="53,75">
+      <gearXY controller="ctrlStatus" pages="0" values="19,274" default="20,177" tween="true"/>
+      <Button icon="ui://5hs1fuejsaevcyiex"/>
     </component>
-    <image id="n25_fs03" name="imgTfReset" src="ylfhcyidq" fileName="imgB/img_main_zt_4.png" xy="24,332" group="n26_fs03"/>
-    <group id="n26_fs03" name="grpBtnResetManor" xy="12,270" size="68,79" advanced="true" collapsed="true">
-      <gearXY controller="ctrlStatus" pages="0,1" values="12,270|13,173" tween="true"/>
-    </group>
     <component id="n31_fs03" name="btnToFreeView" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="11,367" size="73,75">
       <gearDisplay controller="ctrlGodView" pages="0"/>
       <gearXY controller="ctrlStatus" pages="1" values="11,269" default="11,367" tween="true"/>
