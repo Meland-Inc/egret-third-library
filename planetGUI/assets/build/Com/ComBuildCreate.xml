@@ -110,11 +110,19 @@
       <gearLook controller="ctrlEnable" pages="1" values="1,0,1,0" default="1,0,0,1"/>
       <Button title="旋转" titleFontSize="14" icon="ui://32ieekguzefit8w"/>
     </component>
+    <component id="n20_l74u" name="btnCopy" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="36,148" size="42,42" group="n17_jm8l">
+      <gearLook controller="ctrlEnable" pages="1" values="1,0,1,0" default="1,0,0,1"/>
+      <Button title="复制" titleFontSize="14" icon="ui://32ieekguzefit8x"/>
+    </component>
+    <component id="n21_l74u" name="btnDelete" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="36,198" size="42,42" group="n17_jm8l">
+      <gearLook controller="ctrlEnable" pages="1" values="1,0,1,0" default="1,0,0,1"/>
+      <Button title="删除" titleFontSize="14" icon="ui://32ieekguzefit8u"/>
+    </component>
     <component id="n15_7slt" name="btnCancel" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="36,98" size="42,42" group="n17_jm8l">
       <gearLook controller="ctrlEnable" pages="0" values="1,0,0,1" default="1,0,1,0"/>
       <Button title="取消" titleFontSize="14" icon="ui://32ieekguzefit8v"/>
     </component>
-    <group id="n17_jm8l" name="grpOperate" xy="-1,0" size="86,640" advanced="true" collapsed="true">
+    <group id="n17_jm8l" name="grpOperate" xy="-1,0" size="86,640" advanced="true">
       <gearXY controller="ctrlState" pages="1,0" values="-1,0|0,0"/>
     </group>
   </displayList>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="512,587" overflow="hidden" opaque="false" scroll="both" scrollBarRes="ui://rnqj1l77j7co5v,ui://rnqj1l77j7co5x" adaptationTest="FitSize">
   <controller name="codeType" pages="0,robot,1,entity" selected="0"/>
-  <controller name="ctrlShowType" pages="0,scratch,1,python" selected="0"/>
+  <controller name="ctrlShowType" pages="0,scratch,1,python" selected="1"/>
   <controller name="ctrlRecordHint" pages="0,none,1,left,2,right,3,all" selected="0"/>
   <controller name="ctrlStyle" pages="0,black,1,blue" selected="0"/>
   <controller name="ctrlWindowState" pages="0,toMaximize,1,toNormalize" selected="0"/>
@@ -74,18 +74,18 @@
     <component id="n38_czor" name="btnToScratch" src="oliri6q" fileName="btn/rbtnScale.xml" pkg="te1gxawo" xy="173,12" size="90,28" group="n46_dx4v">
       <gearIcon controller="ctrlShowType" pages="0,1" values="ui://rnqj1l77dx4vtkf|ui://rnqj1l77gg8mtgp"/>
       <relation target="n39_czor" sidePair="top-top,left-left"/>
-      <Button checked="true" titleColor="#ffffff" titleFontSize="14" icon="ui://rnqj1l77dx4vtkf" controller="ctrlShowType" page="0"/>
+      <Button titleColor="#ffffff" titleFontSize="14" icon="ui://rnqj1l77gg8mtgp" controller="ctrlShowType" page="0"/>
     </component>
     <component id="n40_czor" name="btnToPython" src="oliri6q" fileName="btn/rbtnScale.xml" pkg="te1gxawo" xy="263,12" size="90,28" group="n46_dx4v">
       <gearIcon controller="ctrlShowType" pages="0,1" values="ui://rnqj1l77hbwitfv|ui://rnqj1l77dx4vtkg"/>
       <relation target="n39_czor" sidePair="right-right,top-top"/>
-      <Button titleColor="#ffffff" titleFontSize="14" icon="ui://rnqj1l77hbwitfv" controller="ctrlShowType" page="1"/>
+      <Button checked="true" titleColor="#ffffff" titleFontSize="14" icon="ui://rnqj1l77dx4vtkg" controller="ctrlShowType" page="1"/>
     </component>
-    <text id="n44_dx4v" name="tfScratch" xy="173,12" size="90,28" group="n46_dx4v" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="Scratch">
+    <text id="n44_dx4v" name="tfScratch" xy="173,12" size="90,28" group="n46_dx4v" fontSize="14" color="#333333" align="center" vAlign="middle" autoSize="none" text="Scratch">
       <gearColor controller="ctrlShowType" pages="1" values="#333333,#000000" default="#ffffff,#000000"/>
       <relation target="n38_czor" sidePair="center-center,middle-middle"/>
     </text>
-    <text id="n47_dx4v" name="tfPython" xy="263,12" size="90,28" group="n46_dx4v" fontSize="14" color="#333333" align="center" vAlign="middle" autoSize="none" text="python">
+    <text id="n47_dx4v" name="tfPython" xy="263,12" size="90,28" group="n46_dx4v" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="python">
       <gearColor controller="ctrlShowType" pages="0,1" values="#333333,#000000|#ffffff,#000000"/>
       <relation target="n40_czor" sidePair="center-center,middle-middle"/>
     </text>
@@ -109,7 +109,7 @@
       <relation target="n40_czor" sidePair="left-right,top-top"/>
     </group>
     <component id="n61_uxq0" name="btnChangeState" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="466,17" size="18,18">
-      <gearDisplay controller="ctrlShowType" pages="0"/>
+      <gearDisplay controller="ctrlShowType" pages="0,1"/>
       <gearIcon controller="ctrlWindowState" pages="0,1" values="ui://te1gxawocw9mcyifh|ui://te1gxawocw9mcyifi"/>
       <relation target="n9_j7co" sidePair="right-right,top-top"/>
       <Button icon="ui://te1gxawocw9mcyifh"/>
