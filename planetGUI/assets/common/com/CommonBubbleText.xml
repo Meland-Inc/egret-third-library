@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="25,52" pivot="0.5,1" anchor="true">
+<component size="25,56" pivot="0.5,1" anchor="true">
   <displayList>
-    <image id="n4_qn8o" name="n4" src="qn8o9" fileName="img/img_main_chatbubble_2.png" xy="0,41">
+    <image id="n4_qn8o" name="n4" src="qn8o9" fileName="newImg/img_main_chatbubble_2.png" xy="0,45">
       <relation target="n1_ij1g" sidePair="center-center,bottom-bottom"/>
     </image>
-    <image id="n5_qn8o" name="n5" src="qn8o8" fileName="img/img_main_chatbubble_1.png" xy="0,0" size="25,41">
+    <image id="n5_qn8o" name="n5" src="qn8o8" fileName="newImg/img_main_chatbubble_1.png" xy="0,0" size="25,45">
       <relation target="n1_ij1g" sidePair="width-width,height-height"/>
     </image>
-    <text id="n1_ij1g" name="tfContent" xy="8,8" size="10,25" fontSize="18" color="#ffffff" bold="true" singleLine="true" text=""/>
+    <text id="n1_ij1g" name="tfContent" xy="8,8" size="10,29" fontSize="18" color="#ffffff" ubb="true" bold="true" singleLine="true" text=""/>
   </displayList>
   <relation target="n1_ij1g" sidePair="width-width,bottomext-bottom"/>
 </component>
