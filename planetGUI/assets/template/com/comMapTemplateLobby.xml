@@ -4,7 +4,7 @@
     <image id="n0_f4tn" name="imgDetailBg" src="f203cyie1" fileName="imgB/img_cm_xxk_1.png" pkg="te1gxawo" xy="0,0" size="336,583" group="n32_x8d1" hideByEditor="true">
       <relation target="" sidePair="height-height"/>
     </image>
-    <text id="n26_ssks" name="tfCreater" xy="18,16" size="149,29" group="n32_x8d1" fontSize="18" color="#365989" vAlign="middle" vars="true" bold="true" text="地图作者: {name=author}"/>
+    <text id="n26_ssks" name="tfCreater" xy="18,16" size="143,24" group="n32_x8d1" fontSize="18" color="#365989" vAlign="middle" vars="true" bold="true" text="地图作者: {name=author}"/>
     <text id="n28_ssks" name="tfMapName" xy="18,54" size="125,24" group="n32_x8d1" fontSize="18" color="#365989" vAlign="middle" autoSize="none" bold="true" text="七桥问题地图"/>
     <list id="n30_ssks" name="lstRoom" xy="22,214" size="308,238" group="n32_x8d1" selectionMode="none" overflow="scroll" scrollBarFlags="6" scrollBar="visible" margin="8,0,0,0" scrollBarRes="ui://rnqj1l77j7co5v," lineGap="6" defaultItem="ui://4wr0elnxssksy">
       <relation target="n31_ssks" sidePair="bottomext-top"/>
@@ -28,7 +28,7 @@
       <relation target="" sidePair="bottom-bottom"/>
       <Button title="快速进入" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
     </component>
-    <image id="n33_imu4" name="mapBg" src="p3zl7" fileName="img/img_stencil_dt_6.png" xy="22,87" size="152,114" group="n32_x8d1"/>
+    <image id="n33_imu4" name="mapBg" src="p3zl7" fileName="img/img_stencil_dt_6.png" xy="23,88" size="150,112" group="n32_x8d1"/>
     <component id="n29_ssks" name="ladMap" src="er8nn1q" fileName="com/ComAutoClipLad.xml" xy="22,87" size="152,114" group="n32_x8d1">
       <relation target="n33_imu4" sidePair="width-width,height-height"/>
     </component>
