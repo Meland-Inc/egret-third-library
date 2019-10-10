@@ -161,6 +161,8 @@ var mouse;
     var isPC;
     var isTouchHitTest; //是否在touch事件中已经检测过 hitTest 帧事件中没必要再重新检测 hitTest很耗
     var touchHitTestResult; //touch事件检测hitTest的结果
+    mouse.checkSpeedFrame = 1; //多少帧check一次 涉及到性能和体验
+    var checkCount = 0;
     var dispatch = function (type, bubbles, x, y) {
         if (type == mouse.MouseEvent.ROLL_OVER && currentTarget.isRollOver) {
             return;
@@ -299,10 +301,26 @@ var mouse;
             // check(x, y);
         };
         stage.addEventListener(egret.Event.ENTER_FRAME, function () {
+            checkCount++;
+            if (checkCount % mouse.checkSpeedFrame !== 0) {
+                return;
+            }
+            checkCount = 0;
             if (mouseX != NaN && mouseY != NaN) {
                 check(mouseX, mouseY);
             }
         }, null);
+    };
+    /**
+     * 设置鼠标库 check的频率 节省性能 默认每帧检查
+     * @param value 大于0生效
+     */
+    mouse.setCheckSpeedFrame = function (value) {
+        if (!value || value < 1) {
+            return;
+        }
+        console.log("mouse setCheckSpeedFrame=" + value);
+        mouse.checkSpeedFrame = value;
     };
     /**
      * @language en_US

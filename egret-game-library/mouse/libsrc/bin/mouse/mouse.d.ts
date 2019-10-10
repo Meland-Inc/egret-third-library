@@ -81,6 +81,7 @@ declare namespace mouse {
     }
 }
 declare namespace mouse {
+    let checkSpeedFrame: number;
     /**
      * @language en_US
      * Enable mouse detection.
@@ -94,6 +95,11 @@ declare namespace mouse {
      * @platform Web
      */
     const enable: (stage: egret.Stage) => void;
+    /**
+     * 设置鼠标库 check的频率 节省性能 默认每帧检查
+     * @param value 大于0生效
+     */
+    const setCheckSpeedFrame: (value: number) => void;
     /**
      * @language en_US
      * Set a target of buttonMode property setting is true, when the mouse rolls over the object becomes hand type.
