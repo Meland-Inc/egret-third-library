@@ -794,13 +794,17 @@ namespace egret {
             if (!this.$visible) {
                 return null;
             }
-            let m = this.$getInvertedConcatenatedMatrix();
-            let localX = m.a * stageX + m.c * stageY + m.tx;
-            let localY = m.b * stageX + m.d * stageY + m.ty;
+
 
             let rect = this.$scrollRect ? this.$scrollRect : this.$maskRect;
-            if (rect && !rect.contains(localX, localY)) {
-                return null;
+            if (rect) {
+                let m = this.$getInvertedConcatenatedMatrix();
+                let localX = m.a * stageX + m.c * stageY + m.tx;
+                let localY = m.b * stageX + m.d * stageY + m.ty;
+
+                if (!rect.contains(localX, localY)) {
+                    return null;
+                }
             }
 
             if (this.$mask && !this.$mask.$hitTest(stageX, stageY)) {
