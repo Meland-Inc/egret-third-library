@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="210,46" opaque="false" extention="Button" designImage="ui://i25v0ebkuhu64p" designImageAlpha="0">
-  <controller name="ctrlMode" pages="0,add,2,editNotDel,1,edit,5,editNotAttr,4,editNotCopy" selected="4"/>
+  <controller name="ctrlMode" pages="0,add,2,editNotDel,1,edit,5,editNotAttr,4,editNotCopy" selected="0"/>
   <displayList>
-    <component id="n8_k177" name="btnR" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="42,0" size="42,46">
+    <component id="n8_k177" name="btnR" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="62,0" size="42,46">
       <gearXY controller="ctrlMode" pages="0,2,1,5,4" values="62,0|20,0|0,0|42,0|42,0"/>
-      <Button icon="ui://32ieekguuhu6t7x" selectedIcon="ui://32ieekguloxgt8l"/>
+      <Button icon="ui://32ieekguzefit8w" selectedIcon="ui://32ieekguloxgt8l"/>
     </component>
-    <component id="n9_k177" name="btnEsc" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="84,0">
+    <component id="n9_k177" name="btnEsc" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="104,0">
       <gearXY controller="ctrlMode" pages="0,2,1,5,4" values="104,0|146,0|126,0|84,0|84,0"/>
-      <Button title="Esc" icon="ui://32ieekguuhu6t80" selectedIcon="ui://32ieekguloxgt8o"/>
+      <Button title="取消" icon="ui://32ieekguzefit8v" selectedIcon="ui://32ieekguloxgt8o"/>
     </component>
-    <component id="n10_k177" name="btnDelete" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="126,0">
+    <component id="n10_k177" name="btnDelete" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="130,1">
       <gearDisplay controller="ctrlMode" pages="1,5,4"/>
       <gearXY controller="ctrlMode" pages="1,5,4" values="168,0|126,0|126,0" default="130,1"/>
       <Button title="Delete" icon="ui://32ieekguxvfat84" selectedIcon="ui://32ieekguloxgt8p"/>
