@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="800,36" designImage="ui://i25v0ebkvbzw5h" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlMode" pages="0,normal,1,tile" selected="0"/>
+  <controller name="ctrlMode" pages="0,normal,1,tile,3,editTile" selected="0"/>
   <displayList>
     <image id="n0_cw9m" name="imgBg" src="cw9mcyifk" fileName="imgB/img_cm_gjl_11.png" pkg="te1gxawo" xy="0,0" size="800,36">
       <relation target="" sidePair="width-width"/>
@@ -18,24 +18,29 @@
       <Button icon="ui://te1gxawocw9mcyifc"/>
     </component>
     <component id="n7_cw9m" name="btnMore" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="747,10" size="16,16">
-      <gearXY controller="ctrlMode" pages="0,1" values="747,10|690,10"/>
+      <gearXY controller="ctrlMode" pages="0,1,3" values="747,10|690,10|690,10"/>
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://te1gxawocw9mcyifg"/>
     </component>
     <component id="n6_cw9m" name="btnEntity" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="777,10" size="16,16" tooltips="地图">
-      <gearXY controller="ctrlMode" pages="0,1" values="777,10|720,10"/>
+      <gearXY controller="ctrlMode" pages="0,1,3" values="777,10|720,10|720,10"/>
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://te1gxawocw9mcyiff"/>
     </component>
     <component id="n8_cw9m" name="btnMapTool" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="749,9" size="16,16">
-      <gearDisplay controller="ctrlMode" pages="1"/>
+      <gearDisplay controller="ctrlMode" pages="1,3"/>
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://te1gxawocw9mcyife"/>
     </component>
     <component id="n9_cw9m" name="btnBackToGameServer" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="779,10" size="16,14">
-      <gearDisplay controller="ctrlMode" pages="1"/>
+      <gearDisplay controller="ctrlMode" pages="1,3"/>
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://te1gxawocw9mcyifd"/>
+    </component>
+    <component id="n10_p7oo" name="btnRestartCode" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="660,8" size="20,19">
+      <gearDisplay controller="ctrlMode" pages="3"/>
+      <relation target="" sidePair="right-right"/>
+      <Button icon="ui://32ieekgup7oot9q"/>
     </component>
   </displayList>
 </component>
