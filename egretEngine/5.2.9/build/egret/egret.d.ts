@@ -2910,6 +2910,14 @@ declare namespace egret {
          */
         $measureChildBounds(bounds: Rectangle): void;
         $touchChildren: boolean;
+        $containerSelfHitTest: boolean;
+        /**
+         * 容器自身是否需要参与hitTest  一般容器自身参与是没有意义的开销
+         */
+        /**
+         * 容器自身是否需要参与hitTest  一般容器自身参与是没有意义的开销
+         */
+        containerSelfHitTest: boolean;
         /**
          * Determines whether or not the children of the object are touch, or user input device, enabled. If an object is
          * enabled, a user can interact with it by using a touch or user input device.

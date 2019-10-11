@@ -2038,6 +2038,10 @@ namespace egret {
          * @private
          */
         $hitTest(stageX: number, stageY: number): DisplayObject {
+            // if (!this.$touchEnabled) {//优化hitTest性能
+            //     return null;
+            // }
+
             let self = this;
             if ((!egret.nativeRender && !self.$renderNode) || !self.$visible || self.$scaleX == 0 || self.$scaleY == 0) {
                 return null;

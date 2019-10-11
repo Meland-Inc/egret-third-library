@@ -45,6 +45,9 @@ namespace mouse {
     let isTouchHitTest: boolean;//是否在touch事件中已经检测过 hitTest 帧事件中没必要再重新检测 hitTest很耗
     let touchHitTestResult: egret.DisplayObject;//touch事件检测hitTest的结果
 
+    export let checkSpeedFrame: number = 1;//多少帧check一次 涉及到性能和体验
+    let checkCount: number = 0
+
     const dispatch = function (type: string, bubbles: boolean, x: number, y: number) {
         if (type == MouseEvent.ROLL_OVER && currentTarget.isRollOver) {
             return;
@@ -187,10 +190,28 @@ namespace mouse {
             // check(x, y);
         };
         stage.addEventListener(egret.Event.ENTER_FRAME, function () {
+            checkCount++;
+            if (checkCount % checkSpeedFrame !== 0) {
+                return;
+            }
+
+            checkCount = 0;
             if (mouseX != NaN && mouseY != NaN) {
                 check(mouseX, mouseY);
             }
         }, null);
+    }
+
+    /**
+     * 设置鼠标库 check的频率 节省性能 默认每帧检查
+     * @param value 大于0生效
+     */
+    export const setCheckSpeedFrame = function (value: number) {
+        if (!value || value < 1) {
+            return;
+        }
+        console.log(`mouse setCheckSpeedFrame=${value}`);
+        checkSpeedFrame = value;
     }
 
     /**
