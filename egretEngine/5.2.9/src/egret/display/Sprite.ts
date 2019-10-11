@@ -69,7 +69,7 @@ namespace egret {
         /**
          * @private
          */
-        $graphics:Graphics;
+        $graphics: Graphics;
 
         /**
          * Specifies the Graphics object belonging to this Shape object, where vector drawing commands can occur.
@@ -83,56 +83,62 @@ namespace egret {
          * @platform Web,Native
          * @language zh_CN
          */
-        public get graphics():Graphics {
+        public get graphics(): Graphics {
             return this.$graphics;
         }
 
-        $hitTest(stageX:number, stageY:number):DisplayObject {
+        $hitTest(stageX: number, stageY: number): DisplayObject {
             if (!this.$visible) {
                 return null;
             }
-            let m = this.$getInvertedConcatenatedMatrix();
-            let localX = m.a * stageX + m.c * stageY + m.tx;
-            let localY = m.b * stageX + m.d * stageY + m.ty;
 
             let rect = this.$scrollRect ? this.$scrollRect : this.$maskRect;
-            if (rect && !rect.contains(localX, localY)) {
-                return null;
+            if (rect) {
+                let m = this.$getInvertedConcatenatedMatrix();
+                let localX = m.a * stageX + m.c * stageY + m.tx;
+                let localY = m.b * stageX + m.d * stageY + m.ty;
+
+                if (!rect.contains(localX, localY)) {
+                    return null;
+                }
             }
 
             if (this.$mask && !this.$mask.$hitTest(stageX, stageY)) {
                 return null;
             }
-            let children = this.$children;
-            let found = false;
-            let target:DisplayObject = null;
-            for (let i = children.length - 1; i >= 0; i--) {
-                let child = children[i];
-                if (child.$maskedObject) {
-                    continue;
+            let target: DisplayObject = null;
+            //如果不能触摸子直接跳过 游戏显示对象太多 节省性能  modify by xiangqian 2018.11.30
+            if (this.$touchChildren) {
+                let children = this.$children;
+                let found = false;
+                for (let i = children.length - 1; i >= 0; i--) {
+                    let child = children[i];
+                    if (child.$maskedObject) {
+                        continue;
+                    }
+                    target = child.$hitTest(stageX, stageY);
+                    if (target) {
+                        found = true;
+                        if (target.$touchEnabled) {
+                            break;
+                        }
+                        else {
+                            target = null;
+                        }
+                    }
                 }
-                target = child.$hitTest(stageX, stageY);
                 if (target) {
-                    found = true;
-                    if(target.$touchEnabled){
-                        break;
+                    if (this.$touchChildren) {
+                        return target;
                     }
-                    else{
-                        target = null;
-                    }
+                    return this;
                 }
-            }
-            if (target) {
-                if (this.$touchChildren) {
-                    return target;
+                if (found) {
+                    return this;
                 }
-                return this;
-            }
-            if (found) {
-                return this;
             }
 
-            target =  DisplayObject.prototype.$hitTest.call(this, stageX, stageY);
+            target = DisplayObject.prototype.$hitTest.call(this, stageX, stageY);
             if (target) {
                 target = this.$graphics.$hitTest(stageX, stageY);
             }
@@ -143,16 +149,16 @@ namespace egret {
         /**
          * @private
          */
-        $measureContentBounds(bounds:Rectangle):void {
+        $measureContentBounds(bounds: Rectangle): void {
             this.$graphics.$measureContentBounds(bounds);
         }
 
         /**
          * @private
          */
-        public $onRemoveFromStage():void {
+        public $onRemoveFromStage(): void {
             super.$onRemoveFromStage();
-            if(this.$graphics) {
+            if (this.$graphics) {
                 this.$graphics.$onRemoveFromStage();
             }
         }

@@ -2449,6 +2449,9 @@ var egret;
          * @private
          */
         DisplayObject.prototype.$hitTest = function (stageX, stageY) {
+            // if (!this.$touchEnabled) {//优化hitTest性能
+            //     return null;
+            // }
             var self = this;
             if ((!egret.nativeRender && !self.$renderNode) || !self.$visible || self.$scaleX == 0 || self.$scaleY == 0) {
                 return null;
@@ -4368,6 +4371,7 @@ var egret;
         function DisplayObjectContainer() {
             var _this = _super.call(this) || this;
             _this.$touchChildren = true;
+            _this.$containerSelfHitTest = false; //容器自身是否需要参与hitTest  一般容器自身参与是没有意义的开销
             _this.$children = [];
             return _this;
         }
@@ -5016,6 +5020,22 @@ var egret;
             }
             bounds.setTo(xMin, yMin, xMax - xMin, yMax - yMin);
         };
+        Object.defineProperty(DisplayObjectContainer.prototype, "containerSelfHitTest", {
+            /**
+             * 容器自身是否需要参与hitTest  一般容器自身参与是没有意义的开销
+             */
+            get: function () {
+                return this.$containerSelfHitTest;
+            },
+            /**
+             * 容器自身是否需要参与hitTest  一般容器自身参与是没有意义的开销
+             */
+            set: function (value) {
+                this.$containerSelfHitTest = value;
+            },
+            enumerable: true,
+            configurable: true
+        });
         Object.defineProperty(DisplayObjectContainer.prototype, "touchChildren", {
             /**
              * Determines whether or not the children of the object are touch, or user input device, enabled. If an object is
@@ -5066,47 +5086,54 @@ var egret;
             if (!this.$visible) {
                 return null;
             }
-            var m = this.$getInvertedConcatenatedMatrix();
-            var localX = m.a * stageX + m.c * stageY + m.tx;
-            var localY = m.b * stageX + m.d * stageY + m.ty;
             var rect = this.$scrollRect ? this.$scrollRect : this.$maskRect;
-            if (rect && !rect.contains(localX, localY)) {
-                return null;
+            if (rect) {
+                var m = this.$getInvertedConcatenatedMatrix();
+                var localX = m.a * stageX + m.c * stageY + m.tx;
+                var localY = m.b * stageX + m.d * stageY + m.ty;
+                if (!rect.contains(localX, localY)) {
+                    return null;
+                }
             }
             if (this.$mask && !this.$mask.$hitTest(stageX, stageY)) {
                 return null;
             }
-            //游戏中太多场景的东西需要触摸 会有异常 保留了按下时搜索所有 不过move时不会再重新寻找 也就不需要这里优化了
-            // //如果不能触摸子直接跳过 游戏显示对象太多 节省性能  modify by xiangqian 2018.11.30
-            // if (this.$touchChildren) {
-            var children = this.$children;
-            var found = false;
-            var target = null;
-            for (var i = children.length - 1; i >= 0; i--) {
-                var child = children[i];
-                if (child.$maskedObject) {
-                    continue;
+            //如果不能触摸子直接跳过 游戏显示对象太多 节省性能  modify by xiangqian 2018.11.30
+            if (this.$touchChildren) {
+                var children = this.$children;
+                var found = false;
+                var target = null;
+                for (var i = children.length - 1; i >= 0; i--) {
+                    var child = children[i];
+                    if (child.$maskedObject) {
+                        continue;
+                    }
+                    target = child.$hitTest(stageX, stageY);
+                    if (target) {
+                        found = true;
+                        if (target.$touchEnabled) {
+                            break;
+                        }
+                        else {
+                            target = null;
+                        }
+                    }
                 }
-                target = child.$hitTest(stageX, stageY);
                 if (target) {
-                    found = true;
-                    if (target.$touchEnabled) {
-                        break;
+                    if (this.$touchChildren) {
+                        return target;
                     }
-                    else {
-                        target = null;
-                    }
+                    return this;
+                }
+                if (found) {
+                    return this;
                 }
             }
-            if (target) {
-                if (this.$touchChildren) {
-                    return target;
-                }
-                return this;
-            }
-            if (found) {
-                return this;
-            }
+            // if (this.$containerSelfHitTest) {
+            //     return super.$hitTest(stageX, stageY);
+            // }
+            // else {
+            //     return null;//空容器没必要调用父类矩阵计算 没有什么意义
             // }
             return _super.prototype.$hitTest.call(this, stageX, stageY);
         };
@@ -17420,43 +17447,48 @@ var egret;
             if (!this.$visible) {
                 return null;
             }
-            var m = this.$getInvertedConcatenatedMatrix();
-            var localX = m.a * stageX + m.c * stageY + m.tx;
-            var localY = m.b * stageX + m.d * stageY + m.ty;
             var rect = this.$scrollRect ? this.$scrollRect : this.$maskRect;
-            if (rect && !rect.contains(localX, localY)) {
-                return null;
+            if (rect) {
+                var m = this.$getInvertedConcatenatedMatrix();
+                var localX = m.a * stageX + m.c * stageY + m.tx;
+                var localY = m.b * stageX + m.d * stageY + m.ty;
+                if (!rect.contains(localX, localY)) {
+                    return null;
+                }
             }
             if (this.$mask && !this.$mask.$hitTest(stageX, stageY)) {
                 return null;
             }
-            var children = this.$children;
-            var found = false;
             var target = null;
-            for (var i = children.length - 1; i >= 0; i--) {
-                var child = children[i];
-                if (child.$maskedObject) {
-                    continue;
+            //如果不能触摸子直接跳过 游戏显示对象太多 节省性能  modify by xiangqian 2018.11.30
+            if (this.$touchChildren) {
+                var children = this.$children;
+                var found = false;
+                for (var i = children.length - 1; i >= 0; i--) {
+                    var child = children[i];
+                    if (child.$maskedObject) {
+                        continue;
+                    }
+                    target = child.$hitTest(stageX, stageY);
+                    if (target) {
+                        found = true;
+                        if (target.$touchEnabled) {
+                            break;
+                        }
+                        else {
+                            target = null;
+                        }
+                    }
                 }
-                target = child.$hitTest(stageX, stageY);
                 if (target) {
-                    found = true;
-                    if (target.$touchEnabled) {
-                        break;
+                    if (this.$touchChildren) {
+                        return target;
                     }
-                    else {
-                        target = null;
-                    }
+                    return this;
                 }
-            }
-            if (target) {
-                if (this.$touchChildren) {
-                    return target;
+                if (found) {
+                    return this;
                 }
-                return this;
-            }
-            if (found) {
-                return this;
             }
             target = egret.DisplayObject.prototype.$hitTest.call(this, stageX, stageY);
             if (target) {
