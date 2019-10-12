@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="90,64">
-  <controller name="color" pages="0,Event,1,DeepYellow,2,Red,3,Purple,4,DeepBlue,5,LightBlue,6,DeepGreen,7,LightGreen,8,Pink" selected="0"/>
+  <controller name="color" pages="0,Event,1,DeepYellow,2,Red,3,Purple,4,DeepBlue,5,LightBlue,6,DeepGreen,7,LightGreen,8,Pink,9,ListGreen" selected="9"/>
   <controller name="isAlone" pages="0,true,1,false" selected="0"/>
-  <controller name="ctrlValueType" pages="1,none,0,interactive,2,entity,3,output,4,question,5,xy,6,class,7,public,8,private" selected="0"/>
+  <controller name="ctrlValueType" pages="1,none,0,interactive,2,entity,3,output,4,question,5,xy,6,class,7,public,8,private" selected="8"/>
   <displayList>
-    <loader id="n2_emrm" name="ladBG" xy="0,0" size="90,64" url="ui://rnqj1l77k3kgtgy" fill="scaleFree">
+    <loader id="n2_emrm" name="ladBG" xy="0,0" size="90,64" url="ui://rnqj1l77p7ootm0" fill="scaleFree">
       <gearDisplay controller="isAlone" pages="1"/>
-      <gearIcon controller="color" pages="0,1,2,3,4,6,7,8" values="ui://rnqj1l77k3kgtgy|ui://rnqj1l77k3kgth0|ui://rnqj1l77h5gvtby|ui://rnqj1l77liabtd9|ui://rnqj1l77pwfmtej|ui://rnqj1l77h5gvtci|ui://rnqj1l77liabtde|ui://rnqj1l77w7botle" default="ui://rnqj1l77h5gvtbh"/>
+      <gearIcon controller="color" pages="0,1,2,3,4,6,7,8,9" values="ui://rnqj1l77k3kgtgy|ui://rnqj1l77k3kgth0|ui://rnqj1l77h5gvtby|ui://rnqj1l77liabtd9|ui://rnqj1l77pwfmtej|ui://rnqj1l77h5gvtci|ui://rnqj1l77liabtde|ui://rnqj1l77w7botle|ui://rnqj1l77p7ootm0" default="ui://rnqj1l77h5gvtbh"/>
       <relation target="n1_flp7" sidePair="width-width,height-height"/>
     </loader>
-    <loader id="n3_yrfu" name="ladAloneBG" xy="0,0" size="90,68" url="ui://rnqj1l77k3kgtgx" fill="scaleFree">
+    <loader id="n3_yrfu" name="ladAloneBG" xy="0,0" size="90,68" url="ui://rnqj1l77p7ootlz" fill="scaleFree">
       <gearDisplay controller="isAlone" pages="0"/>
-      <gearIcon controller="color" pages="0,1,2,3,4,5,6,7,8" values="ui://rnqj1l77k3kgtgx|ui://rnqj1l77k3kgtgz|ui://rnqj1l77h5gvtbx|ui://rnqj1l77liabtda|ui://rnqj1l77pwfmtei|ui://rnqj1l77h5gvtbg|ui://rnqj1l77h5gvtch|ui://rnqj1l77liabtdd|ui://rnqj1l77w7botld"/>
+      <gearIcon controller="color" pages="0,1,2,3,4,5,6,7,8,9" values="ui://rnqj1l77k3kgtgx|ui://rnqj1l77k3kgtgz|ui://rnqj1l77h5gvtbx|ui://rnqj1l77liabtda|ui://rnqj1l77pwfmtei|ui://rnqj1l77h5gvtbg|ui://rnqj1l77h5gvtch|ui://rnqj1l77liabtdd|ui://rnqj1l77w7botld|ui://rnqj1l77p7ootlz"/>
       <relation target="n1_flp7" sidePair="width-width,height-height"/>
     </loader>
     <component id="n1_flp7" name="container" src="kesa9" fileName="com/Container.xml" xy="20,0" size="50,64" restrictSize="50,0,64,64"/>
-    <loader id="n4_kt4s" name="btnHint" xy="16,12" size="40,40">
+    <loader id="n4_kt4s" name="btnHint" xy="16,12" size="40,40" url="ui://rnqj1l77dx4vtkl">
       <gearDisplay controller="ctrlValueType" pages="0,2,3,4,5,6,7,8"/>
       <gearIcon controller="ctrlValueType" pages="1,0,2,3,4,5,6,7,8" values="|ui://rnqj1l77hlthths|ui://rnqj1l77hlththu|ui://rnqj1l77hlththt|ui://rnqj1l77hlththq|ui://rnqj1l77hlththr|ui://rnqj1l77hlththp|ui://rnqj1l77dx4vtkk|ui://rnqj1l77dx4vtkl"/>
       <relation target="n3_yrfu" sidePair="left-left"/>

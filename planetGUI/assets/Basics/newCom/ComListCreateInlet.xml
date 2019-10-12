@@ -12,10 +12,10 @@
       <relation target="" sidePair="right-right,top-top"/>
       <Button icon="ui://rnqj1l77tcu29t"/>
     </component>
-    <component id="n17_hoex" name="btnCreateVariate" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="0,0" size="103,33">
+    <component id="n19_v32m" name="btnCreateList" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="0,0" size="103,33">
       <gearDisplay controller="poolType" pages="1,2"/>
       <relation target="" sidePair="left-left,top-top"/>
-      <Button title="创建变量" titleColor="#ffffff" titleFontSize="14" icon="ui://te1gxawom3dicyidb"/>
+      <Button title="创建列表" titleColor="#ffffff" titleFontSize="14" icon="ui://te1gxawom3dicyidb"/>
     </component>
   </displayList>
 </component>

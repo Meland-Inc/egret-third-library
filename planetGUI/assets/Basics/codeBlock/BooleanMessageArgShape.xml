@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="77,37" opaque="false">
-  <controller name="color" pages="0,Event,1,DeepYellow,2,Red,3,Purple,4,DeepBlue,5,LightBlue,6,DeepGreen,7,LightGreen,8,Pink" selected="8"/>
+  <controller name="color" pages="0,Event,1,DeepYellow,2,Red,3,Purple,4,DeepBlue,5,LightBlue,6,DeepGreen,7,LightGreen,8,Pink,9,ListGreen" selected="9"/>
   <displayList>
-    <loader id="n7_r4qp" name="n7" xy="0,0" size="77,37" url="ui://rnqj1l77w7botlg" align="center" vAlign="middle">
-      <gearIcon controller="color" pages="0,1,2,3,4,5,6,7,8" values="ui://rnqj1l77h5gvtbv|ui://rnqj1l77h5gvtb2|ui://rnqj1l77h5gvtc1|ui://rnqj1l77h5gvtbe|ui://rnqj1l77h5gvtcf|ui://rnqj1l77h5gvtbo|ui://rnqj1l77h5gvtcp|ui://rnqj1l77h5gvtb8|ui://rnqj1l77w7botlg"/>
+    <loader id="n7_r4qp" name="n7" xy="0,0" size="77,37" url="ui://rnqj1l77p7ootlx" align="center" vAlign="middle">
+      <gearIcon controller="color" pages="0,1,2,3,4,5,6,7,8,9" values="ui://rnqj1l77h5gvtbv|ui://rnqj1l77h5gvtb2|ui://rnqj1l77h5gvtc1|ui://rnqj1l77h5gvtbe|ui://rnqj1l77h5gvtcf|ui://rnqj1l77h5gvtbo|ui://rnqj1l77h5gvtcp|ui://rnqj1l77h5gvtb8|ui://rnqj1l77w7botlg|ui://rnqj1l77p7ootlx"/>
     </loader>
   </displayList>
 </component>
