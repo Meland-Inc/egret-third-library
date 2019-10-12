@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="800,36" designImage="ui://i25v0ebkvbzw5h" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlMode" exported="true" pages="0,normal,1,tile,3,editTile" selected="2"/>
+  <controller name="ctrlMode" exported="true" pages="4,none,0,normal,1,tile,3,editTile" selected="0"/>
   <displayList>
     <image id="n0_cw9m" name="imgBg" src="cw9mcyifk" fileName="imgB/img_cm_gjl_11.png" pkg="te1gxawo" xy="0,0" size="800,36">
       <relation target="" sidePair="width-width"/>
@@ -17,13 +17,13 @@
     <component id="n5_cw9m" name="btnForward" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="98,10" size="16,14">
       <Button icon="ui://te1gxawocw9mcyifc"/>
     </component>
-    <component id="n7_cw9m" name="btnMore" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="690,10" size="16,16">
-      <gearXY controller="ctrlMode" pages="0,1,3" values="747,10|690,10|690,10"/>
+    <component id="n7_cw9m" name="btnMore" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="747,10" size="16,16">
+      <gearXY controller="ctrlMode" pages="0,1,3" values="747,10|690,10|690,10" default="747,10"/>
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://te1gxawocw9mcyifg"/>
     </component>
-    <component id="n6_cw9m" name="btnEntity" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="720,10" size="16,16" tooltips="地图">
-      <gearXY controller="ctrlMode" pages="0,1,3" values="777,10|720,10|720,10"/>
+    <component id="n6_cw9m" name="btnEntity" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="777,10" size="16,16" tooltips="地图">
+      <gearXY controller="ctrlMode" pages="0,1,3" values="777,10|720,10|720,10" default="777,10"/>
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://te1gxawocw9mcyiff"/>
     </component>
