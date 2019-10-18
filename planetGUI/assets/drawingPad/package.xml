@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="tcbadh8n" jpegQuality="80" compressPNG="true">
   <resources>
-    <component id="batc0" name="WinDrawingPad.xml" path="/win/" exported="true"/>
     <image id="batc1" name="btn_sket_bc_1.png" path="/img/"/>
     <image id="batc2" name="btn_sket_hbcz_1.png" path="/img/"/>
     <image id="batc3" name="btn_sket_hbcz_2.png" path="/img/"/>
@@ -91,6 +90,7 @@
     <component id="pa6b2n" name="btnProjection.xml" path="/btn/"/>
     <component id="u1c92o" name="ComCanvasBox.xml" path="/com/"/>
     <component id="s3a32p" name="WinDrawingLoading.xml" path="/win/" exported="true"/>
+    <component id="mj872s" name="WinDrawingPad.xml" path="/win/" exported="true"/>
   </resources>
   <publish name="drawingPad"/>
 </packageDescription>
