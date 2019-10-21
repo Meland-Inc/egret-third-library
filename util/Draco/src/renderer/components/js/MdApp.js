@@ -36,7 +36,7 @@ export function getWechatPaths() {
 }
 
 var gameVersion;
-export function getNewVersion() { return gameVersion; }
+export function getGameVersion() { return gameVersion; }
 export function setGameVersion(value) {
     gameVersion = value;
 }

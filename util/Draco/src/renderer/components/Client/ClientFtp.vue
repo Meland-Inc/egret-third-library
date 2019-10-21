@@ -14,6 +14,7 @@
           color="orange500"
           @click="onUploadVersionFile"
         >上传游戏版本</mu-button>
+        <mu-divider></mu-divider>
         <mu-button
           v-loading="isCreatePolicyFileLoading"
           data-mu-loading-size="24"
@@ -38,12 +39,6 @@
           color="green500"
           @click="onApplyPolicyNum"
         >应用策略版本</mu-button>
-        <!-- <mu-button
-          v-loading="isExportIpaLoading"
-          data-mu-loading-size="24"
-          color="cyan500"
-          @click="onExportIpa"
-        >打包ipa</mu-button>-->
       </div>
       <div class="button-wrapper">
         <mu-button full-width color="red" @click="oneForAll">One·for·All</mu-button>
@@ -53,16 +48,16 @@
       <div>
         <mu-flex class="flex-wrapper" align-items="center">
           <mu-col span="12" lg="2" sm="2">
-            <mu-text-field class="text-game" v-model="policyNum" label="策略版本号" label-float/>
+            <mu-text-field class="text-game" v-model="policyNum" label="策略版本号" label-float />
           </mu-col>
           <mu-col span="12" lg="2" sm="2">
-            <mu-text-field class="text-game" v-model="whiteVersion" label="白名单游戏版本" label-float/>
+            <mu-text-field class="text-game" v-model="whiteVersion" label="白名单游戏版本" label-float />
           </mu-col>
           <mu-col span="12" lg="2" sm="2">
-            <mu-text-field class="text-game" v-model="normalVersion" label="常规游戏版本" label-float/>
+            <mu-text-field class="text-game" v-model="normalVersion" label="常规游戏版本" label-float />
           </mu-col>
           <mu-col span="12" lg="2" sm="2">
-            <mu-text-field class="text-game" v-model="displayVersion" label="显示版本号" label-float/>
+            <mu-text-field class="text-game" v-model="displayVersion" label="显示版本号" label-float />
           </mu-col>
           <mu-col span="12" lg="2" sm="2">
             <mu-select label="选择类型" filterable v-model="versionType" label-float full-width>
@@ -82,7 +77,10 @@
         </mu-flex>
         <mu-flex class="flex-wrapper" align-items="center">
           <mu-col span="12" lg="2" sm="2">
-            <mu-checkbox v-model="needPatch" @change="needPatchChange" label="选择patch包"></mu-checkbox>
+            <mu-checkbox v-model="needPatch" @change="needPatchChange" label="patch包"></mu-checkbox>
+          </mu-col>
+          <mu-col span="12" lg="2" sm="2">
+            <mu-checkbox v-model="useCdn" label="使用cdn"></mu-checkbox>
           </mu-col>
           <mu-col span="12" lg="3" sm="3">
             <mu-select label="上传游戏版本" filterable v-model="uploadVersion" label-float full-width>
@@ -124,6 +122,7 @@
 import { Global } from "../js/Global.js";
 import * as fsExc from "../js/FsExecute.js";
 import * as mdFtp from "../js/MdFtp.js";
+import { ModelMgr } from "../js/model/ModelMgr";
 export default {
   data() {
     return {
@@ -144,6 +143,7 @@ export default {
       releaseList: [],
       patchList: [],
       needPatch: true,
+      useCdn: false,
       channelList: [],
       channel: null,
       versionTypes: null,
@@ -152,33 +152,44 @@ export default {
   },
   watch: {
     displayVersion: val => {
-      mdFtp.setDisplayVersion(val);
+      // mdFtp.setDisplayVersion(val);
+      ModelMgr.versionModel.setDisplayVersion(val);
     },
     policyNum: value => {
-      mdFtp.setPolicyNum(value);
+      // mdFtp.setPolicyNum(value);
+      ModelMgr.versionModel.setPolicyNum(value);
     },
     uploadVersion: value => {
-      mdFtp.setUploadVersion(value);
+      // mdFtp.setUploadVersion(value);
+      ModelMgr.versionModel.setUploadVersion(value);
     },
     whiteVersion: value => {
-      mdFtp.setWhiteVersion(value);
+      // mdFtp.setWhiteVersion(value);
+      ModelMgr.versionModel.setWhiteList(value);
     },
     normalVersion: value => {
-      mdFtp.setNormalVersion(value);
+      // mdFtp.setNormalVersion(value);
+      ModelMgr.versionModel.setNormalVersion(value);
     },
     channel: value => {
-      mdFtp.setChannel(value);
+      // mdFtp.setChannel(value);
+      ModelMgr.versionModel.setChannel(value);
     },
     needPatch: value => {
-      mdFtp.setNeedPatch(value);
+      // mdFtp.setNeedPatch(value);
+      ModelMgr.versionModel.setNeedPatch(value);
     },
     versionType: val => {
-      mdFtp.setVersionType(val);
+      // mdFtp.setVersionType(val);
+      ModelMgr.versionModel.setVersionType(val);
+    },
+    useCdn: value => {
+      ModelMgr.ftpModel.useCdn = value;
     }
   },
   methods: {
     serverInfoChange() {
-      mdFtp.setServerInfo(this.serverInfo);
+      // mdFtp.setServerInfo(this.serverInfo);
       this.refreshPolicyNum();
     },
     needPatchChange() {
@@ -247,6 +258,9 @@ export default {
       Global.showRegionLoading();
       try {
         await mdFtp.uploadPolicyFile();
+        if (this.useCdn) {
+          await mdFtp.uploadCdnPolicyFile();
+        }
         this.isUploadPolicyLoading = false;
         Global.hideRegionLoading();
         if (showDialog) {
@@ -299,7 +313,7 @@ export default {
     async refreshVersionList() {
       this.releaseList = [];
       this.patchList = [];
-      let webDir = await fsExc.readDir(Global.svnPublishPath + "/web/");
+      let webDir = await fsExc.readDir(localPath);
       let reg = /[A-Za-z]_*/g;
       for (const iterator of webDir) {
         if (iterator.indexOf("release") != -1) {
@@ -320,18 +334,19 @@ export default {
         return parseInt(a.replace(reg, "")) - parseInt(b.replace(reg, ""));
       });
 
-      this.gameVersionList = this.patchList;
-      this.uploadVersion = this.patchList[this.patchList.length - 1];
-      let versionInfo = this.uploadVersion.split("-v");
+      this.needPatchChange();
+
+      let releaseVersion = this.releaseList[this.releaseList.length - 1];
+      let versionInfo = releaseVersion.split("_v");
       this.whiteVersion = this.normalVersion = this.displayVersion = versionInfo[
         versionInfo.length - 1
       ].replace(reg, "");
     },
-    refreshServerList() {
-      this.serverList = mdFtp.serverList;
-      this.serverInfo = this.serverList[this.serverList.length - 1];
-      mdFtp.setServerInfo(this.serverInfo);
-    },
+    // refreshServerList() {
+    //   this.serverList = mdFtp.serverList;
+    //   this.serverInfo = this.serverList[this.serverList.length - 1];
+    //   mdFtp.setServerInfo(this.serverInfo);
+    // },
     async refreshPolicyNum() {
       let value = await mdFtp.checkPolicyNum();
       let data = JSON.parse(value);
@@ -340,17 +355,18 @@ export default {
       }
     },
     async refreshChannelList() {
-      this.channelList = mdFtp.channelList;
+      this.channelList = ModelMgr.versionModel.channelList;
       this.channel = this.channelList[this.channelList.length - 1];
     }
   },
   async mounted() {
+    await ModelMgr.ftpModel.init();
     await this.refreshVersionList();
-    this.refreshServerList();
+    // this.refreshServerList();
     this.refreshChannelList();
-    mdFtp.setNeedPatch(this.needPatch);
-    this.versionTypes = mdFtp.versionTypes;
-    this.versionType = this.versionTypes[0];
+    // mdFtp.setNeedPatch(this.needPatch);
+    this.versionTypes = ModelMgr.versionModel.versionTypes;
+    this.versionType = ModelMgr.versionModel.versionType;
     await this.refreshPolicyNum();
   }
 };

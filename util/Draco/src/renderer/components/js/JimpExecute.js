@@ -551,7 +551,7 @@ export function jimpPng2(id, area, texture, input_path, output_path) {
                 let halfTileWidth = tileWidth / 2;
                 let halfTileHeight = tileHeight / 2;
 
-                let gapY = 0;
+                let gapY = 10;
 
                 for (let rowLen = area.length, row = 0; row <= rowLen - 1; row++) {
                     for (let colLen = area[row].length, col = 0; col <= colLen - 1; col++) {
@@ -605,7 +605,7 @@ export function jimpPng2(id, area, texture, input_path, output_path) {
                         // hasBottomRight = false;
 
                         let deviationX = -1;     //x轴偏差值
-                        let deviationY = 3;     //y轴偏差值
+                        let deviationY = 0;     //y轴偏差值
 
                         let newImage = new jimp(tileWidth, topDistance + tileHeight + bottomDistance + gapY + deviationY);
                         let cutImgX = (rowLen - 1 - row + col) * halfTileWidth;             //完整图片中,当前图片所在的起点X
@@ -621,6 +621,7 @@ export function jimpPng2(id, area, texture, input_path, output_path) {
                         let diamondSX = halfTileWidth + deviationX;                         //菱形开始X
                         let diamondEX = halfTileWidth;                                      //菱形结束X    
                         let diamondSY = (row + col) * halfTileHeight - gapY;                //菱形开始Y
+                        // let diamondSY = (row + col) * halfTileHeight;                //菱形开始Y
                         let diamondEY = diamondSY + tileHeight + gapY + deviationY;         //菱形结束Y
 
                         let startX = diamondSX;                                             //当前新创建图片菱形的开始X
@@ -804,7 +805,7 @@ function getSetPixel(originImage, newImage, x, y, cutImgX, cutImgY, diamondSY = 
     let imageHeight = originImage.bitmap.height;
     let hex;
     let getPixelX = cutImgX + x;
-    let getPixelY = cutImgY + y - diamondSY;
+    let getPixelY = cutImgY + y - diamondSY - gapY;
     // let getPixelY = cutImgY + y;
     if (getPixelX < 0 || getPixelX > imageWidth || getPixelY < 0 || getPixelY > imageHeight) {
         hex = 0;
@@ -813,9 +814,8 @@ function getSetPixel(originImage, newImage, x, y, cutImgX, cutImgY, diamondSY = 
     }
 
     let setPixelX = x;
-    let setPixelY = y + topDistance - diamondSY + gapY;
-    // let setPixelY = y - startY + gapY;
-    // let setPixelY = y + topDistance + gapY;
+    // let setPixelY = y + topDistance - diamondSY + gapY;
+    let setPixelY = y + topDistance - diamondSY;
 
     if (hex != 0) {
         newImage.setPixelColor(hex, setPixelX, setPixelY);
