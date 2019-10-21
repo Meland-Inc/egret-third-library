@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="80,34" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="1"/>
+  <displayList>
+    <text id="n3_s1sd" name="title" xy="26,7" size="50,20" fontSize="16" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="组合"/>
+    <image id="n6_s1sd" name="n6" src="s1sdtac" fileName="newImg/AnimationEdit/img_cm_dh_6.png" xy="4,3" size="70,28">
+      <gearXY controller="button" pages="0" values="0,0" default="4,3"/>
+      <gearSize controller="button" pages="1" values="70,28,1,1" default="80,34,1,1"/>
+    </image>
+    <image id="n7_s1sd" name="n7" src="s1sdt9y" fileName="newImg/AnimationEdit/icon_cm_dh_2.png" xy="10,9"/>
+  </displayList>
+  <Button/>
+</component>
