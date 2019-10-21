@@ -1,43 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="360,180">
-  <controller name="ctrlProjectionType" exported="true" pages="0,grid,1,side,2,noProjection" selected="2"/>
-  <controller name="ctrlProjectionNum" exported="true" pages="0,1x1,1,1x2,2,2x2,3,2x3,4,3x3,6,2x1,7,3x1" selected="4"/>
+<component size="360,180" designImageAlpha="0">
+  <controller name="ctrlProjectionType" exported="true" pages="0,grid,1,side,2,noProjection" selected="0"/>
+  <controller name="ctrlProjectionNum" exported="true" pages="0,1x1,1,1x2,2,2x2,3,2x3,4,3x3,6,2x1,8,1x3,7,3x1,9,3x2" selected="4"/>
   <displayList>
-    <loader id="n0_mvn3" name="n0" xy="0,60" size="120,60" url="ui://tcbadh8no8md26" autoSize="true">
-      <gearDisplay controller="ctrlProjectionNum" pages="0,1,2,3,4"/>
+    <graph id="n10_jsre" name="gphSizeCtrl" xy="0,0" size="360,180" visible="false" alpha="0" touchable="false" type="rect">
+      <gearSize controller="ctrlProjectionNum" pages="0,1,2,3,4,6,8,7,9" values="120,60,1,1|180,90,1,1|240,120,1,1|300,150,1,1|360,180,1,1|180,90,1,1|240,150,1,1|240,120,1,1|300,150,1,1"/>
+    </graph>
+    <loader id="n0_mvn3" name="n0" xy="0,60" size="120,60" url="ui://tcbadh8no8md25" autoSize="true">
+      <gearDisplay controller="ctrlProjectionNum" pages="0,1,2,3,4,6,8,7,9"/>
       <gearIcon controller="ctrlProjectionType" pages="2" values="ui://tcbadh8no8md26" default="ui://tcbadh8no8md25"/>
     </loader>
-    <loader id="n2_mvn3" name="n2" xy="60,30" size="120,60" url="ui://tcbadh8no8md26" autoSize="true">
-      <gearDisplay controller="ctrlProjectionNum" pages="2,3,4"/>
+    <loader id="n2_mvn3" name="n2" xy="60,30" size="120,60" url="ui://tcbadh8no8md25" autoSize="true">
+      <gearDisplay controller="ctrlProjectionNum" pages="2,3,4,6,7,9"/>
       <gearIcon controller="ctrlProjectionType" pages="2" values="ui://tcbadh8no8md26" default="ui://tcbadh8no8md25"/>
     </loader>
-    <loader id="n3_mvn3" name="n3" xy="60,90" size="120,60" url="ui://tcbadh8no8md26" autoSize="true">
-      <gearDisplay controller="ctrlProjectionNum" pages="1,2,3,4"/>
+    <loader id="n3_mvn3" name="n3" xy="60,90" size="120,60" url="ui://tcbadh8no8md25" autoSize="true">
+      <gearDisplay controller="ctrlProjectionNum" pages="1,2,3,4,8,9"/>
       <gearIcon controller="ctrlProjectionType" pages="2" values="ui://tcbadh8no8md26" default="ui://tcbadh8no8md25"/>
     </loader>
-    <loader id="n4_mvn3" name="n4" xy="120,60" size="120,60" url="ui://tcbadh8no8md26" autoSize="true">
-      <gearDisplay controller="ctrlProjectionNum" pages="2,3,4"/>
+    <loader id="n4_mvn3" name="n4" xy="120,60" size="120,60" url="ui://tcbadh8no8md25" autoSize="true">
+      <gearDisplay controller="ctrlProjectionNum" pages="2,3,4,9"/>
       <gearIcon controller="ctrlProjectionType" pages="2" values="ui://tcbadh8no8md26" default="ui://tcbadh8no8md25"/>
     </loader>
-    <loader id="n5_mvn3" name="n5" xy="120,120" size="120,60" url="ui://tcbadh8no8md26" autoSize="true">
+    <loader id="n5_mvn3" name="n5" xy="120,120" size="120,60" url="ui://tcbadh8no8md25" autoSize="true">
+      <gearDisplay controller="ctrlProjectionNum" pages="3,4,8"/>
+      <gearIcon controller="ctrlProjectionType" pages="2" values="ui://tcbadh8no8md26" default="ui://tcbadh8no8md25"/>
+    </loader>
+    <loader id="n6_mvn3" name="n6" xy="180,90" size="120,60" url="ui://tcbadh8no8md25" autoSize="true">
       <gearDisplay controller="ctrlProjectionNum" pages="3,4"/>
       <gearIcon controller="ctrlProjectionType" pages="2" values="ui://tcbadh8no8md26" default="ui://tcbadh8no8md25"/>
     </loader>
-    <loader id="n6_mvn3" name="n6" xy="180,90" size="120,60" url="ui://tcbadh8no8md26" autoSize="true">
-      <gearDisplay controller="ctrlProjectionNum" pages="3,4"/>
+    <loader id="n7_mvn3" name="n7" xy="120,0" size="120,60" url="ui://tcbadh8no8md25" autoSize="true">
+      <gearDisplay controller="ctrlProjectionNum" pages="4,7,9"/>
       <gearIcon controller="ctrlProjectionType" pages="2" values="ui://tcbadh8no8md26" default="ui://tcbadh8no8md25"/>
     </loader>
-    <loader id="n7_mvn3" name="n7" xy="120,0" size="120,60" url="ui://tcbadh8no8md26" autoSize="true">
-      <gearDisplay controller="ctrlProjectionNum" pages="4"/>
+    <loader id="n8_mvn3" name="n8" xy="180,30" size="120,60" url="ui://tcbadh8no8md25" autoSize="true">
+      <gearDisplay controller="ctrlProjectionNum" pages="4,9"/>
       <gearIcon controller="ctrlProjectionType" pages="2" values="ui://tcbadh8no8md26" default="ui://tcbadh8no8md25"/>
     </loader>
-    <loader id="n8_mvn3" name="n8" xy="180,30" size="120,60" url="ui://tcbadh8no8md26" autoSize="true">
-      <gearDisplay controller="ctrlProjectionNum" pages="4"/>
-      <gearIcon controller="ctrlProjectionType" pages="2" values="ui://tcbadh8no8md26" default="ui://tcbadh8no8md25"/>
-    </loader>
-    <loader id="n9_mvn3" name="n9" xy="240,60" size="120,60" url="ui://tcbadh8no8md26" autoSize="true">
+    <loader id="n9_mvn3" name="n9" xy="240,60" size="120,60" url="ui://tcbadh8no8md25" autoSize="true">
       <gearDisplay controller="ctrlProjectionNum" pages="4"/>
       <gearIcon controller="ctrlProjectionType" pages="2" values="ui://tcbadh8no8md26" default="ui://tcbadh8no8md25"/>
     </loader>
   </displayList>
+  <relation target="n10_jsre" sidePair="width-width"/>
 </component>
