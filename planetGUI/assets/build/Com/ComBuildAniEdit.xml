@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="344,640" opaque="false" designImage="ui://i25v0ebkneku5l" designImageOffsetX="-795">
-  <controller name="ctrlCombine" pages="0,normal,1,combine" selected="1"/>
+  <controller name="ctrlCombine" pages="0,normal,1,combine" selected="0"/>
   <displayList>
     <image id="n32_py50" name="n32" src="nl0rcyic7" fileName="imgB/bg_cm_1.png" pkg="te1gxawo" xy="-1,0" size="345,640">
       <relation target="" sidePair="height-height"/>
@@ -14,7 +14,7 @@
       <relation target="" sidePair="bottom-bottom,center-center"/>
       <Button title="保存" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
     </component>
-    <text id="n55_s1sd" name="n55" xy="10,6" size="85,26" fontSize="20" color="#ffffff" text="动画编辑"/>
+    <text id="n55_s1sd" name="n55" xy="10,14" size="85,26" fontSize="20" color="#ffffff" text="动画编辑"/>
     <component id="n60_s1sd" name="btnAniSelect" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="10,50" size="93,34">
       <Button title="添加造型" titleColor="#ffffff" titleFontSize="16" icon="ui://32ieekgus1sdtac"/>
     </component>
