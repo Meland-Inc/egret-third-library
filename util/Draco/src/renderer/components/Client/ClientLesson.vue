@@ -1,55 +1,69 @@
 <template>
   <mu-container>
     <div class="button-wrapper">
+      <mu-flex class="flex-wrapper" align-items="center">
+        <mu-col span="12" lg="2" sm="2">
+          <mu-checkbox v-model="isTest" label="是否测试"></mu-checkbox>
+        </mu-col>
+        <mu-col span="12" lg="2" sm="2">
+          <mu-text-field class="text-game" v-model="policyNum" label="策略版本号" label-float />
+        </mu-col>
+      </mu-flex>
       <mu-button
-        v-loading="isUpdateSvnLoading"
+        v-loading="isApplyPolicyNumLoading"
         data-mu-loading-size="24"
         color="pink500"
-        @click="updateSvn"
-      >应用lesson策略版本</mu-button>
-    </div>
-    <div class="button-wrapper">
-      <mu-button full-width color="red" @click="oneForAll">One·for·All</mu-button>
+        @click="onApplyPolicyNum"
+      >应用策略版本</mu-button>
     </div>
   </mu-container>
 </template>
 
 <script>
-import * as mdCsv from "../js/MdCsv.js";
+import * as mdFtp from "../js/MdFtp.js";
 import { Global } from "../js/Global.js";
+import { ModelMgr } from "../js/model/ModelMgr";
+import * as ExternalUtil from "../js/ExternalUtil";
 
 export default {
   data() {
     return {
-      isApplyPolicyLoading: false
+      isApplyPolicyNumLoading: false,
+      policyNum: null,
+      isTest: false
     };
   },
   watch: {},
   methods: {
-    async applyPolicy() {
-      this.isUpdateSvnLoading = true;
+    async onApplyPolicyNum() {
+      this.isApplyPolicyNumLoading = true;
       Global.showRegionLoading();
       try {
-        await mdCsv.updateSvn();
-        this.isUpdateSvnLoading = false;
+        await mdFtp.applyLessonPolicyNum(this.isTest);
+        this.isApplyPolicyNumLoading = false;
         Global.hideRegionLoading();
       } catch (error) {
-        this.isUpdateSvnLoading = false;
+        this.isApplyPolicyNumLoading = false;
         Global.hideRegionLoading();
       }
     },
-    async oneForAll() {
-      Global.showLoading();
-      try {
-        await this.applyPolicy();
-        Global.hideLoading();
-        Global.toast("One·for·All Success");
-      } catch (error) {
-        Global.hideLoading();
-        Global.snack("One·for·All Error", error);
+    async onCheckPolicyNum() {
+      let data = JSON.parse(value);
+      if (data.Code == 0) {
+        Global.toast(`策略版本:${data.Data.Version}`);
+      } else {
+        Global.snack(data.Message, null, false);
       }
     }
   },
-  mounted() {}
+  async mounted() {
+    let value = await ExternalUtil.getPolicyInfo(
+      ModelMgr.versionModel.eEnviron.ready
+    );
+    let data = JSON.parse(value);
+    if (data.Code == 0) {
+      this.policyNum = data.Data.Version;
+    }
+  }
 };
 </script>

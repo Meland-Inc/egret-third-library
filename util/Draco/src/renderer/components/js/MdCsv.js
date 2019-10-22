@@ -16,7 +16,7 @@ export function zipCsv() {
     return new Promise(async (resolve, reject) => {
         let pa = await fsExc.readDir(Global.svnCsvPath);
         let archive = archiver("zip");
-        let fileName = "csv.zip";
+        let fileName = "csv.bin";
         let filePath = Global.projPath + "/resource/assets/csv/";
         let output = fs.createWriteStream(filePath + fileName);
         archive.pipe(output);

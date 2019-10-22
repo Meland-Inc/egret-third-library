@@ -3,6 +3,7 @@ import * as spawnExc from './SpawnExecute.js';
 import * as fsExc from './FsExecute';
 import * as path from 'path';
 import * as fs from 'fs';
+import { ModelMgr } from './model/ModelMgr';
 
 const releaseSuffix = '/bin-release/web/';
 const thmFileSuffix = 'resource/default.thm.json';
@@ -28,157 +29,81 @@ const loader_suffix_path = '/resource/loader';
 
 const assetSfxValues = [assetsSfx, asyncSfx, indieSfx, loaderSfx];
 
-var svnPublishPath = Global.svnPublishPath;
+// var projNewVersionPath = Global.projPath + releaseSuffix + newVersion;
 
-var projNewVersionPath = Global.projPath + releaseSuffix + newVersion;
+// var releaseVersion;
+// export function getReleaseVersion() { return releaseVersion; }
+// export function setReleaseVersion(value) { releaseVersion = value; }
 
-var releaseVersion;
-export function getReleaseVersion() { return releaseVersion; }
-export function setReleaseVersion(value) { releaseVersion = value; }
+// var newVersion;
+// export function getNewVersion() { return newVersion; }
+// export function setNewVersion(value) {
+//     newVersion = value;
+//     projNewVersionPath = Global.projPath + releaseSuffix + newVersion;
+// }
 
-var newVersion;
-export function getNewVersion() { return newVersion; }
-export function setNewVersion(value) {
-    newVersion = value;
-    projNewVersionPath = Global.projPath + releaseSuffix + newVersion;
-}
+// var oldVersion;
+// export function getOldVersion() { return oldVersion; }
+// export function setOldVersion(value) { oldVersion = value; }
 
-var oldVersion;
-export function getOldVersion() { return oldVersion; }
-export function setOldVersion(value) { oldVersion = value; }
+// var checkBoxData = [];
+// export function getCheckBoxData() { return checkBoxData; }
+// export function setCheckBoxData(value) { checkBoxData = value; }
 
-var checkBoxData = [];
-export function getCheckBoxData() { return checkBoxData; }
-export function setCheckBoxData(value) { checkBoxData = value; }
+// var needCover = true;
+// export function setNeedCover(value) { needCover = value; }
+// export function getNeedCover() { return needCover; }
 
-var needCover = true;
-export function setNeedCover(value) { needCover = value; }
-export function getNeedCover() { return needCover; }
+// var needCompress = false;
+// export function setNeedCompress(value) { needCompress = value; }
+// export function getNeedCompress() { return needCompress }
 
-var needCompress = false;
-export function setNeedCompress(value) { needCompress = value; }
-export function getNeedCompress() { return needCompress }
-
-var policyObj;
-export async function setPolicyObj(value) {
-    policyObj = value;
-    await fsExc.writeFile(
-        Global.rawResourcePath + "/policyFile.json",
-        JSON.stringify(policyObj)
-    );
-}
-
-export async function getPolicyObj() {
-    if (!policyObj) {
-        let content = await fsExc.readFile(
-            Global.rawResourcePath + "/policyFile.json"
-        );
-        policyObj = JSON.parse(content);
-    }
-
-    return policyObj;
-}
-
-var oldVersionList;
-export async function initOldVersionList() {
-    oldVersionList = [];
-    let webDir = await fsExc.readDir(Global.svnPublishPath + "/web/");
-    let reg = /[A-Za-z]_*/g;
-    for (const iterator of webDir) {
-        if (iterator.indexOf("release") != -1) {
-            let version = parseInt(iterator.replace(reg, ""));
-            oldVersionList.push(version);
-        }
-    }
-
-    oldVersionList = oldVersionList.sort((a, b) => {
-        return a - b;
-    });
-
-    if (oldVersionList.length > 0) {
-        oldVersion = oldVersionList[oldVersionList.length - 1];
-    }
-}
-
-export async function getVersionList() {
-    if (!oldVersion) {
-        await initOldVersionList();
-    }
-    return oldVersionList;
-}
-
-
+/**
+ * 发布项目
+ */
 export async function publishProject() {
+    let releaseVersion = ModelMgr.versionModel.releaseVersion;
     if (!releaseVersion) {
         Global.snack('请先设置发布版本号');
         return;
     }
 
-    // if (!displayVersion) {
-    //     Global.snack('请先设置显示版本号');
-    //     return;
-    // }
-
-    // if (!versionType) {
-    //     Global.snack('请先选择版本更新类型');
-    //     return;
-    // }
-
-    if (needCover) {
+    if (ModelMgr.versionModel.needCover) {
         await checkClearRelease(releaseVersion);
     }
 
     try {
         let cmdStr = 'egret publish --version ' + releaseVersion;
         await spawnExc.runCmd(cmdStr, Global.projPath, null, '发布当前项目错误');
-    } catch (error) {
-        Global.snack('发布当前项目错误', error);
-    }
-
-    let rawPolicyPath = `${Global.projPath}/rawResource/policyFile.json`;
-    let content = await fsExc.readFile(rawPolicyPath);
-    let policyObj = JSON.parse(content);
-    policyObj["whiteGameVersion"] = releaseVersion;
-    // policyObj["versionType"] = versionTypes.indexOf(versionType);
-    // let content = JSON.stringify({
-    //     gameVersion: releaseVersion,
-    //     displayVersion: displayVersion,
-    //     versionType: versionTypes.indexOf(versionType),
-    //     cdnPath: cdnPath
-    // });
-    // content = JSON.stringify(policyObj);
-
-    // let policyFilePath = `${Global.projPath}/rawResource/policyFile.json`;
-
-    // await fsExc.makeDir(Global.projPath + releaseSuffix);
-    // let releasePolicyPath = Global.projPath + releaseSuffix + releaseVersion + '/policyFile.json';
-    try {
-        // await fsExc.writeFile(policyFilePath, content);
-        // await fsExc.writeFile(releasePolicyPath, content);
+        ModelMgr.versionModel.setNewVersion(releaseVersion);
         Global.toast('发布当前项目成功');
-        newVersion = releaseVersion;
     } catch (error) {
         Global.snack('发布当前项目错误', error);
     }
 }
 
+/**
+ * 比较版本
+ */
 export async function mergeVersion() {
+    let newVersion = ModelMgr.versionModel.newVersion;
     if (!newVersion) {
         Global.snack('请先选择新版本号');
         return;
     }
+    let oldVersion = ModelMgr.versionModel.oldVersion;
     if (oldVersion
         && parseInt(oldVersion) >= parseInt(newVersion)) {
         Global.snack('新版本号应该比旧版本号大');
         return;
     }
 
-    if (!svnPublishPath) {
+    if (!Global.svnPublishPath) {
         Global.snack('请在设置选项中设置发布目录');
         return;
     }
 
-    if (needCover) {
+    if (ModelMgr.versionModel.needCover) {
         await checkClearVersion(newVersion);
     } else {
         if (await checkExistVersion(newVersion)) {
@@ -194,30 +119,18 @@ export async function mergeVersion() {
     }
 
     try {
-        let versionListContent = await fsExc.readFile(svnPublishPath + '/versionList.json');
-        let versionList = JSON.parse(versionListContent);
-        if (versionList.versionList.indexOf(newVersion) == -1) {
-            versionList.versionList.push(newVersion);
-            versionListContent = JSON.stringify(versionList);
-        }
-
         if (oldVersion && oldVersion != '0') {
-            versionList.versionList = versionList.versionList.sort((a, b) => {
-                return a <= b ? -1 : 1;
-            });
-            for (const iterator of versionList.versionList) {
-                if (parseInt(oldVersion) < parseInt(iterator)
-                    && parseInt(iterator) < parseInt(newVersion)) {
-                    await mergeSingleVersion(newVersion, iterator, false);
+            for (let i = parseInt(oldVersion) + 1; i < parseInt(newVersion); i++) {
+                if (await checkExistVersion(i)) {
+                    await mergeSingleVersion(newVersion, i + "", false);
                 }
             }
-
             await mergeSingleVersion(newVersion, oldVersion, true);
         } else {
             await mergeSingleVersion(newVersion, null, true);
         }
 
-        await fsExc.writeFile(svnPublishPath + '/versionList.json', versionListContent);
+        await ModelMgr.versionModel.initVersionList();
 
         Global.toast('比较新旧成功');
     } catch (error) {
@@ -225,91 +138,73 @@ export async function mergeVersion() {
     }
 }
 
+/**
+ * 比较单个版本
+ * @param {*} newVersion 新版本
+ * @param {*} oldVersion 旧版本
+ * @param {*} isRelease 是否同时发布release
+ */
 async function mergeSingleVersion(newVersion, oldVersion, isRelease) {
+    let projNewVersionPath = Global.projPath + releaseSuffix + newVersion;
     if (oldVersion) {
         console.log(`--> start merge version v${oldVersion}s-v${newVersion}s`);
     } else {
         console.log(`--> start generate version v${newVersion}s`);
     }
-    let svnWebRlsPath;
-    let svnCdnRlsPath;
+    let svnRlsPath;
     if (isRelease) {
-        svnWebRlsPath = `${svnPublishPath}/web/release_v${newVersion}s`;
-        svnCdnRlsPath = `${svnPublishPath}/cdn/release_v${newVersion}s`;
+        svnRlsPath = `${Global.svnPublishPath}${ModelMgr.versionModel.curEnviron.localPath}/release_v${newVersion}s`;
     }
 
-    let svnWebPatchPath;
-    let svnCdnPatchPath;
-    let oldSvnWebRlsPath;
-    let oldSvnCdnRlsPath;
+    let svnPatchPath;
+    let oldSvnRlsPath;
     if (oldVersion) {
-        svnWebPatchPath = `${svnPublishPath}/web/patch_v${oldVersion}s-v${newVersion}s`;
-        svnCdnPatchPath = `${svnPublishPath}/cdn/patch_v${oldVersion}s-v${newVersion}s`;
-        oldSvnWebRlsPath = `${svnPublishPath}/web/release_v${oldVersion}s`;
-        oldSvnCdnRlsPath = `${svnPublishPath}/cdn/release_v${oldVersion}s`;
-        let webExists = await fsExc.exists(oldSvnWebRlsPath);
-        if (!webExists) {
-            console.error(`--> web version ${oldSvnWebRlsPath} dose not exist`);
-            return;
-        }
-        let cdnExists = await fsExc.exists(oldSvnCdnRlsPath);
-        if (!cdnExists) {
-            console.error(`--> cdn version ${oldSvnCdnRlsPath} dose not exist`);
+        svnPatchPath = `${Global.svnPublishPath}${ModelMgr.versionModel.curEnviron.localPath}/patch_v${oldVersion}s-v${newVersion}s`;
+        oldSvnRlsPath = `${Global.svnPublishPath}${ModelMgr.versionModel.curEnviron.localPath}/release_v${oldVersion}s`;
+        let rlsExists = await fsExc.exists(oldSvnRlsPath);
+        if (!rlsExists) {
+            console.error(`--> version ${oldSvnRlsPath} dose not exist`);
             return;
         }
     } else {
-        svnWebPatchPath = `${svnPublishPath}/web/patch_v${newVersion}s`;
-        svnCdnPatchPath = `${svnPublishPath}/cdn/patch_v${newVersion}s`;
+        svnPatchPath = `${Global.svnPublishPath}${ModelMgr.versionModel.curEnviron.localPath}/patch_v${newVersion}s`;
     }
 
-    newVersion = newVersion.replace(new RegExp('[.]', 'g'), '-');
-    if (oldVersion) {
-        oldVersion = oldVersion.replace(new RegExp('[.]', 'g'), '-');
-    }
+    // newVersion = newVersion.replace(new RegExp('[.]', 'g'), '-');
+    // if (oldVersion) {
+    //     oldVersion = oldVersion.replace(new RegExp('[.]', 'g'), '-');
+    // }
     try {
-        if (svnWebRlsPath) {
-            await fsExc.makeDir(svnWebRlsPath);
+        if (svnRlsPath) {
+            await fsExc.makeDir(svnRlsPath);
         }
-        if (svnCdnRlsPath) {
-            await fsExc.makeDir(svnCdnRlsPath);
-        }
-        await fsExc.makeDir(svnWebPatchPath);
-        await fsExc.makeDir(svnCdnPatchPath);
+        await fsExc.makeDir(svnPatchPath);
 
         //不用比较,直接拷贝的
-        if (svnWebRlsPath) {
-            await copyFileCheckDir('index.html', svnWebRlsPath, newVersion);
+        if (svnRlsPath) {
+            await copyFileCheckDir('index.html', svnRlsPath, newVersion);
         }
-        await copyFileCheckDir('index.html', svnWebPatchPath, newVersion);
+        await copyFileCheckDir('index.html', svnPatchPath, newVersion);
 
-        if (svnWebRlsPath) {
-            await copyFileCheckDir('manifest.json', svnWebRlsPath, newVersion);
+        if (svnRlsPath) {
+            await copyFileCheckDir('manifest.json', svnRlsPath, newVersion);
         }
-        await copyFileCheckDir('manifest.json', svnWebPatchPath, newVersion);
+        await copyFileCheckDir('manifest.json', svnPatchPath, newVersion);
 
-        // let versionContent = await fsExc.readFile(projNewVersionPath + '/policyFile.json');
-        if (svnWebRlsPath) {
-            // await fsExc.writeFile(`${svnWebRlsPath}/policyFile.json`, versionContent);
-            // await fsExc.copyFile(projNewVersionPath + '/policyFile.json', `${svnWebRlsPath}`)
+        if (svnRlsPath) {
+            await folderCopyFile(projNewVersionPath + '/js', svnRlsPath + '/js');
         }
-        // await fsExc.copyFile(projNewVersionPath + '/policyFile.json', `${svnWebPatchPath}`)
-        // await fsExc.writeFile(`${svnWebPatchPath}/policyFile.json`, versionContent);
+        await folderCopyFile(projNewVersionPath + '/js', svnPatchPath + '/js');
 
-
-        if (svnWebRlsPath) {
-            await folderCopyFile(projNewVersionPath + '/js', svnWebRlsPath + '/js');
+        if (svnRlsPath) {
+            await fsExc.makeDir(svnRlsPath + '/resource');
         }
-        await folderCopyFile(projNewVersionPath + '/js', svnWebPatchPath + '/js');
+        await fsExc.makeDir(svnPatchPath + '/resource');
 
-        if (svnCdnRlsPath) {
-            await fsExc.makeDir(svnCdnRlsPath + '/resource');
+        if (svnRlsPath) {
+            await folderCopyFile(projNewVersionPath + '/resource/loader', svnRlsPath + '/resource/loader');
         }
-        await fsExc.makeDir(svnCdnPatchPath + '/resource');
-
-        if (svnCdnRlsPath) {
-            await folderCopyFile(projNewVersionPath + '/resource/loader', svnCdnRlsPath + '/resource/loader');
-        }
-        await folderCopyFile(projNewVersionPath + '/resource/loader', svnCdnPatchPath + '/resource/loader');
+        await folderCopyFile(projNewVersionPath + '/resource/loader', svnPatchPath + '/resource/loader');
 
         //不存在旧版本,所有的都用最新的版本
         if (!oldVersion) {
@@ -320,16 +215,16 @@ async function mergeSingleVersion(newVersion, oldVersion, isRelease) {
             // await copyFileCheckDir(thmFileSuffix, svnCdnPatchPath, newVersion);
 
             //default.res.json
-            await resFileHandle(defaultResSuffix, newVersion, svnCdnRlsPath, svnCdnPatchPath);
+            await resFileHandle(defaultResSuffix, newVersion, svnRlsPath, svnPatchPath);
 
             //mapData.res.json
-            await resFileHandle(mapDataResSuffix, newVersion, svnCdnRlsPath, svnCdnPatchPath);
+            await resFileHandle(mapDataResSuffix, newVersion, svnRlsPath, svnPatchPath);
 
             //async.res.json
-            await resFileHandle(asyncResSuffix, newVersion, svnCdnRlsPath, svnCdnPatchPath);
+            await resFileHandle(asyncResSuffix, newVersion, svnRlsPath, svnPatchPath);
 
             //indie.res.json
-            await resFileHandle(indieResSuffix, newVersion, svnCdnRlsPath, svnCdnPatchPath);
+            await resFileHandle(indieResSuffix, newVersion, svnRlsPath, svnPatchPath);
             console.log(`--> merge success version v0s-v${newVersion}s`);
         } else {
             // //default.thm.json
@@ -337,16 +232,16 @@ async function mergeSingleVersion(newVersion, oldVersion, isRelease) {
             // await mergeFileInVersion(oldThmPath, thmFileSuffix, svnCdnRlsPath, svnCdnPatchPath, oldVersion, newVersion, oldSvnCdnRlsPath);
 
             //default.res.json
-            await resFileHandle(defaultResSuffix, newVersion, svnCdnRlsPath, svnCdnPatchPath, oldVersion, oldSvnCdnRlsPath);
+            await resFileHandle(defaultResSuffix, newVersion, svnRlsPath, svnPatchPath, oldVersion, oldSvnRlsPath);
 
             //mapData.res.json
-            await resFileHandle(mapDataResSuffix, newVersion, svnCdnRlsPath, svnCdnPatchPath, oldVersion, oldSvnCdnRlsPath);
+            await resFileHandle(mapDataResSuffix, newVersion, svnRlsPath, svnPatchPath, oldVersion, oldSvnRlsPath);
 
             //async.res.json
-            await resFileHandle(asyncResSuffix, newVersion, svnCdnRlsPath, svnCdnPatchPath, oldVersion, oldSvnCdnRlsPath);
+            await resFileHandle(asyncResSuffix, newVersion, svnRlsPath, svnPatchPath, oldVersion, oldSvnRlsPath);
 
             //indie.res.json
-            await resFileHandle(indieResSuffix, newVersion, svnCdnRlsPath, svnCdnPatchPath, oldVersion, oldSvnCdnRlsPath);
+            await resFileHandle(indieResSuffix, newVersion, svnRlsPath, svnPatchPath, oldVersion, oldSvnRlsPath);
             console.log(`--> merge success version v${oldVersion}s-v${newVersion}s`);
         }
     } catch (error) {
@@ -354,7 +249,12 @@ async function mergeSingleVersion(newVersion, oldVersion, isRelease) {
     }
 }
 
-//拷贝目录中的文件,遍历拷贝,不存在文件夹就创建
+/**
+ * 拷贝目录中的文件,遍历拷贝,不存在文件夹就创建,如果存在版本号,会文件添加版本号
+ * @param {*} fromPath 来源文件夹
+ * @param {*} targetPath 目标文件夹
+ * @param {*} version 版本号
+ */
 async function folderCopyFile(fromPath, targetPath, version) {
     try {
         await fsExc.makeDir(targetPath);
@@ -374,18 +274,20 @@ async function folderCopyFile(fromPath, targetPath, version) {
     }
 }
 
-//拷贝文件,不存在的目录会自动创建,如果存在版本号,会给拷贝后的文件添加版本号
-async function copyFileCheckDir(fileName, targetPath, version, fromPath) {
-    if (!fromPath) {
-        fromPath = projNewVersionPath;
-    }
-
+/**
+ * 拷贝文件,不存在的目录会自动创建,如果存在版本号,会给拷贝后的文件添加版本号 
+ * @param {*} fileName 文件相对路径,包含文件名称
+ * @param {*} targetPath 目标路径
+ * @param {*} newVersion 版本号
+ */
+async function copyFileCheckDir(fileName, targetPath, newVersion) {
+    let projNewVersionPath = Global.projPath + releaseSuffix + newVersion;
     let fileNameArr = fileName.split('/');
     let checkPath = '';
     for (let i = 0; i < fileNameArr.length; i++) {
         if (i != fileNameArr.length - 1) {
             checkPath += fileNameArr[i] + '/';
-            let filePath = fromPath + '/' + checkPath;
+            let filePath = projNewVersionPath + '/' + checkPath;
             if (await fsExc.exists(filePath)) {
                 if (await fsExc.isDirectory(filePath)) {
                     await fsExc.makeDir(targetPath + '/' + checkPath);
@@ -403,7 +305,7 @@ async function copyFileCheckDir(fileName, targetPath, version, fromPath) {
     //     await fsExc.makeDir(folder);
     // }
 
-    await copyFile(fromPath + '/' + fileName, targetPath + '/' + fileName, version);
+    await copyFile(projNewVersionPath + '/' + fileName, targetPath + '/' + fileName, newVersion);
 }
 
 /**
@@ -411,12 +313,15 @@ async function copyFileCheckDir(fileName, targetPath, version, fromPath) {
  * @param {*} version 
  */
 export async function checkExistVersion(version) {
-    let versionListContent = await fsExc.readFile(svnPublishPath + '/versionList.json');
-    let versionList = JSON.parse(versionListContent);
-    let index = versionList.versionList.indexOf(version);
-    return index != -1;
+    let releasePath = `${Global.svnPublishPath}${ModelMgr.versionModel.curEnviron.localPath}/release_v${version}s`;
+    let exist = await fsExc.exists(releasePath);
+    return exist;
 }
 
+/**
+ * 检查预发布的版本,如果存在,那么清空
+ * @param {*} version 
+ */
 export async function checkClearRelease(version) {
     let releasePath = `${Global.projPath}/bin-release/web/${version}`;
     if (await fsExc.exists(releasePath)) {
@@ -429,60 +334,24 @@ export async function checkClearRelease(version) {
  * @param {*} version 
  */
 export async function checkClearVersion(version) {
-    let versionListContent = await fsExc.readFile(svnPublishPath + '/versionList.json');
-    let versionList = JSON.parse(versionListContent);
-    let index = versionList.versionList.indexOf(version);
-    if (index != -1) {
-        console.log(`--> old version ${version} exist, start clear.`);
-        try {
-            versionList.versionList.splice(index, 1);
-            versionListContent = JSON.stringify(versionList);
-            await fsExc.writeFile(svnPublishPath + '/versionList.json', versionListContent);
+    let exist = await checkExistVersion(version);
+    if (!exist) return;
 
-            let cdnPa = await fsExc.readDir(Global.svnPublishPath + '/cdn');
-            for (let i = 0; i < cdnPa.length; i++) {
-                const element = cdnPa[i];
-                if (element.indexOf(`v${version}s`) != -1) {
-                    await fsExc.delFolder(Global.svnPublishPath + '/cdn/' + element);
-                }
+    console.log(`--> old version ${version} exist, start clear.`);
+    try {
+        let svnPa = await fsExc.readDir(`${Global.svnPublishPath}${ModelMgr.versionModel.curEnviron.localPath}`);
+        for (let i = 0; i < svnPa.length; i++) {
+            const element = svnPa[i];
+            if (element.indexOf(`v${version}s`) != -1) {
+                await fsExc.delFolder(`${Global.svnPublishPath}${ModelMgr.versionModel.curEnviron.localPath}/${element}`);
             }
-
-            let webPa = await fsExc.readDir(Global.svnPublishPath + '/web');
-            for (let i = 0; i < webPa.length; i++) {
-                const element = webPa[i];
-                if (element.indexOf(`v${version}s`) != -1) {
-                    await fsExc.delFolder(Global.svnPublishPath + '/web/' + element);
-                }
-            }
-            console.log(`--> clear version ${version} success`);
-        } catch (error) {
-            Global.snack(`清除旧版本 ${version} 错误`, error);
         }
+
+        console.log(`--> clear version ${version} success`);
+    } catch (error) {
+        Global.snack(`清除旧版本 ${version} 错误`, error);
     }
 }
-
-// //拷贝文件
-// async function copyFile(filePath, targetPath, version) {
-//     try {
-//         if (version) {
-//             let targetPathArr = targetPath.split('/');
-//             let fileName = targetPathArr[targetPathArr.length - 1];
-//             if (fileName.indexOf('_v' + version) == -1) {
-//                 targetPath = addVersionToPath(targetPath, version);
-//             } else {
-//                 console.log('targetPath:' + targetPath + '---fileName:' + fileName);
-//             }
-//         }
-
-//         let exists = await fsExc.exists(filePath);
-//         if (exists) {
-//             let content = await fsExc.readFile(filePath);
-//             await fsExc.writeFile(targetPath, content);
-//         }
-//     } catch (error) {
-//         Global.snack(`copy ${filePath} to ${targetPath}`, error);
-//     }
-// }
 
 /**
  * 拷贝文件,如果带有版本号,会把拷贝的文件名添加版本号
@@ -556,9 +425,10 @@ function addVersionToPath(targetPath, version) {
 }
 
 //根据两个版本比较文件
-async function mergeFileInVersion(oldFileSuffix, newFileSuffix, svnCdnRlsPath, svnCdnPatchPath, oldVersion, newVersion, oldSvnCdnRlsPath) {
+async function mergeFileInVersion(oldFileSuffix, newFileSuffix, svnRlsPath, svnPatchPath, oldVersion, newVersion, oldSvnRlsPath) {
+    let projNewVersionPath = Global.projPath + releaseSuffix + newVersion;
     let newFileExist = await fsExc.exists(projNewVersionPath + '/' + newFileSuffix);
-    let oldFileExist = await fsExc.exists(oldSvnCdnRlsPath + '/' + oldFileSuffix);
+    let oldFileExist = await fsExc.exists(oldSvnRlsPath + '/' + oldFileSuffix);
     if (!newFileExist) {
         console.log(`--> new version v${oldVersion}s-v${newVersion}s delete file ${projNewVersionPath}/${newFileSuffix}`);
         return false;
@@ -571,20 +441,20 @@ async function mergeFileInVersion(oldFileSuffix, newFileSuffix, svnCdnRlsPath, s
 
     let fileEqual = false;
     if (oldFileExist) {
-        fileEqual = await fsExc.mergeFileByMd5(oldSvnCdnRlsPath + '/' + oldFileSuffix, projNewVersionPath + '/' + newFileSuffix);
+        fileEqual = await fsExc.mergeFileByMd5(oldSvnRlsPath + '/' + oldFileSuffix, projNewVersionPath + '/' + newFileSuffix);
     }
 
     if (fileEqual) {
-        if (svnCdnRlsPath) {
+        if (svnRlsPath) {
             //相等,拷贝旧的文件到新目录
-            await fsExc.makeDir(svnCdnRlsPath + '/' + fsExc.dirname(oldFileSuffix));
-            await copyFile(oldSvnCdnRlsPath + '/' + oldFileSuffix, svnCdnRlsPath + '/' + oldFileSuffix);
+            await fsExc.makeDir(svnRlsPath + '/' + fsExc.dirname(oldFileSuffix));
+            await copyFile(oldSvnRlsPath + '/' + oldFileSuffix, svnRlsPath + '/' + oldFileSuffix);
         }
     } else {
-        if (svnCdnRlsPath) {
-            await copyFileCheckDir(newFileSuffix, svnCdnRlsPath, newVersion);
+        if (svnRlsPath) {
+            await copyFileCheckDir(newFileSuffix, svnRlsPath, newVersion);
         }
-        await copyFileCheckDir(newFileSuffix, svnCdnPatchPath, newVersion);
+        await copyFileCheckDir(newFileSuffix, svnPatchPath, newVersion);
     }
     return fileEqual;
 }
@@ -592,6 +462,7 @@ async function mergeFileInVersion(oldFileSuffix, newFileSuffix, svnCdnRlsPath, s
 //根据res配置文件,添加版本号到文件和配置中
 async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, oldVersion, oldVersionPath) {
     let useNew = false;
+    let projNewVersionPath = Global.projPath + releaseSuffix + newVersion;
     let newResContent = await fsExc.readFile(projNewVersionPath + '/' + resFilePath);
     let newResObj = JSON.parse(newResContent);
     if (oldVersion) {
@@ -638,8 +509,9 @@ async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, ol
 
                     //图集配置处理
                     await sheetConfigHandle(resFileEqual, releasePath, patchPath, oldPath, newPath, oldVersion, newVersion, newResIterator.url, oldVersionPath);
-                } else {
-                    //不是图集,直接比较
+                }
+                //不是图集,直接比较
+                else {
                     resFileEqual = await mergeFileInVersion(oldPath, newPath, releasePath, patchPath, oldVersion, newVersion, oldVersionPath);
                 }
 
@@ -677,8 +549,9 @@ async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, ol
 
                 //图集配置处理,不相等,直接用新的
                 await sheetConfigHandle(false, releasePath, patchPath, oldPath, newPath, oldVersion, newVersion, iterator.url, oldVersionPath);
-            } else {
-                //其他文件只要拷贝配置就好了
+            }
+            //其他文件只要拷贝配置就好了
+            else {
                 let targetPath = 'resource/' + iterator.url;
                 if (releasePath) {
                     await copyFileCheckDir(targetPath, releasePath, newVersion);
@@ -702,13 +575,16 @@ async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, ol
 
 /** 处理图集配置 */
 async function sheetConfigHandle(resFileEqual, releasePath, patchPath, oldPath, newPath, oldVersion, newVersion, sheetUrl, oldVersionPath) {
+    let projNewVersionPath = Global.projPath + releaseSuffix + newVersion;
+
+    //相等
     if (resFileEqual) {
-        //相等
         if (releasePath) {
             await copyFile(oldVersionPath + '/' + oldPath, releasePath + '/' + oldPath);
         }
-    } else {
-        //不相等
+    }
+    //不相等
+    else {
         //release
         if (releasePath) {
             await copyFile(projNewVersionPath + '/' + newPath, releasePath + '/' + newPath, newVersion);
@@ -805,6 +681,7 @@ export async function copyResource(releasePath) {
 }
 
 export async function clearAndCopyResource() {
+    let projNewVersionPath = Global.projPath + releaseSuffix + ModelMgr.version.newVersion;
     await clearResource(projNewVersionPath);
     await copyResource(projNewVersionPath);
 }

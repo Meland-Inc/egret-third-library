@@ -14,6 +14,7 @@ const multi_output_suffix_path = '/TextureOutput/multi';
 const sheet_suffix_path = '/TextureSheet';
 const project_sheet_suffix_path = '/resource/assets/preload/sheet';
 
+const entity_csv = '/Entity.csv';
 const object_csv = '/EntityBuildObject.csv';
 const varia_csv = '/EntityVaria.csv';
 const material_csv = '/EntityMaterial.csv';
@@ -21,6 +22,7 @@ const object_state_csv = '/ObjectState.csv';
 
 const copy_in_suffix_arr = [
     '/settings/resource/mapcell',
+    '/settings/resource/material',
     '/settings/resource/object',
     '/settings/resource/object_varia'
 ];
@@ -29,7 +31,7 @@ const itemIconSfx = "itemIcon";
 const groundSfx = "ground";
 const surfaceSfx = "surface"
 const floorSfx = "floor";
-const materialSfx = "material";
+// const materialSfx = "material";
 const objectSfx = "object";
 const objectDecorateSfx = "objectDecorate";
 const multiPictureSfx = "multiPicture";
@@ -64,11 +66,11 @@ const objectType = {
     ObjectTypeSurface: 17
 }
 
-var _checkBoxValues = [itemIconSfx, avatarIconSfx, groundSfx, floorSfx, objectSfx, objectDecorateSfx, multiPictureSfx, materialSfx];
+var _checkBoxValues = [itemIconSfx, avatarIconSfx, groundSfx, floorSfx, objectSfx, objectDecorateSfx, multiPictureSfx];
 export function getCheckBoxValues() { return _checkBoxValues; }
 export function setCheckBoxValues(value) { _checkBoxValues = value; }
 
-var _checkBoxData = [itemIconSfx, avatarIconSfx, groundSfx, floorSfx, objectSfx, objectDecorateSfx, multiPictureSfx, materialSfx];
+var _checkBoxData = [itemIconSfx, avatarIconSfx, groundSfx, floorSfx, objectSfx, objectDecorateSfx, multiPictureSfx];
 export function getCheckBoxData() { return _checkBoxData; }
 export function setCheckBoxData(value) { _checkBoxData = value; }
 
@@ -150,25 +152,30 @@ export async function clipTexture() {
     let input_path = Global.svnArtPath + input_suffix_path;
 
     try {
+        let entity_csv_path = Global.svnCsvPath + entity_csv;
+        // if (Global.entityCells.length == 0) {
+        Global.entityCells = await tableExc.getCsvCells(entity_csv_path);
+        // }
+
         let object_csv_path = Global.svnCsvPath + object_csv;
-        if (Global.objectCells.length == 0) {
-            Global.objectCells = await tableExc.getCsvCells(object_csv_path);
-        }
+        // if (Global.objectCells.length == 0) {
+        Global.objectCells = await tableExc.getCsvCells(object_csv_path);
+        // }
 
         let varia_csv_path = Global.svnCsvPath + varia_csv;
-        if (Global.variaCells.length == 0) {
-            Global.variaCells = await tableExc.getCsvCells(varia_csv_path);
-        }
+        // if (Global.variaCells.length == 0) {
+        Global.variaCells = await tableExc.getCsvCells(varia_csv_path);
+        // }
 
         let material_csv_path = Global.svnCsvPath + material_csv;
-        if (Global.materialCells.length == 0) {
-            Global.materialCells = await tableExc.getCsvCells(material_csv_path);
-        }
+        // if (Global.materialCells.length == 0) {
+        Global.materialCells = await tableExc.getCsvCells(material_csv_path);
+        // }
 
         let objectStateCsvPath = Global.svnCsvPath + object_state_csv;
-        if (Global.objectStateCells.length == 0) {
-            Global.objectStateCells = await tableExc.getCsvCells(objectStateCsvPath);
-        }
+        // if (Global.objectStateCells.length == 0) {
+        Global.objectStateCells = await tableExc.getCsvCells(objectStateCsvPath);
+        // }
 
         let getOutPath = (iterator) => {
             let outPath;
@@ -189,6 +196,11 @@ export async function clipTexture() {
             return outPath;
         }
 
+        console.log('--> start clip entity texture');
+        for (const iterator of Global.entityCells) {
+            let outPath = getOutPath(iterator)
+            await jimpExc.jimpCell(1, iterator, iterator.texture, input_path, outPath);
+        }
         console.log('--> start clip object texture');
         for (const iterator of Global.objectCells) {
             let outPath = getOutPath(iterator)
@@ -217,7 +229,11 @@ export async function clipTexture() {
                 continue;
             }
 
-            let cell = Global.objectCells.find(value => value.id === iterator.objectId);
+            let cell = Global.entityCells.find(value => value.id === iterator.objectId);
+
+            if (!cell) {
+                cell = Global.objectCells.find(value => value.id === iterator.objectId);
+            }
             if (!cell) {
                 cell = Global.variaCells.find(value => value.id === iterator.objectId);
             }
@@ -269,9 +285,9 @@ export async function packerTexture() {
                     case itemIconSfx:
                         inputs.push(Global.svnPath + '/settings/resource/item_icon');
                         break;
-                    case materialSfx:
-                        inputs.push(Global.svnPath + '/settings/resource/material');
-                        break;
+                    // case materialSfx:
+                    //     inputs.push(Global.svnPath + '/settings/resource/material');
+                    //     break;
                     case objectDecorateSfx:
                         inputs.push(Global.svnPath + '/settings/resource/objectDecorate');
                         break;

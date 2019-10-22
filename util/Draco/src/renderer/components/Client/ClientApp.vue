@@ -116,20 +116,20 @@ export default {
         this.checkBoxData.length = 0;
       }
     },
-    async refreshNewVersionList() {
-      if (await fsExc.exists(Global.releasePath)) {
-        let versionListContent = await fsExc.readFile(
-          Global.svnPublishPath + "/versionList.json"
-        );
-        let versionList = JSON.parse(versionListContent);
-        this.gameVersionList = versionList.versionList;
-        this.gameVersion = this.gameVersionList[
-          this.gameVersionList.length - 1
-        ];
-      } else {
-        this.gameVersionList = [];
-      }
-    },
+    // async refreshNewVersionList() {
+    //   if (await fsExc.exists(Global.releasePath)) {
+    //     let versionListContent = await fsExc.readFile(
+    //       Global.svnPublishPath + "/versionList.json"
+    //     );
+    //     let versionList = JSON.parse(versionListContent);
+    //     this.gameVersionList = versionList.versionList;
+    //     this.gameVersion = this.gameVersionList[
+    //       this.gameVersionList.length - 1
+    //     ];
+    //   } else {
+    //     this.gameVersionList = [];
+    //   }
+    // },
     async onExportVersion(showDialog = true) {
       this.isExportVersionLoading = true;
       Global.showRegionLoading();
@@ -191,7 +191,7 @@ export default {
     }
   },
   async mounted() {
-    this.refreshNewVersionList();
+    // this.refreshNewVersionList();
 
     let androidPaths = await mdApp.getAndroidPaths();
     let iosPaths = await mdApp.getIosPaths();

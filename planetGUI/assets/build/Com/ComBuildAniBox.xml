@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="320,70" designImageOffsetX="-224" designImageOffsetY="-570">
+  <controller name="ctrlFold" pages="0,folded,1,unfolded" selected="1"/>
+  <controller name="ctrlSelect" pages="0,unselected,1,preselected,2,selected" selected="0"/>
+  <controller name="ctrlCombine" pages="0,normal,1,combine" selected="0"/>
+  <displayList>
+    <loader id="n0_r0y9" name="loaderBG" xy="0,0" size="300,70" url="ui://32ieekgus1sdta9" fill="scaleFree">
+      <gearDisplay controller="ctrlSelect" pages="0,2"/>
+      <gearXY controller="ctrlCombine" pages="0,1" values="0,0|20,0"/>
+      <relation target="" sidePair="height-height"/>
+    </loader>
+    <loader id="n28_s1sd" name="bg" xy="0,0" size="300,70" url="ui://32ieekgus1sdtab" fill="scaleFree">
+      <gearDisplay controller="ctrlSelect" pages="1"/>
+      <relation target="n0_r0y9" sidePair="width-width,height-height"/>
+      <relation target="n0_r0y9" sidePair="left-left"/>
+    </loader>
+    <image id="n41_s1sd" name="n41" src="s1sdtag" fileName="newImg/AnimationEdit/img_cm_dh_11.png" xy="0,68" size="300,2">
+      <gearDisplay controller="ctrlFold" pages="1"/>
+      <relation target="n0_r0y9" sidePair="width-width,top-top"/>
+      <relation target="n0_r0y9" sidePair="left-left"/>
+    </image>
+    <list id="n25_fidk" name="lstAniFrame" xy="30,70" size="260,362" scrollBarMargin="5,5,0,0" scrollBarRes="ui://te1gxawovulycyid4," lineGap="2" colGap="11" defaultItem="ui://32ieekgufidkt9v" autoClearItems="true">
+      <gearDisplay controller="ctrlFold" pages="1"/>
+      <gearXY controller="ctrlFold" pages="0,1" values="12,70|30,70"/>
+      <relation target="n0_r0y9" sidePair="left-left"/>
+      <item controllers="ctrlBuild,0"/>
+      <item controllers="ctrlBuild,0"/>
+      <item controllers="ctrlBuild,0"/>
+      <item controllers="ctrlBuild,0"/>
+      <item controllers="ctrlBuild,0"/>
+      <item controllers="ctrlBuild,0"/>
+      <item controllers="ctrlBuild,0"/>
+      <item controllers="ctrlBuild,0"/>
+      <item controllers="ctrlBuild,0"/>
+      <item controllers="ctrlBuild,0"/>
+    </list>
+    <component id="n27_s1sd" name="btnFoldFrame" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="282,60" pivot="0.5,0.5" size="10,6">
+      <gearLook controller="ctrlFold" pages="0" values="1,180,0,1" default="1,0,0,1"/>
+      <relation target="n0_r0y9" sidePair="right-right,bottom-bottom"/>
+      <Button icon="ui://32ieekgus1sdta5" selectedIcon="ui://32ieekgus1sdt9x"/>
+    </component>
+    <component id="n29_s1sd" name="btnDelete" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="263,28" size="12,12">
+      <gearDisplay controller="ctrlSelect" pages="1,2"/>
+      <relation target="n0_r0y9" sidePair="right-right"/>
+      <Button icon="ui://32ieekgus1sdta2" selectedIcon="ui://32ieekgus1sdta2"/>
+    </component>
+    <image id="n37_s1sd" name="imgUnselectedFrame" src="s1sdtad" fileName="newImg/AnimationEdit/img_cm_dh_7.png" xy="0,0" size="300,70">
+      <gearDisplay controller="ctrlSelect" pages="0,1"/>
+      <relation target="n0_r0y9" sidePair="width-width,height-height"/>
+      <relation target="n0_r0y9" sidePair="left-left"/>
+    </image>
+    <component id="n30_s1sd" name="btnEdit" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="242,27" size="13,13">
+      <gearDisplay controller="ctrlSelect" pages="1,2"/>
+      <relation target="n0_r0y9" sidePair="right-right"/>
+      <Button icon="ui://32ieekgus1sdta1" selectedIcon="ui://32ieekgus1sdta1"/>
+    </component>
+    <component id="n31_s1sd" name="btnCopy" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="218,26" size="13,13">
+      <gearDisplay controller="ctrlSelect" pages="1,2"/>
+      <relation target="n0_r0y9" sidePair="right-right"/>
+      <Button icon="ui://32ieekgus1sdta0" selectedIcon="ui://32ieekgus1sdta0"/>
+    </component>
+    <text id="n26_izy9" name="textAniName" xy="70,25" size="47,20" input="true" prompt="动画名" fontSize="14" text="动画名">
+      <relation target="n0_r0y9" sidePair="left-left"/>
+    </text>
+    <image id="n38_s1sd" name="imgIconBg" src="s1sdtae" fileName="newImg/AnimationEdit/img_cm_dh_8.png" xy="2,5" size="62,62">
+      <relation target="n0_r0y9" sidePair="left-left"/>
+    </image>
+    <loader id="n21_fidk" name="icon" xy="3,6" pivot="0.5,0.5" size="60,60" align="center" vAlign="middle" fill="scale">
+      <relation target="n0_r0y9" sidePair="left-left,top-top"/>
+    </loader>
+    <image id="n35_s1sd" name="imgSelectedFrame" src="s1sdtaa" fileName="newImg/AnimationEdit/img_cm_dh_4.png" xy="0,0" size="300,70">
+      <gearDisplay controller="ctrlSelect" pages="2"/>
+      <relation target="n0_r0y9" sidePair="width-width,height-height"/>
+      <relation target="n0_r0y9" sidePair="left-left"/>
+    </image>
+    <image id="n36_s1sd" name="imgNumSelected" src="s1sdta7" fileName="newImg/AnimationEdit/img_cm_dh_1.png" xy="0,56">
+      <gearDisplay controller="ctrlSelect" pages="2"/>
+      <relation target="n0_r0y9" sidePair="left-left,bottom-bottom"/>
+    </image>
+    <image id="n34_s1sd" name="imgNumUnselected" src="s1sdta8" fileName="newImg/AnimationEdit/img_cm_dh_2.png" xy="0,56">
+      <gearDisplay controller="ctrlSelect" pages="0,1"/>
+      <relation target="n0_r0y9" sidePair="left-left,bottom-bottom"/>
+    </image>
+    <text id="n23_fidk" name="textIndex" xy="3,55" size="15,16" fontSize="10" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="1">
+      <relation target="n0_r0y9" sidePair="left-left,bottom-bottom"/>
+    </text>
+    <image id="n42_s1sd" name="n42" src="s1sdta4" fileName="newImg/AnimationEdit/icon_cm_dh_8.png" xy="-18,30">
+      <gearDisplay controller="ctrlSelect" pages="0,1"/>
+      <relation target="n0_r0y9" sidePair="right-left"/>
+    </image>
+    <image id="n43_s1sd" name="n43" src="s1sdta3" fileName="newImg/AnimationEdit/icon_cm_dh_7.png" xy="-18,30">
+      <gearDisplay controller="ctrlSelect" pages="2"/>
+      <relation target="n0_r0y9" sidePair="right-left"/>
+    </image>
+  </displayList>
+</component>

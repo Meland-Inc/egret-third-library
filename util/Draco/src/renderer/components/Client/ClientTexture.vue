@@ -39,6 +39,12 @@
           color="green500"
           @click="copyTextureOut"
         >拷出纹理</mu-button>
+        <mu-button
+          v-loading="isImportDefaultLoading"
+          data-mu-loading-size="24"
+          color="pink500"
+          @click="importDefault"
+        >导入default配置</mu-button>
       </div>
       <div class="button-wrapper">
         <mu-button full-width color="red500" @click="oneForAll">One·for·All</mu-button>
@@ -67,7 +73,7 @@
         </mu-flex>
       </div>
     </mu-container>
-    <mu-divider/>
+    <mu-divider />
     <mu-container>
       <div class="select-control-group">
         <mu-flex class="select-control-row">
@@ -92,6 +98,7 @@
 
 <script>
 import * as mdTexture from "../js/MdTexture.js";
+import * as mdAsset from "../js/MdAsset.js";
 import { Global } from "../js/Global.js";
 
 export default {
@@ -104,6 +111,7 @@ export default {
       isClipTextureLoading: false,
       isPackerTextureLoading: false,
       isCopyTextureOutLoading: false,
+      isImportDefaultLoading: false,
 
       sheetMode: mdTexture.getSheetMode(),
       checkBoxValues: mdTexture.getCheckBoxValues(),
@@ -200,6 +208,18 @@ export default {
         Global.hideRegionLoading();
       }
     },
+    async importDefault() {
+      this.isImportDefaultLoading = true;
+      Global.showRegionLoading();
+      try {
+        await mdAsset.importDefault();
+        this.isImportDefaultLoading = false;
+        Global.hideRegionLoading();
+      } catch (error) {
+        this.isImportDefaultLoading = false;
+        Global.hideRegionLoading();
+      }
+    },
     async oneForAll() {
       Global.showLoading();
       try {
@@ -209,6 +229,7 @@ export default {
         await this.clipTexture();
         await this.packerTexture();
         await this.copyTextureOut();
+        await this.importDefault();
 
         Global.hideLoading();
         Global.dialog("One·for·All Success");
