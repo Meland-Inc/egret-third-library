@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="336,583" designImage="ui://i25v0ebker8n5y" designImageOffsetX="-801" designImageOffsetY="-59" designImageAlpha="80">
-  <controller name="ctrlType" pages="0,config,1,custom" selected="0"/>
-  <controller name="ctrlIsPublish" pages="0,false,1,true" selected="0"/>
+<component size="336,583" designImage="ui://i25v0ebker8n5y" designImageOffsetX="-801" designImageOffsetY="-59" designImageAlpha="0">
+  <controller name="ctrlType" pages="0,config,1,custom" selected="1"/>
+  <controller name="ctrlIsPublish" pages="0,false,1,true" selected="1"/>
   <displayList>
     <image id="n0_f4tn" name="imgDetailBg" src="f203cyie1" fileName="imgB/img_cm_xxk_1.png" pkg="te1gxawo" xy="0,0" size="336,583" hideByEditor="true">
       <relation target="" sidePair="height-height"/>
@@ -17,7 +17,7 @@
     <component id="n19_jeto" name="btnPublish" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="4,525" size="106,36" group="n18_f4tn">
       <gearText controller="ctrlIsPublish" pages="1" values="更新地图" default="发布地图"/>
       <relation target="" sidePair="bottom-bottom"/>
-      <Button title="发布地图" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
+      <Button title="更新地图" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
     </component>
     <component id="n25_er8n" name="comDetailContainer" src="er8nn1r" fileName="com/ComDetailContainer.xml" xy="-77,19" size="411,488" group="n18_f4tn">
       <relation target="n11_f4tn" sidePair="bottomext-top"/>
