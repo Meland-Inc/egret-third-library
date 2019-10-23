@@ -209,6 +209,32 @@
     <component id="jktht9p" name="btnIde.xml" path="/btn/" exported="true"/>
     <component id="e7dht9d" name="HoverTipBuildTab.xml" path="/Com/" exported="true"/>
     <image id="p7oot9q" name="icon_cm_gjl_9.png" path="/img_UI3/b/ide/"/>
+    <component id="fidkt9r" name="ComBuildAniSelect.xml" path="/Com/" exported="true"/>
+    <component id="fidkt9s" name="ComBuildAniEdit.xml" path="/Com/" exported="true"/>
+    <component id="fidkt9t" name="comBuildAniScroll.xml" path="/Com/" exported="true"/>
+    <component id="fidkt9u" name="ComBuildAniBox.xml" path="/Com/" exported="true"/>
+    <component id="fidkt9v" name="ComBuildFrameBox.xml" path="/Com/" exported="true"/>
+    <component id="fidkt9w" name="comBuildFrameScroll.xml" path="/Com/" exported="true"/>
+    <image id="s1sdt9x" name="icon_cm_dh_1.png" path="/newImg/AnimationEdit/" exported="true"/>
+    <image id="s1sdt9y" name="icon_cm_dh_2.png" path="/newImg/AnimationEdit/" exported="true"/>
+    <image id="s1sdt9z" name="icon_cm_dh_3.png" path="/newImg/AnimationEdit/" exported="true"/>
+    <image id="s1sdta0" name="icon_cm_dh_4.png" path="/newImg/AnimationEdit/" exported="true"/>
+    <image id="s1sdta1" name="icon_cm_dh_5.png" path="/newImg/AnimationEdit/" exported="true"/>
+    <image id="s1sdta2" name="icon_cm_dh_6.png" path="/newImg/AnimationEdit/" exported="true"/>
+    <image id="s1sdta3" name="icon_cm_dh_7.png" path="/newImg/AnimationEdit/" exported="true"/>
+    <image id="s1sdta4" name="icon_cm_dh_8.png" path="/newImg/AnimationEdit/" exported="true"/>
+    <image id="s1sdta5" name="icon_cm_dh_9.png" path="/newImg/AnimationEdit/" exported="true"/>
+    <image id="s1sdta6" name="icon_cm_dh_10.png" path="/newImg/AnimationEdit/" exported="true"/>
+    <image id="s1sdta7" name="img_cm_dh_1.png" path="/newImg/AnimationEdit/" exported="true"/>
+    <image id="s1sdta8" name="img_cm_dh_2.png" path="/newImg/AnimationEdit/" exported="true"/>
+    <image id="s1sdta9" name="img_cm_dh_3.png" path="/newImg/AnimationEdit/" exported="true" scale="9grid" scale9grid="9,9,36,34"/>
+    <image id="s1sdtaa" name="img_cm_dh_4.png" path="/newImg/AnimationEdit/" exported="true" scale="9grid" scale9grid="9,9,36,34"/>
+    <image id="s1sdtab" name="img_cm_dh_5.png" path="/newImg/AnimationEdit/" exported="true" scale="9grid" scale9grid="9,9,36,34"/>
+    <image id="s1sdtac" name="img_cm_dh_6.png" path="/newImg/AnimationEdit/" exported="true" scale="9grid" scale9grid="6,6,68,18"/>
+    <image id="s1sdtad" name="img_cm_dh_7.png" path="/newImg/AnimationEdit/" exported="true" scale="9grid" scale9grid="9,9,226,274"/>
+    <image id="s1sdtae" name="img_cm_dh_8.png" path="/newImg/AnimationEdit/" exported="true" scale="9grid" scale9grid="9,9,26,26"/>
+    <component id="s1sdtaf" name="btnCombineAni.xml" path="/btn/" exported="true"/>
+    <image id="s1sdtag" name="img_cm_dh_11.png" path="/newImg/AnimationEdit/" exported="true"/>
   </resources>
   <publish name="build" npot="true"/>
 </packageDescription>

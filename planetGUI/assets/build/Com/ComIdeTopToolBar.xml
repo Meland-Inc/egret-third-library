@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="800,36" designImage="ui://i25v0ebkvbzw5h" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlMode" exported="true" pages="4,none,0,normal,1,tile,3,editTile" selected="0"/>
+  <controller name="ctrlMode" exported="true" pages="4,none,0,normal,1,tile,3,editTile" selected="1"/>
   <displayList>
     <image id="n0_cw9m" name="imgBg" src="cw9mcyifk" fileName="imgB/img_cm_gjl_11.png" pkg="te1gxawo" xy="0,0" size="800,36">
       <relation target="" sidePair="width-width"/>
@@ -42,7 +42,7 @@
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://32ieekgup7oot9q"/>
     </component>
-    <component id="n11_iw59" name="btnHideLine" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="628,10" size="16,16">
+    <component id="n11_iw59" name="btnHideLine" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="718,10" size="16,16" tooltips="test">
       <gearDisplay controller="ctrlMode" pages="0,1,3"/>
       <gearXY controller="ctrlMode" pages="0,1" values="718,10|661,10" default="628,10"/>
       <relation target="" sidePair="right-right"/>
