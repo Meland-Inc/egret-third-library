@@ -29,7 +29,8 @@
       <mu-container v-show="!isAdvanceMode">
         <!-- <mu-button large fab color="red" @click="oneForAll"> -->
         <mu-button large round color="red" @click="oneForAll">
-          <mu-icon value="touch_app"></mu-icon>只需要点一下就够了,蠢货!
+          <mu-icon value="touch_app"></mu-icon>
+          {{oneClickContent}}
         </mu-button>
       </mu-container>
     </mu-container>
@@ -281,6 +282,7 @@
 </template>
 
 <script>
+import { ipcRenderer } from "electron";
 import { ModelMgr } from "../js/model/ModelMgr.js";
 import * as mdPublish from "../js/MdPublish.js";
 import * as mdCompress from "../js/MdCompress.js";
@@ -291,6 +293,7 @@ import * as mdFtp from "../js/MdFtp.js";
 export default {
   data() {
     return {
+      oneClickContent: "只需要点一下就够了.",
       isAdvanceMode: false,
 
       isUpdateGitLoading: false,
@@ -690,6 +693,10 @@ export default {
   async mounted() {
     this.curEnviron = ModelMgr.versionModel.curEnviron;
     this.environChange();
+
+    ipcRenderer.on("client_one_click", (event, msg) => {
+      this.oneClickContent = "只需要点一下就够了,蠢货!";
+    });
   }
 };
 </script>

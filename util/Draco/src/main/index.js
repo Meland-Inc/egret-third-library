@@ -93,6 +93,13 @@ let template = [{
   label: '帮助',
   role: 'help',
   submenu: [{
+    label: '点一下?',
+    click: () => {
+      // electron.shell.openExternal('http://electron.atom.io')
+      mainWindow.webContents.send("client_one_click");
+    }
+  },
+  {
     label: '关于',
     click: () => {
       // electron.shell.openExternal('http://electron.atom.io')
@@ -190,9 +197,9 @@ if (process.platform === 'darwin') {
   template[3].submenu.push({
     type: 'separator'
   }, {
-      label: '前置所有',
-      role: 'front'
-    })
+    label: '前置所有',
+    role: 'front'
+  })
 
   // addUpdateMenuItems(template[0].submenu, 1)
 }
