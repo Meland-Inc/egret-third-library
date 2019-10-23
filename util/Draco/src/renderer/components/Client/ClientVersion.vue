@@ -19,154 +19,122 @@
         </mu-select>
       </div>
     </mu-container>
-    <mu-container v-show="curEnviron&&curEnviron.publishEnable">
-      <div class="button-wrapper">
-        <mu-button
-          v-loading="isCompressPicLoading"
-          data-mu-loading-size="24"
-          color="pink500"
-          @click="onCompressPicClick"
-          v-show="curEnviron&&curEnviron.compressPicEnable"
-        >压缩图片</mu-button>
-        <mu-button
-          v-loading="isPublishProjectLoading"
-          data-mu-loading-size="24"
-          color="orange500"
-          @click="onPublishProjectClick"
-        >发布当前项目</mu-button>
-        <mu-button
-          v-loading="isCopyCompressPicLoading"
-          data-mu-loading-size="24"
-          color="cyan500"
-          @click="onCopyPicturesClick"
-          v-show="curEnviron&&curEnviron.compressPicEnable"
-        >拷贝压缩图片</mu-button>
-        <mu-button
-          v-loading="isMergeVersionLoading"
-          data-mu-loading-size="24"
-          color="blue500"
-          @click="onMergeVersionClick"
-          v-show="curEnviron&&curEnviron.mergeVersionEnable"
-        >比较新旧版本</mu-button>
-      </div>
-      <div>
-        <mu-flex class="flex-wrapper" align-items="center">
-          <mu-col span="12" lg="2" sm="2" v-show="curEnviron&&curEnviron.mergeVersionEnable">
-            <mu-checkbox v-model="needCover" label="覆盖"></mu-checkbox>
-          </mu-col>
-          <mu-col span="12" lg="2" sm="2" v-show="curEnviron&&curEnviron.compressPicEnable">
-            <mu-checkbox v-model="needCompress" label="压缩"></mu-checkbox>
-          </mu-col>
-          <mu-col span="12" lg="2" sm="2" v-show="curEnviron&&curEnviron.mergeVersionEnable">
-            <mu-text-field class="text-version" v-model="releaseVersion" label="发布版本号" label-float />
-          </mu-col>
-          <mu-col span="12" lg="2" sm="2" v-show="curEnviron&&curEnviron.mergeVersionEnable">
-            <mu-select label="旧版本号" filterable v-model="oldVersion" label-float full-width>
-              <mu-option
-                v-for="value,index in oldVersionList"
-                :key="value"
-                :label="value"
-                :value="value"
-              ></mu-option>
-            </mu-select>
-          </mu-col>
-          <mu-col span="12" lg="2" sm="2" v-show="curEnviron&&curEnviron.mergeVersionEnable">
-            <mu-button @click="onOpenWhiteDialog">
-              <mu-icon left color="red" value="edit"></mu-icon>编辑白名单
-            </mu-button>
-          </mu-col>
-          <mu-col span="12" lg="2" sm="2" v-show="editCdnUrlEnable">
-            <mu-button @click="onOpenCdnDialog">
-              <mu-icon left color="blue" value="text_format"></mu-icon>编辑cdn路径
-            </mu-button>
-          </mu-col>
-        </mu-flex>
-      </div>
-    </mu-container>
-    <mu-divider />
     <mu-container>
-      <div class="button-wrapper">
-        <mu-button
-          v-loading="isZipVersionLoading"
-          data-mu-loading-size="24"
-          color="pink500"
-          @click="onZipVersion"
-          v-show="curEnviron&&curEnviron.zipFileEnable"
-        >压缩游戏版本</mu-button>
-        <mu-button
-          v-loading="isUploadVersionLoading"
-          data-mu-loading-size="24"
-          color="orange500"
-          @click="onUploadVersionFile"
-        >上传游戏版本</mu-button>
-      </div>
-      <mu-flex class="flex-wrapper" align-items="center">
-        <mu-col span="12" lg="2" sm="2" v-show="curEnviron&&curEnviron.mergeVersionEnable">
-          <mu-checkbox v-model="needPatch" @change="needPatchChange" label="patch包"></mu-checkbox>
-        </mu-col>
-        <mu-col span="12" lg="3" sm="3" v-show="curEnviron&&curEnviron.mergeVersionEnable">
-          <mu-select label="上传游戏版本" filterable v-model="uploadVersion" label-float full-width>
-            <mu-option
-              v-for="value,index in gameVersionList"
-              :key="value"
-              :label="value"
-              :value="value"
-            ></mu-option>
-          </mu-select>
-        </mu-col>
-      </mu-flex>
+      <mu-button small v-show="!isAdvanceMode" @click="changeAdvanceMode">
+        <mu-icon value="add"></mu-icon>高级模式
+      </mu-button>
+      <mu-button small v-show="isAdvanceMode" @click="changeAdvanceMode">
+        <mu-icon value="remove"></mu-icon>垃圾模式
+      </mu-button>
+      <mu-container v-show="!isAdvanceMode">
+        <!-- <mu-button large fab color="red" @click="oneForAll"> -->
+        <mu-button large round color="red" @click="oneForAll">
+          <mu-icon value="touch_app"></mu-icon>只需要点一下就够了,蠢货!
+        </mu-button>
+      </mu-container>
     </mu-container>
-    <mu-divider />
-    <mu-container v-show="curEnviron&&curEnviron.policyEnable">
-      <div class="button-wrapper">
-        <mu-button
-          v-loading="isCreatePolicyFileLoading"
-          data-mu-loading-size="24"
-          color="cyan500"
-          @click="onCreatePolicyFile"
-        >生成策略文件</mu-button>
-        <mu-button
-          v-loading="isModifyPolicyNumLoading"
-          data-mu-loading-size="24"
-          color="blue500"
-          @click="onModifyPolicyFile"
-        >修改策略文件</mu-button>
-        <mu-button
-          v-loading="isUploadPolicyLoading"
-          data-mu-loading-size="24"
-          color="purple500"
-          @click="onUploadPolicyFile"
-        >上传策略文件</mu-button>
-        <mu-button
-          v-loading="isApplyPolicyNumLoading"
-          data-mu-loading-size="24"
-          color="green500"
-          @click="onApplyPolicyNum"
-        >应用策略版本</mu-button>
-      </div>
-      <div>
+    <mu-container v-show="isAdvanceMode">
+      <mu-container v-show="curEnviron&&curEnviron.publishEnable">
+        <div class="button-wrapper">
+          <mu-button
+            v-loading="isUpdateGitLoading"
+            data-mu-loading-size="24"
+            color="pink500"
+            @click="onUpdateGitClick"
+            v-show="curEnviron&&curEnviron.updateGitEnable"
+          >更新GIT文件</mu-button>
+          <mu-button
+            v-loading="isCompressPicLoading"
+            data-mu-loading-size="24"
+            color="pink500"
+            @click="onCompressPicClick"
+            v-show="curEnviron&&curEnviron.compressPicEnable"
+          >压缩图片</mu-button>
+          <mu-button
+            v-loading="isPublishProjectLoading"
+            data-mu-loading-size="24"
+            color="orange500"
+            @click="onPublishProjectClick"
+          >发布当前项目</mu-button>
+          <mu-button
+            v-loading="isCopyCompressPicLoading"
+            data-mu-loading-size="24"
+            color="cyan500"
+            @click="onCopyPicturesClick"
+            v-show="curEnviron&&curEnviron.compressPicEnable"
+          >拷贝压缩图片</mu-button>
+          <mu-button
+            v-loading="isMergeVersionLoading"
+            data-mu-loading-size="24"
+            color="blue500"
+            @click="onMergeVersionClick"
+            v-show="curEnviron&&curEnviron.mergeVersionEnable"
+          >比较新旧版本</mu-button>
+        </div>
+        <div>
+          <mu-flex class="flex-wrapper" align-items="center">
+            <mu-col span="12" lg="2" sm="2" v-show="curEnviron&&curEnviron.mergeVersionEnable">
+              <mu-checkbox v-model="needCover" label="覆盖"></mu-checkbox>
+            </mu-col>
+            <mu-col span="12" lg="2" sm="2" v-show="curEnviron&&curEnviron.compressPicEnable">
+              <mu-checkbox v-model="needCompress" label="压缩"></mu-checkbox>
+            </mu-col>
+            <mu-col span="12" lg="2" sm="2" v-show="curEnviron&&curEnviron.mergeVersionEnable">
+              <mu-text-field
+                class="text-version"
+                v-model="releaseVersion"
+                label="发布版本号"
+                label-float
+              />
+            </mu-col>
+            <mu-col span="12" lg="2" sm="2" v-show="curEnviron&&curEnviron.mergeVersionEnable">
+              <mu-select label="旧版本号" filterable v-model="oldVersion" label-float full-width>
+                <mu-option
+                  v-for="value,index in oldVersionList"
+                  :key="value"
+                  :label="value"
+                  :value="value"
+                ></mu-option>
+              </mu-select>
+            </mu-col>
+            <mu-col span="12" lg="2" sm="2" v-show="curEnviron&&curEnviron.mergeVersionEnable">
+              <mu-button @click="onOpenWhiteDialog">
+                <mu-icon left color="red" value="edit"></mu-icon>编辑白名单
+              </mu-button>
+            </mu-col>
+            <mu-col span="12" lg="2" sm="2" v-show="editCdnUrlEnable">
+              <mu-button @click="onOpenCdnDialog">
+                <mu-icon left color="blue" value="text_format"></mu-icon>编辑cdn路径
+              </mu-button>
+            </mu-col>
+          </mu-flex>
+        </div>
+      </mu-container>
+      <mu-divider />
+      <mu-container>
+        <div class="button-wrapper">
+          <mu-button
+            v-loading="isZipVersionLoading"
+            data-mu-loading-size="24"
+            color="pink500"
+            @click="onZipVersion"
+            v-show="curEnviron&&curEnviron.zipFileEnable"
+          >压缩游戏版本</mu-button>
+          <mu-button
+            v-loading="isUploadVersionLoading"
+            data-mu-loading-size="24"
+            color="orange500"
+            @click="onUploadVersionFile"
+          >上传游戏版本</mu-button>
+        </div>
         <mu-flex class="flex-wrapper" align-items="center">
-          <mu-col span="12" lg="2" sm="2">
-            <mu-text-field class="text-game" v-model="policyNum" label="策略版本号" label-float />
+          <mu-col span="12" lg="2" sm="2" v-show="curEnviron&&curEnviron.mergeVersionEnable">
+            <mu-checkbox v-model="needPatch" @change="needPatchChange" label="patch包"></mu-checkbox>
           </mu-col>
-          <mu-col span="12" lg="2" sm="2">
-            <mu-text-field class="text-game" v-model="whiteVersion" label="白名单游戏版本" label-float />
-          </mu-col>
-          <mu-col span="12" lg="2" sm="2">
-            <mu-text-field class="text-game" v-model="normalVersion" label="常规游戏版本" label-float />
-          </mu-col>
-          <mu-col span="12" lg="2" sm="2">
-            <mu-text-field class="text-game" v-model="displayVersion" label="显示版本号" label-float />
-          </mu-col>
-          <mu-col span="12" lg="2" sm="2">
-            <mu-select label="选择类型" filterable v-model="versionType" label-float full-width>
-              <mu-option v-for="type,index in versionTypes" :key="type" :label="type" :value="type"></mu-option>
-            </mu-select>
-          </mu-col>
-          <mu-col span="12" lg="2" sm="2">
-            <mu-select label="选择渠道号" filterable v-model="channel" label-float full-width>
+          <mu-col span="12" lg="3" sm="3" v-show="curEnviron&&curEnviron.mergeVersionEnable">
+            <mu-select label="上传游戏版本" filterable v-model="uploadVersion" label-float full-width>
               <mu-option
-                v-for="value,index in channelList"
+                v-for="value,index in gameVersionList"
                 :key="value"
                 :label="value"
                 :value="value"
@@ -174,75 +142,140 @@
             </mu-select>
           </mu-col>
         </mu-flex>
-        <mu-container>
-          <div class="button-wrapper">
-            <mu-button @click="onCheckPolicyNum">当前策略版本</mu-button>
-            <mu-button @click="onCheckGameVerison">当前游戏版本</mu-button>
-          </div>
-        </mu-container>
-      </div>
-    </mu-container>
-    <mu-divider />
-    <mu-container>
-      <div class="button-wrapper">
-        <mu-button full-width color="red" @click="oneForAll">One·for·All</mu-button>
-      </div>
-    </mu-container>
-    <mu-container></mu-container>
-    <mu-container>
-      <mu-dialog
-        title="白名单列表"
-        width="360"
-        scrollable
-        :open.sync="whiteVisible"
-        :overlay-close="false"
-        :exc-press-close="false"
-      >
-        <mu-list>
-          <mu-list-item :ripple="true" :key="value" v-for="(value, key) in whiteList">
-            <mu-list-item-title>{{value}}</mu-list-item-title>
-            <mu-list-item-action>
-              <mu-button
-                icon
-                @click="()=>{
+      </mu-container>
+      <mu-divider />
+      <mu-container v-show="curEnviron&&curEnviron.policyEnable">
+        <div class="button-wrapper">
+          <mu-button
+            v-loading="isCreatePolicyFileLoading"
+            data-mu-loading-size="24"
+            color="cyan500"
+            @click="onCreatePolicyFile"
+          >生成策略文件</mu-button>
+          <mu-button
+            v-loading="isModifyPolicyNumLoading"
+            data-mu-loading-size="24"
+            color="blue500"
+            @click="onModifyPolicyFile"
+          >修改策略文件</mu-button>
+          <mu-button
+            v-loading="isUploadPolicyLoading"
+            data-mu-loading-size="24"
+            color="purple500"
+            @click="onUploadPolicyFile"
+          >上传策略文件</mu-button>
+          <mu-button
+            v-loading="isApplyPolicyNumLoading"
+            data-mu-loading-size="24"
+            color="green500"
+            @click="onApplyPolicyNum"
+          >应用策略版本</mu-button>
+        </div>
+        <div>
+          <mu-flex class="flex-wrapper" align-items="center">
+            <mu-col span="12" lg="2" sm="2">
+              <mu-text-field class="text-game" v-model="policyNum" label="策略版本号" label-float />
+            </mu-col>
+            <mu-col span="12" lg="2" sm="2">
+              <mu-text-field class="text-game" v-model="whiteVersion" label="白名单游戏版本" label-float />
+            </mu-col>
+            <mu-col span="12" lg="2" sm="2">
+              <mu-text-field class="text-game" v-model="normalVersion" label="常规游戏版本" label-float />
+            </mu-col>
+            <mu-col span="12" lg="2" sm="2">
+              <mu-text-field class="text-game" v-model="displayVersion" label="显示版本号" label-float />
+            </mu-col>
+            <mu-col span="12" lg="2" sm="2">
+              <mu-select label="选择类型" filterable v-model="versionType" label-float full-width>
+                <mu-option
+                  v-for="type,index in versionTypes"
+                  :key="type"
+                  :label="type"
+                  :value="type"
+                ></mu-option>
+              </mu-select>
+            </mu-col>
+            <mu-col span="12" lg="2" sm="2">
+              <mu-select label="选择渠道号" filterable v-model="channel" label-float full-width>
+                <mu-option
+                  v-for="value,index in channelList"
+                  :key="value"
+                  :label="value"
+                  :value="value"
+                ></mu-option>
+              </mu-select>
+            </mu-col>
+          </mu-flex>
+          <mu-container>
+            <div class="button-wrapper">
+              <mu-button @click="onCheckPolicyNum">当前策略版本</mu-button>
+              <mu-button @click="onCheckGameVerison">当前游戏版本</mu-button>
+            </div>
+          </mu-container>
+        </div>
+      </mu-container>
+      <mu-divider />
+      <mu-container>
+        <div class="button-wrapper">
+          <mu-button full-width color="red" @click="oneForAll">One·for·All</mu-button>
+        </div>
+      </mu-container>
+      <mu-container></mu-container>
+      <mu-container>
+        <mu-dialog
+          title="白名单列表"
+          width="360"
+          scrollable
+          :open.sync="whiteVisible"
+          :overlay-close="false"
+          :exc-press-close="false"
+        >
+          <mu-list>
+            <mu-list-item :ripple="true" :key="value" v-for="(value, key) in whiteList">
+              <mu-list-item-title>{{value}}</mu-list-item-title>
+              <mu-list-item-action>
+                <mu-button
+                  icon
+                  @click="()=>{
                   whiteList.splice(key, 1);
                 }"
-              >
-                <mu-icon value="delete"></mu-icon>
-              </mu-button>
-            </mu-list-item-action>
-          </mu-list-item>
-          <mu-divider />
-          <br />
-          <mu-list-item>
-            <mu-list-item-action>
-              <mu-text-field
-                :label-float="true"
-                label="添加名单"
-                v-model="addWhite"
-                action-icon="add"
-                :action-click="onAddWhite"
-              ></mu-text-field>
-            </mu-list-item-action>
-          </mu-list-item>
-        </mu-list>
-        <mu-button slot="actions" color="error" @click="onCancelWhiteDialog">cancel</mu-button>
-        <mu-button slot="actions" color="success" @click="onConfirmWhiteDialog">confirm</mu-button>
-      </mu-dialog>
-    </mu-container>
-    <mu-container>
-      <mu-dialog
-        title="设置cdn路径"
-        width="360"
-        scrollable
-        :open.sync="cdnVisible"
-        :overlay-close="false"
-        :exc-press-close="false"
-      >
-        <mu-text-field :label-float="true" label="cdn路径" v-model="cdnUrl"></mu-text-field>
-        <mu-button slot="actions" color="error" @click="onCancelCdnDialog">cancel</mu-button>
-        <mu-button slot="actions" color="success" @click="onConfirmCdnDialog">confirm</mu-button>
-      </mu-dialog>
+                >
+                  <mu-icon value="delete"></mu-icon>
+                </mu-button>
+              </mu-list-item-action>
+            </mu-list-item>
+            <mu-divider />
+            <br />
+            <mu-list-item>
+              <mu-list-item-action>
+                <mu-text-field
+                  :label-float="true"
+                  label="添加名单"
+                  v-model="addWhite"
+                  action-icon="add"
+                  :action-click="onAddWhite"
+                ></mu-text-field>
+              </mu-list-item-action>
+            </mu-list-item>
+          </mu-list>
+          <mu-button slot="actions" color="error" @click="onCancelWhiteDialog">cancel</mu-button>
+          <mu-button slot="actions" color="success" @click="onConfirmWhiteDialog">confirm</mu-button>
+        </mu-dialog>
+      </mu-container>
+      <mu-container>
+        <mu-dialog
+          title="设置cdn路径"
+          width="360"
+          scrollable
+          :open.sync="cdnVisible"
+          :overlay-close="false"
+          :exc-press-close="false"
+        >
+          <mu-text-field :label-float="true" label="cdn路径" v-model="cdnUrl"></mu-text-field>
+          <mu-button slot="actions" color="error" @click="onCancelCdnDialog">cancel</mu-button>
+          <mu-button slot="actions" color="success" @click="onConfirmCdnDialog">confirm</mu-button>
+        </mu-dialog>
+      </mu-container>
     </mu-container>
   </div>
 </template>
@@ -258,6 +291,9 @@ import * as mdFtp from "../js/MdFtp.js";
 export default {
   data() {
     return {
+      isAdvanceMode: false,
+
+      isUpdateGitLoading: false,
       isPublishProjectLoading: false,
       isMergeVersionLoading: false,
       isCompressPicLoading: false,
@@ -343,6 +379,9 @@ export default {
     }
   },
   methods: {
+    changeAdvanceMode() {
+      this.isAdvanceMode = !this.isAdvanceMode;
+    },
     async environChange() {
       ModelMgr.versionModel.setCurEnviron(this.curEnviron);
       this.editCdnUrlEnable =
@@ -406,6 +445,19 @@ export default {
     onCancelCdnDialog() {
       this.cdnVisible = false;
       this.cdnUrl = ModelMgr.versionModel.cdnUrl;
+    },
+    async onUpdateGitClick() {
+      this.isUpdateGitLoading = true;
+      Global.showRegionLoading();
+
+      try {
+        await mdPublish.updateGit();
+        this.isUpdateGitLoading = false;
+        Global.hideRegionLoading();
+      } catch (error) {
+        this.isUpdateGitLoading = false;
+        Global.hideRegionLoading();
+      }
     },
     async onCompressPicClick(showDialog = true) {
       this.isCompressPicLoading = true;
@@ -582,6 +634,9 @@ export default {
       Global.showLoading();
       try {
         if (this.curEnviron.publishEnable) {
+          if (this.curEnviron.updateGitEnable) {
+            await this.onUpdateGitClick();
+          }
           if (this.needCompress) {
             await this.onCompressPicClick(false);
           }
@@ -605,6 +660,8 @@ export default {
           await this.onUploadPolicyFile();
           await this.onApplyPolicyNum();
         }
+
+        await this.environChange();
 
         Global.hideLoading();
         Global.dialog("One·for·All Success");

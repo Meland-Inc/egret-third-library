@@ -33,7 +33,11 @@ export default {
       isTest: false
     };
   },
-  watch: {},
+  watch: {
+    policyNum: value => {
+      ModelMgr.versionModel.setPolicyNum(value);
+    }
+  },
   methods: {
     async onApplyPolicyNum() {
       this.isApplyPolicyNumLoading = true;
@@ -58,7 +62,7 @@ export default {
   },
   async mounted() {
     let value = await ExternalUtil.getPolicyInfo(
-      ModelMgr.versionModel.eEnviron.ready
+      ModelMgr.versionModel.eEnviron.release
     );
     let data = JSON.parse(value);
     if (data.Code == 0) {
