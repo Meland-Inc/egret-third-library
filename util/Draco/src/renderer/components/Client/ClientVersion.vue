@@ -47,27 +47,27 @@
           <mu-button
             v-loading="isCompressPicLoading"
             data-mu-loading-size="24"
-            color="pink500"
+            color="orange500"
             @click="onCompressPicClick"
             v-show="curEnviron&&curEnviron.compressPicEnable"
           >压缩图片</mu-button>
           <mu-button
             v-loading="isPublishProjectLoading"
             data-mu-loading-size="24"
-            color="orange500"
+            color="cyan500"
             @click="onPublishProjectClick"
           >发布当前项目</mu-button>
           <mu-button
             v-loading="isCopyCompressPicLoading"
             data-mu-loading-size="24"
-            color="cyan500"
+            color="blue500"
             @click="onCopyPicturesClick"
             v-show="curEnviron&&curEnviron.compressPicEnable"
           >拷贝压缩图片</mu-button>
           <mu-button
             v-loading="isMergeVersionLoading"
             data-mu-loading-size="24"
-            color="blue500"
+            color="purple500"
             @click="onMergeVersionClick"
             v-show="curEnviron&&curEnviron.mergeVersionEnable"
           >比较新旧版本</mu-button>

@@ -406,7 +406,7 @@ export async function applyPolicyNum() {
 export async function applyLessonPolicyNum(isTest) {
     let lessonUrl = "http://api.bellplanet.bellcode.com";
     let parseUrl = url.parse(lessonUrl);
-    let getLessonData = `?policy_version=${ModelMgr.versionModel.policyNum}&isTest=${isTest}&description="aaa"`
+    let getLessonData = `?policy_version=${ModelMgr.versionModel.lessonPolicyNum}&isTest=${isTest}&description="aaa"`
     let lessonOptions = {
         host: parseUrl.hostname, // 请求地址 域名，google.com等..
         // port: 80,

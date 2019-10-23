@@ -35,7 +35,7 @@ export default {
   },
   watch: {
     policyNum: value => {
-      ModelMgr.versionModel.setPolicyNum(value);
+      ModelMgr.versionModel.setLessonPolicyNum(value);
     }
   },
   methods: {

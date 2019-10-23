@@ -137,6 +137,12 @@ export class VersionModel {
         this.channel = value;
     }
 
+    //平台策略号
+    lessonPolicyNum;
+    setLessonPolicyNum(value) {
+        this.lessonPolicyNum = value;
+    }
+
     async init() {
         this.versionType = this.versionTypes[0];
         this.initEnviron();

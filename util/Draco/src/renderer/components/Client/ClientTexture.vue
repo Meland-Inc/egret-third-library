@@ -42,7 +42,7 @@
         <mu-button
           v-loading="isImportDefaultLoading"
           data-mu-loading-size="24"
-          color="pink500"
+          color="red500"
           @click="importDefault"
         >导入default配置</mu-button>
       </div>
