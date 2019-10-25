@@ -22,41 +22,26 @@ const assets_suffix_path = '/resource/assets';
 const async_suffix_path = '/resource/async';
 const indie_suffix_path = '/resource/indie';
 const loader_suffix_path = '/resource/loader';
-// const assetsPath = Global.projPath + assets_suffix_path;
-// const asyncPath = Global.projPath + async_suffix_path;
-// const indiePath = Global.projPath + indie_suffix_path;
-// const loaderPath = Global.projPath + loader_suffix_path;
 
 const assetSfxValues = [assetsSfx, asyncSfx, indieSfx, loaderSfx];
 
-// var projNewVersionPath = Global.projPath + releaseSuffix + newVersion;
+export async function updateGit() {
+    let gitBranch = ModelMgr.versionModel.curEnviron.gitBranch;
+    try {
+        let storeCmdStr = `git checkout -- .`;
+        await spawnExc.runCmd(storeCmdStr, Global.projPath, null, '还原文件错误');
 
-// var releaseVersion;
-// export function getReleaseVersion() { return releaseVersion; }
-// export function setReleaseVersion(value) { releaseVersion = value; }
+        let switchCmdStr = `git checkout ${gitBranch}`;
+        await spawnExc.runCmd(switchCmdStr, Global.projPath, null, '切换分支错误');
 
-// var newVersion;
-// export function getNewVersion() { return newVersion; }
-// export function setNewVersion(value) {
-//     newVersion = value;
-//     projNewVersionPath = Global.projPath + releaseSuffix + newVersion;
-// }
+        let pullCmdStr = `git pull`;
+        await spawnExc.runCmd(pullCmdStr, Global.projPath, null, '拉取分支错误');
 
-// var oldVersion;
-// export function getOldVersion() { return oldVersion; }
-// export function setOldVersion(value) { oldVersion = value; }
-
-// var checkBoxData = [];
-// export function getCheckBoxData() { return checkBoxData; }
-// export function setCheckBoxData(value) { checkBoxData = value; }
-
-// var needCover = true;
-// export function setNeedCover(value) { needCover = value; }
-// export function getNeedCover() { return needCover; }
-
-// var needCompress = false;
-// export function setNeedCompress(value) { needCompress = value; }
-// export function getNeedCompress() { return needCompress }
+        Global.toast('更新git成功');
+    } catch (error) {
+        Global.snack('更新git错误', error);
+    }
+}
 
 /**
  * 发布项目

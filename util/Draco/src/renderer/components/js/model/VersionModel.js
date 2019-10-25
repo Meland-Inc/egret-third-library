@@ -15,21 +15,25 @@ export class VersionModel {
         {
             name: this.eEnviron.alpha, host: "47.107.73.43", user: "ftpadmin", password: "unclemiao",
             zipPath: "/alpha/zip", scpRootPath: "/web", scpPath: "/web/alpha", localPath: "/alpha/web", localPolicyPath: "/alpha/policy",
-            publishEnable: true, mergeVersionEnable: false, compressPicEnable: false, zipFileEnable: true, policyEnable: false, cdnEnable: false
+            updateGitEnable: false, gitBranch: "",
+            publishEnable: true, mergeVersionEnable: false, compressPicEnable: false, zipFileEnable: true, policyEnable: false, cdnEnable: false,
         },
         {
             name: this.eEnviron.beta, host: "47.107.73.43", user: "ftpadmin", password: "unclemiao",
             zipPath: "/beta/zip", scpRootPath: "/web", scpPath: "/web/beta", localPath: "/beta/web", localPolicyPath: "/beta/policy",
+            updateGitEnable: true, gitBranch: "trunk/beta",
             publishEnable: true, mergeVersionEnable: true, compressPicEnable: true, zipFileEnable: true, policyEnable: true, cdnEnable: false
         },
         {
             name: this.eEnviron.ready, host: "47.107.73.43", user: "ftpadmin", password: "unclemiao",
             zipPath: "/ready/zip", scpRootPath: "/web", scpPath: "/web/ready", localPath: "/ready/web", localPolicyPath: "/ready/policy",
+            updateGitEnable: true, gitBranch: "trunk/release",
             publishEnable: true, mergeVersionEnable: true, compressPicEnable: true, zipFileEnable: true, policyEnable: true, cdnEnable: false
         },
         {
-            name: this.eEnviron.release, host: "47.107.73.43", user: "ftpadmin", password: "unclemiao",
-            zipPath: "/ready/zip", scpRootPath: "/web", scpPath: "/web/ready", localPath: "/ready/web", localPolicyPath: "/release/policy",
+            name: this.eEnviron.release, host: "bg-stage.wkcoding.com", user: "ftpadmin", password: "unclemiao",
+            zipPath: "/ready/zip", scpRootPath: "", scpPath: "", localPath: "/ready/web", localPolicyPath: "/release/policy",
+            updateGitEnable: false, gitBranch: "",
             publishEnable: false, mergeVersionEnable: true, compressPicEnable: true, zipFileEnable: false, policyEnable: true, cdnEnable: true
         },
     ];
@@ -37,7 +41,7 @@ export class VersionModel {
 
     channelList = [
         'shangwu',
-        'bian_lesson',
+        // 'bian_lesson',
         'bian_game'
     ];
 
@@ -131,6 +135,12 @@ export class VersionModel {
     channel;
     setChannel(value) {
         this.channel = value;
+    }
+
+    //平台策略号
+    lessonPolicyNum;
+    setLessonPolicyNum(value) {
+        this.lessonPolicyNum = value;
     }
 
     async init() {
@@ -268,7 +278,7 @@ export class VersionModel {
 
     getGameVersion(policyNum, successFunc, errorFunc) {
         let options = {
-            host: '47.107.73.43', // 请求地址 域名，google.com等..
+            host: this.curEnviron.host, // 请求地址 域名，google.com等.. 
             // port: 10001,
             path: `${this.curEnviron.scpPath}/policyFile_v${policyNum}.json`, // 具体路径eg:/upload
             method: 'GET', // 请求方式, 这里以post为例
@@ -278,7 +288,9 @@ export class VersionModel {
         };
         http.get(options, (response) => {
             if (response.statusCode != 200) {
-                errorFunc();
+                if (errorFunc) {
+                    errorFunc();
+                }
                 return;
             }
 

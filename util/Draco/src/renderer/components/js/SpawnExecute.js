@@ -84,7 +84,9 @@ export function runCmd(cmd, cwd, successMsg, errorMsg) {
                 Global.snack(errorMsg, error, false);
                 reject();
             } else {
-                Global.toast(successMsg);
+                if (successMsg) {
+                    Global.toast(successMsg);
+                }
                 resolve();
             }
         });
