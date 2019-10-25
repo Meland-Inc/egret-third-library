@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="294,563">
+  <displayList>
+    <list id="n0_gi14" name="lstItem" xy="0,0" size="294,524" lineGap="20" defaultItem="ui://kzio97vugi148v">
+      <item/>
+      <item/>
+    </list>
+    <component id="n1_r7po" name="btnAdd" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="132,530" size="29,31">
+      <relation target="" sidePair="bottom-bottom"/>
+      <Button icon="ui://te1gxawovulycyicp"/>
+    </component>
+  </displayList>
+  <relation target="n0_gi14" sidePair="bottomext-bottom"/>
+</component>
