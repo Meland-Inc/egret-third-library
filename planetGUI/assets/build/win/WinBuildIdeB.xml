@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkjnb25p">
   <controller name="ctrlOperate" pages="" selected="-1"/>
-  <controller name="ctrlIdeMode" pages="0,create,1,move,4,terrain,3,attr,2,code,5,ani,6,aniselect" selected="5"/>
+  <controller name="ctrlIdeMode" pages="0,create,1,move,4,terrain,3,attr,2,code,5,ani,6,aniselect" selected="6"/>
   <displayList>
     <graph id="n39_e7dh" name="shapeOffset" xy="798,0" size="344,640" visible="false" alpha="0.1" touchable="false" type="rect">
-      <gearXY controller="ctrlIdeMode" pages="0,1,4,3,2,5" values="795,0|795,0|792,0|796,0|798,0|798,0" default="798,0"/>
+      <gearXY controller="ctrlIdeMode" pages="0,1,4,3,2,5,6" values="795,0|795,0|792,0|796,0|798,0|798,0|798,0"/>
       <gearSize controller="ctrlIdeMode" pages="0,1,4,3" values="363,640,1,1|57,641,1,1|360,640,1,1|321,640,1,1" default="344,640,1,1"/>
       <relation target="" sidePair="right-right,height-height"/>
     </graph>
-    <component id="n38_si0u" name="comToolBar" src="zefit91" fileName="Com/ComIdeTopToolBar.xml" xy="72,0" size="725,36" controller="ctrlMode,4">
+    <component id="n38_si0u" name="comToolBar" src="zefit91" fileName="Com/ComIdeTopToolBar.xml" xy="72,0" size="764,36" controller="ctrlMode,4">
       <gearXY controller="ctrlIdeMode" default="72,0"/>
-      <gearSize controller="ctrlIdeMode" pages="0,1,4,3,2,5" values="703,36,1,1|1009,36,1,1|703,36,1,1|746,36,1,1|725,36,1,1|725,36,1,1" default="725,36,1,1"/>
+      <gearSize controller="ctrlIdeMode" pages="0,1,4,3,2,5,6" values="703,36,1,1|1009,36,1,1|703,36,1,1|746,36,1,1|725,36,1,1|725,36,1,1|764,36,1,1"/>
       <relation target="n9_r0y9" sidePair="leftext-right"/>
       <relation target="n39_e7dh" sidePair="rightext-left"/>
     </component>
