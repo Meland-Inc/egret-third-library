@@ -3,9 +3,9 @@
   <controller name="ctrlState" exported="true" pages="1,open,0,fold" selected="0"/>
   <controller name="ctrlEnable" pages="0,enable,1,disable" selected="0"/>
   <displayList>
-    <graph id="n19_n83g" name="n19" xy="9,0" size="381,640" visible="false" alpha="0" touchable="false" type="rect">
-      <gearXY controller="ctrlState" pages="1,0" values="9,0|0,0"/>
-      <gearSize controller="ctrlState" pages="0" values="76,640,1,1" default="381,640,1,1"/>
+    <graph id="n19_n83g" name="n19" xy="0,0" size="390,640" visible="false" alpha="0" touchable="false" type="rect">
+      <gearXY controller="ctrlState" pages="1,0" values="0,0|0,0"/>
+      <gearSize controller="ctrlState" pages="1,0" values="390,640,1,1|86,640,1,1"/>
     </graph>
     <image id="n0_7slt" name="n0" src="nl0rcyic7" fileName="imgB/bg_cm_1.png" pkg="te1gxawo" xy="85,0" size="305,640" group="n16_jm8l">
       <relation target="" sidePair="height-height"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkjnb25p">
   <controller name="ctrlOperate" pages="" selected="-1"/>
-  <controller name="ctrlIdeMode" pages="0,create,1,move,4,terrain,3,attr,2,code,5,ani,6,aniselect" selected="3"/>
+  <controller name="ctrlIdeMode" pages="0,create,1,move,4,terrain,3,attr,2,code,5,ani,6,aniselect" selected="0"/>
   <displayList>
     <graph id="n39_e7dh" name="shapeOffset" xy="820,0" size="319,640" visible="false" alpha="0.1" touchable="false" type="rect">
       <gearXY controller="ctrlIdeMode" pages="3,2" values="820,0|822,0" default="818,0"/>
@@ -17,7 +17,7 @@
     <component id="n9_r0y9" name="comEntitySelect" src="yhf8t7n" fileName="Com/ComMapEntitySelectB.xml" xy="0,0" size="110,640" controller="ctrlState,0">
       <relation target="" sidePair="left-left,height-height"/>
     </component>
-    <component id="n36_7slt" name="comCreate" src="7sltt98" fileName="Com/ComBuildCreate.xml" xy="755,0" size="390,640" controller="ctrlState,1">
+    <component id="n36_7slt" name="comCreate" src="7sltt98" fileName="Com/ComBuildCreate.xml" xy="746,0" size="390,640" controller="ctrlState,1">
       <gearDisplay controller="ctrlIdeMode" pages="0"/>
       <relation target="" sidePair="right-right,height-height"/>
     </component>
@@ -54,7 +54,7 @@
     <item time="0" type="Alpha" target="n38_si0u" value="0"/>
     <item time="0" type="XY" target="n27_r0y9" tween="true" startValue="1136,-" endValue="792,-" duration="9"/>
     <item time="0" type="XY" target="n35_7slt" tween="true" startValue="-,640" endValue="-,587" duration="9"/>
-    <item time="0" type="XY" target="n36_7slt" tween="true" startValue="1136,-" endValue="755,-" duration="9"/>
+    <item time="0" type="XY" target="n36_7slt" tween="true" startValue="1136,-" endValue="746,-" duration="9"/>
     <item time="0" type="XY" target="n37_jm8l" tween="true" startValue="1136,-" endValue="1052,-" duration="9"/>
     <item time="0" type="XY" target="n41_m5hn" tween="true" startValue="1136,-" endValue="745,-" duration="9"/>
     <item time="0" type="XY" target="n9_r0y9" tween="true" startValue="-223,-" endValue="0,-" duration="9"/>
@@ -64,7 +64,7 @@
     <item time="0" type="Alpha" target="n38_si0u" value="0"/>
     <item time="0" type="XY" target="n27_r0y9" tween="true" startValue="792,-" endValue="1136,-" duration="9"/>
     <item time="0" type="XY" target="n35_7slt" tween="true" startValue="-,587" endValue="-,640" duration="9"/>
-    <item time="0" type="XY" target="n36_7slt" tween="true" startValue="755,-" endValue="1136,-" duration="9"/>
+    <item time="0" type="XY" target="n36_7slt" tween="true" startValue="746,-" endValue="1136,-" duration="9"/>
     <item time="0" type="XY" target="n37_jm8l" tween="true" startValue="1052,-" endValue="1136,-" duration="9"/>
     <item time="0" type="XY" target="n41_m5hn" tween="true" startValue="745,-" endValue="1136,-" duration="9"/>
     <item time="0" type="XY" target="n9_r0y9" tween="true" startValue="0,-" endValue="-223,-" duration="9"/>
