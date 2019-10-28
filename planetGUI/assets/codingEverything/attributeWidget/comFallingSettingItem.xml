@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="300,250" designImage="ui://i25v0ebkgi1467" designImageOffsetX="-818" designImageOffsetY="-169" designImageAlpha="0">
+  <displayList>
+    <text id="n0_gi14" name="tfName" xy="21,26" size="85,23" fontSize="14" color="#ffffff" autoSize="none" singleLine="true" text="掉落物件1"/>
+    <image id="n14_gi14" name="imgIconBg" src="nl0rcyic4" fileName="imgB/img_cm_wpk_1.png" pkg="te1gxawo" xy="117,4"/>
+    <loader id="n4_gi14" name="ladIcon" xy="122,9" size="54,53" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <component id="n20_gi14" name="labFallingNumSld" src="gi148x" fileName="attributeWidget/comFallingSld.xml" xy="21,96">
+      <Label title="堆叠数量"/>
+    </component>
+    <component id="n21_gi14" name="labFallingProbability" src="gi148x" fileName="attributeWidget/comFallingSld.xml" xy="21,179">
+      <Label title="概率"/>
+    </component>
+  </displayList>
+</component>
