@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="320,70" designImageOffsetX="-224" designImageOffsetY="-570">
   <controller name="ctrlFold" pages="0,folded,1,unfolded" selected="0"/>
-  <controller name="ctrlSelect" pages="0,unselected,1,preselected,2,selected" selected="0"/>
+  <controller name="ctrlSelect" pages="0,unselected,1,preselected,2,selected" selected="1"/>
   <controller name="ctrlCombine" pages="0,normal,1,combine" selected="0"/>
   <displayList>
     <loader id="n0_r0y9" name="loaderBG" xy="0,0" size="300,70" url="ui://32ieekgus1sdta9" fill="scaleFree">
@@ -39,7 +39,7 @@
       <relation target="n0_r0y9" sidePair="right-right,bottom-bottom"/>
       <Button icon="ui://32ieekgus1sdta5" selectedIcon="ui://32ieekgus1sdt9x"/>
     </component>
-    <component id="n29_s1sd" name="btnDelete" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="263,28" size="12,12">
+    <component id="n29_s1sd" name="btnDelete" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="269,28" size="12,12">
       <gearDisplay controller="ctrlSelect" pages="1,2"/>
       <relation target="n0_r0y9" sidePair="right-right"/>
       <Button icon="ui://32ieekgus1sdta2" selectedIcon="ui://32ieekgus1sdta2"/>
@@ -49,17 +49,17 @@
       <relation target="n0_r0y9" sidePair="width-width,height-height"/>
       <relation target="n0_r0y9" sidePair="left-left"/>
     </image>
-    <component id="n30_s1sd" name="btnEdit" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="242,27" size="13,13">
+    <component id="n30_s1sd" name="btnEdit" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="248,27" size="13,13">
       <gearDisplay controller="ctrlSelect" pages="1,2"/>
       <relation target="n0_r0y9" sidePair="right-right"/>
       <Button icon="ui://32ieekgus1sdta1" selectedIcon="ui://32ieekgus1sdta1"/>
     </component>
-    <component id="n31_s1sd" name="btnCopy" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="218,26" size="13,13">
+    <component id="n31_s1sd" name="btnCopy" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="224,26" size="13,13">
       <gearDisplay controller="ctrlSelect" pages="1,2"/>
       <relation target="n0_r0y9" sidePair="right-right"/>
       <Button icon="ui://32ieekgus1sdta0" selectedIcon="ui://32ieekgus1sdta0"/>
     </component>
-    <text id="n26_izy9" name="textAniName" xy="70,25" size="173,20" input="true" prompt="动画名" maxLength="12" fontSize="14" text="一二三四五六七八九十十一">
+    <text id="n26_izy9" name="textAniName" xy="70,6" size="141,56" input="true" prompt="动画名" maxLength="16" fontSize="14" vAlign="middle" autoSize="none" text="一二三四五六七">
       <relation target="n0_r0y9" sidePair="left-left"/>
     </text>
     <image id="n38_s1sd" name="imgIconBg" src="s1sdtae" fileName="newImg/AnimationEdit/img_cm_dh_8.png" xy="2,5" size="62,62">
@@ -85,7 +85,7 @@
       <relation target="n0_r0y9" sidePair="left-left,bottom-bottom"/>
     </text>
     <image id="n42_s1sd" name="n42" src="s1sdta4" fileName="newImg/AnimationEdit/icon_cm_dh_8.png" xy="-18,30">
-      <gearDisplay controller="ctrlSelect" pages="0,1"/>
+      <gearDisplay controller="ctrlCombine" pages="1"/>
       <relation target="n0_r0y9" sidePair="right-left"/>
     </image>
     <image id="n43_s1sd" name="n43" src="s1sdta3" fileName="newImg/AnimationEdit/icon_cm_dh_7.png" xy="-18,30">
