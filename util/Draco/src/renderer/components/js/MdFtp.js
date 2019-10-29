@@ -154,7 +154,8 @@ function uploaderFile(rootPath, filePath, successFunc, failFunc) {
             return;
         }
 
-        if (rspInfo.statusCode != 200) {
+        //200:成功 614:文件重复
+        if (rspInfo.statusCode != 200 && rspInfo.statusCode != 614) {
             console.log(rspInfo.statusCode);
             console.log(rspBody);
             failFunc();
