@@ -32,17 +32,17 @@ export class Global {
     //工具模式
     static modeList = [
         {
-            name: "develop", title: "开发", icon: "airplanemode_active",
+            name: "develop", title: "开发模式", icon: "airplanemode_active",
             protoEnable: true, csvEnable: true, textureEnable: true, mapDataEnable: false, assetEnable: true,
             versionEnable: true, lessonEnable: true, appEnable: true
         },
         {
-            name: "product", title: "产品", icon: "drive_eta",
+            name: "product", title: "产品模式", icon: "drive_eta",
             protoEnable: false, csvEnable: true, textureEnable: true, mapDataEnable: false, assetEnable: false,
             versionEnable: false, lessonEnable: false, appEnable: false
         },
         {
-            name: "publish", title: "发布", icon: "accessible",
+            name: "publish", title: "发布模式", icon: "accessible",
             protoEnable: false, csvEnable: false, textureEnable: false, mapDataEnable: false, assetEnable: false,
             versionEnable: true, lessonEnable: true, appEnable: false
         }

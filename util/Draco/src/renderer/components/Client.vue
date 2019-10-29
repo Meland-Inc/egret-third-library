@@ -1,7 +1,7 @@
 <template>
   <div class="layout">
     <div class="header">
-      <mu-appbar color="primary" title="Client"></mu-appbar>
+      <mu-appbar color="primary" :title="appTitle"></mu-appbar>
     </div>
     <div class="content">
       <div class="alert-demo-wrapper">
@@ -228,7 +228,9 @@ export default {
       assetEnable: false,
       versionEnable: false,
       lessonEnable: false,
-      appEnable: false
+      appEnable: false,
+
+      appTitle: ""
     };
   },
   watch: {},
@@ -339,6 +341,7 @@ export default {
       this.versionEnable = mode.versionEnable;
       this.lessonEnable = mode.lessonEnable;
       this.appEnable = mode.appEnable;
+      this.appTitle = mode.title;
     }
   },
   components: {
