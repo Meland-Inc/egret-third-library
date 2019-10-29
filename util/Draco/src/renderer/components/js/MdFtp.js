@@ -406,7 +406,8 @@ export async function applyPolicyNum() {
 export async function applyLessonPolicyNum(isTest) {
     let lessonUrl = "http://api.bellplanet.bellcode.com";
     let parseUrl = url.parse(lessonUrl);
-    let getLessonData = `?policy_version=${ModelMgr.versionModel.lessonPolicyNum}&isTest=${isTest}&description="aaa"`
+    let is_test = isTest ? "&is_test=1" : "";
+    let getLessonData = `?policy_version=${ModelMgr.versionModel.lessonPolicyNum}${is_test}&description="aaa"`;
     let lessonOptions = {
         host: parseUrl.hostname, // 请求地址 域名，google.com等..
         // port: 80,
@@ -416,6 +417,7 @@ export async function applyLessonPolicyNum(isTest) {
             'Authorization': 'Basic YmVsbGNvZGU6ZDNuSDh5ZERESw=='
         }
     };
+    console.log(`--> applyLessonPolicy options:${JSON.stringify(lessonOptions)}`);
     http.get(lessonOptions, (response) => {
         let resData = "";
         response.on("data", (data) => {

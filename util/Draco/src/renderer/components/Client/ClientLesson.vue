@@ -3,7 +3,7 @@
     <div class="button-wrapper">
       <mu-flex class="flex-wrapper" align-items="center">
         <mu-col span="12" lg="2" sm="2">
-          <mu-checkbox v-model="isTest" label="是否测试"></mu-checkbox>
+          <mu-checkbox v-model="isTest" label="是否测试" @change="refreshPolicyNum"></mu-checkbox>
         </mu-col>
         <mu-col span="12" lg="2" sm="2">
           <mu-text-field class="text-game" v-model="policyNum" label="策略版本号" label-float />
@@ -24,13 +24,14 @@ import * as mdFtp from "../js/MdFtp.js";
 import { Global } from "../js/Global.js";
 import { ModelMgr } from "../js/model/ModelMgr";
 import * as ExternalUtil from "../js/ExternalUtil";
+import { version } from "punycode";
 
 export default {
   data() {
     return {
       isApplyPolicyNumLoading: false,
       policyNum: null,
-      isTest: false
+      isTest: true
     };
   },
   watch: {
@@ -58,16 +59,20 @@ export default {
       } else {
         Global.snack(data.Message, null, false);
       }
+    },
+    async refreshPolicyNum() {
+      let versionName = this.isTest
+        ? ModelMgr.versionModel.eEnviron.beta
+        : ModelMgr.versionModel.eEnviron.release;
+      let value = await ExternalUtil.getPolicyInfo(versionName);
+      let data = JSON.parse(value);
+      if (data.Code == 0) {
+        this.policyNum = data.Data.Version;
+      }
     }
   },
   async mounted() {
-    let value = await ExternalUtil.getPolicyInfo(
-      ModelMgr.versionModel.eEnviron.release
-    );
-    let data = JSON.parse(value);
-    if (data.Code == 0) {
-      this.policyNum = data.Data.Version;
-    }
+    this.refreshPolicyNum();
   }
 };
 </script>

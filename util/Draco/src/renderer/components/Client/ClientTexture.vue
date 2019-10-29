@@ -2,7 +2,12 @@
   <div>
     <mu-container>
       <div class="button-wrapper">
-        <!-- <mu-button v-loading="isCheckTextureLoading" data-mu-loading-size="24" color="primary" @click="checkTexture">检查纹理</mu-button> -->
+        <mu-button
+          v-loading="isUpdateGitLoading"
+          data-mu-loading-size="24"
+          color="pink500"
+          @click="updateGit"
+        >更新git文件</mu-button>
         <mu-button
           v-loading="isUpdateSvnLoading"
           data-mu-loading-size="24"
@@ -45,6 +50,12 @@
           color="red500"
           @click="importDefault"
         >导入default配置</mu-button>
+        <mu-button
+          v-loading="isPullGitLoading"
+          data-mu-loading-size="24"
+          color="red500"
+          @click="pushGit"
+        >推送Git文件</mu-button>
       </div>
       <div class="button-wrapper">
         <mu-button full-width color="red500" @click="oneForAll">One·for·All</mu-button>
@@ -104,14 +115,15 @@ import { Global } from "../js/Global.js";
 export default {
   data() {
     return {
+      isUpdateGitLoading: false,
       isUpdateSvnLoading: false,
-      isCheckTextureLoading: false,
       isCopyTextureInLoading: false,
       isClearTextureLoading: false,
       isClipTextureLoading: false,
       isPackerTextureLoading: false,
       isCopyTextureOutLoading: false,
       isImportDefaultLoading: false,
+      isPullGitLoading: false,
 
       sheetMode: mdTexture.getSheetMode(),
       checkBoxValues: mdTexture.getCheckBoxValues(),
@@ -134,6 +146,18 @@ export default {
         this.checkBoxData = mdTexture.getCheckBoxValues().concat();
       } else {
         this.checkBoxData.length = 0;
+      }
+    },
+    async updateGit() {
+      this.isUpdateGitLoading = true;
+      Global.showRegionLoading();
+      try {
+        await mdTexture.updateGit();
+        this.isUpdateGitLoading = false;
+        Global.hideRegionLoading();
+      } catch (error) {
+        this.isUpdateGitLoading = false;
+        Global.hideRegionLoading();
       }
     },
     async updateSvn() {
@@ -220,16 +244,44 @@ export default {
         Global.hideRegionLoading();
       }
     },
+    async pushGit() {
+      this.isPullGitLoading = true;
+      Global.showRegionLoading();
+      try {
+        await mdTexture.pushGit();
+        this.isPullGitLoading = false;
+        Global.hideRegionLoading();
+      } catch (error) {
+        this.isPullGitLoading = false;
+        Global.hideRegionLoading();
+      }
+    },
     async oneForAll() {
       Global.showLoading();
+      let promiseList = [
+        this.updateGit,
+        this.updateSvn,
+        this.clearTexture,
+        this.copyTextureIn,
+        this.clipTexture,
+        this.packerTexture,
+        this.copyTextureOut,
+        this.importDefault,
+        this.pushGit
+      ];
       try {
-        await this.updateSvn();
-        await this.clearTexture();
-        await this.copyTextureIn();
-        await this.clipTexture();
-        await this.packerTexture();
-        await this.copyTextureOut();
-        await this.importDefault();
+        // await Promise.all(promiseList);
+        for (const iterator of promiseList) {
+          let success = true;
+          await iterator().catch(reason => {
+            success = false;
+            Global.snack(reason);
+          });
+
+          if (!success) {
+            return;
+          }
+        }
 
         Global.hideLoading();
         Global.dialog("One·for·All Success");

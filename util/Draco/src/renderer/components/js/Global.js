@@ -1,12 +1,52 @@
 import { ipcRenderer } from 'electron';
 
 export class Global {
-    static currentVersion = "1.9.5 beta3";
+    static currentVersion = "1.9.5 beta4";
     static projPath = localStorage.getItem('client_project_path');
     static projPath = localStorage.getItem('client_project_path');
     static protoPath = localStorage.getItem('client_proto_path');
     static svnPath = localStorage.getItem('client_svn_path');
     static clientPath = localStorage.getItem('client_client_path');
+    static author = localStorage.getItem("client_author");
+
+    static _mode;
+    static setMode(value) {
+        this._mode = value;
+        localStorage.setItem("mode", this._mode.name);
+    }
+
+    static get mode() {
+        if (!this._mode) {
+            let modeName = localStorage.getItem("mode");
+            if (modeName) {
+                this._mode = this.modeList.find(value => value.name === modeName);
+            }
+        }
+
+        if (!this._mode) {
+            this._mode = this.modeList.find(value => value.name === "develop")
+        }
+        return this._mode;
+    }
+
+    //工具模式
+    static modeList = [
+        {
+            name: "develop", title: "开发", icon: "airplanemode_active",
+            protoEnable: true, csvEnable: true, textureEnable: true, mapDataEnable: false, assetEnable: true,
+            versionEnable: true, lessonEnable: true, appEnable: true
+        },
+        {
+            name: "product", title: "产品", icon: "drive_eta",
+            protoEnable: false, csvEnable: true, textureEnable: true, mapDataEnable: false, assetEnable: false,
+            versionEnable: false, lessonEnable: false, appEnable: false
+        },
+        {
+            name: "publish", title: "发布", icon: "accessible",
+            protoEnable: false, csvEnable: false, textureEnable: false, mapDataEnable: false, assetEnable: false,
+            versionEnable: true, lessonEnable: true, appEnable: false
+        }
+    ]
 
     static get androidPath() {
         return Global.clientPath + '/platform/android';

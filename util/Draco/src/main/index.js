@@ -37,6 +37,11 @@ let template = [{
       }
     }
   }, {
+    label: '切换模式',
+    click: () => {
+      mainWindow.webContents.send("client_switch_mode");
+    }
+  }, {
     label: '切换全屏',
     accelerator: (() => {
       if (process.platform === 'darwin') {
