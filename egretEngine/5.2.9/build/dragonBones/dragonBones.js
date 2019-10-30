@@ -3791,11 +3791,11 @@ var dragonBones;
          */
         Armature.prototype.advanceTime = function (passedTime) {
             if (this._timeInterval) {
-                this._countInterval += passedTime;
+                this._countInterval += passedTime * 1000;
                 if (this._countInterval < this._timeInterval) {
                     return;
                 }
-                passedTime = this._countInterval - this._countInterval % this._timeInterval;
+                passedTime = (this._countInterval - this._countInterval % this._timeInterval) / 1000;
                 this._countInterval %= this._timeInterval;
             }
             if (this._lockUpdate) {
@@ -4163,7 +4163,7 @@ var dragonBones;
         };
         Object.defineProperty(Armature.prototype, "fps", {
             get: function () {
-                return this._timeInterval ? Math.round(1 / this._timeInterval) : 0;
+                return this._timeInterval ? Math.round(1000 / this._timeInterval) : 0;
             },
             /**
              * - single armature fps.
@@ -4176,7 +4176,7 @@ var dragonBones;
              * @language zh_CN
              */
             set: function (value) {
-                this._timeInterval = value > 0 ? 1 / value : 0;
+                this._timeInterval = value > 0 ? 1000 / value : 0;
             },
             enumerable: true,
             configurable: true

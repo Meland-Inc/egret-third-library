@@ -354,7 +354,7 @@ declare namespace dragonBones {
          * @language zh_CN
          */
         static borrowObject<T extends BaseObject>(objectConstructor: {
-            new (): T;
+            new(): T;
         }): T;
         /**
          * - A unique identification number assigned to the object.
@@ -3357,17 +3357,17 @@ declare namespace dragonBones {
          * @language zh_CN
          */
         getSlots(): Array<Slot>;
-		/**
-		 * - single armature fps.
-		 * @version DragonBones 5.5
-		 * @language en_US
-		 */
-		/**
-		 * - 骨骼的独立的fps
-		 * @version DragonBones 5.5
-		 * @language zh_CN
-		 */
-		fps: number;
+        /**
+         * - Whether to flip the armature horizontally.
+         * @version DragonBones 5.5
+         * @language en_US
+         */
+        /**
+         * - 是否将骨架水平翻转。
+         * @version DragonBones 5.5
+         * @language zh_CN
+         */
+        fps: number;
         /**
          * - Whether to flip the armature horizontally.
          * @version DragonBones 5.5

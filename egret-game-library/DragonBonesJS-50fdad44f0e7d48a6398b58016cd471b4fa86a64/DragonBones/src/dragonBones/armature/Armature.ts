@@ -69,6 +69,8 @@ namespace dragonBones {
         private _lockUpdate: boolean;
         private _slotsDirty: boolean;
         private _zOrderDirty: boolean;
+        private _timeInterval: number = 0;
+        private _countInterval: number = 0;
         private _flipX: boolean;
         private _flipY: boolean;
         /**
@@ -103,7 +105,7 @@ namespace dragonBones {
          * @internal
          */
         public _parent: Slot | null;
-        
+
         protected _onClear(): void {
             if (this._clock !== null) { // Remove clock first.
                 this._clock.remove(this);
@@ -159,6 +161,8 @@ namespace dragonBones {
             this._dragonBones = null as any; //
             this._clock = null;
             this._parent = null;
+            this._timeInterval = 0;
+            this._countInterval = 0;
         }
         /**
          * @internal
@@ -273,6 +277,15 @@ namespace dragonBones {
          * @inheritDoc
          */
         public advanceTime(passedTime: number): void {
+            if (this._timeInterval) {
+                this._countInterval += passedTime * 1000;
+                if (this._countInterval < this._timeInterval) {
+                    return;
+                }
+                passedTime = (this._countInterval - this._countInterval % this._timeInterval) / 1000;
+                this._countInterval %= this._timeInterval;
+            }
+
             if (this._lockUpdate) {
                 return;
             }
@@ -321,8 +334,8 @@ namespace dragonBones {
                                 const childArmature = action.slot.childArmature;
                                 if (childArmature !== null) {
                                     childArmature.animation.fadeIn(actionData.name);
-                    }
-                }
+                                }
+                            }
                             else if (action.bone !== null) {
                                 for (const slot of this.getSlots()) {
                                     if (slot.parent === action.bone) {
@@ -654,6 +667,23 @@ namespace dragonBones {
          */
         public getSlots(): Array<Slot> {
             return this._slots;
+        }
+        /**
+         * - single armature fps.
+         * @version DragonBones 5.5
+         * @language en_US
+         */
+        /**
+         * - 骨骼的独立的fps
+         * @version DragonBones 5.5
+         * @language zh_CN
+         */
+        public set fps(value: number) {
+            this._timeInterval = value > 0 ? 1000 / value : 0;
+        }
+
+        public get fps(): number {
+            return this._timeInterval ? Math.round(1000 / this._timeInterval) : 0;
         }
         /**
          * - Whether to flip the armature horizontally.
