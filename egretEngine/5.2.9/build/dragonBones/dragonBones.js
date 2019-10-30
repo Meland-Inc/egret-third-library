@@ -3608,6 +3608,8 @@ var dragonBones;
         __extends(Armature, _super);
         function Armature() {
             var _this = _super !== null && _super.apply(this, arguments) || this;
+            _this._timeInterval = 0;
+            _this._countInterval = 0;
             _this._bones = [];
             _this._slots = [];
             /**
@@ -3680,6 +3682,8 @@ var dragonBones;
             this._dragonBones = null; //
             this._clock = null;
             this._parent = null;
+            this._timeInterval = 0;
+            this._countInterval = 0;
         };
         /**
          * @internal
@@ -3786,6 +3790,14 @@ var dragonBones;
          * @inheritDoc
          */
         Armature.prototype.advanceTime = function (passedTime) {
+            if (this._timeInterval) {
+                this._countInterval += passedTime;
+                if (this._countInterval < this._timeInterval) {
+                    return;
+                }
+                passedTime = this._countInterval - this._countInterval % this._timeInterval;
+                this._countInterval %= this._timeInterval;
+            }
             if (this._lockUpdate) {
                 return;
             }
@@ -4149,6 +4161,26 @@ var dragonBones;
         Armature.prototype.getSlots = function () {
             return this._slots;
         };
+        Object.defineProperty(Armature.prototype, "fps", {
+            get: function () {
+                return this._timeInterval ? Math.round(1 / this._timeInterval) : 0;
+            },
+            /**
+             * - single armature fps.
+             * @version DragonBones 5.5
+             * @language en_US
+             */
+            /**
+             * - 骨骼的独立的fps
+             * @version DragonBones 5.5
+             * @language zh_CN
+             */
+            set: function (value) {
+                this._timeInterval = value > 0 ? 1 / value : 0;
+            },
+            enumerable: true,
+            configurable: true
+        });
         Object.defineProperty(Armature.prototype, "flipX", {
             /**
              * - Whether to flip the armature horizontally.
