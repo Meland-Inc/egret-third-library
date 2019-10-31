@@ -9,7 +9,7 @@
       <relation target="" sidePair="height-height,top-top"/>
       <relation target="" sidePair="right-right,left-left"/>
     </component>
-    <component id="n54_s1sd" name="btnSave" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="119,582" size="106,36">
+    <component id="n54_s1sd" name="btnSave" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="188,582" size="106,36">
       <gearDisplay controller="ctrlCombine" pages="0"/>
       <relation target="" sidePair="bottom-bottom,center-center"/>
       <Button title="保存" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
@@ -28,6 +28,11 @@
       <gearDisplay controller="ctrlCombine" pages="1"/>
       <relation target="" sidePair="bottom-bottom,center-center"/>
       <Button title="确定" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
+    </component>
+    <component id="n64_o1qm" name="btnExit" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="47,582" size="106,36">
+      <gearDisplay controller="ctrlCombine" pages="0"/>
+      <relation target="" sidePair="bottom-bottom,center-center"/>
+      <Button title="退出" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
     </component>
   </displayList>
 </component>
