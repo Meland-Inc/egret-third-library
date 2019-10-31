@@ -130,7 +130,21 @@ namespace egret {
          */
         private $frameRate: number = NaN;
 
-        private $fpsPercent: number = 0;
+        static $fpsPercent: number = 0;
+
+        /**
+         * MovieClip
+         * @version Egret 2.4
+         * @platform Web,Native
+         */
+        static get fpsPercent(): number {
+            return MovieClip.$fpsPercent;
+        }
+
+        static set fpsPercent(value: number) {
+            MovieClip.$fpsPercent = value;
+        }
+
         //Construct Function
 
         /**
@@ -502,7 +516,7 @@ namespace egret {
             let self = this;
 
             let advancedTime: number = timeStamp - self.lastTime;
-            if (self.$fpsPercent && advancedTime < self.frameIntervalTime / self.$fpsPercent) {
+            if (MovieClip.$fpsPercent && advancedTime < self.frameIntervalTime / MovieClip.$fpsPercent) {
                 return false
             }
             self.lastTime = timeStamp;
@@ -516,7 +530,7 @@ namespace egret {
                 return false;
             }
             while (num >= 1) {
-                if (self.$fpsPercent) {
+                if (MovieClip.$fpsPercent) {
                     self.$nextFrameNum += num;
                     num = 0
                 } else {
@@ -714,13 +728,6 @@ namespace egret {
             this.frameIntervalTime = 1000 / this.$frameRate;
         }
 
-        public get fpsPercent(): number {
-            return this.$fpsPercent;
-        }
-
-        public set fpsPercent(value: number) {
-            this.$fpsPercent = value;
-        }
         /**
          * MovieClip 实例当前是否正在播放
          * @version Egret 2.4

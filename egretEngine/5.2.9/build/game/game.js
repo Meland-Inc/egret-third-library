@@ -2999,7 +2999,6 @@ var egret;
              * @private
              */
             _this.$frameRate = NaN;
-            _this.$fpsPercent = 0;
             /**
              * @private
              */
@@ -3011,6 +3010,21 @@ var egret;
             }
             return _this;
         }
+        Object.defineProperty(MovieClip, "fpsPercent", {
+            /**
+             * MovieClip
+             * @version Egret 2.4
+             * @platform Web,Native
+             */
+            get: function () {
+                return MovieClip.$fpsPercent;
+            },
+            set: function (value) {
+                MovieClip.$fpsPercent = value;
+            },
+            enumerable: true,
+            configurable: true
+        });
         MovieClip.prototype.createNativeDisplayObject = function () {
             this.$nativeDisplayObject = new egret_native.NativeDisplayObject(11 /* BITMAP_TEXT */);
         };
@@ -3337,7 +3351,7 @@ var egret;
         MovieClip.prototype.advanceTime = function (timeStamp) {
             var self = this;
             var advancedTime = timeStamp - self.lastTime;
-            if (self.$fpsPercent && advancedTime < self.frameIntervalTime / self.$fpsPercent) {
+            if (MovieClip.$fpsPercent && advancedTime < self.frameIntervalTime / MovieClip.$fpsPercent) {
                 return false;
             }
             self.lastTime = timeStamp;
@@ -3349,7 +3363,7 @@ var egret;
                 return false;
             }
             while (num >= 1) {
-                if (self.$fpsPercent) {
+                if (MovieClip.$fpsPercent) {
                     self.$nextFrameNum += num;
                     num = 0;
                 }
@@ -3552,16 +3566,6 @@ var egret;
             enumerable: true,
             configurable: true
         });
-        Object.defineProperty(MovieClip.prototype, "fpsPercent", {
-            get: function () {
-                return this.$fpsPercent;
-            },
-            set: function (value) {
-                this.$fpsPercent = value;
-            },
-            enumerable: true,
-            configurable: true
-        });
         Object.defineProperty(MovieClip.prototype, "isPlaying", {
             /**
              * MovieClip 实例当前是否正在播放
@@ -3632,6 +3636,7 @@ var egret;
                 egret.ticker.$startTick(this.advanceTime, this);
             }
         };
+        MovieClip.$fpsPercent = 0;
         return MovieClip;
     }(egret.DisplayObject));
     egret.MovieClip = MovieClip;
