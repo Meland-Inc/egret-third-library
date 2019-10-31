@@ -1578,6 +1578,7 @@ declare namespace egret {
          * @private
          */
         private $frameRate;
+        private $fpsPercent;
         /**
          * 创建新的 MovieClip 实例。创建 MovieClip 之后，调用舞台上的显示对象容器的addElement方法。
          * @param movieClipData {movieClipData} 被引用的 movieClipData 对象
@@ -1774,6 +1775,7 @@ declare namespace egret {
          * @platform Web,Native
          */
         frameRate: number;
+        fpsPercent: number;
         /**
          * MovieClip 实例当前是否正在播放
          * @version Egret 2.4

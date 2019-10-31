@@ -2999,6 +2999,7 @@ var egret;
              * @private
              */
             _this.$frameRate = NaN;
+            _this.$fpsPercent = 0;
             /**
              * @private
              */
@@ -3336,17 +3337,26 @@ var egret;
         MovieClip.prototype.advanceTime = function (timeStamp) {
             var self = this;
             var advancedTime = timeStamp - self.lastTime;
+            if (self.$fpsPercent && advancedTime < self.frameIntervalTime / self.$fpsPercent) {
+                return false;
+            }
             self.lastTime = timeStamp;
             var frameIntervalTime = self.frameIntervalTime;
             var currentTime = self.passedTime + advancedTime;
             self.passedTime = currentTime % frameIntervalTime;
-            var num = currentTime / frameIntervalTime;
+            var num = Math.floor(currentTime / frameIntervalTime);
             if (num < 1) {
                 return false;
             }
             while (num >= 1) {
-                num--;
-                self.$nextFrameNum++;
+                if (self.$fpsPercent) {
+                    self.$nextFrameNum += num;
+                    num = 0;
+                }
+                else {
+                    num--;
+                    self.$nextFrameNum++;
+                }
                 if (self.$nextFrameNum > self.$totalFrames || (self.$frameLabelStart > 0 && self.$nextFrameNum > self.$frameLabelEnd)) {
                     if (self.playTimes == -1) {
                         self.$eventPool.push(egret.Event.LOOP_COMPLETE);
@@ -3538,6 +3548,16 @@ var egret;
                 }
                 this.$frameRate = value;
                 this.frameIntervalTime = 1000 / this.$frameRate;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(MovieClip.prototype, "fpsPercent", {
+            get: function () {
+                return this.$fpsPercent;
+            },
+            set: function (value) {
+                this.$fpsPercent = value;
             },
             enumerable: true,
             configurable: true
