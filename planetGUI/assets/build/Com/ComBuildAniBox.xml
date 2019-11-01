@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="320,70" designImageOffsetX="-224" designImageOffsetY="-570">
   <controller name="ctrlFold" pages="0,folded,1,unfolded" selected="0"/>
-  <controller name="ctrlSelect" pages="0,unselected,1,preselected,2,selected" selected="1"/>
+  <controller name="ctrlSelect" pages="0,unselected,1,preselected,2,selected" selected="0"/>
   <controller name="ctrlCombine" pages="0,normal,1,combine" selected="0"/>
   <displayList>
     <loader id="n0_r0y9" name="loaderBG" xy="0,0" size="300,70" url="ui://32ieekgus1sdta9" fill="scaleFree">
@@ -65,9 +65,9 @@
     <image id="n38_s1sd" name="imgIconBg" src="s1sdtae" fileName="newImg/AnimationEdit/img_cm_dh_8.png" xy="2,5" size="62,62">
       <relation target="n0_r0y9" sidePair="left-left"/>
     </image>
-    <loader id="n21_fidk" name="icon" xy="3,6" pivot="0.5,0.5" size="60,60" align="center" vAlign="middle" fill="scale">
+    <graph id="n21_fidk" name="icon" xy="3,6" pivot="0.5,0.5" size="60,60" type="rect">
       <relation target="n0_r0y9" sidePair="left-left,top-top"/>
-    </loader>
+    </graph>
     <image id="n35_s1sd" name="imgSelectedFrame" src="s1sdtaa" fileName="newImg/AnimationEdit/img_cm_dh_4.png" xy="0,0" size="300,70">
       <gearDisplay controller="ctrlSelect" pages="2"/>
       <relation target="n0_r0y9" sidePair="width-width,height-height"/>

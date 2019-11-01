@@ -3010,6 +3010,21 @@ var egret;
             }
             return _this;
         }
+        Object.defineProperty(MovieClip, "fpsPercent", {
+            /**
+             * MovieClip
+             * @version Egret 2.4
+             * @platform Web,Native
+             */
+            get: function () {
+                return MovieClip.$fpsPercent;
+            },
+            set: function (value) {
+                MovieClip.$fpsPercent = value;
+            },
+            enumerable: true,
+            configurable: true
+        });
         MovieClip.prototype.createNativeDisplayObject = function () {
             this.$nativeDisplayObject = new egret_native.NativeDisplayObject(11 /* BITMAP_TEXT */);
         };
@@ -3336,17 +3351,26 @@ var egret;
         MovieClip.prototype.advanceTime = function (timeStamp) {
             var self = this;
             var advancedTime = timeStamp - self.lastTime;
+            if (MovieClip.$fpsPercent && advancedTime < self.frameIntervalTime / MovieClip.$fpsPercent) {
+                return false;
+            }
             self.lastTime = timeStamp;
             var frameIntervalTime = self.frameIntervalTime;
             var currentTime = self.passedTime + advancedTime;
             self.passedTime = currentTime % frameIntervalTime;
-            var num = currentTime / frameIntervalTime;
+            var num = Math.floor(currentTime / frameIntervalTime);
             if (num < 1) {
                 return false;
             }
             while (num >= 1) {
-                num--;
-                self.$nextFrameNum++;
+                if (MovieClip.$fpsPercent) {
+                    self.$nextFrameNum += num;
+                    num = 0;
+                }
+                else {
+                    num--;
+                    self.$nextFrameNum++;
+                }
                 if (self.$nextFrameNum > self.$totalFrames || (self.$frameLabelStart > 0 && self.$nextFrameNum > self.$frameLabelEnd)) {
                     if (self.playTimes == -1) {
                         self.$eventPool.push(egret.Event.LOOP_COMPLETE);
@@ -3612,6 +3636,7 @@ var egret;
                 egret.ticker.$startTick(this.advanceTime, this);
             }
         };
+        MovieClip.$fpsPercent = 0;
         return MovieClip;
     }(egret.DisplayObject));
     egret.MovieClip = MovieClip;
