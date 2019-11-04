@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="226,320" opaque="false" designImage="ui://i25v0ebkhxqgb" designImageOffsetX="-637" designImageOffsetY="-210" designImageAlpha="0" designImageLayer="1">
+  <controller name="conType" pages="0,other,1,equip,2,comsumable" selected="1"/>
+  <controller name="ctrlArchPath" pages="0,show,1,hide" selected="0"/>
+  <controller name="ctrlWorkbench" pages="0,show,1,hide" selected="1"/>
+  <displayList>
+    <image id="n2_grbn" name="tipsBg" src="j21fi3w" fileName="newImg/img_cm_tips_1.png" xy="0,0" size="226,352">
+      <relation target="n38_lbex" sidePair="bottomext-bottom"/>
+    </image>
+    <loader id="n41_ue72" name="quality" xy="12,12" pivot="0.5,0.5" size="60,60" group="n44_ue72" visible="false" url="ui://te1gxawoz45zcyi99"/>
+    <loader id="n42_ue72" name="icon" xy="12,12" pivot="0.5,0.5" size="60,60" group="n44_ue72" align="center" vAlign="middle" fill="scale">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <group id="n44_ue72" name="grpItemIcon" xy="12,12" size="60,60" advanced="true"/>
+    <text id="n9_grbn" name="tfName" xy="80,16" size="140,22" fontSize="16" color="#ffffff" vAlign="middle" autoSize="none" bold="true" text="name"/>
+    <text id="n10_grbn" name="tfType" xy="80,37" size="85,18" fontSize="12" color="#f0eedc" vAlign="middle" autoSize="height" text="type"/>
+    <text id="n11_grbn" name="tfCanSell" xy="80,56" size="85,18" fontSize="12" color="#f0eedc" vAlign="middle" autoSize="none" text="不可交易"/>
+    <text id="n12_grbn" name="tfDesc" xy="16,131" size="190,19" fontSize="14" color="#ffffff" leading="5" autoSize="height" bold="true" text="我是物品描述">
+      <gearXY controller="conType" pages="0,1,2" values="16,99|16,131|16,119"/>
+    </text>
+    <text id="n32_r2k3" name="tfAttribute" xy="16,79" size="75,18" fontSize="12" color="#f0eedc" vars="true" bold="true" text="攻击力:  {value=100}">
+      <gearDisplay controller="conType" pages="1"/>
+    </text>
+    <text id="n33_r2k3" name="tfDurability" xy="16,99" size="100,18" fontSize="12" color="#f0eedc" vars="true" bold="true" text="耐久度:  {value=100}/{maxValue=100}">
+      <gearDisplay controller="conType" pages="1"/>
+    </text>
+    <text id="n34_r2k3" name="tfCD" xy="16,78" size="54,18" fontSize="12" color="#f0eedc" vars="true" text="CD:   {value=10}秒">
+      <gearDisplay controller="conType" pages="2"/>
+      <relation target="n32_r2k3" sidePair="top-bottom"/>
+    </text>
+    <text id="n35_lbex" name="tfArchMat" xy="16,156" size="85,18" group="n39_lbex" fontSize="14" color="#fbd62a" vAlign="middle" autoSize="none" bold="true" text="合成材料："/>
+    <list id="n36_lbex" name="lstArchMat" xy="16,185" size="121,102" group="n39_lbex" overflow="scroll" lineGap="5" defaultItem="ui://te1gxawolbexcyi94" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n37_lbex" name="tfWorkbench" xy="16,290" size="85,18" group="n40_lbex" fontSize="14" color="#fbb42a" vAlign="middle" autoSize="none" bold="true" text="制作需要："/>
+    <component id="n38_lbex" name="comWorkbench" src="lbexcyi97" fileName="lab/comWorkbench.xml" xy="16,312" size="126,30" group="n40_lbex"/>
+    <group id="n40_lbex" name="grpWorkbench" xy="16,290" size="126,52" group="n39_lbex" advanced="true">
+      <gearDisplay controller="ctrlWorkbench" pages="0"/>
+      <relation target="n36_lbex" sidePair="top-bottom"/>
+    </group>
+    <group id="n39_lbex" name="grpArchPath" xy="16,156" size="126,186" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlArchPath" pages="0"/>
+      <relation target="n12_grbn" sidePair="top-bottom"/>
+    </group>
+  </displayList>
+</component>
