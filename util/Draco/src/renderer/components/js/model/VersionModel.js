@@ -55,7 +55,7 @@ export class VersionModel {
     releaseList;
     patchList;
 
-    whiteList;
+    whiteList = [];
     policyObj;
     cdnUrl;
 
@@ -169,14 +169,14 @@ export class VersionModel {
     }
 
     async initVersionList() {
-        this.oldVersionList = [];
-        this.releaseList = [];
-        this.patchList = [];
-
         let localPath = Global.svnPublishPath + this.curEnviron.localPath;
         await fsExc.makeDir(localPath);
 
         let cdnDir = await fsExc.readDir(localPath);
+
+        this.oldVersionList = [];
+        this.releaseList = [];
+        this.patchList = [];
         let reg = /[A-Za-z]_*/g;
         for (const iterator of cdnDir) {
             if (iterator.indexOf("release") != -1) {
