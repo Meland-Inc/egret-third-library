@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" extention="Label" designImage="ui://i25v0ebkp3zl4y" designImageAlpha="6" designImageLayer="1">
+<component size="1136,640" extention="Label" designImage="ui://i25v0ebkp3zl4y" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlMapList" pages="0,all,1,aboutMe" selected="0">
     <action type="change_page" fromPage="" toPage="0" objectId="n12_p3zl" controller="ctrlList" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n12_p3zl" controller="ctrlList" targetPage="1"/>
@@ -26,6 +26,5 @@
       <relation target="" sidePair="width-width,height-height"/>
       <Label title="进入地图中"/>
     </component>
-    <component id="n20_p7l0" name="comSearch" src="p7l0cyigp" fileName="com/comInput.xml" pkg="te1gxawo" xy="310,18"/>
   </displayList>
 </component>
