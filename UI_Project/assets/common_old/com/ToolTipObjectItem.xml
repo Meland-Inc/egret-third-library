@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="226,330">
+  <controller name="ctrlArchPath" pages="0,show,1,hide" selected="0"/>
+  <controller name="ctrlWorkbench" pages="0,show,1,hide" selected="0"/>
+  <displayList>
+    <image id="n22_lbex" name="tipsBg" src="j21fi3w" fileName="newImg/img_cm_tips_1.png" xy="0,0" size="226,330">
+      <relation target="n34_lbex" sidePair="bottomext-bottom"/>
+    </image>
+    <loader id="n23_lbex" name="ladIcon" xy="10,10" pivot="0.5,0.5" size="64,64" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <image id="n24_lbex" name="imgIconBg" src="j21fi3v" fileName="newImg/img_cm_item_6.png" xy="10,10" size="64,64" hideByEditor="true" visible="false"/>
+    <text id="n25_lbex" name="tfName" xy="80,16" size="140,22" fontSize="16" color="#ffffff" vAlign="middle" autoSize="none" bold="true" text="name"/>
+    <text id="n26_lbex" name="tfType" xy="80,37" size="85,18" fontSize="12" color="#f0eedc" vAlign="middle" autoSize="height" text="type"/>
+    <text id="n27_lbex" name="tfCanSell" xy="80,56" size="85,18" fontSize="12" color="#f0eedc" vAlign="middle" autoSize="none" text="不可交易"/>
+    <text id="n28_lbex" name="tfDesc" xy="16,99" size="190,19" fontSize="14" color="#ffffff" leading="5" autoSize="height" bold="true" text="我是物品描述"/>
+    <text id="n29_lbex" name="tfArchMat" xy="16,133" size="85,18" group="n34_lbex" fontSize="14" color="#fbd62a" vAlign="middle" autoSize="none" bold="true" text="合成材料："/>
+    <list id="n30_lbex" name="lstArchMat" xy="16,162" size="121,102" group="n34_lbex" overflow="scroll" lineGap="5" defaultItem="ui://te1gxawolbexcyi94" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n31_lbex" name="tfWorkbench" xy="16,267" size="85,18" group="n33_lbex" fontSize="14" color="#fbb42a" vAlign="middle" autoSize="none" bold="true" text="制作需要："/>
+    <component id="n32_lbex" name="comWorkbench" src="lbexcyi97" fileName="lab/comWorkbench.xml" xy="16,289" size="126,30" group="n33_lbex"/>
+    <group id="n33_lbex" name="grpWorkbench" xy="16,267" size="126,52" group="n34_lbex" advanced="true">
+      <gearDisplay controller="ctrlWorkbench" pages="0"/>
+      <relation target="n30_lbex" sidePair="top-bottom"/>
+    </group>
+    <group id="n34_lbex" name="grpArchPath" xy="16,133" size="126,186" advanced="true">
+      <gearDisplay controller="ctrlArchPath" pages="0"/>
+      <relation target="n28_lbex" sidePair="top-bottom"/>
+    </group>
+  </displayList>
+  <relation target="n28_lbex" sidePair="bottomext-bottom"/>
+</component>

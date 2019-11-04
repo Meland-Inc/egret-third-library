@@ -16,14 +16,12 @@ const indieResSuffix = 'resource/indie.res.json';
 const assetsSfx = "assets";
 const asyncSfx = "async";
 const indieSfx = "indie";
-const loaderSfx = "loader";
 
 const assets_suffix_path = '/resource/assets';
 const async_suffix_path = '/resource/async';
 const indie_suffix_path = '/resource/indie';
-const loader_suffix_path = '/resource/loader';
 
-const assetSfxValues = [assetsSfx, asyncSfx, indieSfx, loaderSfx];
+const assetSfxValues = [assetsSfx, asyncSfx, indieSfx];
 
 export async function updateGit() {
     let gitBranch = ModelMgr.versionModel.curEnviron.gitBranch;
@@ -36,6 +34,21 @@ export async function updateGit() {
 
         let pullCmdStr = `git pull`;
         await spawnExc.runCmd(pullCmdStr, Global.projPath, null, '推送分支错误');
+
+
+        if (ModelMgr.versionModel.curEnviron.codeVersionEnable) {
+            let configPath = `${Global.projPath}/src/GameConfig.ts`;
+            let configContent = await fsExc.readFile(configPath);
+            configContent = configContent.replace(`public static codeVersion = "";`, `public static codeVersion = "${ModelMgr.versionModel.releaseVersion}";`);
+            await fsExc.writeFile(configPath, configContent);
+        }
+
+        if (ModelMgr.versionModel.versionDesc) {
+            let indexPath = `${Global.projPath}/bin-release/web/${releaseVersion}/index.html`;
+            let indexContent = await fsExc.readFile(indexPath);
+            indexContent = indexContent.replace("//window.location.href", `window.location.hash='publisher="${ModelMgr.versionModel.publisher}"&versionDesc="${ModelMgr.versionModel.versionDesc}"'`);
+            await fsExc.writeFile(indexPath, indexContent);
+        }
 
         Global.toast('更新git成功');
     } catch (error) {
@@ -61,6 +74,13 @@ export async function publishProject() {
         let cmdStr = 'egret publish --version ' + releaseVersion;
         await spawnExc.runCmd(cmdStr, Global.projPath, null, '发布当前项目错误');
         ModelMgr.versionModel.setNewVersion(releaseVersion);
+
+        if (ModelMgr.versionModel.versionDesc) {
+            let indexPath = `${Global.projPath}/bin-release/web/${releaseVersion}/index.html`;
+            let indexContent = await fsExc.readFile(indexPath);
+            indexContent = indexContent.replace("//window.location.href", `window.location.hash='publisher="${ModelMgr.versionModel.publisher}"&versionDesc="${ModelMgr.versionModel.versionDesc}"'`);
+            await fsExc.writeFile(indexPath, indexContent);
+        }
         Global.toast('发布当前项目成功');
     } catch (error) {
         Global.snack('发布当前项目错误', error);
@@ -185,11 +205,6 @@ async function mergeSingleVersion(newVersion, oldVersion, isRelease) {
             await fsExc.makeDir(svnRlsPath + '/resource');
         }
         await fsExc.makeDir(svnPatchPath + '/resource');
-
-        if (svnRlsPath) {
-            await folderCopyFile(projNewVersionPath + '/resource/loader', svnRlsPath + '/resource/loader');
-        }
-        await folderCopyFile(projNewVersionPath + '/resource/loader', svnPatchPath + '/resource/loader');
 
         //不存在旧版本,所有的都用最新的版本
         if (!oldVersion) {
@@ -603,7 +618,6 @@ export async function clearResource(releasePath) {
     let assetsPath = releasePath + assets_suffix_path;
     let asyncPath = releasePath + async_suffix_path;
     let indiePath = releasePath + indie_suffix_path;
-    let loaderPath = releasePath + loader_suffix_path;
     try {
         for (const iterator of assetSfxValues) {
             switch (iterator) {
@@ -615,9 +629,6 @@ export async function clearResource(releasePath) {
                     break;
                 case indieSfx:
                     await fsExc.delFiles(indiePath);
-                    break;
-                case loaderSfx:
-                    await fsExc.delFiles(loaderPath);
                     break;
             }
         }
@@ -631,12 +642,10 @@ export async function copyResource(releasePath) {
     let compressAssetsPath = Global.compressResourcePath + '/' + assetsSfx;
     let compressAsyncPath = Global.compressResourcePath + '/' + asyncSfx;
     let compressIndiePath = Global.compressResourcePath + '/' + indieSfx;
-    let compressLoaderPath = Global.compressResourcePath + '/' + loaderSfx;
 
     let assetsPath = releasePath + assets_suffix_path;
     let asyncPath = releasePath + async_suffix_path;
     let indiePath = releasePath + indie_suffix_path;
-    let loaderPath = releasePath + loader_suffix_path;
     try {
         for (const iterator of assetSfxValues) {
             switch (iterator) {
@@ -651,10 +660,6 @@ export async function copyResource(releasePath) {
                 case indieSfx:
                     await fsExc.makeDir(indiePath);
                     await fsExc.copyFile(compressIndiePath, indiePath, true);
-                    break;
-                case loaderSfx:
-                    await fsExc.makeDir(loaderPath);
-                    await fsExc.copyFile(compressLoaderPath, loaderPath, true);
                     break;
             }
         }

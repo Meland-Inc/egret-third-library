@@ -1,13 +1,20 @@
 import { ipcRenderer } from 'electron';
+import { ModelMgr } from "./model/ModelMgr";
 
 export class Global {
-    static currentVersion = "1.9.5 beta4";
+    static currentVersion = "1.9.5 beta5";
     static projPath = localStorage.getItem('client_project_path');
     static projPath = localStorage.getItem('client_project_path');
     static protoPath = localStorage.getItem('client_proto_path');
     static svnPath = localStorage.getItem('client_svn_path');
     static clientPath = localStorage.getItem('client_client_path');
     static author = localStorage.getItem("client_author");
+
+    static eMode = {
+        develop: "develop",
+        product: "product",
+        publish: "publish"
+    }
 
     static _mode;
     static setMode(value) {
@@ -34,17 +41,24 @@ export class Global {
         {
             name: "develop", title: "开发模式", icon: "airplanemode_active",
             protoEnable: true, csvEnable: true, textureEnable: true, mapDataEnable: false, assetEnable: true,
-            versionEnable: true, lessonEnable: true, appEnable: true
+            egretEnable: false, versionEnable: true, lessonEnable: false, appEnable: false,
+            textureGitEnable: false,
+            environNames: [ModelMgr.versionModel.eEnviron.alpha]
         },
         {
             name: "product", title: "产品模式", icon: "drive_eta",
             protoEnable: false, csvEnable: true, textureEnable: true, mapDataEnable: false, assetEnable: false,
-            versionEnable: false, lessonEnable: false, appEnable: false
+            egretEnable: true, versionEnable: false, lessonEnable: false, appEnable: false,
+            textureGitEnable: true,
+            environNames: [ModelMgr.versionModel.eEnviron.alpha]
+
         },
         {
             name: "publish", title: "发布模式", icon: "accessible",
             protoEnable: false, csvEnable: false, textureEnable: false, mapDataEnable: false, assetEnable: false,
-            versionEnable: true, lessonEnable: true, appEnable: false
+            egretEnable: false, versionEnable: true, lessonEnable: true, appEnable: false,
+            textureGitEnable: false,
+            environNames: [ModelMgr.versionModel.eEnviron.beta, ModelMgr.versionModel.eEnviron.ready, ModelMgr.versionModel.eEnviron.release]
         }
     ]
 

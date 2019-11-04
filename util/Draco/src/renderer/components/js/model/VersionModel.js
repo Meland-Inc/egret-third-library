@@ -17,24 +17,28 @@ export class VersionModel {
             zipPath: "/alpha/zip", scpRootPath: "/web", scpPath: "/web/alpha", localPath: "/alpha/web", localPolicyPath: "/alpha/policy",
             updateGitEnable: false, gitBranch: "",
             publishEnable: true, mergeVersionEnable: false, compressPicEnable: false, zipFileEnable: true, policyEnable: false, cdnEnable: false,
+            publishDescEnable: true, codeVersionEnable: false,
         },
         {
             name: this.eEnviron.beta, host: "47.107.73.43", user: "ftpadmin", password: "unclemiao",
             zipPath: "/beta/zip", scpRootPath: "/web", scpPath: "/web/beta", localPath: "/beta/web", localPolicyPath: "/beta/policy",
             updateGitEnable: true, gitBranch: "trunk/beta",
-            publishEnable: true, mergeVersionEnable: true, compressPicEnable: true, zipFileEnable: true, policyEnable: true, cdnEnable: false
+            publishEnable: true, mergeVersionEnable: true, compressPicEnable: true, zipFileEnable: true, policyEnable: true, cdnEnable: false,
+            publishDescEnable: false, codeVersionEnable: true,
         },
         {
             name: this.eEnviron.ready, host: "47.107.73.43", user: "ftpadmin", password: "unclemiao",
             zipPath: "/ready/zip", scpRootPath: "/web", scpPath: "/web/ready", localPath: "/ready/web", localPolicyPath: "/ready/policy",
             updateGitEnable: true, gitBranch: "trunk/release",
-            publishEnable: true, mergeVersionEnable: true, compressPicEnable: true, zipFileEnable: true, policyEnable: true, cdnEnable: false
+            publishEnable: true, mergeVersionEnable: true, compressPicEnable: true, zipFileEnable: true, policyEnable: true, cdnEnable: false,
+            publishDescEnable: false, codeVersionEnable: true,
         },
         {
             name: this.eEnviron.release, host: "bg-stage.wkcoding.com", user: "ftpadmin", password: "unclemiao",
             zipPath: "/ready/zip", scpRootPath: "", scpPath: "", localPath: "/ready/web", localPolicyPath: "/release/policy",
             updateGitEnable: false, gitBranch: "",
-            publishEnable: false, mergeVersionEnable: true, compressPicEnable: true, zipFileEnable: false, policyEnable: true, cdnEnable: true
+            publishEnable: false, mergeVersionEnable: true, compressPicEnable: true, zipFileEnable: false, policyEnable: true, cdnEnable: true,
+            publishDescEnable: false, codeVersionEnable: false,
         },
     ];
 
@@ -51,9 +55,14 @@ export class VersionModel {
     releaseList;
     patchList;
 
-    whiteList;
+    whiteList = [];
     policyObj;
     cdnUrl;
+
+    //发布者
+    publisher;
+    //发布描述 只有alpha才有
+    versionDesc;
 
     /** 当前发布环境 */
     curEnviron;
@@ -154,18 +163,20 @@ export class VersionModel {
     }
 
     initEnviron() {
-        this.curEnviron = this.environList[0];
+        if (Global.mode.environNames.length > 0) {
+            this.curEnviron = this.environList.find(value => value.name === Global.mode.environNames[0]);
+        }
     }
 
     async initVersionList() {
-        this.oldVersionList = [];
-        this.releaseList = [];
-        this.patchList = [];
-
         let localPath = Global.svnPublishPath + this.curEnviron.localPath;
         await fsExc.makeDir(localPath);
 
         let cdnDir = await fsExc.readDir(localPath);
+
+        this.oldVersionList = [];
+        this.releaseList = [];
+        this.patchList = [];
         let reg = /[A-Za-z]_*/g;
         for (const iterator of cdnDir) {
             if (iterator.indexOf("release") != -1) {

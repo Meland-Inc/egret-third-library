@@ -82,12 +82,12 @@ export function runCmd(cmd, cwd, successMsg, errorMsg) {
         let process = exec(cmd, { cwd: cwd }, (error) => {
             if (error) {
                 Global.snack(errorMsg, error, false);
-                reject();
+                reject(process);
             } else {
                 if (successMsg) {
                     Global.toast(successMsg);
                 }
-                resolve();
+                resolve(process);
             }
         });
 

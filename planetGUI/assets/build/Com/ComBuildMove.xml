@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="84,640" opaque="false" designImage="ui://i25v0ebkjnb25p" designImageOffsetX="-1052">
+<component size="54,640" designImage="ui://i25v0ebkjnb25p" designImageOffsetX="-1052" designImageAlpha="0">
   <controller name="ctrlEnable" pages="0,enable,1,disable,2,multienable" selected="0"/>
   <displayList>
-    <image id="n0_jm8l" name="n0" src="cw9mcyifj" fileName="imgB/img_cm_cbl_1.png" pkg="te1gxawo" xy="30,0" size="54,640">
+    <image id="n0_jm8l" name="n0" src="cw9mcyifj" fileName="imgB/img_cm_cbl_1.png" pkg="te1gxawo" xy="0,0" size="54,640">
       <relation target="" sidePair="height-height"/>
     </image>
-    <image id="n1_jm8l" name="n1" src="7sltcyifx" fileName="imgB/img_cm_lk_1.png" pkg="te1gxawo" xy="1,571">
+    <image id="n1_jm8l" name="n1" src="7sltcyifx" fileName="imgB/img_cm_lk_1.png" pkg="te1gxawo" xy="-29,571">
       <relation target="" sidePair="bottom-bottom"/>
     </image>
-    <component id="n2_jm8l" name="btnRun" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="7,580" size="55,57">
+    <component id="n2_jm8l" name="btnRun" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="-23,580" size="55,57">
       <relation target="" sidePair="bottom-bottom"/>
       <Button icon="ui://te1gxawocw9mcyifb" page="0"/>
     </component>
-    <component id="n3_jm8l" name="btnMirror" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="36,10" size="42,42">
+    <component id="n3_jm8l" name="btnMirror" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="6,10" size="42,42">
       <gearLook controller="ctrlEnable" pages="1,2" values="1,0,1,0|1,0,1,0" default="1,0,0,1"/>
       <Button title="旋转" titleFontSize="14" icon="ui://32ieekguzefit8w"/>
     </component>
-    <component id="n4_jm8l" name="btnCopy" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="36,60" size="42,42">
+    <component id="n4_jm8l" name="btnCopy" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="6,60" size="42,42">
       <gearLook controller="ctrlEnable" pages="1" values="1,0,1,0" default="1,0,0,1"/>
       <Button title="复制" titleFontSize="14" icon="ui://32ieekguzefit8x"/>
     </component>
-    <component id="n5_jm8l" name="btnDelete" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="36,110" size="42,42">
+    <component id="n5_jm8l" name="btnDelete" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="6,110" size="42,42">
       <gearLook controller="ctrlEnable" pages="1" values="1,0,1,0" default="1,0,0,1"/>
       <Button title="删除" titleFontSize="14" icon="ui://32ieekguzefit8u"/>
     </component>
-    <component id="n6_si0u" name="btnCancel" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="36,160" size="42,42">
+    <component id="n6_si0u" name="btnCancel" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="6,160" size="42,42">
       <gearLook controller="ctrlEnable" pages="0,2" values="1,0,0,1|1,0,0,1" default="1,0,1,0"/>
       <Button title="取消" titleFontSize="14" icon="ui://32ieekguzefit8v"/>
     </component>

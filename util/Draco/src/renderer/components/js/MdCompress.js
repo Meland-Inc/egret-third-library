@@ -180,7 +180,7 @@ export async function compareFile() {
     //     Global.snack(`压缩 ${fromPath} 到 ${targetPath} 错误`, error);
     // }
 
-    let folders = ["/assets", "/async", "/indie", "/loader"];
+    let folders = ["/assets", "/async", "/indie"];
     for (const iterator of folders) {
         let fromPath = Global.resourcePath + iterator;
         let targetPath = Global.originalPicPath + iterator;
