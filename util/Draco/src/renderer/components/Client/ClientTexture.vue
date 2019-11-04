@@ -7,6 +7,7 @@
           data-mu-loading-size="24"
           color="pink500"
           @click="updateGit"
+          v-show="gitEnable"
         >更新git文件</mu-button>
         <mu-button
           v-loading="isUpdateSvnLoading"
@@ -50,12 +51,6 @@
           color="red500"
           @click="importDefault"
         >导入default配置</mu-button>
-        <mu-button
-          v-loading="isPullGitLoading"
-          data-mu-loading-size="24"
-          color="red500"
-          @click="pushGit"
-        >推送Git文件</mu-button>
       </div>
       <div class="button-wrapper">
         <mu-button full-width color="red500" @click="oneForAll">One·for·All</mu-button>
@@ -123,12 +118,12 @@ export default {
       isPackerTextureLoading: false,
       isCopyTextureOutLoading: false,
       isImportDefaultLoading: false,
-      isPullGitLoading: false,
 
       sheetMode: mdTexture.getSheetMode(),
       checkBoxValues: mdTexture.getCheckBoxValues(),
       checkBoxData: mdTexture.getCheckBoxData(),
-      checkAll: true
+      checkAll: true,
+      gitEnable: false
     };
   },
   watch: {
@@ -244,54 +239,43 @@ export default {
         Global.hideRegionLoading();
       }
     },
-    async pushGit() {
-      this.isPullGitLoading = true;
-      Global.showRegionLoading();
-      try {
-        await mdTexture.pushGit();
-        this.isPullGitLoading = false;
-        Global.hideRegionLoading();
-      } catch (error) {
-        this.isPullGitLoading = false;
-        Global.hideRegionLoading();
-      }
-    },
     async oneForAll() {
       Global.showLoading();
-      let promiseList = [
-        this.updateGit,
-        this.updateSvn,
-        this.clearTexture,
-        this.copyTextureIn,
-        this.clipTexture,
-        this.packerTexture,
-        this.copyTextureOut,
-        this.importDefault,
-        this.pushGit
-      ];
-      try {
-        // await Promise.all(promiseList);
-        for (const iterator of promiseList) {
-          let success = true;
-          await iterator().catch(reason => {
-            success = false;
-            Global.snack(reason);
-          });
-
-          if (!success) {
-            return;
-          }
-        }
-
-        Global.hideLoading();
-        Global.dialog("One·for·All Success");
-      } catch (error) {
-        Global.hideLoading();
-        Global.snack("One·for·All Error", error);
+      let promiseList = [];
+      if (this.gitEnable) {
+        promiseList.push(this.updateGit);
       }
+      promiseList.push(this.updateSvn);
+      promiseList.push(this.clearTexture);
+      promiseList.push(this.copyTextureIn);
+      promiseList.push(this.clipTexture);
+      promiseList.push(this.packerTexture);
+      promiseList.push(this.copyTextureOut);
+      promiseList.push(this.importDefault);
+
+      for (const iterator of promiseList) {
+        let success = true;
+        let error = "";
+        await iterator().catch(reason => {
+          success = false;
+          error = reason;
+          Global.snack(reason);
+        });
+
+        if (!success) {
+          Global.hideLoading();
+          Global.snack("One·for·All Error", error);
+          return;
+        }
+      }
+
+      Global.hideLoading();
+      Global.dialog("One·for·All Success");
     }
   },
-  mounted() {}
+  mounted() {
+    this.gitEnable = Global.mode.textureGitEnable;
+  }
 };
 </script>
 

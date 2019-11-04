@@ -436,3 +436,23 @@ export async function applyLessonPolicyNum(isTest) {
 export function checkPolicyNum() {
     return ExternalUtil.getPolicyInfo(ModelMgr.versionModel.curEnviron.name);
 }
+
+export async function pushGit() {
+    try {
+        let addCmdStr = `git add ."`;
+        await spawnExc.runCmd(addCmdStr, Global.projPath, null, '添加文件错误');
+
+        let commitCmdStr = `git commit -a -m "${ModelMgr.versionModel.publisher} 发布版本 ${ModelMgr.versionModel.releaseVersion}"`;
+        await spawnExc.runCmd(commitCmdStr, Global.projPath, null, '提交文件错误');
+
+        let pullCmdStr = `git pull`;
+        await spawnExc.runCmd(pullCmdStr, Global.projPath, null, '拉取分支错误');
+
+        let pushCmdStr = `git push`;
+        await spawnExc.runCmd(pushCmdStr, Global.projPath, null, '推送分支错误');
+
+        Global.toast('推送git成功');
+    } catch (error) {
+        Global.snack('推送git错误', error);
+    }
+}
