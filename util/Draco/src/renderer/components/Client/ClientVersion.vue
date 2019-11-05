@@ -530,12 +530,12 @@ export default {
       Global.showRegionLoading();
       try {
         await mdPublish.publishProject();
+        await this.refreshVersionList();
         this.isPublishProjectLoading = false;
         Global.hideRegionLoading();
         if (showDialog) {
           Global.dialog("发布当前项目成功");
         }
-        await this.refreshVersionList();
       } catch (error) {
         this.isPublishProjectLoading = false;
         Global.hideRegionLoading();
@@ -566,12 +566,12 @@ export default {
       await mdPublish
         .mergeVersion()
         .then(async value => {
+          await this.refreshVersionList();
           this.isMergeVersionLoading = false;
           Global.hideRegionLoading();
           if (showDialog) {
             Global.dialog("比较新旧成功");
           }
-          await this.refreshVersionList();
         })
         .catch(reason => {
           this.isMergeVersionLoading = false;
@@ -716,12 +716,19 @@ export default {
             promiseList.push(mdCompress.compressFile);
           }
           promiseList.push(mdPublish.publishProject);
+
+          //发布完项目后要刷新版本列表
+          promiseList.push(this.refreshVersionList);
+
           if (this.needCompress) {
             promiseList.push(mdPublish.copyPictures);
           }
           if (this.curEnviron.mergeVersionEnable) {
             promiseList.push(mdPublish.mergeVersion);
           }
+
+          //比较完项目后要刷新版本列表
+          promiseList.push(this.refreshVersionList);
         }
 
         if (this.curEnviron.zipFileEnable) {
