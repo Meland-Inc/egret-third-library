@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="80,40" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="1"/>
+  <displayList>
+    <image id="n0_r0y9" name="n0" src="r0y9t6z" fileName="img_UI3/b/ide/img_ide_lx_7.png" xy="0,0">
+      <gearDisplay controller="button" pages="1"/>
+    </image>
+    <text id="n1_r0y9" name="title" xy="28,12" size="50,20" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="生物"/>
+    <loader id="n2_r0y9" name="icon" xy="12,12" size="16,18" url="ui://32ieekgur0y9t6b" autoSize="true"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

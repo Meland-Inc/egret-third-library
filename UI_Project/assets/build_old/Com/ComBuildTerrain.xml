@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="360,640" opaque="false" designImage="ui://i25v0ebkm5hn5v" designImageOffsetX="-1049" designImageAlpha="0">
+  <controller name="ctrlState" exported="true" pages="1,open,0,fold" selected="0"/>
+  <controller name="ctrlMode" pages="0,brush,1,shovel,2,replace,3,select" selected="0">
+    <action type="change_page" fromPage="" toPage="1,3" controller="ctrlState" targetPage="0"/>
+    <action type="change_page" fromPage="" toPage="0,2" controller="ctrlState" targetPage="1"/>
+  </controller>
+  <displayList>
+    <graph id="n19_n83g" name="n19" xy="0,0" size="360,640" visible="false" alpha="0" touchable="false" type="rect">
+      <gearXY controller="ctrlState" pages="1,0" values="0,0|-1,0"/>
+      <gearSize controller="ctrlState" pages="1,0" values="360,640,1,1|56,640,1,1"/>
+    </graph>
+    <image id="n0_7slt" name="n0" src="nl0rcyic7" fileName="imgB/bg_cm_1.png" pkg="te1gxawo" xy="55,0" size="305,640" group="n16_jm8l">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <list id="n4_7slt" name="lstBackpack" xy="67,9" size="284,630" group="n16_jm8l" layout="flow_hz" overflow="scroll" scrollBar="visible" scrollBarMargin="5,5,0,0" scrollBarRes="ui://te1gxawovulycyid4," lineGap="12" colGap="11" defaultItem="ui://32ieekgur0y9t7k" autoClearItems="true">
+      <relation target="" sidePair="height-height"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n16_jm8l" name="grpBp" xy="55,0" size="305,640" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlState" pages="1"/>
+    </group>
+    <image id="n1_7slt" name="n1" src="cw9mcyifj" fileName="imgB/img_cm_cbl_1.png" pkg="te1gxawo" xy="0,0" size="55,640" group="n17_jm8l">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <image id="n12_7slt" name="n12" src="7sltcyifx" fileName="imgB/img_cm_lk_1.png" pkg="te1gxawo" xy="-31,571" group="n17_jm8l">
+      <relation target="" sidePair="bottom-bottom"/>
+    </image>
+    <component id="n8_7slt" name="btnRun" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="-22,580" size="55,57" group="n17_jm8l">
+      <relation target="" sidePair="bottom-bottom"/>
+      <Button icon="ui://te1gxawocw9mcyifb" page="0"/>
+    </component>
+    <list id="n22_m5hn" name="lstTerrain" xy="4,47" size="45,198" group="n17_jm8l" lineGap="5" defaultItem="ui://32ieekgum5hnt9m">
+      <item title="刷子" icon="ui://32ieekgum5hnt9e" name="brush"/>
+      <item title="铲子" icon="ui://32ieekgum5hnt9d" name="shovel"/>
+      <item title="替换" icon="ui://32ieekgum5hnt9f" name="replace"/>
+      <item title="选择" icon="ui://32ieekgum5hnt9g" name="select"/>
+    </list>
+    <component id="n3_7slt" name="btnFold" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="18,11" size="20,20" group="n23_m5hn">
+      <gearDisplay controller="ctrlState" pages="1"/>
+      <Button icon="ui://te1gxawo7sltcyifz" controller="ctrlState" page="0"/>
+    </component>
+    <component id="n18_jm8l" name="btnOpen" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="18,11" size="20,20" group="n23_m5hn">
+      <gearDisplay controller="ctrlState" pages="0"/>
+      <Button icon="ui://te1gxawo7sltcyig0" controller="ctrlState" page="1"/>
+    </component>
+    <group id="n23_m5hn" name="grpFoldOpen" xy="18,11" size="20,20" group="n17_jm8l" advanced="true">
+      <gearDisplay controller="ctrlMode" pages="0,2"/>
+    </group>
+    <group id="n17_jm8l" name="grpMode" xy="-31,0" size="86,640" advanced="true" collapsed="true">
+      <gearXY controller="ctrlState" pages="1,0" values="-31,0|-31,0"/>
+    </group>
+    <component id="n24_m5hn" name="btnCopy" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="38,307" size="42,42" group="n27_m5hn">
+      <Button title="复制" titleFontSize="14" icon="ui://32ieekguzefit8x"/>
+    </component>
+    <component id="n25_m5hn" name="btnDelete" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="38,359" size="42,42" group="n27_m5hn">
+      <Button title="删除" titleFontSize="14" icon="ui://32ieekguzefit8u"/>
+    </component>
+    <image id="n26_m5hn" name="n26" src="m5hnt9i" fileName="img_UI3/b/ide/img_ide_sck_x.png" xy="39,285" group="n27_m5hn"/>
+    <group id="n27_m5hn" name="grpOperate" xy="38,285" size="43,116" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlMode" pages="3"/>
+    </group>
+  </displayList>
+  <relation target="n19_n83g" sidePair="width-width"/>
+</component>

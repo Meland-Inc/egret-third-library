@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="52,52" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <controller name="ctrlData" pages="0,none,1,item,2,narrow,3,expand" selected="0">
+    <action type="change_page" fromPage="" toPage="0" controller="button" targetPage="0"/>
+  </controller>
+  <displayList>
+    <image id="n3_ghyn" name="n3" src="r0y9t7f" fileName="img_UI3/b/ide/img_ide_wp_3.png" xy="0,0">
+      <gearDisplay controller="ctrlData" pages="0"/>
+    </image>
+    <image id="n0_wsvg" name="n0" src="nl0rcyic4" fileName="imgB/img_cm_wpk_1.png" pkg="te1gxawo" xy="0,0" size="52,52">
+      <gearDisplay controller="ctrlData" pages="1,2,3"/>
+    </image>
+    <loader id="n2_wsvg" name="icon" xy="3,3" size="46,46" align="center" vAlign="middle" fill="scale"/>
+    <image id="n4_shu1" name="n4" src="shu1cyiei" fileName="imgB/img_cm_stk_sn_1.png" pkg="te1gxawo" xy="0,35">
+      <gearDisplay controller="ctrlData" pages="2,3"/>
+    </image>
+    <text id="n5_shu1" name="tfNum" xy="0,36" size="36,16" fontSize="10" color="#ffffff" align="right" vAlign="middle" autoSize="none" autoClearText="true" text="1234">
+      <gearDisplay controller="ctrlData" pages="2"/>
+    </text>
+    <image id="n6_shu1" name="n6" src="shu1cyief" fileName="imgB/icon_cm_sq_1.png" pkg="te1gxawo" xy="38,40">
+      <gearDisplay controller="ctrlData" pages="2"/>
+    </image>
+    <image id="n7_shu1" name="n7" src="shu1cyieg" fileName="imgB/icon_cm_zk_1.png" pkg="te1gxawo" xy="38,40">
+      <gearDisplay controller="ctrlData" pages="3"/>
+    </image>
+    <image id="n1_wsvg" name="n1" src="nl0rcyic5" fileName="imgB/img_cm_wpk_2.png" pkg="te1gxawo" xy="0,0" size="52,52">
+      <gearDisplay controller="button" pages="1"/>
+    </image>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

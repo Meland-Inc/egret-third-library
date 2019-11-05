@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="320,530" margin="5,5,0,0" scrollBarRes="ui://te1gxawovulycyid4," clipSoftness="15,15" designImageOffsetX="-27" designImageOffsetY="-84" designImageAlpha="10">
+  <displayList>
+    <list id="n1_fidk" name="lstEntityAni" xy="0,0" size="320,530" overflow="scroll" scrollBar="visible" scrollBarMargin="5,5,0,0" scrollBarRes="ui://te1gxawovulycyid4," lineGap="12" colGap="11" defaultItem="ui://32ieekgufidkt9u" autoClearItems="true">
+      <relation target="" sidePair="height-height,width-width"/>
+      <item/>
+      <item controllers="ctrlBuild,0"/>
+      <item controllers="ctrlBuild,0"/>
+      <item controllers="ctrlBuild,0"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n2_nb0m" name="comTempDragAniBox" src="fidkt9u" fileName="Com/ComBuildAniBox.xml" xy="0,-72" hideByEditor="true"/>
+  </displayList>
+</component>

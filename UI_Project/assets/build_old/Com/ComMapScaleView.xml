@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="70,160">
+  <displayList>
+    <component id="n3_jj3j" name="btnMapScaleBig" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="-3,-8" size="76,88" group="n7_lxiz">
+      <Button icon="ui://32ieekgup6jr3o"/>
+    </component>
+    <component id="n4_jj3j" name="btnMapScaleSmall" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="-3,75" size="76,88" group="n7_lxiz">
+      <Button icon="ui://32ieekgup6jr3p"/>
+    </component>
+    <group id="n7_lxiz" name="Scale" xy="-3,-8" size="76,171" advanced="true">
+      <relation target="" sidePair="left-left,top-top"/>
+    </group>
+  </displayList>
+</component>
