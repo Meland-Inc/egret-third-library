@@ -253,21 +253,22 @@ export default {
       promiseList.push(this.copyTextureOut);
       promiseList.push(this.importDefault);
 
-      for (const iterator of promiseList) {
-        let success = true;
-        let error = "";
-        await iterator().catch(reason => {
-          success = false;
-          error = reason;
-          Global.snack(reason);
-        });
+      // for (const iterator of promiseList) {
+      //   let success = true;
+      //   let error = "";
+      //   await iterator().catch(reason => {
+      //     success = false;
+      //     error = reason;
+      //     Global.snack(reason);
+      //   });
 
-        if (!success) {
-          Global.hideLoading();
-          Global.snack("One·for·All Error", error);
-          return;
-        }
-      }
+      //   if (!success) {
+      //     Global.hideLoading();
+      //     Global.snack("One·for·All Error", error);
+      //     return;
+      //   }
+      // }
+      Global.executePromiseList(promiseList);
 
       Global.hideLoading();
       Global.dialog("One·for·All Success");

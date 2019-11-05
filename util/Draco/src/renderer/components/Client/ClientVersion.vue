@@ -493,14 +493,20 @@ export default {
       this.isUpdateGitLoading = true;
       Global.showRegionLoading();
 
-      try {
-        await mdPublish.updateGit();
-        this.isUpdateGitLoading = false;
-        Global.hideRegionLoading();
-      } catch (error) {
-        this.isUpdateGitLoading = false;
-        Global.hideRegionLoading();
-      }
+      await mdPublish
+        .updateGit()
+        .then(() => {
+          this.isUpdateGitLoading = false;
+          Global.hideRegionLoading();
+        })
+        .catch(() => {
+          this.isUpdateGitLoading = false;
+          Global.hideRegionLoading();
+        });
+      // try {
+      //   await mdPublish.updateGit();
+      // } catch (error) {
+      // }
     },
     async onCompressPicClick(showDialog = true) {
       this.isCompressPicLoading = true;
@@ -701,45 +707,49 @@ export default {
       }
       Global.showLoading();
       try {
+        let promiseList = [];
+
         if (this.curEnviron.publishEnable) {
           if (this.curEnviron.updateGitEnable) {
-            await this.onUpdateGitClick();
+            promiseList.push(mdPublish.updateGit);
           }
           if (this.needCompress) {
-            await this.onCompressPicClick(false);
+            promiseList.push(this.onCompressPicClick);
           }
-          await this.onPublishProjectClick(false);
+          promiseList.push(mdCompress.compareFile);
           if (this.needCompress) {
-            await this.onCopyPicturesClick(false);
+            promiseList.push(mdPublish.clearAndCopyResource);
           }
           if (this.curEnviron.mergeVersionEnable) {
-            await this.onMergeVersionClick(false);
+            promiseList.push(mdPublish.mergeVersion);
           }
         }
 
         if (this.curEnviron.zipFileEnable) {
-          await this.onZipVersion();
+          promiseList.push(mdFtp.zipVersion);
         }
-        await this.onUploadVersionFile(false);
+        promiseList.push(mdFtp.uploadVersionFile);
 
         if (this.curEnviron.policyEnable) {
-          await this.onCreatePolicyFile();
-          await this.onModifyPolicyFile();
-          await this.onUploadPolicyFile();
-          await this.onApplyPolicyNum();
+          promiseList.push(mdFtp.createPolicyFile);
+          promiseList.push(mdFtp.modifyPolicyFile);
+          promiseList.push(mdFtp.uploadPolicyFile);
+          promiseList.push(mdFtp.applyPolicyNum);
         }
 
         if (this.curEnviron.codeVersionEnable) {
-          await this.pushGit();
+          promiseList.push(mdFtp.pushGit);
         }
 
-        await this.environChange();
+        promiseList.push(this.environChange);
+
+        await Global.executePromiseList(promiseList);
 
         Global.hideLoading();
         Global.dialog("One·for·All Success");
       } catch (error) {
         Global.hideLoading();
-        Global.snack("One·for·All Error:", error);
+        Global.snack("One·for·All Error:", error, false);
       }
     },
     async refreshVersionList() {

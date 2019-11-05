@@ -178,6 +178,16 @@ export class Global {
             }, this, time);
         });
     }
+
+    static async executePromiseList(promiseList) {
+        for (const iterator of promiseList) {
+            try {
+                await iterator();
+            } catch (error) {
+                Global.snack("", error);
+            }
+        }
+    }
 }
 
 ipcRenderer.on('selected_client_project_path', (event, path) => {

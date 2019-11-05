@@ -10,6 +10,7 @@ import * as url from 'url';
 import { ModelMgr } from "./model/ModelMgr";
 import * as qiniu from "qiniu";
 import * as ExternalUtil from "./ExternalUtil";
+import * as spawnExc from "./SpawnExecute.js";
 
 export const serverList = [
     { name: "long", host: "47.107.73.43", user: "ftpadmin", password: "unclemiao", path: "/web/feature/long" },
