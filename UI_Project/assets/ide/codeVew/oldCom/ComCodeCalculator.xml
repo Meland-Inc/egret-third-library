@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="412,622" designImage="ui://i25v0ebktcu23g" designImageOffsetX="-620" designImageOffsetY="-15">
+  <displayList>
+    <image id="n0_1194t" name="n0" src="lctb42" fileName="newImg2/img_code_2.png" xy="0,0" size="412,625"/>
+    <image id="n1_1194t" name="n1" src="lctb43" fileName="newImg2/img_code_4.png" xy="35,61" size="340,68"/>
+    <text id="n2_1194t" name="tfNum" xy="50,75" size="245,45" fontSize="36" color="#505563" vAlign="middle" autoSize="none" bold="true" autoClearText="true" text="237"/>
+    <component id="n3_1194t" name="btnDelete" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="288,70" size="80,50">
+      <Button icon="ui://ti9jag5tlctb44"/>
+    </component>
+    <component id="n4_1194t" name="btnNum1" src="lctb45" fileName="newBtn/btnCalculator.xml" xy="34,155" size="108,106">
+      <Button icon="ui://ti9jag5tlctb48" selectedIcon="ui://ti9jag5tlctb48"/>
+    </component>
+    <component id="n5_1194t" name="btnNum2" src="lctb45" fileName="newBtn/btnCalculator.xml" xy="151,155" size="108,106">
+      <Button icon="ui://ti9jag5tlctb49"/>
+    </component>
+    <component id="n6_1194t" name="btnNum3" src="lctb45" fileName="newBtn/btnCalculator.xml" xy="268,155" size="108,106">
+      <Button icon="ui://ti9jag5tlctb4a"/>
+    </component>
+    <component id="n7_1194t" name="btnNum4" src="lctb45" fileName="newBtn/btnCalculator.xml" xy="34,268" size="108,106">
+      <Button icon="ui://ti9jag5tlctb4b"/>
+    </component>
+    <component id="n8_1194t" name="btnNum5" src="lctb45" fileName="newBtn/btnCalculator.xml" xy="151,268" size="108,106">
+      <Button icon="ui://ti9jag5tlctb4c"/>
+    </component>
+    <component id="n9_1194t" name="btnNum6" src="lctb45" fileName="newBtn/btnCalculator.xml" xy="268,268" size="108,106">
+      <Button icon="ui://ti9jag5tlctb4d"/>
+    </component>
+    <component id="n10_1194t" name="btnNum7" src="lctb45" fileName="newBtn/btnCalculator.xml" xy="34,380" size="108,106">
+      <Button icon="ui://ti9jag5tlctb4e"/>
+    </component>
+    <component id="n11_1194t" name="btnNum8" src="lctb45" fileName="newBtn/btnCalculator.xml" xy="151,380" size="108,106">
+      <Button icon="ui://ti9jag5tlctb4f"/>
+    </component>
+    <component id="n12_1194t" name="btnNum9" src="lctb45" fileName="newBtn/btnCalculator.xml" xy="268,380" size="108,106">
+      <Button icon="ui://ti9jag5tlctb4g"/>
+    </component>
+    <component id="n13_1194t" name="btnMinus" src="lctb45" fileName="newBtn/btnCalculator.xml" xy="268,492" size="108,106">
+      <Button icon="ui://ti9jag5tlctb4h"/>
+    </component>
+    <component id="n14_1194t" name="btnNum0" src="lctb45" fileName="newBtn/btnCalculator.xml" xy="34,492" size="225,106"/>
+  </displayList>
+</component>

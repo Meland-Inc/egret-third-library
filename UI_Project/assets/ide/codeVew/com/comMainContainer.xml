@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="400,400" overflow="scroll" scroll="both" scrollBarFlags="68" scrollBar="visible" scrollBarRes="ui://rnqj1l77j7co5v,ui://rnqj1l77czortgh" bgColorEnabled="true">
+  <displayList>
+    <component id="n0_j7co" name="freeCtnr" src="s45w1b" fileName="com/FreeContainer.xml" xy="0,0" size="800,1600">
+      <relation target="" sidePair="width-width%,height-height%"/>
+    </component>
+    <component id="n4_ofjd" name="placeCtnr" src="s45w1c" fileName="com/Container.xml" xy="0,0" touchable="false">
+      <relation target="" sidePair="bottomext-bottom,rightext-right"/>
+    </component>
+  </displayList>
+</component>

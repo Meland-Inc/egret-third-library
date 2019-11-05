@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="80,80">
+  <displayList>
+    <image id="n0_ilo1" name="n0" src="lctb5c" fileName="B-PlatformImg/img_code_dh_1 (1).png" xy="0,0" visible="false"/>
+    <image id="n1_ilo1" name="n1" src="lctb5d" fileName="B-PlatformImg/img_code_dh_10(1).png" xy="0,0" visible="false"/>
+    <image id="n2_ilo1" name="n2" src="lctb5e" fileName="B-PlatformImg/img_code_dh_11(1).png" xy="0,0" visible="false"/>
+    <image id="n3_ilo1" name="n3" src="lctb5f" fileName="B-PlatformImg/img_code_dh_12(1).png" xy="0,0" visible="false"/>
+    <image id="n4_ilo1" name="n4" src="lctb5g" fileName="B-PlatformImg/img_code_dh_13(1).png" xy="0,0" visible="false"/>
+    <image id="n5_ilo1" name="n5" src="lctb5h" fileName="B-PlatformImg/img_code_dh_14(1).png" xy="0,0" visible="false"/>
+    <image id="n6_ilo1" name="n6" src="lctb5i" fileName="B-PlatformImg/img_code_dh_15(1).png" xy="0,0" visible="false"/>
+    <image id="n7_ilo1" name="n7" src="lctb5j" fileName="B-PlatformImg/img_code_dh_16(1).png" xy="0,0" visible="false"/>
+    <image id="n8_ilo1" name="n8" src="lctb5k" fileName="B-PlatformImg/img_code_dh_17(1).png" xy="0,0" visible="false"/>
+    <image id="n9_ilo1" name="n9" src="lctb5l" fileName="B-PlatformImg/img_code_dh_18(1).png" xy="0,0" visible="false"/>
+    <image id="n10_ilo1" name="n10" src="lctb5m" fileName="B-PlatformImg/img_code_dh_19(1).png" xy="0,0" visible="false"/>
+    <image id="n11_ilo1" name="n11" src="lctb5n" fileName="B-PlatformImg/img_code_dh_2(1).png" xy="0,0" visible="false"/>
+    <image id="n12_ilo1" name="n12" src="lctb5o" fileName="B-PlatformImg/img_code_dh_3(1).png" xy="0,0" visible="false"/>
+    <image id="n13_ilo1" name="n13" src="lctb5p" fileName="B-PlatformImg/img_code_dh_4(1).png" xy="0,0" visible="false"/>
+    <image id="n14_ilo1" name="n14" src="lctb5q" fileName="B-PlatformImg/img_code_dh_5(1).png" xy="0,0" visible="false"/>
+    <image id="n15_ilo1" name="n15" src="lctb5r" fileName="B-PlatformImg/img_code_dh_6(1).png" xy="0,0" visible="false"/>
+    <image id="n16_ilo1" name="n16" src="lctb5s" fileName="B-PlatformImg/img_code_dh_7(1).png" xy="0,0" visible="false"/>
+    <image id="n17_ilo1" name="n17" src="lctb5t" fileName="B-PlatformImg/img_code_dh_8(1).png" xy="0,0" visible="false"/>
+    <image id="n18_ilo1" name="n18" src="lctb5u" fileName="B-PlatformImg/img_code_dh_9(1).png" xy="0,0" visible="false"/>
+  </displayList>
+  <transition name="running" autoPlayRepeat="-1">
+    <item time="0" type="Visible" target="n0_ilo1" value="true"/>
+    <item time="0" type="Visible" target="n10_ilo1" value="false"/>
+    <item time="0" type="Visible" target="n11_ilo1" value="false"/>
+    <item time="0" type="Visible" target="n12_ilo1" value="false"/>
+    <item time="0" type="Visible" target="n13_ilo1" value="false"/>
+    <item time="0" type="Visible" target="n14_ilo1" value="false"/>
+    <item time="0" type="Visible" target="n15_ilo1" value="false"/>
+    <item time="0" type="Visible" target="n16_ilo1" value="false"/>
+    <item time="0" type="Visible" target="n17_ilo1" value="false"/>
+    <item time="0" type="Visible" target="n18_ilo1" value="false"/>
+    <item time="0" type="Visible" target="n1_ilo1" value="false"/>
+    <item time="0" type="Visible" target="n2_ilo1" value="false"/>
+    <item time="0" type="Visible" target="n3_ilo1" value="false"/>
+    <item time="0" type="Visible" target="n4_ilo1" value="false"/>
+    <item time="0" type="Visible" target="n5_ilo1" value="false"/>
+    <item time="0" type="Visible" target="n6_ilo1" value="false"/>
+    <item time="0" type="Visible" target="n7_ilo1" value="false"/>
+    <item time="0" type="Visible" target="n8_ilo1" value="false"/>
+    <item time="0" type="Visible" target="n9_ilo1" value="false"/>
+    <item time="3" type="Visible" target="n0_ilo1" value="false"/>
+    <item time="3" type="Visible" target="n11_ilo1" value="true"/>
+    <item time="6" type="Visible" target="n11_ilo1" value="false"/>
+    <item time="6" type="Visible" target="n12_ilo1" value="true"/>
+    <item time="9" type="Visible" target="n12_ilo1" value="false"/>
+    <item time="9" type="Visible" target="n13_ilo1" value="true"/>
+    <item time="12" type="Visible" target="n13_ilo1" value="false"/>
+    <item time="12" type="Visible" target="n14_ilo1" value="true"/>
+    <item time="15" type="Visible" target="n14_ilo1" value="false"/>
+    <item time="15" type="Visible" target="n15_ilo1" value="true"/>
+    <item time="18" type="Visible" target="n15_ilo1" value="false"/>
+    <item time="18" type="Visible" target="n16_ilo1" value="true"/>
+    <item time="21" type="Visible" target="n16_ilo1" value="false"/>
+    <item time="21" type="Visible" target="n17_ilo1" value="true"/>
+    <item time="24" type="Visible" target="n17_ilo1" value="false"/>
+    <item time="24" type="Visible" target="n18_ilo1" value="true"/>
+    <item time="27" type="Visible" target="n18_ilo1" value="false"/>
+    <item time="27" type="Visible" target="n1_ilo1" value="true"/>
+    <item time="30" type="Visible" target="n1_ilo1" value="false"/>
+    <item time="30" type="Visible" target="n2_ilo1" value="true"/>
+    <item time="33" type="Visible" target="n2_ilo1" value="false"/>
+    <item time="33" type="Visible" target="n3_ilo1" value="true"/>
+    <item time="36" type="Visible" target="n3_ilo1" value="false"/>
+    <item time="36" type="Visible" target="n4_ilo1" value="true"/>
+    <item time="39" type="Visible" target="n4_ilo1" value="false"/>
+    <item time="39" type="Visible" target="n5_ilo1" value="true"/>
+    <item time="42" type="Visible" target="n5_ilo1" value="false"/>
+    <item time="42" type="Visible" target="n6_ilo1" value="true"/>
+    <item time="45" type="Visible" target="n6_ilo1" value="false"/>
+    <item time="45" type="Visible" target="n7_ilo1" value="true"/>
+    <item time="45" type="Visible" target="n8_ilo1" value="true"/>
+    <item time="48" type="Visible" target="n7_ilo1" value="false"/>
+    <item time="48" type="Visible" target="n8_ilo1" value="false"/>
+    <item time="48" type="Visible" target="n9_ilo1" value="true"/>
+    <item time="51" type="Visible" target="n10_ilo1" value="true"/>
+    <item time="51" type="Visible" target="n9_ilo1" value="false"/>
+  </transition>
+</component>

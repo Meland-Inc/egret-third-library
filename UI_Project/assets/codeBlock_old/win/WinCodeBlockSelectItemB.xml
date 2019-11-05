@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" designImage="ui://i25v0ebkhlth4h" designImageAlpha="100">
+  <displayList>
+    <image id="n21_oiwy" name="imgBG" src="oiwytai" fileName="newImg2/img_code_zhezhao_10.png" pkg="rnqj1l77" xy="-164,-120" size="1465,880">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </image>
+    <image id="n0_oe8k" name="imgBG" src="oiwytal" fileName="newImg2/img_code_landi_7.png" pkg="rnqj1l77" xy="293,153" size="552,338">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n22_hlth" name="imgMainBG" src="nl0rcyicc" fileName="imgB/img_cm_bg_dk_1.png" pkg="te1gxawo" xy="405,211" size="426,269">
+      <relation target="n0_oe8k" sidePair="right-right,bottom-bottom"/>
+    </image>
+    <component id="n10_11slc" name="btnConfirm" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="718,435" size="105,35">
+      <relation target="n0_oe8k" sidePair="right-right,bottom-bottom"/>
+      <Button title="确定" titleColor="#ffffff" titleFontSize="16" icon="ui://te1gxawom3dicyidb"/>
+    </component>
+    <component id="n13_j1n2" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="793,164" size="42,43">
+      <relation target="n0_oe8k" sidePair="right-right,top-top"/>
+      <Button icon="ui://te1gxawonl0rcyica"/>
+    </component>
+    <text id="n19_oiwy" name="imgTitle" xy="403,172" size="147,42" fontSize="24" color="#ffffff" autoSize="none" bold="true" text="选择道具">
+      <relation target="n0_oe8k" sidePair="left-left,top-top"/>
+    </text>
+    <list id="n3_oe8k" name="listTab" xy="302,208" size="100,267" lineGap="3" defaultItem="ui://4o62dubdhlthl">
+      <relation target="n0_oe8k" sidePair="left-left,top-top"/>
+      <item title="玩家建筑物品"/>
+      <item title="武器"/>
+      <item title="食物"/>
+      <item title="其他"/>
+    </list>
+    <list id="n4_oe8k" name="listItem0" xy="414,219" size="620,287" scale="0.73,0.73" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="10" colGap="6" lineItemCount="6" defaultItem="ui://te1gxawoj1n2cyi8y">
+      <relation target="n0_oe8k" sidePair="right-right,top-top"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n23_c2w2" name="listItem1" xy="414,219" size="620,287" scale="0.73,0.73" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="10" colGap="6" lineItemCount="6" defaultItem="ui://te1gxawoj1n2cyi8y">
+      <relation target="n0_oe8k" sidePair="right-right,top-top"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n24_c2w2" name="listItem2" xy="414,219" size="620,287" scale="0.73,0.73" layout="flow_hz" overflow="scroll" scrollBarFlags="4" lineGap="10" colGap="6" lineItemCount="6" defaultItem="ui://te1gxawoj1n2cyi8y">
+      <relation target="n0_oe8k" sidePair="right-right,top-top"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>
