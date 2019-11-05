@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="167,66">
+  <controller name="isAlone" pages="0,true,2,false" selected="0"/>
+  <displayList>
+    <image id="n2_liab" name="imgBG" src="liabteb" fileName="newImg2/img_code_kongzhi_2-1.png" xy="0,-9">
+      <gearDisplay controller="isAlone" pages="2"/>
+      <relation target="" sidePair="width-width"/>
+    </image>
+    <image id="n3_ou0s" name="imgAloneBG" src="liabtea" fileName="newImg2/img_code_kongzhi_2.png" xy="0,-9">
+      <gearDisplay controller="isAlone" pages="0"/>
+      <relation target="" sidePair="width-width"/>
+    </image>
+    <component id="n1_kgcg" name="container" src="kesa9" fileName="com/Container.xml" xy="38,2" size="112,61" restrictSize="112,0,61,0"/>
+    <image id="n4_vavp" name="n4" src="liabtef" fileName="newImg2/img_code_kongzhi_16.png" xy="0,-42" size="34,39" restrictSize="34,34,0,0">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <image id="n5_vavp" name="n5" src="liabtef" fileName="newImg2/img_code_kongzhi_16.png" xy="0,75" size="34,39" restrictSize="34,34,0,0">
+      <relation target="" sidePair="height-height"/>
+    </image>
+  </displayList>
+  <relation target="n1_kgcg" sidePair="width-width,height-height"/>
+</component>

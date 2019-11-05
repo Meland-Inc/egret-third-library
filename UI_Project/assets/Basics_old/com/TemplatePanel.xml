@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="696,433">
+  <displayList>
+    <image id="n16_edsm" name="n16" src="efrs1k" fileName="newImg/bg_cm_1.png" pkg="te1gxawo" xy="0,0" size="694,432"/>
+    <image id="n19_f5ut" name="n19" src="efrs22" fileName="newImg/img_cm_title1.png" pkg="te1gxawo" xy="258,2">
+      <relation target="n16_edsm" sidePair="center-center"/>
+      <relation target="n2_sdqn" sidePair="width-width"/>
+    </image>
+    <text id="n2_sdqn" name="title" xy="304,6" size="85,27" fontSize="20" color="#f5ebde" align="center" vAlign="middle" singleLine="true" text="代码模版">
+      <relation target="n19_f5ut" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n15_azxf" name="container" src="azxf7i" fileName="com/CodeblockTemplateContainer.xml" xy="2,55" size="694,353"/>
+    <component id="n18_edsm" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="643,2" size="36,36">
+      <Button icon="ui://te1gxawohpymyi7o" selectedIcon="ui://te1gxawohpymyi7o"/>
+    </component>
+    <image id="n20_f5ut" name="n20" src="rx7u27" fileName="newImg/img_cm_pattern.png" pkg="te1gxawo" xy="7,413" size="680,14"/>
+  </displayList>
+</component>

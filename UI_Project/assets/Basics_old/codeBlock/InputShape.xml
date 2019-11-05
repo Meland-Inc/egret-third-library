@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="10,26" clipSoftness="5,5" extention="Button" designImageAlpha="100">
+  <displayList>
+    <component id="n8_g1zo" name="btnRemove" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="11,-13" size="50,50">
+      <relation target="" sidePair="left-right"/>
+      <Button icon="ui://rnqj1l77ptzjtaf"/>
+    </component>
+    <component id="n10_g1zo" name="btnAdd" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="60,-13" size="50,50">
+      <relation target="n8_g1zo" sidePair="left-right"/>
+      <Button icon="ui://rnqj1l77ptzjtae"/>
+    </component>
+  </displayList>
+  <Button/>
+</component>

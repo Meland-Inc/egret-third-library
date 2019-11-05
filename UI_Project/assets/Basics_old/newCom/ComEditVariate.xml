@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="400,400" designImage="ui://i25v0ebktcu23e" designImageOffsetX="-357" designImageOffsetY="19" designImageAlpha="0" adaptationTest="FitSize">
+  <controller name="selectScope" pages="0,,1," selected="0"/>
+  <controller name="ctrlEditType" pages="0,add,1,edit" selected="0"/>
+  <controller name="ctrlEditTitle" pages="0,var,1,list" selected="0"/>
+  <displayList>
+    <image id="n7_p3g7" name="img_bg" src="oiwytai" fileName="newImg2/img_code_zhezhao_10.png" xy="0,0" size="400,400">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n3_p3g7" name="btnCloseEdit" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="326,20" size="56,56">
+      <relation target="" sidePair="right-right,top-top"/>
+      <Button icon="ui://te1gxawoqouocyib8"/>
+    </component>
+    <text id="n8_p3g7" name="tfValue" xy="0,123" size="400,43" input="true" prompt="请输入变量名称" maxLength="20" fontSize="34" color="#ffffff" align="center" autoSize="none" singleLine="true" autoClearText="true" text="一二三四五一二三四五一二三四五一二三四五">
+      <relation target="" sidePair="center-center,top-top"/>
+      <relation target="" sidePair="width-width"/>
+    </text>
+    <component id="n4_p3g7" name="btnGlobal" src="x8ztab" fileName="newBtn/btnVariateScope.xml" xy="37,224" size="147,57">
+      <gearDisplay controller="ctrlEditType" pages="0"/>
+      <relation target="" sidePair="top-top,center-center"/>
+      <Button checked="true" title="全局变量" icon="ui://rnqj1l77tcu294" selectedIcon="ui://rnqj1l77tcu293" controller="selectScope" page="0"/>
+    </component>
+    <component id="n5_p3g7" name="btnLocal" src="x8ztab" fileName="newBtn/btnVariateScope.xml" xy="215,224">
+      <gearDisplay controller="ctrlEditType" pages="0"/>
+      <relation target="" sidePair="center-center,top-top"/>
+      <Button title="实体变量" icon="ui://rnqj1l77tcu294" selectedIcon="ui://rnqj1l77tcu293" controller="selectScope" page="1"/>
+    </component>
+    <component id="n9_mqhs" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="128,414" size="144,52">
+      <relation target="" sidePair="center-center,top-top"/>
+      <Button title="确定" titleColor="#ffffff" titleFontSize="28" icon="ui://te1gxawoqouocyib9"/>
+    </component>
+  </displayList>
+</component>
