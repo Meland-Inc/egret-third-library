@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="204,182">
+  <displayList>
+    <image id="n16_qfz9" name="n16" src="qfz98j" fileName="newImg/frame_codeloading_1.png" xy="0,0"/>
+    <image id="n17_qfz9" name="n17" src="qfz98s" fileName="newImg/frame_codeloading_10.png" xy="0,0"/>
+    <image id="n18_qfz9" name="n18" src="qfz98k" fileName="newImg/frame_codeloading_2.png" xy="0,0"/>
+    <image id="n19_qfz9" name="n19" src="qfz98l" fileName="newImg/frame_codeloading_3.png" xy="0,0"/>
+    <image id="n20_qfz9" name="n20" src="qfz98m" fileName="newImg/frame_codeloading_4.png" xy="0,0"/>
+    <image id="n21_qfz9" name="n21" src="qfz98n" fileName="newImg/frame_codeloading_5.png" xy="0,0"/>
+    <image id="n22_qfz9" name="n22" src="qfz98o" fileName="newImg/frame_codeloading_6.png" xy="0,0"/>
+    <image id="n23_qfz9" name="n23" src="qfz98p" fileName="newImg/frame_codeloading_7.png" xy="0,0"/>
+    <image id="n24_qfz9" name="n24" src="qfz98q" fileName="newImg/frame_codeloading_8.png" xy="0,0"/>
+    <image id="n25_qfz9" name="n25" src="qfz98r" fileName="newImg/frame_codeloading_9.png" xy="0,0"/>
+  </displayList>
+  <transition name="running" options="2" autoPlayRepeat="-1">
+    <item time="0" type="Alpha" target="n16_qfz9" value="1"/>
+    <item time="0" type="Alpha" target="n17_qfz9" value="0"/>
+    <item time="0" type="Alpha" target="n18_qfz9" value="0"/>
+    <item time="0" type="Alpha" target="n19_qfz9" value="0"/>
+    <item time="0" type="Alpha" target="n20_qfz9" value="0"/>
+    <item time="0" type="Alpha" target="n21_qfz9" value="0"/>
+    <item time="0" type="Alpha" target="n22_qfz9" value="0"/>
+    <item time="0" type="Alpha" target="n23_qfz9" value="0"/>
+    <item time="0" type="Alpha" target="n24_qfz9" value="0"/>
+    <item time="0" type="Alpha" target="n25_qfz9" value="0"/>
+    <item time="3" type="Alpha" target="n16_qfz9" value="0"/>
+    <item time="3" type="Alpha" target="n18_qfz9" value="1"/>
+    <item time="6" type="Alpha" target="n18_qfz9" value="0"/>
+    <item time="6" type="Alpha" target="n19_qfz9" value="1"/>
+    <item time="9" type="Alpha" target="n19_qfz9" value="0"/>
+    <item time="9" type="Alpha" target="n20_qfz9" value="1"/>
+    <item time="12" type="Alpha" target="n20_qfz9" value="0"/>
+    <item time="12" type="Alpha" target="n21_qfz9" value="1"/>
+    <item time="15" type="Alpha" target="n21_qfz9" value="0"/>
+    <item time="15" type="Alpha" target="n22_qfz9" value="1"/>
+    <item time="18" type="Alpha" target="n22_qfz9" value="0"/>
+    <item time="18" type="Alpha" target="n23_qfz9" value="1"/>
+    <item time="21" type="Alpha" target="n23_qfz9" value="0"/>
+    <item time="21" type="Alpha" target="n24_qfz9" value="1"/>
+    <item time="24" type="Alpha" target="n24_qfz9" value="0"/>
+    <item time="24" type="Alpha" target="n25_qfz9" value="1"/>
+    <item time="27" type="Alpha" target="n17_qfz9" value="1"/>
+  </transition>
+</component>

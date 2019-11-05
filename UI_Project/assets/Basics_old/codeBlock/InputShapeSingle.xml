@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="68,36" restrictSize="68,0,0,0" opaque="false" clipSoftness="5,5" extention="Button" designImageAlpha="100">
+  <controller name="color" pages="0,Event,1,DeepYellow,2,Red,3,Purple,4,DeepBlue,5,LightBlue,6,DeepGreen,7,LightGreen,8,Pink,9,ListGreen" selected="9"/>
+  <displayList>
+    <loader id="n5_n1c0" name="n5" xy="0,0" size="68,36" url="ui://rnqj1l77p7ootly" align="center" vAlign="middle" fill="scaleFree">
+      <gearIcon controller="color" pages="0,1,2,3,4,5,6,7,8,9" values="ui://rnqj1l77h5gvtbw|ui://rnqj1l77h5gvtb3|ui://rnqj1l77h5gvtc2|ui://rnqj1l77h5gvtbf|ui://rnqj1l77h5gvtcg|ui://rnqj1l77h5gvtbp|ui://rnqj1l77h5gvtcq|ui://rnqj1l77h5gvtb9|ui://rnqj1l77w7botlh|ui://rnqj1l77p7ootly"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <text id="n6_n1c0" name="textComp" xy="14,3" size="40,31" restrictSize="40,0,0,0" input="true" fontSize="24" color="#333333" align="center" vAlign="middle" leading="0" singleLine="true" text=""/>
+    <text id="n7_qq8d" name="tfHint" xy="14,3" size="40,31" restrictSize="40,0,0,0" alpha="0.5" fontSize="24" color="#333333" align="center" vAlign="middle" leading="0" singleLine="true" text=""/>
+  </displayList>
+  <Button/>
+  <relation target="n6_n1c0" sidePair="width-width,height-height"/>
+</component>

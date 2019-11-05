@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" opaque="false">
+  <controller name="ctrlSelectedStatus" pages="0,unselected,1,selected" selected="0"/>
+  <displayList>
+    <component id="n0_mcvl" name="comEntitySelect" src="df6n5l" fileName="Com/ComMapEntitySelect.xml" pkg="32ieekgu" xy="0,0" controller="ctrlState,2">
+      <relation target="" sidePair="left-left,height-height"/>
+    </component>
+    <component id="n1_mcvl" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="972,558" size="144,62">
+      <gearDisplay controller="ctrlSelectedStatus" pages="1"/>
+      <relation target="" sidePair="bottom-bottom,right-right"/>
+      <Button icon="ui://rnqj1l77mcvlac"/>
+    </component>
+    <component id="n2_mcvl" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1052,20" size="64,68">
+      <relation target="" sidePair="top-top,right-right"/>
+      <Button icon="ui://rnqj1l77mcvlaf"/>
+    </component>
+    <image id="n4_mcvl" name="imgTip" src="mcvlae" fileName="newImg2/img_code_tishik_01.png" xy="418,0" group="n6_mcvl"/>
+    <image id="n3_mcvl" name="imgTipBG" src="mcvlad" fileName="newImg2/img_code_tishi_04.png" xy="428,17" group="n6_mcvl"/>
+    <text id="n5_mcvl" name="tfTip" xy="458,15" size="245,31" group="n6_mcvl" fontSize="24" color="#ffffff" text="请选择你要吸附的物件"/>
+    <group id="n6_mcvl" name="tip" xy="418,0" size="300,58" advanced="true">
+      <gearDisplay controller="ctrlSelectedStatus" pages="0"/>
+      <relation target="" sidePair="top-top,center-center"/>
+    </group>
+  </displayList>
+</component>

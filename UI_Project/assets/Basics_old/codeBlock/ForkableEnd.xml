@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="167,70">
+  <controller name="isAlone" pages="0,true,1,false" selected="0"/>
+  <displayList>
+    <image id="n2_liab" name="imgBG" src="liabte5" fileName="newImg2/img_code_kongzhi_3-1.png" xy="0,-17">
+      <gearDisplay controller="isAlone" pages="1"/>
+      <relation target="" sidePair="width-width"/>
+    </image>
+    <image id="n3_ou0s" name="imgAloneBG" src="liabtec" fileName="newImg2/img_code_kongzhi_3.png" xy="0,-17">
+      <gearDisplay controller="isAlone" pages="0"/>
+      <relation target="" sidePair="width-width"/>
+    </image>
+    <component id="n1_kgcg" name="container" src="kesa9" fileName="com/Container.xml" xy="35,15" size="116,61" restrictSize="116,0,61,0"/>
+  </displayList>
+  <relation target="n1_kgcg" sidePair="width-width,height-height"/>
+</component>
