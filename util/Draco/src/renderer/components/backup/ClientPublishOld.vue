@@ -243,7 +243,7 @@ export default {
       Global.showRegionLoading();
 
       await mdPublish
-        .clearAndCopyResource()
+        .copyPictures()
         .then(value => {
           this.isCopyCompressPicLoading = false;
           Global.hideRegionLoading();

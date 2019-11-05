@@ -670,7 +670,7 @@ export async function copyResource(releasePath) {
     }
 }
 
-export async function clearAndCopyResource() {
+export async function copyPictures() {
     let projNewVersionPath = Global.projPath + releaseSuffix + ModelMgr.version.newVersion;
     await clearResource(projNewVersionPath);
     await copyResource(projNewVersionPath);
