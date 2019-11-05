@@ -39,7 +39,8 @@ export async function updateGit() {
         if (ModelMgr.versionModel.curEnviron.codeVersionEnable) {
             let configPath = `${Global.projPath}/src/GameConfig.ts`;
             let configContent = await fsExc.readFile(configPath);
-            configContent = configContent.replace(`public static codeVersion = "";`, `public static codeVersion = "${ModelMgr.versionModel.releaseVersion}";`);
+            let reg = /public static codeVersion = ".*?"/;
+            configContent = configContent.replace(reg, `public static codeVersion = "${ModelMgr.versionModel.releaseVersion}";`);
             await fsExc.writeFile(configPath, configContent);
         }
 
