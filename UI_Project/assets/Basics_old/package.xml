@@ -134,7 +134,7 @@
     <image id="mcvlad" name="img_code_tishi_04.png" path="/newImg2/"/>
     <image id="mcvlae" name="img_code_tishik_01.png" path="/newImg2/"/>
     <image id="mcvlaf" name="icon_code_fanhui_03.png" path="/newImg2/"/>
-    <component id="1194tac" name="ComCodeCalculator.xml" path="/newCom/" exported="true"/>
+    <component id="1194tac" name="ComCodeCalculator.xml" path="/newCom/"/>
     <component id="1194tad" name="btnCalculator.xml" path="/newBtn/"/>
     <component id="mcvlag" name="WinCodeblockSelectEntity.xml" path="/win/" exported="true"/>
     <component id="r5zoah" name="InputShapeSingle.xml" path="/codeBlock/" exported="true"/>
@@ -412,8 +412,8 @@
     <component id="sjjotk1" name="comIDEContainerB.xml" path="/newCom/" exported="true"/>
     <component id="zfldtk2" name="ComIDEKeyWord.xml" path="/com/" exported="true"/>
     <component id="zfldtk3" name="btnIDEKeyWord.xml" path="/btn/" exported="true"/>
-    <component id="ox4vtk4" name="ComRadioSelect.xml" path="/newCom/" exported="true"/>
-    <component id="m9k1tk5" name="ComRadioSelectScene.xml" path="/newCom/" exported="true"/>
+    <component id="ox4vtk4" name="ComRadioSelect.xml" path="/newCom/"/>
+    <component id="m9k1tk5" name="ComRadioSelectScene.xml" path="/newCom/"/>
     <image id="vc6ztk6" name="img_code_xzjd_1.png" path="/newImg2/" exported="true"/>
     <image id="vc6ztk7" name="img_code_xzjd_2.png" path="/newImg2/" exported="true"/>
     <image id="vc6ztk8" name="img_code_xzjd_3.png" path="/newImg2/" exported="true"/>
@@ -463,7 +463,7 @@
     <image id="w7botlf" name="img_code_hs_9.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="33,29,65,6"/>
     <image id="w7botlg" name="img_code_hs_lx_5.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="22,9,34,18"/>
     <image id="w7botlh" name="img_code_hs_ty_6.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="20,16,40,5"/>
-    <component id="w7botli" name="ComCreateArg.xml" path="/newCom/" exported="true"/>
+    <component id="w7botli" name="ComCreateArg.xml" path="/newCom/"/>
     <component id="w7botlj" name="BlockCodeblockFunction.xml" path="/codeBlock/" exported="true"/>
     <component id="w7botlk" name="BlockCodeblockReturn.xml" path="/codeBlock/" exported="true"/>
     <component id="w7botll" name="InputArgsShape.xml" path="/codeBlock/" exported="true"/>
@@ -485,47 +485,6 @@
     <image id="g8fatm1" name="img_code_bllb_8.png" path="/newImg2/" scale="9grid" scale9grid="44,16,43,32"/>
     <image id="g8fatm2" name="img_code_bllb_7.png" path="/newImg2/" scale="9grid" scale9grid="43,17,52,34"/>
     <image id="h5butm3" name="img_code_xl_1_2.png" path="/newImg2/" scale="9grid" scale9grid="7,7,63,90"/>
-    <component id="10dn3tm4" name="MainB.xml" path="/aaaaaaaaaaaaaaaaaaaaaaa/win/" exported="true"/>
-    <image id="s45wtm5" name="icon_codeV_bl_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtm6" name="icon_codeV_bl_1_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtm7" name="icon_codeV_gn_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtm8" name="icon_codeV_gn_1_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtm9" name="icon_codeV_hs_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtma" name="icon_codeV_hs_1_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtmb" name="icon_codeV_jc_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtmc" name="icon_codeV_jc_1_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtmd" name="icon_codeV_kz_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtme" name="icon_codeV_kz_1_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtmf" name="icon_codeV_sj_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtmg" name="icon_codeV_sj_1_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtmh" name="icon_codeV_st_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtmi" name="icon_codeV_st_1_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtmj" name="icon_codeV_yd_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtmk" name="icon_codeV_yd_1_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtml" name="icon_codeV_ys_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtmm" name="icon_codeV_ys_1_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtmn" name="icon_codeV_zdy_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtmo" name="icon_codeV_zdy_1_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtmp" name="img_code_bl_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtmq" name="img_code_bl_1_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtmr" name="img_code_gn_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtms" name="img_code_gn_1_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtmt" name="img_code_hs_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtmu" name="img_code_hs_1_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtmv" name="img_code_jc_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtmw" name="img_code_jc_1_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtmx" name="img_code_kz_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtmy" name="img_code_kz_1_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtmz" name="img_code_sj_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtn0" name="img_code_sj_1_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtn1" name="img_code_st_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtn2" name="img_code_st_1_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtn3" name="img_code_yd_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtn4" name="img_code_yd_1_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtn5" name="img_code_ys_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtn6" name="img_code_ys_1_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtn7" name="img_code_zdy_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
-    <image id="s45wtn8" name="img_code_zdy_1_1.png" path="/aaaaaaaaaaaaaaaaaaaaaaa/img/"/>
   </resources>
   <publish name="Basics"/>
 </packageDescription>

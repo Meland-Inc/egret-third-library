@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="120,59" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <image id="n3_f89o" name="n3" src="pwfmteg" fileName="newImg2/btn_code_weixuanzhong_2.png" pkg="rnqj1l77" xy="0,0">
+      <gearDisplay controller="button" pages="0"/>
+    </image>
+    <image id="n4_f89o" name="n4" src="pwfmteh" fileName="newImg2/btn_code_xuanzhong_1.png" pkg="rnqj1l77" xy="0,0">
+      <gearDisplay controller="button" pages="1"/>
+    </image>
+    <text id="n5_f89o" name="title" xy="59,28" pivot="0.5,0.5" anchor="true" size="113,31" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" singleLine="true" text="玩家建筑">
+      <relation target="n3_f89o" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

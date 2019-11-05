@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" designImage="ui://thvmj7vos45w0" designImageAlpha="31">
+  <displayList>
+    <component id="n1_s45w" name="codeBlockContainer" src="s45w19" fileName="codeVew/com/CodeblockContainer.xml" xy="956,0" size="847,1080">
+      <relation target="" sidePair="top-top,right-right"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <graph id="n2_s45w" name="noviceHeaderBlockRect" xy="0,0" size="1920,53" visible="false" alpha="0" touchable="false" type="rect">
+      <relation target="" sidePair="width-width"/>
+    </graph>
+    <component id="n3_s45w" name="comCategoryList" src="s45w1u" fileName="codeVew/com/ComCategoryList.xml" xy="0,0" size="1920,1080">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </component>
+    <component id="n5_lctb" name="comCodeBlockExclusiveChoiceList" src="lctb3w" fileName="codeVew/oldCom/ComCodeBlockExclusiveChoiceList.xml" xy="1443,0" size="362,1080" hideByEditor="true">
+      <relation target="" sidePair="right-right,height-height"/>
+    </component>
+    <component id="n6_lctb" name="comCalculator" src="lctb41" fileName="codeVew/oldCom/ComCodeCalculator.xml" xy="1393,0" size="412,1080" hideByEditor="true">
+      <relation target="" sidePair="right-right,top-top"/>
+    </component>
+    <component id="n7_lctb" name="mask" src="lctb4z" fileName="codeVew/oldCom/RunningStateB.xml" xy="956,0" size="967,1080" hideByEditor="true">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </component>
+    <component id="n8_lctb" name="comDustbin" src="lctb5v" fileName="codeVew/oldCom/ComDustbin.xml" xy="1803,1" size="118,1082" touchable="false" controller="dustbinState,0">
+      <relation target="" sidePair="right-right,bottomext-bottom"/>
+    </component>
+    <component id="n9_lctb" name="comEditVariate" src="lctb5z" fileName="codeVew/oldCom/ComEditVariateB_NEW.xml" xy="956,0" size="967,1080">
+      <relation target="" sidePair="bottomext-bottom,rightext-right"/>
+    </component>
+    <component id="n13_lctb" name="comRadioSelect" src="lctb65" fileName="codeVew/oldCom/ComRadioSelect.xml" xy="871,443" hideByEditor="true"/>
+    <component id="n14_lctb" name="comRadioSelectScene" src="lctb66" fileName="codeVew/oldCom/ComRadioSelectScene.xml" xy="871,481" hideByEditor="true"/>
+    <component id="n15_lctb" name="comCreateArg" src="lctb67" fileName="codeVew/oldCom/ComCreateArg.xml" xy="956,0" size="973,1080" hideByEditor="true" visible="false">
+      <relation target="" sidePair="bottomext-bottom,rightext-right"/>
+      <relation target="n1_s45w" sidePair="left-left,top-top"/>
+    </component>
+    <component id="n4_lctb" name="btnExit" src="lctb3u" fileName="ideCommon/oldBtn/btnExit.xml" xy="895,1014"/>
+  </displayList>
+</component>
