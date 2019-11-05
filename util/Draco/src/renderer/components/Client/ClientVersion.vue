@@ -31,7 +31,6 @@
         @change="updatePublishText"
         v-model="publisher"
         :error-text="publishErrorText"
-        v-show="curEnviron&&(curEnviron.publishDescEnable||curEnviron.codeVersionEnable)"
       />
       <mu-text-field
         @change="updateVersionDescText"
@@ -60,7 +59,7 @@
             v-loading="isCompressPicLoading"
             data-mu-loading-size="24"
             color="orange500"
-            @click="onCompressPicClick"
+            @click="onCompressFileClick"
             v-show="curEnviron&&curEnviron.compressPicEnable"
           >压缩图片</mu-button>
           <mu-button
@@ -508,12 +507,12 @@ export default {
       // } catch (error) {
       // }
     },
-    async onCompressPicClick(showDialog = true) {
+    async onCompressFileClick(showDialog = true) {
       this.isCompressPicLoading = true;
       Global.showRegionLoading();
 
       await mdCompress
-        .compareFile()
+        .compressFile()
         .then(value => {
           this.isCompressPicLoading = false;
           Global.hideRegionLoading();
@@ -547,7 +546,7 @@ export default {
       Global.showRegionLoading();
 
       await mdPublish
-        .clearAndCopyResource()
+        .copyPictures()
         .then(value => {
           this.isCopyCompressPicLoading = false;
           Global.hideRegionLoading();
@@ -714,11 +713,11 @@ export default {
             promiseList.push(mdPublish.updateGit);
           }
           if (this.needCompress) {
-            promiseList.push(this.onCompressPicClick);
+            promiseList.push(mdCompress.compressFile);
           }
-          promiseList.push(mdCompress.compareFile);
+          promiseList.push(mdPublish.publishProject);
           if (this.needCompress) {
-            promiseList.push(mdPublish.clearAndCopyResource);
+            promiseList.push(mdPublish.copyPictures);
           }
           if (this.curEnviron.mergeVersionEnable) {
             promiseList.push(mdPublish.mergeVersion);

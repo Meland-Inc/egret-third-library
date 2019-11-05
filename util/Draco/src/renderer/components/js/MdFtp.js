@@ -440,9 +440,6 @@ export function checkPolicyNum() {
 
 export async function pushGit() {
     try {
-        let addCmdStr = `git add ."`;
-        await spawnExc.runCmd(addCmdStr, Global.projPath, null, '添加文件错误');
-
         let commitCmdStr = `git commit -a -m "${ModelMgr.versionModel.publisher} 发布版本 ${ModelMgr.versionModel.releaseVersion}"`;
         await spawnExc.runCmd(commitCmdStr, Global.projPath, null, '提交文件错误');
 
