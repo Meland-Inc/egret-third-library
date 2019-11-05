@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="50,30" extention="Button">
+  <displayList>
+    <loader id="n2_k8w6" name="icon" xy="0,0" size="50,30" align="center" vAlign="middle" fill="scaleFree">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </loader>
+    <text id="n3_k8w6" name="title" xy="20,1" size="10,27" fontSize="20" align="center" vAlign="middle" singleLine="true" text="">
+      <relation target="n2_k8w6" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+  <Button mode="Radio" sound="ui://fknoioovtqc911"/>
+</component>

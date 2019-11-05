@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" opaque="false" adaptationTest="FitSize">
+  <controller name="states" pages="0,normal,1,stretch" selected="0">
+    <action type="play_transition" fromPage="0" toPage="1" transition="toStretch" stopOnExit="true"/>
+  </controller>
+  <displayList>
+    <component id="n46_kas2" name="mapScaleButton" src="rvyy1j" fileName="Com/ComMapScaleView.xml" xy="28,278" group="n45_kas2">
+      <relation target="n1_rvyy" sidePair="bottom-top,left-left"/>
+    </component>
+    <component id="n49_df6n" name="comMapEntitySelect" src="df6n5l" fileName="Com/ComMapEntitySelect.xml" xy="0,0" group="n45_kas2"/>
+    <image id="n1_rvyy" name="imgBG" src="qo8vi1u" fileName="newImg/bg_cm_7.png" pkg="te1gxawo" xy="0,456" size="1136,184" group="n47_q9kn">
+      <relation target="" sidePair="center-center,width-width"/>
+      <relation target="" sidePair="bottom-bottom"/>
+    </image>
+    <component id="n33_rvyy" name="btnLeft" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1,541" size="58,66" group="n36_rvyy">
+      <gearDisplay controller="states" pages="0"/>
+      <relation target="n1_rvyy" sidePair="left-left,bottom-bottom"/>
+      <Button icon="ui://te1gxawoqo8vi23"/>
+    </component>
+    <component id="n34_rvyy" name="btnRight" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="987,541" size="58,66" group="n36_rvyy">
+      <gearDisplay controller="states" pages="0"/>
+      <relation target="n1_rvyy" sidePair="right-right,bottom-bottom"/>
+      <Button icon="ui://te1gxawoqo8vi22"/>
+    </component>
+    <group id="n36_rvyy" name="Left/Right" xy="1,541" size="1044,66" group="n47_q9kn" collapsed="true"/>
+    <component id="n28_rvyy" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1040,538" size="74,74" group="n47_q9kn">
+      <relation target="n1_rvyy" sidePair="right-right,middle-middle"/>
+      <Button icon="ui://32ieekgulxr13m"/>
+    </component>
+    <list id="n29_rvyy" name="lstTabBar" xy="20,460" size="470,40" group="n47_q9kn" layout="row" defaultItem="ui://32ieekguqq3f2z" align="center">
+      <relation target="n1_rvyy" sidePair="left-left,top-top"/>
+      <item icon="ui://32ieekguqo8v2k" selectedIcon="ui://32ieekguqo8v2l"/>
+      <item icon="ui://32ieekguqo8v2t" selectedIcon="ui://32ieekguqo8v2u"/>
+      <item icon="ui://32ieekguqo8v2q" selectedIcon="ui://32ieekguqo8v2r"/>
+      <item icon="ui://32ieekguqo8v2m" selectedIcon="ui://32ieekguqo8v2n"/>
+      <item icon="ui://32ieekguqo8v2o" selectedIcon="ui://32ieekguqo8v2p"/>
+      <item icon="ui://32ieekguqo8v2o" selectedIcon="ui://32ieekguqo8v2p"/>
+    </list>
+    <list id="n32_rvyy" name="lstNormalScrollerGroup" xy="55,522" size="938,105" group="n47_q9kn" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="2" colGap="10" defaultItem="ui://32ieekgup6jr4k" vAlign="middle" autoClearItems="true">
+      <gearDisplay controller="states" pages="0"/>
+      <relation target="n1_rvyy" sidePair="rightext-right,bottom-bottom"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n43_p37m" name="lstStretchScrollerGroup" xy="54,516" size="959,112" group="n47_q9kn" layout="flow_hz" overflow="scroll" scrollBarFlags="6" scrollBar="visible" margin="0,0,5,0" scrollBarRes="ui://32ieekgu99a234," colGap="10" defaultItem="ui://32ieekgup6jr4k" autoItemSize="true" renderOrder="arch" apex="5" autoClearItems="true">
+      <gearDisplay controller="states" pages="1"/>
+      <relation target="n1_rvyy" sidePair="rightext-right,topext-top"/>
+      <relation target="n1_rvyy" sidePair="bottomext-bottom"/>
+    </list>
+    <image id="n39_rvyy" name="imgSearchBG" src="pagbi27" fileName="newImg/img_inputbox_1.png" pkg="te1gxawo" xy="849,464" size="181,34" group="n41_rvyy">
+      <relation target="n1_rvyy" sidePair="right-right,top-top"/>
+    </image>
+    <image id="n40_rvyy" name="imgSearchIcon" src="qo8v2s" fileName="newImg/WinBuildPannel/icon_build_search.png" xy="862,471" group="n41_rvyy">
+      <relation target="n1_rvyy" sidePair="right-right,top-top"/>
+    </image>
+    <text id="n37_rvyy" name="tfSearch" xy="891,473" size="131,29" group="n41_rvyy" input="true" prompt="[color=#D8CAB0]输入物品名[/color]" fontSize="18" autoSize="none" text="">
+      <relation target="n1_rvyy" sidePair="right-right,top-top"/>
+    </text>
+    <group id="n41_rvyy" name="grpSearch" xy="849,464" size="181,38" group="n47_q9kn" collapsed="true"/>
+    <component id="n42_rvyy" name="btnStretch" src="qo8v2y" fileName="btn/btnStretch.xml" xy="1040,452" group="n47_q9kn">
+      <gearIcon controller="states" pages="1" values="ui://te1gxawoqo8vi24" default="ui://te1gxawoqo8vi25"/>
+      <relation target="n1_rvyy" sidePair="right-right,top-top"/>
+      <Button icon="ui://te1gxawoqo8vi25"/>
+    </component>
+    <component id="n48_lxr1" name="btnOpenFormula" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="498,460" group="n47_q9kn">
+      <relation target="n1_rvyy" sidePair="top-top"/>
+      <Button title="打开配方" titleColor="#000000" icon="ui://te1gxawoqo8vi26"/>
+    </component>
+    <group id="n47_q9kn" name="grpPackage" xy="0,452" size="1136,188" group="n45_kas2" advanced="true"/>
+    <group id="n45_kas2" name="n45" xy="0,0" size="1136,640" advanced="true"/>
+  </displayList>
+  <transition name="toStretch">
+    <item time="0" type="Size" target="n1_rvyy" tween="true" startValue="-,172" endValue="-,370" duration="6" ease="Linear"/>
+  </transition>
+  <transition name="toNormal">
+    <item time="0" type="Size" target="n1_rvyy" tween="true" startValue="-,370" endValue="-,172" duration="6" ease="Linear"/>
+  </transition>
+</component>

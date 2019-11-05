@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640">
+  <displayList>
+    <image id="n8_f3zf" name="bg" src="efrs1m" fileName="newImg/bg_cm_3.png" xy="411,206" size="366,230" group="n16_f3zf"/>
+    <graph id="n9_f3zf" name="dragArea" xy="435,209" size="313,36" group="n16_f3zf" alpha="0" type="rect"/>
+    <component id="n10_f3zf" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" xy="730,208" size="36,36" group="n16_f3zf">
+      <Button icon="ui://te1gxawohpymyi7o"/>
+    </component>
+    <text id="n11_f3zf" name="tfTitle" xy="528,208" size="119,32" group="n16_f3zf" visible="false" fontSize="20" color="#ffffff" align="center" vAlign="middle" ubb="true" autoSize="none" text="确认"/>
+    <text id="n12_f3zf" name="tfContent" xy="440,256" size="307,40" group="n16_f3zf" fontSize="18" color="#635c51" align="center" vAlign="middle" ubb="true" autoSize="none" bold="true" singleLine="true" text=""/>
+    <text id="n7_ar63" name="tfInput" xy="478,316" size="232,40" group="n16_f3zf" input="true" fontSize="18" color="#635c51" align="center" vAlign="middle" ubb="true" autoSize="none" bold="true" text=""/>
+    <component id="n13_f3zf" name="btnConfirm" src="qn8od" fileName="btn/btnCommon.xml" xy="617,371" size="120,40" group="n16_f3zf">
+      <Button title="确定" titleColor="#472f16" titleFontSize="20" icon="ui://te1gxawoefrs1w"/>
+    </component>
+    <component id="n14_f3zf" name="btnCancel" src="qn8od" fileName="btn/btnCommon.xml" xy="458,371" size="120,40" group="n16_f3zf">
+      <Button title="取消" titleColor="#472f16" titleFontSize="20" icon="ui://te1gxawoqo8vi21"/>
+    </component>
+    <image id="n15_f3zf" name="n15" src="rx7u27" fileName="newImg/img_cm_pattern.png" xy="413,418" size="358,14" group="n16_f3zf"/>
+    <graph id="n19_f3zf" name="n19" xy="469,355" size="250,2" group="n16_f3zf" type="rect" lineColor="#ffcccccc" fillColor="#ffcccccc"/>
+    <group id="n16_f3zf" name="root" xy="411,206" size="366,230" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

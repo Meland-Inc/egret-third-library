@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" designImageLayer="1">
+  <displayList>
+    <image id="n18_jn1p" name="bg" src="ylfhcyidj" fileName="imgB/img_cm_tck_2.png" xy="407,214" size="321,211" group="n26_jn1p"/>
+    <graph id="n19_jn1p" name="dragArea" xy="408,216" size="312,44" group="n26_jn1p" alpha="0" type="rect"/>
+    <text id="n21_jn1p" name="tfTitle" xy="410,226" size="316,32" group="n26_jn1p" fontSize="24" color="#ffffff" align="center" vAlign="middle" ubb="true" autoSize="none" bold="true" text="确认"/>
+    <text id="n22_jn1p" name="tfContent" xy="409,266" size="317,94" group="n26_jn1p" fontSize="18" color="#365989" align="center" vAlign="middle" ubb="true" autoSize="none" bold="true" singleLine="true" text=""/>
+    <component id="n23_jn1p" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" xy="573,360" size="106,36" group="n26_jn1p">
+      <Button title="确定" titleColor="#ffffff" titleFontSize="20" icon="ui://te1gxawom3dicyidb"/>
+    </component>
+    <component id="n24_jn1p" name="btnCancel" src="gpm0i4g" fileName="btn/btnFix.xml" xy="460,360" size="106,37" group="n26_jn1p">
+      <Button title="取消" titleColor="#ffffff" titleFontSize="20" icon="ui://te1gxawom3dicyid9"/>
+    </component>
+    <component id="n20_jn1p" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" xy="678,218" size="42,43" group="n26_jn1p">
+      <Button icon="ui://te1gxawonl0rcyica"/>
+    </component>
+    <group id="n26_jn1p" name="root" xy="407,214" size="322,212" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

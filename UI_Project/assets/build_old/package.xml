@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="32ieekgu" jpegQuality="80" compressPNG="true">
+  <resources>
+    <component id="jr3d0" name="ComBuildPreview.xml" path="/Com/" exported="true"/>
+    <component id="jj3j1" name="WinMapLook.xml" path="/win/" exported="true"/>
+    <component id="o18j1f" name="WinBuildThingInfo.xml" path="/win/" exported="true"/>
+    <component id="rvyy1h" name="grpTip.xml" path="/Com/"/>
+    <component id="rvyy1i" name="grpBuildSelect.xml" path="/Com/"/>
+    <component id="rvyy1j" name="ComMapScaleView.xml" path="/Com/" exported="true"/>
+    <component id="rvyy1k" name="WinBuildPanel.xml" path="/win/" exported="true"/>
+    <component id="p7yp1o" name="ComInfo.xml" path="/Com/"/>
+    <component id="p7yp1p" name="ComDetail.xml" path="/Com/"/>
+    <image id="c8lx1r" name="btn_1.png" path="/newImg/"/>
+    <image id="c8lx1s" name="btn_2.png" path="/newImg/"/>
+    <image id="c8lx1t" name="btn_3.png" path="/newImg/"/>
+    <image id="c8lx20" name="img_2.png" path="/newImg/WinMapLook/" scale="9grid" scale9grid="21,21,6,6"/>
+    <image id="c8lx22" name="img_4.png" path="/newImg/WinMapLook/"/>
+    <image id="c8lx23" name="img_5.png" path="/newImg/WinMapLook/" scale="9grid" scale9grid="8,8,16,16"/>
+    <image id="c8lx24" name="img_6.png" path="/newImg/WinMapLook/"/>
+    <image id="c8lx25" name="img_7.png" path="/newImg/"/>
+    <image id="c8lx26" name="img_8.png" path="/newImg/WinMapLook/" scale="9grid" scale9grid="5,2,17,12"/>
+    <image id="c8lx27" name="img_9.png" path="/newImg/WinMapLook/"/>
+    <component id="c8lx2d" name="ComSelectBox.xml" path="/Com/"/>
+    <component id="kqo82e" name="ComCompass.xml" path="/Com/"/>
+    <image id="qo8v2f" name="img_build_item1.png" path="/newImg/WinBuildPannel/"/>
+    <image id="qo8v2g" name="img_build_item2.png" path="/newImg/WinBuildPannel/"/>
+    <image id="qo8v2k" name="icon_build_all_1.png" path="/newImg/WinBuildPannel/"/>
+    <image id="qo8v2l" name="icon_build_all_2.png" path="/newImg/WinBuildPannel/"/>
+    <image id="qo8v2m" name="icon_build_assemble_1.png" path="/newImg/WinBuildPannel/"/>
+    <image id="qo8v2n" name="icon_build_assemble_2.png" path="/newImg/WinBuildPannel/"/>
+    <image id="qo8v2o" name="icon_build_decoration_1.png" path="/newImg/WinBuildPannel/"/>
+    <image id="qo8v2p" name="icon_build_decoration_2.png" path="/newImg/WinBuildPannel/"/>
+    <image id="qo8v2q" name="icon_build_feature_1.png" path="/newImg/WinBuildPannel/"/>
+    <image id="qo8v2r" name="icon_build_feature_2.png" path="/newImg/WinBuildPannel/"/>
+    <image id="qo8v2s" name="icon_build_search.png" path="/newImg/WinBuildPannel/"/>
+    <image id="qo8v2t" name="icon_build_wall_1.png" path="/newImg/WinBuildPannel/"/>
+    <image id="qo8v2u" name="icon_build_wall_2.png" path="/newImg/WinBuildPannel/"/>
+    <component id="qo8v2y" name="btnStretch.xml" path="/btn/"/>
+    <component id="qq3f2z" name="btnRadioButton.xml" path="/btn/"/>
+    <image id="lmzf30" name="btn_build_cancel.png" path="/newImg/WinBuildPannel/" exported="true"/>
+    <image id="lmzf31" name="btn_build_confirm.png" path="/newImg/WinBuildPannel/" exported="true"/>
+    <image id="lmzf32" name="btn_build_rotate.png" path="/newImg/WinBuildPannel/" exported="true"/>
+    <component id="99a233" name="Slider1_grip.xml" path="/Slide/"/>
+    <component id="99a234" name="Slider1.xml" path="/Slide/" exported="true"/>
+    <image id="ddnk35" name="btn_build_delete.png" path="/newImg/WinBuildPannel/" exported="true"/>
+    <image id="ddnk36" name="btn_build_move.png" path="/newImg/WinBuildPannel/" exported="true"/>
+    <component id="uvbh37" name="WinDeleteBuildingConfirm.xml" path="/win/" exported="true"/>
+    <component id="uvbh38" name="btnNoTips.xml" path="/btn/"/>
+    <component id="o68g3g" name="ComHideJoystick.xml" path="/Com/" exported="true"/>
+    <component id="lxr13m" name="spBack.xml" path="/sp/"/>
+    <image id="p6jr3o" name="btn_mode_1.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr3p" name="btn_mode_2.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr3q" name="btn_mode_back.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr3r" name="btn_mode_13.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr3s" name="btn_mode_12.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr3t" name="btn_mode_14.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr3u" name="img_mode_2.png" path="/img_UI3/WinMapLook/" scale="9grid" scale9grid="46,50,63,62"/>
+    <image id="p6jr3v" name="img_mode_1.png" path="/img_UI3/WinMapLook/" scale="9grid" scale9grid="29,29,24,25"/>
+    <image id="p6jr3x" name="btn_mode_10.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr3z" name="btn_mode_11.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr40" name="btn_mode_15.png" path="/img_UI3/WinMapLook/" exported="true"/>
+    <image id="p6jr41" name="btn_mode_16.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr43" name="btn_mode_3.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr44" name="btn_mode_4.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr45" name="btn_mode_5.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr46" name="btn_mode_6.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr47" name="btn_mode_7.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr48" name="btn_mode_8.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr49" name="btn_mode_9.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr4a" name="img_mode_10.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr4b" name="img_mode_3.png" path="/img_UI3/WinMapLook/" scale="9grid" scale9grid="20,20,40,40"/>
+    <image id="p6jr4c" name="img_mode_4.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr4d" name="img_mode_5.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr4e" name="img_mode_6.png" path="/img_UI3/WinMapLook/"/>
+    <image id="p6jr4f" name="img_mode_7.png" path="/img_UI3/WinMapLook/" exported="true"/>
+    <image id="p6jr4g" name="img_mode_8.png" path="/img_UI3/WinMapLook/" exported="true"/>
+    <image id="p6jr4h" name="img_mode_9.png" path="/img_UI3/WinMapLook/"/>
+    <component id="p6jr4i" name="btnModeChange.xml" path="/btn/"/>
+    <image id="p6jr4j" name="img_mode_11.png" path="/img_UI3/WinMapLook/" scale="9grid" scale9grid="20,20,40,40"/>
+    <component id="p6jr4k" name="RBtnBuildRenderer.xml" path="/btn/"/>
+    <component id="jtn84o" name="LabBuildingCountdown.xml" path="/Com/" exported="true"/>
+    <image id="df6n4p" name="btn_ide_1.png" path="/img_UI3/ide/"/>
+    <image id="df6n4q" name="btn_ide_10.png" path="/img_UI3/ide/"/>
+    <image id="df6n4r" name="btn_ide_11.png" path="/img_UI3/ide/"/>
+    <image id="df6n4s" name="btn_ide_12.png" path="/img_UI3/ide/"/>
+    <image id="df6n4v" name="btn_ide_15.png" path="/img_UI3/ide/"/>
+    <image id="df6n4w" name="btn_ide_16.png" path="/img_UI3/ide/"/>
+    <image id="df6n4x" name="btn_ide_2.png" path="/img_UI3/ide/"/>
+    <image id="df6n4y" name="btn_ide_3.png" path="/img_UI3/ide/"/>
+    <image id="df6n4z" name="btn_ide_4.png" path="/img_UI3/ide/"/>
+    <image id="df6n50" name="btn_ide_5.png" path="/img_UI3/ide/"/>
+    <image id="df6n51" name="btn_ide_6.png" path="/img_UI3/ide/"/>
+    <image id="df6n52" name="btn_ide_7.png" path="/img_UI3/ide/"/>
+    <image id="df6n53" name="btn_ide_8.png" path="/img_UI3/ide/"/>
+    <image id="df6n54" name="btn_ide_9.png" path="/img_UI3/ide/"/>
+    <image id="df6n55" name="btn_ide_back.png" path="/img_UI3/ide/"/>
+    <image id="df6n56" name="btn_ide_bag.png" path="/img_UI3/ide/"/>
+    <image id="df6n57" name="btn_ide_play.png" path="/img_UI3/ide/"/>
+    <image id="df6n58" name="fnt_ide_1.png" path="/img_UI3/ide/"/>
+    <image id="df6n59" name="img_ide_9.png" path="/img_UI3/ide/" scale="9grid" scale9grid="40,25,80,50"/>
+    <image id="df6n5a" name="img_ide_1.png" path="/img_UI3/ide/" scale="9grid" scale9grid="20,20,40,40"/>
+    <image id="df6n5b" name="img_ide_2.png" path="/img_UI3/ide/"/>
+    <image id="df6n5f" name="img_ide_6.png" path="/img_UI3/ide/"/>
+    <image id="df6n5g" name="img_ide_7.png" path="/img_UI3/ide/"/>
+    <image id="df6n5i" name="img_ide_bag_1.png" path="/img_UI3/ide/" scale="9grid" scale9grid="50,100,64,50"/>
+    <image id="df6n5j" name="img_ide_item_1.png" path="/img_UI3/ide/"/>
+    <image id="df6n5k" name="img_ide_title.png" path="/img_UI3/ide/"/>
+    <component id="df6n5l" name="ComMapEntitySelect.xml" path="/Com/" exported="true"/>
+    <component id="df6n5m" name="BtnEntitySelect.xml" path="/btn/" exported="true"/>
+    <component id="qouo5n" name="WinBuildIde.xml" path="/win/" exported="true"/>
+    <component id="uvgl4p" name="ComSelectToHideRocker.xml" path="/Com/"/>
+    <component id="p6hg5p" name="ComBuildOperate.xml" path="/Com/"/>
+    <component id="1194t5r" name="ComBuildAttr.xml" path="/Com/"/>
+    <image id="qki6t5s" name="img_ide_ddk_10.png" path="/img_UI3/" scale="9grid" scale9grid="30,28,60,56"/>
+    <image id="qki6t5t" name="img_ide_xdk_8.png" path="/img_UI3/" scale="9grid" scale9grid="29,29,58,58"/>
+    <image id="qki6t5u" name="img_ide_ds_11.png" path="/img_UI3/ide/" scale="9grid" scale9grid="37,35,74,70"/>
+    <image id="r0y9t5v" name="btn_ide_bb_1.png" path="/img_UI3/b/ide/"/>
+    <image id="r0y9t5y" name="btn_ide_fh_1.png" path="/img_UI3/b/ide/"/>
+    <image id="r0y9t60" name="btn_ide_lx_fh_1.png" path="/img_UI3/b/ide/"/>
+    <image id="r0y9t6a" name="icon_ide_lx_1.png" path="/img_UI3/b/ide/"/>
+    <image id="r0y9t6b" name="icon_ide_lx_2.png" path="/img_UI3/b/ide/"/>
+    <image id="r0y9t6c" name="icon_ide_lx_3.png" path="/img_UI3/b/ide/"/>
+    <image id="r0y9t6d" name="icon_ide_lx_4.png" path="/img_UI3/b/ide/"/>
+    <image id="r0y9t6e" name="icon_ide_lx_5.png" path="/img_UI3/b/ide/"/>
+    <image id="r0y9t6f" name="icon_ide_lx_6.png" path="/img_UI3/b/ide/"/>
+    <image id="r0y9t6g" name="icon_ide_tck_1.png" path="/img_UI3/b/ide/"/>
+    <image id="r0y9t6h" name="icon_ide_tck_2.png" path="/img_UI3/b/ide/"/>
+    <image id="r0y9t6i" name="icon_ide_tck_3.png" path="/img_UI3/b/ide/"/>
+    <image id="r0y9t6j" name="icon_ide_tck_4.png" path="/img_UI3/b/ide/"/>
+    <image id="r0y9t6l" name="icon_ide_tck_5.png" path="/img_UI3/b/ide/"/>
+    <image id="r0y9t6m" name="icon_ide_tck_6.png" path="/img_UI3/b/ide/"/>
+    <image id="r0y9t6o" name="icon_ied_bj_1.png" path="/img_UI3/b/ide/"/>
+    <image id="r0y9t6p" name="icon_ied_sx_1.png" path="/img_UI3/b/ide/"/>
+    <image id="r0y9t6q" name="icon_ied_wp_xs_1.png" path="/img_UI3/b/ide/"/>
+    <image id="r0y9t6r" name="icon_ied_wp_yc_2.png" path="/img_UI3/b/ide/"/>
+    <image id="r0y9t6t" name="img_ide_dk_2.png" path="/img_UI3/b/ide/" scale="9grid" scale9grid="39,26,78,52"/>
+    <image id="r0y9t6v" name="img_ide_dk_gd_1.png" path="/img_UI3/b/ide/"/>
+    <image id="r0y9t6w" name="img_ide_dk_gd_2.png" path="/img_UI3/b/ide/"/>
+    <image id="r0y9t6x" name="img_ide_fd_1.png" path="/img_UI3/b/ide/"/>
+    <image id="r0y9t6z" name="img_ide_lx_7.png" path="/img_UI3/b/ide/"/>
+    <image id="r0y9t70" name="img_ide_ssk_1.png" path="/img_UI3/b/ide/" scale="9grid" scale9grid="45,10,84,11"/>
+    <image id="r0y9t71" name="img_ide_ssk_2.png" path="/img_UI3/b/ide/"/>
+    <image id="r0y9t72" name="img_ide_sx_1.png" path="/img_UI3/b/ide/"/>
+    <image id="r0y9t78" name="img_ide_tck_1.png" path="/img_UI3/b/ide/" scale="9grid" scale9grid="37,15,74,30"/>
+    <image id="r0y9t79" name="img_ide_tck_2.png" path="/img_UI3/b/ide/"/>
+    <image id="r0y9t7f" name="img_ide_wp_3.png" path="/img_UI3/b/ide/" scale="9grid" scale9grid="13,13,26,26"/>
+    <image id="r0y9t7g" name="img_ide_yt_1.png" path="/img_UI3/b/ide/"/>
+    <image id="r0y9t7h" name="img_ied_wp_1.png" path="/img_UI3/b/ide/"/>
+    <component id="r0y9t7i" name="WinBuildIdeB.xml" path="/win/" exported="true"/>
+    <component id="r0y9t7j" name="rbtnType.xml" path="/btn/"/>
+    <component id="r0y9t7k" name="RBtnBuildRendererB.xml" path="/btn/" exported="true"/>
+    <component id="r0y9t7l" name="ComBuildOperaB.xml" path="/Com/"/>
+    <component id="r0y9t7m" name="BtnOpera.xml" path="/btn/" exported="true"/>
+    <component id="yhf8t7n" name="ComMapEntitySelectB.xml" path="/Com/" exported="true"/>
+    <component id="yhf8t7o" name="BtnEntitySelectB.xml" path="/btn/" exported="true"/>
+    <component id="j0zct7p" name="ComMapScaleViewB.xml" path="/Com/"/>
+    <component id="vulyt7s" name="ComBuildAttrB.xml" path="/Com/" exported="true"/>
+    <image id="phs5t7t" name="icon_ide_lx_7.png" path="/img_UI3/b/ide/"/>
+    <image id="phs5t7u" name="icon_ide_lx_8.png" path="/img_UI3/b/ide/"/>
+    <component id="q2s3t7v" name="ComBuildPreviewB.xml" path="/Com/" exported="true"/>
+    <component id="uhu6t7w" name="ComBuildShortCut.xml" path="/Com/" exported="true"/>
+    <image id="uhu6t7x" name="btn_ide_zm_1.png" path="/img_UI3/b/ide/" exported="true" scale="9grid" scale9grid="5,29,27,15"/>
+    <image id="uhu6t7y" name="btn_ide_zm_2.png" path="/img_UI3/b/ide/" exported="true" scale="9grid" scale9grid="7,28,26,15"/>
+    <image id="uhu6t7z" name="btn_ide_zm_3.png" path="/img_UI3/b/ide/" exported="true" scale="9grid" scale9grid="8,28,24,15"/>
+    <image id="uhu6t80" name="btn_ide_zm_4.png" path="/img_UI3/b/ide/" exported="true" scale="9grid" scale9grid="8,28,25,16"/>
+    <component id="k177t82" name="BtnBuildShortCut.xml" path="/btn/" exported="true"/>
+    <image id="xvfat83" name="btn_ide_tj_1.png" path="/img_UI3/b/ide/"/>
+    <image id="xvfat84" name="btn_ide_zm_5.png" path="/img_UI3/b/ide/" exported="true" scale="9grid" scale9grid="11,33,22,7"/>
+    <image id="xvfat85" name="btn_ide_zm_6.png" path="/img_UI3/b/ide/" exported="true"/>
+    <image id="xvfat86" name="icon_ide_tck_7.png" path="/img_UI3/b/ide/"/>
+    <image id="xvfat87" name="icon_ide_tck_8.png" path="/img_UI3/b/ide/"/>
+    <image id="mte0t88" name="icon_ide_lb_1.png" path="/img_UI3/b/ide/"/>
+    <image id="mte0t89" name="icon_ide_lb_2.png" path="/img_UI3/b/ide/"/>
+    <component id="mte0t8b" name="BtnEntityInfoSelect.xml" path="/btn/" exported="true"/>
+    <component id="m4pft8c" name="ToolTipBuildCopy.xml" path="/Com/" exported="true"/>
+    <component id="coont8d" name="WinMapLookB.xml" path="/win/" exported="true"/>
+    <image id="coont8e" name="btn_hid_ms_1.png" path="/img_UI3/b/maplook/"/>
+    <image id="coont8h" name="icon_hid_ms_3.png" path="/img_UI3/b/maplook/" scale="" scale9grid="21,11,42,22"/>
+    <image id="coont8i" name="icon_hid_ms_4.png" path="/img_UI3/b/maplook/"/>
+    <image id="coont8j" name="icon_hid_ms_5.png" path="/img_UI3/b/maplook/"/>
+    <component id="coont8k" name="ComMapScaleViewMapLookB.xml" path="/Com/"/>
+    <image id="unomt8l" name="btn_ide_hb_1.png" path="/img_UI3/b/ide/"/>
+    <image id="unomt8m" name="icon_ide_zdy_1.png" path="/img_UI3/b/ide/"/>
+    <image id="zefit8t" name="img_ide_sck_1.png" path="/img_UI3/b/ide/"/>
+    <image id="zefit8u" name="btn_ide_sck_del.png" path="/img_UI3/b/ide/"/>
+    <image id="zefit8v" name="btn_ide_sck_esc.png" path="/img_UI3/b/ide/"/>
+    <image id="zefit8w" name="btn_ide_sck_R.png" path="/img_UI3/b/ide/"/>
+    <image id="zefit8x" name="btn_ide_sck_v.png" path="/img_UI3/b/ide/"/>
+    <component id="zefit91" name="ComIdeTopToolBar.xml" path="/Com/" exported="true"/>
+    <component id="cw9mt92" name="BtnIdeToolItem.xml" path="/btn/"/>
+    <component id="jnb2t96" name="BtnBuildMode.xml" path="/btn/"/>
+    <component id="jnb2t97" name="WinBuildIdeBOld.xml" path="/win/"/>
+    <component id="7sltt98" name="ComBuildCreate.xml" path="/Com/" exported="true"/>
+    <component id="kt9nt99" name="SaveTemplateAlert.xml" path="/win/" exported="true"/>
+    <component id="kt9nt9a" name="ComSelectScope.xml" path="/Com/"/>
+    <image id="kt9nt9b" name="img_ide_sy_1.png" path="/img_UI3/b/ide/"/>
+    <component id="jm8lt9c" name="ComBuildMove.xml" path="/Com/" exported="true"/>
+    <image id="m5hnt9d" name="btn_ide_sck_cz.png" path="/img_UI3/b/ide/"/>
+    <image id="m5hnt9e" name="btn_ide_sck_sz.png" path="/img_UI3/b/ide/"/>
+    <image id="m5hnt9f" name="btn_ide_sck_th.png" path="/img_UI3/b/ide/"/>
+    <image id="m5hnt9g" name="btn_ide_sck_xz.png" path="/img_UI3/b/ide/"/>
+    <image id="m5hnt9h" name="icon_ide_dx_1.png" path="/img_UI3/b/ide/"/>
+    <image id="m5hnt9i" name="img_ide_sck_x.png" path="/img_UI3/b/ide/"/>
+    <image id="m5hnt9j" name="img_ide_sck_xzk.png" path="/img_UI3/b/ide/"/>
+    <component id="m5hnt9l" name="ComBuildTerrain.xml" path="/Com/" exported="true"/>
+    <component id="m5hnt9m" name="BtnBuildTerrain.xml" path="/btn/" exported="true"/>
+    <component id="m5hnt9n" name="ComBuildShovelView.xml" path="/Com/" exported="true"/>
+    <component id="jktht9o" name="spriteBtnIde.xml" path="/sprite/"/>
+    <component id="jktht9p" name="btnIde.xml" path="/btn/" exported="true"/>
+    <component id="e7dht9d" name="HoverTipBuildTab.xml" path="/Com/" exported="true"/>
+    <image id="p7oot9q" name="icon_cm_gjl_9.png" path="/img_UI3/b/ide/"/>
+    <component id="fidkt9r" name="ComBuildAniSelect.xml" path="/Com/" exported="true"/>
+    <component id="fidkt9s" name="ComBuildAniEdit.xml" path="/Com/" exported="true"/>
+    <component id="fidkt9t" name="comBuildAniScroll.xml" path="/Com/" exported="true"/>
+    <component id="fidkt9u" name="ComBuildAniBox.xml" path="/Com/" exported="true"/>
+    <component id="fidkt9v" name="ComBuildFrameBox.xml" path="/Com/" exported="true"/>
+    <component id="fidkt9w" name="comBuildFrameScroll.xml" path="/Com/" exported="true"/>
+    <image id="s1sdt9x" name="icon_cm_dh_1.png" path="/newImg/AnimationEdit/" exported="true"/>
+    <image id="s1sdt9y" name="icon_cm_dh_2.png" path="/newImg/AnimationEdit/" exported="true"/>
+    <image id="s1sdt9z" name="icon_cm_dh_3.png" path="/newImg/AnimationEdit/" exported="true"/>
+    <image id="s1sdta0" name="icon_cm_dh_4.png" path="/newImg/AnimationEdit/" exported="true"/>
+    <image id="s1sdta1" name="icon_cm_dh_5.png" path="/newImg/AnimationEdit/" exported="true"/>
+    <image id="s1sdta2" name="icon_cm_dh_6.png" path="/newImg/AnimationEdit/" exported="true"/>
+    <image id="s1sdta3" name="icon_cm_dh_7.png" path="/newImg/AnimationEdit/" exported="true"/>
+    <image id="s1sdta4" name="icon_cm_dh_8.png" path="/newImg/AnimationEdit/" exported="true"/>
+    <image id="s1sdta5" name="icon_cm_dh_9.png" path="/newImg/AnimationEdit/" exported="true"/>
+    <image id="s1sdta6" name="icon_cm_dh_10.png" path="/newImg/AnimationEdit/" exported="true"/>
+    <image id="s1sdta7" name="img_cm_dh_1.png" path="/newImg/AnimationEdit/" exported="true"/>
+    <image id="s1sdta8" name="img_cm_dh_2.png" path="/newImg/AnimationEdit/" exported="true"/>
+    <image id="s1sdta9" name="img_cm_dh_3.png" path="/newImg/AnimationEdit/" exported="true" scale="9grid" scale9grid="9,9,36,34"/>
+    <image id="s1sdtaa" name="img_cm_dh_4.png" path="/newImg/AnimationEdit/" exported="true" scale="9grid" scale9grid="9,9,36,34"/>
+    <image id="s1sdtab" name="img_cm_dh_5.png" path="/newImg/AnimationEdit/" exported="true" scale="9grid" scale9grid="9,9,36,34"/>
+    <image id="s1sdtac" name="img_cm_dh_6.png" path="/newImg/AnimationEdit/" exported="true" scale="9grid" scale9grid="6,6,68,18"/>
+    <image id="s1sdtad" name="img_cm_dh_7.png" path="/newImg/AnimationEdit/" exported="true" scale="9grid" scale9grid="9,9,226,274"/>
+    <image id="s1sdtae" name="img_cm_dh_8.png" path="/newImg/AnimationEdit/" exported="true" scale="9grid" scale9grid="9,9,26,26"/>
+    <component id="s1sdtaf" name="btnCombineAni.xml" path="/btn/" exported="true"/>
+    <image id="s1sdtag" name="img_cm_dh_11.png" path="/newImg/AnimationEdit/" exported="true"/>
+  </resources>
+  <publish name="build" npot="true"/>
+</packageDescription>
