@@ -3,6 +3,9 @@ import { Global } from './Global.js';
 import * as fsExc from './FsExecute';
 import * as path from 'path';
 
+const externalSuffix = '/resource/external';
+const externalResSuffix = '/resource/external.json';
+
 const assetSuffix = '/resource/assets';
 const defaultResSuffix = '/resource/default.res.json';
 
@@ -27,6 +30,33 @@ const groupFile = {
 }
 
 const sheetArr = ['sheet', 'regSheet'];
+
+export async function importExternal() {
+  try {
+    let external_folder_path = Global.projPath + externalSuffix;
+    let externalConfig = {};
+    await importExternalFolder(external_folder_path, externalConfig);
+    let content = JSON.stringify(externalConfig);
+    let configPath = Global.projPath + externalResSuffix;
+    await fsExc.writeFile(configPath, content);
+
+    Global.toast('导入external配置成功');
+  } catch (error) {
+    Global.snack('导入external配置错误', error);
+  }
+}
+
+async function importExternalFolder(folderPath, externalConfig) {
+  let files = await fsExc.readDir(folderPath);
+  for (const file of files) {
+    let curPath = folderPath + '/' + file;
+    if (await fsExc.isDirectory(curPath)) {
+      await importExternalFolder(curPath, externalConfig);
+    } else {
+      externalConfig[file] = file;
+    }
+  }
+}
 
 export async function importDefault() {
   try {

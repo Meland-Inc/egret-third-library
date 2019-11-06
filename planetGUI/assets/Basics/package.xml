@@ -485,6 +485,8 @@
     <image id="g8fatm1" name="img_code_bllb_8.png" path="/newImg2/" scale="9grid" scale9grid="44,16,43,32"/>
     <image id="g8fatm2" name="img_code_bllb_7.png" path="/newImg2/" scale="9grid" scale9grid="43,17,52,34"/>
     <image id="h5butm3" name="img_code_xl_1_2.png" path="/newImg2/" scale="9grid" scale9grid="7,7,63,90"/>
+    <component id="rwpwtm4" name="ComCodePanelGrid.xml" path="/newCom/"/>
+    <component id="rwpwtm5" name="WinCodePanel.xml" path="/win/" exported="true"/>
   </resources>
   <publish name="Basics"/>
 </packageDescription>

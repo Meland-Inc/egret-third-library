@@ -1,9 +1,9 @@
-import { Global } from './Global.js';
-import * as spawnExc from './SpawnExecute.js';
-import * as fsExc from './FsExecute';
-import * as path from 'path';
 import * as fs from 'fs';
+import * as path from 'path';
+import * as fsExc from './FsExecute';
+import { Global } from './Global.js';
 import { ModelMgr } from './model/ModelMgr';
+import * as spawnExc from './SpawnExecute.js';
 
 const releaseSuffix = '/bin-release/web/';
 const thmFileSuffix = 'resource/default.thm.json';
@@ -11,17 +11,20 @@ const defaultResSuffix = 'resource/default.res.json';
 const mapDataResSuffix = 'resource/mapData.res.json';
 const asyncResSuffix = 'resource/async.res.json';
 const indieResSuffix = 'resource/indie.res.json';
+const externalResSuffix = 'resource/external.json';
 
 //resource里的文件
+const externalSfx = "external";
 const assetsSfx = "assets";
 const asyncSfx = "async";
 const indieSfx = "indie";
 
+const external_suffix_path = '/resource/external';
 const assets_suffix_path = '/resource/assets';
 const async_suffix_path = '/resource/async';
 const indie_suffix_path = '/resource/indie';
 
-const assetSfxValues = [assetsSfx, asyncSfx, indieSfx];
+const assetSfxValues = [assetsSfx, asyncSfx, indieSfx, externalSfx];
 
 export async function updateGit() {
     let gitBranch = ModelMgr.versionModel.curEnviron.gitBranch;
@@ -39,7 +42,7 @@ export async function updateGit() {
         if (ModelMgr.versionModel.curEnviron.codeVersionEnable) {
             let configPath = `${Global.projPath}/src/GameConfig.ts`;
             let configContent = await fsExc.readFile(configPath);
-            let reg = /public static codeVersion = ".*?"/;
+            let reg = /public static codeVersion = ".*?";/;
             configContent = configContent.replace(reg, `public static codeVersion = "${ModelMgr.versionModel.releaseVersion}";`);
             await fsExc.writeFile(configPath, configContent);
         }
@@ -215,6 +218,9 @@ async function mergeSingleVersion(newVersion, oldVersion, isRelease) {
             // }
             // await copyFileCheckDir(thmFileSuffix, svnCdnPatchPath, newVersion);
 
+            //external.json
+            await externalHandle(externalResSuffix, newVersion, svnRlsPath, svnPatchPath);
+
             //default.res.json
             await resFileHandle(defaultResSuffix, newVersion, svnRlsPath, svnPatchPath);
 
@@ -232,6 +238,9 @@ async function mergeSingleVersion(newVersion, oldVersion, isRelease) {
             // let oldThmPath = 'resource/default.thm' + '_v' + oldVersion + '.json';
             // await mergeFileInVersion(oldThmPath, thmFileSuffix, svnCdnRlsPath, svnCdnPatchPath, oldVersion, newVersion, oldSvnCdnRlsPath);
 
+            //external.json
+            await externalHandle(externalResSuffix, newVersion, svnRlsPath, svnPatchPath, oldVersion, oldSvnRlsPath);
+
             //default.res.json
             await resFileHandle(defaultResSuffix, newVersion, svnRlsPath, svnPatchPath, oldVersion, oldSvnRlsPath);
 
@@ -248,6 +257,61 @@ async function mergeSingleVersion(newVersion, oldVersion, isRelease) {
     } catch (error) {
         Global.snack(`比较版本 v${oldVersion}s-v${newVersion}s 错误`, error);
     }
+}
+
+async function externalHandle(resFilePath, newVersion, releasePath, patchPath, oldVersion, oldVersionPath) {
+    let projNewVersionPath = Global.projPath + releaseSuffix + newVersion;
+    let externalCfgPath = projNewVersionPath + '/' + resFilePath;
+    let externalCfgContent = await fsExc.readFile(externalCfgPath);
+    let externalCfgObj = JSON.parse(externalCfgContent);
+
+    if (releasePath) {
+        await fsExc.makeDir(`${releasePath}${external_suffix_path}`);
+    }
+    await fsExc.makeDir(`${patchPath}${external_suffix_path}`);
+
+    for (const key in externalCfgObj) {
+        if (externalCfgObj.hasOwnProperty(key)) {
+            let useNew = true;
+            let fileName = externalCfgObj[key];
+            let fileInfo = fileName.split(".");
+            let oldFilePath = `${oldVersionPath}${external_suffix_path}/${fileInfo[0]}_v${oldVersion}.${fileInfo[1]}`;
+            let newFilePath = `${projNewVersionPath}${external_suffix_path}/${fileName}`;
+            if (oldVersion) {
+                let oldFileExist = await fsExc.exists(oldFilePath);
+                if (oldFileExist) {
+                    let fileEqual = await fsExc.mergeFileByMd5(`${oldFilePath}`, `${newFilePath}`);
+                    if (fileEqual) {
+                        useNew = false;
+                    }
+                }
+            }
+
+            if (useNew) {
+                if (releasePath) {
+                    await copyFile(`${newFilePath}`, `${releasePath}${external_suffix_path}/${fileName}`, newVersion);
+                }
+                await copyFile(`${newFilePath}`, `${patchPath}${external_suffix_path}/${fileName}`, newVersion);
+                externalCfgObj[key] = `${fileInfo[0]}_v${newVersion}.${fileInfo[1]}`;
+            } else {
+                if (releasePath) {
+                    await copyFile(`${newFilePath}`, `${releasePath}${external_suffix_path}/${fileName}`, oldVersion);
+                }
+                externalCfgObj[key] = `${fileInfo[0]}_v${oldVersion}.${fileInfo[1]}`;
+            }
+        }
+    }
+
+
+    if (releasePath) {
+        let newCfgRlsPath = `${releasePath}/${resFilePath}`;
+        newCfgRlsPath = addVersionToPath(newCfgRlsPath, newVersion);
+        await fsExc.writeFile(newCfgRlsPath, JSON.stringify(externalCfgObj));
+    }
+    let newCfgPatchPath = patchPath + '/' + resFilePath;
+    newCfgPatchPath = addVersionToPath(newCfgPatchPath, newVersion);
+    await fsExc.writeFile(newCfgPatchPath, JSON.stringify(externalCfgObj));
+
 }
 
 /**
@@ -619,6 +683,7 @@ export async function clearResource(releasePath) {
     let assetsPath = releasePath + assets_suffix_path;
     let asyncPath = releasePath + async_suffix_path;
     let indiePath = releasePath + indie_suffix_path;
+    let externalPath = releasePath + external_suffix_path;
     try {
         for (const iterator of assetSfxValues) {
             switch (iterator) {
@@ -630,6 +695,9 @@ export async function clearResource(releasePath) {
                     break;
                 case indieSfx:
                     await fsExc.delFiles(indiePath);
+                    break;
+                case externalSfx:
+                    await fsExc.delFiles(externalPath);
                     break;
             }
         }
@@ -643,10 +711,12 @@ export async function copyResource(releasePath) {
     let compressAssetsPath = Global.compressResourcePath + '/' + assetsSfx;
     let compressAsyncPath = Global.compressResourcePath + '/' + asyncSfx;
     let compressIndiePath = Global.compressResourcePath + '/' + indieSfx;
+    let compressExternalPath = Global.compressResourcePath + '/' + externalSfx;
 
     let assetsPath = releasePath + assets_suffix_path;
     let asyncPath = releasePath + async_suffix_path;
     let indiePath = releasePath + indie_suffix_path;
+    let externalPath = releasePath + external_suffix_path;
     try {
         for (const iterator of assetSfxValues) {
             switch (iterator) {
@@ -661,6 +731,10 @@ export async function copyResource(releasePath) {
                 case indieSfx:
                     await fsExc.makeDir(indiePath);
                     await fsExc.copyFile(compressIndiePath, indiePath, true);
+                    break;
+                case externalSfx:
+                    await fsExc.makeDir(externalPath);
+                    await fsExc.copyFile(compressExternalPath, externalPath, true);
                     break;
             }
         }
