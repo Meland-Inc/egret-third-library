@@ -280,7 +280,7 @@ async function externalHandle(resFilePath, newVersion, releasePath, patchPath, o
             if (oldVersion) {
                 let oldFileExist = await fsExc.exists(oldFilePath);
                 if (oldFileExist) {
-                    fileEqual = await fsExc.mergeFileByMd5(`${oldFilePath}`, `${newFilePath}`);
+                    let fileEqual = await fsExc.mergeFileByMd5(`${oldFilePath}`, `${newFilePath}`);
                     if (fileEqual) {
                         useNew = false;
                     }
