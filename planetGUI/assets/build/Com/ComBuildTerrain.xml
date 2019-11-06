@@ -13,7 +13,7 @@
     <image id="n0_7slt" name="n0" src="nl0rcyic7" fileName="imgB/bg_cm_1.png" pkg="te1gxawo" xy="55,0" size="305,640" group="n16_jm8l">
       <relation target="" sidePair="height-height"/>
     </image>
-    <list id="n4_7slt" name="lstBackpack" xy="67,9" size="284,630" group="n16_jm8l" layout="flow_hz" overflow="scroll" scrollBar="visible" scrollBarMargin="5,5,0,0" scrollBarRes="ui://te1gxawovulycyid4," lineGap="12" colGap="11" defaultItem="ui://32ieekgur0y9t7k" autoClearItems="true">
+    <list id="n4_7slt" name="lstBackpack" xy="67,9" size="284,630" group="n16_jm8l" layout="flow_hz" selectionMode="multipleSingleClick" overflow="scroll" scrollBar="visible" scrollBarMargin="5,5,0,0" scrollBarRes="ui://te1gxawovulycyid4," lineGap="12" colGap="11" defaultItem="ui://32ieekgur0y9t7k" autoClearItems="true">
       <relation target="" sidePair="height-height"/>
       <item/>
       <item/>
