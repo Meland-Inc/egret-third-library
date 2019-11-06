@@ -24,7 +24,7 @@
     <image id="s45wk" name="img_code_yd_3.png" path="/img/"/>
     <image id="s45wl" name="img_code_ys_2.png" path="/img/"/>
     <image id="s45wm" name="img_code_ys_3.png" path="/img/"/>
-    <image id="s45wn" name="icon_code_bl_2.png" path="/img/"/>
+    <image id="s45wn" name="icon_code_bl_2.png" path="/img/" exported="true"/>
     <image id="s45wo" name="icon_code_bl_3.png" path="/img/"/>
     <image id="s45wp" name="icon_code_bl_4.png" path="/img/"/>
     <image id="s45wq" name="icon_code_bl_5.png" path="/img/"/>
@@ -60,5 +60,5 @@
     <image id="s45w1k" name="img_code_gn_2.png" path="/img/"/>
     <image id="s45w1l" name="img_code_hs_2.png" path="/img/"/>
   </resources>
-  <publish name=""/>
+  <publish name="code"/>
 </packageDescription>

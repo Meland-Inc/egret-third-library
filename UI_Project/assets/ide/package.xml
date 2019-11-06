@@ -24,27 +24,27 @@
     <image id="s45wk" name="icon_codeV_ys_1_1.png" path="/codeVew/img/"/>
     <image id="s45wl" name="icon_codeV_zdy_1.png" path="/codeVew/img/"/>
     <image id="s45wm" name="icon_codeV_zdy_1_1.png" path="/codeVew/img/"/>
-    <image id="s45wn" name="img_code_bl_1.png" path="/codeVew/img/" scale9grid="0,14,5,28"/>
+    <image id="s45wn" name="img_code_bl_1.png" path="/codeVew/img/" scale="9grid" scale9grid="1,14,2,28"/>
     <image id="s45wo" name="img_code_bl_1_1.png" path="/codeVew/img/"/>
-    <image id="s45wp" name="img_code_gn_1.png" path="/codeVew/img/"/>
+    <image id="s45wp" name="img_code_gn_1.png" path="/codeVew/img/" scale="9grid" scale9grid="1,14,2,28"/>
     <image id="s45wq" name="img_code_gn_1_1.png" path="/codeVew/img/"/>
-    <image id="s45wr" name="img_code_hs_1.png" path="/codeVew/img/"/>
+    <image id="s45wr" name="img_code_hs_1.png" path="/codeVew/img/" scale="9grid" scale9grid="1,14,2,28"/>
     <image id="s45ws" name="img_code_hs_1_1.png" path="/codeVew/img/"/>
-    <image id="s45wt" name="img_code_jc_1.png" path="/codeVew/img/"/>
+    <image id="s45wt" name="img_code_jc_1.png" path="/codeVew/img/" scale="9grid" scale9grid="1,14,2,28"/>
     <image id="s45wu" name="img_code_jc_1_1.png" path="/codeVew/img/"/>
-    <image id="s45wv" name="img_code_kz_1.png" path="/codeVew/img/"/>
+    <image id="s45wv" name="img_code_kz_1.png" path="/codeVew/img/" scale="9grid" scale9grid="1,14,2,28"/>
     <image id="s45ww" name="img_code_kz_1_1.png" path="/codeVew/img/"/>
-    <image id="s45wx" name="img_code_sj_1.png" path="/codeVew/img/"/>
+    <image id="s45wx" name="img_code_sj_1.png" path="/codeVew/img/" scale="9grid" scale9grid="1,14,2,28"/>
     <image id="s45wy" name="img_code_sj_1_1.png" path="/codeVew/img/"/>
-    <image id="s45wz" name="img_code_st_1.png" path="/codeVew/img/"/>
+    <image id="s45wz" name="img_code_st_1.png" path="/codeVew/img/" scale="9grid" scale9grid="1,14,2,28"/>
     <image id="s45w10" name="img_code_st_1_1.png" path="/codeVew/img/"/>
-    <image id="s45w11" name="img_code_yd_1.png" path="/codeVew/img/"/>
+    <image id="s45w11" name="img_code_yd_1.png" path="/codeVew/img/" scale="9grid" scale9grid="1,14,2,28"/>
     <image id="s45w12" name="img_code_yd_1_1.png" path="/codeVew/img/"/>
-    <image id="s45w13" name="img_code_ys_1.png" path="/codeVew/img/"/>
+    <image id="s45w13" name="img_code_ys_1.png" path="/codeVew/img/" scale="9grid" scale9grid="1,14,2,28"/>
     <image id="s45w14" name="img_code_ys_1_1.png" path="/codeVew/img/"/>
-    <image id="s45w15" name="img_code_zdy_1.png" path="/codeVew/img/"/>
+    <image id="s45w15" name="img_code_zdy_1.png" path="/codeVew/img/" scale="9grid" scale9grid="1,14,2,28"/>
     <image id="s45w16" name="img_code_zdy_1_1.png" path="/codeVew/img/"/>
-    <component id="s45w17" name="WinCodeView.xml" path="/codeVew/win/"/>
+    <component id="s45w17" name="WinCodeView.xml" path="/codeVew/win/" exported="true"/>
     <component id="s45w19" name="CodeblockContainer.xml" path="/codeVew/com/"/>
     <component id="s45w1a" name="comMainContainer.xml" path="/codeVew/com/"/>
     <component id="s45w1b" name="FreeContainer.xml" path="/codeVew/com/"/>
@@ -195,6 +195,15 @@
     <component id="lctb65" name="ComRadioSelect.xml" path="/codeVew/oldCom/"/>
     <component id="lctb66" name="ComRadioSelectScene.xml" path="/codeVew/oldCom/"/>
     <component id="lctb67" name="ComCreateArg.xml" path="/codeVew/oldCom/"/>
+    <component id="lctb68" name="ComCodeblockCopy.xml" path="/codeVew/oldCom/" exported="true"/>
+    <image id="lctb69" name="btn_code_bl_1.png" path="/codeVew/oldImg/" scale="9grid" scale9grid="13,7,26,11"/>
+    <component id="lctb6a" name="ComVariateEditB.xml" path="/codeVew/oldCom/" exported="true"/>
+    <image id="lctb6b" name="btn_code_bl_1(1).png" path="/codeVew/oldImg/" scale="9grid" scale9grid="13,7,26,11"/>
+    <component id="lctb6c" name="ComPartingLine.xml" path="/codeVew/oldCom/" exported="true"/>
+    <component id="lctb6d" name="ComIDEKeyWord.xml" path="/codeVew/oldCom/" exported="true"/>
+    <component id="lctb6e" name="ComCodeblockSelectLocation.xml" path="/codeVew/oldCom/" exported="true"/>
+    <image id="lctb6f" name="icon_code_tck_8.png" path="/codeVew/oldImg/" scale="9grid" scale9grid="30,5,60,10"/>
+    <image id="lctb6g" name="img_code_zb_1.png" path="/codeVew/oldImg/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>

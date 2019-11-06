@@ -4,7 +4,7 @@
     <component id="n27_hoex" name="comCodeblocksPool" src="s45w1v" fileName="codeVew/com/CodeblockPool.xml" xy="1174,0" size="630,1082" blend="none" controller="ctrlGameModel,1">
       <relation target="" sidePair="right-right,bottomext-bottom"/>
     </component>
-    <loader id="n28_8tz6" name="imgListBG" xy="1795,-5" size="132,1091" hideByEditor="true" url="ui://ti9jag5ts45w2" fill="scaleFree">
+    <loader id="n28_8tz6" name="imgListBG" xy="1795,-5" size="132,1099" url="ui://ti9jag5ts45w2" fill="scaleFree">
       <relation target="" sidePair="bottomext-bottom,right-right"/>
     </loader>
     <list id="n25_hoex" name="lstCategory" xy="1805,1" size="115,992" defaultItem="ui://ti9jag5ts45w22" align="center">
