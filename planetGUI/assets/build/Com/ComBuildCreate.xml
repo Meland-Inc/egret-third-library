@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="58,640" designImage="ui://i25v0ebkjnb25o" designImageOffsetX="-755" designImageAlpha="0">
-  <controller name="ctrlState" exported="true" pages="1,open,0,fold" selected="1"/>
+<component size="363,640" designImage="ui://i25v0ebkjnb25o" designImageOffsetX="-755" designImageAlpha="0">
+  <controller name="ctrlState" exported="true" pages="1,open,0,fold" selected="0"/>
   <controller name="ctrlEnable" pages="0,enable,1,disable" selected="0"/>
   <displayList>
-    <graph id="n19_n83g" name="n19" xy="0,0" size="58,640" visible="false" alpha="0" touchable="false" type="rect">
+    <graph id="n19_n83g" name="n19" xy="0,0" size="363,640" visible="false" alpha="0" touchable="false" type="rect">
       <gearXY controller="ctrlState" pages="1,0" values="0,0|0,0"/>
       <gearSize controller="ctrlState" pages="1,0" values="363,640,1,1|58,640,1,1"/>
     </graph>
