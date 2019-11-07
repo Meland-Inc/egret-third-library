@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="180,102" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="1"/>
+  <controller name="ctrlMode" pages="0,default,1,hide" selected="0"/>
+  <displayList>
+    <image id="n1_p6jr" name="imgBtnBg" src="p6jr4d" fileName="newImg1/WinMapLook/img_mode_5.png" xy="12,55" group="n5_p6jr">
+      <gearLook controller="button" pages="0" values="0,0,0,1" default="1,0,0,1"/>
+    </image>
+    <text id="n3_p6jr" name="tf2" xy="46,62" size="87,27" group="n5_p6jr" fontSize="20" color="#447edd" align="center" vAlign="middle" text="隐藏模式">
+      <gearLook controller="button" pages="0" values="0,0,0,1" default="1,0,0,1"/>
+      <gearText controller="ctrlMode" pages="1" values="查看模式" default="隐藏模式"/>
+    </text>
+    <group id="n5_p6jr" name="tfBtnTitle" xy="12,55" size="155,42" advanced="true" collapsed="true">
+      <gearXY controller="button" pages="0" values="12,14" default="12,55" tween="true"/>
+    </group>
+    <image id="n0_p6jr" name="imgTitleBg" src="p6jr3t" fileName="newImg1/WinMapLook/btn_mode_14.png" xy="0,0"/>
+    <text id="n2_p6jr" name="tfTitle" xy="10,16" size="158,31" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="height" text="查看模式">
+      <gearText controller="ctrlMode" pages="1" values="隐藏模式" default="查看模式"/>
+    </text>
+  </displayList>
+  <Button mode="Check"/>
+  <relation target="n5_p6jr" sidePair="bottomext-bottom"/>
+</component>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="206,100">
+  <displayList>
+    <image id="n3_k3cq" name="n3" src="cfaftkp" fileName="B-PlatformImg/icon_code_tck_8.png" xy="0,0" size="206,31">
+      <relation target="n2_cfaf" sidePair="width-width"/>
+    </image>
+    <component id="n1_cfaf" name="n1" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="79,40" size="48,60">
+      <relation target="n2_cfaf" sidePair="center-center"/>
+      <Button icon="ui://rnqj1l77cfaftkq"/>
+    </component>
+    <text id="n2_cfaf" name="tfLocation" xy="0,0" size="206,31" fontSize="24" color="#ffffff" align="center" vAlign="middle" vars="true" text="（{x=900000},{y=900000}）"/>
+  </displayList>
+  <relation target="n2_cfaf" sidePair="width-width"/>
+</component>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="194,218" designImage="ui://i25v0ebkp6jr3j" designImageOffsetX="-866" designImageOffsetY="-362" designImageAlpha="100">
+  <displayList>
+    <component id="n2_o68g" name="btnHide" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="115,0" size="79,68">
+      <Button titleColor="#ffffff" icon="ui://32ieekgup6jr49"/>
+    </component>
+    <component id="n6_o68g" name="comSelectToHideRocker" src="uvgl4p" fileName="Com/ComSelectToHideRocker.xml" xy="22,66" pivot="0.5,0.5"/>
+    <component id="n7_lxr1" name="btnUnhide" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="0,8" size="79,50">
+      <Button titleColor="#ffffff" icon="ui://32ieekgup6jr48"/>
+    </component>
+  </displayList>
+</component>

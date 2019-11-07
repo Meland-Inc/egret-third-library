@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="80,80" pivot="0.5,0.5" extention="Button">
+  <displayList>
+    <image id="n0_1194t" name="n0" src="tcu29k" fileName="newImg2/btn_code_1.png" xy="0,0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <loader id="n1_1194t" name="icon" xy="29,25" size="21,30" url="ui://rnqj1l77tcu298" autoSize="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.95"/>
+</component>

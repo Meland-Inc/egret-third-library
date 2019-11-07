@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="58,640" designImage="ui://i25v0ebkjnb25o" designImageOffsetX="-755" designImageAlpha="0">
+  <controller name="ctrlState" exported="true" pages="1,open,0,fold" selected="1"/>
+  <controller name="ctrlEnable" pages="0,enable,1,disable" selected="0"/>
+  <displayList>
+    <graph id="n19_n83g" name="n19" xy="0,0" size="58,640" visible="false" alpha="0" touchable="false" type="rect">
+      <gearXY controller="ctrlState" pages="1,0" values="0,0|0,0"/>
+      <gearSize controller="ctrlState" pages="1,0" values="363,640,1,1|58,640,1,1"/>
+    </graph>
+    <image id="n0_7slt" name="n0" src="nl0rcyic7" fileName="imgB/bg_cm_1.png" pkg="te1gxawo" xy="58,0" size="305,640" group="n16_jm8l">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <list id="n2_7slt" name="lstBpTabBar" xy="68,50" size="295,60" group="n16_jm8l" layout="flow_hz" overflow="hidden" lineGap="4" defaultItem="ui://32ieekgucw9mt92" autoItemSize="true">
+      <item title="全部" icon="ui://32ieekguphs5t7t" name="all"/>
+      <item title="墙面" icon="ui://32ieekguphs5t7u" name="wall"/>
+      <item title="地板" icon="ui://32ieekgur0y9t6d" name="floor"/>
+      <item title="功能" icon="ui://32ieekgur0y9t6e" name="func"/>
+      <item title="装饰" icon="ui://32ieekgur0y9t6f" name="decoration"/>
+      <item title="生物" icon="ui://32ieekgur0y9t6b" name="puppet"/>
+      <item title="植物" icon="ui://32ieekgur0y9t6a" name="plant"/>
+      <item title="武器" icon="ui://32ieekgur0y9t6c" name="weapon"/>
+      <item title="自定义" icon="ui://32ieekguunomt8m" name="custom"/>
+    </list>
+    <list id="n4_7slt" name="lstBackpack" xy="70,125" size="276,511" group="n16_jm8l" layout="flow_hz" overflow="scroll" scrollBar="visible" scrollBarMargin="5,5,0,0" scrollBarRes="ui://te1gxawovulycyid4," lineGap="12" colGap="11" defaultItem="ui://32ieekgur0y9t7k" autoClearItems="true">
+      <relation target="" sidePair="height-height"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n5_7slt" name="n5" src="r0y9t70" fileName="img_UI3/b/ide/img_ide_ssk_1.png" xy="68,11" size="195,28" group="n16_jm8l"/>
+    <image id="n6_7slt" name="n6" src="r0y9t71" fileName="img_UI3/b/ide/img_ide_ssk_2.png" xy="80,18" group="n16_jm8l"/>
+    <text id="n7_7slt" name="tfSearch" xy="100,13" size="156,24" group="n16_jm8l" input="true" prompt="请输入搜索内容" fontSize="14" color="#ffffff" vAlign="middle" autoSize="none" singleLine="true" text=""/>
+    <component id="n9_7slt" name="btnDrawingPad" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="276,9" size="76,32" group="n16_jm8l">
+      <Button icon="ui://32ieekguunomt8l"/>
+    </component>
+    <group id="n16_jm8l" name="grpBp" xy="58,0" size="305,640" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlState" pages="1"/>
+    </group>
+    <image id="n1_7slt" name="n1" src="cw9mcyifj" fileName="imgB/img_cm_cbl_1.png" pkg="te1gxawo" xy="0,0" size="58,640" group="n17_jm8l">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <image id="n12_7slt" name="n12" src="7sltcyifx" fileName="imgB/img_cm_lk_1.png" pkg="te1gxawo" xy="-28,571" group="n17_jm8l">
+      <relation target="" sidePair="bottom-bottom"/>
+    </image>
+    <component id="n3_7slt" name="btnFold" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="21,11" size="20,20" group="n17_jm8l">
+      <gearDisplay controller="ctrlState" pages="1"/>
+      <Button icon="ui://te1gxawo7sltcyifz" controller="ctrlState" page="0"/>
+    </component>
+    <component id="n18_jm8l" name="btnOpen" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="21,11" size="20,20" group="n17_jm8l">
+      <gearDisplay controller="ctrlState" pages="0"/>
+      <Button icon="ui://te1gxawo7sltcyig0" controller="ctrlState" page="1"/>
+    </component>
+    <component id="n8_7slt" name="btnRun" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="-9,580" size="55,57" group="n17_jm8l">
+      <relation target="" sidePair="bottom-bottom"/>
+      <Button icon="ui://te1gxawocw9mcyifb" page="0"/>
+    </component>
+    <component id="n13_7slt" name="btnMirror" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="9,49" size="42,42" group="n17_jm8l">
+      <gearLook controller="ctrlEnable" pages="1" values="1,0,1,0" default="1,0,0,1"/>
+      <Button title="旋转" titleFontSize="14" icon="ui://32ieekguzefit8w"/>
+    </component>
+    <component id="n20_l74u" name="btnCopy" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="9,148" size="42,42" group="n17_jm8l">
+      <gearLook controller="ctrlEnable" pages="1" values="1,0,1,0" default="1,0,0,1"/>
+      <Button title="复制" titleFontSize="14" icon="ui://32ieekguzefit8x"/>
+    </component>
+    <component id="n21_l74u" name="btnDelete" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="9,198" size="42,42" group="n17_jm8l">
+      <gearLook controller="ctrlEnable" pages="1" values="1,0,1,0" default="1,0,0,1"/>
+      <Button title="删除" titleFontSize="14" icon="ui://32ieekguzefit8u"/>
+    </component>
+    <component id="n15_7slt" name="btnCancel" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="9,98" size="42,42" group="n17_jm8l">
+      <gearLook controller="ctrlEnable" pages="0" values="1,0,0,1" default="1,0,1,0"/>
+      <Button title="取消" titleFontSize="14" icon="ui://32ieekguzefit8v"/>
+    </component>
+    <group id="n17_jm8l" name="grpOperate" xy="-28,0" size="86,640" advanced="true" collapsed="true">
+      <gearXY controller="ctrlState" pages="1,0" values="-28,0|-28,0"/>
+    </group>
+  </displayList>
+  <relation target="n19_n83g" sidePair="width-width"/>
+</component>

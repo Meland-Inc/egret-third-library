@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="375,587" restrictSize="630,0,0,0">
+  <controller name="ctrlGameModel" exported="true" pages="0,game,1,lessons,2,creation" selected="2"/>
+  <displayList>
+    <loader id="n10_dib9" name="imgBG" xy="0,0" size="375,587" url="ui://ti9jag5ts45w1" fill="scaleFree">
+      <gearIcon controller="ctrlGameModel" pages="0,1,2" values="ui://ti9jag5ts45w1|ui://ti9jag5ts45w1|ui://ti9jag5ts45w1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <component id="n5_t09y" name="normalPool" src="s45w1x" fileName="codeVew/com/VerticalScrollComponent.xml" xy="7,8" size="372,566">
+      <relation target="" sidePair="height-height,width-width"/>
+    </component>
+  </displayList>
+</component>

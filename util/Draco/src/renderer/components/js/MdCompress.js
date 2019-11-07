@@ -160,9 +160,9 @@ async function compareRes(fromPath, targetPath) {
 }
 
 //比较两个路径文件
-export async function compareFile() {
-    let fromPath = Global.resourcePath;
-    let targetPath = Global.originalPicPath;
+export async function compressFile() {
+    // let fromPath = Global.resourcePath;
+    // let targetPath = Global.originalPicPath;
     // try {
     //     await fsExc.makeDir(targetPath);
     //     let files = await fsExc.readDir(fromPath);
@@ -171,7 +171,7 @@ export async function compareFile() {
     //         let targetPathName = path.join(targetPath, file);
     //         let isDirectory = await fsExc.isDirectory(fromPathName);
     //         if (isDirectory) {
-    //             await compareFile(fromPathName, targetPathName);
+    //             await compressFile(fromPathName, targetPathName);
     //         } else {
     //             await compareRes(fromPathName, targetPathName);
     //         }

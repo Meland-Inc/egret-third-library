@@ -31,7 +31,6 @@
         @change="updatePublishText"
         v-model="publisher"
         :error-text="publishErrorText"
-        v-show="curEnviron&&(curEnviron.publishDescEnable||curEnviron.codeVersionEnable)"
       />
       <mu-text-field
         @change="updateVersionDescText"
@@ -60,7 +59,7 @@
             v-loading="isCompressPicLoading"
             data-mu-loading-size="24"
             color="orange500"
-            @click="onCompressPicClick"
+            @click="onCompressFileClick"
             v-show="curEnviron&&curEnviron.compressPicEnable"
           >压缩图片</mu-button>
           <mu-button
@@ -232,7 +231,7 @@
               data-mu-loading-size="24"
               color="red500"
               @click="pushGit"
-              v-show="curEnviron&&curEnviron.codeVersionEnable"
+              v-show="curEnviron&&curEnviron.pushGitEnable"
             >Git推送文件</mu-button>
           </mu-container>
         </div>
@@ -493,21 +492,27 @@ export default {
       this.isUpdateGitLoading = true;
       Global.showRegionLoading();
 
-      try {
-        await mdPublish.updateGit();
-        this.isUpdateGitLoading = false;
-        Global.hideRegionLoading();
-      } catch (error) {
-        this.isUpdateGitLoading = false;
-        Global.hideRegionLoading();
-      }
+      await mdPublish
+        .updateGit()
+        .then(() => {
+          this.isUpdateGitLoading = false;
+          Global.hideRegionLoading();
+        })
+        .catch(() => {
+          this.isUpdateGitLoading = false;
+          Global.hideRegionLoading();
+        });
+      // try {
+      //   await mdPublish.updateGit();
+      // } catch (error) {
+      // }
     },
-    async onCompressPicClick(showDialog = true) {
+    async onCompressFileClick(showDialog = true) {
       this.isCompressPicLoading = true;
       Global.showRegionLoading();
 
       await mdCompress
-        .compareFile()
+        .compressFile()
         .then(value => {
           this.isCompressPicLoading = false;
           Global.hideRegionLoading();
@@ -525,12 +530,12 @@ export default {
       Global.showRegionLoading();
       try {
         await mdPublish.publishProject();
+        await this.refreshVersionList();
         this.isPublishProjectLoading = false;
         Global.hideRegionLoading();
         if (showDialog) {
           Global.dialog("发布当前项目成功");
         }
-        await this.refreshVersionList();
       } catch (error) {
         this.isPublishProjectLoading = false;
         Global.hideRegionLoading();
@@ -541,7 +546,7 @@ export default {
       Global.showRegionLoading();
 
       await mdPublish
-        .clearAndCopyResource()
+        .copyPictures()
         .then(value => {
           this.isCopyCompressPicLoading = false;
           Global.hideRegionLoading();
@@ -561,12 +566,12 @@ export default {
       await mdPublish
         .mergeVersion()
         .then(async value => {
+          await this.refreshVersionList();
           this.isMergeVersionLoading = false;
           Global.hideRegionLoading();
           if (showDialog) {
             Global.dialog("比较新旧成功");
           }
-          await this.refreshVersionList();
         })
         .catch(reason => {
           this.isMergeVersionLoading = false;
@@ -692,7 +697,7 @@ export default {
       }
 
       if (
-        !!ModelMgr.versionModel.versionDesc &&
+        !ModelMgr.versionModel.versionDesc &&
         this.curEnviron &&
         this.curEnviron.publishDescEnable
       ) {
@@ -701,45 +706,56 @@ export default {
       }
       Global.showLoading();
       try {
+        let promiseList = [];
+
         if (this.curEnviron.publishEnable) {
           if (this.curEnviron.updateGitEnable) {
-            await this.onUpdateGitClick();
+            promiseList.push(mdPublish.updateGit);
           }
           if (this.needCompress) {
-            await this.onCompressPicClick(false);
+            promiseList.push(mdCompress.compressFile);
           }
-          await this.onPublishProjectClick(false);
+          promiseList.push(mdPublish.publishProject);
+
+          //发布完项目后要刷新版本列表
+          promiseList.push(this.refreshVersionList);
+
           if (this.needCompress) {
-            await this.onCopyPicturesClick(false);
+            promiseList.push(mdPublish.copyPictures);
           }
           if (this.curEnviron.mergeVersionEnable) {
-            await this.onMergeVersionClick(false);
+            promiseList.push(mdPublish.mergeVersion);
           }
+
+          //比较完项目后要刷新版本列表
+          promiseList.push(this.refreshVersionList);
         }
 
         if (this.curEnviron.zipFileEnable) {
-          await this.onZipVersion();
+          promiseList.push(mdFtp.zipVersion);
         }
-        await this.onUploadVersionFile(false);
+        promiseList.push(mdFtp.uploadVersionFile);
 
         if (this.curEnviron.policyEnable) {
-          await this.onCreatePolicyFile();
-          await this.onModifyPolicyFile();
-          await this.onUploadPolicyFile();
-          await this.onApplyPolicyNum();
+          promiseList.push(mdFtp.createPolicyFile);
+          promiseList.push(mdFtp.modifyPolicyFile);
+          promiseList.push(mdFtp.uploadPolicyFile);
+          promiseList.push(mdFtp.applyPolicyNum);
         }
 
-        if (this.curEnviron.codeVersionEnable) {
-          await this.pushGit();
+        if (this.curEnviron.pushGitEnable) {
+          promiseList.push(mdFtp.pushGit);
         }
 
-        await this.environChange();
+        promiseList.push(this.environChange);
+
+        await Global.executePromiseList(promiseList);
 
         Global.hideLoading();
         Global.dialog("One·for·All Success");
       } catch (error) {
         Global.hideLoading();
-        Global.snack("One·for·All Error:", error);
+        Global.snack("One·for·All Error:", error, false);
       }
     },
     async refreshVersionList() {

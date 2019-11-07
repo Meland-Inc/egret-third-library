@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" opaque="false" designImage="ui://thvmj7vos45w0" designImageAlpha="70" adaptationTest="FitSize">
+  <displayList>
+    <component id="n27_hoex" name="comCodeblocksPool" src="s45w1v" fileName="codeVew/com/CodeblockPool.xml" xy="1174,0" size="630,1082" blend="none" controller="ctrlGameModel,1">
+      <relation target="" sidePair="right-right,bottomext-bottom"/>
+    </component>
+    <loader id="n28_8tz6" name="imgListBG" xy="1795,-5" size="132,1099" url="ui://ti9jag5ts45w2" fill="scaleFree">
+      <relation target="" sidePair="bottomext-bottom,right-right"/>
+    </loader>
+    <list id="n25_hoex" name="lstCategory" xy="1805,1" size="115,992" defaultItem="ui://ti9jag5ts45w22" align="center">
+      <relation target="" sidePair="bottomext-bottom,right-right"/>
+      <item title="事件" icon="ui://ti9jag5ts45wd" name="event" selectedIcon="ui://ti9jag5ts45we" controllers="c1,0"/>
+      <item title="控制" icon="ui://ti9jag5ts45wb" name="control" selectedIcon="ui://ti9jag5ts45wc" controllers="c1,1"/>
+      <item title="实体" icon="ui://ti9jag5ts45wf" name="prop" selectedIcon="ui://ti9jag5ts45wg" controllers="c1,2"/>
+      <item title="功能" icon="ui://ti9jag5ts45w5" name="function" selectedIcon="ui://ti9jag5ts45w6" controllers="c1,3"/>
+      <item title="运动" icon="ui://ti9jag5ts45wh" name="move" selectedIcon="ui://ti9jag5ts45wi" controllers="c1,4"/>
+      <item title="检测" icon="ui://ti9jag5ts45w9" name="detect" selectedIcon="ui://ti9jag5ts45wa" controllers="c1,5"/>
+      <item title="运算" icon="ui://ti9jag5ts45wj" name="operator" selectedIcon="ui://ti9jag5ts45wk" controllers="c1,6"/>
+      <item title="变量" icon="ui://ti9jag5ts45w3" name="variable" selectedIcon="ui://ti9jag5ts45w4" controllers="c1,7"/>
+      <item title="函数" icon="ui://ti9jag5ts45w7" name="diyfunction" selectedIcon="ui://ti9jag5ts45w8" controllers="c1,8"/>
+      <item title="自定义" icon="ui://ti9jag5ts45wl" name="custom" selectedIcon="ui://ti9jag5ts45wm" controllers="c1,9"/>
+    </list>
+    <component id="n29_8tz6" name="btnAction" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1833,1004" size="55,59">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+      <Button icon="ui://te1gxawocw9mcyifb"/>
+    </component>
+  </displayList>
+</component>

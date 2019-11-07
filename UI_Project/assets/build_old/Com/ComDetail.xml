@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="150,44" bgColor="#ff0000">
+  <displayList>
+    <text id="n0_p7yp" name="tfLeft" xy="5,4" size="19,19" fontSize="14" color="#ffe419" singleLine="true" text="说">
+      <relation target="" sidePair="left-left"/>
+    </text>
+    <text id="n1_p7yp" name="tfRight" xy="30,4" size="120,37" fontSize="14" color="#f2eabc" autoSize="height" text="沙漠中野蛮生长的一类植物">
+      <relation target="" sidePair="right-right"/>
+    </text>
+  </displayList>
+  <relation target="n0_p7yp" sidePair="width-width"/>
+  <relation target="n1_p7yp" sidePair="bottomext-bottom"/>
+</component>

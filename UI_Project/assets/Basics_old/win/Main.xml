@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" opaque="false" designImage="ui://i25v0ebktcu23b" designImageAlpha="100" adaptationTest="FitSize">
+  <controller name="codeType" pages="0,robot,1,entity" selected="0"/>
+  <displayList>
+    <loader id="n14_edsm" name="ladBG" xy="0,0" size="1136,640" url="ui://rnqj1l77tcu29j" fill="scaleFree">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </loader>
+    <component id="n5_n1c0" name="codeBlockContainer" src="n1c01j" fileName="newCom/CodeblockContainer.xml" xy="135,0" size="887,640">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+      <relation target="" sidePair="left-left,top-top"/>
+    </component>
+    <component id="n13_sdqn" name="templatePanel" src="sdqn71" fileName="com/TemplatePanel.xml" xy="220,103" locked="true" hideByEditor="true" visible="false">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n17_edsm" name="n17" src="efrs23" fileName="newImg/img_cm_title2.png" pkg="te1gxawo" xy="482,9" locked="true" hideByEditor="true" visible="false">
+      <relation target="" sidePair="center-center,top-top"/>
+    </image>
+    <text id="n18_edsm" name="n18" xy="518,10" size="137,29" locked="true" hideByEditor="true" visible="false" fontSize="22" color="#ffffff" align="center" vAlign="middle" leading="0" autoSize="none" strokeColor="#352e2c" strokeSize="2" text="代码块编辑器">
+      <relation target="n17_edsm" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n15_edsm" name="btnReset" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="40,5" size="126,40" locked="true" hideByEditor="true" visible="false">
+      <relation target="" sidePair="left-left%,top-top"/>
+      <Button title="恢复默认" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawoqo8vi21" selectedIcon="ui://te1gxawoqo8vi21"/>
+    </component>
+    <component id="n16_edsm" name="btnTemplate" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="180,5" size="136,40" locked="true" hideByEditor="true" visible="false">
+      <relation target="" sidePair="left-left%,top-top"/>
+      <Button title="代码块模版" titleColor="#5b4b37" titleFontSize="20" icon="ui://te1gxawoefrs1w" selectedIcon="ui://te1gxawoefrs1w"/>
+    </component>
+    <component id="n21_f89o" name="btnUserGuide" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="350,8" size="37,38" locked="true" hideByEditor="true" visible="false">
+      <relation target="" sidePair="left-left%,top-top"/>
+      <Button icon="ui://te1gxawoedsmcyi8v" selectedIcon="ui://te1gxawoedsmcyi8v"/>
+    </component>
+    <graph id="n22_foyo" name="noviceHeaderBlockRect" xy="0,0" size="1136,53" locked="true" hideByEditor="true" visible="false" alpha="0" touchable="false" type="rect">
+      <relation target="" sidePair="width-width"/>
+    </graph>
+    <component id="n26_oiwy" name="comEntitySelect" src="df6n5l" fileName="Com/ComMapEntitySelect.xml" pkg="32ieekgu" xy="-1,-1" size="425,643" hideByEditor="true" controller="ctrlState,2">
+      <gearDisplay controller="codeType" pages="1"/>
+      <relation target="" sidePair="left-left,bottomext-bottom"/>
+    </component>
+    <component id="n6_n1c0" name="comCategoryList" src="n1c01l" fileName="newCom/ComCategoryList.xml" xy="0,0" size="1136,640" hideByEditor="true">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </component>
+    <component id="n24_tcu2" name="comCodeBlockExclusiveChoiceList" src="tcu290" fileName="newCom/ComCodeBlockExclusiveChoiceList.xml" xy="662,0" size="362,640" hideByEditor="true">
+      <relation target="" sidePair="right-right,height-height"/>
+    </component>
+    <component id="n25_1194t" name="comCalculator" src="1194tac" fileName="newCom/ComCodeCalculator.xml" xy="609,9" hideByEditor="true">
+      <relation target="" sidePair="right-right,top-top"/>
+    </component>
+    <component id="n12_k1p2" name="mask" src="k1p26w" fileName="com/RunningState.xml" xy="0,0" size="1136,640" hideByEditor="true">
+      <relation target="" sidePair="width-width,bottomext-bottom"/>
+    </component>
+    <component id="n27_ilo1" name="comDustbin" src="ilo1tix" fileName="newCom/ComDustbin.xml" xy="850,28" size="122,124" touchable="false" controller="dustbinState,2">
+      <relation target="" sidePair="top-top,right-right"/>
+    </component>
+    <component id="n28_gllu" name="comEditVariate" src="p3g7a9" fileName="newCom/ComEditVariate.xml" xy="0,0" size="1136,640">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <component id="n29_ox4v" name="comRadioSelect" src="ox4vtk4" fileName="newCom/ComRadioSelect.xml" xy="416,277" hideByEditor="true"/>
+    <component id="n30_m9k1" name="comRadioSelectScene" src="m9k1tk5" fileName="newCom/ComRadioSelectScene.xml" xy="420,281" hideByEditor="true"/>
+    <component id="n31_q5wk" name="comCreateArg" src="w7botli" fileName="newCom/ComCreateArg.xml" xy="0,-2" size="1137,641" hideByEditor="true" visible="false">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+  </displayList>
+</component>

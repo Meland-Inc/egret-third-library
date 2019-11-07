@@ -25,6 +25,12 @@
         color="blue500"
         @click="importMapData"
       >导入mapData配置</mu-button>
+      <mu-button
+        v-loading="isImportExternalLoading"
+        data-mu-loading-size="24"
+        color="purple500"
+        @click="importExternal"
+      >导入external配置</mu-button>
     </div>
     <div class="button-wrapper">
       <mu-button full-width color="red" @click="oneForAll">One·for·All</mu-button>
@@ -42,7 +48,8 @@ export default {
       isImportDefaultLoading: false,
       isImportAsyncLoading: false,
       isImportIndieLoading: false,
-      isImportMapDataLoading: false
+      isImportMapDataLoading: false,
+      isImportExternalLoading: false
     };
   },
   watch: {},
@@ -92,6 +99,18 @@ export default {
         Global.hideRegionLoading();
       } catch (error) {
         this.isImportMapDataLoading = false;
+        Global.hideRegionLoading();
+      }
+    },
+    async importExternal() {
+      this.isImportExternalLoading = true;
+      Global.showRegionLoading();
+      try {
+        await mdAsset.importExternal();
+        this.isImportExternalLoading = false;
+        Global.hideRegionLoading();
+      } catch (error) {
+        this.isImportExternalLoading = false;
         Global.hideRegionLoading();
       }
     },

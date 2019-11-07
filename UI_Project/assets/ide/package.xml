@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="ti9jag5t" jpegQuality="80" compressPNG="true">
+  <resources>
+    <image id="s45w0" name="img_ide_cm_1.png" path="/ideCommon/img/" scale="9grid" scale9grid="2,2,36,36"/>
+    <image id="s45w1" name="img_ide_cm_2.png" path="/ideCommon/img/" scale="9grid" scale9grid="13,13,26,26"/>
+    <image id="s45w2" name="img_ide_cm_3.png" path="/ideCommon/img/" scale="9grid" scale9grid="4,4,28,68"/>
+    <image id="s45w3" name="icon_codeV_bl_1.png" path="/codeVew/img/"/>
+    <image id="s45w4" name="icon_codeV_bl_1_1.png" path="/codeVew/img/"/>
+    <image id="s45w5" name="icon_codeV_gn_1.png" path="/codeVew/img/"/>
+    <image id="s45w6" name="icon_codeV_gn_1_1.png" path="/codeVew/img/"/>
+    <image id="s45w7" name="icon_codeV_hs_1.png" path="/codeVew/img/"/>
+    <image id="s45w8" name="icon_codeV_hs_1_1.png" path="/codeVew/img/"/>
+    <image id="s45w9" name="icon_codeV_jc_1.png" path="/codeVew/img/"/>
+    <image id="s45wa" name="icon_codeV_jc_1_1.png" path="/codeVew/img/"/>
+    <image id="s45wb" name="icon_codeV_kz_1.png" path="/codeVew/img/"/>
+    <image id="s45wc" name="icon_codeV_kz_1_1.png" path="/codeVew/img/"/>
+    <image id="s45wd" name="icon_codeV_sj_1.png" path="/codeVew/img/"/>
+    <image id="s45we" name="icon_codeV_sj_1_1.png" path="/codeVew/img/"/>
+    <image id="s45wf" name="icon_codeV_st_1.png" path="/codeVew/img/"/>
+    <image id="s45wg" name="icon_codeV_st_1_1.png" path="/codeVew/img/"/>
+    <image id="s45wh" name="icon_codeV_yd_1.png" path="/codeVew/img/"/>
+    <image id="s45wi" name="icon_codeV_yd_1_1.png" path="/codeVew/img/"/>
+    <image id="s45wj" name="icon_codeV_ys_1.png" path="/codeVew/img/"/>
+    <image id="s45wk" name="icon_codeV_ys_1_1.png" path="/codeVew/img/"/>
+    <image id="s45wl" name="icon_codeV_zdy_1.png" path="/codeVew/img/"/>
+    <image id="s45wm" name="icon_codeV_zdy_1_1.png" path="/codeVew/img/"/>
+    <image id="s45wn" name="img_code_bl_1.png" path="/codeVew/img/" scale="9grid" scale9grid="1,14,2,28"/>
+    <image id="s45wo" name="img_code_bl_1_1.png" path="/codeVew/img/"/>
+    <image id="s45wp" name="img_code_gn_1.png" path="/codeVew/img/" scale="9grid" scale9grid="1,14,2,28"/>
+    <image id="s45wq" name="img_code_gn_1_1.png" path="/codeVew/img/"/>
+    <image id="s45wr" name="img_code_hs_1.png" path="/codeVew/img/" scale="9grid" scale9grid="1,14,2,28"/>
+    <image id="s45ws" name="img_code_hs_1_1.png" path="/codeVew/img/"/>
+    <image id="s45wt" name="img_code_jc_1.png" path="/codeVew/img/" scale="9grid" scale9grid="1,14,2,28"/>
+    <image id="s45wu" name="img_code_jc_1_1.png" path="/codeVew/img/"/>
+    <image id="s45wv" name="img_code_kz_1.png" path="/codeVew/img/" scale="9grid" scale9grid="1,14,2,28"/>
+    <image id="s45ww" name="img_code_kz_1_1.png" path="/codeVew/img/"/>
+    <image id="s45wx" name="img_code_sj_1.png" path="/codeVew/img/" scale="9grid" scale9grid="1,14,2,28"/>
+    <image id="s45wy" name="img_code_sj_1_1.png" path="/codeVew/img/"/>
+    <image id="s45wz" name="img_code_st_1.png" path="/codeVew/img/" scale="9grid" scale9grid="1,14,2,28"/>
+    <image id="s45w10" name="img_code_st_1_1.png" path="/codeVew/img/"/>
+    <image id="s45w11" name="img_code_yd_1.png" path="/codeVew/img/" scale="9grid" scale9grid="1,14,2,28"/>
+    <image id="s45w12" name="img_code_yd_1_1.png" path="/codeVew/img/"/>
+    <image id="s45w13" name="img_code_ys_1.png" path="/codeVew/img/" scale="9grid" scale9grid="1,14,2,28"/>
+    <image id="s45w14" name="img_code_ys_1_1.png" path="/codeVew/img/"/>
+    <image id="s45w15" name="img_code_zdy_1.png" path="/codeVew/img/" scale="9grid" scale9grid="1,14,2,28"/>
+    <image id="s45w16" name="img_code_zdy_1_1.png" path="/codeVew/img/"/>
+    <component id="s45w17" name="WinCodeView.xml" path="/codeVew/win/" exported="true"/>
+    <component id="s45w19" name="CodeblockContainer.xml" path="/codeVew/com/"/>
+    <component id="s45w1a" name="comMainContainer.xml" path="/codeVew/com/"/>
+    <component id="s45w1b" name="FreeContainer.xml" path="/codeVew/com/"/>
+    <component id="s45w1c" name="Container.xml" path="/codeVew/com/"/>
+    <image id="s45w1d" name="img_code_qh_1.png" path="/codeVew/oldImg/"/>
+    <image id="s45w1e" name="img_code_qh_2.png" path="/codeVew/oldImg/"/>
+    <image id="s45w1f" name="img_code_qh_3_1.png" path="/codeVew/oldImg/"/>
+    <image id="s45w1g" name="img_code_qh_3.png" path="/codeVew/oldImg/"/>
+    <image id="s45w1h" name="img_code_qh_4_1.png" path="/codeVew/oldImg/"/>
+    <image id="s45w1i" name="img_code_qh_4.png" path="/codeVew/oldImg/"/>
+    <image id="s45w1j" name="icon_code_yt_1.png" path="/codeVew/oldImg/"/>
+    <image id="s45w1k" name="icon_code_sx_1.png" path="/codeVew/oldImg/"/>
+    <image id="s45w1l" name="icon_code_fd_1.png" path="/codeVew/oldImg/"/>
+    <image id="s45w1m" name="img_code_a2.png" path="/codeVew/oldImg/"/>
+    <image id="s45w1n" name="img_code_a1.png" path="/codeVew/oldImg/"/>
+    <image id="s45w1o" name="btn_code_bf_1.png" path="/codeVew/oldImg/"/>
+    <image id="s45w1p" name="img_code_dm_1(1).png" path="/codeVew/oldImg/"/>
+    <image id="s45w1q" name="img_code_dm_3.png" path="/codeVew/oldImg/"/>
+    <image id="s45w1r" name="img_code_dm_2(1).png" path="/codeVew/oldImg/"/>
+    <image id="s45w1s" name="img_code_dm_3(1).png" path="/codeVew/oldImg/"/>
+    <image id="s45w1t" name="img_code_dm_2.png" path="/codeVew/oldImg/"/>
+    <component id="s45w1u" name="ComCategoryList.xml" path="/codeVew/com/"/>
+    <component id="s45w1v" name="CodeblockPool.xml" path="/codeVew/com/"/>
+    <image id="s45w1w" name="img_code_3.png" path="/codeVew/oldImg/" scale="9grid" scale9grid="20,20,40,40"/>
+    <component id="s45w1x" name="VerticalScrollComponent.xml" path="/codeVew/com/"/>
+    <component id="s45w1y" name="ComVarCreateInlet.xml" path="/codeVew/oldCom/"/>
+    <image id="s45w1z" name="icon_code_bl_2.png" path="/codeVew/oldImg/"/>
+    <image id="s45w20" name="btn_code_a2.png" path="/codeVew/oldImg/"/>
+    <component id="s45w21" name="ComListCreateInlet.xml" path="/codeVew/oldCom/"/>
+    <component id="s45w22" name="btnCategory.xml" path="/codeVew/btn/"/>
+    <image id="s45w23" name="img_code_dm_2_1.png" path="/codeVew/oldImg/"/>
+    <image id="s45w24" name="icon_code_dm_kz_1_1.png" path="/codeVew/oldImg/" scale="9grid" scale9grid="1,10,2,20"/>
+    <image id="s45w25" name="icon_code_dm_st_2.png" path="/codeVew/oldImg/" scale="9grid" scale9grid="1,10,2,20"/>
+    <image id="s45w26" name="icon_code_dm_gn_2.png" path="/codeVew/oldImg/" scale="9grid" scale9grid="1,10,2,20"/>
+    <image id="s45w27" name="icon_code_dm_yd_2.png" path="/codeVew/oldImg/" scale="9grid" scale9grid="1,10,2,20"/>
+    <image id="s45w28" name="icon_code_dm_jc_2.png" path="/codeVew/oldImg/" scale="9grid" scale9grid="1,10,2,20"/>
+    <image id="s45w29" name="icon_code_dm_ys_2.png" path="/codeVew/oldImg/" scale="9grid" scale9grid="1,10,2,20"/>
+    <image id="s45w2a" name="icon_code_dm_bl_2.png" path="/codeVew/oldImg/" scale="9grid" scale9grid="1,10,2,20"/>
+    <image id="s45w2b" name="icon_code_dm_sj_1.png" path="/codeVew/oldImg/"/>
+    <image id="s45w2c" name="icon_code_dm_sj_1_1.png" path="/codeVew/oldImg/"/>
+    <image id="s45w2d" name="icon_code_dm_kz_1.png" path="/codeVew/oldImg/"/>
+    <image id="s45w2e" name="icon_code_dm_kz_2.png" path="/codeVew/oldImg/"/>
+    <image id="s45w2f" name="icon_code_dm_st_1.png" path="/codeVew/oldImg/"/>
+    <image id="s45w2g" name="icon_code_dm_st_1_1.png" path="/codeVew/oldImg/"/>
+    <image id="s45w2h" name="icon_code_dm_gn_1.png" path="/codeVew/oldImg/"/>
+    <image id="s45w2i" name="icon_code_dm_gn_1_1.png" path="/codeVew/oldImg/"/>
+    <image id="s45w2j" name="icon_code_dm_yd_1.png" path="/codeVew/oldImg/"/>
+    <image id="s45w2k" name="icon_code_dm_yd_1_1.png" path="/codeVew/oldImg/"/>
+    <image id="s45w2l" name="icon_code_dm_jc_1.png" path="/codeVew/oldImg/"/>
+    <image id="s45w2m" name="icon_code_dm_jc_1_1.png" path="/codeVew/oldImg/"/>
+    <image id="s45w2n" name="icon_code_dm_ys_1.png" path="/codeVew/oldImg/"/>
+    <image id="s45w2o" name="icon_code_dm_ys_1_1.png" path="/codeVew/oldImg/"/>
+    <image id="s45w2p" name="icon_code_dm_bl_1.png" path="/codeVew/oldImg/"/>
+    <image id="s45w2q" name="icon_code_dm_bl_1_1.png" path="/codeVew/oldImg/"/>
+    <image id="s45w2r" name="icon_code_dm_hs_1.png" path="/codeVew/oldImg/"/>
+    <image id="s45w2s" name="icon_code_dm_hs_1_1.png" path="/codeVew/oldImg/"/>
+    <image id="s45w2t" name="btn_code_bf_2.png" path="/codeVew/oldImg/"/>
+    <image id="s45w33" name="img_code_dm_2_1(1).png" path="/codeVew/oldImg/"/>
+    <image id="s45w34" name="icon_code_dm_kz_1_1(1).png" path="/codeVew/oldImg/" scale="9grid" scale9grid="1,10,2,20"/>
+    <image id="s45w35" name="icon_code_dm_st_2(1).png" path="/codeVew/oldImg/" scale="9grid" scale9grid="1,10,2,20"/>
+    <image id="s45w36" name="icon_code_dm_gn_2(1).png" path="/codeVew/oldImg/" scale="9grid" scale9grid="1,10,2,20"/>
+    <image id="s45w37" name="icon_code_dm_yd_2(1).png" path="/codeVew/oldImg/" scale="9grid" scale9grid="1,10,2,20"/>
+    <image id="s45w38" name="icon_code_dm_jc_2(1).png" path="/codeVew/oldImg/" scale="9grid" scale9grid="1,10,2,20"/>
+    <image id="s45w39" name="icon_code_dm_ys_2(1).png" path="/codeVew/oldImg/" scale="9grid" scale9grid="1,10,2,20"/>
+    <image id="s45w3a" name="icon_code_dm_bl_2(1).png" path="/codeVew/oldImg/" scale="9grid" scale9grid="1,10,2,20"/>
+    <image id="s45w3b" name="icon_code_dm_sj_1(1).png" path="/codeVew/oldImg/"/>
+    <image id="s45w3c" name="icon_code_dm_sj_1_1(1).png" path="/codeVew/oldImg/"/>
+    <image id="s45w3d" name="icon_code_dm_kz_1(1).png" path="/codeVew/oldImg/"/>
+    <image id="s45w3e" name="icon_code_dm_kz_2(1).png" path="/codeVew/oldImg/"/>
+    <image id="s45w3f" name="icon_code_dm_st_1(1).png" path="/codeVew/oldImg/"/>
+    <image id="s45w3g" name="icon_code_dm_st_1_1(1).png" path="/codeVew/oldImg/"/>
+    <image id="s45w3h" name="icon_code_dm_gn_1(1).png" path="/codeVew/oldImg/"/>
+    <image id="s45w3i" name="icon_code_dm_gn_1_1(1).png" path="/codeVew/oldImg/"/>
+    <image id="s45w3j" name="icon_code_dm_yd_1(1).png" path="/codeVew/oldImg/"/>
+    <image id="s45w3k" name="icon_code_dm_yd_1_1(1).png" path="/codeVew/oldImg/"/>
+    <image id="s45w3l" name="icon_code_dm_jc_1(1).png" path="/codeVew/oldImg/"/>
+    <image id="s45w3m" name="icon_code_dm_jc_1_1(1).png" path="/codeVew/oldImg/"/>
+    <image id="s45w3n" name="icon_code_dm_ys_1(1).png" path="/codeVew/oldImg/"/>
+    <image id="s45w3o" name="icon_code_dm_ys_1_1(1).png" path="/codeVew/oldImg/"/>
+    <image id="s45w3p" name="icon_code_dm_bl_1(1).png" path="/codeVew/oldImg/"/>
+    <image id="s45w3q" name="icon_code_dm_bl_1_1(1).png" path="/codeVew/oldImg/"/>
+    <image id="s45w3t" name="btn_code_bf_2(1).png" path="/codeVew/oldImg/"/>
+    <component id="lctb3u" name="btnExit.xml" path="/codeVew/oldBtn/"/>
+    <component id="lctb3w" name="ComCodeBlockExclusiveChoiceList.xml" path="/codeVew/oldCom/"/>
+    <image id="lctb3x" name="img_code_3(1).png" path="/codeVew/oldImg/" scale="9grid" scale9grid="20,20,40,40"/>
+    <component id="lctb3y" name="btnOtion.xml" path="/codeVew/oldBtn/"/>
+    <image id="lctb3z" name="btn_code_3.png" path="/codeVew/oldImg/" scale="9grid" scale9grid="12,12,24,24"/>
+    <image id="lctb40" name="btn_code_2.png" path="/codeVew/oldImg/" scale="9grid" scale9grid="12,12,24,24"/>
+    <component id="lctb41" name="ComCodeCalculator.xml" path="/codeVew/oldCom/"/>
+    <image id="lctb42" name="img_code_2.png" path="/codeVew/oldImg/" scale="9grid" scale9grid="20,20,40,40"/>
+    <image id="lctb43" name="img_code_4.png" path="/codeVew/oldImg/" scale="9grid" scale9grid="12,16,21,20"/>
+    <image id="lctb44" name="btn_code_a4.png" path="/codeVew/oldImg/"/>
+    <component id="lctb45" name="btnCalculator.xml" path="/codeVew/oldBtn/"/>
+    <image id="lctb46" name="btn_code_1.png" path="/codeVew/oldImg/" scale="9grid" scale9grid="20,20,40,40"/>
+    <image id="lctb47" name="img_code_n0.png" path="/codeVew/oldImg/"/>
+    <image id="lctb48" name="img_code_n1.png" path="/codeVew/oldImg/"/>
+    <image id="lctb49" name="img_code_n2.png" path="/codeVew/oldImg/"/>
+    <image id="lctb4a" name="img_code_n3.png" path="/codeVew/oldImg/"/>
+    <image id="lctb4b" name="img_code_n4.png" path="/codeVew/oldImg/"/>
+    <image id="lctb4c" name="img_code_n5.png" path="/codeVew/oldImg/"/>
+    <image id="lctb4d" name="img_code_n6.png" path="/codeVew/oldImg/"/>
+    <image id="lctb4e" name="img_code_n7.png" path="/codeVew/oldImg/"/>
+    <image id="lctb4f" name="img_code_n8.png" path="/codeVew/oldImg/"/>
+    <image id="lctb4g" name="img_code_n9.png" path="/codeVew/oldImg/"/>
+    <image id="lctb4h" name="img_code_na.png" path="/codeVew/oldImg/"/>
+    <component id="lctb4z" name="RunningState.xml" path="/codeVew/oldCom/"/>
+    <component id="lctb50" name="Component1.xml" path="/codeVew/oldCom/"/>
+    <image id="lctb51" name="frame_codeloading_1.png" path="/codeVew/oldImg/"/>
+    <image id="lctb52" name="frame_codeloading_10.png" path="/codeVew/oldImg/"/>
+    <image id="lctb53" name="frame_codeloading_2.png" path="/codeVew/oldImg/"/>
+    <image id="lctb54" name="frame_codeloading_3.png" path="/codeVew/oldImg/"/>
+    <image id="lctb55" name="frame_codeloading_4.png" path="/codeVew/oldImg/"/>
+    <image id="lctb56" name="frame_codeloading_5.png" path="/codeVew/oldImg/"/>
+    <image id="lctb57" name="frame_codeloading_6.png" path="/codeVew/oldImg/"/>
+    <image id="lctb58" name="frame_codeloading_7.png" path="/codeVew/oldImg/"/>
+    <image id="lctb59" name="frame_codeloading_8.png" path="/codeVew/oldImg/"/>
+    <image id="lctb5a" name="frame_codeloading_9.png" path="/codeVew/oldImg/"/>
+    <component id="lctb5b" name="runingAnim.xml" path="/codeVew/oldCom/"/>
+    <image id="lctb5c" name="img_code_dh_1 (1).png" path="/codeVew/oldImg/"/>
+    <image id="lctb5d" name="img_code_dh_10(1).png" path="/codeVew/oldImg/"/>
+    <image id="lctb5e" name="img_code_dh_11(1).png" path="/codeVew/oldImg/"/>
+    <image id="lctb5f" name="img_code_dh_12(1).png" path="/codeVew/oldImg/"/>
+    <image id="lctb5g" name="img_code_dh_13(1).png" path="/codeVew/oldImg/"/>
+    <image id="lctb5h" name="img_code_dh_14(1).png" path="/codeVew/oldImg/"/>
+    <image id="lctb5i" name="img_code_dh_15(1).png" path="/codeVew/oldImg/"/>
+    <image id="lctb5j" name="img_code_dh_16(1).png" path="/codeVew/oldImg/"/>
+    <image id="lctb5k" name="img_code_dh_17(1).png" path="/codeVew/oldImg/"/>
+    <image id="lctb5l" name="img_code_dh_18(1).png" path="/codeVew/oldImg/"/>
+    <image id="lctb5m" name="img_code_dh_19(1).png" path="/codeVew/oldImg/"/>
+    <image id="lctb5n" name="img_code_dh_2(1).png" path="/codeVew/oldImg/"/>
+    <image id="lctb5o" name="img_code_dh_3(1).png" path="/codeVew/oldImg/"/>
+    <image id="lctb5p" name="img_code_dh_4(1).png" path="/codeVew/oldImg/"/>
+    <image id="lctb5q" name="img_code_dh_5(1).png" path="/codeVew/oldImg/"/>
+    <image id="lctb5r" name="img_code_dh_6(1).png" path="/codeVew/oldImg/"/>
+    <image id="lctb5s" name="img_code_dh_7(1).png" path="/codeVew/oldImg/"/>
+    <image id="lctb5t" name="img_code_dh_8(1).png" path="/codeVew/oldImg/"/>
+    <image id="lctb5u" name="img_code_dh_9(1).png" path="/codeVew/oldImg/"/>
+    <component id="lctb5v" name="ComDustbin.xml" path="/codeVew/oldCom/"/>
+    <image id="lctb5w" name="img_cpde_yx_1.png" path="/codeVew/oldImg/"/>
+    <image id="lctb5x" name="img_code_ljt_2(1).png" path="/codeVew/oldImg/"/>
+    <image id="lctb5y" name="img_code_ljt_1(1).png" path="/codeVew/oldImg/"/>
+    <component id="lctb5z" name="ComEditVariate.xml" path="/codeVew/oldCom/"/>
+    <component id="lctb60" name="btnVariateScope.xml" path="/codeVew/oldBtn/"/>
+    <image id="lctb61" name="icon_code_cjbl_1.png" path="/codeVew/oldImg/"/>
+    <image id="lctb62" name="icon_code_cjbl_3.png" path="/codeVew/oldImg/"/>
+    <image id="lctb63" name="icon_code_cjbl_2.png" path="/codeVew/oldImg/"/>
+    <image id="lctb64" name="icon_code_cjbl_4.png" path="/codeVew/oldImg/"/>
+    <component id="lctb65" name="ComRadioSelect.xml" path="/codeVew/oldCom/"/>
+    <component id="lctb66" name="ComRadioSelectScene.xml" path="/codeVew/oldCom/"/>
+    <component id="lctb67" name="ComCreateArg.xml" path="/codeVew/oldCom/"/>
+    <component id="lctb68" name="ComCodeblockCopy.xml" path="/codeVew/oldCom/" exported="true"/>
+    <image id="lctb69" name="btn_code_bl_1.png" path="/codeVew/oldImg/" scale="9grid" scale9grid="13,7,26,11"/>
+    <component id="lctb6a" name="ComVariateEdit.xml" path="/codeVew/oldCom/" exported="true"/>
+    <image id="lctb6b" name="btn_code_bl_1(1).png" path="/codeVew/oldImg/" scale="9grid" scale9grid="13,7,26,11"/>
+    <component id="lctb6c" name="ComPartingLine.xml" path="/codeVew/oldCom/" exported="true"/>
+    <component id="lctb6d" name="ComIDEKeyWord.xml" path="/codeVew/oldCom/" exported="true"/>
+    <component id="lctb6e" name="ComCodeblockSelectLocation.xml" path="/codeVew/oldCom/" exported="true"/>
+    <image id="lctb6f" name="icon_code_tck_8.png" path="/codeVew/oldImg/" scale="9grid" scale9grid="30,5,60,10"/>
+    <image id="lctb6g" name="img_code_zb_1.png" path="/codeVew/oldImg/"/>
+    <component id="hckx6h" name="ComBuildAniBox.xml" path="/attribute/com/" exported="true"/>
+    <component id="hckx6i" name="ComBuildAniEdit.xml" path="/attribute/com/" exported="true"/>
+    <component id="hckx6j" name="comBuildAniScroll.xml" path="/attribute/com/" exported="true"/>
+    <image id="hckx6k" name="img_att_dh_y_1.png" path="/attribute/img/"/>
+    <image id="hckx6l" name="img_att_dh_y_1_1.png" path="/attribute/img/"/>
+    <image id="hckx6m" name="img_att_dlw_1.png" path="/attribute/img/"/>
+    <image id="hckx6n" name="img_att_dlw_2.png" path="/attribute/img/"/>
+    <image id="hckx6o" name="img_att_szl_1.png" path="/attribute/img/"/>
+    <image id="hckx6p" name="img_att_szl_2.png" path="/attribute/img/"/>
+    <image id="hckx6q" name="img_att_szl_3.png" path="/attribute/img/"/>
+    <image id="hckx6r" name="img_att_szl_4.png" path="/attribute/img/"/>
+    <image id="hckx6s" name="img_att_wb_1.png" path="/attribute/img/" scale="9grid" scale9grid="5,5,50,30"/>
+    <image id="hckx6t" name="img_att_wb_1_1.png" path="/attribute/img/"/>
+    <image id="hckx6u" name="img_att_wp_1.png" path="/attribute/img/" scale="9grid" scale9grid="6,6,48,48"/>
+    <image id="hckx6v" name="img_att_wp_2.png" path="/attribute/img/"/>
+    <image id="hckx6w" name="img_att_xz_1.png" path="/attribute/img/"/>
+    <image id="hckx6x" name="img_att_xz_1_1.png" path="/attribute/img/"/>
+    <image id="hckx6y" name="img_att_xz_2.png" path="/attribute/img/"/>
+    <image id="hckx6z" name="icon_att_bj.png" path="/attribute/img/"/>
+    <image id="hckx70" name="icon_att_dh.png" path="/attribute/img/"/>
+    <image id="hckx71" name="icon_att_dh_1.png" path="/attribute/img/"/>
+    <image id="hckx72" name="icon_att_fz.png" path="/attribute/img/"/>
+    <image id="hckx73" name="icon_att_off.png" path="/attribute/img/"/>
+    <image id="hckx74" name="icon_att_on.png" path="/attribute/img/"/>
+    <image id="hckx75" name="icon_att_sc.png" path="/attribute/img/"/>
+    <image id="hckx76" name="icon_att_sx.png" path="/attribute/img/"/>
+    <image id="hckx77" name="img_att_dh_1.png" path="/attribute/img/" scale="9grid" scale9grid="6,6,68,68"/>
+    <image id="hckx78" name="img_att_dh_2.png" path="/attribute/img/"/>
+    <image id="hckx79" name="img_att_dh_3.png" path="/attribute/img/"/>
+    <image id="hckx7a" name="img_att_dh_4.png" path="/attribute/img/" scale="9grid" scale9grid="5,5,50,50"/>
+    <image id="hckx7b" name="img_att_dh_5.png" path="/attribute/img/"/>
+    <image id="xba67c" name="btn_ide_cm_blue.png" path="/ideCommon/img/"/>
+    <image id="xba67d" name="btn_ide_cm_gray.png" path="/ideCommon/img/"/>
+    <image id="xba67e" name="btn_ide_cm_red.png" path="/ideCommon/img/"/>
+    <image id="xba67f" name="icon_ide_cm_4.png" path="/ideCommon/img/"/>
+    <image id="xba67g" name="icon_ide_cm_4_1.png" path="/ideCommon/img/"/>
+    <image id="xba67h" name="icon_ide_cm_bf.png" path="/ideCommon/img/"/>
+    <image id="xba67l" name="img_ide_cm_5.png" path="/ideCommon/img/"/>
+    <image id="xba67m" name="img_ide_cm_6.png" path="/ideCommon/img/" scale="9grid" scale9grid="4,4,48,48"/>
+    <component id="xba67n" name="ComBuildFrameBox.xml" path="/attribute/com/" exported="true"/>
+    <image id="xba67o" name="img_ide_cm_7.png" path="/ideCommon/img/" scale="9grid" scale9grid="4,4,53,52"/>
+    <component id="xba67q" name="btnScale.xml" path="/attribute/btn/"/>
+  </resources>
+  <publish name="ide"/>
+</packageDescription>
