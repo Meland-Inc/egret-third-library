@@ -13,18 +13,18 @@
     <component id="n6_lctb" name="comCalculator" src="lctb41" fileName="codeVew/oldCom/ComCodeCalculator.xml" xy="1393,0" size="412,1080" hideByEditor="true">
       <relation target="" sidePair="right-right,top-top"/>
     </component>
-    <component id="n7_lctb" name="mask" src="lctb4z" fileName="codeVew/oldCom/RunningStateB.xml" xy="956,0" size="967,1080" hideByEditor="true">
+    <component id="n7_lctb" name="mask" src="lctb4z" fileName="codeVew/oldCom/RunningState.xml" xy="956,0" size="967,1080" hideByEditor="true">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </component>
     <component id="n8_lctb" name="comDustbin" src="lctb5v" fileName="codeVew/oldCom/ComDustbin.xml" xy="1803,1" size="118,1082" hideByEditor="true" touchable="false" controller="dustbinState,0">
       <relation target="" sidePair="right-right,bottomext-bottom"/>
     </component>
-    <component id="n9_lctb" name="comEditVariate" src="lctb5z" fileName="codeVew/oldCom/ComEditVariateB_NEW.xml" xy="956,0" size="967,1080" hideByEditor="true">
+    <component id="n9_lctb" name="comEditVariate" src="lctb5z" fileName="codeVew/oldCom/ComEditVariate.xml" xy="956,0" size="967,1080" hideByEditor="true">
       <relation target="" sidePair="bottomext-bottom,rightext-right"/>
     </component>
     <component id="n13_lctb" name="comRadioSelect" src="lctb65" fileName="codeVew/oldCom/ComRadioSelect.xml" xy="871,443" hideByEditor="true"/>
     <component id="n14_lctb" name="comRadioSelectScene" src="lctb66" fileName="codeVew/oldCom/ComRadioSelectScene.xml" xy="871,481" hideByEditor="true"/>
-    <component id="n15_lctb" name="comCreateArg" src="lctb67" fileName="codeVew/oldCom/ComCreateArg.xml" xy="955,-1" size="1234,1080" hideByEditor="true" visible="false">
+    <component id="n15_lctb" name="comCreateArg" src="lctb67" fileName="codeVew/oldCom/ComCreateArg.xml" xy="955,-1" size="966,1082" hideByEditor="true" visible="false">
       <relation target="" sidePair="bottomext-bottom,rightext-right"/>
       <relation target="n1_s45w" sidePair="left-left,top-top"/>
     </component>
