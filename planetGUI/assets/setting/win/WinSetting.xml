@@ -69,11 +69,12 @@
       <relation target="" sidePair="right-right,bottom-bottom"/>
       <Button title="一键脱离" titleColor="#ffffff" titleFontSize="16" icon="ui://te1gxawom3dicyidb"/>
     </component>
-    <text id="n149_jd08" name="tfGameServerHost" xy="124,83" size="96,23" group="n30_o8k6" fontSize="14" color="#365989" vAlign="middle" vars="true" text="服务器ID: {id=xxxx}"/>
+    <text id="n149_jd08" name="tfServerIdTitle" xy="124,83" size="68,23" group="n30_o8k6" fontSize="14" color="#365989" vAlign="middle" vars="true" text="服务器ID: "/>
     <component id="n151_f5wz" name="btnResetAll" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="734,559" size="106,36" group="n30_o8k6">
       <relation target="" sidePair="right-right,bottom-bottom"/>
       <Button title="重置所有" titleColor="#ffffff" titleFontSize="16" icon="ui://te1gxawom3dicyidb"/>
     </component>
+    <text id="n152_qh6c" name="tfGameServerHost" xy="198,83" size="52,23" group="n30_o8k6" input="true" fontSize="14" color="#365989" vAlign="middle" text="xxxxxxx"/>
     <group id="n30_o8k6" name="system" xy="124,83" size="960,512" advanced="true" collapsed="true">
       <gearDisplay controller="conSetting" pages="0"/>
     </group>
