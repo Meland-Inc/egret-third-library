@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="118,1082" opaque="false">
+  <controller name="dustbinState" exported="true" pages="0,hide,1,show,2,execute" selected="2"/>
+  <displayList>
+    <image id="n0_ilo1" name="n0" src="t1ls6s" fileName="codeVew/img/img_code_zz.png" xy="0,0" size="118,1082">
+      <gearDisplay controller="dustbinState" pages="1,2"/>
+      <relation target="" sidePair="bottomext-bottom,rightext-right"/>
+    </image>
+    <loader id="n1_ilo1" name="ladDelete" xy="31,491" size="61,94" url="ui://ti9jag5tt1ls6r" align="center" vAlign="middle" autoSize="true">
+      <gearXY controller="dustbinState" pages="1,2" values="26,514|31,491" default="28,494"/>
+      <gearIcon controller="dustbinState" pages="0,1,2" values="|ui://ti9jag5tt1ls6t|ui://ti9jag5tt1ls6r"/>
+    </loader>
+  </displayList>
+</component>

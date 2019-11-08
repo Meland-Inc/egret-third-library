@@ -182,7 +182,7 @@
     <image id="lctb5s" name="img_code_dh_7(1).png" path="/codeVew/oldImg/"/>
     <image id="lctb5t" name="img_code_dh_8(1).png" path="/codeVew/oldImg/"/>
     <image id="lctb5u" name="img_code_dh_9(1).png" path="/codeVew/oldImg/"/>
-    <component id="lctb5v" name="ComDustbin.xml" path="/codeVew/oldCom/"/>
+    <component id="lctb5v" name="ComDustbin.xml" path="/codeVew/com/"/>
     <image id="lctb5w" name="img_cpde_yx_1.png" path="/codeVew/oldImg/"/>
     <image id="lctb5x" name="img_code_ljt_2(1).png" path="/codeVew/oldImg/"/>
     <image id="lctb5y" name="img_code_ljt_1(1).png" path="/codeVew/oldImg/"/>
@@ -204,6 +204,19 @@
     <component id="lctb6e" name="ComCodeblockSelectLocation.xml" path="/codeVew/oldCom/" exported="true"/>
     <image id="lctb6f" name="icon_code_tck_8.png" path="/codeVew/oldImg/" scale="9grid" scale9grid="30,5,60,10"/>
     <image id="lctb6g" name="img_code_zb_1.png" path="/codeVew/oldImg/"/>
+    <component id="i6xe6h" name="btnIDEKeyWord.xml" path="/codeVew/oldBtn/"/>
+    <component id="i6xe6i" name="btnTips.xml" path="/codeVew/oldBtn/" exported="true"/>
+    <component id="i6xe6j" name="btnTipsWithImage.xml" path="/codeVew/oldBtn/" exported="true"/>
+    <component id="i6xe6k" name="WinCodeblockSelectEntityB.xml" path="/codeVew/oldWin/" exported="true"/>
+    <image id="i6xe6l" name="icon_code_queding_02.png" path="/codeVew/oldImg/"/>
+    <image id="i6xe6m" name="icon_code_fanhui_03.png" path="/codeVew/oldImg/"/>
+    <image id="i6xe6n" name="img_code_tishik_01.png" path="/codeVew/oldImg/"/>
+    <image id="i6xe6o" name="img_code_tishi_04.png" path="/codeVew/oldImg/"/>
+    <component id="i6xe6p" name="WinCodeblockSelectLocation.xml" path="/codeVew/oldWin/" exported="true"/>
+    <component id="i6xe6q" name="comIDEContainer.xml" path="/codeVew/oldCom/"/>
+    <image id="t1ls6r" name="icon_code_sc_2.png" path="/codeVew/img/"/>
+    <image id="t1ls6s" name="img_code_zz.png" path="/codeVew/img/" scale="9grid" scale9grid="8,8,16,16"/>
+    <image id="t1ls6t" name="icon_code_sc_1.png" path="/codeVew/img/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="60,30">
+  <controller name="color" pages="0,DeepBlue,1,LightBlue,2,LightRed,3,DeepRed,4,Purple,5,Green,6,Pink,7,Carnation,8,LightYellow,9,DeepYellow" selected="0"/>
+  <controller name="ctrlHint" pages="0,none,1,xy,2,entity,3,question,4,class" selected="0"/>
+  <displayList>
+    <loader id="n9_j1n2" name="curentNotUsed" xy="0,0" size="60,30" locked="true" hideByEditor="true" visible="false" touchable="false" url="ui://t573fj5bs45w1i" align="center" vAlign="middle" fill="scaleFree">
+      <gearIcon controller="color" pages="0,1,2,3,4,5,6,7,8,9" values="ui://t573fj5bs45w1i|ui://t573fj5bi6xe1r|ui://t573fj5bi6xe1s|ui://t573fj5bi6xe1t|ui://t573fj5bi6xe1u|ui://t573fj5bi6xe1v|ui://t573fj5bi6xe1w|ui://t573fj5bi6xe1x|ui://rnqj1l77w7botlh|ui://t573fj5bi6xe1p"/>
+      <relation target="" sidePair="rightext-right"/>
+    </loader>
+    <loader id="n12_g8bk" name="currentUsed" xy="0,0" size="60,30" url="ui://t573fj5bs45w18" fill="scaleFree">
+      <relation target="" sidePair="rightext-right"/>
+    </loader>
+    <text id="n10_qq8d" name="n10" xy="39,3" size="10,24" alpha="0.5" fontSize="18" color="#333333" vAlign="middle" text="">
+      <gearText controller="ctrlHint" pages="0,1,2,4" values="|坐标|实体|类别" default="问题"/>
+    </text>
+    <loader id="n11_qq8d" name="n11" xy="6,2" size="28,28" url="ui://t573fj5bi6xe1z" align="center" vAlign="middle">
+      <gearDisplay controller="ctrlHint" pages="1,2,3,4"/>
+      <gearIcon controller="ctrlHint" pages="1,2,3,4" values="ui://t573fj5bs45w11|ui://t573fj5bs45ww|ui://t573fj5bs45wy|ui://t573fj5bs45wu" default="ui://t573fj5bi6xe1z"/>
+    </loader>
+  </displayList>
+  <relation target="n10_qq8d" sidePair="rightext-right"/>
+</component>
