@@ -80,6 +80,15 @@ export async function publishProject() {
             indexContent = indexContent.replace("//window.location.href", `window.location.hash='publisher="${ModelMgr.versionModel.publisher}"&versionDesc="${ModelMgr.versionModel.versionDesc}"'`);
             await fsExc.writeFile(indexPath, indexContent);
         }
+
+        //改回原来的分支名称
+        if (ModelMgr.versionModel.curEnviron.codeVersionEnable) {
+            let configPath = `${Global.projPath}/src/GameConfig.ts`;
+            let configContent = await fsExc.readFile(configPath);
+            let regTrunkName = /public static trunkName: eTrunkName = .*?;/;
+            configContent = configContent.replace(regTrunkName, `public static trunkName: eTrunkName = eTrunkName.${ModelMgr.versionModel.eEnviron.alpha};`);
+            await fsExc.writeFile(configPath, configContent);
+        }
         Global.toast('发布当前项目成功');
     } catch (error) {
         Global.snack('发布当前项目错误', error);
