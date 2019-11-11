@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="512,587" overflow="hidden" opaque="false" scroll="both" scrollBarRes="ui://rnqj1l77j7co5v,ui://rnqj1l77j7co5x" adaptationTest="FitSize">
   <controller name="codeType" pages="0,robot,1,entity" selected="0"/>
-  <controller name="ctrlShowType" pages="2,none,0,scratch,1,python" selected="0"/>
+  <controller name="ctrlShowType" pages="0,scratch,1,python,3,none" selected="0"/>
   <controller name="ctrlRecordHint" pages="0,none,1,left,2,right,3,all" selected="0"/>
   <controller name="ctrlStyle" pages="0,black,1,blue" selected="0"/>
   <controller name="ctrlWindowState" pages="0,toMaximize,1,toNormalize" selected="0"/>
@@ -65,28 +65,28 @@
       <Button icon="ui://rnqj1l77hbwitg7"/>
     </component>
     <image id="n39_czor" name="imgRbtnBG" src="dx4vtke" fileName="B-PlatformImg/img_code_dm_1(1).png" xy="173,12" group="n46_dx4v">
-      <gearDisplay controller="ctrlShowType" pages="0,1"/>
+      <gearDisplay controller="ctrlShowType" pages="3"/>
       <relation target="n9_j7co" sidePair="center-center,top-top"/>
     </image>
     <component id="n38_czor" name="btnToScratch" src="oliri6q" fileName="btn/rbtnScale.xml" pkg="te1gxawo" xy="173,12" size="90,28" group="n46_dx4v">
-      <gearDisplay controller="ctrlShowType" pages="0,1"/>
+      <gearDisplay controller="ctrlShowType" pages="3"/>
       <gearIcon controller="ctrlShowType" pages="0,1" values="ui://rnqj1l77dx4vtkf|ui://rnqj1l77gg8mtgp" default=""/>
       <relation target="n39_czor" sidePair="top-top,left-left"/>
-      <Button titleColor="#ffffff" titleFontSize="14" controller="ctrlShowType" page="0"/>
+      <Button checked="true" titleColor="#ffffff" titleFontSize="14" icon="ui://rnqj1l77dx4vtkf" controller="ctrlShowType" page="0"/>
     </component>
     <component id="n40_czor" name="btnToPython" src="oliri6q" fileName="btn/rbtnScale.xml" pkg="te1gxawo" xy="263,12" size="90,28" group="n46_dx4v">
-      <gearDisplay controller="ctrlShowType" pages="0,1"/>
+      <gearDisplay controller="ctrlShowType" pages="3"/>
       <gearIcon controller="ctrlShowType" pages="0,1" values="ui://rnqj1l77hbwitfv|ui://rnqj1l77dx4vtkg" default=""/>
       <relation target="n39_czor" sidePair="right-right,top-top"/>
-      <Button titleColor="#ffffff" titleFontSize="14" controller="ctrlShowType" page="1"/>
+      <Button titleColor="#ffffff" titleFontSize="14" icon="ui://rnqj1l77hbwitfv" controller="ctrlShowType" page="1"/>
     </component>
     <text id="n44_dx4v" name="tfScratch" xy="173,12" size="90,28" group="n46_dx4v" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="Scratch">
-      <gearDisplay controller="ctrlShowType" pages="0,1"/>
+      <gearDisplay controller="ctrlShowType" pages="3"/>
       <gearColor controller="ctrlShowType" pages="1" values="#333333,#000000" default="#ffffff,#000000"/>
       <relation target="n38_czor" sidePair="center-center,middle-middle"/>
     </text>
-    <text id="n47_dx4v" name="tfPython" xy="263,12" size="90,28" group="n46_dx4v" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="python">
-      <gearDisplay controller="ctrlShowType" pages="0,1"/>
+    <text id="n47_dx4v" name="tfPython" xy="263,12" size="90,28" group="n46_dx4v" fontSize="14" color="#333333" align="center" vAlign="middle" autoSize="none" text="python">
+      <gearDisplay controller="ctrlShowType" pages="3"/>
       <gearColor controller="ctrlShowType" pages="0,1" values="#333333,#000000|#ffffff,#000000" default="#ffffff,#000000"/>
       <relation target="n40_czor" sidePair="center-center,middle-middle"/>
     </text>
