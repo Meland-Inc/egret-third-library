@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" designImage="ui://i25v0ebknl0r45" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlMode" pages="0,normal,1,simple,2,selectItem" selected="2"/>
+  <controller name="ctrlMode" pages="0,normal,1,simple,2,selectItem" selected="0"/>
   <displayList>
     <image id="n65_nl0r" name="imgBgCenter" src="nl0rcyic7" fileName="imgB/bg_cm_1.png" pkg="te1gxawo" xy="0,0" size="1136,640">
       <relation target="" sidePair="width-width,height-height"/>
@@ -17,24 +17,16 @@
     </component>
     <image id="n62_nl0r" name="imgTitileBg" src="nl0rcyice" fileName="imgB/img_cm_db_2.png" pkg="te1gxawo" xy="0,0"/>
     <image id="n63_nl0r" name="imgBagIcon" src="nl0r38" fileName="lessonModeImg/icon_bp_db_4.png" xy="40,13"/>
-    <list id="n24_ey2h" name="lstBagTypeBtn" xy="0,59" size="109,534" lineGap="3" colGap="4" defaultItem="ui://ruc22gntey2h2a">
+    <list id="n24_ey2h" name="lstBagTypeBtn" xy="0,59" size="109,61" lineGap="3" colGap="4" defaultItem="ui://ruc22gntey2h2a">
       <item title="全部" name="all"/>
-      <item title="地板" name="floor"/>
-      <item title="墙面" name="wall"/>
-      <item title="功能" name="func"/>
-      <item title="装饰" name="decoration"/>
-      <item title="生物" name="puppet"/>
-      <item title="武器" name="weapon"/>
-      <item title="植物" name="plant"/>
-      <item title="自定义" name="custom"/>
     </list>
-    <text id="n3_ey2h" name="tfTitle" xy="80,15" size="97,34" fontSize="22" color="#ffffff" vAlign="middle" bold="true" text="选择物品">
+    <text id="n3_ey2h" name="tfTitle" xy="80,15" size="51,34" fontSize="22" color="#ffffff" vAlign="middle" bold="true" text="背包">
       <gearText controller="ctrlMode" pages="2" values="选择物品" default="背包"/>
     </text>
-    <image id="n67_apfp" name="imgLstItemBg" src="nl0rcyicc" fileName="imgB/img_cm_bg_dk_1.png" pkg="te1gxawo" xy="120,78" size="1002,519">
+    <image id="n67_apfp" name="imgLstItemBg" src="nl0rcyicc" fileName="imgB/img_cm_bg_dk_1.png" pkg="te1gxawo" xy="120,78" size="692,443">
       <relation target="n74_yxzk" sidePair="bottomext-top,rightext-left"/>
     </image>
-    <list id="n27_ey2h" name="lstBagItem" xy="140,92" size="964,495" layout="flow_hz" overflow="scroll" lineGap="9" colGap="17" defaultItem="ui://te1gxawop2t3cyid7" autoClearItems="true">
+    <list id="n27_ey2h" name="lstBagItem" xy="140,92" size="654,419" layout="flow_hz" overflow="scroll" lineGap="9" colGap="17" defaultItem="ui://te1gxawop2t3cyid7" autoClearItems="true">
       <relation target="n67_apfp" sidePair="width-width,height-height"/>
       <item/>
       <item/>
@@ -76,17 +68,17 @@
       <gearDisplay controller="ctrlMode" pages="0,1"/>
       <relation target="" sidePair="right-right"/>
     </group>
-    <image id="n71_e0c2" name="imgShortcutBg" src="nl0rcyicc" fileName="imgB/img_cm_bg_dk_1.png" pkg="te1gxawo" xy="120,607" size="1002,91" group="n73_e0c2">
+    <image id="n71_e0c2" name="imgShortcutBg" src="nl0rcyicc" fileName="imgB/img_cm_bg_dk_1.png" pkg="te1gxawo" xy="120,531" size="692,91" group="n73_e0c2">
       <relation target="n67_apfp" sidePair="width-width"/>
     </image>
-    <component id="n72_e0c2" name="comShortcuts" src="dv923o" fileName="com/ComLessonBagShortcuts.xml" xy="294,622" size="660,64" group="n73_e0c2">
+    <component id="n72_e0c2" name="comShortcuts" src="dv923o" fileName="com/ComLessonBagShortcuts.xml" xy="139,546" size="660,64" group="n73_e0c2">
       <relation target="n71_e0c2" sidePair="center-center"/>
     </component>
-    <group id="n73_e0c2" name="grpShortcut" xy="120,607" size="1002,91" advanced="true" collapsed="true">
+    <group id="n73_e0c2" name="grpShortcut" xy="120,531" size="692,91" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlMode" pages="0,1"/>
       <relation target="n67_apfp" sidePair="top-bottom"/>
     </group>
-    <graph id="n74_yxzk" name="gphSizeCtrl" xy="1136,611" pivot="1,1" size="0,29" alpha="0" touchable="false" type="rect" lineSize="0">
+    <graph id="n74_yxzk" name="gphSizeCtrl" xy="826,535" pivot="1,1" size="310,105" alpha="0" touchable="false" type="rect" lineSize="0">
       <gearSize controller="ctrlMode" pages="2" values="0,29,1,1" default="310,105,1,1"/>
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </graph>

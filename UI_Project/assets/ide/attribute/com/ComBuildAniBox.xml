@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="408,60" designImageOffsetX="-224" designImageOffsetY="-570">
+  <controller name="ctrlFold" pages="0,folded,1,unfolded" selected="1"/>
+  <controller name="ctrlSelect" pages="0,unselected,1,preselected,2,selected" selected="0"/>
+  <controller name="ctrlCombine" pages="0,normal,1,combine" selected="0"/>
+  <displayList>
+    <image id="n51_xba6" name="n51" src="hckx7a" fileName="attribute/img/img_att_dh_4.png" xy="0,0" size="407,60">
+      <gearDisplay controller="ctrlSelect" pages="2"/>
+      <gearSize controller="ctrlCombine" pages="0,1" values="407,60,1,1|351,60,1,1"/>
+      <relation target="" sidePair="height-height,right-right"/>
+    </image>
+    <list id="n25_fidk" name="lstAniFrame" xy="0,60" size="408,362" scrollBarMargin="5,5,0,0" scrollBarRes="ui://te1gxawovulycyid4," lineGap="2" colGap="11" defaultItem="ui://ti9jag5txba67n" autoClearItems="true">
+      <gearDisplay controller="ctrlFold" pages="1"/>
+      <relation target="" sidePair="width-width,top-bottom"/>
+      <item controllers="ctrlBuild,0"/>
+      <item controllers="ctrlBuild,0"/>
+      <item controllers="ctrlBuild,0"/>
+      <item controllers="ctrlBuild,0"/>
+      <item controllers="ctrlBuild,0"/>
+      <item controllers="ctrlBuild,0"/>
+      <item controllers="ctrlBuild,0"/>
+      <item controllers="ctrlBuild,0"/>
+      <item controllers="ctrlBuild,0"/>
+      <item controllers="ctrlBuild,0"/>
+    </list>
+    <component id="n27_s1sd" name="btnFoldFrame" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="15,23" pivot="0.5,0.5" size="8,14" rotation="90">
+      <gearLook controller="ctrlFold" pages="0,1" values="1,0,0,1|1,90,0,1"/>
+      <relation target="n48_xba6" sidePair="right-left,middle-middle"/>
+      <Button icon="ui://ti9jag5txba67g"/>
+    </component>
+    <component id="n29_s1sd" name="btnDelete" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="377,16" size="28,28">
+      <gearDisplay controller="ctrlSelect" pages="1,2"/>
+      <Button icon="ui://ti9jag5thckx75" selectedIcon="ui://32ieekgus1sdta2"/>
+    </component>
+    <component id="n30_s1sd" name="btnEdit" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="348,16" size="28,28">
+      <gearDisplay controller="ctrlSelect" pages="1,2"/>
+      <Button icon="ui://ti9jag5thckx6z" selectedIcon="ui://32ieekgus1sdta1"/>
+    </component>
+    <component id="n31_s1sd" name="btnCopy" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="314,16" size="28,28">
+      <gearDisplay controller="ctrlSelect" pages="1,2"/>
+      <Button icon="ui://ti9jag5thckx72" selectedIcon="ui://32ieekgus1sdta0"/>
+    </component>
+    <text id="n26_izy9" name="textAniName" xy="88,2" size="141,56" input="true" prompt="动画名" maxLength="16" fontSize="18" vAlign="middle" autoSize="none" text="一二三四五六七">
+      <relation target="n48_xba6" sidePair="right-left"/>
+    </text>
+    <image id="n45_xba6" name="n45" src="hckx6k" fileName="attribute/img/img_att_dh_y_1.png" xy="-43,20">
+      <gearDisplay controller="ctrlCombine" pages="1"/>
+      <relation target="n48_xba6" sidePair="right-left"/>
+    </image>
+    <image id="n46_xba6" name="n46" src="hckx6l" fileName="attribute/img/img_att_dh_y_1_1.png" xy="-44,20">
+      <gearDisplay controller="ctrlSelect" pages="2"/>
+      <relation target="n48_xba6" sidePair="right-left"/>
+    </image>
+    <image id="n47_xba6" name="n47" src="hckx7b" fileName="attribute/img/img_att_dh_5.png" xy="0,0">
+      <relation target="" sidePair="left-left,top-top"/>
+    </image>
+    <text id="n23_fidk" name="textIndex" xy="2,2" size="15,16" fontSize="10" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="1">
+      <relation target="n47_xba6" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n48_xba6" name="imgIconBg" src="hckx6s" fileName="attribute/img/img_att_wb_1.png" xy="30,6" size="48,48">
+      <gearXY controller="ctrlCombine" pages="0,1" values="30,6|91,6"/>
+    </image>
+    <graph id="n21_fidk" name="icon" xy="33,8" pivot="0.5,0.5" size="41,44">
+      <relation target="n48_xba6" sidePair="center-center,middle-middle"/>
+      <relation target="n48_xba6" sidePair="width-width,height-height"/>
+    </graph>
+    <image id="n49_xba6" name="n49" src="hckx79" fileName="attribute/img/img_att_dh_3.png" xy="-5,0" size="2,60">
+      <gearDisplay controller="ctrlCombine" pages="1"/>
+      <relation target="n48_xba6" sidePair="left-right"/>
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <image id="n50_xba6" name="n50" src="hckx78" fileName="attribute/img/img_att_dh_2.png" xy="0,58" size="408,2">
+      <relation target="" sidePair="top-bottom,width-width"/>
+    </image>
+  </displayList>
+</component>

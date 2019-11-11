@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="ti9jag5t" jpegQuality="80" compressPNG="true">
   <resources>
-    <image id="s45w0" name="img_ide_cm_1.png" path="/ideCommon/img/" scale="9grid" scale9grid="10,10,20,20"/>
+    <image id="s45w0" name="img_ide_cm_1.png" path="/ideCommon/img/" scale="9grid" scale9grid="2,2,36,36"/>
     <image id="s45w1" name="img_ide_cm_2.png" path="/ideCommon/img/" scale="9grid" scale9grid="13,13,26,26"/>
-    <image id="s45w2" name="img_ide_cm_3.png" path="/ideCommon/img/" scale="9grid" scale9grid="19,19,38,38"/>
+    <image id="s45w2" name="img_ide_cm_3.png" path="/ideCommon/img/" scale="9grid" scale9grid="4,4,28,68"/>
     <image id="s45w3" name="icon_codeV_bl_1.png" path="/codeVew/img/"/>
     <image id="s45w4" name="icon_codeV_bl_1_1.png" path="/codeVew/img/"/>
     <image id="s45w5" name="icon_codeV_gn_1.png" path="/codeVew/img/"/>
@@ -217,6 +217,48 @@
     <image id="t1ls6r" name="icon_code_sc_2.png" path="/codeVew/img/"/>
     <image id="t1ls6s" name="img_code_zz.png" path="/codeVew/img/" scale="9grid" scale9grid="8,8,16,16"/>
     <image id="t1ls6t" name="icon_code_sc_1.png" path="/codeVew/img/"/>
+    <component id="hckx6h" name="ComBuildAniBox.xml" path="/attribute/com/" exported="true"/>
+    <component id="hckx6i" name="ComBuildAniEdit.xml" path="/attribute/com/" exported="true"/>
+    <component id="hckx6j" name="comBuildAniScroll.xml" path="/attribute/com/" exported="true"/>
+    <image id="hckx6k" name="img_att_dh_y_1.png" path="/attribute/img/"/>
+    <image id="hckx6l" name="img_att_dh_y_1_1.png" path="/attribute/img/"/>
+    <image id="hckx6m" name="img_att_dlw_1.png" path="/attribute/img/"/>
+    <image id="hckx6n" name="img_att_dlw_2.png" path="/attribute/img/"/>
+    <image id="hckx6o" name="img_att_szl_1.png" path="/attribute/img/"/>
+    <image id="hckx6p" name="img_att_szl_2.png" path="/attribute/img/"/>
+    <image id="hckx6q" name="img_att_szl_3.png" path="/attribute/img/"/>
+    <image id="hckx6r" name="img_att_szl_4.png" path="/attribute/img/"/>
+    <image id="hckx6s" name="img_att_wb_1.png" path="/attribute/img/" scale="9grid" scale9grid="5,5,50,30"/>
+    <image id="hckx6t" name="img_att_wb_1_1.png" path="/attribute/img/"/>
+    <image id="hckx6u" name="img_att_wp_1.png" path="/attribute/img/" scale="9grid" scale9grid="6,6,48,48"/>
+    <image id="hckx6v" name="img_att_wp_2.png" path="/attribute/img/"/>
+    <image id="hckx6w" name="img_att_xz_1.png" path="/attribute/img/"/>
+    <image id="hckx6x" name="img_att_xz_1_1.png" path="/attribute/img/"/>
+    <image id="hckx6y" name="img_att_xz_2.png" path="/attribute/img/"/>
+    <image id="hckx6z" name="icon_att_bj.png" path="/attribute/img/"/>
+    <image id="hckx70" name="icon_att_dh.png" path="/attribute/img/"/>
+    <image id="hckx71" name="icon_att_dh_1.png" path="/attribute/img/"/>
+    <image id="hckx72" name="icon_att_fz.png" path="/attribute/img/"/>
+    <image id="hckx73" name="icon_att_off.png" path="/attribute/img/"/>
+    <image id="hckx74" name="icon_att_on.png" path="/attribute/img/"/>
+    <image id="hckx75" name="icon_att_sc.png" path="/attribute/img/"/>
+    <image id="hckx76" name="icon_att_sx.png" path="/attribute/img/"/>
+    <image id="hckx77" name="img_att_dh_1.png" path="/attribute/img/" scale="9grid" scale9grid="6,6,68,68"/>
+    <image id="hckx78" name="img_att_dh_2.png" path="/attribute/img/"/>
+    <image id="hckx79" name="img_att_dh_3.png" path="/attribute/img/"/>
+    <image id="hckx7a" name="img_att_dh_4.png" path="/attribute/img/" scale="9grid" scale9grid="5,5,50,50"/>
+    <image id="hckx7b" name="img_att_dh_5.png" path="/attribute/img/"/>
+    <image id="xba67c" name="btn_ide_cm_blue.png" path="/ideCommon/img/"/>
+    <image id="xba67d" name="btn_ide_cm_gray.png" path="/ideCommon/img/"/>
+    <image id="xba67e" name="btn_ide_cm_red.png" path="/ideCommon/img/"/>
+    <image id="xba67f" name="icon_ide_cm_4.png" path="/ideCommon/img/"/>
+    <image id="xba67g" name="icon_ide_cm_4_1.png" path="/ideCommon/img/"/>
+    <image id="xba67h" name="icon_ide_cm_bf.png" path="/ideCommon/img/"/>
+    <image id="xba67l" name="img_ide_cm_5.png" path="/ideCommon/img/"/>
+    <image id="xba67m" name="img_ide_cm_6.png" path="/ideCommon/img/" scale="9grid" scale9grid="4,4,48,48"/>
+    <component id="xba67n" name="ComBuildFrameBox.xml" path="/attribute/com/" exported="true"/>
+    <image id="xba67o" name="img_ide_cm_7.png" path="/ideCommon/img/" scale="9grid" scale9grid="4,4,53,52"/>
+    <component id="xba67q" name="btnScale.xml" path="/attribute/btn/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>

@@ -38,22 +38,6 @@ export async function updateGit() {
         let pullCmdStr = `git pull`;
         await spawnExc.runCmd(pullCmdStr, Global.projPath, null, '推送分支错误');
 
-
-        if (ModelMgr.versionModel.curEnviron.codeVersionEnable) {
-            let configPath = `${Global.projPath}/src/GameConfig.ts`;
-            let configContent = await fsExc.readFile(configPath);
-            let reg = /public static codeVersion = ".*?";/;
-            configContent = configContent.replace(reg, `public static codeVersion = "${ModelMgr.versionModel.releaseVersion}";`);
-            await fsExc.writeFile(configPath, configContent);
-        }
-
-        if (ModelMgr.versionModel.versionDesc) {
-            let indexPath = `${Global.projPath}/bin-release/web/${releaseVersion}/index.html`;
-            let indexContent = await fsExc.readFile(indexPath);
-            indexContent = indexContent.replace("//window.location.href", `window.location.hash='publisher="${ModelMgr.versionModel.publisher}"&versionDesc="${ModelMgr.versionModel.versionDesc}"'`);
-            await fsExc.writeFile(indexPath, indexContent);
-        }
-
         Global.toast('更新git成功');
     } catch (error) {
         Global.snack('更新git错误', error);
@@ -75,6 +59,17 @@ export async function publishProject() {
     }
 
     try {
+        if (ModelMgr.versionModel.curEnviron.codeVersionEnable) {
+            let configPath = `${Global.projPath}/src/GameConfig.ts`;
+            let configContent = await fsExc.readFile(configPath);
+            let regCodeVersion = /public static codeVersion = ".*?";/;
+            configContent = configContent.replace(regCodeVersion, `public static codeVersion = "${ModelMgr.versionModel.releaseVersion}";`);
+
+            let regTrunkName = /public static trunkName: eTrunkName = .*?;/;
+            configContent = configContent.replace(regTrunkName, `public static trunkName: eTrunkName = eTrunkName.${ModelMgr.versionModel.curEnviron.trunkName};`);
+            await fsExc.writeFile(configPath, configContent);
+        }
+
         let cmdStr = 'egret publish --version ' + releaseVersion;
         await spawnExc.runCmd(cmdStr, Global.projPath, null, '发布当前项目错误');
         ModelMgr.versionModel.setNewVersion(releaseVersion);

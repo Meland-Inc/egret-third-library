@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="408,60" designImageOffsetX="-224" designImageOffsetY="-570">
+  <controller name="ctrlCombine" exported="true" pages="0,normal,1,combine" selected="1"/>
+  <displayList>
+    <text id="n23_fidk" name="textName" xy="208,17" size="65,26" fontSize="14" vAlign="middle" autoSize="none" text="帧名">
+      <relation target="n28_xba6" sidePair="left-right,middle-middle"/>
+    </text>
+    <image id="n28_xba6" name="n28" src="hckx6u" fileName="attribute/img/img_att_wp_1.png" xy="150,6" size="48,48">
+      <gearXY controller="ctrlCombine" pages="0" values="92,6" default="150,6"/>
+    </image>
+    <loader id="n21_fidk" name="icon" xy="152,7" pivot="0.5,0.5" size="46,46" align="center" vAlign="middle" fill="scale">
+      <relation target="n28_xba6" sidePair="width-width,height-height"/>
+      <relation target="n28_xba6" sidePair="center-center,middle-middle"/>
+    </loader>
+    <image id="n29_xba6" name="n29" src="hckx79" fileName="attribute/img/img_att_dh_3.png" xy="55,0" size="2,60">
+      <gearDisplay controller="ctrlCombine" pages="1"/>
+      <relation target="" sidePair="height-height"/>
+      <relation target="n28_xba6" sidePair="right-left"/>
+    </image>
+    <image id="n30_xba6" name="n30" src="hckx78" fileName="attribute/img/img_att_dh_2.png" xy="0,58" size="408,2">
+      <relation target="" sidePair="bottom-bottom,width-width"/>
+    </image>
+  </displayList>
+</component>
