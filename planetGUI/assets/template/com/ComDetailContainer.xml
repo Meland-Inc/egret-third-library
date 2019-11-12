@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,400" overflow="scroll" scrollBarFlags="4" scrollBar="visible" scrollBarRes="ui://4wr0elnxn08cn1d,ui://4wr0elnxn08cn1d" designImage="ui://i25v0ebkg06r65" designImageOffsetX="-723" designImageOffsetY="-78">
+<component size="1136,400" overflow="scroll" scrollBarFlags="4" scrollBar="visible" scrollBarRes="ui://4wr0elnxn08cn1d,ui://4wr0elnxn08cn1d" designImage="ui://i25v0ebkg06r65" designImageOffsetX="-723" designImageOffsetY="-78" designImageAlpha="0">
   <controller name="ctrlType" pages="0,config,1,custom" selected="0"/>
   <displayList>
     <image id="n0_er8n" name="imgInputBg" src="p3zlcyie0" fileName="imgB/img_cm_srk_2.png" pkg="te1gxawo" xy="100,0" size="285,31"/>
@@ -14,10 +14,10 @@
       <gearXY controller="ctrlType" pages="0,1" values="218,194|318,249"/>
       <Button title="更新" titleColor="#ffffff" titleFontSize="18" icon="ui://te1gxawom3dicyidb"/>
     </component>
-    <group id="n19_er8n" name="customInput" xy="102,194" size="188,87" advanced="true" collapsed="true">
+    <group id="n19_er8n" name="customInput" xy="102,194" size="188,87" advanced="true">
       <gearDisplay controller="ctrlType" pages="1"/>
     </group>
-    <text id="n3_er8n" name="tf" xy="97,203" size="81,24" fontSize="18" color="#365989" vAlign="bottom" bold="true" text="地图大小"/>
+    <text id="n3_er8n" name="tf" xy="97,203" size="77,29" fontSize="18" color="#365989" vAlign="bottom" bold="true" text="地图大小"/>
     <text id="n10_er8n" name="tfManorGenerateType" xy="98,366" size="121,29" fontSize="18" color="#365989" vAlign="middle" autoSize="none" bold="true" text="领地生成方式">
       <relation target="n9_er8n" sidePair="top-top"/>
     </text>

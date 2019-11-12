@@ -231,7 +231,7 @@
               data-mu-loading-size="24"
               color="red500"
               @click="pushGit"
-              v-show="curEnviron&&curEnviron.codeVersionEnable"
+              v-show="curEnviron&&curEnviron.pushGitEnable"
             >Git推送文件</mu-button>
           </mu-container>
         </div>
@@ -697,7 +697,7 @@ export default {
       }
 
       if (
-        !!ModelMgr.versionModel.versionDesc &&
+        !ModelMgr.versionModel.versionDesc &&
         this.curEnviron &&
         this.curEnviron.publishDescEnable
       ) {
@@ -743,7 +743,7 @@ export default {
           promiseList.push(mdFtp.applyPolicyNum);
         }
 
-        if (this.curEnviron.codeVersionEnable) {
+        if (this.curEnviron.pushGitEnable) {
           promiseList.push(mdFtp.pushGit);
         }
 

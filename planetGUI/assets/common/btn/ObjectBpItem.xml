@@ -17,6 +17,9 @@
     <image id="n23_utpb" name="imgSelected" src="nl0rcyic5" fileName="imgB/img_cm_wpk_2.png" xy="0,0">
       <gearDisplay controller="button" pages="1"/>
     </image>
+    <image id="n24_mt5a" name="imgNumBg" src="v3m6cyiee" fileName="imgB/img_cm_kjan_1.png" xy="47,49" group="n26_mt5a"/>
+    <text id="n25_mt5a" name="num" xy="47,46" size="17,18" group="n26_mt5a" fontSize="10" align="center" vAlign="bottom" autoSize="height" text="0"/>
+    <group id="n26_mt5a" name="grpNum" xy="47,46" size="17,18"/>
   </displayList>
   <Button mode="Radio"/>
 </component>

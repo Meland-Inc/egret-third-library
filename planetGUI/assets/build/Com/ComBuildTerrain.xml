@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="360,640" opaque="false" designImage="ui://i25v0ebkm5hn5v" designImageOffsetX="-1049" designImageAlpha="0">
-  <controller name="ctrlState" exported="true" pages="1,open,0,fold" selected="0"/>
-  <controller name="ctrlMode" pages="0,brush,1,shovel,2,replace,3,select" selected="0">
+<component size="56,640" opaque="false" designImage="ui://i25v0ebkm5hn5v" designImageOffsetX="-1049" designImageAlpha="0">
+  <controller name="ctrlState" exported="true" pages="1,open,0,fold" selected="1"/>
+  <controller name="ctrlMode" pages="0,brush,1,shovel,2,replace,3,select" selected="3">
     <action type="change_page" fromPage="" toPage="1,3" controller="ctrlState" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="0,2" controller="ctrlState" targetPage="1"/>
   </controller>
   <displayList>
-    <graph id="n19_n83g" name="n19" xy="0,0" size="360,640" visible="false" alpha="0" touchable="false" type="rect">
+    <graph id="n19_n83g" name="n19" xy="-1,0" size="56,640" visible="false" alpha="0" touchable="false" type="rect">
       <gearXY controller="ctrlState" pages="1,0" values="0,0|-1,0"/>
       <gearSize controller="ctrlState" pages="1,0" values="360,640,1,1|56,640,1,1"/>
     </graph>
@@ -104,14 +104,14 @@
     <group id="n17_jm8l" name="grpMode" xy="-31,0" size="86,640" advanced="true" collapsed="true">
       <gearXY controller="ctrlState" pages="1,0" values="-31,0|-31,0"/>
     </group>
-    <component id="n24_m5hn" name="btnCopy" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="38,307" size="42,42" group="n27_m5hn">
+    <component id="n24_m5hn" name="btnCopy" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="6,307" size="42,42" group="n27_m5hn">
       <Button title="复制" titleFontSize="14" icon="ui://32ieekguzefit8x"/>
     </component>
-    <component id="n25_m5hn" name="btnDelete" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="38,359" size="42,42" group="n27_m5hn">
+    <component id="n25_m5hn" name="btnDelete" src="k177t82" fileName="btn/BtnBuildShortCut.xml" xy="6,359" size="42,42" group="n27_m5hn">
       <Button title="删除" titleFontSize="14" icon="ui://32ieekguzefit8u"/>
     </component>
-    <image id="n26_m5hn" name="n26" src="m5hnt9i" fileName="img_UI3/b/ide/img_ide_sck_x.png" xy="39,285" group="n27_m5hn"/>
-    <group id="n27_m5hn" name="grpOperate" xy="38,285" size="43,116" advanced="true" collapsed="true">
+    <image id="n26_m5hn" name="n26" src="m5hnt9i" fileName="img_UI3/b/ide/img_ide_sck_x.png" xy="7,285" group="n27_m5hn"/>
+    <group id="n27_m5hn" name="grpOperate" xy="6,285" size="43,116" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlMode" pages="3"/>
     </group>
   </displayList>
