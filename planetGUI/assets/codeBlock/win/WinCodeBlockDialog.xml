@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" designImage="ui://i25v0ebkfzlu3y" designImageAlpha="0" designImageLayer="1">
+<component size="1136,640" designImage="ui://i25v0ebkfzlu3y" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
   <controller name="ctrlType" pages="3,unknow,1,showText,2,question,0,selection" selected="0"/>
   <displayList>
     <list id="n2_j5jv" name="lstSelection" xy="544,77" size="464,402" layout="flow_hz" overflow="scroll" lineGap="10" colGap="10" defaultItem="ui://4o62dubdj5jvj" align="right" vAlign="bottom">
@@ -33,8 +33,12 @@
       <gearDisplay controller="ctrlType" pages="2"/>
       <Button titleColor="#000000" icon="ui://te1gxawofzlucyiby"/>
     </component>
-    <group id="n11_qlcu" name="root" xy="90,412" size="927,216" advanced="true">
+    <group id="n11_qlcu" name="root" xy="90,412" size="927,216" advanced="true" collapsed="true">
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </group>
+    <component id="n22_bb3g" name="btnForceClose" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1032,2" size="104,31">
+      <relation target="" sidePair="right-right,top-top"/>
+      <Button title="强制关闭" titleColor="#ffffff" titleFontSize="13" icon="ui://te1gxawom3dicyidb" sound="ui://fknoioovtqc912"/>
+    </component>
   </displayList>
 </component>
