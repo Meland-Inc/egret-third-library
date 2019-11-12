@@ -182,7 +182,7 @@
     <image id="lctb5s" name="img_code_dh_7(1).png" path="/codeVew/oldImg/"/>
     <image id="lctb5t" name="img_code_dh_8(1).png" path="/codeVew/oldImg/"/>
     <image id="lctb5u" name="img_code_dh_9(1).png" path="/codeVew/oldImg/"/>
-    <component id="lctb5v" name="ComDustbin.xml" path="/codeVew/oldCom/"/>
+    <component id="lctb5v" name="ComDustbin.xml" path="/codeVew/com/"/>
     <image id="lctb5w" name="img_cpde_yx_1.png" path="/codeVew/oldImg/"/>
     <image id="lctb5x" name="img_code_ljt_2(1).png" path="/codeVew/oldImg/"/>
     <image id="lctb5y" name="img_code_ljt_1(1).png" path="/codeVew/oldImg/"/>
@@ -204,6 +204,19 @@
     <component id="lctb6e" name="ComCodeblockSelectLocation.xml" path="/codeVew/oldCom/" exported="true"/>
     <image id="lctb6f" name="icon_code_tck_8.png" path="/codeVew/oldImg/" scale="9grid" scale9grid="30,5,60,10"/>
     <image id="lctb6g" name="img_code_zb_1.png" path="/codeVew/oldImg/"/>
+    <component id="i6xe6h" name="btnIDEKeyWord.xml" path="/codeVew/oldBtn/"/>
+    <component id="i6xe6i" name="btnTips.xml" path="/codeVew/oldBtn/" exported="true"/>
+    <component id="i6xe6j" name="btnTipsWithImage.xml" path="/codeVew/oldBtn/" exported="true"/>
+    <component id="i6xe6k" name="WinCodeblockSelectEntityB.xml" path="/codeVew/oldWin/" exported="true"/>
+    <image id="i6xe6l" name="icon_code_queding_02.png" path="/codeVew/oldImg/"/>
+    <image id="i6xe6m" name="icon_code_fanhui_03.png" path="/codeVew/oldImg/"/>
+    <image id="i6xe6n" name="img_code_tishik_01.png" path="/codeVew/oldImg/"/>
+    <image id="i6xe6o" name="img_code_tishi_04.png" path="/codeVew/oldImg/"/>
+    <component id="i6xe6p" name="WinCodeblockSelectLocation.xml" path="/codeVew/oldWin/" exported="true"/>
+    <component id="i6xe6q" name="comIDEContainer.xml" path="/codeVew/oldCom/"/>
+    <image id="t1ls6r" name="icon_code_sc_2.png" path="/codeVew/img/"/>
+    <image id="t1ls6s" name="img_code_zz.png" path="/codeVew/img/" scale="9grid" scale9grid="8,8,16,16"/>
+    <image id="t1ls6t" name="icon_code_sc_1.png" path="/codeVew/img/"/>
     <component id="hckx6h" name="ComBuildAniBox.xml" path="/attribute/com/" exported="true"/>
     <component id="hckx6i" name="ComBuildAniEdit.xml" path="/attribute/com/" exported="true"/>
     <component id="hckx6j" name="comBuildAniScroll.xml" path="/attribute/com/" exported="true"/>
@@ -246,6 +259,67 @@
     <component id="xba67n" name="ComBuildFrameBox.xml" path="/attribute/com/" exported="true"/>
     <image id="xba67o" name="img_ide_cm_7.png" path="/ideCommon/img/" scale="9grid" scale9grid="4,4,53,52"/>
     <component id="xba67q" name="btnScale.xml" path="/attribute/btn/"/>
+    <image id="oiot7r" name="icon_att_bj_1.png" path="/attribute/img/"/>
+    <image id="oiot7s" name="icon_att_fz_1.png" path="/attribute/img/"/>
+    <image id="oiot7t" name="icon_att_sc_1.png" path="/attribute/img/"/>
+    <component id="oiot7u" name="btnCommon.xml" path="/attribute/btn/"/>
+    <image id="80ab7v" name="icon_cre_cl_1.png" path="/create/img/"/>
+    <image id="80ab7w" name="icon_cre_cl_1_1.png" path="/create/img/"/>
+    <image id="80ab7x" name="icon_cre_dw_1.png" path="/create/img/"/>
+    <image id="80ab7y" name="icon_cre_dw_1_1.png" path="/create/img/"/>
+    <image id="80ab7z" name="icon_cre_hb.png" path="/create/img/"/>
+    <image id="80ab80" name="icon_cre_jc_1.png" path="/create/img/"/>
+    <image id="80ab81" name="icon_cre_jc_1_1.png" path="/create/img/"/>
+    <image id="80ab82" name="icon_cre_jz_1.png" path="/create/img/"/>
+    <image id="80ab83" name="icon_cre_jz_1_1.png" path="/create/img/"/>
+    <image id="80ab84" name="icon_cre_lb_1.png" path="/create/img/"/>
+    <image id="80ab85" name="icon_cre_lb_1_1.png" path="/create/img/"/>
+    <image id="80ab86" name="icon_cre_qb_1.png" path="/create/img/"/>
+    <image id="80ab87" name="icon_cre_qb_1_1.png" path="/create/img/"/>
+    <image id="80ab88" name="icon_cre_qt_1.png" path="/create/img/"/>
+    <image id="80ab89" name="icon_cre_qt_1_1.png" path="/create/img/"/>
+    <image id="80ab8a" name="icon_cre_sck.png" path="/create/img/"/>
+    <image id="80ab8b" name="icon_cre_st.png" path="/create/img/"/>
+    <image id="80ab8c" name="icon_cre_sz.png" path="/create/img/"/>
+    <image id="80ab8d" name="icon_cre_tb_1.png" path="/create/img/"/>
+    <image id="80ab8e" name="icon_cre_tb_1_1.png" path="/create/img/"/>
+    <image id="80ab8f" name="icon_cre_xhp_1.png" path="/create/img/"/>
+    <image id="80ab8g" name="icon_cre_xhp_1_1.png" path="/create/img/"/>
+    <image id="80ab8h" name="icon_cre_ycx.png" path="/create/img/"/>
+    <image id="80ab8i" name="icon_cre_zb_1.png" path="/create/img/"/>
+    <image id="80ab8j" name="icon_cre_zb_1_1.png" path="/create/img/"/>
+    <image id="80ab8k" name="icon_cre_zdy_1.png" path="/create/img/"/>
+    <image id="80ab8l" name="icon_cre_zdy_1_1.png" path="/create/img/"/>
+    <image id="80ab8m" name="icon_cre_zj_1.png" path="/create/img/"/>
+    <image id="80ab8n" name="icon_cre_zj_1_1.png" path="/create/img/"/>
+    <image id="80ab8o" name="icon_cre_zw_1.png" path="/create/img/"/>
+    <image id="80ab8p" name="icon_cre_zw_1_1.png" path="/create/img/"/>
+    <image id="80ab8q" name="img_cre_kjj.png" path="/create/img/"/>
+    <image id="80ab8r" name="img_cre_sq.png" path="/create/img/"/>
+    <image id="80ab8s" name="img_cre_xz.png" path="/create/img/"/>
+    <image id="80ab8t" name="img_cre_xzk.png" path="/create/img/"/>
+    <image id="80ab8u" name="btn_ide_cm_cz.png" path="/ideCommon/img/"/>
+    <image id="80ab8v" name="btn_ide_cm_dm.png" path="/ideCommon/img/"/>
+    <image id="80ab8w" name="btn_ide_cm_dx.png" path="/ideCommon/img/"/>
+    <image id="80ab8x" name="btn_ide_cm_sx.png" path="/ideCommon/img/"/>
+    <image id="80ab8y" name="icon_ide_cm_sq.png" path="/ideCommon/img/"/>
+    <image id="80ab8z" name="icon_ide_cm_zk.png" path="/ideCommon/img/"/>
+    <image id="80ab90" name="img_ide_cm_10.png" path="/ideCommon/img/"/>
+    <image id="80ab91" name="img_ide_cm_11.png" path="/ideCommon/img/"/>
+    <image id="80ab92" name="img_ide_cm_12.png" path="/ideCommon/img/"/>
+    <image id="80ab93" name="img_ide_cm_13.png" path="/ideCommon/img/"/>
+    <image id="80ab94" name="img_ide_cm_14.png" path="/ideCommon/img/"/>
+    <image id="80ab95" name="img_ide_cm_15.png" path="/ideCommon/img/"/>
+    <image id="80ab96" name="img_ide_cm_16.png" path="/ideCommon/img/"/>
+    <image id="80ab97" name="img_ide_cm_8.png" path="/ideCommon/img/"/>
+    <image id="80ab98" name="img_ide_cm_9.png" path="/ideCommon/img/"/>
+    <image id="80ab99" name="img_ide_cm_h.png" path="/ideCommon/img/"/>
+    <image id="80ab9a" name="img_ide_cm_s.png" path="/ideCommon/img/"/>
+    <image id="80ab9b" name="img_ide_cm_ssk.png" path="/ideCommon/img/"/>
+    <image id="80ab9c" name="img_ide_wpk_1.png" path="/ideCommon/img/"/>
+    <image id="80ab9d" name="img_ide_wpk_2.png" path="/ideCommon/img/"/>
+    <image id="80ab9e" name="img_ide_wpk_3.png" path="/ideCommon/img/"/>
+    <image id="80ab9f" name="img_ide_wpk_5.png" path="/ideCommon/img/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>

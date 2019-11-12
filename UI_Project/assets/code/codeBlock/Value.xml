@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="80,44">
+  <controller name="color" pages="0,DeepBlue,1,LightBlue,2,LightRed,3,DeepRed,4,Purple,5,Green,6,Pink,7,Carnation,8,LightYellow,9,DeepYellow" selected="0"/>
+  <controller name="isAlone" pages="1,false,0,true" selected="0"/>
+  <controller name="ctrlValueType" pages="1,none,0,interactive,2,entity,3,output,4,question,5,xy,6,class,7,publicVar,8,privateVar,9,publicList,10,privateList" selected="0"/>
+  <displayList>
+    <loader id="n2_emrm" name="ladBG" xy="0,0" size="80,44" url="ui://t573fj5bt1ls5i" fill="scaleFree">
+      <gearDisplay controller="isAlone" pages="1"/>
+      <gearIcon controller="color" pages="0,1,2,3,4,5,6,7,8,9" values="ui://t573fj5bt1ls5i|ui://t573fj5bt1ls5i|ui://t573fj5bs45wi|ui://t573fj5bt1ls5f|ui://t573fj5bt1ls5b|ui://t573fj5bs45wk|ui://t573fj5bs45w1|ui://t573fj5bs45wl|ui://t573fj5bs45w13|ui://t573fj5bt1ls59"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <loader id="n3_yrfu" name="ladAloneBG" xy="0,0" size="90,72" locked="true" hideByEditor="true" url="ui://t573fj5bi6xe4e" fill="scaleFree">
+      <gearDisplay controller="isAlone" pages="0"/>
+      <gearIcon controller="color" pages="0,1,2,3,4,5,6,7,8,9" values="ui://t573fj5bi6xe4e|ui://t573fj5bi6xe4f|ui://t573fj5bi6xe4g|ui://t573fj5bi6xe4h|ui://t573fj5bi6xe4i|ui://t573fj5bi6xe4j|ui://t573fj5bi6xe4k|ui://t573fj5bi6xe4l|ui://rnqj1l77w7botld|ui://t573fj5bi6xe4m"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <loader id="n5_udpv" name="loaderDrag" xy="0,0" size="80,44" locked="true" hideByEditor="true">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <component id="n1_flp7" name="container" src="i6xe2d" fileName="com/Container.xml" xy="19,0" size="46,44" restrictSize="0,0,44,44"/>
+    <loader id="n4_kt4s" name="btnHint" xy="16,6" size="32,32">
+      <gearDisplay controller="ctrlValueType" pages="0,2,3,4,5,6,7,8,9,10"/>
+      <gearIcon controller="ctrlValueType" pages="1,0,2,3,4,5,6,7,8,9,10" values="|ui://t573fj5bs45wz|ui://t573fj5bs45wv|ui://t573fj5bs45wr|ui://t573fj5bs45wx|ui://t573fj5bs45w10|ui://t573fj5bs45wt|ui://t573fj5bs45wn|ui://t573fj5bs45wo|ui://t573fj5bs45wp|ui://t573fj5bs45wq"/>
+      <relation target="n3_yrfu" sidePair="left-left"/>
+    </loader>
+  </displayList>
+  <relation target="n1_flp7" sidePair="width-width,height-height"/>
+</component>

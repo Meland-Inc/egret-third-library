@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="109,50">
+  <controller name="color" pages="0,DeepBlue,1,LightBlue,2,LightRed,3,DeepRed,4,Purple,5,Green,6,Pink,7,Carnation,8,LightYellow,9,DeepYellow" selected="0"/>
+  <controller name="isAlone" pages="1,false,0,true" selected="0"/>
+  <displayList>
+    <image id="n2_h5gv" name="lagBG" src="s45w7" fileName="img/img_code_sj_2.png" xy="-29,-12" size="138,69">
+      <relation target="" sidePair="width-width"/>
+    </image>
+    <component id="n1_flp7" name="container" src="i6xe2d" fileName="com/Container.xml" xy="55,3" size="44,42" restrictSize="15,0,42,42"/>
+  </displayList>
+  <relation target="n1_flp7" sidePair="height-height,width-width"/>
+</component>

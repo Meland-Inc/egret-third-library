@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="rnqj1l77" jpegQuality="80" compressPNG="true">
   <resources>
-    <component id="e13y1" name="InputShape.xml" path="/codeBlock/" exported="true"/>
+    <component id="e13y1" name="InputShape.xml" path="/codeBlock/"/>
     <component id="e13y2" name="Main.xml" path="/win/" exported="true"/>
-    <component id="o3b95" name="DropdownMessageArgShape.xml" path="/codeBlock/" exported="true"/>
+    <component id="o3b95" name="DropdownMessageArgShape.xml" path="/codeBlock/"/>
     <component id="kesa9" name="Container.xml" path="/com/"/>
     <component id="kesaa" name="Text.xml" path="/com/" exported="true"/>
     <component id="y583d" name="CodeblockPool.xml" path="/newCom/"/>
-    <component id="heu0g" name="BooleanMessageArgShape.xml" path="/codeBlock/" exported="true"/>
+    <component id="heu0g" name="BooleanMessageArgShape.xml" path="/codeBlock/"/>
     <component id="t09yv" name="VerticalScrollComponent.xml" path="/com/"/>
     <component id="n1c01j" name="CodeblockContainer.xml" path="/newCom/"/>
     <component id="n1c01l" name="ComCategoryList.xml" path="/newCom/"/>
@@ -18,14 +18,14 @@
     <component id="t3y12f" name="btnShare.xml" path="/btn/"/>
     <component id="t3y12h" name="btnRun.xml" path="/btn/"/>
     <component id="kgcg3m" name="FreeContainer.xml" path="/com/"/>
-    <component id="flp73n" name="PropMessageArgShape.xml" path="/codeBlock/" exported="true"/>
-    <component id="flp74j" name="Value.xml" path="/codeBlock/" exported="true"/>
-    <component id="flp74o" name="Boolean.xml" path="/codeBlock/" exported="true"/>
+    <component id="flp73n" name="PropMessageArgShape.xml" path="/codeBlock/"/>
+    <component id="flp74j" name="Value.xml" path="/codeBlock/"/>
+    <component id="flp74o" name="Boolean.xml" path="/codeBlock/"/>
     <component id="j7co5v" name="ScrollBarVB.xml" path="/com/" exported="true"/>
     <component id="j7co5w" name="ScrollBarH_grip.xml" path="/com/"/>
     <component id="j7co5x" name="ScrollBarH.xml" path="/com/" exported="true"/>
     <component id="j7co5y" name="comMainContainer.xml" path="/newCom/"/>
-    <component id="l2b668" name="BlankShape.xml" path="/codeBlock/" exported="true"/>
+    <component id="l2b668" name="BlankShape.xml" path="/codeBlock/"/>
     <component id="dib96o" name="btnTips.xml" path="/btn/" exported="true"/>
     <component id="dib96p" name="btnTipsWithImage.xml" path="/btn/" exported="true"/>
     <component id="dib96r" name="RunnintMask.xml" path="/com/"/>
@@ -137,7 +137,7 @@
     <component id="1194tac" name="ComCodeCalculator.xml" path="/newCom/" exported="true"/>
     <component id="1194tad" name="btnCalculator.xml" path="/newBtn/"/>
     <component id="mcvlag" name="WinCodeblockSelectEntity.xml" path="/win/" exported="true"/>
-    <component id="r5zoah" name="InputShapeSingle.xml" path="/codeBlock/" exported="true"/>
+    <component id="r5zoah" name="InputShapeSingle.xml" path="/codeBlock/"/>
     <component id="eztytae" name="ComCodeblockCopy.xml" path="/newCom/" exported="true"/>
     <image id="ptzjtae" name="img_code_tongyong_jiahao_5.png" path="/newImg2/"/>
     <image id="ptzjtaf" name="img_code_tongyong_jianhao_6.png" path="/newImg2/"/>
@@ -208,7 +208,7 @@
     <image id="pydetcs" name="img_code_a3.png" path="/newImg2/"/>
     <image id="pydetct" name="btn_code_bf_88.png" path="/newImg2/"/>
     <image id="h5gvtcq" name="img_code_yunsuan_tuoyan_6.png" path="/newImg2/" scale="9grid" scale9grid="17,14,34,6"/>
-    <component id="h5gvtcr" name="BlockCodeblock.xml" path="/codeBlock/" exported="true"/>
+    <component id="h5gvtcr" name="BlockCodeblock.xml" path="/codeBlock/"/>
     <image id="liabtd7" name="img_code_tongyong_anniu_4.png" path="/newImg2/"/>
     <image id="liabtd8" name="img_code_tongyong_tuoyan_3.png" path="/newImg2/" scale="9grid" scale9grid="30,9,60,18"/>
     <image id="liabtd9" name="img_code_gongnneg_8.png" path="/newImg2/" scale="9grid" scale9grid="36,16,72,32"/>
@@ -219,11 +219,11 @@
     <image id="liabtde" name="img_code_bianliang_8.png" path="/newImg2/" scale="9grid" scale9grid="36,16,72,32"/>
     <image id="liabtdf" name="img_code_bianliang_9.png" path="/newImg2/"/>
     <image id="liabtdg" name="img_code_bianliang_10.png" path="/newImg2/"/>
-    <component id="liabtdi" name="BlockCodeblockEvent.xml" path="/codeBlock/" exported="true"/>
-    <component id="liabtdj" name="ForkableContainer.xml" path="/codeBlock/" exported="true"/>
-    <component id="liabtdk" name="ForkableEnd.xml" path="/codeBlock/" exported="true"/>
-    <component id="liabtdl" name="ForkableMiddle.xml" path="/codeBlock/" exported="true"/>
-    <component id="liabtdm" name="ForkableStart.xml" path="/codeBlock/" exported="true"/>
+    <component id="liabtdi" name="BlockCodeblockEvent.xml" path="/codeBlock/"/>
+    <component id="liabtdj" name="ForkableContainer.xml" path="/codeBlock/"/>
+    <component id="liabtdk" name="ForkableEnd.xml" path="/codeBlock/"/>
+    <component id="liabtdl" name="ForkableMiddle.xml" path="/codeBlock/"/>
+    <component id="liabtdm" name="ForkableStart.xml" path="/codeBlock/"/>
     <image id="liabte5" name="img_code_kongzhi_3-1.png" path="/newImg2/" scale="9grid" scale9grid="112,24,33,48"/>
     <image id="liabte6" name="img_code_kongzhi_12.png" path="/newImg2/" scale="9grid" scale9grid="83,20,25,30"/>
     <image id="liabte7" name="img_code_kongzhi_13.png" path="/newImg2/" scale="9grid" scale9grid="78,21,24,32"/>
@@ -352,7 +352,7 @@
     <image id="ilo1thz" name="img_code_xl_2.png" path="/newImg2/"/>
     <component id="ilo1ti7" name="ComboBox1_item.xml" path="/codeBlock/"/>
     <component id="ilo1ti8" name="ComboBox1_popup.xml" path="/codeBlock/"/>
-    <component id="ilo1ti9" name="ComboBox1.xml" path="/codeBlock/" exported="true"/>
+    <component id="ilo1ti9" name="ComboBox1.xml" path="/codeBlock/"/>
     <component id="ilo1tia" name="WinCodeblockSelectEntityB.xml" path="/win/" exported="true"/>
     <image id="ilo1tib" name="img_code_dh_8.png" path="/B-PlatformImg/"/>
     <image id="ilo1tic" name="img_code_dh_9.png" path="/B-PlatformImg/"/>
@@ -409,7 +409,6 @@
     <image id="rfebtjx" name="btn_cm_xf_1.png" path="/newImg/" exported="true"/>
     <image id="rfebtjy" name="btn_cm_xf_3.png" path="/newImg/" exported="true"/>
     <image id="rx4otk0" name="img_code_dm_4.png" path="/B-PlatformImg/"/>
-    <component id="sjjotk1" name="comIDEContainerB.xml" path="/newCom/" exported="true"/>
     <component id="zfldtk2" name="ComIDEKeyWord.xml" path="/com/" exported="true"/>
     <component id="zfldtk3" name="btnIDEKeyWord.xml" path="/btn/" exported="true"/>
     <component id="ox4vtk4" name="ComRadioSelect.xml" path="/newCom/" exported="true"/>
@@ -464,16 +463,16 @@
     <image id="w7botlg" name="img_code_hs_lx_5.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="22,9,34,18"/>
     <image id="w7botlh" name="img_code_hs_ty_6.png" path="/newImg2/" exported="true" scale="9grid" scale9grid="20,16,40,5"/>
     <component id="w7botli" name="ComCreateArg.xml" path="/newCom/" exported="true"/>
-    <component id="w7botlj" name="BlockCodeblockFunction.xml" path="/codeBlock/" exported="true"/>
-    <component id="w7botlk" name="BlockCodeblockReturn.xml" path="/codeBlock/" exported="true"/>
-    <component id="w7botll" name="InputArgsShape.xml" path="/codeBlock/" exported="true"/>
+    <component id="w7botlj" name="BlockCodeblockFunction.xml" path="/codeBlock/"/>
+    <component id="w7botlk" name="BlockCodeblockReturn.xml" path="/codeBlock/"/>
+    <component id="w7botll" name="InputArgsShape.xml" path="/codeBlock/"/>
     <image id="w7botlm" name="icon_code_dm_hs_2.png" path="/B-PlatformImg/" exported="true" scale="9grid" scale9grid="1,10,2,20"/>
     <image id="w7botln" name="icon_code_dm_hs_2_1.png" path="/B-PlatformImg/" exported="true"/>
     <component id="uvm5tlo" name="ComVarCreateInlet.xml" path="/newCom/"/>
     <image id="n3oitlp" name="img_code_hs_12.png" path="/newImg2/" scale="9grid" scale9grid="66,20,36,36"/>
     <component id="puoetlq" name="ComPartingLine.xml" path="/newCom/" exported="true"/>
-    <component id="qhwqtlr" name="AddElseIfShape.xml" path="/codeBlock/" exported="true"/>
-    <component id="qhwqtls" name="DelElseIfShape.xml" path="/codeBlock/" exported="true"/>
+    <component id="qhwqtlr" name="AddElseIfShape.xml" path="/codeBlock/"/>
+    <component id="qhwqtls" name="DelElseIfShape.xml" path="/codeBlock/"/>
     <component id="wp52tlt" name="btnExit.xml" path="/btn/"/>
     <component id="p7ootlu" name="ComListCreateInlet.xml" path="/newCom/"/>
     <image id="p7ootlv" name="img_code_bllb_1.png" path="/newImg2/" scale="9grid" scale9grid="78,27,45,22"/>
@@ -487,6 +486,7 @@
     <image id="h5butm3" name="img_code_xl_1_2.png" path="/newImg2/" scale="9grid" scale9grid="7,7,63,90"/>
     <component id="rwpwtm4" name="ComCodePanelGrid.xml" path="/newCom/"/>
     <component id="rwpwtm5" name="WinCodePanel.xml" path="/win/" exported="true"/>
+    <component id="sjjotk1" name="comIDEContainer.xml" path="/newCom/"/>
   </resources>
   <publish name="Basics"/>
 </packageDescription>

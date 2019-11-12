@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="108,50" opaque="false">
+  <controller name="color" pages="0,DeepBlue,1,LightBlue,2,LightRed,3,DeepRed,4,Purple,5,Green,6,Pink,7,Carnation,8,LightYellow,9,DeepYellow" selected="0"/>
+  <controller name="isAlone" pages="1,false,0,true" selected="0"/>
+  <displayList>
+    <loader id="n2_h5gv" name="lagBG" xy="0,0" size="108,50" url="ui://t573fj5bs45w0" fill="scaleFree">
+      <gearDisplay controller="isAlone" pages="1"/>
+      <gearIcon controller="color" pages="0,1,2,3,4,5,6,7,8,9" values="ui://t573fj5bs45w0|ui://t573fj5bs45w0|ui://t573fj5bs45w0|ui://t573fj5bs45w0|ui://t573fj5bs45w0|ui://t573fj5bs45w0|ui://t573fj5bs45w0|ui://t573fj5bs45w0|ui://t573fj5bs45w0|ui://t573fj5bs45w0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <loader id="n3_yrfu" name="lagAloneBG" xy="1,0" size="108,57" url="ui://rnqj1l77pwmetlo" fill="scaleFree">
+      <gearDisplay controller="isAlone" pages="0"/>
+      <gearIcon controller="color" pages="7,8" values="ui://rnqj1l77w7botl9|ui://rnqj1l77w7botl9" default="ui://rnqj1l77pwmetlo"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <component id="n1_flp7" name="container" src="i6xe2d" fileName="com/Container.xml" xy="55,4" size="43,42" restrictSize="15,0,42,42"/>
+  </displayList>
+  <relation target="n1_flp7" sidePair="height-height,width-width"/>
+</component>
