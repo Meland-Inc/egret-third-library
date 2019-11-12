@@ -259,6 +259,10 @@
     <component id="xba67n" name="ComBuildFrameBox.xml" path="/attribute/com/" exported="true"/>
     <image id="xba67o" name="img_ide_cm_7.png" path="/ideCommon/img/" scale="9grid" scale9grid="4,4,53,52"/>
     <component id="xba67q" name="btnScale.xml" path="/attribute/btn/"/>
+    <image id="oiot7r" name="icon_att_bj_1.png" path="/attribute/img/"/>
+    <image id="oiot7s" name="icon_att_fz_1.png" path="/attribute/img/"/>
+    <image id="oiot7t" name="icon_att_sc_1.png" path="/attribute/img/"/>
+    <component id="oiot7u" name="btnCommon.xml" path="/attribute/btn/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640" opaque="false" designImage="ui://i25v0ebkjnb25p">
   <controller name="ctrlOperate" pages="" selected="-1"/>
-  <controller name="ctrlIdeMode" pages="0,create,1,move,4,terrain,3,attr,2,code,5,ani,6,aniselect" selected="1"/>
+  <controller name="ctrlIdeMode" pages="0,create,1,move,4,terrain,3,attr,2,code,5,ani,6,aniselect" selected="0"/>
   <displayList>
-    <graph id="n39_e7dh" name="shapeOffset" xy="1082,0" size="54,641" visible="false" alpha="0.1" touchable="false" type="rect">
-      <gearXY controller="ctrlIdeMode" pages="0,1,4,3,2,5,6" values="1082,0|1082,0|1082,0|1082,0|1082,0|1089,0|1082,0"/>
+    <graph id="n39_e7dh" name="shapeOffset" xy="773,0" size="363,640" visible="false" alpha="0.1" touchable="false" type="rect">
+      <gearXY controller="ctrlIdeMode" pages="0,1,4,3,2,5,6" values="773,0|773,0|773,0|773,0|773,0|780,0|773,0"/>
       <gearSize controller="ctrlIdeMode" pages="0,1,4,3,2,5,6" values="363,640,1,1|54,641,1,1|360,640,1,1|320,640,1,1|344,640,1,1|346,640,1,1|305,640,1,1"/>
       <relation target="" sidePair="right-right,height-height"/>
     </graph>
-    <component id="n38_si0u" name="comToolBar" src="zefit91" fileName="Com/ComIdeTopToolBar.xml" xy="72,0" size="1014,36" controller="ctrlMode,4">
+    <component id="n38_si0u" name="comToolBar" src="zefit91" fileName="Com/ComIdeTopToolBar.xml" xy="72,0" size="705,36" controller="ctrlMode,4">
       <gearXY controller="ctrlIdeMode" default="72,0"/>
       <gearSize controller="ctrlIdeMode" pages="0,1,4,3,2,5,6" values="705,36,1,1|1014,36,1,1|708,36,1,1|748,36,1,1|724,36,1,1|729,36,1,1|763,36,1,1"/>
       <relation target="n9_r0y9" sidePair="leftext-right"/>
@@ -41,13 +41,12 @@
       <item title="属性" icon="ui://32ieekguuhu6t80" name="attr"/>
       <item title="代码块" icon="ui://32ieekguuhu6t7z" name="code"/>
     </list>
-    <component id="n42_nb0m" name="comAni" src="fidkt9s" fileName="Com/ComBuildAniEdit.xml" xy="797,0" size="346,642">
-      <gearDisplay controller="ctrlIdeMode" pages="5"/>
-      <relation target="" sidePair="right-right,height-height"/>
-    </component>
     <component id="n43_nb0m" name="comAniSelect" src="fidkt9r" fileName="Com/ComBuildAniSelect.xml" xy="831,0">
       <gearDisplay controller="ctrlIdeMode" pages="6"/>
       <relation target="" sidePair="height-height,right-right"/>
+    </component>
+    <component id="n44_kgij" name="comAni" src="hckx6i" fileName="attribute/com/ComBuildAniEdit.xml" pkg="ti9jag5t" xy="707,0">
+      <gearDisplay controller="ctrlIdeMode" pages="5"/>
     </component>
   </displayList>
   <transition name="transBpShow">
@@ -57,7 +56,6 @@
     <item time="0" type="XY" target="n36_7slt" tween="true" startValue="1136,-" endValue="773,-" duration="9"/>
     <item time="0" type="XY" target="n37_jm8l" tween="true" startValue="1136,-" endValue="1082,-" duration="9"/>
     <item time="0" type="XY" target="n41_m5hn" tween="true" startValue="1136,-" endValue="776,-" duration="9"/>
-    <item time="0" type="XY" target="n42_nb0m" tween="true" startValue="1136,0" endValue="797,0" duration="9"/>
     <item time="0" type="XY" target="n43_nb0m" tween="true" startValue="1136,0" endValue="831,0" duration="9"/>
     <item time="0" type="XY" target="n9_r0y9" tween="true" startValue="-223,-" endValue="0,-" duration="9"/>
     <item time="9" type="Alpha" target="n38_si0u" value="1"/>
@@ -69,11 +67,9 @@
     <item time="0" type="XY" target="n36_7slt" tween="true" startValue="773,-" endValue="1136,-" duration="9"/>
     <item time="0" type="XY" target="n37_jm8l" tween="true" startValue="1082,-" endValue="1136,-" duration="9"/>
     <item time="0" type="XY" target="n41_m5hn" tween="true" startValue="776,-" endValue="1136,-" duration="9"/>
-    <item time="0" type="XY" target="n42_nb0m" tween="true" startValue="797,0" endValue="1136,0" duration="9"/>
     <item time="0" type="XY" target="n43_nb0m" tween="true" startValue="831,0" endValue="1136,0" duration="9"/>
     <item time="0" type="XY" target="n9_r0y9" tween="true" startValue="0,-" endValue="-223,-" duration="9"/>
     <item time="9" type="Alpha" target="n38_si0u" value="0"/>
-    <item time="9" type="XY" target="n42_nb0m" tween="true" startValue="1136,0"/>
     <item time="9" type="XY" target="n43_nb0m" tween="true" startValue="1136,0"/>
   </transition>
 </component>
