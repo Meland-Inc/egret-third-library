@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="266,110" designImage="ui://thvmj7voa1nd1" designImageOffsetY="-277" designImageAlpha="0" designImageLayer="1">
+  <displayList>
+    <image id="n0_psru" name="imgArrow" src="a1nd9" fileName="img/icon_main_rw_1.png" xy="11,3"/>
+    <image id="n1_psru" name="imgTitleBg" src="a1nd2" fileName="img/img_maon_rw_1.png" xy="46,3" size="90,30"/>
+    <text id="n2_psru" name="tfTitle" xy="53,7" size="78,24" fontSize="18" color="#333333" text="本节任务"/>
+    <list id="n3_psru" name="lstTaskItem" xy="0,40" size="265,70" overflow="scroll" defaultItem="ui://oyity675psrul" autoClearItems="true">
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>
