@@ -5,7 +5,7 @@
   <displayList>
     <loader id="n14_o6si" name="bg" xy="0,0" size="48,48" url="ui://te1gxawonl0rcyic4" align="center" vAlign="middle" fill="scaleFree" shrinkOnly="true"/>
     <loader id="n22_ww3a" name="icon" xy="6,6" size="35,35" group="n41_ltu2" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
-    <group id="n41_ltu2" name="grpItemIcon" xy="6,6" size="35,35" advanced="true" collapsed="true"/>
+    <group id="n41_ltu2" name="grpItemIcon" xy="6,6" size="35,35" advanced="true"/>
     <image id="n40_uvgl" name="imgEquipMark" src="wq4dcyico" fileName="imgB/img_main_wpk_3.png" xy="2,2">
       <gearDisplay controller="ctrlMark" pages="1"/>
     </image>

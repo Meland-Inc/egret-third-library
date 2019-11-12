@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="262,262" designImage="ui://thvmj7voa1nd1">
+  <controller name="ctrlAreaInfo" pages="0,public,1,private" selected="1"/>
+  <displayList>
+    <image id="n0_psru" name="imgBg" src="a1nd1" fileName="img/img_main_xdt_1.png" xy="0,0" size="262,262"/>
+    <component id="n1_psru" name="mapViewCtnr" src="psruj" fileName="com/SmallMapContainer.xml" xy="12,11" size="237,237"/>
+    <text id="n2_psru" name="tfHomeName" xy="13,18" size="235,24" fontSize="18" color="#ffffff" align="center" vars="true" autoSize="height" strokeColor="#5c4016" strokeSize="2" text="{name=六月二}的家">
+      <gearText controller="ctrlAreaInfo" pages="1" values="{name=六月二}的家" default="公共区域"/>
+    </text>
+    <text id="n3_psru" name="tfLocTitle" xy="42,189" size="77,24" fontSize="18" color="#ffffff" strokeColor="#5c4016" strokeSize="2" text="场景坐标"/>
+    <text id="n4_psru" name="tfHeaderInfo" xy="40,216" size="171,24" fontSize="18" color="#ffffff" vars="true" autoSize="none" text="({r=333},  {c=333})"/>
+  </displayList>
+</component>

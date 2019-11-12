@@ -48,5 +48,17 @@
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://te1gxawopaiocyigr"/>
     </component>
+    <component id="n12_kvgb" name="btnXYGrid" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="687,10" size="16,16" tooltips="test">
+      <gearDisplay controller="ctrlMode" pages="0,1,3"/>
+      <gearXY controller="ctrlMode" pages="0,1,3" values="687,10|630,10|596,10" default="628,10"/>
+      <relation target="" sidePair="right-right"/>
+      <Button icon="ui://te1gxawopaiocyigr"/>
+    </component>
+    <component id="n13_kvgb" name="btnRCGrid" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="656,10" size="16,16" tooltips="test">
+      <gearDisplay controller="ctrlMode" pages="0,1,3"/>
+      <gearXY controller="ctrlMode" pages="0,1,3" values="656,10|598,10|564,10" default="628,10"/>
+      <relation target="" sidePair="right-right"/>
+      <Button icon="ui://te1gxawopaiocyigr"/>
+    </component>
   </displayList>
 </component>

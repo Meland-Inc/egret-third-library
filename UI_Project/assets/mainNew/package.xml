@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="oyity675" jpegQuality="80" compressPNG="true">
   <resources>
-    <component id="a1nd0" name="WinMain.xml" path="/win/"/>
-    <image id="a1nd1" name="img_main_xdt_1.png" path="/img/"/>
-    <image id="a1nd2" name="img_maon_rw_1.png" path="/img/"/>
+    <component id="a1nd0" name="WinMainNew.xml" path="/win/" exported="true"/>
+    <image id="a1nd1" name="img_main_xdt_1.png" path="/img/" scale="9grid" scale9grid="24,24,48,48"/>
+    <image id="a1nd2" name="img_maon_rw_1.png" path="/img/" scale="9grid" scale9grid="23,7,46,14"/>
     <image id="a1nd3" name="img_maon_rw_2.png" path="/img/"/>
     <image id="a1nd4" name="icon_main_bb.png" path="/img/"/>
     <image id="a1nd5" name="icon_main_bf.png" path="/img/"/>
@@ -18,6 +18,14 @@
     <image id="a1nde" name="icon_main_xsgl.png" path="/img/"/>
     <image id="a1ndf" name="img_main_bb_1.png" path="/img/"/>
     <image id="a1ndg" name="img_main_bb_2.png" path="/img/"/>
+    <component id="psruh" name="btnMainMenu.xml" path="/com/" exported="true"/>
+    <component id="psrui" name="ComSmallMap.xml" path="/com/"/>
+    <component id="psruj" name="SmallMapContainer.xml" path="/com/"/>
+    <component id="psruk" name="ComTask.xml" path="/com/"/>
+    <component id="psrul" name="LabTaskItem.xml" path="/com/"/>
+    <component id="psrum" name="ComMainBagShortcut.xml" path="/com/"/>
+    <component id="psrun" name="ComMainShortcutItem.xml" path="/com/"/>
+    <component id="psruo" name="spBagBtn.xml" path="/sprite/"/>
   </resources>
-  <publish name=""/>
+  <publish name="mainNew"/>
 </packageDescription>
