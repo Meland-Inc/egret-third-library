@@ -6,13 +6,16 @@
     <image id="n14_j0zc" name="imgBG_1" src="80ab9e" fileName="ideCommon/img/img_ide_wpk_3.png" xy="0,0" pivot="0.5,0.5">
       <gearDisplay controller="button" pages="1"/>
     </image>
-    <loader id="n16_j0zc" name="icon" xy="0,0" pivot="0.5,0.5" size="86,86" align="center" vAlign="middle" fill="scale"/>
+    <loader id="n25_sxvt" name="formulaBG" xy="0,0" size="86,86" group="n26_sxvt" align="center" vAlign="middle" fill="scale"/>
+    <loader id="n16_j0zc" name="icon" xy="0,0" pivot="0.5,0.5" size="86,86" group="n26_sxvt" align="center" vAlign="middle" fill="scale"/>
+    <group id="n26_sxvt" name="grpItemIcon" xy="0,0" size="86,86" advanced="true"/>
     <image id="n23_b8na" name="imgUnselect" src="v00l9p" fileName="terrain/img/img_ter_k.png" xy="63,64">
       <gearDisplay controller="button" pages="0"/>
     </image>
     <image id="n24_b8na" name="imgSelect" src="v00l9q" fileName="terrain/img/img_ter_xz.png" xy="63,64">
       <gearDisplay controller="button" pages="1"/>
     </image>
+    <image id="n27_sxvt" name="imgMulti" src="s1sdta6" fileName="newImg/AnimationEdit/icon_cm_dh_10.png" pkg="32ieekgu" xy="66,0" hideByEditor="true"/>
   </displayList>
   <Button mode="Check"/>
 </component>

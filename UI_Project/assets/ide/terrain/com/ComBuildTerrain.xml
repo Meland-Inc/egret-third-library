@@ -40,7 +40,7 @@
     <text id="n32_v00l" name="tfSearch" xy="14,73" size="394,24" group="n17_jm8l" input="true" prompt="请输入搜索内容" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="请输入搜索内容">
       <gearDisplay controller="ctrlState" pages="1"/>
     </text>
-    <text id="n31_v00l" name="tfTitle" xy="16,17" size="105,27" group="n17_jm8l" fontSize="20" color="#333333" text="地形编辑器">
+    <text id="n31_v00l" name="tfTitle" xy="16,17" size="105,24" group="n17_jm8l" fontSize="20" color="#333333" text="地形编辑器">
       <gearDisplay controller="ctrlState" pages="1"/>
     </text>
     <component id="n3_7slt" name="btnFold" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="377,2" size="48,48" group="n23_m5hn">
@@ -54,12 +54,14 @@
     <group id="n23_m5hn" name="grpFoldOpen" xy="39,2" size="386,50" group="n17_jm8l" advanced="true">
       <gearDisplay controller="ctrlMode" pages="0,2"/>
     </group>
-    <group id="n17_jm8l" name="grpMode" xy="-114,0" size="545,1090" advanced="true">
+    <group id="n17_jm8l" name="grpMode" xy="-114,0" size="544,1090" advanced="true">
       <gearXY controller="ctrlState" pages="1,0" values="-114,0|-114,0"/>
     </group>
-    <image id="n0_7slt" name="n0" src="80ab97" fileName="ideCommon/img/img_ide_cm_8.png" xy="10,190" size="394,879" group="n16_jm8l"/>
+    <image id="n0_7slt" name="n0" src="80ab97" fileName="ideCommon/img/img_ide_cm_8.png" xy="10,190" size="394,879" group="n16_jm8l">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </image>
     <list id="n4_7slt" name="lstBackpack" xy="20,190" size="412,877" group="n16_jm8l" layout="flow_hz" selectionMode="multipleSingleClick" overflow="scroll" scrollBar="visible" margin="10,0,0,0" scrollBarMargin="5,5,0,0" scrollBarRes="ui://te1gxawovulycyid4," lineGap="10" colGap="10" defaultItem="ui://ti9jag5tv00la9" autoClearItems="true">
-      <relation target="n0_7slt" sidePair="height-height"/>
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
       <item/>
       <item/>
       <item/>
@@ -116,7 +118,7 @@
       <item/>
       <item/>
     </list>
-    <group id="n16_jm8l" name="grpBp" xy="10,190" size="422,879" advanced="true" collapsed="true">
+    <group id="n16_jm8l" name="grpBp" xy="10,190" size="422,879" advanced="true">
       <gearDisplay controller="ctrlState" pages="1"/>
     </group>
   </displayList>
