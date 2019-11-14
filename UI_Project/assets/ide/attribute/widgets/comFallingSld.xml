@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="263,57" extention="Label" designImage="ui://thvmj7vogrwp6" designImageOffsetX="-1646" designImageOffsetY="-556" designImageAlpha="0" designImageLayer="1">
+  <displayList>
+    <component id="n0_grwp" name="sldValue" src="grwpaw" fileName="attribute/widgets/Slider1.xml" xy="10,40">
+      <Slider value="50" max="100"/>
+    </component>
+    <text id="n1_grwp" name="title" xy="7,0" size="77,22" fontSize="18" color="#333333" text="掉落数量"/>
+    <image id="n2_grwp" name="imgValueBg" src="hckx6r" fileName="attribute/img/img_att_szl_4.png" xy="207,25"/>
+    <text id="n3_grwp" name="tfValue" xy="220,31" size="32,22" input="true" keyboardType="4" fontSize="18" color="#333333" singleLine="true" text="100"/>
+  </displayList>
+</component>

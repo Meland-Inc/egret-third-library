@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="407,140" designImage="ui://thvmj7vogrwp6" designImageOffsetX="-1492" designImageOffsetY="-558" designImageAlpha="0" designImageLayer="1">
+  <displayList>
+    <image id="n0_grwp" name="imgBg" src="hckx6u" fileName="attribute/img/img_att_wp_1.png" xy="-1,0" size="140,140"/>
+    <loader id="n1_grwp" name="ladIcon" xy="-1,0" size="140,140"/>
+    <image id="n2_grwp" name="imgNameBg" src="hckx6v" fileName="attribute/img/img_att_wp_2.png" xy="-1,112" size="140,28"/>
+    <text id="n3_grwp" name="tfFallingObj" xy="-1,114" size="140,22" fontSize="18" color="#333333" align="center" vars="true" autoSize="none" text="掉落物件{num=1}"/>
+    <component id="n4_grwp" name="labFallingNumSld" src="grwpb5" fileName="attribute/widgets/comFallingSld.xml" xy="143,0">
+      <Label title="掉落数量"/>
+    </component>
+    <component id="n5_lvog" name="labFallingProbability" src="grwpb5" fileName="attribute/widgets/comFallingSld.xml" xy="143,81">
+      <Label title="概率"/>
+    </component>
+  </displayList>
+</component>
