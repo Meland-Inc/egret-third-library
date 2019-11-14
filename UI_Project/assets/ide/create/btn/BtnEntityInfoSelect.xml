@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="298,60" extention="Button" designImage="ui://thvmj7vo80ab5" designImageOffsetY="-305">
-  <controller name="button" pages="0,up,1,down" selected="1"/>
-  <controller name="ctrlData" pages="0,none,1,item,4,subItem,2,narrow,3,expand" selected="0">
+<component size="298,60" extention="Button" designImage="ui://thvmj7vo80ab5" designImageOffsetY="-305" designImageAlpha="0">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <controller name="ctrlData" pages="0,none,1,item,4,subItem,2,narrow,3,expand" selected="3">
     <action type="change_page" fromPage="" toPage="0" controller="button" targetPage="0"/>
   </controller>
   <controller name="ctrlIsShow" pages="0,true,1,false" selected="0"/>
@@ -9,7 +9,7 @@
     <image id="n15_h5kr" name="n15" src="80ab96" fileName="ideCommon/img/img_ide_cm_16.png" xy="0,0" size="298,58">
       <gearDisplay controller="button" pages="1"/>
     </image>
-    <loader id="n2_wsvg" name="icon" xy="32,7" size="48,48" align="center" vAlign="middle" fill="scale" shrinkOnly="true">
+    <loader id="n2_wsvg" name="icon" xy="32,5" size="48,48" align="center" vAlign="middle" fill="scale" shrinkOnly="true">
       <gearXY controller="ctrlData" pages="0,4" values="32,7|82,5" default="32,5"/>
       <gearSize controller="ctrlData" default="48,48,1,1"/>
     </loader>
@@ -19,18 +19,18 @@
       <gearSize controller="ctrlData" default="100,19,1,1"/>
     </text>
     <image id="n7_shu1" name="n7" src="xba67f" fileName="ideCommon/img/icon_ide_cm_4.png" xy="12,28">
-      <gearDisplay controller="ctrlData" pages="2"/>
+      <gearDisplay controller="ctrlData" pages="3"/>
     </image>
     <image id="n8_shu1" name="n8" src="xba67g" fileName="ideCommon/img/icon_ide_cm_4_1.png" xy="14,23">
-      <gearDisplay controller="ctrlData" pages="3"/>
+      <gearDisplay controller="ctrlData" pages="2"/>
     </image>
     <text id="n9_shu1" name="tfNum" xy="229,20" size="60,22" fontSize="18" color="#333333" align="right" vAlign="middle" autoSize="none" text="1209&#xA;">
       <gearDisplay controller="ctrlData" pages="2,3"/>
     </text>
-    <image id="n11_10awa" name="n11" src="cw9mcyifr" fileName="imgB/img_cm_ys_1_1.png" pkg="te1gxawo" xy="4,4">
+    <image id="n11_10awa" name="n11" src="cw9mcyifr" fileName="old/imgB/img_cm_ys_1_1.png" pkg="te1gxawo" xy="4,4">
       <gearDisplay controller="ctrlIsShow" pages="1"/>
     </image>
-    <image id="n12_10awa" name="n12" src="cw9mcyifs" fileName="imgB/img_cm_ys_2.png" pkg="te1gxawo" xy="6,7">
+    <image id="n12_10awa" name="n12" src="cw9mcyifs" fileName="old/imgB/img_cm_ys_2.png" pkg="te1gxawo" xy="6,7">
       <gearDisplay controller="ctrlIsShow" pages="1"/>
     </image>
     <image id="n13_h5kr" name="n13" src="80ab99" fileName="ideCommon/img/img_ide_cm_h.png" xy="0,60" size="298,2"/>

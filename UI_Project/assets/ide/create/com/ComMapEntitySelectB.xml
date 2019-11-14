@@ -177,10 +177,17 @@
     <text id="n15_h5kr" name="tfTitle" xy="21,17" size="65,24" fontSize="20" color="#333333" text="实体栏">
       <gearDisplay controller="ctrlState" pages="0,1,2"/>
     </text>
-    <component id="n17_cjfp" name="tbtnFold" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="260,10" size="36,36">
-      <gearDisplay controller="ctrlState" pages="1,2"/>
+    <image id="n19_m773" name="n19" src="80ab94" fileName="ideCommon/img/img_ide_cm_14.png" xy="223,7" group="n21_m773"/>
+    <component id="n17_cjfp" name="tbtnState" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="269,10" size="36,36" group="n21_m773">
       <Button icon="ui://ti9jag5t80ab8d" selectedIcon="ui://ti9jag5t80ab84"/>
     </component>
+    <component id="n18_m773" name="tbtnScope" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="227,10" size="36,36" group="n21_m773">
+      <Button icon="ui://ti9jag5t80ab8d" selectedIcon="ui://ti9jag5t80ab84"/>
+    </component>
+    <image id="n20_m773" name="n20" src="80ab95" fileName="ideCommon/img/img_ide_cm_15.png" xy="265,7" group="n21_m773"/>
+    <group id="n21_m773" name="n21" xy="223,7" size="86,42" advanced="true">
+      <gearDisplay controller="ctrlState" pages="1,2"/>
+    </group>
   </displayList>
   <relation target="n0_yhf8" sidePair="width-width"/>
 </component>
