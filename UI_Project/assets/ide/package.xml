@@ -3,7 +3,7 @@
   <resources>
     <image id="s45w0" name="img_ide_cm_1.png" path="/ideCommon/img/" scale="9grid" scale9grid="2,2,36,36"/>
     <image id="s45w1" name="img_ide_cm_2.png" path="/ideCommon/img/" scale="9grid" scale9grid="13,13,26,26"/>
-    <image id="s45w2" name="img_ide_cm_3.png" path="/ideCommon/img/" scale="9grid" scale9grid="4,4,28,68"/>
+    <image id="s45w2" name="img_ide_cm_3.png" path="/ideCommon/img/" scale="9grid" scale9grid="21,18,40,33"/>
     <image id="s45w3" name="icon_codeV_bl_1.png" path="/codeVew/img/"/>
     <image id="s45w4" name="icon_codeV_bl_1_1.png" path="/codeVew/img/"/>
     <image id="s45w5" name="icon_codeV_gn_1.png" path="/codeVew/img/"/>
@@ -222,19 +222,19 @@
     <component id="hckx6j" name="comBuildAniScroll.xml" path="/attribute/com/" exported="true"/>
     <image id="hckx6k" name="img_att_dh_y_1.png" path="/attribute/img/"/>
     <image id="hckx6l" name="img_att_dh_y_1_1.png" path="/attribute/img/"/>
-    <image id="hckx6m" name="img_att_dlw_1.png" path="/attribute/img/"/>
+    <image id="hckx6m" name="img_att_dlw_1.png" path="/attribute/img/" scale="9grid" scale9grid="12,10,24,20"/>
     <image id="hckx6n" name="img_att_dlw_2.png" path="/attribute/img/"/>
-    <image id="hckx6o" name="img_att_szl_1.png" path="/attribute/img/"/>
-    <image id="hckx6p" name="img_att_szl_2.png" path="/attribute/img/"/>
+    <image id="hckx6o" name="img_att_szl_1.png" path="/attribute/img/" scale="9grid" scale9grid="10,2,20,4"/>
+    <image id="hckx6p" name="img_att_szl_2.png" path="/attribute/img/" scale="9grid" scale9grid="8,2,16,4"/>
     <image id="hckx6q" name="img_att_szl_3.png" path="/attribute/img/"/>
     <image id="hckx6r" name="img_att_szl_4.png" path="/attribute/img/"/>
     <image id="hckx6s" name="img_att_wb_1.png" path="/attribute/img/" scale="9grid" scale9grid="5,5,50,30"/>
     <image id="hckx6t" name="img_att_wb_1_1.png" path="/attribute/img/"/>
     <image id="hckx6u" name="img_att_wp_1.png" path="/attribute/img/" scale="9grid" scale9grid="6,6,48,48"/>
-    <image id="hckx6v" name="img_att_wp_2.png" path="/attribute/img/"/>
-    <image id="hckx6w" name="img_att_xz_1.png" path="/attribute/img/"/>
-    <image id="hckx6x" name="img_att_xz_1_1.png" path="/attribute/img/"/>
-    <image id="hckx6y" name="img_att_xz_2.png" path="/attribute/img/"/>
+    <image id="hckx6v" name="img_att_wp_2.png" path="/attribute/img/" scale="9grid" scale9grid="15,7,30,14"/>
+    <image id="hckx6w" name="img_att_xz_1.png" path="/attribute/img/" scale="9grid" scale9grid="11,10,22,20"/>
+    <image id="hckx6x" name="img_att_xz_1_1.png" path="/attribute/img/" scale="9grid" scale9grid="15,10,30,20"/>
+    <image id="hckx6y" name="img_att_xz_2.png" path="/attribute/img/" scale="9grid" scale9grid="31,17,62,34"/>
     <image id="hckx6z" name="icon_att_bj.png" path="/attribute/img/"/>
     <image id="hckx70" name="icon_att_dh.png" path="/attribute/img/"/>
     <image id="hckx71" name="icon_att_dh_1.png" path="/attribute/img/"/>
@@ -254,7 +254,7 @@
     <image id="xba67f" name="icon_ide_cm_4.png" path="/ideCommon/img/"/>
     <image id="xba67g" name="icon_ide_cm_4_1.png" path="/ideCommon/img/"/>
     <image id="xba67h" name="icon_ide_cm_bf.png" path="/ideCommon/img/"/>
-    <image id="xba67l" name="img_ide_cm_5.png" path="/ideCommon/img/"/>
+    <image id="xba67l" name="img_ide_cm_5.png" path="/ideCommon/img/" scale="9grid" scale9grid="17,16,34,32"/>
     <image id="xba67m" name="img_ide_cm_6.png" path="/ideCommon/img/" scale="9grid" scale9grid="4,4,48,48"/>
     <component id="xba67n" name="ComBuildFrameBox.xml" path="/attribute/com/" exported="true"/>
     <image id="xba67o" name="img_ide_cm_7.png" path="/ideCommon/img/" scale="9grid" scale9grid="4,4,53,52"/>
@@ -317,9 +317,36 @@
     <image id="80ab9a" name="img_ide_cm_s.png" path="/ideCommon/img/"/>
     <image id="80ab9b" name="img_ide_cm_ssk.png" path="/ideCommon/img/"/>
     <image id="80ab9c" name="img_ide_wpk_1.png" path="/ideCommon/img/"/>
-    <image id="80ab9d" name="img_ide_wpk_2.png" path="/ideCommon/img/"/>
+    <image id="80ab9d" name="img_ide_wpk_2.png" path="/ideCommon/img/" scale="9grid" scale9grid="22,22,44,44"/>
     <image id="80ab9e" name="img_ide_wpk_3.png" path="/ideCommon/img/"/>
     <image id="80ab9f" name="img_ide_wpk_5.png" path="/ideCommon/img/"/>
+    <component id="9fb89z" name="ComBuildAttrB.xml" path="/attribute/com/ComBuildAttrB/" exported="true"/>
+    <component id="9fb8a1" name="btnFix.xml" path="/attribute/com/ComBuildAttrB/" exported="true"/>
+    <sound id="9fb8a3" name="close.wav" path="/attribute/com/ComBuildAttrB/" exported="true"/>
+    <image id="9fb8a7" name="img_cm_lk_2.png" path="/attribute/com/ComBuildAttrB/" exported="true"/>
+    <component id="9fb8a9" name="comAttrubiteEditB.xml" path="/attribute/com/ComBuildAttrB/" exported="true"/>
+    <component id="9fb8aa" name="ScrollBarV2.xml" path="/attribute/com/ComBuildAttrB/" exported="true"/>
+    <component id="9fb8ab" name="ScrollBarV2_grip.xml" path="/attribute/com/ComBuildAttrB/"/>
+    <image id="9fb8ac" name="img_cm_gdt_1.png" path="/attribute/com/ComBuildAttrB/" exported="true" scale="9grid" scale9grid="1,11,3,68"/>
+    <component id="9fb8ad" name="btnFixNoEffect.xml" path="/attribute/com/ComBuildAttrB/" exported="true"/>
+    <sound id="9fb8af" name="buttonTouch.wav" path="/attribute/com/ComBuildAttrB/" exported="true"/>
+    <image id="9fb8ag" name="btn_code_lk_1.png" path="/attribute/com/ComBuildAttrB/"/>
+    <component id="grwpaj" name="comAWModelB.xml" path="/attribute/widgets/comAWModelB/" exported="true"/>
+    <image id="grwpan" name="icon_ied_wp_xs_1.png" path="/attribute/widgets/comAWModelB/b/ide/"/>
+    <image id="grwpao" name="icon_ied_wp_yc_2.png" path="/attribute/widgets/comAWModelB/b/ide/"/>
+    <component id="grwpas" name="comAWLargeTextB.xml" path="/attribute/widgets/comAWLargeTextB/" exported="true"/>
+    <component id="grwpau" name="comAWValueB.xml" path="/attribute/widgets/"/>
+    <component id="grwpav" name="Slider1_grip.xml" path="/attribute/widgets/"/>
+    <component id="grwpaw" name="Slider1.xml" path="/attribute/widgets/"/>
+    <component id="grwpax" name="comAWToggleB.xml" path="/attribute/widgets/" exported="true"/>
+    <component id="grwpb0" name="comAWOptionSelectB.xml" path="/attribute/widgets/" exported="true"/>
+    <component id="grwpb1" name="ComboBox1_item.xml" path="/attribute/widgets/"/>
+    <component id="grwpb2" name="ComboBox1_popup.xml" path="/attribute/widgets/"/>
+    <component id="grwpb3" name="ComboBox1.xml" path="/attribute/widgets/" exported="true"/>
+    <component id="grwpb4" name="comFallingSettingItem.xml" path="/attribute/widgets/"/>
+    <component id="grwpb5" name="comFallingSld.xml" path="/attribute/widgets/"/>
+    <component id="lvogb6" name="comAWFallingObj.xml" path="/attribute/widgets/"/>
+    <component id="lvogb7" name="spAddFalling.xml" path="/attribute/img/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>

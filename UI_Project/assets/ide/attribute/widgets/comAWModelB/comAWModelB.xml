@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="237,176" designImage="ui://thvmj7vok2vs4" designImageOffsetX="-1465" designImageOffsetY="-40" designImageAlpha="0" designImageLayer="1">
+  <displayList>
+    <image id="n37_py50" name="imgBg" src="hckx6u" fileName="attribute/img/img_att_wp_1.png" xy="37,26" size="200,150"/>
+    <component id="n38_py50" name="btnAttrVisible" src="a1nd0" fileName="btn/btnFixNew.xml" pkg="oh2uffmg" xy="200,40" size="22,22" visible="false">
+      <Button icon="ui://ti9jag5tgrwpan" selectedIcon="ui://ti9jag5tgrwpao"/>
+    </component>
+    <loader id="n39_py50" name="ladAttrObj" xy="37,26" size="200,150" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <component id="n44_s1sd" name="btnEditAni" src="a1nd0" fileName="btn/btnFixNew.xml" pkg="oh2uffmg" xy="209,144" size="25,25">
+      <Button icon="ui://ti9jag5thckx71" selectedIcon="ui://ti9jag5tgrwpar"/>
+    </component>
+  </displayList>
+</component>
