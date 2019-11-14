@@ -294,14 +294,14 @@
     <image id="80ab8n" name="icon_cre_zj_1_1.png" path="/create/img/"/>
     <image id="80ab8o" name="icon_cre_zw_1.png" path="/create/img/"/>
     <image id="80ab8p" name="icon_cre_zw_1_1.png" path="/create/img/"/>
-    <image id="80ab8q" name="img_cre_kjj.png" path="/create/img/"/>
+    <image id="80ab8q" name="img_cre_kjj.png" path="/create/img/" scale="9grid" scale9grid="15,10,30,20"/>
     <image id="80ab8r" name="img_cre_sq.png" path="/create/img/"/>
     <image id="80ab8s" name="img_cre_xz.png" path="/create/img/"/>
     <image id="80ab8t" name="img_cre_xzk.png" path="/create/img/"/>
-    <image id="80ab8u" name="btn_ide_cm_cz.png" path="/ideCommon/img/"/>
-    <image id="80ab8v" name="btn_ide_cm_dm.png" path="/ideCommon/img/"/>
-    <image id="80ab8w" name="btn_ide_cm_dx.png" path="/ideCommon/img/"/>
-    <image id="80ab8x" name="btn_ide_cm_sx.png" path="/ideCommon/img/"/>
+    <image id="80ab8u" name="btn_ide_cm_cz.png" path="/ideCommon/img/" scale="9grid" scale9grid="22,65,44,13"/>
+    <image id="80ab8v" name="btn_ide_cm_dm.png" path="/ideCommon/img/" scale="9grid" scale9grid="22,57,44,19"/>
+    <image id="80ab8w" name="btn_ide_cm_dx.png" path="/ideCommon/img/" scale="9grid" scale9grid="22,58,44,19"/>
+    <image id="80ab8x" name="btn_ide_cm_sx.png" path="/ideCommon/img/" scale="9grid" scale9grid="22,57,44,18"/>
     <image id="80ab8y" name="icon_ide_cm_sq.png" path="/ideCommon/img/"/>
     <image id="80ab8z" name="icon_ide_cm_zk.png" path="/ideCommon/img/"/>
     <image id="80ab90" name="img_ide_cm_10.png" path="/ideCommon/img/"/>
@@ -311,37 +311,50 @@
     <image id="80ab94" name="img_ide_cm_14.png" path="/ideCommon/img/"/>
     <image id="80ab95" name="img_ide_cm_15.png" path="/ideCommon/img/"/>
     <image id="80ab96" name="img_ide_cm_16.png" path="/ideCommon/img/"/>
-    <image id="80ab97" name="img_ide_cm_8.png" path="/ideCommon/img/"/>
+    <image id="80ab97" name="img_ide_cm_8.png" path="/ideCommon/img/" scale="9grid" scale9grid="20,20,40,40"/>
     <image id="80ab98" name="img_ide_cm_9.png" path="/ideCommon/img/"/>
     <image id="80ab99" name="img_ide_cm_h.png" path="/ideCommon/img/"/>
     <image id="80ab9a" name="img_ide_cm_s.png" path="/ideCommon/img/"/>
-    <image id="80ab9b" name="img_ide_cm_ssk.png" path="/ideCommon/img/"/>
+    <image id="80ab9b" name="img_ide_cm_ssk.png" path="/ideCommon/img/" scale="9grid" scale9grid="11,10,22,20"/>
     <image id="80ab9c" name="img_ide_wpk_1.png" path="/ideCommon/img/"/>
     <image id="80ab9d" name="img_ide_wpk_2.png" path="/ideCommon/img/"/>
-    <image id="80ab9e" name="img_ide_wpk_3.png" path="/ideCommon/img/"/>
+    <image id="80ab9e" name="img_ide_wpk_3.png" path="/ideCommon/img/" scale="9grid" scale9grid="22,22,44,44"/>
     <image id="80ab9f" name="img_ide_wpk_5.png" path="/ideCommon/img/"/>
-    <image id="v00l9g" name="btn_ter_sx_1.png" path="/terrain/img/"/>
-    <image id="v00l9h" name="btn_ter_th.png" path="/terrain/img/"/>
-    <image id="v00l9i" name="btn_ter_th_1.png" path="/terrain/img/"/>
-    <image id="v00l9j" name="btn_ter_yd.png" path="/terrain/img/"/>
-    <image id="v00l9k" name="btn_ter_yd_1.png" path="/terrain/img/"/>
-    <image id="v00l9l" name="img_ter_1.png" path="/terrain/img/"/>
-    <image id="v00l9m" name="img_ter_2.png" path="/terrain/img/"/>
-    <image id="v00l9n" name="img_ter_3.png" path="/terrain/img/"/>
-    <image id="v00l9o" name="img_ter_4.png" path="/terrain/img/"/>
-    <image id="v00l9p" name="img_ter_k.png" path="/terrain/img/"/>
-    <image id="v00l9q" name="img_ter_xz.png" path="/terrain/img/"/>
-    <image id="v00l9r" name="btn_ter_cz.png" path="/terrain/img/"/>
-    <image id="v00l9s" name="btn_ter_cz_1.png" path="/terrain/img/"/>
-    <image id="v00l9t" name="btn_ter_sx.png" path="/terrain/img/"/>
-    <component id="v00l9u" name="ComBuildTerrain.xml" path="/terrain/com/"/>
-    <image id="v00l9v" name="btn_ide_sck_sz.png" path="/terrain/com/b/ide/"/>
-    <image id="v00l9w" name="btn_ide_sck_cz.png" path="/terrain/com/b/ide/"/>
-    <image id="v00l9x" name="btn_ide_sck_th.png" path="/terrain/com/b/ide/"/>
-    <image id="v00l9y" name="btn_ide_sck_xz.png" path="/terrain/com/b/ide/"/>
-    <image id="v00l9z" name="btn_ide_sck_v.png" path="/terrain/com/b/ide/"/>
-    <image id="v00la0" name="btn_ide_sck_del.png" path="/terrain/com/b/ide/"/>
-    <image id="v00la1" name="img_ide_sck_x.png" path="/terrain/com/b/ide/"/>
+    <component id="80ab9g" name="ComBuildCreate.xml" path="/create/com/"/>
+    <component id="80ab9h" name="BtnIdeToolItem.xml" path="/create/btn/"/>
+    <component id="inuq9z" name="RBtnBuildRendererB.xml" path="/ideCommon/btn/" exported="true"/>
+    <component id="inuqa1" name="HoverTipBuildTab.xml" path="/create/com/" exported="true"/>
+    <component id="a91xa2" name="ComMapEntitySelectB.xml" path="/create/com/"/>
+    <image id="a91xae" name="btn_ter_cz.png" path="/terrain/img/"/>
+    <image id="a91xaf" name="btn_ter_cz_1.png" path="/terrain/img/"/>
+    <image id="a91xag" name="btn_ter_sx.png" path="/terrain/img/"/>
+    <image id="a91xah" name="btn_ter_sx_1.png" path="/terrain/img/"/>
+    <image id="a91xai" name="btn_ter_th.png" path="/terrain/img/"/>
+    <image id="a91xaj" name="btn_ter_th_1.png" path="/terrain/img/"/>
+    <image id="a91xak" name="btn_ter_yd.png" path="/terrain/img/"/>
+    <image id="a91xal" name="btn_ter_yd_1.png" path="/terrain/img/"/>
+    <image id="a91xam" name="img_ter_1.png" path="/terrain/img/"/>
+    <image id="a91xan" name="img_ter_2.png" path="/terrain/img/"/>
+    <image id="a91xao" name="img_ter_3.png" path="/terrain/img/"/>
+    <image id="a91xap" name="img_ter_4.png" path="/terrain/img/"/>
+    <image id="a91xaq" name="img_ter_k.png" path="/terrain/img/"/>
+    <image id="a91xar" name="img_ter_xz.png" path="/terrain/img/"/>
+    <component id="a91xas" name="ComBuildTerrain.xml" path="/terrain/com/"/>
+    <image id="a91xat" name="btn_ide_sck_cz.png" path="/terrain/com/b/ide/"/>
+    <image id="a91xau" name="btn_ide_sck_del.png" path="/terrain/com/b/ide/"/>
+    <image id="a91xav" name="btn_ide_sck_sz.png" path="/terrain/com/b/ide/"/>
+    <image id="a91xaw" name="btn_ide_sck_th.png" path="/terrain/com/b/ide/"/>
+    <image id="a91xax" name="btn_ide_sck_v.png" path="/terrain/com/b/ide/"/>
+    <image id="a91xay" name="btn_ide_sck_xz.png" path="/terrain/com/b/ide/"/>
+    <image id="a91xaz" name="img_ide_sck_x.png" path="/terrain/com/b/ide/"/>
+    <component id="a91xb0" name="BtnEntitySelectFold.xml" path="/create/btn/"/>
+    <component id="h5krb1" name="BtnEntityInfoSelect.xml" path="/create/btn/" exported="true"/>
+    <component id="cjfpb3" name="BtnEntitySelectB.xml" path="/create/btn/" exported="true"/>
+    <component id="r0y9t7i" name="WinBuildIdeB.xml" path="/ideCommon/win/" exported="true"/>
+    <component id="dyk9b4" name="ComIdeTopToolBar.xml" path="/ideCommon/com/"/>
+    <component id="dyk9b6" name="BtnIdeTopToolBar.xml" path="/ideCommon/btn/"/>
+    <component id="dyk9b7" name="BtnBuildMode.xml" path="/ideCommon/btn/"/>
+    <component id="qu7tt7j" name="ComBuildShortCutB.xml" path="/ideCommon/com/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>
