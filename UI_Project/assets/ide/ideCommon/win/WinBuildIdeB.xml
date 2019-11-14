@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" opaque="false" designImage="ui://thvmj7vo80ab3">
   <controller name="ctrlOperate" pages="" selected="-1"/>
-  <controller name="ctrlIdeMode" pages="0,create,1,move,4,terrain,3,attr,2,code,5,ani,6,aniselect" selected="0"/>
+  <controller name="ctrlIdeMode" pages="0,create,1,move,4,terrain,3,attr,2,code,5,ani,6,aniselect" selected="2"/>
   <displayList>
-    <graph id="n39_e7dh" name="shapeOffset" xy="1490,0" size="430,1080" visible="false" alpha="0.1" touchable="false" type="rect">
-      <gearXY controller="ctrlIdeMode" pages="0,1,4,3,2,5,6" values="1490,0|1490,0|1490,0|1490,0|1490,0|1487,0|1490,0"/>
+    <graph id="n39_e7dh" name="shapeOffset" xy="1560,0" size="360,1080" visible="false" alpha="0.1" touchable="false" type="rect">
+      <gearXY controller="ctrlIdeMode" pages="0,1,4,3,2,5,6" values="1560,0|1560,0|1560,0|1560,0|1560,0|1557,0|1560,0"/>
       <gearSize controller="ctrlIdeMode" pages="0,1,4,3,2,5,6" values="430,1080,1,1|54,1081,1,1|360,1080,1,1|320,1080,1,1|344,1080,1,1|427,1080,1,1|305,1080,1,1"/>
       <relation target="" sidePair="right-right,height-height"/>
     </graph>
-    <component id="n38_si0u" name="comToolBar" src="dyk9b4" fileName="ideCommon/com/ComIdeTopToolBar.xml" xy="126,0" size="1363,56" controller="ctrlMode,4">
+    <component id="n38_si0u" name="comToolBar" src="dyk9b4" fileName="ideCommon/com/ComIdeTopToolBar.xml" xy="126,0" size="1433,56" controller="ctrlMode,4">
       <gearSize controller="ctrlIdeMode" pages="0,1,4,3,2,5,6" values="1363,56,1,1|1739,56,1,1|1433,56,1,1|1473,56,1,1|1449,56,1,1|1363,56,1,1|1488,56,1,1"/>
       <relation target="n9_r0y9" sidePair="leftext-right"/>
       <relation target="n39_e7dh" sidePair="rightext-left"/>
@@ -20,7 +20,7 @@
       <gearDisplay controller="ctrlIdeMode" pages="0"/>
       <relation target="" sidePair="right-right,height-height"/>
     </component>
-    <component id="n41_m5hn" name="comTerrain" src="m5hnt9l" fileName="Com/ComBuildTerrain.xml" pkg="32ieekgu" xy="1560,0" size="360,1080" controller="ctrlState,1">
+    <component id="n41_m5hn" name="comTerrain" src="v00l9u" fileName="terrain/com/ComBuildTerrain.xml" xy="1490,0" size="430,1080" controller="ctrlState,1">
       <gearDisplay controller="ctrlIdeMode" pages="4"/>
       <relation target="" sidePair="right-right,height-height"/>
     </component>
@@ -54,7 +54,7 @@
     <item time="0" type="XY" target="n35_7slt" tween="true" startValue="-,1080" endValue="-,994" duration="9"/>
     <item time="0" type="XY" target="n36_7slt" tween="true" startValue="1920,-" endValue="1490,-" duration="9"/>
     <item time="0" type="XY" target="n37_jm8l" tween="true" startValue="1920,-" endValue="1866,-" duration="9"/>
-    <item time="0" type="XY" target="n41_m5hn" tween="true" startValue="1920,-" endValue="1560,-" duration="9"/>
+    <item time="0" type="XY" target="n41_m5hn" tween="true" startValue="1920,-" endValue="1490,-" duration="9"/>
     <item time="0" type="XY" target="n43_nb0m" tween="true" startValue="1920,0" endValue="1619,0" duration="9"/>
     <item time="0" type="XY" target="n9_r0y9" tween="true" startValue="-223,-" endValue="0,-" duration="9"/>
     <item time="9" type="Alpha" target="n38_si0u" value="1"/>
@@ -65,7 +65,7 @@
     <item time="0" type="XY" target="n35_7slt" tween="true" startValue="-,994" endValue="-,1080" duration="9"/>
     <item time="0" type="XY" target="n36_7slt" tween="true" startValue="1490,-" endValue="1920,-" duration="9"/>
     <item time="0" type="XY" target="n37_jm8l" tween="true" startValue="1866,-" endValue="1920,-" duration="9"/>
-    <item time="0" type="XY" target="n41_m5hn" tween="true" startValue="1560,-" endValue="1920,-" duration="9"/>
+    <item time="0" type="XY" target="n41_m5hn" tween="true" startValue="1490,-" endValue="1920,-" duration="9"/>
     <item time="0" type="XY" target="n43_nb0m" tween="true" startValue="1619,0" endValue="1920,0" duration="9"/>
     <item time="0" type="XY" target="n9_r0y9" tween="true" startValue="0,-" endValue="-223,-" duration="9"/>
     <item time="9" type="Alpha" target="n38_si0u" value="0"/>

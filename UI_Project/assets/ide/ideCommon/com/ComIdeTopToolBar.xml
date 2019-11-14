@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1495,56" designImage="ui://thvmj7vo80ab4" designImageOffsetX="-300" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlMode" exported="true" pages="4,none,0,normal,1,tile,3,editTile" selected="3"/>
+  <controller name="ctrlMode" exported="true" pages="4,none,0,normal,1,tile,3,editTile" selected="0"/>
   <displayList>
     <image id="n0_cw9m" name="imgBg" src="xba67m" fileName="ideCommon/img/img_ide_cm_6.png" xy="0,0" size="1495,56">
       <relation target="" sidePair="width-width"/>
@@ -19,7 +19,7 @@
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://ti9jag5t80ab8h"/>
     </component>
-    <component id="n14_dyk9" name="btnEntity" src="dyk9b6" fileName="ideCommon/btn/BtnIdeTopToolBar.xml" xy="1276,2">
+    <component id="n14_dyk9" name="btnEntity" src="dyk9b6" fileName="ideCommon/btn/BtnIdeTopToolBar.xml" xy="1380,2">
       <gearXY controller="ctrlMode" pages="4,0" values="1380,2|1380,2" default="1276,2"/>
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://ti9jag5t80ab8b"/>
@@ -34,7 +34,7 @@
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://ti9jag5t80ab8h"/>
     </component>
-    <component id="n18_dyk9" name="btnDrawingPad" src="a1nd0" fileName="btn/btnFix.xml" pkg="oh2uffmg" xy="1438,2" size="52,52">
+    <component id="n18_dyk9" name="btnDrawingPad" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1438,2" size="52,52">
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://ti9jag5t80ab7z"/>
     </component>
