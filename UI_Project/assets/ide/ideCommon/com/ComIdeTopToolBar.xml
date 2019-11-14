@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1495,56" designImage="ui://thvmj7vo80ab4" designImageOffsetX="-300" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlMode" exported="true" pages="4,none,0,normal,1,tile,3,editTile" selected="0"/>
+  <displayList>
+    <image id="n0_cw9m" name="imgBg" src="xba67m" fileName="ideCommon/img/img_ide_cm_6.png" xy="0,0" size="1495,56">
+      <relation target="" sidePair="width-width"/>
+    </image>
+    <component id="n12_dyk9" name="btnSetting" src="dyk9b6" fileName="ideCommon/btn/BtnIdeTopToolBar.xml" xy="0,2">
+      <Button icon="ui://ti9jag5t80ab8c"/>
+    </component>
+    <component id="n13_dyk9" name="btnHideLine" src="dyk9b6" fileName="ideCommon/btn/BtnIdeTopToolBar.xml" xy="1172,2">
+      <gearDisplay controller="ctrlMode" pages="0,1,3"/>
+      <gearXY controller="ctrlMode" pages="0,1" values="1328,2|1224,2" default="1172,2"/>
+      <relation target="" sidePair="right-right"/>
+      <Button icon="ui://ti9jag5t80ab8h"/>
+    </component>
+    <component id="n17_dyk9" name="btnRestartCode" src="dyk9b6" fileName="ideCommon/btn/BtnIdeTopToolBar.xml" xy="1224,2">
+      <gearDisplay controller="ctrlMode" pages="3"/>
+      <relation target="" sidePair="right-right"/>
+      <Button icon="ui://ti9jag5t80ab8h"/>
+    </component>
+    <component id="n14_dyk9" name="btnEntity" src="dyk9b6" fileName="ideCommon/btn/BtnIdeTopToolBar.xml" xy="1380,2">
+      <gearXY controller="ctrlMode" pages="4,0" values="1380,2|1380,2" default="1276,2"/>
+      <relation target="" sidePair="right-right"/>
+      <Button icon="ui://ti9jag5t80ab8b"/>
+    </component>
+    <component id="n15_dyk9" name="btnMapTool" src="dyk9b6" fileName="ideCommon/btn/BtnIdeTopToolBar.xml" xy="1328,2">
+      <gearDisplay controller="ctrlMode" pages="1,3"/>
+      <relation target="" sidePair="right-right"/>
+      <Button icon="ui://ti9jag5t80ab8h"/>
+    </component>
+    <component id="n16_dyk9" name="btnBackToGameServer" src="dyk9b6" fileName="ideCommon/btn/BtnIdeTopToolBar.xml" xy="1380,2">
+      <gearDisplay controller="ctrlMode" pages="1,3"/>
+      <relation target="" sidePair="right-right"/>
+      <Button icon="ui://ti9jag5t80ab8h"/>
+    </component>
+    <component id="n18_dyk9" name="btnDrawingPad" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1438,2" size="52,52">
+      <relation target="" sidePair="right-right"/>
+      <Button icon="ui://ti9jag5t80ab7z"/>
+    </component>
+  </displayList>
+</component>

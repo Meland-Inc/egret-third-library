@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://thvmj7voa1nd2" designImageAlpha="0">
   <controller name="ctrlUserStatus" pages="0,student,1,teacher,2,fakeStudent,3,fakeTeacher" selected="0"/>
-  <controller name="ctrlGodView" pages="0,false,1,true" selected="1"/>
+  <controller name="ctrlGodView" pages="0,false,1,true" selected="0"/>
   <displayList>
     <component id="n4_psru" name="btnTeachPlan" src="psruh" fileName="com/btnMainMenu.xml" xy="1677,13">
       <gearDisplay controller="ctrlUserStatus" pages=""/>
@@ -25,14 +25,14 @@
       <relation target="" sidePair="right-right"/>
       <Button title="模板创作" icon="ui://oyity675a1nd8"/>
     </component>
-    <component id="n9_psru" name="btnIde" src="a1nd0" fileName="btn/btnFix.xml" pkg="oh2uffmg" xy="1804,979" size="116,110">
+    <component id="n9_psru" name="btnIde" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1804,979" size="116,110">
       <Button icon="ui://oyity675a1nd7"/>
     </component>
     <component id="n10_psru" name="comSmallMap" src="psrui" fileName="com/ComSmallMap.xml" xy="0,0"/>
-    <component id="n11_psru" name="btnSetting" src="a1nd0" fileName="btn/btnFix.xml" pkg="oh2uffmg" xy="272,105" size="74,74">
+    <component id="n11_psru" name="btnSetting" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="272,105" size="74,74">
       <Button icon="ui://oyity675a1ndc"/>
     </component>
-    <component id="n12_psru" name="btnSetting" src="a1nd0" fileName="btn/btnFix.xml" pkg="oh2uffmg" xy="272,186" size="74,74">
+    <component id="n12_psru" name="btnSetting" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="272,186" size="74,74">
       <Button icon="ui://oyity675a1ndb"/>
     </component>
     <component id="n13_psru" name="n13" src="psrum" fileName="com/ComMainBagShortcut.xml" xy="554,987">

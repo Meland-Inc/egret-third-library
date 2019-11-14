@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="86,86" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <controller name="ctrlState" pages="0,single,1,group" selected="0"/>
+  <displayList>
+    <image id="n13_j0zc" name="imgBG_1" src="80ab9c" fileName="ideCommon/img/img_ide_wpk_1.png" xy="0,0" pivot="0.5,0.5">
+      <gearDisplay controller="ctrlState" pages="0"/>
+    </image>
+    <image id="n23_inuq" name="imgBG_2" src="80ab9d" fileName="ideCommon/img/img_ide_wpk_2.png" xy="0,0" pivot="0.5,0.5" size="86,86">
+      <gearDisplay controller="ctrlState" pages="1"/>
+    </image>
+    <image id="n14_j0zc" name="imgBG_3" src="80ab9e" fileName="ideCommon/img/img_ide_wpk_3.png" xy="0,0" pivot="0.5,0.5" size="86,86">
+      <gearDisplay controller="button" pages="1"/>
+    </image>
+    <loader id="n16_j0zc" name="icon" xy="3,3" pivot="0.5,0.5" size="80,80" group="n21_j0zc" align="center" vAlign="middle" fill="scale"/>
+    <group id="n21_j0zc" name="grpItemIcon" xy="3,3" size="80,80" advanced="true"/>
+    <image id="n22_g0no" name="imgMulti" src="s1sdta6" fileName="newImg/AnimationEdit/icon_cm_dh_10.png" pkg="32ieekgu" xy="66,0" hideByEditor="true"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

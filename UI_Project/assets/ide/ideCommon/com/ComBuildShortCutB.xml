@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="536,40" opaque="false" designImage="ui://thvmj7vo80ab3" designImageAlpha="0">
+  <displayList>
+    <component id="n0_qu7t" name="btnR" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="0,0" size="60,40">
+      <Button title="R" titleFontSize="24" icon="ui://ti9jag5t80ab8q"/>
+    </component>
+    <component id="n1_qu7t" name="btnV" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="130,0" size="60,40">
+      <Button title="V" titleFontSize="24" icon="ui://ti9jag5t80ab8q"/>
+    </component>
+    <component id="n2_qu7t" name="btnEsc" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="260,0" size="60,40">
+      <Button title="Esc" titleFontSize="24" icon="ui://ti9jag5t80ab8q"/>
+    </component>
+    <component id="n3_qu7t" name="btnDelete" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="390,0" size="89,40">
+      <Button title="Delete" titleColor="#ffffff" icon="ui://ti9jag5t80ab8q"/>
+    </component>
+    <text id="n4_qu7t" name="n4" xy="70,8" size="45,24" fontSize="20" color="#ffffff" strokeColor="#333333" strokeSize="2" text="旋转"/>
+    <text id="n5_qu7t" name="n5" xy="200,8" size="45,24" fontSize="20" color="#ffffff" strokeColor="#333333" strokeSize="2" text="复制"/>
+    <text id="n6_qu7t" name="n6" xy="326,8" size="45,24" fontSize="20" color="#ffffff" strokeColor="#333333" strokeSize="2" text="退出"/>
+    <text id="n7_qu7t" name="n7" xy="490,8" size="45,24" fontSize="20" color="#ffffff" strokeColor="#333333" strokeSize="2" text="删除"/>
+  </displayList>
+</component>
