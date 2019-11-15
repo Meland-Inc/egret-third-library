@@ -767,6 +767,10 @@ export default {
           promiseList.push(mdFtp.pushGit);
         }
 
+        if (this.curEnviron.gitTagEnable) {
+          promiseList.push(mdFtp.gitTag);
+        }
+
         promiseList.push(this.environChange);
 
         await Global.executePromiseList(promiseList);
