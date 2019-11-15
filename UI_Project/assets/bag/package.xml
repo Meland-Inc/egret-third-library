@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="48p8y12a" jpegQuality="80" compressPNG="true">
   <resources>
-    <component id="y8ju0" name="WinBag.xml" path="/win/"/>
+    <component id="y8ju0" name="WinBag.xml" path="/win/" exported="true"/>
     <image id="y8ju1" name="icon_bac_bb.png" path="/img/"/>
     <image id="y8ju2" name="icon_bac_kz.png" path="/img/"/>
     <image id="y8ju3" name="icon_bac_st.png" path="/img/"/>
@@ -18,6 +18,9 @@
     <image id="y8jue" name="标注-背包界面.png" path="/sketch/"/>
     <image id="y8juf" name="小贝星球_背包界面.png" path="/sketch/"/>
     <image id="y8jug" name="效果图-背包界面.png" path="/sketch/"/>
+    <component id="oiqdh" name="EquipItem.xml" path="/com/"/>
+    <component id="tvlfi" name="btnBagType.xml" path="/btn/"/>
+    <component id="e8s1j" name="BagItem.xml" path="/com/"/>
   </resources>
-  <publish name=""/>
+  <publish name="bag"/>
 </packageDescription>
