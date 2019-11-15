@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="0,1080" opaque="false" designImage="ui://thvmj7vo80ab4">
-  <controller name="ctrlState" exported="true" pages="0,fold,1,open,2,info,3,none" selected="3">
+<component size="126,1080" opaque="false" designImage="ui://thvmj7vo80ab4">
+  <controller name="ctrlState" exported="true" pages="0,fold,1,open,2,info,3,none" selected="0">
     <action type="change_page" fromPage="" toPage="0" objectId="n10_r6n0" controller="ctrlType" targetPage="1"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n10_r6n0" controller="ctrlType" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="2" objectId="n10_r6n0" controller="ctrlType" targetPage="0"/>
@@ -8,14 +8,15 @@
   <displayList>
     <component id="n14_a91x" name="btnOpen" src="a91xb0" fileName="create/btn/BtnEntitySelectFold.xml" xy="124,1044">
       <gearDisplay controller="ctrlState" pages="0"/>
+      <Button controller="ctrlState" page="1"/>
     </component>
     <component id="n4_yhf8" name="btnFold" src="a91xb0" fileName="create/btn/BtnEntitySelectFold.xml" xy="194,1030" size="40,36">
       <gearDisplay controller="ctrlState" pages="1,2"/>
       <gearXY controller="ctrlState" pages="0,1,2" values="194,1030|318,1044|318,1044" default="194,1030"/>
       <relation target="" sidePair="bottom-bottom"/>
-      <Button icon="ui://ti9jag5txba67g" controller="ctrlState" page="0"/>
+      <Button icon="ui://ti9jag5tha0pt7k" controller="ctrlState" page="0"/>
     </component>
-    <image id="n0_yhf8" name="n0" src="xba67o" fileName="ideCommon/img/img_ide_cm_7.png" xy="0,0" size="0,1080">
+    <image id="n0_yhf8" name="n0" src="xba67o" fileName="ideCommon/img/img_ide_cm_7.png" xy="0,0" size="126,1080">
       <gearSize controller="ctrlState" pages="0,1,2,3" values="126,1080,1,1|320,1080,1,1|320,1080,1,1|0,1080,1,1"/>
       <relation target="" sidePair="height-height"/>
     </image>
@@ -23,7 +24,7 @@
       <gearDisplay controller="ctrlState" pages="0,1"/>
       <gearSize controller="ctrlState" pages="1,2" values="300,1004,1,1|106,1004,1,1" default="106,1004,1,1"/>
     </image>
-    <image id="n13_a91x" name="n13" src="xba67m" fileName="ideCommon/img/img_ide_cm_6.png" xy="0,0" size="300,56">
+    <image id="n13_a91x" name="n13" src="xba67m" fileName="ideCommon/img/img_ide_cm_6.png" xy="0,0" size="126,56">
       <gearDisplay controller="ctrlState" pages="0,1,2"/>
       <gearSize controller="ctrlState" pages="0,1,2" values="126,56,1,1|320,56,1,1|320,56,1,1" default="300,56,1,1"/>
     </image>
@@ -176,10 +177,17 @@
     <text id="n15_h5kr" name="tfTitle" xy="21,17" size="65,24" fontSize="20" color="#333333" text="实体栏">
       <gearDisplay controller="ctrlState" pages="0,1,2"/>
     </text>
-    <component id="n17_cjfp" name="tbtnFold" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="260,10" size="36,36">
-      <gearDisplay controller="ctrlState" pages="1,2"/>
+    <image id="n19_m773" name="n19" src="80ab94" fileName="ideCommon/img/img_ide_cm_14.png" xy="223,7" group="n21_m773"/>
+    <component id="n17_cjfp" name="tbtnState" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="269,10" size="36,36" group="n21_m773">
       <Button icon="ui://ti9jag5t80ab8d" selectedIcon="ui://ti9jag5t80ab84"/>
     </component>
+    <component id="n18_m773" name="tbtnScope" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="227,10" size="36,36" group="n21_m773">
+      <Button icon="ui://ti9jag5t80ab8d" selectedIcon="ui://ti9jag5t80ab84"/>
+    </component>
+    <image id="n20_m773" name="n20" src="80ab95" fileName="ideCommon/img/img_ide_cm_15.png" xy="265,7" group="n21_m773"/>
+    <group id="n21_m773" name="n21" xy="223,7" size="86,42" advanced="true">
+      <gearDisplay controller="ctrlState" pages="1,2"/>
+    </group>
   </displayList>
   <relation target="n0_yhf8" sidePair="width-width"/>
 </component>

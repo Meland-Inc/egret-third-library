@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="430,1080" designImage="ui://thvmj7vok2vs4" designImageOffsetX="-1490" designImageAlpha="100" designImageLayer="1">
+<component size="430,1080" designImage="ui://thvmj7vok2vs4" designImageOffsetX="-1490" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlState" pages="0,none,1,elem" selected="0"/>
   <displayList>
     <image id="n32_py50" name="imgBg" src="xba67l" fileName="ideCommon/img/img_ide_cm_5.png" xy="0,0" size="430,1080">
       <relation target="" sidePair="height-height"/>
     </image>
-    <component id="n44_py50" name="btnAttrCoding" src="a1nd0" fileName="btn/btnFixNew.xml" pkg="oh2uffmg" xy="110,1036" size="50,30" hideByEditor="true" visible="false">
+    <component id="n44_py50" name="btnAttrCoding" pkg="oh2uffmg" src="a1nd0" fileName="btn/btnFixNew.xml" xy="110,1036" size="50,30" hideByEditor="true" visible="false">
       <relation target="" sidePair="bottom-bottom"/>
-      <Button title="编辑脚本" titleFontSize="18" icon="ui://ti9jag5t9fb8a5"/>
     </component>
-    <component id="n50_kca4" name="btnSaveAsTemplate" src="a1nd0" fileName="btn/btnFixNew.xml" pkg="oh2uffmg" xy="297,1026" size="120,44">
+    <component id="n50_kca4" name="btnSaveAsTemplate" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="297,1026" size="120,44">
       <gearDisplay controller="ctrlState" pages="1"/>
       <relation target="" sidePair="bottom-bottom"/>
-      <Button title="保存物件" titleFontSize="20" icon="ui://ti9jag5txba67c"/>
     </component>
     <image id="n47_qki6" name="imgAttribuiteBg" src="s45w2" fileName="ideCommon/img/img_ide_cm_3.png" xy="-8,49" size="446,981">
       <relation target="" sidePair="bottomext-bottom"/>
     </image>
-    <component id="n52_jm8l" name="btnRun" src="a1nd0" fileName="btn/btnFixNew.xml" pkg="oh2uffmg" xy="-115,980" size="116,110">
+    <component id="n52_jm8l" name="btnRun" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="-115,980" size="116,110">
       <relation target="" sidePair="bottom-bottom"/>
-      <Button icon="ui://ti9jag5txba67h" page="0"/>
+      <Button icon="ui://ti9jag5txba67h"/>
     </component>
     <component id="n46_rb1c" name="comAttrubiteEdit" src="9fb8a9" fileName="attribute/com/ComBuildAttrB/comAttrubiteEditB.xml" xy="14,55" size="410,956">
       <gearDisplay controller="ctrlState" pages="1"/>
@@ -33,7 +31,7 @@
     <text id="n54_k2vs" name="tfTitle" xy="69,17" size="125,24" fontSize="20" color="#333333" text="属性编辑模式"/>
     <image id="n56_grwp" name="imgNameBg" src="xba67m" fileName="ideCommon/img/img_ide_cm_6.png" xy="165,66" size="252,40" group="n58_grwp"/>
     <text id="n33_py50" name="tfAttrName" xy="184,75" size="229,24" group="n58_grwp" input="true" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="蘑菇蓝莓"/>
-    <group id="n58_grwp" name="grpName" xy="165,66" size="253,41" advanced="true" collapsed="true">
+    <group id="n58_grwp" name="grpName" xy="165,66" size="253,41" advanced="true">
       <gearDisplay controller="ctrlState" pages="1"/>
     </group>
   </displayList>
