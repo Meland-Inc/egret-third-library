@@ -225,15 +225,22 @@
             </div>
           </mu-container>
           <mu-divider />
-          <mu-container>
+          <div class="button-wrapper">
             <mu-button
               v-loading="isPullGitLoading"
               data-mu-loading-size="24"
-              color="red500"
+              color="pink500"
               @click="pushGit"
               v-show="curEnviron&&curEnviron.pushGitEnable"
             >Git推送文件</mu-button>
-          </mu-container>
+            <mu-button
+              v-loading="isGitTagLoading"
+              data-mu-loading-size="24"
+              color="orange500"
+              @click="gitTag"
+              v-show="curEnviron&&curEnviron.gitTagEnable"
+            >Git打tag</mu-button>
+          </div>
         </div>
       </mu-container>
       <mu-divider />
@@ -332,6 +339,7 @@ export default {
       isApplyPolicyNumLoading: false,
 
       isPullGitLoading: false,
+      isGitTagLoading: false,
 
       needCover: ModelMgr.versionModel.needCover,
       needCompress: ModelMgr.versionModel.needCompress,
@@ -687,6 +695,18 @@ export default {
         Global.hideRegionLoading();
       } catch (error) {
         this.isPullGitLoading = false;
+        Global.hideRegionLoading();
+      }
+    },
+    async gitTag() {
+      this.isGitTagLoading = true;
+      Global.showRegionLoading();
+      try {
+        await mdFtp.gitTag();
+        this.isGitTagLoading = false;
+        Global.hideRegionLoading();
+      } catch (error) {
+        this.isGitTagLoading = false;
         Global.hideRegionLoading();
       }
     },

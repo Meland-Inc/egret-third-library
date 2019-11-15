@@ -17,28 +17,28 @@ export class VersionModel {
             zipPath: "/alpha/zip", scpRootPath: "/web", scpPath: "/web/alpha", localPath: "/alpha/web", localPolicyPath: "/alpha/policy",
             updateGitEnable: false, gitBranch: "", trunkName: "alpha",
             publishEnable: true, mergeVersionEnable: false, compressPicEnable: false, zipFileEnable: true, policyEnable: false, cdnEnable: false,
-            pushGitEnable: false, publishDescEnable: true, codeVersionEnable: true,
+            pushGitEnable: false, publishDescEnable: true, codeVersionEnable: true, gitTagEnable: false
         },
         {
             name: this.eEnviron.beta, host: "47.107.73.43", user: "ftpadmin", password: "unclemiao",
             zipPath: "/beta/zip", scpRootPath: "/web", scpPath: "/web/beta", localPath: "/beta/web", localPolicyPath: "/beta/policy",
             updateGitEnable: true, gitBranch: "trunk/beta", trunkName: "beta",
             publishEnable: true, mergeVersionEnable: true, compressPicEnable: true, zipFileEnable: true, policyEnable: true, cdnEnable: false,
-            pushGitEnable: true, publishDescEnable: false, codeVersionEnable: true,
+            pushGitEnable: true, publishDescEnable: false, codeVersionEnable: true, gitTagEnable: false
         },
         {
             name: this.eEnviron.ready, host: "47.107.73.43", user: "ftpadmin", password: "unclemiao",
             zipPath: "/ready/zip", scpRootPath: "/web", scpPath: "/web/ready", localPath: "/ready/web", localPolicyPath: "/ready/policy",
             updateGitEnable: true, gitBranch: "trunk/release", trunkName: "release",
             publishEnable: true, mergeVersionEnable: true, compressPicEnable: true, zipFileEnable: true, policyEnable: true, cdnEnable: false,
-            pushGitEnable: true, publishDescEnable: false, codeVersionEnable: true,
+            pushGitEnable: true, publishDescEnable: false, codeVersionEnable: true, gitTagEnable: true
         },
         {
             name: this.eEnviron.release, host: "bg-stage.wkcoding.com", user: "ftpadmin", password: "unclemiao",
             zipPath: "/ready/zip", scpRootPath: "", scpPath: "", localPath: "/ready/web", localPolicyPath: "/release/policy",
             updateGitEnable: false, gitBranch: "", trunkName: "",
             publishEnable: false, mergeVersionEnable: true, compressPicEnable: true, zipFileEnable: false, policyEnable: true, cdnEnable: true,
-            pushGitEnable: false, publishDescEnable: false, codeVersionEnable: false,
+            pushGitEnable: false, publishDescEnable: false, codeVersionEnable: false, gitTagEnable: false
         },
     ];
 
