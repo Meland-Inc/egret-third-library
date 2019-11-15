@@ -3,7 +3,7 @@
   <resources>
     <image id="s45w0" name="img_ide_cm_1.png" path="/ideCommon/img/" scale="9grid" scale9grid="2,2,36,36"/>
     <image id="s45w1" name="img_ide_cm_2.png" path="/ideCommon/img/" scale="9grid" scale9grid="13,13,26,26"/>
-    <image id="s45w2" name="img_ide_cm_3.png" path="/ideCommon/img/" scale="9grid" scale9grid="17,12,36,44"/>
+    <image id="s45w2" name="img_ide_cm_3.png" path="/ideCommon/img/" scale="9grid" scale9grid="24,20,27,28"/>
     <image id="s45w3" name="icon_codeV_bl_1.png" path="/codeVew/img/"/>
     <image id="s45w4" name="icon_codeV_bl_1_1.png" path="/codeVew/img/"/>
     <image id="s45w5" name="icon_codeV_gn_1.png" path="/codeVew/img/"/>
@@ -308,7 +308,7 @@
     <image id="80ab91" name="img_ide_cm_11.png" path="/ideCommon/img/"/>
     <image id="80ab92" name="img_ide_cm_12.png" path="/ideCommon/img/"/>
     <image id="80ab93" name="img_ide_cm_13.png" path="/ideCommon/img/"/>
-    <image id="80ab94" name="img_ide_cm_14.png" path="/ideCommon/img/" scale="9grid" scale9grid="22,11,44,22"/>
+    <image id="80ab94" name="img_ide_cm_14.png" path="/ideCommon/img/"/>
     <image id="80ab95" name="img_ide_cm_15.png" path="/ideCommon/img/"/>
     <image id="80ab96" name="img_ide_cm_16.png" path="/ideCommon/img/"/>
     <image id="80ab97" name="img_ide_cm_8.png" path="/ideCommon/img/" scale="9grid" scale9grid="20,20,40,40"/>
@@ -339,7 +339,6 @@
     <image id="v00l9r" name="btn_ter_cz.png" path="/terrain/img/"/>
     <image id="v00l9s" name="btn_ter_cz_1.png" path="/terrain/img/"/>
     <image id="v00l9t" name="btn_ter_sx.png" path="/terrain/img/"/>
-    <image id="ha0pt7k" name="icon_ide_cm_4_2.png" path="/ideCommon/img/"/>
     <component id="v00l9u" name="ComBuildTerrain.xml" path="/terrain/com/"/>
     <component id="v00la3" name="BtnIdeTerrainHorizontal.xml" path="/terrain/btn/"/>
     <component id="v00la7" name="BtnIdeTerrainVertical.xml" path="/terrain/btn/"/>
@@ -379,7 +378,8 @@
     <component id="grwpb5" name="comFallingSld.xml" path="/attribute/widgets/"/>
     <component id="lvogb6" name="comAWFallingObj.xml" path="/attribute/widgets/"/>
     <component id="lvogb7" name="spAddFalling.xml" path="/attribute/img/"/>
-    <component id="rhptt7l" name="WinMultiSelectFrame.xml" path="/create/win/" exported="true"/>
+    <image id="lgvkt7k" name="icon_ide_cm_4_2.png" path="/ideCommon/img/"/>
+    <component id="lgvkt7l" name="WinMultiSelectFrame.xml" path="/create/win/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>

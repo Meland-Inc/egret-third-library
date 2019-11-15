@@ -16,7 +16,7 @@
     <component id="n7_lctb" name="mask" src="lctb4z" fileName="codeVew/oldCom/RunningState.xml" xy="956,0" size="967,1080" hideByEditor="true">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </component>
-    <component id="n8_lctb" name="comDustbin" src="lctb5v" fileName="codeVew/oldCom/ComDustbin.xml" xy="1803,1" size="118,1082" hideByEditor="true" touchable="false" controller="dustbinState,0">
+    <component id="n8_lctb" name="comDustbin" src="lctb5v" fileName="codeVew/com/ComDustbin.xml" xy="1803,1" size="118,1082" hideByEditor="true" touchable="false" controller="dustbinState,0">
       <relation target="" sidePair="right-right,bottomext-bottom"/>
     </component>
     <component id="n9_lctb" name="comEditVariate" src="lctb5z" fileName="codeVew/oldCom/ComEditVariate.xml" xy="956,0" size="967,1080" hideByEditor="true">
@@ -28,8 +28,9 @@
       <relation target="" sidePair="bottomext-bottom,rightext-right"/>
       <relation target="n1_s45w" sidePair="left-left,top-top"/>
     </component>
-    <component id="n4_lctb" name="btnExit" src="lctb3u" fileName="ideCommon/oldBtn/btnExit.xml" xy="900,1024">
+    <component id="n4_lctb" name="btnExit" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="841,981" size="116,110">
       <relation target="n1_s45w" sidePair="bottom-bottom,right-left"/>
+      <Button icon="ui://ti9jag5txba67h"/>
     </component>
   </displayList>
 </component>
