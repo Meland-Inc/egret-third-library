@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="263,57" extention="Label" designImage="ui://thvmj7vogrwp6" designImageOffsetX="-1646" designImageOffsetY="-556" designImageAlpha="0" designImageLayer="1">
   <displayList>
-    <component id="n0_grwp" name="sldValue" src="grwpaw" fileName="attribute/widgets/Slider1.xml" xy="10,40">
+    <component id="n0_grwp" name="sldValue" src="grwpaw" fileName="attribute/widgets/Slider1.xml" xy="10,40" size="172,8">
       <Slider value="50" max="100"/>
     </component>
     <text id="n1_grwp" name="title" xy="7,0" size="77,22" fontSize="18" color="#333333" text="掉落数量"/>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="48p8y12a" jpegQuality="80" compressPNG="true">
+  <resources>
+    <component id="y8ju0" name="WinBackpack.xml" path="/win/" exported="true"/>
+    <image id="y8ju1" name="icon_bac_bb.png" path="/img/"/>
+    <image id="y8ju2" name="icon_bac_kz.png" path="/img/"/>
+    <image id="y8ju3" name="icon_bac_st.png" path="/img/"/>
+    <image id="y8ju4" name="icon_bac_tk.png" path="/img/"/>
+    <image id="y8ju5" name="icon_bac_xz.png" path="/img/"/>
+    <image id="y8ju6" name="icon_bac_yf.png" path="/img/"/>
+    <image id="y8ju7" name="icon_bac_zb.png" path="/img/"/>
+    <image id="y8ju8" name="img_bac_1.png" path="/img/"/>
+    <image id="y8ju9" name="img_bac_pzk_1.png" path="/img/"/>
+    <image id="y8jua" name="img_bac_pzk_2.png" path="/img/"/>
+    <image id="y8jub" name="img_bac_pzk_3.png" path="/img/"/>
+    <image id="y8juc" name="img_bac_pzk_4.png" path="/img/"/>
+    <image id="y8jud" name="img_bac_xxk.png" path="/img/"/>
+    <image id="y8jue" name="标注-背包界面.png" path="/sketch/"/>
+    <image id="y8juf" name="小贝星球_背包界面.png" path="/sketch/"/>
+    <image id="y8jug" name="效果图-背包界面.png" path="/sketch/"/>
+    <component id="oiqdh" name="EquipItem.xml" path="/com/"/>
+    <component id="tvlfi" name="btnBagType.xml" path="/btn/"/>
+    <component id="e8s1j" name="BagItem.xml" path="/com/"/>
+    <component id="qg3ok" name="WinLessonBag.xml" path="/old/WinLessonBag/" exported="true"/>
+    <image id="qg3ol" name="bg_cm_1.png" path="/old/WinLessonBag/" exported="true"/>
+    <image id="qg3om" name="img_cm__bg_cbl_1.png" path="/old/WinLessonBag/" exported="true"/>
+    <image id="qg3on" name="img_cm_db_1.png" path="/old/WinLessonBag/" exported="true" scale="9grid" scale9grid="22,16,44,32"/>
+    <component id="qg3oo" name="btnFixClickArea.xml" path="/old/WinLessonBag/" exported="true"/>
+    <sound id="qg3op" name="buttonTouch.wav" path="/old/WinLessonBag/" exported="true"/>
+    <image id="qg3oq" name="btn_cm_db_3.png" path="/old/WinLessonBag/" exported="true"/>
+    <sound id="qg3or" name="close.wav" path="/old/WinLessonBag/" exported="true"/>
+    <image id="qg3os" name="img_cm_db_2.png" path="/old/WinLessonBag/" exported="true" scale="9grid" scale9grid="53,15,106,30"/>
+    <image id="qg3ot" name="icon_bp_db_4.png" path="/old/WinLessonBag/"/>
+    <component id="qg3ou" name="btnBagTypeB.xml" path="/old/WinLessonBag/"/>
+    <image id="qg3ov" name="btn_cm_cbl_2.png" path="/old/WinLessonBag/" exported="true"/>
+    <image id="qg3ow" name="btn_cm_cbl_1.png" path="/old/WinLessonBag/" exported="true"/>
+    <image id="qg3ox" name="icon_mail_2.png" path="/old/WinLessonBag/" exported="true"/>
+    <image id="qg3oy" name="img_cm_bg_dk_1.png" path="/old/WinLessonBag/" exported="true" scale="9grid" scale9grid="31,23,62,46"/>
+    <component id="qg3oz" name="ObjectBpItem.xml" path="/old/WinLessonBag/" exported="true"/>
+    <image id="qg3o10" name="img_cm_wpk_1.png" path="/old/WinLessonBag/" exported="true"/>
+    <image id="qg3o11" name="img_cm_quantity_1.png" path="/old/WinLessonBag/" exported="true"/>
+    <image id="qg3o12" name="img_main_item_3.png" path="/old/WinLessonBag/" exported="true"/>
+    <image id="qg3o13" name="img_cm_wpk_2.png" path="/old/WinLessonBag/" exported="true" scale="9grid" scale9grid="16,16,32,32"/>
+    <image id="qg3o14" name="img_cm_kjan_1.png" path="/old/WinLessonBag/" exported="true"/>
+    <image id="qg3o15" name="img_bp_mck_1.png" path="/old/WinLessonBag/" scale="9grid" scale9grid="24,12,48,24"/>
+    <component id="qg3o16" name="comAvatarContainer.xml" path="/old/WinLessonBag/"/>
+    <image id="qg3o17" name="img_bp_zbk_1.png" path="/old/WinLessonBag/"/>
+    <image id="qg3o18" name="img_bp_zbk_6.png" path="/old/WinLessonBag/"/>
+    <image id="qg3o19" name="img_bp_zbk_3.png" path="/old/WinLessonBag/"/>
+    <image id="qg3o1a" name="img_bp_zbk_2.png" path="/old/WinLessonBag/"/>
+    <image id="qg3o1b" name="img_bp_zbk_4.png" path="/old/WinLessonBag/"/>
+    <image id="qg3o1c" name="img_bp_zbk_5.png" path="/old/WinLessonBag/"/>
+    <component id="qg3o1d" name="ComLessonBagShortcuts.xml" path="/old/WinLessonBag/"/>
+    <image id="qg3o1e" name="img_cm_wpk_3.png" path="/old/WinLessonBag/" exported="true"/>
+    <component id="qg3o1f" name="btnFix.xml" path="/old/WinLessonBag/" exported="true"/>
+    <image id="qg3o1g" name="btn_cm_1_red.png" path="/old/WinLessonBag/" exported="true"/>
+    <image id="qg3o1h" name="btn_cm_an_2.png" path="/old/WinLessonBag/" exported="true" scale="9grid" scale9grid="27,9,54,18"/>
+    <image id="qg3o1i" name="背包效果图11.png" path="/old/WinLessonBag/"/>
+  </resources>
+  <publish name="backpack"/>
+</packageDescription>

@@ -366,7 +366,7 @@
     <image id="grwpan" name="icon_ied_wp_xs_1.png" path="/attribute/widgets/comAWModelB/b/ide/"/>
     <image id="grwpao" name="icon_ied_wp_yc_2.png" path="/attribute/widgets/comAWModelB/b/ide/"/>
     <component id="grwpas" name="comAWLargeTextB.xml" path="/attribute/widgets/comAWLargeTextB/" exported="true"/>
-    <component id="grwpau" name="comAWValueB.xml" path="/attribute/widgets/"/>
+    <component id="grwpau" name="comAWValueB.xml" path="/attribute/widgets/" exported="true"/>
     <component id="grwpav" name="Slider1_grip.xml" path="/attribute/widgets/"/>
     <component id="grwpaw" name="Slider1.xml" path="/attribute/widgets/"/>
     <component id="grwpax" name="comAWToggleB.xml" path="/attribute/widgets/" exported="true"/>
@@ -376,7 +376,7 @@
     <component id="grwpb3" name="ComboBox1.xml" path="/attribute/widgets/" exported="true"/>
     <component id="grwpb4" name="comFallingSettingItem.xml" path="/attribute/widgets/"/>
     <component id="grwpb5" name="comFallingSld.xml" path="/attribute/widgets/"/>
-    <component id="lvogb6" name="comAWFallingObj.xml" path="/attribute/widgets/"/>
+    <component id="lvogb6" name="comAWFallingObj.xml" path="/attribute/widgets/" exported="true"/>
     <component id="lvogb7" name="spAddFalling.xml" path="/attribute/img/"/>
     <image id="lgvkt7k" name="icon_ide_cm_4_2.png" path="/ideCommon/img/"/>
     <component id="lgvkt7l" name="WinMultiSelectFrame.xml" path="/create/win/"/>
