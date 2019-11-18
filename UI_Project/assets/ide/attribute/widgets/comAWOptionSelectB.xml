@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="421,163" designImage="ui://thvmj7vogrwp6" designImageOffsetX="-1494" designImageOffsetY="-361" designImageAlpha="0" designImageLayer="1">
+<component size="407,45" designImage="ui://thvmj7vogrwp6" designImageOffsetX="-1494" designImageOffsetY="-361" designImageAlpha="0" designImageLayer="1">
+  <controller name="showStatus" pages="0,single,1,multiple" selected="0"/>
   <displayList>
-    <text id="n0_grwp" name="n0" xy="4,9" size="78,22" fontSize="18" text="通行方向"/>
-    <component id="n1_grwp" name="n1" src="grwpb3" fileName="attribute/widgets/ComboBox1.xml" xy="161,1" size="252,37">
-      <ComboBox visibleItemCount="10" direction="down"/>
+    <text id="n0_grwp" name="labTitle" xy="7,9" size="77,22" fontSize="18" text="通行方向"/>
+    <component id="n1_grwp" name="cbTag" src="grwpb3" fileName="attribute/widgets/ComboBox1.xml" xy="155,1" size="252,37">
+      <ComboBox visibleItemCount="10" direction="down" autoClearItems="true">
+        <item title="1"/>
+        <item title="2"/>
+        <item title="3"/>
+        <item title="4"/>
+        <item title="5"/>
+      </ComboBox>
     </component>
   </displayList>
+  <relation target="n1_grwp" sidePair="bottomext-bottom"/>
 </component>

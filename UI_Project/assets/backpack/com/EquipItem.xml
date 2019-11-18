@@ -2,7 +2,8 @@
 <component size="100,100" extention="Button">
   <displayList>
     <image id="n0_oiqd" name="imgBg" src="oiqdcyih4" fileName="img/img_cm_1.png" pkg="te1gxawo" xy="0,0"/>
-    <loader id="n2_oiqd" name="icon" xy="0,0" size="100,100" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <loader id="n2_oiqd" name="icon" xy="0,0" size="100,100" group="n3_n173" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <group id="n3_n173" name="grpItemIcon" xy="0,0" size="100,100" advanced="true"/>
   </displayList>
   <Button mode="Radio"/>
 </component>

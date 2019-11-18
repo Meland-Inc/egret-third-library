@@ -3,8 +3,9 @@
   <controller name="button" pages="0,up,1,down" selected="0"/>
   <displayList>
     <image id="n0_e8s1" name="imgBg" src="oiqdcyigz" fileName="img/img_cm_wpx_1.png" pkg="te1gxawo" xy="0,0"/>
-    <loader id="n4_e8s1" name="icon" xy="18,18" size="64,64" fill="scale" shrinkOnly="true"/>
     <image id="n2_e8s1" name="imgNumBg" src="oiqdcyigy" fileName="img/img_cm_szk.png" pkg="te1gxawo" xy="70,80"/>
+    <loader id="n4_e8s1" name="icon" xy="18,18" size="64,64" group="n5_n173" fill="scale" shrinkOnly="true"/>
+    <group id="n5_n173" name="grpItemIcon" xy="18,18" size="64,64" advanced="true"/>
     <text id="n3_e8s1" name="num" xy="70,80" size="29,19" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="23"/>
     <image id="n1_e8s1" name="imgSelect" src="oiqdcyih0" fileName="img/img_cm_wpx_2.png" pkg="te1gxawo" xy="0,0">
       <gearDisplay controller="button" pages="1"/>

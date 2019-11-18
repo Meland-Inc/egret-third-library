@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="430,1080" designImage="ui://thvmj7vok2vs4" designImageOffsetX="-1490" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlState" pages="0,none,1,elem" selected="1"/>
+<component size="430,1080" designImage="ui://thvmj7vok2vs4" designImageOffsetX="-1490" designImageAlpha="100" designImageLayer="1">
+  <controller name="ctrlState" pages="0,none,1,elem" selected="0"/>
   <displayList>
     <image id="n32_py50" name="imgBg" src="xba67l" fileName="ideCommon/img/img_ide_cm_5.png" xy="0,0" size="430,1080">
       <relation target="" sidePair="height-height"/>
@@ -15,7 +15,7 @@
       <relation target="" sidePair="bottom-bottom"/>
       <Button icon="ui://ti9jag5txba67h"/>
     </component>
-    <component id="n46_rb1c" name="comAttrubiteEdit" src="9fb8a9" fileName="attribute/com/ComBuildAttrB/comAttrubiteEditB.xml" xy="14,55" size="410,956">
+    <component id="n46_rb1c" name="comAttrubiteEdit" src="9fb8a9" fileName="attribute/com/ComBuildAttrB/comAttrubiteEditB.xml" xy="0,55" size="430,956">
       <gearDisplay controller="ctrlState" pages="1"/>
       <relation target="" sidePair="bottomext-bottom"/>
     </component>

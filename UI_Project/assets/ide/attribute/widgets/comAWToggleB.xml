@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="419,45" designImage="ui://thvmj7vogrwp6" designImageOffsetX="-1490" designImageOffsetY="-297" designImageAlpha="0">
-  <controller name="toggle" alias="toggle" pages="0,on,1,off" selected="1"/>
+<component size="419,50" designImage="ui://thvmj7vogrwp6" designImageOffsetX="-1490" designImageOffsetY="-297" designImageAlpha="0">
+  <controller name="toggle" alias="toggle" pages="0,on,1,off" selected="0"/>
   <displayList>
-    <text id="n14_qki6" name="labTitle" xy="7,14" size="60,22" fontSize="18" color="#333333" vAlign="middle" text="是否类"/>
-    <loader id="n13_gjd5" name="ladToggle" xy="344,6" size="76,39" url="ui://ti9jag5thckx73" fill="scaleFree" autoSize="true">
+    <text id="n14_qki6" name="labTitle" xy="7,8" size="59,22" fontSize="18" color="#333333" vAlign="middle" text="是否类"/>
+    <loader id="n13_gjd5" name="ladToggle" xy="344,0" size="75,39" url="ui://ti9jag5thckx74" fill="scaleFree" autoSize="true">
       <gearIcon controller="toggle" pages="0,1" values="ui://ti9jag5thckx74|ui://ti9jag5thckx73"/>
     </loader>
   </displayList>

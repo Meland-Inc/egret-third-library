@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" designImage="ui://48p8y12aqg3o1i" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlMode" pages="0,normal,1,simple,2,selectItem" selected="0"/>
+  <displayList>
+    <image id="n65_nl0r" name="imgBgCenter" src="qg3ol" fileName="imgB/bg_cm_1.png" xy="0,0" size="1136,640">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n64_nl0r" name="imgLeftBg" src="qg3om" fileName="imgB/img_cm__bg_cbl_1.png" xy="0,48" size="95,597">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <image id="n61_nl0r" name="imgTopBg" src="qg3on" fileName="imgB/img_cm_db_1.png" xy="0,0" size="1136,62">
+      <relation target="" sidePair="width-width"/>
+    </image>
+    <component id="n56_rstx" name="btnClose" src="qg3oo" fileName="btn/btnFixClickArea.xml" xy="1077,3" size="57,51">
+      <relation target="" sidePair="right-right"/>
+      <Button icon="ui://48p8y12aqg3oq" sound="ui://48p8y12aqg3or"/>
+    </component>
+    <image id="n62_nl0r" name="imgTitileBg" src="qg3os" fileName="imgB/img_cm_db_2.png" xy="0,0"/>
+    <image id="n63_nl0r" name="imgBagIcon" src="qg3ot" fileName="lessonModeImg/icon_bp_db_4.png" xy="40,13"/>
+    <list id="n24_ey2h" name="lstBagTypeBtn" xy="0,59" size="109,61" lineGap="3" colGap="4" defaultItem="ui://48p8y12aqg3ou">
+      <item title="全部" name="all"/>
+    </list>
+    <text id="n3_ey2h" name="tfTitle" xy="80,15" size="51,34" fontSize="22" color="#ffffff" vAlign="middle" bold="true" text="背包">
+      <gearText controller="ctrlMode" pages="2" values="选择物品" default="背包"/>
+    </text>
+    <image id="n67_apfp" name="imgLstItemBg" src="qg3oy" fileName="imgB/img_cm_bg_dk_1.png" xy="120,78" size="692,443">
+      <relation target="n74_yxzk" sidePair="bottomext-top,rightext-left"/>
+    </image>
+    <list id="n27_ey2h" name="lstBagItem" xy="140,92" size="654,419" layout="flow_hz" overflow="scroll" lineGap="9" colGap="17" defaultItem="ui://48p8y12aqg3oz" autoClearItems="true">
+      <relation target="n67_apfp" sidePair="width-width,height-height"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n68_apfp" name="imgAvatarBg" src="qg3oy" fileName="imgB/img_cm_bg_dk_1.png" xy="837,78" size="288,544" group="n70_e0c2">
+      <relation target="" sidePair="bottomext-bottom"/>
+    </image>
+    <image id="n69_apfp" name="n69" src="qg3o15" fileName="lessonModeImg/img_bp_mck_1.png" xy="828,99" size="265,46" group="n30_ey2h"/>
+    <text id="n13_ey2h" name="tfLv" xy="847,107" size="46,29" group="n30_ey2h" visible="false" fontSize="18" color="#365989" align="center" vAlign="middle" leading="0" vars="true" autoSize="none" bold="true" text="LV.{lv=10}"/>
+    <text id="n14_ey2h" name="tfName" xy="922,106" size="145,29" group="n30_ey2h" fontSize="18" color="#365989" align="center" vAlign="middle" autoSize="none" text="playerName"/>
+    <group id="n30_ey2h" name="grpLvAndName" xy="828,99" size="265,46" group="n70_e0c2" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlMode" pages="0"/>
+    </group>
+    <component id="n55_ey2h" name="comAvatarCtnr" src="qg3o16" fileName="com/comAvatarContainer.xml" xy="969,364" size="81,60" group="n70_e0c2" touchable="false"/>
+    <list id="n20_ey2h" name="lstEquip" xy="865,472" size="241,147" group="n70_e0c2" layout="flow_hz" lineGap="10" colGap="20" defaultItem="ui://48p8y12aqg3oz">
+      <relation target="" sidePair="bottom-bottom"/>
+      <item icon="ui://48p8y12aqg3o17"/>
+      <item icon="ui://48p8y12aqg3o18" name="hair"/>
+      <item icon="ui://48p8y12aqg3o19" name="coat"/>
+      <item icon="ui://48p8y12aqg3o1a" name="pants"/>
+      <item icon="ui://48p8y12aqg3o1b" name="glove"/>
+      <item icon="ui://48p8y12aqg3o1c" name="shoe"/>
+    </list>
+    <group id="n70_e0c2" name="grpAvatar" xy="828,78" size="297,544" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlMode" pages="0,1"/>
+      <relation target="" sidePair="right-right"/>
+    </group>
+    <image id="n71_e0c2" name="imgShortcutBg" src="qg3oy" fileName="imgB/img_cm_bg_dk_1.png" xy="120,531" size="692,91" group="n73_e0c2">
+      <relation target="n67_apfp" sidePair="width-width"/>
+    </image>
+    <component id="n72_e0c2" name="comShortcuts" src="qg3o1d" fileName="com/ComLessonBagShortcuts.xml" xy="139,546" size="660,64" group="n73_e0c2">
+      <relation target="n71_e0c2" sidePair="center-center"/>
+    </component>
+    <group id="n73_e0c2" name="grpShortcut" xy="120,531" size="692,91" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlMode" pages="0,1"/>
+      <relation target="n67_apfp" sidePair="top-bottom"/>
+    </group>
+    <graph id="n74_yxzk" name="gphSizeCtrl" xy="826,535" pivot="1,1" size="310,105" alpha="0" touchable="false" type="rect" lineSize="0">
+      <gearSize controller="ctrlMode" pages="2" values="0,29,1,1" default="310,105,1,1"/>
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+    </graph>
+    <component id="n75_yxzk" name="btnSelectItemConfirm" src="qg3o1f" fileName="btn/btnFix.xml" xy="1019,603" size="106,36">
+      <gearDisplay controller="ctrlMode" pages="2"/>
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+      <Button title="确定" icon="ui://48p8y12aqg3o1h"/>
+    </component>
+  </displayList>
+  <transition name="t0"/>
+</component>
