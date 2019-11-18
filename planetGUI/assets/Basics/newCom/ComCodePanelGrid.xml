@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="134,100">
   <displayList>
-    <loader id="n2_rwpw" name="loaderImg" xy="0,0" size="134,100" fill="scaleFree">
-      <relation target="" sidePair="left-left,top-top"/>
-      <relation target="" sidePair="width-width,height-height"/>
+    <loader id="n2_rwpw" name="loaderImg" xy="42,25" size="50,50" fill="scaleFree">
+      <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
     <text id="n1_rwpw" name="textContent" xy="0,11" size="133,77" fontSize="16" align="center" vAlign="middle" autoSize="none" text="格子里面的文本">
       <relation target="" sidePair="left-left,top-top"/>
