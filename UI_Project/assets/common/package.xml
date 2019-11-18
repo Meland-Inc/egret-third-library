@@ -552,6 +552,8 @@
     <image id="oiqdcyih5" name="img_cm_2.png" path="/img/" exported="true"/>
     <image id="oiqdcyih6" name="img_cm_3.png" path="/img/" exported="true" scale="9grid" scale9grid="20,15,40,30"/>
     <component id="tvlfcyih7" name="ComEmpty.xml" path="/com/" exported="true"/>
+    <component id="gz74cyih8" name="labTextVScroll.xml" path="/lab/" exported="true"/>
+    <component id="gz74cyih9" name="labInputTextVScroll.xml" path="/lab/" exported="true"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>

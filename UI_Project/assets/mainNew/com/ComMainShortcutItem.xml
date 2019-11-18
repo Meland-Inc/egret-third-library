@@ -5,8 +5,9 @@
     <loader id="n0_psru" name="ladBg" xy="0,0" size="83,83" url="ui://oyity675a1ndf">
       <gearIcon controller="button" pages="1" values="ui://oyity675a1ndg" default="ui://oyity675a1ndf"/>
     </loader>
-    <text id="n2_psru" name="tfTitle" xy="4,2" size="19,24" fontSize="18" autoSize="none" text="1"/>
-    <loader id="n4_psru" name="icon" xy="0,0" size="83,83" fill="scale" shrinkOnly="true"/>
+    <text id="n2_psru" name="tfTitle" xy="4,2" size="19,24" visible="false" fontSize="18" autoSize="none" text="1"/>
+    <loader id="n4_psru" name="icon" xy="0,0" size="83,83" group="n5_foy4" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <group id="n5_foy4" name="grpItemIcon" xy="0,0" size="83,83" advanced="true"/>
   </displayList>
   <Button mode="Radio"/>
 </component>

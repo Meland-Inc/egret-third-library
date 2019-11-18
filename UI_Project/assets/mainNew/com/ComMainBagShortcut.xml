@@ -1,23 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="811,83" designImage="ui://thvmj7voa1nd2" designImageOffsetX="-552" designImageOffsetY="-987" designImageAlpha="0" designImageLayer="1">
+<component size="811,83" opaque="false" designImage="ui://thvmj7voa1nd2" designImageOffsetX="-552" designImageOffsetY="-987" designImageAlpha="100" designImageLayer="1">
   <displayList>
-    <graph id="n2_psru" name="gphPosCtrl" xy="0,0" size="810,83" hideByEditor="true" visible="false" type="rect">
+    <graph id="n2_psru" name="gphPosCtrl" xy="363,0" size="83,83" hideByEditor="true" visible="false" type="rect">
       <relation target="" sidePair="center-center"/>
       <relation target="n0_psru" sidePair="width-width"/>
     </graph>
-    <list id="n0_psru" name="lstItem" xy="0,0" size="727,83" layout="row" overflow="scroll" margin="0,0,0,29" colGap="5" defaultItem="ui://oyity675psrun">
+    <list id="n0_psru" name="lstItem" xy="363,0" size="0,83" layout="row" overflow="scroll" margin="0,0,0,29" colGap="5" defaultItem="ui://oyity675psrun" autoClearItems="true">
       <relation target="n2_psru" sidePair="left-left"/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
     </list>
-    <component id="n1_psru" name="btnBag" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="727,0" size="83,83">
-      <relation target="n0_psru" sidePair="left-right"/>
+    <component id="n1_psru" name="btnBag" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="363,0" size="83,83">
+      <relation target="n2_psru" sidePair="right-right"/>
       <Button icon="ui://oyity675psruo"/>
     </component>
   </displayList>

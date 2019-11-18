@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="430,1080" designImage="ui://thvmj7vok2vs4" designImageOffsetX="-1490" designImageAlpha="100" designImageLayer="1">
-  <controller name="ctrlState" pages="0,none,1,elem" selected="0"/>
+<component size="430,1080" designImage="ui://thvmj7vok2vs4" designImageOffsetX="-1490" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlState" pages="0,none,1,elem" selected="1"/>
   <displayList>
     <image id="n32_py50" name="imgBg" src="xba67l" fileName="ideCommon/img/img_ide_cm_5.png" xy="0,0" size="430,1080">
       <relation target="" sidePair="height-height"/>
@@ -27,7 +27,7 @@
     <text id="n54_k2vs" name="tfTitle" xy="69,17" size="125,24" fontSize="20" color="#333333" text="属性编辑模式"/>
     <image id="n56_grwp" name="imgNameBg" src="xba67m" fileName="ideCommon/img/img_ide_cm_6.png" xy="165,66" size="252,40" group="n58_grwp"/>
     <text id="n33_py50" name="tfAttrName" xy="184,75" size="229,24" group="n58_grwp" input="true" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="蘑菇蓝莓"/>
-    <group id="n58_grwp" name="grpName" xy="165,66" size="253,41" advanced="true" collapsed="true">
+    <group id="n58_grwp" name="grpName" xy="165,66" size="253,41" hideByEditor="true" visible="false" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlState" pages="1"/>
     </group>
     <component id="n50_kca4" name="btnSaveAsTemplate" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="297,1025" size="121,45">

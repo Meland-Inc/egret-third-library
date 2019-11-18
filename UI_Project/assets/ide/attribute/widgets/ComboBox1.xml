@@ -10,7 +10,7 @@
       <gearDisplay controller="button" pages="1,3"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <text id="n2_grwp" name="title" xy="11,0" size="176,40" fontSize="18" vAlign="middle" autoSize="none" singleLine="true" text="item">
+    <text id="n2_grwp" name="title" xy="10,0" size="176,40" fontSize="18" vAlign="middle" autoSize="none" singleLine="true" text="item">
       <relation target="" sidePair="width-width,height-height"/>
     </text>
   </displayList>
