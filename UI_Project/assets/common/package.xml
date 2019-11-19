@@ -555,8 +555,28 @@
     <component id="gz74cyih8" name="labTextVScroll.xml" path="/lab/" exported="true"/>
     <component id="gz74cyih9" name="labInputTextVScroll.xml" path="/lab/" exported="true"/>
     <component id="8qqicyiha" name="LabWinTitle.xml" path="/com/" exported="true"/>
-    <image id="8qqicyihb" name="icon_mapt_map_2.png" path="/img/"/>
+    <image id="8qqicyihb" name="icon_mapt_map_2.png" path="/img/" exported="true"/>
     <image id="8qqicyihc" name="img_cm_bottom_1.png" path="/img/" exported="true" scale="9grid" scale9grid="30,30,60,60"/>
+    <image id="eggjcyihd" name="btn_cm_off.png" path="/img/" exported="true"/>
+    <image id="eggjcyihe" name="btn_cm_on.png" path="/img/" exported="true"/>
+    <image id="eggjcyihf" name="btn_cm_red.png" path="/img/" exported="true"/>
+    <image id="eggjcyihg" name="icon_cm_set.png" path="/img/" exported="true"/>
+    <image id="eggjcyihh" name="img_cm_line.png" path="/img/" exported="true" scale="9grid" scale9grid="8,0,14,3"/>
+    <image id="eggjcyihi" name="img_cm_szt_1.png" path="/img/" exported="true" scale="9grid" scale9grid="8,0,14,12"/>
+    <image id="eggjcyihj" name="img_cm_szt_2.png" path="/img/" exported="true" scale="9grid" scale9grid="8,0,14,12"/>
+    <image id="eggjcyihk" name="img_cm_szt_3.png" path="/img/" exported="true"/>
+    <image id="eggjcyihl" name="img_cm_szt_4.png" path="/img/" exported="true" scale="9grid" scale9grid="8,0,14,12"/>
+    <image id="eggjcyihm" name="img_cm_szt_5.png" path="/img/" exported="true" scale="9grid" scale9grid="8,0,14,12"/>
+    <image id="eggjcyihn" name="img_cm_szt_6.png" path="/img/" exported="true"/>
+    <image id="eggjcyiho" name="img_cm_top_1.png" path="/img/" exported="true" scale="9grid" scale9grid="20,21,40,24"/>
+    <image id="eggjcyihp" name="img_cm_xlk_1.png" path="/img/" exported="true" scale="9grid" scale9grid="43,22,86,44"/>
+    <image id="eggjcyihq" name="img_cm_xlk_2.png" path="/img/" exported="true" scale="9grid" scale9grid="43,10,86,20"/>
+    <image id="eggjcyihr" name="img_cm_xlk_3.png" path="/img/" exported="true" scale="9grid" scale9grid="43,10,86,20"/>
+    <image id="eggjcyihs" name="img_cm_srk_1.png" path="/img/" exported="true" scale="9grid" scale9grid="15,10,30,20"/>
+    <image id="eggjcyiht" name="img_cm_srk_2.png" path="/img/" exported="true" scale="9grid" scale9grid="15,10,30,20"/>
+    <image id="eggjcyihu" name="img_cm_srk_3.png" path="/img/" exported="true" scale="9grid" scale9grid="15,10,30,20"/>
+    <image id="eggjcyihv" name="img_cm_xlk_4.png" path="/img/" exported="true" scale="9grid" scale9grid="30,30,60,60"/>
+    <image id="eggjcyihw" name="img_cm_xlk_5.png" path="/img/" exported="true" scale="9grid" scale9grid="30,10,60,20"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>
