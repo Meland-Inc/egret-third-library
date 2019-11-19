@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="172,176" designImage="ui://i25v0ebkcxfq4f" designImageOffsetX="-293" designImageOffsetY="-370" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlOperation" pages="0,rocker,1,keyboard" selected="0"/>
+  <controller name="ctrlShowHide" pages="0,hide,1,show" selected="1"/>
+  <displayList>
+    <component id="n0_o89o" name="btnOperation" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="0,0" size="172,40">
+      <gearText controller="ctrlOperation" pages="0" values="摇杆操作" default="WASD操作"/>
+      <Button title="摇杆操作" titleColor="#333333" icon="ui://te1gxawoeggjcyihr" controller="ctrlShowHide" page="1"/>
+    </component>
+    <image id="n10_tcst" name="n10" src="eggjcyihp" fileName="img/img_cm_xlk_1.png" pkg="te1gxawo" xy="0,43" group="n9_o89o"/>
+    <component id="n4_o89o" name="btnRockerOperation" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="0,48" size="172,40" group="n9_o89o">
+      <Button title="摇杆操作" titleColor="#333333" icon="ui://te1gxawoeggjcyihr" selectedIcon="ui://te1gxawoeggjcyihq" controller="ctrlOperation" page="0"/>
+    </component>
+    <component id="n5_o89o" name="btnKeyboardOperation" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="0,88" size="172,40" group="n9_o89o">
+      <Button title="WASD操作" titleColor="#333333" icon="ui://te1gxawoeggjcyihr" selectedIcon="ui://te1gxawoeggjcyihq" controller="ctrlOperation" page="1"/>
+    </component>
+    <component id="n8_o89o" name="btnConfirmOperation" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="28,132" size="120,44" group="n9_o89o">
+      <Button title="确定" icon="ui://te1gxawoeggjcyihf" controller="ctrlShowHide" page="0"/>
+    </component>
+    <group id="n9_o89o" name="grpSelection" xy="0,43" size="172,133" advanced="true">
+      <gearDisplay controller="ctrlShowHide" pages="1"/>
+    </group>
+  </displayList>
+</component>

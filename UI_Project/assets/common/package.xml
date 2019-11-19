@@ -409,8 +409,8 @@
     <component id="txgscyid8" name="comCommonWinBg.xml" path="/old/com/" exported="true"/>
     <component id="txgscyida" name="rbtnCommonTab.xml" path="/old/btn/" exported="true"/>
     <image id="qd2ccyidb" name="bg_cm_1_2.png" path="/old/img_UI3/" exported="true"/>
-    <component id="o89ocyidf" name="sldCommon_grip.xml" path="/old/sld/"/>
-    <component id="o89ocyidg" name="sldCommon.xml" path="/old/sld/" exported="true"/>
+    <component id="o89ocyidf" name="sldCommon_gripBlue.xml" path="/sld/"/>
+    <component id="o89ocyidg" name="sldCommonBlue.xml" path="/sld/" exported="true"/>
     <component id="o89ocyidh" name="rbtnFixNoScale.xml" path="/old/btn/" exported="true"/>
     <image id="nxmwcyid8" name="bg_cm_1_1.png" path="/old/img_UI3/" exported="true"/>
     <image id="m3dicyid9" name="btn_cm_an_3.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="27,10,54,20"/>
@@ -577,6 +577,9 @@
     <image id="eggjcyihu" name="img_cm_srk_3.png" path="/img/" exported="true" scale="9grid" scale9grid="15,10,30,20"/>
     <image id="eggjcyihv" name="img_cm_xlk_4.png" path="/img/" exported="true" scale="9grid" scale9grid="30,30,60,60"/>
     <image id="eggjcyihw" name="img_cm_xlk_5.png" path="/img/" exported="true" scale="9grid" scale9grid="30,10,60,20"/>
+    <component id="j70wcyihy" name="rbtnCommonTopTab.xml" path="/btn/" exported="true"/>
+    <component id="j70wcyihz" name="sldCommon_gripYellow.xml" path="/sld/"/>
+    <component id="j70wcyii0" name="sldCommonYellow.xml" path="/sld/" exported="true"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>
