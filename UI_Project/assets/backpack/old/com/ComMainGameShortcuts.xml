@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="719,112" opaque="false" designImage="ui://48p8y12a8q283j" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlStatus" pages="0,normal,1,hide" selected="0"/>
+  <controller name="ctrlGameMode" pages="1,game,0,lessons,2,creation" selected="0"/>
+  <displayList>
+    <image id="n28_uvgl" name="bg2" src="8q2833" fileName="img_UI3/img_main_beibaodise_13.png" xy="543,22" group="n41_x5ue"/>
+    <image id="n27_uvgl" name="bg1" src="8q2834" fileName="img_UI3/btn_main_beibaozhankai_4 .png" xy="0,2" group="n41_x5ue"/>
+    <component id="n22_o6si" name="btnBag" src="8q282n" fileName="btn/btnFixClickArea.xml" xy="606,21" size="113,90" group="n41_x5ue">
+      <Button icon="ui://48p8y12a8q2835" sound="ui://48p8y12a8q28o"/>
+    </component>
+    <list id="n40_ltu2" name="lstItem" xy="9,34" size="605,70" group="n41_x5ue" layout="flow_hz" colGap="6" defaultItem="ui://48p8y12a8q2836">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n31_uvgl" name="btnHide" src="8q282n" fileName="btn/btnFixClickArea.xml" xy="268,0" size="84,32" group="n41_x5ue">
+      <gearDisplay controller="ctrlStatus" pages="0"/>
+      <Button icon="ui://48p8y12a8q283h" controller="ctrlStatus" page="1"/>
+    </component>
+    <component id="n37_wq4d" name="btnNormal" src="8q282n" fileName="btn/btnFixClickArea.xml" xy="268,0" size="84,32" group="n41_x5ue">
+      <gearDisplay controller="ctrlStatus" pages="1"/>
+      <Button icon="ui://48p8y12a8q283i" controller="ctrlStatus" page="0"/>
+    </component>
+    <group id="n41_x5ue" name="root" xy="0,0" size="719,112" advanced="true">
+      <gearXY controller="ctrlStatus" pages="1" values="0,90" default="0,0" tween="true"/>
+    </group>
+  </displayList>
+</component>

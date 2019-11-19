@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1920,1080" designImage="ui://thvmj7vo8qqii" designImageAlpha="0" designImageLayer="1">
+<component size="1920,1080" designImage="ui://thvmj7vo8qqii" designImageAlpha="3" designImageLayer="1">
   <controller name="ctrlViewStatus" pages="0,all,1,mine" selected="0"/>
   <displayList>
     <graph id="n0_8qqi" name="gphBg" xy="0,0" size="1920,1080" locked="true" alpha="0.5" type="rect" lineSize="0" lineColor="#ffffffff"/>
@@ -14,11 +14,12 @@
       <Button icon="ui://0axy98cg8qqi3l"/>
     </component>
     <image id="n8_8qqi" name="imgMainBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="111,88" size="1780,942"/>
-    <component id="n12_8qqi" name="n12" src="8qqi3m" fileName="btn/btnViewStatus.xml" xy="429,40">
+    <component id="n12_8qqi" name="tbtnAllMap" src="8qqi3m" fileName="btn/btnViewStatus.xml" xy="429,40">
       <Button checked="true" title="地图列表" controller="ctrlViewStatus" page="0"/>
     </component>
-    <component id="n13_8qqi" name="n13" src="8qqi3m" fileName="btn/btnViewStatus.xml" xy="588,40">
+    <component id="n13_8qqi" name="tbtnMyMap" src="8qqi3m" fileName="btn/btnViewStatus.xml" xy="588,40">
       <Button title="我的地图" controller="ctrlViewStatus" page="1"/>
     </component>
+    <image id="n15_8qqi" name="n15" src="oiqdcyigx" fileName="img/img_cm_ssk.png" pkg="te1gxawo" xy="1403,41" size="400,47"/>
   </displayList>
 </component>

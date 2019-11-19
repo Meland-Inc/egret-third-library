@@ -3,6 +3,6 @@
   <displayList>
     <image id="n2_psru" name="imgBg" src="a1nd3" fileName="img/img_maon_rw_2.png" xy="0,0"/>
     <image id="n0_psru" name="imgIcon" src="a1nda" fileName="img/icon_main_rw_2.png" xy="13,7"/>
-    <text id="n3_psru" name="title" xy="42,9" size="215,22" fontSize="16" color="#ffffff" vAlign="bottom" autoSize="none" strokeColor="#242d3a" text="任务描述任务描述任务描述任务描述"/>
+    <text id="n3_psru" name="title" xy="42,9" size="215,22" fontSize="16" color="#ffffff" vAlign="middle" autoSize="none" strokeColor="#242d3a" singleLine="true" text="任务描述任务描述任务描述任务描述"/>
   </displayList>
 </component>

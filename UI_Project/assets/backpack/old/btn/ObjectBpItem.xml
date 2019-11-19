@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="64,64" extention="Button" bgColor="#00ff00">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <controller name="ctrlMark" pages="1,normal,0,equip,2,broken,3,shadow" selected="0"/>
+  <displayList>
+    <loader id="n0_sntq" name="bg" xy="0,0" size="64,64" url="ui://48p8y12a8q2819"/>
+    <loader id="n7_fene" name="quality" xy="0,0" pivot="0.5,0.5" size="64,64" group="n10_fene" visible="false" url="ui://48p8y12a8q281a" fill="scaleFree"/>
+    <loader id="n8_fene" name="icon" xy="5,5" pivot="0.5,0.5" size="54,54" group="n10_fene" align="center" vAlign="middle" fill="scale" shrinkOnly="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <group id="n10_fene" name="grpItemIcon" xy="0,0" size="64,64" advanced="true"/>
+    <image id="n2_sntq" name="equipedMark" src="8q2811" fileName="newImg/img_main_item_3.png" xy="0,0" group="n4_sntq"/>
+    <text id="n3_sntq" name="tfE" xy="3,3" size="18,19" group="n4_sntq" fontSize="12" align="center" vAlign="middle" autoSize="none" text="E"/>
+    <group id="n4_sntq" name="grpEquipedMark" xy="0,0" size="34,32" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlMark" pages="0"/>
+    </group>
+    <image id="n23_utpb" name="imgSelected" src="8q281b" fileName="imgB/img_cm_wpk_2.png" xy="0,0">
+      <gearDisplay controller="button" pages="1"/>
+    </image>
+    <image id="n24_mt5a" name="imgNumBg" src="8q281c" fileName="imgB/img_cm_kjan_1.png" xy="47,49" group="n26_mt5a"/>
+    <text id="n25_mt5a" name="num" xy="47,46" size="17,18" group="n26_mt5a" fontSize="10" align="center" vAlign="bottom" autoSize="height" text="0"/>
+    <group id="n26_mt5a" name="grpNum" xy="47,46" size="17,18"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

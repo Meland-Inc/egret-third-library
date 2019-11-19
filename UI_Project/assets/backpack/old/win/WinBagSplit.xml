@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" designImage="ui://48p8y12a8q282i" designImageOffsetX="-369" designImageOffsetY="-185" designImageAlpha="0" designImageLayer="1">
+  <displayList>
+    <image id="n0_k8dt" name="bg" src="8q2827" fileName="newImg/bg_cm_3.png" xy="358,190" size="413,260" group="n24_cuwy"/>
+    <component id="n21_fyx8" name="btnClose" src="8q2828" fileName="btn/btnFix.xml" xy="737,190" size="30,30" group="n24_cuwy">
+      <Button icon="ui://48p8y12a8q282b"/>
+    </component>
+    <text id="n1_k8dt" name="title" xy="501,192" size="119,32" group="n24_cuwy" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="拆分"/>
+    <image id="n4_k8dt" name="n4" src="8q282c" fileName="newImg/img_cm_inputbox_2.png" xy="537,255" size="60,35" group="n7_k8dt"/>
+    <text id="n8_k8dt" name="tfNum" xy="539,259" size="56,28" group="n7_k8dt" fontSize="21" color="#472f16" align="center" vAlign="middle" autoSize="none" text="0&#xA;"/>
+    <component id="n16_k8dt" name="btnSub" src="8q2828" fileName="btn/btnFix.xml" xy="482,260" size="18,26" group="n7_k8dt">
+      <Button icon="ui://48p8y12a8q282d" sound="ui://48p8y12a8q282e"/>
+    </component>
+    <component id="n18_k8dt" name="btnAdd" src="8q2828" fileName="btn/btnFix.xml" xy="636,260" size="18,26" group="n7_k8dt">
+      <Button icon="ui://48p8y12a8q282f" sound="ui://48p8y12a8q282e"/>
+    </component>
+    <group id="n7_k8dt" name="n7" xy="482,255" size="172,35" group="n24_cuwy"/>
+    <text id="n19_lj6i" name="tfSplitMsg" xy="461,419" size="213,18" group="n24_cuwy" fontSize="12" color="#ff8f02" align="center" autoSize="none" text="没有空闲的位置摆放"/>
+    <component id="n22_5ccm" name="btnConfirm" src="8q282g" fileName="btn/btnScale.xml" xy="514,372" size="105,40" group="n24_cuwy">
+      <Button title="确定" titleColor="#472f16" titleFontSize="18" icon="ui://48p8y12a8q282h"/>
+    </component>
+    <component id="n25_lsbl" name="sld" src="8q2821" fileName="sld/Slider1.xml" xy="462,323" group="n24_cuwy">
+      <Slider value="50" max="100"/>
+    </component>
+    <group id="n24_cuwy" name="root" xy="358,190" size="413,260" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

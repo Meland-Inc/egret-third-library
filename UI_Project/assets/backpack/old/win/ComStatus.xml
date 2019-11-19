@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="125,71" designImage="ui://48p8y12a8q2831" designImageOffsetX="-1149" designImageOffsetY="-28" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlGameMode" pages="1,game,0,lessons,2,creation" selected="0"/>
+  <displayList>
+    <component id="n57_wdqf" name="pbrHp" src="8q282u" fileName="pbr/pbrHp.xml" xy="0,0">
+      <ProgressBar value="100" max="100"/>
+    </component>
+    <component id="n58_wdqf" name="pbrHunger" src="8q282y" fileName="pbr/pbrHunger.xml" xy="0,40">
+      <gearDisplay controller="ctrlGameMode" pages="1"/>
+      <ProgressBar value="100" max="100"/>
+    </component>
+  </displayList>
+</component>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="97,55" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <controller name="ctrlIsRead" pages="0,yes,1,no" selected="0"/>
+  <displayList>
+    <loader id="n6_nl0r" name="icon" xy="0,0" size="91,55" url="ui://48p8y12a8q28l" autoSize="true">
+      <gearIcon controller="button" pages="1" values="ui://48p8y12a8q28m" default="ui://48p8y12a8q28l"/>
+    </loader>
+    <text id="n3_ey2h" name="title" xy="14,10" size="63,28" fontSize="18" color="#365989" align="center" vAlign="middle" autoSize="none" bold="true" text="全部"/>
+    <image id="n4_hdqr" name="imgRedPoint" src="8q28n" fileName="img/icon_mail_2.png" xy="89,0">
+      <gearDisplay controller="ctrlIsRead" pages="1"/>
+      <relation target="" sidePair="right-right,top-top"/>
+    </image>
+  </displayList>
+  <Button mode="Radio" sound="ui://48p8y12a8q28o"/>
+</component>
