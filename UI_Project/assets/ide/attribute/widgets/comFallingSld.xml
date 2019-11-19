@@ -6,6 +6,6 @@
     </component>
     <text id="n1_grwp" name="title" xy="7,0" size="77,22" fontSize="18" color="#333333" text="掉落数量"/>
     <image id="n2_grwp" name="imgValueBg" src="hckx6r" fileName="attribute/img/img_att_szl_4.png" xy="207,25"/>
-    <text id="n3_grwp" name="tfValue" xy="220,31" size="33,22" input="true" keyboardType="4" fontSize="18" color="#333333" align="center" vAlign="middle" singleLine="true" text="100"/>
+    <text id="n3_grwp" name="tfValue" xy="220,31" size="32,22" fontSize="18" color="#333333" align="center" vAlign="middle" singleLine="true" text="100"/>
   </displayList>
 </component>

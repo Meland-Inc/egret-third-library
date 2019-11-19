@@ -14,7 +14,7 @@
     <image id="y8jua" name="img_bac_pzk_2.png" path="/img/"/>
     <image id="y8jub" name="img_bac_pzk_3.png" path="/img/"/>
     <image id="y8juc" name="img_bac_pzk_4.png" path="/img/"/>
-    <image id="y8jud" name="img_bac_xxk.png" path="/img/"/>
+    <image id="y8jud" name="img_bac_xxk.png" path="/img/" scale="9grid" scale9grid="15,15,30,30"/>
     <image id="y8jue" name="标注-背包界面.png" path="/sketch/"/>
     <image id="y8juf" name="小贝星球_背包界面.png" path="/sketch/"/>
     <image id="y8jug" name="效果图-背包界面.png" path="/sketch/"/>
@@ -144,6 +144,7 @@
     <image id="8q283w" name="img_cm_bg_dk_1.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="31,23,62,46"/>
     <image id="8q283x" name="btn_cm_an_2.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="27,9,54,18"/>
     <image id="8q283y" name="背包效果图11.png" path="/old/backpack/"/>
+    <component id="8q283z" name="ToolTipOperaBagItemB.xml" path="/com/" exported="true"/>
   </resources>
   <publish name="backpack"/>
 </packageDescription>

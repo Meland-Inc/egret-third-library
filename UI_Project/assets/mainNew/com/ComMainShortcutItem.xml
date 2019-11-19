@@ -8,6 +8,8 @@
     <text id="n2_psru" name="tfTitle" xy="4,2" size="19,24" visible="false" fontSize="18" autoSize="none" text="1"/>
     <loader id="n4_psru" name="icon" xy="0,0" size="83,83" group="n5_foy4" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
     <group id="n5_foy4" name="grpItemIcon" xy="0,0" size="83,83" advanced="true"/>
+    <image id="n6_8q28" name="imgNumBg" src="oiqdcyigy" fileName="img/img_cm_szk.png" pkg="te1gxawo" xy="53,63"/>
+    <text id="n7_8q28" name="num" xy="53,63" size="29,19" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="23"/>
   </displayList>
   <Button mode="Radio"/>
 </component>
