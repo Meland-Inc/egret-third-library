@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" designImage="ui://0axy98cgiv933c" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlUpdate" pages="0,normal,1,updating" selected="0"/>
+  <displayList>
+    <image id="n0_ui82" name="imgBg" src="iv9336" fileName="imgB/img_cm_dtgj_1.png" xy="270,124" size="609,394" group="n13_ui82"/>
+    <graph id="n14_ui82" name="dragArea" xy="271,124" size="604,38" group="n13_ui82" alpha="0" type="rect"/>
+    <text id="n3_ui82" name="title" xy="290,128" size="77,29" group="n13_ui82" fontSize="18" color="#ffffff" vAlign="bottom" text="地图工具"/>
+    <component id="n16_ui82" name="labMapCtnr" src="iv931y" fileName="com/ladMapCtnr.xml" xy="290,182" size="568,268" group="n13_ui82">
+      <Label icon="ui://0axy98cgiv9337"/>
+    </component>
+    <component id="n2_ui82" name="btnClose" src="iv93j" fileName="btn/btnFix.xml" xy="842,130" size="26,26" group="n13_ui82">
+      <Button icon="ui://0axy98cgiv9338"/>
+    </component>
+    <component id="n5_ui82" name="btnUpdate" src="iv93j" fileName="btn/btnFix.xml" xy="521,470" size="106,36" group="n10_ui82">
+      <Button title="更新地图" titleFontSize="18" icon="ui://0axy98cgiv93m" controller="ctrlUpdate" page="1"/>
+    </component>
+    <component id="n6_ui82" name="btnZoomIn" src="iv93j" fileName="btn/btnFix.xml" xy="776,478" size="20,20" group="n10_ui82">
+      <Button icon="ui://0axy98cgiv9339"/>
+    </component>
+    <component id="n8_ui82" name="btnZoomOut" src="iv93j" fileName="btn/btnFix.xml" xy="806,478" size="20,20" group="n10_ui82">
+      <Button icon="ui://0axy98cgiv933a"/>
+    </component>
+    <component id="n9_ui82" name="btnRestore" src="iv93j" fileName="btn/btnFix.xml" xy="836,478" size="20,20" group="n10_ui82">
+      <Button icon="ui://0axy98cgiv933b"/>
+    </component>
+    <group id="n10_ui82" name="grpBottom" xy="521,470" size="335,36" group="n13_ui82" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlUpdate" pages="0"/>
+    </group>
+    <component id="n11_ui82" name="prbUpdate" src="iv932n" fileName="prb/prbUpdate.xml" xy="290,482" size="567,16" group="n13_ui82">
+      <gearDisplay controller="ctrlUpdate" pages="1"/>
+      <ProgressBar max="100"/>
+    </component>
+    <group id="n13_ui82" name="root" xy="270,124" size="609,394" advanced="true" collapsed="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

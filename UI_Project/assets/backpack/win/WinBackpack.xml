@@ -4,9 +4,9 @@
     <image id="n8_oiqd" name="imgTopBg" src="oiqdcyigw" fileName="img/img_cm_7.png" pkg="te1gxawo" xy="0,0" size="1920,56">
       <relation target="" sidePair="width-width"/>
     </image>
-    <image id="n2_oiqd" name="imgTitleBg" src="oiqdcyih5" fileName="img/img_cm_2.png" pkg="te1gxawo" xy="36,0"/>
-    <image id="n5_oiqd" name="imgIcon" src="y8ju1" fileName="img/icon_bac_bb.png" xy="68,13"/>
-    <text id="n6_oiqd" name="tfTitle" xy="102,14" size="53,31" fontSize="24" text="背包&#xA;"/>
+    <component id="n30_8qqi" name="labTitle" src="8qqicyiha" fileName="com/LabWinTitle.xml" pkg="te1gxawo" xy="21,0">
+      <Label title="背包" icon="ui://48p8y12ay8ju1"/>
+    </component>
     <component id="n9_oiqd" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1864,8" size="43,47">
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://te1gxawooiqdcyih2"/>
@@ -75,7 +75,7 @@
     <component id="n24_e8s1" name="btnArrange" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1649,857" size="121,45" group="n28_n173">
       <Button title="整理" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <group id="n28_n173" name="mainContent" xy="89,114" size="1739,824" advanced="true">
+    <group id="n28_n173" name="mainContent" xy="88,114" size="1739,824" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>

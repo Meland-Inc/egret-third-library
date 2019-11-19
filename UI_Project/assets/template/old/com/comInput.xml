@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="178,24" extention="Label">
+  <displayList>
+    <loader id="n0_p7l0" name="icon" xy="0,0" size="178,24" url="ui://0axy98cgiv93p" fill="scaleFree"/>
+    <image id="n2_p7l0" name="imgSearch" src="iv9323" fileName="imgB/icon_cm_xsgl_5.png" xy="4,5">
+      <relation target="" sidePair="middle-middle"/>
+    </image>
+    <text id="n1_p7l0" name="title" xy="22,0" size="155,24" alpha="0.6" input="true" fontSize="14" color="#ffffff" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text="">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </text>
+  </displayList>
+</component>

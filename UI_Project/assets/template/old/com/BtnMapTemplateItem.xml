@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="142,156" extention="Button" designImage="ui://0axy98cgiv931u" designImageOffsetX="-297" designImageOffsetY="-102" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlMode" pages="1,normal,2,publish,0,addBtn" selected="0"/>
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <image id="n0_uov9" name="imgBg" src="iv934" fileName="img/img_stencil_dt_4.png" xy="0,4" group="n7_o7or"/>
+    <image id="n1_uov9" name="mapBg" src="iv93d" fileName="img/img_stencil_dt_6.png" xy="7,13" size="128,96" group="n7_o7or"/>
+    <component id="n6_uov9" name="ladMap" src="iv937" fileName="com/ComAutoClipLad.xml" xy="7,13" size="128,96" group="n7_o7or"/>
+    <text id="n3_uov9" name="tfName" xy="5,112" size="130,37" group="n7_o7or" fontSize="14" color="#365989" align="center" vAlign="middle" autoSize="none" text="七桥问题地图"/>
+    <component id="n12_uic4" name="pbrConnectServer" src="iv931q" fileName="prb/pbrLoadMapTemplate.xml" xy="11,142" size="120,6" group="n7_o7or" visible="false">
+      <ProgressBar max="100"/>
+    </component>
+    <component id="n14_spq9" name="comSelector" src="iv931t" fileName="com/comTemplateSelector.xml" xy="0,0" group="n7_o7or" controller="ctrlOperate,0">
+      <gearDisplay controller="button" pages="1"/>
+    </component>
+    <group id="n7_o7or" name="root" xy="0,0" size="142,156" advanced="true">
+      <gearDisplay controller="ctrlMode" pages="1,2"/>
+    </group>
+    <image id="n8_lls7" name="imgAdd" src="iv931" fileName="img/img_stencil_dt_1.png" xy="0,6" pivot="0.5,0.5">
+      <gearDisplay controller="ctrlMode" pages="0"/>
+    </image>
+    <image id="n13_10gnn" name="imgPublish" src="iv931x" fileName="img/icon_stencil_bq_1.png" xy="0,4">
+      <gearDisplay controller="ctrlMode" pages="2"/>
+    </image>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

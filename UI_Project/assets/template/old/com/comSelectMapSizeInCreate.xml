@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="395,311" opaque="false">
+  <controller name="ctrlMapSize" pages="0,UnknownSize,1,Big,2,Middle,3,Small" selected="0"/>
+  <controller name="ctrlShowHide" pages="1,hide,0,show" selected="1"/>
+  <displayList>
+    <component id="n9_mwli" name="btnOperation" src="iv93j" fileName="btn/btnFix.xml" xy="31,0" size="117,34">
+      <gearText controller="ctrlMapSize" pages="0,1,2,3" values="其他|大|中|小"/>
+      <Button title="其他" titleColor="#365989" titleFontSize="16" icon="ui://0axy98cgiv9315" controller="ctrlShowHide" page="0"/>
+    </component>
+    <image id="n0_mwli" name="imgBg" src="iv9311" fileName="imgB/btn_cm_xzl_4.png" xy="-19,48" size="180,227" group="n10_mwli"/>
+    <text id="n1_mwli" name="tfOperation1" xy="53,60" size="37,23" group="n10_mwli" fontSize="16" color="#365989" text="选择"/>
+    <image id="n2_mwli" name="imgPoint" src="iv9312" fileName="imgB/btn_cm_xzl_5.png" xy="4,61" group="n10_mwli"/>
+    <component id="n3_mwli" name="btnPalindrome" src="iv9313" fileName="btn/btnFixClickArea.xml" xy="6,93" size="130,34" group="n10_mwli">
+      <Button title="大" titleColor="#365989" titleFontSize="16" icon="ui://0axy98cgiv9315" selectedIcon="ui://0axy98cgiv9316" controller="ctrlMapSize" page="1"/>
+    </component>
+    <component id="n11_ssks" name="btnVertical" src="iv9313" fileName="btn/btnFixClickArea.xml" xy="6,135" size="130,34" group="n10_mwli">
+      <Button title="中" titleColor="#365989" titleFontSize="16" icon="ui://0axy98cgiv9315" selectedIcon="ui://0axy98cgiv9316" controller="ctrlMapSize" page="2"/>
+    </component>
+    <component id="n4_mwli" name="btnHorizontal" src="iv9313" fileName="btn/btnFixClickArea.xml" xy="6,177" size="130,34" group="n10_mwli">
+      <Button title="小" titleColor="#365989" titleFontSize="16" icon="ui://0axy98cgiv9315" selectedIcon="ui://0axy98cgiv9316" controller="ctrlMapSize" page="3"/>
+    </component>
+    <component id="n6_mwli" name="btnVertical" src="iv9313" fileName="btn/btnFixClickArea.xml" xy="6,219" size="130,34" group="n10_mwli">
+      <Button title="其他" titleColor="#365989" titleFontSize="16" icon="ui://0axy98cgiv9315" selectedIcon="ui://0axy98cgiv9316" controller="ctrlMapSize" page="0"/>
+    </component>
+    <group id="n10_mwli" name="root" xy="-19,48" size="180,227" advanced="true">
+      <gearDisplay controller="ctrlShowHide" pages="0"/>
+    </group>
+  </displayList>
+</component>

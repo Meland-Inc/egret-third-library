@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="204,239" opaque="false">
+  <controller name="ctrlManorType" pages="0,palindrome,1,horizontal,2,vertical" selected="0"/>
+  <controller name="ctrlShowHide" exported="true" pages="1,hide,0,show" selected="0"/>
+  <displayList>
+    <component id="n12_ssks" name="btnOperation" src="iv93j" fileName="btn/btnFix.xml" xy="40,0" size="100,114">
+      <gearIcon controller="ctrlManorType" pages="0,1,2" values="ui://0axy98cgiv93y|ui://0axy98cgiv93z|ui://0axy98cgiv9310"/>
+      <Button titleColor="#365989" titleFontSize="16" icon="ui://0axy98cgiv93y" controller="ctrlShowHide" page="0"/>
+    </component>
+    <image id="n19_ssks" name="imgBg" src="iv9311" fileName="imgB/btn_cm_xzl_4.png" xy="-197,-62" size="355,176" group="n29_ssks"/>
+    <text id="n20_ssks" name="tfOperation1" xy="-71,-50" size="101,23" group="n29_ssks" fontSize="16" color="#365989" text="领地生成方式"/>
+    <image id="n21_ssks" name="imgPoint" src="iv9312" fileName="imgB/btn_cm_xzl_5.png" xy="-174,-48" group="n29_ssks"/>
+    <component id="n25_ssks" name="btnPalindrome" src="iv9313" fileName="btn/btnFixClickArea.xml" xy="-178,-21" size="100,114" group="n29_ssks">
+      <Button titleColor="#365989" titleFontSize="16" icon="ui://0axy98cgiv93y" controller="ctrlManorType" page="0"/>
+    </component>
+    <component id="n26_ssks" name="btnHorizontal" src="iv9313" fileName="btn/btnFixClickArea.xml" xy="-71,-21" size="100,114" group="n29_ssks">
+      <Button titleColor="#365989" titleFontSize="16" icon="ui://0axy98cgiv93z" controller="ctrlManorType" page="1"/>
+    </component>
+    <component id="n27_ssks" name="btnVertical" src="iv9313" fileName="btn/btnFixClickArea.xml" xy="35,-21" size="100,114" group="n29_ssks">
+      <Button titleColor="#365989" titleFontSize="16" icon="ui://0axy98cgiv9310" controller="ctrlManorType" page="2"/>
+    </component>
+    <group id="n29_ssks" name="root" xy="-197,-62" size="355,176" advanced="true">
+      <gearDisplay controller="ctrlShowHide" pages="0"/>
+    </group>
+  </displayList>
+</component>

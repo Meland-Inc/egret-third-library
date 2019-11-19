@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,400" overflow="scroll" scrollBarFlags="4" scrollBar="visible" scrollBarRes="ui://0axy98cgiv9318,ui://0axy98cgiv9318" designImage="ui://0axy98cgiv9317" designImageOffsetX="-723" designImageOffsetY="-78" designImageAlpha="0">
+  <controller name="ctrlType" pages="0,config,1,custom" selected="0"/>
+  <displayList>
+    <image id="n0_er8n" name="imgInputBg" src="iv93p" fileName="imgB/img_cm_srk_2.png" xy="100,0" size="285,31"/>
+    <image id="n1_er8n" name="imgPen" src="iv93q" fileName="imgB/img_cm_bjtb_2.png" xy="359,8"/>
+    <text id="n2_er8n" name="inpMapName" xy="108,1" size="241,29" alpha="0.6" input="true" fontSize="18" color="#ffffff" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="七桥问题地图"/>
+    <image id="n4_er8n" name="imgMutil" src="iv93r" fileName="img/img_stencil_c_1.png" xy="191,265" group="n19_er8n"/>
+    <image id="n5_er8n" name="imgWidthBG" src="iv93p" fileName="imgB/img_cm_srk_2.png" xy="102,257" size="65,24" group="n19_er8n"/>
+    <image id="n6_er8n" name="imgHeightBG" src="iv93p" fileName="imgB/img_cm_srk_2.png" xy="222,254" size="68,24" group="n19_er8n"/>
+    <text id="n7_er8n" name="inpMapWidth" xy="102,257" size="64,23" group="n19_er8n" alpha="0.5" input="true" prompt="1920" restrict="0-9" keyboardType="4" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text="1000"/>
+    <text id="n8_er8n" name="inpMapHeight" xy="222,254" size="68,23" group="n19_er8n" alpha="0.6" input="true" prompt="1080" restrict="0-9" keyboardType="4" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text="1000"/>
+    <component id="n9_er8n" name="btnUpdateMap" src="iv93s" fileName="btn/btnScale.xml" xy="218,194" size="66,40" group="n19_er8n">
+      <gearXY controller="ctrlType" pages="0,1" values="218,194|318,249"/>
+      <Button title="更新" titleColor="#ffffff" titleFontSize="18" icon="ui://0axy98cgiv93m"/>
+    </component>
+    <group id="n19_er8n" name="customInput" xy="102,194" size="188,87" advanced="true">
+      <gearDisplay controller="ctrlType" pages="1"/>
+    </group>
+    <text id="n3_er8n" name="tf" xy="97,203" size="77,29" fontSize="18" color="#365989" vAlign="bottom" bold="true" text="地图大小"/>
+    <text id="n10_er8n" name="tfManorGenerateType" xy="98,366" size="121,29" fontSize="18" color="#365989" vAlign="middle" autoSize="none" bold="true" text="领地生成方式">
+      <relation target="n9_er8n" sidePair="top-top"/>
+    </text>
+    <text id="n11_er8n" name="tfIsOpen" xy="98,252" size="121,29" fontSize="18" color="#365989" vAlign="middle" autoSize="none" bold="true" text="是否开源">
+      <relation target="n9_er8n" sidePair="top-top"/>
+    </text>
+    <text id="n12_er8n" name="tfIsCanEdit" xy="98,306" size="147,29" fontSize="18" color="#365989" vAlign="middle" autoSize="none" bold="true" text="编辑器是否可用">
+      <relation target="n9_er8n" sidePair="top-top"/>
+    </text>
+    <component id="n13_er8n" name="btnIsOpen" src="iv93u" fileName="btn/tbtnFix.xml" xy="303,249" size="80,34">
+      <relation target="n9_er8n" sidePair="top-top"/>
+      <Button checked="true" icon="ui://0axy98cgiv93v" selectedIcon="ui://0axy98cgiv93w"/>
+    </component>
+    <component id="n14_er8n" name="btnIsCanEdit" src="iv93u" fileName="btn/tbtnFix.xml" xy="303,304" size="80,34">
+      <relation target="n9_er8n" sidePair="top-top"/>
+      <Button checked="true" icon="ui://0axy98cgiv93v" selectedIcon="ui://0axy98cgiv93w"/>
+    </component>
+    <component id="n15_er8n" name="comSelectManorType" src="iv93x" fileName="com/comSelectManorTypeInList.xml" xy="243,371" size="208,134" controller="ctrlShowHide,1">
+      <relation target="n9_er8n" sidePair="top-top"/>
+    </component>
+    <component id="n16_er8n" name="comSelectMapSize" src="iv9314" fileName="com/comSelectMapSizeInCreate.xml" xy="235,200"/>
+    <text id="n18_er8n" name="tf" xy="97,41" size="147,29" fontSize="18" color="#365989" vAlign="middle" autoSize="none" bold="true" text="地图封面"/>
+    <component id="n17_er8n" name="btnSelectMapIcon" src="iv93c" fileName="btn/BtnSelectMapIcon.xml" xy="100,74" size="152,114"/>
+  </displayList>
+</component>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="295,109" opaque="false">
+  <controller name="ctrlOperate" exported="true" pages="0,editSelf,2,editOther,1,subscribe,3,quickEnter" selected="3"/>
+  <displayList>
+    <image id="n0_l9al" name="imgSelecte" src="iv935" fileName="img/img_stencil_dt_5.png" xy="0,4" size="295,105">
+      <gearSize controller="ctrlOperate" pages="0,2,1,3" values="142,152,1,1|295,105,1,1|295,105,1,1|295,105,1,1"/>
+    </image>
+    <component id="n1_l9al" name="btnOperate" src="iv93j" fileName="btn/btnFix.xml" xy="17,35" size="106,36">
+      <gearText controller="ctrlOperate" pages="1,3" values="订阅地图|快速加入" default="编辑地图"/>
+      <relation target="" sidePair="middle-middle"/>
+      <Button title="快速加入" titleFontSize="18" icon="ui://0axy98cgiv93m"/>
+    </component>
+  </displayList>
+  <relation target="n0_l9al" sidePair="width-width,height-height"/>
+</component>
