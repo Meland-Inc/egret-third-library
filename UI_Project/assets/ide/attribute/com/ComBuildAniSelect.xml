@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="430,1080" designImage="ui://thvmj7vo80ab4" designImageOffsetX="-1795">
+  <controller name="ctrlState" exported="true" pages="1,open,0,fold" selected="0"/>
+  <displayList>
+    <graph id="n29_smiy" name="n29" xy="0,0" size="430,1080" visible="false" alpha="0" touchable="false" type="rect">
+      <gearXY controller="ctrlState" pages="1,0" values="0,0|0,0"/>
+      <gearSize controller="ctrlState" pages="1,0" values="430,1080,1,1|126,1080,1,1"/>
+    </graph>
+    <image id="n30_smiy" name="n30" src="xba67o" fileName="ideCommon/img/img_ide_cm_7.png" xy="0,0" size="429,1079" group="n42_smiy">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <image id="n31_smiy" name="n31" src="xba67m" fileName="ideCommon/img/img_ide_cm_6.png" xy="0,0" size="430,56" group="n42_smiy"/>
+    <image id="n32_smiy" name="n32" src="80ab97" fileName="ideCommon/img/img_ide_cm_8.png" xy="10,216" size="405,806" group="n42_smiy">
+      <relation target="" sidePair="width-width,height-height"/>
+      <relation target="" sidePair="top-top,center-center"/>
+    </image>
+    <list id="n33_smiy" name="lstBpTabBar" xy="9,118" size="408,93" group="n42_smiy" layout="flow_hz" overflow="hidden" lineGap="4" defaultItem="ui://ti9jag5t80ab9h" autoItemSize="true">
+      <item title="最近" icon="ui://ti9jag5t80ab8m" name="recent" selectedIcon="ui://ti9jag5t80ab8n"/>
+      <item title="全部" icon="ui://ti9jag5t80ab86" name="all" selectedIcon="ui://ti9jag5t80ab87"/>
+      <item title="建材" icon="ui://ti9jag5t80ab80" name="buildObj" selectedIcon="ui://ti9jag5t80ab81"/>
+      <item title="建筑" icon="ui://ti9jag5t80ab82" name="buildArch" selectedIcon="ui://ti9jag5t80ab83"/>
+      <item title="动物" icon="ui://ti9jag5t80ab7x" name="puppet" selectedIcon="ui://ti9jag5t80ab7y"/>
+      <item title="植物" icon="ui://ti9jag5t80ab8o" name="plant" selectedIcon="ui://ti9jag5t80ab8p"/>
+      <item title="装备" icon="ui://ti9jag5t80ab8i" name="equip" selectedIcon="ui://ti9jag5t80ab8j"/>
+      <item title="消耗品" icon="ui://ti9jag5t80ab8f" name="consumables" selectedIcon="ui://ti9jag5t80ab8g"/>
+      <item title="材料" icon="ui://ti9jag5t80ab7v" name="material" selectedIcon="ui://ti9jag5t80ab7w"/>
+      <item title="其他" icon="ui://ti9jag5t80ab88" name="other" selectedIcon="ui://ti9jag5t80ab89"/>
+      <item title="自定义" icon="ui://ti9jag5t80ab8k" name="custom" selectedIcon="ui://ti9jag5t80ab8l"/>
+    </list>
+    <list id="n34_smiy" name="lstBackpack" xy="25,226" size="387,791" group="n42_smiy" layout="flow_hz" overflow="scroll" scrollBar="visible" scrollBarMargin="5,5,0,0" scrollBarRes="ui://te1gxawovulycyid4," lineGap="10" colGap="10" defaultItem="ui://ti9jag5tinuq9z" autoClearItems="true">
+      <relation target="" sidePair="height-height"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n35_smiy" name="n35" src="80ab9b" fileName="ideCommon/img/img_ide_cm_ssk.png" xy="12,69" size="405,37" group="n42_smiy"/>
+    <text id="n36_smiy" name="tfSearch" xy="15,75" size="399,27" group="n42_smiy" input="true" prompt="请输入搜索内容&#xD;" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" text=""/>
+    <image id="n37_smiy" name="n37" src="80ab8a" fileName="create/img/icon_cre_sck.png" xy="18,13" size="29,29" group="n42_smiy"/>
+    <text id="n38_smiy" name="n38" xy="59,16" size="65,26" group="n42_smiy" fontSize="20" color="#333333" text="素材库"/>
+    <component id="n39_smiy" name="btnConfirm" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="306,1032" size="110,40" group="n42_smiy">
+      <relation target="" sidePair="bottom-bottom,right-right"/>
+      <Button title="确定" titleColor="#ffffff" icon="ui://ti9jag5txba67c"/>
+    </component>
+    <component id="n40_smiy" name="btnBack" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="179,1032" size="110,40" group="n42_smiy">
+      <relation target="" sidePair="bottom-bottom,right-right"/>
+      <Button title="取消" titleColor="#ffffff" icon="ui://ti9jag5txba67e"/>
+    </component>
+    <component id="n41_smiy" name="btnDrawingPad" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="302,7" size="110,40" group="n42_smiy">
+      <Button title="画板" titleColor="#ffffff" icon="ui://ti9jag5txba67c"/>
+    </component>
+    <group id="n42_smiy" name="grpOpen" xy="0,0" size="430,1079" advanced="true">
+      <gearDisplay controller="ctrlState" pages="1"/>
+    </group>
+  </displayList>
+</component>

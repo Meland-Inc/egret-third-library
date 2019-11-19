@@ -2,9 +2,14 @@
 <component size="430,1080" designImage="ui://i25v0ebkneku5l" designImageOffsetX="-795">
   <controller name="ctrlCombine" pages="0,normal,1,combine" selected="0"/>
   <displayList>
-    <image id="n69_xba6" name="n69" src="xba67o" fileName="ideCommon/img/img_ide_cm_7.png" xy="0,0" size="430,1080"/>
+    <image id="n69_xba6" name="n69" src="xba67o" fileName="ideCommon/img/img_ide_cm_7.png" xy="0,0" size="430,1080">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
     <image id="n65_xba6" name="n65" src="xba67m" fileName="ideCommon/img/img_ide_cm_6.png" xy="0,0" size="430,56"/>
-    <image id="n74_xba6" name="n74" src="hckx77" fileName="attribute/img/img_att_dh_1.png" xy="12,120" size="408,904"/>
+    <image id="n74_xba6" name="n74" src="hckx77" fileName="attribute/img/img_att_dh_1.png" xy="12,120" size="408,904">
+      <relation target="" sidePair="width-width,height-height"/>
+      <relation target="" sidePair="center-center,top-top"/>
+    </image>
     <component id="n53_fidk" name="scrollAni" src="hckx6j" fileName="attribute/com/comBuildAniScroll.xml" xy="12,120" size="408,904">
       <relation target="n74_xba6" sidePair="height-height,width-width"/>
       <relation target="n74_xba6" sidePair="left-left,top-top"/>
@@ -19,18 +24,22 @@
     </component>
     <component id="n75_xba6" name="btnSave" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="306,1032" size="110,40">
       <gearDisplay controller="ctrlCombine" pages="0"/>
+      <relation target="" sidePair="right-right,bottom-bottom"/>
       <Button title="保存" titleColor="#ffffff" icon="ui://ti9jag5txba67c"/>
     </component>
     <component id="n76_xba6" name="btnExit" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="179,1032" size="110,40">
       <gearDisplay controller="ctrlCombine" pages="0"/>
+      <relation target="" sidePair="right-right,bottom-bottom"/>
       <Button title="取消" titleColor="#ffffff" icon="ui://ti9jag5txba67e"/>
     </component>
     <component id="n77_xba6" name="btnConfirmCombine" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="306,1032" size="110,40">
-      <gearDisplay controller="ctrlCombine" pages="0,1"/>
+      <gearDisplay controller="ctrlCombine" pages="1"/>
+      <relation target="" sidePair="bottom-bottom,right-right"/>
       <Button title="组合" titleColor="#ffffff" icon="ui://ti9jag5txba67c"/>
     </component>
     <component id="n78_xba6" name="btnExitCombine" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="179,1032" size="110,40">
-      <gearDisplay controller="ctrlCombine" pages="0,1"/>
+      <gearDisplay controller="ctrlCombine" pages="1"/>
+      <relation target="" sidePair="bottom-bottom,right-right"/>
       <Button title="取消" titleColor="#ffffff" icon="ui://ti9jag5txba67e"/>
     </component>
   </displayList>

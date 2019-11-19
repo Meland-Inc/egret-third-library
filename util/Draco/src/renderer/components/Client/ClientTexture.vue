@@ -268,7 +268,7 @@ export default {
       //     return;
       //   }
       // }
-      await Global.executePromiseList(promiseList);
+      Global.executePromiseList(promiseList);
 
       Global.hideLoading();
       Global.dialog("One·for·All Success");
