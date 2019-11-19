@@ -14,8 +14,8 @@
     </graph>
     <text id="n8_rwpw" name="textTitle" xy="0,0" size="452,40" fontSize="20" align="center" vAlign="middle" autoSize="none" text="标题">
       <gearDisplay controller="ctrlTitleVisible" pages="0"/>
-      <relation target="" sidePair="center-center,top-top"/>
-      <relation target="" sidePair="width-width"/>
+      <relation target="n10_rwpw" sidePair="center-center,middle-middle"/>
+      <relation target="n10_rwpw" sidePair="width-width,height-height"/>
     </text>
     <list id="n7_rwpw" name="lstGrid" xy="0,40" size="453,329" layout="pagination" lineItemCount="3" lineItemCount2="3" defaultItem="ui://rnqj1l77rwpwtm4" align="center">
       <gearDisplay controller="ctrlFolded" pages="1"/>
