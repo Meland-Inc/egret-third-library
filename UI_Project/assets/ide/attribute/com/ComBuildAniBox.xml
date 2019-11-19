@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="408,60" designImageOffsetX="-224" designImageOffsetY="-570">
-  <controller name="ctrlFold" pages="0,folded,1,unfolded" selected="0"/>
-  <controller name="ctrlSelect" pages="0,unselected,1,preselected,2,selected" selected="1"/>
+  <controller name="ctrlFold" pages="0,folded,1,unfolded" selected="1"/>
+  <controller name="ctrlSelect" pages="0,unselected,1,preselected,2,selected" selected="2"/>
   <controller name="ctrlCombine" pages="0,normal,1,combine" selected="0"/>
   <displayList>
     <image id="n51_xba6" name="n51" src="hckx7a" fileName="attribute/img/img_att_dh_4.png" xy="-3,0" size="412,60">
       <gearDisplay controller="ctrlSelect" pages="2"/>
       <gearSize controller="ctrlCombine" pages="0,1" values="412,60,1,1|352,60,1,1"/>
-      <relation target="" sidePair="height-height"/>
       <relation target="n49_xba6" sidePair="left-right"/>
     </image>
     <list id="n25_fidk" name="lstAniFrame" xy="0,60" size="408,362" scrollBarMargin="5,5,0,0" scrollBarRes="ui://te1gxawovulycyid4," lineGap="2" colGap="11" defaultItem="ui://ti9jag5txba67n" autoClearItems="true">
       <gearDisplay controller="ctrlFold" pages="1"/>
-      <relation target="" sidePair="width-width,top-bottom"/>
+      <relation target="" sidePair="width-width"/>
       <item controllers="ctrlBuild,0"/>
       <item controllers="ctrlBuild,0"/>
       <item controllers="ctrlBuild,0"/>
@@ -24,7 +23,7 @@
       <item controllers="ctrlBuild,0"/>
       <item controllers="ctrlBuild,0"/>
     </list>
-    <component id="n27_s1sd" name="btnFoldFrame" src="qn8od" fileName="btn/btnCommon.xml" pkg="te1gxawo" xy="15,23" pivot="0.5,0.5" size="8,14">
+    <component id="n27_s1sd" name="btnFoldFrame" src="qn8od" fileName="old/btn/btnCommon.xml" pkg="te1gxawo" xy="15,23" pivot="0.5,0.5" size="8,14" rotation="90">
       <gearLook controller="ctrlFold" pages="0,1" values="1,0,0,1|1,90,0,1"/>
       <relation target="n48_xba6" sidePair="right-left,middle-middle"/>
       <Button icon="ui://ti9jag5txba67g"/>
@@ -59,22 +58,22 @@
       <relation target="" sidePair="height-height"/>
     </image>
     <image id="n50_xba6" name="n50" src="hckx78" fileName="attribute/img/img_att_dh_2.png" xy="0,58" size="408,2">
-      <relation target="" sidePair="top-bottom,width-width"/>
+      <relation target="" sidePair="top-top,width-width"/>
     </image>
     <component id="n55_oiot" name="btnCopy" src="oiot7u" fileName="attribute/btn/btnCommon.xml" xy="316,16" size="28,28">
       <gearDisplay controller="ctrlSelect" pages="1,2"/>
       <gearIcon controller="ctrlSelect" pages="1" values="ui://ti9jag5toiot7s" default="ui://ti9jag5thckx72"/>
-      <Button icon="ui://ti9jag5toiot7s"/>
+      <Button icon="ui://ti9jag5thckx72"/>
     </component>
     <component id="n56_oiot" name="btnEdit" src="oiot7u" fileName="attribute/btn/btnCommon.xml" xy="348,16" size="28,28">
       <gearDisplay controller="ctrlSelect" pages="1,2"/>
       <gearIcon controller="ctrlSelect" pages="1,2" values="ui://ti9jag5toiot7r|ui://ti9jag5thckx6z" default="ui://ti9jag5thckx72"/>
-      <Button icon="ui://ti9jag5toiot7r"/>
+      <Button icon="ui://ti9jag5thckx6z"/>
     </component>
     <component id="n57_oiot" name="btnDelete" src="oiot7u" fileName="attribute/btn/btnCommon.xml" xy="377,16" size="28,28">
       <gearDisplay controller="ctrlSelect" pages="1,2"/>
       <gearIcon controller="ctrlSelect" pages="1,2" values="ui://ti9jag5toiot7t|ui://ti9jag5thckx75" default="ui://ti9jag5thckx72"/>
-      <Button icon="ui://ti9jag5toiot7t"/>
+      <Button icon="ui://ti9jag5thckx75"/>
     </component>
   </displayList>
 </component>

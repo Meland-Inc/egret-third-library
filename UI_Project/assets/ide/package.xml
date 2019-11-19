@@ -217,9 +217,9 @@
     <image id="t1ls6r" name="icon_code_sc_2.png" path="/codeVew/img/"/>
     <image id="t1ls6s" name="img_code_zz.png" path="/codeVew/img/" scale="9grid" scale9grid="8,8,16,16"/>
     <image id="t1ls6t" name="icon_code_sc_1.png" path="/codeVew/img/"/>
-    <component id="hckx6h" name="ComBuildAniBox.xml" path="/attribute/com/" exported="true"/>
-    <component id="hckx6i" name="ComBuildAniEdit.xml" path="/attribute/com/" exported="true"/>
-    <component id="hckx6j" name="comBuildAniScroll.xml" path="/attribute/com/" exported="true"/>
+    <component id="hckx6h" name="ComBuildAniBox.xml" path="/attribute/com/"/>
+    <component id="hckx6i" name="ComBuildAniEdit.xml" path="/attribute/com/"/>
+    <component id="hckx6j" name="comBuildAniScroll.xml" path="/attribute/com/"/>
     <image id="hckx6k" name="img_att_dh_y_1.png" path="/attribute/img/"/>
     <image id="hckx6l" name="img_att_dh_y_1_1.png" path="/attribute/img/"/>
     <image id="hckx6m" name="img_att_dlw_1.png" path="/attribute/img/" scale="9grid" scale9grid="12,10,24,20"/>
@@ -256,7 +256,7 @@
     <image id="xba67h" name="icon_ide_cm_bf.png" path="/ideCommon/img/"/>
     <image id="xba67l" name="img_ide_cm_5.png" path="/ideCommon/img/" scale="9grid" scale9grid="17,16,34,32"/>
     <image id="xba67m" name="img_ide_cm_6.png" path="/ideCommon/img/" scale="9grid" scale9grid="4,4,48,48"/>
-    <component id="xba67n" name="ComBuildFrameBox.xml" path="/attribute/com/" exported="true"/>
+    <component id="xba67n" name="ComBuildFrameBox.xml" path="/attribute/com/"/>
     <image id="xba67o" name="img_ide_cm_7.png" path="/ideCommon/img/" scale="9grid" scale9grid="4,4,53,52"/>
     <component id="xba67q" name="btnScale.xml" path="/attribute/btn/"/>
     <image id="oiot7r" name="icon_att_bj_1.png" path="/attribute/img/"/>
@@ -381,6 +381,7 @@
     <image id="lgvkt7k" name="icon_ide_cm_4_2.png" path="/ideCommon/img/"/>
     <component id="lgvkt7l" name="WinMultiSelectFrame.xml" path="/create/win/"/>
     <component id="foy4t7m" name="comAWDetail.xml" path="/attribute/widgets/" exported="true"/>
+    <component id="smiyt7n" name="ComBuildAniSelect.xml" path="/attribute/com/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>
