@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="56,33">
+  <controller name="conToggle" pages="0,open,1,close" selected="0"/>
+  <displayList>
+    <image id="n0_rw7f" name="imgBg" src="r398yi7s" fileName="newImg/img_cm_switch2.png" pkg="te1gxawo" xy="1,5" size="55,22"/>
+    <image id="n1_rw7f" name="imgFg" src="r398yi7r" fileName="newImg/img_cm_switch1.png" pkg="te1gxawo" xy="1,5" size="54,22">
+      <relation target="n7_cf98" sidePair="rightext-right"/>
+    </image>
+    <image id="n7_cf98" name="grid" src="r398yi7t" fileName="newImg/img_cm_switch3.png" pkg="te1gxawo" xy="26,1">
+      <gearXY controller="conToggle" pages="0,1" values="26,1|1,1" tween="true"/>
+    </image>
+    <component id="n8_cf98" name="n8" src="cf98i" fileName="btn/btnNull.xml" xy="1,0" size="55,33">
+      <gearDisplay controller="conToggle" pages="1"/>
+      <Button sound="ui://fknoioovtqc913" controller="conToggle" page="0"/>
+    </component>
+    <component id="n9_cf98" name="n9" src="cf98i" fileName="btn/btnNull.xml" xy="1,0" size="55,33">
+      <gearDisplay controller="conToggle" pages="0"/>
+      <Button sound="ui://fknoioovtqc911" controller="conToggle" page="1"/>
+    </component>
+  </displayList>
+</component>
