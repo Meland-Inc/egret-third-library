@@ -60,10 +60,18 @@ export async function publishProject() {
 
     try {
         if (ModelMgr.versionModel.curEnviron.codeVersionEnable) {
-            let configPath = `${Global.projPath}/src/GameConfig.ts`;
+            let configPath = `${Global.projPath}/src/config/VersionConfig.ts`;
             let configContent = await fsExc.readFile(configPath);
-            let regCodeVersion = /public static codeVersion = ".*?";/;
-            configContent = configContent.replace(regCodeVersion, `public static codeVersion = "${ModelMgr.versionModel.releaseVersion}";`);
+            let codeVersionName;
+            let regCodeVersion;
+            if (ModelMgr.versionModel.curEnviron.trunkName === ModelMgr.versionModel.eEnviron.beta) {
+                regCodeVersion = /public static betaCodeVersion = ".*?";/;
+                codeVersionName = "betaCodeVersion";
+            } else {
+                regCodeVersion = /public static releaseCodeVersion = ".*?";/;
+                codeVersionName = "releaseCodeVersion";
+            }
+            configContent = configContent.replace(regCodeVersion, `public static ${codeVersionName} = "${ModelMgr.versionModel.releaseVersion}";`);
 
             let regTrunkName = /public static trunkName: eTrunkName = .*?;/;
             configContent = configContent.replace(regTrunkName, `public static trunkName: eTrunkName = eTrunkName.${ModelMgr.versionModel.curEnviron.trunkName};`);
@@ -83,7 +91,7 @@ export async function publishProject() {
 
         //改回原来的分支名称
         if (ModelMgr.versionModel.curEnviron.codeVersionEnable) {
-            let configPath = `${Global.projPath}/src/GameConfig.ts`;
+            let configPath = `${Global.projPath}/src/config/VersionConfig.ts`;
             let configContent = await fsExc.readFile(configPath);
             let regTrunkName = /public static trunkName: eTrunkName = .*?;/;
             configContent = configContent.replace(regTrunkName, `public static trunkName: eTrunkName = eTrunkName.${ModelMgr.versionModel.eEnviron.alpha};`);

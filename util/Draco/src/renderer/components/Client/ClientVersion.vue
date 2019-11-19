@@ -139,21 +139,23 @@
             @click="onUploadVersionFile"
           >上传游戏版本</mu-button>
         </div>
-        <mu-flex class="flex-wrapper" align-items="center">
-          <mu-col span="12" lg="2" sm="2" v-show="curEnviron&&curEnviron.mergeVersionEnable">
-            <mu-checkbox v-model="needPatch" @change="needPatchChange" label="patch包"></mu-checkbox>
-          </mu-col>
-          <mu-col span="12" lg="3" sm="3" v-show="curEnviron&&curEnviron.mergeVersionEnable">
-            <mu-select label="上传游戏版本" filterable v-model="uploadVersion" label-float full-width>
-              <mu-option
-                v-for="value,index in gameVersionList"
-                :key="value"
-                :label="value"
-                :value="value"
-              ></mu-option>
-            </mu-select>
-          </mu-col>
-        </mu-flex>
+        <mu-container v-show="!curEnviron||!curEnviron.cdnEnable">
+          <mu-flex class="flex-wrapper" align-items="center">
+            <mu-col span="12" lg="2" sm="2" v-show="curEnviron&&curEnviron.mergeVersionEnable">
+              <mu-checkbox v-model="needPatch" @change="needPatchChange" label="patch包"></mu-checkbox>
+            </mu-col>
+            <mu-col span="12" lg="3" sm="3" v-show="curEnviron&&curEnviron.mergeVersionEnable">
+              <mu-select label="上传游戏版本" filterable v-model="uploadVersion" label-float full-width>
+                <mu-option
+                  v-for="value,index in gameVersionList"
+                  :key="value"
+                  :label="value"
+                  :value="value"
+                ></mu-option>
+              </mu-select>
+            </mu-col>
+          </mu-flex>
+        </mu-container>
       </mu-container>
       <mu-divider />
       <mu-container v-show="curEnviron&&curEnviron.policyEnable">
@@ -240,6 +242,13 @@
               @click="gitTag"
               v-show="curEnviron&&curEnviron.gitTagEnable"
             >Git打tag</mu-button>
+            <mu-button
+              v-loading="isZipUploadGameLoading"
+              data-mu-loading-size="24"
+              color="cyan500"
+              @click="zipUploadGame"
+              v-show="curEnviron&&curEnviron.zipUploadGameEnable"
+            >打包上传游戏</mu-button>
           </div>
         </div>
       </mu-container>
@@ -340,6 +349,7 @@ export default {
 
       isPullGitLoading: false,
       isGitTagLoading: false,
+      isZipUploadGameLoading: false,
 
       needCover: ModelMgr.versionModel.needCover,
       needCompress: ModelMgr.versionModel.needCompress,
@@ -675,16 +685,8 @@ export default {
       }
     },
     async onCheckGameVerison() {
-      let value = await ModelMgr.versionModel.getCurPolicyInfo();
-      let data = JSON.parse(value);
-      if (data.Code == 0) {
-        let policyNum = data.Data.Version;
-        await ModelMgr.versionModel.getGameVersion(policyNum, gameVersion => {
-          Global.toast(`游戏版本:${gameVersion}`);
-        });
-      } else {
-        Global.snack(`获取游戏版本失败`, null, false);
-      }
+      let gameVersion = await ModelMgr.versionModel.getEnvironGameVersion();
+      Global.toast(`游戏版本:${gameVersion}`);
     },
     async pushGit() {
       this.isPullGitLoading = true;
@@ -707,6 +709,18 @@ export default {
         Global.hideRegionLoading();
       } catch (error) {
         this.isGitTagLoading = false;
+        Global.hideRegionLoading();
+      }
+    },
+    async zipUploadGame() {
+      this.isZipUploadGameLoading = true;
+      Global.showRegionLoading();
+      try {
+        await mdFtp.zipUploadGame();
+        this.isZipUploadGameLoading = false;
+        Global.hideRegionLoading();
+      } catch (error) {
+        this.isZipUploadGameLoading = false;
         Global.hideRegionLoading();
       }
     },
@@ -769,6 +783,10 @@ export default {
 
         if (this.curEnviron.gitTagEnable) {
           promiseList.push(mdFtp.gitTag);
+        }
+
+        if (this.curEnviron.zipUploadGameEnable) {
+          promiseList.push(mdFtp.zipUploadGame);
         }
 
         promiseList.push(this.environChange);
