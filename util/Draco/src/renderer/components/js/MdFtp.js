@@ -88,11 +88,38 @@ export async function uploadVersionFile() {
 let maxUploadCount = 10;
 export function uploadCdnVersionFile() {
     return new Promise(async (resolve, reject) => {
+        let releaseGameVersion = await ModelMgr.versionModel.getEnvironGameVersion(ModelMgr.versionModel.eEnviron.release);
+        let readyGameVersion = await ModelMgr.versionModel.getEnvironGameVersion(ModelMgr.versionModel.eEnviron.ready);
+        if (releaseGameVersion === readyGameVersion) {
+            resolve();
+            return;
+        }
+
+        let readyEnviron = ModelMgr.versionModel.environList.find(value => value.name === ModelMgr.versionModel.eEnviron.ready);
+        let readyPath = `${Global.svnPublishPath}${readyEnviron.localPath}`;
+        let curGameVersion = releaseGameVersion;
+        for (let i = releaseGameVersion + 1; i <= readyGameVersion; i++) {
+            let patchVersion = `patch_v${curGameVersion}s_v${i}s`;
+            let patchPath = `${readyPath}/${patchVersion}/`;
+            let patchExist = await fsExc.exists(patchPath);
+            if (!patchExist) {
+                continue;
+            }
+
+            await uploadCdnSingleVersionFile(patchPath);
+            curGameVersion = i;
+        }
+
+        resolve();
+    });
+}
+
+async function uploadCdnSingleVersionFile(patchPath) {
+    return new Promise(async (resolve, reject) => {
         let releaseUploadCount = 0;
-        let svnRlsPath = `${Global.svnPublishPath}${ModelMgr.versionModel.curEnviron.localPath}/${ModelMgr.versionModel.uploadVersion}/`;
-        let releaseFilePathArr = [];
-        await batchUploaderFiles(svnRlsPath, releaseFilePathArr);
-        await checkUploaderFiles(svnRlsPath, releaseFilePathArr, releaseUploadCount, resolve, reject);
+        let filePathArr = [];
+        await batchUploaderFiles(patchPath, filePathArr);
+        await checkUploaderFiles(patchPath, filePathArr, releaseUploadCount, resolve, reject);
     });
 }
 
@@ -440,7 +467,7 @@ export function checkPolicyNum() {
 
 export async function pushGit() {
     try {
-        let commitCmdStr = `git commit -a -m "${ModelMgr.versionModel.publisher} 发布版本 ${ModelMgr.versionModel.releaseVersion}"`;
+        let commitCmdStr = `git commit -a -m "${ModelMgr.versionModel.publisher} 发布${ModelMgr.versionModel.curEnviron.name}版本 ${ModelMgr.versionModel.releaseVersion}"`;
         await spawnExc.runCmd(commitCmdStr, Global.projPath, null, '提交文件错误');
 
         let pullCmdStr = `git pull`;
@@ -469,4 +496,15 @@ export async function gitTag() {
     } catch (error) {
         Global.snack('推送git错误', error);
     }
+}
+
+export async function zipUploadGame() {
+    // let filePath = `${Global.svnPublishPath}${environ.localPath}/${ModelMgr.versionModel.uploadVersion}/`;
+    // let zipName = "release.zip";
+
+    // try {
+    //     await zipProject(filePath, zipPath, zipName);
+    // } catch (error) {
+    //     Global.snack('推送git错误', error);
+    // }
 }
