@@ -467,7 +467,7 @@ export function checkPolicyNum() {
 
 export async function pushGit() {
     try {
-        let commitCmdStr = `git commit -a -m "${ModelMgr.versionModel.publisher} 发布版本 ${ModelMgr.versionModel.releaseVersion}"`;
+        let commitCmdStr = `git commit -a -m "${ModelMgr.versionModel.publisher} 发布${ModelMgr.versionModel.curEnviron.name}版本 ${ModelMgr.versionModel.releaseVersion}"`;
         await spawnExc.runCmd(commitCmdStr, Global.projPath, null, '提交文件错误');
 
         let pullCmdStr = `git pull`;
