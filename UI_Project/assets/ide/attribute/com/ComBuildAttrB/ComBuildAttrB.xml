@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="430,1080" designImage="ui://thvmj7vok2vs4" designImageOffsetX="-1490" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlState" pages="0,none,1,elem" selected="1"/>
+  <controller name="ctrlState" pages="0,none,1,elem" selected="0"/>
   <displayList>
     <image id="n32_py50" name="imgBg" src="xba67l" fileName="ideCommon/img/img_ide_cm_5.png" xy="0,0" size="430,1080">
       <relation target="" sidePair="height-height"/>
     </image>
-    <component id="n44_py50" name="btnAttrCoding" pkg="oh2uffmg" src="a1nd0" fileName="btn/btnFixNew.xml" xy="110,1036" size="50,30" hideByEditor="true" visible="false">
-      <relation target="" sidePair="bottom-bottom"/>
-    </component>
     <image id="n47_qki6" name="imgAttribuiteBg" src="s45w2" fileName="ideCommon/img/img_ide_cm_3.png" xy="-8,49" size="446,981">
       <relation target="" sidePair="bottomext-bottom"/>
     </image>
@@ -18,9 +15,6 @@
     <component id="n46_rb1c" name="comAttrubiteEdit" src="9fb8a9" fileName="attribute/com/ComBuildAttrB/comAttrubiteEditB.xml" xy="0,55" size="430,956">
       <gearDisplay controller="ctrlState" pages="1"/>
       <relation target="" sidePair="bottomext-bottom"/>
-    </component>
-    <component id="n49_vuly" name="btnAttrClose" src="9fb8ad" fileName="attribute/com/ComBuildAttrB/btnFixNoEffect.xml" xy="-48,237" size="49,98" hideByEditor="true" visible="false">
-      <Button icon="ui://ti9jag5t9fb8ag" page="1"/>
     </component>
     <image id="n55_grwp" name="imgTitleBg" src="xba67m" fileName="ideCommon/img/img_ide_cm_6.png" xy="0,0" size="430,56"/>
     <image id="n53_k2vs" name="imgIcon" src="hckx76" fileName="attribute/img/icon_att_sx.png" xy="16,14"/>

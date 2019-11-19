@@ -352,20 +352,14 @@
     <component id="dyk9b7" name="BtnBuildMode.xml" path="/ideCommon/btn/"/>
     <component id="qu7tt7j" name="ComBuildShortCutB.xml" path="/ideCommon/com/"/>
     <component id="9fb89z" name="ComBuildAttrB.xml" path="/attribute/com/ComBuildAttrB/" exported="true"/>
-    <component id="9fb8a1" name="btnFix.xml" path="/attribute/com/ComBuildAttrB/" exported="true"/>
-    <sound id="9fb8a3" name="close.wav" path="/attribute/com/ComBuildAttrB/" exported="true"/>
-    <image id="9fb8a7" name="img_cm_lk_2.png" path="/attribute/com/ComBuildAttrB/" exported="true"/>
     <component id="9fb8a9" name="comAttrubiteEditB.xml" path="/attribute/com/ComBuildAttrB/" exported="true"/>
     <component id="9fb8aa" name="ScrollBarV2.xml" path="/attribute/com/ComBuildAttrB/" exported="true"/>
     <component id="9fb8ab" name="ScrollBarV2_grip.xml" path="/attribute/com/ComBuildAttrB/"/>
     <image id="9fb8ac" name="img_cm_gdt_1.png" path="/attribute/com/ComBuildAttrB/" exported="true" scale="9grid" scale9grid="1,11,3,68"/>
-    <component id="9fb8ad" name="btnFixNoEffect.xml" path="/attribute/com/ComBuildAttrB/" exported="true"/>
-    <sound id="9fb8af" name="buttonTouch.wav" path="/attribute/com/ComBuildAttrB/" exported="true"/>
-    <image id="9fb8ag" name="btn_code_lk_1.png" path="/attribute/com/ComBuildAttrB/"/>
-    <component id="grwpaj" name="comAWModelB.xml" path="/attribute/widgets/comAWModelB/" exported="true"/>
-    <image id="grwpan" name="icon_ied_wp_xs_1.png" path="/attribute/widgets/comAWModelB/b/ide/"/>
-    <image id="grwpao" name="icon_ied_wp_yc_2.png" path="/attribute/widgets/comAWModelB/b/ide/"/>
-    <component id="grwpas" name="comAWLargeTextB.xml" path="/attribute/widgets/comAWLargeTextB/" exported="true"/>
+    <component id="grwpaj" name="comAWModelB.xml" path="/attribute/widgets/" exported="true"/>
+    <image id="grwpan" name="icon_ied_wp_xs_1.png" path="/attribute/img/"/>
+    <image id="grwpao" name="icon_ied_wp_yc_2.png" path="/attribute/img/"/>
+    <component id="grwpas" name="comAWLargeTextB.xml" path="/attribute/widgets/" exported="true"/>
     <component id="grwpau" name="comAWValueB.xml" path="/attribute/widgets/" exported="true"/>
     <component id="grwpav" name="Slider1_grip.xml" path="/attribute/widgets/"/>
     <component id="grwpaw" name="Slider1.xml" path="/attribute/widgets/"/>
