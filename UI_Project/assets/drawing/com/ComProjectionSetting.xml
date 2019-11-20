@@ -2,14 +2,14 @@
 <component size="180,120" opaque="false" bgColorEnabled="true">
   <controller name="ctrlType" pages="0,,1,,2," selected="0"/>
   <displayList>
-    <image id="n20_qiln" name="n20" src="qilncyiin" fileName="img/img_cm_xlk_4.png" pkg="te1gxawo" xy="0,0" size="180,120"/>
-    <image id="n21_qiln" name="n21" src="qilncyiio" fileName="img/img_cm_xlk_2.png" pkg="te1gxawo" xy="0,0" size="180,40">
+    <image id="n20_qiln" name="n20" src="eggjcyihv" fileName="img/img_cm_xlk_4.png" pkg="te1gxawo" xy="0,0" size="180,120"/>
+    <image id="n21_qiln" name="n21" src="eggjcyihq" fileName="img/img_cm_xlk_2.png" pkg="te1gxawo" xy="0,0" size="180,40">
       <gearDisplay controller="ctrlType" pages="0"/>
     </image>
-    <image id="n22_qiln" name="n22" src="qilncyiio" fileName="img/img_cm_xlk_2.png" pkg="te1gxawo" xy="0,40" size="180,40">
+    <image id="n22_qiln" name="n22" src="eggjcyihq" fileName="img/img_cm_xlk_2.png" pkg="te1gxawo" xy="0,40" size="180,40">
       <gearDisplay controller="ctrlType" pages="1"/>
     </image>
-    <image id="n23_qiln" name="n23" src="qilncyiio" fileName="img/img_cm_xlk_2.png" pkg="te1gxawo" xy="0,80" size="180,40">
+    <image id="n23_qiln" name="n23" src="eggjcyihq" fileName="img/img_cm_xlk_2.png" pkg="te1gxawo" xy="0,80" size="180,40">
       <gearDisplay controller="ctrlType" pages="2"/>
     </image>
     <component id="n15_qiln" name="n15" src="qiln17" fileName="btn/btnProjection.xml" xy="0,0"/>
