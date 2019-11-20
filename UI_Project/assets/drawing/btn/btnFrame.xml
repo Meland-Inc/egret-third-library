@@ -11,6 +11,7 @@
       <gearDisplay controller="button" pages="1"/>
     </image>
     <text id="n2_d1ba" name="title" xy="6,1" size="13,23" fontSize="16" color="#ffffff" align="center" vAlign="middle" text="1"/>
+    <loader id="n9_gup1" name="icon" xy="0,0" size="80,80" fill="scaleFree"/>
   </displayList>
   <Button mode="Radio"/>
 </component>

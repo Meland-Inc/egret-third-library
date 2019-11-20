@@ -7,77 +7,37 @@
     <graph id="n1_batc" name="gphBg" xy="0,0" size="1920,1080" type="rect" lineSize="0">
       <relation target="" sidePair="width-width,height-height"/>
     </graph>
-    <loader id="n13_batc" name="ladCanvasBg" xy="464,40" size="1424,1010" url="ui://a0pj43bjqilns" fill="scaleFree">
+    <loader id="n13_batc" name="ladCanvasBg" xy="464,40" size="1424,926" url="ui://a0pj43bjqilns" fill="scaleFree">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </loader>
-    <component id="n44_gup1" name="comProjectionDrawing" src="qiln2g" fileName="com/ComProjectionDrawing.xml" xy="464,40" size="1424,1010" controller="ctrlPojectionType,0,ctrlProjectionNum,0">
+    <component id="n44_gup1" name="comProjectionDrawing" src="qiln2g" fileName="com/ComProjectionDrawing.xml" xy="464,40" size="1424,926" controller="ctrlPojectionType,0,ctrlProjectionNum,0">
       <relation target="n13_batc" sidePair="width-width,height-height"/>
     </component>
-    <graph id="n21_ljuf" name="gphDrawingBotBoard" xy="459,19" size="1441,1001" group="n33_mj87" alpha="0.3" fillColor="#ff66cc33">
-      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
-    </graph>
-    <graph id="n22_ljuf" name="gphDrawingMidBoard" xy="459,19" size="1441,1001" group="n33_mj87" alpha="0.6" fillColor="#ff66cc33">
-      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
-    </graph>
-    <graph id="n19_ljuf" name="gphDrawingTopBoard" xy="459,19" size="1441,1001" group="n33_mj87" hideByEditor="true" type="rect" lineColor="#ffffffff">
-      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
-    </graph>
-    <group id="n33_mj87" name="grpDrawingBoard" xy="459,19" size="1441,1001" advanced="true"/>
-    <component id="n36_gup1" name="comDrawSelectBoxContainer" src="qiln1o" fileName="com/ComDrawSelectBoxContainer.xml" xy="457,17" size="1444,1003" hideByEditor="true">
-      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    <component id="n36_gup1" name="comDrawSelectBoxContainer" src="qiln1o" fileName="com/ComDrawSelectBoxContainer.xml" xy="464,40" size="1424,926" hideByEditor="true">
+      <relation target="n13_batc" sidePair="rightext-right,bottomext-bottom"/>
     </component>
-    <component id="n24_vdhh" name="comIsometricHelpLineCtnr" src="gup13r" fileName="win/ComIsometric.xml" xy="231,19" size="1670,1001" touchable="false">
+    <component id="n46_gup1" name="comIsometricHelpLineCtnr" src="qiln1z" fileName="com/ComIsometric.xml" xy="464,40" size="1424,926">
       <gearDisplay controller="ctrlTool" pages="2"/>
-      <relation target="" sidePair="bottomext-bottom,rightext-right"/>
+      <relation target="n13_batc" sidePair="width-width,height-height"/>
     </component>
-    <image id="n0_batc" name="imgLeftBg" src="qilns" fileName="img/img_dra_bottom.png" xy="30,40" size="410,1010" group="n14_batc">
-      <relation target="" sidePair="height-height"/>
-    </image>
-    <component id="n5_batc" name="tbtnDrawing" src="oliri6s" fileName="old/btn/tbtnScale.xml" pkg="te1gxawo" xy="30,40" size="410,59" group="n14_batc" touchable="false">
-      <Button checked="true" title="画图" titleColor="#333333" titleFontSize="24" icon="ui://a0pj43bjqiln4" selectedIcon="ui://a0pj43bjqiln4" controller="ctrlLeft" page="0"/>
-    </component>
-    <list id="n7_batc" name="lstTool" xy="49,106" size="379,86" group="n14_batc" layout="flow_hz" overflow="hidden" margin="5,0,0,0" lineGap="8" colGap="10" defaultItem="ui://a0pj43bjqiln21">
-      <item icon="ui://a0pj43bjqilnm" name="SELECTOR" selectedIcon="ui://a0pj43bjqilnn"/>
-      <item icon="ui://a0pj43bjqilnc" name="BRUSH" selectedIcon="ui://a0pj43bjqilnd"/>
-      <item icon="ui://a0pj43bjqilnq" name="LINEPEN" selectedIcon="ui://a0pj43bjqilnr"/>
-      <item icon="ui://a0pj43bjqilno" name="ERASER" selectedIcon="ui://a0pj43bjqilnp"/>
-      <item icon="ui://a0pj43bjqiln9" name="ISOMETRIC" selectedIcon="ui://a0pj43bjqilna"/>
-    </list>
-    <image id="n8_batc" name="imgInpNameBg" src="eggjcyihu" fileName="img/img_cm_srk_3.png" pkg="te1gxawo" xy="47,897" size="370,65" group="n17_batc"/>
-    <text id="n9_batc" name="inpCanvasName" xy="57,898" size="370,65" group="n17_batc" alpha="0.6" input="true" fontSize="24" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="新名称">
-      <relation target="n8_batc" sidePair="width-width,height-height"/>
-    </text>
-    <component id="n39_gup1" name="btnImport" src="gup1cyihy" fileName="btn/btnImg.xml" pkg="te1gxawo" xy="52,837" size="174,47" group="n17_batc">
-      <Button title="导入图片" titleColor="#000000" icon="ui://te1gxawogup1cyihx" selectedIcon="ui://te1gxawooiqdcyih1"/>
-    </component>
-    <component id="n40_gup1" name="btnDownload" src="gup1cyihy" fileName="btn/btnImg.xml" pkg="te1gxawo" xy="244,837" size="174,47" group="n17_batc">
-      <Button title="下载图片" titleColor="#000000" icon="ui://te1gxawogup1cyihx" selectedIcon="ui://te1gxawooiqdcyih1"/>
-    </component>
-    <component id="n41_gup1" name="btnSave" src="gup1cyihy" fileName="btn/btnImg.xml" pkg="te1gxawo" xy="52,971" size="365,54" group="n17_batc">
-      <Button title="保存" titleColor="#000000" icon="ui://te1gxawogup1cyihx" selectedIcon="ui://te1gxawooiqdcyih1"/>
-    </component>
-    <group id="n17_batc" name="grpBottom" xy="47,837" size="380,188" group="n14_batc" advanced="true">
-      <relation target="" sidePair="bottom-bottom"/>
-    </group>
-    <component id="n38_gup1" name="comPenSetting" src="qiln2s" fileName="com/ComPenSetting.xml" xy="30,168" size="410,494" group="n14_batc"/>
-    <group id="n14_batc" name="grpLeft" xy="30,40" size="410,1010"/>
-    <list id="n16_batc" name="lstOperateBtn" xy="1777,96" size="74,283" lineGap="30" defaultItem="ui://a0pj43bjqiln14">
+    <list id="n16_batc" name="lstOperateBtn" xy="1777,96" size="72,283" lineGap="30" defaultItem="ui://a0pj43bjqiln14">
       <relation target="" sidePair="right-right"/>
       <item icon="ui://a0pj43bjqilnk"/>
       <item icon="ui://a0pj43bjqilne"/>
       <item icon="ui://a0pj43bjqilnj"/>
     </list>
     <component id="n43_gup1" name="btnClose" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1838,9" size="72,72">
+      <relation target="n13_batc" sidePair="right-right,top-top"/>
       <Button icon="ui://a0pj43bjqiln7"/>
     </component>
     <graph id="n23_fekj" name="gphMask" xy="0,0" size="1920,1080" locked="true" hideByEditor="true" visible="false" type="rect" lineSize="0" lineColor="#00000000" fillColor="#00ffffff">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </graph>
-    <component id="n37_gup1" name="comAnimEditingArea" src="qiln2z" fileName="com/ComAnimEditingArea.xml" xy="464,959" size="1422,92">
+    <component id="n37_gup1" name="comAnimEditingArea" src="qiln2z" fileName="com/ComAnimEditingArea.xml" xy="464,958" size="1422,92">
       <relation target="n13_batc" sidePair="width-width,bottom-bottom"/>
       <relation target="n13_batc" sidePair="left-left"/>
     </component>
-    <list id="n26_pa6b" name="lstProjectionBtn" xy="1777,487" size="77,389" lineGap="30" defaultItem="ui://a0pj43bjqiln14">
+    <list id="n26_pa6b" name="lstProjectionBtn" xy="1777,487" size="72,389" lineGap="30" defaultItem="ui://a0pj43bjqiln14">
       <gearDisplay controller="ctrlMode" pages="0"/>
       <relation target="n13_batc" sidePair="right-right"/>
       <item icon="ui://a0pj43bjqilni"/>
@@ -85,7 +45,58 @@
       <item icon="ui://a0pj43bjqilnl"/>
       <item icon="ui://a0pj43bjqilnb"/>
     </list>
-    <component id="n34_gup1" name="comHeightSetting" src="qiln2m" fileName="com/ComHeightSetting.xml" xy="1464,774"/>
-    <component id="n35_gup1" name="comProjectionSetting" src="qiln27" fileName="com/ComProjectionSetting.xml" xy="1580,669"/>
+    <component id="n34_gup1" name="comHeightSetting" src="qiln2m" fileName="com/ComHeightSetting.xml" xy="1464,774">
+      <relation target="n26_pa6b" sidePair="right-left,bottom-bottom"/>
+    </component>
+    <component id="n35_gup1" name="comProjectionSetting" src="qiln27" fileName="com/ComProjectionSetting.xml" xy="1580,669">
+      <relation target="n26_pa6b" sidePair="right-left,bottom-bottom"/>
+    </component>
+    <image id="n0_batc" name="imgLeftBg" src="qilns" fileName="img/img_dra_bottom.png" xy="30,40" size="410,1010" group="n14_batc">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <component id="n5_batc" name="tbtnDrawing" src="oliri6s" fileName="old/btn/tbtnScale.xml" pkg="te1gxawo" xy="30,40" size="410,59" group="n14_batc" touchable="false">
+      <Button checked="true" title="画图" titleColor="#333333" titleFontSize="24" icon="ui://a0pj43bjqiln4" selectedIcon="ui://a0pj43bjqiln4" controller="ctrlLeft" page="0"/>
+    </component>
+    <list id="n7_batc" name="lstTool" xy="49,105" size="379,86" group="n14_batc" layout="flow_hz" overflow="hidden" margin="5,0,0,0" lineGap="8" colGap="10" defaultItem="ui://a0pj43bjqiln21">
+      <item icon="ui://a0pj43bjqilnm" name="SELECTOR" selectedIcon="ui://a0pj43bjqilnn"/>
+      <item icon="ui://a0pj43bjqilnc" name="BRUSH" selectedIcon="ui://a0pj43bjqilnd"/>
+      <item icon="ui://a0pj43bjqilnq" name="LINEPEN" selectedIcon="ui://a0pj43bjqilnr"/>
+      <item icon="ui://a0pj43bjqilno" name="ERASER" selectedIcon="ui://a0pj43bjqilnp"/>
+      <item icon="ui://a0pj43bjqiln9" name="ISOMETRIC" selectedIcon="ui://a0pj43bjqilna"/>
+    </list>
+    <image id="n8_batc" name="imgInpNameBg" src="eggjcyihu" fileName="img/img_cm_srk_3.png" pkg="te1gxawo" xy="46,897" size="370,65" group="n17_batc"/>
+    <text id="n9_batc" name="inpCanvasName" xy="56,898" size="370,65" group="n17_batc" alpha="0.6" input="true" fontSize="24" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="新名称">
+      <relation target="n8_batc" sidePair="width-width,height-height"/>
+    </text>
+    <component id="n39_gup1" name="btnImport" src="gup1cyihy" fileName="btn/btnImg.xml" pkg="te1gxawo" xy="52,837" size="174,47" group="n17_batc">
+      <Button title="导入图片" titleColor="#000000" icon="ui://te1gxawogup1cyihx" selectedIcon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <component id="n40_gup1" name="btnDownload" src="gup1cyihy" fileName="btn/btnImg.xml" pkg="te1gxawo" xy="243,837" size="174,47" group="n17_batc">
+      <Button title="下载图片" titleColor="#000000" icon="ui://te1gxawogup1cyihx" selectedIcon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <component id="n41_gup1" name="btnSave" src="gup1cyihy" fileName="btn/btnImg.xml" pkg="te1gxawo" xy="52,970" size="365,54" group="n17_batc">
+      <gearText controller="ctrlMode" pages="1" values="保存动画" default="保存"/>
+      <Button title="保存" titleColor="#000000" icon="ui://te1gxawogup1cyihx" selectedIcon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <group id="n17_batc" name="grpBottom" xy="46,837" size="380,188" group="n14_batc" advanced="true">
+      <relation target="" sidePair="bottom-bottom"/>
+    </group>
+    <component id="n38_gup1" name="comPenSetting" src="qiln2s" fileName="com/ComPenSetting.xml" xy="30,168" size="410,494" group="n14_batc">
+      <gearDisplay controller="ctrlTool" pages="0,2"/>
+    </component>
+    <group id="n14_batc" name="grpLeft" xy="30,40" size="410,1010" collapsed="true"/>
+    <image id="n49_gup1" name="n49" src="gup15c" fileName="img/img_sket_qy_2.png" xy="1781,431" size="60,2">
+      <relation target="n26_pa6b" sidePair="bottom-top,right-right"/>
+    </image>
+    <graph id="n21_ljuf" name="gphDrawingBotBoard" xy="464,40" size="1315,921" group="n33_mj87" alpha="0.3" fillColor="#ff66cc33">
+      <relation target="n13_batc" sidePair="rightext-right,bottomext-bottom"/>
+    </graph>
+    <graph id="n22_ljuf" name="gphDrawingMidBoard" xy="464,40" size="1313,921" group="n33_mj87" alpha="0.6" fillColor="#ff66cc33">
+      <relation target="n13_batc" sidePair="rightext-right,bottomext-bottom"/>
+    </graph>
+    <graph id="n19_ljuf" name="gphDrawingTopBoard" xy="464,40" size="1310,921" group="n33_mj87" type="rect" lineSize="0" fillColor="#00000000">
+      <relation target="n13_batc" sidePair="rightext-right,bottomext-bottom"/>
+    </graph>
+    <group id="n33_mj87" name="grpDrawingBoard" xy="464,40" size="1315,921" advanced="true"/>
   </displayList>
 </component>
