@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="320,1080" opaque="false" designImage="ui://thvmj7vo80ab4">
-  <controller name="ctrlState" exported="true" pages="0,fold,1,open,2,info,3,none" selected="1">
+<component size="126,1080" opaque="false" designImage="ui://thvmj7vo80ab4">
+  <controller name="ctrlState" exported="true" pages="0,fold,1,open,2,info,3,none" selected="0">
     <action type="change_page" fromPage="" toPage="0" objectId="n10_r6n0" controller="ctrlType" targetPage="1"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n10_r6n0" controller="ctrlType" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="2" objectId="n10_r6n0" controller="ctrlType" targetPage="0"/>
@@ -8,23 +8,24 @@
   <displayList>
     <component id="n14_a91x" name="btnOpen" src="a91xb0" fileName="create/btn/BtnEntitySelectFold.xml" xy="124,1044">
       <gearDisplay controller="ctrlState" pages="0"/>
+      <relation target="" sidePair="bottom-bottom"/>
       <Button controller="ctrlState" page="1"/>
     </component>
-    <component id="n4_yhf8" name="btnFold" src="a91xb0" fileName="create/btn/BtnEntitySelectFold.xml" xy="318,1044" size="40,36">
+    <component id="n4_yhf8" name="btnFold" src="a91xb0" fileName="create/btn/BtnEntitySelectFold.xml" xy="194,1030" size="40,36">
       <gearDisplay controller="ctrlState" pages="1,2"/>
       <gearXY controller="ctrlState" pages="0,1,2" values="194,1030|318,1044|318,1044" default="194,1030"/>
       <relation target="" sidePair="bottom-bottom"/>
       <Button icon="ui://ti9jag5tlgvkt7k" controller="ctrlState" page="0"/>
     </component>
-    <image id="n0_yhf8" name="n0" src="xba67o" fileName="ideCommon/img/img_ide_cm_7.png" xy="0,0" size="320,1080">
+    <image id="n0_yhf8" name="n0" src="xba67o" fileName="ideCommon/img/img_ide_cm_7.png" xy="0,0" size="126,1080">
       <gearSize controller="ctrlState" pages="0,1,2,3" values="126,1080,1,1|320,1080,1,1|320,1080,1,1|0,1080,1,1"/>
       <relation target="" sidePair="height-height"/>
     </image>
-    <image id="n16_cjfp" name="n16" src="80ab97" fileName="ideCommon/img/img_ide_cm_8.png" xy="10,66" size="300,1004">
+    <image id="n16_cjfp" name="n16" src="80ab97" fileName="ideCommon/img/img_ide_cm_8.png" xy="10,66" size="106,1004">
       <gearDisplay controller="ctrlState" pages="0,1"/>
       <gearSize controller="ctrlState" pages="1,2" values="300,1004,1,1|106,1004,1,1" default="106,1004,1,1"/>
     </image>
-    <image id="n13_a91x" name="n13" src="xba67m" fileName="ideCommon/img/img_ide_cm_6.png" xy="0,0" size="320,56">
+    <image id="n13_a91x" name="n13" src="xba67m" fileName="ideCommon/img/img_ide_cm_6.png" xy="0,0" size="126,56">
       <gearDisplay controller="ctrlState" pages="0,1,2"/>
       <gearSize controller="ctrlState" pages="0,1,2" values="126,56,1,1|320,56,1,1|320,56,1,1" default="300,56,1,1"/>
     </image>
