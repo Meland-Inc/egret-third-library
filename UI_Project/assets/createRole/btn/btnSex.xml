@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="102,102" extention="Button" designImage="ui://i25v0ebktxgs4c" designImageOffsetX="-598" designImageOffsetY="-89" designImageAlpha="0">
+  <controller name="button" pages="4,up,5,down" selected="1"/>
+  <displayList>
+    <image id="n8_nvqa" name="n8" src="nvqa1c" fileName="img/img_cre_xbk.png" xy="0,0">
+      <gearDisplay controller="button" pages="5"/>
+    </image>
+    <loader id="n5_bidp" name="icon" xy="3,3" size="96,96" url="ui://f6ytlquwnvqa18" fill="scaleFree"/>
+    <image id="n7_nvqa" name="n7" src="nvqa1i" fileName="img/icon_cre_Correct.png" xy="0,0">
+      <gearDisplay controller="button" pages="5"/>
+    </image>
+  </displayList>
+  <Button mode="Radio" sound="ui://fknoioovtqc911"/>
+</component>

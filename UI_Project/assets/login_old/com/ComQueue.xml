@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="370,206">
+  <displayList>
+    <image id="n0_rjim" name="n0" src="efrs1m" fileName="newImg/bg_cm_3.png" pkg="te1gxawo" xy="0,0" size="370,206"/>
+    <component id="n2_rjim" name="btnBack" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="322,3" size="32,32">
+      <Button icon="ui://te1gxawoqo8vi1z"/>
+    </component>
+    <image id="n3_rjim" name="n3" src="qo8vi1x" fileName="newImg/img_cm_pattern2.png" pkg="te1gxawo" xy="0,181" size="366,21"/>
+    <text id="n4_rjim" name="tf" xy="79,71" size="232,24" fontSize="18" color="#695c49" vAlign="middle" bold="true" text="服务器爆满，努力插队中..."/>
+    <text id="n5_rjim" name="tfTitle" xy="151,5" size="71,28" fontSize="22" color="#ffffff" text="排队中"/>
+    <text id="n6_rjim" name="tf" xy="112,120" size="100,24" fontSize="18" color="#695c49" vAlign="middle" bold="true" text="前方人数："/>
+    <text id="n7_rjim" name="tfNum" xy="211,118" size="64,31" fontSize="24" color="#e78434" align="center" vAlign="middle" autoSize="none" bold="true" text="26"/>
+  </displayList>
+</component>

@@ -545,7 +545,7 @@
     <image id="oiqdcyigy" name="img_cm_szk.png" path="/img/" exported="true"/>
     <image id="oiqdcyigz" name="img_cm_wpx_1.png" path="/img/" exported="true"/>
     <image id="oiqdcyih0" name="img_cm_wpx_2.png" path="/img/" exported="true"/>
-    <image id="oiqdcyih1" name="btn_cm_blue.png" path="/img/" exported="true"/>
+    <image id="oiqdcyih1" name="btn_cm_blue.png" path="/img/" exported="true" scale="9grid" scale9grid="30,11,60,22"/>
     <image id="oiqdcyih2" name="btn_cm_gb.png" path="/img/" exported="true"/>
     <image id="oiqdcyih3" name="btn_cm_yellow.png" path="/img/" exported="true"/>
     <image id="oiqdcyih4" name="img_cm_1.png" path="/img/" exported="true" scale="9grid" scale9grid="25,25,50,50"/>
@@ -577,6 +577,7 @@
     <image id="eggjcyihu" name="img_cm_srk_3.png" path="/img/" exported="true" scale="9grid" scale9grid="15,10,30,20"/>
     <image id="eggjcyihv" name="img_cm_xlk_4.png" path="/img/" exported="true" scale="9grid" scale9grid="30,30,60,60"/>
     <image id="eggjcyihw" name="img_cm_xlk_5.png" path="/img/" exported="true" scale="9grid" scale9grid="30,10,60,20"/>
+    <image id="nvqacyihy" name="img_cm_top_2.png" path="/img/" exported="true" scale="9grid" scale9grid="20,15,40,30"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>
