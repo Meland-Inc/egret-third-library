@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" designImage="ui://i25v0ebks3a35g">
+  <displayList>
+    <image id="n0_s3a3" name="n0" src="vulycyicq" fileName="imgB/btn_cm_xzl_4.png" pkg="te1gxawo" xy="559,201" size="260,160"/>
+    <image id="n1_s3a3" name="n1" src="s3a3cyif1" fileName="img_UI3/img_cm_bc_1.png" pkg="te1gxawo" xy="672,232"/>
+    <text id="n2_s3a3" name="n2" xy="636,273" size="111,24" fontSize="18" color="#365989" bold="true" text="作品保存中..."/>
+    <component id="n3_s3a3" name="barLoading" src="s3a3cyif4" fileName="bar/barCm3.xml" pkg="te1gxawo" xy="578,317" size="220,6">
+      <ProgressBar value="80" max="100"/>
+    </component>
+  </displayList>
+</component>

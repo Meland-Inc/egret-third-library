@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="a0pj43bj" jpegQuality="80" compressPNG="true">
+  <resources>
+    <image id="qiln0" name="img_dra_dh_bf.png" path="/img/"/>
+    <image id="qiln1" name="img_dra_dh_zt.png" path="/img/"/>
+    <image id="qiln2" name="img_dra_gdt.png" path="/img/"/>
+    <image id="qiln3" name="img_dra_gjk.png" path="/img/"/>
+    <image id="qiln4" name="img_dra_top.png" path="/img/" scale="9grid" scale9grid="4,4,44,44"/>
+    <image id="qiln5" name="img_dra_y_1.png" path="/img/"/>
+    <image id="qiln6" name="img_dra_y_2.png" path="/img/"/>
+    <image id="qiln7" name="btn_dra_gb.png" path="/img/"/>
+    <image id="qiln8" name="icon_dra_fz.png" path="/img/"/>
+    <image id="qiln9" name="icon_dra_gc_1.png" path="/img/"/>
+    <image id="qilna" name="icon_dra_gc_2.png" path="/img/"/>
+    <image id="qilnb" name="icon_dra_gd.png" path="/img/"/>
+    <image id="qilnc" name="icon_dra_hb_1.png" path="/img/"/>
+    <image id="qilnd" name="icon_dra_hb_2.png" path="/img/"/>
+    <image id="qilne" name="icon_dra_ht.png" path="/img/"/>
+    <image id="qilnf" name="icon_dra_j.png" path="/img/"/>
+    <image id="qilng" name="icon_dra_j_1.png" path="/img/"/>
+    <image id="qilnh" name="icon_dra_jj.png" path="/img/"/>
+    <image id="qilni" name="icon_dra_jj_1.png" path="/img/"/>
+    <image id="qilnj" name="icon_dra_qj.png" path="/img/"/>
+    <image id="qilnk" name="icon_dra_sc.png" path="/img/"/>
+    <image id="qilnl" name="icon_dra_ty.png" path="/img/"/>
+    <image id="qilnm" name="icon_dra_xd_1.png" path="/img/"/>
+    <image id="qilnn" name="icon_dra_xd_2.png" path="/img/"/>
+    <image id="qilno" name="icon_dra_xp_1.png" path="/img/"/>
+    <image id="qilnp" name="icon_dra_xp_2.png" path="/img/"/>
+    <image id="qilnq" name="icon_dra_zx_1.png" path="/img/"/>
+    <image id="qilnr" name="icon_dra_zx_2.png" path="/img/"/>
+    <image id="qilns" name="img_dra_bottom.png" path="/img/" scale="9grid" scale9grid="4,4,82,82"/>
+    <image id="qilnt" name="img_dra_dh_1.png" path="/img/"/>
+    <image id="qilnu" name="img_dra_dh_2.png" path="/img/"/>
+    <image id="qilnv" name="img_dra_dh_3.png" path="/img/"/>
+    <image id="qilnw" name="img_dra_dh_4.png" path="/img/"/>
+    <image id="qilnx" name="img_dra_dh_5.png" path="/img/" scale="9grid" scale9grid="4,4,84,84"/>
+    <image id="qilny" name="img_dra_dh_6.png" path="/img/"/>
+    <component id="qilnz" name="btnFrame.xml" path="/btn/"/>
+    <component id="qiln14" name="btnOperate.xml" path="/btn/"/>
+    <component id="qiln17" name="btnProjection.xml" path="/btn/"/>
+    <component id="qiln18" name="ComCanvasBox.xml" path="/com/"/>
+    <image id="qiln1b" name="img_sket_ty_3.png" path="/img/" scale="tile" duplicatePadding="true"/>
+    <image id="qiln1c" name="img_sket_ty_4.png" path="/img/" scale="tile" duplicatePadding="true"/>
+    <component id="qiln1d" name="ComDrawSelectBox.xml" path="/com/"/>
+    <image id="qiln1e" name="img_sket_ydgj_3.png" path="/img/" scale="tile" duplicatePadding="true"/>
+    <image id="qiln1f" name="img_sket_ydgj_3_1.png" path="/img/" scale="tile" duplicatePadding="true"/>
+    <image id="qiln1g" name="img_sket_ydgj_1.png" path="/img/"/>
+    <image id="qiln1h" name="img_sket_ydgj_2.png" path="/img/"/>
+    <component id="qiln1o" name="ComDrawSelectBoxContainer.xml" path="/com/"/>
+    <component id="qiln1x" name="sldDraw_grip.xml" path="/com/"/>
+    <component id="qiln1y" name="sldDraw.xml" path="/com/"/>
+    <component id="qiln1z" name="ComIsometric.xml" path="/com/"/>
+    <component id="qiln20" name="ComPenColorItem.xml" path="/com/" exported="true"/>
+    <component id="qiln21" name="DrawingToolItem.xml" path="/com/"/>
+    <image id="qiln26" name="img_dra_gjk_1.png" path="/img/"/>
+    <component id="qiln27" name="ComProjectionSetting.xml" path="/com/"/>
+    <component id="qiln2d" name="ComProjection.xml" path="/com/"/>
+    <image id="qiln2e" name="img_sket_ty_1.png" path="/img/"/>
+    <image id="qiln2f" name="img_sket_ty_2.png" path="/img/"/>
+    <component id="qiln2g" name="ComProjectionDrawing.xml" path="/com/"/>
+    <component id="qiln2m" name="ComHeightSetting.xml" path="/com/"/>
+    <component id="qiln2s" name="ComPenSetting.xml" path="/com/"/>
+    <component id="qiln2z" name="ComAnimEditingArea.xml" path="/com/"/>
+    <component id="gup13d" name="WinDrawingPad.xml" path="/win/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

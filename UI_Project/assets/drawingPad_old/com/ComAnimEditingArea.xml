@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="886,62" designImage="ui://i25v0ebkbatc58" designImageAlpha="0">
+  <controller name="ctrlAnimType" pages="0,stop,1,playing" selected="0"/>
+  <displayList>
+    <image id="n9_d1ba" name="imgBG" src="batcx" fileName="img/img_sket_zhqy_2.png" xy="0,0" size="886,42">
+      <relation target="" sidePair="top-top,width-width"/>
+    </image>
+    <component id="n0_d1ba" name="btnAction" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="3,4" size="35,35">
+      <gearIcon controller="ctrlAnimType" pages="1" values="ui://tcbadh8nbatc13" default="ui://tcbadh8nbatc12"/>
+      <relation target="n9_d1ba" sidePair="left-left,top-top"/>
+      <Button icon="ui://tcbadh8nbatc12"/>
+    </component>
+    <image id="n4_d1ba" name="imgBtnBg" src="batcy" fileName="img/img_sket_zhqy_3.png" xy="763,0" group="n8_d1ba"/>
+    <image id="n6_d1ba" name="imgBtnBg" src="batcy" fileName="img/img_sket_zhqy_3.png" xy="843,0" group="n8_d1ba"/>
+    <image id="n7_d1ba" name="imgBtnBg" src="batcy" fileName="img/img_sket_zhqy_3.png" xy="803,0" group="n8_d1ba"/>
+    <component id="n1_d1ba" name="btnAddFrame" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="765,2" size="38,38" group="n8_d1ba">
+      <Button icon="ui://tcbadh8nbatc11"/>
+    </component>
+    <component id="n2_d1ba" name="btnCopyFrame" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="803,0" size="42,42" group="n8_d1ba">
+      <Button icon="ui://tcbadh8nbatc10"/>
+    </component>
+    <component id="n3_d1ba" name="btnRemoveFrame" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="843,0" size="42,42" group="n8_d1ba">
+      <Button icon="ui://tcbadh8nbatcz"/>
+    </component>
+    <group id="n8_d1ba" name="btn" xy="763,0" size="122,42" advanced="true" collapsed="true">
+      <relation target="n9_d1ba" sidePair="right-right,top-top"/>
+    </group>
+    <list id="n10_d1ba" name="lstFrame" xy="46,0" size="716,62" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="4" scrollBarRes=",ui://tcbadh8nqh6c2u" colGap="2" defaultItem="ui://tcbadh8nd1ba1d" autoItemSize="false">
+      <relation target="n9_d1ba" sidePair="rightext-right"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>
