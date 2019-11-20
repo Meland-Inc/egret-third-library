@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" overflow="hidden" designImage="ui://i25v0ebku1c95d" designImageAlpha="0">
+<component size="1424,1010" overflow="hidden" designImage="ui://i25v0ebku1c95d" designImageAlpha="0">
   <controller name="ctrlPojectionType" exported="true" pages="0,grid,1,side,2,noProjection" selected="0"/>
   <controller name="ctrlProjectionNum" exported="true" pages="0,1,1,2,2,3,3,4,4,5" selected="0"/>
   <displayList>
-    <component id="n12_qiln" name="comCanvasBox" src="qiln18" fileName="com/ComCanvasBox.xml" xy="480,100" size="64,333" skew="0,-26.5"/>
-    <component id="n13_qiln" name="comProjection" src="qiln2d" fileName="com/ComProjection.xml" xy="483,345" size="360,180" controller="ctrlProjectionType,0,ctrlProjectionNum,4"/>
+    <component id="n12_qiln" name="comCanvasBox" src="qiln18" fileName="com/ComCanvasBox.xml" xy="556,290" size="64,333" skew="0,-26.5"/>
+    <component id="n13_qiln" name="comProjection" src="qiln2d" fileName="com/ComProjection.xml" xy="559,535" size="360,180" controller="ctrlProjectionType,0,ctrlProjectionNum,4"/>
   </displayList>
 </component>

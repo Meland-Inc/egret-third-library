@@ -577,6 +577,8 @@
     <image id="eggjcyihu" name="img_cm_srk_3.png" path="/img/" exported="true" scale="9grid" scale9grid="5,5,50,30"/>
     <image id="eggjcyihv" name="img_cm_xlk_4.png" path="/img/" exported="true" scale="9grid" scale9grid="30,30,60,60"/>
     <image id="eggjcyihw" name="img_cm_xlk_5.png" path="/img/" exported="true" scale="9grid" scale9grid="30,10,60,20"/>
+    <image id="gup1cyihx" name="btn_cm_gray.png" path="/img/" exported="true" scale="9grid" scale9grid="8,6,84,26"/>
+    <component id="gup1cyihy" name="btnImg.xml" path="/btn/" exported="true"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>

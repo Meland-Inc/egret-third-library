@@ -29,7 +29,7 @@
     <image id="qilnp" name="icon_dra_xp_2.png" path="/img/"/>
     <image id="qilnq" name="icon_dra_zx_1.png" path="/img/"/>
     <image id="qilnr" name="icon_dra_zx_2.png" path="/img/"/>
-    <image id="qilns" name="img_dra_bottom.png" path="/img/"/>
+    <image id="qilns" name="img_dra_bottom.png" path="/img/" scale="9grid" scale9grid="4,4,82,82"/>
     <image id="qilnt" name="img_dra_dh_1.png" path="/img/"/>
     <image id="qilnu" name="img_dra_dh_2.png" path="/img/"/>
     <image id="qilnv" name="img_dra_dh_3.png" path="/img/"/>
@@ -62,6 +62,7 @@
     <component id="qiln2m" name="ComHeightSetting.xml" path="/com/"/>
     <component id="qiln2s" name="ComPenSetting.xml" path="/com/"/>
     <component id="qiln2z" name="ComAnimEditingArea.xml" path="/com/"/>
+    <component id="gup13d" name="WinDrawingPad.xml" path="/win/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

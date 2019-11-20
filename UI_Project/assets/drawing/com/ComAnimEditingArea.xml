@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1424,92" designImage="ui://i25v0ebkbatc58" designImageAlpha="0">
-  <controller name="ctrlAnimType" pages="0,stop,1,playing" selected="1"/>
+  <controller name="ctrlAnimType" pages="0,stop,1,playing" selected="0"/>
   <displayList>
-    <image id="n11_qiln" name="imgBG" src="qilnx" fileName="img/img_dra_dh_5.png" xy="0,0" size="1424,92"/>
+    <image id="n11_qiln" name="imgBG" src="qilnx" fileName="img/img_dra_dh_5.png" xy="0,0" size="1424,92">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
     <list id="n10_d1ba" name="lstFrame" xy="98,0" size="1054,90" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="4" scrollBarRes=",ui://tcbadh8nqh6c2u" colGap="2" defaultItem="ui://a0pj43bjqilnz" autoItemSize="false">
+      <relation target="" sidePair="width-width,height-height"/>
       <item/>
       <item/>
       <item/>
@@ -48,20 +51,30 @@
     </list>
     <component id="n0_d1ba" name="btnAction" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="11,9" size="74,74">
       <gearIcon controller="ctrlAnimType" pages="0,1" values="ui://a0pj43bjqiln0|ui://a0pj43bjqiln1"/>
-      <Button icon="ui://a0pj43bjqiln1"/>
+      <relation target="" sidePair="left-left"/>
+      <Button icon="ui://a0pj43bjqiln0"/>
     </component>
-    <image id="n13_qiln" name="n13" src="qilny" fileName="img/img_dra_dh_6.png" xy="1240,0" group="n8_d1ba"/>
-    <image id="n14_qiln" name="n14" src="qilny" fileName="img/img_dra_dh_6.png" xy="1150,0" group="n8_d1ba"/>
-    <image id="n12_qiln" name="n12" src="qilny" fileName="img/img_dra_dh_6.png" xy="1331,0" group="n8_d1ba"/>
+    <image id="n13_qiln" name="n13" src="qilny" fileName="img/img_dra_dh_6.png" xy="1240,0" group="n8_d1ba">
+      <relation target="" sidePair="right-right"/>
+    </image>
+    <image id="n14_qiln" name="n14" src="qilny" fileName="img/img_dra_dh_6.png" xy="1150,0" group="n8_d1ba">
+      <relation target="" sidePair="right-right"/>
+    </image>
+    <image id="n12_qiln" name="n12" src="qilny" fileName="img/img_dra_dh_6.png" xy="1331,0" group="n8_d1ba">
+      <relation target="" sidePair="right-right"/>
+    </image>
     <component id="n1_d1ba" name="btnAddFrame" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1177,27" size="38,38" group="n8_d1ba">
+      <relation target="" sidePair="right-right"/>
       <Button icon="ui://a0pj43bjqilnh"/>
     </component>
     <component id="n2_d1ba" name="btnCopyFrame" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1264,25" size="42,42" group="n8_d1ba">
+      <relation target="" sidePair="right-right"/>
       <Button icon="ui://a0pj43bjqiln8"/>
     </component>
     <component id="n3_d1ba" name="btnRemoveFrame" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1356,25" size="42,42" group="n8_d1ba">
+      <relation target="" sidePair="right-right"/>
       <Button icon="ui://a0pj43bjqilnf"/>
     </component>
-    <group id="n8_d1ba" name="btn" xy="1150,0" size="273,92" advanced="true"/>
+    <group id="n8_d1ba" name="btn" xy="1150,0" size="273,92" advanced="true" collapsed="true"/>
   </displayList>
 </component>
