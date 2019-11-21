@@ -601,8 +601,9 @@
     <image id="umtscyiig" name="icon_cm_d.png" path="/img/" exported="true"/>
     <image id="umtscyiih" name="img_cm_load.png" path="/img/" exported="true"/>
     <image id="umtscyiii" name="img_cm_tck_2.png" path="/img/" exported="true"/>
-    <image id="umtscyiij" name="img_cm_tkc_1.png" path="/img/" exported="true"/>
     <image id="umtscyiik" name="img_cm_zzdt.png" path="/img/" exported="true"/>
+    <image id="j595cyiic" name="img_cm_tkc_1.png" path="/img/" exported="true" scale="9grid" scale9grid="8,8,44,44"/>
+    <component id="j595cyiid" name="barCm3.xml" path="/com/" exported="true"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>
