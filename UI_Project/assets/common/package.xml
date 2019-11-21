@@ -593,6 +593,8 @@
     <image id="c1h7cyii9" name="img_cm_gdt.png" path="/img/" exported="true"/>
     <image id="c1h7cyiia" name="img_cm_top_3.png" path="/img/" exported="true" scale="9grid" scale9grid="20,14,40,28"/>
     <image id="c1h7cyiib" name="img_cm_zz.png" path="/img/" exported="true"/>
+    <image id="j595cyiic" name="img_cm_tkc_1.png" path="/img/" exported="true" scale="9grid" scale9grid="8,8,44,44"/>
+    <component id="j595cyiid" name="barCm3.xml" path="/com/" exported="true"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>
