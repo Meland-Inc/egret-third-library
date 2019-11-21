@@ -580,19 +580,19 @@
     <image id="nvqacyihy" name="img_cm_top_2.png" path="/img/" exported="true" scale="9grid" scale9grid="20,15,40,30"/>
     <image id="gup1cyihx" name="btn_cm_gray.png" path="/img/" exported="true" scale="9grid" scale9grid="8,6,84,26"/>
     <component id="gup1cyihy" name="btnImg.xml" path="/btn/" exported="true"/>
-    <image id="c1h7cyihz" name="btn_cm_fd.png" path="/img/"/>
-    <image id="c1h7cyii0" name="btn_cm_green.png" path="/img/"/>
-    <image id="c1h7cyii1" name="btn_cm_sx.png" path="/img/"/>
-    <image id="c1h7cyii2" name="icon_cm_avatar.png" path="/img/"/>
-    <image id="c1h7cyii3" name="icon_cm_plus.png" path="/img/"/>
-    <image id="c1h7cyii4" name="icon_xl_1.png" path="/img/"/>
-    <image id="c1h7cyii5" name="icon_xl_2.png" path="/img/"/>
-    <image id="c1h7cyii6" name="icon_xl_3.png" path="/img/"/>
-    <image id="c1h7cyii7" name="icon_xl_4.png" path="/img/"/>
-    <image id="c1h7cyii8" name="img_cm_blank.png" path="/img/"/>
-    <image id="c1h7cyii9" name="img_cm_gdt.png" path="/img/"/>
+    <image id="c1h7cyihz" name="btn_cm_fd.png" path="/img/" exported="true"/>
+    <image id="c1h7cyii0" name="btn_cm_green.png" path="/img/" exported="true"/>
+    <image id="c1h7cyii1" name="btn_cm_sx.png" path="/img/" exported="true"/>
+    <image id="c1h7cyii2" name="icon_cm_avatar.png" path="/img/" exported="true"/>
+    <image id="c1h7cyii3" name="icon_cm_plus.png" path="/img/" exported="true"/>
+    <image id="c1h7cyii4" name="icon_xl_1.png" path="/img/" exported="true"/>
+    <image id="c1h7cyii5" name="icon_xl_2.png" path="/img/" exported="true"/>
+    <image id="c1h7cyii6" name="icon_xl_3.png" path="/img/" exported="true"/>
+    <image id="c1h7cyii7" name="icon_xl_4.png" path="/img/" exported="true"/>
+    <image id="c1h7cyii8" name="img_cm_blank.png" path="/img/" exported="true"/>
+    <image id="c1h7cyii9" name="img_cm_gdt.png" path="/img/" exported="true"/>
     <image id="c1h7cyiia" name="img_cm_top_3.png" path="/img/" exported="true" scale="9grid" scale9grid="20,14,40,28"/>
-    <image id="c1h7cyiib" name="img_cm_zz.png" path="/img/"/>
+    <image id="c1h7cyiib" name="img_cm_zz.png" path="/img/" exported="true"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>
