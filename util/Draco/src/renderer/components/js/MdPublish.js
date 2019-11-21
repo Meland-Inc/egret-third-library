@@ -567,6 +567,7 @@ async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, ol
                     }
                 }
 
+                let configEqual = false;
                 let resFileEqual = false;
                 //处理纹理集配置内索引的图片地址
                 if (newResIterator.type == 'sheet') {
@@ -579,7 +580,6 @@ async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, ol
                     let newFilePath = `resource/${fsExc.dirname(newResIterator.url)}/${newConfigObj.file}`;
 
                     let oldFilePath = '';
-                    let configEqual = false;
                     let oldConfigObj
                     if (oldPath) {
                         //存在旧的 给旧路径赋值
@@ -621,7 +621,7 @@ async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, ol
                 }
 
                 //修改图集配置中的版本号
-                if (resFileEqual) {
+                if (configEqual && resFilePath) {
                     newResIterator.url = oldResIteratorUrl;
                 } else {
                     newResIterator.url = addVersionToPath(newResIterator.url, newVersion);
