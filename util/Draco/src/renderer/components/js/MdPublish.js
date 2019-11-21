@@ -617,6 +617,7 @@ async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, ol
                 }
                 //不是图集,直接比较
                 else {
+                    configEqual = true;
                     resFileEqual = await mergeFileInVersion(oldPath, newPath, releasePath, patchPath, oldVersion, newVersion, oldVersionPath);
                 }
 
