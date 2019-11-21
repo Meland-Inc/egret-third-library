@@ -593,6 +593,16 @@
     <image id="c1h7cyii9" name="img_cm_gdt.png" path="/img/" exported="true"/>
     <image id="c1h7cyiia" name="img_cm_top_3.png" path="/img/" exported="true" scale="9grid" scale9grid="20,14,40,28"/>
     <image id="c1h7cyiib" name="img_cm_zz.png" path="/img/" exported="true"/>
+    <component id="kt9nt99" name="SaveTemplateAlert.xml" path="/com/"/>
+    <image id="umtscyiic" name="btn_cm_left.png" path="/img/" exported="true"/>
+    <image id="umtscyiid" name="btn_cm_right.png" path="/img/" exported="true"/>
+    <image id="umtscyiie" name="icon_cm_c.png" path="/img/" exported="true"/>
+    <image id="umtscyiif" name="icon_cm_caveat.png" path="/img/" exported="true"/>
+    <image id="umtscyiig" name="icon_cm_d.png" path="/img/" exported="true"/>
+    <image id="umtscyiih" name="img_cm_load.png" path="/img/" exported="true"/>
+    <image id="umtscyiii" name="img_cm_tck_2.png" path="/img/" exported="true"/>
+    <image id="umtscyiij" name="img_cm_tkc_1.png" path="/img/" exported="true"/>
+    <image id="umtscyiik" name="img_cm_zzdt.png" path="/img/" exported="true"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>
