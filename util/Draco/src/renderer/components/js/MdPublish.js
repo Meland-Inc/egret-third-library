@@ -622,7 +622,7 @@ async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, ol
                 }
 
                 //修改图集配置中的版本号
-                if (configEqual && resFilePath) {
+                if (configEqual && resFileEqual) {
                     newResIterator.url = oldResIteratorUrl;
                 } else {
                     newResIterator.url = addVersionToPath(newResIterator.url, newVersion);
