@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="82tadhh2" jpegQuality="80" compressPNG="true">
+  <resources>
+    <component id="fp4h8" name="btnSelect.xml" path="/teachPlan/btn/"/>
+    <image id="c1h7a" name="img_teaP_bottom.png" path="/teachPlan/img/" scale="9grid" scale9grid="15,15,30,30"/>
+    <image id="c1h7b" name="img_teaP_qh_1.png" path="/teachPlan/img/"/>
+    <image id="c1h7c" name="img_teaP_qh_2.png" path="/teachPlan/img/"/>
+    <component id="qvmf0" name="WinTeachPlan.xml" path="/teachPlan/win/" exported="true"/>
+    <component id="vk2w9" name="WinExternalURL.xml" path="/teachPlan/win/" exported="true"/>
+  </resources>
+  <publish name="business"/>
+</packageDescription>
