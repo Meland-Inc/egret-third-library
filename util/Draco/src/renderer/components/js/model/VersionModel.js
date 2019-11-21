@@ -17,28 +17,28 @@ export class VersionModel {
             zipPath: "/alpha/zip", scpRootPath: "/web", scpPath: "/web/alpha", localPath: "/alpha/web", localPolicyPath: "/alpha/policy",
             updateGitEnable: false, gitBranch: "", trunkName: "alpha",
             publishEnable: true, mergeVersionEnable: false, compressPicEnable: false, zipFileEnable: true, policyEnable: false, cdnEnable: false,
-            pushGitEnable: false, publishDescEnable: true, codeVersionEnable: true, gitTagEnable: false, zipUploadGameEnable: false,
+            pushGitEnable: false, publishDescEnable: true, codeVersionEnable: true, gitTagEnable: false
         },
         {
             name: this.eEnviron.beta, host: "47.107.73.43", user: "ftpadmin", password: "unclemiao",
             zipPath: "/beta/zip", scpRootPath: "/web", scpPath: "/web/beta", localPath: "/beta/web", localPolicyPath: "/beta/policy",
             updateGitEnable: true, gitBranch: "trunk/beta", trunkName: "beta",
             publishEnable: true, mergeVersionEnable: true, compressPicEnable: true, zipFileEnable: true, policyEnable: true, cdnEnable: false,
-            pushGitEnable: true, publishDescEnable: false, codeVersionEnable: true, gitTagEnable: false, zipUploadGameEnable: false,
+            pushGitEnable: true, publishDescEnable: false, codeVersionEnable: true, gitTagEnable: false
         },
         {
             name: this.eEnviron.ready, host: "47.107.73.43", user: "ftpadmin", password: "unclemiao",
             zipPath: "/ready/zip", scpRootPath: "/web", scpPath: "/web/ready", localPath: "/ready/web", localPolicyPath: "/ready/policy",
             updateGitEnable: true, gitBranch: "trunk/release", trunkName: "release",
             publishEnable: true, mergeVersionEnable: true, compressPicEnable: true, zipFileEnable: true, policyEnable: true, cdnEnable: false,
-            pushGitEnable: true, publishDescEnable: false, codeVersionEnable: true, gitTagEnable: true, zipUploadGameEnable: false,
+            pushGitEnable: true, publishDescEnable: false, codeVersionEnable: true, gitTagEnable: true
         },
         {
             name: this.eEnviron.release, host: "bg-stage.wkcoding.com", user: "ftpadmin", password: "unclemiao",
             zipPath: "/ready/zip", scpRootPath: "", scpPath: "", localPath: "/ready/web", localPolicyPath: "/release/policy",
             updateGitEnable: false, gitBranch: "", trunkName: "",
             publishEnable: false, mergeVersionEnable: true, compressPicEnable: true, zipFileEnable: false, policyEnable: true, cdnEnable: true,
-            pushGitEnable: false, publishDescEnable: false, codeVersionEnable: false, gitTagEnable: false, zipUploadGameEnable: false,
+            pushGitEnable: false, publishDescEnable: false, codeVersionEnable: false, gitTagEnable: false
         },
     ];
 
@@ -236,7 +236,7 @@ export class VersionModel {
                 return;
             }
             let policyNum = +data.Data.Version;
-            this.getGameVersion(this.curEnviron, policyNum,
+            this.getGameVersion(policyNum,
                 async (gameVersion) => {
                     this.releaseVersion = parseInt(gameVersion) + 1;
 
@@ -287,11 +287,11 @@ export class VersionModel {
         });
     }
 
-    getGameVersion(environ, policyNum, successFunc, errorFunc) {
+    getGameVersion(policyNum, successFunc, errorFunc) {
         let options = {
-            host: environ.host, // 请求地址 域名，google.com等.. 
+            host: this.curEnviron.host, // 请求地址 域名，google.com等.. 
             // port: 10001,
-            path: `${environ.scpPath}/policyFile_v${policyNum}.json`, // 具体路径eg:/upload
+            path: `${this.curEnviron.scpPath}/policyFile_v${policyNum}.json`, // 具体路径eg:/upload
             method: 'GET', // 请求方式, 这里以post为例
             headers: { // 必选信息,  可以抓包工看一下
                 'Content-Type': 'application/json'
@@ -355,22 +355,5 @@ export class VersionModel {
 
     async getCurPolicyInfo() {
         return await ExternalUtil.getPolicyInfo(this.curEnviron.name);
-    }
-
-    async getEnvironGameVersion(environName = this.curEnviron.name) {
-        return new Promise(async (resolve, reject) => {
-            let value = await ExternalUtil.getPolicyInfo(environName);
-            let environ = this.environList.find(value => value.name === environName);
-            let data = JSON.parse(value);
-            if (data.Code == 0) {
-                let policyNum = data.Data.Version;
-                this.getGameVersion(environ, policyNum, gameVersion => {
-                    resolve(gameVersion);
-                });
-            } else {
-                reject();
-                Global.snack(`获取游戏版本失败`, null, false);
-            }
-        })
     }
 }
