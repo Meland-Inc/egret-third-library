@@ -67,14 +67,19 @@ export async function publishProject() {
             if (ModelMgr.versionModel.curEnviron.trunkName === ModelMgr.versionModel.eEnviron.beta) {
                 regCodeVersion = /public static betaCodeVersion = ".*?";/;
                 codeVersionName = "betaCodeVersion";
-            } else {
+            } else if (ModelMgr.versionModel.curEnviron.trunkName === ModelMgr.versionModel.eEnviron.ready) {
                 regCodeVersion = /public static releaseCodeVersion = ".*?";/;
                 codeVersionName = "releaseCodeVersion";
+            } else {
+                //reserve
             }
-            configContent = configContent.replace(regCodeVersion, `public static ${codeVersionName} = "${ModelMgr.versionModel.releaseVersion}";`);
+            if (regCodeVersion) {
+                configContent = configContent.replace(regCodeVersion, `public static ${codeVersionName} = "${ModelMgr.versionModel.releaseVersion}";`);
+            }
 
             let regTrunkName = /public static trunkName: eTrunkName = .*?;/;
             configContent = configContent.replace(regTrunkName, `public static trunkName: eTrunkName = eTrunkName.${ModelMgr.versionModel.curEnviron.trunkName};`);
+
             await fsExc.writeFile(configPath, configContent);
         }
 
@@ -566,16 +571,21 @@ async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, ol
                 //处理纹理集配置内索引的图片地址
                 if (newResIterator.type == 'sheet') {
                     //是图集,比较图集配置文件中的图片是否相同
+                    // let newConfigPath = projNewVersionPath + '/' + newPath;
+                    // let newConfigContent = await fsExc.readFile(newConfigPath);
+
                     let newConfigContent = await fsExc.readFile(projNewVersionPath + '/' + newPath);
                     let newConfigObj = JSON.parse(newConfigContent);
                     let newFilePath = `resource/${fsExc.dirname(newResIterator.url)}/${newConfigObj.file}`;
 
                     let oldFilePath = '';
+                    let configEqual = false;
+                    let oldConfigObj
                     if (oldPath) {
                         //存在旧的 给旧路径赋值
                         let oldConfigPath = oldVersionPath + '/' + oldPath;
                         let oldConfigContent = await fsExc.readFile(oldConfigPath);
-                        let oldConfigObj = JSON.parse(oldConfigContent);
+                        oldConfigObj = JSON.parse(oldConfigContent);
                         oldFilePath = `resource/${fsExc.dirname(newResIterator.url)}/${oldConfigObj.file}`;
                     } else {
                         oldFilePath = `resource/${fsExc.dirname(newResIterator.url)}/${newConfigObj.file}`;
@@ -583,9 +593,27 @@ async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, ol
 
                     //判断图集是否相同
                     resFileEqual = await mergeFileInVersion(oldFilePath, newFilePath, releasePath, patchPath, oldVersion, newVersion, oldVersionPath);
+                    if (resFileEqual && oldConfigObj) {
+                        let oldFrameStr = JSON.stringify(oldConfigObj.frames);
+                        oldFrameStr = oldFrameStr.replace(/\s+/g, '');
+
+                        let newFrameStr = JSON.stringify(newConfigObj.frames);
+                        newFrameStr = newFrameStr.replace(/\s+/g, '');
+
+                        if (oldFrameStr === newFrameStr) {
+                            configEqual = true;
+                            console.log(`${newConfigObj.file} frames equal`);
+                        } else {
+                            //不相等的话,创建对应的文件夹
+                            await fsExc.makeDir(patchPath + '/' + fsExc.dirname(oldFilePath));
+                            await fsExc.makeDir(releasePath + '/' + fsExc.dirname(oldFilePath));
+                            console.log(`${newConfigObj.file} frames not equal`);
+                        }
+
+                    }
 
                     //图集配置处理
-                    await sheetConfigHandle(resFileEqual, releasePath, patchPath, oldPath, newPath, oldVersion, newVersion, newResIterator.url, oldVersionPath);
+                    await sheetConfigHandle(configEqual, resFileEqual, releasePath, patchPath, oldPath, newPath, oldVersion, newVersion, newResIterator.url, oldVersionPath);
                 }
                 //不是图集,直接比较
                 else {
@@ -625,7 +653,7 @@ async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, ol
                 await copyFileCheckDir(filePath, patchPath, newVersion);
 
                 //图集配置处理,不相等,直接用新的
-                await sheetConfigHandle(false, releasePath, patchPath, oldPath, newPath, oldVersion, newVersion, iterator.url, oldVersionPath);
+                await sheetConfigHandle(false, false, releasePath, patchPath, oldPath, newPath, oldVersion, newVersion, iterator.url, oldVersionPath);
             }
             //其他文件只要拷贝配置就好了
             else {
@@ -651,11 +679,11 @@ async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, ol
 }
 
 /** 处理图集配置 */
-async function sheetConfigHandle(resFileEqual, releasePath, patchPath, oldPath, newPath, oldVersion, newVersion, sheetUrl, oldVersionPath) {
+async function sheetConfigHandle(configEqual, resFileEqual, releasePath, patchPath, oldPath, newPath, oldVersion, newVersion, sheetUrl, oldVersionPath) {
     let projNewVersionPath = Global.projPath + releaseSuffix + newVersion;
 
     //相等
-    if (resFileEqual) {
+    if (configEqual) {
         if (releasePath) {
             await copyFile(oldVersionPath + '/' + oldPath, releasePath + '/' + oldPath);
         }
@@ -670,19 +698,20 @@ async function sheetConfigHandle(resFileEqual, releasePath, patchPath, oldPath, 
         //patch
         await copyFile(projNewVersionPath + '/' + newPath, patchPath + '/' + newPath, newVersion);
 
+        let fileContentVersion = resFileEqual ? oldVersion : newVersion;
         //修改图集配置文件
         if (releasePath) {
             let releaseFileContent = await fsExc.readFile(projNewVersionPath + '/resource/' + sheetUrl);
 
             let releaseFileObj = JSON.parse(releaseFileContent);
-            releaseFileObj.file = addVersionToPath(releaseFileObj.file, newVersion);
+            releaseFileObj.file = addVersionToPath(releaseFileObj.file, fileContentVersion);
             releaseFileContent = JSON.stringify(releaseFileObj);
             await fsExc.writeFile(releasePath + '/resource/' + addVersionToPath(sheetUrl, newVersion), releaseFileContent);
         }
 
         let patchFileContent = await fsExc.readFile(projNewVersionPath + '/resource/' + sheetUrl);
         let patchFileObj = JSON.parse(patchFileContent);
-        patchFileObj.file = addVersionToPath(patchFileObj.file, newVersion);
+        patchFileObj.file = addVersionToPath(patchFileObj.file, fileContentVersion);
         patchFileContent = JSON.stringify(patchFileObj);
         await fsExc.writeFile(patchPath + '/resource/' + addVersionToPath(sheetUrl, newVersion), patchFileContent);
     }
