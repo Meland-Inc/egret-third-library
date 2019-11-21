@@ -64,6 +64,8 @@
     <component id="qiln2z" name="ComAnimEditingArea.xml" path="/com/"/>
     <component id="gup13d" name="WinDrawingPad.xml" path="/win/" exported="true"/>
     <image id="gup15c" name="img_sket_qy_2.png" path="/img/"/>
+    <image id="j5955d" name="icon_dra_save.png" path="/img/"/>
+    <component id="j5955e" name="WinDrawingLoading.xml" path="/win/" exported="true"/>
   </resources>
   <publish name="drawing"/>
 </packageDescription>
