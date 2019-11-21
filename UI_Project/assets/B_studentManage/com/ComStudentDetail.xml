@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="520,558" designImage="ui://thvmj7vof63g16" designImageAlpha="40" designImageLayer="1">
+  <controller name="ctrlStudentStatus" pages="0,unlocked,1,locken" selected="0"/>
+  <controller name="ctrlOnlineStatus" pages="0,true,1,false" selected="0"/>
+  <displayList>
+    <image id="n8_p84a" name="imgPanelBg" src="j595cyiic" fileName="img/img_cm_tkc_1.png" pkg="te1gxawo" xy="31,0" size="460,558"/>
+    <image id="n20_f63g" name="n20" src="c1h7cyiia" fileName="img/img_cm_top_3.png" pkg="te1gxawo" xy="31,0" size="460,56"/>
+    <component id="n9_p84a" name="btnClosePanel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="434,3" size="48,48">
+      <Button icon="ui://te1gxawooiqdcyih2"/>
+    </component>
+    <component id="n14_p84a" name="btnPrevious" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="0,227" size="58,58">
+      <Button icon="ui://te1gxawon15scyiex"/>
+    </component>
+    <component id="n15_p84a" name="btnNext" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="462,217" size="58,58">
+      <Button icon="ui://te1gxawon15scyiey"/>
+    </component>
+    <image id="n23_f63g" name="n23" src="eggjcyihu" fileName="img/img_cm_srk_3.png" pkg="te1gxawo" xy="175,77" size="276,40"/>
+    <image id="n24_f63g" name="n24" src="eggjcyihu" fileName="img/img_cm_srk_3.png" pkg="te1gxawo" xy="175,137" size="276,40"/>
+    <text id="n10_p84a" name="tfTitle" xy="68,12" size="107,28" fontSize="24" color="#333333" align="center" vAlign="middle" letterSpacing="1" text="学生详情"/>
+    <text id="n11_p84a" name="tfPlayerName" xy="197,86" size="247,22" fontSize="18" color="#666666" vAlign="middle" autoSize="none" autoClearText="true" text="学生自己起的昵称"/>
+    <text id="n12_p84a" name="tfRealName" xy="197,146" size="247,22" fontSize="18" color="#666666" vAlign="middle" autoSize="none" autoClearText="true" text="学生自己起的微信号"/>
+    <text id="n21_f63g" name="n21" xy="70,85" size="47,24" fontSize="20" color="#333333" vAlign="middle" letterSpacing="1" text="昵称"/>
+    <text id="n22_f63g" name="n22" xy="70,145" size="68,24" fontSize="20" color="#333333" vAlign="middle" letterSpacing="1" text="微信号"/>
+    <component id="n16_p84a" name="btnLockUnlock" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="71,334" size="380,48" group="n25_f63g">
+      <gearText controller="ctrlStudentStatus" pages="0" values="锁屏" default="解锁"/>
+      <Button title="锁屏" titleFontSize="24" icon="ui://te1gxawoeggjcyihf"/>
+    </component>
+    <component id="n17_p84a" name="btnGoToStudent" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="71,402" size="380,48" group="n25_f63g">
+      <gearLook controller="ctrlOnlineStatus" pages="1" values="1,0,1,0" default="1,0,0,1"/>
+      <Button title="传送到学生位置" titleFontSize="24" icon="ui://te1gxawooiqdcyih3"/>
+    </component>
+    <component id="n18_p84a" name="btnSubmit" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="71,470" size="380,48" group="n25_f63g">
+      <gearLook controller="ctrlOnlineStatus" pages="1" values="1,0,1,0" default="1,0,0,1"/>
+      <Button title="提交" titleFontSize="24" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <group id="n25_f63g" name="n25" xy="71,334" size="380,184" advanced="true" layout="vt" lineGap="20"/>
+  </displayList>
+</component>

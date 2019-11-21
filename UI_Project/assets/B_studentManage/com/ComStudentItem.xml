@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="407,62" extention="Button" designImageOffsetX="-902" designImageOffsetY="-98" designImageAlpha="40" designImageLayer="1">
+  <controller name="button" pages="0,up,1,down,2,over" selected="0"/>
+  <controller name="ctrlLock" pages="0,locked,1,unlocked" selected="0"/>
+  <controller name="ctrlLessonsStatus" pages="1,going,0,notEnter,2,finished" selected="0"/>
+  <controller name="ctrlCanTransfer" pages="0,true,1,false" selected="0"/>
+  <controller name="ctrlSelect" pages="0,false,1,true" selected="0"/>
+  <displayList>
+    <image id="n10_rtqq" name="selected" src="f63gcyies" fileName="img/img_stuM_sdk.png" xy="3,2" size="404,58" group="n12_f63g">
+      <gearDisplay controller="ctrlSelect" pages="1"/>
+    </image>
+    <loader id="n1_skn6" name="imgNumBg" xy="1,0" size="20,20" group="n12_f63g" url="ui://ct340yhvf63gcyiel" fill="scale" autoSize="true">
+      <gearIcon controller="ctrlLessonsStatus" pages="1,0,2" values="ui://ct340yhvf63gcyiel|ui://ct340yhvf63gcyier|ui://ct340yhvf63gcyiep"/>
+    </loader>
+    <text id="n2_skn6" name="tfNum" xy="0,1" size="21,18" group="n12_f63g" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="1"/>
+    <text id="n3_skn6" name="tfPlayerName" xy="33,11" size="132,22" group="n12_f63g" fontSize="18" color="#333333" vAlign="middle" text="这里支持七个字"/>
+    <text id="n9_m1ux" name="tfLessonsStatus" xy="32,33" size="48,18" group="n12_f63g" alpha="0.5" fontSize="14" color="#999999" vAlign="middle" text="关卡中">
+      <gearText controller="ctrlLessonsStatus" pages="0,2" values="未进入|已提交" default="关卡中"/>
+    </text>
+    <component id="n6_skn6" name="btnLockUnlock" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="367,14" size="32,32" group="n12_f63g">
+      <gearIcon controller="ctrlLock" pages="0,1" values="ui://ct340yhvf63gcyied|ui://ct340yhvf63gcyief"/>
+      <Button icon="ui://ct340yhvf63gcyied"/>
+    </component>
+    <component id="n8_fs03" name="btnGoToStudent" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="330,14" size="32,32" group="n12_f63g">
+      <gearIcon controller="ctrlCanTransfer" pages="0,1" values="ui://ct340yhvf63gcyieg|ui://ct340yhvf63gcyieh"/>
+      <Button icon="ui://ct340yhvf63gcyieg"/>
+    </component>
+    <image id="n13_f63g" name="n13" src="f63gcyieq" fileName="img/img_stuM_line.png" xy="3,60" size="404,2" group="n12_f63g"/>
+    <group id="n12_f63g" name="n12" xy="0,0" size="407,62"/>
+  </displayList>
+  <Button/>
+</component>
