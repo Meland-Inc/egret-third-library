@@ -11,12 +11,12 @@
     <image id="n39_f63g" name="bgStudentInfo" src="f63gcyien" fileName="img/img_stuM_dk_1.png" xy="1501,202" size="406,803" group="n13_hbdr">
       <relation target="" sidePair="bottomext-bottom"/>
     </image>
-    <text id="n2_skn6" name="title" xy="1499,17" size="85,24" group="n13_hbdr" fontSize="20" color="#333333" vAlign="bottom" text="学生管理"/>
+    <text id="n2_skn6" name="title" xy="1499,17" size="87,24" group="n13_hbdr" fontSize="20" color="#333333" align="center" vAlign="middle" text="学生管理"/>
     <component id="n4_skn6" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1867,2" size="48,48" group="n13_hbdr">
       <Button icon="ui://ct340yhvf63gcyiee"/>
     </component>
     <image id="n5_skn6" name="inputBg" src="oiqdcyigx" fileName="img/img_cm_ssk.png" pkg="te1gxawo" xy="1502,66" size="406,39" group="n13_hbdr"/>
-    <text id="n6_skn6" name="inpSearch" xy="1504,74" size="400,23" group="n13_hbdr" input="true" prompt="[size=14]请输入搜索内容[/size]" maxLength="10" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text=""/>
+    <text id="n6_skn6" name="inpSearch" xy="1509,74" size="392,23" group="n13_hbdr" input="true" prompt="[size=18]请输入搜索内容[/size]" maxLength="10" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text=""/>
     <list id="n38_m1ux" name="lstTag" xy="1500,116" size="410,69" group="n13_hbdr" layout="row" overflow="scroll" lineGap="4" defaultItem="ui://ct340yhvf63gcyieu">
       <item title="全部" icon="ui://ct340yhvf63gcyie9" controllers="ctrlLocation,0"/>
       <item title="已提交" icon="ui://ct340yhvf63gcyiea" controllers="ctrlLocation,1"/>
@@ -24,7 +24,7 @@
       <item title="未进入" icon="ui://ct340yhvf63gcyiec" controllers="ctrlLocation,2"/>
     </list>
     <image id="n45_e1le" name="n45" src="c1h7cyii8" fileName="img/img_cm_blank.png" pkg="te1gxawo" xy="1616,445" group="n47_e1le"/>
-    <text id="n46_e1le" name="n46" xy="1656,624" pivot="0.5,0.5" size="102,22" group="n47_e1le" fontSize="18" color="#999999" vAlign="middle" letterSpacing="1" text="暂无学生哦"/>
+    <text id="n46_e1le" name="n46" xy="1657,624" pivot="0.5,0.5" size="100,22" group="n47_e1le" fontSize="18" color="#999999" vAlign="middle" letterSpacing="1" text="暂无学生哦"/>
     <group id="n47_e1le" name="notInfo" xy="1616,445" size="180,201" group="n13_hbdr" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlNotInfo" pages="1"/>
       <relation target="n39_f63g" sidePair="middle-middle"/>
