@@ -547,7 +547,7 @@
     <image id="oiqdcyih0" name="img_cm_wpx_2.png" path="/img/" exported="true"/>
     <image id="oiqdcyih1" name="btn_cm_blue.png" path="/img/" exported="true" scale="9grid" scale9grid="30,11,60,22"/>
     <image id="oiqdcyih2" name="btn_cm_gb.png" path="/img/" exported="true"/>
-    <image id="oiqdcyih3" name="btn_cm_yellow.png" path="/img/" exported="true"/>
+    <image id="oiqdcyih3" name="btn_cm_yellow.png" path="/img/" exported="true" scale="9grid" scale9grid="30,11,60,22"/>
     <image id="oiqdcyih4" name="img_cm_1.png" path="/img/" exported="true" scale="9grid" scale9grid="25,25,50,50"/>
     <image id="oiqdcyih5" name="img_cm_2.png" path="/img/" exported="true"/>
     <image id="oiqdcyih6" name="img_cm_3.png" path="/img/" exported="true" scale="9grid" scale9grid="20,15,40,30"/>
@@ -559,7 +559,7 @@
     <image id="8qqicyihc" name="img_cm_bottom_1.png" path="/img/" exported="true" scale="9grid" scale9grid="30,30,60,60"/>
     <image id="eggjcyihd" name="btn_cm_off.png" path="/img/" exported="true"/>
     <image id="eggjcyihe" name="btn_cm_on.png" path="/img/" exported="true"/>
-    <image id="eggjcyihf" name="btn_cm_red.png" path="/img/" exported="true"/>
+    <image id="eggjcyihf" name="btn_cm_red.png" path="/img/" exported="true" scale="9grid" scale9grid="30,11,60,22"/>
     <image id="eggjcyihg" name="icon_cm_set.png" path="/img/" exported="true"/>
     <image id="eggjcyihh" name="img_cm_line.png" path="/img/" exported="true" scale="9grid" scale9grid="8,0,14,3"/>
     <image id="eggjcyihi" name="img_cm_szt_1.png" path="/img/" exported="true" scale="9grid" scale9grid="8,0,14,12"/>
@@ -593,6 +593,15 @@
     <image id="c1h7cyii9" name="img_cm_gdt.png" path="/img/" exported="true"/>
     <image id="c1h7cyiia" name="img_cm_top_3.png" path="/img/" exported="true" scale="9grid" scale9grid="20,14,40,28"/>
     <image id="c1h7cyiib" name="img_cm_zz.png" path="/img/" exported="true"/>
+    <component id="kt9nt99" name="SaveTemplateAlert.xml" path="/com/"/>
+    <image id="umtscyiic" name="btn_cm_left.png" path="/img/" exported="true"/>
+    <image id="umtscyiid" name="btn_cm_right.png" path="/img/" exported="true"/>
+    <image id="umtscyiie" name="icon_cm_c.png" path="/img/" exported="true"/>
+    <image id="umtscyiif" name="icon_cm_caveat.png" path="/img/" exported="true"/>
+    <image id="umtscyiig" name="icon_cm_d.png" path="/img/" exported="true"/>
+    <image id="umtscyiih" name="img_cm_load.png" path="/img/" exported="true"/>
+    <image id="umtscyiii" name="img_cm_tck_2.png" path="/img/" exported="true"/>
+    <image id="umtscyiik" name="img_cm_zzdt.png" path="/img/" exported="true"/>
     <image id="j595cyiic" name="img_cm_tkc_1.png" path="/img/" exported="true" scale="9grid" scale9grid="8,8,44,44"/>
     <component id="j595cyiid" name="barCm3.xml" path="/com/" exported="true"/>
   </resources>
