@@ -7,16 +7,16 @@
     <component id="qn8oa" name="CommonModal.xml" path="/old/com/" exported="true"/>
     <component id="qn8ob" name="CommonBubbleText.xml" path="/old/com/" exported="true"/>
     <component id="qn8od" name="btnCommon.xml" path="/old/btn/" exported="true"/>
-    <component id="cnpnf" name="CommonToast.xml" path="/old/com/" exported="true"/>
-    <component id="hxf8g" name="CommonAlert.xml" path="/old/com/" exported="true"/>
+    <component id="cnpnf" name="CommonToast.xml" path="/com/" exported="true"/>
+    <component id="hxf8g" name="CommonAlert.xml" path="/com/" exported="true"/>
     <image id="d30ci" name="img_common_prompt.png" path="/old/newImg/" exported="true" scale="9grid" scale9grid="216,0,31,26"/>
     <component id="ar63j" name="CommonInputAlert.xml" path="/old/com/" exported="true"/>
     <image id="q8x4j" name="img_line_on.png" path="/old/newImg/"/>
     <image id="q8x4k" name="bg_common_1.png" path="/old/newImg/"/>
     <image id="q8x4m" name="img_line_off.png" path="/old/newImg/"/>
     <component id="q8x4n" name="btnFixNoEffect.xml" path="/btn/" exported="true"/>
-    <component id="q8x4o" name="CommonReconnect.xml" path="/old/com/" exported="true"/>
-    <component id="q8x4q" name="CommonLoading.xml" path="/old/com/" exported="true"/>
+    <component id="q8x4o" name="CommonReconnect.xml" path="/com/" exported="true"/>
+    <component id="q8x4q" name="CommonLoading.xml" path="/com/" exported="true"/>
     <image id="exp3s" name="img_lineloading_back.png" path="/old/newImg/"/>
     <component id="lt5g17" name="ToolTipOperaBagItem.xml" path="/old/com/" exported="true"/>
     <image id="efrs1k" name="bg_cm_1.png" path="/old/newImg/" exported="true" scale="9grid" scale9grid="28,57,56,18"/>
@@ -593,17 +593,20 @@
     <image id="c1h7cyii9" name="img_cm_gdt.png" path="/img/" exported="true"/>
     <image id="c1h7cyiia" name="img_cm_top_3.png" path="/img/" exported="true" scale="9grid" scale9grid="20,14,40,28"/>
     <image id="c1h7cyiib" name="img_cm_zz.png" path="/img/" exported="true"/>
-    <component id="kt9nt99" name="SaveTemplateAlert.xml" path="/com/"/>
+    <component id="kt9nt99" name="SaveTemplateAlert.xml" path="/com/" exported="true"/>
     <image id="umtscyiic" name="btn_cm_left.png" path="/img/" exported="true"/>
     <image id="umtscyiid" name="btn_cm_right.png" path="/img/" exported="true"/>
     <image id="umtscyiie" name="icon_cm_c.png" path="/img/" exported="true"/>
     <image id="umtscyiif" name="icon_cm_caveat.png" path="/img/" exported="true"/>
     <image id="umtscyiig" name="icon_cm_d.png" path="/img/" exported="true"/>
     <image id="umtscyiih" name="img_cm_load.png" path="/img/" exported="true"/>
-    <image id="umtscyiii" name="img_cm_tck_2.png" path="/img/" exported="true"/>
+    <image id="umtscyiii" name="img_cm_tck_2.png" path="/img/" exported="true" scale="9grid" scale9grid="240,11,20,22"/>
     <image id="umtscyiik" name="img_cm_zzdt.png" path="/img/" exported="true"/>
     <image id="j595cyiic" name="img_cm_tkc_1.png" path="/img/" exported="true" scale="9grid" scale9grid="8,8,44,44"/>
     <component id="j595cyiid" name="barCm3.xml" path="/com/" exported="true"/>
+    <component id="dv1icyiim" name="ComInput.xml" path="/com/" exported="true"/>
+    <component id="orntcyiin" name="CommonWarn.xml" path="/com/" exported="true"/>
+    <component id="edzwcyiio" name="CommonSmallLoading.xml" path="/com/" exported="true"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>

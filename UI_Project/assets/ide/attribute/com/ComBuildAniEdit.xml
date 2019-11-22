@@ -10,7 +10,7 @@
       <relation target="" sidePair="width-width,height-height"/>
       <relation target="" sidePair="center-center,top-top"/>
     </image>
-    <component id="n53_fidk" name="scrollAni" src="hckx6j" fileName="attribute/com/comBuildAniScroll.xml" xy="12,116" size="408,904">
+    <component id="n53_fidk" name="scrollAni" src="hckx6j" fileName="attribute/com/comBuildAniScroll.xml" xy="12,115" size="408,904">
       <relation target="n74_xba6" sidePair="height-height,width-width"/>
       <relation target="n74_xba6" sidePair="left-left,top-top"/>
     </component>
@@ -18,7 +18,7 @@
       <relation target="" sidePair="width-width,left-left"/>
       <relation target="" sidePair="bottom-bottom"/>
     </image>
-    <text id="n55_s1sd" name="n55" xy="55,15" size="77,24" fontSize="18" text="动画编辑"/>
+    <text id="n55_s1sd" name="n55" xy="55,15" size="85,26" fontSize="20" align="center" vAlign="middle" text="动画编辑"/>
     <image id="n70_xba6" name="n70" src="hckx70" fileName="attribute/img/icon_att_dh.png" xy="15,14"/>
     <component id="n71_xba6" name="btnAniSelect" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="10,67" size="120,40">
       <Button title="添加动画"/>
