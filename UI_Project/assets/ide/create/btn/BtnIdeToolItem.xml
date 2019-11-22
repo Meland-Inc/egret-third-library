@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="66,42" extention="Button">
-  <controller name="button" pages="0,up,1,down" selected="1"/>
+  <controller name="button" pages="0,up,1,down" selected="0"/>
   <displayList>
+    <image id="n2_so8v" name="n2" src="so8vt7o" fileName="create/img/img_cre_flk.png" xy="0,0">
+      <gearDisplay controller="button" pages="0"/>
+    </image>
     <image id="n0_cw9m" name="bg" src="80ab8t" fileName="create/img/img_cre_xzk.png" xy="0,0">
       <gearDisplay controller="button" pages="1"/>
     </image>

@@ -376,6 +376,10 @@
     <component id="lgvkt7l" name="WinMultiSelectFrame.xml" path="/create/win/" exported="true"/>
     <component id="foy4t7m" name="comAWDetail.xml" path="/attribute/widgets/" exported="true"/>
     <component id="smiyt7n" name="ComBuildAniSelect.xml" path="/attribute/com/"/>
+    <image id="so8vt7o" name="img_cre_flk.png" path="/create/img/"/>
+    <image id="so8vt7p" name="img_ide_cm_gdt.png" path="/ideCommon/img/" scale="9grid" scale9grid="2,15,3,30"/>
+    <component id="so8vt7r" name="ScrollBarBuild1.xml" path="/ideCommon/bar/" exported="true"/>
+    <component id="so8vt7s" name="ScrollBarBuild1_grip.xml" path="/ideCommon/bar/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>
