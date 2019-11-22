@@ -98,8 +98,8 @@ export function uploadCdnVersionFile() {
         let readyEnviron = ModelMgr.versionModel.environList.find(value => value.name === ModelMgr.versionModel.eEnviron.ready);
         let readyPath = `${Global.svnPublishPath}${readyEnviron.localPath}`;
         let curGameVersion = releaseGameVersion;
-        for (let i = releaseGameVersion + 1; i <= readyGameVersion; i++) {
-            let patchVersion = `patch_v${curGameVersion}s_v${i}s`;
+        for (let i = +releaseGameVersion + 1; i <= readyGameVersion; i++) {
+            let patchVersion = `patch_v${curGameVersion}s-v${i}s`;
             let patchPath = `${readyPath}/${patchVersion}/`;
             let patchExist = await fsExc.exists(patchPath);
             if (!patchExist) {
