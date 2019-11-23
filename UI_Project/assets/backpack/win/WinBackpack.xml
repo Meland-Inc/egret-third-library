@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1920,1080" designImage="ui://48p8y12ay8jug" designImageAlpha="97" designImageLayer="1" adaptationTest="FitSize">
+<component size="1920,1080" designImage="ui://48p8y12ay8jug" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
   <displayList>
     <image id="n8_oiqd" name="imgTopBg" src="oiqdcyigw" fileName="img/img_cm_7.png" pkg="te1gxawo" xy="0,0" size="1920,56">
       <relation target="" sidePair="width-width"/>
@@ -25,18 +25,7 @@
     <image id="n18_e8s1" name="imgListBg" src="oiqdcyih4" fileName="img/img_cm_1.png" pkg="te1gxawo" xy="697,167" size="1131,586" group="n28_n173"/>
     <image id="n15_tvlf" name="imgListTitleBg" src="oiqdcyih6" fileName="img/img_cm_3.png" pkg="te1gxawo" xy="697,114" size="1130,58" group="n28_n173"/>
     <text id="n14_tvlf" name="tfNum" xy="714,134" size="95,24" group="n28_n173" fontSize="20" color="#333333" align="center" vars="true" text="背包 [{num=10}]"/>
-    <list id="n16_tvlf" name="lstBagType" xy="938,122" size="655,48" group="n28_n173" layout="row" overflow="scroll" scroll="horizontal" colGap="13" defaultItem="ui://48p8y12atvlfi" autoClearItems="true">
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
+    <list id="n16_tvlf" name="lstBagType" xy="938,122" size="655,48" group="n28_n173" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="128" colGap="13" defaultItem="ui://48p8y12atvlfi">
       <item/>
     </list>
     <image id="n26_vkix" name="imgSearchBg" src="oiqdcyigx" fileName="img/img_cm_ssk.png" pkg="te1gxawo" xy="1597,124" size="210,38" group="n28_n173"/>
