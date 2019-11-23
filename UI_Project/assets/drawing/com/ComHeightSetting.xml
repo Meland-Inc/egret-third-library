@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="296,120" bgColorEnabled="true">
+  <displayList>
+    <image id="n9_qiln" name="n9" src="qiln4" fileName="img/img_dra_top.png" xy="0,0" size="296,120"/>
+    <image id="n10_qiln" name="n10" src="eggjcyihu" fileName="img/img_cm_srk_3.png" pkg="te1gxawo" xy="163,22" size="120,38"/>
+    <text id="n2_wdtr" name="n2" xy="11,22" size="53,31" fontSize="24" color="#333333" text="高度"/>
+    <text id="n6_wdtr" name="tfCanvasHeight" xy="166,24" size="116,35" input="true" restrict="0-9" keyboardType="4" fontSize="24" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" text="50">
+      <relation target="n10_qiln" sidePair="width-width,height-height"/>
+      <relation target="n10_qiln" sidePair="left-left,top-top"/>
+    </text>
+    <component id="n8_qiln" name="sldCanvasHeight" src="qiln1y" fileName="com/sldDraw.xml" xy="11,83" size="273,12">
+      <Slider value="50" max="100"/>
+    </component>
+  </displayList>
+</component>

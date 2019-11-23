@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="430,1080" designImage="ui://thvmj7vo80ab4" designImageOffsetX="-1795">
+<component size="430,1080" designImage="ui://thvmj7vo80ab3" designImageOffsetX="-1491">
   <controller name="ctrlState" exported="true" pages="1,open,0,fold" selected="0"/>
   <displayList>
     <graph id="n19_n83g" name="n19" xy="0,0" size="430,1080" visible="false" alpha="0" touchable="false" type="rect">
@@ -10,12 +10,12 @@
       <relation target="" sidePair="bottom-bottom"/>
       <Button icon="ui://ti9jag5txba67h" page="0"/>
     </component>
-    <image id="n0_7slt" name="n0" src="xba67o" fileName="ideCommon/img/img_ide_cm_7.png" xy="0,0" size="429,1079" group="n16_jm8l">
+    <image id="n0_7slt" name="n0" src="xba67o" fileName="ideCommon/img/img_ide_cm_7.png" xy="0,0" size="430,1079" group="n16_jm8l">
       <relation target="" sidePair="height-height"/>
     </image>
     <image id="n23_inuq" name="n23" src="xba67m" fileName="ideCommon/img/img_ide_cm_6.png" xy="0,0" size="430,56" group="n16_jm8l"/>
     <image id="n22_inuq" name="n22" src="80ab97" fileName="ideCommon/img/img_ide_cm_8.png" xy="10,216" size="393,849" group="n16_jm8l"/>
-    <list id="n2_7slt" name="lstBpTabBar" xy="9,118" size="408,93" group="n16_jm8l" layout="flow_hz" overflow="hidden" lineGap="4" defaultItem="ui://ti9jag5t80ab9h" autoItemSize="true">
+    <list id="n2_7slt" name="lstBpTabBar" xy="9,118" size="412,93" group="n16_jm8l" layout="flow_hz" overflow="hidden" lineGap="4" colGap="3" defaultItem="ui://ti9jag5t80ab9h" autoItemSize="true">
       <item title="最近" icon="ui://ti9jag5t80ab8m" name="recent" selectedIcon="ui://ti9jag5t80ab8n"/>
       <item title="全部" icon="ui://ti9jag5t80ab86" name="all" selectedIcon="ui://ti9jag5t80ab87"/>
       <item title="建材" icon="ui://ti9jag5t80ab80" name="buildObj" selectedIcon="ui://ti9jag5t80ab81"/>
@@ -28,7 +28,7 @@
       <item title="其他" icon="ui://ti9jag5t80ab88" name="other" selectedIcon="ui://ti9jag5t80ab89"/>
       <item title="自定义" icon="ui://ti9jag5t80ab8k" name="custom" selectedIcon="ui://ti9jag5t80ab8l"/>
     </list>
-    <list id="n4_7slt" name="lstBpOpen" xy="20,226" size="387,835" group="n16_jm8l" layout="flow_hz" overflow="scroll" scrollBar="visible" scrollBarMargin="5,5,0,0" scrollBarRes="ui://te1gxawovulycyid4," lineGap="10" colGap="10" defaultItem="ui://ti9jag5tinuq9z" autoClearItems="true">
+    <list id="n4_7slt" name="lstBpOpen" xy="20,219" size="401,835" group="n16_jm8l" layout="flow_hz" overflow="scroll" scrollBar="visible" margin="7,0,0,0" scrollBarRes="ui://ti9jag5tso8vt7r," lineGap="10" colGap="10" defaultItem="ui://ti9jag5tinuq9z" autoClearItems="true">
       <relation target="" sidePair="height-height"/>
       <item/>
       <item/>
@@ -86,14 +86,14 @@
       <item/>
       <item/>
     </list>
-    <image id="n5_7slt" name="n5" src="80ab9b" fileName="ideCommon/img/img_ide_cm_ssk.png" xy="12,70" size="405,37" group="n16_jm8l"/>
-    <text id="n7_7slt" name="tfSearch" xy="15,76" size="399,27" group="n16_jm8l" input="true" prompt="请输入搜索内容&#xD;" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" text=""/>
+    <image id="n5_7slt" name="n5" src="80ab9b" fileName="ideCommon/img/img_ide_cm_ssk.png" xy="12,70" size="409,37" group="n16_jm8l"/>
+    <text id="n7_7slt" name="tfSearch" xy="15,76" size="401,27" group="n16_jm8l" input="true" prompt="请输入搜索内容&#xD;" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" text=""/>
     <image id="n20_inuq" name="n20" src="80ab8a" fileName="create/img/icon_cre_sck.png" xy="18,13" size="29,29" group="n16_jm8l"/>
     <text id="n21_inuq" name="n21" xy="59,16" size="65,24" group="n16_jm8l" fontSize="20" color="#333333" text="素材库"/>
     <component id="n3_7slt" name="btnFold" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="377,2" size="48,48" group="n16_jm8l">
       <Button icon="ui://ti9jag5t80ab8y" controller="ctrlState" page="0"/>
     </component>
-    <group id="n16_jm8l" name="grpOpen" xy="0,0" size="430,1080" advanced="true">
+    <group id="n16_jm8l" name="grpOpen" xy="0,0" size="430,1079" advanced="true">
       <gearDisplay controller="ctrlState" pages="1"/>
     </group>
     <image id="n26_inuq" name="n26" src="xba67o" fileName="ideCommon/img/img_ide_cm_7.png" xy="0,0" size="126,1079" group="n25_inuq">

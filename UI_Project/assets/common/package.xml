@@ -7,16 +7,16 @@
     <component id="qn8oa" name="CommonModal.xml" path="/old/com/" exported="true"/>
     <component id="qn8ob" name="CommonBubbleText.xml" path="/old/com/" exported="true"/>
     <component id="qn8od" name="btnCommon.xml" path="/old/btn/" exported="true"/>
-    <component id="cnpnf" name="CommonToast.xml" path="/old/com/" exported="true"/>
-    <component id="hxf8g" name="CommonAlert.xml" path="/old/com/" exported="true"/>
+    <component id="cnpnf" name="CommonToast.xml" path="/com/" exported="true"/>
+    <component id="hxf8g" name="CommonAlert.xml" path="/com/" exported="true"/>
     <image id="d30ci" name="img_common_prompt.png" path="/old/newImg/" exported="true" scale="9grid" scale9grid="216,0,31,26"/>
     <component id="ar63j" name="CommonInputAlert.xml" path="/old/com/" exported="true"/>
     <image id="q8x4j" name="img_line_on.png" path="/old/newImg/"/>
     <image id="q8x4k" name="bg_common_1.png" path="/old/newImg/"/>
     <image id="q8x4m" name="img_line_off.png" path="/old/newImg/"/>
     <component id="q8x4n" name="btnFixNoEffect.xml" path="/btn/" exported="true"/>
-    <component id="q8x4o" name="CommonReconnect.xml" path="/old/com/" exported="true"/>
-    <component id="q8x4q" name="CommonLoading.xml" path="/old/com/" exported="true"/>
+    <component id="q8x4o" name="CommonReconnect.xml" path="/com/" exported="true"/>
+    <component id="q8x4q" name="CommonLoading.xml" path="/com/" exported="true"/>
     <image id="exp3s" name="img_lineloading_back.png" path="/old/newImg/"/>
     <component id="lt5g17" name="ToolTipOperaBagItem.xml" path="/old/com/" exported="true"/>
     <image id="efrs1k" name="bg_cm_1.png" path="/old/newImg/" exported="true" scale="9grid" scale9grid="28,57,56,18"/>
@@ -545,9 +545,9 @@
     <image id="oiqdcyigy" name="img_cm_szk.png" path="/img/" exported="true"/>
     <image id="oiqdcyigz" name="img_cm_wpx_1.png" path="/img/" exported="true"/>
     <image id="oiqdcyih0" name="img_cm_wpx_2.png" path="/img/" exported="true"/>
-    <image id="oiqdcyih1" name="btn_cm_blue.png" path="/img/" exported="true"/>
+    <image id="oiqdcyih1" name="btn_cm_blue.png" path="/img/" exported="true" scale="9grid" scale9grid="30,11,60,22"/>
     <image id="oiqdcyih2" name="btn_cm_gb.png" path="/img/" exported="true"/>
-    <image id="oiqdcyih3" name="btn_cm_yellow.png" path="/img/" exported="true"/>
+    <image id="oiqdcyih3" name="btn_cm_yellow.png" path="/img/" exported="true" scale="9grid" scale9grid="30,11,60,22"/>
     <image id="oiqdcyih4" name="img_cm_1.png" path="/img/" exported="true" scale="9grid" scale9grid="25,25,50,50"/>
     <image id="oiqdcyih5" name="img_cm_2.png" path="/img/" exported="true"/>
     <image id="oiqdcyih6" name="img_cm_3.png" path="/img/" exported="true" scale="9grid" scale9grid="20,15,40,30"/>
@@ -555,8 +555,58 @@
     <component id="gz74cyih8" name="labTextVScroll.xml" path="/lab/" exported="true"/>
     <component id="gz74cyih9" name="labInputTextVScroll.xml" path="/lab/" exported="true"/>
     <component id="8qqicyiha" name="LabWinTitle.xml" path="/com/" exported="true"/>
-    <image id="8qqicyihb" name="icon_mapt_map_2.png" path="/img/"/>
+    <image id="8qqicyihb" name="icon_mapt_map_2.png" path="/img/" exported="true"/>
     <image id="8qqicyihc" name="img_cm_bottom_1.png" path="/img/" exported="true" scale="9grid" scale9grid="30,30,60,60"/>
+    <image id="eggjcyihd" name="btn_cm_off.png" path="/img/" exported="true"/>
+    <image id="eggjcyihe" name="btn_cm_on.png" path="/img/" exported="true"/>
+    <image id="eggjcyihf" name="btn_cm_red.png" path="/img/" exported="true" scale="9grid" scale9grid="30,11,60,22"/>
+    <image id="eggjcyihg" name="icon_cm_set.png" path="/img/" exported="true"/>
+    <image id="eggjcyihh" name="img_cm_line.png" path="/img/" exported="true" scale="9grid" scale9grid="8,0,14,3"/>
+    <image id="eggjcyihi" name="img_cm_szt_1.png" path="/img/" exported="true" scale="9grid" scale9grid="8,0,14,12"/>
+    <image id="eggjcyihj" name="img_cm_szt_2.png" path="/img/" exported="true" scale="9grid" scale9grid="8,0,14,12"/>
+    <image id="eggjcyihk" name="img_cm_szt_3.png" path="/img/" exported="true"/>
+    <image id="eggjcyihl" name="img_cm_szt_4.png" path="/img/" exported="true" scale="9grid" scale9grid="8,0,14,12"/>
+    <image id="eggjcyihm" name="img_cm_szt_5.png" path="/img/" exported="true" scale="9grid" scale9grid="8,0,14,12"/>
+    <image id="eggjcyihn" name="img_cm_szt_6.png" path="/img/" exported="true"/>
+    <image id="eggjcyiho" name="img_cm_top_1.png" path="/img/" exported="true" scale="9grid" scale9grid="20,21,40,24"/>
+    <image id="eggjcyihp" name="img_cm_xlk_1.png" path="/img/" exported="true" scale="9grid" scale9grid="43,22,86,44"/>
+    <image id="eggjcyihq" name="img_cm_xlk_2.png" path="/img/" exported="true" scale="9grid" scale9grid="43,10,86,20"/>
+    <image id="eggjcyihr" name="img_cm_xlk_3.png" path="/img/" exported="true" scale="9grid" scale9grid="43,10,86,20"/>
+    <image id="eggjcyihs" name="img_cm_srk_1.png" path="/img/" exported="true" scale="9grid" scale9grid="15,10,30,20"/>
+    <image id="eggjcyiht" name="img_cm_srk_2.png" path="/img/" exported="true" scale="9grid" scale9grid="15,10,30,20"/>
+    <image id="eggjcyihu" name="img_cm_srk_3.png" path="/img/" exported="true" scale="9grid" scale9grid="5,5,50,30"/>
+    <image id="eggjcyihv" name="img_cm_xlk_4.png" path="/img/" exported="true" scale="9grid" scale9grid="30,30,60,60"/>
+    <image id="eggjcyihw" name="img_cm_xlk_5.png" path="/img/" exported="true" scale="9grid" scale9grid="30,10,60,20"/>
+    <image id="nvqacyihy" name="img_cm_top_2.png" path="/img/" exported="true" scale="9grid" scale9grid="20,15,40,30"/>
+    <image id="gup1cyihx" name="btn_cm_gray.png" path="/img/" exported="true" scale="9grid" scale9grid="8,6,84,26"/>
+    <component id="gup1cyihy" name="btnImg.xml" path="/btn/" exported="true"/>
+    <image id="c1h7cyihz" name="btn_cm_fd.png" path="/img/" exported="true"/>
+    <image id="c1h7cyii0" name="btn_cm_green.png" path="/img/" exported="true"/>
+    <image id="c1h7cyii1" name="btn_cm_sx.png" path="/img/" exported="true"/>
+    <image id="c1h7cyii2" name="icon_cm_avatar.png" path="/img/" exported="true"/>
+    <image id="c1h7cyii3" name="icon_cm_plus.png" path="/img/" exported="true"/>
+    <image id="c1h7cyii4" name="icon_xl_1.png" path="/img/" exported="true"/>
+    <image id="c1h7cyii5" name="icon_xl_2.png" path="/img/" exported="true"/>
+    <image id="c1h7cyii6" name="icon_xl_3.png" path="/img/" exported="true"/>
+    <image id="c1h7cyii7" name="icon_xl_4.png" path="/img/" exported="true"/>
+    <image id="c1h7cyii8" name="img_cm_blank.png" path="/img/" exported="true"/>
+    <image id="c1h7cyii9" name="img_cm_gdt.png" path="/img/" exported="true"/>
+    <image id="c1h7cyiia" name="img_cm_top_3.png" path="/img/" exported="true" scale="9grid" scale9grid="20,14,40,28"/>
+    <image id="c1h7cyiib" name="img_cm_zz.png" path="/img/" exported="true"/>
+    <component id="kt9nt99" name="SaveTemplateAlert.xml" path="/com/" exported="true"/>
+    <image id="umtscyiic" name="btn_cm_left.png" path="/img/" exported="true"/>
+    <image id="umtscyiid" name="btn_cm_right.png" path="/img/" exported="true"/>
+    <image id="umtscyiie" name="icon_cm_c.png" path="/img/" exported="true"/>
+    <image id="umtscyiif" name="icon_cm_caveat.png" path="/img/" exported="true"/>
+    <image id="umtscyiig" name="icon_cm_d.png" path="/img/" exported="true"/>
+    <image id="umtscyiih" name="img_cm_load.png" path="/img/" exported="true"/>
+    <image id="umtscyiii" name="img_cm_tck_2.png" path="/img/" exported="true" scale="9grid" scale9grid="240,11,20,22"/>
+    <image id="umtscyiik" name="img_cm_zzdt.png" path="/img/" exported="true"/>
+    <image id="j595cyiic" name="img_cm_tkc_1.png" path="/img/" exported="true" scale="9grid" scale9grid="8,8,44,44"/>
+    <component id="j595cyiid" name="barCm3.xml" path="/com/" exported="true"/>
+    <component id="dv1icyiim" name="ComInput.xml" path="/com/" exported="true"/>
+    <component id="orntcyiin" name="CommonWarn.xml" path="/com/" exported="true"/>
+    <component id="edzwcyiio" name="CommonSmallLoading.xml" path="/com/" exported="true"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>

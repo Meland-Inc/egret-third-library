@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" designImage="ui://thvmj7vodv1icyiil">
+  <controller name="state" pages="0,reconnect,1,fail,2,success" selected="2"/>
+  <displayList>
+    <image id="n12_ornt" name="imgBg" src="j595cyiic" fileName="img/img_cm_tkc_1.png" xy="770,420" size="380,240" group="n13_ornt"/>
+    <image id="n6_exp3" name="success" src="umtscyiig" fileName="img/icon_cm_d.png" xy="935,529" group="n13_ornt">
+      <gearDisplay controller="state" pages="2"/>
+    </image>
+    <image id="n5_exp3" name="fail" src="umtscyiie" fileName="img/icon_cm_c.png" xy="935,529" group="n13_ornt">
+      <gearDisplay controller="state" pages="1"/>
+    </image>
+    <text id="n3_q8x4" name="tfContent" xy="785,486" size="345,81" group="n13_ornt" fontSize="24" color="#333333" align="center" autoSize="none" autoClearText="true" text="重新连接失败次数过多，将返回登录界面！"/>
+    <component id="n9_v0n2" name="btnConfirm" src="gpm0i4h" fileName="btn/btnScale.xml" xy="889,592" size="140,44" group="n13_ornt">
+      <Button title="重新选择" titleColor="#ffffff" titleFontSize="24" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <group id="n13_ornt" name="n13" xy="770,420" size="380,240" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

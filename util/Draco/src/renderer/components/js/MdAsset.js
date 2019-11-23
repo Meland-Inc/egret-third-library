@@ -26,7 +26,9 @@ const groupFile = {
   'common_atlas0.png': 'login',
   'common_atlas1.png': 'login',
   'login.fui': 'login',
-  'login_atlas0.png': 'login'
+  'login_atlas0.png': 'login',
+  'createRole.fui': 'login',
+  'createRole_atlas0.png': 'login',
 }
 
 const sheetArr = ['sheet', 'regSheet'];
