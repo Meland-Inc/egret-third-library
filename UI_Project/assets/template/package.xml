@@ -16,13 +16,12 @@
     <component id="iv93c" name="BtnSelectMapIcon.xml" path="/old/btn/"/>
     <image id="iv93d" name="img_stencil_dt_6.png" path="/old/img/" scale="9grid" scale9grid="32,25,64,50"/>
     <image id="iv93e" name="img_stencil_fm_1.png" path="/old/img/" scale="9grid" scale9grid="38,7,76,14"/>
-    <component id="iv93f" name="ComMapTemplateList.xml" path="/old/com/" exported="true"/>
+    <component id="iv93f" name="ComMapTemplateListOld.xml" path="/old/com/" exported="true"/>
     <image id="iv93g" name="img_cm_bg_dk_1.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="31,23,62,46"/>
     <component id="iv93h" name="comMapTemplateDetail.xml" path="/old/com/"/>
     <image id="iv93i" name="img_cm_xxk_1.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="43,41,86,82"/>
     <component id="iv93j" name="btnFix.xml" path="/old/btn/" exported="true"/>
     <image id="iv93k" name="btn_cm_1_red.png" path="/old/newImg/" exported="true"/>
-    <sound id="iv93l" name="close.wav" path="/old/" exported="true"/>
     <image id="iv93m" name="btn_cm_an_2.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="27,9,54,18"/>
     <image id="iv93n" name="btn_cm_an_3.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="27,10,54,20"/>
     <component id="iv93o" name="ComDetailContainer.xml" path="/old/com/"/>
@@ -30,7 +29,6 @@
     <image id="iv93q" name="img_cm_bjtb_2.png" path="/old/imgB/" exported="true"/>
     <image id="iv93r" name="img_stencil_c_1.png" path="/old/img/"/>
     <component id="iv93s" name="btnScale.xml" path="/old/btn/" exported="true"/>
-    <sound id="iv93t" name="buttonTouch.wav" path="/old/" exported="true"/>
     <component id="iv93u" name="tbtnFix.xml" path="/old/btn/" exported="true"/>
     <image id="iv93v" name="btn_cm_sfl_2.png" path="/old/imgB/" exported="true"/>
     <image id="iv93w" name="btn_cm_sfl_1.png" path="/old/imgB/" exported="true"/>
@@ -49,7 +47,7 @@
     <component id="iv9319" name="ScrollBarV_gripB.xml" path="/old/sld/"/>
     <image id="iv931a" name="img_stencil_gdt.png" path="/old/img/" scale="9grid" scale9grid="2,6,4,86"/>
     <image id="iv931b" name="我的地图-我创建的(1).png" path="/old/template/"/>
-    <component id="iv931c" name="comMapTemplateLobby.xml" path="/old/com/"/>
+    <component id="iv931c" name="comMapTemplateLobbyOld.xml" path="/old/com/"/>
     <component id="iv931d" name="comRoom.xml" path="/old/com/"/>
     <image id="iv931e" name="img_stencil_fj_1.png" path="/old/img/" scale="9grid" scale9grid="26,12,52,24"/>
     <component id="iv931f" name="ScrollBarVB.xml" path="/old/com/" exported="true"/>
@@ -99,7 +97,7 @@
     <component id="iv932n" name="prbUpdate.xml" path="/old/prb/"/>
     <image id="iv932o" name="img_cm_dtgj_6.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="22,4,44,8"/>
     <image id="iv932p" name="img_cm_dtgj_7.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="22,4,44,8"/>
-    <component id="iv932q" name="WinMapTemplate.xml" path="/old/win/" exported="true"/>
+    <component id="iv932q" name="WinMapTemplateOld.xml" path="/old/win/" exported="true"/>
     <component id="iv932r" name="comCommonWinBgSimplified.xml" path="/old/com/" exported="true"/>
     <image id="iv932s" name="bg_cm_1.png" path="/old/imgB/" exported="true"/>
     <image id="iv932t" name="img_cm__bg_cbl_1.png" path="/old/imgB/" exported="true"/>
@@ -122,7 +120,7 @@
     <image id="iv933a" name="img_cm_dtgj_4.png" path="/old/imgB/" exported="true"/>
     <image id="iv933b" name="img_cm_dtgj_5.png" path="/old/imgB/" exported="true"/>
     <image id="iv933c" name="地图工具-对应图2.png" path="/old/template/"/>
-    <component id="8qqi3d" name="WinMapTemplate.xml" path="/win/"/>
+    <component id="8qqi3d" name="WinMapTemplate.xml" path="/win/" exported="true"/>
     <image id="8qqi3e" name="icon_mapt_dz_1.png" path="/img/"/>
     <image id="8qqi3f" name="icon_mapt_dz_2.png" path="/img/"/>
     <image id="8qqi3g" name="icon_mapt_map_2.png" path="/img/"/>
@@ -132,6 +130,20 @@
     <image id="8qqi3k" name="img_mapt_lab_2.png" path="/img/"/>
     <image id="8qqi3l" name="btn_cm_gb.png" path="/old/imgB/" exported="true"/>
     <component id="8qqi3m" name="btnViewStatus.xml" path="/btn/"/>
+    <component id="pz1n3n" name="ComMapTemplateList.xml" path="/com/"/>
+    <component id="pz1n3o" name="btnTemplateType.xml" path="/btn/"/>
+    <component id="pz1n3q" name="BtnMapTemplateItemDetail.xml" path="/btn/"/>
+    <component id="pz1n3r" name="comTemplateSelector.xml" path="/com/"/>
+    <component id="pz1n3s" name="BtnMapTemplateItem.xml" path="/btn/"/>
+    <component id="pz1n3t" name="ComAutoClipLad.xml" path="/com/" exported="true"/>
+    <image id="pz1n3u" name="img_mapT_cjtd.png" path="/img/"/>
+    <component id="pz1n3v" name="ComEditTemplate.xml" path="/com/"/>
+    <image id="pz1n3w" name="icon_mapT_bj.png" path="/img/"/>
+    <component id="ra2b3x" name="WinMapTemplateIconSelect.xml" path="/win/" exported="true"/>
+    <component id="ra2b3y" name="comMapTemplateLobby.xml" path="/com/"/>
+    <component id="ra2b3z" name="spCreateRoom.xml" path="/sprite/"/>
+    <component id="ra2b41" name="comRoom.xml" path="/com/"/>
+    <component id="ra2b42" name="ComCreateTemplate.xml" path="/com/"/>
   </resources>
-  <publish name=""/>
+  <publish name="template"/>
 </packageDescription>

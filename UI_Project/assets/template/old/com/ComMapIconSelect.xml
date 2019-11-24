@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" designImage="ui://0axy98cgiv932g" designImageAlpha="100">
+<component size="1136,640" designImage="ui://0axy98cgiv932g" designImageAlpha="0">
   <displayList>
-    <image id="n0_er8n" name="imgBg" src="iv932c" fileName="img/img_stencil_fm_2.png" xy="336,149" size="604,399"/>
-    <text id="n1_er8n" name="tfTitle" xy="599,156" size="81,24" fontSize="18" color="#ffffff" align="center" vAlign="middle" bold="true" text="封面设置"/>
-    <text id="n2_er8n" name="tf" xy="346,203" size="61,20" fontSize="14" color="#365989" align="center" vAlign="middle" text="地图封面"/>
+    <image id="n0_er8n" name="imgBg" src="iv932c" fileName="old/img/img_stencil_fm_2.png" xy="336,149" size="604,399"/>
+    <text id="n1_er8n" name="tfTitle" xy="599,156" size="81,22" fontSize="18" color="#ffffff" align="center" vAlign="middle" bold="true" text="封面设置"/>
+    <text id="n2_er8n" name="tf" xy="346,203" size="61,18" fontSize="14" color="#365989" align="center" vAlign="middle" text="地图封面"/>
     <list id="n3_er8n" name="lstIcons" xy="504,201" size="431,296" locked="true" layout="flow_hz" overflow="scroll" scrollBarFlags="4" margin="2,0,0,0" scrollBarRes="ui://0axy98cgiv9318," lineGap="8" colGap="8" defaultItem="ui://0axy98cgiv939">
       <item/>
       <item/>
@@ -15,17 +15,17 @@
       <item/>
       <item/>
     </list>
-    <image id="n4_er8n" name="img" src="iv932d" fileName="img/img_stencil_fm_4.png" xy="490,185" size="7,316"/>
-    <image id="n5_er8n" name="img" src="iv932e" fileName="img/img_stencil_fm_3.png" xy="335,498" size="606,7"/>
-    <image id="n10_er8n" name="mapBg" src="iv93d" fileName="img/img_stencil_dt_6.png" xy="350,262" size="126,94"/>
-    <component id="n6_er8n" name="ladSelectIcon" src="iv937" fileName="com/ComAutoClipLad.xml" xy="349,261" size="128,96" touchable="false"/>
-    <component id="n8_er8n" name="btn" src="iv9313" fileName="btn/btnFixClickArea.xml" xy="367,456" size="85,31">
+    <image id="n4_er8n" name="img" src="iv932d" fileName="old/img/img_stencil_fm_4.png" xy="490,185" size="7,316"/>
+    <image id="n5_er8n" name="img" src="iv932e" fileName="old/img/img_stencil_fm_3.png" xy="335,498" size="606,7"/>
+    <image id="n10_er8n" name="mapBg" src="iv93d" fileName="old/img/img_stencil_dt_6.png" xy="350,262" size="126,94"/>
+    <component id="n6_er8n" name="ladSelectIcon" src="iv937" fileName="old/com/ComAutoClipLad.xml" xy="349,261" size="128,96" touchable="false"/>
+    <component id="n8_er8n" name="btn" src="iv9313" fileName="old/btn/btnFixClickArea.xml" xy="367,456" size="85,31">
       <Button icon="ui://0axy98cgiv932f"/>
     </component>
-    <component id="n7_er8n" name="btnConfirm" src="iv9313" fileName="btn/btnFixClickArea.xml" xy="593,505">
+    <component id="n7_er8n" name="btnConfirm" src="iv9313" fileName="old/btn/btnFixClickArea.xml" xy="593,505">
       <Button title="确定" titleColor="#ffffff" icon="ui://0axy98cgiv93m"/>
     </component>
-    <component id="n9_er8n" name="btnCancel" src="iv93j" fileName="btn/btnFix.xml" xy="720,507" size="106,37">
+    <component id="n9_er8n" name="btnCancel" src="iv93j" fileName="old/btn/btnFix.xml" xy="720,507" size="106,37">
       <Button title="取消" icon="ui://0axy98cgiv93n" page="0"/>
     </component>
   </displayList>
