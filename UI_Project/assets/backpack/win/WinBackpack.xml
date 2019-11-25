@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1920,1080" designImage="ui://48p8y12ay8jug" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
+<component size="1920,1080" designImage="ui://48p8y12ay8jug" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlStatus" pages="0,useItem,1,selectItem" selected="1"/>
   <displayList>
     <image id="n8_oiqd" name="imgTopBg" src="oiqdcyigw" fileName="img/img_cm_7.png" pkg="te1gxawo" xy="0,0" size="1920,56">
       <relation target="" sidePair="width-width"/>
     </image>
     <component id="n30_8qqi" name="labTitle" src="8qqicyiha" fileName="com/LabWinTitle.xml" pkg="te1gxawo" xy="21,0">
-      <Label title="背包" icon="ui://48p8y12ay8ju1"/>
+      <Label title="选择物品" icon="ui://48p8y12ay8ju1"/>
     </component>
-    <component id="n9_oiqd" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1864,8" size="43,47">
+    <component id="n9_oiqd" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1859,8" size="48,48">
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://te1gxawooiqdcyih2"/>
     </component>
-    <list id="n10_oiqd" name="lstEquipItem" xy="89,155" size="102,651" group="n28_n173" overflow="scroll" lineGap="10" defaultItem="ui://48p8y12aoiqdh">
+    <list id="n10_oiqd" name="lstEquipItem" xy="91,156" size="102,651" group="n31_ibv1" overflow="scroll" lineGap="10" defaultItem="ui://48p8y12aoiqdh">
       <item icon="ui://48p8y12ay8ju4"/>
       <item icon="ui://48p8y12ay8ju6"/>
       <item icon="ui://48p8y12ay8ju2"/>
@@ -19,18 +20,22 @@
       <item icon="ui://48p8y12ay8ju3"/>
       <item icon="ui://48p8y12ay8ju7"/>
     </list>
-    <image id="n11_bzo2" name="imgNameBg" src="y8ju8" fileName="img/img_bac_1.png" xy="206,155" group="n28_n173"/>
-    <text id="n12_bzo2" name="tfRoleName" xy="206,171" size="484,24" group="n28_n173" fontSize="20" color="#333333" align="center" autoSize="none" text="千与千寻千寻哦"/>
-    <component id="n13_tvlf" name="comAvatarCtnr" src="tvlfcyih7" fileName="com/ComEmpty.xml" pkg="te1gxawo" xy="435,784" group="n28_n173" scale="2.5,2.5"/>
-    <image id="n18_e8s1" name="imgListBg" src="oiqdcyih4" fileName="img/img_cm_1.png" pkg="te1gxawo" xy="697,167" size="1131,586" group="n28_n173"/>
-    <image id="n15_tvlf" name="imgListTitleBg" src="oiqdcyih6" fileName="img/img_cm_3.png" pkg="te1gxawo" xy="697,114" size="1130,58" group="n28_n173"/>
-    <text id="n14_tvlf" name="tfNum" xy="714,134" size="95,24" group="n28_n173" fontSize="20" color="#333333" align="center" vars="true" text="背包 [{num=10}]"/>
-    <list id="n16_tvlf" name="lstBagType" xy="938,122" size="655,48" group="n28_n173" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="128" colGap="13" defaultItem="ui://48p8y12atvlfi">
+    <image id="n11_bzo2" name="imgNameBg" src="y8ju8" fileName="img/img_bac_1.png" xy="208,156" group="n31_ibv1"/>
+    <text id="n12_bzo2" name="tfRoleName" xy="208,174" size="484,24" group="n31_ibv1" fontSize="20" color="#333333" align="center" autoSize="none" text="千与千寻千寻哦"/>
+    <component id="n13_tvlf" name="comAvatarCtnr" src="tvlfcyih7" fileName="com/ComEmpty.xml" pkg="te1gxawo" xy="437,785" group="n31_ibv1" scale="2.5,2.5"/>
+    <group id="n31_ibv1" name="grpAvatar" xy="91,156" size="601,651" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlStatus" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <image id="n18_e8s1" name="imgListBg" src="oiqdcyih4" fileName="img/img_cm_1.png" pkg="te1gxawo" xy="394,273" size="1131,586" group="n32_ibv1"/>
+    <image id="n15_tvlf" name="imgListTitleBg" src="oiqdcyih6" fileName="img/img_cm_3.png" pkg="te1gxawo" xy="394,220" size="1130,58" group="n32_ibv1"/>
+    <text id="n14_tvlf" name="tfNum" xy="411,240" size="95,24" group="n32_ibv1" fontSize="20" color="#333333" align="center" vars="true" text="背包 [{num=10}]"/>
+    <list id="n16_tvlf" name="lstBagType" xy="634,228" size="655,48" group="n32_ibv1" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="128" colGap="13" defaultItem="ui://48p8y12atvlfi">
       <item/>
     </list>
-    <image id="n26_vkix" name="imgSearchBg" src="oiqdcyigx" fileName="img/img_cm_ssk.png" pkg="te1gxawo" xy="1597,124" size="210,38" group="n28_n173"/>
-    <text id="n25_vkix" name="tfSearch" xy="1608,124" size="196,38" group="n28_n173" input="true" prompt="请输入搜索内容" fontSize="18" vAlign="middle" autoSize="none" singleLine="true" text=""/>
-    <list id="n17_e8s1" name="lstBagItem" xy="717,192" size="1098,547" group="n28_n173" layout="flow_hz" overflow="scroll" lineGap="10" colGap="10" defaultItem="ui://48p8y12ae8s1j" autoClearItems="true">
+    <image id="n26_vkix" name="imgSearchBg" src="oiqdcyigx" fileName="img/img_cm_ssk.png" pkg="te1gxawo" xy="1293,230" size="210,38" group="n32_ibv1"/>
+    <text id="n25_vkix" name="tfSearch" xy="1304,231" size="196,38" group="n32_ibv1" input="true" prompt="请输入搜索内容" fontSize="18" vAlign="middle" autoSize="none" singleLine="true" text=""/>
+    <list id="n17_e8s1" name="lstBagItem" xy="414,298" size="1098,547" group="n32_ibv1" layout="flow_hz" overflow="scroll" lineGap="10" colGap="10" defaultItem="ui://48p8y12ae8s1j" autoClearItems="true">
       <item/>
       <item/>
       <item/>
@@ -40,17 +45,6 @@
       <item/>
       <item/>
       <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-    </list>
-    <image id="n19_e8s1" name="imgShortcutBg" src="oiqdcyih4" fileName="img/img_cm_1.png" pkg="te1gxawo" xy="697,818" size="1130,120" group="n28_n173"/>
-    <list id="n20_e8s1" name="lstShortcut" xy="717,828" size="880,100" group="n28_n173" layout="row" scroll="horizontal" colGap="10" defaultItem="ui://48p8y12ae8s1j">
       <item/>
       <item/>
       <item/>
@@ -60,11 +54,27 @@
       <item/>
       <item/>
     </list>
-    <text id="n22_e8s1" name="tfShortcutTitle" xy="714,785" size="105,24" group="n28_n173" fontSize="20" color="#333333" align="center" text="背包快捷栏"/>
-    <component id="n24_e8s1" name="btnArrange" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1649,857" size="121,45" group="n28_n173">
+    <group id="n32_ibv1" name="grpBackpack" xy="394,220" size="1131,639" advanced="true" collapsed="true">
+      <gearXY controller="ctrlStatus" pages="0,1" values="698,115|394,220"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <text id="n22_e8s1" name="tfShortcutTitle" xy="715,786" size="105,24" group="n33_ibv1" fontSize="20" color="#333333" align="center" text="背包快捷栏"/>
+    <image id="n19_e8s1" name="imgShortcutBg" src="oiqdcyih4" fileName="img/img_cm_1.png" pkg="te1gxawo" xy="698,819" size="1130,120" group="n33_ibv1"/>
+    <list id="n20_e8s1" name="lstShortcut" xy="718,829" size="880,100" group="n33_ibv1" layout="row" scroll="horizontal" colGap="10" defaultItem="ui://48p8y12ae8s1j">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n24_e8s1" name="btnArrange" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1649,877" size="120,44" group="n33_ibv1">
       <Button title="整理" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <group id="n28_n173" name="mainContent" xy="88,114" size="1739,824" advanced="true">
+    <group id="n33_ibv1" name="grpShortcut" xy="698,786" size="1130,153" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlStatus" pages="0"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>

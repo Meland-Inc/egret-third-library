@@ -104,6 +104,7 @@
     <image id="fv5t2s" name="img_map_zbx_1.png" path="/img/"/>
     <image id="fv5t2t" name="img_map_zbx_2.png" path="/img/"/>
     <image id="fv5t2u" name="img_map_zbx_3.png" path="/img/"/>
+    <component id="ibv12v" name="ComAreaMark.xml" path="/com/" exported="true"/>
   </resources>
   <publish name="minimap"/>
 </packageDescription>
