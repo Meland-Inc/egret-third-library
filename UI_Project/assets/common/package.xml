@@ -614,7 +614,7 @@
     <image id="gyoucyij0" name="img_cm_lab_1.png" path="/img/" exported="true"/>
     <image id="gyoucyij3" name="img_cm_lab_2.png" path="/img/"/>
     <image id="k3wpcyiiy" name="icon_cm_prompt.png" path="/img/" exported="true"/>
-    <image id="k3wpcyiiz" name="img_cm_cbd.png" path="/img/" exported="true"/>
+    <image id="k3wpcyiiz" name="img_cm_cbd.png" path="/img/" exported="true" scale="9grid" scale9grid="8,8,44,44"/>
     <image id="k3wpcyij0" name="img_cm_gdt_1.png" path="/img/" exported="true"/>
   </resources>
   <publish name="common" npot="true">
