@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1920,1080" designImage="ui://thvmj7vomquwx" designImageAlpha="0" designImageLayer="1">
+<component size="1920,1080" designImage="ui://thvmj7vomquwk" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlViewStatus" pages="0,all,1,self,2,create" selected="0">
     <action type="change_page" fromPage="" toPage="0" objectId="n16_pz1n" controller="ctrlTemplateType" targetPage="3"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n16_pz1n" controller="ctrlTemplateType" targetPage="0"/>
   </controller>
-  <controller name="ctrlRightDetail" pages="2,empty,0,edit,1,lobby" selected="0"/>
+  <controller name="ctrlRightDetail" pages="2,empty,0,edit,1,lobby" selected="2"/>
   <displayList>
     <image id="n5_8qqi" name="imgHeaderBg" src="oiqdcyih6" fileName="img/img_cm_3.png" pkg="te1gxawo" xy="111,30" size="1780,68" group="n20_ra2b"/>
     <image id="n8_8qqi" name="imgMainBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="111,88" size="1780,942" group="n20_ra2b"/>
+    <image id="n26_lmgf" name="imgRightBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="1463,118" size="400,881" group="n20_ra2b"/>
     <component id="n4_8qqi" name="labTitle" src="8qqicyiha" fileName="com/LabWinTitle.xml" pkg="te1gxawo" xy="41,30" group="n20_ra2b">
       <Label title="模板创作"/>
     </component>
@@ -35,13 +36,15 @@
     <component id="n21_ra2b" name="comLobby" src="ra2b3y" fileName="com/comMapTemplateLobby.xml" xy="1463,118" group="n24_ra2b">
       <gearDisplay controller="ctrlRightDetail" pages="1"/>
     </component>
-    <image id="n22_ra2b" name="imgEmpty" src="c1h7cyii8" fileName="img/img_cm_blank.png" pkg="te1gxawo" xy="1573,512" group="n24_ra2b">
+    <image id="n22_ra2b" name="imgEmpty" src="c1h7cyii8" fileName="img/img_cm_blank.png" pkg="te1gxawo" xy="1573,453" group="n27_lmgf"/>
+    <text id="n25_lmgf" name="tfNoInfo" xy="1621,629" size="86,24" group="n27_lmgf" fontSize="20" color="#999999" text="暂无信息"/>
+    <group id="n27_lmgf" name="grpEmpty" xy="1573,453" size="180,200" group="n24_ra2b" advanced="true">
       <gearDisplay controller="ctrlRightDetail" pages="2"/>
-    </image>
+    </group>
     <group id="n24_ra2b" name="grpTemplateInfo" xy="31,118" size="1833,882" group="n20_ra2b" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlViewStatus" pages="0,1"/>
     </group>
-    <group id="n20_ra2b" name="root" xy="31,30" size="1860,1000" advanced="true" collapsed="true">
+    <group id="n20_ra2b" name="root" xy="31,30" size="1860,1000" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>
