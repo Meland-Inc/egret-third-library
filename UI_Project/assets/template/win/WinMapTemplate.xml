@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://thvmj7vomquwk" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlViewStatus" pages="0,all,1,self,2,create" selected="0">
+  <controller name="ctrlViewStatus" pages="0,all,1,self,2,create" selected="2">
     <action type="change_page" fromPage="" toPage="0" objectId="n16_pz1n" controller="ctrlTemplateType" targetPage="3"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n16_pz1n" controller="ctrlTemplateType" targetPage="0"/>
   </controller>
@@ -8,7 +8,9 @@
   <displayList>
     <image id="n5_8qqi" name="imgHeaderBg" src="oiqdcyih6" fileName="img/img_cm_3.png" pkg="te1gxawo" xy="111,30" size="1780,68" group="n20_ra2b"/>
     <image id="n8_8qqi" name="imgMainBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="111,88" size="1780,942" group="n20_ra2b"/>
-    <image id="n26_lmgf" name="imgRightBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="1463,118" size="400,881" group="n20_ra2b"/>
+    <image id="n26_lmgf" name="imgRightBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="1463,118" size="400,881" group="n20_ra2b">
+      <gearDisplay controller="ctrlViewStatus" pages="0,1"/>
+    </image>
     <component id="n4_8qqi" name="labTitle" src="8qqicyiha" fileName="com/LabWinTitle.xml" pkg="te1gxawo" xy="41,30" group="n20_ra2b">
       <Label title="模板创作"/>
     </component>
@@ -20,7 +22,7 @@
     </component>
     <component id="n12_8qqi" name="tbtnAllMap" src="8qqi3m" fileName="btn/btnViewStatus.xml" xy="429,40" group="n20_ra2b">
       <gearDisplay controller="ctrlViewStatus" pages="0,1"/>
-      <Button checked="true" title="地图列表" controller="ctrlViewStatus" page="0"/>
+      <Button title="地图列表" controller="ctrlViewStatus" page="0"/>
     </component>
     <component id="n13_8qqi" name="tbtnMyMap" src="8qqi3m" fileName="btn/btnViewStatus.xml" xy="588,40" group="n20_ra2b">
       <gearDisplay controller="ctrlViewStatus" pages="0,1"/>
@@ -38,10 +40,10 @@
     </component>
     <image id="n22_ra2b" name="imgEmpty" src="c1h7cyii8" fileName="img/img_cm_blank.png" pkg="te1gxawo" xy="1573,453" group="n27_lmgf"/>
     <text id="n25_lmgf" name="tfNoInfo" xy="1621,629" size="86,24" group="n27_lmgf" fontSize="20" color="#999999" text="暂无信息"/>
-    <group id="n27_lmgf" name="grpEmpty" xy="1573,453" size="180,200" group="n24_ra2b" advanced="true">
+    <group id="n27_lmgf" name="grpEmpty" xy="1573,453" size="180,200" group="n24_ra2b" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlRightDetail" pages="2"/>
     </group>
-    <group id="n24_ra2b" name="grpTemplateInfo" xy="31,118" size="1833,882" group="n20_ra2b" advanced="true" collapsed="true">
+    <group id="n24_ra2b" name="grpTemplateInfo" xy="31,118" size="1833,882" group="n20_ra2b" advanced="true">
       <gearDisplay controller="ctrlViewStatus" pages="0,1"/>
     </group>
     <group id="n20_ra2b" name="root" xy="31,30" size="1860,1000" advanced="true">
