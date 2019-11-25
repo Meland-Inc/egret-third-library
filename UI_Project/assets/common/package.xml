@@ -611,8 +611,12 @@
     <component id="pz1ncyiiw" name="ComboBox1_popup.xml" path="/comboBox/combox1/"/>
     <component id="pz1ncyiix" name="ComboBox1.xml" path="/comboBox/combox1/" exported="true"/>
     <image id="k3wpcyiiy" name="icon_cm_prompt.png" path="/img/" exported="true"/>
-    <image id="k3wpcyiiz" name="img_cm_cbd.png" path="/img/" exported="true"/>
+    <image id="k3wpcyiiz" name="img_cm_cbd.png" path="/img/" exported="true" scale="9grid" scale9grid="15,15,30,30"/>
     <image id="k3wpcyij0" name="img_cm_gdt_1.png" path="/img/" exported="true"/>
+    <image id="9c90cyij1" name="img_cm_hline.png" path="/img/" exported="true"/>
+    <image id="9c90cyij2" name="img_cm_lab_1.png" path="/img/" exported="true"/>
+    <image id="9c90cyij3" name="img_cm_lab_2.png" path="/img/" exported="true"/>
+    <image id="9c90cyij4" name="img_cm_xxk.png" path="/img/" exported="true"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>
