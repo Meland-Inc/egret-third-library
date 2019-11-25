@@ -37,7 +37,7 @@
     <text id="n7_er8n" name="inpMapWidth" xy="11,270" size="101,38" group="n19_er8n" input="true" prompt="1920" restrict="0-9" keyboardType="4" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text="1000"/>
     <text id="n8_er8n" name="inpMapHeight" xy="162,270" size="102,40" group="n19_er8n" input="true" prompt="1080" restrict="0-9" keyboardType="4" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text="1000"/>
     <component id="n9_er8n" name="btnUpdateMap" src="iv93s" fileName="old/btn/btnScale.xml" xy="290,272" size="100,37" group="n19_er8n">
-      <Button title="更新尺寸" titleColor="#ffffff" titleFontSize="18" icon="ui://ti9jag5txba67c"/>
+      <Button title="更新尺寸" titleColor="#ffffff" titleFontSize="18" icon="ui://te1gxawooiqdcyih1"/>
     </component>
     <group id="n19_er8n" name="customInput" xy="11,269" size="380,41" advanced="true">
       <gearDisplay controller="ctrlMapSizeStatus" pages="3"/>
