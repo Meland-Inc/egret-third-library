@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" designImage="ui://guylk3knk3wp8x" designImageAlpha="0" designImageLayer="1">
+  <controller name="conShowSendHistory" pages="0,hide,1,show" selected="0"/>
+  <controller name="conShowEmoj" pages="0,hide,1,show" selected="0"/>
+  <controller name="conFrivateChat" pages="0,hide,1,show" selected="0"/>
+  <displayList>
+    <image id="n3_q73n" name="bg" src="k3wp8m" fileName="newImg/bg_cm_1.png" xy="184,98" size="779,456" group="n26_hrgt"/>
+    <image id="n11_q73n" name="chatContentBg" src="k3wp8n" fileName="newImg/img_cm_bottom_4.png" xy="388,153" size="552,369" group="n26_hrgt"/>
+    <component id="n4_q73n" name="btnClose" src="k3wp8o" fileName="btn/btnFixClickArea.xml" xy="924,80" size="72,72" group="n26_hrgt">
+      <Button icon="ui://guylk3knk3wp8p" sound="ui://guylk3knk3wp8"/>
+    </component>
+    <image id="n8_q73n" name="titleBg" src="k3wp8q" fileName="newImg/img_cm_title1.png" xy="476,101" group="n26_hrgt"/>
+    <text id="n9_q73n" name="title" xy="542,108" size="45,32" group="n26_hrgt" fontSize="20" color="#f5ebde" text="聊天"/>
+    <image id="n10_q73n" name="bottomBg" src="k3wp8r" fileName="newImg/img_cm_pattern.png" xy="206,536" size="751,14" group="n26_hrgt"/>
+    <image id="n5_q73n" name="lstBtnBg" src="k3wp8s" fileName="newImg/img_cm_bottom_1.png" xy="215,156" size="166,366" group="n26_hrgt"/>
+    <list id="n6_q73n" name="lstBtnChannel" xy="233,170" size="132,335" group="n26_hrgt" layout="flow_hz" defaultItem="ui://guylk3knk3wp1">
+      <item title="系统" name="system"/>
+      <item title="综合" name="comprehensive"/>
+      <item title="世界" name="world"/>
+      <item title="代码块广播" name="robot"/>
+      <item title="创造" name="create"/>
+      <item title="附近" name="near"/>
+      <item title="私聊" name="private"/>
+    </list>
+    <list id="n12_q73n" name="lstChatContent" xy="402,195" size="520,252" group="n26_hrgt" overflow="scroll" defaultItem="ui://guylk3knk3wpi">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n13_q73n" name="friendNameBg" src="k3wp8t" fileName="newImg/img_cm_name.png" xy="408,164" size="80,22" group="n25_11e02">
+      <relation target="n14_q73n" sidePair="width-width"/>
+    </image>
+    <text id="n14_q73n" name="tfFriendName" xy="408,165" size="82,23" group="n25_11e02" fontSize="14" color="#5b4b37" align="center" vAlign="middle" ubb="true" vars="true" text="与[color=#c88316]{name=xxx}[/color]聊天中"/>
+    <group id="n25_11e02" name="grpFriendChatTitle" xy="408,164" size="81,22" group="n26_hrgt" advanced="true" collapsed="true">
+      <gearDisplay controller="conFrivateChat" pages="1"/>
+    </group>
+    <component id="n15_q73n" name="btnVoice" src="k3wp8u" fileName="btn/btnCommon.xml" xy="404,481" size="54,28" group="n26_hrgt">
+      <Button icon="ui://guylk3knk3wp8h"/>
+    </component>
+    <image id="n16_q73n" name="inputBg" src="k3wp8v" fileName="newImg/img_cm_inputbox_3.png" xy="464,481" size="280,26" group="n26_hrgt"/>
+    <text id="n17_q73n" name="inpSendText" xy="470,477" size="244,35" group="n26_hrgt" input="true" prompt="[size=14]点击输入文字...[/size]" maxLength="200" fontSize="14" color="#9b8e72" vAlign="middle" autoSize="none" singleLine="true" text=""/>
+    <image id="n22_q73n" name="emojBg" src="k3wp8k" fileName="imgNew/img_chat_emoji.png" xy="466,318" size="327,191" group="n24_q73n"/>
+    <list id="n23_q73n" name="lstBtnEmoj" xy="468,320" size="323,148" group="n24_q73n" layout="flow_hz" overflow="scroll" lineGap="2" colGap="2" defaultItem="ui://guylk3knk3wp0" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n24_q73n" name="emoj" xy="466,318" size="328,192" group="n26_hrgt" advanced="true" collapsed="true">
+      <gearDisplay controller="conShowEmoj" pages="1"/>
+    </group>
+    <component id="n18_q73n" name="btnEmoj" src="k3wp6" fileName="btn/btnFix.xml" xy="761,483" size="22,22" group="n26_hrgt">
+      <Button icon="ui://guylk3knk3wp8g" sound="ui://guylk3knk3wp8w"/>
+    </component>
+    <component id="n19_q73n" name="btnSend" src="k3wp6" fileName="btn/btnFix.xml" xy="801,476" size="110,34" group="n26_hrgt">
+      <Button title="发送" titleColor="#ffffff" titleFontSize="18" icon="ui://guylk3knk3wp8i" sound="ui://guylk3knk3wp4"/>
+    </component>
+    <component id="n21_q73n" name="comSendHistory" src="k3wpf" fileName="com/comSendHistory.xml" xy="465,362" size="278,115" group="n26_hrgt">
+      <gearDisplay controller="conShowSendHistory" pages="1"/>
+    </component>
+    <component id="n20_q73n" name="btnHistory" src="k3wp6" fileName="btn/btnFix.xml" xy="727,492" size="10,7" group="n26_hrgt">
+      <gearIcon controller="conShowSendHistory" pages="0,1" values="ui://guylk3knk3wpd|ui://guylk3knk3wpe"/>
+      <Button icon="ui://guylk3knk3wpd" sound="ui://guylk3knk3wp4"/>
+    </component>
+    <component id="n28_q9ya" name="btnFriendList" src="k3wp5" fileName="btn/btnFriendList.xml" xy="814,159" group="n26_hrgt">
+      <gearDisplay controller="conFrivateChat" pages="1"/>
+    </component>
+    <group id="n26_hrgt" name="root" xy="184,80" size="812,474" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>
