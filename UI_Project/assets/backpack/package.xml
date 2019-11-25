@@ -14,14 +14,133 @@
     <image id="y8jua" name="img_bac_pzk_2.png" path="/img/"/>
     <image id="y8jub" name="img_bac_pzk_3.png" path="/img/"/>
     <image id="y8juc" name="img_bac_pzk_4.png" path="/img/"/>
-    <image id="y8jud" name="img_bac_xxk.png" path="/img/" scale="9grid" scale9grid="15,15,30,30"/>
-    <image id="y8jue" name="标注-背包界面.png" path="/sketch/"/>
-    <image id="y8juf" name="小贝星球_背包界面.png" path="/sketch/"/>
-    <image id="y8jug" name="效果图-背包界面.png" path="/sketch/"/>
     <component id="oiqdh" name="EquipItem.xml" path="/com/"/>
     <component id="tvlfi" name="btnBagType.xml" path="/btn/"/>
     <component id="e8s1j" name="BagItem.xml" path="/com/"/>
     <component id="8q283z" name="ToolTipOperaBagItemB.xml" path="/com/" exported="true"/>
+    <sound id="gyou40" name="buttonTouch.wav" path="/old/"/>
+    <sound id="gyou41" name="close.wav" path="/old/"/>
+    <sound id="gyou42" name="rbtnItem.wav" path="/old/"/>
+    <component id="gyou43" name="ComStatus.xml" path="/old/win/"/>
+    <component id="gyou44" name="WinBagSplit.xml" path="/old/win/"/>
+    <component id="gyou45" name="WinGameBag.xml" path="/old/win/"/>
+    <component id="gyou46" name="WinLessonBag.xml" path="/old/win/"/>
+    <component id="gyou47" name="WinRepair.xml" path="/old/win/"/>
+    <component id="gyou48" name="Slider1.xml" path="/old/sld/"/>
+    <component id="gyou49" name="Slider1_grip.xml" path="/old/sld/"/>
+    <component id="gyou4a" name="pbrHp.xml" path="/old/pbr/"/>
+    <component id="gyou4b" name="pbrHunger.xml" path="/old/pbr/"/>
+    <image id="gyou4c" name="bg_cm_3.png" path="/old/newImg/"/>
+    <image id="gyou4d" name="bg_cm_9.png" path="/old/newImg/"/>
+    <image id="gyou4e" name="btn_cm_1_red.png" path="/old/newImg/"/>
+    <image id="gyou4f" name="btn_cm_closed.png" path="/old/newImg/"/>
+    <image id="gyou4g" name="btn_cm_closed_3.png" path="/old/newImg/"/>
+    <image id="gyou4h" name="btn_cm_closed_4.png" path="/old/newImg/"/>
+    <image id="gyou4i" name="btn_cm_leftturn.png" path="/old/newImg/"/>
+    <image id="gyou4j" name="btn_cm_orange.png" path="/old/newImg/"/>
+    <image id="gyou4k" name="btn_cm_other_1.png" path="/old/newImg/"/>
+    <image id="gyou4l" name="btn_cm_rightturn.png" path="/old/newImg/"/>
+    <image id="gyou4m" name="btn_cm_white1.png" path="/old/newImg/"/>
+    <image id="gyou4n" name="btn_cm_yellow1.png" path="/old/newImg/"/>
+    <image id="gyou4o" name="btn_cm_yellow8.png" path="/old/newImg/"/>
+    <image id="gyou4p" name="icon_cm_defende.png" path="/old/newImg/"/>
+    <image id="gyou4q" name="img_bag_grade_1.png" path="/old/newImg/"/>
+    <image id="gyou4r" name="img_cm_attack.png" path="/old/newImg/"/>
+    <image id="gyou4s" name="img_cm_bottom_5.png" path="/old/newImg/"/>
+    <image id="gyou4t" name="img_cm_inputbox_2.png" path="/old/newImg/"/>
+    <image id="gyou4u" name="img_cm_item_12.png" path="/old/newImg/"/>
+    <image id="gyou4v" name="img_cm_item_13.png" path="/old/newImg/"/>
+    <image id="gyou4w" name="img_cm_item_2.png" path="/old/newImg/"/>
+    <image id="gyou4x" name="img_cm_item_6.png" path="/old/newImg/"/>
+    <image id="gyou4y" name="img_cm_pattern3.png" path="/old/newImg/"/>
+    <image id="gyou4z" name="img_cm_slider_1.png" path="/old/newImg/"/>
+    <image id="gyou50" name="img_cm_slider_2.png" path="/old/newImg/"/>
+    <image id="gyou51" name="img_cm_switch3.png" path="/old/newImg/"/>
+    <image id="gyou52" name="img_cm_title4.png" path="/old/newImg/"/>
+    <image id="gyou53" name="img_cm_title5.png" path="/old/newImg/"/>
+    <image id="gyou54" name="img_cm_title6.png" path="/old/newImg/"/>
+    <image id="gyou55" name="img_formula_bottom_3.png" path="/old/newImg/"/>
+    <image id="gyou56" name="img_formula_bottom_4.png" path="/old/newImg/"/>
+    <image id="gyou57" name="img_main_item_3.png" path="/old/newImg/"/>
+    <image id="gyou58" name="img_main_item_4.png" path="/old/newImg/"/>
+    <image id="gyou59" name="img_main_item_8.png" path="/old/newImg/"/>
+    <image id="gyou5a" name="效果图1.png" path="/old/main/"/>
+    <image id="gyou5b" name="btn_bp_wpxx_1.png" path="/old/lessonModeImg/"/>
+    <image id="gyou5c" name="icon_bp_db_4.png" path="/old/lessonModeImg/"/>
+    <image id="gyou5d" name="img_bp_mck_1.png" path="/old/lessonModeImg/"/>
+    <image id="gyou5e" name="img_bp_wpxx_1.png" path="/old/lessonModeImg/"/>
+    <image id="gyou5f" name="img_bp_wpxx_3.png" path="/old/lessonModeImg/"/>
+    <image id="gyou5g" name="img_bp_zbk_1.png" path="/old/lessonModeImg/"/>
+    <image id="gyou5h" name="img_bp_zbk_2.png" path="/old/lessonModeImg/"/>
+    <image id="gyou5i" name="img_bp_zbk_3.png" path="/old/lessonModeImg/"/>
+    <image id="gyou5j" name="img_bp_zbk_4.png" path="/old/lessonModeImg/"/>
+    <image id="gyou5k" name="img_bp_zbk_5.png" path="/old/lessonModeImg/"/>
+    <image id="gyou5l" name="img_bp_zbk_6.png" path="/old/lessonModeImg/"/>
+    <image id="gyou5m" name="1.png" path="/old/main/B端效果图/"/>
+    <component id="gyou5n" name="labBasicTalent.xml" path="/old/lab/"/>
+    <image id="gyou5o" name="btn_main_beibaoshouqianniu_3_1.png" path="/old/img_UI3/"/>
+    <image id="gyou5p" name="btn_main_beibaozhankaianniu_4 _1.png" path="/old/img_UI3/"/>
+    <image id="gyou5q" name="btn_main_beibaozhankai_4 .png" path="/old/img_UI3/"/>
+    <image id="gyou5r" name="btn_main_beibao_12.png" path="/old/img_UI3/"/>
+    <image id="gyou5s" name="img_main_+_61.png" path="/old/img_UI3/"/>
+    <image id="gyou5t" name="img_main_aixintianchong_29.png" path="/old/img_UI3/"/>
+    <image id="gyou5u" name="img_main_aixin_28.png" path="/old/img_UI3/"/>
+    <image id="gyou5v" name="img_main_beibaodise_13.png" path="/old/img_UI3/"/>
+    <image id="gyou5w" name="img_main_posun_65.png" path="/old/img_UI3/"/>
+    <image id="gyou5x" name="img_main_tilitianchongse_30.png" path="/old/img_UI3/"/>
+    <image id="gyou5y" name="img_main_tili_27.png" path="/old/img_UI3/"/>
+    <image id="gyou5z" name="img_main_xitiaodikuang_73.png" path="/old/img_UI3/"/>
+    <image id="gyou60" name="img_main_xuanzhong_61.png" path="/old/img_UI3/"/>
+    <image id="gyou61" name="img_main_yihaojin_62.png" path="/old/img_UI3/"/>
+    <image id="gyou62" name="img_main_yitianjiawupin_6.png" path="/old/img_UI3/"/>
+    <image id="gyou63" name="img_main_yujin_64.png" path="/old/img_UI3/"/>
+    <image id="gyou64" name="img_main_zaishiyong_63.png" path="/old/img_UI3/"/>
+    <image id="gyou65" name="icon_bag_title.png" path="/old/imgNew/"/>
+    <image id="gyou66" name="img_bag_avatarinfo.png" path="/old/imgNew/"/>
+    <image id="gyou67" name="img_bag_decoration.png" path="/old/imgNew/"/>
+    <image id="gyou68" name="img_bag_equiting.png" path="/old/imgNew/"/>
+    <image id="gyou69" name="img_bag_gloves.png" path="/old/imgNew/"/>
+    <image id="gyou6a" name="img_bag_helmet.png" path="/old/imgNew/"/>
+    <image id="gyou6b" name="img_bag_lowerbody.png" path="/old/imgNew/"/>
+    <image id="gyou6c" name="img_bag_shoes.png" path="/old/imgNew/"/>
+    <image id="gyou6d" name="img_bag_upperbody.png" path="/old/imgNew/"/>
+    <image id="gyou6e" name="img_bag_weapon.png" path="/old/imgNew/"/>
+    <image id="gyou6f" name="fnt_shortcutNum_0.png" path="/old/img_UI3/fnts/"/>
+    <image id="gyou6g" name="bg_cm_1.png" path="/old/imgB/"/>
+    <image id="gyou6h" name="btn_cm_an_2.png" path="/old/imgB/"/>
+    <image id="gyou6i" name="btn_cm_cbl_1.png" path="/old/imgB/"/>
+    <image id="gyou6j" name="btn_cm_cbl_2.png" path="/old/imgB/"/>
+    <image id="gyou6k" name="btn_cm_db_3.png" path="/old/imgB/"/>
+    <image id="gyou6l" name="img_cm_bg_dk_1.png" path="/old/imgB/"/>
+    <image id="gyou6m" name="img_cm_db_1.png" path="/old/imgB/"/>
+    <image id="gyou6n" name="img_cm_db_2.png" path="/old/imgB/"/>
+    <image id="gyou6o" name="img_cm_kjan_1.png" path="/old/imgB/"/>
+    <image id="gyou6p" name="img_cm_quantity_1.png" path="/old/imgB/"/>
+    <image id="gyou6q" name="img_cm_wpk_1.png" path="/old/imgB/"/>
+    <image id="gyou6r" name="img_cm_wpk_2.png" path="/old/imgB/"/>
+    <image id="gyou6s" name="img_cm_wpk_3.png" path="/old/imgB/"/>
+    <image id="gyou6t" name="img_cm__bg_cbl_1.png" path="/old/imgB/"/>
+    <image id="gyou6u" name="icon_mail_2.png" path="/old/img/"/>
+    <component id="gyou6v" name="comArtNum.xml" path="/old/com/"/>
+    <component id="gyou6w" name="ComArtNums.xml" path="/old/com/"/>
+    <component id="gyou6x" name="comAvatarContainer.xml" path="/old/com/"/>
+    <component id="gyou6y" name="ComLessonBagShortcuts.xml" path="/old/com/"/>
+    <component id="gyou6z" name="ComMainGameShortcuts.xml" path="/old/com/"/>
+    <component id="gyou70" name="comRepairMatItem.xml" path="/old/com/"/>
+    <component id="gyou71" name="comTalentTitle.xml" path="/old/com/"/>
+    <component id="gyou72" name="btnBagTypeB.xml" path="/old/btn/"/>
+    <component id="gyou73" name="btnBagTypeC.xml" path="/old/btn/"/>
+    <component id="gyou74" name="btnFix.xml" path="/old/btn/"/>
+    <component id="gyou75" name="btnFixClickArea.xml" path="/old/btn/"/>
+    <component id="gyou76" name="btnScale.xml" path="/old/btn/"/>
+    <component id="gyou77" name="ObjectBpItem.xml" path="/old/btn/"/>
+    <component id="gyou78" name="RBtnBpEquipRenderer.xml" path="/old/btn/"/>
+    <component id="gyou79" name="RBtnBpItemRenderer.xml" path="/old/btn/"/>
+    <component id="gyou7a" name="ShortcutItem.xml" path="/old/btn/"/>
+    <component id="gyou7b" name="barItem1.xml" path="/old/bar/"/>
+    <image id="gyou7c" name="切图提示1.png" path="/old/backpack/"/>
+    <image id="gyou7d" name="切图提示3.png" path="/old/backpack/"/>
+    <image id="gyou7e" name="背包效果图11.png" path="/old/backpack/"/>
   </resources>
   <publish name="backpack"/>
 </packageDescription>

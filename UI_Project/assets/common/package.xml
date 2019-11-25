@@ -610,6 +610,9 @@
     <component id="pz1ncyiiv" name="ComboBox1_item.xml" path="/comboBox/combox1/"/>
     <component id="pz1ncyiiw" name="ComboBox1_popup.xml" path="/comboBox/combox1/"/>
     <component id="pz1ncyiix" name="ComboBox1.xml" path="/comboBox/combox1/" exported="true"/>
+    <image id="gyoucyiiy" name="img_cm_xxk.png" path="/img/" exported="true" scale="9grid" scale9grid="15,15,30,30"/>
+    <image id="gyoucyij0" name="img_cm_lab_1.png" path="/img/" exported="true"/>
+    <image id="gyoucyij3" name="img_cm_lab_2.png" path="/img/"/>
   </resources>
   <publish name="common" npot="true">
     <atlas name="默认" index="0"/>
