@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" opaque="false" designImage="ui://thvmj7voa1nd2" designImageAlpha="0">
-  <controller name="ctrlUserStatus" pages="0,student,1,teacher,2,fakeStudent,3,fakeTeacher" selected="0"/>
-  <controller name="ctrlGodView" pages="0,false,1,true" selected="0"/>
+  <controller name="ctrlUserStatus" pages="0,student,1,teacher,2,fakeStudent,3,fakeTeacher" selected="3"/>
+  <controller name="ctrlGodView" pages="0,false,1,true" selected="1"/>
   <displayList>
-    <component id="n4_psru" name="btnTeachPlan" src="psruh" fileName="com/btnMainMenu.xml" xy="1677,13" customData="top">
+    <component id="n17_swki" name="btnChangeViewMode" src="psruh" fileName="com/btnMainMenu.xml" xy="1302,13">
+      <gearDisplay controller="ctrlUserStatus" pages="1,3"/>
+      <gearXY controller="ctrlUserStatus" pages="0,1,2,3" values="1552,13|1427,13|1427,13|1302,13"/>
+      <gearText controller="ctrlGodView" pages="0" values="角色视角" default="自由视角"/>
+      <gearIcon controller="ctrlGodView" pages="0" values="ui://oyity675lmgfp" default="ui://oyity675lmgfq"/>
+      <relation target="" sidePair="right-right"/>
+      <Button title="自由视角" icon="ui://oyity675lmgfq"/>
+    </component>
+    <component id="n4_psru" name="btnTeachPlan" src="psruh" fileName="com/btnMainMenu.xml" xy="1427,13" customData="top">
       <gearDisplay controller="ctrlUserStatus" pages=""/>
       <gearXY controller="ctrlUserStatus" pages="0,1,2,3" values="1677,13|1552,13|1552,13|1427,13"/>
       <relation target="" sidePair="right-right"/>
       <Button title="教案" icon="ui://oyity675a1nd6"/>
     </component>
-    <component id="n3_psru" name="btnUpload" src="psruh" fileName="com/btnMainMenu.xml" xy="1802,13" customData="top">
+    <component id="n3_psru" name="btnUpload" src="psruh" fileName="com/btnMainMenu.xml" xy="1552,13" customData="top">
       <gearXY controller="ctrlUserStatus" pages="0,1,2,3" values="1802,13|1677,13|1677,13|1552,13"/>
       <relation target="" sidePair="right-right"/>
       <Button title="提交" icon="ui://oyity675a1ndd"/>
@@ -40,6 +48,6 @@
       <Button icon="ui://oyity675a1ndb"/>
     </component>
     <component id="n14_psru" name="comTask" src="psruk" fileName="com/ComMainTask.xml" xy="0,277" group="n15_n173"/>
-    <group id="n15_n173" name="grpLeftTop" xy="0,0" size="346,387" customData="left" advanced="true"/>
+    <group id="n15_n173" name="grpLeftTop" xy="0,0" size="346,387" customData="left" advanced="true" collapsed="true"/>
   </displayList>
 </component>
