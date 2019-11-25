@@ -144,6 +144,8 @@
     <component id="ra2b3z" name="spCreateRoom.xml" path="/sprite/"/>
     <component id="ra2b41" name="comRoom.xml" path="/com/"/>
     <component id="ra2b42" name="ComCreateTemplate.xml" path="/com/"/>
+    <image id="ie8a43" name="img_stencil_dt_6.png" path="/img/"/>
+    <component id="nvw444" name="WinTileMapPreview.xml" path="/win/" exported="true"/>
   </resources>
   <publish name="template"/>
 </packageDescription>

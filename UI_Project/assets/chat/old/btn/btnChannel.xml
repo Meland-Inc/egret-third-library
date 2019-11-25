@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="132,48" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <image id="n0_q73n" name="imgUp" src="k3wp2" fileName="newImg/btn_cm_white2.png" xy="0,0" size="132,48">
+      <gearDisplay controller="button" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_q73n" name="imgDown" src="k3wp3" fileName="newImg/btn_cm_yellow2.png" xy="0,0" size="132,48">
+      <gearDisplay controller="button" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n2_q73n" name="title" xy="3,2" size="126,41" fontSize="20" color="#5b4b37" align="center" vAlign="middle" autoSize="none" text="button">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button mode="Radio" sound="ui://guylk3knk3wp4"/>
+</component>
