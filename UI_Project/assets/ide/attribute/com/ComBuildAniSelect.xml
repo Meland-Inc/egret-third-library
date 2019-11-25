@@ -88,17 +88,17 @@
     <image id="n35_smiy" name="n35" src="80ab9b" fileName="ideCommon/img/img_ide_cm_ssk.png" xy="12,69" size="405,37" group="n42_smiy"/>
     <text id="n36_smiy" name="tfSearch" xy="15,75" size="399,27" group="n42_smiy" input="true" prompt="请输入搜索内容&#xD;" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" text=""/>
     <image id="n37_smiy" name="n37" src="80ab8a" fileName="create/img/icon_cre_sck.png" xy="18,13" size="29,29" group="n42_smiy"/>
-    <text id="n38_smiy" name="n38" xy="59,16" size="65,26" group="n42_smiy" fontSize="20" color="#333333" text="素材库"/>
+    <text id="n38_smiy" name="n38" xy="59,16" size="65,24" group="n42_smiy" fontSize="20" color="#333333" text="素材库"/>
     <component id="n39_smiy" name="btnConfirm" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="306,1032" size="110,40" group="n42_smiy">
       <relation target="" sidePair="bottom-bottom,right-right"/>
-      <Button title="确定" titleColor="#ffffff" icon="ui://ti9jag5txba67c"/>
+      <Button title="确定" titleColor="#ffffff" icon="ui://te1gxawooiqdcyih1"/>
     </component>
     <component id="n40_smiy" name="btnBack" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="179,1032" size="110,40" group="n42_smiy">
       <relation target="" sidePair="bottom-bottom,right-right"/>
-      <Button title="取消" titleColor="#ffffff" icon="ui://ti9jag5txba67e"/>
+      <Button title="取消" titleColor="#ffffff" icon="ui://te1gxawoeggjcyihf"/>
     </component>
     <component id="n41_smiy" name="btnDrawingPad" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="302,7" size="110,40" group="n42_smiy">
-      <Button title="画板" titleColor="#ffffff" icon="ui://ti9jag5txba67c"/>
+      <Button title="画板" titleColor="#ffffff" icon="ui://te1gxawooiqdcyih1"/>
     </component>
     <group id="n42_smiy" name="grpOpen" xy="0,0" size="430,1079" advanced="true">
       <gearDisplay controller="ctrlState" pages="1"/>
