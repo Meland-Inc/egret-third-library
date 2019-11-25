@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="132,48" extention="Button">
+<component size="120,48" extention="Button" designImage="ui://thvmj7vok3wpcyiiq" designImageOffsetX="-646" designImageOffsetY="-134">
   <controller name="button" pages="0,up,1,down" selected="0"/>
   <displayList>
-    <image id="n0_q73n" name="imgUp" src="k3wp2" fileName="newImg/btn_cm_white2.png" xy="0,0" size="132,48">
+    <image id="n0_q73n" name="imgUp" src="oiqdcyigv" fileName="img/img_cm_5.png" pkg="te1gxawo" xy="0,6" size="120,42">
       <gearDisplay controller="button" pages="0"/>
-      <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n1_q73n" name="imgDown" src="k3wp3" fileName="newImg/btn_cm_yellow2.png" xy="0,0" size="132,48">
+    <image id="n1_q73n" name="imgDown" src="oiqdcyigu" fileName="img/img_cm_4.png" pkg="te1gxawo" xy="0,0" size="120,48">
       <gearDisplay controller="button" pages="1"/>
-      <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <text id="n2_q73n" name="title" xy="3,2" size="126,41" fontSize="20" color="#5b4b37" align="center" vAlign="middle" autoSize="none" text="button">
-      <relation target="" sidePair="width-width,height-height"/>
+    <text id="n2_q73n" name="title" xy="0,6" size="120,41" fontSize="20" color="#333333" align="center" vAlign="middle" autoSize="none" text="系统">
+      <gearXY controller="button" pages="1" values="0,4" default="0,6"/>
+      <gearColor controller="button" pages="0" values="#333333,#000000" default="#ffffff,#000000"/>
     </text>
   </displayList>
   <Button mode="Radio" sound="ui://guylk3knk3wp4"/>
