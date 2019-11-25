@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="198,278" extention="Button" designImage="ui://thvmj7vomquwl" designImageOffsetX="-163" designImageOffsetY="-134" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlMode" pages="1,normal,2,publish,0,addBtn" selected="0"/>
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <image id="n0_uov9" name="imgBg" src="oiqdcyigz" fileName="img/img_cm_wpx_1.png" pkg="te1gxawo" xy="0,4" size="198,274" group="n7_o7or"/>
+    <component id="n6_uov9" name="ladMap" src="pz1n3t" fileName="com/ComAutoClipLad.xml" xy="10,14" size="178,135" group="n7_o7or"/>
+    <text id="n3_uov9" name="tfName" xy="4,157" size="190,22" group="n7_o7or" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" text="显示是十个字哦"/>
+    <component id="n12_uic4" name="pbrConnectServer" src="iv931q" fileName="old/prb/pbrLoadMapTemplate.xml" xy="11,142" size="120,6" group="n7_o7or" hideByEditor="true" visible="false">
+      <ProgressBar max="100"/>
+    </component>
+    <component id="n14_spq9" name="comSelector" src="pz1n3r" fileName="com/comTemplateSelector.xml" xy="0,0" group="n7_o7or" controller="ctrlOperate,0">
+      <gearDisplay controller="button" pages="1"/>
+    </component>
+    <group id="n7_o7or" name="mainContent" xy="0,0" size="198,278" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlMode" pages="1,2"/>
+    </group>
+    <image id="n8_lls7" name="imgAdd" src="pz1n3u" fileName="img/img_mapT_cjtd.png" xy="0,6" pivot="0.5,0.5" group="n16_pz1n"/>
+    <text id="n15_pz1n" name="tfCreateMap" xy="11,165" size="175,22" group="n16_pz1n" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" text="创建地图"/>
+    <group id="n16_pz1n" name="grpBtnCreate" xy="0,6" size="198,274" advanced="true">
+      <gearDisplay controller="ctrlMode" pages="0"/>
+    </group>
+    <image id="n13_10gnn" name="imgPublish" src="iv931x" fileName="old/img/icon_stencil_bq_1.png" xy="0,4">
+      <gearDisplay controller="ctrlMode" pages="2"/>
+    </image>
+  </displayList>
+  <Button mode="Radio"/>
+</component>
