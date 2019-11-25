@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1920,1080" designImage="ui://48p8y12ay8jug" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlStatus" pages="0,useItem,1,selectItem" selected="1"/>
+<component size="1920,1080" designImage="ui://thvmj7voy8jug" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlStatus" pages="0,useItem,1,selectItem" selected="0"/>
   <displayList>
     <image id="n8_oiqd" name="imgTopBg" src="oiqdcyigw" fileName="img/img_cm_7.png" pkg="te1gxawo" xy="0,0" size="1920,56">
       <relation target="" sidePair="width-width"/>
@@ -12,6 +12,25 @@
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://te1gxawooiqdcyih2"/>
     </component>
+    <text id="n22_e8s1" name="tfShortcutTitle" xy="715,786" size="105,24" group="n33_ibv1" fontSize="20" color="#333333" align="center" text="背包快捷栏"/>
+    <image id="n19_e8s1" name="imgShortcutBg" src="oiqdcyih4" fileName="img/img_cm_1.png" pkg="te1gxawo" xy="698,819" size="1130,120" group="n33_ibv1"/>
+    <list id="n20_e8s1" name="lstShortcut" xy="718,829" size="880,100" group="n33_ibv1" layout="row" scroll="horizontal" colGap="10" defaultItem="ui://48p8y12ae8s1j">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n24_e8s1" name="btnArrange" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1650,859" size="120,44" group="n33_ibv1">
+      <Button title="整理" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <group id="n33_ibv1" name="grpShortcut" xy="698,786" size="1130,153" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlStatus" pages="0"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
     <list id="n10_oiqd" name="lstEquipItem" xy="91,156" size="102,651" group="n31_ibv1" overflow="scroll" lineGap="10" defaultItem="ui://48p8y12aoiqdh">
       <item icon="ui://48p8y12ay8ju4"/>
       <item icon="ui://48p8y12ay8ju6"/>
@@ -27,40 +46,41 @@
       <gearDisplay controller="ctrlStatus" pages="0"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <image id="n18_e8s1" name="imgListBg" src="oiqdcyih4" fileName="img/img_cm_1.png" pkg="te1gxawo" xy="394,273" size="1131,586" group="n32_ibv1"/>
-    <image id="n15_tvlf" name="imgListTitleBg" src="oiqdcyih6" fileName="img/img_cm_3.png" pkg="te1gxawo" xy="394,220" size="1130,58" group="n32_ibv1"/>
-    <text id="n14_tvlf" name="tfNum" xy="411,240" size="95,24" group="n32_ibv1" fontSize="20" color="#333333" align="center" vars="true" text="背包 [{num=10}]"/>
-    <list id="n16_tvlf" name="lstBagType" xy="634,228" size="655,48" group="n32_ibv1" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="128" colGap="13" defaultItem="ui://48p8y12atvlfi">
-      <item/>
-    </list>
-    <image id="n26_vkix" name="imgSearchBg" src="oiqdcyigx" fileName="img/img_cm_ssk.png" pkg="te1gxawo" xy="1293,230" size="210,38" group="n32_ibv1"/>
-    <text id="n25_vkix" name="tfSearch" xy="1304,231" size="196,38" group="n32_ibv1" input="true" prompt="请输入搜索内容" fontSize="18" vAlign="middle" autoSize="none" singleLine="true" text=""/>
-    <list id="n17_e8s1" name="lstBagItem" xy="414,298" size="1098,547" group="n32_ibv1" layout="flow_hz" overflow="scroll" lineGap="10" colGap="10" defaultItem="ui://48p8y12ae8s1j" autoClearItems="true">
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-    </list>
-    <group id="n32_ibv1" name="grpBackpack" xy="394,220" size="1131,639" advanced="true" collapsed="true">
-      <gearXY controller="ctrlStatus" pages="0,1" values="698,115|394,220"/>
+    <image id="n18_e8s1" name="imgListBg" src="oiqdcyih4" fileName="img/img_cm_1.png" pkg="te1gxawo" xy="698,168" size="1129,586">
+      <gearSize controller="ctrlStatus" pages="0,1" values="1129,586,1,1|1129,826,1,1"/>
+      <relation target="n15_tvlf" sidePair="left-left,top-top"/>
+      <relation target="n15_tvlf" sidePair="width-width"/>
+    </image>
+    <image id="n15_tvlf" name="imgListTitleBg" src="oiqdcyih6" fileName="img/img_cm_3.png" pkg="te1gxawo" xy="698,115" size="1130,58">
+      <gearXY controller="ctrlStatus" pages="0,1" values="698,115|394,115"/>
+      <gearSize controller="ctrlStatus" pages="0" values="1130,58,1,1" default="1679,58,1,1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n26_vkix" name="imgSearchBg" src="oiqdcyigx" fileName="img/img_cm_ssk.png" pkg="te1gxawo" xy="1598,126" size="210,38" group="n34_emzb"/>
+    <text id="n25_vkix" name="tfSearch" xy="1609,127" size="196,38" group="n34_emzb" input="true" prompt="请输入搜索内容" fontSize="18" vAlign="middle" autoSize="none" singleLine="true" text=""/>
+    <group id="n34_emzb" name="grpInpSearch" xy="1598,125" size="210,39" advanced="true" collapsed="true">
+      <relation target="n15_tvlf" sidePair="top-top,right-right"/>
     </group>
-    <text id="n22_e8s1" name="tfShortcutTitle" xy="715,786" size="105,24" group="n33_ibv1" fontSize="20" color="#333333" align="center" text="背包快捷栏"/>
-    <image id="n19_e8s1" name="imgShortcutBg" src="oiqdcyih4" fileName="img/img_cm_1.png" pkg="te1gxawo" xy="698,819" size="1130,120" group="n33_ibv1"/>
-    <list id="n20_e8s1" name="lstShortcut" xy="718,829" size="880,100" group="n33_ibv1" layout="row" scroll="horizontal" colGap="10" defaultItem="ui://48p8y12ae8s1j">
+    <text id="n14_tvlf" name="tfNum" xy="715,135" size="95,24" fontSize="20" color="#333333" align="center" vars="true" text="背包 [{num=10}]">
+      <relation target="n15_tvlf" sidePair="left-left,top-top"/>
+    </text>
+    <list id="n16_tvlf" name="lstBagType" xy="937,123" size="655,48" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="128" colGap="13" defaultItem="ui://48p8y12atvlfi">
+      <relation target="n15_tvlf" sidePair="left-left,top-top"/>
+      <item/>
+    </list>
+    <list id="n17_e8s1" name="lstBagItem" xy="718,192" size="1094,535" layout="flow_hz" overflow="scroll" lineGap="10" colGap="10" defaultItem="ui://48p8y12ae8s1j" autoClearItems="true">
+      <relation target="n15_tvlf" sidePair="left-left,top-top"/>
+      <relation target="n15_tvlf" sidePair="width-width"/>
+      <relation target="n18_e8s1" sidePair="height-height"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
       <item/>
       <item/>
       <item/>
@@ -70,12 +90,5 @@
       <item/>
       <item/>
     </list>
-    <component id="n24_e8s1" name="btnArrange" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1649,877" size="120,44" group="n33_ibv1">
-      <Button title="整理" icon="ui://te1gxawooiqdcyih1"/>
-    </component>
-    <group id="n33_ibv1" name="grpShortcut" xy="698,786" size="1130,153" advanced="true" collapsed="true">
-      <gearDisplay controller="ctrlStatus" pages="0"/>
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </group>
   </displayList>
 </component>
