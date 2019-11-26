@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="makcczvj" jpegQuality="80" compressPNG="true">
   <resources>
-    <component id="fv5t0" name="btnMark.xml" path="/old/btn/"/>
+    <component id="fv5t0" name="btnMark.xml" path="/btn/"/>
     <image id="fv5t1" name="img_map_bj_7.png" path="/old/imgB/"/>
     <image id="fv5t2" name="icon_map_sign_1.png" path="/old/imgNew/" exported="true"/>
     <component id="fv5t3" name="btnOperate.xml" path="/btn/"/>
     <sound id="fv5t4" name="buttonTouch.wav" path="/old/" exported="true"/>
     <component id="fv5t5" name="comMainPlayerIcon.xml" path="/old/com/" exported="true"/>
-    <image id="fv5t6" name="img_main_xdt_zb_3.png" path="/old/img_UI3/" exported="true"/>
+    <image id="fv5t6" name="img_main_xdt_zb_3.png" path="/img/"/>
     <component id="fv5t7" name="SpawnPointMark.xml" path="/old/com/" exported="true"/>
     <image id="fv5t8" name="img_map_10.png" path="/old/img/" scale="9grid" scale9grid="29,9,58,18"/>
     <image id="fv5t9" name="btn_map_2.png" path="/old/img/"/>
@@ -105,6 +105,8 @@
     <image id="fv5t2t" name="img_map_zbx_2.png" path="/img/"/>
     <image id="fv5t2u" name="img_map_zbx_3.png" path="/img/"/>
     <component id="ibv12v" name="ComAreaMark.xml" path="/com/" exported="true"/>
+    <image id="lmgf2w" name="icon_map_ljt.png" path="/img/"/>
+    <image id="lmgf2x" name="icon_map_qx.png" path="/img/"/>
   </resources>
   <publish name="minimap"/>
 </packageDescription>

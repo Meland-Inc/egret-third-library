@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1304,869" designImage="ui://thvmj7vomquwx" designImageOffsetX="-349" designImageOffsetY="-118" designImageAlpha="7" designImageLayer="1">
+<component size="1304,869" designImage="ui://thvmj7vomquwx" designImageOffsetX="-349" designImageOffsetY="-118" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlMapSizeStatus" pages="0,big,1,middle,2,small,3,custom" selected="0"/>
   <controller name="ctrlAdvancedSetting" pages="0,expand,1,shrink" selected="0"/>
   <displayList>
+    <image id="n65_ra2b" name="imgBasicSettingBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="0,0" size="1304,440" group="n111_ra2b"/>
     <image id="n63_ra2b" name="imgBasicSettingHeaderBg" src="c1h7cyiia" fileName="img/img_cm_top_3.png" pkg="te1gxawo" xy="0,0" size="1304,40" group="n111_ra2b"/>
-    <text id="n64_ra2b" name="tfBasicSetting" xy="19,8" size="85,24" group="n111_ra2b" fontSize="20" color="#333333" text="基础设置"/>
-    <image id="n65_ra2b" name="imgBasicSettingBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="0,40" size="1304,401" group="n111_ra2b"/>
+    <text id="n64_ra2b" name="tfBasicSetting" xy="19,8" size="85,24" group="n111_ra2b" fontSize="20" color="#333333" vAlign="middle" text="基础设置"/>
     <text id="n89_ra2b" name="tfMapNameTitle" xy="118,78" size="85,24" group="n88_ra2b" fontSize="20" color="#333333" text="地图名字"/>
     <image id="n85_ra2b" name="imgInputBg" src="eggjcyihs" fileName="img/img_cm_srk_1.png" pkg="te1gxawo" xy="121,109" size="380,40" group="n88_ra2b"/>
     <text id="n87_ra2b" name="inpMapName" xy="125,115" size="369,29" group="n88_ra2b" input="true" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="七桥问题地图"/>
@@ -41,23 +41,23 @@
     </component>
     <text id="n100_ra2b" name="tfIconTitle" xy="799,249" size="85,24" group="n111_ra2b" fontSize="20" color="#333333" text="地图封面"/>
     <component id="n99_ra2b" name="btnSelectMapIcon" src="iv93c" fileName="old/btn/BtnSelectMapIcon.xml" xy="802,281" size="160,118" group="n111_ra2b"/>
-    <group id="n111_ra2b" name="grpBasicSetting" xy="0,0" size="1304,441" collapsed="true"/>
-    <image id="n107_ra2b" name="imgAdvancedSettingHeaderBg" src="c1h7cyiia" fileName="img/img_cm_top_3.png" pkg="te1gxawo" xy="0,462" size="1304,40"/>
+    <group id="n111_ra2b" name="grpBasicSetting" xy="0,0" size="1304,440"/>
     <loader id="n110_ra2b" name="imgArrow" xy="1277,478" size="16,10" url="ui://te1gxawoc1h7cyii4">
       <gearIcon controller="ctrlAdvancedSetting" pages="1" values="ui://te1gxawoc1h7cyii6" default="ui://te1gxawoc1h7cyii4"/>
     </loader>
-    <text id="n108_ra2b" name="tfadvancedSetting" xy="18,470" size="85,24" fontSize="20" color="#333333" text="基础设置"/>
-    <image id="n109_ra2b" name="imgAdvancedSettingBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="0,502" size="1304,293" group="n124_ra2b"/>
-    <text id="n112_ra2b" name="tfManorGenerateType" xy="118,536" size="121,29" group="n124_ra2b" fontSize="20" color="#333333" vAlign="middle" autoSize="none" bold="true" text="领地生成方式"/>
-    <component id="n113_ra2b" name="cbSelectManorType" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="122,571" size="378,40" group="n124_ra2b">
+    <image id="n109_ra2b" name="imgAdvancedSettingBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="0,462" size="1304,332" group="n124_ra2b"/>
+    <image id="n107_ra2b" name="imgAdvancedSettingHeaderBg" src="c1h7cyiia" fileName="img/img_cm_top_3.png" pkg="te1gxawo" xy="0,462" size="1304,40" group="n124_ra2b"/>
+    <text id="n108_ra2b" name="tfadvancedSetting" xy="18,470" size="89,24" group="n124_ra2b" fontSize="20" color="#333333" vAlign="middle" text="高级设置"/>
+    <text id="n112_ra2b" name="tfManorGenerateType" xy="118,536" size="121,28" group="n124_ra2b" fontSize="20" color="#333333" vAlign="middle" autoSize="none" bold="true" text="领地生成方式"/>
+    <component id="n113_ra2b" name="cbSelectManorType" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="122,571" size="378,39" group="n124_ra2b">
       <ComboBox title="回字形" visibleItemCount="10">
         <item title="回字形" value="palindrome"/>
         <item title="横向排列" value="horizontal"/>
         <item title="纵向排列" value="vertical"/>
       </ComboBox>
     </component>
-    <text id="n114_ra2b" name="tfManorGenerateGap" xy="800,538" size="146,29" group="n124_ra2b" fontSize="20" color="#333333" vAlign="middle" autoSize="none" bold="true" text="领地生成间隔"/>
-    <component id="n115_ra2b" name="cbManorGap" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="802,571" size="379,40" group="n124_ra2b">
+    <text id="n114_ra2b" name="tfManorGenerateGap" xy="800,538" size="146,28" group="n124_ra2b" fontSize="20" color="#333333" vAlign="middle" autoSize="none" bold="true" text="领地生成间隔"/>
+    <component id="n115_ra2b" name="cbManorGap" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="802,571" size="379,39" group="n124_ra2b">
       <ComboBox title="100" visibleItemCount="10">
         <item title="100"/>
         <item title="50"/>
@@ -76,7 +76,7 @@
     <component id="n123_ra2b" name="btnIsSceneObjCanDestroy" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1110,649" size="78,42" group="n124_ra2b">
       <Button icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
     </component>
-    <group id="n124_ra2b" name="grpAdvancedSetting" xy="0,502" size="1304,293" advanced="true">
+    <group id="n124_ra2b" name="grpAdvancedSetting" xy="0,462" size="1304,333" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlAdvancedSetting" pages="0"/>
     </group>
     <component id="n40_f4tn" name="btnCreateMap" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1084,831" size="100,38">

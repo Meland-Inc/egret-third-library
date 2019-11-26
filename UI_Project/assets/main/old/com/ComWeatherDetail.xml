@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="150,125" opaque="false">
+  <displayList>
+    <image id="n2_t8is" name="imgBg" src="gen82y" fileName="newImg/img_weather_bg_2.png" xy="1,0" group="n5_t8is"/>
+    <loader id="n3_t8is" name="weatherIcon" xy="5,4" size="30,30" group="n5_t8is" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <group id="n5_t8is" name="grpIcon" xy="1,0" size="38,38" advanced="true"/>
+    <image id="n0_t8is" name="n0" src="gen82b" fileName="newImg/img_cm_tips_5.png" xy="0,40" size="149,47" group="n4_t8is">
+      <relation target="n1_t8is" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n1_t8is" name="tfdescription" xy="15,53" size="119,20" group="n4_t8is" fontSize="14" color="#ffffff" autoSize="height" text=""/>
+    <group id="n4_t8is" name="grpDetail" xy="0,40" size="149,47" visible="false" advanced="true"/>
+  </displayList>
+</component>

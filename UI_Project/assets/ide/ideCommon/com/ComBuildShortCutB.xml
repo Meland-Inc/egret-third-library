@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="536,40" opaque="false" designImage="ui://thvmj7vo80ab3" designImageAlpha="0">
-  <controller name="ctrlState" exported="true" pages="0,terrain,1,create,2,noReplace" selected="2"/>
+  <controller name="ctrlState" exported="true" pages="0,terrain,1,create,2,esc" selected="2"/>
   <displayList>
     <component id="n0_qu7t" name="btnR" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="0,0" size="60,40">
       <gearDisplay controller="ctrlState" pages="1"/>
@@ -14,6 +14,7 @@
       <Button title="Esc" titleFontSize="24" icon="ui://ti9jag5t80ab8q"/>
     </component>
     <component id="n3_qu7t" name="btnDelete" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="390,0" size="89,40">
+      <gearDisplay controller="ctrlState" pages="0,1"/>
       <Button title="Delete" titleColor="#ffffff" icon="ui://ti9jag5t80ab8q"/>
     </component>
     <text id="n4_qu7t" name="n4" xy="70,10" size="45,24" fontSize="20" color="#ffffff" strokeColor="#333333" strokeSize="2" text="旋转">
@@ -23,6 +24,8 @@
       <gearDisplay controller="ctrlState" pages="0,1"/>
     </text>
     <text id="n6_qu7t" name="n6" xy="326,10" size="45,24" fontSize="20" color="#ffffff" strokeColor="#333333" strokeSize="2" text="退出"/>
-    <text id="n7_qu7t" name="n7" xy="490,10" size="45,24" fontSize="20" color="#ffffff" strokeColor="#333333" strokeSize="2" text="删除"/>
+    <text id="n7_qu7t" name="n7" xy="490,10" size="45,24" fontSize="20" color="#ffffff" strokeColor="#333333" strokeSize="2" text="删除">
+      <gearDisplay controller="ctrlState" pages="0,1"/>
+    </text>
   </displayList>
 </component>

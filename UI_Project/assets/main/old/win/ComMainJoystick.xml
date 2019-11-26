@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="246,186" opaque="false" designImage="ui://oyity675gen82n" designImageOffsetX="-863" designImageOffsetY="-262" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlShowHide" pages="0,hide,1,show" selected="0"/>
+  <controller name="ctrlGameMode" exported="true" pages="1,game,0,lessons,2,creation" selected="0"/>
+  <displayList>
+    <component id="n24_uvgl" name="btnAttack" src="gen8s" fileName="btn/btnAttack.xml" xy="115,88">
+      <Button icon="ui://oyity675gen8u"/>
+    </component>
+    <component id="n27_uvgl" name="btnOperate" src="gen8y" fileName="btn/btnOperate.xml" xy="58,5" visible="false">
+      <Button icon="ui://oyity675gen811"/>
+    </component>
+    <component id="n28_uvgl" name="btnWorkbench" src="gen8y" fileName="btn/btnOperate.xml" xy="157,0" size="89,82" visible="false">
+      <Button icon="ui://oyity675gen810"/>
+    </component>
+    <component id="n29_uvgl" name="btnTalk" src="gen8y" fileName="btn/btnOperate.xml" xy="23,97" size="77,80" visible="false">
+      <Button icon="ui://oyity675gen8z"/>
+    </component>
+  </displayList>
+</component>

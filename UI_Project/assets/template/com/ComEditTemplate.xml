@@ -3,9 +3,6 @@
   <controller name="ctrlMapSizeStatus" pages="0,big,1,middle,2,small,3,custom" selected="0"/>
   <controller name="ctrlIsPublish" pages="0,false,1,true" selected="0"/>
   <displayList>
-    <image id="n22_pz1n" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="0,0" size="401,882">
-      <relation target="" sidePair="bottomext-bottom"/>
-    </image>
     <image id="n0_er8n" name="imgInputBg" src="eggjcyihs" fileName="img/img_cm_srk_1.png" pkg="te1gxawo" xy="10,10" size="380,40" group="n40_ra2b"/>
     <image id="n1_er8n" name="imgPen" src="pz1n3w" fileName="img/icon_mapT_bj.png" xy="355,19" group="n40_ra2b"/>
     <text id="n2_er8n" name="inpMapName" xy="14,16" size="369,29" group="n40_ra2b" alpha="0.6" input="true" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="七桥问题地图"/>

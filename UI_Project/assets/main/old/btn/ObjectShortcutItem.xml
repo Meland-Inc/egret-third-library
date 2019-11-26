@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="48,48" extention="Button">
+  <controller name="button" pages="2,up,3,down" selected="0"/>
+  <controller name="ctrlMark" pages="0,normal,1,equip" selected="0"/>
+  <displayList>
+    <loader id="n14_o6si" name="bg" xy="0,0" size="48,48" url="ui://oyity675gen81a" align="center" vAlign="middle" fill="scaleFree" shrinkOnly="true"/>
+    <loader id="n22_ww3a" name="icon" xy="6,6" size="35,35" group="n41_ltu2" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <group id="n41_ltu2" name="grpItemIcon" xy="6,6" size="35,35" advanced="true"/>
+    <image id="n40_uvgl" name="imgEquipMark" src="gen81b" fileName="imgB/img_main_wpk_3.png" xy="2,2">
+      <gearDisplay controller="ctrlMark" pages="1"/>
+    </image>
+    <image id="n42_v3m6" name="imgSelected" src="gen81c" fileName="imgB/img_cm_wpk_2.png" xy="0,0" size="48,48">
+      <gearDisplay controller="button" pages="3"/>
+    </image>
+    <image id="n44_mt5a" name="imgNumBg" src="gen81d" fileName="imgB/img_cm_kjan_1.png" xy="32,34"/>
+    <text id="n45_mt5a" name="num" xy="31,30" size="17,18" fontSize="10" align="center" vAlign="bottom" autoSize="height" text=""/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>
