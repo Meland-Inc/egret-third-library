@@ -2,7 +2,7 @@
 <component size="407,140" designImage="ui://thvmj7vogrwp6" designImageOffsetX="-1492" designImageOffsetY="-558" designImageAlpha="0" designImageLayer="1">
   <displayList>
     <image id="n0_grwp" name="imgIconBg" src="hckx6u" fileName="attribute/img/img_att_wp_1.png" xy="-1,0" size="140,140"/>
-    <loader id="n1_grwp" name="ladIcon" xy="-1,0" size="140,140" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <loader id="n1_grwp" name="ladIcon" xy="19,20" pivot="0.5,0.5" size="100,100" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
     <image id="n2_grwp" name="imgNameBg" src="hckx6v" fileName="attribute/img/img_att_wp_2.png" xy="-1,112" size="140,28"/>
     <text id="n3_grwp" name="tfFallingObj" xy="-1,114" size="140,22" fontSize="18" color="#333333" align="center" vAlign="middle" vars="true" autoSize="none" text="掉落物件{num=1}"/>
     <component id="n4_grwp" name="labFallingNumSld" src="grwpb5" fileName="attribute/widgets/comFallingSld.xml" xy="143,0">

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="400,881" opaque="false" designImage="ui://thvmj7vomquwp" designImageOffsetX="-1463" designImageOffsetY="-118" designImageAlpha="0" designImageLayer="1">
+  <displayList>
+    <image id="n34_ra2b" name="imgTopBg" src="nvqacyihy" fileName="img/img_cm_top_2.png" pkg="te1gxawo" xy="0,0" size="400,40" group="n32_x8d1"/>
+    <text id="n26_ssks" name="tfCreater" xy="47,5" size="305,29" group="n32_x8d1" fontSize="18" color="#333333" align="center" vAlign="middle" vars="true" autoSize="none" bold="true" text="地图作者: {name=author}"/>
+    <text id="n28_ssks" name="tfMapName" xy="205,60" size="191,29" group="n32_x8d1" fontSize="18" color="#333333" vAlign="middle" autoSize="none" bold="true" text="千与千寻七个字"/>
+    <list id="n30_ssks" name="lstRoom" xy="5,242" size="390,629" group="n32_x8d1" selectionMode="none" overflow="scroll" scrollBarFlags="6" scrollBar="visible" margin="8,0,0,0" lineGap="6" defaultItem="ui://0axy98cgra2b41">
+      <relation target="" sidePair="bottomext-bottom"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n31_ssks" name="btnCreateRoom" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="11,189" size="227,38" group="n32_x8d1">
+      <Button icon="ui://0axy98cgra2b3z"/>
+    </component>
+    <component id="n11_f4tn" name="btnCopy" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="290,134" size="100,38" group="n32_x8d1">
+      <relation target="" sidePair="bottom-bottom"/>
+      <Button title="复制地图" titleFontSize="18" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <component id="n25_ssks" name="btnQuicklyEnter" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="290,189" size="100,38" group="n32_x8d1">
+      <relation target="" sidePair="bottom-bottom"/>
+      <Button title="快速进入" titleFontSize="18" icon="ui://te1gxawooiqdcyih3"/>
+    </component>
+    <image id="n33_imu4" name="mapBg" src="iv93d" fileName="old/img/img_stencil_dt_6.png" xy="13,62" size="157,117" group="n32_x8d1"/>
+    <component id="n29_ssks" name="ladMap" src="pz1n3t" fileName="com/ComAutoClipLad.xml" xy="12,62" size="158,118" group="n32_x8d1">
+      <relation target="n33_imu4" sidePair="width-width,height-height"/>
+    </component>
+    <group id="n32_x8d1" name="root" xy="0,0" size="400,871" advanced="true"/>
+  </displayList>
+</component>

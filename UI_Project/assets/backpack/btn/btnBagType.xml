@@ -5,7 +5,8 @@
     <loader id="n6_nl0r" name="icon" xy="0,0" size="120,48" url="ui://te1gxawooiqdcyigv" vAlign="bottom">
       <gearIcon controller="button" pages="0,1" values="ui://te1gxawooiqdcyigv|ui://te1gxawooiqdcyigu"/>
     </loader>
-    <text id="n3_ey2h" name="title" xy="14,11" size="90,28" fontSize="20" color="#333333" align="center" vAlign="middle" autoSize="none" bold="true" text="全部">
+    <text id="n3_ey2h" name="title" xy="14,14" size="90,28" fontSize="20" color="#333333" align="center" vAlign="middle" autoSize="none" bold="true" text="全部">
+      <gearXY controller="button" pages="0" values="14,14" default="14,11"/>
       <gearColor controller="button" pages="0" values="#333333,#000000" default="#ffffff,#000000"/>
     </text>
   </displayList>

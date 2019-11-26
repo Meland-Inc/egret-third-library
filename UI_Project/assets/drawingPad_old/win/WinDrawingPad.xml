@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" designImage="ui://i25v0ebkbatc58" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlLeft" pages="0,drawing,1,layer" selected="0"/>
+  <controller name="ctrlTool" pages="0,pen,1,none,2,isometric" selected="0"/>
+  <controller name="ctrlMode" pages="0,create,1,editAnim" selected="0"/>
+  <displayList>
+    <graph id="n1_batc" name="gphBg" xy="0,0" size="1136,640" type="rect" lineSize="0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <loader id="n13_batc" name="ladCanvasBg" xy="231,19" size="886,603" url="ui://tcbadh8nbatcw" fill="scaleFree">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </loader>
+    <component id="n29_u1c9" name="comProjectionDrawing" src="pa6b2k" fileName="com/ComProjectionDrawing.xml" xy="231,19" size="886,561" controller="ctrlPojectionType,0,ctrlProjectionNum,0">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </component>
+    <graph id="n21_ljuf" name="gphDrawingBotBoard" xy="231,19" size="886,561" group="n33_mj87" alpha="0.3" fillColor="#ff66cc33">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </graph>
+    <graph id="n22_ljuf" name="gphDrawingMidBoard" xy="231,19" size="886,561" group="n33_mj87" alpha="0.6" fillColor="#ff66cc33">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </graph>
+    <graph id="n19_ljuf" name="gphDrawingTopBoard" xy="231,19" size="886,561" group="n33_mj87" hideByEditor="true" type="rect" lineColor="#ffffffff">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </graph>
+    <group id="n33_mj87" name="grpDrawingBoard" xy="231,19" size="886,561" advanced="true"/>
+    <component id="n25_mqcq" name="comDrawSelectBoxContainer" src="mqcq2c" fileName="com/ComDrawSelectBoxContainer.xml" xy="231,19" size="886,561" hideByEditor="true" touchable="false">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </component>
+    <component id="n24_vdhh" name="comIsometricHelpLineCtnr" src="vdhh1i" fileName="com/ComIsometric.xml" xy="231,19" size="886,561" touchable="false">
+      <gearDisplay controller="ctrlTool" pages="2"/>
+      <relation target="" sidePair="bottomext-bottom,rightext-right"/>
+    </component>
+    <image id="n0_batc" name="imgLeftBg" src="batcx" fileName="img/img_sket_zhqy_2.png" xy="20,20" size="202,602" group="n14_batc">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <component id="n5_batc" name="tbtnDrawing" src="oliri6s" fileName="btn/tbtnScale.xml" pkg="te1gxawo" xy="21,20" size="100,36" group="n14_batc" touchable="false">
+      <Button checked="true" title="画图" titleColor="#333333" titleFontSize="14" icon="ui://tcbadh8nbatcs" selectedIcon="ui://tcbadh8nbatct" controller="ctrlLeft" page="0"/>
+    </component>
+    <component id="n6_batc" name="tbtnLayer" src="oliri6s" fileName="btn/tbtnScale.xml" pkg="te1gxawo" xy="121,20" size="100,36" group="n14_batc" touchable="false" grayed="true">
+      <Button title="图层" titleColor="#333333" titleFontSize="14" icon="ui://tcbadh8nbatcs" selectedIcon="ui://tcbadh8nbatct" controller="ctrlLeft" page="1"/>
+    </component>
+    <list id="n7_batc" name="lstTool" xy="30,76" size="184,82" group="n14_batc" layout="flow_hz" overflow="hidden" margin="5,0,0,0" lineGap="4" colGap="3" defaultItem="ui://tcbadh8nbatc19">
+      <item icon="ui://tcbadh8nbatce" name="SELECTOR" selectedIcon="ui://tcbadh8nbatcf"/>
+      <item icon="ui://tcbadh8nbatca" name="BRUSH" selectedIcon="ui://tcbadh8nbatcb"/>
+      <item icon="ui://tcbadh8nbatci" name="LINEPEN" selectedIcon="ui://tcbadh8nbatcj"/>
+      <item icon="ui://tcbadh8nbatcc" name="ERASER" selectedIcon="ui://tcbadh8nbatcd"/>
+      <item icon="ui://tcbadh8nbatc8" name="ISOMETRIC" selectedIcon="ui://tcbadh8nbatc9"/>
+    </list>
+    <image id="n8_batc" name="imgInpNameBg" src="batcq" fileName="img/img_sket_mnk_1.png" xy="32,544" size="178,28" group="n17_batc"/>
+    <text id="n9_batc" name="inpCanvasName" xy="42,545" size="156,26" group="n17_batc" alpha="0.6" input="true" fontSize="14" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="新名称"/>
+    <component id="n10_batc" name="btnSave" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="33,582" size="78,28" group="n17_batc">
+      <gearText controller="ctrlMode" pages="1" values="保存动画" default="保存"/>
+      <Button title="保存" titleFontSize="18" icon="ui://tcbadh8nbatc1"/>
+    </component>
+    <component id="n12_batc" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="132,582" size="78,28" group="n17_batc">
+      <Button title="退出" titleFontSize="18" icon="ui://tcbadh8nbatc7"/>
+    </component>
+    <component id="n31_drcq" name="btnImport" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="33,500" size="78,28" group="n17_batc">
+      <Button title="导入" titleFontSize="18" icon="ui://tcbadh8nbatc7"/>
+    </component>
+    <component id="n32_drcq" name="btnDownload" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="132,500" size="78,28" group="n17_batc">
+      <Button title="下载" titleFontSize="18" icon="ui://tcbadh8nbatc7"/>
+    </component>
+    <group id="n17_batc" name="grpBottom" xy="32,500" size="178,110" group="n14_batc" advanced="true" collapsed="true">
+      <relation target="" sidePair="bottom-bottom"/>
+    </group>
+    <component id="n23_wdtr" name="comPenSetting" src="wdtr1e" fileName="com/ComPenSetting.xml" xy="0,0" size="215,487" group="n14_batc">
+      <gearDisplay controller="ctrlTool" pages="0,2"/>
+    </component>
+    <group id="n14_batc" name="grpLeft" xy="0,0" size="222,622" collapsed="true"/>
+    <list id="n16_batc" name="lstOperateBtn" xy="1048,63" size="44,164" lineGap="15" defaultItem="ui://tcbadh8nbatc1b">
+      <relation target="" sidePair="right-right"/>
+      <item icon="ui://tcbadh8nbatc2"/>
+      <item icon="ui://tcbadh8nbatc3"/>
+      <item icon="ui://tcbadh8nbatc4"/>
+    </list>
+    <graph id="n23_fekj" name="gphMask" xy="0,0" size="1136,640" locked="true" hideByEditor="true" visible="false" type="rect" lineSize="0" lineColor="#00000000" fillColor="#00ffffff">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </graph>
+    <component id="n18_d1ba" name="comAnimEditingArea" src="d1ba1c" fileName="com/ComAnimEditingArea.xml" xy="231,580">
+      <relation target="n13_batc" sidePair="width-width,bottom-bottom"/>
+    </component>
+    <list id="n26_pa6b" name="lstProjectionBtn" xy="1048,268" size="44,225" lineGap="15" defaultItem="ui://tcbadh8nbatc1b">
+      <gearDisplay controller="ctrlMode" pages="0"/>
+      <relation target="" sidePair="right-right"/>
+      <item icon="ui://tcbadh8no8md1s"/>
+      <item icon="ui://tcbadh8no8md1r"/>
+      <item icon="ui://tcbadh8no8md1q"/>
+      <item icon="ui://tcbadh8no8md1p"/>
+    </list>
+    <component id="n28_pa6b" name="comProjectionSetting" src="pa6b2m" fileName="com/ComProjectionSetting.xml" xy="935,362">
+      <relation target="n26_pa6b" sidePair="right-left,bottom-bottom"/>
+    </component>
+    <component id="n27_pa6b" name="comHeightSetting" src="pa6b2l" fileName="com/ComHeightSetting.xml" xy="881,437">
+      <relation target="n26_pa6b" sidePair="right-left,bottom-bottom"/>
+    </component>
+    <image id="n30_u1c9" name="img" src="o8md20" fileName="img/img_sket_qy_2.png" xy="1056,246">
+      <gearDisplay controller="ctrlMode" pages="0"/>
+      <relation target="" sidePair="right-right"/>
+    </image>
+  </displayList>
+</component>

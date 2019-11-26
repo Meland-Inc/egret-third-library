@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="120,40" extention="Button" designImage="ui://i25v0ebktxgs4c" designImageOffsetX="-598" designImageOffsetY="-89" designImageAlpha="0">
+  <controller name="button" pages="4,up,5,down" selected="0"/>
+  <displayList>
+    <loader id="n5_bidp" name="icon" xy="0,0" size="120,40" url="ui://0n4pg0optxgs5t" fill="scaleFree">
+      <gearIcon controller="button" pages="5" values="ui://0n4pg0optxgs5s" default="ui://0n4pg0optxgs5t"/>
+    </loader>
+    <text id="n6_bidp" name="title" xy="43,5" size="33,29" fontSize="18" color="#365989" align="center" vAlign="middle" autoSize="none" text="sex">
+      <gearColor controller="button" pages="4,5" values="#365989,#000000|#ffffff,#000000"/>
+    </text>
+  </displayList>
+  <Button mode="Radio" sound="ui://fknoioovtqc911"/>
+</component>

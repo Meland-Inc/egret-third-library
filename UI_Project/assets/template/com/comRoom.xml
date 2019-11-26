@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="380,48">
+  <displayList>
+    <text id="n1_ssks" name="tfName" xy="13,12" size="53,22" fontSize="18" color="#333333" vAlign="middle" vars="true" bold="true" text="房间{num=1}"/>
+    <component id="n4_ssks" name="btnEnterMap" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="313,5" size="60,38">
+      <Button title="加入" titleColor="#75b33f" titleFontSize="18" icon="ui://te1gxawoc1h7cyii0"/>
+    </component>
+  </displayList>
+</component>

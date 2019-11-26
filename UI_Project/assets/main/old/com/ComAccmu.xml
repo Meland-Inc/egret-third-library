@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" designImage="ui://oyity675gen825" designImageAlpha="0">
+  <displayList>
+    <image id="n2_snov" name="n2" src="gen822" fileName="newImg/img_main_powerstorage_1.png" xy="574,497" pivot="0.5,0.5" anchor="true" size="231,20" group="n4_d0ut"/>
+    <component id="n0_snov" name="pbrAccmu" src="gen823" fileName="pbr/pbrAccmu.xml" xy="460,497" pivot="0,0.5" anchor="true" size="227,16" group="n4_d0ut">
+      <ProgressBar value="100" max="100"/>
+    </component>
+    <text id="n1_snov" name="n1" xy="573,497" pivot="0.5,0.5" anchor="true" size="56,21" group="n4_d0ut" fontSize="15" color="#ffffff" vAlign="middle" bold="true" strokeColor="#916e4c" strokeSize="2" text="蓄力中"/>
+    <group id="n4_d0ut" name="root" xy="460,497" size="345,22" advanced="true" collapsed="true">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </group>
+  </displayList>
+</component>

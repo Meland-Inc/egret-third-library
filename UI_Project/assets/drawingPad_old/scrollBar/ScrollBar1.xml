@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="300,20" extention="ScrollBar">
+  <displayList>
+    <graph id="n1_qh6c" name="bar" xy="0,0" size="300,20">
+      <relation target="" sidePair="width-width,middle-middle"/>
+    </graph>
+    <component id="n2_qh6c" name="grip" src="qh6c2t" fileName="scrollBar/ScrollBar1_grip.xml" xy="0,0" size="20,20"/>
+  </displayList>
+  <ScrollBar/>
+</component>

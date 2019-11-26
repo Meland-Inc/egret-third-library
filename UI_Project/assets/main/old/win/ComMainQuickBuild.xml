@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="227,195" opaque="false" designImage="ui://oyity675gen8bo" designImageAlpha="0">
+  <displayList>
+    <component id="n5_rdy4" name="btnConfirm" src="gen834" fileName="btn/btnFix.xml" xy="88,95" size="98,98">
+      <Button icon="ui://oyity675gen863"/>
+    </component>
+    <component id="n6_rdy4" name="btnRemove" src="gen834" fileName="btn/btnFix.xml" xy="37,25" size="66,66">
+      <Button icon="ui://oyity675gen873"/>
+    </component>
+    <component id="n11_9wxv" name="btnCancel" src="gen834" fileName="btn/btnFix.xml" xy="140,14" size="66,66">
+      <Button icon="ui://oyity675gen861"/>
+    </component>
+    <component id="n8_lhu4" name="btnMirror" src="gen834" fileName="btn/btnFix.xml" xy="0,112" size="66,66">
+      <Button icon="ui://oyity675gen862"/>
+    </component>
+    <component id="n17_jtn8" name="labBuildingCountdown" src="gen8bn" fileName="Com/LabBuildingCountdown.xml" xy="17,0" size="107,15">
+      <Label title="{day=10}天{hour=10}小时{minute=10}分{second=10}秒" titleColor="#ffffff" titleFontSize="10"/>
+    </component>
+    <component id="n18_uvgl" name="comBuildRocker" src="gen83f" fileName="com/ComBuildRocker.xml" xy="110,0" hideByEditor="true" visible="false"/>
+  </displayList>
+</component>

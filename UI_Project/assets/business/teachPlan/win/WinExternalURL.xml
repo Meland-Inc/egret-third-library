@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" designImage="ui://i25v0ebkqvmf4r" designImageAlpha="0">
+  <controller name="ctrlState" pages="0,loading,1,showing" selected="0"/>
+  <displayList>
+    <graph id="n0_qvmf" name="imgBG" xy="-1,10" size="1922,1070" type="rect" lineSize="0" lineColor="#ffffffff">
+      <gearDisplay controller="ctrlState" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <text id="n14_i4ys" name="tfLoading" xy="813,559" size="293,40" fontSize="36" color="#333333" text="加载网页中。。。">
+      <gearDisplay controller="ctrlState" pages="0"/>
+      <relation target="n0_qvmf" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n13_n762" name="imgBarDeep" src="c1h7cyiia" fileName="img/img_cm_top_3.png" pkg="te1gxawo" xy="-2,0" size="1924,56">
+      <relation target="" sidePair="width-width"/>
+    </image>
+    <graph id="n11_id84" name="bar" xy="0,0" size="1920,56" type="rect" lineSize="0" lineColor="#00000000" fillColor="#0033ff00">
+      <relation target="" sidePair="top-top,width-width"/>
+    </graph>
+    <component id="n4_qvmf" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1855,6" size="48,48">
+      <relation target="" sidePair="right-right,top-top"/>
+      <Button icon="ui://te1gxawooiqdcyih2"/>
+    </component>
+    <component id="n5_qvmf" name="btnToNormal" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1795,10" size="42,42">
+      <relation target="" sidePair="right-right,top-top"/>
+      <Button icon="ui://te1gxawoc1h7cyii1"/>
+    </component>
+    <component id="n6_qvmf" name="btnToMax" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1795,7" size="42,42">
+      <relation target="" sidePair="top-top,right-right"/>
+      <Button icon="ui://te1gxawoc1h7cyihz"/>
+    </component>
+    <graph id="n8_fp4h" name="sign" xy="0,55" size="1921,1026" lineSize="0" lineColor="#00000000" fillColor="#ff000000" corner="00">
+      <relation target="" sidePair="width-width,bottomext-bottom"/>
+      <relation target="n11_id84" sidePair="top-bottom"/>
+    </graph>
+  </displayList>
+</component>

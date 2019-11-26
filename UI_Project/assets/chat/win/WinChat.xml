@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" designImage="ui://thvmj7vok3wpcyiiq" designImageLayer="1">
+  <controller name="conShowSendHistory" pages="0,hide,1,show" selected="0"/>
+  <controller name="conShowEmoj" pages="0,hide,1,show" selected="0"/>
+  <controller name="conFrivateChat" pages="0,hide,1,show" selected="0"/>
+  <displayList>
+    <image id="n3_q73n" name="bg" src="k3wpcyiiz" fileName="img/img_cm_cbd.png" pkg="te1gxawo" xy="388,125" size="1140,743" group="n26_hrgt"/>
+    <image id="n8_q73n" name="titleBg" src="oiqdcyih6" fileName="img/img_cm_3.png" pkg="te1gxawo" xy="388,125" size="1140,58" group="n26_hrgt"/>
+    <image id="n30_k3wp" name="n30" src="oiqdcyih5" fileName="img/img_cm_2.png" pkg="te1gxawo" xy="408,124" group="n26_hrgt"/>
+    <component id="n4_q73n" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1467,133" size="48,48" group="n26_hrgt">
+      <Button icon="ui://te1gxawooiqdcyih2"/>
+    </component>
+    <text id="n9_q73n" name="title" xy="450,138" size="101,28" group="n26_hrgt" fontSize="24" color="#333333" align="center" vAlign="middle" text="聊天大厅"/>
+    <list id="n6_q73n" name="lstBtnChannel" xy="646,134" size="656,48" group="n26_hrgt" layout="row" colGap="12" defaultItem="ui://guylk3knk3wp1">
+      <item title="系统" name="system"/>
+      <item title="综合" name="comprehensive"/>
+      <item title="世界" name="world"/>
+      <item title="附近" name="near"/>
+    </list>
+    <list id="n12_q73n" name="lstChatContent" xy="408,233" size="1109,538" group="n26_hrgt" overflow="scroll" margin="35,0,0,0" scrollBarRes="ui://te1gxawo9c90cyij6," defaultItem="ui://guylk3knk3wpi">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n13_q73n" name="friendNameBg" src="k3wp8t" fileName="old/newImg/img_cm_name.png" xy="636,245" size="80,22" group="n25_11e02">
+      <relation target="n14_q73n" sidePair="width-width"/>
+    </image>
+    <text id="n14_q73n" name="tfFriendName" xy="636,246" size="85,18" group="n25_11e02" fontSize="14" color="#5b4b37" align="center" vAlign="middle" ubb="true" vars="true" text="与[color=#c88316]{name=xxx}[/color]聊天中"/>
+    <group id="n25_11e02" name="grpFriendChatTitle" xy="636,245" size="81,22" group="n26_hrgt" advanced="true">
+      <gearDisplay controller="conFrivateChat" pages="1"/>
+    </group>
+    <component id="n28_q9ya" name="btnFriendList" src="k3wp5" fileName="btn/btnFriendList.xml" xy="1042,240" group="n26_hrgt">
+      <gearDisplay controller="conFrivateChat" pages="1"/>
+    </component>
+    <image id="n32_9c90" name="n32" src="9c90cyij4" fileName="img/img_cm_hline.png" pkg="te1gxawo" xy="388,776" size="1140,3" group="n26_hrgt"/>
+    <image id="n33_9c90" name="n33" src="k3wpcyiiy" fileName="img/icon_cm_prompt.png" pkg="te1gxawo" xy="574,213" group="n26_hrgt"/>
+    <text id="n34_9c90" name="n34" xy="604,213" size="707,22" group="n26_hrgt" fontSize="18" color="#666666" align="center" vAlign="middle" text="贝尔星球官方提示：严禁传播政治敏感、色情、暴力等违法违规内容，违者追究法律责任"/>
+    <component id="n37_xjew" name="inpSendText" src="osb69a" fileName="com/ComChatInput.xml" xy="456,799" size="800,44" group="n26_hrgt"/>
+    <component id="n15_q73n" name="btnVoice" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="398,797" size="48,48" group="n26_hrgt">
+      <Button icon="ui://guylk3knk3wp91"/>
+    </component>
+    <image id="n22_q73n" name="emojBg" src="eggjcyihp" fileName="img/img_cm_xlk_1.png" pkg="te1gxawo" xy="456,388" pivot="0,1" size="860,200" group="n24_q73n" scale="1,-1"/>
+    <list id="n23_q73n" name="lstBtnEmoj" xy="460,593" size="850,190" group="n24_q73n" layout="flow_hz" overflow="scroll" lineGap="2" colGap="2" defaultItem="ui://guylk3knk3wp0" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n24_q73n" name="emoj" xy="456,388" size="860,395" group="n26_hrgt" advanced="true">
+      <gearDisplay controller="conShowEmoj" pages="1"/>
+    </group>
+    <component id="n18_q73n" name="btnEmoj" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1276,797" size="48,48" group="n26_hrgt">
+      <Button icon="ui://guylk3knk3wp90" sound=""/>
+    </component>
+    <component id="n19_q73n" name="btnSend" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1388,799" size="120,44" group="n26_hrgt">
+      <Button title="发送" titleColor="#ffffff" titleFontSize="18" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <component id="n21_q73n" name="comSendHistory" src="k3wpf" fileName="com/comSendHistory.xml" xy="456,588" size="800,200" group="n26_hrgt">
+      <gearDisplay controller="conShowSendHistory" pages="1"/>
+    </component>
+    <component id="n20_q73n" name="btnHistory" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1211,799" size="44,44" group="n26_hrgt">
+      <gearIcon controller="conShowSendHistory" pages="0,1" values="ui://te1gxawoc1h7cyii5|ui://te1gxawoc1h7cyii4"/>
+      <Button icon="ui://te1gxawoc1h7cyii5"/>
+    </component>
+    <group id="n26_hrgt" name="root" xy="388,124" size="1140,744" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

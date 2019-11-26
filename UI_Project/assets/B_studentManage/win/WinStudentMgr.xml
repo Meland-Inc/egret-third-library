@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" opaque="false" designImage="ui://thvmj7vof63g17" designImageAlpha="40" designImageLayer="1" adaptationTest="FitSize">
+  <controller name="ctrlStatus" exported="true" pages="0,hide,1,show" selected="0"/>
+  <controller name="ctrlNotInfo" pages="0,false,1,true" selected="0"/>
+  <displayList>
+    <loader id="n0_skn6" name="bg" xy="1925,0" size="430,1080" group="n13_hbdr" url="ui://ct340yhvf63gcyieo" fill="scaleFree">
+      <relation target="" sidePair="bottomext-bottom"/>
+    </loader>
+    <image id="n44_f63g" name="n44" src="f63gcyiem" fileName="img/img_stuM_bottom.png" xy="1925,1016" size="430,64" group="n13_hbdr"/>
+    <image id="n40_f63g" name="n40" src="f63gcyiet" fileName="img/img_stuM_top.png" xy="1925,0" size="430,56" group="n13_hbdr"/>
+    <image id="n39_f63g" name="bgStudentInfo" src="f63gcyien" fileName="img/img_stuM_dk_1.png" xy="1936,202" size="406,803" group="n13_hbdr">
+      <relation target="" sidePair="bottomext-bottom"/>
+    </image>
+    <text id="n2_skn6" name="title" xy="1934,17" size="85,24" group="n13_hbdr" fontSize="20" color="#333333" align="center" vAlign="middle" text="学生管理"/>
+    <component id="n4_skn6" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="2302,2" size="48,48" group="n13_hbdr">
+      <Button icon="ui://ct340yhvf63gcyiee" controller="ctrlStatus" page="0"/>
+    </component>
+    <image id="n5_skn6" name="inputBg" src="oiqdcyigx" fileName="img/img_cm_ssk.png" pkg="te1gxawo" xy="1937,66" size="406,39" group="n13_hbdr"/>
+    <text id="n6_skn6" name="inpSearch" xy="1944,74" size="392,23" group="n13_hbdr" input="true" prompt="[size=18]请输入搜索内容[/size]" maxLength="10" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text=""/>
+    <list id="n38_m1ux" name="lstTag" xy="1935,116" size="410,69" group="n13_hbdr" layout="row" overflow="scroll" lineGap="4" defaultItem="ui://ct340yhvf63gcyieu">
+      <item title="全部" icon="ui://ct340yhvf63gcyie9" controllers="ctrlLocation,0"/>
+      <item title="已提交" icon="ui://ct340yhvf63gcyiea" controllers="ctrlLocation,1"/>
+      <item title="关卡中" icon="ui://ct340yhvf63gcyieb" controllers="ctrlLocation,1"/>
+      <item title="未进入" icon="ui://ct340yhvf63gcyiec" controllers="ctrlLocation,2"/>
+    </list>
+    <image id="n45_e1le" name="n45" src="c1h7cyii8" fileName="img/img_cm_blank.png" pkg="te1gxawo" xy="2051,445" group="n47_e1le"/>
+    <text id="n46_e1le" name="n46" xy="2092,624" pivot="0.5,0.5" size="100,22" group="n47_e1le" fontSize="18" color="#999999" vAlign="middle" letterSpacing="1" text="暂无学生哦"/>
+    <group id="n47_e1le" name="notInfo" xy="2051,445" size="180,201" group="n13_hbdr" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlNotInfo" pages="1"/>
+      <relation target="n39_f63g" sidePair="middle-middle"/>
+    </group>
+    <list id="n10_skn6" name="lstStudent" xy="1934,202" size="410,802" group="n13_hbdr" selectionMode="none" overflow="scroll" lineGap="-2" defaultItem="ui://ct340yhvskn60" autoClearItems="true">
+      <relation target="n39_f63g" sidePair="bottomext-bottom"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n12_skn6" name="btnConsole" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="2368,1028" size="120,44" group="n13_hbdr" hideByEditor="true" visible="false" touchable="false" grayed="true">
+      <relation target="" sidePair="bottom-bottom"/>
+      <Button title="控制台" titleFontSize="18" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <component id="n15_j0dl" name="btnAllSubmit" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1935,1027" size="120,44" group="n41_f63g">
+      <Button title="全部提交" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <component id="n14_okp9" name="btnUnlockAll" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="2080,1027" size="120,44" group="n41_f63g">
+      <Button title="全部解锁" icon="ui://te1gxawooiqdcyih3"/>
+    </component>
+    <component id="n11_skn6" name="btnLockAll" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="2225,1027" size="120,44" group="n41_f63g">
+      <Button title="全部锁屏" icon="ui://te1gxawoeggjcyihf"/>
+    </component>
+    <group id="n41_f63g" name="n41" xy="1935,1027" size="410,44" group="n13_hbdr" advanced="true" collapsed="true" layout="hz" colGap="25">
+      <relation target="" sidePair="bottom-bottom"/>
+    </group>
+    <group id="n13_hbdr" name="root" xy="1925,0" size="563,1080" advanced="true">
+      <gearXY controller="ctrlStatus" pages="0,1" values="1925,0|1490,0" tween="true"/>
+      <relation target="" sidePair="right-right"/>
+    </group>
+    <component id="n36_p84a" name="comStudentDetail" src="qg7tcyie4" fileName="com/ComStudentDetail.xml" xy="700,297" visible="false">
+      <relation target="" sidePair="middle-middle,center-center"/>
+    </component>
+  </displayList>
+  <transition name="t0"/>
+</component>

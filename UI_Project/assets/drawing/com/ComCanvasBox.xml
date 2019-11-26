@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="40,40" opaque="false">
+  <displayList>
+    <image id="n7_qiln" name="n7" src="qiln1b" fileName="img/img_sket_ty_3.png" xy="0,0" size="2,40">
+      <relation target="" sidePair="left-left,height-height"/>
+    </image>
+    <image id="n8_qiln" name="n8" src="qiln1c" fileName="img/img_sket_ty_4.png" xy="0,0" size="40,2">
+      <relation target="" sidePair="top-top,width-width"/>
+    </image>
+    <image id="n9_qiln" name="n9" src="qiln1c" fileName="img/img_sket_ty_4.png" xy="0,38" size="40,2">
+      <relation target="" sidePair="width-width,bottom-bottom"/>
+    </image>
+    <image id="n10_qiln" name="n10" src="qiln1b" fileName="img/img_sket_ty_3.png" xy="38,0" size="2,40">
+      <relation target="" sidePair="height-height,right-right"/>
+    </image>
+  </displayList>
+</component>

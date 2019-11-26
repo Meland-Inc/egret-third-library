@@ -4,7 +4,7 @@
     <component id="n27_hoex" name="comCodeblocksPool" src="s45w1v" fileName="codeVew/com/CodeblockPool.xml" xy="1174,0" size="630,1082" blend="none" controller="ctrlGameModel,1">
       <relation target="" sidePair="right-right,bottomext-bottom"/>
     </component>
-    <loader id="n28_8tz6" name="imgListBG" xy="1795,-5" size="132,1099" url="ui://ti9jag5ts45w2" fill="scaleFree">
+    <loader id="n28_8tz6" name="imgListBG" xy="1795,-5" size="133,1099" url="ui://ti9jag5ts45w2" fill="scaleFree">
       <relation target="" sidePair="bottomext-bottom,right-right"/>
     </loader>
     <list id="n25_hoex" name="lstCategory" xy="1805,1" size="115,992" defaultItem="ui://ti9jag5ts45w22" align="center">
@@ -20,9 +20,9 @@
       <item title="函数" icon="ui://ti9jag5ts45w7" name="diyfunction" selectedIcon="ui://ti9jag5ts45w8" controllers="c1,8"/>
       <item title="自定义" icon="ui://ti9jag5ts45wl" name="custom" selectedIcon="ui://ti9jag5ts45wm" controllers="c1,9"/>
     </list>
-    <component id="n29_8tz6" name="btnAction" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1833,1004" size="55,59">
+    <component id="n29_8tz6" name="btnAction" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="1815,980" size="96,96">
       <relation target="" sidePair="right-right,bottom-bottom"/>
-      <Button icon="ui://te1gxawocw9mcyifb"/>
+      <Button icon="ui://ti9jag5thixvt8m"/>
     </component>
   </displayList>
 </component>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="nyy10939" jpegQuality="80" compressPNG="true">
+  <resources>
+    <component id="qylxc" name="WinCodeBlockDialog.xml" path="/screenDialog/win/" exported="true"/>
+    <component id="qylxd" name="btnSelection.xml" path="/screenDialog/btn/"/>
+    <image id="qylxe" name="img_screenD_1.png" path="/screenDialog/img/" scale="9grid" scale9grid="20,11,40,22"/>
+    <image id="qylxf" name="img_screenD_2.png" path="/screenDialog/img/" scale="9grid" scale9grid="71,42,142,102"/>
+  </resources>
+  <publish name="codeUtil"/>
+</packageDescription>

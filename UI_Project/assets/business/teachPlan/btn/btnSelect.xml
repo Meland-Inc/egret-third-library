@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="12,12" extention="Button">
+  <controller name="button" pages="1,up,2,down" selected="1"/>
+  <displayList>
+    <loader id="n0_fp4h" name="n0" xy="0,0" size="12,12" url="ui://82tadhh2c1h7b" autoSize="true">
+      <gearIcon controller="button" pages="1,2" values="ui://82tadhh2c1h7c|ui://82tadhh2c1h7b"/>
+    </loader>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

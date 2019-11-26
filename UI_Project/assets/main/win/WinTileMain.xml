@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" overflow="hidden" opaque="false" designImage="ui://i25v0ebku5yf4w" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
+  <controller name="ctrlGodView" pages="0,false,1,true" selected="1"/>
+  <controller name="ctrlViewMode" pages="0,share,1,editSelf,2,editOther,3,roomPlayCanEdit,4,roomPlayCanNotEdit" selected="4"/>
+  <controller name="ctrlSmallStatus" pages="0,strech,1,shrink" selected="0"/>
+  <displayList>
+    <component id="n4_muc9" name="comMainRocker" src="gen8bp" fileName="old/win/ComMainRocker.xml" xy="70,696" hideByEditor="true">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+    </component>
+    <component id="n40_c994" name="comExperience" src="gen8d3" fileName="old/win/ComExperience.xml" xy="0,1063" customData="bottom">
+      <relation target="" sidePair="bottom-bottom"/>
+    </component>
+    <component id="n122_11584" name="comSmallMap" src="psrui" fileName="com/ComSmallMap.xml" xy="0,0" group="n126_11584"/>
+    <component id="n123_11584" name="btnSetting" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="272,186" size="74,74" group="n126_11584">
+      <Button icon="ui://oyity675a1ndc"/>
+    </component>
+    <component id="n124_11584" name="btnShrink" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="272,105" size="74,74" group="n126_11584" visible="false">
+      <Button icon="ui://oyity675a1ndb"/>
+    </component>
+    <component id="n125_11584" name="comTask" src="psruk" fileName="com/ComMainTask.xml" xy="0,277" group="n126_11584"/>
+    <group id="n126_11584" name="grpLeftTop" xy="0,0" size="346,387" customData="left" advanced="true" collapsed="true"/>
+    <component id="n91_u5yf" name="btnBack" src="gen82t" fileName="old/btn/btnFixClickArea.xml" xy="1873,5" pivot="0.49,0" anchor="true" size="59,66" group="n93_u5yf">
+      <Button icon="ui://oyity675gen87v" page="1"/>
+    </component>
+    <image id="n92_u5yf" name="imgTfBack" src="gen87x" fileName="old/imgB/btn_main_fh_1_1.png" xy="1873,69" pivot="0.5,0" anchor="true" group="n93_u5yf"/>
+    <group id="n93_u5yf" name="grpBtnBack" xy="1844,5" size="59,81" customData="top" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlViewMode" pages="1,2,3,4"/>
+      <relation target="" sidePair="right-right"/>
+    </group>
+    <component id="n100_oxve" name="btnInvite" src="gen82t" fileName="old/btn/btnFixClickArea.xml" xy="1685,10" pivot="0.49,0" anchor="true" size="56,79" customData="top">
+      <gearDisplay controller="ctrlViewMode" pages="1"/>
+      <gearXY controller="ctrlViewMode" pages="0,1" values="1777,10|1771,10" default="1685,10"/>
+      <relation target="" sidePair="right-right"/>
+      <Button icon="ui://oyity675gen880" page="1"/>
+    </component>
+    <component id="n42_w0g2" name="comMainQuickBuild" src="gen8bm" fileName="old/win/ComMainQuickBuild.xml" xy="1674,795" hideByEditor="true" visible="false" customData="right">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+    </component>
+    <component id="n99_u5yf" name="comMainJoystick" src="gen8bd" fileName="old/win/ComMainJoystick.xml" xy="1649,802" hideByEditor="true" tooltips="right" controller="ctrlGameMode,1">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+    </component>
+    <component id="n121_11584" name="btnIde" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1804,979" size="116,110" customData="right">
+      <relation target="" sidePair="bottom-bottom,right-right"/>
+      <Button icon="ui://oyity675a1nd7"/>
+    </component>
+    <component id="n120_11584" name="comMainBagShortcut" src="psrum" fileName="com/ComMainBagShortcut.xml" xy="554,997" customData="bottom">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </component>
+    <component id="n70_k177" name="comShortCut" src="gen8bw" fileName="old/com/ComBuildShortCut.xml" xy="855,960" visible="false" customData="bottom">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </component>
+  </displayList>
+</component>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="76,76" designImage="ui://oyity675gen8bb" designImageOffsetX="-1151" designImageOffsetY="-3" designImageAlpha="100">
+  <displayList>
+    <image id="n25_wdqf" name="bg" src="gen86y" fileName="img_UI3/img_main_topuxiangkuang_74.png" xy="0,0"/>
+    <loader id="n21_oxrf" name="ladAvatarIcon" xy="3,3" size="70,70" align="center" vAlign="middle" fill="scale"/>
+    <image id="n27_wdqf" name="imgLvBg" src="gen86w" fileName="img_UI3/img_main_dengjizezhao_75.png" xy="4,56" size="68,19"/>
+    <image id="n28_wdqf" name="imgHeadIconEdge" src="gen872" fileName="img_UI3/img_main_touxiangi_81.png" xy="0,0"/>
+    <image id="n26_wdqf" name="imgExpEdge" src="gen86x" fileName="img_UI3/img_main_jingyanzhi_76.png" xy="0,0"/>
+    <text id="n22_oxrf" name="tfLevel" xy="4,54" size="67,21" fontSize="14" color="#ffe22c" align="center" vAlign="middle" vars="true" autoSize="none" text="Lv.  {lv=99}"/>
+  </displayList>
+</component>

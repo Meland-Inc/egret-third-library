@@ -1,20 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="298,60" extention="Button" designImage="ui://thvmj7vo80ab5" designImageOffsetY="-305" designImageAlpha="0">
+<component size="320,60" extention="Button" designImage="ui://thvmj7vo80ab5" designImageOffsetY="-305">
   <controller name="button" pages="0,up,1,down" selected="0"/>
-  <controller name="ctrlData" pages="0,none,1,item,4,subItem,2,narrow,3,expand" selected="3">
+  <controller name="ctrlData" pages="0,none,1,item,4,subItem,2,narrow,3,expand,5,itemExpand" selected="4">
     <action type="change_page" fromPage="" toPage="0" controller="button" targetPage="0"/>
   </controller>
   <controller name="ctrlIsShow" pages="0,true,1,false" selected="0"/>
   <displayList>
-    <image id="n15_h5kr" name="n15" src="80ab96" fileName="ideCommon/img/img_ide_cm_16.png" xy="0,0" size="298,58">
+    <image id="n15_h5kr" name="n15" src="80ab96" fileName="ideCommon/img/img_ide_cm_16.png" xy="0,0" size="320,58">
+      <gearDisplay controller="ctrlData" pages="3"/>
+    </image>
+    <image id="n17_so8v" name="n17" src="80ab9c" fileName="ideCommon/img/img_ide_wpk_1.png" xy="32,5" size="48,48">
+      <gearDisplay controller="ctrlData" pages="0,1"/>
+      <gearXY controller="ctrlData" pages="0,4,2" values="32,5|82,5|32,5" default="32,5"/>
+    </image>
+    <image id="n19_so8v" name="n19" src="80ab9d" fileName="ideCommon/img/img_ide_wpk_2.png" xy="32,5" size="48,48">
+      <gearDisplay controller="ctrlData" pages="4,2,3,5"/>
+      <gearXY controller="ctrlData" pages="4" values="82,5" default="32,5"/>
+    </image>
+    <loader id="n2_wsvg" name="icon" xy="39,12" size="34,34" align="center" vAlign="middle" fill="scale" shrinkOnly="true">
+      <gearXY controller="ctrlData" pages="0,1,4,2,3,5" values="39,12|39,12|89,12|39,12|39,12|39,12"/>
+    </loader>
+    <image id="n18_so8v" name="n18" src="80ab9e" fileName="ideCommon/img/img_ide_wpk_3.png" xy="32,5" size="48,48">
       <gearDisplay controller="button" pages="1"/>
     </image>
-    <loader id="n2_wsvg" name="icon" xy="32,5" size="48,48" align="center" vAlign="middle" fill="scale" shrinkOnly="true">
-      <gearXY controller="ctrlData" pages="0,4" values="32,7|82,5" default="32,5"/>
-      <gearSize controller="ctrlData" default="48,48,1,1"/>
-    </loader>
     <text id="n6_mte0" name="title" xy="90,22" size="100,19" fontSize="18" color="#333333" vAlign="middle" autoSize="none" autoClearText="true" text="金制工作台">
-      <gearDisplay controller="ctrlData" pages="1,4,2,3"/>
+      <gearDisplay controller="ctrlData" pages="1,4,2,3,5"/>
       <gearXY controller="ctrlData" pages="4" values="139,22" default="90,22"/>
       <gearSize controller="ctrlData" default="100,19,1,1"/>
     </text>
@@ -24,7 +34,7 @@
     <image id="n8_shu1" name="n8" src="xba67g" fileName="ideCommon/img/icon_ide_cm_4_1.png" xy="14,23">
       <gearDisplay controller="ctrlData" pages="2"/>
     </image>
-    <text id="n9_shu1" name="tfNum" xy="229,20" size="60,22" fontSize="18" color="#333333" align="right" vAlign="middle" autoSize="none" text="1209&#xA;">
+    <text id="n9_shu1" name="tfNum" xy="245,20" size="60,22" fontSize="18" color="#333333" align="right" vAlign="middle" autoSize="none" text="1209&#xA;">
       <gearDisplay controller="ctrlData" pages="2,3"/>
     </text>
     <image id="n11_10awa" name="n11" src="cw9mcyifr" fileName="old/imgB/img_cm_ys_1_1.png" pkg="te1gxawo" xy="4,4">
@@ -33,8 +43,8 @@
     <image id="n12_10awa" name="n12" src="cw9mcyifs" fileName="old/imgB/img_cm_ys_2.png" pkg="te1gxawo" xy="6,7">
       <gearDisplay controller="ctrlIsShow" pages="1"/>
     </image>
-    <image id="n13_h5kr" name="n13" src="80ab99" fileName="ideCommon/img/img_ide_cm_h.png" xy="0,60" size="298,2"/>
-    <image id="n14_h5kr" name="imgTopLine" src="80ab99" fileName="ideCommon/img/img_ide_cm_h.png" xy="0,0" size="298,2"/>
+    <image id="n13_h5kr" name="n13" src="80ab99" fileName="ideCommon/img/img_ide_cm_h.png" xy="0,58" size="320,2"/>
+    <image id="n14_h5kr" name="imgTopLine" src="80ab99" fileName="ideCommon/img/img_ide_cm_h.png" xy="0,0" size="320,2"/>
   </displayList>
   <Button mode="Radio"/>
 </component>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="241,40" designImage="ui://thvmj7vozgghcyiiu" designImageOffsetX="-1309" designImageOffsetY="-420" bgColorEnabled="true">
+  <controller name="poolType" pages="3,,1,,2," selected="2"/>
+  <displayList>
+    <component id="n15_mkhl" name="btnSetVariate" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="175,2" size="36,36">
+      <gearDisplay controller="poolType" pages="1"/>
+      <relation target="" sidePair="right-right,top-top"/>
+      <Button icon="ui://ti9jag5tzgght83"/>
+    </component>
+    <component id="n18_nx0y" name="btnUnSetVariate" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="175,2" size="36,36">
+      <gearDisplay controller="poolType" pages="2"/>
+      <relation target="" sidePair="right-right,top-top"/>
+      <Button icon="ui://ti9jag5tzgght8h"/>
+    </component>
+    <component id="n19_v32m" name="btnCreateList" src="lj8gt8j" fileName="codeVew/btn/btnScale.xml" xy="0,0" size="140,40">
+      <gearDisplay controller="poolType" pages="1,2"/>
+      <relation target="" sidePair="left-left,top-top"/>
+      <Button title="建立一个列表" titleColor="#333333" titleFontSize="18" icon="ui://te1gxawogup1cyihx"/>
+    </component>
+  </displayList>
+</component>

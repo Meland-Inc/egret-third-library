@@ -1,20 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="86,86" extention="Button">
   <controller name="button" pages="0,up,1,down" selected="0"/>
-  <controller name="ctrlState" pages="0,single,1,group" selected="0"/>
+  <controller name="ctrlData" pages="0,item,1,narrow,2,expand,3,itemExpand" selected="0"/>
   <displayList>
     <image id="n13_j0zc" name="imgBG_1" src="80ab9c" fileName="ideCommon/img/img_ide_wpk_1.png" xy="0,0" pivot="0.5,0.5">
-      <gearDisplay controller="ctrlState" pages="0"/>
+      <gearDisplay controller="ctrlData" pages="0"/>
     </image>
     <image id="n23_inuq" name="imgBG_2" src="80ab9d" fileName="ideCommon/img/img_ide_wpk_2.png" xy="0,0" pivot="0.5,0.5" size="86,86">
-      <gearDisplay controller="ctrlState" pages="1"/>
+      <gearDisplay controller="ctrlData" pages="1,2,3"/>
     </image>
     <image id="n14_j0zc" name="imgBG_3" src="80ab9e" fileName="ideCommon/img/img_ide_wpk_3.png" xy="0,0" pivot="0.5,0.5" size="86,86">
       <gearDisplay controller="button" pages="1"/>
     </image>
-    <loader id="n16_j0zc" name="icon" xy="3,3" pivot="0.5,0.5" size="80,80" group="n21_j0zc" align="center" vAlign="middle" fill="scale"/>
-    <group id="n21_j0zc" name="grpItemIcon" xy="3,3" size="80,80" advanced="true"/>
+    <loader id="n16_j0zc" name="icon" xy="11,11" pivot="0.5,0.5" size="64,64" group="n21_j0zc" align="center" vAlign="middle" fill="scale"/>
+    <group id="n21_j0zc" name="grpItemIcon" xy="11,11" size="64,64" advanced="true"/>
     <image id="n22_g0no" name="imgMulti" src="s1sdta6" fileName="newImg/AnimationEdit/icon_cm_dh_10.png" pkg="32ieekgu" xy="66,0" hideByEditor="true"/>
+    <graph id="n24_pgmr" name="n24" xy="0,0" size="86,86" group="n26_pgmr" alpha="0.5" type="rect" lineSize="0" lineColor="#00000000" fillColor="#ff000000" corner="5"/>
+    <text id="n25_pgmr" name="tfName" xy="0,46" size="86,40" group="n26_pgmr" fontSize="14" color="#ffffff" align="center" autoSize="none" text="我是一个大草块"/>
+    <group id="n26_pgmr" name="grpTip" xy="0,0" size="86,86" hideByEditor="true" visible="false" advanced="true" collapsed="true"/>
+    <image id="n27_pgmr" name="n27" src="80ab9f" fileName="ideCommon/img/img_ide_wpk_5.png" xy="0,62">
+      <gearDisplay controller="ctrlData" pages="1,2"/>
+    </image>
+    <text id="n28_pgmr" name="tfNum" xy="21,65" size="36,16" fontSize="12" color="#ffffff" align="right" vAlign="middle" autoSize="none" autoClearText="true" text="1234">
+      <gearDisplay controller="ctrlData" pages="1,2"/>
+    </text>
+    <image id="n29_pgmr" name="n29" src="xba67f" fileName="ideCommon/img/icon_ide_cm_4.png" xy="60,69" filter="color" filterData="1.00,0.00,0.00,0.00">
+      <gearDisplay controller="ctrlData" pages="1"/>
+    </image>
+    <image id="n30_pgmr" name="n30" src="xba67f" fileName="ideCommon/img/icon_ide_cm_4.png" xy="60,69" pivot="0.5,0.5" scale="1,-1" filter="color" filterData="1.00,0.00,0.00,0.00">
+      <gearDisplay controller="ctrlData" pages="2"/>
+    </image>
   </displayList>
   <Button mode="Radio"/>
 </component>
