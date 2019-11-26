@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1920,1080" designImage="ui://thvmj7vomquw10" designImageAlpha="40" designImageLayer="1" adaptationTest="FitSize">
-  <controller name="conSetting" pages="0,system,4,manor,5,robotCode" selected="2"/>
+<component size="1920,1080" designImage="ui://thvmj7vomquw10" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
+  <controller name="conSetting" pages="0,system,4,manor,5,robotCode" selected="0"/>
   <controller name="ctrlGameMode" pages="0,game,1,lessons" selected="0"/>
   <displayList>
     <image id="n166_tcst" name="n166" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="382,192" size="1140,696" group="n154_o5a3"/>
@@ -12,22 +12,25 @@
       <Button icon="ui://te1gxawooiqdcyih2" sound="ui://fknoioovtqc912"/>
     </component>
     <component id="n21_o8k6" name="btnSystem" src="j70wcyihy" fileName="btn/rbtnCommonTopTab.xml" pkg="te1gxawo" xy="760,157" group="n94_o89o">
-      <Button title="系统" controller="conSetting" page="0"/>
+      <Button checked="true" title="系统" controller="conSetting" page="0"/>
     </component>
     <component id="n65_o31t" name="btnManor" src="j70wcyihy" fileName="btn/rbtnCommonTopTab.xml" pkg="te1gxawo" xy="892,157" group="n94_o89o">
-      <Button title="领地" titleColor="#365989" controller="conSetting" page="4"/>
+      <Button title="领地" controller="conSetting" page="4"/>
     </component>
     <component id="n80_opya" name="btnRobotCode" src="j70wcyihy" fileName="btn/rbtnCommonTopTab.xml" pkg="te1gxawo" xy="1024,157" group="n94_o89o">
-      <Button checked="true" title="机器人" controller="conSetting" page="5"/>
+      <Button title="机器人" controller="conSetting" page="5"/>
     </component>
-    <group id="n94_o89o" name="grpTabs" xy="760,157" size="384,48" group="n154_o5a3" advanced="true" collapsed="true" layout="hz" colGap="12">
+    <group id="n94_o89o" name="grpTabs" xy="760,157" size="384,48" group="n154_o5a3" advanced="true" layout="hz" colGap="12">
       <gearDisplay controller="ctrlGameMode" pages="0"/>
     </group>
     <text id="n97_o89o" name="tfQuality" xy="489,272" size="85,24" group="n103_o89o" fontSize="20" color="#333333" vAlign="middle" text="画面质量"/>
     <component id="n98_o89o" name="sldImgQuality" src="o89ocyidg" fileName="sld/sldCommonBlue.xml" pkg="te1gxawo" xy="652,276" size="725,20" group="n103_o89o">
       <Slider value="50" max="100"/>
     </component>
-    <group id="n103_o89o" name="grpImgQuality" xy="489,272" size="888,26" group="n30_o8k6"/>
+    <text id="n172_kvjb" name="tfQuality" xy="649,308" size="25,24" group="n103_o89o" fontSize="20" color="#333333" align="center" vAlign="middle" text="低"/>
+    <text id="n173_kvjb" name="tfQuality" xy="1002,308" size="25,24" group="n103_o89o" fontSize="20" color="#333333" align="center" vAlign="middle" text="中"/>
+    <text id="n174_kvjb" name="tfQuality" xy="1361,308" size="25,24" group="n103_o89o" fontSize="20" color="#333333" align="center" vAlign="middle" text="高"/>
+    <group id="n103_o89o" name="grpImgQuality" xy="489,272" size="897,60" group="n30_o8k6"/>
     <text id="n114_o89o" name="tfSoundVolume" xy="488,367" size="45,24" group="n122_o89o" fontSize="20" color="#333333" vAlign="middle" text="音量"/>
     <component id="n120_o89o" name="sldSoundVolume" src="j70wcyii0" fileName="sld/sldCommonYellow.xml" pkg="te1gxawo" xy="652,371" size="725,20" group="n122_o89o">
       <Slider value="50" max="100"/>
@@ -82,8 +85,8 @@
       <gearDisplay controller="ctrlGameMode" pages="0"/>
       <Button title="退出登陆" icon="ui://te1gxawoeggjcyihf"/>
     </component>
-    <group id="n165_j70w" name="n165" xy="653,825" size="600,46" group="n30_o8k6" advanced="true" layout="hz" colGap="40"/>
-    <group id="n30_o8k6" name="system" xy="488,221" size="1002,650" group="n154_o5a3" advanced="true" collapsed="true">
+    <group id="n165_j70w" name="n165" xy="653,825" size="600,46" group="n30_o8k6" advanced="true" collapsed="true" layout="hz" colGap="40"/>
+    <group id="n30_o8k6" name="system" xy="488,221" size="1002,650" group="n154_o5a3" advanced="true">
       <gearDisplay controller="conSetting" pages="0"/>
     </group>
     <component id="n66_o31t" name="cbManorName" src="l61l3" fileName="com/comManorList.xml" xy="652,315" size="254,40" group="n71_o31t">
@@ -100,8 +103,8 @@
       </ComboBox>
     </component>
     <text id="n67_o31t" name="n67" xy="489,322" size="85,24" group="n71_o31t" fontSize="20" color="#333333" vAlign="middle" text="领地名字"/>
-    <text id="n72_ppgn" name="n72" xy="489,241" size="87,24" group="n71_o31t" fontSize="20" color="#333333" vAlign="middle" text="当前领地"/>
-    <text id="n73_ppgn" name="tfCurManorName" xy="742,241" size="62,24" group="n71_o31t" fontSize="20" color="#333333" vAlign="middle" autoClearText="true" text="aaaaa"/>
+    <text id="n72_ppgn" name="n72" xy="489,241" size="85,24" group="n71_o31t" fontSize="20" color="#333333" vAlign="middle" text="当前领地"/>
+    <text id="n73_ppgn" name="tfCurManorName" xy="669,241" size="227,24" group="n71_o31t" fontSize="20" color="#333333" vAlign="middle" autoSize="none" autoClearText="true" text=""/>
     <text id="n123_xljy" name="tfCurManorBuyRow" xy="758,317" size="39,26" group="n71_o31t" hideByEditor="true" visible="false" fontSize="16" color="#5b4b37" vAlign="middle" autoSize="shrink" autoClearText="true" text="17"/>
     <text id="n124_xljy" name="tfCurManorBuyCol" xy="808,317" size="39,26" group="n71_o31t" hideByEditor="true" visible="false" fontSize="16" color="#5b4b37" vAlign="middle" autoSize="shrink" autoClearText="true" text="17"/>
     <text id="n125_xljy" name="n125" xy="489,403" size="85,24" group="n71_o31t" fontSize="20" color="#333333" vAlign="middle" text="领地大小"/>
@@ -109,8 +112,8 @@
     <loader id="n168_sh0c" name="n168" xy="845,395" size="141,40" group="n71_o31t" url="ui://te1gxawoeggjcyihr" fill="scaleFree"/>
     <text id="n127_xljy" name="tfSelectManorBuyRow" xy="700,402" size="45,24" group="n71_o31t" input="true" keyboardType="4" fontSize="20" color="#333333" vAlign="middle" autoClearText="true" text="1920"/>
     <text id="n128_xljy" name="tfSelectManorBuyCol" xy="891,402" size="45,24" group="n71_o31t" input="true" keyboardType="4" fontSize="20" color="#333333" vAlign="middle" autoClearText="true" text="1080"/>
-    <text id="n129_xljy" name="n129" xy="811,403" size="19,24" group="n71_o31t" fontSize="20" color="#333333" vAlign="middle" text="X"/>
-    <text id="n136_tb0j" name="tfCurManorID" xy="649,241" size="72,26" group="n71_o31t" fontSize="20" color="#990066" vAlign="middle" autoSize="none" autoClearText="true" text="11"/>
+    <text id="n129_xljy" name="n129" xy="811,403" size="18,24" group="n71_o31t" fontSize="20" color="#333333" vAlign="middle" text="X"/>
+    <text id="n136_tb0j" name="tfCurManorID" xy="926,241" size="72,26" group="n71_o31t" fontSize="20" color="#990066" vAlign="middle" autoSize="none" autoClearText="true" text="11"/>
     <component id="n133_xljy" name="btnUpdateSize" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1026,394" size="120,44" group="n71_o31t">
       <Button title="更新" icon="ui://te1gxawooiqdcyih1"/>
     </component>
@@ -147,10 +150,10 @@
         <item/>
       </ComboBox>
     </component>
-    <text id="n83_opya" name="n83" xy="489,322" size="108,24" group="n91_opya" fontSize="20" color="#333333" vAlign="middle" text="机器人代码"/>
-    <text id="n87_opya" name="n87" xy="489,241" size="87,24" group="n91_opya" fontSize="20" color="#333333" vAlign="middle" text="当前代码"/>
-    <text id="n137_ewse" name="tfCurCodeID" xy="649,241" size="72,26" group="n91_opya" fontSize="20" color="#990066" vAlign="middle" autoSize="none" autoClearText="true" text="11"/>
-    <text id="n88_opya" name="tfCurCodeName" xy="742,241" size="62,24" group="n91_opya" fontSize="20" color="#333333" vAlign="middle" autoClearText="true" text="aaaaa"/>
+    <text id="n83_opya" name="n83" xy="489,322" size="105,24" group="n91_opya" fontSize="20" color="#333333" vAlign="middle" text="机器人代码"/>
+    <text id="n87_opya" name="n87" xy="489,241" size="85,24" group="n91_opya" fontSize="20" color="#333333" vAlign="middle" text="当前代码"/>
+    <text id="n137_ewse" name="tfCurCodeID" xy="926,241" size="72,26" group="n91_opya" fontSize="20" color="#990066" vAlign="middle" autoSize="none" autoClearText="true" text="11"/>
+    <text id="n88_opya" name="tfCurCodeName" xy="669,241" size="227,24" group="n91_opya" fontSize="20" color="#333333" vAlign="middle" autoSize="none" autoClearText="true" text="aaaaa"/>
     <text id="n139_t4ko" name="tfSelectCodeID" xy="926,322" size="72,26" group="n91_opya" fontSize="20" color="#990066" vAlign="middle" autoSize="none" autoClearText="true" text="11"/>
     <component id="n85_opya" name="btnCodeUpload" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="732,824" size="120,44" group="n171_sh0c">
       <Button title="上传" icon="ui://te1gxawooiqdcyih1"/>
