@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="55,50">
-  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+<component size="30,30">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="2"/>
   <displayList>
-    <component id="n10_z1hj" name="btnDelArg" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="2,0" size="50,50">
+    <component id="n10_z1hj" name="btnDelArg" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="-10,-10" size="50,50">
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://t573fj5bs45w1b"/>
     </component>

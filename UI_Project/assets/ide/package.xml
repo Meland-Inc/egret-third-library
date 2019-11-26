@@ -206,12 +206,12 @@
     <component id="i6xe6h" name="btnIDEKeyWord.xml" path="/codeVew/oldBtn/"/>
     <component id="i6xe6i" name="btnTips.xml" path="/codeVew/oldBtn/" exported="true"/>
     <component id="i6xe6j" name="btnTipsWithImage.xml" path="/codeVew/oldBtn/" exported="true"/>
-    <component id="i6xe6k" name="WinCodeblockSelectEntityB.xml" path="/codeVew/oldWin/" exported="true"/>
+    <component id="i6xe6k" name="WinCodeblockSelectEntity.xml" path="/codeVew/win/" exported="true"/>
     <image id="i6xe6l" name="icon_code_queding_02.png" path="/codeVew/oldImg/"/>
     <image id="i6xe6m" name="icon_code_fanhui_03.png" path="/codeVew/oldImg/"/>
     <image id="i6xe6n" name="img_code_tishik_01.png" path="/codeVew/oldImg/"/>
     <image id="i6xe6o" name="img_code_tishi_04.png" path="/codeVew/oldImg/"/>
-    <component id="i6xe6p" name="WinCodeblockSelectLocation.xml" path="/codeVew/oldWin/" exported="true"/>
+    <component id="i6xe6p" name="WinCodeblockSelectLocation.xml" path="/codeVew/win/" exported="true"/>
     <component id="i6xe6q" name="comIDEContainer.xml" path="/codeVew/oldCom/"/>
     <image id="t1ls6r" name="icon_code_sc_2.png" path="/codeVew/img/"/>
     <image id="t1ls6s" name="img_code_zz.png" path="/codeVew/img/" scale="9grid" scale9grid="8,8,16,16"/>
@@ -396,6 +396,10 @@
     <image id="zgght8f" name="img_codeV_k.png" path="/codeVew/img/" scale="9grid" scale9grid="30,12,60,24"/>
     <image id="zgght8g" name="img_codeV_x.png" path="/codeVew/img/"/>
     <image id="zgght8h" name="icon_ide_cm_sc.png" path="/ideCommon/img/"/>
+    <component id="lj8gt8j" name="btnScale.xml" path="/codeVew/btn/"/>
+    <component id="lj8gt8k" name="WinCodeBlockSelectItem.xml" path="/codeVew/win/" exported="true"/>
+    <component id="lj8gt8l" name="btnCodeBlockTabB.xml" path="/codeVew/btn/"/>
+    <image id="hixvt8m" name="icon_codeV_bf.png" path="/codeVew/img/"/>
     <image id="amogt8i" name="icon_cre_cjzb.png" path="/create/img/"/>
     <image id="amogt8j" name="icon_cre_cxyx.png" path="/create/img/"/>
     <image id="amogt8k" name="icon_cre_dtgj.png" path="/create/img/"/>

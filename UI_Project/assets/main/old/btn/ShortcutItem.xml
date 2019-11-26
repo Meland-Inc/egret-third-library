@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="70,70" extention="Button">
+  <controller name="button" pages="2,up,3,down" selected="0"/>
+  <controller name="ctrlMark" pages="0,normal,1,equip,2,broken,3,shadow" selected="0"/>
+  <displayList>
+    <loader id="n14_o6si" name="bg" xy="0,0" size="70,70" url="ui://oyity675gen81l" align="center" vAlign="middle" fill="scaleFree" shrinkOnly="true">
+      <gearIcon controller="button" pages="2,3" values="ui://oyity675gen81l|ui://oyity675gen81m"/>
+    </loader>
+    <image id="n41_uvgl" name="bgBroken" src="gen81n" fileName="img_UI3/img_main_posun_65.png" xy="0,0">
+      <gearDisplay controller="ctrlMark" pages="2"/>
+    </image>
+    <loader id="n22_ww3a" name="icon" xy="10,10" size="50,50" group="n24_ww3a" url="ui://oyity675gen81o" align="center" vAlign="middle" fill="scale" shrinkOnly="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <loader id="n36_w9v6" name="formulaBG" xy="0,0" size="70,70" group="n24_ww3a" visible="false" url="ui://oyity675gen81p" align="center" vAlign="middle" fill="scaleFree" playing="false">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <image id="n42_v08m" name="imgBrokenWarn" src="gen81q" fileName="img_UI3/img_main_yujin_64.png" xy="0,0" group="n24_ww3a" visible="false"/>
+    <component id="n43_wdqf" name="comArtNums" src="gen81r" fileName="com/ComArtNums.xml" xy="35,48" group="n38_uvgl">
+      <relation target="" sidePair="right-right"/>
+    </component>
+    <group id="n38_uvgl" name="grpNum" xy="35,48" size="32,20" group="n24_ww3a" advanced="true" collapsed="true"/>
+    <group id="n24_ww3a" name="grpItemIcon" xy="0,0" size="70,70" advanced="true"/>
+    <component id="n31_w9v6" name="barSchedule" src="gen81u" fileName="bar/barItem1.xml" xy="10,55" size="49,8" group="n34_w9v6">
+      <ProgressBar value="50" max="100"/>
+    </component>
+    <text id="n33_w9v6" name="tfArchNum" xy="24,7" size="22,18" group="n34_w9v6" fontSize="12" color="#584736" align="center" vAlign="middle" autoClearText="true" text="5/7">
+      <relation target="" sidePair="center-center"/>
+    </text>
+    <group id="n34_w9v6" name="grpShadowMark" xy="10,7" size="49,56" locked="true" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlMark" pages="3"/>
+    </group>
+    <image id="n40_uvgl" name="imgEquipMark" src="gen81x" fileName="img_UI3/img_main_zaishiyong_63.png" xy="2,2">
+      <gearDisplay controller="ctrlMark" pages="1"/>
+    </image>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

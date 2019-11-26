@@ -9,16 +9,22 @@
     </image>
     <image id="n22_zggh" name="imgBg" src="j595cyiic" fileName="img/img_cm_tkc_1.png" pkg="te1gxawo" xy="19,84" size="362,232" group="n26_zggh"/>
     <image id="n23_zggh" name="imgBgTop" src="c1h7cyiia" fileName="img/img_cm_top_3.png" pkg="te1gxawo" xy="19,84" size="362,56" group="n26_zggh"/>
-    <text id="n12_v32m" name="tfOperate" xy="60,98" size="142,28" group="n26_zggh" fontSize="24" color="#333333" align="right" vAlign="middle" autoSize="none" text="创建">
+    <text id="n12_v32m" name="tfOperate" xy="58,98" size="142,28" group="n26_zggh" fontSize="24" color="#333333" align="right" vAlign="middle" autoSize="none" text="创建">
       <gearText controller="ctrlEditType" pages="1" values="编辑" default="创建"/>
     </text>
-    <text id="n13_v32m" name="tfTitle" xy="198,98" size="129,28" group="n26_zggh" fontSize="24" color="#333333" vAlign="middle" autoSize="none" text="变量">
+    <text id="n13_v32m" name="tfTitle" xy="200,98" size="129,28" group="n26_zggh" fontSize="24" color="#333333" vAlign="middle" autoSize="none" text="变量">
       <gearText controller="ctrlEditTitle" pages="1" values="列表" default="变量"/>
     </text>
-    <component id="n25_zggh" name="comInput" src="dv1icyiim" fileName="com/ComInput.xml" pkg="te1gxawo" xy="51,198" size="300,40" group="n26_zggh"/>
+    <component id="n25_zggh" name="comInput" src="dv1icyiim" fileName="com/ComInput.xml" pkg="te1gxawo" xy="51,198" size="300,40" group="n26_zggh">
+      <Label prompt="请输入变量名称" maxLength="20"/>
+    </component>
     <component id="n4_p3g7" name="btnGlobal" src="lctb60" fileName="codeVew/btn/btnVariateScope.xml" xy="52,162" size="14,14" group="n26_zggh">
       <gearLook controller="ctrlEditType" pages="1" values="1,0,0,0" default="1,0,0,1"/>
       <Button checked="true" titleColor="#ffffff" titleFontSize="18" icon="ui://ti9jag5tzgght86" selectedIcon="ui://ti9jag5tzgght8e" controller="selectScope" page="0"/>
+    </component>
+    <component id="n27_lj8g" name="btnGlobalNull" src="lctb60" fileName="codeVew/btn/btnVariateScope.xml" xy="52,158" size="91,19" group="n26_zggh">
+      <gearLook controller="ctrlEditType" pages="1" values="1,0,0,0" default="1,0,0,1"/>
+      <Button checked="true" titleColor="#ffffff" titleFontSize="18" controller="selectScope" page="0"/>
     </component>
     <text id="n16_v32m" name="tfGlobalTitle" xy="75,158" size="69,20" group="n26_zggh" fontSize="16" color="#333333" vAlign="middle" text="全局变量">
       <gearText controller="ctrlEditTitle" pages="0,1" values="全局变量|全局列表"/>
@@ -26,6 +32,10 @@
     <component id="n5_p3g7" name="btnLocal" src="lctb60" fileName="codeVew/btn/btnVariateScope.xml" xy="178,162" size="14,14" group="n26_zggh">
       <gearLook controller="ctrlEditType" pages="1" values="1,0,0,0" default="1,0,0,1"/>
       <Button titleColor="#ffffff" titleFontSize="18" icon="ui://ti9jag5tzgght86" selectedIcon="ui://ti9jag5tzgght8e" controller="selectScope" page="1"/>
+    </component>
+    <component id="n28_lj8g" name="btnLocalNull" src="lctb60" fileName="codeVew/btn/btnVariateScope.xml" xy="178,158" size="94,19" group="n26_zggh">
+      <gearLook controller="ctrlEditType" pages="1" values="1,0,0,0" default="1,0,0,1"/>
+      <Button titleColor="#ffffff" titleFontSize="18" controller="selectScope" page="1"/>
     </component>
     <text id="n17_v32m" name="tfLocalTitle" xy="203,158" size="69,20" group="n26_zggh" fontSize="16" color="#333333" vAlign="middle" text="实体变量">
       <gearText controller="ctrlEditTitle" pages="0,1" values="实体变量|实体列表"/>

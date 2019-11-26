@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="oyity675" jpegQuality="80" compressPNG="true">
+  <resources>
+    <image id="a1nd1" name="img_main_xdt_1.png" path="/img/" scale="9grid" scale9grid="24,24,48,48"/>
+    <image id="a1nd2" name="img_maon_rw_1.png" path="/img/" scale="9grid" scale9grid="23,7,46,14"/>
+    <image id="a1nd3" name="img_maon_rw_2.png" path="/img/"/>
+    <image id="a1nd4" name="icon_main_bb.png" path="/img/"/>
+    <image id="a1nd5" name="icon_main_bf.png" path="/img/"/>
+    <image id="a1nd6" name="icon_main_ja.png" path="/img/"/>
+    <image id="a1nd7" name="icon_main_jz.png" path="/img/"/>
+    <image id="a1nd8" name="icon_main_mb.png" path="/img/"/>
+    <image id="a1nd9" name="icon_main_rw_1.png" path="/img/"/>
+    <image id="a1nda" name="icon_main_rw_2.png" path="/img/"/>
+    <image id="a1ndb" name="icon_main_sx.png" path="/img/"/>
+    <image id="a1ndc" name="icon_main_sz.png" path="/img/"/>
+    <image id="a1ndd" name="icon_main_tj.png" path="/img/"/>
+    <image id="a1nde" name="icon_main_xsgl.png" path="/img/"/>
+    <image id="a1ndf" name="img_main_bb_1.png" path="/img/"/>
+    <image id="a1ndg" name="img_main_bb_2.png" path="/img/"/>
+    <component id="psruh" name="btnMainMenu.xml" path="/com/" exported="true"/>
+    <component id="psrui" name="ComSmallMap.xml" path="/com/"/>
+    <component id="psruj" name="SmallMapContainer.xml" path="/com/"/>
+    <component id="psruk" name="ComMainTask.xml" path="/com/"/>
+    <component id="psrul" name="LabTaskItem.xml" path="/com/"/>
+    <component id="psrum" name="ComMainBagShortcut.xml" path="/com/"/>
+    <component id="psrun" name="ComMainShortcutItem.xml" path="/com/"/>
+    <component id="psruo" name="spBagBtn.xml" path="/sprite/"/>
+    <image id="lmgfp" name="icon_mainV_zjsj.png" path="/img/"/>
+    <image id="lmgfq" name="icon_mainV_zysj.png" path="/img/"/>
+    <component id="gen8r" name="WinMain.xml" path="/win/" exported="true"/>
+    <component id="gen8s" name="btnAttack.xml" path="/old/btn/"/>
+    <image id="gen8t" name="icon_main_caozuianniu_dikuang_53.png" path="/old/img_UI3/"/>
+    <image id="gen8u" name="icon_main_caozuianniu_quantou_51.png" path="/old/img_UI3/"/>
+    <image id="gen8v" name="icon_main_caozuianniu_jian_49.png" path="/old/img_UI3/"/>
+    <image id="gen8w" name="icon_main_caozuianniu_gaotou_52.png" path="/old/img_UI3/"/>
+    <image id="gen8x" name="icon_main_caozuianniu_futou_50.png" path="/old/img_UI3/"/>
+    <component id="gen8y" name="btnOperate.xml" path="/old/btn/"/>
+    <image id="gen8z" name="icon_main_caozuoanniu_duihua _44.png" path="/old/img_UI3/"/>
+    <image id="gen810" name="icon_main_caozuoanniu_shezhi_46.png" path="/old/img_UI3/"/>
+    <image id="gen811" name="icon_main_caozuoanniu_zhaichu_45.png" path="/old/img_UI3/"/>
+    <component id="gen812" name="btnAvatar.xml" path="/old/btn/"/>
+    <image id="gen813" name="img_main_avatar_1.png" path="/old/newImg/"/>
+    <image id="gen814" name="img_main_avatar_2.png" path="/old/newImg/"/>
+    <component id="gen815" name="btnCircle.xml" path="/old/btn/"/>
+    <image id="gen816" name="btn_cm_circle_1.png" path="/old/newImg/" exported="true"/>
+    <component id="gen817" name="btnRobotViewReturn.xml" path="/old/btn/"/>
+    <image id="gen818" name="btn_cm_orange.png" path="/old/newImg/" exported="true" scale="9grid" scale9grid="16,8,17,30"/>
+    <component id="gen819" name="ObjectShortcutItem.xml" path="/old/btn/" exported="true"/>
+    <image id="gen81a" name="img_cm_wpk_1.png" path="/old/imgB/" exported="true"/>
+    <image id="gen81b" name="img_main_wpk_3.png" path="/old/imgB/"/>
+    <image id="gen81c" name="img_cm_wpk_2.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="16,16,32,32"/>
+    <image id="gen81d" name="img_cm_kjan_1.png" path="/old/imgB/" exported="true"/>
+    <component id="gen81e" name="btnMenu.xml" path="/old/btn/"/>
+    <image id="gen81f" name="icon_main_jiqiren_36.png" path="/old/img_UI3/"/>
+    <sound id="gen81g" name="buttonTouch.wav" path="/old/" exported="true"/>
+    <component id="gen81h" name="btnShowEditor.xml" path="/old/btn/"/>
+    <image id="gen81i" name="btn_main_cl_1.png" path="/old/imgB/"/>
+    <image id="gen81j" name="btn_main_cl_2.png" path="/old/imgB/"/>
+    <component id="gen81k" name="ShortcutItem.xml" path="/old/btn/" exported="true"/>
+    <image id="gen81l" name="img_main_yitianjiawupin_6.png" path="/old/img_UI3/"/>
+    <image id="gen81m" name="img_main_xuanzhong_61.png" path="/old/img_UI3/"/>
+    <image id="gen81n" name="img_main_posun_65.png" path="/old/img_UI3/"/>
+    <image id="gen81o" name="img_main_+_61.png" path="/old/img_UI3/"/>
+    <image id="gen81p" name="img_main_yihaojin_62.png" path="/old/img_UI3/"/>
+    <image id="gen81q" name="img_main_yujin_64.png" path="/old/img_UI3/"/>
+    <component id="gen81r" name="ComArtNums.xml" path="/old/com/"/>
+    <component id="gen81s" name="comArtNum.xml" path="/old/com/"/>
+    <image id="gen81t" name="fnt_shortcutNum_0.png" path="/old/img_UI3/fnts/" exported="true"/>
+    <component id="gen81u" name="barItem1.xml" path="/old/bar/" exported="true"/>
+    <image id="gen81v" name="img_cm_item_12.png" path="/old/newImg/" exported="true" scale="9grid" scale9grid="10,2,20,4"/>
+    <image id="gen81w" name="img_cm_item_13.png" path="/old/newImg/" exported="true" scale="9grid" scale9grid="10,2,20,2"/>
+    <image id="gen81x" name="img_main_zaishiyong_63.png" path="/old/img_UI3/"/>
+    <component id="gen81y" name="ComHeadInfo.xml" path="/old/com/" exported="true"/>
+    <image id="gen81z" name="img_Blood volume_2.png" path="/old/img/" exported="true"/>
+    <image id="gen820" name="img_Blood volume_1.png" path="/old/img/" exported="true"/>
+    <component id="gen821" name="ComAccmu.xml" path="/old/com/" exported="true"/>
+    <image id="gen822" name="img_main_powerstorage_1.png" path="/old/newImg/"/>
+    <component id="gen823" name="pbrAccmu.xml" path="/old/pbr/"/>
+    <image id="gen824" name="img_main_powerstorage_2.png" path="/old/newImg/"/>
+    <image id="gen825" name="复活界面.png" path="/old/main/"/>
+    <component id="gen826" name="ComPickObjectToast.xml" path="/old/com/" exported="true"/>
+    <image id="gen827" name="img_main_itemdrop.png" path="/old/img/"/>
+    <component id="gen828" name="SmallMapContainer.xml" path="/old/com/"/>
+    <component id="gen829" name="ProgressBar.xml" path="/old/com/"/>
+    <component id="gen82a" name="ComSaturationDetail.xml" path="/old/com/" exported="true"/>
+    <image id="gen82b" name="img_cm_tips_5.png" path="/old/newImg/" exported="true" scale="9grid" scale9grid="10,10,20,20"/>
+    <component id="gen82c" name="ComMainChatItem.xml" path="/com/" exported="true"/>
+    <image id="gen82d" name="img_chat_fenxian.png" path="/old/imgNew/" exported="true"/>
+    <image id="gen82e" name="img_chat_system.png" path="/old/imgNew/" exported="true"/>
+    <image id="gen82f" name="img_chat_shijie.png" path="/old/imgNew/" exported="true"/>
+    <image id="gen82g" name="img_chat_fujin.png" path="/old/imgNew/" exported="true"/>
+    <image id="gen82h" name="img_chat_siliao.png" path="/old/imgNew/" exported="true"/>
+    <component id="gen82i" name="ComEmpty.xml" path="/old/com/" exported="true"/>
+    <component id="gen82j" name="taskObjectiveItem.xml" path="/old/com/"/>
+    <component id="gen82k" name="ComTaskTraceItem.xml" path="/old/com/" exported="true"/>
+    <image id="gen82l" name="img_main_renuwulan_24.png" path="/old/img_UI3/" scale="9grid" scale9grid="15,9,30,13"/>
+    <sound id="gen82m" name="close.wav" path="/old/" exported="true"/>
+    <image id="gen82n" name="主界面_展开状态效果图.png" path="/old/main/"/>
+    <component id="gen82o" name="comTaskTargetItem.xml" path="/old/com/" exported="true"/>
+    <image id="gen82p" name="img_main_task_9.png" path="/old/newImg/"/>
+    <component id="gen82q" name="ToolTipWorkbench.xml" path="/old/com/" exported="true"/>
+    <image id="gen82r" name="icon_cm_itemwork.png" path="/old/newImg/" exported="true"/>
+    <component id="gen82s" name="ToolTipWbPet.xml" path="/old/com/" exported="true"/>
+    <component id="gen82t" name="btnFixClickArea.xml" path="/old/btn/" exported="true"/>
+    <component id="gen82u" name="ToolTipWbPlant.xml" path="/old/com/" exported="true"/>
+    <component id="gen82v" name="shortcutLab.xml" path="/old/com/"/>
+    <image id="gen82w" name="img_main_item_2.png" path="/old/newImg/" exported="true"/>
+    <component id="gen82x" name="ComWeatherDetail.xml" path="/old/com/" exported="true"/>
+    <image id="gen82y" name="img_weather_bg_2.png" path="/old/newImg/" exported="true"/>
+    <component id="gen82z" name="ComTaskTipsItem.xml" path="/old/com/"/>
+    <component id="gen830" name="ToolTipTaskPic.xml" path="/old/com/" exported="true"/>
+    <image id="gen831" name="img_cm_tips_4.png" path="/old/newImg/" exported="true" scale="9grid" scale9grid="23,23,46,46"/>
+    <component id="gen832" name="ComMainOperateCorona.xml" path="/old/com/"/>
+    <image id="gen833" name="img_roulette_1.png" path="/old/img_UI3/"/>
+    <component id="gen834" name="btnFix.xml" path="/old/btn/" exported="true"/>
+    <image id="gen835" name="btn_cm_1_red.png" path="/old/newImg/" exported="true"/>
+    <image id="gen836" name="btn_roulette_4.png" path="/old/img_UI3/"/>
+    <image id="gen837" name="btn_roulette_2.png" path="/old/img_UI3/"/>
+    <image id="gen838" name="btn_roulette_3.png" path="/old/img_UI3/"/>
+    <image id="gen839" name="btn_roulette_1.png" path="/old/img_UI3/"/>
+    <component id="gen83a" name="ComTaskTraceItemOld.xml" path="/old/com/" exported="true"/>
+    <image id="gen83b" name="img_main_task_6.png" path="/old/newImg/"/>
+    <image id="gen83c" name="img_main_task_3.png" path="/old/newImg/"/>
+    <image id="gen83d" name="img_main_task_2.png" path="/old/newImg/"/>
+    <image id="gen83e" name="img_main_task_4.png" path="/old/newImg/"/>
+    <component id="gen83f" name="ComBuildRocker.xml" path="/old/com/"/>
+    <image id="gen83g" name="img_main_kuaisujianzao_toumingdu_42.png" path="/old/img_UI3/"/>
+    <image id="gen83h" name="img_main_kuaisujianzao_toumingdu20%_41.png" path="/old/img_UI3/"/>
+    <image id="gen83i" name="icon_main_kuaisujianzao_yidong_43.png" path="/old/img_UI3/"/>
+    <component id="gen83j" name="ComMainGameLeftTopUICtnr.xml" path="/old/com/" exported="true"/>
+    <image id="gen83k" name="icon_main_shezhi_67.png" path="/old/img_UI3/"/>
+    <image id="gen83l" name="icon_main_xinxiang_67.png" path="/old/img_UI3/"/>
+    <image id="gen83m" name="icon_main_suoxiaoi_69.png" path="/old/img_UI3/"/>
+    <image id="gen83n" name="icon_main_map_66.png" path="/old/img_UI3/"/>
+    <image id="gen83o" name="icon_main_hongdian_68.png" path="/old/img_UI3/"/>
+    <component id="gen83p" name="ComSmallMap.xml" path="/old/win/" exported="true"/>
+    <image id="gen83q" name="img_main_zhezhao_71.png" path="/old/img_UI3/" scale="9grid" scale9grid="25,25,50,50"/>
+    <image id="gen83r" name="img_main_zhezhao_71-1.png" path="/old/img_UI3/" scale="9grid" scale9grid="40,40,80,80"/>
+    <image id="gen83s" name="img_main_qingtian_14.png" path="/old/img_UI3/"/>
+    <image id="gen83t" name="效果图2.png" path="/old/main/"/>
+    <component id="gen83u" name="ComMainLessonLeftTopUICtnr.xml" path="/old/com/" exported="true"/>
+    <image id="gen83v" name="icon_main_dt_1.png" path="/old/imgB/"/>
+    <component id="gen83w" name="spriteSummonBot.xml" path="/old/sprite/"/>
+    <image id="gen83x" name="btn_main_zh_1.png" path="/old/img_UI3/"/>
+    <image id="gen83y" name="img_main_zt_2.png" path="/old/imgB/"/>
+    <component id="gen83z" name="spriteRecallBot.xml" path="/old/sprite/"/>
+    <image id="gen840" name="img_main_zt_3.png" path="/old/imgB/"/>
+    <image id="gen841" name="btn_main_zh_2.png" path="/old/img_UI3/"/>
+    <component id="gen842" name="spriteResetManor.xml" path="/old/sprite/"/>
+    <image id="gen843" name="icon_main_czld_1.png" path="/old/imgB/"/>
+    <image id="gen844" name="img_main_zt_4.png" path="/old/imgB/"/>
+    <image id="gen845" name="btn_main_zsj_2.png" path="/old/imgB/"/>
+    <image id="gen846" name="btn_main_zsj_1.png" path="/old/imgB/"/>
+    <image id="gen847" name="学生端—主界面按钮2.png" path="/old/main/"/>
+    <component id="gen848" name="ComMainGameShortcuts.xml" path="/old/com/" exported="true"/>
+    <image id="gen849" name="img_main_beibaodise_13.png" path="/old/img_UI3/"/>
+    <image id="gen84a" name="btn_main_beibaozhankai_4 .png" path="/old/img_UI3/"/>
+    <image id="gen84b" name="btn_main_beibao_12.png" path="/old/img_UI3/"/>
+    <image id="gen84c" name="btn_main_beibaozhankaianniu_4 _1.png" path="/old/img_UI3/"/>
+    <image id="gen84d" name="btn_main_beibaoshouqianniu_3_1.png" path="/old/img_UI3/"/>
+    <image id="gen84e" name="1.png" path="/old/main/B端效果图/"/>
+    <component id="gen84f" name="ComMainLessonShortcutsOld.xml" path="/old/com/" exported="true"/>
+    <image id="gen84g" name="btn_main_dl_1.png" path="/old/imgB/"/>
+    <image id="gen84h" name="btn_main_dl_2.png" path="/old/imgB/"/>
+    <image id="gen84i" name="btn_main_dl_4.png" path="/old/imgB/"/>
+    <image id="gen84j" name="btn_main_bb_1.png" path="/old/imgB/"/>
+    <component id="gen84k" name="ComMainMapOperate.xml" path="/old/com/" exported="true"/>
+    <image id="gen84l" name="btn_main_cebianlanzhankai 20.png" path="/old/img_UI3/" scale="9grid" scale9grid="62,21,31,42"/>
+    <image id="gen84m" name="icon_main_shanchu _22.png" path="/old/img_UI3/"/>
+    <image id="gen84n" name="icon_main_chuizi_ 21.png" path="/old/img_UI3/"/>
+    <image id="gen84o" name="icon_main_yingcang_23.png" path="/old/img_UI3/"/>
+    <image id="gen84p" name="btn_main_cebianlanzhankai 20_1.png" path="/old/img_UI3/"/>
+    <image id="gen84q" name="btn_main_cebianlananniu 19_1.png" path="/old/img_UI3/"/>
+    <component id="gen84r" name="ComMainLessonShortcuts.xml" path="/old/com/" exported="true"/>
+    <image id="gen84s" name="img_main_kjld_1.png" path="/old/imgB/" scale="9grid" scale9grid="21,17,42,34"/>
+    <image id="gen84t" name="img_main_kjld_2.png" path="/old/imgB/"/>
+    <image id="gen84u" name="btn_cm_tj_1.png" path="/old/imgB/" exported="true"/>
+    <component id="gen84v" name="labKeyBoardIndex.xml" path="/old/com/"/>
+    <image id="gen84w" name="main1.png" path="/old/main/"/>
+    <component id="gen84x" name="btnCodeQuestion.xml" path="/old/com/" exported="true"/>
+    <image id="gen84y" name="img_Dialog_dk_5.png" path="/old/img_UI3/" exported="true"/>
+    <image id="gen84z" name="img_Dialog_dk_6.png" path="/old/img_UI3/" exported="true"/>
+    <component id="gen850" name="btnSelection.xml" path="/old/com/"/>
+    <image id="gen851" name="btn_Dialog_shurukuang_2.png" path="/old/img_UI3/dialog/" exported="true" scale="9grid" scale9grid="29,17,58,34"/>
+    <component id="gen852" name="ToolTipCodeQuestion.xml" path="/old/com/" exported="true"/>
+    <image id="gen853" name="img_Dialog_dk_1.png" path="/old/img_UI3/" exported="true" scale="9grid" scale9grid="12,10,109,100"/>
+    <component id="gen854" name="labVScroll.xml" path="/old/lab/" exported="true"/>
+    <image id="gen855" name="img_Dialog_dk_4.png" path="/old/img_UI3/" exported="true"/>
+    <image id="gen856" name="img_Dialog_dk_3.png" path="/old/img_UI3/" exported="true"/>
+    <image id="gen857" name="img_Dialog_dk_2.png" path="/old/img_UI3/" exported="true"/>
+    <image id="gen858" name="选择类界面效果图.png" path="/old/codeBlock/"/>
+    <component id="gen859" name="ComLessonGuide.xml" path="/old/com/"/>
+    <image id="gen85a" name="btn_main_rwl_3.png" path="/old/imgB/" scale="9grid" scale9grid="22,19,44,38"/>
+    <image id="gen85b" name="btn_main_rwl_1.png" path="/old/imgB/"/>
+    <component id="gen85c" name="labLessonGuideItem.xml" path="/old/com/"/>
+    <image id="gen85d" name="btn_main_rwl_2.png" path="/old/imgB/"/>
+    <image id="gen85e" name="img_main_avatar_1.png" path="/old/img/" exported="true"/>
+    <image id="gen85f" name="img_main_avatar_12.png" path="/old/img/" exported="true"/>
+    <image id="gen85g" name="img_main_avatar_2.png" path="/old/img/" exported="true"/>
+    <image id="gen85h" name="img_main_avatar_3.png" path="/old/img/" exported="true"/>
+    <image id="gen85i" name="img_main_avatar_5.png" path="/old/img/" exported="true"/>
+    <image id="gen85j" name="img_main_avatar_6.png" path="/old/img/" exported="true"/>
+    <image id="gen85k" name="img_main_avatar_8.png" path="/old/img/" exported="true"/>
+    <image id="gen85l" name="img_main_avatar_9.png" path="/old/img/" exported="true"/>
+    <image id="gen85m" name="fnt_shortcutNum_1.png" path="/old/img_UI3/fnts/" exported="true"/>
+    <image id="gen85n" name="fnt_shortcutNum_2.png" path="/old/img_UI3/fnts/" exported="true"/>
+    <image id="gen85o" name="fnt_shortcutNum_3.png" path="/old/img_UI3/fnts/" exported="true"/>
+    <image id="gen85p" name="fnt_shortcutNum_4.png" path="/old/img_UI3/fnts/" exported="true"/>
+    <image id="gen85q" name="fnt_shortcutNum_5.png" path="/old/img_UI3/fnts/" exported="true"/>
+    <image id="gen85r" name="fnt_shortcutNum_6.png" path="/old/img_UI3/fnts/" exported="true"/>
+    <image id="gen85s" name="fnt_shortcutNum_7.png" path="/old/img_UI3/fnts/" exported="true"/>
+    <image id="gen85t" name="fnt_shortcutNum_8.png" path="/old/img_UI3/fnts/" exported="true"/>
+    <image id="gen85u" name="fnt_shortcutNum_9.png" path="/old/img_UI3/fnts/" exported="true"/>
+    <image id="gen85v" name="btn_main_beibaoshouqi_3.png" path="/old/img_UI3/"/>
+    <image id="gen85w" name="btn_main_cebianlan 19.png" path="/old/img_UI3/"/>
+    <image id="gen85x" name="btn_main_gengduo _31.png" path="/old/img_UI3/"/>
+    <image id="gen85y" name="btn_main_gengduoxialai _32.png" path="/old/img_UI3/" scale="9grid" scale9grid="19,26,21,59"/>
+    <image id="gen85z" name="icon_main_caozuianniu_pugong_47.png" path="/old/img_UI3/"/>
+    <image id="gen860" name="icon_main_guanxia_33.png" path="/old/img_UI3/"/>
+    <image id="gen861" name="icon_main_kuaisujianzao_guanbi_39.png" path="/old/img_UI3/"/>
+    <image id="gen862" name="icon_main_kuaisujianzao_jingxiang_40.png" path="/old/img_UI3/"/>
+    <image id="gen863" name="icon_main_kuaisujianzao_queding_38.png" path="/old/img_UI3/"/>
+    <image id="gen864" name="icon_main_lantu_37.png" path="/old/img_UI3/"/>
+    <image id="gen865" name="icon_main_renwu_34.png" path="/old/img_UI3/"/>
+    <image id="gen866" name="icon_main_shejiao_35.png" path="/old/img_UI3/"/>
+    <image id="gen867" name="img_main_aixin_28.png" path="/old/img_UI3/"/>
+    <image id="gen868" name="img_main_aixintianchong_29.png" path="/old/img_UI3/" scale="9grid" scale9grid="9,4,18,8"/>
+    <image id="gen869" name="img_main_EXP_7.png" path="/old/img_UI3/"/>
+    <image id="gen86a" name="img_main_kuaisujianzao_toumingdu80%_42.png" path="/old/img_UI3/"/>
+    <image id="gen86b" name="img_main_liaotianquyu_10.png" path="/old/img_UI3/" scale="9grid" scale9grid="14,10,28,20"/>
+    <image id="gen86c" name="img_main_qingtian_14 .png" path="/old/img_UI3/"/>
+    <image id="gen86d" name="img_main_shuliangkuang_10.png" path="/old/img_UI3/"/>
+    <image id="gen86e" name="img_main_tianjiawupin_5.png" path="/old/img_UI3/"/>
+    <image id="gen86f" name="img_main_tianqiyuyue_48.png" path="/old/img_UI3/" scale="9grid" scale9grid="35,16,70,32"/>
+    <image id="gen86g" name="img_main_tiaotianquyu_11.png" path="/old/img_UI3/"/>
+    <image id="gen86h" name="img_main_tili_27.png" path="/old/img_UI3/"/>
+    <image id="gen86i" name="img_main_tilitianchongse_30.png" path="/old/img_UI3/" scale="9grid" scale9grid="9,4,18,8"/>
+    <image id="gen86j" name="img_main_wenduji_15.png" path="/old/img_UI3/"/>
+    <image id="gen86k" name="img_main_xuetiaodikuang_8.png" path="/old/img_UI3/" scale="9grid" scale9grid="8,2,16,4"/>
+    <image id="gen86l" name="img_main_xuetiaotianchongse_9.png" path="/old/img_UI3/" scale="9grid" scale9grid="5,2,10,4"/>
+    <image id="gen86m" name="img_main_yidonglunpan_toumingdu20%_16.png" path="/old/img_UI3/"/>
+    <image id="gen86n" name="img_main_yidonglunpantubiao_70%_18 .png" path="/old/img_UI3/"/>
+    <image id="gen86o" name="img_main_yidonglunpanwaiyuan_toumingdu80%_17.png" path="/old/img_UI3/"/>
+    <image id="gen86p" name="img_main_zhuangtailanyuanxing_26.png" path="/old/img_UI3/"/>
+    <image id="gen86q" name="img_main_zhuangtailandikuang_25.png" path="/old/img_UI3/"/>
+    <image id="gen86r" name="img_main_moon_50.png" path="/old/img_UI3/"/>
+    <image id="gen86s" name="img_main_tilitianchongse_60.png" path="/old/img_UI3/"/>
+    <image id="gen86t" name="btn_main_cebianlanzhankaianniu 20_1.png" path="/old/img_UI3/"/>
+    <image id="gen86u" name="btn_main_liaotian _77.png" path="/old/img_UI3/"/>
+    <image id="gen86v" name="btn_main_suoxiao _78.png" path="/old/img_UI3/"/>
+    <image id="gen86w" name="img_main_dengjizezhao_75.png" path="/old/img_UI3/"/>
+    <image id="gen86x" name="img_main_jingyanzhi_76.png" path="/old/img_UI3/"/>
+    <image id="gen86y" name="img_main_topuxiangkuang_74.png" path="/old/img_UI3/"/>
+    <image id="gen86z" name="img_main_xitiaodikuang_73.png" path="/old/img_UI3/"/>
+    <image id="gen870" name="img_main_zhuangtailanyuanxing_26_1.png" path="/old/img_UI3/"/>
+    <image id="gen871" name="img_main_zuobiao_70.png" path="/old/img_UI3/" exported="true"/>
+    <image id="gen872" name="img_main_touxiangi_81.png" path="/old/img_UI3/"/>
+    <image id="gen873" name="icon_main_kuaisujianzao_shanchu_80.png" path="/old/img_UI3/"/>
+    <image id="gen874" name="fnt_shortcutNum_0.png" path="/old/img_UI3/"/>
+    <image id="gen875" name="fnt_shortcutNum_1.png" path="/old/img_UI3/"/>
+    <image id="gen876" name="fnt_shortcutNum_2.png" path="/old/img_UI3/"/>
+    <image id="gen877" name="fnt_shortcutNum_3.png" path="/old/img_UI3/"/>
+    <image id="gen878" name="fnt_shortcutNum_4.png" path="/old/img_UI3/"/>
+    <image id="gen879" name="fnt_shortcutNum_5.png" path="/old/img_UI3/"/>
+    <image id="gen87a" name="fnt_shortcutNum_6.png" path="/old/img_UI3/"/>
+    <image id="gen87b" name="fnt_shortcutNum_7.png" path="/old/img_UI3/"/>
+    <image id="gen87c" name="fnt_shortcutNum_8.png" path="/old/img_UI3/"/>
+    <image id="gen87d" name="fnt_shortcutNum_9.png" path="/old/img_UI3/"/>
+    <image id="gen87e" name="img_main_xdt_zb_3.png" path="/old/img_UI3/" exported="true"/>
+    <image id="gen87f" name="img_Dialog_dk_7.png" path="/old/img_UI3/" exported="true"/>
+    <image id="gen87g" name="img_main_wpk_1.png" path="/old/imgB/"/>
+    <image id="gen87h" name="img_main_wpk_2.png" path="/old/imgB/"/>
+    <image id="gen87i" name="btn_main_dl_3.png" path="/old/imgB/"/>
+    <image id="gen87j" name="icon_main_gd_1.png" path="/old/imgB/"/>
+    <image id="gen87k" name="icon_main_gd_2.png" path="/old/imgB/"/>
+    <image id="gen87l" name="icon_main_gd_3.png" path="/old/imgB/"/>
+    <image id="gen87m" name="icon_main_gd_4.png" path="/old/imgB/" scale="9grid" scale9grid="14,23,28,119"/>
+    <image id="gen87n" name="icon_main_sc_1.png" path="/old/imgB/"/>
+    <image id="gen87o" name="img_main_zt_1.png" path="/old/imgB/"/>
+    <image id="gen87p" name="img_main_zt_5.png" path="/old/imgB/"/>
+    <image id="gen87q" name="img_main_zt_6.png" path="/old/imgB/"/>
+    <image id="gen87r" name="btn_main_ja_1.png" path="/old/imgB/"/>
+    <image id="gen87s" name="icon_main_ja_3.png" path="/old/imgB/"/>
+    <image id="gen87t" name="btn_main_xslb_1.png" path="/old/imgB/"/>
+    <image id="gen87u" name="btn_main_dtgj_1.png" path="/old/imgB/"/>
+    <image id="gen87v" name="btn_main_fh_1.png" path="/old/imgB/"/>
+    <image id="gen87w" name="btn_main_dtgj_1_1.png" path="/old/imgB/"/>
+    <image id="gen87x" name="btn_main_fh_1_1.png" path="/old/imgB/"/>
+    <image id="gen87y" name="btn_main_mbcz_1.png" path="/old/imgB/"/>
+    <image id="gen87z" name="img_main_mbcz_1_1.png" path="/old/imgB/"/>
+    <image id="gen880" name="btn_main_zsj_3.png" path="/old/imgB/"/>
+    <component id="gen881" name="labHitFlutterWord.xml" path="/old/lab/" exported="true"/>
+    <component id="gen882" name="comArchPathItem.xml" path="/old/lab/"/>
+    <image id="gen883" name="icon_main_formulaOK.png" path="/old/newImg/"/>
+    <component id="gen884" name="labProgress.xml" path="/old/lab/"/>
+    <image id="gen885" name="btn_main_item_add.png" path="/old/newImg/"/>
+    <image id="gen886" name="btn_main_mail.png" path="/old/newImg/"/>
+    <image id="gen887" name="btn_main_menu.png" path="/old/newImg/"/>
+    <image id="gen888" name="btn_main_menu_3.png" path="/old/newImg/"/>
+    <image id="gen889" name="icon_main_axe.png" path="/old/newImg/" exported="true"/>
+    <image id="gen88a" name="icon_main_backpack.png" path="/old/newImg/"/>
+    <image id="gen88b" name="icon_main_battery.png" path="/old/newImg/"/>
+    <image id="gen88c" name="icon_main_bow.png" path="/old/newImg/" exported="true"/>
+    <image id="gen88d" name="icon_main_building.png" path="/old/newImg/" exported="true"/>
+    <image id="gen88e" name="icon_main_chat.png" path="/old/newImg/"/>
+    <image id="gen88f" name="icon_main_fist.png" path="/old/newImg/" exported="true"/>
+    <image id="gen88g" name="icon_main_formula.png" path="/old/newImg/" exported="true"/>
+    <image id="gen88h" name="icon_main_health.png" path="/old/newImg/" exported="true"/>
+    <image id="gen88i" name="icon_main_hunger.png" path="/old/newImg/"/>
+    <image id="gen88j" name="icon_main_mining.png" path="/old/newImg/" exported="true"/>
+    <image id="gen88k" name="icon_main_night.png" path="/old/newImg/"/>
+    <image id="gen88l" name="icon_main_pickup.png" path="/old/newImg/" exported="true"/>
+    <image id="gen88m" name="icon_main_robot.png" path="/old/newImg/"/>
+    <image id="gen88n" name="icon_main_setting.png" path="/old/newImg/"/>
+    <image id="gen88o" name="icon_main_shoot.png" path="/old/newImg/" exported="true"/>
+    <image id="gen88p" name="icon_main_sun.png" path="/old/newImg/"/>
+    <image id="gen88q" name="icon_main_sword.png" path="/old/newImg/" exported="true"/>
+    <image id="gen88r" name="icon_main_talk.png" path="/old/newImg/" exported="true"/>
+    <image id="gen88s" name="icon_main_task.png" path="/old/newImg/"/>
+    <image id="gen88t" name="icon_main_temperature.png" path="/old/newImg/"/>
+    <image id="gen88u" name="icon_main_thirst.png" path="/old/newImg/"/>
+    <image id="gen88v" name="icon_main_time.png" path="/old/newImg/"/>
+    <image id="gen88w" name="icon_main_watch.png" path="/old/newImg/" exported="true"/>
+    <image id="gen88x" name="icon_main_wifi.png" path="/old/newImg/"/>
+    <image id="gen88y" name="icon_main_work.png" path="/old/newImg/"/>
+    <image id="gen88z" name="img_main_announcement.png" path="/old/newImg/"/>
+    <image id="gen890" name="img_main_attacked.png" path="/old/newImg/"/>
+    <image id="gen891" name="img_main_chat_1.png" path="/old/newImg/"/>
+    <image id="gen892" name="img_main_chat_2.png" path="/old/newImg/"/>
+    <image id="gen893" name="img_main_exp_1.png" path="/old/newImg/"/>
+    <image id="gen894" name="img_main_exp_2.png" path="/old/newImg/"/>
+    <image id="gen895" name="img_main_exp_3.png" path="/old/newImg/"/>
+    <image id="gen896" name="img_main_info.png" path="/old/newImg/"/>
+    <image id="gen897" name="img_main_itemdrop.png" path="/old/newImg/"/>
+    <image id="gen898" name="img_main_item_1.png" path="/old/newImg/"/>
+    <image id="gen899" name="img_main_item_2(1).png" path="/old/newImg/"/>
+    <image id="gen89a" name="img_main_item_3.png" path="/old/newImg/" exported="true"/>
+    <image id="gen89b" name="img_main_item_4.png" path="/old/newImg/"/>
+    <image id="gen89c" name="img_main_item_5.png" path="/old/newImg/"/>
+    <image id="gen89d" name="img_main_location.png" path="/old/newImg/"/>
+    <image id="gen89e" name="img_main_mailprompt.png" path="/old/newImg/"/>
+    <image id="gen89f" name="img_main_map_1.png" path="/old/newImg/"/>
+    <image id="gen89g" name="img_main_map_2.png" path="/old/newImg/"/>
+    <image id="gen89h" name="img_main_menu.png" path="/old/newImg/"/>
+    <image id="gen89i" name="img_main_monster_1.png" path="/old/newImg/"/>
+    <image id="gen89j" name="img_main_monster_2.png" path="/old/newImg/"/>
+    <image id="gen89k" name="img_main_monster_3.png" path="/old/newImg/"/>
+    <image id="gen89l" name="img_main_monster_4.png" path="/old/newImg/"/>
+    <image id="gen89m" name="img_main_survive_1.png" path="/old/newImg/" exported="true"/>
+    <image id="gen89n" name="img_main_survive_2.png" path="/old/newImg/" exported="true"/>
+    <image id="gen89o" name="img_main_survive_3.png" path="/old/newImg/" exported="true"/>
+    <image id="gen89p" name="img_main_survive_4.png" path="/old/newImg/"/>
+    <image id="gen89q" name="img_main_survive_5.png" path="/old/newImg/"/>
+    <image id="gen89r" name="img_main_systeminfo.png" path="/old/newImg/" scale="9grid" scale9grid="46,4,92,8"/>
+    <image id="gen89s" name="img_main_task_1.png" path="/old/newImg/"/>
+    <image id="gen89t" name="img_main_task_5.png" path="/old/newImg/"/>
+    <image id="gen89u" name="img_main_task_7.png" path="/old/newImg/"/>
+    <image id="gen89v" name="img_main_task_8.png" path="/old/newImg/"/>
+    <image id="gen89w" name="icon_main_email.png" path="/old/newImg/"/>
+    <image id="gen89x" name="icon_main_manual.png" path="/old/newImg/"/>
+    <image id="gen89y" name="icon_main_workshop.png" path="/old/newImg/"/>
+    <image id="gen89z" name="icon_main_exp_2.png" path="/old/newImg/" exported="true"/>
+    <image id="gen8a0" name="icon_main_health_2.png" path="/old/newImg/" exported="true"/>
+    <image id="gen8a1" name="icon_main_hunger_2.png" path="/old/newImg/" exported="true"/>
+    <image id="gen8a2" name="icon_main_thirst_2.png" path="/old/newImg/" exported="true"/>
+    <image id="gen8a3" name="icon_main_dawn.png" path="/old/newImg/"/>
+    <image id="gen8a4" name="icon_main_dusk.png" path="/old/newImg/"/>
+    <image id="gen8a5" name="icon_main_battery_1.png" path="/old/newImg/"/>
+    <image id="gen8a6" name="icon_main_battery_2.png" path="/old/newImg/"/>
+    <image id="gen8a7" name="icon_main_battery_3.png" path="/old/newImg/"/>
+    <image id="gen8a8" name="icon_main_wifi_1.png" path="/old/newImg/"/>
+    <image id="gen8a9" name="icon_main_wifi_2.png" path="/old/newImg/"/>
+    <image id="gen8aa" name="btn_main_formula.png" path="/old/newImg/"/>
+    <image id="gen8ab" name="btn_main_menu_1.png" path="/old/newImg/"/>
+    <image id="gen8ac" name="btn_main_menu_2.png" path="/old/newImg/"/>
+    <image id="gen8ad" name="icon_main_more.png" path="/old/newImg/"/>
+    <image id="gen8ae" name="img_main_menu_1.png" path="/old/newImg/" scale="9grid" scale9grid="22,22,44,44"/>
+    <image id="gen8af" name="img_main_item_8.png" path="/old/newImg/" exported="true"/>
+    <image id="gen8ag" name="icon_main_treasure.png" path="/old/newImg/" exported="true"/>
+    <image id="gen8ah" name="icon_weather_fire.png" path="/old/newImg/" exported="true"/>
+    <image id="gen8ai" name="icon_weather_gas.png" path="/old/newImg/" exported="true"/>
+    <image id="gen8aj" name="icon_weather_health.png" path="/old/newImg/" exported="true"/>
+    <image id="gen8ak" name="icon_weather_rain.png" path="/old/newImg/" exported="true"/>
+    <image id="gen8al" name="icon_weather_snow.png" path="/old/newImg/" exported="true"/>
+    <image id="gen8am" name="icon_weather_sun.png" path="/old/newImg/" exported="true"/>
+    <image id="gen8an" name="icon_weather_temperature.png" path="/old/newImg/" exported="true"/>
+    <image id="gen8ao" name="icon_weather_walk.png" path="/old/newImg/" exported="true"/>
+    <image id="gen8ap" name="icon_weather_water.png" path="/old/newImg/" exported="true"/>
+    <image id="gen8aq" name="icon_weather_wind.png" path="/old/newImg/" exported="true"/>
+    <image id="gen8ar" name="img_weather_bg.png" path="/old/newImg/" exported="true"/>
+    <image id="gen8as" name="icon_main_fatigue_2.png" path="/old/newImg/" exported="true"/>
+    <component id="gen8at" name="pbrMainHp.xml" path="/old/pbr/"/>
+    <component id="gen8au" name="pbrMainPlayerHp.xml" path="/old/pbr/"/>
+    <component id="gen8av" name="pbrHp.xml" path="/old/pbr/"/>
+    <component id="gen8aw" name="pbrHunger.xml" path="/old/pbr/"/>
+    <component id="gen8ax" name="comExpBar.xml" path="/old/progressBar/"/>
+    <component id="gen8ay" name="spriteBag.xml" path="/old/sprite/"/>
+    <image id="gen8az" name="img_cm_item_4.png" path="/old/newImg/" exported="true"/>
+    <component id="gen8b0" name="spriteTaskTrace.xml" path="/old/sprite/"/>
+    <component id="gen8b1" name="spriteArrow.xml" path="/old/sprite/"/>
+    <component id="gen8b2" name="spriteBtnIde.xml" path="/old/sprite/"/>
+    <image id="gen8b3" name="img_cm_ztj_1.png" path="/old/imgB/" exported="true"/>
+    <component id="gen8b4" name="btnFixNoEffect.xml" path="/old/btn/" exported="true"/>
+    <image id="gen8b5" name="btn_cm_1_yellow.png" path="/old/newImg/" exported="true"/>
+    <image id="gen8b6" name="img_cm_ztj_2.png" path="/old/imgB/" exported="true"/>
+    <component id="gen8b7" name="ToolTipTaskTargetItem.xml" path="/old/ToolTip/" exported="true"/>
+    <image id="gen8b8" name="img_cm_tips_1.png" path="/old/newImg/" exported="true" scale="9grid" scale9grid="19,16,10,14"/>
+    <image id="gen8b9" name="img_cm_item_6.png" path="/old/newImg/" exported="true" scale="9grid" scale9grid="18,18,36,36"/>
+    <component id="gen8ba" name="ComMainUserInfo.xml" path="/old/win/" exported="true"/>
+    <image id="gen8bb" name="效果图1.png" path="/old/main/"/>
+    <component id="gen8bc" name="WinMainItemField.xml" path="/old/win/" exported="true"/>
+    <component id="gen8bd" name="ComMainJoystick.xml" path="/old/win/" exported="true"/>
+    <component id="gen8be" name="ComMainMenuOld.xml" path="/old/win/" exported="true"/>
+    <image id="gen8bf" name="icon_mail_2.png" path="/old/img/" exported="true"/>
+    <image id="gen8bg" name="主界面.png" path="/old/main/"/>
+    <component id="gen8bh" name="WinMainNpcInfo.xml" path="/old/win/" exported="true"/>
+    <component id="gen8bi" name="ComMainEnemyInfo.xml" path="/old/win/" exported="true"/>
+    <component id="gen8bj" name="WinMainPickUpTips.xml" path="/old/win/" exported="true"/>
+    <image id="gen8bk" name="mainDesign.png" path="/old/img/"/>
+    <component id="gen8bl" name="WinMainContainer（deprecated).xml" path="/old/win/" exported="true"/>
+    <component id="gen8bm" name="ComMainQuickBuild.xml" path="/old/win/" exported="true"/>
+    <component id="gen8bn" name="LabBuildingCountdown.xml" path="/old/com/" exported="true"/>
+    <image id="gen8bo" name="主界面_快速建造效果图(1).png" path="/old/main/"/>
+    <component id="gen8bp" name="ComMainRocker.xml" path="/old/win/" exported="true"/>
+    <component id="gen8bq" name="btnCommon.xml" path="/old/btn/" exported="true"/>
+    <component id="gen8br" name="ComMainChatViewOld.xml" path="/old/win/" exported="true"/>
+    <component id="gen8bs" name="ComTaskTrace.xml" path="/old/win/" exported="true"/>
+    <component id="gen8bt" name="ComStatus.xml" path="/old/win/" exported="true"/>
+    <component id="gen8bu" name="ComMainStorage.xml" path="/old/win/" exported="true"/>
+    <image id="gen8bv" name="btn_code_lk_2.png" path="/old/B-PlatformImg/" exported="true"/>
+    <component id="gen8bw" name="ComBuildShortCut.xml" path="/old/com/" exported="true"/>
+    <component id="gen8bx" name="BtnBuildShortCut.xml" path="/old/btn/" exported="true"/>
+    <image id="gen8by" name="btn_ide_sck_R.png" path="/old/img_UI3/b/ide/"/>
+    <image id="gen8bz" name="btn_ide_sck_esc.png" path="/old/img_UI3/b/ide/"/>
+    <image id="gen8c0" name="btn_ide_zm_5.png" path="/old/img_UI3/b/ide/" exported="true" scale="9grid" scale9grid="11,33,22,7"/>
+    <image id="gen8c1" name="btn_ide_zm_2.png" path="/old/img_UI3/b/ide/" exported="true" scale="9grid" scale9grid="7,28,26,15"/>
+    <image id="gen8c2" name="btn_ide_zm_3.png" path="/old/img_UI3/b/ide/" exported="true" scale="9grid" scale9grid="8,28,24,15"/>
+    <image id="gen8c3" name="ied_操作优化.png" path="/old/ide/b/"/>
+    <component id="gen8c4" name="WinStudentMgr.xml" path="/old/win/" exported="true"/>
+    <image id="gen8c5" name="img_cm_dk_2.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="21,26,42,52"/>
+    <component id="gen8c6" name="ComStudentTagButton.xml" path="/old/com/"/>
+    <image id="gen8c7" name="img_cm_xsgl_10_1.png" path="/old/imgB/" exported="true"/>
+    <image id="gen8c8" name="img_cm_xsgl_10.png" path="/old/imgB/" exported="true"/>
+    <image id="gen8c9" name="img_cm_xsgl_1.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="27,23,54,46"/>
+    <image id="gen8ca" name="icon_main_xsgl_2.png" path="/old/img/"/>
+    <image id="gen8cb" name="icon_cm_xsgl_3.png" path="/old/imgB/" exported="true"/>
+    <image id="gen8cc" name="img_cm_xsgl_4.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="14,7,28,14"/>
+    <image id="gen8cd" name="icon_cm_xsgl_5.png" path="/old/imgB/" exported="true"/>
+    <component id="gen8ce" name="ComStudentItem.xml" path="/old/com/"/>
+    <image id="gen8cf" name="img_cm_xsgl_sd.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="54,11,108,22"/>
+    <image id="gen8cg" name="img_cm_xsgl_6.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="17,11,34,22"/>
+    <image id="gen8ch" name="img_cm_xsgl_6_1.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="17,11,34,22"/>
+    <image id="gen8ci" name="img_cm_xsgl_9.png" path="/old/imgB/" exported="true"/>
+    <image id="gen8cj" name="img_cm_xsgl_9_2.png" path="/old/imgB/" exported="true"/>
+    <image id="gen8ck" name="img_cm_xsgl_9_1.png" path="/old/imgB/" exported="true"/>
+    <image id="gen8cl" name="img_cm_xsgl_7.png" path="/old/imgB/" exported="true"/>
+    <image id="gen8cm" name="img_cm_xsgl_8.png" path="/old/imgB/" exported="true"/>
+    <image id="gen8cn" name="icon_cm_xsgl_10.png" path="/old/imgB/" exported="true"/>
+    <image id="gen8co" name="icon_cm_xsgl_10_1.png" path="/old/imgB/" exported="true"/>
+    <image id="gen8cp" name="icon_cm_xsgl_11.png" path="/old/imgB/" exported="true"/>
+    <image id="gen8cq" name="学生管理-对应图.png" path="/old/main/B端效果图/"/>
+    <image id="gen8cr" name="img_cm_xsgl_11.png" path="/old/imgB/" exported="true"/>
+    <image id="gen8cs" name="btn_cm_an_2.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="27,9,54,18"/>
+    <component id="gen8ct" name="ComStudentDetail.xml" path="/old/com/"/>
+    <image id="gen8cu" name="img_sd_xsxq_1.png" path="/old/img/" scale="9grid" scale9grid="31,35,62,70"/>
+    <image id="gen8cv" name="btn_cm_gban_1.png" path="/old/imgB/" exported="true"/>
+    <image id="gen8cw" name="img_sd_xsxq_2.png" path="/old/img/"/>
+    <image id="gen8cx" name="btn_cm_zy_1.png" path="/old/imgB/" exported="true"/>
+    <image id="gen8cy" name="btn_cm_zy_2.png" path="/old/imgB/" exported="true"/>
+    <image id="gen8cz" name="img_sd_xsxq_3.png" path="/old/img/"/>
+    <image id="gen8d0" name="img_sd_xsxq_5.png" path="/old/img/"/>
+    <image id="gen8d1" name="img_sd_xsxq_4.png" path="/old/img/"/>
+    <image id="gen8d2" name="学生详情.png" path="/old/img/"/>
+    <component id="gen8d3" name="ComExperience.xml" path="/old/win/"/>
+    <component id="gen8d4" name="ComMainTemperature.xml" path="/old/win/"/>
+    <component id="gen8d5" name="WinMainFriendInfo.xml" path="/old/win/"/>
+    <component id="gen8d6" name="ComMainTaskTrace.xml" path="/old/win/" exported="true"/>
+    <component id="gen8d7" name="WinMainRevive.xml" path="/old/win/" exported="true"/>
+    <image id="gen8d8" name="bg_cm_3.png" path="/old/newImg/" exported="true" scale="9grid" scale9grid="22,42,44,24"/>
+    <image id="gen8d9" name="img_cm_pattern2.png" path="/old/newImg/" exported="true" scale="tile" smoothing="false"/>
+    <component id="gen8da" name="btnScale.xml" path="/old/btn/" exported="true"/>
+    <image id="gen8db" name="btn_cm_yellow1.png" path="/old/newImg/" exported="true" scale="9grid" scale9grid="12,8,14,22"/>
+    <component id="gen8dc" name="ComMainInfo.xml" path="/old/win/"/>
+    <component id="gen8dd" name="ComStorage.xml" path="/old/win/" exported="true"/>
+    <image id="gen8de" name="2.png" path="/old/main/B端效果图/"/>
+    <component id="gen8df" name="WinGameMain.xml" path="/old/win/" exported="true"/>
+    <component id="gen8dg" name="WinLessonMain.xml" path="/old/win/" exported="true"/>
+    <component id="gen8dh" name="btnIde.xml" path="/old/btn/" exported="true"/>
+    <component id="gen8di" name="WinTileMainOld.xml" path="/old/win/" exported="true"/>
+    <component id="11584dl" name="ComMainChatView.xml" path="/com/" exported="true"/>
+    <image id="11584dn" name="img_mianV_ltk.png" path="/img/" scale="9grid" scale9grid="20,20,40,40"/>
+    <component id="11584do" name="WinTileMain.xml" path="/win/" exported="true"/>
+  </resources>
+  <publish name="main"/>
+</packageDescription>
