@@ -27,20 +27,20 @@
       <item title="替换" icon="ui://ti9jag5tv00l9i" name="replace"/>
       <item title="选择" icon="ui://ti9jag5tv00l9k" name="select"/>
     </list>
-    <list id="n29_v00l" name="lstTerrainHorizontal" xy="10,116" size="410,67" group="n17_jm8l" layout="row" lineGap="5" defaultItem="ui://ti9jag5tv00la7">
+    <list id="n29_v00l" name="lstTerrainHorizontal" xy="10,115" size="410,67" group="n17_jm8l" layout="row" lineGap="5" defaultItem="ui://ti9jag5tv00la7">
       <gearDisplay controller="ctrlState" pages="1"/>
       <item title="刷子" icon="ui://ti9jag5tv00l9t" name="brush" controllers="ctrlLocation,0"/>
       <item title="铲子" icon="ui://ti9jag5tv00l9r" name="shovel" controllers="ctrlLocation,1"/>
       <item title="替换" icon="ui://ti9jag5tv00l9h" name="replace" controllers="ctrlLocation,1"/>
       <item title="选择" icon="ui://ti9jag5tv00l9j" name="select" controllers="ctrlLocation,2"/>
     </list>
-    <image id="n33_v00l" name="imgSearchBg" src="80ab9b" fileName="ideCommon/img/img_ide_cm_ssk.png" xy="10,66" size="407,40" group="n17_jm8l">
+    <image id="n33_v00l" name="imgSearchBg" src="80ab9b" fileName="ideCommon/img/img_ide_cm_ssk.png" xy="10,65" size="407,40" group="n17_jm8l">
       <gearDisplay controller="ctrlState" pages="1"/>
     </image>
     <text id="n32_v00l" name="tfSearch" xy="20,73" size="387,24" group="n17_jm8l" input="true" prompt="请输入搜索内容" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="请输入搜索内容">
       <gearDisplay controller="ctrlState" pages="1"/>
     </text>
-    <text id="n31_v00l" name="tfTitle" xy="20,17" size="108,24" group="n17_jm8l" fontSize="20" color="#333333" align="center" vAlign="middle" text="地形编辑器">
+    <text id="n31_v00l" name="tfTitle" xy="20,17" size="85,24" group="n17_jm8l" fontSize="20" color="#333333" align="center" vAlign="middle" text="地形编辑">
       <gearDisplay controller="ctrlState" pages="1"/>
     </text>
     <component id="n3_7slt" name="btnFold" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="377,2" size="48,48" group="n23_m5hn">

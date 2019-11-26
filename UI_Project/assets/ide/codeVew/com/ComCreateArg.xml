@@ -14,11 +14,13 @@
     <component id="n21_q5wk" name="btnConfirm" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="215,259" size="140,44" group="n37_zggh">
       <Button title="确定" titleColor="#ffffff" titleFontSize="24" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <component id="n30_zggh" name="comInput" src="dv1icyiim" fileName="com/ComInput.xml" pkg="te1gxawo" xy="45,199" size="310,40" group="n37_zggh"/>
+    <component id="n30_zggh" name="comInput" src="dv1icyiim" fileName="com/ComInput.xml" pkg="te1gxawo" xy="45,199" size="310,40" group="n37_zggh">
+      <Label prompt="请输入参数名称" maxLength="30"/>
+    </component>
     <component id="n19_q5wk" name="btn1" src="ot9si3c" fileName="btn/btnTab.xml" pkg="te1gxawo" xy="43,161" size="16,16" group="n36_zggh">
       <Button checked="true" icon="ui://ti9jag5tzgght86" selectedIcon="ui://ti9jag5tzgght8e" controller="ctrlArgType" page="0"/>
     </component>
-    <component id="n25_rp0f" name="btn1_1" src="qn8od" fileName="old/btn/btnCommon.xml" pkg="te1gxawo" xy="66,159" size="54,20" group="n36_zggh">
+    <component id="n25_rp0f" name="btn1_1" src="qn8od" fileName="old/btn/btnCommon.xml" pkg="te1gxawo" xy="45,159" size="75,20" group="n36_zggh">
       <relation target="n32_zggh" sidePair="width-width,height-height"/>
       <Button titleColor="#333333" titleFontSize="16" controller="ctrlArgType" page="0"/>
     </component>
@@ -26,7 +28,7 @@
     <component id="n18_q5wk" name="btn2" src="ot9si3c" fileName="btn/btnTab.xml" pkg="te1gxawo" xy="153,161" size="16,16" group="n36_zggh">
       <Button icon="ui://ti9jag5tzgght86" selectedIcon="ui://ti9jag5tzgght8e" controller="ctrlArgType" page="1"/>
     </component>
-    <component id="n26_rp0f" name="btn2_1" src="qn8od" fileName="old/btn/btnCommon.xml" pkg="te1gxawo" xy="176,159" size="54,20" group="n36_zggh">
+    <component id="n26_rp0f" name="btn2_1" src="qn8od" fileName="old/btn/btnCommon.xml" pkg="te1gxawo" xy="154,159" size="75,20" group="n36_zggh">
       <relation target="n31_zggh" sidePair="width-width,height-height"/>
       <Button controller="ctrlArgType" page="1"/>
     </component>
@@ -34,12 +36,12 @@
     <component id="n17_q5wk" name="btn3" src="ot9si3c" fileName="btn/btnTab.xml" pkg="te1gxawo" xy="263,161" size="16,16" group="n36_zggh">
       <Button icon="ui://ti9jag5tzgght86" selectedIcon="ui://ti9jag5tzgght8e" controller="ctrlArgType" page="2"/>
     </component>
-    <component id="n27_rp0f" name="btn3_1" src="qn8od" fileName="old/btn/btnCommon.xml" pkg="te1gxawo" xy="286,157" size="71,20" group="n36_zggh">
+    <component id="n27_rp0f" name="btn3_1" src="qn8od" fileName="old/btn/btnCommon.xml" pkg="te1gxawo" xy="266,157" size="91,20" group="n36_zggh">
       <relation target="n33_zggh" sidePair="width-width,height-height"/>
       <Button titleColor="#333333" titleFontSize="16" controller="ctrlArgType" page="2"/>
     </component>
     <text id="n33_zggh" name="tf3" xy="286,158" size="69,20" group="n36_zggh" fontSize="16" color="#333333" vAlign="middle" text="文本标签"/>
-    <group id="n36_zggh" name="n36" xy="43,157" size="314,22" group="n37_zggh" advanced="true">
+    <group id="n36_zggh" name="n36" xy="43,157" size="313,22" group="n37_zggh" advanced="true">
       <relation target="n28_zggh" sidePair="center-center"/>
     </group>
     <group id="n37_zggh" name="n37" xy="19,81" size="362,237" advanced="true">

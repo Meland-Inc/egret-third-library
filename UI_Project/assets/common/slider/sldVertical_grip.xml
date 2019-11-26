@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="8,40" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <loader id="n0_dt2p" name="icon" xy="0,0" size="8,40" url="ui://te1gxawoc1h7cyii9" autoSize="true"/>
+  </displayList>
+  <Button/>
+  <relation target="n0_dt2p" sidePair="width-width,height-height"/>
+</component>

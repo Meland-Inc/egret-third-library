@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" opaque="false">
+  <controller name="ctrlSelectedStatus" pages="0,unselected,1,selected" selected="1"/>
+  <displayList>
+    <component id="n1_mcvl" name="btnConfirm" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1740,1006" size="160,52">
+      <gearDisplay controller="ctrlSelectedStatus" pages="1"/>
+      <relation target="" sidePair="bottom-bottom,right-right"/>
+      <Button title="确定选中" titleColor="#ffffff" titleFontSize="30" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <component id="n2_mcvl" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1828,25" size="72,72">
+      <relation target="" sidePair="top-top,right-right"/>
+      <Button icon="ui://te1gxawodt2pcyij9"/>
+    </component>
+    <image id="n4_mcvl" name="imgTip" src="i6xe6n" fileName="codeVew/oldImg/img_code_tishik_01.png" xy="810,0" group="n6_mcvl"/>
+    <image id="n3_mcvl" name="imgTipBG" src="i6xe6o" fileName="codeVew/oldImg/img_code_tishi_04.png" xy="820,17" group="n6_mcvl"/>
+    <text id="n5_mcvl" name="tfTip" xy="850,15" size="245,28" group="n6_mcvl" fontSize="24" color="#ffffff" text="请确认你要选择的位置"/>
+    <group id="n6_mcvl" name="tip" xy="810,0" size="300,58" advanced="true">
+      <gearDisplay controller="ctrlSelectedStatus" pages="0"/>
+      <relation target="" sidePair="top-top,center-center"/>
+    </group>
+  </displayList>
+</component>

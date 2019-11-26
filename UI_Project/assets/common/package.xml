@@ -272,7 +272,7 @@
     <component id="j1n2cyi8y" name="RBtnObjectRenderer.xml" path="/old/btn/" exported="true"/>
     <image id="b7cicyi8z" name="img_formula_bottom_4.png" path="/old/newImg/" exported="true"/>
     <image id="nsh4cyi90" name="img_cm_bottom_21.png" path="/old/newImg/" exported="true" scale="9grid" scale9grid="13,13,26,26"/>
-    <component id="lbexcyi91" name="ToolTipObjectItem.xml" path="/old/com/" exported="true"/>
+    <component id="lbexcyi91" name="ToolTipObjectItem.xml" path="/com/" exported="true"/>
     <component id="lbexcyi94" name="comArchMat.xml" path="/old/lab/"/>
     <component id="lbexcyi97" name="comWorkbench.xml" path="/old/lab/"/>
     <image id="z45zcyi99" name="img_bag_grade_1.png" path="/old/newImg/" exported="true" scale="9grid" scale9grid="15,15,30,30"/>
@@ -611,12 +611,21 @@
     <component id="pz1ncyiiw" name="ComboBox1_popup.xml" path="/comboBox/combox1/"/>
     <component id="pz1ncyiix" name="ComboBox1.xml" path="/comboBox/combox1/" exported="true"/>
     <image id="gyoucyiiy" name="img_cm_xxk.png" path="/img/" exported="true" scale="9grid" scale9grid="15,15,30,30"/>
-    <image id="gyoucyij0" name="img_cm_lab_1.png" path="/img/" exported="true"/>
-    <image id="gyoucyij3" name="img_cm_lab_2.png" path="/img/" exported="true"/>
+    <image id="gyoucyij0" name="img_cm_lab_1.png" path="/img/" exported="true" scale="9grid" scale9grid="28,15,56,30"/>
+    <image id="gyoucyij3" name="img_cm_lab_2.png" path="/img/" exported="true" scale="9grid" scale9grid="28,15,56,30"/>
     <image id="k3wpcyiiy" name="icon_cm_prompt.png" path="/img/" exported="true"/>
     <image id="k3wpcyiiz" name="img_cm_cbd.png" path="/img/" exported="true" scale="9grid" scale9grid="8,8,44,44"/>
     <image id="k3wpcyij0" name="img_cm_gdt_1.png" path="/img/" exported="true" scale="9grid" scale9grid="2,15,4,30"/>
     <image id="9c90cyij4" name="img_cm_hline.png" path="/img/" exported="true"/>
+    <component id="dt2pcyij6" name="sldVertical_grip.xml" path="/slider/"/>
+    <component id="dt2pcyij7" name="sldVerticalWhite.xml" path="/slider/" exported="true"/>
+    <image id="dt2pcyij9" name="btn_cm_return.png" path="/img/" exported="true"/>
+    <component id="qylxcyija" name="sldVerticalGray.xml" path="/slider/" exported="true"/>
+    <image id="qylxcyijb" name="img_cm_gdt_2.png" path="/img/" exported="true"/>
+    <component id="qylxcyijc" name="sldHorizontalGray.xml" path="/slider/" exported="true"/>
+    <component id="qylxcyijd" name="sldHorizontalWhite.xml" path="/slider/" exported="true"/>
+    <image id="qylxcyije" name="img_cm_gdt_3.png" path="/img/" exported="true"/>
+    <image id="qylxcyijf" name="btn_cm_blue_1.png" path="/img/" exported="true" scale="9grid" scale9grid="30,11,60,22"/>
     <component id="9c90cyij5" name="btnText.xml" path="/btn/" exported="true"/>
     <component id="9c90cyij6" name="Pbr1.xml" path="/pbr/" exported="true"/>
     <component id="9c90cyij7" name="Pbr1_grip.xml" path="/pbr/"/>
