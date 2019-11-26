@@ -325,12 +325,12 @@
     <image id="k3wp91" name="icon_chat_yy.png" path="/img/"/>
     <image id="k3wp92" name="img_chat_dhk_1.png" path="/img/" scale="9grid" scale9grid="21,27,42,15"/>
     <image id="k3wp93" name="img_chat_dhk_2.png" path="/img/" scale="9grid" scale9grid="21,27,35,11"/>
-    <image id="k3wp94" name="img_chat_fj.png" path="/img/"/>
-    <image id="k3wp95" name="img_chat_sj.png" path="/img/"/>
+    <image id="k3wp94" name="img_chat_fj.png" path="/img/" exported="true"/>
+    <image id="k3wp95" name="img_chat_sj.png" path="/img/" exported="true"/>
     <image id="k3wp96" name="img_chat_srk_1.png" path="/img/" scale="9grid" scale9grid="10,11,20,22"/>
     <image id="k3wp97" name="img_chat_srk_2.png" path="/img/" scale="9grid" scale9grid="10,11,20,22"/>
     <image id="k3wp98" name="img_chat_tx.png" path="/img/"/>
-    <image id="k3wp99" name="img_chat_xt.png" path="/img/" scale="9grid" scale9grid="13,6,26,12"/>
+    <image id="k3wp99" name="img_chat_xt.png" path="/img/" exported="true" scale="9grid" scale9grid="13,6,26,12"/>
     <component id="osb69a" name="ComChatInput.xml" path="/old/com/" exported="true"/>
   </resources>
   <publish name="chat"/>

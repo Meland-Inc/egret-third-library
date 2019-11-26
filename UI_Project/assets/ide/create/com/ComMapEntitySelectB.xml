@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="300,1080" opaque="false" designImage="ui://thvmj7vo80ab4">
-  <controller name="ctrlState" exported="true" pages="0,fold,1,open,2,info,3,none" selected="2">
+<component size="320,1080" opaque="false" designImage="ui://thvmj7vo80ab4">
+  <controller name="ctrlState" exported="true" pages="0,fold,1,open,2,info,3,none" selected="1">
     <action type="change_page" fromPage="" toPage="0" objectId="n10_r6n0" controller="ctrlType" targetPage="1"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n10_r6n0" controller="ctrlType" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="2" objectId="n10_r6n0" controller="ctrlType" targetPage="0"/>
@@ -21,7 +21,7 @@
       <gearSize controller="ctrlState" pages="0,1,2,3" values="126,1080,1,1|320,1080,1,1|320,1080,1,1|0,1080,1,1"/>
       <relation target="" sidePair="height-height"/>
     </image>
-    <image id="n16_cjfp" name="n16" src="80ab97" fileName="ideCommon/img/img_ide_cm_8.png" xy="10,66" size="106,1004">
+    <image id="n16_cjfp" name="n16" src="80ab97" fileName="ideCommon/img/img_ide_cm_8.png" xy="10,66" size="300,1004">
       <gearDisplay controller="ctrlState" pages="0,1"/>
       <gearSize controller="ctrlState" pages="1,2" values="300,1004,1,1|106,1004,1,1" default="106,1004,1,1"/>
     </image>
@@ -175,7 +175,7 @@
     <component id="n5_yhf8" name="btnBackpack" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="9,5" size="54,55" locked="true" hideByEditor="true" visible="false">
       <Button page="2"/>
     </component>
-    <text id="n15_h5kr" name="tfTitle" xy="21,17" size="65,24" fontSize="20" color="#333333" text="实体栏">
+    <text id="n15_h5kr" name="tfTitle" xy="30,18" size="67,24" fontSize="20" color="#333333" align="center" vAlign="middle" text="实体栏">
       <gearDisplay controller="ctrlState" pages="0,1,2"/>
     </text>
     <image id="n19_m773" name="n19" src="80ab94" fileName="ideCommon/img/img_ide_cm_14.png" xy="220,7" group="n21_m773"/>
@@ -183,7 +183,7 @@
       <Button icon="ui://ti9jag5t80ab8d" selectedIcon="ui://ti9jag5t80ab84"/>
     </component>
     <component id="n18_m773" name="tbtnScope" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="224,10" size="36,36" group="n21_m773">
-      <Button icon="ui://ti9jag5t80ab8d" selectedIcon="ui://ti9jag5t80ab84"/>
+      <Button icon="ui://ti9jag5tamogt8l" selectedIcon="ui://ti9jag5tamogt8m"/>
     </component>
     <image id="n20_m773" name="n20" src="80ab95" fileName="ideCommon/img/img_ide_cm_15.png" xy="262,7" group="n21_m773"/>
     <group id="n21_m773" name="n21" xy="220,7" size="86,42" advanced="true" collapsed="true">

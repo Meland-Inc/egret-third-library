@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="350,161" opaque="false" designImage="ui://oyity675gen8bg" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlStorage" pages="0,hide,1,show" selected="0"/>
+  <displayList>
+    <component id="n32_110nb" name="btnBuyHomeArea" src="rdy458" fileName="btn/btnMenu.xml" xy="147,0" pkg="5hs1fuej">
+      <Button title="领地" icon="ui://oyity675gen88n"/>
+    </component>
+    <component id="n18_r2bf" name="btnGamePlatform" src="rdy458" fileName="btn/btnMenu.xml" xy="147,0" visible="false" pkg="5hs1fuej">
+      <Button title="游戏" icon="ui://oyity675gen89y"/>
+    </component>
+    <component id="n21_b4ke" name="btnShowStorage" src="rdy458" fileName="btn/btnMenu.xml" xy="86,0" pkg="5hs1fuej">
+      <gearDisplay controller="ctrlStorage" pages="0"/>
+      <Button title="更多" icon="ui://oyity675gen8ad" controller="ctrlStorage" page="1"/>
+    </component>
+    <component id="n30_cjhf" name="btnRobot" src="cjhf7h" fileName="btn/btnRobot.xml" xy="205,-5" pkg="5hs1fuej">
+      <Button title="机器人"/>
+    </component>
+    <component id="n28_b4ke" name="btnHideStorage" src="rdy458" fileName="btn/btnMenu.xml" xy="86,0" pkg="5hs1fuej">
+      <gearDisplay controller="ctrlStorage" pages="1"/>
+      <Button title="更多" icon="ui://oyity675gen8ad" controller="ctrlStorage" page="0"/>
+    </component>
+    <image id="n31_nln9" name="grpStorageTag" src="gen8bf" fileName="img/icon_mail_2.png" xy="115,55" visible="false">
+      <relation target="n21_b4ke" sidePair="left-left,top-top"/>
+    </image>
+    <component id="n22_b4ke" name="btnFormula" src="b4ke79" fileName="btn/btnFormula.xml" xy="270,-4" pkg="5hs1fuej">
+      <Button title="配方"/>
+    </component>
+    <image id="n25_b4ke" name="storageBg" src="gen8ae" fileName="newImg/img_main_menu_1.png" xy="0,75" size="228,86" group="n24_b4ke"/>
+    <component id="n19_r2bf" name="btnManual" src="b4ke7b" fileName="btn/btnStorageMenu.xml" xy="14,89" size="52,63" group="n24_b4ke" visible="false" pkg="5hs1fuej">
+      <Button title="手册" icon="ui://oyity675gen89x"/>
+    </component>
+    <component id="n17_r2bf" name="btnMail" src="b4ke7b" fileName="btn/btnStorageMenu.xml" xy="14,89" group="n24_b4ke" pkg="5hs1fuej">
+      <Button title="邮件" icon="ui://oyity675gen89w"/>
+    </component>
+    <component id="n12_r2bf" name="btnTask" src="b4ke7b" fileName="btn/btnStorageMenu.xml" xy="89,89" group="n24_b4ke" pkg="5hs1fuej">
+      <Button title="任务" icon="ui://oyity675gen88s"/>
+    </component>
+    <component id="n14_r2bf" name="btnSetting" src="b4ke7b" fileName="btn/btnStorageMenu.xml" xy="164,89" group="n24_b4ke" pkg="5hs1fuej">
+      <Button title="设置" icon="ui://oyity675gen88n"/>
+    </component>
+    <image id="n20_11syp" name="grpMailTag" src="gen8bf" fileName="img/icon_mail_2.png" xy="36,98" group="n24_b4ke" visible="false">
+      <relation target="n17_r2bf" sidePair="left-left,top-top"/>
+    </image>
+    <group id="n24_b4ke" name="grpStorageBtn" xy="0,75" size="228,86" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlStorage" pages="1"/>
+    </group>
+    <list id="n29_b4ke" name="lstFromulaMat" xy="281,68" size="60,93" touchable="false" defaultItem="ui://oyity675gen882" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

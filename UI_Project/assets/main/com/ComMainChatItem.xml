@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="419,29" extention="Label" designImage="ui://thvmj7vo11584cyij0" designImageOffsetX="-10" designImageOffsetY="-940" designImageAlpha="24" designImageLayer="1">
+  <controller name="conChannelTitle" pages="0,unknown,1,system,2,world,3,map,4,instance,5,near,6,private,7,comprehensive,8,robot" selected="0"/>
+  <displayList>
+    <loader id="n12_hdi9" name="ladChanelBg" xy="0,3" size="50,24" url="ui://guylk3knk3wp99" autoSize="true">
+      <gearIcon controller="conChannelTitle" pages="0,1,2,5,6" values="ui://guylk3knk3wp99|ui://guylk3knk3wp99|ui://guylk3knk3wp95|ui://guylk3knk3wp94|ui://oyity675gen82h" default="ui://oyity675gen82d"/>
+    </loader>
+    <text id="n27_xf9r" name="tfSenderName" xy="47,4" size="120,20" fontSize="16" color="#f5d347" vars="true" bold="true" text="【{sender=青青河边草}】"/>
+    <text id="n25_q73n" name="tfChannel" xy="5,5" size="40,20" fontSize="16" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="未知">
+      <gearText controller="conChannelTitle" pages="0,1,3,4,5,6,7,8" values="未知|系统|map|野外|附近|私聊|综合|机器人" default="世界"/>
+    </text>
+    <component id="n26_xf9r" name="richTextCtnr" src="gen82i" fileName="old/com/ComEmpty.xml" xy="173,0" size="228,20">
+      <relation target="n27_xf9r" sidePair="leftext-right"/>
+    </component>
+  </displayList>
+  <relation target="n26_xf9r" sidePair="bottomext-bottom"/>
+</component>

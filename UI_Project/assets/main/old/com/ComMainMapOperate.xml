@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="274,82">
+  <controller name="ctrlShowHide" pages="0,hide,1,show" selected="0"/>
+  <displayList>
+    <image id="n15_uvgl" name="imgBg" src="gen84l" fileName="img_UI3/btn_main_cebianlanzhankai 20.png" xy="221,0" size="274,82" group="n23_uvgl"/>
+    <component id="n17_uvgl" name="btnDelete" src="gen82t" fileName="btn/btnFixClickArea.xml" xy="275,8" size="70,60" group="n23_uvgl">
+      <Button icon="ui://oyity675gen84m"/>
+    </component>
+    <component id="n18_uvgl" name="btnBuild" src="gen82t" fileName="btn/btnFixClickArea.xml" xy="345,7" size="70,60" group="n23_uvgl">
+      <Button icon="ui://oyity675gen84n"/>
+    </component>
+    <component id="n19_uvgl" name="btnLook" src="gen82t" fileName="btn/btnFixClickArea.xml" xy="415,8" size="70,60" group="n23_uvgl">
+      <Button icon="ui://oyity675gen84o"/>
+    </component>
+    <component id="n22_uvgl" name="btnHide" src="gen82t" fileName="btn/btnFixClickArea.xml" xy="229,9" size="46,60" group="n23_uvgl">
+      <gearDisplay controller="ctrlShowHide" pages="1"/>
+      <Button icon="ui://oyity675gen84p" controller="ctrlShowHide" page="0"/>
+    </component>
+    <component id="n21_uvgl" name="btnShow" src="gen82t" fileName="btn/btnFixClickArea.xml" xy="229,9" size="46,60" group="n23_uvgl">
+      <gearDisplay controller="ctrlShowHide" pages="0"/>
+      <Button icon="ui://oyity675gen84q" controller="ctrlShowHide" page="1"/>
+    </component>
+    <group id="n23_uvgl" name="n23" xy="221,0" size="274,82" advanced="true" collapsed="true">
+      <gearXY controller="ctrlShowHide" pages="1" values="0,0" default="221,0" tween="true"/>
+    </group>
+  </displayList>
+</component>
