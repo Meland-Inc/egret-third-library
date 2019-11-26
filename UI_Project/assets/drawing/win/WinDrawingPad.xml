@@ -45,12 +45,6 @@
       <item icon="ui://a0pj43bjqilnl"/>
       <item icon="ui://a0pj43bjqilnb"/>
     </list>
-    <component id="n34_gup1" name="comHeightSetting" src="qiln2m" fileName="com/ComHeightSetting.xml" xy="1464,774">
-      <relation target="n26_pa6b" sidePair="right-left,bottom-bottom"/>
-    </component>
-    <component id="n35_gup1" name="comProjectionSetting" src="qiln27" fileName="com/ComProjectionSetting.xml" xy="1580,669">
-      <relation target="n26_pa6b" sidePair="right-left,bottom-bottom"/>
-    </component>
     <image id="n0_batc" name="imgLeftBg" src="qilns" fileName="img/img_dra_bottom.png" xy="30,40" size="410,1010" group="n14_batc">
       <relation target="" sidePair="height-height"/>
     </image>
@@ -94,9 +88,15 @@
     <graph id="n22_ljuf" name="gphDrawingMidBoard" xy="464,40" size="1313,921" group="n33_mj87" alpha="0.6" fillColor="#ff66cc33">
       <relation target="n13_batc" sidePair="rightext-right,bottomext-bottom"/>
     </graph>
-    <graph id="n19_ljuf" name="gphDrawingTopBoard" xy="464,40" size="1310,921" group="n33_mj87" type="rect" lineSize="0" fillColor="#00000000">
+    <graph id="n19_ljuf" name="gphDrawingTopBoard" xy="464,40" size="1310,921" group="n33_mj87" hideByEditor="true" type="rect" lineSize="0" fillColor="#00000000">
       <relation target="n13_batc" sidePair="rightext-right,bottomext-bottom"/>
     </graph>
     <group id="n33_mj87" name="grpDrawingBoard" xy="464,40" size="1315,921" advanced="true"/>
+    <component id="n35_gup1" name="comProjectionSetting" src="qiln27" fileName="com/ComProjectionSetting.xml" xy="1580,669">
+      <relation target="n26_pa6b" sidePair="right-left,bottom-bottom"/>
+    </component>
+    <component id="n34_gup1" name="comHeightSetting" src="qiln2m" fileName="com/ComHeightSetting.xml" xy="1464,774">
+      <relation target="n26_pa6b" sidePair="right-left,bottom-bottom"/>
+    </component>
   </displayList>
 </component>
