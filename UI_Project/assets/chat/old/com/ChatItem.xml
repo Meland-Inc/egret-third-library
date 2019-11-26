@@ -1,63 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="520,64" extention="Label">
+<component size="1081,111" extention="Label" designImage="ui://thvmj7vok3wpcyiiq" designImageOffsetX="-408" designImageOffsetY="-270" adaptationTest="FitSize">
   <controller name="selfOther" pages="1,other,0,self" selected="0"/>
   <controller name="conChannelTitle" pages="0,unknown,1,system,2,world,3,map,4,instance,5,near,6,private,7,comprehensive,8,robot" selected="0"/>
   <controller name="ctrlAt" pages="0,none,2,atMe,1,atOther" selected="0"/>
   <displayList>
-    <image id="n26_mbd7" name="privateBg1" src="k3wpj" fileName="imgNew/img_chat_private.png" xy="41,1" size="70,18" group="n30_mbd7">
+    <image id="n26_mbd7" name="privateBg1" src="k3wpj" fileName="old/imgNew/img_chat_private.png" xy="160,1" size="172,18" group="n30_mbd7">
       <relation target="n29_mbd7" sidePair="rightext-right"/>
     </image>
-    <image id="n27_mbd7" name="imgAtMe" src="k3wpk" fileName="imgNew/icon_chat_private.png" xy="74,3" group="n30_mbd7">
+    <image id="n27_mbd7" name="imgAtMe" src="k3wpk" fileName="old/imgNew/icon_chat_private.png" xy="295,3" group="n30_mbd7">
       <relation target="n10_swb5" sidePair="left-right"/>
     </image>
-    <text id="n29_mbd7" name="tfMe" xy="92,1" size="18,18" group="n30_mbd7" fontSize="12" color="#c88316" vAlign="middle" bold="true" singleLine="true" text="我">
+    <text id="n29_mbd7" name="tfMe" xy="313,1" size="18,16" group="n30_mbd7" fontSize="12" color="#c88316" vAlign="middle" bold="true" singleLine="true" text="我">
       <relation target="n10_swb5" sidePair="left-right"/>
     </text>
-    <group id="n30_mbd7" name="grpAtMe" xy="41,1" size="70,18" advanced="true">
+    <group id="n30_mbd7" name="grpAtMe" xy="160,1" size="172,18" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlAt" pages="2"/>
     </group>
-    <text id="n10_swb5" name="tfOtherName" xy="43,1" size="31,18" fontSize="12" color="#c88316" vAlign="middle" bold="true" singleLine="true" text="别人">
+    <text id="n10_swb5" name="tfOtherName" xy="128,11" size="43,22" fontSize="18" color="#666666" vAlign="middle" bold="true" singleLine="true" text="别人">
       <gearDisplay controller="selfOther" pages="1"/>
     </text>
-    <image id="n23_q73n" name="bubbleBg1" src="k3wpl" fileName="imgNew/img_chat_bubble_1.png" xy="44,28" size="35,32">
+    <image id="n23_q73n" name="bubbleBg1" src="k3wp92" fileName="img/img_chat_dhk_1.png" xy="65,50" size="60,50">
       <gearDisplay controller="selfOther" pages="1"/>
       <relation target="n20_fvj8" sidePair="rightext-right,bottomext-bottom"/>
     </image>
-    <component id="n20_fvj8" name="comOtherRichText" src="k3wpm" fileName="com/ComEmpty.xml" xy="60,36" size="10,17"/>
-    <loader id="n12_hdi9" name="ladChanelBg" xy="0,0" size="40,20" group="n15_on75" url="ui://guylk3knk3wpn" autoSize="true">
-      <gearIcon controller="conChannelTitle" pages="1,2,5,6,7" values="ui://guylk3knk3wpo|ui://guylk3knk3wpp|ui://guylk3knk3wpq|ui://guylk3knk3wpr|ui://guylk3knk3wps" default="ui://guylk3knk3wpn"/>
+    <component id="n20_fvj8" name="comOtherRichText" src="k3wpm" fileName="old/com/ComEmpty.xml" xy="95,65" size="10,20"/>
+    <loader id="n12_hdi9" name="ladChanelBg" xy="71,10" size="50,24" group="n15_on75" url="ui://guylk3knk3wp95">
+      <gearXY controller="selfOther" pages="1,0" values="71,10|960,10"/>
+      <gearIcon controller="conChannelTitle" pages="0,1,2,3,4,5,6,7,8" values="ui://guylk3knk3wp95|ui://guylk3knk3wp99|ui://guylk3knk3wp95|ui://guylk3knk3wp94|ui://guylk3knk3wp94|ui://guylk3knk3wp94|ui://guylk3knk3wp94|ui://guylk3knk3wp99|ui://guylk3knk3wp94"/>
     </loader>
-    <image id="n22_q73n" name="iconBg" src="k3wpt" fileName="imgNew/img_chat_avatar.png" xy="1,22" size="38,39" group="n11_hdi9"/>
-    <loader id="n4_oy2m" name="_icon" xy="1,22" size="39,39" group="n11_hdi9" align="center" vAlign="middle" fill="scale"/>
-    <group id="n11_hdi9" name="icon" xy="1,22" size="39,39" group="n15_on75" advanced="true" collapsed="true"/>
-    <text id="n25_q73n" name="tfChannel" xy="0,1" size="40,20" group="n15_on75" fontSize="12" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="">
-      <gearText controller="conChannelTitle" pages="0,1,3,4,5,6,7,8" values="|系统|map|野外|附近|私聊|综合|机器人" default="世界"/>
-    </text>
-    <group id="n15_on75" name="grpInfo" xy="0,0" size="40,61" advanced="true" collapsed="true">
-      <gearXY controller="selfOther" pages="1,0" values="0,0|479,1"/>
+    <image id="n22_q73n" name="iconBg" src="k3wp98" fileName="img/img_chat_tx.png" xy="0,0" size="60,60" group="n11_hdi9"/>
+    <loader id="n4_oy2m" name="_icon" xy="0,0" size="60,60" group="n11_hdi9" align="center" vAlign="middle" fill="scale"/>
+    <group id="n11_hdi9" name="icon" xy="0,0" size="60,60" group="n15_on75" advanced="true" collapsed="true">
+      <gearXY controller="selfOther" pages="1,0" values="0,0|1021,0"/>
     </group>
-    <image id="n35_mbd7" name="privateBg2" src="k3wpj" fileName="imgNew/img_chat_private.png" xy="456,1" size="71,18" group="n38_mbd7">
+    <text id="n25_q73n" name="tfChannel" xy="76,13" size="40,20" group="n15_on75" fontSize="16" color="#ffffff" align="center" vAlign="middle" leading="0" autoSize="none" text="世界">
+      <gearXY controller="selfOther" pages="1,0" values="76,13|965,12"/>
+      <gearText controller="conChannelTitle" pages="1,3,4,5,6,7,8" values="系统|map|野外|附近|私聊|综合|机器人" default="世界"/>
+    </text>
+    <group id="n15_on75" name="grpInfo" xy="0,0" size="121,60" advanced="true" collapsed="true"/>
+    <image id="n35_mbd7" name="privateBg2" src="k3wpj" fileName="old/imgNew/img_chat_private.png" xy="1017,1" size="0,18" group="n38_mbd7">
       <relation target="n36_mbd7" sidePair="leftext-left"/>
     </image>
-    <image id="n36_mbd7" name="imgAtOther" src="k3wpk" fileName="imgNew/icon_chat_private.png" xy="478,3" group="n38_mbd7">
+    <image id="n36_mbd7" name="imgAtOther" src="k3wpk" fileName="old/imgNew/icon_chat_private.png" xy="1039,3" group="n38_mbd7">
       <relation target="n37_mbd7" sidePair="left-left"/>
     </image>
-    <text id="n37_mbd7" name="tfOther" xy="497,1" size="31,18" group="n38_mbd7" fontSize="12" color="#c88316" vAlign="middle" bold="true" singleLine="true" text="别人">
+    <text id="n37_mbd7" name="tfOther" xy="1058,1" size="31,16" group="n38_mbd7" fontSize="12" color="#c88316" vAlign="middle" bold="true" singleLine="true" text="别人">
       <relation target="" sidePair="right-right"/>
     </text>
-    <group id="n38_mbd7" name="grpAtOther" xy="456,1" size="72,18" advanced="true" collapsed="true">
+    <group id="n38_mbd7" name="grpAtOther" xy="1017,1" size="72,18" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlAt" pages="1"/>
-      <gearXY controller="ctrlAt" pages="1" values="405,1" default="456,1"/>
+      <gearXY controller="ctrlAt" pages="0,1" values="1017,1|850,1" default="456,1"/>
     </group>
-    <text id="n16_on75" name="tfSelfName" xy="458,1" size="18,18" fontSize="12" color="#c88316" vAlign="middle" bold="true" singleLine="true" text="我">
+    <text id="n16_on75" name="tfSelfName" xy="931,11" size="24,22" fontSize="18" color="#666666" align="right" vAlign="middle" bold="true" singleLine="true" text="我">
       <gearDisplay controller="selfOther" pages="0"/>
-      <relation target="n36_mbd7" sidePair="right-right"/>
     </text>
-    <image id="n24_q73n" name="bubbleBg2" src="k3wpu" fileName="imgNew/img_chat_bubble_2.png" xy="438,28" size="36,32">
+    <image id="n24_q73n" name="bubbleBg2" src="k3wp93" fileName="img/img_chat_dhk_2.png" xy="945,50" size="70,50">
       <gearDisplay controller="selfOther" pages="0"/>
       <relation target="n21_fvj8" sidePair="leftext-left,bottomext-bottom"/>
     </image>
-    <component id="n21_fvj8" name="comSelfRichText" src="k3wpm" fileName="com/ComEmpty.xml" xy="448,36" size="10,17">
+    <component id="n21_fvj8" name="comSelfRichText" src="k3wpm" fileName="old/com/ComEmpty.xml" xy="965,65" size="10,20">
+      <gearDisplay controller="selfOther" pages="0"/>
       <relation target="" sidePair="right-right"/>
     </component>
   </displayList>
