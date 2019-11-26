@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" opaque="false" designImage="ui://thvmj7vo80ab3">
   <controller name="ctrlOperate" pages="" selected="-1"/>
-  <controller name="ctrlIdeMode" pages="0,create,1,move,4,terrain,3,attr,2,code,5,ani,6,aniselect" selected="0">
+  <controller name="ctrlIdeMode" pages="0,create,1,move,4,terrain,3,attr,2,code,5,ani,6,aniselect" selected="3">
     <action type="change_page" fromPage="" toPage="0" objectId="n45_qu7t" controller="ctrlState" targetPage="1"/>
     <action type="change_page" fromPage="" toPage="4" objectId="n45_qu7t" controller="ctrlState" targetPage="0"/>
   </controller>
@@ -21,7 +21,7 @@
       <gearDisplay controller="ctrlIdeMode" pages="0"/>
       <relation target="" sidePair="right-right,height-height"/>
     </component>
-    <component id="n41_m5hn" name="comTerrain" src="v00l9u" fileName="terrain/com/ComBuildTerrain.xml" xy="1490,0" size="430,1080" controller="ctrlState,1">
+    <component id="n41_m5hn" name="comTerrain" src="v00l9u" fileName="terrain/com/ComBuildTerrain.xml" xy="1490,0" size="430,1080" controller="ctrlState,1,ctrlMode,0">
       <gearDisplay controller="ctrlIdeMode" pages="4"/>
       <relation target="" sidePair="right-right,height-height"/>
     </component>
@@ -33,8 +33,8 @@
       <gearDisplay controller="ctrlIdeMode" pages="3"/>
       <relation target="" sidePair="right-right,height-height"/>
     </component>
-    <list id="n35_7slt" name="lstIdeMode" xy="579,996" size="348,84" layout="row" defaultItem="ui://ti9jag5tdyk9b7">
-      <gearXY controller="ctrlIdeMode" pages="0,3,2" values="579,996|250,994|250,994" default="579,994"/>
+    <list id="n35_7slt" name="lstIdeMode" xy="579,994" size="348,84" layout="row" defaultItem="ui://ti9jag5tdyk9b7">
+      <gearXY controller="ctrlIdeMode" pages="0,3,2" values="579,996|579,994|250,994" default="579,994"/>
       <relation target="" sidePair="bottom-bottom,center-center"/>
       <item title="地形" icon="ui://ti9jag5t80ab8w" name="terrain"/>
       <item title="创造" icon="ui://ti9jag5t80ab8u" name="create"/>
@@ -45,7 +45,7 @@
       <gearDisplay controller="ctrlIdeMode" pages="5"/>
       <relation target="" sidePair="right-right,height-height"/>
     </component>
-    <component id="n45_qu7t" name="comShortCut" src="qu7tt7j" fileName="ideCommon/com/ComBuildShortCutB.xml" xy="694,76" controller="ctrlState,1">
+    <component id="n45_qu7t" name="comShortCut" src="qu7tt7j" fileName="ideCommon/com/ComBuildShortCutB.xml" xy="694,76" controller="ctrlState,0">
       <gearDisplay controller="ctrlIdeMode" pages="0,4"/>
     </component>
     <component id="n46_smiy" name="comAniSelect" src="smiyt7n" fileName="attribute/com/ComBuildAniSelect.xml" xy="1490,0" controller="ctrlState,1">
