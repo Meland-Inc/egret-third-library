@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640" opaque="false" designImage="ui://oyity675gen8bo" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
+  <displayList>
+    <component id="n31_r2bf" name="comMainEnemyInfo" src="gen8bi" fileName="win/ComMainEnemyInfo.xml" xy="492,7" size="152,45">
+      <relation target="" sidePair="center-center,top-top"/>
+    </component>
+    <component id="n80_u5yf" name="comMapOperate" src="gen84k" fileName="com/ComMainMapOperate.xml" xy="862,260">
+      <relation target="" sidePair="middle-middle,right-right"/>
+    </component>
+    <component id="n1_muc9" name="comMainJoystick" src="gen8bd" fileName="win/ComMainJoystick.xml" xy="865,362" controller="ctrlGameMode,1">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+    </component>
+    <component id="n42_w0g2" name="comMainQuickBuild" src="gen8bm" fileName="win/ComMainQuickBuild.xml" xy="890,355" hideByEditor="true" visible="false">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+    </component>
+    <component id="n4_muc9" name="comMainRocker" src="gen8bp" fileName="win/ComMainRocker.xml" xy="0,256">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
+    </component>
+    <component id="n37_x9um" name="comChat" src="gen8br" fileName="win/ComMainChatView.xml" xy="3,555">
+      <relation target="" sidePair="bottom-bottom"/>
+    </component>
+    <component id="n39_c3x2" name="comTaskTrace" src="gen8bs" fileName="win/ComTaskTrace.xml" xy="940,100" customData="xOffset,1">
+      <relation target="" sidePair="right-right"/>
+    </component>
+    <component id="n41_xles" name="btnRobotViewReturn" src="gen817" fileName="btn/btnRobotViewReturn.xml" xy="1030,547">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+    </component>
+    <component id="n46_uvgl" name="comStatus" src="gen8bt" fileName="win/ComStatus.xml" xy="831,9">
+      <relation target="" sidePair="right-right"/>
+    </component>
+    <component id="n44_uvgl" name="comMainStorage" src="gen8bu" fileName="win/ComMainStorage.xml" xy="1060,6">
+      <relation target="" sidePair="right-right"/>
+    </component>
+    <component id="n47_wdqf" name="comUserInfo" src="gen8ba" fileName="win/ComMainUserInfo.xml" xy="966,6">
+      <relation target="" sidePair="right-right"/>
+    </component>
+    <component id="n54_x5ue" name="comGameShortcuts" src="gen848" fileName="com/ComMainGameShortcuts.xml" xy="228,528">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </component>
+    <component id="n70_k177" name="comShortCut" src="gen8bw" fileName="Com/ComBuildShortCut.xml" xy="433,496" visible="false">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </component>
+    <component id="n40_c994" name="comExperience" src="gen8d3" fileName="win/ComExperience.xml" xy="1082,623">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+    </component>
+    <component id="n81_u5yf" name="comLeftTopUICtnr" src="gen83j" fileName="com/ComMainGameLeftTopUICtnr.xml" xy="0,0"/>
+  </displayList>
+</component>

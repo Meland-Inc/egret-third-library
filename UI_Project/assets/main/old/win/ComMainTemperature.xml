@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="170,150" opaque="false">
+  <controller name="weather" pages="1,night,0,day,2,dusk,3,dawn" selected="0">
+    <remark page="0" value="夜晚"/>
+    <remark page="1" value="白天"/>
+    <remark page="2" value="黄昏"/>
+    <remark page="3" value="黎明"/>
+  </controller>
+  <displayList>
+    <image id="n14_r2bf" name="n14" src="gen896" fileName="newImg/img_main_info.png" xy="107,9" group="n3_r2bf"/>
+    <image id="n13_r2bf" name="n13" src="gen88t" fileName="newImg/icon_main_temperature.png" xy="114,11" group="n3_r2bf"/>
+    <text id="n2_r2bf" name="n2" xy="142,9" size="15,18" group="n3_r2bf" fontSize="11" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="C"/>
+    <text id="n18_qfn3" name="tfTemperature" xy="128,9" size="20,18" group="n3_r2bf" fontSize="11" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="11"/>
+    <group id="n3_r2bf" name="n3" xy="107,9" size="60,18" collapsed="true"/>
+    <image id="n15_r2bf" name="n15" src="gen896" fileName="newImg/img_main_info.png" xy="44,9" group="n8_r2bf"/>
+    <image id="n12_r2bf" name="night" src="gen88k" fileName="newImg/icon_main_night.png" xy="49,12" group="n8_r2bf">
+      <gearDisplay controller="weather" pages="1"/>
+    </image>
+    <image id="n11_r2bf" name="day" src="gen88p" fileName="newImg/icon_main_sun.png" xy="49,11" size="12,12" group="n8_r2bf">
+      <gearDisplay controller="weather" pages="0"/>
+    </image>
+    <image id="n19_c994" name="dusk" src="gen8a4" fileName="newImg/icon_main_dusk.png" xy="49,11" size="12,12" group="n8_r2bf">
+      <gearDisplay controller="weather" pages="2"/>
+    </image>
+    <image id="n20_c994" name="dawn" src="gen8a3" fileName="newImg/icon_main_dawn.png" xy="49,11" group="n8_r2bf">
+      <gearDisplay controller="weather" pages="3"/>
+    </image>
+    <text id="n7_r2bf" name="tfTime" xy="69,9" size="34,18" group="n8_r2bf" fontSize="10" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="12:00"/>
+    <group id="n8_r2bf" name="grpWeatherIcon" xy="44,9" size="60,18" collapsed="true"/>
+    <component id="n23_t8is" name="comWeatherDetail" src="gen82x" fileName="com/ComWeatherDetail.xml" xy="0,1"/>
+  </displayList>
+</component>
