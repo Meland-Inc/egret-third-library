@@ -15,7 +15,7 @@
     </image>
     <image id="n23_inuq" name="n23" src="xba67m" fileName="ideCommon/img/img_ide_cm_6.png" xy="0,0" size="430,56" group="n16_jm8l"/>
     <image id="n22_inuq" name="n22" src="80ab97" fileName="ideCommon/img/img_ide_cm_8.png" xy="9,216" size="393,849" group="n16_jm8l"/>
-    <list id="n2_7slt" name="lstBpTabBar" xy="9,118" size="412,93" group="n16_jm8l" layout="flow_hz" overflow="hidden" lineGap="4" colGap="3" defaultItem="ui://ti9jag5t80ab9h" autoItemSize="true">
+    <list id="n2_7slt" name="lstBpTabBar" xy="9,115" size="412,93" group="n16_jm8l" layout="flow_hz" overflow="hidden" lineGap="4" colGap="3" defaultItem="ui://ti9jag5t80ab9h" autoItemSize="true">
       <item title="最近" icon="ui://ti9jag5t80ab8m" name="recent" selectedIcon="ui://ti9jag5t80ab8n"/>
       <item title="全部" icon="ui://ti9jag5t80ab86" name="all" selectedIcon="ui://ti9jag5t80ab87"/>
       <item title="建材" icon="ui://ti9jag5t80ab80" name="buildObj" selectedIcon="ui://ti9jag5t80ab81"/>
@@ -86,8 +86,8 @@
       <item/>
       <item/>
     </list>
-    <image id="n5_7slt" name="n5" src="80ab9b" fileName="ideCommon/img/img_ide_cm_ssk.png" xy="9,70" size="412,37" group="n16_jm8l"/>
-    <text id="n7_7slt" name="tfSearch" xy="19,76" size="392,27" group="n16_jm8l" input="true" prompt="请输入搜索内容&#xD;" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" text=""/>
+    <image id="n5_7slt" name="n5" src="80ab9b" fileName="ideCommon/img/img_ide_cm_ssk.png" xy="9,65" size="412,40" group="n16_jm8l"/>
+    <text id="n7_7slt" name="tfSearch" xy="19,73" size="392,24" group="n16_jm8l" input="true" prompt="请输入搜索内容&#xD;" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" text=""/>
     <text id="n21_inuq" name="n21" xy="19,16" size="67,24" group="n16_jm8l" fontSize="20" color="#333333" align="center" vAlign="middle" text="素材库"/>
     <component id="n3_7slt" name="btnFold" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="377,2" size="48,48" group="n16_jm8l">
       <Button icon="ui://ti9jag5t80ab8y" controller="ctrlState" page="0"/>
