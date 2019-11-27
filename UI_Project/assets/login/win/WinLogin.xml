@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1920,1080" adaptationTest="FitSize">
+<component size="1920,1080" designImage="ui://7daqie1jpnmu4h" adaptationTest="FitSize">
   <controller name="c1" pages="0,wait,1,normal" selected="1"/>
   <controller name="c2" pages="0,,1," selected="1"/>
   <controller name="ctrlRegister" pages="0,normal,1,mail" selected="0"/>
@@ -139,13 +139,13 @@
       <gearDisplay controller="c1" pages="1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <component id="n189_t3kc" name="btnAccountLogin" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1026,830" size="300,88" group="n160_tcg1">
+    <component id="n189_t3kc" name="btnAccountLogin" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1026,890" size="300,88" group="n160_tcg1">
       <Button title="账号登陆" titleColor="#fdf8e2" titleFontSize="36" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <component id="n190_t3kc" name="btnVisitorLogin" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="593,830" size="300,88" group="n160_tcg1">
+    <component id="n190_t3kc" name="btnVisitorLogin" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="566,890" size="300,88" group="n160_tcg1">
       <Button title="快速登录" titleColor="#fdf8e2" titleFontSize="36" icon="ui://te1gxawoeggjcyihf"/>
     </component>
-    <group id="n160_tcg1" name="selectModeGroup" xy="593,830" size="733,88" advanced="true">
+    <group id="n160_tcg1" name="selectModeGroup" xy="566,890" size="760,88" advanced="true">
       <gearDisplay controller="c1" pages="1"/>
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </group>
