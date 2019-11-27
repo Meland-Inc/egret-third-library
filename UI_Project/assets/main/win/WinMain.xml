@@ -2,8 +2,8 @@
 <component size="1920,1080" opaque="false" designImage="ui://thvmj7voa1nd2" designImageAlpha="0">
   <controller name="ctrlUserStatus" pages="0,student,1,teacher,2,fakeStudent,3,fakeTeacher" selected="2"/>
   <controller name="ctrlGodView" pages="0,false,1,true" selected="0"/>
-  <controller name="ctrlEnterWay" pages="0,share,1,editSelf,2,editOther,3,roomPlayCanEdit,4,roomPlayCanNotEdit" selected="0"/>
-  <controller name="ctrlViewMode" pages="0,world,1,edit" selected="0"/>
+  <controller name="ctrlEnterWay" pages="0,share,1,editSelf,2,editOther,3,roomPlayCanEdit,4,roomPlayCanNotEdit" selected="1"/>
+  <controller name="ctrlViewMode" pages="0,world,1,edit" selected="1"/>
   <displayList>
     <component id="n17_swki" name="btnChangeViewMode" src="psruh" fileName="com/btnMainMenu.xml" xy="1427,13" group="n23_11584">
       <gearDisplay controller="ctrlUserStatus" pages="1,3"/>
@@ -38,22 +38,16 @@
     <group id="n23_11584" name="grpMenu" xy="1427,13" size="485,113" customData="top" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlViewMode" pages="0"/>
     </group>
-    <component id="n19_11584" name="btnBack" src="gen82t" fileName="old/btn/btnFixClickArea.xml" xy="1873,5" pivot="0.49,0" anchor="true" size="59,66" group="n21_11584">
-      <Button icon="ui://oyity675gen87v" page="1"/>
+    <component id="n19_11584" name="btnBack" src="psruh" fileName="com/btnMainMenu.xml" xy="1802,13" group="n24_11584">
+      <Button title="退出" icon="ui://oyity675xh734dq" page="1"/>
     </component>
-    <image id="n20_11584" name="imgTfBack" src="gen87x" fileName="old/imgB/btn_main_fh_1_1.png" xy="1873,69" pivot="0.5,0" anchor="true" group="n21_11584"/>
-    <group id="n21_11584" name="grpBtnBack" xy="1844,5" size="59,81" group="n24_11584" customData="top" advanced="true" collapsed="true">
-      <gearDisplay controller="ctrlEnterWay" pages="1,2,3,4"/>
-      <relation target="" sidePair="right-right"/>
-    </group>
-    <component id="n22_11584" name="btnInvite" src="gen82t" fileName="old/btn/btnFixClickArea.xml" xy="1771,10" pivot="0.49,0" anchor="true" size="56,79" group="n24_11584" customData="top">
+    <component id="n22_11584" name="btnInvite" src="psruh" fileName="com/btnMainMenu.xml" xy="1667,13" group="n24_11584" customData="top">
       <gearDisplay controller="ctrlEnterWay" pages="1"/>
-      <gearXY controller="ctrlEnterWay" pages="0,1" values="1771,10|1771,10" default="1685,10"/>
-      <relation target="" sidePair="right-right"/>
-      <Button icon="ui://oyity675gen880" page="1"/>
+      <Button title="邀请好友" icon="ui://oyity675xh734dp" page="1"/>
     </component>
-    <group id="n24_11584" name="grpEditMenu" xy="1743,5" size="160,84" customData="top" advanced="true" collapsed="true">
+    <group id="n24_11584" name="grpEditMenu" xy="1667,13" size="245,112" customData="top" advanced="true">
       <gearDisplay controller="ctrlViewMode" pages="1"/>
+      <relation target="" sidePair="right-right"/>
     </group>
     <component id="n9_psru" name="btnIde" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1804,979" size="116,110" customData="right">
       <relation target="" sidePair="bottom-bottom,right-right"/>
@@ -72,8 +66,8 @@
     <component id="n14_psru" name="comTask" src="psruk" fileName="com/ComMainTask.xml" xy="0,277" group="n15_n173">
       <gearDisplay controller="ctrlViewMode" pages="0"/>
     </component>
-    <group id="n15_n173" name="grpLeftTop" xy="0,0" size="346,387" customData="left" advanced="true" collapsed="true"/>
-    <component id="n18_11584" name="comChat" src="11584dl" fileName="com/ComMainChatView.xml" xy="0,940" customData="bottom">
+    <group id="n15_n173" name="grpLeftTop" xy="0,0" size="346,494" customData="left" advanced="true" collapsed="true"/>
+    <component id="n18_11584" name="comChat" src="11584dl" fileName="com/ComMainChatView.xml" xy="0,940" visible="false" customData="bottom">
       <gearDisplay controller="ctrlUserStatus" pages="2,3"/>
       <relation target="" sidePair="bottom-bottom"/>
     </component>
