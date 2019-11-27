@@ -12,7 +12,7 @@
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://te1gxawooiqdcyih2"/>
     </component>
-    <text id="n22_e8s1" name="tfShortcutTitle" xy="715,786" size="105,24" group="n33_ibv1" fontSize="20" color="#333333" align="center" text="背包快捷栏"/>
+    <text id="n22_e8s1" name="tfShortcutTitle" xy="715,786" size="105,26" group="n33_ibv1" fontSize="20" color="#333333" align="center" text="背包快捷栏"/>
     <image id="n19_e8s1" name="imgShortcutBg" src="oiqdcyih4" fileName="img/img_cm_1.png" pkg="te1gxawo" xy="698,819" size="1130,120" group="n33_ibv1"/>
     <list id="n20_e8s1" name="lstShortcut" xy="718,829" size="880,100" group="n33_ibv1" layout="row" scroll="horizontal" colGap="10" defaultItem="ui://48p8y12ae8s1j">
       <item/>
@@ -46,8 +46,8 @@
       <gearDisplay controller="ctrlOperateType" pages="0"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <image id="n18_e8s1" name="imgListBg" src="oiqdcyih4" fileName="img/img_cm_1.png" pkg="te1gxawo" xy="698,168" size="1129,586">
-      <gearSize controller="ctrlOperateType" pages="0,1" values="1129,586,1,1|1129,826,1,1"/>
+    <image id="n18_e8s1" name="imgListBg" src="oiqdcyih4" fileName="img/img_cm_1.png" pkg="te1gxawo" xy="698,167" size="1130,590">
+      <gearSize controller="ctrlOperateType" pages="0,1" values="1130,590,1,1|1129,826,1,1"/>
       <relation target="n15_tvlf" sidePair="left-left,top-top"/>
       <relation target="n15_tvlf" sidePair="width-width"/>
     </image>
@@ -61,14 +61,14 @@
     <group id="n34_emzb" name="grpInpSearch" xy="1598,125" size="210,39" advanced="true" collapsed="true">
       <relation target="n15_tvlf" sidePair="top-top,right-right"/>
     </group>
-    <text id="n14_tvlf" name="tfNum" xy="715,135" size="95,24" fontSize="20" color="#333333" align="center" vars="true" text="背包 [{num=10}]">
+    <text id="n14_tvlf" name="tfNum" xy="715,135" size="84,26" fontSize="20" color="#333333" align="center" vars="true" text="背包 [{num=10}]">
       <relation target="n15_tvlf" sidePair="left-left,top-top"/>
     </text>
     <list id="n16_tvlf" name="lstBagType" xy="937,123" size="655,48" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="128" colGap="13" defaultItem="ui://48p8y12atvlfi">
       <relation target="n15_tvlf" sidePair="left-left,top-top"/>
       <item/>
     </list>
-    <list id="n17_e8s1" name="lstBagItem" xy="718,192" size="1094,535" layout="flow_hz" overflow="scroll" lineGap="10" colGap="10" defaultItem="ui://48p8y12ae8s1j" autoClearItems="true">
+    <list id="n17_e8s1" name="lstBagItem" xy="718,192" size="1094,539" layout="flow_hz" overflow="scroll" lineGap="10" colGap="10" defaultItem="ui://48p8y12ae8s1j" autoClearItems="true">
       <relation target="n15_tvlf" sidePair="left-left,top-top"/>
       <relation target="n15_tvlf" sidePair="width-width"/>
       <relation target="n18_e8s1" sidePair="height-height"/>

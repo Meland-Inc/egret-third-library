@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="50,50" overflow="hidden">
+<component size="50,50" overflow="hidden" mask="n1_vlrg">
   <displayList>
     <loader id="n0_er8n" name="lad" xy="0,0" size="50,50" align="center" vAlign="middle" fill="scaleNoBorder">
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
+    <image id="n1_vlrg" name="n1" src="eggjcyihs" fileName="img/img_cm_srk_1.png" pkg="te1gxawo" xy="0,0" size="50,50">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
   </displayList>
 </component>
