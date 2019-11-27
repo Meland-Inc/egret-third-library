@@ -51,6 +51,7 @@
     <component id="n5_batc" name="tbtnDrawing" src="oliri6s" fileName="old/btn/tbtnScale.xml" pkg="te1gxawo" xy="30,40" size="410,59" group="n14_batc" touchable="false">
       <Button checked="true" title="画图" titleColor="#333333" titleFontSize="24" icon="ui://a0pj43bjqiln4" selectedIcon="ui://a0pj43bjqiln4" controller="ctrlLeft" page="0"/>
     </component>
+    <image id="n51_giuq" name="n51" src="qiln4" fileName="img/img_dra_top.png" xy="30,40" size="410,59" group="n14_batc"/>
     <list id="n7_batc" name="lstTool" xy="49,105" size="379,86" group="n14_batc" layout="flow_hz" overflow="hidden" margin="5,0,0,0" lineGap="8" colGap="10" defaultItem="ui://a0pj43bjqiln21">
       <item icon="ui://a0pj43bjqilnm" name="SELECTOR" selectedIcon="ui://a0pj43bjqilnn"/>
       <item icon="ui://a0pj43bjqilnc" name="BRUSH" selectedIcon="ui://a0pj43bjqilnd"/>
@@ -58,27 +59,27 @@
       <item icon="ui://a0pj43bjqilno" name="ERASER" selectedIcon="ui://a0pj43bjqilnp"/>
       <item icon="ui://a0pj43bjqiln9" name="ISOMETRIC" selectedIcon="ui://a0pj43bjqilna"/>
     </list>
-    <image id="n8_batc" name="imgInpNameBg" src="eggjcyihu" fileName="img/img_cm_srk_3.png" pkg="te1gxawo" xy="46,897" size="370,65" group="n17_batc"/>
-    <text id="n9_batc" name="inpCanvasName" xy="56,898" size="370,65" group="n17_batc" alpha="0.6" input="true" fontSize="24" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="新名称">
+    <image id="n8_batc" name="imgInpNameBg" src="eggjcyihu" fileName="img/img_cm_srk_3.png" pkg="te1gxawo" xy="46,898" size="370,65" group="n17_batc"/>
+    <text id="n9_batc" name="inpCanvasName" xy="67,899" size="358,65" group="n17_batc" alpha="0.6" input="true" fontSize="24" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="新名称">
       <relation target="n8_batc" sidePair="width-width,height-height"/>
     </text>
-    <component id="n39_gup1" name="btnImport" src="gup1cyihy" fileName="btn/btnImg.xml" pkg="te1gxawo" xy="52,837" size="174,47" group="n17_batc">
-      <Button title="导入图片" titleColor="#000000" icon="ui://te1gxawogup1cyihx" selectedIcon="ui://te1gxawooiqdcyih1"/>
+    <component id="n39_gup1" name="btnImport" src="gup1cyihy" fileName="btn/btnImg.xml" pkg="te1gxawo" xy="52,838" size="174,47" group="n17_batc">
+      <Button title="导入图片" titleColor="#333333" icon="ui://te1gxawogup1cyihx" selectedIcon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <component id="n40_gup1" name="btnDownload" src="gup1cyihy" fileName="btn/btnImg.xml" pkg="te1gxawo" xy="243,837" size="174,47" group="n17_batc">
-      <Button title="下载图片" titleColor="#000000" icon="ui://te1gxawogup1cyihx" selectedIcon="ui://te1gxawooiqdcyih1"/>
+    <component id="n40_gup1" name="btnDownload" src="gup1cyihy" fileName="btn/btnImg.xml" pkg="te1gxawo" xy="243,838" size="174,47" group="n17_batc">
+      <Button title="下载图片" titleColor="#333333" icon="ui://te1gxawogup1cyihx" selectedIcon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <component id="n41_gup1" name="btnSave" src="gup1cyihy" fileName="btn/btnImg.xml" pkg="te1gxawo" xy="52,970" size="365,54" group="n17_batc">
-      <gearText controller="ctrlMode" pages="1" values="保存动画" default="保存"/>
-      <Button title="保存" titleColor="#000000" icon="ui://te1gxawogup1cyihx" selectedIcon="ui://te1gxawooiqdcyih1"/>
+    <component id="n50_giuq" name="btnSave" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="52,971" size="365,54" group="n17_batc">
+      <Button title="保存" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <group id="n17_batc" name="grpBottom" xy="46,837" size="380,188" group="n14_batc" advanced="true">
+    <group id="n17_batc" name="grpBottom" xy="46,838" size="380,187" group="n14_batc" advanced="true" collapsed="true">
       <relation target="" sidePair="bottom-bottom"/>
     </group>
     <component id="n38_gup1" name="comPenSetting" src="qiln2s" fileName="com/ComPenSetting.xml" xy="30,168" size="410,494" group="n14_batc">
       <gearDisplay controller="ctrlTool" pages="0,2"/>
     </component>
-    <group id="n14_batc" name="grpLeft" xy="30,40" size="410,1010" collapsed="true"/>
+    <text id="n53_giuq" name="n53" xy="208,57" size="52,31" group="n14_batc" fontSize="24" color="#333333" align="center" vAlign="middle" text="画图"/>
+    <group id="n14_batc" name="grpLeft" xy="30,40" size="410,1010"/>
     <image id="n49_gup1" name="n49" src="gup15c" fileName="img/img_sket_qy_2.png" xy="1781,431" size="60,2">
       <relation target="n26_pa6b" sidePair="bottom-top,right-right"/>
     </image>

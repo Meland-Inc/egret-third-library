@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="518,338">
+  <displayList>
+    <image id="n9_giuq" name="n9" src="k3wpcyiiz" fileName="img/img_cm_cbd.png" pkg="te1gxawo" xy="0,0" size="518,338">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n10_giuq" name="n10" src="c1h7cyiia" fileName="img/img_cm_top_3.png" pkg="te1gxawo" xy="0,0" size="518,56">
+      <relation target="" sidePair="left-left,top-top"/>
+    </image>
+    <text id="n11_giuq" name="tf" xy="115,138" size="287,31" fontSize="24" color="#333333" vAlign="middle" text="服务器爆满，努力插队中..."/>
+    <text id="n12_giuq" name="tfTitle" xy="20,15" size="80,30" fontSize="24" color="#333333" bold="true" text="排队中">
+      <relation target="" sidePair="left-left,top-top"/>
+    </text>
+    <text id="n13_giuq" name="tf" xy="115,200" size="125,31" fontSize="24" color="#333333" vAlign="middle" text="前方人数："/>
+    <text id="n14_giuq" name="tfNum" xy="238,199" size="64,31" fontSize="28" color="#ff676d" vAlign="middle" autoSize="none" bold="true" text="26"/>
+    <component id="n15_giuq" name="btnBack" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="464,4" size="50,50">
+      <Button icon="ui://te1gxawooiqdcyih2"/>
+    </component>
+  </displayList>
+</component>
