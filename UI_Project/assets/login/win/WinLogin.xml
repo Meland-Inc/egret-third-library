@@ -140,10 +140,10 @@
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
     <component id="n189_t3kc" name="btnAccountLogin" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1026,890" size="300,88" group="n160_tcg1">
-      <Button title="账号登陆" titleColor="#fdf8e2" titleFontSize="36" icon="ui://te1gxawooiqdcyih1"/>
+      <Button title="账号登陆" titleColor="#ffffff" titleFontSize="36" icon="ui://te1gxawooiqdcyih1"/>
     </component>
     <component id="n190_t3kc" name="btnVisitorLogin" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="566,890" size="300,88" group="n160_tcg1">
-      <Button title="快速登录" titleColor="#fdf8e2" titleFontSize="36" icon="ui://te1gxawoeggjcyihf"/>
+      <Button title="快速登录" titleColor="#ffffff" titleFontSize="36" icon="ui://te1gxawoeggjcyihf"/>
     </component>
     <group id="n160_tcg1" name="selectModeGroup" xy="566,890" size="760,88" advanced="true">
       <gearDisplay controller="c1" pages="1"/>
