@@ -37,11 +37,11 @@
       <gearText controller="status" pages="0,1,2" values="畅通|爆满|维护"/>
       <relation target="n45_dll3" sidePair="left-left,middle-middle"/>
     </text>
-    <text id="n49_dll3" name="tfServerName" xy="872,721" size="188,38" group="n52_dll3" fontSize="30" color="#333333" align="center" vAlign="middle" autoSize="none" text="BETA">
+    <text id="n49_dll3" name="tfServerName" xy="866,721" size="188,38" group="n52_dll3" fontSize="30" color="#333333" align="center" vAlign="middle" autoSize="none" text="BETA">
       <relation target="n45_dll3" sidePair="center-center,middle-middle"/>
     </text>
-    <text id="n50_dll3" name="n50" xy="1144,726" size="65,38" group="n52_dll3" fontSize="30" color="#333333" align="center" vAlign="middle" text="换区"/>
-    <image id="n51_dll3" name="n51" src="giuq1k" fileName="img/icon_log_hq.png" xy="1200,714" group="n52_dll3">
+    <text id="n50_dll3" name="n50" xy="1118,726" size="65,38" group="n52_dll3" fontSize="30" color="#333333" align="center" vAlign="middle" text="换区"/>
+    <image id="n51_dll3" name="n51" src="giuq1k" fileName="img/icon_log_hq.png" xy="1186,714" group="n52_dll3">
       <relation target="n45_dll3" sidePair="middle-middle,right-right"/>
     </image>
     <group id="n52_dll3" name="selectServer" xy="663,714" size="594,56" advanced="true">
