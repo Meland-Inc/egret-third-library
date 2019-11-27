@@ -37,7 +37,7 @@
     <image id="n33_v00l" name="imgSearchBg" src="80ab9b" fileName="ideCommon/img/img_ide_cm_ssk.png" xy="10,65" size="407,40" group="n17_jm8l">
       <gearDisplay controller="ctrlState" pages="1"/>
     </image>
-    <text id="n32_v00l" name="tfSearch" xy="20,73" size="387,24" group="n17_jm8l" input="true" prompt="请输入搜索内容" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="请输入搜索内容">
+    <text id="n32_v00l" name="tfSearch" xy="20,73" size="387,24" group="n17_jm8l" input="true" prompt="[color=#999999][size=18]请输入搜索内容[/size][/color]" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="">
       <gearDisplay controller="ctrlState" pages="1"/>
     </text>
     <text id="n31_v00l" name="tfTitle" xy="20,17" size="85,24" group="n17_jm8l" fontSize="20" color="#333333" align="center" vAlign="middle" text="地形编辑">
