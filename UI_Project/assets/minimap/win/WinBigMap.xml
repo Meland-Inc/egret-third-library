@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://thvmj7vofv5tcyiio" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlMapMode" pages="0,normal,1,born,2,revive" selected="0"/>
-  <controller name="ctrlMarkOperate" pages="0,normal,1,selectMark,2,puttingMark,3,deleteMark,4,editMarkName" selected="3"/>
+  <controller name="ctrlMarkOperate" pages="0,normal,1,selectMark,2,puttingMark,3,deleteMark,4,editMarkName" selected="1"/>
   <displayList>
     <component id="n35_trc2" name="comMap" src="fv5tc" fileName="old/com/ComMiniMapCtnr.xml" xy="0,57" size="1920,1023" hideByEditor="true">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
@@ -75,7 +75,7 @@
       <relation target="n27_11e02" sidePair="rightext-right"/>
     </image>
     <image id="n95_fv5t" name="imgPosIcon" src="fv5t2n" fileName="img/icon_map_zb.png" xy="23,969" group="n28_11e02"/>
-    <text id="n27_11e02" name="tfPos" xy="64,989" size="194,24" group="n28_11e02" fontSize="20" color="#ffffff" align="center" vAlign="middle" vars="true" text="自然坐标  ({r=999},{c=999})"/>
+    <text id="n27_11e02" name="tfPos" xy="64,989" size="174,26" group="n28_11e02" fontSize="20" color="#ffffff" align="center" vAlign="middle" vars="true" text="自然坐标  ({r=999},{c=999})"/>
     <group id="n28_11e02" name="posGroup" xy="21,969" size="249,52" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlMapMode" pages="0,2"/>
       <relation target="" sidePair="bottom-bottom"/>
@@ -91,8 +91,8 @@
     </graph>
     <image id="n96_lmgf" name="imgMarkBg" src="j595cyiic" fileName="img/img_cm_tkc_1.png" pkg="te1gxawo" xy="662,294" size="596,368" group="n80_mr86"/>
     <image id="n51_mr86" name="imgMarkTopBg" src="c1h7cyiia" fileName="img/img_cm_top_3.png" pkg="te1gxawo" xy="662,294" size="596,57" group="n80_mr86"/>
-    <text id="n52_mr86" name="selectMarkTitle" xy="681,310" size="103,28" group="n80_mr86" fontSize="24" color="#333333" align="center" vAlign="middle" bold="true" text="选择标记"/>
-    <list id="n54_mr86" name="lstMarkBtn" xy="745,402" size="437,58" group="n80_mr86" layout="flow_hz" scroll="horizontal" colGap="20" defaultItem="ui://makcczvjfv5t0">
+    <text id="n52_mr86" name="selectMarkTitle" xy="681,310" size="99,31" group="n80_mr86" fontSize="24" color="#333333" align="center" vAlign="middle" text="选择标记"/>
+    <list id="n54_mr86" name="lstMarkBtn" xy="741,402" size="437,58" group="n80_mr86" layout="flow_hz" scroll="horizontal" colGap="20" defaultItem="ui://makcczvjfv5t0">
       <item title="icon_map_1" icon="ui://makcczvjfv5t2b" name="1"/>
       <item title="icon_map_6" icon="ui://makcczvjfv5t2g" name="6"/>
       <item title="icon_map_5" icon="ui://makcczvjfv5t2f" name="5"/>
@@ -103,10 +103,9 @@
     <component id="n53_mr86" name="btnCloseSelectMark" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1201,299" size="48,48" group="n80_mr86">
       <Button icon="ui://te1gxawooiqdcyih2" controller="ctrlMarkOperate" page="0"/>
     </component>
-    <image id="n55_mr86" name="inputBg" src="eggjcyihu" fileName="img/img_cm_srk_3.png" pkg="te1gxawo" xy="800,497" size="324,40" group="n57_mr86"/>
-    <text id="n56_mr86" name="inpMarkName" xy="800,501" size="324,34" group="n57_mr86" input="true" prompt="自定义标记点" fontSize="20" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" text=""/>
-    <group id="n57_mr86" name="grpMarkInput" xy="800,497" size="324,40" group="n80_mr86" advanced="true"/>
-    <component id="n59_mr86" name="btnPutMark" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="811,577" size="300,44" group="n80_mr86">
+    <component id="n56_mr86" name="inpMarkName" src="dv1icyiim" fileName="com/ComInput.xml" pkg="te1gxawo" xy="798,501" size="324,40" group="n57_mr86"/>
+    <group id="n57_mr86" name="grpMarkInput" xy="798,501" size="324,40" group="n80_mr86" advanced="true"/>
+    <component id="n59_mr86" name="btnPutMark" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="810,577" size="300,44" group="n80_mr86">
       <Button title="放置" titleColor="#ffffff" titleFontSize="24" icon="ui://te1gxawooiqdcyih1" controller="ctrlMarkOperate" page="2"/>
     </component>
     <group id="n80_mr86" name="grpSelectMarkPanel" xy="662,294" size="596,368" group="n60_mr86" advanced="true">
