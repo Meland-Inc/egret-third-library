@@ -7,7 +7,7 @@
     <loader id="n76_txgs" name="comBg" xy="0,0" size="1920,1080" hideByEditor="true" url="ui://f6ytlquwm1q8cyihy" align="center" vAlign="middle" fill="scaleNoBorder">
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <text id="n78_nvqa" name="tfTitle" xy="817,49" size="287,40" fontSize="36" color="#ffffff" leading="0" letterSpacing="10" bold="true" strokeColor="#333333" strokeSize="4" text="创建您的角色">
+    <text id="n78_nvqa" name="tfTitle" xy="817,49" size="287,40" fontSize="36" color="#ffffff" leading="0" letterSpacing="10" bold="true" strokeColor="#333333" strokeSize="3" text="创建您的角色">
       <relation target="" sidePair="center-center,top-top"/>
     </text>
     <image id="n81_nvqa" name="imgSexyBg" src="nvqa16" fileName="img/img_cre_bottom.png" xy="389,128" size="140,309" group="n80_nvqa"/>
@@ -38,7 +38,7 @@
     </component>
     <list id="n19_trkw" name="lstBodySubclass" xy="984,223" size="100,534" lineGap="10" defaultItem="ui://f6ytlquwnvqa2" selectionController="ctrlSelectSubclass">
       <gearDisplay controller="sort" pages="0"/>
-      <relation target="" sidePair="center-center%,middle-middle%"/>
+      <relation target="n85_nvqa" sidePair="middle-middle,right-left"/>
       <item title="头部" icon="ui://f6ytlquwnvqaz" name="1" selectedIcon="ui://f6ytlquwnvqa10"/>
       <item title="脸型" icon="ui://f6ytlquwnvqa1k" name="5" selectedIcon="ui://f6ytlquwnvqa1l"/>
       <item title="上衣" icon="ui://f6ytlquwnvqa1g" name="2" selectedIcon="ui://f6ytlquwnvqa1h"/>
