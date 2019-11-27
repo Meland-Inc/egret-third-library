@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="198,278" extention="Button" designImage="ui://thvmj7vomquwq" designImageOffsetX="-147" designImageOffsetY="-134" designImageAlpha="0" designImageLayer="1">
-  <controller name="button" pages="0,up,1,down" selected="1"/>
-  <controller name="ctrlMode" pages="0,other,1,self" selected="1"/>
+<component size="408,144" extention="Button" designImage="ui://thvmj7vomquwq" designImageOffsetX="-147" designImageOffsetY="-134" designImageAlpha="0" designImageLayer="1">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <controller name="ctrlMode" pages="0,other,1,self" selected="0"/>
   <controller name="ctrlStatus" pages="0,normal,1,publish,2,addBtn" selected="0"/>
   <displayList>
     <image id="n23_pz1n" name="imgAdd" src="pz1n3u" fileName="img/img_mapT_cjtd.png" xy="0,6" pivot="0.5,0.5" group="n25_pz1n"/>
@@ -9,21 +9,24 @@
     <group id="n25_pz1n" name="grpBtnCreate" xy="0,6" size="198,274" advanced="true">
       <gearDisplay controller="ctrlStatus" pages="2"/>
     </group>
-    <image id="n0_uov9" name="imgBg" src="oiqdcyigz" fileName="img/img_cm_wpx_1.png" pkg="te1gxawo" xy="0,4" size="198,274" group="n28_pz1n">
+    <image id="n0_uov9" name="imgBg" src="oiqdcyigz" fileName="img/img_cm_wpx_1.png" pkg="te1gxawo" xy="0,4" size="408,140" group="n28_pz1n">
       <gearSize controller="ctrlMode" pages="1" values="198,274,1,1" default="408,140,1,1"/>
     </image>
-    <component id="n6_uov9" name="ladMap" src="pz1n3t" fileName="com/ComAutoClipLad.xml" xy="10,14" size="178,120" group="n28_pz1n">
+    <component id="n6_uov9" name="ladMap" src="pz1n3t" fileName="com/ComAutoClipLad.xml" xy="10,13" size="160,120" group="n28_pz1n">
       <gearXY controller="ctrlMode" pages="1" values="10,14" default="10,13"/>
       <gearSize controller="ctrlMode" pages="1" values="178,120,1,1" default="160,120,1,1"/>
     </component>
-    <image id="n14_o3c2" name="imgAuthor" src="c1h7cyii2" fileName="img/icon_cm_avatar.png" pkg="te1gxawo" xy="-2,111" group="n22_pz1n"/>
-    <text id="n13_o3c2" name="tfAuthor" xy="25,110" size="173,25" group="n22_pz1n" fontSize="14" color="#666666" vAlign="middle" autoSize="none" singleLine="true" text="千与千寻"/>
-    <group id="n22_pz1n" name="grpAuthor" xy="-2,110" size="200,25" group="n28_pz1n" advanced="true">
+    <image id="n14_o3c2" name="imgAuthor" src="c1h7cyii2" fileName="img/icon_cm_avatar.png" pkg="te1gxawo" xy="177,51" group="n22_pz1n"/>
+    <text id="n13_o3c2" name="tfAuthor" xy="204,50" size="173,25" group="n22_pz1n" fontSize="14" color="#666666" vAlign="middle" autoSize="none" singleLine="true" text="千与千寻"/>
+    <group id="n22_pz1n" name="grpAuthor" xy="177,50" size="200,25" group="n28_pz1n" advanced="true">
       <gearDisplay controller="ctrlMode" pages="0"/>
       <gearXY controller="ctrlMode" pages="1" values="-2,110" default="177,50"/>
     </group>
-    <text id="n3_uov9" name="tfName" xy="4,157" size="190,25" group="n28_pz1n" fontSize="18" color="#333333" align="center" vAlign="middle" ubb="true" autoSize="none" singleLine="true" text="这里可以显示是十个字">
-      <gearXY controller="ctrlMode" pages="0,1" values="178,20|4,157"/>
+    <text id="n3_uov9" name="tfName0" xy="178,20" size="190,25" group="n28_pz1n" fontSize="18" color="#333333" vAlign="middle" ubb="true" autoSize="none" singleLine="true" text="这里可以显示是十个字">
+      <gearDisplay controller="ctrlMode" pages="0"/>
+    </text>
+    <text id="n30_qncg" name="tfName1" xy="4,157" size="190,25" group="n28_pz1n" fontSize="18" color="#333333" align="center" vAlign="middle" ubb="true" autoSize="none" singleLine="true" text="这里可以显示是十个字">
+      <gearDisplay controller="ctrlMode" pages="1"/>
     </text>
     <image id="n16_o3c2" name="imgEditNum" src="iv931o" fileName="old/img/img_stencil_dty_2.png" xy="148,66" group="n28_pz1n" hideByEditor="true" visible="false"/>
     <image id="n15_o3c2" name="imgSubscribeNum" src="iv931p" fileName="old/img/img_stencil_dty_3.png" xy="236,66" group="n28_pz1n" hideByEditor="true" visible="false"/>
@@ -35,7 +38,7 @@
     <component id="n21_spq9" name="comSelector" src="pz1n3r" fileName="com/comTemplateSelector.xml" xy="0,0" size="408,144" group="n28_pz1n" controller="ctrlOperate,2">
       <gearDisplay controller="button" pages="1"/>
     </component>
-    <group id="n28_pz1n" name="mainContent" xy="-2,0" size="410,278" advanced="true">
+    <group id="n28_pz1n" name="mainContent" xy="0,0" size="408,182" advanced="true">
       <gearDisplay controller="ctrlStatus" pages="0,1"/>
     </group>
     <image id="n29_pz1n" name="imgPublish" src="iv931x" fileName="old/img/icon_stencil_bq_1.png" xy="0,4">

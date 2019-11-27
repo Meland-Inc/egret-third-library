@@ -39,35 +39,35 @@
     <group id="n19_er8n" name="customInput" xy="11,269" size="380,41" advanced="true">
       <gearDisplay controller="ctrlMapSizeStatus" pages="3"/>
     </group>
-    <text id="n10_er8n" name="tfManorGenerateType" xy="7,276" size="121,29" group="n38_ra2b" fontSize="18" color="#333333" vAlign="middle" autoSize="none" bold="true" text="领地生成方式"/>
+    <text id="n10_er8n" name="tfManorGenerateType" xy="7,276" size="121,29" group="n38_ra2b" fontSize="18" color="#333333" vAlign="middle" autoSize="none" text="领地生成方式"/>
     <component id="n30_pz1n" name="cbSelectManorType" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="218,272" size="172,40" group="n38_ra2b">
-      <ComboBox title="回字形" visibleItemCount="10">
+      <ComboBox title="回字形" titleColor="#333333" visibleItemCount="10">
         <item title="回字形" value="palindrome"/>
         <item title="横向排列" value="horizontal"/>
         <item title="纵向排列" value="vertical"/>
       </ComboBox>
     </component>
-    <text id="n23_pz1n" name="tfManorGenerateGap" xy="7,336" size="146,29" group="n38_ra2b" fontSize="18" color="#333333" vAlign="middle" autoSize="none" bold="true" text="领地生成间隔"/>
+    <text id="n23_pz1n" name="tfManorGenerateGap" xy="7,336" size="146,29" group="n38_ra2b" fontSize="18" color="#333333" vAlign="middle" autoSize="none" text="领地生成间隔"/>
     <component id="n31_ra2b" name="cbManorGap" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="218,331" size="172,40" group="n38_ra2b">
-      <ComboBox title="100" visibleItemCount="10">
+      <ComboBox title="100" titleColor="#333333" visibleItemCount="10">
         <item title="100"/>
         <item title="50"/>
         <item title="20"/>
       </ComboBox>
     </component>
-    <text id="n12_er8n" name="tfIsCanEdit" xy="7,396" size="147,29" group="n38_ra2b" fontSize="18" color="#333333" vAlign="middle" autoSize="none" bold="true" text="编辑器是否可用"/>
+    <text id="n12_er8n" name="tfIsCanEdit" xy="7,396" size="147,29" group="n38_ra2b" fontSize="18" color="#333333" vAlign="middle" autoSize="none" text="编辑器是否可用"/>
     <component id="n14_er8n" name="btnIsCanEdit" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="313,389" size="78,42" group="n38_ra2b">
       <Button checked="true" icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
     </component>
-    <text id="n11_er8n" name="tfIsOpen" xy="7,455" size="121,29" group="n38_ra2b" fontSize="18" color="#333333" vAlign="middle" autoSize="none" bold="true" text="是否开源"/>
+    <text id="n11_er8n" name="tfIsOpen" xy="7,455" size="121,29" group="n38_ra2b" fontSize="18" color="#333333" vAlign="middle" autoSize="none" text="是否开源"/>
     <component id="n13_er8n" name="btnIsOpen" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="313,447" size="78,42" group="n38_ra2b">
       <Button icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
     </component>
-    <text id="n24_pz1n" name="tfIsManorCheckPoint" xy="7,512" size="121,29" group="n38_ra2b" fontSize="18" color="#333333" vAlign="middle" autoSize="none" bold="true" text="是否领地关卡"/>
+    <text id="n24_pz1n" name="tfIsManorCheckPoint" xy="7,512" size="121,29" group="n38_ra2b" fontSize="18" color="#333333" vAlign="middle" autoSize="none" text="是否领地关卡"/>
     <component id="n26_pz1n" name="btnIsManorCheckPoint" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="313,506" size="78,42" group="n38_ra2b">
       <Button icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
     </component>
-    <text id="n25_pz1n" name="tfIsSceneObjCanDestroy" xy="7,571" size="196,29" group="n38_ra2b" fontSize="18" color="#333333" vAlign="middle" autoSize="none" bold="true" text="场景物件是否能被破坏"/>
+    <text id="n25_pz1n" name="tfIsSceneObjCanDestroy" xy="7,571" size="196,29" group="n38_ra2b" fontSize="18" color="#333333" vAlign="middle" autoSize="none" text="场景物件是否能被破坏"/>
     <component id="n27_pz1n" name="btnIsSceneObjCanDestroy" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="313,563" size="78,42" group="n38_ra2b">
       <Button checked="true" icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
     </component>
