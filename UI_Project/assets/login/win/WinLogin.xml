@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" adaptationTest="FitSize">
+  <controller name="c1" pages="0,wait,1,normal" selected="1"/>
+  <controller name="c2" pages="0,,1," selected="0"/>
+  <controller name="ctrlRegister" pages="0,normal,1,mail" selected="1"/>
+  <displayList>
+    <loader id="n103_tcg1" name="imgBG" xy="0,0" size="1920,1080" fill="scaleFree">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <image id="n104_tcg1" name="imgloginBG" src="k3wpcyiiz" fileName="img/img_cm_cbd.png" pkg="te1gxawo" xy="2165,256" size="600,567" group="n123_tcg1"/>
+    <component id="n179_t3kc" name="tfUsername" src="tcg1s" fileName="com/ComLoginInput.xml" xy="2195,372" group="n123_tcg1">
+      <gearDisplay controller="ctrlRegister" pages="0"/>
+      <relation target="n104_tcg1" sidePair="top-top,center-center"/>
+    </component>
+    <image id="n162_tcg1" name="n162" src="ntkm5" fileName="img/img_log_user.png" xy="2221,380" size="50,50" group="n123_tcg1">
+      <gearDisplay controller="ctrlRegister" pages="0"/>
+      <relation target="n179_t3kc" sidePair="left-left,middle-middle"/>
+    </image>
+    <component id="n180_t3kc" name="tfEmail" src="tcg1s" fileName="com/ComLoginInput.xml" xy="2195,372" group="n123_tcg1">
+      <gearDisplay controller="ctrlRegister" pages="1"/>
+      <relation target="n104_tcg1" sidePair="center-center,top-top"/>
+    </component>
+    <image id="n163_tcg1" name="n163" src="giuq1j" fileName="img/img_log_email.png" xy="2221,378" size="50,50" group="n123_tcg1">
+      <gearDisplay controller="ctrlRegister" pages="1"/>
+      <relation target="n180_t3kc" sidePair="left-left,middle-middle"/>
+    </image>
+    <component id="n181_t3kc" name="tfLoginPassword" src="tcg1s" fileName="com/ComLoginInput.xml" xy="2195,463" group="n123_tcg1">
+      <relation target="n104_tcg1" sidePair="center-center,top-top"/>
+    </component>
+    <image id="n164_tcg1" name="n164" src="ntkm3" fileName="img/img_log_mm.png" xy="2222,473" size="50,50" group="n123_tcg1">
+      <relation target="n181_t3kc" sidePair="middle-middle,left-left"/>
+    </image>
+    <component id="n182_t3kc" name="tfRepeat" src="tcg1s" fileName="com/ComLoginInput.xml" xy="2195,554" group="n123_tcg1">
+      <relation target="n104_tcg1" sidePair="center-center,top-top"/>
+    </component>
+    <image id="n165_tcg1" name="n165" src="ntkm4" fileName="img/img_log_pas.png" xy="2221,561" size="50,50" group="n123_tcg1">
+      <relation target="n182_t3kc" sidePair="left-left,middle-middle"/>
+    </image>
+    <component id="n119_tcg1" name="btnLogin" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="2195,720" size="540,72" group="n123_tcg1">
+      <relation target="n104_tcg1" sidePair="bottom-bottom,center-center"/>
+      <Button title="登录" titleColor="#fdf8e2" titleFontSize="42" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <text id="n120_tcg1" name="tfErrorInLogin" xy="2195,627" size="275,38" group="n123_tcg1" visible="false" font="方正准圆简体" fontSize="30" color="#ff676d" align="center" vAlign="middle" singleLine="true" text="两次密码输入不一致">
+      <relation target="n104_tcg1" sidePair="top-top,left-left"/>
+    </text>
+    <component id="n121_tcg1" name="btnRetrunToSigninGroup" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="2685,280" size="64,64" group="n123_tcg1">
+      <relation target="n104_tcg1" sidePair="right-right,top-top"/>
+      <Button icon="ui://te1gxawooiqdcyih2"/>
+    </component>
+    <text id="n191_t3kc" name="tfTitle" xy="2195,290" size="149,45" group="n123_tcg1" fontSize="36" color="#333333" text="普通注册">
+      <gearDisplay controller="ctrlRegister" pages="0"/>
+      <relation target="n104_tcg1" sidePair="left-left,top-top"/>
+    </text>
+    <text id="n122_tcg1" name="tfMailTitle" xy="2195,290" size="149,45" group="n123_tcg1" fontSize="36" color="#333333" text="邮件注册">
+      <gearDisplay controller="ctrlRegister" pages="1"/>
+      <relation target="n104_tcg1" sidePair="left-left,top-top"/>
+    </text>
+    <component id="n166_tcg1" name="btnEmailSignup" src="9c90cyij5" fileName="btn/btnText.xml" pkg="te1gxawo" xy="2611,626" size="137,39" group="n123_tcg1">
+      <gearDisplay controller="ctrlRegister" pages="0"/>
+      <relation target="n104_tcg1" sidePair="top-top,right-right"/>
+      <Button title="邮箱注册" titleColor="#7dcd4a" titleFontSize="30" controller="ctrlRegister" page="1"/>
+    </component>
+    <component id="n167_tcg1" name="btnUsernameSignup" src="9c90cyij5" fileName="btn/btnText.xml" pkg="te1gxawo" xy="2610,626" size="137,39" group="n123_tcg1">
+      <gearDisplay controller="ctrlRegister" pages="1"/>
+      <relation target="n104_tcg1" sidePair="top-top,right-right"/>
+      <Button title="普通注册" titleColor="#7dcd4a" titleFontSize="30" controller="ctrlRegister" page="0"/>
+    </component>
+    <group id="n123_tcg1" name="loginGroup" xy="2165,256" size="600,567" advanced="true">
+      <gearDisplay controller="c1" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <image id="n124_tcg1" name="imgSigninBG" src="k3wpcyiiz" fileName="img/img_cm_cbd.png" pkg="te1gxawo" xy="2396,256" size="600,567" group="n137_tcg1"/>
+    <component id="n177_tcg1" name="tfAccount" src="tcg1s" fileName="com/ComLoginInput.xml" xy="2427,372" group="n137_tcg1">
+      <relation target="n124_tcg1" sidePair="center-center,top-top"/>
+    </component>
+    <text id="n134_tcg1" name="tfErrorInSignin" xy="2427,547" size="222,39" group="n137_tcg1" visible="false" font="方正准圆简体" fontSize="30" color="#ff676d" vAlign="middle" bold="true" text="账号或密码错误">
+      <relation target="n124_tcg1" sidePair="left-left,top-top"/>
+    </text>
+    <text id="n135_tcg1" name="tfSigninGroupTitle" xy="2427,290" size="149,45" group="n137_tcg1" fontSize="36" color="#333333" text="账号登录">
+      <relation target="n124_tcg1" sidePair="left-left,top-top"/>
+    </text>
+    <component id="n178_tcg1" name="tfPassword" src="tcg1s" fileName="com/ComLoginInput.xml" xy="2427,465" group="n137_tcg1">
+      <relation target="n124_tcg1" sidePair="center-center,top-top"/>
+    </component>
+    <image id="n170_tcg1" name="n170" src="ntkm5" fileName="img/img_log_user.png" xy="2453,380" size="50,50" group="n137_tcg1">
+      <relation target="n177_tcg1" sidePair="left-left,middle-middle"/>
+    </image>
+    <image id="n173_tcg1" name="n173" src="ntkm4" fileName="img/img_log_pas.png" xy="2453,472" size="50,50" group="n137_tcg1">
+      <relation target="n178_tcg1" sidePair="left-left,middle-middle"/>
+    </image>
+    <component id="n175_tcg1" name="btnSignup" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="2427,721" size="540,72" group="n137_tcg1">
+      <relation target="n124_tcg1" sidePair="bottom-bottom,center-center"/>
+      <Button title="注册" titleColor="#fdf8e2" titleFontSize="42" icon="ui://te1gxawooiqdcyih3"/>
+    </component>
+    <component id="n174_tcg1" name="btnSignin" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="2427,623" size="540,72" group="n137_tcg1">
+      <relation target="n124_tcg1" sidePair="bottom-bottom,center-center"/>
+      <Button title="登录" titleColor="#fdf8e2" titleFontSize="42" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <component id="n176_tcg1" name="btnReturnToSelectModeGroup" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="2903,280" size="64,64" group="n137_tcg1">
+      <relation target="n124_tcg1" sidePair="right-right,top-top"/>
+      <Button icon="ui://te1gxawooiqdcyih2"/>
+    </component>
+    <group id="n137_tcg1" name="signinGroup" xy="2396,256" size="600,567" advanced="true" collapsed="true">
+      <gearDisplay controller="c1" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <image id="n138_tcg1" name="imgSigninBG" src="k3wpcyiiz" fileName="img/img_cm_cbd.png" pkg="te1gxawo" xy="2317,257" size="600,567" group="n151_tcg1"/>
+    <component id="n183_t3kc" name="btnTouristsSignin" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="2347,624" size="540,72" group="n151_tcg1">
+      <relation target="n138_tcg1" sidePair="bottom-bottom,center-center"/>
+      <Button title="开始" titleColor="#fdf8e2" titleFontSize="42" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <component id="n184_t3kc" name="btnTouristsSave" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="2347,722" size="540,72" group="n151_tcg1">
+      <relation target="n138_tcg1" sidePair="bottom-bottom,center-center"/>
+      <Button title="截图保存" titleColor="#fdf8e2" titleFontSize="42" icon="ui://te1gxawooiqdcyih3"/>
+    </component>
+    <component id="n185_t3kc" name="tfTouristsAccount" src="tcg1s" fileName="com/ComLoginInput.xml" xy="2347,373" group="n151_tcg1">
+      <relation target="n138_tcg1" sidePair="center-center,top-top"/>
+    </component>
+    <component id="n186_t3kc" name="tfTouristsPassword" src="tcg1s" fileName="com/ComLoginInput.xml" xy="2347,466" group="n151_tcg1">
+      <relation target="n138_tcg1" sidePair="center-center,top-top"/>
+    </component>
+    <text id="n148_tcg1" name="tfErrorInVouristsSignin" xy="2347,548" size="160,39" group="n151_tcg1" visible="false" font="方正准圆简体" fontSize="30" color="#ff676d" align="center" vAlign="middle" leading="0" bold="true" text="账号已注册">
+      <relation target="n138_tcg1" sidePair="left-left,top-top"/>
+    </text>
+    <text id="n149_tcg1" name="tfSigninGroupTitle" xy="2347,290" size="149,45" group="n151_tcg1" fontSize="36" color="#333333" text="游客登录">
+      <relation target="n138_tcg1" sidePair="left-left,top-top"/>
+    </text>
+    <component id="n188_t3kc" name="btnReturnToSelectModeGroup2" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="2823,280" size="64,64" group="n151_tcg1">
+      <relation target="n138_tcg1" sidePair="right-right,top-top"/>
+      <Button icon="ui://te1gxawooiqdcyih2"/>
+    </component>
+    <image id="n192_mede" name="n192" src="ntkm5" fileName="img/img_log_user.png" xy="2375,378" size="50,50" group="n151_tcg1">
+      <relation target="n185_t3kc" sidePair="left-left,middle-middle"/>
+    </image>
+    <image id="n193_mede" name="n193" src="ntkm4" fileName="img/img_log_pas.png" xy="2375,472" size="50,50" group="n151_tcg1">
+      <relation target="n186_t3kc" sidePair=""/>
+    </image>
+    <group id="n151_tcg1" name="touristsExperienceGroup" xy="2317,257" size="600,567" advanced="true" collapsed="true">
+      <gearDisplay controller="c1" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <component id="n189_t3kc" name="btnAccountLogin" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1026,830" size="300,88" group="n160_tcg1">
+      <Button title="账号登陆" titleColor="#fdf8e2" titleFontSize="36" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <component id="n190_t3kc" name="btnVisitorLogin" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="593,830" size="300,88" group="n160_tcg1">
+      <Button title="快速登录" titleColor="#fdf8e2" titleFontSize="36" icon="ui://te1gxawoeggjcyihf"/>
+    </component>
+    <group id="n160_tcg1" name="selectModeGroup" xy="593,830" size="733,88" advanced="true">
+      <gearDisplay controller="c1" pages="1"/>
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </group>
+    <image id="n161_tcg1" name="imgLoading" src="umtscyiih" fileName="img/img_cm_load.png" pkg="te1gxawo" xy="904,484" pivot="0.5,0.5" hideByEditor="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+  </displayList>
+  <transition name="toSignin" options="4">
+    <item time="0" type="Alpha" target="n137_tcg1" value="1"/>
+    <item time="0" type="Alpha" target="n151_tcg1" value="1"/>
+    <item time="0" type="Alpha" target="n160_tcg1" tween="true" startValue="1" endValue="0" duration="12"/>
+    <item time="0" type="XY" target="n123_tcg1" value="2292,-"/>
+    <item time="0" type="XY" target="n137_tcg1" value="2284,-"/>
+    <item time="0" type="XY" target="n151_tcg1" value="2272,-"/>
+    <item time="0" type="XY" target="n160_tcg1" tween="true" startValue="593,-" endValue="-2000,-" duration="12" ease="Linear"/>
+    <item time="6" type="XY" target="n137_tcg1" tween="true" startValue="2327,-" endValue="660,-" duration="14" ease="Back.Out"/>
+    <item time="6" type="XY" target="n151_tcg1" tween="true" startValue="2327,-" endValue="660,-" duration="12" ease="Back.Out"/>
+    <item time="18" type="Alpha" target="n137_tcg1" value="1"/>
+    <item time="18" type="Alpha" target="n151_tcg1" value="1"/>
+  </transition>
+  <transition name="toLogin" options="4">
+    <item time="0" type="Alpha" target="n123_tcg1" value="1"/>
+    <item time="0" type="Alpha" target="n137_tcg1" tween="true" startValue="1" endValue="0" duration="12"/>
+    <item time="0" type="Alpha" target="n151_tcg1" tween="true" startValue="1" endValue="0" duration="12"/>
+    <item time="0" type="XY" target="n123_tcg1" value="2233,-"/>
+    <item time="0" type="XY" target="n137_tcg1" tween="true" startValue="660,-" endValue="-2000,-" duration="12" ease="Linear"/>
+    <item time="0" type="XY" target="n151_tcg1" tween="true" startValue="660,-" endValue="-2000,-" duration="12" ease="Linear"/>
+    <item time="0" type="XY" target="n160_tcg1" value="-2000,-"/>
+    <item time="6" type="XY" target="n123_tcg1" tween="true" startValue="2256,-" endValue="660,-" duration="12" ease="Back.Out"/>
+    <item time="18" type="Alpha" target="n123_tcg1" value="1"/>
+  </transition>
+  <transition name="returnToSignin" options="4">
+    <item time="0" type="Alpha" target="n123_tcg1" tween="true" startValue="1" endValue="0" duration="12" ease="Linear"/>
+    <item time="0" type="Alpha" target="n137_tcg1" value="1"/>
+    <item time="0" type="Alpha" target="n151_tcg1" value="1"/>
+    <item time="0" type="XY" target="n123_tcg1" tween="true" startValue="660,-" endValue="2188,-" duration="12" ease="Linear"/>
+    <item time="0" type="XY" target="n137_tcg1" value="-2000,-"/>
+    <item time="0" type="XY" target="n151_tcg1" value="-2000,-"/>
+    <item time="0" type="XY" target="n160_tcg1" tween="true" startValue="-2000,-"/>
+    <item time="6" type="XY" target="n137_tcg1" tween="true" startValue="-2000,-" endValue="660,-" duration="12" ease="Back.Out"/>
+    <item time="6" type="XY" target="n151_tcg1" tween="true" startValue="-2000,-" endValue="660,-" duration="12" ease="Back.Out"/>
+    <item time="18" type="Alpha" target="n137_tcg1" value="1"/>
+    <item time="18" type="Alpha" target="n151_tcg1" value="1"/>
+  </transition>
+  <transition name="returnToSelect" options="4">
+    <item time="0" type="Alpha" target="n137_tcg1" tween="true" startValue="1" endValue="0" duration="12" ease="Linear"/>
+    <item time="0" type="Alpha" target="n151_tcg1" tween="true" startValue="1" endValue="0" duration="12" ease="Linear"/>
+    <item time="0" type="Alpha" target="n160_tcg1" value="1"/>
+    <item time="0" type="XY" target="n123_tcg1" value="-2000,-"/>
+    <item time="0" type="XY" target="n137_tcg1" tween="true" startValue="660,-" endValue="2332,-" duration="12" ease="Linear"/>
+    <item time="0" type="XY" target="n151_tcg1" tween="true" startValue="660,-" endValue="2332,-" duration="12" ease="Linear"/>
+    <item time="0" type="XY" target="n160_tcg1" value="-2000,-"/>
+    <item time="6" type="XY" target="n160_tcg1" tween="true" startValue="-2000,-" endValue="593,-" duration="12" ease="Back.Out"/>
+    <item time="18" type="Alpha" target="n160_tcg1" value="1"/>
+  </transition>
+  <transition name="wait" autoPlayRepeat="-1">
+    <item time="0" type="Rotation" target="n161_tcg1" tween="true" startValue="0" endValue="360" duration="23" ease="Linear"/>
+  </transition>
+</component>

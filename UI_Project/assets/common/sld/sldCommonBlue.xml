@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="224,21" extention="Slider">
+  <displayList>
+    <image id="n0_o89o" name="n0" src="eggjcyihl" fileName="img/img_cm_szt_4.png" xy="0,5" size="224,12">
+      <relation target="" sidePair="rightext-right"/>
+    </image>
+    <image id="n1_o89o" name="bar" src="eggjcyihm" fileName="img/img_cm_szt_5.png" xy="0,5" size="224,12">
+      <relation target="" sidePair="rightext-right"/>
+    </image>
+    <component id="n3_o89o" name="grip" src="o89ocyidf" fileName="sld/sldCommon_grip.xml" xy="208,-3">
+      <relation target="n1_o89o" sidePair="right-right"/>
+    </component>
+  </displayList>
+  <Slider titleType="valueAndmax"/>
+</component>
