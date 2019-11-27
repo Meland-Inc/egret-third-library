@@ -395,18 +395,18 @@
     <image id="zgght8f" name="img_codeV_k.png" path="/codeVew/img/" scale="9grid" scale9grid="30,12,60,24"/>
     <image id="zgght8g" name="img_codeV_x.png" path="/codeVew/img/"/>
     <image id="zgght8h" name="icon_ide_cm_sc.png" path="/ideCommon/img/"/>
-    <component id="x3zpt8i" name="WinCodeblockSelectEntity.xml" path="/codeVew/win/" exported="true"/>
-    <component id="x3zpt8j" name="WinCodeBlockSelectItem.xml" path="/codeVew/win/" exported="true"/>
-    <image id="x3zpt8k" name="icon_codeV_bf.png" path="/codeVew/img/"/>
-    <component id="x3zpt8l" name="btnCodeBlockTabB.xml" path="/codeVew/btn/"/>
-    <component id="x3zpt8m" name="btnScale.xml" path="/codeVew/btn/"/>
-    <image id="x3zpt8n" name="icon_cre_cjzb.png" path="/create/img/"/>
-    <image id="x3zpt8o" name="icon_cre_cxyx.png" path="/create/img/"/>
-    <image id="x3zpt8p" name="icon_cre_dtgj.png" path="/create/img/"/>
-    <image id="x3zpt8q" name="icon_cre_gy.png" path="/create/img/"/>
-    <image id="x3zpt8r" name="icon_cre_sy.png" path="/create/img/"/>
-    <image id="x3zpt8s" name="icon_cre_tc.png" path="/create/img/"/>
-    <image id="x3zpt8t" name="icon_cre_zrzb.png" path="/create/img/"/>
+    <component id="lj8gt8j" name="btnScale.xml" path="/codeVew/btn/"/>
+    <component id="lj8gt8k" name="WinCodeBlockSelectItem.xml" path="/codeVew/win/" exported="true"/>
+    <component id="lj8gt8l" name="btnCodeBlockTabB.xml" path="/codeVew/btn/"/>
+    <image id="hixvt8m" name="icon_codeV_bf.png" path="/codeVew/img/"/>
+    <image id="amogt8i" name="icon_cre_cjzb.png" path="/create/img/"/>
+    <image id="amogt8j" name="icon_cre_cxyx.png" path="/create/img/"/>
+    <image id="amogt8k" name="icon_cre_dtgj.png" path="/create/img/"/>
+    <image id="amogt8l" name="icon_cre_gy.png" path="/create/img/"/>
+    <image id="amogt8m" name="icon_cre_sy.png" path="/create/img/"/>
+    <image id="amogt8n" name="icon_cre_tc.png" path="/create/img/"/>
+    <image id="amogt8o" name="icon_cre_zrzb.png" path="/create/img/"/>
+    <component id="kaj5t8p" name="WinCodeblockSelectEntity.xml" path="/codeVew/win/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>
