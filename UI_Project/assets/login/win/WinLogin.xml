@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" adaptationTest="FitSize">
   <controller name="c1" pages="0,wait,1,normal" selected="1"/>
-  <controller name="c2" pages="0,,1," selected="0"/>
-  <controller name="ctrlRegister" pages="0,normal,1,mail" selected="1"/>
+  <controller name="c2" pages="0,,1," selected="1"/>
+  <controller name="ctrlRegister" pages="0,normal,1,mail" selected="0"/>
   <displayList>
     <loader id="n103_tcg1" name="imgBG" xy="0,0" size="1920,1080" fill="scaleFree">
       <relation target="" sidePair="width-width,height-height"/>
@@ -24,13 +24,13 @@
       <gearDisplay controller="ctrlRegister" pages="1"/>
       <relation target="n180_t3kc" sidePair="left-left,middle-middle"/>
     </image>
-    <component id="n181_t3kc" name="tfLoginPassword" src="tcg1s" fileName="com/ComLoginInput.xml" xy="2195,463" group="n123_tcg1">
+    <component id="n181_t3kc" name="tfLoginPassword" src="pnmu4g" fileName="com/ComLoginPassword.xml" xy="2195,463" group="n123_tcg1">
       <relation target="n104_tcg1" sidePair="center-center,top-top"/>
     </component>
     <image id="n164_tcg1" name="n164" src="ntkm3" fileName="img/img_log_mm.png" xy="2222,473" size="50,50" group="n123_tcg1">
       <relation target="n181_t3kc" sidePair="middle-middle,left-left"/>
     </image>
-    <component id="n182_t3kc" name="tfRepeat" src="tcg1s" fileName="com/ComLoginInput.xml" xy="2195,554" group="n123_tcg1">
+    <component id="n182_t3kc" name="tfRepeat" src="pnmu4g" fileName="com/ComLoginPassword.xml" xy="2195,554" group="n123_tcg1">
       <relation target="n104_tcg1" sidePair="center-center,top-top"/>
     </component>
     <image id="n165_tcg1" name="n165" src="ntkm4" fileName="img/img_log_pas.png" xy="2221,561" size="50,50" group="n123_tcg1">
@@ -38,12 +38,12 @@
     </image>
     <component id="n119_tcg1" name="btnLogin" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="2195,720" size="540,72" group="n123_tcg1">
       <relation target="n104_tcg1" sidePair="bottom-bottom,center-center"/>
-      <Button title="登录" titleColor="#fdf8e2" titleFontSize="42" icon="ui://te1gxawooiqdcyih1"/>
+      <Button title="登录" titleColor="#ffffff" titleFontSize="42" icon="ui://te1gxawooiqdcyih1"/>
     </component>
     <text id="n120_tcg1" name="tfErrorInLogin" xy="2195,627" size="275,38" group="n123_tcg1" visible="false" font="方正准圆简体" fontSize="30" color="#ff676d" align="center" vAlign="middle" singleLine="true" text="两次密码输入不一致">
       <relation target="n104_tcg1" sidePair="top-top,left-left"/>
     </text>
-    <component id="n121_tcg1" name="btnRetrunToSigninGroup" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="2685,280" size="64,64" group="n123_tcg1">
+    <component id="n121_tcg1" name="btnRetrunToSigninGroup" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="2685,270" size="64,64" group="n123_tcg1">
       <relation target="n104_tcg1" sidePair="right-right,top-top"/>
       <Button icon="ui://te1gxawooiqdcyih2"/>
     </component>
@@ -65,7 +65,7 @@
       <relation target="n104_tcg1" sidePair="top-top,right-right"/>
       <Button title="普通注册" titleColor="#7dcd4a" titleFontSize="30" controller="ctrlRegister" page="0"/>
     </component>
-    <group id="n123_tcg1" name="loginGroup" xy="2165,256" size="600,567" advanced="true">
+    <group id="n123_tcg1" name="loginGroup" xy="2165,256" size="600,567" advanced="true" collapsed="true">
       <gearDisplay controller="c1" pages="1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
@@ -79,7 +79,7 @@
     <text id="n135_tcg1" name="tfSigninGroupTitle" xy="2427,290" size="149,45" group="n137_tcg1" fontSize="36" color="#333333" text="账号登录">
       <relation target="n124_tcg1" sidePair="left-left,top-top"/>
     </text>
-    <component id="n178_tcg1" name="tfPassword" src="tcg1s" fileName="com/ComLoginInput.xml" xy="2427,465" group="n137_tcg1">
+    <component id="n178_tcg1" name="tfPassword" src="pnmu4g" fileName="com/ComLoginPassword.xml" xy="2427,465" group="n137_tcg1">
       <relation target="n124_tcg1" sidePair="center-center,top-top"/>
     </component>
     <image id="n170_tcg1" name="n170" src="ntkm5" fileName="img/img_log_user.png" xy="2453,380" size="50,50" group="n137_tcg1">
@@ -96,7 +96,7 @@
       <relation target="n124_tcg1" sidePair="bottom-bottom,center-center"/>
       <Button title="登录" titleColor="#fdf8e2" titleFontSize="42" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <component id="n176_tcg1" name="btnReturnToSelectModeGroup" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="2903,280" size="64,64" group="n137_tcg1">
+    <component id="n176_tcg1" name="btnReturnToSelectModeGroup" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="2903,270" size="64,64" group="n137_tcg1">
       <relation target="n124_tcg1" sidePair="right-right,top-top"/>
       <Button icon="ui://te1gxawooiqdcyih2"/>
     </component>
@@ -116,7 +116,7 @@
     <component id="n185_t3kc" name="tfTouristsAccount" src="tcg1s" fileName="com/ComLoginInput.xml" xy="2347,373" group="n151_tcg1">
       <relation target="n138_tcg1" sidePair="center-center,top-top"/>
     </component>
-    <component id="n186_t3kc" name="tfTouristsPassword" src="tcg1s" fileName="com/ComLoginInput.xml" xy="2347,466" group="n151_tcg1">
+    <component id="n186_t3kc" name="tfTouristsPassword" src="pnmu4g" fileName="com/ComLoginPassword.xml" xy="2347,466" group="n151_tcg1">
       <relation target="n138_tcg1" sidePair="center-center,top-top"/>
     </component>
     <text id="n148_tcg1" name="tfErrorInVouristsSignin" xy="2347,548" size="160,39" group="n151_tcg1" visible="false" font="方正准圆简体" fontSize="30" color="#ff676d" align="center" vAlign="middle" leading="0" bold="true" text="账号已注册">
@@ -125,7 +125,7 @@
     <text id="n149_tcg1" name="tfSigninGroupTitle" xy="2347,290" size="149,45" group="n151_tcg1" fontSize="36" color="#333333" text="游客登录">
       <relation target="n138_tcg1" sidePair="left-left,top-top"/>
     </text>
-    <component id="n188_t3kc" name="btnReturnToSelectModeGroup2" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="2823,280" size="64,64" group="n151_tcg1">
+    <component id="n188_t3kc" name="btnReturnToSelectModeGroup2" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="2823,270" size="64,64" group="n151_tcg1">
       <relation target="n138_tcg1" sidePair="right-right,top-top"/>
       <Button icon="ui://te1gxawooiqdcyih2"/>
     </component>
@@ -135,7 +135,7 @@
     <image id="n193_mede" name="n193" src="ntkm4" fileName="img/img_log_pas.png" xy="2375,472" size="50,50" group="n151_tcg1">
       <relation target="n186_t3kc" sidePair=""/>
     </image>
-    <group id="n151_tcg1" name="touristsExperienceGroup" xy="2317,257" size="600,567" advanced="true" collapsed="true">
+    <group id="n151_tcg1" name="touristsExperienceGroup" xy="2317,257" size="600,567" advanced="true">
       <gearDisplay controller="c1" pages="1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" adaptationTest="FitSize">
-  <controller name="status" pages="0,,1,full ,2,close" selected="1"/>
+  <controller name="status" pages="0,,1,full ,2,close" selected="0"/>
   <displayList>
     <loader id="n34_dll3" name="imgBG" xy="0,0" size="1920,1080" fill="scaleFree">
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <text id="n37_dll3" name="tfName" xy="1519,82" size="128,61" font="FZZhunYuan-M02S" fontSize="30" color="#523416" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" text="">
+    <text id="n37_dll3" name="tfName" xy="1551,82" size="128,52" font="FZZhunYuan-M02S" fontSize="30" color="#523416" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" text="">
       <relation target="" sidePair="left-left,top-top"/>
     </text>
     <component id="n38_dll3" name="btnAgreement" src="dll318" fileName="btn/btnSelect.xml" xy="572,893" group="n41_dll3">
@@ -32,7 +32,7 @@
       <gearDisplay controller="status" pages="0"/>
       <relation target="n45_dll3" sidePair="middle-middle,left-left"/>
     </image>
-    <text id="n48_dll3" name="n48" xy="736,722" size="64,38" group="n52_dll3" fontSize="30" color="#ff5400" vAlign="middle" text="爆满">
+    <text id="n48_dll3" name="n48" xy="736,722" size="65,38" group="n52_dll3" fontSize="30" color="#20b311" vAlign="middle" text="畅通">
       <gearColor controller="status" pages="0,1,2" values="#20b311,#000000|#ff5400,#000000|#666666,#000000"/>
       <gearText controller="status" pages="0,1,2" values="畅通|爆满|维护"/>
       <relation target="n45_dll3" sidePair="left-left,middle-middle"/>
@@ -50,11 +50,13 @@
     <image id="n53_dll3" name="imgLoading" src="umtscyiih" fileName="img/img_cm_load.png" pkg="te1gxawo" xy="913,380" pivot="0.5,0.5">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <component id="n57_pz6x" name="btnLogout" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1660,80" size="180,64">
-      <relation target="" sidePair="left-left,top-top"/>
-      <Button title="注销" titleColor="#ffffff" titleFontSize="30" icon="ui://te1gxawoeggjcyihf"/>
+    <component id="n57_pz6x" name="btnLogout" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1692,80" size="120,48">
+      <relation target="" sidePair="right-right,top-top"/>
+      <Button title="注销" titleColor="#ffffff" titleFontSize="28" icon="ui://te1gxawoeggjcyihf"/>
     </component>
-    <component id="n58_giuq" name="comQueue" src="dll31h" fileName="com/ComQueue.xml" xy="701,283"/>
+    <component id="n58_giuq" name="comQueue" src="dll31h" fileName="com/ComQueue.xml" xy="701,283">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
   </displayList>
   <transition name="t1" autoPlay="true" autoPlayRepeat="-1"/>
 </component>
