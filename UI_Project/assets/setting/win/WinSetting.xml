@@ -56,11 +56,11 @@
       <Button icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
     </component>
     <group id="n142_r6hf" name="grpFPS" xy="1138,503" size="352,42" group="n30_o8k6"/>
-    <text id="n144_q29o" name="tfWindWalk" xy="1138,592" size="65,24" group="n146_q29o" fontSize="20" color="#333333" vAlign="middle" text="疾风步"/>
-    <component id="n162_j70w" name="btnEnableWindWalk" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1300,584" size="78,42" group="n146_q29o">
+    <text id="n144_q29o" name="tfWindWalk" xy="1138,592" size="65,24" group="n146_q29o" hideByEditor="true" visible="false" fontSize="20" color="#333333" vAlign="middle" text="疾风步"/>
+    <component id="n162_j70w" name="btnEnableWindWalk" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1300,584" size="78,42" group="n146_q29o" hideByEditor="true" visible="false">
       <Button icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
     </component>
-    <group id="n146_q29o" name="grpWindWalk" xy="1138,584" size="240,42" group="n30_o8k6"/>
+    <group id="n146_q29o" name="grpWindWalk" xy="1138,584" size="240,42" group="n30_o8k6" hideByEditor="true"/>
     <text id="n164_j70w" name="tfOperation" xy="488,592" size="85,24" group="n30_o8k6" fontSize="20" color="#333333" vAlign="middle" text="操作方式"/>
     <component id="n113_o89o" name="comSelectOperation" src="l61l2" fileName="com/comSelectOperation.xml" xy="654,588" group="n30_o8k6"/>
     <component id="n42_o8k6" name="btnVconsole" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1119,749" size="120,44" group="n30_o8k6" hideByEditor="true" visible="false">
