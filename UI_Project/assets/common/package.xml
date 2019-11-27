@@ -590,7 +590,7 @@
     <image id="c1h7cyii6" name="icon_xl_3.png" path="/img/" exported="true"/>
     <image id="c1h7cyii7" name="icon_xl_4.png" path="/img/" exported="true"/>
     <image id="c1h7cyii8" name="img_cm_blank.png" path="/img/" exported="true"/>
-    <image id="c1h7cyii9" name="img_cm_gdt.png" path="/img/" exported="true"/>
+    <image id="c1h7cyii9" name="img_cm_gdt.png" path="/img/" exported="true" scale="9grid" scale9grid="2,10,4,20"/>
     <image id="c1h7cyiia" name="img_cm_top_3.png" path="/img/" exported="true" scale="9grid" scale9grid="20,14,40,28"/>
     <image id="c1h7cyiib" name="img_cm_zz.png" path="/img/" exported="true"/>
     <component id="kt9nt99" name="SaveTemplateAlert.xml" path="/com/" exported="true"/>
@@ -621,10 +621,10 @@
     <component id="dt2pcyij7" name="sldVerticalWhite.xml" path="/slider/" exported="true"/>
     <image id="dt2pcyij9" name="btn_cm_return.png" path="/img/" exported="true"/>
     <component id="qylxcyija" name="sldVerticalGray.xml" path="/slider/" exported="true"/>
-    <image id="qylxcyijb" name="img_cm_gdt_2.png" path="/img/" exported="true"/>
+    <image id="qylxcyijb" name="img_cm_gdt_2.png" path="/img/" exported="true" scale="9grid" scale9grid="15,2,30,4"/>
     <component id="qylxcyijc" name="sldHorizontalGray.xml" path="/slider/" exported="true"/>
     <component id="qylxcyijd" name="sldHorizontalWhite.xml" path="/slider/" exported="true"/>
-    <image id="qylxcyije" name="img_cm_gdt_3.png" path="/img/" exported="true"/>
+    <image id="qylxcyije" name="img_cm_gdt_3.png" path="/img/" exported="true" scale="9grid" scale9grid="10,2,20,4"/>
     <image id="qylxcyijf" name="btn_cm_blue_1.png" path="/img/" exported="true" scale="9grid" scale9grid="30,11,60,22"/>
     <component id="9c90cyij5" name="btnText.xml" path="/btn/" exported="true"/>
     <component id="9c90cyij6" name="Pbr1.xml" path="/pbr/" exported="true"/>

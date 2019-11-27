@@ -3,7 +3,7 @@
   <displayList>
     <image id="n11_dv1i" name="imgBg" src="j595cyiic" fileName="img/img_cm_tkc_1.png" xy="772,416" size="376,248" group="n10_neku"/>
     <image id="n0_neku" name="imgBgTop" src="c1h7cyiia" fileName="img/img_cm_top_3.png" xy="772,416" size="376,56" group="n10_neku"/>
-    <text id="n6_neku" name="tfName" xy="791,521" size="85,24" group="n10_neku" fontSize="20" color="#333333" vAlign="middle" text="物件名字"/>
+    <text id="n6_neku" name="tfName" xy="791,521" size="87,24" group="n10_neku" fontSize="20" color="#333333" align="center" vAlign="middle" text="物件名字"/>
     <component id="n3_neku" name="btnCancel" src="gpm0i4g" fileName="btn/btnFix.xml" xy="823,588" size="120,44" group="n10_neku">
       <Button title="取消" icon="ui://te1gxawoeggjcyihf"/>
     </component>
@@ -16,7 +16,7 @@
     <component id="n16_dv1i" name="comInput" src="dv1icyiim" fileName="com/ComInput.xml" xy="896,513" size="232,40" group="n10_neku">
       <Label title="请输出入名字"/>
     </component>
-    <text id="n17_dv1i" name="tfTitle" xy="792,430" size="77,28" group="n10_neku" fontSize="24" color="#333333" vAlign="middle" text="保存为"/>
+    <text id="n17_dv1i" name="tfTitle" xy="792,430" size="79,28" group="n10_neku" fontSize="24" color="#333333" align="center" vAlign="middle" text="保存为"/>
     <group id="n10_neku" name="root" xy="772,416" size="376,248" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>

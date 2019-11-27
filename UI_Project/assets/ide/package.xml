@@ -203,7 +203,7 @@
     <component id="lctb6e" name="ComCodeblockSelectLocation.xml" path="/codeVew/oldCom/" exported="true"/>
     <image id="lctb6f" name="icon_code_tck_8.png" path="/codeVew/oldImg/" scale="9grid" scale9grid="30,5,60,10"/>
     <image id="lctb6g" name="img_code_zb_1.png" path="/codeVew/oldImg/"/>
-    <component id="i6xe6h" name="btnIDEKeyWord.xml" path="/codeVew/oldBtn/"/>
+    <component id="i6xe6h" name="btnIDEKeyWord.xml" path="/codeVew/oldBtn/" exported="true"/>
     <component id="i6xe6i" name="btnTips.xml" path="/codeVew/oldBtn/" exported="true"/>
     <component id="i6xe6j" name="btnTipsWithImage.xml" path="/codeVew/oldBtn/" exported="true"/>
     <image id="i6xe6l" name="icon_code_queding_02.png" path="/codeVew/oldImg/"/>
@@ -406,7 +406,7 @@
     <image id="amogt8m" name="icon_cre_sy.png" path="/create/img/"/>
     <image id="amogt8n" name="icon_cre_tc.png" path="/create/img/"/>
     <image id="amogt8o" name="icon_cre_zrzb.png" path="/create/img/"/>
-    <component id="kaj5t8p" name="WinCodeblockSelectEntity.xml" path="/codeVew/win/"/>
+    <component id="kaj5t8p" name="WinCodeblockSelectEntity.xml" path="/codeVew/win/" exported="true"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>

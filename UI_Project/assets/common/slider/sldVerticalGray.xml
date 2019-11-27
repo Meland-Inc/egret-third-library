@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="10,50" extention="ScrollBar">
+<component size="10,146" extention="ScrollBar">
   <displayList>
-    <graph id="n1_dt2p" name="bar" xy="-6,5" size="4,40" lineSize="0" fillColor="#ff3399ff">
+    <graph id="n1_dt2p" name="bar" xy="-6,5" size="4,136" lineSize="0" fillColor="#ff3399ff">
       <relation target="" sidePair="height-height"/>
     </graph>
     <component id="n2_dt2p" name="grip" src="dt2pcyij6" fileName="slider/sldVertical_grip.xml" xy="-8,5" size="8,60">
       <Button icon="ui://te1gxawok3wpcyij0"/>
     </component>
   </displayList>
-  <ScrollBar fixedGripSize="true"/>
+  <ScrollBar/>
 </component>

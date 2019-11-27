@@ -4,8 +4,8 @@
     <image id="n27_ornt" name="imgBg" src="j595cyiic" fileName="img/img_cm_tkc_1.png" xy="772,416" size="376,248" group="n26_jn1p"/>
     <image id="n28_ornt" name="imgBgTop" src="c1h7cyiia" fileName="img/img_cm_top_3.png" xy="772,416" size="376,56" group="n26_jn1p"/>
     <graph id="n19_jn1p" name="dragArea" xy="772,416" size="376,56" group="n26_jn1p" alpha="0" type="rect"/>
-    <text id="n21_jn1p" name="tfTitle" xy="790,428" size="92,32" group="n26_jn1p" fontSize="24" color="#333333" vAlign="middle" ubb="true" autoSize="shrink" text="确认"/>
-    <text id="n22_jn1p" name="tfContent" xy="806,472" size="317,108" group="n26_jn1p" fontSize="24" color="#333333" align="center" vAlign="middle" ubb="true" autoSize="none" singleLine="true" text="确认提交答案吗？"/>
+    <text id="n21_jn1p" name="tfTitle" xy="793,430" size="55,28" group="n26_jn1p" fontSize="24" color="#333333" align="center" vAlign="middle" ubb="true" text="确认"/>
+    <text id="n22_jn1p" name="tfContent" xy="801,474" size="317,108" group="n26_jn1p" fontSize="24" color="#333333" align="center" vAlign="middle" ubb="true" autoSize="none" singleLine="true" text="确认提交答案吗？"/>
     <component id="n23_jn1p" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" xy="978,590" size="120,44" group="n26_jn1p">
       <Button title="确定" icon="ui://te1gxawooiqdcyih1"/>
     </component>

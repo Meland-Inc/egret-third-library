@@ -6,7 +6,7 @@
     <image id="n7_z1hj" name="lagBG" src="s45w1l" fileName="img/img_code_hs_2.png" xy="-45,-12" size="135,69">
       <relation target="" sidePair="height-height,width-width"/>
     </image>
-    <component id="n1_flp7" name="container" src="i6xe2d" fileName="com/Container.xml" xy="40,0" size="40,42" restrictSize="20,0,42,42"/>
+    <component id="n1_flp7" name="container" src="i6xe2d" fileName="com/Container.xml" xy="40,4" size="40,42" restrictSize="20,0,42,42"/>
   </displayList>
   <relation target="n1_flp7" sidePair="height-height,width-width"/>
 </component>
