@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="582,163" designImage="ui://oyity675gen858" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlType" pages="3,unknow,1,showText,2,question,0,selection" selected="2"/>
+  <controller name="ctrlType" pages="3,unknow,1,showText,2,question,0,selection" selected="1"/>
   <displayList>
-    <loader id="n0_j5jv" name="bg" xy="0,0" size="582,176" group="n11_qlcu" url="ui://oyity675gen853" fill="scaleFree">
+    <loader id="n0_j5jv" name="bg" xy="0,0" size="582,165" group="n11_qlcu" url="ui://oyity675gen853" fill="scaleFree">
       <gearSize controller="ctrlType" pages="1,2,0" values="582,165,1,1|582,176,1,1|520,272,1,1" default="649,165,1,1"/>
       <relation target="n11_qlcu" sidePair="left-left,top-top"/>
     </loader>
-    <component id="n18_fzlu" name="labContent" src="gen854" fileName="old/lab/labVScroll.xml" xy="22,20" size="540,119" group="n11_qlcu">
-      <gearSize controller="ctrlType" pages="3,1,2,0" values="540,119,1,1|540,119,1,1|540,119,1,1|540,119,1,1"/>
-      <relation target="n0_j5jv" sidePair="width-width,top-top"/>
-      <Label title="身体白又胖现场v现场v现场v现场v现场v现场v下现场v现场v现场v现场v现场v现场v从" titleColor="#333333" titleFontSize="24"/>
+    <component id="n18_fzlu" name="labContent" src="gen854" fileName="old/lab/labVScroll.xml" xy="22,20" size="540,122" group="n11_qlcu">
+      <gearSize controller="ctrlType" pages="2,0" values="540,74,1,1|475,75,1,1" default="540,122,1,1"/>
+      <Label title="身体白又胖现场v现场v现场v现场v现场v现场v下现场v现场v现场v现场v现场v现场v从身体白又胖现场v现场v现场v现场v现场v现场v下现场v现场v现场v现场v现场v现场v从身体白又胖现场v现场v现场v现场v现场v现场v下现场v现场v现场v现场v现场v现场v从身体白又胖现场v现场v现场v现场v现场v现场v下现场v现场v现场v现场v现场v现场v从身体白又胖现场v现场v现场v现场v现场v现场v下现场v现场v现场v现场v现场v现场v从" titleColor="#333333" titleFontSize="24"/>
     </component>
     <component id="n10_qlcu" name="btnSubmit" src="gen82t" fileName="old/btn/btnFixClickArea.xml" xy="461,102" size="111,55" group="n9_j5jv">
       <Button title="提 交" titleColor="#ffffff" titleFontSize="24" icon="ui://te1gxawoqylxcyijf"/>
@@ -25,7 +24,7 @@
     <image id="n28_pzqf" name="imgDown" src="gen856" fileName="old/img_UI3/img_Dialog_dk_3.png" xy="282,147" size="16,11" group="n11_qlcu">
       <gearDisplay controller="ctrlType" pages="1"/>
     </image>
-    <image id="n29_pzqf" name="imgArrow1" src="gen857" fileName="old/img_UI3/img_Dialog_dk_2.png" xy="280,174" group="n46_pzqf" visible="false">
+    <image id="n29_pzqf" name="imgArrow1" src="gen857" fileName="old/img_UI3/img_Dialog_dk_2.png" xy="277,162" group="n46_pzqf" visible="false">
       <gearXY controller="ctrlType" pages="1,2" values="277,162|280,174" default="237,270"/>
     </image>
     <image id="n38_pzqf" name="imgArrow3" src="gen857" fileName="old/img_UI3/img_Dialog_dk_2.png" xy="580,91" group="n46_pzqf" visible="false" rotation="270">
@@ -53,7 +52,7 @@
     <group id="n11_qlcu" name="root" xy="0,0" size="605,186" advanced="true">
       <relation target="" sidePair="left-left,top-top"/>
     </group>
-    <list id="n2_j5jv" name="lstSelection" xy="56,-5" size="465,163" layout="flow_hz" overflow="scroll" lineGap="20" colGap="24" defaultItem="ui://oyity675gen84x" align="right" vAlign="bottom">
+    <list id="n2_j5jv" name="lstSelection" xy="56,-16" size="465,163" layout="flow_hz" overflow="scroll" lineGap="20" colGap="24" defaultItem="ui://oyity675gen84x" align="right" vAlign="bottom">
       <gearDisplay controller="ctrlType" pages="0"/>
       <relation target="n0_j5jv" sidePair="center-center,bottom-bottom"/>
       <item/>
