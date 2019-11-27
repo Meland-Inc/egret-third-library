@@ -206,7 +206,6 @@
     <component id="i6xe6h" name="btnIDEKeyWord.xml" path="/codeVew/oldBtn/"/>
     <component id="i6xe6i" name="btnTips.xml" path="/codeVew/oldBtn/" exported="true"/>
     <component id="i6xe6j" name="btnTipsWithImage.xml" path="/codeVew/oldBtn/" exported="true"/>
-    <component id="i6xe6k" name="WinCodeblockSelectEntity.xml" path="/codeVew/win/" exported="true"/>
     <image id="i6xe6l" name="icon_code_queding_02.png" path="/codeVew/oldImg/"/>
     <image id="i6xe6m" name="icon_code_fanhui_03.png" path="/codeVew/oldImg/"/>
     <image id="i6xe6n" name="img_code_tishik_01.png" path="/codeVew/oldImg/"/>
@@ -407,6 +406,7 @@
     <image id="amogt8m" name="icon_cre_sy.png" path="/create/img/"/>
     <image id="amogt8n" name="icon_cre_tc.png" path="/create/img/"/>
     <image id="amogt8o" name="icon_cre_zrzb.png" path="/create/img/"/>
+    <component id="kaj5t8p" name="WinCodeblockSelectEntity.xml" path="/codeVew/win/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>
