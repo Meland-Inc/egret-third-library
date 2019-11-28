@@ -309,7 +309,7 @@ export function uploadCdnPolicyFile() {
             }
         }
 
-        await checkUploaderFiles(policyPath, policyFilePathArr, uploadCount, resolve, reject);
+        await checkUploaderFiles(policyPath, policyFilePathArr, ModelMgr.versionModel.curEnviron.cdnRoot, uploadCount, resolve, reject);
     });
 }
 
