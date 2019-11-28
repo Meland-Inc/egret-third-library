@@ -6,11 +6,15 @@
   <displayList>
     <image id="n65_ra2b" name="imgBasicSettingBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="0,0" size="1304,440" group="n111_ra2b"/>
     <image id="n63_ra2b" name="imgBasicSettingHeaderBg" src="c1h7cyiia" fileName="img/img_cm_top_3.png" pkg="te1gxawo" xy="0,0" size="1304,40" group="n111_ra2b"/>
+    <loader id="n126_vlrg" name="imgArrow1" xy="1272,16" size="16,10" group="n111_ra2b" visible="false" url="ui://te1gxawoc1h7cyii4">
+      <relation target="" sidePair="right-right"/>
+    </loader>
     <text id="n64_ra2b" name="tfBasicSetting" xy="19,8" size="85,24" group="n111_ra2b" fontSize="20" color="#333333" vAlign="middle" text="基础设置"/>
     <text id="n89_ra2b" name="tfMapNameTitle" xy="120,77" size="85,24" group="n88_ra2b" fontSize="20" color="#333333" text="地图名字"/>
-    <image id="n85_ra2b" name="imgInputBg" src="eggjcyihs" fileName="img/img_cm_srk_1.png" pkg="te1gxawo" xy="120,109" size="380,40" group="n88_ra2b"/>
-    <text id="n87_ra2b" name="inpMapName" xy="124,116" size="369,29" group="n88_ra2b" input="true" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="七桥问题地图"/>
-    <group id="n88_ra2b" name="grpInput" xy="117,78" size="383,71" group="n111_ra2b"/>
+    <component id="n128_qncg" name="comNameInput" src="dv1icyiim" fileName="com/ComInput.xml" pkg="te1gxawo" xy="120,109" size="380,40" group="n88_ra2b">
+      <Label icon="ui://te1gxawoeggjcyihs"/>
+    </component>
+    <group id="n88_ra2b" name="grpInput" xy="120,77" size="380,72" group="n111_ra2b"/>
     <text id="n91_ra2b" name="tfMapSizeTitle" xy="800,77" size="85,24" group="n111_ra2b" fontSize="20" color="#333333" text="地图大小"/>
     <component id="n90_ra2b" name="cbMapSize" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="804,111" size="378,40" group="n111_ra2b">
       <ComboBox title="大" titleColor="#333333" visibleItemCount="10" selectionController="ctrlMapSizeStatus">

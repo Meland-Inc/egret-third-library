@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1136,640" designImage="ui://0axy98cgiv932g" designImageAlpha="0">
+<component size="1920,1080" designImage="ui://thvmj7voqncg4cyij1" designImageAlpha="0" designImageLayer="1">
   <displayList>
-    <image id="n0_er8n" name="imgBg" src="iv932c" fileName="old/img/img_stencil_fm_2.png" xy="336,149" size="604,399" group="n11_ra2b"/>
-    <text id="n1_er8n" name="tfTitle" xy="599,156" size="81,22" group="n11_ra2b" fontSize="18" color="#ffffff" align="center" vAlign="middle" bold="true" text="封面设置"/>
-    <text id="n2_er8n" name="tf" xy="346,203" size="61,18" group="n11_ra2b" fontSize="14" color="#365989" align="center" vAlign="middle" text="地图封面"/>
-    <list id="n3_er8n" name="lstIcons" xy="504,201" size="431,296" group="n11_ra2b" locked="true" layout="flow_hz" overflow="scroll" scrollBarFlags="4" margin="2,0,0,0" scrollBarRes="ui://0axy98cgiv9318," lineGap="8" colGap="8" defaultItem="ui://0axy98cgiv939">
+    <component id="n14_qncg" name="imgBg" src="qncgcyiji" fileName="com/comBg.xml" pkg="te1gxawo" xy="506,156" size="976,698" group="n11_ra2b"/>
+    <text id="n1_er8n" name="tfTitle" xy="534,169" size="103,28" group="n11_ra2b" fontSize="24" color="#333333" align="center" vAlign="middle" bold="true" text="封面设置"/>
+    <list id="n3_er8n" name="lstIcons" xy="774,228" size="680,520" group="n11_ra2b" layout="flow_hz" overflow="scroll" scrollBarFlags="4" margin="2,0,0,0" scrollBarRes="ui://0axy98cgiv9318," lineGap="8" colGap="8" defaultItem="ui://0axy98cgiv939">
       <item/>
       <item/>
       <item/>
@@ -15,20 +14,22 @@
       <item/>
       <item/>
     </list>
-    <image id="n4_er8n" name="img" src="iv932d" fileName="old/img/img_stencil_fm_4.png" xy="490,185" size="7,316" group="n11_ra2b"/>
-    <image id="n5_er8n" name="img" src="iv932e" fileName="old/img/img_stencil_fm_3.png" xy="335,498" size="606,7" group="n11_ra2b"/>
-    <image id="n10_er8n" name="mapBg" src="iv93d" fileName="old/img/img_stencil_dt_6.png" xy="350,262" size="126,94" group="n11_ra2b"/>
-    <component id="n6_er8n" name="ladSelectIcon" src="pz1n3t" fileName="com/ComAutoClipLad.xml" xy="349,261" size="128,96" group="n11_ra2b" touchable="false"/>
-    <component id="n8_er8n" name="btn" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="367,456" size="84,30" group="n11_ra2b">
-      <Button icon="ui://0axy98cgiv932f"/>
+    <image id="n5_er8n" name="img" src="9c90cyij4" fileName="img/img_cm_hline.png" pkg="te1gxawo" xy="506,772" size="976,3" group="n11_ra2b"/>
+    <image id="n17_qncg" name="img" src="9c90cyij4" fileName="img/img_cm_hline.png" pkg="te1gxawo" xy="749,212" size="560,3" group="n11_ra2b" rotation="90"/>
+    <component id="n6_er8n" name="ladSelectIcon" src="pz1n3t" fileName="com/ComAutoClipLad.xml" xy="550,399" size="156,117" group="n11_ra2b" touchable="false"/>
+    <component id="n8_er8n" name="btn" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="548,708" size="160,40" group="n11_ra2b">
+      <Button title="本地上传" titleColor="#333333" titleFontSize="20" icon="ui://te1gxawogup1cyihx"/>
     </component>
-    <component id="n7_er8n" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="593,505" size="106,36" group="n11_ra2b">
-      <Button title="确定" titleColor="#ffffff" icon="ui://0axy98cgiv93m"/>
+    <component id="n7_er8n" name="btnConfirm" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1329,795" size="120,40" group="n11_ra2b">
+      <Button title="确定" titleColor="#ffffff" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <component id="n9_er8n" name="btnCancel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="720,505" size="106,37" group="n11_ra2b">
-      <Button title="取消" icon="ui://0axy98cgiv93n" page="0"/>
+    <component id="n9_er8n" name="btnCancel" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1170,795" size="120,40" group="n11_ra2b">
+      <Button title="取消" icon="ui://te1gxawoeggjcyihf" page="0"/>
     </component>
-    <group id="n11_ra2b" name="root" xy="335,149" size="606,399" advanced="true">
+    <component id="n15_qncg" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1424,160" size="48,48" group="n11_ra2b">
+      <Button icon="ui://0axy98cg8qqi3l"/>
+    </component>
+    <group id="n11_ra2b" name="root" xy="506,156" size="976,698" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>

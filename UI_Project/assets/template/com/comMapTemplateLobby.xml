@@ -3,7 +3,7 @@
   <displayList>
     <image id="n34_ra2b" name="imgTopBg" src="nvqacyihy" fileName="img/img_cm_top_2.png" pkg="te1gxawo" xy="0,0" size="400,40" group="n32_x8d1"/>
     <text id="n26_ssks" name="tfCreater" xy="203,61" size="194,29" group="n32_x8d1" fontSize="18" color="#333333" vAlign="middle" vars="true" autoSize="none" text="地图作者: {name=author}"/>
-    <text id="n28_ssks" name="tfMapName" xy="104,6" size="191,29" group="n32_x8d1" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" text="千与千寻七个字">
+    <text id="n28_ssks" name="tfMapName" xy="23,6" size="352,29" group="n32_x8d1" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" text="千与千寻七个字">
       <relation target="n34_ra2b" sidePair="middle-middle"/>
     </text>
     <list id="n30_ssks" name="lstRoom" xy="5,242" size="390,629" group="n32_x8d1" selectionMode="none" overflow="scroll" scrollBarFlags="6" scrollBar="visible" margin="8,0,0,0" lineGap="6" defaultItem="ui://0axy98cgra2b41">
@@ -33,6 +33,9 @@
     <image id="n35_vlrg" name="n35" src="c1h7cyii2" fileName="img/icon_cm_avatar.png" pkg="te1gxawo" xy="177,65" group="n32_x8d1"/>
     <image id="n38_vlrg" name="n38" src="vlrgcyijh" fileName="img/img_cm_line_1.png" pkg="te1gxawo" xy="11,236" size="378,3" group="n32_x8d1"/>
     <image id="n39_vlrg" name="n39" src="vlrgcyijh" fileName="img/img_cm_line_1.png" pkg="te1gxawo" xy="265,192" size="34,3" group="n32_x8d1" rotation="90"/>
+    <image id="n41_qncg" name="imgEmpty" src="c1h7cyii8" fileName="img/img_cm_blank.png" pkg="te1gxawo" xy="110,429" group="n43_qncg"/>
+    <text id="n42_qncg" name="tfNoInfo" xy="158,605" size="85,24" group="n43_qncg" fontSize="20" color="#999999" text="暂无房间"/>
+    <group id="n43_qncg" name="grpEmpty" xy="110,429" size="180,200" group="n32_x8d1" hideByEditor="true" advanced="true"/>
     <group id="n32_x8d1" name="root" xy="0,0" size="400,871" advanced="true"/>
   </displayList>
 </component>

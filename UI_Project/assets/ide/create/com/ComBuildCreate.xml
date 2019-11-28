@@ -87,8 +87,8 @@
       <item/>
     </list>
     <image id="n5_7slt" name="n5" src="80ab9b" fileName="ideCommon/img/img_ide_cm_ssk.png" xy="9,65" size="412,40" group="n16_jm8l"/>
-    <text id="n7_7slt" name="tfSearch" xy="19,73" size="392,24" group="n16_jm8l" input="true" prompt="请输入搜索内容&#xD;" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" text=""/>
-    <text id="n21_inuq" name="n21" xy="19,16" size="67,24" group="n16_jm8l" fontSize="20" color="#333333" align="center" vAlign="middle" text="素材库"/>
+    <text id="n7_7slt" name="tfSearch" xy="19,73" size="392,24" group="n16_jm8l" input="true" prompt="[color=#999999][size=18]请输入搜索内容[/size][/color]&#xD;" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" text=""/>
+    <text id="n21_inuq" name="n21" xy="19,16" size="65,24" group="n16_jm8l" fontSize="20" color="#333333" align="center" vAlign="middle" text="素材库"/>
     <component id="n3_7slt" name="btnFold" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="377,2" size="48,48" group="n16_jm8l">
       <Button icon="ui://ti9jag5t80ab8y" controller="ctrlState" page="0"/>
     </component>
