@@ -105,6 +105,7 @@ export function uploadCdnVersionFile() {
             return;
         }
 
+        let releaseEnviron = ModelMgr.versionModel.environList.find(value => value.name === ModelMgr.versionModel.eEnviron.release);
         let readyEnviron = ModelMgr.versionModel.environList.find(value => value.name === ModelMgr.versionModel.eEnviron.ready);
         let readyPath = `${Global.svnPublishPath}${readyEnviron.localPath}`;
         let curGameVersion = releaseGameVersion;
@@ -116,7 +117,7 @@ export function uploadCdnVersionFile() {
                 continue;
             }
 
-            await uploadCdnSingleVersionFile(patchPath, readyEnviron.cdnRoot);
+            await uploadCdnSingleVersionFile(patchPath, releaseEnviron.cdnRoot);
             curGameVersion = i;
         }
 
