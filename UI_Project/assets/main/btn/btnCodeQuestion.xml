@@ -2,8 +2,9 @@
 <component size="220,68" pivot="0.5,0.5" extention="Button" designImageLayer="1">
   <controller name="button" pages="0,up,1,down" selected="0"/>
   <displayList>
-    <loader id="n0_j5jv" name="icon" xy="4,2" pivot="0.5,0.5" size="212,66" url="ui://te1gxawogup1cyihx" fill="scaleFree">
-      <gearIcon controller="button" pages="0,1" values="ui://te1gxawogup1cyihx|ui://oyity675gen84z"/>
+    <image id="n2_rvlj" name="bg" src="gup1cyihx" fileName="img/btn_cm_gray.png" pkg="te1gxawo" xy="4,2" size="212,66"/>
+    <loader id="n0_j5jv" name="icon" xy="4,2" pivot="0.5,0.5" size="212,66" fill="scaleFree">
+      <gearIcon controller="button" pages="0,1" values="|ui://te1gxawooiqdcyih0"/>
     </loader>
     <text id="n1_j5jv" name="title" xy="14,21" pivot="0.5,0.5" size="191,31" fontSize="24" align="center" vAlign="middle" autoSize="none" singleLine="true" text="selection"/>
   </displayList>

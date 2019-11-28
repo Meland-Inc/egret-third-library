@@ -20,7 +20,7 @@
       <Button title="删除地图" titleFontSize="18" icon="ui://te1gxawoeggjcyihf"/>
     </component>
     <group id="n42_ra2b" name="grpDesc" xy="10,62" size="380,118" collapsed="true"/>
-    <text id="n3_er8n" name="tfMapSize" xy="7,220" size="76,22" fontSize="18" color="#333333" vAlign="bottom" text="地图大小"/>
+    <text id="n3_er8n" name="tfMapSize" xy="7,220" size="77,22" fontSize="18" color="#333333" vAlign="bottom" text="地图大小"/>
     <component id="n28_pz1n" name="cbMapSize" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="218,209" size="172,40">
       <ComboBox title="大" visibleItemCount="10" selectionController="ctrlMapSizeStatus">
         <item title="大" value="big"/>
@@ -52,8 +52,8 @@
     <component id="n26_pz1n" name="btnIsManorCheckPoint" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="313,387" size="78,42" group="n38_ra2b">
       <Button checked="true" icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe" controller="ctrlIsManorCheckPoint" page="0"/>
     </component>
-    <text id="n25_pz1n" name="tfIsSceneObjCanDestroy" xy="7,571" size="196,29" group="n38_ra2b" locked="true" hideByEditor="true" fontSize="18" color="#333333" vAlign="middle" autoSize="none" bold="true" text="场景物件是否能被破坏"/>
-    <component id="n27_pz1n" name="btnIsSceneObjCanDestroy" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="313,563" size="78,42" group="n38_ra2b" locked="true" hideByEditor="true">
+    <text id="n25_pz1n" name="tfIsSceneObjCanDestroy" xy="7,571" size="196,29" group="n38_ra2b" locked="true" hideByEditor="true" visible="false" fontSize="18" color="#333333" vAlign="middle" autoSize="none" bold="true" text="场景物件是否能被破坏"/>
+    <component id="n27_pz1n" name="btnIsSceneObjCanDestroy" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="313,563" size="78,42" group="n38_ra2b" locked="true" hideByEditor="true" visible="false">
       <Button checked="true" icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
     </component>
     <text id="n10_er8n" name="tfManorGenerateType" xy="7,455" size="121,29" group="n45_lnk9" fontSize="18" color="#333333" vAlign="middle" autoSize="none" text="领地生成方式"/>
@@ -66,10 +66,10 @@
     </component>
     <text id="n23_pz1n" name="tfManorGenerateGap" xy="7,512" size="146,29" group="n45_lnk9" fontSize="18" color="#333333" vAlign="middle" autoSize="none" text="领地生成间隔"/>
     <component id="n31_ra2b" name="cbManorGap" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="218,504" size="172,40" group="n45_lnk9">
-      <ComboBox title="100" visibleItemCount="10">
-        <item title="100"/>
-        <item title="50"/>
-        <item title="20"/>
+      <ComboBox title="0(领地相接)" visibleItemCount="10">
+        <item title="0(领地相接)" value="0"/>
+        <item title="10(部分可见)" value="10"/>
+        <item title="30(完全不可见)" value="30"/>
       </ComboBox>
     </component>
     <group id="n45_lnk9" name="n45" xy="7,447" size="383,97" group="n38_ra2b" advanced="true">

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://thvmj7vomquw10" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
-  <controller name="conSetting" pages="0,system,4,manor,5,robotCode" selected="0"/>
+  <controller name="conSetting" pages="0,system,4,manor,5,robotCode" selected="1"/>
   <controller name="ctrlGameMode" pages="0,game,1,lessons" selected="0"/>
   <displayList>
     <image id="n166_tcst" name="n166" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="382,192" size="1140,696" group="n154_o5a3"/>
@@ -12,10 +12,10 @@
       <Button icon="ui://te1gxawooiqdcyih2" sound="ui://fknoioovtqc912"/>
     </component>
     <component id="n21_o8k6" name="btnSystem" src="j70wcyihy" fileName="btn/rbtnCommonTopTab.xml" pkg="te1gxawo" xy="760,157" group="n94_o89o">
-      <Button checked="true" title="系统" controller="conSetting" page="0"/>
+      <Button title="系统" controller="conSetting" page="0"/>
     </component>
     <component id="n65_o31t" name="btnManor" src="j70wcyihy" fileName="btn/rbtnCommonTopTab.xml" pkg="te1gxawo" xy="892,157" group="n94_o89o">
-      <Button title="领地" controller="conSetting" page="4"/>
+      <Button checked="true" title="领地" controller="conSetting" page="4"/>
     </component>
     <component id="n80_opya" name="btnRobotCode" src="j70wcyihy" fileName="btn/rbtnCommonTopTab.xml" pkg="te1gxawo" xy="1024,157" group="n94_o89o">
       <Button title="机器人" controller="conSetting" page="5"/>
@@ -110,8 +110,8 @@
     <text id="n125_xljy" name="n125" xy="489,403" size="85,24" group="n71_o31t" fontSize="20" color="#333333" vAlign="middle" text="领地大小"/>
     <loader id="n130_xljy" name="n130" xy="652,395" size="141,40" group="n71_o31t" url="ui://te1gxawoeggjcyihr" fill="scaleFree"/>
     <loader id="n168_sh0c" name="n168" xy="845,395" size="141,40" group="n71_o31t" url="ui://te1gxawoeggjcyihr" fill="scaleFree"/>
-    <text id="n127_xljy" name="tfSelectManorBuyRow" xy="700,402" size="45,24" group="n71_o31t" input="true" keyboardType="4" fontSize="20" color="#333333" vAlign="middle" autoClearText="true" text="1920"/>
-    <text id="n128_xljy" name="tfSelectManorBuyCol" xy="891,402" size="45,24" group="n71_o31t" input="true" keyboardType="4" fontSize="20" color="#333333" vAlign="middle" autoClearText="true" text="1080"/>
+    <text id="n127_xljy" name="tfSelectManorBuyRow" xy="652,395" pivot="0.5,0.5" size="140,40" group="n71_o31t" input="true" keyboardType="4" fontSize="20" color="#333333" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="1920"/>
+    <text id="n128_xljy" name="tfSelectManorBuyCol" xy="845,395" pivot="0.5,0.5" size="140,40" group="n71_o31t" input="true" keyboardType="4" fontSize="20" color="#333333" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="1080"/>
     <text id="n129_xljy" name="n129" xy="811,403" size="18,24" group="n71_o31t" fontSize="20" color="#333333" vAlign="middle" text="X"/>
     <text id="n136_tb0j" name="tfCurManorID" xy="926,241" size="72,26" group="n71_o31t" fontSize="20" color="#990066" vAlign="middle" autoSize="none" autoClearText="true" text="11"/>
     <component id="n133_xljy" name="btnUpdateSize" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1026,394" size="120,44" group="n71_o31t">

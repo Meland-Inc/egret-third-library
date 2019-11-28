@@ -6,8 +6,8 @@
       <gearSize controller="button" pages="0,1" values="114,40,1,1|110,41,0.9,0.9"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
-    <text id="n1_obf0" name="title" xy="0,0" pivot="0.5,0.5" size="114,40" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" text="">
-      <gearSize controller="button" pages="0,1" values="114,40,1,1|100,27,0.9,0.9"/>
+    <text id="n1_obf0" name="title" xy="52,6" pivot="0.5,0.5" size="10,28" fontSize="24" color="#ffffff" align="center" vAlign="middle" bold="true" singleLine="true" text="">
+      <gearSize controller="button" pages="0,1" values="10,28,1,1|100,27,0.9,0.9"/>
       <relation target="" sidePair="center-center,middle-middle"/>
       <relation target="" sidePair="width-width,height-height"/>
     </text>

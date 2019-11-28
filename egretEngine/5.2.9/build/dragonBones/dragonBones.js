@@ -7011,7 +7011,7 @@ var dragonBones;
                     }
                 }
                 curveVertices.length = 8;
-                for (var i = 0, o = 0, curve = 0; i < spaceCount; i++, o += 3) {
+                for (var i = 0, o = 0, curve = 0; i < spaceCount; i++ , o += 3) {
                     var space = spaces[i];
                     position += space;
                     if (isClosed) {
@@ -7030,7 +7030,7 @@ var dragonBones;
                         continue;
                     }
                     var percent = 0.0;
-                    for (;; curve++) {
+                    for (; ; curve++) {
                         var len = lenghts[curve];
                         if (position > len) {
                             continue;
@@ -7080,7 +7080,7 @@ var dragonBones;
             pathLength = 0;
             var x1 = curveVertices[0], y1 = curveVertices[1], cx1 = 0, cy1 = 0, cx2 = 0, cy2 = 0, x2 = 0, y2 = 0;
             var tmpx, tmpy, dddfx, dddfy, ddfx, ddfy, dfx, dfy;
-            for (var i = 0, w = 2; i < curveCount; i++, w += 6) {
+            for (var i = 0, w = 2; i < curveCount; i++ , w += 6) {
                 cx1 = curveVertices[w];
                 cy1 = curveVertices[w + 1];
                 cx2 = curveVertices[w + 2];
@@ -7121,7 +7121,7 @@ var dragonBones;
             }
             var segments = this._segments;
             var curveLength = 0;
-            for (var i = 0, o = 0, curve = 0, segment = 0; i < spaceCount; i++, o += 3) {
+            for (var i = 0, o = 0, curve = 0, segment = 0; i < spaceCount; i++ , o += 3) {
                 var space = spaces[i];
                 position += space;
                 var p = position;
@@ -7138,7 +7138,7 @@ var dragonBones;
                     continue;
                 }
                 // Determine curve containing position.
-                for (;; curve++) {
+                for (; ; curve++) {
                     var length_1 = curves[curve];
                     if (p > length_1)
                         continue;
@@ -7191,7 +7191,7 @@ var dragonBones;
                 }
                 // Weight by segment length.
                 p *= curveLength;
-                for (;; segment++) {
+                for (; ; segment++) {
                     var length_2 = segments[segment];
                     if (p > length_2)
                         continue;
@@ -7347,7 +7347,7 @@ var dragonBones;
             //
             var rotateMix = this.rotateMix;
             var translateMix = this.translateMix;
-            for (var i = 0, p = 3; i < boneCount; i++, p += 3) {
+            for (var i = 0, p = 3; i < boneCount; i++ , p += 3) {
                 var bone = bones[i];
                 bone.updateByConstraint();
                 var matrix = bone.globalTransformMatrix;
@@ -7955,7 +7955,7 @@ var dragonBones;
         Animation.prototype.playConfig = function (animationConfig) {
             var animationName = animationConfig.animation;
             if (!(animationName in this._animations)) {
-                console.warn("Non-existent animation.\n", "DragonBones name: " + this._armature.armatureData.parent.name, "Armature name: " + this._armature.name, "Animation name: " + animationName);
+                // console.warn("Non-existent animation.\n", "DragonBones name: " + this._armature.armatureData.parent.name, "Armature name: " + this._armature.name, "Animation name: " + animationName);
                 return null;
             }
             var animationData = this._animations[animationName];
