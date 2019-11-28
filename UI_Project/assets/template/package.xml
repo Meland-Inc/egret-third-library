@@ -143,6 +143,10 @@
     <component id="ra2b42" name="ComCreateTemplate.xml" path="/com/"/>
     <image id="ie8a43" name="img_stencil_dt_6.png" path="/img/"/>
     <component id="nvw444" name="WinTileMapPreview.xml" path="/win/" exported="true"/>
+    <component id="hgj749" name="ScrollBar1_grip.xml" path="/slider/"/>
+    <component id="hgj74a" name="ScrollBar1.xml" path="/slider/" exported="true"/>
+    <component id="hgj74b" name="ScrollBar2_grip.xml" path="/slider/"/>
+    <component id="hgj74c" name="ScrollBar2.xml" path="/slider/" exported="true"/>
   </resources>
   <publish name="template"/>
 </packageDescription>

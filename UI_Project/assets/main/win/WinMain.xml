@@ -67,7 +67,7 @@
       <gearDisplay controller="ctrlViewMode" pages="0"/>
     </component>
     <group id="n15_n173" name="grpLeftTop" xy="0,0" size="346,494" customData="left" advanced="true" collapsed="true"/>
-    <component id="n18_11584" name="comChat" src="11584dl" fileName="com/ComMainChatView.xml" xy="0,940" visible="false" customData="bottom">
+    <component id="n18_11584" name="comChat" src="11584dl" fileName="com/ComMainChatView.xml" xy="0,940" customData="bottom">
       <gearDisplay controller="ctrlUserStatus" pages="2,3"/>
       <relation target="" sidePair="bottom-bottom"/>
     </component>

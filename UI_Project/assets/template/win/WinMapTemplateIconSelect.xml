@@ -2,8 +2,8 @@
 <component size="1920,1080" designImage="ui://thvmj7voqncg4cyij1" designImageAlpha="0" designImageLayer="1">
   <displayList>
     <component id="n14_qncg" name="imgBg" src="qncgcyiji" fileName="com/comBg.xml" pkg="te1gxawo" xy="506,156" size="976,698" group="n11_ra2b"/>
-    <text id="n1_er8n" name="tfTitle" xy="534,169" size="103,28" group="n11_ra2b" fontSize="24" color="#333333" align="center" vAlign="middle" bold="true" text="封面设置"/>
-    <list id="n3_er8n" name="lstIcons" xy="774,228" size="680,520" group="n11_ra2b" layout="flow_hz" overflow="scroll" scrollBarFlags="4" margin="2,0,0,0" scrollBarRes="ui://0axy98cgiv9318," lineGap="8" colGap="8" defaultItem="ui://0axy98cgiv939">
+    <text id="n1_er8n" name="tfTitle" xy="534,169" size="101,28" group="n11_ra2b" fontSize="24" color="#333333" align="center" vAlign="middle" text="封面设置"/>
+    <list id="n3_er8n" name="lstIcons" xy="773,228" size="700,520" group="n11_ra2b" layout="flow_hz" overflow="scroll" scrollBarFlags="4" margin="2,0,0,0" scrollBarRes="ui://0axy98cghgj74c," lineGap="8" colGap="8" defaultItem="ui://0axy98cgiv939">
       <item/>
       <item/>
       <item/>
