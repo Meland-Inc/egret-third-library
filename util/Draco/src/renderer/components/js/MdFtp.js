@@ -188,6 +188,7 @@ function uploaderFile(rootPath, filePath, cdnRoot, successFunc, failFunc) {
         if (rspErr) {
             //单个文件失败
             console.error(rspErr);
+            console.error(`cdn --> upload ${fileKey} error`);
             failFunc();
             return;
         }
@@ -285,10 +286,12 @@ export async function modifyPolicyFile() {
 }
 
 export async function uploadPolicyFile() {
+    if (ModelMgr.versionModel.curEnviron.scpEnable) {
+        await uploadScpPolicyFile();
+    }
+
     if (ModelMgr.versionModel.curEnviron.cdnEnable) {
         await uploadCdnPolicyFile();
-    } else {
-        await uploadScpPolicyFile();
     }
 }
 
