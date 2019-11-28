@@ -54,9 +54,9 @@ export async function publishProject() {
         return;
     }
 
-    if (ModelMgr.versionModel.needCover) {
-        await checkClearRelease(releaseVersion);
-    }
+    // if (ModelMgr.versionModel.needCover) {
+    //     await checkClearRelease(releaseVersion);
+    // }
 
     try {
         if (ModelMgr.versionModel.curEnviron.codeVersionEnable) {
@@ -64,10 +64,10 @@ export async function publishProject() {
             let configContent = await fsExc.readFile(configPath);
             let codeVersionName;
             let regCodeVersion;
-            if (ModelMgr.versionModel.curEnviron.trunkName === ModelMgr.versionModel.eEnviron.beta) {
+            if (ModelMgr.versionModel.curEnviron.name === ModelMgr.versionModel.eEnviron.beta) {
                 regCodeVersion = /public static betaCodeVersion = ".*?";/;
                 codeVersionName = "betaCodeVersion";
-            } else if (ModelMgr.versionModel.curEnviron.trunkName === ModelMgr.versionModel.eEnviron.ready) {
+            } else if (ModelMgr.versionModel.curEnviron.name === ModelMgr.versionModel.eEnviron.ready) {
                 regCodeVersion = /public static releaseCodeVersion = ".*?";/;
                 codeVersionName = "releaseCodeVersion";
             } else {
