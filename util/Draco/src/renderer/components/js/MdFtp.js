@@ -188,6 +188,7 @@ function uploaderFile(rootPath, filePath, cdnRoot, successFunc, failFunc) {
         if (rspErr) {
             //单个文件失败
             console.error(rspErr);
+            console.error(`cdn --> upload ${fileKey} error`);
             failFunc();
             return;
         }
@@ -240,9 +241,9 @@ export async function createPolicyFile() {
     let rawPolicyPath = `${Global.projPath}/rawResource/policyFile.json`;
     let policyContent = await fsExc.readFile(rawPolicyPath);
     let policyObj = JSON.parse(policyContent);
-    if (!ModelMgr.versionModel.curEnviron.cdnEnable) {
-        policyObj.cdnUrl = ``;
-    }
+    // if (!ModelMgr.versionModel.curEnviron.cdnEnable) {
+    policyObj.cdnUrl = ``;
+    // }
     policyContent = JSON.stringify(policyObj);
 
     let policyPath = `${Global.svnPublishPath}${ModelMgr.versionModel.curEnviron.localPolicyPath}/`;
@@ -285,28 +286,33 @@ export async function modifyPolicyFile() {
 }
 
 export async function uploadPolicyFile() {
+    if (ModelMgr.versionModel.curEnviron.scpEnable) {
+        await uploadScpPolicyFile();
+    }
+
     if (ModelMgr.versionModel.curEnviron.cdnEnable) {
         await uploadCdnPolicyFile();
-    } else {
-        await uploadScpPolicyFile();
     }
 }
 
 export function uploadCdnPolicyFile() {
     return new Promise(async (resolve, reject) => {
+        if (!ModelMgr.ftpModel.uploadToken) {
+            await ModelMgr.ftpModel.initQiniuOption();
+        }
+
         let uploadCount = 0;
         let policyPath = `${Global.svnPublishPath}${ModelMgr.versionModel.curEnviron.localPolicyPath}/`;
         let policyFilePathArr = [];
         let files = await fsExc.readDir(policyPath);
         for (const iterator of files) {
-            if (iterator === "index.html"
-                || iterator.indexOf("policyFile") != -1) {
+            if (iterator === "index.html" || iterator.indexOf("policyFile") != -1) {
                 let fullPath = `${policyPath}/${iterator}`;
                 policyFilePathArr.push(fullPath);
             }
         }
 
-        await checkUploaderFiles(policyPath, policyFilePathArr, uploadCount, resolve, reject);
+        await checkUploaderFiles(policyPath, policyFilePathArr, ModelMgr.versionModel.curEnviron.cdnRoot, uploadCount, resolve, reject);
     });
 }
 

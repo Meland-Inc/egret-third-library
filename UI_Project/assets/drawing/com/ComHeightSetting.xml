@@ -8,7 +8,7 @@
       <relation target="n10_qiln" sidePair="width-width,height-height"/>
       <relation target="n10_qiln" sidePair="left-left,top-top"/>
     </text>
-    <component id="n8_qiln" name="sldCanvasHeight" src="qiln1y" fileName="com/sldDraw.xml" xy="11,83" size="273,12">
+    <component id="n8_qiln" name="sldCanvasHeight" src="qiln1y" fileName="com/sldDraw.xml" xy="26,83" size="244,12">
       <Slider value="50" max="100"/>
     </component>
   </displayList>
