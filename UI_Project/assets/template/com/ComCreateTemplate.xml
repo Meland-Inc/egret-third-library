@@ -75,10 +75,10 @@
     </component>
     <text id="n114_ra2b" name="tfManorGenerateGap" xy="800,682" size="146,28" group="n127_lnk9" fontSize="20" color="#333333" vAlign="middle" autoSize="none" text="领地生成间隔"/>
     <component id="n115_ra2b" name="cbManorGap" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="800,717" size="379,39" group="n127_lnk9">
-      <ComboBox title="100" titleColor="#333333" visibleItemCount="10">
-        <item title="100"/>
-        <item title="50"/>
-        <item title="20"/>
+      <ComboBox title="0(领地相接)" titleColor="#333333" visibleItemCount="10">
+        <item title="0(领地相接)" value="0"/>
+        <item title="10(部分可见)" value="10"/>
+        <item title="30(完全不可见)" value="30"/>
       </ComboBox>
     </component>
     <group id="n127_lnk9" name="n127" xy="800,585" size="379,171" group="n124_ra2b" advanced="true">
