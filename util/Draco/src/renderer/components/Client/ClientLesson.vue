@@ -62,7 +62,7 @@ export default {
     },
     async refreshPolicyNum() {
       let versionName = this.isTest
-        ? ModelMgr.versionModel.eEnviron.beta
+        ? ModelMgr.versionModel.eEnviron.ready
         : ModelMgr.versionModel.eEnviron.release;
       let value = await ExternalUtil.getPolicyInfo(versionName);
       let data = JSON.parse(value);

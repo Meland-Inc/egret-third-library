@@ -78,24 +78,6 @@ var _sheetMode = false;
 export function getSheetMode() { return _sheetMode; }
 export function setSheetMode(value) { _sheetMode = value; }
 
-export async function updateGit() {
-    return new Promise(async (resolve, reject) => {
-        try {
-            let storeCmdStr = `git checkout -- .`;
-            await spawnExc.runCmd(storeCmdStr, Global.projPath, null, '还原文件错误');
-
-            let pullCmdStr = `git pull`;
-            await spawnExc.runCmd(pullCmdStr, Global.projPath, null, '拉取分支错误');
-
-            Global.toast('更新git成功');
-            resolve();
-        } catch (error) {
-            Global.snack('更新git错误', error);
-            reject();
-        }
-    });
-}
-
 /**
  * 更新svn
  */

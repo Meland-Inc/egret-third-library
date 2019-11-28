@@ -7,9 +7,12 @@ import * as archiver from "archiver";
 import * as fs from "fs";
 import { removeSpaces, replace, toStudlyCaps } from "strman";
 import * as iconv from "iconv-lite";
+import { ModelMgr } from "./model/ModelMgr.js";
 
 export async function updateSvn() {
-    await spawnExc.svnUpdate(Global.svnCsvPath, "更新svn文件成功", "更新svn文件错误");
+    await spawnExc.svnUpdate(Global.svnCsvPath, "", "更新csv文件错误");
+    await spawnExc.svnUpdate(Global.svnUITextPath, "更新svn文件成功", "更新UIText文件错误");
+
 }
 
 export function zipCsv() {
@@ -18,29 +21,44 @@ export function zipCsv() {
         let archive = archiver("zip");
         let fileName = "csv.bin";
         let filePath = Global.projPath + "/resource/assets/csv/";
-        let output = fs.createWriteStream(filePath + fileName);
-        archive.pipe(output);
+        let csvZipFile = fs.createWriteStream(filePath + fileName);
+        archive.pipe(csvZipFile);
+
 
         for (let i = 0; i < pa.length; i++) {
             const element = pa[i];
             if (element.indexOf(".csv") != -1) {
                 let csvContent = await tableExc.readCsvContent(Global.svnCsvPath + "/" + element);
+                if (element === ModelMgr.languageModel.languageTableName) {
+                    let languagePath = `${Global.projPath}/resource/assets/loading/Language.bin`;
+                    let languageZipFile = fs.createWriteStream(languagePath);
+                    let languageArchive = archiver("zip");
+                    languageArchive.pipe(languageZipFile);
+                    languageArchive.append(csvContent, {
+                        name: element
+                    });
+
+                    languageZipFile.on("error", error => {
+                        Global.snack('压缩Language.bin文件错误', error);
+                        reject();
+                    });
+                    languageZipFile.on("close", () => {
+                        console.log("压缩Language.bin文件成功");
+                    });
+                    languageArchive.finalize();
+                    continue;
+                }
                 archive.append(csvContent, {
                     name: element
                 });
-
-
-                // archive.append(fs.createReadStream(Global.svnCsvPath + "/" + element), {
-                //     name: element
-                // });
             }
         }
 
-        archive.on("error", error => {
+        csvZipFile.on("error", error => {
             Global.snack('压缩zip文件错误', error);
             reject();
         });
-        output.on("close", () => {
+        csvZipFile.on("close", () => {
             Global.toast('压缩zip文件成功');
             resolve();
         });
@@ -102,6 +120,32 @@ export async function createTs() {
     }
 
     Global.toast('生成ts文件成功');
+}
+
+export async function copyUIText() {
+    return new Promise(async (resolve, reject) => {
+        let UILanguageName = "UILanguage.xml";
+        let UILanguageContent = await fsExc.readFile(`${Global.svnUITextPath}/${UILanguageName}`);
+        let UILanguagePath = `${Global.projPath}/resource/assets/loading/UILanguage.bin`;
+        let UILanguageZipFile = fs.createWriteStream(UILanguagePath);
+        let UILanguageArchive = archiver("zip");
+        UILanguageArchive.pipe(UILanguageZipFile);
+        UILanguageArchive.append(UILanguageContent, {
+            name: UILanguageName
+        });
+
+        UILanguageZipFile.on("error", error => {
+            Global.snack('压缩UILanguage.bin文件错误', error);
+            reject();
+        });
+        UILanguageZipFile.on("close", () => {
+            console.log("压缩UILanguage.bin文件成功");
+            resolve();
+        });
+        UILanguageArchive.finalize();
+    })
+
+    // fsExc.copyFile(Global.svnUITextPath, Global.projPath + "/resource/assets/loading/")
 }
 
 export async function oneForAll() {

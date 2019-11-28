@@ -3,6 +3,24 @@ import * as spawnExc from "./SpawnExecute.js";
 
 var excProcess;
 
+export async function updateGit() {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let storeCmdStr = `git checkout -- .`;
+            await spawnExc.runCmd(storeCmdStr, Global.projPath, null, '还原文件错误');
+
+            let pullCmdStr = `git pull`;
+            await spawnExc.runCmd(pullCmdStr, Global.projPath, null, '拉取分支错误');
+
+            Global.toast('更新git成功');
+            resolve();
+        } catch (error) {
+            Global.snack('更新git错误', error);
+            reject();
+        }
+    });
+}
+
 export async function egretRun() {
     let cmdStr = "egret run";
     excProcess = await spawnExc.runCmd(cmdStr, Global.projPath, null, '运行游戏错误');

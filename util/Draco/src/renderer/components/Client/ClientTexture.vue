@@ -3,13 +3,6 @@
     <mu-container>
       <div class="button-wrapper">
         <mu-button
-          v-loading="isUpdateGitLoading"
-          data-mu-loading-size="24"
-          color="pink500"
-          @click="updateGit"
-          v-show="gitEnable"
-        >更新git文件</mu-button>
-        <mu-button
           v-loading="isUpdateSvnLoading"
           data-mu-loading-size="24"
           color="pink500"
@@ -122,8 +115,7 @@ export default {
       sheetMode: mdTexture.getSheetMode(),
       checkBoxValues: mdTexture.getCheckBoxValues(),
       checkBoxData: mdTexture.getCheckBoxData(),
-      checkAll: true,
-      gitEnable: false
+      checkAll: true
     };
   },
   watch: {
@@ -242,9 +234,6 @@ export default {
     async oneForAll() {
       Global.showLoading();
       let promiseList = [];
-      if (this.gitEnable) {
-        promiseList.push(this.updateGit);
-      }
       promiseList.push(this.updateSvn);
       promiseList.push(this.clearTexture);
       promiseList.push(this.copyTextureIn);
@@ -274,9 +263,7 @@ export default {
       Global.dialog("One·for·All Success");
     }
   },
-  mounted() {
-    this.gitEnable = Global.mode.textureGitEnable;
-  }
+  mounted() {}
 };
 </script>
 
