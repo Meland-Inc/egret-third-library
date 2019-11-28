@@ -297,6 +297,10 @@ export async function uploadPolicyFile() {
 
 export function uploadCdnPolicyFile() {
     return new Promise(async (resolve, reject) => {
+        if (!ModelMgr.ftpModel.uploadToken) {
+            await ModelMgr.ftpModel.initQiniuOption();
+        }
+
         let uploadCount = 0;
         let policyPath = `${Global.svnPublishPath}${ModelMgr.versionModel.curEnviron.localPolicyPath}/`;
         let policyFilePathArr = [];
@@ -309,7 +313,7 @@ export function uploadCdnPolicyFile() {
             }
         }
 
-        await checkUploaderFiles(policyPath, policyFilePathArr, uploadCount, resolve, reject);
+        await checkUploaderFiles(policyPath, policyFilePathArr, ModelMgr.versionModel.curEnviron.cdnRoot, uploadCount, resolve, reject);
     });
 }
 
