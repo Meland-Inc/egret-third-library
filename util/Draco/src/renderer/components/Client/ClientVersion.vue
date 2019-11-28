@@ -235,13 +235,13 @@
               @click="pushGit"
               v-show="curEnviron&&curEnviron.pushGitEnable"
             >Git推送文件</mu-button>
-            <mu-button
+            <!-- <mu-button
               v-loading="isGitTagLoading"
               data-mu-loading-size="24"
               color="orange500"
               @click="gitTag"
               v-show="curEnviron&&curEnviron.gitTagEnable"
-            >Git打tag</mu-button>
+            >Git打tag</mu-button>-->
             <mu-button
               v-loading="isZipUploadGameLoading"
               data-mu-loading-size="24"
