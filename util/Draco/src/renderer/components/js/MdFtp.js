@@ -181,7 +181,10 @@ function checkUploaderFile(rootPath, filePath, cdnRoot, uploadCount, successFunc
 function uploaderFile(rootPath, filePath, cdnRoot, successFunc, failFunc) {
     let formUploader = new qiniu.form_up.FormUploader(ModelMgr.ftpModel.qiniuConfig);
     let uploadToken = ModelMgr.ftpModel.uploadToken;
-    let fileKey = `${cdnRoot}/${filePath.split(`${rootPath}/`)[1]}`;
+    let fileKey = filePath.split(`${rootPath}/`)[1];
+    if (cdnRoot) {
+        fileKey = `${cdnRoot}/${fileKey}`;
+    }
     let readerStream = fs.createReadStream(filePath);
     let putExtra = new qiniu.form_up.PutExtra();
 
