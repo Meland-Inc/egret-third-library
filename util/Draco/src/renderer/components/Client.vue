@@ -2,6 +2,11 @@
   <div class="layout">
     <div class="header">
       <mu-appbar color="primary" :title="appTitle"></mu-appbar>
+      <mu-alert color="warning" v-show="egretEnable">
+        <mu-icon left value="warning"></mu-icon>
+        <h3 class="warn-text">更新配置和资源前,请先更新GIT文件</h3>
+        <component is="ClientEgret"></component>
+      </mu-alert>
     </div>
     <div class="content">
       <div class="alert-demo-wrapper">
@@ -17,9 +22,6 @@
       </div>
       <div class="content-left">
         <mu-list v-loading="regionLoading" @change="handleListChange" :value="activeList">
-          <!-- <mu-list-item title="Module" value="ClientModule">
-                    <mu-icon slot="left" value="assignment" />
-          </mu-list-item>-->
           <mu-list-item button :ripple="false" value="ClientProto" v-show="protoEnable">
             <mu-list-item-action>
               <mu-icon slot="left" value="swap_vert" />
@@ -55,12 +57,12 @@
             <mu-list-item-title>Asset</mu-list-item-title>
           </mu-list-item>
 
-          <mu-list-item button :ripple="false" value="ClientEgret" v-show="egretEnable">
+          <!-- <mu-list-item button :ripple="false" value="ClientEgret" v-show="egretEnable">
             <mu-list-item-action>
               <mu-icon slot="left" value="apps" />
             </mu-list-item-action>
             <mu-list-item-title>Egret</mu-list-item-title>
-          </mu-list-item>
+          </mu-list-item>-->
 
           <mu-divider />
 
@@ -113,7 +115,7 @@
         </div>
       </div>
     </div>
-    <div class="footer">Draco ©2019 Created by Muse-UI</div>
+    <div class="footer">Draco ©2018-2019 Created by Muse-UI</div>
 
     <mu-snackbar position="bottom-end" color="success" :open.sync="toastVisible" @close="hideToast">
       <mu-icon left value="check_circle"></mu-icon>
@@ -358,7 +360,7 @@ export default {
           viewName = "ClientProto";
           break;
         case Global.eMode.product:
-          viewName = "ClientTexture";
+          viewName = "ClientCsv";
           break;
         case Global.eMode.publish:
           viewName = "ClientVersion";
@@ -536,5 +538,14 @@ export default {
 }
 .text-game {
   width: 120px;
+}
+
+.common-bg {
+  width: 100%;
+  background-color: white;
+}
+
+.warn-text {
+  color: black;
 }
 </style>

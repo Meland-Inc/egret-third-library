@@ -2,7 +2,7 @@ import { ipcRenderer } from 'electron';
 import { ModelMgr } from "./model/ModelMgr";
 
 export class Global {
-    static currentVersion = "1.9.5 beta8";
+    static currentVersion = "1.9.5 beta12";
     static projPath = localStorage.getItem('client_project_path');
     static projPath = localStorage.getItem('client_project_path');
     static protoPath = localStorage.getItem('client_proto_path');
@@ -67,7 +67,11 @@ export class Global {
     }
 
     static get svnCsvPath() {
-        return Global.svnPath + '/settings/csv';
+        return Global.svnPath + ModelMgr.languageModel.curLanguage.csvPath;
+    }
+
+    static get svnUITextPath() {
+        return Global.svnPath + ModelMgr.languageModel.curLanguage.UITextPath;
     }
 
     static get svnResPath() {

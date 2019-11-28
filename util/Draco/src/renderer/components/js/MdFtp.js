@@ -78,16 +78,26 @@ export async function zipVersion() {
 }
 
 export async function uploadVersionFile() {
+    if (ModelMgr.versionModel.curEnviron.scpEnable) {
+        await uploadScpVersionFile();
+    }
+
     if (ModelMgr.versionModel.curEnviron.cdnEnable) {
         await uploadCdnVersionFile();
-    } else {
-        await uploadScpVersionFile();
     }
 }
 
 let maxUploadCount = 10;
 export function uploadCdnVersionFile() {
     return new Promise(async (resolve, reject) => {
+        await ModelMgr.ftpModel.initQiniuOption();
+        if (ModelMgr.versionModel.curEnviron.scpEnable && ModelMgr.versionModel.curEnviron.cdnEnable) {
+            let patchPath = `${Global.svnPublishPath}${ModelMgr.versionModel.curEnviron.localPath}/${ModelMgr.versionModel.uploadVersion}/`;
+            await uploadCdnSingleVersionFile(patchPath, ModelMgr.versionModel.curEnviron.cdnRoot);
+            resolve();
+            return;
+        }
+
         let releaseGameVersion = await ModelMgr.versionModel.getEnvironGameVersion(ModelMgr.versionModel.eEnviron.release);
         let readyGameVersion = await ModelMgr.versionModel.getEnvironGameVersion(ModelMgr.versionModel.eEnviron.ready);
         if (releaseGameVersion === readyGameVersion) {
@@ -106,7 +116,7 @@ export function uploadCdnVersionFile() {
                 continue;
             }
 
-            await uploadCdnSingleVersionFile(patchPath);
+            await uploadCdnSingleVersionFile(patchPath, readyEnviron.cdnRoot);
             curGameVersion = i;
         }
 
@@ -114,12 +124,12 @@ export function uploadCdnVersionFile() {
     });
 }
 
-async function uploadCdnSingleVersionFile(patchPath) {
+async function uploadCdnSingleVersionFile(patchPath, cdnRoot) {
     return new Promise(async (resolve, reject) => {
         let releaseUploadCount = 0;
         let filePathArr = [];
         await batchUploaderFiles(patchPath, filePathArr);
-        await checkUploaderFiles(patchPath, filePathArr, releaseUploadCount, resolve, reject);
+        await checkUploaderFiles(patchPath, filePathArr, cdnRoot, releaseUploadCount, resolve, reject);
     });
 }
 
@@ -136,15 +146,15 @@ async function batchUploaderFiles(rootPath, filePathArr) {
     }
 }
 
-function checkUploaderFiles(rootPath, filePathArr, uploadCount, resolve, reject) {
+function checkUploaderFiles(rootPath, filePathArr, cdnRoot, uploadCount, resolve, reject) {
     if (uploadCount > maxUploadCount) return;
     if (filePathArr.length == 0) return;
 
     let filePath = filePathArr.shift();
-    checkUploaderFile(rootPath, filePath, uploadCount,
+    checkUploaderFile(rootPath, filePath, cdnRoot, uploadCount,
         () => {
             if (filePathArr.length != 0) {
-                checkUploaderFiles(rootPath, filePathArr, uploadCount, resolve, reject);
+                checkUploaderFiles(rootPath, filePathArr, cdnRoot, uploadCount, resolve, reject);
             } else {
                 if (resolve) {
                     resolve();
@@ -154,23 +164,23 @@ function checkUploaderFiles(rootPath, filePathArr, uploadCount, resolve, reject)
         });
 }
 
-function checkUploaderFile(rootPath, filePath, uploadCount, successFunc) {
+function checkUploaderFile(rootPath, filePath, cdnRoot, uploadCount, successFunc) {
     uploadCount++;
-    uploaderFile(rootPath, filePath,
+    uploaderFile(rootPath, filePath, cdnRoot,
         () => {
             uploadCount--;
             successFunc();
         },
         () => {
             uploadCount--;
-            checkUploaderFile(rootPath, filePath, uploadCount, successFunc);
+            checkUploaderFile(rootPath, filePath, cdnRoot, uploadCount, successFunc);
         });
 }
 
-function uploaderFile(rootPath, filePath, successFunc, failFunc) {
+function uploaderFile(rootPath, filePath, cdnRoot, successFunc, failFunc) {
     let formUploader = new qiniu.form_up.FormUploader(ModelMgr.ftpModel.qiniuConfig);
     let uploadToken = ModelMgr.ftpModel.uploadToken;
-    let fileKey = filePath.split(`${rootPath}/`)[1];
+    let fileKey = `${cdnRoot}/${filePath.split(`${rootPath}/`)[1]}`;
     let readerStream = fs.createReadStream(filePath);
     let putExtra = new qiniu.form_up.PutExtra();
 

@@ -139,7 +139,7 @@
             @click="onUploadVersionFile"
           >上传游戏版本</mu-button>
         </div>
-        <mu-container v-show="!curEnviron||!curEnviron.cdnEnable">
+        <mu-container v-show="curEnviron&&curEnviron.scpEnable">
           <mu-flex class="flex-wrapper" align-items="center">
             <mu-col span="12" lg="2" sm="2" v-show="curEnviron&&curEnviron.mergeVersionEnable">
               <mu-checkbox v-model="needPatch" @change="needPatchChange" label="patch包"></mu-checkbox>

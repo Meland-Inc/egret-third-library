@@ -8,7 +8,7 @@ export class FtpModel {
     uploaderCount = 10;
 
     async init() {
-        await this.initQiniuOption();
+        // await this.initQiniuOption();
     }
 
     async initQiniuOption() {

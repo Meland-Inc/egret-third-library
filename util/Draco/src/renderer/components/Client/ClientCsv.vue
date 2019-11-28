@@ -1,6 +1,22 @@
 <template>
   <mu-container>
     <div class="button-wrapper">
+      <mu-select
+        label="语言版本"
+        @change="onLanguageChange"
+        filterable
+        v-model="curLanguage"
+        label-float
+        full-width
+        v-show="languageVisible"
+      >
+        <mu-option
+          v-for="value,index in languageList"
+          :key="value.name"
+          :label="value.name"
+          :value="value"
+        ></mu-option>
+      </mu-select>
       <mu-button
         v-loading="isUpdateSvnLoading"
         data-mu-loading-size="24"
@@ -19,6 +35,12 @@
         color="cyan500"
         @click="createTs"
       >生成ts文件</mu-button>
+      <mu-button
+        v-loading="isCopyUITextLoading"
+        data-mu-loading-size="24"
+        color="blue500"
+        @click="copyUIText"
+      >拷贝UIText文件</mu-button>
     </div>
     <div class="button-wrapper">
       <mu-button full-width color="red" @click="oneForAll">One·for·All</mu-button>
@@ -29,17 +51,28 @@
 <script>
 import * as mdCsv from "../js/MdCsv.js";
 import { Global } from "../js/Global.js";
+import { ModelMgr } from "../js/model/ModelMgr";
 
 export default {
   data() {
     return {
+      languageList: ModelMgr.languageModel.languageList,
+
       isUpdateSvnLoading: false,
       isZipCsvLoading: false,
-      isCreateTsLoading: false
+      isCreateTsLoading: false,
+      isCopyUITextLoading: false,
+
+      curLanguage: ModelMgr.languageModel.curLanguage,
+
+      languageVisible: true
     };
   },
   watch: {},
   methods: {
+    onLanguageChange() {
+      ModelMgr.languageModel.curLanguage = this.curLanguage;
+    },
     async updateSvn() {
       this.isUpdateSvnLoading = true;
       Global.showRegionLoading();
@@ -76,6 +109,18 @@ export default {
         Global.hideRegionLoading();
       }
     },
+    async copyUIText() {
+      this.isCopyUITextLoading = true;
+      Global.showRegionLoading();
+      try {
+        await mdCsv.copyUIText();
+        this.isCopyUITextLoading = false;
+        Global.hideRegionLoading();
+      } catch (error) {
+        this.isCopyUITextLoading = false;
+        Global.hideRegionLoading();
+      }
+    },
 
     async oneForAll() {
       Global.showLoading();
@@ -83,6 +128,7 @@ export default {
         await this.updateSvn();
         await this.zipCsv();
         await this.createTs();
+        await this.copyUIText();
         Global.hideLoading();
         Global.toast("One·for·All Success");
       } catch (error) {
@@ -91,6 +137,9 @@ export default {
       }
     }
   },
-  mounted() {}
+  mounted() {
+    this.curLanguage = ModelMgr.languageModel.curLanguage;
+    this.languageVisible = !Global.mode.egretEnable;
+  }
 };
 </script>
