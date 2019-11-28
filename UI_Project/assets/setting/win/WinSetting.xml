@@ -64,28 +64,28 @@
     <text id="n164_j70w" name="tfOperation" xy="488,592" size="85,24" group="n30_o8k6" fontSize="20" color="#333333" vAlign="middle" text="操作方式"/>
     <component id="n113_o89o" name="comSelectOperation" src="l61l2" fileName="com/comSelectOperation.xml" xy="654,588" group="n30_o8k6"/>
     <component id="n42_o8k6" name="btnVconsole" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1119,749" size="120,44" group="n30_o8k6" hideByEditor="true" visible="false">
-      <Button title="开启vconsole" icon="ui://te1gxawooiqdcyih1"/>
-    </component>
-    <component id="n151_f5wz" name="btnResetAll" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="982,749" size="120,44" group="n30_o8k6" hideByEditor="true" visible="false">
-      <relation target="" sidePair="right-right,bottom-bottom"/>
-      <Button title="重置所有" icon="ui://te1gxawoeggjcyihf"/>
+      <Button title="开启vconsole" titleFontSize="20" icon="ui://te1gxawooiqdcyih1"/>
     </component>
     <text id="n149_jd08" name="tfServerIdTitle" xy="488,221" size="70,18" group="n30_o8k6" fontSize="14" color="#333333" vAlign="middle" vars="true" text="服务器ID: "/>
     <text id="n152_qh6c" name="tfGameServerHost" xy="562,221" size="61,18" group="n30_o8k6" input="true" fontSize="14" color="#333333" vAlign="middle" text="xxxxxxx"/>
     <component id="n29_o8k6" name="btnOpenLog" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="653,825" size="120,44" group="n165_j70w">
-      <Button title="查看日志" icon="ui://te1gxawooiqdcyih1"/>
+      <Button title="查看日志" titleFontSize="20" icon="ui://te1gxawooiqdcyih1"/>
     </component>
     <component id="n64_epn8" name="btnUploadLog" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="813,825" size="120,44" group="n165_j70w">
-      <Button title="上传日志" icon="ui://te1gxawooiqdcyih1"/>
+      <Button title="上传日志" titleFontSize="20" icon="ui://te1gxawooiqdcyih1"/>
     </component>
     <component id="n143_vxor" name="btnPlayerUnStuck" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="973,827" size="120,44" group="n165_j70w">
-      <Button title="一键脱离" icon="ui://te1gxawooiqdcyih3"/>
+      <Button title="一键脱离" titleFontSize="20" icon="ui://te1gxawooiqdcyih3"/>
     </component>
     <component id="n28_o8k6" name="btnLogout" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1133,827" size="120,44" group="n165_j70w">
       <gearDisplay controller="ctrlGameMode" pages="0"/>
-      <Button title="退出登陆" icon="ui://te1gxawoeggjcyihf"/>
+      <Button title="退出登陆" titleFontSize="20" icon="ui://te1gxawoeggjcyihf"/>
     </component>
-    <group id="n165_j70w" name="n165" xy="653,825" size="600,46" group="n30_o8k6" advanced="true" collapsed="true" layout="hz" colGap="40"/>
+    <component id="n151_f5wz" name="btnResetAll" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1293,826" size="120,44" group="n165_j70w" hideByEditor="true" visible="false">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+      <Button title="重置所有" titleColor="#ffffff" titleFontSize="20" icon="ui://te1gxawoeggjcyihf"/>
+    </component>
+    <group id="n165_j70w" name="n165" xy="653,825" size="760,46" group="n30_o8k6" advanced="true" layout="hz" colGap="40"/>
     <group id="n30_o8k6" name="system" xy="488,221" size="1002,650" group="n154_o5a3" advanced="true">
       <gearDisplay controller="conSetting" pages="0"/>
     </group>
@@ -119,19 +119,19 @@
     </component>
     <text id="n138_t4ko" name="tfSelectManorID" xy="926,322" size="72,26" group="n71_o31t" fontSize="20" color="#990066" vAlign="middle" autoSize="none" autoClearText="true" text="11"/>
     <component id="n69_o31t" name="btnUpload" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="572,825" size="120,44" group="n169_sh0c">
-      <Button title="上传" icon="ui://te1gxawooiqdcyih1"/>
+      <Button title="上传" titleFontSize="20" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <component id="n68_o31t" name="btnLoad" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="732,824" size="120,44" group="n169_sh0c">
-      <Button title="下载" icon="ui://te1gxawooiqdcyih1"/>
+    <component id="n68_o31t" name="btnLoad" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="732,825" size="120,44" group="n169_sh0c">
+      <Button title="下载" titleFontSize="20" icon="ui://te1gxawooiqdcyih1"/>
     </component>
     <component id="n134_xljy" name="btnClearBuyMark" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="892,824" size="120,44" group="n169_sh0c">
-      <Button title="清除已购买" icon="ui://te1gxawooiqdcyih3"/>
+      <Button title="清除已购买" titleFontSize="20" icon="ui://te1gxawooiqdcyih3"/>
     </component>
     <component id="n74_hj15" name="btnRestoreScene" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1052,824" size="120,44" group="n169_sh0c">
-      <Button title="还原场景" icon="ui://te1gxawooiqdcyih3"/>
+      <Button title="还原场景" titleFontSize="20" icon="ui://te1gxawooiqdcyih3"/>
     </component>
     <component id="n70_o31t" name="btnDel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1212,824" size="120,44" group="n169_sh0c">
-      <Button title="删除" icon="ui://te1gxawoeggjcyihf"/>
+      <Button title="删除" titleFontSize="20" icon="ui://te1gxawoeggjcyihf"/>
     </component>
     <group id="n169_sh0c" name="n169" xy="572,824" size="760,45" group="n71_o31t" advanced="true" layout="hz" lineGap="-44" colGap="40"/>
     <group id="n71_o31t" name="manor" xy="489,241" size="843,628" group="n154_o5a3" advanced="true">
@@ -156,13 +156,13 @@
     <text id="n88_opya" name="tfCurCodeName" xy="669,241" size="227,24" group="n91_opya" fontSize="20" color="#333333" vAlign="middle" autoSize="none" autoClearText="true" text="aaaaa"/>
     <text id="n139_t4ko" name="tfSelectCodeID" xy="926,322" size="72,26" group="n91_opya" fontSize="20" color="#990066" vAlign="middle" autoSize="none" autoClearText="true" text="11"/>
     <component id="n85_opya" name="btnCodeUpload" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="732,824" size="120,44" group="n171_sh0c">
-      <Button title="上传" icon="ui://te1gxawooiqdcyih1"/>
+      <Button title="上传" titleFontSize="20" icon="ui://te1gxawooiqdcyih1"/>
     </component>
     <component id="n84_opya" name="btnCodeLoad" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="892,824" size="120,44" group="n171_sh0c">
-      <Button title="下载" icon="ui://te1gxawooiqdcyih1"/>
+      <Button title="下载" titleFontSize="20" icon="ui://te1gxawooiqdcyih1"/>
     </component>
     <component id="n86_opya" name="btnCodeDel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1052,824" size="120,44" group="n171_sh0c">
-      <Button title="删除" icon="ui://te1gxawoeggjcyihf"/>
+      <Button title="删除" titleFontSize="20" icon="ui://te1gxawoeggjcyihf"/>
     </component>
     <group id="n171_sh0c" name="n171" xy="732,824" size="440,44" group="n91_opya" advanced="true" layout="hz" colGap="40"/>
     <group id="n91_opya" name="robotCode" xy="489,241" size="683,627" group="n154_o5a3" advanced="true">
