@@ -241,9 +241,9 @@ export async function createPolicyFile() {
     let rawPolicyPath = `${Global.projPath}/rawResource/policyFile.json`;
     let policyContent = await fsExc.readFile(rawPolicyPath);
     let policyObj = JSON.parse(policyContent);
-    if (!ModelMgr.versionModel.curEnviron.cdnEnable) {
-        policyObj.cdnUrl = ``;
-    }
+    // if (!ModelMgr.versionModel.curEnviron.cdnEnable) {
+    policyObj.cdnUrl = ``;
+    // }
     policyContent = JSON.stringify(policyObj);
 
     let policyPath = `${Global.svnPublishPath}${ModelMgr.versionModel.curEnviron.localPolicyPath}/`;
@@ -306,8 +306,7 @@ export function uploadCdnPolicyFile() {
         let policyFilePathArr = [];
         let files = await fsExc.readDir(policyPath);
         for (const iterator of files) {
-            if (iterator === "index.html"
-                || iterator.indexOf("policyFile") != -1) {
+            if (iterator === "index.html" || iterator.indexOf("policyFile") != -1) {
                 let fullPath = `${policyPath}/${iterator}`;
                 policyFilePathArr.push(fullPath);
             }
