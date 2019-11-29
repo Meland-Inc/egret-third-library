@@ -13,7 +13,7 @@
       <gearDisplay controller="ctrlBarType" pages="0"/>
       <relation target="" sidePair="width-width"/>
     </image>
-    <text id="n1_qvmf" name="tfClassName" xy="17,17" size="255,28" fontSize="24" color="#333333" autoClearText="true" text="欧拉七桥课（default）">
+    <text id="n1_qvmf" name="tfClassName" xy="17,17" size="10,28" fontSize="24" color="#333333" autoClearText="true" text="">
       <gearDisplay controller="ctrlBarType" pages="0,2"/>
       <relation target="" sidePair="left-left,top-top"/>
     </text>

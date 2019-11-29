@@ -78,7 +78,7 @@
     <component id="n38_gup1" name="comPenSetting" src="qiln2s" fileName="com/ComPenSetting.xml" xy="30,168" size="410,494" group="n14_batc">
       <gearDisplay controller="ctrlTool" pages="0,2"/>
     </component>
-    <text id="n53_giuq" name="n53" xy="208,57" size="53,31" group="n14_batc" fontSize="24" color="#333333" align="center" vAlign="middle" text="画图"/>
+    <text id="n53_giuq" name="n53" xy="208,57" size="53,28" group="n14_batc" fontSize="24" color="#333333" align="center" vAlign="middle" text="画图"/>
     <group id="n14_batc" name="grpLeft" xy="30,40" size="410,1010"/>
     <image id="n49_gup1" name="n49" src="gup15c" fileName="img/img_sket_qy_2.png" xy="1781,431" size="60,2">
       <relation target="n26_pa6b" sidePair="bottom-top,right-right"/>

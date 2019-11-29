@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="400,400" designImage="ui://thvmj7vozgghcyiis" designImageOffsetX="-879" designImageOffsetY="-286" designImageAlpha="100" adaptationTest="FitSize">
+<component size="400,400" designImage="ui://thvmj7vozgghcyiis" designImageOffsetX="-879" designImageOffsetY="-286" designImageAlpha="0" adaptationTest="FitSize">
   <controller name="selectScope" pages="0,,1," selected="0"/>
   <controller name="ctrlEditType" pages="0,add,1,edit" selected="0"/>
   <controller name="ctrlEditTitle" pages="0,var,1,list" selected="0"/>
   <displayList>
-    <image id="n7_p3g7" name="img_bg" src="oiwytai" fileName="newImg2/img_code_zhezhao_10.png" pkg="rnqj1l77" xy="0,0" size="400,400">
+    <graph id="n7_p3g7" name="img_bg" xy="0,0" size="400,400" alpha="0.5" type="rect" lineSize="0" fillColor="#ff000000">
       <relation target="" sidePair="width-width,height-height"/>
-    </image>
+    </graph>
     <image id="n22_zggh" name="imgBg" src="j595cyiic" fileName="img/img_cm_tkc_1.png" pkg="te1gxawo" xy="19,84" size="362,232" group="n26_zggh"/>
     <image id="n23_zggh" name="imgBgTop" src="c1h7cyiia" fileName="img/img_cm_top_3.png" pkg="te1gxawo" xy="19,84" size="362,56" group="n26_zggh"/>
     <text id="n12_v32m" name="tfOperate" xy="58,98" size="142,28" group="n26_zggh" fontSize="24" color="#333333" align="right" vAlign="middle" autoSize="none" text="创建">

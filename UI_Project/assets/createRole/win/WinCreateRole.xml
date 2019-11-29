@@ -99,11 +99,11 @@
     </group>
     <text id="n88_nvqa" name="tfNameTitle" xy="399,743" size="67,34" group="n18_trkw" fontSize="30" color="#333333" leading="0" bold="true" text="昵称"/>
     <image id="n10_no43" name="imgNameBG" src="nvqa19" fileName="img/img_cre_nc.png" xy="399,790" size="492,66" group="n18_trkw"/>
-    <text id="n5_no43" name="tfRoleName" xy="422,790" size="441,66" group="n18_trkw" input="true" fontSize="30" color="#333333" vAlign="middle" leading="0" letterSpacing="3" autoSize="none" singleLine="true" text="zzzzzzzzzzzzzz">
+    <text id="n5_no43" name="tfRoleName" xy="422,790" size="441,66" group="n18_trkw" input="true" fontSize="30" color="#333333" vAlign="middle" leading="0" letterSpacing="3" autoSize="none" singleLine="true" text="">
       <gearLook controller="ctrlGameMode" pages="1" values="1,0,0,0" default="1,0,0,1"/>
       <relation target="n10_no43" sidePair="width-width"/>
     </text>
-    <text id="n6_no43" name="tfError" xy="474,744" size="197,31" group="n18_trkw" visible="false" font="方正准圆简体" fontSize="24" color="#f97272" vAlign="middle" text="【角色名字重复】">
+    <text id="n6_no43" name="tfError" xy="474,744" size="10,31" group="n18_trkw" visible="false" font="方正准圆简体" fontSize="24" color="#f97272" vAlign="middle" text="">
       <relation target="n88_nvqa" sidePair="left-right"/>
     </text>
     <component id="n9_no43" name="btnDice" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="908,790" pivot="0.5,0.5" size="64,64" group="n18_trkw">

@@ -2,9 +2,9 @@
 <component size="400,400">
   <controller name="ctrlArgType" alias="ctrlArgType" pages="0,number,1,boolean,2,text" selected="0"/>
   <displayList>
-    <image id="n23_z1hj" name="img_bg" src="oiwytai" fileName="newImg2/img_code_zhezhao_10.png" pkg="rnqj1l77" xy="0,0" size="399,399">
+    <graph id="n23_z1hj" name="img_bg" xy="0,0" size="400,400" alpha="0.5" type="rect" lineSize="0" fillColor="#ff000000">
       <relation target="" sidePair="width-width,height-height"/>
-    </image>
+    </graph>
     <image id="n28_zggh" name="imgBg" src="j595cyiic" fileName="img/img_cm_tkc_1.png" pkg="te1gxawo" xy="19,81" size="362,237" group="n37_zggh"/>
     <image id="n29_zggh" name="imgBgTop" src="c1h7cyiia" fileName="img/img_cm_top_3.png" pkg="te1gxawo" xy="19,81" size="362,56" group="n37_zggh"/>
     <text id="n16_q5wk" name="tfTitle" xy="105,91" size="189,37" group="n37_zggh" fontSize="24" color="#333333" align="center" vAlign="middle" autoSize="none" text="创建参数"/>

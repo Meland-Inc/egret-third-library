@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://i25v0ebkfzlu3y" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlType" pages="3,unknow,1,showText,2,question,0,selection" selected="0"/>
+  <controller name="ctrlType" pages="3,unknow,1,showText,2,question,0,selection" selected="3"/>
   <displayList>
     <list id="n2_j5jv" name="lstSelection" xy="956,469" size="464,402" layout="flow_hz" overflow="scroll" lineGap="10" colGap="20" defaultItem="ui://nyy10939qylxd" align="right" vAlign="bottom">
       <gearDisplay controller="ctrlType" pages="0"/>
@@ -12,13 +12,13 @@
     </list>
     <image id="n0_j5jv" name="bg" src="qylxf" fileName="screenDialog/img/img_screenD_2.png" xy="480,879" size="960,189" group="n24_qylx" locked="true"/>
     <image id="n13_fzlu" name="imgTitleBg" src="qylxcyijf" fileName="img/btn_cm_blue_1.png" pkg="te1gxawo" xy="548,847" size="210,64" group="n24_qylx" locked="true"/>
-    <text id="n14_fzlu" name="tfTitle" xy="574,863" size="157,31" group="n24_qylx" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" singleLine="true" text="神秘大门"/>
+    <text id="n14_fzlu" name="tfTitle" xy="574,863" size="157,31" group="n24_qylx" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" singleLine="true" text=""/>
     <image id="n19_u5yf" name="iconBg" src="oiqdcyigz" fileName="img/img_cm_wpx_1.png" pkg="te1gxawo" xy="546,932" size="86,86" group="n21_u5yf"/>
     <loader id="n20_u5yf" name="ladIcon" xy="557,943" size="64,64" group="n21_u5yf" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
     <group id="n21_u5yf" name="grpIcon" xy="546,932" size="86,86" group="n24_qylx" advanced="true"/>
     <image id="n16_fzlu" name="imgDown" src="fzlucyic2" fileName="old/img_UI3/dialog/img_Dialog_xiaosanjiao_7.png" pkg="te1gxawo" xy="1362,1037" group="n24_qylx" visible="false"/>
     <component id="n18_fzlu" name="labContent" src="gz74cyih8" fileName="lab/labTextVScroll.xml" pkg="te1gxawo" xy="662,935" size="704,82" group="n24_qylx">
-      <Label title="身体白又胖" titleColor="#666666" titleFontSize="20"/>
+      <Label titleColor="#666666" titleFontSize="20"/>
     </component>
     <image id="n17_fzlu" name="imgInputBg" src="qylxe" fileName="screenDialog/img/img_screenD_1.png" xy="905,826" size="390,44" group="n9_j5jv"/>
     <text id="n6_j5jv" name="inpAnswer" xy="914,830" size="376,41" group="n9_j5jv" input="true" prompt="[size=24]输入答案[/size]" fontSize="20" color="#333333" vAlign="middle" autoSize="none" singleLine="true" text=""/>
