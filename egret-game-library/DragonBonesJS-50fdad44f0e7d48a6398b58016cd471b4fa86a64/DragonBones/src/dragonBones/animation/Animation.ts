@@ -317,12 +317,12 @@ namespace dragonBones {
         public playConfig(animationConfig: AnimationConfig): AnimationState | null {
             const animationName = animationConfig.animation;
             if (!(animationName in this._animations)) {
-                console.warn(
-                    "Non-existent animation.\n",
-                    "DragonBones name: " + this._armature.armatureData.parent.name,
-                    "Armature name: " + this._armature.name,
-                    "Animation name: " + animationName
-                );
+                // console.warn(
+                //     "Non-existent animation.\n",
+                //     "DragonBones name: " + this._armature.armatureData.parent.name,
+                //     "Armature name: " + this._armature.name,
+                //     "Animation name: " + animationName
+                // );
 
                 return null;
             }

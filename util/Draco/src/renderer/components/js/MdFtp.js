@@ -105,6 +105,7 @@ export function uploadCdnVersionFile() {
             return;
         }
 
+        let releaseEnviron = ModelMgr.versionModel.environList.find(value => value.name === ModelMgr.versionModel.eEnviron.release);
         let readyEnviron = ModelMgr.versionModel.environList.find(value => value.name === ModelMgr.versionModel.eEnviron.ready);
         let readyPath = `${Global.svnPublishPath}${readyEnviron.localPath}`;
         let curGameVersion = releaseGameVersion;
@@ -116,7 +117,7 @@ export function uploadCdnVersionFile() {
                 continue;
             }
 
-            await uploadCdnSingleVersionFile(patchPath, readyEnviron.cdnRoot);
+            await uploadCdnSingleVersionFile(patchPath, releaseEnviron.cdnRoot);
             curGameVersion = i;
         }
 
@@ -180,7 +181,10 @@ function checkUploaderFile(rootPath, filePath, cdnRoot, uploadCount, successFunc
 function uploaderFile(rootPath, filePath, cdnRoot, successFunc, failFunc) {
     let formUploader = new qiniu.form_up.FormUploader(ModelMgr.ftpModel.qiniuConfig);
     let uploadToken = ModelMgr.ftpModel.uploadToken;
-    let fileKey = `${cdnRoot}/${filePath.split(`${rootPath}/`)[1]}`;
+    let fileKey = filePath.split(`${rootPath}/`)[1];
+    if (cdnRoot) {
+        fileKey = `${cdnRoot}/${fileKey}`;
+    }
     let readerStream = fs.createReadStream(filePath);
     let putExtra = new qiniu.form_up.PutExtra();
 
@@ -483,8 +487,15 @@ export function checkPolicyNum() {
 
 export async function pushGit() {
     try {
-        let commitCmdStr = `git commit -a -m "${ModelMgr.versionModel.publisher} 发布${ModelMgr.versionModel.curEnviron.name}版本 ${ModelMgr.versionModel.releaseVersion}"`;
-        await spawnExc.runCmd(commitCmdStr, Global.projPath, null, '提交文件错误');
+        if (ModelMgr.versionModel.curEnviron.pushGitEnable) {
+            let commitCmdStr = `git commit -a -m "${ModelMgr.versionModel.publisher} 发布${ModelMgr.versionModel.curEnviron.name}版本 ${ModelMgr.versionModel.releaseVersion}"`;
+            await spawnExc.runCmd(commitCmdStr, Global.projPath, null, '提交文件错误');
+        }
+
+        if (ModelMgr.versionModel.curEnviron.gitTagEnable) {
+            let commitCmdStr = `git tag version/release_v${ModelMgr.versionModel.releaseVersion}`;
+            await spawnExc.runCmd(commitCmdStr, Global.projPath, null, 'git打tag错误');
+        }
 
         let pullCmdStr = `git pull`;
         await spawnExc.runCmd(pullCmdStr, Global.projPath, null, '拉取分支错误');
@@ -498,21 +509,21 @@ export async function pushGit() {
     }
 }
 
-export async function gitTag() {
-    try {
-        //         git tag <tagName> //创建本地tag
-        // git push origin <tagName> //推送到远程仓库
-        let commitCmdStr = `git tag version/release_v${ModelMgr.versionModel.releaseVersion}`;
-        await spawnExc.runCmd(commitCmdStr, Global.projPath, null, 'git打tag错误');
+// export async function gitTag() {
+//     try {
+//         //         git tag <tagName> //创建本地tag
+//         // git push origin <tagName> //推送到远程仓库
+// let commitCmdStr = `git tag version/release_v${ModelMgr.versionModel.releaseVersion}`;
+// await spawnExc.runCmd(commitCmdStr, Global.projPath, null, 'git打tag错误');
 
-        let pullCmdStr = `git push origin version/release_v${ModelMgr.versionModel.releaseVersion}`;
-        await spawnExc.runCmd(pullCmdStr, Global.projPath, null, 'git推送tag错误');
+//         let pullCmdStr = `git push origin version/release_v${ModelMgr.versionModel.releaseVersion}`;
+//         await spawnExc.runCmd(pullCmdStr, Global.projPath, null, 'git推送tag错误');
 
-        Global.toast('推送git成功');
-    } catch (error) {
-        Global.snack('推送git错误', error);
-    }
-}
+//         Global.toast('推送git成功');
+//     } catch (error) {
+//         Global.snack('推送git错误', error);
+//     }
+// }
 
 export async function zipUploadGame() {
     // let filePath = `${Global.svnPublishPath}${environ.localPath}/${ModelMgr.versionModel.uploadVersion}/`;

@@ -7587,7 +7587,7 @@ var dragonBones;
         Animation.prototype.playConfig = function (animationConfig) {
             var animationName = animationConfig.animation;
             if (!(animationName in this._animations)) {
-                console.warn("Non-existent animation.\n", "DragonBones name: " + this._armature.armatureData.parent.name, "Armature name: " + this._armature.name, "Animation name: " + animationName);
+                // console.warn("Non-existent animation.\n", "DragonBones name: " + this._armature.armatureData.parent.name, "Armature name: " + this._armature.name, "Animation name: " + animationName);
                 return null;
             }
             var animationData = this._animations[animationName];
@@ -14564,7 +14564,7 @@ var dragonBones;
                     for (var k in this.textures) {
                         var textureData = this.textures[k];
                         textureData.renderTexture = new PIXI.Texture(this._renderTexture, textureData.region, // No need to set frame.
-                        textureData.region, new PIXI.Rectangle(0, 0, textureData.region.width, textureData.region.height)); // Phaser-ce can not support texture rotate. TODO
+                            textureData.region, new PIXI.Rectangle(0, 0, textureData.region.width, textureData.region.height)); // Phaser-ce can not support texture rotate. TODO
                     }
                 }
                 else {

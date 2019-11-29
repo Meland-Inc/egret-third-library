@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="401,882" overflow="scroll" scrollBarFlags="4" scrollBar="visible" scrollBarRes="ui://0axy98cgiv9318,ui://0axy98cgiv9318" designImage="ui://thvmj7vomquwj" designImageOffsetX="-1463" designImageOffsetY="-118" designImageAlpha="0" designImageLayer="1">
+<component size="401,882" overflow="scroll" scrollBarFlags="4" scrollBar="visible" scrollBarRes="ui://0axy98cgiv9318,ui://0axy98cgiv9318" designImage="ui://thvmj7vomquwj" designImageOffsetX="-1463" designImageOffsetY="-118" designImageLayer="1">
   <controller name="ctrlMapSizeStatus" pages="0,big,1,middle,2,small,3,custom" selected="0"/>
   <controller name="ctrlIsPublish" pages="0,false,1,true" selected="0"/>
   <controller name="ctrlIsManorCheckPoint" pages="0,true,1,false" selected="0"/>
@@ -20,6 +20,7 @@
       <Button title="删除地图" titleFontSize="18" icon="ui://te1gxawoeggjcyihf"/>
     </component>
     <group id="n42_ra2b" name="grpDesc" xy="10,62" size="380,118" collapsed="true"/>
+    <image id="n46_qq0e" name="imgLIne" src="vlrgcyijh" fileName="img/img_cm_line_1.png" pkg="te1gxawo" xy="11,199" size="378,3"/>
     <text id="n3_er8n" name="tfMapSize" xy="7,220" size="77,22" fontSize="18" color="#333333" vAlign="bottom" text="地图大小"/>
     <component id="n28_pz1n" name="cbMapSize" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="218,209" size="172,40">
       <ComboBox title="大" visibleItemCount="10" selectionController="ctrlMapSizeStatus">
@@ -32,12 +33,12 @@
     <image id="n4_er8n" name="imgMutil" src="iv93r" fileName="old/img/img_stencil_c_1.png" xy="131,286" group="n19_er8n"/>
     <image id="n5_er8n" name="imgWidthBG" src="eggjcyihs" fileName="img/img_cm_srk_1.png" pkg="te1gxawo" xy="11,269" size="102,40" group="n19_er8n"/>
     <image id="n6_er8n" name="imgHeightBG" src="eggjcyihs" fileName="img/img_cm_srk_1.png" pkg="te1gxawo" xy="162,269" size="102,40" group="n19_er8n"/>
-    <text id="n7_er8n" name="inpMapWidth" xy="11,270" size="101,38" group="n19_er8n" input="true" prompt="1920" restrict="0-9" keyboardType="4" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text="1000"/>
-    <text id="n8_er8n" name="inpMapHeight" xy="162,270" size="102,40" group="n19_er8n" input="true" prompt="1080" restrict="0-9" keyboardType="4" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text="1000"/>
+    <text id="n7_er8n" name="inpMapWidth" xy="11,270" size="101,38" group="n19_er8n" input="true" prompt="1920" restrict="0-9" keyboardType="4" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="1000"/>
+    <text id="n8_er8n" name="inpMapHeight" xy="162,270" size="102,40" group="n19_er8n" input="true" prompt="1080" restrict="0-9" keyboardType="4" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="1000"/>
     <component id="n9_er8n" name="btnUpdateMap" src="iv93s" fileName="old/btn/btnScale.xml" xy="290,272" size="100,37" group="n19_er8n">
       <Button title="更新尺寸" titleColor="#ffffff" titleFontSize="18" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <group id="n19_er8n" name="customInput" xy="11,269" size="380,41" advanced="true">
+    <group id="n19_er8n" name="customInput" xy="11,269" size="380,41" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlMapSizeStatus" pages="3"/>
     </group>
     <text id="n12_er8n" name="tfIsCanEdit" xy="7,341" size="147,29" group="n38_ra2b" fontSize="18" color="#333333" vAlign="middle" autoSize="none" text="编辑器是否可用"/>

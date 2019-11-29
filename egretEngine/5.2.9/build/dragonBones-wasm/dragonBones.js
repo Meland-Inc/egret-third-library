@@ -439,31 +439,31 @@ var dragonBones;
              * @version DragonBones 3.0
              * @language zh_CN
              */
-            x, 
+            x,
             /**
              * 垂直位移。
              * @version DragonBones 3.0
              * @language zh_CN
              */
-            y, 
+            y,
             /**
              * 倾斜。 (以弧度为单位)
              * @version DragonBones 3.0
              * @language zh_CN
              */
-            skew, 
+            skew,
             /**
              * 旋转。 (以弧度为单位)
              * @version DragonBones 3.0
              * @language zh_CN
              */
-            rotation, 
+            rotation,
             /**
              * 水平缩放。
              * @version DragonBones 3.0
              * @language zh_CN
              */
-            scaleX, 
+            scaleX,
             /**
              * 垂直缩放。
              * @version DragonBones 3.0
@@ -5393,7 +5393,7 @@ var dragonBones;
         Animation.prototype.playConfig = function (animationConfig) {
             var animationName = animationConfig.animation;
             if (!(animationName in this._animations)) {
-                console.warn("Non-existent animation.\n", "DragonBones name: " + this._armature.armatureData.parent.name, "Armature name: " + this._armature.name, "Animation name: " + animationName);
+                // console.warn("Non-existent animation.\n", "DragonBones name: " + this._armature.armatureData.parent.name, "Armature name: " + this._armature.name, "Animation name: " + animationName);
                 return null;
             }
             var animationData = this._animations[animationName];
