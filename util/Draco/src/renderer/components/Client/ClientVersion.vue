@@ -233,7 +233,7 @@
               data-mu-loading-size="24"
               color="pink500"
               @click="pushGit"
-              v-show="curEnviron&&curEnviron.pushGitEnable"
+              v-show="curEnviron&&(curEnviron.pushGitEnable||curEnviron.gitTagEnable)"
             >Git推送文件</mu-button>
             <!-- <mu-button
               v-loading="isGitTagLoading"
@@ -700,18 +700,18 @@ export default {
         Global.hideRegionLoading();
       }
     },
-    async gitTag() {
-      this.isGitTagLoading = true;
-      Global.showRegionLoading();
-      try {
-        await mdFtp.gitTag();
-        this.isGitTagLoading = false;
-        Global.hideRegionLoading();
-      } catch (error) {
-        this.isGitTagLoading = false;
-        Global.hideRegionLoading();
-      }
-    },
+    // async gitTag() {
+    //   this.isGitTagLoading = true;
+    //   Global.showRegionLoading();
+    //   try {
+    //     await mdFtp.gitTag();
+    //     this.isGitTagLoading = false;
+    //     Global.hideRegionLoading();
+    //   } catch (error) {
+    //     this.isGitTagLoading = false;
+    //     Global.hideRegionLoading();
+    //   }
+    // },
     async zipUploadGame() {
       this.isZipUploadGameLoading = true;
       Global.showRegionLoading();
@@ -777,13 +777,13 @@ export default {
           promiseList.push(mdFtp.applyPolicyNum);
         }
 
-        if (this.curEnviron.pushGitEnable) {
+        if (this.curEnviron.pushGitEnable || this.curEnviron.gitTagEnable) {
           promiseList.push(mdFtp.pushGit);
         }
 
-        if (this.curEnviron.gitTagEnable) {
-          promiseList.push(mdFtp.gitTag);
-        }
+        // if (this.curEnviron.gitTagEnable) {
+        //   promiseList.push(mdFtp.gitTag);
+        // }
 
         if (this.curEnviron.zipUploadGameEnable) {
           promiseList.push(mdFtp.zipUploadGame);
