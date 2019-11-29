@@ -16,7 +16,9 @@
     </component>
     <image id="n15_8qqi" name="imgSearchInputBg" src="oiqdcyigx" fileName="img/img_cm_ssk.png" pkg="te1gxawo" xy="1403,41" size="400,47" group="n19_ra2b"/>
     <text id="n18_ra2b" name="inpSearch" xy="1414,53" size="380,24" group="n19_ra2b" input="true" prompt="[color=#999999]请输入搜索内容[/color]" fontSize="20" color="#333333" align="center" vAlign="middle" autoSize="height" singleLine="true" autoClearText="true" text="请输入搜索内容"/>
-    <group id="n19_ra2b" name="grpSearchInput" xy="1403,41" size="400,47" group="n20_ra2b" collapsed="true"/>
+    <group id="n19_ra2b" name="grpSearchInput" xy="1403,41" size="400,47" group="n20_ra2b" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlViewStatus" pages="0,1"/>
+    </group>
     <component id="n6_8qqi" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1831,42" size="48,48" group="n20_ra2b">
       <Button icon="ui://0axy98cg8qqi3l"/>
     </component>
@@ -46,7 +48,7 @@
     <group id="n24_ra2b" name="grpTemplateInfo" xy="31,118" size="1833,882" group="n20_ra2b" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlViewStatus" pages="0,1"/>
     </group>
-    <group id="n20_ra2b" name="root" xy="31,30" size="1860,1000" advanced="true">
+    <group id="n20_ra2b" name="root" xy="31,30" size="1860,999" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>

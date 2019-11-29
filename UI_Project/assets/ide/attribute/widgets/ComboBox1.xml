@@ -9,11 +9,11 @@
       <relation target="" sidePair="width-width,height-height"/>
     </text>
     <image id="n3_qq0e" name="imgDown" src="c1h7cyii4" fileName="img/icon_xl_1.png" pkg="te1gxawo" xy="175,14">
-      <gearDisplay controller="button" pages="1"/>
+      <gearDisplay controller="button" pages="0,2,3"/>
       <relation target="" sidePair="right-right"/>
     </image>
     <image id="n4_qq0e" name="imgUp" src="c1h7cyii5" fileName="img/icon_xl_2.png" pkg="te1gxawo" xy="175,14">
-      <gearDisplay controller="button" pages="0,2,3"/>
+      <gearDisplay controller="button" pages="1"/>
       <relation target="" sidePair="right-right"/>
     </image>
   </displayList>
