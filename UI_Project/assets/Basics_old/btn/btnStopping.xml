@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<component size="120,40" extention="Button">
-  <controller name="button" pages="0,up,1,down" selected="0"/>
-  <displayList>
-    <image id="n4_edsm" name="n4" src="efrs1x" fileName="newImg/btn_cm_yellow2.png" pkg="te1gxawo" xy="0,0" size="120,40"/>
-    <text id="n5_edsm" name="n5" xy="13,5" size="93,29" fontSize="22" color="#672f16" align="center" vAlign="middle" text="停止运行"/>
-  </displayList>
-  <Button/>
-</component>
