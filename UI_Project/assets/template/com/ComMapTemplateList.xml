@@ -17,16 +17,16 @@
     <group id="n10_pz1n" name="grpBtnSelfType" xy="2,11" size="110,194" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlTemplateType" pages="0,1,2"/>
     </group>
-    <component id="n11_qncg" name="btnRecommended" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="2,11" size="110,58" group="n14_qncg" touchable="false">
+    <component id="n11_qncg" name="btnRecommended" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="0,11" size="110,58" group="n14_qncg" touchable="false">
       <Button checked="true" title="官方推荐" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3"/>
     </component>
-    <component id="n12_qncg" name="btnHot" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="2,79" size="110,58" group="n14_qncg" touchable="false">
+    <component id="n12_qncg" name="btnHot" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="0,79" size="110,58" group="n14_qncg" touchable="false">
       <Button title="热门" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3"/>
     </component>
-    <component id="n13_qncg" name="btnCollection" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="2,147" size="110,58" group="n14_qncg" touchable="false">
+    <component id="n13_qncg" name="btnCollection" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="0,147" size="110,58" group="n14_qncg" touchable="false">
       <Button title="最新" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3"/>
     </component>
-    <group id="n14_qncg" name="grpBtnAllType" xy="2,11" size="110,194" locked="true" advanced="true">
+    <group id="n14_qncg" name="grpBtnAllType" xy="0,11" size="110,194" locked="true" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlTemplateType" pages="3"/>
     </group>
     <list id="n8_pz1n" name="lstTemplate" xy="129,16" size="1266,850" layout="flow_hz" overflow="scroll" scrollBarFlags="4" scrollBarMargin="0,0,0,3" scrollBarRes="ui://0axy98cghgj74a," lineGap="6" colGap="10" defaultItem="ui://0axy98cgpz1n3q" autoClearItems="true">
