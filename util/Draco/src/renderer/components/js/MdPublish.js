@@ -87,9 +87,14 @@ export async function publishProject() {
         await spawnExc.runCmd(cmdStr, Global.projPath, null, '发布当前项目错误');
         ModelMgr.versionModel.setNewVersion(releaseVersion);
 
+        let indexPath = `${Global.projPath}/bin-release/web/${releaseVersion}/index.html`;
+        let indexContent = await fsExc.readFile(indexPath);
+        if (ModelMgr.versionModel.curEnviron.codeVersionEnable) {
+            indexContent = indexContent.replace("//window.trunkName", `window.trunkName="${ModelMgr.versionModel.curEnviron.trunkName}"`);
+            await fsExc.writeFile(indexPath, indexContent);
+        }
+
         if (ModelMgr.versionModel.versionDesc) {
-            let indexPath = `${Global.projPath}/bin-release/web/${releaseVersion}/index.html`;
-            let indexContent = await fsExc.readFile(indexPath);
             indexContent = indexContent.replace("//window.location.href", `window.location.hash='publisher="${ModelMgr.versionModel.publisher}"&versionDesc="${ModelMgr.versionModel.versionDesc}"'`);
             await fsExc.writeFile(indexPath, indexContent);
         }

@@ -121,6 +121,7 @@ export default {
         await this.importAsync();
         await this.importIndie();
         await this.importMapData();
+        await this.importExternal();
         Global.dialog("One·for·All Success");
         Global.hideLoading();
       } catch (error) {
