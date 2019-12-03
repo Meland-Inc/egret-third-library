@@ -1,13 +1,16 @@
-var __reflect = (this && this.__reflect) || function (p, c, t) {
-    p.__class__ = c, t ? t.push(c) : t = [c], p.__types__ = p.__types__ ? t.concat(p.__types__) : t;
-};
-var __extends = this && this.__extends || function __extends(t, e) { 
- function r() { 
- this.constructor = t;
-}
-for (var i in e) e.hasOwnProperty(i) && (t[i] = e[i]);
-r.prototype = e.prototype, t.prototype = new r();
-};
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -44,6 +47,228 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 //////////////////////////////////////////////////////////////////////////////////////
 var RES;
 (function (RES) {
+})(RES || (RES = {}));
+//////////////////////////////////////////////////////////////////////////////////////
+//
+//  Copyright (c) 2014-present, Egret Technology.
+//  All rights reserved.
+//  Redistribution and use in source and binary forms, with or without
+//  modification, are permitted provided that the following conditions are met:
+//
+//     * Redistributions of source code must retain the above copyright
+//       notice, this list of conditions and the following disclaimer.
+//     * Redistributions in binary form must reproduce the above copyright
+//       notice, this list of conditions and the following disclaimer in the
+//       documentation and/or other materials provided with the distribution.
+//     * Neither the name of the Egret nor the
+//       names of its contributors may be used to endorse or promote products
+//       derived from this software without specific prior written permission.
+//
+//  THIS SOFTWARE IS PROVIDED BY EGRET AND CONTRIBUTORS "AS IS" AND ANY EXPRESS
+//  OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+//  OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+//  IN NO EVENT SHALL EGRET AND CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+//  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+//  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;LOSS OF USE, DATA,
+//  OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+//  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+//  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+//  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//
+//////////////////////////////////////////////////////////////////////////////////////
+var RES;
+(function (RES) {
+    /**
+     * @private
+     */
+    var NativeVersionController = /** @class */ (function () {
+        function NativeVersionController() {
+        }
+        NativeVersionController.prototype.init = function () {
+            this.versionInfo = this.getLocalData("all.manifest");
+            return Promise.resolve();
+        };
+        NativeVersionController.prototype.getVirtualUrl = function (url) {
+            return url;
+        };
+        NativeVersionController.prototype.getLocalData = function (filePath) {
+            if (egret_native.readUpdateFileSync && egret_native.readResourceFileSync) {
+                //先取更新目录
+                var content = egret_native.readUpdateFileSync(filePath);
+                if (content != null) {
+                    return JSON.parse(content);
+                }
+                //再取资源目录
+                content = egret_native.readResourceFileSync(filePath);
+                if (content != null) {
+                    return JSON.parse(content);
+                }
+            }
+            return null;
+        };
+        return NativeVersionController;
+    }());
+    RES.NativeVersionController = NativeVersionController;
+    if (egret.Capabilities.runtimeType == egret.RuntimeType.NATIVE) {
+        RES.VersionController = NativeVersionController;
+    }
+})(RES || (RES = {}));
+var RES;
+(function (RES) {
+    /**
+     * Print the memory occupied by the picture.
+     * @version Egret 5.2
+     * @platform Web,Native
+     * @language en_US
+     */
+    /**
+     * 对文件路径的一些操作，针对的是 C:/A/B/C/D/example.ts这种格式
+     * @version Egret 5.2
+     * @platform Web,Native
+     * @language zh_CN
+     */
+    var path;
+    (function (path_1) {
+        /**
+         * Format the file path,"C:/A/B//C//D//example.ts"=>"C:/A/B/C/D/example.ts"
+         * @param filename Incoming file path
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language en_US
+         */
+        /**
+         * 格式化文件路径，"C:/A/B//C//D//example.ts"=>"C:/A/B/C/D/example.ts"
+         * @param filename 传入的文件路径
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language zh_CN
+         */
+        function normalize(filename) {
+            var arr = filename.split("/");
+            return arr.filter(function (value, index) { return !!value || index == arr.length - 1; }).join("/");
+        }
+        path_1.normalize = normalize;
+        /**
+         * Get the file name according to the file path, "C:/A/B/example.ts"=>"example.ts"
+         * @param filename Incoming file path
+         * @return File name
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language en_US
+         */
+        /**
+         * 根据文件路径得到文件名字，"C:/A/B/example.ts"=>"example.ts"
+         * @param filename 传入的文件路径
+         * @return 文件的名字
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language zh_CN
+         */
+        function basename(filename) {
+            return filename.substr(filename.lastIndexOf("/") + 1);
+        }
+        path_1.basename = basename;
+        /**
+         * The path to the folder where the file is located,"C:/A/B/example.ts"=>"C:/A/B"
+         * @param filename Incoming file path
+         * @return The address of the folder where the file is located
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language en_US
+         */
+        /**
+         * 文件所在文件夹路径，"C:/A/B/example.ts"=>"C:/A/B"
+         * @param filename 传入的文件路径
+         * @return 文件所在文件夹的地址
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language zh_CN
+         */
+        function dirname(path) {
+            return path.substr(0, path.lastIndexOf("/"));
+        }
+        path_1.dirname = dirname;
+    })(path = RES.path || (RES.path = {}));
+})(RES || (RES = {}));
+var RES;
+(function (RES) {
+    /**
+    * @internal
+    */
+    var NewFileSystem = /** @class */ (function () {
+        function NewFileSystem(data) {
+            this.data = data;
+        }
+        NewFileSystem.prototype.profile = function () {
+            console.log(this.data);
+        };
+        NewFileSystem.prototype.addFile = function (filename, type) {
+            if (!type)
+                type = "";
+            filename = RES.path.normalize(filename);
+            var basefilename = RES.path.basename(filename);
+            var folder = RES.path.dirname(filename);
+            if (!this.exists(folder)) {
+                this.mkdir(folder);
+            }
+            var d = this.resolve(folder);
+            d[basefilename] = { url: filename, type: type };
+        };
+        NewFileSystem.prototype.getFile = function (filename) {
+            var result = this.resolve(filename);
+            if (result) {
+                result.name = filename;
+            }
+            return result;
+        };
+        NewFileSystem.prototype.resolve = function (dirpath) {
+            if (dirpath == "") {
+                return this.data;
+            }
+            dirpath = RES.path.normalize(dirpath);
+            var list = dirpath.split("/");
+            var current = this.data;
+            for (var _i = 0, list_1 = list; _i < list_1.length; _i++) {
+                var f = list_1[_i];
+                if (current) {
+                    current = current[f];
+                }
+                else {
+                    return current;
+                }
+            }
+            return current;
+        };
+        NewFileSystem.prototype.mkdir = function (dirpath) {
+            dirpath = RES.path.normalize(dirpath);
+            var list = dirpath.split("/");
+            var current = this.data;
+            for (var _i = 0, list_2 = list; _i < list_2.length; _i++) {
+                var f = list_2[_i];
+                if (!current[f]) {
+                    current[f] = {};
+                }
+                current = current[f];
+            }
+        };
+        NewFileSystem.prototype.exists = function (dirpath) {
+            if (dirpath == "")
+                return true;
+            dirpath = RES.path.normalize(dirpath);
+            var list = dirpath.split("/");
+            var current = this.data;
+            for (var _i = 0, list_3 = list; _i < list_3.length; _i++) {
+                var f = list_3[_i];
+                if (!current[f]) {
+                    return false;
+                }
+                current = current[f];
+            }
+            return true;
+        };
+        return NewFileSystem;
+    }());
+    RES.NewFileSystem = NewFileSystem;
 })(RES || (RES = {}));
 var RES;
 (function (RES) {
@@ -97,7 +322,7 @@ var RES;
      * @classdesc
      * @private
      */
-    var ResourceConfig = (function () {
+    var ResourceConfig = /** @class */ (function () {
         function ResourceConfig() {
         }
         ResourceConfig.prototype.init = function () {
@@ -305,7 +530,6 @@ var RES;
         return ResourceConfig;
     }());
     RES.ResourceConfig = ResourceConfig;
-    __reflect(ResourceConfig.prototype, "RES.ResourceConfig");
 })(RES || (RES = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
@@ -342,7 +566,7 @@ var RES;
      * @classdesc
      * @private
      */
-    var ResourceLoader = (function () {
+    var ResourceLoader = /** @class */ (function () {
         function ResourceLoader() {
             /**
              * 当前组加载的项总个数,key为groupName
@@ -443,8 +667,8 @@ var RES;
             if (this.itemListPriorityDic[priority] == undefined) {
                 this.itemListPriorityDic[priority] = [];
             }
-            for (var _i = 0, list_1 = list; _i < list_1.length; _i++) {
-                var item = list_1[_i];
+            for (var _i = 0, list_4 = list; _i < list_4.length; _i++) {
+                var item = list_4[_i];
                 if (this.itemLoadDic[item.root + item.name] == 1) {
                     continue;
                 }
@@ -567,6 +791,9 @@ var RES;
         ResourceLoader.prototype.getOneResourceInfoInGroup = function () {
             if (this.failedList.length > 0)
                 return this.failedList.shift();
+            if (this.lazyLoadList.length > 0)
+                //后请求的先加载，以便更快获取当前需要的资源
+                return this.lazyLoadList.pop();
             var maxPriority = Number.NEGATIVE_INFINITY;
             for (var p in this.itemListPriorityDic) {
                 maxPriority = Math.max(maxPriority, p);
@@ -689,7 +916,929 @@ var RES;
         return ResourceLoader;
     }());
     RES.ResourceLoader = ResourceLoader;
-    __reflect(ResourceLoader.prototype, "RES.ResourceLoader");
+})(RES || (RES = {}));
+var RES;
+(function (RES) {
+    var __tempCache = {};
+    /**
+     * Print the memory occupied by the picture.
+     * @version Egret 5.2
+     * @platform Web,Native
+     * @language en_US
+     */
+    /**
+     * 打印图片所占内存
+     * @version Egret 5.2
+     * @platform Web,Native
+     * @language zh_CN
+     */
+    function profile() {
+        RES.config.config.fileSystem.profile();
+        console.log(__tempCache);
+        //todo 
+        var totalImageSize = 0;
+        for (var key in __tempCache) {
+            var img = __tempCache[key];
+            if (img instanceof egret.Texture) {
+                totalImageSize += img.$bitmapWidth * img.$bitmapHeight * 4;
+            }
+        }
+        console.log("gpu size : " + (totalImageSize / 1024).toFixed(3) + "kb");
+    }
+    RES.profile = profile;
+    /**
+    * @internal
+    */
+    RES.host = {
+        state: {},
+        get resourceConfig() {
+            return RES.config;
+        },
+        load: function (r, processorName) {
+            var processor = typeof processorName == 'string' ? RES.processor._map[processorName] : processorName;
+            return RES.queue["loadResource"](r, processor);
+        },
+        unload: function (r) { return RES.queue.unloadResource(r); },
+        save: function (resource, data) {
+            RES.host.state[resource.root + resource.name] = 2;
+            delete resource.promise;
+            __tempCache[resource.root + resource.name] = data;
+        },
+        get: function (resource) {
+            return __tempCache[resource.root + resource.name];
+        },
+        remove: function (resource) {
+            delete RES.host.state[resource.root + resource.name];
+            delete __tempCache[resource.root + resource.name];
+        }
+    };
+    /**
+     * @internal
+     */
+    RES.config = new RES.ResourceConfig();
+    /**
+     * @internal
+     */
+    RES.queue = new RES.ResourceLoader();
+    /**
+    * @private
+    */
+    var ResourceManagerError = /** @class */ (function (_super) {
+        __extends(ResourceManagerError, _super);
+        function ResourceManagerError(code, replacer, replacer2) {
+            var _this = _super.call(this) || this;
+            /**
+             * why instanceof e  != ResourceManagerError ???
+             * see link : https://github.com/Microsoft/TypeScript/wiki/Breaking-Changes#extending-built-ins-like-error-array-and-map-may-no-longer-work
+             */
+            _this.__resource_manager_error__ = true;
+            _this.name = code.toString();
+            _this.message = ResourceManagerError.errorMessage[code].replace("{0}", replacer).replace("{1}", replacer2);
+            return _this;
+        }
+        ResourceManagerError.errorMessage = {
+            1001: '文件加载失败:{0}',
+            1002: "ResourceManager 初始化失败：配置文件加载失败",
+            2001: "{0}解析失败,不支持指定解析类型:\'{1}\'，请编写自定义 Processor ，更多内容请参见 https://github.com/egret-labs/resourcemanager/blob/master/docs/README.md#processor",
+            2002: "Analyzer 相关API 在 ResourceManager 中不再支持，请编写自定义 Processor ，更多内容请参见 https://github.com/egret-labs/resourcemanager/blob/master/docs/README.md#processor",
+            2003: "{0}解析失败,错误原因:{1}",
+            2004: "无法找到文件类型:{0}",
+            2005: "RES加载了不存在或空的资源组:\"{0}\"",
+            2006: "资源配置文件中无法找到特定的资源:{0}"
+        };
+        return ResourceManagerError;
+    }(Error));
+    RES.ResourceManagerError = ResourceManagerError;
+})(RES || (RES = {}));
+var RES;
+(function (RES) {
+    var processor;
+    (function (processor_1) {
+        /**
+         * @internal
+         * @param resource 对应的资源接口，需要type属性
+         */
+        function isSupport(resource) {
+            return processor_1._map[resource.type];
+        }
+        processor_1.isSupport = isSupport;
+        /**
+         * Register the processor that loads the resource
+         * @param type Load resource type
+         * @param processor Loaded processor, an instance that implements the Processor interface
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language en_US
+         */
+        /**
+         * 注册加载资源的处理器
+         * @param type 加载资源类型
+         * @param processor 加载的处理器，一个实现Processor接口的实例
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language zh_CN
+         */
+        function map(type, processor) {
+            processor_1._map[type] = processor;
+        }
+        processor_1.map = map;
+        /**
+        * @internal
+        */
+        function promisify(loader, resource) {
+            var _this = this;
+            return new Promise(function (resolve, reject) {
+                var onSuccess = function () {
+                    var texture = loader['data'] ? loader['data'] : loader['response'];
+                    resolve(texture);
+                };
+                var onError = function () {
+                    var e = new RES.ResourceManagerError(1001, resource.url);
+                    reject(e);
+                };
+                loader.addEventListener(egret.Event.COMPLETE, onSuccess, _this);
+                loader.addEventListener(egret.IOErrorEvent.IO_ERROR, onError, _this);
+            });
+        }
+        /**
+         * @private
+         * @param url
+         * @param file
+         */
+        function getRelativePath(url, file) {
+            if (file.indexOf("://") != -1) {
+                return file;
+            }
+            url = url.split("\\").join("/");
+            var params = url.match(/#.*|\?.*/);
+            var paramUrl = "";
+            if (params) {
+                paramUrl = params[0];
+            }
+            var index = url.lastIndexOf("/");
+            if (index != -1) {
+                url = url.substring(0, index + 1) + file;
+            }
+            else {
+                url = file;
+            }
+            return url + paramUrl;
+        }
+        processor_1.getRelativePath = getRelativePath;
+        processor_1.ImageProcessor = {
+            onLoadStart: function (host, resource) {
+                var loader = new egret.ImageLoader();
+                loader.load(RES.getVirtualUrl(resource.root + resource.url));
+                return promisify(loader, resource)
+                    .then(function (bitmapData) {
+                    var texture = new egret.Texture();
+                    texture._setBitmapData(bitmapData);
+                    var r = host.resourceConfig.getResource(resource.name);
+                    if (r && r.scale9grid) {
+                        var list = r.scale9grid.split(",");
+                        texture["scale9Grid"] = new egret.Rectangle(parseInt(list[0]), parseInt(list[1]), parseInt(list[2]), parseInt(list[3]));
+                    }
+                    return texture;
+                });
+            },
+            onRemoveStart: function (host, resource) {
+                var texture = host.get(resource);
+                texture.dispose();
+            }
+        };
+        processor_1.BinaryProcessor = {
+            onLoadStart: function (host, resource) {
+                var request = new egret.HttpRequest();
+                request.responseType = egret.HttpResponseType.ARRAY_BUFFER;
+                request.open(RES.getVirtualUrl(resource.root + resource.url), "get");
+                request.send();
+                return promisify(request, resource);
+            },
+            onRemoveStart: function (host, resource) {
+            }
+        };
+        processor_1.TextProcessor = {
+            onLoadStart: function (host, resource) {
+                var request = new egret.HttpRequest();
+                request.responseType = egret.HttpResponseType.TEXT;
+                request.open(RES.getVirtualUrl(resource.root + resource.url), "get");
+                request.send();
+                return promisify(request, resource);
+            },
+            onRemoveStart: function (host, resource) {
+                return true;
+            }
+        };
+        processor_1.JsonProcessor = {
+            onLoadStart: function (host, resource) {
+                return host.load(resource, 'text').then(function (text) {
+                    var data = JSON.parse(text);
+                    return data;
+                });
+            },
+            onRemoveStart: function (host, request) {
+            }
+        };
+        /**
+        * @internal
+        */
+        processor_1.XMLProcessor = {
+            onLoadStart: function (host, resource) {
+                return host.load(resource, 'text').then(function (text) {
+                    var data = egret.XML.parse(text);
+                    return data;
+                });
+            },
+            onRemoveStart: function (host, resource) {
+                return true;
+            }
+        };
+        /**
+        * @internal
+        */
+        processor_1.CommonJSProcessor = {
+            onLoadStart: function (host, resource) {
+                // let text = await host.load(resource, 'text');
+                return host.load(resource, 'text').then(function (text) {
+                    var f = new Function('require', 'exports', text);
+                    var require = function () { };
+                    var exports = {};
+                    try {
+                        f(require, exports);
+                    }
+                    catch (e) {
+                        throw new RES.ResourceManagerError(2003, resource.name, e.message);
+                    }
+                    return exports;
+                });
+            },
+            onRemoveStart: function (host, resource) {
+            }
+        };
+        /**
+        * @internal
+        */
+        processor_1.SheetProcessor = {
+            onLoadStart: function (host, resource) {
+                return host.load(resource, "json").then(function (data) {
+                    var r = host.resourceConfig.getResource(RES.nameSelector(data.file));
+                    if (!r) {
+                        var imageName = getRelativePath(resource.url, data.file);
+                        r = { name: imageName, url: imageName, type: 'image', root: resource.root };
+                    }
+                    return host.load(r)
+                        .then(function (bitmapData) {
+                        var frames = data.frames;
+                        var spriteSheet = new egret.SpriteSheet(bitmapData);
+                        spriteSheet["$resourceInfo"] = r;
+                        for (var subkey in frames) {
+                            var config = frames[subkey];
+                            var texture = spriteSheet.createTexture(subkey, config.x, config.y, config.w, config.h, config.offX, config.offY, config.sourceW, config.sourceH);
+                            if (config["scale9grid"]) {
+                                var str = config["scale9grid"];
+                                var list = str.split(",");
+                                texture["scale9Grid"] = new egret.Rectangle(parseInt(list[0]), parseInt(list[1]), parseInt(list[2]), parseInt(list[3]));
+                            }
+                        }
+                        host.save(r, bitmapData);
+                        return spriteSheet;
+                    }, function (e) {
+                        host.remove(r);
+                        throw e;
+                    });
+                });
+            },
+            getData: function (host, resource, key, subkey) {
+                var data = host.get(resource);
+                if (data) {
+                    return data.getTexture(subkey);
+                }
+                else {
+                    return null;
+                }
+            },
+            onRemoveStart: function (host, resource) {
+                var sheet = host.get(resource);
+                var r = sheet["$resourceInfo"];
+                sheet.dispose();
+                host.unload(r);
+            }
+        };
+        var fontGetTexturePath = function (url, fntText) {
+            var file = "";
+            var lines = fntText.split("\n");
+            var pngLine = lines[2];
+            var index = pngLine.indexOf("file=\"");
+            if (index != -1) {
+                pngLine = pngLine.substring(index + 6);
+                index = pngLine.indexOf("\"");
+                file = pngLine.substring(0, index);
+            }
+            url = url.split("\\").join("/");
+            var index = url.lastIndexOf("/");
+            if (index != -1) {
+                url = url.substring(0, index + 1) + file;
+            }
+            else {
+                url = file;
+            }
+            return url;
+        };
+        /**
+        * @internal
+        */
+        processor_1.FontProcessor = {
+            onLoadStart: function (host, resource) {
+                // let data: string = await host.load(resource, 'text');
+                return host.load(resource, 'text').then(function (data) {
+                    var config;
+                    try {
+                        config = JSON.parse(data);
+                    }
+                    catch (e) {
+                        config = data;
+                    }
+                    var imageName;
+                    if (typeof config === 'string') {
+                        imageName = fontGetTexturePath(resource.url, config);
+                    }
+                    else {
+                        imageName = getRelativePath(resource.url, config.file);
+                    }
+                    var r = host.resourceConfig.getResource(RES.nameSelector(imageName));
+                    if (!r) {
+                        r = { name: imageName, url: imageName, type: 'image', root: resource.root };
+                    }
+                    // var texture: egret.Texture = await host.load(r);
+                    return host.load(r).then(function (texture) {
+                        var font = new egret.BitmapFont(texture, config);
+                        font["$resourceInfo"] = r;
+                        // todo refactor
+                        host.save(r, texture);
+                        return font;
+                    }, function (e) {
+                        host.remove(r);
+                        throw e;
+                    });
+                });
+            },
+            onRemoveStart: function (host, resource) {
+                var font = host.get(resource);
+                var r = font["$resourceInfo"];
+                host.unload(r);
+            }
+        };
+        processor_1.SoundProcessor = {
+            onLoadStart: function (host, resource) {
+                var sound = new egret.Sound();
+                sound.load(RES.getVirtualUrl(resource.root + resource.url));
+                return promisify(sound, resource).then(function () {
+                    return sound;
+                });
+            },
+            onRemoveStart: function (host, resource) {
+            }
+        };
+        /**
+        * @internal
+        */
+        processor_1.MovieClipProcessor = {
+            onLoadStart: function (host, resource) {
+                var mcData;
+                var imageResource;
+                return host.load(resource, 'json')
+                    .then(function (value) {
+                    mcData = value;
+                    var jsonPath = resource.name;
+                    var imagePath = jsonPath.substring(0, jsonPath.lastIndexOf(".")) + ".png";
+                    imageResource = host.resourceConfig.getResource(imagePath);
+                    if (!imageResource) {
+                        throw new RES.ResourceManagerError(1001, imagePath);
+                    }
+                    return host.load(imageResource);
+                }).then(function (value) {
+                    host.save(imageResource, value);
+                    var mcTexture = value;
+                    var mcDataFactory = new egret.MovieClipDataFactory(mcData, mcTexture);
+                    return mcDataFactory;
+                });
+            },
+            onRemoveStart: function (host, resource) {
+                var mcFactory = host.get(resource);
+                mcFactory.clearCache();
+                mcFactory.$spriteSheet.dispose();
+                // refactor
+                var jsonPath = resource.name;
+                var imagePath = jsonPath.substring(0, jsonPath.lastIndexOf(".")) + ".png";
+                var imageResource = host.resourceConfig.getResource(imagePath);
+                if (imageResource) {
+                    host.unload(imageResource);
+                }
+            }
+        };
+        /**
+        * @internal
+        */
+        processor_1.MergeJSONProcessor = {
+            onLoadStart: function (host, resource) {
+                // let data = await host.load(resource, 'json');
+                return host.load(resource, 'json').then(function (data) {
+                    for (var key in data) {
+                        RES.config.addSubkey(key, resource.name);
+                    }
+                    return data;
+                });
+            },
+            getData: function (host, resource, key, subkey) {
+                var data = host.get(resource);
+                if (data) {
+                    return data[subkey];
+                }
+                else {
+                    console.error("missing resource :" + resource.name);
+                    return null;
+                }
+            },
+            onRemoveStart: function (host, resource) {
+            }
+        };
+        /**
+        * @internal
+        */
+        processor_1.LegacyResourceConfigProcessor = {
+            onLoadStart: function (host, resource) {
+                return host.load(resource, 'json').then(function (data) {
+                    var resConfigData = RES.config.config;
+                    var root = resource.root;
+                    var fileSystem = resConfigData.fileSystem;
+                    if (!fileSystem) {
+                        fileSystem = {
+                            fsData: {},
+                            getFile: function (filename) {
+                                return fsData[filename];
+                            },
+                            addFile: function (data) {
+                                if (!data.type)
+                                    data.type = "";
+                                if (root == undefined) {
+                                    data.root = "";
+                                }
+                                fsData[data.name] = data;
+                            },
+                            profile: function () {
+                                console.log(fsData);
+                            },
+                            removeFile: function (filename) {
+                                delete fsData[filename];
+                            }
+                        };
+                        resConfigData.fileSystem = fileSystem;
+                    }
+                    var groups = resConfigData.groups;
+                    for (var _i = 0, _a = data.groups; _i < _a.length; _i++) {
+                        var g = _a[_i];
+                        if (g.keys == "") {
+                            groups[g.name] = [];
+                        }
+                        else {
+                            groups[g.name] = g.keys.split(",");
+                        }
+                    }
+                    var alias = resConfigData.alias;
+                    var fsData = fileSystem['fsData'];
+                    var _loop_1 = function (resource_1) {
+                        fsData[resource_1.name] = resource_1;
+                        fsData[resource_1.name].root = root;
+                        if (resource_1.subkeys) {
+                            resource_1.subkeys.split(",").forEach(function (subkey) {
+                                alias[subkey] = resource_1.name + "#" + subkey;
+                                alias[resource_1.name + "." + subkey] = resource_1.name + "#" + subkey;
+                            });
+                            // ResourceConfig.
+                        }
+                    };
+                    for (var _b = 0, _c = data.resources; _b < _c.length; _b++) {
+                        var resource_1 = _c[_b];
+                        _loop_1(resource_1);
+                    }
+                    host.save(resource, data);
+                    return data;
+                });
+            },
+            onRemoveStart: function () {
+            }
+        };
+        /**
+        * @internal
+        */
+        processor_1._map = {
+            "image": processor_1.ImageProcessor,
+            "json": processor_1.JsonProcessor,
+            "text": processor_1.TextProcessor,
+            "xml": processor_1.XMLProcessor,
+            "sheet": processor_1.SheetProcessor,
+            "font": processor_1.FontProcessor,
+            "bin": processor_1.BinaryProcessor,
+            "commonjs": processor_1.CommonJSProcessor,
+            "sound": processor_1.SoundProcessor,
+            "movieclip": processor_1.MovieClipProcessor,
+            "mergeJson": processor_1.MergeJSONProcessor,
+            "legacyResourceConfig": processor_1.LegacyResourceConfigProcessor,
+        };
+    })(processor = RES.processor || (RES.processor = {}));
+})(RES || (RES = {}));
+//////////////////////////////////////////////////////////////////////////////////////
+//
+//  Copyright (c) 2014-present, Egret Technology.
+//  All rights reserved.
+//  Redistribution and use in source and binary forms, with or without
+//  modification, are permitted provided that the following conditions are met:
+//
+//     * Redistributions of source code must retain the above copyright
+//       notice, this list of conditions and the following disclaimer.
+//     * Redistributions in binary form must reproduce the above copyright
+//       notice, this list of conditions and the following disclaimer in the
+//       documentation and/or other materials provided with the distribution.
+//     * Neither the name of the Egret nor the
+//       names of its contributors may be used to endorse or promote products
+//       derived from this software without specific prior written permission.
+//
+//  THIS SOFTWARE IS PROVIDED BY EGRET AND CONTRIBUTORS "AS IS" AND ANY EXPRESS
+//  OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+//  OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+//  IN NO EVENT SHALL EGRET AND CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+//  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+//  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;LOSS OF USE, DATA,
+//  OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+//  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+//  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+//  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//
+//////////////////////////////////////////////////////////////////////////////////////
+var RES;
+(function (RES) {
+    /**
+     * The events of resource loading.
+     * @version Egret 5.2
+     * @platform Web,Native
+     * @language en_US
+     */
+    /**
+     * 资源加载事件。
+     * @version Egret 5.2
+     * @platform Web,Native
+     * @language zh_CN
+     */
+    var ResourceEvent = /** @class */ (function (_super) {
+        __extends(ResourceEvent, _super);
+        /**
+         * Creates an Event object to pass as a parameter to event listeners.
+         * @param type  The type of the event, accessible as Event.type.
+         * @param bubbles  Determines whether the Event object participates in the bubbling stage of the event flow. The default value is false.
+         * @param cancelable Determines whether the Event object can be canceled. The default values is false.
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @private
+         * @language en_US
+         */
+        /**
+         * 创建一个作为参数传递给事件侦听器的 Event 对象。
+         * @param type  事件的类型，可以作为 Event.type 访问。
+         * @param bubbles  确定 Event 对象是否参与事件流的冒泡阶段。默认值为 false。
+         * @param cancelable 确定是否可以取消 Event 对象。默认值为 false。
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @private
+         * @language zh_CN
+         */
+        function ResourceEvent(type, bubbles, cancelable) {
+            if (bubbles === void 0) { bubbles = false; }
+            if (cancelable === void 0) { cancelable = false; }
+            var _this = _super.call(this, type, bubbles, cancelable) || this;
+            /**
+             * File number that has been loaded.
+             * @version Egret 5.2
+             * @platform Web,Native
+             * @language en_US
+             */
+            /**
+             * 已经加载的文件数。
+             * @version Egret 5.2
+             * @platform Web,Native
+             * @language zh_CN
+             */
+            _this.itemsLoaded = 0;
+            /**
+             * Total file number to load.
+             * @version Egret 5.2
+             * @platform Web,Native
+             * @language en_US
+             */
+            /**
+             * 要加载的总文件数。
+             * @version Egret 5.2
+             * @platform Web,Native
+             * @language zh_CN
+             */
+            _this.itemsTotal = 0;
+            /**
+             * Resource group name.
+             * @version Egret 5.2
+             * @platform Web,Native
+             * @language en_US
+             */
+            /**
+             * 资源组名。
+             * @version Egret 5.2
+             * @platform Web,Native
+             * @language zh_CN
+             */
+            _this.groupName = "";
+            return _this;
+        }
+        /**
+         * 使用指定的EventDispatcher对象来抛出事件对象。抛出的对象将会缓存在对象池上，供下次循环复用。
+         * @method RES.ResourceEvent.dispatchResourceEvent
+         * @param target {egret.IEventDispatcher}
+         * @param type {string}
+         * @param groupName {string}
+         * @param resItem {egret.ResourceItem}
+         * @param itemsLoaded {number}
+         * @param itemsTotal {number}
+         * @internal
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language en_CN
+         */
+        ResourceEvent.dispatchResourceEvent = function (target, type, groupName, resItem, itemsLoaded, itemsTotal) {
+            if (groupName === void 0) { groupName = ""; }
+            if (resItem === void 0) { resItem = undefined; }
+            if (itemsLoaded === void 0) { itemsLoaded = 0; }
+            if (itemsTotal === void 0) { itemsTotal = 0; }
+            var event = egret.Event.create(ResourceEvent, type);
+            event.groupName = groupName;
+            if (resItem) {
+                event.resItem = RES.ResourceItem.convertToResItem(resItem);
+            }
+            event.itemsLoaded = itemsLoaded;
+            event.itemsTotal = itemsTotal;
+            var result = target.dispatchEvent(event);
+            egret.Event.release(event);
+            return result;
+        };
+        /**
+         * Failure event for a load item.
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language en_US
+         */
+        /**
+         * 一个加载项加载失败事件。
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language zh_CN
+         */
+        ResourceEvent.ITEM_LOAD_ERROR = "itemLoadError";
+        /**
+         * Configure file to load and parse the completion event. Note: if a configuration file is loaded, it will not be thrown out, and if you want to handle the configuration loading failure, monitor the CONFIG_LOAD_ERROR event.
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language en_US
+         */
+        /**
+         * 配置文件加载并解析完成事件。注意：若有配置文件加载失败，将不会抛出此事件，若要处理配置加载失败，请同时监听 CONFIG_LOAD_ERROR 事件。
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language zh_CN
+         */
+        ResourceEvent.CONFIG_COMPLETE = "configComplete";
+        /**
+         * Configuration file failed to load.
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language en_US
+         */
+        /**
+         * 配置文件加载失败事件。
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language zh_CN
+         */
+        ResourceEvent.CONFIG_LOAD_ERROR = "configLoadError";
+        /**
+         * Delay load group resource loading progress event.
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language en_US
+         */
+        /**
+         * 延迟加载组资源加载进度事件。
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language zh_CN
+         */
+        ResourceEvent.GROUP_PROGRESS = "groupProgress";
+        /**
+         * Delay load group resource to complete event. Note: if you have a resource item loading failure, the event will not be thrown, if you want to handle the group load failure, please listen to the GROUP_LOAD_ERROR event.
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language en_US
+         */
+        /**
+         * 延迟加载组资源加载完成事件。注意：若组内有资源项加载失败，将不会抛出此事件，若要处理组加载失败，请同时监听 GROUP_LOAD_ERROR 事件。
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language zh_CN
+         */
+        ResourceEvent.GROUP_COMPLETE = "groupComplete";
+        /**
+         * Delayed load group resource failed event.
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language en_US
+         */
+        /**
+         * 延迟加载组资源加载失败事件。
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language zh_CN
+         */
+        ResourceEvent.GROUP_LOAD_ERROR = "groupLoadError";
+        return ResourceEvent;
+    }(egret.Event));
+    RES.ResourceEvent = ResourceEvent;
+})(RES || (RES = {}));
+//////////////////////////////////////////////////////////////////////////////////////
+//
+//  Copyright (c) 2014-present, Egret Technology.
+//  All rights reserved.
+//  Redistribution and use in source and binary forms, with or without
+//  modification, are permitted provided that the following conditions are met:
+//
+//     * Redistributions of source code must retain the above copyright
+//       notice, this list of conditions and the following disclaimer.
+//     * Redistributions in binary form must reproduce the above copyright
+//       notice, this list of conditions and the following disclaimer in the
+//       documentation and/or other materials provided with the distribution.
+//     * Neither the name of the Egret nor the
+//       names of its contributors may be used to endorse or promote products
+//       derived from this software without specific prior written permission.
+//
+//  THIS SOFTWARE IS PROVIDED BY EGRET AND CONTRIBUTORS "AS IS" AND ANY EXPRESS
+//  OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+//  OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+//  IN NO EVENT SHALL EGRET AND CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+//  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+//  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;LOSS OF USE, DATA,
+//  OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+//  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+//  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+//  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//
+//////////////////////////////////////////////////////////////////////////////////////
+var RES;
+(function (RES) {
+    /**
+     * Resource term. One of the resources arrays in resource.json.
+     * @version Egret 5.2
+     * @platform Web,Native
+     * @language en_US
+     */
+    /**
+     * 资源项。对应 resource.json 中 resources 数组中的一项。
+     * @version Egret 5.2
+     * @platform Web,Native
+     * @language zh_CN
+     */
+    var ResourceItem;
+    (function (ResourceItem) {
+        /**
+         * XML file.
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language en_US
+         */
+        /**
+         * XML 文件。
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language zh_CN
+         */
+        ResourceItem.TYPE_XML = "xml";
+        /**
+         * Picture file.
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language en_US
+         */
+        /**
+         * 图片文件。
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language zh_CN
+         */
+        ResourceItem.TYPE_IMAGE = "image";
+        /**
+         * Binary file.
+         * @version Egret 5.2
+         * @platform Web
+         * @language en_US
+         */
+        /**
+         * 二进制文件。
+         * @version Egret 5.2
+         * @platform Web
+         * @language zh_CN
+         */
+        ResourceItem.TYPE_BIN = "bin";
+        /**
+         * Text file.
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language en_US
+         */
+        /**
+         * 文本文件。
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language zh_CN
+         */
+        ResourceItem.TYPE_TEXT = "text";
+        /**
+         * JSON file.
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language en_US
+         */
+        /**
+         * JSON 文件。
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language zh_CN
+         */
+        ResourceItem.TYPE_JSON = "json";
+        /**
+         * SpriteSheet file.
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language en_US
+         */
+        /**
+         * SpriteSheet 文件。
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language zh_CN
+         */
+        ResourceItem.TYPE_SHEET = "sheet";
+        /**
+         * BitmapTextSpriteSheet file.
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language en_US
+         */
+        /**
+         * BitmapTextSpriteSheet 文件。
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language zh_CN
+         */
+        ResourceItem.TYPE_FONT = "font";
+        /**
+         * Sound file.
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language en_US
+         */
+        /**
+         * 声音文件。
+         * @version Egret 5.2
+         * @platform Web,Native
+         * @language zh_CN
+         */
+        ResourceItem.TYPE_SOUND = "sound";
+        function convertToResItem(r) {
+            var name = r.name;
+            if (!RES.config.config) {
+                name = r.url;
+            }
+            else {
+                for (var aliasName in RES.config.config.alias) {
+                    if (RES.config.config.alias[aliasName] == r.url) {
+                        name = aliasName;
+                    }
+                }
+            }
+            var result = {
+                name: name,
+                url: r.url,
+                type: r.type,
+                data: r,
+                root: r.root
+            };
+            return result;
+        }
+        ResourceItem.convertToResItem = convertToResItem;
+    })(ResourceItem = RES.ResourceItem || (RES.ResourceItem = {}));
 })(RES || (RES = {}));
 var RES;
 (function (RES) {
@@ -1401,7 +2550,7 @@ var RES;
     /**
      * @private
      */
-    var Resource = (function (_super) {
+    var Resource = /** @class */ (function (_super) {
         __extends(Resource, _super);
         function Resource() {
             var _this = _super.call(this) || this;
@@ -1724,1158 +2873,8 @@ var RES;
         return Resource;
     }(egret.EventDispatcher));
     RES.Resource = Resource;
-    __reflect(Resource.prototype, "RES.Resource");
     /**
      * Resource单例
      */
     var instance;
-})(RES || (RES = {}));
-var RES;
-(function (RES) {
-    /**
-     * Print the memory occupied by the picture.
-     * @version Egret 5.2
-     * @platform Web,Native
-     * @language en_US
-     */
-    /**
-     * 对文件路径的一些操作，针对的是 C:/A/B/C/D/example.ts这种格式
-     * @version Egret 5.2
-     * @platform Web,Native
-     * @language zh_CN
-     */
-    var path;
-    (function (path_1) {
-        /**
-         * Format the file path,"C:/A/B//C//D//example.ts"=>"C:/A/B/C/D/example.ts"
-         * @param filename Incoming file path
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language en_US
-         */
-        /**
-         * 格式化文件路径，"C:/A/B//C//D//example.ts"=>"C:/A/B/C/D/example.ts"
-         * @param filename 传入的文件路径
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language zh_CN
-         */
-        function normalize(filename) {
-            var arr = filename.split("/");
-            return arr.filter(function (value, index) { return !!value || index == arr.length - 1; }).join("/");
-        }
-        path_1.normalize = normalize;
-        /**
-         * Get the file name according to the file path, "C:/A/B/example.ts"=>"example.ts"
-         * @param filename Incoming file path
-         * @return File name
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language en_US
-         */
-        /**
-         * 根据文件路径得到文件名字，"C:/A/B/example.ts"=>"example.ts"
-         * @param filename 传入的文件路径
-         * @return 文件的名字
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language zh_CN
-         */
-        function basename(filename) {
-            return filename.substr(filename.lastIndexOf("/") + 1);
-        }
-        path_1.basename = basename;
-        /**
-         * The path to the folder where the file is located,"C:/A/B/example.ts"=>"C:/A/B"
-         * @param filename Incoming file path
-         * @return The address of the folder where the file is located
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language en_US
-         */
-        /**
-         * 文件所在文件夹路径，"C:/A/B/example.ts"=>"C:/A/B"
-         * @param filename 传入的文件路径
-         * @return 文件所在文件夹的地址
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language zh_CN
-         */
-        function dirname(path) {
-            return path.substr(0, path.lastIndexOf("/"));
-        }
-        path_1.dirname = dirname;
-    })(path = RES.path || (RES.path = {}));
-})(RES || (RES = {}));
-//////////////////////////////////////////////////////////////////////////////////////
-//
-//  Copyright (c) 2014-present, Egret Technology.
-//  All rights reserved.
-//  Redistribution and use in source and binary forms, with or without
-//  modification, are permitted provided that the following conditions are met:
-//
-//     * Redistributions of source code must retain the above copyright
-//       notice, this list of conditions and the following disclaimer.
-//     * Redistributions in binary form must reproduce the above copyright
-//       notice, this list of conditions and the following disclaimer in the
-//       documentation and/or other materials provided with the distribution.
-//     * Neither the name of the Egret nor the
-//       names of its contributors may be used to endorse or promote products
-//       derived from this software without specific prior written permission.
-//
-//  THIS SOFTWARE IS PROVIDED BY EGRET AND CONTRIBUTORS "AS IS" AND ANY EXPRESS
-//  OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-//  OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-//  IN NO EVENT SHALL EGRET AND CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
-//  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-//  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;LOSS OF USE, DATA,
-//  OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
-//  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
-//  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
-//  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-//
-//////////////////////////////////////////////////////////////////////////////////////
-var RES;
-(function (RES) {
-    /**
-     * @private
-     */
-    var NativeVersionController = (function () {
-        function NativeVersionController() {
-        }
-        NativeVersionController.prototype.init = function () {
-            this.versionInfo = this.getLocalData("all.manifest");
-            return Promise.resolve();
-        };
-        NativeVersionController.prototype.getVirtualUrl = function (url) {
-            return url;
-        };
-        NativeVersionController.prototype.getLocalData = function (filePath) {
-            if (egret_native.readUpdateFileSync && egret_native.readResourceFileSync) {
-                //先取更新目录
-                var content = egret_native.readUpdateFileSync(filePath);
-                if (content != null) {
-                    return JSON.parse(content);
-                }
-                //再取资源目录
-                content = egret_native.readResourceFileSync(filePath);
-                if (content != null) {
-                    return JSON.parse(content);
-                }
-            }
-            return null;
-        };
-        return NativeVersionController;
-    }());
-    RES.NativeVersionController = NativeVersionController;
-    __reflect(NativeVersionController.prototype, "RES.NativeVersionController", ["RES.IVersionController"]);
-    if (egret.Capabilities.runtimeType == egret.RuntimeType.NATIVE) {
-        RES.VersionController = NativeVersionController;
-    }
-})(RES || (RES = {}));
-var RES;
-(function (RES) {
-    var processor;
-    (function (processor_1) {
-        /**
-         * @internal
-         * @param resource 对应的资源接口，需要type属性
-         */
-        function isSupport(resource) {
-            return processor_1._map[resource.type];
-        }
-        processor_1.isSupport = isSupport;
-        /**
-         * Register the processor that loads the resource
-         * @param type Load resource type
-         * @param processor Loaded processor, an instance that implements the Processor interface
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language en_US
-         */
-        /**
-         * 注册加载资源的处理器
-         * @param type 加载资源类型
-         * @param processor 加载的处理器，一个实现Processor接口的实例
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language zh_CN
-         */
-        function map(type, processor) {
-            processor_1._map[type] = processor;
-        }
-        processor_1.map = map;
-        /**
-        * @internal
-        */
-        function promisify(loader, resource) {
-            var _this = this;
-            return new Promise(function (resolve, reject) {
-                var onSuccess = function () {
-                    var texture = loader['data'] ? loader['data'] : loader['response'];
-                    resolve(texture);
-                };
-                var onError = function () {
-                    var e = new RES.ResourceManagerError(1001, resource.url);
-                    reject(e);
-                };
-                loader.addEventListener(egret.Event.COMPLETE, onSuccess, _this);
-                loader.addEventListener(egret.IOErrorEvent.IO_ERROR, onError, _this);
-            });
-        }
-        /**
-         * @private
-         * @param url
-         * @param file
-         */
-        function getRelativePath(url, file) {
-            if (file.indexOf("://") != -1) {
-                return file;
-            }
-            url = url.split("\\").join("/");
-            var params = url.match(/#.*|\?.*/);
-            var paramUrl = "";
-            if (params) {
-                paramUrl = params[0];
-            }
-            var index = url.lastIndexOf("/");
-            if (index != -1) {
-                url = url.substring(0, index + 1) + file;
-            }
-            else {
-                url = file;
-            }
-            return url + paramUrl;
-        }
-        processor_1.getRelativePath = getRelativePath;
-        processor_1.ImageProcessor = {
-            onLoadStart: function (host, resource) {
-                var loader = new egret.ImageLoader();
-                loader.load(RES.getVirtualUrl(resource.root + resource.url));
-                return promisify(loader, resource)
-                    .then(function (bitmapData) {
-                    var texture = new egret.Texture();
-                    texture._setBitmapData(bitmapData);
-                    var r = host.resourceConfig.getResource(resource.name);
-                    if (r && r.scale9grid) {
-                        var list = r.scale9grid.split(",");
-                        texture["scale9Grid"] = new egret.Rectangle(parseInt(list[0]), parseInt(list[1]), parseInt(list[2]), parseInt(list[3]));
-                    }
-                    return texture;
-                });
-            },
-            onRemoveStart: function (host, resource) {
-                var texture = host.get(resource);
-                texture.dispose();
-            }
-        };
-        processor_1.BinaryProcessor = {
-            onLoadStart: function (host, resource) {
-                var request = new egret.HttpRequest();
-                request.responseType = egret.HttpResponseType.ARRAY_BUFFER;
-                request.open(RES.getVirtualUrl(resource.root + resource.url), "get");
-                request.send();
-                return promisify(request, resource);
-            },
-            onRemoveStart: function (host, resource) {
-            }
-        };
-        processor_1.TextProcessor = {
-            onLoadStart: function (host, resource) {
-                var request = new egret.HttpRequest();
-                request.responseType = egret.HttpResponseType.TEXT;
-                request.open(RES.getVirtualUrl(resource.root + resource.url), "get");
-                request.send();
-                return promisify(request, resource);
-            },
-            onRemoveStart: function (host, resource) {
-                return true;
-            }
-        };
-        processor_1.JsonProcessor = {
-            onLoadStart: function (host, resource) {
-                return host.load(resource, 'text').then(function (text) {
-                    var data = JSON.parse(text);
-                    return data;
-                });
-            },
-            onRemoveStart: function (host, request) {
-            }
-        };
-        /**
-        * @internal
-        */
-        processor_1.XMLProcessor = {
-            onLoadStart: function (host, resource) {
-                return host.load(resource, 'text').then(function (text) {
-                    var data = egret.XML.parse(text);
-                    return data;
-                });
-            },
-            onRemoveStart: function (host, resource) {
-                return true;
-            }
-        };
-        /**
-        * @internal
-        */
-        processor_1.CommonJSProcessor = {
-            onLoadStart: function (host, resource) {
-                // let text = await host.load(resource, 'text');
-                return host.load(resource, 'text').then(function (text) {
-                    var f = new Function('require', 'exports', text);
-                    var require = function () { };
-                    var exports = {};
-                    try {
-                        f(require, exports);
-                    }
-                    catch (e) {
-                        throw new RES.ResourceManagerError(2003, resource.name, e.message);
-                    }
-                    return exports;
-                });
-            },
-            onRemoveStart: function (host, resource) {
-            }
-        };
-        /**
-        * @internal
-        */
-        processor_1.SheetProcessor = {
-            onLoadStart: function (host, resource) {
-                return host.load(resource, "json").then(function (data) {
-                    var r = host.resourceConfig.getResource(RES.nameSelector(data.file));
-                    if (!r) {
-                        var imageName = getRelativePath(resource.url, data.file);
-                        r = { name: imageName, url: imageName, type: 'image', root: resource.root };
-                    }
-                    return host.load(r)
-                        .then(function (bitmapData) {
-                        var frames = data.frames;
-                        var spriteSheet = new egret.SpriteSheet(bitmapData);
-                        spriteSheet["$resourceInfo"] = r;
-                        for (var subkey in frames) {
-                            var config = frames[subkey];
-                            var texture = spriteSheet.createTexture(subkey, config.x, config.y, config.w, config.h, config.offX, config.offY, config.sourceW, config.sourceH);
-                            if (config["scale9grid"]) {
-                                var str = config["scale9grid"];
-                                var list = str.split(",");
-                                texture["scale9Grid"] = new egret.Rectangle(parseInt(list[0]), parseInt(list[1]), parseInt(list[2]), parseInt(list[3]));
-                            }
-                        }
-                        host.save(r, bitmapData);
-                        return spriteSheet;
-                    }, function (e) {
-                        host.remove(r);
-                        throw e;
-                    });
-                });
-            },
-            getData: function (host, resource, key, subkey) {
-                var data = host.get(resource);
-                if (data) {
-                    return data.getTexture(subkey);
-                }
-                else {
-                    return null;
-                }
-            },
-            onRemoveStart: function (host, resource) {
-                var sheet = host.get(resource);
-                var r = sheet["$resourceInfo"];
-                sheet.dispose();
-                host.unload(r);
-            }
-        };
-        var fontGetTexturePath = function (url, fntText) {
-            var file = "";
-            var lines = fntText.split("\n");
-            var pngLine = lines[2];
-            var index = pngLine.indexOf("file=\"");
-            if (index != -1) {
-                pngLine = pngLine.substring(index + 6);
-                index = pngLine.indexOf("\"");
-                file = pngLine.substring(0, index);
-            }
-            url = url.split("\\").join("/");
-            var index = url.lastIndexOf("/");
-            if (index != -1) {
-                url = url.substring(0, index + 1) + file;
-            }
-            else {
-                url = file;
-            }
-            return url;
-        };
-        /**
-        * @internal
-        */
-        processor_1.FontProcessor = {
-            onLoadStart: function (host, resource) {
-                // let data: string = await host.load(resource, 'text');
-                return host.load(resource, 'text').then(function (data) {
-                    var config;
-                    try {
-                        config = JSON.parse(data);
-                    }
-                    catch (e) {
-                        config = data;
-                    }
-                    var imageName;
-                    if (typeof config === 'string') {
-                        imageName = fontGetTexturePath(resource.url, config);
-                    }
-                    else {
-                        imageName = getRelativePath(resource.url, config.file);
-                    }
-                    var r = host.resourceConfig.getResource(RES.nameSelector(imageName));
-                    if (!r) {
-                        r = { name: imageName, url: imageName, type: 'image', root: resource.root };
-                    }
-                    // var texture: egret.Texture = await host.load(r);
-                    return host.load(r).then(function (texture) {
-                        var font = new egret.BitmapFont(texture, config);
-                        font["$resourceInfo"] = r;
-                        // todo refactor
-                        host.save(r, texture);
-                        return font;
-                    }, function (e) {
-                        host.remove(r);
-                        throw e;
-                    });
-                });
-            },
-            onRemoveStart: function (host, resource) {
-                var font = host.get(resource);
-                var r = font["$resourceInfo"];
-                host.unload(r);
-            }
-        };
-        processor_1.SoundProcessor = {
-            onLoadStart: function (host, resource) {
-                var sound = new egret.Sound();
-                sound.load(RES.getVirtualUrl(resource.root + resource.url));
-                return promisify(sound, resource).then(function () {
-                    return sound;
-                });
-            },
-            onRemoveStart: function (host, resource) {
-            }
-        };
-        /**
-        * @internal
-        */
-        processor_1.MovieClipProcessor = {
-            onLoadStart: function (host, resource) {
-                var mcData;
-                var imageResource;
-                return host.load(resource, 'json')
-                    .then(function (value) {
-                    mcData = value;
-                    var jsonPath = resource.name;
-                    var imagePath = jsonPath.substring(0, jsonPath.lastIndexOf(".")) + ".png";
-                    imageResource = host.resourceConfig.getResource(imagePath);
-                    if (!imageResource) {
-                        throw new RES.ResourceManagerError(1001, imagePath);
-                    }
-                    return host.load(imageResource);
-                }).then(function (value) {
-                    host.save(imageResource, value);
-                    var mcTexture = value;
-                    var mcDataFactory = new egret.MovieClipDataFactory(mcData, mcTexture);
-                    return mcDataFactory;
-                });
-            },
-            onRemoveStart: function (host, resource) {
-                var mcFactory = host.get(resource);
-                mcFactory.clearCache();
-                mcFactory.$spriteSheet.dispose();
-                // refactor
-                var jsonPath = resource.name;
-                var imagePath = jsonPath.substring(0, jsonPath.lastIndexOf(".")) + ".png";
-                var imageResource = host.resourceConfig.getResource(imagePath);
-                if (imageResource) {
-                    host.unload(imageResource);
-                }
-            }
-        };
-        /**
-        * @internal
-        */
-        processor_1.MergeJSONProcessor = {
-            onLoadStart: function (host, resource) {
-                // let data = await host.load(resource, 'json');
-                return host.load(resource, 'json').then(function (data) {
-                    for (var key in data) {
-                        RES.config.addSubkey(key, resource.name);
-                    }
-                    return data;
-                });
-            },
-            getData: function (host, resource, key, subkey) {
-                var data = host.get(resource);
-                if (data) {
-                    return data[subkey];
-                }
-                else {
-                    console.error("missing resource :" + resource.name);
-                    return null;
-                }
-            },
-            onRemoveStart: function (host, resource) {
-            }
-        };
-        /**
-        * @internal
-        */
-        processor_1.LegacyResourceConfigProcessor = {
-            onLoadStart: function (host, resource) {
-                return host.load(resource, 'json').then(function (data) {
-                    var resConfigData = RES.config.config;
-                    var root = resource.root;
-                    var fileSystem = resConfigData.fileSystem;
-                    if (!fileSystem) {
-                        fileSystem = {
-                            fsData: {},
-                            getFile: function (filename) {
-                                return fsData[filename];
-                            },
-                            addFile: function (data) {
-                                if (!data.type)
-                                    data.type = "";
-                                if (root == undefined) {
-                                    data.root = "";
-                                }
-                                fsData[data.name] = data;
-                            },
-                            profile: function () {
-                                console.log(fsData);
-                            },
-                            removeFile: function (filename) {
-                                delete fsData[filename];
-                            }
-                        };
-                        resConfigData.fileSystem = fileSystem;
-                    }
-                    var groups = resConfigData.groups;
-                    for (var _i = 0, _a = data.groups; _i < _a.length; _i++) {
-                        var g = _a[_i];
-                        if (g.keys == "") {
-                            groups[g.name] = [];
-                        }
-                        else {
-                            groups[g.name] = g.keys.split(",");
-                        }
-                    }
-                    var alias = resConfigData.alias;
-                    var fsData = fileSystem['fsData'];
-                    var _loop_1 = function (resource_1) {
-                        fsData[resource_1.name] = resource_1;
-                        fsData[resource_1.name].root = root;
-                        if (resource_1.subkeys) {
-                            resource_1.subkeys.split(",").forEach(function (subkey) {
-                                alias[subkey] = resource_1.name + "#" + subkey;
-                                alias[resource_1.name + "." + subkey] = resource_1.name + "#" + subkey;
-                            });
-                            // ResourceConfig.
-                        }
-                    };
-                    for (var _b = 0, _c = data.resources; _b < _c.length; _b++) {
-                        var resource_1 = _c[_b];
-                        _loop_1(resource_1);
-                    }
-                    host.save(resource, data);
-                    return data;
-                });
-            },
-            onRemoveStart: function () {
-            }
-        };
-        /**
-        * @internal
-        */
-        processor_1._map = {
-            "image": processor_1.ImageProcessor,
-            "json": processor_1.JsonProcessor,
-            "text": processor_1.TextProcessor,
-            "xml": processor_1.XMLProcessor,
-            "sheet": processor_1.SheetProcessor,
-            "font": processor_1.FontProcessor,
-            "bin": processor_1.BinaryProcessor,
-            "commonjs": processor_1.CommonJSProcessor,
-            "sound": processor_1.SoundProcessor,
-            "movieclip": processor_1.MovieClipProcessor,
-            "mergeJson": processor_1.MergeJSONProcessor,
-            "legacyResourceConfig": processor_1.LegacyResourceConfigProcessor,
-        };
-    })(processor = RES.processor || (RES.processor = {}));
-})(RES || (RES = {}));
-//////////////////////////////////////////////////////////////////////////////////////
-//
-//  Copyright (c) 2014-present, Egret Technology.
-//  All rights reserved.
-//  Redistribution and use in source and binary forms, with or without
-//  modification, are permitted provided that the following conditions are met:
-//
-//     * Redistributions of source code must retain the above copyright
-//       notice, this list of conditions and the following disclaimer.
-//     * Redistributions in binary form must reproduce the above copyright
-//       notice, this list of conditions and the following disclaimer in the
-//       documentation and/or other materials provided with the distribution.
-//     * Neither the name of the Egret nor the
-//       names of its contributors may be used to endorse or promote products
-//       derived from this software without specific prior written permission.
-//
-//  THIS SOFTWARE IS PROVIDED BY EGRET AND CONTRIBUTORS "AS IS" AND ANY EXPRESS
-//  OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-//  OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-//  IN NO EVENT SHALL EGRET AND CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
-//  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-//  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;LOSS OF USE, DATA,
-//  OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
-//  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
-//  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
-//  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-//
-//////////////////////////////////////////////////////////////////////////////////////
-var RES;
-(function (RES) {
-    /**
-     * The events of resource loading.
-     * @version Egret 5.2
-     * @platform Web,Native
-     * @language en_US
-     */
-    /**
-     * 资源加载事件。
-     * @version Egret 5.2
-     * @platform Web,Native
-     * @language zh_CN
-     */
-    var ResourceEvent = (function (_super) {
-        __extends(ResourceEvent, _super);
-        /**
-         * Creates an Event object to pass as a parameter to event listeners.
-         * @param type  The type of the event, accessible as Event.type.
-         * @param bubbles  Determines whether the Event object participates in the bubbling stage of the event flow. The default value is false.
-         * @param cancelable Determines whether the Event object can be canceled. The default values is false.
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @private
-         * @language en_US
-         */
-        /**
-         * 创建一个作为参数传递给事件侦听器的 Event 对象。
-         * @param type  事件的类型，可以作为 Event.type 访问。
-         * @param bubbles  确定 Event 对象是否参与事件流的冒泡阶段。默认值为 false。
-         * @param cancelable 确定是否可以取消 Event 对象。默认值为 false。
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @private
-         * @language zh_CN
-         */
-        function ResourceEvent(type, bubbles, cancelable) {
-            if (bubbles === void 0) { bubbles = false; }
-            if (cancelable === void 0) { cancelable = false; }
-            var _this = _super.call(this, type, bubbles, cancelable) || this;
-            /**
-             * File number that has been loaded.
-             * @version Egret 5.2
-             * @platform Web,Native
-             * @language en_US
-             */
-            /**
-             * 已经加载的文件数。
-             * @version Egret 5.2
-             * @platform Web,Native
-             * @language zh_CN
-             */
-            _this.itemsLoaded = 0;
-            /**
-             * Total file number to load.
-             * @version Egret 5.2
-             * @platform Web,Native
-             * @language en_US
-             */
-            /**
-             * 要加载的总文件数。
-             * @version Egret 5.2
-             * @platform Web,Native
-             * @language zh_CN
-             */
-            _this.itemsTotal = 0;
-            /**
-             * Resource group name.
-             * @version Egret 5.2
-             * @platform Web,Native
-             * @language en_US
-             */
-            /**
-             * 资源组名。
-             * @version Egret 5.2
-             * @platform Web,Native
-             * @language zh_CN
-             */
-            _this.groupName = "";
-            return _this;
-        }
-        /**
-         * 使用指定的EventDispatcher对象来抛出事件对象。抛出的对象将会缓存在对象池上，供下次循环复用。
-         * @method RES.ResourceEvent.dispatchResourceEvent
-         * @param target {egret.IEventDispatcher}
-         * @param type {string}
-         * @param groupName {string}
-         * @param resItem {egret.ResourceItem}
-         * @param itemsLoaded {number}
-         * @param itemsTotal {number}
-         * @internal
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language en_CN
-         */
-        ResourceEvent.dispatchResourceEvent = function (target, type, groupName, resItem, itemsLoaded, itemsTotal) {
-            if (groupName === void 0) { groupName = ""; }
-            if (resItem === void 0) { resItem = undefined; }
-            if (itemsLoaded === void 0) { itemsLoaded = 0; }
-            if (itemsTotal === void 0) { itemsTotal = 0; }
-            var event = egret.Event.create(ResourceEvent, type);
-            event.groupName = groupName;
-            if (resItem) {
-                event.resItem = RES.ResourceItem.convertToResItem(resItem);
-            }
-            event.itemsLoaded = itemsLoaded;
-            event.itemsTotal = itemsTotal;
-            var result = target.dispatchEvent(event);
-            egret.Event.release(event);
-            return result;
-        };
-        /**
-         * Failure event for a load item.
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language en_US
-         */
-        /**
-         * 一个加载项加载失败事件。
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language zh_CN
-         */
-        ResourceEvent.ITEM_LOAD_ERROR = "itemLoadError";
-        /**
-         * Configure file to load and parse the completion event. Note: if a configuration file is loaded, it will not be thrown out, and if you want to handle the configuration loading failure, monitor the CONFIG_LOAD_ERROR event.
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language en_US
-         */
-        /**
-         * 配置文件加载并解析完成事件。注意：若有配置文件加载失败，将不会抛出此事件，若要处理配置加载失败，请同时监听 CONFIG_LOAD_ERROR 事件。
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language zh_CN
-         */
-        ResourceEvent.CONFIG_COMPLETE = "configComplete";
-        /**
-         * Configuration file failed to load.
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language en_US
-         */
-        /**
-         * 配置文件加载失败事件。
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language zh_CN
-         */
-        ResourceEvent.CONFIG_LOAD_ERROR = "configLoadError";
-        /**
-         * Delay load group resource loading progress event.
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language en_US
-         */
-        /**
-         * 延迟加载组资源加载进度事件。
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language zh_CN
-         */
-        ResourceEvent.GROUP_PROGRESS = "groupProgress";
-        /**
-         * Delay load group resource to complete event. Note: if you have a resource item loading failure, the event will not be thrown, if you want to handle the group load failure, please listen to the GROUP_LOAD_ERROR event.
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language en_US
-         */
-        /**
-         * 延迟加载组资源加载完成事件。注意：若组内有资源项加载失败，将不会抛出此事件，若要处理组加载失败，请同时监听 GROUP_LOAD_ERROR 事件。
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language zh_CN
-         */
-        ResourceEvent.GROUP_COMPLETE = "groupComplete";
-        /**
-         * Delayed load group resource failed event.
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language en_US
-         */
-        /**
-         * 延迟加载组资源加载失败事件。
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language zh_CN
-         */
-        ResourceEvent.GROUP_LOAD_ERROR = "groupLoadError";
-        return ResourceEvent;
-    }(egret.Event));
-    RES.ResourceEvent = ResourceEvent;
-    __reflect(ResourceEvent.prototype, "RES.ResourceEvent");
-})(RES || (RES = {}));
-//////////////////////////////////////////////////////////////////////////////////////
-//
-//  Copyright (c) 2014-present, Egret Technology.
-//  All rights reserved.
-//  Redistribution and use in source and binary forms, with or without
-//  modification, are permitted provided that the following conditions are met:
-//
-//     * Redistributions of source code must retain the above copyright
-//       notice, this list of conditions and the following disclaimer.
-//     * Redistributions in binary form must reproduce the above copyright
-//       notice, this list of conditions and the following disclaimer in the
-//       documentation and/or other materials provided with the distribution.
-//     * Neither the name of the Egret nor the
-//       names of its contributors may be used to endorse or promote products
-//       derived from this software without specific prior written permission.
-//
-//  THIS SOFTWARE IS PROVIDED BY EGRET AND CONTRIBUTORS "AS IS" AND ANY EXPRESS
-//  OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-//  OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-//  IN NO EVENT SHALL EGRET AND CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
-//  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-//  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;LOSS OF USE, DATA,
-//  OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
-//  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
-//  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
-//  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-//
-//////////////////////////////////////////////////////////////////////////////////////
-var RES;
-(function (RES) {
-    /**
-     * Resource term. One of the resources arrays in resource.json.
-     * @version Egret 5.2
-     * @platform Web,Native
-     * @language en_US
-     */
-    /**
-     * 资源项。对应 resource.json 中 resources 数组中的一项。
-     * @version Egret 5.2
-     * @platform Web,Native
-     * @language zh_CN
-     */
-    var ResourceItem;
-    (function (ResourceItem) {
-        /**
-         * XML file.
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language en_US
-         */
-        /**
-         * XML 文件。
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language zh_CN
-         */
-        ResourceItem.TYPE_XML = "xml";
-        /**
-         * Picture file.
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language en_US
-         */
-        /**
-         * 图片文件。
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language zh_CN
-         */
-        ResourceItem.TYPE_IMAGE = "image";
-        /**
-         * Binary file.
-         * @version Egret 5.2
-         * @platform Web
-         * @language en_US
-         */
-        /**
-         * 二进制文件。
-         * @version Egret 5.2
-         * @platform Web
-         * @language zh_CN
-         */
-        ResourceItem.TYPE_BIN = "bin";
-        /**
-         * Text file.
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language en_US
-         */
-        /**
-         * 文本文件。
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language zh_CN
-         */
-        ResourceItem.TYPE_TEXT = "text";
-        /**
-         * JSON file.
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language en_US
-         */
-        /**
-         * JSON 文件。
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language zh_CN
-         */
-        ResourceItem.TYPE_JSON = "json";
-        /**
-         * SpriteSheet file.
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language en_US
-         */
-        /**
-         * SpriteSheet 文件。
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language zh_CN
-         */
-        ResourceItem.TYPE_SHEET = "sheet";
-        /**
-         * BitmapTextSpriteSheet file.
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language en_US
-         */
-        /**
-         * BitmapTextSpriteSheet 文件。
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language zh_CN
-         */
-        ResourceItem.TYPE_FONT = "font";
-        /**
-         * Sound file.
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language en_US
-         */
-        /**
-         * 声音文件。
-         * @version Egret 5.2
-         * @platform Web,Native
-         * @language zh_CN
-         */
-        ResourceItem.TYPE_SOUND = "sound";
-        function convertToResItem(r) {
-            var name = r.name;
-            if (!RES.config.config) {
-                name = r.url;
-            }
-            else {
-                for (var aliasName in RES.config.config.alias) {
-                    if (RES.config.config.alias[aliasName] == r.url) {
-                        name = aliasName;
-                    }
-                }
-            }
-            var result = {
-                name: name,
-                url: r.url,
-                type: r.type,
-                data: r,
-                root: r.root
-            };
-            return result;
-        }
-        ResourceItem.convertToResItem = convertToResItem;
-    })(ResourceItem = RES.ResourceItem || (RES.ResourceItem = {}));
-})(RES || (RES = {}));
-var RES;
-(function (RES) {
-    /**
-    * @internal
-    */
-    var NewFileSystem = (function () {
-        function NewFileSystem(data) {
-            this.data = data;
-        }
-        NewFileSystem.prototype.profile = function () {
-            console.log(this.data);
-        };
-        NewFileSystem.prototype.addFile = function (filename, type) {
-            if (!type)
-                type = "";
-            filename = RES.path.normalize(filename);
-            var basefilename = RES.path.basename(filename);
-            var folder = RES.path.dirname(filename);
-            if (!this.exists(folder)) {
-                this.mkdir(folder);
-            }
-            var d = this.resolve(folder);
-            d[basefilename] = { url: filename, type: type };
-        };
-        NewFileSystem.prototype.getFile = function (filename) {
-            var result = this.resolve(filename);
-            if (result) {
-                result.name = filename;
-            }
-            return result;
-        };
-        NewFileSystem.prototype.resolve = function (dirpath) {
-            if (dirpath == "") {
-                return this.data;
-            }
-            dirpath = RES.path.normalize(dirpath);
-            var list = dirpath.split("/");
-            var current = this.data;
-            for (var _i = 0, list_2 = list; _i < list_2.length; _i++) {
-                var f = list_2[_i];
-                if (current) {
-                    current = current[f];
-                }
-                else {
-                    return current;
-                }
-            }
-            return current;
-        };
-        NewFileSystem.prototype.mkdir = function (dirpath) {
-            dirpath = RES.path.normalize(dirpath);
-            var list = dirpath.split("/");
-            var current = this.data;
-            for (var _i = 0, list_3 = list; _i < list_3.length; _i++) {
-                var f = list_3[_i];
-                if (!current[f]) {
-                    current[f] = {};
-                }
-                current = current[f];
-            }
-        };
-        NewFileSystem.prototype.exists = function (dirpath) {
-            if (dirpath == "")
-                return true;
-            dirpath = RES.path.normalize(dirpath);
-            var list = dirpath.split("/");
-            var current = this.data;
-            for (var _i = 0, list_4 = list; _i < list_4.length; _i++) {
-                var f = list_4[_i];
-                if (!current[f]) {
-                    return false;
-                }
-                current = current[f];
-            }
-            return true;
-        };
-        return NewFileSystem;
-    }());
-    RES.NewFileSystem = NewFileSystem;
-    __reflect(NewFileSystem.prototype, "RES.NewFileSystem");
-})(RES || (RES = {}));
-var RES;
-(function (RES) {
-    var __tempCache = {};
-    /**
-     * Print the memory occupied by the picture.
-     * @version Egret 5.2
-     * @platform Web,Native
-     * @language en_US
-     */
-    /**
-     * 打印图片所占内存
-     * @version Egret 5.2
-     * @platform Web,Native
-     * @language zh_CN
-     */
-    function profile() {
-        RES.config.config.fileSystem.profile();
-        console.log(__tempCache);
-        //todo 
-        var totalImageSize = 0;
-        for (var key in __tempCache) {
-            var img = __tempCache[key];
-            if (img instanceof egret.Texture) {
-                totalImageSize += img.$bitmapWidth * img.$bitmapHeight * 4;
-            }
-        }
-        console.log("gpu size : " + (totalImageSize / 1024).toFixed(3) + "kb");
-    }
-    RES.profile = profile;
-    /**
-    * @internal
-    */
-    RES.host = {
-        state: {},
-        get resourceConfig() {
-            return RES.config;
-        },
-        load: function (r, processorName) {
-            var processor = typeof processorName == 'string' ? RES.processor._map[processorName] : processorName;
-            return RES.queue["loadResource"](r, processor);
-        },
-        unload: function (r) { return RES.queue.unloadResource(r); },
-        save: function (resource, data) {
-            RES.host.state[resource.root + resource.name] = 2;
-            delete resource.promise;
-            __tempCache[resource.root + resource.name] = data;
-        },
-        get: function (resource) {
-            return __tempCache[resource.root + resource.name];
-        },
-        remove: function (resource) {
-            delete RES.host.state[resource.root + resource.name];
-            delete __tempCache[resource.root + resource.name];
-        }
-    };
-    /**
-     * @internal
-     */
-    RES.config = new RES.ResourceConfig();
-    /**
-     * @internal
-     */
-    RES.queue = new RES.ResourceLoader();
-    /**
-    * @private
-    */
-    var ResourceManagerError = (function (_super) {
-        __extends(ResourceManagerError, _super);
-        function ResourceManagerError(code, replacer, replacer2) {
-            var _this = _super.call(this) || this;
-            /**
-             * why instanceof e  != ResourceManagerError ???
-             * see link : https://github.com/Microsoft/TypeScript/wiki/Breaking-Changes#extending-built-ins-like-error-array-and-map-may-no-longer-work
-             */
-            _this.__resource_manager_error__ = true;
-            _this.name = code.toString();
-            _this.message = ResourceManagerError.errorMessage[code].replace("{0}", replacer).replace("{1}", replacer2);
-            return _this;
-        }
-        ResourceManagerError.errorMessage = {
-            1001: '文件加载失败:{0}',
-            1002: "ResourceManager 初始化失败：配置文件加载失败",
-            2001: "{0}解析失败,不支持指定解析类型:\'{1}\'，请编写自定义 Processor ，更多内容请参见 https://github.com/egret-labs/resourcemanager/blob/master/docs/README.md#processor",
-            2002: "Analyzer 相关API 在 ResourceManager 中不再支持，请编写自定义 Processor ，更多内容请参见 https://github.com/egret-labs/resourcemanager/blob/master/docs/README.md#processor",
-            2003: "{0}解析失败,错误原因:{1}",
-            2004: "无法找到文件类型:{0}",
-            2005: "RES加载了不存在或空的资源组:\"{0}\"",
-            2006: "资源配置文件中无法找到特定的资源:{0}"
-        };
-        return ResourceManagerError;
-    }(Error));
-    RES.ResourceManagerError = ResourceManagerError;
-    __reflect(ResourceManagerError.prototype, "RES.ResourceManagerError");
 })(RES || (RES = {}));

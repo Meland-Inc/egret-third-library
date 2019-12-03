@@ -254,6 +254,9 @@ module RES {
 		private getOneResourceInfoInGroup(): ResourceInfo | undefined {
 			if (this.failedList.length > 0)
 				return this.failedList.shift();
+			if (this.lazyLoadList.length > 0)
+				//后请求的先加载，以便更快获取当前需要的资源
+				return this.lazyLoadList.pop();
 			let maxPriority: number = Number.NEGATIVE_INFINITY;
 			for (let p in this.itemListPriorityDic) {
 				maxPriority = Math.max(maxPriority, <number><any>p);
