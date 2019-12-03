@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="430,1080" designImageOffsetX="-1635">
-  <controller name="ctrlCombine" pages="0,normal,1,combine" selected="1"/>
+  <controller name="ctrlCombine" pages="0,normal,1,combine" selected="0"/>
   <displayList>
     <image id="n69_xba6" name="n69" src="xba67o" fileName="ideCommon/img/img_ide_cm_7.png" xy="0,0" size="430,1080">
       <relation target="" sidePair="width-width,height-height"/>
@@ -18,7 +18,7 @@
       <relation target="" sidePair="width-width,left-left"/>
       <relation target="" sidePair="bottom-bottom"/>
     </image>
-    <text id="n55_s1sd" name="n55" xy="55,15" size="85,24" fontSize="20" align="center" vAlign="middle" text="动画编辑"/>
+    <text id="n55_s1sd" name="n55" xy="55,15" size="85,26" fontSize="20" align="center" vAlign="middle" text="动画编辑"/>
     <image id="n70_xba6" name="n70" src="hckx70" fileName="attribute/img/icon_att_dh.png" xy="15,14"/>
     <component id="n71_xba6" name="btnAniSelect" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="10,67" size="120,40">
       <Button title="添加动画"/>
@@ -26,12 +26,12 @@
     <component id="n73_xba6" name="btnCombine" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="140,67" size="120,40">
       <Button title="组合动画" titleColor="#333333"/>
     </component>
-    <component id="n75_xba6" name="btnSave" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="306,1032" size="110,40">
+    <component id="n75_xba6" name="btnSave" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="306,1032" size="110,40" hideByEditor="true" visible="false">
       <gearDisplay controller="ctrlCombine" pages="0"/>
       <relation target="" sidePair="right-right,bottom-bottom"/>
       <Button title="保存" titleColor="#ffffff" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <component id="n76_xba6" name="btnExit" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="179,1032" size="110,40">
+    <component id="n76_xba6" name="btnExit" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="179,1032" size="110,40" hideByEditor="true" visible="false">
       <gearDisplay controller="ctrlCombine" pages="0"/>
       <relation target="" sidePair="right-right,bottom-bottom"/>
       <Button title="取消" titleColor="#ffffff" icon="ui://te1gxawoeggjcyihf"/>

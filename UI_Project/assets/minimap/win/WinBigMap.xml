@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://thvmj7vofv5tcyiio" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlMapMode" pages="0,normal,1,born,2,revive" selected="0"/>
-  <controller name="ctrlMarkOperate" pages="0,normal,1,selectMark,2,puttingMark,3,deleteMark,4,editMarkName" selected="1"/>
+  <controller name="ctrlMarkOperate" pages="0,normal,1,selectMark,2,puttingMark,3,deleteMark,4,editMarkName" selected="0"/>
   <displayList>
     <component id="n35_trc2" name="comMap" src="fv5tc" fileName="old/com/ComMiniMapCtnr.xml" xy="0,57" size="1920,1023" hideByEditor="true">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
@@ -67,16 +67,21 @@
       <gearDisplay controller="ctrlMarkOperate" pages="2"/>
       <Button icon="ui://makcczvjlmgf2x" controller="ctrlMarkOperate" page="0"/>
     </component>
-    <group id="n22_11e02" name="grpMapOperateBtn" xy="1810,736" size="80,260" advanced="true">
+    <group id="n22_11e02" name="grpMapOperateBtn" xy="1810,736" size="80,260" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlMapMode" pages="0"/>
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </group>
-    <image id="n26_11e02" name="posBg" src="fv5t2o" fileName="img/img_map_dk.png" xy="21,981" size="249,40" group="n28_11e02">
+    <image id="n26_11e02" name="posBg" src="fv5t2o" fileName="img/img_map_dk.png" xy="21,960" size="257,40" group="n28_11e02">
       <relation target="n27_11e02" sidePair="rightext-right"/>
     </image>
-    <image id="n95_fv5t" name="imgPosIcon" src="fv5t2n" fileName="img/icon_map_zb.png" xy="23,969" group="n28_11e02"/>
-    <text id="n27_11e02" name="tfPos" xy="64,989" size="174,26" group="n28_11e02" fontSize="20" color="#ffffff" align="center" vAlign="middle" vars="true" text="自然坐标  ({r=999},{c=999})"/>
-    <group id="n28_11e02" name="posGroup" xy="21,969" size="249,52" advanced="true" collapsed="true">
+    <image id="n95_fv5t" name="imgPosIcon" src="fv5t2n" fileName="img/icon_map_zb.png" xy="23,948" group="n28_11e02"/>
+    <text id="n27_11e02" name="tfNaturalPos" xy="64,968" size="199,24" group="n28_11e02" fontSize="20" color="#ffffff" align="center" vAlign="middle" vars="true" text="自然坐标  ({x=999},{y=999})"/>
+    <image id="n97_sod9" name="posBg" src="fv5t2o" fileName="img/img_map_dk.png" xy="21,1013" size="253,40" group="n28_11e02">
+      <relation target="n99_sod9" sidePair="rightext-right"/>
+    </image>
+    <image id="n98_sod9" name="imgPosIcon" src="fv5t2n" fileName="img/icon_map_zb.png" xy="23,1001" group="n28_11e02"/>
+    <text id="n99_sod9" name="tfScenePos" xy="64,1021" size="194,24" group="n28_11e02" fontSize="20" color="#ffffff" align="center" vAlign="middle" vars="true" text="场景坐标  ({r=999},{c=999})"/>
+    <group id="n28_11e02" name="posGroup" xy="21,948" size="257,105" advanced="true">
       <gearDisplay controller="ctrlMapMode" pages="0,2"/>
       <relation target="" sidePair="bottom-bottom"/>
     </group>
@@ -91,7 +96,7 @@
     </graph>
     <image id="n96_lmgf" name="imgMarkBg" src="j595cyiic" fileName="img/img_cm_tkc_1.png" pkg="te1gxawo" xy="662,294" size="596,368" group="n80_mr86"/>
     <image id="n51_mr86" name="imgMarkTopBg" src="c1h7cyiia" fileName="img/img_cm_top_3.png" pkg="te1gxawo" xy="662,294" size="596,57" group="n80_mr86"/>
-    <text id="n52_mr86" name="selectMarkTitle" xy="681,310" size="99,31" group="n80_mr86" fontSize="24" color="#333333" align="center" vAlign="middle" text="选择标记"/>
+    <text id="n52_mr86" name="selectMarkTitle" xy="681,310" size="101,28" group="n80_mr86" fontSize="24" color="#333333" align="center" vAlign="middle" text="选择标记"/>
     <list id="n54_mr86" name="lstMarkBtn" xy="741,402" size="437,58" group="n80_mr86" layout="flow_hz" scroll="horizontal" colGap="20" defaultItem="ui://makcczvjfv5t0">
       <item title="icon_map_1" icon="ui://makcczvjfv5t2b" name="1"/>
       <item title="icon_map_6" icon="ui://makcczvjfv5t2g" name="6"/>
@@ -111,7 +116,7 @@
     <group id="n80_mr86" name="grpSelectMarkPanel" xy="662,294" size="596,368" group="n60_mr86" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <group id="n60_mr86" name="grpSelectMark" xy="0,0" size="1920,1080" advanced="true">
+    <group id="n60_mr86" name="grpSelectMark" xy="0,0" size="1920,1080" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlMarkOperate" pages="1,4"/>
     </group>
     <component id="n87_xf9r" name="curPuttingMark" src="fv5t0" fileName="btn/btnMark.xml" xy="567,320" pivot="0.5,0.5" anchor="true" visible="false" touchable="false">
