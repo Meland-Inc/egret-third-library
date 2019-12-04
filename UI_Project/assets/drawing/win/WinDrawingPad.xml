@@ -2,7 +2,7 @@
 <component size="1920,1080" designImage="ui://i25v0ebkbatc58" designImageAlpha="0" designImageLayer="1" bgColorEnabled="true">
   <controller name="ctrlLeft" pages="0,drawing,1,layer" selected="0"/>
   <controller name="ctrlTool" pages="0,pen,1,none,2,isometric" selected="0"/>
-  <controller name="ctrlMode" pages="0,create,1,editAnim" selected="0"/>
+  <controller name="ctrlMode" pages="0,create,1,editAnim" selected="1"/>
   <displayList>
     <graph id="n1_batc" name="gphBg" xy="0,0" size="1920,1080" type="rect" lineSize="0">
       <relation target="" sidePair="width-width,height-height"/>
@@ -10,7 +10,7 @@
     <loader id="n13_batc" name="ladCanvasBg" xy="464,40" size="1424,926" url="ui://a0pj43bjqilns" fill="scaleFree">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </loader>
-    <component id="n44_gup1" name="comProjectionDrawing" src="qiln2g" fileName="com/ComProjectionDrawing.xml" xy="464,40" size="1424,926" controller="ctrlPojectionType,0,ctrlProjectionNum,0">
+    <component id="n44_gup1" name="comProjectionDrawing" src="qiln2g" fileName="com/ComProjectionDrawing.xml" xy="464,40" size="1315,926" controller="ctrlPojectionType,0,ctrlProjectionNum,0">
       <relation target="n13_batc" sidePair="width-width,height-height"/>
     </component>
     <component id="n36_gup1" name="comDrawSelectBoxContainer" src="qiln1o" fileName="com/ComDrawSelectBoxContainer.xml" xy="464,40" size="1424,926" hideByEditor="true">
@@ -60,7 +60,9 @@
       <item icon="ui://a0pj43bjqiln9" name="ISOMETRIC" selectedIcon="ui://a0pj43bjqilna"/>
     </list>
     <image id="n8_batc" name="imgInpNameBg" src="eggjcyihu" fileName="img/img_cm_srk_3.png" pkg="te1gxawo" xy="47,894" size="374,65" group="n17_batc"/>
-    <text id="n9_batc" name="inpCanvasName" xy="67,895" size="351,65" group="n17_batc" alpha="0.6" input="true" fontSize="24" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="新名称">
+    <text id="n9_batc" name="inpCanvasName" xy="67,895" size="351,65" group="n17_batc" alpha="0.6" touchable="false" grayed="true" input="true" fontSize="24" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="">
+      <gearLook controller="ctrlMode" pages="1" values="0.6,0,1,0" default="0.6,0,0,1"/>
+      <gearText controller="ctrlMode" pages="0,1" values="新素材|"/>
       <relation target="n8_batc" sidePair="width-width,height-height"/>
     </text>
     <component id="n39_gup1" name="btnImport" src="gup1cyihy" fileName="btn/btnImg.xml" pkg="te1gxawo" xy="47,834" size="174,47" group="n17_batc">
@@ -70,7 +72,8 @@
       <Button title="下载图片" titleColor="#333333" icon="ui://te1gxawogup1cyihx" selectedIcon="ui://te1gxawooiqdcyih1"/>
     </component>
     <component id="n50_giuq" name="btnSave" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="47,971" size="374,54" group="n17_batc">
-      <Button title="保存" icon="ui://te1gxawooiqdcyih1"/>
+      <gearText controller="ctrlMode" pages="1" values="保存动画" default="保存"/>
+      <Button title="保存动画" icon="ui://te1gxawooiqdcyih1"/>
     </component>
     <group id="n17_batc" name="grpBottom" xy="47,834" size="374,191" group="n14_batc" advanced="true">
       <relation target="" sidePair="bottom-bottom"/>
@@ -81,6 +84,7 @@
     <text id="n53_giuq" name="n53" xy="208,57" size="53,28" group="n14_batc" fontSize="24" color="#333333" align="center" vAlign="middle" text="画图"/>
     <group id="n14_batc" name="grpLeft" xy="30,40" size="410,1010"/>
     <image id="n49_gup1" name="n49" src="gup15c" fileName="img/img_sket_qy_2.png" xy="1781,431" size="60,2">
+      <gearDisplay controller="ctrlMode" pages="0"/>
       <relation target="n26_pa6b" sidePair="bottom-top,right-right"/>
     </image>
     <graph id="n21_ljuf" name="gphDrawingBotBoard" xy="464,40" size="1315,921" group="n33_mj87" alpha="0.3" fillColor="#ff66cc33">
