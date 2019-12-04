@@ -796,6 +796,7 @@ export default {
         Global.hideLoading();
         Global.dialog("One·for·All Success");
       } catch (error) {
+        this.environChange();
         Global.hideLoading();
         Global.snack("One·for·All Error:", error, false);
       }
