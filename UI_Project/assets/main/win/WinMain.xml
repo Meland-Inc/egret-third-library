@@ -2,7 +2,7 @@
 <component size="1920,1080" opaque="false" designImage="ui://thvmj7voa1nd2" designImageAlpha="0">
   <controller name="ctrlUserStatus" pages="0,student,1,teacher,2,fakeStudent,3,fakeTeacher" selected="0"/>
   <controller name="ctrlGodView" pages="0,false,1,true" selected="0"/>
-  <controller name="ctrlEnterWay" pages="0,share,1,editSelf,2,editOther,3,roomPlayCanEdit,4,roomPlayCanNotEdit" selected="4"/>
+  <controller name="ctrlEnterWay" pages="0,share,1,editSelf,2,editOther,3,roomPlayCanEdit,4,roomPlayCanNotEdit" selected="1"/>
   <controller name="ctrlViewMode" pages="0,world,1,edit" selected="1"/>
   <displayList>
     <component id="n17_swki" name="btnChangeViewMode" src="psruh" fileName="com/btnMainMenu.xml" xy="1552,13" group="n23_11584">
@@ -44,7 +44,6 @@
     </component>
     <component id="n22_11584" name="btnInvite" src="psruh" fileName="com/btnMainMenu.xml" xy="1667,13" group="n24_11584" customData="top">
       <gearDisplay controller="ctrlEnterWay" pages="1"/>
-      <gearXY controller="ctrlEnterWay" default="1667,13"/>
       <Button title="邀请好友" icon="ui://oyity675xh734dp" page="1"/>
     </component>
     <group id="n24_11584" name="grpEditMenu" xy="1667,13" size="245,112" customData="top" advanced="true" collapsed="true">

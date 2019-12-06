@@ -416,6 +416,8 @@
     <image id="j6cmt8w" name="img_code_xzjd_9.png" path="/codeVew/oldImg/"/>
     <component id="sod9t8x" name="comEditFallingItem.xml" path="/attribute/com/"/>
     <component id="sod9t8y" name="btnOperateFallingItem.xml" path="/attribute/btn/"/>
+    <component id="j2h8cyijj" name="ComCoordinate.xml" path="/ideCommon/com/" exported="true"/>
+    <image id="j2h8t8z" name="img_ide_cm_zbk.png" path="/ideCommon/img/" scale="9grid" scale9grid="15,8,30,16"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>
