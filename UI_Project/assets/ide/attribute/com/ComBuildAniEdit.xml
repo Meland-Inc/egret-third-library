@@ -31,10 +31,10 @@
       <relation target="" sidePair="right-right,bottom-bottom"/>
       <Button title="保存" titleColor="#ffffff" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <component id="n76_xba6" name="btnExit" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="179,1032" size="110,40" hideByEditor="true" visible="false">
+    <component id="n76_xba6" name="btnExit" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="308,1032" size="110,40">
       <gearDisplay controller="ctrlCombine" pages="0"/>
       <relation target="" sidePair="right-right,bottom-bottom"/>
-      <Button title="取消" titleColor="#ffffff" icon="ui://te1gxawoeggjcyihf"/>
+      <Button title="返回" titleColor="#ffffff" icon="ui://te1gxawoeggjcyihf"/>
     </component>
     <component id="n77_xba6" name="btnConfirmCombine" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="306,1032" size="110,40">
       <gearDisplay controller="ctrlCombine" pages="1"/>
