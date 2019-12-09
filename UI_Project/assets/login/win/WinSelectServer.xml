@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080">
+  <controller name="state" pages="0,peace,1,chaos" selected="0"/>
+  <displayList>
+    <loader id="n10_test" name="imgBG" xy="0,0" size="1920,1080" fill="scaleFree">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <image id="n1_7s5l" name="bg" src="j595cyiic" fileName="img/img_cm_tkc_1.png" pkg="te1gxawo" xy="510,240" size="900,600" group="n11_test"/>
+    <image id="n13_hy2m" name="n13" src="c1h7cyiia" fileName="img/img_cm_top_3.png" pkg="te1gxawo" xy="510,241" size="900,58" group="n11_test"/>
+    <list id="n7_rhmg" name="lstServer" xy="540,358" size="846,398" group="n11_test" layout="flow_hz" overflow="scroll" lineGap="20" colGap="76" lineItemCount="2" defaultItem="ui://7daqie1jhy2m4j" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n9_rhmg" name="n9" xy="529,254" size="123,31" group="n11_test" fontSize="24" color="#333333" align="center" vAlign="middle" leading="0" text="分线服务器">
+      <relation target="n1_7s5l" sidePair="left-left,top-top"/>
+    </text>
+    <component id="n14_hy2m" name="btnClose" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1353,245" size="50,50" group="n11_test">
+      <Button icon="ui://7daqie1jhy2m4i"/>
+    </component>
+    <component id="n4_7s5l" name="btnPeace" src="j70wcyihy" fileName="btn/rbtnCommonTopTab.xml" pkg="te1gxawo" xy="832,247" size="125,50" group="n15_hy2m">
+      <Button checked="true" title="和平分线" controller="state" page="0"/>
+    </component>
+    <component id="n5_7s5l" name="btnChaos" src="j70wcyihy" fileName="btn/rbtnCommonTopTab.xml" pkg="te1gxawo" xy="963,247" size="125,50" group="n15_hy2m">
+      <Button title="混乱分线" controller="state" page="1"/>
+    </component>
+    <group id="n15_hy2m" name="n15" xy="832,247" size="256,50" group="n11_test"/>
+    <group id="n11_test" name="comServerList" xy="510,240" size="900,600" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>
