@@ -41,18 +41,18 @@
       <relation target="n104_tcg1" sidePair="bottom-bottom,center-center"/>
       <Button title="登录" titleColor="#ffffff" titleFontSize="42" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <text id="n120_tcg1" name="tfErrorInLogin" xy="4030,627" size="275,37" group="n123_tcg1" visible="false" font="方正准圆简体" fontSize="30" color="#ff676d" align="center" vAlign="middle" singleLine="true" text="两次密码输入不一致">
+    <text id="n120_tcg1" name="tfErrorInLogin" xy="4030,627" size="275,38" group="n123_tcg1" visible="false" font="方正准圆简体" fontSize="30" color="#ff676d" align="center" vAlign="middle" singleLine="true" text="两次密码输入不一致">
       <relation target="n104_tcg1" sidePair="top-top,left-left"/>
     </text>
     <component id="n121_tcg1" name="btnRetrunToSigninGroup" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="4520,270" size="64,64" group="n123_tcg1">
       <relation target="n104_tcg1" sidePair="right-right,top-top"/>
       <Button icon="ui://te1gxawooiqdcyih2"/>
     </component>
-    <text id="n191_t3kc" name="tfTitle" xy="4030,290" size="149,40" group="n123_tcg1" fontSize="36" color="#333333" text="普通注册">
+    <text id="n191_t3kc" name="tfTitle" xy="4030,290" size="149,45" group="n123_tcg1" fontSize="36" color="#333333" text="普通注册">
       <gearDisplay controller="ctrlRegister" pages="0"/>
       <relation target="n104_tcg1" sidePair="left-left,top-top"/>
     </text>
-    <text id="n122_tcg1" name="tfMailTitle" xy="4030,290" size="149,40" group="n123_tcg1" fontSize="36" color="#333333" text="邮件注册">
+    <text id="n122_tcg1" name="tfMailTitle" xy="4030,290" size="149,45" group="n123_tcg1" fontSize="36" color="#333333" text="邮件注册">
       <gearDisplay controller="ctrlRegister" pages="1"/>
       <relation target="n104_tcg1" sidePair="left-left,top-top"/>
     </text>
@@ -74,10 +74,10 @@
     <component id="n177_tcg1" name="tfAccount" src="tcg1s" fileName="com/ComLoginInput.xml" xy="4031,372" group="n137_tcg1">
       <relation target="n124_tcg1" sidePair="center-center,top-top"/>
     </component>
-    <text id="n134_tcg1" name="tfErrorInSignin" xy="4031,547" size="222,37" group="n137_tcg1" visible="false" font="方正准圆简体" fontSize="30" color="#ff676d" vAlign="middle" bold="true" text="账号或密码错误">
+    <text id="n134_tcg1" name="tfErrorInSignin" xy="4031,547" size="222,39" group="n137_tcg1" visible="false" font="方正准圆简体" fontSize="30" color="#ff676d" vAlign="middle" bold="true" text="账号或密码错误">
       <relation target="n124_tcg1" sidePair="left-left,top-top"/>
     </text>
-    <text id="n135_tcg1" name="tfSigninGroupTitle" xy="4031,290" size="149,40" group="n137_tcg1" fontSize="36" color="#333333" text="账号登录">
+    <text id="n135_tcg1" name="tfSigninGroupTitle" xy="4031,290" size="149,45" group="n137_tcg1" fontSize="36" color="#333333" text="账号登录">
       <relation target="n124_tcg1" sidePair="left-left,top-top"/>
     </text>
     <component id="n178_tcg1" name="tfPassword" src="pnmu4g" fileName="com/ComLoginPassword.xml" xy="4031,465" group="n137_tcg1">
@@ -122,10 +122,10 @@
     <component id="n186_t3kc" name="tfTouristsPassword" src="pnmu4g" fileName="com/ComLoginPassword.xml" xy="4030,466" group="n151_tcg1">
       <relation target="n138_tcg1" sidePair="center-center,top-top"/>
     </component>
-    <text id="n148_tcg1" name="tfErrorInVouristsSignin" xy="4030,548" size="160,37" group="n151_tcg1" visible="false" font="方正准圆简体" fontSize="30" color="#ff676d" align="center" vAlign="middle" leading="0" bold="true" text="账号已注册">
+    <text id="n148_tcg1" name="tfErrorInVouristsSignin" xy="4030,548" size="160,39" group="n151_tcg1" visible="false" font="方正准圆简体" fontSize="30" color="#ff676d" align="center" vAlign="middle" leading="0" bold="true" text="账号已注册">
       <relation target="n138_tcg1" sidePair="left-left,top-top"/>
     </text>
-    <text id="n149_tcg1" name="tfSigninGroupTitle" xy="4030,290" size="149,40" group="n151_tcg1" fontSize="36" color="#333333" text="游客登录">
+    <text id="n149_tcg1" name="tfSigninGroupTitle" xy="4030,290" size="149,45" group="n151_tcg1" fontSize="36" color="#333333" text="游客登录">
       <relation target="n138_tcg1" sidePair="left-left,top-top"/>
     </text>
     <component id="n188_t3kc" name="btnReturnToSelectModeGroup2" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="4506,270" size="64,64" group="n151_tcg1">
@@ -195,8 +195,8 @@
     <item time="0" type="XY" target="n160_tcg1" tween="true" startValue="-2000,-"/>
     <item time="6" type="XY" target="n137_tcg1" tween="true" startValue="-2000,-" endValue="660,-" duration="12" ease="Back.Out"/>
     <item time="6" type="XY" target="n151_tcg1" tween="true" startValue="-2000,-" endValue="660,-" duration="12" ease="Back.Out"/>
-    <item time="18" type="Alpha" target="n151_tcg1" value="1"/>
     <item time="18" type="Alpha" target="n137_tcg1" value="1"/>
+    <item time="18" type="Alpha" target="n151_tcg1" value="1"/>
   </transition>
   <transition name="returnToSelect" options="4">
     <item time="0" type="Alpha" target="n137_tcg1" tween="true" startValue="1" endValue="0" duration="12" ease="Linear"/>
@@ -209,7 +209,7 @@
     <item time="6" type="XY" target="n160_tcg1" tween="true" startValue="-2000,-" endValue="593,-" duration="12" ease="Back.Out"/>
     <item time="18" type="Alpha" target="n160_tcg1" value="1"/>
   </transition>
-  <transition name="wait" autoPlayRepeat="-1">
+  <transition name="wait" autoPlay="true" autoPlayRepeat="-1">
     <item time="0" type="Rotation" target="n161_tcg1" tween="true" startValue="0" endValue="360" duration="23" ease="Linear"/>
   </transition>
 </component>
