@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" opaque="false" designImage="ui://thvmj7vo80ab3">
   <controller name="ctrlOperate" pages="" selected="-1"/>
-  <controller name="ctrlIdeMode" pages="0,create,1,move,4,terrain,3,attr,2,code,5,ani,6,aniselect" selected="3">
+  <controller name="ctrlIdeMode" pages="0,create,1,move,4,terrain,3,attr,2,code,5,ani,6,aniselect" selected="2">
     <action type="change_page" fromPage="" toPage="0" objectId="n45_qu7t" controller="ctrlState" targetPage="1"/>
     <action type="change_page" fromPage="" toPage="4" objectId="n45_qu7t" controller="ctrlState" targetPage="0"/>
   </controller>
@@ -25,7 +25,7 @@
       <gearDisplay controller="ctrlIdeMode" pages="4"/>
       <relation target="" sidePair="right-right,height-height"/>
     </component>
-    <component id="n37_jm8l" name="comMove" src="jm8lt9c" fileName="Com/ComBuildMove.xml" pkg="32ieekgu" xy="1866,0" size="54,1080">
+    <component id="n37_jm8l" name="comMove" src="jm8lt9c" fileName="Com/ComBuildMove.xml" xy="1866,0" size="54,1080">
       <gearDisplay controller="ctrlIdeMode" pages="1"/>
       <relation target="" sidePair="right-right,height-height"/>
     </component>
@@ -45,9 +45,7 @@
       <gearDisplay controller="ctrlIdeMode" pages="5"/>
       <relation target="" sidePair="right-right,height-height"/>
     </component>
-    <component id="n45_qu7t" name="comShortCut" src="qu7tt7j" fileName="ideCommon/com/ComBuildShortCutB.xml" xy="694,76" controller="ctrlState,0">
-      <gearDisplay controller="ctrlIdeMode" pages="0,4"/>
-    </component>
+    <component id="n45_qu7t" name="comShortCut" src="qu7tt7j" fileName="ideCommon/com/ComBuildShortCutB.xml" xy="529,76" controller="ctrlState,4"/>
     <component id="n46_smiy" name="comAniSelect" src="smiyt7n" fileName="attribute/com/ComBuildAniSelect.xml" xy="1490,0" controller="ctrlState,1">
       <gearDisplay controller="ctrlIdeMode" pages="6"/>
       <relation target="" sidePair="height-height,right-right"/>
