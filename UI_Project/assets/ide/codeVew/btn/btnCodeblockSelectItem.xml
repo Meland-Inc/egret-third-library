@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="100,100" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="1"/>
+  <controller name="btnType" pages="0,common ,1,codeBlock" selected="1"/>
+  <displayList>
+    <image id="n19_oiwy" name="propBG" src="oiqdcyigz" fileName="img/img_cm_wpx_1.png" xy="0,0" pkg="te1gxawo">
+      <gearDisplay controller="btnType" pages="1"/>
+    </image>
+    <image id="n20_oiwy" name="propSelectBG" src="oiqdcyih0" fileName="img/img_cm_wpx_2.png" xy="0,0" pkg="te1gxawo">
+      <gearDisplay controller="button" pages="1"/>
+      <gearLook controller="btnType" pages="0" values="0,0,0,1" default="1,0,0,1"/>
+    </image>
+    <image id="n7_j1n2" name="bg" src="oiqdcyigz" fileName="img/img_cm_wpx_1.png" xy="0,0" pkg="te1gxawo">
+      <gearDisplay controller="btnType" pages="0"/>
+    </image>
+    <loader id="n14_ww3a" name="quality" xy="16,16" pivot="0.5,0.5" size="68,68" group="n17_ww3a" visible="false" align="center" vAlign="middle" fill="scale"/>
+    <loader id="n15_ww3a" name="icon" xy="16,16" pivot="0.5,0.5" size="68,68" group="n17_ww3a" align="center" vAlign="middle" fill="scale">
+      <relation target="n14_ww3a" sidePair="center-center,middle-middle"/>
+    </loader>
+    <text id="n18_i7sy" name="num" xy="84,76" pivot="1,0.5" anchor="true" size="17,16" group="n17_ww3a" visible="false" fontSize="12" color="#74634c" align="right" vAlign="middle" text="99"/>
+    <group id="n17_ww3a" name="grpItemIcon" xy="16,16" size="68,68" advanced="true"/>
+    <image id="n12_j1n2" name="selectedBg" src="oiqdcyih0" fileName="img/img_cm_wpx_2.png" xy="0,0" alpha="0" pkg="te1gxawo">
+      <gearDisplay controller="button" pages="1"/>
+      <gearSize controller="btnType" pages="0,1" values="100,100,1,1|100,100,1,1"/>
+      <gearLook controller="btnType" pages="1" values="0,0,0,1" default="1,0,0,1"/>
+    </image>
+  </displayList>
+  <Button mode="Radio"/>
+  <relation target="n12_j1n2" sidePair="width-width,height-height"/>
+</component>
