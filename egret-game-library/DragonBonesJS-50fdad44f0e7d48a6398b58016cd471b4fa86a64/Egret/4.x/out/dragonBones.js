@@ -3767,7 +3767,8 @@ var dragonBones;
         Armature.prototype.dispose = function () {
             if (this._armatureData !== null) {
                 this._lockUpdate = true;
-                this._dragonBones.bufferObject(this);
+                this.returnToPool();
+                // this._dragonBones.bufferObject(this);
             }
         };
         /**
