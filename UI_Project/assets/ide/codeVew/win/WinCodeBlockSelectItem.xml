@@ -1,63 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://thvmj7volj8gcyij0" designImageAlpha="100">
   <displayList>
-    <image id="n21_oiwy" name="imgBG" src="oiwytai" fileName="newImg2/img_code_zhezhao_10.png" pkg="rnqj1l77" xy="-164,-120" size="2249,1320" hideByEditor="true">
+    <graph id="n21_oiwy" name="imgBG" xy="-164,-120" size="2249,1320" alpha="0.5" type="rect" lineSize="0" fillColor="#ff000000">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
-    </image>
-    <image id="n26_lj8g" name="imgMainBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="237,111" size="1440,885" group="n36_dt2p" hideByEditor="true"/>
-    <image id="n25_lj8g" name="imgHeaderBg" src="oiqdcyih6" fileName="img/img_cm_3.png" pkg="te1gxawo" xy="237,107" size="1440,68" group="n36_dt2p" hideByEditor="true"/>
-    <image id="n28_lj8g" name="imgTitleBg" src="oiqdcyih5" fileName="img/img_cm_2.png" pkg="te1gxawo" xy="166,107" group="n36_dt2p" hideByEditor="true"/>
-    <text id="n30_lj8g" name="tfTitle" xy="186,114" size="147,47" group="n36_dt2p" hideByEditor="true" fontSize="24" color="#333333" align="center" vAlign="middle" autoSize="none" text="选择道具"/>
-    <image id="n31_lj8g" name="imgMainBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="268,197" size="1380,703" group="n36_dt2p" hideByEditor="true"/>
-    <component id="n10_11slc" name="btnConfirm" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1486,916" size="160,52" group="n36_dt2p" hideByEditor="true">
+    </graph>
+    <image id="n26_lj8g" name="imgMainBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="237,111" size="1440,885" group="n36_dt2p"/>
+    <image id="n25_lj8g" name="imgHeaderBg" src="oiqdcyih6" fileName="img/img_cm_3.png" pkg="te1gxawo" xy="237,107" size="1440,68" group="n36_dt2p"/>
+    <image id="n28_lj8g" name="imgTitleBg" src="oiqdcyih5" fileName="img/img_cm_2.png" pkg="te1gxawo" xy="166,107" group="n36_dt2p"/>
+    <text id="n30_lj8g" name="tfTitle" xy="186,114" size="147,47" group="n36_dt2p" fontSize="24" color="#333333" align="center" vAlign="middle" autoSize="none" text="选择道具"/>
+    <image id="n31_lj8g" name="imgMainBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="268,197" size="1380,703" group="n36_dt2p"/>
+    <component id="n10_11slc" name="btnConfirm" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1486,916" size="160,52" group="n36_dt2p">
       <Button title="确定" titleColor="#ffffff" titleFontSize="24" icon="ui://te1gxawooiqdcyih3"/>
     </component>
-    <component id="n13_j1n2" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1617,119" size="48,48" group="n36_dt2p" hideByEditor="true">
+    <component id="n13_j1n2" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1617,119" size="48,48" group="n36_dt2p">
       <Button icon="ui://0axy98cg8qqi3l"/>
     </component>
-    <list id="n3_oe8k" name="listTab" xy="148,216" size="119,267" group="n36_dt2p" hideByEditor="true" lineGap="10" defaultItem="ui://ti9jag5tlj8gt8l">
+    <list id="n3_oe8k" name="listTab" xy="148,216" size="119,267" group="n36_dt2p" lineGap="10" defaultItem="ui://ti9jag5tlj8gt8l" autoClearItems="true">
       <item title="玩家建筑物品"/>
       <item title="武器"/>
       <item title="食物"/>
       <item title="其他"/>
-    </list>
-    <list id="n4_oe8k" name="listItem0" xy="297,216" size="1345,657" group="n36_dt2p" layout="flow_hz" overflow="scroll" scrollBarFlags="4" scrollBarRes="ui://te1gxawodt2pcyij7," lineGap="10" colGap="10" lineItemCount="12" defaultItem="ui://te1gxawoj1n2cyi8y" autoClearItems="true">
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
       <item/>
       <item/>
       <item/>
@@ -65,119 +27,7 @@
       <item/>
       <item/>
     </list>
-    <list id="n23_c2w2" name="listItem1" xy="297,216" size="1345,657" group="n36_dt2p" layout="flow_hz" overflow="scroll" scrollBarFlags="4" scrollBarRes="ui://te1gxawodt2pcyij7," lineGap="10" colGap="10" lineItemCount="12" defaultItem="ui://te1gxawoj1n2cyi8y" autoClearItems="true">
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-    </list>
-    <list id="n24_c2w2" name="listItem2" xy="297,216" size="1345,657" group="n36_dt2p" layout="flow_hz" overflow="scroll" scrollBarFlags="4" scrollBarRes="ui://te1gxawodt2pcyij7," lineGap="10" colGap="10" lineItemCount="12" defaultItem="ui://te1gxawoj1n2cyi8y" autoClearItems="true">
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
+    <list id="n4_oe8k" name="listItem" xy="297,216" size="1345,657" group="n36_dt2p" layout="flow_hz" overflow="scroll" scrollBarFlags="4" scrollBarRes="ui://te1gxawodt2pcyij7," lineGap="10" colGap="10" lineItemCount="12" defaultItem="ui://ti9jag5to1lgwcyijm" autoClearItems="true">
       <item/>
       <item/>
       <item/>
@@ -221,209 +71,9 @@
       <item/>
       <item/>
     </list>
-    <list id="n37_b13f" name="listItem3" xy="297,216" size="1345,657" group="n36_dt2p" layout="flow_hz" overflow="scroll" scrollBarFlags="4" scrollBarRes="ui://te1gxawodt2pcyij7," lineGap="10" colGap="10" lineItemCount="12" defaultItem="ui://te1gxawoj1n2cyi8y" autoClearItems="true">
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-    </list>
-    <list id="n38_b13f" name="listItem4" xy="297,216" size="1345,657" group="n36_dt2p" layout="flow_hz" overflow="scroll" scrollBarFlags="4" scrollBarRes="ui://te1gxawodt2pcyij7," lineGap="10" colGap="10" lineItemCount="12" defaultItem="ui://te1gxawoj1n2cyi8y" autoClearItems="true">
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-    </list>
-    <list id="n39_b13f" name="listItem5" xy="297,216" size="1345,657" group="n36_dt2p" layout="flow_hz" overflow="scroll" scrollBarFlags="4" scrollBarRes="ui://te1gxawodt2pcyij7," lineGap="10" colGap="10" lineItemCount="12" defaultItem="ui://te1gxawoj1n2cyi8y" autoClearItems="true">
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-    </list>
-    <image id="n33_dt2p" name="imgSearchInputBg" src="oiqdcyigx" fileName="img/img_cm_ssk.png" pkg="te1gxawo" xy="1205,118" size="400,47" group="n35_dt2p" hideByEditor="true"/>
-    <text id="n34_dt2p" name="inpSearch" xy="1216,130" size="380,24" group="n35_dt2p" hideByEditor="true" input="true" prompt="请输入搜索内容" fontSize="20" color="#333333" align="center" vAlign="middle" autoSize="height" singleLine="true" autoClearText="true" text="请输入搜索内容"/>
-    <group id="n35_dt2p" name="grpSearchInput" xy="1205,118" size="400,47" group="n36_dt2p" hideByEditor="true"/>
+    <image id="n33_dt2p" name="imgSearchInputBg" src="oiqdcyigx" fileName="img/img_cm_ssk.png" pkg="te1gxawo" xy="1205,118" size="400,47" group="n35_dt2p"/>
+    <text id="n34_dt2p" name="inpSearch" xy="1216,130" size="380,24" group="n35_dt2p" input="true" prompt="请输入搜索内容" fontSize="20" color="#333333" align="center" vAlign="middle" autoSize="height" singleLine="true" autoClearText="true" text="请输入搜索内容"/>
+    <group id="n35_dt2p" name="grpSearchInput" xy="1205,118" size="400,47" group="n36_dt2p"/>
     <group id="n36_dt2p" name="n36" xy="148,107" size="1529,889" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
