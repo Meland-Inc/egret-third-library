@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://thvmj7vomquw10" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
-  <controller name="conSetting" pages="0,system,4,manor,5,robotCode" selected="1"/>
-  <controller name="ctrlGameMode" pages="0,game,1,lessons" selected="0"/>
+  <controller name="conSetting" pages="0,system,4,manor,5,robotCode" selected="0"/>
+  <controller name="ctrlGameMode" pages="0,game,1,lessons" selected="1"/>
   <displayList>
     <image id="n166_tcst" name="n166" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="382,192" size="1140,696" group="n154_o5a3"/>
     <image id="n92_cxfq" name="comBg" src="eggjcyiho" fileName="img/img_cm_top_1.png" pkg="te1gxawo" xy="382,148" size="1140,58" group="n154_o5a3"/>
@@ -12,10 +12,10 @@
       <Button icon="ui://te1gxawooiqdcyih2" sound="ui://fknoioovtqc912"/>
     </component>
     <component id="n21_o8k6" name="btnSystem" src="j70wcyihy" fileName="btn/rbtnCommonTopTab.xml" pkg="te1gxawo" xy="760,157" group="n94_o89o">
-      <Button title="系统" controller="conSetting" page="0"/>
+      <Button checked="true" title="系统" controller="conSetting" page="0"/>
     </component>
     <component id="n65_o31t" name="btnManor" src="j70wcyihy" fileName="btn/rbtnCommonTopTab.xml" pkg="te1gxawo" xy="892,157" group="n94_o89o">
-      <Button checked="true" title="领地" controller="conSetting" page="4"/>
+      <Button title="领地" controller="conSetting" page="4"/>
     </component>
     <component id="n80_opya" name="btnRobotCode" src="j70wcyihy" fileName="btn/rbtnCommonTopTab.xml" pkg="te1gxawo" xy="1024,157" group="n94_o89o">
       <Button title="机器人" controller="conSetting" page="5"/>
@@ -68,24 +68,28 @@
     </component>
     <text id="n149_jd08" name="tfServerIdTitle" xy="488,221" size="70,18" group="n30_o8k6" fontSize="14" color="#333333" vAlign="middle" vars="true" text="服务器ID: "/>
     <text id="n152_qh6c" name="tfGameServerHost" xy="562,221" size="61,18" group="n30_o8k6" input="true" fontSize="14" color="#333333" vAlign="middle" text="xxxxxxx"/>
-    <component id="n29_o8k6" name="btnOpenLog" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="653,825" size="120,44" group="n165_j70w">
+    <component id="n29_o8k6" name="btnOpenLog" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="653,825" size="120,44" group="n176_hxjz">
       <Button title="查看日志" titleFontSize="20" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <component id="n64_epn8" name="btnUploadLog" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="813,825" size="120,44" group="n165_j70w">
+    <component id="n64_epn8" name="btnUploadLog" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="813,825" size="120,44" group="n176_hxjz">
       <Button title="上传日志" titleFontSize="20" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <component id="n143_vxor" name="btnPlayerUnStuck" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="973,827" size="120,44" group="n165_j70w">
+    <component id="n143_vxor" name="btnPlayerUnStuck" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="973,827" size="120,44" group="n176_hxjz">
       <Button title="一键脱离" titleFontSize="20" icon="ui://te1gxawooiqdcyih3"/>
     </component>
-    <component id="n28_o8k6" name="btnLogout" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1133,827" size="120,44" group="n165_j70w">
+    <component id="n28_o8k6" name="btnLogout" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1133,827" size="120,44" group="n176_hxjz">
       <gearDisplay controller="ctrlGameMode" pages="0"/>
       <Button title="退出登陆" titleFontSize="20" icon="ui://te1gxawoeggjcyihf"/>
     </component>
-    <component id="n151_f5wz" name="btnResetAll" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1293,826" size="120,44" group="n165_j70w" hideByEditor="true" visible="false">
+    <component id="n151_f5wz" name="btnResetAll" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1293,826" size="120,44" group="n176_hxjz" hideByEditor="true" visible="false">
       <relation target="" sidePair="right-right,bottom-bottom"/>
       <Button title="重置所有" titleColor="#ffffff" titleFontSize="20" icon="ui://te1gxawoeggjcyihf"/>
     </component>
-    <group id="n165_j70w" name="n165" xy="653,825" size="760,46" group="n30_o8k6" advanced="true" layout="hz" colGap="40"/>
+    <component id="n175_hxjz" name="btnManorRestore" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1133,827" size="120,44" group="n176_hxjz">
+      <gearXY controller="ctrlGameMode" pages="1" values="1133,827" default="1293,826"/>
+      <Button title="重置领地" titleFontSize="20" icon="ui://te1gxawoeggjcyihf"/>
+    </component>
+    <group id="n176_hxjz" name="n176" xy="653,825" size="760,46" group="n30_o8k6" advanced="true"/>
     <group id="n30_o8k6" name="system" xy="488,221" size="1002,650" group="n154_o5a3" advanced="true">
       <gearDisplay controller="conSetting" pages="0"/>
     </group>
