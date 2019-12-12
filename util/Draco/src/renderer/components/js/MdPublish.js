@@ -31,12 +31,14 @@ export async function updateGit() {
     try {
         let storeCmdStr = `git checkout -- .`;
         await spawnExc.runCmd(storeCmdStr, Global.projPath, null, '还原分支错误');
+        await spawnExc.runCmd(storeCmdStr, Global.clientPath, null, '还原Client代码错误');
 
         let switchCmdStr = `git checkout ${gitBranch}`;
         await spawnExc.runCmd(switchCmdStr, Global.projPath, null, '切换分支错误');
 
         let pullCmdStr = `git pull`;
-        await spawnExc.runCmd(pullCmdStr, Global.projPath, null, '推送分支错误');
+        await spawnExc.runCmd(pullCmdStr, Global.projPath, null, '拉取分支错误');
+        await spawnExc.runCmd(pullCmdStr, Global.clientPath, null, '拉取Client代码错误');
 
         Global.toast('更新git成功');
     } catch (error) {
