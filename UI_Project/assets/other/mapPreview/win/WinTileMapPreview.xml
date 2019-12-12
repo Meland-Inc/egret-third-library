@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://thvmj7voqncg4cyij2" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlUpdate" pages="0,normal,1,updating" selected="1"/>
+  <controller name="ctrlUpdate" pages="0,normal,1,updating" selected="0"/>
   <displayList>
     <component id="n0_ui82" name="imgBg" src="qncgcyiji" fileName="com/comBg.xml" pkg="te1gxawo" xy="460,181" size="1002,718" group="n13_ui82"/>
     <graph id="n14_ui82" name="dragArea" xy="462,184" size="993,51" group="n13_ui82" alpha="0" type="rect"/>
@@ -26,7 +26,7 @@
     </group>
     <component id="n11_ui82" name="prbUpdate" src="qncg2" fileName="mapPreview/prb/prbUpdate.xml" xy="491,851" size="936,16" group="n13_ui82">
       <gearDisplay controller="ctrlUpdate" pages="1"/>
-      <ProgressBar value="63" max="100"/>
+      <ProgressBar value="100" max="100"/>
     </component>
     <group id="n13_ui82" name="root" xy="460,181" size="1002,718" advanced="true" collapsed="true">
       <relation target="" sidePair="center-center,middle-middle"/>
