@@ -2,7 +2,7 @@
 <component size="1920,1080" opaque="false" designImage="ui://thvmj7voa1nd2" designImageAlpha="0">
   <controller name="ctrlUserStatus" pages="0,student,1,teacher,2,fakeStudent,3,fakeTeacher" selected="0"/>
   <controller name="ctrlGodView" pages="0,false,1,true" selected="0"/>
-  <controller name="ctrlEnterWay" pages="0,share,1,editSelf,2,editOther,3,roomPlayCanEdit,4,roomPlayCanNotEdit" selected="1"/>
+  <controller name="ctrlEnterWay" pages="0,share,1,editSelf,2,editOther,3,roomPlayCanEdit,4,roomPlayCanNotEdit" selected="0"/>
   <controller name="ctrlViewMode" pages="0,world,1,edit" selected="1"/>
   <displayList>
     <component id="n17_swki" name="btnChangeViewMode" src="psruh" fileName="com/btnMainMenu.xml" xy="1552,13" group="n23_11584">
@@ -77,5 +77,9 @@
     <group id="n25_sod9" name="grpChat" xy="0,940" size="425,140" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlViewMode" pages="0"/>
     </group>
+    <component id="n26_evs4" name="comShortCut" src="gen8bw" fileName="old/com/ComBuildShortCut.xml" xy="692,55" customData="bottom">
+      <gearDisplay controller="ctrlViewMode" pages="1"/>
+      <relation target="" sidePair="center-center,top-top"/>
+    </component>
   </displayList>
 </component>

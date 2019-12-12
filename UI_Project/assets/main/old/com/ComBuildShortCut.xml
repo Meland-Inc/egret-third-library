@@ -1,30 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="210,46" opaque="false" extention="Button" designImage="ui://oyity675gen8c3" designImageAlpha="0">
+<component size="536,40" opaque="false" extention="Button" designImage="ui://oyity675gen8c3" designImageAlpha="0">
   <controller name="ctrlMode" pages="0,add,2,editNotDel,1,edit,5,editNotAttr,4,editNotCopy" selected="0"/>
   <displayList>
-    <component id="n8_k177" name="btnR" src="gen8bx" fileName="btn/BtnBuildShortCut.xml" xy="62,0" size="42,46">
-      <gearXY controller="ctrlMode" pages="0,2,1,5,4" values="62,0|20,0|0,0|42,0|42,0"/>
-      <Button icon="ui://oyity675gen8by" selectedIcon="ui://32ieekguloxgt8l"/>
+    <component id="n13_evs4" name="btnR" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="133,0" size="60,40">
+      <gearDisplay controller="ctrlMode" pages="0"/>
+      <gearXY controller="ctrlMode" pages="0" values="133,0" default="1,0"/>
+      <Button title="R" titleFontSize="24" icon="ui://oyity675evs44dr"/>
     </component>
-    <component id="n9_k177" name="btnEsc" src="gen8bx" fileName="btn/BtnBuildShortCut.xml" xy="104,0">
-      <gearXY controller="ctrlMode" pages="0,2,1,5,4" values="104,0|146,0|126,0|84,0|84,0"/>
-      <Button title="取消" icon="ui://oyity675gen8bz" selectedIcon="ui://32ieekguloxgt8o"/>
+    <text id="n14_evs4" name="n14" xy="203,7" size="45,26" fontSize="20" color="#ffffff" vAlign="middle" strokeColor="#333333" strokeSize="2" text="旋转">
+      <gearDisplay controller="ctrlMode" pages="0"/>
+      <gearXY controller="ctrlMode" pages="0" values="203,7" default="71,7"/>
+    </text>
+    <component id="n15_evs4" name="btnEsc" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="263,0" size="60,40">
+      <gearDisplay controller="ctrlMode" pages="4"/>
+      <Button title="Esc" titleFontSize="24" icon="ui://oyity675evs44dr"/>
     </component>
-    <component id="n10_k177" name="btnDelete" src="gen8bx" fileName="btn/BtnBuildShortCut.xml" xy="130,1">
-      <gearDisplay controller="ctrlMode" pages="1,5,4"/>
-      <gearXY controller="ctrlMode" pages="1,5,4" values="168,0|126,0|126,0" default="130,1"/>
-      <Button title="Delete" icon="ui://oyity675gen8c0" selectedIcon="ui://32ieekguloxgt8p"/>
+    <text id="n16_evs4" name="n16" xy="329,7" size="45,26" fontSize="20" color="#ffffff" vAlign="middle" strokeColor="#333333" strokeSize="2" text="退出">
+      <gearDisplay controller="ctrlMode" pages="4"/>
+    </text>
+    <component id="n17_evs4" name="btnCopy" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="265,0" size="60,40">
+      <gearDisplay controller="ctrlMode" pages="0"/>
+      <gearXY controller="ctrlMode" pages="0" values="265,0" default="133,0"/>
+      <Button title="V" titleFontSize="24" icon="ui://oyity675evs44dr"/>
     </component>
-    <component id="n11_xvfa" name="btnAttr" src="gen8bx" fileName="btn/BtnBuildShortCut.xml" xy="165,1">
-      <gearDisplay controller="ctrlMode" pages="1,2"/>
-      <gearXY controller="ctrlMode" pages="2,1" values="62,0|42,0" default="165,1"/>
-      <Button title="Z" icon="ui://oyity675gen8c1" selectedIcon="ui://32ieekguloxgt8m"/>
+    <text id="n18_evs4" name="n18" xy="335,7" size="45,26" fontSize="20" color="#ffffff" vAlign="middle" strokeColor="#333333" strokeSize="2" text="复制">
+      <gearDisplay controller="ctrlMode" pages="0"/>
+      <gearXY controller="ctrlMode" pages="0" values="335,7" default="203,7"/>
+    </text>
+    <component id="n19_evs4" name="btnDelete" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="391,0" size="89,40">
+      <gearDisplay controller="ctrlMode" pages="4"/>
+      <Button title="Delete" titleColor="#ffffff" icon="ui://oyity675evs44dr"/>
     </component>
-    <component id="n12_xvfa" name="btnCopy" src="gen8bx" fileName="btn/BtnBuildShortCut.xml" xy="235,1">
-      <gearDisplay controller="ctrlMode" pages="1,2"/>
-      <gearXY controller="ctrlMode" pages="2,1" values="104,0|84,0" default="235,1"/>
-      <Button title="V" icon="ui://oyity675gen8c2" selectedIcon="ui://32ieekguloxgt8n"/>
-    </component>
+    <text id="n20_evs4" name="n20" xy="491,7" size="45,26" fontSize="20" color="#ffffff" vAlign="middle" strokeColor="#333333" strokeSize="2" text="删除">
+      <gearDisplay controller="ctrlMode" pages="4"/>
+    </text>
   </displayList>
   <Button/>
 </component>
