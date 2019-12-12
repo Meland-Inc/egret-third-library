@@ -60,9 +60,8 @@
       <item icon="ui://a0pj43bjqiln9" name="ISOMETRIC" selectedIcon="ui://a0pj43bjqilna"/>
     </list>
     <image id="n8_batc" name="imgInpNameBg" src="eggjcyihu" fileName="img/img_cm_srk_3.png" pkg="te1gxawo" xy="47,894" size="374,65" group="n17_batc"/>
-    <text id="n9_batc" name="inpCanvasName" xy="67,895" size="351,65" group="n17_batc" alpha="0.6" touchable="false" grayed="true" input="true" fontSize="24" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="">
+    <text id="n9_batc" name="inpCanvasName" xy="67,895" size="351,65" group="n17_batc" alpha="0.6" touchable="false" grayed="true" customData="新素材" input="true" fontSize="24" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="">
       <gearLook controller="ctrlMode" pages="1" values="0.6,0,1,0" default="0.6,0,0,1"/>
-      <gearText controller="ctrlMode" pages="0,1" values="新素材|"/>
       <relation target="n8_batc" sidePair="width-width,height-height"/>
     </text>
     <component id="n39_gup1" name="btnImport" src="gup1cyihy" fileName="btn/btnImg.xml" pkg="te1gxawo" xy="47,834" size="174,47" group="n17_batc">
