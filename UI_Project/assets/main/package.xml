@@ -428,7 +428,7 @@
     <component id="gen8bt" name="ComStatus.xml" path="/old/win/" exported="true"/>
     <component id="gen8bu" name="ComMainStorage.xml" path="/old/win/" exported="true"/>
     <image id="gen8bv" name="btn_code_lk_2.png" path="/old/B-PlatformImg/" exported="true"/>
-    <component id="gen8bw" name="ComBuildShortCut.xml" path="/old/com/" exported="true"/>
+    <component id="gen8bw" name="ComMainBuildShortCut.xml" path="/com/" exported="true"/>
     <component id="gen8bx" name="BtnBuildShortCut.xml" path="/old/btn/" exported="true"/>
     <image id="gen8by" name="btn_ide_sck_R.png" path="/old/img_UI3/b/ide/"/>
     <image id="gen8bz" name="btn_ide_sck_esc.png" path="/old/img_UI3/b/ide/"/>
@@ -492,6 +492,10 @@
     <image id="xh734dp" name="icon_mainV_yqhy.png" path="/img/"/>
     <image id="xh734dq" name="icon_mainV_fh.png" path="/img/"/>
     <image id="evs44dr" name="img_cre_kjj.png" path="/create/img/" scale="9grid" scale9grid="15,10,30,20"/>
+    <image id="qr0m4ds" name="icon_mainV_mb.png" path="/img/"/>
+    <image id="qr0m4dt" name="icon_mainV_lt.png" path="/img/"/>
+    <image id="qr0m4du" name="img_mianV_tx.png" path="/img/"/>
+    <image id="qr0m4dv" name="icon_mainV_sx_1 2.png" path="/img/"/>
   </resources>
   <publish name="main"/>
 </packageDescription>
