@@ -77,9 +77,8 @@
     <group id="n25_sod9" name="grpChat" xy="0,940" size="425,140" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlViewMode" pages="0"/>
     </group>
-    <component id="n26_evs4" name="comShortCut" src="gen8bw" fileName="old/com/ComBuildShortCut.xml" xy="692,55" visible="false" customData="bottom">
-      <gearDisplay controller="ctrlViewMode" pages=""/>
-      <relation target="" sidePair="center-center,top-top"/>
+    <component id="n26_evs4" name="comBuildShortCut" src="qu7tt7j" fileName="ideCommon/com/ComBuildShortCutB.xml" pkg="ti9jag5t" xy="692,55" visible="false" touchable="false" customData="bottom" controller="ctrlState,3">
+      <relation target="" sidePair="center-center"/>
     </component>
   </displayList>
 </component>
