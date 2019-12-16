@@ -6,16 +6,20 @@
   "scripts": {
     "start": "electron .",
     "dist": "electron-builder --win --x64",
+    "build-win": "electron-builder --win --x64",
+    "build-mac": "electron-builder --mac",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "bellcode",
   "license": "ISC",
   "devDependencies": {
     "electron": "7.1.5",
-    "electron-builder": "^21.2.0"
+    "electron-builder": "^21.2.0",
+    "electron-packager": "^14.1.1"
   },
   "build": {
     "productName": "bellplanet",
+    "asar": false,
     "appId": "org.egret.launcher.ymbl",
     "copyright": "bellcode",
     "directories": {
@@ -25,6 +29,7 @@
       "./index.html",
       "./main.js",
       "./package.json",
+      "egret/**/*",
       "dist/electron/**/*"
     ],
     "win": {

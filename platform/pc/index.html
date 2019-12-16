@@ -7,7 +7,13 @@
 
 <body>
   <script>
-    location.href = `./egret/index.html`;
+    let hrefArr = location.href.split(".html");
+    //后面有参数 需要拷贝过来
+    if (hrefArr[1] != "") {
+      location.href = `./egret/index.html${hrefArr[1]}`;
+    } else {
+      location.href = `./egret/index.html`;
+    }
   </script>
 </body>
 
