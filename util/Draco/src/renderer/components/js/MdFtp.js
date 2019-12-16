@@ -494,7 +494,7 @@ export async function pushGit() {
 
         if (ModelMgr.versionModel.curEnviron.gitTagEnable) {
             let commitCmdStr = `git tag version/release_v${ModelMgr.versionModel.releaseVersion}`;
-            await spawnExc.runCmd(commitCmdStr, Global.projPath, null, 'git打tag错误');
+            await spawnExc.runCmd(commitCmdStr, Global.projPath, `git打tag成功`, 'git打tag错误');
         }
 
         let pullCmdStr = `git pull`;
