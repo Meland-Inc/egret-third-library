@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="90,32" pivot="0.5,1" anchor="true">
+  <controller name="ctrlType" pages="0,natural,1,scene" selected="0"/>
+  <displayList>
+    <image id="n0_j2h8" name="imgBg" src="j2h8t8z" fileName="ideCommon/img/img_ide_cm_zbk.png" xy="0,0" size="90,32">
+      <relation target="n1_j2h8" sidePair="rightext-right"/>
+    </image>
+    <text id="n1_j2h8" name="tfNumber" xy="12,4" size="64,24" fontSize="18" color="#ffffff" align="center" vAlign="middle" vars="true" text="120/300">
+      <gearText controller="ctrlType" pages="0,1" values="120/300|R:{r=100} C:{c=100}"/>
+    </text>
+  </displayList>
+  <relation target="n1_j2h8" sidePair="rightext-right"/>
+</component>
