@@ -9,5 +9,5 @@
     <text id="n2_ilo1" name="title" xy="0,0" size="10,24" fontSize="18" color="#333333" align="center" vAlign="middle" singleLine="true" text=""/>
   </displayList>
   <Button mode="Radio"/>
-  <relation target="n2_ilo1" sidePair="rightext-right,bottomext-bottom"/>
+  <relation target="n2_ilo1" sidePair="width-width,height-height"/>
 </component>

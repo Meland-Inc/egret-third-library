@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="68,30" restrictSize="68,0,0,0" opaque="false" clipSoftness="5,5" extention="Button" designImageAlpha="100">
-  <controller name="color" pages="0,DeepBlue,1,LightBlue,2,LightRed,3,DeepRed,4,Purple,5,Green,6,Pink,7,Carnation,8,LightYellow,9,DeepYellow" selected="0"/>
+<component size="68,30" restrictSize="68,0,0,0" opaque="false" clipSoftness="5,5" extention="ComboBox" designImageAlpha="100">
+  <controller name="color" pages="0,DeepBlue,1,LightBlue,2,LightRed,3,DeepRed,4,Purple,5,Green,6,Pink,7,Carnation,8,LightYellow,9,DeepYellow" selected="5"/>
   <displayList>
-    <loader id="n5_n1c0" name="curentNotUsed" xy="0,0" size="68,30" locked="true" hideByEditor="true" visible="false" url="ui://t573fj5bi6xe1q" align="center" vAlign="middle" fill="scaleFree">
+    <loader id="n5_n1c0" name="curentNotUsed" xy="0,0" size="68,30" locked="true" visible="false" url="ui://t573fj5bi6xe1v" align="center" vAlign="middle" fill="scaleFree">
       <gearIcon controller="color" pages="0,1,2,3,4,5,6,7,8,9" values="ui://t573fj5bi6xe1q|ui://t573fj5bi6xe1r|ui://t573fj5bi6xe1s|ui://t573fj5bi6xe1t|ui://t573fj5bi6xe1u|ui://t573fj5bi6xe1v|ui://t573fj5bi6xe1w|ui://t573fj5bi6xe1x|ui://rnqj1l77w7botlh|ui://t573fj5bi6xe1p"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
     <loader id="n8_g8bk" name="currentUsed" xy="0,0" size="68,30" url="ui://t573fj5bs45w1e" fill="scaleFree">
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <text id="n6_n1c0" name="textComp" xy="14,3" size="40,24" restrictSize="40,0,0,0" input="true" fontSize="18" color="#333333" align="center" vAlign="middle" leading="0" singleLine="true" text=""/>
+    <text id="n6_n1c0" name="title" xy="14,4" size="40,22" restrictSize="10,0,0,0" input="true" fontSize="18" color="#333333" align="center" vAlign="middle" leading="0" autoSize="none" singleLine="true" text=""/>
     <text id="n7_qq8d" name="tfHint" xy="14,3" size="40,24" restrictSize="40,0,0,0" alpha="0.5" fontSize="18" color="#333333" align="center" vAlign="middle" leading="0" singleLine="true" text=""/>
   </displayList>
-  <Button/>
+  <ComboBox dropdown="ui://t573fj5bi6xe3f"/>
   <relation target="n6_n1c0" sidePair="width-width,height-height"/>
 </component>

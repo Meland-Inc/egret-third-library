@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="248,40" opaque="false" extention="Button" designImage="ui://oyity675gen8c3" designImageAlpha="0">
+  <controller name="ctrlMode" pages="0,add,2,editNotDel,1,edit,5,editNotAttr,4,editNotCopy" selected="0"/>
+  <displayList>
+    <component id="n13_evs4" name="btnR" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="0,0" size="60,40">
+      <Button title="R" titleFontSize="24" icon="ui://oyity675evs44dr"/>
+    </component>
+    <text id="n14_evs4" name="tfRotate" xy="70,7" size="45,24" fontSize="20" color="#ffffff" vAlign="middle" strokeColor="#333333" strokeSize="2" text="旋转"/>
+    <component id="n17_evs4" name="btnEsc" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="132,0" size="60,40">
+      <Button title="Esc" titleFontSize="24" icon="ui://oyity675evs44dr"/>
+    </component>
+    <text id="n18_evs4" name="tfEsc" xy="202,7" size="46,24" fontSize="20" color="#ffffff" vAlign="middle" strokeColor="#333333" strokeSize="2" text="退出"/>
+  </displayList>
+  <Button/>
+</component>

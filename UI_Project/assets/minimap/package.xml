@@ -102,8 +102,8 @@
     <image id="fv5t2q" name="img_map_wz.png" path="/img/"/>
     <image id="fv5t2r" name="img_map_xz.png" path="/img/"/>
     <image id="fv5t2s" name="img_map_zbx_1.png" path="/img/"/>
-    <image id="fv5t2t" name="img_map_zbx_2.png" path="/img/"/>
-    <image id="fv5t2u" name="img_map_zbx_3.png" path="/img/"/>
+    <image id="fv5t2t" name="img_map_zbx_2.png" path="/img/" scale="9grid" scale9grid="5,1,10,2"/>
+    <image id="fv5t2u" name="img_map_zbx_3.png" path="/img/" scale="9grid" scale9grid="1,5,2,10"/>
     <component id="ibv12v" name="ComAreaMark.xml" path="/com/" exported="true"/>
     <image id="lmgf2w" name="icon_map_ljt.png" path="/img/"/>
     <image id="lmgf2x" name="icon_map_qx.png" path="/img/"/>

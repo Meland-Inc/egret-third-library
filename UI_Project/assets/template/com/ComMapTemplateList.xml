@@ -2,25 +2,25 @@
 <component size="1413,881" designImage="ui://thvmj7vomquwf" designImageOffsetX="-31" designImageOffsetY="-118" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlTemplateType" exported="true" pages="3,all,0,selfCreate,1,editable,2,subscribed" selected="0"/>
   <displayList>
-    <component id="n3_pz1n" name="btnSelfCreate" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="0,11" size="110,58" group="n10_pz1n">
+    <component id="n3_pz1n" name="btnSelfCreate" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="0,11" size="110,58" group="n10_pz1n">
       <Button title="我创建的" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3" controller="ctrlTemplateType" page="0"/>
     </component>
-    <component id="n4_pz1n" name="btnEditable" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="0,79" size="110,58" group="n10_pz1n">
+    <component id="n4_pz1n" name="btnEditable" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="0,79" size="110,58" group="n10_pz1n">
       <Button title="可编辑的" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3" controller="ctrlTemplateType" page="1"/>
     </component>
-    <component id="n5_pz1n" name="btnSubscribed" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="0,147" size="110,58" group="n10_pz1n">
+    <component id="n5_pz1n" name="btnSubscribed" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="0,147" size="110,58" group="n10_pz1n">
       <Button title="我的收藏" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3" controller="ctrlTemplateType" page="2"/>
     </component>
     <group id="n10_pz1n" name="grpBtnSelfType" xy="0,11" size="110,194" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlTemplateType" pages="0,1,2"/>
     </group>
-    <component id="n11_qncg" name="btnRecommended" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="0,11" size="110,58" group="n14_qncg" touchable="false">
+    <component id="n11_qncg" name="btnRecommended" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="0,11" size="110,58" group="n14_qncg" touchable="false">
       <Button checked="true" title="官方推荐" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3"/>
     </component>
-    <component id="n12_qncg" name="btnHot" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="0,79" size="110,58" group="n14_qncg" touchable="false">
+    <component id="n12_qncg" name="btnHot" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="0,79" size="110,58" group="n14_qncg" touchable="false">
       <Button title="热门" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3"/>
     </component>
-    <component id="n13_qncg" name="btnCollection" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="0,147" size="110,58" group="n14_qncg" touchable="false">
+    <component id="n13_qncg" name="btnCollection" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="0,147" size="110,58" group="n14_qncg" touchable="false">
       <Button title="最新" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3"/>
     </component>
     <group id="n14_qncg" name="grpBtnAllType" xy="0,11" size="110,194" locked="true" advanced="true" collapsed="true">
