@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1413,881" designImage="ui://thvmj7vomquwf" designImageOffsetX="-31" designImageOffsetY="-118" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlTemplateType" exported="true" pages="3,all,0,selfCreate,1,editable,2,subscribed" selected="0"/>
+  <controller name="ctrlListType" exported="true" pages="5,hot,6,recent,4,published,0,selfCreate,1,editable,2,subscribed" selected="0"/>
   <displayList>
+    <component id="n12_qncg" name="btnHot" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="0,11" size="110,58" group="n14_qncg">
+      <Button checked="true" title="热门" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3" controller="ctrlListType" page="5"/>
+    </component>
+    <component id="n13_qncg" name="btnRecent" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="0,79" size="110,58" group="n14_qncg">
+      <Button title="最新" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3" controller="ctrlListType" page="6"/>
+    </component>
+    <component id="n15_l03j" name="btnPublished" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="0,147" size="110,58" group="n14_qncg">
+      <Button title="我发布的" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3" controller="ctrlListType" page="4"/>
+    </component>
+    <group id="n14_qncg" name="grpBtnAllType" xy="0,11" size="110,194" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlListType" pages="5,6,4"/>
+    </group>
     <component id="n3_pz1n" name="btnSelfCreate" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="0,11" size="110,58" group="n10_pz1n">
-      <Button title="我创建的" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3" controller="ctrlTemplateType" page="0"/>
+      <Button title="我创建的" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3" controller="ctrlListType" page="0"/>
     </component>
     <component id="n4_pz1n" name="btnEditable" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="0,79" size="110,58" group="n10_pz1n">
-      <Button title="可编辑的" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3" controller="ctrlTemplateType" page="1"/>
+      <Button title="可编辑的" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3" controller="ctrlListType" page="1"/>
     </component>
     <component id="n5_pz1n" name="btnSubscribed" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="0,147" size="110,58" group="n10_pz1n">
-      <Button title="我的收藏" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3" controller="ctrlTemplateType" page="2"/>
+      <Button title="我的收藏" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3" controller="ctrlListType" page="2"/>
     </component>
     <group id="n10_pz1n" name="grpBtnSelfType" xy="0,11" size="110,194" advanced="true" collapsed="true">
-      <gearDisplay controller="ctrlTemplateType" pages="0,1,2"/>
-    </group>
-    <component id="n11_qncg" name="btnRecommended" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="0,11" size="110,58" group="n14_qncg" touchable="false">
-      <Button checked="true" title="官方推荐" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3"/>
-    </component>
-    <component id="n12_qncg" name="btnHot" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="0,79" size="110,58" group="n14_qncg" touchable="false">
-      <Button title="热门" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3"/>
-    </component>
-    <component id="n13_qncg" name="btnCollection" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="0,147" size="110,58" group="n14_qncg" touchable="false">
-      <Button title="最新" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3"/>
-    </component>
-    <group id="n14_qncg" name="grpBtnAllType" xy="0,11" size="110,194" locked="true" advanced="true" collapsed="true">
-      <gearDisplay controller="ctrlTemplateType" pages="3"/>
+      <gearDisplay controller="ctrlListType" pages="0,1,2"/>
     </group>
     <image id="n6_pz1n" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="110,0" size="1303,882">
       <relation target="" sidePair="bottomext-bottom"/>
     </image>
-    <list id="n8_pz1n" name="lstTemplate" xy="129,16" size="1266,850" layout="flow_hz" overflow="scroll" scrollBarFlags="4" scrollBarMargin="0,0,0,3" scrollBarRes="ui://0axy98cghgj74a," lineGap="6" colGap="10" defaultItem="ui://0axy98cgpz1n3q" autoClearItems="true">
+    <list id="n8_pz1n" name="lstTemplate" xy="129,16" size="1266,850" layout="flow_hz" overflow="scroll" scrollBarFlags="4" scrollBarMargin="0,0,0,3" scrollBarRes="ui://0axy98cghgj74a," ptrRes="ui://0axy98cgp5r74d,ui://0axy98cgp5r74h" lineGap="6" colGap="10" defaultItem="ui://0axy98cgpz1n3q" autoClearItems="true">
       <relation target="" sidePair="bottomext-bottom"/>
       <item/>
       <item/>

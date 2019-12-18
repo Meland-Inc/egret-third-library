@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://thvmj7vomquwk" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlViewStatus" pages="0,all,1,self,2,create" selected="2">
-    <action type="change_page" fromPage="" toPage="0" objectId="n16_pz1n" controller="ctrlTemplateType" targetPage="3"/>
-    <action type="change_page" fromPage="" toPage="1" objectId="n16_pz1n" controller="ctrlTemplateType" targetPage="0"/>
-  </controller>
   <controller name="ctrlRightDetail" pages="2,empty,0,edit,1,lobby" selected="0"/>
+  <controller name="ctrlViewStatus" pages="0,allList,1,selfList,2,create" selected="0">
+    <action type="change_page" fromPage="" toPage="0" objectId="n16_pz1n" controller="ctrlListType" targetPage="5"/>
+    <action type="change_page" fromPage="" toPage="1" objectId="n16_pz1n" controller="ctrlListType" targetPage="0"/>
+  </controller>
   <displayList>
     <image id="n8_8qqi" name="imgMainBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="111,90" size="1780,939" group="n20_ra2b"/>
     <image id="n5_8qqi" name="imgHeaderBg" src="oiqdcyih6" fileName="img/img_cm_3.png" pkg="te1gxawo" xy="111,30" size="1780,68" group="n20_ra2b"/>
@@ -24,11 +24,11 @@
     </component>
     <component id="n28_q186" name="btnCloseCreateView" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1831,42" size="48,48" group="n20_ra2b">
       <gearDisplay controller="ctrlViewStatus" pages="2"/>
-      <Button icon="ui://0axy98cg8qqi3l" controller="ctrlViewStatus" page="1"/>
+      <Button icon="ui://0axy98cg8qqi3l" page="1"/>
     </component>
     <component id="n12_8qqi" name="tbtnAllMap" src="8qqi3m" fileName="btn/btnViewStatus.xml" xy="429,40" group="n20_ra2b">
       <gearDisplay controller="ctrlViewStatus" pages="0,1"/>
-      <Button title="地图列表" controller="ctrlViewStatus" page="0"/>
+      <Button checked="true" title="地图列表" controller="ctrlViewStatus" page="0"/>
     </component>
     <component id="n13_8qqi" name="tbtnMyMap" src="8qqi3m" fileName="btn/btnViewStatus.xml" xy="588,40" group="n20_ra2b">
       <gearDisplay controller="ctrlViewStatus" pages="0,1"/>
@@ -37,7 +37,7 @@
     <component id="n23_ra2b" name="comCreateTemplate" src="ra2b42" fileName="com/ComCreateTemplate.xml" xy="349,118" group="n20_ra2b">
       <gearDisplay controller="ctrlViewStatus" pages="2"/>
     </component>
-    <component id="n16_pz1n" name="comMapTemplateList" src="pz1n3n" fileName="com/ComMapTemplateList.xml" xy="31,118" group="n24_ra2b" controller="ctrlTemplateType,3"/>
+    <component id="n16_pz1n" name="comMapTemplateList" src="pz1n3n" fileName="com/ComMapTemplateList.xml" xy="31,118" group="n24_ra2b" controller="ctrlListType,5"/>
     <component id="n17_ra2b" name="comEdit" src="pz1n3v" fileName="com/ComEditTemplate.xml" xy="1463,118" group="n24_ra2b">
       <gearDisplay controller="ctrlRightDetail" pages="0"/>
     </component>
@@ -49,7 +49,7 @@
     <group id="n27_lmgf" name="grpEmpty" xy="1573,453" size="180,200" group="n24_ra2b" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlRightDetail" pages="2"/>
     </group>
-    <group id="n24_ra2b" name="grpTemplateInfo" xy="31,118" size="1833,882" group="n20_ra2b" advanced="true" collapsed="true">
+    <group id="n24_ra2b" name="grpTemplateInfo" xy="31,118" size="1833,882" group="n20_ra2b" advanced="true">
       <gearDisplay controller="ctrlViewStatus" pages="0,1"/>
     </group>
     <group id="n20_ra2b" name="root" xy="31,30" size="1860,999" advanced="true">

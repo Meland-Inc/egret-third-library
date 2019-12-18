@@ -129,9 +129,8 @@
     <image id="8qqi3l" name="btn_cm_gb.png" path="/old/imgB/" exported="true"/>
     <component id="8qqi3m" name="btnViewStatus.xml" path="/btn/"/>
     <component id="pz1n3n" name="ComMapTemplateList.xml" path="/com/"/>
-    <component id="pz1n3q" name="BtnMapTemplateItemDetail.xml" path="/btn/"/>
+    <component id="pz1n3q" name="BtnMapTemplateItem.xml" path="/btn/"/>
     <component id="pz1n3r" name="comTemplateSelector.xml" path="/com/"/>
-    <component id="pz1n3s" name="BtnMapTemplateItem.xml" path="/btn/"/>
     <component id="pz1n3t" name="ComAutoClipLad.xml" path="/com/" exported="true"/>
     <image id="pz1n3u" name="img_mapT_cjtd.png" path="/img/"/>
     <component id="pz1n3v" name="ComEditTemplate.xml" path="/com/"/>
@@ -147,6 +146,11 @@
     <component id="hgj74a" name="ScrollBar1.xml" path="/slider/" exported="true"/>
     <component id="hgj74b" name="ScrollBar2_grip.xml" path="/slider/"/>
     <component id="hgj74c" name="ScrollBar2.xml" path="/slider/" exported="true"/>
+    <component id="p5r74d" name="ComMapTemplateListHeader.xml" path="/com/"/>
+    <component id="p5r74e" name="comPullUpRefresh.xml" path="/com/"/>
+    <image id="p5r74f" name="icon_mapT_bq_1.png" path="/img/"/>
+    <image id="p5r74g" name="icon_mapT_bq_2.png" path="/img/"/>
+    <component id="p5r74h" name="ComMapTemplateListFooter.xml" path="/com/"/>
   </resources>
   <publish name="template"/>
 </packageDescription>
