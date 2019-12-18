@@ -1,37 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="536,40" opaque="false" designImage="ui://thvmj7vo80ab3" designImageAlpha="0">
-  <controller name="ctrlState" exported="true" pages="0,terrain,1,create,2,esc,3,quickBuild" selected="3"/>
+<component size="617,40" opaque="false" designImage="ui://thvmj7vo80ab3" designImageAlpha="0">
+  <controller name="ctrlState" exported="true" pages="4,terrainBrush,3,terrainBrushView,6,terrainSelectView,7,createAdd,8,createEditSingle,9,createEditMulti,2,esc,10,none,11,quickBuild" selected="6"/>
   <displayList>
-    <component id="n0_qu7t" name="btnR" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="130,0" size="60,40" group="n8_pyag">
-      <gearDisplay controller="ctrlState" pages="1,3"/>
+    <component id="n12_o38y" name="btnCtrl" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="0,0" size="130,40" group="n14_o38y">
+      <Button title="Ctrl+左键" titleFontSize="24" icon="ui://ti9jag5t80ab8q"/>
+    </component>
+    <text id="n13_o38y" name="n13" xy="135,8" size="85,24" group="n14_o38y" fontSize="20" color="#ffffff" align="center" vAlign="middle" strokeColor="#333333" strokeSize="2" text="素材多选"/>
+    <group id="n14_o38y" name="grpCtrl" xy="0,0" size="220,40" advanced="true">
+      <gearDisplay controller="ctrlState" pages="4,3"/>
+      <gearXY controller="ctrlState" pages="4,3" values="198,0|95,0" default="0,0"/>
+    </group>
+    <component id="n0_qu7t" name="btnR" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="0,-80" size="60,40" group="n8_o38y">
       <Button title="R" titleFontSize="24" icon="ui://ti9jag5t80ab8q"/>
     </component>
-    <text id="n4_qu7t" name="tfRotate" xy="200,10" size="45,24" group="n8_pyag" fontSize="20" color="#ffffff" strokeColor="#333333" strokeSize="2" text="旋转">
-      <gearDisplay controller="ctrlState" pages="1,3"/>
-    </text>
-    <group id="n8_pyag" name="grpRotate" xy="130,0" size="115,40" advanced="true" collapsed="true">
-      <gearXY controller="ctrlState" pages="3" values="130,0" default="0,0"/>
+    <text id="n4_qu7t" name="n4" xy="65,-72" size="45,24" group="n8_o38y" fontSize="20" color="#ffffff" align="center" vAlign="middle" strokeColor="#333333" strokeSize="2" text="旋转"/>
+    <group id="n8_o38y" name="grpR" xy="0,-80" size="110,40" advanced="true">
+      <gearDisplay controller="ctrlState" pages="7,8,11"/>
+      <gearXY controller="ctrlState" pages="4,7,8,11" values="447,0|150,0|0,0|150,0" default="0,-80"/>
     </group>
-    <component id="n1_qu7t" name="btnV" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="130,0" size="60,40" group="n9_pyag">
-      <gearDisplay controller="ctrlState" pages="0,1"/>
+    <component id="n1_qu7t" name="btnV" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="582,0" size="60,40" group="n9_o38y">
       <Button title="V" titleFontSize="24" icon="ui://ti9jag5t80ab8q"/>
     </component>
-    <text id="n5_qu7t" name="tfCopy" xy="200,10" size="45,24" group="n9_pyag" fontSize="20" color="#ffffff" strokeColor="#333333" strokeSize="2" text="复制">
-      <gearDisplay controller="ctrlState" pages="0,1"/>
-    </text>
-    <group id="n9_pyag" name="tfCopy" xy="130,0" size="115,40" advanced="true" collapsed="true"/>
-    <component id="n2_qu7t" name="btnEsc" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="260,0" size="60,40" group="n10_pyag">
-      <Button title="Esc" titleFontSize="24" icon="ui://ti9jag5t80ab8q"/>
-    </component>
-    <text id="n6_qu7t" name="tfEsc" xy="326,10" size="45,24" group="n10_pyag" fontSize="20" color="#ffffff" strokeColor="#333333" strokeSize="2" text="退出"/>
-    <group id="n10_pyag" name="grpEsc" xy="260,0" size="111,40" advanced="true" collapsed="true"/>
-    <component id="n3_qu7t" name="btnDelete" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="390,0" size="89,40" group="n11_pyag">
-      <gearDisplay controller="ctrlState" pages="0,1"/>
+    <text id="n5_qu7t" name="n5" xy="652,8" size="45,24" group="n9_o38y" fontSize="20" color="#ffffff" align="center" vAlign="middle" strokeColor="#333333" strokeSize="2" text="复制"/>
+    <group id="n9_o38y" name="grpV" xy="582,0" size="115,40" advanced="true">
+      <gearDisplay controller="ctrlState" pages="6,8,9"/>
+      <gearXY controller="ctrlState" pages="6,8,9" values="65,0|130,0|65,0" default="582,0"/>
+    </group>
+    <component id="n3_qu7t" name="btnDelete" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="717,0" size="89,40" group="n11_o38y">
       <Button title="Delete" titleColor="#ffffff" icon="ui://ti9jag5t80ab8q"/>
     </component>
-    <text id="n7_qu7t" name="tfDelete" xy="490,10" size="45,24" group="n11_pyag" fontSize="20" color="#ffffff" strokeColor="#333333" strokeSize="2" text="删除">
-      <gearDisplay controller="ctrlState" pages="0,1"/>
-    </text>
-    <group id="n11_pyag" name="grpDelete" xy="390,0" size="145,40" advanced="true" collapsed="true"/>
+    <text id="n7_qu7t" name="n7" xy="817,8" size="45,24" group="n11_o38y" fontSize="20" color="#ffffff" align="center" vAlign="middle" strokeColor="#333333" strokeSize="2" text="删除"/>
+    <group id="n11_o38y" name="grpDelete" xy="717,0" size="145,40" advanced="true">
+      <gearDisplay controller="ctrlState" pages="6,8,9"/>
+      <gearXY controller="ctrlState" pages="6,8,9" values="200,0|265,0|200,0" default="717,0"/>
+    </group>
+    <component id="n2_qu7t" name="btnEsc" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="215,0" size="135,40" group="n10_o38y">
+      <Button title="ESC/右键" titleFontSize="24" icon="ui://ti9jag5t80ab8q"/>
+    </component>
+    <text id="n6_qu7t" name="n6" xy="355,8" size="45,24" group="n10_o38y" fontSize="20" color="#ffffff" align="center" vAlign="middle" strokeColor="#333333" strokeSize="2" text="取消"/>
+    <group id="n10_o38y" name="grpEsc" xy="215,0" size="187,40" advanced="true">
+      <gearDisplay controller="ctrlState" pages="3,6,7,8,9,2,11"/>
+      <gearXY controller="ctrlState" pages="4,3,6,7,8,9,2,11" values="240,1|335,0|365,0|280,0|430,0|365,0|215,0|300,0" default="225,0"/>
+    </group>
   </displayList>
 </component>
