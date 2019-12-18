@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" opaque="false" designImage="ui://thvmj7vo80ab3">
   <controller name="ctrlOperate" pages="" selected="-1"/>
-  <controller name="ctrlIdeMode" pages="0,create,1,move,4,terrain,3,attr,2,code,5,ani,6,aniselect" selected="4">
+  <controller name="ctrlIdeMode" pages="0,create,1,move,4,terrain,3,attr,2,code,5,ani,6,aniselect" selected="0">
     <action type="change_page" fromPage="" toPage="0" objectId="n45_qu7t" controller="ctrlState" targetPage="1"/>
     <action type="change_page" fromPage="" toPage="4" objectId="n45_qu7t" controller="ctrlState" targetPage="0"/>
   </controller>
   <displayList>
-    <graph id="n39_e7dh" name="shapeOffset" xy="1575,0" size="344,1080" visible="false" alpha="0.1" touchable="false" type="rect">
+    <graph id="n39_e7dh" name="shapeOffset" xy="1489,0" size="430,1080" visible="false" alpha="0.1" touchable="false" type="rect">
       <gearSize controller="ctrlIdeMode" pages="0,1,4,3,2,5,6" values="430,1080,1,1|54,1081,1,1|430,1080,1,1|430,1080,1,1|344,1080,1,1|427,1080,1,1|426,1080,1,1"/>
       <relation target="" sidePair="right-right,height-height"/>
     </graph>
-    <component id="n38_si0u" name="comToolBar" src="dyk9b4" fileName="ideCommon/com/ComIdeTopToolBar.xml" xy="124,0" size="1452,56" controller="ctrlMode,4">
+    <component id="n38_si0u" name="comToolBar" src="dyk9b4" fileName="ideCommon/com/ComIdeTopToolBar.xml" xy="-2,0" size="1492,56" controller="ctrlMode,4">
       <relation target="n9_r0y9" sidePair="leftext-right"/>
       <relation target="n39_e7dh" sidePair="rightext-left"/>
     </component>
-    <component id="n9_r0y9" name="comEntitySelect" src="a91xa2" fileName="create/com/ComMapEntitySelectB.xml" xy="0,0" size="126,1080" controller="ctrlState,0">
+    <component id="n9_r0y9" name="comEntitySelect" src="a91xa2" fileName="create/com/ComMapEntitySelectB.xml" xy="0,0" size="0,1080" controller="ctrlState,3">
       <relation target="" sidePair="left-left,height-height"/>
     </component>
     <component id="n36_7slt" name="comCreate" src="80ab9g" fileName="create/com/ComBuildCreate.xml" xy="1490,0" size="430,1080" controller="ctrlState,1">
@@ -33,7 +33,7 @@
       <gearDisplay controller="ctrlIdeMode" pages="3"/>
       <relation target="" sidePair="right-right,height-height"/>
     </component>
-    <list id="n35_7slt" name="lstIdeMode" xy="250,994" size="348,84" layout="row" defaultItem="ui://ti9jag5tdyk9b7">
+    <list id="n35_7slt" name="lstIdeMode" xy="579,996" size="348,84" layout="row" defaultItem="ui://ti9jag5tdyk9b7">
       <gearXY controller="ctrlIdeMode" pages="0,3,2" values="579,996|579,994|250,994" default="579,994"/>
       <relation target="" sidePair="bottom-bottom,center-center"/>
       <item title="地形" icon="ui://ti9jag5t80ab8w" name="terrain"/>
@@ -45,7 +45,7 @@
       <gearDisplay controller="ctrlIdeMode" pages="5"/>
       <relation target="" sidePair="right-right,height-height"/>
     </component>
-    <component id="n45_qu7t" name="comShortCut" src="qu7tt7j" fileName="ideCommon/com/ComBuildShortCutB.xml" xy="115,76" touchable="false" controller="ctrlState,4">
+    <component id="n45_qu7t" name="comShortCut" src="qu7tt7j" fileName="ideCommon/com/ComBuildShortCutB.xml" xy="444,76" touchable="false" controller="ctrlState,4">
       <gearXY controller="ctrlIdeMode" pages="2" values="115,76" default="444,76"/>
       <relation target="" sidePair="center-center"/>
     </component>
