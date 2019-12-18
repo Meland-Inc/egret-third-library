@@ -490,20 +490,26 @@ export async function pushGit() {
         if (ModelMgr.versionModel.curEnviron.pushGitEnable) {
             let commitCmdStr = `git commit -a -m "${ModelMgr.versionModel.publisher} 发布${ModelMgr.versionModel.curEnviron.name}版本 ${ModelMgr.versionModel.releaseVersion}"`;
             await spawnExc.runCmd(commitCmdStr, Global.projPath, null, '提交文件错误');
+            console.log(`提交文件成功`);
         }
 
         if (ModelMgr.versionModel.curEnviron.gitTagEnable) {
-            console.log(`git tag start version:${ModelMgr.versionModel.releaseVersion}`);
             let commitCmdStr = `git tag version/release_v${ModelMgr.versionModel.releaseVersion}`;
-            await spawnExc.runCmd(commitCmdStr, Global.projPath, `git打tag成功`, 'git打tag错误');
-            console.log(`git tag success`);
+            await spawnExc.runCmd(commitCmdStr, Global.projPath, null, 'git打tag错误');
+            console.log(`git打tag成功`);
+
+            let pullCmdStr = `git push origin --tags`;
+            await spawnExc.runCmd(pullCmdStr, Global.projPath, null, 'git推送tag错误');
+            console.log(`git推送tag成功`);
         }
 
         let pullCmdStr = `git pull`;
         await spawnExc.runCmd(pullCmdStr, Global.projPath, null, '拉取分支错误');
+        console.log(`拉取分支成功`);
 
         let pushCmdStr = `git push`;
         await spawnExc.runCmd(pushCmdStr, Global.projPath, null, '推送分支错误');
+        console.log(`推送分支成功`);
 
         Global.toast('推送git成功');
     } catch (error) {

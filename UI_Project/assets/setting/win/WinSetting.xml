@@ -23,46 +23,42 @@
     <group id="n94_o89o" name="grpTabs" xy="760,157" size="384,48" group="n154_o5a3" advanced="true" layout="hz" colGap="12">
       <gearDisplay controller="ctrlGameMode" pages="0"/>
     </group>
-    <text id="n97_o89o" name="tfQuality" xy="489,272" size="85,24" group="n103_o89o" fontSize="20" color="#333333" vAlign="middle" text="画面质量"/>
-    <component id="n98_o89o" name="sldImgQuality" src="o89ocyidg" fileName="sld/sldCommonBlue.xml" pkg="te1gxawo" xy="652,276" size="725,20" group="n103_o89o">
+    <text id="n114_o89o" name="tfSoundVolume" xy="488,275" size="45,24" group="n122_o89o" fontSize="20" color="#333333" vAlign="middle" text="音量"/>
+    <component id="n120_o89o" name="sldSoundVolume" src="j70wcyii0" fileName="sld/sldCommonYellow.xml" pkg="te1gxawo" xy="652,279" size="725,20" group="n122_o89o">
       <Slider value="50" max="100"/>
     </component>
-    <text id="n172_kvjb" name="tfQuality" xy="649,308" size="25,24" group="n103_o89o" fontSize="20" color="#333333" align="center" vAlign="middle" text="低"/>
-    <text id="n173_kvjb" name="tfQuality" xy="1002,308" size="25,24" group="n103_o89o" fontSize="20" color="#333333" align="center" vAlign="middle" text="中"/>
-    <text id="n174_kvjb" name="tfQuality" xy="1361,308" size="25,24" group="n103_o89o" fontSize="20" color="#333333" align="center" vAlign="middle" text="高"/>
-    <group id="n103_o89o" name="grpImgQuality" xy="489,272" size="897,60" group="n30_o8k6"/>
-    <text id="n114_o89o" name="tfSoundVolume" xy="488,367" size="45,24" group="n122_o89o" fontSize="20" color="#333333" vAlign="middle" text="音量"/>
-    <component id="n120_o89o" name="sldSoundVolume" src="j70wcyii0" fileName="sld/sldCommonYellow.xml" pkg="te1gxawo" xy="652,371" size="725,20" group="n122_o89o">
-      <Slider value="50" max="100"/>
-    </component>
-    <group id="n122_o89o" name="grpSoundVolume" xy="488,367" size="889,26" group="n30_o8k6"/>
-    <component id="n115_o89o" name="btnBgm" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="649,426" size="78,42" group="n116_o89o">
+    <group id="n122_o89o" name="grpSoundVolume" xy="488,275" size="889,26" group="n30_o8k6" collapsed="true"/>
+    <component id="n115_o89o" name="btnBgm" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="649,334" size="78,42" group="n116_o89o">
       <Button icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
     </component>
-    <text id="n121_o89o" name="tfMusic" xy="488,435" size="45,24" group="n116_o89o" fontSize="20" color="#333333" vAlign="middle" text="音乐"/>
-    <group id="n116_o89o" name="grpBgm" xy="488,426" size="239,42" group="n30_o8k6"/>
-    <component id="n158_j70w" name="btnSoundEffect" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1300,426" size="78,42" group="n119_o89o">
+    <text id="n121_o89o" name="tfMusic" xy="488,343" size="45,24" group="n116_o89o" fontSize="20" color="#333333" vAlign="middle" text="音乐"/>
+    <group id="n116_o89o" name="grpBgm" xy="488,334" size="239,42" group="n30_o8k6" collapsed="true"/>
+    <component id="n158_j70w" name="btnSoundEffect" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1300,334" size="78,42" group="n119_o89o">
       <Button icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
     </component>
-    <text id="n117_o89o" name="tfMusicEffect" xy="1138,435" size="45,24" group="n119_o89o" fontSize="20" color="#333333" vAlign="middle" text="音效"/>
-    <group id="n119_o89o" name="grpMusicEffect" xy="1138,426" size="240,42" group="n30_o8k6"/>
-    <text id="n95_o89o" name="tfPathFinding" xy="488,512" size="85,24" group="n105_o89o" fontSize="20" color="#333333" vAlign="middle" text="点击寻路"/>
-    <component id="n159_j70w" name="btnPathFinding" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="649,503" size="78,42" group="n105_o89o">
+    <text id="n117_o89o" name="tfMusicEffect" xy="1138,343" size="45,24" group="n119_o89o" fontSize="20" color="#333333" vAlign="middle" text="音效"/>
+    <group id="n119_o89o" name="grpMusicEffect" xy="1138,334" size="240,42" group="n30_o8k6" collapsed="true"/>
+    <text id="n95_o89o" name="tfPathFinding" xy="488,420" size="85,24" group="n105_o89o" fontSize="20" color="#333333" vAlign="middle" text="点击寻路"/>
+    <component id="n159_j70w" name="btnPathFinding" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="649,411" size="78,42" group="n105_o89o">
       <Button icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
     </component>
-    <group id="n105_o89o" name="grpPathFinding" xy="488,507" size="323,42" group="n30_o8k6"/>
-    <text id="n160_j70w" name="tfFPS" xy="1138,513" size="85,24" group="n142_r6hf" fontSize="20" color="#333333" vAlign="middle" text="显示帧率"/>
-    <component id="n161_j70w" name="btnShowFPS" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1300,503" size="78,42" group="n142_r6hf">
+    <group id="n105_o89o" name="grpPathFinding" xy="488,415" size="323,42" group="n30_o8k6" collapsed="true"/>
+    <text id="n160_j70w" name="tfFPS" xy="1138,421" size="85,24" group="n142_r6hf" fontSize="20" color="#333333" vAlign="middle" text="显示帧率"/>
+    <component id="n161_j70w" name="btnShowFPS" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1300,411" size="78,42" group="n142_r6hf">
       <Button icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
     </component>
-    <group id="n142_r6hf" name="grpFPS" xy="1138,503" size="352,42" group="n30_o8k6"/>
+    <group id="n142_r6hf" name="grpFPS" xy="1138,411" size="352,42" group="n30_o8k6" collapsed="true"/>
     <text id="n144_q29o" name="tfWindWalk" xy="1138,592" size="65,24" group="n146_q29o" hideByEditor="true" visible="false" fontSize="20" color="#333333" vAlign="middle" text="疾风步"/>
     <component id="n162_j70w" name="btnEnableWindWalk" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1300,584" size="78,42" group="n146_q29o" hideByEditor="true" visible="false">
       <Button icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
     </component>
-    <group id="n146_q29o" name="grpWindWalk" xy="1138,584" size="240,42" group="n30_o8k6" hideByEditor="true"/>
-    <text id="n164_j70w" name="tfOperation" xy="488,592" size="85,24" group="n30_o8k6" fontSize="20" color="#333333" vAlign="middle" text="操作方式"/>
-    <component id="n113_o89o" name="comSelectOperation" src="l61l2" fileName="com/comSelectOperation.xml" xy="654,588" group="n30_o8k6"/>
+    <group id="n146_q29o" name="grpWindWalk" xy="1138,584" size="240,42" group="n30_o8k6" hideByEditor="true" collapsed="true"/>
+    <text id="n97_o89o" name="tfQuality" xy="1138,500" size="85,24" group="n180_w0xi" fontSize="20" color="#333333" vAlign="middle" text="画面质量"/>
+    <component id="n177_w0xi" name="comSelectQuality" src="w0xi7" fileName="com/comSelectQuality.xml" xy="1302,496" group="n180_w0xi"/>
+    <group id="n180_w0xi" name="grpQuality" xy="1138,496" size="336,128" group="n30_o8k6" collapsed="true"/>
+    <text id="n164_j70w" name="tfOperation" xy="488,500" size="85,24" group="n181_w0xi" fontSize="20" color="#333333" vAlign="middle" text="操作方式"/>
+    <component id="n113_o89o" name="comSelectOperation" src="l61l2" fileName="com/comSelectOperation.xml" xy="651,496" group="n181_w0xi"/>
+    <group id="n181_w0xi" name="grpOperation" xy="488,496" size="335,128" group="n30_o8k6" collapsed="true"/>
     <component id="n42_o8k6" name="btnVconsole" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1119,749" size="120,44" group="n30_o8k6" hideByEditor="true" visible="false">
       <Button title="开启vconsole" titleFontSize="20" icon="ui://te1gxawooiqdcyih1"/>
     </component>
@@ -87,7 +83,7 @@
     <component id="n175_hxjz" name="btnManorRestore" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1293,826" size="120,44" group="n176_hxjz">
       <Button title="重置领地" titleFontSize="20" icon="ui://te1gxawoeggjcyihf"/>
     </component>
-    <group id="n176_hxjz" name="n176" xy="653,825" size="760,46" group="n30_o8k6" advanced="true"/>
+    <group id="n176_hxjz" name="n176" xy="653,825" size="760,46" group="n30_o8k6" advanced="true" collapsed="true"/>
     <group id="n30_o8k6" name="system" xy="488,221" size="1002,650" group="n154_o5a3" advanced="true">
       <gearDisplay controller="conSetting" pages="0"/>
     </group>
