@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="401,882" overflow="scroll" scrollBarFlags="4" scrollBar="visible" scrollBarRes="ui://0axy98cgiv9318,ui://0axy98cgiv9318" designImage="ui://thvmj7vomquwj" designImageOffsetX="-1463" designImageOffsetY="-118" designImageLayer="1">
+<component size="401,882" overflow="scroll" scrollBarFlags="4" scrollBar="visible" scrollBarRes="ui://0axy98cgiv9318,ui://0axy98cgiv9318" designImage="ui://thvmj7vomquwj" designImageOffsetX="-1463" designImageOffsetY="-118" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlMapSizeStatus" pages="0,big,1,middle,2,small,3,custom" selected="0"/>
-  <controller name="ctrlIsPublish" pages="0,false,1,true" selected="0"/>
-  <controller name="ctrlIsManorCheckPoint" pages="0,true,1,false" selected="0"/>
+  <controller name="ctrlIsPublish" pages="0,false,1,true" selected="1"/>
+  <controller name="ctrlIsManorCheckPoint" pages="0,true,1,false" selected="1"/>
   <displayList>
     <image id="n0_er8n" name="imgInputBg" src="eggjcyihs" fileName="img/img_cm_srk_1.png" pkg="te1gxawo" xy="10,10" size="380,40" group="n40_ra2b"/>
     <image id="n1_er8n" name="imgPen" src="pz1n3w" fileName="img/icon_mapT_bj.png" xy="355,19" group="n40_ra2b"/>
@@ -11,15 +11,16 @@
     <component id="n17_er8n" name="btnSelectMapIcon" src="iv93c" fileName="old/btn/BtnSelectMapIcon.xml" xy="10,62" size="160,118" group="n42_ra2b"/>
     <component id="n41_ra2b" name="btnPublish" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="290,91" size="100,38" group="n42_ra2b">
       <gearText controller="ctrlIsPublish" pages="1" values="更新地图" default="发布地图"/>
-      <Button title="发布地图" titleFontSize="18" icon="ui://te1gxawooiqdcyih3"/>
+      <Button title="更新地图" titleFontSize="18" icon="ui://te1gxawooiqdcyih3"/>
     </component>
     <component id="n43_ra2b" name="btnCopy" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="180,141" size="100,38" group="n42_ra2b">
       <Button title="复制地图" titleFontSize="18" icon="ui://te1gxawooiqdcyih1"/>
     </component>
     <component id="n44_ra2b" name="btnDelete" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="290,141" size="100,38" group="n42_ra2b">
-      <Button title="删除地图" titleFontSize="18" icon="ui://te1gxawoeggjcyihf"/>
+      <gearText controller="ctrlIsPublish" pages="1" values="下架地图" default="删除地图"/>
+      <Button title="下架地图" titleFontSize="18" icon="ui://te1gxawoeggjcyihf"/>
     </component>
-    <group id="n42_ra2b" name="grpDesc" xy="10,62" size="380,118" collapsed="true"/>
+    <group id="n42_ra2b" name="grpDesc" xy="10,62" size="380,118"/>
     <image id="n46_qq0e" name="imgLIne" src="vlrgcyijh" fileName="img/img_cm_line_1.png" pkg="te1gxawo" xy="11,199" size="378,3"/>
     <text id="n3_er8n" name="tfMapSize" xy="7,220" size="77,22" fontSize="18" color="#333333" vAlign="bottom" text="地图大小"/>
     <component id="n28_pz1n" name="cbMapSize" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="218,209" size="172,40">
@@ -51,7 +52,7 @@
     </component>
     <text id="n24_pz1n" name="tfIsManorCheckPoint" xy="7,401" size="121,29" group="n38_ra2b" fontSize="18" color="#333333" vAlign="middle" autoSize="none" text="是否领地关卡"/>
     <component id="n26_pz1n" name="btnIsManorCheckPoint" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="313,392" size="78,42" group="n38_ra2b">
-      <Button checked="true" icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe" controller="ctrlIsManorCheckPoint" page="0"/>
+      <Button icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe" controller="ctrlIsManorCheckPoint" page="0"/>
     </component>
     <text id="n25_pz1n" name="tfIsSceneObjCanDestroy" xy="7,576" size="196,29" group="n38_ra2b" locked="true" hideByEditor="true" visible="false" fontSize="18" color="#333333" vAlign="middle" autoSize="none" bold="true" text="场景物件是否能被破坏"/>
     <component id="n27_pz1n" name="btnIsSceneObjCanDestroy" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="313,568" size="78,42" group="n38_ra2b" locked="true" hideByEditor="true" visible="false">

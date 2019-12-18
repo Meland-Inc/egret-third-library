@@ -1,28 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="198,278" extention="Button" designImage="ui://thvmj7vomquwl" designImageOffsetX="-163" designImageOffsetY="-134" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlMode" pages="1,normal,2,publish,0,addBtn" selected="0"/>
+<component size="408,144" extention="Button" designImage="ui://thvmj7vomquwq" designImageOffsetX="-161" designImageOffsetY="-134" designImageAlpha="0" designImageLayer="1">
   <controller name="button" pages="0,up,1,down" selected="0"/>
+  <controller name="ctrlMode" pages="0,other,1,self" selected="0"/>
+  <controller name="ctrlStatus" pages="0,normal,1,publish,3,updatable,2,addBtn" selected="0"/>
+  <controller name="ctrlOperate" pages="0,editSelf,1,editOther,2,subscribe,3,quickEnter" selected="0"/>
   <displayList>
-    <image id="n0_uov9" name="imgBg" src="oiqdcyigz" fileName="img/img_cm_wpx_1.png" pkg="te1gxawo" xy="0,4" size="198,274" group="n7_o7or"/>
-    <component id="n6_uov9" name="ladMap" src="pz1n3t" fileName="com/ComAutoClipLad.xml" xy="10,14" size="178,135" group="n7_o7or"/>
-    <text id="n3_uov9" name="tfName" xy="4,157" size="190,22" group="n7_o7or" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" text="显示是十个字哦"/>
-    <component id="n12_uic4" name="pbrConnectServer" src="iv931q" fileName="old/prb/pbrLoadMapTemplate.xml" xy="11,142" size="120,6" group="n7_o7or" hideByEditor="true" visible="false">
-      <ProgressBar max="100"/>
-    </component>
-    <component id="n14_spq9" name="comSelector" src="pz1n3r" fileName="com/comTemplateSelector.xml" xy="0,0" group="n7_o7or" controller="ctrlOperate,0">
-      <gearDisplay controller="button" pages="1"/>
-    </component>
-    <group id="n7_o7or" name="mainContent" xy="0,0" size="198,278" advanced="true" collapsed="true">
-      <gearDisplay controller="ctrlMode" pages="1,2"/>
+    <image id="n23_pz1n" name="imgAdd" src="pz1n3u" fileName="img/img_mapT_cjtd.png" xy="0,6" pivot="0.5,0.5" group="n25_pz1n"/>
+    <text id="n24_pz1n" name="tfCreateMap" xy="11,165" size="175,22" group="n25_pz1n" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" text="创建地图"/>
+    <group id="n25_pz1n" name="grpBtnCreate" xy="0,6" size="198,274" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlStatus" pages="2"/>
     </group>
-    <image id="n8_lls7" name="imgAdd" src="pz1n3u" fileName="img/img_mapT_cjtd.png" xy="0,6" pivot="0.5,0.5" group="n16_pz1n"/>
-    <text id="n15_pz1n" name="tfCreateMap" xy="11,165" size="175,22" group="n16_pz1n" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" text="创建地图"/>
-    <group id="n16_pz1n" name="grpBtnCreate" xy="0,6" size="198,274" advanced="true">
-      <gearDisplay controller="ctrlMode" pages="0"/>
-    </group>
-    <image id="n13_10gnn" name="imgPublish" src="iv931x" fileName="old/img/icon_stencil_bq_1.png" xy="0,4">
-      <gearDisplay controller="ctrlMode" pages="2"/>
+    <image id="n0_uov9" name="imgBg" src="oiqdcyigz" fileName="img/img_cm_wpx_1.png" pkg="te1gxawo" xy="0,4" size="408,140" group="n28_pz1n">
+      <gearSize controller="ctrlMode" pages="1" values="198,274,1,1" default="408,140,1,1"/>
     </image>
+    <component id="n6_uov9" name="ladMap" src="pz1n3t" fileName="com/ComAutoClipLad.xml" xy="10,13" size="160,120" group="n28_pz1n">
+      <gearXY controller="ctrlMode" pages="1" values="10,14" default="10,13"/>
+      <gearSize controller="ctrlMode" pages="1" values="178,120,1,1" default="160,120,1,1"/>
+    </component>
+    <image id="n14_o3c2" name="imgAuthor" src="c1h7cyii2" fileName="img/icon_cm_avatar.png" pkg="te1gxawo" xy="177,51" group="n22_pz1n"/>
+    <text id="n13_o3c2" name="tfAuthor" xy="204,50" size="173,25" group="n22_pz1n" fontSize="14" color="#666666" vAlign="middle" autoSize="none" singleLine="true" text="千与千寻"/>
+    <group id="n22_pz1n" name="grpAuthor" xy="177,50" size="200,25" group="n28_pz1n" advanced="true">
+      <gearDisplay controller="ctrlMode" pages="0"/>
+      <gearXY controller="ctrlMode" pages="1" values="-2,110" default="177,50"/>
+    </group>
+    <text id="n3_uov9" name="tfName0" xy="178,20" size="190,25" group="n28_pz1n" fontSize="18" color="#333333" vAlign="middle" ubb="true" autoSize="none" singleLine="true" text="这里可以显示是十个字">
+      <gearDisplay controller="ctrlMode" pages="0"/>
+    </text>
+    <text id="n30_qncg" name="tfName1" xy="4,157" size="190,25" group="n28_pz1n" fontSize="18" color="#333333" align="center" vAlign="middle" ubb="true" autoSize="none" singleLine="true" text="这里可以显示是十个字">
+      <gearDisplay controller="ctrlMode" pages="1"/>
+    </text>
+    <image id="n15_o3c2" name="imgSubscribeNum" src="8qqi3i" fileName="img/icon_mapt_sc_2.png" xy="177,84" group="n36_p5r7"/>
+    <text id="n17_o3c2" name="tfSubscribeNum" xy="201,86" size="66,18" group="n36_p5r7" fontSize="14" color="#999999" vAlign="middle" autoSize="none" singleLine="true" text="999"/>
+    <group id="n36_p5r7" name="grpSubscribe" xy="177,84" size="90,20" group="n28_pz1n" advanced="true">
+      <gearXY controller="ctrlMode" pages="0,1" values="177,84|63,184"/>
+    </group>
+    <image id="n38_p5r7" name="imgSelecte" src="oiqdcyih0" fileName="img/img_cm_wpx_2.png" pkg="te1gxawo" xy="0,4" size="408,140" group="n28_pz1n">
+      <gearDisplay controller="button" pages="1"/>
+      <gearSize controller="ctrlMode" pages="0" values="408,140,1,1" default="198,274,1,1"/>
+    </image>
+    <component id="n37_p5r7" name="btnOperate" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="268,87" size="120,38" group="n28_pz1n">
+      <gearXY controller="ctrlMode" pages="0,1" values="268,87|39,220"/>
+      <gearText controller="ctrlOperate" pages="2,3" values="订阅地图|快速加入" default="编辑地图"/>
+      <Button title="编辑地图" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <group id="n28_pz1n" name="mainContent" xy="0,4" size="408,178" advanced="true">
+      <gearDisplay controller="ctrlStatus" pages="0,1,3"/>
+    </group>
+    <image id="n31_l03j" name="imgUpdatable" src="p5r74f" fileName="img/icon_mapT_bq_1.png" xy="0,4" group="n33_p5r7"/>
+    <text id="n32_p5r7" name="tfUpdatable" xy="0,10" size="79,24" group="n33_p5r7" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="可更新"/>
+    <group id="n33_p5r7" name="grpUpdatable" xy="0,4" size="80,36" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlStatus" pages="3"/>
+    </group>
+    <image id="n29_pz1n" name="imgPublish" src="p5r74g" fileName="img/icon_mapT_bq_2.png" xy="0,4" group="n35_p5r7"/>
+    <text id="n34_p5r7" name="tfPublish" xy="0,10" size="79,24" group="n35_p5r7" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="已发布"/>
+    <group id="n35_p5r7" name="grpPublish" xy="0,4" size="80,36" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlStatus" pages="1"/>
+    </group>
   </displayList>
   <Button mode="Radio"/>
+  <relation target="n0_uov9" sidePair="bottomext-bottom,rightext-right"/>
 </component>
