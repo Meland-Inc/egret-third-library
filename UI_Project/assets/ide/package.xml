@@ -424,6 +424,10 @@
     <image id="ps3owcyijn" name="icon_codeV_zb_1.png" path="/codeVew/img/"/>
     <image id="ps3owcyijo" name="icon_codeV_zb_2.png" path="/codeVew/img/"/>
     <component id="baegwcyijp" name="ComSelectNumber.xml" path="/terrain/com/" exported="true"/>
+    <image id="f0vfwcyijq" name="icon_code_ui_1.png" path="/codeVew/img/"/>
+    <image id="f0vfwcyijr" name="icon_code_ui_1_1.png" path="/codeVew/img/"/>
+    <image id="f0vfwcyijs" name="img_code_ui_1_1.png" path="/codeVew/img/"/>
+    <image id="f0vfwcyijt" name="img_code_ui_1.png" path="/codeVew/img/" scale="9grid" scale9grid="1,14,2,28"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>
