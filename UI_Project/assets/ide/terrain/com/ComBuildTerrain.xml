@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="430,1080" opaque="false" designImage="ui://thvmj7vov00l3" designImageOffsetX="-1490" designImageAlpha="0">
+<component size="430,1080" opaque="false" designImage="ui://thvmj7voo5ey4cyij8" designImageOffsetX="-1490">
   <controller name="ctrlState" exported="true" pages="1,open,0,fold" selected="0"/>
   <controller name="ctrlMode" exported="true" pages="0,brush,1,shovel,2,replace,3,select" selected="0">
     <action type="change_page" fromPage="" toPage="1,3" controller="ctrlState" targetPage="0"/>
@@ -121,6 +121,72 @@
     <group id="n16_jm8l" name="grpBp" xy="10,190" size="410,879" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlState" pages="1"/>
     </group>
+    <image id="n36_o5ey" name="n36" src="o5eywcyijs" fileName="ideCommon/img/img_ide_cm_xfk.png" xy="-9,790" size="448,296" group="n39_o5ey">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </image>
+    <list id="n37_o5ey" name="lstBpSelect" xy="20,814" size="400,200" group="n39_o5ey" layout="flow_hz" selectionMode="multipleSingleClick" overflow="scroll" scrollBar="hidden" margin="10,0,0,0" scrollBarMargin="5,5,0,0" scrollBarRes="ui://ti9jag5tso8vt7r," lineGap="10" colGap="15" defaultItem="ui://ti9jag5to5eywcyijr" autoClearItems="true">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n40_o5ey" name="btnClear" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="288,1026" size="120,44" group="n39_o5ey">
+      <Button title="清空" icon="ui://te1gxawoeggjcyihf"/>
+    </component>
+    <image id="n41_o5ey" name="n41" src="80ab99" fileName="ideCommon/img/img_ide_cm_h.png" xy="0,1014" size="430,2" group="n39_o5ey"/>
+    <group id="n39_o5ey" name="grpSelect" xy="-9,790" size="448,296" hideByEditor="true" advanced="true"/>
   </displayList>
   <relation target="n19_n83g" sidePair="width-width"/>
 </component>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="86,86" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <image id="n13_j0zc" name="imgBG_0" src="80ab9c" fileName="ideCommon/img/img_ide_wpk_1.png" xy="0,0" pivot="0.5,0.5"/>
+    <image id="n28_o5ey" name="n28" src="o5eywcyijt" fileName="ideCommon/img/img_ide_wpk_1_1.png" xy="0,0" size="86,86" group="n30_o5ey" alpha="0.5"/>
+    <image id="n31_o5ey" name="n31" src="umtscyiie" fileName="img/icon_cm_c.png" pkg="te1gxawo" xy="69,3" size="14,14" group="n30_o5ey"/>
+    <group id="n30_o5ey" name="grpTip" xy="0,0" size="86,86" visible="false" advanced="true" collapsed="true"/>
+    <loader id="n25_sxvt" name="formulaBG" xy="11,11" size="64,64" group="n26_sxvt" align="center" vAlign="middle" fill="scale"/>
+    <loader id="n16_j0zc" name="icon" xy="11,11" pivot="0.5,0.5" size="64,64" group="n26_sxvt" align="center" vAlign="middle" fill="scale"/>
+    <group id="n26_sxvt" name="grpItemIcon" xy="11,11" size="64,64" advanced="true" collapsed="true"/>
+    <image id="n27_sxvt" name="imgMulti" src="s1sdta6" fileName="newImg/AnimationEdit/icon_cm_dh_10.png" pkg="32ieekgu" xy="66,0" hideByEditor="true"/>
+  </displayList>
+  <Button mode="Check"/>
+</component>
