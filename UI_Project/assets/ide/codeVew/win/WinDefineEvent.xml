@@ -81,7 +81,7 @@
       <relation target="n38_iasz" sidePair="center-center,top-top"/>
     </group>
     <image id="n64_fvb2" name="imgMainBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="369,252" size="1181,570" group="n59_iasz"/>
-    <component id="n60_oydg" name="freeCtnr" src="s45w1b" fileName="codeVew/com/FreeContainer.xml" xy="417,291" size="1098,93" group="n59_iasz">
+    <component id="n60_oydg" name="freeCtnr" src="s45w1b" fileName="codeVew/com/FreeContainer.xml" xy="425,305" size="1098,93" group="n59_iasz">
       <relation target="n64_fvb2" sidePair="width-width,center-center"/>
       <relation target="n64_fvb2" sidePair="top-top"/>
     </component>
