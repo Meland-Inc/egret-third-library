@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="244,34">
-  <controller name="ctrlPull" pages="0,pulling,1,ready" selected="0"/>
+  <controller name="ctrlPull" pages="0,pulling,3,loading,1,done,2,noMore" selected="1"/>
   <displayList>
-    <text id="n0_p5r7" name="title" xy="0,0" size="244,34" fontSize="30" color="#333333" align="center" vAlign="middle" autoSize="none" text="下滑">
-      <gearText controller="ctrlPull" pages="1" values="释放刷新" default="下滑"/>
+    <text id="n0_p5r7" name="title" xy="0,0" size="244,34" fontSize="30" color="#333333" align="center" vAlign="middle" autoSize="none" text="刷新中……">
+      <gearText controller="ctrlPull" pages="0,3,1,2" values="下滑刷新|刷新中……|已刷新|已经最新"/>
       <relation target="" sidePair="width-width,height-height"/>
     </text>
   </displayList>

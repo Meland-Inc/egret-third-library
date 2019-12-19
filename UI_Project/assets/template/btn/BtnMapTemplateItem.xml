@@ -29,10 +29,11 @@
     <text id="n30_qncg" name="tfName1" xy="4,157" size="190,25" group="n28_pz1n" fontSize="18" color="#333333" align="center" vAlign="middle" ubb="true" autoSize="none" singleLine="true" text="这里可以显示是十个字">
       <gearDisplay controller="ctrlMode" pages="1"/>
     </text>
-    <image id="n15_o3c2" name="imgSubscribeNum" src="8qqi3i" fileName="img/icon_mapt_sc_2.png" xy="177,84" group="n36_p5r7"/>
-    <text id="n17_o3c2" name="tfSubscribeNum" xy="201,86" size="66,18" group="n36_p5r7" fontSize="14" color="#999999" vAlign="middle" autoSize="none" singleLine="true" text="999"/>
-    <group id="n36_p5r7" name="grpSubscribe" xy="177,84" size="90,20" group="n28_pz1n" advanced="true">
-      <gearXY controller="ctrlMode" pages="0,1" values="177,84|63,184"/>
+    <image id="n15_o3c2" name="imgSubscribeNum" src="8qqi3i" fileName="img/icon_mapt_sc_2.png" xy="177,94" group="n36_p5r7"/>
+    <text id="n17_o3c2" name="tfSubscribeNum" xy="201,96" size="66,18" group="n36_p5r7" fontSize="14" color="#999999" vAlign="middle" autoSize="none" singleLine="true" text="999"/>
+    <group id="n36_p5r7" name="grpSubscribe" xy="177,94" size="90,20" group="n28_pz1n" advanced="true">
+      <gearDisplay controller="ctrlMode" pages="0"/>
+      <gearXY controller="ctrlMode" pages="0,1" values="177,94|63,184"/>
     </group>
     <image id="n38_p5r7" name="imgSelecte" src="oiqdcyih0" fileName="img/img_cm_wpx_2.png" pkg="te1gxawo" xy="0,4" size="408,140" group="n28_pz1n">
       <gearDisplay controller="button" pages="1"/>
