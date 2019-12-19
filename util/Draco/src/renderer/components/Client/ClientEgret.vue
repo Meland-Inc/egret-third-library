@@ -4,25 +4,31 @@
       <mu-button
         v-loading="isUpdateGitLoading"
         data-mu-loading-size="24"
-        color="cyan500"
+        color="pink500"
         @click="updateGit"
       >更新git文件</mu-button>
       <mu-button
         v-loading="isEgretRunLoading"
         data-mu-loading-size="24"
-        color="blue500"
+        color="orange500"
         @click="egretRun"
       >运行游戏</mu-button>
       <mu-button
         v-loading="isEgretStopLoading"
         data-mu-loading-size="24"
-        color="purple500"
+        color="cyan500"
         @click="stopRun"
       >停止游戏</mu-button>
       <mu-button
+        v-loading="isCommitGitLoading"
+        data-mu-loading-size="24"
+        color="blue500"
+        @click="commitGit"
+      >Git提交文件</mu-button>
+      <mu-button
         v-loading="isPullGitLoading"
         data-mu-loading-size="24"
-        color="green500"
+        color="purple500"
         @click="pushGit"
       >Git推送文件</mu-button>
     </div>
@@ -38,7 +44,7 @@ export default {
       isUpdateGitLoading: false,
       isEgretRunLoading: false,
       isEgretStopLoading: false,
-
+      isCommitGitLoading: false,
       isPullGitLoading: false
     };
   },
@@ -70,6 +76,15 @@ export default {
         this.isEgretRunLoading = false;
       } catch (error) {
         this.isEgretStopLoading = false;
+      }
+    },
+    async commitGit() {
+      this.isCommitGitLoading = true;
+      try {
+        await mdEgret.commitGit();
+        this.isCommitGitLoading = false;
+      } catch (error) {
+        this.isCommitGitLoading = false;
       }
     },
     async pushGit() {

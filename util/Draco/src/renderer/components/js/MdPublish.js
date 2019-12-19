@@ -29,6 +29,10 @@ const assetSfxValues = [assetsSfx, asyncSfx, indieSfx, externalSfx];
 export async function updateGit() {
     let gitBranch = ModelMgr.versionModel.curEnviron.gitBranch;
     try {
+        let clearCmdStr = `git clean -df`;
+        await spawnExc.runCmd(clearCmdStr, Global.projPath, null, '清除文件错误');
+        await spawnExc.runCmd(clearCmdStr, Global.clientPath, null, '清除Client代码错误');
+
         let storeCmdStr = `git checkout -- .`;
         await spawnExc.runCmd(storeCmdStr, Global.projPath, null, '还原分支错误');
         await spawnExc.runCmd(storeCmdStr, Global.clientPath, null, '还原Client代码错误');
