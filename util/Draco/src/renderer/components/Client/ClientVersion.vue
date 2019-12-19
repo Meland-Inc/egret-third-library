@@ -229,19 +229,19 @@
           <mu-divider />
           <div class="button-wrapper">
             <mu-button
-              v-loading="isPullGitLoading"
+              v-loading="isCommitGitLoading"
               data-mu-loading-size="24"
               color="pink500"
+              @click="commitGit"
+              v-show="curEnviron&&(curEnviron.pushGitEnable||curEnviron.gitTagEnable)"
+            >Git提交文件</mu-button>
+            <mu-button
+              v-loading="isPullGitLoading"
+              data-mu-loading-size="24"
+              color="orange500"
               @click="pushGit"
               v-show="curEnviron&&(curEnviron.pushGitEnable||curEnviron.gitTagEnable)"
             >Git推送文件</mu-button>
-            <!-- <mu-button
-              v-loading="isGitTagLoading"
-              data-mu-loading-size="24"
-              color="orange500"
-              @click="gitTag"
-              v-show="curEnviron&&curEnviron.gitTagEnable"
-            >Git打tag</mu-button>-->
             <mu-button
               v-loading="isZipUploadGameLoading"
               data-mu-loading-size="24"
@@ -347,6 +347,7 @@ export default {
       isUploadPolicyLoading: false,
       isApplyPolicyNumLoading: false,
 
+      isCommitGitLoading: false,
       isPullGitLoading: false,
       isGitTagLoading: false,
       isZipUploadGameLoading: false,
@@ -688,6 +689,18 @@ export default {
       let gameVersion = await ModelMgr.versionModel.getEnvironGameVersion();
       Global.toast(`游戏版本:${gameVersion}`);
     },
+    async commitGit() {
+      this.isCommitGitLoading = true;
+      Global.showRegionLoading();
+      try {
+        await mdFtp.commitGit();
+        this.isCommitGitLoading = false;
+        Global.hideRegionLoading();
+      } catch (error) {
+        this.isCommitGitLoading = false;
+        Global.hideRegionLoading();
+      }
+    },
     async pushGit() {
       this.isPullGitLoading = true;
       Global.showRegionLoading();
@@ -700,18 +713,6 @@ export default {
         Global.hideRegionLoading();
       }
     },
-    // async gitTag() {
-    //   this.isGitTagLoading = true;
-    //   Global.showRegionLoading();
-    //   try {
-    //     await mdFtp.gitTag();
-    //     this.isGitTagLoading = false;
-    //     Global.hideRegionLoading();
-    //   } catch (error) {
-    //     this.isGitTagLoading = false;
-    //     Global.hideRegionLoading();
-    //   }
-    // },
     async zipUploadGame() {
       this.isZipUploadGameLoading = true;
       Global.showRegionLoading();
@@ -778,12 +779,9 @@ export default {
         }
 
         if (this.curEnviron.pushGitEnable || this.curEnviron.gitTagEnable) {
+          promiseList.push(mdFtp.commitGit);
           promiseList.push(mdFtp.pushGit);
         }
-
-        // if (this.curEnviron.gitTagEnable) {
-        //   promiseList.push(mdFtp.gitTag);
-        // }
 
         if (this.curEnviron.zipUploadGameEnable) {
           promiseList.push(mdFtp.zipUploadGame);

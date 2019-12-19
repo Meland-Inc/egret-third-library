@@ -485,19 +485,23 @@ export function checkPolicyNum() {
     return ExternalUtil.getPolicyInfo(ModelMgr.versionModel.curEnviron.name);
 }
 
+export async function commitGit() {
+    if (ModelMgr.versionModel.curEnviron.pushGitEnable) {
+        let commitCmdStr = `git commit -a -m "${ModelMgr.versionModel.publisher} 发布${ModelMgr.versionModel.curEnviron.name}版本 ${ModelMgr.versionModel.releaseVersion}"`;
+        await spawnExc.runCmd(commitCmdStr, Global.projPath, null, '提交文件错误');
+        console.log(`提交文件成功`);
+    }
+
+    if (ModelMgr.versionModel.curEnviron.gitTagEnable) {
+        let commitCmdStr = `git tag version/release_v${ModelMgr.versionModel.releaseVersion}`;
+        await spawnExc.runCmd(commitCmdStr, Global.projPath, null, 'git打tag错误');
+        console.log(`git打tag成功`);
+    }
+}
+
 export async function pushGit() {
     try {
-        if (ModelMgr.versionModel.curEnviron.pushGitEnable) {
-            let commitCmdStr = `git commit -a -m "${ModelMgr.versionModel.publisher} 发布${ModelMgr.versionModel.curEnviron.name}版本 ${ModelMgr.versionModel.releaseVersion}"`;
-            await spawnExc.runCmd(commitCmdStr, Global.projPath, null, '提交文件错误');
-            console.log(`提交文件成功`);
-        }
-
         if (ModelMgr.versionModel.curEnviron.gitTagEnable) {
-            let commitCmdStr = `git tag version/release_v${ModelMgr.versionModel.releaseVersion}`;
-            await spawnExc.runCmd(commitCmdStr, Global.projPath, null, 'git打tag错误');
-            console.log(`git打tag成功`);
-
             let pullCmdStr = `git push origin --tags`;
             await spawnExc.runCmd(pullCmdStr, Global.projPath, null, 'git推送tag错误');
             console.log(`git推送tag成功`);
@@ -516,22 +520,6 @@ export async function pushGit() {
         Global.snack('推送git错误', error);
     }
 }
-
-// export async function gitTag() {
-//     try {
-//         //         git tag <tagName> //创建本地tag
-//         // git push origin <tagName> //推送到远程仓库
-// let commitCmdStr = `git tag version/release_v${ModelMgr.versionModel.releaseVersion}`;
-// await spawnExc.runCmd(commitCmdStr, Global.projPath, null, 'git打tag错误');
-
-//         let pullCmdStr = `git push origin version/release_v${ModelMgr.versionModel.releaseVersion}`;
-//         await spawnExc.runCmd(pullCmdStr, Global.projPath, null, 'git推送tag错误');
-
-//         Global.toast('推送git成功');
-//     } catch (error) {
-//         Global.snack('推送git错误', error);
-//     }
-// }
 
 export async function zipUploadGame() {
     // let filePath = `${Global.svnPublishPath}${environ.localPath}/${ModelMgr.versionModel.uploadVersion}/`;
