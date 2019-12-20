@@ -186,7 +186,9 @@
       <Button title="清空" icon="ui://te1gxawoeggjcyihf"/>
     </component>
     <image id="n41_o5ey" name="n41" src="80ab99" fileName="ideCommon/img/img_ide_cm_h.png" xy="0,1014" size="430,2" group="n39_o5ey"/>
-    <group id="n39_o5ey" name="grpSelect" xy="-9,790" size="448,296" hideByEditor="true" advanced="true"/>
+    <group id="n39_o5ey" name="grpSelect" xy="-9,790" size="448,296" hideByEditor="true" advanced="true" collapsed="true">
+      <relation target="" sidePair="bottom-bottom"/>
+    </group>
   </displayList>
   <relation target="n19_n83g" sidePair="width-width"/>
 </component>
