@@ -20,6 +20,7 @@
       </div>
     </mu-container>
     <mu-container>
+      <mu-checkbox v-model="containNative" label="native包"></mu-checkbox>
       <mu-button small v-show="!isAdvanceMode" @click="changeAdvanceMode">
         <mu-icon value="add"></mu-icon>高级模式
       </mu-button>
@@ -82,6 +83,8 @@
             @click="onMergeVersionClick"
             v-show="curEnviron&&curEnviron.mergeVersionEnable"
           >比较新旧版本</mu-button>
+
+          <mu-button @click="onTestClick" v-loading="isTestLoading">Test</mu-button>
         </div>
         <div>
           <mu-flex class="flex-wrapper" align-items="center">
@@ -331,7 +334,9 @@ export default {
   data() {
     return {
       oneClickContent: "只需要点一下就够了.",
+      containNative: false,
       isAdvanceMode: false,
+      isTestLoading: false,
 
       isUpdateGitLoading: false,
       isPublishProjectLoading: false,
@@ -429,6 +434,12 @@ export default {
     }
   },
   methods: {
+    async onTestClick() {
+      this.isTestLoading = true;
+      await mdPublish.copyPackageToNative();
+      await mdPublish.publishWin();
+      this.isTestLoading = false;
+    },
     updatePublishText() {
       this.publishErrorText = this.publisher ? null : "请输入发布者";
       ModelMgr.versionModel.publisher = this.publisher;
@@ -776,6 +787,11 @@ export default {
           promiseList.push(mdFtp.modifyPolicyFile);
           promiseList.push(mdFtp.uploadPolicyFile);
           promiseList.push(mdFtp.applyPolicyNum);
+        }
+
+        if (this.containNative) {
+          promiseList.push(mdPublish.publishWin);
+          promiseList.push(mdPublish.publishMac);
         }
 
         if (this.curEnviron.pushGitEnable || this.curEnviron.gitTagEnable) {

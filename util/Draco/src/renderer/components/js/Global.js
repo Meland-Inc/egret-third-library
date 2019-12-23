@@ -2,7 +2,7 @@ import { ipcRenderer } from 'electron';
 import { ModelMgr } from "./model/ModelMgr";
 
 export class Global {
-    static currentVersion = "1.9.5 beta17";
+    static currentVersion = "1.9.6 beta1";
     static projPath = localStorage.getItem('client_project_path');
     static protoPath = localStorage.getItem('client_proto_path');
     static svnPath = localStorage.getItem('client_svn_path');
@@ -55,7 +55,7 @@ export class Global {
         {
             name: "publish", title: "发布模式", icon: "accessible",
             protoEnable: false, csvEnable: false, textureEnable: false, mapDataEnable: false, assetEnable: false,
-            egretEnable: false, versionEnable: true, lessonEnable: true, appEnable: false,
+            egretEnable: false, versionEnable: true, lessonEnable: true, appEnable: true,
             textureGitEnable: false,
             environNames: [ModelMgr.versionModel.eEnviron.beta, ModelMgr.versionModel.eEnviron.ready, ModelMgr.versionModel.eEnviron.release]
         }
@@ -95,6 +95,10 @@ export class Global {
 
     static get rawResourcePath() {
         return Global.projPath + '/rawResource';
+    }
+
+    static get pcProjectPath() {
+        return Global.clientPath + '/platform/pc';
     }
 
     // static get compressPath() {
