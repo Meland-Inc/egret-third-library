@@ -804,7 +804,7 @@ export async function copyPictures() {
     await copyResource(projNewVersionPath);
 }
 
-export async function copyPackageToNative() {
+export async function copyVersionToNative() {
     let pcEgretPath = Global.pcProjectPath + "/egret";
     let releaseVersion = ModelMgr.versionModel.releaseVersion;
     let environ = ModelMgr.versionModel.curEnviron;
@@ -813,7 +813,6 @@ export async function copyPackageToNative() {
 
     //删除egret文件夹
     await fsExc.delFiles(pcEgretPath);
-
 
     //拷贝egret游戏资源包
     await fsExc.copyFile(releasePath, pcEgretPath, true);
@@ -828,12 +827,6 @@ export async function copyPackageToNative() {
     //写policy文件
     let policyPath = `${Global.svnPublishPath}${environ.localPolicyPath}/policyFile_v${policyNum}.json`
     await fsExc.copyFile(policyPath, pcEgretPath);
-
-    // let packagePath = Global.pcProjectPath + "/package.json";
-    // let packageContent = await fsExc.readFile(packagePath);
-    // let reg = /(?="version": )(.*)(?=,)/;
-    // packageContent = packageContent.replace(reg, `"version": "${releaseVersion}"`)
-    // console.log(packageContent);
 }
 
 export async function publishWin() {
@@ -844,5 +837,4 @@ export async function publishWin() {
 export async function publishMac() {
     let cmdStr = "npm run build:mac";
     await spawnExc.runCmd(cmdStr, Global.pcProjectPath, null, "打包mac包错误");
-
 }

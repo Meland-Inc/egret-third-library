@@ -436,8 +436,13 @@ export default {
   methods: {
     async onTestClick() {
       this.isTestLoading = true;
-      await mdPublish.copyPackageToNative();
-      await mdPublish.publishWin();
+      // await mdPublish.copyVersionToNative();
+      // await mdPublish.publishWin();
+      // await mdPublish.publishMac();
+      // await ModelMgr.ftpModel.initQiniuOption();
+      // await mdFtp.copyPackageToSvn();
+      // await mdFtp.uploadNativeExe();
+      // await mdFtp.uploadNativeDmg();
       this.isTestLoading = false;
     },
     updatePublishText() {
@@ -789,9 +794,16 @@ export default {
           promiseList.push(mdFtp.applyPolicyNum);
         }
 
-        if (this.containNative) {
+        if (this.containNative && this.curEnviron.nativeEnable) {
+          //打包native包
+          promiseList.push(mdPublish.copyVersionToNative);
           promiseList.push(mdPublish.publishWin);
           promiseList.push(mdPublish.publishMac);
+
+          //改名native包拷贝到svn,并上传到cdn
+          promiseList.push(mdFtp.copyPackageToSvn);
+          promiseList.push(mdFtp.uploadNativeExe);
+          promiseList.push(mdFtp.uploadNativeDmg);
         }
 
         if (this.curEnviron.pushGitEnable || this.curEnviron.gitTagEnable) {
