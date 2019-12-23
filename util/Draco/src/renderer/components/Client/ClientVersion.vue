@@ -84,7 +84,7 @@
             v-show="curEnviron&&curEnviron.mergeVersionEnable"
           >比较新旧版本</mu-button>
 
-          <mu-button @click="onTestClick" v-loading="isTestLoading">Test</mu-button>
+          <!-- <mu-button @click="onTestClick" v-loading="isTestLoading">Test</mu-button> -->
         </div>
         <div>
           <mu-flex class="flex-wrapper" align-items="center">
@@ -435,7 +435,7 @@ export default {
   },
   methods: {
     async onTestClick() {
-      this.isTestLoading = true;
+      // this.isTestLoading = true;
       // await mdPublish.copyVersionToNative();
       // await mdPublish.publishWin();
       // await mdPublish.publishMac();
@@ -443,7 +443,7 @@ export default {
       // await mdFtp.copyPackageToSvn();
       // await mdFtp.uploadNativeExe();
       // await mdFtp.uploadNativeDmg();
-      this.isTestLoading = false;
+      // this.isTestLoading = false;
     },
     updatePublishText() {
       this.publishErrorText = this.publisher ? null : "请输入发布者";

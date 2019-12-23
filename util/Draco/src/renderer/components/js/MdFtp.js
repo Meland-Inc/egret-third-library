@@ -533,6 +533,7 @@ export async function zipUploadGame() {
 }
 
 export async function copyPackageToSvn() {
+    console.log(`拷贝native包到svn文件夹`);
     let environ = ModelMgr.versionModel.curEnviron;
     let releaseVersion = ModelMgr.versionModel.releaseVersion;
     let exeOriginName = "bellplanet Setup 1.0.0.exe"
@@ -548,10 +549,12 @@ export async function copyPackageToSvn() {
     let dmgNewName = `bellplanet_${environ.name}_${releaseVersion}.dmg`;
     await fsExc.copyFile(dmgPath, dmgTargetPath)
     await fsExc.rename(`${dmgTargetPath}/${dmgOriginName}`, `${dmgTargetPath}/${dmgNewName}`);
+    console.log(`拷贝完毕`);
 }
 
 export async function uploadNativeExe() {
     return new Promise((resolve, reject) => {
+        console.log(`开始上传exe文件`);
         let environ = ModelMgr.versionModel.curEnviron;
         let releaseVersion = ModelMgr.versionModel.releaseVersion;
         let nativePath = `${Global.svnPublishPath}/native/`;
@@ -569,6 +572,7 @@ export async function uploadNativeExe() {
 
 export async function uploadNativeDmg() {
     return new Promise((resolve, reject) => {
+        console.log(`开始上传dmg文件`);
         let environ = ModelMgr.versionModel.curEnviron;
         let releaseVersion = ModelMgr.versionModel.releaseVersion;
         let nativePath = `${Global.svnPublishPath}/native/`;

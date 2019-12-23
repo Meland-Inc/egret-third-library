@@ -805,6 +805,7 @@ export async function copyPictures() {
 }
 
 export async function copyVersionToNative() {
+    console.log(`拷贝游戏包到native文件夹`);
     let pcEgretPath = Global.pcProjectPath + "/egret";
     let releaseVersion = ModelMgr.versionModel.releaseVersion;
     let environ = ModelMgr.versionModel.curEnviron;
@@ -827,14 +828,19 @@ export async function copyVersionToNative() {
     //写policy文件
     let policyPath = `${Global.svnPublishPath}${environ.localPolicyPath}/policyFile_v${policyNum}.json`
     await fsExc.copyFile(policyPath, pcEgretPath);
+    console.log(`拷贝完毕`);
 }
 
 export async function publishWin() {
     let cmdStr = "npm run build:win";
+    console.log(`开始打包windows包`);
     await spawnExc.runCmd(cmdStr, Global.pcProjectPath, null, "打包window包错误");
+    console.log(`打包windows成功`);
 }
 
 export async function publishMac() {
     let cmdStr = "npm run build:mac";
+    console.log(`开始打包mac包`);
     await spawnExc.runCmd(cmdStr, Global.pcProjectPath, null, "打包mac包错误");
+    console.log(`打包mac成功`);
 }
