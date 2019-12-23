@@ -223,11 +223,27 @@
               </mu-select>
             </mu-col>
           </mu-flex>
+          <mu-divider />
           <mu-container>
             <div class="button-wrapper">
               <mu-button @click="onCheckPolicyNum">当前策略版本</mu-button>
               <mu-button @click="onCheckGameVerison">当前游戏版本</mu-button>
             </div>
+          </mu-container>
+          <mu-divider />
+          <mu-container v-show="containNative&&curEnviron&&curEnviron.nativeEnable">
+            <mu-button
+              v-loading="isPublishNativeLoading"
+              data-mu-loading-size="24"
+              color="pink500"
+              @click="onPublishNative"
+            >生成native包</mu-button>
+            <mu-button
+              v-loading="isUploadNativeLoading"
+              data-mu-loading-size="24"
+              color="orange500"
+              @click="onUploadNative"
+            >上传native包</mu-button>
           </mu-container>
           <mu-divider />
           <div class="button-wrapper">
@@ -356,6 +372,9 @@ export default {
       isPullGitLoading: false,
       isGitTagLoading: false,
       isZipUploadGameLoading: false,
+
+      isPublishNativeLoading: false,
+      isUploadNativeLoading: false,
 
       needCover: ModelMgr.versionModel.needCover,
       needCompress: ModelMgr.versionModel.needCompress,
@@ -741,6 +760,35 @@ export default {
         Global.hideRegionLoading();
       }
     },
+    async onPublishNative() {
+      this.isPublishNativeLoading = true;
+      Global.showRegionLoading();
+      try {
+        await mdPublish.copyVersionToNative();
+        await mdPublish.publishWin();
+        await mdPublish.publishMac();
+        this.isPublishNativeLoading = false;
+        Global.hideRegionLoading();
+      } catch (error) {
+        this.isPublishNativeLoading = false;
+        Global.hideRegionLoading();
+      }
+    },
+    async onUploadNative() {
+      this.isUploadNativeLoading = true;
+      Global.showRegionLoading();
+      try {
+        await ModelMgr.ftpModel.initQiniuOption();
+        await mdFtp.copyPackageToSvn();
+        await mdFtp.uploadNativeExe();
+        await mdFtp.uploadNativeDmg();
+        this.isUploadNativeLoading = false;
+        Global.hideRegionLoading();
+      } catch (error) {
+        this.isUploadNativeLoading = false;
+        Global.hideRegionLoading();
+      }
+    },
     async oneForAll() {
       if (!ModelMgr.versionModel.publisher) {
         Global.snack("请输入发布者", null, false);
@@ -801,6 +849,7 @@ export default {
           promiseList.push(mdPublish.publishMac);
 
           //改名native包拷贝到svn,并上传到cdn
+          promiseList.push(ModelMgr.ftpModel.initQiniuOption);
           promiseList.push(mdFtp.copyPackageToSvn);
           promiseList.push(mdFtp.uploadNativeExe);
           promiseList.push(mdFtp.uploadNativeDmg);
