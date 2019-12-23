@@ -849,7 +849,9 @@ export default {
           promiseList.push(mdPublish.publishMac);
 
           //改名native包拷贝到svn,并上传到cdn
-          promiseList.push(ModelMgr.ftpModel.initQiniuOption);
+          promiseList.push(
+            ModelMgr.ftpModel.initQiniuOption.bind(ModelMgr.ftpModel)
+          );
           promiseList.push(mdFtp.copyPackageToSvn);
           promiseList.push(mdFtp.uploadNativeExe);
           promiseList.push(mdFtp.uploadNativeDmg);
