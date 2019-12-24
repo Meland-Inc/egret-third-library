@@ -207,6 +207,15 @@
     <image id="t1ls5p" name="img_code_dx_1.png" path="/img/" scale="9grid" scale9grid="44,0,32,12"/>
     <image id="t1ls5q" name="img_code_dx_2.png" path="/img/"/>
     <component id="t1ls5r" name="ComBlankHint.xml" path="/com/" exported="true"/>
+    <image id="f0vf5s" name="img_code_jm_3.png" path="/img/" scale="9grid" scale9grid="21,11,20,22"/>
+    <image id="f0vf5t" name="img_code_jm_4.png" path="/img/" scale="9grid" scale9grid="30,11,60,22"/>
+    <image id="f0vf5u" name="img_code_jm_2.png" path="/img/" scale="9grid" scale9grid="43,14,37,28"/>
+    <image id="rn1a5v" name="img_code_srk_jm.png" path="/img/" scale="9grid" scale9grid="17,9,34,18"/>
+    <image id="lx595w" name="icon_att_bj.png" path="/img/"/>
+    <component id="lx595x" name="DefineEventShape.xml" path="/codeBlock/" exported="true"/>
+    <component id="lx595y" name="EditEventShape.xml" path="/codeBlock/" exported="true"/>
+    <image id="fvb25z" name="img_code_cm_bj.png" path="/img/"/>
+    <image id="fvb260" name="img_codeV_sj_2.png" path="/img/" scale="9grid" scale9grid="8,8,42,42"/>
   </resources>
   <publish name="code"/>
 </packageDescription>

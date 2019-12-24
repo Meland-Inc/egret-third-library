@@ -6,37 +6,31 @@
   "scripts": {
     "start": "electron .",
     "dist": "electron-builder --win --x64",
-    "build-win": "electron-builder --win --x64",
-    "build-mac": "electron-builder --mac",
+    "build:win": "electron-builder --win --x64",
+    "build:mac": "electron-builder --mac",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "bellcode",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
-    "electron": "7.1.5",
-    "electron-builder": "^21.2.0",
-    "electron-packager": "^14.1.1"
+    "electron": "^7.1.7",
+    "electron-builder": "^21.2.0"
   },
   "build": {
     "productName": "bellplanet",
-    "asar": false,
     "appId": "org.egret.launcher.ymbl",
-    "copyright": "bellcode",
-    "directories": {
-      "output": "build"
-    },
+    "copyright": "Copyright © 2019 bellcode",
     "files": [
       "./index.html",
       "./main.js",
       "./package.json",
-      "egret/**/*",
-      "dist/electron/**/*"
+      "./egret/**/*"
     ],
     "win": {
       "target": [
         "nsis"
       ],
-      "icon": "icon.ico"
+      "icon": "./icon/icon.ico"
     },
     "dmg": {
       "contents": [
@@ -54,18 +48,19 @@
       ]
     },
     "mac": {
-      "icon": "icon.icns"
+      "icon": "./icon/icon.icns"
     },
     "nsis": {
       "oneClick": false,
-      "perMachine": true,
+      "perMachine": false,
       "allowElevation": true,
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
       "runAfterFinish": true,
-      "installerIcon": "icon.ico",
-      "uninstallerIcon": "icon.ico",
+      "installerIcon": "./icon/icon.ico",
+      "uninstallerIcon": "./icon/icon.ico",
       "include": "installer.nsh"
-    }
+    },
+    "extends": null
   }
 }

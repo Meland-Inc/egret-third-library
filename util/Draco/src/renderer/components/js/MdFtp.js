@@ -485,19 +485,23 @@ export function checkPolicyNum() {
     return ExternalUtil.getPolicyInfo(ModelMgr.versionModel.curEnviron.name);
 }
 
+export async function commitGit() {
+    if (ModelMgr.versionModel.curEnviron.pushGitEnable) {
+        let commitCmdStr = `git commit -a -m "${ModelMgr.versionModel.publisher} 发布${ModelMgr.versionModel.curEnviron.name}版本 ${ModelMgr.versionModel.releaseVersion}"`;
+        await spawnExc.runCmd(commitCmdStr, Global.projPath, null, '提交文件错误');
+        console.log(`提交文件成功`);
+    }
+
+    if (ModelMgr.versionModel.curEnviron.gitTagEnable) {
+        let commitCmdStr = `git tag version/release_v${ModelMgr.versionModel.releaseVersion}`;
+        await spawnExc.runCmd(commitCmdStr, Global.projPath, null, 'git打tag错误');
+        console.log(`git打tag成功`);
+    }
+}
+
 export async function pushGit() {
     try {
-        if (ModelMgr.versionModel.curEnviron.pushGitEnable) {
-            let commitCmdStr = `git commit -a -m "${ModelMgr.versionModel.publisher} 发布${ModelMgr.versionModel.curEnviron.name}版本 ${ModelMgr.versionModel.releaseVersion}"`;
-            await spawnExc.runCmd(commitCmdStr, Global.projPath, null, '提交文件错误');
-            console.log(`提交文件成功`);
-        }
-
         if (ModelMgr.versionModel.curEnviron.gitTagEnable) {
-            let commitCmdStr = `git tag version/release_v${ModelMgr.versionModel.releaseVersion}`;
-            await spawnExc.runCmd(commitCmdStr, Global.projPath, null, 'git打tag错误');
-            console.log(`git打tag成功`);
-
             let pullCmdStr = `git push origin --tags`;
             await spawnExc.runCmd(pullCmdStr, Global.projPath, null, 'git推送tag错误');
             console.log(`git推送tag成功`);
@@ -517,22 +521,6 @@ export async function pushGit() {
     }
 }
 
-// export async function gitTag() {
-//     try {
-//         //         git tag <tagName> //创建本地tag
-//         // git push origin <tagName> //推送到远程仓库
-// let commitCmdStr = `git tag version/release_v${ModelMgr.versionModel.releaseVersion}`;
-// await spawnExc.runCmd(commitCmdStr, Global.projPath, null, 'git打tag错误');
-
-//         let pullCmdStr = `git push origin version/release_v${ModelMgr.versionModel.releaseVersion}`;
-//         await spawnExc.runCmd(pullCmdStr, Global.projPath, null, 'git推送tag错误');
-
-//         Global.toast('推送git成功');
-//     } catch (error) {
-//         Global.snack('推送git错误', error);
-//     }
-// }
-
 export async function zipUploadGame() {
     // let filePath = `${Global.svnPublishPath}${environ.localPath}/${ModelMgr.versionModel.uploadVersion}/`;
     // let zipName = "release.zip";
@@ -542,4 +530,67 @@ export async function zipUploadGame() {
     // } catch (error) {
     //     Global.snack('推送git错误', error);
     // }
+}
+
+export async function copyPackageToSvn() {
+    console.log(`拷贝native包到svn文件夹`);
+    let environ = ModelMgr.versionModel.curEnviron;
+    let releaseVersion = ModelMgr.versionModel.releaseVersion;
+    let exeOriginName = "bellplanet Setup 1.0.0.exe"
+    let exePath = `${Global.pcProjectPath}/dist/${exeOriginName}`;
+    let exeTargetPath = `${Global.svnPublishPath}/native`;
+    let exeNewName = `bellplanet_${environ.name}_${releaseVersion}.exe`;
+    await fsExc.copyFile(exePath, exeTargetPath);
+    await fsExc.rename(`${exeTargetPath}/${exeOriginName}`, `${exeTargetPath}/${exeNewName}`);
+
+    let dmgOriginName = "bellplanet-1.0.0.dmg";
+    let dmgPath = `${Global.pcProjectPath}/dist/${dmgOriginName}`;
+    let dmgTargetPath = `${Global.svnPublishPath}/native/`;
+    let dmgNewName = `bellplanet_${environ.name}_${releaseVersion}.dmg`;
+    await fsExc.copyFile(dmgPath, dmgTargetPath)
+    await fsExc.rename(`${dmgTargetPath}/${dmgOriginName}`, `${dmgTargetPath}/${dmgNewName}`);
+    console.log(`拷贝完毕`);
+}
+
+export async function uploadNativeExe() {
+    return new Promise((resolve, reject) => {
+        tryUploadNativeExe(resolve, reject);
+    });
+}
+
+async function tryUploadNativeExe(resolve, reject) {
+    console.log(`开始上传exe文件`);
+    let environ = ModelMgr.versionModel.curEnviron;
+    let releaseVersion = ModelMgr.versionModel.releaseVersion;
+    let nativePath = `${Global.svnPublishPath}/native/`;
+    let exeName = `bellplanet_${environ.name}_${releaseVersion}.exe`;
+    console.log(`nativePath: ${nativePath} exeName:${exeName}`);
+    uploaderFile(`${nativePath}`, `${nativePath}/${exeName}`, "native", () => {
+        console.log(`上传exe成功`)
+        resolve();
+    }, (reason) => {
+        console.log(`上传exe失败: ${reason}`)
+        setTimeout(tryUploadNativeExe, 5000, resolve, reject);
+    });
+}
+
+export async function uploadNativeDmg() {
+    return new Promise((resolve, reject) => {
+        tryUploadNativeDmg(resolve, reject);
+    });
+}
+
+async function tryUploadNativeDmg(resolve, reject) {
+    console.log(`开始上传dmg文件`);
+    let environ = ModelMgr.versionModel.curEnviron;
+    let releaseVersion = ModelMgr.versionModel.releaseVersion;
+    let nativePath = `${Global.svnPublishPath}/native/`;
+    let dmgName = `bellplanet_${environ.name}_${releaseVersion}.dmg`;
+    uploaderFile(`${nativePath}`, `${nativePath}/${dmgName}`, "native", () => {
+        console.log(`上传dmg成功`)
+        resolve();
+    }, (reason) => {
+        console.log(`上传dmg失败: ${reason}`)
+        setTimeout(tryUploadNativeDmg, 5000, resolve, reject)
+    });
 }

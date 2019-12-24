@@ -42,6 +42,10 @@ export async function copyFile(fromPath, toPath, needLoop) {
     }
 }
 
+export async function rename(originPath, newPath) {
+    await fs.renameSync(originPath, newPath);
+}
+
 /**
  * 删除指定文件
  * @param {*} path 

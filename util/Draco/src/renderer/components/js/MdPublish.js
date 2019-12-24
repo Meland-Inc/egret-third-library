@@ -29,6 +29,10 @@ const assetSfxValues = [assetsSfx, asyncSfx, indieSfx, externalSfx];
 export async function updateGit() {
     let gitBranch = ModelMgr.versionModel.curEnviron.gitBranch;
     try {
+        let clearCmdStr = `git clean -df`;
+        await spawnExc.runCmd(clearCmdStr, Global.projPath, null, '清除文件错误');
+        await spawnExc.runCmd(clearCmdStr, Global.clientPath, null, '清除Client代码错误');
+
         let storeCmdStr = `git checkout -- .`;
         await spawnExc.runCmd(storeCmdStr, Global.projPath, null, '还原分支错误');
         await spawnExc.runCmd(storeCmdStr, Global.clientPath, null, '还原Client代码错误');
@@ -798,4 +802,45 @@ export async function copyPictures() {
     let projNewVersionPath = Global.projPath + releaseSuffix + ModelMgr.version.newVersion;
     await clearResource(projNewVersionPath);
     await copyResource(projNewVersionPath);
+}
+
+export async function copyVersionToNative() {
+    console.log(`拷贝游戏包到native文件夹`);
+    let pcEgretPath = Global.pcProjectPath + "/egret";
+    let releaseVersion = ModelMgr.versionModel.releaseVersion;
+    let environ = ModelMgr.versionModel.curEnviron;
+    let releasePath = `${Global.svnPublishPath}${environ.localPath}/release_v${releaseVersion}s`;
+    let policyNum = ModelMgr.versionModel.policyNum;
+
+    //删除egret文件夹
+    await fsExc.delFiles(pcEgretPath);
+
+    //拷贝egret游戏资源包
+    await fsExc.copyFile(releasePath, pcEgretPath, true);
+
+    //写index.html文件
+    let indexPath = Global.rawResourcePath + "/nativeIndex.html";
+    let indexContent = await fsExc.readFile(indexPath);
+    indexContent = indexContent.replace(`let curPolicyVersion = "";`, `let curPolicyVersion = "${policyNum}";`);
+    let egretIndexPath = pcEgretPath + "/index.html";
+    await fsExc.writeFile(egretIndexPath, indexContent);
+
+    //写policy文件
+    let policyPath = `${Global.svnPublishPath}${environ.localPolicyPath}/policyFile_v${policyNum}.json`
+    await fsExc.copyFile(policyPath, pcEgretPath);
+    console.log(`拷贝完毕`);
+}
+
+export async function publishWin() {
+    let cmdStr = "npm run build:win";
+    console.log(`开始打包windows包`);
+    await spawnExc.runCmd(cmdStr, Global.pcProjectPath, null, "打包window包错误");
+    console.log(`打包windows成功`);
+}
+
+export async function publishMac() {
+    let cmdStr = "npm run build:mac";
+    console.log(`开始打包mac包`);
+    await spawnExc.runCmd(cmdStr, Global.pcProjectPath, null, "打包mac包错误");
+    console.log(`打包mac成功`);
 }
