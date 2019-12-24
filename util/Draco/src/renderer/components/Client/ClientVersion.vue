@@ -20,6 +20,7 @@
       </div>
     </mu-container>
     <mu-container>
+      <mu-checkbox v-model="containNative" label="native包"></mu-checkbox>
       <mu-button small v-show="!isAdvanceMode" @click="changeAdvanceMode">
         <mu-icon value="add"></mu-icon>高级模式
       </mu-button>
@@ -82,6 +83,8 @@
             @click="onMergeVersionClick"
             v-show="curEnviron&&curEnviron.mergeVersionEnable"
           >比较新旧版本</mu-button>
+
+          <!-- <mu-button @click="onTestClick" v-loading="isTestLoading">Test</mu-button> -->
         </div>
         <div>
           <mu-flex class="flex-wrapper" align-items="center">
@@ -220,11 +223,27 @@
               </mu-select>
             </mu-col>
           </mu-flex>
+          <mu-divider />
           <mu-container>
             <div class="button-wrapper">
               <mu-button @click="onCheckPolicyNum">当前策略版本</mu-button>
               <mu-button @click="onCheckGameVerison">当前游戏版本</mu-button>
             </div>
+          </mu-container>
+          <mu-divider />
+          <mu-container v-show="containNative&&curEnviron&&curEnviron.nativeEnable">
+            <mu-button
+              v-loading="isPublishNativeLoading"
+              data-mu-loading-size="24"
+              color="pink500"
+              @click="onPublishNative"
+            >生成native包</mu-button>
+            <mu-button
+              v-loading="isUploadNativeLoading"
+              data-mu-loading-size="24"
+              color="orange500"
+              @click="onUploadNative"
+            >上传native包</mu-button>
           </mu-container>
           <mu-divider />
           <div class="button-wrapper">
@@ -331,7 +350,9 @@ export default {
   data() {
     return {
       oneClickContent: "只需要点一下就够了.",
+      containNative: false,
       isAdvanceMode: false,
+      isTestLoading: false,
 
       isUpdateGitLoading: false,
       isPublishProjectLoading: false,
@@ -351,6 +372,9 @@ export default {
       isPullGitLoading: false,
       isGitTagLoading: false,
       isZipUploadGameLoading: false,
+
+      isPublishNativeLoading: false,
+      isUploadNativeLoading: false,
 
       needCover: ModelMgr.versionModel.needCover,
       needCompress: ModelMgr.versionModel.needCompress,
@@ -429,6 +453,17 @@ export default {
     }
   },
   methods: {
+    async onTestClick() {
+      // this.isTestLoading = true;
+      // await mdPublish.copyVersionToNative();
+      // await mdPublish.publishWin();
+      // await mdPublish.publishMac();
+      // await ModelMgr.ftpModel.initQiniuOption();
+      // await mdFtp.copyPackageToSvn();
+      // await mdFtp.uploadNativeExe();
+      // await mdFtp.uploadNativeDmg();
+      // this.isTestLoading = false;
+    },
     updatePublishText() {
       this.publishErrorText = this.publisher ? null : "请输入发布者";
       ModelMgr.versionModel.publisher = this.publisher;
@@ -725,6 +760,35 @@ export default {
         Global.hideRegionLoading();
       }
     },
+    async onPublishNative() {
+      this.isPublishNativeLoading = true;
+      Global.showRegionLoading();
+      try {
+        await mdPublish.copyVersionToNative();
+        await mdPublish.publishWin();
+        await mdPublish.publishMac();
+        this.isPublishNativeLoading = false;
+        Global.hideRegionLoading();
+      } catch (error) {
+        this.isPublishNativeLoading = false;
+        Global.hideRegionLoading();
+      }
+    },
+    async onUploadNative() {
+      this.isUploadNativeLoading = true;
+      Global.showRegionLoading();
+      try {
+        await ModelMgr.ftpModel.initQiniuOption();
+        await mdFtp.copyPackageToSvn();
+        await mdFtp.uploadNativeExe();
+        await mdFtp.uploadNativeDmg();
+        this.isUploadNativeLoading = false;
+        Global.hideRegionLoading();
+      } catch (error) {
+        this.isUploadNativeLoading = false;
+        Global.hideRegionLoading();
+      }
+    },
     async oneForAll() {
       if (!ModelMgr.versionModel.publisher) {
         Global.snack("请输入发布者", null, false);
@@ -776,6 +840,21 @@ export default {
           promiseList.push(mdFtp.modifyPolicyFile);
           promiseList.push(mdFtp.uploadPolicyFile);
           promiseList.push(mdFtp.applyPolicyNum);
+        }
+
+        if (this.containNative && this.curEnviron.nativeEnable) {
+          //打包native包
+          promiseList.push(mdPublish.copyVersionToNative);
+          promiseList.push(mdPublish.publishWin);
+          promiseList.push(mdPublish.publishMac);
+
+          //改名native包拷贝到svn,并上传到cdn
+          promiseList.push(
+            ModelMgr.ftpModel.initQiniuOption.bind(ModelMgr.ftpModel)
+          );
+          promiseList.push(mdFtp.copyPackageToSvn);
+          promiseList.push(mdFtp.uploadNativeExe);
+          promiseList.push(mdFtp.uploadNativeDmg);
         }
 
         if (this.curEnviron.pushGitEnable || this.curEnviron.gitTagEnable) {

@@ -427,6 +427,14 @@
     <component id="o5eywcyijr" name="RBtnIdeTerrainSelectRenderer.xml" path="/terrain/btn/"/>
     <image id="o5eywcyijs" name="img_ide_cm_xfk.png" path="/ideCommon/img/" scale="9grid" scale9grid="50,37,100,74"/>
     <image id="o5eywcyijt" name="img_ide_wpk_1_1.png" path="/ideCommon/img/"/>
+    <image id="f0vfwcyijq" name="icon_code_ui_1.png" path="/codeVew/img/"/>
+    <image id="f0vfwcyijr" name="icon_code_ui_1_1.png" path="/codeVew/img/"/>
+    <image id="f0vfwcyijs" name="img_code_ui_1_1.png" path="/codeVew/img/"/>
+    <image id="f0vfwcyijt" name="img_code_ui_1.png" path="/codeVew/img/" scale="9grid" scale9grid="1,14,2,28"/>
+    <component id="lx59wcyiju" name="WinDefineEvent.xml" path="/codeVew/win/" exported="true"/>
+    <component id="lx59wcyijv" name="btnCustomizeEvent.xml" path="/codeVew/btn/"/>
+    <component id="fvb2wcyijw" name="btnCodeBlockTabA.xml" path="/codeVew/btn/"/>
+    <image id="fvb2wcyijx" name="img_codeV_sj_3.png" path="/codeVew/img/" scale="9grid" scale9grid="8,8,42,42"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>

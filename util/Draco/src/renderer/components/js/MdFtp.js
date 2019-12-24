@@ -531,3 +531,66 @@ export async function zipUploadGame() {
     //     Global.snack('推送git错误', error);
     // }
 }
+
+export async function copyPackageToSvn() {
+    console.log(`拷贝native包到svn文件夹`);
+    let environ = ModelMgr.versionModel.curEnviron;
+    let releaseVersion = ModelMgr.versionModel.releaseVersion;
+    let exeOriginName = "bellplanet Setup 1.0.0.exe"
+    let exePath = `${Global.pcProjectPath}/dist/${exeOriginName}`;
+    let exeTargetPath = `${Global.svnPublishPath}/native`;
+    let exeNewName = `bellplanet_${environ.name}_${releaseVersion}.exe`;
+    await fsExc.copyFile(exePath, exeTargetPath);
+    await fsExc.rename(`${exeTargetPath}/${exeOriginName}`, `${exeTargetPath}/${exeNewName}`);
+
+    let dmgOriginName = "bellplanet-1.0.0.dmg";
+    let dmgPath = `${Global.pcProjectPath}/dist/${dmgOriginName}`;
+    let dmgTargetPath = `${Global.svnPublishPath}/native/`;
+    let dmgNewName = `bellplanet_${environ.name}_${releaseVersion}.dmg`;
+    await fsExc.copyFile(dmgPath, dmgTargetPath)
+    await fsExc.rename(`${dmgTargetPath}/${dmgOriginName}`, `${dmgTargetPath}/${dmgNewName}`);
+    console.log(`拷贝完毕`);
+}
+
+export async function uploadNativeExe() {
+    return new Promise((resolve, reject) => {
+        tryUploadNativeExe(resolve, reject);
+    });
+}
+
+async function tryUploadNativeExe(resolve, reject) {
+    console.log(`开始上传exe文件`);
+    let environ = ModelMgr.versionModel.curEnviron;
+    let releaseVersion = ModelMgr.versionModel.releaseVersion;
+    let nativePath = `${Global.svnPublishPath}/native/`;
+    let exeName = `bellplanet_${environ.name}_${releaseVersion}.exe`;
+    console.log(`nativePath: ${nativePath} exeName:${exeName}`);
+    uploaderFile(`${nativePath}`, `${nativePath}/${exeName}`, "native", () => {
+        console.log(`上传exe成功`)
+        resolve();
+    }, (reason) => {
+        console.log(`上传exe失败: ${reason}`)
+        setTimeout(tryUploadNativeExe, 5000, resolve, reject);
+    });
+}
+
+export async function uploadNativeDmg() {
+    return new Promise((resolve, reject) => {
+        tryUploadNativeDmg(resolve, reject);
+    });
+}
+
+async function tryUploadNativeDmg(resolve, reject) {
+    console.log(`开始上传dmg文件`);
+    let environ = ModelMgr.versionModel.curEnviron;
+    let releaseVersion = ModelMgr.versionModel.releaseVersion;
+    let nativePath = `${Global.svnPublishPath}/native/`;
+    let dmgName = `bellplanet_${environ.name}_${releaseVersion}.dmg`;
+    uploaderFile(`${nativePath}`, `${nativePath}/${dmgName}`, "native", () => {
+        console.log(`上传dmg成功`)
+        resolve();
+    }, (reason) => {
+        console.log(`上传dmg失败: ${reason}`)
+        setTimeout(tryUploadNativeDmg, 5000, resolve, reject)
+    });
+}

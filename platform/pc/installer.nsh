@@ -1,7 +1,21 @@
-!macro customInstall
-  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Run" "AutoupdaterDemoKey" "$INSTDIR\autoupdater-demo.exe"
+!macro customHeader
+  !system "echo '' > ${BUILD_RESOURCES_DIR}/customHeader"
 !macroend
 
-!macro customUnInstall
-  DeleteRegValue HKCU "Software\Microsoft\Windows\CurrentVersion\Run" "AutoupdaterDemoKey"
+!macro preInit
+  ; This macro is inserted at the beginning of the NSIS .OnInit callback
+  !system "echo '' > ${BUILD_RESOURCES_DIR}/preInit"
+!macroend
+
+!macro customInit
+  !system "echo '' > ${BUILD_RESOURCES_DIR}/customInit"
+!macroend
+
+!macro customInstall
+  !system "echo '' > ${BUILD_RESOURCES_DIR}/customInstall"
+!macroend
+
+!macro customInstallMode
+  # set $isForceMachineInstall or $isForceCurrentInstall 
+  # to enforce one or the other modes.
 !macroend
