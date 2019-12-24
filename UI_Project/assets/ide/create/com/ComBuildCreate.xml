@@ -14,7 +14,9 @@
       <relation target="" sidePair="height-height"/>
     </image>
     <image id="n23_inuq" name="n23" src="xba67m" fileName="ideCommon/img/img_ide_cm_6.png" xy="0,0" size="430,56" group="n16_jm8l"/>
-    <image id="n22_inuq" name="n22" src="80ab97" fileName="ideCommon/img/img_ide_cm_8.png" xy="9,216" size="393,849" group="n16_jm8l"/>
+    <image id="n22_inuq" name="n22" src="80ab97" fileName="ideCommon/img/img_ide_cm_8.png" xy="9,216" size="393,849" group="n16_jm8l">
+      <relation target="" sidePair="height-height"/>
+    </image>
     <list id="n2_7slt" name="lstBpTabBar" xy="9,115" size="412,93" group="n16_jm8l" layout="flow_hz" overflow="hidden" lineGap="4" colGap="3" defaultItem="ui://ti9jag5t80ab9h" autoItemSize="true">
       <item title="最近" icon="ui://ti9jag5t80ab8m" name="recent" selectedIcon="ui://ti9jag5t80ab8n"/>
       <item title="全部" icon="ui://ti9jag5t80ab86" name="all" selectedIcon="ui://ti9jag5t80ab87"/>
