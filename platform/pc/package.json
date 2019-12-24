@@ -24,8 +24,7 @@
       "./index.html",
       "./main.js",
       "./package.json",
-      "./egret/**/*",
-      "./license.txt"
+      "./egret/**/*"
     ],
     "win": {
       "target": [
@@ -60,7 +59,7 @@
       "runAfterFinish": true,
       "installerIcon": "icon.ico",
       "uninstallerIcon": "icon.ico",
-      "include": "script/installer.nsh"
+      "include": "installer.nsi"
     },
     "extends": null
   }
