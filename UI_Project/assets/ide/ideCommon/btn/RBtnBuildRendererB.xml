@@ -13,7 +13,7 @@
       <gearDisplay controller="button" pages="1"/>
     </image>
     <loader id="n16_j0zc" name="icon" xy="11,11" pivot="0.5,0.5" size="64,64" group="n21_j0zc" align="center" vAlign="middle" fill="scale"/>
-    <group id="n21_j0zc" name="grpItemIcon" xy="11,11" size="64,64" advanced="true"/>
+    <group id="n21_j0zc" name="grpItemIcon" xy="11,11" size="64,64" advanced="true" collapsed="true"/>
     <image id="n22_g0no" name="imgMulti" src="s1sdta6" fileName="newImg/AnimationEdit/icon_cm_dh_10.png" pkg="32ieekgu" xy="66,0" hideByEditor="true"/>
     <graph id="n24_pgmr" name="n24" xy="0,0" size="86,86" group="n26_pgmr" alpha="0.5" type="rect" lineSize="0" lineColor="#00000000" fillColor="#ff000000" corner="5"/>
     <text id="n25_pgmr" name="tfName" xy="0,46" size="86,40" group="n26_pgmr" fontSize="14" color="#ffffff" align="center" autoSize="none" text="我是一个大草块"/>
