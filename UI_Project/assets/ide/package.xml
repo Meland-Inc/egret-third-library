@@ -346,7 +346,7 @@
     <component id="cjfpb3" name="BtnEntitySelectB.xml" path="/create/btn/" exported="true"/>
     <component id="r0y9t7i" name="WinBuildIdeB.xml" path="/ideCommon/win/" exported="true"/>
     <component id="dyk9b4" name="ComIdeTopToolBar.xml" path="/ideCommon/com/"/>
-    <component id="dyk9b6" name="BtnIdeTopToolBar.xml" path="/ideCommon/btn/"/>
+    <component id="dyk9b6" name="tBtnIdeTopToolBar.xml" path="/ideCommon/btn/"/>
     <component id="dyk9b7" name="BtnBuildMode.xml" path="/ideCommon/btn/"/>
     <component id="qu7tt7j" name="ComBuildShortCutB.xml" path="/ideCommon/com/" exported="true"/>
     <component id="9fb89z" name="ComBuildAttrB.xml" path="/attribute/com/ComBuildAttrB/" exported="true"/>
@@ -388,7 +388,7 @@
     <image id="zgght81" name="icon_ide_cm_qp.png" path="/ideCommon/img/"/>
     <image id="zgght82" name="icon_ide_cm_sx.png" path="/ideCommon/img/"/>
     <image id="zgght83" name="icon_ide_cm_sz.png" path="/ideCommon/img/"/>
-    <image id="zgght84" name="img_ide_cm_blank.png" path="/ideCommon/img/"/>
+    <image id="zgght84" name="img_ide_cm_blank.png" path="/ideCommon/img/" exported="true"/>
     <image id="zgght85" name="img_ide_cm_gdt_1.png" path="/ideCommon/img/"/>
     <image id="zgght86" name="img_ide_cm_k.png" path="/ideCommon/img/"/>
     <image id="zgght8e" name="img_ide_cm_xz.png" path="/ideCommon/img/"/>
@@ -423,7 +423,14 @@
     <component id="o1lgwcyijm" name="btnCodeblockSelectItem.xml" path="/codeVew/btn/" exported="true"/>
     <image id="ps3owcyijn" name="icon_codeV_zb_1.png" path="/codeVew/img/"/>
     <image id="ps3owcyijo" name="icon_codeV_zb_2.png" path="/codeVew/img/"/>
-    <component id="baegwcyijp" name="ComSelectNumber.xml" path="/terrain/com/" exported="true"/>
+    <image id="en7jwcyijp" name="img_cre_xz_1.png" path="/ideCommon/img/"/>
+    <image id="en7jwcyijq" name="icon_cre_cjzb_1.png" path="/ideCommon/img/"/>
+    <image id="en7jwcyijr" name="icon_cre_zrzb_1.png" path="/ideCommon/img/"/>
+    <image id="en7jwcyijs" name="icon_cre_ycx_1.png" path="/ideCommon/img/"/>
+    <image id="en7jwcyijt" name="icon_cre_st_1.png" path="/ideCommon/img/"/>
+    <image id="en7jwcyiju" name="icon_cre_dtgj_1.png" path="/ideCommon/img/"/>
+    <component id="en7jwcyijv" name="BtnIdeTopToolBar.xml" path="/ideCommon/btn/"/>
+    <component id="hl7ywcyijw" name="comEmptyCloneEntity.xml" path="/ideCommon/com/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>

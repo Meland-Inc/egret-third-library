@@ -1,36 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1920,1080" opaque="false" designImage="ui://thvmj7vos45w0" designImageAlpha="66">
+<component size="1920,1080" opaque="false" designImage="ui://thvmj7voen7j4cyij9" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlStatus" pages="2,none,1,clone,0,elem" selected="1"/>
   <displayList>
-    <component id="n1_s45w" name="codeBlockContainer" src="s45w19" fileName="codeVew/com/CodeblockContainer.xml" xy="955,-1" size="852,1082">
+    <component id="n1_s45w" name="codeBlockContainer" src="s45w19" fileName="codeVew/com/CodeblockContainer.xml" xy="955,-1" size="852,1082" group="n16_en7j">
       <relation target="" sidePair="bottomext-bottom,rightext-right"/>
     </component>
-    <component id="n3_s45w" name="comCategoryList" src="s45w1u" fileName="codeVew/com/ComCategoryList.xml" xy="0,0" size="1920,1080">
+    <component id="n3_s45w" name="comCategoryList" src="s45w1u" fileName="codeVew/com/ComCategoryList.xml" xy="0,0" size="1920,1080" group="n16_en7j">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </component>
-    <component id="n5_lctb" name="comCodeBlockExclusiveChoiceList" src="lctb3w" fileName="codeVew/oldCom/ComCodeBlockExclusiveChoiceList.xml" xy="1443,0" size="362,1080">
+    <component id="n5_lctb" name="comCodeBlockExclusiveChoiceList" src="lctb3w" fileName="codeVew/oldCom/ComCodeBlockExclusiveChoiceList.xml" xy="1443,0" size="362,1080" group="n16_en7j">
       <relation target="" sidePair="right-right,height-height"/>
     </component>
-    <component id="n6_lctb" name="comCalculator" src="lctb41" fileName="codeVew/oldCom/ComCodeCalculator.xml" xy="1393,0" size="412,1080">
+    <component id="n6_lctb" name="comCalculator" src="lctb41" fileName="codeVew/oldCom/ComCodeCalculator.xml" xy="1393,0" size="412,1080" group="n16_en7j">
       <relation target="" sidePair="right-right,top-top"/>
     </component>
-    <component id="n7_lctb" name="mask" src="lctb4z" fileName="codeVew/oldCom/RunningState.xml" xy="956,0" size="967,1080">
+    <component id="n7_lctb" name="mask" src="lctb4z" fileName="codeVew/oldCom/RunningState.xml" xy="956,0" size="967,1080" group="n16_en7j">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </component>
-    <component id="n8_lctb" name="comDustbin" src="lctb5v" fileName="codeVew/com/ComDustbin.xml" xy="1803,1" size="118,1082" touchable="false" controller="dustbinState,0">
+    <component id="n8_lctb" name="comDustbin" src="lctb5v" fileName="codeVew/com/ComDustbin.xml" xy="1803,1" size="118,1082" group="n16_en7j" touchable="false" controller="dustbinState,0">
       <relation target="" sidePair="right-right,bottomext-bottom"/>
     </component>
-    <component id="n9_lctb" name="comEditVariate" src="lctb5z" fileName="codeVew/com/ComEditVariate.xml" xy="956,0" size="967,1080">
+    <component id="n9_lctb" name="comEditVariate" src="lctb5z" fileName="codeVew/com/ComEditVariate.xml" xy="956,0" size="967,1080" group="n16_en7j">
       <relation target="" sidePair="bottomext-bottom,rightext-right"/>
     </component>
-    <component id="n13_lctb" name="comRadioSelect" src="lctb65" fileName="codeVew/oldCom/ComRadioSelect.xml" xy="871,443"/>
-    <component id="n14_lctb" name="comRadioSelectScene" src="lctb66" fileName="codeVew/oldCom/ComRadioSelectScene.xml" xy="871,481"/>
-    <component id="n15_lctb" name="comCreateArg" src="lctb67" fileName="codeVew/com/ComCreateArg.xml" xy="955,-1" size="966,1082" visible="false">
+    <component id="n13_lctb" name="comRadioSelect" src="lctb65" fileName="codeVew/oldCom/ComRadioSelect.xml" xy="871,443" group="n16_en7j"/>
+    <component id="n14_lctb" name="comRadioSelectScene" src="lctb66" fileName="codeVew/oldCom/ComRadioSelectScene.xml" xy="871,481" group="n16_en7j"/>
+    <component id="n15_lctb" name="comCreateArg" src="lctb67" fileName="codeVew/com/ComCreateArg.xml" xy="955,-1" size="966,1082" group="n16_en7j" visible="false">
       <relation target="" sidePair="bottomext-bottom,rightext-right"/>
       <relation target="n1_s45w" sidePair="left-left,top-top"/>
     </component>
+    <group id="n16_en7j" name="root" xy="0,-1" size="1923,1084" advanced="true">
+      <gearDisplay controller="ctrlStatus" pages="0"/>
+    </group>
     <component id="n4_lctb" name="btnExit" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="841,981" size="116,110">
+      <gearDisplay controller="ctrlStatus" pages="0"/>
       <relation target="n1_s45w" sidePair="bottom-bottom,right-left"/>
       <Button icon="ui://ti9jag5txba67h"/>
     </component>
+    <component id="n31_en7j" name="btnExit1" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="1606,981" size="116,110">
+      <gearDisplay controller="ctrlStatus" pages="2,1"/>
+      <relation target="" sidePair="bottom-bottom,right-right"/>
+      <Button icon="ui://ti9jag5txba67h"/>
+    </component>
+    <image id="n24_en7j" name="imgEmptyBg" src="xba67o" fileName="ideCommon/img/img_ide_cm_7.png" xy="1718,0" size="201,1080">
+      <gearDisplay controller="ctrlStatus" pages="2,1"/>
+      <relation target="" sidePair="right-right,height-height"/>
+    </image>
+    <text id="n25_en7j" name="tfCloneTips" xy="1721,376" size="200,47" group="n27_en7j" fontSize="20" color="#999999" align="center" vAlign="middle" vars="true" autoSize="height" text="这是【{parent=entity}】的克隆体"/>
+    <component id="n26_en7j" name="btnEditParent" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1762,439" size="120,44" group="n27_en7j">
+      <relation target="n25_en7j" sidePair="top-bottom"/>
+      <Button title="编辑原物件" titleFontSize="20" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <group id="n27_en7j" name="grpCloneTips" xy="1721,376" size="200,107" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlStatus" pages="1"/>
+      <relation target="" sidePair="middle-middle,right-right"/>
+    </group>
+    <image id="n28_en7j" name="imgEmpty" src="zgght84" fileName="ideCommon/img/img_ide_cm_blank.png" xy="1759,404" group="n30_en7j"/>
+    <text id="n29_en7j" name="tfEmpty" xy="1724,526" size="194,24" group="n30_en7j" fontSize="20" color="#999999" align="center" vAlign="middle" autoSize="none" text="暂无选择"/>
+    <group id="n30_en7j" name="grpEmpty" xy="1724,404" size="194,146" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlStatus" pages="2"/>
+      <relation target="" sidePair="middle-middle,right-right"/>
+    </group>
   </displayList>
 </component>

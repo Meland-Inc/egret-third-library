@@ -1,37 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1495,56" designImage="ui://thvmj7vo80ab4" designImageOffsetX="-300" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlMode" exported="true" pages="4,none,0,normal,1,tile,3,editTile" selected="3"/>
+  <controller name="ctrlFuncSelect" pages="3,none,0,xyCoordinate,1,rcCoordinate,2,hideLine" selected="0"/>
   <displayList>
     <image id="n0_cw9m" name="imgBg" src="xba67m" fileName="ideCommon/img/img_ide_cm_6.png" xy="0,0" size="1495,56">
       <relation target="" sidePair="width-width"/>
     </image>
-    <component id="n12_dyk9" name="btnSetting" src="dyk9b6" fileName="ideCommon/btn/BtnIdeTopToolBar.xml" xy="0,2">
+    <component id="n12_dyk9" name="btnSetting" src="en7jwcyijv" fileName="ideCommon/btn/BtnIdeTopToolBar.xml" xy="0,2">
       <Button title="设置" icon="ui://ti9jag5t80ab8c"/>
     </component>
-    <component id="n13_dyk9" name="btnHideLine" src="dyk9b6" fileName="ideCommon/btn/BtnIdeTopToolBar.xml" xy="1230,2">
+    <component id="n13_dyk9" name="btnHideLine" src="dyk9b6" fileName="ideCommon/btn/tBtnIdeTopToolBar.xml" xy="1230,2">
       <gearDisplay controller="ctrlMode" pages="0,1,3"/>
       <gearXY controller="ctrlMode" pages="0,1,3" values="1334,2|1282,2|1230,2" default="1172,2"/>
       <relation target="" sidePair="right-right"/>
-      <Button title="隐藏线" icon="ui://ti9jag5t80ab8h"/>
+      <Button title="隐藏线" icon="ui://ti9jag5t80ab8h" selectedIcon="ui://ti9jag5ten7jwcyijs" controller="ctrlFuncSelect" page="2"/>
     </component>
-    <component id="n17_dyk9" name="btnRestartCode" src="dyk9b6" fileName="ideCommon/btn/BtnIdeTopToolBar.xml" xy="1282,2">
+    <component id="n17_dyk9" name="btnRestartCode" src="en7jwcyijv" fileName="ideCommon/btn/BtnIdeTopToolBar.xml" xy="1282,2">
       <gearDisplay controller="ctrlMode" pages="3"/>
       <gearXY controller="ctrlMode" pages="1" values="1134,2" default="1282,2"/>
       <relation target="" sidePair="right-right"/>
       <Button title="重新运行" icon="ui://ti9jag5tamogt8j"/>
     </component>
-    <component id="n14_dyk9" name="btnEntity" src="dyk9b6" fileName="ideCommon/btn/BtnIdeTopToolBar.xml" xy="1334,2">
+    <component id="n14_dyk9" name="btnEntity" src="dyk9b6" fileName="ideCommon/btn/tBtnIdeTopToolBar.xml" xy="1334,2">
       <gearXY controller="ctrlMode" pages="4,0,1,3" values="1386,2|1386,2|1334,2|1334,2"/>
       <relation target="" sidePair="right-right"/>
-      <Button title="实体选择栏" icon="ui://ti9jag5t80ab8b"/>
+      <Button title="实体选择栏" icon="ui://ti9jag5t80ab8b" selectedIcon="ui://ti9jag5ten7jwcyijt"/>
     </component>
-    <component id="n15_dyk9" name="btnMapTool" src="dyk9b6" fileName="ideCommon/btn/BtnIdeTopToolBar.xml" xy="1386,2">
+    <component id="n15_dyk9" name="btnMapTool" src="dyk9b6" fileName="ideCommon/btn/tBtnIdeTopToolBar.xml" xy="1386,2">
       <gearDisplay controller="ctrlMode" pages="1,3"/>
       <gearXY controller="ctrlMode" default="1386,2"/>
       <relation target="" sidePair="right-right"/>
-      <Button title="地图工具" icon="ui://ti9jag5tamogt8k"/>
+      <Button title="地图工具" icon="ui://ti9jag5tamogt8k" selectedIcon="ui://ti9jag5ten7jwcyiju"/>
     </component>
-    <component id="n16_dyk9" name="btnBackToGameServer" src="dyk9b6" fileName="ideCommon/btn/BtnIdeTopToolBar.xml" xy="52,2">
+    <component id="n16_dyk9" name="btnBackToGameServer" src="en7jwcyijv" fileName="ideCommon/btn/BtnIdeTopToolBar.xml" xy="52,2">
       <gearDisplay controller="ctrlMode" pages="1,3"/>
       <Button title="退出" icon="ui://ti9jag5tamogt8n"/>
     </component>
@@ -39,17 +40,17 @@
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://ti9jag5t80ab7z"/>
     </component>
-    <component id="n21_amog" name="btnXYGrid" src="dyk9b6" fileName="ideCommon/btn/BtnIdeTopToolBar.xml" xy="1178,2">
+    <component id="n21_amog" name="btnXYGrid" src="dyk9b6" fileName="ideCommon/btn/tBtnIdeTopToolBar.xml" xy="1178,2">
       <gearDisplay controller="ctrlMode" pages="0,1,3"/>
       <gearXY controller="ctrlMode" pages="0,1,3" values="1230,2|1178,2|1178,2" default="1172,2"/>
       <relation target="" sidePair="right-right"/>
-      <Button title="自然坐标" icon="ui://ti9jag5tamogt8o"/>
+      <Button title="自然坐标" icon="ui://ti9jag5tamogt8o" selectedIcon="ui://ti9jag5ten7jwcyijr" controller="ctrlFuncSelect" page="0"/>
     </component>
-    <component id="n22_amog" name="btnRCGrid" src="dyk9b6" fileName="ideCommon/btn/BtnIdeTopToolBar.xml" xy="1126,2">
+    <component id="n22_amog" name="btnRCGrid" src="dyk9b6" fileName="ideCommon/btn/tBtnIdeTopToolBar.xml" xy="1126,2">
       <gearDisplay controller="ctrlMode" pages="0,1,3"/>
       <gearXY controller="ctrlMode" pages="0,1,3" values="1282,2|1230,2|1126,2" default="1172,2"/>
       <relation target="" sidePair="right-right"/>
-      <Button title="场景坐标" icon="ui://ti9jag5tamogt8i"/>
+      <Button title="场景坐标" icon="ui://ti9jag5tamogt8i" selectedIcon="ui://ti9jag5ten7jwcyijq" controller="ctrlFuncSelect" page="1"/>
     </component>
   </displayList>
 </component>

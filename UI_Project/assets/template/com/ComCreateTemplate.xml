@@ -87,11 +87,11 @@
     <group id="n124_ra2b" name="grpAdvancedSetting" xy="0,462" size="1304,332" advanced="true">
       <gearDisplay controller="ctrlAdvancedSetting" pages="0"/>
     </group>
-    <component id="n40_f4tn" name="btnCreateMap" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1084,831" size="100,38">
-      <Button title="创建" icon="ui://te1gxawoeggjcyihf"/>
+    <component id="n40_f4tn" name="btnCreateMap" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1204,831" size="100,38">
+      <Button title="创建" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <component id="n41_f4tn" name="btnCancel" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1204,831" size="100,38">
-      <Button title="取消" icon="ui://te1gxawooiqdcyih1" page="0"/>
+    <component id="n41_f4tn" name="btnCancel" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1084,831" size="100,38">
+      <Button title="取消" icon="ui://te1gxawoeggjcyihf" page="0"/>
     </component>
   </displayList>
 </component>
