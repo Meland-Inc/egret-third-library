@@ -30,7 +30,7 @@
       "target": [
         "nsis"
       ],
-      "icon": "icon.ico"
+      "icon": "./icon/icon.ico"
     },
     "dmg": {
       "contents": [
@@ -48,7 +48,7 @@
       ]
     },
     "mac": {
-      "icon": "icon.icns"
+      "icon": "./icon/icon.icns"
     },
     "nsis": {
       "oneClick": false,
@@ -57,9 +57,9 @@
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
       "runAfterFinish": true,
-      "installerIcon": "icon.ico",
-      "uninstallerIcon": "icon.ico",
-      "include": "installer.nsi"
+      "installerIcon": "./icon/icon.ico",
+      "uninstallerIcon": "./icon/icon.ico",
+      "include": "installer.nsh"
     },
     "extends": null
   }
