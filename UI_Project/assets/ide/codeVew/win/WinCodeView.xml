@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" opaque="false" designImage="ui://thvmj7voen7j4cyij9" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlStatus" pages="2,none,1,clone,0,elem" selected="1"/>
+  <controller name="ctrlStatus" pages="2,none,1,clone,0,elem" selected="1">
+    <action type="change_page" fromPage="" toPage="2" objectId="n32_g61s" controller="ctrlStatus" targetPage="0"/>
+    <action type="change_page" fromPage="" toPage="1" objectId="n32_g61s" controller="ctrlStatus" targetPage="1"/>
+  </controller>
   <displayList>
     <component id="n1_s45w" name="codeBlockContainer" src="s45w19" fileName="codeVew/com/CodeblockContainer.xml" xy="955,-1" size="852,1082" group="n16_en7j">
       <relation target="" sidePair="bottomext-bottom,rightext-right"/>
@@ -42,24 +45,9 @@
       <relation target="" sidePair="bottom-bottom,right-right"/>
       <Button icon="ui://ti9jag5txba67h"/>
     </component>
-    <image id="n24_en7j" name="imgEmptyBg" src="xba67o" fileName="ideCommon/img/img_ide_cm_7.png" xy="1718,0" size="201,1080">
+    <component id="n32_g61s" name="comEmptyClone" src="hl7ywcyijw" fileName="ideCommon/com/comEmptyCloneEntity.xml" xy="1719,0" controller="ctrlStatus,1">
       <gearDisplay controller="ctrlStatus" pages="2,1"/>
-      <relation target="" sidePair="right-right,height-height"/>
-    </image>
-    <text id="n25_en7j" name="tfCloneTips" xy="1721,376" size="200,47" group="n27_en7j" fontSize="20" color="#999999" align="center" vAlign="middle" vars="true" autoSize="height" text="这是【{parent=entity}】的克隆体"/>
-    <component id="n26_en7j" name="btnEditParent" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1762,439" size="120,44" group="n27_en7j">
-      <relation target="n25_en7j" sidePair="top-bottom"/>
-      <Button title="编辑原物件" titleFontSize="20" icon="ui://te1gxawooiqdcyih1"/>
+      <relation target="" sidePair="height-height,right-right"/>
     </component>
-    <group id="n27_en7j" name="grpCloneTips" xy="1721,376" size="200,107" advanced="true" collapsed="true">
-      <gearDisplay controller="ctrlStatus" pages="1"/>
-      <relation target="" sidePair="middle-middle,right-right"/>
-    </group>
-    <image id="n28_en7j" name="imgEmpty" src="zgght84" fileName="ideCommon/img/img_ide_cm_blank.png" xy="1759,404" group="n30_en7j"/>
-    <text id="n29_en7j" name="tfEmpty" xy="1724,526" size="194,24" group="n30_en7j" fontSize="20" color="#999999" align="center" vAlign="middle" autoSize="none" text="暂无选择"/>
-    <group id="n30_en7j" name="grpEmpty" xy="1724,404" size="194,146" advanced="true" collapsed="true">
-      <gearDisplay controller="ctrlStatus" pages="2"/>
-      <relation target="" sidePair="middle-middle,right-right"/>
-    </group>
   </displayList>
 </component>
