@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://thvmj7volj8gcyij0" designImageAlpha="0">
-  <controller name="ctrlPanel" pages="0,select,1,define" selected="1"/>
+  <controller name="ctrlPanel" pages="0,select,1,define" selected="0"/>
   <displayList>
     <graph id="n37_iasz" name="imgBG" xy="0,0" size="1920,1080" alpha="0.5" type="rect" lineSize="0" fillColor="#ff000000">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
@@ -12,7 +12,7 @@
     <image id="n38_iasz" name="imgMainBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="329,158" size="1260,762">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <text id="n41_iasz" name="tTitle" xy="336,167" size="147,47" fontSize="24" color="#333333" align="center" vAlign="middle" autoSize="none" text="定义事件">
+    <text id="n41_iasz" name="tTitle" xy="336,167" size="147,47" fontSize="24" color="#333333" align="center" vAlign="middle" autoSize="none" text="事件列表">
       <gearText controller="ctrlPanel" pages="1" values="定义事件" default="事件列表"/>
       <relation target="n38_iasz" sidePair="left-left,top-top"/>
     </text>
@@ -74,7 +74,8 @@
       <item/>
     </list>
     <image id="n61_fvb2" name="imgSearchInputBg" src="oiqdcyigx" fileName="img/img_cm_ssk.png" pkg="te1gxawo" xy="1119,168" size="400,47" group="n63_fvb2" visible="false"/>
-    <text id="n62_fvb2" name="inpSearch" xy="1130,180" size="380,26" group="n63_fvb2" visible="false" input="true" prompt="请输入搜索内容" fontSize="20" color="#333333" align="center" vAlign="middle" autoSize="height" singleLine="true" autoClearText="true" text="请输入搜索内容"/>
+    <text id="n62_fvb2" name="inpSearch" xy="1161,180" size="348,26" group="n63_fvb2" visible="false" input="true" prompt="请输入搜索内容" fontSize="20" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="请输入搜索内容"/>
+    <image id="n67_rujp" name="n67" src="rujpcyijl" fileName="img/icon_cm_ss.png" pkg="te1gxawo" xy="1124,176" size="32,32" group="n63_fvb2"/>
     <group id="n63_fvb2" name="grpSearchInput" xy="1119,168" size="400,47" group="n50_iasz" hideByEditor="true"/>
     <group id="n50_iasz" name="n50" xy="380,168" size="1180,726" advanced="true">
       <gearDisplay controller="ctrlPanel" pages="0"/>

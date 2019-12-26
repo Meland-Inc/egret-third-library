@@ -37,10 +37,11 @@
     <image id="n33_v00l" name="imgSearchBg" src="80ab9b" fileName="ideCommon/img/img_ide_cm_ssk.png" xy="10,65" size="407,40" group="n17_jm8l">
       <gearDisplay controller="ctrlState" pages="1"/>
     </image>
-    <text id="n32_v00l" name="tfSearch" xy="20,73" size="387,24" group="n17_jm8l" input="true" prompt="[color=#999999][size=18]请输入搜索内容[/size][/color]" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="">
+    <text id="n32_v00l" name="tfSearch" xy="51,73" size="355,24" group="n17_jm8l" input="true" prompt="[color=#999999][size=18]请输入搜索内容[/size][/color]" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="">
       <gearDisplay controller="ctrlState" pages="1"/>
     </text>
-    <text id="n31_v00l" name="tfTitle" xy="20,17" size="85,24" group="n17_jm8l" fontSize="20" color="#333333" align="center" vAlign="middle" text="地形编辑">
+    <image id="n42_rujp" name="n42" src="rujpcyijl" fileName="img/icon_cm_ss.png" pkg="te1gxawo" xy="15,69" size="32,32" group="n17_jm8l"/>
+    <text id="n31_v00l" name="tfTitle" xy="20,17" size="85,26" group="n17_jm8l" fontSize="20" color="#333333" align="center" vAlign="middle" text="地形编辑">
       <gearDisplay controller="ctrlState" pages="1"/>
     </text>
     <component id="n3_7slt" name="btnFold" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="377,2" size="48,48" group="n23_m5hn">
@@ -54,7 +55,7 @@
     <group id="n23_m5hn" name="grpFoldOpen" xy="39,2" size="386,50" group="n17_jm8l" advanced="true">
       <gearDisplay controller="ctrlMode" pages="0,2"/>
     </group>
-    <group id="n17_jm8l" name="grpMode" xy="-114,0" size="544,1090" advanced="true" collapsed="true">
+    <group id="n17_jm8l" name="grpMode" xy="-114,0" size="544,1090" advanced="true">
       <gearXY controller="ctrlState" pages="1,0" values="-114,0|-114,0"/>
     </group>
     <image id="n0_7slt" name="n0" src="80ab97" fileName="ideCommon/img/img_ide_cm_8.png" xy="10,190" size="394,879" group="n16_jm8l">

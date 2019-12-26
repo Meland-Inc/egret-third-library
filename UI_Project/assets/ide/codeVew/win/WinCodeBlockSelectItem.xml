@@ -72,7 +72,8 @@
       <item/>
     </list>
     <image id="n33_dt2p" name="imgSearchInputBg" src="oiqdcyigx" fileName="img/img_cm_ssk.png" pkg="te1gxawo" xy="1205,118" size="400,47" group="n35_dt2p"/>
-    <text id="n34_dt2p" name="inpSearch" xy="1216,130" size="380,24" group="n35_dt2p" input="true" prompt="请输入搜索内容" fontSize="20" color="#333333" align="center" vAlign="middle" autoSize="height" singleLine="true" autoClearText="true" text="请输入搜索内容"/>
+    <text id="n34_dt2p" name="inpSearch" xy="1247,130" size="348,26" group="n35_dt2p" input="true" prompt="请输入搜索内容" fontSize="20" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text=""/>
+    <image id="n37_rujp" name="n37" src="rujpcyijl" fileName="img/icon_cm_ss.png" pkg="te1gxawo" xy="1212,126" size="32,32" group="n35_dt2p"/>
     <group id="n35_dt2p" name="grpSearchInput" xy="1205,118" size="400,47" group="n36_dt2p"/>
     <group id="n36_dt2p" name="n36" xy="148,107" size="1529,889" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
