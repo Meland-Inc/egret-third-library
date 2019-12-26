@@ -87,8 +87,9 @@
       <item/>
     </list>
     <image id="n35_smiy" name="n35" src="80ab9b" fileName="ideCommon/img/img_ide_cm_ssk.png" xy="12,69" size="405,37" group="n42_smiy"/>
-    <text id="n36_smiy" name="tfSearch" xy="15,75" size="399,27" group="n42_smiy" input="true" prompt="[color=#999999][size=18]请输入搜索内容[/size][/color]" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" text=""/>
-    <text id="n38_smiy" name="n38" xy="15,16" size="65,24" group="n42_smiy" fontSize="20" color="#333333" text="素材库"/>
+    <text id="n36_smiy" name="tfSearch" xy="47,75" size="366,27" group="n42_smiy" input="true" prompt="[color=#999999][size=18]请输入搜索内容[/size][/color]" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" text=""/>
+    <image id="n45_rujp" name="n45" src="rujpcyijl" fileName="img/icon_cm_ss.png" pkg="te1gxawo" xy="15,72" size="32,32" group="n42_smiy"/>
+    <text id="n38_smiy" name="n38" xy="15,16" size="65,26" group="n42_smiy" fontSize="20" color="#333333" text="素材库"/>
     <component id="n39_smiy" name="btnConfirm" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="306,1032" size="110,40" group="n42_smiy">
       <relation target="" sidePair="bottom-bottom,right-right"/>
       <Button title="确定" titleColor="#ffffff" icon="ui://te1gxawooiqdcyih1"/>

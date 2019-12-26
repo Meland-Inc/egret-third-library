@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="126,1080" opaque="false" designImage="ui://thvmj7voo5ey4cyij8" designImageOffsetX="-1490">
-  <controller name="ctrlState" exported="true" pages="1,open,0,fold" selected="1"/>
-  <controller name="ctrlMode" exported="true" pages="0,brush,1,shovel,2,replace,3,select" selected="3">
+<component size="430,1080" opaque="false" designImage="ui://thvmj7voo5ey4cyij8" designImageOffsetX="-1490">
+  <controller name="ctrlState" exported="true" pages="1,open,0,fold" selected="0"/>
+  <controller name="ctrlMode" exported="true" pages="0,brush,1,shovel,2,replace,3,select" selected="0">
     <action type="change_page" fromPage="" toPage="1,3" controller="ctrlState" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="0,2" controller="ctrlState" targetPage="1"/>
   </controller>
   <displayList>
-    <graph id="n19_n83g" name="n19" xy="0,0" size="126,640" visible="false" alpha="0" touchable="false" type="rect">
+    <graph id="n19_n83g" name="n19" xy="0,0" size="430,1082" visible="false" alpha="0" touchable="false" type="rect">
       <gearXY controller="ctrlState" pages="1,0" values="0,0|0,0"/>
       <gearSize controller="ctrlState" pages="1,0" values="430,1082,1,1|126,640,1,1"/>
     </graph>
-    <image id="n1_7slt" name="imgTotalBg" src="xba67o" fileName="ideCommon/img/img_ide_cm_7.png" xy="0,0" size="126,1080" group="n17_jm8l">
+    <image id="n1_7slt" name="imgTotalBg" src="xba67o" fileName="ideCommon/img/img_ide_cm_7.png" xy="0,0" size="430,1080" group="n17_jm8l">
       <relation target="" sidePair="height-height,width-width"/>
     </image>
-    <image id="n34_b8na" name="imgTopBg" src="xba67m" fileName="ideCommon/img/img_ide_cm_6.png" xy="0,0" size="126,55" group="n17_jm8l">
+    <image id="n34_b8na" name="imgTopBg" src="xba67m" fileName="ideCommon/img/img_ide_cm_6.png" xy="0,0" size="430,55" group="n17_jm8l">
       <relation target="" sidePair="width-width"/>
     </image>
     <component id="n8_7slt" name="btnRun" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="-114,980" size="116,110" group="n17_jm8l">
@@ -37,10 +37,11 @@
     <image id="n33_v00l" name="imgSearchBg" src="80ab9b" fileName="ideCommon/img/img_ide_cm_ssk.png" xy="10,65" size="407,40" group="n17_jm8l">
       <gearDisplay controller="ctrlState" pages="1"/>
     </image>
-    <text id="n32_v00l" name="tfSearch" xy="20,73" size="387,24" group="n17_jm8l" input="true" prompt="[color=#999999][size=18]请输入搜索内容[/size][/color]" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="">
+    <text id="n32_v00l" name="tfSearch" xy="51,73" size="355,24" group="n17_jm8l" input="true" prompt="[color=#999999][size=18]请输入搜索内容[/size][/color]" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="">
       <gearDisplay controller="ctrlState" pages="1"/>
     </text>
-    <text id="n31_v00l" name="tfTitle" xy="20,17" size="85,24" group="n17_jm8l" fontSize="20" color="#333333" align="center" vAlign="middle" text="地形编辑">
+    <image id="n42_rujp" name="n42" src="rujpcyijl" fileName="img/icon_cm_ss.png" pkg="te1gxawo" xy="15,69" size="32,32" group="n17_jm8l"/>
+    <text id="n31_v00l" name="tfTitle" xy="20,17" size="85,26" group="n17_jm8l" fontSize="20" color="#333333" align="center" vAlign="middle" text="地形编辑">
       <gearDisplay controller="ctrlState" pages="1"/>
     </text>
     <component id="n3_7slt" name="btnFold" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="377,2" size="48,48" group="n23_m5hn">
@@ -54,13 +55,13 @@
     <group id="n23_m5hn" name="grpFoldOpen" xy="39,2" size="386,50" group="n17_jm8l" advanced="true">
       <gearDisplay controller="ctrlMode" pages="0,2"/>
     </group>
-    <group id="n17_jm8l" name="grpMode" xy="-114,0" size="539,1090" advanced="true" collapsed="true">
+    <group id="n17_jm8l" name="grpMode" xy="-114,0" size="544,1090" advanced="true">
       <gearXY controller="ctrlState" pages="1,0" values="-114,0|-114,0"/>
     </group>
-    <image id="n0_7slt" name="n0" src="80ab97" fileName="ideCommon/img/img_ide_cm_8.png" xy="10,190" size="90,879" group="n16_jm8l">
+    <image id="n0_7slt" name="n0" src="80ab97" fileName="ideCommon/img/img_ide_cm_8.png" xy="10,190" size="394,879" group="n16_jm8l">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </image>
-    <list id="n4_7slt" name="lstBackpack" xy="20,190" size="96,877" group="n16_jm8l" layout="flow_hz" selectionMode="multipleSingleClick" overflow="scroll" scrollBar="visible" margin="10,0,0,0" scrollBarMargin="5,5,0,0" scrollBarRes="ui://ti9jag5tso8vt7r," lineGap="10" colGap="10" defaultItem="ui://ti9jag5tv00la9" autoClearItems="true">
+    <list id="n4_7slt" name="lstBackpack" xy="20,190" size="400,877" group="n16_jm8l" layout="flow_hz" selectionMode="multipleSingleClick" overflow="scroll" scrollBar="visible" margin="10,0,0,0" scrollBarMargin="5,5,0,0" scrollBarRes="ui://ti9jag5tso8vt7r," lineGap="10" colGap="10" defaultItem="ui://ti9jag5tv00la9" autoClearItems="true">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
       <item/>
       <item/>
@@ -118,13 +119,13 @@
       <item/>
       <item/>
     </list>
-    <group id="n16_jm8l" name="grpBp" xy="10,190" size="106,879" advanced="true" collapsed="true">
+    <group id="n16_jm8l" name="grpBp" xy="10,190" size="410,879" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlState" pages="1"/>
     </group>
-    <image id="n36_o5ey" name="n36" src="o5eywcyijs" fileName="ideCommon/img/img_ide_cm_xfk.png" xy="-9,790" size="144,296" group="n39_o5ey">
+    <image id="n36_o5ey" name="n36" src="o5eywcyijs" fileName="ideCommon/img/img_ide_cm_xfk.png" xy="-9,790" size="448,296" group="n39_o5ey">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </image>
-    <list id="n37_o5ey" name="lstBpSelect" xy="20,814" size="96,200" group="n39_o5ey" layout="flow_hz" selectionMode="multipleSingleClick" overflow="scroll" scrollBar="hidden" margin="10,0,0,0" scrollBarMargin="5,5,0,0" scrollBarRes="ui://ti9jag5tso8vt7r," lineGap="10" colGap="15" defaultItem="ui://ti9jag5to5eywcyijr" autoClearItems="true">
+    <list id="n37_o5ey" name="lstBpSelect" xy="20,814" size="400,200" group="n39_o5ey" layout="flow_hz" selectionMode="multipleSingleClick" overflow="scroll" scrollBar="hidden" margin="10,0,0,0" scrollBarMargin="5,5,0,0" scrollBarRes="ui://ti9jag5tso8vt7r," lineGap="10" colGap="15" defaultItem="ui://ti9jag5to5eywcyijr" autoClearItems="true">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
       <item/>
       <item/>
@@ -186,7 +187,7 @@
       <Button title="清空" icon="ui://te1gxawoeggjcyihf"/>
     </component>
     <image id="n41_o5ey" name="n41" src="80ab99" fileName="ideCommon/img/img_ide_cm_h.png" xy="0,1014" size="430,2" group="n39_o5ey"/>
-    <group id="n39_o5ey" name="grpSelect" xy="-9,790" size="439,296" hideByEditor="true" advanced="true" collapsed="true">
+    <group id="n39_o5ey" name="grpSelect" xy="-9,790" size="448,296" hideByEditor="true" advanced="true" collapsed="true">
       <relation target="" sidePair="bottom-bottom"/>
     </group>
   </displayList>
