@@ -2,6 +2,7 @@
 <component size="1920,1080" designImage="ui://thvmj7vofv5tcyiio" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlMapMode" pages="0,normal,1,born,2,revive" selected="0"/>
   <controller name="ctrlMarkOperate" pages="0,normal,1,selectMark,2,puttingMark,3,deleteMark,4,editMarkName" selected="0"/>
+  <controller name="ctrlPosType" pages="0,scene,1,natural" selected="1"/>
   <displayList>
     <component id="n35_trc2" name="comMap" src="fv5tc" fileName="old/com/ComMiniMapCtnr.xml" xy="0,57" size="1920,1023" hideByEditor="true">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
@@ -71,17 +72,15 @@
       <gearDisplay controller="ctrlMapMode" pages="0"/>
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </group>
-    <image id="n26_11e02" name="posBg1" src="fv5t2o" fileName="img/img_map_dk.png" xy="21,960" size="257,40" group="n28_11e02">
-      <relation target="n27_11e02" sidePair="rightext-right"/>
-    </image>
-    <image id="n95_fv5t" name="imgPosIcon1" src="fv5t2n" fileName="img/icon_map_zb.png" xy="23,948" group="n28_11e02"/>
-    <text id="n27_11e02" name="tfNaturalPos" xy="64,968" size="191,24" group="n28_11e02" fontSize="20" color="#ffffff" align="center" vAlign="middle" vars="true" text="自然坐标  ({x=999},{y=999})"/>
-    <image id="n97_sod9" name="posBg2" src="fv5t2o" fileName="img/img_map_dk.png" xy="21,1013" size="253,40" group="n28_11e02">
+    <component id="n97_sod9" name="btnChangePosType" src="oliri6s" fileName="old/btn/tbtnScale.xml" pkg="te1gxawo" xy="21,1014" size="277,40" group="n28_11e02">
       <relation target="n99_sod9" sidePair="rightext-right"/>
-    </image>
-    <image id="n98_sod9" name="imgPosIcon2" src="fv5t2n" fileName="img/icon_map_zb.png" xy="23,1001" group="n28_11e02"/>
-    <text id="n99_sod9" name="tfScenePos" xy="64,1021" size="191,24" group="n28_11e02" fontSize="20" color="#ffffff" align="center" vAlign="middle" vars="true" text="场景坐标  ({r=999},{c=999})"/>
-    <group id="n28_11e02" name="posGroup" xy="21,948" size="257,105" advanced="true">
+      <Button checked="true" icon="ui://makcczvjfv5t2o" controller="ctrlPosType" page="1"/>
+    </component>
+    <image id="n98_sod9" name="imgPosIcon" src="fv5t2n" fileName="img/icon_map_zb.png" xy="23,1002" group="n28_11e02"/>
+    <text id="n99_sod9" name="tfPos" xy="64,1022" size="215,24" group="n28_11e02" fontSize="20" color="#ffffff" align="center" vAlign="middle" vars="true" text="自然坐标  ({x=999} , {y=999})">
+      <gearText controller="ctrlPosType" pages="0,1" values="场景坐标  ({row=999} , {col=999})|自然坐标  ({x=999} , {y=999})"/>
+    </text>
+    <group id="n28_11e02" name="posGroup" xy="21,1002" size="277,52" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlMapMode" pages="0,2"/>
       <relation target="" sidePair="bottom-bottom"/>
     </group>
