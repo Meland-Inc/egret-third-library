@@ -7,32 +7,26 @@ export function getPolicyInfo(versionName) {
         let due = 1800;
         let token = "*";
         let channel = "bian_game"
-        // let token = crypto
-        //     .createHash('md5')
-        //     .update(tokenStr)
-        //     .digest('hex');
 
-        let getData = `?versionName=${versionName}&&channel=${channel}&&time=${time}&&due=${due}&&token=${token}`
-
-        let options = {
-            host: '47.107.73.43', // 请求地址 域名，google.com等..
-            port: 10001,
-            path: "/getVersion" + getData, // 具体路径eg:/upload
-            method: 'GET', // 请求方式, 这里以post为例
-            headers: { // 必选信息,  可以抓包工看一下
-                'Content-Type': 'application/json'
+        let policyQueryServer = 'policy-server.wkcoding.com';
+        let url = new URL('//' + policyQueryServer + '/getVersion', window.location);
+        url.searchParams.append('versionName', versionName);
+        url.searchParams.append('channel', channel);
+        url.searchParams.append('time', time);
+        url.searchParams.append('due', due);
+        url.searchParams.append('token', token);
+        let request = new XMLHttpRequest();
+        request.open("GET", url);
+        request.onreadystatechange = () => {
+            if (request.readyState !== 4) return;
+            if (request.status === 200) {
+                console.log(request.responseText);
+                resolve(request.responseText);
+            } else {
+                reject("获取版本号错误!");
             }
-        };
-        http.get(options, (response) => {
-            let resData = "";
-            response.on("data", (data) => {
-                resData += data;
-            });
-            response.on("end", () => {
-                console.log(resData);
-                resolve(resData);
-            });
-        })
+        }
+        request.send(null);
     });
 }
 
@@ -47,26 +41,46 @@ export function applyPolicyNum(policyNum, versionName, channel) {
             .update(tokenStr)
             .digest('hex');
 
-        let getData = `?versionName=${versionName}&&channel=${channel}&&time=${time}&&due=${due}&&token=${token}&&version=${policyNum}`
-
-        let options = {
-            host: '47.107.73.43', // 请求地址 域名，google.com等..
-            port: 10001,
-            path: "/setVersion" + getData, // 具体路径eg:/upload
-            method: 'GET', // 请求方式, 这里以post为例
-            headers: { // 必选信息,  可以抓包工看一下
-                'Content-Type': 'application/json'
+        let policyQueryServerOld = '47.107.73.43:10001';
+        let oldUrl = new URL('//' + policyQueryServerOld + '/setVersion', window.location);
+        oldUrl.searchParams.append('versionName', versionName);
+        oldUrl.searchParams.append('channel', channel);
+        oldUrl.searchParams.append('time', time);
+        oldUrl.searchParams.append('due', due);
+        oldUrl.searchParams.append('token', token);
+        oldUrl.searchParams.append('version', policyNum);
+        let oldRequest = new XMLHttpRequest();
+        oldRequest.open("GET", oldUrl);
+        oldRequest.onreadystatechange = () => {
+            if (oldRequest.readyState !== 4) return;
+            if (oldRequest.status === 200) {
+                console.log(`47: ${oldRequest.responseText}`);
+                resolve(oldRequest.responseText);
+            } else {
+                reject("获取版本号错误!");
             }
-        };
-        http.get(options, (response) => {
-            let resData = "";
-            response.on("data", (data) => {
-                resData += data;
-            });
-            response.on("end", async () => {
-                console.log(resData);
+        }
+        oldRequest.send(null);
+
+        let policyQueryServer = 'policy-server.wkcoding.com';
+        let url = new URL('//' + policyQueryServer + '/setVersion', window.location);
+        url.searchParams.append('versionName', versionName);
+        url.searchParams.append('channel', channel);
+        url.searchParams.append('time', time);
+        url.searchParams.append('due', due);
+        url.searchParams.append('token', token);
+        url.searchParams.append('version', policyNum);
+        let request = new XMLHttpRequest();
+        request.open("GET", url);
+        request.onreadystatechange = () => {
+            if (request.readyState !== 4) return;
+            if (request.status === 200) {
+                console.log(`wkcoding:${request.responseText}`);
                 resolve();
-            });
-        })
+            } else {
+                reject("获取版本号错误!");
+            }
+        }
+        request.send(null);
     });
 }
