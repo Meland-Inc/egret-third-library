@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="201,1080">
-  <controller name="ctrlStatus" exported="true" pages="0,none,1,clone" selected="0"/>
+<component size="201,1080" designImageAlpha="25">
+  <controller name="ctrlStatus" exported="true" pages="0,none,1,clone" selected="1"/>
   <displayList>
     <image id="n0_hl7y" name="imgEmptyBg" src="xba67o" fileName="ideCommon/img/img_ide_cm_7.png" xy="0,0" size="201,1080">
       <relation target="" sidePair="height-height"/>
@@ -11,12 +11,11 @@
       <gearDisplay controller="ctrlStatus" pages="0"/>
       <relation target="" sidePair="middle-middle"/>
     </group>
-    <text id="n4_hl7y" name="tfCloneTips" xy="2,387" size="198,47" group="n6_hl7y" fontSize="20" color="#999999" align="center" vAlign="middle" vars="true" autoSize="height" text="这是【{parent=entity}】的克隆体"/>
-    <component id="n5_hl7y" name="btnEditParent" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="42,447" size="120,44" group="n6_hl7y">
-      <relation target="n4_hl7y" sidePair="top-bottom"/>
+    <text id="n4_hl7y" name="tfCloneTips" xy="2,384" size="198,47" group="n6_hl7y" fontSize="20" color="#999999" align="center" vAlign="middle" vars="true" autoSize="height" text="这是【{parent=entity}】的克隆体"/>
+    <component id="n5_hl7y" name="btnEditParent" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="42,484" size="120,44" group="n6_hl7y">
       <Button title="编辑原物件" titleFontSize="20" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <group id="n6_hl7y" name="grpCloneTips" xy="2,387" size="198,104" advanced="true" collapsed="true">
+    <group id="n6_hl7y" name="grpCloneTips" xy="2,384" size="198,144" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlStatus" pages="1"/>
       <relation target="" sidePair="middle-middle"/>
     </group>
