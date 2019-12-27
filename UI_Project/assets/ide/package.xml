@@ -443,6 +443,26 @@
     <component id="lx59wcyijv" name="btnCustomizeEvent.xml" path="/codeVew/btn/"/>
     <component id="fvb2wcyijw" name="btnCodeBlockTabA.xml" path="/codeVew/btn/"/>
     <image id="fvb2wcyijx" name="img_codeV_sj_3.png" path="/codeVew/img/" scale="9grid" scale9grid="8,8,42,42"/>
+    <component id="rujpwcyijy" name="ComRichTextInput.xml" path="/codeVew/com/" exported="true"/>
+    <image id="rujpwcyijz" name="icon_code_oth_ct.png" path="/codeVew/img/"/>
+    <image id="rujpwcyik0" name="icon_code_oth_xhx.png" path="/codeVew/img/"/>
+    <image id="rujpwcyik1" name="icon_code_oth_xt.png" path="/codeVew/img/"/>
+    <image id="rujpwcyik2" name="icon_code_oth_zh.png" path="/codeVew/img/"/>
+    <image id="rujpwcyik3" name="icon_code_oth_zs.png" path="/codeVew/img/"/>
+    <image id="rujpwcyik4" name="img_code_oth_fwb_1.png" path="/codeVew/img/" scale="9grid" scale9grid="10,10,20,20"/>
+    <image id="rujpwcyik5" name="img_code_oth_fwb_2.png" path="/codeVew/img/" scale="9grid" scale9grid="10,10,20,20"/>
+    <image id="rujpwcyik6" name="img_code_oth_fwb_3.png" path="/codeVew/img/" scale="9grid" scale9grid="6,6,18,18"/>
+    <image id="rujpwcyik7" name="img_code_oth_fwb_4.png" path="/codeVew/img/"/>
+    <image id="rujpwcyik8" name="img_code_oth_fwb_5.png" path="/codeVew/img/" scale="9grid" scale9grid="2,2,10,10"/>
+    <image id="rujpwcyik9" name="img_code_oth_fwb_6.png" path="/codeVew/img/"/>
+    <component id="rujpwcyikc" name="btnRichType.xml" path="/codeVew/btn/"/>
+    <component id="rujpwcyikd" name="btnRichColor.xml" path="/codeVew/btn/"/>
+    <component id="rujpwcyikf" name="ComDropdown.xml" path="/codeVew/com/" exported="true"/>
+    <component id="rujpwcyiki" name="ComDropdownList.xml" path="/codeVew/com/"/>
+    <component id="rujpwcyikl" name="ComDropdownItem.xml" path="/codeVew/com/"/>
+    <component id="rujpwcyikn" name="ComDropdownColor.xml" path="/codeVew/com/" exported="true"/>
+    <component id="rujpwcyikp" name="ComDropdownColorList.xml" path="/codeVew/com/"/>
+    <component id="rujpwcyikq" name="ComDropdownColorItem.xml" path="/codeVew/com/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>

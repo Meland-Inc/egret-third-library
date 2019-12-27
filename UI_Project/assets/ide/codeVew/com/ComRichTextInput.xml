@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="535,292">
+  <controller name="ctrlArgType" alias="ctrlArgType" pages="0,number,1,boolean,2,text" selected="0"/>
+  <controller name="ctrlTextColor" pages="0,show,1,hide" selected="1"/>
+  <displayList>
+    <image id="n38_rujp" name="n38" src="rujpwcyik5" fileName="codeVew/img/img_code_oth_fwb_2.png" xy="0,0" size="535,292">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n39_rujp" name="n39" src="rujpwcyik4" fileName="codeVew/img/img_code_oth_fwb_1.png" xy="0,0" size="535,40"/>
+    <component id="n41_rujp" name="n41" src="lj8gt8j" fileName="codeVew/btn/btnScale.xml" xy="497,3" size="32,32">
+      <Button icon="ui://te1gxawoumtscyiie"/>
+    </component>
+    <image id="n46_rujp" name="n46" src="rujpwcyik6" fileName="codeVew/img/img_code_oth_fwb_3.png" xy="157,5" size="89,31"/>
+    <list id="n45_rujp" name="lstRichType" xy="159,7" size="85,27" layout="flow_hz" selectionMode="multipleSingleClick" overflow="hidden" defaultItem="ui://ti9jag5trujpwcyikc" autoItemSize="true">
+      <relation target="n46_rujp" sidePair="left-left,top-top"/>
+      <item title="粗体" icon="ui://ti9jag5trujpwcyijz" name="bold" selectedIcon="ui://ti9jag5trujpwcyijz"/>
+      <item title="斜体" icon="ui://ti9jag5trujpwcyik1" name="斜体" selectedIcon="ui://ti9jag5trujpwcyik1"/>
+      <item title="下划线" icon="ui://ti9jag5trujpwcyik0" name="buildObj" selectedIcon="ui://ti9jag5trujpwcyik0"/>
+    </list>
+    <image id="n47_rujp" name="n47" src="rujpwcyik9" fileName="codeVew/img/img_code_oth_fwb_6.png" xy="187,7" size="2,28">
+      <relation target="n46_rujp" sidePair="left-left,top-top"/>
+    </image>
+    <image id="n48_rujp" name="n48" src="rujpwcyik9" fileName="codeVew/img/img_code_oth_fwb_6.png" xy="215,7" size="2,28">
+      <relation target="n46_rujp" sidePair="left-left,top-top"/>
+    </image>
+    <component id="n50_rujp" name="ddTextFont" src="rujpwcyikf" fileName="codeVew/com/ComDropdown.xml" xy="14,5">
+      <ComboBox visibleItemCount="10"/>
+    </component>
+    <component id="n51_rujp" name="ddTextColor" src="rujpwcyikn" fileName="codeVew/com/ComDropdownColor.xml" xy="94,5"/>
+    <text id="n54_rujp" name="textRichInput" xy="8,47" size="517,236" input="true" fontSize="18" ubb="true" autoSize="none" autoClearText="true" text="富文本输入"/>
+    <component id="n55_rujp" name="lstTextColor" src="rujpwcyikp" fileName="codeVew/com/ComDropdownColorList.xml" xy="53,42" controller="ctrlDirection,0">
+      <gearDisplay controller="ctrlTextColor" pages="0"/>
+    </component>
+  </displayList>
+</component>
