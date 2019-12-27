@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="90,24">
+  <controller name="battery" pages="0,green,1,red" selected="1"/>
+  <controller name="net" pages="0,quick,1,slow" selected="0"/>
+  <displayList>
+    <image id="n0_c994" name="n0" src="y6w64dx" fileName="img/img_mianV_wifi.png" xy="0,0" size="90,24" group="n18_mjrt"/>
+    <image id="n7_c994" name="n7" src="y6w64dy" fileName="img/icon_mianV_wifi_1.png" xy="7,4" group="n13_c994">
+      <gearDisplay controller="net" pages="1"/>
+    </image>
+    <image id="n5_c994" name="n5" src="y6w64dw" fileName="img/icon_mianV_wifi.png" xy="7,4" group="n13_c994">
+      <gearDisplay controller="net" pages="0"/>
+    </image>
+    <text id="n6_c994" name="tfnetSpeed" xy="31,1" size="53,20" group="n13_c994" fontSize="16" color="#92cb5e" align="center" vAlign="middle" bold="true" text="100MS"/>
+    <group id="n13_c994" name="n13" xy="7,1" size="77,20" group="n18_mjrt"/>
+    <text id="n4_c994" name="tfTime" xy="95,0" size="33,14" group="n15_c994" visible="false" fontSize="10" color="#b7ff69" align="center" vAlign="middle" bold="true" text="12:51"/>
+    <group id="n15_c994" name="time" xy="83,0" size="44,16" group="n18_mjrt" hideByEditor="true"/>
+    <text id="n1_c994" name="n1" xy="0,0" size="33,16" group="n17_c994" visible="false" fontSize="10" color="#b7ff69" align="center" vAlign="middle" autoSize="none" bold="true" text="经验:"/>
+    <text id="n2_c994" name="tfExperience" xy="31,0" size="42,16" group="n17_c994" visible="false" fontSize="10" color="#b7ff69" vAlign="middle" autoSize="none" bold="true" text="55.55%"/>
+    <group id="n17_c994" name="n17" xy="0,0" size="68,16" group="n18_mjrt" hideByEditor="true"/>
+    <group id="n18_mjrt" name="n18" xy="0,0" size="127,24"/>
+  </displayList>
+</component>

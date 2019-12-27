@@ -2,7 +2,7 @@
 <component size="1920,1080" opaque="false" designImage="ui://thvmj7voqr0m4cyij5" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlUserStatus" pages="0,student,1,teacher,2,fakeStudent,3,fakeTeacher" selected="0"/>
   <controller name="ctrlGodView" pages="0,false,1,true" selected="0"/>
-  <controller name="ctrlEnterWay" pages="0,share,1,editSelf,2,editOther,3,roomPlayCanEdit,4,roomPlayCanNotEdit" selected="0"/>
+  <controller name="ctrlEnterWay" pages="0,share,1,editSelf,2,editOther,3,roomPlayCanEdit,4,roomPlayCanNotEdit" selected="4"/>
   <controller name="ctrlViewMode" pages="0,world,1,mapTemplate" selected="0"/>
   <controller name="ctrlLeftTopView" pages="0,show,1,hide" selected="0"/>
   <displayList>
@@ -81,12 +81,13 @@
       <gearDisplay controller="ctrlUserStatus" pages="2,3"/>
       <relation target="" sidePair="bottom-bottom"/>
     </component>
-    <group id="n25_sod9" name="grpChat" xy="0,920" size="440,160" advanced="true" collapsed="true">
+    <group id="n25_sod9" name="grpChat" xy="0,920" size="440,160" advanced="true">
       <gearDisplay controller="ctrlViewMode" pages="0"/>
     </group>
     <component id="n26_evs4" name="comBuildShortCut" src="qu7tt7j" fileName="ideCommon/com/ComBuildShortCutB.xml" pkg="ti9jag5t" xy="704,40" visible="false" touchable="false" customData="bottom" controller="ctrlState,11">
       <relation target="" sidePair="center-center"/>
     </component>
+    <component id="n28_y6w6" name="comExperience" src="gen8d3" fileName="com/ComExperience.xml" xy="0,878"/>
   </displayList>
   <transition name="showAnim">
     <item time="0" type="XY" target="n13_psru" tween="true" startValue="-,1080" endValue="-,987" duration="12"/>
