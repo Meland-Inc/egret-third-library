@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="408,144" extention="Button" designImage="ui://thvmj7vomquwq" designImageOffsetX="-161" designImageOffsetY="-134" designImageAlpha="0" designImageLayer="1">
-  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <controller name="button" pages="0,up,1,down" selected="1"/>
   <controller name="ctrlMode" pages="0,other,1,self" selected="0"/>
   <controller name="ctrlStatus" pages="0,normal,1,publish,3,updatable,2,addBtn" selected="0"/>
   <controller name="ctrlOperate" pages="0,editSelf,1,editOther,2,subscribe,3,quickEnter" selected="0"/>
@@ -35,10 +35,10 @@
       <gearDisplay controller="ctrlMode" pages="0"/>
       <gearXY controller="ctrlMode" pages="0,1" values="177,94|63,184"/>
     </group>
-    <image id="n38_p5r7" name="imgSelecte" src="oiqdcyih0" fileName="img/img_cm_wpx_2.png" pkg="te1gxawo" xy="0,4" size="408,140" group="n28_pz1n">
+    <component id="n38_p5r7" name="imgSelecte" src="jk954i" fileName="btn/imgSelect.xml" xy="0,4" size="408,140" group="n28_pz1n">
       <gearDisplay controller="button" pages="1"/>
       <gearSize controller="ctrlMode" pages="0" values="408,140,1,1" default="198,274,1,1"/>
-    </image>
+    </component>
     <component id="n37_p5r7" name="btnOperate" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="268,87" size="120,38" group="n28_pz1n">
       <gearXY controller="ctrlMode" pages="0,1" values="268,87|39,220"/>
       <gearText controller="ctrlOperate" pages="2,3" values="订阅地图|快速加入" default="编辑地图"/>

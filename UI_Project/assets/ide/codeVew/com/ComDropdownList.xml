@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="80,188" restrictSize="80,0,0,0">
+  <controller name="ctrlDirection" exported="true" pages="0,down,1,up" selected="0"/>
+  <displayList>
+    <image id="n4_rujp" name="n4" src="rujpwcyik6" fileName="codeVew/img/img_code_oth_fwb_3.png" xy="0,2" size="80,185">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <list id="n1_ilo1" name="list" xy="4,8" size="72,175" overflow="scroll" defaultItem="ui://ti9jag5trujpwcyikl" autoItemSize="false" align="center">
+      <gearXY controller="ctrlDirection" pages="0,1" values="4,8|4,5"/>
+      <relation target="" sidePair="width-width"/>
+    </list>
+  </displayList>
+</component>

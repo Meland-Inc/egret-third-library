@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="430,1080" opaque="false" designImage="ui://thvmj7voen7j4cyij9" designImageOffsetX="-1490" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlState" pages="0,none,1,elem,2,clone" selected="0">
+  <controller name="ctrlState" pages="0,none,1,elem,2,clone" selected="2">
     <action type="change_page" fromPage="" toPage="0" objectId="n68_hl7y" controller="ctrlStatus" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="2" objectId="n68_hl7y" controller="ctrlStatus" targetPage="1"/>
   </controller>
@@ -50,11 +50,11 @@
       <relation target="" sidePair="middle-middle"/>
     </group>
     <component id="n52_jm8l" name="btnRun" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="115,980" size="116,110">
-      <gearXY controller="ctrlState" pages="0,2" values="115,980|114,980" default="-115,980"/>
+      <gearXY controller="ctrlState" pages="0,2" values="115,980|115,980" default="-115,980"/>
       <relation target="" sidePair="bottom-bottom"/>
       <Button icon="ui://ti9jag5txba67h"/>
     </component>
-    <component id="n68_hl7y" name="comEmptyClone" src="hl7ywcyijw" fileName="ideCommon/com/comEmptyCloneEntity.xml" xy="229,0" controller="ctrlStatus,0">
+    <component id="n68_hl7y" name="comEmptyClone" src="hl7ywcyijw" fileName="ideCommon/com/comEmptyCloneEntity.xml" xy="229,0" controller="ctrlStatus,1">
       <gearDisplay controller="ctrlState" pages="0,2"/>
     </component>
   </displayList>
