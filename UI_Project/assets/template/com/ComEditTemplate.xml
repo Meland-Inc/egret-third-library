@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="401,882" overflow="scroll" scrollBarFlags="4" scrollBar="visible" scrollBarRes="ui://0axy98cgiv9318,ui://0axy98cgiv9318" designImage="ui://thvmj7vooebl4cyij8" designImageOffsetX="-1463" designImageOffsetY="-118" designImageAlpha="7" designImageLayer="1">
-  <controller name="ctrlMapSizeStatus" pages="0,big,1,middle,2,small,3,custom" selected="3"/>
-  <controller name="ctrlIsPublish" pages="0,false,1,true" selected="1"/>
+  <controller name="ctrlMapSizeStatus" pages="0,big,1,middle,2,small,3,custom" selected="0"/>
+  <controller name="ctrlIsPublish" pages="0,false,1,true" selected="0"/>
   <controller name="ctrlIsManorCheckPoint" pages="0,true,1,false" selected="0"/>
   <displayList>
     <image id="n0_er8n" name="imgInputBg" src="eggjcyihs" fileName="img/img_cm_srk_1.png" pkg="te1gxawo" xy="10,10" size="380,40" group="n40_ra2b"/>
@@ -17,84 +17,87 @@
     <group id="n55_oebl" name="grpSubscribe" xy="177,103" size="90,20" group="n42_ra2b" advanced="true" collapsed="true"/>
     <component id="n41_ra2b" name="btnPublish" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="290,91" size="100,38" group="n42_ra2b">
       <gearText controller="ctrlIsPublish" pages="1" values="更新地图" default="发布地图"/>
-      <Button title="更新地图" titleFontSize="18" icon="ui://te1gxawooiqdcyih3"/>
+      <Button title="发布地图" titleFontSize="18" icon="ui://te1gxawooiqdcyih3"/>
     </component>
     <component id="n43_ra2b" name="btnCopy" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="180,141" size="100,38" group="n42_ra2b">
       <Button title="复制地图" titleFontSize="18" icon="ui://te1gxawooiqdcyih1"/>
     </component>
     <component id="n44_ra2b" name="btnDelete" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="290,141" size="100,38" group="n42_ra2b">
       <gearText controller="ctrlIsPublish" pages="1" values="下架地图" default="删除地图"/>
-      <Button title="下架地图" titleFontSize="18" icon="ui://te1gxawoeggjcyihf"/>
+      <Button title="删除地图" titleFontSize="18" icon="ui://te1gxawoeggjcyihf"/>
     </component>
     <group id="n42_ra2b" name="grpDesc" xy="10,55" size="389,125"/>
     <component id="n47_oebl" name="btnSkipToMapListView" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="10,189" size="380,40">
       <gearDisplay controller="ctrlIsPublish" pages="1"/>
       <Button title="跳转到列表页" titleColor="#333333" titleFontSize="18" icon="ui://ti9jag5txba67d"/>
     </component>
-    <image id="n46_qq0e" name="imgLIne" src="vlrgcyijh" fileName="img/img_cm_line_1.png" pkg="te1gxawo" xy="11,247" size="378,3" group="n48_oebl"/>
-    <text id="n3_er8n" name="tfMapSize" xy="7,268" size="77,22" group="n48_oebl" fontSize="18" color="#333333" vAlign="bottom" text="地图大小"/>
-    <graph id="n49_oebl" name="gphPosCtrl" xy="161,359" size="100,65" group="n48_oebl" hideByEditor="true" visible="false" type="rect">
+    <image id="n46_qq0e" name="imgLIne" src="vlrgcyijh" fileName="img/img_cm_line_1.png" pkg="te1gxawo" xy="11,199" size="378,3" group="n48_oebl"/>
+    <text id="n3_er8n" name="tfMapSize" xy="7,220" size="77,22" group="n48_oebl" fontSize="18" color="#333333" vAlign="bottom" text="地图大小"/>
+    <graph id="n49_oebl" name="gphPosCtrl" xy="161,311" size="100,0" group="n48_oebl" hideByEditor="true" visible="false" type="rect">
       <gearSize controller="ctrlMapSizeStatus" pages="3" values="100,65,1,1" default="100,0,1,1"/>
     </graph>
-    <component id="n28_pz1n" name="cbMapSize" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="218,257" size="172,40" group="n48_oebl">
-      <ComboBox title="其他" visibleItemCount="10" selectionController="ctrlMapSizeStatus">
+    <component id="n28_pz1n" name="cbMapSize" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="218,209" size="172,40" group="n48_oebl">
+      <ComboBox title="大" visibleItemCount="10" selectionController="ctrlMapSizeStatus">
         <item title="大" value="big"/>
         <item title="中" value="middle"/>
         <item title="小" value="small"/>
         <item title="其他" value="custom"/>
       </ComboBox>
     </component>
-    <image id="n4_er8n" name="imgMutil" src="iv93r" fileName="old/img/img_stencil_c_1.png" xy="131,334" group="n19_er8n"/>
-    <image id="n5_er8n" name="imgWidthBG" src="eggjcyihs" fileName="img/img_cm_srk_1.png" pkg="te1gxawo" xy="11,317" size="102,40" group="n19_er8n"/>
-    <image id="n6_er8n" name="imgHeightBG" src="eggjcyihs" fileName="img/img_cm_srk_1.png" pkg="te1gxawo" xy="162,317" size="102,40" group="n19_er8n"/>
-    <text id="n7_er8n" name="inpMapWidth" xy="11,318" size="101,38" group="n19_er8n" input="true" prompt="1920" restrict="0-9" keyboardType="4" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="1000"/>
-    <text id="n8_er8n" name="inpMapHeight" xy="162,318" size="102,40" group="n19_er8n" input="true" prompt="1080" restrict="0-9" keyboardType="4" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="1000"/>
-    <component id="n9_er8n" name="btnUpdateMap" src="iv93s" fileName="old/btn/btnScale.xml" xy="290,320" size="100,37" group="n19_er8n">
+    <image id="n4_er8n" name="imgMutil" src="iv93r" fileName="old/img/img_stencil_c_1.png" xy="131,286" group="n19_er8n"/>
+    <image id="n5_er8n" name="imgWidthBG" src="eggjcyihs" fileName="img/img_cm_srk_1.png" pkg="te1gxawo" xy="11,269" size="102,40" group="n19_er8n"/>
+    <image id="n6_er8n" name="imgHeightBG" src="eggjcyihs" fileName="img/img_cm_srk_1.png" pkg="te1gxawo" xy="162,269" size="102,40" group="n19_er8n"/>
+    <text id="n7_er8n" name="inpMapWidth" xy="11,270" size="101,38" group="n19_er8n" input="true" prompt="1920" restrict="0-9" keyboardType="4" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="1000"/>
+    <text id="n8_er8n" name="inpMapHeight" xy="162,270" size="102,40" group="n19_er8n" input="true" prompt="1080" restrict="0-9" keyboardType="4" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="1000"/>
+    <component id="n9_er8n" name="btnUpdateMap" src="iv93s" fileName="old/btn/btnScale.xml" xy="290,272" size="100,37" group="n19_er8n">
       <Button title="更新尺寸" titleColor="#ffffff" titleFontSize="18" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <group id="n19_er8n" name="customInput" xy="11,317" size="380,41" group="n48_oebl" advanced="true" collapsed="true">
+    <group id="n19_er8n" name="customInput" xy="11,269" size="380,41" group="n48_oebl" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlMapSizeStatus" pages="3"/>
     </group>
-    <text id="n12_er8n" name="tfIsCanEdit" xy="7,454" size="147,29" group="n38_ra2b" fontSize="18" color="#333333" vAlign="middle" autoSize="none" text="编辑器是否可用"/>
-    <component id="n14_er8n" name="btnIsCanEdit" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="313,445" size="78,42" group="n38_ra2b">
+    <text id="n12_er8n" name="tfIsCanEdit" xy="7,341" size="147,29" group="n38_ra2b" fontSize="18" color="#333333" vAlign="middle" autoSize="none" text="编辑器是否可用"/>
+    <component id="n14_er8n" name="btnIsCanEdit" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="313,332" size="78,42" group="n38_ra2b">
       <Button checked="true" icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
     </component>
-    <text id="n11_er8n" name="tfIsOpen" xy="7,394" size="121,29" group="n38_ra2b" fontSize="18" color="#333333" vAlign="middle" autoSize="none" text="是否开源"/>
-    <component id="n13_er8n" name="btnIsOpen" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="313,385" size="78,42" group="n38_ra2b">
+    <text id="n11_er8n" name="tfIsOpen" xy="7,281" size="121,29" group="n38_ra2b" fontSize="18" color="#333333" vAlign="middle" autoSize="none" text="是否开源"/>
+    <component id="n13_er8n" name="btnIsOpen" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="313,272" size="78,42" group="n38_ra2b">
       <Button icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
     </component>
-    <text id="n24_pz1n" name="tfIsManorCheckPoint" xy="7,514" size="121,29" group="n38_ra2b" fontSize="18" color="#333333" vAlign="middle" autoSize="none" text="是否领地关卡"/>
-    <component id="n26_pz1n" name="btnIsManorCheckPoint" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="313,505" size="78,42" group="n38_ra2b">
+    <text id="n24_pz1n" name="tfIsManorCheckPoint" xy="7,401" size="121,29" group="n38_ra2b" fontSize="18" color="#333333" vAlign="middle" autoSize="none" text="是否领地关卡"/>
+    <component id="n26_pz1n" name="btnIsManorCheckPoint" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="313,392" size="78,42" group="n38_ra2b">
       <Button checked="true" icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe" controller="ctrlIsManorCheckPoint" page="0"/>
     </component>
-    <text id="n25_pz1n" name="tfIsSceneObjCanDestroy" xy="7,689" size="196,29" group="n38_ra2b" locked="true" hideByEditor="true" visible="false" fontSize="18" color="#333333" vAlign="middle" autoSize="none" bold="true" text="场景物件是否能被破坏"/>
-    <component id="n27_pz1n" name="btnIsSceneObjCanDestroy" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="313,681" size="78,42" group="n38_ra2b" locked="true" hideByEditor="true" visible="false">
+    <text id="n25_pz1n" name="tfIsSceneObjCanDestroy" xy="7,576" size="196,29" group="n38_ra2b" locked="true" hideByEditor="true" visible="false" fontSize="18" color="#333333" vAlign="middle" autoSize="none" bold="true" text="场景物件是否能被破坏"/>
+    <component id="n27_pz1n" name="btnIsSceneObjCanDestroy" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="313,568" size="78,42" group="n38_ra2b" locked="true" hideByEditor="true" visible="false">
       <Button checked="true" icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
     </component>
-    <text id="n10_er8n" name="tfManorGenerateType" xy="7,573" size="121,29" group="n45_lnk9" fontSize="18" color="#333333" vAlign="middle" autoSize="none" text="领地生成方式"/>
-    <component id="n30_pz1n" name="cbSelectManorType" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="218,565" size="172,40" group="n45_lnk9">
+    <text id="n10_er8n" name="tfManorGenerateType" xy="7,460" size="121,29" group="n45_lnk9" fontSize="18" color="#333333" vAlign="middle" autoSize="none" text="领地生成方式"/>
+    <component id="n30_pz1n" name="cbSelectManorType" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="218,452" size="172,40" group="n45_lnk9">
       <ComboBox title="回字形" visibleItemCount="10">
         <item title="回字形" value="palindrome"/>
         <item title="横向排列" value="horizontal"/>
         <item title="纵向排列" value="vertical"/>
       </ComboBox>
     </component>
-    <text id="n23_pz1n" name="tfManorGenerateGap" xy="7,630" size="146,29" group="n45_lnk9" fontSize="18" color="#333333" vAlign="middle" autoSize="none" text="领地生成间隔"/>
-    <component id="n31_ra2b" name="cbManorGap" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="218,622" size="172,40" group="n45_lnk9">
+    <text id="n23_pz1n" name="tfManorGenerateGap" xy="7,517" size="146,29" group="n45_lnk9" fontSize="18" color="#333333" vAlign="middle" autoSize="none" text="领地生成间隔"/>
+    <component id="n31_ra2b" name="cbManorGap" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="218,509" size="172,40" group="n45_lnk9">
       <ComboBox title="0(领地相接)" visibleItemCount="10">
         <item title="0(领地相接)" value="0"/>
         <item title="10(部分可见)" value="10"/>
         <item title="30(完全不可见)" value="30"/>
       </ComboBox>
     </component>
-    <group id="n45_lnk9" name="n45" xy="7,565" size="383,97" group="n38_ra2b" advanced="true">
+    <group id="n45_lnk9" name="n45" xy="7,452" size="383,97" group="n38_ra2b" advanced="true">
       <gearDisplay controller="ctrlIsManorCheckPoint" pages="0"/>
     </group>
-    <group id="n38_ra2b" name="grpSetting" xy="7,385" size="384,338" group="n48_oebl" advanced="true" collapsed="true">
+    <group id="n38_ra2b" name="grpSetting" xy="7,272" size="384,338" group="n48_oebl" advanced="true" collapsed="true">
       <relation target="n49_oebl" sidePair="top-bottom"/>
     </group>
-    <group id="n48_oebl" name="grpDetail" xy="7,247" size="384,476" advanced="true" collapsed="true">
+    <group id="n48_oebl" name="grpDetail" xy="7,199" size="384,411" advanced="true" collapsed="true">
       <gearXY controller="ctrlIsPublish" pages="1" values="7,247" default="7,199"/>
     </group>
+    <component id="n57_ur6k" name="btnEnterCase" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="158,833" size="100,38" visible="false">
+      <Button title="录制数据" titleFontSize="18" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
   </displayList>
 </component>
