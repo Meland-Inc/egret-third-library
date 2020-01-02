@@ -36,6 +36,11 @@
       <relation target="" sidePair="right-right"/>
       <Button title="模板创作" icon="ui://oyity675a1nd8"/>
     </component>
+    <component id="n29_kpw9" name="btnManorRestore" src="psruh" fileName="com/btnMainMenu.xml" xy="1552,13" group="n23_11584" visible="false">
+      <gearXY controller="ctrlUserStatus" pages="0,1,2" values="1552,13|1302,13|1427,13" default="1177,13"/>
+      <relation target="" sidePair="right-right"/>
+      <Button title="重置领地" icon="ui://oyity675kpw94dz"/>
+    </component>
     <group id="n23_11584" name="grpMenu" xy="1552,13" size="360,113" customData="top" advanced="true">
       <gearDisplay controller="ctrlViewMode" pages="0"/>
     </group>
@@ -84,7 +89,7 @@
     <group id="n25_sod9" name="grpChat" xy="0,920" size="440,160" advanced="true">
       <gearDisplay controller="ctrlViewMode" pages="0"/>
     </group>
-    <component id="n26_evs4" name="comBuildShortCut" src="qu7tt7j" fileName="ideCommon/com/ComBuildShortCutB.xml" pkg="ti9jag5t" xy="704,40" visible="false" touchable="false" customData="bottom" controller="ctrlState,11">
+    <component id="n26_evs4" name="comBuildShortCut" src="qu7tt7j" fileName="ideCommon/com/ComBuildShortCutB.xml" pkg="ti9jag5t" xy="531,40" locked="true" visible="false" touchable="false" customData="bottom" controller="ctrlState,11">
       <relation target="" sidePair="center-center"/>
     </component>
     <component id="n28_y6w6" name="comExperience" src="gen8d3" fileName="com/ComExperience.xml" xy="0,878"/>
