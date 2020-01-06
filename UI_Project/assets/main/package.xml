@@ -471,7 +471,7 @@
     <image id="gen8d0" name="img_sd_xsxq_5.png" path="/old/img/"/>
     <image id="gen8d1" name="img_sd_xsxq_4.png" path="/old/img/"/>
     <image id="gen8d2" name="学生详情.png" path="/old/img/"/>
-    <component id="gen8d3" name="ComExperience.xml" path="/old/win/"/>
+    <component id="gen8d3" name="ComExperience.xml" path="/com/"/>
     <component id="gen8d4" name="ComMainTemperature.xml" path="/old/win/"/>
     <component id="gen8d5" name="WinMainFriendInfo.xml" path="/old/win/"/>
     <component id="gen8d6" name="ComMainTaskTrace.xml" path="/old/win/" exported="true"/>
@@ -496,6 +496,10 @@
     <image id="qr0m4dt" name="icon_mainV_lt.png" path="/img/"/>
     <image id="qr0m4du" name="img_mianV_tx.png" path="/img/"/>
     <image id="qr0m4dv" name="icon_mainV_sx_1 2.png" path="/img/"/>
+    <image id="y6w64dw" name="icon_mianV_wifi.png" path="/img/"/>
+    <image id="y6w64dx" name="img_mianV_wifi.png" path="/img/" scale="9grid" scale9grid="23,6,46,12"/>
+    <image id="y6w64dy" name="icon_mianV_wifi_1.png" path="/img/"/>
+    <image id="kpw94dz" name="icon_mainV_c z.png" path="/img/"/>
   </resources>
   <publish name="main"/>
 </packageDescription>

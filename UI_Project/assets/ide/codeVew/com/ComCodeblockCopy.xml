@@ -18,5 +18,9 @@
       <gearDisplay controller="copyType" pages="1"/>
       <Button title="复制全部" titleColor="#ffffff" titleFontSize="18" icon="ui://te1gxawooiqdcyih1"/>
     </component>
+    <component id="n5_fgo2" name="btnCleanAll" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="47,86" size="126,35" customData="delete">
+      <gearDisplay controller="copyType" pages="1"/>
+      <Button title="删除全部" titleColor="#ffffff" titleFontSize="18" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
   </displayList>
 </component>
