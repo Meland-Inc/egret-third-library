@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="87,104">
+<component size="87,104" pivot="0.5,1" anchor="true">
   <controller name="ctrlState" pages="0,select,1,display" selected="0"/>
   <displayList>
-    <image id="n6_vkzd" name="imgArea" src="vkzdwcyik0" fileName="codeVew/img/img_build_ok_15.png" xy="-16,74"/>
+    <image id="n6_vkzd" name="imgArea" src="vkzdwcyik0" fileName="codeVew/img/img_build_ok_15.png" xy="-16,74">
+      <relation target="n2_cfaf" sidePair="center-center"/>
+    </image>
     <image id="n3_k3cq" name="n3" src="lctb6f" fileName="codeVew/oldImg/icon_code_tck_8.png" xy="0,0" size="87,31">
       <relation target="n2_cfaf" sidePair="width-width"/>
     </image>
@@ -16,7 +18,7 @@
       <relation target="n2_cfaf" sidePair="center-center"/>
       <Button icon="ui://ti9jag5tps3owcyijo"/>
     </component>
-    <text id="n2_cfaf" name="tfLocation" xy="0,0" size="85,28" fontSize="24" color="#ffffff" align="center" vAlign="middle" vars="true" text="（{x=0},{y=0}）"/>
+    <text id="n2_cfaf" name="tfLocation" xy="0,0" size="84,28" fontSize="24" color="#ffffff" align="center" vAlign="middle" vars="true" text="（{x=0},{y=0}）"/>
   </displayList>
   <relation target="n2_cfaf" sidePair="width-width"/>
 </component>
