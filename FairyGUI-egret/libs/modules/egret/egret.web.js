@@ -287,6 +287,11 @@ var egret;
                     audio.autoplay = !0;
                     audio.muted = true;
                 }
+                //edge and ie11
+                var ie = ua.indexOf("edge") >= 0 || ua.indexOf("trident") >= 0;
+                if (ie) {
+                    document.body.appendChild(audio);
+                }
                 audio.load();
                 this.originAudio = audio;
                 if (HtmlSound.clearAudios[this.url]) {
@@ -299,6 +304,9 @@ var egret;
                         audio.pause();
                         audio.muted = false;
                     }
+                    if (ie) {
+                        document.body.appendChild(audio);
+                    }
                     self.loaded = true;
                     self.dispatchEventWith(egret.Event.COMPLETE);
                 }
@@ -309,6 +317,9 @@ var egret;
                 function removeListeners() {
                     audio.removeEventListener("canplaythrough", onAudioLoaded);
                     audio.removeEventListener("error", onAudioError);
+                    if (ie) {
+                        document.body.removeChild(audio);
+                    }
                 }
             };
             /**
@@ -637,7 +648,7 @@ var egret;
                     WebAudioDecode.isDecoding = false;
                     WebAudioDecode.decodeAudios();
                 }, function () {
-                    alert("sound decode error: " + decodeInfo["url"] + "！\nsee http://edn.egret.com/cn/docs/page/156");
+                    egret.log('sound decode error');
                     if (decodeInfo["fail"]) {
                         decodeInfo["fail"]();
                     }
@@ -698,24 +709,25 @@ var egret;
                 var request = new XMLHttpRequest();
                 request.open("GET", url, true);
                 request.responseType = "arraybuffer";
-                request.onreadystatechange = function () {
-                    if (request.readyState == 4) {
-                        var ioError = (request.status >= 400 || request.status == 0);
-                        if (ioError) {
-                            self.dispatchEventWith(egret.IOErrorEvent.IO_ERROR);
-                        }
-                        else {
-                            WebAudioDecode.decodeArr.push({
-                                "buffer": request.response,
-                                "success": onAudioLoaded,
-                                "fail": onAudioError,
-                                "self": self,
-                                "url": self.url
-                            });
-                            WebAudioDecode.decodeAudios();
-                        }
+                request.addEventListener("load", function () {
+                    var ioError = (request.status >= 400);
+                    if (ioError) {
+                        self.dispatchEventWith(egret.IOErrorEvent.IO_ERROR);
                     }
-                };
+                    else {
+                        WebAudioDecode.decodeArr.push({
+                            "buffer": request.response,
+                            "success": onAudioLoaded,
+                            "fail": onAudioError,
+                            "self": self,
+                            "url": self.url
+                        });
+                        WebAudioDecode.decodeAudios();
+                    }
+                });
+                request.addEventListener("error", function () {
+                    self.dispatchEventWith(egret.IOErrorEvent.IO_ERROR);
+                });
                 request.send();
                 function onAudioLoaded() {
                     self.loaded = true;
@@ -1141,8 +1153,9 @@ var egret;
                 }
                 this.isPlayed = true;
                 var video = this.video;
-                if (startTime != undefined)
+                if (startTime != undefined) {
                     video.currentTime = +startTime || 0;
+                }
                 video.loop = !!loop;
                 if (egret.Capabilities.isMobile) {
                     video.style.zIndex = "-88888"; //移动端，就算设置成最小，只要全屏，都会在最上层，而且在自动退出去后，不担心挡住canvas
@@ -1293,6 +1306,7 @@ var egret;
                     return;
                 }
                 this.userPause = false;
+                this.video.pause();
                 egret.stopTick(this.markDirty, this);
             };
             Object.defineProperty(WebVideo.prototype, "volume", {
@@ -1390,7 +1404,7 @@ var egret;
                     if (egret.nativeRender) {
                         var texture = new egret.Texture();
                         texture._setBitmapData(_this.posterData);
-                        _this.$nativeDisplayObject.setBitmapData(texture);
+                        _this.$nativeDisplayObject.setTexture(texture);
                     }
                 }, this);
                 imageLoader.load(poster);
@@ -1469,6 +1483,13 @@ var egret;
              */
             WebVideo.prototype.$setHeight = function (value) {
                 this.heightSet = value;
+                if (this.paused) {
+                    var self_1 = this;
+                    this.$renderDirty = true;
+                    window.setTimeout(function () {
+                        self_1.$renderDirty = false;
+                    }, 200);
+                }
                 _super.prototype.$setHeight.call(this, value);
             };
             /**
@@ -1477,6 +1498,13 @@ var egret;
              */
             WebVideo.prototype.$setWidth = function (value) {
                 this.widthSet = value;
+                if (this.paused) {
+                    var self_2 = this;
+                    this.$renderDirty = true;
+                    window.setTimeout(function () {
+                        self_2.$renderDirty = false;
+                    }, 200);
+                }
                 _super.prototype.$setWidth.call(this, value);
             };
             Object.defineProperty(WebVideo.prototype, "paused", {
@@ -1551,6 +1579,10 @@ var egret;
              */
             function WebHttpRequest() {
                 var _this = _super.call(this) || this;
+                /**
+                 *
+                 */
+                _this.timeout = 0;
                 /**
                  * @private
                  */
@@ -1646,10 +1678,18 @@ var egret;
                     this._xhr.abort();
                     this._xhr = null;
                 }
-                this._xhr = this.getXHR(); //new XMLHttpRequest();
-                this._xhr.onreadystatechange = this.onReadyStateChange.bind(this);
-                this._xhr.onprogress = this.updateProgress.bind(this);
-                this._xhr.open(this._method, this._url, true);
+                var xhr = this.getXHR(); //new XMLHttpRequest();
+                if (window["XMLHttpRequest"]) {
+                    xhr.addEventListener("load", this.onload.bind(this));
+                    xhr.addEventListener("error", this.onerror.bind(this));
+                }
+                else {
+                    xhr.onreadystatechange = this.onReadyStateChange.bind(this);
+                }
+                xhr.onprogress = this.updateProgress.bind(this);
+                xhr.ontimeout = this.onTimeout.bind(this);
+                xhr.open(this._method, this._url, true);
+                this._xhr = xhr;
             };
             /**
              * @private
@@ -1668,6 +1708,7 @@ var egret;
                         this._xhr.setRequestHeader(key, this.headerObj[key]);
                     }
                 }
+                this._xhr.timeout = this.timeout;
                 this._xhr.send(data);
             };
             /**
@@ -1717,21 +1758,30 @@ var egret;
             /**
              * @private
              */
+            WebHttpRequest.prototype.onTimeout = function () {
+                if (true) {
+                    egret.$warn(1052, this._url);
+                }
+                this.dispatchEventWith(egret.IOErrorEvent.IO_ERROR);
+            };
+            /**
+             * @private
+             */
             WebHttpRequest.prototype.onReadyStateChange = function () {
                 var xhr = this._xhr;
                 if (xhr.readyState == 4) {
                     var ioError_1 = (xhr.status >= 400 || xhr.status == 0);
                     var url_1 = this._url;
-                    var self_1 = this;
+                    var self_3 = this;
                     window.setTimeout(function () {
                         if (ioError_1) {
-                            if (true && !self_1.hasEventListener(egret.IOErrorEvent.IO_ERROR)) {
+                            if (true && !self_3.hasEventListener(egret.IOErrorEvent.IO_ERROR)) {
                                 egret.$error(1011, url_1);
                             }
-                            self_1.dispatchEventWith(egret.IOErrorEvent.IO_ERROR);
+                            self_3.dispatchEventWith(egret.IOErrorEvent.IO_ERROR);
                         }
                         else {
-                            self_1.dispatchEventWith(egret.Event.COMPLETE);
+                            self_3.dispatchEventWith(egret.Event.COMPLETE);
                         }
                     }, 0);
                 }
@@ -1743,6 +1793,39 @@ var egret;
                 if (event.lengthComputable) {
                     egret.ProgressEvent.dispatchProgressEvent(this, egret.ProgressEvent.PROGRESS, event.loaded, event.total);
                 }
+            };
+            /**
+             * @private
+             */
+            WebHttpRequest.prototype.onload = function () {
+                var self = this;
+                var xhr = this._xhr;
+                var url = this._url;
+                var ioError = (xhr.status >= 400);
+                window.setTimeout(function () {
+                    if (ioError) {
+                        if (true && !self.hasEventListener(egret.IOErrorEvent.IO_ERROR)) {
+                            egret.$error(1011, url);
+                        }
+                        self.dispatchEventWith(egret.IOErrorEvent.IO_ERROR);
+                    }
+                    else {
+                        self.dispatchEventWith(egret.Event.COMPLETE);
+                    }
+                }, 0);
+            };
+            /**
+             * @private
+             */
+            WebHttpRequest.prototype.onerror = function () {
+                var url = this._url;
+                var self = this;
+                window.setTimeout(function () {
+                    if (true && !self.hasEventListener(egret.IOErrorEvent.IO_ERROR)) {
+                        egret.$error(1011, url);
+                    }
+                    self.dispatchEventWith(egret.IOErrorEvent.IO_ERROR);
+                }, 0);
             };
             return WebHttpRequest;
         }(egret.EventDispatcher));
@@ -2059,6 +2142,12 @@ var egret;
             HTML5StageText.prototype.$addToStage = function () {
                 this.htmlInput = egret.web.$getTextAdapter(this.$textfield);
             };
+            HTML5StageText.prototype.$getFocusIndex = function () {
+                return this.inputElement ? this.inputElement.selectionStart : 0;
+            };
+            HTML5StageText.prototype.$setSelectionRange = function (start, end) {
+                this.inputElement.setSelectionRange(start, end);
+            };
             /**
              * @private
              *
@@ -2104,6 +2193,7 @@ var egret;
             HTML5StageText.prototype.$show = function () {
                 if (!this.htmlInput.isCurrentStageText(this)) {
                     this.inputElement = this.htmlInput.getInputElement(this);
+                    this.inputElement.autocomplete = 'off';
                     if (!this.$textfield.multiline) {
                         this.inputElement.type = this.$textfield.inputType;
                     }
@@ -2255,6 +2345,63 @@ var egret;
                     this.executeShow();
                     this.dispatchEvent(new egret.Event("focus"));
                 }
+                else if (this.$textfield.isIDEMode) {
+                    this.dispatchEvent(new egret.Event("focus"));
+                }
+            };
+            /**
+             * @private
+             *
+             */
+            HTML5StageText.prototype._onClickInput = function () {
+                var self = this;
+                window.setTimeout(function () {
+                    if (self.inputElement) {
+                        var e = new egret.Event("updatefocus");
+                        e.data = [self.inputElement.selectionStart, self.inputElement.selectionEnd];
+                        self.dispatchEvent(e);
+                    }
+                }, 0);
+            };
+            /**
+             * @private
+             *
+             */
+            HTML5StageText.prototype._onMouseMove = function () {
+                var self = this;
+                window.setTimeout(function () {
+                    if (self.inputElement && self.inputElement.selectionStart != self.inputElement.selectionEnd) {
+                        var e = new egret.Event("updatefocus");
+                        e.data = [self.inputElement.selectionStart, self.inputElement.selectionEnd];
+                        self.dispatchEvent(e);
+                    }
+                }, 0);
+            };
+            /**
+             * @private
+             *
+             */
+            HTML5StageText.prototype._onDragEnd = function () {
+                var self = this;
+                window.setTimeout(function () {
+                    if (self.inputElement) {
+                        self.textValue = self.inputElement.value;
+                        var e = new egret.Event("updatefocus");
+                        e.data = [self.inputElement.selectionStart, self.inputElement.selectionEnd];
+                        self.dispatchEvent(e);
+                        egret.Event.dispatchEvent(self, "updateText", false);
+                    }
+                }, 0);
+            };
+            HTML5StageText.prototype._onKeyPress = function () {
+                var self = this;
+                window.setTimeout(function () {
+                    if (self.inputElement) {
+                        var e = new egret.Event("updatefocus");
+                        e.data = [self.inputElement.selectionStart, self.inputElement.selectionEnd];
+                        self.dispatchEvent(e);
+                    }
+                }, 0);
             };
             /**
              * @private
@@ -2486,6 +2633,36 @@ var egret;
                         self._stageText._onInput();
                     }
                 };
+                inputElement.onclick = function () {
+                    if (self._stageText) {
+                        self._stageText._onClickInput();
+                    }
+                };
+                inputElement.onmousemove = function () {
+                    if (self._stageText) {
+                        self._stageText._onMouseMove();
+                    }
+                };
+                inputElement.ondragend = function () {
+                    if (self._stageText) {
+                        self._stageText._onDragEnd();
+                    }
+                };
+                inputElement.onkeypress = function () {
+                    if (self._stageText) {
+                        self._stageText._onKeyPress();
+                    }
+                };
+                inputElement.onkeydown = function () {
+                    if (self._stageText.$textfield.isIDETip) {
+                        if ([13, 38, 40].indexOf(event.which) >= 0) {
+                            event.returnValue = false;
+                        }
+                    }
+                    if (self._stageText) {
+                        self._stageText._onKeyPress();
+                    }
+                };
             };
             /**
              * @private
@@ -2495,9 +2672,11 @@ var egret;
                 var self = this;
                 var inputElement = self._inputElement;
                 //隐藏输入框
-                egret.$callAsync(function () {
-                    inputElement.style.opacity = 1;
-                }, self);
+                if (!this._stageText.$textfield.isIDEMode) {
+                    egret.$callAsync(function () {
+                        inputElement.style.opacity = 1;
+                    }, self);
+                }
             };
             /**
              * @private
@@ -2907,14 +3086,18 @@ var egret;
                  */
                 _this.onTouchBegin = function (event) {
                     var location = _this.getLocation(event);
-                    _this.touch.onTouchBegin(location.x, location.y, event.identifier);
+                    _this.touch.onTouchBegin(location.x, location.y, event.identifier, event.button);
+                    _this._curButton = event.button;
                 };
                 _this.onMouseMove = function (event) {
                     if (event.buttons == 0) {
                         _this.onTouchEnd(event);
                     }
                     else {
-                        _this.onTouchMove(event);
+                        if (!_this.dealMouseMoveEvent) {
+                            _this.dealMouseMoveEvent = true;
+                            _this.onTouchMove(event);
+                        }
                     }
                 };
                 /**
@@ -2922,14 +3105,17 @@ var egret;
                  */
                 _this.onTouchMove = function (event) {
                     var location = _this.getLocation(event);
-                    _this.touch.onTouchMove(location.x, location.y, event.identifier);
+                    _this.touch.onTouchMove(location.x, location.y, event.identifier, _this._curButton);
                 };
                 /**
                  * @private
                  */
                 _this.onTouchEnd = function (event) {
                     var location = _this.getLocation(event);
-                    _this.touch.onTouchEnd(location.x, location.y, event.identifier);
+                    _this.touch.onTouchEnd(location.x, location.y, event.identifier, event.button);
+                    if (_this._curButton) {
+                        _this._curButton = undefined;
+                    }
                 };
                 /**
                  * @private
@@ -2977,6 +3163,7 @@ var egret;
                     }
                     this.addTouchListener();
                 }
+                egret.ticker.$startTick(this.$update, this);
             };
             /**
              * @private
@@ -3030,6 +3217,11 @@ var egret;
                 if (event["isScroll"] != true && !this.canvas['userTyping']) {
                     event.preventDefault();
                 }
+            };
+            //每次帧循环 会支持降帧 在enterFrame之前
+            WebTouchHandler.prototype.$update = function (timeStamp) {
+                this.dealMouseMoveEvent = false;
+                return false;
             };
             /**
              * @private
@@ -3485,15 +3677,20 @@ var egret;
             else {
                 web.Html5Capatibility._audioType = options.audioType;
                 web.Html5Capatibility.$init();
+                var renderMode = options.renderMode;
                 // WebGL上下文参数自定义
-                if (options.renderMode == "webgl") {
+                if (renderMode == "webgl") {
                     // WebGL抗锯齿默认关闭，提升PC及某些平台性能
                     var antialias = options.antialias;
                     web.WebGLRenderContext.antialias = !!antialias;
                     // WebGLRenderContext.antialias = (typeof antialias == undefined) ? true : antialias;
                 }
                 egret.sys.CanvasRenderBuffer = web.CanvasRenderBuffer;
-                setRenderMode(options.renderMode);
+                if (ua.indexOf("egretnative") >= 0 && renderMode != "webgl") {
+                    egret.$warn(1051);
+                    renderMode = "webgl";
+                }
+                setRenderMode(renderMode);
                 var canvasScaleFactor = void 0;
                 if (options.canvasScaleFactor) {
                     canvasScaleFactor = options.canvasScaleFactor;
@@ -3574,8 +3771,8 @@ var egret;
             }
             requestAnimationFrame(onTick);
             function onTick() {
-                ticker.update();
                 requestAnimationFrame(onTick);
+                ticker.update();
             }
         }
         //覆盖原生的isNaN()方法实现，在不同浏览器上有2~10倍性能提升。
@@ -3783,6 +3980,7 @@ var egret;
                     all.style.left = this.panelX + 'px';
                     all.style.top = this.panelY + 'px';
                     all.style.pointerEvents = 'none';
+                    all.id = 'egret-fps-panel';
                     document.body.appendChild(all);
                     var container = document.createElement('div');
                     container.style.color = this.fontColor;
@@ -5442,34 +5640,47 @@ var egret;
     (function (web) {
         /**
          * @private
-         * WebGLRenderTarget类
-         * 一个WebGL渲染目标，拥有一个frame buffer和texture
+         * WebGLRenderTarget
+         * A WebGL render target with a frame buffer and texture
          */
         var WebGLRenderTarget = (function (_super) {
             __extends(WebGLRenderTarget, _super);
             function WebGLRenderTarget(gl, width, height) {
                 var _this = _super.call(this) || this;
-                // 清除色
                 _this.clearColor = [0, 0, 0, 0];
-                // 是否启用frame buffer, 默认为true
+                /**
+                 * If frame buffer is enabled, the default is true
+                 */
                 _this.useFrameBuffer = true;
                 _this.gl = gl;
-                // 如果尺寸为 0 chrome会报警
-                _this.width = width || 1;
-                _this.height = height || 1;
+                _this._resize(width, height);
                 return _this;
             }
-            /**
-             * 重置render target的尺寸
-             */
-            WebGLRenderTarget.prototype.resize = function (width, height) {
-                var gl = this.gl;
+            WebGLRenderTarget.prototype._resize = function (width, height) {
+                // Chrome alerts if the size is 0
+                width = width || 1;
+                height = height || 1;
+                if (width < 1) {
+                    if (true) {
+                        egret.warn('WebGLRenderTarget _resize width = ' + width);
+                    }
+                    width = 1;
+                }
+                if (height < 1) {
+                    if (true) {
+                        egret.warn('WebGLRenderTarget _resize height = ' + height);
+                    }
+                    height = 1;
+                }
                 this.width = width;
                 this.height = height;
+            };
+            WebGLRenderTarget.prototype.resize = function (width, height) {
+                this._resize(width, height);
+                var gl = this.gl;
                 if (this.frameBuffer) {
-                    // 设置texture尺寸
                     gl.bindTexture(gl.TEXTURE_2D, this.texture);
-                    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, width, height, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
+                    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, this.width, this.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
                     // gl.bindTexture(gl.TEXTURE_2D, null);
                 }
                 if (this.stencilBuffer) {
@@ -5477,16 +5688,10 @@ var egret;
                     this.stencilBuffer = null;
                 }
             };
-            /**
-             * 激活此render target
-             */
             WebGLRenderTarget.prototype.activate = function () {
                 var gl = this.gl;
                 gl.bindFramebuffer(gl.FRAMEBUFFER, this.getFrameBuffer());
             };
-            /**
-             * 获取frame buffer
-             */
             WebGLRenderTarget.prototype.getFrameBuffer = function () {
                 if (!this.useFrameBuffer) {
                     return null;
@@ -5496,19 +5701,12 @@ var egret;
             WebGLRenderTarget.prototype.initFrameBuffer = function () {
                 if (!this.frameBuffer) {
                     var gl = this.gl;
-                    // 创建材质
                     this.texture = this.createTexture();
-                    // 创建frame buffer
                     this.frameBuffer = gl.createFramebuffer();
                     gl.bindFramebuffer(gl.FRAMEBUFFER, this.frameBuffer);
-                    // 绑定材质
                     gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, this.texture, 0);
                 }
             };
-            /**
-             * 创建材质
-             * TODO 创建材质的方法可以合并
-             */
             WebGLRenderTarget.prototype.createTexture = function () {
                 var gl = this.gl;
                 var texture = gl.createTexture();
@@ -5521,9 +5719,6 @@ var egret;
                 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
                 return texture;
             };
-            /**
-             * 清除render target颜色缓存
-             */
             WebGLRenderTarget.prototype.clear = function (bind) {
                 var gl = this.gl;
                 if (bind) {
@@ -5538,14 +5733,12 @@ var egret;
                     return;
                 }
                 var gl = this.gl;
-                // 设置render buffer的尺寸
-                gl.bindFramebuffer(gl.FRAMEBUFFER, this.frameBuffer); // 是否需要强制绑定？
-                // 绑定stencil buffer
+                gl.bindFramebuffer(gl.FRAMEBUFFER, this.frameBuffer);
                 this.stencilBuffer = gl.createRenderbuffer();
                 gl.bindRenderbuffer(gl.RENDERBUFFER, this.stencilBuffer);
                 gl.renderbufferStorage(gl.RENDERBUFFER, gl.DEPTH_STENCIL, this.width, this.height);
                 gl.framebufferRenderbuffer(gl.FRAMEBUFFER, gl.DEPTH_STENCIL_ATTACHMENT, gl.RENDERBUFFER, this.stencilBuffer);
-                // 此处不解绑是否会造成bug？
+                // Is unbundling a bug here?
                 // gl.bindFramebuffer(gl.FRAMEBUFFER, null);
             };
             WebGLRenderTarget.prototype.dispose = function () {
@@ -8286,12 +8479,12 @@ var egret;
         var EgretShaderLib = (function () {
             function EgretShaderLib() {
             }
-            EgretShaderLib.blur_frag = "precision mediump float;\nuniform vec2 blur;\nuniform sampler2D uSampler;\nvarying vec2 vTextureCoord;\nuniform vec2 uTextureSize;\nvoid main()\n{\n    const int sampleRadius = 5;\n    const int samples = sampleRadius * 2 + 1;\n    vec2 blurUv = blur / uTextureSize;\n    vec4 color = vec4(0, 0, 0, 0);\n    vec2 uv = vec2(0.0, 0.0);\n    blurUv /= float(sampleRadius);\n    for (int i = -sampleRadius; i <= sampleRadius; i++) {\n        uv.x = vTextureCoord.x + float(i) * blurUv.x;\n        uv.y = vTextureCoord.y + float(i) * blurUv.y;\n        color += texture2D(uSampler, uv);\n    }\n    color /= float(samples);\n    gl_FragColor = color;\n}";
-            EgretShaderLib.colorTransform_frag = "precision mediump float;\nvarying vec2 vTextureCoord;\nvarying vec4 vColor;\nuniform mat4 matrix;\nuniform vec4 colorAdd;\nuniform sampler2D uSampler;\nvoid main(void) {\n    vec4 texColor = texture2D(uSampler, vTextureCoord);\n    if(texColor.a > 0.) {\n        texColor = vec4(texColor.rgb / texColor.a, texColor.a);\n    }\n    vec4 locColor = clamp(texColor * matrix + colorAdd, 0., 1.);\n    gl_FragColor = vColor * vec4(locColor.rgb * locColor.a, locColor.a);\n}";
-            EgretShaderLib.default_vert = "attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\nattribute vec2 aColor;\nuniform vec2 projectionVector;\nvarying vec2 vTextureCoord;\nvarying vec4 vColor;\nconst vec2 center = vec2(-1.0, 1.0);\nvoid main(void) {\n   gl_Position = vec4( (aVertexPosition / projectionVector) + center , 0.0, 1.0);\n   vTextureCoord = aTextureCoord;\n   vColor = vec4(aColor.x, aColor.x, aColor.x, aColor.x);\n}";
-            EgretShaderLib.glow_frag = "precision highp float;\nvarying vec2 vTextureCoord;\nuniform sampler2D uSampler;\nuniform float dist;\nuniform float angle;\nuniform vec4 color;\nuniform float alpha;\nuniform float blurX;\nuniform float blurY;\nuniform float strength;\nuniform float inner;\nuniform float knockout;\nuniform float hideObject;\nuniform vec2 uTextureSize;\nfloat random(vec2 scale)\n{\n    return fract(sin(dot(gl_FragCoord.xy, scale)) * 43758.5453);\n}\nvoid main(void) {\n    vec2 px = vec2(1.0 / uTextureSize.x, 1.0 / uTextureSize.y);\n    const float linearSamplingTimes = 7.0;\n    const float circleSamplingTimes = 12.0;\n    vec4 ownColor = texture2D(uSampler, vTextureCoord);\n    vec4 curColor;\n    float totalAlpha = 0.0;\n    float maxTotalAlpha = 0.0;\n    float curDistanceX = 0.0;\n    float curDistanceY = 0.0;\n    float offsetX = dist * cos(angle) * px.x;\n    float offsetY = dist * sin(angle) * px.y;\n    const float PI = 3.14159265358979323846264;\n    float cosAngle;\n    float sinAngle;\n    float offset = PI * 2.0 / circleSamplingTimes * random(vec2(12.9898, 78.233));\n    float stepX = blurX * px.x / linearSamplingTimes;\n    float stepY = blurY * px.y / linearSamplingTimes;\n    for (float a = 0.0; a <= PI * 2.0; a += PI * 2.0 / circleSamplingTimes) {\n        cosAngle = cos(a + offset);\n        sinAngle = sin(a + offset);\n        for (float i = 1.0; i <= linearSamplingTimes; i++) {\n            curDistanceX = i * stepX * cosAngle;\n            curDistanceY = i * stepY * sinAngle;\n            \n            curColor = texture2D(uSampler, vec2(vTextureCoord.x + curDistanceX - offsetX, vTextureCoord.y + curDistanceY + offsetY));\n            totalAlpha += (linearSamplingTimes - i) * curColor.a;\n            maxTotalAlpha += (linearSamplingTimes - i);\n        }\n    }\n    ownColor.a = max(ownColor.a, 0.0001);\n    ownColor.rgb = ownColor.rgb / ownColor.a;\n    float outerGlowAlpha = (totalAlpha / maxTotalAlpha) * strength * alpha * (1. - inner) * max(min(hideObject, knockout), 1. - ownColor.a);\n    float innerGlowAlpha = ((maxTotalAlpha - totalAlpha) / maxTotalAlpha) * strength * alpha * inner * ownColor.a;\n    ownColor.a = max(ownColor.a * knockout * (1. - hideObject), 0.0001);\n    vec3 mix1 = mix(ownColor.rgb, color.rgb, innerGlowAlpha / (innerGlowAlpha + ownColor.a));\n    vec3 mix2 = mix(mix1, color.rgb, outerGlowAlpha / (innerGlowAlpha + ownColor.a + outerGlowAlpha));\n    float resultAlpha = min(ownColor.a + outerGlowAlpha + innerGlowAlpha, 1.);\n    gl_FragColor = vec4(mix2 * resultAlpha, resultAlpha);\n}";
-            EgretShaderLib.primitive_frag = "precision lowp float;\nvarying vec2 vTextureCoord;\nvarying vec4 vColor;\nvoid main(void) {\n    gl_FragColor = vColor;\n}";
-            EgretShaderLib.texture_frag = "precision lowp float;\nvarying vec2 vTextureCoord;\nvarying vec4 vColor;\nuniform sampler2D uSampler;\nvoid main(void) {\n    gl_FragColor = texture2D(uSampler, vTextureCoord) * vColor;\n}";
+            EgretShaderLib.blur_frag = "precision mediump float;\r\nuniform vec2 blur;\r\nuniform sampler2D uSampler;\r\nvarying vec2 vTextureCoord;\r\nuniform vec2 uTextureSize;\r\nvoid main()\r\n{\r\n    const int sampleRadius = 5;\r\n    const int samples = sampleRadius * 2 + 1;\r\n    vec2 blurUv = blur / uTextureSize;\r\n    vec4 color = vec4(0, 0, 0, 0);\r\n    vec2 uv = vec2(0.0, 0.0);\r\n    blurUv /= float(sampleRadius);\r\n\r\n    for (int i = -sampleRadius; i <= sampleRadius; i++) {\r\n        uv.x = vTextureCoord.x + float(i) * blurUv.x;\r\n        uv.y = vTextureCoord.y + float(i) * blurUv.y;\r\n        color += texture2D(uSampler, uv);\r\n    }\r\n\r\n    color /= float(samples);\r\n    gl_FragColor = color;\r\n}";
+            EgretShaderLib.colorTransform_frag = "precision mediump float;\r\nvarying vec2 vTextureCoord;\r\nvarying vec4 vColor;\r\nuniform mat4 matrix;\r\nuniform vec4 colorAdd;\r\nuniform sampler2D uSampler;\r\n\r\nvoid main(void) {\r\n    vec4 texColor = texture2D(uSampler, vTextureCoord);\r\n    if(texColor.a > 0.) {\r\n        // 抵消预乘的alpha通道\r\n        texColor = vec4(texColor.rgb / texColor.a, texColor.a);\r\n    }\r\n    vec4 locColor = clamp(texColor * matrix + colorAdd, 0., 1.);\r\n    gl_FragColor = vColor * vec4(locColor.rgb * locColor.a, locColor.a);\r\n}";
+            EgretShaderLib.default_vert = "attribute vec2 aVertexPosition;\r\nattribute vec2 aTextureCoord;\r\nattribute vec2 aColor;\r\n\r\nuniform vec2 projectionVector;\r\n// uniform vec2 offsetVector;\r\n\r\nvarying vec2 vTextureCoord;\r\nvarying vec4 vColor;\r\n\r\nconst vec2 center = vec2(-1.0, 1.0);\r\n\r\nvoid main(void) {\r\n   gl_Position = vec4( (aVertexPosition / projectionVector) + center , 0.0, 1.0);\r\n   vTextureCoord = aTextureCoord;\r\n   vColor = vec4(aColor.x, aColor.x, aColor.x, aColor.x);\r\n}";
+            EgretShaderLib.glow_frag = "precision highp float;\r\nvarying vec2 vTextureCoord;\r\n\r\nuniform sampler2D uSampler;\r\n\r\nuniform float dist;\r\nuniform float angle;\r\nuniform vec4 color;\r\nuniform float alpha;\r\nuniform float blurX;\r\nuniform float blurY;\r\n// uniform vec4 quality;\r\nuniform float strength;\r\nuniform float inner;\r\nuniform float knockout;\r\nuniform float hideObject;\r\n\r\nuniform vec2 uTextureSize;\r\n\r\nfloat random(vec2 scale)\r\n{\r\n    return fract(sin(dot(gl_FragCoord.xy, scale)) * 43758.5453);\r\n}\r\n\r\nvoid main(void) {\r\n    vec2 px = vec2(1.0 / uTextureSize.x, 1.0 / uTextureSize.y);\r\n    // TODO 自动调节采样次数？\r\n    const float linearSamplingTimes = 7.0;\r\n    const float circleSamplingTimes = 12.0;\r\n    vec4 ownColor = texture2D(uSampler, vTextureCoord);\r\n    vec4 curColor;\r\n    float totalAlpha = 0.0;\r\n    float maxTotalAlpha = 0.0;\r\n    float curDistanceX = 0.0;\r\n    float curDistanceY = 0.0;\r\n    float offsetX = dist * cos(angle) * px.x;\r\n    float offsetY = dist * sin(angle) * px.y;\r\n\r\n    const float PI = 3.14159265358979323846264;\r\n    float cosAngle;\r\n    float sinAngle;\r\n    float offset = PI * 2.0 / circleSamplingTimes * random(vec2(12.9898, 78.233));\r\n    float stepX = blurX * px.x / linearSamplingTimes;\r\n    float stepY = blurY * px.y / linearSamplingTimes;\r\n    for (float a = 0.0; a <= PI * 2.0; a += PI * 2.0 / circleSamplingTimes) {\r\n        cosAngle = cos(a + offset);\r\n        sinAngle = sin(a + offset);\r\n        for (float i = 1.0; i <= linearSamplingTimes; i++) {\r\n            curDistanceX = i * stepX * cosAngle;\r\n            curDistanceY = i * stepY * sinAngle;\r\n            if (vTextureCoord.x + curDistanceX - offsetX >= 0.0 && vTextureCoord.y + curDistanceY + offsetY <= 1.0){\r\n                curColor = texture2D(uSampler, vec2(vTextureCoord.x + curDistanceX - offsetX, vTextureCoord.y + curDistanceY + offsetY));\r\n                totalAlpha += (linearSamplingTimes - i) * curColor.a;\r\n            }\r\n            maxTotalAlpha += (linearSamplingTimes - i);\r\n        }\r\n    }\r\n\r\n    ownColor.a = max(ownColor.a, 0.0001);\r\n    ownColor.rgb = ownColor.rgb / ownColor.a;\r\n\r\n    float outerGlowAlpha = (totalAlpha / maxTotalAlpha) * strength * alpha * (1. - inner) * max(min(hideObject, knockout), 1. - ownColor.a);\r\n    float innerGlowAlpha = ((maxTotalAlpha - totalAlpha) / maxTotalAlpha) * strength * alpha * inner * ownColor.a;\r\n\r\n    ownColor.a = max(ownColor.a * knockout * (1. - hideObject), 0.0001);\r\n    vec3 mix1 = mix(ownColor.rgb, color.rgb, innerGlowAlpha / (innerGlowAlpha + ownColor.a));\r\n    vec3 mix2 = mix(mix1, color.rgb, outerGlowAlpha / (innerGlowAlpha + ownColor.a + outerGlowAlpha));\r\n    float resultAlpha = min(ownColor.a + outerGlowAlpha + innerGlowAlpha, 1.);\r\n    gl_FragColor = vec4(mix2 * resultAlpha, resultAlpha);\r\n}";
+            EgretShaderLib.primitive_frag = "precision lowp float;\r\nvarying vec2 vTextureCoord;\r\nvarying vec4 vColor;\r\n\r\nvoid main(void) {\r\n    gl_FragColor = vColor;\r\n}";
+            EgretShaderLib.texture_frag = "precision lowp float;\r\nvarying vec2 vTextureCoord;\r\nvarying vec4 vColor;\r\nuniform sampler2D uSampler;\r\n\r\nvoid main(void) {\r\n    gl_FragColor = texture2D(uSampler, vTextureCoord) * vColor;\r\n}";
             return EgretShaderLib;
         }());
         web.EgretShaderLib = EgretShaderLib;
