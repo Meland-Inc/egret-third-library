@@ -6,6 +6,9 @@ module fairygui {
         public stageX: number;
         public stageY: number;
 
+
+        /** 点击事件鼠标左中右键 */
+        public button: number;
         public static CLICK: string = "___itemClick";
 
         public constructor(type: string, itemObject: GObject = null,

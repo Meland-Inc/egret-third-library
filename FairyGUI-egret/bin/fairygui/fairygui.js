@@ -9751,6 +9751,7 @@ var fairygui;
             if (this._scrollPane && this.scrollItemToViewOnClick)
                 this._scrollPane.scrollToView(item, true);
             var ie = new fairygui.ItemEvent(fairygui.ItemEvent.CLICK, item);
+            ie.button = evt.button;
             ie.stageX = evt.stageX;
             ie.stageY = evt.stageY;
             this.dispatchEvent(ie);

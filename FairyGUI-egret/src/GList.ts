@@ -641,6 +641,7 @@ module fairygui {
                 this._scrollPane.scrollToView(item, true);
 
             var ie: ItemEvent = new ItemEvent(ItemEvent.CLICK, item);
+            ie.button = evt.button;
             ie.stageX = evt.stageX;
             ie.stageY = evt.stageY;
             this.dispatchEvent(ie);

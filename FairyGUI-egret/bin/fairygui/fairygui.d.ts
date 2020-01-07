@@ -664,6 +664,8 @@ declare module fairygui {
         itemObject: GObject;
         stageX: number;
         stageY: number;
+        /** 点击事件鼠标左中右键 */
+        button: number;
         static CLICK: string;
         constructor(type: string, itemObject?: GObject, stageX?: number, stageY?: number);
     }
