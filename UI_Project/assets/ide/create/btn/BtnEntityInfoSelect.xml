@@ -23,10 +23,10 @@
     <image id="n18_so8v" name="n18" src="80ab9e" fileName="ideCommon/img/img_ide_wpk_3.png" xy="32,5" size="48,48">
       <gearDisplay controller="button" pages="1"/>
     </image>
-    <text id="n6_mte0" name="title" xy="90,22" size="100,19" fontSize="18" color="#333333" vAlign="middle" autoSize="none" autoClearText="true" text="金制工作台">
+    <text id="n6_mte0" name="title" xy="90,19" size="100,22" fontSize="18" color="#333333" vAlign="middle" autoClearText="true" text="金制工作台">
       <gearDisplay controller="ctrlData" pages="1,4,2,3,5"/>
-      <gearXY controller="ctrlData" pages="4" values="139,22" default="90,22"/>
-      <gearSize controller="ctrlData" default="100,19,1,1"/>
+      <gearXY controller="ctrlData" pages="1,4,2,3,5" values="90,19|139,19|90,19|90,19|90,19" default="90,22"/>
+      <gearSize controller="ctrlData" pages="1" values="98,22,1,1" default="100,19,1,1"/>
     </text>
     <image id="n7_shu1" name="n7" src="xba67f" fileName="ideCommon/img/icon_ide_cm_4.png" xy="12,28">
       <gearDisplay controller="ctrlData" pages="3"/>
@@ -34,7 +34,7 @@
     <image id="n8_shu1" name="n8" src="xba67g" fileName="ideCommon/img/icon_ide_cm_4_1.png" xy="14,23">
       <gearDisplay controller="ctrlData" pages="2"/>
     </image>
-    <text id="n9_shu1" name="tfNum" xy="245,20" size="60,22" fontSize="18" color="#333333" align="right" vAlign="middle" autoSize="none" text="1209&#xA;">
+    <text id="n9_shu1" name="tfNum" xy="245,19" size="60,22" fontSize="18" color="#333333" align="right" vAlign="middle" autoSize="none" text="1209&#xA;">
       <gearDisplay controller="ctrlData" pages="2,3"/>
     </text>
     <image id="n11_10awa" name="n11" src="cw9mcyifr" fileName="old/imgB/img_cm_ys_1_1.png" pkg="te1gxawo" xy="4,4">
