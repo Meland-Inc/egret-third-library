@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" designImage="ui://thvmj7vouxad4cyijb">
+  <displayList>
+    <image id="n0_uxad" name="n0" src="j595cyiic" fileName="img/img_cm_tkc_1.png" pkg="te1gxawo" xy="722,201" size="454,480" group="n14_qzjn"/>
+    <component id="n1_uxad" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1119,207" size="48,48" group="n14_qzjn">
+      <Button icon="ui://te1gxawooiqdcyih2"/>
+    </component>
+    <text id="n2_uxad" name="n2" xy="739,216" size="101,28" group="n14_qzjn" fontSize="24" color="#333333" text="新建组件"/>
+    <text id="n3_uxad" name="n3" xy="741,286" size="45,24" group="n14_qzjn" fontSize="20" color="#333333" text="名字"/>
+    <text id="n4_uxad" name="n4" xy="741,346" size="45,24" group="n14_qzjn" fontSize="20" color="#333333" text="描述"/>
+    <component id="n8_uxad" name="tfName" src="uxadcyijm" fileName="com/ComLeftInput.xml" pkg="te1gxawo" xy="803,278" size="352,40" group="n14_qzjn">
+      <Label prompt="[color=#333333]请输入名字[/color]"/>
+    </component>
+    <component id="n9_uxad" name="tfDesc" src="uxadcyijm" fileName="com/ComLeftInput.xml" pkg="te1gxawo" xy="803,338" size="352,120" group="n14_qzjn">
+      <Label title="&#xD;" prompt="[color=#333333]请输入一段描述[/color]"/>
+    </component>
+    <component id="n10_uxad" name="btnCreate" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="742,478" size="414,40" group="n14_qzjn">
+      <Button title="新建组件" titleColor="#333333" icon="ui://te1gxawoeggjcyihr"/>
+    </component>
+    <component id="n11_uxad" name="cbSave" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="743,527" size="414,40" group="n14_qzjn">
+      <ComboBox title="保存为现有组件" visibleItemCount="3" autoClearItems="true">
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+      </ComboBox>
+    </component>
+    <component id="n12_uxad" name="btnCancel" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="782,610" size="140,44" group="n14_qzjn">
+      <Button title="取消" icon="ui://te1gxawoeggjcyihf"/>
+    </component>
+    <component id="n13_uxad" name="btnSave" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="975,610" size="140,44" group="n14_qzjn">
+      <Button title="保存" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <group id="n14_qzjn" name="root" xy="722,201" size="454,480" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

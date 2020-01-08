@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" designImage="ui://thvmj7vouxad4cyijd">
+  <controller name="state" pages="0,none,1,info" selected="1"/>
+  <controller name="ctrlListType" pages="0,hot,1,new" selected="0"/>
+  <displayList>
+    <image id="n27_qzjn" name="n27" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="348,184" size="1290,700"/>
+    <image id="n0_qzjn" name="n0" src="oiqdcyih6" fileName="img/img_cm_3.png" pkg="te1gxawo" xy="348,184" size="1290,59"/>
+    <component id="n1_qzjn" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1578,193" size="48,48">
+      <Button icon="ui://0axy98cg8qqi3l"/>
+    </component>
+    <image id="n7_qzjn" name="imgTitleBg" src="oiqdcyih5" fileName="img/img_cm_2.png" pkg="te1gxawo" xy="317,184"/>
+    <text id="n8_qzjn" name="title" xy="368,199" size="106,28" fontSize="24" color="#333333" vAlign="middle" autoSize="none" text="组件中心"/>
+    <image id="n2_qzjn" name="imgSearchInputBg" src="oiqdcyigx" fileName="img/img_cm_ssk.png" pkg="te1gxawo" xy="1311,196" size="248,38" group="n6_qzjn"/>
+    <text id="n3_qzjn" name="inpSearch" xy="1375,203" size="180,26" group="n6_qzjn" input="true" prompt="[color=#999999]请输入搜索内容[/color]" fontSize="20" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text=""/>
+    <image id="n4_qzjn" name="n4" src="rujpcyijl" fileName="img/icon_cm_ss.png" pkg="te1gxawo" xy="1342,200" size="32,32" group="n6_qzjn"/>
+    <group id="n6_qzjn" name="grpSearch" xy="1311,196" size="248,38"/>
+    <image id="n16_qzjn" name="n16" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="378,263" size="930,580"/>
+    <component id="n12_qzjn" name="btnNew" src="qzjnwcyikv" fileName="create/btn/BtnEntityTemplate.xml" xy="618,193">
+      <Button title="最新" controller="ctrlListType" page="1"/>
+    </component>
+    <component id="n13_qzjn" name="btnHot" src="qzjnwcyikv" fileName="create/btn/BtnEntityTemplate.xml" xy="751,193">
+      <Button title="最热" controller="ctrlListType" page="0"/>
+    </component>
+    <list id="n14_qzjn" name="lstTemplate" xy="398,276" size="900,549" layout="flow_hz" overflow="scroll" scrollBarFlags="4" scrollBar="visible" margin="7,0,0,0" scrollBarRes="ui://ti9jag5tso8vt7r," ptrRes="ui://0axy98cgp5r74d,ui://0axy98cgp5r74d" lineGap="10" colGap="10" defaultItem="ui://ti9jag5tqzjnwcyikw" autoClearItems="true">
+      <relation target="" sidePair="height-height"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n17_qzjn" name="n17" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="1328,263" size="280,580"/>
+    <image id="n28_qzjn" name="n28" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="1340,389" size="258,365" group="n30_qzjn"/>
+    <image id="n18_qzjn" name="n18" src="oiqdcyigz" fileName="img/img_cm_wpx_1.png" pkg="te1gxawo" xy="1337,273" group="n30_qzjn"/>
+    <loader id="n19_qzjn" name="ladTemplate" xy="1347,283" size="80,80" group="n30_qzjn"/>
+    <text id="n20_qzjn" name="tfTemplateName" xy="1446,274" size="117,20" group="n30_qzjn" fontSize="16" color="#333333" autoClearText="true" text="胡萝卜胡萝卜哦"/>
+    <text id="n21_qzjn" name="tfTemplateOwner" xy="1469,308" size="106,18" group="n30_qzjn" fontSize="14" color="#333333" autoClearText="true" text="千与千寻七个字"/>
+    <image id="n22_qzjn" name="n22" src="c1h7cyii2" fileName="img/icon_cm_avatar.png" pkg="te1gxawo" xy="1444,306" group="n30_qzjn"/>
+    <image id="n23_qzjn" name="n23" src="qzjnwcyiky" fileName="ideCommon/img/icon_ide_cm_sj.png" xy="1445,331" group="n30_qzjn"/>
+    <text id="n24_qzjn" name="tfLikeNum" xy="1470,330" size="34,18" group="n30_qzjn" fontSize="14" color="#333333" autoClearText="true" text="3000"/>
+    <text id="n25_qzjn" name="tfCreateTime" xy="1444,356" size="127,16" group="n30_qzjn" fontSize="12" color="#333333" vars="true" autoClearText="true" text="创建时间: {time=2020/01/12}"/>
+    <text id="n26_qzjn" name="tfDesc" xy="1344,398" size="250,348" group="n30_qzjn" fontSize="16" color="#333333" autoSize="none" text=""/>
+    <component id="n29_qzjn" name="btnCollect" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1370,776" size="199,44" group="n30_qzjn">
+      <Button title="采集" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <group id="n30_qzjn" name="grpTemplateInfo" xy="1337,273" size="261,547" advanced="true" collapsed="true">
+      <gearDisplay controller="state" pages="1"/>
+    </group>
+    <image id="n31_qzjn" name="imgEmpty" src="zgght84" fileName="ideCommon/img/img_ide_cm_blank.png" xy="1381,407" size="172,196" group="n33_qzjn"/>
+    <text id="n32_qzjn" name="tfEmpty" xy="1370,581" size="194,24" group="n33_qzjn" fontSize="20" color="#999999" align="center" vAlign="middle" autoSize="height" text="暂无信息"/>
+    <group id="n33_qzjn" name="grpEmpty" xy="1370,407" size="195,198" advanced="true" collapsed="true">
+      <gearDisplay controller="state" pages="0"/>
+    </group>
+  </displayList>
+</component>

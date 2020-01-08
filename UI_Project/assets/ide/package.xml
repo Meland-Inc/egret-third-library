@@ -464,6 +464,13 @@
     <component id="rujpwcyikp" name="ComDropdownColorList.xml" path="/codeVew/com/"/>
     <component id="rujpwcyikq" name="ComDropdownColorItem.xml" path="/codeVew/com/"/>
     <image id="vkzdwcyik0" name="img_build_ok_15.png" path="/codeVew/img/"/>
+    <component id="uxadwcyikr" name="WinCreateEntityTemplate.xml" path="/create/win/" exported="true"/>
+    <component id="qzjnwcyiks" name="ToolTipCustomOperate.xml" path="/create/com/" exported="true"/>
+    <component id="qzjnwcyikt" name="WinEntityTemplateCenter.xml" path="/create/win/" exported="true"/>
+    <component id="qzjnwcyikv" name="BtnEntityTemplate.xml" path="/create/btn/"/>
+    <component id="qzjnwcyikw" name="RBtnEntityTemplateCenter.xml" path="/create/btn/" exported="true"/>
+    <image id="qzjnwcyikx" name="icon_ide_cm_cz.png" path="/ideCommon/img/"/>
+    <image id="qzjnwcyiky" name="icon_ide_cm_sj.png" path="/ideCommon/img/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>

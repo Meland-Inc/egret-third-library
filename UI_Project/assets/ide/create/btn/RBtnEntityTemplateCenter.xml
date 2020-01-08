@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="100,100" extention="Button" designImage="ui://thvmj7vouxad4cyijc" designImageOffsetX="-398" designImageOffsetY="-283">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <image id="n13_j0zc" name="imgBG_0" src="80ab9c" fileName="ideCommon/img/img_ide_wpk_1.png" xy="0,0" pivot="0.5,0.5" size="100,100"/>
+    <image id="n14_j0zc" name="imgBG_1" src="80ab9e" fileName="ideCommon/img/img_ide_wpk_3.png" xy="0,0" pivot="0.5,0.5" size="100,100">
+      <gearDisplay controller="button" pages="1"/>
+    </image>
+    <loader id="n25_sxvt" name="formulaBG" xy="10,10" size="80,80" group="n26_sxvt" align="center" vAlign="middle" fill="scale"/>
+    <loader id="n16_j0zc" name="icon" xy="10,10" pivot="0.5,0.5" size="80,80" group="n26_sxvt" align="center" vAlign="middle" fill="scale"/>
+    <group id="n26_sxvt" name="grpItemIcon" xy="10,10" size="80,80" advanced="true" collapsed="true"/>
+    <image id="n27_sxvt" name="imgMulti" src="s1sdta6" fileName="newImg/AnimationEdit/icon_cm_dh_10.png" pkg="32ieekgu" xy="66,0" hideByEditor="true"/>
+    <graph id="n28_o5ey" name="n28" xy="0,0" size="86,86" group="n30_o5ey" alpha="0.5" type="rect" lineSize="0" lineColor="#00000000" fillColor="#ff000000" corner="5"/>
+    <text id="n29_o5ey" name="tfName" xy="0,46" size="86,40" group="n30_o5ey" fontSize="14" color="#ffffff" align="center" autoSize="none" text="我是一个大草块"/>
+    <group id="n30_o5ey" name="grpTip" xy="0,0" size="86,86" hideByEditor="true" visible="false" advanced="true" collapsed="true"/>
+  </displayList>
+  <Button mode="Check"/>
+</component>
