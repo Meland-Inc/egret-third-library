@@ -272,6 +272,20 @@ namespace egret {
         public static DEACTIVATE: string = "deactivate";
 
         /**
+         * 切到后台 官方的deactivate失焦也会调用
+         * @version Egret 2.4
+         * @platform Web,Native
+         */
+        public static TO_BACKGROUND: string = "toBackground";
+
+        /**
+        * 切到前台 官方的activate获取焦点也会调用
+        * @version Egret 2.4
+        * @platform Web,Native
+        */
+        public static FROM_BACKGROUND: string = "fromBackground";
+
+        /**
          * Event.CLOSE 常量定义 close 事件对象的 type 属性的值。
          * @version Egret 2.4
          * @platform Web,Native

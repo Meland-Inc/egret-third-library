@@ -1793,6 +1793,18 @@ declare namespace egret {
          */
         static DEACTIVATE: string;
         /**
+         * 切到后台 官方的deactivate失焦也会调用
+         * @version Egret 2.4
+         * @platform Web,Native
+         */
+        static TO_BACKGROUND: string;
+        /**
+        * 切到前台 官方的activate获取焦点也会调用
+        * @version Egret 2.4
+        * @platform Web,Native
+        */
+        static FROM_BACKGROUND: string;
+        /**
          * Event.CLOSE 常量定义 close 事件对象的 type 属性的值。
          * @version Egret 2.4
          * @platform Web,Native
@@ -9485,6 +9497,8 @@ declare module egret {
         class LifecycleContext {
             pause(): void;
             resume(): void;
+            toBackground(): void;
+            fromBackground(): void;
             onUpdate?: () => void;
         }
         let onResume: () => void;

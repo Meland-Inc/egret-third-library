@@ -453,6 +453,7 @@ module egret {
          */
         export let contexts: LifecycleContext[] = [];
         let isActivate = true;
+        let isRunBackground = false;
 
         export class LifecycleContext {
 
@@ -474,6 +475,26 @@ module egret {
                         onResume();
                     }
                 }
+            }
+
+            //切到后台 名字这么奇怪是因为官方的失焦用掉了resume关键字
+            toBackground() {
+                if (isRunBackground) {
+                    return;
+                }
+
+                isRunBackground = true;
+                stage.dispatchEvent(new Event(Event.TO_BACKGROUND));
+            }
+
+            //切到前台 名字这么奇怪是因为官方的失焦用掉了pause关键字
+            fromBackground() {
+                if (!isRunBackground) {
+                    return;
+                }
+
+                isRunBackground = false;
+                stage.dispatchEvent(new Event(Event.FROM_BACKGROUND));
             }
 
             onUpdate?: () => void;

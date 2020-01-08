@@ -36,10 +36,13 @@ namespace egret.web {
 
         let handleVisibilityChange = function () {
             if (!document[hidden]) {
-                context.resume();
+                // context.resume();
+                context.fromBackground();
+
             }
             else {
-                context.pause();
+                // context.pause();
+                context.toBackground();
             }
         };
 

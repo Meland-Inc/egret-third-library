@@ -3308,10 +3308,12 @@ var egret;
         web.WebLifeCycleHandler = function (context) {
             var handleVisibilityChange = function () {
                 if (!document[hidden]) {
-                    context.resume();
+                    // context.resume();
+                    context.fromBackground();
                 }
                 else {
-                    context.pause();
+                    // context.pause();
+                    context.toBackground();
                 }
             };
             window.addEventListener("focus", context.resume, false);

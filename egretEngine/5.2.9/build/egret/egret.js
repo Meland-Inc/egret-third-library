@@ -3805,6 +3805,18 @@ var egret;
          */
         Event.DEACTIVATE = "deactivate";
         /**
+         * 切到后台 官方的deactivate失焦也会调用
+         * @version Egret 2.4
+         * @platform Web,Native
+         */
+        Event.TO_BACKGROUND = "toBackground";
+        /**
+        * 切到前台 官方的activate获取焦点也会调用
+        * @version Egret 2.4
+        * @platform Web,Native
+        */
+        Event.FROM_BACKGROUND = "fromBackground";
+        /**
          * Event.CLOSE 常量定义 close 事件对象的 type 属性的值。
          * @version Egret 2.4
          * @platform Web,Native
@@ -14364,6 +14376,7 @@ var egret;
          */
         lifecycle.contexts = [];
         var isActivate = true;
+        var isRunBackground = false;
         var LifecycleContext = (function () {
             function LifecycleContext() {
             }
@@ -14384,6 +14397,22 @@ var egret;
                         lifecycle.onResume();
                     }
                 }
+            };
+            //切到后台 名字这么奇怪是因为官方的失焦用掉了resume关键字
+            LifecycleContext.prototype.toBackground = function () {
+                if (isRunBackground) {
+                    return;
+                }
+                isRunBackground = true;
+                lifecycle.stage.dispatchEvent(new egret.Event(egret.Event.TO_BACKGROUND));
+            };
+            //切到前台 名字这么奇怪是因为官方的失焦用掉了pause关键字
+            LifecycleContext.prototype.fromBackground = function () {
+                if (!isRunBackground) {
+                    return;
+                }
+                isRunBackground = false;
+                lifecycle.stage.dispatchEvent(new egret.Event(egret.Event.FROM_BACKGROUND));
             };
             return LifecycleContext;
         }());
