@@ -46,8 +46,8 @@
       <gearDisplay controller="ctrlIdeMode" pages="5"/>
       <relation target="" sidePair="right-right,height-height"/>
     </component>
-    <component id="n45_qu7t" name="comShortCut" src="qu7tt7j" fileName="ideCommon/com/ComBuildShortCutB.xml" xy="324,76" controller="ctrlState,4">
-      <gearXY controller="ctrlIdeMode" pages="2" values="-4,76" default="324,76"/>
+    <component id="n45_qu7t" name="comShortCut" src="qu7tt7j" fileName="ideCommon/com/ComBuildShortCutB.xml" xy="124,76" controller="ctrlState,4">
+      <gearXY controller="ctrlIdeMode" pages="0,2" values="124,76|-4,76" default="324,76"/>
       <relation target="n38_si0u" sidePair="center-center"/>
     </component>
     <component id="n46_smiy" name="comAniSelect" src="smiyt7n" fileName="attribute/com/ComBuildAniSelect.xml" xy="1490,0" controller="ctrlState,1">
