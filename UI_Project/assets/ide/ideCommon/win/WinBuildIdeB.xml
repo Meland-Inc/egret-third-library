@@ -10,7 +10,7 @@
       <gearSize controller="ctrlIdeMode" pages="0,1,4,3,2,5,6" values="430,1080,1,1|54,1081,1,1|430,1080,1,1|430,1080,1,1|344,1080,1,1|427,1080,1,1|426,1080,1,1"/>
       <relation target="" sidePair="right-right,height-height"/>
     </graph>
-    <component id="n38_si0u" name="comToolBar" src="dyk9b4" fileName="ideCommon/com/ComIdeTopToolBar.xml" xy="-2,0" size="1492,56" controller="ctrlMode,4">
+    <component id="n38_si0u" name="comToolBar" src="dyk9b4" fileName="ideCommon/com/ComIdeTopToolBar.xml" xy="-2,0" size="1492,56" controller="ctrlMode,7">
       <relation target="n9_r0y9" sidePair="leftext-right"/>
       <relation target="n39_e7dh" sidePair="rightext-left"/>
     </component>
@@ -47,7 +47,7 @@
       <relation target="" sidePair="right-right,height-height"/>
     </component>
     <component id="n45_qu7t" name="comShortCut" src="qu7tt7j" fileName="ideCommon/com/ComBuildShortCutB.xml" xy="324,76" touchable="false" controller="ctrlState,4">
-      <gearXY controller="ctrlIdeMode" pages="2" values="-4,76" default="324,76"/>
+      <gearXY controller="ctrlIdeMode" pages="0,2" values="324,76|-4,76" default="324,76"/>
       <relation target="n38_si0u" sidePair="center-center"/>
     </component>
     <component id="n46_smiy" name="comAniSelect" src="smiyt7n" fileName="attribute/com/ComBuildAniSelect.xml" xy="1490,0" controller="ctrlState,1">
