@@ -443,7 +443,6 @@
     <component id="lx59wcyijv" name="btnCustomizeEvent.xml" path="/codeVew/btn/"/>
     <component id="fvb2wcyijw" name="btnCodeBlockTabA.xml" path="/codeVew/btn/"/>
     <image id="fvb2wcyijx" name="img_codeV_sj_3.png" path="/codeVew/img/" scale="9grid" scale9grid="8,8,42,42"/>
-    <component id="rujpwcyijy" name="ComRichTextInput.xml" path="/codeVew/com/" exported="true"/>
     <image id="rujpwcyijz" name="icon_code_oth_ct.png" path="/codeVew/img/"/>
     <image id="rujpwcyik0" name="icon_code_oth_xhx.png" path="/codeVew/img/"/>
     <image id="rujpwcyik1" name="icon_code_oth_xt.png" path="/codeVew/img/"/>
@@ -460,9 +459,6 @@
     <component id="rujpwcyikf" name="ComDropdown.xml" path="/codeVew/com/" exported="true"/>
     <component id="rujpwcyiki" name="ComDropdownList.xml" path="/codeVew/com/"/>
     <component id="rujpwcyikl" name="ComDropdownItem.xml" path="/codeVew/com/"/>
-    <component id="rujpwcyikn" name="ComDropdownColor.xml" path="/codeVew/com/" exported="true"/>
-    <component id="rujpwcyikp" name="ComDropdownColorList.xml" path="/codeVew/com/"/>
-    <component id="rujpwcyikq" name="ComDropdownColorItem.xml" path="/codeVew/com/"/>
     <image id="vkzdwcyik0" name="img_build_ok_15.png" path="/codeVew/img/"/>
     <image id="uxadwcyikr" name="icon_ide_cm_cz.png" path="/ideCommon/img/"/>
     <image id="uxadwcyiks" name="icon_ide_cm_sj.png" path="/ideCommon/img/"/>
@@ -472,6 +468,7 @@
     <image id="uxadwcyikw" name="icon_cre_ycx_1.png" path="/create/img/"/>
     <image id="uxadwcyikx" name="icon_cre_zrzb_1.png" path="/create/img/"/>
     <image id="uxadwcyiky" name="img_cre_xz_1.png" path="/create/img/"/>
+    <component id="n82ewcyil3" name="ComQuillInput.xml" path="/codeVew/com/" exported="true"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>
