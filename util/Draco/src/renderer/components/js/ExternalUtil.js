@@ -30,17 +30,23 @@ export function getPolicyInfo(versionName) {
     });
 }
 
-export function applyPolicyNum(policyNum, versionName, channel) {
-    return new Promise((resolve, reject) => {
-        let time = Math.floor(new Date().getTime() / 1000);
-        let secret = "LznauW6GzBsq3wP6";
-        let due = 1800;
-        let tokenStr = versionName + channel + time + secret + due;
-        let token = crypto
-            .createHash('md5')
-            .update(tokenStr)
-            .digest('hex');
+export async function applyPolicyNum(policyNum, versionName, channel) {
+    let time = Math.floor(new Date().getTime() / 1000);
+    let secret = "LznauW6GzBsq3wP6";
+    let due = 1800;
+    let tokenStr = versionName + channel + time + secret + due;
+    let token = crypto
+        .createHash('md5')
+        .update(tokenStr)
+        .digest('hex');
 
+
+    await apply47PolicyNum(policyNum, versionName, channel, time, due, token);
+    await applyWkPolicyNum(policyNum, versionName, channel, time, due, token);
+}
+
+function apply47PolicyNum(policyNum, versionName, channel, time, due, token) {
+    return new Promise((resolve, reject) => {
         let policyQueryServerOld = '47.107.73.43:10001';
         let oldUrl = new URL('//' + policyQueryServerOld + '/setVersion', window.location);
         oldUrl.searchParams.append('versionName', versionName);
@@ -57,11 +63,15 @@ export function applyPolicyNum(policyNum, versionName, channel) {
                 console.log(`47: ${oldRequest.responseText}`);
                 resolve(oldRequest.responseText);
             } else {
-                reject("获取版本号错误!");
+                reject("应用版本号错误!");
             }
         }
         oldRequest.send(null);
+    });
+}
 
+function applyWkPolicyNum(policyNum, versionName, channel, time, due, token) {
+    return new Promise((resolve, reject) => {
         let policyQueryServer = 'policy-server.wkcoding.com';
         let url = new URL('//' + policyQueryServer + '/setVersion', window.location);
         url.searchParams.append('versionName', versionName);
@@ -78,7 +88,7 @@ export function applyPolicyNum(policyNum, versionName, channel) {
                 console.log(`wkcoding:${request.responseText}`);
                 resolve();
             } else {
-                reject("获取版本号错误!");
+                reject("应用版本号错误!");
             }
         }
         request.send(null);

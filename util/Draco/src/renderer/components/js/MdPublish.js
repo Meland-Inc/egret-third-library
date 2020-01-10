@@ -303,7 +303,9 @@ async function externalHandle(resFilePath, newVersion, releasePath, patchPath, o
             let useNew = true;
             let fileName = externalCfgObj[key];
             let fileInfo = fileName.split(".");
-            let oldFilePath = `${oldVersionPath}${external_suffix_path}/${fileInfo[0]}_v${oldVersion}.${fileInfo[1]}`;
+            let fileSuffix = fileInfo.pop();
+            let filePreName = fileInfo.join(".");
+            let oldFilePath = `${oldVersionPath}${external_suffix_path}/${filePreName}_v${oldVersion}.${fileSuffix}`;
             let newFilePath = `${projNewVersionPath}${external_suffix_path}/${fileName}`;
             if (oldVersion) {
                 let oldFileExist = await fsExc.exists(oldFilePath);
@@ -320,12 +322,12 @@ async function externalHandle(resFilePath, newVersion, releasePath, patchPath, o
                     await copyFile(`${newFilePath}`, `${releasePath}${external_suffix_path}/${fileName}`, newVersion);
                 }
                 await copyFile(`${newFilePath}`, `${patchPath}${external_suffix_path}/${fileName}`, newVersion);
-                externalCfgObj[key] = `${fileInfo[0]}_v${newVersion}.${fileInfo[1]}`;
+                externalCfgObj[key] = `${filePreName}_v${newVersion}.${fileSuffix}`;
             } else {
                 if (releasePath) {
                     await copyFile(`${newFilePath}`, `${releasePath}${external_suffix_path}/${fileName}`, oldVersion);
                 }
-                externalCfgObj[key] = `${fileInfo[0]}_v${oldVersion}.${fileInfo[1]}`;
+                externalCfgObj[key] = `${filePreName}_v${oldVersion}.${fileSuffix}`;
             }
         }
     }

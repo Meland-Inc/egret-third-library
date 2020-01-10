@@ -103,7 +103,7 @@ import { Global } from "../js/Global.js";
 export default {
   data() {
     return {
-      isUpdateGitLoading: false,
+      // isUpdateGitLoading: false,
       isUpdateSvnLoading: false,
       isCopyTextureInLoading: false,
       isClearTextureLoading: false,
@@ -135,18 +135,18 @@ export default {
         this.checkBoxData.length = 0;
       }
     },
-    async updateGit() {
-      this.isUpdateGitLoading = true;
-      Global.showRegionLoading();
-      try {
-        await mdTexture.updateGit();
-        this.isUpdateGitLoading = false;
-        Global.hideRegionLoading();
-      } catch (error) {
-        this.isUpdateGitLoading = false;
-        Global.hideRegionLoading();
-      }
-    },
+    // async updateGit() {
+    //   this.isUpdateGitLoading = true;
+    //   Global.showRegionLoading();
+    //   try {
+    //     await mdTexture.updateGit();
+    //     this.isUpdateGitLoading = false;
+    //     Global.hideRegionLoading();
+    //   } catch (error) {
+    //     this.isUpdateGitLoading = false;
+    //     Global.hideRegionLoading();
+    //   }
+    // },
     async updateSvn() {
       this.isUpdateSvnLoading = true;
       Global.showRegionLoading();
