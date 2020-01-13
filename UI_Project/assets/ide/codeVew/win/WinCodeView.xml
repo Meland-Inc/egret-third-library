@@ -37,12 +37,11 @@
       <gearDisplay controller="ctrlStatus" pages="0"/>
     </group>
     <component id="n4_lctb" name="btnExit" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="1605,981" size="116,110">
-      <gearDisplay controller="ctrlStatus" pages="0"/>
       <gearXY controller="ctrlStatus" pages="2,1" values="1605,981|1605,981" default="841,981"/>
       <relation target="n1_s45w" sidePair="bottom-bottom,right-left"/>
       <Button icon="ui://ti9jag5txba67h"/>
     </component>
-    <component id="n31_en7j" name="btnExit1" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="1605,980" size="116,110" hideByEditor="true" visible="false">
+    <component id="n31_en7j" name="btnExit1" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="1605,980" size="116,110">
       <gearDisplay controller="ctrlStatus" pages="2,1"/>
       <relation target="" sidePair="bottom-bottom,right-right"/>
       <Button icon="ui://ti9jag5txba67h"/>
