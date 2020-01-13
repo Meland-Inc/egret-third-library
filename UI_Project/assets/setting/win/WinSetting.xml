@@ -84,8 +84,8 @@
       <Button title="重置领地" titleFontSize="20" icon="ui://te1gxawoeggjcyihf"/>
     </component>
     <group id="n176_hxjz" name="n176" xy="653,825" size="760,46" group="n30_o8k6" advanced="true" collapsed="true"/>
-    <text id="n182_ggj7" name="tfRoomCodeTitle" xy="1038,221" size="87,28" group="n184_ggj7" fontSize="20" vAlign="middle" text="房间码：&#xA;"/>
-    <text id="n183_ggj7" name="tfRoomCode" xy="1126,222" size="68,24" group="n184_ggj7" input="true" fontSize="20" vAlign="middle" singleLine="true" text="999999">
+    <text id="n182_ggj7" name="tfRoomCodeTitle" xy="1038,221" size="85,27" group="n184_ggj7" fontSize="20" vAlign="middle" text="房间码：&#xA;"/>
+    <text id="n183_ggj7" name="tfRoomCode" xy="1126,222" size="65,24" group="n184_ggj7" fontSize="20" vAlign="middle" singleLine="true" text="999999">
       <relation target="n182_ggj7" sidePair="left-right"/>
     </text>
     <component id="n185_ggj7" name="btnRoomCodeMax" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1207,227" size="24,16" group="n184_ggj7">
