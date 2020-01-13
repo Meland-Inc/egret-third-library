@@ -469,6 +469,10 @@
     <image id="uxadwcyikx" name="icon_cre_zrzb_1.png" path="/create/img/"/>
     <image id="uxadwcyiky" name="img_cre_xz_1.png" path="/create/img/"/>
     <component id="n82ewcyil3" name="ComQuillInput.xml" path="/codeVew/com/" exported="true"/>
+    <component id="pk6xwcyil4" name="ComBuildPreview.xml" path="/ideCommon/com/" exported="true"/>
+    <component id="pk6xwcyil5" name="grpTip.xml" path="/ideCommon/com/"/>
+    <image id="pk6xwcyil6" name="btn_ide_11.png" path="/ideCommon/img/"/>
+    <component id="pk6xwcyil7" name="ComBuildPreviewB.xml" path="/ideCommon/com/" exported="true"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>
