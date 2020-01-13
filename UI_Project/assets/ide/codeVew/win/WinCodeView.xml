@@ -32,7 +32,8 @@
       <relation target="" sidePair="bottomext-bottom,rightext-right"/>
       <relation target="n1_s45w" sidePair="left-left,top-top"/>
     </component>
-    <group id="n16_en7j" name="root" xy="0,-1" size="1923,1084" advanced="true" collapsed="true">
+    <component id="n34_n82e" name="comQuillInput" src="n82ewcyil3" fileName="codeVew/com/ComQuillInput.xml" xy="556,380" size="672,375" group="n16_en7j"/>
+    <group id="n16_en7j" name="root" xy="0,-1" size="1923,1084" advanced="true">
       <gearDisplay controller="ctrlStatus" pages="0"/>
     </group>
     <component id="n4_lctb" name="btnExit" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="1605,981" size="116,110">

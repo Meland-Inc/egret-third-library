@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="30,30">
+  <controller name="color" pages="0,DeepBlue,1,LightBlue,2,LightRed,3,DeepRed,4,Purple,5,Green,6,Pink,7,Carnation,8,LightYellow,9,DeepYellow,10,PinkRed" selected="0"/>
+  <controller name="isText" pages="1,false,0,true" selected="0"/>
+  <displayList>
+    <component id="n3_ld0n" name="btnRichText" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="0,0" size="30,30">
+      <relation target="" sidePair="right-right,middle-middle"/>
+      <Button icon="ui://t573fj5bfvb25z"/>
+    </component>
+  </displayList>
+</component>
