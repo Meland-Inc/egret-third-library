@@ -22,11 +22,6 @@
     <group id="n58_grwp" name="grpName" xy="165,66" size="253,41" group="n67_en7j" visible="false" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlState" pages="1"/>
     </group>
-    <component id="n50_kca4" name="btnSaveAsTemplate" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="297,1026" size="120,44" group="n67_en7j">
-      <gearDisplay controller="ctrlState" pages="1"/>
-      <relation target="" sidePair="bottom-bottom"/>
-      <Button title="保存物件" icon="ui://te1gxawooiqdcyih1"/>
-    </component>
     <group id="n67_en7j" name="grpElem" xy="-8,0" size="446,1080" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlState" pages="1"/>
     </group>
