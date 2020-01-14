@@ -2,8 +2,8 @@
 <component size="1920,1080" designImage="ui://i25v0ebkqvmf4r" designImageAlpha="0">
   <controller name="ctrlState" pages="0,loading,1,showing" selected="0"/>
   <displayList>
-    <graph id="n0_qvmf" name="imgBG" xy="-1,10" size="1922,1070" type="rect" lineSize="0" lineColor="#ffffffff">
-      <gearDisplay controller="ctrlState" pages="0"/>
+    <graph id="n0_qvmf" name="imgBG" xy="0,10" size="1920,1070" type="rect" lineSize="0" lineColor="#ffffffff">
+      <gearDisplay controller="ctrlState" pages="0,1"/>
       <relation target="" sidePair="width-width,height-height"/>
     </graph>
     <text id="n14_i4ys" name="tfLoading" xy="813,559" size="293,40" fontSize="36" color="#333333" text="加载网页中。。。">
