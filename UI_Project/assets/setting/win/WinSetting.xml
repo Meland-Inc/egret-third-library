@@ -17,7 +17,7 @@
     <component id="n65_o31t" name="btnManor" src="j70wcyihy" fileName="btn/rbtnCommonTopTab.xml" pkg="te1gxawo" xy="892,157" group="n94_o89o">
       <Button title="领地" controller="conSetting" page="4"/>
     </component>
-    <component id="n80_opya" name="btnRobotCode" src="j70wcyihy" fileName="btn/rbtnCommonTopTab.xml" pkg="te1gxawo" xy="1024,157" group="n94_o89o">
+    <component id="n80_opya" name="btnRobotCode" src="j70wcyihy" fileName="btn/rbtnCommonTopTab.xml" pkg="te1gxawo" xy="1024,157" group="n94_o89o" visible="false">
       <Button title="机器人" controller="conSetting" page="5"/>
     </component>
     <group id="n94_o89o" name="grpTabs" xy="760,157" size="384,48" group="n154_o5a3" advanced="true" layout="hz" colGap="12">
