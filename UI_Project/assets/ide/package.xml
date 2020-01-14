@@ -443,7 +443,6 @@
     <component id="lx59wcyijv" name="btnCustomizeEvent.xml" path="/codeVew/btn/"/>
     <component id="fvb2wcyijw" name="btnCodeBlockTabA.xml" path="/codeVew/btn/"/>
     <image id="fvb2wcyijx" name="img_codeV_sj_3.png" path="/codeVew/img/" scale="9grid" scale9grid="8,8,42,42"/>
-    <component id="rujpwcyijy" name="ComRichTextInput.xml" path="/codeVew/com/" exported="true"/>
     <image id="rujpwcyijz" name="icon_code_oth_ct.png" path="/codeVew/img/"/>
     <image id="rujpwcyik0" name="icon_code_oth_xhx.png" path="/codeVew/img/"/>
     <image id="rujpwcyik1" name="icon_code_oth_xt.png" path="/codeVew/img/"/>
@@ -460,9 +459,6 @@
     <component id="rujpwcyikf" name="ComDropdown.xml" path="/codeVew/com/" exported="true"/>
     <component id="rujpwcyiki" name="ComDropdownList.xml" path="/codeVew/com/"/>
     <component id="rujpwcyikl" name="ComDropdownItem.xml" path="/codeVew/com/"/>
-    <component id="rujpwcyikn" name="ComDropdownColor.xml" path="/codeVew/com/" exported="true"/>
-    <component id="rujpwcyikp" name="ComDropdownColorList.xml" path="/codeVew/com/"/>
-    <component id="rujpwcyikq" name="ComDropdownColorItem.xml" path="/codeVew/com/"/>
     <image id="vkzdwcyik0" name="img_build_ok_15.png" path="/codeVew/img/"/>
     <component id="uxadwcyikr" name="WinCreateEntityTemplate.xml" path="/create/win/" exported="true"/>
     <component id="qzjnwcyiks" name="ToolTipCustomOperate.xml" path="/create/com/" exported="true"/>
@@ -477,6 +473,11 @@
     <image id="uxadwcyikw" name="icon_cre_ycx_1.png" path="/create/img/"/>
     <image id="uxadwcyikx" name="icon_cre_zrzb_1.png" path="/create/img/"/>
     <image id="uxadwcyiky" name="img_cre_xz_1.png" path="/create/img/"/>
+    <component id="n82ewcyil3" name="ComQuillInput.xml" path="/codeVew/com/" exported="true"/>
+    <component id="pk6xwcyil4" name="ComBuildPreview.xml" path="/ideCommon/com/" exported="true"/>
+    <component id="pk6xwcyil5" name="grpTip.xml" path="/ideCommon/com/"/>
+    <image id="pk6xwcyil6" name="btn_ide_11.png" path="/ideCommon/img/"/>
+    <component id="pk6xwcyil7" name="ComBuildPreviewB.xml" path="/ideCommon/com/" exported="true"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>

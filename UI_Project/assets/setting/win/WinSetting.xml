@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1920,1080" designImage="ui://thvmj7vomquw10" designImageAlpha="0" designImageLayer="1" adaptationTest="FitSize">
+<component size="1920,1080" designImage="ui://thvmj7voggj74cyijd" designImageAlpha="33" designImageLayer="1">
   <controller name="conSetting" pages="0,system,4,manor,5,robotCode" selected="0"/>
   <controller name="ctrlGameMode" pages="0,game,1,lessons" selected="0"/>
   <displayList>
@@ -84,6 +84,15 @@
       <Button title="重置领地" titleFontSize="20" icon="ui://te1gxawoeggjcyihf"/>
     </component>
     <group id="n176_hxjz" name="n176" xy="653,825" size="760,46" group="n30_o8k6" advanced="true" collapsed="true"/>
+    <text id="n182_ggj7" name="tfRoomCodeTitle" xy="1038,221" size="85,27" group="n184_ggj7" fontSize="20" vAlign="middle" text="房间码：&#xA;"/>
+    <text id="n183_ggj7" name="tfRoomCode" xy="1126,222" size="65,24" group="n184_ggj7" fontSize="20" vAlign="middle" singleLine="true" text="999999">
+      <relation target="n182_ggj7" sidePair="left-right"/>
+    </text>
+    <component id="n185_ggj7" name="btnRoomCodeMax" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1207,227" size="24,16" group="n184_ggj7">
+      <relation target="n183_ggj7" sidePair="left-right"/>
+      <Button icon="ui://te1gxawoggj7cyijo"/>
+    </component>
+    <group id="n184_ggj7" name="grpRoomCode" xy="1038,221" size="193,28" group="n30_o8k6" advanced="true" collapsed="true"/>
     <group id="n30_o8k6" name="system" xy="488,221" size="1002,650" group="n154_o5a3" advanced="true">
       <gearDisplay controller="conSetting" pages="0"/>
     </group>
@@ -131,8 +140,8 @@
     <component id="n70_o31t" name="btnDel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1212,824" size="120,44" group="n169_sh0c">
       <Button title="删除" titleFontSize="20" icon="ui://te1gxawoeggjcyihf"/>
     </component>
-    <group id="n169_sh0c" name="n169" xy="572,824" size="760,45" group="n71_o31t" advanced="true" layout="hz" lineGap="-44" colGap="40"/>
-    <group id="n71_o31t" name="manor" xy="489,241" size="843,628" group="n154_o5a3" advanced="true">
+    <group id="n169_sh0c" name="n169" xy="572,824" size="760,45" group="n71_o31t" advanced="true" collapsed="true" layout="hz" lineGap="-44" colGap="40"/>
+    <group id="n71_o31t" name="manor" xy="489,241" size="843,628" group="n154_o5a3" advanced="true" collapsed="true">
       <gearDisplay controller="conSetting" pages="4"/>
     </group>
     <component id="n82_opya" name="cbCodeName" src="l61l3" fileName="com/comManorList.xml" xy="652,315" size="254,40" group="n91_opya">
@@ -162,11 +171,11 @@
     <component id="n86_opya" name="btnCodeDel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1052,824" size="120,44" group="n171_sh0c">
       <Button title="删除" titleFontSize="20" icon="ui://te1gxawoeggjcyihf"/>
     </component>
-    <group id="n171_sh0c" name="n171" xy="732,824" size="440,44" group="n91_opya" advanced="true" layout="hz" colGap="40"/>
-    <group id="n91_opya" name="robotCode" xy="489,241" size="683,627" group="n154_o5a3" advanced="true">
+    <group id="n171_sh0c" name="n171" xy="732,824" size="440,44" group="n91_opya" advanced="true" collapsed="true" layout="hz" colGap="40"/>
+    <group id="n91_opya" name="robotCode" xy="489,241" size="683,627" group="n154_o5a3" advanced="true" collapsed="true">
       <gearDisplay controller="conSetting" pages="5"/>
     </group>
-    <group id="n154_o5a3" name="root" xy="382,148" size="1140,740" advanced="true">
+    <group id="n154_o5a3" name="root" xy="382,148" size="1140,740" advanced="true" collapsed="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>

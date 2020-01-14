@@ -151,6 +151,9 @@
     <image id="p5r74f" name="icon_mapT_bq_1.png" path="/img/"/>
     <image id="p5r74g" name="icon_mapT_bq_2.png" path="/img/"/>
     <component id="jk954i" name="imgSelect.xml" path="/btn/"/>
+    <component id="kujx4j" name="spRoomCodeEnter.xml" path="/img/"/>
+    <component id="kujx4k" name="WinInputMapTemplateRoomCode.xml" path="/win/" exported="true"/>
+    <component id="ggj78" name="WinRoomCode.xml" path="/win/" exported="true"/>
   </resources>
   <publish name="template"/>
 </packageDescription>

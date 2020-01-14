@@ -4,7 +4,7 @@
     <action type="play_transition" fromPage="0" toPage="1" transition="t0"/>
   </controller>
   <displayList>
-    <loader id="n0_sz33" name="icon" xy="0,0" pivot="0.5,0.5" size="114,40" url="ui://te1gxawoot9si2a" autoSize="true">
+    <loader id="n0_sz33" name="icon" xy="0,0" pivot="0.5,0.5" size="114,40" touchable="false" url="ui://te1gxawoot9si2a" autoSize="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
     <text id="n1_obf0" name="title" xy="6,5" pivot="0.5,0.5" size="100,28" fontSize="20" color="#599c11" align="center" vAlign="middle" autoSize="none" singleLine="true" text="">

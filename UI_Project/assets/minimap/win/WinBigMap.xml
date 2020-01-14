@@ -2,7 +2,7 @@
 <component size="1920,1080" designImage="ui://thvmj7vofv5tcyiio" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlMapMode" pages="0,normal,1,born,2,revive" selected="0"/>
   <controller name="ctrlMarkOperate" pages="0,normal,1,selectMark,2,puttingMark,3,deleteMark,4,editMarkName" selected="0"/>
-  <controller name="ctrlPosType" pages="0,scene,1,natural" selected="1"/>
+  <controller name="ctrlPosType" pages="0,scene,1,natural" selected="0"/>
   <displayList>
     <component id="n35_trc2" name="comMap" src="fv5tc" fileName="old/com/ComMiniMapCtnr.xml" xy="0,57" size="1920,1023" hideByEditor="true">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
@@ -50,13 +50,13 @@
       <relation target="" sidePair="bottom-bottom,center-center"/>
     </group>
     <image id="n18_11e02" name="operateBg" src="fv5t2p" fileName="img/img_map_ty.png" xy="1850,736" pivot="0.5,0" anchor="true" size="80,260" group="n22_11e02"/>
-    <component id="n20_11e02" name="btnZoomIn" src="fv5t3" fileName="btn/btnOperate.xml" xy="1849,842" pivot="0.5,0" anchor="true" size="48,48" group="n22_11e02">
+    <component id="n20_11e02" name="btnZoomIn" src="fv5t3" fileName="btn/btnOperate.xml" xy="1849,763" pivot="0.5,0" anchor="true" size="48,48" group="n22_11e02">
       <Button icon="ui://makcczvjfv5t2i"/>
     </component>
     <component id="n21_11e02" name="btnZoomOut" src="fv5t3" fileName="btn/btnOperate.xml" xy="1849,929" pivot="0.5,0" anchor="true" size="48,48" group="n22_11e02">
       <Button icon="ui://makcczvjfv5t2m"/>
     </component>
-    <component id="n19_11e02" name="btnShowSelectMark" src="fv5t3" fileName="btn/btnOperate.xml" xy="1849,763" pivot="0.5,0" anchor="true" size="48,48" group="n22_11e02">
+    <component id="n19_11e02" name="btnShowSelectMark" src="fv5t3" fileName="btn/btnOperate.xml" xy="1849,842" pivot="0.5,0" anchor="true" size="48,48" group="n22_11e02" visible="false">
       <gearDisplay controller="ctrlMarkOperate" pages="0,1,4"/>
       <Button icon="ui://makcczvjfv5t2h" controller="ctrlMarkOperate" page="1"/>
     </component>
@@ -68,16 +68,16 @@
       <gearDisplay controller="ctrlMarkOperate" pages="2"/>
       <Button icon="ui://makcczvjlmgf2x" controller="ctrlMarkOperate" page="0"/>
     </component>
-    <group id="n22_11e02" name="grpMapOperateBtn" xy="1810,736" size="80,260" advanced="true" collapsed="true">
+    <group id="n22_11e02" name="grpMapOperateBtn" xy="1810,736" size="80,260" advanced="true">
       <gearDisplay controller="ctrlMapMode" pages="0"/>
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </group>
     <component id="n97_sod9" name="btnChangePosType" src="oliri6s" fileName="old/btn/tbtnScale.xml" pkg="te1gxawo" xy="21,1014" size="277,40" group="n28_11e02">
       <relation target="n99_sod9" sidePair="rightext-right"/>
-      <Button checked="true" icon="ui://makcczvjfv5t2o" controller="ctrlPosType" page="1"/>
+      <Button icon="ui://makcczvjfv5t2o" controller="ctrlPosType" page="1"/>
     </component>
     <image id="n98_sod9" name="imgPosIcon" src="fv5t2n" fileName="img/icon_map_zb.png" xy="23,1002" group="n28_11e02"/>
-    <text id="n99_sod9" name="tfPos" xy="64,1022" size="215,24" group="n28_11e02" fontSize="20" color="#ffffff" align="center" vAlign="middle" vars="true" text="自然坐标  ({x=999} , {y=999})">
+    <text id="n99_sod9" name="tfPos" xy="64,1022" size="211,24" group="n28_11e02" fontSize="20" color="#ffffff" align="center" vAlign="middle" vars="true" text="场景坐标  ({row=999} , {col=999})">
       <gearText controller="ctrlPosType" pages="0,1" values="场景坐标  ({row=999} , {col=999})|自然坐标  ({x=999} , {y=999})"/>
     </text>
     <group id="n28_11e02" name="posGroup" xy="21,1002" size="277,52" advanced="true" collapsed="true">
