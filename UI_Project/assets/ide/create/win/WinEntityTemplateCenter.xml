@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://thvmj7vouxad4cyijd">
-  <controller name="ctrlState" pages="0,none,1,info,2,remove" selected="2"/>
+  <controller name="ctrlState" pages="0,none,1,info,2,remove" selected="0"/>
   <controller name="ctrlListType" pages="0,hot,1,new" selected="0"/>
   <displayList>
     <image id="n27_qzjn" name="n27" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="348,184" size="1290,700"/>
@@ -13,7 +13,7 @@
     <image id="n2_qzjn" name="imgSearchInputBg" src="oiqdcyigx" fileName="img/img_cm_ssk.png" pkg="te1gxawo" xy="1311,196" size="248,38" group="n6_qzjn"/>
     <text id="n3_qzjn" name="inpSearch" xy="1375,203" size="180,26" group="n6_qzjn" input="true" prompt="[color=#999999]请输入搜索内容[/color]" fontSize="20" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text=""/>
     <image id="n4_qzjn" name="n4" src="rujpcyijl" fileName="img/icon_cm_ss.png" pkg="te1gxawo" xy="1342,200" size="32,32" group="n6_qzjn"/>
-    <group id="n6_qzjn" name="grpSearch" xy="1311,196" size="248,38"/>
+    <group id="n6_qzjn" name="grpSearch" xy="1311,196" size="248,38" visible="false" advanced="true"/>
     <image id="n16_qzjn" name="n16" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="378,263" size="930,580"/>
     <component id="n12_qzjn" name="btnNew" src="qzjnwcyikv" fileName="create/btn/BtnEntityTemplate.xml" xy="618,193">
       <Button title="最新" controller="ctrlListType" page="1"/>

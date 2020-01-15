@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="86,86" extention="Button">
   <controller name="button" pages="0,up,1,down" selected="0"/>
-  <controller name="ctrlData" pages="0,item,1,narrow,2,expand,3,itemExpand" selected="0"/>
+  <controller name="ctrlData" pages="0,item,1,narrow,2,expand,3,itemExpand,4,published" selected="0"/>
   <displayList>
     <image id="n13_j0zc" name="imgBG_1" src="80ab9c" fileName="ideCommon/img/img_ide_wpk_1.png" xy="0,0" pivot="0.5,0.5">
-      <gearDisplay controller="ctrlData" pages="0"/>
+      <gearDisplay controller="ctrlData" pages="0,4"/>
     </image>
     <image id="n23_inuq" name="imgBG_2" src="80ab9d" fileName="ideCommon/img/img_ide_wpk_2.png" xy="0,0" pivot="0.5,0.5" size="86,86">
       <gearDisplay controller="ctrlData" pages="1,2,3"/>
@@ -30,6 +30,11 @@
     <image id="n30_pgmr" name="n30" src="xba67f" fileName="ideCommon/img/icon_ide_cm_4.png" xy="60,69" pivot="0.5,0.5" scale="1,-1" filter="color" filterData="1.00,0.00,0.00,0.00">
       <gearDisplay controller="ctrlData" pages="2"/>
     </image>
+    <image id="n31_f06d" name="imgPublish" src="f06dwcyil8" fileName="img/icon_mapT_bq_2.png" xy="0,0" size="50,28" group="n33_f06d"/>
+    <text id="n32_f06d" name="tfPublish" xy="0,0" size="50,28" group="n33_f06d" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="已发布"/>
+    <group id="n33_f06d" name="grpPublish" xy="0,0" size="50,28" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlData" pages="4"/>
+    </group>
   </displayList>
   <Button mode="Radio"/>
 </component>
