@@ -47,7 +47,7 @@
     <component id="n161_j70w" name="btnShowFPS" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1300,411" size="78,42" group="n142_r6hf">
       <Button icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
     </component>
-    <group id="n142_r6hf" name="grpFPS" xy="1138,411" size="352,42" group="n30_o8k6" collapsed="true"/>
+    <group id="n142_r6hf" name="grpFPS" xy="1138,411" size="240,42" group="n30_o8k6" advanced="true" collapsed="true"/>
     <text id="n144_q29o" name="tfWindWalk" xy="1138,592" size="65,24" group="n146_q29o" hideByEditor="true" visible="false" fontSize="20" color="#333333" vAlign="middle" text="疾风步"/>
     <component id="n162_j70w" name="btnEnableWindWalk" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1300,584" size="78,42" group="n146_q29o" hideByEditor="true" visible="false">
       <Button icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
@@ -93,7 +93,7 @@
       <Button icon="ui://te1gxawoggj7cyijo"/>
     </component>
     <group id="n184_ggj7" name="grpRoomCode" xy="1038,221" size="193,28" group="n30_o8k6" advanced="true" collapsed="true"/>
-    <group id="n30_o8k6" name="system" xy="488,221" size="1002,650" group="n154_o5a3" advanced="true">
+    <group id="n30_o8k6" name="system" xy="488,221" size="985,650" group="n154_o5a3" advanced="true">
       <gearDisplay controller="conSetting" pages="0"/>
     </group>
     <component id="n66_o31t" name="cbManorName" src="l61l3" fileName="com/comManorList.xml" xy="652,315" size="254,40" group="n71_o31t">
