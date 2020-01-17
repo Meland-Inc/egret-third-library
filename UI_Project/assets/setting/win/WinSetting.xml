@@ -17,7 +17,7 @@
     <component id="n65_o31t" name="btnManor" src="j70wcyihy" fileName="btn/rbtnCommonTopTab.xml" pkg="te1gxawo" xy="892,157" group="n94_o89o">
       <Button title="领地" controller="conSetting" page="4"/>
     </component>
-    <component id="n80_opya" name="btnRobotCode" src="j70wcyihy" fileName="btn/rbtnCommonTopTab.xml" pkg="te1gxawo" xy="1024,157" group="n94_o89o">
+    <component id="n80_opya" name="btnRobotCode" src="j70wcyihy" fileName="btn/rbtnCommonTopTab.xml" pkg="te1gxawo" xy="1024,157" group="n94_o89o" visible="false">
       <Button title="机器人" controller="conSetting" page="5"/>
     </component>
     <group id="n94_o89o" name="grpTabs" xy="760,157" size="384,48" group="n154_o5a3" advanced="true" layout="hz" colGap="12">
@@ -53,12 +53,12 @@
       <Button icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
     </component>
     <group id="n146_q29o" name="grpWindWalk" xy="1138,584" size="240,42" group="n30_o8k6" hideByEditor="true" collapsed="true"/>
-    <text id="n97_o89o" name="tfQuality" xy="1138,500" size="85,24" group="n180_w0xi" fontSize="20" color="#333333" vAlign="middle" text="画面质量"/>
-    <component id="n177_w0xi" name="comSelectQuality" src="w0xi7" fileName="com/comSelectQuality.xml" xy="1302,496" group="n180_w0xi"/>
-    <group id="n180_w0xi" name="grpQuality" xy="1138,496" size="336,128" group="n30_o8k6" collapsed="true"/>
-    <text id="n164_j70w" name="tfOperation" xy="488,500" size="85,24" group="n181_w0xi" fontSize="20" color="#333333" vAlign="middle" text="操作方式"/>
-    <component id="n113_o89o" name="comSelectOperation" src="l61l2" fileName="com/comSelectOperation.xml" xy="651,496" group="n181_w0xi"/>
-    <group id="n181_w0xi" name="grpOperation" xy="488,496" size="335,128" group="n30_o8k6" collapsed="true"/>
+    <text id="n97_o89o" name="tfQuality" xy="488,500" size="85,24" group="n180_w0xi" fontSize="20" color="#333333" vAlign="middle" text="画面质量"/>
+    <component id="n177_w0xi" name="comSelectQuality" src="w0xi7" fileName="com/comSelectQuality.xml" xy="652,496" group="n180_w0xi"/>
+    <group id="n180_w0xi" name="grpQuality" xy="488,496" size="336,128" group="n30_o8k6" collapsed="true"/>
+    <text id="n164_j70w" name="tfOperation" xy="1138,500" size="85,24" group="n181_w0xi" fontSize="20" color="#333333" vAlign="middle" text="操作方式"/>
+    <component id="n113_o89o" name="comSelectOperation" src="l61l2" fileName="com/comSelectOperation.xml" xy="1301,496" group="n181_w0xi"/>
+    <group id="n181_w0xi" name="grpOperation" xy="1138,496" size="335,128" group="n30_o8k6" visible="false" advanced="true" collapsed="true"/>
     <component id="n42_o8k6" name="btnVconsole" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1119,749" size="120,44" group="n30_o8k6" hideByEditor="true" visible="false">
       <Button title="开启vconsole" titleFontSize="20" icon="ui://te1gxawooiqdcyih1"/>
     </component>
@@ -175,7 +175,7 @@
     <group id="n91_opya" name="robotCode" xy="489,241" size="683,627" group="n154_o5a3" advanced="true" collapsed="true">
       <gearDisplay controller="conSetting" pages="5"/>
     </group>
-    <group id="n154_o5a3" name="root" xy="382,148" size="1140,740" advanced="true" collapsed="true">
+    <group id="n154_o5a3" name="root" xy="382,148" size="1140,740" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>

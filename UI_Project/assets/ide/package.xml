@@ -478,7 +478,9 @@
     <component id="pk6xwcyil5" name="grpTip.xml" path="/ideCommon/com/"/>
     <image id="pk6xwcyil6" name="btn_ide_11.png" path="/ideCommon/img/"/>
     <component id="pk6xwcyil7" name="ComBuildPreviewB.xml" path="/ideCommon/com/" exported="true"/>
+    <component id="j5zfwcyil8" name="ComBuildShovelView.xml" path="/ideCommon/com/" exported="true"/>
+    <image id="j5zfwcyil9" name="icon_ide_dx_1.png" path="/ideCommon/img/"/>
     <image id="f06dwcyil8" name="icon_mapT_bq_2.png" path="/img/" scale="9grid" scale9grid="20,9,40,18"/>
-  </resources>
+    </resources>
   <publish name="ide"/>
 </packageDescription>

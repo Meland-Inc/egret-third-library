@@ -6,6 +6,9 @@
     <action type="change_page" fromPage="" toPage="1" objectId="n16_pz1n" controller="ctrlListType" targetPage="0"/>
   </controller>
   <displayList>
+    <image id="n31_upwh" name="imgBg" src="upwh4l" fileName="img/img_mapT_bg_1.png" xy="0,0" size="1920,1080" visible="false">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
     <image id="n8_8qqi" name="imgMainBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="111,90" size="1780,939" group="n20_ra2b"/>
     <image id="n5_8qqi" name="imgHeaderBg" src="oiqdcyih6" fileName="img/img_cm_3.png" pkg="te1gxawo" xy="111,30" size="1780,68" group="n20_ra2b"/>
     <image id="n26_lmgf" name="imgRightBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="1463,118" size="400,881" group="n20_ra2b">
@@ -58,7 +61,7 @@
     <group id="n24_ra2b" name="grpTemplateInfo" xy="31,118" size="1833,882" group="n20_ra2b" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlViewStatus" pages="0,1"/>
     </group>
-    <group id="n20_ra2b" name="root" xy="31,30" size="1860,999" advanced="true">
+    <group id="n20_ra2b" name="root" xy="31,30" size="1860,999" advanced="true" collapsed="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>
