@@ -824,6 +824,14 @@ export async function copyVersionToNative() {
     let indexPath = Global.rawResourcePath + "/nativeIndex.html";
     let indexContent = await fsExc.readFile(indexPath);
     indexContent = indexContent.replace(`let curPolicyVersion = "";`, `let curPolicyVersion = "${policyNum}";`);
+    indexContent = indexContent.replace(`let evnName = "";`, `let evnName = "${ModelMgr.versionModel.curEnviron.name}";`);
+    if (ModelMgr.versionModel.curEnviron.name == ModelMgr.versionModel.eEnviron.release) {
+        indexContent = indexContent.replace(`let patchUrl = "";`, `let patchUrl = "${environ.host}${environ.cdnWinPatchPath}";`);
+        indexContent = indexContent.replace(`let policyUrl = "";`, `let policyUrl = "${environ.host}/";`);
+    } else {
+        indexContent = indexContent.replace(`let patchUrl = "";`, `let patchUrl = "${environ.host}${environ.scpRootPath}${environ.scpWinPatchPath}";`);
+        indexContent = indexContent.replace(`let policyUrl = "";`, `let policyUrl = "${environ.host}${environ.scpRootPath}${environ.scpPath}";`);
+    }
     let egretIndexPath = pcEgretPath + "/index.html";
     await fsExc.writeFile(egretIndexPath, indexContent);
 

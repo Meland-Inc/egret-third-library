@@ -56,6 +56,10 @@ export const serverList = [
 // export function getNormalVersion() { return normalVersion; }
 // export function setNormalVersion(value) { normalVersion = value; }
 
+function getPatchName() {
+    return `patch_v${ModelMgr.versionModel.oldVersion}s_v${ModelMgr.versionModel.newVersion}s.zip`;
+}
+
 export async function zipVersion() {
     let environ = ModelMgr.versionModel.curEnviron;
     let zipPath = `${Global.svnPublishPath}${environ.zipPath}/`;
@@ -67,7 +71,7 @@ export async function zipVersion() {
         zipName = "release.zip";
     } else {
         filePath = `${Global.svnPublishPath}${environ.localPath}/${ModelMgr.versionModel.uploadVersion}/`;
-        zipName = ModelMgr.versionModel.needPatch ? "patch.zip" : "release.zip";
+        zipName = ModelMgr.versionModel.needPatch ? getPatchName() : "release.zip";
     }
 
     try {
@@ -80,10 +84,14 @@ export async function zipVersion() {
 export async function uploadVersionFile() {
     if (ModelMgr.versionModel.curEnviron.scpEnable) {
         await uploadScpVersionFile();
+        await uploadScpPatchZip(ModelMgr.versionModel.curEnviron.scpMacPatchPath);
+        await uploadScpPatchZip(ModelMgr.versionModel.curEnviron.scpWinPatchPath);
     }
 
     if (ModelMgr.versionModel.curEnviron.cdnEnable) {
         await uploadCdnVersionFile();
+        await uploadCdnPatchZip(ModelMgr.versionModel.curEnviron.cdnWinPatchPath);
+        await uploadCdnPatchZip(ModelMgr.versionModel.curEnviron.cdnMacPatchPath);
     }
 }
 
@@ -217,7 +225,7 @@ async function uploadScpVersionFile() {
     if (environ.name === ModelMgr.versionModel.eEnviron.alpha) {
         zipName = "release.zip";
     } else {
-        zipName = ModelMgr.versionModel.needPatch ? "patch.zip" : "release.zip";
+        zipName = ModelMgr.versionModel.needPatch ? getPatchName() : "release.zip";
     }
 
     let webZipPath = zipPath + zipName;
@@ -361,6 +369,110 @@ async function scpFile(path) {
                 }
             }
         );
+    });
+}
+
+async function uploadScpPatchZip(scpPatchPath) {
+    return new Promise((resolve, reject) => {
+        let client = new Client();
+        let environ = ModelMgr.versionModel.curEnviron;
+        if (!scpPatchPath) {
+            reject();
+            console.log("没有配置补丁zip scp上传路径");
+        }
+        client
+            .on("ready", () => {
+                console.log("Client :: ready");
+                let cmdCopyPatch =
+                    "cp -rvf " +
+                    environ.scpRootPath + environ.scpPath + "/" + getPatchName() + " " +
+                    environ.scpRootPath + scpPatchPath + "/" + getPatchName();
+
+                console.log("cmd --> " + cmdCopyPatch);
+
+                client.exec(
+                    cmdCopyPatch,
+                    {},
+                    (err, stream) => {
+                        if (err) throw err;
+                        stream
+                            .on("close", (code, signal) => {
+                                client.end();
+                                if (code != 0) {
+                                    reject();
+                                    console.log("复制补丁失败", code);
+                                    return;
+                                }
+
+                                console.log("复制补丁成功");
+                                resolve();
+                            })
+                            .on("data", (data) => {
+                                // console.log("STDOUT: " + data);
+                            })
+                            .stderr.on("data", (data) => {
+                                console.log("STDERR: " + data);
+                            });
+                    }
+                );
+            })
+            .connect({
+                host: environ.host,
+                user: environ.user,
+                password: environ.password
+            });
+    })
+}
+
+async function uploadCdnPatchZip(cdnPatchPath) {
+    return new Promise(async (resolve, reject) => {
+        if (!cdnPatchPath) {
+            reject();
+            console.log("没有配置补丁zip cdn上传路径");
+        }
+        await ModelMgr.ftpModel.initQiniuOption();
+        let releaseEnviron = ModelMgr.versionModel.environList.find(value => value.name === ModelMgr.versionModel.eEnviron.release);
+        let readyEnviron = ModelMgr.versionModel.environList.find(value => value.name === ModelMgr.versionModel.eEnviron.ready);
+        let readyPath = `${Global.svnPublishPath}${readyEnviron.zipPath}`;
+        let patchPath = `${readyPath}/${getPatchName()}`;
+        let patchExist = await fsExc.exists(patchPath);
+        if (patchExist) {
+            // uploaderFile(readyPath, patchPath, releaseEnviron.cdnRoot,
+            //     () => {
+            //         resolve();
+            //     },
+            //     () => {
+            //         reject();
+            //     });
+            let formUploader = new qiniu.form_up.FormUploader(ModelMgr.ftpModel.qiniuConfig);
+            let uploadToken = ModelMgr.ftpModel.uploadToken;
+            let fileKey = `${cdnPatchPath}/${getPatchName()}`;
+            let readerStream = fs.createReadStream(patchPath);
+            let putExtra = new qiniu.form_up.PutExtra();
+            formUploader.putStream(uploadToken, fileKey, readerStream, putExtra, (rspErr, rspBody, rspInfo) => {
+                if (rspErr) {
+                    //单个文件失败
+                    console.error(rspErr);
+                    console.error(`cdn --> upload ${fileKey} error`);
+                    reject();
+                    return;
+                }
+
+                //200:成功 614:文件重复
+                if (rspInfo.statusCode != 200 && rspInfo.statusCode != 614) {
+                    console.log(rspInfo.statusCode);
+                    console.log(rspBody);
+                    reject();
+                    return;
+                }
+
+                console.log(`cdn --> upload ${fileKey} success`);
+                resolve();
+            });
+        }
+
+
+        resolve();
     });
 }
 
