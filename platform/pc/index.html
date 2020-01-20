@@ -146,7 +146,12 @@
           gameVersion = obj.normalVersion;
           console.log("native lastest version :", gameVersion);
           patchCount = gameVersion - startVersion;
-          installSinglePatch();
+          if (patchCount > 0) {
+            installSinglePatch();
+          } else {
+            startRunGame();
+          }
+
         });
       })
     }
