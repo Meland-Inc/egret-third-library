@@ -46,7 +46,7 @@
         // 通知完成
         try {
           var zip = new admzip(filename);
-          zip.extractAllTo("./egret", true);
+          zip.extractAllTo("./resources/app/egret/", true);
         } catch (error) {
           console.error("native extractAllTo error ： ", error, filename);
           startRunGame();
@@ -57,6 +57,9 @@
           }
           console.log('文件:' + filename + '删除成功！');
         })
+        var indexContent = fs.readFileSync("./resources/app/egret/index.html").toString();
+        var matchResult = indexContent.match(new RegExp(`let patchVersion = ([0-9]+)`));
+        curVersion = +matchResult[1];
         if (curVersion >= gameVersion) {
           startRunGame();
         } else {
@@ -212,7 +215,7 @@
       try {
         console.log("native StreamDownload downloadFile:", patchUrl, filename, baseDir);
         this.downloadCallback = callback; // 注册回调函数
-        this.patchUrl = patchUrl + filename;
+        this.patchUrl = patchUrl + "/" + filename;
 
         let receivedBytes = 0;
         let totalBytes = 1;
@@ -273,8 +276,8 @@
     }
 
     try {
-      var indexContent = fs.readFileSync("./egret/index.html").toString();
-      var matchResult = indexContent.match(new RegExp(`let curPolicyVersion = ([0-9]+)`));
+      var indexContent = fs.readFileSync("./resources/app/egret/index.html").toString();
+      var matchResult = indexContent.match(new RegExp(`let patchVersion = ([0-9]+)`));
       startVersion = +matchResult[1];
       curVersion = startVersion;
 

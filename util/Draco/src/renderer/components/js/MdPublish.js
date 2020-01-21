@@ -222,6 +222,8 @@ async function mergeSingleVersion(newVersion, oldVersion, isRelease) {
             await copyFileCheckDir('index.html', svnRlsPath, newVersion);
         }
         await copyFileCheckDir('index.html', svnPatchPath, newVersion);
+        let egretIndexPath = svnPatchPath + "/index.html";
+        await writeNativeIndexToPath(egretIndexPath);
 
         if (svnRlsPath) {
             await copyFileCheckDir('manifest.json', svnRlsPath, newVersion);
@@ -806,6 +808,30 @@ export async function copyPictures() {
     await copyResource(projNewVersionPath);
 }
 
+export async function writeNativeIndexToPath(egretIndexPath) {
+    let releaseVersion = ModelMgr.versionModel.releaseVersion;
+    let indexPath = Global.rawResourcePath + "/nativeIndex.html";
+    let environ = ModelMgr.versionModel.curEnviron;
+    let indexContent = await fsExc.readFile(indexPath);
+    indexContent = indexContent.replace(`let patchVersion = "";`, `let patchVersion = "${releaseVersion}";`);
+    indexContent = indexContent.replace(`let evnName = "";`, `let evnName = "${ModelMgr.versionModel.curEnviron.name}";`);
+    if (ModelMgr.versionModel.curEnviron.name == ModelMgr.versionModel.eEnviron.release) {
+        indexContent = indexContent.replace(`let patchUrl = "";`, `let patchUrl = "${environ.host}${environ.cdnWinPatchPath}";`);
+        indexContent = indexContent.replace(`let policyUrl = "";`, `let policyUrl = "${environ.host}/";`);
+    } else {
+        indexContent = indexContent.replace(`let patchUrl = "";`, `let patchUrl = "${environ.host}${environ.scpWinPatchPath}";`);
+        indexContent = indexContent.replace(`let policyUrl = "";`, `let policyUrl = "${environ.host}${environ.scpPath}";`);
+    }
+
+    // let bExist = await fsExc.exists(egretIndexPath);
+    // console.log("222222", egretIndexPath, bExist)
+    // if (!bExist) {
+
+    //     await fsExc.copyFile(indexPath, egretIndexPath.replace("index.html", ""));
+    // }
+    await fsExc.writeFile(egretIndexPath, indexContent);
+}
+
 export async function copyVersionToNative() {
     console.log(`拷贝游戏包到native文件夹`);
     let pcEgretPath = Global.pcProjectPath + "/egret";
@@ -821,19 +847,8 @@ export async function copyVersionToNative() {
     await fsExc.copyFile(releasePath, pcEgretPath, true);
 
     //写index.html文件
-    let indexPath = Global.rawResourcePath + "/nativeIndex.html";
-    let indexContent = await fsExc.readFile(indexPath);
-    indexContent = indexContent.replace(`let curPolicyVersion = "";`, `let curPolicyVersion = "${policyNum}";`);
-    indexContent = indexContent.replace(`let evnName = "";`, `let evnName = "${ModelMgr.versionModel.curEnviron.name}";`);
-    if (ModelMgr.versionModel.curEnviron.name == ModelMgr.versionModel.eEnviron.release) {
-        indexContent = indexContent.replace(`let patchUrl = "";`, `let patchUrl = "${environ.host}${environ.cdnWinPatchPath}";`);
-        indexContent = indexContent.replace(`let policyUrl = "";`, `let policyUrl = "${environ.host}/";`);
-    } else {
-        indexContent = indexContent.replace(`let patchUrl = "";`, `let patchUrl = "${environ.host}${environ.scpRootPath}${environ.scpWinPatchPath}";`);
-        indexContent = indexContent.replace(`let policyUrl = "";`, `let policyUrl = "${environ.host}${environ.scpRootPath}${environ.scpPath}";`);
-    }
     let egretIndexPath = pcEgretPath + "/index.html";
-    await fsExc.writeFile(egretIndexPath, indexContent);
+    writeNativeIndexToPath(egretIndexPath)
 
     //写policy文件
     let policyPath = `${Global.svnPublishPath}${environ.localPolicyPath}/policyFile_v${policyNum}.json`
