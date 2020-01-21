@@ -55,7 +55,7 @@
           console.error("native extractAllTo error ： ", error, filename);
           startRunGame();
         }
-        fs.unlink(filename, function (err) {
+        fs.unlink(resourcePath + filename, function (err) {
           if (err) {
             throw err;
           }
