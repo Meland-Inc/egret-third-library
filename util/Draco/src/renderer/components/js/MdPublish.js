@@ -840,7 +840,7 @@ export async function copyVersionToNative() {
     let releaseVersion = ModelMgr.versionModel.releaseVersion;
     let environ = ModelMgr.versionModel.curEnviron;
     let releasePath = `${Global.svnPublishPath}${environ.localPath}/release_v${releaseVersion}s`;
-
+    let policyNum = ModelMgr.versionModel.policyNum;
 
     //删除egret文件夹
     await fsExc.delFiles(pcEgretPath);
