@@ -823,11 +823,7 @@ export async function writeNativeIndexToPath(egretIndexPath) {
         indexContent = indexContent.replace(`let patchUrl = "";`, `let patchUrl = "${environ.host}${environ.scpWinPatchPath}";`);
         indexContent = indexContent.replace(`let policyUrl = "";`, `let policyUrl = "${environ.host}${environ.scpPath}";`);
     }
-
     await fsExc.writeFile(egretIndexPath + "/index.html", indexContent);
-
-    let policyPath = `${Global.svnPublishPath}${environ.localPolicyPath}/policyFile_v${policyNum}.json`
-    await fsExc.copyFile(policyPath, egretIndexPath);
 }
 
 export async function copyVersionToNative() {
@@ -836,7 +832,7 @@ export async function copyVersionToNative() {
     let releaseVersion = ModelMgr.versionModel.releaseVersion;
     let environ = ModelMgr.versionModel.curEnviron;
     let releasePath = `${Global.svnPublishPath}${environ.localPath}/release_v${releaseVersion}s`;
-
+    let policyNum = ModelMgr.versionModel.policyNum;
     //删除egret文件夹
     await fsExc.delFiles(pcEgretPath);
 
@@ -845,7 +841,8 @@ export async function copyVersionToNative() {
 
     //写index.html文件
     await writeNativeIndexToPath(pcEgretPath)
-
+    let policyPath = `${Global.svnPublishPath}${environ.localPolicyPath}/policyFile.json`
+    await fsExc.copyFile(policyPath, pcEgretPath);
     console.log(`拷贝完毕`);
 }
 
