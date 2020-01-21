@@ -49,7 +49,7 @@
       else if (arg === "finished") {
         // 通知完成
         try {
-          var zip = new admzip(filename);
+          var zip = new admzip(resourcePath + filename);
           zip.extractAllTo(resourcePath, true);
         } catch (error) {
           console.error("native extractAllTo error ： ", error, filename);
@@ -82,7 +82,7 @@
 
     function installSinglePatch() {
       try {
-        download.downloadFile(patchUrl, "./", `patch_v${curVersion}s_v${curVersion + 1}s.zip`, downloadFileCallback);
+        download.downloadFile(patchUrl, resourcePath, `patch_v${curVersion}s_v${curVersion + 1}s.zip`, downloadFileCallback);
       } catch (error) {
         throw error
       }
@@ -90,7 +90,7 @@
 
     function installAllPatch() {
       allInOne = true;
-      download.downloadFile(patchUrl, "./", `patch_v${startVersion}s_v${gameVersion}s.zip`, downloadFileCallback);
+      download.downloadFile(patchUrl, resourcePath, `patch_v${startVersion}s_v${gameVersion}s.zip`, downloadFileCallback);
       curVersion = gameVersion;
     }
 
