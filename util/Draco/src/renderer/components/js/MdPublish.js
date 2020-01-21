@@ -843,6 +843,7 @@ export async function copyVersionToNative() {
     await writeNativeIndexToPath(pcEgretPath)
     let policyPath = `${Global.svnPublishPath}${environ.localPolicyPath}/policyFile_v${policyNum}.json`
     await fsExc.copyFile(policyPath, pcEgretPath);
+    await fsExc.rename(pcEgretPath + `/policyFile_v${policyNum}.json`, pcEgretPath + `/policyFile.json`)
     console.log(`拷贝完毕`);
 }
 
