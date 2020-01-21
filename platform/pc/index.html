@@ -277,7 +277,7 @@
 
     try {
       var indexContent = fs.readFileSync("./resources/app/egret/index.html").toString();
-      var matchResult = indexContent.match(new RegExp(`let patchVersion = ([0-9]+)`));
+      var matchResult = indexContent.match(new RegExp(`let patchVersion = "([0-9]+)";`));
       startVersion = +matchResult[1];
       curVersion = startVersion;
 
