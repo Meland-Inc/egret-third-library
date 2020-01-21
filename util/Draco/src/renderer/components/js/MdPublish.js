@@ -813,6 +813,8 @@ export async function writeNativeIndexToPath(egretIndexPath) {
     let indexPath = Global.rawResourcePath + "/nativeIndex.html";
     let environ = ModelMgr.versionModel.curEnviron;
     let indexContent = await fsExc.readFile(indexPath);
+    let policyNum = ModelMgr.versionModel.policyNum;
+    indexContent = indexContent.replace(`let curPolicyVersion = "";`, `let curPolicyVersion = "${policyNum}";`);
     indexContent = indexContent.replace(`let patchVersion = "";`, `let patchVersion = "${releaseVersion}";`);
     indexContent = indexContent.replace(`let evnName = "";`, `let evnName = "${ModelMgr.versionModel.curEnviron.name}";`);
     if (ModelMgr.versionModel.curEnviron.name == ModelMgr.versionModel.eEnviron.release) {
@@ -838,7 +840,7 @@ export async function copyVersionToNative() {
     let releaseVersion = ModelMgr.versionModel.releaseVersion;
     let environ = ModelMgr.versionModel.curEnviron;
     let releasePath = `${Global.svnPublishPath}${environ.localPath}/release_v${releaseVersion}s`;
-    let policyNum = ModelMgr.versionModel.policyNum;
+
 
     //删除egret文件夹
     await fsExc.delFiles(pcEgretPath);
