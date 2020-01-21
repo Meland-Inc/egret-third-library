@@ -841,7 +841,7 @@ export async function copyVersionToNative() {
 
     //写index.html文件
     await writeNativeIndexToPath(pcEgretPath)
-    let policyPath = `${Global.svnPublishPath}${environ.localPolicyPath}/policyFile.json`
+    let policyPath = `${Global.svnPublishPath}${environ.localPolicyPath}/policyFile_v${policyNum}.json`
     await fsExc.copyFile(policyPath, pcEgretPath);
     console.log(`拷贝完毕`);
 }
