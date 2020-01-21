@@ -222,8 +222,7 @@ async function mergeSingleVersion(newVersion, oldVersion, isRelease) {
             await copyFileCheckDir('index.html', svnRlsPath, newVersion);
         }
         await copyFileCheckDir('index.html', svnPatchPath, newVersion);
-        let egretIndexPath = svnPatchPath + "/index.html";
-        await writeNativeIndexToPath(egretIndexPath);
+        await writeNativeIndexToPath(svnPatchPath);
 
         if (svnRlsPath) {
             await copyFileCheckDir('manifest.json', svnRlsPath, newVersion);
@@ -825,13 +824,10 @@ export async function writeNativeIndexToPath(egretIndexPath) {
         indexContent = indexContent.replace(`let policyUrl = "";`, `let policyUrl = "${environ.host}${environ.scpPath}";`);
     }
 
-    // let bExist = await fsExc.exists(egretIndexPath);
-    // console.log("222222", egretIndexPath, bExist)
-    // if (!bExist) {
+    await fsExc.writeFile(egretIndexPath + "/index.html", indexContent);
 
-    //     await fsExc.copyFile(indexPath, egretIndexPath.replace("index.html", ""));
-    // }
-    await fsExc.writeFile(egretIndexPath, indexContent);
+    let policyPath = `${Global.svnPublishPath}${environ.localPolicyPath}/policyFile_v${policyNum}.json`
+    await fsExc.copyFile(policyPath, egretIndexPath);
 }
 
 export async function copyVersionToNative() {
@@ -840,7 +836,6 @@ export async function copyVersionToNative() {
     let releaseVersion = ModelMgr.versionModel.releaseVersion;
     let environ = ModelMgr.versionModel.curEnviron;
     let releasePath = `${Global.svnPublishPath}${environ.localPath}/release_v${releaseVersion}s`;
-    let policyNum = ModelMgr.versionModel.policyNum;
 
     //删除egret文件夹
     await fsExc.delFiles(pcEgretPath);
@@ -849,12 +844,8 @@ export async function copyVersionToNative() {
     await fsExc.copyFile(releasePath, pcEgretPath, true);
 
     //写index.html文件
-    let egretIndexPath = pcEgretPath + "/index.html";
-    writeNativeIndexToPath(egretIndexPath)
+    await writeNativeIndexToPath(pcEgretPath)
 
-    //写policy文件
-    let policyPath = `${Global.svnPublishPath}${environ.localPolicyPath}/policyFile_v${policyNum}.json`
-    await fsExc.copyFile(policyPath, pcEgretPath);
     console.log(`拷贝完毕`);
 }
 
