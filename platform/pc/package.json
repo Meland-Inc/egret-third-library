@@ -27,7 +27,8 @@
       "./preload.js",
       "./render.js",
       "./package.json",
-      "./egret/**/*"
+      "./client/**/*",
+      "./server/**/*"
     ],
     "win": {
       "target": [
