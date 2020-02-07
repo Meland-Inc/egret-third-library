@@ -8198,9 +8198,8 @@ var egret;
             var totalUniforms = gl.getProgramParameter(program, gl.ACTIVE_UNIFORMS);
             for (var i = 0; i < totalUniforms; i++) {
                 var uniformData = gl.getActiveUniform(program, i);
-                var name_3 = uniformData.name;
                 var uniform = new web.EgretWebGLUniform(gl, program, uniformData);
-                uniforms[name_3] = uniform;
+                uniforms[uniform.name] = uniform;
             }
             return uniforms;
         }
@@ -8275,16 +8274,50 @@ var egret;
         var EgretWebGLUniform = (function () {
             function EgretWebGLUniform(gl, program, uniformData) {
                 this.gl = gl;
-                this.name = uniformData.name;
+                var tName = uniformData.name;
+                if (tName.substring(tName.length - 3) == '[0]') {
+                    this._name = tName.substring(0, tName.length - 3);
+                    this._isArray = true;
+                }
+                else {
+                    this._name = tName;
+                    this._isArray = false;
+                }
                 this.type = uniformData.type;
-                this.size = uniformData.size;
-                this.location = gl.getUniformLocation(program, this.name);
+                this._size = uniformData.size;
+                this.location = gl.getUniformLocation(program, uniformData.name);
                 this.setDefaultValue();
                 this.generateSetValue();
                 this.generateUpload();
             }
+            Object.defineProperty(EgretWebGLUniform.prototype, "name", {
+                get: function () {
+                    return this._name;
+                },
+                enumerable: true,
+                configurable: true
+            });
             EgretWebGLUniform.prototype.setDefaultValue = function () {
                 var type = this.type;
+                //数组
+                if (this._isArray) {
+                    switch (type) {
+                        case 5126 /* FLOAT */:
+                            this.value = new Float32Array(this._size);
+                            break;
+                        case 35664 /* FLOAT_VEC2 */:
+                            this.value = new Float32Array(this._size * 2);
+                            break;
+                        case 35665 /* FLOAT_VEC3 */:
+                            this.value = new Float32Array(this._size * 3);
+                            break;
+                        case 35666 /* FLOAT_VEC4 */:
+                            this.value = new Float32Array(this._size * 4);
+                            break;
+                    }
+                    return;
+                }
+                //非数组
                 switch (type) {
                     case 5126 /* FLOAT */:
                     case 35678 /* SAMPLER_2D */:
@@ -8333,6 +8366,26 @@ var egret;
             };
             EgretWebGLUniform.prototype.generateSetValue = function () {
                 var type = this.type;
+                //数组
+                if (this._isArray) {
+                    switch (type) {
+                        case 5126 /* FLOAT */:
+                        case 35664 /* FLOAT_VEC2 */:
+                        case 35665 /* FLOAT_VEC3 */:
+                        case 35666 /* FLOAT_VEC4 */:
+                            //为了加快这里效率 拼接程序放到游戏 这里拿到的就是长度相等的Float32Array
+                            this.setValue = function (value) {
+                                if (value.length != this.value.length) {
+                                    return;
+                                }
+                                this.value = value; //加快效率
+                                this.upload();
+                            };
+                            break;
+                    }
+                    return;
+                }
+                //非数组
                 switch (type) {
                     case 5126 /* FLOAT */:
                     case 35678 /* SAMPLER_2D */:
@@ -8390,6 +8443,37 @@ var egret;
                 var gl = this.gl;
                 var type = this.type;
                 var location = this.location;
+                //数组
+                if (this._isArray) {
+                    switch (type) {
+                        case 5126 /* FLOAT */:
+                            this.upload = function () {
+                                var value = this.value;
+                                gl.uniform1fv(location, value);
+                            };
+                            break;
+                        case 35664 /* FLOAT_VEC2 */:
+                            this.upload = function () {
+                                var value = this.value;
+                                gl.uniform2fv(location, value);
+                            };
+                            break;
+                        case 35665 /* FLOAT_VEC3 */:
+                            this.upload = function () {
+                                var value = this.value;
+                                gl.uniform3fv(location, value);
+                            };
+                            break;
+                        case 35666 /* FLOAT_VEC4 */:
+                            this.upload = function () {
+                                var value = this.value;
+                                gl.uniform4fv(location, value);
+                            };
+                            break;
+                    }
+                    return;
+                }
+                //非数组
                 switch (type) {
                     case 5126 /* FLOAT */:
                         this.upload = function () {
