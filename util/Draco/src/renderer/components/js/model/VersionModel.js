@@ -247,6 +247,8 @@ export class VersionModel {
                     let exist = await fsExc.exists(oldVersionPath);
                     if (exist) {
                         this.oldVersion = gameVersion;
+                    } else {
+                        this.oldVersion = 0;
                     }
                     resolve();
                 },

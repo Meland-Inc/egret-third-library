@@ -826,25 +826,47 @@ export async function writeNativeIndexToPath(egretIndexPath) {
     await fsExc.writeFile(egretIndexPath + "/index.html", indexContent);
 }
 
-export async function copyVersionToNative() {
-    console.log(`拷贝游戏包到native文件夹`);
-    let pcEgretPath = Global.pcProjectPath + "/egret";
+export async function updateServerPackage() {
+    let serverPackage = `${Global.svnPath}/server/native`;
+    await spawnExc.svnUpdate(serverPackage, "", "更新服务器包错误");
+
+}
+
+export async function copyServerPackageToNative() {
+    console.log(`拷贝服务器包到native文件夹`);
+    let pcServerPath = `$${Global.pcProjectPath}/server`;
+    let pcServerPackagePath = `${Global.pcProjectPath}/server.zip`;
+    let svnServerPackagePath = `${Global.svnPath}/server/native/server.zip`;
+    //删除egret文件夹
+    await fsExc.delFiles(pcServerPath);
+
+    //拷贝egret游戏资源包
+    await fsExc.copyFile(svnServerPackagePath, Global.pcProjectPath, true);
+    fsExc.unzipFile(`${pcServerPackagePath}`, Global.pcProjectPath);
+    fsExc.delFile(pcServerPackagePath);
+
+    console.log(`拷贝服务器包完毕`);
+}
+
+export async function copyClientPackageToNative() {
+    console.log(`拷贝客户端包到native文件夹`);
+    let pcClientPath = Global.pcProjectPath + "/client";
     let releaseVersion = ModelMgr.versionModel.releaseVersion;
     let environ = ModelMgr.versionModel.curEnviron;
     let releasePath = `${Global.svnPublishPath}${environ.localPath}/release_v${releaseVersion}s`;
     let policyNum = ModelMgr.versionModel.policyNum;
     //删除egret文件夹
-    await fsExc.delFiles(pcEgretPath);
+    await fsExc.delFiles(pcClientPath);
 
     //拷贝egret游戏资源包
-    await fsExc.copyFile(releasePath, pcEgretPath, true);
+    await fsExc.copyFile(releasePath, pcClientPath, true);
 
     //写index.html文件
-    await writeNativeIndexToPath(pcEgretPath)
+    await writeNativeIndexToPath(pcClientPath)
     let policyPath = `${Global.svnPublishPath}${environ.localPolicyPath}/policyFile_v${policyNum}.json`
-    await fsExc.copyFile(policyPath, pcEgretPath);
-    await fsExc.rename(pcEgretPath + `/policyFile_v${policyNum}.json`, pcEgretPath + `/policyFile.json`)
-    console.log(`拷贝完毕`);
+    await fsExc.copyFile(policyPath, pcClientPath);
+    await fsExc.rename(pcClientPath + `/policyFile_v${policyNum}.json`, pcClientPath + `/policyFile.json`)
+    console.log(`拷贝客户端包完毕`);
 }
 
 export async function publishWin() {

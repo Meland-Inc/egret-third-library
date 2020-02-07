@@ -455,7 +455,7 @@ export default {
   methods: {
     async onTestClick() {
       // this.isTestLoading = true;
-      // await mdPublish.copyVersionToNative();
+      // await mdPublish.copyClientPackageToNative();
       // await mdPublish.publishWin();
       // await mdPublish.publishMac();
       // await ModelMgr.ftpModel.initQiniuOption();
@@ -764,7 +764,9 @@ export default {
       this.isPublishNativeLoading = true;
       Global.showRegionLoading();
       try {
-        await mdPublish.copyVersionToNative();
+        await mdPublish.updateServerPackage();
+        await mdPublish.copyServerPackageToNative();
+        await mdPublish.copyClientPackageToNative();
         await mdPublish.publishWin();
         await mdPublish.publishMac();
         this.isPublishNativeLoading = false;
@@ -844,7 +846,10 @@ export default {
 
         if (this.containNative && this.curEnviron.nativeEnable) {
           //打包native包
-          promiseList.push(mdPublish.copyVersionToNative);
+          promiseList.push(await mdPublish.updateServerPackage());
+          promiseList.push(await mdPublish.copyServerPackageToNative());
+          promiseList.push(await mdPublish.copyClientPackageToNative());
+          promiseList.push(mdPublish.copyClientPackageToNative);
           promiseList.push(mdPublish.publishWin);
           promiseList.push(mdPublish.publishMac);
 
