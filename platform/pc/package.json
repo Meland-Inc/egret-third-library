@@ -2,7 +2,7 @@
   "name": "bellplanet",
   "version": "1.0.0",
   "description": "让孩子快乐的编程创造",
-  "main": "main.js",
+  "main": "./src/main.js",
   "scripts": {
     "start": "electron .",
     "dist": "electron-builder --win --x64",
@@ -22,10 +22,7 @@
     "appId": "org.egret.launcher.ymbl",
     "copyright": "Copyright © 2019 bellcode",
     "files": [
-      "./index.html",
-      "./main.js",
-      "./preload.js",
-      "./render.js",
+      "./src/**/*",
       "./package.json",
       "./client/**/*",
       "./server/**/*"

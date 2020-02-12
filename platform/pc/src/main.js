@@ -2,23 +2,24 @@
 const { app, globalShortcut, BrowserWindow, Menu, shell } = require('electron')
 const path = require('path')
 
-// Keep a global reference of the window object, if you don't, the window will
-// be closed automatically when the JavaScript object is garbage collected.
+const util = require('./util.js');
+
+
 let mainWindow
 
-function createWindow() {
+async function createWindow() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
     width: 1600,
     height: 900,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js'),
+      // preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true
     }
-  })
+  });
 
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html', { query: { fakeGameMode: "lessons" } })
+  mainWindow.loadFile(`${__dirname}/index.html`);
   // mainWindow.loadFile('index.html')
 
   // Open the DevTools.
@@ -29,11 +30,32 @@ function createWindow() {
     // Dereference the window object, usually you would store windows
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
-    mainWindow = null
+    util.closeGameServer();
+    mainWindow = null;
   })
 
   const menu = Menu.buildFromTemplate(template);
   Menu.setApplicationMenu(menu);
+}
+
+/** 关闭游戏服务器 */
+function closeGameServer() {
+  let options = {
+    host: localIp, // 请求地址 域名，google.com等.. 
+    port: gameServerPort,
+    path: `/native?controlType=closeServer`, // 具体路径eg:/upload
+    method: 'GET', // 请求方式, 这里以post为例
+    headers: { // 必选信息,  可以抓包工看一下
+      'Content-Type': 'application/json'
+    }
+  };
+
+  http.get(options, (response) => {
+    if (response.statusCode != 200) {
+      console.error(`关闭游戏服务器错误`, response);
+      return;
+    }
+  })
 }
 
 // This method will be called when Electron has finished

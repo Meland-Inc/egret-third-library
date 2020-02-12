@@ -1,5 +1,6 @@
 
 import * as loading from '../loading.js';
+import * as renderConfig from '../renderConfig.js';
 
 const request = require('request');
 const fs = require('fs');
@@ -11,10 +12,11 @@ let startVersion = 0;
 let curVersion = 0;
 let gameVersion = 0;
 let patchCount = 1;
-let resourcePath = "./resources/app/client/";
-if (navigator.userAgent.indexOf("Mac") > 0) {
-    resourcePath = "./Applications/bellplanet.app/Contents/Resources/app/client/";
-}
+let resourcePath = renderConfig.resourcePath;
+// let resourcePath = "./resources/app/client/";
+// if (navigator.userAgent.indexOf("Mac") > 0) {
+//     resourcePath = "./Applications/bellplanet.app/Contents/Resources/app/client/";
+// }
 const download = new StreamDownload();
 
 function downloadFileCallback(arg, filename, percentage) {
