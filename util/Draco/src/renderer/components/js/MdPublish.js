@@ -829,28 +829,27 @@ export async function writeNativeIndexToPath(egretIndexPath) {
 export async function updateServerPackage() {
     let serverPackage = `${Global.svnPath}/server/native`;
     await spawnExc.svnUpdate(serverPackage, "", "更新服务器包错误");
-
 }
 
 export async function copyServerPackageToNative() {
     console.log(`拷贝服务器包到native文件夹`);
-    let pcServerPath = `$${Global.pcProjectPath}/server`;
-    let pcServerPackagePath = `${Global.pcProjectPath}/server.zip`;
+    let pcPackagePath = `${Global.pcProjectPath}/package`;
+    let pcServerPackageFilePath = `${pcPackagePath}/server.zip`;
     let svnServerPackagePath = `${Global.svnPath}/server/native/server.zip`;
     //删除egret文件夹
-    await fsExc.delFiles(pcServerPath);
+    await fsExc.delFiles(`${pcPackagePath}/server`);
 
     //拷贝egret游戏资源包
-    await fsExc.copyFile(svnServerPackagePath, Global.pcProjectPath, true);
-    fsExc.unzipFile(`${pcServerPackagePath}`, Global.pcProjectPath);
-    fsExc.delFile(pcServerPackagePath);
+    await fsExc.copyFile(svnServerPackagePath, pcPackagePath, true);
+    fsExc.unzipFile(`${pcServerPackageFilePath}`, pcPackagePath);
+    fsExc.delFile(pcServerPackageFilePath);
 
     console.log(`拷贝服务器包完毕`);
 }
 
 export async function copyClientPackageToNative() {
     console.log(`拷贝客户端包到native文件夹`);
-    let pcClientPath = Global.pcProjectPath + "/client";
+    let pcClientPath = `${Global.pcProjectPath}/package/client`;
     let releaseVersion = ModelMgr.versionModel.releaseVersion;
     let environ = ModelMgr.versionModel.curEnviron;
     let releasePath = `${Global.svnPublishPath}${environ.localPath}/release_v${releaseVersion}s`;
