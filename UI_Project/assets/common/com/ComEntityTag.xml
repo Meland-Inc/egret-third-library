@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="66,23" extention="Label">
+  <displayList>
+    <graph id="n1_g6m3" name="n1" xy="0,0" size="66,23" type="rect" lineSize="0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <text id="n0_g6m3" name="title" xy="2,1" size="62,21" fontSize="14" align="center" vAlign="middle" bold="true" singleLine="true" text="教师资源"/>
+  </displayList>
+  <relation target="n0_g6m3" sidePair="width-width,height-height"/>
+</component>
