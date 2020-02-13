@@ -17,12 +17,11 @@
     <component id="n4_8qqi" name="labTitle" src="8qqicyiha" fileName="com/LabWinTitle.xml" pkg="te1gxawo" xy="41,30" group="n20_ra2b">
       <Label title="模板创作"/>
     </component>
-    <image id="n15_8qqi" name="imgSearchInputBg" src="oiqdcyigx" fileName="img/img_cm_ssk.png" pkg="te1gxawo" xy="1184,41" size="400,47" group="n19_ra2b"/>
-    <text id="n18_ra2b" name="inpSearch" xy="1227,53" size="347,26" group="n19_ra2b" input="true" prompt="[color=#999999]请输入搜索内容[/color]" fontSize="20" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text=""/>
-    <image id="n29_rujp" name="n29" src="rujpcyijl" fileName="img/icon_cm_ss.png" pkg="te1gxawo" xy="1192,50" size="32,32" group="n19_ra2b"/>
-    <group id="n19_ra2b" name="grpSearchInput" xy="1184,41" size="400,47" group="n20_ra2b" advanced="true" collapsed="true">
+    <image id="n15_8qqi" name="imgSearchInputBg" src="oiqdcyigx" fileName="img/img_cm_ssk.png" pkg="te1gxawo" xy="1220,41" size="400,47" group="n19_ra2b"/>
+    <text id="n18_ra2b" name="inpSearch" xy="1263,53" size="347,26" group="n19_ra2b" input="true" prompt="[color=#999999]请输入搜索内容[/color]" fontSize="20" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text=""/>
+    <image id="n29_rujp" name="n29" src="rujpcyijl" fileName="img/icon_cm_ss.png" pkg="te1gxawo" xy="1228,50" size="32,32" group="n19_ra2b"/>
+    <group id="n19_ra2b" name="grpSearchInput" xy="1220,41" size="400,47" group="n20_ra2b" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlViewStatus" pages="0,1"/>
-      <gearXY controller="ctrlViewStatus" pages="1,2" values="1400,41|1400,41" default="1184,41"/>
     </group>
     <component id="n30_kujx" name="btnRoomCodeEnter" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1646,41" size="160,48" group="n20_ra2b">
       <gearDisplay controller="ctrlViewStatus" pages="0"/>
@@ -54,14 +53,14 @@
       <gearDisplay controller="ctrlRightDetail" pages="1"/>
     </component>
     <image id="n22_ra2b" name="imgEmpty" src="c1h7cyii8" fileName="img/img_cm_blank.png" pkg="te1gxawo" xy="1573,453" group="n27_lmgf"/>
-    <text id="n25_lmgf" name="tfNoInfo" xy="1621,629" size="85,24" group="n27_lmgf" fontSize="20" color="#999999" text="暂无信息"/>
+    <text id="n25_lmgf" name="tfNoInfo" xy="1621,629" size="85,26" group="n27_lmgf" fontSize="20" color="#999999" text="暂无信息"/>
     <group id="n27_lmgf" name="grpEmpty" xy="1573,453" size="180,200" group="n24_ra2b" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlRightDetail" pages="2"/>
     </group>
     <group id="n24_ra2b" name="grpTemplateInfo" xy="31,118" size="1833,882" group="n20_ra2b" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlViewStatus" pages="0,1"/>
     </group>
-    <group id="n20_ra2b" name="root" xy="31,30" size="1860,999" advanced="true" collapsed="true">
+    <group id="n20_ra2b" name="root" xy="31,30" size="1860,999" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>
