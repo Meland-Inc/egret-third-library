@@ -1,13 +1,12 @@
 const spawn = require("child_process").spawn;
 const exec = require("child_process").exec;
-const { app } = require('electron');
-const path = require('path');
-const globalConfig = require('./globalConfig');
+const config = require('./config.js');
+const logger = require('./logger.js');
 const http = require('http');
 
 function runSpawn(command, param, cwd, successMsg, errorMsg) {
     return new Promise((resolve, reject) => {
-        console.log(`spawn --> command:${command} para:${param} cwd:${cwd}`);
+        logger.log('spawn', `spawn -->command:${command} para:${param} cwd:${cwd}`);
         let process = spawn(command, [param], { cwd: cwd });
         process.stdout.on("data", data => {
             console.log("stdout: " + data);
@@ -18,12 +17,12 @@ function runSpawn(command, param, cwd, successMsg, errorMsg) {
         process.on("exit", code => {
             if (code == 0) {
                 if (successMsg) {
-                    console.log(successMsg);
+                    logger.log('spawn', successMsg);
                 }
                 resolve(process);
             } else {
                 if (errorMsg) {
-                    console.error(errorMsg, false);
+                    logger.error('spawn', errorMsg, error);
                 }
                 reject();
             }
@@ -33,14 +32,16 @@ function runSpawn(command, param, cwd, successMsg, errorMsg) {
 
 function runCmd(cmd, cwd, successMsg, errorMsg) {
     return new Promise((resolve, reject) => {
-        console.log(`cmd --> cmd:${cmd} cwd:${cwd}`);
+        logger.log('cmd', `cmd --> command:${cmd} cwd:${cwd}`);
         let process = exec(cmd, { cwd: cwd }, (error) => {
             if (error) {
-                console.error(errorMsg, error, false);
+                if (errorMsg) {
+                    error('cmd', errorMsg, error);
+                }
                 reject(process);
             } else {
                 if (successMsg) {
-                    console.log(successMsg);
+                    logger.log('cmd', successMsg);
                 }
                 resolve(process);
             }
@@ -55,21 +56,25 @@ function runCmd(cmd, cwd, successMsg, errorMsg) {
     });
 }
 
-// function getRootPath() {
-//     return `${__dirname}/../`;
-// }
-
 /** 关闭游戏服务器 */
 function closeGameServer() {
-    if (!globalConfig.gameServerInited) {
+    if (!config.gameServerInited) {
         let cmdStr = "taskkill /im game.exe /f";
         runCmd(cmdStr, null, `游戏服务器关闭成功`, "游戏服务器关闭错误");
         return;
     }
+
+    let path = `/native?controlType=closeServer`
+    requstGameServerHttp(path, null, () => {
+        error(`net`, `游戏服务器关闭错误`, response);
+    });
+}
+
+function requstGameServerHttp(path, successFunc, errorFunc) {
     let options = {
-        host: globalConfig.localIp, // 请求地址 域名，google.com等.. 
-        port: globalConfig.gameServerPort,
-        path: `/native?controlType=closeServer`, // 具体路径eg:/upload
+        host: config.localIp, // 请求地址 域名，google.com等.. 
+        port: config.gameServerPort,
+        path: path, // 具体路径eg:/upload
         method: 'GET', // 请求方式, 这里以post为例
         headers: { // 必选信息,  可以抓包工看一下
             'Content-Type': 'application/json'
@@ -78,8 +83,13 @@ function closeGameServer() {
 
     http.get(options, (response) => {
         if (response.statusCode != 200) {
-            console.error(`游戏服务器关闭错误`, response);
+            if (errorFunc) {
+                errorFunc();
+            }
             return;
+        }
+        if (successFunc) {
+            successFunc();
         }
     })
 }
@@ -87,3 +97,4 @@ function closeGameServer() {
 exports.runSpawn = runSpawn;
 exports.runCmd = runCmd;
 exports.closeGameServer = closeGameServer;
+exports.requstGameServerHttp = requstGameServerHttp;

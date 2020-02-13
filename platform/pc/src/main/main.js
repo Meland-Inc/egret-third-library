@@ -3,6 +3,8 @@ const { app, globalShortcut, BrowserWindow, Menu, shell } = require('electron')
 const path = require('path')
 
 const util = require('./util.js');
+const logger = require('./logger.js');
+const config = require('./config.js');
 
 
 let mainWindow
@@ -19,8 +21,8 @@ async function createWindow() {
   });
 
   // and load the index.html of the app.
-  mainWindow.loadFile(`${__dirname}/index.html`);
-  // mainWindow.loadFile('index.html')
+  // mainWindow.loadFile(`${config.rootPath}/src/renderer/renderer.html`, { query: { fakeGameMode: "lessons" } });
+  mainWindow.loadFile(`${config.rootPath}/src/main/index.html`)
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
@@ -38,26 +40,6 @@ async function createWindow() {
   Menu.setApplicationMenu(menu);
 }
 
-/** 关闭游戏服务器 */
-function closeGameServer() {
-  let options = {
-    host: localIp, // 请求地址 域名，google.com等.. 
-    port: gameServerPort,
-    path: `/native?controlType=closeServer`, // 具体路径eg:/upload
-    method: 'GET', // 请求方式, 这里以post为例
-    headers: { // 必选信息,  可以抓包工看一下
-      'Content-Type': 'application/json'
-    }
-  };
-
-  http.get(options, (response) => {
-    if (response.statusCode != 200) {
-      console.error(`关闭游戏服务器错误`, response);
-      return;
-    }
-  })
-}
-
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
@@ -65,30 +47,28 @@ app.on('ready', () => {
   createWindow();
   let shortCut = "";
   if (process.platform === 'darwin') {
-    shortCut = 'Alt+Command+I'
+    shortCut = 'Alt+Command+I';
   } else {
-    shortCut = 'Ctrl+Shift+I'
+    shortCut = 'Ctrl+Shift+I';
   }
   globalShortcut.register(shortCut, () => {
-    console.log('CommandOrControl+X is pressed')
-    mainWindow.toggleDevTools()
-    mainWindow.toggleDevTools
-
+    logger.log('command', 'CommandOrControl+X is pressed');
+    mainWindow.toggleDevTools();
     mainWindow.webContents.toggleDevTools
   })
 })
 
 // Quit when all windows are closed.
-app.on('window-all-closed', function () {
+app.on('window-all-closed', () => {
   // On macOS it is common for applications and their menu bar
   // to stay active until the user quits explicitly with Cmd + Q
-  if (process.platform !== 'darwin') app.quit()
+  if (process.platform !== 'darwin') app.quit();
 })
 
-app.on('activate', function () {
+app.on('activate', () => {
   // On macOS it's common to re-create a window in the app when the
   // dock icon is clicked and there are no other windows open.
-  if (mainWindow === null) createWindow()
+  if (mainWindow === null) createWindow();
 })
 
 app.on('ready', () => {

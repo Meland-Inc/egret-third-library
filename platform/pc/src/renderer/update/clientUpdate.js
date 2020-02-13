@@ -1,6 +1,14 @@
+/**
+ * @author 雪糕 
+ * @desc 处理游戏客户端包更新逻辑
+ * @date 2020-02-13 14:56:09 
+ * @Last Modified by 雪糕 
+ * @Last Modified time 2020-02-13 14:56:09 
+ */
 
 import * as loading from '../loading.js';
-import * as renderConfig from '../renderConfig.js';
+import * as config from '../config.js';
+import * as logger from '../logger.js';
 
 const request = require('request');
 const fs = require('fs');
@@ -12,7 +20,7 @@ let startVersion = 0;
 let curVersion = 0;
 let gameVersion = 0;
 let patchCount = 1;
-let resourcePath = renderConfig.resourcePath;
+let resourcePath = config.resourcePath;
 // let resourcePath = "./resources/app/client/";
 // if (navigator.userAgent.indexOf("Mac") > 0) {
 //     resourcePath = "./Applications/bellplanet.app/Contents/Resources/app/client/";
@@ -35,15 +43,15 @@ function downloadFileCallback(arg, filename, percentage) {
             var zip = new admzip(resourcePath + filename);
             zip.extractAllTo(resourcePath, true);
         } catch (error) {
-            console.error("native extractAllTo error ： ", error, filename);
+            logger.error(`update`, `解压${filename}报错`, error);
             startRunGame();
         }
-        fs.unlink(resourcePath + filename, function (err) {
+        fs.unlink(resourcePath + filename, (err) => {
             if (err) {
                 throw err;
             }
-            console.log('文件:' + filename + '删除成功！');
-        })
+            logger.log(`update`, '文件:' + filename + '删除成功！');
+        });
         var indexContent = fs.readFileSync(resourcePath + "index.html").toString();
         var matchResult = indexContent.match(new RegExp(`let patchVersion = "([0-9]+)";`));
         curVersion = +matchResult[1];
@@ -87,7 +95,7 @@ StreamDownload.prototype.showProgress = function (received, total) {
 // // 下载过程
 StreamDownload.prototype.downloadFile = function (patchUrl, baseDir, filename, callback) {
     try {
-        console.log("native StreamDownload downloadFile:", patchUrl, filename, baseDir);
+        logger.log(`update`, `开始下载文件`, patchUrl, filename, baseDir)
         this.downloadCallback = callback; // 注册回调函数
         this.patchUrl = patchUrl + "/" + filename;
 
@@ -107,7 +115,7 @@ StreamDownload.prototype.downloadFile = function (patchUrl, baseDir, filename, c
         req.on('response', (data) => {
             // 更新总文件字节大小
             if (data.statusCode == 404) {
-                console.error("native StreamDownload downloadFile!cant find patch:", this.patchUrl);
+                logger.error(`update`, `下载patch包路径找不到文件`, this.patchUrl);
                 this.downloadCallback('404', filename, 100);
                 this.downloadCallback = null;
             } else {
@@ -123,7 +131,7 @@ StreamDownload.prototype.downloadFile = function (patchUrl, baseDir, filename, c
 
         req.on('end', () => {
             this.fileStream && this.fileStream.end();
-            console.log('下载已完成，等待处理', filename);
+            logger.log(`update`, `下载已完成，等待处理`, filename)
             // TODO: 检查文件，部署文件，删除文件
             setTimeout(() => {
                 this.downloadCallback && this.downloadCallback('finished', filename, 100);

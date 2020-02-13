@@ -2,10 +2,9 @@
   "name": "bellplanet",
   "version": "1.0.0",
   "description": "让孩子快乐的编程创造",
-  "main": "./src/main.js",
+  "main": "./src/main/main.js",
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder --win --x64",
     "build:win": "electron-builder --win --x64",
     "build:mac": "electron-builder --mac",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,13 +18,12 @@
   "build": {
     "productName": "bellplanet",
     "asar": false,
-    "appId": "org.egret.launcher.ymbl",
-    "copyright": "Copyright © 2019 bellcode",
+    "appId": "org.egret.launcher.bellplanet",
+    "copyright": "Copyright © 2020 bellcode",
     "files": [
       "./src/**/*",
       "./package.json",
-      "./client/**/*",
-      "./server/**/*"
+      "./package/**/*"
     ],
     "win": {
       "target": [
