@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="ti9jag5t" jpegQuality="80" compressPNG="true">
+<packageDescription id="ti9jag5t">
   <resources>
     <image id="s45w0" name="img_ide_cm_1.png" path="/ideCommon/img/" scale="9grid" scale9grid="2,2,36,36"/>
     <image id="s45w1" name="img_ide_cm_2.png" path="/ideCommon/img/" scale="9grid" scale9grid="13,13,26,26"/>
@@ -481,6 +481,6 @@
     <component id="j5zfwcyil8" name="ComBuildShovelView.xml" path="/ideCommon/com/" exported="true"/>
     <image id="j5zfwcyil9" name="icon_ide_dx_1.png" path="/ideCommon/img/"/>
     <image id="f06dwcyil8" name="icon_mapT_bq_2.png" path="/img/" scale="9grid" scale9grid="20,9,40,18"/>
-    </resources>
+  </resources>
   <publish name="ide"/>
 </packageDescription>
