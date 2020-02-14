@@ -6,8 +6,11 @@ const util = require('./util.js');
 const logger = require('./logger.js');
 
 let nativeCnf;
+let mainWindow;
 
-async function init() {
+async function init(value) {
+    mainWindow = value;
+    logger.init(mainWindow);
     await initNativeCnf();
     createHttpServer();
 }
@@ -28,16 +31,19 @@ function createHttpServer() {
         config.nativeServerPort = server.address().port;
         logger.log('net', '启动native服务器完毕,端口号', config.nativeServerPort);
 
+        await writeCnfValue('channel', config.channel);
         await writeCnfValue("nativePort", config.nativeServerPort + "");
         await runGameServer();
+
+        // logger.log('net', '跳转到游戏渲染地址');
+        // let clientArg = `&fakeGameMode=lessons&pcNative=1`;
+        // let rendererPath = `${config.rootPath}/src/renderer/renderer.html?${clientArg}`;
+        // window.location.href = rendererPath;
     });
 
     server.on('request', (req, res) => {
         let urlObj = url.parse(req.url, true);
         let args = urlObj.query;
-        let clientArg = `&fakeGameMode=lessons`
-        // let serverArg = `&gameChannel=${args.channel}&gameServer=${args.ip}:${args.port}`;
-        let serverArg = `&gameServer=${args.ip}:${args.port}`;
         let pathname = urlObj.pathname;
         if (pathname === "/serverState") {
             if (config.gameServerInited) {
@@ -47,12 +53,11 @@ function createHttpServer() {
             config.gameServerInited = true;
 
             logger.log('net', '收到服务器启动完毕消息');
-            logger.log('net', '跳转到游戏渲染地址');
 
-            let rendererPath = `${config.rootPath}/src/renderer/renderer.html?${clientArg}${serverArg}`
+            logger.log('net', 'native游戏客户端登录本地游戏服务器');
+            let gameServer = `${args.ip}:${args.port}`;
+            mainWindow.webContents.executeJavaScript(`window.nativeSignIn(\'${gameServer}\');`);
 
-            // res.writeHead(302, { 'Location': rendererPath });
-            window.location.href = rendererPath;
             //关闭服务器推送
             let path = `/native?controlType=receiveStart`;
             util.requstGameServerHttp(path, () => {
@@ -79,4 +84,5 @@ async function writeCnfValue(key, value) {
     await fs.writeFileSync(config.nativeCnfPath, JSON.stringify(nativeCnf, null, 4));
 }
 
-init();
+// init();
+exports.init = init;

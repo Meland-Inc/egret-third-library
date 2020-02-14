@@ -1,34 +1,34 @@
-const spawn = require("child_process").spawn;
+// const spawn = require("child_process").spawn;
 const exec = require("child_process").exec;
 const config = require('./config.js');
 const logger = require('./logger.js');
 const http = require('http');
 
-function runSpawn(command, param, cwd, successMsg, errorMsg) {
-    return new Promise((resolve, reject) => {
-        logger.log('spawn', `spawn -->command:${command} para:${param} cwd:${cwd}`);
-        let process = spawn(command, [param], { cwd: cwd });
-        process.stdout.on("data", data => {
-            console.log("stdout: " + data);
-        });
-        process.stderr.on("data", data => {
-            console.log("stderr: " + data);
-        });
-        process.on("exit", code => {
-            if (code == 0) {
-                if (successMsg) {
-                    logger.log('spawn', successMsg);
-                }
-                resolve(process);
-            } else {
-                if (errorMsg) {
-                    logger.error('spawn', errorMsg, error);
-                }
-                reject();
-            }
-        });
-    });
-}
+// function runSpawn(command, param, cwd, successMsg, errorMsg) {
+//     return new Promise((resolve, reject) => {
+//         logger.log('spawn', `spawn -->command:${command} para:${param} cwd:${cwd}`);
+//         let process = spawn(command, [param], { cwd: cwd });
+//         process.stdout.on("data", data => {
+//             logger.log('stdout', data);
+//         });
+//         process.stderr.on("data", data => {
+//             logger.log('stderr', data);
+//         });
+//         process.on("exit", code => {
+//             if (code == 0) {
+//                 if (successMsg) {
+//                     logger.log('spawn', successMsg);
+//                 }
+//                 resolve(process);
+//             } else {
+//                 if (errorMsg) {
+//                     logger.error('spawn', errorMsg, error);
+//                 }
+//                 reject();
+//             }
+//         });
+//     });
+// }
 
 function runCmd(cmd, cwd, successMsg, errorMsg) {
     return new Promise((resolve, reject) => {
@@ -36,7 +36,7 @@ function runCmd(cmd, cwd, successMsg, errorMsg) {
         let process = exec(cmd, { cwd: cwd }, (error) => {
             if (error) {
                 if (errorMsg) {
-                    error('cmd', errorMsg, error);
+                    loger.error('cmd', errorMsg, error);
                 }
                 reject(process);
             } else {
@@ -48,10 +48,10 @@ function runCmd(cmd, cwd, successMsg, errorMsg) {
         });
 
         process.stdout.on("data", data => {
-            console.log("stdout: " + data);
+            logger.log('process', 'stdout', data);
         });
         process.stderr.on("data", data => {
-            console.log("stderr: " + data);
+            logger.log('process', 'stderr', data);
         });
     });
 }
@@ -94,7 +94,7 @@ function requstGameServerHttp(path, successFunc, errorFunc) {
     })
 }
 
-exports.runSpawn = runSpawn;
+// exports.runSpawn = runSpawn;
 exports.runCmd = runCmd;
 exports.closeGameServer = closeGameServer;
 exports.requstGameServerHttp = requstGameServerHttp;
