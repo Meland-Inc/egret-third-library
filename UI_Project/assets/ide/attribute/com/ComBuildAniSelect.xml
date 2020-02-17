@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="430,1080" designImage="ui://thvmj7vo80ab4" designImageOffsetX="-1795">
   <controller name="ctrlState" exported="true" pages="1,open,0,fold" selected="0"/>
-  <controller name="ctrlSelectType" pages="0,unselect,1,select" selected="1"/>
+  <controller name="ctrlSelectType" pages="0,unselect,1,select" selected="0"/>
   <displayList>
     <graph id="n29_smiy" name="n29" xy="0,0" size="430,1080" visible="false" alpha="0" touchable="false" type="rect">
       <gearXY controller="ctrlState" pages="1,0" values="0,0|0,0"/>
@@ -152,18 +152,18 @@
       <item/>
     </list>
     <image id="n50_pkmm" name="n50" src="80ab99" fileName="ideCommon/img/img_ide_cm_h.png" xy="-1,1012" size="430,2" group="n51_pkmm"/>
-    <text id="n52_ibzj" name="tf" xy="27,1034" size="109,29" group="n51_pkmm" fontSize="22" vAlign="middle" bold="true" text="新增动画 :"/>
-    <text id="n53_ibzj" name="tfNum" xy="137,1034" size="17,29" group="n51_pkmm" fontSize="22" vAlign="middle" bold="true" text="1"/>
+    <text id="n52_ibzj" name="tf" xy="27,1034" size="110,29" group="n51_pkmm" fontSize="22" vAlign="middle" bold="true" text="新增动画 :"/>
+    <text id="n53_ibzj" name="tfNum" xy="137,1034" size="16,29" group="n51_pkmm" fontSize="22" vAlign="middle" bold="true" text="1"/>
     <group id="n51_pkmm" name="grpSelect" xy="-10,788" size="448,296" group="n42_smiy" advanced="true">
       <gearDisplay controller="ctrlSelectType" pages="1"/>
       <relation target="" sidePair="bottom-bottom"/>
     </group>
-    <component id="n39_smiy" name="btnConfirm" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="306,1024" size="110,40" group="n42_smiy">
+    <component id="n39_smiy" name="btnConfirm" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="306,1032" size="110,40" group="n42_smiy">
       <gearDisplay controller="ctrlSelectType" pages="1"/>
       <relation target="" sidePair="bottom-bottom,right-right"/>
       <Button title="确定" titleColor="#ffffff" icon="ui://te1gxawooiqdcyih1" controller="ctrlSelectType" page="0"/>
     </component>
-    <component id="n40_smiy" name="btnClear" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="179,1024" size="110,40" group="n42_smiy">
+    <component id="n40_smiy" name="btnClear" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="179,1032" size="110,40" group="n42_smiy">
       <gearDisplay controller="ctrlSelectType" pages="1"/>
       <relation target="" sidePair="bottom-bottom,right-right"/>
       <Button title="清空" titleColor="#ffffff" icon="ui://te1gxawoeggjcyihf" controller="ctrlSelectType" page="0"/>
@@ -171,7 +171,7 @@
     <component id="n41_smiy" name="btnDrawingPad" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="302,7" size="110,40" group="n42_smiy">
       <Button title="画板" titleColor="#ffffff" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <component id="n47_pkmm" name="btnBack" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="306,1024" size="110,40" group="n42_smiy">
+    <component id="n47_pkmm" name="btnBack" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="306,1032" size="110,40" group="n42_smiy">
       <gearDisplay controller="ctrlSelectType" pages="0"/>
       <relation target="" sidePair="bottom-bottom,right-right"/>
       <Button title="取消" titleColor="#ffffff" icon="ui://te1gxawoeggjcyihf"/>
