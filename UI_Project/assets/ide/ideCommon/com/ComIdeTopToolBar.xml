@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1495,56" designImage="ui://thvmj7vo80ab4" designImageOffsetX="-300" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlFuncSelect" pages="3,none,0,xyCoordinate,1,rcCoordinate,2,hideLine" selected="0"/>
+  <controller name="ctrlFuncSelect" pages="3,none,0,xyCoordinate,1,rcCoordinate,2,hideLine" selected="1"/>
   <displayList>
     <image id="n0_cw9m" name="imgBg" src="xba67m" fileName="ideCommon/img/img_ide_cm_6.png" xy="0,0" size="1495,56">
       <relation target="" sidePair="width-width"/>
@@ -33,11 +33,17 @@
     </component>
     <component id="n21_amog" name="btnXYGrid" src="dyk9b6" fileName="ideCommon/btn/tBtnIdeTopToolBar.xml" xy="1178,2">
       <relation target="" sidePair="right-right"/>
-      <Button title="自然坐标" icon="ui://ti9jag5tamogt8o" selectedIcon="ui://ti9jag5ten7jwcyijr" controller="ctrlFuncSelect" page="0"/>
+      <Button checked="true" title="自然坐标" icon="ui://ti9jag5tamogt8o" selectedIcon="ui://ti9jag5ten7jwcyijr" controller="ctrlFuncSelect" page="0"/>
     </component>
     <component id="n22_amog" name="btnRCGrid" src="dyk9b6" fileName="ideCommon/btn/tBtnIdeTopToolBar.xml" xy="1126,2">
       <relation target="" sidePair="right-right"/>
       <Button title="场景坐标" icon="ui://ti9jag5tamogt8i" selectedIcon="ui://ti9jag5ten7jwcyijq" controller="ctrlFuncSelect" page="1"/>
+    </component>
+    <component id="n23_tgxu" name="btnJumpPre" src="en7jwcyijv" fileName="ideCommon/btn/BtnIdeTopToolBar.xml" xy="102,2">
+      <Button title="后退" icon="ui://ti9jag5tzgght7z"/>
+    </component>
+    <component id="n24_tgxu" name="btnJumpNext" src="en7jwcyijv" fileName="ideCommon/btn/BtnIdeTopToolBar.xml" xy="160,2">
+      <Button title="前进" icon="ui://ti9jag5tzgght7x"/>
     </component>
   </displayList>
 </component>
