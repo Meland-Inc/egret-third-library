@@ -29,6 +29,14 @@
       "target": [
         "nsis"
       ],
+      "signingHashAlgorithms": [
+        "sha256",
+        "sha1"
+      ],
+      "signDlls": true,
+      "rfc3161TimeStampServer": "http://timestamp.digicert.com",
+      "certificateFile": "bellplanet.pfx",
+      "certificatePassword": "bellcode123",
       "icon": "./icon/icon.ico"
     },
     "dmg": {

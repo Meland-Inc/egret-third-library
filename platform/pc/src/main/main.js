@@ -90,7 +90,6 @@ async function saveProccessLog() {
     });
   let content = await fs.readFileSync(config.processLogPath, 'utf-8');
   let result = await fs.writeFileSync(path, content, 'utf-8');
-  result;
 }
 
 // In this file you can include the rest of your app's specific main process
