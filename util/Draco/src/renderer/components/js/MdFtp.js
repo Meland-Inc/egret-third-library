@@ -117,6 +117,7 @@ export function uploadCdnVersionFile() {
         let readyEnviron = ModelMgr.versionModel.environList.find(value => value.name === ModelMgr.versionModel.eEnviron.ready);
         let readyPath = `${Global.svnPublishPath}${readyEnviron.localPath}`;
         let curGameVersion = releaseGameVersion;
+        let hasPatch = false;
         for (let i = +releaseGameVersion + 1; i <= readyGameVersion; i++) {
             let patchVersion = `patch_v${curGameVersion}s-v${i}s`;
             let patchPath = `${readyPath}/${patchVersion}/`;
@@ -125,10 +126,16 @@ export function uploadCdnVersionFile() {
                 continue;
             }
 
+            hasPatch = true;
             await uploadCdnSingleVersionFile(patchPath, releaseEnviron.cdnRoot);
             curGameVersion = i;
         }
 
+        //没有patch包,传整包
+        if (!hasPatch) {
+            let releasePath = `${readyPath}/release_v${readyGameVersion}s`;
+            await uploadCdnSingleVersionFile(releasePath, releaseEnviron.cdnRoot);
+        }
         resolve();
     });
 }

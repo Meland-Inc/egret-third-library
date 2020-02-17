@@ -455,7 +455,7 @@ export default {
   methods: {
     async onTestClick() {
       // this.isTestLoading = true;
-      // await mdPublish.copyVersionToNative();
+      // await mdPublish.copyClientPackageToNative();
       // await mdPublish.publishWin();
       // await mdPublish.publishMac();
       // await ModelMgr.ftpModel.initQiniuOption();
@@ -543,6 +543,11 @@ export default {
       this.cdnUrl = ModelMgr.versionModel.cdnUrl;
     },
     async onUpdateGitClick() {
+      if (!ModelMgr.versionModel.publisher) {
+        Global.snack("请输入发布者", null, false);
+        return;
+      }
+
       this.isUpdateGitLoading = true;
       Global.showRegionLoading();
 
@@ -562,6 +567,11 @@ export default {
       // }
     },
     async onCompressFileClick(showDialog = true) {
+      if (!ModelMgr.versionModel.publisher) {
+        Global.snack("请输入发布者", null, false);
+        return;
+      }
+
       this.isCompressPicLoading = true;
       Global.showRegionLoading();
 
@@ -580,6 +590,11 @@ export default {
         });
     },
     async onPublishProjectClick(showDialog = true) {
+      if (!ModelMgr.versionModel.publisher) {
+        Global.snack("请输入发布者", null, false);
+        return;
+      }
+
       this.isPublishProjectLoading = true;
       Global.showRegionLoading();
       try {
@@ -596,6 +611,11 @@ export default {
       }
     },
     async onCopyPicturesClick(showDialog = true) {
+      if (!ModelMgr.versionModel.publisher) {
+        Global.snack("请输入发布者", null, false);
+        return;
+      }
+
       this.isCopyCompressPicLoading = true;
       Global.showRegionLoading();
 
@@ -614,6 +634,11 @@ export default {
         });
     },
     async onMergeVersionClick(showDialog = true) {
+      if (!ModelMgr.versionModel.publisher) {
+        Global.snack("请输入发布者", null, false);
+        return;
+      }
+
       this.isMergeVersionLoading = true;
       Global.showRegionLoading();
 
@@ -633,6 +658,11 @@ export default {
         });
     },
     async onZipVersion() {
+      if (!ModelMgr.versionModel.publisher) {
+        Global.snack("请输入发布者", null, false);
+        return;
+      }
+
       this.isZipVersionLoading = true;
       Global.showRegionLoading();
       try {
@@ -645,6 +675,11 @@ export default {
       }
     },
     async onUploadVersionFile(showDialog = true) {
+      if (!ModelMgr.versionModel.publisher) {
+        Global.snack("请输入发布者", null, false);
+        return;
+      }
+
       this.isUploadVersionLoading = true;
       Global.showRegionLoading();
       try {
@@ -660,6 +695,11 @@ export default {
       }
     },
     async onCreatePolicyFile() {
+      if (!ModelMgr.versionModel.publisher) {
+        Global.snack("请输入发布者", null, false);
+        return;
+      }
+
       this.isCreatePolicyFileLoading = true;
       Global.showRegionLoading();
       try {
@@ -672,6 +712,11 @@ export default {
       }
     },
     async onModifyPolicyFile() {
+      if (!ModelMgr.versionModel.publisher) {
+        Global.snack("请输入发布者", null, false);
+        return;
+      }
+
       this.isModifyPolicyNumLoading = true;
       Global.showRegionLoading();
       try {
@@ -684,6 +729,11 @@ export default {
       }
     },
     async onUploadPolicyFile() {
+      if (!ModelMgr.versionModel.publisher) {
+        Global.snack("请输入发布者", null, false);
+        return;
+      }
+
       this.isUploadPolicyLoading = true;
       Global.showRegionLoading();
       try {
@@ -699,6 +749,11 @@ export default {
       }
     },
     async onApplyPolicyNum() {
+      if (!ModelMgr.versionModel.publisher) {
+        Global.snack("请输入发布者", null, false);
+        return;
+      }
+
       this.isApplyPolicyNumLoading = true;
       Global.showRegionLoading();
 
@@ -725,6 +780,11 @@ export default {
       Global.toast(`游戏版本:${gameVersion}`);
     },
     async commitGit() {
+      if (!ModelMgr.versionModel.publisher) {
+        Global.snack("请输入发布者", null, false);
+        return;
+      }
+
       this.isCommitGitLoading = true;
       Global.showRegionLoading();
       try {
@@ -737,6 +797,11 @@ export default {
       }
     },
     async pushGit() {
+      if (!ModelMgr.versionModel.publisher) {
+        Global.snack("请输入发布者", null, false);
+        return;
+      }
+
       this.isPullGitLoading = true;
       Global.showRegionLoading();
       try {
@@ -749,6 +814,11 @@ export default {
       }
     },
     async zipUploadGame() {
+      if (!ModelMgr.versionModel.publisher) {
+        Global.snack("请输入发布者", null, false);
+        return;
+      }
+
       this.isZipUploadGameLoading = true;
       Global.showRegionLoading();
       try {
@@ -761,10 +831,17 @@ export default {
       }
     },
     async onPublishNative() {
+      if (!ModelMgr.versionModel.publisher) {
+        Global.snack("请输入发布者", null, false);
+        return;
+      }
+
       this.isPublishNativeLoading = true;
       Global.showRegionLoading();
       try {
-        await mdPublish.copyVersionToNative();
+        await mdPublish.updateServerPackage();
+        await mdPublish.copyServerPackageToNative();
+        await mdPublish.copyClientPackageToNative();
         await mdPublish.publishWin();
         await mdPublish.publishMac();
         this.isPublishNativeLoading = false;
@@ -775,6 +852,11 @@ export default {
       }
     },
     async onUploadNative() {
+      if (!ModelMgr.versionModel.publisher) {
+        Global.snack("请输入发布者", null, false);
+        return;
+      }
+
       this.isUploadNativeLoading = true;
       Global.showRegionLoading();
       try {
@@ -844,7 +926,10 @@ export default {
 
         if (this.containNative && this.curEnviron.nativeEnable) {
           //打包native包
-          promiseList.push(mdPublish.copyVersionToNative);
+          promiseList.push(await mdPublish.updateServerPackage());
+          promiseList.push(await mdPublish.copyServerPackageToNative());
+          promiseList.push(await mdPublish.copyClientPackageToNative());
+          promiseList.push(mdPublish.copyClientPackageToNative);
           promiseList.push(mdPublish.publishWin);
           promiseList.push(mdPublish.publishMac);
 

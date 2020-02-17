@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1495,56" designImage="ui://thvmj7vo80ab4" designImageOffsetX="-300" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlFuncSelect" pages="3,none,0,xyCoordinate,1,rcCoordinate,2,hideLine" selected="0"/>
+  <controller name="ctrlFuncSelect" pages="3,none,0,xyCoordinate,1,rcCoordinate,2,hideLine" selected="3"/>
+  <controller name="ctrlCode" pages="0,true,1,false" selected="0"/>
   <displayList>
     <image id="n0_cw9m" name="imgBg" src="xba67m" fileName="ideCommon/img/img_ide_cm_6.png" xy="0,0" size="1495,56">
       <relation target="" sidePair="width-width"/>
@@ -10,7 +11,7 @@
     </component>
     <component id="n13_dyk9" name="btnHideLine" src="dyk9b6" fileName="ideCommon/btn/tBtnIdeTopToolBar.xml" xy="1230,2">
       <relation target="" sidePair="right-right"/>
-      <Button title="隐藏线" icon="ui://ti9jag5t80ab8h" selectedIcon="ui://ti9jag5ten7jwcyijs" controller="ctrlFuncSelect" page="2"/>
+      <Button checked="true" title="隐藏线" icon="ui://ti9jag5t80ab8h" selectedIcon="ui://ti9jag5ten7jwcyijs" controller="ctrlFuncSelect" page="2"/>
     </component>
     <component id="n17_dyk9" name="btnRestartCode" src="en7jwcyijv" fileName="ideCommon/btn/BtnIdeTopToolBar.xml" xy="1282,2">
       <relation target="" sidePair="right-right"/>
@@ -38,6 +39,14 @@
     <component id="n22_amog" name="btnRCGrid" src="dyk9b6" fileName="ideCommon/btn/tBtnIdeTopToolBar.xml" xy="1126,2">
       <relation target="" sidePair="right-right"/>
       <Button title="场景坐标" icon="ui://ti9jag5tamogt8i" selectedIcon="ui://ti9jag5ten7jwcyijq" controller="ctrlFuncSelect" page="1"/>
+    </component>
+    <component id="n23_tgxu" name="btnJumpPre" src="en7jwcyijv" fileName="ideCommon/btn/BtnIdeTopToolBar.xml" xy="102,2">
+      <gearDisplay controller="ctrlCode" pages="0"/>
+      <Button title="后退" icon="ui://ti9jag5tzgght7z"/>
+    </component>
+    <component id="n24_tgxu" name="btnJumpNext" src="en7jwcyijv" fileName="ideCommon/btn/BtnIdeTopToolBar.xml" xy="160,2">
+      <gearDisplay controller="ctrlCode" pages="0"/>
+      <Button title="前进" icon="ui://ti9jag5tzgght7x"/>
     </component>
   </displayList>
 </component>
