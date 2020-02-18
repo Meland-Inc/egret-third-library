@@ -1,3 +1,10 @@
+/**
+ * @author 雪糕 
+ * @desc renderer主程序
+ * @date 2020-02-18 11:44:51 
+ * @Last Modified by: 雪糕
+ * @Last Modified time: 2020-02-18 15:40:40
+ */
 import * as clientUpdate from './update/clientUpdate.js';
 import * as config from './config.js';
 import * as logger from './logger.js';
@@ -84,9 +91,9 @@ function startLoadPolicy(policyVersion) {
 function startRunGame() {
     let hrefArr = location.href.split(".html");
     if (hrefArr[1] != "") {
-        location.href = `${__dirname}/../../package/client/index.html${hrefArr[1]}`;
+        location.href = `${config.rootPath}/package/client/index.html${hrefArr[1]}`;
     } else {
-        location.href = `${__dirname}/../../package/client/index.html`;
+        location.href = `${config.rootPath}/package/client/index.html`;
     }
 }
 

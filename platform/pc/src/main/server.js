@@ -1,3 +1,10 @@
+/**
+ * @author 雪糕 
+ * @desc 处理native服务器和游戏服务器的文件
+ * @date 2020-02-18 11:42:29 
+ * @Last Modified by 雪糕 
+ * @Last Modified time 2020-02-18 11:42:29 
+ */
 const http = require('http');
 const url = require('url');
 const fs = require('fs');
@@ -84,5 +91,4 @@ async function writeCnfValue(key, value) {
     await fs.writeFileSync(config.nativeCnfPath, JSON.stringify(nativeCnf, null, 4));
 }
 
-// init();
 exports.init = init;

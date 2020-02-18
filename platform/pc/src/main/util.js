@@ -1,3 +1,10 @@
+/**
+ * @author 雪糕 
+ * @desc main用的工具类
+ * @date 2020-02-18 11:43:24 
+ * @Last Modified by 雪糕 
+ * @Last Modified time 2020-02-18 11:43:24 
+ */
 // const spawn = require("child_process").spawn;
 const exec = require("child_process").exec;
 const config = require('./config.js');
