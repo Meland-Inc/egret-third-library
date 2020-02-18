@@ -1,370 +1,111 @@
-[native][process]2020-2-18 15:48:34	stdout:["2020/02/18 15:48:34.765 [I]  ================ serverModel(lesson), IsDevelop(false), IsNative(true) ============
+[native][process]2020-2-18 18:2:25	stdout:["2020/02/18 18:02:25.143 [I]  ================ serverModel(lesson), IsDevelop(false), IsNative(true) ============
 "]
-[native][process]2020-2-18 15:48:34	stdout:["2020/02/18 15:48:34.796 [I]  nativeData = &{School:测试学校1 Class:20200212 Lesson:开启星球之旅 StageIndex:1 Channel:bian_game StudentNum:10 NativeHost:127.0.0.1 NativePort:4175 TemplateUrl:http://demoapi.wkcoding.com/feature/release.txt LessonData:0xc0002d1600}
-2020/02/18 15:48:34.796 [I]  nativeData.LessonData = &{LessonTemplateId:9020102 DefaultShortcuts:[0 0 0 0 0 0 0 0] SceneId:0 ManorTemplate:0 MapTemplate:67891160030380947 RobotCodeTemplate:0 BuildNumLimit:10000 DefaultBagItems:[11000241:3 11000244:3 21015007:99] DefaultShortcutsv2:[3010093:30 21012007:99 21015001:99 21015002:99 21015003:99 21015004:99 21015005:99 21015006:99] EntityCodeList:0 GuideBoard: IdeEnable:false RobotBlockLibId:0 Tutorial:0xc00037a5c0}
-2020/02/18 15:48:34.796 [I]  nativeData.LessonData.Tutorial = &{Name:开启星球之旅（二） Resources:[0xc0002d3140 0xc0002d3170 0xc0002d31a0 0xc0002d31d0] TargetGuide:找到零件，将零件放到传送机附近，修好传送机}
-2020/02/18 15:48:34.796 [I]  nativeServerGid = 790
-2020/02/18 15:48:34.796 [I]  nativeServerName = s_测试学校1_c_20200212_l_开启星球之旅_n_1
+[native][process]2020-2-18 18:2:25	stdout:["2020/02/18 18:02:25.172 [I]  nativeData = &{School:测试学校1 Class:20200212 Lesson:开启星球之旅 StageIndex:1 Channel:bian_game StudentNum:10 NativeHost:127.0.0.1 NativePort:9294 TemplateUrl:http://demoapi.wkcoding.com/feature/release.txt LessonData:0xc00047bce0}
+2020/02/18 18:02:25.172 [I]  nativeData.LessonData = &{LessonTemplateId:9020102 DefaultShortcuts:[0 0 0 0 0 0 0 0] SceneId:0 ManorTemplate:0 MapTemplate:67891160030380947 RobotCodeTemplate:0 BuildNumLimit:10000 DefaultBagItems:[11000241:3 11000244:3 21015007:99] DefaultShortcutsv2:[3010093:30 21012007:99 21015001:99 21015002:99 21015003:99 21015004:99 21015005:99 21015006:99] EntityCodeList:0 GuideBoard: IdeEnable:false RobotBlockLibId:0 Tutorial:0xc000682240}
+2020/02/18 18:02:25.172 [I]  nativeData.LessonData.Tutorial = &{Name:开启星球之旅（二） Resources:[0xc0006916b0 0xc0006916e0 0xc000691710 0xc000691740] TargetGuide:找到零件，将零件放到传送机附近，修好传送机}
+2020/02/18 18:02:25.172 [I]  nativeServerGid = 790
+2020/02/18 18:02:25.172 [I]  nativeServerName = s_测试学校1_c_20200212_l_开启星球之旅_n_1
 "]
-[native][process]2020-2-18 15:48:34	stdout:["{\"hostname\":\"WIN-01408111057\",\"message\":\"initializing\",\"mode\":\"develop\",\"server\":\"bian_game\",\"time\":\"2020-02-18T07:48:34.8615264Z\",\"version\":\"bian-go1.13-unknown-unknown\"}
+[native][process]2020-2-18 18:2:25	stdout:["{\"hostname\":\"WIN-01408111057\",\"message\":\"initializing\",\"mode\":\"develop\",\"server\":\"bian_game\",\"time\":\"2020-02-18T10:02:25.2195174Z\",\"version\":\"bian-go1.13-unknown-unknown\"}
 "]
-[native][process]2020-2-18 15:48:34	stdout:["2020/02/18 15:48:34.916 [I]  init flag &{Sid:790 EditMap:false RoomMap:false UseMapTemplate: OssUrl:oss-cn-shanghai.aliyuncs.com MapTemplateId:0 TemplateDNS: ClassDNS: CnfDNS: RoomServerHost: MapTemplateUrl: TestModel:false RoomPassword:0 RedisDNS:}
+[native][process]2020-2-18 18:2:25	stdout:["2020/02/18 18:02:25.270 [I]  init flag &{Sid:790 EditMap:false RoomMap:false UseMapTemplate: OssUrl:oss-cn-shanghai.aliyuncs.com MapTemplateId:0 TemplateDNS: ClassDNS: CnfDNS: RoomServerHost: MapTemplateUrl: TestModel:false RoomPassword:0 RedisDNS:}
 "]
-[native][process]2020-2-18 15:48:34	stdout:["2020/02/18 15:48:34.935 [I]  *********************************************************************************************
-2020/02/18 15:48:34.935 [I]  --------------  nativeServerChannel = bian_game -----------------------------------
-2020/02/18 15:48:34.935 [I]  *********************************************************************************************
-2020/02/18 15:48:34.935 [I]  --------------  nativeLessonInfo    = &{GId:790 PackageId:1 ClassID:790 LessonID:1 ActivityId:1 ActivityName: LessonName:s_测试学校1_c_20200212_l_开启星球之旅_n_1 GameHost:192.168.31.21 GamePort:3211 Channel:bian_game BellcodeSecret:<nil> Client_version:304 LessonHost:47.107.73.43 LessonPort:3306 LessonUsername:root LessonPassword:root LessonDatabaseName:lesson_s_测试学校1_c_20200212_l_开启星球之旅_n_1 CfgHost:47.107.73.43 CfgPort:3306 CfgUsername:root CfgPassword:root CfgDatabaseName:bian_cnf TemplateHost:47.107.73.43 TemplatePort:3306 TemplateUsername:root TemplatePassword:root TemplateDatabaseName:bian_template LastPlayTime:0001-01-01 00:00:00 +0000 UTC TemplateUrl:http://demoapi.wkcoding.com/feature/release.txt StudentNum:10 IsTest:0 LessonDsn:0xc000408050 CfgDsn:0xc0004080a0 TemplateDsn:0xc0004080f0 ManorTemplateID:0 MapTemplateID:67891160030380947}
-2020/02/18 15:48:34.935 [I]  *********************************************************************************************
-2020/02/18 15:48:34.935 [I]  nativeClassInfo   =  {Host:47.107.73.43 Port:3306 Username:root Password:root DatabaseName:bian_class},  classId=790
-2020/02/18 15:48:34.935 [I]  *********************************************************************************************
+[native][process]2020-2-18 18:2:25	stdout:["2020/02/18 18:02:25.288 [I]  *********************************************************************************************
+2020/02/18 18:02:25.288 [I]  --------------  nativeServerChannel = bian_game -----------------------------------
+2020/02/18 18:02:25.288 [I]  *********************************************************************************************
+2020/02/18 18:02:25.288 [I]  --------------  nativeLessonInfo    = &{GId:790 PackageId:1 ClassID:790 LessonID:1 ActivityId:1 ActivityName: LessonName:s_测试学校1_c_20200212_l_开启星球之旅_n_1 GameHost:192.168.31.21 GamePort:3211 Channel:bian_game BellcodeSecret:<nil> Client_version:304 LessonHost:47.107.73.43 LessonPort:3306 LessonUsername:root LessonPassword:root LessonDatabaseName:lesson_s_测试学校1_c_20200212_l_开启星球之旅_n_1 CfgHost:47.107.73.43 CfgPort:3306 CfgUsername:root CfgPassword:root CfgDatabaseName:bian_cnf TemplateHost:47.107.73.43 TemplatePort:3306 TemplateUsername:root TemplatePassword:root TemplateDatabaseName:bian_template LastPlayTime:0001-01-01 00:00:00 +0000 UTC TemplateUrl:http://demoapi.wkcoding.com/feature/release.txt StudentNum:10 IsTest:0 LessonDsn:0xc000406320 CfgDsn:0xc000406370 TemplateDsn:0xc0004063c0 ManorTemplateID:0 MapTemplateID:67891160030380947}
+2020/02/18 18:02:25.288 [I]  *********************************************************************************************
+2020/02/18 18:02:25.288 [I]  nativeClassInfo   =  {Host:47.107.73.43 Port:3306 Username:root Password:root DatabaseName:bian_class},  classId=790
+2020/02/18 18:02:25.288 [I]  *********************************************************************************************
 "]
-[native][process]2020-2-18 15:48:35	stdout:["2020/02/18 15:48:35.049 [I]  LoadConfigs
+[native][process]2020-2-18 18:2:25	stdout:["2020/02/18 18:02:25.397 [I]  LoadConfigs
 "]
-[native][process]2020-2-18 15:48:35	stdout:["2020/02/18 15:48:35.072 [I]  Init Template Url &{LessonTemplateId:1020101 DefaultShortcuts:[] SceneId:1001 ManorTemplate:0 MapTemplate:0 RobotCodeTemplate:0 BuildNumLimit:3000 DefaultBagItems:[] DefaultShortcutsv2:[] EntityCodeList: GuideBoard: IdeEnable:true RobotBlockLibId:0 Tutorial:0xc00067db00}
-2020/02/18 15:48:35.072 [I]  Init Material: []
-2020/02/18 15:48:35.072 [I]  Init Shortcut Item: []
-2020/02/18 15:48:35.072 [I]  InitTemplateCnf completed.
+[native][process]2020-2-18 18:2:25	stdout:["2020/02/18 18:02:25.421 [I]  Init Template Url &{LessonTemplateId:1020101 DefaultShortcuts:[] SceneId:1001 ManorTemplate:0 MapTemplate:0 RobotCodeTemplate:0 BuildNumLimit:3000 DefaultBagItems:[] DefaultShortcutsv2:[] EntityCodeList: GuideBoard: IdeEnable:true RobotBlockLibId:0 Tutorial:0xc000396500}
+2020/02/18 18:02:25.421 [I]  Init Material: []
+2020/02/18 18:02:25.421 [I]  Init Shortcut Item: []
+2020/02/18 18:02:25.421 [I]  InitTemplateCnf completed.
 "]
-[native][process]2020-2-18 15:48:35	stdout:["2020/02/18 15:48:35.157 [I]  InitGameValueCnf completed.
-2020/02/18 15:48:35.157 [I]  InitConstantCnf completed.
-2020/02/18 15:48:35.157 [I]  InitMapCnf [0] false
+[native][process]2020-2-18 18:2:25	stdout:["2020/02/18 18:02:25.702 [I]  InitGameValueCnf completed.
+2020/02/18 18:02:25.702 [I]  InitConstantCnf completed.
+2020/02/18 18:02:25.702 [I]  InitMapCnf [0] false
 "]
-[native][process]2020-2-18 15:48:36	stdout:["2020/02/18 15:48:36.067 [I]  InitMapCnf completed.
+[native][process]2020-2-18 18:2:26	stdout:["2020/02/18 18:02:26.307 [I]  InitMapCnf completed.
 "]
-[native][process]2020-2-18 15:48:36	stdout:["2020/02/18 15:48:36.076 [I]  InitAttributeRandCnf completed.
+[native][process]2020-2-18 18:2:26	stdout:["2020/02/18 18:02:26.313 [I]  InitAttributeRandCnf completed.
 "]
-[native][process]2020-2-18 15:48:36	stdout:["2020/02/18 15:48:36.300 [I]  InitBuffCnf completed.
+[native][process]2020-2-18 18:2:26	stdout:["2020/02/18 18:02:26.320 [I]  InitBuffCnf completed.
 "]
-[native][process]2020-2-18 15:48:36	stdout:["2020/02/18 15:48:36.632 [I]  InitSkillCnf completed.
+[native][process]2020-2-18 18:2:26	stdout:["2020/02/18 18:02:26.576 [I]  InitSkillCnf completed.
 "]
-[native][process]2020-2-18 15:48:36	stdout:["2020/02/18 15:48:36.650 [I]  InitSpawnPointsCnf completed.
+[native][process]2020-2-18 18:2:26	stdout:["2020/02/18 18:02:26.618 [I]  InitSpawnPointsCnf completed.
 "]
-[native][process]2020-2-18 15:48:36	stdout:["2020/02/18 15:48:36.659 [I]  InitPlayerLvCnf completed.
+[native][process]2020-2-18 18:2:26	stdout:["2020/02/18 18:02:26.625 [I]  InitPlayerLvCnf completed.
 "]
-[native][process]2020-2-18 15:48:36	stdout:["2020/02/18 15:48:36.671 [I]  InitSceneCnf completed.
+[native][process]2020-2-18 18:2:26	stdout:["2020/02/18 18:02:26.662 [I]  InitSceneCnf completed.
 "]
-[native][process]2020-2-18 15:48:36	stdout:["2020/02/18 15:48:36.680 [I]  InitWeatherCnf completed.
+[native][process]2020-2-18 18:2:26	stdout:["2020/02/18 18:02:26.668 [I]  InitWeatherCnf completed.
 "]
-[native][process]2020-2-18 15:48:36	stdout:["2020/02/18 15:48:36.689 [I]  InitAchieveCnf completed.
+[native][process]2020-2-18 18:2:26	stdout:["2020/02/18 18:02:26.675 [I]  InitAchieveCnf completed.
 "]
-[native][process]2020-2-18 15:48:36	stdout:["2020/02/18 15:48:36.697 [I]  InitSystemAvatarCnf completed.
+[native][process]2020-2-18 18:2:26	stdout:["2020/02/18 18:02:26.689 [I]  InitSystemAvatarCnf completed.
 "]
-[native][process]2020-2-18 15:48:36	stdout:["2020/02/18 15:48:36.756 [I]  InitBotLvCnf completed.
+[native][process]2020-2-18 18:2:26	stdout:["2020/02/18 18:02:26.750 [I]  InitBotLvCnf completed.
 "]
-[native][process]2020-2-18 15:48:36	stdout:["2020/02/18 15:48:36.765 [I]  InitBotCnf completed.
+[native][process]2020-2-18 18:2:26	stdout:["2020/02/18 18:02:26.757 [I]  InitBotCnf completed.
 "]
-[native][process]2020-2-18 15:48:48	stdout:["2020/02/18 15:48:48.881 [I]  InitObjectCnf completed.
+[native][process]2020-2-18 18:2:31	stdout:["2020/02/18 18:02:31.860 [I]  InitObjectCnf completed.
 "]
-[native][process]2020-2-18 15:48:48	stdout:["2020/02/18 15:48:48.890 [I]  InitGearSettingsCnf completed.
+[native][process]2020-2-18 18:2:31	stdout:["2020/02/18 18:02:31.866 [I]  InitGearSettingsCnf completed.
 "]
-[native][process]2020-2-18 15:48:48	stdout:["2020/02/18 15:48:48.920 [I]  InitFallingRecipetsCnf completed.
+[native][process]2020-2-18 18:2:32	stdout:["2020/02/18 18:02:32.380 [I]  InitFallingRecipetsCnf completed.
 "]
-[native][process]2020-2-18 15:48:48	stdout:["2020/02/18 15:48:48.947 [I]  InitResourcePointsCnf completed.
+[native][process]2020-2-18 18:2:32	stdout:["2020/02/18 18:02:32.406 [I]  InitResourcePointsCnf completed.
 "]
-[native][process]2020-2-18 15:48:49	stdout:["2020/02/18 15:48:49.565 [I]  InitMonsterCnf completed.
+[native][process]2020-2-18 18:2:32	stdout:["2020/02/18 18:02:32.947 [I]  InitMonsterCnf completed.
 "]
-[native][process]2020-2-18 15:48:50	stdout:["2020/02/18 15:48:50.323 [I]  InitNpcCnf completed.
+[native][process]2020-2-18 18:2:33	stdout:["2020/02/18 18:02:33.274 [I]  InitNpcCnf completed.
 "]
-[native][process]2020-2-18 15:48:50	stdout:["2020/02/18 15:48:50.331 [I]  InitNpcLocationCnf completed.
+[native][process]2020-2-18 18:2:33	stdout:["2020/02/18 18:02:33.280 [I]  InitNpcLocationCnf completed.
 "]
-[native][process]2020-2-18 15:48:50	stdout:["2020/02/18 15:48:50.339 [I]  InitMailTemplateCnf completed.
+[native][process]2020-2-18 18:2:33	stdout:["2020/02/18 18:02:33.285 [I]  InitMailTemplateCnf completed.
 "]
-[native][process]2020-2-18 15:48:50	stdout:["2020/02/18 15:48:50.459 [I]  InitRewardCnf completed.
+[native][process]2020-2-18 18:2:33	stdout:["2020/02/18 18:02:33.303 [I]  InitRewardCnf completed.
 "]
-[native][process]2020-2-18 15:48:51	stdout:["2020/02/18 15:48:51.013 [I]  InitTaskCnf completed.
+[native][process]2020-2-18 18:2:33	stdout:["2020/02/18 18:02:33.870 [I]  InitTaskCnf completed.
 "]
-[native][process]2020-2-18 15:48:51	stdout:["2020/02/18 15:48:51.255 [I]  InitCodeCnf completed.
+[native][process]2020-2-18 18:2:34	stdout:["2020/02/18 18:02:34.129 [I]  InitCodeCnf completed.
 "]
-[native][process]2020-2-18 15:48:51	stdout:["2020/02/18 15:48:51.263 [I]  InitFormulaCnf completed.
+[native][process]2020-2-18 18:2:34	stdout:["2020/02/18 18:02:34.135 [I]  InitFormulaCnf completed.
 "]
-[native][process]2020-2-18 15:48:51	stdout:["2020/02/18 15:48:51.279 [I]  InitSpecialBuildCnf completed.
+[native][process]2020-2-18 18:2:34	stdout:["2020/02/18 18:02:34.146 [I]  InitSpecialBuildCnf completed.
 "]
-[native][process]2020-2-18 15:48:51	stdout:["2020/02/18 15:48:51.927 [I]  InitConsumableItemCnf completed.
+[native][process]2020-2-18 18:2:34	stdout:["2020/02/18 18:02:34.711 [I]  InitConsumableItemCnf completed.
 "]
-[native][process]2020-2-18 15:48:51	stdout:["2020/02/18 15:48:51.935 [I]  InitRoleCnfCnf completed.
+[native][process]2020-2-18 18:2:34	stdout:["2020/02/18 18:02:34.717 [I]  InitRoleCnfCnf completed.
 "]
-[native][process]2020-2-18 15:48:51	stdout:["2020/02/18 15:48:51.943 [I]  InitChatCnfCnf completed.
+[native][process]2020-2-18 18:2:34	stdout:["2020/02/18 18:02:34.722 [I]  InitChatCnfCnf completed.
 "]
-[native][process]2020-2-18 15:48:51	stdout:["2020/02/18 15:48:51.950 [I]  InitConditionCnfCnf completed.
+[native][process]2020-2-18 18:2:34	stdout:["2020/02/18 18:02:34.728 [I]  InitConditionCnfCnf completed.
 "]
-[native][process]2020-2-18 15:48:51	stdout:["2020/02/18 15:48:51.958 [I]  InitCdCnfCnf completed.
+[native][process]2020-2-18 18:2:34	stdout:["2020/02/18 18:02:34.733 [I]  InitCdCnfCnf completed.
 "]
-[native][process]2020-2-18 15:48:51	stdout:["2020/02/18 15:48:51.966 [I]  InitQuotaCnfCnf completed.
+[native][process]2020-2-18 18:2:34	stdout:["2020/02/18 18:02:34.739 [I]  InitQuotaCnfCnf completed.
 "]
-[native][process]2020-2-18 15:48:51	stdout:["2020/02/18 15:48:51.974 [I]  InitPlayerBuyCnfCnf completed.
+[native][process]2020-2-18 18:2:34	stdout:["2020/02/18 18:02:34.745 [I]  InitPlayerBuyCnfCnf completed.
 "]
-[native][process]2020-2-18 15:48:51	stdout:["2020/02/18 15:48:51.982 [I]  InitwidgetCnfCnf completed.
+[native][process]2020-2-18 18:2:34	stdout:["2020/02/18 18:02:34.750 [I]  InitwidgetCnfCnf completed.
 "]
-[native][process]2020-2-18 15:49:0	stdout:["2020/02/18 15:49:00.915 [I]  InitEntityCnf completed.
+[native][process]2020-2-18 18:2:37	stdout:["2020/02/18 18:02:37.561 [I]  InitEntityCnf completed.
 "]
-[native][process]2020-2-18 15:49:0	stdout:["2020/02/18 15:49:00.915 [I]  begin check~~~~~~~
+[native][process]2020-2-18 18:2:37	stdout:["2020/02/18 18:02:37.562 [I]  begin check~~~~~~~
 "]
-[native][process]2020-2-18 15:49:0	stdout:["2020/02/18 15:49:00.917 [I]  check completed.
-"]
-[native][process]2020-2-18 15:49:0	stdout:["2020/02/18 15:49:00.933 [I]  init config:&{keyDelim:. configPaths:[] fs:0x25c9c38 remoteProviders:[] configName:config configFile: configType: configPermissions:420 envPrefix: automaticEnvApplied:false envKeyReplacer:<nil> allowEmptyEnv:false config:map[grpc:map[host:127.0.0.1 port:3213] http:map[host:0.0.0.0 port:41789] is_develop:false is_native:true log:map[console:true] mini_map:false mysql_account:map[conn:map[dbname:bian_account host:47.107.73.43 password:root port:3306 username:root]] mysql_center:map[conn:map[dbname:server_list host:47.107.73.43 password:root port:3306 table_class:class_cnf table_lession:lesson_cnf1 username:root]] mysql_class:map[conn:map[dbname:bian_class host:47.107.73.43 password:root port:3306 username:root]] mysql_cnf:map[conn:map[dbname:bian_cnf host:47.107.73.43 password:root port:3306 username:root]] mysql_lesson:map[conn:map[dbname:bian_lesson host:47.107.73.43 password:root port:3306 username:root]] mysql_record:map[conn:map[dbname:bian_record_log host:47.107.73.43 password:root port:3306 username:root]] mysql_template:map[conn:map[dbname:bian_template host:47.107.73.43 password:root port:3306 username:root]] pressure_monster_multiple:5 pressure_test:0 server:map[channel:bian_lesson host:192.168.101.5 name:军杰 node_id:789 signkey:bian] server_model:lesson tpl_path:./src/bian_admin/tpl websocket:map[host:0.0.0.0 port:3211]] override:map[server:map[name:s_测试学校1_c_20200212_l_开启星球之旅_n_1 node_id:790]] defaults:map[repl:map[file:/tmp/bian_game_repl.socks host:127.0.0.1 network:tcp port:13333]] kvstore:map[] pflags:map[] env:map[] aliases:map[] typeByDefValue:false properties:<nil> onConfigChange:<nil>}
-"]
-[native][process]2020-2-18 15:49:0	stdout:["2020/02/18 15:49:00.944 [I]  ========  pprof-http try ========
-{\"component\":\"profile.http\",\"hostname\":\"WIN-01408111057\",\"message\":\"http server started at 0.0.0.0:4177\",\"mode\":\"develop\",\"server\":\"bian_game\",\"time\":\"2020-02-18T07:49:00.9448925Z\"}
-2020/02/18 15:49:00.944 [I]  ========  pprof-http done ========
-"]
-[native][process]2020-2-18 15:49:1	stdout:["2020/02/18 15:49:01.119 [I]  initLog V1
-"]
-[native][process]2020-2-18 15:49:42	stdout:["2020/02/18 15:49:42.752 [I]  LoadEntityTemplateData\t  need(40648)Ms --- err(<nil>)
-2020/02/18 15:49:42.752 [I]  LoadAllEntityAnimation\t  need(0)Ms --- err(<nil>)
-"]
-[native][process]2020-2-18 15:50:7	stdout:["2020/02/18 15:50:07.980 [I]  loadBuilds\tneed(25228)Ms --- err(<nil>)
-"]
-[native][process]2020-2-18 15:50:7	stdout:["2020/02/18 15:50:07.999 [I]  LoadPlants \tneed(19)Ms --- err(<nil>)
-"]
-[native][process]2020-2-18 15:50:8	stdout:["2020/02/18 15:50:08.017 [I]  LoadPets \tneed(18)Ms --- err(<nil>)
-"]
-[native][process]2020-2-18 15:50:8	stdout:["2020/02/18 15:50:08.035 [I]  LoadBots \tneed(18)Ms --- err(<nil>)
-"]
-[native][process]2020-2-18 15:50:8	stdout:["2020/02/18 15:50:08.044 [I]  LoadPuppets \tneed(9)Ms --- err(<nil>)
-2020/02/18 15:50:08.044 [I]  LoadFalling \tneed(0)Ms --- err(<nil>)
-"]
-[native][process]2020-2-18 15:50:10	stdout:["2020/02/18 15:50:10.046 [I]  Zone Start
-"]
-[native][process]2020-2-18 15:50:10	stdout:["2020/02/18 15:50:10.052 [I]  =========== server start ===========
-"]
-[native][process]2020-2-18 15:50:10	stdout:["2020/02/18 15:50:10.085 [I]   ---------------------------- ShowFuncCount Begin ---------------------------- 
-2020/02/18 15:50:10.085 [I]  Func ALLCount:(26)
-2020/02/18 15:50:10.085 [I]  Func LeftCount:(0)
-2020/02/18 15:50:10.085 [I]  Func CallCount:(26)
-2020/02/18 15:50:10.085 [I]   ----------------------------------------------------------------------------- 
-2020/02/18 15:50:10.085 [I]  Func  Type:(ServerEventTypeServerTimer)   Num:(1)
-"]
-[native][process]2020-2-18 15:50:10	stdout:["2020/02/18 15:50:10.085 [I]  Func  Type:(WorldEventTypeResourceLoadFinish)   Num:(25)
-2020/02/18 15:50:10.085 [I]   ----------------------------------------------------------------------------- 
-2020/02/18 15:50:10.085 [I]   ---------------------------- ShowFuncCount  End  ---------------------------- 
-2020/02/18 15:50:10.085 [I]  -----------------------------------------
-2020/02/18 15:50:10.085 [I]  sendState. snode(790), channel(bian_game), name(s_测试学校1_c_20200212_l_开启星球之旅_n_1)
-2020/02/18 15:50:10.085 [I]  -----------------------------------------
-"]
-[native][process]2020-2-18 15:50:10	stdout:["2020/02/18 15:50:10.095 [W]  Revice ServerEventTypeServerTimer By 41 ms, 41992 us
-"]
-[native][process]2020-2-18 15:50:10	stdout:["2020/02/18 15:50:10.183 [I]  ping to bellplanet[&{Code:200 Data: Msg:成功}]
-"]
-[native][process]2020-2-18 15:50:11	stdout:["2020/02/18 15:50:11.095 [E]  Err: INSERT INTO `map_object` (`id`, `num`, `r`, `c`, `z`, `z_index`, `mirror`, `cid`, `owner_id`, `workbench_id`, `refresh_time`, `map_id`, `fuel`, `attr`, `program_pb`, `template_build`, `entity_template_id`, `entity_template_creator`) VALUES  (60744545842978942, 1, -33, 169, 0, 3, false, 20012009, 60604161279951532, 0, 1571275370, 666, 0, UNHEX('0a16088020121136303734343534353834323937383934321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60744545843044478, 1, -33, 170, 0, 2, false, 20012009, 60604161279951532, 0, 1571275370, 666, 0, UNHEX('0a16088020121136303734343534353834333034343437381a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) ;
-"]
-[native][process]2020-2-18 15:50:11	stdout:["2020/02/18 15:50:11.135 [E]  EntitySave err:sql([INSERT INTO `map_object` (`id`, `num`, `r`, `c`, `z`, `z_index`, `mirror`, `cid`, `owner_id`, `workbench_id`, `refresh_time`, `map_id`, `fuel`, `attr`, `program_pb`, `template_build`, `entity_template_id`, `entity_template_creator`) VALUES  (60744545842978942, 1, -33, 169, 0, 3, false, 20012009, 60604161279951532, 0, 1571275370, 666, 0, UNHEX('0a16088020121136303734343534353834323937383934321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60744545843044478, 1, -33, 170, 0, 2, false, 20012009, 60604161279951532, 0, 1571275370, 666, 0, UNHEX('0a16088020121136303734343534353834333034343437381a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) ; Error 1062: Duplicate entry '60744545842978942' for key 'PRIMARY']) exec fail err(%!v(MISSING))
-2020/02/18 15:50:11.135 [I]  goroutine 240 [running]:
-bian/src/bian/game/gameLog.StackError(0x17405ea, 0x11, 0xc008e4fb10, 0x1, 0x1)
-\tC:/world/bi_an/src/bian/game/gameLog/log.go:44 +0x97
-bian/src/bian/game/server_node.(*ServerNode).onEntitySave.func1(0xc001968de0, 0x59ed4ebdea9af)
-\tC:/world/bi_an/src/bian/game/server_node/server_handle.go:104 +0x261
-panic(0x14d06a0, 0xc008e32120)
-\tC:/Go/src/runtime/panic.go:679 +0x1c0
-bian/src/bian/x/assert.Assert(0x14e0300, 0xc008e44180, 0x3, 0x3)
-\tC:/world/bi_an/src/bian/x/assert/assert.go:19 +0x25c
-bian/src/bian/game/game_sql.(*GameSQL).MustExec(0xc001968de0, 0x19be8c0, 0xc00003c128, 0xc009012000, 0x332, 0x0, 0x0, 0x0, 0xc00003c128, 0x0)
-\tC:/world/bi_an/src/bian/game/game_sql/game_sql.go:241 +0x1dd
-bian/src/bian/game/server_node.(*ServerNode).buildingSave(0xc0000021e0, 0x19be8c0, 0xc00003c128, 0xc0082480a0)
-\tC:/world/bi_an/src/bian/game/server_node/handle_build.go:312 +0x82a
-bian/src/bian/game/server_node.(*ServerNode).onEntitySave(0xc0000021e0, 0xc008246060)
-\tC:/world/bi_an/src/bian/game/server_node/server_handle.go:128 +0x1b0
-bian/src/bian/game/server_node.(*ServerNode).Start.func6(0xc0000021e0)
-\tC:/world/bi_an/src/bian/game/server_node/server.go:303 +0x53
-created by bian/src/bian/game/server_node.(*ServerNode).Start
-\tC:/world/bi_an/src/bian/game/server_node/server.go:299 +0x7c9
-
-"]
-[native][process]2020-2-18 15:50:11	stdout:["2020/02/18 15:50:11.135 [W]  onEntitySave By 88 ms, 88988 us
-"]
-[native][process]2020-2-18 15:50:11	stdout:["2020/02/18 15:50:11.213 [E]  Err: INSERT INTO `map_object` (`id`, `num`, `r`, `c`, `z`, `z_index`, `mirror`, `cid`, `owner_id`, `workbench_id`, `refresh_time`, `map_id`, `fuel`, `attr`, `program_pb`, `template_build`, `entity_template_id`, `entity_template_creator`) VALUES  (60746835497476222, 1, -43, 184, 0, 3, false, 20012009, 60604161279951532, 0, 1571276735, 666, 0, UNHEX('0a16088020121136303734363833353439373437363232321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60757085268242635, 1, -41, 183, 75, 3, false, 10000511, 60604161279951532, 0, 1571280871, 666, 0, UNHEX('0a16088020121136303735373038353236383234323633351a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60744583140499582, 1, -37, 177, 0, 106, false, 8000022, 60604161279951532, 0, 1571275393, 666, 0, UNHEX('0a16088020121136303734343538333134303439393538321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a016e0a014e'), false, 0, 0) , (60744583141679230, 1, -36, 182, 0, 2, false, 8000022, 60604161279951532, 0, 1571275393, 666, 0, UNHEX('0a16088020121136303734343538333134313637393233301a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60744605907640446, 1, -45, 184, 0, 1, false, 8000022, 60604161279951532, 0, 1571275406, 666, 0, UNHEX('0a16088020121136303734343630353930373634303434361a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60744605908164734, 1, -41, 184, 0, 1, false, 8000022, 60604161279951532, 0, 1571275406, 666, 0, UNHEX('0a16088020121136303734343630353930383136343733341a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60744583141154942, 1, -36, 174, 0, 2, false, 8000022, 60604161279951532, 0, 1571275393, 666, 0, UNHEX('0a16088020121136303734343538333134313135343934321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60744583141810302, 1, -35, 171, 0, 1, false, 8000022, 60604161279951532, 0, 1571275393, 666, 0, UNHEX('0a16088020121136303734343538333134313831303330321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60744583142924414, 1, -34, 175, 0, 1, false, 8000022, 60604161279951532, 0, 1571275393, 666, 0, UNHEX('0a16088020121136303734343538333134323932343431341a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60744583144235134, 1, -33, 182, 0, 29, false, 8000022, 60604161279951532, 0, 1571275393, 666, 0, UNHEX('0a16088020121136303734343538333134343233353133341a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) ;
-"]
-[native][process]2020-2-18 15:50:11	stdout:["2020/02/18 15:50:11.226 [E]  EntitySave err:sql([INSERT INTO `map_object` (`id`, `num`, `r`, `c`, `z`, `z_index`, `mirror`, `cid`, `owner_id`, `workbench_id`, `refresh_time`, `map_id`, `fuel`, `attr`, `program_pb`, `template_build`, `entity_template_id`, `entity_template_creator`) VALUES  (60746835497476222, 1, -43, 184, 0, 3, false, 20012009, 60604161279951532, 0, 1571276735, 666, 0, UNHEX('0a16088020121136303734363833353439373437363232321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60757085268242635, 1, -41, 183, 75, 3, false, 10000511, 60604161279951532, 0, 1571280871, 666, 0, UNHEX('0a16088020121136303735373038353236383234323633351a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60744583140499582, 1, -37, 177, 0, 106, false, 8000022, 60604161279951532, 0, 1571275393, 666, 0, UNHEX('0a16088020121136303734343538333134303439393538321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a016e0a014e'), false, 0, 0) , (60744583141679230, 1, -36, 182, 0, 2, false, 8000022, 60604161279951532, 0, 1571275393, 666, 0, UNHEX('0a16088020121136303734343538333134313637393233301a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60744605907640446, 1, -45, 184, 0, 1, false, 8000022, 60604161279951532, 0, 1571275406, 666, 0, UNHEX('0a16088020121136303734343630353930373634303434361a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60744605908164734, 1, -41, 184, 0, 1, false, 8000022, 60604161279951532, 0, 1571275406, 666, 0, UNHEX('0a16088020121136303734343630353930383136343733341a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60744583141154942, 1, -36, 174, 0, 2, false, 8000022, 60604161279951532, 0, 1571275393, 666, 0, UNHEX('0a16088020121136303734343538333134313135343934321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60744583141810302, 1, -35, 171, 0, 1, false, 8000022, 60604161279951532, 0, 1571275393, 666, 0, UNHEX('0a16088020121136303734343538333134313831303330321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60744583142924414, 1, -34, 175, 0, 1, false, 8000022, 60604161279951532, 0, 1571275393, 666, 0, UNHEX('0a16088020121136303734343538333134323932343431341a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60744583144235134, 1, -33, 182, 0, 29, false, 8000022, 60604161279951532, 0, 1571275393, 666, 0, UNHEX('0a16088020121136303734343538333134343233353133341a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) ; Error 1062: Duplicate entry '60746835497476222' for key 'PRIMARY']) exec fail err(%!v(MISSING))
-2020/02/18 15:50:11.226 [I]  goroutine 240 [running]:
-bian/src/bian/game/gameLog.StackError(0x17405ea, 0x11, 0xc008e4fb10, 0x1, 0x1)
-\tC:/world/bi_an/src/bian/game/gameLog/log.go:44 +0x97
-bian/src/bian/game/server_node.(*ServerNode).onEntitySave.func1(0xc001968de0, 0x59ed4ebe0054b)
-\tC:/world/bi_an/src/bian/game/server_node/server_handle.go:104 +0x261
-panic(0x14d06a0, 0xc008283a00)
-\tC:/Go/src/runtime/panic.go:679 +0x1c0
-bian/src/bian/x/assert.Assert(0x14e0300, 0xc0090560c0, 0x3, 0x3)
-\tC:/world/bi_an/src/bian/x/assert/assert.go:19 +0x25c
-bian/src/bian/game/game_sql.(*GameSQL).MustExec(0xc001968de0, 0x19be8c0, 0xc00003c128, 0xc009046000, 0xc36, 0x0, 0x0, 0x0, 0x19960c0, 0xc008246160)
-\tC:/world/bi_an/src/bian/game/game_sql/game_sql.go:241 +0x1dd
-bian/src/bian/game/server_node.(*ServerNode).buildingSave(0xc0000021e0, 0x19be8c0, 0xc00003c128, 0xc0082640f0)
-\tC:/world/bi_an/src/bian/game/server_node/handle_build.go:306 +0x943
-bian/src/bian/game/server_node.(*ServerNode).onEntitySave(0xc0000021e0, 0xc00854a4a0)
-\tC:/world/bi_an/src/bian/game/server_node/server_handle.go:128 +0x1b0
-bian/src/bian/game/server_node.(*ServerNode).Start.func6(0xc0000021e0)
-\tC:/world/bi_an/src/bian/game/server_node/server.go:303 +0x53
-created by bian/src/bian/game/server_node.(*ServerNode).Start
-\tC:/world/bi_an/src/bian/game/server_node/server.go:299 +0x7c9
-
-2020/02/18 15:50:11.226 [W]  onEntitySave By 90 ms, 90954 us
-"]
-[native][process]2020-2-18 15:50:11	stdout:["2020/02/18 15:50:11.303 [E]  Err: INSERT INTO `map_object` (`id`, `num`, `r`, `c`, `z`, `z_index`, `mirror`, `cid`, `owner_id`, `workbench_id`, `refresh_time`, `map_id`, `fuel`, `attr`, `program_pb`, `template_build`, `entity_template_id`, `entity_template_creator`) VALUES  (60664281144217948, 1, -79, 144, 0, 2, false, 8000022, 60604161279951532, 0, 1571227529, 666, 0, UNHEX('0a16088020121136303636343238313134343231373934381a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60664281145397596, 1, -77, 144, 0, 2, false, 8000022, 60604161279951532, 0, 1571227529, 666, 0, UNHEX('0a16088020121136303636343238313134353339373539361a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a016e0a014e'), false, 0, 0) , (60668950858092892, 1, -90, 143, 0, 1, false, 8000022, 60604161279951532, 0, 1571230312, 666, 0, UNHEX('0a16088020121136303636383935303835383039323839321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60669541375463772, 1, -85, 149, 0, 2, false, 8000022, 60604161279951532, 0, 1571230664, 666, 0, UNHEX('0a16088020121136303636393534313337353436333737321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60758078731415755, 1, -89, 145, 0, 2, false, 20012009, 60604161279951532, 0, 1571283437, 666, 0, UNHEX('0a16088020121136303735383037383733313431353735351a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60758144650342603, 1, -87, 147, 0, 2, false, 20012009, 60604161279951532, 0, 1571283476, 666, 0, UNHEX('0a16088020121136303735383134343635303334323630331a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60663990947271004, 1, -85, 143, 0, 3, false, 8000022, 60604161279951532, 0, 1571227356, 666, 0, UNHEX('0a16088020121136303636333939303934373237313030341a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60664281143431516, 1, -80, 141, 0, 2, false, 8000022, 60604161279951532, 0, 1571227529, 666, 0, UNHEX('0a16088020121136303636343238313134333433313531361a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60758762352308427, 1, -91, 142, 75, 5, false, 10000306, 60604161279951532, 0, 1571224481, 666, 0, UNHEX('0a16088020121136303735383736323335323330383432371a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60758405349929163, 1, -89, 144, 75, 2, false, 10000305, 60604161279951532, 0, 1571283631, 666, 0, UNHEX('0a16088020121136303735383430353334393932393136331a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) ;
-"]
-[native][process]2020-2-18 15:50:11	stdout:["2020/02/18 15:50:11.317 [E]  EntitySave err:sql([INSERT INTO `map_object` (`id`, `num`, `r`, `c`, `z`, `z_index`, `mirror`, `cid`, `owner_id`, `workbench_id`, `refresh_time`, `map_id`, `fuel`, `attr`, `program_pb`, `template_build`, `entity_template_id`, `entity_template_creator`) VALUES  (60664281144217948, 1, -79, 144, 0, 2, false, 8000022, 60604161279951532, 0, 1571227529, 666, 0, UNHEX('0a16088020121136303636343238313134343231373934381a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60664281145397596, 1, -77, 144, 0, 2, false, 8000022, 60604161279951532, 0, 1571227529, 666, 0, UNHEX('0a16088020121136303636343238313134353339373539361a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a016e0a014e'), false, 0, 0) , (60668950858092892, 1, -90, 143, 0, 1, false, 8000022, 60604161279951532, 0, 1571230312, 666, 0, UNHEX('0a16088020121136303636383935303835383039323839321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60669541375463772, 1, -85, 149, 0, 2, false, 8000022, 60604161279951532, 0, 1571230664, 666, 0, UNHEX('0a16088020121136303636393534313337353436333737321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60758078731415755, 1, -89, 145, 0, 2, false, 20012009, 60604161279951532, 0, 1571283437, 666, 0, UNHEX('0a16088020121136303735383037383733313431353735351a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60758144650342603, 1, -87, 147, 0, 2, false, 20012009, 60604161279951532, 0, 1571283476, 666, 0, UNHEX('0a16088020121136303735383134343635303334323630331a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60663990947271004, 1, -85, 143, 0, 3, false, 8000022, 60604161279951532, 0, 1571227356, 666, 0, UNHEX('0a16088020121136303636333939303934373237313030341a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60664281143431516, 1, -80, 141, 0, 2, false, 8000022, 60604161279951532, 0, 1571227529, 666, 0, UNHEX('0a16088020121136303636343238313134333433313531361a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60758762352308427, 1, -91, 142, 75, 5, false, 10000306, 60604161279951532, 0, 1571224481, 666, 0, UNHEX('0a16088020121136303735383736323335323330383432371a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60758405349929163, 1, -89, 144, 75, 2, false, 10000305, 60604161279951532, 0, 1571283631, 666, 0, UNHEX('0a16088020121136303735383430353334393932393136331a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) ; Error 1062: Duplicate entry '60664281144217948' for key 'PRIMARY']) exec fail err(%!v(MISSING))
-2020/02/18 15:50:11.318 [I]  goroutine 240 [running]:
-bian/src/bian/game/gameLog.StackError(0x17405ea, 0x11, 0xc008e4fb10, 0x1, 0x1)
-\tC:/world/bi_an/src/bian/game/gameLog/log.go:44 +0x97
-bian/src/bian/game/server_node.(*ServerNode).onEntitySave.func1(0xc001968de0, 0x59ed4ebe16895)
-\tC:/world/bi_an/src/bian/game/server_node/server_handle.go:104 +0x261
-panic(0x14d06a0, 0xc0083c8490)
-\tC:/Go/src/runtime/panic.go:679 +0x1c0
-bian/src/bian/x/assert.Assert(0x14e0300, 0xc0083250e0, 0x3, 0x3)
-\tC:/world/bi_an/src/bian/x/assert/assert.go:19 +0x25c
-bian/src/bian/game/game_sql.(*GameSQL).MustExec(0xc001968de0, 0x19be8c0, 0xc00003c128, 0xc009088000, 0xc36, 0x0, 0x0, 0x0, 0x19960c0, 0xc005ee3160)
-\tC:/world/bi_an/src/bian/game/game_sql/game_sql.go:241 +0x1dd
-bian/src/bian/game/server_node.(*ServerNode).buildingSave(0xc0000021e0, 0x19be8c0, 0xc00003c128, 0xc002e62820)
-\tC:/world/bi_an/src/bian/game/server_node/handle_build.go:306 +0x943
-bian/src/bian/game/server_node.(*ServerNode).onEntitySave(0xc0000021e0, 0xc0082e2500)
-\tC:/world/bi_an/src/bian/game/server_node/server_handle.go:128 +0x1b0
-bian/src/bian/game/server_node.(*ServerNode).Start.func6(0xc0000021e0)
-\tC:/world/bi_an/src/bian/game/server_node/server.go:303 +0x53
-created by bian/src/bian/game/server_node.(*ServerNode).Start
-\tC:/world/bi_an/src/bian/game/server_node/server.go:299 +0x7c9
-
-2020/02/18 15:50:11.318 [W]  onEntitySave By 91 ms, 91986 us
-"]
-[native][process]2020-2-18 15:50:11	stdout:["2020/02/18 15:50:11.403 [E]  Err: INSERT INTO `map_object` (`id`, `num`, `r`, `c`, `z`, `z_index`, `mirror`, `cid`, `owner_id`, `workbench_id`, `refresh_time`, `map_id`, `fuel`, `attr`, `program_pb`, `template_build`, `entity_template_id`, `entity_template_creator`) VALUES  (60674381181931868, 1, -46, 152, 0, 267, false, 20012010, 60604161279951532, 0, 1571233549, 666, 0, UNHEX('0a16088020121136303637343338313138313933313836381a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60676161038045532, 1, -54, 142, 0, 3, false, 20012010, 60604161279951532, 0, 1571234610, 666, 0, UNHEX('0a16088020121136303637363136313033383034353533321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a016e0a014e'), false, 0, 0) , (60676384745378140, 1, -35, 156, 75, 2, true, 10000260, 60604161279951532, 0, 1571234743, 666, 0, UNHEX('0a16088020121136303637363338343734353337383134301a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60670380421206364, 1, -43, 141, 0, 2, false, 8000022, 60604161279951532, 0, 1571231164, 666, 0, UNHEX('0a16088020121136303637303338303432313230363336341a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60670401034965340, 1, -40, 160, 0, 3, false, 20012009, 60604161279951532, 0, 1571231177, 666, 0, UNHEX('0a16088020121136303637303430313033343936353334301a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60671828019958108, 1, -40, 153, 315, 155, true, 20006024, 60604161279951532, 0, 1571232027, 666, 0, UNHEX('0a16088020121136303637313832383031393935383130381a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60673510170743132, 1, -45, 148, 495, 541, false, 20011010, 60604161279951532, 0, 1571233030, 666, 0, UNHEX('0a16088020121136303637333531303137303734333133321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a016e0a014e'), false, 0, 0) , (60748261761245310, 1, -58, 141, 75, 2, false, 10000306, 60604161279951532, 0, 1571224357, 666, 0, UNHEX('0a16088020121136303734383236313736313234353331301a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60664645748773212, 1, -58, 143, 0, 1, false, 8000022, 60604161279951532, 0, 1571227746, 666, 0, UNHEX('0a16088020121136303636343634353734383737333231321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60673200731771228, 1, -47, 146, 495, 231, false, 20011009, 60604161279951532, 0, 1571232845, 666, 0, UNHEX('0a16088020121136303637333230303733313737313232381a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) ;
-"]
-[native][process]2020-2-18 15:50:11	stdout:["2020/02/18 15:50:11.417 [E]  EntitySave err:sql([INSERT INTO `map_object` (`id`, `num`, `r`, `c`, `z`, `z_index`, `mirror`, `cid`, `owner_id`, `workbench_id`, `refresh_time`, `map_id`, `fuel`, `attr`, `program_pb`, `template_build`, `entity_template_id`, `entity_template_creator`) VALUES  (60674381181931868, 1, -46, 152, 0, 267, false, 20012010, 60604161279951532, 0, 1571233549, 666, 0, UNHEX('0a16088020121136303637343338313138313933313836381a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60676161038045532, 1, -54, 142, 0, 3, false, 20012010, 60604161279951532, 0, 1571234610, 666, 0, UNHEX('0a16088020121136303637363136313033383034353533321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a016e0a014e'), false, 0, 0) , (60676384745378140, 1, -35, 156, 75, 2, true, 10000260, 60604161279951532, 0, 1571234743, 666, 0, UNHEX('0a16088020121136303637363338343734353337383134301a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60670380421206364, 1, -43, 141, 0, 2, false, 8000022, 60604161279951532, 0, 1571231164, 666, 0, UNHEX('0a16088020121136303637303338303432313230363336341a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60670401034965340, 1, -40, 160, 0, 3, false, 20012009, 60604161279951532, 0, 1571231177, 666, 0, UNHEX('0a16088020121136303637303430313033343936353334301a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60671828019958108, 1, -40, 153, 315, 155, true, 20006024, 60604161279951532, 0, 1571232027, 666, 0, UNHEX('0a16088020121136303637313832383031393935383130381a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60673510170743132, 1, -45, 148, 495, 541, false, 20011010, 60604161279951532, 0, 1571233030, 666, 0, UNHEX('0a16088020121136303637333531303137303734333133321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a016e0a014e'), false, 0, 0) , (60748261761245310, 1, -58, 141, 75, 2, false, 10000306, 60604161279951532, 0, 1571224357, 666, 0, UNHEX('0a16088020121136303734383236313736313234353331301a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60664645748773212, 1, -58, 143, 0, 1, false, 8000022, 60604161279951532, 0, 1571227746, 666, 0, UNHEX('0a16088020121136303636343634353734383737333231321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60673200731771228, 1, -47, 146, 495, 231, false, 20011009, 60604161279951532, 0, 1571232845, 666, 0, UNHEX('0a16088020121136303637333230303733313737313232381a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) ; Error 1062: Duplicate entry '60674381181931868' for key 'PRIMARY']) exec fail err(%!v(MISSING))
-2020/02/18 15:50:11.417 [I]  goroutine 240 [running]:
-bian/src/bian/game/gameLog.StackError(0x17405ea, 0x11, 0xc008e4fb10, 0x1, 0x1)
-\tC:/world/bi_an/src/bian/game/gameLog/log.go:44 +0x97
-bian/src/bian/game/server_node.(*ServerNode).onEntitySave.func1(0xc001968de0, 0x59ed4ebe2cfe7)
-\tC:/world/bi_an/src/bian/game/server_node/server_handle.go:104 +0x261
-panic(0x14d06a0, 0xc008314360)
-\tC:/Go/src/runtime/panic.go:679 +0x1c0
-bian/src/bian/x/assert.Assert(0x14e0300, 0xc00831a240, 0x3, 0x3)
-\tC:/world/bi_an/src/bian/x/assert/assert.go:19 +0x25c
-bian/src/bian/game/game_sql.(*GameSQL).MustExec(0xc001968de0, 0x19be8c0, 0xc00003c128, 0xc0090bc000, 0xc46, 0x0, 0x0, 0x0, 0x19960c0, 0xc0082720c0)
-\tC:/world/bi_an/src/bian/game/game_sql/game_sql.go:241 +0x1dd
-bian/src/bian/game/server_node.(*ServerNode).buildingSave(0xc0000021e0, 0x19be8c0, 0xc00003c128, 0xc0081ca320)
-\tC:/world/bi_an/src/bian/game/server_node/handle_build.go:306 +0x943
-bian/src/bian/game/server_node.(*ServerNode).onEntitySave(0xc0000021e0, 0xc008781140)
-\tC:/world/bi_an/src/bian/game/server_node/server_handle.go:128 +0x1b0
-bian/src/bian/game/server_node.(*ServerNode).Start.func6(0xc0000021e0)
-\tC:/world/bi_an/src/bian/game/server_node/server.go:303 +0x53
-created by bian/src/bian/game/server_node.(*ServerNode).Start
-\tC:/world/bi_an/src/bian/game/server_node/server.go:299 +0x7c9
-
-2020/02/18 15:50:11.417 [W]  onEntitySave By 98 ms, 98969 us
-"]
-[native][process]2020-2-18 15:50:11	stdout:["2020/02/18 15:50:11.494 [E]  Err: INSERT INTO `map_object` (`id`, `num`, `r`, `c`, `z`, `z_index`, `mirror`, `cid`, `owner_id`, `workbench_id`, `refresh_time`, `map_id`, `fuel`, `attr`, `program_pb`, `template_build`, `entity_template_id`, `entity_template_creator`) VALUES  (60758744685899979, 1, -90, 153, 75, 3, false, 10000306, 60604161279951532, 0, 1571224481, 666, 0, UNHEX('0a16088020121136303735383734343638353839393937391a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a016e0a014e'), false, 0, 0) , (60758751229014219, 1, -91, 149, 75, 3, false, 10000306, 60604161279951532, 0, 1571224481, 666, 0, UNHEX('0a16088020121136303735383735313232393031343231391a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60758806962925771, 1, -94, 152, 75, 3, false, 10000306, 60604161279951532, 0, 1571224481, 666, 0, UNHEX('0a16088020121136303735383830363936323932353737311a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60670297485529436, 1, -92, 154, 0, 1, false, 8000022, 60604161279951532, 0, 1571231115, 666, 0, UNHEX('0a16088020121136303637303239373438353532393433361a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60670303189455196, 1, -99, 148, 0, 3, false, 8000022, 60604161279951532, 0, 1571231118, 666, 0, UNHEX('0a16088020121136303637303330333138393435353139361a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60670303189586268, 1, -99, 150, 0, 2, false, 8000022, 60604161279951532, 0, 1571231118, 666, 0, UNHEX('0a16088020121136303637303330333138393538363236381a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60670303189848412, 1, -99, 154, 0, 2, false, 8000022, 60604161279951532, 0, 1571231118, 666, 0, UNHEX('0a16088020121136303637303330333138393834383431321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60670303194501468, 1, -94, 145, 0, 2, false, 8000022, 60604161279951532, 0, 1571231118, 666, 0, UNHEX('0a16088020121136303637303330333139343530313436381a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60758187984384203, 1, -95, 159, 0, 1, false, 8000022, 60604161279951532, 0, 1571283502, 666, 0, UNHEX('0a16088020121136303735383138373938343338343230331a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60758242476716235, 1, -96, 150, 75, 5, false, 10000308, 60604161279951532, 0, 1571224108, 666, 0, UNHEX('0a16088020121136303735383234323437363731363233351a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) ;
-"]
-[native][process]2020-2-18 15:50:11	stdout:["2020/02/18 15:50:11.511 [E]  EntitySave err:sql([INSERT INTO `map_object` (`id`, `num`, `r`, `c`, `z`, `z_index`, `mirror`, `cid`, `owner_id`, `workbench_id`, `refresh_time`, `map_id`, `fuel`, `attr`, `program_pb`, `template_build`, `entity_template_id`, `entity_template_creator`) VALUES  (60758744685899979, 1, -90, 153, 75, 3, false, 10000306, 60604161279951532, 0, 1571224481, 666, 0, UNHEX('0a16088020121136303735383734343638353839393937391a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a016e0a014e'), false, 0, 0) , (60758751229014219, 1, -91, 149, 75, 3, false, 10000306, 60604161279951532, 0, 1571224481, 666, 0, UNHEX('0a16088020121136303735383735313232393031343231391a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60758806962925771, 1, -94, 152, 75, 3, false, 10000306, 60604161279951532, 0, 1571224481, 666, 0, UNHEX('0a16088020121136303735383830363936323932353737311a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60670297485529436, 1, -92, 154, 0, 1, false, 8000022, 60604161279951532, 0, 1571231115, 666, 0, UNHEX('0a16088020121136303637303239373438353532393433361a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60670303189455196, 1, -99, 148, 0, 3, false, 8000022, 60604161279951532, 0, 1571231118, 666, 0, UNHEX('0a16088020121136303637303330333138393435353139361a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60670303189586268, 1, -99, 150, 0, 2, false, 8000022, 60604161279951532, 0, 1571231118, 666, 0, UNHEX('0a16088020121136303637303330333138393538363236381a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60670303189848412, 1, -99, 154, 0, 2, false, 8000022, 60604161279951532, 0, 1571231118, 666, 0, UNHEX('0a16088020121136303637303330333138393834383431321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60670303194501468, 1, -94, 145, 0, 2, false, 8000022, 60604161279951532, 0, 1571231118, 666, 0, UNHEX('0a16088020121136303637303330333139343530313436381a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60758187984384203, 1, -95, 159, 0, 1, false, 8000022, 60604161279951532, 0, 1571283502, 666, 0, UNHEX('0a16088020121136303735383138373938343338343230331a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60758242476716235, 1, -96, 150, 75, 5, false, 10000308, 60604161279951532, 0, 1571224108, 666, 0, UNHEX('0a16088020121136303735383234323437363731363233351a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) ; Error 1062: Duplicate entry '60758744685899979' for key 'PRIMARY']) exec fail err(%!v(MISSING))
-2020/02/18 15:50:11.511 [I]  goroutine 240 [running]:
-bian/src/bian/game/gameLog.StackError(0x17405ea, 0x11, 0xc008e4fb10, 0x1, 0x1)
-\tC:/world/bi_an/src/bian/game/gameLog/log.go:44 +0x97
-bian/src/bian/game/server_node.(*ServerNode).onEntitySave.func1(0xc001968de0, 0x59ed4ebe45280)
-\tC:/world/bi_an/src/bian/game/server_node/server_handle.go:104 +0x261
-panic(0x14d06a0, 0xc008314520)
-\tC:/Go/src/runtime/panic.go:679 +0x1c0
-bian/src/bian/x/assert.Assert(0x14e0300, 0xc00831a4b0, 0x3, 0x3)
-\tC:/world/bi_an/src/bian/x/assert/assert.go:19 +0x25c
-bian/src/bian/game/game_sql.(*GameSQL).MustExec(0xc001968de0, 0x19be8c0, 0xc00003c128, 0xc0090c3200, 0xc38, 0x0, 0x0, 0x0, 0x19960c0, 0xc008272160)
-\tC:/world/bi_an/src/bian/game/game_sql/game_sql.go:241 +0x1dd
-bian/src/bian/game/server_node.(*ServerNode).buildingSave(0xc0000021e0, 0x19be8c0, 0xc00003c128, 0xc002e628c0)
-\tC:/world/bi_an/src/bian/game/server_node/handle_build.go:306 +0x943
-bian/src/bian/game/server_node.(*ServerNode).onEntitySave(0xc0000021e0, 0xc0082e2520)
-\tC:/world/bi_an/src/bian/game/server_node/server_handle.go:128 +0x1b0
-bian/src/bian/game/server_node.(*ServerNode).Start.func6(0xc0000021e0)
-\tC:/world/bi_an/src/bian/game/server_node/server.go:303 +0x53
-created by bian/src/bian/game/server_node.(*ServerNode).Start
-\tC:/world/bi_an/src/bian/game/server_node/server.go:299 +0x7c9
-
-2020/02/18 15:50:11.511 [W]  onEntitySave By 93 ms, 93954 us
-"]
-[native][process]2020-2-18 15:50:11	stdout:["2020/02/18 15:50:11.609 [E]  Err: INSERT INTO `map_object` (`id`, `num`, `r`, `c`, `z`, `z_index`, `mirror`, `cid`, `owner_id`, `workbench_id`, `refresh_time`, `map_id`, `fuel`, `attr`, `program_pb`, `template_build`, `entity_template_id`, `entity_template_creator`) VALUES  (60669541389554012, 1, -83, 153, 0, 2, false, 8000022, 60604161279951532, 0, 1571230664, 666, 0, UNHEX('0a16088020121136303636393534313338393535343031321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60744583124836478, 1, -45, 179, 0, 2, false, 8000022, 60604161279951532, 0, 1571275392, 666, 0, UNHEX('0a16088020121136303734343538333132343833363437381a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60658524912406876, 1, -64, 173, 75, 4, false, 10000308, 60604161279951532, 0, 1571224098, 666, 0, UNHEX('0a16088020121136303635383532343931323430363837361a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a04081558001a0408135800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60664645745430876, 1, -63, 147, 0, 1, false, 8000022, 60604161279951532, 0, 1571227746, 666, 0, UNHEX('0a16088020121136303636343634353734353433303837361a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60669541389619548, 1, -83, 154, 0, 2, false, 8000022, 60604161279951532, 0, 1571230664, 666, 0, UNHEX('0a16088020121136303636393534313338393631393534381a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60747121381892222, 1, -45, 175, 0, 3, false, 20012009, 60604161279951532, 0, 1571276905, 666, 0, UNHEX('0a16088020121136303734373132313338313839323232321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60748250856054910, 1, -61, 144, 75, 2, false, 10000306, 60604161279951532, 0, 1571224357, 666, 0, UNHEX('0a16088020121136303734383235303835363035343931301a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60658273779372380, 1, -61, 161, 0, 2, false, 8000022, 60604161279951532, 0, 1571223948, 666, 0, UNHEX('0a16088020121136303635383237333737393337323338301a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60658273782387036, 1, -60, 173, 0, 1, false, 8000022, 60604161279951532, 0, 1571223948, 666, 0, UNHEX('0a16088020121136303635383237333738323338373033361a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60658824855474524, 1, -72, 164, 75, 4, true, 10000308, 60604161279951532, 0, 1571224277, 666, 0, UNHEX('0a16088020121136303635383832343835353437343532341a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a04081558001a0408135800'), UNHEX('0a014e0a016e'), false, 0, 0) ;
-"]
-[native][process]2020-2-18 15:50:11	stdout:["2020/02/18 15:50:11.625 [E]  EntitySave err:sql([INSERT INTO `map_object` (`id`, `num`, `r`, `c`, `z`, `z_index`, `mirror`, `cid`, `owner_id`, `workbench_id`, `refresh_time`, `map_id`, `fuel`, `attr`, `program_pb`, `template_build`, `entity_template_id`, `entity_template_creator`) VALUES  (60669541389554012, 1, -83, 153, 0, 2, false, 8000022, 60604161279951532, 0, 1571230664, 666, 0, UNHEX('0a16088020121136303636393534313338393535343031321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60744583124836478, 1, -45, 179, 0, 2, false, 8000022, 60604161279951532, 0, 1571275392, 666, 0, UNHEX('0a16088020121136303734343538333132343833363437381a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60658524912406876, 1, -64, 173, 75, 4, false, 10000308, 60604161279951532, 0, 1571224098, 666, 0, UNHEX('0a16088020121136303635383532343931323430363837361a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a04081558001a0408135800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60664645745430876, 1, -63, 147, 0, 1, false, 8000022, 60604161279951532, 0, 1571227746, 666, 0, UNHEX('0a16088020121136303636343634353734353433303837361a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60669541389619548, 1, -83, 154, 0, 2, false, 8000022, 60604161279951532, 0, 1571230664, 666, 0, UNHEX('0a16088020121136303636393534313338393631393534381a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60747121381892222, 1, -45, 175, 0, 3, false, 20012009, 60604161279951532, 0, 1571276905, 666, 0, UNHEX('0a16088020121136303734373132313338313839323232321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60748250856054910, 1, -61, 144, 75, 2, false, 10000306, 60604161279951532, 0, 1571224357, 666, 0, UNHEX('0a16088020121136303734383235303835363035343931301a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60658273779372380, 1, -61, 161, 0, 2, false, 8000022, 60604161279951532, 0, 1571223948, 666, 0, UNHEX('0a16088020121136303635383237333737393337323338301a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60658273782387036, 1, -60, 173, 0, 1, false, 8000022, 60604161279951532, 0, 1571223948, 666, 0, UNHEX('0a16088020121136303635383237333738323338373033361a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60658824855474524, 1, -72, 164, 75, 4, true, 10000308, 60604161279951532, 0, 1571224277, 666, 0, UNHEX('0a16088020121136303635383832343835353437343532341a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a04081558001a0408135800'), UNHEX('0a014e0a016e'), false, 0, 0) ; Error 1062: Duplicate entry '60669541389554012' for key 'PRIMARY']) exec fail err(%!v(MISSING))
-2020/02/18 15:50:11.625 [I]  goroutine 240 [running]:
-bian/src/bian/game/gameLog.StackError(0x17405ea, 0x11, 0xc008e4fb10, 0x1, 0x1)
-\tC:/world/bi_an/src/bian/game/gameLog/log.go:44 +0x97
-bian/src/bian/game/server_node.(*ServerNode).onEntitySave.func1(0xc001968de0, 0x59ed4ebe5c182)
-\tC:/world/bi_an/src/bian/game/server_node/server_handle.go:104 +0x261
-panic(0x14d06a0, 0xc008314570)
-\tC:/Go/src/runtime/panic.go:679 +0x1c0
-bian/src/bian/x/assert.Assert(0x14e0300, 0xc00831a5a0, 0x3, 0x3)
-\tC:/world/bi_an/src/bian/x/assert/assert.go:19 +0x25c
-bian/src/bian/game/game_sql.(*GameSQL).MustExec(0xc001968de0, 0x19be8c0, 0xc00003c128, 0xc009116000, 0xc4e, 0x0, 0x0, 0x0, 0x19960c0, 0xc008244100)
-\tC:/world/bi_an/src/bian/game/game_sql/game_sql.go:241 +0x1dd
-bian/src/bian/game/server_node.(*ServerNode).buildingSave(0xc0000021e0, 0x19be8c0, 0xc00003c128, 0xc002e62960)
-\tC:/world/bi_an/src/bian/game/server_node/handle_build.go:306 +0x943
-bian/src/bian/game/server_node.(*ServerNode).onEntitySave(0xc0000021e0, 0xc0082e2540)
-\tC:/world/bi_an/src/bian/game/server_node/server_handle.go:128 +0x1b0
-bian/src/bian/game/server_node.(*ServerNode).Start.func6(0xc0000021e0)
-\tC:/world/bi_an/src/bian/game/server_node/server.go:303 +0x53
-created by bian/src/bian/game/server_node.(*ServerNode).Start
-\tC:/world/bi_an/src/bian/game/server_node/server.go:299 +0x7c9
-
-2020/02/18 15:50:11.625 [W]  onEntitySave By 113 ms, 113963 us
-"]
-[native][process]2020-2-18 15:50:11	stdout:["2020/02/18 15:50:11.681 [E]  Err: INSERT INTO `map_object` (`id`, `num`, `r`, `c`, `z`, `z_index`, `mirror`, `cid`, `owner_id`, `workbench_id`, `refresh_time`, `map_id`, `fuel`, `attr`, `program_pb`, `template_build`, `entity_template_id`, `entity_template_creator`) VALUES  (60668874611544412, 1, -79, 174, 0, 2, false, 20012010, 60604161279951532, 0, 1571230267, 666, 0, UNHEX('0a16088020121136303636383837343631313534343431321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60669541395911004, 1, -82, 184, 0, 2, false, 8000022, 60604161279951532, 0, 1571230664, 666, 0, UNHEX('0a16088020121136303636393534313339353931313030341a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a016e0a014e'), false, 0, 0) , (60747768175550590, 1, -57, 184, 75, 4, false, 10000305, 60604161279951532, 0, 1571224090, 666, 0, UNHEX('0a16088020121136303734373736383137353535303539301a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a04081558001a0408135800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60667889534947676, 1, -96, 172, 345, 169, false, 20009046, 60604161279951532, 0, 1571229680, 666, 0, UNHEX('0a16088020121136303636373838393533343934373637361a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60669697414386012, 1, -90, 180, 0, 147, false, 20012010, 60604161279951532, 0, 1571230757, 666, 0, UNHEX('0a16088020121136303636393639373431343338363031321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60752979011072203, 1, -91, 162, 75, 3, false, 10000306, 60604161279951532, 0, 1571224481, 666, 0, UNHEX('0a16088020121136303735323937393031313037323230331a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60753898066964683, 1, -54, 184, 75, 2, false, 10000254, 60604161279951532, 0, 1571280945, 666, 0, UNHEX('0a16088020121136303735333839383036363936343638331a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a04081558001a0408135800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60758177683108043, 1, -90, 159, 0, 2, false, 8000022, 60604161279951532, 0, 1571283495, 666, 0, UNHEX('0a16088020121136303735383137373638333130383034331a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60658273773801820, 1, -64, 178, 0, 1, false, 8000022, 60604161279951532, 0, 1571223948, 666, 0, UNHEX('0a16088020121136303635383237333737333830313832301a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60662089955135836, 1, -74, 169, 0, 3, false, 20012009, 60604161279951532, 0, 1571226223, 666, 0, UNHEX('0a16088020121136303636323038393935353133353833361a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) ;
-"]
-[native][process]2020-2-18 15:50:11	stdout:["2020/02/18 15:50:11.694 [E]  EntitySave err:sql([INSERT INTO `map_object` (`id`, `num`, `r`, `c`, `z`, `z_index`, `mirror`, `cid`, `owner_id`, `workbench_id`, `refresh_time`, `map_id`, `fuel`, `attr`, `program_pb`, `template_build`, `entity_template_id`, `entity_template_creator`) VALUES  (60668874611544412, 1, -79, 174, 0, 2, false, 20012010, 60604161279951532, 0, 1571230267, 666, 0, UNHEX('0a16088020121136303636383837343631313534343431321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60669541395911004, 1, -82, 184, 0, 2, false, 8000022, 60604161279951532, 0, 1571230664, 666, 0, UNHEX('0a16088020121136303636393534313339353931313030341a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a016e0a014e'), false, 0, 0) , (60747768175550590, 1, -57, 184, 75, 4, false, 10000305, 60604161279951532, 0, 1571224090, 666, 0, UNHEX('0a16088020121136303734373736383137353535303539301a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a04081558001a0408135800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60667889534947676, 1, -96, 172, 345, 169, false, 20009046, 60604161279951532, 0, 1571229680, 666, 0, UNHEX('0a16088020121136303636373838393533343934373637361a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60669697414386012, 1, -90, 180, 0, 147, false, 20012010, 60604161279951532, 0, 1571230757, 666, 0, UNHEX('0a16088020121136303636393639373431343338363031321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60752979011072203, 1, -91, 162, 75, 3, false, 10000306, 60604161279951532, 0, 1571224481, 666, 0, UNHEX('0a16088020121136303735323937393031313037323230331a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60753898066964683, 1, -54, 184, 75, 2, false, 10000254, 60604161279951532, 0, 1571280945, 666, 0, UNHEX('0a16088020121136303735333839383036363936343638331a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a04081558001a0408135800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60758177683108043, 1, -90, 159, 0, 2, false, 8000022, 60604161279951532, 0, 1571283495, 666, 0, UNHEX('0a16088020121136303735383137373638333130383034331a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60658273773801820, 1, -64, 178, 0, 1, false, 8000022, 60604161279951532, 0, 1571223948, 666, 0, UNHEX('0a16088020121136303635383237333737333830313832301a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60662089955135836, 1, -74, 169, 0, 3, false, 20012009, 60604161279951532, 0, 1571226223, 666, 0, UNHEX('0a16088020121136303636323038393935353133353833361a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) ; Error 1062: Duplicate entry '60668874611544412' for key 'PRIMARY']) exec fail err(%!v(MISSING))
-2020/02/18 15:50:11.694 [I]  goroutine 240 [running]:
-bian/src/bian/game/gameLog.StackError(0x17405ea, 0x11, 0xc008e4fb10, 0x1, 0x1)
-\tC:/world/bi_an/src/bian/game/gameLog/log.go:44 +0x97
-bian/src/bian/game/server_node.(*ServerNode).onEntitySave.func1(0xc001968de0, 0x59ed4ebe77ead)
-\tC:/world/bi_an/src/bian/game/server_node/server_handle.go:104 +0x261
-panic(0x14d06a0, 0xc0083145c0)
-\tC:/Go/src/runtime/panic.go:679 +0x1c0
-bian/src/bian/x/assert.Assert(0x14e0300, 0xc00831a690, 0x3, 0x3)
-\tC:/world/bi_an/src/bian/x/assert/assert.go:19 +0x25c
-bian/src/bian/game/game_sql.(*GameSQL).MustExec(0xc001968de0, 0x19be8c0, 0xc00003c128, 0xc00908f200, 0xc58, 0x0, 0x0, 0x0, 0xc00003c128, 0x0)
-\tC:/world/bi_an/src/bian/game/game_sql/game_sql.go:241 +0x1dd
-bian/src/bian/game/server_node.(*ServerNode).buildingSave(0xc0000021e0, 0x19be8c0, 0xc00003c128, 0xc002e629b0)
-\tC:/world/bi_an/src/bian/game/server_node/handle_build.go:306 +0x943
-bian/src/bian/game/server_node.(*ServerNode).onEntitySave(0xc0000021e0, 0xc0082e2560)
-\tC:/world/bi_an/src/bian/game/server_node/server_handle.go:128 +0x1b0
-bian/src/bian/game/server_node.(*ServerNode).Start.func6(0xc0000021e0)
-\tC:/world/bi_an/src/bian/game/server_node/server.go:303 +0x53
-created by bian/src/bian/game/server_node.(*ServerNode).Start
-\tC:/world/bi_an/src/bian/game/server_node/server.go:299 +0x7c9
-
-2020/02/18 15:50:11.694 [W]  onEntitySave By 68 ms, 68993 us
-"]
-[native][process]2020-2-18 15:50:11	stdout:["2020/02/18 15:50:11.773 [E]  Err: INSERT INTO `map_object` (`id`, `num`, `r`, `c`, `z`, `z_index`, `mirror`, `cid`, `owner_id`, `workbench_id`, `refresh_time`, `map_id`, `fuel`, `attr`, `program_pb`, `template_build`, `entity_template_id`, `entity_template_creator`) VALUES  (60667062317535580, 1, -94, 179, 75, 762, false, 20009062, 60604161279951532, 0, 1571229186, 666, 0, UNHEX('0a16088020121136303636373036323331373533353538301a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60669384854983004, 1, -98, 177, 0, 3, false, 20012010, 60604161279951532, 0, 1571230571, 666, 0, UNHEX('0a16088020121136303636393338343835343938333030341a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60669846748254556, 1, -96, 183, 0, 2, false, 20012010, 60604161279951532, 0, 1571230846, 666, 0, UNHEX('0a16088020121136303636393834363734383235343535361a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (63501562709805811, 1, -93, 180, 75, 14177, false, 20009065, 60604161279951532, 0, 1571228551, 666, 0, UNHEX('0a16088020121136333530313536323730393830353831311a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60666723417772380, 1, -94, 180, 285, 118, true, 20009051, 60604161279951532, 0, 1571228984, 666, 0, UNHEX('0a16088020121136303636363732333431373737323338301a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60669384858456412, 1, -93, 180, 0, 14116, false, 20012010, 60604161279951532, 0, 1571230571, 666, 0, UNHEX('0a16088020121136303636393338343835383435363431321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60669541359407452, 1, -89, 184, 0, 3, false, 8000022, 60604161279951532, 0, 1571230664, 666, 0, UNHEX('0a16088020121136303636393534313335393430373435321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a016e0a014e'), false, 0, 0) , (60669697414320476, 1, -91, 182, 0, 1, false, 20012010, 60604161279951532, 0, 1571230757, 666, 0, UNHEX('0a16088020121136303636393639373431343332303437361a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (63501555193613043, 1, -93, 180, 75, 14181, false, 20009065, 60604161279951532, 0, 1571228551, 666, 0, UNHEX('0a16088020121136333530313535353139333631333034331a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60669355344908636, 1, -95, 184, 0, 2, false, 8000022, 60604161279951532, 0, 1571230553, 666, 0, UNHEX('0a16088020121136303636393335353334343930383633361a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) ;
-"]
-[native][process]2020-2-18 15:50:11	stdout:["2020/02/18 15:50:11.788 [E]  EntitySave err:sql([INSERT INTO `map_object` (`id`, `num`, `r`, `c`, `z`, `z_index`, `mirror`, `cid`, `owner_id`, `workbench_id`, `refresh_time`, `map_id`, `fuel`, `attr`, `program_pb`, `template_build`, `entity_template_id`, `entity_template_creator`) VALUES  (60667062317535580, 1, -94, 179, 75, 762, false, 20009062, 60604161279951532, 0, 1571229186, 666, 0, UNHEX('0a16088020121136303636373036323331373533353538301a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60669384854983004, 1, -98, 177, 0, 3, false, 20012010, 60604161279951532, 0, 1571230571, 666, 0, UNHEX('0a16088020121136303636393338343835343938333030341a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60669846748254556, 1, -96, 183, 0, 2, false, 20012010, 60604161279951532, 0, 1571230846, 666, 0, UNHEX('0a16088020121136303636393834363734383235343535361a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (63501562709805811, 1, -93, 180, 75, 14177, false, 20009065, 60604161279951532, 0, 1571228551, 666, 0, UNHEX('0a16088020121136333530313536323730393830353831311a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60666723417772380, 1, -94, 180, 285, 118, true, 20009051, 60604161279951532, 0, 1571228984, 666, 0, UNHEX('0a16088020121136303636363732333431373737323338301a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60669384858456412, 1, -93, 180, 0, 14116, false, 20012010, 60604161279951532, 0, 1571230571, 666, 0, UNHEX('0a16088020121136303636393338343835383435363431321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (60669541359407452, 1, -89, 184, 0, 3, false, 8000022, 60604161279951532, 0, 1571230664, 666, 0, UNHEX('0a16088020121136303636393534313335393430373435321a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a016e0a014e'), false, 0, 0) , (60669697414320476, 1, -91, 182, 0, 1, false, 20012010, 60604161279951532, 0, 1571230757, 666, 0, UNHEX('0a16088020121136303636393639373431343332303437361a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) , (63501555193613043, 1, -93, 180, 75, 14181, false, 20009065, 60604161279951532, 0, 1571228551, 666, 0, UNHEX('0a16088020121136333530313535353139333631333034331a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58001a0508118a01001a0408155800'), UNHEX('0a014e0a016e'), false, 0, 0) , (60669355344908636, 1, -95, 184, 0, 2, false, 8000022, 60604161279951532, 0, 1571230553, 666, 0, UNHEX('0a16088020121136303636393335353334343930383633361a0a080d6a06e5a496e8a7821a04080558001a08080872040a02eb071a04080f58011a0508118a01001a0408155801'), UNHEX('0a014e0a016e'), false, 0, 0) ; Error 1062: Duplicate entry '60667062317535580' for key 'PRIMARY']) exec fail err(%!v(MISSING))
-2020/02/18 15:50:11.788 [I]  goroutine 240 [running]:
-bian/src/bian/game/gameLog.StackError(0x17405ea, 0x11, 0xc008e4fb10, 0x1, 0x1)
-\tC:/world/bi_an/src/bian/game/gameLog/log.go:44 +0x97
-bian/src/bian/game/server_node.(*ServerNode).onEntitySave.func1(0xc001968de0, 0x59ed4ebe88c2e)
-\tC:/world/bi_an/src/bian/game/server_node/server_handle.go:104 +0x261
-panic(0x14d06a0, 0xc00834ed70)
-\tC:/Go/src/runtime/panic.go:679 +0x1c0
-bian/src/bian/x/assert.Assert(0x14e0300, 0xc008356d20, 0x3, 0x3)
-\tC:/world/bi_an/src/bian/x/assert/assert.go:19 +0x25c
-bian/src/bian/game/game_sql.(*GameSQL).MustExec(0xc001968de0, 0x19be8c0, 0xc00003c128, 0xc003922c80, 0xc4c, 0x0, 0x0, 0x0, 0x19960c0, 0xc008e088c0)
-\tC:/world/bi_an/src/bian/game/game_sql/game_sql.go:241 +0x1dd
-bian/src/bian/game/server_node.(*ServerNode).buildingSave(0xc0000021e0, 0x19be8c0, 0xc00003c128, 0xc002e62aa0)
-\tC:/world/bi_an/src/bian/game/server_node/handle_build.go:306 +0x943
-bian/src/bian/game/server_node.(*ServerNode).onEntitySave(0xc0000021e0, 0xc0082e25c0)
-\tC:/world/bi_an/src/bian/game/server_node/server_handle.go:128 +0x1b0
-bian/src/bian/game/server_node.(*ServerNode).Start.func6(0xc0000021e0)
-\tC:/world/bi_an/src/bian/game/server_node/server.go:303 +0x53
-created by bian/src/bian/game/server_node.(*ServerNode).Start
-\tC:/world/bi_an/src/bian/game/server_node/server.go:299 +0x7c9
-
-2020/02/18 15:50:11.788 [W]  onEntitySave By 93 ms, 93954 us
-"]
-[native][process]2020-2-18 15:50:20	stdout:["2020/02/18 15:50:20.089 [W]  Revice ServerEventTypeServerTimer By 35 ms, 35988 us
-"]
-[native][process]2020-2-18 15:50:50	stdout:["2020/02/18 15:50:50.155 [W]  Revice ServerEventTypeServerTimer By 36 ms, 36984 us
-"]
-[native][process]2020-2-18 15:51:0	stdout:["2020/02/18 15:51:00.060 [I]   ---------------------------- ShowFuncCount Begin ---------------------------- 
-2020/02/18 15:51:00.060 [I]  Func ALLCount:(5)
-2020/02/18 15:51:00.060 [I]  Func LeftCount:(0)
-2020/02/18 15:51:00.060 [I]  Func CallCount:(5)
-2020/02/18 15:51:00.060 [I]   ----------------------------------------------------------------------------- 
-2020/02/18 15:51:00.060 [I]  Func  Type:(ServerEventTypeServerTimer)   Num:(5)
-2020/02/18 15:51:00.060 [I]   ----------------------------------------------------------------------------- 
-2020/02/18 15:51:00.060 [I]   ---------------------------- ShowFuncCount  End  ---------------------------- 
-2020/02/18 15:51:00.061 [I]  -----------------------------------------
-2020/02/18 15:51:00.061 [I]  -----------------------------------------
-2020/02/18 15:51:00.061 [I]  sendState. snode(790), channel(bian_game), name(s_测试学校1_c_20200212_l_开启星球之旅_n_1)
-"]
-[native][process]2020-2-18 15:51:0	stdout:["2020/02/18 15:51:00.070 [W]  Revice ServerEventTypeServerTimer By 55 ms, 55977 us
-"]
-[native][process]2020-2-18 15:51:0	stdout:["2020/02/18 15:51:00.397 [W]  Revice ServerEventTypeServerTimer By 250 ms, 250920 us
-"]
-[native][process]2020-2-18 15:51:20	stdout:["2020/02/18 15:51:20.672 [W]  Revice ServerEventTypeServerTimer By 260 ms, 260912 us
+[native][process]2020-2-18 18:2:37	stdout:["2020/02/18 18:02:37.564 [I]  check completed.
+"]
+[native][process]2020-2-18 18:2:37	stdout:["2020/02/18 18:02:37.584 [I]  init config:&{keyDelim:. configPaths:[] fs:0x25c9c38 remoteProviders:[] configName:config configFile: configType: configPermissions:420 envPrefix: automaticEnvApplied:false envKeyReplacer:<nil> allowEmptyEnv:false config:map[grpc:map[host:127.0.0.1 port:3213] http:map[host:0.0.0.0 port:41789] is_develop:false is_native:true log:map[console:true] mini_map:false mysql_account:map[conn:map[dbname:bian_account host:47.107.73.43 password:root port:3306 username:root]] mysql_center:map[conn:map[dbname:server_list host:47.107.73.43 password:root port:3306 table_class:class_cnf table_lession:lesson_cnf1 username:root]] mysql_class:map[conn:map[dbname:bian_class host:47.107.73.43 password:root port:3306 username:root]] mysql_cnf:map[conn:map[dbname:bian_cnf host:47.107.73.43 password:root port:3306 username:root]] mysql_lesson:map[conn:map[dbname:bian_lesson host:47.107.73.43 password:root port:3306 username:root]] mysql_record:map[conn:map[dbname:bian_record_log host:47.107.73.43 password:root port:3306 username:root]] mysql_template:map[conn:map[dbname:bian_template host:47.107.73.43 password:root port:3306 username:root]] pressure_monster_multiple:5 pressure_test:0 server:map[channel:bian_lesson host:192.168.101.5 name:军杰 node_id:789 signkey:bian] server_model:lesson tpl_path:./src/bian_admin/tpl websocket:map[host:0.0.0.0 port:3211]] override:map[server:map[name:s_测试学校1_c_20200212_l_开启星球之旅_n_1 node_id:790]] defaults:map[repl:map[file:/tmp/bian_game_repl.socks host:127.0.0.1 network:tcp port:13333]] kvstore:map[] pflags:map[] env:map[] aliases:map[] typeByDefValue:false properties:<nil> onConfigChange:<nil>}
+"]
+[native][process]2020-2-18 18:2:37	stdout:["2020/02/18 18:02:37.596 [I]  ========  pprof-http try ========
+{\"component\":\"profile.http\",\"hostname\":\"WIN-01408111057\",\"message\":\"http server started at 0.0.0.0:9295\",\"mode\":\"develop\",\"server\":\"bian_game\",\"time\":\"2020-02-18T10:02:37.5968851Z\"}
+2020/02/18 18:02:37.596 [I]  ========  pprof-http done ========
+"]
+[native][process]2020-2-18 18:2:37	stdout:["2020/02/18 18:02:37.928 [I]  initLog V1
 "]
