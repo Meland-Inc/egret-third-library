@@ -2,8 +2,8 @@
  * @author 雪糕 
  * @desc 处理native服务器和游戏服务器的文件
  * @date 2020-02-18 11:42:29 
- * @Last Modified by 雪糕 
- * @Last Modified time 2020-02-18 11:42:29 
+ * @Last Modified by: 雪糕
+ * @Last Modified time: 2020-02-20 10:10:02
  */
 const http = require('http');
 const url = require('url');
@@ -11,6 +11,7 @@ const fs = require('fs');
 const config = require('./config.js');
 const util = require('./util.js');
 const logger = require('./logger.js');
+const platform = require('./platform.js');
 
 let nativeCnf;
 let mainWindow;
@@ -41,11 +42,6 @@ function createHttpServer() {
         await writeCnfValue('channel', config.channel);
         await writeCnfValue("nativePort", config.nativeServerPort + "");
         await runGameServer();
-
-        // logger.log('net', '跳转到游戏渲染地址');
-        // let clientArg = `&fakeGameMode=lessons&pcNative=1`;
-        // let rendererPath = `${config.rootPath}/src/renderer/renderer.html?${clientArg}`;
-        // window.location.href = rendererPath;
     });
 
     server.on('request', (req, res) => {
@@ -65,14 +61,30 @@ function createHttpServer() {
             let gameServer = `${args.ip}:${args.port}`;
             mainWindow.webContents.executeJavaScript(`window.nativeSignIn(\'${gameServer}\');`);
 
+            config.gameServerIp = args.ip;
+            config.gameServerPort = args.port;
+
+            // platform.test();
+
+            //上课渠道 并且是老师端,要上报本地ip
+            if (config.channel === config.constChannelLesson && config.userType === config.eUserType.teacher) {
+                platform.teacherUploadIp();
+            }
+
             //关闭服务器推送
             let path = `/native?controlType=receiveStart`;
-            util.requstGameServerHttp(path, () => {
+            util.requestGetHttp(config.localIp, config.gameServerPort, path, null, () => {
                 logger.log('net', `关闭服务器启动推送成功`)
             }, () => {
                 logger.error('net', `关闭服务器启动推送错误`)
             });
         }
+
+        // if (pathname === "/test") {
+        //     let obj = { data: 'lalala', data2: 'hahaha', data3: 333 };
+        //     res.end(JSON.stringify(obj));
+        //     return;
+        // }
 
         // res.end('hello world !');
         res.end();
@@ -86,6 +98,7 @@ async function runGameServer() {
     await util.runCmd(cmd, `${config.rootPath}/package/server/`, "启动游戏服务器成功", "启动游戏服务器失败");
 }
 
+/** 写入配置文件 */
 async function writeCnfValue(key, value) {
     nativeCnf[key] = value;
     await fs.writeFileSync(config.nativeCnfPath, JSON.stringify(nativeCnf, null, 4));

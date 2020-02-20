@@ -3,17 +3,17 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-18 20:36:16
+ * @Last Modified time: 2020-02-19 17:33:02
  */
 // Modules to control application life and create native browser window
 const { app, globalShortcut, BrowserWindow, Menu, shell, dialog } = require('electron')
-const process = require('process');
-
+const os = require('os');
 const fs = require('fs');
 
 const util = require('./util.js');
 const config = require('./config.js');
 const server = require('./server.js');
+const platform = require('./platform.js');
 
 //创建游戏浏览窗口
 let mainWindow
@@ -30,20 +30,7 @@ async function createWindow() {
   server.init(mainWindow);
 
   let queryValue = { fakeGameMode: "lessons", pcNative: 1 };
-
-  //添加伪协议启动参数
-  let urlValue = process.argv[process.argv.length - 1];
-  let protocolName = "bellplanet:///?"
-  if (urlValue.indexOf(protocolName) != -1) {
-    let argsValue = urlValue.replace(protocolName, "");
-    let argsArr = argsValue.split('&');
-    for (const arg of argsArr) {
-      let splitIndex = arg.search("=");
-      let key = arg.slice(0, splitIndex);
-      let value = arg.slice(splitIndex + 1, arg.length);
-      queryValue[key] = `${value}`;
-    }
-  }
+  queryValue = platform.init(queryValue);
 
   //加载渲染页面
   mainWindow.loadFile(`${config.rootPath}/src/renderer/renderer.html`, { query: queryValue });

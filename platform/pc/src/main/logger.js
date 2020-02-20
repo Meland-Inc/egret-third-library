@@ -3,7 +3,7 @@
  * @desc main用的logger类
  * @date 2020-02-13 14:54:34 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-14 17:20:29
+ * @Last Modified time: 2020-02-19 16:03:54
  */
 const fs = require('fs');
 const config = require('./config.js');
@@ -18,7 +18,6 @@ function init(value) {
 
 function log(tag, msg, ...args) {
     let content = formateMsg(tag, msg, ...args);
-    // console.log(content);
     /** 后台进程放到日志文件中 */
     if (tag === 'process') {
         content = content.replace(/\\n/g, '\r\n')
@@ -26,30 +25,35 @@ function log(tag, msg, ...args) {
         fs.writeFileSync(config.processLogPath, stdLog);
         return;
     }
-    mainWindow.webContents.executeJavaScript(`console.log(\'${content}\');`);
+    if (mainWindow && mainWindow.webContents) {
+        mainWindow.webContents.executeJavaScript(`console.log(\'${content}\');`);
+    }
 }
 
 function error(tag, msg, ...args) {
     let content = formateMsg(tag, msg, ...args);
-    // console.error(content);
-    mainWindow.webContents.executeJavaScript(`console.error(\'${content}\');`);
+    if (mainWindow && mainWindow.webContents) {
+        mainWindow.webContents.executeJavaScript(`console.error(\'${content}\');`);
+    }
 }
 
 function warn(tag, msg, ...args) {
     let content = formateMsg(tag, msg, ...args);
-    // console.warn(content);
-    mainWindow.webContents.executeJavaScript(`console.warn(\'${content}\');`);
+    if (mainWindow && mainWindow.webContents) {
+        mainWindow.webContents.executeJavaScript(`console.warn(\'${content}\');`);
+    }
 }
 
 function info(tag, msg, ...args) {
     let content = formateMsg(tag, msg, ...args);
-    // console.info(content);
-    mainWindow.webContents.executeJavaScript(`console.info(\'${content}\');`);
+    if (mainWindow && mainWindow.webContents) {
+        mainWindow.webContents.executeJavaScript(`console.info(\'${content}\');`);
+    }
 }
 
 function formateMsg(tag, msg, ...args) {
     let date = formatDate(new Date());
-    let argStr = args ? `:${JSON.stringify(args)}` : "";
+    let argStr = args && args.length > 0 ? `:${JSON.stringify(args)}` : "";
     let content = `[native][${tag}]${date}\t${msg}${argStr}`;
     return content
 }

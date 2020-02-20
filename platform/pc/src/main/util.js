@@ -2,14 +2,15 @@
  * @author 雪糕 
  * @desc main用的工具类
  * @date 2020-02-18 11:43:24 
- * @Last Modified by 雪糕 
- * @Last Modified time 2020-02-18 11:43:24 
+ * @Last Modified by: 雪糕
+ * @Last Modified time: 2020-02-19 16:49:51
  */
 // const spawn = require("child_process").spawn;
 const exec = require("child_process").exec;
 const config = require('./config.js');
 const logger = require('./logger.js');
 const http = require('http');
+const querystring = require('querystring');
 
 // function runSpawn(command, param, cwd, successMsg, errorMsg) {
 //     return new Promise((resolve, reject) => {
@@ -72,36 +73,108 @@ function closeGameServer() {
     }
 
     let path = `/native?controlType=closeServer`
-    requstGameServerHttp(path, null, () => {
-        error(`net`, `游戏服务器关闭错误`, response);
+    requestGetHttp(config.localIp, config.gameServerPort, path, null, () => {
+        logger.log('net', `游戏服务器关闭成功`)
+    }, () => {
+        logger.error('net', `游戏服务器关闭错误`)
     });
 }
 
-function requstGameServerHttp(path, successFunc, errorFunc) {
-    let options = {
-        host: config.localIp, // 请求地址 域名，google.com等.. 
-        port: config.gameServerPort,
-        path: path, // 具体路径eg:/upload
-        method: 'GET', // 请求方式, 这里以post为例
-        headers: { // 必选信息,  可以抓包工看一下
-            'Content-Type': 'application/json'
-        }
-    };
+function requestGetHttp(host, port, path, data, successFunc, errorFunc) {
+    let content = data ? querystring.stringify(data) : "";
 
-    http.get(options, (response) => {
-        if (response.statusCode != 200) {
+    let options = {
+        host: host,
+        path: `${path}?${content}`,
+        method: 'GET'
+    };
+    if (port) {
+        options['port'] = port;
+    }
+
+
+    let request = http.request(options, (response) => {
+        response.setEncoding('utf8');
+
+        let body = "";
+        response.on('data', (data) => {
+            body += data;
+        });
+
+        response.on('end', () => {
+            if (successFunc) {
+                successFunc(body);
+            }
+        });
+
+        response.on('error', (e) => {
             if (errorFunc) {
                 errorFunc();
             }
-            return;
+        });
+    });
+
+    request.on('error', (e) => {
+        if (errorFunc) {
+            errorFunc();
         }
-        if (successFunc) {
-            successFunc();
+        logger.error('net', `get方式 发送http请求错误`, e.message)
+    });
+
+    request.write(content);
+    request.end();
+}
+
+function requstPostHttp(host, port, path, data, successFunc, errorFunc) {
+    let content = data ? querystring.stringify(data) : "";
+
+    let options = {
+        host: host,
+        path: path,
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Content-Length': content.length
         }
-    })
+    }
+    if (port) {
+        options['port'] = port;
+    }
+
+    let request = http.request(options, (response) => {
+        response.setEncoding('utf8');
+
+        let body = "";
+        response.on('data', (data) => {
+            body += data;
+        });
+
+        response.on('end', () => {
+            if (successFunc) {
+                successFunc(body);
+            }
+        });
+
+        response.on('error', (e) => {
+            if (errorFunc) {
+                errorFunc();
+            }
+        });
+    });
+
+    request.on('error', (e) => {
+        if (errorFunc) {
+            errorFunc();
+        }
+        logger.error('net', `post方式 发送http请求错误`, e.message)
+    });
+
+    request.write(content);
+    request.end();
 }
 
 // exports.runSpawn = runSpawn;
 exports.runCmd = runCmd;
 exports.closeGameServer = closeGameServer;
-exports.requstGameServerHttp = requstGameServerHttp;
+exports.requestGetHttp = requestGetHttp;
+exports.requstPostHttp = requstPostHttp;

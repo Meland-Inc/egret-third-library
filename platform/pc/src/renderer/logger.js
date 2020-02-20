@@ -3,7 +3,7 @@
  * @desc renderer用的logger类
  * @date 2020-02-13 14:54:24 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-13 15:31:39
+ * @Last Modified time: 2020-02-19 16:04:55
  */
 export function log(tag, msg, ...args) {
     let content = formateMsg(tag, msg, ...args);
@@ -27,7 +27,7 @@ export function info(tag, msg, ...args) {
 
 function formateMsg(tag, msg, ...args) {
     let date = formatDate(new Date());
-    let argStr = args ? `:${JSON.stringify(args)}` : "";
+    let argStr = args && args.length > 0 ? `:${JSON.stringify(args)}` : "";
     let content = `[native][${tag}]${date}\t${msg}${argStr}`;
     return content
 }
