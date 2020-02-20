@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="40,40" opaque="false">
+  <displayList>
+    <image id="n3_mqcq" name="n3" src="qiln1e" fileName="img/img_sket_ydgj_3.png" xy="-1,0" size="2,40">
+      <relation target="" sidePair="left-left,height-height"/>
+    </image>
+    <image id="n4_mqcq" name="n4" src="qiln1f" fileName="img/img_sket_ydgj_3_1.png" xy="0,-1" size="40,2">
+      <relation target="" sidePair="width-width,top-top"/>
+    </image>
+    <image id="n5_mqcq" name="n5" src="qiln1f" fileName="img/img_sket_ydgj_3_1.png" xy="0,40" size="40,2">
+      <relation target="" sidePair="width-width,bottom-bottom"/>
+    </image>
+    <image id="n6_mqcq" name="n6" src="qiln1e" fileName="img/img_sket_ydgj_3.png" xy="40,0" size="2,40">
+      <relation target="" sidePair="right-right,height-height"/>
+    </image>
+  </displayList>
+</component>
