@@ -87,19 +87,20 @@
       <gearDisplay controller="ctrlMode" pages="0"/>
       <relation target="n26_pa6b" sidePair="bottom-top,right-right"/>
     </image>
-    <component id="n35_gup1" name="comProjectionSetting" src="qiln27" fileName="com/ComProjectionSetting.xml" xy="1580,669">
+    <component id="n35_gup1" name="comProjectionSetting" src="qiln27" fileName="com/ComProjectionSetting.xml" xy="1580,451">
       <relation target="n26_pa6b" sidePair="right-left,bottom-bottom"/>
     </component>
-    <component id="n34_gup1" name="comHeightSetting" src="qiln2m" fileName="com/ComHeightSetting.xml" xy="1464,774">
+    <component id="n34_gup1" name="comCanvasBoxSetting" src="qiln2m" fileName="com/ComCanvasBoxSetting.xml" xy="1464,539">
       <relation target="n26_pa6b" sidePair="right-left,bottom-bottom"/>
     </component>
-    <list id="n26_pa6b" name="lstProjectionBtn" xy="1777,487" size="72,389" lineGap="30" defaultItem="ui://a0pj43bjqiln14">
+    <list id="n26_pa6b" name="lstProjectionBtn" xy="1777,487" size="72,192" lineGap="30" defaultItem="ui://a0pj43bjqiln14">
       <gearDisplay controller="ctrlMode" pages="0"/>
       <relation target="n13_batc" sidePair="right-right"/>
-      <item icon="ui://a0pj43bjqilni"/>
-      <item icon="ui://a0pj43bjqilng"/>
       <item icon="ui://a0pj43bjqilnl"/>
-      <item icon="ui://a0pj43bjqilnb"/>
+      <item icon="ui://a0pj43bjqhbb5j"/>
     </list>
+    <component id="n54_s0bt" name="comCanvasBoxInfo" src="s0bt5k" fileName="com/ComCanvasBoxInfo.xml" xy="465,41">
+      <relation target="" sidePair="left-left,top-top"/>
+    </component>
   </displayList>
 </component>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="296,220" bgColorEnabled="true">
+  <displayList>
+    <image id="n35_s0bt" name="n35" src="qiln4" fileName="img/img_dra_top.png" xy="0,0" size="296,62" group="n44_s0bt"/>
+    <text id="n36_s0bt" name="n36" xy="15,15" size="53,31" group="n44_s0bt" fontSize="24" color="#333333" text="长度"/>
+    <image id="n37_s0bt" name="n37" src="eggjcyihu" fileName="img/img_cm_srk_3.png" pkg="te1gxawo" xy="163,12" size="120,38" group="n43_s0bt"/>
+    <text id="n38_s0bt" name="tfCanvasLength" xy="198,14" size="50,35" group="n43_s0bt" input="true" restrict="0-9" keyboardType="4" fontSize="24" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" text="500">
+      <relation target="n37_s0bt" sidePair="width-width,height-height,left-left,top-top"/>
+    </text>
+    <component id="n39_s0bt" name="btnAddLength" src="ilo1cyidi" fileName="btn/btnScaleNoEffect.xml" pkg="te1gxawo" xy="166,16" size="30,30" group="n43_s0bt">
+      <Button icon="ui://a0pj43bjqilnh"/>
+    </component>
+    <component id="n40_s0bt" name="btnSubLength" src="ilo1cyidi" fileName="btn/btnScaleNoEffect.xml" pkg="te1gxawo" xy="250,16" size="30,30" group="n43_s0bt">
+      <Button icon="ui://a0pj43bjqilnf"/>
+    </component>
+    <image id="n41_s0bt" name="n41" src="qhbb5g" fileName="img/img_dra_line_2.png" xy="197,13" size="2,37" group="n43_s0bt"/>
+    <image id="n42_s0bt" name="n42" src="qhbb5g" fileName="img/img_dra_line_2.png" xy="247,13" size="2,37" group="n43_s0bt"/>
+    <group id="n43_s0bt" name="n43" xy="163,12" size="120,38" group="n44_s0bt"/>
+    <group id="n44_s0bt" name="length" xy="0,0" size="296,62"/>
+    <image id="n14_s0bt" name="n14" src="qiln4" fileName="img/img_dra_top.png" xy="0,60" size="296,62" group="n33_s0bt"/>
+    <text id="n16_s0bt" name="n16" xy="15,75" size="53,31" group="n33_s0bt" fontSize="24" color="#333333" text="宽度"/>
+    <image id="n26_s0bt" name="n26" src="eggjcyihu" fileName="img/img_cm_srk_3.png" pkg="te1gxawo" xy="163,72" size="120,38" group="n32_s0bt"/>
+    <text id="n27_s0bt" name="tfCanvasWidth" xy="198,74" size="50,35" group="n32_s0bt" input="true" restrict="0-9" keyboardType="4" fontSize="24" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" text="500">
+      <relation target="n26_s0bt" sidePair="width-width,height-height,left-left,top-top"/>
+    </text>
+    <component id="n28_s0bt" name="btnAddWidth" src="ilo1cyidi" fileName="btn/btnScaleNoEffect.xml" pkg="te1gxawo" xy="166,76" size="30,30" group="n32_s0bt">
+      <Button icon="ui://a0pj43bjqilnh"/>
+    </component>
+    <component id="n29_s0bt" name="btnSubWidth" src="ilo1cyidi" fileName="btn/btnScaleNoEffect.xml" pkg="te1gxawo" xy="250,76" size="30,30" group="n32_s0bt">
+      <Button icon="ui://a0pj43bjqilnf"/>
+    </component>
+    <image id="n30_s0bt" name="n30" src="qhbb5g" fileName="img/img_dra_line_2.png" xy="197,73" size="2,37" group="n32_s0bt"/>
+    <image id="n31_s0bt" name="n31" src="qhbb5g" fileName="img/img_dra_line_2.png" xy="247,73" size="2,37" group="n32_s0bt"/>
+    <group id="n32_s0bt" name="n32" xy="163,72" size="120,38" group="n33_s0bt"/>
+    <group id="n33_s0bt" name="width" xy="0,60" size="296,62"/>
+    <image id="n9_qiln" name="n9" src="qiln4" fileName="img/img_dra_top.png" xy="0,120" size="296,100" group="n12_s0bt"/>
+    <component id="n8_qiln" name="sldCanvasHeight" src="qiln1y" fileName="com/sldDraw.xml" xy="26,193" size="244,12" group="n12_s0bt">
+      <Slider value="50" max="100"/>
+    </component>
+    <text id="n2_wdtr" name="n2" xy="15,135" size="53,31" group="n12_s0bt" fontSize="24" color="#333333" text="高度"/>
+    <image id="n10_qiln" name="n10" src="eggjcyihu" fileName="img/img_cm_srk_3.png" pkg="te1gxawo" xy="163,133" size="120,38" group="n25_s0bt"/>
+    <text id="n6_wdtr" name="tfCanvasHeight" xy="198,135" size="50,35" group="n25_s0bt" input="true" restrict="0-9" keyboardType="4" fontSize="24" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" text="500">
+      <relation target="n10_qiln" sidePair="width-width,height-height,left-left,top-top"/>
+    </text>
+    <component id="n21_s0bt" name="btnAddHight" src="ilo1cyidi" fileName="btn/btnScaleNoEffect.xml" pkg="te1gxawo" xy="166,137" size="30,30" group="n25_s0bt">
+      <Button icon="ui://a0pj43bjqilnh"/>
+    </component>
+    <component id="n22_s0bt" name="btnSubHight" src="ilo1cyidi" fileName="btn/btnScaleNoEffect.xml" pkg="te1gxawo" xy="250,137" size="30,30" group="n25_s0bt">
+      <Button icon="ui://a0pj43bjqilnf"/>
+    </component>
+    <image id="n23_s0bt" name="n23" src="qhbb5g" fileName="img/img_dra_line_2.png" xy="197,134" size="2,37" group="n25_s0bt"/>
+    <image id="n24_s0bt" name="n24" src="qhbb5g" fileName="img/img_dra_line_2.png" xy="247,134" size="2,37" group="n25_s0bt"/>
+    <group id="n25_s0bt" name="n25" xy="163,133" size="120,38" group="n12_s0bt"/>
+    <group id="n12_s0bt" name="hight" xy="0,120" size="296,100"/>
+  </displayList>
+</component>

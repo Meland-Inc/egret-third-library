@@ -59,7 +59,7 @@
     <image id="qiln2e" name="img_sket_ty_1.png" path="/img/"/>
     <image id="qiln2f" name="img_sket_ty_2.png" path="/img/"/>
     <component id="qiln2g" name="ComProjectionDrawing.xml" path="/com/"/>
-    <component id="qiln2m" name="ComHeightSetting.xml" path="/com/"/>
+    <component id="qiln2m" name="ComCanvasBoxSetting.xml" path="/com/"/>
     <component id="qiln2s" name="ComPenSetting.xml" path="/com/"/>
     <component id="qiln2z" name="ComAnimEditingArea.xml" path="/com/"/>
     <component id="gup13d" name="WinDrawingPad.xml" path="/win/" exported="true"/>
@@ -67,6 +67,11 @@
     <image id="j5955d" name="icon_dra_save.png" path="/img/"/>
     <component id="j5955e" name="WinDrawingLoading.xml" path="/win/" exported="true"/>
     <component id="gbo05f" name="ComDrawSelect.xml" path="/com/" exported="true"/>
+    <image id="qhbb5g" name="img_dra_line_2.png" path="/img/" scale="9grid"/>
+    <image id="qhbb5h" name="img_dra_line_1.png" path="/img/" scale="9grid" scale9grid="5,1,10,2"/>
+    <image id="qhbb5i" name="img_dra_ckg_1.png" path="/img/" scale="9grid" scale9grid="10,10,16,17"/>
+    <image id="qhbb5j" name="icon_dra_ckg_1.png" path="/img/"/>
+    <component id="s0bt5k" name="ComCanvasBoxInfo.xml" path="/com/"/>
   </resources>
   <publish name="drawing"/>
 </packageDescription>

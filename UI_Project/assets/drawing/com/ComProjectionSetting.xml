@@ -13,13 +13,13 @@
       <gearDisplay controller="ctrlType" pages="2"/>
     </image>
     <component id="n15_qiln" name="n15" src="qiln17" fileName="btn/btnProjection.xml" xy="0,0">
-      <Button controller="ctrlType" page="0"/>
+      <Button checked="true" titleFontSize="24" controller="ctrlType" page="0"/>
     </component>
     <component id="n16_qiln" name="n16" src="qiln17" fileName="btn/btnProjection.xml" xy="0,40">
-      <Button title="边投影" controller="ctrlType" page="1"/>
+      <Button title="边投影" titleFontSize="24" controller="ctrlType" page="1"/>
     </component>
     <component id="n17_qiln" name="n17" src="qiln17" fileName="btn/btnProjection.xml" xy="0,80">
-      <Button title="不占格" controller="ctrlType" page="2"/>
+      <Button title="不占格" titleFontSize="24" controller="ctrlType" page="2"/>
     </component>
   </displayList>
 </component>
