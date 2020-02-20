@@ -1,15 +1,23 @@
+/**
+ * @author 雪糕 
+ * @desc main主程序文件
+ * @date 2020-02-18 11:42:51 
+ * @Last Modified by: 雪糕
+ * @Last Modified time: 2020-02-19 17:33:02
+ */
 // Modules to control application life and create native browser window
 const { app, globalShortcut, BrowserWindow, Menu, shell, dialog } = require('electron')
-const path = require('path')
+const os = require('os');
 const fs = require('fs');
 
 const util = require('./util.js');
 const config = require('./config.js');
-const index = require('./index.js');
+const server = require('./server.js');
+const platform = require('./platform.js');
 
+//创建游戏浏览窗口
 let mainWindow
 async function createWindow() {
-  // Create the browser window.
   mainWindow = new BrowserWindow({
     width: 1600,
     height: 900,
@@ -19,22 +27,18 @@ async function createWindow() {
     }
   });
 
-  index.init(mainWindow);
+  server.init(mainWindow);
 
-  // and load the index.html of the app.
+  let queryValue = { fakeGameMode: "lessons", pcNative: 1 };
+  queryValue = platform.init(queryValue);
 
-  // logger.log('net', '跳转到游戏渲染地址');
-  // let clientArg = `&fakeGameMode=lessons&pcNative=1`;
-  // let rendererPath = `${config.rootPath}/src/renderer/renderer.html?${clientArg}`;
-  // window.location.href = rendererPath;
-
-  mainWindow.loadFile(`${config.rootPath}/src/renderer/renderer.html`, { query: { fakeGameMode: "lessons", pcNative: 1 } });
-  // mainWindow.loadFile(`${config.rootPath}/src/main/index.html`);
+  //加载渲染页面
+  mainWindow.loadFile(`${config.rootPath}/src/renderer/renderer.html`, { query: queryValue });
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 
-  // Emitted when the window is closed.
+  //监听窗口关闭
   mainWindow.on('closed', function () {
     // Dereference the window object, usually you would store windows
     // in an array if your app supports multi windows, this is the time
@@ -81,21 +85,8 @@ app.on('ready', () => {
 
 })
 
-async function saveProccessLog() {
-  let path = await dialog.showSaveDialogSync(
-    // mainWindow,
-    {
-      title: `后台进程日志另存为`,
-      filters: [{ name: "process.log", extensions: ["log"] }]
-    });
-  let content = await fs.readFileSync(config.processLogPath, 'utf-8');
-  let result = await fs.writeFileSync(path, content, 'utf-8');
-}
-
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
-
-
 let template = [
   // {
   //   label: '窗口',
@@ -162,14 +153,19 @@ let template = [
         click: () => {
           shell.openExternal('http://www.bellcode.com')
         }
-      },
-      // {
-      //   label: '查看版本',
-      //   click: () => {
-      //     mainWindow.webContents.send("client_show_version");
-      //     console.log('send client_show_version');
-      //   }
-      // }
+      }
     ]
   }
 ]
+
+//保存日志文件方法
+async function saveProccessLog() {
+  let path = await dialog.showSaveDialogSync(
+    // mainWindow,
+    {
+      title: `后台进程日志另存为`,
+      filters: [{ name: "process.log", extensions: ["log"] }]
+    });
+  let content = await fs.readFileSync(config.processLogPath, 'utf-8');
+  await fs.writeFileSync(path, content, 'utf-8');
+}
