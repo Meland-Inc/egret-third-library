@@ -482,6 +482,8 @@
     <image id="j5zfwcyil9" name="icon_ide_dx_1.png" path="/ideCommon/img/"/>
     <image id="f06dwcyil8" name="icon_mapT_bq_2.png" path="/img/" scale="9grid" scale9grid="20,9,40,18"/>
     <image id="vlmwwcyila" name="img_codeV_xf.png" path="/codeVew/img/"/>
+    <component id="f08kwcyilb" name="btnCodeBlockOperate.xml" path="/codeVew/btn/"/>
+    <image id="f08kwcyilc" name="img_codeV_xzk_1.png" path="/codeVew/img/" scale="9grid" scale9grid="4,4,32,32"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>
