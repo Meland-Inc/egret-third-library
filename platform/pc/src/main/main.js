@@ -3,22 +3,60 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-19 17:33:02
+ * @Last Modified time: 2020-02-22 04:22:41
  */
 // Modules to control application life and create native browser window
 const { app, globalShortcut, BrowserWindow, Menu, shell, dialog } = require('electron')
 const os = require('os');
 const fs = require('fs');
+const process = require('process');
 
-const util = require('./util.js');
+const logger = require('./logger.js');
 const config = require('./config.js');
 const server = require('./server.js');
 const platform = require('./platform.js');
+const util = require('./util.js');
+
+let mainWindow
+
+//初始化方法
+async function init() {
+  //日志初始化
+  logger.init();
+
+  //工具初始化
+  util.init();
+
+  //平台测试
+  config.urlValue = 'bellplanet://lesson?temporary_token=LWKqnyRO8M:QN0WH&class_id=410&bell_origin=demoapi.wkcoding.com';
+
+  //平台相关初始化
+  let queryValue = { pcNative: 1 };
+  let protocolName = "bellplanet://";
+  if (config.urlValue.indexOf(protocolName) === -1) {
+    //非平台
+    logger.log('net', `本地打开native程序`);
+    queryValue["fakeGameMode"] = "lessons";
+  } else {
+    //平台初始化
+    await platform.init(queryValue);
+    queryValue['fakeUserType'] = config.userType;
+    queryValue['token'] = config.bellTempToken;
+  }
+
+  //非上课端 或者 老师端 本地服务器初始化
+  if (config.channel != config.constChannelLesson || config.userType === config.eUserType.teacher) {
+    server.init();
+  }
+
+  //加载渲染页面
+  mainWindow.loadFile(`${config.rootPath}/src/renderer/renderer.html`, { query: queryValue });
+  logger.log('net', 'urlValue', config.urlValue);
+}
 
 //创建游戏浏览窗口
-let mainWindow
-async function createWindow() {
-  mainWindow = new BrowserWindow({
+function createWindow() {
+  config.mainWindow = mainWindow = new BrowserWindow({
     width: 1600,
     height: 900,
     webPreferences: {
@@ -27,26 +65,52 @@ async function createWindow() {
     }
   });
 
-  server.init(mainWindow);
+  // mainWindow.isEnabled
 
-  let queryValue = { fakeGameMode: "lessons", pcNative: 1 };
-  queryValue = platform.init(queryValue);
-
-  //加载渲染页面
-  mainWindow.loadFile(`${config.rootPath}/src/renderer/renderer.html`, { query: queryValue });
+  /** 设置url参数 */
+  config.urlValue = process.argv[process.argv.length - 1];
+  //初始化
+  init();
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 
+  mainWindow.webContents.on('crashed', () => {
+    const options = {
+      type: 'error',
+      title: '进程崩溃了',
+      message: '这个进程已经崩溃.',
+      buttons: ['重载', '退出'],
+    };
+    recordCrash().then(() => {
+      dialog.showMessageBox(options, (index) => {
+        if (index === 0) {
+          reloadWindow(mainWindow);
+        }
+        else app.quit();
+      });
+    }).catch((e) => {
+      console.log('err', e);
+    });
+  })
+
+  function recordCrash() {
+    return new Promise(resolve => {
+      // 崩溃日志请求成功.... 
+      resolve();
+    })
+  }
+
   //监听窗口关闭
-  mainWindow.on('closed', function () {
+  mainWindow.on('closed', async () => {
     // Dereference the window object, usually you would store windows
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
-    util.closeGameServer();
-    mainWindow = null;
+    config.mainWindow = mainWindow = null;
+    await server.closeGameServer();
   })
 
+  //设置菜单
   const menu = Menu.buildFromTemplate(template);
   Menu.setApplicationMenu(menu);
 }
@@ -54,6 +118,32 @@ async function createWindow() {
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
+//限制只启用一个程序
+const gotTheLock = app.requestSingleInstanceLock();
+if (!gotTheLock) {
+  app.quit();
+  return;
+}
+app.on('second-instance', async (event, argv, workingDirectory) => {
+  // 当运行第二个实例时,将会聚焦到mainWindow这个窗口
+  if (mainWindow) {
+    if (mainWindow.isMinimized()) {
+      mainWindow.restore();
+    }
+    mainWindow.focus();
+    mainWindow.show();
+
+    //非上课端 或者 老师端要关闭之前的服务器
+    if (config.channel != config.constChannelLesson || config.userType === config.eUserType.teacher) {
+      await server.closeGameServer();
+    }
+
+    /** 设置url参数 */
+    config.urlValue = argv[argv.length - 1];
+    init();
+  }
+})
+
 app.on('ready', () => {
   createWindow();
   let shortCut = "";

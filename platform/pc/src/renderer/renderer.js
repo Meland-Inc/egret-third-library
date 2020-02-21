@@ -3,12 +3,13 @@
  * @desc renderer主程序
  * @date 2020-02-18 11:44:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-18 15:40:40
+ * @Last Modified time: 2020-02-22 04:29:24
  */
 import * as clientUpdate from './update/clientUpdate.js';
 import * as config from './config.js';
 import * as logger from './logger.js';
 
+const fs = require('fs');
 const http = require("http");
 let evnName = "beta";
 let policyHost = "";
@@ -88,7 +89,13 @@ function startLoadPolicy(policyVersion) {
     })
 }
 
-function startRunGame() {
+async function startRunGame() {
+    let content = await fs.readFileSync(config.globalConfigPath, "utf-8");
+    let globalConfigData = JSON.parse(content);
+    if (globalConfigData) {
+        localStorage.setItem(config.nativeConfig, JSON.stringify(globalConfigData));
+    }
+
     let hrefArr = location.href.split(".html");
     if (hrefArr[1] != "") {
         location.href = `${config.rootPath}/package/client/index.html${hrefArr[1]}`;

@@ -3,7 +3,7 @@
  * @desc main用的工具类
  * @date 2020-02-18 11:43:24 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-19 16:49:51
+ * @Last Modified time: 2020-02-21 23:13:23
  */
 // const spawn = require("child_process").spawn;
 const exec = require("child_process").exec;
@@ -11,6 +11,7 @@ const config = require('./config.js');
 const logger = require('./logger.js');
 const http = require('http');
 const querystring = require('querystring');
+const fs = require('fs');
 
 // function runSpawn(command, param, cwd, successMsg, errorMsg) {
 //     return new Promise((resolve, reject) => {
@@ -44,7 +45,7 @@ function runCmd(cmd, cwd, successMsg, errorMsg) {
         let process = exec(cmd, { cwd: cwd }, (error) => {
             if (error) {
                 if (errorMsg) {
-                    loger.error('cmd', errorMsg, error);
+                    logger.error('cmd', errorMsg, error);
                 }
                 reject(process);
             } else {
@@ -56,31 +57,15 @@ function runCmd(cmd, cwd, successMsg, errorMsg) {
         });
 
         process.stdout.on("data", data => {
-            logger.log('process', 'stdout', data);
+            logger.processLog('cmd', 'stdout', data);
         });
         process.stderr.on("data", data => {
-            logger.log('process', 'stderr', data);
+            logger.processLog('cmd', 'stderr', data);
         });
     });
 }
 
-/** 关闭游戏服务器 */
-function closeGameServer() {
-    if (!config.gameServerInited) {
-        let cmdStr = "taskkill /im game.exe /f";
-        runCmd(cmdStr, null, `游戏服务器关闭成功`, "游戏服务器关闭错误");
-        return;
-    }
-
-    let path = `/native?controlType=closeServer`
-    requestGetHttp(config.localIp, config.gameServerPort, path, null, () => {
-        logger.log('net', `游戏服务器关闭成功`)
-    }, () => {
-        logger.error('net', `游戏服务器关闭错误`)
-    });
-}
-
-function requestGetHttp(host, port, path, data, successFunc, errorFunc) {
+function requestGetHttp(host, port, path, data, headers, successFunc, errorFunc) {
     let content = data ? querystring.stringify(data) : "";
 
     let options = {
@@ -91,7 +76,13 @@ function requestGetHttp(host, port, path, data, successFunc, errorFunc) {
     if (port) {
         options['port'] = port;
     }
-
+    if (headers) {
+        options.headers = {};
+        for (const key in headers) {
+            const value = headers[key];
+            options.headers[key] = value;
+        }
+    }
 
     let request = http.request(options, (response) => {
         response.setEncoding('utf8');
@@ -103,7 +94,11 @@ function requestGetHttp(host, port, path, data, successFunc, errorFunc) {
 
         response.on('end', () => {
             if (successFunc) {
-                successFunc(body);
+                if (!!body) {
+                    successFunc(JSON.parse(body));
+                } else {
+                    successFunc();
+                }
             }
         });
 
@@ -125,7 +120,7 @@ function requestGetHttp(host, port, path, data, successFunc, errorFunc) {
     request.end();
 }
 
-function requstPostHttp(host, port, path, data, successFunc, errorFunc) {
+function requestPostHttp(host, port, path, data, headers, successFunc, errorFunc) {
     let content = data ? querystring.stringify(data) : "";
 
     let options = {
@@ -140,6 +135,12 @@ function requstPostHttp(host, port, path, data, successFunc, errorFunc) {
     if (port) {
         options['port'] = port;
     }
+    if (headers) {
+        for (const key in headers) {
+            const value = headers[key];
+            options.headers[key] = value;
+        }
+    }
 
     let request = http.request(options, (response) => {
         response.setEncoding('utf8');
@@ -151,7 +152,11 @@ function requstPostHttp(host, port, path, data, successFunc, errorFunc) {
 
         response.on('end', () => {
             if (successFunc) {
-                successFunc(body);
+                if (!!body) {
+                    successFunc(JSON.parse(body));
+                } else {
+                    successFunc();
+                }
             }
         });
 
@@ -173,8 +178,25 @@ function requstPostHttp(host, port, path, data, successFunc, errorFunc) {
     request.end();
 }
 
+/** 初始化 */
+async function init() {
+    config.globalConfigData = {};
+    await fs.writeFileSync(config.globalConfigPath, JSON.stringify(config.globalConfigData, null, 4));
+}
+
+/** 写入数据到全局配置文件 */
+async function setGlobalConfigValue(key, value) {
+    if (!config.globalConfigData) {
+        let content = await fs.readFileSync(config.globalConfigPath, "utf-8");
+        config.globalConfigData = JSON.parse(content);
+    }
+    config.globalConfigData[key] = value;
+    await fs.writeFileSync(config.globalConfigPath, JSON.stringify(config.globalConfigData, null, 4));
+}
+
 // exports.runSpawn = runSpawn;
 exports.runCmd = runCmd;
-exports.closeGameServer = closeGameServer;
 exports.requestGetHttp = requestGetHttp;
-exports.requstPostHttp = requstPostHttp;
+exports.requestPostHttp = requestPostHttp;
+exports.setGlobalConfigValue = setGlobalConfigValue;
+exports.init = init;
