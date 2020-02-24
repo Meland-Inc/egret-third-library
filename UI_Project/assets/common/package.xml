@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="te1gxawo">
+<packageDescription id="te1gxawo" jpegQuality="80" compressPNG="true">
   <resources>
     <component id="qn8o0" name="WinConfirm.xml" path="/old/win/" exported="true"/>
     <image id="qn8o8" name="img_main_chatbubble_1.png" path="/old/newImg/" exported="true" scale="9grid" scale9grid="25,10,50,20"/>
@@ -643,6 +643,7 @@
     <image id="ggj7cyijo" name="icon_cm_fjm_1.png" path="/img/" exported="true"/>
     <component id="g6m3cyijp" name="ComEntityTag.xml" path="/com/"/>
     <image id="d7i5cyijq" name="img_cm_bq.png" path="/img/" scale="9grid" scale9grid="14,6,28,12"/>
+    <image id="f08kcyijr" name="icon_cm_gb_1.png" path="/img/" exported="true"/>
   </resources>
   <publish name="common">
     <atlas name="默认" index="0"/>
