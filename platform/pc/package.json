@@ -37,7 +37,8 @@
       "rfc3161TimeStampServer": "http://timestamp.digicert.com",
       "certificateFile": "bellplanet.pfx",
       "certificatePassword": "bellcode123",
-      "icon": "./icon/icon.ico"
+      "icon": "./icon/icon.ico",
+      "requestedExecutionLevel": "highestAvailable"
     },
     "dmg": {
       "contents": [
