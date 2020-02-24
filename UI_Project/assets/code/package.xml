@@ -217,6 +217,9 @@
     <image id="fvb25z" name="img_code_cm_bj.png" path="/img/"/>
     <image id="fvb260" name="img_codeV_sj_2.png" path="/img/" scale="9grid" scale9grid="8,8,42,42"/>
     <component id="ld0n61" name="ComRichEdit.xml" path="/com/" exported="true"/>
+    <component id="f08k62" name="CodeBlockNote.xml" path="/codeBlock/" exported="true"/>
+    <image id="f08k63" name="img_codeV_zs_1.png" path="/img/" scale="9grid" scale9grid="9,33,40,25"/>
+    <image id="f08k64" name="img_codeV_zs_2.png" path="/img/" scale="9grid" scale9grid="13,8,26,16"/>
   </resources>
   <publish name="code"/>
 </packageDescription>

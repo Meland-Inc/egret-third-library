@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="200,200">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <controller name="ctrlFold" pages="0,false,1,true" selected="0"/>
+  <displayList>
+    <graph id="n16_f08k" name="shapeBG" xy="0,0" size="200,200">
+      <gearSize controller="ctrlFold" pages="1" values="200,30,1,1" default="200,200,1,1"/>
+    </graph>
+    <image id="n12_f08k" name="n12" src="f08k63" fileName="img/img_codeV_zs_1.png" xy="0,0" size="200,200">
+      <gearDisplay controller="ctrlFold" pages="0"/>
+      <relation target="n16_f08k" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n15_f08k" name="n15" src="f08k64" fileName="img/img_codeV_zs_2.png" xy="0,0" size="200,200">
+      <gearDisplay controller="ctrlFold" pages="1"/>
+      <relation target="n16_f08k" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n11_z1hj" name="btnFold" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="0,0" pivot="0.5,0.5" size="30,30" rotation="270">
+      <gearDisplay controller="ctrlFold" pages="0"/>
+      <relation target="n16_f08k" sidePair="left-left,top-top"/>
+      <Button icon="ui://te1gxawoc1h7cyii4" controller="ctrlFold" page="1"/>
+    </component>
+    <component id="n13_f08k" name="btnUnFold" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="0,0" size="30,30">
+      <gearDisplay controller="ctrlFold" pages="1"/>
+      <relation target="n16_f08k" sidePair="left-left,top-top"/>
+      <Button icon="ui://te1gxawoc1h7cyii4" controller="ctrlFold" page="0"/>
+    </component>
+    <component id="n14_f08k" name="btnClose" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="167,0" size="30,30">
+      <relation target="n16_f08k" sidePair="right-right,top-top"/>
+      <Button icon="ui://te1gxawof08kcyijr"/>
+    </component>
+    <text id="n17_f08k" name="textFold" xy="27,0" size="144,30" input="true" prompt="注释简介..." fontSize="14" color="#333333" vAlign="middle" autoSize="none" text="">
+      <gearDisplay controller="ctrlFold" pages="1"/>
+      <relation target="n16_f08k" sidePair="left-left,top-top"/>
+      <relation target="n16_f08k" sidePair="width-width"/>
+    </text>
+    <text id="n18_f08k" name="textUnFold" xy="6,35" size="188,159" input="true" prompt="请输入注释" fontSize="14" color="#333333" autoSize="none" text="">
+      <gearDisplay controller="ctrlFold" pages="0"/>
+      <relation target="n16_f08k" sidePair="center-center,top-top"/>
+      <relation target="n16_f08k" sidePair="width-width"/>
+    </text>
+  </displayList>
+</component>
