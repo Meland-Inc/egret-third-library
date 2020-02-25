@@ -3,7 +3,7 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-22 04:51:06
+ * @Last Modified time: 2020-02-25 17:14:59
  */
 // Modules to control application life and create native browser window
 const { app, globalShortcut, BrowserWindow, Menu, shell, dialog } = require('electron')
@@ -50,7 +50,7 @@ async function init() {
   }
 
   //加载渲染页面
-  mainWindow.loadFile(`${config.rootPath}/src/renderer/renderer.html`, { query: queryValue });
+  mainWindow.loadFile(`${config.rootPath}/src/renderer/index.html`, { query: queryValue });
   logger.log('net', 'urlValue', config.urlValue);
 }
 
@@ -60,7 +60,7 @@ function createWindow() {
     width: 1600,
     height: 900,
     webPreferences: {
-      // preload: path.join(__dirname, 'preload.js'),
+      preload: `${config.rootPath}/src/renderer/renderer.js`,
       nodeIntegration: true
     }
   });
