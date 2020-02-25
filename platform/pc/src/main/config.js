@@ -3,7 +3,7 @@
  * @desc main用的配置
  * @date 2020-02-13 14:54:41 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-22 04:22:49
+ * @Last Modified time: 2020-02-25 15:51:32
  */
 /** 本机IP */
 const localIp = "127.0.0.1";
@@ -20,7 +20,7 @@ let gameServerIp;
 let gameServerPort;
 
 /** 全局配置路径 */
-const globalConfigPath = `${rootPath}/src/GlobalConfig.json`;
+const globalConfigPath = `${rootPath}/GlobalConfig.json`;
 
 /** 全局配置数据 */
 let globalConfigData;

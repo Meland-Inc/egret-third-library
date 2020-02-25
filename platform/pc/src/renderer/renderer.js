@@ -3,9 +3,9 @@
  * @desc renderer主程序
  * @date 2020-02-18 11:44:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-22 04:37:57
+ * @Last Modified time: 2020-02-25 15:53:06
  */
-import * as clientUpdate from './update/clientUpdate.js';
+import { ClientUpdate } from './update/ClientUpdate.js';
 import * as config from './config.js';
 import * as logger from './logger.js';
 
@@ -15,6 +15,7 @@ let evnName = "beta";
 let policyHost = "";
 let policyPath = "";
 let policyUrl = "";
+let clientUpdate = new ClientUpdate();
 // let tryCount = 0;
 
 function getPolicyVersion() {
@@ -30,7 +31,7 @@ function getPolicyVersion() {
     let due = '' + 1800;
     let token = "*";
 
-    let url = new URL(`${config.protocol}://${policyQueryServer}/getVersion`, window.location);
+    let url = new URL(`${config.protocol}//${policyQueryServer}/getVersion`, window.location);
     url.searchParams.append('versionName', versionName);
     url.searchParams.append('channel', channel);
     url.searchParams.append('time', time);
@@ -75,16 +76,15 @@ function startLoadPolicy(policyVersion) {
         });
         response.on("end", async () => {
             let obj = JSON.parse(resData);
-            gameVersion = obj.normalVersion;
-            logger.log(`renderer`, `游戏版本号:${gameVersion}`)
+            clientUpdate.gameVersion = obj.normalVersion;
+            logger.log(`renderer`, `游戏版本号:${clientUpdate.gameVersion}`)
 
-            patchCount = gameVersion - startVersion;
-            if (patchCount > 0) {
+            clientUpdate.patchCount = clientUpdate.gameVersion - clientUpdate.startVersion;
+            if (clientUpdate.patchCount > 0) {
                 clientUpdate.installSinglePatch();
             } else {
                 startRunGame();
             }
-
         });
     })
 }
@@ -112,12 +112,14 @@ try {
     //mac : ./Applications/bellplanet.app/Contents/Resources/app/client
     var indexContent = fs.readFileSync(resourcePath + "index.html").toString();
     var matchResult = indexContent.match(new RegExp(`let patchVersion = "([0-9]+)";`));
-    startVersion = +matchResult[1];
-    curVersion = startVersion;
+    let version = +matchResult[1];
+
+    clientUpdate.curVersion = clientUpdate.startVersion = version;
 
     //同样通过匹配获取当前环境
     matchResult = indexContent.match(new RegExp(`let patchUrl = "([^\";]*)";`));
-    patchUrl = `${config.protocol}//${matchResult[1]}`;
+    let patchUrl = `${config.protocol}//${matchResult[1]}`;
+    clientUpdate.patchUrl = patchUrl
 
     matchResult = indexContent.match(new RegExp(`let evnName = "([^\";]*)";`));
     evnName = matchResult[1];
@@ -126,7 +128,7 @@ try {
     policyUrl = matchResult[1];
     policyHost = matchResult[1].split("/")[0];
     policyPath = matchResult[1].replace(policyHost, policyPath)
-    logger.log(`renderer`, "native curVersion : ", startVersion, policyHost, policyPath, evnName, policyUrl);
+    logger.log(`renderer`, "native curVersion : ", version, policyHost, policyPath, evnName, policyUrl);
     getPolicyVersion();
 } catch (error) {
     logger.error(`renderer`, `native更新客户端报错`, error)

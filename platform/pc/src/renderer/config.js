@@ -3,12 +3,12 @@
  * @desc renderer用的配置
  * @date 2020-02-13 14:54:50 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-22 04:29:03
+ * @Last Modified time: 2020-02-25 15:52:13
  */
 let fs = require('fs');
 
 /** native用请求头 */
-export const protocol = "http";
+export const protocol = "http:";
 /** 资源路径 */
 const macResourcePath = "./Applications/bellplanet.app/Contents/Resources/app/package/client/";
 const winResourcePath = "./resources/app/package/client/"
@@ -21,7 +21,4 @@ export const rootPath = `${__dirname}/../..`;
 export const nativeConfig = 'nativeConfig';
 
 /** 全局配置路径 */
-export const globalConfigPath = `${rootPath}/src/GlobalConfig.json`;
-
-/** 全局配置数据 */
-export let globalConfigData;
+export const globalConfigPath = `${rootPath}/GlobalConfig.json`;
