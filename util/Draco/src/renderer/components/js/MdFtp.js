@@ -82,16 +82,25 @@ export async function zipVersion() {
 }
 
 export async function uploadVersionFile() {
-    if (ModelMgr.versionModel.curEnviron.scpEnable) {
+    let curEnviron = ModelMgr.versionModel.curEnviron;
+    if (curEnviron.scpEnable) {
         await uploadScpVersionFile();
-        await uploadScpPatchZip(ModelMgr.versionModel.curEnviron.scpMacPatchPath);
-        await uploadScpPatchZip(ModelMgr.versionModel.curEnviron.scpWinPatchPath);
+        if (curEnviron.scpMacPatchPath) {
+            await uploadScpPatchZip(curEnviron.scpMacPatchPath);
+        }
+        if (curEnviron.scpWinPatchPath) {
+            await uploadScpPatchZip(curEnviron.scpWinPatchPath);
+        }
     }
 
-    if (ModelMgr.versionModel.curEnviron.cdnEnable) {
+    if (curEnviron.cdnEnable) {
         await uploadCdnVersionFile();
-        await uploadCdnPatchZip(ModelMgr.versionModel.curEnviron.cdnWinPatchPath);
-        await uploadCdnPatchZip(ModelMgr.versionModel.curEnviron.cdnMacPatchPath);
+        if (curEnviron.cdnWinPatchPath) {
+            await uploadCdnPatchZip(curEnviron.cdnWinPatchPath);
+        }
+        if (curEnviron.cdnMacPatchPath) {
+            await uploadCdnPatchZip(curEnviron.cdnMacPatchPath);
+        }
     }
 }
 
