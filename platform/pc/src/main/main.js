@@ -3,7 +3,7 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-25 17:14:59
+ * @Last Modified time: 2020-02-25 20:13:57
  */
 // Modules to control application life and create native browser window
 const { app, globalShortcut, BrowserWindow, Menu, shell, dialog } = require('electron')
@@ -27,19 +27,28 @@ async function init() {
   //工具初始化
   util.init();
 
-  // //平台测试参数
+  //平台老师端测试参数
   // config.urlValue = 'bellplanet://lesson?temporary_token=LWKqnyRO8M:QN0WH&class_id=410&bell_origin=demoapi.wkcoding.com';
+
+  //平台学生端端测试参数
+  // config.urlValue = `bellplanet://student?temporary_token=AWRl2okDEQ:fYHQv&class_id=410&bell_origin=demoapi.wkcoding.com&local_network=127.0.0.1:8080&internet_network=democm.wkcoding.com`
+  // config.urlValue = `bellplanet://student?temporary_token=AWRl2okDEQ:fYHQv&class_id=410&bell_origin=demoapi.wkcoding.com&internet_network=192.168.31.21:3211`
 
   //平台相关初始化
   let queryValue = { pcNative: 1 };
   let protocolName = "bellplanet://";
   if (config.urlValue.indexOf(protocolName) === -1) {
-    //非平台
+    //非平台 
     logger.log('net', `本地打开native程序`);
     queryValue["fakeGameMode"] = "lessons";
   } else {
     //平台初始化
     await platform.init(queryValue);
+
+    //设置上课对应路由
+    let lessonRouter = config.urlValue.replace(protocolName, '');
+    config.lessonRouter = lessonRouter.slice(0, lessonRouter.indexOf("?"));
+
     queryValue['fakeUserType'] = config.userType;
     queryValue['token'] = config.bellTempToken;
   }

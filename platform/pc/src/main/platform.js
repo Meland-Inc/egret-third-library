@@ -3,7 +3,7 @@
  * @desc 平台相关的逻辑
  * @date 2020-02-19 11:22:49
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-22 04:23:00
+ * @Last Modified time: 2020-02-25 20:04:06
  */
 const querystring = require('querystring');
 const config = require('./config.js');
@@ -37,6 +37,17 @@ async function init(queryValue) {
             if (key === 'bell_origin') {
                 queryValue['bellApiOrigin'] = `${value}`;
                 config.bellApiOrigin = value;
+                continue;
+            }
+
+            if (key === 'local_network') {
+                queryValue['gameServer'] = `${value}`;
+                continue;
+            }
+
+            //有公网地址,且不存在服务器地址的情况下,赋值
+            if (key === 'internet_network' && !queryValue['gameServer']) {
+                queryValue['gameServer'] = `${value}`;
                 continue;
             }
 

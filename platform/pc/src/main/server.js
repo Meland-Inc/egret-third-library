@@ -3,7 +3,7 @@
  * @desc 处理native服务器和游戏服务器的文件
  * @date 2020-02-18 11:42:29 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-22 04:23:35
+ * @Last Modified time: 2020-02-25 19:27:11
  */
 const http = require('http');
 const url = require('url');
@@ -70,7 +70,7 @@ async function createNativeServer() {
 
             //上课渠道 并且是老师端,要上报本地ip
             if (config.channel === config.constChannelLesson && config.userType === config.eUserType.teacher) {
-                // platform.teacherUploadIp();
+                platform.teacherUploadIp();
             }
 
             //关闭服务器推送

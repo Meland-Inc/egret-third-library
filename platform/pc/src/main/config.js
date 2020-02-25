@@ -3,7 +3,7 @@
  * @desc main用的配置
  * @date 2020-02-13 14:54:41 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-25 15:51:32
+ * @Last Modified time: 2020-02-25 20:13:39
  */
 /** 本机IP */
 const localIp = "127.0.0.1";
@@ -57,6 +57,9 @@ let realName;
 /** 用户昵称 */
 let nickName;
 
+/** 上课伪协议 路由*/
+let lessonRouter;
+
 /** 上课模式渠道常量 */
 const constChannelLesson = 'bian_lesson';
 
@@ -68,6 +71,11 @@ const eUserType = {
     institution: 4,//机构
     tutor: 5,//导师
     lessonsDevelop: 99,//小贝客户端自定义的 教研用
+}
+
+/** 路由枚举 */
+const eLessonRouter = {
+
 }
 
 /** 伪协议里url带的参数 */
@@ -96,6 +104,8 @@ exports.nickName = nickName;
 exports.urlValue = urlValue;
 exports.globalConfigData = globalConfigData;
 exports.mainWindow = mainWindow;
+exports.lessonRouter = lessonRouter;
 
 exports.constChannelLesson = constChannelLesson;
 exports.eUserType = eUserType;
+exports.eLessonRouter = eLessonRouter;

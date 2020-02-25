@@ -3,7 +3,7 @@
  * @desc index.js
  * @date 2020-02-18 11:44:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-25 17:14:28
+ * @Last Modified time: 2020-02-25 19:58:59
  */
 import { ClientUpdate } from './update/ClientUpdate.js';
 import * as config from './config.js';
@@ -13,12 +13,16 @@ const fs = require('fs');
 let clientUpdate = new ClientUpdate(startRunGame);
 
 async function startRunGame() {
-    return;
-
     let content = await fs.readFileSync(config.globalConfigPath, "utf-8");
     let globalConfigData = JSON.parse(content);
     if (globalConfigData) {
         localStorage.setItem(config.nativeConfig, JSON.stringify(globalConfigData));
+    }
+
+    if (config.gameServerIp && config.gameServerPort) {
+        localStorage.setItem('nativeGameServer', `${config.gameServerIp}:${config.gameServerPort}`);
+    } else {
+        localStorage.removeItem('nativeGameServer');
     }
 
     let hrefArr = location.href.split(".html");
