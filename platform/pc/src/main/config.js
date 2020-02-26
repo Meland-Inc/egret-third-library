@@ -3,7 +3,7 @@
  * @desc main用的配置
  * @date 2020-02-13 14:54:41 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-20 10:43:24
+ * @Last Modified time: 2020-02-25 20:13:39
  */
 /** 本机IP */
 const localIp = "127.0.0.1";
@@ -18,6 +18,12 @@ let rootPath = `${__dirname}/../..`;
 let gameServerIp;
 /** 游戏服务器端口 */
 let gameServerPort;
+
+/** 全局配置路径 */
+const globalConfigPath = `${rootPath}/GlobalConfig.json`;
+
+/** 全局配置数据 */
+let globalConfigData;
 
 /** native配置路径 */
 const nativeCnfPath = `${rootPath}/package/server/config/native_lesson_cnf.json`;
@@ -39,6 +45,9 @@ let bellToken;
 /** bell平台通信地址 */
 let bellApiOrigin;
 
+/** 班级id */
+let classId;
+
 /** 用户类型 */
 let userType;
 
@@ -47,6 +56,9 @@ let realName;
 
 /** 用户昵称 */
 let nickName;
+
+/** 上课伪协议 路由*/
+let lessonRouter;
 
 /** 上课模式渠道常量 */
 const constChannelLesson = 'bian_lesson';
@@ -61,11 +73,23 @@ const eUserType = {
     lessonsDevelop: 99,//小贝客户端自定义的 教研用
 }
 
+/** 路由枚举 */
+const eLessonRouter = {
+
+}
+
+/** 伪协议里url带的参数 */
+let urlValue;
+
+/** 主程序窗口 */
+let mainWindow;
+
 exports.localIp = localIp;
 exports.nativeServerPort = nativeServerPort;
 exports.rootPath = rootPath;
 exports.gameServerIp = gameServerIp;
 exports.gameServerPort = gameServerPort;
+exports.globalConfigPath = globalConfigPath;
 exports.nativeCnfPath = nativeCnfPath;
 exports.processLogPath = processLogPath;
 exports.gameServerInited = gameServerInited;
@@ -74,8 +98,14 @@ exports.bellTempToken = bellTempToken;
 exports.bellToken = bellToken;
 exports.bellApiOrigin = bellApiOrigin;
 exports.userType = userType;
+exports.classId = classId;
 exports.realName = realName;
 exports.nickName = nickName;
+exports.urlValue = urlValue;
+exports.globalConfigData = globalConfigData;
+exports.mainWindow = mainWindow;
+exports.lessonRouter = lessonRouter;
 
 exports.constChannelLesson = constChannelLesson;
 exports.eUserType = eUserType;
+exports.eLessonRouter = eLessonRouter;

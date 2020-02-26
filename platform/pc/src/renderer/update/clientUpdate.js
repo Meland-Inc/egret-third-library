@@ -2,157 +2,220 @@
  * @author 雪糕 
  * @desc 处理游戏客户端包更新逻辑
  * @date 2020-02-13 14:56:09 
- * @Last Modified by 雪糕 
- * @Last Modified time 2020-02-13 14:56:09 
+ * @Last Modified by: 雪糕
+ * @Last Modified time: 2020-02-25 17:07:25
  */
 
 import * as loading from '../loading.js';
 import * as config from '../config.js';
 import * as logger from '../logger.js';
+import { StreamDownload } from './StreamDownload.js';
 
-const request = require('request');
 const fs = require('fs');
-const path = require('path');
 const admzip = require("adm-zip");
-let patchUrl = "http://planet.wkcoding.com/web/beta/";
-let allInOne = false;
-let startVersion = 0;
-let curVersion = 0;
-let gameVersion = 0;
-let patchCount = 1;
-let resourcePath = config.resourcePath;
-// let resourcePath = "./resources/app/client/";
-// if (navigator.userAgent.indexOf("Mac") > 0) {
-//     resourcePath = "./Applications/bellplanet.app/Contents/Resources/app/client/";
-// }
-const download = new StreamDownload();
+const http = require("http");
 
-function downloadFileCallback(arg, filename, percentage) {
-    if (arg === "progress") {
-        // 显示进度
-        if (allInOne) {
-            loading.setLoadingProgress(percentage);
-        } else {
-            var each = 100 / patchCount;
-            loading.setLoadingProgress(percentage / 100 * each + (curVersion - startVersion - 1) * each);
-        }
-    }
-    else if (arg === "finished") {
-        // 通知完成
+export class ClientUpdate {
+    /** 补丁包目录 */
+    patchUrl = "";
+    /** 是否一次性下载 */
+    allInOne = false;
+    /** 本地初始的游戏版本 */
+    startVersion = 0;
+    /** 当前下载的游戏版本 */
+    curVersion = 0;
+    /** 最新游戏版本 */
+    gameVersion = 0;
+    /** 软件安装的资源目录 */
+    resourcePath = config.resourcePath;
+    /** 补丁包数量 */
+    patchCount = 0;
+    /** 下载器 */
+    download = new StreamDownload();
+
+    /** 更新后回调 */
+    updateCallback;
+
+    /** 分支环境 */
+    evnName;
+
+    /** 策略文件host */
+    policyHost = "";
+
+    /** 策略文件相对host路径 */
+    policyPath = "";
+
+    /** 检查更新 */
+    async checkUpdate(updateCallback) {
         try {
-            var zip = new admzip(resourcePath + filename);
-            zip.extractAllTo(resourcePath, true);
-        } catch (error) {
-            logger.error(`update`, `解压${filename}报错`, error);
-            startRunGame();
-        }
-        fs.unlink(resourcePath + filename, (err) => {
-            if (err) {
-                throw err;
-            }
-            logger.log(`update`, '文件:' + filename + '删除成功！');
-        });
-        var indexContent = fs.readFileSync(resourcePath + "index.html").toString();
-        var matchResult = indexContent.match(new RegExp(`let patchVersion = "([0-9]+)";`));
-        curVersion = +matchResult[1];
-        if (curVersion >= gameVersion) {
-            startRunGame();
-        } else {
-            installSinglePatch()
-        }
+            this.updateCallback = updateCallback;
+            let indexContent = await fs.readFileSync(`${config.resourcePath}` + "index.html", "utf-8");
+            let versionResult = indexContent.match(new RegExp(`let patchVersion = "([0-9]+)";`));
+            this.curVersion = this.startVersion = +versionResult[1];
 
-    } else if (arg == "404") {
-        //一次性下载不到，就一个一个来
-        if (allInOne) {
-            installSinglePatch();
-        } else {
-            startRunGame();
-        }
-    }
-}
+            //同样通过匹配获取当前环境
+            let urlResult = indexContent.match(new RegExp(`let patchUrl = "([^\";]*)";`));
+            this.patchUrl = `${config.protocol}//${urlResult[1]}`;
 
-function installAllPatch() {
-    allInOne = true;
-    download.downloadFile(patchUrl, resourcePath, `patch_v${startVersion}s_v${gameVersion}s.zip`, downloadFileCallback);
-    curVersion = gameVersion;
-}
+            let evnResult = indexContent.match(new RegExp(`let evnName = "([^\";]*)";`));
+            this.evnName = evnResult[1];
 
-// // ---- 下载类 ---- //
-function StreamDownload() {
-    // 声明下载过程回调函数
-    this.downloadCallback = null;
-    this.patchUrl = null;
-    this.fileStream = null;
-}
-
-// // 下载进度
-StreamDownload.prototype.showProgress = function (received, total) {
-    const percentage = (received * 100) / total;
-    // 用回调显示到界面上
-    this.downloadCallback && this.downloadCallback('progress', "", percentage);
-};
-
-// // 下载过程
-StreamDownload.prototype.downloadFile = function (patchUrl, baseDir, filename, callback) {
-    try {
-        logger.log(`update`, `开始下载文件`, patchUrl, filename, baseDir)
-        this.downloadCallback = callback; // 注册回调函数
-        this.patchUrl = patchUrl + "/" + filename;
-
-        let receivedBytes = 0;
-        let totalBytes = 1;
-        let req = null;
-        try {
-            req = request({
-                method: 'GET',
-                uri: this.patchUrl
-            });
+            let policyUrlResult = indexContent.match(new RegExp(`let policyUrl = "([^\";]*)";`));
+            let policyUrl = policyUrlResult[1];
+            this.policyHost = policyUrlResult[1].split("/")[0];
+            this.policyPath = policyUrlResult[1].replace(this.policyHost, this.policyPath);
+            logger.log(`renderer`, "native curVersion : ", this.curVersion, this.policyHost, this.policyPath, this.evnName, policyUrl);
+            this.getPolicyVersion();
         } catch (error) {
             throw error;
         }
+    }
 
+    /** 获取策略版本 */
+    getPolicyVersion() {
+        //外部直接指定
+        let policyQueryServer = 'policy-server.wkcoding.com';
+        //没有指定需要获取
+        let request = new XMLHttpRequest();
+        let versionName = this.evnName;
+        let channel = "bian_game";
+        let time = '' + Math.floor(new Date().getTime() / 1000);
+        let secret = "LznauW6GzBsq3wP6";
+        let due = '' + 1800;
+        let token = "*";
 
-        req.on('response', (data) => {
-            // 更新总文件字节大小
-            if (data.statusCode == 404) {
-                logger.error(`update`, `下载patch包路径找不到文件`, this.patchUrl);
-                this.downloadCallback('404', filename, 100);
-                this.downloadCallback = null;
+        let url = new URL(`${config.protocol}//${policyQueryServer}/getVersion`, window.location);
+        url.searchParams.append('versionName', versionName);
+        url.searchParams.append('channel', channel);
+        url.searchParams.append('time', time);
+        url.searchParams.append('due', due);
+        url.searchParams.append('token', token);
+
+        request.open("GET", url.toString());
+        request.onreadystatechange = () => {
+            if (request.readyState !== 4) return;
+            if (request.status === 200) {
+                let data = JSON.parse(request.responseText);
+                let policyVersion = data.Data.Version;
+                logger.log(`renderer`, `策略版本号:${policyVersion}`)
+                this.startLoadPolicy(policyVersion);
             } else {
-                totalBytes = parseInt(data.headers['content-length'], 10);
+                let content = "获取策略版本号错误!";
+                logger.error(`renderer`, content);
+                alert(content);
+                this.executeUpdateCallback();
             }
-        });
+        }
+        request.send();
+    }
 
-        req.on('data', (chunk) => {
-            // 更新下载的文件块字节大小
-            receivedBytes += chunk.length;
-            this.showProgress(receivedBytes, totalBytes);
-        });
+    /** 加载策略文件 */
+    startLoadPolicy(policyVersion) {
+        let options = {
+            host: this.policyHost, // 请求地址 域名，google.com等.. 
+            // port: 10001,
+            path: `${this.policyPath}/policyFile_v${policyVersion}.json`, // 具体路径eg:/upload
+            method: 'GET', // 请求方式, 这里以post为例
+            headers: { // 必选信息,  可以抓包工看一下
+                'Content-Type': 'application/json'
+            }
+        };
+        http.get(options, (response) => {
+            if (response.statusCode != 200) {
+                console.error("[policy] can not load policy, version=" + policyVersion + ", statusCode=" + response.statusCode + ",option =" + options.host + options.path);
+                throw "can not load policy!";
+            }
 
-        req.on('end', () => {
-            this.fileStream && this.fileStream.end();
-            logger.log(`update`, `下载已完成，等待处理`, filename)
-            // TODO: 检查文件，部署文件，删除文件
-            setTimeout(() => {
-                this.downloadCallback && this.downloadCallback('finished', filename, 100);
-                this.downloadCallback = null;
-            }, 500)
+            let resData = "";
+            response.on("data", (data) => {
+                resData += data;
+            });
+            response.on("end", async () => {
+                let obj = JSON.parse(resData);
+                this.gameVersion = obj.normalVersion;
+                logger.log(`renderer`, `游戏版本号:${this.gameVersion}`)
+
+                this.patchCount = this.gameVersion - this.startVersion;
+                if (this.patchCount > 0) {
+                    this.installSinglePatch();
+                } else {
+                    this.executeUpdateCallback();
+                }
+            });
         })
-        var filepath = path.join(baseDir, filename);
-        this.fileStream = fs.createWriteStream(filepath);
-        req.pipe(this.fileStream);
+    }
 
-    } catch (error) {
-        throw error
+    /** 下载文件回调 */
+    async downloadFileCallback(arg, filename, percentage) {
+        if (arg === "progress") {
+            // 显示进度
+            if (this.allInOne) {
+                loading.setLoadingProgress(percentage);
+            } else {
+                let each = 100 / this.patchCount;
+                loading.setLoadingProgress(percentage / 100 * each + (this.curVersion - this.startVersion - 1) * each);
+            }
+        }
+        else if (arg === "finished") {
+            // 通知完成
+            try {
+                let zip = new admzip(this.resourcePath + filename);
+                zip.extractAllTo(this.resourcePath, true);
+            } catch (error) {
+                let content = `解压文件:${filename}错误`
+                logger.error(`update`, content, error);
+                alert(content);
+                this.executeUpdateCallback();
+            }
+            fs.unlink(this.resourcePath + filename, (err) => {
+                if (err) {
+                    throw err;
+                }
+                logger.log(`update`, '文件:' + filename + '删除成功！');
+            });
+            let indexContent = await fs.readFileSync(resourcePath + "index.html").toString();
+            let matchResult = indexContent.match(new RegExp(`let patchVersion = "([0-9]+)";`));
+            this.curVersion = +matchResult[1];
+            if (this.curVersion >= this.gameVersion) {
+                this.executeUpdateCallback();
+            } else {
+                this.installSinglePatch()
+            }
+
+        } else if (arg == "404") {
+            let content = `下载文件:${filename}错误, 文件不存在!`;
+            logger.error(`update`, content);
+            alert(content);
+
+            //一次性下载不到，就一个一个来
+            if (this.allInOne) {
+                this.installSinglePatch();
+            } else {
+                this.executeUpdateCallback();
+            }
+        }
+    }
+
+    /** 下载所有补丁包 */
+    installAllPatch() {
+        this.allInOne = true;
+        this.download.downloadFile(this.patchUrl, this.resourcePath, `patch_v${this.startVersion}s_v${this.gameVersion}s.zip`, this.downloadFileCallback.bind(this));
+        this.curVersion = this.gameVersion;
+    }
+
+    /** 下载单个补丁包 */
+    installSinglePatch() {
+        try {
+            this.download.downloadFile(this.patchUrl, this.resourcePath, `patch_v${this.curVersion}s_v${this.curVersion + 1}s.zip`, this.downloadFileCallback.bind(this));
+        } catch (error) {
+            throw error;
+        }
+    }
+
+    /** 执行更新后回调 */
+    executeUpdateCallback() {
+        if (this.updateCallback) {
+            this.updateCallback();
+        }
     }
 }
-
-export function installSinglePatch() {
-    try {
-        download.downloadFile(patchUrl, resourcePath, `patch_v${curVersion}s_v${curVersion + 1}s.zip`, downloadFileCallback);
-    } catch (error) {
-        throw error
-    }
-}
-
-// exports.installSinglePatch = installSinglePatch;
