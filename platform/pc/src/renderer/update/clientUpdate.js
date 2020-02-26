@@ -1,14 +1,14 @@
 /**
  * @author 雪糕 
- * @desc 处理游戏客户端包更新逻辑
+ * @desc 游戏客户端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-25 17:07:25
+ * @Last Modified time: 2020-02-26 21:59:15
  */
 
 import * as loading from '../loading.js';
-import * as config from '../config.js';
 import * as logger from '../logger.js';
+import { Config } from '../Config.js';
 import { StreamDownload } from './StreamDownload.js';
 
 const fs = require('fs');
@@ -27,7 +27,7 @@ export class ClientUpdate {
     /** 最新游戏版本 */
     gameVersion = 0;
     /** 软件安装的资源目录 */
-    resourcePath = config.resourcePath;
+    resourcePath = Config.resourcePath;
     /** 补丁包数量 */
     patchCount = 0;
     /** 下载器 */
@@ -35,6 +35,8 @@ export class ClientUpdate {
 
     /** 更新后回调 */
     updateCallback;
+    /** 更新后回调参数 */
+    updateCbArgs;
 
     /** 分支环境 */
     evnName;
@@ -46,16 +48,17 @@ export class ClientUpdate {
     policyPath = "";
 
     /** 检查更新 */
-    async checkUpdate(updateCallback) {
+    async checkUpdate(updateCallback, ...updateCbArgs) {
         try {
             this.updateCallback = updateCallback;
-            let indexContent = await fs.readFileSync(`${config.resourcePath}` + "index.html", "utf-8");
+            this.updateCbArgs = updateCbArgs;
+            let indexContent = await fs.readFileSync(`${Config.resourcePath}` + "index.html", "utf-8");
             let versionResult = indexContent.match(new RegExp(`let patchVersion = "([0-9]+)";`));
             this.curVersion = this.startVersion = +versionResult[1];
 
             //同样通过匹配获取当前环境
             let urlResult = indexContent.match(new RegExp(`let patchUrl = "([^\";]*)";`));
-            this.patchUrl = `${config.protocol}//${urlResult[1]}`;
+            this.patchUrl = `${Config.protocol}//${urlResult[1]}`;
 
             let evnResult = indexContent.match(new RegExp(`let evnName = "([^\";]*)";`));
             this.evnName = evnResult[1];
@@ -84,7 +87,7 @@ export class ClientUpdate {
         let due = '' + 1800;
         let token = "*";
 
-        let url = new URL(`${config.protocol}//${policyQueryServer}/getVersion`, window.location);
+        let url = new URL(`${Config.protocol}//${policyQueryServer}/getVersion`, window.location);
         url.searchParams.append('versionName', versionName);
         url.searchParams.append('channel', channel);
         url.searchParams.append('time', time);
@@ -153,7 +156,7 @@ export class ClientUpdate {
                 loading.setLoadingProgress(percentage);
             } else {
                 let each = 100 / this.patchCount;
-                loading.setLoadingProgress(percentage / 100 * each + (this.curVersion - this.startVersion - 1) * each);
+                loading.setLoadingProgress(percentage / 100 * each + (this.curVersion - this.startVersion) * each);
             }
         }
         else if (arg === "finished") {
@@ -173,7 +176,7 @@ export class ClientUpdate {
                 }
                 logger.log(`update`, '文件:' + filename + '删除成功！');
             });
-            let indexContent = await fs.readFileSync(resourcePath + "index.html").toString();
+            let indexContent = await fs.readFileSync(this.resourcePath + "index.html").toString();
             let matchResult = indexContent.match(new RegExp(`let patchVersion = "([0-9]+)";`));
             this.curVersion = +matchResult[1];
             if (this.curVersion >= this.gameVersion) {
@@ -199,6 +202,7 @@ export class ClientUpdate {
     /** 下载所有补丁包 */
     installAllPatch() {
         this.allInOne = true;
+        loading.showLoading();
         this.download.downloadFile(this.patchUrl, this.resourcePath, `patch_v${this.startVersion}s_v${this.gameVersion}s.zip`, this.downloadFileCallback.bind(this));
         this.curVersion = this.gameVersion;
     }
@@ -206,6 +210,7 @@ export class ClientUpdate {
     /** 下载单个补丁包 */
     installSinglePatch() {
         try {
+            loading.showLoading();
             this.download.downloadFile(this.patchUrl, this.resourcePath, `patch_v${this.curVersion}s_v${this.curVersion + 1}s.zip`, this.downloadFileCallback.bind(this));
         } catch (error) {
             throw error;
@@ -214,8 +219,9 @@ export class ClientUpdate {
 
     /** 执行更新后回调 */
     executeUpdateCallback() {
+        loading.hideLoading();
         if (this.updateCallback) {
-            this.updateCallback();
+            this.updateCallback(...this.updateCbArgs);
         }
     }
 }

@@ -3,7 +3,7 @@
  * @desc 处理native服务器和游戏服务器的文件
  * @date 2020-02-18 11:42:29 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-25 19:27:11
+ * @Last Modified time: 2020-02-26 23:26:08
  */
 const http = require('http');
 const url = require('url');
@@ -59,14 +59,34 @@ async function createNativeServer() {
             config.gameServerInited = true;
 
             logger.log('net', '收到游戏服务器启动完毕消息');
+            config.gameServerLocalIp = args.localIp;
+            config.gameServerLocalPort = args.localPort;
+            config.gameServerNatUrl = args.natUrl;
+            config.gameServerNatPort = args.natPort;
+            logger.log('net', `gameServer --> localIp:${config.gameServerLocalIp} localPort:${config.gameServerLocalPort} natUrl:${config.gameServerNatUrl} natPort:${config.gameServerNatPort}`);
+
             logger.log('net', 'native游戏客户端登录本地游戏服务器');
-            let gameServer = `${args.ip}:${args.port}`;
-            config.mainWindow.webContents.executeJavaScript(`window.nativeSignIn(\'${gameServer}\');`);
+            if (config.gameServerLocalIp && config.gameServerLocalPort) {
+                let gameServer = `${config.gameServerLocalIp}:${config.gameServerLocalPort}`;
+                if (config.mainWindow && config.mainWindow.webContents) {
+                    config.mainWindow.webContents.executeJavaScript(`
+                        if(window.nativeSignIn){
+                            window.nativeSignIn(\'${gameServer}\');
+                        }
+                    `);
+                }
+            }
 
-            config.gameServerIp = args.ip;
-            config.gameServerPort = args.port;
-
-            // platform.test();
+            // if (config.gameServerNatUrl && config.gameServerNatPort) {
+            //     let gameServer = `${config.gameServerNatUrl}:${config.gameServerNatPort}`;
+            //     if (config.mainWindow && config.mainWindow.webContents) {
+            //         config.mainWindow.webContents.executeJavaScript(`
+            //             if(window.nativeSignIn){
+            //                 window.nativeSignIn(\'${gameServer}\');
+            //             }
+            //         `);
+            //     }
+            // }
 
             //上课渠道 并且是老师端,要上报本地ip
             if (config.channel === config.constChannelLesson && config.userType === config.eUserType.teacher) {
@@ -75,7 +95,7 @@ async function createNativeServer() {
 
             //关闭服务器推送
             let path = `/native?controlType=receiveStart`;
-            util.requestGetHttp(config.localIp, config.gameServerPort, path, null, null, () => {
+            util.requestGetHttp(config.gameServerLocalIp, config.gameServerLocalPort, path, null, null, () => {
                 logger.log('net', `关闭游戏服务器启动推送成功`)
             }, () => {
                 logger.error('net', `关闭游戏服务器启动推送错误`)
@@ -125,7 +145,7 @@ async function closeGameServer() {
         }
 
         let path = `/native?controlType=closeServer`
-        util.requestGetHttp(config.localIp, config.gameServerPort, path, null, null, () => {
+        util.requestGetHttp(config.gameServerLocalIp, config.gameServerLocalPort, path, null, null, () => {
             resolve();
             logger.log('net', `关闭游戏服务器成功`)
         }, () => {
