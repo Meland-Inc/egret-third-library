@@ -3,7 +3,7 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-25 20:13:57
+ * @Last Modified time: 2020-02-26 22:56:51
  */
 // Modules to control application life and create native browser window
 const { app, globalShortcut, BrowserWindow, Menu, shell, dialog } = require('electron')
@@ -16,41 +16,42 @@ const config = require('./config.js');
 const server = require('./server.js');
 const platform = require('./platform.js');
 const util = require('./util.js');
+const message = require('./message.js');
 
 let mainWindow
 
-//初始化方法
-async function init() {
+//native初始化
+async function nativeInit() {
   //日志初始化
   logger.init();
 
-  //工具初始化
-  util.init();
-
   //平台老师端测试参数
-  // config.urlValue = 'bellplanet://lesson?temporary_token=LWKqnyRO8M:QN0WH&class_id=410&bell_origin=demoapi.wkcoding.com';
+  config.urlValue = 'bellplanet://lesson?temporary_token=LWKqnyRO8M:QN0WH&class_id=410&bell_origin=demoapi.wkcoding.com';
 
   //平台学生端端测试参数
   // config.urlValue = `bellplanet://student?temporary_token=AWRl2okDEQ:fYHQv&class_id=410&bell_origin=demoapi.wkcoding.com&local_network=127.0.0.1:8080&internet_network=democm.wkcoding.com`
-  // config.urlValue = `bellplanet://student?temporary_token=AWRl2okDEQ:fYHQv&class_id=410&bell_origin=demoapi.wkcoding.com&internet_network=192.168.31.21:3211`
+  // config.urlValue = `bellplanet://student?temporary_token=AWRl2okDEQ:fYHQv&class_id=410&bell_origin=demoapi.wkcoding.com&internet_network=uwex364021.planet-dev.wkcoding.com:9000`
 
-  //平台相关初始化
-  let queryValue = { pcNative: 1 };
+  //加载渲染页面
+  await mainWindow.loadFile(`${config.rootPath}/src/renderer/renderer.html`);
+
+  //初始化参数
+  let queryObject = { pcNative: 1 };
   let protocolName = "bellplanet://";
   if (config.urlValue.indexOf(protocolName) === -1) {
     //非平台 
     logger.log('net', `本地打开native程序`);
-    queryValue["fakeGameMode"] = "lessons";
+    queryObject["fakeGameMode"] = "lessons";
   } else {
     //平台初始化
-    await platform.init(queryValue);
+    await platform.init(queryObject);
 
     //设置上课对应路由
     let lessonRouter = config.urlValue.replace(protocolName, '');
     config.lessonRouter = lessonRouter.slice(0, lessonRouter.indexOf("?"));
 
-    queryValue['fakeUserType'] = config.userType;
-    queryValue['token'] = config.bellTempToken;
+    queryObject['fakeUserType'] = config.userType;
+    queryObject['token'] = config.bellTempToken;
   }
 
   //非上课端 或者 老师端 本地服务器初始化
@@ -58,9 +59,9 @@ async function init() {
     server.init();
   }
 
-  //加载渲染页面
-  mainWindow.loadFile(`${config.rootPath}/src/renderer/index.html`, { query: queryValue });
   logger.log('net', 'urlValue', config.urlValue);
+
+  message.sendMsg('START_GAME', queryObject);
 }
 
 //创建游戏浏览窗口
@@ -69,7 +70,7 @@ function createWindow() {
     width: 1600,
     height: 900,
     webPreferences: {
-      preload: `${config.rootPath}/src/renderer/renderer.js`,
+      // preload: `${config.rootPath}/src/renderer/renderer.js`,
       nodeIntegration: true
     }
   });
@@ -78,8 +79,12 @@ function createWindow() {
 
   /** 设置url参数 */
   config.urlValue = process.argv[process.argv.length - 1];
-  //初始化
-  init();
+
+  /** 初始化消息处理类 */
+  message.init();
+
+  //native初始化
+  nativeInit();
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
@@ -95,8 +100,9 @@ function createWindow() {
       dialog.showMessageBox(options, (index) => {
         if (index === 0) {
           reloadWindow(mainWindow);
+        } else {
+          app.quit();
         }
-        else app.quit();
       });
     }).catch((e) => {
       console.log('err', e);
@@ -149,7 +155,7 @@ app.on('second-instance', async (event, argv, workingDirectory) => {
 
     /** 设置url参数 */
     config.urlValue = argv[argv.length - 1];
-    init();
+    nativeInit();
   }
 })
 
@@ -242,10 +248,7 @@ let template = [
       },
       {
         label: '下载服务器日志',
-        click: () => {
-          // shell.openExternal('http://www.bellcode.com')
-          saveProccessLog();
-        }
+        click: saveProccessLog
       },
       {
         label: '关于',

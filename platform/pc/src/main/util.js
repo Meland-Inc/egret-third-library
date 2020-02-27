@@ -3,15 +3,13 @@
  * @desc main用的工具类
  * @date 2020-02-18 11:43:24 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-21 23:13:23
+ * @Last Modified time: 2020-02-26 23:11:14
  */
 // const spawn = require("child_process").spawn;
 const exec = require("child_process").exec;
-const config = require('./config.js');
 const logger = require('./logger.js');
 const http = require('http');
 const querystring = require('querystring');
-const fs = require('fs');
 
 // function runSpawn(command, param, cwd, successMsg, errorMsg) {
 //     return new Promise((resolve, reject) => {
@@ -66,11 +64,11 @@ function runCmd(cmd, cwd, successMsg, errorMsg) {
 }
 
 function requestGetHttp(host, port, path, data, headers, successFunc, errorFunc) {
-    let content = data ? querystring.stringify(data) : "";
-
+    let content = data ? `${querystring.stringify(data)}` : "";
+    path = content ? `${path}?${content}` : path;
     let options = {
         host: host,
-        path: `${path}?${content}`,
+        path: path,
         method: 'GET'
     };
     if (port) {
@@ -178,25 +176,7 @@ function requestPostHttp(host, port, path, data, headers, successFunc, errorFunc
     request.end();
 }
 
-/** 初始化 */
-async function init() {
-    config.globalConfigData = {};
-    await fs.writeFileSync(config.globalConfigPath, JSON.stringify(config.globalConfigData, null, 4));
-}
-
-/** 写入数据到全局配置文件 */
-async function setGlobalConfigValue(key, value) {
-    if (!config.globalConfigData) {
-        let content = await fs.readFileSync(config.globalConfigPath, "utf-8");
-        config.globalConfigData = JSON.parse(content);
-    }
-    config.globalConfigData[key] = value;
-    await fs.writeFileSync(config.globalConfigPath, JSON.stringify(config.globalConfigData, null, 4));
-}
-
 // exports.runSpawn = runSpawn;
 exports.runCmd = runCmd;
 exports.requestGetHttp = requestGetHttp;
 exports.requestPostHttp = requestPostHttp;
-exports.setGlobalConfigValue = setGlobalConfigValue;
-exports.init = init;

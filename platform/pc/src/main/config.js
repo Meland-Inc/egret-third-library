@@ -3,7 +3,7 @@
  * @desc main用的配置
  * @date 2020-02-13 14:54:41 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-25 20:13:39
+ * @Last Modified time: 2020-02-26 21:56:52
  */
 /** 本机IP */
 const localIp = "127.0.0.1";
@@ -14,16 +14,15 @@ let nativeServerPort;
 /** 程序根路径 */
 let rootPath = `${__dirname}/../..`;
 
-/** 游戏服务器ip */
-let gameServerIp;
-/** 游戏服务器端口 */
-let gameServerPort;
+/** 游戏服务器内网ip */
+let gameServerLocalIp;
+/** 游戏服务器内网端口 */
+let gameServerLocalPort;
 
-/** 全局配置路径 */
-const globalConfigPath = `${rootPath}/GlobalConfig.json`;
-
-/** 全局配置数据 */
-let globalConfigData;
+/** 游戏服务器公网ip */
+let gameServerNatUrl;
+/** 游戏服务器公网端口 */
+let gameServerNatPort;
 
 /** native配置路径 */
 const nativeCnfPath = `${rootPath}/package/server/config/native_lesson_cnf.json`;
@@ -87,9 +86,10 @@ let mainWindow;
 exports.localIp = localIp;
 exports.nativeServerPort = nativeServerPort;
 exports.rootPath = rootPath;
-exports.gameServerIp = gameServerIp;
-exports.gameServerPort = gameServerPort;
-exports.globalConfigPath = globalConfigPath;
+exports.gameServerLocalIp = gameServerLocalIp;
+exports.gameServerLocalPort = gameServerLocalPort;
+exports.gameServerNatUrl = gameServerNatUrl;
+exports.gameServerNatPort = gameServerNatPort;
 exports.nativeCnfPath = nativeCnfPath;
 exports.processLogPath = processLogPath;
 exports.gameServerInited = gameServerInited;
@@ -102,7 +102,6 @@ exports.classId = classId;
 exports.realName = realName;
 exports.nickName = nickName;
 exports.urlValue = urlValue;
-exports.globalConfigData = globalConfigData;
 exports.mainWindow = mainWindow;
 exports.lessonRouter = lessonRouter;
 

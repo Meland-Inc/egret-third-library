@@ -3,12 +3,13 @@
  * @desc 平台相关的逻辑
  * @date 2020-02-19 11:22:49
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-25 20:04:06
+ * @Last Modified time: 2020-02-26 21:58:00
  */
 const querystring = require('querystring');
 const config = require('./config.js');
 const util = require('./util.js');
 const logger = require('./logger.js');
+const message = require('./message.js');
 
 async function init(queryValue) {
     return new Promise((resolve, reject) => {
@@ -123,7 +124,7 @@ function getMemberInfo(successFunc, errorFunc) {
                 config.realName = body.data.user_info.real_name;
                 config.nickName = body.data.user_info.nickname;
 
-                util.setGlobalConfigValue('nativeLoginResponse', body);
+                message.sendMsg('SAVE_NATIVE_LOGIN_RESPONSE', body);
                 logger.log('net', `获取贝尔平台用户信息成功`);
                 successFunc();
             } else {
@@ -140,7 +141,17 @@ function getMemberInfo(successFunc, errorFunc) {
 
 /** 老师上报ip */
 function teacherUploadIp() {
-    let data = { token: config.bellToken, class_id: config.classId, local_network: `${config.gameServerIp}:${config.gameServerPort}` };
+    let data = { token: config.bellToken, class_id: config.classId };
+
+    //公网连接方式
+    if (config.gameServerNatUrl && config.gameServerNatPort) {
+        data['internet_network'] = `${config.gameServerNatUrl}:${config.gameServerNatPort}`;
+    }
+    //局域网连接方式
+    else if (config.gameServerLocalIp && config.gameServerLocalPort) {
+        data['local_network'] = `${config.gameServerLocalIp}:${config.gameServerLocalPort}`;
+    }
+
     util.requestPostHttp(config.bellApiOrigin, null, '/teacher/bellplanet-origins.put', data, null
         , (body) => {
             if (body.code === 200) {
