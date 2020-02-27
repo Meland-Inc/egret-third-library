@@ -3,7 +3,7 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-26 22:56:51
+ * @Last Modified time: 2020-02-27 15:44:35
  */
 // Modules to control application life and create native browser window
 const { app, globalShortcut, BrowserWindow, Menu, shell, dialog } = require('electron')
@@ -21,41 +21,64 @@ const message = require('./message.js');
 let mainWindow
 
 //native初始化
-async function nativeInit() {
+async function initNative() {
   //日志初始化
   logger.init();
 
   //平台老师端测试参数
-  config.urlValue = 'bellplanet://lesson?temporary_token=LWKqnyRO8M:QN0WH&class_id=410&bell_origin=demoapi.wkcoding.com';
+  // config.urlValue = 'bellplanet://lesson?temporary_token=LWKqnyRO8M:QN0WH&class_id=410&bell_origin=demoapi.wkcoding.com';
 
   //平台学生端端测试参数
   // config.urlValue = `bellplanet://student?temporary_token=AWRl2okDEQ:fYHQv&class_id=410&bell_origin=demoapi.wkcoding.com&local_network=127.0.0.1:8080&internet_network=democm.wkcoding.com`
-  // config.urlValue = `bellplanet://student?temporary_token=AWRl2okDEQ:fYHQv&class_id=410&bell_origin=demoapi.wkcoding.com&internet_network=uwex364021.planet-dev.wkcoding.com:9000`
+  // config.urlValue = `bellplanet://student?temporary_token=AWRl2okDEQ:fYHQv&class_id=410&bell_origin=demoapi.wkcoding.com&internet_network=kojm364021.planet-dev.wkcoding.com:9000`;
+
+  if (config.urlValue.indexOf(config.constPseudoProtocol) === -1) {
+    initNativePlatform();
+  } else {
+    initNativeLesson();
+  }
+}
+
+/** 初始化native c端游戏 */
+async function initNativeGame() {
+  //加载渲染页面
+  await mainWindow.loadFile(`${config.rootPath}/src/renderer/renderer.html`);
+
+  //初始化参数
+  let queryObject = { pcNative: 1, fakeGameMode: "lessons" };
+
+  //本地服务器初始化
+  server.init();
+
+  message.sendMsg('START_GAME', queryObject);
+}
+
+/** 初始化native上课课程 */
+async function initNativeLesson() {
+  //平台老师端测试参数
+  // config.urlValue = 'bellplanet://lesson?temporary_token=LWKqnyRO8M:QN0WH&class_id=410&bell_origin=demoapi.wkcoding.com';
+
+  //平台学生端端测试参数
+  // config.urlValue = `bellplanet://student?temporary_token=AWRl2okDEQ:fYHQv&class_id=410&bell_origin=demoapi.wkcoding.com&local_network=127.0.0.1:8080&internet_network=democm.wkcoding.com`
+  // config.urlValue = `bellplanet://student?temporary_token=AWRl2okDEQ:fYHQv&class_id=410&bell_origin=demoapi.wkcoding.com&internet_network=kojm364021.planet-dev.wkcoding.com:9000`;
+
+  //设置上课对应路由
+  let lessonRouter = config.urlValue.replace(config.constPseudoProtocol, '');
+  config.lessonRouter = lessonRouter.slice(0, lessonRouter.indexOf("?"));
 
   //加载渲染页面
   await mainWindow.loadFile(`${config.rootPath}/src/renderer/renderer.html`);
 
   //初始化参数
   let queryObject = { pcNative: 1 };
-  let protocolName = "bellplanet://";
-  if (config.urlValue.indexOf(protocolName) === -1) {
-    //非平台 
-    logger.log('net', `本地打开native程序`);
-    queryObject["fakeGameMode"] = "lessons";
-  } else {
-    //平台初始化
-    await platform.init(queryObject);
+  //平台初始化
+  await platform.init(queryObject);
 
-    //设置上课对应路由
-    let lessonRouter = config.urlValue.replace(protocolName, '');
-    config.lessonRouter = lessonRouter.slice(0, lessonRouter.indexOf("?"));
+  queryObject['fakeUserType'] = config.userType;
+  queryObject['token'] = config.bellTempToken;
 
-    queryObject['fakeUserType'] = config.userType;
-    queryObject['token'] = config.bellTempToken;
-  }
-
-  //非上课端 或者 老师端 本地服务器初始化
-  if (config.channel != config.constChannelLesson || config.userType === config.eUserType.teacher) {
+  //老师端 本地服务器初始化
+  if (config.userType === config.eUserType.teacher) {
     server.init();
   }
 
@@ -63,6 +86,12 @@ async function nativeInit() {
 
   message.sendMsg('START_GAME', queryObject);
 }
+
+/** 初始化native上课平台 */
+function initNativePlatform() {
+  mainWindow.loadURL("http://www.bellcode.com");
+}
+
 
 //创建游戏浏览窗口
 function createWindow() {
@@ -77,6 +106,7 @@ function createWindow() {
 
   // mainWindow.isEnabled
 
+
   /** 设置url参数 */
   config.urlValue = process.argv[process.argv.length - 1];
 
@@ -84,7 +114,7 @@ function createWindow() {
   message.init();
 
   //native初始化
-  nativeInit();
+  initNative();
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
@@ -155,7 +185,7 @@ app.on('second-instance', async (event, argv, workingDirectory) => {
 
     /** 设置url参数 */
     config.urlValue = argv[argv.length - 1];
-    nativeInit();
+    initNative();
   }
 })
 

@@ -3,7 +3,7 @@
  * @desc main用的配置
  * @date 2020-02-13 14:54:41 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-26 21:56:52
+ * @Last Modified time: 2020-02-27 15:13:14
  */
 /** 本机IP */
 const localIp = "127.0.0.1";
@@ -62,6 +62,11 @@ let lessonRouter;
 /** 上课模式渠道常量 */
 const constChannelLesson = 'bian_lesson';
 
+/** 上课伪协议头 */
+const constPseudoProtocol = 'bellplanet://';
+
+const constBellcodeUrl = 'www.bellcode.com';
+
 /** 用户类型枚举，教师端，学生端，机构端 */
 const eUserType = {
     student: 1,
@@ -106,5 +111,7 @@ exports.mainWindow = mainWindow;
 exports.lessonRouter = lessonRouter;
 
 exports.constChannelLesson = constChannelLesson;
+exports.constPseudoProtocol = constPseudoProtocol;
+exports.constBellcodeUrl = constBellcodeUrl;
 exports.eUserType = eUserType;
 exports.eLessonRouter = eLessonRouter;
