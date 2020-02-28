@@ -7069,6 +7069,7 @@ var egret;
          */
         var WebGLRenderer = (function () {
             function WebGLRenderer() {
+                this._tempResultPos = new egret.Point(); //临时计算坐标使用 防止gc
                 this.nestLevel = 0; //渲染的嵌套层次，0表示在调用堆栈的最外层。
             }
             /**
@@ -7242,21 +7243,36 @@ var egret;
                 var filters = displayObject.$filters;
                 var hasBlendMode = (displayObject.$blendMode !== 0);
                 var compositeOp;
+                var isCameraFilter = displayObject.tag == egret.TAG.cameraFilter; //镜头滤镜
                 if (hasBlendMode) {
                     compositeOp = blendModes[displayObject.$blendMode];
                     if (!compositeOp) {
                         compositeOp = defaultCompositeOp;
                     }
                 }
-                var displayBounds = displayObject.$getOriginalBounds();
-                var displayBoundsX = displayBounds.x;
-                var displayBoundsY = displayBounds.y;
-                var displayBoundsWidth = displayBounds.width;
-                var displayBoundsHeight = displayBounds.height;
+                var displayBoundsX;
+                var displayBoundsY;
+                var displayBoundsWidth;
+                var displayBoundsHeight;
+                if (isCameraFilter) {
+                    var cameraPos = displayObject.globalToLocal(0, 0, this._tempResultPos);
+                    displayBoundsX = cameraPos.x;
+                    displayBoundsY = cameraPos.y;
+                    var m = displayObject.$getConcatenatedMatrix();
+                    displayBoundsWidth = displayObject.$stage.$stageWidth / m.a;
+                    displayBoundsHeight = displayObject.$stage.$stageHeight / m.d;
+                }
+                else {
+                    var displayBounds = displayObject.$getOriginalBounds();
+                    displayBoundsX = displayBounds.x;
+                    displayBoundsY = displayBounds.y;
+                    displayBoundsWidth = displayBounds.width;
+                    displayBoundsHeight = displayBounds.height;
+                }
                 if (displayBoundsWidth <= 0 || displayBoundsHeight <= 0) {
                     return drawCalls;
                 }
-                if (!displayObject.mask && filters.length == 1 && (filters[0].type == "colorTransform" || (filters[0].type === "custom" && filters[0].padding === 0))) {
+                if (!displayObject.mask && filters.length == 1 && !isCameraFilter && (filters[0].type == "colorTransform" || (filters[0].type === "custom" && filters[0].padding === 0))) {
                     var childrenDrawCount = this.getRenderCount(displayObject);
                     if (!displayObject.$children || childrenDrawCount == 1) {
                         if (hasBlendMode) {
