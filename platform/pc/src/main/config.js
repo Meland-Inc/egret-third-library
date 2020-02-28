@@ -3,7 +3,7 @@
  * @desc main用的配置
  * @date 2020-02-13 14:54:41 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-27 15:13:14
+ * @Last Modified time: 2020-02-28 21:08:37
  */
 /** 本机IP */
 const localIp = "127.0.0.1";
@@ -59,6 +59,9 @@ let nickName;
 /** 上课伪协议 路由*/
 let lessonRouter;
 
+/** native模式 */
+let nativeMode;
+
 /** 上课模式渠道常量 */
 const constChannelLesson = 'bian_lesson';
 
@@ -80,6 +83,13 @@ const eUserType = {
 /** 路由枚举 */
 const eLessonRouter = {
 
+}
+
+/** native模式 */
+const eNativeMode = {
+    game: 1,    //c端游戏模式
+    lesson: 2,  //b端上单节课程模式(入口不走平台)
+    platform: 3, //b端平台上课模式(入口从平台进)  
 }
 
 /** 伪协议里url带的参数 */
@@ -109,9 +119,11 @@ exports.nickName = nickName;
 exports.urlValue = urlValue;
 exports.mainWindow = mainWindow;
 exports.lessonRouter = lessonRouter;
+exports.nativeMode = nativeMode;
 
 exports.constChannelLesson = constChannelLesson;
 exports.constPseudoProtocol = constPseudoProtocol;
 exports.constBellcodeUrl = constBellcodeUrl;
 exports.eUserType = eUserType;
 exports.eLessonRouter = eLessonRouter;
+exports.eNativeMode = eNativeMode;

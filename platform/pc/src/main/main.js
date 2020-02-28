@@ -3,7 +3,7 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-27 15:44:35
+ * @Last Modified time: 2020-02-28 22:23:15
  */
 // Modules to control application life and create native browser window
 const { app, globalShortcut, BrowserWindow, Menu, shell, dialog } = require('electron')
@@ -14,8 +14,8 @@ const process = require('process');
 const logger = require('./logger.js');
 const config = require('./config.js');
 const server = require('./server.js');
-const platform = require('./platform.js');
-const util = require('./util.js');
+// const platform = require('./platform.js');
+// const util = require('./util.js');
 const message = require('./message.js');
 
 let mainWindow
@@ -26,7 +26,7 @@ async function initNative() {
   logger.init();
 
   //平台老师端测试参数
-  // config.urlValue = 'bellplanet://lesson?temporary_token=LWKqnyRO8M:QN0WH&class_id=410&bell_origin=demoapi.wkcoding.com';
+  config.urlValue = 'bellplanet://lesson?temporary_token=LWKqnyRO8M:QN0WH&class_id=410&bell_origin=demoapi.wkcoding.com';
 
   //平台学生端端测试参数
   // config.urlValue = `bellplanet://student?temporary_token=AWRl2okDEQ:fYHQv&class_id=410&bell_origin=demoapi.wkcoding.com&local_network=127.0.0.1:8080&internet_network=democm.wkcoding.com`
@@ -37,59 +37,28 @@ async function initNative() {
   } else {
     initNativeLesson();
   }
+
+  await mainWindow.loadFile(`${config.rootPath}/src/renderer/renderer.html`);
+  //发送检查更新消息
+  message.sendMsg('CHECK_UPDATE');
 }
 
 /** 初始化native c端游戏 */
 async function initNativeGame() {
-  //加载渲染页面
-  await mainWindow.loadFile(`${config.rootPath}/src/renderer/renderer.html`);
-
-  //初始化参数
-  let queryObject = { pcNative: 1, fakeGameMode: "lessons" };
-
-  //本地服务器初始化
-  server.init();
-
-  message.sendMsg('START_GAME', queryObject);
+  config.nativeMode = config.eNativeMode.game;
 }
 
 /** 初始化native上课课程 */
 async function initNativeLesson() {
-  //平台老师端测试参数
-  // config.urlValue = 'bellplanet://lesson?temporary_token=LWKqnyRO8M:QN0WH&class_id=410&bell_origin=demoapi.wkcoding.com';
-
-  //平台学生端端测试参数
-  // config.urlValue = `bellplanet://student?temporary_token=AWRl2okDEQ:fYHQv&class_id=410&bell_origin=demoapi.wkcoding.com&local_network=127.0.0.1:8080&internet_network=democm.wkcoding.com`
-  // config.urlValue = `bellplanet://student?temporary_token=AWRl2okDEQ:fYHQv&class_id=410&bell_origin=demoapi.wkcoding.com&internet_network=kojm364021.planet-dev.wkcoding.com:9000`;
-
+  config.nativeMode = config.eNativeMode.lesson;
   //设置上课对应路由
   let lessonRouter = config.urlValue.replace(config.constPseudoProtocol, '');
   config.lessonRouter = lessonRouter.slice(0, lessonRouter.indexOf("?"));
-
-  //加载渲染页面
-  await mainWindow.loadFile(`${config.rootPath}/src/renderer/renderer.html`);
-
-  //初始化参数
-  let queryObject = { pcNative: 1 };
-  //平台初始化
-  await platform.init(queryObject);
-
-  queryObject['fakeUserType'] = config.userType;
-  queryObject['token'] = config.bellTempToken;
-
-  //老师端 本地服务器初始化
-  if (config.userType === config.eUserType.teacher) {
-    server.init();
-  }
-
-  logger.log('net', 'urlValue', config.urlValue);
-
-  message.sendMsg('START_GAME', queryObject);
 }
 
 /** 初始化native上课平台 */
 function initNativePlatform() {
-  mainWindow.loadURL("http://www.bellcode.com");
+  config.nativeMode = config.eNativeMode.platform;
 }
 
 

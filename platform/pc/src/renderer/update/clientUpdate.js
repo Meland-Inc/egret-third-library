@@ -3,7 +3,7 @@
  * @desc 游戏客户端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-26 21:59:15
+ * @Last Modified time: 2020-02-28 20:09:28
  */
 
 import * as loading from '../loading.js';
@@ -26,8 +26,8 @@ export class ClientUpdate {
     curVersion = 0;
     /** 最新游戏版本 */
     gameVersion = 0;
-    /** 软件安装的资源目录 */
-    resourcePath = Config.resourcePath;
+    /** 客户端包路径 */
+    clientPackagePath = Config.clientPackagePath;
     /** 补丁包数量 */
     patchCount = 0;
     /** 下载器 */
@@ -52,7 +52,7 @@ export class ClientUpdate {
         try {
             this.updateCallback = updateCallback;
             this.updateCbArgs = updateCbArgs;
-            let indexContent = await fs.readFileSync(`${Config.resourcePath}` + "index.html", "utf-8");
+            let indexContent = await fs.readFileSync(`${Config.clientPackagePath}` + "index.html", "utf-8");
             let versionResult = indexContent.match(new RegExp(`let patchVersion = "([0-9]+)";`));
             this.curVersion = this.startVersion = +versionResult[1];
 
@@ -162,21 +162,21 @@ export class ClientUpdate {
         else if (arg === "finished") {
             // 通知完成
             try {
-                let zip = new admzip(this.resourcePath + filename);
-                zip.extractAllTo(this.resourcePath, true);
+                let zip = new admzip(this.clientPackagePath + filename);
+                zip.extractAllTo(this.clientPackagePath, true);
             } catch (error) {
                 let content = `解压文件:${filename}错误`
                 logger.error(`update`, content, error);
                 alert(content);
                 this.executeUpdateCallback();
             }
-            fs.unlink(this.resourcePath + filename, (err) => {
+            fs.unlink(this.clientPackagePath + filename, (err) => {
                 if (err) {
                     throw err;
                 }
                 logger.log(`update`, '文件:' + filename + '删除成功！');
             });
-            let indexContent = await fs.readFileSync(this.resourcePath + "index.html").toString();
+            let indexContent = await fs.readFileSync(this.clientPackagePath + "index.html").toString();
             let matchResult = indexContent.match(new RegExp(`let patchVersion = "([0-9]+)";`));
             this.curVersion = +matchResult[1];
             if (this.curVersion >= this.gameVersion) {
@@ -203,7 +203,7 @@ export class ClientUpdate {
     installAllPatch() {
         this.allInOne = true;
         loading.showLoading();
-        this.download.downloadFile(this.patchUrl, this.resourcePath, `patch_v${this.startVersion}s_v${this.gameVersion}s.zip`, this.downloadFileCallback.bind(this));
+        this.download.downloadFile(this.patchUrl, this.clientPackagePath, `patch_v${this.startVersion}s_v${this.gameVersion}s.zip`, this.downloadFileCallback.bind(this));
         this.curVersion = this.gameVersion;
     }
 
@@ -211,7 +211,7 @@ export class ClientUpdate {
     installSinglePatch() {
         try {
             loading.showLoading();
-            this.download.downloadFile(this.patchUrl, this.resourcePath, `patch_v${this.curVersion}s_v${this.curVersion + 1}s.zip`, this.downloadFileCallback.bind(this));
+            this.download.downloadFile(this.patchUrl, this.clientPackagePath, `patch_v${this.curVersion}s_v${this.curVersion + 1}s.zip`, this.downloadFileCallback.bind(this));
         } catch (error) {
             throw error;
         }

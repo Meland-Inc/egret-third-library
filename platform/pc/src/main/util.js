@@ -3,7 +3,7 @@
  * @desc main用的工具类
  * @date 2020-02-18 11:43:24 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-26 23:11:14
+ * @Last Modified time: 2020-02-28 22:26:41
  */
 // const spawn = require("child_process").spawn;
 const exec = require("child_process").exec;
@@ -37,6 +37,7 @@ const querystring = require('querystring');
 //     });
 // }
 
+/** 运行cmd命令 */
 function runCmd(cmd, cwd, successMsg, errorMsg) {
     return new Promise((resolve, reject) => {
         logger.log('cmd', `cmd --> command:${cmd} cwd:${cwd}`);
@@ -63,6 +64,7 @@ function runCmd(cmd, cwd, successMsg, errorMsg) {
     });
 }
 
+/** 发送get请求 */
 function requestGetHttp(host, port, path, data, headers, successFunc, errorFunc) {
     let content = data ? `${querystring.stringify(data)}` : "";
     path = content ? `${path}?${content}` : path;
@@ -118,6 +120,7 @@ function requestGetHttp(host, port, path, data, headers, successFunc, errorFunc)
     request.end();
 }
 
+/** 发送post请求 */
 function requestPostHttp(host, port, path, data, headers, successFunc, errorFunc) {
     let content = data ? querystring.stringify(data) : "";
 

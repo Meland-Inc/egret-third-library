@@ -3,10 +3,11 @@
  * @desc 渲染进程消息处理文件
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-26 22:03:18
+ * @Last Modified time: 2020-02-28 22:22:57
  */
 import { Config } from './Config.js';
 import { ClientUpdate } from './update/ClientUpdate.js';
+import { ServerUpdate } from './update/ServerUpdate.js';
 import * as logger from './logger.js';
 let ipcRenderer = require('electron').ipcRenderer;
 let querystring = require('querystring');
@@ -16,6 +17,7 @@ let msgMap = {
     'SAVE_NATIVE_LOGIN_RESPONSE': onSaveNativeLoginResponse,    //保存native平台登陆信息
     'SAVE_NATIVE_SERVER_IP_PORT': onSaveNativeServerIpPort,     //设置native服务器内网ip和端口
     'START_GAME': onStartGame,  //开始游戏
+    'CHECK_UPDATE': onCheckUpdate,  //检查更新 
 }
 
 /** 发送渲染进程消息 */
@@ -53,22 +55,36 @@ function onSaveNativeServerIpPort(ip, port) {
     Config.setGameServerLocalPort(port);
 }
 
-/** 开始游戏 */
-function onStartGame(queryObject) {
+/** 检查更新 */
+function onCheckUpdate() {
     try {
         let clientUpdate = new ClientUpdate();
-        clientUpdate.checkUpdate(clientUpdateCB, queryObject);
+        clientUpdate.checkUpdate(clientUpdateCB);
     } catch (error) {
         let content = `native更新客户端报错`
         logger.error(`update`, content, error);
         alert(content);
 
-        clientUpdateCB(queryObject);
+        clientUpdateCB();
     }
 }
 
 /** 客户端更新回调 */
-function clientUpdateCB(queryObject) {
+function clientUpdateCB() {
+    try {
+        let serverUpdate = new ServerUpdate();
+        serverUpdate.checkUpdate(serverUpdateCB);
+    } catch (error) {
+        let content = `native更新服务端报错`
+        logger.error(`update`, content, error);
+        alert(content);
+
+        serverUpdateCB();
+    }
+}
+
+/** 服务端更新回调 */
+function serverUpdateCB() {
     if (Config.nativeLoginResponse) {
         localStorage.setItem('nativeLoginResponse', JSON.stringify(Config.nativeLoginResponse));
     } else {
@@ -81,6 +97,11 @@ function clientUpdateCB(queryObject) {
         localStorage.removeItem('nativeGameServer');
     }
 
+    sendMsg(`CHECK_UPDATE_COMPLETE`);
+}
+
+/** 开始游戏 */
+function onStartGame(queryObject) {
     let queryValue = querystring.stringify(queryObject);
     location.href = `${Config.rootPath}/package/client/index.html?${queryValue}`;
 }
