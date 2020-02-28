@@ -839,8 +839,15 @@ export default {
       this.isPublishNativeLoading = true;
       Global.showRegionLoading();
       try {
-        await mdPublish.updateServerPackage();
-        await mdPublish.copyServerPackageToNative();
+        await ModelMgr.ftpModel.initQiniuOption();
+        await mdPublish.mergeServerPackage();
+        this.isPublishNativeLoading = false;
+        Global.hideRegionLoading();
+        return;
+
+        // await mdPublish.updateServerPackage();
+        await mdPublish.clearServerPackage();
+        // await mdPublish.copyServerPackageToNative();
         await mdPublish.copyClientPackageToNative();
         await mdPublish.publishWin();
         await mdPublish.publishMac();
