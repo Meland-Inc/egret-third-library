@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1920,1080" designImage="ui://thvmj7vokujx4cyijb" designImageAlpha="0" designImageLayer="1">
+<component size="1920,1080" designImage="ui://thvmj7vovhcj4cyijj" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlRightDetail" pages="2,empty,0,edit,1,lobby" selected="0"/>
-  <controller name="ctrlViewStatus" pages="0,allList,1,selfList,2,create" selected="0">
-    <action type="change_page" fromPage="" toPage="0" objectId="n16_pz1n" controller="ctrlListType" targetPage="5"/>
+  <controller name="ctrlViewStatus" pages="0,allList,1,selfList,2,create,3,publish,4,detail" selected="0">
+    <action type="change_page" fromPage="" toPage="0" objectId="n16_pz1n" controller="ctrlListType" targetPage="7"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n16_pz1n" controller="ctrlListType" targetPage="0"/>
   </controller>
   <displayList>
@@ -28,11 +28,11 @@
       <Button icon="ui://0axy98cgkujx4j"/>
     </component>
     <component id="n6_8qqi" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1831,42" size="48,48" group="n20_ra2b">
-      <Button icon="ui://0axy98cg8qqi3l"/>
+      <Button icon="ui://te1gxawooiqdcyih2"/>
     </component>
     <component id="n28_q186" name="btnCloseCreateView" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1831,42" size="48,48" group="n20_ra2b">
       <gearDisplay controller="ctrlViewStatus" pages="2"/>
-      <Button icon="ui://0axy98cg8qqi3l" controller="ctrlViewStatus" page="1"/>
+      <Button icon="ui://te1gxawooiqdcyih2" controller="ctrlViewStatus" page="1"/>
     </component>
     <component id="n12_8qqi" name="tbtnAllMap" src="8qqi3m" fileName="btn/btnViewStatus.xml" xy="429,40" group="n20_ra2b">
       <gearDisplay controller="ctrlViewStatus" pages="0,1"/>
@@ -45,7 +45,13 @@
     <component id="n23_ra2b" name="comCreateTemplate" src="ra2b42" fileName="com/ComCreateTemplate.xml" xy="349,118" group="n20_ra2b">
       <gearDisplay controller="ctrlViewStatus" pages="2"/>
     </component>
-    <component id="n16_pz1n" name="comMapTemplateList" src="pz1n3n" fileName="com/ComMapTemplateList.xml" xy="31,118" group="n24_ra2b" controller="ctrlListType,5"/>
+    <component id="n32_a16n" name="comPublishTemplate" src="a16n4o" fileName="com/ComPublishTemplate.xml" xy="350,118" group="n20_ra2b">
+      <gearDisplay controller="ctrlViewStatus" pages="3"/>
+    </component>
+    <component id="n33_nibs" name="comDetail" src="nibs4p" fileName="com/ComTemplateDetail.xml" xy="143,118" group="n20_ra2b">
+      <gearDisplay controller="ctrlViewStatus" pages="4"/>
+    </component>
+    <component id="n16_pz1n" name="comMapTemplateList" src="pz1n3n" fileName="com/ComMapTemplateList.xml" xy="31,118" group="n24_ra2b" controller="ctrlListType,7"/>
     <component id="n17_ra2b" name="comEdit" src="pz1n3v" fileName="com/ComEditTemplate.xml" xy="1463,118" group="n24_ra2b">
       <gearDisplay controller="ctrlRightDetail" pages="0"/>
     </component>

@@ -1,132 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="0axy98cg" jpegQuality="80" compressPNG="true">
   <resources>
-    <component id="iv930" name="btnCreateMap.xml" path="/old/btn/"/>
-    <image id="iv931" name="img_stencil_dt_1.png" path="/old/img/"/>
-    <image id="iv932" name="创作模版-对应图.png" path="/old/template/"/>
-    <component id="iv933" name="BtnMapPrototypeItem.xml" path="/old/btn/"/>
-    <image id="iv934" name="img_stencil_dt_4.png" path="/old/img/" scale="9grid" scale9grid="36,38,72,76"/>
-    <image id="iv935" name="img_stencil_dt_5.png" path="/old/img/" scale="9grid" scale9grid="35,38,70,76"/>
-    <image id="iv936" name="img_stencil_dt_3.png" path="/old/img/"/>
-    <component id="iv937" name="ComAutoClipLad.xml" path="/old/com/" exported="true"/>
-    <image id="iv938" name="创建地图-联机大厅1.png" path="/old/template/"/>
-    <component id="iv939" name="BtnMapIcon.xml" path="/old/btn/"/>
-    <image id="iv93a" name="img_stencil_fm_7.png" path="/old/img/" scale="9grid" scale9grid="32,22,64,44"/>
-    <image id="iv93b" name="img_stencil_fm_6.png" path="/old/img/" scale="9grid" scale9grid="33,23,66,46"/>
-    <component id="iv93c" name="BtnSelectMapIcon.xml" path="/old/btn/"/>
-    <image id="iv93d" name="img_stencil_dt_6.png" path="/old/img/" scale="9grid" scale9grid="32,25,64,50"/>
-    <image id="iv93e" name="img_stencil_fm_1.png" path="/old/img/" scale="9grid" scale9grid="38,7,76,14"/>
-    <component id="iv93f" name="ComMapTemplateListOld.xml" path="/old/com/" exported="true"/>
-    <image id="iv93g" name="img_cm_bg_dk_1.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="31,23,62,46"/>
-    <component id="iv93h" name="comMapTemplateDetail.xml" path="/old/com/"/>
-    <image id="iv93i" name="img_cm_xxk_1.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="43,41,86,82"/>
-    <component id="iv93j" name="btnFix.xml" path="/old/btn/" exported="true"/>
-    <image id="iv93k" name="btn_cm_1_red.png" path="/old/newImg/" exported="true"/>
-    <image id="iv93m" name="btn_cm_an_2.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="27,9,54,18"/>
-    <image id="iv93n" name="btn_cm_an_3.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="27,10,54,20"/>
-    <component id="iv93o" name="ComDetailContainer.xml" path="/old/com/"/>
-    <image id="iv93p" name="img_cm_srk_2.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="18,7,36,14"/>
-    <image id="iv93q" name="img_cm_bjtb_2.png" path="/old/imgB/" exported="true"/>
-    <image id="iv93r" name="img_stencil_c_1.png" path="/old/img/"/>
-    <component id="iv93s" name="btnScale.xml" path="/old/btn/" exported="true"/>
-    <component id="iv93u" name="tbtnFix.xml" path="/old/btn/" exported="true"/>
-    <image id="iv93v" name="btn_cm_sfl_2.png" path="/old/imgB/" exported="true"/>
-    <image id="iv93w" name="btn_cm_sfl_1.png" path="/old/imgB/" exported="true"/>
-    <component id="iv93x" name="comSelectManorTypeInList.xml" path="/old/com/"/>
-    <image id="iv93y" name="img_stencil_ld_1.png" path="/old/img/"/>
-    <image id="iv93z" name="img_stencil_ld_2.png" path="/old/img/"/>
-    <image id="iv9310" name="img_stencil_ld_3.png" path="/old/img/"/>
-    <image id="iv9311" name="btn_cm_xzl_4.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="30,30,60,60"/>
-    <image id="iv9312" name="btn_cm_xzl_5.png" path="/old/imgB/" exported="true"/>
-    <component id="iv9313" name="btnFixClickArea.xml" path="/old/btn/" exported="true"/>
-    <component id="iv9314" name="comSelectMapSizeInCreate.xml" path="/old/com/"/>
-    <image id="iv9315" name="btn_cm_xzl_1.png" path="/old/imgB/" exported="true"/>
-    <image id="iv9316" name="btn_cm_xzl_2.png" path="/old/imgB/" exported="true"/>
-    <image id="iv9317" name="我的地图-我创建的.png" path="/old/template/封面UI调整/"/>
-    <component id="iv9318" name="ScrollBarVB.xml" path="/old/sld/" exported="true"/>
-    <component id="iv9319" name="ScrollBarV_gripB.xml" path="/old/sld/"/>
-    <image id="iv931a" name="img_stencil_gdt.png" path="/old/img/" scale="9grid" scale9grid="2,6,4,86"/>
-    <image id="iv931b" name="我的地图-我创建的(1).png" path="/old/template/"/>
-    <component id="iv931c" name="comMapTemplateLobbyOld.xml" path="/old/com/"/>
-    <component id="iv931d" name="comRoom.xml" path="/old/com/"/>
-    <image id="iv931e" name="img_stencil_fj_1.png" path="/old/img/" scale="9grid" scale9grid="26,12,52,24"/>
-    <component id="iv931f" name="ScrollBarVB.xml" path="/old/com/" exported="true"/>
-    <component id="iv931g" name="ScrollBarV_gripB.xml" path="/old/com/"/>
-    <image id="iv931h" name="img_code_gdt_2.png" path="/old/B-PlatformImg/" scale="9grid" scale9grid="2,23,4,46"/>
-    <component id="iv931i" name="btnFixNoEffect.xml" path="/old/btn/" exported="true"/>
-    <image id="iv931j" name="btn_cm_1_yellow.png" path="/old/newImg/" exported="true"/>
-    <image id="iv931k" name="img_stencil_fj_2.png" path="/old/img/"/>
-    <image id="iv931l" name="我的地图-我订阅的.png" path="/old/template/封面UI调整/"/>
-    <component id="iv931m" name="BtnMapTemplateItemDetail.xml" path="/old/com/"/>
-    <image id="iv931n" name="img_stencil_dty_1.png" path="/old/img/"/>
-    <image id="iv931o" name="img_stencil_dty_2.png" path="/old/img/"/>
-    <image id="iv931p" name="img_stencil_dty_3.png" path="/old/img/"/>
-    <component id="iv931q" name="pbrLoadMapTemplate.xml" path="/old/prb/"/>
-    <image id="iv931r" name="img_stencil_jdt_1.png" path="/old/img/" scale="9grid" scale9grid="10,2,20,4"/>
-    <image id="iv931s" name="img_stencil_jdt_2.png" path="/old/img/" scale="9grid" scale9grid="10,2,20,4"/>
-    <component id="iv931t" name="comTemplateSelector.xml" path="/old/com/"/>
-    <image id="iv931u" name="地图列表.png" path="/old/template/"/>
-    <component id="iv931v" name="comMineList.xml" path="/old/com/"/>
-    <component id="iv931w" name="BtnMapTemplateItem.xml" path="/old/com/"/>
-    <image id="iv931x" name="icon_stencil_bq_1.png" path="/old/img/"/>
-    <component id="iv931y" name="ladMapCtnr.xml" path="/old/com/"/>
-    <component id="iv931z" name="comSelectMapSizeInLIst.xml" path="/old/com/"/>
-    <component id="iv9320" name="comSelectManorTypeInCreate.xml" path="/old/com/"/>
-    <component id="iv9321" name="ComMapTemplate.xml" path="/old/com/"/>
-    <component id="iv9322" name="comInput.xml" path="/old/com/" exported="true"/>
-    <image id="iv9323" name="icon_cm_xsgl_5.png" path="/old/imgB/" exported="true"/>
-    <component id="iv9324" name="ComCreateTemplate.xml" path="/old/com/"/>
-    <image id="iv9325" name="img_cm_cjk_1.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="9,39,195,137"/>
-    <image id="iv9326" name="icon_stencil_1.png" path="/old/img/"/>
-    <component id="iv9327" name="ComCreateContainer.xml" path="/old/com/"/>
-    <component id="iv9328" name="comSelectMapPrototype.xml" path="/old/com/"/>
-    <image id="iv9329" name="16_44_56__09_20_2019.jpg" path="/old/template/"/>
-    <image id="iv932a" name="创建地图-更换封面.png" path="/old/template/"/>
-    <component id="iv932b" name="ComMapIconSelect.xml" path="/old/com/"/>
-    <image id="iv932c" name="img_stencil_fm_2.png" path="/old/img/" scale="9grid" scale9grid="51,48,102,96"/>
-    <image id="iv932d" name="img_stencil_fm_4.png" path="/old/img/" scale="9grid" scale9grid="2,27,4,54"/>
-    <image id="iv932e" name="img_stencil_fm_3.png" path="/old/img/" scale="9grid" scale9grid="39,2,78,4"/>
-    <image id="iv932f" name="btn_stencil_fm_5.png" path="/old/img/"/>
-    <image id="iv932g" name="创建地图-封面设置.png" path="/old/template/封面UI调整/"/>
-    <image id="iv932h" name="创建地图.png" path="/old/template/"/>
-    <component id="iv932i" name="comLstTitle.xml" path="/old/com/"/>
-    <component id="iv932j" name="BtnMapTemplateItemNew.xml" path="/old/com/"/>
-    <image id="iv932k" name="icon_stencil_2.png" path="/old/img/"/>
-    <image id="iv932l" name="img_stencil_dt_2.png" path="/old/img/"/>
-    <image id="iv932m" name="img_stencil_ld_4.png" path="/old/img/" scale="9grid" scale9grid="25,25,50,50"/>
-    <component id="iv932n" name="prbUpdate.xml" path="/old/prb/"/>
-    <image id="iv932o" name="img_cm_dtgj_6.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="22,4,44,8"/>
-    <image id="iv932p" name="img_cm_dtgj_7.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="22,4,44,8"/>
-    <component id="iv932q" name="WinMapTemplateOld.xml" path="/old/win/" exported="true"/>
-    <component id="iv932r" name="comCommonWinBgSimplified.xml" path="/old/com/" exported="true"/>
-    <image id="iv932s" name="bg_cm_1.png" path="/old/imgB/" exported="true"/>
-    <image id="iv932t" name="img_cm__bg_cbl_1.png" path="/old/imgB/" exported="true"/>
-    <image id="iv932u" name="img_cm_db_1.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="22,16,44,32"/>
-    <image id="iv932v" name="img_cm_db_2.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="53,15,106,30"/>
-    <image id="iv932w" name="角色创建效果图1.png" path="/old/login/创角/"/>
-    <component id="iv932x" name="rbtnCommonTab.xml" path="/old/btn/" exported="true"/>
-    <image id="iv932y" name="btn_cm_cbl_2.png" path="/old/imgB/" exported="true"/>
-    <image id="iv932z" name="btn_cm_cbl_1.png" path="/old/imgB/" exported="true"/>
-    <image id="iv9330" name="btn_cm_db_3.png" path="/old/imgB/" exported="true"/>
-    <component id="iv9331" name="CommonLoading.xml" path="/old/com/" exported="true"/>
-    <image id="iv9332" name="img_lineloading_1.png" path="/old/newImg/" exported="true"/>
-    <image id="iv9333" name="img_lineloading_back.png" path="/old/newImg/"/>
-    <image id="iv9334" name="创作模版.png" path="/old/template/"/>
-    <component id="iv9335" name="WinTileMapPreview.xml" path="/old/win/" exported="true"/>
-    <image id="iv9336" name="img_cm_dtgj_1.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="33,39,66,70"/>
-    <image id="iv9337" name="img_cm_dtgj_2.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="142,67,284,134"/>
-    <image id="iv9338" name="btn_cm_gban_1.png" path="/old/imgB/" exported="true"/>
-    <image id="iv9339" name="img_cm_dtgj_3.png" path="/old/imgB/" exported="true"/>
-    <image id="iv933a" name="img_cm_dtgj_4.png" path="/old/imgB/" exported="true"/>
-    <image id="iv933b" name="img_cm_dtgj_5.png" path="/old/imgB/" exported="true"/>
-    <image id="iv933c" name="地图工具-对应图2.png" path="/old/template/"/>
+    <component id="iv939" name="BtnMapIcon.xml" path="/btn/"/>
+    <component id="iv93c" name="BtnSelectMapIcon.xml" path="/btn/"/>
+    <image id="iv93d" name="img_stencil_dt_6.png" path="/img/" scale="9grid" scale9grid="32,25,64,50"/>
+    <image id="iv93e" name="img_stencil_fm_1.png" path="/img/" scale="9grid" scale9grid="38,7,76,14"/>
+    <image id="iv93r" name="img_stencil_c_1.png" path="/img/"/>
     <component id="8qqi3d" name="WinMapTemplate.xml" path="/win/" exported="true"/>
     <image id="8qqi3e" name="icon_mapt_dz_1.png" path="/img/"/>
     <image id="8qqi3f" name="icon_mapt_dz_2.png" path="/img/"/>
     <image id="8qqi3g" name="icon_mapt_map_2.png" path="/img/"/>
     <image id="8qqi3h" name="icon_mapt_sc_1.png" path="/img/"/>
     <image id="8qqi3i" name="icon_mapt_sc_2.png" path="/img/"/>
-    <image id="8qqi3l" name="btn_cm_gb.png" path="/old/imgB/" exported="true"/>
     <component id="8qqi3m" name="btnViewStatus.xml" path="/btn/"/>
     <component id="pz1n3n" name="ComMapTemplateList.xml" path="/com/"/>
     <component id="pz1n3q" name="BtnMapTemplateItem.xml" path="/btn/"/>
@@ -140,8 +25,6 @@
     <component id="ra2b3z" name="spCreateRoom.xml" path="/sprite/"/>
     <component id="ra2b41" name="comRoom.xml" path="/com/"/>
     <component id="ra2b42" name="ComCreateTemplate.xml" path="/com/"/>
-    <image id="ie8a43" name="img_stencil_dt_6.png" path="/img/"/>
-    <component id="nvw444" name="WinTileMapPreview.xml" path="/win/" exported="true"/>
     <component id="hgj749" name="ScrollBar1_grip.xml" path="/slider/"/>
     <component id="hgj74a" name="ScrollBar1.xml" path="/slider/" exported="true"/>
     <component id="hgj74b" name="ScrollBar2_grip.xml" path="/slider/"/>
@@ -155,6 +38,11 @@
     <component id="kujx4k" name="WinInputMapTemplateRoomCode.xml" path="/win/" exported="true"/>
     <component id="ggj78" name="WinRoomCode.xml" path="/win/" exported="true"/>
     <image id="upwh4l" name="img_mapT_bg_1.png" path="/img/"/>
+    <image id="a16n4m" name="img_stencil_fm_7.png" path="/img/"/>
+    <component id="a16n4o" name="ComPublishTemplate.xml" path="/com/"/>
+    <component id="nibs4p" name="ComTemplateDetail.xml" path="/com/"/>
+    <component id="nibs4q" name="btnType.xml" path="/btn/"/>
+    <component id="nibs4r" name="btnShowHotRecent.xml" path="/btn/"/>
   </resources>
   <publish name="template" path="E:\bellcode\egret-planet\resource\assets\fairyGui"/>
 </packageDescription>
