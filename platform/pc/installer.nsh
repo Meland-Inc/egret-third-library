@@ -5,12 +5,16 @@
 !macro preInit
   ; This macro is inserted at the beginning of the NSIS .OnInit callback
   !system "echo '' > ${BUILD_RESOURCES_DIR}/preInit"
+
+  ;64位包
   SetRegView 64
-  WriteRegExpandStr HKLM "${INSTALL_REGISTRY_KEY}" InstallLocation "D:\bellplanet\"
-  WriteRegExpandStr HKCU "${INSTALL_REGISTRY_KEY}" InstallLocation "D:\bellplanet\"
-  SetRegView 32
-  WriteRegExpandStr HKLM "${INSTALL_REGISTRY_KEY}" InstallLocation "D:\bellplanet\"
-  WriteRegExpandStr HKCU "${INSTALL_REGISTRY_KEY}" InstallLocation "D:\bellplanet\"
+  WriteRegExpandStr HKLM "${INSTALL_REGISTRY_KEY}" InstallLocation "D:\Program Files\bellplanet\"
+  WriteRegExpandStr HKCU "${INSTALL_REGISTRY_KEY}" InstallLocation "D:\Program Files\bellplanet\"
+
+  ;32位包
+  ; SetRegView 32
+  ; WriteRegExpandStr HKLM "${INSTALL_REGISTRY_KEY}" InstallLocation "D:\Program Files (x86)\bellplanet\"
+  ; WriteRegExpandStr HKCU "${INSTALL_REGISTRY_KEY}" InstallLocation "D:\Program Files (x86)\bellplanet\"
 !macroend
 
 !macro customInit
@@ -19,6 +23,9 @@
 
 !macro customInstall
   !system "echo '' > ${BUILD_RESOURCES_DIR}/customInstall"
+  WriteRegStr HKCR "bellplanet" "URL Protocol" ""
+  WriteRegStr HKCR "bellplanet" "" "URL:bellplanet Protocol Handler"
+  WriteRegStr HKCR "bellplanet\shell\open\command" "" '"$INSTDIR\bellplanet.exe" "%1"'
 !macroend
 
 !macro customInstallMode

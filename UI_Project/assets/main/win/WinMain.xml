@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" opaque="false" designImage="ui://thvmj7voqr0m4cyij5" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlUserStatus" pages="0,student,1,teacher,2,fakeStudent,3,fakeTeacher" selected="1"/>
+  <controller name="ctrlUserStatus" pages="0,student,1,teacher,2,fakeStudent,3,fakeTeacher" selected="3"/>
   <controller name="ctrlGodView" pages="0,false,1,true" selected="0"/>
-  <controller name="ctrlEnterWay" pages="0,share,1,editSelf,2,editOther,3,roomPlayCanEdit,4,roomPlayCanNotEdit" selected="0"/>
+  <controller name="ctrlEnterWay" pages="0,share,1,editSelf,2,editOther,3,roomPlayCanEdit,4,roomPlayCanNotEdit,8,banner" selected="3"/>
   <controller name="ctrlViewMode" pages="0,world,1,mapTemplate" selected="0"/>
   <controller name="ctrlLeftTopView" pages="0,show,1,hide" selected="0"/>
+  <controller name="ctrlChatMode" pages="1,show,2,hide" selected="0"/>
   <displayList>
-    <component id="n17_swki" name="btnChangeViewMode" src="psruh" fileName="com/btnMainMenu.xml" xy="1427,13" group="n23_11584">
+    <component id="n17_swki" name="btnChangeViewMode" src="psruh" fileName="com/btnMainMenu.xml" xy="1302,13" group="n23_11584">
       <gearDisplay controller="ctrlUserStatus" pages="1,3"/>
       <gearXY controller="ctrlUserStatus" pages="0,1,2,3" values="1552,13|1427,13|1427,13|1302,13"/>
       <gearText controller="ctrlGodView" pages="0,1" values="查看模式|演示模式"/>
@@ -14,18 +15,18 @@
       <relation target="" sidePair="right-right"/>
       <Button title="查看模式" icon="ui://oyity675lmgfq"/>
     </component>
-    <component id="n4_psru" name="btnTeachPlan" src="psruh" fileName="com/btnMainMenu.xml" xy="1552,13" group="n23_11584" customData="top">
+    <component id="n4_psru" name="btnTeachPlan" src="psruh" fileName="com/btnMainMenu.xml" xy="1427,13" group="n23_11584" customData="top">
       <gearDisplay controller="ctrlUserStatus" pages=""/>
       <gearXY controller="ctrlUserStatus" pages="0,1,2,3" values="1677,13|1552,13|1552,13|1427,13"/>
       <relation target="" sidePair="right-right"/>
       <Button title="教案" icon="ui://oyity675a1nd6"/>
     </component>
-    <component id="n3_psru" name="btnUpload" src="psruh" fileName="com/btnMainMenu.xml" xy="1677,13" group="n23_11584" customData="top">
+    <component id="n3_psru" name="btnUpload" src="psruh" fileName="com/btnMainMenu.xml" xy="1552,13" group="n23_11584" customData="top">
       <gearXY controller="ctrlUserStatus" pages="0,1,2,3" values="1802,13|1677,13|1677,13|1552,13"/>
       <relation target="" sidePair="right-right"/>
       <Button title="提交" icon="ui://oyity675a1ndd"/>
     </component>
-    <component id="n2_psru" name="btnShowStudentMgr" src="psruh" fileName="com/btnMainMenu.xml" xy="1802,14" group="n23_11584" customData="top">
+    <component id="n2_psru" name="btnShowStudentMgr" src="psruh" fileName="com/btnMainMenu.xml" xy="1677,14" group="n23_11584" customData="top">
       <gearDisplay controller="ctrlUserStatus" pages="1,3"/>
       <gearXY controller="ctrlUserStatus" pages="0,1,2,3" values="1677,14|1802,14|1677,14|1677,14"/>
       <relation target="" sidePair="right-right"/>
@@ -36,23 +37,27 @@
       <relation target="" sidePair="right-right"/>
       <Button title="模板创作" icon="ui://oyity675a1nd8"/>
     </component>
-    <component id="n29_kpw9" name="btnManorRestore" src="psruh" fileName="com/btnMainMenu.xml" xy="1302,13" group="n23_11584" visible="false">
+    <component id="n29_kpw9" name="btnManorRestore" src="psruh" fileName="com/btnMainMenu.xml" xy="1177,13" group="n23_11584" visible="false">
       <gearXY controller="ctrlUserStatus" pages="0,1,2" values="1552,13|1302,13|1427,13" default="1177,13"/>
       <relation target="" sidePair="right-right"/>
       <Button title="重置领地" icon="ui://oyity675kpw94dz"/>
     </component>
-    <group id="n23_11584" name="grpMenu" xy="1302,13" size="610,113" customData="top" advanced="true">
+    <group id="n23_11584" name="grpMenu" xy="1177,13" size="735,113" customData="top" advanced="true">
       <gearDisplay controller="ctrlViewMode" pages="0"/>
     </group>
+    <component id="n30_bix1" name="btnBannerTemplate" src="psruh" fileName="com/btnMainMenu.xml" xy="1802,13" group="n24_11584" customData="top">
+      <gearDisplay controller="ctrlEnterWay" pages="8"/>
+      <Button title="模板创作" icon="ui://oyity675a1nd8"/>
+    </component>
     <component id="n19_11584" name="btnBack" src="psruh" fileName="com/btnMainMenu.xml" xy="1802,13" group="n24_11584">
       <gearDisplay controller="ctrlEnterWay" pages="1,2,3,4"/>
-      <Button title="退出" icon="ui://oyity675xh734dq" page="1"/>
+      <Button title="退出" icon="ui://oyity675xh734dq"/>
     </component>
     <component id="n22_11584" name="btnInvite" src="psruh" fileName="com/btnMainMenu.xml" xy="1667,13" group="n24_11584" customData="top">
       <gearDisplay controller="ctrlEnterWay" pages="1"/>
-      <Button title="邀请好友" icon="ui://oyity675xh734dp" page="1"/>
+      <Button title="邀请好友" icon="ui://oyity675xh734dp"/>
     </component>
-    <group id="n24_11584" name="grpEditMenu" xy="1667,13" size="245,112" customData="top" advanced="true" collapsed="true">
+    <group id="n24_11584" name="grpEditMenu" xy="1667,13" size="245,112" customData="top" advanced="true">
       <gearDisplay controller="ctrlViewMode" pages="1"/>
       <relation target="" sidePair="right-right"/>
     </group>
@@ -76,7 +81,7 @@
     <component id="n12_psru" name="btnHideLeftTop" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="272,105" size="74,74" group="n15_n173">
       <Button icon="ui://oyity675a1ndb" controller="ctrlLeftTopView" page="1"/>
     </component>
-    <group id="n15_n173" name="grpLeftTop" xy="0,0" size="346,262" customData="left" advanced="true" collapsed="true">
+    <group id="n15_n173" name="grpLeftTop" xy="0,0" size="346,262" customData="left" advanced="true">
       <gearXY controller="ctrlLeftTopView" pages="0,1" values="0,0|-346,0" tween="true"/>
     </group>
     <component id="n14_psru" name="comTask" src="psruk" fileName="com/ComMainTask.xml" xy="0,277">
@@ -87,7 +92,7 @@
       <relation target="" sidePair="bottom-bottom"/>
     </component>
     <group id="n25_sod9" name="grpChat" xy="0,920" size="440,160" advanced="true">
-      <gearDisplay controller="ctrlViewMode" pages="0"/>
+      <gearDisplay controller="ctrlChatMode" pages="1"/>
     </group>
     <component id="n26_evs4" name="comBuildShortCut" src="qu7tt7j" fileName="ideCommon/com/ComBuildShortCutB.xml" pkg="ti9jag5t" xy="331,40" visible="false" touchable="false" customData="bottom" controller="ctrlState,11">
       <relation target="" sidePair="center-center"/>

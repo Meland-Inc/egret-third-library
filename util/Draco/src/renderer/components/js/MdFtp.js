@@ -11,6 +11,7 @@ import { ModelMgr } from "./model/ModelMgr";
 import * as qiniu from "qiniu";
 import * as ExternalUtil from "./ExternalUtil";
 import * as spawnExc from "./SpawnExecute.js";
+import * as CdnUtil from "./CdnUtil.js";
 
 export const serverList = [
     { name: "long", host: "47.107.73.43", user: "ftpadmin", password: "unclemiao", path: "/web/feature/long" },
@@ -82,20 +83,28 @@ export async function zipVersion() {
 }
 
 export async function uploadVersionFile() {
-    if (ModelMgr.versionModel.curEnviron.scpEnable) {
+    let curEnviron = ModelMgr.versionModel.curEnviron;
+    if (curEnviron.scpEnable) {
         await uploadScpVersionFile();
-        await uploadScpPatchZip(ModelMgr.versionModel.curEnviron.scpMacPatchPath);
-        await uploadScpPatchZip(ModelMgr.versionModel.curEnviron.scpWinPatchPath);
+        if (curEnviron.scpMacPatchPath) {
+            await uploadScpPatchZip(curEnviron.scpMacPatchPath);
+        }
+        if (curEnviron.scpWinPatchPath) {
+            await uploadScpPatchZip(curEnviron.scpWinPatchPath);
+        }
     }
 
-    if (ModelMgr.versionModel.curEnviron.cdnEnable) {
+    if (curEnviron.cdnEnable) {
         await uploadCdnVersionFile();
-        await uploadCdnPatchZip(ModelMgr.versionModel.curEnviron.cdnWinPatchPath);
-        await uploadCdnPatchZip(ModelMgr.versionModel.curEnviron.cdnMacPatchPath);
+        if (curEnviron.cdnWinPatchPath) {
+            await uploadCdnPatchZip(curEnviron.cdnWinPatchPath);
+        }
+        if (curEnviron.cdnMacPatchPath) {
+            await uploadCdnPatchZip(curEnviron.cdnMacPatchPath);
+        }
     }
 }
 
-let maxUploadCount = 10;
 export function uploadCdnVersionFile() {
     return new Promise(async (resolve, reject) => {
         await ModelMgr.ftpModel.initQiniuOption();
@@ -117,6 +126,7 @@ export function uploadCdnVersionFile() {
         let readyEnviron = ModelMgr.versionModel.environList.find(value => value.name === ModelMgr.versionModel.eEnviron.ready);
         let readyPath = `${Global.svnPublishPath}${readyEnviron.localPath}`;
         let curGameVersion = releaseGameVersion;
+        let hasPatch = false;
         for (let i = +releaseGameVersion + 1; i <= readyGameVersion; i++) {
             let patchVersion = `patch_v${curGameVersion}s-v${i}s`;
             let patchPath = `${readyPath}/${patchVersion}/`;
@@ -125,10 +135,16 @@ export function uploadCdnVersionFile() {
                 continue;
             }
 
+            hasPatch = true;
             await uploadCdnSingleVersionFile(patchPath, releaseEnviron.cdnRoot);
             curGameVersion = i;
         }
 
+        //没有patch包,传整包
+        if (!hasPatch) {
+            let releasePath = `${readyPath}/release_v${readyGameVersion}s`;
+            await uploadCdnSingleVersionFile(releasePath, releaseEnviron.cdnRoot);
+        }
         resolve();
     });
 }
@@ -137,84 +153,8 @@ async function uploadCdnSingleVersionFile(patchPath, cdnRoot) {
     return new Promise(async (resolve, reject) => {
         let releaseUploadCount = 0;
         let filePathArr = [];
-        await batchUploaderFiles(patchPath, filePathArr);
-        await checkUploaderFiles(patchPath, filePathArr, cdnRoot, releaseUploadCount, resolve, reject);
-    });
-}
-
-async function batchUploaderFiles(rootPath, filePathArr) {
-    let files = await fsExc.readDir(rootPath);
-    for (const iterator of files) {
-        let fullPath = `${rootPath}/${iterator}`;
-        let isFolder = await fsExc.isDirectory(fullPath);
-        if (isFolder) {
-            await batchUploaderFiles(fullPath, filePathArr);
-        } else {
-            filePathArr.push(fullPath);
-        }
-    }
-}
-
-function checkUploaderFiles(rootPath, filePathArr, cdnRoot, uploadCount, resolve, reject) {
-    if (uploadCount > maxUploadCount) return;
-    if (filePathArr.length == 0) return;
-
-    let filePath = filePathArr.shift();
-    checkUploaderFile(rootPath, filePath, cdnRoot, uploadCount,
-        () => {
-            if (filePathArr.length != 0) {
-                checkUploaderFiles(rootPath, filePathArr, cdnRoot, uploadCount, resolve, reject);
-            } else {
-                if (resolve) {
-                    resolve();
-                    console.log(`上传cdn完成`);
-                }
-            }
-        });
-}
-
-function checkUploaderFile(rootPath, filePath, cdnRoot, uploadCount, successFunc) {
-    uploadCount++;
-    uploaderFile(rootPath, filePath, cdnRoot,
-        () => {
-            uploadCount--;
-            successFunc();
-        },
-        () => {
-            uploadCount--;
-            checkUploaderFile(rootPath, filePath, cdnRoot, uploadCount, successFunc);
-        });
-}
-
-function uploaderFile(rootPath, filePath, cdnRoot, successFunc, failFunc) {
-    let formUploader = new qiniu.form_up.FormUploader(ModelMgr.ftpModel.qiniuConfig);
-    let uploadToken = ModelMgr.ftpModel.uploadToken;
-    let fileKey = filePath.split(`${rootPath}/`)[1];
-    if (cdnRoot) {
-        fileKey = `${cdnRoot}/${fileKey}`;
-    }
-    let readerStream = fs.createReadStream(filePath);
-    let putExtra = new qiniu.form_up.PutExtra();
-
-    formUploader.putStream(uploadToken, fileKey, readerStream, putExtra, (rspErr, rspBody, rspInfo) => {
-        if (rspErr) {
-            //单个文件失败
-            console.error(rspErr);
-            console.error(`cdn --> upload ${fileKey} error`);
-            failFunc();
-            return;
-        }
-
-        //200:成功 614:文件重复
-        if (rspInfo.statusCode != 200 && rspInfo.statusCode != 614) {
-            console.log(rspInfo.statusCode);
-            console.log(rspBody);
-            failFunc();
-            return;
-        }
-
-        console.log(`cdn --> upload ${fileKey} success`);
-        successFunc();
+        await CdnUtil.createUploaderFilePathArr(patchPath, filePathArr);
+        await CdnUtil.checkUploaderFiles(patchPath, filePathArr, cdnRoot, releaseUploadCount, resolve, reject);
     });
 }
 
@@ -324,7 +264,7 @@ export function uploadCdnPolicyFile() {
             }
         }
 
-        await checkUploaderFiles(policyPath, policyFilePathArr, ModelMgr.versionModel.curEnviron.cdnRoot, uploadCount, resolve, reject);
+        await CdnUtil.checkUploaderFiles(policyPath, policyFilePathArr, ModelMgr.versionModel.curEnviron.cdnRoot, uploadCount, resolve, reject);
     });
 }
 
@@ -437,40 +377,33 @@ async function uploadCdnPatchZip(cdnPatchPath) {
         let patchPath = `${readyPath}/${getPatchName()}`;
         let patchExist = await fsExc.exists(patchPath);
         if (patchExist) {
-            // uploaderFile(readyPath, patchPath, releaseEnviron.cdnRoot,
-            //     () => {
-            //         resolve();
-            //     },
-            //     () => {
-            //         reject();
-            //     });
-            let formUploader = new qiniu.form_up.FormUploader(ModelMgr.ftpModel.qiniuConfig);
-            let uploadToken = ModelMgr.ftpModel.uploadToken;
             let fileKey = `${cdnPatchPath}/${getPatchName()}`;
-            let readerStream = fs.createReadStream(patchPath);
-            let putExtra = new qiniu.form_up.PutExtra();
-            formUploader.putStream(uploadToken, fileKey, readerStream, putExtra, (rspErr, rspBody, rspInfo) => {
-                if (rspErr) {
-                    //单个文件失败
-                    console.error(rspErr);
-                    console.error(`cdn --> upload ${fileKey} error`);
-                    reject();
-                    return;
-                }
+            CdnUtil.checkUploaderFile(patchPath, fileKey, releaseEnviron.cdnRoot, resolve);
+            // let formUploader = new qiniu.form_up.FormUploader(ModelMgr.ftpModel.qiniuConfig);
+            // let uploadToken = ModelMgr.ftpModel.uploadToken;
+            // let readerStream = fs.createReadStream(patchPath);
+            // let putExtra = new qiniu.form_up.PutExtra();
+            // formUploader.putStream(uploadToken, fileKey, readerStream, putExtra, (rspErr, rspBody, rspInfo) => {
+            //     if (rspErr) {
+            //         //单个文件失败
+            //         console.error(rspErr);
+            //         console.error(`cdn --> upload ${fileKey} error`);
+            //         reject();
+            //         return;
+            //     }
 
-                //200:成功 614:文件重复
-                if (rspInfo.statusCode != 200 && rspInfo.statusCode != 614) {
-                    console.log(rspInfo.statusCode);
-                    console.log(rspBody);
-                    reject();
-                    return;
-                }
+            //     //200:成功 614:文件重复
+            //     if (rspInfo.statusCode != 200 && rspInfo.statusCode != 614) {
+            //         console.log(rspInfo.statusCode);
+            //         console.log(rspBody);
+            //         reject();
+            //         return;
+            //     }
 
-                console.log(`cdn --> upload ${fileKey} success`);
-                resolve();
-            });
+            //     console.log(`cdn --> upload ${fileKey} success`);
+            //     resolve();
+            // });
         }
-
 
         resolve();
     });
@@ -677,13 +610,14 @@ async function tryUploadNativeExe(resolve, reject) {
     let nativePath = `${Global.svnPublishPath}/native/`;
     let exeName = `bellplanet_${environ.name}_${releaseVersion}.exe`;
     console.log(`nativePath: ${nativePath} exeName:${exeName}`);
-    uploaderFile(`${nativePath}`, `${nativePath}/${exeName}`, "native", () => {
+    CdnUtil.uploaderFile(`${nativePath}/${exeName}`, exeName, "native", () => {
         console.log(`上传exe成功`)
         resolve();
     }, (reason) => {
         console.log(`上传exe失败: ${reason}`)
         setTimeout(tryUploadNativeExe, 5000, resolve, reject);
     });
+    CdnUtil.checkUploaderFile(`${nativePath}/${exeName}`, exeName, "native")
 }
 
 export async function uploadNativeDmg() {
@@ -698,7 +632,7 @@ async function tryUploadNativeDmg(resolve, reject) {
     let releaseVersion = ModelMgr.versionModel.releaseVersion;
     let nativePath = `${Global.svnPublishPath}/native/`;
     let dmgName = `bellplanet_${environ.name}_${releaseVersion}.dmg`;
-    uploaderFile(`${nativePath}`, `${nativePath}/${dmgName}`, "native", () => {
+    CdnUtil.uploaderFile(`${nativePath}/${dmgName}`, dmgName, "native", () => {
         console.log(`上传dmg成功`)
         resolve();
     }, (reason) => {

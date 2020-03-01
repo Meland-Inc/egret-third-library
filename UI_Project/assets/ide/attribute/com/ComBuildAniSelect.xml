@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="430,1080" designImage="ui://thvmj7vo80ab4" designImageOffsetX="-1795">
   <controller name="ctrlState" exported="true" pages="1,open,0,fold" selected="0"/>
+  <controller name="ctrlSelectType" pages="0,unselect,1,select" selected="0"/>
   <displayList>
     <graph id="n29_smiy" name="n29" xy="0,0" size="430,1080" visible="false" alpha="0" touchable="false" type="rect">
       <gearXY controller="ctrlState" pages="1,0" values="0,0|0,0"/>
@@ -11,8 +12,7 @@
     </image>
     <image id="n31_smiy" name="n31" src="xba67m" fileName="ideCommon/img/img_ide_cm_6.png" xy="0,0" size="430,56" group="n42_smiy"/>
     <image id="n32_smiy" name="n32" src="80ab97" fileName="ideCommon/img/img_ide_cm_8.png" xy="10,216" size="398,806" group="n42_smiy">
-      <relation target="" sidePair="width-width,height-height"/>
-      <relation target="" sidePair="top-top,center-center"/>
+      <relation target="" sidePair="width-width,height-height,top-top,center-center"/>
     </image>
     <list id="n43_o8uz" name="lstBpTabBar" xy="9,119" size="412,93" group="n42_smiy" layout="flow_hz" overflow="hidden" lineGap="4" colGap="3" defaultItem="ui://ti9jag5t80ab9h" autoItemSize="true">
       <item title="最近" icon="ui://ti9jag5t80ab8m" name="recent" selectedIcon="ui://ti9jag5t80ab8n"/>
@@ -28,7 +28,7 @@
       <item title="装饰" icon="ui://ti9jag5t80ab7v" name="decoration" selectedIcon="ui://ti9jag5t80ab7w"/>
       <item title="自定义" icon="ui://ti9jag5t80ab8k" name="custom" selectedIcon="ui://ti9jag5t80ab8l"/>
     </list>
-    <list id="n44_o8uz" name="lstBackpack" xy="22,219" size="402,791" group="n42_smiy" layout="flow_hz" overflow="scroll" scrollBar="visible" margin="7,0,0,0" scrollBarRes="ui://ti9jag5tso8vt7r," lineGap="10" colGap="10" defaultItem="ui://ti9jag5tinuq9z" autoClearItems="true">
+    <list id="n44_o8uz" name="lstBackpack" xy="22,219" size="402,791" group="n42_smiy" layout="flow_hz" selectionMode="multipleSingleClick" overflow="scroll" scrollBar="visible" margin="7,0,0,0" scrollBarRes="ui://ti9jag5tso8vt7r," lineGap="10" colGap="10" defaultItem="ui://ti9jag5tinuq9z" autoClearItems="true">
       <relation target="" sidePair="height-height"/>
       <item/>
       <item/>
@@ -90,18 +90,93 @@
     <text id="n36_smiy" name="tfSearch" xy="47,75" size="366,27" group="n42_smiy" input="true" prompt="[color=#999999][size=18]请输入搜索内容[/size][/color]" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" text=""/>
     <image id="n45_rujp" name="n45" src="rujpcyijl" fileName="img/icon_cm_ss.png" pkg="te1gxawo" xy="15,72" size="32,32" group="n42_smiy"/>
     <text id="n38_smiy" name="n38" xy="15,16" size="65,26" group="n42_smiy" fontSize="20" color="#333333" text="素材库"/>
+    <image id="n48_pkmm" name="n48" src="o5eywcyijs" fileName="ideCommon/img/img_ide_cm_xfk.png" xy="-10,788" size="448,296" group="n51_pkmm">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </image>
+    <list id="n49_pkmm" name="lstBpSelect" xy="19,812" size="400,200" group="n51_pkmm" layout="flow_hz" selectionMode="multipleSingleClick" overflow="scroll" scrollBar="hidden" margin="10,0,0,0" scrollBarMargin="5,5,0,0" scrollBarRes="ui://ti9jag5tso8vt7r," lineGap="10" colGap="15" defaultItem="ui://ti9jag5to5eywcyijr" autoClearItems="true">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n50_pkmm" name="n50" src="80ab99" fileName="ideCommon/img/img_ide_cm_h.png" xy="-1,1012" size="430,2" group="n51_pkmm"/>
+    <text id="n52_ibzj" name="tf" xy="27,1034" size="110,29" group="n51_pkmm" fontSize="22" vAlign="middle" bold="true" text="新增动画 :"/>
+    <text id="n53_ibzj" name="tfNum" xy="137,1034" size="16,29" group="n51_pkmm" fontSize="22" vAlign="middle" bold="true" text="1"/>
+    <group id="n51_pkmm" name="grpSelect" xy="-10,788" size="448,296" group="n42_smiy" advanced="true">
+      <gearDisplay controller="ctrlSelectType" pages="1"/>
+      <relation target="" sidePair="bottom-bottom"/>
+    </group>
     <component id="n39_smiy" name="btnConfirm" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="306,1032" size="110,40" group="n42_smiy">
+      <gearDisplay controller="ctrlSelectType" pages="1"/>
       <relation target="" sidePair="bottom-bottom,right-right"/>
-      <Button title="确定" titleColor="#ffffff" icon="ui://te1gxawooiqdcyih1"/>
+      <Button title="确定" titleColor="#ffffff" icon="ui://te1gxawooiqdcyih1" controller="ctrlSelectType" page="0"/>
     </component>
-    <component id="n40_smiy" name="btnBack" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="179,1032" size="110,40" group="n42_smiy">
+    <component id="n40_smiy" name="btnClear" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="179,1032" size="110,40" group="n42_smiy">
+      <gearDisplay controller="ctrlSelectType" pages="1"/>
       <relation target="" sidePair="bottom-bottom,right-right"/>
-      <Button title="取消" titleColor="#ffffff" icon="ui://te1gxawoeggjcyihf"/>
+      <Button title="清空" titleColor="#ffffff" icon="ui://te1gxawoeggjcyihf" controller="ctrlSelectType" page="0"/>
     </component>
     <component id="n41_smiy" name="btnDrawingPad" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="302,7" size="110,40" group="n42_smiy">
       <Button title="画板" titleColor="#ffffff" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <group id="n42_smiy" name="grpOpen" xy="0,0" size="430,1079" advanced="true">
+    <component id="n47_pkmm" name="btnBack" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="306,1032" size="110,40" group="n42_smiy">
+      <gearDisplay controller="ctrlSelectType" pages="0"/>
+      <relation target="" sidePair="bottom-bottom,right-right"/>
+      <Button title="取消" titleColor="#ffffff" icon="ui://te1gxawoeggjcyihf"/>
+    </component>
+    <group id="n42_smiy" name="grpOpen" xy="-10,0" size="448,1084" advanced="true">
       <gearDisplay controller="ctrlState" pages="1"/>
     </group>
   </displayList>

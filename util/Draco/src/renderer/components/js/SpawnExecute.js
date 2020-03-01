@@ -42,10 +42,14 @@ export function svnUpdate(path, successMsg, errorMsg) {
 
         process.on("exit", code => {
             if (code == 0) {
-                Global.toast(successMsg);
+                if (successMsg) {
+                    Global.toast(successMsg);
+                }
                 resolve();
             } else {
-                Global.snack(errorMsg, code, false);
+                if (errorMsg) {
+                    Global.snack(errorMsg, code, false);
+                }
                 reject();
             }
         });

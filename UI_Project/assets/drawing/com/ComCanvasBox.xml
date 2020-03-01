@@ -1,17 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="40,40" opaque="false">
+<component size="240,60" opaque="false">
+  <controller name="ctrlBoxType" pages="0,nornal,1,special" selected="1"/>
+  <controller name="ctrlBoxProjectionNum" exported="true" pages="0,1x1,1,1x2,2,2x2,3,2x3,4,3x3,6,2x1,8,1x3,7,3x1,9,3x2" selected="8"/>
   <displayList>
-    <image id="n7_qiln" name="n7" src="qiln1b" fileName="img/img_sket_ty_3.png" xy="0,0" size="2,40">
+    <image id="n7_qiln" name="n7" src="qiln1b" fileName="img/img_sket_ty_3.png" xy="0,0" size="2,60" group="n13_gbo0">
       <relation target="" sidePair="left-left,height-height"/>
     </image>
-    <image id="n8_qiln" name="n8" src="qiln1c" fileName="img/img_sket_ty_4.png" xy="0,0" size="40,2">
-      <relation target="" sidePair="top-top,width-width"/>
-    </image>
-    <image id="n9_qiln" name="n9" src="qiln1c" fileName="img/img_sket_ty_4.png" xy="0,38" size="40,2">
-      <relation target="" sidePair="width-width,bottom-bottom"/>
-    </image>
-    <image id="n10_qiln" name="n10" src="qiln1b" fileName="img/img_sket_ty_3.png" xy="38,0" size="2,40">
+    <image id="n10_qiln" name="n10" src="qiln1b" fileName="img/img_sket_ty_3.png" xy="238,0" size="2,60" group="n13_gbo0">
       <relation target="" sidePair="height-height,right-right"/>
     </image>
+    <image id="n8_qiln" name="n8" src="qiln1c" fileName="img/img_sket_ty_4.png" xy="0,0" size="240,2" group="n13_gbo0">
+      <relation target="" sidePair="top-top,width-width"/>
+    </image>
+    <image id="n9_qiln" name="n9" src="qiln1c" fileName="img/img_sket_ty_4.png" xy="0,58" size="240,2" group="n13_gbo0">
+      <relation target="" sidePair="width-width,bottom-bottom"/>
+    </image>
+    <group id="n13_gbo0" name="normal" xy="0,0" size="240,60" advanced="true">
+      <gearDisplay controller="ctrlBoxType" pages="0"/>
+    </group>
+    <component id="n21_gbo0" name="n21" src="qiln2d" fileName="com/ComProjection.xml" xy="0,-30" size="300,180" group="n18_gbo0" visible="false" controller="ctrlProjectionNum,9"/>
+    <image id="n14_gbo0" name="n14" src="qiln1b" fileName="img/img_sket_ty_3.png" xy="0,0" size="2,60" group="n18_gbo0">
+      <relation target="" sidePair="left-left,height-height"/>
+    </image>
+    <image id="n15_gbo0" name="n15" src="qiln1b" fileName="img/img_sket_ty_3.png" xy="238,-30" size="2,60" group="n18_gbo0">
+      <gearXY controller="ctrlBoxProjectionNum" pages="1,2,3,6,8,7,9" values="238,30|238,0|238,30|238,-30|238,60|238,-60|238,-30" default="238,0"/>
+      <relation target="" sidePair="height-height,right-right"/>
+    </image>
+    <image id="n16_gbo0" name="n16" src="qiln1c" fileName="img/img_sket_ty_4.png" xy="180,-92" size="134,2" group="n18_gbo0" skew="0,26.5">
+      <gearXY controller="ctrlBoxProjectionNum" pages="2,3,4,6,7,9" values="120,-62|123,-61|180,-92|123,-63|180,-92|180,-92" default="60,-32"/>
+      <gearSize controller="ctrlBoxProjectionNum" pages="0,3,4,6,8,7" values="67,2,1,1|201,2,1,1|201,2,1,1|37,2,1,1|201,2,1,1|67,2,1,1" default="134,2,1,1"/>
+      <relation target="" sidePair="top-top"/>
+    </image>
+    <image id="n12_gbo0" name="n12" src="qiln1c" fileName="img/img_sket_ty_4.png" xy="0,-2" size="201,2" group="n18_gbo0" skew="0,-26.5">
+      <gearSize controller="ctrlBoxProjectionNum" pages="2,3,4,6,7,9" values="134,2,1,1|137,2,1,1|201,2,1,1|137,2,1,1|201,2,1,1|201,2,1,1" default="67,2,1,1"/>
+      <relation target="" sidePair="top-top"/>
+    </image>
+    <image id="n19_gbo0" name="n19" src="qiln1c" fileName="img/img_sket_ty_4.png" xy="0,60" size="134,2" group="n18_gbo0" skew="0,26.5">
+      <gearSize controller="ctrlBoxProjectionNum" pages="1,2,3,4,8,9" values="134,2,1,1|134,2,1,1|201,2,1,1|201,2,1,1|201,2,1,1|134,2,1,1" default="67,2,1,1"/>
+      <relation target="" sidePair="bottom-bottom"/>
+    </image>
+    <image id="n20_gbo0" name="n20" src="qiln1c" fileName="img/img_sket_ty_4.png" xy="120,120" size="201,2" group="n18_gbo0" skew="0,-26.5">
+      <gearXY controller="ctrlBoxProjectionNum" pages="0,1,2,3,4,6,8,7,9" values="60,90|120,120|120,120|180,150|180,150|60,90|180,150|60,90|120,120"/>
+      <gearSize controller="ctrlBoxProjectionNum" pages="2,3,4,6,7,9" values="134,2,1,1|137,2,1,1|201,2,1,1|137,2,1,1|201,2,1,1|201,2,1,1" default="67,2,1,1"/>
+      <relation target="" sidePair="bottom-bottom"/>
+    </image>
+    <group id="n18_gbo0" name="special" xy="0,-92" size="321,242" advanced="true">
+      <gearDisplay controller="ctrlBoxType" pages="1"/>
+    </group>
   </displayList>
 </component>

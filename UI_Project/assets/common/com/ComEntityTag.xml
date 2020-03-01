@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="70,24" extention="Label">
+  <displayList>
+    <image id="n2_d7i5" name="n2" src="d7i5cyijq" fileName="img/img_cm_bq.png" xy="0,0" size="70,24">
+      <relation target="" sidePair="width-width"/>
+    </image>
+    <text id="n0_g6m3" name="title" xy="4,2" size="61,20" fontSize="14" color="#ffffff" align="center" vAlign="middle" singleLine="true" text="教师资源"/>
+  </displayList>
+  <relation target="n0_g6m3" sidePair="width-width,height-height"/>
+</component>
