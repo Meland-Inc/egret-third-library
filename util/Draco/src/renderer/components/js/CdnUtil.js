@@ -1,6 +1,7 @@
 import { ModelMgr } from "./model/ModelMgr";
 import * as fs from 'fs';
 import * as qiniu from "qiniu";
+import fsExc from "./FsExecute";
 
 let maxUploadCount = 10;
 /** 创建要上传的物件路径数组 */

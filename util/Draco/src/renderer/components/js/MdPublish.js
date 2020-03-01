@@ -868,25 +868,34 @@ async function checkUploadServerPackages(packageDir, successFunc) {
     // await checkUploadServerPackages(packageDir, successFunc);
     // return;
 
+    let newServerPackagePath = `${Global.svnPath}/server/server_packages/${iterator}`;
+    let curServerPackagePath = `${Global.svnPublishPath}${environ.serverPackagePath}/${iterator}`;
+    let newPolicyNum;
     //直接拷贝
     if (policyNum === 0) {
-        let newPolicyNum = 2;
-        let newServerPackagePath = `${Global.svnPath}/server/server_packages/${iterator}`;
-        let curServerPackagePath = `${Global.svnPublishPath}${environ.serverPackagePath}/${iterator}`;
-        let fileKey = `${fileName}_v${newPolicyNum}.zip`;
+        newPolicyNum = 1;
+        console.log(`服务器版本不存在,用最新的包`);
+    } else {
+        //比较版本,不相等
+        let fileEqual = await fsExc.mergeFileByMd5(newServerPackagePath, curServerPackagePath);
+        if (fileEqual) {
+            console.log(`服务器包版本相等,跳过`);
+            return;
+        }
 
-        await copyFile(newServerPackagePath, curServerPackagePath);
-        console.log(`${environ.name} 开始上传 ${fileKey}`);
-        CdnUtil.checkUploaderFile(newServerPackagePath, fileKey, `serverPackages/${environ.name}`, async () => {
-            await ExternalUtil.applyServerPackagePolicyNum(newPolicyNum, environ.name, fileName);
-            console.log(`${environ.name}上传${fileKey}完毕`);
-            await checkUploadServerPackages(packageDir, successFunc);
-        });
-        return;
+        console.log(`服务器包版本不相等,用最新的包`);
+        newPolicyNum = policyNum + 1;
     }
 
-    //比较版本
-    console.log(`${environ.name} ${fileName} 策略版本号: ${policyNum}`);
+    await copyFile(newServerPackagePath, curServerPackagePath);
+
+    console.log(`${environ.name} 开始上传 ${fileKey}`);
+    let fileKey = `${fileName}_v${newPolicyNum}.zip`;
+    CdnUtil.checkUploaderFile(curServerPackagePath, fileKey, `serverPackages/${environ.name}`, async () => {
+        await ExternalUtil.applyServerPackagePolicyNum(newPolicyNum, environ.name, fileName);
+        console.log(`${environ.name}上传${fileKey}完毕,版本号:${newPolicyNum}`);
+        await checkUploadServerPackages(packageDir, successFunc);
+    });
 }
 
 /** 拷贝服务器包到native文件夹 */
