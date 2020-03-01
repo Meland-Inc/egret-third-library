@@ -47,6 +47,7 @@ export function checkUploaderFile(filePath, fileKey, cdnRoot, successFunc) {
             successFunc();
         },
         () => {
+            console.log(`cdn --> upload ${fileKey} fail, 3 seconds later retry`);
             setTimeout(() => {
                 checkUploaderFile(filePath, fileKey, cdnRoot, successFunc);
             }, 3000);
