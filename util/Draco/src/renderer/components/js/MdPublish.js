@@ -871,26 +871,32 @@ async function checkUploadServerPackages(packageDir, successFunc) {
     let newServerPackagePath = `${Global.svnPath}/server/server_packages/${iterator}`;
     let curServerPackagePath = `${Global.svnPublishPath}${environ.serverPackagePath}/${iterator}`;
     let newPolicyNum;
+
     //直接拷贝
     if (policyNum === 0) {
         newPolicyNum = 1;
         console.log(`服务器版本不存在,用最新的包`);
     } else {
         //比较版本,不相等
-        let fileEqual = await fsExc.mergeFileByMd5(newServerPackagePath, curServerPackagePath);
-        if (fileEqual) {
-            console.log(`服务器包版本相等,跳过`);
-            return;
+        console.log(`开始检比服务器包${fileName}`);
+        let fileExist = await fsExc.exists(curServerPackagePath);
+        if (fileExist) {
+            let fileEqual = await fsExc.mergeFileByMd5(newServerPackagePath, curServerPackagePath);
+            if (fileEqual) {
+                console.log(`服务器包${fileName}版本相等,跳过`);
+                await checkUploadServerPackages(packageDir, successFunc);
+                return;
+            }
         }
 
         console.log(`服务器包版本不相等,用最新的包`);
         newPolicyNum = policyNum + 1;
     }
 
-    await copyFile(newServerPackagePath, curServerPackagePath);
+    await fsExc.copyFile(newServerPackagePath, `${Global.svnPublishPath}${environ.serverPackagePath}`);
 
-    console.log(`${environ.name} 开始上传 ${fileKey}`);
     let fileKey = `${fileName}_v${newPolicyNum}.zip`;
+    console.log(`${environ.name} 开始上传 ${fileKey}`);
     CdnUtil.checkUploaderFile(curServerPackagePath, fileKey, `serverPackages/${environ.name}`, async () => {
         await ExternalUtil.applyServerPackagePolicyNum(newPolicyNum, environ.name, fileName);
         console.log(`${environ.name}上传${fileKey}完毕,版本号:${newPolicyNum}`);
