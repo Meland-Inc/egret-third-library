@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="400,400">
+  <displayList>
+    <graph id="n23_z1hj" name="img_bg" xy="0,0" size="400,400" alpha="0.5" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <image id="n28_zggh" name="imgBg" src="j595cyiic" fileName="img/img_cm_tkc_1.png" pkg="te1gxawo" xy="19,99" size="362,201" group="n37_zggh"/>
+    <image id="n29_zggh" name="imgBgTop" src="c1h7cyiia" fileName="img/img_cm_top_3.png" pkg="te1gxawo" xy="19,99" size="362,56" group="n37_zggh"/>
+    <text id="n16_q5wk" name="tfTitle" xy="105,109" size="189,37" group="n37_zggh" fontSize="24" color="#333333" align="center" vAlign="middle" autoSize="none" text="函数命名"/>
+    <component id="n20_q5wk" name="btnCancel" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="45,236" size="140,44" group="n37_zggh">
+      <Button title="取消" titleColor="#ffffff" titleFontSize="24" icon="ui://te1gxawoeggjcyihf"/>
+    </component>
+    <component id="n21_q5wk" name="btnConfirm" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="215,236" size="140,44" group="n37_zggh">
+      <Button title="确定" titleColor="#ffffff" titleFontSize="24" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <component id="n30_zggh" name="comInput" src="dv1icyiim" fileName="com/ComInput.xml" pkg="te1gxawo" xy="45,172" size="310,40" group="n37_zggh">
+      <Label prompt="请输入函数名称" maxLength="30"/>
+    </component>
+    <group id="n37_zggh" name="n37" xy="19,99" size="362,201" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>
