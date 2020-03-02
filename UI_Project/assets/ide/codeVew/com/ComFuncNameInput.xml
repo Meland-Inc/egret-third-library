@@ -13,7 +13,8 @@
     <component id="n21_q5wk" name="btnConfirm" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="215,236" size="140,44" group="n37_zggh">
       <Button title="确定" titleColor="#ffffff" titleFontSize="24" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <component id="n30_zggh" name="comInput" src="dv1icyiim" fileName="com/ComInput.xml" pkg="te1gxawo" xy="45,172" size="310,40" group="n37_zggh">
+    <text id="n38_l8hx" name="textRename" xy="45,207" size="164,24" group="n37_zggh" visible="false" fontSize="16" color="#ff0000" autoSize="none" text="函数名已经存在"/>
+    <component id="n30_zggh" name="comInput" src="dv1icyiim" fileName="com/ComInput.xml" pkg="te1gxawo" xy="45,167" size="310,40" group="n37_zggh">
       <Label prompt="请输入函数名称" maxLength="30"/>
     </component>
     <group id="n37_zggh" name="n37" xy="19,99" size="362,201" advanced="true">
