@@ -3,11 +3,12 @@
  * @desc renderer用的配置静态类
  * @date 2020-02-13 14:54:50 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-28 22:01:09
+ * @Last Modified time: 2020-03-02 15:18:26
  */
 export class Config {
     /** native用请求头 */
     static protocol = "http:";
+
     /** 程序根路径 */
     static rootPath = `${__dirname}/../..`;
 
