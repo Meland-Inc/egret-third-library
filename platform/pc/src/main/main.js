@@ -3,7 +3,7 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-02 17:03:02
+ * @Last Modified time: 2020-03-02 19:03:29
  */
 // Modules to control application life and create native browser window
 const { app, globalShortcut, BrowserWindow, Menu, shell, dialog } = require('electron')
@@ -39,10 +39,10 @@ async function initNative() {
   // initNativeLesson();
   // }
 
-  await mainWindow.loadFile(`${config.rootPath}/src/renderer/renderer.html`);
-
-  let userAgent = "BellCodeIpadWebView " + mainWindow.webContents.userAgent;
+  let userAgent = mainWindow.webContents.userAgent + " BellCodeIpadWebView";
   mainWindow.webContents.setUserAgent(userAgent);
+
+  await mainWindow.loadFile(`${config.rootPath}/src/renderer/renderer.html`);
 
   //发送检查更新消息
   message.sendMsg('CHECK_UPDATE');
