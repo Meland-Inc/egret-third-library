@@ -7,7 +7,7 @@
     <image id="n129_a16n" name="imgBg1" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="0,0" size="1304,440"/>
     <image id="n130_a16n" name="imgTopBg1" src="c1h7cyiia" fileName="img/img_cm_top_3.png" pkg="te1gxawo" xy="0,0" size="1304,40"/>
     <text id="n132_a16n" name="tfSettingTitle" xy="18,7" size="85,24" fontSize="20" color="#333333" vAlign="middle" text="基础设置"/>
-    <text id="n133_a16n" name="tfNameTitle" xy="118,78" size="84,24" fontSize="20" color="#333333" vAlign="middle" text="地图名字"/>
+    <text id="n133_a16n" name="tfNameTitle" xy="118,78" size="85,24" fontSize="20" color="#333333" vAlign="middle" text="地图名字"/>
     <image id="n134_a16n" name="imgNameBg" src="eggjcyihs" fileName="img/img_cm_srk_1.png" pkg="te1gxawo" xy="121,110" size="377,40"/>
     <text id="n135_a16n" name="tfName" xy="136,117" size="350,26" fontSize="20" color="#333333" vAlign="middle" autoSize="none" text="堡垒前线"/>
     <text id="n137_a16n" name="tfMapTypeTitle" xy="118,187" size="85,24" fontSize="20" color="#333333" vAlign="middle" text="地图分类"/>
@@ -23,9 +23,10 @@
     </component>
     <image id="n138_a16n" name="imgBg2" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="0,462" size="1304,330"/>
     <image id="n139_a16n" name="imgTopBg2" src="c1h7cyiia" fileName="img/img_cm_top_3.png" pkg="te1gxawo" xy="0,462" size="1304,40"/>
-    <image id="n145_a16n" name="imgDescBg" src="eggjcyihs" fileName="img/img_cm_srk_1.png" pkg="te1gxawo" xy="22,512" size="1260,260"/>
     <text id="n140_a16n" name="tfDescTitle" xy="18,468" size="85,24" fontSize="20" color="#333333" vAlign="middle" text="地图描述"/>
-    <text id="n146_a16n" name="inpDesc" xy="45,531" size="1218,228" input="true" fontSize="20" color="#333333" autoSize="none" autoClearText="true" text="地图描述"/>
+    <image id="n145_a16n" name="imgDescBg" src="eggjcyihs" fileName="img/img_cm_srk_1.png" pkg="te1gxawo" xy="22,512" size="1260,260" visible="false"/>
+    <text id="n146_a16n" name="inpDesc" xy="45,531" size="1218,228" visible="false" input="true" maxLength="500" fontSize="20" color="#333333" leading="10" autoSize="none" autoClearText="true" text="地图描述"/>
+    <component id="n147_bszy" name="comInput" src="dv1icyiim" fileName="com/ComInput.xml" pkg="te1gxawo" xy="22,512" size="1260,260"/>
     <component id="n141_a16n" name="btnPublish" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1203,831" size="100,38">
       <Button title="发布" icon="ui://te1gxawooiqdcyih1"/>
     </component>

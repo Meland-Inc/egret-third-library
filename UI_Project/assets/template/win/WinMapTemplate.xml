@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://thvmj7vovhcj4cyijj" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlRightDetail" pages="2,empty,0,edit,1,lobby" selected="0"/>
-  <controller name="ctrlViewStatus" pages="0,allList,1,selfList,2,create,3,publish,4,detail" selected="4">
+  <controller name="ctrlViewStatus" pages="0,allList,1,selfList,2,create,3,publish,4,detail" selected="2">
     <action type="change_page" fromPage="" toPage="0" objectId="n16_pz1n" controller="ctrlListType" targetPage="7"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n16_pz1n" controller="ctrlListType" targetPage="0"/>
   </controller>
@@ -16,7 +16,7 @@
     </image>
     <component id="n4_8qqi" name="labTitle" src="8qqicyiha" fileName="com/LabWinTitle.xml" pkg="te1gxawo" xy="41,30" group="n20_ra2b">
       <gearText controller="ctrlViewStatus" pages="3,4" values=" 发布地图|地图详情" default="模板创作"/>
-      <Label title="地图详情"/>
+      <Label title="模板创作"/>
     </component>
     <image id="n15_8qqi" name="imgSearchInputBg" src="oiqdcyigx" fileName="img/img_cm_ssk.png" pkg="te1gxawo" xy="1220,41" size="400,47" group="n19_ra2b"/>
     <text id="n18_ra2b" name="inpSearch" xy="1263,53" size="347,26" group="n19_ra2b" input="true" prompt="[color=#999999]请输入搜索内容[/color]" fontSize="20" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text=""/>
@@ -32,9 +32,17 @@
       <gearDisplay controller="ctrlViewStatus" pages="0,1"/>
       <Button icon="ui://te1gxawooiqdcyih2"/>
     </component>
-    <component id="n28_q186" name="btnCloseCreateView" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1831,42" size="48,48" group="n20_ra2b" visible="false">
+    <component id="n28_q186" name="btnCloseCreateView" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1831,42" size="48,48" group="n20_ra2b">
       <gearDisplay controller="ctrlViewStatus" pages="2"/>
       <Button icon="ui://te1gxawooiqdcyih2" controller="ctrlViewStatus" page="1"/>
+    </component>
+    <component id="n34_bszy" name="btnClosePublishView" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1831,42" size="48,48" group="n20_ra2b">
+      <gearDisplay controller="ctrlViewStatus" pages="3"/>
+      <Button icon="ui://te1gxawooiqdcyih2" controller="ctrlViewStatus" page="1"/>
+    </component>
+    <component id="n35_bszy" name="btnCloseDetailView" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1831,42" size="48,48" group="n20_ra2b">
+      <gearDisplay controller="ctrlViewStatus" pages="4"/>
+      <Button icon="ui://te1gxawooiqdcyih2" controller="ctrlViewStatus" page="0"/>
     </component>
     <component id="n12_8qqi" name="tbtnAllMap" src="8qqi3m" fileName="btn/btnViewStatus.xml" xy="429,40" group="n20_ra2b">
       <gearDisplay controller="ctrlViewStatus" pages="0,1"/>
