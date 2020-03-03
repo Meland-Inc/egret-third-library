@@ -3,7 +3,7 @@
  * @desc 平台相关的逻辑
  * @date 2020-02-19 11:22:49
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-26 21:58:00
+ * @Last Modified time: 2020-03-02 16:13:16
  */
 const querystring = require('querystring');
 const config = require('./config.js');
@@ -36,8 +36,25 @@ async function init(queryValue) {
             }
 
             if (key === 'bell_origin') {
-                queryValue['bellApiOrigin'] = `${value}`;
                 config.bellApiOrigin = value;
+                continue;
+            }
+
+            if (key === 'package_id') {
+                config.bellPackageId = value;
+                queryValue['package_id'] = `${value}`;
+                continue;
+            }
+
+            if (key === 'lesson_id') {
+                config.bellLessonId = value;
+                queryValue['lesson_id'] = `${value}`;
+                continue;
+            }
+
+            if (key === 'act_id') {
+                config.bellActId = value;
+                queryValue['act_id'] = `${value}`;
                 continue;
             }
 
@@ -54,20 +71,20 @@ async function init(queryValue) {
 
             queryValue[key] = `${value}`;
         }
-        login(resolve, reject);
+        login(queryValue, resolve, reject);
     });
 
 }
 
 /** 登陆贝尔平台 */
-function login(successFunc, errorFunc) {
+function login(queryValue, successFunc, errorFunc) {
     let data = { temporary_token: config.bellTempToken };
     util.requestPostHttp(config.bellApiOrigin, null, '/common/member/login-by-temporary-token', data, null
         , (body) => {
             if (body.code === 200) {
-                config.bellToken = body.data.token;
+                queryValue['token'] = config.bellToken = body.data.token;
                 getMemberInfo(successFunc, errorFunc);
-                logger.log('net', `登陆贝尔平台成功`);
+                logger.log('net', `登陆贝尔平台成功, token:${config.bellToken}`);
             } else {
                 errorFunc();
                 logger.error('net', `登陆贝尔平台失败`, body.msg);

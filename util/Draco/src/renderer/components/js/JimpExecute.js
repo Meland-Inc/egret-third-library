@@ -551,10 +551,15 @@ export function jimpPng2(id, area, texture, input_path, output_path) {
                 let halfTileWidth = tileWidth / 2;
                 let halfTileHeight = tileHeight / 2;
 
-                let gapY = 10;
+                let rowLen = area.length;
+                let colLen = area[0].length;
+                // let gapY = 10;
+                let gapY = imageHeight - (rowLen + colLen) * halfTileHeight;
+                gapY = gapY < 0 ? 0 : gapY;
+                gapY = Math.min(10, gapY)
 
-                for (let rowLen = area.length, row = 0; row <= rowLen - 1; row++) {
-                    for (let colLen = area[row].length, col = 0; col <= colLen - 1; col++) {
+                for (let row = 0; row <= rowLen - 1; row++) {
+                    for (let col = 0; col <= colLen - 1; col++) {
                         let topImageHigh = imageHeight - (rowLen + colLen) * halfTileHeight;
                         let topDistance = 0;
                         let bottomDistance = 0;
