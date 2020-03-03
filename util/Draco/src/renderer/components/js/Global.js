@@ -40,14 +40,14 @@ export class Global {
         {
             name: "develop", title: "开发模式", icon: "airplanemode_active",
             protoEnable: true, csvEnable: true, textureEnable: true, mapDataEnable: false, assetEnable: true,
-            egretEnable: false, versionEnable: true, lessonEnable: false, appEnable: false,
+            egretEnable: false, versionEnable: true, lessonEnable: false, appEnable: false, nativeEnable: false,
             textureGitEnable: false,
             environNames: [ModelMgr.versionModel.eEnviron.alpha]
         },
         {
             name: "product", title: "产品模式", icon: "drive_eta",
             protoEnable: false, csvEnable: true, textureEnable: true, mapDataEnable: false, assetEnable: false,
-            egretEnable: true, versionEnable: false, lessonEnable: false, appEnable: false,
+            egretEnable: true, versionEnable: false, lessonEnable: false, appEnable: false, nativeEnable: true,
             textureGitEnable: true,
             environNames: [ModelMgr.versionModel.eEnviron.alpha]
 
@@ -55,7 +55,7 @@ export class Global {
         {
             name: "publish", title: "发布模式", icon: "accessible",
             protoEnable: false, csvEnable: false, textureEnable: false, mapDataEnable: false, assetEnable: false,
-            egretEnable: false, versionEnable: true, lessonEnable: true, appEnable: true,
+            egretEnable: false, versionEnable: true, lessonEnable: true, appEnable: true, nativeEnable: true,
             textureGitEnable: false,
             environNames: [ModelMgr.versionModel.eEnviron.beta, ModelMgr.versionModel.eEnviron.ready, ModelMgr.versionModel.eEnviron.release]
         }

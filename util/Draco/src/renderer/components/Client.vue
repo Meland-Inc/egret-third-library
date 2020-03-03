@@ -87,6 +87,13 @@
             <mu-list-item-title>Lesson</mu-list-item-title>
           </mu-list-item>
 
+          <mu-list-item button :ripple="false" value="ClientNative" v-show="lessonEnable">
+            <mu-list-item-action>
+              <mu-icon slot="left" value="computer" />
+            </mu-list-item-action>
+            <mu-list-item-title>Native</mu-list-item-title>
+          </mu-list-item>
+
           <!-- <mu-list-item button :ripple="false" value="ClientApp" v-show="appEnable">
             <mu-list-item-action>
               <mu-icon slot="left" value="weekend" />
@@ -238,6 +245,7 @@ export default {
       egretEnable: false,
       versionEnable: false,
       lessonEnable: false,
+      nativeEnable: false,
       appEnable: false,
 
       appTitle: ""
@@ -351,6 +359,7 @@ export default {
       this.egretEnable = mode.egretEnable;
       this.versionEnable = mode.versionEnable;
       this.lessonEnable = mode.lessonEnable;
+      this.nativeEnable = mode.nativeEnable;
       this.appEnable = mode.appEnable;
       this.appTitle = mode.title;
 
@@ -381,7 +390,8 @@ export default {
     ClientAsset: require("./Client/ClientAsset"),
     ClientEgret: require("./Client/ClientEgret"),
     ClientVersion: require("./Client/ClientVersion"),
-    ClientLesson: require("./Client/ClientLesson")
+    ClientLesson: require("./Client/ClientLesson"),
+    ClientNative: require("./Client/ClientNative")
     // ClientApp: require("./Client/ClientApp")
     // ClientFtp: require("./Client/ClientFtp")
     // ClientModule: require("./backup/ClientModule"),

@@ -831,11 +831,17 @@ export async function updateServerPackage() {
     await spawnExc.svnUpdate(serverPackage, "", "更新服务器包错误");
 }
 
-/** 清理服务器包文件夹 */
-export async function clearServerPackage() {
-    let pcPackagePath = `${Global.pcProjectPath}/package/server`;
-    if (await fsExc.exists(pcPackagePath)) {
-        await fsExc.delFiles(`${pcPackagePath}`);
+/** 清理游戏包目录 */
+export async function clearPackageDir() {
+    console.log(`清空游戏包目录`)
+    let clientPackagePath = `${Global.pcProjectPath}/package/client`;
+    if (await fsExc.exists(clientPackagePath)) {
+        await fsExc.delFiles(clientPackagePath);
+    }
+
+    let serverPackagePath = `${Global.pcProjectPath}/package/server`;
+    if (await fsExc.exists(serverPackagePath)) {
+        await fsExc.delFiles(serverPackagePath);
     }
 }
 
@@ -903,41 +909,67 @@ async function checkUploadServerPackages(packageDir, successFunc) {
     });
 }
 
-/** 拷贝服务器包到native文件夹 */
-export async function copyServerPackageToNative() {
-    console.log(`拷贝服务器包到native文件夹`);
-    let pcPackagePath = `${Global.pcProjectPath}/package`;
-    let pcServerPackageFilePath = `${pcPackagePath}/server.zip`;
-    let svnServerPackagePath = `${Global.svnPath}/server/native/server.zip`;
+// /** 拷贝服务器包到native文件夹 */
+// export async function copyServerPackageToNative() {
+//     console.log(`拷贝服务器包到native文件夹`);
+//     let pcPackagePath = `${Global.pcProjectPath}/package`;
+//     let pcServerPackageFilePath = `${pcPackagePath}/server.zip`;
+//     let svnServerPackagePath = `${Global.svnPath}/server/native/server.zip`;
 
-    //拷贝egret游戏资源包
-    await fsExc.copyFile(svnServerPackagePath, pcPackagePath, true);
-    fsExc.unzipFile(`${pcServerPackageFilePath}`, pcPackagePath);
-    fsExc.delFile(pcServerPackageFilePath);
+//     //拷贝egret游戏资源包
+//     await fsExc.copyFile(svnServerPackagePath, pcPackagePath, true);
+//     fsExc.unzipFile(`${pcServerPackageFilePath}`, pcPackagePath);
+//     fsExc.delFile(pcServerPackageFilePath);
 
-    console.log(`拷贝服务器包完毕`);
-}
+//     console.log(`拷贝服务器包完毕`);
+// }
 
 /** 拷贝客户端包到native文件夹 */
 export async function copyClientPackageToNative() {
-    console.log(`拷贝客户端包到native文件夹`);
-    let pcClientPath = `${Global.pcProjectPath}/package/client`;
-    let releaseVersion = ModelMgr.versionModel.releaseVersion;
-    let environ = ModelMgr.versionModel.curEnviron;
-    let releasePath = `${Global.svnPublishPath}${environ.localPath}/release_v${releaseVersion}s`;
-    let policyNum = ModelMgr.versionModel.policyNum;
-    //删除egret文件夹
-    await fsExc.delFiles(pcClientPath);
+    return new Promise(async (resolve, reject) => {
+        console.log(`拷贝客户端包到native文件夹`);
+        let pcClientPath = `${Global.pcProjectPath}/package/client`;
 
-    //拷贝egret游戏资源包
-    await fsExc.copyFile(releasePath, pcClientPath, true);
+        let policyInfo = await ModelMgr.versionModel.getCurPolicyInfo();
+        let data = JSON.parse(policyInfo);
+        if (data.Code != 0) {
+            console.log(data.Message);
+            return;
+        }
 
-    //写index.html文件
-    await writeNativeIndexToPath(pcClientPath)
-    let policyPath = `${Global.svnPublishPath}${environ.localPolicyPath}/policyFile_v${policyNum}.json`
-    await fsExc.copyFile(policyPath, pcClientPath);
-    await fsExc.rename(pcClientPath + `/policyFile_v${policyNum}.json`, pcClientPath + `/policyFile.json`)
-    console.log(`拷贝客户端包完毕`);
+        let policyNum = data.Data.Version;
+        let environ = ModelMgr.versionModel.curEnviron;
+        let gameVersion = await ModelMgr.versionModel.getGameVersion(environ, policyNum);
+
+        // let releaseVersion = ModelMgr.versionModel.releaseVersion;
+        let releasePath = `${Global.svnPublishPath}${environ.localPath}/release_v${gameVersion}s`;
+        // let policyNum = ModelMgr.versionModel.policyNum;
+
+        //删除egret文件夹
+        await fsExc.delFiles(pcClientPath);
+
+        if (!(await fsExc.exists(releasePath))) {
+            console.log(`本地不存在最新版本:${releasePath}`);
+            reject();
+            return;
+        }
+
+        //拷贝egret游戏资源包
+        await fsExc.copyFile(releasePath, pcClientPath, true);
+
+        //写index.html文件
+        await writeNativeIndexToPath(pcClientPath)
+        let policyPath = `${Global.svnPublishPath}${environ.localPolicyPath}/policyFile_v${policyNum}.json`
+        if (!(await fsExc.exists(policyPath))) {
+            console.log(`本地不存在最新策略文件:${policyPath}`);
+            reject();
+            return;
+        }
+        await fsExc.copyFile(policyPath, pcClientPath);
+        await fsExc.rename(pcClientPath + `/policyFile_v${policyNum}.json`, pcClientPath + `/policyFile.json`)
+        console.log(`拷贝客户端包完毕`);
+        resolve();
+    });
 }
 
 /** 发布window版本 */

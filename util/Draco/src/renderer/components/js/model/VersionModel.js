@@ -232,95 +232,90 @@ export class VersionModel {
                 resolve();
                 return;
             }
-            let value = await ExternalUtil.getPolicyInfo(this.curEnviron.name, "bian_game");
+            let value = await ExternalUtil.getPolicyInfo(this.curEnviron.name);
             let data = JSON.parse(value);
             if (data.Code != 0) {
                 resolve();
                 return;
             }
             let policyNum = +data.Data.Version;
-            this.getGameVersion(this.curEnviron, policyNum,
-                async (gameVersion) => {
-                    this.releaseVersion = parseInt(gameVersion) + 1;
+            let gameVersion = await this.getGameVersion(this.curEnviron, policyNum);
 
-                    let oldVersionPath = `${Global.svnPublishPath}${this.curEnviron.localPath}/release_v${gameVersion}s`;
-                    let exist = await fsExc.exists(oldVersionPath);
-                    if (exist) {
-                        this.oldVersion = gameVersion;
-                    } else {
-                        this.oldVersion = 0;
-                    }
-                    resolve();
-                },
-                () => {
-                    resolve();
-                })
-
-            // let options = {
-            //     host: '47.107.73.43', // 请求地址 域名，google.com等..
-            //     // port: 10001,
-            //     path: `${this.curEnviron.scpPath}/policyFile_v${policyNum}.json`, // 具体路径eg:/upload
-            //     method: 'GET', // 请求方式, 这里以post为例
-            //     headers: { // 必选信息,  可以抓包工看一下
-            //         'Content-Type': 'application/json'
-            //     }
-            // };
-            // http.get(options, (response) => {
-            //     if (response.statusCode != 200) {
-            //         resolve();
-            //         return;
-            //     }
-
-            //     let resData = "";
-            //     response.on("data", (data) => {
-            //         resData += data;
-            //     });
-            //     response.on("end", async () => {
-            //         // console.log(resData);
-
-            //         let obj = JSON.parse(resData);
-            //         this.releaseVersion = parseInt(obj.normalVersion) + 1;
-
-            //         let oldVersionPath = `${Global.svnPublishPath}${this.curEnviron.localPath}/release_v${obj.normalVersion}s`;
-            //         let exist = await fsExc.exists(oldVersionPath);
-            //         if (exist) {
-            //             this.oldVersion = obj.normalVersion;
-            //         }
-            //         resolve();
-            //     });
-            // })
+            this.releaseVersion = parseInt(gameVersion) + 1;
+            let oldVersionPath = `${Global.svnPublishPath}${this.curEnviron.localPath}/release_v${gameVersion}s`;
+            let exist = await fsExc.exists(oldVersionPath);
+            if (exist) {
+                this.oldVersion = gameVersion;
+            } else {
+                this.oldVersion = 0;
+            }
+            resolve();
         });
+
+        // let options = {
+        //     host: '47.107.73.43', // 请求地址 域名，google.com等..
+        //     // port: 10001,
+        //     path: `${this.curEnviron.scpPath}/policyFile_v${policyNum}.json`, // 具体路径eg:/upload
+        //     method: 'GET', // 请求方式, 这里以post为例
+        //     headers: { // 必选信息,  可以抓包工看一下
+        //         'Content-Type': 'application/json'
+        //     }
+        // };
+        // http.get(options, (response) => {
+        //     if (response.statusCode != 200) {
+        //         resolve();
+        //         return;
+        //     }
+
+        //     let resData = "";
+        //     response.on("data", (data) => {
+        //         resData += data;
+        //     });
+        //     response.on("end", async () => {
+        //         // console.log(resData);
+
+        //         let obj = JSON.parse(resData);
+        //         this.releaseVersion = parseInt(obj.normalVersion) + 1;
+
+        //         let oldVersionPath = `${Global.svnPublishPath}${this.curEnviron.localPath}/release_v${obj.normalVersion}s`;
+        //         let exist = await fsExc.exists(oldVersionPath);
+        //         if (exist) {
+        //             this.oldVersion = obj.normalVersion;
+        //         }
+        //         resolve();
+        //     });
+        // })
     }
 
-    getGameVersion(environ, policyNum, successFunc, errorFunc) {
-        let options = {
-            host: environ.host, // 请求地址 域名，google.com等.. 
-            // port: 10001,
-            path: `${environ.scpPath}/policyFile_v${policyNum}.json`, // 具体路径eg:/upload
-            method: 'GET', // 请求方式, 这里以post为例
-            headers: { // 必选信息,  可以抓包工看一下
-                'Content-Type': 'application/json'
-            }
-        };
-        http.get(options, (response) => {
-            if (response.statusCode != 200) {
-                if (errorFunc) {
-                    errorFunc();
+    getGameVersion(environ, policyNum) {
+        return new Promise((resolve, reject) => {
+            let options = {
+                host: environ.host, // 请求地址 域名，google.com等.. 
+                // port: 10001,
+                path: `${environ.scpPath}/policyFile_v${policyNum}.json`, // 具体路径eg:/upload
+                method: 'GET', // 请求方式, 这里以post为例
+                headers: { // 必选信息,  可以抓包工看一下
+                    'Content-Type': 'application/json'
                 }
-                return;
-            }
+            };
+            http.get(options, (response) => {
+                if (response.statusCode != 200) {
+                    reject();
+                    return;
+                }
 
-            let resData = "";
-            response.on("data", (data) => {
-                resData += data;
-            });
-            response.on("end", async () => {
-                // console.log(resData);
-                let obj = JSON.parse(resData);
+                let resData = "";
+                response.on("data", (data) => {
+                    resData += data;
+                });
+                response.on("end", async () => {
+                    // console.log(resData);
+                    let obj = JSON.parse(resData);
 
-                successFunc(obj.normalVersion);
-            });
-        })
+                    resolve(obj.normalVersion);
+                });
+            })
+        });
     }
 
     async initPolicyNum() {
@@ -369,9 +364,8 @@ export class VersionModel {
             let data = JSON.parse(value);
             if (data.Code == 0) {
                 let policyNum = data.Data.Version;
-                this.getGameVersion(environ, policyNum, gameVersion => {
-                    resolve(gameVersion);
-                });
+                let gameVersion = await this.getGameVersion(environ, policyNum);
+                resolve(gameVersion);
             } else {
                 reject();
                 Global.snack(`获取游戏版本失败`, null, false);
