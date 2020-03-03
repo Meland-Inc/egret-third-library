@@ -6,11 +6,11 @@
     <graph id="n16_f08k" name="shapeBG" xy="0,0" size="200,200">
       <gearSize controller="ctrlFold" pages="1" values="200,30,1,1" default="200,200,1,1"/>
     </graph>
-    <image id="n12_f08k" name="n12" src="f08k63" fileName="img/img_codeV_zs_1.png" xy="0,0" size="200,200">
+    <image id="n12_f08k" name="imgUnFold" src="f08k63" fileName="img/img_codeV_zs_1.png" xy="0,0" size="200,200">
       <gearDisplay controller="ctrlFold" pages="0"/>
       <relation target="n16_f08k" sidePair="width-width,height-height"/>
     </image>
-    <image id="n15_f08k" name="n15" src="f08k64" fileName="img/img_codeV_zs_2.png" xy="0,0" size="200,200">
+    <image id="n15_f08k" name="imgFold" src="f08k64" fileName="img/img_codeV_zs_2.png" xy="0,0" size="200,200">
       <gearDisplay controller="ctrlFold" pages="1"/>
       <relation target="n16_f08k" sidePair="width-width,height-height"/>
     </image>
@@ -28,15 +28,23 @@
       <relation target="n16_f08k" sidePair="right-right,top-top"/>
       <Button icon="ui://te1gxawof08kcyijr"/>
     </component>
-    <text id="n17_f08k" name="textFold" xy="27,0" size="144,30" input="true" prompt="注释简介..." fontSize="14" color="#333333" vAlign="middle" autoSize="none" text="">
+    <text id="n17_f08k" name="textFold" xy="27,0" size="144,30" fontSize="14" color="#333333" vAlign="middle" autoSize="none" text="">
       <gearDisplay controller="ctrlFold" pages="1"/>
       <relation target="n16_f08k" sidePair="left-left,top-top"/>
       <relation target="n16_f08k" sidePair="width-width"/>
     </text>
-    <text id="n18_f08k" name="textUnFold" xy="6,35" size="188,159" input="true" prompt="请输入注释" fontSize="14" color="#333333" autoSize="none" text="">
+    <text id="n18_f08k" name="textUnFold" xy="6,35" size="188,141" input="true" prompt="请输入注释" fontSize="14" color="#333333" autoSize="none" text="">
       <gearDisplay controller="ctrlFold" pages="0"/>
-      <relation target="n16_f08k" sidePair="center-center,top-top"/>
-      <relation target="n16_f08k" sidePair="width-width"/>
+      <relation target="n12_f08k" sidePair="center-center,top-top"/>
+      <relation target="n12_f08k" sidePair="width-width,height-height"/>
     </text>
+    <text id="n19_p1hp" name="textNum" xy="3,174" size="41,23" fontSize="16" align="center" vAlign="middle" text="0/100">
+      <gearDisplay controller="ctrlFold" pages="0"/>
+      <relation target="n16_f08k" sidePair="bottom-bottom,left-left"/>
+    </text>
+    <component id="n20_p1hp" name="btnZoom" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="183,180" pivot="0.5,0.5" size="30,30" rotation="270">
+      <gearDisplay controller="ctrlFold" pages="0"/>
+      <relation target="n12_f08k" sidePair="right-right,bottom-bottom"/>
+    </component>
   </displayList>
 </component>

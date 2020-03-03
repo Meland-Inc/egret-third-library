@@ -59,7 +59,7 @@
     <image id="qiln2e" name="img_sket_ty_1.png" path="/img/"/>
     <image id="qiln2f" name="img_sket_ty_2.png" path="/img/"/>
     <component id="qiln2g" name="ComProjectionDrawing.xml" path="/com/"/>
-    <component id="qiln2m" name="ComHeightSetting.xml" path="/com/"/>
+    <component id="qiln2m" name="ComCanvasBoxSetting.xml" path="/com/"/>
     <component id="qiln2s" name="ComPenSetting.xml" path="/com/"/>
     <component id="qiln2z" name="ComAnimEditingArea.xml" path="/com/"/>
     <component id="gup13d" name="WinDrawingPad.xml" path="/win/" exported="true"/>
@@ -67,6 +67,27 @@
     <image id="j5955d" name="icon_dra_save.png" path="/img/"/>
     <component id="j5955e" name="WinDrawingLoading.xml" path="/win/" exported="true"/>
     <component id="gbo05f" name="ComDrawSelect.xml" path="/com/" exported="true"/>
+    <image id="qhbb5g" name="img_dra_line_2.png" path="/img/" scale="9grid"/>
+    <image id="qhbb5h" name="img_dra_line_1.png" path="/img/" scale="9grid" scale9grid="5,1,10,2"/>
+    <image id="qhbb5i" name="img_dra_ckg_1.png" path="/img/" scale="9grid" scale9grid="10,10,16,17"/>
+    <image id="qhbb5j" name="icon_dra_ckg_1.png" path="/img/"/>
+    <component id="s0bt5k" name="ComCanvasBoxInfo.xml" path="/com/"/>
+    <image id="q8ax5l" name="img_dra_gjk_2.png" path="/img/"/>
+    <image id="q8ax5m" name="icon_dra_zt_2.png" path="/img/"/>
+    <image id="q8ax5n" name="icon_dra_zt_1.png" path="/img/"/>
+    <image id="q8ax5o" name="icon_dra_yx.png" path="/img/"/>
+    <image id="q8ax5p" name="icon_dra_xg_2.png" path="/img/"/>
+    <image id="q8ax5q" name="icon_dra_xg_1.png" path="/img/"/>
+    <image id="q8ax5r" name="icon_dra_tc_2.png" path="/img/"/>
+    <image id="q8ax5s" name="icon_dra_tc_1.png" path="/img/"/>
+    <image id="q8ax5t" name="icon_dra_sjx.png" path="/img/"/>
+    <image id="q8ax5u" name="icon_dra_jx_2.png" path="/img/"/>
+    <image id="q8ax5v" name="icon_dra_jx_1.png" path="/img/"/>
+    <image id="q8ax5w" name="icon_dra_jx.png" path="/img/"/>
+    <image id="q8ax5x" name="icon_dra_fz_4.png" path="/img/"/>
+    <image id="q8ax5y" name="icon_dra_fz_3.png" path="/img/"/>
+    <image id="q8ax5z" name="icon_dra_fz_2.png" path="/img/"/>
+    <image id="q8ax60" name="icon_dra_fz_1.png" path="/img/"/>
   </resources>
   <publish name="drawing"/>
 </packageDescription>

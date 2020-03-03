@@ -3,11 +3,10 @@
  * @desc main用的工具类
  * @date 2020-02-18 11:43:24 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-19 16:49:51
+ * @Last Modified time: 2020-02-28 22:26:41
  */
 // const spawn = require("child_process").spawn;
 const exec = require("child_process").exec;
-const config = require('./config.js');
 const logger = require('./logger.js');
 const http = require('http');
 const querystring = require('querystring');
@@ -38,13 +37,14 @@ const querystring = require('querystring');
 //     });
 // }
 
+/** 运行cmd命令 */
 function runCmd(cmd, cwd, successMsg, errorMsg) {
     return new Promise((resolve, reject) => {
         logger.log('cmd', `cmd --> command:${cmd} cwd:${cwd}`);
         let process = exec(cmd, { cwd: cwd }, (error) => {
             if (error) {
                 if (errorMsg) {
-                    loger.error('cmd', errorMsg, error);
+                    logger.error('cmd', errorMsg, error);
                 }
                 reject(process);
             } else {
@@ -56,42 +56,33 @@ function runCmd(cmd, cwd, successMsg, errorMsg) {
         });
 
         process.stdout.on("data", data => {
-            logger.log('process', 'stdout', data);
+            logger.processLog('cmd', 'stdout', data);
         });
         process.stderr.on("data", data => {
-            logger.log('process', 'stderr', data);
+            logger.processLog('cmd', 'stderr', data);
         });
     });
 }
 
-/** 关闭游戏服务器 */
-function closeGameServer() {
-    if (!config.gameServerInited) {
-        let cmdStr = "taskkill /im game.exe /f";
-        runCmd(cmdStr, null, `游戏服务器关闭成功`, "游戏服务器关闭错误");
-        return;
-    }
-
-    let path = `/native?controlType=closeServer`
-    requestGetHttp(config.localIp, config.gameServerPort, path, null, () => {
-        logger.log('net', `游戏服务器关闭成功`)
-    }, () => {
-        logger.error('net', `游戏服务器关闭错误`)
-    });
-}
-
-function requestGetHttp(host, port, path, data, successFunc, errorFunc) {
-    let content = data ? querystring.stringify(data) : "";
-
+/** 发送get请求 */
+function requestGetHttp(host, port, path, data, headers, successFunc, errorFunc) {
+    let content = data ? `${querystring.stringify(data)}` : "";
+    path = content ? `${path}?${content}` : path;
     let options = {
         host: host,
-        path: `${path}?${content}`,
+        path: path,
         method: 'GET'
     };
     if (port) {
         options['port'] = port;
     }
-
+    if (headers) {
+        options.headers = {};
+        for (const key in headers) {
+            const value = headers[key];
+            options.headers[key] = value;
+        }
+    }
 
     let request = http.request(options, (response) => {
         response.setEncoding('utf8');
@@ -103,7 +94,11 @@ function requestGetHttp(host, port, path, data, successFunc, errorFunc) {
 
         response.on('end', () => {
             if (successFunc) {
-                successFunc(body);
+                if (!!body) {
+                    successFunc(JSON.parse(body));
+                } else {
+                    successFunc();
+                }
             }
         });
 
@@ -125,7 +120,8 @@ function requestGetHttp(host, port, path, data, successFunc, errorFunc) {
     request.end();
 }
 
-function requstPostHttp(host, port, path, data, successFunc, errorFunc) {
+/** 发送post请求 */
+function requestPostHttp(host, port, path, data, headers, successFunc, errorFunc) {
     let content = data ? querystring.stringify(data) : "";
 
     let options = {
@@ -140,6 +136,12 @@ function requstPostHttp(host, port, path, data, successFunc, errorFunc) {
     if (port) {
         options['port'] = port;
     }
+    if (headers) {
+        for (const key in headers) {
+            const value = headers[key];
+            options.headers[key] = value;
+        }
+    }
 
     let request = http.request(options, (response) => {
         response.setEncoding('utf8');
@@ -151,7 +153,11 @@ function requstPostHttp(host, port, path, data, successFunc, errorFunc) {
 
         response.on('end', () => {
             if (successFunc) {
-                successFunc(body);
+                if (!!body) {
+                    successFunc(JSON.parse(body));
+                } else {
+                    successFunc();
+                }
             }
         });
 
@@ -175,6 +181,5 @@ function requstPostHttp(host, port, path, data, successFunc, errorFunc) {
 
 // exports.runSpawn = runSpawn;
 exports.runCmd = runCmd;
-exports.closeGameServer = closeGameServer;
 exports.requestGetHttp = requestGetHttp;
-exports.requstPostHttp = requstPostHttp;
+exports.requestPostHttp = requestPostHttp;

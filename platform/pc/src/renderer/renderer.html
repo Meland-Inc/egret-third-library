@@ -5,17 +5,51 @@
   <meta charset="UTF-8">
 </head>
 
-
 <body>
-  <progress id="loadingUi" class="loading" value="0" max="100"></progress>
+  <div id='logoImg'></div>
+  <progress id="loadingUi" value="0" max="100" hidden="true"></progress>
+
   <script type="module" src="./renderer.js"></script>
 </body>
 
 <style>
-  .loading {
+  #loadingUi {
     top: 45%;
     left: 45%;
     position: absolute;
+  }
+
+  #logoImg {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    width: 804.75px;
+    height: 267.75px;
+    background-image: url(../../resource/logo.png);
+    background-size: 100%, 100%;
+    animation: opacity2 3s;
+    -webkit-animation: opacity2 3s;
+  }
+
+  @keyframes opacity2 {
+    0% {
+      opacity: 0
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes opacity2 {
+    0% {
+      opacity: 0
+    }
+
+    50% {
+      opacity: 1;
+    }
   }
 </style>
 

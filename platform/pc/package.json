@@ -22,6 +22,7 @@
     "copyright": "Copyright © 2020 bellcode",
     "files": [
       "./src/**/*",
+      "./resource/**/*",
       "./package.json",
       "./package/**/*"
     ],
@@ -37,7 +38,8 @@
       "rfc3161TimeStampServer": "http://timestamp.digicert.com",
       "certificateFile": "bellplanet.pfx",
       "certificatePassword": "bellcode123",
-      "icon": "./icon/icon.ico"
+      "icon": "./icon/icon.ico",
+      "requestedExecutionLevel": "highestAvailable"
     },
     "dmg": {
       "contents": [

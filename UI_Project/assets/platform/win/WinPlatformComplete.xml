@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080">
+  <displayList>
+    <graph id="n1_kuxv" name="n1" xy="593,285" size="733,510" type="rect">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </graph>
+    <component id="n2_kuxv" name="btnClose" src="ilo1cyidi" fileName="btn/btnScaleNoEffect.xml" pkg="te1gxawo" xy="656,686" size="206,70">
+      <relation target="n1_kuxv" sidePair="left-left,bottom-bottom"/>
+      <Button title="留在场景"/>
+    </component>
+    <component id="n3_kuxv" name="btnNext" src="ilo1cyidi" fileName="btn/btnScaleNoEffect.xml" pkg="te1gxawo" xy="871,688" size="402,70">
+      <relation target="n1_kuxv" sidePair="right-right,bottom-bottom"/>
+      <Button title="下一关"/>
+    </component>
+  </displayList>
+</component>

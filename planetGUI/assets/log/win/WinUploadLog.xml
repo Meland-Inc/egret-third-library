@@ -14,7 +14,10 @@
     <component id="n2_epn8" name="btnUpload" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1198,950" size="118,40" group="n8_epn8">
       <Button title="上传日志" titleColor="#f8ecc2" icon="ui://te1gxawopgixi4o"/>
     </component>
-    <group id="n8_epn8" name="n8" xy="561,58" size="798,960" advanced="true">
+    <component id="n11_ma1t" name="btnGetName" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="965,950" size="164,40" group="n8_epn8">
+      <Button title="获取角色名" titleColor="#f8ecc2" icon="ui://te1gxawopgixi4o"/>
+    </component>
+    <group id="n8_epn8" name="n8" xy="561,59" size="798,959" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>
