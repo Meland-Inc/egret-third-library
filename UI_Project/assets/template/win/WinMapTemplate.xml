@@ -21,7 +21,7 @@
     <image id="n15_8qqi" name="imgSearchInputBg" src="oiqdcyigx" fileName="img/img_cm_ssk.png" pkg="te1gxawo" xy="1220,41" size="400,47" group="n19_ra2b"/>
     <text id="n18_ra2b" name="inpSearch" xy="1263,53" size="347,26" group="n19_ra2b" input="true" prompt="[color=#999999]请输入搜索内容[/color]" fontSize="20" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text=""/>
     <image id="n29_rujp" name="n29" src="rujpcyijl" fileName="img/icon_cm_ss.png" pkg="te1gxawo" xy="1228,50" size="32,32" group="n19_ra2b"/>
-    <group id="n19_ra2b" name="grpSearchInput" xy="1220,41" size="400,47" group="n20_ra2b" advanced="true" collapsed="true">
+    <group id="n19_ra2b" name="grpSearchInput" xy="1220,41" size="400,47" group="n20_ra2b" advanced="true">
       <gearDisplay controller="ctrlViewStatus" pages="0,1"/>
     </group>
     <component id="n30_kujx" name="btnRoomCodeEnter" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1646,41" size="160,48" group="n20_ra2b">
