@@ -22,9 +22,9 @@
     <image id="n138_a16n" name="imgBg2" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="579,0" size="1130,882" group="n168_nibs"/>
     <image id="n139_a16n" name="imgTopBg2" src="c1h7cyiia" fileName="img/img_cm_top_3.png" pkg="te1gxawo" xy="579,0" size="1130,40" group="n168_nibs"/>
     <text id="n140_a16n" name="tfCommentTitle" xy="597,6" size="65,24" group="n168_nibs" fontSize="20" color="#333333" vAlign="middle" text="评论区"/>
-    <component id="n169_bszy" name="comInput" src="dv1icyiim" fileName="com/ComInput.xml" pkg="te1gxawo" xy="600,51" size="1080,143" group="n168_nibs"/>
-    <image id="n145_a16n" name="imgCommentBg" src="eggjcyihs" fileName="img/img_cm_srk_1.png" pkg="te1gxawo" xy="600,51" size="1080,143" group="n168_nibs" visible="false"/>
-    <text id="n146_a16n" name="inpComment" xy="610,62" size="1058,124" group="n168_nibs" visible="false" input="true" fontSize="20" color="#666666" autoSize="none" autoClearText="true" text="地图描述"/>
+    <component id="n169_bszy" name="comInput" src="dv1icyiim" fileName="com/ComInput.xml" pkg="te1gxawo" xy="600,51" size="1080,143" group="n168_nibs">
+      <Label icon="ui://te1gxawoeggjcyihs"/>
+    </component>
     <component id="n141_a16n" name="btnComment" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1579,216" size="100,38" group="n168_nibs">
       <Button title="发布" icon="ui://te1gxawooiqdcyih1"/>
     </component>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1920,1080" designImage="ui://thvmj7vovhcj4cyijj" designImageAlpha="0" designImageLayer="1">
+<component size="1920,1080" designImage="ui://thvmj7vouecl4cyijp" designImageAlpha="60" designImageLayer="1">
   <controller name="ctrlRightDetail" pages="2,empty,0,edit,1,lobby" selected="0"/>
-  <controller name="ctrlViewStatus" pages="0,allList,1,selfList,2,create,3,publish,4,detail" selected="2">
+  <controller name="ctrlViewStatus" pages="0,allList,1,selfList,2,create,3,publish,4,detail" selected="0">
     <action type="change_page" fromPage="" toPage="0" objectId="n16_pz1n" controller="ctrlListType" targetPage="7"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n16_pz1n" controller="ctrlListType" targetPage="0"/>
   </controller>
@@ -44,11 +44,11 @@
       <gearDisplay controller="ctrlViewStatus" pages="4"/>
       <Button icon="ui://te1gxawooiqdcyih2" controller="ctrlViewStatus" page="0"/>
     </component>
-    <component id="n12_8qqi" name="tbtnAllMap" src="8qqi3m" fileName="btn/btnViewStatus.xml" xy="429,40" group="n20_ra2b">
+    <component id="n12_8qqi" name="tbtnAllMap" src="8qqi3m" fileName="btn/btnViewStatus.xml" xy="472,40" group="n20_ra2b">
       <gearDisplay controller="ctrlViewStatus" pages="0,1"/>
-      <Button title="地图列表" controller="ctrlViewStatus" page="0"/>
+      <Button checked="true" title="地图列表" controller="ctrlViewStatus" page="0"/>
     </component>
-    <component id="n13_8qqi" name="tbtnMyMap" src="8qqi3m" fileName="btn/btnViewStatus.xml" xy="588,40" group="n20_ra2b">
+    <component id="n13_8qqi" name="tbtnMyMap" src="8qqi3m" fileName="btn/btnViewStatus.xml" xy="632,40" size="140,58" group="n20_ra2b">
       <gearDisplay controller="ctrlViewStatus" pages="0,1"/>
       <Button title="我的地图" controller="ctrlViewStatus" page="1"/>
     </component>
@@ -61,7 +61,7 @@
     <component id="n33_nibs" name="comDetail" src="nibs4p" fileName="com/ComTemplateDetail.xml" xy="143,118" group="n20_ra2b">
       <gearDisplay controller="ctrlViewStatus" pages="4"/>
     </component>
-    <component id="n16_pz1n" name="comMapTemplateList" src="pz1n3n" fileName="com/ComMapTemplateList.xml" xy="31,118" group="n24_ra2b" controller="ctrlListType,0"/>
+    <component id="n16_pz1n" name="comMapTemplateList" src="pz1n3n" fileName="com/ComMapTemplateList.xml" xy="31,118" group="n24_ra2b" controller="ctrlListType,7"/>
     <component id="n17_ra2b" name="comEdit" src="pz1n3v" fileName="com/ComEditTemplate.xml" xy="1463,118" group="n24_ra2b">
       <gearDisplay controller="ctrlRightDetail" pages="0"/>
     </component>

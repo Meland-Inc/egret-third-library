@@ -24,9 +24,9 @@
     <image id="n138_a16n" name="imgBg2" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="0,462" size="1304,330"/>
     <image id="n139_a16n" name="imgTopBg2" src="c1h7cyiia" fileName="img/img_cm_top_3.png" pkg="te1gxawo" xy="0,462" size="1304,40"/>
     <text id="n140_a16n" name="tfDescTitle" xy="18,468" size="85,24" fontSize="20" color="#333333" vAlign="middle" text="地图描述"/>
-    <image id="n145_a16n" name="imgDescBg" src="eggjcyihs" fileName="img/img_cm_srk_1.png" pkg="te1gxawo" xy="22,512" size="1260,260" visible="false"/>
-    <text id="n146_a16n" name="inpDesc" xy="45,531" size="1218,228" visible="false" input="true" maxLength="500" fontSize="20" color="#333333" leading="10" autoSize="none" autoClearText="true" text="地图描述"/>
-    <component id="n147_bszy" name="comInput" src="dv1icyiim" fileName="com/ComInput.xml" pkg="te1gxawo" xy="22,512" size="1260,260"/>
+    <component id="n147_bszy" name="comInput" src="dv1icyiim" fileName="com/ComInput.xml" pkg="te1gxawo" xy="22,512" size="1260,260">
+      <Label icon="ui://te1gxawoeggjcyihs"/>
+    </component>
     <component id="n141_a16n" name="btnPublish" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1203,831" size="100,38">
       <Button title="发布" icon="ui://te1gxawooiqdcyih1"/>
     </component>
