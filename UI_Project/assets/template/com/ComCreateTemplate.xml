@@ -9,13 +9,13 @@
     <loader id="n126_vlrg" name="imgArrow1" xy="1272,16" size="16,10" group="n111_ra2b" visible="false" url="ui://te1gxawoc1h7cyii4">
       <relation target="" sidePair="right-right"/>
     </loader>
-    <text id="n64_ra2b" name="tfBasicSetting" xy="19,8" size="85,24" group="n111_ra2b" fontSize="20" color="#333333" vAlign="middle" text="基础设置"/>
-    <text id="n89_ra2b" name="tfMapNameTitle" xy="120,77" size="85,24" group="n88_ra2b" fontSize="20" color="#333333" text="地图名字"/>
+    <text id="n64_ra2b" name="tfBasicSetting" xy="19,8" size="85,26" group="n111_ra2b" fontSize="20" color="#333333" vAlign="middle" text="基础设置"/>
+    <text id="n89_ra2b" name="tfMapNameTitle" xy="120,77" size="85,26" group="n88_ra2b" fontSize="20" color="#333333" text="地图名字"/>
     <component id="n128_qncg" name="comNameInput" src="dv1icyiim" fileName="com/ComInput.xml" pkg="te1gxawo" xy="120,109" size="380,40" group="n88_ra2b">
       <Label icon="ui://te1gxawoeggjcyihs"/>
     </component>
     <group id="n88_ra2b" name="grpInput" xy="120,77" size="380,72" group="n111_ra2b"/>
-    <text id="n91_ra2b" name="tfMapSizeTitle" xy="800,77" size="85,24" group="n111_ra2b" fontSize="20" color="#333333" text="地图大小"/>
+    <text id="n91_ra2b" name="tfMapSizeTitle" xy="800,77" size="85,26" group="n111_ra2b" fontSize="20" color="#333333" text="地图大小"/>
     <component id="n90_ra2b" name="cbMapSize" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="804,111" size="378,40" group="n111_ra2b">
       <ComboBox title="大" titleColor="#333333" visibleItemCount="10" selectionController="ctrlMapSizeStatus">
         <item title="大" value="big"/>
@@ -24,15 +24,15 @@
         <item title="其他" value="custom"/>
       </ComboBox>
     </component>
-    <image id="n92_ra2b" name="imgMutil" src="iv93r" fileName="old/img/img_stencil_c_1.png" xy="918,194" group="n98_ra2b"/>
+    <image id="n92_ra2b" name="imgMutil" src="iv93r" fileName="img/img_stencil_c_1.png" xy="918,194" group="n98_ra2b"/>
     <image id="n93_ra2b" name="imgWidthBG" src="eggjcyihs" fileName="img/img_cm_srk_1.png" pkg="te1gxawo" xy="802,182" size="102,35" group="n98_ra2b"/>
     <image id="n94_ra2b" name="imgHeightBG" src="eggjcyihs" fileName="img/img_cm_srk_1.png" pkg="te1gxawo" xy="947,182" size="102,35" group="n98_ra2b"/>
     <text id="n95_ra2b" name="inpMapWidth" xy="803,183" size="101,33" group="n98_ra2b" input="true" prompt="1920" restrict="0-9" keyboardType="4" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text="1000"/>
     <text id="n96_ra2b" name="inpMapHeight" xy="948,183" size="100,33" group="n98_ra2b" input="true" prompt="1080" restrict="0-9" keyboardType="4" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" autoClearText="true" text="1000"/>
-    <group id="n98_ra2b" name="customInput" xy="802,182" size="247,35" group="n111_ra2b" advanced="true" collapsed="true">
+    <group id="n98_ra2b" name="customInput" xy="802,182" size="247,35" group="n111_ra2b" advanced="true">
       <gearDisplay controller="ctrlMapSizeStatus" pages="3"/>
     </group>
-    <text id="n103_ra2b" name="tfMapTemplateTypeTitle" xy="121,187" size="85,24" group="n111_ra2b" fontSize="20" color="#333333" text="地图模板"/>
+    <text id="n103_ra2b" name="tfMapTemplateTypeTitle" xy="121,187" size="85,26" group="n111_ra2b" fontSize="20" color="#333333" text="地图模板"/>
     <component id="n104_ra2b" name="cbMapTemplateType" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="121,220" size="378,40" group="n111_ra2b">
       <ComboBox title="空地图" titleColor="#333333" visibleItemCount="10">
         <item title="空地图" value="empty"/>
@@ -44,24 +44,24 @@
     <component id="n102_ra2b" name="btnIsOpen" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="422,313" size="78,42" group="n111_ra2b">
       <Button icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
     </component>
-    <text id="n100_ra2b" name="tfIconTitle" xy="804,249" size="85,24" group="n111_ra2b" fontSize="20" color="#333333" text="地图封面"/>
-    <component id="n99_ra2b" name="btnSelectMapIcon" src="iv93c" fileName="old/btn/BtnSelectMapIcon.xml" xy="804,281" size="160,118" group="n111_ra2b"/>
+    <text id="n100_ra2b" name="tfIconTitle" xy="804,249" size="85,26" group="n111_ra2b" fontSize="20" color="#333333" text="地图封面"/>
+    <component id="n99_ra2b" name="btnSelectMapIcon" src="iv93c" fileName="btn/BtnSelectMapIcon.xml" xy="804,281" size="160,118" group="n111_ra2b"/>
     <group id="n111_ra2b" name="grpBasicSetting" xy="0,0" size="1304,440"/>
     <image id="n109_ra2b" name="imgAdvancedSettingBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="0,462" size="1304,332" group="n124_ra2b"/>
     <image id="n107_ra2b" name="imgAdvancedSettingHeaderBg" src="c1h7cyiia" fileName="img/img_cm_top_3.png" pkg="te1gxawo" xy="0,462" size="1304,40" group="n124_ra2b"/>
     <loader id="n110_ra2b" name="imgArrow2" xy="1277,478" size="16,10" group="n124_ra2b" visible="false" url="ui://te1gxawoc1h7cyii4">
       <gearIcon controller="ctrlAdvancedSetting" pages="1" values="ui://te1gxawoc1h7cyii6" default="ui://te1gxawoc1h7cyii4"/>
     </loader>
-    <text id="n108_ra2b" name="tfadvancedSetting" xy="18,470" size="85,24" group="n124_ra2b" fontSize="20" color="#333333" vAlign="middle" text="高级设置"/>
-    <text id="n116_ra2b" name="tfIsCanEdit" xy="121,536" size="145,24" group="n124_ra2b" fontSize="20" color="#333333" vAlign="middle" text="编辑器是否可用"/>
+    <text id="n108_ra2b" name="tfadvancedSetting" xy="18,470" size="85,26" group="n124_ra2b" fontSize="20" color="#333333" vAlign="middle" text="高级设置"/>
+    <text id="n116_ra2b" name="tfIsCanEdit" xy="121,536" size="145,26" group="n124_ra2b" fontSize="20" color="#333333" vAlign="middle" text="编辑器是否可用"/>
     <component id="n117_ra2b" name="btnIsCanEdit" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="421,527" size="78,42" group="n124_ra2b">
       <Button checked="true" icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
     </component>
-    <text id="n120_ra2b" name="tfIsManorCheckPoint" xy="800,536" size="125,24" group="n124_ra2b" fontSize="20" color="#333333" vAlign="middle" text="是否领地关卡"/>
+    <text id="n120_ra2b" name="tfIsManorCheckPoint" xy="800,536" size="125,26" group="n124_ra2b" fontSize="20" color="#333333" vAlign="middle" text="是否领地关卡"/>
     <component id="n121_ra2b" name="btnIsManorCheckPoint" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1100,527" size="78,42" group="n124_ra2b">
       <Button checked="true" icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe" controller="ctrlIsManorCheckPoint" page="0"/>
     </component>
-    <text id="n122_ra2b" name="tfIsSceneObjCanDestroy" xy="800,656" size="205,24" group="n124_ra2b" locked="true" hideByEditor="true" visible="false" fontSize="20" color="#333333" vAlign="middle" text="场景物件是否能被破坏"/>
+    <text id="n122_ra2b" name="tfIsSceneObjCanDestroy" xy="800,656" size="205,26" group="n124_ra2b" locked="true" hideByEditor="true" visible="false" fontSize="20" color="#333333" vAlign="middle" text="场景物件是否能被破坏"/>
     <component id="n123_ra2b" name="btnIsSceneObjCanDestroy" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1103,649" size="78,42" group="n124_ra2b" locked="true" hideByEditor="true" visible="false">
       <Button icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
     </component>

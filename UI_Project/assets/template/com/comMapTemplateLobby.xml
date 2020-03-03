@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="400,881" opaque="false" designImage="ui://thvmj7vomquwp" designImageOffsetX="-1463" designImageOffsetY="-118" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlIsMySubscribe" pages="0,true,1,false" selected="1"/>
+<component size="400,881" opaque="false" designImage="ui://thvmj7vomquwp" designImageOffsetX="-1463" designImageOffsetY="-118" designImageAlpha="1" designImageLayer="1">
+  <controller name="ctrlIsMySubscribe" pages="0,true,1,false" selected="0"/>
   <controller name="ctrlIsMine" pages="0,true,1,false" selected="0"/>
   <displayList>
     <image id="n34_ra2b" name="imgTopBg" src="nvqacyihy" fileName="img/img_cm_top_2.png" pkg="te1gxawo" xy="0,0" size="400,40" group="n32_x8d1"/>
@@ -41,7 +41,7 @@
       <item/>
       <item/>
     </list>
-    <image id="n33_imu4" name="mapBg" src="iv93d" fileName="old/img/img_stencil_dt_6.png" xy="13,62" size="157,117" group="n32_x8d1"/>
+    <image id="n33_imu4" name="mapBg" src="iv93d" fileName="img/img_stencil_dt_6.png" xy="13,62" size="157,117" group="n32_x8d1"/>
     <image id="n38_vlrg" name="n38" src="vlrgcyijh" fileName="img/img_cm_line_1.png" pkg="te1gxawo" xy="11,236" size="378,3" group="n32_x8d1"/>
     <image id="n39_vlrg" name="n39" src="vlrgcyijh" fileName="img/img_cm_line_1.png" pkg="te1gxawo" xy="265,192" size="34,3" group="n32_x8d1" rotation="90"/>
     <image id="n41_qncg" name="imgEmpty" src="c1h7cyii8" fileName="img/img_cm_blank.png" pkg="te1gxawo" xy="110,429" group="n43_qncg"/>
@@ -51,6 +51,12 @@
       <relation target="n33_imu4" sidePair="width-width,height-height"/>
     </component>
     <text id="n48_oebl" name="tfUpdateTime" xy="177,98" size="218,18" group="n32_x8d1" fontSize="14" color="#999999" vAlign="middle" vars="true" autoSize="none" text="最后更新时间：{year=0}.{month=0}.{day=0}"/>
+    <image id="n50_nibs" name="n50" src="iv93e" fileName="img/img_stencil_fm_1.png" xy="13,150" size="157,29" group="n32_x8d1">
+      <relation target="" sidePair="width-width,bottom-bottom"/>
+    </image>
+    <text id="n51_nibs" name="tf" xy="13,154" size="157,24" group="n32_x8d1" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="地图详情">
+      <relation target="n50_nibs" sidePair="center-center,middle-middle"/>
+    </text>
     <group id="n32_x8d1" name="root" xy="0,0" size="400,871" advanced="true"/>
   </displayList>
 </component>

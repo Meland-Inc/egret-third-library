@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1709,882" designImage="ui://thvmj7vovhcj4cyijj" designImageOffsetX="-143" designImageOffsetY="-118" designImageLayer="1">
+  <controller name="ctrlMapSizeStatus" pages="0,big,1,middle,2,small,3,custom" selected="0"/>
+  <controller name="ctrlAdvancedSetting" pages="0,expand,1,shrink" selected="0"/>
+  <controller name="ctrlIsManorCheckPoint" pages="0,true,1,false" selected="0"/>
+  <displayList>
+    <image id="n129_a16n" name="imgBg1" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="0,0" size="560,882" group="n167_nibs"/>
+    <image id="n130_a16n" name="imgTopBg1" src="c1h7cyiia" fileName="img/img_cm_top_3.png" pkg="te1gxawo" xy="0,0" size="560,40" group="n167_nibs"/>
+    <text id="n132_a16n" name="tfSettingTitle" xy="28,7" size="85,24" group="n167_nibs" fontSize="20" color="#333333" vAlign="middle" text="详情信息"/>
+    <component id="n160_nibs" name="ladMap" src="pz1n3t" fileName="com/ComAutoClipLad.xml" xy="30,53" size="193,142" group="n167_nibs"/>
+    <text id="n166_nibs" name="tfMapName" xy="241,57" size="266,30" group="n167_nibs" fontSize="24" color="#333333" vAlign="middle" autoSize="none" text="堡垒前线"/>
+    <image id="n151_nibs" name="imgAuthor" src="c1h7cyii2" fileName="img/icon_cm_avatar.png" pkg="te1gxawo" xy="241,114" group="n153_nibs"/>
+    <text id="n152_nibs" name="tfCreater" xy="268,110" size="194,29" group="n153_nibs" fontSize="18" color="#333333" vAlign="middle" autoSize="none" text="千与千寻"/>
+    <group id="n153_nibs" name="grpAuthor" xy="241,110" size="221,29" group="n167_nibs" collapsed="true"/>
+    <image id="n155_nibs" name="imgSubscribeNum" src="8qqi3i" fileName="img/icon_mapt_sc_2.png" xy="239,165" group="n157_nibs"/>
+    <text id="n156_nibs" name="tfSubscribeNum" xy="267,166" size="66,18" group="n157_nibs" fontSize="14" color="#999999" vAlign="middle" autoSize="none" singleLine="true" text="999"/>
+    <group id="n157_nibs" name="grpSubscribe" xy="239,165" size="94,20" group="n167_nibs" advanced="true" collapsed="true"/>
+    <text id="n161_nibs" name="tfUpdateTime" xy="241,139" size="218,18" group="n167_nibs" fontSize="14" color="#999999" vAlign="middle" vars="true" autoSize="none" text="最后更新时间：{year=0}.{month=0}.{day=0}"/>
+    <text id="n164_nibs" name="tfDescTitle" xy="27,227" size="85,24" group="n167_nibs" fontSize="20" color="#333333" text="地图描述"/>
+    <text id="n165_nibs" name="tfDesc" xy="27,281" size="494,582" group="n167_nibs" fontSize="20" color="#333333" leading="17" autoSize="none" text="Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet"/>
+    <group id="n167_nibs" name="grpLeft" xy="0,0" size="560,882"/>
+    <image id="n138_a16n" name="imgBg2" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="579,0" size="1130,882" group="n168_nibs"/>
+    <image id="n139_a16n" name="imgTopBg2" src="c1h7cyiia" fileName="img/img_cm_top_3.png" pkg="te1gxawo" xy="579,0" size="1130,40" group="n168_nibs"/>
+    <text id="n140_a16n" name="tfCommentTitle" xy="597,6" size="65,24" group="n168_nibs" fontSize="20" color="#333333" vAlign="middle" text="评论区"/>
+    <component id="n169_bszy" name="comInput" src="dv1icyiim" fileName="com/ComInput.xml" pkg="te1gxawo" xy="600,51" size="1080,143" group="n168_nibs">
+      <Label icon="ui://te1gxawoeggjcyihs"/>
+    </component>
+    <component id="n141_a16n" name="btnComment" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1579,216" size="100,38" group="n168_nibs">
+      <Button title="发布" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <component id="n142_a16n" name="btnCancel" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1459,216" size="100,38" group="n168_nibs">
+      <Button title="取消" icon="ui://te1gxawoeggjcyihf" page="0"/>
+    </component>
+    <group id="n168_nibs" name="grpRight" xy="579,0" size="1130,882"/>
+  </displayList>
+</component>

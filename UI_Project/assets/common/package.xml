@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="te1gxawo">
+<packageDescription id="te1gxawo" jpegQuality="80" compressPNG="true">
   <resources>
     <component id="qn8o0" name="WinConfirm.xml" path="/old/win/" exported="true"/>
     <image id="qn8o8" name="img_main_chatbubble_1.png" path="/old/newImg/" exported="true" scale="9grid" scale9grid="25,10,50,20"/>
@@ -645,7 +645,7 @@
     <image id="d7i5cyijq" name="img_cm_bq.png" path="/img/" exported="true" scale="9grid" scale9grid="14,6,28,12"/>
     <image id="f08kcyijr" name="icon_cm_gb_1.png" path="/img/" exported="true"/>
     <image id="pve9cyijs" name="img_cm_xzk_2.png" path="/img/" exported="true"/>
-    <image id="pve9cyijt" name="img_cm_xzk_1.png" path="/img/" exported="true"/>
+    <image id="pve9cyijt" name="img_cm_xzk_1.png" path="/img/" exported="true" scale="9grid" scale9grid="10,10,20,20"/>
     <image id="pve9cyiju" name="img_cm_kjj.png" path="/img/" exported="true"/>
     <image id="pve9cyijv" name="icon_cm_fdj_3.png" path="/img/" exported="true"/>
     <image id="pve9cyijw" name="icon_cm_fdj_2.png" path="/img/" exported="true"/>
