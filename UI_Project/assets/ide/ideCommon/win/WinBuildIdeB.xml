@@ -54,6 +54,10 @@
       <gearDisplay controller="ctrlIdeMode" pages="6"/>
       <relation target="" sidePair="height-height,right-right"/>
     </component>
+    <loader id="n47_t8cg" name="shapeEditArea" xy="-1,53" size="1490,1025" visible="false" fill="scaleFree">
+      <relation target="" sidePair="left-left,width-width"/>
+      <relation target="" sidePair="top-top,height-height"/>
+    </loader>
   </displayList>
   <transition name="transBpShow">
     <item time="0" type="Alpha" target="n38_si0u" value="0"/>
