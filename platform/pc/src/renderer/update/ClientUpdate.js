@@ -3,7 +3,7 @@
  * @desc 游戏客户端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-03 15:39:37
+ * @Last Modified time: 2020-03-03 16:08:39
  */
 
 import * as loading from '../loading.js';
@@ -74,7 +74,8 @@ export class ClientUpdate {
         }
 
         try {
-            this.gameVersion = await util.getGameVersion(this.policyHost, this.policyPath, policyNum);
+            let gameVersion = await util.getGameVersion(this.policyHost, this.policyPath, policyNum);
+            this.gameVersion = +gameVersion;
             return this.curVersion === this.gameVersion;
         } catch (error) {
             let content = "获取游戏版本号错误!";

@@ -3,13 +3,14 @@
  * @desc 工具类
  * @date 2020-02-28 19:56:39 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-03 15:42:04
+ * @Last Modified time: 2020-03-03 16:41:26
  */
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
 const http = require("http");
 import * as logger from './logger.js';
+import { Config } from './Config.js';
 
 /** 获取指定策略信息 */
 export function getPolicyInfo(versionName) {
@@ -127,4 +128,19 @@ export async function deleteFolderRecursive(folderPath) {
     } else {
         console.log("给定的路径不存在，请给出正确的路径", folderPath);
     }
+}
+
+/** 设置全局配置值 */
+export async function setGlobalConfigValue(key, value) {
+    let configContent = await fs.readFileSync(Config.globalConfigPath, "utf-8");
+    let globalConfig = JSON.parse(configContent);
+    globalConfig[key] = value;
+    await fs.writeFileSync(Config.globalConfigPath, JSON.stringify(globalConfig), "utf-8");
+}
+
+/** 获取全局配置值 */
+export async function getGlobalConfigValue(key) {
+    let configContent = await fs.readFileSync(Config.globalConfigPath, "utf-8");
+    let globalConfig = JSON.parse(configContent);
+    return globalConfig[key];
 }

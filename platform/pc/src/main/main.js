@@ -3,7 +3,7 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-02 19:03:29
+ * @Last Modified time: 2020-03-03 16:19:29
  */
 // Modules to control application life and create native browser window
 const { app, globalShortcut, BrowserWindow, Menu, shell, dialog } = require('electron')
@@ -38,10 +38,6 @@ async function initNative() {
   // } else {
   // initNativeLesson();
   // }
-
-  let userAgent = mainWindow.webContents.userAgent + " BellCodeIpadWebView";
-  mainWindow.webContents.setUserAgent(userAgent);
-
   await mainWindow.loadFile(`${config.rootPath}/src/renderer/renderer.html`);
 
   //发送检查更新消息
@@ -84,6 +80,8 @@ function createWindow() {
 
   // mainWindow.isEnabled
 
+  let userAgent = mainWindow.webContents.userAgent + " BellCodeIpadWebView";
+  mainWindow.webContents.setUserAgent(userAgent);
 
   /** 设置url参数 */
   config.urlValue = process.argv[process.argv.length - 1];
@@ -95,7 +93,7 @@ function createWindow() {
   initNative();
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 
   mainWindow.webContents.on('crashed', () => {
     const options = {

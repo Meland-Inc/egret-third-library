@@ -3,7 +3,7 @@
  * @desc 游戏服务器端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-28 22:11:13
+ * @Last Modified time: 2020-03-03 16:43:35
  */
 
 import * as loading from '../loading.js';
@@ -30,47 +30,62 @@ export class ServerUpdate {
     /** 分支环境 */
     evnName;
 
+    /** 本地版本 */
+    localVersion;
+
+    /** 远程版本 */
+    remoteVersion;
+
+
+    /** 检查是否最新版本 */
+    async checkLatestVersion() {
+        //获取分支名称
+        let indexContent = await fs.readFileSync(`${Config.clientPackagePath}` + "index.html", "utf-8");
+        let evnResult = indexContent.match(new RegExp(`let evnName = "([^\";]*)";`));
+        this.evnName = evnResult[1];
+
+        //获取本地游戏版本
+        this.localVersion = await util.getGlobalConfigValue("serverPackageVersion");
+
+        this.remoteVersion = await util.getServerPackagePolicyNum(this.evnName);
+        return this.remoteVersion === this.localVersion;
+    }
+
     /** 检查更新 */
     async checkUpdate(updateCallback, ...updateCbArgs) {
         try {
             this.updateCallback = updateCallback;
             this.updateCbArgs = updateCbArgs;
-
-            //获取分支名称
-            let indexContent = await fs.readFileSync(`${Config.clientPackagePath}` + "index.html", "utf-8");
-            let evnResult = indexContent.match(new RegExp(`let evnName = "([^\";]*)";`));
-            this.evnName = evnResult[1];
-
-            //获取本地游戏版本
-            let configContent = await fs.readFileSync(Config.globalConfigPath, "utf-8");
-            let globalConfig = JSON.parse(configContent);
-            let localVersion = globalConfig.serverPackageVersion;
-
-            let newVersion = await util.getServerPackagePolicyNum(this.evnName);
-            if (newVersion != localVersion) {
-                logger.log(`update`, `检测到服务器版本更新,开始更新版本${newVersion}`)
-                //更新
-                loading.showLoading();
-                let deleteDir = `${this.serverPackagePath}server`;
-                //清除要保存的文件夹
-                await util.deleteFolderRecursive(deleteDir);
-
-                let fileDir = `${Config.cdnHost}/serverPackages/${this.evnName}`;
-                let saveDir = this.serverPackagePath;
-                let fileName = `${util.getServerPackageFileName()}_v${newVersion}.zip`;
-
-
-                //下载文件
-                this.download.downloadFile(fileDir, saveDir, fileName, async (arg, filename, percentage) => {
-                    if (arg === "finished") {
-                        globalConfig.serverPackageVersion = newVersion;
-                        await fs.writeFileSync(Config.globalConfigPath, JSON.stringify(globalConfig), "utf-8");
-                    }
-                    this.downloadFileCallback(arg, filename, percentage);
-                });
+            let isLatestVersion;
+            if (this.remoteVersion) {
+                isLatestVersion = this.localVersion === this.remoteVersion;
             } else {
-                this.executeUpdateCallback();
+                isLatestVersion = await this.checkLatestVersion();
             }
+
+            if (isLatestVersion) {
+                this.executeUpdateCallback();
+                return;
+            }
+
+            logger.log(`update`, `检测到服务器版本更新,开始更新版本${this.remoteVersion}`);
+            //更新
+            loading.showLoading();
+            let deleteDir = `${this.serverPackagePath}server`;
+            //清除要保存的文件夹
+            await util.deleteFolderRecursive(deleteDir);
+
+            let fileDir = `${Config.cdnHost}/serverPackages/${this.evnName}`;
+            let saveDir = this.serverPackagePath;
+            let fileName = `${util.getServerPackageFileName()}_v${this.remoteVersion}.zip`;
+
+            //下载文件
+            this.download.downloadFile(fileDir, saveDir, fileName, async (arg, filename, percentage) => {
+                if (arg === "finished") {
+                    util.setGlobalConfigValue("serverPackageVersion", this.remoteVersion);
+                }
+                this.downloadFileCallback(arg, filename, percentage);
+            });
         } catch (error) {
             throw error;
         }

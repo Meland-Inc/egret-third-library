@@ -3,12 +3,13 @@
  * @desc 渲染进程消息处理文件
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-03 15:33:02
+ * @Last Modified time: 2020-03-03 17:01:48
  */
 import { Config } from './Config.js';
 import { ClientUpdate } from './update/ClientUpdate.js';
 import { ServerUpdate } from './update/ServerUpdate.js';
 import * as logger from './logger.js';
+import * as util from './util.js';
 let ipcRenderer = require('electron').ipcRenderer;
 let querystring = require('querystring');
 let fs = require('fs');
@@ -22,6 +23,10 @@ let msgMap = {
     'START_NATIVE_PLATFORM': onStartNativePlatform,  //开始平台进入
     'CHECK_UPDATE': onCheckUpdate,  //检查更新 
 }
+
+let clientUpdate = new ClientUpdate();
+let serverUpdate = new ServerUpdate();
+
 
 /** 发送渲染进程消息 */
 export function sendMsg(msgId, ...args) {
@@ -59,14 +64,32 @@ function onSaveNativeServerIpPort(ip, port) {
 }
 
 /** 检查更新 */
-function onCheckUpdate() {
+async function onCheckUpdate() {
     checkClientUpdate(checkServerUpdate, checkUpdateComplete);
+
+    // /** 服务器包所在目录 */
+    // let serverPackageDir = `${Config.serverPackagePath}server`;
+    // let exists = await fs.existsSync(serverPackageDir);
+    // if (!exists) {
+
+    //     return;
+    // }
+
+    // let dir = await fs.readdirSync(serverPackageDir);
+    // if (dir.length == 0) {
+
+    //     return;
+    // }
+
+
+
+    // let isServerLatestVersion = await serverUpdate.checkLatestVersion();
+
 }
 
 /** 检查客户端包更新 */
 function checkClientUpdate(callback, ...args) {
     try {
-        let clientUpdate = new ClientUpdate();
         clientUpdate.checkUpdate(callback, ...args);
     } catch (error) {
         let content = `native更新客户端报错`
@@ -80,7 +103,6 @@ function checkClientUpdate(callback, ...args) {
 /** 检查服务端包更新 */
 function checkServerUpdate(callback, ...args) {
     try {
-        let serverUpdate = new ServerUpdate();
         serverUpdate.checkUpdate(callback, ...args);
     } catch (error) {
         let content = `native更新服务端报错`
@@ -137,9 +159,7 @@ async function onStartNativePlatform(queryObject) {
     }
     let platformValue = querystring.stringify(platformObject);
     //获取官网链接
-    let configContent = await fs.readFileSync(Config.globalConfigPath, "utf-8");
-    let globalConfig = JSON.parse(configContent);
-    let bellPlatformDomain = globalConfig.bellPlatformDomain;
+    let bellPlatformDomain = await util.getGlobalConfigValue("bellPlatformDomain");
 
     location.href = `${bellPlatformDomain}?${platformValue}`;
 }
