@@ -3,7 +3,7 @@
  * @desc 游戏客户端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-03 16:08:39
+ * @Last Modified time: 2020-03-03 21:17:04
  */
 
 import * as loading from '../loading.js';
@@ -115,6 +115,7 @@ export class ClientUpdate {
             }
 
             if (isLatestVersion) {
+                logger.log(`update`, `检测到客户端版本一致,跳过更新`);
                 this.executeUpdateCallback();
                 return;
             }

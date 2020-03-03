@@ -3,7 +3,7 @@
  * @desc 渲染进程消息处理文件
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-03 17:01:48
+ * @Last Modified time: 2020-03-03 21:18:51
  */
 import { Config } from './Config.js';
 import { ClientUpdate } from './update/ClientUpdate.js';
@@ -65,26 +65,58 @@ function onSaveNativeServerIpPort(ip, port) {
 
 /** 检查更新 */
 async function onCheckUpdate() {
-    checkClientUpdate(checkServerUpdate, checkUpdateComplete);
-
-    // /** 服务器包所在目录 */
-    // let serverPackageDir = `${Config.serverPackagePath}server`;
-    // let exists = await fs.existsSync(serverPackageDir);
-    // if (!exists) {
-
-    //     return;
+    // if (confirm("确认开始游戏吗")) {
+    //     checkServerUpdate(checkClientUpdate, checkUpdateComplete);
     // }
 
-    // let dir = await fs.readdirSync(serverPackageDir);
-    // if (dir.length == 0) {
+    /** 服务器包所在目录 */
+    let serverPackageDir = `${Config.serverPackagePath}server`;
+    let exists = await fs.existsSync(serverPackageDir);
+    if (!exists) {
+        directDownloadServer(checkClientUpdate, checkUpdateComplete);
+        return;
+    }
 
-    //     return;
-    // }
+    let dir = await fs.readdirSync(serverPackageDir);
+    if (dir.length == 0) {
+        directDownloadServer(checkClientUpdate, checkUpdateComplete);
+        return;
+    }
 
+    let isServerLatestVersion = await serverUpdate.checkLatestVersion();
+    let isClientLatestVersion = await clientUpdate.checkLatestVersion();
+    //两个版本都一致
+    if (isServerLatestVersion && isClientLatestVersion) {
+        checkUpdateComplete();
+        return;
+    }
 
+    //服务端版本一致, 直接检查更新客户端
+    if (isServerLatestVersion) {
+        checkClientUpdate(checkUpdateComplete);
+        return;
+    }
 
-    // let isServerLatestVersion = await serverUpdate.checkLatestVersion();
+    //服务端版本不一致,先提示是否更新
+    if (confirm('检测到游戏版本更新,是否更新?')) {
+        checkServerUpdate(checkClientUpdate, checkUpdateComplete);
+        return
+    }
 
+    checkUpdateComplete();
+}
+
+/** 直接下载最新服务端包 */
+function directDownloadServer(callback, ...args) {
+    try {
+        util.setGlobalConfigValue("serverPackageVersion", 0);
+        serverUpdate.checkUpdate(callback, ...args);
+    } catch (error) {
+        let content = `native下次服务端出错,点击重试`;
+        logger.error(`update`, content, error);
+        alert(content);
+        directDownloadServer(callback, ...args);
+    }
 }
 
 /** 检查客户端包更新 */

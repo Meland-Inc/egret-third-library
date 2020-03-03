@@ -3,7 +3,7 @@
  * @desc 游戏服务器端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-03 16:43:35
+ * @Last Modified time: 2020-03-03 21:17:32
  */
 
 import * as loading from '../loading.js';
@@ -53,61 +53,67 @@ export class ServerUpdate {
 
     /** 检查更新 */
     async checkUpdate(updateCallback, ...updateCbArgs) {
-        try {
-            this.updateCallback = updateCallback;
-            this.updateCbArgs = updateCbArgs;
-            let isLatestVersion;
-            if (this.remoteVersion) {
-                isLatestVersion = this.localVersion === this.remoteVersion;
-            } else {
-                isLatestVersion = await this.checkLatestVersion();
-            }
-
-            if (isLatestVersion) {
-                this.executeUpdateCallback();
-                return;
-            }
-
-            logger.log(`update`, `检测到服务器版本更新,开始更新版本${this.remoteVersion}`);
-            //更新
-            loading.showLoading();
-            let deleteDir = `${this.serverPackagePath}server`;
-            //清除要保存的文件夹
-            await util.deleteFolderRecursive(deleteDir);
-
-            let fileDir = `${Config.cdnHost}/serverPackages/${this.evnName}`;
-            let saveDir = this.serverPackagePath;
-            let fileName = `${util.getServerPackageFileName()}_v${this.remoteVersion}.zip`;
-
-            //下载文件
-            this.download.downloadFile(fileDir, saveDir, fileName, async (arg, filename, percentage) => {
-                if (arg === "finished") {
-                    util.setGlobalConfigValue("serverPackageVersion", this.remoteVersion);
-                }
-                this.downloadFileCallback(arg, filename, percentage);
-            });
-        } catch (error) {
-            throw error;
+        this.updateCallback = updateCallback;
+        this.updateCbArgs = updateCbArgs;
+        let isLatestVersion;
+        if (this.remoteVersion) {
+            isLatestVersion = this.localVersion === this.remoteVersion;
+        } else {
+            isLatestVersion = await this.checkLatestVersion();
         }
+
+        if (isLatestVersion) {
+            logger.log(`update`, `检测到服务端版本一致,跳过更新`);
+            this.executeUpdateCallback();
+            return;
+        }
+
+        logger.log(`update`, `检测到服务器版本更新,开始更新版本${this.remoteVersion}`);
+        //更新
+        loading.showLoading();
+        let deleteDir = `${this.serverPackagePath}server`;
+        //清除要保存的文件夹
+        await util.deleteFolderRecursive(deleteDir);
+
+        this.downloadPackage()
+    }
+
+    /** 下载服务端包 */
+    downloadPackage() {
+        let fileDir = `${Config.cdnHost}/serverPackages/${this.evnName}`;
+        let saveDir = this.serverPackagePath;
+        let fileName = `${util.getServerPackageFileName()}_v${this.remoteVersion}.zip`;
+        //下载文件
+        this.download.downloadFile(fileDir, saveDir, fileName, async (arg, filename, percentage, errorMsg) => {
+            if (arg === "finished") {
+                util.setGlobalConfigValue("serverPackageVersion", this.remoteVersion);
+            }
+            this.downloadFileCallback(fileDir, saveDir, arg, filename, percentage, errorMsg);
+        });
     }
 
     /** 下载文件回调 */
-    async downloadFileCallback(arg, filename, percentage) {
-        if (arg === "progress") {
+    async downloadFileCallback(fileDir, saveDir, result, filename, percentage, errorMsg) {
+        if (result === "progress") {
             // 显示进度
             loading.setLoadingProgress(percentage);
+            return;
         }
-        else if (arg === "finished") {
+
+        if (result === "finished") {
             logger.log(`update`, `下载文件:${filename}完毕`);
             // 通知完成
             try {
                 let zip = new admzip(this.serverPackagePath + filename);
                 zip.extractAllTo(this.serverPackagePath, true);
             } catch (error) {
-                let content = `解压文件:${filename}错误`
+                let content = `解压文件:${filename}错误,开始重新下载`;
                 logger.error(`update`, content, error);
-                alert(content);
-                this.executeUpdateCallback();
+
+                this.downloadPackage();
+                // alert(content);
+                // this.executeUpdateCallback();
+
             }
             fs.unlink(this.serverPackagePath + filename, (err) => {
                 if (err) {
@@ -116,12 +122,24 @@ export class ServerUpdate {
                 logger.log(`update`, '文件:' + filename + '删除成功！');
             });
             this.executeUpdateCallback();
-        } else if (arg == "404") {
+            return;
+        }
+
+        if (result == "404") {
             let content = `下载文件:${filename}错误, 文件不存在!`;
             logger.error(`update`, content);
             alert(content);
 
             this.executeUpdateCallback();
+            return;
+        }
+
+        if (result == "error") {
+            let content = `下载文件:${filename}出错, ${errorMsg}`;
+            logger.error(`update`, content);
+            alert(content);
+            this.downloadPackage();
+            return;
         }
     }
 
