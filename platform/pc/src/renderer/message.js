@@ -3,7 +3,7 @@
  * @desc 渲染进程消息处理文件
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-03 21:18:51
+ * @Last Modified time: 2020-03-03 21:42:53
  */
 import { Config } from './Config.js';
 import { ClientUpdate } from './update/ClientUpdate.js';
@@ -103,6 +103,7 @@ async function onCheckUpdate() {
         return
     }
 
+    //不更新
     checkUpdateComplete();
 }
 
@@ -179,15 +180,14 @@ async function onStartNativeLesson(queryObject) {
 /** 开始平台进入 */
 async function onStartNativePlatform(queryObject) {
     let queryValue = querystring.stringify(queryObject);
-    let jumpHref = `${Config.rootPath}/package/client/index.html?${queryValue}`;
-    jumpHref = encodeURIComponent(jumpHref);
+    let iframeSrc = `file://${Config.rootPath}/package/client/index.html?${queryValue}`;
     let platformObject = {
         class_id: queryObject["class_id"],
         package_id: queryObject["package_id"],
         lesson_id: queryObject["lesson_id"],
         act_id: queryObject["act_id"],
         webviewToken: queryObject["token"],
-        iframeSrc: `file://${jumpHref}`
+        iframeSrc: iframeSrc
     }
     let platformValue = querystring.stringify(platformObject);
     //获取官网链接
