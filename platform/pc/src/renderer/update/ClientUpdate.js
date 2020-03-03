@@ -3,17 +3,17 @@
  * @desc 游戏客户端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-28 20:09:28
+ * @Last Modified time: 2020-03-03 15:39:37
  */
 
 import * as loading from '../loading.js';
 import * as logger from '../logger.js';
 import { Config } from '../Config.js';
+import * as util from '../util.js';
 import { StreamDownload } from './StreamDownload.js';
 
 const fs = require('fs');
 const admzip = require("adm-zip");
-const http = require("http");
 
 export class ClientUpdate {
     /** 补丁包目录 */
@@ -47,105 +47,82 @@ export class ClientUpdate {
     /** 策略文件相对host路径 */
     policyPath = "";
 
+    /** 检查是否最新版本 */
+    async checkLatestVersion() {
+        let indexContent = await fs.readFileSync(`${Config.clientPackagePath}` + "index.html", "utf-8");
+        let versionResult = indexContent.match(new RegExp(`let patchVersion = "([0-9]+)";`));
+        this.curVersion = this.startVersion = +versionResult[1];
+
+        //同样通过匹配获取当前环境
+        let urlResult = indexContent.match(new RegExp(`let patchUrl = "([^\";]*)";`));
+        this.patchUrl = `${Config.protocol}//${urlResult[1]}`;
+
+        let evnResult = indexContent.match(new RegExp(`let evnName = "([^\";]*)";`));
+        this.evnName = evnResult[1];
+
+        let policyUrlResult = indexContent.match(new RegExp(`let policyUrl = "([^\";]*)";`));
+        let policyUrl = policyUrlResult[1];
+        this.policyHost = policyUrlResult[1].split("/")[0];
+        this.policyPath = policyUrlResult[1].replace(this.policyHost, this.policyPath);
+        logger.log(`renderer`, "native curVersion : ", this.curVersion, this.policyHost, this.policyPath, this.evnName, policyUrl);
+        let policyNum = await this.getCurPolicyNum();
+        if (policyNum === null) {
+            let content = "获取策略版本号错误!";
+            logger.error(`renderer`, content);
+            alert(content);
+            return true;
+        }
+
+        try {
+            this.gameVersion = await util.getGameVersion(this.policyHost, this.policyPath, policyNum);
+            return this.curVersion === this.gameVersion;
+        } catch (error) {
+            let content = "获取游戏版本号错误!";
+            logger.error(`renderer`, content);
+            alert(content);
+            return true;
+        }
+    }
+
+    /** 获取当前策略版本 */
+    getCurPolicyNum() {
+        return new Promise(async (resolve, reject) => {
+            try {
+                let responseText = await util.getPolicyInfo(this.evnName);
+                let data = JSON.parse(responseText);
+                let policyNum = data.Data.Version;
+                logger.log(`renderer`, `策略版本号:${policyNum}`);
+                resolve(policyNum);
+            } catch (error) {
+                let content = "获取策略版本号错误!";
+                logger.error(`renderer`, content);
+                resolve(null);
+            }
+        });
+    }
+
     /** 检查更新 */
     async checkUpdate(updateCallback, ...updateCbArgs) {
         try {
             this.updateCallback = updateCallback;
             this.updateCbArgs = updateCbArgs;
-            let indexContent = await fs.readFileSync(`${Config.clientPackagePath}` + "index.html", "utf-8");
-            let versionResult = indexContent.match(new RegExp(`let patchVersion = "([0-9]+)";`));
-            this.curVersion = this.startVersion = +versionResult[1];
+            let isLatestVersion;
+            if (this.gameVersion) {
+                isLatestVersion = this.curVersion === this.gameVersion;
+            } else {
+                isLatestVersion = await this.checkLatestVersion();
+            }
 
-            //同样通过匹配获取当前环境
-            let urlResult = indexContent.match(new RegExp(`let patchUrl = "([^\";]*)";`));
-            this.patchUrl = `${Config.protocol}//${urlResult[1]}`;
+            if (isLatestVersion) {
+                this.executeUpdateCallback();
+                return;
+            }
 
-            let evnResult = indexContent.match(new RegExp(`let evnName = "([^\";]*)";`));
-            this.evnName = evnResult[1];
-
-            let policyUrlResult = indexContent.match(new RegExp(`let policyUrl = "([^\";]*)";`));
-            let policyUrl = policyUrlResult[1];
-            this.policyHost = policyUrlResult[1].split("/")[0];
-            this.policyPath = policyUrlResult[1].replace(this.policyHost, this.policyPath);
-            logger.log(`renderer`, "native curVersion : ", this.curVersion, this.policyHost, this.policyPath, this.evnName, policyUrl);
-            this.getPolicyVersion();
+            this.patchCount = this.gameVersion - this.startVersion;
+            this.installSinglePatch();
         } catch (error) {
             throw error;
         }
-    }
-
-    /** 获取策略版本 */
-    getPolicyVersion() {
-        //外部直接指定
-        let policyQueryServer = 'policy-server.wkcoding.com';
-        //没有指定需要获取
-        let request = new XMLHttpRequest();
-        let versionName = this.evnName;
-        let channel = "bian_game";
-        let time = '' + Math.floor(new Date().getTime() / 1000);
-        let secret = "LznauW6GzBsq3wP6";
-        let due = '' + 1800;
-        let token = "*";
-
-        let url = new URL(`${Config.protocol}//${policyQueryServer}/getVersion`, window.location);
-        url.searchParams.append('versionName', versionName);
-        url.searchParams.append('channel', channel);
-        url.searchParams.append('time', time);
-        url.searchParams.append('due', due);
-        url.searchParams.append('token', token);
-
-        request.open("GET", url.toString());
-        request.onreadystatechange = () => {
-            if (request.readyState !== 4) return;
-            if (request.status === 200) {
-                let data = JSON.parse(request.responseText);
-                let policyVersion = data.Data.Version;
-                logger.log(`renderer`, `策略版本号:${policyVersion}`)
-                this.startLoadPolicy(policyVersion);
-            } else {
-                let content = "获取策略版本号错误!";
-                logger.error(`renderer`, content);
-                alert(content);
-                this.executeUpdateCallback();
-            }
-        }
-        request.send();
-    }
-
-    /** 加载策略文件 */
-    startLoadPolicy(policyVersion) {
-        let options = {
-            host: this.policyHost, // 请求地址 域名，google.com等.. 
-            // port: 10001,
-            path: `${this.policyPath}/policyFile_v${policyVersion}.json`, // 具体路径eg:/upload
-            method: 'GET', // 请求方式, 这里以post为例
-            headers: { // 必选信息,  可以抓包工看一下
-                'Content-Type': 'application/json'
-            }
-        };
-        http.get(options, (response) => {
-            if (response.statusCode != 200) {
-                console.error("[policy] can not load policy, version=" + policyVersion + ", statusCode=" + response.statusCode + ",option =" + options.host + options.path);
-                throw "can not load policy!";
-            }
-
-            let resData = "";
-            response.on("data", (data) => {
-                resData += data;
-            });
-            response.on("end", async () => {
-                let obj = JSON.parse(resData);
-                this.gameVersion = obj.normalVersion;
-                logger.log(`renderer`, `游戏版本号:${this.gameVersion}`)
-
-                this.patchCount = this.gameVersion - this.startVersion;
-                if (this.patchCount > 0) {
-                    this.installSinglePatch();
-                } else {
-                    this.executeUpdateCallback();
-                }
-            });
-        })
     }
 
     /** 下载文件回调 */

@@ -3,7 +3,7 @@
  * @desc 渲染进程消息处理文件
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-02 16:50:09
+ * @Last Modified time: 2020-03-03 15:33:02
  */
 import { Config } from './Config.js';
 import { ClientUpdate } from './update/ClientUpdate.js';
@@ -60,34 +60,39 @@ function onSaveNativeServerIpPort(ip, port) {
 
 /** 检查更新 */
 function onCheckUpdate() {
+    checkClientUpdate(checkServerUpdate, checkUpdateComplete);
+}
+
+/** 检查客户端包更新 */
+function checkClientUpdate(callback, ...args) {
     try {
         let clientUpdate = new ClientUpdate();
-        clientUpdate.checkUpdate(clientUpdateCB);
+        clientUpdate.checkUpdate(callback, ...args);
     } catch (error) {
         let content = `native更新客户端报错`
         logger.error(`update`, content, error);
         alert(content);
 
-        clientUpdateCB();
+        callback(...args);
     }
 }
 
-/** 客户端更新回调 */
-function clientUpdateCB() {
+/** 检查服务端包更新 */
+function checkServerUpdate(callback, ...args) {
     try {
         let serverUpdate = new ServerUpdate();
-        serverUpdate.checkUpdate(serverUpdateCB);
+        serverUpdate.checkUpdate(callback, ...args);
     } catch (error) {
         let content = `native更新服务端报错`
         logger.error(`update`, content, error);
         alert(content);
 
-        serverUpdateCB();
+        callback(...args);
     }
 }
 
-/** 服务端更新回调 */
-function serverUpdateCB() {
+/** 检查更新完毕 */
+function checkUpdateComplete() {
     if (Config.nativeLoginResponse) {
         localStorage.setItem('nativeLoginResponse', JSON.stringify(Config.nativeLoginResponse));
     } else {

@@ -3,14 +3,16 @@
  * @desc 工具类
  * @date 2020-02-28 19:56:39 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-28 22:27:21
+ * @Last Modified time: 2020-03-03 15:42:04
  */
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
+const http = require("http");
+import * as logger from './logger.js';
 
 /** 获取指定策略信息 */
-function getPolicyInfo(versionName) {
+export function getPolicyInfo(versionName) {
     return new Promise((resolve, reject) => {
         let time = Math.floor(new Date().getTime() / 1000);
         let due = 1800;
@@ -27,7 +29,9 @@ function getPolicyInfo(versionName) {
         let request = new XMLHttpRequest();
         request.open("GET", url);
         request.onreadystatechange = () => {
-            if (request.readyState !== 4) return;
+            if (request.readyState !== 4) {
+                return;
+            }
             if (request.status === 200) {
                 console.log(request.responseText);
                 resolve(request.responseText);
@@ -37,6 +41,39 @@ function getPolicyInfo(versionName) {
         }
         request.send(null);
     });
+}
+
+/** 获取游戏版本 */
+export function getGameVersion(policyHost, policyPath, policyNum) {
+    return new Promise((resolve, reject) => {
+        let options = {
+            host: policyHost, // 请求地址 域名，google.com等.. 
+            // port: 10001,
+            path: `${policyPath}/policyFile_v${policyNum}.json`, // 具体路径eg:/upload
+            method: 'GET', // 请求方式, 这里以post为例
+            headers: { // 必选信息,  可以抓包工看一下
+                'Content-Type': 'application/json'
+            }
+        };
+        http.get(options, (response) => {
+            if (response.statusCode != 200) {
+                console.error("[policy] can not load policy, version=" + policyNum + ", statusCode=" + response.statusCode + ",option =" + options.host + options.path);
+                reject();
+            }
+
+            let resData = "";
+            response.on("data", (data) => {
+                resData += data;
+            });
+            response.on("end", () => {
+                let obj = JSON.parse(resData);
+                let gameVersion = obj.normalVersion;
+                logger.log(`renderer`, `游戏版本号:${gameVersion}`)
+
+                resolve(gameVersion)
+            });
+        })
+    })
 }
 
 /** 获取服务器包版本号 */
