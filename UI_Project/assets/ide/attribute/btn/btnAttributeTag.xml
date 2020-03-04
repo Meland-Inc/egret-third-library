@@ -8,7 +8,9 @@
     <image id="n1_cgkq" name="n1" src="cgkqwcyilf" fileName="attribute/img/img_att_tab_2.png" xy="0,0">
       <gearDisplay controller="button" pages="1"/>
     </image>
-    <text id="n2_cgkq" name="title" xy="0,6" size="99,30" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" text="title"/>
+    <text id="n2_cgkq" name="title" xy="0,6" size="99,30" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" text="title">
+      <gearColor controller="button" pages="0" values="#333333,#000000" default="#ffffff,#000000"/>
+    </text>
   </displayList>
   <Button mode="Radio"/>
 </component>
