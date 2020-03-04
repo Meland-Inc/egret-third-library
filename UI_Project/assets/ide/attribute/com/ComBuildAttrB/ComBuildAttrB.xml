@@ -67,10 +67,10 @@
       <gearDisplay controller="ctrlState" pages="2"/>
       <relation target="" sidePair="middle-middle"/>
     </group>
-    <component id="n52_jm8l" name="btnRun" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="115,979" size="116,110">
+    <component id="n52_jm8l" name="btnRun" src="fn8fcyijz" fileName="btn/btnIde.xml" pkg="oyity675" xy="115,979">
       <gearXY controller="ctrlState" pages="0,2" values="115,979|115,980" default="-115,980"/>
       <relation target="" sidePair="bottom-bottom"/>
-      <Button icon="ui://ti9jag5txba67h"/>
+      <Button icon="ui://oyity675cnxcwcyilz"/>
     </component>
     <component id="n68_hl7y" name="comEmptyClone" src="hl7ywcyijw" fileName="ideCommon/com/comEmptyCloneEntity.xml" xy="229,0" controller="ctrlStatus,0">
       <gearDisplay controller="ctrlState" pages="0,2"/>

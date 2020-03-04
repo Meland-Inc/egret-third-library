@@ -46,10 +46,10 @@
       <relation target="n1_s45w" sidePair="bottom-bottom,right-left"/>
       <Button icon="ui://ti9jag5txba67h"/>
     </component>
-    <component id="n31_en7j" name="btnExit1" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="1605,980" size="116,110">
+    <component id="n31_en7j" name="btnExit1" src="fn8fcyijz" fileName="btn/btnIde.xml" pkg="oyity675" xy="1605,980">
       <gearDisplay controller="ctrlStatus" pages="2,1"/>
       <relation target="" sidePair="bottom-bottom,right-right"/>
-      <Button icon="ui://ti9jag5txba67h"/>
+      <Button icon="ui://oyity675cnxcwcyilz"/>
     </component>
     <component id="n32_g61s" name="comEmptyClone" src="hl7ywcyijw" fileName="ideCommon/com/comEmptyCloneEntity.xml" xy="1719,0" controller="ctrlStatus,0">
       <gearDisplay controller="ctrlStatus" pages="2,1"/>

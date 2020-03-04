@@ -10,9 +10,9 @@
     <text id="n28_ssks" name="tfMapName" xy="23,6" size="352,29" group="n32_x8d1" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" text="千与千寻七个字">
       <relation target="n34_ra2b" sidePair="middle-middle"/>
     </text>
-    <image id="n45_oebl" name="imgSubscribeNum" src="8qqi3i" fileName="img/icon_mapt_sc_2.png" xy="171,138" group="n47_oebl"/>
-    <text id="n46_oebl" name="tfSubscribeNum" xy="195,140" size="66,18" group="n47_oebl" fontSize="14" color="#999999" vAlign="middle" autoSize="none" singleLine="true" text="999"/>
-    <group id="n47_oebl" name="grpSubscribe" xy="171,138" size="90,20" group="n32_x8d1" advanced="true"/>
+    <image id="n45_oebl" name="imgSubscribeNum" src="8qqi3i" fileName="img/icon_mapt_sc_2.png" xy="175,138" group="n47_oebl"/>
+    <text id="n46_oebl" name="tfSubscribeNum" xy="199,140" size="66,18" group="n47_oebl" fontSize="14" color="#999999" vAlign="middle" autoSize="none" singleLine="true" text="999"/>
+    <group id="n47_oebl" name="grpSubscribe" xy="175,138" size="90,20" group="n32_x8d1" advanced="true"/>
     <component id="n31_ssks" name="btnCreateRoom" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="11,189" size="227,38" group="n32_x8d1">
       <Button icon="ui://0axy98cgra2b3z"/>
     </component>

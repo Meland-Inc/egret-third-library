@@ -4,10 +4,9 @@
   <controller name="ctrlIsPublish" pages="0,false,1,true" selected="0"/>
   <controller name="ctrlIsManorCheckPoint" pages="0,true,1,false" selected="0"/>
   <displayList>
-    <image id="n0_er8n" name="imgInputBg" src="eggjcyihs" fileName="img/img_cm_srk_1.png" pkg="te1gxawo" xy="10,10" size="380,40" group="n40_ra2b"/>
-    <image id="n1_er8n" name="imgPen" src="pz1n3w" fileName="img/icon_mapT_bj.png" xy="355,19" group="n40_ra2b"/>
-    <text id="n2_er8n" name="inpMapName" xy="14,16" size="369,29" group="n40_ra2b" alpha="0.6" input="true" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="七桥问题地图"/>
-    <group id="n40_ra2b" name="grpInput" xy="10,10" size="380,40" collapsed="true"/>
+    <component id="n59_azjx" name="labNameInput" src="azjx4v" fileName="com/labNameInput.xml" xy="10,10" size="380,40">
+      <Label icon="ui://te1gxawoeggjcyihs"/>
+    </component>
     <image id="n50_oebl" name="imgAuthor" src="c1h7cyii2" fileName="img/icon_cm_avatar.png" pkg="te1gxawo" xy="179,59" group="n52_oebl"/>
     <text id="n51_oebl" name="tfCreater" xy="205,55" size="194,29" group="n52_oebl" fontSize="18" color="#333333" vAlign="middle" vars="true" autoSize="none" text="地图作者: {name=author}"/>
     <group id="n52_oebl" name="grpAuthor" xy="179,55" size="220,29" group="n42_ra2b" collapsed="true"/>
@@ -32,7 +31,7 @@
       <Button title="跳转到列表页" titleColor="#333333" titleFontSize="18" icon="ui://ti9jag5txba67d"/>
     </component>
     <image id="n46_qq0e" name="imgLIne" src="vlrgcyijh" fileName="img/img_cm_line_1.png" pkg="te1gxawo" xy="11,199" size="378,3" group="n48_oebl"/>
-    <text id="n3_er8n" name="tfMapSize" xy="7,220" size="77,24" group="n48_oebl" fontSize="18" color="#333333" vAlign="bottom" text="地图大小"/>
+    <text id="n3_er8n" name="tfMapSize" xy="7,220" size="77,22" group="n48_oebl" fontSize="18" color="#333333" vAlign="bottom" text="地图大小"/>
     <graph id="n49_oebl" name="gphPosCtrl" xy="161,311" size="100,0" group="n48_oebl" hideByEditor="true" visible="false" type="rect">
       <gearSize controller="ctrlMapSizeStatus" pages="3" values="100,65,1,1" default="100,0,1,1"/>
     </graph>
