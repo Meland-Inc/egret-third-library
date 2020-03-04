@@ -3,7 +3,7 @@
  * @desc 下载类
  * @date 2020-02-25 10:50:36 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-25 15:45:51
+ * @Last Modified time: 2020-02-28 20:14:11
  */
 import * as logger from '../logger.js';
 const fs = require('fs');
@@ -13,7 +13,7 @@ const path = require('path');
 export class StreamDownload {
     // 声明下载过程回调函数
     downloadCallback = null;
-    patchUrl = null;
+    fileUrl = null;
     fileStream = null;
 
     // 下载进度
@@ -24,11 +24,18 @@ export class StreamDownload {
     };
 
     // 下载过程
-    downloadFile(patchUrl, baseDir, filename, callback) {
+    /**
+     * 
+     * @param fileDir 下载文件的目录
+     * @param saveDir 下载后存放的目录
+     * @param filename 下载文件的名称
+     * @param callback 下载完成的回调方法
+     */
+    downloadFile(fileDir, saveDir, filename, callback) {
         try {
-            logger.log(`update`, `开始下载文件`, patchUrl, filename, baseDir)
+            logger.log(`update`, `开始下载文件`, fileDir, filename, saveDir)
             this.downloadCallback = callback; // 注册回调函数
-            this.patchUrl = patchUrl + "/" + filename;
+            this.fileUrl = fileDir + "/" + filename;
 
             let receivedBytes = 0;
             let totalBytes = 1;
@@ -36,7 +43,7 @@ export class StreamDownload {
             try {
                 req = request({
                     method: 'GET',
-                    uri: this.patchUrl
+                    uri: this.fileUrl
                 });
             } catch (error) {
                 throw error;
@@ -46,7 +53,7 @@ export class StreamDownload {
             req.on('response', (data) => {
                 // 更新总文件字节大小
                 if (data.statusCode == 404) {
-                    logger.error(`update`, `下载patch包路径找不到文件`, this.patchUrl);
+                    logger.error(`update`, `下载patch包路径找不到文件`, this.fileUrl);
                     this.downloadCallback('404', filename, 100);
                     this.downloadCallback = null;
                 } else {
@@ -69,7 +76,7 @@ export class StreamDownload {
                     this.downloadCallback = null;
                 }, 500)
             })
-            var filepath = path.join(baseDir, filename);
+            let filepath = path.join(saveDir, filename);
             this.fileStream = fs.createWriteStream(filepath);
             req.pipe(this.fileStream);
 

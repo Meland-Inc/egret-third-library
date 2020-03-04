@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" designImage="ui://thvmj7vopi8y4cyiji" designImageAlpha="3" designImageLayer="1">
+  <controller name="ctrlTag" pages="0,all,1,effect,2,music,3,custom" selected="0"/>
+  <controller name="ctrlSelected" pages="1,hide,0,show" selected="1"/>
+  <displayList>
+    <image id="n22_i6od" name="imgTopBg" src="oiqdcyih6" fileName="img/img_cm_3.png" pkg="te1gxawo" xy="251,96" size="1460,58" group="n15_pi8y"/>
+    <image id="n21_i6od" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="250,96" size="1460,890" group="n15_pi8y"/>
+    <image id="n3_pi8y" name="imgTitleBg" src="oiqdcyih5" fileName="img/img_cm_2.png" pkg="te1gxawo" xy="222,97" group="n15_pi8y"/>
+    <text id="n4_pi8y" name="tfTitle" xy="227,108" size="178,38" group="n15_pi8y" fontSize="24" color="#333333" align="center" vAlign="middle" autoSize="none" text="声音素材库"/>
+    <list id="n7_pi8y" name="lstTag" xy="520,104" size="526,48" group="n15_pi8y" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="128" colGap="13" defaultItem="ui://48p8y12atvlfi" selectionController="ctrlTag">
+      <item title="全部"/>
+      <item title="音效"/>
+      <item title="音乐"/>
+      <item title="自定义"/>
+    </list>
+    <image id="n17_i6od" name="imgSearchInputBg" src="oiqdcyigx" fileName="img/img_cm_ssk.png" pkg="te1gxawo" xy="1383,107" size="257,37" group="n20_i6od"/>
+    <text id="n18_i6od" name="inpSearch" xy="1449,114" size="179,26" group="n20_i6od" input="true" prompt="[color=#999999]请输入搜索内容[/color]" fontSize="20" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text=""/>
+    <image id="n19_i6od" name="n19" src="rujpcyijl" fileName="img/icon_cm_ss.png" pkg="te1gxawo" xy="1414,111" size="32,32" group="n20_i6od"/>
+    <group id="n20_i6od" name="grpSearchInput" xy="1382,107" size="258,37" group="n15_pi8y" advanced="true" collapsed="true"/>
+    <component id="n5_pi8y" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1650,106" size="48,48" group="n15_pi8y">
+      <Button icon="ui://0axy98cg8qqi3l"/>
+    </component>
+    <image id="n23_i6od" name="imgLstBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="280,175" size="1400,780" group="n15_pi8y"/>
+    <list id="n9_pi8y" name="lstSound" xy="300,196" size="1373,487" group="n15_pi8y" layout="flow_hz" selectionMode="multipleSingleClick" overflow="scroll" scrollBarRes="ui://te1gxawo9c90cyij6," lineGap="10" colGap="10" defaultItem="ui://ti9jag5tpi8ywcyilr">
+      <gearSize controller="ctrlSelected" pages="1,0" values="1373,742,1,1|1373,487,1,1"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n11_pi8y" name="imgLstCurSelectedBg" src="pi8ywcyilv" fileName="attribute/img/img_att_sy_4.png" xy="250,686" size="1460,300" group="n14_pi8y"/>
+    <list id="n10_pi8y" name="lstCurSelected" xy="300,706" size="1376,174" group="n14_pi8y" layout="row" overflow="scroll" scroll="horizontal" colGap="10" defaultItem="ui://ti9jag5tpi8ywcyilr" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n12_pi8y" name="btnClear" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1298,916" size="160,44" group="n14_pi8y">
+      <Button title="清空" titleFontSize="20" icon="ui://te1gxawoeggjcyihf"/>
+    </component>
+    <component id="n13_pi8y" name="btnConfirm" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1489,916" size="160,44" group="n14_pi8y">
+      <Button title="确定" titleFontSize="20" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <group id="n14_pi8y" name="grpCurSelected" xy="250,686" size="1460,300" group="n15_pi8y" advanced="true">
+      <gearDisplay controller="ctrlSelected" pages="0"/>
+    </group>
+    <component id="n16_s9jm" name="btnUpload" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1098,104" size="160,44" group="n15_pi8y">
+      <gearDisplay controller="ctrlTag" pages="3"/>
+      <Button title="上传" titleFontSize="20" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <group id="n15_pi8y" name="root" xy="222,96" size="1489,890" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

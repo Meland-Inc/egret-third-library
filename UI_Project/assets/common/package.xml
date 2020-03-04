@@ -642,10 +642,15 @@
     <image id="kujxcyijn" name="btn_cm_fjm.png" path="/img/" exported="true"/>
     <image id="ggj7cyijo" name="icon_cm_fjm_1.png" path="/img/" exported="true"/>
     <component id="g6m3cyijp" name="ComEntityTag.xml" path="/com/"/>
-    <image id="d7i5cyijq" name="img_cm_bq.png" path="/img/" scale="9grid" scale9grid="14,6,28,12"/>
+    <image id="d7i5cyijq" name="img_cm_bq.png" path="/img/" exported="true" scale="9grid" scale9grid="14,6,28,12"/>
     <image id="f08kcyijr" name="icon_cm_gb_1.png" path="/img/" exported="true"/>
-    <image id="nibscyijs" name="img_cm_xzk_1.png" path="/img/" exported="true" scale="9grid" scale9grid="10,10,20,20"/>
-    <image id="nibscyijt" name="img_cm_xzk_2.png" path="/img/" exported="true" scale="9grid" scale9grid="10,10,20,20"/>
+    <image id="pve9cyijs" name="img_cm_xzk_2.png" path="/img/" exported="true"/>
+    <image id="pve9cyijt" name="img_cm_xzk_1.png" path="/img/" exported="true" scale="9grid" scale9grid="10,10,20,20"/>
+    <image id="pve9cyiju" name="img_cm_kjj.png" path="/img/" exported="true"/>
+    <image id="pve9cyijv" name="icon_cm_fdj_3.png" path="/img/" exported="true"/>
+    <image id="pve9cyijw" name="icon_cm_fdj_2.png" path="/img/" exported="true"/>
+    <image id="pve9cyijx" name="icon_cm_fdj_1.png" path="/img/" exported="true"/>
+    <image id="pve9cyijy" name="btn_cm_yellow_1.png" path="/img/" exported="true"/>
   </resources>
   <publish name="common">
     <atlas name="默认" index="0"/>

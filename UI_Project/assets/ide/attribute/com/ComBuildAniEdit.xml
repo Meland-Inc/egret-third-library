@@ -7,13 +7,11 @@
     </image>
     <image id="n65_xba6" name="n65" src="xba67m" fileName="ideCommon/img/img_ide_cm_6.png" xy="0,0" size="430,56"/>
     <image id="n74_xba6" name="n74" src="hckx77" fileName="attribute/img/img_att_dh_1.png" xy="12,120" size="408,904">
-      <relation target="" sidePair="width-width,height-height,center-center,top-top"/>
+      <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <component id="n53_fidk" name="scrollAni" src="hckx6j" fileName="attribute/com/comBuildAniScroll.xml" xy="12,115" size="408,904">
-      <relation target="n74_xba6" sidePair="height-height,width-width,left-left,top-top"/>
-    </component>
     <image id="n79_odww" name="n79" src="xba67l" fileName="ideCommon/img/img_ide_cm_5.png" xy="0,1016" size="430,64">
-      <relation target="" sidePair="width-width,left-left,bottom-bottom"/>
+      <relation target="" sidePair="width-width,left-left"/>
+      <relation target="" sidePair="height-height"/>
     </image>
     <text id="n55_s1sd" name="n55" xy="55,15" size="85,26" fontSize="20" align="center" vAlign="middle" text="动画编辑"/>
     <image id="n70_xba6" name="n70" src="hckx70" fileName="attribute/img/icon_att_dh.png" xy="15,14"/>
@@ -28,7 +26,7 @@
       <relation target="" sidePair="right-right,bottom-bottom"/>
       <Button title="保存" titleColor="#ffffff" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <component id="n76_xba6" name="btnExit" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="308,1032" size="110,40">
+    <component id="n76_xba6" name="btnExit" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="308,1032" size="110,40" visible="false">
       <gearDisplay controller="ctrlCombine" pages="0"/>
       <relation target="" sidePair="right-right,bottom-bottom"/>
       <Button title="返回" titleColor="#ffffff" icon="ui://te1gxawoeggjcyihf"/>
@@ -51,6 +49,9 @@
       <gearDisplay controller="ctrlCombine" pages="2"/>
       <relation target="" sidePair="bottom-bottom,right-right"/>
       <Button title="拆分" titleColor="#ffffff" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <component id="n53_fidk" name="scrollAni" src="hckx6j" fileName="attribute/com/comBuildAniScroll.xml" xy="12,115" size="408,904">
+      <relation target="n74_xba6" sidePair="bottomext-bottom,width-width"/>
     </component>
   </displayList>
 </component>

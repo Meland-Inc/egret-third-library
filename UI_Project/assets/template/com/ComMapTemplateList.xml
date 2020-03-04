@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1413,881" designImage="ui://thvmj7vouecl4cyijp" designImageOffsetX="-31" designImageOffsetY="-118" designImageAlpha="100" designImageLayer="1">
-  <controller name="ctrlHotRecent" pages="1,hide,0,show" selected="1"/>
+<component size="1413,881" designImage="ui://thvmj7vouecl4cyijp" designImageOffsetX="-31" designImageOffsetY="-118" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlHotRecent" pages="1,hide,0,show" selected="0"/>
   <controller name="ctrlSort" pages="1,hot,0,recent" selected="0">
     <action type="change_page" fromPage="" toPage="1" controller="ctrlHotRecent" targetPage="1"/>
     <action type="change_page" fromPage="" toPage="0" controller="ctrlHotRecent" targetPage="1"/>
@@ -91,19 +91,19 @@
     <component id="n29_nibs" name="btnShowHotRecent" src="nibs4r" fileName="btn/btnShowHotRecent.xml" xy="279,-64" size="80,26" group="n31_nw2k">
       <gearDisplay controller="ctrlListType" pages=""/>
       <gearText controller="ctrlSort" pages="1" values="最热" default="最新"/>
-      <Button checked="true" title="最热" controller="ctrlHotRecent" page="0"/>
+      <Button title="最热" controller="ctrlHotRecent" page="0"/>
     </component>
-    <image id="n25_nibs" name="imgBtnBg" src="nibscyijs" fileName="img/img_cm_xzk_1.png" pkg="te1gxawo" xy="273,-32" size="88,88" group="n30_nibs"/>
+    <image id="n25_nibs" name="imgBtnBg" src="pve9cyijt" fileName="img/img_cm_xzk_1.png" pkg="te1gxawo" xy="273,-32" size="88,88" group="n30_nibs"/>
     <component id="n24_nibs" name="btnHot" src="nibs4q" fileName="btn/btnType.xml" xy="275,-29" size="83,41" group="n30_nibs">
       <Button checked="true" title="最热" controller="ctrlSort" page="1"/>
     </component>
     <component id="n27_nibs" name="btnRecent" src="nibs4q" fileName="btn/btnType.xml" xy="275,11" size="83,41" group="n30_nibs">
       <Button title="最新" controller="ctrlSort" page="0"/>
     </component>
-    <group id="n30_nibs" name="grpHotRecent" xy="273,-32" size="89,87" group="n31_nw2k" advanced="true">
+    <group id="n30_nibs" name="grpHotRecent" xy="273,-32" size="88,88" group="n31_nw2k" advanced="true">
       <gearDisplay controller="ctrlHotRecent" pages="0"/>
     </group>
-    <group id="n31_nw2k" name="grpSort" xy="273,-64" size="89,119" advanced="true">
+    <group id="n31_nw2k" name="grpSort" xy="273,-64" size="88,120" advanced="true">
       <gearDisplay controller="ctrlListType" pages="7,8,9,10,11,12,5,6"/>
     </group>
   </displayList>

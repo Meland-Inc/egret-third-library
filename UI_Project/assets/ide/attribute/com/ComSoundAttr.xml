@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="409,769" designImage="ui://thvmj7vorx8e4cyijh" designImageOffsetX="-1501" designImageOffsetY="-289" designImageAlpha="1" designImageLayer="1">
+  <displayList>
+    <image id="n0_rx8e" name="imgBg" src="hckx77" fileName="attribute/img/img_att_dh_1.png" xy="0,0" size="408,710">
+      <relation target="" sidePair="bottomext-bottom"/>
+    </image>
+    <list id="n1_rx8e" name="lstSound" xy="0,0" size="408,710" overflow="scroll" defaultItem="ui://ti9jag5trx8ewcyili" autoClearItems="true">
+      <relation target="" sidePair="bottomext-bottom"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n3_rx8e" name="btnAddSound" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="160,729" size="119,40">
+      <relation target="" sidePair="bottom-bottom"/>
+      <Button title="添加声音" titleColor="#333333" titleFontSize="18" icon="ui://te1gxawogup1cyihx"/>
+    </component>
+    <component id="n5_rx8e" name="btnUpload" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="290,729" size="119,40">
+      <relation target="" sidePair="bottom-bottom"/>
+      <Button title="上传声音" titleColor="#333333" titleFontSize="18" icon="ui://te1gxawogup1cyihx"/>
+    </component>
+  </displayList>
+</component>

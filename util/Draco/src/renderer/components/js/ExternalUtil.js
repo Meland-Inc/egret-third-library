@@ -9,7 +9,7 @@ export function getPolicyInfo(versionName) {
         let channel = "bian_game"
 
         let policyQueryServer = 'policy-server.wkcoding.com';
-        let url = new URL('//' + policyQueryServer + '/getVersion', window.location);
+        let url = new URL('http://' + policyQueryServer + '/getVersion', window.location);
         url.searchParams.append('versionName', versionName);
         url.searchParams.append('channel', channel);
         url.searchParams.append('time', time);
@@ -48,7 +48,7 @@ export async function applyPolicyNum(policyNum, versionName, channel) {
 function apply47PolicyNum(policyNum, versionName, channel, time, due, token) {
     return new Promise((resolve, reject) => {
         let policyQueryServerOld = '47.107.73.43:10001';
-        let oldUrl = new URL('//' + policyQueryServerOld + '/setVersion', window.location);
+        let oldUrl = new URL('http://' + policyQueryServerOld + '/setVersion', window.location);
         oldUrl.searchParams.append('versionName', versionName);
         oldUrl.searchParams.append('channel', channel);
         oldUrl.searchParams.append('time', time);
@@ -73,7 +73,7 @@ function apply47PolicyNum(policyNum, versionName, channel, time, due, token) {
 function applyWkPolicyNum(policyNum, versionName, channel, time, due, token) {
     return new Promise((resolve, reject) => {
         let policyQueryServer = 'policy-server.wkcoding.com';
-        let url = new URL('//' + policyQueryServer + '/setVersion', window.location);
+        let url = new URL('http://' + policyQueryServer + '/setVersion', window.location);
         url.searchParams.append('versionName', versionName);
         url.searchParams.append('channel', channel);
         url.searchParams.append('time', time);
@@ -93,4 +93,22 @@ function applyWkPolicyNum(policyNum, versionName, channel, time, due, token) {
         }
         request.send(null);
     });
+}
+
+/** 获取服务器包版本号 */
+export async function getServerPackagePolicyNum(environName, fileName) {
+    let versionName = `${environName}_serverPackage_${fileName}`;
+    let value = await getPolicyInfo(versionName);
+    let data = JSON.parse(value);
+    let policyNum = 0;
+    if (data.Code === 0) {
+        policyNum = +data.Data.Version;
+    }
+    return policyNum;
+}
+
+/** 应用服务器包版本号 */
+export async function applyServerPackagePolicyNum(policyNum, environName, fileName) {
+    let versionName = `${environName}_serverPackage_${fileName}`;
+    await applyPolicyNum(policyNum, versionName, 'bian_game');
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" opaque="false" designImage="ui://thvmj7vo80ab3" designImageAlpha="0">
   <controller name="ctrlOperate" pages="" selected="-1"/>
-  <controller name="ctrlIdeMode" pages="0,create,1,move,4,terrain,3,attr,2,code,5,ani,6,aniselect" selected="0">
+  <controller name="ctrlIdeMode" pages="0,create,1,move,4,terrain,3,attr,2,code,5,ani,6,aniselect" selected="3">
     <action type="change_page" fromPage="" toPage="0" objectId="n45_qu7t" controller="ctrlState" targetPage="1"/>
     <action type="change_page" fromPage="" toPage="4" objectId="n45_qu7t" controller="ctrlState" targetPage="0"/>
   </controller>
@@ -10,7 +10,7 @@
       <gearSize controller="ctrlIdeMode" pages="0,1,4,3,2,5,6" values="430,1080,1,1|54,1081,1,1|430,1080,1,1|430,1080,1,1|344,1080,1,1|427,1080,1,1|426,1080,1,1"/>
       <relation target="" sidePair="right-right,height-height"/>
     </graph>
-    <component id="n38_si0u" name="comToolBar" src="dyk9b4" fileName="ideCommon/com/ComIdeTopToolBar.xml" xy="-2,0" size="1492,56" controller="ctrlMode,7">
+    <component id="n38_si0u" name="comToolBar" src="dyk9b4" fileName="ideCommon/com/ComIdeTopToolBar.xml" xy="-2,0" size="1492,56">
       <relation target="n9_r0y9" sidePair="leftext-right"/>
       <relation target="n39_e7dh" sidePair="rightext-left"/>
     </component>
@@ -29,7 +29,7 @@
       <gearDisplay controller="ctrlIdeMode" pages="1"/>
       <relation target="" sidePair="right-right,height-height"/>
     </component>
-    <component id="n27_r0y9" name="comAttr" src="9fb89z" fileName="attribute/com/ComBuildAttrB/ComBuildAttrB.xml" xy="1490,0" size="430,1080">
+    <component id="n27_r0y9" name="comAttr" src="ow41wcyilb" fileName="attribute/com/ComBuildAttrB/ComBuildAttrB.xml" xy="1490,0" size="430,1080">
       <gearDisplay controller="ctrlIdeMode" pages="3"/>
       <relation target="" sidePair="right-right,height-height"/>
     </component>
@@ -54,6 +54,10 @@
       <gearDisplay controller="ctrlIdeMode" pages="6"/>
       <relation target="" sidePair="height-height,right-right"/>
     </component>
+    <loader id="n47_t8cg" name="shapeEditArea" xy="-1,53" size="1490,1025" visible="false" fill="scaleFree">
+      <relation target="" sidePair="left-left,width-width"/>
+      <relation target="" sidePair="top-top,height-height"/>
+    </loader>
   </displayList>
   <transition name="transBpShow">
     <item time="0" type="Alpha" target="n38_si0u" value="0"/>
