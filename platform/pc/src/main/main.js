@@ -3,7 +3,7 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-04 10:47:26
+ * @Last Modified time: 2020-03-04 15:06:40
  */
 // Modules to control application life and create native browser window
 const { app, globalShortcut, BrowserWindow, Menu, shell, dialog } = require('electron')
@@ -26,10 +26,10 @@ async function initNative() {
   logger.init();
 
   //平台老师端测试参数
-  config.urlValue = `bellplanet://lesson?temporary_token=AWRl2okDEQ:fYHQv&class_id=18744&package_id=278&lesson_id=960&act_id=9999&bell_origin=demoapi.wkcoding.com&local_network=127.0.0.1:8080&internet_network=democm.wkcoding.com`;
+  // config.urlValue = `bellplanet://lesson?temporary_token=LWKqnyRO8M:eRhNA&class_id=18744&package_id=278&lesson_id=960&act_id=9999&bell_origin=demoapi.wkcoding.com&local_network=127.0.0.1:8080&internet_network=democm.wkcoding.com`;
 
   //平台学生端端测试参数
-  // config.urlValue = `bellplanet://student?temporary_token=AWRl2okDEQ:fYHQv&class_id=18744&package_id=278&lesson_id=960&act_id=9999&bell_origin=demoapi.wkcoding.com&local_network=127.0.0.1:8080&internet_network=democm.wkcoding.com`;
+  config.urlValue = `bellplanet://student?temporary_token=AWRl2okDEQ:fYHQv&class_id=18744&package_id=278&lesson_id=960&act_id=9999&bell_origin=demoapi.wkcoding.com&local_network=127.0.0.1:8080&internet_network=bg.bellcode.com/app26643846800605185`;
 
   // if (config.urlValue.indexOf(config.constPseudoProtocol) === -1) {
   initNativePlatform();
@@ -80,7 +80,8 @@ function createWindow() {
   // mainWindow.isEnabled
 
   let userAgent = mainWindow.webContents.userAgent + " BellCodeIpadWebView";
-  mainWindow.webContents.setUserAgent(userAgent);
+  // mainWindow.webContents.setUserAgent(userAgent);
+  mainWindow.webContents.userAgent = userAgent;
 
   /** 设置url参数 */
   config.urlValue = process.argv[process.argv.length - 1];

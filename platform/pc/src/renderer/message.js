@@ -3,7 +3,7 @@
  * @desc 渲染进程消息处理文件
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-03 21:42:53
+ * @Last Modified time: 2020-03-04 14:38:00
  */
 import { Config } from './Config.js';
 import { ClientUpdate } from './update/ClientUpdate.js';
@@ -148,6 +148,10 @@ function checkServerUpdate(callback, ...args) {
 
 /** 检查更新完毕 */
 function checkUpdateComplete() {
+    sendMsg(`CHECK_UPDATE_COMPLETE`);
+}
+
+function setConfigData2LocalStorage() {
     if (Config.nativeLoginResponse) {
         localStorage.setItem('nativeLoginResponse', JSON.stringify(Config.nativeLoginResponse));
     } else {
@@ -159,12 +163,12 @@ function checkUpdateComplete() {
     } else {
         localStorage.removeItem('nativeGameServer');
     }
-
-    sendMsg(`CHECK_UPDATE_COMPLETE`);
 }
 
 /** 开始游戏模式 */
 async function onStartNativeGame(queryObject) {
+    setConfigData2LocalStorage();
+
     let queryValue = querystring.stringify(queryObject);
     let jumpHref = `${Config.rootPath}/package/client/index.html?${queryValue}`;
     location.href = jumpHref;
@@ -172,6 +176,8 @@ async function onStartNativeGame(queryObject) {
 
 /** 开始单个课程 */
 async function onStartNativeLesson(queryObject) {
+    setConfigData2LocalStorage();
+
     let queryValue = querystring.stringify(queryObject);
     let jumpHref = `${Config.rootPath}/package/client/index.html?${queryValue}`;
     location.href = jumpHref;
@@ -179,6 +185,8 @@ async function onStartNativeLesson(queryObject) {
 
 /** 开始平台进入 */
 async function onStartNativePlatform(queryObject) {
+    setConfigData2LocalStorage();
+
     let queryValue = querystring.stringify(queryObject);
     let iframeSrc = `file://${Config.rootPath}/package/client/index.html?${queryValue}`;
     let platformObject = {

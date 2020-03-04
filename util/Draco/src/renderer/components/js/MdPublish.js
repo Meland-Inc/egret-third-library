@@ -827,7 +827,7 @@ export async function writeNativeIndexToPath(egretIndexPath) {
 
 /** 更新服务器包 */
 export async function updateServerPackage() {
-    let serverPackage = `${Global.svnPath}/server/server_packages`;
+    let serverPackage = `${Global.svnPath}/server/native`;
     await spawnExc.svnUpdate(serverPackage, "", "更新服务器包错误");
 }
 
@@ -848,7 +848,7 @@ export async function clearPackageDir() {
 /** 比较服务器包版本 */
 export function mergeServerPackage() {
     return new Promise(async (resolve, reject) => {
-        let serverPackage = `${Global.svnPath}/server/server_packages`;
+        let serverPackage = `${Global.svnPath}/server/native`;
 
         let packageDir = await fsExc.readDir(serverPackage);
         await checkUploadServerPackages(packageDir, () => {
@@ -865,15 +865,21 @@ async function checkUploadServerPackages(packageDir, successFunc) {
     }
 
     let iterator = packageDir.pop();
+    if (iterator.indexOf(".zip") === -1) {
+        await checkUploadServerPackages(packageDir, successFunc);
+        return;
+    }
+
     let environ = ModelMgr.versionModel.curEnviron;
     let fileName = iterator.slice(0, iterator.indexOf("."));
+
     let policyNum = await ExternalUtil.getServerPackagePolicyNum(environ.name, fileName);
 
     // await ExternalUtil.applyServerPackagePolicyNum(0, environ.name, fileName);
     // await checkUploadServerPackages(packageDir, successFunc);
     // return;
 
-    let newServerPackagePath = `${Global.svnPath}/server/server_packages/${iterator}`;
+    let newServerPackagePath = `${Global.svnPath}/server/native/${iterator}`;
     let curServerPackagePath = `${Global.svnPublishPath}${environ.serverPackagePath}/${iterator}`;
     let newPolicyNum;
 

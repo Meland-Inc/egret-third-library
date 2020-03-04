@@ -23,8 +23,9 @@
     "files": [
       "./src/**/*",
       "./resource/**/*",
+      "./package/**/*",
       "./package.json",
-      "./package/**/*"
+      "./GlobalConfig.json"
     ],
     "win": {
       "target": [
