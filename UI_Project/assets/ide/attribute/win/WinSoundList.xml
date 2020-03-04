@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://thvmj7vopi8y4cyiji" designImageAlpha="3" designImageLayer="1">
   <controller name="ctrlTag" pages="0,all,1,effect,2,music,3,custom" selected="0"/>
-  <controller name="ctrlSelected" pages="1,hide,0,show" selected="1"/>
+  <controller name="ctrlSelected" pages="1,hide,0,show" selected="0"/>
   <displayList>
     <image id="n22_i6od" name="imgTopBg" src="oiqdcyih6" fileName="img/img_cm_3.png" pkg="te1gxawo" xy="251,96" size="1460,58" group="n15_pi8y"/>
     <image id="n21_i6od" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="250,96" size="1460,890" group="n15_pi8y"/>
@@ -18,10 +18,10 @@
     <image id="n19_i6od" name="n19" src="rujpcyijl" fileName="img/icon_cm_ss.png" pkg="te1gxawo" xy="1414,111" size="32,32" group="n20_i6od"/>
     <group id="n20_i6od" name="grpSearchInput" xy="1382,107" size="258,37" group="n15_pi8y" advanced="true" collapsed="true"/>
     <component id="n5_pi8y" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1650,106" size="48,48" group="n15_pi8y">
-      <Button icon="ui://0axy98cg8qqi3l"/>
+      <Button icon="ui://te1gxawooiqdcyih2"/>
     </component>
     <image id="n23_i6od" name="imgLstBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="280,175" size="1400,780" group="n15_pi8y"/>
-    <list id="n9_pi8y" name="lstSound" xy="300,196" size="1373,487" group="n15_pi8y" layout="flow_hz" selectionMode="multipleSingleClick" overflow="scroll" scrollBarRes="ui://te1gxawo9c90cyij6," lineGap="10" colGap="10" defaultItem="ui://ti9jag5tpi8ywcyilr">
+    <list id="n9_pi8y" name="lstSound" xy="300,196" size="1373,742" group="n15_pi8y" layout="flow_hz" selectionMode="multipleSingleClick" overflow="scroll" scrollBarRes="ui://te1gxawo9c90cyij6," lineGap="10" colGap="10" defaultItem="ui://ti9jag5tpi8ywcyilr">
       <gearSize controller="ctrlSelected" pages="1,0" values="1373,742,1,1|1373,487,1,1"/>
       <item/>
       <item/>
@@ -58,7 +58,7 @@
     <component id="n13_pi8y" name="btnConfirm" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1489,916" size="160,44" group="n14_pi8y">
       <Button title="确定" titleFontSize="20" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <group id="n14_pi8y" name="grpCurSelected" xy="250,686" size="1460,300" group="n15_pi8y" advanced="true">
+    <group id="n14_pi8y" name="grpCurSelected" xy="250,686" size="1460,300" group="n15_pi8y" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlSelected" pages="0"/>
     </group>
     <component id="n16_s9jm" name="btnUpload" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1098,104" size="160,44" group="n15_pi8y">
