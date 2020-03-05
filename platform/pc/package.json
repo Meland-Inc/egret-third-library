@@ -58,7 +58,17 @@
       ]
     },
     "mac": {
-      "icon": "./icon/icon.icns"
+      "icon": "./icon/icon.icns",
+      "extendInfo": {
+        "CFBundleURLTypes":[
+          {
+            "CFBundleURLName":"com.bellcode.bellplanet",
+            "CFBundleURLSchemes":[
+              "bellplanet"
+            ]
+          }
+        ]
+      }
     },
     "nsis": {
       "oneClick": false,
