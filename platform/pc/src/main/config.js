@@ -3,7 +3,7 @@
  * @desc main用的配置
  * @date 2020-02-13 14:54:41 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-28 21:08:37
+ * @Last Modified time: 2020-03-02 14:33:16
  */
 /** 本机IP */
 const localIp = "127.0.0.1";
@@ -43,6 +43,15 @@ let bellToken;
 
 /** bell平台通信地址 */
 let bellApiOrigin;
+
+/** bell平台回传给的参数 */
+let bellPackageId;
+
+/** bell平台回传给的参数 */
+let bellLessonId;
+
+/** bell平台回传给的参数 */
+let bellActId;
 
 /** 班级id */
 let classId;
@@ -112,6 +121,9 @@ exports.channel = channel;
 exports.bellTempToken = bellTempToken;
 exports.bellToken = bellToken;
 exports.bellApiOrigin = bellApiOrigin;
+exports.bellPackageId = bellPackageId;
+exports.bellLessonId = bellLessonId;
+exports.bellActId = bellActId;
 exports.userType = userType;
 exports.classId = classId;
 exports.realName = realName;

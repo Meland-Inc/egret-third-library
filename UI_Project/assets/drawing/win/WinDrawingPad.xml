@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://i25v0ebkbatc58" designImageAlpha="0" designImageLayer="1" bgColorEnabled="true">
   <controller name="ctrlLeft" pages="0,drawing,1,layer" selected="0"/>
-  <controller name="ctrlTool" pages="0,pen,1,none,2,isometric" selected="0"/>
+  <controller name="ctrlTool" pages="0,pen,1,none,2,isometric" selected="2">
+    <action type="change_page" fromPage="" toPage="1" objectId="n38_gup1" controller="ctrlDrawSet" targetPage="1"/>
+    <action type="change_page" fromPage="1" toPage="" objectId="n38_gup1" controller="ctrlDrawSet" targetPage="0"/>
+  </controller>
   <controller name="ctrlMode" pages="0,create,1,editAnim" selected="0"/>
   <displayList>
     <graph id="n1_batc" name="gphBg" xy="0,0" size="1920,1080" type="rect" lineSize="0">
@@ -20,10 +23,6 @@
       <gearDisplay controller="ctrlTool" pages="2"/>
       <relation target="n13_batc" sidePair="width-width,height-height"/>
     </component>
-    <component id="n43_gup1" name="btnClose" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1838,9" size="72,72">
-      <relation target="n13_batc" sidePair="right-right,top-top"/>
-      <Button icon="ui://a0pj43bjqiln7"/>
-    </component>
     <graph id="n23_fekj" name="gphMask" xy="0,0" size="1920,1080" visible="false" type="rect" lineSize="0" lineColor="#00000000" fillColor="#00ffffff">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </graph>
@@ -37,12 +36,17 @@
       <Button checked="true" title="画图" titleColor="#333333" titleFontSize="24" icon="ui://a0pj43bjqiln4" selectedIcon="ui://a0pj43bjqiln4" controller="ctrlLeft" page="0"/>
     </component>
     <image id="n51_giuq" name="n51" src="qiln4" fileName="img/img_dra_top.png" xy="30,40" size="410,59" group="n14_batc"/>
-    <list id="n7_batc" name="lstTool" xy="49,105" size="379,86" group="n14_batc" layout="flow_hz" overflow="hidden" margin="5,0,0,0" lineGap="8" colGap="10" defaultItem="ui://a0pj43bjqiln21">
+    <list id="n7_batc" name="lstTool" xy="49,105" size="379,151" group="n14_batc" layout="flow_hz" overflow="hidden" margin="5,0,0,0" lineGap="8" colGap="10" defaultItem="ui://a0pj43bjqiln21">
       <item icon="ui://a0pj43bjqilnm" name="SELECTOR" selectedIcon="ui://a0pj43bjqilnn"/>
       <item icon="ui://a0pj43bjqilnc" name="BRUSH" selectedIcon="ui://a0pj43bjqilnd"/>
       <item icon="ui://a0pj43bjqilnq" name="LINEPEN" selectedIcon="ui://a0pj43bjqilnr"/>
       <item icon="ui://a0pj43bjqilno" name="ERASER" selectedIcon="ui://a0pj43bjqilnp"/>
       <item icon="ui://a0pj43bjqiln9" name="ISOMETRIC" selectedIcon="ui://a0pj43bjqilna"/>
+      <item icon="ui://a0pj43bjq8ax5s" selectedIcon="ui://a0pj43bjq8ax5r"/>
+      <item icon="ui://a0pj43bjq8ax5q" name="GETCOLOR" selectedIcon="ui://a0pj43bjq8ax5p"/>
+      <item icon="ui://a0pj43bjq8ax5n" selectedIcon="ui://a0pj43bjq8ax5m"/>
+      <item icon="ui://a0pj43bjq8ax5v" selectedIcon="ui://a0pj43bjq8ax5u"/>
+      <item icon="ui://a0pj43bjq8ax5y" selectedIcon="ui://a0pj43bjq8ax5x"/>
     </list>
     <image id="n8_batc" name="imgInpNameBg" src="eggjcyihu" fileName="img/img_cm_srk_3.png" pkg="te1gxawo" xy="47,894" size="374,65" group="n17_batc"/>
     <text id="n9_batc" name="inpCanvasName" xy="67,895" size="351,65" group="n17_batc" alpha="0.6" customData="新素材" input="true" fontSize="24" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="">
@@ -62,10 +66,11 @@
     <group id="n17_batc" name="grpBottom" xy="47,834" size="374,191" group="n14_batc" advanced="true">
       <relation target="" sidePair="bottom-bottom"/>
     </group>
-    <component id="n38_gup1" name="comPenSetting" src="qiln2s" fileName="com/ComPenSetting.xml" xy="30,168" size="410,494" group="n14_batc">
-      <gearDisplay controller="ctrlTool" pages="0,2"/>
+    <component id="n38_gup1" name="comPenSetting" src="qiln2s" fileName="com/ComPenSetting.xml" xy="30,264" size="410,562" group="n14_batc">
+      <gearDisplay controller="ctrlTool" pages="0,1,2"/>
     </component>
     <text id="n53_giuq" name="n53" xy="208,57" size="53,31" group="n14_batc" fontSize="24" color="#333333" align="center" vAlign="middle" text="画图"/>
+    <image id="n55_q8ax" name="n55" src="qhbb5h" fileName="img/img_dra_line_1.png" xy="31,260" size="408,2" group="n14_batc"/>
     <group id="n14_batc" name="grpLeft" xy="30,40" size="410,1010"/>
     <graph id="n21_ljuf" name="gphDrawingBotBoard" xy="464,40" size="1423,921" group="n33_mj87" alpha="0.3" fillColor="#ff66cc33">
       <relation target="n13_batc" sidePair="rightext-right,bottomext-bottom"/>
@@ -87,19 +92,24 @@
       <gearDisplay controller="ctrlMode" pages="0"/>
       <relation target="n26_pa6b" sidePair="bottom-top,right-right"/>
     </image>
-    <component id="n35_gup1" name="comProjectionSetting" src="qiln27" fileName="com/ComProjectionSetting.xml" xy="1580,669">
+    <component id="n35_gup1" name="comProjectionSetting" src="qiln27" fileName="com/ComProjectionSetting.xml" xy="1580,438">
       <relation target="n26_pa6b" sidePair="right-left,bottom-bottom"/>
     </component>
-    <component id="n34_gup1" name="comHeightSetting" src="qiln2m" fileName="com/ComHeightSetting.xml" xy="1464,774">
+    <component id="n34_gup1" name="comCanvasBoxSetting" src="qiln2m" fileName="com/ComCanvasBoxSetting.xml" xy="1464,539">
       <relation target="n26_pa6b" sidePair="right-left,bottom-bottom"/>
     </component>
-    <list id="n26_pa6b" name="lstProjectionBtn" xy="1777,487" size="72,389" lineGap="30" defaultItem="ui://a0pj43bjqiln14">
+    <list id="n26_pa6b" name="lstProjectionBtn" xy="1777,487" size="72,192" lineGap="30" defaultItem="ui://a0pj43bjqiln14">
       <gearDisplay controller="ctrlMode" pages="0"/>
       <relation target="n13_batc" sidePair="right-right"/>
-      <item icon="ui://a0pj43bjqilni"/>
-      <item icon="ui://a0pj43bjqilng"/>
       <item icon="ui://a0pj43bjqilnl"/>
-      <item icon="ui://a0pj43bjqilnb"/>
+      <item icon="ui://a0pj43bjqhbb5j"/>
     </list>
+    <component id="n54_s0bt" name="comCanvasBoxInfo" src="s0bt5k" fileName="com/ComCanvasBoxInfo.xml" xy="465,41">
+      <relation target="" sidePair="left-left,top-top"/>
+    </component>
+    <component id="n43_gup1" name="btnClose" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1838,9" size="72,72">
+      <relation target="n13_batc" sidePair="right-right,top-top"/>
+      <Button icon="ui://a0pj43bjqiln7"/>
+    </component>
   </displayList>
 </component>

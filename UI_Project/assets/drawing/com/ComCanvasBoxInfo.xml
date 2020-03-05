@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="371,38" bgColorEnabled="true">
+  <displayList>
+    <image id="n46_s0bt" name="n46" src="qhbb5i" fileName="img/img_dra_ckg_1.png" xy="0,0" size="371,38">
+      <relation target="" sidePair="width-width"/>
+    </image>
+    <text id="n47_s0bt" name="tfInfo" xy="7,8" size="360,24" fontSize="18" color="#333333" vAlign="middle" autoClearText="true" text="长：{l=1}格  宽：{w=3}格  高：{h=519}像素"/>
+  </displayList>
+  <relation target="n47_s0bt" sidePair="width-width"/>
+</component>

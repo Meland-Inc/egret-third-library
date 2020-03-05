@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="86,86" extention="Button" bgColorEnabled="true">
+  <controller name="button" pages="0,up,1,down,2,over" selected="0"/>
+  <displayList>
+    <loader id="n1_pi8y" name="icon" xy="0,0" size="86,86" url="ui://ti9jag5trx8ewcyilm" autoSize="true">
+      <gearIcon controller="button" pages="1,2" values="ui://ti9jag5trx8ewcyilo|ui://ti9jag5trx8ewcyilk" default="ui://ti9jag5trx8ewcyilm"/>
+    </loader>
+  </displayList>
+  <Button mode="Check"/>
+  <relation target="n1_pi8y" sidePair="width-width,height-height"/>
+</component>

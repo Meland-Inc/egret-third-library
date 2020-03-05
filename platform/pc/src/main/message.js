@@ -3,7 +3,7 @@
  * @desc 主进程消息处理类
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-28 22:23:54
+ * @Last Modified time: 2020-03-02 16:13:46
  */
 const config = require('./config.js');
 const { ipcMain } = require('electron');
@@ -71,7 +71,7 @@ async function startNativeGame() {
 
     //本地服务器初始化
     await server.init();
-    sendMsg('START_GAME', queryObject);
+    sendMsg('START_NATIVE_GAME', queryObject);
 }
 
 //从单个课程进入
@@ -90,12 +90,24 @@ async function startNativeLesson() {
     }
 
     logger.log('net', 'urlValue', config.urlValue);
-    sendMsg('START_GAME', queryObject);
+    sendMsg('START_NATIVE_LESSON', queryObject);
 }
 
 //从平台进入
 async function startNativePlatform() {
-    mainWindow.loadURL("http://www.bellcode.com");
+    //初始化参数
+    let queryObject = { pcNative: 1 };
+    //平台初始化
+    await platform.init(queryObject);
+    queryObject['fakeUserType'] = config.userType;
+
+    //老师端 本地服务器初始化
+    if (config.userType === config.eUserType.teacher) {
+        server.init();
+    }
+
+    // mainWindow.loadURL("http://www.bellcode.com");
+    sendMsg('START_NATIVE_PLATFORM', queryObject);
 }
 
 exports.sendMsg = sendMsg;

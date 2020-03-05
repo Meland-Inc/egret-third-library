@@ -833,19 +833,18 @@ export async function updateServerPackage() {
 
 /** 清理服务器包文件夹 */
 export async function clearServerPackage() {
-    let pcPackagePath = `${Global.pcProjectPath}/package`;
-    //删除egret文件夹
-    await fsExc.delFiles(`${pcPackagePath}/server`);
+    let pcPackagePath = `${Global.pcProjectPath}/package/server`;
+    if (await fsExc.exists(pcPackagePath)) {
+        await fsExc.delFiles(`${pcPackagePath}`);
+    }
 }
 
 /** 比较服务器包版本 */
 export function mergeServerPackage() {
     return new Promise(async (resolve, reject) => {
-        let environ = ModelMgr.versionModel.curEnviron;
-        let curServerPackagePath = `${Global.svnPublishPath}${environ.serverPackagePath}`;
-        let newServerPackage = `${Global.svnPath}/server/server_packages`;
+        let serverPackage = `${Global.svnPath}/server/server_packages`;
 
-        let packageDir = await fsExc.readDir(newServerPackage);
+        let packageDir = await fsExc.readDir(serverPackage);
         await checkUploadServerPackages(packageDir, () => {
             console.log(`比较服务器包并上传完毕`);
             resolve();

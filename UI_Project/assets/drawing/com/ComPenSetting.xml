@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="410,487" opaque="false" designImage="ui://i25v0ebkbatc58">
+  <controller name="ctrlDrawSet" exported="true" pages="0,show,1,hide" selected="0"/>
   <displayList>
-    <image id="n14_qiln" name="n14" src="eggjcyihq" fileName="img/img_cm_xlk_2.png" pkg="te1gxawo" xy="18,28" size="74,120"/>
-    <graph id="n4_wdtr" name="shapePen" xy="29,62" size="54,54" type="eclipse" lineSize="0" lineColor="#00000000"/>
-    <list id="n5_wdtr" name="lstColor" xy="18,165" size="374,242" layout="flow_hz" overflow="scroll" lineGap="2" colGap="4" lineItemCount="7" defaultItem="ui://a0pj43bjqiln20" autoClearItems="true">
+    <text id="n18_iuyb" name="tfAlphaSld" xy="25,33" size="77,31" fontSize="24" color="#333333" text="透明度"/>
+    <component id="n16_l3a6" name="sldAlpha" src="qiln1y" fileName="com/sldDraw.xml" xy="151,39">
+      <Slider value="50" max="100"/>
+    </component>
+    <image id="n14_qiln" name="n14" src="eggjcyihq" fileName="img/img_cm_xlk_2.png" pkg="te1gxawo" xy="18,89" size="74,120" group="n19_iuyb"/>
+    <graph id="n4_wdtr" name="shapePen" xy="29,123" size="54,54" group="n19_iuyb" type="eclipse" lineSize="0" lineColor="#00000000"/>
+    <list id="n5_wdtr" name="lstColor" xy="18,226" size="374,166" group="n19_iuyb" layout="flow_hz" overflow="scroll" lineGap="2" colGap="4" lineItemCount="7" defaultItem="ui://a0pj43bjqiln20" autoClearItems="true">
       <item/>
       <item/>
       <item/>
@@ -22,15 +27,37 @@
       <item/>
       <item/>
     </list>
-    <image id="n8_qiln" name="n8" src="qiln4" fileName="img/img_dra_top.png" xy="89,28" size="302,120"/>
-    <image id="n9_qiln" name="n9" src="eggjcyihu" fileName="img/img_cm_srk_3.png" pkg="te1gxawo" xy="254,50" size="120,38"/>
-    <text id="n10_qiln" name="n10" xy="102,50" size="53,31" fontSize="24" color="#333333" text="大小"/>
-    <text id="n11_qiln" name="tfFontSize" xy="257,52" size="116,35" input="true" restrict="0-9" keyboardType="4" fontSize="24" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" text="50">
-      <relation target="n9_qiln" sidePair="width-width,height-height"/>
-      <relation target="n9_qiln" sidePair="left-left,top-top"/>
+    <image id="n8_qiln" name="n8" src="qiln4" fileName="img/img_dra_top.png" xy="89,89" size="302,120" group="n19_iuyb"/>
+    <image id="n9_qiln" name="n9" src="eggjcyihu" fileName="img/img_cm_srk_3.png" pkg="te1gxawo" xy="254,111" size="120,38" group="n19_iuyb"/>
+    <text id="n10_qiln" name="n10" xy="102,111" size="53,31" group="n19_iuyb" fontSize="24" color="#333333" text="大小"/>
+    <text id="n11_qiln" name="tfFontSize" xy="257,113" size="116,35" group="n19_iuyb" input="true" restrict="0-9" keyboardType="4" fontSize="24" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" text="50">
+      <relation target="n9_qiln" sidePair="width-width,height-height,left-left,top-top"/>
     </text>
-    <component id="n12_qiln" name="sldFontSize" src="qiln1y" fileName="com/sldDraw.xml" xy="115,111" size="244,12">
+    <component id="n12_qiln" name="sldFontSize" src="qiln1y" fileName="com/sldDraw.xml" xy="115,172" size="244,12" group="n19_iuyb">
       <Slider value="50" max="100"/>
     </component>
+    <list id="n20_m22t" name="lstNewColor" xy="18,409" size="374,166" group="n19_iuyb" layout="flow_hz" overflow="scroll" lineGap="2" colGap="4" lineItemCount="7" defaultItem="ui://a0pj43bjqiln20" autoClearItems="true">
+      <relation target="n5_wdtr" sidePair="top-top"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n19_iuyb" name="n19" xy="18,89" size="374,486" advanced="true">
+      <gearDisplay controller="ctrlDrawSet" pages="0"/>
+    </group>
   </displayList>
 </component>
