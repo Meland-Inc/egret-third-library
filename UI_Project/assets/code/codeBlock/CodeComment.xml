@@ -33,10 +33,10 @@
       <relation target="n16_f08k" sidePair="left-left,top-top"/>
       <relation target="n16_f08k" sidePair="width-width"/>
     </text>
-    <text id="n18_f08k" name="textUnFold" xy="6,35" size="188,141" input="true" prompt="请输入注释" fontSize="14" color="#333333" autoSize="none" text="">
+    <text id="n18_f08k" name="textUnFold" xy="6,35" size="189,141" input="true" prompt="请输入注释" fontSize="16" color="#333333" autoSize="none" text="">
       <gearDisplay controller="ctrlFold" pages="0"/>
-      <relation target="n12_f08k" sidePair="center-center,top-top"/>
-      <relation target="n12_f08k" sidePair="width-width,height-height"/>
+      <relation target="n12_f08k" sidePair="width-width,center-center"/>
+      <relation target="n12_f08k" sidePair="top-top,height-height"/>
     </text>
     <text id="n19_p1hp" name="textNum" xy="3,174" size="41,23" fontSize="16" align="center" vAlign="middle" text="0/100">
       <gearDisplay controller="ctrlFold" pages="0"/>
