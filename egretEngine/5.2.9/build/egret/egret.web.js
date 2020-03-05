@@ -7069,6 +7069,7 @@ var egret;
          */
         var WebGLRenderer = (function () {
             function WebGLRenderer() {
+                this._tempResultPos = new egret.Point(); //临时计算坐标使用 防止gc
                 this.nestLevel = 0; //渲染的嵌套层次，0表示在调用堆栈的最外层。
             }
             /**
@@ -7242,21 +7243,36 @@ var egret;
                 var filters = displayObject.$filters;
                 var hasBlendMode = (displayObject.$blendMode !== 0);
                 var compositeOp;
+                var isCameraFilter = displayObject.tag == egret.TAG.cameraFilter; //镜头滤镜
                 if (hasBlendMode) {
                     compositeOp = blendModes[displayObject.$blendMode];
                     if (!compositeOp) {
                         compositeOp = defaultCompositeOp;
                     }
                 }
-                var displayBounds = displayObject.$getOriginalBounds();
-                var displayBoundsX = displayBounds.x;
-                var displayBoundsY = displayBounds.y;
-                var displayBoundsWidth = displayBounds.width;
-                var displayBoundsHeight = displayBounds.height;
+                var displayBoundsX;
+                var displayBoundsY;
+                var displayBoundsWidth;
+                var displayBoundsHeight;
+                if (isCameraFilter) {
+                    var cameraPos = displayObject.globalToLocal(0, 0, this._tempResultPos);
+                    displayBoundsX = cameraPos.x;
+                    displayBoundsY = cameraPos.y;
+                    var m = displayObject.$getConcatenatedMatrix();
+                    displayBoundsWidth = displayObject.$stage.$stageWidth / m.a;
+                    displayBoundsHeight = displayObject.$stage.$stageHeight / m.d;
+                }
+                else {
+                    var displayBounds = displayObject.$getOriginalBounds();
+                    displayBoundsX = displayBounds.x;
+                    displayBoundsY = displayBounds.y;
+                    displayBoundsWidth = displayBounds.width;
+                    displayBoundsHeight = displayBounds.height;
+                }
                 if (displayBoundsWidth <= 0 || displayBoundsHeight <= 0) {
                     return drawCalls;
                 }
-                if (!displayObject.mask && filters.length == 1 && (filters[0].type == "colorTransform" || (filters[0].type === "custom" && filters[0].padding === 0))) {
+                if (!displayObject.mask && filters.length == 1 && !isCameraFilter && (filters[0].type == "colorTransform" || (filters[0].type === "custom" && filters[0].padding === 0))) {
                     var childrenDrawCount = this.getRenderCount(displayObject);
                     if (!displayObject.$children || childrenDrawCount == 1) {
                         if (hasBlendMode) {
@@ -8198,9 +8214,8 @@ var egret;
             var totalUniforms = gl.getProgramParameter(program, gl.ACTIVE_UNIFORMS);
             for (var i = 0; i < totalUniforms; i++) {
                 var uniformData = gl.getActiveUniform(program, i);
-                var name_3 = uniformData.name;
                 var uniform = new web.EgretWebGLUniform(gl, program, uniformData);
-                uniforms[name_3] = uniform;
+                uniforms[uniform.name] = uniform;
             }
             return uniforms;
         }
@@ -8275,16 +8290,50 @@ var egret;
         var EgretWebGLUniform = (function () {
             function EgretWebGLUniform(gl, program, uniformData) {
                 this.gl = gl;
-                this.name = uniformData.name;
+                var tName = uniformData.name;
+                if (tName.substring(tName.length - 3) == '[0]') {
+                    this._name = tName.substring(0, tName.length - 3);
+                    this._isArray = true;
+                }
+                else {
+                    this._name = tName;
+                    this._isArray = false;
+                }
                 this.type = uniformData.type;
-                this.size = uniformData.size;
-                this.location = gl.getUniformLocation(program, this.name);
+                this._size = uniformData.size;
+                this.location = gl.getUniformLocation(program, uniformData.name);
                 this.setDefaultValue();
                 this.generateSetValue();
                 this.generateUpload();
             }
+            Object.defineProperty(EgretWebGLUniform.prototype, "name", {
+                get: function () {
+                    return this._name;
+                },
+                enumerable: true,
+                configurable: true
+            });
             EgretWebGLUniform.prototype.setDefaultValue = function () {
                 var type = this.type;
+                //数组
+                if (this._isArray) {
+                    switch (type) {
+                        case 5126 /* FLOAT */:
+                            this.value = new Float32Array(this._size);
+                            break;
+                        case 35664 /* FLOAT_VEC2 */:
+                            this.value = new Float32Array(this._size * 2);
+                            break;
+                        case 35665 /* FLOAT_VEC3 */:
+                            this.value = new Float32Array(this._size * 3);
+                            break;
+                        case 35666 /* FLOAT_VEC4 */:
+                            this.value = new Float32Array(this._size * 4);
+                            break;
+                    }
+                    return;
+                }
+                //非数组
                 switch (type) {
                     case 5126 /* FLOAT */:
                     case 35678 /* SAMPLER_2D */:
@@ -8333,6 +8382,26 @@ var egret;
             };
             EgretWebGLUniform.prototype.generateSetValue = function () {
                 var type = this.type;
+                //数组
+                if (this._isArray) {
+                    switch (type) {
+                        case 5126 /* FLOAT */:
+                        case 35664 /* FLOAT_VEC2 */:
+                        case 35665 /* FLOAT_VEC3 */:
+                        case 35666 /* FLOAT_VEC4 */:
+                            //为了加快这里效率 拼接程序放到游戏 这里拿到的就是长度相等的Float32Array
+                            this.setValue = function (value) {
+                                if (value.length != this.value.length) {
+                                    return;
+                                }
+                                this.value = value; //加快效率
+                                this.upload();
+                            };
+                            break;
+                    }
+                    return;
+                }
+                //非数组
                 switch (type) {
                     case 5126 /* FLOAT */:
                     case 35678 /* SAMPLER_2D */:
@@ -8390,6 +8459,37 @@ var egret;
                 var gl = this.gl;
                 var type = this.type;
                 var location = this.location;
+                //数组
+                if (this._isArray) {
+                    switch (type) {
+                        case 5126 /* FLOAT */:
+                            this.upload = function () {
+                                var value = this.value;
+                                gl.uniform1fv(location, value);
+                            };
+                            break;
+                        case 35664 /* FLOAT_VEC2 */:
+                            this.upload = function () {
+                                var value = this.value;
+                                gl.uniform2fv(location, value);
+                            };
+                            break;
+                        case 35665 /* FLOAT_VEC3 */:
+                            this.upload = function () {
+                                var value = this.value;
+                                gl.uniform3fv(location, value);
+                            };
+                            break;
+                        case 35666 /* FLOAT_VEC4 */:
+                            this.upload = function () {
+                                var value = this.value;
+                                gl.uniform4fv(location, value);
+                            };
+                            break;
+                    }
+                    return;
+                }
+                //非数组
                 switch (type) {
                     case 5126 /* FLOAT */:
                         this.upload = function () {

@@ -408,6 +408,8 @@ declare namespace egret {
          * @language zh_CN
          */
         name: string;
+        /** 自定义标签 */
+        tag: string;
         /**
          * @private
          */
@@ -1291,6 +1293,13 @@ declare namespace egret {
          */
         willTrigger(type: string): boolean;
     }
+    /**
+     * 系统固定标签
+     * cameraFilter 镜头滤镜 上面的滤镜比较特殊 不要乱用
+     */
+    const TAG: {
+        cameraFilter: string;
+    };
 }
 declare namespace egret {
     let $TextureScaleFactor: number;

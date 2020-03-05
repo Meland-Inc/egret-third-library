@@ -610,6 +610,8 @@ var egret;
              */
             _this.$children = null;
             _this.$name = "";
+            /** 自定义标签 */
+            _this.tag = ""; //没用get set  渲染频繁使用 提高效率
             /**
              * @private
              */
@@ -2711,6 +2713,13 @@ var egret;
     }(egret.EventDispatcher));
     egret.DisplayObject = DisplayObject;
     __reflect(DisplayObject.prototype, "egret.DisplayObject");
+    /**
+     * 系统固定标签
+     * cameraFilter 镜头滤镜 上面的滤镜比较特殊 不要乱用
+     */
+    egret.TAG = {
+        cameraFilter: "cameraFilter",
+    };
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
