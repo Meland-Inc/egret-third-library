@@ -3,7 +3,7 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-05 09:50:37
+ * @Last Modified time: 2020-03-05 20:55:36
  */
 // Modules to control application life and create native browser window
 const { app, globalShortcut, BrowserWindow, Menu, shell, dialog } = require('electron')
@@ -155,8 +155,8 @@ app.on('second-instance', async (event, argv, workingDirectory) => {
     mainWindow.focus();
     mainWindow.show();
 
-    //非上课端 或者 老师端要关闭之前的服务器
-    if (config.channel != config.constChannelLesson || config.userType === config.eUserType.teacher) {
+    //非上课端 或者 非学生端要关闭之前的服务器
+    if (config.channel != config.constChannelLesson || config.userType != config.eUserType.student) {
       await server.closeGameServer();
     }
 

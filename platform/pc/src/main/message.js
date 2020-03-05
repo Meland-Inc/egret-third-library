@@ -3,7 +3,7 @@
  * @desc 主进程消息处理类
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-02 16:13:46
+ * @Last Modified time: 2020-03-05 21:07:30
  */
 const config = require('./config.js');
 const { ipcMain } = require('electron');
@@ -84,8 +84,8 @@ async function startNativeLesson() {
     queryObject['fakeUserType'] = config.userType;
     queryObject['token'] = config.bellTempToken;
 
-    //老师端 本地服务器初始化
-    if (config.userType === config.eUserType.teacher) {
+    //非学生端 本地服务器初始化
+    if (config.userType != config.eUserType.student) {
         server.init();
     }
 
@@ -101,10 +101,14 @@ async function startNativePlatform() {
     await platform.init(queryObject);
     queryObject['fakeUserType'] = config.userType;
 
-    //老师端 本地服务器初始化
-    if (config.userType === config.eUserType.teacher) {
+    logger.log(`test`, `config.userType`, config.userType);
+
+    //非学生端 本地服务器初始化
+    if (config.userType != config.eUserType.student) {
         server.init();
     }
+
+    logger.log(`test`, `queryObject`, queryObject);
 
     // mainWindow.loadURL("http://www.bellcode.com");
     sendMsg('START_NATIVE_PLATFORM', queryObject);
