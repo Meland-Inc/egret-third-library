@@ -66,7 +66,7 @@
       "allowElevation": true,
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
-      "runAfterFinish": true,
+      "runAfterFinish": false,
       "installerIcon": "./icon/icon.ico",
       "uninstallerIcon": "./icon/icon.ico",
       "include": "installer.nsh"

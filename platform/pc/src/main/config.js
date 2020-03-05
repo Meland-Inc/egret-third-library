@@ -53,6 +53,9 @@ let bellLessonId;
 /** bell平台回传给的参数 */
 let bellActId;
 
+/** bell平台回传给的url */
+let bellBackUrl;
+
 /** 班级id */
 let classId;
 
@@ -124,6 +127,7 @@ exports.bellApiOrigin = bellApiOrigin;
 exports.bellPackageId = bellPackageId;
 exports.bellLessonId = bellLessonId;
 exports.bellActId = bellActId;
+exports.bellBackUrl = bellBackUrl;
 exports.userType = userType;
 exports.classId = classId;
 exports.realName = realName;

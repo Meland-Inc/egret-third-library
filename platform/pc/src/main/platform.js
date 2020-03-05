@@ -21,6 +21,8 @@ async function init(queryValue) {
 
         //解析参数
         let argsObj = querystring.parse(argsValue);
+        //原始服务器地址
+        let originGameServer;
         for (const key in argsObj) {
             const value = argsObj[key];
 
@@ -52,6 +54,12 @@ async function init(queryValue) {
                 continue;
             }
 
+            if (key === 'back_url') {
+                config.bellBackUrl = value;
+                queryValue['back_url'] = `${value}`;
+                continue;
+            }
+
             if (key === 'act_id') {
                 config.bellActId = value;
                 queryValue['act_id'] = `${value}`;
@@ -69,7 +77,15 @@ async function init(queryValue) {
                 continue;
             }
 
+            if(key === 'gameServer'){
+                originGameServer = value;
+                continue;
+            }
             queryValue[key] = `${value}`;
+        }
+
+        if(!queryValue['gameServer'] && originGameServer){
+            originGameServer = queryValue['gameServer'];
         }
         login(queryValue, resolve, reject);
     });

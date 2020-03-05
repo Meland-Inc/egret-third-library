@@ -193,6 +193,7 @@ async function onStartNativePlatform(queryObject) {
         class_id: queryObject["class_id"],
         package_id: queryObject["package_id"],
         lesson_id: queryObject["lesson_id"],
+        back_url: queryObject["back_url"],
         act_id: queryObject["act_id"],
         webviewToken: queryObject["token"],
         iframeSrc: iframeSrc
