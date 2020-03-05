@@ -155,6 +155,7 @@ namespace egret.web {
             if (!this.htmlInput.isCurrentStageText(this)) {
                 this.inputElement = this.htmlInput.getInputElement(this);
                 this.inputElement.autocomplete = 'off'
+                this.inputElement.readOnly = "true";
                 if (!this.$textfield.multiline) {
                     this.inputElement.type = this.$textfield.inputType;
                 }
@@ -208,6 +209,7 @@ namespace egret.web {
 
             this.inputElement.selectionStart = this.inputElement.value.length;
             this.inputElement.selectionEnd = this.inputElement.value.length;
+            this.inputElement.readOnly = null;
             this.inputElement.focus();
         }
 
@@ -216,6 +218,7 @@ namespace egret.web {
          */
         $hide(): void {
             if (this.htmlInput) {
+                this.inputElement.readOnly = "true";
                 this.htmlInput.disconnectStageText(this);
             }
         }
@@ -353,10 +356,13 @@ namespace egret.web {
 
         public _onClickInput(): void {
             let self = this;
+            let clientX = (window.event as MouseEvent).clientX;
+            let clientY = (window.event as MouseEvent).clientY;
             window.setTimeout(function () {
                 if (self.inputElement) {
                     let e = new egret.Event("updatefocus");
-                    e.data = [self.inputElement.selectionStart, self.inputElement.selectionEnd];
+
+                    e.data = [self.inputElement.selectionStart, self.inputElement.selectionEnd, clientX, clientY];
                     self.dispatchEvent(e);
                 }
             }, 0);
