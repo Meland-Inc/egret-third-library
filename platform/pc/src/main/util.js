@@ -123,6 +123,7 @@ function requestGetHttp(host, port, path, data, headers, successFunc, errorFunc)
 /** 发送post请求 */
 function requestPostHttp(host, port, path, data, headers, successFunc, errorFunc) {
     let content = data ? querystring.stringify(data) : "";
+    logger.log('net', `http post data`, content);
 
     let options = {
         host: host,

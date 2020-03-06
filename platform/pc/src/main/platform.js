@@ -179,10 +179,15 @@ function teacherUploadIp() {
     //公网连接方式
     if (config.gameServerNatUrl && config.gameServerNatPort) {
         data['internet_network'] = `${config.gameServerNatUrl}:${config.gameServerNatPort}`;
+    }else{
+        data['internet_network'] = ``;
     }
+    
     //局域网连接方式
-    else if (config.gameServerLocalIp && config.gameServerLocalPort) {
+    if (config.gameServerLocalIp && config.gameServerLocalPort) {
         data['local_network'] = `${config.gameServerLocalIp}:${config.gameServerLocalPort}`;
+    }else{
+        data['local_network'] = ``;
     }
 
     util.requestPostHttp(config.bellApiOrigin, null, '/teacher/bellplanet-origins.put', data, null
@@ -190,7 +195,7 @@ function teacherUploadIp() {
             if (body.code === 200) {
                 logger.log('net', `上报老师ip成功`);
             } else {
-                logger.error('net', `上报老师ip失败`, body.msg);
+                logger.error('net', `上报老师ip失败`);
             }
         }
         , () => {

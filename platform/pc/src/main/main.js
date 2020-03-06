@@ -38,6 +38,8 @@ async function initNative() {
   // }
   await mainWindow.loadFile(`${config.rootPath}/src/renderer/renderer.html`);
 
+  logger.log('net', `config.urlValue`, config.urlValue);
+
   //发送检查更新消息
   message.sendMsg('CHECK_UPDATE');
 }
@@ -148,12 +150,14 @@ if (!gotTheLock) {
 }
 app.on('second-instance', async (event, argv, workingDirectory) => {
   // 当运行第二个实例时,将会聚焦到mainWindow这个窗口
+  logger.log('electron', `运行第二个实例`);
   if (mainWindow) {
     if (mainWindow.isMinimized()) {
       mainWindow.restore();
     }
     mainWindow.focus();
     mainWindow.show();
+    logger.log('electron', `显示当前主窗口`);
 
     //非上课端 或者 非学生端要关闭之前的服务器
     if (config.channel != config.constChannelLesson || config.userType != config.eUserType.student) {
@@ -162,6 +166,7 @@ app.on('second-instance', async (event, argv, workingDirectory) => {
 
     /** 设置url参数 */
     config.urlValue = argv[argv.length - 1];
+    logger.log('electron', `config.urlValue`, config.urlValue);
     initNative();
   }
 })
