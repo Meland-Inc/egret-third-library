@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="80,34" extention="Button" designImage="ui://thvmj7vovhcj4cyijl" designImageOffsetX="-1323" designImageOffsetY="-167" designImageAlpha="0" designImageLayer="1">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="1"/>
+  <displayList>
+    <image id="n1_nibs" name="n1" src="pve9cyijs" fileName="img/img_cm_xzk_2.png" pkg="te1gxawo" xy="0,0" size="80,34">
+      <gearDisplay controller="button" pages="1,2,3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n2_nibs" name="title" xy="0,0" size="80,34" fontSize="18" align="center" vAlign="middle" autoSize="none" text="">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button/>
+</component>

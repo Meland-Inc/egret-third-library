@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="152,114" extention="Button" mask="n5_vlrg" designImageAlpha="0">
+  <displayList>
+    <image id="n5_vlrg" name="n5" src="eggjcyihs" fileName="img/img_cm_srk_1.png" pkg="te1gxawo" xy="0,0" size="152,114" hideByEditor="true">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n4_er8n" name="mapBg" src="iv93d" fileName="img/img_stencil_dt_6.png" xy="0,0" size="152,114">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n1_er8n" name="icon" src="pz1n3t" fileName="com/ComAutoClipLad.xml" xy="0,0" size="152,114">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <image id="n2_er8n" name="n2" src="iv93e" fileName="img/img_stencil_fm_1.png" xy="0,85" size="152,29">
+      <relation target="" sidePair="width-width,bottom-bottom"/>
+    </image>
+    <text id="n3_er8n" name="tf" xy="37,89" size="77,24" fontSize="18" color="#ffffff" align="center" vAlign="middle" text="封面设置">
+      <relation target="n2_er8n" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+  <Button/>
+</component>

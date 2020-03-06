@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="430,1080" opaque="false" designImage="ui://thvmj7voen7j4cyij9" designImageOffsetX="-1490" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlState" pages="0,none,1,elem,2,clone" selected="2">
+<component size="430,1080" opaque="false" designImage="ui://thvmj7vocgkq4cyijg" designImageOffsetX="-1490" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlState" pages="0,none,1,elem,2,clone" selected="0">
     <action type="change_page" fromPage="" toPage="0" objectId="n68_hl7y" controller="ctrlStatus" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="2" objectId="n68_hl7y" controller="ctrlStatus" targetPage="1"/>
   </controller>
+  <controller name="ctrlAttributeTag" pages="0,basic,1,anim,2,falling,3,sound" selected="0"/>
+  <controller name="ctrlAnim" pages="0,editAnim,1,addAnim,2,none" selected="0"/>
   <displayList>
     <image id="n32_py50" name="imgBg" src="xba67l" fileName="ideCommon/img/img_ide_cm_5.png" xy="0,0" size="430,1080" group="n67_en7j">
       <relation target="" sidePair="height-height"/>
     </image>
-    <image id="n47_qki6" name="imgAttribuiteBg" src="s45w2" fileName="ideCommon/img/img_ide_cm_3.png" xy="-8,49" size="446,981" group="n67_en7j">
+    <component id="n46_rb1c" name="comAttrubiteEdit" src="9fb8a9" fileName="attribute/com/ComBuildAttrB/comAttrubiteEditB.xml" xy="12,290" size="417,719" group="n67_en7j">
+      <gearDisplay controller="ctrlAttributeTag" pages="0,2"/>
       <relation target="" sidePair="bottomext-bottom"/>
-    </image>
-    <component id="n46_rb1c" name="comAttrubiteEdit" src="9fb8a9" fileName="attribute/com/ComBuildAttrB/comAttrubiteEditB.xml" xy="12,65" size="417,945" group="n67_en7j">
-      <gearDisplay controller="ctrlState" pages="1"/>
-      <relation target="" sidePair="bottomext-bottom"/>
+      <relation target="n69_cgkq" sidePair="topext-bottom"/>
     </component>
+    <component id="n69_cgkq" name="comAwDetail" src="foy4t7m" fileName="attribute/widgets/comAWDetail.xml" xy="10,64" group="n67_en7j"/>
+    <list id="n70_cgkq" name="lstAttributeTag" xy="11,227" size="410,45" group="n67_en7j" layout="row" colGap="4" defaultItem="ui://ti9jag5tcgkqwcyild" selectionController="ctrlAttributeTag">
+      <relation target="n69_cgkq" sidePair="top-bottom"/>
+      <item title="基础"/>
+      <item title="动画"/>
+      <item title="掉落"/>
+      <item title="声音"/>
+    </list>
     <image id="n55_grwp" name="imgTitleBg" src="xba67m" fileName="ideCommon/img/img_ide_cm_6.png" xy="0,0" size="430,56" group="n67_en7j"/>
     <text id="n54_k2vs" name="tfTitle" xy="20,17" size="85,24" group="n67_en7j" fontSize="20" color="#333333" align="center" vAlign="middle" text="属性编辑"/>
     <image id="n56_grwp" name="imgNameBg" src="xba67m" fileName="ideCommon/img/img_ide_cm_6.png" xy="165,66" size="252,40" group="n58_grwp"/>
@@ -22,7 +30,22 @@
     <group id="n58_grwp" name="grpName" xy="165,66" size="253,41" group="n67_en7j" visible="false" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlState" pages="1"/>
     </group>
-    <group id="n67_en7j" name="grpElem" xy="-8,0" size="446,1080" advanced="true" collapsed="true">
+    <component id="n74_drx0" name="comAniSelect" src="smiyt7n" fileName="attribute/com/ComBuildAniSelect.xml" xy="0,290" size="430,790" group="n75_drx0" controller="ctrlState,1">
+      <gearDisplay controller="ctrlAnim" pages="1"/>
+      <relation target="" sidePair="bottomext-bottom"/>
+    </component>
+    <component id="n73_drx0" name="comAni" src="hckx6i" fileName="attribute/com/ComBuildAniEdit.xml" xy="0,290" size="430,790" group="n75_drx0">
+      <gearDisplay controller="ctrlAnim" pages="0"/>
+      <relation target="" sidePair="bottomext-bottom"/>
+    </component>
+    <group id="n75_drx0" name="grpAnim" xy="0,290" size="430,790" group="n67_en7j" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlAttributeTag" pages="1"/>
+    </group>
+    <component id="n76_nd60" name="comSoundAttr" src="rx8ewcyilh" fileName="attribute/com/ComSoundAttr.xml" xy="11,289" size="409,769" group="n67_en7j">
+      <gearDisplay controller="ctrlAttributeTag" pages="3"/>
+      <relation target="" sidePair="bottomext-bottom"/>
+    </component>
+    <group id="n67_en7j" name="grpElem" xy="0,0" size="430,1080" advanced="true">
       <gearDisplay controller="ctrlState" pages="1"/>
     </group>
     <image id="n66_en7j" name="imgEmptyBg" src="xba67o" fileName="ideCommon/img/img_ide_cm_7.png" xy="229,0" size="201,1080">
@@ -44,13 +67,14 @@
       <gearDisplay controller="ctrlState" pages="2"/>
       <relation target="" sidePair="middle-middle"/>
     </group>
-    <component id="n52_jm8l" name="btnRun" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="115,980" size="116,110">
-      <gearXY controller="ctrlState" pages="0,2" values="115,980|115,980" default="-115,980"/>
+    <component id="n52_jm8l" name="btnRun" src="fn8fcyijz" fileName="btn/btnIde.xml" pkg="oyity675" xy="115,979">
+      <gearXY controller="ctrlState" pages="0,2" values="115,979|115,980" default="-115,980"/>
       <relation target="" sidePair="bottom-bottom"/>
-      <Button icon="ui://ti9jag5txba67h"/>
+      <Button icon="ui://oyity675cnxcwcyilz"/>
     </component>
-    <component id="n68_hl7y" name="comEmptyClone" src="hl7ywcyijw" fileName="ideCommon/com/comEmptyCloneEntity.xml" xy="229,0" controller="ctrlStatus,1">
+    <component id="n68_hl7y" name="comEmptyClone" src="hl7ywcyijw" fileName="ideCommon/com/comEmptyCloneEntity.xml" xy="229,0" controller="ctrlStatus,0">
       <gearDisplay controller="ctrlState" pages="0,2"/>
+      <relation target="" sidePair="height-height"/>
     </component>
   </displayList>
 </component>
