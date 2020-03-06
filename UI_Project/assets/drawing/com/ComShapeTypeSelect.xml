@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="118,124">
+  <controller name="ctrlShapeType" pages="3,none,0,triangle,1,round,2,rectangular" selected="0"/>
+  <displayList>
+    <image id="n0_pve9" name="n0" src="pve9cyijt" fileName="img/img_cm_xzk_1.png" pkg="te1gxawo" xy="0,0" size="118,124"/>
+    <component id="n1_pve9" name="n1" src="pve961" fileName="btn/btnSelect.xml" xy="2,2" size="114,40">
+      <Button title="三角形" icon="ui://a0pj43bjq8ax5t" controller="ctrlShapeType" page="0"/>
+    </component>
+    <component id="n2_pve9" name="n2" src="pve961" fileName="btn/btnSelect.xml" xy="2,42" size="114,40">
+      <Button title="圆形" icon="ui://a0pj43bjq8ax5o" controller="ctrlShapeType" page="1"/>
+    </component>
+    <component id="n3_pve9" name="n3" src="pve961" fileName="btn/btnSelect.xml" xy="2,82" size="114,40">
+      <Button title="矩形" icon="ui://a0pj43bjq8ax5w" controller="ctrlShapeType" page="2"/>
+    </component>
+  </displayList>
+</component>

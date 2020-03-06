@@ -62,37 +62,70 @@ namespace egret.web {
      */
     export class EgretWebGLUniform {
 
-        private gl:WebGLRenderingContext;
+        private gl: WebGLRenderingContext;
 
-        private name:string;
+        private _name: string;//如果是数组的的话 WebGLRenderingContext中名字会在后面多一个[0]用来分辨数组 不会完全一致
 
-        public type:WEBGL_UNIFORM_TYPE;
+        public type: WEBGL_UNIFORM_TYPE;
 
-        private size:number;
+        private _isArray: boolean;//是否是数组数据
+        private _size: number;//多少个元素 数组下才有意义
 
-        private location:WebGLUniformLocation;
+        private location: WebGLUniformLocation;
 
-        constructor(gl:WebGLRenderingContext, program:WebGLProgram, uniformData:any) {
+        public get name(): string {
+            return this._name;
+        }
+
+        constructor(gl: WebGLRenderingContext, program: WebGLProgram, uniformData: any) {
             this.gl = gl;
 
-            this.name = uniformData.name;
+            let tName: string = uniformData.name;
+            if (tName.substring(tName.length - 3) == '[0]') {//如果是数组 名字key抛掉后面的[0]和代码中的对应
+                this._name = tName.substring(0, tName.length - 3);
+                this._isArray = true;
+            }
+            else {
+                this._name = tName;
+                this._isArray = false;
+            }
 
             this.type = uniformData.type;
 
-            this.size = uniformData.size;
+            this._size = uniformData.size;
 
-            this.location = gl.getUniformLocation(program, this.name);
+            this.location = gl.getUniformLocation(program, uniformData.name);
 
             this.setDefaultValue();
             this.generateSetValue();
             this.generateUpload();
         }
 
-        public value:any;
+        public value: any;
 
-        private setDefaultValue():void {
+        private setDefaultValue(): void {
             let type = this.type;
 
+            //数组
+            if (this._isArray) {
+                switch (type) {
+                    case WEBGL_UNIFORM_TYPE.FLOAT:
+                        this.value = new Float32Array(this._size);
+                        break;
+                    case WEBGL_UNIFORM_TYPE.FLOAT_VEC2:
+                        this.value = new Float32Array(this._size * 2);
+                        break;
+                    case WEBGL_UNIFORM_TYPE.FLOAT_VEC3:
+                        this.value = new Float32Array(this._size * 3);
+                        break;
+                    case WEBGL_UNIFORM_TYPE.FLOAT_VEC4:
+                        this.value = new Float32Array(this._size * 4);
+                        break;
+                }
+                return;
+            }
+
+            //非数组
             switch (type) {
                 case WEBGL_UNIFORM_TYPE.FLOAT:
                 case WEBGL_UNIFORM_TYPE.SAMPLER_2D:
@@ -141,18 +174,40 @@ namespace egret.web {
             }
         }
 
-        public setValue:Function;
+        public setValue: Function;
 
-        private generateSetValue():void {
+        private generateSetValue(): void {
             let type = this.type;
 
+            //数组
+            if (this._isArray) {
+                switch (type) {
+                    case WEBGL_UNIFORM_TYPE.FLOAT:
+                    case WEBGL_UNIFORM_TYPE.FLOAT_VEC2:
+                    case WEBGL_UNIFORM_TYPE.FLOAT_VEC3:
+                    case WEBGL_UNIFORM_TYPE.FLOAT_VEC4:
+                        //为了加快这里效率 拼接程序放到游戏 这里拿到的就是长度相等的Float32Array
+                        this.setValue = function (value: Float32Array) {
+                            if (value.length != this.value.length) {
+                                return;
+                            }
+
+                            this.value = value;//加快效率
+                            this.upload();
+                        }
+                        break;
+                }
+                return;
+            }
+
+            //非数组
             switch (type) {
                 case WEBGL_UNIFORM_TYPE.FLOAT:
                 case WEBGL_UNIFORM_TYPE.SAMPLER_2D:
                 case WEBGL_UNIFORM_TYPE.SAMPLER_CUBE:
                 case WEBGL_UNIFORM_TYPE.BOOL:
                 case WEBGL_UNIFORM_TYPE.INT:
-                    this.setValue = function(value) {
+                    this.setValue = function (value) {
                         let notEqual = this.value !== value;
                         this.value = value;
                         notEqual && this.upload();
@@ -161,7 +216,7 @@ namespace egret.web {
                 case WEBGL_UNIFORM_TYPE.FLOAT_VEC2:
                 case WEBGL_UNIFORM_TYPE.BOOL_VEC2:
                 case WEBGL_UNIFORM_TYPE.INT_VEC2:
-                    this.setValue = function(value) {
+                    this.setValue = function (value) {
                         let notEqual = this.value[0] !== value.x || this.value[1] !== value.y;
                         this.value[0] = value.x;
                         this.value[1] = value.y;
@@ -171,7 +226,7 @@ namespace egret.web {
                 case WEBGL_UNIFORM_TYPE.FLOAT_VEC3:
                 case WEBGL_UNIFORM_TYPE.BOOL_VEC3:
                 case WEBGL_UNIFORM_TYPE.INT_VEC3:
-                    this.setValue = function(value) {
+                    this.setValue = function (value) {
                         this.value[0] = value.x;
                         this.value[1] = value.y;
                         this.value[2] = value.z;
@@ -181,7 +236,7 @@ namespace egret.web {
                 case WEBGL_UNIFORM_TYPE.FLOAT_VEC4:
                 case WEBGL_UNIFORM_TYPE.BOOL_VEC4:
                 case WEBGL_UNIFORM_TYPE.INT_VEC4:
-                    this.setValue = function(value) {
+                    this.setValue = function (value) {
                         this.value[0] = value.x;
                         this.value[1] = value.y;
                         this.value[2] = value.z;
@@ -193,7 +248,7 @@ namespace egret.web {
                 case WEBGL_UNIFORM_TYPE.FLOAT_MAT2:
                 case WEBGL_UNIFORM_TYPE.FLOAT_MAT3:
                 case WEBGL_UNIFORM_TYPE.FLOAT_MAT4:
-                    this.setValue = function(value) {
+                    this.setValue = function (value) {
                         this.value.set(value);
                         this.upload();
                     }
@@ -201,34 +256,66 @@ namespace egret.web {
             }
         }
 
-        public upload:Function;
+        public upload: Function;
 
-        private generateUpload():void {
+        private generateUpload(): void {
             let gl = this.gl;
             let type = this.type;
             let location = this.location;
 
+            //数组
+            if (this._isArray) {
+                switch (type) {
+                    case WEBGL_UNIFORM_TYPE.FLOAT:
+                        this.upload = function () {
+                            var value = this.value;
+                            gl.uniform1fv(location, value);
+                        };
+                        break;
+                    case WEBGL_UNIFORM_TYPE.FLOAT_VEC2:
+                        this.upload = function () {
+                            var value = this.value;
+                            gl.uniform2fv(location, value);
+                        };
+                        break;
+                    case WEBGL_UNIFORM_TYPE.FLOAT_VEC3:
+                        this.upload = function () {
+                            var value = this.value;
+                            gl.uniform3fv(location, value);
+                        };
+                        break;
+                    case WEBGL_UNIFORM_TYPE.FLOAT_VEC4:
+                        this.upload = function () {
+                            var value = this.value;
+                            gl.uniform4fv(location, value);
+                        };
+                        break;
+                }
+                return;
+            }
+
+            //非数组
             switch (type) {
                 case WEBGL_UNIFORM_TYPE.FLOAT:
-                    this.upload = function() {
+                    this.upload = function () {
                         var value = this.value;
                         gl.uniform1f(location, value);
                     };
                     break;
                 case WEBGL_UNIFORM_TYPE.FLOAT_VEC2:
-                    this.upload = function() {
+                    this.upload = function () {
                         var value = this.value;
                         gl.uniform2f(location, value[0], value[1]);
                     };
                     break;
                 case WEBGL_UNIFORM_TYPE.FLOAT_VEC3:
-                    this.upload = function() {
+                    this.upload = function () {
                         var value = this.value;
                         gl.uniform3f(location, value[0], value[1], value[2]);
                     };
                     break;
                 case WEBGL_UNIFORM_TYPE.FLOAT_VEC4:
-                    this.upload = function() {
+                    this.upload = function () {
                         var value = this.value;
                         gl.uniform4f(location, value[0], value[1], value[2], value[3]);
                     };
@@ -238,52 +325,53 @@ namespace egret.web {
                 case WEBGL_UNIFORM_TYPE.SAMPLER_CUBE:
                 case WEBGL_UNIFORM_TYPE.BOOL:
                 case WEBGL_UNIFORM_TYPE.INT:
-                    this.upload = function() {
+                    this.upload = function () {
                         var value = this.value;
                         gl.uniform1i(location, value);
                     };
                     break;
                 case WEBGL_UNIFORM_TYPE.BOOL_VEC2:
                 case WEBGL_UNIFORM_TYPE.INT_VEC2:
-                    this.upload = function() {
+                    this.upload = function () {
                         var value = this.value;
                         gl.uniform2i(location, value[0], value[1]);
                     };
                     break;
                 case WEBGL_UNIFORM_TYPE.BOOL_VEC3:
                 case WEBGL_UNIFORM_TYPE.INT_VEC3:
-                    this.upload = function() {
+                    this.upload = function () {
                         var value = this.value;
                         gl.uniform3i(location, value[0], value[1], value[2]);
                     };
                     break;
                 case WEBGL_UNIFORM_TYPE.BOOL_VEC4:
                 case WEBGL_UNIFORM_TYPE.INT_VEC4:
-                    this.upload = function() {
+                    this.upload = function () {
                         var value = this.value;
                         gl.uniform4i(location, value[0], value[1], value[2], value[3]);
                     };
                     break;
 
                 case WEBGL_UNIFORM_TYPE.FLOAT_MAT2:
-                    this.upload = function() {
+                    this.upload = function () {
                         var value = this.value;
                         gl.uniformMatrix2fv(location, false, value);
                     };
                     break;
                 case WEBGL_UNIFORM_TYPE.FLOAT_MAT3:
-                    this.upload = function() {
+                    this.upload = function () {
                         var value = this.value;
                         gl.uniformMatrix3fv(location, false, value);
                     };
                     break;
                 case WEBGL_UNIFORM_TYPE.FLOAT_MAT4:
-                    this.upload = function() {
+                    this.upload = function () {
                         var value = this.value;
                         gl.uniformMatrix4fv(location, false, value);
                     };
                     break;
             }
         }
+
     }
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://i25v0ebkbatc58" designImageAlpha="0" designImageLayer="1" bgColorEnabled="true">
   <controller name="ctrlLeft" pages="0,drawing,1,layer" selected="0"/>
-  <controller name="ctrlTool" pages="0,pen,1,none,2,isometric" selected="2">
+  <controller name="ctrlTool" pages="0,pen,1,none,2,isometric" selected="0">
     <action type="change_page" fromPage="" toPage="1" objectId="n38_gup1" controller="ctrlDrawSet" targetPage="1"/>
     <action type="change_page" fromPage="1" toPage="" objectId="n38_gup1" controller="ctrlDrawSet" targetPage="0"/>
   </controller>
@@ -37,16 +37,16 @@
     </component>
     <image id="n51_giuq" name="n51" src="qiln4" fileName="img/img_dra_top.png" xy="30,40" size="410,59" group="n14_batc"/>
     <list id="n7_batc" name="lstTool" xy="49,105" size="379,151" group="n14_batc" layout="flow_hz" overflow="hidden" margin="5,0,0,0" lineGap="8" colGap="10" defaultItem="ui://a0pj43bjqiln21">
-      <item icon="ui://a0pj43bjqilnm" name="SELECTOR" selectedIcon="ui://a0pj43bjqilnn"/>
-      <item icon="ui://a0pj43bjqilnc" name="BRUSH" selectedIcon="ui://a0pj43bjqilnd"/>
-      <item icon="ui://a0pj43bjqilnq" name="LINEPEN" selectedIcon="ui://a0pj43bjqilnr"/>
-      <item icon="ui://a0pj43bjqilno" name="ERASER" selectedIcon="ui://a0pj43bjqilnp"/>
-      <item icon="ui://a0pj43bjqiln9" name="ISOMETRIC" selectedIcon="ui://a0pj43bjqilna"/>
-      <item icon="ui://a0pj43bjq8ax5s" selectedIcon="ui://a0pj43bjq8ax5r"/>
-      <item icon="ui://a0pj43bjq8ax5q" name="GETCOLOR" selectedIcon="ui://a0pj43bjq8ax5p"/>
-      <item icon="ui://a0pj43bjq8ax5n" selectedIcon="ui://a0pj43bjq8ax5m"/>
-      <item icon="ui://a0pj43bjq8ax5v" selectedIcon="ui://a0pj43bjq8ax5u"/>
-      <item icon="ui://a0pj43bjq8ax5y" selectedIcon="ui://a0pj43bjq8ax5x"/>
+      <item title="选择" icon="ui://a0pj43bjqilnm" name="SELECTOR" selectedIcon="ui://a0pj43bjqilnn"/>
+      <item title="画笔" icon="ui://a0pj43bjqilnc" name="BRUSH" selectedIcon="ui://a0pj43bjqilnd"/>
+      <item title="直线" icon="ui://a0pj43bjqilnq" name="LINEPEN" selectedIcon="ui://a0pj43bjqilnr"/>
+      <item title="橡皮擦" icon="ui://a0pj43bjqilno" name="ERASER" selectedIcon="ui://a0pj43bjqilnp"/>
+      <item title="直线辅助" icon="ui://a0pj43bjqiln9" name="ISOMETRIC" selectedIcon="ui://a0pj43bjqilna"/>
+      <item title="油漆桶" icon="ui://a0pj43bjq8ax5s" name="PAINT" selectedIcon="ui://a0pj43bjq8ax5r"/>
+      <item title="取色器" icon="ui://a0pj43bjq8ax5q" name="GETCOLOR" selectedIcon="ui://a0pj43bjq8ax5p"/>
+      <item title="文本" icon="ui://a0pj43bjq8ax5n" name="TEXT" selectedIcon="ui://a0pj43bjq8ax5m"/>
+      <item title="形状" icon="ui://a0pj43bjq8ax5v" name="SHAPE" selectedIcon="ui://a0pj43bjq8ax5u"/>
+      <item title="翻转" icon="ui://a0pj43bjq8ax5y" name="FLIP" selectedIcon="ui://a0pj43bjq8ax5x"/>
     </list>
     <image id="n8_batc" name="imgInpNameBg" src="eggjcyihu" fileName="img/img_cm_srk_3.png" pkg="te1gxawo" xy="47,894" size="374,65" group="n17_batc"/>
     <text id="n9_batc" name="inpCanvasName" xy="67,895" size="351,65" group="n17_batc" alpha="0.6" customData="新素材" input="true" fontSize="24" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="">
@@ -71,6 +71,7 @@
     </component>
     <text id="n53_giuq" name="n53" xy="208,57" size="53,31" group="n14_batc" fontSize="24" color="#333333" align="center" vAlign="middle" text="画图"/>
     <image id="n55_q8ax" name="n55" src="qhbb5h" fileName="img/img_dra_line_1.png" xy="31,260" size="408,2" group="n14_batc"/>
+    <component id="n56_pve9" name="comShapeTypeSelect" src="pve963" fileName="com/ComShapeTypeSelect.xml" xy="157,172" group="n14_batc" visible="false"/>
     <group id="n14_batc" name="grpLeft" xy="30,40" size="410,1010"/>
     <graph id="n21_ljuf" name="gphDrawingBotBoard" xy="464,40" size="1423,921" group="n33_mj87" alpha="0.3" fillColor="#ff66cc33">
       <relation target="n13_batc" sidePair="rightext-right,bottomext-bottom"/>

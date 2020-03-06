@@ -43,7 +43,7 @@ namespace egret.web {
         public constructor() {
 
         }
-
+        private _tempResultPos: Point = new Point();//临时计算坐标使用 防止gc
         private nestLevel: number = 0;//渲染的嵌套层次，0表示在调用堆栈的最外层。
         /**
          * 渲染一个显示对象
@@ -222,6 +222,7 @@ namespace egret.web {
             let filters = displayObject.$filters;
             let hasBlendMode = (displayObject.$blendMode !== 0);
             let compositeOp: string;
+            let isCameraFilter: boolean = displayObject.tag == TAG.cameraFilter;//镜头滤镜
             if (hasBlendMode) {
                 compositeOp = blendModes[displayObject.$blendMode];
                 if (!compositeOp) {
@@ -229,16 +230,30 @@ namespace egret.web {
                 }
             }
 
-            const displayBounds = displayObject.$getOriginalBounds();
-            const displayBoundsX = displayBounds.x;
-            const displayBoundsY = displayBounds.y;
-            const displayBoundsWidth = displayBounds.width;
-            const displayBoundsHeight = displayBounds.height;
+            let displayBoundsX: number
+            let displayBoundsY: number
+            let displayBoundsWidth: number
+            let displayBoundsHeight: number
+            if (isCameraFilter) {
+                let cameraPos: Point = displayObject.globalToLocal(0, 0, this._tempResultPos);
+                displayBoundsX = cameraPos.x;
+                displayBoundsY = cameraPos.y;
+                let m: Matrix = displayObject.$getConcatenatedMatrix();
+                displayBoundsWidth = displayObject.$stage.$stageWidth / m.a;
+                displayBoundsHeight = displayObject.$stage.$stageHeight / m.d;
+            }
+            else {
+                const displayBounds = displayObject.$getOriginalBounds();
+                displayBoundsX = displayBounds.x;
+                displayBoundsY = displayBounds.y;
+                displayBoundsWidth = displayBounds.width;
+                displayBoundsHeight = displayBounds.height;
+            }
             if (displayBoundsWidth <= 0 || displayBoundsHeight <= 0) {
                 return drawCalls;
             }
 
-            if (!displayObject.mask && filters.length == 1 && (filters[0].type == "colorTransform" || (filters[0].type === "custom" && (<CustomFilter>filters[0]).padding === 0))) {
+            if (!displayObject.mask && filters.length == 1 && !isCameraFilter && (filters[0].type == "colorTransform" || (filters[0].type === "custom" && (<CustomFilter>filters[0]).padding === 0))) {
                 let childrenDrawCount = this.getRenderCount(displayObject);
                 if (!displayObject.$children || childrenDrawCount == 1) {
                     if (hasBlendMode) {

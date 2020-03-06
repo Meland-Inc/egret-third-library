@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="115,28" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <image id="n0_pve9" name="n0" src="pve9cyijs" fileName="img/img_cm_xzk_2.png" pkg="te1gxawo" xy="0,0" size="115,28">
+      <gearDisplay controller="button" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n1_pve9" name="title" xy="45,1" size="86,26" fontSize="20" color="#333333" align="center" vAlign="middle" singleLine="true" text="垂直翻转">
+      <relation target="" sidePair="middle-middle,left-left"/>
+    </text>
+    <loader id="n2_pve9" name="icon" xy="9,0" size="28,28" url="ui://a0pj43bjq8ax60" align="center" vAlign="middle" fill="scale">
+      <relation target="" sidePair="middle-middle,left-left"/>
+    </loader>
+  </displayList>
+  <Button mode="Radio"/>
+</component>
