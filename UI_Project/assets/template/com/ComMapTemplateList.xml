@@ -14,7 +14,7 @@
       <Button checked="true" title="全部" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3" controller="ctrlListType" page="7"/>
     </component>
     <component id="n17_nibs" name="btnPlanet" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="0,156" size="110,58" group="n14_qncg">
-      <Button title="星球杯" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3" controller="ctrlListType" page="8"/>
+      <Button title="邀请赛" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3" controller="ctrlListType" page="8"/>
     </component>
     <component id="n18_nibs" name="btnStory" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="0,224" size="110,58" group="n14_qncg">
       <Button title="故事" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3" controller="ctrlListType" page="9"/>
@@ -95,7 +95,7 @@
     </component>
     <image id="n25_nibs" name="imgBtnBg" src="pve9cyijt" fileName="img/img_cm_xzk_1.png" pkg="te1gxawo" xy="273,-32" size="88,88" group="n30_nibs"/>
     <component id="n24_nibs" name="btnHot" src="nibs4q" fileName="btn/btnType.xml" xy="275,-29" size="83,41" group="n30_nibs">
-      <Button checked="true" title="最热" controller="ctrlSort" page="1"/>
+      <Button title="最热" controller="ctrlSort" page="1"/>
     </component>
     <component id="n27_nibs" name="btnRecent" src="nibs4q" fileName="btn/btnType.xml" xy="275,11" size="83,41" group="n30_nibs">
       <Button title="最新" controller="ctrlSort" page="0"/>
