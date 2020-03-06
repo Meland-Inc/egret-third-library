@@ -69,11 +69,27 @@ async function createNativeServer() {
             if (config.gameServerLocalIp && config.gameServerLocalPort) {
                 let gameServer = `${config.gameServerLocalIp}:${config.gameServerLocalPort}`;
                 if (config.mainWindow && config.mainWindow.webContents) {
-                    config.mainWindow.webContents.executeJavaScript(`
-                        if(window.nativeSignIn){
-                            window.nativeSignIn(\'${gameServer}\');
-                        }
-                    `);
+                    logger.log('net', 'native游戏客户端登录本地游戏服务器',gameServer);
+                    //上课渠道
+                    if(config.channel === config.constChannelLesson){
+                        config.mainWindow.webContents.executeJavaScript(`
+                            if(window.frames && window.frames.length > 0) {
+                                console.log('frames-->postMessage nativeSignIn');
+                                window.frames[0].postMessage({'key':'nativeSignIn', 'value':\'${gameServer}\'},'*');
+                            } else if(window.nativeSignIn) {
+                                console.log('nativeSignIn');
+                                window.nativeSignIn(\'${gameServer}\');
+                            }
+                        `);
+                    }
+                    //游戏
+                    else{
+                        config.mainWindow.webContents.executeJavaScript(`
+                            if(window.nativeSignIn){
+                                window.nativeSignIn(\'${gameServer}\');
+                            }
+                        `);
+                    }
                 }
             }
 
@@ -89,7 +105,7 @@ async function createNativeServer() {
             // }
 
             //上课渠道 并且是老师端,要上报本地ip
-            if (config.channel === config.constChannelLesson && config.userType === config.eUserType.teacher) {
+            if (config.channel === config.constChannelLesson && config.userType != config.eUserType.student) {
                 platform.teacherUploadIp();
             }
 
