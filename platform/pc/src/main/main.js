@@ -22,8 +22,6 @@ let mainWindow
 
 //native初始化
 async function initNative() {
-  //日志初始化
-  logger.init();
 
   //平台老师端测试参数
   // config.urlValue = `bellplanet://lesson?temporary_token=LWKqnyRO8M:eRhNA&class_id=18744&package_id=278&lesson_id=960&act_id=9999&bell_origin=demoapi.wkcoding.com&local_network=127.0.0.1:8080&internet_network=democm.wkcoding.com`;
@@ -59,6 +57,7 @@ async function initNativeLesson() {
 
 /** 初始化native上课平台 */
 function initNativePlatform() {
+  logger.log('platform', `初始化上课平台`);
   config.nativeMode = config.eNativeMode.platform;
 
   //设置上课对应路由
@@ -90,6 +89,9 @@ function createWindow() {
 
   /** 初始化消息处理类 */
   message.init();
+
+  //日志初始化
+  logger.init();
 
   //native初始化
   initNative();

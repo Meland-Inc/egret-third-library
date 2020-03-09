@@ -24,6 +24,7 @@ async function init() {
 
 /** 初始化native配置 */
 async function initNativeCnf() {
+    logger.log('net', `初始化native本地服务器配置`);
     let content = await fs.readFileSync(config.nativeCnfPath, "utf-8");
     nativeCnf = JSON.parse(content);
 }
@@ -32,6 +33,7 @@ async function initNativeCnf() {
 async function createNativeServer() {
     if (nativeServer) {
         logger.log('net', `关闭旧的native服务器`);
+        config.gameServerInited = false;
         await closeNativeServer();
     }
 
@@ -51,8 +53,10 @@ async function createNativeServer() {
         let urlObj = url.parse(req.url, true);
         let args = urlObj.query;
         let pathname = urlObj.pathname;
+        logger.log('net', `收到游戏服务器消息 pathname:${pathname} args`, args);
         if (pathname === "/serverState") {
             if (config.gameServerInited) {
+                logger.log('net', '判断游戏服务器已经启动了,不用操作');
                 res.end();
                 return;
             }
@@ -65,11 +69,10 @@ async function createNativeServer() {
             config.gameServerNatPort = args.natPort;
             logger.log('net', `gameServer --> localIp:${config.gameServerLocalIp} localPort:${config.gameServerLocalPort} natUrl:${config.gameServerNatUrl} natPort:${config.gameServerNatPort}`);
 
-            logger.log('net', 'native游戏客户端登录本地游戏服务器');
             if (config.gameServerLocalIp && config.gameServerLocalPort) {
                 let gameServer = `${config.gameServerLocalIp}:${config.gameServerLocalPort}`;
                 if (config.mainWindow && config.mainWindow.webContents) {
-                    logger.log('net', 'native游戏客户端登录本地游戏服务器',gameServer);
+                    logger.log('net', 'native上课客户端登录本地游戏服务器',gameServer);
                     //上课渠道
                     if(config.channel === config.constChannelLesson){
                         config.mainWindow.webContents.executeJavaScript(`
@@ -84,6 +87,7 @@ async function createNativeServer() {
                     }
                     //游戏
                     else{
+                        logger.log('net', 'native游戏客户端登录本地游戏服务器',gameServer);
                         config.mainWindow.webContents.executeJavaScript(`
                             if(window.nativeSignIn){
                                 window.nativeSignIn(\'${gameServer}\');
@@ -92,17 +96,6 @@ async function createNativeServer() {
                     }
                 }
             }
-
-            // if (config.gameServerNatUrl && config.gameServerNatPort) {
-            //     let gameServer = `${config.gameServerNatUrl}:${config.gameServerNatPort}`;
-            //     if (config.mainWindow && config.mainWindow.webContents) {
-            //         config.mainWindow.webContents.executeJavaScript(`
-            //             if(window.nativeSignIn){
-            //                 window.nativeSignIn(\'${gameServer}\');
-            //             }
-            //         `);
-            //     }
-            // }
 
             //上课渠道 并且是老师端,要上报本地ip
             if (config.channel === config.constChannelLesson && config.userType != config.eUserType.student) {
@@ -136,7 +129,7 @@ function closeNativeServer() {
             if (err) {
                 logger.error('net', `关闭native服务器失败`, err);
             } else {
-                logger.log('net', `关闭native服务器c成功`);
+                logger.log('net', `关闭native服务器成功`);
             }
             nativeServer = null;
             resolve();
@@ -147,7 +140,7 @@ function closeNativeServer() {
 /** 创建游戏服务器 */
 async function createGameServer() {
     logger.log('net', '创建游戏服务器');
-    let cmd = `game.exe`;
+    let cmd = `game`;
     gameServerProcess = await util.runCmd(cmd, `${config.rootPath}/package/server/`, "创建游戏服务器成功", "创建游戏服务器失败");
 }
 

@@ -55,17 +55,24 @@ function applyMsg(msgId, ...args) {
 async function onCheckUpdateComplete() {
     if (config.nativeMode === config.eNativeMode.game) {
         await startNativeGame();
-    } else if (config.nativeMode === config.eNativeMode.lesson) {
+        return
+    } 
+    
+    if (config.nativeMode === config.eNativeMode.lesson) {
         await startNativeLesson();
-    } else if (config.nativeMode === config.eNativeMode.platform) {
+        return;
+    }
+    
+    if (config.nativeMode === config.eNativeMode.platform) {
         await startNativePlatform();
-    } else {
-        //reserve
+        return;
     }
 }
 
 //从游戏模式进入
 async function startNativeGame() {
+    logger.log('update', `从游戏模式进入`);
+
     //初始化参数
     let queryObject = { pcNative: 1, fakeGameMode: "lessons" };
 
@@ -76,6 +83,8 @@ async function startNativeGame() {
 
 //从单个课程进入
 async function startNativeLesson() {
+    logger.log('update', `从单个课程进入`);
+
     //初始化参数
     let queryObject = { pcNative: 1 };
     //平台初始化
@@ -95,6 +104,8 @@ async function startNativeLesson() {
 
 //从平台进入
 async function startNativePlatform() {
+    logger.log('update', `从平台进入`);
+
     //初始化参数
     let queryObject = { pcNative: 1 };
     //平台初始化

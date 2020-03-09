@@ -68,6 +68,7 @@ async function onCheckUpdate() {
     // if (confirm("确认开始游戏吗")) {
     //     checkServerUpdate(checkClientUpdate, checkUpdateComplete);
     // }
+    logger.log('update', `开始检查更新`);
 
     /** 服务器包所在目录 */
     let serverPackageDir = `${Config.serverPackagePath}server`;
@@ -148,6 +149,7 @@ function checkServerUpdate(callback, ...args) {
 
 /** 检查更新完毕 */
 function checkUpdateComplete() {
+    logger.log('update', `检查更新完毕`);
     sendMsg(`CHECK_UPDATE_COMPLETE`);
 }
 

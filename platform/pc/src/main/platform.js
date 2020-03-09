@@ -15,7 +15,7 @@ async function init(queryValue) {
     return new Promise((resolve, reject) => {
         let urlValue = config.urlValue;
         //伪协议启动参数
-        logger.log('net', `平台打开native程序`)
+        logger.log('server', `初始化平台数据`);
         config.channel = queryValue['gameChannel'] = config.constChannelLesson;
         let argsValue = urlValue.slice(urlValue.indexOf("?") + 1);
 
@@ -95,6 +95,7 @@ async function init(queryValue) {
 /** 登陆贝尔平台 */
 function login(queryValue, successFunc, errorFunc) {
     let data = { temporary_token: config.bellTempToken };
+    logger.log('net', `请求登录贝尔平台`);
     util.requestPostHttp(config.bellApiOrigin, null, '/common/member/login-by-temporary-token', data, null
         , (body) => {
             if (body.code === 200) {
@@ -150,6 +151,7 @@ function login(queryValue, successFunc, errorFunc) {
 function getMemberInfo(successFunc, errorFunc) {
     let data = { token: config.bellToken };
     let headers = { "X-Bellcode-Referer": "bellplanet" }
+    logger.log('net', `请求获取贝尔平台用户信息`);
     util.requestGetHttp(config.bellApiOrigin, null, '/common/member/init', data, headers
         , (body) => {
             if (body.code === 200) {
@@ -190,6 +192,7 @@ function teacherUploadIp() {
         data['local_network'] = ``;
     }
 
+    logger.log('net', `请求上报老师ip`);
     util.requestPostHttp(config.bellApiOrigin, null, '/teacher/bellplanet-origins.put', data, null
         , (body) => {
             if (body.code === 200) {

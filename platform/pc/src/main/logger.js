@@ -8,19 +8,28 @@
 const fs = require('fs');
 const config = require('./config.js');
 
-let stdLog;
+let processLogContent;
+let webContentsLogContent;
 
 function init() {
-    stdLog = '';
+    processLogContent = '';
+    webContentsLogContent = '';
 }
 
 /** 打印log到后台进程日志中 */
 function processLog(tag, msg, ...args) {
-    /** 后台进程放到日志文件中 */
     let content = formateMsg(tag, msg, ...args);
     content = content.replace(/\\n/g, '\r\n')
-    stdLog += content + '\r\n';
-    fs.writeFileSync(config.processLogPath, stdLog);
+    processLogContent += content + '\r\n';
+    fs.writeFileSync(config.processLogPath, processLogContent);
+}
+
+/** 打印web端log到本地日志文件中 */
+function webContentsLog(tag, msg, ...args) {
+    let content = formateMsg(tag, msg, ...args);
+    content = content.replace(/\\n/g, '\r\n')
+    webContentsLogContent += content + '\r\n';
+    fs.writeFileSync(config.webContentsLogPath, webContentsLogContent);
 }
 
 /** 打印日志 */
@@ -28,6 +37,7 @@ function log(tag, msg, ...args) {
     let content = formateMsg(tag, msg, ...args);
     if (config.mainWindow && config.mainWindow.isEnabled && config.mainWindow.webContents) {
         config.mainWindow.webContents.executeJavaScript(`console.log(\'${content}\');`);
+        webContentsLog(tag, msg, ...args);
     } else {
         processLog(tag, msg, ...args);
     }
@@ -38,6 +48,7 @@ function error(tag, msg, ...args) {
     let content = formateMsg(tag, msg, ...args);
     if (config.mainWindow && config.mainWindow.isEnabled && config.mainWindow.webContents) {
         config.mainWindow.webContents.executeJavaScript(`console.error(\'${content}\');`);
+        webContentsLog(tag, msg, ...args);
     } else {
         processLog(tag, msg, ...args);
     }
@@ -48,6 +59,7 @@ function warn(tag, msg, ...args) {
     let content = formateMsg(tag, msg, ...args);
     if (config.mainWindow && config.mainWindow.isEnabled && config.mainWindow.webContents) {
         config.mainWindow.webContents.executeJavaScript(`console.warn(\'${content}\');`);
+        webContentsLog(tag, msg, ...args);
     } else {
         processLog(tag, msg, ...args);
     }
@@ -58,6 +70,7 @@ function info(tag, msg, ...args) {
     let content = formateMsg(tag, msg, ...args);
     if (config.mainWindow && config.mainWindow.isEnabled && config.mainWindow.webContents) {
         config.mainWindow.webContents.executeJavaScript(`console.info(\'${content}\');`);
+        webContentsLog(tag, msg, ...args);
     } else {
         processLog(tag, msg, ...args);
     }

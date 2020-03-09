@@ -27,7 +27,11 @@ let gameServerNatPort;
 /** native配置路径 */
 const nativeCnfPath = `${rootPath}/package/server/config/native_lesson_cnf.json`;
 
+/** 后台进程日志路径 */
 const processLogPath = `${rootPath}/src/main/process.log`;
+
+/** 前台日志路径 */
+const webContentsLogPath = `${rootPath}/src/main/webContents.log`;
 
 /** 游戏服务器是否初始化 */
 let gameServerInited;
@@ -119,6 +123,7 @@ exports.gameServerNatUrl = gameServerNatUrl;
 exports.gameServerNatPort = gameServerNatPort;
 exports.nativeCnfPath = nativeCnfPath;
 exports.processLogPath = processLogPath;
+exports.webContentsLogPath = webContentsLogPath;
 exports.gameServerInited = gameServerInited;
 exports.channel = channel;
 exports.bellTempToken = bellTempToken;
