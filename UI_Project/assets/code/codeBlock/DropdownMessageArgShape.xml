@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="65,30" restrictSize="0,0,30,30" extention="ComboBox">
+<component size="65,24" restrictSize="0,0,24,24" extention="ComboBox">
   <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <controller name="ctrlDropShowType" pages="0,normal,1,round" selected="0"/>
   <displayList>
-    <image id="n6_flp7" name="n6" src="s45w1h" fileName="img/img_code_cm_10.png" xy="0,0" size="65,30">
+    <loader id="n6_flp7" name="n6" xy="0,0" size="65,24" url="ui://t573fj5ba8xf65" fill="scaleFree">
+      <gearIcon controller="ctrlDropShowType" pages="0" values="ui://t573fj5ba8xf65" default="ui://t573fj5bs45w1h"/>
       <relation target="" sidePair="width-width,height-height"/>
-    </image>
-    <text id="n4" name="title" xy="9,4" size="30,24" restrictSize="30,0,20,0" fontSize="18" color="#333333" align="center" vAlign="middle" ubb="true" singleLine="true" text=""/>
-    <image id="n7_flp7" name="n7" src="s45w1d" fileName="img/img_code_cm_6.png" xy="43,11">
+    </loader>
+    <text id="n4" name="title" xy="9,0" size="30,24" restrictSize="30,0,24,0" fontSize="18" color="#333333" align="center" vAlign="middle" ubb="true" singleLine="true" text=""/>
+    <image id="n7_flp7" name="n7" src="s45w1d" fileName="img/img_code_cm_6.png" xy="43,8">
       <relation target="" sidePair="middle-middle,right-right"/>
     </image>
   </displayList>

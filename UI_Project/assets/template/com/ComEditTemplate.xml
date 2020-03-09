@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="401,882" overflow="scroll" scrollBarFlags="4" scrollBar="visible" scrollBarRes="ui://0axy98cgiv9318,ui://0axy98cgiv9318" designImage="ui://thvmj7vooebl4cyij8" designImageOffsetX="-1463" designImageOffsetY="-118" designImageAlpha="7" designImageLayer="1">
+<component size="401,882" overflow="scroll" scrollBarFlags="4" scrollBar="visible" designImage="ui://thvmj7vooebl4cyij8" designImageOffsetX="-1463" designImageOffsetY="-118" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlMapSizeStatus" pages="0,big,1,middle,2,small,3,custom" selected="0"/>
   <controller name="ctrlIsPublish" pages="0,false,1,true" selected="0"/>
   <controller name="ctrlIsManorCheckPoint" pages="0,true,1,false" selected="0"/>
   <displayList>
-    <image id="n0_er8n" name="imgInputBg" src="eggjcyihs" fileName="img/img_cm_srk_1.png" pkg="te1gxawo" xy="10,10" size="380,40" group="n40_ra2b"/>
-    <image id="n1_er8n" name="imgPen" src="pz1n3w" fileName="img/icon_mapT_bj.png" xy="355,19" group="n40_ra2b"/>
-    <text id="n2_er8n" name="inpMapName" xy="14,16" size="369,29" group="n40_ra2b" alpha="0.6" input="true" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="七桥问题地图"/>
-    <group id="n40_ra2b" name="grpInput" xy="10,10" size="380,40" collapsed="true"/>
+    <component id="n59_azjx" name="labNameInput" src="azjx4v" fileName="com/labNameInput.xml" xy="10,10" size="380,40">
+      <Label icon="ui://te1gxawoeggjcyihs"/>
+    </component>
     <image id="n50_oebl" name="imgAuthor" src="c1h7cyii2" fileName="img/icon_cm_avatar.png" pkg="te1gxawo" xy="179,59" group="n52_oebl"/>
     <text id="n51_oebl" name="tfCreater" xy="205,55" size="194,29" group="n52_oebl" fontSize="18" color="#333333" vAlign="middle" vars="true" autoSize="none" text="地图作者: {name=author}"/>
     <group id="n52_oebl" name="grpAuthor" xy="179,55" size="220,29" group="n42_ra2b" collapsed="true"/>
-    <component id="n17_er8n" name="btnSelectMapIcon" src="iv93c" fileName="old/btn/BtnSelectMapIcon.xml" xy="10,62" size="160,118" group="n42_ra2b"/>
+    <component id="n17_er8n" name="btnSelectMapIcon" src="iv93c" fileName="btn/BtnSelectMapIcon.xml" xy="10,62" size="160,118" group="n42_ra2b"/>
     <image id="n53_oebl" name="imgSubscribeNum" src="8qqi3i" fileName="img/icon_mapt_sc_2.png" xy="177,103" group="n55_oebl"/>
     <text id="n54_oebl" name="tfSubscribeNum" xy="201,104" size="66,18" group="n55_oebl" fontSize="14" color="#999999" vAlign="middle" autoSize="none" singleLine="true" text="999"/>
     <group id="n55_oebl" name="grpSubscribe" xy="177,103" size="90,20" group="n42_ra2b" advanced="true" collapsed="true"/>
@@ -44,15 +43,15 @@
         <item title="其他" value="custom"/>
       </ComboBox>
     </component>
-    <image id="n4_er8n" name="imgMutil" src="iv93r" fileName="old/img/img_stencil_c_1.png" xy="131,286" group="n19_er8n"/>
+    <image id="n4_er8n" name="imgMutil" src="iv93r" fileName="img/img_stencil_c_1.png" xy="131,286" group="n19_er8n"/>
     <image id="n5_er8n" name="imgWidthBG" src="eggjcyihs" fileName="img/img_cm_srk_1.png" pkg="te1gxawo" xy="11,269" size="102,40" group="n19_er8n"/>
     <image id="n6_er8n" name="imgHeightBG" src="eggjcyihs" fileName="img/img_cm_srk_1.png" pkg="te1gxawo" xy="162,269" size="102,40" group="n19_er8n"/>
     <text id="n7_er8n" name="inpMapWidth" xy="11,270" size="101,38" group="n19_er8n" input="true" prompt="1920" restrict="0-9" keyboardType="4" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="1000"/>
     <text id="n8_er8n" name="inpMapHeight" xy="162,270" size="102,40" group="n19_er8n" input="true" prompt="1080" restrict="0-9" keyboardType="4" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="1000"/>
-    <component id="n9_er8n" name="btnUpdateMap" src="iv93s" fileName="old/btn/btnScale.xml" xy="290,272" size="100,37" group="n19_er8n">
+    <component id="n9_er8n" name="btnUpdateMap" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="290,272" size="100,37" group="n19_er8n">
       <Button title="更新尺寸" titleColor="#ffffff" titleFontSize="18" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <group id="n19_er8n" name="customInput" xy="11,269" size="380,41" group="n48_oebl" advanced="true" collapsed="true">
+    <group id="n19_er8n" name="customInput" xy="11,269" size="379,41" group="n48_oebl" advanced="true">
       <gearDisplay controller="ctrlMapSizeStatus" pages="3"/>
     </group>
     <text id="n12_er8n" name="tfIsCanEdit" xy="7,341" size="147,29" group="n38_ra2b" fontSize="18" color="#333333" vAlign="middle" autoSize="none" text="编辑器是否可用"/>
@@ -93,7 +92,7 @@
     <group id="n38_ra2b" name="grpSetting" xy="7,272" size="384,338" group="n48_oebl" advanced="true" collapsed="true">
       <relation target="n49_oebl" sidePair="top-bottom"/>
     </group>
-    <group id="n48_oebl" name="grpDetail" xy="7,199" size="384,411" advanced="true" collapsed="true">
+    <group id="n48_oebl" name="grpDetail" xy="7,199" size="384,411" advanced="true">
       <gearXY controller="ctrlIsPublish" pages="1" values="7,247" default="7,199"/>
     </group>
     <component id="n57_ur6k" name="btnEnterCase" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="158,833" size="100,38" visible="false">

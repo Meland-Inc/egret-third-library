@@ -1,26 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="221,35" opaque="false">
+<component size="130,160" opaque="false">
   <controller name="copyType" pages="0,copy,1,paste" selected="1"/>
   <displayList>
-    <component id="n0_hoex" name="btnCopyAndPaste" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="0,0" size="140,35" customData="delete">
+    <image id="n8_f08k" name="n8" src="f08kwcyilc" fileName="codeVew/img/img_codeV_xzk_1.png" xy="0,0" size="130,160">
+      <gearSize controller="copyType" pages="0" values="130,120,1,1" default="130,160,1,1"/>
+    </image>
+    <component id="n2_ezty" name="btnCopy" src="f08kwcyilb" fileName="codeVew/btn/btnCodeBlockOperate.xml" xy="0,0" size="130,40" customData="delete">
       <gearDisplay controller="copyType" pages="0"/>
-      <Button title="复制并粘贴" titleColor="#ffffff" titleFontSize="18" icon="ui://te1gxawooiqdcyih3"/>
+      <Button title="复制" titleFontSize="20" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <component id="n2_ezty" name="btnCopy" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="150,0" size="71,35" customData="delete">
+    <component id="n3_ezty" name="btnPaste" src="f08kwcyilb" fileName="codeVew/btn/btnCodeBlockOperate.xml" xy="0,0" size="130,40" customData="delete">
+      <gearDisplay controller="copyType" pages="1"/>
+      <Button title="粘贴" titleColor="#000000" titleFontSize="20" icon="ui://te1gxawooiqdcyih3"/>
+    </component>
+    <component id="n4_qs3d" name="btnCopyAll" src="f08kwcyilb" fileName="codeVew/btn/btnCodeBlockOperate.xml" xy="0,40" size="130,40" customData="delete">
+      <gearDisplay controller="copyType" pages="1"/>
+      <Button title="复制全部" titleColor="#000000" titleFontSize="20" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <component id="n5_fgo2" name="btnCleanAll" src="f08kwcyilb" fileName="codeVew/btn/btnCodeBlockOperate.xml" xy="0,120" size="130,40" customData="delete">
+      <gearDisplay controller="copyType" pages="1"/>
+      <Button title="删除全部" titleColor="#000000" titleFontSize="20" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <component id="n7_f08k" name="btnCopyAndPaste" src="f08kwcyilb" fileName="codeVew/btn/btnCodeBlockOperate.xml" xy="0,40">
       <gearDisplay controller="copyType" pages="0"/>
-      <Button title="复制" titleColor="#ffffff" titleFontSize="18" icon="ui://te1gxawooiqdcyih1"/>
+      <Button title="复制并粘贴"/>
     </component>
-    <component id="n3_ezty" name="btnPaste" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="72,0" size="75,35" customData="delete">
-      <gearDisplay controller="copyType" pages="1"/>
-      <Button title="粘贴" titleColor="#ffffff" titleFontSize="18" icon="ui://te1gxawooiqdcyih3"/>
-    </component>
-    <component id="n4_qs3d" name="btnCopyAll" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="47,42" size="126,35" customData="delete">
-      <gearDisplay controller="copyType" pages="1"/>
-      <Button title="复制全部" titleColor="#ffffff" titleFontSize="18" icon="ui://te1gxawooiqdcyih1"/>
-    </component>
-    <component id="n5_fgo2" name="btnCleanAll" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="47,86" size="126,35" customData="delete">
-      <gearDisplay controller="copyType" pages="1"/>
-      <Button title="删除全部" titleColor="#ffffff" titleFontSize="18" icon="ui://te1gxawooiqdcyih1"/>
+    <component id="n9_f08k" name="btnComment" src="f08kwcyilb" fileName="codeVew/btn/btnCodeBlockOperate.xml" xy="0,80" size="130,40" customData="delete">
+      <Button title="注释" titleColor="#000000" titleFontSize="20"/>
     </component>
   </displayList>
 </component>
