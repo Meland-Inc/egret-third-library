@@ -46,7 +46,12 @@ namespace egret {
      * @includeExample egret/utils/getTimer.ts
      * @language zh_CN
      */
-    export function getTimer():number {
+    export function getTimer(): number {
         return Date.now() - sys.$START_TIME;
+    }
+
+    /**上次帧消耗时间 ms 如果限制帧会是限制帧率的间隔时间*/
+    export function getFrameDelta(): number {
+        return ticker.frameRealDelta;
     }
 }

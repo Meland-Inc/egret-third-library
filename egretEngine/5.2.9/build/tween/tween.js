@@ -875,8 +875,9 @@ var egret;
          */
         Tween.tick = function (timeStamp, paused) {
             if (paused === void 0) { paused = false; }
-            var delta = timeStamp - Tween._lastTime;
-            Tween._lastTime = timeStamp;
+            var delta = egret.getFrameDelta();
+            // let delta = timeStamp - Tween._lastTime;
+            // Tween._lastTime = timeStamp;
             var tweens = Tween._tweens.concat();
             for (var i = tweens.length - 1; i >= 0; i--) {
                 var tween_1 = tweens[i];
@@ -887,6 +888,7 @@ var egret;
             }
             return false;
         };
+        // private static _lastTime: number = 0;
         /**
          * @private
          *
@@ -902,7 +904,7 @@ var egret;
                 }
                 tweens.push(tween);
                 if (!Tween._inited) {
-                    Tween._lastTime = egret.getTimer();
+                    // Tween._lastTime = egret.getTimer();
                     egret.ticker.$startTick(Tween.tick, null);
                     Tween._inited = true;
                 }
@@ -1452,7 +1454,6 @@ var egret;
          * @private
          */
         Tween._inited = false;
-        Tween._lastTime = 0;
         return Tween;
     }(egret.EventDispatcher));
     egret.Tween = Tween;
