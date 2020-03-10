@@ -101,6 +101,11 @@ export class Global {
         return Global.clientPath + '/platform/pc';
     }
 
+    static get nativeConfigPath() {
+        return `${Global.clientPath}/platform/pc/GlobalConfig.json`;
+    }
+
+
     // static get compressPath() {
     //     return Global.projPath + '/rawResource/asset/compress';
     // }

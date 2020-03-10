@@ -863,27 +863,31 @@ export function mergeServerPackage() {
 
 /** 上传客户端包 */
 export async function uploadClientPackage() {
-    let policyInfo = await ModelMgr.versionModel.getCurPolicyInfo();
-    let data = JSON.parse(policyInfo);
-    console.log(`start zip`);
-    if (data.Code != 0) {
-        console.log(`policy num is null`);
-        console.log(data.Message);
-        return;
-    }
+    return new Promise(async (resolve, reject) => {
+        let policyInfo = await ModelMgr.versionModel.getCurPolicyInfo();
+        let data = JSON.parse(policyInfo);
+        console.log(`start zip`);
+        if (data.Code != 0) {
+            console.log(`policy num is null`);
+            console.log(data.Message);
+            reject();
+            return;
+        }
 
-    let policyNum = data.Data.Version;
-    let environ = ModelMgr.versionModel.curEnviron;
-    let gameVersion = await ModelMgr.versionModel.getGameVersion(environ, policyNum);
-    let releaseName = `release_v${gameVersion}s`;
-    let zipPath = `${Global.svnPublishPath}${environ.zipPath}/${releaseName}.zip`;
+        let policyNum = data.Data.Version;
+        let environ = ModelMgr.versionModel.curEnviron;
+        let gameVersion = await ModelMgr.versionModel.getGameVersion(environ, policyNum);
+        let releaseName = `release_v${gameVersion}s`;
+        let zipPath = `${Global.svnPublishPath}${environ.zipPath}/${releaseName}.zip`;
 
-    await zipClientPackage(environ, policyNum, releaseName, zipPath);
+        await zipClientPackage(environ, policyNum, releaseName, zipPath);
 
-    let fileKey = `${releaseName}.zip`
-    CdnUtil.checkUploaderFile(zipPath, fileKey, `clientPackages/${environ.name}`, async () => {
-        console.log(`${environ.name}上传${fileKey}完毕,版本号:${gameVersion}`);
-    });
+        let fileKey = `${releaseName}.zip`
+        CdnUtil.checkUploaderFile(zipPath, fileKey, `clientPackages/${environ.name}`, () => {
+            console.log(`${environ.name}上传${fileKey}完毕,版本号:${gameVersion}`);
+            resolve();
+        });
+    })
 }
 
 function zipClientPackage(environ, policyNum, releaseName, zipPath) {
@@ -897,13 +901,18 @@ function zipClientPackage(environ, policyNum, releaseName, zipPath) {
             return;
         }
 
-        let zipData = fs.readFileSync(policyPath);
+        let indexPath = Global.rawResourcePath + "/nativeIndex.html";
+        let policyData = fs.readFileSync(policyPath);
+        let indexData = fs.readFileSync(indexPath);
         let output = fs.createWriteStream(zipPath);
         let archive = archiver("zip");
         archive.pipe(output);
         archive.directory(releasePath, ``);
-        archive.append(zipData, {
+        archive.append(policyData, {
             name: "policyFile.json"
+        });
+        archive.append(indexData, {
+            name: "index.html"
         });
 
         archive.on("error", (err) => {
@@ -1038,6 +1047,26 @@ async function checkUploadServerPackages(packageDir, successFunc) {
 //         resolve();
 //     });
 // }
+
+/** 写入版本信息 */
+export async function writeVersionInfo() {
+    let nativeConfigContent = await fsExc.readFile(Global.nativeConfigPath);
+    let curEnviron = ModelMgr.versionModel.curEnviron;
+    let nativeConfig = JSON.parse(nativeConfigContent);
+    nativeConfig.environName = curEnviron.name;
+    let gameVersion = await ModelMgr.versionModel.getEnvironGameVersion(curEnviron.name);
+    nativeConfig.gameVersion = +gameVersion;
+    if (curEnviron.name == ModelMgr.versionModel.eEnviron.release) {
+        nativeConfig.patchUrl = `${curEnviron.host}${curEnviron.cdnWinPatchPath}`;
+        nativeConfig.policyUrl = `${curEnviron.host}/`;
+    } else {
+        nativeConfig.patchUrl = `${curEnviron.host}${curEnviron.scpWinPatchPath}`;
+        nativeConfig.policyUrl = `${curEnviron.host}${curEnviron.scpPath}`;
+    }
+
+    nativeConfigContent = JSON.stringify(nativeConfig, null, 4);
+    await fsExc.writeFile(Global.nativeConfigPath, nativeConfigContent);
+}
 
 /** 发布window版本 */
 export async function publishWin() {

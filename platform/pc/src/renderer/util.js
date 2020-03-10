@@ -3,7 +3,7 @@
  * @desc 工具类
  * @date 2020-02-28 19:56:39 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-03 16:41:26
+ * @Last Modified time: 2020-03-10 22:29:07
  */
 const fs = require('fs');
 const path = require('path');
@@ -131,16 +131,21 @@ export async function deleteFolderRecursive(folderPath) {
 }
 
 /** 设置全局配置值 */
-export async function setGlobalConfigValue(key, value) {
-    let configContent = await fs.readFileSync(Config.globalConfigPath, "utf-8");
+export function setGlobalConfigValue(key, value) {
+    let configContent = fs.readFileSync(Config.globalConfigPath, "utf-8");
     let globalConfig = JSON.parse(configContent);
     globalConfig[key] = value;
-    await fs.writeFileSync(Config.globalConfigPath, JSON.stringify(globalConfig), "utf-8");
+    fs.writeFileSync(Config.globalConfigPath, JSON.stringify(globalConfig), "utf-8");
 }
 
 /** 获取全局配置值 */
-export async function getGlobalConfigValue(key) {
-    let configContent = await fs.readFileSync(Config.globalConfigPath, "utf-8");
-    let globalConfig = JSON.parse(configContent);
+export function getGlobalConfigValue(key) {
+    let globalConfig = getGlobalConfig();
     return globalConfig[key];
+}
+
+export function getGlobalConfig() {
+    let configContent = fs.readFileSync(Config.globalConfigPath, "utf-8");
+    let globalConfig = JSON.parse(configContent);
+    return globalConfig;
 }

@@ -65,6 +65,12 @@
           @click="onClearPackageDir"
         >清空游戏包目录</mu-button>
         <mu-button
+          v-loading="isWriteVersionInfoLoading"
+          data-mu-loading-size="24"
+          color="blue500"
+          @click="onWriteVersionInfo"
+        >写入版本信息</mu-button>
+        <mu-button
           v-loading="isPublishWinLoading"
           data-mu-loading-size="24"
           color="blue500"
@@ -109,6 +115,7 @@ export default {
       isMergeServerPackageLoading: false,
       isUploadClientPackageLoading: false,
       isClearPackageDirLoading: false,
+      isWriteVersionInfoLoading: false,
       isPublishWinLoading: false,
       isPublishMacLoading: false,
       isUploadNativeLoading: false,
@@ -197,6 +204,23 @@ export default {
         Global.hideRegionLoading();
       } catch (error) {
         this.isClearPackageDirLoading = false;
+        Global.hideRegionLoading();
+      }
+    },
+    async onWriteVersionInfo() {
+      if (!ModelMgr.versionModel.publisher) {
+        Global.snack("请输入发布者", null, false);
+        return;
+      }
+
+      this.isWriteVersionInfoLoading = true;
+      Global.showRegionLoading();
+      try {
+        await mdPublish.writeVersionInfo();
+        this.isWriteVersionInfoLoading = false;
+        Global.hideRegionLoading();
+      } catch (error) {
+        this.isPublishWinLoading = false;
         Global.hideRegionLoading();
       }
     },
@@ -289,6 +313,7 @@ export default {
       try {
         let promiseList = [];
         promiseList.push(mdPublish.clearPackageDir);
+        promiseList.push(mdPublish.writeVersionInfo);
         promiseList.push(mdPublish.publishWin);
         promiseList.push(mdPublish.publishMac);
         promiseList.push(ModelMgr.ftpModel.initQiniuOption);

@@ -14,7 +14,7 @@ export class FtpModel {
     async initQiniuOption() {
         let options = {
             scope: "bp-stage",
-            expires: 60 * 60 * 3
+            expires: 1000 * 60 * 60 * 3
         };
         let putPolicy = new qiniu.rs.PutPolicy(options);
         let mac = new qiniu.auth.digest.Mac(this.accessKey, this.secretKey);

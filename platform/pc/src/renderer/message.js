@@ -3,7 +3,7 @@
  * @desc 渲染进程消息处理文件
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-10 17:36:25
+ * @Last Modified time: 2020-03-10 22:59:37
  */
 import { Config } from './Config.js';
 import { ClientUpdate } from './update/ClientUpdate.js';
@@ -89,7 +89,7 @@ async function onCheckUpdate() {
     } else {
         let dir = await fs.readdirSync(clientPackageDir);
         logger.log(`net`, `dir length:${dir.length}`);
-        if (dir.length <= 1) {
+        if (dir.length === 0) {
             clientDirect = true;
         }
     }
@@ -106,6 +106,7 @@ async function onCheckUpdate() {
     let isClientLatestVersion = await clientUpdate.checkLatestVersion();
     //两个版本都一致
     if (isServerLatestVersion && isClientLatestVersion) {
+        logger.log(`net`, `检查更新完毕,客户端,服务端版本都是最新`);
         checkUpdateComplete();
         return;
     }

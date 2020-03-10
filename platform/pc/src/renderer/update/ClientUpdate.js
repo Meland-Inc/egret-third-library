@@ -3,7 +3,7 @@
  * @desc 游戏客户端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-10 18:01:49
+ * @Last Modified time: 2020-03-10 23:04:18
  */
 
 import * as loading from '../loading.js';
@@ -49,23 +49,14 @@ export class ClientUpdate {
 
     /** 检查是否最新版本 */
     async checkLatestVersion() {
-        let indexPath = `${Config.clientPackagePath}index.html`;
-        let indexContent = await fs.readFileSync(indexPath, "utf-8");
-        let versionResult = indexContent.match(new RegExp(`let patchVersion = "([0-9]+)";`));
-        this.curVersion = this.startVersion = +versionResult[1];
+        let globalConfig = util.getGlobalConfig();
+        this.curVersion = this.startVersion = +globalConfig.gameVersion;
+        this.patchUrl = `${Config.protocol}//${globalConfig.patchUrl}`;
+        this.evnName = globalConfig.environName;
+        let policyUrl = globalConfig.policyUrl;
+        this.policyHost = policyUrl.split("/")[0];
+        this.policyPath = policyUrl.replace(this.policyHost, "");
 
-        //同样通过匹配获取当前环境
-        let urlResult = indexContent.match(new RegExp(`let patchUrl = "([^\";]*)";`));
-        this.patchUrl = `${Config.protocol}//${urlResult[1]}`;
-
-        let evnResult = indexContent.match(new RegExp(`let evnName = "([^\";]*)";`));
-        this.evnName = evnResult[1];
-
-        let policyUrlResult = indexContent.match(new RegExp(`let policyUrl = "([^\";]*)";`));
-        let policyUrl = policyUrlResult[1];
-        this.policyHost = policyUrlResult[1].split("/")[0];
-        this.policyPath = policyUrlResult[1].replace(this.policyHost, this.policyPath);
-        logger.log(`renderer`, "native curVersion : ", this.curVersion, this.policyHost, this.policyPath, this.evnName, policyUrl);
         let policyNum = await this.getCurPolicyNum();
         if (policyNum === null) {
             let content = "获取策略版本号错误!";
@@ -134,6 +125,7 @@ export class ClientUpdate {
                 return;
             }
 
+            logger.log(`update`, `检测到客户端版本不一致,开始更新`);
             this.patchCount = this.gameVersion - this.startVersion;
             this.installSinglePatch();
         } catch (error) {
@@ -203,6 +195,7 @@ export class ClientUpdate {
                     let matchResult = indexContent.match(new RegExp(`let patchVersion = "([0-9]+)";`));
                     this.curVersion = +matchResult[1];
                     if (this.curVersion >= this.gameVersion) {
+                        util.setGlobalConfigValue("gameVersion", this.curVersion);
                         this.executeUpdateCallback();
                     } else {
                         this.installSinglePatch()
@@ -227,6 +220,7 @@ export class ClientUpdate {
             this.downloadFileCallback(arg, filename, percentage);
 
             if (arg === "finished") {
+                util.setGlobalConfigValue("gameVersion", this.gameVersion);
                 this.executeUpdateCallback();
             }
         });

@@ -3,7 +3,7 @@
  * @desc 游戏服务器端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-10 17:56:05
+ * @Last Modified time: 2020-03-10 22:36:31
  */
 
 import * as loading from '../loading.js';
@@ -36,18 +36,14 @@ export class ServerUpdate {
     /** 远程版本 */
     remoteVersion;
 
+    initVersionInfo() {
+        let globalConfig = util.getGlobalConfig();
+        this.evnName = globalConfig.environName;
+    }
 
     /** 检查是否最新版本 */
     async checkLatestVersion() {
-        //获取分支名称
-        let indexPath = `${Config.clientPackagePath}index.html`;
-        if (!fs.existsSync(indexPath)) {
-            return false;
-        }
-
-        let indexContent = await fs.readFileSync(indexPath, "utf-8");
-        let evnResult = indexContent.match(new RegExp(`let evnName = "([^\";]*)";`));
-        this.evnName = evnResult[1];
+        this.initVersionInfo();
 
         //获取本地游戏版本
         this.localVersion = await util.getGlobalConfigValue("serverPackageVersion");
