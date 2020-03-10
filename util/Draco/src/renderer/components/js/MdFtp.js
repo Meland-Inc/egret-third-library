@@ -577,66 +577,99 @@ export async function zipUploadGame() {
     // }
 }
 
-export async function copyPackageToSvn() {
-    console.log(`拷贝native包到svn文件夹`);
-    let environ = ModelMgr.versionModel.curEnviron;
-    let releaseVersion = ModelMgr.versionModel.releaseVersion;
-    let exeOriginName = "bellplanet Setup 1.0.0.exe"
-    let exePath = `${Global.pcProjectPath}/dist/${exeOriginName}`;
-    let exeTargetPath = `${Global.svnPublishPath}/native`;
-    let exeNewName = `bellplanet_${environ.name}_${releaseVersion}.exe`;
-    await fsExc.copyFile(exePath, exeTargetPath);
-    await fsExc.rename(`${exeTargetPath}/${exeOriginName}`, `${exeTargetPath}/${exeNewName}`);
+// export async function copyPackageToSvn() {
+//     console.log(`拷贝native包到svn文件夹`);
+//     let environ = ModelMgr.versionModel.curEnviron;
+//     let releaseVersion = ModelMgr.versionModel.releaseVersion;
+//     let exeOriginName = "bellplanet Setup 1.0.0.exe"
+//     let exePath = `${Global.pcProjectPath}/dist/${exeOriginName}`;
+//     let exeTargetPath = `${Global.svnPublishPath}/native`;
+//     let exeNewName = `bellplanet_${environ.name}_${releaseVersion}.exe`;
+//     await fsExc.copyFile(exePath, exeTargetPath);
+//     await fsExc.rename(`${exeTargetPath}/${exeOriginName}`, `${exeTargetPath}/${exeNewName}`);
 
-    let dmgOriginName = "bellplanet-1.0.0.dmg";
-    let dmgPath = `${Global.pcProjectPath}/dist/${dmgOriginName}`;
-    let dmgTargetPath = `${Global.svnPublishPath}/native/`;
-    let dmgNewName = `bellplanet_${environ.name}_${releaseVersion}.dmg`;
-    await fsExc.copyFile(dmgPath, dmgTargetPath)
-    await fsExc.rename(`${dmgTargetPath}/${dmgOriginName}`, `${dmgTargetPath}/${dmgNewName}`);
-    console.log(`拷贝完毕`);
-}
+//     let dmgOriginName = "bellplanet-1.0.0.dmg";
+//     let dmgPath = `${Global.pcProjectPath}/dist/${dmgOriginName}`;
+//     let dmgTargetPath = `${Global.svnPublishPath}/native/`;
+//     let dmgNewName = `bellplanet_${environ.name}_${releaseVersion}.dmg`;
+//     await fsExc.copyFile(dmgPath, dmgTargetPath)
+//     await fsExc.rename(`${dmgTargetPath}/${dmgOriginName}`, `${dmgTargetPath}/${dmgNewName}`);
+//     console.log(`拷贝完毕`);
+// }
 
 export async function uploadNativeExe() {
-    return new Promise((resolve, reject) => {
-        tryUploadNativeExe(resolve, reject);
+    return new Promise(async (resolve, reject) => {
+        let environ = ModelMgr.versionModel.curEnviron;
+        // let releaseVersion = ModelMgr.versionModel.releaseVersion;
+        let exeOriginName = "bellplanet Setup 1.0.0.exe"
+        let exePath = `${Global.pcProjectPath}/dist/${exeOriginName}`;
+        let exeTargetName = `bellplanet_${environ.name}.exe`;
+        let exeTargetDir = `${Global.svnPublishPath}/native`;
+        let exeTargetPath = `${exeTargetDir}/${exeTargetName}`;
+
+        console.log("比较exe包");
+        let equal = await fsExc.mergeFileByMd5(exePath, exeTargetPath);
+        if (equal) {
+            console.log("exe包相等");
+            resolve();
+            return;
+        }
+
+        console.log("exe包不相等,开始上传");
+        // let exeName = `bellplanet_${environ.name}_${releaseVersion}.exe`;
+        // tryUploadNativeExe(exeName, async () => {
+        //     console.log("exe包上传完毕,拷贝最新包到svn文件夹");
+        await fsExc.copyFile(exePath, exeTargetDir);
+        await fsExc.rename(`${exeTargetDir}/${exeOriginName}`, exeTargetPath);
+        //     resolve();
+        // }, reject);
     });
 }
 
-async function tryUploadNativeExe(resolve, reject) {
-    console.log(`开始上传exe文件`);
-    let environ = ModelMgr.versionModel.curEnviron;
-    let releaseVersion = ModelMgr.versionModel.releaseVersion;
-    let nativePath = `${Global.svnPublishPath}/native/`;
-    let exeName = `bellplanet_${environ.name}_${releaseVersion}.exe`;
-    console.log(`nativePath: ${nativePath} exeName:${exeName}`);
-    CdnUtil.uploaderFile(`${nativePath}/${exeName}`, exeName, "native", () => {
+async function tryUploadNativeExe(exePath, exeName, resolve, reject) {
+    console.log(`尝试上传exe文件`);
+    CdnUtil.uploaderFile(exePath, exeName, "native", () => {
         console.log(`上传exe成功`)
         resolve();
     }, (reason) => {
-        console.log(`上传exe失败: ${reason}`)
-        setTimeout(tryUploadNativeExe, 5000, resolve, reject);
+        console.log(`上传exe失败: ${reason}, 5秒后重试`)
+        setTimeout(tryUploadNativeExe, 5000, exePath, exeName, resolve, reject);
     });
-    CdnUtil.checkUploaderFile(`${nativePath}/${exeName}`, exeName, "native")
 }
 
 export async function uploadNativeDmg() {
-    return new Promise((resolve, reject) => {
-        tryUploadNativeDmg(resolve, reject);
+    return new Promise(async (resolve, reject) => {
+        // let environ = ModelMgr.versionModel.curEnviron;
+        // let releaseVersion = ModelMgr.versionModel.releaseVersion;
+        let dmgOriginName = "bellplanet-1.0.0.dmg";
+        let dmgPath = `${Global.pcProjectPath}/dist/${dmgOriginName}`;
+        let dmgTargetPath = `${Global.svnPublishPath}/native/`;
+
+        console.log("比较mac包");
+        let equal = await fsExc.mergeFileByMd5(dmgPath, dmgTargetPath);
+        if (equal) {
+            console.log("mac包相等");
+            resolve();
+            return;
+        }
+
+        console.log("mac包不相等,开始上传");
+        // let dmgName = `bellplanet_${environ.name}_${releaseVersion}.dmg`;
+        // tryUploadNativeDmg(dmgPath, dmgName, async () => {
+        //     console.log("mac包上传完毕,拷贝最新包到svn文件夹");
+        //     await fsExc.copyFile(dmgPath, dmgTargetPath);
+        //     resolve();
+        // }, reject);
     });
 }
 
-async function tryUploadNativeDmg(resolve, reject) {
-    console.log(`开始上传dmg文件`);
-    let environ = ModelMgr.versionModel.curEnviron;
-    let releaseVersion = ModelMgr.versionModel.releaseVersion;
-    let nativePath = `${Global.svnPublishPath}/native/`;
-    let dmgName = `bellplanet_${environ.name}_${releaseVersion}.dmg`;
-    CdnUtil.uploaderFile(`${nativePath}/${dmgName}`, dmgName, "native", () => {
+async function tryUploadNativeDmg(dmgPath, dmgName, resolve, reject) {
+    console.log(`尝试上传dmg文件`);
+    CdnUtil.uploaderFile(dmgPath, dmgName, "native", () => {
         console.log(`上传dmg成功`)
         resolve();
     }, (reason) => {
-        console.log(`上传dmg失败: ${reason}`)
-        setTimeout(tryUploadNativeDmg, 5000, resolve, reject)
+        console.log(`上传dmg失败: ${reason}, 5秒后重试`)
+        setTimeout(tryUploadNativeDmg, 5000, dmgPath, dmgName, resolve, reject)
     });
 }

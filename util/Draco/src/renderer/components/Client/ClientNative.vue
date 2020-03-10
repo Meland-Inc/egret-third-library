@@ -34,19 +34,36 @@
           data-mu-loading-size="24"
           color="pink500"
           @click="onUpdateServerPackage"
-        >更新svn服务器包</mu-button>
+        >更新svn服务端包</mu-button>
         <mu-button
           v-loading="isMergeServerPackageLoading"
           data-mu-loading-size="24"
           color="orange500"
           @click="onMergeServerPackage"
-        >比较上传服务器包</mu-button>
+        >比较上传服务端包</mu-button>
         <mu-button
-          v-loading="isCopyClientPackageLoading"
+          v-loading="isUploadClientPackageLoading"
+          data-mu-loading-size="24"
+          color="orange500"
+          @click="onUploadClientPackage"
+        >上传客户端包</mu-button>
+      </div>
+    </mu-container>
+    <mu-divider />
+    <mu-container>
+      <div class="button-wrapper">
+        <mu-button full-width color="red" @click="oneKeyUpload">一键上传游戏包</mu-button>
+      </div>
+    </mu-container>
+    <mu-divider />
+    <mu-container>
+      <div class="button-wrapper" id="package">
+        <mu-button
+          v-loading="isClearPackageDirLoading"
           data-mu-loading-size="24"
           color="cyan500"
-          @click="onCopyClientPackage"
-        >拷贝客户端包</mu-button>
+          @click="onClearPackageDir"
+        >清空游戏包目录</mu-button>
         <mu-button
           v-loading="isPublishWinLoading"
           data-mu-loading-size="24"
@@ -70,7 +87,7 @@
     <mu-divider />
     <mu-container>
       <div class="button-wrapper">
-        <mu-button full-width color="red" @click="oneForAll">One·for·All</mu-button>
+        <mu-button full-width color="red" @click="oneKeyPackage">一键打包native</mu-button>
       </div>
     </mu-container>
   </div>
@@ -90,7 +107,8 @@ export default {
       publisher: null,
       isUpdateServerPackageLoading: false,
       isMergeServerPackageLoading: false,
-      isCopyClientPackageLoading: false,
+      isUploadClientPackageLoading: false,
+      isClearPackageDirLoading: false,
       isPublishWinLoading: false,
       isPublishMacLoading: false,
       isUploadNativeLoading: false,
@@ -146,21 +164,39 @@ export default {
         Global.hideRegionLoading();
       }
     },
-    async onCopyClientPackage() {
+    async onUploadClientPackage() {
       if (!ModelMgr.versionModel.publisher) {
         Global.snack("请输入发布者", null, false);
         return;
       }
 
-      this.isCopyClientPackageLoading = true;
+      this.isUploadClientPackageLoading = true;
+      Global.showRegionLoading();
+      try {
+        await ModelMgr.ftpModel.initQiniuOption();
+        await mdPublish.uploadClientPackage();
+        this.isUploadClientPackageLoading = false;
+        Global.hideRegionLoading();
+      } catch (error) {
+        this.isUploadClientPackageLoading = false;
+        Global.hideRegionLoading();
+      }
+    },
+    async onClearPackageDir() {
+      if (!ModelMgr.versionModel.publisher) {
+        Global.snack("请输入发布者", null, false);
+        return;
+      }
+
+      this.isClearPackageDirLoading = true;
       Global.showRegionLoading();
       try {
         await mdPublish.clearPackageDir();
-        await mdPublish.copyClientPackageToNative();
-        this.isCopyClientPackageLoading = false;
+        // await mdPublish.copyClientPackageToNative();
+        this.isClearPackageDirLoading = false;
         Global.hideRegionLoading();
       } catch (error) {
-        this.isCopyClientPackageLoading = false;
+        this.isClearPackageDirLoading = false;
         Global.hideRegionLoading();
       }
     },
@@ -208,7 +244,7 @@ export default {
       Global.showRegionLoading();
       try {
         await ModelMgr.ftpModel.initQiniuOption();
-        await mdFtp.copyPackageToSvn();
+        // await mdFtp.copyPackageToSvn();
         await mdFtp.uploadNativeExe();
         await mdFtp.uploadNativeDmg();
         this.isUploadNativeLoading = false;
@@ -218,7 +254,8 @@ export default {
         Global.hideRegionLoading();
       }
     },
-    async oneForAll() {
+    //一键上传
+    async oneKeyUpload() {
       if (!ModelMgr.versionModel.publisher) {
         Global.snack("请输入发布者", null, false);
         return;
@@ -230,13 +267,31 @@ export default {
         promiseList.push(mdPublish.updateServerPackage);
         promiseList.push(ModelMgr.ftpModel.initQiniuOption);
         promiseList.push(mdPublish.mergeServerPackage);
-        promiseList.push(mdPublish.clearPackageDir);
-        promiseList.push(mdPublish.copyClientPackageToNative);
 
+        await Global.executePromiseList(promiseList);
+
+        Global.hideLoading();
+        Global.dialog("One·for·All Success");
+      } catch (error) {
+        this.environChange();
+        Global.hideLoading();
+        Global.snack("One·for·All Error:", error, false);
+      }
+    },
+    //一键打包
+    async oneKeyPackage() {
+      if (!ModelMgr.versionModel.publisher) {
+        Global.snack("请输入发布者", null, false);
+        return;
+      }
+
+      Global.showLoading();
+      try {
+        let promiseList = [];
+        promiseList.push(mdPublish.clearPackageDir);
         promiseList.push(mdPublish.publishWin);
         promiseList.push(mdPublish.publishMac);
         promiseList.push(ModelMgr.ftpModel.initQiniuOption);
-        promiseList.push(mdFtp.copyPackageToSvn);
         promiseList.push(mdFtp.uploadNativeExe);
         promiseList.push(mdFtp.uploadNativeDmg);
 
@@ -285,5 +340,9 @@ export default {
 }
 .text-publisher {
   width: 80px;
+}
+
+#package {
+  padding-top: 100px;
 }
 </style>

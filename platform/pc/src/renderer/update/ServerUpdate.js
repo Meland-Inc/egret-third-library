@@ -3,7 +3,7 @@
  * @desc 游戏服务器端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-03 21:17:32
+ * @Last Modified time: 2020-03-10 17:56:05
  */
 
 import * as loading from '../loading.js';
@@ -40,7 +40,12 @@ export class ServerUpdate {
     /** 检查是否最新版本 */
     async checkLatestVersion() {
         //获取分支名称
-        let indexContent = await fs.readFileSync(`${Config.clientPackagePath}` + "index.html", "utf-8");
+        let indexPath = `${Config.clientPackagePath}index.html`;
+        if (!fs.existsSync(indexPath)) {
+            return false;
+        }
+
+        let indexContent = await fs.readFileSync(indexPath, "utf-8");
         let evnResult = indexContent.match(new RegExp(`let evnName = "([^\";]*)";`));
         this.evnName = evnResult[1];
 
@@ -84,6 +89,7 @@ export class ServerUpdate {
         let saveDir = this.serverPackagePath;
         let fileName = `${util.getServerPackageFileName()}_v${this.remoteVersion}.zip`;
         //下载文件
+        loading.showLoading();
         this.download.downloadFile(fileDir, saveDir, fileName, async (arg, filename, percentage, errorMsg) => {
             if (arg === "finished") {
                 util.setGlobalConfigValue("serverPackageVersion", this.remoteVersion);

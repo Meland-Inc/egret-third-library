@@ -3,7 +3,7 @@
  * @desc 游戏客户端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-03 21:17:04
+ * @Last Modified time: 2020-03-10 18:01:49
  */
 
 import * as loading from '../loading.js';
@@ -49,7 +49,8 @@ export class ClientUpdate {
 
     /** 检查是否最新版本 */
     async checkLatestVersion() {
-        let indexContent = await fs.readFileSync(`${Config.clientPackagePath}` + "index.html", "utf-8");
+        let indexPath = `${Config.clientPackagePath}index.html`;
+        let indexContent = await fs.readFileSync(indexPath, "utf-8");
         let versionResult = indexContent.match(new RegExp(`let patchVersion = "([0-9]+)";`));
         this.curVersion = this.startVersion = +versionResult[1];
 
@@ -95,11 +96,24 @@ export class ClientUpdate {
                 logger.log(`renderer`, `策略版本号:${policyNum}`);
                 resolve(policyNum);
             } catch (error) {
-                let content = "获取策略版本号错误!";
+                let content = `获取策略版本号错误!, evnName:${this.evnName}`;
                 logger.error(`renderer`, content);
                 resolve(null);
             }
         });
+    }
+
+    /** 直接下载最新版本 */
+    async directDownload(updateCallback, ...updateCbArgs) {
+        try {
+            this.updateCallback = updateCallback;
+            this.updateCbArgs = updateCbArgs;
+
+            loading.showLoading();
+            this.downloadPackage();
+        } catch (error) {
+            throw error;
+        }
     }
 
     /** 检查更新 */
@@ -155,15 +169,6 @@ export class ClientUpdate {
                 }
                 logger.log(`update`, '文件:' + filename + '删除成功！');
             });
-            let indexContent = await fs.readFileSync(this.clientPackagePath + "index.html").toString();
-            let matchResult = indexContent.match(new RegExp(`let patchVersion = "([0-9]+)";`));
-            this.curVersion = +matchResult[1];
-            if (this.curVersion >= this.gameVersion) {
-                this.executeUpdateCallback();
-            } else {
-                this.installSinglePatch()
-            }
-
         } else if (arg == "404") {
             let content = `下载文件:${filename}错误, 文件不存在!`;
             logger.error(`update`, content);
@@ -178,22 +183,53 @@ export class ClientUpdate {
         }
     }
 
-    /** 下载所有补丁包 */
-    installAllPatch() {
-        this.allInOne = true;
-        loading.showLoading();
-        this.download.downloadFile(this.patchUrl, this.clientPackagePath, `patch_v${this.startVersion}s_v${this.gameVersion}s.zip`, this.downloadFileCallback.bind(this));
-        this.curVersion = this.gameVersion;
-    }
+    // /** 下载所有补丁包 */
+    // installAllPatch() {
+    //     this.allInOne = true;
+    //     loading.showLoading();
+    //     this.download.downloadFile(this.patchUrl, this.clientPackagePath, `patch_v${this.startVersion}s_v${this.gameVersion}s.zip`, this.downloadFileCallback.bind(this));
+    //     this.curVersion = this.gameVersion;
+    // }
 
     /** 下载单个补丁包 */
     installSinglePatch() {
         try {
             loading.showLoading();
-            this.download.downloadFile(this.patchUrl, this.clientPackagePath, `patch_v${this.curVersion}s_v${this.curVersion + 1}s.zip`, this.downloadFileCallback.bind(this));
+            this.download.downloadFile(this.patchUrl, this.clientPackagePath, `patch_v${this.curVersion}s_v${this.curVersion + 1}s.zip`, (arg, filename, percentage) => {
+                this.downloadFileCallback(arg, filename, percentage);
+
+                if (arg === "finished") {
+                    let indexContent = fs.readFileSync(this.clientPackagePath + "index.html").toString();
+                    let matchResult = indexContent.match(new RegExp(`let patchVersion = "([0-9]+)";`));
+                    this.curVersion = +matchResult[1];
+                    if (this.curVersion >= this.gameVersion) {
+                        this.executeUpdateCallback();
+                    } else {
+                        this.installSinglePatch()
+                    }
+                }
+            });
         } catch (error) {
             throw error;
         }
+    }
+
+    /** 下载服务端包 */
+    async downloadPackage() {
+        await this.checkLatestVersion();
+        this.patchCount = 1;
+
+        let fileDir = `${Config.cdnHost}/clientPackages/${this.evnName}`;
+        let saveDir = this.clientPackagePath;
+        let fileName = `release_v${this.gameVersion}s.zip`;
+        //下载文件
+        this.download.downloadFile(fileDir, saveDir, fileName, (arg, filename, percentage) => {
+            this.downloadFileCallback(arg, filename, percentage);
+
+            if (arg === "finished") {
+                this.executeUpdateCallback();
+            }
+        });
     }
 
     /** 执行更新后回调 */

@@ -3,7 +3,7 @@
  * @desc 渲染进程消息处理文件
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-04 14:38:00
+ * @Last Modified time: 2020-03-10 17:36:25
  */
 import { Config } from './Config.js';
 import { ClientUpdate } from './update/ClientUpdate.js';
@@ -67,17 +67,38 @@ function onSaveNativeServerIpPort(ip, port) {
 async function onCheckUpdate() {
     logger.log('update', `开始检查更新`);
 
-    /** 服务器包所在目录 */
+    //服务器包所在目录
     let serverPackageDir = `${Config.serverPackagePath}server`;
-    let exists = await fs.existsSync(serverPackageDir);
-    if (!exists) {
-        directDownloadServer(checkClientUpdate, checkUpdateComplete);
-        return;
+    let serverDirect = false;
+    let serverExists = await fs.existsSync(serverPackageDir);
+    if (!serverExists) {
+        serverDirect = true;
+    } else {
+        let dir = await fs.readdirSync(serverPackageDir);
+        if (dir.length == 0) {
+            serverDirect = true;
+        }
     }
 
-    let dir = await fs.readdirSync(serverPackageDir);
-    if (dir.length == 0) {
-        directDownloadServer(checkClientUpdate, checkUpdateComplete);
+    //客户端包所在目录
+    let clientPackageDir = Config.clientPackagePath;
+    let clientDirect = false;
+    let clientExists = await fs.existsSync(clientPackageDir);
+    if (!clientExists) {
+        clientDirect = true;
+    } else {
+        let dir = await fs.readdirSync(clientPackageDir);
+        logger.log(`net`, `dir length:${dir.length}`);
+        if (dir.length <= 1) {
+            clientDirect = true;
+        }
+    }
+
+    if (serverDirect || clientDirect) {
+        let serverUpdateFunc = serverDirect ? directDownloadServer : checkServerUpdate;
+        let clientUpdateFunc = clientDirect ? directDownloadClient : checkClientUpdate;
+        serverUpdateFunc(clientUpdateFunc, checkUpdateComplete);
+        logger.log(`net`, `直接下载最新包`);
         return;
     }
 
@@ -115,6 +136,18 @@ function directDownloadServer(callback, ...args) {
         logger.error(`update`, content, error);
         alert(content);
         directDownloadServer(callback, ...args);
+    }
+}
+
+/** 直接下载最新的客户端包 */
+function directDownloadClient(callback, ...args) {
+    try {
+        clientUpdate.directDownload(callback, ...args);
+    } catch (error) {
+        let content = `native下次客户端出错,点击重试`;
+        logger.error(`update`, content, error);
+        alert(content);
+        directDownloadClient(callback, ...args);
     }
 }
 
