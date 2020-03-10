@@ -600,7 +600,6 @@ export async function zipUploadGame() {
 export async function uploadNativeExe() {
     return new Promise(async (resolve, reject) => {
         let environ = ModelMgr.versionModel.curEnviron;
-        // let releaseVersion = ModelMgr.versionModel.releaseVersion;
         let exeOriginName = "bellplanet Setup 1.0.0.exe"
         let exePath = `${Global.pcProjectPath}/dist/${exeOriginName}`;
         let exeTargetName = `bellplanet_${environ.name}.exe`;
@@ -616,13 +615,17 @@ export async function uploadNativeExe() {
         }
 
         console.log("exe包不相等,开始上传");
-        // let exeName = `bellplanet_${environ.name}_${releaseVersion}.exe`;
-        // tryUploadNativeExe(exeName, async () => {
-        //     console.log("exe包上传完毕,拷贝最新包到svn文件夹");
-        await fsExc.copyFile(exePath, exeTargetDir);
-        await fsExc.rename(`${exeTargetDir}/${exeOriginName}`, exeTargetPath);
-        //     resolve();
-        // }, reject);
+        let platform = "win";
+        let exeVersion = ExternalUtil.getNativePolicyNum(environ.name, platform);
+        exeVersion = exeVersion + 1;
+        let exeName = `bellplanet_${environ.name}_${exeVersion}.exe`;
+        tryUploadNativeExe(exeName, async () => {
+            console.log("exe包上传完毕,拷贝最新包到svn文件夹");
+            await fsExc.copyFile(exePath, exeTargetDir);
+            await fsExc.rename(`${exeTargetDir}/${exeOriginName}`, exeTargetPath);
+            await ExternalUtil.applyNativePolicyNum(exeVersion, environ.name, platform);
+            resolve();
+        }, reject);
     });
 }
 
@@ -639,14 +642,15 @@ async function tryUploadNativeExe(exePath, exeName, resolve, reject) {
 
 export async function uploadNativeDmg() {
     return new Promise(async (resolve, reject) => {
-        // let environ = ModelMgr.versionModel.curEnviron;
-        // let releaseVersion = ModelMgr.versionModel.releaseVersion;
+        let environ = ModelMgr.versionModel.curEnviron;
         let dmgOriginName = "bellplanet-1.0.0.dmg";
         let dmgPath = `${Global.pcProjectPath}/dist/${dmgOriginName}`;
-        let dmgTargetPath = `${Global.svnPublishPath}/native/`;
+        let dmgTargetName = `bellplanet_${environ.name}.dmg`;
+        let dmgTargetDir = `${Global.svnPublishPath}/native/`;
+        let dmgTargetPath = `${dmgTargetDir}/${dmgTargetName}`;
 
         console.log("比较mac包");
-        let equal = await fsExc.mergeFileByMd5(dmgPath, dmgTargetPath);
+        let equal = await fsExc.mergeFileByMd5(dmgPath, dmgTargetDir);
         if (equal) {
             console.log("mac包相等");
             resolve();
@@ -654,12 +658,17 @@ export async function uploadNativeDmg() {
         }
 
         console.log("mac包不相等,开始上传");
-        // let dmgName = `bellplanet_${environ.name}_${releaseVersion}.dmg`;
-        // tryUploadNativeDmg(dmgPath, dmgName, async () => {
-        //     console.log("mac包上传完毕,拷贝最新包到svn文件夹");
-        //     await fsExc.copyFile(dmgPath, dmgTargetPath);
-        //     resolve();
-        // }, reject);
+        let platform = "mac";
+        let macVersion = ExternalUtil.getNativePolicyNum(environ.name, platform);
+        macVersion = macVersion + 1;
+        let dmgName = `bellplanet_${environ.name}_${macVersion}.dmg`;
+        tryUploadNativeDmg(dmgPath, dmgName, async () => {
+            console.log("mac包上传完毕,拷贝最新包到svn文件夹");
+            await fsExc.copyFile(dmgPath, dmgTargetDir);
+            await fsExc.rename(`${dmgTargetDir}/${dmgOriginName}`, dmgTargetPath);
+            await ExternalUtil.applyNativePolicyNum(macVersion, environ.name, platform);
+            resolve();
+        }, reject);
     });
 }
 
