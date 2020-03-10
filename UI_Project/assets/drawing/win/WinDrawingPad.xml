@@ -13,7 +13,7 @@
     <loader id="n13_batc" name="ladCanvasBg" xy="464,40" size="1424,926" url="ui://a0pj43bjqilns" fill="scaleFree">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </loader>
-    <component id="n44_gup1" name="comProjectionDrawing" src="qiln2g" fileName="com/ComProjectionDrawing.xml" xy="464,40" size="1315,926">
+    <component id="n44_gup1" name="comProjectionDrawing" src="qiln2g" fileName="com/ComProjectionDrawing.xml" xy="464,40" size="1424,926">
       <relation target="n13_batc" sidePair="width-width,height-height"/>
     </component>
     <component id="n36_gup1" name="comDrawSelectBoxContainer" src="qiln1o" fileName="com/ComDrawSelectBoxContainer.xml" xy="464,40" size="1424,926">
@@ -42,7 +42,6 @@
       <item title="直线" icon="ui://a0pj43bjqilnq" name="LINEPEN" selectedIcon="ui://a0pj43bjqilnr"/>
       <item title="橡皮擦" icon="ui://a0pj43bjqilno" name="ERASER" selectedIcon="ui://a0pj43bjqilnp"/>
       <item title="直线辅助" icon="ui://a0pj43bjqiln9" name="ISOMETRIC" selectedIcon="ui://a0pj43bjqilna"/>
-      <item title="油漆桶" icon="ui://a0pj43bjq8ax5s" name="PAINT" selectedIcon="ui://a0pj43bjq8ax5r"/>
       <item title="取色器" icon="ui://a0pj43bjq8ax5q" name="GETCOLOR" selectedIcon="ui://a0pj43bjq8ax5p"/>
       <item title="文本" icon="ui://a0pj43bjq8ax5n" name="TEXT" selectedIcon="ui://a0pj43bjq8ax5m"/>
       <item title="形状" icon="ui://a0pj43bjq8ax5v" name="SHAPE" selectedIcon="ui://a0pj43bjq8ax5u"/>
@@ -66,23 +65,24 @@
     <group id="n17_batc" name="grpBottom" xy="47,834" size="374,191" group="n14_batc" advanced="true">
       <relation target="" sidePair="bottom-bottom"/>
     </group>
-    <component id="n38_gup1" name="comPenSetting" src="qiln2s" fileName="com/ComPenSetting.xml" xy="30,264" size="410,562" group="n14_batc">
+    <component id="n38_gup1" name="comPenSetting" src="qiln2s" fileName="com/ComPenSetting.xml" xy="30,272" size="410,562" group="n14_batc">
       <gearDisplay controller="ctrlTool" pages="0,1,2"/>
     </component>
     <text id="n53_giuq" name="n53" xy="208,57" size="53,31" group="n14_batc" fontSize="24" color="#333333" align="center" vAlign="middle" text="画图"/>
     <image id="n55_q8ax" name="n55" src="qhbb5h" fileName="img/img_dra_line_1.png" xy="31,260" size="408,2" group="n14_batc"/>
     <component id="n56_pve9" name="comShapeTypeSelect" src="pve963" fileName="com/ComShapeTypeSelect.xml" xy="157,172" group="n14_batc" visible="false"/>
+    <component id="n57_eb91" name="comFlipTypeSelect" src="pve962" fileName="com/ComFlipTypeSelect.xml" xy="206,176" group="n14_batc" visible="false"/>
     <group id="n14_batc" name="grpLeft" xy="30,40" size="410,1010"/>
-    <graph id="n21_ljuf" name="gphDrawingBotBoard" xy="464,40" size="1423,921" group="n33_mj87" alpha="0.3" fillColor="#ff66cc33">
+    <graph id="n21_ljuf" name="gphDrawingBotBoard" xy="464,40" size="1424,921" group="n33_mj87" alpha="0.3" fillColor="#ff66cc33">
       <relation target="n13_batc" sidePair="rightext-right,bottomext-bottom"/>
     </graph>
-    <graph id="n22_ljuf" name="gphDrawingMidBoard" xy="464,40" size="1425,921" group="n33_mj87" alpha="0.6" fillColor="#ff66cc33">
+    <graph id="n22_ljuf" name="gphDrawingMidBoard" xy="464,40" size="1424,921" group="n33_mj87" alpha="0.6" fillColor="#ff66cc33">
       <relation target="n13_batc" sidePair="rightext-right,bottomext-bottom"/>
     </graph>
-    <graph id="n19_ljuf" name="gphDrawingTopBoard" xy="464,40" size="1426,921" group="n33_mj87" type="rect" lineSize="0" fillColor="#00000000">
+    <graph id="n19_ljuf" name="gphDrawingTopBoard" xy="464,40" size="1424,921" group="n33_mj87" type="rect" lineSize="0" fillColor="#00000000">
       <relation target="n13_batc" sidePair="rightext-right,bottomext-bottom"/>
     </graph>
-    <group id="n33_mj87" name="grpDrawingBoard" xy="464,40" size="1426,921" advanced="true"/>
+    <group id="n33_mj87" name="grpDrawingBoard" xy="464,40" size="1424,921" advanced="true"/>
     <list id="n16_batc" name="lstOperateBtn" xy="1777,96" size="72,283" lineGap="30" defaultItem="ui://a0pj43bjqiln14">
       <relation target="" sidePair="right-right"/>
       <item icon="ui://a0pj43bjqilnk"/>
