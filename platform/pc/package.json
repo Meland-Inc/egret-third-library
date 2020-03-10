@@ -60,10 +60,10 @@
     "mac": {
       "icon": "./icon/icon.icns",
       "extendInfo": {
-        "CFBundleURLTypes":[
+        "CFBundleURLTypes": [
           {
-            "CFBundleURLName":"com.bellcode.bellplanet",
-            "CFBundleURLSchemes":[
+            "CFBundleURLName": "com.bellcode.bellplanet",
+            "CFBundleURLSchemes": [
               "bellplanet"
             ]
           }
@@ -71,10 +71,10 @@
       }
     },
     "nsis": {
-      "oneClick": false,
+      "oneClick": true,
       "perMachine": false,
       "allowElevation": true,
-      "allowToChangeInstallationDirectory": true,
+      "allowToChangeInstallationDirectory": false,
       "createDesktopShortcut": true,
       "runAfterFinish": false,
       "installerIcon": "./icon/icon.ico",
