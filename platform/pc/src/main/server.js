@@ -3,7 +3,7 @@
  * @desc 处理native服务器和游戏服务器的文件
  * @date 2020-02-18 11:42:29 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-26 23:26:08
+ * @Last Modified time: 2020-03-11 23:36:32
  */
 const http = require('http');
 const url = require('url');
@@ -13,20 +13,12 @@ const util = require('./util.js');
 const logger = require('./logger.js');
 const platform = require('./platform.js');
 
-let nativeCnf;
 let nativeServer;
 let gameServerProcess;
 
 async function init() {
-    await initNativeCnf();
+    await util.initNativeCnf();
     await createNativeServer();
-}
-
-/** 初始化native配置 */
-async function initNativeCnf() {
-    logger.log('net', `初始化native本地服务器配置`);
-    let content = await fs.readFileSync(config.nativeCnfPath, "utf-8");
-    nativeCnf = JSON.parse(content);
 }
 
 /** 创建native服务器 */
@@ -44,8 +36,8 @@ async function createNativeServer() {
         config.nativeServerPort = nativeServer.address().port;
         logger.log('net', '创建native服务器成功,端口号', config.nativeServerPort);
 
-        await writeCnfValue('channel', config.channel);
-        await writeCnfValue("nativePort", config.nativeServerPort + "");
+        await util.writeServerCnfValue('channel', config.channel);
+        await util.writeServerCnfValue("nativePort", config.nativeServerPort + "");
         await createGameServer();
     });
 
@@ -72,9 +64,9 @@ async function createNativeServer() {
             if (config.gameServerLocalIp && config.gameServerLocalPort) {
                 let gameServer = `${config.gameServerLocalIp}:${config.gameServerLocalPort}`;
                 if (config.mainWindow && config.mainWindow.webContents) {
-                    logger.log('net', 'native上课客户端登录本地游戏服务器',gameServer);
+                    logger.log('net', 'native上课客户端登录本地游戏服务器', gameServer);
                     //上课渠道
-                    if(config.channel === config.constChannelLesson){
+                    if (config.channel === config.constChannelLesson) {
                         config.mainWindow.webContents.executeJavaScript(`
                             if(window.frames && window.frames.length > 0) {
                                 console.log('frames-->postMessage nativeSignIn');
@@ -86,8 +78,8 @@ async function createNativeServer() {
                         `);
                     }
                     //游戏
-                    else{
-                        logger.log('net', 'native游戏客户端登录本地游戏服务器',gameServer);
+                    else {
+                        logger.log('net', 'native游戏客户端登录本地游戏服务器', gameServer);
                         config.mainWindow.webContents.executeJavaScript(`
                             if(window.nativeSignIn){
                                 window.nativeSignIn(\'${gameServer}\');
@@ -162,12 +154,6 @@ async function closeGameServer() {
             logger.error('net', `关闭游戏服务器错误`)
         });
     });
-}
-
-/** 写入配置文件 */
-async function writeCnfValue(key, value) {
-    nativeCnf[key] = value;
-    await fs.writeFileSync(config.nativeCnfPath, JSON.stringify(nativeCnf, null, 4));
 }
 
 exports.init = init;

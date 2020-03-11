@@ -3,7 +3,7 @@
  * @desc 游戏客户端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-10 23:04:18
+ * @Last Modified time: 2020-03-12 00:01:32
  */
 
 import * as loading from '../loading.js';
@@ -146,9 +146,14 @@ export class ClientUpdate {
         }
         else if (arg === "finished") {
             // 通知完成
+            let content = `开始解压文件:${filename}`;
+            logger.log('update', content);
             try {
                 let zip = new admzip(this.clientPackagePath + filename);
                 zip.extractAllTo(this.clientPackagePath, true);
+                let content = `解压文件:${filename}成功`;
+                logger.log('update', content);
+                util.setGlobalConfigValue("gameVersion", this.curVersion);
             } catch (error) {
                 let content = `解压文件:${filename}错误`
                 logger.error(`update`, content, error);
@@ -160,6 +165,14 @@ export class ClientUpdate {
                     throw err;
                 }
                 logger.log(`update`, '文件:' + filename + '删除成功！');
+
+                this.curVersion = this.curVersion + 1;
+                if (this.curVersion >= this.gameVersion) {
+                    util.setGlobalConfigValue("gameVersion", this.curVersion);
+                    this.executeUpdateCallback();
+                } else {
+                    this.installSinglePatch()
+                }
             });
         } else if (arg == "404") {
             let content = `下载文件:${filename}错误, 文件不存在!`;
@@ -187,25 +200,12 @@ export class ClientUpdate {
     installSinglePatch() {
         try {
             loading.showLoading();
-            this.download.downloadFile(this.patchUrl, this.clientPackagePath, `patch_v${this.curVersion}s_v${this.curVersion + 1}s.zip`, (arg, filename, percentage) => {
-                this.downloadFileCallback(arg, filename, percentage);
-
-                if (arg === "finished") {
-                    let indexContent = fs.readFileSync(this.clientPackagePath + "index.html").toString();
-                    let matchResult = indexContent.match(new RegExp(`let patchVersion = "([0-9]+)";`));
-                    this.curVersion = +matchResult[1];
-                    if (this.curVersion >= this.gameVersion) {
-                        util.setGlobalConfigValue("gameVersion", this.curVersion);
-                        this.executeUpdateCallback();
-                    } else {
-                        this.installSinglePatch()
-                    }
-                }
-            });
+            this.download.downloadFile(this.patchUrl, this.clientPackagePath, `patch_v${this.curVersion}s_v${this.curVersion + 1}s.zip`, this.downloadFileCallback.bind(this));
         } catch (error) {
             throw error;
         }
     }
+
 
     /** 下载服务端包 */
     async downloadPackage() {
@@ -216,14 +216,7 @@ export class ClientUpdate {
         let saveDir = this.clientPackagePath;
         let fileName = `release_v${this.gameVersion}s.zip`;
         //下载文件
-        this.download.downloadFile(fileDir, saveDir, fileName, (arg, filename, percentage) => {
-            this.downloadFileCallback(arg, filename, percentage);
-
-            if (arg === "finished") {
-                util.setGlobalConfigValue("gameVersion", this.gameVersion);
-                this.executeUpdateCallback();
-            }
-        });
+        this.download.downloadFile(fileDir, saveDir, fileName, this.downloadFileCallback.bind(this));
     }
 
     /** 执行更新后回调 */

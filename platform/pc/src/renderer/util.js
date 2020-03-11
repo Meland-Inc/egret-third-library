@@ -3,7 +3,7 @@
  * @desc 工具类
  * @date 2020-02-28 19:56:39 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-10 22:29:07
+ * @Last Modified time: 2020-03-12 00:02:58
  */
 const fs = require('fs');
 const path = require('path');
@@ -135,7 +135,7 @@ export function setGlobalConfigValue(key, value) {
     let configContent = fs.readFileSync(Config.globalConfigPath, "utf-8");
     let globalConfig = JSON.parse(configContent);
     globalConfig[key] = value;
-    fs.writeFileSync(Config.globalConfigPath, JSON.stringify(globalConfig), "utf-8");
+    fs.writeFileSync(Config.globalConfigPath, JSON.stringify(globalConfig, null, 4), "utf-8");
 }
 
 /** 获取全局配置值 */

@@ -3,12 +3,14 @@
  * @desc main用的工具类
  * @date 2020-02-18 11:43:24 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-28 22:26:41
+ * @Last Modified time: 2020-03-11 23:33:19
  */
 // const spawn = require("child_process").spawn;
 const exec = require("child_process").exec;
 const logger = require('./logger.js');
+const config = require('./config.js');
 const http = require('http');
+const fs = require('fs');
 const querystring = require('querystring');
 
 // function runSpawn(command, param, cwd, successMsg, errorMsg) {
@@ -36,6 +38,8 @@ const querystring = require('querystring');
 //         });
 //     });
 // }
+
+let nativeCnf;
 
 /** 运行cmd命令 */
 function runCmd(cmd, cwd, successMsg, errorMsg) {
@@ -180,7 +184,22 @@ function requestPostHttp(host, port, path, data, headers, successFunc, errorFunc
     request.end();
 }
 
+/** 初始化native配置 */
+async function initNativeCnf() {
+    logger.log('net', `初始化native本地服务器配置`);
+    let content = await fs.readFileSync(config.nativeCnfPath, "utf-8");
+    nativeCnf = JSON.parse(content);
+}
+
+/** 写入服务端配置文件 */
+async function writeServerCnfValue(key, value) {
+    nativeCnf[key] = value;
+    await fs.writeFileSync(config.nativeCnfPath, JSON.stringify(nativeCnf, null, 4));
+}
+
 // exports.runSpawn = runSpawn;
 exports.runCmd = runCmd;
 exports.requestGetHttp = requestGetHttp;
 exports.requestPostHttp = requestPostHttp;
+exports.initNativeCnf = initNativeCnf;
+exports.writeServerCnfValue = writeServerCnfValue;

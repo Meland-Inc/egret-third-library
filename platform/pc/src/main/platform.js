@@ -3,7 +3,7 @@
  * @desc 平台相关的逻辑
  * @date 2020-02-19 11:22:49
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-05 21:05:28
+ * @Last Modified time: 2020-03-11 23:42:18
  */
 const querystring = require('querystring');
 const config = require('./config.js');
@@ -34,6 +34,7 @@ async function init(queryValue) {
             if (key === 'class_id') {
                 queryValue[key] = `${value}`;
                 config.classId = +value;
+                util.writeServerCnfValue("classId", value);
                 continue;
             }
 
@@ -51,6 +52,7 @@ async function init(queryValue) {
             if (key === 'lesson_id') {
                 config.bellLessonId = value;
                 queryValue['lesson_id'] = `${value}`;
+                util.writeServerCnfValue("lessonId", value);
                 continue;
             }
 
@@ -77,8 +79,9 @@ async function init(queryValue) {
                 continue;
             }
 
-            if (key === 'gameServer') {
-                // originGameServer = value;
+            if (key === 'gid') {
+                queryValue[key] = `${value}`;
+                util.writeServerCnfValue("gid", value);
                 continue;
             }
             queryValue[key] = `${value}`;
@@ -98,6 +101,7 @@ function login(queryValue, successFunc, errorFunc) {
     logger.log('net', `请求登录贝尔平台`);
     util.requestPostHttp(config.bellApiOrigin, null, '/common/member/login-by-temporary-token', data, null
         , (body) => {
+            logger.log('net', `登陆贝尔平台返回body`, body);
             if (body.code === 200) {
                 queryValue['token'] = config.bellToken = body.data.token;
                 getMemberInfo(successFunc, errorFunc);
@@ -159,6 +163,9 @@ function getMemberInfo(successFunc, errorFunc) {
                 config.realName = body.data.user_info.real_name;
                 config.nickName = body.data.user_info.nickname;
 
+                util.writeServerCnfValue("userId", body.data.user_info.userid);
+                util.writeServerCnfValue("schoolId", body.data.user_info.school.id);
+
                 message.sendMsg('SAVE_NATIVE_LOGIN_RESPONSE', body);
                 logger.log('net', `获取贝尔平台用户信息成功`);
                 successFunc();
@@ -181,14 +188,14 @@ function teacherUploadIp() {
     //公网连接方式
     if (config.gameServerNatUrl && config.gameServerNatPort) {
         data['internet_network'] = `${config.gameServerNatUrl}:${config.gameServerNatPort}`;
-    }else{
+    } else {
         data['internet_network'] = ``;
     }
-    
+
     //局域网连接方式
     if (config.gameServerLocalIp && config.gameServerLocalPort) {
         data['local_network'] = `${config.gameServerLocalIp}:${config.gameServerLocalPort}`;
-    }else{
+    } else {
         data['local_network'] = ``;
     }
 
