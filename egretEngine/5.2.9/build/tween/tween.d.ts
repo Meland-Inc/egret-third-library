@@ -693,7 +693,6 @@ declare namespace egret {
          * @param paused
          */
         private static tick(timeStamp, paused?);
-        private static _lastTime;
         /**
          * @private
          *

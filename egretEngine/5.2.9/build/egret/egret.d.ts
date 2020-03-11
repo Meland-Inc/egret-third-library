@@ -9405,6 +9405,8 @@ declare namespace egret.sys {
          * 全局帧率
          */
         $frameRate: number;
+        private _lastFrameEgretTime;
+        frameRealDelta: number;
         /**
          * @private
          */
@@ -14925,6 +14927,8 @@ declare namespace egret {
      * @language zh_CN
      */
     function getTimer(): number;
+    /**上次帧消耗时间 ms 如果限制帧会是限制帧率的间隔时间*/
+    function getFrameDelta(): number;
 }
 declare namespace egret {
     /**
