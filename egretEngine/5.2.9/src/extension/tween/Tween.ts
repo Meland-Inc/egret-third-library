@@ -260,8 +260,9 @@ namespace egret {
          * @param paused 
          */
         private static tick(timeStamp: number, paused = false): boolean {
-            let delta = timeStamp - Tween._lastTime;
-            Tween._lastTime = timeStamp;
+            let delta: number = egret.getFrameDelta();
+            // let delta = timeStamp - Tween._lastTime;
+            // Tween._lastTime = timeStamp;
 
             let tweens: Tween[] = Tween._tweens.concat();
             for (let i = tweens.length - 1; i >= 0; i--) {
@@ -275,7 +276,7 @@ namespace egret {
             return false;
         }
 
-        private static _lastTime: number = 0;
+        // private static _lastTime: number = 0;
         /**
          * @private
          * 
@@ -291,7 +292,7 @@ namespace egret {
                 }
                 tweens.push(tween);
                 if (!Tween._inited) {
-                    Tween._lastTime = egret.getTimer();
+                    // Tween._lastTime = egret.getTimer();
                     ticker.$startTick(Tween.tick, null);
                     Tween._inited = true;
                 }
@@ -349,7 +350,7 @@ namespace egret {
          * @param props 
          * @param pluginData 
          */
-        private initialize(target:any, props: any, pluginData: any): void {
+        private initialize(target: any, props: any, pluginData: any): void {
             this._target = target;
             if (props) {
                 this._useTicks = props.useTicks;
@@ -394,11 +395,11 @@ namespace egret {
             if (t >= this.duration) {
                 if (this.loop) {
                     var newTime = t % this.duration;
-					if (t > 0 && newTime === 0) {
-						t = this.duration;
-					} else {
-						t = newTime;
-					}
+                    if (t > 0 && newTime === 0) {
+                        t = this.duration;
+                    } else {
+                        t = newTime;
+                    }
                 }
                 else {
                     t = this.duration;
@@ -557,7 +558,7 @@ namespace egret {
          * @language zh_CN
 		 */
         public setPaused(value: boolean): Tween {
-            if(this.paused == value) {
+            if (this.paused == value) {
                 return this;
             }
             this.paused = value;
