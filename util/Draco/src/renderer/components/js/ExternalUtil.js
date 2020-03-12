@@ -115,7 +115,7 @@ export async function applyServerPackagePolicyNum(policyNum, environName, fileNa
 
 /** 获取native包版本号 */
 export async function getNativePolicyNum(environName, platform) {
-    let versionName = `${environName}_${platform}`;
+    let versionName = `${environName}_native_${platform}`;
     let value = await getPolicyInfo(versionName);
     let data = JSON.parse(value);
     let policyNum = 0;
@@ -127,6 +127,6 @@ export async function getNativePolicyNum(environName, platform) {
 
 /** 应用native包版本号 */
 export async function applyNativePolicyNum(policyNum, environName, platform) {
-    let versionName = `${environName}_${platform}`;
+    let versionName = `${environName}_native_${platform}`;
     await applyPolicyNum(policyNum, versionName, 'bian_game');
 }

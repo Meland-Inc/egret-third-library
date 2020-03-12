@@ -606,20 +606,20 @@ export async function uploadNativeExe() {
         let exeTargetDir = `${Global.svnPublishPath}/native`;
         let exeTargetPath = `${exeTargetDir}/${exeTargetName}`;
 
-        console.log("比较exe包");
-        let equal = await fsExc.mergeFileByMd5(exePath, exeTargetPath);
-        if (equal) {
-            console.log("exe包相等");
-            resolve();
-            return;
-        }
+        // console.log("比较exe包");
+        // let equal = await fsExc.mergeFileByMd5(exePath, exeTargetPath);
+        // if (equal) {
+        //     console.log("exe包相等");
+        //     resolve();
+        //     return;
+        // }
 
         console.log("exe包不相等,开始上传");
         let platform = "win";
-        let exeVersion = ExternalUtil.getNativePolicyNum(environ.name, platform);
+        let exeVersion = await ExternalUtil.getNativePolicyNum(environ.name, platform);
         exeVersion = exeVersion + 1;
         let exeName = `bellplanet_${environ.name}_${exeVersion}.exe`;
-        tryUploadNativeExe(exeName, async () => {
+        tryUploadNativeExe(exePath, exeName, async () => {
             console.log("exe包上传完毕,拷贝最新包到svn文件夹");
             await fsExc.copyFile(exePath, exeTargetDir);
             await fsExc.rename(`${exeTargetDir}/${exeOriginName}`, exeTargetPath);
@@ -649,17 +649,17 @@ export async function uploadNativeDmg() {
         let dmgTargetDir = `${Global.svnPublishPath}/native/`;
         let dmgTargetPath = `${dmgTargetDir}/${dmgTargetName}`;
 
-        console.log("比较mac包");
-        let equal = await fsExc.mergeFileByMd5(dmgPath, dmgTargetDir);
-        if (equal) {
-            console.log("mac包相等");
-            resolve();
-            return;
-        }
+        // console.log("比较mac包");
+        // let equal = await fsExc.mergeFileByMd5(dmgPath, dmgTargetDir);
+        // if (equal) {
+        //     console.log("mac包相等");
+        //     resolve();
+        //     return;
+        // }
 
         console.log("mac包不相等,开始上传");
         let platform = "mac";
-        let macVersion = ExternalUtil.getNativePolicyNum(environ.name, platform);
+        let macVersion = await ExternalUtil.getNativePolicyNum(environ.name, platform);
         macVersion = macVersion + 1;
         let dmgName = `bellplanet_${environ.name}_${macVersion}.dmg`;
         tryUploadNativeDmg(dmgPath, dmgName, async () => {
