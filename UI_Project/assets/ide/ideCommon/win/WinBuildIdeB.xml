@@ -33,8 +33,7 @@
       <gearDisplay controller="ctrlIdeMode" pages="3"/>
       <relation target="" sidePair="right-right,height-height"/>
     </component>
-    <list id="n35_7slt" name="lstIdeMode" xy="578,994" size="348,84" layout="row" defaultItem="ui://ti9jag5tdyk9b7">
-      <gearXY controller="ctrlIdeMode" pages="0,1,4,3,2,5,6" values="578,994|578,994|578,994|578,994|578,994|578,994|578,994"/>
+    <list id="n35_7slt" name="lstIdeMode" xy="578,996" size="348,84" layout="row" defaultItem="ui://ti9jag5tdyk9b7">
       <relation target="" sidePair="bottom-bottom"/>
       <relation target="n38_si0u" sidePair="center-center"/>
       <item title="地形" icon="ui://ti9jag5t80ab8w" name="terrain"/>
@@ -47,7 +46,7 @@
       <relation target="" sidePair="right-right,height-height"/>
     </component>
     <component id="n45_qu7t" name="comShortCut" src="qu7tt7j" fileName="ideCommon/com/ComBuildShortCutB.xml" xy="123,76" controller="ctrlState,4">
-      <gearXY controller="ctrlIdeMode" pages="0,1,4,3,2,5,6" values="123,76|122,76|122,76|123,76|123,76|123,76|123,76"/>
+      <gearXY controller="ctrlIdeMode" pages="0,1,4,3,2,5,6" values="11,76|-181623,76|-181623,76|-181622,76|-181622,76|-181622,76|-181622,76"/>
       <relation target="n38_si0u" sidePair="center-center"/>
     </component>
     <component id="n46_smiy" name="comAniSelect" src="smiyt7n" fileName="attribute/com/ComBuildAniSelect.xml" xy="1490,0" controller="ctrlState,1">
@@ -60,24 +59,22 @@
     </loader>
   </displayList>
   <transition name="transBpShow">
-    <item time="0" type="Alpha" target="n38_si0u" value="0"/>
+    <item time="0" type="Alpha" target="n35_7slt" tween="true" startValue="0" endValue="1" duration="9"/>
+    <item time="0" type="Alpha" target="n38_si0u" tween="true" startValue="0" endValue="0" duration="9"/>
     <item time="0" type="XY" target="n27_r0y9" tween="true" startValue="1920,-" endValue="1490,-" duration="9"/>
-    <item time="0" type="XY" target="n35_7slt" tween="true" startValue="-,1100" endValue="-,1100" duration="9"/>
     <item time="0" type="XY" target="n36_7slt" tween="true" startValue="1920,-" endValue="1490,-" duration="9"/>
     <item time="0" type="XY" target="n37_jm8l" tween="true" startValue="1920,-" endValue="1866,-" duration="9"/>
     <item time="0" type="XY" target="n41_m5hn" tween="true" startValue="1920,-" endValue="1490,-" duration="9"/>
     <item time="0" type="XY" target="n9_r0y9" tween="true" startValue="-223,-" endValue="0,-" duration="9"/>
-    <item time="9" type="Alpha" target="n38_si0u" value="1"/>
-    <item time="9" type="XY" target="n35_7slt" tween="true" startValue="-,1100" endValue="581,994" duration="3"/>
+    <item time="9" type="Alpha" target="n38_si0u" tween="true" startValue="0" endValue="1" duration="3"/>
   </transition>
   <transition name="transBpHide">
-    <item time="0" type="XY" target="n35_7slt" tween="true" startValue="-,994" endValue="-,1100" duration="3"/>
-    <item time="3" type="Alpha" target="n38_si0u" value="0"/>
-    <item time="3" type="XY" target="n27_r0y9" tween="true" startValue="1490,-" endValue="1920,-" duration="9"/>
-    <item time="3" type="XY" target="n36_7slt" tween="true" startValue="1490,-" endValue="1920,-" duration="9"/>
-    <item time="3" type="XY" target="n37_jm8l" tween="true" startValue="1866,-" endValue="1920,-" duration="9"/>
-    <item time="3" type="XY" target="n41_m5hn" tween="true" startValue="1490,-" endValue="1920,-" duration="9"/>
-    <item time="3" type="XY" target="n9_r0y9" tween="true" startValue="0,-" endValue="-223,-" duration="9"/>
-    <item time="12" type="Alpha" target="n38_si0u" value="0"/>
+    <item time="0" type="Alpha" target="n35_7slt" tween="true" startValue="1" endValue="0" duration="9"/>
+    <item time="0" type="Alpha" target="n38_si0u" tween="true" startValue="0" endValue="0" duration="9"/>
+    <item time="0" type="XY" target="n27_r0y9" tween="true" startValue="1490,-" endValue="1920,-" duration="9"/>
+    <item time="0" type="XY" target="n36_7slt" tween="true" startValue="1490,-" endValue="1920,-" duration="9"/>
+    <item time="0" type="XY" target="n37_jm8l" tween="true" startValue="1866,-" endValue="1920,-" duration="9"/>
+    <item time="0" type="XY" target="n41_m5hn" tween="true" startValue="1490,-" endValue="1920,-" duration="9"/>
+    <item time="0" type="XY" target="n9_r0y9" tween="true" startValue="0,-" endValue="-223,-" duration="9"/>
   </transition>
 </component>
