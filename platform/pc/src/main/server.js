@@ -3,7 +3,7 @@
  * @desc 处理native服务器和游戏服务器的文件
  * @date 2020-02-18 11:42:29 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-11 23:36:32
+ * @Last Modified time: 2020-03-12 16:31:48
  */
 const http = require('http');
 const url = require('url');
@@ -17,7 +17,6 @@ let nativeServer;
 let gameServerProcess;
 
 async function init() {
-    await util.initNativeCnf();
     await createNativeServer();
 }
 

@@ -185,7 +185,7 @@ function requestPostHttp(host, port, path, data, headers, successFunc, errorFunc
 }
 
 /** 初始化native配置 */
-async function initNativeCnf() {
+async function init() {
     logger.log('net', `初始化native本地服务器配置`);
     let content = await fs.readFileSync(config.nativeCnfPath, "utf-8");
     nativeCnf = JSON.parse(content);
@@ -194,12 +194,13 @@ async function initNativeCnf() {
 /** 写入服务端配置文件 */
 async function writeServerCnfValue(key, value) {
     nativeCnf[key] = value;
-    await fs.writeFileSync(config.nativeCnfPath, JSON.stringify(nativeCnf, null, 4));
+    let content = JSON.stringify(nativeCnf, null, 4);
+    await fs.writeFileSync(config.nativeCnfPath, content);
 }
 
 // exports.runSpawn = runSpawn;
 exports.runCmd = runCmd;
 exports.requestGetHttp = requestGetHttp;
 exports.requestPostHttp = requestPostHttp;
-exports.initNativeCnf = initNativeCnf;
+exports.init = init;
 exports.writeServerCnfValue = writeServerCnfValue;

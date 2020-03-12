@@ -3,7 +3,7 @@
  * @desc 工具类
  * @date 2020-02-28 19:56:39 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-12 00:02:58
+ * @Last Modified time: 2020-03-12 14:54:30
  */
 const fs = require('fs');
 const path = require('path');
@@ -95,6 +95,8 @@ export function getServerPackageFileName() {
     let platform = "windows";
     if (os.platform() === "win32") {
         platform = "windows"
+    } else {
+        platform = "mac"
     }
 
     let arch = "amd64";

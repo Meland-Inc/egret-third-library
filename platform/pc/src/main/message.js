@@ -3,13 +3,14 @@
  * @desc 主进程消息处理类
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-05 21:07:30
+ * @Last Modified time: 2020-03-12 16:47:46
  */
 const config = require('./config.js');
 const { ipcMain } = require('electron');
 const logger = require('./logger.js');
 const platform = require('./platform.js');
 const server = require('./server.js');
+const util = require('./util.js');
 
 //消息对应方法集合
 let msgMap = {
@@ -53,16 +54,20 @@ function applyMsg(msgId, ...args) {
 
 /** 检查更新完毕 */
 async function onCheckUpdateComplete() {
+    await util.init();
+
+    logger.log('config', `nativeMode:${config.nativeMode}`);
+
     if (config.nativeMode === config.eNativeMode.game) {
         await startNativeGame();
         return
-    } 
-    
+    }
+
     if (config.nativeMode === config.eNativeMode.lesson) {
         await startNativeLesson();
         return;
     }
-    
+
     if (config.nativeMode === config.eNativeMode.platform) {
         await startNativePlatform();
         return;
@@ -83,23 +88,24 @@ async function startNativeGame() {
 
 //从单个课程进入
 async function startNativeLesson() {
-    logger.log('update', `从单个课程进入`);
+    // logger.log('update', `从单个课程进入`);
 
-    //初始化参数
-    let queryObject = { pcNative: 1 };
-    //平台初始化
-    await platform.init(queryObject);
+    // //初始化参数
+    // let queryObject = { pcNative: 1 };
+    // //平台初始化
+    // await platform.init(queryObject);
 
-    queryObject['fakeUserType'] = config.userType;
-    queryObject['token'] = config.bellTempToken;
+    // queryObject['fakeUserType'] = config.userType;
+    // queryObject['token'] = config.bellTempToken;
 
-    //非学生端 本地服务器初始化
-    if (config.userType != config.eUserType.student) {
-        server.init();
-    }
+    // //非学生端 本地服务器初始化
+    // if (config.userType != config.eUserType.student) {
+    //     server.init();
+    // }
 
-    logger.log('net', 'urlValue', config.urlValue);
-    sendMsg('START_NATIVE_LESSON', queryObject);
+    // logger.log('net', 'urlValue', config.urlValue);
+    // sendMsg('START_NATIVE_LESSON', queryObject);
+    config.mainWindow.loadURL("http://www.bellcode.com");
 }
 
 //从平台进入
