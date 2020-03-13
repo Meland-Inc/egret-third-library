@@ -45,8 +45,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    var _ = { label: 0, sent: function () { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function () { return this; }), g;
     function verb(n) { return function (v) { return step([n, v]); }; }
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
@@ -75,7 +75,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var cp = require("child_process");
 var path = require("path");
 var file = require("./FileUtil");
-var UglifyJS = require("./uglify-js/uglifyjs");
+var UglifyJS = require("./uglify-js2");
 var net = require("net");
 var timers_1 = require("timers");
 //第三方调用时，可能不支持颜色显示，可通过添加 -nocoloroutput 移除颜色信息
@@ -238,10 +238,10 @@ function executeCommand(command, options) {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
             return [2 /*return*/, new Promise(function (resolve, reject) {
-                    cp.exec(command, options, function (error, stdout, stderr) {
-                        resolve({ error: error, stdout: stdout, stderr: stderr });
-                    });
-                })];
+                cp.exec(command, options, function (error, stdout, stderr) {
+                    resolve({ error: error, stdout: stdout, stderr: stderr });
+                });
+            })];
         });
     });
 }
@@ -253,13 +253,56 @@ exports.endWith = endWith;
 function escape(s) {
     return s.replace(/"/, '\\\"');
 }
+
+//对main.js进行混淆
+//属性名混淆的定制处理，在propmangle里
 function uglify(sourceFile) {
-    var defines = {
-        DEBUG: false,
-        RELEASE: true
+    var envReg = /.trunkName = eTrunkName.([^,;]+)/;
+    var evnStr = envReg.exec(sourceFile);
+    var options = {
+        mangle: {
+            properties: {
+                reserved: [],
+            },
+            //类名混淆时，各种配置表***Table，由于是资源读出的，需要保留
+            //还有比如Main是引擎的引用等，需要手动添加进reserved
+            reserved: ['Main', 'Bian', '__reflect', 'WebSocketWorker', 'wsWorker', 'Asset',
+                'AchievementTable', 'ArchFormulaTable', 'ArchFuelCntrTable', 'ArchFuelTable', 'ArchProductionTable', 'ArchPromptTable', 'ArchStateAcceptTable', 'ArchStateSendTable', 'ArchStorageTable', 'AvatarTable', 'BuffTable', 'ChatTable', 'ClassroomModeLessonTable', 'ClassroomModeTutorialTable', 'CodeblockLibTable', 'CodeblocksetTable', 'CodeblockTable', 'CodetipsTable', 'ConditionTable', 'CreatTypeTable', 'DescribeTable', 'DrawBoardColorTable', 'DropTable', 'EntityBuildObjectTable', 'EntityFunctionTable', 'EntityMaterialTable', 'EntitySoundTable', 'EntityTable', 'EntityVariaTable', 'EquipmentRandTable', 'EquipmentTable', 'GamePlatformTable', 'GameValueTable', 'HelpTable', 'HitBubbleTable', 'InitializationResurrectionTable', 'ItemArgumentTable', 'ItemEatableTable', 'ItemTable', 'LanguageTable', 'MailTemplateTable', 'MapCellTable', 'MapTable', 'MonsterAttributeTable', 'MonsterTable', 'NetworkConfigTable', 'NoviceManualTable', 'NoviceNodeTable', 'NoviceStepTable', 'NPCTable', 'NPCtalkTable', 'ObjectAnimationTable', 'ObjectInfoTable', 'ObjectStateTable', 'outputPaoMaDengTable', 'PlayerAreaBuyTable', 'QuotaTable', 'ResourcePointTable', 'ResSoundTable', 'RewardTable', 'RobotCodeblockTable', 'RobotLvTable', 'RobotSkinTable', 'RobotTable', 'RoleLvTable', 'RoleTable', 'SceneTable', 'SignInTable', 'SkillTable', 'TaskTable', 'WeakGuideTable', 'WeatherTable', 'WorksListCoverPatternTable', 'XinShouhelpTable',
+            ],
+        },
+
+        toplevel: true,
+        ie8: true,
+        warnings: true,
     };
-    var result = UglifyJS.minify(sourceFile, { compress: { global_defs: defines }, fromString: true, output: { beautify: false } });
+    //hasOwnProperty使用字符串反射属性，不能混淆，***cell中最常见这个
+    var reflectReg = /.hasOwnProperty\("([^"]+)"\)/g;
+    let reservedCell = [];
+    var r = null;
+    while (r = reflectReg.exec(sourceFile)) {
+        reservedCell.push(r[1]);
+    }
+    options.mangle.properties.reserved = reservedCell.concat();
+
+    if (!evnStr || evnStr[1] != "release") {
+        // options.mangle = false;
+        // options.toplevel = false;
+    }
+    //继承的类名没替换，目前没影响
+    // __reflect(hq.prototype, "MapGrid", ["IPoolInstance"]);
+    // __reflect(SX.prototype, "MapElemSelectView", ["IPoolInstance"]),
+    // __reflect(FQ.prototype, "MapTerrainStruct", ["IPoolInstance"]),
+    // __reflect(s3.prototype, "DebugPlatform", ["Platform"]),
+    // __reflect(h3.prototype, "PlayerIdleStatus", ["IPlayerAnimUpdateStatus"]);
+    var result = UglifyJS.minify(sourceFile, options);
     var code = result.code;
+    //unlify混淆类名后，__reflect保留了原有的className，反射时会有问题，需要一起替换，这里可能存在遗漏
+    var filterRe = /__reflect\(([^",]+).prototype,"([^"]+)"\)/g;
+    while (r = filterRe.exec(code)) {
+        if (r[1].length < 10 && r[2].length < 50) {
+            code = code.replace(r[0], `__reflect\(${r[1]}.prototype,"${r[1]}")`)
+        }
+    }
     return code;
 }
 exports.uglify = uglify;

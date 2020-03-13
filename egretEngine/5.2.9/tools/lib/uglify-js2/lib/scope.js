@@ -73,9 +73,6 @@ SymbolDef.prototype = {
         var cache = options.cache && options.cache.props;
         if (this.global && cache && cache.has(this.name)) {
             this.mangled_name = cache.get(this.name);
-        } else if (this.name.indexOf('Table') >= 0) {
-            console.log("77777777777777777777777777", this.name)
-            this.mangled_name = this.name;
         } else if (!this.mangled_name && !this.unmangleable(options)) {
             var def;
             if (def = this.redefined()) {
