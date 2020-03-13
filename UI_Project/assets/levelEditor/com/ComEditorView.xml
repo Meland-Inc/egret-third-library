@@ -3,7 +3,7 @@
   <displayList>
     <loader id="n2_u1qk" name="ladBG" xy="0,0" size="1280,720" url="ui://ce9jx9xtnhj614" fill="scaleFree"/>
     <image id="n6_l7sp" name="n6" src="nhj615" fileName="img/img_jm_pt_dbl.png" xy="0,0" size="1280,56"/>
-    <loader id="n1_u3xq" name="ladPicture" xy="103,111" size="1066,580" url="ui://h1faefzwkuxv2" fill="scaleFree"/>
+    <graph id="n1_u3xq" name="gphPicture" xy="103,111" size="1066,580"/>
     <text id="n3_l7sp" name="n3" xy="102,72" size="83,31" fontSize="24" color="#333333" text="倒计时:"/>
     <text id="n4_l7sp" name="tfTime" xy="190,68" size="71,31" fontSize="24" color="#333333" align="center" vAlign="middle" autoSize="none" text="60"/>
     <list id="n5_l7sp" name="lstStart" xy="911,67" size="299,42" touchable="false" layout="row" selectionMode="none" overflow="scroll" colGap="15" defaultItem="ui://ce9jx9xtl7sp25" align="center" vAlign="middle">
@@ -21,5 +21,6 @@
     <component id="n9_l7sp" name="btnNextPage" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1223,9" size="40,40">
       <Button icon="ui://ce9jx9xtnhj68"/>
     </component>
+    <component id="n11_nuye" name="comEditorStage" src="nuyecyif9" fileName="com/ComEditorStage.xml" xy="103,111" size="1066,580"/>
   </displayList>
 </component>

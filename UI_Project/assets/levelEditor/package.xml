@@ -43,7 +43,7 @@
     <image id="nhj613" name="img_jm_line.png" path="/img/"/>
     <image id="nhj614" name="img_jm_pt_bgk.png" path="/img/" scale="9grid" scale9grid="20,12,40,24"/>
     <image id="nhj615" name="img_jm_pt_dbl.png" path="/img/" scale="9grid" scale9grid="10,14,20,28"/>
-    <image id="nhj616" name="img_jm_pt_msk.png" path="/img/"/>
+    <image id="nhj616" name="img_jm_pt_msk.png" path="/img/" scale="9grid" scale9grid="29,17,58,34"/>
     <component id="ns4ocyif1" name="btnNewImg.xml" path="/btn/"/>
     <component id="ns4ocyiex" name="ComPuzzleTool.xml" path="/com/"/>
     <component id="ns4ocyiey" name="ComInfoSetting.xml" path="/com/"/>
@@ -64,6 +64,8 @@
     <component id="l7sp23" name="btnDel.xml" path="/btn/" exported="true"/>
     <component id="l7sp25" name="btnStart.xml" path="/btn/"/>
     <component id="l7sp26" name="btnDo.xml" path="/btn/"/>
+    <component id="nuyecyif8" name="WinPlayLevel.xml" path="/win/" exported="true"/>
+    <component id="nuyecyif9" name="ComEditorStage.xml" path="/com/"/>
   </resources>
   <publish name="levelEditor"/>
 </packageDescription>
