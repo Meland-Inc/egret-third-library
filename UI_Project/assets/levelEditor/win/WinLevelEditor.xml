@@ -4,13 +4,16 @@
     <component id="n0_6bth" name="comBg" src="qncgcyiji" fileName="com/comBg.xml" pkg="te1gxawo" xy="0,0" size="1920,1080">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
-    <text id="n1_6bth" name="tfLevelType" xy="17,75" size="77,22" fontSize="18" text="关卡类型"/>
+    <image id="n17_x59d" name="bg" src="nhj611" fileName="img/img_jm_gjk_3.png" xy="0,138" size="1920,942">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </image>
+    <text id="n1_6bth" name="tfLevelType" xy="17,75" size="77,24" fontSize="18" text="关卡类型"/>
     <component id="n2_6bth" name="cbLevelType" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="109,65">
       <ComboBox title="关卡类型" visibleItemCount="10">
         <item title="拼图关卡" value="puzzle"/>
       </ComboBox>
     </component>
-    <text id="n3_6bth" name="tfConfigData" xy="373,75" size="77,22" fontSize="18" text="配置数据"/>
+    <text id="n3_6bth" name="tfConfigData" xy="373,75" size="77,24" fontSize="18" text="配置数据"/>
     <component id="n4_6bth" name="cbLevelConfigData" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="474,65">
       <ComboBox title="配置数据" visibleItemCount="10"/>
     </component>
@@ -24,5 +27,39 @@
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://te1gxawooiqdcyih2"/>
     </component>
+    <component id="n8_l7sp" name="comPictureLibrary" src="ns4ocyif0" fileName="com/ComPictureLibrary.xml" xy="1694,138" size="226,942">
+      <relation target="" sidePair="right-right,bottomext-bottom"/>
+    </component>
+    <component id="n9_l7sp" name="comEditorComposite" src="l7sp1z" fileName="com/ComEditorComposite.xml" xy="89,135" size="260,942">
+      <relation target="" sidePair="left-left,bottomext-bottom"/>
+    </component>
+    <component id="n10_l7sp" name="comEditorView" src="ns4ocyiez" fileName="com/ComEditorView.xml" xy="404,222" size="1280,720">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n11_l7sp" name="comEditorBoxContainer" src="u3xqcyif7" fileName="com/ComEditorBoxContainer.xml" xy="402,222" size="1280,720">
+      <relation target="n10_l7sp" sidePair="left-left,top-top"/>
+    </component>
+    <component id="n12_l7sp" name="btnDel" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="1077,433" size="58,62" visible="false">
+      <Button icon="ui://ce9jx9xtnhj6o"/>
+    </component>
+    <image id="n19_x59d" name="imgBG" src="nhj6y" fileName="img/img_jm_fl.png" xy="1,135" size="90,942">
+      <relation target="" sidePair="left-left,bottomext-bottom"/>
+    </image>
+    <list id="n13_l7sp" name="lstTools" xy="1,135" size="90,942" layout="flow_vt" overflow="scroll" defaultItem="ui://ce9jx9xtl7sp1u">
+      <relation target="" sidePair="left-left,bottomext-bottom"/>
+      <item name="setting"/>
+      <item title="工具箱" icon="ui://ce9jx9xtnhj6h" name="tools"/>
+    </list>
+    <component id="n14_l7sp" name="btnUnDo" src="l7sp26" fileName="btn/btnDo.xml" xy="914,957">
+      <relation target="n10_l7sp" sidePair="left-left,top-bottom"/>
+      <Button icon="ui://ce9jx9xtnhj6j" selectedIcon="ui://ce9jx9xtnhj6i"/>
+    </component>
+    <component id="n15_l7sp" name="btnReDo" src="l7sp26" fileName="btn/btnDo.xml" xy="1062,957">
+      <relation target="n10_l7sp" sidePair="right-right,top-bottom"/>
+      <Button title="前进" icon="ui://ce9jx9xtnhj6r" selectedIcon="ui://ce9jx9xtnhj6q"/>
+    </component>
+    <image id="n16_l7sp" name="n16" src="nhj613" fileName="img/img_jm_line.png" xy="1061,957">
+      <relation target="n14_l7sp" sidePair="left-right,top-top"/>
+    </image>
   </displayList>
 </component>
