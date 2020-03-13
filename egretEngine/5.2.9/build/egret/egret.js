@@ -14263,6 +14263,12 @@ var egret;
                     }
                     this.lastCount += this.frameInterval;
                 }
+                //所有的其他帧处理都需要遵从统一征率 否则没有渲染也没有意义 统一管理
+                for (var i = 0; i < length; i++) {
+                    if (callBackList[i].call(thisObjectList[i], timeStamp)) {
+                        // requestRenderingFlag = true;
+                    }
+                }
                 var curTime = egret.getTimer();
                 if (this._lastFrameEgretTime == 0) {
                     this.frameRealDelta = 0;
@@ -14280,13 +14286,6 @@ var egret;
                 this.broadcastEnterFrame();
                 var t4 = egret.getTimer();
                 this.costEnterFrame = t4 - t3;
-                //所有的其他帧处理都需要遵从统一征率 否则没有渲染也没有意义 统一管理
-                //tween什么的都移动到enterFrame后面执行  游戏改变坐标都是在enterFrame中执行  先执行业务层 再执行底层tween等 防止屏幕tween跟随主角等抖动问题
-                for (var i = 0; i < length; i++) {
-                    if (callBackList[i].call(thisObjectList[i], timeStamp)) {
-                        // requestRenderingFlag = true;
-                    }
-                }
             };
             /**
              * @private
