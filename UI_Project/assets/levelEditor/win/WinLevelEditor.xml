@@ -1,28 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1920,1080">
+<component size="1920,1080" designImage="ui://thvmj7vonhj64cyijq" designImageAlpha="0" designImageLayer="1">
   <displayList>
-    <component id="n0_6bth" name="comBg" src="qncgcyiji" fileName="com/comBg.xml" pkg="te1gxawo" xy="0,0" size="1920,1080">
+    <image id="n16_mock" name="imgBg" src="nhj612" fileName="img/img_jm_gq_bg.png" xy="0,0" size="1920,1080">
       <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n15_mock" name="imgTitleBg" src="nhj6x" fileName="img/img_jm_dbl.png" xy="0,0" size="1920,56">
+      <relation target="" sidePair="width-width"/>
+    </image>
+    <text id="n8_nhj6" name="tfTitle" xy="19,15" size="125,28" fontSize="24" color="#333333" text="关卡编辑器"/>
+    <component id="n7_oxv8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1855,5" size="48,48">
+      <relation target="" sidePair="right-right"/>
+      <Button icon="ui://te1gxawooiqdcyih2"/>
     </component>
-    <text id="n1_6bth" name="tfLevelType" xy="17,75" size="77,22" fontSize="18" text="关卡类型"/>
-    <component id="n2_6bth" name="cbLevelType" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="109,65">
+    <image id="n9_nhj6" name="n9" src="nhj6y" fileName="img/img_jm_fl.png" xy="0,54" size="1920,84">
+      <relation target="" sidePair="rightext-right"/>
+    </image>
+    <text id="n1_6bth" name="tfLevelType" xy="16,83" size="85,24" fontSize="20" color="#333333" text="关卡类型"/>
+    <component id="n2_6bth" name="cbLevelType" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="122,77" size="216,40">
       <ComboBox title="关卡类型" visibleItemCount="10">
         <item title="拼图关卡" value="puzzle"/>
       </ComboBox>
     </component>
-    <text id="n3_6bth" name="tfConfigData" xy="373,75" size="77,22" fontSize="18" text="配置数据"/>
-    <component id="n4_6bth" name="cbLevelConfigData" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="474,65">
+    <text id="n3_6bth" name="tfConfigData" xy="367,84" size="85,24" fontSize="20" color="#333333" text="配置数据"/>
+    <component id="n4_6bth" name="cbLevelConfigData" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="470,76" size="219,40">
       <ComboBox title="配置数据" visibleItemCount="10"/>
     </component>
-    <component id="n5_6bth" name="btnImport" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="701,63" size="120,44" visible="false">
-      <Button title="导入" icon="ui://te1gxawooiqdcyih1"/>
+    <component id="n5_6bth" name="btnImport" src="nhj617" fileName="btn/btnSaveImport.xml" xy="1600,57" group="n12_nhj6">
+      <Button title="导入" icon="ui://ce9jx9xtnhj66"/>
     </component>
-    <component id="n6_6bth" name="btnSave" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="855,63" size="120,44" visible="false">
-      <Button title="保存" icon="ui://te1gxawooiqdcyih1"/>
+    <component id="n6_6bth" name="btnSave" src="nhj617" fileName="btn/btnSaveImport.xml" xy="1759,57" group="n12_nhj6">
+      <Button title="保存" icon="ui://ce9jx9xtnhj65"/>
     </component>
-    <component id="n7_oxv8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1871,0" size="48,48">
+    <image id="n13_mock" name="n13" src="nhj613" fileName="img/img_jm_line.png" xy="1600,54" size="1,84" group="n12_nhj6"/>
+    <image id="n14_mock" name="n14" src="nhj613" fileName="img/img_jm_line.png" xy="1759,54" size="1,84" group="n12_nhj6"/>
+    <group id="n12_nhj6" name="grpImportSave" xy="1600,54" size="320,84" advanced="true" collapsed="true">
       <relation target="" sidePair="right-right"/>
-      <Button icon="ui://te1gxawooiqdcyih2"/>
-    </component>
+    </group>
   </displayList>
 </component>

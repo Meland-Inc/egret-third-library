@@ -35,15 +35,16 @@
     <image id="nhj6v" name="img_jm_an_1.png" path="/img/"/>
     <image id="nhj6w" name="img_jm_cbl.png" path="/img/"/>
     <image id="nhj6x" name="img_jm_dbl.png" path="/img/"/>
-    <image id="nhj6y" name="img_jm_fl.png" path="/img/"/>
+    <image id="nhj6y" name="img_jm_fl.png" path="/img/" scale="9grid" scale9grid="13,13,26,26"/>
     <image id="nhj6z" name="img_jm_gjk_1.png" path="/img/"/>
     <image id="nhj610" name="img_jm_gjk_2.png" path="/img/"/>
-    <image id="nhj611" name="img_jm_gjk_3.png" path="/img/"/>
-    <image id="nhj612" name="img_jm_gq_bg.png" path="/img/"/>
+    <image id="nhj611" name="img_jm_gjk_3.png" path="/img/" scale="9grid" scale9grid="15,15,30,30"/>
+    <image id="nhj612" name="img_jm_gq_bg.png" path="/img/" scale="9grid" scale9grid="8,8,16,16"/>
     <image id="nhj613" name="img_jm_line.png" path="/img/"/>
     <image id="nhj614" name="img_jm_pt_bgk.png" path="/img/"/>
     <image id="nhj615" name="img_jm_pt_dbl.png" path="/img/"/>
     <image id="nhj616" name="img_jm_pt_msk.png" path="/img/"/>
+    <component id="nhj617" name="btnSaveImport.xml" path="/btn/"/>
   </resources>
   <publish name="levelEditor"/>
 </packageDescription>
