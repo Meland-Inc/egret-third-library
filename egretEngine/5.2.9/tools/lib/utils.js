@@ -284,9 +284,9 @@ function uglify(sourceFile) {
     }
     options.mangle.properties.reserved = reservedCell.concat();
 
-    if (!evnStr || evnStr[1] != "release") {
-        // options.mangle = false;
-        // options.toplevel = false;
+    if (evnStr && evnStr[1] == "release") {
+        options.mangle = false;
+        options.toplevel = false;
     }
     //继承的类名没替换，目前没影响
     // __reflect(hq.prototype, "MapGrid", ["IPoolInstance"]);
