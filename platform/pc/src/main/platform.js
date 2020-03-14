@@ -3,7 +3,7 @@
  * @desc 平台相关的逻辑
  * @date 2020-02-19 11:22:49
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-12 16:14:14
+ * @Last Modified time: 2020-03-14 20:28:30
  */
 const querystring = require('querystring');
 const config = require('./config.js');
@@ -79,10 +79,16 @@ async function init(queryValue) {
                 continue;
             }
 
+            //课程地图的gid
             if (key === 'gid') {
                 logger.log('net', `平台给的gid`, value);
                 queryValue[key] = `${value}`;
                 util.writeServerCnfValue("gid", value);
+                continue;
+            }
+
+            if (key === 'alone_shared') {
+                config.aloneShared = !!value;
                 continue;
             }
             queryValue[key] = `${value}`;

@@ -3,7 +3,7 @@
  * @desc 主进程消息处理类
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-12 16:47:46
+ * @Last Modified time: 2020-03-14 20:35:58
  */
 const config = require('./config.js');
 const { ipcMain } = require('electron');
@@ -120,8 +120,8 @@ async function startNativePlatform() {
 
     logger.log(`test`, `config.userType`, config.userType);
 
-    //非学生端 本地服务器初始化
-    if (config.userType != config.eUserType.student) {
+    //非学生端 或者单人单服务器 本地服务器初始化
+    if (config.userType != config.eUserType.student || config.aloneShared) {
         server.init();
     }
 
