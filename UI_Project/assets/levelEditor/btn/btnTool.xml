@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="60,60" extention="Button">
-  <controller name="button" pages="0,up,1,down,3,over" selected="0"/>
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <controller name="ctrlOver" pages="0,up,1,over" selected="0"/>
   <displayList>
     <image id="n12_l7sp" name="n12" src="nhj6z" fileName="img/img_jm_gjk_1.png" xy="0,0">
-      <gearDisplay controller="button" pages="3"/>
+      <gearDisplay controller="ctrlOver" pages="1"/>
     </image>
     <image id="n11_l7sp" name="n11" src="nhj610" fileName="img/img_jm_gjk_2.png" xy="0,0" size="60,60">
-      <gearDisplay controller="button" pages="1"/>
+      <gearDisplay controller="button" pages="1,4"/>
     </image>
     <loader id="n9_gup1" name="icon" xy="6,6" size="48,48" url="ui://ce9jx9xtl7sp22" autoSize="true">
       <relation target="" sidePair="center-center,top-top"/>
