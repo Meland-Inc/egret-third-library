@@ -122,7 +122,7 @@ async function startNativePlatform() {
     logger.log(`test`, `config.userType`, config.userType);
 
     //非学生端 或者单人单服务器 本地服务器初始化
-    if (config.userType != config.eUserType.student || config.aloneShared) {
+    if (config.userType != config.eUserType.student || config.standAlone) {
         server.init();
     }
 

@@ -3,7 +3,7 @@
  * @desc main用的配置
  * @date 2020-02-13 14:54:41 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-16 14:55:30
+ * @Last Modified time: 2020-03-16 17:05:44
  */
 /** 本机IP */
 const localIp = "127.0.0.1";
@@ -73,7 +73,7 @@ let realName;
 let nickName;
 
 /** 学生单人开服务器 */
-let aloneShared;
+let standAlone;
 
 /** 上课伪协议 路由*/
 let lessonRouter;
@@ -141,7 +141,7 @@ exports.classId = classId;
 exports.realName = realName;
 exports.nickName = nickName;
 exports.urlValue = urlValue;
-exports.aloneShared = aloneShared;
+exports.standAlone = standAlone;
 exports.mainWindow = mainWindow;
 exports.lessonRouter = lessonRouter;
 exports.nativeMode = nativeMode;
