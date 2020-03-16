@@ -3,7 +3,7 @@
  * @desc 主进程消息处理类
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-16 16:04:05
+ * @Last Modified time: 2020-03-16 16:54:36
  */
 const config = require('./config.js');
 const { ipcMain } = require('electron');
@@ -14,7 +14,8 @@ const util = require('./util.js');
 
 //消息对应方法集合
 let msgMap = {
-    'CHECK_UPDATE_COMPLETE': onCheckUpdateComplete,  //检查更新 
+    'CHECK_UPDATE_COMPLETE': onCheckUpdateComplete,  //检查更新
+    'CREATE_GAME_SERVER': onCreateGameServer,   //启动游戏服务器
 }
 
 /** 发送主进程消息 */
@@ -52,11 +53,6 @@ function applyIpcMsg(msgId, ...args) {
     }
 }
 
-/** 发送native消息到客户端 */
-function sendNativeMsg(msgId, ...args) {
-    sendIpcMsg('SEND_NATIVE_MSG', msgId, ...args);
-}
-
 /** 检查更新完毕 */
 async function onCheckUpdateComplete() {
     await util.init();
@@ -79,7 +75,7 @@ async function onCheckUpdateComplete() {
     }
 }
 
-//从游戏模式进入
+/** 从游戏模式进入 */
 async function startNativeGame() {
     logger.log('update', `从游戏模式进入`);
 
@@ -91,7 +87,7 @@ async function startNativeGame() {
     sendIpcMsg('START_NATIVE_GAME', queryObject);
 }
 
-//从单个课程进入
+/** 从单个课程进入 */
 async function startNativeLesson() {
     // logger.log('update', `从单个课程进入`);
 
@@ -113,7 +109,7 @@ async function startNativeLesson() {
     // config.mainWindow.loadURL("http://www.bellcode.com");
 }
 
-//从平台进入
+/** 从平台进入 */
 async function startNativePlatform() {
     logger.log('update', `从平台进入`);
 
@@ -136,6 +132,10 @@ async function startNativePlatform() {
     sendIpcMsg('START_NATIVE_PLATFORM', queryObject);
 }
 
+/** 收到创建游戏服务器 */
+function onCreateGameServer() {
+    server.createGameServer();
+}
+
 exports.sendIpcMsg = sendIpcMsg;
-exports.sendNativeMsg = sendNativeMsg;
 exports.init = init;

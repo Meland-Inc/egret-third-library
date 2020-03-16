@@ -3,7 +3,7 @@
  * @desc 渲染进程消息处理文件
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-16 15:57:40
+ * @Last Modified time: 2020-03-16 16:54:21
  */
 import { Config } from './Config.js';
 import { ClientUpdate } from './update/ClientUpdate.js';
@@ -20,8 +20,7 @@ let msgMap = {
     'START_NATIVE_GAME': onStartNativeGame,  //开始游戏模式
     'START_NATIVE_LESSON': onStartNativeLesson,  //开始单个课程
     'START_NATIVE_PLATFORM': onStartNativePlatform,  //开始平台进入
-    // 'CHECK_UPDATE': onCheckUpdate,  //检查更新
-    'SEND_NATIVE_MSG': onSendNativeMsg,//收到发送native消息
+    'GAME_SERVER_INITED': onGameServerInited, //游戏服务器启动完毕
 }
 
 let clientUpdate = new ClientUpdate();
@@ -45,7 +44,7 @@ export function init() {
     //监听主进程发过来的客户端消息
     ipcRenderer.on('CLIENT_MESSAGE', (evt, msgId, ...args) => {
         logger.log('main', `收到主进程发过来的客户端消息:${msgId} args`, ...args);
-        applyClientMsg(msgId, ...args);
+        applyNativeMsg(msgId, ...args);
     });
 }
 
@@ -216,18 +215,14 @@ async function onStartNativeGame(queryObject) {
     let queryValue = querystring.stringify(queryObject);
     let jumpHref = `${Config.rootPath}/package/client/index.html?${queryValue}`;
     location.href = jumpHref;
-    registerClientMsg();
+    registerNativeMsg();
 }
 
 /** 开始单个课程 */
 async function onStartNativeLesson() {
-    // setConfigData2LocalStorage();
-
-    // let queryValue = querystring.stringify(queryObject);
-    // let jumpHref = `${Config.rootPath}/package/client/index.html?${queryValue}`;
     location.href = Config.bellcodeUrl;
 
-    registerClientMsg();
+    registerNativeMsg();
 }
 
 /** 开始平台进入 */
@@ -250,20 +245,16 @@ async function onStartNativePlatform(queryObject) {
     let bellPlatformDomain = await Config.getGlobalConfigValue("bellPlatformDomain");
 
     location.href = `${bellPlatformDomain}?${platformValue}`;
-    registerClientMsg();
+    registerNativeMsg();
 }
 
-/** 收到发送native消息到客户端 */
-function onSendNativeMsg(msgId, ...args) {
-    sendNativeMsg(msgId, ...args);
+/** 收到游戏服务器启动完毕 */
+function onGameServerInited(gameServer) {
+    sendMsgToClient('nativeSignIn', gameServer);
 }
 
-/** 发送native消息到客户端 */
-export function sendNativeMsg(msgId, ...args) {
-    if (window.applyNativeMsg) {
-        window.applyNativeMsg(msgId, ...args);
-    }
-
+/** 发送消息到客户端 */
+export function sendMsgToClient(msgId, ...args) {
     if (window.frames && window.frames.length > 0) {
         window.frames[0].postMessage({ 'key': 'nativeMsg', 'value': `${[msgId, args]}` }, '* ');
         return;
@@ -276,13 +267,47 @@ export function sendNativeMsg(msgId, ...args) {
 }
 
 
-/** 注册客户端消息 */
-function registerClientMsg() {
-    window.applyClientMsg = this.applyClientMsg;
+/** 注册native消息 */
+function registerNativeMsg() {
+    if (window.frames && window.frames.length > 0) {
+        window.frames[0].applyClientMsg = applyClientMsg;
+        return;
+    }
+
+    if (window) {
+        window.sendMsgToNative = sendMsgToNative;
+        return;
+    }
 }
 
 /** 应用客户端消息 */
-function applyClientMsg(msgId, ...args) {
+function sendMsgToNative(msgId, ...args) {
+    switch (msgId) {
+        //进入地图模板
+        case "MAP_TEMPLATE_ENTER":
+            onMapTemplateEnter(...args);
+            break;
+        //创建地图模板房间
+        case "MAP_TEMPLATE_ROOM_CREATE":
+            onMapTemplateRoomCreate(...args);
+            break;
+        default:
+            break;
+    }
+}
 
+/** 当前进入地图模板 */
+function onMapTemplateEnter(gid, gameArgs) {
+    Config.setGlobalConfigValue('gid', gid);
+    Config.setGlobalConfigValue('gameArgs', gameArgs);
 
+    sendIpcMsg('CREATE_GAME_SERVER');
+}
+
+/** 当创建地图模板房间 */
+function onMapTemplateRoomCreate(gid, gameArgs) {
+    Config.setGlobalConfigValue('gid', gid);
+    Config.setGlobalConfigValue('gameArgs', gameArgs);
+
+    sendIpcMsg('CREATE_GAME_SERVER');
 }

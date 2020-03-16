@@ -3,7 +3,7 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-16 16:07:14
+ * @Last Modified time: 2020-03-16 16:09:17
  */
 // Modules to control application life and create native browser window
 const { app, globalShortcut, BrowserWindow, Menu, shell, dialog } = require('electron')
@@ -136,7 +136,7 @@ function createWindow() {
   // 拦截new-window事件，起到拦截window.open的作用
   mainWindow.webContents.on('new-window', (e, url, frameName, disposition, options, additionalFeatures) => {
     // 阻止创建默认窗口
-    e.preventDefault()
+    e.preventDefault();
 
     // // 在这里可以实现不同的协议
     // if (/^app:\/\//.test(url)) {
