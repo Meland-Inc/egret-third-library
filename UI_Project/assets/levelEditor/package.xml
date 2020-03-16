@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="ce9jx9xt">
+<packageDescription id="ce9jx9xt" jpegQuality="80" compressPNG="true">
   <resources>
     <component id="6bth0" name="WinLevelEditor.xml" path="/win/" exported="true"/>
     <image id="nhj61" name="img_jm_pt_ym.png" path="/img/"/>
@@ -66,7 +66,7 @@
     <component id="l7sp26" name="btnDo.xml" path="/btn/"/>
     <component id="nuyecyif8" name="WinPlayLevel.xml" path="/win/" exported="true"/>
     <component id="nuyecyif9" name="ComEditorStage.xml" path="/com/"/>
-    <component id="cdz3cyifa" name="ComPlayView.xml" path="/win/"/>
+    <component id="cdz3cyifa" name="ComPlayView.xml" path="/com/"/>
   </resources>
   <publish name="levelEditor"/>
 </packageDescription>
