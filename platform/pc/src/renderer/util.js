@@ -3,7 +3,7 @@
  * @desc 工具类
  * @date 2020-02-28 19:56:39 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-12 14:54:30
+ * @Last Modified time: 2020-03-16 14:51:52
  */
 const fs = require('fs');
 const path = require('path');
@@ -113,41 +113,21 @@ export function getServerPackageFileName() {
 export async function deleteFolderRecursive(folderPath) {
     let files = [];
     //判断给定的路径是否存在
-    if (await fs.existsSync(folderPath)) {
+    if (fs.existsSync(folderPath)) {
         //返回文件和子目录的数组
-        files = await fs.readdirSync(folderPath);
+        files = fs.readdirSync(folderPath);
         for (const file of files) {
             let curPath = path.join(folderPath, file);
             //fs.statSync同步读取文件夹文件，如果是文件夹，在重复触发函数
-            if (await fs.statSync(curPath).isDirectory()) { // recurse
+            if (fs.statSync(curPath).isDirectory()) {
                 await deleteFolderRecursive(curPath);
             } else {
-                await fs.unlinkSync(curPath);
+                fs.unlinkSync(curPath);
             }
         }
         //清除文件夹
-        await fs.rmdirSync(folderPath);
+        fs.rmdirSync(folderPath);
     } else {
         console.log("给定的路径不存在，请给出正确的路径", folderPath);
     }
-}
-
-/** 设置全局配置值 */
-export function setGlobalConfigValue(key, value) {
-    let configContent = fs.readFileSync(Config.globalConfigPath, "utf-8");
-    let globalConfig = JSON.parse(configContent);
-    globalConfig[key] = value;
-    fs.writeFileSync(Config.globalConfigPath, JSON.stringify(globalConfig, null, 4), "utf-8");
-}
-
-/** 获取全局配置值 */
-export function getGlobalConfigValue(key) {
-    let globalConfig = getGlobalConfig();
-    return globalConfig[key];
-}
-
-export function getGlobalConfig() {
-    let configContent = fs.readFileSync(Config.globalConfigPath, "utf-8");
-    let globalConfig = JSON.parse(configContent);
-    return globalConfig;
 }

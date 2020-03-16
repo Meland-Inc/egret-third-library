@@ -3,7 +3,7 @@
  * @desc main用的配置
  * @date 2020-02-13 14:54:41 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-14 20:27:04
+ * @Last Modified time: 2020-03-16 14:55:30
  */
 /** 本机IP */
 const localIp = "127.0.0.1";
@@ -101,7 +101,7 @@ const eUserType = {
 
 /** 路由枚举 */
 const eLessonRouter = {
-
+    openMapTemplateWin: "openMapTemplateWin",   //默认进入banner页面
 }
 
 /** native模式 */

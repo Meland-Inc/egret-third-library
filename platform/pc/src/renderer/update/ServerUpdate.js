@@ -3,7 +3,7 @@
  * @desc 游戏服务器端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-10 22:36:31
+ * @Last Modified time: 2020-03-16 15:59:00
  */
 
 import * as loading from '../loading.js';
@@ -28,7 +28,7 @@ export class ServerUpdate {
     updateCbArgs;
 
     /** 分支环境 */
-    evnName;
+    environName;
 
     /** 本地版本 */
     localVersion;
@@ -37,8 +37,7 @@ export class ServerUpdate {
     remoteVersion;
 
     initVersionInfo() {
-        let globalConfig = util.getGlobalConfig();
-        this.evnName = globalConfig.environName;
+        this.environName = Config.environName;
     }
 
     /** 检查是否最新版本 */
@@ -46,9 +45,9 @@ export class ServerUpdate {
         this.initVersionInfo();
 
         //获取本地游戏版本
-        this.localVersion = await util.getGlobalConfigValue("serverPackageVersion");
+        this.localVersion = await Config.getGlobalConfigValue("serverPackageVersion");
 
-        this.remoteVersion = await util.getServerPackagePolicyNum(this.evnName);
+        this.remoteVersion = await util.getServerPackagePolicyNum(this.environName);
         return this.remoteVersion === this.localVersion;
     }
 
@@ -81,14 +80,14 @@ export class ServerUpdate {
 
     /** 下载服务端包 */
     downloadPackage() {
-        let fileDir = `${Config.cdnHost}/serverPackages/${this.evnName}`;
+        let fileDir = `${Config.cdnHost}/serverPackages/${this.environName}`;
         let saveDir = this.serverPackagePath;
         let fileName = `${util.getServerPackageFileName()}_v${this.remoteVersion}.zip`;
         //下载文件
         loading.showLoading();
         this.download.downloadFile(fileDir, saveDir, fileName, async (arg, filename, percentage, errorMsg) => {
             if (arg === "finished") {
-                util.setGlobalConfigValue("serverPackageVersion", this.remoteVersion);
+                Config.setGlobalConfigValue("serverPackageVersion", this.remoteVersion);
             }
             this.downloadFileCallback(fileDir, saveDir, arg, filename, percentage, errorMsg);
         });

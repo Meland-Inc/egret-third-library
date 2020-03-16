@@ -3,7 +3,7 @@
  * @desc 主进程消息处理类
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-14 20:35:58
+ * @Last Modified time: 2020-03-16 16:04:05
  */
 const config = require('./config.js');
 const { ipcMain } = require('electron');
@@ -18,7 +18,7 @@ let msgMap = {
 }
 
 /** 发送主进程消息 */
-function sendMsg(msgId, ...args) {
+function sendIpcMsg(msgId, ...args) {
     if (!config.mainWindow) {
         logger.error('main', `发送主进程消息失败:${msgId} config.mainWindow不存在 args`, ...args);
         return;
@@ -40,16 +40,21 @@ function init() {
     //监听渲染进程消息
     ipcMain.on('RENDERER_PROCESS_MESSAGE', (evt, msgId, ...args) => {
         logger.log('main', `收到渲染进程消息:${msgId} args`, ...args);
-        applyMsg(msgId, ...args);
+        applyIpcMsg(msgId, ...args);
     });
 }
 
 /** 应用渲染进程消息 */
-function applyMsg(msgId, ...args) {
+function applyIpcMsg(msgId, ...args) {
     let func = msgMap[msgId];
     if (func) {
         func(...args);
     }
+}
+
+/** 发送native消息到客户端 */
+function sendNativeMsg(msgId, ...args) {
+    sendIpcMsg('SEND_NATIVE_MSG', msgId, ...args);
 }
 
 /** 检查更新完毕 */
@@ -83,7 +88,7 @@ async function startNativeGame() {
 
     //本地服务器初始化
     await server.init();
-    sendMsg('START_NATIVE_GAME', queryObject);
+    sendIpcMsg('START_NATIVE_GAME', queryObject);
 }
 
 //从单个课程进入
@@ -104,8 +109,8 @@ async function startNativeLesson() {
     // }
 
     // logger.log('net', 'urlValue', config.urlValue);
-    // sendMsg('START_NATIVE_LESSON', queryObject);
-    config.mainWindow.loadURL("http://www.bellcode.com");
+    sendIpcMsg('START_NATIVE_LESSON');
+    // config.mainWindow.loadURL("http://www.bellcode.com");
 }
 
 //从平台进入
@@ -128,8 +133,9 @@ async function startNativePlatform() {
     logger.log(`test`, `queryObject`, queryObject);
 
     // mainWindow.loadURL("http://www.bellcode.com");
-    sendMsg('START_NATIVE_PLATFORM', queryObject);
+    sendIpcMsg('START_NATIVE_PLATFORM', queryObject);
 }
 
-exports.sendMsg = sendMsg;
+exports.sendIpcMsg = sendIpcMsg;
+exports.sendNativeMsg = sendNativeMsg;
 exports.init = init;

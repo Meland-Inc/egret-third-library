@@ -3,13 +3,12 @@
  * @desc 渲染进程消息处理文件
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-10 22:59:37
+ * @Last Modified time: 2020-03-16 15:57:40
  */
 import { Config } from './Config.js';
 import { ClientUpdate } from './update/ClientUpdate.js';
 import { ServerUpdate } from './update/ServerUpdate.js';
 import * as logger from './logger.js';
-import * as util from './util.js';
 let ipcRenderer = require('electron').ipcRenderer;
 let querystring = require('querystring');
 let fs = require('fs');
@@ -21,15 +20,15 @@ let msgMap = {
     'START_NATIVE_GAME': onStartNativeGame,  //开始游戏模式
     'START_NATIVE_LESSON': onStartNativeLesson,  //开始单个课程
     'START_NATIVE_PLATFORM': onStartNativePlatform,  //开始平台进入
-    'CHECK_UPDATE': onCheckUpdate,  //检查更新 
+    // 'CHECK_UPDATE': onCheckUpdate,  //检查更新
+    'SEND_NATIVE_MSG': onSendNativeMsg,//收到发送native消息
 }
 
 let clientUpdate = new ClientUpdate();
 let serverUpdate = new ServerUpdate();
 
-
 /** 发送渲染进程消息 */
-export function sendMsg(msgId, ...args) {
+export function sendIpcMsg(msgId, ...args) {
     logger.log('renderer', `发送渲染进程消息:${msgId} args`, ...args);
     ipcRenderer.send('RENDERER_PROCESS_MESSAGE', msgId, ...args);
 }
@@ -40,12 +39,18 @@ export function init() {
     //监听主进程消息
     ipcRenderer.on('MAIN_PROCESS_MESSAGE', (evt, msgId, ...args) => {
         logger.log('renderer', `收到主进程消息:${msgId} args`, ...args);
-        applyMsg(msgId, ...args);
+        applyIpcMsg(msgId, ...args);
+    });
+
+    //监听主进程发过来的客户端消息
+    ipcRenderer.on('CLIENT_MESSAGE', (evt, msgId, ...args) => {
+        logger.log('main', `收到主进程发过来的客户端消息:${msgId} args`, ...args);
+        applyClientMsg(msgId, ...args);
     });
 }
 
 /** 应用主进程消息 */
-function applyMsg(msgId, ...args) {
+function applyIpcMsg(msgId, ...args) {
     let func = msgMap[msgId];
     if (func) {
         func(...args);
@@ -63,9 +68,15 @@ function onSaveNativeServerIpPort(ip, port) {
     Config.setGameServerLocalPort(port);
 }
 
+// async function onCheckUpdate() {
+//     await this.checkUpdate();
+// }
+
 /** 检查更新 */
-async function onCheckUpdate() {
+export async function checkUpdate() {
     logger.log('update', `开始检查更新`);
+
+    logger.log('config', `全局配置`, Config.globalConfig);
 
     //服务器包所在目录
     let serverPackageDir = `${Config.serverPackagePath}server`;
@@ -130,7 +141,7 @@ async function onCheckUpdate() {
 /** 直接下载最新服务端包 */
 function directDownloadServer(callback, ...args) {
     try {
-        util.setGlobalConfigValue("serverPackageVersion", 0);
+        Config.setGlobalConfigValue("serverPackageVersion", 0);
         serverUpdate.checkUpdate(callback, ...args);
     } catch (error) {
         let content = `native下次服务端出错,点击重试`;
@@ -181,7 +192,7 @@ function checkServerUpdate(callback, ...args) {
 /** 检查更新完毕 */
 function checkUpdateComplete() {
     logger.log('update', `检查更新完毕`);
-    sendMsg(`CHECK_UPDATE_COMPLETE`);
+    sendIpcMsg(`CHECK_UPDATE_COMPLETE`);
 }
 
 function setConfigData2LocalStorage() {
@@ -205,15 +216,18 @@ async function onStartNativeGame(queryObject) {
     let queryValue = querystring.stringify(queryObject);
     let jumpHref = `${Config.rootPath}/package/client/index.html?${queryValue}`;
     location.href = jumpHref;
+    registerClientMsg();
 }
 
 /** 开始单个课程 */
-async function onStartNativeLesson(queryObject) {
-    setConfigData2LocalStorage();
+async function onStartNativeLesson() {
+    // setConfigData2LocalStorage();
 
-    let queryValue = querystring.stringify(queryObject);
-    let jumpHref = `${Config.rootPath}/package/client/index.html?${queryValue}`;
-    location.href = jumpHref;
+    // let queryValue = querystring.stringify(queryObject);
+    // let jumpHref = `${Config.rootPath}/package/client/index.html?${queryValue}`;
+    location.href = Config.bellcodeUrl;
+
+    registerClientMsg();
 }
 
 /** 开始平台进入 */
@@ -233,7 +247,42 @@ async function onStartNativePlatform(queryObject) {
     }
     let platformValue = querystring.stringify(platformObject);
     //获取官网链接
-    let bellPlatformDomain = await util.getGlobalConfigValue("bellPlatformDomain");
+    let bellPlatformDomain = await Config.getGlobalConfigValue("bellPlatformDomain");
 
     location.href = `${bellPlatformDomain}?${platformValue}`;
+    registerClientMsg();
+}
+
+/** 收到发送native消息到客户端 */
+function onSendNativeMsg(msgId, ...args) {
+    sendNativeMsg(msgId, ...args);
+}
+
+/** 发送native消息到客户端 */
+export function sendNativeMsg(msgId, ...args) {
+    if (window.applyNativeMsg) {
+        window.applyNativeMsg(msgId, ...args);
+    }
+
+    if (window.frames && window.frames.length > 0) {
+        window.frames[0].postMessage({ 'key': 'nativeMsg', 'value': `${[msgId, args]}` }, '* ');
+        return;
+    }
+
+    if (window) {
+        window.postMessage({ 'key': 'nativeMsg', 'value': `${[msgId, args]}` }, '* ');
+        return;
+    }
+}
+
+
+/** 注册客户端消息 */
+function registerClientMsg() {
+    window.applyClientMsg = this.applyClientMsg;
+}
+
+/** 应用客户端消息 */
+function applyClientMsg(msgId, ...args) {
+
+
 }

@@ -3,15 +3,15 @@
  * @desc 处理native服务器和游戏服务器的文件
  * @date 2020-02-18 11:42:29 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-14 20:37:20
+ * @Last Modified time: 2020-03-16 13:58:00
  */
 const http = require('http');
 const url = require('url');
-const fs = require('fs');
 const config = require('./config.js');
 const util = require('./util.js');
 const logger = require('./logger.js');
 const platform = require('./platform.js');
+const message = require('./message.js');
 
 let nativeServer;
 let gameServerProcess;
@@ -62,30 +62,33 @@ async function createNativeServer() {
 
             if (config.gameServerLocalIp && config.gameServerLocalPort) {
                 let gameServer = `${config.gameServerLocalIp}:${config.gameServerLocalPort}`;
-                if (config.mainWindow && config.mainWindow.webContents) {
-                    logger.log('net', 'native上课客户端登录本地游戏服务器', gameServer);
-                    //上课渠道
-                    if (config.channel === config.constChannelLesson) {
-                        config.mainWindow.webContents.executeJavaScript(`
-                            if(window.frames && window.frames.length > 0) {
-                                console.log('frames-->postMessage nativeSignIn');
-                                window.frames[0].postMessage({'key':'nativeSignIn', 'value':\'${gameServer}\'},'*');
-                            } else if(window.nativeSignIn) {
-                                console.log('nativeSignIn');
-                                window.nativeSignIn(\'${gameServer}\');
-                            }
-                        `);
-                    }
-                    //游戏
-                    else {
-                        logger.log('net', 'native游戏客户端登录本地游戏服务器', gameServer);
-                        config.mainWindow.webContents.executeJavaScript(`
-                            if(window.nativeSignIn){
-                                window.nativeSignIn(\'${gameServer}\');
-                            }
-                        `);
-                    }
-                }
+                logger.log('net', 'native上课客户端登录本地游戏服务器', gameServer);
+                message.sendNativeMsg('nativeSignIn', gameServer);
+
+                // if (config.mainWindow && config.mainWindow.webContents) {
+                //     logger.log('net', 'native上课客户端登录本地游戏服务器', gameServer);
+                //     //上课渠道
+                //     if (config.channel === config.constChannelLesson) {
+                //         config.mainWindow.webContents.executeJavaScript(`
+                //             if(window.frames && window.frames.length > 0) {
+                //                 console.log('frames-->postMessage nativeSignIn');
+                //                 window.frames[0].postMessage({'key':'nativeSignIn', 'value':\'${gameServer}\'},'*');
+                //             } else if(window.nativeSignIn) {
+                //                 console.log('nativeSignIn');
+                //                 window.nativeSignIn(\'${gameServer}\');
+                //             }
+                //         `);
+                //     }
+                //     //游戏
+                //     else {
+                //         logger.log('net', 'native游戏客户端登录本地游戏服务器', gameServer);
+                //         config.mainWindow.webContents.executeJavaScript(`
+                //             if(window.nativeSignIn){
+                //                 window.nativeSignIn(\'${gameServer}\');
+                //             }
+                //         `);
+                //     }
+                // }
             }
 
             //上课渠道 并且是老师端,要上报本地ip

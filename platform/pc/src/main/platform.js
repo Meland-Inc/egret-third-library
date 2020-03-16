@@ -3,7 +3,7 @@
  * @desc 平台相关的逻辑
  * @date 2020-02-19 11:22:49
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-14 20:28:30
+ * @Last Modified time: 2020-03-16 11:32:03
  */
 const querystring = require('querystring');
 const config = require('./config.js');
@@ -173,7 +173,7 @@ function getMemberInfo(successFunc, errorFunc) {
                 util.writeServerCnfValue("userId", body.data.user_info.userid + "");
                 util.writeServerCnfValue("schoolId", body.data.user_info.school.id + "");
 
-                message.sendMsg('SAVE_NATIVE_LOGIN_RESPONSE', body);
+                message.sendIpcMsg('SAVE_NATIVE_LOGIN_RESPONSE', body);
                 logger.log('net', `获取贝尔平台用户信息成功`);
                 successFunc();
             } else {

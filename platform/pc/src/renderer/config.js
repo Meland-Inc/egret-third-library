@@ -3,9 +3,15 @@
  * @desc renderer用的配置静态类
  * @date 2020-02-13 14:54:50 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-02 15:18:26
+ * @Last Modified time: 2020-03-16 15:58:37
  */
+const fs = require('fs');
+import * as logger from './logger.js';
+
 export class Config {
+    /** 全局配置 */
+    static globalConfig;
+
     /** native用请求头 */
     static protocol = "http:";
 
@@ -25,6 +31,21 @@ export class Config {
     static serverPackagePath = `${this.rootPath}/package/`;
 
     static cdnHost = "http://bg-stage.wkcoding.com";
+
+    /** 分支环境  beta|ready|release */
+    static environName = "";
+
+    /** 官网地址 */
+    static bellcodeUrl = "http://www.bellcode.com";
+
+    /** beta客户端地址 */
+    static betaUrl = "http://wplanet.wkcoding.com/app-beta";
+
+    /** ready客户端地址 */
+    static readyUrl = "http://wplanet.wkcoding.com/app-ready";
+
+    /** release客户端地址 */
+    static releaseUrl = "http://wplanet.wkcoding.com/app";
 
     static _nativeLoginResponse;
     /** native平台登陆信息 */
@@ -51,5 +72,35 @@ export class Config {
     }
     static setGameServerLocalPort(value) {
         this._gameServerLocalPort = value;
+    }
+
+    /** 分支环境名称 */
+    static environName;
+
+    static async init() {
+        return new Promise((resolve, reject) => {
+            logger.log('renderer', `初始化全局配置`);
+            fs.readFile(this.globalConfigPath, "utf-8", (err, data) => {
+                if (err) {
+                    reject(err);
+                    return;
+                }
+
+                this.globalConfig = JSON.parse(data);
+                this.environName = this.globalConfig.environName;
+                resolve();
+            });
+        })
+    }
+
+    /** 获取全局配置值 */
+    static getGlobalConfigValue(key) {
+        return this.globalConfig[key];
+    }
+
+    /** 设置全局配置值 */
+    static setGlobalConfigValue(key, value) {
+        this.globalConfig[key] = value;
+        fs.writeFileSync(this.globalConfigPath, JSON.stringify(this.globalConfig, null, 4), "utf-8");
     }
 }

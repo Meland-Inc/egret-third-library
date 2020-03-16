@@ -3,7 +3,7 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-14 20:37:33
+ * @Last Modified time: 2020-03-16 16:07:14
  */
 // Modules to control application life and create native browser window
 const { app, globalShortcut, BrowserWindow, Menu, shell, dialog } = require('electron')
@@ -29,6 +29,7 @@ async function initNative() {
   //平台学生端端测试参数
   // config.urlValue = `bellplanet://student?temporary_token=AWRl2okDEQ:fYHQv&class_id=18744&package_id=278&lesson_id=960&act_id=9999&bell_origin=demoapi.wkcoding.com&local_network=127.0.0.1:8080&internet_network=ofga364021.codingmonkey.com.cn:80`;
 
+  logger.log('net', `urlValue: ${config.urlValue}`);
   if (config.urlValue.indexOf(config.constPseudoProtocol) === -1) {
     initNativeLesson();
   } else {
@@ -37,9 +38,6 @@ async function initNative() {
   await mainWindow.loadFile(`${config.rootPath}/src/renderer/renderer.html`);
 
   logger.log('net', `config.urlValue`, config.urlValue);
-
-  //发送检查更新消息
-  message.sendMsg('CHECK_UPDATE');
 }
 
 /** 初始化native c端游戏 */
@@ -135,6 +133,22 @@ function createWindow() {
     await server.closeGameServer();
   })
 
+  // 拦截new-window事件，起到拦截window.open的作用
+  mainWindow.webContents.on('new-window', (e, url, frameName, disposition, options, additionalFeatures) => {
+    // 阻止创建默认窗口
+    e.preventDefault()
+
+    // // 在这里可以实现不同的协议
+    // if (/^app:\/\//.test(url)) {
+    //   app.emit('protocol-test', {
+    //     sender: mainWindow.webContents
+    //   }, url)
+    // }
+
+    logger.log('electron', `new-window: ${url}`);
+    mainWindow.loadURL(url);
+  })
+
   //设置菜单
   const menu = Menu.buildFromTemplate(template);
   Menu.setApplicationMenu(menu);
@@ -168,10 +182,9 @@ app.on('second-instance', async (event, argv, workingDirectory) => {
 
     /** 设置url参数 */
     config.urlValue = argv[argv.length - 1];
-    logger.log('electron', `config.urlValue`, config.urlValue);
     initNative();
   }
-})
+});
 
 app.on('ready', () => {
   createWindow();

@@ -3,7 +3,7 @@
  * @desc 游戏客户端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-12 00:01:32
+ * @Last Modified time: 2020-03-16 15:59:10
  */
 
 import * as loading from '../loading.js';
@@ -38,9 +38,6 @@ export class ClientUpdate {
     /** 更新后回调参数 */
     updateCbArgs;
 
-    /** 分支环境 */
-    evnName;
-
     /** 策略文件host */
     policyHost = "";
 
@@ -49,19 +46,18 @@ export class ClientUpdate {
 
     /** 检查是否最新版本 */
     async checkLatestVersion() {
-        let globalConfig = util.getGlobalConfig();
+        let globalConfig = Config.globalConfig;
         this.curVersion = this.startVersion = +globalConfig.gameVersion;
         this.patchUrl = `${Config.protocol}//${globalConfig.patchUrl}`;
-        this.evnName = globalConfig.environName;
         let policyUrl = globalConfig.policyUrl;
         this.policyHost = policyUrl.split("/")[0];
         this.policyPath = policyUrl.replace(this.policyHost, "");
 
         let policyNum = await this.getCurPolicyNum();
         if (policyNum === null) {
-            let content = "获取策略版本号错误!";
+            let content = `获取策略版本号错误!, environName:${Config.environName}`;
             logger.error(`renderer`, content);
-            alert(content);
+            // alert(content);
             return true;
         }
 
@@ -81,13 +77,13 @@ export class ClientUpdate {
     getCurPolicyNum() {
         return new Promise(async (resolve, reject) => {
             try {
-                let responseText = await util.getPolicyInfo(this.evnName);
+                let responseText = await util.getPolicyInfo(Config.environName);
                 let data = JSON.parse(responseText);
                 let policyNum = data.Data.Version;
                 logger.log(`renderer`, `策略版本号:${policyNum}`);
                 resolve(policyNum);
             } catch (error) {
-                let content = `获取策略版本号错误!, evnName:${this.evnName}`;
+                let content = `获取策略版本号错误!, environName:${Config.environName}`;
                 logger.error(`renderer`, content);
                 resolve(null);
             }
@@ -153,7 +149,7 @@ export class ClientUpdate {
                 zip.extractAllTo(this.clientPackagePath, true);
                 let content = `解压文件:${filename}成功`;
                 logger.log('update', content);
-                util.setGlobalConfigValue("gameVersion", this.curVersion);
+                Config.setGlobalConfigValue("gameVersion", this.curVersion);
             } catch (error) {
                 let content = `解压文件:${filename}错误`
                 logger.error(`update`, content, error);
@@ -168,7 +164,7 @@ export class ClientUpdate {
 
                 this.curVersion = this.curVersion + 1;
                 if (this.curVersion >= this.gameVersion) {
-                    util.setGlobalConfigValue("gameVersion", this.curVersion);
+                    Config.setGlobalConfigValue("gameVersion", this.curVersion);
                     this.executeUpdateCallback();
                 } else {
                     this.installSinglePatch()
@@ -212,7 +208,7 @@ export class ClientUpdate {
         await this.checkLatestVersion();
         this.patchCount = 1;
 
-        let fileDir = `${Config.cdnHost}/clientPackages/${this.evnName}`;
+        let fileDir = `${Config.cdnHost}/clientPackages/${Config.environName}`;
         let saveDir = this.clientPackagePath;
         let fileName = `release_v${this.gameVersion}s.zip`;
         //下载文件
