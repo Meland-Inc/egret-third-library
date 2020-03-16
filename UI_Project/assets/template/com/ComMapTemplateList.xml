@@ -5,7 +5,7 @@
     <action type="change_page" fromPage="" toPage="1" controller="ctrlHotRecent" targetPage="1"/>
     <action type="change_page" fromPage="" toPage="0" controller="ctrlHotRecent" targetPage="1"/>
   </controller>
-  <controller name="ctrlListType" exported="true" pages="7,all,4,published,8,planet,9,story,10,leisure,11,tutorial,12,internal,0,selfCreate,1,editable,2,subscribed" selected="0"/>
+  <controller name="ctrlListType" exported="true" pages="7,all,4,published,8,planet,9,story,10,leisure,11,tutorial,13,lesson,12,internal,0,selfCreate,1,editable,2,subscribed" selected="0"/>
   <displayList>
     <component id="n15_l03j" name="btnPublished" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="0,20" size="110,58" group="n14_qncg">
       <Button title="我发布的" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3" controller="ctrlListType" page="4"/>
@@ -25,11 +25,14 @@
     <component id="n20_nibs" name="btnTutorial" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="0,360" size="110,58" group="n14_qncg">
       <Button title="教程" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3" controller="ctrlListType" page="11"/>
     </component>
-    <component id="n21_nibs" name="btnInternal" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="0,428" size="110,58" group="n14_qncg">
+    <component id="n32_nhj6" name="btnLesson" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="0,428" size="110,58" group="n14_qncg">
+      <Button title="作业" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3" controller="ctrlListType" page="13"/>
+    </component>
+    <component id="n21_nibs" name="btnInternal" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="0,496" size="110,58" group="n14_qncg">
       <Button title="内部地图" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3" controller="ctrlListType" page="12"/>
     </component>
-    <group id="n14_qncg" name="grpBtnAllType" xy="0,20" size="110,466" advanced="true" collapsed="true">
-      <gearDisplay controller="ctrlListType" pages="5,6,4,7,8,9,10,11,12"/>
+    <group id="n14_qncg" name="grpBtnAllType" xy="0,20" size="110,534" advanced="true">
+      <gearDisplay controller="ctrlListType" pages="7,4,8,9,10,11,13,12"/>
     </group>
     <component id="n3_pz1n" name="btnSelfCreate" src="o89ocyidh" fileName="btn/rbtnFixNoScale.xml" pkg="te1gxawo" xy="0,20" size="110,58" group="n10_pz1n">
       <Button title="我创建的" titleColor="#333333" titleFontSize="22" icon="ui://te1gxawogyoucyij0" selectedIcon="ui://te1gxawogyoucyij3" controller="ctrlListType" page="0"/>

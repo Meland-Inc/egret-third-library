@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1304,869" designImage="ui://thvmj7vovhcj4cyijk" designImageOffsetX="-350" designImageOffsetY="-118" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlMapSizeStatus" pages="0,big,1,middle,2,small,3,custom" selected="0"/>
-  <controller name="ctrlAdvancedSetting" pages="0,expand,1,shrink" selected="0"/>
-  <controller name="ctrlIsManorCheckPoint" pages="0,true,1,false" selected="0"/>
   <displayList>
     <image id="n129_a16n" name="imgBg1" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="0,0" size="1304,440"/>
     <image id="n130_a16n" name="imgTopBg1" src="c1h7cyiia" fileName="img/img_cm_top_3.png" pkg="te1gxawo" xy="0,0" size="1304,40"/>
@@ -12,12 +9,13 @@
     <text id="n135_a16n" name="tfName" xy="136,117" size="350,26" fontSize="20" color="#333333" vAlign="middle" autoSize="none" text="堡垒前线"/>
     <text id="n137_a16n" name="tfMapTypeTitle" xy="118,187" size="85,24" fontSize="20" color="#333333" vAlign="middle" text="地图分类"/>
     <component id="n136_a16n" name="cbMapTemplateType" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="125,222" size="378,40">
-      <ComboBox title="无" titleColor="#333333" visibleItemCount="10">
+      <ComboBox visibleItemCount="10">
         <item title="无" value="default"/>
         <item title="教程" value="tutorial"/>
-        <item title="星球杯" value="planet"/>
+        <item title="邀请赛" value="planet"/>
         <item title="故事" value="story"/>
         <item title="休闲" value="leisure"/>
+        <item title="作业" value="lesson"/>
         <item title="内部" value="internal"/>
       </ComboBox>
     </component>

@@ -236,14 +236,24 @@ export class GenerateTask {
             fs.mkdirSync(dir);
         }
 
+        let jsList: string = "[";
+
         let itemDes: string = "";
         for (let i = 0; i < symbols.length; i++) {
             if (i !== 0) {
                 itemDes += "\n";
             }
             itemDes += `\t<item marked="true" name="${symbols[i]}" newName="" markedInStrings="true"/>`;
-        }
+            if (i % 50 == 0) {
+                jsList += "\r\n";
+            }
+            if (symbols[i][0] != `"`) {
+                jsList += `"${symbols[i]}",`;
+            }
 
+
+        }
+        jsList += "]"
         let textFileContent: string = `<?xml version="1.0" encoding="utf-8"?>
 <namesBag comments="">
 ${itemDes}
@@ -251,6 +261,7 @@ ${itemDes}
 
         try {
             fs.writeFileSync(fsPath, textFileContent);
+            fs.writeFileSync(fsPath + ".js", jsList);
         }
         catch (e) {
             window.showErrorMessage(`save jasob file error = ${e}`);

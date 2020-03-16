@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080">
+  <displayList>
+    <component id="n0_6bth" name="comBg" src="qncgcyiji" fileName="com/comBg.xml" pkg="te1gxawo" xy="0,0" size="1920,1080">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <text id="n1_6bth" name="tfLevelType" xy="17,75" size="77,22" fontSize="18" text="关卡类型"/>
+    <component id="n2_6bth" name="cbLevelType" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="109,65">
+      <ComboBox title="关卡类型" visibleItemCount="10">
+        <item title="拼图关卡" value="puzzle"/>
+      </ComboBox>
+    </component>
+    <text id="n3_6bth" name="tfConfigData" xy="373,75" size="77,22" fontSize="18" text="配置数据"/>
+    <component id="n4_6bth" name="cbLevelConfigData" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="474,65">
+      <ComboBox title="配置数据" visibleItemCount="10"/>
+    </component>
+    <component id="n5_6bth" name="btnImport" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="701,63" size="120,44" visible="false">
+      <Button title="导入" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <component id="n6_6bth" name="btnSave" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="855,63" size="120,44" visible="false">
+      <Button title="保存" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <component id="n7_oxv8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1871,0" size="48,48">
+      <relation target="" sidePair="right-right"/>
+      <Button icon="ui://te1gxawooiqdcyih2"/>
+    </component>
+  </displayList>
+</component>
