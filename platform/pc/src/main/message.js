@@ -3,7 +3,7 @@
  * @desc 主进程消息处理类
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-16 16:54:36
+ * @Last Modified time: 2020-03-17 01:39:18
  */
 const config = require('./config.js');
 const { ipcMain } = require('electron');
@@ -59,6 +59,11 @@ async function onCheckUpdateComplete() {
 
     logger.log('config', `nativeMode:${config.nativeMode}`);
 
+    if (config.nativeMode === config.eNativeMode.createmap) {
+        startCreateMap();
+        return;
+    }
+
     if (config.nativeMode === config.eNativeMode.game) {
         await startNativeGame();
         return
@@ -73,6 +78,14 @@ async function onCheckUpdateComplete() {
         await startNativePlatform();
         return;
     }
+}
+
+/** 从创造地图模式进入 */
+async function startCreateMap() {
+    let queryValue = config.urlValue.slice(config.urlValue.indexOf("?") + 1);
+
+    logger.log('update', `从创造地图模式进入`);
+    sendIpcMsg('START_CREATE_MAP', queryValue);
 }
 
 /** 从游戏模式进入 */
@@ -133,9 +146,27 @@ async function startNativePlatform() {
 }
 
 /** 收到创建游戏服务器 */
-function onCreateGameServer() {
-    server.createGameServer();
+function onCreateGameServer(mode) {
+    server.createGameServer(mode);
+}
+
+/** 发送消息到客户端 */
+function sendMsgToClient(msgId, ...args) {
+    // sendIpcMsg('SEND_MSG_TO_CLIENT', msgId, ...args)
+
+    config.mainWindow.webContents.executeJavaScript(
+        `if (window.frames && window.frames.length > 0) {
+            window.frames[0].postMessage({'key': 'nativeMsg', 'value': \'${[msgId, args]}\' }, '* ');
+            return;
+        }
+
+        if (window) {
+            window.postMessage({'key': 'nativeMsg', 'value': \'${[msgId, args]}\' }, '* ');
+            return;
+        }`
+    );
 }
 
 exports.sendIpcMsg = sendIpcMsg;
+exports.sendMsgToClient = sendMsgToClient;
 exports.init = init;

@@ -3,7 +3,7 @@
  * @desc main用的配置
  * @date 2020-02-13 14:54:41 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-16 17:05:44
+ * @Last Modified time: 2020-03-16 23:47:33
  */
 /** 本机IP */
 const localIp = "127.0.0.1";
@@ -81,6 +81,9 @@ let lessonRouter;
 /** native模式 */
 let nativeMode;
 
+/** 游戏服务器模式 */
+let gameServerMode;
+
 /** 上课模式渠道常量 */
 const constChannelLesson = 'bian_lesson';
 
@@ -101,14 +104,22 @@ const eUserType = {
 
 /** 路由枚举 */
 const eLessonRouter = {
-    openMapTemplateWin: "openMapTemplateWin",   //默认进入banner页面
+    createMap: "createMap"
+}
+
+/** 游戏服务器模式 */
+const eGameServerMode = {
+    gameMap: 1,    //游戏地图
+    mapTemplate: 2,  //模板地图
+    mapTemplateRoom: 3, //模板地图房间
 }
 
 /** native模式 */
 const eNativeMode = {
     game: 1,    //c端游戏模式
     lesson: 2,  //b端上单节课程模式(入口不走平台)
-    platform: 3, //b端平台上课模式(入口从平台进)  
+    platform: 3, //b端平台上课模式(入口从平台进) 
+    createmap: 4, //c端创造地图模式
 }
 
 /** 伪协议里url带的参数 */
@@ -152,3 +163,4 @@ exports.constBellcodeUrl = constBellcodeUrl;
 exports.eUserType = eUserType;
 exports.eLessonRouter = eLessonRouter;
 exports.eNativeMode = eNativeMode;
+exports.eGameServerMode = eGameServerMode;

@@ -3,7 +3,7 @@
  * @desc 处理native服务器和游戏服务器的文件
  * @date 2020-02-18 11:42:29 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-16 16:54:36
+ * @Last Modified time: 2020-03-16 22:47:48
  */
 const http = require('http');
 const url = require('url');
@@ -37,7 +37,7 @@ async function createNativeServer() {
 
         await util.writeServerCnfValue('channel', config.channel);
         await util.writeServerCnfValue("nativePort", config.nativeServerPort + "");
-        await createGameServer();
+        await createGameServer(config.eGameServerMode.gameMap);
     });
 
     nativeServer.on('request', (req, res) => {
@@ -64,7 +64,20 @@ async function createNativeServer() {
                 let gameServer = `${config.gameServerLocalIp}:${config.gameServerLocalPort}`;
                 logger.log('net', 'native上课客户端登录本地游戏服务器', gameServer);
 
-                message.sendIpcMsg('GAME_SERVER_INITED', gameServer);
+                //游戏地图
+                if (config.gameServerMode === config.eGameServerMode.gameMap) {
+                    message.sendMsgToClient('nativeSignIn', gameServer);
+                }
+                //模板地图
+                else if (config.gameServerMode === config.eGameServerMode.mapTemplate) {
+                    message.sendMsgToClient('enterMapTemplate', gameServer);
+                }
+                //模板地图房间
+                else if (config.gameServerMode === config.eGameServerMode.mapTemplateRoom) {
+                    message.sendMsgToClient('enterMapTemplateRoom', gameServer);
+                } else {
+                    //reserve
+                }
 
                 // if (config.mainWindow && config.mainWindow.webContents) {
                 //     logger.log('net', 'native上课客户端登录本地游戏服务器', gameServer);
@@ -133,8 +146,9 @@ function closeNativeServer() {
 }
 
 /** 创建游戏服务器 */
-async function createGameServer() {
+async function createGameServer(mode) {
     logger.log('net', '创建游戏服务器');
+    config.gameServerMode = mode;
     let cmd = `game`;
     gameServerProcess = await util.runCmd(cmd, `${config.rootPath}/package/server/`, "创建游戏服务器成功", "创建游戏服务器失败");
 }

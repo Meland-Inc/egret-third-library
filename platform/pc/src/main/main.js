@@ -3,7 +3,7 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-16 16:09:17
+ * @Last Modified time: 2020-03-16 23:39:29
  */
 // Modules to control application life and create native browser window
 const { app, globalShortcut, BrowserWindow, Menu, shell, dialog } = require('electron')
@@ -31,38 +31,23 @@ async function initNative() {
 
   logger.log('net', `urlValue: ${config.urlValue}`);
   if (config.urlValue.indexOf(config.constPseudoProtocol) === -1) {
-    initNativeLesson();
+    config.nativeMode = config.eNativeMode.lesson;
   } else {
-    initNativePlatform();
+    //设置路由
+    let lessonRouter = config.urlValue.replace(config.constPseudoProtocol, '');
+    config.lessonRouter = lessonRouter.slice(0, lessonRouter.indexOf("?"));
+
+    //创造地图模式
+    if (config.lessonRouter === config.eLessonRouter.createMap) {
+      config.nativeMode = config.eNativeMode.createmap;
+    } else {
+      config.nativeMode = config.eNativeMode.platform;
+    }
   }
   await mainWindow.loadFile(`${config.rootPath}/src/renderer/renderer.html`);
 
   logger.log('net', `config.urlValue`, config.urlValue);
 }
-
-/** 初始化native c端游戏 */
-async function initNativeGame() {
-  config.nativeMode = config.eNativeMode.game;
-}
-
-/** 初始化native上课课程 */
-async function initNativeLesson() {
-  config.nativeMode = config.eNativeMode.lesson;
-  // //设置上课对应路由
-  // let lessonRouter = config.urlValue.replace(config.constPseudoProtocol, '');
-  // config.lessonRouter = lessonRouter.slice(0, lessonRouter.indexOf("?"));
-}
-
-/** 初始化native上课平台 */
-function initNativePlatform() {
-  logger.log('platform', `初始化上课平台`);
-  config.nativeMode = config.eNativeMode.platform;
-
-  //设置上课对应路由
-  let lessonRouter = config.urlValue.replace(config.constPseudoProtocol, '');
-  config.lessonRouter = lessonRouter.slice(0, lessonRouter.indexOf("?"));
-}
-
 
 //创建游戏浏览窗口
 function createWindow() {
@@ -134,7 +119,7 @@ function createWindow() {
   })
 
   // 拦截new-window事件，起到拦截window.open的作用
-  mainWindow.webContents.on('new-window', (e, url, frameName, disposition, options, additionalFeatures) => {
+  mainWindow.webContents.on('new-window', async (e, url, frameName, disposition, options, additionalFeatures) => {
     // 阻止创建默认窗口
     e.preventDefault();
 
@@ -146,7 +131,7 @@ function createWindow() {
     // }
 
     logger.log('electron', `new-window: ${url}`);
-    mainWindow.loadURL(url);
+    await mainWindow.loadURL(url, { query: { pcNative: 1 } });
   })
 
   //设置菜单

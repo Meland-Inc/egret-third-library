@@ -3,7 +3,7 @@
  * @desc 渲染进程消息处理文件
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-16 16:54:21
+ * @Last Modified time: 2020-03-16 23:50:51
  */
 import { Config } from './Config.js';
 import { ClientUpdate } from './update/ClientUpdate.js';
@@ -17,10 +17,11 @@ let fs = require('fs');
 let msgMap = {
     'SAVE_NATIVE_LOGIN_RESPONSE': onSaveNativeLoginResponse,    //保存native平台登陆信息
     'SAVE_NATIVE_SERVER_IP_PORT': onSaveNativeServerIpPort,     //设置native服务器内网ip和端口
+    'START_CREATE_MAP': onStartCreateMap,  //创建地图模式
     'START_NATIVE_GAME': onStartNativeGame,  //开始游戏模式
     'START_NATIVE_LESSON': onStartNativeLesson,  //开始单个课程
     'START_NATIVE_PLATFORM': onStartNativePlatform,  //开始平台进入
-    'GAME_SERVER_INITED': onGameServerInited, //游戏服务器启动完毕
+    'SEND_MSG_TO_CLIENT': onSendMsgToClient, //发送消息到客户端
 }
 
 let clientUpdate = new ClientUpdate();
@@ -194,18 +195,15 @@ function checkUpdateComplete() {
     sendIpcMsg(`CHECK_UPDATE_COMPLETE`);
 }
 
-function setConfigData2LocalStorage() {
-    if (Config.nativeLoginResponse) {
-        localStorage.setItem('nativeLoginResponse', JSON.stringify(Config.nativeLoginResponse));
-    } else {
-        localStorage.removeItem('nativeLoginResponse');
-    }
+/** 创建地图模式 */
+async function onStartCreateMap(queryValue) {
+    setConfigData2LocalStorage();
 
-    if (Config.gameServerLocalIp && Config.gameServerLocalPort) {
-        localStorage.setItem('nativeGameServer', `${Config.gameServerLocalIp}:${Config.gameServerLocalPort}`);
-    } else {
-        localStorage.removeItem('nativeGameServer');
-    }
+    let jumpHref = `${Config.rootPath}/package/client/index.html?${queryValue}`;
+
+    jumpHref = url + "&createMap=1";
+    location.href = jumpHref;
+    registerNativeMsg();
 }
 
 /** 开始游戏模式 */
@@ -220,6 +218,8 @@ async function onStartNativeGame(queryObject) {
 
 /** 开始单个课程 */
 async function onStartNativeLesson() {
+    setConfigData2LocalStorage();
+
     location.href = Config.bellcodeUrl;
 
     registerNativeMsg();
@@ -248,9 +248,23 @@ async function onStartNativePlatform(queryObject) {
     registerNativeMsg();
 }
 
+function setConfigData2LocalStorage() {
+    if (Config.nativeLoginResponse) {
+        localStorage.setItem('nativeLoginResponse', JSON.stringify(Config.nativeLoginResponse));
+    } else {
+        localStorage.removeItem('nativeLoginResponse');
+    }
+
+    if (Config.gameServerLocalIp && Config.gameServerLocalPort) {
+        localStorage.setItem('nativeGameServer', `${Config.gameServerLocalIp}:${Config.gameServerLocalPort}`);
+    } else {
+        localStorage.removeItem('nativeGameServer');
+    }
+}
+
 /** 收到游戏服务器启动完毕 */
-function onGameServerInited(gameServer) {
-    sendMsgToClient('nativeSignIn', gameServer);
+function onSendMsgToClient(msgId, ...args) {
+    sendMsgToClient(msgId, ...args);
 }
 
 /** 发送消息到客户端 */

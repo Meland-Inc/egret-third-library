@@ -3,7 +3,7 @@
  * @desc renderer用的配置静态类
  * @date 2020-02-13 14:54:50 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-16 16:59:02
+ * @Last Modified time: 2020-03-16 23:45:02
  */
 const fs = require('fs');
 import * as logger from './logger.js';
@@ -47,13 +47,6 @@ export class Config {
     /** release客户端地址 */
     static releaseUrl = "http://wplanet.wkcoding.com/app";
 
-    /** 游戏服务器模式 */
-    static eGameServerMode = {
-        gameMap: 1,    //游戏地图
-        mapTemplate: 2,  //模板地图
-        mapTemplateRoom: 3, //模板地图房间
-    }
-
     static _nativeLoginResponse;
     /** native平台登陆信息 */
     static get nativeLoginResponse() {
@@ -83,6 +76,13 @@ export class Config {
 
     /** 分支环境名称 */
     static environName;
+
+    /** 分支枚举 */
+    static eEnvironName = {
+        beta: "beta",
+        ready: "ready",
+        release: "release",
+    }
 
     static async init() {
         return new Promise((resolve, reject) => {
