@@ -3,7 +3,7 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-17 10:09:07
+ * @Last Modified time: 2020-03-17 18:31:10
  */
 // Modules to control application life and create native browser window
 const { app, globalShortcut, BrowserWindow, Menu, shell, dialog } = require('electron')
@@ -31,7 +31,7 @@ async function initNative() {
 
   logger.log('net', `urlValue: ${config.urlValue}`);
   if (config.urlValue.indexOf(config.constPseudoProtocol) === -1) {
-    config.nativeMode = config.eNativeMode.lesson;
+    config.nativeMode = config.eNativeMode.website;
   } else {
     //设置路由
     let lessonRouter = config.urlValue.replace(config.constPseudoProtocol, '');
@@ -46,11 +46,13 @@ async function initNative() {
   }
   await mainWindow.loadFile(`${config.rootPath}/src/renderer/renderer.html`);
 
+  message.sendIpcMsg("NATIVE_INITED", mainWindow);
+
   logger.log('net', `config.urlValue`, config.urlValue);
 }
 
 //创建游戏浏览窗口
-function createWindow() {
+async function createWindow() {
   config.mainWindow = mainWindow = new BrowserWindow({
     width: 1600,
     height: 900,
@@ -131,7 +133,7 @@ function createWindow() {
     // }
 
     logger.log('electron', `new-window: ${url}`);
-    await mainWindow.loadURL(url, { query: { pcNative: 1 } });
+    await mainWindow.loadURL(url);
   })
 
   //设置菜单

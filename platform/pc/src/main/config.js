@@ -3,8 +3,12 @@
  * @desc main用的配置
  * @date 2020-02-13 14:54:41 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-16 23:47:33
+ * @Last Modified time: 2020-03-17 18:38:36
  */
+const fs = require('fs');
+const message = require('./message.js');
+const logger = require('./logger.js');
+
 /** 本机IP */
 const localIp = "127.0.0.1";
 
@@ -13,6 +17,9 @@ let nativeServerPort;
 
 /** 程序根路径 */
 let rootPath = `${__dirname}/../..`;
+
+/** 全局配置路径 */
+let globalConfigPath = `${rootPath}/GlobalConfig.json`;
 
 /** 游戏服务器内网ip */
 let gameServerLocalIp;
@@ -117,7 +124,7 @@ const eGameServerMode = {
 /** native模式 */
 const eNativeMode = {
     game: 1,    //c端游戏模式
-    lesson: 2,  //b端上单节课程模式(入口不走平台)
+    website: 2,  //官网进入
     platform: 3, //b端平台上课模式(入口从平台进) 
     createMap: 4, //c端创造地图模式
 }
@@ -156,6 +163,8 @@ exports.standAlone = standAlone;
 exports.mainWindow = mainWindow;
 exports.lessonRouter = lessonRouter;
 exports.nativeMode = nativeMode;
+exports.gameServerMode = gameServerMode;
+exports.globalConfigPath = globalConfigPath;
 
 exports.constChannelLesson = constChannelLesson;
 exports.constPseudoProtocol = constPseudoProtocol;

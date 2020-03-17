@@ -3,7 +3,7 @@
  * @desc 主进程消息处理类
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-17 10:54:45
+ * @Last Modified time: 2020-03-17 18:43:02
  */
 const config = require('./config.js');
 const { ipcMain } = require('electron');
@@ -14,8 +14,10 @@ const util = require('./util.js');
 
 //消息对应方法集合
 let msgMap = {
+    'UPDATE_GLOBAL_CONFIG': onUpdateGlobalConfig,//更新全局配置
     'CHECK_UPDATE_COMPLETE': onCheckUpdateComplete,  //检查更新
-    'CREATE_GAME_SERVER': onCreateGameServer,   //启动游戏服务器
+    'MAP_TEMPLATE_ENTER': onMapTemplateEnter,   //启动地图模板游戏服务器
+    'MAP_TEMPLATE_ROOM_CREATE': onMapTemplateRoomCreate,   //启动地图模板房间游戏服务器
 }
 
 /** 发送主进程消息 */
@@ -43,6 +45,13 @@ function init() {
         logger.log('main', `收到渲染进程消息:${msgId} args`, ...args);
         applyIpcMsg(msgId, ...args);
     });
+
+    //监听 客户端消息 应用 或者 转发给渲染进程
+    ipcMain.on('CLIENT_PROCESS_MESSAGE', (evt, msgId, ...args) => {
+        logger.log('main', `收到客户端消息:${msgId} args`, ...args);
+        applyIpcMsg(msgId, ...args);    //应用
+        // sendIpcMsg(msgId, ...args);     //转发
+    });
 }
 
 /** 应用渲染进程消息 */
@@ -53,6 +62,11 @@ function applyIpcMsg(msgId, ...args) {
     }
 }
 
+/** 更新全局配置 */
+function onUpdateGlobalConfig(globalConfig) {
+    config.globalConfig = globalConfig;
+}
+
 /** 检查更新完毕 */
 async function onCheckUpdateComplete() {
     await util.init();
@@ -60,7 +74,7 @@ async function onCheckUpdateComplete() {
     logger.log('config', `nativeMode:${config.nativeMode}`);
 
     if (config.nativeMode === config.eNativeMode.createMap) {
-        startCreateMap();
+        await startCreateMap();
         return;
     }
 
@@ -69,8 +83,8 @@ async function onCheckUpdateComplete() {
         return
     }
 
-    if (config.nativeMode === config.eNativeMode.lesson) {
-        await startNativeLesson();
+    if (config.nativeMode === config.eNativeMode.website) {
+        await startNativeWebsite();
         return;
     }
 
@@ -83,7 +97,7 @@ async function onCheckUpdateComplete() {
 /** 从创造地图模式进入 */
 async function startCreateMap() {
     let queryValue = config.urlValue.slice(config.urlValue.indexOf("?") + 1);
-
+    queryValue += `&nativeMode=${config.eNativeMode.createMap}`;
     logger.log('update', `从创造地图模式进入`);
     sendIpcMsg('START_CREATE_MAP', queryValue);
 }
@@ -93,33 +107,16 @@ async function startNativeGame() {
     logger.log('update', `从游戏模式进入`);
 
     //初始化参数
-    let queryObject = { pcNative: 1, fakeGameMode: "lessons" };
+    let queryObject = { fakeGameMode: "lessons", nativeMode: config.eNativeMode.game };
 
     //本地服务器初始化
     await server.init();
     sendIpcMsg('START_NATIVE_GAME', queryObject);
 }
 
-/** 从单个课程进入 */
-async function startNativeLesson() {
-    // logger.log('update', `从单个课程进入`);
-
-    // //初始化参数
-    // let queryObject = { pcNative: 1 };
-    // //平台初始化
-    // await platform.init(queryObject);
-
-    // queryObject['fakeUserType'] = config.userType;
-    // queryObject['token'] = config.bellTempToken;
-
-    // //非学生端 本地服务器初始化
-    // if (config.userType != config.eUserType.student) {
-    //     server.init();
-    // }
-
-    // logger.log('net', 'urlValue', config.urlValue);
-    sendIpcMsg('START_NATIVE_LESSON');
-    // config.mainWindow.loadURL("http://www.bellcode.com");
+/** 官网地址进入 */
+async function startNativeWebsite() {
+    sendIpcMsg('START_NATIVE_WEBSITE');
 }
 
 /** 从平台进入 */
@@ -127,10 +124,11 @@ async function startNativePlatform() {
     logger.log('update', `从平台进入`);
 
     //初始化参数
-    let queryObject = { pcNative: 1 };
+    let queryObject = {};
     //平台初始化
     await platform.init(queryObject);
     queryObject['fakeUserType'] = config.userType;
+    queryObject['nativeMode'] = config.eNativeMode.platform;
 
     logger.log(`test`, `config.userType`, config.userType);
 
@@ -145,9 +143,22 @@ async function startNativePlatform() {
     sendIpcMsg('START_NATIVE_PLATFORM', queryObject);
 }
 
-/** 收到创建游戏服务器 */
-function onCreateGameServer(mode) {
-    server.createGameServer(mode);
+/** 收到地图模板游戏服务器 */
+function onMapTemplateEnter(gid, gameArgs) {
+    logger.log('msg', `gid gameArgs`, gid, gameArgs);
+    logger.log('msg', `globalConfig`, util.globalConfig);
+    util.setGlobalConfigValue('gid', gid);
+    util.setGlobalConfigValue('gameArgs', gameArgs);
+
+    server.createGameServer(config.eGameServerMode.mapTemplate);
+}
+
+/** 收到地图模板房间游戏服务器 */
+function onMapTemplateRoomCreate(gid, gameArgs) {
+    util.setGlobalConfigValue('gid', gid);
+    util.setGlobalConfigValue('gameArgs', gameArgs);
+
+    server.createGameServer(config.eGameServerMode.mapTemplateRoom);
 }
 
 /** 发送消息到客户端 */
@@ -159,20 +170,10 @@ function sendMsgToClient(msgId, ...args) {
     config.mainWindow.webContents.executeJavaScript(`
         if(window.frames && window.frames.length > 0) {
             window.frames[0].postMessage({'key':'nativeMsg', 'value':\'${content}\'},'*');
+        } else if(window){
+            window.postMessage({'key':'nativeMsg', 'value':\'${content}\'},'*');
         }
     `);
-
-    // config.mainWindow.webContents.executeJavaScript(
-    //     `if (window.frames && window.frames.length > 0) {
-    //         window.frames[0].postMessage({'key': 'nativeMsg', 'value': \'${[msgId, args]}\' }, '* ');
-    //         return;
-    //     }
-
-    //     if (window) {
-    //         window.postMessage({'key': 'nativeMsg', 'value': \'${[msgId, args]}\' }, '* ');
-    //         return;
-    //     }`
-    // );
 }
 
 exports.sendIpcMsg = sendIpcMsg;

@@ -3,12 +3,16 @@
  * @desc renderer用的配置静态类
  * @date 2020-02-13 14:54:50 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-16 23:45:02
+ * @Last Modified time: 2020-03-17 18:04:26
  */
 const fs = require('fs');
 import * as logger from './logger.js';
+import * as message from './message.js';
 
 export class Config {
+    /** 主窗口 */
+    static mainWindow;
+
     /** 全局配置 */
     static globalConfig;
 
@@ -109,5 +113,6 @@ export class Config {
     static setGlobalConfigValue(key, value) {
         this.globalConfig[key] = value;
         fs.writeFileSync(this.globalConfigPath, JSON.stringify(this.globalConfig, null, 4), "utf-8");
+        message.sendIpcMsg('UPDATE_GLOBAL_CONFIG', this.globalConfig);
     }
 }

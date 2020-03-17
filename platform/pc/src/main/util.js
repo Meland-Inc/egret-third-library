@@ -3,12 +3,13 @@
  * @desc main用的工具类
  * @date 2020-02-18 11:43:24 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-11 23:33:19
+ * @Last Modified time: 2020-03-17 18:44:50
  */
 // const spawn = require("child_process").spawn;
 const exec = require("child_process").exec;
 const logger = require('./logger.js');
 const config = require('./config.js');
+const message = require('./message.js');
 const http = require('http');
 const fs = require('fs');
 const querystring = require('querystring');
@@ -40,6 +41,9 @@ const querystring = require('querystring');
 // }
 
 let nativeCnf;
+
+/** 全局配置 */
+let globalConfig;
 
 /** 运行cmd命令 */
 function runCmd(cmd, cwd, successMsg, errorMsg) {
@@ -187,8 +191,11 @@ function requestPostHttp(host, port, path, data, headers, successFunc, errorFunc
 /** 初始化native配置 */
 async function init() {
     logger.log('net', `初始化native本地服务器配置`);
-    let content = await fs.readFileSync(config.nativeCnfPath, "utf-8");
-    nativeCnf = JSON.parse(content);
+    let nativeCnfContent = await fs.readFileSync(config.nativeCnfPath, "utf-8");
+    nativeCnf = JSON.parse(nativeCnfContent);
+
+    let globalConfigContent = await fs.readFileSync(config.globalConfigPath, "utf-8");
+    globalConfig = JSON.parse(globalConfigContent);
 }
 
 /** 写入服务端配置文件 */
@@ -198,9 +205,25 @@ async function writeServerCnfValue(key, value) {
     await fs.writeFileSync(config.nativeCnfPath, content);
 }
 
+/** 获取全局配置值 */
+function getGlobalConfigValue(key) {
+    return globalConfig[key];
+}
+
+/** 设置全局配置值 */
+function setGlobalConfigValue(key, value) {
+    globalConfig[key] = value;
+    logger.log('globalConfig', `content ${globalConfig}`);
+    fs.writeFileSync(config.globalConfigPath, JSON.stringify(globalConfig, null, 4), "utf-8");
+    message.sendIpcMsg('UPDATE_GLOBAL_CONFIG', globalConfig);
+}
+
 // exports.runSpawn = runSpawn;
 exports.runCmd = runCmd;
 exports.requestGetHttp = requestGetHttp;
 exports.requestPostHttp = requestPostHttp;
 exports.init = init;
 exports.writeServerCnfValue = writeServerCnfValue;
+exports.globalConfig = globalConfig;
+exports.getGlobalConfigValue = getGlobalConfigValue;
+exports.setGlobalConfigValue = setGlobalConfigValue;
