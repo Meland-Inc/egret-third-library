@@ -12,6 +12,7 @@
     <component id="n13_nuye" name="comEditorStage" src="nuyecyif9" fileName="com/ComEditorStage.xml" xy="107,111" size="1066,580">
       <relation target="n11_nuye" sidePair="center-center,middle-middle"/>
     </component>
+    <graph id="n31_jimd" name="gphEditCanvas" xy="0,0" size="1280,720" lineSize="0"/>
     <text id="n14_nuye" name="n14" xy="102,72" size="84,28" fontSize="24" color="#333333" text="倒计时:">
       <relation target="n11_nuye" sidePair="left-left,top-top"/>
     </text>

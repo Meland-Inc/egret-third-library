@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1280,720" designImageOffsetX="-400" designImageOffsetY="-210" designImageAlpha="100">
+  <controller name="ctrlVoiceType" pages="0,none,1,playing,2,pause" selected="0"/>
   <displayList>
     <loader id="n2_u1qk" name="ladBG" xy="0,0" size="1280,720" url="ui://ce9jx9xtnhj614" fill="scaleFree"/>
     <image id="n6_l7sp" name="n6" src="nhj615" fileName="img/img_jm_pt_dbl.png" xy="0,0" size="1280,56"/>
-    <image id="n12_x3fw" name="n12" src="nhj611" fileName="img/img_jm_gjk_3.png" xy="103,111" size="1066,580"/>
-    <graph id="n1_u3xq" name="gphPicture" xy="103,111" size="1066,580"/>
+    <image id="n12_x3fw" name="n12" src="nhj611" fileName="img/img_jm_gjk_3.png" xy="107,111" size="1066,580"/>
+    <graph id="n1_u3xq" name="gphPicture" xy="107,111" size="1066,580"/>
     <text id="n3_l7sp" name="n3" xy="102,72" size="84,28" fontSize="24" color="#333333" text="倒计时:"/>
     <text id="n4_l7sp" name="tfTime" xy="190,68" size="71,31" fontSize="24" color="#333333" align="center" vAlign="middle" autoSize="none" text="60"/>
     <list id="n5_l7sp" name="lstStart" xy="911,67" size="299,42" touchable="false" layout="row" selectionMode="none" overflow="scroll" colGap="15" defaultItem="ui://ce9jx9xtl7sp25" align="center" vAlign="middle">
@@ -23,5 +24,21 @@
       <Button icon="ui://ce9jx9xtnhj68"/>
     </component>
     <component id="n11_nuye" name="comEditorStage" src="nuyecyif9" fileName="com/ComEditorStage.xml" xy="103,111" size="1066,580"/>
+    <graph id="n21_jimd" name="gphEditCanvas" xy="0,0" size="1280,720" lineSize="0"/>
+    <image id="n13_jimd" name="n13" src="nhj61" fileName="img/img_jm_pt_ym.png" xy="107,651"/>
+    <text id="n14_jimd" name="tfPage" xy="113,657" size="78,31" fontSize="24" color="#333333" align="center" vAlign="middle" vars="true" autoSize="none" text="{curPage=1}/{pageNum = 20}"/>
+    <component id="n15_jimd" name="btnVoice" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="126,140" size="80,80" group="n18_jimd">
+      <gearDisplay controller="ctrlVoiceType" pages="1,2"/>
+      <gearIcon controller="ctrlVoiceType" pages="1,2" values="ui://ce9jx9xtnhj6k|ui://ce9jx9xtnhj6p" default=""/>
+    </component>
+    <image id="n16_jimd" name="n16" src="nhj616" fileName="img/img_jm_pt_msk.png" xy="247,147" size="789,66" group="n18_jimd"/>
+    <text id="n17_jimd" name="tfDescribe" xy="283,166" size="709,31" group="n18_jimd" fontSize="24" color="#ffffff" vAlign="middle" autoSize="none" text="这里是关卡描述"/>
+    <group id="n18_jimd" name="n18" xy="126,140" size="910,80" advanced="true"/>
+    <component id="n19_jimd" name="btnUndo" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1087,526" size="58,62">
+      <Button icon="ui://ce9jx9xtnhj6l"/>
+    </component>
+    <component id="n20_jimd" name="btnMerge" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1087,603" size="58,62">
+      <Button icon="ui://ce9jx9xtnhj6n"/>
+    </component>
   </displayList>
 </component>
