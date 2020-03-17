@@ -10,7 +10,7 @@
     <component id="cnpnf" name="CommonToast.xml" path="/com/" exported="true"/>
     <component id="hxf8g" name="CommonAlert.xml" path="/com/" exported="true"/>
     <image id="d30ci" name="img_common_prompt.png" path="/old/newImg/" exported="true" scale="9grid" scale9grid="216,0,31,26"/>
-    <component id="ar63j" name="CommonInputAlert.xml" path="/old/com/" exported="true"/>
+    <component id="ar63j" name="CommonInputAlert.xml" path="/com/" exported="true"/>
     <image id="q8x4j" name="img_line_on.png" path="/old/newImg/"/>
     <image id="q8x4k" name="bg_common_1.png" path="/old/newImg/"/>
     <image id="q8x4m" name="img_line_off.png" path="/old/newImg/"/>
@@ -651,6 +651,7 @@
     <image id="pve9cyijw" name="icon_cm_fdj_2.png" path="/img/" exported="true"/>
     <image id="pve9cyijx" name="icon_cm_fdj_1.png" path="/img/" exported="true"/>
     <image id="pve9cyijy" name="btn_cm_yellow_1.png" path="/img/" exported="true"/>
+    <component id="nci3cyijz" name="SaveLevelDataAlert.xml" path="/com/" exported="true"/>
   </resources>
   <publish name="common">
     <atlas name="默认" index="0"/>
