@@ -3,7 +3,7 @@
  * @desc 主进程消息处理类
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-17 01:39:18
+ * @Last Modified time: 2020-03-17 10:54:45
  */
 const config = require('./config.js');
 const { ipcMain } = require('electron');
@@ -59,7 +59,7 @@ async function onCheckUpdateComplete() {
 
     logger.log('config', `nativeMode:${config.nativeMode}`);
 
-    if (config.nativeMode === config.eNativeMode.createmap) {
+    if (config.nativeMode === config.eNativeMode.createMap) {
         startCreateMap();
         return;
     }
@@ -154,17 +154,25 @@ function onCreateGameServer(mode) {
 function sendMsgToClient(msgId, ...args) {
     // sendIpcMsg('SEND_MSG_TO_CLIENT', msgId, ...args)
 
-    config.mainWindow.webContents.executeJavaScript(
-        `if (window.frames && window.frames.length > 0) {
-            window.frames[0].postMessage({'key': 'nativeMsg', 'value': \'${[msgId, args]}\' }, '* ');
-            return;
+    let data = [msgId, args];
+    let content = JSON.stringify(data);
+    config.mainWindow.webContents.executeJavaScript(`
+        if(window.frames && window.frames.length > 0) {
+            window.frames[0].postMessage({'key':'nativeMsg', 'value':\'${content}\'},'*');
         }
+    `);
 
-        if (window) {
-            window.postMessage({'key': 'nativeMsg', 'value': \'${[msgId, args]}\' }, '* ');
-            return;
-        }`
-    );
+    // config.mainWindow.webContents.executeJavaScript(
+    //     `if (window.frames && window.frames.length > 0) {
+    //         window.frames[0].postMessage({'key': 'nativeMsg', 'value': \'${[msgId, args]}\' }, '* ');
+    //         return;
+    //     }
+
+    //     if (window) {
+    //         window.postMessage({'key': 'nativeMsg', 'value': \'${[msgId, args]}\' }, '* ');
+    //         return;
+    //     }`
+    // );
 }
 
 exports.sendIpcMsg = sendIpcMsg;

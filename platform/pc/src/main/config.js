@@ -119,7 +119,7 @@ const eNativeMode = {
     game: 1,    //c端游戏模式
     lesson: 2,  //b端上单节课程模式(入口不走平台)
     platform: 3, //b端平台上课模式(入口从平台进) 
-    createmap: 4, //c端创造地图模式
+    createMap: 4, //c端创造地图模式
 }
 
 /** 伪协议里url带的参数 */

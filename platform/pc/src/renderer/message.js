@@ -3,7 +3,7 @@
  * @desc 渲染进程消息处理文件
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-16 23:50:51
+ * @Last Modified time: 2020-03-17 10:57:26
  */
 import { Config } from './Config.js';
 import { ClientUpdate } from './update/ClientUpdate.js';
@@ -201,13 +201,16 @@ async function onStartCreateMap(queryValue) {
 
     let jumpHref = `${Config.rootPath}/package/client/index.html?${queryValue}`;
 
-    jumpHref = url + "&createMap=1";
+    // jumpHref = jumpHref + "&createMap=1";
     location.href = jumpHref;
     registerNativeMsg();
 }
 
 /** 开始游戏模式 */
 async function onStartNativeGame(queryObject) {
+    //清空gameArgs
+    Config.setGlobalConfigValue('gameArgs', "");
+
     setConfigData2LocalStorage();
 
     let queryValue = querystring.stringify(queryObject);
@@ -218,15 +221,20 @@ async function onStartNativeGame(queryObject) {
 
 /** 开始单个课程 */
 async function onStartNativeLesson() {
+    //清空gameArgs
+    Config.setGlobalConfigValue('gameArgs', "");
+
     setConfigData2LocalStorage();
 
     location.href = Config.bellcodeUrl;
-
     registerNativeMsg();
 }
 
 /** 开始平台进入 */
 async function onStartNativePlatform(queryObject) {
+    //清空gameArgs
+    Config.setGlobalConfigValue('gameArgs', "");
+
     setConfigData2LocalStorage();
 
     let queryValue = querystring.stringify(queryObject);

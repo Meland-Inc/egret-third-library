@@ -3,7 +3,7 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-16 23:39:29
+ * @Last Modified time: 2020-03-17 10:09:07
  */
 // Modules to control application life and create native browser window
 const { app, globalShortcut, BrowserWindow, Menu, shell, dialog } = require('electron')
@@ -35,11 +35,11 @@ async function initNative() {
   } else {
     //设置路由
     let lessonRouter = config.urlValue.replace(config.constPseudoProtocol, '');
-    config.lessonRouter = lessonRouter.slice(0, lessonRouter.indexOf("?"));
+    config.lessonRouter = lessonRouter.slice(0, lessonRouter.indexOf("?") - 1);
 
     //创造地图模式
     if (config.lessonRouter === config.eLessonRouter.createMap) {
-      config.nativeMode = config.eNativeMode.createmap;
+      config.nativeMode = config.eNativeMode.createMap;
     } else {
       config.nativeMode = config.eNativeMode.platform;
     }
