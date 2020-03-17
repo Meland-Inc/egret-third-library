@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="226,942">
   <displayList>
-    <image id="n5_l7sp" name="imgTitleBG" src="nhj6y" fileName="img/img_jm_fl.png" xy="0,0" size="226,84"/>
-    <text id="n6_l7sp" name="tfTitle" xy="50,26" size="125,31" fontSize="24" color="#333333" align="center" vAlign="middle" text="图片素材库"/>
-    <image id="n7_l7sp" name="imgTitleBG" src="nhj6y" fileName="img/img_jm_fl.png" xy="0,84" size="226,858">
+    <image id="n5_l7sp" name="imgTitleBG" src="nhj6y" fileName="img/img_jm_fl.png" xy="0,-1" size="226,84"/>
+    <text id="n6_l7sp" name="tfTitle" xy="50,26" size="125,28" fontSize="24" color="#333333" align="center" vAlign="middle" text="图片素材库"/>
+    <image id="n7_l7sp" name="imgTitleBG" src="nhj6y" fileName="img/img_jm_fl.png" xy="0,81" size="226,861">
       <relation target="" sidePair="bottomext-bottom"/>
     </image>
     <component id="n2_l7sp" name="btnAddImg" src="l7sp1t" fileName="btn/btnAddImg.xml" xy="20,101">
