@@ -3,7 +3,7 @@
  * @desc main用的工具类
  * @date 2020-02-18 11:43:24 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-17 18:44:50
+ * @Last Modified time: 2020-03-17 23:24:05
  */
 // const spawn = require("child_process").spawn;
 const exec = require("child_process").exec;
@@ -213,7 +213,7 @@ function getGlobalConfigValue(key) {
 /** 设置全局配置值 */
 function setGlobalConfigValue(key, value) {
     globalConfig[key] = value;
-    logger.log('globalConfig', `content ${globalConfig}`);
+    logger.log('globalConfig', `content`, globalConfig);
     fs.writeFileSync(config.globalConfigPath, JSON.stringify(globalConfig, null, 4), "utf-8");
     message.sendIpcMsg('UPDATE_GLOBAL_CONFIG', globalConfig);
 }

@@ -3,7 +3,7 @@
  * @desc 主进程消息处理类
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-17 18:43:02
+ * @Last Modified time: 2020-03-17 23:26:11
  */
 const config = require('./config.js');
 const { ipcMain } = require('electron');
@@ -64,7 +64,7 @@ function applyIpcMsg(msgId, ...args) {
 
 /** 更新全局配置 */
 function onUpdateGlobalConfig(globalConfig) {
-    config.globalConfig = globalConfig;
+    util.globalConfig = globalConfig;
 }
 
 /** 检查更新完毕 */
@@ -147,18 +147,18 @@ async function startNativePlatform() {
 function onMapTemplateEnter(gid, gameArgs) {
     logger.log('msg', `gid gameArgs`, gid, gameArgs);
     logger.log('msg', `globalConfig`, util.globalConfig);
-    util.setGlobalConfigValue('gid', gid);
-    util.setGlobalConfigValue('gameArgs', gameArgs);
+    util.writeServerCnfValue('gid', gid);
+    util.writeServerCnfValue('gameArgs', gameArgs);
 
-    server.createGameServer(config.eGameServerMode.mapTemplate);
+    server.createNativeServer(config.eGameServerMode.mapTemplate);
 }
 
 /** 收到地图模板房间游戏服务器 */
 function onMapTemplateRoomCreate(gid, gameArgs) {
-    util.setGlobalConfigValue('gid', gid);
-    util.setGlobalConfigValue('gameArgs', gameArgs);
+    util.writeServerCnfValue('gid', gid);
+    util.writeServerCnfValue('gameArgs', gameArgs);
 
-    server.createGameServer(config.eGameServerMode.mapTemplateRoom);
+    server.createNativeServer(config.eGameServerMode.mapTemplateRoom);
 }
 
 /** 发送消息到客户端 */

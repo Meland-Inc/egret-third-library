@@ -3,7 +3,7 @@
  * @desc 处理native服务器和游戏服务器的文件
  * @date 2020-02-18 11:42:29 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-16 22:47:48
+ * @Last Modified time: 2020-03-17 22:42:18
  */
 const http = require('http');
 const url = require('url');
@@ -17,11 +17,11 @@ let nativeServer;
 let gameServerProcess;
 
 async function init() {
-    await createNativeServer();
+    await createNativeServer(config.eGameServerMode.gameMap);
 }
 
 /** 创建native服务器 */
-async function createNativeServer() {
+async function createNativeServer(gameServerMode) {
     if (nativeServer) {
         logger.log('net', `关闭旧的native服务器`);
         config.gameServerInited = false;
@@ -37,7 +37,7 @@ async function createNativeServer() {
 
         await util.writeServerCnfValue('channel', config.channel);
         await util.writeServerCnfValue("nativePort", config.nativeServerPort + "");
-        await createGameServer(config.eGameServerMode.gameMap);
+        await createGameServer(gameServerMode);
     });
 
     nativeServer.on('request', (req, res) => {
@@ -178,5 +178,5 @@ async function closeGameServer() {
 }
 
 exports.init = init;
-exports.createGameServer = createGameServer;
+exports.createNativeServer = createNativeServer;
 exports.closeGameServer = closeGameServer;
