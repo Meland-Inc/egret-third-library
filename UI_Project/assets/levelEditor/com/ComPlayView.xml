@@ -5,13 +5,14 @@
     <loader id="n11_nuye" name="ladBG" xy="0,0" size="1280,720" url="ui://ce9jx9xtnhj614" fill="scaleFree">
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
+    <image id="n30_x3fw" name="n30" src="nhj611" fileName="img/img_jm_gjk_3.png" xy="107,111" size="1066,580"/>
     <image id="n12_nuye" name="imgBar" src="nhj615" fileName="img/img_jm_pt_dbl.png" xy="0,0" size="1280,56">
       <relation target="n11_nuye" sidePair="center-center,middle-middle"/>
     </image>
     <component id="n13_nuye" name="comEditorStage" src="nuyecyif9" fileName="com/ComEditorStage.xml" xy="107,111" size="1066,580">
       <relation target="n11_nuye" sidePair="center-center,middle-middle"/>
     </component>
-    <text id="n14_nuye" name="n14" xy="102,72" size="83,31" fontSize="24" color="#333333" text="倒计时:">
+    <text id="n14_nuye" name="n14" xy="102,72" size="84,28" fontSize="24" color="#333333" text="倒计时:">
       <relation target="n11_nuye" sidePair="left-left,top-top"/>
     </text>
     <text id="n15_nuye" name="tfTime" xy="190,68" size="71,31" fontSize="24" color="#333333" align="center" vAlign="middle" autoSize="none" text="60">
@@ -28,7 +29,8 @@
     <text id="n17_nuye" name="tfTitle" xy="27,14" size="194,31" fontSize="24" color="#333333" vAlign="middle" vars="true" autoSize="none" text="拼图关卡">
       <relation target="n12_nuye" sidePair="left-left,top-top"/>
     </text>
-    <text id="n18_nuye" name="tfPageInfo" xy="103,660" size="78,31" fontSize="24" color="#333333" align="center" vAlign="middle" vars="true" autoSize="none" text="{curPage=1}/{pageNum = 20}">
+    <image id="n29_x3fw" name="n29" src="nhj61" fileName="img/img_jm_pt_ym.png" xy="107,651"/>
+    <text id="n18_nuye" name="tfPageInfo" xy="113,657" size="78,31" fontSize="24" color="#333333" align="center" vAlign="middle" vars="true" autoSize="none" text="{curPage=1}/{pageNum = 20}">
       <relation target="n13_nuye" sidePair="left-left,bottom-bottom"/>
     </text>
     <component id="n23_nuye" name="btnVoice" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="126,140" size="80,80" group="n26_nuye">
@@ -43,7 +45,7 @@
       <relation target="n13_nuye" sidePair="right-right,bottom-bottom"/>
       <Button icon="ui://ce9jx9xtnhj6l"/>
     </component>
-    <component id="n28_nuye" name="btnWhat" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1087,603" size="58,62">
+    <component id="n28_nuye" name="btnMerge" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1087,603" size="58,62">
       <relation target="n13_nuye" sidePair="right-right,bottom-bottom"/>
       <Button icon="ui://ce9jx9xtnhj6n"/>
     </component>
