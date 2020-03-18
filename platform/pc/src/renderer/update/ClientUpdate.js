@@ -3,7 +3,7 @@
  * @desc 游戏客户端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-18 22:38:16
+ * @Last Modified time: 2020-03-19 00:20:44
  */
 
 import * as loading from '../loading.js';
@@ -47,11 +47,8 @@ export class ClientUpdate {
     /** 检查是否最新版本 */
     async checkLatestVersion() {
         //从客户端index文件中获取当前游戏版本号
-        let indexContent = await fs.readFileSync(`${Config.clientPackagePath}` + "index.html", "utf-8");
-        let patchVersion = indexContent.match(new RegExp(`let patchVersion = "([0-9]+)";`));
-        this.curVersion = this.startVersion = +patchVersion;
-
         let globalConfig = Config.globalConfig;
+        this.curVersion = this.startVersion = +globalConfig.gameVersion;
         this.patchUrl = `${Config.protocol}//${globalConfig.patchUrl}`;
         let policyUrl = globalConfig.policyUrl;
         this.policyHost = policyUrl.split("/")[0];
