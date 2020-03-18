@@ -28,6 +28,16 @@
   WriteRegStr HKCR "bellplanet\shell\open\command" "" '"$INSTDIR\bellplanet.exe" "%1"'
 !macroend
 
+!macro customUnInit
+  !system "echo '' > ${BUILD_RESOURCES_DIR}/customInit"
+!macroend
+
+!macro customUnInstall
+  !system "echo '' > ${BUILD_RESOURCES_DIR}/customUnInstall"
+  DeleteRegKey HKCR "bellplanet"
+  DeleteRegKey HKCR "bellplanet\shell\open\command"
+!macroend
+
 !macro customInstallMode
   # set $isForceMachineInstall or $isForceCurrentInstall 
   # to enforce one or the other modes.
