@@ -289,8 +289,14 @@ export default {
       try {
         let promiseList = [];
         promiseList.push(mdPublish.updateServerPackage);
-        promiseList.push(ModelMgr.ftpModel.initQiniuOption);
+        promiseList.push(
+          ModelMgr.ftpModel.initQiniuOption.bind(ModelMgr.ftpModel)
+        );
         promiseList.push(mdPublish.mergeServerPackage);
+        promiseList.push(
+          ModelMgr.ftpModel.initQiniuOption.bind(ModelMgr.ftpModel)
+        );
+        promiseList.push(mdPublish.uploadClientPackage);
 
         await Global.executePromiseList(promiseList);
 
