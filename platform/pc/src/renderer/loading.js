@@ -3,17 +3,18 @@
  * @desc 处理loading逻辑文件
  * @date 2020-02-13 14:55:57 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-02-26 21:59:35
+ * @Last Modified time: 2020-03-18 22:06:14
  */
-let loadingUi = document.getElementById('loadingUi');
+let loadingGroup = document.getElementById('loadingGroup');
+let loadingProgress = document.getElementById('loadingProgress');
 export function showLoading() {
-    loadingUi.hidden = false;
+    loadingGroup.hidden = false;
 }
 
 export function hideLoading() {
-    loadingUi.hidden = true;
+    loadingGroup.hidden = true;
 }
 
 export function setLoadingProgress(value) {
-    loadingUi.value = value;
+    loadingProgress.value = value;
 }

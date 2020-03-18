@@ -7,16 +7,30 @@
 
 <body>
   <div id='logoImg'></div>
-  <progress id="loadingUi" value="0" max="100" hidden="true"></progress>
+  <div id="loadingGroup" hidden="true">
+    <label id="loadingTip">正在更新中</label>
+    <progress id="loadingProgress" value="0" max="100"></progress>
+  </div>
 
   <script type="module" src="./renderer.js"></script>
 </body>
 
 <style>
-  #loadingUi {
-    top: 45%;
-    left: 45%;
+  #loadingGroup {
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     position: absolute;
+  }
+
+  #loadingTip {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  #loadingProgress {
+    display: block;
   }
 
   #logoImg {
