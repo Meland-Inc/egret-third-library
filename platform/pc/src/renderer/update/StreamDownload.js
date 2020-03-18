@@ -3,7 +3,7 @@
  * @desc 下载类
  * @date 2020-02-25 10:50:36 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-03 20:56:43
+ * @Last Modified time: 2020-03-18 09:52:19
  */
 import * as logger from '../logger.js';
 const fs = require('fs');
@@ -82,8 +82,8 @@ export class StreamDownload {
                 this.downloadCallback = null;
             });
 
-            let filepath = path.join(saveDir, filename);
-            this.fileStream = fs.createWriteStream(filepath);
+            let filePath = path.join(saveDir, filename);
+            this.fileStream = fs.createWriteStream(filePath);
             req.pipe(this.fileStream);
 
         } catch (error) {

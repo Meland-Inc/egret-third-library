@@ -3,7 +3,7 @@
  * @desc 游戏客户端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-16 15:59:10
+ * @Last Modified time: 2020-03-18 09:51:33
  */
 
 import * as loading from '../loading.js';
@@ -57,7 +57,7 @@ export class ClientUpdate {
         if (policyNum === null) {
             let content = `获取策略版本号错误!, environName:${Config.environName}`;
             logger.error(`renderer`, content);
-            // alert(content);
+            alert(content);
             return true;
         }
 

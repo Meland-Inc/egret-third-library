@@ -3,7 +3,7 @@
  * @desc 处理native服务器和游戏服务器的文件
  * @date 2020-02-18 11:42:29 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-17 22:42:18
+ * @Last Modified time: 2020-03-18 09:49:03
  */
 const http = require('http');
 const url = require('url');
@@ -17,6 +17,7 @@ let nativeServer;
 let gameServerProcess;
 
 async function init() {
+    util.writeServerCnfValue('gameArgs', "");
     await createNativeServer(config.eGameServerMode.gameMap);
 }
 
@@ -78,31 +79,6 @@ async function createNativeServer(gameServerMode) {
                 } else {
                     //reserve
                 }
-
-                // if (config.mainWindow && config.mainWindow.webContents) {
-                //     logger.log('net', 'native上课客户端登录本地游戏服务器', gameServer);
-                //     //上课渠道
-                //     if (config.channel === config.constChannelLesson) {
-                //         config.mainWindow.webContents.executeJavaScript(`
-                //             if(window.frames && window.frames.length > 0) {
-                //                 console.log('frames-->postMessage nativeSignIn');
-                //                 window.frames[0].postMessage({'key':'nativeSignIn', 'value':\'${gameServer}\'},'*');
-                //             } else if(window.nativeSignIn) {
-                //                 console.log('nativeSignIn');
-                //                 window.nativeSignIn(\'${gameServer}\');
-                //             }
-                //         `);
-                //     }
-                //     //游戏
-                //     else {
-                //         logger.log('net', 'native游戏客户端登录本地游戏服务器', gameServer);
-                //         config.mainWindow.webContents.executeJavaScript(`
-                //             if(window.nativeSignIn){
-                //                 window.nativeSignIn(\'${gameServer}\');
-                //             }
-                //         `);
-                //     }
-                // }
             }
 
             //上课渠道 并且是老师端,要上报本地ip

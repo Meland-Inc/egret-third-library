@@ -3,7 +3,7 @@
  * @desc 渲染进程消息处理文件
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-17 18:44:00
+ * @Last Modified time: 2020-03-18 09:46:00
  */
 import { Config } from './Config.js';
 import { ClientUpdate } from './update/ClientUpdate.js';
@@ -224,9 +224,6 @@ async function onStartCreateMap(queryValue) {
 
 /** 开始游戏模式 */
 async function onStartNativeGame(queryObject) {
-    //清空gameArgs
-    Config.setGlobalConfigValue('gameArgs', "");
-
     setConfigData2LocalStorage();
 
     let queryValue = querystring.stringify(queryObject);
@@ -237,9 +234,6 @@ async function onStartNativeGame(queryObject) {
 
 /** 从官网地址进入 */
 async function onStartNativeWebsite() {
-    //清空gameArgs
-    Config.setGlobalConfigValue('gameArgs', "");
-
     setConfigData2LocalStorage();
 
     location.href = Config.bellcodeUrl;
@@ -248,9 +242,6 @@ async function onStartNativeWebsite() {
 
 /** 开始平台进入 */
 async function onStartNativePlatform(queryObject) {
-    //清空gameArgs
-    Config.setGlobalConfigValue('gameArgs', "");
-
     setConfigData2LocalStorage();
 
     let queryValue = querystring.stringify(queryObject);
@@ -303,36 +294,3 @@ export function sendMsgToClient(msgId, ...args) {
         return;
     }
 }
-
-
-// /** 应用客户端消息 */
-// function applyClientMsg(msgId, ...args) {
-//     switch (msgId) {
-//         //进入地图模板
-//         case "MAP_TEMPLATE_ENTER":
-//             onMapTemplateEnter(...args);
-//             break;
-//         //创建地图模板房间
-//         case "MAP_TEMPLATE_ROOM_CREATE":
-//             onMapTemplateRoomCreate(...args);
-//             break;
-//         default:
-//             break;
-//     }
-// }
-
-// /** 当前进入地图模板 */
-// function onMapTemplateEnter(gid, gameArgs) {
-//     Config.setGlobalConfigValue('gid', gid);
-//     Config.setGlobalConfigValue('gameArgs', gameArgs);
-
-//     sendIpcMsg('CREATE_MAP_TEMPLATE_SERVER');
-// }
-
-// /** 当创建地图模板房间 */
-// function onMapTemplateRoomCreate(gid, gameArgs) {
-//     Config.setGlobalConfigValue('gid', gid);
-//     Config.setGlobalConfigValue('gameArgs', gameArgs);
-
-//     sendIpcMsg('CREATE_MAP_TEMPLATE_ROOM_SERVER');
-// }

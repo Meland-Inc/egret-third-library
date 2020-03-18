@@ -3,7 +3,7 @@
  * @desc 平台相关的逻辑
  * @date 2020-02-19 11:22:49
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-16 17:06:23
+ * @Last Modified time: 2020-03-18 09:50:01
  */
 const querystring = require('querystring');
 const config = require('./config.js');
@@ -21,8 +21,6 @@ async function init(queryValue) {
 
         //解析参数
         let argsObj = querystring.parse(argsValue);
-        //原始服务器地址
-        // let originGameServer;
         for (const key in argsObj) {
             const value = argsObj[key];
 
@@ -93,10 +91,6 @@ async function init(queryValue) {
             }
             queryValue[key] = `${value}`;
         }
-
-        // if(!queryValue['gameServer'] && originGameServer){
-        //     originGameServer = queryValue['gameServer'];
-        // }
         login(queryValue, resolve, reject);
     });
 

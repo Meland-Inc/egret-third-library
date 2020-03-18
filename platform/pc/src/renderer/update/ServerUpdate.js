@@ -3,7 +3,7 @@
  * @desc 游戏服务器端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-16 15:59:00
+ * @Last Modified time: 2020-03-18 09:51:52
  */
 
 import * as loading from '../loading.js';
@@ -14,7 +14,6 @@ import { StreamDownload } from './StreamDownload.js';
 
 const fs = require('fs');
 const admzip = require("adm-zip");
-const http = require("http");
 
 export class ServerUpdate {
     /** 服务端包存放目录 */
@@ -112,9 +111,6 @@ export class ServerUpdate {
                 logger.error(`update`, content, error);
 
                 this.downloadPackage();
-                // alert(content);
-                // this.executeUpdateCallback();
-
             }
             fs.unlink(this.serverPackagePath + filename, (err) => {
                 if (err) {

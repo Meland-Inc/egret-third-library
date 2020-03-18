@@ -3,7 +3,7 @@
  * @desc 主进程消息处理类
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-17 23:26:11
+ * @Last Modified time: 2020-03-18 09:47:27
  */
 const config = require('./config.js');
 const { ipcMain } = require('electron');
@@ -145,8 +145,6 @@ async function startNativePlatform() {
 
 /** 收到地图模板游戏服务器 */
 function onMapTemplateEnter(gid, gameArgs) {
-    logger.log('msg', `gid gameArgs`, gid, gameArgs);
-    logger.log('msg', `globalConfig`, util.globalConfig);
     util.writeServerCnfValue('gid', gid);
     util.writeServerCnfValue('gameArgs', gameArgs);
 
@@ -163,8 +161,6 @@ function onMapTemplateRoomCreate(gid, gameArgs) {
 
 /** 发送消息到客户端 */
 function sendMsgToClient(msgId, ...args) {
-    // sendIpcMsg('SEND_MSG_TO_CLIENT', msgId, ...args)
-
     let data = [msgId, args];
     let content = JSON.stringify(data);
     config.mainWindow.webContents.executeJavaScript(`

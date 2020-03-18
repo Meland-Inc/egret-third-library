@@ -3,7 +3,7 @@
  * @desc main用的工具类
  * @date 2020-02-18 11:43:24 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-17 23:24:05
+ * @Last Modified time: 2020-03-18 09:51:09
  */
 // const spawn = require("child_process").spawn;
 const exec = require("child_process").exec;
@@ -114,6 +114,7 @@ function requestGetHttp(host, port, path, data, headers, successFunc, errorFunc)
             if (errorFunc) {
                 errorFunc();
             }
+            logger.error('net', `get方式 http返回错误`, e)
         });
     });
 
@@ -174,6 +175,7 @@ function requestPostHttp(host, port, path, data, headers, successFunc, errorFunc
             if (errorFunc) {
                 errorFunc();
             }
+            logger.error('net', `post方式 http返回错误`, e)
         });
     });
 
@@ -191,10 +193,10 @@ function requestPostHttp(host, port, path, data, headers, successFunc, errorFunc
 /** 初始化native配置 */
 async function init() {
     logger.log('net', `初始化native本地服务器配置`);
-    let nativeCnfContent = await fs.readFileSync(config.nativeCnfPath, "utf-8");
+    let nativeCnfContent = fs.readFileSync(config.nativeCnfPath, "utf-8");
     nativeCnf = JSON.parse(nativeCnfContent);
 
-    let globalConfigContent = await fs.readFileSync(config.globalConfigPath, "utf-8");
+    let globalConfigContent = fs.readFileSync(config.globalConfigPath, "utf-8");
     globalConfig = JSON.parse(globalConfigContent);
 }
 
@@ -202,7 +204,7 @@ async function init() {
 async function writeServerCnfValue(key, value) {
     nativeCnf[key] = value;
     let content = JSON.stringify(nativeCnf, null, 4);
-    await fs.writeFileSync(config.nativeCnfPath, content);
+    fs.writeFileSync(config.nativeCnfPath, content);
 }
 
 /** 获取全局配置值 */

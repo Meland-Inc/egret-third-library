@@ -3,7 +3,7 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-17 18:31:10
+ * @Last Modified time: 2020-03-18 09:49:39
  */
 // Modules to control application life and create native browser window
 const { app, globalShortcut, BrowserWindow, Menu, shell, dialog } = require('electron')
@@ -14,8 +14,6 @@ const process = require('process');
 const logger = require('./logger.js');
 const config = require('./config.js');
 const server = require('./server.js');
-// const platform = require('./platform.js');
-// const util = require('./util.js');
 const message = require('./message.js');
 
 let mainWindow
@@ -66,7 +64,6 @@ async function createWindow() {
   // mainWindow.isEnabled
 
   let userAgent = mainWindow.webContents.userAgent + " BellCodeIpadWebView";
-  // mainWindow.webContents.setUserAgent(userAgent);
   mainWindow.webContents.userAgent = userAgent;
 
   /** 设置url参数 */

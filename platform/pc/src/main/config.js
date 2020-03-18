@@ -3,12 +3,8 @@
  * @desc main用的配置
  * @date 2020-02-13 14:54:41 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-17 18:38:36
+ * @Last Modified time: 2020-03-18 09:49:28
  */
-const fs = require('fs');
-const message = require('./message.js');
-const logger = require('./logger.js');
-
 /** 本机IP */
 const localIp = "127.0.0.1";
 
