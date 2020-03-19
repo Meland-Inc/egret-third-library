@@ -650,7 +650,7 @@ export async function uploadNativeDmg() {
         let dmgTargetPath = `${dmgTargetDir}/${dmgTargetName}`;
 
         console.log("比较mac包");
-        let equal = await fsExc.mergeFileByMd5(dmgPath, dmgTargetDir);
+        let equal = await fsExc.mergeFileByMd5(dmgPath, dmgTargetPath);
         if (equal) {
             console.log("mac包相等");
             resolve();
