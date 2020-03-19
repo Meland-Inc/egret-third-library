@@ -3,11 +3,11 @@
  * @desc 处理native服务器和游戏服务器的文件
  * @date 2020-02-18 11:42:29 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-19 15:55:45
+ * @Last Modified time: 2020-03-19 23:13:28
  */
 const http = require('http');
 const url = require('url');
-const config = require('./config.js');
+const Config = require('./config.js').Config;
 const util = require('./util.js');
 const logger = require('./logger.js');
 const platform = require('./platform.js');
@@ -18,14 +18,14 @@ let gameServerProcess;
 
 async function init() {
     util.writeServerCnfValue('gameArgs', "");
-    await createNativeServer(config.eGameServerMode.gameMap);
+    await createNativeServer(Config.eGameServerMode.gameMap);
 }
 
 /** 创建native服务器 */
 async function createNativeServer(gameServerMode) {
     if (nativeServer) {
         logger.log('net', `关闭旧的native服务器`);
-        config.gameServerInited = false;
+        Config.setGameServerInited(false);
         await closeNativeServer();
     }
 
@@ -33,11 +33,11 @@ async function createNativeServer(gameServerMode) {
     nativeServer = http.createServer();
     nativeServer.listen(0);
     nativeServer.on('listening', async () => {
-        config.nativeServerPort = nativeServer.address().port;
-        logger.log('net', '创建native服务器成功,端口号', config.nativeServerPort);
+        Config.setNativeServerPort(nativeServer.address().port);
+        logger.log('net', '创建native服务器成功,端口号', Config.nativeServerPort);
 
-        await util.writeServerCnfValue('channel', config.channel);
-        await util.writeServerCnfValue("nativePort", config.nativeServerPort + "");
+        await util.writeServerCnfValue('channel', Config.channel);
+        await util.writeServerCnfValue("nativePort", Config.nativeServerPort + "");
         await createGameServer(gameServerMode);
     });
 
@@ -47,34 +47,34 @@ async function createNativeServer(gameServerMode) {
         let pathname = urlObj.pathname;
         logger.log('net', `收到游戏服务器消息 pathname:${pathname} args`, args);
         if (pathname === "/serverState") {
-            if (config.gameServerInited) {
+            if (Config.gameServerInited) {
                 logger.log('net', '判断游戏服务器已经启动了,不用操作');
                 res.end();
                 return;
             }
-            config.gameServerInited = true;
+            Config.setGameServerInited(true);
 
             logger.log('net', '收到游戏服务器启动完毕消息');
-            config.gameServerLocalIp = args.localIp;
-            config.gameServerLocalPort = args.localPort;
-            config.gameServerNatUrl = args.natUrl;
-            config.gameServerNatPort = args.natPort;
-            logger.log('net', `gameServer --> localIp:${config.gameServerLocalIp} localPort:${config.gameServerLocalPort} natUrl:${config.gameServerNatUrl} natPort:${config.gameServerNatPort}`);
+            Config.setGameServerLocalIp(args.localIp);
+            Config.setGameServerLocalPort(args.localPort);
+            Config.setGameServerNatUrl(args.natUrl);
+            Config.setGameServerNatPort(args.natPort);
+            logger.log('net', `gameServer --> localIp:${Config.gameServerLocalIp} localPort:${Config.gameServerLocalPort} natUrl:${Config.gameServerNatUrl} natPort:${Config.gameServerNatPort}`);
 
-            if (config.gameServerLocalIp && config.gameServerLocalPort) {
-                let gameServer = `${config.gameServerLocalIp}:${config.gameServerLocalPort}`;
+            if (Config.gameServerLocalIp && Config.gameServerLocalPort) {
+                let gameServer = `${Config.gameServerLocalIp}:${Config.gameServerLocalPort}`;
                 logger.log('net', 'native上课客户端登录本地游戏服务器', gameServer);
 
                 //游戏地图
-                if (config.gameServerMode === config.eGameServerMode.gameMap) {
+                if (Config.gameServerMode === Config.eGameServerMode.gameMap) {
                     message.sendMsgToClient('nativeSignIn', gameServer);
                 }
                 //模板地图
-                else if (config.gameServerMode === config.eGameServerMode.mapTemplate) {
+                else if (Config.gameServerMode === Config.eGameServerMode.mapTemplate) {
                     message.sendMsgToClient('enterMapTemplate', gameServer);
                 }
                 //模板地图房间
-                else if (config.gameServerMode === config.eGameServerMode.mapTemplateRoom) {
+                else if (Config.gameServerMode === Config.eGameServerMode.mapTemplateRoom) {
                     message.sendMsgToClient('enterMapTemplateRoom', gameServer);
                 } else {
                     //reserve
@@ -82,13 +82,13 @@ async function createNativeServer(gameServerMode) {
             }
 
             //上课渠道 并且是老师端,要上报本地ip
-            if (config.channel === config.constChannelLesson && config.userType != config.eUserType.student) {
+            if (Config.channel === Config.constChannelLesson && Config.userType != Config.eUserType.student) {
                 platform.teacherUploadIp();
             }
 
             //关闭服务器推送
             let path = `/native?controlType=receiveStart`;
-            util.requestGetHttp(config.gameServerLocalIp, config.gameServerLocalPort, path, null, null, () => {
+            util.requestGetHttp(Config.gameServerLocalIp, Config.gameServerLocalPort, path, null, null, () => {
                 logger.log('net', `关闭游戏服务器启动推送成功`)
             }, () => {
                 logger.error('net', `关闭游戏服务器启动推送错误`)
@@ -134,9 +134,9 @@ async function createGameServer(mode) {
     }
 
     logger.log('net', '创建游戏服务器');
-    config.gameServerMode = mode;
+    Config.setGameServerMode(mode);
     let cmd = `game`;
-    gameServerProcess = await util.runCmd(cmd, `${config.rootPath}/package/server/`, "创建游戏服务器成功", "创建游戏服务器失败");
+    gameServerProcess = await util.runCmd(cmd, `${Config.rootPath}/package/server/`, "创建游戏服务器成功", "创建游戏服务器失败");
 }
 
 /** 关闭游戏服务器 */
@@ -147,7 +147,7 @@ async function closeGameServer() {
             return;
         }
 
-        if (!config.gameServerInited) {
+        if (!Config.gameServerInited) {
             let cmdStr = "taskkill /im game.exe /f";
             util.runCmd(cmdStr, null, `关闭游戏服务器成功`, "关闭游戏服务器错误");
             gameServerProcess = null;
@@ -155,7 +155,7 @@ async function closeGameServer() {
         }
 
         let path = `/native?controlType=closeServer`
-        util.requestGetHttp(config.gameServerLocalIp, config.gameServerLocalPort, path, null, null, () => {
+        util.requestGetHttp(Config.gameServerLocalIp, Config.gameServerLocalPort, path, null, null, () => {
             logger.log('net', `关闭游戏服务器成功`)
             gameServerProcess = null;
             resolve();

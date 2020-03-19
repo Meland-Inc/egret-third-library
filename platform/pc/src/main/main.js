@@ -3,7 +3,7 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-19 16:00:48
+ * @Last Modified time: 2020-03-19 22:55:25
  */
 // Modules to control application life and create native browser window
 const { app, globalShortcut, BrowserWindow, Menu, shell, dialog } = require('electron')
@@ -11,7 +11,7 @@ const fs = require('fs');
 const process = require('process');
 
 const logger = require('./logger.js');
-const config = require('./config.js');
+const Config = require('./config.js').Config;
 const server = require('./server.js');
 const message = require('./message.js');
 
@@ -26,31 +26,32 @@ async function initNative() {
   //平台学生端端测试参数
   // config.urlValue = `bellplanet://student?temporary_token=AWRl2okDEQ:fYHQv&class_id=18744&package_id=278&lesson_id=960&act_id=9999&bell_origin=demoapi.wkcoding.com&local_network=127.0.0.1:8080&internet_network=ofga364021.codingmonkey.com.cn:80`;
 
-  logger.log('net', `urlValue: ${config.urlValue}`);
-  if (config.urlValue.indexOf(config.constPseudoProtocol) === -1) {
-    config.nativeMode = config.eNativeMode.website;
+  logger.log('net', `urlValue: ${Config.urlValue}`);
+  if (Config.urlValue.indexOf(Config.constPseudoProtocol) === -1) {
+    Config.setNativeMode(Config.eNativeMode.website);
   } else {
     //设置路由
-    let lessonRouter = config.urlValue.replace(config.constPseudoProtocol, '');
-    config.lessonRouter = lessonRouter.slice(0, lessonRouter.indexOf("?") - 1);
+    let lessonRouter = Config.urlValue.replace(Config.constPseudoProtocol, '');
+    lessonRouter = lessonRouter.slice(0, lessonRouter.indexOf("?") - 1);
+    Config.setLessonRouter(lessonRouter);
 
     //创造地图模式
-    if (config.lessonRouter === config.eLessonRouter.createMap) {
-      config.nativeMode = config.eNativeMode.createMap;
-    } else if (config.lessonRouter === config.eLessonRouter.banner) {
-      config.nativeMode = config.eNativeMode.banner;
+    if (Config.lessonRouter === Config.eLessonRouter.createMap) {
+      Config.setNativeMode(Config.eNativeMode.createMap);
+    } else if (Config.lessonRouter === Config.eLessonRouter.banner) {
+      Config.setNativeMode(Config.eNativeMode.banner);
     } else {
-      config.nativeMode = config.eNativeMode.platform;
+      Config.setNativeMode(Config.eNativeMode.platform);
     }
   }
-  await mainWindow.loadFile(`${config.rootPath}/src/renderer/renderer.html`);
+  await mainWindow.loadFile(`${Config.rootPath}/src/renderer/renderer.html`);
 
-  logger.log('net', `config.urlValue`, config.urlValue);
+  logger.log('net', `config.urlValue`, Config.urlValue);
 }
 
 //创建游戏浏览窗口
 async function createWindow() {
-  config.mainWindow = mainWindow = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     width: 1600,
     height: 900,
     webPreferences: {
@@ -59,27 +60,28 @@ async function createWindow() {
       webSecurity: false
     }
   });
+  Config.setMainWindow(mainWindow);
 
   // mainWindow.isEnabled
 
   //判断创建文件加
-  if (!fs.existsSync(`${config.rootPath}/package`)) {
-    fs.mkdirSync(`${config.rootPath}/package`)
+  if (!fs.existsSync(`${Config.rootPath}/package`)) {
+    fs.mkdirSync(`${Config.rootPath}/package`)
   }
 
-  if (!fs.existsSync(`${config.rootPath}/package/client`)) {
-    fs.mkdirSync(`${config.rootPath}/package/client`)
+  if (!fs.existsSync(`${Config.rootPath}/package/client`)) {
+    fs.mkdirSync(`${Config.rootPath}/package/client`)
   }
 
-  if (!fs.existsSync(`${config.rootPath}/package/server`)) {
-    fs.mkdirSync(`${config.rootPath}/package/server`)
+  if (!fs.existsSync(`${Config.rootPath}/package/server`)) {
+    fs.mkdirSync(`${Config.rootPath}/package/server`)
   }
 
   let userAgent = mainWindow.webContents.userAgent + " BellCodeIpadWebView BellplanetNative";
   mainWindow.webContents.userAgent = userAgent;
 
   /** 设置url参数 */
-  config.urlValue = process.argv[process.argv.length - 1];
+  Config.setUrlValue(process.argv[process.argv.length - 1]);
 
   /** 初始化消息处理类 */
   message.init();
@@ -125,7 +127,8 @@ async function createWindow() {
     // Dereference the window object, usually you would store windows
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
-    config.mainWindow = mainWindow = null;
+    mainWindow = null;
+    Config.setMainWindow(null);
     await server.closeGameServer();
   })
 
@@ -177,7 +180,7 @@ app.on('second-instance', async (event, argv, workingDirectory) => {
     // }
 
     /** 设置url参数 */
-    config.urlValue = argv[argv.length - 1];
+    Config.setUrlValue(argv[argv.length - 1]);
     initNative();
   }
 });
@@ -271,7 +274,7 @@ let template = [
       },
       {
         label: '下载服务器日志',
-        click: saveProccessLog
+        click: saveProcessLog
       },
       {
         label: '关于',
@@ -284,13 +287,13 @@ let template = [
 ]
 
 //保存日志文件方法
-async function saveProccessLog() {
-  let path = await dialog.showSaveDialogSync(
+async function saveProcessLog() {
+  let path = dialog.showSaveDialogSync(
     // mainWindow,
     {
       title: `后台进程日志另存为`,
       filters: [{ name: "process.log", extensions: ["log"] }]
     });
-  let content = await fs.readFileSync(config.processLogPath, 'utf-8');
-  await fs.writeFileSync(path, content, 'utf-8');
+  let content = fs.readFileSync(Config.processLogPath, 'utf-8');
+  fs.writeFileSync(path, content, 'utf-8');
 }

@@ -3,10 +3,11 @@
  * @desc 主进程消息处理类
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-19 15:04:11
+ * @Last Modified time: 2020-03-20 00:49:48
  */
-const config = require('./config.js');
+const Config = require('./config.js').Config;
 const { ipcMain } = require('electron');
+const querystring = require('querystring');
 const logger = require('./logger.js');
 const platform = require('./platform.js');
 const server = require('./server.js');
@@ -22,18 +23,18 @@ let msgMap = {
 
 /** 发送主进程消息 */
 function sendIpcMsg(msgId, ...args) {
-    if (!config.mainWindow) {
+    if (!Config.mainWindow) {
         logger.error('main', `发送主进程消息失败:${msgId} config.mainWindow不存在 args`, ...args);
         return;
     }
 
-    if (!config.mainWindow.webContents) {
+    if (!Config.mainWindow.webContents) {
         logger.error('main', `发送主进程消息失败:${msgId} config.mainWindow.webContents不存在 args`, ...args);
         return;
     }
 
     logger.log('main', `发送主进程消息:${msgId} args`, ...args);
-    config.mainWindow.webContents.send('MAIN_PROCESS_MESSAGE', msgId, ...args);
+    Config.mainWindow.webContents.send('MAIN_PROCESS_MESSAGE', msgId, ...args);
 }
 
 /** 初始化 */
@@ -71,29 +72,29 @@ function onUpdateGlobalConfig(globalConfig) {
 async function onCheckUpdateComplete() {
     await util.init();
 
-    logger.log('config', `nativeMode:${config.nativeMode}`);
+    logger.log('config', `nativeMode:${Config.nativeMode}`);
 
-    if (config.nativeMode === config.eNativeMode.banner) {
+    if (Config.nativeMode === Config.eNativeMode.banner) {
         await startBanner();
         return;
     }
 
-    if (config.nativeMode === config.eNativeMode.createMap) {
+    if (Config.nativeMode === Config.eNativeMode.createMap) {
         await startCreateMap();
         return;
     }
 
-    if (config.nativeMode === config.eNativeMode.game) {
+    if (Config.nativeMode === Config.eNativeMode.game) {
         await startNativeGame();
         return
     }
 
-    if (config.nativeMode === config.eNativeMode.website) {
+    if (Config.nativeMode === Config.eNativeMode.website) {
         await startNativeWebsite();
         return;
     }
 
-    if (config.nativeMode === config.eNativeMode.platform) {
+    if (Config.nativeMode === Config.eNativeMode.platform) {
         await startNativePlatform();
         return;
     }
@@ -101,16 +102,22 @@ async function onCheckUpdateComplete() {
 
 /** 从banner模式进入 */
 async function startBanner() {
-    let queryValue = config.urlValue.slice(config.urlValue.indexOf("?") + 1);
-    queryValue += `&nativeMode=${config.eNativeMode.banner}`;
+    let queryValue = Config.urlValue.slice(Config.urlValue.indexOf("?") + 1);
+    queryValue += `&nativeMode=${Config.eNativeMode.banner}`;
     logger.log('update', `从banner模式进入`);
     sendIpcMsg('START_NATIVE_CLIENT', queryValue);
 }
 
 /** 从创造地图模式进入 */
 async function startCreateMap() {
-    let queryValue = config.urlValue.slice(config.urlValue.indexOf("?") + 1);
-    queryValue += `&nativeMode=${config.eNativeMode.createMap}`;
+    //平台初始化
+    let queryObject = await platform.init();
+    //初始化参数
+    // Object.assign(queryObject, platform.queryObject);
+    // queryObject['fakeUserType'] = config.userType;
+    queryObject['nativeMode'] = Config.eNativeMode.createMap;
+    let queryValue = querystring.stringify(queryObject);
+
     logger.log('update', `从创造地图模式进入`);
     sendIpcMsg('START_NATIVE_CLIENT', queryValue);
 }
@@ -120,7 +127,7 @@ async function startNativeGame() {
     logger.log('update', `从游戏模式进入`);
 
     //初始化参数
-    let queryObject = { fakeGameMode: "lessons", nativeMode: config.eNativeMode.game };
+    let queryObject = { fakeGameMode: "lessons", nativeMode: Config.eNativeMode.game };
 
     //本地服务器初始化
     await server.init();
@@ -132,6 +139,8 @@ async function startNativeGame() {
 
 /** 官网地址进入 */
 async function startNativeWebsite() {
+    logger.log('update', `从官网地址进入`);
+
     sendIpcMsg('START_NATIVE_WEBSITE');
 }
 
@@ -139,23 +148,24 @@ async function startNativeWebsite() {
 async function startNativePlatform() {
     logger.log('update', `从平台进入`);
 
-    //初始化参数
-    let queryObject = {};
     //平台初始化
-    await platform.init(queryObject);
-    queryObject['fakeUserType'] = config.userType;
-    queryObject['nativeMode'] = config.eNativeMode.platform;
+    let queryObject = await platform.init();
+    //初始化参数
+    // Object.assign(queryObject, platform.queryObject);
+    Config.setChannel(Config.constChannelLesson);
+    queryObject['gameChannel'] = Config.constChannelLesson;
+    queryObject['fakeUserType'] = Config.userType;
+    queryObject['nativeMode'] = Config.eNativeMode.platform;
 
-    logger.log(`test`, `config.userType`, config.userType);
+    logger.log(`test`, `queryObject`, queryObject);
 
     //非学生端 或者单人单服务器 本地服务器初始化
-    if (config.userType != config.eUserType.student || config.standAlone) {
+    if (Config.userType != Config.eUserType.student || Config.standAlone) {
         server.init();
     }
 
     logger.log(`test`, `queryObject`, queryObject);
 
-    // mainWindow.loadURL("http://www.bellcode.com");
     sendIpcMsg('START_NATIVE_PLATFORM', queryObject);
 }
 
@@ -164,7 +174,7 @@ function onMapTemplateEnter(gid, gameArgs) {
     util.writeServerCnfValue('gid', gid);
     util.writeServerCnfValue('gameArgs', gameArgs);
 
-    server.createNativeServer(config.eGameServerMode.mapTemplate);
+    server.createNativeServer(Config.eGameServerMode.mapTemplate);
 }
 
 /** 收到地图模板房间游戏服务器 */
@@ -172,14 +182,14 @@ function onMapTemplateRoomCreate(gid, gameArgs) {
     util.writeServerCnfValue('gid', gid);
     util.writeServerCnfValue('gameArgs', gameArgs);
 
-    server.createNativeServer(config.eGameServerMode.mapTemplateRoom);
+    server.createNativeServer(Config.eGameServerMode.mapTemplateRoom);
 }
 
 /** 发送消息到客户端 */
 function sendMsgToClient(msgId, ...args) {
     let data = [msgId, args];
     let content = JSON.stringify(data);
-    config.mainWindow.webContents.executeJavaScript(`
+    Config.mainWindow.webContents.executeJavaScript(`
         if(window.frames && window.frames.length > 0) {
             window.frames[0].postMessage({'key':'nativeMsg', 'value':\'${content}\'},'*');
         } else if(window){

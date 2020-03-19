@@ -3,124 +3,131 @@
  * @desc 平台相关的逻辑
  * @date 2020-02-19 11:22:49
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-19 17:44:30
+ * @Last Modified time: 2020-03-20 00:59:30
  */
 const querystring = require('querystring');
-const config = require('./config.js');
+const Config = require('./config.js').Config;
 const util = require('./util.js');
 const logger = require('./logger.js');
 const message = require('./message.js');
 
-async function init(queryValue) {
-    return new Promise((resolve, reject) => {
-        let urlValue = config.urlValue;
-        //伪协议启动参数
-        logger.log('server', `初始化平台数据`);
-        config.channel = queryValue['gameChannel'] = config.constChannelLesson;
-        let argsValue = urlValue.slice(urlValue.indexOf("?") + 1);
+// let queryObject;
 
-        //解析参数
-        let argsObj = querystring.parse(argsValue);
-        for (const key in argsObj) {
-            const value = argsObj[key];
+async function init() {
+    let urlValue = Config.urlValue;
+    //伪协议启动参数
+    logger.log('platform', `初始化平台数据`, urlValue);
+    let argsValue = urlValue.slice(urlValue.indexOf("?") + 1);
+    //解析参数
+    let argsObj = querystring.parse(argsValue);
 
-            if (key === 'temporary_token') {
-                config.bellTempToken = value;
-                continue;
-            }
+    let queryObject = {};
 
-            if (key === 'class_id') {
-                queryValue[key] = `${value}`;
-                config.classId = +value;
-                util.writeServerCnfValue("classId", value);
-                continue;
-            }
+    for (const key in argsObj) {
+        const value = argsObj[key];
 
-            if (key === 'bell_origin') {
-                config.bellApiOrigin = value;
-                continue;
-            }
-
-            if (key === 'package_id') {
-                config.bellPackageId = value;
-                queryValue['package_id'] = `${value}`;
-                continue;
-            }
-
-            if (key === 'lesson_id') {
-                config.bellLessonId = value;
-                queryValue['lesson_id'] = `${value}`;
-                util.writeServerCnfValue("lessonId", value);
-                continue;
-            }
-
-            if (key === 'back_url') {
-                config.bellBackUrl = value;
-                queryValue['back_url'] = `${value}`;
-                continue;
-            }
-
-            if (key === 'act_id') {
-                config.bellActId = value;
-                queryValue['act_id'] = `${value}`;
-                continue;
-            }
-
-            if (key === 'local_network') {
-                queryValue['gameServer'] = `${value}`;
-                continue;
-            }
-
-            //有公网地址,且不存在服务器地址的情况下,赋值
-            if (key === 'internet_network' && !queryValue['gameServer']) {
-                queryValue['gameServer'] = `${value}`;
-                continue;
-            }
-
-            //课程地图的gid
-            if (key === 'gid') {
-                logger.log('net', `平台给的gid`, value);
-                queryValue[key] = `${value}`;
-                util.writeServerCnfValue("gid", value);
-                continue;
-            }
-
-            if (key === 'stand_alone') {
-                if (value === "null") {
-                    config.standAlone = false;
-                } else {
-                    config.standAlone = !!value;
-                }
-                continue;
-            }
-            queryValue[key] = `${value}`;
+        if (key === 'temporary_token') {
+            Config.setBellTempToken(`${value}`);
+            continue;
         }
-        login(queryValue, resolve, reject);
-    });
 
+        if (key === 'class_id') {
+            queryObject[key] = `${value}`;
+            Config.setClassId(+value);
+            util.writeServerCnfValue("classId", value);
+            continue;
+        }
+
+        if (key === 'bell_origin') {
+            Config.setBellApiOrigin(value);
+            continue;
+        }
+
+        if (key === 'package_id') {
+            Config.setBellPackageId(value);
+            queryObject['package_id'] = `${value}`;
+            continue;
+        }
+
+        if (key === 'lesson_id') {
+            Config.setBellLessonId(value);
+            queryObject['lesson_id'] = `${value}`;
+            util.writeServerCnfValue("lessonId", value);
+            continue;
+        }
+
+        if (key === 'back_url') {
+            Config.setBellBackUrl(value);
+            queryObject['back_url'] = `${value}`;
+            continue;
+        }
+
+        if (key === 'act_id') {
+            Config.setBellActId(value);
+            queryObject['act_id'] = `${value}`;
+            continue;
+        }
+
+        if (key === 'local_network') {
+            queryObject['gameServer'] = `${value}`;
+            continue;
+        }
+
+        //有公网地址,且不存在服务器地址的情况下,赋值
+        if (key === 'internet_network' && !queryObject['gameServer']) {
+            queryObject['gameServer'] = `${value}`;
+            continue;
+        }
+
+        //课程地图的gid
+        if (key === 'gid') {
+            logger.log('net', `平台给的gid`, value);
+            queryObject[key] = `${value}`;
+            util.writeServerCnfValue("gid", value);
+            continue;
+        }
+
+        if (key === 'stand_alone') {
+            if (value === "null") {
+                Config.setStandAlone(false);
+            } else {
+                Config.setStandAlone(!!value);
+            }
+            continue;
+        }
+        queryObject[key] = `${value}`;
+    }
+
+    let token = await login();
+    queryObject['token'] = token;
+    return queryObject;
 }
 
 /** 登陆贝尔平台 */
-function login(queryValue, successFunc, errorFunc) {
-    let data = { temporary_token: config.bellTempToken };
-    logger.log('net', `请求登录贝尔平台`);
-    util.requestPostHttp(config.bellApiOrigin, null, '/common/member/login-by-temporary-token', data, null
-        , (body) => {
-            logger.log('net', `登陆贝尔平台返回body`, body);
-            if (body.code === 200) {
-                queryValue['token'] = config.bellToken = body.data.token;
-                getMemberInfo(successFunc, errorFunc);
-                logger.log('net', `登陆贝尔平台成功, token:${config.bellToken}`);
-            } else {
-                errorFunc();
-                logger.error('net', `登陆贝尔平台失败`, body.msg);
+function login() {
+    let data = { temporary_token: Config.bellTempToken };
+    logger.log('net', `请求登录贝尔平台, bellApiOrigin: ${Config.bellApiOrigin}, bellTempToken:${Config.bellTempToken}`);
+    return new Promise((resolve, reject) => {
+        util.requestPostHttp(Config.bellApiOrigin, null, '/common/member/login-by-temporary-token', data, null
+            , (body) => {
+                logger.log('net', `登陆贝尔平台返回body`, body);
+                if (body.code === 200) {
+                    Config.setBellToken(body.data.token);
+                    getMemberInfo(() => {
+                        resolve(body.data.token)
+                    }, (err) => { reject(err) });
+                    logger.log('net', `登陆贝尔平台成功, token:${Config.bellToken}`);
+                } else {
+                    errorFunc();
+                    logger.error('net', `登陆贝尔平台失败`, body.msg);
+                }
             }
-        }
-        , () => {
-            errorFunc();
-            logger.error('net', `登陆贝尔平台失败`);
-        }
-    );
+            , (e) => {
+                errorFunc();
+                logger.error('net', `登陆贝尔平台失败`, e);
+            }
+        );
+    })
 }
 
 /* let memberInfo = `{
@@ -158,18 +165,19 @@ function login(queryValue, successFunc, errorFunc) {
 }` */
 /** 获取用户信息 */
 function getMemberInfo(successFunc, errorFunc) {
-    let data = { token: config.bellToken };
+    let data = { token: Config.bellToken };
     let headers = { "X-Bellcode-Referer": "bellplanet" }
     logger.log('net', `请求获取贝尔平台用户信息`);
-    util.requestGetHttp(config.bellApiOrigin, null, '/common/member/init', data, headers
+    util.requestGetHttp(Config.bellApiOrigin, null, '/common/member/init', data, headers
         , (body) => {
             if (body.code === 200) {
-                config.userType = +body.data.user_info.usertype;
-                config.realName = body.data.user_info.real_name;
-                config.nickName = body.data.user_info.nickname;
+                Config.setUserType(+body.data.user_info.usertype);
+                Config.setRealName(body.data.user_info.real_name);
+                Config.setNickName(body.data.user_info.nickname);
 
                 util.writeServerCnfValue("userId", body.data.user_info.userid + "");
                 util.writeServerCnfValue("schoolId", body.data.user_info.school.id + "");
+                util.writeServerCnfValue("nickName", body.data.user_info.nickname + "");
 
                 message.sendIpcMsg('SAVE_NATIVE_LOGIN_RESPONSE', body);
                 logger.log('net', `获取贝尔平台用户信息成功`);
@@ -188,24 +196,24 @@ function getMemberInfo(successFunc, errorFunc) {
 
 /** 老师上报ip */
 function teacherUploadIp() {
-    let data = { token: config.bellToken, class_id: config.classId };
+    let data = { token: Config.bellToken, class_id: Config.classId };
 
     //公网连接方式
-    if (config.gameServerNatUrl && config.gameServerNatPort) {
-        data['internet_network'] = `${config.gameServerNatUrl}:${config.gameServerNatPort}`;
+    if (Config.gameServerNatUrl && Config.gameServerNatPort) {
+        data['internet_network'] = `${Config.gameServerNatUrl}:${Config.gameServerNatPort}`;
     } else {
         data['internet_network'] = ``;
     }
 
     //局域网连接方式
-    if (config.gameServerLocalIp && config.gameServerLocalPort) {
-        data['local_network'] = `${config.gameServerLocalIp}:${config.gameServerLocalPort}`;
+    if (Config.gameServerLocalIp && Config.gameServerLocalPort) {
+        data['local_network'] = `${Config.gameServerLocalIp}:${Config.gameServerLocalPort}`;
     } else {
         data['local_network'] = ``;
     }
 
     logger.log('net', `请求上报老师ip`);
-    util.requestPostHttp(config.bellApiOrigin, null, '/teacher/bellplanet-origins.put', data, null
+    util.requestPostHttp(Config.bellApiOrigin, null, '/teacher/bellplanet-origins.put', data, null
         , (body) => {
             if (body.code === 200) {
                 logger.log('net', `上报老师ip成功`);
@@ -232,6 +240,7 @@ function teacherUploadIp() {
 // }
 
 exports.init = init;
+// exports.queryObject = queryObject;
 exports.teacherUploadIp = teacherUploadIp;
 
 // exports.test = test;
