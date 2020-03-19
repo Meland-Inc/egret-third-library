@@ -1,7 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="ce9jx9xt" jpegQuality="80" compressPNG="true">
+<packageDescription id="ce9jx9xt">
   <resources>
     <component id="6bth0" name="WinLevelEditor.xml" path="/win/" exported="true"/>
+    <image id="nhj61" name="img_jm_pt_ym.png" path="/img/"/>
+    <image id="nhj62" name="img_jm_xx.png" path="/img/"/>
+    <image id="nhj63" name="img_jm_xx_1.png" path="/img/"/>
+    <image id="nhj64" name="tn_jm_xjtpb.png" path="/img/"/>
+    <image id="nhj65" name="icon_jm_bc.png" path="/img/"/>
+    <image id="nhj66" name="icon_jm_dr.png" path="/img/"/>
+    <image id="nhj67" name="icon_jm_fy_1.png" path="/img/"/>
+    <image id="nhj68" name="icon_jm_fy_2.png" path="/img/"/>
+    <image id="nhj69" name="icon_jm_gj_jx.png" path="/img/"/>
+    <image id="nhj6a" name="icon_jm_gj_jx_1.png" path="/img/"/>
+    <image id="nhj6b" name="icon_jm_gj_px.png" path="/img/"/>
+    <image id="nhj6c" name="icon_jm_gj_px_1.png" path="/img/"/>
+    <image id="nhj6d" name="icon_jm_gj_sjx.png" path="/img/"/>
+    <image id="nhj6e" name="icon_jm_gj_sjx_1.png" path="/img/"/>
+    <image id="nhj6f" name="icon_jm_gj_yx.png" path="/img/"/>
+    <image id="nhj6g" name="icon_jm_gj_yx_1.png" path="/img/"/>
+    <image id="nhj6h" name="icon_jm_gjx.png" path="/img/"/>
+    <image id="nhj6i" name="icon_jm_ht.png" path="/img/"/>
+    <image id="nhj6j" name="icon_jm_ht_1.png" path="/img/"/>
+    <image id="nhj6k" name="icon_jm_pt_bf.png" path="/img/"/>
+    <image id="nhj6l" name="icon_jm_pt_cx.png" path="/img/"/>
+    <image id="nhj6m" name="icon_jm_pt_jc.png" path="/img/"/>
+    <image id="nhj6n" name="icon_jm_pt_pt.png" path="/img/"/>
+    <image id="nhj6o" name="icon_jm_pt_sc.png" path="/img/"/>
+    <image id="nhj6p" name="icon_jm_pt_zt.png" path="/img/"/>
+    <image id="nhj6q" name="icon_jm_qj.png" path="/img/"/>
+    <image id="nhj6r" name="icon_jm_qj_1.png" path="/img/"/>
+    <image id="nhj6s" name="icon_jm_sz.png" path="/img/"/>
+    <image id="nhj6t" name="icon_jm_xl_1.png" path="/img/"/>
+    <image id="nhj6u" name="icon_jm_xl_2.png" path="/img/"/>
+    <image id="nhj6v" name="img_jm_an_1.png" path="/img/"/>
+    <image id="nhj6w" name="img_jm_cbl.png" path="/img/"/>
+    <image id="nhj6x" name="img_jm_dbl.png" path="/img/" scale="9grid" scale9grid="14,14,28,28"/>
+    <image id="nhj6y" name="img_jm_fl.png" path="/img/" scale="9grid" scale9grid="13,13,26,26"/>
+    <image id="nhj6z" name="img_jm_gjk_1.png" path="/img/" scale="9grid" scale9grid="15,15,30,30"/>
+    <image id="nhj610" name="img_jm_gjk_2.png" path="/img/" scale="9grid" scale9grid="15,15,30,30"/>
+    <image id="nhj611" name="img_jm_gjk_3.png" path="/img/" scale="9grid" scale9grid="15,15,30,30"/>
+    <image id="nhj612" name="img_jm_gq_bg.png" path="/img/" scale="9grid" scale9grid="8,8,16,16"/>
+    <image id="nhj613" name="img_jm_line.png" path="/img/"/>
+    <image id="nhj614" name="img_jm_pt_bgk.png" path="/img/" scale="9grid" scale9grid="20,12,40,24"/>
+    <image id="nhj615" name="img_jm_pt_dbl.png" path="/img/" scale="9grid" scale9grid="10,14,20,28"/>
+    <image id="nhj616" name="img_jm_pt_msk.png" path="/img/" scale="9grid" scale9grid="29,17,58,34"/>
+    <component id="nhj617" name="btnSaveImport.xml" path="/btn/"/>
+    <component id="ns4ocyif1" name="btnNewImg.xml" path="/btn/"/>
+    <component id="ns4ocyiex" name="ComPuzzleTool.xml" path="/com/"/>
+    <component id="ns4ocyiey" name="ComInfoSetting.xml" path="/com/"/>
+    <component id="ns4ocyiez" name="ComEditorView.xml" path="/com/"/>
+    <component id="ns4ocyif0" name="ComPictureLibrary.xml" path="/com/"/>
+    <component id="u3xqcyif2" name="ComEditBox.xml" path="/com/"/>
+    <image id="u3xqcyif3" name="img_sket_ydgj_3.png" path="/com/" scale="tile" duplicatePadding="true"/>
+    <image id="u3xqcyif4" name="img_sket_ydgj_3_1.png" path="/com/" scale="tile" duplicatePadding="true"/>
+    <image id="u3xqcyif5" name="img_sket_ydgj_1.png" path="/com/"/>
+    <image id="u3xqcyif6" name="img_sket_ydgj_2.png" path="/com/"/>
+    <component id="u3xqcyif7" name="ComEditorBoxContainer.xml" path="/com/"/>
+    <component id="l7sp1t" name="btnAddImg.xml" path="/btn/" exported="true"/>
+    <component id="l7sp1u" name="btnSetting.xml" path="/btn/"/>
+    <component id="l7sp1z" name="ComEditorComposite.xml" path="/com/"/>
+    <component id="l7sp20" name="btnTool.xml" path="/btn/"/>
+    <image id="l7sp21" name="icon_jm_gj_xz_1.png" path="/img/"/>
+    <image id="l7sp22" name="icon_jm_gj_xz.png" path="/img/"/>
+    <component id="l7sp23" name="btnDel.xml" path="/btn/" exported="true"/>
+    <component id="l7sp25" name="btnStart.xml" path="/btn/"/>
+    <component id="l7sp26" name="btnDo.xml" path="/btn/"/>
+    <component id="nuyecyif8" name="WinPlayLevel.xml" path="/win/" exported="true"/>
+    <component id="nuyecyif9" name="ComEditorStage.xml" path="/com/"/>
+    <component id="cdz3cyifa" name="ComPlayView.xml" path="/com/"/>
   </resources>
   <publish name="levelEditor"/>
 </packageDescription>

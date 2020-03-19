@@ -39,8 +39,13 @@
         let url = 'http://47.103.29.74/clientlogs/';
         // url: "../../../game/serverList/",
         // url: "/serverList/",
-        $(document).ready(() => {
-            $.ajax({
+
+        // $(document).ready(() => {
+        //     getFile();
+        // });
+
+        function getFile() {
+            return $.ajax({
                 // url: "/serverList/",
                 headers: {
                     // Authorization: 'Basic YmVsbGNvZGU6ZDNuSDh5ZERESw=='
@@ -68,14 +73,16 @@
                     });
                 }
             });
-        });
+        }
         laydate.render({
             elem: '#timeRange'
             , range: true
             , done: findFile
         });
 
-        function findFile(data) {
+        async function findFile(data) {
+            await getFile();
+
             if (typeof (data) == 'string') {
                 timeRange.value = data;
             }
