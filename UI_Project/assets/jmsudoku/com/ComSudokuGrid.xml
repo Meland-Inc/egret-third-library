@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="300,300">
-  <controller name="ctrlNumber" pages="0,0,1,1,2,2,3,3,4,4,5,101" selected="5"/>
+<component size="250,250">
+  <controller name="ctrlNumber" pages="0,0,1,1,2,2,3,3,4,4,5,101" selected="0"/>
   <controller name="ctrlType" pages="0,blank,1,number" selected="0"/>
   <displayList>
-    <graph id="n0_erox" name="n0" xy="0,0" size="300,300" type="rect" lineSize="2" fillColor="#00ffffff">
+    <graph id="n0_erox" name="n0" xy="0,0" size="250,250" type="rect" fillColor="#00ffffff">
       <gearDisplay controller="ctrlType" pages="0"/>
       <relation target="" sidePair="width-width,height-height"/>
     </graph>
-    <image id="n1_erox" name="img1" src="erox0" fileName="img/icon_jmsudoku_number1.png" xy="0,0" size="300,300">
+    <image id="n1_erox" name="img1" src="erox0" fileName="img/icon_jmsudoku_number1.png" xy="0,0" size="250,250">
       <gearDisplay controller="ctrlNumber" pages="1"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n2_erox" name="img2" src="erox1" fileName="img/icon_jmsudoku_number2.png" xy="0,0" size="300,300">
+    <image id="n2_erox" name="img2" src="erox1" fileName="img/icon_jmsudoku_number2.png" xy="0,0" size="250,250">
       <gearDisplay controller="ctrlNumber" pages="2"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n3_erox" name="img3" src="erox2" fileName="img/icon_jmsudoku_number3.png" xy="0,0" size="300,300">
+    <image id="n3_erox" name="img3" src="erox2" fileName="img/icon_jmsudoku_number3.png" xy="0,0" size="250,250">
       <gearDisplay controller="ctrlNumber" pages="3"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n4_erox" name="img4" src="erox3" fileName="img/icon_jmsudoku_number4.png" xy="0,0" size="300,300">
+    <image id="n4_erox" name="img4" src="erox3" fileName="img/icon_jmsudoku_number4.png" xy="0,0" size="250,250">
       <gearDisplay controller="ctrlNumber" pages="4"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n8_kag9" name="img101" src="kag98" fileName="img/icon_jmsudoku_number101.png" xy="0,0">
+    <image id="n8_kag9" name="img101" src="kag98" fileName="img/icon_jmsudoku_number101.png" xy="0,0" size="250,250">
       <gearDisplay controller="ctrlNumber" pages="5"/>
       <relation target="" sidePair="height-height,width-width"/>
     </image>
-    <component id="n5_erox" name="btnGrid" src="erox6" fileName="btnDrag.xml" xy="0,0" size="300,300">
+    <component id="n5_erox" name="btnGrid" src="erox6" fileName="btnDrag.xml" xy="0,0" size="250,250">
       <relation target="" sidePair="height-height,width-width"/>
     </component>
   </displayList>
