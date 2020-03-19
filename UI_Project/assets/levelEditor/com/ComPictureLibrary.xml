@@ -9,7 +9,7 @@
     <component id="n2_l7sp" name="btnAddImg" src="l7sp1t" fileName="btn/btnAddImg.xml" xy="20,101">
       <Button title="添加图片" icon="ui://ce9jx9xtnhj64"/>
     </component>
-    <list id="n1_ns4o" name="lstPicture" xy="20,164" size="186,759" layout="flow_vt" overflow="scroll" lineGap="10" defaultItem="ui://ce9jx9xtns4ocyif1">
+    <list id="n1_ns4o" name="lstPicture" xy="20,164" size="186,759" layout="flow_vt" overflow="scroll" lineGap="10" defaultItem="ui://ce9jx9xtns4ocyif1" autoClearItems="true">
       <relation target="" sidePair="bottomext-bottom"/>
       <item icon="ui://h1faefzwkuxv1"/>
       <item icon="ui://h1faefzwkuxv2"/>

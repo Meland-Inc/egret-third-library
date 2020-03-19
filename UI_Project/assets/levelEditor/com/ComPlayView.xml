@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1280,720">
-  <controller name="ctrlVoiceType" pages="0,none,1,playing,2,pause" selected="0"/>
+  <controller name="ctrlVoiceType" pages="0,none,1,play,2,pause" selected="1"/>
   <displayList>
     <loader id="n11_nuye" name="ladBG" xy="0,0" size="1280,720" url="ui://ce9jx9xtnhj614" fill="scaleFree">
       <relation target="" sidePair="center-center,middle-middle"/>
@@ -36,6 +36,7 @@
     </text>
     <component id="n23_nuye" name="btnVoice" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="126,140" size="80,80" group="n26_nuye">
       <gearIcon controller="ctrlVoiceType" pages="0,2" values="|ui://ce9jx9xtnhj6p" default="ui://ce9jx9xtnhj6k"/>
+      <Button icon="ui://ce9jx9xtnhj6k"/>
     </component>
     <image id="n24_nuye" name="n24" src="nhj616" fileName="img/img_jm_pt_msk.png" xy="247,147" size="789,66" group="n26_nuye"/>
     <text id="n25_nuye" name="tfDescribe" xy="283,166" size="709,31" group="n26_nuye" fontSize="24" color="#ffffff" vAlign="middle" autoSize="none" text="这里是关卡描述"/>
