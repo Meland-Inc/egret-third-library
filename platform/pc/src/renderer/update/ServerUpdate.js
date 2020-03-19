@@ -3,7 +3,7 @@
  * @desc 游戏服务器端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-18 09:51:52
+ * @Last Modified time: 2020-03-19 18:58:27
  */
 
 import * as loading from '../loading.js';
@@ -79,7 +79,12 @@ export class ServerUpdate {
 
     /** 下载服务端包 */
     downloadPackage() {
-        let fileDir = `${Config.cdnHost}/serverPackages/${this.environName}`;
+        //release环境, 用的ready的包, 去ready下载
+        let environName = Config.environName;
+        if (environName === Config.eEnvironName.release) {
+            environName = Config.eEnvironName.ready;
+        }
+        let fileDir = `${Config.cdnHost}/serverPackages/${environName}`;
         let saveDir = this.serverPackagePath;
         let fileName = `${util.getServerPackageFileName()}_v${this.remoteVersion}.zip`;
         //下载文件

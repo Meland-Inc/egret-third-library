@@ -3,7 +3,7 @@
  * @desc 游戏客户端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-19 00:20:44
+ * @Last Modified time: 2020-03-19 17:38:00
  */
 
 import * as loading from '../loading.js';
@@ -208,8 +208,13 @@ export class ClientUpdate {
     async downloadPackage() {
         await this.checkLatestVersion();
         this.patchCount = 1;
+        //release环境, 用的ready的包, 去ready下载
+        let environName = Config.environName;
+        if (environName === Config.eEnvironName.release) {
+            environName = Config.eEnvironName.ready;
+        }
 
-        let fileDir = `${Config.cdnHost}/clientPackages/${Config.environName}`;
+        let fileDir = `${Config.cdnHost}/clientPackages/${environName}`;
         let saveDir = this.clientPackagePath;
         let fileName = `release_v${this.gameVersion}s.zip`;
         //下载文件
