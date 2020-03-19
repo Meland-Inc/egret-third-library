@@ -36,7 +36,9 @@
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
       <relation target="n1_s45w" sidePair="left-left,top-top"/>
     </image>
-    <component id="n34_n82e" name="comQuillInput" src="n82ewcyil3" fileName="codeVew/com/ComQuillInput.xml" xy="556,380" size="672,375" group="n16_en7j"/>
+    <component id="n34_n82e" name="comQuillInput" src="n82ewcyil3" fileName="codeVew/com/ComQuillInput.xml" xy="1116,352" size="672,375" group="n16_en7j">
+      <relation target="n1_s45w" sidePair="center-center,middle-middle"/>
+    </component>
     <component id="n35_fkya" name="comFuncNameInput" src="fkyawcyild" fileName="codeVew/com/ComFuncNameInput.xml" xy="953,2" size="966,1082" group="n16_en7j" visible="false">
       <relation target="" sidePair="bottomext-bottom,rightext-right"/>
       <relation target="n1_s45w" sidePair="left-left,top-top"/>
@@ -55,7 +57,7 @@
       <relation target="" sidePair="bottom-bottom,right-right"/>
       <Button icon="ui://oyity675cnxcwcyilz"/>
     </component>
-    <component id="n32_g61s" name="comEmptyClone" src="hl7ywcyijw" fileName="ideCommon/com/comEmptyCloneEntity.xml" xy="1719,0" controller="ctrlStatus,0">
+    <component id="n32_g61s" name="comEmptyClone" src="hl7ywcyijw" fileName="ideCommon/com/comEmptyCloneEntity.xml" xy="1719,0" controller="ctrlStatus,1">
       <gearDisplay controller="ctrlStatus" pages="2,1"/>
       <relation target="" sidePair="height-height,right-right"/>
     </component>
