@@ -3,7 +3,7 @@
  * @desc renderer用的配置静态类
  * @date 2020-02-13 14:54:50 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-19 15:57:53
+ * @Last Modified time: 2020-03-20 02:30:32
  */
 const fs = require('fs');
 import * as logger from './logger.js';
@@ -37,7 +37,10 @@ export class Config {
     static environName = "";
 
     /** 官网地址 */
-    static bellcodeUrl = "http://www.bellcode.com";
+    static bellcodeUrl = "https://www.bellcode.com";
+
+    /** demo */
+    static demoBellCodeUrl = "https://democm.wkcoding.com/";
 
     /** beta客户端地址 */
     static betaUrl = "http://wplanet.wkcoding.com/app-beta";

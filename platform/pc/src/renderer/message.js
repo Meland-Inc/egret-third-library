@@ -3,7 +3,7 @@
  * @desc 渲染进程消息处理文件
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-20 00:33:00
+ * @Last Modified time: 2020-03-20 02:31:58
  */
 import { Config } from './Config.js';
 import { ClientUpdate } from './update/ClientUpdate.js';
@@ -205,7 +205,7 @@ async function onStartNativeWebsite() {
     if (Config.environName === Config.eEnvironName.release) {
         location.href = Config.bellcodeUrl;
     } else {
-        location.href = 'http://democm.wkcoding.com/';
+        location.href = Config.demoBellCodeUrl;
     }
 
     //http://wplanet.wkcoding.com/app-beta?register=1&developMode=1&fakeGameMode=lessons&register=1&banner=1&bellApiOrigin=demoapi.wkcoding.com&serverListServer=ready-server-list.wkcoding.com
@@ -229,9 +229,14 @@ async function onStartNativePlatform(queryObject) {
     }
     let platformValue = querystring.stringify(platformObject);
     //获取官网链接
-    let bellPlatformDomain = await Config.getGlobalConfigValue("bellPlatformDomain");
+    let bellPlatformDomain;
+    if (Config.environName === Config.eEnvironName.release) {
+        bellPlatformDomain = Config.bellcodeUrl;
+    } else {
+        bellPlatformDomain = Config.demoBellCodeUrl;
+    }
 
-    location.href = `${bellPlatformDomain}?${platformValue}`;
+    location.href = `${bellPlatformDomain}/#/bell-planet?${platformValue}`;
     registerClientMsg();
 }
 

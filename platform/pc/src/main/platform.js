@@ -3,7 +3,7 @@
  * @desc 平台相关的逻辑
  * @date 2020-02-19 11:22:49
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-20 00:59:30
+ * @Last Modified time: 2020-03-20 02:45:36
  */
 const querystring = require('querystring');
 const Config = require('./config.js').Config;
@@ -108,7 +108,7 @@ function login() {
     let data = { temporary_token: Config.bellTempToken };
     logger.log('net', `请求登录贝尔平台, bellApiOrigin: ${Config.bellApiOrigin}, bellTempToken:${Config.bellTempToken}`);
     return new Promise((resolve, reject) => {
-        util.requestPostHttp(Config.bellApiOrigin, null, '/common/member/login-by-temporary-token', data, null
+        util.requestPostHttps(Config.bellApiOrigin, null, '/common/member/login-by-temporary-token', data, null
             , (body) => {
                 logger.log('net', `登陆贝尔平台返回body`, body);
                 if (body.code === 200) {
@@ -168,7 +168,7 @@ function getMemberInfo(successFunc, errorFunc) {
     let data = { token: Config.bellToken };
     let headers = { "X-Bellcode-Referer": "bellplanet" }
     logger.log('net', `请求获取贝尔平台用户信息`);
-    util.requestGetHttp(Config.bellApiOrigin, null, '/common/member/init', data, headers
+    util.requestGetHttps(Config.bellApiOrigin, null, '/common/member/init', data, headers
         , (body) => {
             if (body.code === 200) {
                 Config.setUserType(+body.data.user_info.usertype);
@@ -213,7 +213,7 @@ function teacherUploadIp() {
     }
 
     logger.log('net', `请求上报老师ip`);
-    util.requestPostHttp(Config.bellApiOrigin, null, '/teacher/bellplanet-origins.put', data, null
+    util.requestPostHttps(Config.bellApiOrigin, null, '/teacher/bellplanet-origins.put', data, null
         , (body) => {
             if (body.code === 200) {
                 logger.log('net', `上报老师ip成功`);

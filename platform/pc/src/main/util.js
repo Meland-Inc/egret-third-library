@@ -3,13 +3,14 @@
  * @desc main用的工具类
  * @date 2020-02-18 11:43:24 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-20 01:19:42
+ * @Last Modified time: 2020-03-20 02:59:23
  */
 // const spawn = require("child_process").spawn;
 const exec = require("child_process").exec;
 const logger = require('./logger.js');
 const Config = require('./config.js').Config;
 const message = require('./message.js');
+const http = require('http');
 const https = require('https');
 const fs = require('fs');
 const querystring = require('querystring');
@@ -72,8 +73,18 @@ function runCmd(cmd, cwd, successMsg, errorMsg) {
     });
 }
 
-/** 发送get请求 */
+/** https发送get请求 */
+function requestGetHttps(host, port, path, data, headers, successFunc, errorFunc) {
+    requestGet(true, host, port, path, data, headers, successFunc, errorFunc);
+}
+
+/** http发送get请求 */
 function requestGetHttp(host, port, path, data, headers, successFunc, errorFunc) {
+    requestGet(false, host, port, path, data, headers, successFunc, errorFunc);
+}
+
+/** 发送get请求 */
+function requestGet(isHttps, host, port, path, data, headers, successFunc, errorFunc) {
     let content = data ? `${querystring.stringify(data)}` : "";
     path = content ? `${path}?${content}` : path;
     let options = {
@@ -92,7 +103,8 @@ function requestGetHttp(host, port, path, data, headers, successFunc, errorFunc)
         }
     }
 
-    let request = https.request(options, (response) => {
+    let transportLib = isHttps ? https : http;
+    let request = transportLib.request(options, (response) => {
         response.setEncoding('utf8');
 
         let body = "";
@@ -129,8 +141,18 @@ function requestGetHttp(host, port, path, data, headers, successFunc, errorFunc)
     request.end();
 }
 
-/** 发送post请求 */
+/** https发送post请求 */
+function requestPostHttps(host, port, path, data, headers, successFunc, errorFunc) {
+    requestPost(true, host, port, path, data, headers, successFunc, errorFunc);
+}
+
+/** http发送post请求 */
 function requestPostHttp(host, port, path, data, headers, successFunc, errorFunc) {
+    requestPost(false, host, port, path, data, headers, successFunc, errorFunc);
+}
+
+/** 发送post请求 */
+function requestPost(isHttps, host, port, path, data, headers, successFunc, errorFunc) {
     let content = data ? querystring.stringify(data) : "";
     logger.log('net', `http post data`, content);
 
@@ -153,7 +175,8 @@ function requestPostHttp(host, port, path, data, headers, successFunc, errorFunc
         }
     }
 
-    let request = https.request(options, (response) => {
+    let transportLib = isHttps ? https : http;
+    let request = transportLib.request(options, (response) => {
         response.setEncoding('utf8');
 
         let body = "";
@@ -223,7 +246,9 @@ function setGlobalConfigValue(key, value) {
 // exports.runSpawn = runSpawn;
 exports.runCmd = runCmd;
 exports.requestGetHttp = requestGetHttp;
+exports.requestGetHttps = requestGetHttps;
 exports.requestPostHttp = requestPostHttp;
+exports.requestPostHttps = requestPostHttps;
 exports.init = init;
 exports.writeServerCnfValue = writeServerCnfValue;
 exports.globalConfig = globalConfig;
