@@ -355,7 +355,7 @@ function next_mangled_name(scope, options, def) {
     }
     while (true) {
         name = base54(++scope.cname);
-        if (in_use[name] || RESERVED_WORDS[name] || options.reserved.has[name]) continue;
+        if (in_use[name] || RESERVED_WORDS[name] || options.reserved.has[name] || name.match(/Table$/)) continue;
         if (!names[name]) break;
         holes.push(scope.cname);
     }
@@ -459,6 +459,7 @@ AST_Toplevel.DEFMETHOD("mangle_names", function (options) {
 
     function mangle(def) {
         if (options.reserved.has[def.name]) return;
+        if (def.name.match(/Table$/)) return;
         def.mangle(options);
     }
 
@@ -525,6 +526,7 @@ AST_Toplevel.DEFMETHOD("expand_names", function (options) {
         if (def.global && options.cache) return;
         if (def.unmangleable(options)) return;
         if (options.reserved.has[def.name]) return;
+        if (def.name.match(/Table$/)) return;
         var redef = def.redefined();
         var name = redef ? redef.rename || redef.name : next_name();
         def.rename = name;
