@@ -90,6 +90,9 @@ async function createWindow() {
   //日志初始化
   logger.init();
 
+
+  logger.log('main', `收到参数1: ${JSON.stringify(process.argv)}`);
+
   //native初始化
   initNative();
 
@@ -164,8 +167,8 @@ if (!gotTheLock) {
   app.quit();
   return;
 }
-app.on('second-instance', async (event, argv, workingDirectory) => {
-  // 当运行第二个实例时,将会聚焦到mainWindow这个窗口
+
+const onGotTheLock = async (url) => {
   logger.log('electron', `运行第二个实例`);
   if (mainWindow) {
     if (mainWindow.isMinimized()) {
@@ -181,17 +184,30 @@ app.on('second-instance', async (event, argv, workingDirectory) => {
     // }
 
     /** 设置url参数 */
-    Config.setUrlValue(argv[argv.length - 1]);
+    Config.setUrlValue(url);
     initNative();
   }
+}
+
+app.on('second-instance', async (event, argv, workingDirectory) => {
+  // 当运行第二个实例时,将会聚焦到mainWindow这个窗口
+  if (process.platform === 'win32') {
+    onGotTheLock(argv[argv.length - 1]);
+  }
+  
+  logger.log('main', `收到参数: ${JSON.stringify(argv)}, ${JSON.stringify(process.argv)}`);
+});
+
+app.on('open-url', function (event, url) {
+  onGotTheLock(url);
 });
 
 app.on('ready', () => {
   createWindow();
 
   //检测杀game进程
-  let cmdStr = "taskkill /im game.exe /f";
-  util.runCmd(cmdStr, null, `关闭游戏服务器成功`, "关闭游戏服务器错误");
+  //let cmdStr = "taskkill /im game.exe /f";
+  //util.runCmd(cmdStr, null, `关闭游戏服务器成功`, "关闭游戏服务器错误");
 
   let shortCut = "";
   if (process.platform === 'darwin') {
