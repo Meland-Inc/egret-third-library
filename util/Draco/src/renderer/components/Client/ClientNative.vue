@@ -131,7 +131,10 @@ export default {
       ModelMgr.versionModel.publisher = this.publisher;
     },
     async environChange() {
-      ModelMgr.versionModel.setCurEnviron(this.curEnviron);
+      let versionModel = ModelMgr.versionModel;
+      versionModel.setCurEnviron(this.curEnviron);
+      this.releaseShow = this.curEnviron.name === versionModel.eEnviron.release;
+      this.readyShow = this.curEnviron.name === versionModel.eEnviron.ready;
 
       this.publisher = null;
       this.updatePublishText();
@@ -338,13 +341,15 @@ export default {
     }
   },
   async mounted() {
-    if (!ModelMgr.versionModel.curEnviron) {
-      ModelMgr.versionModel.initEnviron();
-    }
-    this.environList = ModelMgr.versionModel.environList.filter(
-      value => Global.mode.environNames.indexOf(value.name) != -1
+    let versionModel = ModelMgr.versionModel;
+    this.curEnviron = versionModel.curEnviron = versionModel.environList.find(
+      value => value.name === versionModel.eEnviron.ready
     );
-    this.curEnviron = ModelMgr.versionModel.curEnviron;
+    this.environList = versionModel.environList.filter(
+      value =>
+        value.name === versionModel.eEnviron.ready ||
+        value.name === versionModel.eEnviron.release
+    );
     this.environChange();
   }
 };
