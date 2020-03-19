@@ -3,7 +3,7 @@
  * @desc main用的工具类
  * @date 2020-02-18 11:43:24 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-20 02:59:23
+ * @Last Modified time: 2020-03-20 06:02:16
  */
 // const spawn = require("child_process").spawn;
 const exec = require("child_process").exec;
@@ -55,12 +55,7 @@ function runCmd(cmd, cwd, successMsg, errorMsg) {
                 if (errorMsg) {
                     logger.error('cmd', errorMsg, error);
                 }
-                reject(process);
-            } else {
-                if (successMsg) {
-                    logger.log('cmd', successMsg);
-                }
-                resolve(process);
+                reject(error);
             }
         });
 
@@ -70,6 +65,8 @@ function runCmd(cmd, cwd, successMsg, errorMsg) {
         process.stderr.on("data", data => {
             logger.processLog('cmd', 'stderr', data);
         });
+
+        resolve(process);
     });
 }
 

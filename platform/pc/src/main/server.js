@@ -3,8 +3,9 @@
  * @desc 处理native服务器和游戏服务器的文件
  * @date 2020-02-18 11:42:29 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-19 23:13:28
+ * @Last Modified time: 2020-03-20 07:10:19
  */
+const kill = require('tree-kill');
 const http = require('http');
 const url = require('url');
 const Config = require('./config.js').Config;
@@ -13,9 +14,6 @@ const logger = require('./logger.js');
 const platform = require('./platform.js');
 const message = require('./message.js');
 
-let nativeServer;
-let gameServerProcess;
-
 async function init() {
     util.writeServerCnfValue('gameArgs', "");
     await createNativeServer(Config.eGameServerMode.gameMap);
@@ -23,17 +21,18 @@ async function init() {
 
 /** 创建native服务器 */
 async function createNativeServer(gameServerMode) {
-    if (nativeServer) {
+    if (Config.nativeServer) {
         logger.log('net', `关闭旧的native服务器`);
         Config.setGameServerInited(false);
         await closeNativeServer();
     }
 
     logger.log('net', '开始创建native服务器');
-    nativeServer = http.createServer();
-    nativeServer.listen(0);
-    nativeServer.on('listening', async () => {
-        Config.setNativeServerPort(nativeServer.address().port);
+    let nativeServer = http.createServer();
+    Config.setNativeServer(nativeServer);
+    Config.nativeServer.listen(0);
+    Config.nativeServer.on('listening', async () => {
+        Config.setNativeServerPort(Config.nativeServer.address().port);
         logger.log('net', '创建native服务器成功,端口号', Config.nativeServerPort);
 
         await util.writeServerCnfValue('channel', Config.channel);
@@ -41,7 +40,7 @@ async function createNativeServer(gameServerMode) {
         await createGameServer(gameServerMode);
     });
 
-    nativeServer.on('request', (req, res) => {
+    Config.nativeServer.on('request', (req, res) => {
         let urlObj = url.parse(req.url, true);
         let args = urlObj.query;
         let pathname = urlObj.pathname;
@@ -95,12 +94,6 @@ async function createNativeServer(gameServerMode) {
             });
         }
 
-        // if (pathname === "/test") {
-        //     let obj = { data: 'lalala', data2: 'hahaha', data3: 333 };
-        //     res.end(JSON.stringify(obj));
-        //     return;
-        // }
-
         // res.end('hello world !');
         res.end();
     })
@@ -109,18 +102,18 @@ async function createNativeServer(gameServerMode) {
 /** 关闭native服务器 */
 function closeNativeServer() {
     return new Promise((resolve, reject) => {
-        if (!nativeServer) {
+        if (!Config.nativeServer) {
             resolve();
             return;
         }
 
-        nativeServer.close((err) => {
+        Config.nativeServer.close((err) => {
             if (err) {
                 logger.error('net', `关闭native服务器失败`, err);
             } else {
                 logger.log('net', `关闭native服务器成功`);
             }
-            nativeServer = null;
+            Config.setNativeServer(null);
             resolve();
         });
     })
@@ -128,7 +121,7 @@ function closeNativeServer() {
 
 /** 创建游戏服务器 */
 async function createGameServer(mode) {
-    if (gameServerProcess) {
+    if (Config.gameServerProcess) {
         logger.log('net', `关闭旧的游戏服务器`);
         await closeGameServer();
     }
@@ -136,32 +129,38 @@ async function createGameServer(mode) {
     logger.log('net', '创建游戏服务器');
     Config.setGameServerMode(mode);
     let cmd = `game`;
-    gameServerProcess = await util.runCmd(cmd, `${Config.rootPath}/package/server/`, "创建游戏服务器成功", "创建游戏服务器失败");
+    let gameServerProcess = await util.runCmd(cmd, `${Config.rootPath}/package/server/`, "创建游戏服务器成功", "创建游戏服务器失败");
+    Config.setGameServerProcess(gameServerProcess);
 }
 
 /** 关闭游戏服务器 */
 async function closeGameServer() {
     return new Promise((resolve, reject) => {
-        if (!gameServerProcess) {
+        logger.log('server', 'gameServerProcess', Config.gameServerProcess);
+        if (!Config.gameServerProcess) {
             resolve();
             return;
         }
 
         if (!Config.gameServerInited) {
-            let cmdStr = "taskkill /im game.exe /f";
-            util.runCmd(cmdStr, null, `关闭游戏服务器成功`, "关闭游戏服务器错误");
-            gameServerProcess = null;
+            // let cmdStr = "taskkill /im game.exe /f";
+            // util.runCmd(cmdStr, null, `关闭游戏服务器成功`, "关闭游戏服务器错误");
+            logger.log('net', `关闭游戏服务器`);
+            kill(Config.gameServerProcess.pid, (error) => {
+                reject(error);
+            });
+            Config.setGameServerProcess(null);
             return;
         }
 
         let path = `/native?controlType=closeServer`
         util.requestGetHttp(Config.gameServerLocalIp, Config.gameServerLocalPort, path, null, null, () => {
             logger.log('net', `关闭游戏服务器成功`)
-            gameServerProcess = null;
+            Config.setGameServerProcess(null);
             resolve();
         }, () => {
             logger.error('net', `关闭游戏服务器错误`)
-            gameServerProcess = null;
+            Config.setGameServerProcess(null);
             resolve();
         });
     });

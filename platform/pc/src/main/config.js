@@ -3,7 +3,7 @@
  * @desc main用的配置
  * @date 2020-02-13 14:54:41 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-20 00:09:30
+ * @Last Modified time: 2020-03-20 07:04:10
  */
 
 class Config {
@@ -281,6 +281,23 @@ class Config {
     }
     static setMainWindow(value) {
         this._mainWindow = value;
+    }
+
+
+    static _nativeServer;
+    static get nativeServer() {
+        return this._nativeServer;
+    }
+    static setNativeServer(value) {
+        this._nativeServer = value;
+    }
+
+    static _gameServerProcess;
+    static get gameServerProcess() {
+        return this._gameServerProcess;
+    }
+    static setGameServerProcess(value) {
+        this._gameServerProcess = value;
     }
 }
 

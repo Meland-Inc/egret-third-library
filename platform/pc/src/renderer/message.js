@@ -3,7 +3,7 @@
  * @desc 渲染进程消息处理文件
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-20 02:31:58
+ * @Last Modified time: 2020-03-20 05:37:15
  */
 import { Config } from './Config.js';
 import { ClientUpdate } from './update/ClientUpdate.js';
@@ -252,6 +252,10 @@ function setConfigData2LocalStorage() {
     } else {
         localStorage.removeItem('nativeGameServer');
     }
+}
+
+function registerClientMsg() {
+
 }
 
 /** 收到游戏服务器启动完毕 */
