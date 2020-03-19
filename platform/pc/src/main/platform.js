@@ -3,7 +3,7 @@
  * @desc 平台相关的逻辑
  * @date 2020-02-19 11:22:49
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-18 09:50:01
+ * @Last Modified time: 2020-03-19 17:44:30
  */
 const querystring = require('querystring');
 const config = require('./config.js');
@@ -86,7 +86,11 @@ async function init(queryValue) {
             }
 
             if (key === 'stand_alone') {
-                config.standAlone = !!value;
+                if (value === "null") {
+                    config.standAlone = false;
+                } else {
+                    config.standAlone = !!value;
+                }
                 continue;
             }
             queryValue[key] = `${value}`;
