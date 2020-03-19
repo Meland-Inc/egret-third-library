@@ -3,7 +3,7 @@
  * @desc 平台相关的逻辑
  * @date 2020-02-19 11:22:49
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-20 04:56:10
+ * @Last Modified time: 2020-03-20 07:27:10
  */
 const querystring = require('querystring');
 const Config = require('./config.js').Config;
@@ -105,9 +105,9 @@ async function init() {
 /** 登陆贝尔平台 */
 function login() {
     let data = { temporary_token: Config.bellTempToken };
-    if (Config.bellToken) {
-        data[token] = Config.bellToken;
-    }
+    // if (Config.bellToken) {
+    //     data["webviewToken"] = Config.bellToken;
+    // }
     logger.log('net', `请求登录贝尔平台, bellApiOrigin: ${Config.bellApiOrigin}, bellTempToken:${Config.bellTempToken}`);
     return new Promise((resolve, reject) => {
         util.requestPostHttps(Config.bellApiOrigin, null, '/common/member/login-by-temporary-token', data, null

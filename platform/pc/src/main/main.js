@@ -3,7 +3,7 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-20 07:07:03
+ * @Last Modified time: 2020-03-20 07:27:20
  */
 // Modules to control application life and create native browser window
 const { app, globalShortcut, BrowserWindow, Menu, shell, dialog } = require('electron')
@@ -95,7 +95,7 @@ async function createWindow() {
   initNative();
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools()
+  // mainWindow.webContents.openDevTools()
 
   mainWindow.webContents.on('crashed', () => {
     const options = {
@@ -150,31 +150,31 @@ async function createWindow() {
     await mainWindow.loadURL(url);
   })
 
-  // 拦截new-window事件，起到拦截window.open的作用
-  mainWindow.webContents.on('will-navigate', async (e, url, frameName, disposition, options, additionalFeatures) => {
+  // // 拦截new-window事件，起到拦截window.open的作用
+  // mainWindow.webContents.on('will-navigate', async (e, url, frameName, disposition, options, additionalFeatures) => {
 
-    const tokenField = "webviewToken";
-    const newURL = new URL(url);
-    const hash = newURL.hash;
+  //   const tokenField = "webviewToken";
+  //   const newURL = new URL(url);
+  //   const hash = newURL.hash;
 
-    const searchParams = (new URL(`https://bai.com${hash.slice(1)}`)).searchParams;
+  //   const searchParams = (new URL(`https://bai.com${hash.slice(1)}`)).searchParams;
 
-    if (newURL.searchParams.has(tokenField)
-      || searchParams.has(tokenField)
-    ) {
-      return;
-    }
+  //   if (newURL.searchParams.has(tokenField)
+  //     || searchParams.has(tokenField)
+  //   ) {
+  //     return;
+  //   }
 
-    // 阻止创建默认窗口
-    e.preventDefault();
+  //   // 阻止创建默认窗口
+  //   e.preventDefault();
 
-    if (Config.bellToken) {
-      newURL.searchParams.append(tokenField, Config.bellToken);
-    }
+  //   if (Config.bellToken) {
+  //     newURL.searchParams.append(tokenField, Config.bellToken);
+  //   }
 
-    logger.log('electron', `will-navigate: ${newURL}`);
-    await mainWindow.loadURL(newURL.toString());
-  })
+  //   logger.log('electron', `will-navigate: ${newURL}`);
+  //   await mainWindow.loadURL(newURL.toString());
+  // })
 
   //设置菜单
   const menu = Menu.buildFromTemplate(template);
@@ -228,7 +228,7 @@ app.on('ready', () => {
     shortCut = 'Ctrl+Shift+I';
   }
   globalShortcut.register(shortCut, () => {
-    // mainWindow.toggleDevTools();
+    mainWindow.openDevTools();
     // mainWindow.webContents.toggleDevTools
   })
 })
