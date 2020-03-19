@@ -3,7 +3,7 @@
  * @desc main用的配置
  * @date 2020-02-13 14:54:41 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-18 09:49:28
+ * @Last Modified time: 2020-03-19 18:49:27
  */
 /** 本机IP */
 const localIp = "127.0.0.1";
@@ -107,7 +107,8 @@ const eUserType = {
 
 /** 路由枚举 */
 const eLessonRouter = {
-    createMap: "createMap"
+    createMap: "createMap",
+    banner: "banner",
 }
 
 /** 游戏服务器模式 */
@@ -123,6 +124,9 @@ const eNativeMode = {
     website: 2,  //官网进入
     platform: 3, //b端平台上课模式(入口从平台进) 
     createMap: 4, //c端创造地图模式
+    mapTemplate: 5, //c端地图模板模式
+    mapTemplateRoom: 6, //c端地图模板房间模式
+    banner: 7, //banner模式
 }
 
 /** 伪协议里url带的参数 */

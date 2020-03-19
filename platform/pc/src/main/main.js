@@ -3,7 +3,7 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-19 00:20:04
+ * @Last Modified time: 2020-03-19 16:00:48
  */
 // Modules to control application life and create native browser window
 const { app, globalShortcut, BrowserWindow, Menu, shell, dialog } = require('electron')
@@ -37,13 +37,13 @@ async function initNative() {
     //创造地图模式
     if (config.lessonRouter === config.eLessonRouter.createMap) {
       config.nativeMode = config.eNativeMode.createMap;
+    } else if (config.lessonRouter === config.eLessonRouter.banner) {
+      config.nativeMode = config.eNativeMode.banner;
     } else {
       config.nativeMode = config.eNativeMode.platform;
     }
   }
   await mainWindow.loadFile(`${config.rootPath}/src/renderer/renderer.html`);
-
-  message.sendIpcMsg("NATIVE_INITED", mainWindow);
 
   logger.log('net', `config.urlValue`, config.urlValue);
 }
@@ -75,7 +75,7 @@ async function createWindow() {
     fs.mkdirSync(`${config.rootPath}/package/server`)
   }
 
-  let userAgent = mainWindow.webContents.userAgent + " BellCodeIpadWebView";
+  let userAgent = mainWindow.webContents.userAgent + " BellCodeIpadWebView BellplanetNative";
   mainWindow.webContents.userAgent = userAgent;
 
   /** 设置url参数 */

@@ -3,7 +3,7 @@
  * @desc 渲染进程消息处理文件
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-18 09:46:00
+ * @Last Modified time: 2020-03-19 16:39:15
  */
 import { Config } from './Config.js';
 import { ClientUpdate } from './update/ClientUpdate.js';
@@ -15,17 +15,13 @@ let fs = require('fs');
 
 //消息对应方法集合
 let msgMap = {
-    'NATIVE_INITED': onNativeInited,    //native初始化完毕
     'UPDATE_GLOBAL_CONFIG': onUpdateGlobalConfig,//更新全局配置
     'SAVE_NATIVE_LOGIN_RESPONSE': onSaveNativeLoginResponse,    //保存native平台登陆信息
     'SAVE_NATIVE_SERVER_IP_PORT': onSaveNativeServerIpPort,     //设置native服务器内网ip和端口
-    'START_CREATE_MAP': onStartCreateMap,  //创建地图模式
-    'START_NATIVE_GAME': onStartNativeGame,  //开始游戏模式
+    'START_NATIVE_CLIENT': onStartNativeClient,  //从客户端进入
     'START_NATIVE_WEBSITE': onStartNativeWebsite,  //开始官网地址进入
     'START_NATIVE_PLATFORM': onStartNativePlatform,  //开始平台进入
     'SEND_MSG_TO_CLIENT': onSendMsgToClient, //发送消息到客户端
-    // "MAP_TEMPLATE_ENTER": onMapTemplateEnter, //进入地图模板
-    // "MAP_TEMPLATE_ROOM_CREATE": onMapTemplateRoomCreate, //进入地图模板
 }
 
 let clientUpdate = new ClientUpdate();
@@ -45,12 +41,6 @@ export function init() {
         logger.log('renderer', `收到主进程消息:${msgId} args`, ...args);
         applyIpcMsg(msgId, ...args);
     });
-
-    // //监听 客户端消息
-    // ipcRenderer.on('CLIENT_PROCESS_MESSAGE', (evt, msgId, ...args) => {
-    //     logger.log('main', `收到客户端消息:${msgId} args`, ...args);
-    //     applyClientMsg(msgId, ...args);
-    // });
 }
 
 /** 应用主进程消息 */
@@ -59,11 +49,6 @@ function applyIpcMsg(msgId, ...args) {
     if (func) {
         func(...args);
     }
-}
-
-/** native初始化完毕 */
-function onNativeInited(mainWindow) {
-    Config.mainWindow = mainWindow;
 }
 
 /** 更新全局配置 */
@@ -82,10 +67,6 @@ function onSaveNativeServerIpPort(ip, port) {
     Config.setGameServerLocalPort(port);
 }
 
-// async function onCheckUpdate() {
-//     await this.checkUpdate();
-// }
-
 /** 检查更新 */
 export async function checkUpdate() {
     logger.log('update', `开始检查更新`);
@@ -95,12 +76,12 @@ export async function checkUpdate() {
     //服务器包所在目录
     let serverPackageDir = `${Config.serverPackagePath}server`;
     let serverDirect = false;
-    let serverExists = await fs.existsSync(serverPackageDir);
+    let serverExists = fs.existsSync(serverPackageDir);
     if (!serverExists) {
         serverDirect = true;
     } else {
-        let dir = await fs.readdirSync(serverPackageDir);
-        if (dir.length == 0) {
+        let dir = fs.readdirSync(serverPackageDir);
+        if (dir.length < 2) {
             serverDirect = true;
         }
     }
@@ -108,13 +89,13 @@ export async function checkUpdate() {
     //客户端包所在目录
     let clientPackageDir = Config.clientPackagePath;
     let clientDirect = false;
-    let clientExists = await fs.existsSync(clientPackageDir);
+    let clientExists = fs.existsSync(clientPackageDir);
     if (!clientExists) {
         clientDirect = true;
     } else {
-        let dir = await fs.readdirSync(clientPackageDir);
+        let dir = fs.readdirSync(clientPackageDir);
         logger.log(`net`, `dir length:${dir.length}`);
-        if (dir.length === 0) {
+        if (dir.length < 2) {
             clientDirect = true;
         }
     }
@@ -209,26 +190,11 @@ function checkUpdateComplete() {
     sendIpcMsg(`CHECK_UPDATE_COMPLETE`);
 }
 
-/** 创建地图模式 */
-async function onStartCreateMap(queryValue) {
+/** 从客户端进入 */
+async function onStartNativeClient(queryValue) {
     setConfigData2LocalStorage();
 
-    let jumpHref = `${Config.rootPath}/package/client/index.html?${queryValue}`;
-
-    // jumpHref = jumpHref + "&createMap=1";
-    location.href = jumpHref;
-
-    // location.href = "http://192.168.21.115:3000/index.html?fakeGameMode=lessons"
-    registerClientMsg();
-}
-
-/** 开始游戏模式 */
-async function onStartNativeGame(queryObject) {
-    setConfigData2LocalStorage();
-
-    let queryValue = querystring.stringify(queryObject);
-    let jumpHref = `${Config.rootPath}/package/client/index.html?${queryValue}`;
-    location.href = jumpHref;
+    location.href = `${Config.rootPath}/package/client/index.html?${queryValue}`;
     registerClientMsg();
 }
 
@@ -236,11 +202,14 @@ async function onStartNativeGame(queryObject) {
 async function onStartNativeWebsite() {
     setConfigData2LocalStorage();
 
-    location.href = Config.bellcodeUrl;
+    // location.href = Config.bellcodeUrl;
+    location.href = 'http://democm.wkcoding.com/';
+
+    //http://wplanet.wkcoding.com/app-beta?register=1&developMode=1&fakeGameMode=lessons&register=1&banner=1&bellApiOrigin=demoapi.wkcoding.com&serverListServer=ready-server-list.wkcoding.com
     registerClientMsg();
 }
 
-/** 开始平台进入 */
+/** 从官网平台进入 */
 async function onStartNativePlatform(queryObject) {
     setConfigData2LocalStorage();
 

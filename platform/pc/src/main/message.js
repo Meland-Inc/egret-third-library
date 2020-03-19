@@ -3,7 +3,7 @@
  * @desc 主进程消息处理类
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-18 09:47:27
+ * @Last Modified time: 2020-03-19 15:04:11
  */
 const config = require('./config.js');
 const { ipcMain } = require('electron');
@@ -73,6 +73,11 @@ async function onCheckUpdateComplete() {
 
     logger.log('config', `nativeMode:${config.nativeMode}`);
 
+    if (config.nativeMode === config.eNativeMode.banner) {
+        await startBanner();
+        return;
+    }
+
     if (config.nativeMode === config.eNativeMode.createMap) {
         await startCreateMap();
         return;
@@ -94,12 +99,20 @@ async function onCheckUpdateComplete() {
     }
 }
 
+/** 从banner模式进入 */
+async function startBanner() {
+    let queryValue = config.urlValue.slice(config.urlValue.indexOf("?") + 1);
+    queryValue += `&nativeMode=${config.eNativeMode.banner}`;
+    logger.log('update', `从banner模式进入`);
+    sendIpcMsg('START_NATIVE_CLIENT', queryValue);
+}
+
 /** 从创造地图模式进入 */
 async function startCreateMap() {
     let queryValue = config.urlValue.slice(config.urlValue.indexOf("?") + 1);
     queryValue += `&nativeMode=${config.eNativeMode.createMap}`;
     logger.log('update', `从创造地图模式进入`);
-    sendIpcMsg('START_CREATE_MAP', queryValue);
+    sendIpcMsg('START_NATIVE_CLIENT', queryValue);
 }
 
 /** 从游戏模式进入 */
@@ -111,7 +124,10 @@ async function startNativeGame() {
 
     //本地服务器初始化
     await server.init();
-    sendIpcMsg('START_NATIVE_GAME', queryObject);
+
+    let queryValue = querystring.stringify(queryObject);
+
+    sendIpcMsg('START_NATIVE_CLIENT', queryValue);
 }
 
 /** 官网地址进入 */

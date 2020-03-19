@@ -3,16 +3,13 @@
  * @desc renderer用的配置静态类
  * @date 2020-02-13 14:54:50 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-17 18:04:26
+ * @Last Modified time: 2020-03-19 15:57:53
  */
 const fs = require('fs');
 import * as logger from './logger.js';
 import * as message from './message.js';
 
 export class Config {
-    /** 主窗口 */
-    static mainWindow;
-
     /** 全局配置 */
     static globalConfig;
 
