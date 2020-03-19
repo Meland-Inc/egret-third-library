@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="2048,1536" opaque="false">
-  <controller name="ctrlType" pages="0,3*3,3,4*4" selected="1"/>
+  <controller name="ctrlType" pages="0,3*3,3,4*4" selected="0"/>
   <displayList>
-    <component id="n1_erox" name="comSudokuGrid33_0_0" src="erox5" fileName="com/ComSudokuGrid.xml" xy="574,141" size="250,250" group="n36_erox"/>
-    <component id="n0_erox" name="comSudokuGrid33_0_1" src="erox5" fileName="com/ComSudokuGrid.xml" xy="1074,141" size="250,250" group="n36_erox"/>
-    <component id="n2_erox" name="comSudokuGrid33_0_2" src="erox5" fileName="com/ComSudokuGrid.xml" xy="574,641" size="250,250" group="n36_erox"/>
-    <component id="n3_erox" name="comSudokuGrid33_1_0" src="erox5" fileName="com/ComSudokuGrid.xml" xy="574,391" size="250,250" group="n36_erox"/>
-    <component id="n4_erox" name="comSudokuGrid33_1_1" src="erox5" fileName="com/ComSudokuGrid.xml" xy="824,391" size="250,250" group="n36_erox"/>
-    <component id="n5_erox" name="comSudokuGrid33_1_2" src="erox5" fileName="com/ComSudokuGrid.xml" xy="824,641" size="250,250" group="n36_erox"/>
-    <component id="n6_erox" name="comSudokuGrid33_2_0" src="erox5" fileName="com/ComSudokuGrid.xml" xy="824,141" size="250,250" group="n36_erox"/>
-    <component id="n7_erox" name="comSudokuGrid33_2_1" src="erox5" fileName="com/ComSudokuGrid.xml" xy="1074,391" size="250,250" group="n36_erox"/>
-    <component id="n8_erox" name="comSudokuGrid33_2_2" src="erox5" fileName="com/ComSudokuGrid.xml" xy="1074,641" size="250,250" group="n36_erox"/>
-    <group id="n36_erox" name="n36" xy="574,141" size="900,900" advanced="true" collapsed="true">
+    <component id="n1_erox" name="comSudokuGrid33_0_0" src="erox5" fileName="com/ComSudokuGrid.xml" xy="649,141" size="250,250" group="n36_erox"/>
+    <component id="n0_erox" name="comSudokuGrid33_0_1" src="erox5" fileName="com/ComSudokuGrid.xml" xy="1149,141" size="250,250" group="n36_erox"/>
+    <component id="n2_erox" name="comSudokuGrid33_0_2" src="erox5" fileName="com/ComSudokuGrid.xml" xy="649,641" size="250,250" group="n36_erox"/>
+    <component id="n3_erox" name="comSudokuGrid33_1_0" src="erox5" fileName="com/ComSudokuGrid.xml" xy="649,391" size="250,250" group="n36_erox"/>
+    <component id="n4_erox" name="comSudokuGrid33_1_1" src="erox5" fileName="com/ComSudokuGrid.xml" xy="899,391" size="250,250" group="n36_erox"/>
+    <component id="n5_erox" name="comSudokuGrid33_1_2" src="erox5" fileName="com/ComSudokuGrid.xml" xy="899,641" size="250,250" group="n36_erox"/>
+    <component id="n6_erox" name="comSudokuGrid33_2_0" src="erox5" fileName="com/ComSudokuGrid.xml" xy="899,141" size="250,250" group="n36_erox"/>
+    <component id="n7_erox" name="comSudokuGrid33_2_1" src="erox5" fileName="com/ComSudokuGrid.xml" xy="1149,391" size="250,250" group="n36_erox"/>
+    <component id="n8_erox" name="comSudokuGrid33_2_2" src="erox5" fileName="com/ComSudokuGrid.xml" xy="1149,641" size="250,250" group="n36_erox"/>
+    <group id="n36_erox" name="n36" xy="649,141" size="750,750" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlType" pages="0"/>
     </group>
     <component id="n14_erox" name="comSudokuGrid44_0_0" src="erox5" fileName="com/ComSudokuGrid.xml" xy="624,141" size="200,200" group="n35_erox"/>
@@ -33,10 +33,10 @@
     <group id="n35_erox" name="n35" xy="624,141" size="800,800" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlType" pages="3"/>
     </group>
-    <component id="n38_erox" name="comDragGrid" src="erox5" fileName="com/ComSudokuGrid.xml" xy="36,87" size="200,200" visible="false">
+    <component id="n38_erox" name="comDragGrid" src="erox5" fileName="com/ComSudokuGrid.xml" xy="36,87" size="250,250" visible="false">
       <gearSize controller="ctrlType" pages="0,3" values="250,250,1,1|200,200,1,1"/>
     </component>
-    <list id="n39_u3c4" name="lstOption" xy="229,1109" size="1589,250" layout="row" overflow="scroll" colGap="100" defaultItem="ui://adde5qwgerox5" align="center" vAlign="middle">
+    <list id="n39_u3c4" name="lstOption" xy="229,1109" size="1589,420" layout="row" scroll="both" colGap="100" defaultItem="ui://adde5qwgerox5" autoItemSize="false" align="center">
       <item/>
       <item/>
       <item/>
