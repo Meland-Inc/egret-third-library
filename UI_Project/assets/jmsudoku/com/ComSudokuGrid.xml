@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="300,300">
-  <controller name="ctrlNumber" pages="0,0,1,1,2,2,3,3,4,4,5,101" selected="1"/>
+  <controller name="ctrlNumber" pages="0,0,1,1,2,2,3,3,4,4,5,101" selected="5"/>
   <controller name="ctrlType" pages="0,blank,1,number" selected="0"/>
   <displayList>
     <graph id="n0_erox" name="n0" xy="0,0" size="300,300" type="rect" lineSize="2" fillColor="#00ffffff">
@@ -22,6 +22,10 @@
     <image id="n4_erox" name="img4" src="erox3" fileName="img/icon_jmsudoku_number4.png" xy="0,0" size="300,300">
       <gearDisplay controller="ctrlNumber" pages="4"/>
       <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n8_kag9" name="img101" src="kag98" fileName="img/icon_jmsudoku_number101.png" xy="0,0">
+      <gearDisplay controller="ctrlNumber" pages="5"/>
+      <relation target="" sidePair="height-height,width-width"/>
     </image>
     <component id="n5_erox" name="btnGrid" src="erox6" fileName="btnDrag.xml" xy="0,0" size="300,300">
       <relation target="" sidePair="height-height,width-width"/>
