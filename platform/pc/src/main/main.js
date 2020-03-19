@@ -3,7 +3,7 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-19 22:55:25
+ * @Last Modified time: 2020-03-20 01:29:15
  */
 // Modules to control application life and create native browser window
 const { app, globalShortcut, BrowserWindow, Menu, shell, dialog } = require('electron')
@@ -14,6 +14,7 @@ const logger = require('./logger.js');
 const Config = require('./config.js').Config;
 const server = require('./server.js');
 const message = require('./message.js');
+const util = require('./util.js');
 
 let mainWindow
 
@@ -187,6 +188,11 @@ app.on('second-instance', async (event, argv, workingDirectory) => {
 
 app.on('ready', () => {
   createWindow();
+
+  //检测杀game进程
+  let cmdStr = "taskkill /im game.exe /f";
+  util.runCmd(cmdStr, null, `关闭游戏服务器成功`, "关闭游戏服务器错误");
+
   let shortCut = "";
   if (process.platform === 'darwin') {
     shortCut = 'Alt+Command+I';

@@ -3,14 +3,14 @@
  * @desc main用的工具类
  * @date 2020-02-18 11:43:24 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-19 23:14:46
+ * @Last Modified time: 2020-03-20 01:19:42
  */
 // const spawn = require("child_process").spawn;
 const exec = require("child_process").exec;
 const logger = require('./logger.js');
 const Config = require('./config.js').Config;
 const message = require('./message.js');
-const http = require('http');
+const https = require('https');
 const fs = require('fs');
 const querystring = require('querystring');
 
@@ -92,7 +92,7 @@ function requestGetHttp(host, port, path, data, headers, successFunc, errorFunc)
         }
     }
 
-    let request = http.request(options, (response) => {
+    let request = https.request(options, (response) => {
         response.setEncoding('utf8');
 
         let body = "";
@@ -153,7 +153,7 @@ function requestPostHttp(host, port, path, data, headers, successFunc, errorFunc
         }
     }
 
-    let request = http.request(options, (response) => {
+    let request = https.request(options, (response) => {
         response.setEncoding('utf8');
 
         let body = "";
