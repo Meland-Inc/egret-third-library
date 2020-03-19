@@ -40,7 +40,7 @@
       "certificateFile": "bellplanet.pfx",
       "certificatePassword": "bellcode123",
       "icon": "./icon/icon.ico",
-      "requestedExecutionLevel": "requireAdministrator"
+      "requestedExecutionLevel": "highestAvailable"
     },
     "dmg": {
       "contents": [
