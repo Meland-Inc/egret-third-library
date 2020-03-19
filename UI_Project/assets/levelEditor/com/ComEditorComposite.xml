@@ -19,7 +19,7 @@
       <gearXY controller="ctrlFold" pages="1" values="0,402" default="260,402"/>
       <relation target="" sidePair="middle-middle"/>
     </image>
-    <component id="n7_l7sp" name="btnHide" src="ilo1cyidi" fileName="btn/btnScaleNoEffect.xml" pkg="te1gxawo" xy="260,402" size="46,138" group="n8_l7sp">
+    <component id="n7_l7sp" name="btnHide" src="ojgccyifb" fileName="btn/btnScaleNoEffect.xml" xy="260,402" size="46,138" group="n8_l7sp">
       <gearDisplay controller="ctrlFold" pages="0"/>
       <relation target="n3_l7sp" sidePair="center-center,middle-middle"/>
       <Button icon="" controller="ctrlFold" page="1"/>
@@ -29,7 +29,7 @@
       <relation target="n3_l7sp" sidePair="center-center,middle-middle"/>
     </image>
     <group id="n8_l7sp" name="hide" xy="260,402" size="46,138" group="n12_l7sp"/>
-    <component id="n6_l7sp" name="btnOpen" src="ilo1cyidi" fileName="btn/btnScaleNoEffect.xml" pkg="te1gxawo" xy="260,402" size="46,138" group="n9_l7sp">
+    <component id="n6_l7sp" name="btnOpen" src="ojgccyifb" fileName="btn/btnScaleNoEffect.xml" xy="260,402" size="46,138" group="n9_l7sp">
       <gearDisplay controller="ctrlFold" pages="1"/>
       <relation target="n3_l7sp" sidePair="center-center,middle-middle"/>
       <Button icon="" controller="ctrlFold" page="0"/>

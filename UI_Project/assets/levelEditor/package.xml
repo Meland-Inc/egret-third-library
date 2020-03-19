@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="ce9jx9xt">
   <resources>
-    <component id="6bth0" name="WinLevelEditor.xml" path="/win/" exported="true"/>
+    <component id="6bth0" name="WinLevelEditor.xml" path="/win/"/>
     <image id="nhj61" name="img_jm_pt_ym.png" path="/img/"/>
     <image id="nhj62" name="img_jm_xx.png" path="/img/"/>
     <image id="nhj63" name="img_jm_xx_1.png" path="/img/"/>
@@ -11,7 +11,7 @@
     <image id="nhj67" name="icon_jm_fy_1.png" path="/img/"/>
     <image id="nhj68" name="icon_jm_fy_2.png" path="/img/"/>
     <image id="nhj69" name="icon_jm_gj_jx.png" path="/img/"/>
-    <image id="nhj6a" name="icon_jm_gj_jx_1.png" path="/img/"/>
+    <image id="nhj6a" name="icon_jm_gj_jx_1.png" path="/img/" scale="9grid" scale9grid="11,13,25,20"/>
     <image id="nhj6b" name="icon_jm_gj_px.png" path="/img/"/>
     <image id="nhj6c" name="icon_jm_gj_px_1.png" path="/img/"/>
     <image id="nhj6d" name="icon_jm_gj_sjx.png" path="/img/"/>
@@ -62,12 +62,15 @@
     <component id="l7sp20" name="btnTool.xml" path="/btn/"/>
     <image id="l7sp21" name="icon_jm_gj_xz_1.png" path="/img/"/>
     <image id="l7sp22" name="icon_jm_gj_xz.png" path="/img/"/>
-    <component id="l7sp23" name="btnDel.xml" path="/btn/" exported="true"/>
+    <component id="l7sp23" name="btnScale.xml" path="/btn/" exported="true"/>
     <component id="l7sp25" name="btnStart.xml" path="/btn/"/>
     <component id="l7sp26" name="btnDo.xml" path="/btn/"/>
     <component id="nuyecyif8" name="WinPlayLevel.xml" path="/win/" exported="true"/>
     <component id="nuyecyif9" name="ComEditorStage.xml" path="/com/"/>
     <component id="cdz3cyifa" name="ComPlayView.xml" path="/com/"/>
+    <component id="ojgccyifb" name="btnScaleNoEffect.xml" path="/btn/" exported="true"/>
+    <component id="ojgccyifc" name="btnFixClickArea.xml" path="/btn/" exported="true"/>
+    <image id="ojgccyifd" name="btn_cm_gb.png" path="/img/" exported="true"/>
   </resources>
   <publish name="levelEditor"/>
 </packageDescription>

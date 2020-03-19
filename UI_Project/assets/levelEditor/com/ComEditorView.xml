@@ -17,27 +17,27 @@
     </list>
     <text id="n7_l7sp" name="tfTitle" xy="27,14" size="194,31" fontSize="24" color="#333333" vAlign="middle" vars="true" autoSize="none" text="第{page=1}页"/>
     <text id="n10_l7sp" name="tfPageInfo" xy="1154,14" size="78,31" fontSize="24" color="#333333" align="center" vAlign="middle" vars="true" autoSize="none" text="{curPage=1}/{pageNum = 20}"/>
-    <component id="n8_l7sp" name="btnLastPage" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1114,10" size="40,40">
+    <component id="n8_l7sp" name="btnLastPage" src="ojgccyifc" fileName="btn/btnFixClickArea.xml" xy="1114,10" size="40,40">
       <Button icon="ui://ce9jx9xtnhj67"/>
     </component>
-    <component id="n9_l7sp" name="btnNextPage" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1223,9" size="40,40">
+    <component id="n9_l7sp" name="btnNextPage" src="ojgccyifc" fileName="btn/btnFixClickArea.xml" xy="1223,9" size="40,40">
       <Button icon="ui://ce9jx9xtnhj68"/>
     </component>
     <component id="n11_nuye" name="comEditorStage" src="nuyecyif9" fileName="com/ComEditorStage.xml" xy="107,111" size="1066,580"/>
     <graph id="n21_jimd" name="gphEditCanvas" xy="0,0" size="1280,720" lineSize="0"/>
     <image id="n13_jimd" name="n13" src="nhj61" fileName="img/img_jm_pt_ym.png" xy="107,651"/>
     <text id="n14_jimd" name="tfPage" xy="113,657" size="78,31" fontSize="24" color="#333333" align="center" vAlign="middle" vars="true" autoSize="none" text="{curPage=1}/{pageNum = 20}"/>
-    <component id="n15_jimd" name="btnVoice" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="126,140" size="80,80" group="n18_jimd">
+    <component id="n15_jimd" name="btnVoice" src="l7sp23" fileName="btn/btnScale.xml" xy="126,140" size="80,80" group="n18_jimd">
       <gearDisplay controller="ctrlVoiceType" pages="1,2"/>
       <gearIcon controller="ctrlVoiceType" pages="1,2" values="ui://ce9jx9xtnhj6k|ui://ce9jx9xtnhj6p" default=""/>
     </component>
     <image id="n16_jimd" name="n16" src="nhj616" fileName="img/img_jm_pt_msk.png" xy="247,147" size="789,66" group="n18_jimd"/>
     <text id="n17_jimd" name="tfDescribe" xy="283,166" size="709,31" group="n18_jimd" fontSize="24" color="#ffffff" vAlign="middle" autoSize="none" text="这里是关卡描述"/>
     <group id="n18_jimd" name="n18" xy="126,140" size="910,80" advanced="true"/>
-    <component id="n19_jimd" name="btnUndo" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1087,526" size="58,62">
+    <component id="n19_jimd" name="btnUndo" src="l7sp23" fileName="btn/btnScale.xml" xy="1087,526" size="58,62">
       <Button icon="ui://ce9jx9xtnhj6l"/>
     </component>
-    <component id="n20_jimd" name="btnMerge" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1087,603" size="58,62">
+    <component id="n20_jimd" name="btnMerge" src="l7sp23" fileName="btn/btnScale.xml" xy="1087,603" size="58,62">
       <Button icon="ui://ce9jx9xtnhj6n"/>
     </component>
   </displayList>

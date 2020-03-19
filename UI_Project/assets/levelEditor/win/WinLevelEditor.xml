@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://thvmj7vonhj64cyijq" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlRecordHint" pages="0,none,1,left,2,right,3,all" selected="0"/>
-  <controller name="ctrlShowType" pages="0,none,1,puzzle" selected="0"/>
+  <controller name="ctrlShowType" pages="0,none,1,puzzle" selected="1"/>
   <displayList>
     <image id="n16_mock" name="imgBg" src="nhj612" fileName="img/img_jm_gq_bg.png" xy="0,0" size="1920,1080">
       <relation target="" sidePair="width-width,height-height"/>
@@ -55,7 +55,7 @@
       <gearDisplay controller="ctrlShowType" pages="1"/>
       <relation target="n29_nci3" sidePair="left-left,top-top"/>
     </component>
-    <component id="n31_nci3" name="btnDel" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="1077,433" size="58,62" visible="false">
+    <component id="n31_nci3" name="btnDel" src="l7sp23" fileName="btn/btnScale.xml" xy="1077,433" size="58,62">
       <gearDisplay controller="ctrlShowType" pages="1"/>
       <Button icon="ui://ce9jx9xtnhj6o"/>
     </component>
