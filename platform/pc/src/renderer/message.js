@@ -3,7 +3,7 @@
  * @desc 渲染进程消息处理文件
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-19 16:39:15
+ * @Last Modified time: 2020-03-20 00:33:00
  */
 import { Config } from './Config.js';
 import { ClientUpdate } from './update/ClientUpdate.js';
@@ -202,8 +202,11 @@ async function onStartNativeClient(queryValue) {
 async function onStartNativeWebsite() {
     setConfigData2LocalStorage();
 
-    // location.href = Config.bellcodeUrl;
-    location.href = 'http://democm.wkcoding.com/';
+    if (Config.environName === Config.eEnvironName.release) {
+        location.href = Config.bellcodeUrl;
+    } else {
+        location.href = 'http://democm.wkcoding.com/';
+    }
 
     //http://wplanet.wkcoding.com/app-beta?register=1&developMode=1&fakeGameMode=lessons&register=1&banner=1&bellApiOrigin=demoapi.wkcoding.com&serverListServer=ready-server-list.wkcoding.com
     registerClientMsg();
