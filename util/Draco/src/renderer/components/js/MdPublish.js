@@ -830,7 +830,8 @@ export async function writeNativeIndexToPath(egretIndexPath) {
 
 /** 更新服务器包 */
 export async function updateServerPackage() {
-    let serverPackage = `${Global.svnPath}/server/native`;
+    let environ = ModelMgr.versionModel.curEnviron;
+    let serverPackage = `${Global.svnPath}/server/native_${environ.name}`;
     await spawnExc.svnUpdate(serverPackage, "", "更新服务器包错误");
 }
 
@@ -851,7 +852,8 @@ export async function clearPackageDir() {
 /** 比较服务端包版本 */
 export function mergeServerPackage() {
     return new Promise(async (resolve, reject) => {
-        let serverPackage = `${Global.svnPath}/server/native`;
+        let environ = ModelMgr.versionModel.curEnviron;
+        let serverPackage = `${Global.svnPath}/server/native_${environ.name}`;
 
         let packageDir = await fsExc.readDir(serverPackage);
         await checkUploadServerPackages(packageDir, () => {
@@ -949,7 +951,7 @@ async function checkUploadServerPackages(packageDir, successFunc) {
     // await checkUploadServerPackages(packageDir, successFunc);
     // return;
 
-    let newServerPackagePath = `${Global.svnPath}/server/native/${iterator}`;
+    let newServerPackagePath = `${Global.svnPath}/server/native_${environ.name}/${iterator}`;
     let curServerPackagePath = `${Global.svnPublishPath}${environ.serverPackagePath}/${iterator}`;
     let newPolicyNum;
 
