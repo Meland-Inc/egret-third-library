@@ -5,6 +5,7 @@
  * @Last Modified by: 雪糕
  * @Last Modified time: 2020-03-19 23:13:28
  */
+const fs = require('fs');
 const http = require('http');
 const url = require('url');
 const Config = require('./config.js').Config;
@@ -126,6 +127,20 @@ function closeNativeServer() {
     })
 }
 
+// 设置游戏运行权限
+function assignGameXPermission(paths) {
+    return new Promise((resolve, reject) => {
+        for (let path of paths) {
+            fs.chmod(path, fs.constants.S_IXUSR, (err) => {
+                if (err) {
+                    reject(err);
+                }
+            });
+        }
+        resolve();
+    })    
+}
+
 /** 创建游戏服务器 */
 async function createGameServer(mode) {
     if (gameServerProcess) {
@@ -135,7 +150,11 @@ async function createGameServer(mode) {
 
     logger.log('net', '创建游戏服务器');
     Config.setGameServerMode(mode);
-    let cmd = `game`;
+    let cmd = `./game`;
+    assignGameXPermission([
+        `${Config.rootPath}/package/server/game`,
+        `${Config.rootPath}/package/server/ngrok`
+    ]);
     gameServerProcess = await util.runCmd(cmd, `${Config.rootPath}/package/server/`, "创建游戏服务器成功", "创建游戏服务器失败");
 }
 
