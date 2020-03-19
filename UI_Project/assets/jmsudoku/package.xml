@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="adde5qwg">
-  <resources/>
+<packageDescription id="adde5qwg" jpegQuality="80" compressPNG="true">
+  <resources>
+    <image id="erox0" name="icon_jmsudoku_number1.png" path="/img/"/>
+    <image id="erox1" name="icon_jmsudoku_number2.png" path="/img/"/>
+    <image id="erox2" name="icon_jmsudoku_number3.png" path="/img/"/>
+    <image id="erox3" name="icon_jmsudoku_number4.png" path="/img/"/>
+    <component id="erox4" name="ComSudoku.xml" path="/com/" exported="true"/>
+    <component id="erox5" name="ComSudokuGrid.xml" path="/com/" exported="true"/>
+    <component id="erox6" name="btnDrag.xml" path="/"/>
+  </resources>
+  <publish name="jmsudoku"/>
 </packageDescription>
