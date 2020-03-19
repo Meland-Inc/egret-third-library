@@ -1053,7 +1053,7 @@ export async function writeVersionInfo() {
     let nativeConfigContent = await fsExc.readFile(Global.nativeConfigPath);
     let curEnviron = ModelMgr.versionModel.curEnviron;
     let nativeConfig = JSON.parse(nativeConfigContent);
-    nativeConfig.environName = curEnviron.name;
+    nativeConfig.environName = curEnviron.trunkName;
     let gameVersion = await ModelMgr.versionModel.getEnvironGameVersion(curEnviron.name);
     nativeConfig.gameVersion = +gameVersion;
     if (curEnviron.name == ModelMgr.versionModel.eEnviron.release) {
