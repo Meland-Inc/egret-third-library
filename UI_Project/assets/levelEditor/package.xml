@@ -56,21 +56,21 @@
     <image id="u3xqcyif5" name="img_sket_ydgj_1.png" path="/com/"/>
     <image id="u3xqcyif6" name="img_sket_ydgj_2.png" path="/com/"/>
     <component id="u3xqcyif7" name="ComEditorBoxContainer.xml" path="/com/"/>
-    <component id="l7sp1t" name="btnAddImg.xml" path="/btn/" exported="true"/>
+    <component id="l7sp1t" name="btnAddImg.xml" path="/btn/"/>
     <component id="l7sp1u" name="btnSetting.xml" path="/btn/"/>
     <component id="l7sp1z" name="ComEditorComposite.xml" path="/com/"/>
     <component id="l7sp20" name="btnTool.xml" path="/btn/"/>
     <image id="l7sp21" name="icon_jm_gj_xz_1.png" path="/img/"/>
     <image id="l7sp22" name="icon_jm_gj_xz.png" path="/img/"/>
-    <component id="l7sp23" name="btnScale.xml" path="/btn/" exported="true"/>
+    <component id="l7sp23" name="btnScale.xml" path="/btn/"/>
     <component id="l7sp25" name="btnStart.xml" path="/btn/"/>
     <component id="l7sp26" name="btnDo.xml" path="/btn/"/>
     <component id="nuyecyif8" name="WinPlayLevel.xml" path="/win/" exported="true"/>
     <component id="nuyecyif9" name="ComEditorStage.xml" path="/com/"/>
     <component id="cdz3cyifa" name="ComPlayView.xml" path="/com/"/>
-    <component id="ojgccyifb" name="btnScaleNoEffect.xml" path="/btn/" exported="true"/>
-    <component id="ojgccyifc" name="btnFixClickArea.xml" path="/btn/" exported="true"/>
-    <image id="ojgccyifd" name="btn_cm_gb.png" path="/img/" exported="true"/>
+    <component id="ojgccyifb" name="btnScaleNoEffect.xml" path="/btn/"/>
+    <component id="ojgccyifc" name="btnFixClickArea.xml" path="/btn/"/>
+    <image id="ojgccyifd" name="btn_cm_gb.png" path="/img/"/>
   </resources>
   <publish name="levelEditor"/>
 </packageDescription>

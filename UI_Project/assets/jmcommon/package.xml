@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="av6agj0g" jpegQuality="80" compressPNG="true">
-  <resources/>
+<packageDescription id="av6agj0g">
+  <resources>
+    <component id="sco7g" name="WinPlayLevel.xml" path="/win/" exported="true"/>
+    <image id="sco7h" name="img_jm_pt_bgk.png" path="/img/" scale="9grid" scale9grid="20,12,40,24"/>
+    <image id="sco7i" name="img_jm_pt_dbl.png" path="/img/" scale="9grid" scale9grid="10,14,20,28"/>
+    <component id="sco7j" name="ComPlayView.xml" path="/com/"/>
+    <component id="sco7k" name="btnScale.xml" path="/btn/"/>
+    <image id="sco7l" name="btn_cm_gb.png" path="/img/"/>
+    <image id="sco7m" name="img_jm_gjk_3.png" path="/img/" scale="9grid" scale9grid="15,15,30,30"/>
+    <component id="sco7n" name="ComEditorStage.xml" path="/com/"/>
+    <component id="sco7o" name="btnStart.xml" path="/btn/"/>
+    <image id="sco7p" name="img_jm_xx.png" path="/img/"/>
+    <image id="sco7q" name="img_jm_xx_1.png" path="/img/"/>
+    <image id="sco7r" name="img_jm_pt_ym.png" path="/img/"/>
+    <image id="sco7s" name="img_jm_pt_msk.png" path="/img/" scale="9grid" scale9grid="29,17,58,34"/>
+    <image id="sco7t" name="icon_jm_pt_bf.png" path="/img/"/>
+    <image id="sco7u" name="icon_jm_pt_zt.png" path="/img/"/>
+    <image id="sco7v" name="icon_jm_pt_cx.png" path="/img/"/>
+    <image id="sco7w" name="icon_jm_pt_pt.png" path="/img/"/>
+    <image id="sco7x" name="img_jm_cbl.png" path="/img/"/>
+    <image id="sco715" name="跳过关卡.png" path="/img/"/>
+    <image id="sco716" name="wrong.png" path="/img/"/>
+    <image id="sco717" name="tipsnext.png" path="/img/"/>
+    <image id="sco718" name="right.png" path="/img/"/>
+    <image id="sco719" name="next.png" path="/img/"/>
+    <image id="sco71a" name="jindutiao2.png" path="/img/"/>
+    <image id="sco71b" name="jindutiao1.png" path="/img/"/>
+  </resources>
   <publish name="jmcommon"/>
 </packageDescription>
