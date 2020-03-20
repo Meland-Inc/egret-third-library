@@ -55,6 +55,8 @@
     <image id="wmmv2h" name="btn_cm_gb.png" path="/imgBaseCommon/"/>
     <component id="wmmv2i" name="JMCommonWarn.xml" path="/comBaseCommon/" exported="true"/>
     <image id="wmmv2j" name="icon_cm_caveat.png" path="/imgBaseCommon/"/>
+    <component id="wmmv2k" name="JMCommonModal.xml" path="/comBaseCommon/" exported="true"/>
+    <image id="wmmv2l" name="img_cm_zzdt.png" path="/imgBaseCommon/" scale="9grid" scale9grid="10,10,20,20"/>
   </resources>
-  <publish name="jmcommon"/>
+  <publish name="jmcommon" path="E:\work\xiaobei\ClientProject\feature-xiang\resource\jingmiAssets\fairyGui"/>
 </packageDescription>
