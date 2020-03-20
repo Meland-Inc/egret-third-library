@@ -64,7 +64,7 @@
     <component id="n57_sco7" name="btnSetConfig" src="sco7k" fileName="btn/btnScale.xml" xy="684,1459" size="198,58" group="n58_sco7" controller="button,0">
       <Button title="加载配置" titleFontSize="40" icon="ui://av6agj0gsco7x"/>
     </component>
-    <group id="n58_sco7" name="config" xy="266,1459" size="616,58" advanced="true">
+    <group id="n58_sco7" name="config" xy="266,1459" size="616,58" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlIsDevelop" pages="1"/>
       <relation target="" sidePair="left-left,bottom-bottom"/>
     </group>
@@ -97,7 +97,7 @@
     <image id="n66_sco7" name="imgRateBg" src="alb71r" fileName="img/jindu1.png" xy="1464,44" group="n70_sco7"/>
     <image id="n65_sco7" name="imgRate" src="alb71q" fileName="img/jindu2.png" xy="1464,44" group="n70_sco7"/>
     <graph id="n69_sco7" name="gphRateMask" xy="1464,44" size="526,100" group="n70_sco7" type="rect" lineSize="0"/>
-    <group id="n70_sco7" name="grpRate" xy="1464,44" size="526,100" advanced="true">
+    <group id="n70_sco7" name="grpRate" xy="1464,44" size="526,100" advanced="true" collapsed="true">
       <relation target="n37_gx7z" sidePair="right-right,top-top"/>
     </group>
     <component id="n30_nuye" name="btnClose" src="sco7k" fileName="btn/btnScale.xml" xy="0,0" size="174,90" controller="button,0">

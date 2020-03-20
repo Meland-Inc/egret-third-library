@@ -29,6 +29,7 @@
     </image>
     <component id="n5_erox" name="btnGrid" src="erox6" fileName="btnDrag.xml" xy="0,0" size="250,250">
       <relation target="" sidePair="height-height,width-width"/>
+      <relation target="" sidePair="left-left,top-top"/>
     </component>
   </displayList>
 </component>
