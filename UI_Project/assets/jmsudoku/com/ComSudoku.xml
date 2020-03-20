@@ -2,41 +2,41 @@
 <component size="2048,1536" opaque="false">
   <controller name="ctrlType" pages="0,3*3,3,4*4" selected="0"/>
   <displayList>
-    <component id="n1_erox" name="comSudokuGrid33_0_0" src="erox5" fileName="com/ComSudokuGrid.xml" xy="649,141" size="250,250" group="n36_erox"/>
-    <component id="n0_erox" name="comSudokuGrid33_0_1" src="erox5" fileName="com/ComSudokuGrid.xml" xy="1149,141" size="250,250" group="n36_erox"/>
-    <component id="n2_erox" name="comSudokuGrid33_0_2" src="erox5" fileName="com/ComSudokuGrid.xml" xy="649,641" size="250,250" group="n36_erox"/>
-    <component id="n3_erox" name="comSudokuGrid33_1_0" src="erox5" fileName="com/ComSudokuGrid.xml" xy="649,391" size="250,250" group="n36_erox"/>
-    <component id="n4_erox" name="comSudokuGrid33_1_1" src="erox5" fileName="com/ComSudokuGrid.xml" xy="899,391" size="250,250" group="n36_erox"/>
-    <component id="n5_erox" name="comSudokuGrid33_1_2" src="erox5" fileName="com/ComSudokuGrid.xml" xy="899,641" size="250,250" group="n36_erox"/>
-    <component id="n6_erox" name="comSudokuGrid33_2_0" src="erox5" fileName="com/ComSudokuGrid.xml" xy="899,141" size="250,250" group="n36_erox"/>
-    <component id="n7_erox" name="comSudokuGrid33_2_1" src="erox5" fileName="com/ComSudokuGrid.xml" xy="1149,391" size="250,250" group="n36_erox"/>
-    <component id="n8_erox" name="comSudokuGrid33_2_2" src="erox5" fileName="com/ComSudokuGrid.xml" xy="1149,641" size="250,250" group="n36_erox"/>
-    <group id="n36_erox" name="n36" xy="649,141" size="750,750" advanced="true" collapsed="true">
+    <component id="n1_erox" name="comSudokuGrid33_0_0" src="erox5" fileName="com/ComSudokuGrid.xml" xy="649,225" size="250,250" group="n36_erox"/>
+    <component id="n0_erox" name="comSudokuGrid33_0_1" src="erox5" fileName="com/ComSudokuGrid.xml" xy="1149,225" size="250,250" group="n36_erox"/>
+    <component id="n2_erox" name="comSudokuGrid33_0_2" src="erox5" fileName="com/ComSudokuGrid.xml" xy="649,725" size="250,250" group="n36_erox"/>
+    <component id="n3_erox" name="comSudokuGrid33_1_0" src="erox5" fileName="com/ComSudokuGrid.xml" xy="649,475" size="250,250" group="n36_erox"/>
+    <component id="n4_erox" name="comSudokuGrid33_1_1" src="erox5" fileName="com/ComSudokuGrid.xml" xy="899,475" size="250,250" group="n36_erox"/>
+    <component id="n5_erox" name="comSudokuGrid33_1_2" src="erox5" fileName="com/ComSudokuGrid.xml" xy="899,725" size="250,250" group="n36_erox"/>
+    <component id="n6_erox" name="comSudokuGrid33_2_0" src="erox5" fileName="com/ComSudokuGrid.xml" xy="899,225" size="250,250" group="n36_erox"/>
+    <component id="n7_erox" name="comSudokuGrid33_2_1" src="erox5" fileName="com/ComSudokuGrid.xml" xy="1149,475" size="250,250" group="n36_erox"/>
+    <component id="n8_erox" name="comSudokuGrid33_2_2" src="erox5" fileName="com/ComSudokuGrid.xml" xy="1149,725" size="250,250" group="n36_erox"/>
+    <group id="n36_erox" name="n36" xy="649,225" size="750,750" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlType" pages="0"/>
     </group>
-    <component id="n14_erox" name="comSudokuGrid44_0_0" src="erox5" fileName="com/ComSudokuGrid.xml" xy="624,141" size="200,200" group="n35_erox"/>
-    <component id="n13_erox" name="comSudokuGrid44_0_1" src="erox5" fileName="com/ComSudokuGrid.xml" xy="824,141" size="200,200" group="n35_erox"/>
-    <component id="n17_erox" name="comSudokuGrid44_0_2" src="erox5" fileName="com/ComSudokuGrid.xml" xy="1024,141" size="200,200" group="n35_erox"/>
-    <component id="n15_erox" name="comSudokuGrid44_0_3" src="erox5" fileName="com/ComSudokuGrid.xml" xy="1224,141" size="200,200" group="n35_erox"/>
-    <component id="n16_erox" name="comSudokuGrid44_1_0" src="erox5" fileName="com/ComSudokuGrid.xml" xy="624,341" size="200,200" group="n35_erox"/>
-    <component id="n20_erox" name="comSudokuGrid44_1_1" src="erox5" fileName="com/ComSudokuGrid.xml" xy="824,341" size="200,200" group="n35_erox"/>
-    <component id="n18_erox" name="comSudokuGrid44_1_2" src="erox5" fileName="com/ComSudokuGrid.xml" xy="1024,341" size="200,200" group="n35_erox"/>
-    <component id="n27_erox" name="comSudokuGrid44_1_3" src="erox5" fileName="com/ComSudokuGrid.xml" xy="1224,341" size="200,200" group="n35_erox"/>
-    <component id="n19_erox" name="comSudokuGrid44_2_0" src="erox5" fileName="com/ComSudokuGrid.xml" xy="624,541" size="200,200" group="n35_erox"/>
-    <component id="n28_erox" name="comSudokuGrid44_2_1" src="erox5" fileName="com/ComSudokuGrid.xml" xy="824,541" size="200,200" group="n35_erox"/>
-    <component id="n29_erox" name="comSudokuGrid44_2_2" src="erox5" fileName="com/ComSudokuGrid.xml" xy="1024,541" size="200,200" group="n35_erox"/>
-    <component id="n21_erox" name="comSudokuGrid44_2_3" src="erox5" fileName="com/ComSudokuGrid.xml" xy="1224,541" size="200,200" group="n35_erox"/>
-    <component id="n31_erox" name="comSudokuGrid44_3_0" src="erox5" fileName="com/ComSudokuGrid.xml" xy="624,741" size="200,200" group="n35_erox"/>
-    <component id="n32_erox" name="comSudokuGrid44_3_1" src="erox5" fileName="com/ComSudokuGrid.xml" xy="824,741" size="200,200" group="n35_erox"/>
-    <component id="n30_erox" name="comSudokuGrid44_3_2" src="erox5" fileName="com/ComSudokuGrid.xml" xy="1024,741" size="200,200" group="n35_erox"/>
-    <component id="n33_erox" name="comSudokuGrid44_3_3" src="erox5" fileName="com/ComSudokuGrid.xml" xy="1224,741" size="200,200" group="n35_erox"/>
-    <group id="n35_erox" name="n35" xy="624,141" size="800,800" advanced="true" collapsed="true">
+    <component id="n14_erox" name="comSudokuGrid44_0_0" src="erox5" fileName="com/ComSudokuGrid.xml" xy="624,225" size="200,200" group="n35_erox"/>
+    <component id="n13_erox" name="comSudokuGrid44_0_1" src="erox5" fileName="com/ComSudokuGrid.xml" xy="824,225" size="200,200" group="n35_erox"/>
+    <component id="n17_erox" name="comSudokuGrid44_0_2" src="erox5" fileName="com/ComSudokuGrid.xml" xy="1024,225" size="200,200" group="n35_erox"/>
+    <component id="n15_erox" name="comSudokuGrid44_0_3" src="erox5" fileName="com/ComSudokuGrid.xml" xy="1224,225" size="200,200" group="n35_erox"/>
+    <component id="n16_erox" name="comSudokuGrid44_1_0" src="erox5" fileName="com/ComSudokuGrid.xml" xy="624,425" size="200,200" group="n35_erox"/>
+    <component id="n20_erox" name="comSudokuGrid44_1_1" src="erox5" fileName="com/ComSudokuGrid.xml" xy="824,425" size="200,200" group="n35_erox"/>
+    <component id="n18_erox" name="comSudokuGrid44_1_2" src="erox5" fileName="com/ComSudokuGrid.xml" xy="1024,425" size="200,200" group="n35_erox"/>
+    <component id="n27_erox" name="comSudokuGrid44_1_3" src="erox5" fileName="com/ComSudokuGrid.xml" xy="1224,425" size="200,200" group="n35_erox"/>
+    <component id="n19_erox" name="comSudokuGrid44_2_0" src="erox5" fileName="com/ComSudokuGrid.xml" xy="624,625" size="200,200" group="n35_erox"/>
+    <component id="n28_erox" name="comSudokuGrid44_2_1" src="erox5" fileName="com/ComSudokuGrid.xml" xy="824,625" size="200,200" group="n35_erox"/>
+    <component id="n29_erox" name="comSudokuGrid44_2_2" src="erox5" fileName="com/ComSudokuGrid.xml" xy="1024,625" size="200,200" group="n35_erox"/>
+    <component id="n21_erox" name="comSudokuGrid44_2_3" src="erox5" fileName="com/ComSudokuGrid.xml" xy="1224,625" size="200,200" group="n35_erox"/>
+    <component id="n31_erox" name="comSudokuGrid44_3_0" src="erox5" fileName="com/ComSudokuGrid.xml" xy="624,825" size="200,200" group="n35_erox"/>
+    <component id="n32_erox" name="comSudokuGrid44_3_1" src="erox5" fileName="com/ComSudokuGrid.xml" xy="824,825" size="200,200" group="n35_erox"/>
+    <component id="n30_erox" name="comSudokuGrid44_3_2" src="erox5" fileName="com/ComSudokuGrid.xml" xy="1024,825" size="200,200" group="n35_erox"/>
+    <component id="n33_erox" name="comSudokuGrid44_3_3" src="erox5" fileName="com/ComSudokuGrid.xml" xy="1224,825" size="200,200" group="n35_erox"/>
+    <group id="n35_erox" name="n35" xy="624,225" size="800,800" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlType" pages="3"/>
     </group>
     <component id="n38_erox" name="comDragGrid" src="erox5" fileName="com/ComSudokuGrid.xml" xy="36,87" size="250,250" visible="false">
       <gearSize controller="ctrlType" pages="0,3" values="250,250,1,1|200,200,1,1"/>
     </component>
-    <list id="n39_u3c4" name="lstOption" xy="229,1109" size="1589,420" layout="row" scroll="both" colGap="100" defaultItem="ui://adde5qwgerox5" autoItemSize="false" align="center">
+    <list id="n39_u3c4" name="lstOption" xy="229,1109" size="1589,259" layout="row" scroll="both" colGap="180" defaultItem="ui://adde5qwgerox5" autoItemSize="false" align="center">
       <item/>
       <item/>
       <item/>
