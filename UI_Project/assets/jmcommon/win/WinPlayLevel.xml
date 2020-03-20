@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="2048,1536" designImage="ui://av6agj0galb71o" designImageOffsetX="-300" designImageOffsetY="-155" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlVoiceType" pages="1,play,0,none,2,pause" selected="0"/>
-  <controller name="ctrlIsDevelop" pages="0,false,1,true" selected="1"/>
-  <controller name="ctrlTemGameType" pages="0,none,1,success,2,fail" selected="1"/>
-  <controller name="ctrlStartL" pages="0,,1,,2,,3," selected="3"/>
+  <controller name="ctrlVoiceType" pages="1,play,0,none,2,pause" selected="2"/>
+  <controller name="ctrlIsDevelop" pages="0,false,1,true" selected="0"/>
+  <controller name="ctrlTemGameType" pages="0,none,1,success,2,fail,3,over" selected="3"/>
+  <controller name="ctrlStartL" pages="0,,1,,2,,3," selected="0"/>
   <displayList>
     <loader id="n34_gx7z" name="ladBG" xy="0,0" size="2048,1536" url="ui://av6agj0galb71m" fill="scaleFree">
       <relation target="" sidePair="width-width,height-height"/>
@@ -23,7 +23,7 @@
     <component id="n39_gx7z" name="comEditorStage" src="sco7n" fileName="com/ComEditorStage.xml" xy="0,0" size="2048,1536">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <graph id="n40_gx7z" name="gphEditCanvas" xy="0,0" size="2048,1536" lineSize="0">
+    <graph id="n40_gx7z" name="gphEditCanvas" xy="0,0" size="2048,1536" touchable="false" lineSize="0">
       <relation target="" sidePair="width-width,height-height"/>
     </graph>
     <image id="n44_gx7z" name="n44" src="sco7r" fileName="img/img_jm_pt_ym.png" xy="0,1441">
@@ -35,17 +35,19 @@
     <image id="n47_gx7z" name="imgDesBg" src="alb71r" fileName="img/jindu1.png" xy="180,46" size="753,100">
       <relation target="n37_gx7z" sidePair="left-left,top-top"/>
     </image>
-    <text id="n48_gx7z" name="tfDescribe" xy="281,74" size="1972,44" fontSize="40" color="#333333" vAlign="middle" text="这里是关卡描述这里是关卡这里是关卡描述这里是关卡这里是关卡描述这里是关卡这里是关卡描述这里是关卡">
+    <text id="n48_gx7z" name="tfDescribe" xy="281,74" size="1925,44" fontSize="40" color="#333333" vAlign="middle" text="这里是关卡描述这里是关卡这里是关卡描述这里是关卡这里是关卡描述这里是关卡这里是关卡描述这里是关卡">
       <relation target="n47_gx7z" sidePair="left-left,top-top"/>
     </text>
     <graph id="n71_sco7" name="gphDesMask" xy="275,59" size="626,66" type="rect">
       <relation target="n47_gx7z" sidePair="center-center,middle-middle"/>
     </graph>
     <component id="n46_gx7z" name="btnPlayVoice" src="sco7k" fileName="btn/btnScale.xml" xy="164,37" size="120,120" controller="button,0">
+      <gearDisplay controller="ctrlVoiceType" pages="1"/>
       <relation target="n37_gx7z" sidePair="left-left,top-top"/>
       <Button icon="ui://av6agj0gsco7t" selectedIcon="ui://av6agj0galb71l" controller="ctrlVoiceType" page="2"/>
     </component>
     <component id="n76_alb7" name="btnPauseVoice" src="sco7k" fileName="btn/btnScale.xml" xy="164,37" size="120,120" controller="button,0">
+      <gearDisplay controller="ctrlVoiceType" pages="2"/>
       <relation target="n37_gx7z" sidePair="left-left,top-top"/>
       <Button icon="ui://av6agj0gsco7u" selectedIcon="ui://av6agj0galb71k" controller="ctrlVoiceType" page="1"/>
     </component>
@@ -70,13 +72,17 @@
       <relation target="n37_gx7z" sidePair="right-right,bottom-bottom"/>
       <Button icon="ui://av6agj0galb71c" selectedIcon="ui://av6agj0galb71g"/>
     </component>
-    <loader id="n61_sco7" name="ladImg" xy="570,384" size="900,900" url="ui://av6agj0gsco718" fill="scaleFree" autoSize="true">
-      <gearDisplay controller="ctrlTemGameType" pages="0"/>
-      <gearIcon controller="ctrlTemGameType" pages="0,1,2" values="|ui://av6agj0gsco718|ui://av6agj0gsco716"/>
+    <loader id="n61_sco7" name="ladImg" xy="570,384" size="900,900" touchable="false" fill="scaleFree" autoSize="true">
+      <gearDisplay controller="ctrlTemGameType" pages="2"/>
+      <gearIcon controller="ctrlTemGameType" pages="0,1,2" values="|ui://av6agj0gsco718|ui://av6agj0gsco716" default=""/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
-    <loader id="n72_alb7" name="mask" xy="0,0" size="2048,1536">
-      <gearDisplay controller="ctrlTemGameType" pages="1,2"/>
+    <graph id="n83_fy6w" name="gphMC" xy="570,384" size="900,900" touchable="false">
+      <gearDisplay controller="ctrlTemGameType" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </graph>
+    <loader id="n72_alb7" name="ladMask" xy="0,0" size="2048,1536">
+      <gearDisplay controller="ctrlTemGameType" pages="1,2,3"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
     <component id="n63_sco7" name="btnNext" src="sco7k" fileName="btn/btnScale.xml" xy="914,1098" size="212,98" controller="button,0">
@@ -98,17 +104,21 @@
       <relation target="n35_gx7z" sidePair="left-left,top-top"/>
       <Button icon="ui://av6agj0galb71s"/>
     </component>
-    <loader id="n77_alb7" name="btnStart1" xy="1599,59" size="70,70" touchable="false" url="ui://av6agj0gsco7q">
+    <loader id="n77_alb7" name="btnStart1" xy="1599,59" size="70,70" touchable="false" url="ui://av6agj0gsco7p">
       <gearIcon controller="ctrlStartL" pages="1,2,3" values="ui://av6agj0gsco7q|ui://av6agj0gsco7q|ui://av6agj0gsco7q" default="ui://av6agj0gsco7p"/>
       <relation target="n70_sco7" sidePair="middle-middle,left-left"/>
     </loader>
-    <loader id="n78_alb7" name="btnStart2" xy="1947,59" size="70,70" touchable="false" url="ui://av6agj0gsco7q">
+    <loader id="n78_alb7" name="btnStart2" xy="1947,59" size="70,70" touchable="false" url="ui://av6agj0gsco7p">
       <gearIcon controller="ctrlStartL" pages="3" values="ui://av6agj0gsco7q" default="ui://av6agj0gsco7p"/>
       <relation target="n70_sco7" sidePair="middle-middle,left-left"/>
     </loader>
-    <loader id="n79_alb7" name="btnStart3" xy="1781,59" size="70,70" touchable="false" url="ui://av6agj0gsco7q">
+    <loader id="n79_alb7" name="btnStart3" xy="1781,59" size="70,70" touchable="false" url="ui://av6agj0gsco7p">
       <gearIcon controller="ctrlStartL" pages="2,3" values="ui://av6agj0gsco7q|ui://av6agj0gsco7q" default="ui://av6agj0gsco7p"/>
       <relation target="n70_sco7" sidePair="middle-middle,left-left"/>
     </loader>
+    <text id="n80_fy6w" name="n80" xy="255,315" size="1538,906" fontSize="300" align="center" vAlign="middle" autoSize="none" text="关卡结束">
+      <gearDisplay controller="ctrlTemGameType" pages="3"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
   </displayList>
 </component>
