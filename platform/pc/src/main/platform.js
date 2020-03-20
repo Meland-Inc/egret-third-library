@@ -3,7 +3,7 @@
  * @desc 平台相关的逻辑
  * @date 2020-02-19 11:22:49
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-20 07:27:10
+ * @Last Modified time: 2020-03-20 10:02:07
  */
 const querystring = require('querystring');
 const Config = require('./config.js').Config;
@@ -23,6 +23,7 @@ async function init() {
 
     let queryObject = {};
 
+    logger.log('platform', 'argsObj', argsObj);
     for (const key in argsObj) {
         const value = argsObj[key];
 
@@ -73,8 +74,10 @@ async function init() {
             continue;
         }
 
-        if (key === 'local_network' && !queryObject['gameServer']) {
-            queryObject['gameServer'] = `${value}`;
+        if (key === 'local_network') {
+            if (!queryObject['gameServer']) {
+                queryObject['gameServer'] = `${value}`;
+            }
             continue;
         }
 
@@ -94,11 +97,23 @@ async function init() {
             }
             continue;
         }
+
+        //过滤掉原始服务器
+        if (key === 'gameServer') {
+            continue;
+        }
         queryObject[key] = `${value}`;
     }
 
     let token = await login();
     queryObject['token'] = token;
+
+    if (queryObject["gameServer"]) {
+        message.sendIpcMsg('SAVE_NATIVE_GAME_SERVER', queryObject["gameServer"]);
+    }
+
+
+    logger.log('platform', 'queryObject', queryObject);
     return queryObject;
 }
 
@@ -106,7 +121,7 @@ async function init() {
 function login() {
     let data = { temporary_token: Config.bellTempToken };
     // if (Config.bellToken) {
-    //     data["webviewToken"] = Config.bellToken;
+    //     data["token"] = Config.bellToken;
     // }
     logger.log('net', `请求登录贝尔平台, bellApiOrigin: ${Config.bellApiOrigin}, bellTempToken:${Config.bellTempToken}`);
     return new Promise((resolve, reject) => {

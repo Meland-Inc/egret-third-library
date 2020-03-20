@@ -3,7 +3,7 @@
  * @desc renderer用的配置静态类
  * @date 2020-02-13 14:54:50 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-20 02:30:32
+ * @Last Modified time: 2020-03-20 10:02:56
  */
 const fs = require('fs');
 import * as logger from './logger.js';
@@ -60,22 +60,13 @@ export class Config {
         this._nativeLoginResponse = value;
     }
 
-    static _gameServerLocalIp;
+    static _nativeGameServer;
     /** 游戏服务器内网ip */
-    static get gameServerLocalIp() {
-        return this._gameServerLocalIp;
+    static get nativeGameServer() {
+        return this._nativeGameServer;
     }
-    static setGameServerLocalIp(value) {
-        this._gameServerLocalIp = value;
-    }
-
-    static _gameServerLocalPort;
-    /** 游戏服务器内网端口 */
-    static get gameServerLocalPort() {
-        return this._gameServerLocalPort;
-    }
-    static setGameServerLocalPort(value) {
-        this._gameServerLocalPort = value;
+    static setNativeGameServer(value) {
+        this._nativeGameServer = value;
     }
 
     /** 分支环境名称 */

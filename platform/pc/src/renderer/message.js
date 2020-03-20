@@ -3,7 +3,7 @@
  * @desc 渲染进程消息处理文件
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-20 05:37:15
+ * @Last Modified time: 2020-03-20 10:12:26
  */
 import { Config } from './Config.js';
 import { ClientUpdate } from './update/ClientUpdate.js';
@@ -17,7 +17,7 @@ let fs = require('fs');
 let msgMap = {
     'UPDATE_GLOBAL_CONFIG': onUpdateGlobalConfig,//更新全局配置
     'SAVE_NATIVE_LOGIN_RESPONSE': onSaveNativeLoginResponse,    //保存native平台登陆信息
-    'SAVE_NATIVE_SERVER_IP_PORT': onSaveNativeServerIpPort,     //设置native服务器内网ip和端口
+    'SAVE_NATIVE_GAME_SERVER': onSaveNativeGameServer,     //设置native服务器内网ip和端口
     'START_NATIVE_CLIENT': onStartNativeClient,  //从客户端进入
     'START_NATIVE_WEBSITE': onStartNativeWebsite,  //开始官网地址进入
     'START_NATIVE_PLATFORM': onStartNativePlatform,  //开始平台进入
@@ -61,10 +61,9 @@ function onSaveNativeLoginResponse(body) {
     Config.setNativeLoginResponse(body);
 }
 
-/** 设置native服务器内网ip和端口 */
-function onSaveNativeServerIpPort(ip, port) {
-    Config.setGameServerLocalIp(ip);
-    Config.setGameServerLocalPort(port);
+/** 设置native服务器地址 */
+function onSaveNativeGameServer(gameServer) {
+    Config.setNativeGameServer(gameServer);
 }
 
 /** 检查更新 */
@@ -247,8 +246,8 @@ function setConfigData2LocalStorage() {
         localStorage.removeItem('nativeLoginResponse');
     }
 
-    if (Config.gameServerLocalIp && Config.gameServerLocalPort) {
-        localStorage.setItem('nativeGameServer', `${Config.gameServerLocalIp}:${Config.gameServerLocalPort}`);
+    if (Config.nativeGameServer) {
+        localStorage.setItem('nativeGameServer', JSON.stringify(Config.nativeGameServer));
     } else {
         localStorage.removeItem('nativeGameServer');
     }
