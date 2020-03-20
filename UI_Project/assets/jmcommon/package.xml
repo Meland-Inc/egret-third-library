@@ -13,7 +13,7 @@
     <image id="sco7p" name="img_jm_xx.png" path="/img/"/>
     <image id="sco7q" name="img_jm_xx_1.png" path="/img/"/>
     <image id="sco7r" name="img_jm_pt_ym.png" path="/img/"/>
-    <image id="sco7s" name="img_jm_pt_msk.png" path="/img/" scale="9grid" scale9grid="29,17,58,34"/>
+    <image id="sco7s" name="img_jm_pt_msk.png" path="/img/" scale="9grid" scale9grid="66,17,89,78"/>
     <image id="sco7t" name="icon_jm_pt_bf.png" path="/img/"/>
     <image id="sco7u" name="icon_jm_pt_zt.png" path="/img/"/>
     <image id="sco7v" name="icon_jm_pt_cx.png" path="/img/"/>
@@ -26,6 +26,23 @@
     <image id="sco719" name="next.png" path="/img/"/>
     <image id="sco71a" name="jindutiao2.png" path="/img/"/>
     <image id="sco71b" name="jindutiao1.png" path="/img/"/>
+    <image id="alb71c" name="skip.png" path="/img/"/>
+    <image id="alb71d" name="replay.png" path="/img/"/>
+    <image id="alb71e" name="OK.png" path="/img/"/>
+    <image id="alb71f" name="预览图.jpg" path="/img/"/>
+    <image id="alb71g" name="skip2.png" path="/img/"/>
+    <image id="alb71h" name="replay2.png" path="/img/"/>
+    <image id="alb71i" name="OK2.png" path="/img/"/>
+    <image id="alb71j" name="next2.png" path="/img/"/>
+    <image id="alb71k" name="icon_jm_pt_zt2.png" path="/img/"/>
+    <image id="alb71l" name="icon_jm_pt_bf2.png" path="/img/"/>
+    <image id="alb71m" name="bg.jpg" path="/img/" scale="tile" scale9grid="512,384,1024,768"/>
+    <image id="alb71n" name="white.png" path="/img/" scale="9grid" scale9grid="466,337,932,674"/>
+    <image id="alb71o" name="预览图带标记.png" path="/img/"/>
+    <image id="alb71p" name="tips.png" path="/img/"/>
+    <image id="alb71q" name="jindu2.png" path="/img/"/>
+    <image id="alb71r" name="jindu1.png" path="/img/" scale="9grid" scale9grid="132,25,264,50"/>
+    <image id="alb71s" name="back.png" path="/img/"/>
   </resources>
   <publish name="jmcommon"/>
 </packageDescription>

@@ -1,102 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="2048,1536">
+<component size="2048,1536" designImage="ui://av6agj0galb71o" designImageOffsetX="-300" designImageOffsetY="-155" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlVoiceType" pages="1,play,0,none,2,pause" selected="0"/>
-  <controller name="ctrlIsDevelop" pages="0,false,1,true" selected="0"/>
-  <controller name="ctrlTemGameType" pages="0,none,1,showSuccess,2,showFail" selected="0"/>
+  <controller name="ctrlIsDevelop" pages="0,false,1,true" selected="1"/>
+  <controller name="ctrlTemGameType" pages="0,none,1,success,2,fail" selected="1"/>
+  <controller name="ctrlStartL" pages="0,,1,,2,,3," selected="3"/>
   <displayList>
-    <loader id="n34_gx7z" name="ladBG" xy="0,0" size="2048,1536" url="ui://av6agj0gsco7h" fill="scaleFree">
+    <loader id="n34_gx7z" name="ladBG" xy="0,0" size="2048,1536" url="ui://av6agj0galb71m" fill="scaleFree">
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <image id="n35_gx7z" name="imgBar" src="sco7i" fileName="img/img_jm_pt_dbl.png" xy="0,0" size="2048,56">
+    <image id="n35_gx7z" name="imgBar" src="sco7i" fileName="img/img_jm_pt_dbl.png" xy="0,0" size="2048,56" visible="false">
       <relation target="" sidePair="width-width,top-top"/>
     </image>
-    <text id="n36_gx7z" name="tfTitle" xy="12,13" size="194,31" fontSize="24" color="#333333" vAlign="middle" vars="true" autoSize="none" text="拼图关卡"/>
-    <graph id="n37_gx7z" name="gphPos" xy="107,155" size="1834,1297" type="rect" fillColor="#ff6666cc">
+    <loader id="n37_gx7z" name="gphPos" xy="97,95" size="1858,1347" url="ui://av6agj0galb71n" fill="scaleFree">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
-    </graph>
+    </loader>
     <component id="n11_nuye" name="comPlayView" src="sco7j" fileName="com/ComPlayView.xml" xy="0,0" size="2048,1536">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
-    <component id="n30_nuye" name="btnClose" src="sco7k" fileName="btn/btnScale.xml" xy="1980,6" size="48,48" visible="false" controller="button,0">
-      <relation target="n35_gx7z" sidePair="right-right,top-top"/>
-      <Button icon="ui://av6agj0gsco7l"/>
-    </component>
-    <image id="n38_gx7z" name="imgStageBG" src="sco7m" fileName="img/img_jm_gjk_3.png" xy="171,333" size="1706,940" hideByEditor="true" visible="false">
+    <image id="n38_gx7z" name="imgStageBG" src="sco7m" fileName="img/img_jm_gjk_3.png" xy="171,333" size="1706,940" visible="false">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <component id="n39_gx7z" name="comEditorStage" src="sco7n" fileName="com/ComEditorStage.xml" xy="171,333" size="1706,940" hideByEditor="true" visible="false">
+    <component id="n39_gx7z" name="comEditorStage" src="sco7n" fileName="com/ComEditorStage.xml" xy="0,0" size="2048,1536">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
     <graph id="n40_gx7z" name="gphEditCanvas" xy="0,0" size="2048,1536" lineSize="0">
       <relation target="" sidePair="width-width,height-height"/>
     </graph>
-    <text id="n41_gx7z" name="tfTimeTitle" xy="102,72" size="83,31" visible="false" fontSize="24" color="#333333" text="倒计时:"/>
-    <text id="n42_gx7z" name="tfTime" xy="190,68" size="71,31" visible="false" fontSize="24" color="#333333" align="center" vAlign="middle" autoSize="none" text="60"/>
-    <image id="n44_gx7z" name="n44" src="sco7r" fileName="img/img_jm_pt_ym.png" xy="107,1412">
-      <relation target="n37_gx7z" sidePair="left-left,bottom-bottom"/>
+    <image id="n44_gx7z" name="n44" src="sco7r" fileName="img/img_jm_pt_ym.png" xy="0,1441">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
     </image>
-    <text id="n45_gx7z" name="tfPageInfo" xy="113,1418" size="78,31" fontSize="24" color="#333333" align="center" vAlign="middle" vars="true" autoSize="none" text="{curPage=1}/{pageNum = 20}">
+    <text id="n45_gx7z" name="tfPageInfo" xy="0,1459" size="188,66" fontSize="40" color="#333333" align="center" vAlign="middle" vars="true" autoSize="none" text="{curPage=1}/{pageNum = 20}">
       <relation target="n44_gx7z" sidePair="left-left,bottom-bottom"/>
     </text>
-    <image id="n47_gx7z" name="imgDesBg" src="sco7s" fileName="img/img_jm_pt_msk.png" xy="629,194" size="789,66">
-      <relation target="n37_gx7z" sidePair="center-center,middle-middle"/>
+    <image id="n47_gx7z" name="imgDesBg" src="alb71r" fileName="img/jindu1.png" xy="180,46" size="753,100">
+      <relation target="n37_gx7z" sidePair="left-left,top-top"/>
     </image>
-    <text id="n48_gx7z" name="tfDescribe" xy="665,213" size="1349,31" fontSize="24" color="#ffffff" vAlign="middle" text="这里是关卡描述这里是关卡描述这里是关卡描述这里是关卡描述这里是关卡描述这里是关卡描述这里是关卡描述这里是关卡描述">
+    <text id="n48_gx7z" name="tfDescribe" xy="281,74" size="1972,44" fontSize="40" color="#333333" vAlign="middle" text="这里是关卡描述这里是关卡这里是关卡描述这里是关卡这里是关卡描述这里是关卡这里是关卡描述这里是关卡">
       <relation target="n47_gx7z" sidePair="left-left,top-top"/>
     </text>
-    <graph id="n71_sco7" name="gphDesMask" xy="665,194" size="717,66" type="rect">
+    <graph id="n71_sco7" name="gphDesMask" xy="275,59" size="626,66" type="rect">
       <relation target="n47_gx7z" sidePair="center-center,middle-middle"/>
     </graph>
-    <component id="n46_gx7z" name="btnVoice" src="sco7k" fileName="btn/btnScale.xml" xy="524,187" size="80,80" controller="button,0">
-      <gearIcon controller="ctrlVoiceType" pages="0,2" values="|ui://av6agj0gsco7u" default="ui://av6agj0gsco7t"/>
-      <relation target="n37_gx7z" sidePair="center-center,top-top"/>
-      <Button icon="ui://av6agj0gsco7t"/>
+    <component id="n46_gx7z" name="btnPlayVoice" src="sco7k" fileName="btn/btnScale.xml" xy="164,37" size="120,120" controller="button,0">
+      <relation target="n37_gx7z" sidePair="left-left,top-top"/>
+      <Button icon="ui://av6agj0gsco7t" selectedIcon="ui://av6agj0galb71l" controller="ctrlVoiceType" page="2"/>
     </component>
-    <component id="n50_gx7z" name="btnUndo" src="sco7k" fileName="btn/btnScale.xml" xy="1877,1284" size="58,62" controller="button,0">
+    <component id="n76_alb7" name="btnPauseVoice" src="sco7k" fileName="btn/btnScale.xml" xy="164,37" size="120,120" controller="button,0">
+      <relation target="n37_gx7z" sidePair="left-left,top-top"/>
+      <Button icon="ui://av6agj0gsco7u" selectedIcon="ui://av6agj0galb71k" controller="ctrlVoiceType" page="1"/>
+    </component>
+    <component id="n50_gx7z" name="btnUndo" src="sco7k" fileName="btn/btnScale.xml" xy="1818,1304" size="106,112" controller="button,0">
       <relation target="n37_gx7z" sidePair="right-right,bottom-bottom"/>
-      <Button icon="ui://av6agj0gsco7v"/>
+      <Button icon="ui://av6agj0galb71d" selectedIcon="ui://av6agj0galb71h"/>
     </component>
-    <component id="n51_gx7z" name="btnMerge" src="sco7k" fileName="btn/btnScale.xml" xy="1877,1364" size="58,62" controller="button,0">
+    <component id="n51_gx7z" name="btnMerge" src="sco7k" fileName="btn/btnScale.xml" xy="1818,1172" size="106,112" controller="button,0">
       <relation target="n37_gx7z" sidePair="right-right,bottom-bottom"/>
-      <Button icon="ui://av6agj0gsco7w"/>
+      <Button icon="ui://av6agj0galb71e" selectedIcon="ui://av6agj0galb71i"/>
     </component>
-    <graph id="n54_ojgc" name="n54" xy="244,8" size="298,46" group="n58_sco7" type="rect" lineSize="0" fillColor="#ffffffcc"/>
-    <text id="n53_ojgc" name="tfConfig" xy="244,8" size="298,46" group="n58_sco7" input="true" prompt="这里输入配置信息" fontSize="25" vAlign="middle" autoSize="none" text=""/>
-    <component id="n57_sco7" name="btnSetConfig" src="sco7k" fileName="btn/btnScale.xml" xy="569,13" size="128,40" group="n58_sco7" controller="button,0">
-      <Button title="加载配置" icon="ui://av6agj0gsco7x"/>
+    <graph id="n54_ojgc" name="n54" xy="266,1460" size="393,57" group="n58_sco7" type="rect" lineSize="0" fillColor="#ffffffcc"/>
+    <text id="n53_ojgc" name="tfConfig" xy="288,1465" size="358,46" group="n58_sco7" input="true" prompt="这里输入配置信息" fontSize="40" vAlign="middle" autoSize="none" text=""/>
+    <component id="n57_sco7" name="btnSetConfig" src="sco7k" fileName="btn/btnScale.xml" xy="684,1459" size="198,58" group="n58_sco7" controller="button,0">
+      <Button title="加载配置" titleFontSize="40" icon="ui://av6agj0gsco7x"/>
     </component>
-    <group id="n58_sco7" name="config" xy="244,8" size="453,46" advanced="true">
+    <group id="n58_sco7" name="config" xy="266,1459" size="616,58" advanced="true">
       <gearDisplay controller="ctrlIsDevelop" pages="1"/>
+      <relation target="" sidePair="left-left,bottom-bottom"/>
     </group>
-    <component id="n59_sco7" name="btnSkipLevel" src="sco7k" fileName="btn/btnScale.xml" xy="1835,1162" size="100,100" controller="button,0">
+    <component id="n59_sco7" name="btnSkipLevel" src="sco7k" fileName="btn/btnScale.xml" xy="1818,1040" size="106,112" controller="button,0">
       <relation target="n37_gx7z" sidePair="right-right,bottom-bottom"/>
-      <Button icon="ui://av6agj0gsco715"/>
+      <Button icon="ui://av6agj0galb71c" selectedIcon="ui://av6agj0galb71g"/>
     </component>
-    <loader id="n61_sco7" name="ladImg" xy="530,313" size="900,900" fill="scaleFree" autoSize="true">
+    <loader id="n61_sco7" name="ladImg" xy="570,384" size="900,900" url="ui://av6agj0gsco718" fill="scaleFree" autoSize="true">
+      <gearDisplay controller="ctrlTemGameType" pages="0"/>
       <gearIcon controller="ctrlTemGameType" pages="0,1,2" values="|ui://av6agj0gsco718|ui://av6agj0gsco716"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
-    <component id="n63_sco7" name="btnNext" src="sco7k" fileName="btn/btnScale.xml" xy="830,825" size="300,300" controller="button,0">
+    <loader id="n72_alb7" name="mask" xy="0,0" size="2048,1536">
+      <gearDisplay controller="ctrlTemGameType" pages="1,2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <component id="n63_sco7" name="btnNext" src="sco7k" fileName="btn/btnScale.xml" xy="914,1098" size="212,98" controller="button,0">
       <gearDisplay controller="ctrlTemGameType" pages="1"/>
       <relation target="n61_sco7" sidePair="center-center,bottom-bottom"/>
-      <Button icon="ui://av6agj0gsco719"/>
+      <Button icon="ui://av6agj0gsco719" selectedIcon="ui://av6agj0galb71j"/>
     </component>
-    <component id="n64_sco7" name="btnTip" src="sco7k" fileName="btn/btnScale.xml" xy="793,972" size="374,100" controller="button,0">
-      <gearDisplay controller="ctrlTemGameType" pages="2"/>
-      <relation target="n61_sco7" sidePair="center-center,bottom-bottom"/>
+    <component id="n64_sco7" name="btnTip" src="sco7k" fileName="btn/btnScale.xml" xy="1496,909" size="379,117" touchable="false" controller="button,0">
+      <relation target="n59_sco7" sidePair="center-center,bottom-bottom"/>
       <Button icon="ui://av6agj0gsco717"/>
     </component>
-    <image id="n66_sco7" name="imgRateBg" src="sco71b" fileName="img/jindutiao1.png" xy="1330,69" group="n70_sco7"/>
-    <image id="n65_sco7" name="imgRate" src="sco71a" fileName="img/jindutiao2.png" xy="1330,69" size="633,120" group="n70_sco7"/>
-    <graph id="n69_sco7" name="gphRateMask" xy="1330,69" size="633,120" group="n70_sco7" type="rect" lineSize="0"/>
-    <group id="n70_sco7" name="grpRate" xy="1330,69" size="633,120" advanced="true">
+    <image id="n66_sco7" name="imgRateBg" src="alb71r" fileName="img/jindu1.png" xy="1464,44" group="n70_sco7"/>
+    <image id="n65_sco7" name="imgRate" src="alb71q" fileName="img/jindu2.png" xy="1464,44" group="n70_sco7"/>
+    <graph id="n69_sco7" name="gphRateMask" xy="1464,44" size="526,100" group="n70_sco7" type="rect" lineSize="0"/>
+    <group id="n70_sco7" name="grpRate" xy="1464,44" size="526,100" advanced="true">
       <relation target="n37_gx7z" sidePair="right-right,top-top"/>
     </group>
-    <list id="n43_gx7z" name="lstStart" xy="1460,108" size="372,42" touchable="false" layout="row" selectionMode="none" colGap="100" defaultItem="ui://av6agj0gsco7o" align="center" vAlign="middle">
-      <relation target="n70_sco7" sidePair="right-right,top-top"/>
-      <item/>
-      <item/>
-      <item/>
-    </list>
+    <component id="n30_nuye" name="btnClose" src="sco7k" fileName="btn/btnScale.xml" xy="0,0" size="174,90" controller="button,0">
+      <relation target="n35_gx7z" sidePair="left-left,top-top"/>
+      <Button icon="ui://av6agj0galb71s"/>
+    </component>
+    <loader id="n77_alb7" name="btnStart1" xy="1599,59" size="70,70" touchable="false" url="ui://av6agj0gsco7q">
+      <gearIcon controller="ctrlStartL" pages="1,2,3" values="ui://av6agj0gsco7q|ui://av6agj0gsco7q|ui://av6agj0gsco7q" default="ui://av6agj0gsco7p"/>
+      <relation target="n70_sco7" sidePair="middle-middle,left-left"/>
+    </loader>
+    <loader id="n78_alb7" name="btnStart2" xy="1947,59" size="70,70" touchable="false" url="ui://av6agj0gsco7q">
+      <gearIcon controller="ctrlStartL" pages="3" values="ui://av6agj0gsco7q" default="ui://av6agj0gsco7p"/>
+      <relation target="n70_sco7" sidePair="middle-middle,left-left"/>
+    </loader>
+    <loader id="n79_alb7" name="btnStart3" xy="1781,59" size="70,70" touchable="false" url="ui://av6agj0gsco7q">
+      <gearIcon controller="ctrlStartL" pages="2,3" values="ui://av6agj0gsco7q|ui://av6agj0gsco7q" default="ui://av6agj0gsco7p"/>
+      <relation target="n70_sco7" sidePair="middle-middle,left-left"/>
+    </loader>
   </displayList>
 </component>
