@@ -3,21 +3,21 @@
  * @desc 游戏服务器端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-19 18:58:27
+ * @Last Modified time: 2020-03-21 21:43:44
  */
+import fs from 'fs';
+import admzip from "adm-zip";
 
-import * as loading from '../loading.js';
-import * as logger from '../logger.js';
-import { Config } from '../Config.js';
-import * as util from '../util.js';
-import { StreamDownload } from './StreamDownload.js';
+import { define } from '../define';
+import loading from '../loading';
+import * as logger from '../logger';
+import * as util from '../util';
+import config from '../Config';
+import StreamDownload from './StreamDownload';
 
-const fs = require('fs');
-const admzip = require("adm-zip");
-
-export class ServerUpdate {
+export default class ServerUpdate {
     /** 服务端包存放目录 */
-    serverPackagePath = Config.serverPackagePath;
+    serverPackagePath = config.serverPackagePath;
     /** 下载器 */
     download = new StreamDownload();
 
@@ -36,7 +36,7 @@ export class ServerUpdate {
     remoteVersion;
 
     initVersionInfo() {
-        this.environName = Config.environName;
+        this.environName = config.environName;
     }
 
     /** 检查是否最新版本 */
@@ -44,7 +44,7 @@ export class ServerUpdate {
         this.initVersionInfo();
 
         //获取本地游戏版本
-        this.localVersion = await Config.getGlobalConfigValue("serverPackageVersion");
+        this.localVersion = await config.getGlobalConfigValue("serverPackageVersion");
 
         this.remoteVersion = await util.getServerPackagePolicyNum(this.environName);
         return this.remoteVersion === this.localVersion;
@@ -80,18 +80,18 @@ export class ServerUpdate {
     /** 下载服务端包 */
     downloadPackage() {
         //release环境, 用的ready的包, 去ready下载
-        let environName = Config.environName;
-        if (environName === Config.eEnvironName.release) {
-            environName = Config.eEnvironName.ready;
+        let environName: define.eEnvironName;
+        if (environName === define.eEnvironName.release) {
+            environName = define.eEnvironName.ready;
         }
-        let fileDir = `${Config.cdnHost}/serverPackages/${environName}`;
+        let fileDir = `${config.cdnHost}/serverPackages/${environName}`;
         let saveDir = this.serverPackagePath;
         let fileName = `${util.getServerPackageFileName()}_v${this.remoteVersion}.zip`;
         //下载文件
         loading.showLoading();
         this.download.downloadFile(fileDir, saveDir, fileName, async (arg, filename, percentage, errorMsg) => {
             if (arg === "finished") {
-                Config.setGlobalConfigValue("serverPackageVersion", this.remoteVersion);
+                config.setGlobalConfigValue("serverPackageVersion", this.remoteVersion);
             }
             this.downloadFileCallback(fileDir, saveDir, arg, filename, percentage, errorMsg);
         });

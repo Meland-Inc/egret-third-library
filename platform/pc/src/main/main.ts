@@ -3,52 +3,45 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-20 07:27:20
+ * @Last Modified time: 2020-03-21 23:42:09
  */
 // Modules to control application life and create native browser window
-const { app, globalShortcut, BrowserWindow, Menu, shell, dialog } = require('electron')
-const fs = require('fs');
-const process = require('process');
-const querystring = require('querystring');
+import { app, globalShortcut, BrowserWindow, Menu, shell, dialog, Referrer, BrowserWindowConstructorOptions } from 'electron';
+import * as fs from 'fs';
+import * as process from 'process';
 
-const logger = require('./logger.js');
-const Config = require('./config.js').Config;
-const server = require('./server.js');
-const message = require('./message.js');
-const util = require('./util.js');
+import { define } from './define';
+import { logger } from './logger';
+import config from './Config';
+import server from './Server';
+import message from './Message';
 
-let mainWindow
+let mainWindow: BrowserWindow;
 
 //native初始化
 async function initNative() {
 
-  //平台老师端测试参数
-  // config.urlValue = `bellplanet://lesson?temporary_token=LWKqnyRO8M:eRhNA&class_id=18744&package_id=278&lesson_id=960&act_id=9999&bell_origin=demoapi.wkcoding.com&local_network=127.0.0.1:8080&internet_network=democm.wkcoding.com`;
-
-  //平台学生端端测试参数
-  // config.urlValue = `bellplanet://student?temporary_token=AWRl2okDEQ:fYHQv&class_id=18744&package_id=278&lesson_id=960&act_id=9999&bell_origin=demoapi.wkcoding.com&local_network=127.0.0.1:8080&internet_network=ofga364021.codingmonkey.com.cn:80`;
-
-  logger.log('net', `urlValue: ${Config.urlValue}`);
-  if (Config.urlValue.indexOf(Config.constPseudoProtocol) === -1) {
-    Config.setNativeMode(Config.eNativeMode.website);
+  logger.log('net', `urlValue: ${config.urlValue}`);
+  if (config.urlValue.indexOf(config.constPseudoProtocol) === -1) {
+    config.setNativeMode(define.eNativeMode.website);
   } else {
     //设置路由
-    let lessonRouter = Config.urlValue.replace(Config.constPseudoProtocol, '');
+    let lessonRouter = config.urlValue.replace(config.constPseudoProtocol, '');
     lessonRouter = lessonRouter.slice(0, lessonRouter.indexOf("?") - 1);
-    Config.setLessonRouter(lessonRouter);
+    config.setLessonRouter(lessonRouter as define.eLessonRouter);
 
     //创造地图模式
-    if (Config.lessonRouter === Config.eLessonRouter.createMap) {
-      Config.setNativeMode(Config.eNativeMode.createMap);
-    } else if (Config.lessonRouter === Config.eLessonRouter.banner) {
-      Config.setNativeMode(Config.eNativeMode.banner);
+    if (config.lessonRouter === define.eLessonRouter.createMap) {
+      config.setNativeMode(define.eNativeMode.createMap);
+    } else if (config.lessonRouter === define.eLessonRouter.banner) {
+      config.setNativeMode(define.eNativeMode.banner);
     } else {
-      Config.setNativeMode(Config.eNativeMode.platform);
+      config.setNativeMode(define.eNativeMode.platform);
     }
   }
-  await mainWindow.loadFile(`${Config.rootPath}/src/renderer/renderer.html`);
 
-  logger.log('net', `config.urlValue`, Config.urlValue);
+  await mainWindow.loadFile(`./dist/renderer.html`);
+  logger.log('net', `config.urlValue`, config.urlValue);
 }
 
 //创建游戏浏览窗口
@@ -57,33 +50,31 @@ async function createWindow() {
     width: 1600,
     height: 900,
     webPreferences: {
-      // preload: `${config.rootPath}/src/renderer/renderer.js`,
+      // preload: `${config.rootPath}/dist/renderer/renderer.js`,
       nodeIntegration: true,
       webSecurity: false
     }
   });
-  Config.setMainWindow(mainWindow);
+  config.setMainWindow(mainWindow);
 
-  // mainWindow.isEnabled
-
-  //判断创建文件加
-  if (!fs.existsSync(`${Config.rootPath}/package`)) {
-    fs.mkdirSync(`${Config.rootPath}/package`)
+  // 判断创建文件
+  if (!fs.existsSync(`${config.rootPath}/package`)) {
+    fs.mkdirSync(`${config.rootPath}/package`)
   }
 
-  if (!fs.existsSync(`${Config.rootPath}/package/client`)) {
-    fs.mkdirSync(`${Config.rootPath}/package/client`)
+  if (!fs.existsSync(`${config.rootPath}/package/client`)) {
+    fs.mkdirSync(`${config.rootPath}/package/client`)
   }
 
-  if (!fs.existsSync(`${Config.rootPath}/package/server`)) {
-    fs.mkdirSync(`${Config.rootPath}/package/server`)
+  if (!fs.existsSync(`${config.rootPath}/package/server`)) {
+    fs.mkdirSync(`${config.rootPath}/package/server`)
   }
 
   let userAgent = mainWindow.webContents.userAgent + " BellCodeIpadWebView BellplanetNative";
   mainWindow.webContents.userAgent = userAgent;
 
   /** 设置url参数 */
-  Config.setUrlValue(process.argv[process.argv.length - 1]);
+  config.setUrlValue(process.argv[process.argv.length - 1]);
 
   /** 初始化消息处理类 */
   message.init();
@@ -92,29 +83,30 @@ async function createWindow() {
   logger.init();
 
 
+  logger.log('main', `process.env.NODE_ENV:`, process.env.NODE_ENV);
   logger.log('main', `收到参数1: ${JSON.stringify(process.argv)}`);
 
   //native初始化
   initNative();
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 
   mainWindow.webContents.on('crashed', () => {
-    const options = {
-      type: 'error',
-      title: '进程崩溃了',
-      message: '这个进程已经崩溃.',
-      buttons: ['重载', '退出'],
-    };
+    // const options = {
+    //   type: 'error',
+    //   title: '进程崩溃了',
+    //   message: '这个进程已经崩溃.',
+    //   buttons: ['重载', '退出'],
+    // };
     recordCrash().then(() => {
-      dialog.showMessageBox(options, (index) => {
-        if (index === 0) {
-          reloadWindow(mainWindow);
-        } else {
-          app.quit();
-        }
-      });
+      // dialog.showMessageBox(options, (index) => {
+      //   if (index === 0) {
+      //     reloadWindow(mainWindow);
+      //   } else {
+      //     app.quit();
+      //   }
+      // });
     }).catch((e) => {
       console.log('err', e);
     });
@@ -133,29 +125,21 @@ async function createWindow() {
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
     mainWindow = null;
-    Config.setMainWindow(null);
+    config.setMainWindow(null);
     await server.closeGameServer();
   })
 
   // 拦截new-window事件，起到拦截window.open的作用
-  mainWindow.webContents.on('new-window', async (e, url, frameName, disposition, options, additionalFeatures) => {
+  mainWindow.webContents.on('new-window', async (event: Event, url: string) => {
     // 阻止创建默认窗口
-    e.preventDefault();
-
-    // // 在这里可以实现不同的协议
-    // if (/^app:\/\//.test(url)) {
-    //   app.emit('protocol-test', {
-    //     sender: mainWindow.webContents
-    //   }, url)
-    // }
+    event.preventDefault();
 
     logger.log('electron', `new-window: ${url}`);
     await mainWindow.loadURL(url);
   })
 
   // // 拦截new-window事件，起到拦截window.open的作用
-  // mainWindow.webContents.on('will-navigate', async (e, url, frameName, disposition, options, additionalFeatures) => {
-
+  // mainWindow.webContents.on('will-navigate', async (event: Event, url: string) => {
   //   const tokenField = "webviewToken";
   //   const newURL = new URL(url);
   //   const hash = newURL.hash;
@@ -169,10 +153,10 @@ async function createWindow() {
   //   }
 
   //   // 阻止创建默认窗口
-  //   e.preventDefault();
+  //   event.preventDefault();
 
-  //   if (Config.bellToken) {
-  //     newURL.searchParams.append(tokenField, Config.bellToken);
+  //   if (config.bellToken) {
+  //     newURL.searchParams.append(tokenField, config.bellToken);
   //   }
 
   //   logger.log('electron', `will-navigate: ${newURL}`);
@@ -180,7 +164,7 @@ async function createWindow() {
   // })
 
   //设置菜单
-  const menu = Menu.buildFromTemplate(template);
+  // const menu = Menu.buildFromTemplate(template);
   // Menu.setApplicationMenu(menu);
   Menu.setApplicationMenu(null)
 }
@@ -193,7 +177,6 @@ async function createWindow() {
 const gotTheLock = app.requestSingleInstanceLock();
 if (!gotTheLock) {
   app.quit();
-  return;
 }
 
 const onGotTheLock = async (url) => {
@@ -212,7 +195,7 @@ const onGotTheLock = async (url) => {
     // }
 
     /** 设置url参数 */
-    Config.setUrlValue(url);
+    config.setUrlValue(url);
     initNative();
   }
 }
@@ -222,7 +205,7 @@ app.on('second-instance', async (event, argv, workingDirectory) => {
   if (process.platform === 'win32') {
     onGotTheLock(argv[argv.length - 1]);
   }
-  
+
   logger.log('main', `收到参数: ${JSON.stringify(argv)}, ${JSON.stringify(process.argv)}`);
 });
 
@@ -244,8 +227,7 @@ app.on('ready', () => {
     shortCut = 'Ctrl+Shift+I';
   }
   globalShortcut.register(shortCut, () => {
-    mainWindow.openDevTools();
-    // mainWindow.webContents.toggleDevTools
+    mainWindow.webContents.openDevTools();
   })
 })
 
@@ -336,14 +318,13 @@ let template = [
   }
 ]
 
-//保存日志文件方法
+// //保存日志文件方法
 async function saveProcessLog() {
   let path = dialog.showSaveDialogSync(
-    // mainWindow,
     {
       title: `后台进程日志另存为`,
       filters: [{ name: "process.log", extensions: ["log"] }]
     });
-  let content = fs.readFileSync(Config.processLogPath, 'utf-8');
+  let content = fs.readFileSync(config.processLogPath, 'utf-8');
   fs.writeFileSync(path, content, 'utf-8');
 }

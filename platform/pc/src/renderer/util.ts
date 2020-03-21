@@ -3,17 +3,16 @@
  * @desc 工具类
  * @date 2020-02-28 19:56:39 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-16 14:51:52
+ * @Last Modified time: 2020-03-21 20:51:00
  */
-const fs = require('fs');
-const path = require('path');
-const os = require('os');
-const http = require("http");
-import * as logger from './logger.js';
-import { Config } from './Config.js';
+import fs from 'fs';
+import path from 'path';
+import os from 'os';
+import http from "http";
+import * as logger from './logger';
 
 /** 获取指定策略信息 */
-export function getPolicyInfo(versionName) {
+export function getPolicyInfo(versionName: string): Promise<string> {
     return new Promise((resolve, reject) => {
         let time = Math.floor(new Date().getTime() / 1000);
         let due = 1800;
@@ -21,14 +20,14 @@ export function getPolicyInfo(versionName) {
         let channel = "bian_game"
 
         let policyQueryServer = 'policy-server.wkcoding.com';
-        let url = new URL('http://' + policyQueryServer + '/getVersion', window.location);
+        let url = new URL('http://' + policyQueryServer + '/getVersion', window.location.href);
         url.searchParams.append('versionName', versionName);
         url.searchParams.append('channel', channel);
-        url.searchParams.append('time', time);
-        url.searchParams.append('due', due);
+        url.searchParams.append('time', time.toString());
+        url.searchParams.append('due', due.toString());
         url.searchParams.append('token', token);
         let request = new XMLHttpRequest();
-        request.open("GET", url);
+        request.open("GET", url.toString());
         request.onreadystatechange = () => {
             if (request.readyState !== 4) {
                 return;
@@ -45,7 +44,7 @@ export function getPolicyInfo(versionName) {
 }
 
 /** 获取游戏版本 */
-export function getGameVersion(policyHost, policyPath, policyNum) {
+export function getGameVersion(policyHost: string, policyPath: string, policyNum: number) {
     return new Promise((resolve, reject) => {
         let options = {
             host: policyHost, // 请求地址 域名，google.com等.. 
@@ -110,7 +109,7 @@ export function getServerPackageFileName() {
 }
 
 /** 遍历删除指定文件夹 */
-export async function deleteFolderRecursive(folderPath) {
+export async function deleteFolderRecursive(folderPath: string) {
     let files = [];
     //判断给定的路径是否存在
     if (fs.existsSync(folderPath)) {

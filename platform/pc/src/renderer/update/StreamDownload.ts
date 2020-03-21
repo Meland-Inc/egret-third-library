@@ -3,14 +3,15 @@
  * @desc 下载类
  * @date 2020-02-25 10:50:36 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-18 09:52:19
+ * @Last Modified time: 2020-03-21 20:48:33
  */
-import * as logger from '../logger.js';
-const fs = require('fs');
-const request = require('request');
-const path = require('path');
+import fs from 'fs';
+import request from 'request';
+import path from 'path';
 
-export class StreamDownload {
+import * as logger from '../logger';
+
+export default class StreamDownload {
     // 声明下载过程回调函数
     downloadCallback = null;
     fileUrl = null;
