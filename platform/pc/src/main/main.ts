@@ -3,7 +3,7 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-21 23:42:09
+ * @Last Modified time: 2020-03-22 01:37:40
  */
 // Modules to control application life and create native browser window
 import { app, globalShortcut, BrowserWindow, Menu, shell, dialog, Referrer, BrowserWindowConstructorOptions } from 'electron';
@@ -20,7 +20,6 @@ let mainWindow: BrowserWindow;
 
 //native初始化
 async function initNative() {
-
   logger.log('net', `urlValue: ${config.urlValue}`);
   if (config.urlValue.indexOf(config.constPseudoProtocol) === -1) {
     config.setNativeMode(define.eNativeMode.website);
@@ -55,6 +54,7 @@ async function createWindow() {
       webSecurity: false
     }
   });
+
   config.setMainWindow(mainWindow);
 
   // 判断创建文件
@@ -83,7 +83,6 @@ async function createWindow() {
   logger.init();
 
 
-  logger.log('main', `process.env.NODE_ENV:`, process.env.NODE_ENV);
   logger.log('main', `收到参数1: ${JSON.stringify(process.argv)}`);
 
   //native初始化
@@ -190,9 +189,7 @@ const onGotTheLock = async (url) => {
     logger.log('electron', `显示当前主窗口`);
 
     // 关闭之前的服务器
-    // if (config.channel != config.constChannelLesson || config.userType != config.eUserType.student) {
     await server.closeGameServer();
-    // }
 
     /** 设置url参数 */
     config.setUrlValue(url);

@@ -3,11 +3,9 @@
  * @desc renderer用的配置静态类
  * @date 2020-02-13 14:54:50 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-21 23:08:26
+ * @Last Modified time: 2020-03-22 01:36:47
  */
 import fs from 'fs';
-import path from 'path';
-import process from 'process';
 import { remote } from 'electron';
 
 import * as logger from './logger';
@@ -29,21 +27,10 @@ class Config {
     public protocol = "http:";
 
     /** 程序根路径 */
-    // public rootPath = `${__dirname}/../..`;
-    // public rootPath = remote.app.getPath('exe');
-
     public _rootPath: string;
-
-    // public rootPath = process.env.INIT_CWD;
-
-    // public rootPath = process.env.PORTABLE_EXECUTABLE_FILE;
     public get rootPath() {
         if (!this._rootPath) {
-            if (remote.app.isPackaged) {
-                this._rootPath = remote.app.getAppPath();
-            } else {
-                this._rootPath = `${__dirname}/../..`;
-            }
+            this._rootPath = remote.app.getAppPath();
         }
 
         return this._rootPath;

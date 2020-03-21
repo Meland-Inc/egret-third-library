@@ -3,7 +3,7 @@
  * @desc 渲染进程消息处理文件
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-21 23:44:14
+ * @Last Modified time: 2020-03-22 01:25:59
  */
 import { ipcRenderer, IpcRendererEvent } from "electron";
 import querystring from "querystring";
@@ -103,9 +103,9 @@ class Message {
         }
 
         if (serverDirect || clientDirect) {
-            let serverUpdateFunc = serverDirect ? this.directDownloadServer : this.checkServerUpdate;
-            let clientUpdateFunc = clientDirect ? this.directDownloadClient : this.checkClientUpdate;
-            serverUpdateFunc(clientUpdateFunc, this.checkUpdateComplete);
+            let serverUpdateFunc = serverDirect ? this.directDownloadServer.bind(this) : this.checkServerUpdate.bind(this);
+            let clientUpdateFunc = clientDirect ? this.directDownloadClient.bind(this) : this.checkClientUpdate.bind(this);
+            serverUpdateFunc(clientUpdateFunc, this.checkUpdateComplete.bind(this));
             logger.log(`net`, `直接下载最新包`);
             return;
         }
@@ -121,13 +121,13 @@ class Message {
 
         //服务端版本一致, 直接检查更新客户端
         if (isServerLatestVersion) {
-            this.checkClientUpdate(this.checkUpdateComplete);
+            this.checkClientUpdate(this.checkUpdateComplete.bind(this));
             return;
         }
 
         //服务端版本不一致,先提示是否更新
         if (confirm('检测到游戏版本更新,是否更新?')) {
-            this.checkServerUpdate(this.checkClientUpdate, this.checkUpdateComplete);
+            this.checkServerUpdate(this.checkClientUpdate.bind(this), this.checkUpdateComplete.bind(this));
             return
         }
 
@@ -204,11 +204,11 @@ class Message {
     private async onStartNativeWebsite() {
         this.setConfigData2LocalStorage();
 
-        // if (config.environName === define.eEnvironName.release) {
-        //     location.href = config.bellcodeUrl;
-        // } else {
-        //     location.href = config.demoBellCodeUrl;
-        // }
+        if (config.environName === define.eEnvironName.release) {
+            location.href = config.bellcodeUrl;
+        } else {
+            location.href = config.demoBellCodeUrl;
+        }
     }
 
     /** 从官网平台进入 */

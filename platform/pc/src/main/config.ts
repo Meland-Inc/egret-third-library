@@ -3,14 +3,12 @@
  * @desc main用的配置
  * @date 2020-02-13 14:54:41 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-21 23:08:26
+ * @Last Modified time: 2020-03-22 01:36:25
  */
 import { BrowserWindow } from 'electron';
 import { Server } from 'net';
 import { ChildProcess } from 'child_process';
-import path from 'path';
 import { app } from 'electron';
-import process from 'process';
 
 import { define } from './define';
 class Config {
@@ -27,21 +25,11 @@ class Config {
     }
 
     /** 程序根路径 */
-    // public rootPath = `${__dirname}/../..`;
-    // public rootPath = app.getPath('exe');
-
-    // public rootPath = process.cwd();
-
-    // public rootPath = process.env.INIT_CWD;
     public _rootPath: string;
 
     public get rootPath() {
         if (!this._rootPath) {
-            if (app.isPackaged) {
-                this._rootPath = app.getAppPath();
-            } else {
-                this._rootPath = `${__dirname}/../..`;
-            }
+            this._rootPath = app.getAppPath();
         }
 
         return this._rootPath;

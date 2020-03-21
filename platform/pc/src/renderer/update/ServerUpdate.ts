@@ -3,13 +3,13 @@
  * @desc 游戏服务器端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-21 21:43:44
+ * @Last Modified time: 2020-03-22 01:28:35
  */
 import fs from 'fs';
 import admzip from "adm-zip";
 
 import { define } from '../define';
-import loading from '../loading';
+import * as loading from '../loading';
 import * as logger from '../logger';
 import * as util from '../util';
 import config from '../Config';
