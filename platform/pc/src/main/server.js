@@ -3,9 +3,10 @@
  * @desc 处理native服务器和游戏服务器的文件
  * @date 2020-02-18 11:42:29 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-19 23:13:28
+ * @Last Modified time: 2020-03-21 10:38:43
  */
 const fs = require('fs');
+const os = require('os');
 const kill = require('tree-kill');
 const http = require('http');
 const url = require('url');
@@ -143,11 +144,16 @@ async function createGameServer(mode) {
 
     logger.log('net', '创建游戏服务器');
     Config.setGameServerMode(mode);
-    let cmd = `./game`;
-    // assignGameXPermission([
-    //     `${Config.rootPath}/package/server/game`,
-    //     `${Config.rootPath}/package/server/ngrok`
-    // ]);
+    let cmd
+    if (os.platform() === "win32") {
+        cmd = `game`;
+    } else {
+        cmd = `./game`;
+        assignGameXPermission([
+            `${Config.rootPath}/package/server/game`,
+            `${Config.rootPath}/package/server/ngrok`
+        ]);
+    }
     let gameServerProcess = await util.runCmd(cmd, `${Config.rootPath}/package/server/`, "创建游戏服务器成功", "创建游戏服务器失败");
     Config.setGameServerProcess(gameServerProcess);
 }
