@@ -3,7 +3,7 @@
  * @desc main用的工具类
  * @date 2020-02-18 11:43:24 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-20 06:02:16
+ * @Last Modified time: 2020-03-21 10:26:09
  */
 // const spawn = require("child_process").spawn;
 const exec = require("child_process").exec;
@@ -184,7 +184,11 @@ function requestPost(isHttps, host, port, path, data, headers, successFunc, erro
         response.on('end', () => {
             if (successFunc) {
                 if (!!body) {
-                    successFunc(JSON.parse(body));
+                    try {
+                        successFunc(JSON.parse(body));
+                    } catch (error) {
+                        logger.error('net', `http post error, body`, body);
+                    }
                 } else {
                     successFunc();
                 }
