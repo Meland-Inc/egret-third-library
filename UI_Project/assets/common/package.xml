@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="te1gxawo" jpegQuality="80" compressPNG="true">
+<packageDescription id="te1gxawo" jpegQuality="80" compressPNG="true" hasFavorites="true">
   <resources>
     <component id="qn8o0" name="WinConfirm.xml" path="/old/win/" exported="true"/>
     <image id="qn8o8" name="img_main_chatbubble_1.png" path="/old/newImg/" exported="true" scale="9grid" scale9grid="25,10,50,20"/>
@@ -68,7 +68,7 @@
     <image id="rdy43z" name="img_cm_item_4.png" path="/old/newImg/" exported="true"/>
     <image id="rdy440" name="img_cm_item_5.png" path="/old/newImg/" exported="true"/>
     <image id="ot9si29" name="btn_cm_1_green.png" path="/old/newImg/" exported="true"/>
-    <image id="ot9si2a" name="btn_cm_1_red.png" path="/old/newImg/" exported="true"/>
+    <image id="ot9si2a" name="btn_cm_1_red.png" path="/img/" exported="true"/>
     <image id="ot9si2b" name="btn_cm_1_yellow.png" path="/old/newImg/" exported="true"/>
     <image id="ot9si2c" name="btn_cm_location_1.png" path="/old/newImg/" exported="true"/>
     <image id="ot9si2d" name="btn_cm_location_2.png" path="/old/newImg/" exported="true"/>
@@ -653,7 +653,7 @@
     <image id="pve9cyijy" name="btn_cm_yellow_1.png" path="/img/" exported="true"/>
     <image id="rknvcyik0" name="img_cm_xyb.png" path="/img/" exported="true"/>
     <image id="rknvcyik1" name="img_cm_dds.png" path="/img/" exported="true" scale="9grid" scale9grid="10,10,20,20"/>
-    <image id="rknvcyik2" name="img_cm_yxz.png" path="/img/" exported="true"/>
+    <image id="rknvcyik2" name="img_cm_yxz.png" path="/img/" exported="true" favorite="true"/>
     <image id="rknvcyik3" name="img_cm_yxz_1.png" path="/img/" exported="true"/>
     <component id="nci3cyijz" name="SaveLevelDataAlert.xml" path="/com/" exported="true"/>
   </resources>
