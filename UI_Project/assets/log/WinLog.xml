@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1136,640">
+  <controller name="conShowDetail" pages="0,hide,1,show" selected="0"/>
+  <displayList>
+    <image id="n0_jtjd" name="bg" src="nycen" fileName="old/img/bg_cm_5.png" xy="0,-1" size="1136,640" group="n25_kg0b"/>
+    <text id="n1_jtjd" name="tfTitle" xy="480,5" size="178,44" group="n25_kg0b" fontSize="35" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="日志"/>
+    <list id="n2_jtjd" name="lstLogTitle" xy="149,64" size="965,561" group="n25_kg0b" overflow="scroll" scrollBarRes="ui://r2qs43tunycef," lineGap="10" defaultItem="ui://r2qs43tunycej" autoClearItems="true">
+      <item title="阿斯顿发送到发送到发送到发送到发送到发送到发送到发送到发送到发送到发送到发送到发送到发送到&#xD;&#xD;&#xD;&#xD;水电费"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n6_jtjd" name="btnClose" src="to3m2" fileName="com/btnFix.xml" xy="1081,-3" size="52,52" group="n25_kg0b">
+      <Button icon="ui://r2qs43tunycem"/>
+    </component>
+    <graph id="n9_tj4m" name="n9" xy="762,16" size="165,24" group="n10_tj4m" type="rect"/>
+    <text id="n8_tj4m" name="inpSearch" xy="763,15" size="138,25" group="n10_tj4m" input="true" fontSize="16" vAlign="middle" autoSize="none" singleLine="true" text=""/>
+    <image id="n7_tj4m" name="n7" src="nycee" fileName="old/img/img_build_search_2.png" xy="908,19" group="n10_tj4m"/>
+    <group id="n10_tj4m" name="n10" xy="762,15" size="165,25" group="n25_kg0b"/>
+    <list id="n11_tj4m" name="lstLogTag" xy="18,70" size="107,552" group="n25_kg0b" overflow="scroll" lineGap="5" defaultItem="ui://r2qs43tunycei" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n16_o8k6" name="btnSearchSetting" src="nycek" fileName="old/btn/btnSearch.xml" xy="946,14" group="n25_kg0b"/>
+    <component id="n17_wbpe" name="btnDownLog" src="nyceq" fileName="com/btnScale.xml" xy="0,3" size="104,50" group="n25_kg0b">
+      <Button title="下载日志" titleColor="#5b4b37" icon="ui://r2qs43tunyceo"/>
+    </component>
+    <image id="n18_wbpe" name="bg" src="nycep" fileName="old/img/bg_cm_4.png" xy="118,64" size="899,509" group="n24_wbpe"/>
+    <text id="n20_wbpe" name="titleLogDetail" xy="477,68" size="175,42" group="n24_wbpe" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="日志详情"/>
+    <list id="n22_wbpe" name="lstDetail" xy="147,122" size="842,439" group="n24_wbpe" overflow="scroll" scrollBarFlags="128"/>
+    <component id="n23_wbpe" name="btnCloseLogDetail" src="to3m2" fileName="com/btnFix.xml" xy="961,62" size="52,52" group="n24_wbpe">
+      <Button icon="ui://r2qs43tunycem" controller="conShowDetail" page="0"/>
+    </component>
+    <group id="n24_wbpe" name="detail" xy="118,62" size="899,511" group="n25_kg0b" advanced="true">
+      <gearDisplay controller="conShowDetail" pages="1"/>
+    </group>
+    <component id="n26_h68z" name="btnClear" src="nyceq" fileName="com/btnScale.xml" xy="103,3" size="102,50" group="n25_kg0b">
+      <Button title="清除日志" titleColor="#5b4b37" icon="ui://r2qs43tunyceo"/>
+    </component>
+    <group id="n25_kg0b" name="root" xy="0,-3" size="1136,642" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>
