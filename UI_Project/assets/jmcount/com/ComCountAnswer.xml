@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="300,100">
+  <displayList>
+    <loader id="n9_xr0j" name="loaderImg" xy="0,0" size="100,100" align="center" vAlign="middle" fill="scale">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <image id="n12_hwlx" name="n12" src="hwlx3" fileName="img/img_count_answerframe.png" xy="100,0" size="200,100"/>
+    <text id="n11_hwlx" name="textNum" xy="135,14" size="144,76" fontSize="24" vAlign="middle" autoSize="none" text=""/>
+  </displayList>
+</component>

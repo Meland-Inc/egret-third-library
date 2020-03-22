@@ -43,6 +43,19 @@
     <image id="alb71q" name="jindu2.png" path="/img/"/>
     <image id="alb71r" name="jindu1.png" path="/img/" scale="9grid" scale9grid="132,25,264,50"/>
     <image id="alb71s" name="back.png" path="/img/"/>
+    <component id="hwlx1t" name="ComNumberInput.xml" path="/com/" exported="true"/>
+    <image id="hwlx1u" name="img_jm_num0.png" path="/img/"/>
+    <image id="hwlx1v" name="img_jm_num1.png" path="/img/"/>
+    <image id="hwlx1w" name="img_jm_num2.png" path="/img/"/>
+    <image id="hwlx1x" name="img_jm_num3.png" path="/img/"/>
+    <image id="hwlx1y" name="img_jm_num4.png" path="/img/"/>
+    <image id="hwlx1z" name="img_jm_num5.png" path="/img/"/>
+    <image id="hwlx20" name="img_jm_num6.png" path="/img/"/>
+    <image id="hwlx21" name="img_jm_num7.png" path="/img/"/>
+    <image id="hwlx22" name="img_jm_num8.png" path="/img/"/>
+    <image id="hwlx23" name="img_jm_num9.png" path="/img/"/>
+    <image id="hwlx24" name="img_jm_numdel.png" path="/img/"/>
+    <image id="hwlx25" name="img_keybord_bg.png" path="/img/"/>
   </resources>
   <publish name="jmcommon"/>
 </packageDescription>
