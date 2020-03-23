@@ -63,9 +63,10 @@
     <image id="bmxe2f" name="close_bt.png" path="/img/"/>
     <image id="bmxe2g" name="bt_bg.png" path="/img/"/>
     <image id="bmxe2h" name="参考图.jpg" path="/img/"/>
-    <image id="bmxe2i" name="neikuang.png" path="/img/" scale="9grid" scale9grid="124,149,233,225"/>
+    <image id="bmxe2i" name="neikuang.png" path="/img/" scale="9grid" scale9grid="111,142,331,342"/>
     <image id="bmxe2j" name="bg.png" path="/img/" scale="tile" scale9grid="46,36,92,72"/>
-    <image id="bmxe2k" name="外框遮罩.png" path="/img/" scale="9grid" scale9grid="188,231,333,333"/>
+    <image id="bmxe2l" name="waikuang.png" path="/img/" scale="9grid" scale9grid="188,210,351,353"/>
+    <image id="bmxe2m" name="neikuang_1.png" path="/img/" scale="9grid" scale9grid="188,255,331,308"/>
   </resources>
   <publish name="jmcommon"/>
 </packageDescription>
