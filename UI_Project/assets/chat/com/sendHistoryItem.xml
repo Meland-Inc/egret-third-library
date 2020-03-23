@@ -5,7 +5,7 @@
     <image id="n2_q73n" name="bg" src="eggjcyihq" fileName="img/img_cm_xlk_2.png" pkg="te1gxawo" xy="0,0" size="800,24">
       <gearDisplay controller="button" pages="1"/>
     </image>
-    <text id="n0_k59n" name="title" xy="5,0" size="790,24" fontSize="20" color="#5b4b37" vAlign="middle" autoSize="height" text="hello world!!">
+    <text id="n0_k59n" name="title" xy="5,2" size="791,24" fontSize="20" color="#5b4b37" vAlign="middle" autoSize="none" text="hello world!!">
       <gearColor controller="button" pages="0,1" values="#5b4b37,#000000|#333333,#666666"/>
     </text>
   </displayList>
