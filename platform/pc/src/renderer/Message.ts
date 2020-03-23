@@ -3,7 +3,7 @@
  * @desc 渲染进程消息处理文件
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-22 01:25:59
+ * @Last Modified time: 2020-03-23 15:39:46
  */
 import { ipcRenderer, IpcRendererEvent } from "electron";
 import querystring from "querystring";
@@ -215,6 +215,14 @@ class Message {
     private async onStartNativePlatform(queryObject: any) {
         this.setConfigData2LocalStorage();
 
+        let webviewToken: string
+        if (queryObject['webviewToken']) {
+            webviewToken = queryObject["webviewToken"];
+            delete queryObject['webviewToken']
+        } else {
+            webviewToken = queryObject["token"];
+        }
+
         let queryValue = querystring.stringify(queryObject);
         let iframeSrc = `file://${config.rootPath}/package/client/index.html?${queryValue}`;
         iframeSrc = path.join(iframeSrc);
@@ -222,12 +230,14 @@ class Message {
             class_id: queryObject["class_id"],
             package_id: queryObject["package_id"],
             lesson_id: queryObject["lesson_id"],
-            back_url: queryObject["back_url"],
             act_id: queryObject["act_id"],
-            webviewToken: queryObject["token"],
+            webviewToken: webviewToken,
+            back_url: queryObject["back_url"],
             iframeSrc: iframeSrc
         }
         logger.log('platform', `platformObject:`, platformObject);
+        logger.rendererLog('platform', `platformObject:`, platformObject);
+        logger.rendererLog('platform', `iframeSrc:`, iframeSrc);
         let platformValue = querystring.stringify(platformObject);
         //获取官网链接
         let bellPlatformDomain: string;

@@ -3,7 +3,7 @@
  * @desc main用的工具类
  * @date 2020-02-18 11:43:24 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-21 20:41:25
+ * @Last Modified time: 2020-03-23 15:10:59
  */
 // const spawn = require("child_process").spawn;
 import { exec, ChildProcess } from 'child_process';
@@ -60,6 +60,7 @@ export namespace util {
     /** 发送get请求 */
     function requestGet(isHttps: boolean, host: string, port: string, path: string, data: any, headers: any, successFunc: Function, errorFunc: Function) {
         let content = data ? `${querystring.stringify(data)}` : "";
+        logger.log('net', `http isHttps:${isHttps} post data`, content);
         path = content ? `${path}?${content}` : path;
         let options = {
             host: host,
@@ -129,7 +130,7 @@ export namespace util {
     /** 发送post请求 */
     function requestPost(isHttps: boolean, host: string, port: string, path: string, data: any, headers: any, successFunc: Function, errorFunc: Function) {
         let content = data ? querystring.stringify(data) : "";
-        logger.log('net', `http post data`, content);
+        logger.log('net', `http isHttps:${isHttps} post data`, content);
 
         let options = {
             host: host,
@@ -165,7 +166,7 @@ export namespace util {
                         try {
                             successFunc(JSON.parse(body));
                         } catch (error) {
-                            logger.error('net', `http post error, body`, body);
+                            logger.error('net', `http isHttps:${isHttps} error, body`, body);
                         }
                     } else {
                         successFunc();

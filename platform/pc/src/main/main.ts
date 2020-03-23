@@ -137,30 +137,30 @@ async function createWindow() {
     await mainWindow.loadURL(url);
   })
 
-  // // 拦截new-window事件，起到拦截window.open的作用
-  // mainWindow.webContents.on('will-navigate', async (event: Event, url: string) => {
-  //   const tokenField = "webviewToken";
-  //   const newURL = new URL(url);
-  //   const hash = newURL.hash;
+  // 拦截new-window事件，起到拦截window.open的作用
+  mainWindow.webContents.on('will-navigate', async (event: Event, url: string) => {
+    const tokenField = "webviewToken";
+    const newURL = new URL(url);
+    const hash = newURL.hash;
 
-  //   const searchParams = (new URL(`https://bai.com${hash.slice(1)}`)).searchParams;
+    const searchParams = (new URL(`https://bai.com${hash.slice(1)}`)).searchParams;
 
-  //   if (newURL.searchParams.has(tokenField)
-  //     || searchParams.has(tokenField)
-  //   ) {
-  //     return;
-  //   }
+    if (newURL.searchParams.has(tokenField)
+      || searchParams.has(tokenField)
+    ) {
+      return;
+    }
 
-  //   // 阻止创建默认窗口
-  //   event.preventDefault();
+    // 阻止创建默认窗口
+    event.preventDefault();
 
-  //   if (config.bellToken) {
-  //     newURL.searchParams.append(tokenField, config.bellToken);
-  //   }
+    if (config.bellToken) {
+      newURL.searchParams.set(tokenField, config.bellToken);
+    }
 
-  //   logger.log('electron', `will-navigate: ${newURL}`);
-  //   await mainWindow.loadURL(newURL.toString());
-  // })
+    logger.log('electron', `will-navigate: ${newURL}`);
+    await mainWindow.loadURL(newURL.toString());
+  })
 
   //设置菜单
   // const menu = Menu.buildFromTemplate(template);

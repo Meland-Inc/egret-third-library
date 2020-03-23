@@ -3,7 +3,7 @@
  * @desc 平台相关的逻辑
  * @date 2020-02-19 11:22:49
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-21 20:55:18
+ * @Last Modified time: 2020-03-23 15:12:16
  */
 import querystring from 'querystring';
 
@@ -25,7 +25,12 @@ class Platform {
 
         logger.log('platform', 'argsObj', argsObj);
         for (const key in argsObj) {
-            const value = argsObj[key];
+            let value: string;
+            if (Array.isArray(argsObj[key])) {
+                value = argsObj[key][0];
+            } else {
+                value = argsObj[key] as string;
+            }
 
             if (key === 'temporary_token') {
                 config.setBellTempToken(`${value}`);
@@ -105,13 +110,14 @@ class Platform {
             queryObject[key] = `${value}`;
         }
 
+        logger.log('platform', 'queryObject', queryObject);
+
         let token = await this.login();
         queryObject['token'] = token;
 
         if (queryObject["gameServer"]) {
             message.sendIpcMsg('SAVE_NATIVE_GAME_SERVER', queryObject["gameServer"]);
         }
-
 
         logger.log('platform', 'queryObject', queryObject);
         return queryObject;
@@ -120,18 +126,20 @@ class Platform {
     /** 登陆贝尔平台 */
     private login(): Promise<string> {
         let data = { temporary_token: config.bellTempToken };
-        // if (Config.bellToken) {
-        //     data["token"] = Config.bellToken;
-        // }
+        if (config.bellToken) {
+            data["token"] = config.bellToken;
+        }
         logger.log('net', `请求登录贝尔平台, bellApiOrigin: ${config.bellApiOrigin}, bellTempToken:${config.bellTempToken}`);
         return new Promise((resolve, reject) => {
             util.requestPostHttps(config.bellApiOrigin, null, '/common/member/login-by-temporary-token', data, null
                 , (body: any) => {
                     logger.log('net', `登陆贝尔平台返回body`, body);
                     if (body.code === 200) {
-                        config.setBellToken(body.data.token);
+                        if (body.data.token) {
+                            config.setBellToken(body.data.token);
+                        }
                         this.getMemberInfo(() => {
-                            resolve(body.data.token as string)
+                            resolve(config.bellToken as string)
                         }, (err: any) => { reject(err) });
                         logger.log('net', `登陆贝尔平台成功, token:${config.bellToken}`);
                     } else {

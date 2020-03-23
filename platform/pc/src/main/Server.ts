@@ -166,7 +166,6 @@ class Server {
     /** 关闭游戏服务器 */
     public async closeGameServer() {
         return new Promise((resolve, reject) => {
-            logger.log('server', 'gameServerProcess', config.gameServerProcess);
             if (!config.gameServerProcess) {
                 resolve();
                 return;
