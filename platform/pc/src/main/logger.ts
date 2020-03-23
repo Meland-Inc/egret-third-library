@@ -15,6 +15,8 @@ export namespace logger {
     export function init() {
         processLogContent = '';
         webContentsLogContent = '';
+
+        fs.writeFileSync(`${config.rootPath}/dist/log/ipcRenderer.log`, '');
     }
 
     /** 打印log到后台进程日志中 */

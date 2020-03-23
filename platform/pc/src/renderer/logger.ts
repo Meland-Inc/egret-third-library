@@ -3,11 +3,24 @@
  * @desc renderer用的logger类
  * @date 2020-02-13 14:54:24 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-21 20:48:09
+ * @Last Modified time: 2020-03-23 15:22:57
  */
+import fs from 'fs';
+import { remote } from 'electron';
+
+let rendererLogContent: string = fs.readFileSync(`${remote.app.getAppPath()}/dist/log/ipcRenderer.log`, 'utf-8');
+/** 打印log到后台进程日志中 */
+export function rendererLog(tag: string, msg: string, ...args: any[]) {
+    let content = formateMsg(tag, msg, ...args);
+    content = content.replace(/\\n/g, '\r\n')
+    rendererLogContent += content + '\r\n';
+    fs.writeFileSync(`${remote.app.getAppPath()}/dist/log/ipcRenderer.log`, rendererLogContent);
+}
+
 export function log(tag: string, msg: string, ...args: any[]) {
     let content = formateMsg(tag, msg, ...args);
     console.log(content);
+    rendererLog(tag, msg, ...args);
 }
 
 export function error(tag: string, msg: string, ...args: any[]) {

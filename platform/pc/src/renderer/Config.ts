@@ -68,6 +68,10 @@ class Config {
     /** release客户端地址 */
     public releaseUrl = "http://wplanet.wkcoding.com/app";
 
+
+    /** 渲染日志路径 */
+    public rendererLogPath = `${this.rootPath}/dist/log/renderer.log`;
+
     private _nativeLoginResponse: any;
     /** native平台登陆信息 */
     public get nativeLoginResponse(): any {
