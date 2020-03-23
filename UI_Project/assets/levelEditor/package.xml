@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="ce9jx9xt">
+<packageDescription id="ce9jx9xt" jpegQuality="80" compressPNG="true">
   <resources>
     <component id="6bth0" name="WinLevelEditor.xml" path="/win/"/>
     <image id="nhj61" name="img_jm_pt_ym.png" path="/img/"/>
@@ -72,5 +72,5 @@
     <component id="ojgccyifc" name="btnFixClickArea.xml" path="/btn/"/>
     <image id="ojgccyifd" name="btn_cm_gb.png" path="/img/"/>
   </resources>
-  <publish name="levelEditor"/>
+  <publish name="levelEditor" path="..\..\egret-planet\resource\jimmyAssets\fairyGui"/>
 </packageDescription>

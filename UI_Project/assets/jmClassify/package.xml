@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="2r8x2qul">
+<packageDescription id="2r8x2qul" jpegQuality="80" compressPNG="true">
   <resources>
     <component id="l78k0" name="ComClassify.xml" path="/com/" exported="true"/>
     <component id="l78k1" name="ComTip.xml" path="/com/" exported="true"/>
   </resources>
-  <publish name="jmClassify"/>
+  <publish name="jmClassify" path="..\..\egret-planet\resource\jimmyAssets\dynamicMission\jmClassify"/>
 </packageDescription>

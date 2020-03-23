@@ -2,16 +2,16 @@
 <component size="673,50" extention="Button">
   <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
   <displayList>
-    <image id="n9_rknv" name="n9" src="j595cyiic" fileName="img/img_cm_tkc_1.png" pkg="te1gxawo" xy="0,0" size="673,50">
+    <image id="n9_rknv" name="n9" src="to3m4" fileName="img/img_cm_tkc_1.png" xy="0,0" size="673,50">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
     <text id="n8_epn8" name="title" xy="42,12" size="212,29" fontSize="18" color="#333333" vAlign="middle" autoSize="none" text="日志名.log">
       <relation target="" sidePair="left-left"/>
     </text>
-    <image id="n13_rknv" name="n13" src="rknvcyik2" fileName="img/img_cm_yxz.png" pkg="te1gxawo" xy="16,19">
+    <image id="n13_rknv" name="n13" src="to3m8" fileName="img/img_cm_yxz.png" xy="16,19">
       <gearDisplay controller="button" pages="1,3"/>
     </image>
-    <image id="n14_rknv" name="n14" src="rknvcyik3" fileName="img/img_cm_yxz_1.png" pkg="te1gxawo" xy="16,19">
+    <image id="n14_rknv" name="n14" src="to3m9" fileName="img/img_cm_yxz_1.png" xy="16,19">
       <gearDisplay controller="button" pages="0,2"/>
     </image>
     <text id="n15_rknv" name="time" xy="425,12" size="232,29" fontSize="18" color="#333333" align="right" vAlign="middle" letterSpacing="3" autoSize="none" text="2020/3/17   9:11:54">

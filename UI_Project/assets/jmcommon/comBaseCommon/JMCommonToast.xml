@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="384,56">
+  <displayList>
+    <image id="n5_d30c" name="n5" src="wmmv29" fileName="img/img_cm_tck_2.png" xy="-58,-1" size="501,44" scale="1,1.32">
+      <relation target="" sidePair="width-width"/>
+    </image>
+    <text id="n2_cnpn" name="tfContent" xy="176,12" size="30,31" font="FZZhunYuan-M02S" fontSize="24" color="#333333" align="center" vAlign="middle" leading="0" singleLine="true" text="我"/>
+  </displayList>
+  <relation target="n2_cnpn" sidePair="rightext-right,bottomext-bottom"/>
+</component>
