@@ -29,5 +29,5 @@
     <image id="nycep" name="bg_cm_4.png" path="/old/img/" scale="9grid" scale9grid="30,57,60,33"/>
     <component id="nyceq" name="btnScale.xml" path="/btn/"/>
   </resources>
-  <publish name="log"/>
+  <publish name="log" path="..\..\egret-planet\resource\assets\fairyGuiLog"/>
 </packageDescription>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="av6agj0g">
+<packageDescription id="av6agj0g" jpegQuality="80" compressPNG="true">
   <resources>
     <component id="sco7g" name="WinPlayLevel.xml" path="/win/" exported="true"/>
     <image id="sco7h" name="img_jm_pt_bgk.png" path="/img/" scale="9grid" scale9grid="20,12,40,24"/>
@@ -71,5 +71,5 @@
     <component id="wmmv2k" name="JMCommonModal.xml" path="/comBaseCommon/" exported="true"/>
     <image id="wmmv2l" name="img_cm_zzdt.png" path="/imgBaseCommon/" scale="9grid" scale9grid="10,10,20,20"/>
   </resources>
-  <publish name="jmcommon" path="\resource\jingmiAssets\fairyGui"/>
+  <publish name="jmcommon" path="..\..\egret-planet\resource\jingmiAssets\fairyGui"/>
 </packageDescription>

@@ -10,5 +10,5 @@
     <component id="erox6" name="btnDrag.xml" path="/"/>
     <image id="kag98" name="icon_jmsudoku_number101.png" path="/img/"/>
   </resources>
-  <publish name="jmsudoku"/>
+  <publish name="jmsudoku" path="..\..\egret-planet\resource\jingmiAssets\fairyGui"/>
 </packageDescription>
