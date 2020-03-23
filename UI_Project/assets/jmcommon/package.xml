@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="av6agj0g" jpegQuality="80" compressPNG="true">
+<packageDescription id="av6agj0g">
   <resources>
     <component id="sco7g" name="WinPlayLevel.xml" path="/win/" exported="true"/>
     <image id="sco7h" name="img_jm_pt_bgk.png" path="/img/" scale="9grid" scale9grid="20,12,40,24"/>
@@ -43,6 +43,19 @@
     <image id="alb71q" name="jindu2.png" path="/img/"/>
     <image id="alb71r" name="jindu1.png" path="/img/" scale="9grid" scale9grid="132,25,264,50"/>
     <image id="alb71s" name="back.png" path="/img/"/>
+    <component id="hwlx1t" name="ComNumberInput.xml" path="/com/" exported="true"/>
+    <image id="hwlx1u" name="img_jm_num0.png" path="/img/"/>
+    <image id="hwlx1v" name="img_jm_num1.png" path="/img/"/>
+    <image id="hwlx1w" name="img_jm_num2.png" path="/img/"/>
+    <image id="hwlx1x" name="img_jm_num3.png" path="/img/"/>
+    <image id="hwlx1y" name="img_jm_num4.png" path="/img/"/>
+    <image id="hwlx1z" name="img_jm_num5.png" path="/img/"/>
+    <image id="hwlx20" name="img_jm_num6.png" path="/img/"/>
+    <image id="hwlx21" name="img_jm_num7.png" path="/img/"/>
+    <image id="hwlx22" name="img_jm_num8.png" path="/img/"/>
+    <image id="hwlx23" name="img_jm_num9.png" path="/img/"/>
+    <image id="hwlx24" name="img_jm_numdel.png" path="/img/"/>
+    <image id="hwlx25" name="img_keybord_bg.png" path="/img/"/>
     <component id="wmmv28" name="JMCommonToast.xml" path="/comBaseCommon/" exported="true"/>
     <image id="wmmv29" name="img_cm_tck_2.png" path="/imgBaseCommon/" scale="9grid" scale9grid="240,11,20,22"/>
     <component id="wmmv2a" name="JMCommonAlert.xml" path="/comBaseCommon/" exported="true"/>
@@ -58,5 +71,5 @@
     <component id="wmmv2k" name="JMCommonModal.xml" path="/comBaseCommon/" exported="true"/>
     <image id="wmmv2l" name="img_cm_zzdt.png" path="/imgBaseCommon/" scale="9grid" scale9grid="10,10,20,20"/>
   </resources>
-  <publish name="jmcommon" path="E:\work\xiaobei\ClientProject\feature-xiang\resource\jingmiAssets\fairyGui"/>
+  <publish name="jmcommon" path="\resource\jingmiAssets\fairyGui"/>
 </packageDescription>
