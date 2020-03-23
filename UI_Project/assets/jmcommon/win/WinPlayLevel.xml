@@ -2,7 +2,7 @@
 <component size="1920,1080" designImage="ui://av6agj0gbmxe2h" designImageAlpha="3" designImageLayer="1">
   <controller name="ctrlVoiceType" pages="1,play,0,none,2,pause" selected="0"/>
   <controller name="ctrlIsDevelop" pages="0,false,1,true" selected="0"/>
-  <controller name="ctrlTemGameType" pages="0,none,1,success,2,fail,3,over" selected="2"/>
+  <controller name="ctrlTemGameType" pages="0,none,1,success,2,fail,3,over" selected="0"/>
   <controller name="ctrlStartL" pages="0,,1,,2,,3," selected="0"/>
   <displayList>
     <graph id="n38_gx7z" name="imgStageBG" xy="0,0" size="1920,1080" type="rect" lineSize="0" lineColor="#ffffffff">
@@ -30,7 +30,7 @@
     <image id="n47_gx7z" name="imgDesBg" src="bmxe28" fileName="img/tip_bg.png" xy="117,128" size="1291,95">
       <relation target="n37_gx7z" sidePair="left-left,top-top"/>
     </image>
-    <text id="n48_gx7z" name="tfDescribe" xy="280,156" size="1863,44" fontSize="40" color="#333333" vAlign="middle" autoSize="none" text="这里是关卡描述这里是关卡这里是关卡描述这里是关卡这里是关卡描述这里是关卡这里是关卡描述这里是关卡">
+    <text id="n48_gx7z" name="tfDescribe" xy="280,156" size="1925,44" fontSize="40" color="#333333" vAlign="middle" autoClearText="true" text="这里是关卡描述这里是关卡这里是关卡描述这里是关卡这里是关卡描述这里是关卡这里是关卡描述这里是关卡">
       <relation target="n47_gx7z" sidePair="left-left,top-top"/>
     </text>
     <graph id="n71_sco7" name="gphDesMask" xy="273,144" size="1106,66" type="rect">
@@ -68,10 +68,10 @@
       <relation target="n37_gx7z" sidePair="right-right,bottom-bottom"/>
       <Button icon="ui://av6agj0gbmxe2c"/>
     </component>
-    <graph id="n61_sco7" name="ladImg" xy="0,90" size="1920,900" alpha="0.8" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
+    <graph id="n61_sco7" name="ladImg" xy="0,223" size="1920,632" alpha="0.2" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
       <gearDisplay controller="ctrlTemGameType" pages="2"/>
       <gearIcon controller="ctrlTemGameType" pages="0,1,2,3" values="|||"/>
-      <relation target="" sidePair="width-width,middle-middle"/>
+      <relation target="" sidePair="width-width,height-height%,middle-middle"/>
     </graph>
     <graph id="n83_fy6w" name="gphMC" xy="506,90" size="900,900" touchable="false">
       <gearDisplay controller="ctrlTemGameType" pages="2"/>
@@ -81,7 +81,7 @@
       <gearDisplay controller="ctrlTemGameType" pages="1,2,3"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <component id="n63_sco7" name="btnNext" src="sco7k" fileName="btn/btnScale.xml" xy="854,804" size="212,98" touchable="false" controller="button,0">
+    <component id="n63_sco7" name="btnNext" src="sco7k" fileName="btn/btnScale.xml" xy="854,670" size="212,98" touchable="false" controller="button,0">
       <gearDisplay controller="ctrlTemGameType" pages="1"/>
       <relation target="n61_sco7" sidePair="center-center,bottom-bottom"/>
     </component>
