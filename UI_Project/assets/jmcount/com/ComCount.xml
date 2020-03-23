@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="2048,1536" opaque="false">
+<component size="1700,1200" opaque="false">
   <displayList>
-    <loader id="n40_xr0j" name="loaderBG" xy="638,316" size="786,601"/>
-    <component id="n43_hwlx" name="comNumberInput" src="hwlx1t" fileName="com/ComNumberInput.xml" pkg="av6agj0g" xy="256,1335" size="1662,150"/>
-    <component id="n44_hwlx" name="comCountAnswer1" src="hwlx2" fileName="com/ComCountAnswer.xml" xy="281,1190"/>
-    <component id="n45_hwlx" name="comCountAnswer2" src="hwlx2" fileName="com/ComCountAnswer.xml" xy="632,1187"/>
-    <component id="n46_hwlx" name="comCountAnswer3" src="hwlx2" fileName="com/ComCountAnswer.xml" xy="988,1185"/>
+    <loader id="n40_xr0j" name="loaderBG" xy="490,255" size="786,601"/>
+    <component id="n43_hwlx" name="comNumberInput" src="hwlx1t" fileName="com/ComNumberInput.xml" pkg="av6agj0g" xy="23,1036" size="1662,150"/>
+    <component id="n44_hwlx" name="comCountAnswer1" src="hwlx2" fileName="com/ComCountAnswer.xml" xy="89,888"/>
+    <component id="n45_hwlx" name="comCountAnswer2" src="hwlx2" fileName="com/ComCountAnswer.xml" xy="440,885"/>
+    <component id="n46_hwlx" name="comCountAnswer3" src="hwlx2" fileName="com/ComCountAnswer.xml" xy="796,883"/>
   </displayList>
 </component>
