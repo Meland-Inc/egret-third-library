@@ -3,9 +3,16 @@
  * @desc 全局定义
  * @date 2020-03-21 14:52:44 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-21 21:07:40
+ * @Last Modified time: 2020-03-23 20:12:28
  */
 export namespace define {
+    /** 分支枚举 */
+    export enum eEnvironName {
+        beta = "beta",
+        ready = "ready",
+        release = "release",
+    }
+
     /** 路由枚举 */
     export enum eLessonRouter {
         createMap = "createMap",

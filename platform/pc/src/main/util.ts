@@ -3,7 +3,7 @@
  * @desc main用的工具类
  * @date 2020-02-18 11:43:24 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-23 15:10:59
+ * @Last Modified time: 2020-03-23 20:13:46
  */
 // const spawn = require("child_process").spawn;
 import { exec, ChildProcess } from 'child_process';
@@ -196,11 +196,17 @@ export namespace util {
     /** 初始化native配置 */
     export async function init() {
         logger.log('net', `初始化native本地服务器配置`);
+
         let nativeCnfContent = fs.readFileSync(config.nativeCnfPath, "utf-8");
         nativeCnf = JSON.parse(nativeCnfContent);
 
         let globalConfigContent = fs.readFileSync(config.globalConfigPath, "utf-8");
         globalConfig = JSON.parse(globalConfigContent);
+
+        //初始化清空参数
+        util.setGlobalConfigValue("token", "");
+
+        config.setEnvironName(globalConfig.environName);
     }
 
     /** 写入服务端配置文件 */

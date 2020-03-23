@@ -7,8 +7,8 @@
     "start": "yarn build:dev && electron .",
     "build:dev": "cross-env NODE_ENV=development webpack --config build/webpack.config.js",
     "build:prod": "cross-env NODE_ENV=production webpack --config build/webpack.config.js",
-    "build:win": "electron-builder --win --x64",
-    "build:mac": "electron-builder --mac",
+    "build:win": "yarn build:prod &&electron-builder --win --x64",
+    "build:mac": "yarn build:prod &&electron-builder --mac",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "cross-env NODE_ENV=development webpack-dev-server --mode=development --config build/webpack.config.js"
   },

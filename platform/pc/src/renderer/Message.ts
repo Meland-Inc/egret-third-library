@@ -3,7 +3,7 @@
  * @desc 渲染进程消息处理文件
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-23 15:39:46
+ * @Last Modified time: 2020-03-23 19:49:28
  */
 import { ipcRenderer, IpcRendererEvent } from "electron";
 import querystring from "querystring";
@@ -261,6 +261,12 @@ class Message {
             localStorage.setItem('nativeGameServer', JSON.stringify(config.nativeGameServer));
         } else {
             localStorage.removeItem('nativeGameServer');
+        }
+
+        if (config.nativeToken) {
+            localStorage.setItem('nativeToken', config.nativeToken);
+        } else {
+            localStorage.removeItem('nativeToken');
         }
     }
 

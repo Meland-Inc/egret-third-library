@@ -3,18 +3,20 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-22 01:37:40
+ * @Last Modified time: 2020-03-23 19:29:20
  */
 // Modules to control application life and create native browser window
-import { app, globalShortcut, BrowserWindow, Menu, shell, dialog, Referrer, BrowserWindowConstructorOptions } from 'electron';
+import { app, globalShortcut, BrowserWindow, Menu, shell, dialog, session, Referrer, BrowserWindowConstructorOptions } from 'electron';
 import * as fs from 'fs';
 import * as process from 'process';
+
 
 import { define } from './define';
 import { logger } from './logger';
 import config from './Config';
 import server from './Server';
 import message from './Message';
+import { util } from './util';
 
 let mainWindow: BrowserWindow;
 
@@ -142,7 +144,26 @@ async function createWindow() {
     const tokenField = "webviewToken";
     const newURL = new URL(url);
     const hash = newURL.hash;
+    logger.log('platform', `config.environName`, config.environName);
+    if (config.environName) {
+      let cookies = await session.defaultSession.cookies.get({});
+      let domain: string;
+      if (config.environName === define.eEnvironName.ready) {
+        domain = config.readyTokenDomain;
+      } else {
+        domain = config.releaseTokenDomain;
+      }
 
+      // logger.log('platform', `cookies`, cookies);
+      let cookie = cookies.find(value => value.name === "token" && value.domain === domain);
+      if (cookie) {
+        util.setGlobalConfigValue("token", cookie.value);
+      } else {
+        util.setGlobalConfigValue("token", "");
+      }
+    }
+
+    //江哥写的特殊处理平台locationBuilder的代码
     const searchParams = (new URL(`https://bai.com${hash.slice(1)}`)).searchParams;
 
     if (newURL.searchParams.has(tokenField)

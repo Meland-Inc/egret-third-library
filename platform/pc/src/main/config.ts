@@ -3,7 +3,7 @@
  * @desc main用的配置
  * @date 2020-02-13 14:54:41 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-22 01:36:25
+ * @Last Modified time: 2020-03-23 18:48:26
  */
 import { BrowserWindow } from 'electron';
 import { Server } from 'net';
@@ -35,7 +35,14 @@ class Config {
         return this._rootPath;
     }
 
-
+    /** 分支环境  beta|ready|release */
+    private _environName: define.eEnvironName;
+    public get environName(): define.eEnvironName {
+        return this._environName;
+    }
+    public setEnvironName(value: define.eEnvironName) {
+        this._environName = value;
+    }
 
     /** 全局配置路径 */
     public globalConfigPath: string = `${this.rootPath}/dist/GlobalConfig.json`;
@@ -83,7 +90,13 @@ class Config {
     public processLogPath = `${this.rootPath}/dist/log/process.log`;
 
     /** 前台日志路径 */
-    public webContentsLogPath = `${this.rootPath}/dist/log/webContents.log`;
+    public ipcMainLogPath = `${this.rootPath}/dist/log/ipcMain.log`;
+
+    /** 正式环境用tokenDomain */
+    public releaseTokenDomain = `.bellcode.com`;
+
+    /** ready环境用tokenDomain */
+    public readyTokenDomain = `.wkcoding.com`
 
     /** 游戏服务器是否初始化 */
     private _gameServerInited: boolean;

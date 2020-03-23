@@ -3,7 +3,7 @@
  * @desc main用的logger类
  * @date 2020-02-13 14:54:34 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-21 20:38:31
+ * @Last Modified time: 2020-03-23 18:48:10
  */
 import fs from 'fs';
 import config from './Config';
@@ -32,7 +32,7 @@ export namespace logger {
         let content = formateMsg(tag, msg, ...args);
         content = content.replace(/\\n/g, '\r\n')
         webContentsLogContent += content + '\r\n';
-        fs.writeFileSync(config.webContentsLogPath, webContentsLogContent);
+        fs.writeFileSync(config.ipcMainLogPath, webContentsLogContent);
     }
 
     /** 打印日志 */

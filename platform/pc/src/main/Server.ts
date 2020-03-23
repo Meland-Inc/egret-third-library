@@ -3,11 +3,11 @@
  * @desc 处理native服务器和游戏服务器的文件
  * @date 2020-02-18 11:42:29 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-21 20:40:06
+ * @Last Modified time: 2020-03-23 19:27:12
  */
 import fs from 'fs';
 import os from 'os';
-import kill from 'tree-kill';
+import treeKill from 'tree-kill';
 import http from 'http';
 import url from 'url';
 import { ChildProcess } from 'child_process';
@@ -175,7 +175,7 @@ class Server {
                 // let cmdStr = "taskkill /im game.exe /f";
                 // util.runCmd(cmdStr, null, `关闭游戏服务器成功`, "关闭游戏服务器错误");
                 logger.log('net', `关闭游戏服务器`);
-                kill(config.gameServerProcess.pid, (error) => {
+                treeKill(config.gameServerProcess.pid, (error) => {
                     reject(error);
                 });
                 config.setGameServerProcess(null);
