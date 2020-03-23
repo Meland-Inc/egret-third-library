@@ -102,7 +102,7 @@ export class Global {
     }
 
     static get nativeConfigPath() {
-        return `${Global.clientPath}/platform/pc/GlobalConfig.json`;
+        return `${Global.clientPath}/platform/pc/dist/GlobalConfig.json`;
     }
 
 
