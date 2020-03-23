@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://av6agj0gbmxe2h" designImageAlpha="3" designImageLayer="1">
   <controller name="ctrlVoiceType" pages="1,play,0,none,2,pause" selected="0"/>
-  <controller name="ctrlIsDevelop" pages="0,false,1,true" selected="1"/>
-  <controller name="ctrlTemGameType" pages="0,none,1,success,2,fail,3,over" selected="1"/>
+  <controller name="ctrlIsDevelop" pages="0,false,1,true" selected="0"/>
+  <controller name="ctrlTemGameType" pages="0,none,1,success,2,fail,3,over" selected="0"/>
   <controller name="ctrlStartL" pages="0,,1,,2,,3," selected="0"/>
   <displayList>
     <graph id="n38_gx7z" name="imgStageBG" xy="0,0" size="1920,1080" type="rect" lineSize="0" lineColor="#ffffffff">
       <relation target="" sidePair="width-width,height-height"/>
     </graph>
-    <component id="n39_gx7z" name="comEditorStage" src="sco7n" fileName="com/ComEditorStage.xml" xy="83,84" size="1757,921">
+    <component id="n39_gx7z" name="comEditorStage" src="sco7n" fileName="com/ComEditorStage.xml" xy="174,237" size="1572,744">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
     <loader id="n34_gx7z" name="ladBG" xy="0,0" size="1920,1080" touchable="false" url="ui://av6agj0gbmxe27" fill="scaleFree">
