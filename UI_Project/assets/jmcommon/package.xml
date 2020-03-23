@@ -16,8 +16,6 @@
     <image id="sco7s" name="img_jm_pt_msk.png" path="/img/" scale="9grid" scale9grid="66,17,89,78"/>
     <image id="sco7t" name="icon_jm_pt_bf.png" path="/img/"/>
     <image id="sco7u" name="icon_jm_pt_zt.png" path="/img/"/>
-    <image id="sco7v" name="icon_jm_pt_cx.png" path="/img/"/>
-    <image id="sco7w" name="icon_jm_pt_pt.png" path="/img/"/>
     <image id="sco7x" name="img_jm_cbl.png" path="/img/"/>
     <image id="sco715" name="跳过关卡.png" path="/img/"/>
     <image id="sco716" name="wrong.png" path="/img/"/>
@@ -29,15 +27,12 @@
     <image id="alb71c" name="skip.png" path="/img/"/>
     <image id="alb71d" name="replay.png" path="/img/"/>
     <image id="alb71e" name="OK.png" path="/img/"/>
-    <image id="alb71f" name="预览图.jpg" path="/img/"/>
     <image id="alb71g" name="skip2.png" path="/img/"/>
     <image id="alb71h" name="replay2.png" path="/img/"/>
     <image id="alb71i" name="OK2.png" path="/img/"/>
     <image id="alb71j" name="next2.png" path="/img/"/>
     <image id="alb71k" name="icon_jm_pt_zt2.png" path="/img/"/>
     <image id="alb71l" name="icon_jm_pt_bf2.png" path="/img/"/>
-    <image id="alb71m" name="bg.jpg" path="/img/" scale="tile" scale9grid="512,384,1024,768"/>
-    <image id="alb71n" name="white.png" path="/img/" scale="9grid" scale9grid="466,337,932,674"/>
     <image id="alb71o" name="预览图带标记.png" path="/img/"/>
     <image id="alb71p" name="tips.png" path="/img/"/>
     <image id="alb71q" name="jindu2.png" path="/img/"/>
@@ -56,6 +51,21 @@
     <image id="hwlx23" name="img_jm_num9.png" path="/img/"/>
     <image id="hwlx24" name="img_jm_numdel.png" path="/img/"/>
     <image id="hwlx25" name="img_keybord_bg.png" path="/img/"/>
+    <image id="bmxe26" name="white_bg.png" path="/img/" scale="9grid" scale9grid="61,63,32,40"/>
+    <image id="bmxe27" name="bg1.jpg" path="/img/" scale="tile"/>
+    <image id="bmxe28" name="tip_bg.png" path="/img/"/>
+    <image id="bmxe29" name="sound_on.png" path="/img/"/>
+    <image id="bmxe2a" name="sound_off.png" path="/img/"/>
+    <image id="bmxe2b" name="skip_tip.png" path="/img/"/>
+    <image id="bmxe2c" name="skip_bt.png" path="/img/"/>
+    <image id="bmxe2d" name="right_bt.png" path="/img/"/>
+    <image id="bmxe2e" name="replay_bt.png" path="/img/"/>
+    <image id="bmxe2f" name="close_bt.png" path="/img/"/>
+    <image id="bmxe2g" name="bt_bg.png" path="/img/"/>
+    <image id="bmxe2h" name="参考图.jpg" path="/img/"/>
+    <image id="bmxe2i" name="neikuang.png" path="/img/" scale="9grid" scale9grid="124,149,233,225"/>
+    <image id="bmxe2j" name="bg.png" path="/img/" scale="tile" scale9grid="46,36,92,72"/>
+    <image id="bmxe2k" name="外框遮罩.png" path="/img/" scale="9grid" scale9grid="188,231,333,333"/>
   </resources>
   <publish name="jmcommon"/>
 </packageDescription>
