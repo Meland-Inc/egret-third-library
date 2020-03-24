@@ -601,7 +601,7 @@ export async function uploadNativeExe() {
     return new Promise(async (resolve, reject) => {
         let environ = ModelMgr.versionModel.curEnviron;
         let exeOriginName = "bellplanet Setup 1.0.0.exe"
-        let exePath = `${Global.pcProjectPath}/dist/${exeOriginName}`;
+        let exePath = `${Global.pcProjectPath}/app/${exeOriginName}`;
         let exeTargetName = `bellplanet_${environ.name}.exe`;
         let exeTargetDir = `${Global.svnPublishPath}/native`;
         let exeTargetPath = `${exeTargetDir}/${exeTargetName}`;
@@ -644,7 +644,7 @@ export async function uploadNativeDmg() {
     return new Promise(async (resolve, reject) => {
         let environ = ModelMgr.versionModel.curEnviron;
         let dmgOriginName = "bellplanet-1.0.0.dmg";
-        let dmgPath = `${Global.pcProjectPath}/dist/${dmgOriginName}`;
+        let dmgPath = `${Global.pcProjectPath}/app/${dmgOriginName}`;
         let dmgTargetName = `bellplanet_${environ.name}.dmg`;
         let dmgTargetDir = `${Global.svnPublishPath}/native/`;
         let dmgTargetPath = `${dmgTargetDir}/${dmgTargetName}`;
