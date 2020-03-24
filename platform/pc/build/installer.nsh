@@ -8,6 +8,7 @@ RequestExecutionLevel admin
   ; This macro is inserted at the beginning of the NSIS .OnInit callback
   !system "echo '' > ${BUILD_RESOURCES_DIR}/preInit"
 
+  ; 磁盘检测
   StrCpy $R1 "D:\"
   ${DriveSpace} $R1 "/D=F /S=M" $R0
   ${If} $R0 = null
@@ -51,6 +52,13 @@ RequestExecutionLevel admin
   WriteRegStr HKCR "bellplanet" "URL Protocol" ""
   WriteRegStr HKCR "bellplanet" "" "URL:bellplanet Protocol Handler"
   WriteRegStr HKCR "bellplanet\shell\open\command" "" '"$INSTDIR\bellplanet.exe" "%1"'
+
+  ;安装后 添加注册表管理员权限
+  ; ;针对当前用户有效
+  ; WriteRegStr HKCU "SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" "$INSTDIR\bellplanet.exe" "RUNASADMIN" 
+ 
+  ; ;针对所有用户有效
+  ; WriteRegStr HKEY_LOCAL_MACHINE "SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" "$INSTDIR\bellplanet.exe" "RUNASADMIN"
 !macroend
 
 !macro customUnInit
@@ -61,6 +69,13 @@ RequestExecutionLevel admin
   !system "echo '' > ${BUILD_RESOURCES_DIR}/customUnInstall"
   DeleteRegKey HKCR "bellplanet"
   DeleteRegKey HKCR "bellplanet\shell\open\command"
+
+  ;卸载时 删除注册表管理员权限
+  ; ;针对当前用户有效
+  ; DeleteRegKey HKCU "SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers"
+ 
+  ; ;针对所有用户有效
+  ; DeleteRegKey HKEY_LOCAL_MACHINE "SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers"
 !macroend
 
 !macro customInstallMode
