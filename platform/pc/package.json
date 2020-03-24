@@ -69,6 +69,7 @@
     "nsis": {
       "oneClick": true,
       "perMachine": true,
+      "menuCategory": true,
       "allowElevation": true,
       "allowToChangeInstallationDirectory": false,
       "createDesktopShortcut": true,
