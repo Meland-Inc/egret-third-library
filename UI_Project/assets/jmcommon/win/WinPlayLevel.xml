@@ -125,5 +125,15 @@
     <image id="n90_bmxe" name="imgBgMask" src="bmxe2l" fileName="img/waikuang.png" xy="0,0" size="1920,1080" visible="false">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
+    <image id="n93_hilw" name="n93" src="hilw2p" fileName="img/pop.png" xy="1409,148" group="n94_hilw"/>
+    <component id="n91_hilw" name="btnNoSkip" src="sco7k" fileName="btn/btnScale.xml" xy="1456,177" size="141,72" group="n94_hilw">
+      <Button icon="ui://av6agj0ghilw2n"/>
+    </component>
+    <component id="n92_hilw" name="btnSkip" src="sco7k" fileName="btn/btnScale.xml" xy="1607,176" size="142,73" group="n94_hilw">
+      <Button icon="ui://av6agj0ghilw2o"/>
+    </component>
+    <group id="n94_hilw" name="grpSecond" xy="1409,148" size="389,130" advanced="true">
+      <relation target="n59_sco7" sidePair="center-center,bottom-bottom"/>
+    </group>
   </displayList>
 </component>

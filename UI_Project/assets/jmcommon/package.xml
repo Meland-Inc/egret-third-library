@@ -81,6 +81,9 @@
     <image id="wmmv2j" name="icon_cm_caveat.png" path="/imgBaseCommon/"/>
     <component id="wmmv2k" name="JMCommonModal.xml" path="/comBaseCommon/" exported="true"/>
     <image id="wmmv2l" name="img_cm_zzdt.png" path="/imgBaseCommon/" scale="9grid" scale9grid="10,10,20,20"/>
+    <image id="hilw2n" name="确认跳过.png" path="/img/"/>
+    <image id="hilw2o" name="retry.png" path="/img/"/>
+    <image id="hilw2p" name="pop.png" path="/img/"/>
   </resources>
   <publish name="jmcommon" path="..\..\egret-planet\resource\jimmyAssets\fairyGui" packageCount="2"/>
 </packageDescription>
