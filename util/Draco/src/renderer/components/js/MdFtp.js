@@ -606,13 +606,14 @@ export async function uploadNativeExe() {
         let exeTargetDir = `${Global.svnPublishPath}/native`;
         let exeTargetPath = `${exeTargetDir}/${exeTargetName}`;
 
-        console.log("比较exe包");
-        let equal = await fsExc.mergeFileByMd5(exePath, exeTargetPath);
-        if (equal) {
-            console.log("exe包相等");
-            resolve();
-            return;
-        }
+        //不比较,直接传
+        // console.log("比较exe包");
+        // let equal = await fsExc.mergeFileByMd5(exePath, exeTargetPath);
+        // if (equal) {
+        //     console.log("exe包相等");
+        //     resolve();
+        //     return;
+        // }
 
         console.log("exe包不相等,开始上传");
         let platform = "win";
@@ -649,13 +650,14 @@ export async function uploadNativeDmg() {
         let dmgTargetDir = `${Global.svnPublishPath}/native/`;
         let dmgTargetPath = `${dmgTargetDir}/${dmgTargetName}`;
 
-        console.log("比较mac包");
-        let equal = await fsExc.mergeFileByMd5(dmgPath, dmgTargetPath);
-        if (equal) {
-            console.log("mac包相等");
-            resolve();
-            return;
-        }
+        //不比较,直接传
+        // console.log("比较mac包");
+        // let equal = await fsExc.mergeFileByMd5(dmgPath, dmgTargetPath);
+        // if (equal) {
+        //     console.log("mac包相等");
+        //     resolve();
+        //     return;
+        // }
 
         console.log("mac包不相等,开始上传");
         let platform = "mac";
