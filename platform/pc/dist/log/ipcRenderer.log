@@ -1,0 +1,30 @@
+[native][renderer]2020-3-23 20:6:17	初始化渲染进程主逻辑
+[native][renderer]2020-3-23 20:6:17	初始化渲染进程监听消息
+[native][renderer]2020-3-23 20:6:17	初始化全局配置
+[native][renderer]2020-3-23 20:6:17	设置nativeToken:["48196e10-6cf9-11ea-aad7-0242ac140004-6447"]
+[native][update]2020-3-23 20:6:17	开始检查更新
+[native][config]2020-3-23 20:6:17	全局配置:[{"environName":"ready","gameVersion":464,"patchUrl":"47.107.73.43/native/win/release/patch","policyUrl":"47.107.73.43/web/ready","serverPackageVersion":1,"token":"48196e10-6cf9-11ea-aad7-0242ac140004-6447"}]
+[native][net]2020-3-23 20:6:17	dir length:22
+[native][renderer]2020-3-23 20:6:18	策略版本号:157
+[native][renderer]2020-3-23 20:6:18	游戏版本号:464
+[native][net]2020-3-23 20:6:18	检查更新完毕,客户端,服务端版本都是最新
+[native][update]2020-3-23 20:6:18	检查更新完毕
+[native][renderer]2020-3-23 20:6:18	发送渲染进程消息:CHECK_UPDATE_COMPLETE args
+[native][renderer]2020-3-23 20:6:18	收到主进程消息:UPDATE_GLOBAL_CONFIG args:[{"environName":"ready","gameVersion":464,"patchUrl":"47.107.73.43/native/win/release/patch","policyUrl":"47.107.73.43/web/ready","serverPackageVersion":1,"token":""}]
+[native][renderer]2020-3-23 20:6:18	收到主进程消息:START_NATIVE_WEBSITE args
+[native][renderer]2020-3-23 20:6:18	收到主进程消息:UPDATE_GLOBAL_CONFIG args:[{"environName":"ready","gameVersion":464,"patchUrl":"47.107.73.43/native/win/release/patch","policyUrl":"47.107.73.43/web/ready","serverPackageVersion":1,"token":"48196e10-6cf9-11ea-aad7-0242ac140004-6447"}]
+[native][renderer]2020-3-23 20:6:29	初始化渲染进程主逻辑
+[native][renderer]2020-3-23 20:6:29	初始化渲染进程监听消息
+[native][renderer]2020-3-23 20:6:29	初始化全局配置
+[native][renderer]2020-3-23 20:6:29	设置nativeToken:["48196e10-6cf9-11ea-aad7-0242ac140004-6447"]
+[native][update]2020-3-23 20:6:29	开始检查更新
+[native][config]2020-3-23 20:6:29	全局配置:[{"environName":"ready","gameVersion":464,"patchUrl":"47.107.73.43/native/win/release/patch","policyUrl":"47.107.73.43/web/ready","serverPackageVersion":1,"token":"48196e10-6cf9-11ea-aad7-0242ac140004-6447"}]
+[native][net]2020-3-23 20:6:29	dir length:22
+[native][renderer]2020-3-23 20:6:29	策略版本号:157
+[native][renderer]2020-3-23 20:6:29	游戏版本号:464
+[native][net]2020-3-23 20:6:29	检查更新完毕,客户端,服务端版本都是最新
+[native][update]2020-3-23 20:6:29	检查更新完毕
+[native][renderer]2020-3-23 20:6:29	发送渲染进程消息:CHECK_UPDATE_COMPLETE args
+[native][renderer]2020-3-23 20:6:29	收到主进程消息:UPDATE_GLOBAL_CONFIG args:[{"environName":"ready","gameVersion":464,"patchUrl":"47.107.73.43/native/win/release/patch","policyUrl":"47.107.73.43/web/ready","serverPackageVersion":1,"token":""}]
+[native][renderer]2020-3-23 20:6:29	收到主进程消息:START_NATIVE_CLIENT args:["fakeGameMode=lessons&gameServer=app-ready.wkcoding.com&accountServer=ready-account.wkcoding.com&serverListServer=ready-server-list.wkcoding.com&uploadLogServer=ready-clientlog.wkcoding.com&register=1&developMode=1&register=1&banner=1&bellApiOrigin=demoapi.wkcoding.com&serverListServer=ready-server-list.wkcoding.com&gameVersion=_v464&displayVersion=464&cdnUrl=&versionType=0&nativeMode=7"]
+[native][renderer]2020-3-23 20:6:29	收到主进程消息:UPDATE_GLOBAL_CONFIG args:[{"environName":"ready","gameVersion":464,"patchUrl":"47.107.73.43/native/win/release/patch","policyUrl":"47.107.73.43/web/ready","serverPackageVersion":1,"token":"48196e10-6cf9-11ea-aad7-0242ac140004-6447"}]

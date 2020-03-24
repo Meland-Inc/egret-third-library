@@ -1,0 +1,334 @@
+[native][cmd]2020-3-23 19:52:54	stdout:["2020/03/23 19:52:54.039 [I]  ----------serverModel = lesson ----------------------
+2020/03/23 19:52:54.050 [I]  ----------IsDevelop = false ----------------------
+2020/03/23 19:52:54.050 [I]  ----------IsNative = true ----------------------
+2020/03/23 19:52:54.050 [I]  ----------serverUseNat = true ----------------------
+2020/03/23 19:52:54.050 [I]  ----------serverDomain = game-native ----------------------
+"]
+[native][cmd]2020-3-23 19:52:54	stdout:["{\"hostname\":\"ZFBIL9MTEIXHABK\",\"message\":\"initializing\",\"mode\":\"develop\",\"server\":\"bian_game\",\"time\":\"2020-03-23T11:52:54.0537885Z\",\"version\":\"bian-go1.14-unknown-unknown\"}
+"]
+[native][cmd]2020-3-23 19:52:54	stdout:["2020/03/23 19:52:54.080 [I]  nativeData = &{Gid:27481056185679873 SchoolId:22 ClassId:18753 LessonId:848 UserId:15432 UseNat:true NativeHost:127.0.0.1 NativePort:49621 NickName:bell_cs11 GameArgs:--mapTemplateId=83227605779638366 --edit=1 --templateDNS=rm-uf69412paf3wj6f95mo.mysql.rds.aliyuncs.com#3306#bellplanet_ctl#Y6cuxV9iRj#game_template_test --classDNS=rm-uf69412paf3wj6f95mo.mysql.rds.aliyuncs.com#3306#bellplanet_ctl#Y6cuxV9iRj#game_class_test --cnfDNS=rm-uf69412paf3wj6f95mo.mysql.rds.aliyuncs.com#3306#bellplanet_ctl#Y6cuxV9iRj#game_cnf_test --roomServerHost=http://bellplanet-ready-maphall-map-hall --mapTemplateUrl=83227605779638366_小贝星球的世界4_77128658803782135_1584947384.gob --isRoom=0 --mapTemplate=小贝星球的世界4 --redisDNS=47.107.73.43:6379#!aBcDeF542158@@@ --serverListHost=ready-server-list.wkcoding.com --roomId=83227605779638366 --Password=0}
+"]
+[native][cmd]2020-3-23 19:52:54	stdout:["2020/03/23 19:52:54.081 [I]  native 中心服配置 map[conn:map[dbname:center_cnf host:rm-uf69412paf3wj6f95mo.mysql.rds.aliyuncs.com password:Y6cuxV9iRj port:3306 table_class:class_cnf table_lession:lesson_cnf username:bellplanet_ctl]]
+2020/03/23 19:52:54.081 [I]  Native gameArgs = [--mapTemplateId=83227605779638366 --edit=1 --templateDNS=rm-uf69412paf3wj6f95mo.mysql.rds.aliyuncs.com#3306#bellplanet_ctl#Y6cuxV9iRj#game_template_test --classDNS=rm-uf69412paf3wj6f95mo.mysql.rds.aliyuncs.com#3306#bellplanet_ctl#Y6cuxV9iRj#game_class_test --cnfDNS=rm-uf69412paf3wj6f95mo.mysql.rds.aliyuncs.com#3306#bellplanet_ctl#Y6cuxV9iRj#game_cnf_test --roomServerHost=http://bellplanet-ready-maphall-map-hall --mapTemplateUrl=83227605779638366_小贝星球的世界4_77128658803782135_1584947384.gob --isRoom=0 --mapTemplate=小贝星球的世界4 --redisDNS=47.107.73.43:6379#!aBcDeF542158@@@ --serverListHost=ready-server-list.wkcoding.com --roomId=83227605779638366 --Password=0]
+2020/03/23 19:52:54.081 [I]  init flag &{ServerId:27481056185679873 Channel: EditMap:true RoomMap:false UseMapTemplate:小贝星球的世界4 OssUrl: MapTemplateId:83227605779638366 TemplateDNS:rm-uf69412paf3wj6f95mo.mysql.rds.aliyuncs.com#3306#bellplanet_ctl#Y6cuxV9iRj#game_template_test ClassDNS:rm-uf69412paf3wj6f95mo.mysql.rds.aliyuncs.com#3306#bellplanet_ctl#Y6cuxV9iRj#game_class_test CnfDNS:rm-uf69412paf3wj6f95mo.mysql.rds.aliyuncs.com#3306#bellplanet_ctl#Y6cuxV9iRj#game_cnf_test RoomServerHost:http://bellplanet-ready-maphall-map-hall MapTemplateUrl:83227605779638366_小贝星球的世界4_77128658803782135_1584947384.gob ServerListHost:ready-server-list.wkcoding.com TestModel:false RoomPassword:0 RedisDNS:47.107.73.43:6379#!aBcDeF542158@@@ RoomId:83227605779638366}
+2020/03/23 19:52:54.081 [I]  *********************************************************************************************
+2020/03/23 19:52:54.081 [I]  --------------  dsnCenter = &{DSN:{Host:rm-uf69412paf3wj6f95mo.mysql.rds.aliyuncs.com Port:3306 Username:bellplanet_ctl Password:Y6cuxV9iRj DatabaseName:center_cnf} TableClassCnf:class_cnf TableLessonCnf:lesson_cnf} -----------------------------------
+2020/03/23 19:52:54.081 [I]  *********************************************************************************************
+"]
+[native][cmd]2020-3-23 19:52:54	stdout:["2020/03/23 19:52:54.735 [I]  *********************************************************************************************
+2020/03/23 19:52:54.735 [I]  --------------  serverChannel = bian_lesson -----------------------------------
+2020/03/23 19:52:54.735 [I]  *********************************************************************************************
+2020/03/23 19:52:54.735 [I]  --------------  lessonInfo    = &{GId:27481056185679873 PackageId:7605 ClassID:8322 LessonID:7796 ActivityId:38366 ActivityName: LessonName:bell_cs11的小贝星球的世界4 GameHost:192.168.21.115 GamePort:3211 Channel:bian_lesson BellcodeSecret:0xc000114710 Client_version:304 LessonHost:rm-uf69412paf3wj6f95mo.mysql.rds.aliyuncs.com LessonPort:3306 LessonUsername:bellplanet_ctl LessonPassword:Y6cuxV9iRj LessonDatabaseName:class_8322_package_7605_lesson_7796_activity_38366_true CfgHost:47.107.73.43 CfgPort:3306 CfgUsername:root CfgPassword:root CfgDatabaseName:cfg_global_db TemplateHost:47.107.73.43 TemplatePort:3306 TemplateUsername:root TemplatePassword:root TemplateDatabaseName:template_global_db LastPlayTime:0001-01-01 00:00:00 +0000 UTC TemplateUrl:https://bg-stage.wkcoding.com/db77be6c546080bafcf3b5f7fe431f3d StudentNum:0 IsTest:1 LessonDsn:0xc0000b0370 CfgDsn:0xc0000b03c0 TemplateDsn:0xc0000b0410 ManorTemplateID:0 MapTemplateID:0}
+2020/03/23 19:52:54.735 [I]  *********************************************************************************************
+"]
+[native][cmd]2020-3-23 19:52:54	stdout:["2020/03/23 19:52:54.780 [I]  *********************************************************************************************
+2020/03/23 19:52:54.780 [I]  lessonInfo  =  &{GId:27481056185679873 PackageId:7605 ClassID:8322 LessonID:7796 ActivityId:38366 ActivityName: LessonName:bell_cs11的小贝星球的世界4 GameHost:192.168.21.115 GamePort:3211 Channel:bian_lesson BellcodeSecret:0xc000114710 Client_version:304 LessonHost:rm-uf69412paf3wj6f95mo.mysql.rds.aliyuncs.com LessonPort:3306 LessonUsername:bellplanet_ctl LessonPassword:Y6cuxV9iRj LessonDatabaseName:class_8322_package_7605_lesson_7796_activity_38366_true CfgHost:47.107.73.43 CfgPort:3306 CfgUsername:root CfgPassword:root CfgDatabaseName:cfg_global_db TemplateHost:47.107.73.43 TemplatePort:3306 TemplateUsername:root TemplatePassword:root TemplateDatabaseName:template_global_db LastPlayTime:0001-01-01 00:00:00 +0000 UTC TemplateUrl:https://bg-stage.wkcoding.com/db77be6c546080bafcf3b5f7fe431f3d StudentNum:0 IsTest:1 LessonDsn:0xc0000b0370 CfgDsn:0xc0000b03c0 TemplateDsn:0xc0000b0410 ManorTemplateID:0 MapTemplateID:83227605779638366}
+2020/03/23 19:52:54.780 [I]  *********************************************************************************************
+2020/03/23 19:52:54.780 [I]  classInfo   =  {Host:rm-uf69412paf3wj6f95mo.mysql.rds.aliyuncs.com Port:3306 Username:bellplanet_ctl Password:Y6cuxV9iRj DatabaseName:game_class_test},  classId=8322
+2020/03/23 19:52:54.780 [I]  *********************************************************************************************
+"]
+[native][cmd]2020-3-23 19:52:56	stdout:["2020/03/23 19:52:56.158 [I]  LoadConfigs
+2020/03/23 19:52:56.158 [I]  templateUrl = https://bg-stage.wkcoding.com/db77be6c546080bafcf3b5f7fe431f3d
+"]
+[native][cmd]2020-3-23 19:52:58	stdout:["2020/03/23 19:52:58.760 [I]  Init Template Url &{LessonTemplateId:999992 DefaultShortcuts:[] SceneId:666 ManorTemplate:0 MapTemplate:0 RobotCodeTemplate:0 BuildNumLimit:0 DefaultBagItems:[] DefaultShortcutsv2:[] MapTemplateTag:0 Name:地图编辑器配置（勿删） EntityCodeList: GuideBoard: IdeEnable:true RobotBlockLibId:1001}
+2020/03/23 19:52:58.760 [I]  Init Material: []
+2020/03/23 19:52:58.760 [I]  Init Shortcut Item: []
+2020/03/23 19:52:58.760 [I]  InitTemplateCnf completed.
+"]
+[native][cmd]2020-3-23 19:52:59	stdout:["2020/03/23 19:52:59.275 [I]  InitGameValueCnf completed.
+2020/03/23 19:52:59.275 [I]  InitConstantCnf completed.
+2020/03/23 19:52:59.275 [I]  InitMapCnf mapIds([666]),  isEditMap=true, templateId=83227605779638366
+"]
+[native][cmd]2020-3-23 19:53:0	stdout:["2020/03/23 19:53:00.377 [I]  size of 83227605779638366_小贝星球的世界4_77128658803782135_1584947384.gob 45566
+"]
+[native][cmd]2020-3-23 19:53:0	stdout:["2020/03/23 19:53:00.384 [I]  InitMapCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:0	stdout:["2020/03/23 19:53:00.473 [I]  InitAttributeRandCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:0	stdout:["2020/03/23 19:53:00.574 [I]  InitBuffCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:0	stdout:["2020/03/23 19:53:00.675 [I]  InitSkillCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:0	stdout:["2020/03/23 19:53:00.873 [I]  InitSpawnPointsCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:0	stdout:["2020/03/23 19:53:00.974 [I]  InitPlayerLvCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:1	stdout:["2020/03/23 19:53:01.075 [I]  InitSceneCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:1	stdout:["2020/03/23 19:53:01.174 [I]  InitWeatherCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:1	stdout:["2020/03/23 19:53:01.274 [I]  InitAchieveCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:1	stdout:["2020/03/23 19:53:01.374 [I]  InitSystemAvatarCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:1	stdout:["2020/03/23 19:53:01.475 [I]  InitBotLvCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:1	stdout:["2020/03/23 19:53:01.574 [I]  InitBotCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:2	stdout:["2020/03/23 19:53:02.191 [I]  InitObjectCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:2	stdout:["2020/03/23 19:53:02.274 [I]  InitGearSettingsCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:2	stdout:["2020/03/23 19:53:02.378 [I]  InitFallingRecipetsCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:2	stdout:["2020/03/23 19:53:02.478 [I]  InitResourcePointsCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:2	stdout:["2020/03/23 19:53:02.586 [I]  InitMonsterCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:2	stdout:["2020/03/23 19:53:02.684 [I]  InitNpcCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:2	stdout:["2020/03/23 19:53:02.773 [I]  InitNpcLocationCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:2	stdout:["2020/03/23 19:53:02.874 [I]  InitMailTemplateCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:2	stdout:["2020/03/23 19:53:02.978 [I]  InitRewardCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:3	stdout:["2020/03/23 19:53:03.085 [I]  InitTaskCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:3	stdout:["2020/03/23 19:53:03.273 [I]  InitCodeCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:3	stdout:["2020/03/23 19:53:03.374 [I]  InitFormulaCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:3	stdout:["2020/03/23 19:53:03.475 [I]  InitSpecialBuildCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:3	stdout:["2020/03/23 19:53:03.599 [I]  InitConsumableItemCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:3	stdout:["2020/03/23 19:53:03.674 [I]  InitRoleCnfCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:3	stdout:["2020/03/23 19:53:03.774 [I]  InitChatCnfCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:3	stdout:["2020/03/23 19:53:03.874 [I]  InitConditionCnfCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:3	stdout:["2020/03/23 19:53:03.974 [I]  InitCdCnfCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:4	stdout:["2020/03/23 19:53:04.074 [I]  InitQuotaCnfCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:4	stdout:["2020/03/23 19:53:04.174 [I]  InitPlayerBuyCnfCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:4	stdout:["2020/03/23 19:53:04.274 [I]  InitwidgetCnfCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:4	stdout:["2020/03/23 19:53:04.479 [I]  InitEntityCnf completed.
+"]
+[native][cmd]2020-3-23 19:53:4	stdout:["2020/03/23 19:53:04.479 [I]  begin check~~~~~~~
+"]
+[native][cmd]2020-3-23 19:53:4	stdout:["2020/03/23 19:53:04.491 [I]  init config:&{keyDelim:. configPaths:[] fs:0x26a7520 remoteProviders:[] configName:config configFile: configType: configPermissions:420 envPrefix: automaticEnvApplied:false envKeyReplacer:<nil> allowEmptyEnv:false config:map[domain:game-native grpc:map[host:127.0.0.1 port:3213] http:map[host:0.0.0.0 port:41988] is_develop:false is_native:true log:map[console:true] mini_map:false mysql_account:map[conn:map[dbname:bian_account host:127.0.0.1 password:root port:3306 username:root]] mysql_center:map[conn:map[dbname:server_list host:47.107.73.43 password:root port:3306 table_class:class_cnf table_lession:lesson_cnf1 username:root]] mysql_cnf:map[conn:map[dbname:bian_cnf host:127.0.0.1 password:root port:3306 username:root]] mysql_record:map[conn:map[dbname:bian_record_log host:127.0.0.1 password:root port:3306 username:root]] pressure_monster_multiple:1 pressure_test:0 server:map[channel:bian_lesson host:192.168.1.1 name:Native包 node_id:100 signkey:bian] server_model:lesson tpl_path:./src/bian_admin/tpl use_nat:true websocket:map[host:0.0.0.0 port:3211]] override:map[mysql_center:map[conn:map[dbname:center_cnf host:rm-uf69412paf3wj6f95mo.mysql.rds.aliyuncs.com password:Y6cuxV9iRj port:3306 table_class:class_cnf table_lession:lesson_cnf username:bellplanet_ctl]] server:map[node_id:27481056185679873]] defaults:map[repl:map[file:/tmp/bian_game_repl.socks host:127.0.0.1 network:tcp port:13333]] kvstore:map[] pflags:map[] env:map[] aliases:map[] typeByDefValue:false properties:<nil> onConfigChange:<nil>}
+"]
+[native][cmd]2020-3-23 19:53:4	stdout:["2020/03/23 19:53:04.492 [I]  ========  pprof-http try ========
+"]
+[native][cmd]2020-3-23 19:53:4	stdout:["{\"component\":\"profile.http\",\"hostname\":\"ZFBIL9MTEIXHABK\",\"message\":\"http server started at 0.0.0.0:49623\",\"mode\":\"develop\",\"server\":\"bian_game\",\"time\":\"2020-03-23T11:53:04.4920395Z\"}
+2020/03/23 19:53:04.492 [I]  ========  pprof-http done ========
+"]
+[native][cmd]2020-3-23 19:53:5	stdout:["2020/03/23 19:53:05.179 [I]  initLog V1
+"]
+[native][cmd]2020-3-23 19:53:5	stdout:["2020/03/23 19:53:05.885 [I]  initTerrian mapW 201, mapH 402, rhombR 401, rhombC 402, offsetR 200
+"]
+[native][cmd]2020-3-23 19:53:6	stdout:["2020/03/23 19:53:06.877 [I]  LoadEntityTemplateData\t  need(0)Ms --- err(<nil>)
+"]
+[native][cmd]2020-3-23 19:53:7	stdout:["2020/03/23 19:53:07.476 [I]  LoadAllEntityAnimation\t  need(599)Ms --- err(<nil>)
+"]
+[native][cmd]2020-3-23 19:53:7	stdout:["2020/03/23 19:53:07.575 [I]  arrBuild len 9
+"]
+[native][cmd]2020-3-23 19:53:7	stdout:["2020/03/23 19:53:07.576 [I]  loadBuilds\tneed(100)Ms --- err(<nil>)
+"]
+[native][cmd]2020-3-23 19:53:7	stdout:["2020/03/23 19:53:07.775 [I]  LoadPlants \tneed(199)Ms --- err(<nil>)
+"]
+[native][cmd]2020-3-23 19:53:7	stdout:["2020/03/23 19:53:07.975 [I]  LoadPets \tneed(200)Ms --- err(<nil>)
+"]
+[native][cmd]2020-3-23 19:53:9	stdout:["2020/03/23 19:53:09.875 [I]  LoadBots \tneed(1900)Ms --- err(<nil>)
+"]
+[native][cmd]2020-3-23 19:53:9	stdout:["2020/03/23 19:53:09.976 [I]  LoadPuppets \tneed(101)Ms --- err(<nil>)
+2020/03/23 19:53:09.976 [I]  LoadFalling \tneed(0)Ms --- err(<nil>)
+"]
+[native][cmd]2020-3-23 19:53:11	stdout:["2020/03/23 19:53:11.976 [I]  Zone Start
+"]
+[native][cmd]2020-3-23 19:53:12	stdout:["2020/03/23 19:53:12.079 [I]  NgrokData = &{configFile:./config/ngrok_client_cnf.cfg serverUrl:codingmonkey.com.cn serverTunnelPort:4443 serverHttpPort:80 serverHttpsPort:443 module:http goos:windows serviceFile:ngrok.exe domain:gpni15432 servicePort:3211 logFile:./logs/ngrok2020-03-23.log execArgTemplate:%s -config=%s -log=%s -subdomain=%s %d channel:0xc00004ad20}
+"]
+[native][cmd]2020-3-23 19:53:12	stdout:["2020/03/23 19:53:12.103 [I]  执行命令[cmd(cmd) subCmd(/c) arg(start  taskkill /im ngrok.exe /f)] return err[<nil>]
+"]
+[native][cmd]2020-3-23 19:53:12	stdout:["2020/03/23 19:53:12.403 [I]  穿透工具启动信息 = if \"%1\" == \"h\" goto begin
+\tmshta vbscript:createobject(\"wscript.shell\").run(\"\"\"%~nx0\"\" h\",0)(window.close)&&exit
+:begin
+REM
+
+ngrok.exe -config=./config/ngrok_client_cnf.cfg -log=./logs/ngrok2020-03-23.log -subdomain=gpni15432 3211
+"]
+[native][cmd]2020-3-23 19:53:12	stdout:["2020/03/23 19:53:12.428 [I]  执行命令[cmd(cmd) subCmd(/c) arg(start  startup.bat)] return err[<nil>]
+2020/03/23 19:53:12.428 [I]  =========== server start ===========
+"]
+[native][cmd]2020-3-23 19:53:12	stdout:["2020/03/23 19:53:12.463 [I]  ping to bellplanet[&{Code:200 Data: Msg:成功}]
+"]
+[native][cmd]2020-3-23 19:53:12	stdout:["2020/03/23 19:53:12.879 [I]   ---------------------------- ShowFuncCount Begin ---------------------------- 
+2020/03/23 19:53:12.879 [I]  Func ALLCount:(26)
+2020/03/23 19:53:12.879 [I]  Func LeftCount:(0)
+2020/03/23 19:53:12.879 [I]  Func CallCount:(26)
+2020/03/23 19:53:12.879 [I]   ----------------------------------------------------------------------------- 
+2020/03/23 19:53:12.879 [I]  Func  Type:(ServerEventTypeServerTimer)   Num:(1)
+2020/03/23 19:53:12.879 [I]  Func  Type:(WorldEventTypeResourceLoadFinish)   Num:(25)
+2020/03/23 19:53:12.879 [I]   ----------------------------------------------------------------------------- 
+2020/03/23 19:53:12.879 [I]   ---------------------------- ShowFuncCount  End  ---------------------------- 
+2020/03/23 19:53:12.879 [I]  -----------------------------------------
+2020/03/23 19:53:12.879 [I]  -----------------------------------------
+2020/03/23 19:53:12.879 [I]  发送服务器状态到native,  info = http://127.0.0.1:49621/serverState?snode=27481056185679873&channel=bian_lesson&token=d6de7c5a6b76947f8e45febd0b61a858&localPort=3211&localIp=192.168.21.115&natPort=80&natUrl=gpni15432.codingmonkey.com.cn&online=0&name=bell_cs11的小贝星球的世界4
+"]
+[native][cmd]2020-3-23 19:53:12	stdout:["2020/03/23 19:53:12.886 [I]  ---------------- native receive server start -----------------------
+"]
+[native][cmd]2020-3-23 19:53:12	stdout:["2020/03/23 19:53:12.895 [W]  conn read err: 0xc00004b320, websocket: close 1005 (no status) 
+2020/03/23 19:53:12.895 [I]  conn close
+"]
+[native][cmd]2020-3-23 19:53:12	stdout:["2020/03/23 19:53:12.895 [W]  conn is closed
+2020/03/23 19:53:12.895 [W]  conn is closed
+"]
+[native][cmd]2020-3-23 19:53:13	stdout:["2020/03/23 19:53:13.180 [W]  Revice ServerEventTypeServerTimer By 751 ms, 751984 us
+"]
+[native][cmd]2020-3-23 19:53:13	stdout:["2020/03/23 19:53:13.580 [W]  Revice ServerEventTypeServerConnConnect By 399 ms, 399655 us
+"]
+[native][cmd]2020-3-23 19:53:13	stdout:["2020/03/23 19:53:13.978 [W]  Revice ServerEventTypeServerConnClose By 398 ms, 398568 us
+"]
+[native][cmd]2020-3-23 19:53:14	stdout:["2020/03/23 19:53:14.379 [W]  Revice ServerEventTypeServerConnConnect By 399 ms, 399590 us
+"]
+[native][cmd]2020-3-23 19:53:15	stdout:["2020/03/23 19:53:15.679 [I]  player(77128658803782135) writeMessage(SigninPlayer)
+"]
+[native][cmd]2020-3-23 19:53:15	stdout:["2020/03/23 19:53:15.863 [D]  发送服务器状态到 serverList : url=http://ready-server-list.wkcoding.com/serverState?snode=27481056185679873&online=0&channel=bian_lesson&token=d6528133373f56990d6deb52ff427d34&name=bell_cs11的小贝星球的世界4&port=80&ip=gpni15432.codingmonkey.com.cn&isFirst=%!s(bool=true), err(<nil>)
+"]
+[native][cmd]2020-3-23 19:53:16	stdout:["2020/03/23 19:53:16.145 [I]  ping to bellplanet[&{Code:200 Data: Msg:成功}]
+"]
+[native][cmd]2020-3-23 19:53:17	stdout:["2020/03/23 19:53:17.279 [I]  player(77128658803782135) writeMessage(TSceneExploredList)
+"]
+[native][cmd]2020-3-23 19:53:18	stdout:["2020/03/23 19:53:18.279 [I]  EnterMap EventCallNoReturn Begin
+2020/03/23 19:53:18.279 [I]  handleEnterMap
+2020/03/23 19:53:18.279 [I]  OnEnterMap
+2020/03/23 19:53:18.279 [I]  player(77128658803782135) writeMessage(TMapEnter)
+"]
+[native][cmd]2020-3-23 19:53:18	stdout:["2020/03/23 19:53:18.279 [I]  player(77128658803782135) writeMessage(TPlayerProfileUpdateByFieldId)
+2020/03/23 19:53:18.279 [I]  player(77128658803782135) writeMessage(TPlayerAreaBriefSync)
+2020/03/23 19:53:18.279 [I]  player(77128658803782135) writeMessage(TQueryDoList)
+"]
+[native][cmd]2020-3-23 19:53:18	stdout:["2020/03/23 19:53:18.834 [I]  添加玩家77128658803782135对房间83227605779638366的编辑权限成功！！！
+"]
+[native][cmd]2020-3-23 19:53:18	stdout:["2020/03/23 19:53:18.878 [W]  Revice SigninPlayer By 4499 ms, 4499183 us
+"]
+[native][cmd]2020-3-23 19:53:19	stdout:["2020/03/23 19:53:19.178 [I]  player(77128658803782135) writeMessage(QueryPlayerAreas)
+"]
+[native][cmd]2020-3-23 19:53:19	stdout:["2020/03/23 19:53:19.278 [W]  Revice QueryPlayerAreas By 400 ms, 400219 us
+"]
+[native][cmd]2020-3-23 19:53:19	stdout:["2020/03/23 19:53:19.679 [W]  Revice ItemsGet By 400 ms, 400375 us
+2020/03/23 19:53:19.679 [I]  player(77128658803782135) writeMessage(ItemsGet)
+"]
+[native][cmd]2020-3-23 19:53:21	stdout:["2020/03/23 19:53:21.692 [I]  player(77128658803782135) writeMessage(GetOwnBotList)
+"]
+[native][cmd]2020-3-23 19:53:21	stdout:["2020/03/23 19:53:21.790 [W]  Revice GetOwnBotList By 2110 ms, 2110176 us
+"]
+[native][cmd]2020-3-23 19:53:22	stdout:["2020/03/23 19:53:22.579 [W]  Revice QueryMiniMap By 788 ms, 788797 us
+2020/03/23 19:53:22.579 [I]  player(77128658803782135) writeMessage(QueryMiniMap)
+"]
+[native][cmd]2020-3-23 19:53:22	stdout:["2020/03/23 19:53:22.981 [W]  Revice ServerEventTypeServerTimer By 402 ms, 402329 us
+"]
+[native][cmd]2020-3-23 19:53:23	stdout:["2020/03/23 19:53:23.578 [W]  Revice PlayerCanUseSpawnPoints By 596 ms, 596409 us
+2020/03/23 19:53:23.578 [I]  player(77128658803782135) writeMessage(PlayerCanUseSpawnPoints)
+"]
+[native][cmd]2020-3-23 19:53:23	stdout:["2020/03/23 19:53:23.979 [W]  Revice PlayerEnterIdeModel By 399 ms, 399346 us
+"]
+[native][cmd]2020-3-23 19:53:24	stdout:["2020/03/23 19:53:24.622 [I]  get_entity_group cost 144
+"]
+[native][cmd]2020-3-23 19:53:24	stdout:["2020/03/23 19:53:24.678 [W]  Revice EntityTemplateQuery By 467 ms, 467293 us
+2020/03/23 19:53:24.678 [I]  player(77128658803782135) writeMessage(EntityTemplateQuery)
+"]
+[native][cmd]2020-3-23 19:53:25	stdout:["2020/03/23 19:53:25.078 [W]  Revice BuildingSwitch By 391 ms, 391316 us
+2020/03/23 19:53:25.078 [I]  player(77128658803782135) writeMessage(TEntityTemplateQuery)
+2020/03/23 19:53:25.078 [I]  player(77128658803782135) writeMessage(TEntityTemplateQuery)
+"]
+[native][cmd]2020-3-23 19:53:26	stdout:["2020/03/23 19:53:26.878 [W]  Revice PlayerQuitIdeModel By 351 ms, 351372 us
+2020/03/23 19:53:26.878 [I]  player(77128658803782135) writeMessage(PlayerQuitIdeModel)
+"]
+[native][cmd]2020-3-23 19:53:27	stdout:["2020/03/23 19:53:27.278 [W]  Revice BuildingSwitch By 391 ms, 391895 us
+"]
+[native][cmd]2020-3-23 19:53:30	stdout:["2020/03/23 19:53:30.074 [W]  conn read err: 0xc0008fc7e0, websocket: close 1005 (no status) 
+2020/03/23 19:53:30.074 [I]  conn close
+2020/03/23 19:53:30.074 [W]  conn is closed
+2020/03/23 19:53:30.074 [W]  conn is closed
+"]
+[native][cmd]2020-3-23 19:53:30	stdout:["2020/03/23 19:53:30.378 [W]  player not online
+"]
+[native][cmd]2020-3-23 19:53:30	stdout:["2020/03/23 19:53:30.677 [W]  Revice ServerEventTypeServerConnClose By 603 ms, 603172 us
+"]
+[native][cmd]2020-3-23 19:53:34	stdout:["2020/03/23 19:53:34.377 [W]  Revice Z2SPlayerSave By 3700 ms, 3700164 us
+"]
+[native][cmd]2020-3-23 19:53:35	stdout:["2020/03/23 19:53:35.289 [I]  file(83227605779638366_小贝星球的世界4_77128658803782135_1584964414.gob) save gobMap with name(83227605779638366_小贝星球的世界4_77128658803782135_1584947384.gob), mapObject length(9), puppet length(0), entityTemplate length(0), falling length(0)
+"]
+[native][cmd]2020-3-23 19:53:35	stdout:["2020/03/23 19:53:35.469 [I]  playerId(83227605779638366) save template and update template(77128658803782135)
+"]
+[native][cmd]2020-3-23 19:53:35	stdout:["2020/03/23 19:53:35.575 [W]  Revice Z2SGobMapSave By 1197 ms, 1197405 us
+"]
+[native][cmd]2020-3-23 19:53:35	stdout:["2020/03/23 19:53:35.975 [W]  Revice ServerEventTypeServerTimer By 399 ms, 399736 us
+"]
+[native][cmd]2020-3-23 19:53:46	stdout:["2020/03/23 19:53:46.274 [W]  Revice ServerEventTypeServerTimer By 399 ms, 399020 us
+"]
+[native][cmd]2020-3-23 19:53:57	stdout:["2020/03/23 19:53:57.373 [W]  Revice ServerEventTypeServerTimer By 1198 ms, 1198552 us
+"]
+[native][cmd]2020-3-23 19:54:0	stdout:["2020/03/23 19:54:00.674 [I]   ---------------------------- ShowFuncCount Begin ---------------------------- 
+2020/03/23 19:54:00.674 [I]  Func ALLCount:(68)
+2020/03/23 19:54:00.674 [I]  Func LeftCount:(0)
+2020/03/23 19:54:00.674 [I]  Func CallCount:(68)
+2020/03/23 19:54:00.674 [I]   ----------------------------------------------------------------------------- 
+2020/03/23 19:54:00.674 [I]  Func  Type:(SigninPlayer)   Num:(1)
+2020/03/23 19:54:00.674 [I]  Func  Type:(QueryPlayerAreas)   Num:(1)
+2020/03/23 19:54:00.674 [I]  Func  Type:(ItemsGet)   Num:(1)
+2020/03/23 19:54:00.674 [I]  Func  Type:(GetOwnBotList)   Num:(1)
+2020/03/23 19:54:00.674 [I]  Func  Type:(QueryMiniMap)   Num:(1)
+2020/03/23 19:54:00.674 [I]  Func  Type:(PlayerCanUseSpawnPoints)   Num:(1)
+2020/03/23 19:54:00.674 [I]  Func  Type:(PlayerEnterIdeModel)   Num:(1)
+2020/03/23 19:54:00.674 [I]  Func  Type:(EntityTemplateQuery)   Num:(1)
+2020/03/23 19:54:00.674 [I]  Func  Type:(BuildingSwitch)   Num:(2)
+2020/03/23 19:54:00.674 [I]  Func  Type:(PlayerQuitIdeModel)   Num:(1)
+2020/03/23 19:54:00.674 [I]  Func  Type:(Z2SPlayerSave)   Num:(1)
+2020/03/23 19:54:00.674 [I]  Func  Type:(Z2SGobMapSave)   Num:(1)
+2020/03/23 19:54:00.674 [I]  Func  Type:(ServerEventTypeServerConnConnect)   Num:(2)
+2020/03/23 19:54:00.674 [I]  Func  Type:(ServerEventTypeServerConnClose)   Num:(2)
+2020/03/23 19:54:00.674 [I]  Func  Type:(ServerEventTypeServerTimer)   Num:(5)
+2020/03/23 19:54:00.674 [I]  Func  Type:(WorldEventTypeLeaveMap)   Num:(1)
+2020/03/23 19:54:00.674 [I]  Func  Type:(EntityEventTypeEnterIdeModel)   Num:(1)
+"]
+[native][cmd]2020-3-23 19:54:0	stdout:["2020/03/23 19:54:00.674 [I]  Func  Type:(EntityEventTypeMoveTo)   Num:(41)
+2020/03/23 19:54:00.674 [I]  Func  Type:(EntityEventTypeBuildingSwitch)   Num:(2)
+2020/03/23 19:54:00.674 [I]  Func  Type:(EntityEventTypeQuitIdeModel)   Num:(1)
+2020/03/23 19:54:00.674 [I]   ----------------------------------------------------------------------------- 
+2020/03/23 19:54:00.674 [I]   ---------------------------- ShowFuncCount  End  ---------------------------- 
+2020/03/23 19:54:00.674 [I]  -----------------------------------------
+2020/03/23 19:54:00.674 [I]  -----------------------------------------
+"]
+[native][cmd]2020-3-23 19:54:0	stdout:["2020/03/23 19:54:00.975 [W]  Revice ServerEventTypeServerTimer By 775 ms, 775681 us
+"]
+[native][cmd]2020-3-23 19:54:3	stdout:["2020/03/23 19:54:03.496 [D]  发送服务器状态到 serverList : url=http://ready-server-list.wkcoding.com/serverState?snode=27481056185679873&online=0&channel=bian_lesson&token=d6528133373f56990d6deb52ff427d34&name=bell_cs11的小贝星球的世界4&port=80&ip=gpni15432.codingmonkey.com.cn&isFirst=%!s(bool=false), err(<nil>)
+"]
+[native][cmd]2020-3-23 19:54:9	stdout:["2020/03/23 19:54:09.172 [W]  Revice ServerEventTypeServerTimer By 1897 ms, 1897942 us
+"]
+[native][cmd]2020-3-23 19:54:20	stdout:["2020/03/23 19:54:20.969 [W]  Revice ServerEventTypeServerTimer By 1896 ms, 1896999 us
+"]
+[native][cmd]2020-3-23 19:54:32	stdout:["2020/03/23 19:54:32.769 [W]  Revice ServerEventTypeServerTimer By 1898 ms, 1898452 us
+"]
+[native][cmd]2020-3-23 19:54:44	stdout:["2020/03/23 19:54:44.670 [W]  Revice ServerEventTypeServerTimer By 2001 ms, 2001962 us
+"]
+[native][cmd]2020-3-23 19:54:56	stdout:["2020/03/23 19:54:56.465 [W]  Revice ServerEventTypeServerTimer By 1894 ms, 1894758 us
+"]
+[native][cmd]2020-3-23 19:55:0	stdout:["2020/03/23 19:55:00.664 [I]   ---------------------------- ShowFuncCount Begin ---------------------------- 
+2020/03/23 19:55:00.664 [I]  Func ALLCount:(6)
+2020/03/23 19:55:00.664 [I]  Func LeftCount:(0)
+2020/03/23 19:55:00.664 [I]  Func CallCount:(6)
+2020/03/23 19:55:00.664 [I]   ----------------------------------------------------------------------------- 
+2020/03/23 19:55:00.664 [I]  Func  Type:(ServerEventTypeServerTimer)   Num:(6)
+2020/03/23 19:55:00.664 [I]   ----------------------------------------------------------------------------- 
+2020/03/23 19:55:00.664 [I]   ---------------------------- ShowFuncCount  End  ---------------------------- 
+2020/03/23 19:55:00.664 [I]  -----------------------------------------
+2020/03/23 19:55:00.664 [I]  -----------------------------------------
+"]
+[native][cmd]2020-3-23 19:55:0	stdout:["2020/03/23 19:55:00.966 [W]  Revice ServerEventTypeServerTimer By 765 ms, 765257 us
+"]
+[native][cmd]2020-3-23 19:55:3	stdout:["2020/03/23 19:55:03.292 [D]  发送服务器状态到 serverList : url=http://ready-server-list.wkcoding.com/serverState?snode=27481056185679873&online=0&channel=bian_lesson&token=d6528133373f56990d6deb52ff427d34&name=bell_cs11的小贝星球的世界4&port=80&ip=gpni15432.codingmonkey.com.cn&isFirst=%!s(bool=false), err(<nil>)
+"]
+[native][cmd]2020-3-23 19:55:8	stdout:["2020/03/23 19:55:08.264 [W]  Revice ServerEventTypeServerTimer By 1899 ms, 1899201 us
+"]
+[native][cmd]2020-3-23 19:55:20	stdout:["2020/03/23 19:55:20.063 [W]  Revice ServerEventTypeServerTimer By 1897 ms, 1897672 us
+"]
+[native][cmd]2020-3-23 19:55:31	stdout:["2020/03/23 19:55:31.860 [W]  Revice ServerEventTypeServerTimer By 1894 ms, 1894806 us
+"]
+[native][net]2020-3-23 19:55:32	http isHttps:false post data:[""]

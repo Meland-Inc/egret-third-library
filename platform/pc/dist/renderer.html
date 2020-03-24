@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <div id='logoImg'></div>
+  <div id="loadingGroup" hidden="true">
+    <label id="loadingTip">正在更新中</label>
+    <progress id="loadingProgress" value="0" max="100"></progress>
+  </div>
+
+  <script type="module" src="./renderer-bundle.js"></script>
+</body>
+
+<style>
+  #loadingGroup {
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+  }
+
+  #loadingTip {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  #loadingProgress {
+    display: block;
+  }
+
+  #logoImg {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    width: 804.75px;
+    height: 267.75px;
+    background-image: url(./resource/logo.png);
+    background-size: 100%, 100%;
+    animation: opacity2 3s;
+    -webkit-animation: opacity2 3s;
+  }
+
+  @keyframes opacity2 {
+    0% {
+      opacity: 0
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes opacity2 {
+    0% {
+      opacity: 0
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
+</style>
+
+</html>
