@@ -1056,8 +1056,8 @@ export async function writeVersionInfo() {
     let curEnviron = ModelMgr.versionModel.curEnviron;
     let nativeConfig = JSON.parse(nativeConfigContent);
     nativeConfig.environName = curEnviron.name;
-    let gameVersion = await ModelMgr.versionModel.getEnvironGameVersion(curEnviron.name);
-    nativeConfig.gameVersion = +gameVersion;
+    // let gameVersion = await ModelMgr.versionModel.getEnvironGameVersion(curEnviron.name);
+    // nativeConfig.gameVersion = +gameVersion;
     if (curEnviron.name == ModelMgr.versionModel.eEnviron.release) {
         nativeConfig.patchUrl = `${curEnviron.host}${curEnviron.cdnWinPatchPath}`;
         nativeConfig.policyUrl = `${curEnviron.host}/`;
