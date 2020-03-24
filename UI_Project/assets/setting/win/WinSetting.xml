@@ -74,7 +74,6 @@
       <Button title="一键脱离" titleFontSize="20" icon="ui://te1gxawooiqdcyih3"/>
     </component>
     <component id="n28_o8k6" name="btnLogout" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1056,825" size="120,44" group="n176_hxjz">
-      <gearDisplay controller="ctrlGameMode" pages="0"/>
       <Button title="退出登陆" titleFontSize="20" icon="ui://te1gxawoeggjcyihf"/>
     </component>
     <component id="n151_f5wz" name="btnResetAll" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1056,824" size="120,44" group="n176_hxjz">
@@ -179,6 +178,7 @@
       <gearDisplay controller="conSetting" pages="5"/>
     </group>
     <image id="n186_r1s6" name="imgLine" src="eggjcyihh" fileName="img/img_cm_line.png" pkg="te1gxawo" xy="384,803" size="1138,3" group="n154_o5a3"/>
+    <text id="n189_pyxg" name="n189" xy="987,564" size="90,22" group="n154_o5a3" fontSize="18" text="btnLogout"/>
     <group id="n154_o5a3" name="root" xy="381,148" size="1141,740" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
