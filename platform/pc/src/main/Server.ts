@@ -3,7 +3,7 @@
  * @desc 处理native服务器和游戏服务器的文件
  * @date 2020-02-18 11:42:29 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-24 15:55:53
+ * @Last Modified time: 2020-03-24 16:27:55
  */
 import fs from 'fs';
 import os from 'os';
@@ -30,7 +30,6 @@ class Server {
     public async createNativeServer(gameServerMode: define.eGameServerMode) {
         if (config.nativeServer) {
             logger.log('net', `关闭旧的native服务器`);
-            config.setGameServerInited(false);
             await this.closeNativeServer();
         }
 
@@ -145,7 +144,11 @@ class Server {
     private async createGameServer(mode: define.eGameServerMode) {
         if (config.gameServerProcess) {
             logger.log('net', `关闭旧的游戏服务器`);
-            await this.closeGameServer();
+            try {
+                await this.closeGameServer();
+            } catch (error) {
+                logger.error('net', `关闭游戏服务器错误`, error);
+            }
         }
 
         logger.log('net', '创建游戏服务器');
@@ -183,21 +186,22 @@ class Server {
                         return;
                     }
                     logger.log('net', `kill 关闭游戏服务器成功`)
+                    config.setGameServerProcess(null);
                     resolve();
                 });
-                config.setGameServerProcess(null);
                 return;
             }
 
             let path = `/native?controlType=closeServer`
             util.requestGetHttp(config.gameServerLocalIp, config.gameServerLocalPort, path, null, null, () => {
                 logger.log('net', `关闭游戏服务器成功`)
+                config.setGameServerInited(false);
                 config.setGameServerProcess(null);
                 resolve();
             }, () => {
                 logger.error('net', `关闭游戏服务器错误`)
-                config.setGameServerProcess(null);
-                resolve();
+                config.setGameServerInited(false);
+                reject();
             });
         });
     }
