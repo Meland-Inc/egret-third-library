@@ -3,24 +3,22 @@
  * @desc renderer用的配置静态类
  * @date 2020-02-13 14:54:50 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-24 15:24:54
+ * @Last Modified time: 2020-03-24 17:15:24
  */
 import fs from 'fs';
 import { remote } from 'electron';
 
 import * as logger from './logger';
-import message from './Message';
 import { define } from './define';
 
 class Config {
+    /** 版本配置 */
+    private _versionConfig: any;
+
     /** 全局配置 */
     private _globalConfig: any;
     public get globalConfig(): any {
-        return this._globalConfig
-    }
-
-    public setGlobalConfig(value: any) {
-        this._globalConfig = value;
+        return this._globalConfig;
     }
 
     /** native用请求头 */
@@ -36,17 +34,36 @@ class Config {
         return this._rootPath;
     }
 
-    /** 全局配置路径 */
-    public globalConfigPath = `${this.rootPath}/dist/GlobalConfig.json`;
+    /** 用户数据路径 */
+    public _userDataPath: string;
+    public get userDataPath() {
+        if (!this._userDataPath) {
+            this._userDataPath = remote.app.getPath("userData");
+        }
+
+        return this._userDataPath;
+    }
+
 
     // const macResourcePath = "./Applications/bellplanet.app/Contents/Resources/app/package/client/";
     // const winResourcePath = "./resources/app/package/client/"
     // export const resourcePath = navigator.userAgent.indexOf("Mac") > 0 ? macResourcePath : winResourcePath;
+
+    /** 游戏包路径 */
+    public packagePath = `${this.userDataPath}/package`;
+
     /** 客户端包路径 */
-    public clientPackagePath = `${this.rootPath}/package/client/`;
+    public clientPackagePath = `${this.packagePath}/client`;
 
     /** 服务端包路径 不带server文件夹是因为压缩包包含了一个server文件夹 */
-    public serverPackagePath = `${this.rootPath}/package/`;
+    public serverPackagePath = `${this.packagePath}/server`;
+
+    /** 全局配置路径 */
+    public globalConfigPath = `${this.rootPath}/dist/GlobalConfig.json`;
+
+
+    /** 版本配置路径 */
+    public versionConfigPath = `${this.packagePath}/VersionConfig.json`;
 
     public cdnHost = "http://bg-stage.wkcoding.com";
 
@@ -58,19 +75,6 @@ class Config {
 
     /** demo */
     public demoBellCodeUrl = "https://democm.wkcoding.com/";
-
-    /** beta客户端地址 */
-    public betaUrl = "http://wplanet.wkcoding.com/app-beta";
-
-    /** ready客户端地址 */
-    public readyUrl = "http://wplanet.wkcoding.com/app-ready";
-
-    /** release客户端地址 */
-    public releaseUrl = "http://wplanet.wkcoding.com/app";
-
-
-    /** 渲染日志路径 */
-    public rendererLogPath = `${this.rootPath}/dist/log/renderer.log`;
 
     private _nativeLoginResponse: any;
     /** native平台登陆信息 */
@@ -100,41 +104,33 @@ class Config {
     //     logger.log('renderer', `设置nativeToken`, this._nativeToken);
     // }
 
-    public async init() {
-        return new Promise((resolve, reject) => {
-            logger.log('renderer', `初始化全局配置`);
-            fs.readFile(this.globalConfigPath, "utf-8", (err: NodeJS.ErrnoException, data: string) => {
-                if (err) {
-                    reject(err.message);
-                    return;
-                }
+    public init() {
+        logger.log('renderer', `初始化全局配置`);
+        if (fs.existsSync(this.globalConfigPath)) {
+            let data = fs.readFileSync(this.globalConfigPath, 'utf-8');
+            this._globalConfig = JSON.parse(data);
+            this.environName = this._globalConfig.environName;
+        }
 
-                this._globalConfig = JSON.parse(data);
-                this.environName = this._globalConfig.environName;
-                // if (!!this._globalConfig.token) {
-                //     this.setNativeToken(this._globalConfig.token);
-                // }
-                resolve();
-            });
-        })
+        if (fs.existsSync(this.versionConfigPath)) {
+            let data = fs.readFileSync(this.versionConfigPath, 'utf-8');
+            this._versionConfig = JSON.parse(data);
+        } else {
+            this._versionConfig = {};
+        }
     }
 
-    /** 获取全局配置值 */
-    public getGlobalConfigValue(key: string) {
-        return this._globalConfig[key];
+    /** 获取版本配置值 */
+    public getVersionConfigValue(key: string) {
+        return this._versionConfig[key];
     }
 
     /** 设置全局配置值 */
-    public setGlobalConfigValue(key: string, value: string | number) {
-        this._globalConfig[key] = value;
-        fs.writeFileSync(this.globalConfigPath, JSON.stringify(this._globalConfig, null, 4), "utf-8");
-        message.sendIpcMsg('UPDATE_GLOBAL_CONFIG', this._globalConfig);
+    public setVersionConfigValue(key: string, value: string | number) {
+        this._versionConfig[key] = value;
+        fs.writeFileSync(this.versionConfigPath, JSON.stringify(this._versionConfig, null, 4), "utf-8");
 
-        logger.log('renderer', `设置GlobalConfigValue`, key, value);
-
-        // if (key === "token") {
-        //     this.setNativeToken(this._globalConfig.token);
-        // }
+        logger.log('renderer', `设置VersionConfigValue`, key, value);
     }
 }
 

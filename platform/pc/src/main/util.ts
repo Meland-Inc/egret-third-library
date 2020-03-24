@@ -3,9 +3,8 @@
  * @desc main用的工具类
  * @date 2020-02-18 11:43:24 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-24 15:07:50
+ * @Last Modified time: 2020-03-24 17:13:30
  */
-// const spawn = require("child_process").spawn;
 import { exec, ChildProcess } from 'child_process';
 import http from 'http';
 import https from 'https';
@@ -14,13 +13,9 @@ import querystring from 'querystring';
 
 import { logger } from './logger';
 import config from './Config';
-import message from './Message';
 
 export namespace util {
-    export let nativeCnf: any;
-
-    /** 全局配置 */
-    export let globalConfig: any;
+    let nativeCnf: any;
 
     /** 运行cmd命令 */
     export function runCmd(cmd: string, cwd: string, successMsg: string, errorMsg: string): Promise<ChildProcess> {
@@ -194,38 +189,22 @@ export namespace util {
     }
 
     /** 初始化native配置 */
-    export async function init() {
+    export function init() {
         logger.log('net', `初始化native本地服务器配置`);
 
         let nativeCnfContent = fs.readFileSync(config.nativeCnfPath, "utf-8");
         nativeCnf = JSON.parse(nativeCnfContent);
 
         let globalConfigContent = fs.readFileSync(config.globalConfigPath, "utf-8");
-        globalConfig = JSON.parse(globalConfigContent);
-
-        //初始化清空参数
-        util.setGlobalConfigValue("token", "");
+        let globalConfig = JSON.parse(globalConfigContent);
 
         config.setEnvironName(globalConfig.environName);
     }
 
     /** 写入服务端配置文件 */
-    export async function writeServerCnfValue(key: string, value: number | string) {
+    export function writeServerCnfValue(key: string, value: number | string) {
         nativeCnf[key] = value;
         let content = JSON.stringify(nativeCnf, null, 4);
         fs.writeFileSync(config.nativeCnfPath, content);
-    }
-
-    /** 获取全局配置值 */
-    export function getGlobalConfigValue(key: string) {
-        return globalConfig[key];
-    }
-
-    /** 设置全局配置值 */
-    export function setGlobalConfigValue(key: string, value: number | string) {
-        globalConfig[key] = value;
-        logger.log('globalConfig', `content`, globalConfig);
-        fs.writeFileSync(config.globalConfigPath, JSON.stringify(globalConfig, null, 4), "utf-8");
-        message.sendIpcMsg('UPDATE_GLOBAL_CONFIG', globalConfig);
     }
 }

@@ -3,7 +3,7 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-24 15:23:23
+ * @Last Modified time: 2020-03-24 17:14:16
  */
 // Modules to control application life and create native browser window
 import { app, globalShortcut, BrowserWindow, Menu, shell, dialog, session, Referrer, BrowserWindowConstructorOptions } from 'electron';
@@ -16,7 +16,6 @@ import { logger } from './logger';
 import config from './Config';
 import server from './Server';
 import message from './Message';
-import { util } from './util';
 
 let mainWindow: BrowserWindow;
 
@@ -46,7 +45,7 @@ async function initNative() {
 }
 
 //创建游戏浏览窗口
-async function createWindow() {
+function createWindow() {
   mainWindow = new BrowserWindow({
     width: 1600,
     height: 900,
@@ -60,16 +59,16 @@ async function createWindow() {
   config.setMainWindow(mainWindow);
 
   // 判断创建文件
-  if (!fs.existsSync(`${config.rootPath}/package`)) {
-    fs.mkdirSync(`${config.rootPath}/package`)
+  if (!fs.existsSync(`${config.packagePath}`)) {
+    fs.mkdirSync(`${config.packagePath}`)
   }
 
-  if (!fs.existsSync(`${config.rootPath}/package/client`)) {
-    fs.mkdirSync(`${config.rootPath}/package/client`)
+  if (!fs.existsSync(`${config.clientPackagePath}`)) {
+    fs.mkdirSync(`${config.clientPackagePath}`)
   }
 
-  if (!fs.existsSync(`${config.rootPath}/package/server`)) {
-    fs.mkdirSync(`${config.rootPath}/package/server`)
+  if (!fs.existsSync(`${config.serverPackagePath}`)) {
+    fs.mkdirSync(`${config.serverPackagePath}`)
   }
 
   let userAgent = mainWindow.webContents.userAgent + " BellCodeIpadWebView BellplanetNative";
@@ -155,32 +154,6 @@ async function createWindow() {
     }
 
     logger.log('platform', `config.environName`, config.environName);
-    // let token = newURL.searchParams.get("token");
-    // if (!token && config.environName) {
-    //   logger.log('token', '浏览器参数内不存在token, 查找cookie看是否有参数')
-    //   let cookies = await session.defaultSession.cookies.get({});
-    //   let domain: string;
-    //   if (config.environName === define.eEnvironName.ready) {
-    //     domain = config.readyTokenDomain;
-    //   } else {
-    //     domain = config.releaseTokenDomain;
-    //   }
-
-    //   // logger.log('platform', `cookies`, cookies);
-    //   let cookie = cookies.find(value => value.name === "token" && value.domain === domain);
-    //   if (cookie) {
-    //     token = cookie.value;
-    //     logger.log('token', `cookie内存在token:${token}`);
-    //   }
-    // }
-
-    // if (token) {
-    //   logger.log('token', `存在token:${token}`);
-    //   util.setGlobalConfigValue("token", token);
-    // } else {
-    //   logger.log('token', `不存在token,设置token为空`);
-    //   util.setGlobalConfigValue("token", "");
-    // }
 
     // 阻止创建默认窗口
     event.preventDefault();
@@ -209,7 +182,7 @@ if (!gotTheLock) {
   app.quit();
 }
 
-const onGotTheLock = async (url) => {
+const onGotTheLock = async (url: string) => {
   logger.log('electron', `运行第二个实例`);
   if (mainWindow) {
     if (mainWindow.isMinimized()) {
@@ -228,7 +201,7 @@ const onGotTheLock = async (url) => {
   }
 }
 
-app.on('second-instance', async (event, argv, workingDirectory) => {
+app.on('second-instance', (event, argv, workingDirectory) => {
   // 当运行第二个实例时,将会聚焦到mainWindow这个窗口
   if (process.platform === 'win32') {
     onGotTheLock(argv[argv.length - 1]);
@@ -346,8 +319,8 @@ let template = [
   }
 ]
 
-// //保存日志文件方法
-async function saveProcessLog() {
+//保存日志文件方法
+function saveProcessLog() {
   let path = dialog.showSaveDialogSync(
     {
       title: `后台进程日志另存为`,

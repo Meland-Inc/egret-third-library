@@ -3,7 +3,7 @@
  * @desc 主进程消息处理类
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-21 21:28:41
+ * @Last Modified time: 2020-03-24 17:14:33
  */
 import { ipcMain, IpcMainEvent } from 'electron';
 import querystring from 'querystring';
@@ -18,7 +18,6 @@ import server from './Server';
 class Message {
     //消息对应方法集合
     public msgMap = {
-        'UPDATE_GLOBAL_CONFIG': this.onUpdateGlobalConfig.bind(this),//更新全局配置
         'CHECK_UPDATE_COMPLETE': this.onCheckUpdateComplete.bind(this),  //检查更新
         'MAP_TEMPLATE_ENTER': this.onMapTemplateEnter.bind(this),   //启动地图模板游戏服务器
         'MAP_TEMPLATE_ROOM_CREATE': this.onMapTemplateRoomCreate.bind(this),   //启动地图模板房间游戏服务器
@@ -66,11 +65,6 @@ class Message {
         }
     }
 
-    /** 更新全局配置 */
-    private onUpdateGlobalConfig(globalConfig: any) {
-        util.globalConfig = globalConfig;
-    }
-
     /** 检查更新完毕 */
     private async onCheckUpdateComplete() {
         await util.init();
@@ -103,7 +97,7 @@ class Message {
     }
 
     /** 从banner模式进入 */
-    private async  startBanner() {
+    private startBanner() {
         let queryValue: string = config.urlValue.slice(config.urlValue.indexOf("?") + 1);
         queryValue += `&nativeMode=${define.eNativeMode.banner}`;
         logger.log('update', `从banner模式进入`);
@@ -111,7 +105,7 @@ class Message {
     }
 
     /** 从创造地图模式进入 */
-    private async  startCreateMap() {
+    private async startCreateMap() {
         //平台初始化
         let queryObject = await platform.init();
         //初始化参数
@@ -125,14 +119,14 @@ class Message {
     }
 
     /** 从游戏模式进入 */
-    private async startNativeGame() {
+    private startNativeGame() {
         logger.log('update', `从游戏模式进入`);
 
         //初始化参数
         let queryObject = { fakeGameMode: "lessons", nativeMode: define.eNativeMode.game };
 
         //本地服务器初始化
-        await message.init();
+        message.init();
 
         let queryValue: string = querystring.stringify(queryObject);
 
@@ -140,7 +134,7 @@ class Message {
     }
 
     /** 官网地址进入 */
-    private async startNativeWebsite() {
+    private startNativeWebsite() {
         logger.log('update', `从官网地址进入`);
 
         this.sendIpcMsg('START_NATIVE_WEBSITE');

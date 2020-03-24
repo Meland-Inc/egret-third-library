@@ -3,7 +3,7 @@
  * @desc 渲染进程消息处理文件
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-24 15:25:10
+ * @Last Modified time: 2020-03-24 17:16:59
  */
 import { ipcRenderer, IpcRendererEvent } from "electron";
 import querystring from "querystring";
@@ -19,7 +19,6 @@ import ServerUpdate from './update/ServerUpdate';
 class Message {
     //消息对应方法集合
     private msgMap = {
-        'UPDATE_GLOBAL_CONFIG': this.onUpdateGlobalConfig.bind(this),//更新全局配置
         'SAVE_NATIVE_LOGIN_RESPONSE': this.onSaveNativeLoginResponse.bind(this),    //保存native平台登陆信息
         'SAVE_NATIVE_GAME_SERVER': this.onSaveNativeGameServer.bind(this),     //设置native服务器内网ip和端口
         'START_NATIVE_CLIENT': this.onStartNativeClient.bind(this),  //从客户端进入
@@ -55,11 +54,6 @@ class Message {
         }
     }
 
-    /** 更新全局配置 */
-    private onUpdateGlobalConfig(globalConfig: any) {
-        config.setGlobalConfig(globalConfig);
-    }
-
     /** 保存native平台登陆信息 */
     private onSaveNativeLoginResponse(body: any) {
         config.setNativeLoginResponse(body);
@@ -76,7 +70,7 @@ class Message {
         logger.log('config', `全局配置`, config.globalConfig);
 
         //服务器包所在目录
-        let serverPackageDir = `${config.serverPackagePath}server`;
+        let serverPackageDir = `${config.serverPackagePath}`;
         let serverDirect = false;
         let serverExists = fs.existsSync(serverPackageDir);
         if (!serverExists) {
@@ -138,7 +132,7 @@ class Message {
     /** 直接下载最新服务端包 */
     private directDownloadServer(callback: Function, ...args: any[]) {
         try {
-            config.setGlobalConfigValue("serverPackageVersion", 0);
+            config.setVersionConfigValue("serverPackageVersion", 0);
             this.serverUpdate.checkUpdate(callback, ...args);
         } catch (error) {
             let content = `native下载服务端出错,点击重试`;
@@ -193,15 +187,15 @@ class Message {
     }
 
     /** 从客户端进入 */
-    private async onStartNativeClient(queryValue: string) {
+    private onStartNativeClient(queryValue: string) {
         this.setConfigData2LocalStorage();
-        let url = `${config.rootPath}/package/client/index.html?${queryValue}`;
+        let url = `${config.clientPackagePath}/index.html?${queryValue}`;
         url = path.join(url);
         location.href = url;
     }
 
     /** 从官网地址进入 */
-    private async onStartNativeWebsite() {
+    private onStartNativeWebsite() {
         this.setConfigData2LocalStorage();
 
         if (config.environName === define.eEnvironName.release) {
@@ -212,7 +206,7 @@ class Message {
     }
 
     /** 从官网平台进入 */
-    private async onStartNativePlatform(queryObject: any) {
+    private onStartNativePlatform(queryObject: any) {
         this.setConfigData2LocalStorage();
 
         let webviewToken: string
@@ -224,7 +218,7 @@ class Message {
         }
 
         let queryValue = querystring.stringify(queryObject);
-        let iframeSrc = `file://${config.rootPath}/package/client/index.html?${queryValue}`;
+        let iframeSrc = `file://${config.clientPackagePath}/index.html?${queryValue}`;
         iframeSrc = path.join(iframeSrc);
         let platformObject = {
             class_id: queryObject["class_id"],

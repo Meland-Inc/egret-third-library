@@ -3,7 +3,7 @@
  * @desc 游戏服务器端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-24 10:05:14
+ * @Last Modified time: 2020-03-24 17:27:41
  */
 import fs from 'fs';
 import admzip from "adm-zip";
@@ -17,46 +17,49 @@ import StreamDownload from './StreamDownload';
 
 export default class ServerUpdate {
     /** 服务端包存放目录 */
-    serverPackagePath = config.serverPackagePath;
+    private _packagePath: string = `${config.packagePath}/`;
     /** 下载器 */
-    download = new StreamDownload();
+    private _download: StreamDownload = new StreamDownload();
 
     /** 更新后回调 */
-    updateCallback;
+    private _updateCallback: Function;
     /** 更新后回调参数 */
-    updateCbArgs;
+    private _updateCbArgs: any;
 
     /** 分支环境 */
-    environName;
+    private _environName: define.eEnvironName;
 
     /** 本地版本 */
-    localVersion;
+    private _localVersion: number;
 
     /** 远程版本 */
-    remoteVersion;
+    private _remoteVersion: number;
 
-    initVersionInfo() {
-        this.environName = config.environName;
+    private initVersionInfo() {
+        this._environName = config.environName;
     }
 
     /** 检查是否最新版本 */
-    async checkLatestVersion() {
+    public async checkLatestVersion() {
         this.initVersionInfo();
 
         //获取本地游戏版本
-        this.localVersion = await config.getGlobalConfigValue("serverPackageVersion");
+        this._localVersion = await config.getVersionConfigValue("serverPackageVersion");
+        if (!this._localVersion) {
+            this._localVersion = 0;
+        }
 
-        this.remoteVersion = await util.getServerPackagePolicyNum(this.environName);
-        return this.remoteVersion === this.localVersion;
+        this._remoteVersion = await util.getServerPackagePolicyNum(this._environName);
+        return this._remoteVersion === this._localVersion;
     }
 
     /** 检查更新 */
-    async checkUpdate(updateCallback, ...updateCbArgs) {
-        this.updateCallback = updateCallback;
-        this.updateCbArgs = updateCbArgs;
-        let isLatestVersion;
-        if (this.remoteVersion) {
-            isLatestVersion = this.localVersion === this.remoteVersion;
+    public async checkUpdate(updateCallback: Function, ...updateCbArgs: any[]) {
+        this._updateCallback = updateCallback;
+        this._updateCbArgs = updateCbArgs;
+        let isLatestVersion: boolean;
+        if (this._remoteVersion) {
+            isLatestVersion = this._localVersion === this._remoteVersion;
         } else {
             isLatestVersion = await this.checkLatestVersion();
         }
@@ -67,10 +70,10 @@ export default class ServerUpdate {
             return;
         }
 
-        logger.log(`update`, `检测到服务器版本更新,开始更新版本${this.remoteVersion}`);
+        logger.log(`update`, `检测到服务器版本更新,开始更新版本${this._remoteVersion}`);
         //更新
         loading.showLoading();
-        let deleteDir = `${this.serverPackagePath}server`;
+        let deleteDir = `${this._packagePath}server`;
         //清除要保存的文件夹
         await util.deleteFolderRecursive(deleteDir);
 
@@ -78,23 +81,18 @@ export default class ServerUpdate {
     }
 
     /** 下载服务端包 */
-    downloadPackage() {
+    private downloadPackage() {
         //release环境, 用的ready的包, 去ready下载
-        let fileDir = `${config.cdnHost}/serverPackages/${this.environName}`;
-        let saveDir = this.serverPackagePath;
-        let fileName = `${util.getServerPackageFileName()}_v${this.remoteVersion}.zip`;
+        let fileDir = `${config.cdnHost}/serverPackages/${this._environName}`;
+        let saveDir = this._packagePath;
+        let fileName = `${util.getServerPackageFileName()}_v${this._remoteVersion}.zip`;
         //下载文件
         loading.showLoading();
-        this.download.downloadFile(fileDir, saveDir, fileName, async (arg, filename, percentage, errorMsg) => {
-            if (arg === "finished") {
-                config.setGlobalConfigValue("serverPackageVersion", this.remoteVersion);
-            }
-            this.downloadFileCallback(fileDir, saveDir, arg, filename, percentage, errorMsg);
-        });
+        this._download.downloadFile(fileDir, saveDir, fileName, this.downloadFileCallback.bind(this));
     }
 
     /** 下载文件回调 */
-    async downloadFileCallback(fileDir, saveDir, result, filename, percentage, errorMsg) {
+    private downloadFileCallback(result: string, filename: string, percentage: number, errorMsg: string) {
         if (result === "progress") {
             // 显示进度
             loading.setLoadingProgress(percentage);
@@ -102,18 +100,22 @@ export default class ServerUpdate {
         }
 
         if (result === "finished") {
-            logger.log(`update`, `下载文件:${filename}完毕`);
+            let content = `开始解压文件:${filename}`;
+            logger.log(`update`, content);
             // 通知完成
             try {
-                let zip = new admzip(this.serverPackagePath + filename);
-                zip.extractAllTo(this.serverPackagePath, true);
+                let zip = new admzip(this._packagePath + filename);
+                zip.extractAllTo(this._packagePath, true);
+                let content = `解压文件:${filename}成功`;
+                logger.log('update', content);
+                config.setVersionConfigValue("serverPackageVersion", this._remoteVersion);
             } catch (error) {
                 let content = `解压文件:${filename}错误,开始重新下载`;
                 logger.error(`update`, content, error);
 
                 this.downloadPackage();
             }
-            fs.unlink(this.serverPackagePath + filename, (err) => {
+            fs.unlink(this._packagePath + filename, (err) => {
                 if (err) {
                     throw err;
                 }
@@ -142,10 +144,10 @@ export default class ServerUpdate {
     }
 
     /** 执行更新后回调 */
-    executeUpdateCallback() {
+    private executeUpdateCallback() {
         loading.hideLoading();
-        if (this.updateCallback) {
-            this.updateCallback(...this.updateCbArgs);
+        if (this._updateCallback) {
+            this._updateCallback(...this._updateCbArgs);
         }
     }
 }

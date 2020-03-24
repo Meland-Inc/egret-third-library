@@ -3,7 +3,7 @@
  * @desc 处理native服务器和游戏服务器的文件
  * @date 2020-02-18 11:42:29 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-24 16:27:55
+ * @Last Modified time: 2020-03-24 17:15:17
  */
 import fs from 'fs';
 import os from 'os';
@@ -41,8 +41,8 @@ class Server {
             config.setNativeServerPort((config.nativeServer.address() as AddressInfo).port);
             logger.log('net', '创建native服务器成功,端口号', config.nativeServerPort);
 
-            await util.writeServerCnfValue('channel', config.channel);
-            await util.writeServerCnfValue("nativePort", config.nativeServerPort + "");
+            util.writeServerCnfValue('channel', config.channel);
+            util.writeServerCnfValue("nativePort", config.nativeServerPort + "");
             await this.createGameServer(gameServerMode);
         });
 
@@ -160,10 +160,10 @@ class Server {
             cmd = `./game`;
         }
         this.assignGameXPermission([
-            `${config.rootPath}/package/server/game`,
-            `${config.rootPath}/package/server/ngrok`
+            `${config.serverPackagePath}/game`,
+            `${config.serverPackagePath}/ngrok`
         ]);
-        let gameServerProcess: ChildProcess = await util.runCmd(cmd, `${config.rootPath}/package/server/`, "创建游戏服务器成功", "创建游戏服务器失败");
+        let gameServerProcess: ChildProcess = await util.runCmd(cmd, `${config.serverPackagePath}/`, "创建游戏服务器成功", "创建游戏服务器失败");
         config.setGameServerProcess(gameServerProcess);
     }
 

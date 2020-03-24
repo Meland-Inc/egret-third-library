@@ -3,7 +3,7 @@
  * @desc main用的配置
  * @date 2020-02-13 14:54:41 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-23 18:48:26
+ * @Last Modified time: 2020-03-24 16:48:04
  */
 import { BrowserWindow } from 'electron';
 import { Server } from 'net';
@@ -33,6 +33,16 @@ class Config {
         }
 
         return this._rootPath;
+    }
+
+    /** 用户数据路径 */
+    public _userDataPath: string;
+    public get userDataPath() {
+        if (!this._userDataPath) {
+            this._userDataPath = app.getPath("userData");
+        }
+
+        return this._userDataPath;
     }
 
     /** 分支环境  beta|ready|release */
@@ -83,8 +93,17 @@ class Config {
         this._gameServerNatPort = value;
     }
 
+    /** 游戏包路径 */
+    public packagePath = `${this.userDataPath}/package`;
+
+    /** 客户端包路径 */
+    public clientPackagePath = `${this.packagePath}/client`;
+
+    /** 服务端包路径 */
+    public serverPackagePath = `${this.packagePath}/server`;
+
     /** native配置路径 */
-    public nativeCnfPath = `${this.rootPath}/package/server/config/native_lesson_cnf.json`;
+    public nativeCnfPath = `${this.serverPackagePath}/config/native_lesson_cnf.json`;
 
     /** 后台进程日志路径 */
     public processLogPath = `${this.rootPath}/dist/log/process.log`;
