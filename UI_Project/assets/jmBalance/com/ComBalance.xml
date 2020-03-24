@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1700,1200" opaque="false">
+  <displayList>
+    <loader id="n0_l78k" name="ladBG" xy="0,0" size="1700,1200" touchable="false" align="center" vAlign="middle"/>
+    <loader id="n1_hilw" name="ladBar" xy="850,632" pivot="0.5,0.5" anchor="true" size="984,48" align="center" vAlign="middle">
+      <relation target="n2_hilw" sidePair="center-center,bottom-top"/>
+    </loader>
+    <loader id="n2_hilw" name="ladBase" xy="696,634" size="308,197" align="center" vAlign="middle">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </loader>
+    <loader id="n3_hilw" name="ladLeftContainer" xy="-41,336" size="800,300" align="center" vAlign="bottom"/>
+    <loader id="n4_hilw" name="ladRightContainer" xy="934,336" size="800,300" align="center" vAlign="bottom"/>
+  </displayList>
+</component>

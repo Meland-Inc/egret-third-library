@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="kvblsqzc">
+  <resources>
+    <component id="hilw0" name="ComBalance.xml" path="/com/" exported="true"/>
+    <image id="hilw4" name="bar.png" path="/"/>
+    <image id="hilw5" name="pallet.png" path="/"/>
+    <image id="hilw6" name="item3.png" path="/"/>
+    <image id="hilw7" name="item1.png" path="/"/>
+    <image id="hilw8" name="base.png" path="/"/>
+    <component id="hilw9" name="ComTip.xml" path="/com/" exported="true"/>
+  </resources>
+  <publish name="jmBalance" path="..\..\egret-planet\resource\jimmyAssets\dynamicMission\jmBlance" packageCount="2"/>
+</packageDescription>
