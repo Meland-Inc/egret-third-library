@@ -3,7 +3,7 @@
  * @desc 游戏服务器端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-22 01:28:35
+ * @Last Modified time: 2020-03-24 10:05:14
  */
 import fs from 'fs';
 import admzip from "adm-zip";
@@ -80,11 +80,7 @@ export default class ServerUpdate {
     /** 下载服务端包 */
     downloadPackage() {
         //release环境, 用的ready的包, 去ready下载
-        let environName: define.eEnvironName;
-        if (environName === define.eEnvironName.release) {
-            environName = define.eEnvironName.ready;
-        }
-        let fileDir = `${config.cdnHost}/serverPackages/${environName}`;
+        let fileDir = `${config.cdnHost}/serverPackages/${this.environName}`;
         let saveDir = this.serverPackagePath;
         let fileName = `${util.getServerPackageFileName()}_v${this.remoteVersion}.zip`;
         //下载文件
