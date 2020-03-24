@@ -8,10 +8,33 @@ RequestExecutionLevel admin
   ; This macro is inserted at the beginning of the NSIS .OnInit callback
   !system "echo '' > ${BUILD_RESOURCES_DIR}/preInit"
 
+  StrCpy $R1 "D:\"
+  ${DriveSpace} $R1 "/D=F /S=M" $R0
+  ${If} $R0 = null
+  ${OrIf} $R0 < 1024
+    StrCpy $R1 "E:\"
+    ${DriveSpace} $R1 "/D=F /S=M" $R0
+    ${If} $R0 = null
+    ${OrIf} $R0 < 1024
+      StrCpy $R1 "F:\"
+      ${DriveSpace} $R1 "/D=F /S=M" $R0
+      ${If} $R0 = null
+      ${OrIf} $R0 < 1024
+        StrCpy $R1 "C:\"
+        ${DriveSpace} $R1 "/D=F /S=M" $R0
+        ${If} $R0 = null
+        ${OrIf} $R0 < 1024
+          MessageBox MB_OK "电脑无可用磁盘,请检查!"
+          Abort
+        ${EndIf}
+      ${EndIf}
+    ${EndIf}
+  ${EndIf}
+
   ;64位包
   SetRegView 64
-  WriteRegExpandStr HKLM "${INSTALL_REGISTRY_KEY}" InstallLocation "D:\Program Files\bellplanet\"
-  WriteRegExpandStr HKCU "${INSTALL_REGISTRY_KEY}" InstallLocation "D:\Program Files\bellplanet\"
+  WriteRegExpandStr HKLM "${INSTALL_REGISTRY_KEY}" InstallLocation "$R1Program Files\bellplanet\"
+  WriteRegExpandStr HKCU "${INSTALL_REGISTRY_KEY}" InstallLocation "$R1Program Files\bellplanet\"
 
   ;32位包
   ; SetRegView 32
