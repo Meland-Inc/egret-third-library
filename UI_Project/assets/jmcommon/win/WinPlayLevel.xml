@@ -2,7 +2,7 @@
 <component size="1920,1080" designImage="ui://av6agj0gbmxe2h" designImageAlpha="3" designImageLayer="1">
   <controller name="ctrlVoiceType" pages="1,play,0,none,2,pause" selected="0"/>
   <controller name="ctrlIsDevelop" pages="0,false,1,true" selected="0"/>
-  <controller name="ctrlTemGameType" pages="0,none,1,success,2,fail,3,over" selected="0"/>
+  <controller name="ctrlTemGameType" pages="0,none,1,success,2,fail,3,over" selected="2"/>
   <controller name="ctrlStartL" pages="0,,1,,2,,3," selected="0"/>
   <displayList>
     <graph id="n38_gx7z" name="imgStageBG" xy="0,0" size="1920,1080" type="rect" lineSize="0" lineColor="#ffffffff">
@@ -68,7 +68,11 @@
       <relation target="n37_gx7z" sidePair="right-right,bottom-bottom"/>
       <Button icon="ui://av6agj0gbmxe2c"/>
     </component>
-    <graph id="n61_sco7" name="ladImg" xy="0,223" size="1920,632" alpha="0.2" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
+    <component id="n30_nuye" name="btnClose" src="sco7k" fileName="btn/btnScale.xml" xy="1756,43" size="127,130" controller="button,0">
+      <relation target="n35_gx7z" sidePair="right-right,top-top"/>
+      <Button icon="ui://av6agj0gbmxe2f"/>
+    </component>
+    <graph id="n61_sco7" name="ladImg" xy="0,-1" size="1920,1080" alpha="0.2" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
       <gearDisplay controller="ctrlTemGameType" pages="2"/>
       <gearIcon controller="ctrlTemGameType" pages="0,1,2,3" values="|||"/>
       <relation target="" sidePair="width-width,height-height%,middle-middle"/>
@@ -81,7 +85,7 @@
       <gearDisplay controller="ctrlTemGameType" pages="1,2,3"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <component id="n63_sco7" name="btnNext" src="sco7k" fileName="btn/btnScale.xml" xy="854,670" size="212,98" touchable="false" controller="button,0">
+    <component id="n63_sco7" name="btnNext" src="sco7k" fileName="btn/btnScale.xml" xy="854,894" size="212,98" touchable="false" controller="button,0">
       <gearDisplay controller="ctrlTemGameType" pages="1"/>
       <relation target="n61_sco7" sidePair="center-center,bottom-bottom"/>
     </component>
@@ -95,10 +99,6 @@
     <group id="n70_sco7" name="grpRate" xy="1349,33" size="526,100" visible="false" advanced="true">
       <relation target="n37_gx7z" sidePair="right-right,top-top"/>
     </group>
-    <component id="n30_nuye" name="btnClose" src="sco7k" fileName="btn/btnScale.xml" xy="1756,43" size="127,130" controller="button,0">
-      <relation target="n35_gx7z" sidePair="right-right,top-top"/>
-      <Button icon="ui://av6agj0gbmxe2f"/>
-    </component>
     <text id="n80_fy6w" name="n80" xy="191,87" size="1538,906" fontSize="300" align="center" vAlign="middle" autoSize="none" text="关卡结束">
       <gearDisplay controller="ctrlTemGameType" pages="3"/>
       <relation target="" sidePair="center-center,middle-middle"/>
