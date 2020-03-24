@@ -3,7 +3,7 @@
  * @desc main用的工具类
  * @date 2020-02-18 11:43:24 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-23 20:13:46
+ * @Last Modified time: 2020-03-24 15:07:50
  */
 // const spawn = require("child_process").spawn;
 import { exec, ChildProcess } from 'child_process';
@@ -26,7 +26,7 @@ export namespace util {
     export function runCmd(cmd: string, cwd: string, successMsg: string, errorMsg: string): Promise<ChildProcess> {
         return new Promise((resolve, reject) => {
             logger.log('cmd', `cmd --> command:${cmd} cwd:${cwd}`);
-            let process = exec(cmd, { cwd: cwd }, (error) => {
+            let process = exec(cmd, { cwd: cwd, windowsHide: false }, (error) => {
                 if (error) {
                     if (errorMsg) {
                         logger.error('cmd', errorMsg, error);

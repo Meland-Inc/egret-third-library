@@ -3,7 +3,7 @@
  * @desc 处理native服务器和游戏服务器的文件
  * @date 2020-02-18 11:42:29 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-23 19:27:12
+ * @Last Modified time: 2020-03-24 15:55:53
  */
 import fs from 'fs';
 import os from 'os';
@@ -130,7 +130,8 @@ class Server {
     private assignGameXPermission(paths: string[]) {
         return new Promise((resolve, reject) => {
             for (let path of paths) {
-                fs.chmod(path, fs.constants.S_IXUSR, (err) => {
+                //0o100 --> fs.constants.S_IXUSR
+                fs.chmod(path, 0o100, (err) => {
                     if (err) {
                         reject(err);
                     }
@@ -154,17 +155,17 @@ class Server {
             cmd = `game`;
         } else {
             cmd = `./game`;
-            this.assignGameXPermission([
-                `${config.rootPath}/package/server/game`,
-                `${config.rootPath}/package/server/ngrok`
-            ]);
         }
+        this.assignGameXPermission([
+            `${config.rootPath}/package/server/game`,
+            `${config.rootPath}/package/server/ngrok`
+        ]);
         let gameServerProcess: ChildProcess = await util.runCmd(cmd, `${config.rootPath}/package/server/`, "创建游戏服务器成功", "创建游戏服务器失败");
         config.setGameServerProcess(gameServerProcess);
     }
 
     /** 关闭游戏服务器 */
-    public async closeGameServer() {
+    public closeGameServer() {
         return new Promise((resolve, reject) => {
             if (!config.gameServerProcess) {
                 resolve();
@@ -176,7 +177,13 @@ class Server {
                 // util.runCmd(cmdStr, null, `关闭游戏服务器成功`, "关闭游戏服务器错误");
                 logger.log('net', `关闭游戏服务器`);
                 treeKill(config.gameServerProcess.pid, (error) => {
-                    reject(error);
+                    if (error) {
+                        logger.error('net', `kill 关闭游戏服务器错误`)
+                        reject(error);
+                        return;
+                    }
+                    logger.log('net', `kill 关闭游戏服务器成功`)
+                    resolve();
                 });
                 config.setGameServerProcess(null);
                 return;

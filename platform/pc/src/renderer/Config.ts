@@ -3,7 +3,7 @@
  * @desc renderer用的配置静态类
  * @date 2020-02-13 14:54:50 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-23 19:33:34
+ * @Last Modified time: 2020-03-24 15:24:54
  */
 import fs from 'fs';
 import { remote } from 'electron';
@@ -90,15 +90,15 @@ class Config {
         this._nativeGameServer = value;
     }
 
-    private _nativeToken: string;
-    /** native保存的token */
-    public get nativeToken(): string {
-        return this._nativeToken;
-    }
-    public setNativeToken(value: string) {
-        this._nativeToken = value;
-        logger.log('renderer', `设置nativeToken`, this._nativeToken);
-    }
+    // private _nativeToken: string;
+    // /** native保存的token */
+    // public get nativeToken(): string {
+    //     return this._nativeToken;
+    // }
+    // public setNativeToken(value: string) {
+    //     this._nativeToken = value;
+    //     logger.log('renderer', `设置nativeToken`, this._nativeToken);
+    // }
 
     public async init() {
         return new Promise((resolve, reject) => {
@@ -111,9 +111,9 @@ class Config {
 
                 this._globalConfig = JSON.parse(data);
                 this.environName = this._globalConfig.environName;
-                if (!!this._globalConfig.token) {
-                    this.setNativeToken(this._globalConfig.token);
-                }
+                // if (!!this._globalConfig.token) {
+                //     this.setNativeToken(this._globalConfig.token);
+                // }
                 resolve();
             });
         })
@@ -132,9 +132,9 @@ class Config {
 
         logger.log('renderer', `设置GlobalConfigValue`, key, value);
 
-        if (key === "token") {
-            this.setNativeToken(this._globalConfig.token);
-        }
+        // if (key === "token") {
+        //     this.setNativeToken(this._globalConfig.token);
+        // }
     }
 }
 

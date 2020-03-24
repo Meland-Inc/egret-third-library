@@ -3,7 +3,7 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-24 14:30:55
+ * @Last Modified time: 2020-03-24 15:23:23
  */
 // Modules to control application life and create native browser window
 import { app, globalShortcut, BrowserWindow, Menu, shell, dialog, session, Referrer, BrowserWindowConstructorOptions } from 'electron';
@@ -142,45 +142,45 @@ async function createWindow() {
   // 拦截new-window事件，起到拦截window.open的作用
   mainWindow.webContents.on('will-navigate', async (event: Event, url: string) => {
     logger.log('electron', `will-navigate url: ${url}`);
-    const tokenField = "webviewToken";
     const newURL = new URL(url);
     const hash = newURL.hash;
-    logger.log('platform', `config.environName`, config.environName);
-    let token = newURL.searchParams.get("token");
-    if (!token && config.environName) {
-      logger.log('token', '浏览器参数内不存在token, 查找cookie看是否有参数')
-      let cookies = await session.defaultSession.cookies.get({});
-      let domain: string;
-      if (config.environName === define.eEnvironName.ready) {
-        domain = config.readyTokenDomain;
-      } else {
-        domain = config.releaseTokenDomain;
-      }
-
-      // logger.log('platform', `cookies`, cookies);
-      let cookie = cookies.find(value => value.name === "token" && value.domain === domain);
-      if (cookie) {
-        token = cookie.value;
-        logger.log('token', `cookie内存在token:${token}`);
-      }
-    }
-
-    if (token) {
-      logger.log('token', `存在token:${token}`);
-      util.setGlobalConfigValue("token", token);
-    } else {
-      logger.log('token', `不存在token,设置token为空`);
-      util.setGlobalConfigValue("token", "");
-    }
-
     //江哥写的特殊处理平台locationBuilder的代码
     const searchParams = (new URL(`https://bai.com${hash.slice(1)}`)).searchParams;
 
+    const tokenField = "webviewToken";
     if (newURL.searchParams.has(tokenField)
       || searchParams.has(tokenField)
     ) {
       return;
     }
+
+    logger.log('platform', `config.environName`, config.environName);
+    // let token = newURL.searchParams.get("token");
+    // if (!token && config.environName) {
+    //   logger.log('token', '浏览器参数内不存在token, 查找cookie看是否有参数')
+    //   let cookies = await session.defaultSession.cookies.get({});
+    //   let domain: string;
+    //   if (config.environName === define.eEnvironName.ready) {
+    //     domain = config.readyTokenDomain;
+    //   } else {
+    //     domain = config.releaseTokenDomain;
+    //   }
+
+    //   // logger.log('platform', `cookies`, cookies);
+    //   let cookie = cookies.find(value => value.name === "token" && value.domain === domain);
+    //   if (cookie) {
+    //     token = cookie.value;
+    //     logger.log('token', `cookie内存在token:${token}`);
+    //   }
+    // }
+
+    // if (token) {
+    //   logger.log('token', `存在token:${token}`);
+    //   util.setGlobalConfigValue("token", token);
+    // } else {
+    //   logger.log('token', `不存在token,设置token为空`);
+    //   util.setGlobalConfigValue("token", "");
+    // }
 
     // 阻止创建默认窗口
     event.preventDefault();
