@@ -29,18 +29,18 @@
     </mu-container>
     <mu-container>
       <div class="button-wrapper">
-        <mu-button
+        <!-- <mu-button
           v-loading="isUpdateServerPackageLoading"
           data-mu-loading-size="24"
           color="pink500"
           @click="onUpdateServerPackage"
-        >更新svn服务端包</mu-button>
+        >更新svn服务端包</mu-button>-->
         <mu-button
           v-loading="isMergeServerPackageLoading"
           data-mu-loading-size="24"
           color="orange500"
           @click="onMergeServerPackage"
-        >比较上传服务端包</mu-button>
+        >更新上传服务端包</mu-button>
         <mu-button
           v-loading="isUploadClientPackageLoading"
           data-mu-loading-size="24"
@@ -58,12 +58,12 @@
     <mu-divider />
     <mu-container>
       <div class="button-wrapper" id="package">
-        <mu-button
+        <!-- <mu-button
           v-loading="isClearPackageDirLoading"
           data-mu-loading-size="24"
           color="cyan500"
           @click="onClearPackageDir"
-        >清空游戏包目录</mu-button>
+        >清空游戏包目录</mu-button>-->
         <mu-button
           v-loading="isWriteVersionInfoLoading"
           data-mu-loading-size="24"
@@ -139,23 +139,23 @@ export default {
       this.publisher = null;
       this.updatePublishText();
     },
-    async onUpdateServerPackage() {
-      if (!ModelMgr.versionModel.publisher) {
-        Global.snack("请输入发布者", null, false);
-        return;
-      }
+    // async onUpdateServerPackage() {
+    //   if (!ModelMgr.versionModel.publisher) {
+    //     Global.snack("请输入发布者", null, false);
+    //     return;
+    //   }
 
-      this.isUpdateServerPackageLoading = true;
-      Global.showRegionLoading();
-      try {
-        await mdPublish.updateServerPackage();
-        this.isUpdateServerPackageLoading = false;
-        Global.hideRegionLoading();
-      } catch (error) {
-        this.isUpdateServerPackageLoading = false;
-        Global.hideRegionLoading();
-      }
-    },
+    //   this.isUpdateServerPackageLoading = true;
+    //   Global.showRegionLoading();
+    //   try {
+    //     await mdPublish.updateServerPackage();
+    //     this.isUpdateServerPackageLoading = false;
+    //     Global.hideRegionLoading();
+    //   } catch (error) {
+    //     this.isUpdateServerPackageLoading = false;
+    //     Global.hideRegionLoading();
+    //   }
+    // },
     async onMergeServerPackage() {
       if (!ModelMgr.versionModel.publisher) {
         Global.snack("请输入发布者", null, false);
@@ -165,6 +165,7 @@ export default {
       this.isMergeServerPackageLoading = true;
       Global.showRegionLoading();
       try {
+        await mdPublish.updateServerPackage();
         await ModelMgr.ftpModel.initQiniuOption();
         await mdPublish.mergeServerPackage();
         this.isMergeServerPackageLoading = false;
@@ -192,24 +193,24 @@ export default {
         Global.hideRegionLoading();
       }
     },
-    async onClearPackageDir() {
-      if (!ModelMgr.versionModel.publisher) {
-        Global.snack("请输入发布者", null, false);
-        return;
-      }
+    // async onClearPackageDir() {
+    //   if (!ModelMgr.versionModel.publisher) {
+    //     Global.snack("请输入发布者", null, false);
+    //     return;
+    //   }
 
-      this.isClearPackageDirLoading = true;
-      Global.showRegionLoading();
-      try {
-        await mdPublish.clearPackageDir();
-        // await mdPublish.copyClientPackageToNative();
-        this.isClearPackageDirLoading = false;
-        Global.hideRegionLoading();
-      } catch (error) {
-        this.isClearPackageDirLoading = false;
-        Global.hideRegionLoading();
-      }
-    },
+    //   this.isClearPackageDirLoading = true;
+    //   Global.showRegionLoading();
+    //   try {
+    //     await mdPublish.clearPackageDir();
+    //     // await mdPublish.copyClientPackageToNative();
+    //     this.isClearPackageDirLoading = false;
+    //     Global.hideRegionLoading();
+    //   } catch (error) {
+    //     this.isClearPackageDirLoading = false;
+    //     Global.hideRegionLoading();
+    //   }
+    // },
     async onWriteVersionInfo() {
       if (!ModelMgr.versionModel.publisher) {
         Global.snack("请输入发布者", null, false);
