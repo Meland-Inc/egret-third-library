@@ -3,7 +3,7 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-24 17:14:16
+ * @Last Modified time: 2020-03-24 22:23:11
  */
 // Modules to control application life and create native browser window
 import { app, globalShortcut, BrowserWindow, Menu, shell, dialog, session, Referrer, BrowserWindowConstructorOptions } from 'electron';
@@ -160,6 +160,25 @@ function createWindow() {
 
     if (config.bellToken) {
       newURL.searchParams.set(tokenField, config.bellToken);
+    } else {
+      if (config.environName) {
+        logger.log('token', '浏览器参数内不存在token, 查找cookie看是否有参数')
+        let cookies = await session.defaultSession.cookies.get({});
+        let domain: string;
+        if (config.environName === define.eEnvironName.ready) {
+          domain = config.readyTokenDomain;
+        } else {
+          domain = config.releaseTokenDomain;
+        }
+
+        let cookie = cookies.find(value => value.name === "token" && value.domain === domain);
+        if (cookie) {
+          let token = cookie.value;
+          logger.log('token', `cookie内存在token:${token}`);
+          config.setBellToken(token);
+          newURL.searchParams.set(tokenField, token);
+        }
+      }
     }
 
     logger.log('electron', `will-navigate newURL: ${newURL}`);
