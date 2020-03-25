@@ -3,20 +3,17 @@
  * @desc native包更新类
  * @date 2020-03-25 17:36:41 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-25 18:43:13
+ * @Last Modified time: 2020-03-26 00:44:08
  */
+import os from 'os';
 import { autoUpdater } from 'electron-updater';
 import { logger } from './logger';
 import message from './Message';
-import os from 'os';
 import config from './Config';
-import { util } from './util';
 
 export default class NativeUpdate {
-    public checkUpdate() {
-        this.setFeedURL();
-        // autoUpdater.setFeedURL("http://bg-stage.wkcoding.com/native/beta/v1");
-
+    public checkUpdate(nativePolicyVersion: number) {
+        this.setFeedURL(nativePolicyVersion);
 
         // eslint-disable-next-line handle-callback-err
         autoUpdater.on('error', (error) => {
@@ -51,21 +48,13 @@ export default class NativeUpdate {
         autoUpdater.checkForUpdates();
     }
 
-    private async setFeedURL() {
-        let platform = os.platform();
-        if (platform != "win32" && platform != "darwin") {
-            return;
-        }
-
+    private async setFeedURL(nativePolicyVersion: number) {
         let environName = config.environName;
-
-        let isWin = platform === "win32";
+        let isWin = os.platform() === "win32";
         let pkgPlatform = isWin ? "win" : "mac";
-        let suffix = isWin ? "exe" : "dmg";
-        let versionName = `${environName}_native_${pkgPlatform}`;
-        let nativeVersion = await util.getPolicyNum(versionName);
-        let nativeName = `bellplanet_${environName}_${nativeVersion}.${suffix}`;
-        let nativeCdnPath = `http://bg-stage.wkcoding.com/native/${nativeName}`;
+        let feedURL = `http://bg-stage.wkcoding.com/native/${environName}/${nativePolicyVersion}/${pkgPlatform}`;
+        logger.log(`update`, `feedURL:${feedURL}`);
+        autoUpdater.setFeedURL(feedURL);
     }
 
     private checkUpdateComplete() {

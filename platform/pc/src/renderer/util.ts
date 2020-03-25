@@ -3,7 +3,7 @@
  * @desc 工具类
  * @date 2020-02-28 19:56:39 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-21 20:51:00
+ * @Last Modified time: 2020-03-26 00:26:00
  */
 import fs from 'fs';
 import path from 'path';
@@ -26,6 +26,9 @@ export function getPolicyInfo(versionName: string): Promise<string> {
         url.searchParams.append('time', time.toString());
         url.searchParams.append('due', due.toString());
         url.searchParams.append('token', token);
+
+        logger.log("policy", `getPolicyInfo url:${url}`);
+
         let request = new XMLHttpRequest();
         request.open("GET", url.toString());
         request.onreadystatechange = () => {
@@ -86,6 +89,18 @@ export async function getServerPackagePolicyNum(environName) {
     if (data.Code === 0) {
         policyNum = +data.Data.Version;
     }
+    return policyNum;
+}
+
+/** 获取native策略版本号 */
+export async function getNativePolicyNum(versionName: string) {
+    let value = await getPolicyInfo(versionName);
+    let data = JSON.parse(value);
+    let policyNum = 0;
+    if (data.Code === 0) {
+        policyNum = +data.Data.Version;
+    }
+    logger.log('policy', `nativePolicyNum:${policyNum}`);
     return policyNum;
 }
 

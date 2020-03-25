@@ -3,7 +3,7 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-25 18:34:36
+ * @Last Modified time: 2020-03-26 00:43:41
  */
 // Modules to control application life and create native browser window
 import { app, globalShortcut, BrowserWindow, Menu, shell, dialog, session, Referrer, BrowserWindowConstructorOptions } from 'electron';
@@ -17,6 +17,7 @@ import config from './Config';
 import server from './Server';
 import message from './Message';
 import NativeUpdate from './NativeUpdate';
+import { util } from './util';
 
 //限制只启用一个程序
 const gotTheLock = app.requestSingleInstanceLock();
@@ -127,6 +128,9 @@ async function createWindow() {
   logger.init();
   logger.log('main', `收到参数1: ${JSON.stringify(process.argv)}`);
 
+  //初始化全局配置
+  await util.initGlobalConfig();
+
   await initNative();
 
   //初始化MainWindow
@@ -193,8 +197,6 @@ async function onClosed() {
 async function onNewWindow(event: Event, url: string) {
   // 阻止创建默认窗口
   event.preventDefault();
-
-  nativeUpdate.checkUpdate();
 
   logger.log('electron', `new-window: ${url}`);
   await mainWindow.loadURL(url);
@@ -273,7 +275,7 @@ async function initNative() {
 
   logger.log('net', `config.urlValue`, config.urlValue);
 
-  nativeUpdate.checkUpdate();
+  message.sendIpcMsg("GET_NATIVE_POLICY_VERSION");
 }
 
 // In this file you can include the rest of your app's specific main process

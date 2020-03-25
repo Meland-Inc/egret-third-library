@@ -3,7 +3,7 @@
  * @desc 渲染进程消息处理文件
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-25 18:41:26
+ * @Last Modified time: 2020-03-26 00:17:33
  */
 import { ipcRenderer, IpcRendererEvent } from "electron";
 import querystring from "querystring";
@@ -11,6 +11,7 @@ import fs from "fs";
 import path from "path";
 
 import config from './Config';
+import * as util from './util';
 import { define } from './define';
 import * as logger from './logger';
 import * as loading from './loading';
@@ -30,6 +31,7 @@ class Message {
         'HIDE_LOADING': this.onHideLoading.bind(this),//隐藏loading
         'SET_LOADING_PROGRESS': this.onSetLoadingProgress.bind(this),//设置loading进度
         'CHECK_PACKAGE_UPDATE': this.checkPackageUpdate.bind(this),//检查游戏包更新
+        'GET_NATIVE_POLICY_VERSION': this.onGetNativePolicyVersion.bind(this),//获取native策略版本号
     }
 
     private _clientUpdate = new ClientUpdate();
@@ -66,6 +68,12 @@ class Message {
 
     private onSaveNativeGameServer(gameServer: string) {
         config.setNativeGameServer(gameServer);
+    }
+
+    private async onGetNativePolicyVersion() {
+        let versionName = `${config.environName}_native`;
+        let nativePolicyVersion: number = await util.getNativePolicyNum(versionName);
+        this.sendIpcMsg("SET_NATIVE_POLICY_VERSION", nativePolicyVersion);
     }
 
     /** 检查游戏包更新 */

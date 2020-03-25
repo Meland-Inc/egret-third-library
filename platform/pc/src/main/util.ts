@@ -3,7 +3,7 @@
  * @desc main用的工具类
  * @date 2020-02-18 11:43:24 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-24 17:13:30
+ * @Last Modified time: 2020-03-26 00:42:34
  */
 import { exec, ChildProcess } from 'child_process';
 import http from 'http';
@@ -21,7 +21,7 @@ export namespace util {
     export function runCmd(cmd: string, cwd: string, successMsg: string, errorMsg: string): Promise<ChildProcess> {
         return new Promise((resolve, reject) => {
             logger.log('cmd', `cmd --> command:${cmd} cwd:${cwd}`);
-            let process = exec(cmd, { cwd: cwd, windowsHide: false }, (error) => {
+            let process = exec(cmd, { cwd: cwd }, (error) => {
                 if (error) {
                     if (errorMsg) {
                         logger.error('cmd', errorMsg, error);
@@ -95,7 +95,7 @@ export namespace util {
 
             response.on('error', (e) => {
                 if (errorFunc) {
-                    errorFunc();
+                    errorFunc(e);
                 }
                 logger.error('net', `get方式 http返回错误`, e)
             });
@@ -103,7 +103,7 @@ export namespace util {
 
         request.on('error', (e) => {
             if (errorFunc) {
-                errorFunc();
+                errorFunc(e);
             }
             logger.error('net', `get方式 发送http请求错误`, e.message)
         });
@@ -188,13 +188,15 @@ export namespace util {
         request.end();
     }
 
-    /** 初始化native配置 */
-    export function init() {
+    /** 初始化服务端native配置 */
+    export function initNativeCnf() {
         logger.log('net', `初始化native本地服务器配置`);
-
         let nativeCnfContent = fs.readFileSync(config.nativeCnfPath, "utf-8");
         nativeCnf = JSON.parse(nativeCnfContent);
+    }
 
+    /** 初始化全局配置 */
+    export function initGlobalConfig() {
         let globalConfigContent = fs.readFileSync(config.globalConfigPath, "utf-8");
         let globalConfig = JSON.parse(globalConfigContent);
 
@@ -208,7 +210,7 @@ export namespace util {
         fs.writeFileSync(config.nativeCnfPath, content);
     }
 
-    /** 获取native版本号 */
+    /** 获取指定版本号 */
     export async function getPolicyNum(versionName: string) {
         let value = await getPolicyInfo(versionName);
         let data = JSON.parse(value);
@@ -227,27 +229,37 @@ export namespace util {
             let token = "*";
             let channel = "bian_game"
 
-            let policyQueryServer = 'policy-server.wkcoding.com';
-            let url = new URL('http://' + policyQueryServer + '/getVersion', window.location.href);
-            url.searchParams.append('versionName', versionName);
-            url.searchParams.append('channel', channel);
-            url.searchParams.append('time', time.toString());
-            url.searchParams.append('due', due.toString());
-            url.searchParams.append('token', token);
-            let request = new XMLHttpRequest();
-            request.open("GET", url.toString());
-            request.onreadystatechange = () => {
-                if (request.readyState !== 4) {
-                    return;
+            let newURL = new URL('http://policy-server.wkcoding.com/getVersion');
+            // let data = {
+            //     versionName: versionName,
+            //     channel: channel,
+            //     time: time.toString(),
+            //     due: due.toString(),
+            //     token: token
+            // }
+            newURL.searchParams.set("versionName", versionName)
+            newURL.searchParams.set("channel", channel)
+            newURL.searchParams.set("time", time.toString())
+            newURL.searchParams.set("due", due.toString())
+            newURL.searchParams.set("token", token)
+            util.requestGetHttp(newURL.toString(), null, null, null, null
+                , (body: any) => {
+                    if (body.code !== 4) {
+                        return;
+                    }
+
+                    logger.log(`body`, `getPolicyInfo body:${body}`);
+                    if (body.code === 200) {
+                        console.log(body.data);
+                        resolve(body.data);
+                    } else {
+                        reject("获取版本号错误!");
+                    }
                 }
-                if (request.status === 200) {
-                    console.log(request.responseText);
-                    resolve(request.responseText);
-                } else {
-                    reject("获取版本号错误!");
+                , () => {
+                    logger.error('net', `获取版本号错误!`);
                 }
-            }
-            request.send(null);
+            );
         });
     }
 }
