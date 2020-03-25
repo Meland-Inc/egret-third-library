@@ -635,7 +635,7 @@ export async function uploadNativeDmg() {
 
     console.log("开始mac包上传");
     let platform = "mac";
-    let cdnRoot = `native/${environName}/${newNativePolicyNum}/${platform}/`
+    let cdnRoot = `native/${environName}/${newNativePolicyNum}/${platform}`
     await tryUploadNativePkg(pkgPath, pkgName, cdnRoot);
 
     let ymlName = `latest.yml`;
