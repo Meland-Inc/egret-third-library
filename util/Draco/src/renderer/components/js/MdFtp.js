@@ -671,7 +671,8 @@ function tryUploadNativePkg(pkgPath, pkgName, cdnRoot) {
 
 export async function applyNativePolicyNum() {
     let newNativePolicyNum = getNewNativePolicyNum();
-    await ExternalUtil.applyNativePolicyNum(newNativePolicyNum, environ.name);
+    let environName = ModelMgr.versionModel.curEnviron.name;
+    await ExternalUtil.applyNativePolicyNum(newNativePolicyNum, environName);
 
     let commitCmdStr = `git commit -a -m "${ModelMgr.versionModel.publisher} 发布${ModelMgr.versionModel.curEnviron.name} native包 策略版本号:${newNativePolicyNum}"`;
     await spawnExc.runCmd(commitCmdStr, Global.clientPath, null, '提交文件错误');

@@ -351,6 +351,7 @@ export class VersionModel {
         if (data.Code == 0) {
             this._nativePolicyNum = +data.Data.Version;
         } else {
+            this._nativePolicyNum = 0;
             this.originNativeVersion = this.nativeVersion = 0;
             console.log(`originNativeVersion:${this.originNativeVersion} nativeVersion:${this.nativeVersion}`);
             return;

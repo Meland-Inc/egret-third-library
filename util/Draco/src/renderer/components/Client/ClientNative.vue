@@ -94,6 +94,12 @@
           color="green500"
           @click="onUploadNative"
         >上传native包</mu-button>
+        <mu-button
+          v-loading="isApplyNativePolicyNumLoading"
+          data-mu-loading-size="24"
+          color="green500"
+          @click="applyNativePolicyNum"
+        >应用native策略号</mu-button>
       </div>
     </mu-container>
     <mu-divider />
@@ -126,6 +132,7 @@ export default {
       isPublishWinLoading: false,
       isPublishMacLoading: false,
       isUploadNativeLoading: false,
+      isApplyNativePolicyNumLoading: false,
 
       publishErrorText: null,
       nativeVersionText: null,
@@ -319,11 +326,32 @@ export default {
         await ModelMgr.ftpModel.initQiniuOption();
         await mdFtp.uploadNativeExe();
         await mdFtp.uploadNativeDmg();
-        await mdFtp.applyNativePolicyNum();
         this.isUploadNativeLoading = false;
         Global.hideRegionLoading();
       } catch (error) {
         this.isUploadNativeLoading = false;
+        Global.hideRegionLoading();
+      }
+    },
+    async applyNativePolicyNum() {
+      if (!ModelMgr.versionModel.publisher) {
+        Global.snack("请输入发布者", null, false);
+        return;
+      }
+
+      if (this.checkNativeVersion()) {
+        Global.snack("请填入新的native版本号!", null, false);
+        return;
+      }
+
+      this.isApplyNativePolicyNumLoading = true;
+      Global.showRegionLoading();
+      try {
+        await mdFtp.applyNativePolicyNum();
+        this.isApplyNativePolicyNumLoading = false;
+        Global.hideRegionLoading();
+      } catch (error) {
+        this.isApplyNativePolicyNumLoading = false;
         Global.hideRegionLoading();
       }
     },
