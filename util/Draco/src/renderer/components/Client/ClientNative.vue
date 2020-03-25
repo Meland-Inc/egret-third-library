@@ -326,7 +326,9 @@ export default {
         promiseList.push(mdPublish.writeVersionInfo);
         promiseList.push(mdPublish.publishWin);
         promiseList.push(mdPublish.publishMac);
-        promiseList.push(ModelMgr.ftpModel.initQiniuOption);
+        promiseList.push(
+          ModelMgr.ftpModel.initQiniuOption.bind(ModelMgr.ftpModel)
+        );
         promiseList.push(mdFtp.uploadNativeExe);
         promiseList.push(mdFtp.uploadNativeDmg);
 
