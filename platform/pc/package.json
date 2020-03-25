@@ -1,6 +1,7 @@
 {
   "name": "bellplanet",
-  "version": "1.0.0",
+  "version": "0.0.1",
+  "author": "bellcode",
   "description": "让孩子快乐的学习编程创造",
   "main": "./dist/main-bundle.js",
   "scripts": {
@@ -12,8 +13,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "cross-env NODE_ENV=development webpack-dev-server --mode=development --config build/webpack.config.js"
   },
-  "author": "bellcode",
-  "license": "MIT",
   "build": {
     "productName": "bellplanet",
     "asar": false,
@@ -33,10 +32,11 @@
       ],
       "signDlls": true,
       "rfc3161TimeStampServer": "http://timestamp.digicert.com",
+      "verifyUpdateCodeSignature": false,
       "certificateFile": "./build/bellplanet.pfx",
       "certificatePassword": "bellcode123",
-      "icon": "./icon/icon.ico",
-      "requestedExecutionLevel": "highestAvailable"
+      "requestedExecutionLevel": "highestAvailable",
+      "icon": "./icon/icon.ico"
     },
     "dmg": {
       "contents": [
@@ -81,15 +81,22 @@
     "directories": {
       "output": "app"
     },
-    "extends": null
+    "publish": [
+      {
+        "name": "bellplanet",
+        "provider": "generic",
+        "url": ""
+      }
+    ]
   },
   "dependencies": {
-    "@types/adm-zip": "^0.4.32",
     "adm-zip": "^0.4.13",
+    "electron-updater": "^4.2.5",
     "request": "^2.88.0",
     "tree-kill": "^1.2.2"
   },
   "devDependencies": {
+    "@types/adm-zip": "^0.4.32",
     "cross-env": "^7.0.2",
     "electron": "^7.1.7",
     "electron-builder": "^21.2.0",

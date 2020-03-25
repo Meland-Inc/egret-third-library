@@ -3,7 +3,7 @@
  * @desc 游戏客户端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-24 17:49:24
+ * @Last Modified time: 2020-03-25 18:43:40
  */
 import fs from 'fs';
 import admzip from "adm-zip";
@@ -105,7 +105,7 @@ export default class ClientUpdate {
             this._updateCallback = updateCallback;
             this._updateCbArgs = updateCbArgs;
 
-            loading.showLoading();
+            loading.showLoading("正在下载客户端游戏包");
             this.downloadPackage();
         } catch (error) {
             throw error;
@@ -211,7 +211,7 @@ export default class ClientUpdate {
     /** 下载单个补丁包 */
     private installSinglePatch() {
         try {
-            loading.showLoading();
+            loading.showLoading("正在更新客户端游戏包");
             this._download.downloadFile(this._patchUrl, this._clientPackagePath, `patch_v${this._curVersion}s_v${this._curVersion + 1}s.zip`, this.downloadFileCallback.bind(this));
         } catch (error) {
             throw error;

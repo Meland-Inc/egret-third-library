@@ -3,7 +3,7 @@
  * @desc 渲染进程消息处理文件
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-24 17:16:59
+ * @Last Modified time: 2020-03-25 18:41:26
  */
 import { ipcRenderer, IpcRendererEvent } from "electron";
 import querystring from "querystring";
@@ -13,6 +13,7 @@ import path from "path";
 import config from './Config';
 import { define } from './define';
 import * as logger from './logger';
+import * as loading from './loading';
 import ClientUpdate from './update/ClientUpdate';
 import ServerUpdate from './update/ServerUpdate';
 
@@ -25,10 +26,14 @@ class Message {
         'START_NATIVE_WEBSITE': this.onStartNativeWebsite.bind(this),  //开始官网地址进入
         'START_NATIVE_PLATFORM': this.onStartNativePlatform.bind(this),  //开始平台进入
         'SEND_MSG_TO_CLIENT': this.onSendMsgToClient.bind(this), //发送消息到客户端
+        'SHOW_LOADING': this.onShowLoading.bind(this),//显示loading
+        'HIDE_LOADING': this.onHideLoading.bind(this),//隐藏loading
+        'SET_LOADING_PROGRESS': this.onSetLoadingProgress.bind(this),//设置loading进度
+        'CHECK_PACKAGE_UPDATE': this.checkPackageUpdate.bind(this),//检查游戏包更新
     }
 
-    private clientUpdate = new ClientUpdate();
-    private serverUpdate = new ServerUpdate();
+    private _clientUpdate = new ClientUpdate();
+    private _serverUpdate = new ServerUpdate();
 
     /** 发送渲染进程消息 */
     public sendIpcMsg(msgId: string, ...args: any[]) {
@@ -63,10 +68,9 @@ class Message {
         config.setNativeGameServer(gameServer);
     }
 
-    /** 检查更新 */
-    public async checkUpdate() {
+    /** 检查游戏包更新 */
+    private async checkPackageUpdate() {
         logger.log('update', `开始检查更新`);
-
         logger.log('config', `全局配置`, config.globalConfig);
 
         //服务器包所在目录
@@ -104,8 +108,8 @@ class Message {
             return;
         }
 
-        let isServerLatestVersion = await this.serverUpdate.checkLatestVersion();
-        let isClientLatestVersion = await this.clientUpdate.checkLatestVersion();
+        let isServerLatestVersion = await this._serverUpdate.checkLatestVersion();
+        let isClientLatestVersion = await this._clientUpdate.checkLatestVersion();
         //两个版本都一致
         if (isServerLatestVersion && isClientLatestVersion) {
             logger.log(`net`, `检查更新完毕,客户端,服务端版本都是最新`);
@@ -113,27 +117,37 @@ class Message {
             return;
         }
 
-        //服务端版本一致, 直接检查更新客户端
+        //服务端版本一致, 检查更新客户端
         if (isServerLatestVersion) {
             this.checkClientUpdate(this.checkUpdateComplete.bind(this));
             return;
         }
 
-        //服务端版本不一致,先提示是否更新
-        if (confirm('检测到游戏版本更新,是否更新?')) {
-            this.checkServerUpdate(this.checkClientUpdate.bind(this), this.checkUpdateComplete.bind(this));
-            return
+        //客户端版本一致, 检查更新服务端
+        if (isClientLatestVersion) {
+            this.checkServerUpdate(this.checkUpdateComplete.bind(this));
+            return;
         }
 
-        //不更新
-        this.checkUpdateComplete();
+        //两个版本都不一致,先更新服务端版本,再更新客户端版本
+        this.checkServerUpdate(this.checkClientUpdate.bind(this), this.checkUpdateComplete.bind(this));
+
+        ////服务端版本不一致,先提示是否更新
+        // if (confirm('检测到游戏版本更新,是否更新?')) {
+        //先更新服务端版本,再更新客户端版本
+        // this.checkServerUpdate(this.checkClientUpdate.bind(this), this.checkUpdateComplete.bind(this));
+        // return
+        // }
+
+        // //不更新
+        // this.checkUpdateComplete();
     }
 
     /** 直接下载最新服务端包 */
     private directDownloadServer(callback: Function, ...args: any[]) {
         try {
             config.setVersionConfigValue("serverPackageVersion", 0);
-            this.serverUpdate.checkUpdate(callback, ...args);
+            this._serverUpdate.checkUpdate(callback, ...args);
         } catch (error) {
             let content = `native下载服务端出错,点击重试`;
             logger.error(`update`, content, error);
@@ -145,7 +159,7 @@ class Message {
     /** 直接下载最新的客户端包 */
     private directDownloadClient(callback: Function, ...args: any[]) {
         try {
-            this.clientUpdate.directDownload(callback, ...args);
+            this._clientUpdate.directDownload(callback, ...args);
         } catch (error) {
             let content = `native下载客户端出错,点击重试`;
             logger.error(`update`, content, error);
@@ -157,7 +171,7 @@ class Message {
     /** 检查客户端包更新 */
     private checkClientUpdate(callback: Function, ...args: any[]) {
         try {
-            this.clientUpdate.checkUpdate(callback, ...args);
+            this._clientUpdate.checkUpdate(callback, ...args);
         } catch (error) {
             let content = `native更新客户端报错`
             logger.error(`update`, content, error);
@@ -170,7 +184,7 @@ class Message {
     /** 检查服务端包更新 */
     private checkServerUpdate(callback: Function, ...args: any[]) {
         try {
-            this.serverUpdate.checkUpdate(callback, ...args);
+            this._serverUpdate.checkUpdate(callback, ...args);
         } catch (error) {
             let content = `native更新服务端报错`
             logger.error(`update`, content, error);
@@ -256,17 +270,23 @@ class Message {
         } else {
             localStorage.removeItem('nativeGameServer');
         }
-
-        // if (config.nativeToken) {
-        //     localStorage.setItem('nativeToken', config.nativeToken);
-        // } else {
-        //     localStorage.removeItem('nativeToken');
-        // }
     }
 
     /** 收到游戏服务器启动完毕 */
     private onSendMsgToClient(msgId: string, ...args: any[]) {
         this.sendMsgToClient(msgId, ...args);
+    }
+
+    private onShowLoading(value: string) {
+        loading.showLoading(value);
+    }
+
+    private onHideLoading() {
+        loading.hideLoading();
+    }
+
+    private onSetLoadingProgress(value) {
+        loading.setLoadingProgress(value);
     }
 
     /** 发送消息到客户端 */

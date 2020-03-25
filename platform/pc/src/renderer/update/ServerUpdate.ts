@@ -3,7 +3,7 @@
  * @desc 游戏服务器端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-24 17:27:41
+ * @Last Modified time: 2020-03-25 18:43:48
  */
 import fs from 'fs';
 import admzip from "adm-zip";
@@ -72,7 +72,7 @@ export default class ServerUpdate {
 
         logger.log(`update`, `检测到服务器版本更新,开始更新版本${this._remoteVersion}`);
         //更新
-        loading.showLoading();
+        loading.showLoading("正在更新服务端游戏包");
         let deleteDir = `${this._packagePath}server`;
         //清除要保存的文件夹
         await util.deleteFolderRecursive(deleteDir);
@@ -86,8 +86,6 @@ export default class ServerUpdate {
         let fileDir = `${config.cdnHost}/serverPackages/${this._environName}`;
         let saveDir = this._packagePath;
         let fileName = `${util.getServerPackageFileName()}_v${this._remoteVersion}.zip`;
-        //下载文件
-        loading.showLoading();
         this._download.downloadFile(fileDir, saveDir, fileName, this.downloadFileCallback.bind(this));
     }
 

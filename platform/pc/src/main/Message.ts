@@ -3,7 +3,7 @@
  * @desc 主进程消息处理类
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-24 17:14:33
+ * @Last Modified time: 2020-03-25 17:45:38
  */
 import { ipcMain, IpcMainEvent } from 'electron';
 import querystring from 'querystring';
