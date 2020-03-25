@@ -598,89 +598,88 @@ export async function zipUploadGame() {
 // }
 
 export async function uploadNativeExe() {
-    return new Promise(async (resolve, reject) => {
-        let environ = ModelMgr.versionModel.curEnviron;
-        let exeOriginName = "bellplanet Setup 1.0.0.exe"
-        let exePath = `${Global.pcProjectPath}/app/${exeOriginName}`;
-        let exeTargetName = `bellplanet_${environ.name}.exe`;
-        let exeTargetDir = `${Global.svnPublishPath}/native`;
-        let exeTargetPath = `${exeTargetDir}/${exeTargetName}`;
+    let environName = ModelMgr.versionModel.curEnviron.name;
+    let newNativePolicyNum = getNewNativePolicyNum();
+    let nativeVersion = ModelMgr.versionModel.nativeVersion;
+    let pkgName = `bellplanet Setup ${nativeVersion}.exe`
+    let pkgPath = `${Global.pcProjectPath}/app/${pkgName}`;
 
-        //不比较,直接传
-        // console.log("比较exe包");
-        // let equal = await fsExc.mergeFileByMd5(exePath, exeTargetPath);
-        // if (equal) {
-        //     console.log("exe包相等");
-        //     resolve();
-        //     return;
-        // }
+    console.log("开始exe包上传");
+    let platform = "win";
+    let cdnRoot = `native/${environName}/${newNativePolicyNum}/${platform}`;
+    await tryUploadNativePkg(pkgPath, pkgName, cdnRoot);
 
-        console.log("exe包不相等,开始上传");
-        let platform = "win";
-        let exeVersion = await ExternalUtil.getNativePolicyNum(environ.name, platform);
-        exeVersion = exeVersion + 1;
-        let exeName = `bellplanet_${environ.name}_${exeVersion}.exe`;
-        tryUploadNativeExe(exePath, exeName, async () => {
-            console.log("exe包上传完毕,拷贝最新包到svn文件夹");
-            await fsExc.copyFile(exePath, exeTargetDir);
-            await fsExc.rename(`${exeTargetDir}/${exeOriginName}`, exeTargetPath);
-            await ExternalUtil.applyNativePolicyNum(exeVersion, environ.name, platform);
-            resolve();
-        }, reject);
-    });
-}
+    let ymlName = `latest.yml`;
+    let ymlPath = `${Global.pcProjectPath}/app/${ymlName}`;
+    await tryUploadNativePkg(ymlPath, ymlName, cdnRoot);
 
-async function tryUploadNativeExe(exePath, exeName, resolve, reject) {
-    console.log(`尝试上传exe文件`);
-    CdnUtil.uploaderFile(exePath, exeName, "native", () => {
-        console.log(`上传exe成功`)
-        resolve();
-    }, (reason) => {
-        console.log(`上传exe失败: ${reason}, 5秒后重试`)
-        setTimeout(tryUploadNativeExe, 5000, exePath, exeName, resolve, reject);
-    });
+    let policyObj = {
+        nativeVersion: nativeVersion,
+        nativePolicyNum: newNativePolicyNum,
+        trunkName: environName,
+        platform: platform
+    }
+    let policyName = "policyFile.json"
+    let policyPath = `${Global.pcProjectPath}/app/${policyName}`;
+    await fsExc.writeFile(policyPath, JSON.stringify(policyObj));
+    await tryUploadNativePkg(policyPath, policyName, cdnRoot);
+    console.log("上传exe包完毕");
 }
 
 export async function uploadNativeDmg() {
-    return new Promise(async (resolve, reject) => {
-        let environ = ModelMgr.versionModel.curEnviron;
-        let dmgOriginName = "bellplanet-1.0.0.dmg";
-        let dmgPath = `${Global.pcProjectPath}/app/${dmgOriginName}`;
-        let dmgTargetName = `bellplanet_${environ.name}.dmg`;
-        let dmgTargetDir = `${Global.svnPublishPath}/native/`;
-        let dmgTargetPath = `${dmgTargetDir}/${dmgTargetName}`;
+    let environName = ModelMgr.versionModel.curEnviron.name;
+    let newNativePolicyNum = getNewNativePolicyNum();
+    let nativeVersion = ModelMgr.versionModel.nativeVersion;
+    let pkgName = `bellplanet-${nativeVersion}.dmg`;
+    let pkgPath = `${Global.pcProjectPath}/app/${pkgName}`;
 
-        //不比较,直接传
-        // console.log("比较mac包");
-        // let equal = await fsExc.mergeFileByMd5(dmgPath, dmgTargetPath);
-        // if (equal) {
-        //     console.log("mac包相等");
-        //     resolve();
-        //     return;
-        // }
+    console.log("开始mac包上传");
+    let platform = "mac";
+    let cdnRoot = `native/${environName}/${newNativePolicyNum}/${platform}/`
+    await tryUploadNativePkg(pkgPath, pkgName, cdnRoot);
 
-        console.log("mac包不相等,开始上传");
-        let platform = "mac";
-        let macVersion = await ExternalUtil.getNativePolicyNum(environ.name, platform);
-        macVersion = macVersion + 1;
-        let dmgName = `bellplanet_${environ.name}_${macVersion}.dmg`;
-        tryUploadNativeDmg(dmgPath, dmgName, async () => {
-            console.log("mac包上传完毕,拷贝最新包到svn文件夹");
-            await fsExc.copyFile(dmgPath, dmgTargetDir);
-            await fsExc.rename(`${dmgTargetDir}/${dmgOriginName}`, dmgTargetPath);
-            await ExternalUtil.applyNativePolicyNum(macVersion, environ.name, platform);
-            resolve();
-        }, reject);
-    });
+    let ymlName = `latest.yml`;
+    let ymlPath = `${Global.pcProjectPath}/app/${ymlName}`;
+    await tryUploadNativePkg(ymlPath, ymlName, cdnRoot);
+
+    let policyObj = {
+        nativeVersion: nativeVersion,
+        nativePolicyNum: newNativePolicyNum,
+        trunkName: environName,
+        platform: platform
+    }
+    let policyName = "policyFile.json"
+    let policyPath = `${Global.pcProjectPath}/app/${policyName}`;
+    await fsExc.writeFile(policyPath, JSON.stringify(policyObj));
+    await tryUploadNativePkg(policyPath, policyName, cdnRoot);
+
+    console.log("上传mac包完毕");
 }
 
-async function tryUploadNativeDmg(dmgPath, dmgName, resolve, reject) {
-    console.log(`尝试上传dmg文件`);
-    CdnUtil.uploaderFile(dmgPath, dmgName, "native", () => {
-        console.log(`上传dmg成功`)
-        resolve();
-    }, (reason) => {
-        console.log(`上传dmg失败: ${reason}, 5秒后重试`)
-        setTimeout(tryUploadNativeDmg, 5000, dmgPath, dmgName, resolve, reject)
-    });
+function tryUploadNativePkg(pkgPath, pkgName, cdnRoot) {
+    return new Promise((resolve, reject) => {
+        console.log(`尝试上传${pkgName}文件`);
+        CdnUtil.uploaderFile(pkgPath, pkgName, cdnRoot, () => {
+            console.log(`上传${pkgName}成功`)
+            resolve();
+        }, (reason) => {
+            console.log(`上传${pkgName}失败: ${reason}, 5秒后重试`)
+            setTimeout(tryUploadNativePkg, 5000, pkgPath, pkgName, cdnRoot);
+        });
+    })
+}
+
+export async function applyNativePolicyNum() {
+    let newNativePolicyNum = getNewNativePolicyNum();
+    await ExternalUtil.applyNativePolicyNum(newNativePolicyNum, environ.name);
+
+    let commitCmdStr = `git commit -a -m "${ModelMgr.versionModel.publisher} 发布${ModelMgr.versionModel.curEnviron.name} native包 策略版本号:${newNativePolicyNum}"`;
+    await spawnExc.runCmd(commitCmdStr, Global.clientPath, null, '提交文件错误');
+    console.log(`提交文件成功`);
+
+    ModelMgr.versionModel.originNativeVersion = ModelMgr.versionModel.nativeVersion;
+}
+
+function getNewNativePolicyNum() {
+    return ModelMgr.versionModel.nativePolicyNum + 1;
 }

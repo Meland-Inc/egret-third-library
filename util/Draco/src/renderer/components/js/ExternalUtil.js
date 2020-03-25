@@ -1,5 +1,6 @@
 import * as http from 'http';
 import * as crypto from 'crypto';
+import { Global } from './Global';
 
 export function getPolicyInfo(versionName) {
     return new Promise((resolve, reject) => {
@@ -114,8 +115,8 @@ export async function applyServerPackagePolicyNum(policyNum, environName, fileNa
 }
 
 /** 获取native包版本号 */
-export async function getNativePolicyNum(environName, platform) {
-    let versionName = `${environName}_native_${platform}`;
+export async function getNativePolicyNum(environName) {
+    let versionName = `${environName}_native`;
     let value = await getPolicyInfo(versionName);
     let data = JSON.parse(value);
     let policyNum = 0;
@@ -125,8 +126,43 @@ export async function getNativePolicyNum(environName, platform) {
     return policyNum;
 }
 
+export function getNativeVersion(environ, policyNum) {
+    return new Promise((resolve, reject) => {
+        let options = {
+            host: Global.cdnUrl, // 请求地址 域名，google.com等.. 
+            path: `${environ.name}/${policyNum}/policyFile.json`, // 具体路径eg:/upload
+            method: 'GET', // 请求方式, 这里以post为例
+            headers: { // 必选信息,  可以抓包工看一下
+                'Content-Type': 'application/json'
+            }
+        };
+        http.get(options, (response) => {
+            if (response.statusCode != 200) {
+                reject();
+                return;
+            }
+
+            let resData = "";
+            response.on("data", (data) => {
+                resData += data;
+            });
+            response.on("end", async () => {
+                console.log("nativeVersion resData:", resData);
+                let obj = JSON.parse(resData);
+                let nativeVersion;
+                if (!obj.nativeVersion) {
+                    nativeVersion = 0;
+                } else {
+                    nativeVersion = obj.nativeVersion;
+                }
+                resolve(nativeVersion);
+            });
+        })
+    });
+}
+
 /** 应用native包版本号 */
-export async function applyNativePolicyNum(policyNum, environName, platform) {
-    let versionName = `${environName}_native_${platform}`;
+export async function applyNativePolicyNum(policyNum, environName) {
+    let versionName = `${environName}_native`;
     await applyPolicyNum(policyNum, versionName, 'bian_game');
 }

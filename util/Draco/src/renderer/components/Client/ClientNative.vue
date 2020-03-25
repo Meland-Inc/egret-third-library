@@ -64,6 +64,12 @@
           color="cyan500"
           @click="onClearPackageDir"
         >清空游戏包目录</mu-button>-->
+        <mu-text-field
+          class="text-publisher"
+          @change="updateNativeVersionText"
+          v-model="nativeVersion"
+          :error-text="nativeVersionText"
+        />
         <mu-button
           v-loading="isWriteVersionInfoLoading"
           data-mu-loading-size="24"
@@ -111,6 +117,7 @@ export default {
       environList: [],
 
       publisher: null,
+      nativeVersion: null,
       isUpdateServerPackageLoading: false,
       isMergeServerPackageLoading: false,
       isUploadClientPackageLoading: false,
@@ -121,6 +128,7 @@ export default {
       isUploadNativeLoading: false,
 
       publishErrorText: null,
+      nativeVersionText: null,
       versionDescErrorText: null
     };
   },
@@ -130,6 +138,22 @@ export default {
       this.publishErrorText = this.publisher ? null : "请输入发布者";
       ModelMgr.versionModel.publisher = this.publisher;
     },
+    updateNativeVersionText() {
+      this.nativeVersionText = this.nativeVersion ? null : "请输入版本号";
+      ModelMgr.versionModel.nativeVersion = this.nativeVersion;
+    },
+    checkNativeVersion() {
+      console.log(
+        `originNativeVersion ${ModelMgr.versionModel.originNativeVersion}`
+      );
+      console.log(`nativeVersion ${ModelMgr.versionModel.nativeVersion}`);
+      let equal =
+        ModelMgr.versionModel.originNativeVersion ===
+        ModelMgr.versionModel.nativeVersion;
+
+      console.log(`equal ${equal}`);
+      return equal;
+    },
     async environChange() {
       let versionModel = ModelMgr.versionModel;
       versionModel.setCurEnviron(this.curEnviron);
@@ -138,6 +162,7 @@ export default {
 
       this.publisher = null;
       this.updatePublishText();
+      this.nativeVersion = ModelMgr.versionModel.nativeVersion;
     },
     // async onUpdateServerPackage() {
     //   if (!ModelMgr.versionModel.publisher) {
@@ -217,6 +242,11 @@ export default {
         return;
       }
 
+      if (this.checkNativeVersion()) {
+        Global.snack("请填入新的native版本号!", null, false);
+        return;
+      }
+
       this.isWriteVersionInfoLoading = true;
       Global.showRegionLoading();
       try {
@@ -231,6 +261,11 @@ export default {
     async onPublishWin() {
       if (!ModelMgr.versionModel.publisher) {
         Global.snack("请输入发布者", null, false);
+        return;
+      }
+
+      if (this.checkNativeVersion()) {
+        Global.snack("请填入新的native版本号!", null, false);
         return;
       }
 
@@ -251,6 +286,11 @@ export default {
         return;
       }
 
+      if (this.checkNativeVersion()) {
+        Global.snack("请填入新的native版本号!", null, false);
+        return;
+      }
+
       this.isPublishMacLoading = true;
       Global.showRegionLoading();
       try {
@@ -268,13 +308,18 @@ export default {
         return;
       }
 
+      if (this.checkNativeVersion()) {
+        Global.snack("请填入新的native版本号!", null, false);
+        return;
+      }
+
       this.isUploadNativeLoading = true;
       Global.showRegionLoading();
       try {
         await ModelMgr.ftpModel.initQiniuOption();
-        // await mdFtp.copyPackageToSvn();
         await mdFtp.uploadNativeExe();
         await mdFtp.uploadNativeDmg();
+        await mdFtp.applyNativePolicyNum();
         this.isUploadNativeLoading = false;
         Global.hideRegionLoading();
       } catch (error) {
@@ -319,6 +364,11 @@ export default {
         return;
       }
 
+      if (this.checkNativeVersion()) {
+        Global.snack("请填入新的native版本号!", null, false);
+        return;
+      }
+
       Global.showLoading();
       try {
         let promiseList = [];
@@ -331,6 +381,7 @@ export default {
         );
         promiseList.push(mdFtp.uploadNativeExe);
         promiseList.push(mdFtp.uploadNativeDmg);
+        promiseList.push(mdFtp.applyNativePolicyNum);
 
         await Global.executePromiseList(promiseList);
 
@@ -354,6 +405,7 @@ export default {
         value.name === versionModel.eEnviron.release
     );
     this.environChange();
+    this.nativeVersion = versionModel.nativeVersion;
   }
 };
 </script>

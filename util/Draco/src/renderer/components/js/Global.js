@@ -105,6 +105,9 @@ export class Global {
         return `${Global.clientPath}/platform/pc/dist/GlobalConfig.json`;
     }
 
+    static get nativePackagePath() {
+        return `${Global.clientPath}/platform/pc/package.json`;
+    }
 
     // static get compressPath() {
     //     return Global.projPath + '/rawResource/asset/compress';
@@ -120,6 +123,10 @@ export class Global {
 
     static get resourcePath() {
         return Global.projPath + '/resource';
+    }
+
+    static get cdnUrl() {
+        return "http://bg-stage.wkcoding.com";
     }
 
     static entityCells = [];

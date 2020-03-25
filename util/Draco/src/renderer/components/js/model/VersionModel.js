@@ -131,6 +131,21 @@ export class VersionModel {
         this.policyNum = value;
     }
 
+    _nativePolicyNum;
+    setNativePolicyNum(value) {
+        this._nativePolicyNum = value;
+    }
+    /** native策略号 */
+    get nativePolicyNum() {
+        return this._nativePolicyNum;
+    }
+
+    /** native版本号 */
+    nativeVersion;
+
+    /** 线上的native版本 */
+    originNativeVersion;
+
     //白名单版本号
     whiteVersion;
     setWhiteVersion(value) {
@@ -163,6 +178,7 @@ export class VersionModel {
         await this.initPolicyObj();
         await this.initReleaseVersion();
         await this.initPolicyNum();
+        await this.initNativePolicyNum();
     }
 
     initEnviron() {
@@ -326,6 +342,21 @@ export class VersionModel {
         } else {
             this.policyNum = 1;
         }
+    }
+
+    async initNativePolicyNum() {
+        let environName = this.curEnviron.name;
+        let value = await ExternalUtil.getNativePolicyNum(environName);
+        let data = JSON.parse(value);
+        if (data.Code == 0) {
+            this._nativePolicyNum = +data.Data.Version;
+        } else {
+            this.originNativeVersion = this.nativeVersion = 0;
+            console.log(`originNativeVersion:${this.originNativeVersion} nativeVersion:${this.nativeVersion}`);
+            return;
+        }
+
+        this.originNativeVersion = this._nativeVersion = await ExternalUtil.getNativeVersion(environName, this._nativePolicyNum);
     }
 
     initChannel() {

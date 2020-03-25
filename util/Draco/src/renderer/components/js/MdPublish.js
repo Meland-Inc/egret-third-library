@@ -1052,12 +1052,11 @@ async function checkUploadServerPackages(packageDir, successFunc) {
 
 /** 写入版本信息 */
 export async function writeVersionInfo() {
+    //设置globalConfig信息
     let nativeConfigContent = await fsExc.readFile(Global.nativeConfigPath);
     let curEnviron = ModelMgr.versionModel.curEnviron;
     let nativeConfig = JSON.parse(nativeConfigContent);
     nativeConfig.environName = curEnviron.name;
-    // let gameVersion = await ModelMgr.versionModel.getEnvironGameVersion(curEnviron.name);
-    // nativeConfig.gameVersion = +gameVersion;
     if (curEnviron.name == ModelMgr.versionModel.eEnviron.release) {
         nativeConfig.patchUrl = `${curEnviron.host}${curEnviron.cdnWinPatchPath}`;
         nativeConfig.policyUrl = `${curEnviron.host}/`;
@@ -1068,6 +1067,13 @@ export async function writeVersionInfo() {
 
     nativeConfigContent = JSON.stringify(nativeConfig, null, 4);
     await fsExc.writeFile(Global.nativeConfigPath, nativeConfigContent);
+
+    //写入native版本号
+    let nativePackageContent = await fsExc.readFile(Global.nativePackagePath);
+    let nativePackageObj = JSON.parse(nativePackageContent);
+    nativePackageObj.version = ModelMgr.versionModel.nativeVersion;
+    nativePackageContent = JSON.stringify(nativePackageObj, null, 4);
+    await fsExc.writeFile(Global.nativePackagePath, nativePackageContent);
 }
 
 /** 发布window版本 */
