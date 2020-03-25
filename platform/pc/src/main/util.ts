@@ -207,4 +207,47 @@ export namespace util {
         let content = JSON.stringify(nativeCnf, null, 4);
         fs.writeFileSync(config.nativeCnfPath, content);
     }
+
+    /** 获取native版本号 */
+    export async function getPolicyNum(versionName: string) {
+        let value = await getPolicyInfo(versionName);
+        let data = JSON.parse(value);
+        let policyNum = 0;
+        if (data.Code === 0) {
+            policyNum = +data.Data.Version;
+        }
+        return policyNum;
+    }
+
+    /** 获取指定策略信息 */
+    export function getPolicyInfo(versionName: string): Promise<string> {
+        return new Promise((resolve, reject) => {
+            let time = Math.floor(new Date().getTime() / 1000);
+            let due = 1800;
+            let token = "*";
+            let channel = "bian_game"
+
+            let policyQueryServer = 'policy-server.wkcoding.com';
+            let url = new URL('http://' + policyQueryServer + '/getVersion', window.location.href);
+            url.searchParams.append('versionName', versionName);
+            url.searchParams.append('channel', channel);
+            url.searchParams.append('time', time.toString());
+            url.searchParams.append('due', due.toString());
+            url.searchParams.append('token', token);
+            let request = new XMLHttpRequest();
+            request.open("GET", url.toString());
+            request.onreadystatechange = () => {
+                if (request.readyState !== 4) {
+                    return;
+                }
+                if (request.status === 200) {
+                    console.log(request.responseText);
+                    resolve(request.responseText);
+                } else {
+                    reject("获取版本号错误!");
+                }
+            }
+            request.send(null);
+        });
+    }
 }

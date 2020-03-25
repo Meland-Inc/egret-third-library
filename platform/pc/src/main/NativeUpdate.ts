@@ -8,10 +8,16 @@
 import { autoUpdater } from 'electron-updater';
 import { logger } from './logger';
 import message from './Message';
+import os from 'os';
+import config from './Config';
+import { util } from './util';
 
 export default class NativeUpdate {
     public checkUpdate() {
-        autoUpdater.setFeedURL("http://bg-stage.wkcoding.com/native/beta/v1");
+        this.setFeedURL();
+        // autoUpdater.setFeedURL("http://bg-stage.wkcoding.com/native/beta/v1");
+
+
         // eslint-disable-next-line handle-callback-err
         autoUpdater.on('error', (error) => {
             logger.error('update', `检查更新出错`, error);
@@ -43,6 +49,23 @@ export default class NativeUpdate {
         });
 
         autoUpdater.checkForUpdates();
+    }
+
+    private async setFeedURL() {
+        let platform = os.platform();
+        if (platform != "win32" && platform != "darwin") {
+            return;
+        }
+
+        let environName = config.environName;
+
+        let isWin = platform === "win32";
+        let pkgPlatform = isWin ? "win" : "mac";
+        let suffix = isWin ? "exe" : "dmg";
+        let versionName = `${environName}_native_${pkgPlatform}`;
+        let nativeVersion = await util.getPolicyNum(versionName);
+        let nativeName = `bellplanet_${environName}_${nativeVersion}.${suffix}`;
+        let nativeCdnPath = `http://bg-stage.wkcoding.com/native/${nativeName}`;
     }
 
     private checkUpdateComplete() {
