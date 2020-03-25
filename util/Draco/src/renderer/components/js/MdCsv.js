@@ -24,7 +24,6 @@ export function zipCsv() {
         let csvZipFile = fs.createWriteStream(filePath + fileName);
         archive.pipe(csvZipFile);
 
-
         for (let i = 0; i < pa.length; i++) {
             const element = pa[i];
             if (element.indexOf(".csv") != -1) {
@@ -51,6 +50,15 @@ export function zipCsv() {
                 archive.append(csvContent, {
                     name: element
                 });
+            }
+        }
+
+        /**鲸幂配置表压缩 */
+        if (ModelMgr.jimmyModel) {
+            try {
+                await ModelMgr.jimmyModel.processJimmyCSV();
+            } catch (error) {
+                reject();
             }
         }
 

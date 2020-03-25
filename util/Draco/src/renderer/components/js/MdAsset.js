@@ -2,6 +2,7 @@
 import { Global } from './Global.js';
 import * as fsExc from './FsExecute';
 import * as path from 'path';
+import { ModelMgr } from './model/ModelMgr.js';
 
 const externalSuffix = '/resource/external';
 const externalResSuffix = '/resource/external.json';
@@ -184,6 +185,11 @@ export async function importMapData() {
 }
 
 export async function importJimmy() {
+  //鲸幂开关
+  if (!ModelMgr.jimmyModel) {
+    return;
+  }
+
   try {
     let jmAssetPath = Global.projPath + jimmySuffix;
     let jmConfig = {
