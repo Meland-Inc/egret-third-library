@@ -4,7 +4,7 @@
   <controller name="ctrlIsDevelop" pages="0,false,1,true" selected="0"/>
   <controller name="ctrlTemGameType" pages="0,none,1,success,2,fail,3,over" selected="0"/>
   <controller name="ctrlStartL" pages="0,,1,,2,,3," selected="0"/>
-  <controller name="ctrlJmType" pages="0,soduku,1,pickphoto,2,classify,3,count,4,balance" selected="2"/>
+  <controller name="ctrlJmType" pages="0,soduku,1,pickphoto,2,classify,3,count,4,balance" selected="0"/>
   <displayList>
     <graph id="n38_gx7z" name="imgStageBG" xy="0,0" size="1920,1080" type="rect" lineSize="0" lineColor="#ffffffff">
       <relation target="" sidePair="width-width,height-height"/>
@@ -12,14 +12,14 @@
     <component id="n39_gx7z" name="comEditorStage" src="sco7n" fileName="com/ComEditorStage.xml" xy="174,237" size="1572,744">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
-    <loader id="n34_gx7z" name="ladBG" xy="0,0" size="1920,1080" url="ui://av6agj0gbmxe27" fill="scaleFree">
+    <loader id="n34_gx7z" name="ladBG" xy="0,0" size="1920,1080" touchable="false" url="ui://av6agj0gbmxe27" fill="scaleFree">
       <gearIcon controller="ctrlJmType" pages="4" values="ui://kvblsqzcj5tqb" default="ui://av6agj0gbmxe27"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
     <image id="n35_gx7z" name="imgBar" src="hwlx25" fileName="img/img_keybord_bg.png" xy="0,0" size="1920,56" visible="false">
       <relation target="" sidePair="width-width,top-top"/>
     </image>
-    <loader id="n37_gx7z" name="gphPos" xy="83,84" size="1757,921" url="ui://av6agj0gbmxe2i" fill="scaleFree">
+    <loader id="n37_gx7z" name="gphPos" xy="83,84" size="1757,921" touchable="false" url="ui://av6agj0gbmxe2i" fill="scaleFree">
       <gearIcon controller="ctrlJmType" pages="4" values="ui://kvblsqzcj5tqa" default="ui://av6agj0gbmxe2i"/>
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </loader>
