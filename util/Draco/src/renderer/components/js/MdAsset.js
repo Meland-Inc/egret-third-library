@@ -2,6 +2,7 @@
 import { Global } from './Global.js';
 import * as fsExc from './FsExecute';
 import * as path from 'path';
+import { ModelMgr } from './model/ModelMgr.js';
 
 const externalSuffix = '/resource/external';
 const externalResSuffix = '/resource/external.json';
@@ -19,7 +20,13 @@ const indieResSuffix = '/resource/indie.res.json';
 const mapDataSuffix = '/resource/mapData';
 const mapDataResSuffix = '/resource/mapData.res.json'
 
-const groupArr = ['preload', 'loading', 'fairyGui', 'fairySound', 'boyAni', 'girlAni', 'regSheet'];
+//鲸幂相关
+const jimmySuffix = '/resource/jimmyAssets';
+const jimmyResSuffix = '/resource/jimmy.res.json';
+const jimmyDynamicMissionDir = 'dynamicMission';//动态关卡文件夹名 该文件夹下面子文件夹都会作为group
+const jimmyNeedExternalAssetPath = ['/resource/assets/fairyGuiLog', '/resource/assets/fairySound'];//鲸幂res配置需要的外部资源
+
+const groupArr = ['preload', 'loading', 'fairyGui', 'fairySound', 'boyAni', 'girlAni', 'regSheet', 'fairyGuiLog', 'base'];
 
 const groupFile = {
   'common.fui': 'login',
@@ -177,24 +184,93 @@ export async function importMapData() {
   }
 }
 
-export async function oneForAll() {
-  await importDefault();
-  await importAsync();
-  await importIndie();
-  await importMapData();
+export async function importJimmy() {
+  //鲸幂开关
+  if (!ModelMgr.jimmyModel) {
+    return;
+  }
+
+  try {
+    let jmAssetPath = Global.projPath + jimmySuffix;
+    let jmConfig = {
+      groups: [],
+      resources: []
+    };
+
+    //鲸幂自己的的非动态关卡的
+    await importFolderFile(jmAssetPath, jmConfig, '', false, false, false, [jimmyDynamicMissionDir]);
+
+    //处理依赖的鲸幂外部文件
+    for (let jmExternalPath of jimmyNeedExternalAssetPath) {
+      let words = jmExternalPath.split(/[\/\\]/);
+      let dirName = words[words.length - 1];
+      await importFolderFile(Global.projPath + jmExternalPath, jmConfig, dirName, false, true);
+    }
+
+    //处理动态关卡资源组
+    await importFolderFile(jmAssetPath + `/${jimmyDynamicMissionDir}`, jmConfig, '', false, true);
+
+    for (const iterator of jmConfig.groups) {
+      let keys = '';
+      for (let i = 0; i < iterator.keyArr.length; i++) {
+        const element = iterator.keyArr[i];
+        if (i == iterator.keyArr.length - 1) {
+          keys += element;
+        } else {
+          keys += element + ',';
+        }
+        iterator.keys = keys;
+      }
+      delete iterator.keyArr;
+    }
+
+    let content = JSON.stringify(jmConfig);
+    let configPath = Global.projPath + jimmyResSuffix;
+    await fsExc.writeFile(configPath, content);
+
+    Global.toast('导入Jimmy配置成功');
+  } catch (error) {
+    Global.snack('导入Jimmy配置错误', error);
+  }
 }
 
-async function importFolderFile(folderPath, config, group = '', isSheet = false, isRootGroupFolder = false, useOriginGroup = false) {
+// export async function oneForAll() {
+//   await importDefault();
+//   await importAsync();
+//   await importIndie();
+//   await importMapData();
+//   await importExternal();
+//   await importJimmy();
+// }
+
+/**
+ * 
+ * @param {*} folderPath 
+ * @param {*} config 
+ * @param {*} group 
+ * @param {*} isSheet 
+ * @param {*} isRootGroupFolder 
+ * @param {*} useOriginGroup 
+ * @param {*} excludeDirList 排除的文件夹 string[] 默认null
+ */
+async function importFolderFile(folderPath, config, group = '', isSheet = false, isRootGroupFolder = false, useOriginGroup = false, excludeDirList = null) {
   let files = await fsExc.readDir(folderPath);
   let originGroup = group;
   for (const file of files) {
     let curPath = folderPath + '/' + file;
     group = originGroup;
     if (await fsExc.isDirectory(curPath)) {
+
+      //排除特定文件夹
+      if (excludeDirList && excludeDirList.indexOf(file) >= 0) {
+        continue;
+      }
+
       if (!useOriginGroup) {
         if (groupArr.some(value => { return value === file })) {
           group = file;
         } else if (groupArr.some(value => { return value === group })) {
+          //
         } else {
           group = '';
         }
@@ -211,7 +287,7 @@ async function importFolderFile(folderPath, config, group = '', isSheet = false,
       } else {
         isSheet = false;
       }
-      await importFolderFile(curPath, config, group, isSheet, false, isRootGroupFolder);
+      await importFolderFile(curPath, config, group, isSheet, false, useOriginGroup, excludeDirList);
     } else {
       if (groupFile[file]) {
         group = groupFile[file];
