@@ -40,10 +40,8 @@ export namespace logger {
         let content = formateMsg(tag, msg, ...args);
         if (config.mainWindow && config.mainWindow.isEnabled && config.mainWindow.webContents) {
             config.mainWindow.webContents.executeJavaScript(`console.log(\'${content}\');`);
-            webContentsLog(tag, msg, ...args);
-        } else {
-            processLog(tag, msg, ...args);
         }
+        webContentsLog(tag, msg, ...args);
     }
 
     /** 打印错误 */
@@ -51,10 +49,8 @@ export namespace logger {
         let content = formateMsg(tag, msg, ...args);
         if (config.mainWindow && config.mainWindow.isEnabled && config.mainWindow.webContents) {
             config.mainWindow.webContents.executeJavaScript(`console.error(\'${content}\');`);
-            webContentsLog(tag, msg, ...args);
-        } else {
-            processLog(tag, msg, ...args);
         }
+        webContentsLog(tag, msg, ...args);
     }
 
     /** 打印警告 */
@@ -62,10 +58,8 @@ export namespace logger {
         let content = formateMsg(tag, msg, ...args);
         if (config.mainWindow && config.mainWindow.isEnabled && config.mainWindow.webContents) {
             config.mainWindow.webContents.executeJavaScript(`console.warn(\'${content}\');`);
-            webContentsLog(tag, msg, ...args);
-        } else {
-            processLog(tag, msg, ...args);
         }
+        webContentsLog(tag, msg, ...args);
     }
 
     /** 打印信息 */
@@ -73,10 +67,8 @@ export namespace logger {
         let content = formateMsg(tag, msg, ...args);
         if (config.mainWindow && config.mainWindow.isEnabled && config.mainWindow.webContents) {
             config.mainWindow.webContents.executeJavaScript(`console.info(\'${content}\');`);
-            webContentsLog(tag, msg, ...args);
-        } else {
-            processLog(tag, msg, ...args);
         }
+        webContentsLog(tag, msg, ...args);
     }
 
     /** 格式化消息 */
