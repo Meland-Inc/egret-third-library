@@ -3,7 +3,7 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-26 18:01:14
+ * @Last Modified time: 2020-03-26 20:47:19
  */
 // Modules to control application life and create native browser window
 import { app, globalShortcut, BrowserWindow, Menu, shell, dialog, session, Referrer, BrowserWindowConstructorOptions } from 'electron';
@@ -273,8 +273,15 @@ async function initNative() {
   await mainWindow.loadFile(`./dist/renderer.html`);
 
   logger.log('net', `config.urlValue`, config.urlValue);
-
-  message.sendIpcMsg("GET_NATIVE_POLICY_VERSION");
+  logger.log('env', `app.isPackaged:`, app.isPackaged);
+  //打包后的包才要检查更新
+  if (app.isPackaged) {
+    message.sendIpcMsg("GET_NATIVE_POLICY_VERSION");
+  }
+  //没打包的直接检查游戏包更新
+  else {
+    message.sendIpcMsg("CHECK_PACKAGE_UPDATE");
+  }
 }
 
 // In this file you can include the rest of your app's specific main process
