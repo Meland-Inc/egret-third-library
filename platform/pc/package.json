@@ -1,111 +1,111 @@
 {
-  "name": "bellplanet",
-  "author": "bellcode",
-  "description": "让孩子快乐的学习编程创造",
-  "main": "./dist/main-bundle.js",
-  "scripts": {
-    "start": "yarn build:dev && electron .",
-    "build:dev": "cross-env NODE_ENV=development webpack --config build/webpack.config.js",
-    "build:prod": "cross-env NODE_ENV=production webpack --config build/webpack.config.js",
-    "build:win": "yarn build:prod &&electron-builder --win --x64",
-    "build:mac": "yarn build:prod &&electron-builder --mac",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "cross-env NODE_ENV=development webpack-dev-server --mode=development --config build/webpack.config.js"
-  },
-  "build": {
-    "productName": "bellplanet",
-    "asar": false,
-    "appId": "org.egret.launcher.bellplanet",
-    "copyright": "Copyright © 2020 bellcode",
-    "files": [
-      "./dist/**/*",
-      "./package.json"
-    ],
-    "win": {
-      "target": [
-        "nsis"
-      ],
-      "signingHashAlgorithms": [
-        "sha256",
-        "sha1"
-      ],
-      "signDlls": true,
-      "rfc3161TimeStampServer": "http://timestamp.digicert.com",
-      "verifyUpdateCodeSignature": false,
-      "certificateFile": "./build/bellplanet.pfx",
-      "certificatePassword": "bellcode123",
-      "requestedExecutionLevel": "highestAvailable",
-      "icon": "./icon/icon.ico"
+    "name": "bellplanet",
+    "author": "bellcode",
+    "description": "让孩子快乐的学习编程创造",
+    "main": "./dist/main-bundle.js",
+    "scripts": {
+        "start": "yarn build:dev && electron .",
+        "build:dev": "cross-env NODE_ENV=development webpack --config build/webpack.config.js",
+        "build:prod": "cross-env NODE_ENV=production webpack --config build/webpack.config.js",
+        "build:win": "yarn build:prod &&electron-builder --win --x64",
+        "build:mac": "yarn build:prod &&electron-builder --mac",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "server": "cross-env NODE_ENV=development webpack-dev-server --mode=development --config build/webpack.config.js"
     },
-    "dmg": {
-      "contents": [
-        {
-          "x": 410,
-          "y": 150,
-          "type": "link",
-          "path": "/Applications"
+    "build": {
+        "productName": "bellplanet",
+        "asar": false,
+        "appId": "org.egret.launcher.bellplanet",
+        "copyright": "Copyright © 2020 bellcode",
+        "files": [
+            "./dist/**/*",
+            "./package.json"
+        ],
+        "win": {
+            "target": [
+                "nsis"
+            ],
+            "signingHashAlgorithms": [
+                "sha256",
+                "sha1"
+            ],
+            "signDlls": true,
+            "rfc3161TimeStampServer": "http://timestamp.digicert.com",
+            "verifyUpdateCodeSignature": false,
+            "certificateFile": "./build/bellplanet.pfx",
+            "certificatePassword": "bellcode123",
+            "requestedExecutionLevel": "highestAvailable",
+            "icon": "./icon/icon.ico"
         },
-        {
-          "x": 130,
-          "y": 150,
-          "type": "file"
-        }
-      ]
-    },
-    "mac": {
-      "icon": "./icon/icon.icns",
-      "extendInfo": {
-        "CFBundleURLTypes": [
-          {
-            "CFBundleURLName": "com.bellcode.bellplanet",
-            "CFBundleURLSchemes": [
-              "bellplanet"
+        "dmg": {
+            "contents": [
+                {
+                    "x": 410,
+                    "y": 150,
+                    "type": "link",
+                    "path": "/Applications"
+                },
+                {
+                    "x": 130,
+                    "y": 150,
+                    "type": "file"
+                }
             ]
-          }
+        },
+        "mac": {
+            "icon": "./icon/icon.icns",
+            "extendInfo": {
+                "CFBundleURLTypes": [
+                    {
+                        "CFBundleURLName": "com.bellcode.bellplanet",
+                        "CFBundleURLSchemes": [
+                            "bellplanet"
+                        ]
+                    }
+                ]
+            }
+        },
+        "nsis": {
+            "oneClick": true,
+            "perMachine": true,
+            "menuCategory": true,
+            "allowElevation": true,
+            "allowToChangeInstallationDirectory": false,
+            "createDesktopShortcut": true,
+            "runAfterFinish": false,
+            "installerIcon": "./icon/icon.ico",
+            "uninstallerIcon": "./icon/icon.ico",
+            "include": "./build/installer.nsh"
+        },
+        "directories": {
+            "output": "app"
+        },
+        "publish": [
+            {
+                "name": "bellplanet",
+                "provider": "generic",
+                "url": ""
+            }
         ]
-      }
     },
-    "nsis": {
-      "oneClick": true,
-      "perMachine": true,
-      "menuCategory": true,
-      "allowElevation": true,
-      "allowToChangeInstallationDirectory": false,
-      "createDesktopShortcut": true,
-      "runAfterFinish": false,
-      "installerIcon": "./icon/icon.ico",
-      "uninstallerIcon": "./icon/icon.ico",
-      "include": "./build/installer.nsh"
+    "dependencies": {
+        "adm-zip": "^0.4.13",
+        "electron-updater": "^4.2.5",
+        "request": "^2.88.0",
+        "tree-kill": "^1.2.2"
     },
-    "directories": {
-      "output": "app"
+    "devDependencies": {
+        "@types/adm-zip": "^0.4.32",
+        "cross-env": "^7.0.2",
+        "electron": "^7.1.7",
+        "electron-builder": "^21.2.0",
+        "html-webpack-plugin": "^3.2.0",
+        "npm-run-all": "^4.1.5",
+        "ts-loader": "^6.2.1",
+        "typescript": "^3.8.3",
+        "webpack": "^4.42.0",
+        "webpack-cli": "^3.3.11",
+        "webpack-dev-server": "^3.10.3"
     },
-    "publish": [
-      {
-        "name": "bellplanet",
-        "provider": "generic",
-        "url": ""
-      }
-    ]
-  },
-  "dependencies": {
-    "adm-zip": "^0.4.13",
-    "electron-updater": "^4.2.5",
-    "request": "^2.88.0",
-    "tree-kill": "^1.2.2"
-  },
-  "devDependencies": {
-    "@types/adm-zip": "^0.4.32",
-    "cross-env": "^7.0.2",
-    "electron": "^7.1.7",
-    "electron-builder": "^21.2.0",
-    "html-webpack-plugin": "^3.2.0",
-    "npm-run-all": "^4.1.5",
-    "ts-loader": "^6.2.1",
-    "typescript": "^3.8.3",
-    "webpack": "^4.42.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
-  },
-  "version": "0.0.0"
+    "version": "0.0.2"
 }
