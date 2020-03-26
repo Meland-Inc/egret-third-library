@@ -678,6 +678,9 @@ export async function applyNativePolicyNum() {
     await spawnExc.runCmd(commitCmdStr, Global.clientPath, null, '提交文件错误');
     console.log(`提交文件成功`);
 
+    let pushCmdStr = `git push`;
+    await spawnExc.runCmd(pushCmdStr, Global.projPath, null, '推送分支错误');
+
     ModelMgr.versionModel.originNativeVersion = ModelMgr.versionModel.nativeVersion;
 }
 

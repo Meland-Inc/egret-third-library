@@ -2,6 +2,7 @@ import { Global } from "../Global";
 import * as fsExc from "../FsExecute";
 import * as ExternalUtil from "../ExternalUtil";
 import * as http from 'http';
+import os from 'os';
 
 export class VersionModel {
     eEnviron = {
@@ -347,17 +348,21 @@ export class VersionModel {
     async initNativePolicyNum() {
         let environName = this.curEnviron.name;
         let value = await ExternalUtil.getNativePolicyNum(environName);
-        let data = JSON.parse(value);
-        if (data.Code == 0) {
-            this._nativePolicyNum = +data.Data.Version;
-        } else {
+        // let data = JSON.parse(value);
+        console.log(`nativePolicyNum:${value}`);
+        if (value === 0) {
+            // this._nativePolicyNum = +data.Data.Version;
             this._nativePolicyNum = 0;
             this.originNativeVersion = this.nativeVersion = 0;
             console.log(`originNativeVersion:${this.originNativeVersion} nativeVersion:${this.nativeVersion}`);
             return;
         }
 
-        this.originNativeVersion = this._nativeVersion = await ExternalUtil.getNativeVersion(environName, this._nativePolicyNum);
+        this._nativePolicyNum = value;
+
+        let platform = os.platform() === 'win32' ? "win" : "mac";
+        this.originNativeVersion = this.nativeVersion = await ExternalUtil.getNativeVersion(environName, this._nativePolicyNum, platform);
+        console.log(`nativeVersion:${this.nativeVersion}`);
     }
 
     initChannel() {

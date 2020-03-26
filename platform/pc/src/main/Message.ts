@@ -3,7 +3,7 @@
  * @desc 主进程消息处理类
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-25 17:45:38
+ * @Last Modified time: 2020-03-26 00:44:44
  */
 import { ipcMain, IpcMainEvent } from 'electron';
 import querystring from 'querystring';
@@ -14,13 +14,17 @@ import { define } from './define';
 import config from './Config';
 import platform from './Platform';
 import server from './Server';
+import NativeUpdate from './NativeUpdate';
 
 class Message {
+    private _nativeUpdate = new NativeUpdate();
+
     //消息对应方法集合
     public msgMap = {
         'CHECK_UPDATE_COMPLETE': this.onCheckUpdateComplete.bind(this),  //检查更新
         'MAP_TEMPLATE_ENTER': this.onMapTemplateEnter.bind(this),   //启动地图模板游戏服务器
         'MAP_TEMPLATE_ROOM_CREATE': this.onMapTemplateRoomCreate.bind(this),   //启动地图模板房间游戏服务器
+        'SET_NATIVE_POLICY_VERSION': this.onSetNativePolicyVersion.bind(this),   //设置native版本号
     }
 
     /** 发送主进程消息 */
@@ -67,7 +71,7 @@ class Message {
 
     /** 检查更新完毕 */
     private async onCheckUpdateComplete() {
-        await util.init();
+        await util.initNativeCnf();
 
         logger.log('config', `nativeMode:${config.nativeMode}`);
         if (config.nativeMode === define.eNativeMode.banner) {
@@ -179,6 +183,10 @@ class Message {
         util.writeServerCnfValue('gameArgs', gameArgs);
 
         server.createNativeServer(define.eGameServerMode.mapTemplateRoom);
+    }
+
+    private onSetNativePolicyVersion(nativeVersion: number) {
+        this._nativeUpdate.checkUpdate(nativeVersion);
     }
 
     /** 发送消息到客户端 */
