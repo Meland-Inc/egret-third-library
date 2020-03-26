@@ -118,6 +118,7 @@ export async function applyServerPackagePolicyNum(policyNum, environName, fileNa
 export async function getNativePolicyNum(environName) {
     let versionName = `${environName}_native`;
     let value = await getPolicyInfo(versionName);
+    console.log('nativePolicyData', value);
     let data = JSON.parse(value);
     let policyNum = 0;
     if (data.Code === 0) {
@@ -126,17 +127,19 @@ export async function getNativePolicyNum(environName) {
     return policyNum;
 }
 
-export function getNativeVersion(environ, policyNum) {
+export function getNativeVersion(environName, policyNum, platform) {
     return new Promise((resolve, reject) => {
         let options = {
             host: Global.cdnUrl, // 请求地址 域名，google.com等.. 
-            path: `${environ.name}/${policyNum}/policyFile.json`, // 具体路径eg:/upload
+            path: `/native/${environName}/${policyNum}/${platform}/policyFile.json`, // 具体路径eg:/upload
             method: 'GET', // 请求方式, 这里以post为例
             headers: { // 必选信息,  可以抓包工看一下
                 'Content-Type': 'application/json'
             }
         };
-        http.get(options, (response) => {
+        let url = `${Global.cdnUrl}/native/${environName}/${policyNum}/${platform}/policyFile.json`
+        console.log("getNativeVersion", url);
+        http.get(url, (response) => {
             if (response.statusCode != 200) {
                 reject();
                 return;
@@ -164,5 +167,6 @@ export function getNativeVersion(environ, policyNum) {
 /** 应用native包版本号 */
 export async function applyNativePolicyNum(policyNum, environName) {
     let versionName = `${environName}_native`;
+    console.log(`applyNativePolicyNum policyNum:${policyNum} environName:${environName}`);
     await applyPolicyNum(policyNum, versionName, 'bian_game');
 }

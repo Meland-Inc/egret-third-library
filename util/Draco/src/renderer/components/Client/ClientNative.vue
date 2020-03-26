@@ -169,6 +169,8 @@ export default {
 
       this.publisher = null;
       this.updatePublishText();
+
+      await ModelMgr.versionModel.initNativePolicyNum();
       this.nativeVersion = ModelMgr.versionModel.nativeVersion;
     },
     // async onUpdateServerPackage() {
