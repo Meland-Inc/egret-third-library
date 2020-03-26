@@ -129,14 +129,14 @@ export async function getNativePolicyNum(environName) {
 
 export function getNativeVersion(environName, policyNum, platform) {
     return new Promise((resolve, reject) => {
-        let options = {
-            host: Global.cdnUrl, // 请求地址 域名，google.com等.. 
-            path: `/native/${environName}/${policyNum}/${platform}/policyFile.json`, // 具体路径eg:/upload
-            method: 'GET', // 请求方式, 这里以post为例
-            headers: { // 必选信息,  可以抓包工看一下
-                'Content-Type': 'application/json'
-            }
-        };
+        // let options = {
+        //     host: Global.cdnUrl, // 请求地址 域名，google.com等.. 
+        //     path: `/native/${environName}/${policyNum}/${platform}/policyFile.json`, // 具体路径eg:/upload
+        //     method: 'GET', // 请求方式, 这里以post为例
+        //     headers: { // 必选信息,  可以抓包工看一下
+        //         'Content-Type': 'application/json'
+        //     }
+        // };
         let url = `${Global.cdnUrl}/native/${environName}/${policyNum}/${platform}/policyFile.json`
         console.log("getNativeVersion", url);
         http.get(url, (response) => {

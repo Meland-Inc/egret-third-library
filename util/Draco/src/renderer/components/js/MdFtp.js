@@ -229,6 +229,7 @@ export async function modifyPolicyFile() {
     policyObj["channel"] = ModelMgr.versionModel.channel;
     policyObj["displayVersion"] = ModelMgr.versionModel.displayVersion;
     policyObj["versionType"] = ModelMgr.versionModel.versionTypes.indexOf(ModelMgr.versionModel.versionType);
+    policyObj["environName"] = ModelMgr.versionModel.curEnviron.name;
     content = JSON.stringify(policyObj);
 
     let newPolicyPath = `${Global.svnPublishPath}${ModelMgr.versionModel.curEnviron.localPolicyPath}/policyFile_v${ModelMgr.versionModel.policyNum}.json`;
