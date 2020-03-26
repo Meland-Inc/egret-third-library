@@ -3,7 +3,7 @@
  * @desc 渲染进程消息处理文件
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-26 00:17:33
+ * @Last Modified time: 2020-03-26 18:02:38
  */
 import { ipcRenderer, IpcRendererEvent } from "electron";
 import querystring from "querystring";
@@ -17,6 +17,7 @@ import * as logger from './logger';
 import * as loading from './loading';
 import ClientUpdate from './update/ClientUpdate';
 import ServerUpdate from './update/ServerUpdate';
+import errorReport from "./ErrorReport";
 
 class Message {
     //消息对应方法集合
@@ -32,6 +33,7 @@ class Message {
         'SET_LOADING_PROGRESS': this.onSetLoadingProgress.bind(this),//设置loading进度
         'CHECK_PACKAGE_UPDATE': this.checkPackageUpdate.bind(this),//检查游戏包更新
         'GET_NATIVE_POLICY_VERSION': this.onGetNativePolicyVersion.bind(this),//获取native策略版本号
+        'ERROR_REPORT': this.onErrorReport.bind(this),//错误上报
     }
 
     private _clientUpdate = new ClientUpdate();
@@ -74,6 +76,11 @@ class Message {
         let versionName = `${config.environName}_native`;
         let nativePolicyVersion: number = await util.getNativePolicyNum(versionName);
         this.sendIpcMsg("SET_NATIVE_POLICY_VERSION", nativePolicyVersion);
+    }
+
+    private onErrorReport(content: string) {
+        logger.log('errorReport', `收到错误上报:${content}`);
+        errorReport.error(content);
     }
 
     /** 检查游戏包更新 */

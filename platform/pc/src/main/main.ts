@@ -3,7 +3,7 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-26 00:43:41
+ * @Last Modified time: 2020-03-26 18:01:14
  */
 // Modules to control application life and create native browser window
 import { app, globalShortcut, BrowserWindow, Menu, shell, dialog, session, Referrer, BrowserWindowConstructorOptions } from 'electron';
@@ -187,7 +187,6 @@ function onCrashed() {
 
 /** 监听窗口关闭 */
 async function onClosed() {
-  logger.log('electron', 'mainWindow closed');
   mainWindow = null;
   config.setMainWindow(null);
   await server.closeGameServer();

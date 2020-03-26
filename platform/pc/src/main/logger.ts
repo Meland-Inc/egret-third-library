@@ -3,10 +3,11 @@
  * @desc main用的logger类
  * @date 2020-02-13 14:54:34 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-23 18:48:10
+ * @Last Modified time: 2020-03-26 17:59:45
  */
 import fs from 'fs';
 import config from './Config';
+import message from './Message';
 
 export namespace logger {
     let processLogContent: string;
@@ -50,6 +51,7 @@ export namespace logger {
         if (config.mainWindow && config.mainWindow.isEnabled && config.mainWindow.webContents) {
             config.mainWindow.webContents.executeJavaScript(`console.error(\'${content}\');`);
         }
+        message.sendIpcMsg("ERROR_REPORT", msg);
         webContentsLog(tag, msg, ...args);
     }
 
