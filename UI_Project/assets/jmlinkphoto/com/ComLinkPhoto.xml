@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1700,1200" opaque="false">
+  <controller name="ctrlDir" pages="0,h,1,v" selected="0"/>
+  <displayList>
+    <loader id="n40_xr0j" name="loaderBG" xy="521,190" size="843,496" align="center" vAlign="middle" fill="scaleFree" playing="false"/>
+    <list id="n41_dz6i" name="lstLeft" xy="321,140" size="321,920" group="n44_dz6i" defaultItem="ui://siwpa9gldz6i1" align="center">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n43_dz6i" name="lstRight" xy="1058,140" size="321,920" group="n44_dz6i" defaultItem="ui://siwpa9gldz6i1" align="center">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n44_dz6i" name="n44" xy="321,140" size="1058,920" advanced="true">
+      <gearDisplay controller="ctrlDir" pages="1"/>
+    </group>
+    <list id="n45_dz6i" name="lstTop" xy="333,148" size="1041,281" group="n47_dz6i" layout="row" defaultItem="ui://siwpa9gldz6i1" vAlign="middle">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <list id="n46_dz6i" name="lstBottom" xy="304,793" size="1086,274" group="n47_dz6i" layout="row" defaultItem="ui://siwpa9gldz6i1" vAlign="middle">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n47_dz6i" name="n47" xy="304,148" size="1087,920" advanced="true">
+      <gearDisplay controller="ctrlDir" pages="0"/>
+    </group>
+    <component id="n49_dz6i" name="btnCancel1" src="sco7k" fileName="btn/btnScale.xml" pkg="av6agj0g" xy="809,552" controller="button,0">
+      <Button icon="ui://av6agj0gbmxe2f"/>
+    </component>
+    <component id="n48_dz6i" name="btnCancel2" src="sco7k" fileName="btn/btnScale.xml" pkg="av6agj0g" xy="121,160" controller="button,0">
+      <Button icon="ui://av6agj0gbmxe2f"/>
+    </component>
+    <component id="n50_dz6i" name="btnCancel3" src="sco7k" fileName="btn/btnScale.xml" pkg="av6agj0g" xy="809,552" controller="button,0">
+      <Button icon="ui://av6agj0gbmxe2f"/>
+    </component>
+    <component id="n51_dz6i" name="btnCancel4" src="sco7k" fileName="btn/btnScale.xml" pkg="av6agj0g" xy="809,552" controller="button,0">
+      <Button icon="ui://av6agj0gbmxe2f"/>
+    </component>
+    <component id="n52_dz6i" name="btnCancel5" src="sco7k" fileName="btn/btnScale.xml" pkg="av6agj0g" xy="809,552" controller="button,0">
+      <Button icon="ui://av6agj0gbmxe2f"/>
+    </component>
+    <component id="n53_dz6i" name="btnCancel6" src="sco7k" fileName="btn/btnScale.xml" pkg="av6agj0g" xy="809,552" controller="button,0">
+      <Button icon="ui://av6agj0gbmxe2f"/>
+    </component>
+    <component id="n54_dz6i" name="btnCancel7" src="sco7k" fileName="btn/btnScale.xml" pkg="av6agj0g" xy="809,552" controller="button,0">
+      <Button icon="ui://av6agj0gbmxe2f"/>
+    </component>
+    <component id="n55_dz6i" name="btnCancel8" src="sco7k" fileName="btn/btnScale.xml" pkg="av6agj0g" xy="809,552" controller="button,0">
+      <Button icon="ui://av6agj0gbmxe2f"/>
+    </component>
+    <component id="n56_dz6i" name="btnCancel9" src="sco7k" fileName="btn/btnScale.xml" pkg="av6agj0g" xy="809,552" controller="button,0">
+      <Button icon="ui://av6agj0gbmxe2f"/>
+    </component>
+    <component id="n57_dz6i" name="btnCancel10" src="sco7k" fileName="btn/btnScale.xml" pkg="av6agj0g" xy="809,552" controller="button,0">
+      <Button icon="ui://av6agj0gbmxe2f"/>
+    </component>
+    <component id="n58_dz6i" name="btnCancel11" src="sco7k" fileName="btn/btnScale.xml" pkg="av6agj0g" xy="809,552" controller="button,0">
+      <Button icon="ui://av6agj0gbmxe2f"/>
+    </component>
+    <component id="n59_dz6i" name="btnCancel12" src="sco7k" fileName="btn/btnScale.xml" pkg="av6agj0g" xy="809,552" controller="button,0">
+      <Button icon="ui://av6agj0gbmxe2f"/>
+    </component>
+    <component id="n60_dz6i" name="btnCancel13" src="sco7k" fileName="btn/btnScale.xml" pkg="av6agj0g" xy="809,552" controller="button,0">
+      <Button icon="ui://av6agj0gbmxe2f"/>
+    </component>
+    <component id="n61_dz6i" name="btnCancel14" src="sco7k" fileName="btn/btnScale.xml" pkg="av6agj0g" xy="809,552" controller="button,0">
+      <Button icon="ui://av6agj0gbmxe2f"/>
+    </component>
+    <component id="n62_dz6i" name="btnCancel15" src="sco7k" fileName="btn/btnScale.xml" pkg="av6agj0g" xy="809,552" controller="button,0">
+      <Button icon="ui://av6agj0gbmxe2f"/>
+    </component>
+    <component id="n63_dz6i" name="btnCancel16" src="sco7k" fileName="btn/btnScale.xml" pkg="av6agj0g" xy="809,552" controller="button,0">
+      <Button icon="ui://av6agj0gbmxe2f"/>
+    </component>
+    <component id="n64_dz6i" name="btnCancel17" src="sco7k" fileName="btn/btnScale.xml" pkg="av6agj0g" xy="809,552" controller="button,0">
+      <Button icon="ui://av6agj0gbmxe2f"/>
+    </component>
+    <component id="n65_dz6i" name="btnCancel18" src="sco7k" fileName="btn/btnScale.xml" pkg="av6agj0g" xy="809,552" controller="button,0">
+      <Button icon="ui://av6agj0gbmxe2f"/>
+    </component>
+    <component id="n66_dz6i" name="btnCancel19" src="sco7k" fileName="btn/btnScale.xml" pkg="av6agj0g" xy="809,552" controller="button,0">
+      <Button icon="ui://av6agj0gbmxe2f"/>
+    </component>
+    <component id="n67_dz6i" name="btnCancel120" src="sco7k" fileName="btn/btnScale.xml" pkg="av6agj0g" xy="809,552" controller="button,0">
+      <Button icon="ui://av6agj0gbmxe2f"/>
+    </component>
+    <component id="n68_dz6i" name="btnCancel21" src="sco7k" fileName="btn/btnScale.xml" pkg="av6agj0g" xy="809,552" controller="button,0">
+      <Button icon="ui://av6agj0gbmxe2f"/>
+    </component>
+  </displayList>
+</component>
