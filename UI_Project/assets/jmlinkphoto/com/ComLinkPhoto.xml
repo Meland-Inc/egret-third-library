@@ -66,7 +66,7 @@
     <component id="n68_dz6i" name="btnCancel21" src="sco7k" fileName="btn/btnScale.xml" pkg="av6agj0g" xy="809,552" visible="false" controller="button,0">
       <Button icon="ui://av6agj0gbmxe2f"/>
     </component>
-    <list id="n45_dz6i" name="lstTop" xy="0,0" size="1700,600" group="n47_dz6i" layout="row" defaultItem="ui://siwpa9gldz6i1" autoItemSize="false" align="center" vAlign="middle" autoClearItems="true">
+    <list id="n45_dz6i" name="lstTop" xy="0,300" size="1700,1" group="n47_dz6i" layout="row" scroll="both" defaultItem="ui://siwpa9gldz6i1" autoItemSize="false" align="center" vAlign="middle" autoClearItems="true">
       <gearDisplay controller="ctrlDir" pages="0"/>
       <relation target="" sidePair=""/>
       <item/>
@@ -76,7 +76,7 @@
       <item/>
       <item/>
     </list>
-    <list id="n46_dz6i" name="lstBottom" xy="0,600" size="1700,600" group="n47_dz6i" layout="row" defaultItem="ui://siwpa9gldz6i1" autoItemSize="false" align="center" vAlign="middle">
+    <list id="n46_dz6i" name="lstBottom" xy="0,900" size="1700,1" group="n47_dz6i" layout="row" defaultItem="ui://siwpa9gldz6i1" autoItemSize="false" align="center" vAlign="middle">
       <gearDisplay controller="ctrlDir" pages="0"/>
       <relation target="" sidePair="width-width"/>
       <item/>
@@ -86,8 +86,8 @@
       <item/>
       <item/>
     </list>
-    <group id="n47_dz6i" name="n47" xy="0,0" size="1700,1200"/>
-    <list id="n41_dz6i" name="lstLeft" xy="0,0" size="850,1200" group="n44_dz6i" defaultItem="ui://siwpa9gldz6i1" autoItemSize="false" align="center" vAlign="middle">
+    <group id="n47_dz6i" name="n47" xy="0,300" size="1700,601"/>
+    <list id="n41_dz6i" name="lstLeft" xy="425,0" size="1,1200" group="n44_dz6i" overflow="scroll" defaultItem="ui://siwpa9gldz6i1" autoItemSize="false" align="center" vAlign="middle">
       <gearDisplay controller="ctrlDir" pages="1"/>
       <relation target="" sidePair="height-height"/>
       <item/>
@@ -97,7 +97,7 @@
       <item/>
       <item/>
     </list>
-    <list id="n43_dz6i" name="lstRight" xy="851,0" size="850,1200" group="n44_dz6i" defaultItem="ui://siwpa9gldz6i1" autoItemSize="false" align="center" vAlign="middle">
+    <list id="n43_dz6i" name="lstRight" xy="1225,0" size="1,1200" group="n44_dz6i" defaultItem="ui://siwpa9gldz6i1" autoItemSize="false" align="center" vAlign="middle">
       <gearDisplay controller="ctrlDir" pages="1"/>
       <relation target="" sidePair="height-height"/>
       <item/>
@@ -107,6 +107,6 @@
       <item/>
       <item/>
     </list>
-    <group id="n44_dz6i" name="n44" xy="0,0" size="1701,1200"/>
+    <group id="n44_dz6i" name="n44" xy="425,0" size="801,1200"/>
   </displayList>
 </component>
