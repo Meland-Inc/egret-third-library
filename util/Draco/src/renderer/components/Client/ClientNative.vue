@@ -402,7 +402,7 @@ export default {
       Global.showLoading();
       try {
         let promiseList = [];
-        promiseList.push(mdPublish.clearPackageDir);
+        // promiseList.push(mdPublish.clearPackageDir);
         promiseList.push(mdPublish.writeVersionInfo);
         promiseList.push(mdPublish.publishWin);
         promiseList.push(mdPublish.publishMac);
