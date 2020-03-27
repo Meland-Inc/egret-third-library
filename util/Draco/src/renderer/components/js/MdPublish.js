@@ -99,6 +99,8 @@ export async function publishProject() {
         let indexContent = await fsExc.readFile(indexPath);
         if (ModelMgr.versionModel.curEnviron.codeVersionEnable) {
             indexContent = indexContent.replace("//window.trunkName", `window.trunkName="${ModelMgr.versionModel.curEnviron.trunkName}"`);
+            indexContent = indexContent.replace("//window.environName", `window.environName="${ModelMgr.versionModel.curEnviron.name}"`);
+            indexContent = indexContent.replace("//window.gameVersion", `window.gameVersion="${releaseVersion}"`);
             await fsExc.writeFile(indexPath, indexContent);
         }
 
