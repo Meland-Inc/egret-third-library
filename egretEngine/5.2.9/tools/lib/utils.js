@@ -263,6 +263,7 @@ function uglify(sourceFile) {
         mangle: {
             properties: {
                 reserved: [],
+                keep_quoted: true,
             },
             //类名混淆时，各种配置表***Table，由于是资源读出的，需要保留
             //还有比如Main是引擎的引用等，需要手动添加进reserved
@@ -284,7 +285,8 @@ function uglify(sourceFile) {
     }
     options.mangle.properties.reserved = reservedCell.concat();
 
-    if (evnStr && evnStr[1] == "release") {
+    // if (evnStr && evnStr[1] != "beta" ) {
+    if (true) {
         // options.mangle = false;
         // options.toplevel = false;
         options = {
