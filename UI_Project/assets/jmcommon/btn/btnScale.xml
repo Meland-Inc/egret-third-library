@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="106,112" overflow="hidden" extention="Button">
-  <controller name="button" exported="true" pages="0,up,1,down" selected="1"/>
+  <controller name="button" exported="true" pages="0,up,1,down" selected="0"/>
   <displayList>
     <loader id="n3_alb7" name="icon" xy="0,0" size="106,112" touchable="false" align="center" vAlign="middle" fill="scaleFree">
       <relation target="" sidePair="width-width,height-height"/>
@@ -9,7 +9,7 @@
       <relation target="" sidePair="center-center,middle-middle,width-width,height-height"/>
     </text>
   </displayList>
-  <Button sound="ui://fknoioovtqc911"/>
+  <Button sound="ui://fknoioovl3l213"/>
   <transition name="down" options="4">
     <item time="0" type="XY" target="n3_alb7" tween="true" startValue="0,-" endValue="0,5" duration="4" ease="Linear"/>
   </transition>

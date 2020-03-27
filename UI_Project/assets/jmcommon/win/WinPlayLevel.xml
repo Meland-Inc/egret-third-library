@@ -52,12 +52,12 @@
     <component id="n46_gx7z" name="btnPlayVoice" src="sco7k" fileName="btn/btnScale.xml" xy="127,57" size="170,143" controller="button,0">
       <gearDisplay controller="ctrlVoiceType" pages="1"/>
       <relation target="n37_gx7z" sidePair="left-left,top-top"/>
-      <Button icon="ui://av6agj0gbmxe2a" controller="ctrlVoiceType" page="2"/>
+      <Button icon="ui://av6agj0gbmxe2a"/>
     </component>
     <component id="n76_alb7" name="btnPauseVoice" src="sco7k" fileName="btn/btnScale.xml" xy="127,57" size="170,143" controller="button,0">
       <gearDisplay controller="ctrlVoiceType" pages="2"/>
       <relation target="n37_gx7z" sidePair="left-left,top-top"/>
-      <Button icon="ui://av6agj0gbmxe29" controller="ctrlVoiceType" page="1"/>
+      <Button icon="ui://av6agj0gbmxe29"/>
     </component>
     <component id="n50_gx7z" name="btnUndo" src="sco7k" fileName="btn/btnScale.xml" xy="1667,528" size="221,225" controller="button,0">
       <relation target="n37_gx7z" sidePair="right-right,bottom-bottom"/>
