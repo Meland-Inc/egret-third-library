@@ -24,6 +24,4 @@ function init() {
 
     //错误上报初始化
     errorReport.init();
-
-    logger.error('test', 'native renderer raven test');
 }

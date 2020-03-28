@@ -12,7 +12,40 @@ import { util } from './util';
 import message from './Message';
 import config from "./Config";
 
+enum eQueryArgsField {
+    'temporary_token' = 'temporary_token',
+    'class_id' = 'class_id',
+    'bell_origin' = 'bell_origin',
+    'package_id' = 'package_id',
+    'lesson_id' = 'lesson_id',
+    'back_url' = 'back_url',
+    'act_id' = 'act_id',
+    'internet_network' = 'internet_network',
+    'local_network' = 'local_network',
+    'gid' = 'gid',
+    'stand_alone' = 'stand_alone',
+    'gameServer' = 'gameServer',
+    'token' = 'token'
+}
+
 class Platform {
+    private readonly _configFields = [
+        eQueryArgsField.temporary_token,
+        eQueryArgsField.class_id,
+        eQueryArgsField.bell_origin,
+        eQueryArgsField.package_id,
+        eQueryArgsField.lesson_id,
+        eQueryArgsField.back_url,
+        eQueryArgsField.act_id,
+        eQueryArgsField.stand_alone,
+    ]
+
+    private readonly _serverCnfFileds = [
+        eQueryArgsField.class_id,
+        eQueryArgsField.lesson_id,
+        eQueryArgsField.gid
+    ]
+
     public async init() {
         let urlValue = config.urlValue;
         //伪协议启动参数
@@ -24,6 +57,84 @@ class Platform {
         let queryObject: querystring.ParsedUrlQuery = {};
 
         logger.log('platform', 'argsObj', argsObj);
+
+        //解析参数给native用的config
+        for (const field of this._configFields) {
+            let value = argsObj[field];
+            if (value === undefined) {
+                //stand_alone 非必传参数
+                if (field != eQueryArgsField.stand_alone) {
+                    logger.error('platform', `传入的平台参数不存在${field}`);
+                }
+                continue;
+            }
+
+            let strValue: string;
+            if (Array.isArray(value)) {
+                strValue = value[0];
+            } else {
+                strValue = value as string;
+            }
+
+            switch (field) {
+                case eQueryArgsField.temporary_token:
+                    config.setBellTempToken(strValue);
+                    break;
+                case eQueryArgsField.class_id:
+                    config.setClassId(+strValue);
+                    break;
+                case eQueryArgsField.bell_origin:
+                    config.setBellApiOrigin(strValue);
+                    break;
+                case eQueryArgsField.package_id:
+                    config.setBellPackageId(strValue);
+                    break;
+                case eQueryArgsField.lesson_id:
+                    config.setBellLessonId(strValue);
+                    break;
+                case eQueryArgsField.back_url:
+                    config.setBellBackUrl(strValue);
+                    break;
+                case eQueryArgsField.act_id:
+                    config.setBellActId(strValue);
+                    break;
+                case eQueryArgsField.stand_alone:
+                    config.setStandAlone(!!strValue);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        //解析参数给本地服务器的配置
+        for (const field of this._serverCnfFileds) {
+            let value = argsObj[field];
+            if (!value) {
+                logger.error('platform', `传入的平台参数不存在${field}`);
+                continue;
+            }
+
+            let strValue: string;
+            if (Array.isArray(value)) {
+                strValue = value[0];
+            } else {
+                strValue = value as string;
+            }
+
+            switch (field) {
+                case eQueryArgsField.class_id:
+                    util.writeServerCnfValue("classId", strValue);
+                    break;
+                case eQueryArgsField.lesson_id:
+                    util.writeServerCnfValue("lessonId", strValue);
+                    break;
+                case eQueryArgsField.gid:
+                    util.writeServerCnfValue("gid", strValue);
+                    break;
+            }
+        }
+
+        //解析参数,传入给返回数据
         for (const key in argsObj) {
             let value: string;
             if (Array.isArray(argsObj[key])) {
@@ -32,91 +143,36 @@ class Platform {
                 value = argsObj[key] as string;
             }
 
-            if (key === 'temporary_token') {
-                config.setBellTempToken(`${value}`);
+            //过滤以下几个字段
+            if (key === eQueryArgsField.temporary_token
+                || key === eQueryArgsField.bell_origin
+                || key === eQueryArgsField.stand_alone
+                || key === eQueryArgsField.gameServer) {
                 continue;
             }
 
-            if (key === 'class_id') {
-                queryObject[key] = `${value}`;
-                config.setClassId(+value);
-                util.writeServerCnfValue("classId", value as string);
+            //不是单人单服模式,并且有穿透服务器地址
+            if (!config.standAlone && key === eQueryArgsField.internet_network) {
+                queryObject[eQueryArgsField.gameServer] = `${value}`;
                 continue;
             }
 
-            if (key === 'bell_origin') {
-                config.setBellApiOrigin(value as string);
+            //不是单人单服模式,不存在服务器地址,并且有本地服务器地址
+            if (!config.standAlone && key === eQueryArgsField.local_network && !queryObject[eQueryArgsField.gameServer]) {
+                queryObject[eQueryArgsField.gameServer] = `${value}`;
                 continue;
             }
 
-            if (key === 'package_id') {
-                config.setBellPackageId(value as string);
-                queryObject['package_id'] = `${value}`;
-                continue;
-            }
-
-            if (key === 'lesson_id') {
-                config.setBellLessonId(value as string);
-                queryObject['lesson_id'] = `${value}`;
-                util.writeServerCnfValue("lessonId", value as string);
-                continue;
-            }
-
-            if (key === 'back_url') {
-                config.setBellBackUrl(value as string);
-                queryObject['back_url'] = `${value}`;
-                continue;
-            }
-
-            if (key === 'act_id') {
-                config.setBellActId(value as string);
-                queryObject['act_id'] = `${value}`;
-                continue;
-            }
-
-            if (key === 'internet_network') {
-                queryObject['gameServer'] = `${value}`;
-                continue;
-            }
-
-            if (key === 'local_network') {
-                if (!queryObject['gameServer']) {
-                    queryObject['gameServer'] = `${value}`;
-                }
-                continue;
-            }
-
-            //课程地图的gid
-            if (key === 'gid') {
-                logger.log('net', `平台给的gid`, value);
-                queryObject[key] = `${value}`;
-                util.writeServerCnfValue("gid", value as string);
-                continue;
-            }
-
-            if (key === 'stand_alone') {
-                if (value === "null") {
-                    config.setStandAlone(false);
-                } else {
-                    config.setStandAlone(!!value);
-                }
-                continue;
-            }
-
-            //过滤掉原始服务器
-            if (key === 'gameServer') {
-                continue;
-            }
             queryObject[key] = `${value}`;
         }
 
         logger.log('platform', 'queryObject', queryObject);
 
         let token = await this.login();
-        queryObject['token'] = token;
+        queryObject[eQueryArgsField.token] = token;
 
-        if (queryObject["gameServer"]) {
-            message.sendIpcMsg('SAVE_NATIVE_GAME_SERVER', queryObject["gameServer"]);
+        if (queryObject[eQueryArgsField.gameServer]) {
+            message.sendIpcMsg('SAVE_NATIVE_GAME_SERVER', queryObject[eQueryArgsField.gameServer]);
         }
 
         logger.log('platform', 'queryObject', queryObject);
