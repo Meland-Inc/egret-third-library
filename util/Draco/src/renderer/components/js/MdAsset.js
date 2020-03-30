@@ -26,7 +26,7 @@ const jimmyResSuffix = '/resource/jimmy.res.json';
 const jimmyDynamicMissionDir = 'dynamicMission';//动态关卡文件夹名 该文件夹下面子文件夹都会作为group
 const jimmyNeedExternalAssetPath = ['/resource/assets/fairyGuiLog', '/resource/assets/fairySound'];//鲸幂res配置需要的外部资源
 
-const groupArr = ['preload', 'loading', 'fairyGui', 'fairySound', 'boyAni', 'girlAni', 'regSheet', 'fairyGuiLog', 'base'];
+const groupArr = ['preload', 'loading', 'fairyGui', 'fairySound', 'boyAni', 'girlAni', 'regSheet', 'fairyGuiLog', 'jmBase', 'jmFairyGui'];
 
 const groupFile = {
   'common.fui': 'login',
