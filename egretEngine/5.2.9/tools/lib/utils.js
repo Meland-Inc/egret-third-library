@@ -75,7 +75,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var cp = require("child_process");
 var path = require("path");
 var file = require("./FileUtil");
-var UglifyJS = require("./uglify-js2");
+var UglifyJS = require("./uglify-js/uglifyjs");
+var UglifyJS2 = require("./uglify-js2");
 var net = require("net");
 var timers_1 = require("timers");
 //第三方调用时，可能不支持颜色显示，可通过添加 -nocoloroutput 移除颜色信息
@@ -308,7 +309,7 @@ function uglify(sourceFile) {
     // __reflect(FQ.prototype, "MapTerrainStruct", ["IPoolInstance"]),
     // __reflect(s3.prototype, "DebugPlatform", ["Platform"]),
     // __reflect(h3.prototype, "PlayerIdleStatus", ["IPlayerAnimUpdateStatus"]);
-    var result = UglifyJS.minify(sourceFile, options);
+    var result = UglifyJS2.minify(sourceFile, options);
     var code = result.code;
     //unlify混淆类名后，__reflect保留了原有的className，反射时会有问题，需要一起替换，这里可能存在遗漏
     var filterRe = /__reflect\(([^",]+).prototype,"([^"]+)"\)/g;
