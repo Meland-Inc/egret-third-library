@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://av6agj0gbmxe2h" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlVoiceType" pages="1,play,0,none,2,pause" selected="0"/>
+  <controller name="ctrlVoiceType" pages="1,play,0,none,2,pause" selected="1"/>
   <controller name="ctrlIsDevelop" pages="0,false,1,true" selected="0"/>
-  <controller name="ctrlTemGameType" pages="0,none,1,success,2,fail,3,over" selected="0"/>
+  <controller name="ctrlTemGameType" pages="0,none,1,success,2,fail,3,over" selected="2"/>
   <controller name="ctrlStartL" pages="0,,1,,2,,3," selected="0"/>
   <controller name="ctrlJmType" pages="0,soduku,1,pickphoto,2,classify,3,count,4,balance" selected="0"/>
   <displayList>
@@ -76,12 +76,12 @@
       <Button icon="ui://av6agj0gbmxe2f"/>
     </component>
     <graph id="n61_sco7" name="ladImg" xy="0,-1" size="1920,1080" alpha="0.2" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
-      <gearDisplay controller="ctrlTemGameType" pages="2"/>
+      <gearDisplay controller="ctrlTemGameType" pages="1,2"/>
       <gearIcon controller="ctrlTemGameType" pages="0,1,2,3" values="|||"/>
       <relation target="" sidePair="width-width,height-height%,middle-middle"/>
     </graph>
     <graph id="n83_fy6w" name="gphMC" xy="506,90" size="900,900" touchable="false">
-      <gearDisplay controller="ctrlTemGameType" pages="2"/>
+      <gearDisplay controller="ctrlTemGameType" pages="1,2"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </graph>
     <loader id="n72_alb7" name="ladMask" xy="0,0" size="1920,1080">
