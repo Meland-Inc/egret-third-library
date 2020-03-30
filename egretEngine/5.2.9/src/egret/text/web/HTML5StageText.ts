@@ -154,7 +154,8 @@ namespace egret.web {
         $show(): void {
             if (!this.htmlInput.isCurrentStageText(this)) {
                 this.inputElement = this.htmlInput.getInputElement(this);
-                this.inputElement.autocomplete = 'off'
+                this.inputElement.autocomplete = 'off';
+                this.inputElement.readOnly = "readonly";
                 if (!this.$textfield.multiline) {
                     this.inputElement.type = this.$textfield.inputType;
                 }
@@ -180,6 +181,8 @@ namespace egret.web {
          * 
          */
         private onBlurHandler(): void {
+            this.inputElement.autocomplete = 'off';
+            this.inputElement.readOnly = "readonly";
             this.htmlInput.clearInputElement();
             window.scrollTo(0, 0);
         }
@@ -208,6 +211,8 @@ namespace egret.web {
 
             this.inputElement.selectionStart = this.inputElement.value.length;
             this.inputElement.selectionEnd = this.inputElement.value.length;
+            this.inputElement.readOnly = undefined;
+            this.inputElement.autocomplete = 'off';
             this.inputElement.focus();
         }
 

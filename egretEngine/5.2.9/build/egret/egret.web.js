@@ -2194,6 +2194,7 @@ var egret;
                 if (!this.htmlInput.isCurrentStageText(this)) {
                     this.inputElement = this.htmlInput.getInputElement(this);
                     this.inputElement.autocomplete = 'off';
+                    this.inputElement.readOnly = "readonly";
                     if (!this.$textfield.multiline) {
                         this.inputElement.type = this.$textfield.inputType;
                     }
@@ -2215,6 +2216,8 @@ var egret;
              *
              */
             HTML5StageText.prototype.onBlurHandler = function () {
+                this.inputElement.autocomplete = 'off';
+                this.inputElement.readOnly = "readonly";
                 this.htmlInput.clearInputElement();
                 window.scrollTo(0, 0);
             };
@@ -2238,6 +2241,8 @@ var egret;
                 }
                 this.inputElement.selectionStart = this.inputElement.value.length;
                 this.inputElement.selectionEnd = this.inputElement.value.length;
+                this.inputElement.readOnly = undefined;
+                this.inputElement.autocomplete = 'off';
                 this.inputElement.focus();
             };
             /**
