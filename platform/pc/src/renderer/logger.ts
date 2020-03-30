@@ -27,7 +27,9 @@ export function log(tag: string, msg: string, ...args: any[]) {
 export function error(tag: string, msg: string, ...args: any[]) {
     let content = formateMsg(tag, msg, ...args);
     console.error(content);
-    errorReport.error(msg);
+    if (!remote.app.isPackaged) {
+        errorReport.error(msg);
+    }
 }
 
 export function warn(tag: string, msg: string, ...args: any[]) {

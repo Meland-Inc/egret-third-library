@@ -94,15 +94,14 @@ class Config {
         this._nativeGameServer = value;
     }
 
-    // private _nativeToken: string;
-    // /** native保存的token */
-    // public get nativeToken(): string {
-    //     return this._nativeToken;
-    // }
-    // public setNativeToken(value: string) {
-    //     this._nativeToken = value;
-    //     logger.log('renderer', `设置nativeToken`, this._nativeToken);
-    // }
+    private _isPackaged: boolean;
+    public get isPackaged(): boolean {
+        if (this._isPackaged === undefined) {
+            this._isPackaged = remote.app.isPackaged;
+        }
+
+        return this._isPackaged;
+    }
 
     public init() {
         logger.log('renderer', `初始化全局配置`);

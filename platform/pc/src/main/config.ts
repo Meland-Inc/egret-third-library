@@ -311,6 +311,14 @@ class Config {
     public setGameServerProcess(value: ChildProcess) {
         this._gameServerProcess = value;
     }
+
+    private _isPackaged: boolean;
+    public get isPackaged(): boolean {
+        return this._isPackaged;
+    }
+    public setIsPackaged(value: boolean) {
+        this._isPackaged = value;
+    }
 }
 
 let config = new Config();

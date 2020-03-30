@@ -7,12 +7,11 @@
 
 import Raven from 'raven-js'
 import config from './Config';
-import * as logger from './logger';
 import { define } from './define';
 
 /**错误上报 */
 class ErrorReport {
-    private _raven;
+    private _raven: Raven.RavenStatic;
     private _enable: boolean;
 
     public init() {

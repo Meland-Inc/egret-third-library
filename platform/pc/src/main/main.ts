@@ -274,6 +274,7 @@ async function initNative() {
 
   logger.log('net', `config.urlValue`, config.urlValue);
   logger.log('env', `app.isPackaged:`, app.isPackaged);
+  config.setIsPackaged(app.isPackaged);
   //打包后的包才要检查更新
   if (app.isPackaged) {
     message.sendIpcMsg("GET_NATIVE_POLICY_VERSION");

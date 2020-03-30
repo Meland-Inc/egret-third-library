@@ -51,7 +51,9 @@ export namespace logger {
         if (config.mainWindow && config.mainWindow.isEnabled && config.mainWindow.webContents) {
             config.mainWindow.webContents.executeJavaScript(`console.error(\'${content}\');`);
         }
-        message.sendIpcMsg("ERROR_REPORT", msg);
+        if (!config.isPackaged) {
+            message.sendIpcMsg("ERROR_REPORT", msg);
+        }
         webContentsLog(tag, msg, ...args);
     }
 
