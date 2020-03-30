@@ -34,7 +34,7 @@
             "verifyUpdateCodeSignature": false,
             "certificateFile": "./build/bellplanet.pfx",
             "certificatePassword": "bellcode123",
-            "requestedExecutionLevel": "asInvoker",
+            "requestedExecutionLevel": "highestAvailable",
             "icon": "./icon/icon.ico"
         },
         "dmg": {
