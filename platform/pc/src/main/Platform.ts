@@ -40,7 +40,7 @@ class Platform {
         eQueryArgsField.stand_alone,
     ]
 
-    private readonly _serverCnfFileds = [
+    private readonly _serverCnfFields = [
         eQueryArgsField.class_id,
         eQueryArgsField.lesson_id,
         eQueryArgsField.gid
@@ -107,7 +107,7 @@ class Platform {
         }
 
         //解析参数给本地服务器的配置
-        for (const field of this._serverCnfFileds) {
+        for (const field of this._serverCnfFields) {
             let value = argsObj[field];
             if (!value) {
                 logger.error('platform', `传入的平台参数不存在${field}`);
