@@ -2,7 +2,7 @@
 <component size="1700,1200" opaque="false">
   <controller name="ctrlDir" pages="0,h,1,v" selected="0"/>
   <displayList>
-    <loader id="n40_xr0j" name="loaderBG" xy="438,376" size="843,368" visible="false" align="center" vAlign="middle" fill="scaleFree" playing="false"/>
+    <loader id="n40_xr0j" name="loaderBG" xy="438,376" size="843,368" align="center" vAlign="middle" fill="scaleFree" playing="false"/>
     <component id="n49_dz6i" name="btnCancel1" src="sco7k" fileName="btn/btnScale.xml" pkg="av6agj0g" xy="809,552" visible="false" controller="button,0">
       <Button icon="ui://av6agj0gbmxe2f"/>
     </component>
