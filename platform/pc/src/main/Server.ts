@@ -3,7 +3,7 @@
  * @desc 处理native服务器和游戏服务器的文件
  * @date 2020-02-18 11:42:29 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-24 17:15:17
+ * @Last Modified time: 2020-03-31 20:27:22
  */
 import fs from 'fs';
 import os from 'os';
@@ -67,7 +67,18 @@ class Server {
                 logger.log('net', `gameServer --> localIp:${config.gameServerLocalIp} localPort:${config.gameServerLocalPort} natUrl:${config.gameServerNatUrl} natPort:${config.gameServerNatPort}`);
 
                 if (config.gameServerLocalIp && config.gameServerLocalPort) {
-                    let gameServer = `${config.gameServerLocalIp}:${config.gameServerLocalPort}`;
+                    let gameServer: string = `${config.gameServerLocalIp}:${config.gameServerLocalPort}`;
+                    let hasParam: boolean = false;
+                    if (args.canedit) {
+                        gameServer += `?canedit=${args.canedit}`;
+                        hasParam = true;
+                    }
+
+                    if (args.rw) {
+                        let sign = hasParam ? `&` : `?`;
+                        gameServer += `${sign}rw=${args.rw}`;
+                    }
+
                     logger.log('net', 'native上课客户端登录本地游戏服务器', gameServer);
 
                     //游戏地图
