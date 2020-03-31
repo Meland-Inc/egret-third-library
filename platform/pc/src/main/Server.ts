@@ -97,8 +97,10 @@ class Server {
                     }
                 }
 
-                //上课渠道 并且是老师端,要上报本地ip
-                if (config.channel === config.constChannelLesson && config.userType != define.eUserType.student) {
+                //上课渠道 并且是老师端,并且不是备课的时候,要上报本地ip
+                if (config.channel === config.constChannelLesson
+                    && config.userType != define.eUserType.student
+                    && config.classId) {
                     platform.teacherUploadIp();
                 }
 

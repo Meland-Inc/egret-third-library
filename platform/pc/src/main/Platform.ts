@@ -61,20 +61,20 @@ class Platform {
         //解析参数给native用的config
         for (const field of this._configFields) {
             let value = argsObj[field];
+            let strValue: string;
             if (value === undefined) {
                 //stand_alone 非必传参数
                 if (field != eQueryArgsField.stand_alone) {
                     logger.error('platform', `传入的平台参数不存在${field}`);
                 }
-                continue;
+            } else {
+                if (Array.isArray(value)) {
+                    strValue = value[0];
+                } else {
+                    strValue = value as string;
+                }
             }
 
-            let strValue: string;
-            if (Array.isArray(value)) {
-                strValue = value[0];
-            } else {
-                strValue = value as string;
-            }
 
             switch (field) {
                 case eQueryArgsField.temporary_token:
@@ -109,16 +109,15 @@ class Platform {
         //解析参数给本地服务器的配置
         for (const field of this._serverCnfFields) {
             let value = argsObj[field];
+            let strValue: string = "";
             if (!value) {
                 logger.error('platform', `传入的平台参数不存在${field}`);
-                continue;
-            }
-
-            let strValue: string;
-            if (Array.isArray(value)) {
-                strValue = value[0];
             } else {
-                strValue = value as string;
+                if (Array.isArray(value)) {
+                    strValue = value[0];
+                } else {
+                    strValue = value as string;
+                }
             }
 
             switch (field) {
