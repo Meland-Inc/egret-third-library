@@ -71,11 +71,11 @@ class Message {
 
     /** 检查更新完毕 */
     private async onCheckUpdateComplete() {
-        await util.initNativeCnf();
+        util.initNativeCnf();
 
         logger.log('config', `nativeMode:${config.nativeMode}`);
         if (config.nativeMode === define.eNativeMode.banner) {
-            await this.startBanner();
+            this.startBanner();
             return;
         }
 
@@ -85,12 +85,12 @@ class Message {
         }
 
         if (config.nativeMode === define.eNativeMode.game) {
-            await this.startNativeGame();
+            this.startNativeGame();
             return
         }
 
         if (config.nativeMode === define.eNativeMode.website) {
-            await this.startNativeWebsite();
+            this.startNativeWebsite();
             return;
         }
 
@@ -145,19 +145,16 @@ class Message {
     }
 
     /** 从平台进入 */
-    private async  startNativePlatform() {
+    private async startNativePlatform() {
         logger.log('update', `从平台进入`);
 
         //平台初始化
         let queryObject = await platform.init();
         //初始化参数
-        // Object.assign(queryObject, platform.queryObject);
         config.setChannel(config.constChannelLesson);
         queryObject['gameChannel'] = config.constChannelLesson;
         queryObject['fakeUserType'] = config.userType.toString();
-        queryObject['nativeMode'] = define.eNativeMode.platform.toString();;
-
-        logger.log(`test`, `queryObject`, queryObject);
+        queryObject['nativeMode'] = define.eNativeMode.platform.toString();
 
         //非学生端 或者单人单服务器 本地服务器初始化
         if (config.userType != define.eUserType.student || config.standAlone) {
