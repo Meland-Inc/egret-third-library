@@ -69,12 +69,12 @@ class Server {
                 if (config.gameServerLocalIp && config.gameServerLocalPort) {
                     let gameServer: string = `${config.gameServerLocalIp}:${config.gameServerLocalPort}`;
                     let hasParam: boolean = false;
-                    if (args.canedit) {
+                    if (args.canedit && args.canedit === "true") {
                         gameServer += `?canedit=${args.canedit}`;
                         hasParam = true;
                     }
 
-                    if (args.rw) {
+                    if (args.rw && args.rw != "0") {
                         let sign = hasParam ? `&` : `?`;
                         gameServer += `${sign}rw=${args.rw}`;
                     }
