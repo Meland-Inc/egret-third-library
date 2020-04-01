@@ -21,6 +21,8 @@ import platform from './Platform';
 import message from './Message';
 
 class Server {
+    private _tryGameServerCount: number;
+
     public async init() {
         util.writeServerCnfValue('gameArgs', "");
         await this.createNativeServer(define.eGameServerMode.gameMap);
@@ -43,6 +45,7 @@ class Server {
 
             util.writeServerCnfValue('channel', config.channel);
             util.writeServerCnfValue("nativePort", config.nativeServerPort + "");
+
             await this.createGameServer(gameServerMode);
         });
 
@@ -176,8 +179,29 @@ class Server {
             `${config.serverPackagePath}/game`,
             `${config.serverPackagePath}/ngrok`
         ]);
-        let gameServerProcess: ChildProcess = await util.runCmd(cmd, `${config.serverPackagePath}/`, "创建游戏服务器成功", "创建游戏服务器失败");
-        config.setGameServerProcess(gameServerProcess);
+        // let gameServerProcess: ChildProcess = await util.runCmd(cmd, `${config.serverPackagePath}/`, "创建游戏服务器成功", "创建游戏服务器失败");
+        // config.setGameServerProcess(gameServerProcess);
+        this._tryGameServerCount = 0;
+        this.tryRunGameServerCmd(cmd);
+    }
+
+    /** 尝试创建游戏服务器,创建失败后,重试 */
+    private async tryRunGameServerCmd(cmd: string) {
+        try {
+            let gameServerProcess: ChildProcess = await util.runCmd(cmd, `${config.serverPackagePath}/`, "创建游戏服务器成功", "创建游戏服务器失败");
+            config.setGameServerProcess(gameServerProcess);
+        } catch (error) {
+            //3次重试 3秒后重试
+            setTimeout(() => {
+                if (this._tryGameServerCount < 3) {
+                    logger.error(`server`, `gameServer启动失败, 尝试重启`, error);
+                    this.tryRunGameServerCmd(cmd);
+                    this._tryGameServerCount++;
+                } else {
+                    message.sendMsgToClient("gameServerStartupFail");
+                }
+            }, 3000);
+        }
     }
 
     /** 关闭游戏服务器 */
@@ -192,6 +216,7 @@ class Server {
                 // let cmdStr = "taskkill /im game.exe /f";
                 // util.runCmd(cmdStr, null, `关闭游戏服务器成功`, "关闭游戏服务器错误");
                 logger.log('net', `关闭游戏服务器`);
+                // treeKill(config.gameServerProcess.pid, 15, (error) => {
                 treeKill(config.gameServerProcess.pid, (error) => {
                     if (error) {
                         logger.error('net', `kill 关闭游戏服务器错误`)
