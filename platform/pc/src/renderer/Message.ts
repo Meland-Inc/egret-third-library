@@ -76,7 +76,7 @@ class Message {
     /** 收到获取native策略号消息 */
     private async onGetNativePolicyVersion() {
         let versionName = `${config.environName}_native`;
-        let nativePolicyVersion: number = await util.getNativePolicyNum(versionName);
+        let nativePolicyVersion: number = await util.getNativeVersion(versionName);
         this.sendIpcMsg("SET_NATIVE_POLICY_VERSION", nativePolicyVersion);
     }
 
