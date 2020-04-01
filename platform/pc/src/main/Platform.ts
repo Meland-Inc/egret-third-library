@@ -62,12 +62,7 @@ class Platform {
         for (const field of this._configFields) {
             let value = argsObj[field];
             let strValue: string;
-            if (value === undefined) {
-                //stand_alone 非必传参数
-                if (field != eQueryArgsField.stand_alone) {
-                    logger.error('platform', `传入的平台参数不存在${field}`);
-                }
-            } else {
+            if (value != undefined) {
                 if (Array.isArray(value)) {
                     strValue = value[0];
                 } else {
@@ -110,9 +105,7 @@ class Platform {
         for (const field of this._serverCnfFields) {
             let value = argsObj[field];
             let strValue: string = "";
-            if (!value) {
-                logger.error('platform', `传入的平台参数不存在${field}`);
-            } else {
+            if (value != undefined) {
                 if (Array.isArray(value)) {
                     strValue = value[0];
                 } else {

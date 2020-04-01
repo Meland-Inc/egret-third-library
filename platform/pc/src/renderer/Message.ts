@@ -68,16 +68,19 @@ class Message {
         config.setNativeLoginResponse(body);
     }
 
+    /** 保存native游戏服务器地址 */
     private onSaveNativeGameServer(gameServer: string) {
         config.setNativeGameServer(gameServer);
     }
 
+    /** 收到获取native策略号消息 */
     private async onGetNativePolicyVersion() {
         let versionName = `${config.environName}_native`;
         let nativePolicyVersion: number = await util.getNativePolicyNum(versionName);
         this.sendIpcMsg("SET_NATIVE_POLICY_VERSION", nativePolicyVersion);
     }
 
+    /** 收到错误上报 */
     private onErrorReport(content: string) {
         logger.log('errorReport', `收到错误上报:${content}`);
         errorReport.error(content);
@@ -146,16 +149,6 @@ class Message {
 
         //两个版本都不一致,先更新服务端版本,再更新客户端版本
         this.checkServerUpdate(this.checkClientUpdate.bind(this), this.checkUpdateComplete.bind(this));
-
-        ////服务端版本不一致,先提示是否更新
-        // if (confirm('检测到游戏版本更新,是否更新?')) {
-        //先更新服务端版本,再更新客户端版本
-        // this.checkServerUpdate(this.checkClientUpdate.bind(this), this.checkUpdateComplete.bind(this));
-        // return
-        // }
-
-        // //不更新
-        // this.checkUpdateComplete();
     }
 
     /** 直接下载最新服务端包 */
@@ -300,7 +293,7 @@ class Message {
         loading.hideLoading();
     }
 
-    private onSetLoadingProgress(value) {
+    private onSetLoadingProgress(value: number) {
         loading.setLoadingProgress(value);
     }
 

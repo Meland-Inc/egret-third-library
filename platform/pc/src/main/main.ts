@@ -16,7 +16,6 @@ import { logger } from './logger';
 import config from './Config';
 import server from './Server';
 import message from './Message';
-import NativeUpdate from './NativeUpdate';
 import { util } from './util';
 
 //限制只启用一个程序
@@ -26,7 +25,6 @@ if (!gotTheLock) {
 }
 
 let mainWindow: BrowserWindow;
-let nativeUpdate: NativeUpdate = new NativeUpdate();
 
 //监听app事件
 app.on('ready', onAppReady);

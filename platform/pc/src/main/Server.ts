@@ -219,7 +219,7 @@ class Server {
                 // treeKill(config.gameServerProcess.pid, 15, (error) => {
                 treeKill(config.gameServerProcess.pid, (error) => {
                     if (error) {
-                        logger.error('net', `kill 关闭游戏服务器错误`)
+                        logger.error('net', `kill 关闭游戏服务器错误`, error)
                         reject(error);
                         return;
                     }
