@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1650,112">
   <controller name="ctrlVoiceType" pages="0,none,1,play,2,pause" selected="0"/>
+  <controller name="ctrlInputType" pages="0,normal,1,withPoint" selected="1"/>
   <displayList>
     <image id="n11_hwlx" name="n11" src="hwlx25" fileName="img/img_keybord_bg.png" xy="0,0" size="1656,150"/>
     <component id="n0_hwlx" name="btnNum0" src="sco7k" fileName="btn/btnScale.xml" xy="0,-2" size="150,150" controller="button,0">
@@ -35,6 +36,10 @@
     </component>
     <component id="n10_hwlx" name="btnClear" src="sco7k" fileName="btn/btnScale.xml" xy="1500,-2" size="150,150" controller="button,0">
       <Button icon="ui://av6agj0ghwlx24"/>
+    </component>
+    <component id="n14_hilr" name="btnPoint" src="sco7k" fileName="btn/btnScale.xml" xy="1,0" size="150,150" controller="button,0">
+      <gearDisplay controller="ctrlInputType" pages="1"/>
+      <Button icon="ui://av6agj0ghwlx1u"/>
     </component>
   </displayList>
 </component>
