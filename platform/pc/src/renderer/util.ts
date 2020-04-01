@@ -11,6 +11,22 @@ import os from 'os';
 import http from "http";
 import * as logger from './logger';
 
+/** 尝试获取指定策略信息 失败3秒后重试 */
+async function tryGetPolicyInfo(versionName: string): Promise<string> {
+    return new Promise(async resolve => {
+        try {
+            let policyInfo = await getPolicyInfo(versionName);
+            resolve(policyInfo);
+        } catch (error) {
+            logger.error(`policy`, `尝试获取策略号${versionName}失败,3秒后重试`);
+            setTimeout(async () => {
+                let policyInfo = await tryGetPolicyInfo(versionName);
+                resolve(policyInfo);
+            }, 3000);
+        }
+    });
+}
+
 /** 获取指定策略信息 */
 export function getPolicyInfo(versionName: string): Promise<string> {
     return new Promise((resolve, reject) => {
@@ -83,7 +99,7 @@ export function getGameVersion(policyHost: string, policyPath: string, policyNum
 export async function getServerPackagePolicyNum(environName) {
     let fileName = getServerPackageFileName();
     let versionName = `${environName}_serverPackage_${fileName}`;
-    let value = await getPolicyInfo(versionName);
+    let value = await tryGetPolicyInfo(versionName);
     let data = JSON.parse(value);
     let policyNum = 0;
     if (data.Code === 0) {
@@ -94,7 +110,7 @@ export async function getServerPackagePolicyNum(environName) {
 
 /** 获取native策略版本号 */
 export async function getNativePolicyNum(versionName: string) {
-    let value = await getPolicyInfo(versionName);
+    let value = await tryGetPolicyInfo(versionName);
     let data = JSON.parse(value);
     let policyNum = 0;
     if (data.Code === 0) {
