@@ -12,7 +12,7 @@ import http from "http";
 import * as logger from './logger';
 
 /** 尝试获取指定策略信息 失败3秒后重试 */
-async function tryGetPolicyInfo(versionName: string): Promise<string> {
+export async function tryGetPolicyInfo(versionName: string): Promise<string> {
     return new Promise(async resolve => {
         try {
             let policyInfo = await getPolicyInfo(versionName);
@@ -28,7 +28,7 @@ async function tryGetPolicyInfo(versionName: string): Promise<string> {
 }
 
 /** 获取指定策略信息 */
-export function getPolicyInfo(versionName: string): Promise<string> {
+function getPolicyInfo(versionName: string): Promise<string> {
     return new Promise((resolve, reject) => {
         let time = Math.floor(new Date().getTime() / 1000);
         let due = 1800;
@@ -96,28 +96,28 @@ export function getGameVersion(policyHost: string, policyPath: string, policyNum
 }
 
 /** 获取服务器包版本号 */
-export async function getServerPackagePolicyNum(environName) {
+export async function getServerPackageVersion(environName) {
     let fileName = getServerPackageFileName();
     let versionName = `${environName}_serverPackage_${fileName}`;
     let value = await tryGetPolicyInfo(versionName);
     let data = JSON.parse(value);
-    let policyNum = 0;
+    let packageVersion = 0;
     if (data.Code === 0) {
-        policyNum = +data.Data.Version;
+        packageVersion = +data.Data.Version;
     }
-    return policyNum;
+    return packageVersion;
 }
 
 /** 获取native策略版本号 */
-export async function getNativePolicyNum(versionName: string) {
+export async function getNativeVersion(versionName: string) {
     let value = await tryGetPolicyInfo(versionName);
     let data = JSON.parse(value);
-    let policyNum = 0;
+    let nativeVersion = 0;
     if (data.Code === 0) {
-        policyNum = +data.Data.Version;
+        nativeVersion = +data.Data.Version;
     }
-    logger.log('policy', `nativePolicyNum:${policyNum}`);
-    return policyNum;
+    logger.log('policy', `nativeVersion:${nativeVersion}`);
+    return nativeVersion;
 }
 
 /** 根据操作系统信息获取服务器包文件名称 */

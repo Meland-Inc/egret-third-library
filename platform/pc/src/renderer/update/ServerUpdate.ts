@@ -49,7 +49,7 @@ export default class ServerUpdate {
             this._localVersion = 0;
         }
 
-        this._remoteVersion = await util.getServerPackagePolicyNum(this._environName);
+        this._remoteVersion = await util.getServerPackageVersion(this._environName);
         return this._remoteVersion === this._localVersion;
     }
 

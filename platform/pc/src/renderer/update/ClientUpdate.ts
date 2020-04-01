@@ -86,7 +86,7 @@ export default class ClientUpdate {
     private getCurPolicyNum(): Promise<number> {
         return new Promise(async (resolve, reject) => {
             try {
-                let responseText = await util.getPolicyInfo(config.environName);
+                let responseText = await util.tryGetPolicyInfo(config.environName);
                 let data = JSON.parse(responseText);
                 let policyNum = data.Data.Version;
                 logger.log(`renderer`, `策略版本号:${policyNum}`);
