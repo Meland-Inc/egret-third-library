@@ -24,7 +24,7 @@ class Server {
     private _tryGameServerCount: number;
 
     public async init() {
-        util.writeServerCnfValue('gameArgs', "");
+        config.setGameArgs("");
         await this.createNativeServer(define.eGameServerMode.gameMap);
     }
 
@@ -174,6 +174,11 @@ class Server {
             cmd = `game`;
         } else {
             cmd = `./game`;
+        }
+
+        //添加运行参数
+        if (config.gameArgs) {
+            cmd += ` ${config.gameArgs}`;
         }
         this.assignGameXPermission([
             `${config.serverPackagePath}/game`,

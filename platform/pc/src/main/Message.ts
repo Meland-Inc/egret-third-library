@@ -149,7 +149,7 @@ class Message {
         logger.log('update', `从平台进入`);
 
         //平台初始化
-        let queryObject = await platform.init();
+        let queryObject: querystring.ParsedUrlQuery = await platform.init();
         //初始化参数
         config.setChannel(config.constChannelLesson);
         queryObject['gameChannel'] = config.constChannelLesson;
@@ -169,7 +169,7 @@ class Message {
     /** 收到地图模板游戏服务器 */
     private onMapTemplateEnter(gid: string, gameArgs: string) {
         util.writeServerCnfValue('gid', gid);
-        util.writeServerCnfValue('gameArgs', gameArgs);
+        config.setGameArgs(gameArgs);
 
         server.createNativeServer(define.eGameServerMode.mapTemplate);
     }
@@ -177,7 +177,7 @@ class Message {
     /** 收到地图模板房间游戏服务器 */
     private onMapTemplateRoomCreate(gid: string, gameArgs: string) {
         util.writeServerCnfValue('gid', gid);
-        util.writeServerCnfValue('gameArgs', gameArgs);
+        config.setGameArgs(gameArgs);
 
         server.createNativeServer(define.eGameServerMode.mapTemplateRoom);
     }
