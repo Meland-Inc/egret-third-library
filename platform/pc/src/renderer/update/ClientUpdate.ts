@@ -62,7 +62,7 @@ export default class ClientUpdate {
         this._policyHost = policyUrl.split("/")[0];
         this._policyPath = policyUrl.replace(this._policyHost, "");
 
-        let policyNum = await this.getCurPolicyNum();
+        let policyNum = await util.getClientPackagePolicyNum(config.environName);
         if (policyNum === null) {
             let content = `获取策略版本号错误!, environName:${config.environName}`;
             logger.error(`renderer`, content);
@@ -71,7 +71,7 @@ export default class ClientUpdate {
         }
 
         try {
-            let gameVersion = await util.getGameVersion(this._policyHost, this._policyPath, policyNum);
+            let gameVersion = await util.tryGetClientGameVersion(this._policyHost, this._policyPath, policyNum);
             this._gameVersion = +gameVersion;
             return this._curVersion === this._gameVersion;
         } catch (error) {
@@ -80,23 +80,6 @@ export default class ClientUpdate {
             alert(content);
             return true;
         }
-    }
-
-    /** 获取当前策略版本 */
-    private getCurPolicyNum(): Promise<number> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                let responseText = await util.tryGetPolicyInfo(config.environName);
-                let data = JSON.parse(responseText);
-                let policyNum = data.Data.Version;
-                logger.log(`renderer`, `策略版本号:${policyNum}`);
-                resolve(policyNum);
-            } catch (error) {
-                let content = `获取策略版本号错误!, environName:${config.environName}`;
-                logger.error(`renderer`, content);
-                resolve(null);
-            }
-        });
     }
 
     /** 直接下载最新版本 */

@@ -44,12 +44,12 @@ export default class ServerUpdate {
         this.initVersionInfo();
 
         //获取本地游戏版本
-        this._localVersion = await config.getVersionConfigValue("serverPackageVersion");
+        this._localVersion = config.getVersionConfigValue("serverPackageVersion");
         if (!this._localVersion) {
             this._localVersion = 0;
         }
 
-        this._remoteVersion = await util.getServerPackageVersion(this._environName);
+        this._remoteVersion = await util.getServerPackagePolicyNum(this._environName);
         return this._remoteVersion === this._localVersion;
     }
 

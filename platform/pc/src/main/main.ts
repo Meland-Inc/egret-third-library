@@ -127,7 +127,7 @@ async function createWindow() {
   logger.log('main', `收到参数1: ${JSON.stringify(process.argv)}`);
 
   //初始化全局配置
-  await util.initGlobalConfig();
+  util.initGlobalConfig();
 
   await initNative();
 
@@ -159,7 +159,7 @@ function initMainWindow() {
   mainWindow.on('closed', onClosed);
   mainWindow.webContents.on('crashed', onCrashed);
   mainWindow.webContents.on('new-window', onNewWindow);
-  mainWindow.webContents.on('will-navigate', onWillNavigate);
+  // mainWindow.webContents.on('will-navigate', onWillNavigate);
 
   //设置菜单
   // const menu = Menu.buildFromTemplate(template);
@@ -199,52 +199,52 @@ async function onNewWindow(event: Event, url: string) {
   await mainWindow.loadURL(url);
 }
 
-/** 拦截will-navigate事件，起到拦截window.location.href = xxx的作用 */
-async function onWillNavigate(event: Event, url: string) {
-  logger.log('electron', `will-navigate url: ${url}`);
-  const newURL = new URL(url);
-  const hash = newURL.hash;
-  //江哥写的特殊处理平台locationBuilder的代码
-  const searchParams = (new URL(`https://bai.com${hash.slice(1)}`)).searchParams;
+// /** 拦截will-navigate事件，起到拦截window.location.href = xxx的作用 */
+// async function onWillNavigate(event: Event, url: string) {
+//   logger.log('electron', `will-navigate url: ${url}`);
+//   const newURL = new URL(url);
+//   const hash = newURL.hash;
+//   //江哥写的特殊处理平台locationBuilder的代码
+//   const searchParams = (new URL(`https://bai.com${hash.slice(1)}`)).searchParams;
 
-  const tokenField = "webviewToken";
-  if (newURL.searchParams.has(tokenField)
-    || searchParams.has(tokenField)
-  ) {
-    return;
-  }
+//   const tokenField = "webviewToken";
+//   if (newURL.searchParams.has(tokenField)
+//     || searchParams.has(tokenField)
+//   ) {
+//     return;
+//   }
 
-  logger.log('platform', `config.environName`, config.environName);
+//   logger.log('platform', `config.environName`, config.environName);
 
-  // 阻止创建默认窗口
-  event.preventDefault();
+//   // 阻止创建默认窗口
+//   event.preventDefault();
 
-  if (config.bellToken) {
-    newURL.searchParams.set(tokenField, config.bellToken);
-  } else {
-    if (config.environName) {
-      logger.log('token', '浏览器参数内不存在token, 查找cookie看是否有参数')
-      let cookies = await session.defaultSession.cookies.get({});
-      let domain: string;
-      if (config.environName === define.eEnvironName.ready) {
-        domain = config.readyTokenDomain;
-      } else {
-        domain = config.releaseTokenDomain;
-      }
+//   if (config.bellToken) {
+//     newURL.searchParams.set(tokenField, config.bellToken);
+//   } else {
+//     if (config.environName) {
+//       logger.log('token', '浏览器参数内不存在token, 查找cookie看是否有参数')
+//       let cookies = await session.defaultSession.cookies.get({});
+//       let domain: string;
+//       if (config.environName === define.eEnvironName.ready) {
+//         domain = config.readyTokenDomain;
+//       } else {
+//         domain = config.releaseTokenDomain;
+//       }
 
-      let cookie = cookies.find(value => value.name === "token" && value.domain === domain);
-      if (cookie) {
-        let token = cookie.value;
-        logger.log('token', `cookie内存在token:${token}`);
-        config.setBellToken(token);
-        newURL.searchParams.set(tokenField, token);
-      }
-    }
-  }
+//       let cookie = cookies.find(value => value.name === "token" && value.domain === domain);
+//       if (cookie) {
+//         let token = cookie.value;
+//         logger.log('token', `cookie内存在token:${token}`);
+//         config.setBellToken(token);
+//         newURL.searchParams.set(tokenField, token);
+//       }
+//     }
+//   }
 
-  logger.log('electron', `will-navigate newURL: ${newURL}`);
-  await mainWindow.loadURL(newURL.toString());
-}
+//   logger.log('electron', `will-navigate newURL: ${newURL}`);
+//   await mainWindow.loadURL(newURL.toString());
+// }
 
 /** native初始化 */
 async function initNative() {

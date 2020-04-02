@@ -62,7 +62,7 @@ class Platform {
         for (const field of this._configFields) {
             let value = argsObj[field];
             let strValue: string;
-            if (value != undefined) {
+            if (value) {
                 if (Array.isArray(value)) {
                     strValue = value[0];
                 } else {
@@ -105,7 +105,7 @@ class Platform {
         for (const field of this._serverCnfFields) {
             let value = argsObj[field];
             let strValue: string = "";
-            if (value != undefined) {
+            if (value) {
                 if (Array.isArray(value)) {
                     strValue = value[0];
                 } else {
@@ -185,6 +185,7 @@ class Platform {
                     if (body.code === 200) {
                         if (body.data.token) {
                             config.setBellToken(body.data.token);
+                            message.sendMsgToClient('SAVE_NATIVE_BELL_TOKEN', config.bellToken)
                         }
                         this.getMemberInfo(() => {
                             resolve(config.bellToken as string)

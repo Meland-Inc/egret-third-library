@@ -24,6 +24,7 @@ class Message {
     private msgMap = {
         'SAVE_NATIVE_LOGIN_RESPONSE': this.onSaveNativeLoginResponse.bind(this),    //保存native平台登陆信息
         'SAVE_NATIVE_GAME_SERVER': this.onSaveNativeGameServer.bind(this),     //设置native服务器内网ip和端口
+        'SAVE_NATIVE_BELL_TOKEN': this.onSaveNativeBellToken.bind(this),     //设置native服务器内网ip和端口
         'START_NATIVE_CLIENT': this.onStartNativeClient.bind(this),  //从客户端进入
         'START_NATIVE_WEBSITE': this.onStartNativeWebsite.bind(this),  //开始官网地址进入
         'START_NATIVE_PLATFORM': this.onStartNativePlatform.bind(this),  //开始平台进入
@@ -68,15 +69,18 @@ class Message {
         config.setNativeLoginResponse(body);
     }
 
-    /** 保存native游戏服务器地址 */
+    /** 保存native游戏服务器 */
     private onSaveNativeGameServer(gameServer: string) {
         config.setNativeGameServer(gameServer);
     }
 
+    private onSaveNativeBellToken(gameServer: string) {
+        config.setNativeBellToken(gameServer);
+    }
+
     /** 收到获取native策略号消息 */
     private async onGetNativePolicyVersion() {
-        let versionName = `${config.environName}_native`;
-        let nativePolicyVersion: number = await util.getNativeVersion(versionName);
+        let nativePolicyVersion: number = await util.getNativePolicyNum(config.environName);
         this.sendIpcMsg("SET_NATIVE_POLICY_VERSION", nativePolicyVersion);
     }
 
@@ -277,6 +281,12 @@ class Message {
             localStorage.setItem('nativeGameServer', JSON.stringify(config.nativeGameServer));
         } else {
             localStorage.removeItem('nativeGameServer');
+        }
+
+        if (config.nativeBellToken) {
+            localStorage.setItem('nativeBellToken', JSON.stringify(config.nativeBellToken));
+        } else {
+            localStorage.removeItem('nativeBellToken');
         }
     }
 

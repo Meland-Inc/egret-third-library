@@ -62,8 +62,24 @@ function getPolicyInfo(versionName: string): Promise<string> {
     });
 }
 
-/** 获取游戏版本 */
-export function getGameVersion(policyHost: string, policyPath: string, policyNum: number) {
+/** 尝试获取客户端游戏版本 */
+export function tryGetClientGameVersion(policyHost: string, policyPath: string, policyNum: number) {
+    return new Promise(async resolve => {
+        try {
+            let policyInfo = await getClientGameVersion(policyHost, policyPath, policyNum);
+            resolve(policyInfo);
+        } catch (error) {
+            logger.error(`policy`, `尝试获取游戏版本号失败,3秒后重试, policyHost:${policyHost} policyPath:${policyPath} policyNum:${policyNum}`);
+            setTimeout(async () => {
+                let policyInfo = await tryGetClientGameVersion(policyHost, policyPath, policyNum);
+                resolve(policyInfo);
+            }, 3000);
+        }
+    });
+}
+
+/** 获取客户端游戏版本 */
+function getClientGameVersion(policyHost: string, policyPath: string, policyNum: number) {
     return new Promise((resolve, reject) => {
         let options = {
             host: policyHost, // 请求地址 域名，google.com等.. 
@@ -76,7 +92,7 @@ export function getGameVersion(policyHost: string, policyPath: string, policyNum
         };
         http.get(options, (response) => {
             if (response.statusCode != 200) {
-                console.error("[policy] can not load policy, version=" + policyNum + ", statusCode=" + response.statusCode + ",option =" + options.host + options.path);
+                console.error(`load policy file error policyNum:${policyNum} statusCode:${response.statusCode} option:${options.host}${options.path}`);
                 reject();
             }
 
@@ -91,33 +107,52 @@ export function getGameVersion(policyHost: string, policyPath: string, policyNum
 
                 resolve(gameVersion)
             });
+            response.on("error", (err) => {
+                console.error(`load policy file error policyNum:${policyNum} statusCode:${response.statusCode} option:${options.host}${options.path}`, err);
+                reject();
+            });
         })
     })
 }
 
-/** 获取服务器包版本号 */
-export async function getServerPackageVersion(environName) {
+/** 获取客户端包策略版本 */
+export async function getClientPackagePolicyNum(environName: string): Promise<number> {
+    let value = await tryGetPolicyInfo(environName);
+    let data = JSON.parse(value);
+    let policyNum = 0;
+    if (data.Code === 0) {
+        policyNum = +data.Data.Version;
+    }
+
+    logger.log(`policy`, `client package policy num:${policyNum}`);
+    return policyNum;
+}
+
+/** 获取服务器包策略版本号 */
+export async function getServerPackagePolicyNum(environName: string) {
     let fileName = getServerPackageFileName();
     let versionName = `${environName}_serverPackage_${fileName}`;
     let value = await tryGetPolicyInfo(versionName);
     let data = JSON.parse(value);
-    let packageVersion = 0;
+    let policyNum = 0;
     if (data.Code === 0) {
-        packageVersion = +data.Data.Version;
+        policyNum = +data.Data.Version;
     }
-    return packageVersion;
+    logger.log(`policy`, `server package policy num:${policyNum}`);
+    return policyNum;
 }
 
 /** 获取native策略版本号 */
-export async function getNativeVersion(versionName: string) {
+export async function getNativePolicyNum(environName: string) {
+    let versionName = `${environName}_native`;
     let value = await tryGetPolicyInfo(versionName);
     let data = JSON.parse(value);
-    let nativeVersion = 0;
+    let policyNum = 0;
     if (data.Code === 0) {
-        nativeVersion = +data.Data.Version;
+        policyNum = +data.Data.Version;
     }
-    logger.log('policy', `nativeVersion:${nativeVersion}`);
-    return nativeVersion;
+    logger.log('policy', `nativeVersion:${policyNum}`);
+    return policyNum;
 }
 
 /** 根据操作系统信息获取服务器包文件名称 */
