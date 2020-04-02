@@ -154,7 +154,9 @@ function packageMkDir() {
 /** 初始化MainWindow */
 function initMainWindow() {
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  if (!app.isPackaged) {
+    mainWindow.webContents.openDevTools()
+  }
 
   mainWindow.on('closed', onClosed);
   mainWindow.webContents.on('crashed', onCrashed);
