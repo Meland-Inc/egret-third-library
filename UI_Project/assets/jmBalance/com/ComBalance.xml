@@ -2,6 +2,7 @@
 <component size="1700,1200" opaque="false">
   <displayList>
     <loader id="n0_l78k" name="ladBG" xy="0,0" size="1700,1200" touchable="false" align="center" vAlign="middle"/>
+    <component id="n5_hvmo" name="comBG" src="hvmoc" fileName="com/ComBG.xml" xy="0,0" size="1700,1200"/>
     <loader id="n1_hilw" name="ladBar" xy="850,800" pivot="0.5,0.5" anchor="true" size="1000,50" touchable="false" align="center" vAlign="middle">
       <relation target="n2_hilw" sidePair="center-center,bottom-top"/>
     </loader>
