@@ -68,16 +68,18 @@ class Message {
         config.setNativeLoginResponse(body);
     }
 
+    /** 保存native游戏服务器 */
     private onSaveNativeGameServer(gameServer: string) {
         config.setNativeGameServer(gameServer);
     }
 
+    /** 收到获取native策略号消息 */
     private async onGetNativePolicyVersion() {
-        let versionName = `${config.environName}_native`;
-        let nativePolicyVersion: number = await util.getNativePolicyNum(versionName);
+        let nativePolicyVersion: number = await util.getNativePolicyNum(config.environName);
         this.sendIpcMsg("SET_NATIVE_POLICY_VERSION", nativePolicyVersion);
     }
 
+    /** 收到错误上报 */
     private onErrorReport(content: string) {
         logger.log('errorReport', `收到错误上报:${content}`);
         errorReport.error(content);
@@ -146,16 +148,6 @@ class Message {
 
         //两个版本都不一致,先更新服务端版本,再更新客户端版本
         this.checkServerUpdate(this.checkClientUpdate.bind(this), this.checkUpdateComplete.bind(this));
-
-        ////服务端版本不一致,先提示是否更新
-        // if (confirm('检测到游戏版本更新,是否更新?')) {
-        //先更新服务端版本,再更新客户端版本
-        // this.checkServerUpdate(this.checkClientUpdate.bind(this), this.checkUpdateComplete.bind(this));
-        // return
-        // }
-
-        // //不更新
-        // this.checkUpdateComplete();
     }
 
     /** 直接下载最新服务端包 */
@@ -235,20 +227,42 @@ class Message {
     }
 
     /** 从官网平台进入 */
-    private onStartNativePlatform(queryObject: any) {
+    private onStartNativePlatform(queryObject: querystring.ParsedUrlQuery) {
         this.setConfigData2LocalStorage();
 
         let webviewToken: string
-        if (queryObject['webviewToken']) {
-            webviewToken = queryObject["webviewToken"];
-            delete queryObject['webviewToken']
+        let queryObjectWebviewToken = queryObject['webviewToken'];
+        let queryObjectToken = queryObject['token'];
+        if (queryObjectWebviewToken) {
+            if (Array.isArray(queryObjectWebviewToken)) {
+                webviewToken = queryObjectWebviewToken[0];
+            } else {
+                webviewToken = queryObjectWebviewToken;
+            }
+        }
+        else if (queryObjectToken) {
+            if (Array.isArray(queryObjectToken)) {
+                webviewToken = queryObjectToken[0];
+            } else {
+                webviewToken = queryObjectToken;
+            }
+            queryObject["webviewToken"] = webviewToken
         } else {
-            webviewToken = queryObject["token"];
+            //reserve
         }
 
-        let queryValue = querystring.stringify(queryObject);
-        let iframeSrc = `file://${config.clientPackagePath}/index.html?${queryValue}`;
-        iframeSrc = path.join(iframeSrc);
+        logger.log("platform", `start native platform queryObject`, queryObject);
+        let iframeUrl = new URL(`file://${config.clientPackagePath}/index.html`);
+        for (const key in queryObject) {
+            if (queryObject.hasOwnProperty(key)) {
+                const value = queryObject[key];
+                if (Array.isArray(value)) {
+                    iframeUrl.searchParams.set(key, value[0]);
+                } else {
+                    iframeUrl.searchParams.set(key, value);
+                }
+            }
+        }
         let platformObject = {
             class_id: queryObject["class_id"],
             package_id: queryObject["package_id"],
@@ -256,11 +270,12 @@ class Message {
             act_id: queryObject["act_id"],
             webviewToken: webviewToken,
             back_url: queryObject["back_url"],
-            iframeSrc: iframeSrc
+            iframeSrc: iframeUrl.toString()
         }
+
         logger.log('platform', `platformObject:`, platformObject);
         logger.rendererLog('platform', `platformObject:`, platformObject);
-        logger.rendererLog('platform', `iframeSrc:`, iframeSrc);
+        logger.rendererLog('platform', `iframeSrc:`, iframeUrl.toString());
         let platformValue = querystring.stringify(platformObject);
         //获取官网链接
         let bellPlatformDomain: string;
@@ -270,6 +285,7 @@ class Message {
             bellPlatformDomain = config.demoBellCodeUrl;
         }
 
+        logger.log('url', `${bellPlatformDomain}/#/bell-planet?${platformValue}`);
         location.href = `${bellPlatformDomain}/#/bell-planet?${platformValue}`;
     }
 
@@ -300,7 +316,7 @@ class Message {
         loading.hideLoading();
     }
 
-    private onSetLoadingProgress(value) {
+    private onSetLoadingProgress(value: number) {
         loading.setLoadingProgress(value);
     }
 

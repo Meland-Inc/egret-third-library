@@ -44,7 +44,7 @@ export default class ServerUpdate {
         this.initVersionInfo();
 
         //获取本地游戏版本
-        this._localVersion = await config.getVersionConfigValue("serverPackageVersion");
+        this._localVersion = config.getVersionConfigValue("serverPackageVersion");
         if (!this._localVersion) {
             this._localVersion = 0;
         }

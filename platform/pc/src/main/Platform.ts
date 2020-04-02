@@ -62,12 +62,7 @@ class Platform {
         for (const field of this._configFields) {
             let value = argsObj[field];
             let strValue: string;
-            if (value === undefined) {
-                //stand_alone 非必传参数
-                if (field != eQueryArgsField.stand_alone) {
-                    logger.error('platform', `传入的平台参数不存在${field}`);
-                }
-            } else {
+            if (value) {
                 if (Array.isArray(value)) {
                     strValue = value[0];
                 } else {
@@ -110,9 +105,7 @@ class Platform {
         for (const field of this._serverCnfFields) {
             let value = argsObj[field];
             let strValue: string = "";
-            if (!value) {
-                logger.error('platform', `传入的平台参数不存在${field}`);
-            } else {
+            if (value) {
                 if (Array.isArray(value)) {
                     strValue = value[0];
                 } else {
@@ -159,6 +152,11 @@ class Platform {
             //不是单人单服模式,不存在服务器地址,并且有本地服务器地址
             if (!config.standAlone && key === eQueryArgsField.local_network && !queryObject[eQueryArgsField.gameServer]) {
                 queryObject[eQueryArgsField.gameServer] = `${value}`;
+                continue;
+            }
+
+            if (key === eQueryArgsField.back_url) {
+                queryObject[key] = encodeURIComponent(value);
                 continue;
             }
 

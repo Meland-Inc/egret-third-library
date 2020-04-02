@@ -276,10 +276,8 @@ class Config {
     /** 上课伪协议头 */
     public constPseudoProtocol = 'bellplanet://';
 
-    public constBellcodeUrl = 'www.bellcode.com';
-
-    /** 伪协议里url带的参数 */
     private _urlValue: string;
+    /** 伪协议里url带的参数 */
     public get urlValue(): string {
         return this._urlValue;
     }
@@ -287,8 +285,8 @@ class Config {
         this._urlValue = decodeURIComponent(value);
     }
 
-    /** 主程序窗口 */
     private _mainWindow: BrowserWindow;
+    /** 主程序窗口 */
     public get mainWindow(): BrowserWindow {
         return this._mainWindow;
     }
@@ -300,11 +298,13 @@ class Config {
     public get nativeServer(): Server {
         return this._nativeServer;
     }
+    /** native服务器 */
     public setNativeServer(value: Server) {
         this._nativeServer = value;
     }
 
     private _gameServerProcess: ChildProcess;
+    /** 游戏服务器进程 */
     public get gameServerProcess(): ChildProcess {
         return this._gameServerProcess;
     }
@@ -313,11 +313,22 @@ class Config {
     }
 
     private _isPackaged: boolean;
+    /** native是否打包运行状态 */
     public get isPackaged(): boolean {
         return this._isPackaged;
     }
     public setIsPackaged(value: boolean) {
         this._isPackaged = value;
+    }
+
+
+    private _gameArgs: string;
+    /** 游戏服务器启动参数 */
+    public get gameArgs(): string {
+        return this._gameArgs;
+    }
+    public setGameArgs(value: string) {
+        this._gameArgs = value;
     }
 }
 
