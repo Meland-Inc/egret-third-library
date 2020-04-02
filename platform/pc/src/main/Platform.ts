@@ -155,6 +155,11 @@ class Platform {
                 continue;
             }
 
+            if (key === eQueryArgsField.back_url) {
+                queryObject[key] = encodeURIComponent(value);
+                continue;
+            }
+
             queryObject[key] = `${value}`;
         }
 
@@ -185,7 +190,6 @@ class Platform {
                     if (body.code === 200) {
                         if (body.data.token) {
                             config.setBellToken(body.data.token);
-                            message.sendMsgToClient('SAVE_NATIVE_BELL_TOKEN', config.bellToken)
                         }
                         this.getMemberInfo(() => {
                             resolve(config.bellToken as string)

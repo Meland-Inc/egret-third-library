@@ -74,7 +74,7 @@ class Config {
     public bellcodeUrl = "https://www.bellcode.com";
 
     /** demo */
-    public demoBellCodeUrl = "http://democm.wkcoding.com/";
+    public demoBellCodeUrl = "https://democm.wkcoding.com/";
 
     private _nativeLoginResponse: any;
     /** native平台登陆信息 */
@@ -92,15 +92,6 @@ class Config {
     }
     public setNativeGameServer(value: string) {
         this._nativeGameServer = value;
-    }
-
-    private _nativeBellToken: string;
-    /** 平台token */
-    public get nativeBellToken(): string {
-        return this._nativeBellToken;
-    }
-    public setNativeBellToken(value: string) {
-        this._nativeBellToken = value;
     }
 
     private _isPackaged: boolean;

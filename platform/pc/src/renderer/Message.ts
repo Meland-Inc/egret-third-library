@@ -24,7 +24,6 @@ class Message {
     private msgMap = {
         'SAVE_NATIVE_LOGIN_RESPONSE': this.onSaveNativeLoginResponse.bind(this),    //保存native平台登陆信息
         'SAVE_NATIVE_GAME_SERVER': this.onSaveNativeGameServer.bind(this),     //设置native服务器内网ip和端口
-        'SAVE_NATIVE_BELL_TOKEN': this.onSaveNativeBellToken.bind(this),     //设置native服务器内网ip和端口
         'START_NATIVE_CLIENT': this.onStartNativeClient.bind(this),  //从客户端进入
         'START_NATIVE_WEBSITE': this.onStartNativeWebsite.bind(this),  //开始官网地址进入
         'START_NATIVE_PLATFORM': this.onStartNativePlatform.bind(this),  //开始平台进入
@@ -72,10 +71,6 @@ class Message {
     /** 保存native游戏服务器 */
     private onSaveNativeGameServer(gameServer: string) {
         config.setNativeGameServer(gameServer);
-    }
-
-    private onSaveNativeBellToken(gameServer: string) {
-        config.setNativeBellToken(gameServer);
     }
 
     /** 收到获取native策略号消息 */
@@ -232,20 +227,42 @@ class Message {
     }
 
     /** 从官网平台进入 */
-    private onStartNativePlatform(queryObject: any) {
+    private onStartNativePlatform(queryObject: querystring.ParsedUrlQuery) {
         this.setConfigData2LocalStorage();
 
         let webviewToken: string
-        if (queryObject['webviewToken']) {
-            webviewToken = queryObject["webviewToken"];
-            delete queryObject['webviewToken']
+        let queryObjectWebviewToken = queryObject['webviewToken'];
+        let queryObjectToken = queryObject['token'];
+        if (queryObjectWebviewToken) {
+            if (Array.isArray(queryObjectWebviewToken)) {
+                webviewToken = queryObjectWebviewToken[0];
+            } else {
+                webviewToken = queryObjectWebviewToken;
+            }
+        }
+        else if (queryObjectToken) {
+            if (Array.isArray(queryObjectToken)) {
+                webviewToken = queryObjectToken[0];
+            } else {
+                webviewToken = queryObjectToken;
+            }
+            queryObject["webviewToken"] = webviewToken
         } else {
-            webviewToken = queryObject["token"];
+            //reserve
         }
 
-        let queryValue = querystring.stringify(queryObject);
-        let iframeSrc = `file://${config.clientPackagePath}/index.html?${queryValue}`;
-        iframeSrc = path.join(iframeSrc);
+        logger.log("platform", `start native platform queryObject`, queryObject);
+        let iframeUrl = new URL(`file://${config.clientPackagePath}/index.html`);
+        for (const key in queryObject) {
+            if (queryObject.hasOwnProperty(key)) {
+                const value = queryObject[key];
+                if (Array.isArray(value)) {
+                    iframeUrl.searchParams.set(key, value[0]);
+                } else {
+                    iframeUrl.searchParams.set(key, value);
+                }
+            }
+        }
         let platformObject = {
             class_id: queryObject["class_id"],
             package_id: queryObject["package_id"],
@@ -253,11 +270,12 @@ class Message {
             act_id: queryObject["act_id"],
             webviewToken: webviewToken,
             back_url: queryObject["back_url"],
-            iframeSrc: iframeSrc
+            iframeSrc: iframeUrl.toString()
         }
+
         logger.log('platform', `platformObject:`, platformObject);
         logger.rendererLog('platform', `platformObject:`, platformObject);
-        logger.rendererLog('platform', `iframeSrc:`, iframeSrc);
+        logger.rendererLog('platform', `iframeSrc:`, iframeUrl.toString());
         let platformValue = querystring.stringify(platformObject);
         //获取官网链接
         let bellPlatformDomain: string;
@@ -267,6 +285,7 @@ class Message {
             bellPlatformDomain = config.demoBellCodeUrl;
         }
 
+        logger.log('url', `${bellPlatformDomain}/#/bell-planet?${platformValue}`);
         location.href = `${bellPlatformDomain}/#/bell-planet?${platformValue}`;
     }
 
@@ -281,12 +300,6 @@ class Message {
             localStorage.setItem('nativeGameServer', JSON.stringify(config.nativeGameServer));
         } else {
             localStorage.removeItem('nativeGameServer');
-        }
-
-        if (config.nativeBellToken) {
-            localStorage.setItem('nativeBellToken', JSON.stringify(config.nativeBellToken));
-        } else {
-            localStorage.removeItem('nativeBellToken');
         }
     }
 
