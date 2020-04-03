@@ -54,6 +54,21 @@ export async function updateGit() {
     }
 }
 
+async function uploadSourceMap() {
+    let environ = ModelMgr.versionModel.curEnviron;
+    let version = ModelMgr.versionModel.releaseVersion;
+    let prefix = `~/js/`;
+    if (environ == ModelMgr.versionModel.eEnviron.beta) {
+        prefix = `~/web/beta/js`;
+    }
+    if (environ == ModelMgr.versionModel.eEnviron.beta || environ == ModelMgr.versionModel.eEnviron.release) {
+        let cmdStr = `sentry-cli releases -o bellcode -p bellplanet files bellplanet_${environ}_${version} upload-sourcemaps --ext map './'  --url-prefix "${prefix}" --log-level=debug`
+        await spawnExc.runCmd(cmdStr, Global.projPath, null, 'sourcemap上传sentry错误');
+        cmdStr = `sentry-cli releases -o bellcode -p bellplanet files bellplanet_${environ}_${version} upload-sourcemaps --ext js './bin-release/web/${version}/js/'  --url-prefix "${prefix}" --log-level=debug`
+        await spawnExc.runCmd(cmdStr, Global.projPath, null, ' js上传sentry错误');
+    }
+}
+
 /** 发布项目 */
 export async function publishProject() {
     let releaseVersion = ModelMgr.versionModel.releaseVersion;
@@ -94,7 +109,11 @@ export async function publishProject() {
         let cmdStr = 'egret publish --version ' + releaseVersion;
         await spawnExc.runCmd(cmdStr, Global.projPath, null, '发布当前项目错误');
         ModelMgr.versionModel.setNewVersion(releaseVersion);
-
+        try {
+            await uploadSourceMap();
+        } catch (e) {
+            console.log("--> a上传sourcemap失败", e);
+        }
         let indexPath = `${Global.projPath}/bin-release/web/${releaseVersion}/index.html`;
         let indexContent = await fsExc.readFile(indexPath);
         if (ModelMgr.versionModel.curEnviron.codeVersionEnable) {
