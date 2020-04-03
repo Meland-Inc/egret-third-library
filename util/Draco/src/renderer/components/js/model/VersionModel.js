@@ -360,8 +360,10 @@ export class VersionModel {
 
         this._nativePolicyNum = value;
 
+        let readyPolicyNum = await ExternalUtil.getNativePolicyNum(this.eEnviron.ready);
         let platform = os.platform() === 'win32' ? "win" : "mac";
-        this.originNativeVersion = this.nativeVersion = await ExternalUtil.getNativeVersion(environName, this._nativePolicyNum, platform);
+        //以ready的native版本号为准
+        this.originNativeVersion = this.nativeVersion = await ExternalUtil.getNativeVersion(this.eEnviron.ready, readyPolicyNum, platform);
         console.log(`nativeVersion:${this.nativeVersion}`);
     }
 

@@ -154,7 +154,7 @@ async function uploadCdnSingleVersionFile(patchPath, cdnRoot) {
         let releaseUploadCount = 0;
         let filePathArr = [];
         await CdnUtil.createUploaderFilePathArr(patchPath, filePathArr);
-        await CdnUtil.checkUploaderFiles(patchPath, filePathArr, cdnRoot, releaseUploadCount, resolve, reject);
+        CdnUtil.checkUploaderFiles(patchPath, filePathArr, cdnRoot, releaseUploadCount, resolve, reject);
     });
 }
 
