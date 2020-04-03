@@ -271,7 +271,11 @@ function uglify(sourceFile) {
                 'AchievementTable', 'ArchFormulaTable', 'ArchFuelCntrTable', 'ArchFuelTable', 'ArchProductionTable', 'ArchPromptTable', 'ArchStateAcceptTable', 'ArchStateSendTable', 'ArchStorageTable', 'AvatarTable', 'BuffTable', 'ChatTable', 'ClassroomModeLessonTable', 'ClassroomModeTutorialTable', 'CodeblockLibTable', 'CodeblocksetTable', 'CodeblockTable', 'CodetipsTable', 'ConditionTable', 'CreatTypeTable', 'DescribeTable', 'DrawBoardColorTable', 'DropTable', 'EntityBuildObjectTable', 'EntityFunctionTable', 'EntityMaterialTable', 'EntitySoundTable', 'EntityTable', 'EntityVariaTable', 'EquipmentRandTable', 'EquipmentTable', 'GamePlatformTable', 'GameValueTable', 'HelpTable', 'HitBubbleTable', 'InitializationResurrectionTable', 'ItemArgumentTable', 'ItemEatableTable', 'ItemTable', 'LanguageTable', 'MailTemplateTable', 'MapCellTable', 'MapTable', 'MonsterAttributeTable', 'MonsterTable', 'NetworkConfigTable', 'NoviceManualTable', 'NoviceNodeTable', 'NoviceStepTable', 'NPCTable', 'NPCtalkTable', 'ObjectAnimationTable', 'ObjectInfoTable', 'ObjectStateTable', 'outputPaoMaDengTable', 'PlayerAreaBuyTable', 'QuotaTable', 'ResourcePointTable', 'ResSoundTable', 'RewardTable', 'RobotCodeblockTable', 'RobotLvTable', 'RobotSkinTable', 'RobotTable', 'RoleLvTable', 'RoleTable', 'SceneTable', 'SignInTable', 'SkillTable', 'TaskTable', 'WeakGuideTable', 'WeatherTable', 'WorksListCoverPatternTable', 'XinShouhelpTable',
             ],
         },
-
+        sourceMap: {
+            filename: "main.js",
+            url: "main.js.map",
+            includeSources: true,
+        },
         toplevel: true,
         ie8: true,
         warnings: true,
@@ -285,10 +289,10 @@ function uglify(sourceFile) {
     }
     options.mangle.properties.reserved = reservedCell.concat();
 
-    // if (evnStr && evnStr[1] != "beta" ) {
-    if (true) {
-        // options.mangle = false;
-        // options.toplevel = false;
+    if (evnStr && evnStr[1] != "beta") {
+        // if (true) {
+        options.mangle = false;
+        options.toplevel = false;
         options = {
             compress: {
                 global_defs: {
@@ -310,9 +314,10 @@ function uglify(sourceFile) {
     var filterRe = /__reflect\(([^",]+).prototype,"([^"]+)"\)/g;
     while (r = filterRe.exec(code)) {
         if (r[1].length < 10 && r[2].length < 50) {
-            code = code.replace(r[0], `__reflect\(${r[1]}.prototype,"${r[1]}")`)
+            code = code.replace(r[0], `__reflect\(${r[1]}.prototype,"${r[1]}")${' '.repeat(r[2].length - r[1].length)}`)
         }
     }
+    file.save("main.js.map", result.map);
     return code;
 }
 exports.uglify = uglify;
