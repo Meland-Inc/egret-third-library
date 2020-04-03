@@ -59,8 +59,13 @@ export default class ClientUpdate {
         this._curVersion = this._startVersion = +gameVersion;
         this._patchUrl = `${config.protocol}//${globalConfig.patchUrl}`;
         let policyUrl = globalConfig.policyUrl;
-        this._policyHost = policyUrl.split("/")[0];
-        this._policyPath = policyUrl.replace(this._policyHost, "");
+        let policyArr = policyUrl.split("/");
+        this._policyHost = policyArr[0];
+        if (!policyArr[1] || policyArr[1] === "") {
+            this._policyPath = "";
+        } else {
+            this._policyPath = policyUrl.replace(`${this._policyHost}`, "");
+        }
 
         let policyNum = await util.getClientPackagePolicyNum(config.environName);
         if (policyNum === null) {
