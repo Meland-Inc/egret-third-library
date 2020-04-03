@@ -221,8 +221,8 @@ class Server {
                 // let cmdStr = "taskkill /im game.exe /f";
                 // util.runCmd(cmdStr, null, `关闭游戏服务器成功`, "关闭游戏服务器错误");
                 logger.log('net', `关闭游戏服务器`);
-                // treeKill(config.gameServerProcess.pid, 15, (error) => {
-                treeKill(config.gameServerProcess.pid, (error) => {
+                treeKill(config.gameServerProcess.pid, 15, (error) => {
+                    // treeKill(config.gameServerProcess.pid, (error) => {
                     if (error) {
                         logger.error('net', `kill 关闭游戏服务器错误`, error)
                         reject(error);

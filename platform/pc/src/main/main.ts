@@ -9,6 +9,7 @@
 import { app, globalShortcut, BrowserWindow, Menu, shell, dialog, session, Referrer, BrowserWindowConstructorOptions } from 'electron';
 import * as fs from 'fs';
 import * as process from 'process';
+import * as os from 'os';
 
 
 import { define } from './define';
@@ -37,8 +38,13 @@ function onAppReady() {
   createWindow();
 
   //检测杀game进程
-  //let cmdStr = "taskkill /im game.exe /f";
-  //util.runCmd(cmdStr, null, `关闭游戏服务器成功`, "关闭游戏服务器错误");
+  let cmdStr: string;
+  if (os.platform() === "win32") {
+    cmdStr = "taskkill /im game.exe /f";
+  } else {
+    cmdStr = `pkill game`;
+  }
+  util.runCmd(cmdStr, null, `关闭游戏服务器成功`, "");
 
   let shortCut = "";
   if (process.platform === 'darwin') {
