@@ -55,16 +55,16 @@ export async function updateGit() {
 }
 
 async function uploadSourceMap() {
-    let environ = ModelMgr.versionModel.curEnviron;
+    let environ = ModelMgr.versionModel.curEnviron.name;
     let version = ModelMgr.versionModel.releaseVersion;
     let prefix = `~/js/`;
     if (environ == ModelMgr.versionModel.eEnviron.beta) {
         prefix = `~/web/beta/js`;
     }
     if (environ == ModelMgr.versionModel.eEnviron.beta || environ == ModelMgr.versionModel.eEnviron.release) {
-        let cmdStr = `sentry-cli releases -o bellcode -p bellplanet files bellplanet_${environ}_${version} upload-sourcemaps --ext map './'  --url-prefix "${prefix}" --log-level=debug`
+        let cmdStr = `sentry-cli releases -o bellcode -p bellplanet files bellplanet_${environ}_${version} upload-sourcemaps main.js.map  --url-prefix "${prefix}" --log-level=error`
         await spawnExc.runCmd(cmdStr, Global.projPath, null, 'sourcemap上传sentry错误');
-        cmdStr = `sentry-cli releases -o bellcode -p bellplanet files bellplanet_${environ}_${version} upload-sourcemaps --ext js './bin-release/web/${version}/js/'  --url-prefix "${prefix}" --log-level=debug`
+        cmdStr = `sentry-cli releases -o bellcode -p bellplanet files bellplanet_${environ}_${version} upload-sourcemaps --ext js './bin-release/web/${version}/js/'  --url-prefix "${prefix}" --log-level=error`
         await spawnExc.runCmd(cmdStr, Global.projPath, null, ' js上传sentry错误');
     }
 }
