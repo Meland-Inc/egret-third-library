@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="800,600">
+  <controller name="ctrlState" pages="0,normal,1,wrong,2,right" selected="0"/>
+  <controller name="ctrlType" pages="0,normal,1,fouce" selected="1"/>
   <displayList>
-    <image id="n0_hilr" name="n0" src="hwlx3" fileName="img/img_count_answerframe.png" xy="0,0" size="800,600">
+    <loader id="n0_hilr" name="n0" xy="0,0" size="800,600" url="ui://av6agj0gfqdk2t" fill="scaleFree">
+      <gearDisplay controller="ctrlType" pages="0"/>
+      <gearIcon controller="ctrlState" pages="0,1,2" values="ui://av6agj0gfqdk2t|ui://av6agj0gfqdk2x|ui://av6agj0gfqdk2v"/>
       <relation target="" sidePair="width-width,height-height"/>
-    </image>
-    <text id="n1_hilr" name="title" xy="29,270" size="750,64" fontSize="60" leading="0" autoSize="none" singleLine="true" text="1111dsfsdf sdfddddddddddddddddddddddddddddd">
-      <relation target="" sidePair="width-width,middle-middle"/>
+    </loader>
+    <loader id="n2_fqdk" name="n2" xy="0,0" size="800,600" url="ui://av6agj0gfqdk2t" fill="scaleFree">
+      <gearDisplay controller="ctrlType" pages="1"/>
+      <gearIcon controller="ctrlState" pages="0,1,2" values="ui://av6agj0gfqdk2t|ui://av6agj0gfqdk2y|ui://av6agj0gfqdk2w"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <text id="n1_hilr" name="title" xy="18,16" size="761,570" fontSize="60" align="center" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="1111dsfsdf sdfddddddddddddddddddddddddddddd">
+      <relation target="" sidePair="width-width,height-height"/>
     </text>
   </displayList>
 </component>

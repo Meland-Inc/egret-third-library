@@ -1,45 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1650,112">
+<component size="1656,152">
   <controller name="ctrlVoiceType" pages="0,none,1,play,2,pause" selected="0"/>
-  <controller name="ctrlInputType" pages="0,normal,1,withPoint" selected="1"/>
+  <controller name="ctrlInputType" pages="0,normal,1,withPoint" selected="0"/>
+  <controller name="c1" pages="0,,1," selected="0"/>
   <displayList>
-    <image id="n11_hwlx" name="n11" src="hwlx25" fileName="img/img_keybord_bg.png" xy="0,0" size="1656,150"/>
-    <component id="n0_hwlx" name="btnNum0" src="sco7k" fileName="btn/btnScale.xml" xy="0,-2" size="150,150" controller="button,0">
-      <Button icon="ui://av6agj0ghwlx1u"/>
+    <image id="n11_hwlx" name="n11" src="fqdk2z" fileName="img/托底.png" xy="0,0" size="1661,201"/>
+    <component id="n0_hwlx" name="btnNum0" src="fqdk2s" fileName="btn/btnNumber.xml" xy="11,23" size="128,129" controller="button,0">
+      <Button icon="ui://av6agj0gfqdk3l" selectedIcon="ui://av6agj0gfqdk3k"/>
     </component>
-    <component id="n1_hwlx" name="btnNum1" src="sco7k" fileName="btn/btnScale.xml" xy="150,-2" size="150,150" controller="button,0">
-      <Button icon="ui://av6agj0ghwlx1v"/>
+    <component id="n1_hwlx" name="btnNum1" src="fqdk2s" fileName="btn/btnNumber.xml" xy="161,23" size="128,129" controller="button,0">
+      <Button icon="ui://av6agj0gfqdk3j" selectedIcon="ui://av6agj0gfqdk3i"/>
     </component>
-    <component id="n2_hwlx" name="btnNum2" src="sco7k" fileName="btn/btnScale.xml" xy="300,-2" size="150,150" controller="button,0">
-      <Button icon="ui://av6agj0ghwlx1w"/>
+    <component id="n2_hwlx" name="btnNum2" src="fqdk2s" fileName="btn/btnNumber.xml" xy="311,23" size="128,129" controller="button,0">
+      <Button icon="ui://av6agj0gfqdk3h" selectedIcon="ui://av6agj0gfqdk3g"/>
     </component>
-    <component id="n3_hwlx" name="btnNum3" src="sco7k" fileName="btn/btnScale.xml" xy="450,-2" size="150,150" controller="button,0">
-      <Button icon="ui://av6agj0ghwlx1x"/>
+    <component id="n3_hwlx" name="btnNum3" src="fqdk2s" fileName="btn/btnNumber.xml" xy="464,23" size="128,129" controller="button,0">
+      <Button icon="ui://av6agj0gfqdk3f" selectedIcon="ui://av6agj0gfqdk3e"/>
     </component>
-    <component id="n4_hwlx" name="btnNum4" src="sco7k" fileName="btn/btnScale.xml" xy="600,-2" size="150,150" controller="button,0">
-      <Button icon="ui://av6agj0ghwlx1y"/>
+    <component id="n4_hwlx" name="btnNum4" src="fqdk2s" fileName="btn/btnNumber.xml" xy="614,23" size="128,129" controller="button,0">
+      <Button icon="ui://av6agj0gfqdk3d" selectedIcon="ui://av6agj0gfqdk3c"/>
     </component>
-    <component id="n5_hwlx" name="btnNum5" src="sco7k" fileName="btn/btnScale.xml" xy="750,-2" size="150,150" controller="button,0">
-      <Button icon="ui://av6agj0ghwlx1z"/>
+    <component id="n5_hwlx" name="btnNum5" src="fqdk2s" fileName="btn/btnNumber.xml" xy="764,23" size="128,129" controller="button,0">
+      <Button icon="ui://av6agj0gfqdk3b" selectedIcon="ui://av6agj0gfqdk3a"/>
     </component>
-    <component id="n6_hwlx" name="btnNum6" src="sco7k" fileName="btn/btnScale.xml" xy="900,-2" size="150,150" controller="button,0">
-      <Button icon="ui://av6agj0ghwlx20"/>
+    <component id="n6_hwlx" name="btnNum6" src="fqdk2s" fileName="btn/btnNumber.xml" xy="915,23" size="128,129" controller="button,0">
+      <Button icon="ui://av6agj0gfqdk39" selectedIcon="ui://av6agj0gfqdk38"/>
     </component>
-    <component id="n7_hwlx" name="btnNum7" src="sco7k" fileName="btn/btnScale.xml" xy="1050,-2" size="150,150" controller="button,0">
-      <Button icon="ui://av6agj0ghwlx21"/>
+    <component id="n7_hwlx" name="btnNum7" src="fqdk2s" fileName="btn/btnNumber.xml" xy="1064,23" size="128,129" controller="button,0">
+      <Button icon="ui://av6agj0gfqdk37" selectedIcon="ui://av6agj0gfqdk36"/>
     </component>
-    <component id="n8_hwlx" name="btnNum8" src="sco7k" fileName="btn/btnScale.xml" xy="1200,-2" size="150,150" controller="button,0">
-      <Button icon="ui://av6agj0ghwlx22"/>
+    <component id="n8_hwlx" name="btnNum8" src="fqdk2s" fileName="btn/btnNumber.xml" xy="1214,23" size="128,129" controller="button,0">
+      <Button icon="ui://av6agj0gfqdk35" selectedIcon="ui://av6agj0gfqdk34"/>
     </component>
-    <component id="n9_hwlx" name="btnNum9" src="sco7k" fileName="btn/btnScale.xml" xy="1350,-2" size="150,150" controller="button,0">
-      <Button icon="ui://av6agj0ghwlx23"/>
+    <component id="n9_hwlx" name="btnNum9" src="fqdk2s" fileName="btn/btnNumber.xml" xy="1364,23" size="128,129" controller="button,0">
+      <Button icon="ui://av6agj0gfqdk33" selectedIcon="ui://av6agj0gfqdk32"/>
     </component>
-    <component id="n10_hwlx" name="btnClear" src="sco7k" fileName="btn/btnScale.xml" xy="1500,-2" size="150,150" controller="button,0">
-      <Button icon="ui://av6agj0ghwlx24"/>
+    <component id="n10_hwlx" name="btnClear" src="fqdk2s" fileName="btn/btnNumber.xml" xy="1511,23" size="128,129" controller="button,0">
+      <Button icon="ui://av6agj0gfqdk31" selectedIcon="ui://av6agj0gfqdk30"/>
     </component>
-    <component id="n14_hilr" name="btnPoint" src="sco7k" fileName="btn/btnScale.xml" xy="1,0" size="150,150" controller="button,0">
+    <component id="n14_hilr" name="btnPoint" src="fqdk2s" fileName="btn/btnNumber.xml" xy="12,23" size="128,129" controller="button,0">
       <gearDisplay controller="ctrlInputType" pages="1"/>
-      <Button icon="ui://av6agj0ghwlx1u"/>
+      <Button icon="ui://av6agj0gfqdk3l" selectedIcon="ui://av6agj0gfqdk3k"/>
     </component>
   </displayList>
 </component>

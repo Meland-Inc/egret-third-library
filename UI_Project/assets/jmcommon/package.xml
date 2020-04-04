@@ -67,6 +67,36 @@
     <image id="j5tq2q" name="bg灰色.png" path="/img/" scale="tile"/>
     <image id="hwlx3" name="img_count_answerframe.png" path="/img/" scale="9grid" scale9grid="69,26,138,52"/>
     <component id="hilr2r" name="ComInput.xml" path="/com/" exported="true"/>
+    <component id="fqdk2s" name="btnNumber.xml" path="/btn/" exported="true"/>
+    <image id="fqdk2t" name="黄框框.png" path="/img/" scale="9grid" scale9grid="20,15,240,70"/>
+    <image id="fqdk2u" name="黄框框-1.png" path="/img/" scale="9grid" scale9grid="20,15,240,70"/>
+    <image id="fqdk2v" name="绿框框.png" path="/img/" scale="9grid" scale9grid="20,15,240,70"/>
+    <image id="fqdk2w" name="绿框框-1.png" path="/img/" scale="9grid" scale9grid="20,15,240,70"/>
+    <image id="fqdk2x" name="红框框.png" path="/img/" scale="9grid" scale9grid="20,15,240,70"/>
+    <image id="fqdk2y" name="红框框-1.png" path="/img/" scale="9grid" scale9grid="20,15,240,70"/>
+    <image id="fqdk2z" name="托底.png" path="/img/" scale="9grid" scale9grid="375,42,750,84"/>
+    <image id="fqdk30" name="11_1.png" path="/img/"/>
+    <image id="fqdk31" name="11_0.png" path="/img/"/>
+    <image id="fqdk32" name="09_1.png" path="/img/"/>
+    <image id="fqdk33" name="09_0.png" path="/img/"/>
+    <image id="fqdk34" name="08_1.png" path="/img/"/>
+    <image id="fqdk35" name="08_0.png" path="/img/"/>
+    <image id="fqdk36" name="07_1.png" path="/img/"/>
+    <image id="fqdk37" name="07_0.png" path="/img/"/>
+    <image id="fqdk38" name="06_1.png" path="/img/"/>
+    <image id="fqdk39" name="06_0.png" path="/img/"/>
+    <image id="fqdk3a" name="05_1.png" path="/img/"/>
+    <image id="fqdk3b" name="05_0.png" path="/img/"/>
+    <image id="fqdk3c" name="04_1.png" path="/img/"/>
+    <image id="fqdk3d" name="04_0.png" path="/img/"/>
+    <image id="fqdk3e" name="03_1.png" path="/img/"/>
+    <image id="fqdk3f" name="03_0.png" path="/img/"/>
+    <image id="fqdk3g" name="02_1.png" path="/img/"/>
+    <image id="fqdk3h" name="02_0.png" path="/img/"/>
+    <image id="fqdk3i" name="01_1.png" path="/img/"/>
+    <image id="fqdk3j" name="01_0.png" path="/img/"/>
+    <image id="fqdk3k" name="00_1.png" path="/img/"/>
+    <image id="fqdk3l" name="00_0.png" path="/img/"/>
   </resources>
   <publish name="jmcommon" path="..\..\egret-planet\resource\jimmyAssets\jmFairyGui" packageCount="2"/>
 </packageDescription>
