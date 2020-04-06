@@ -141,7 +141,7 @@ namespace egret.web {
         /**
          * 启用RenderBuffer
          */
-        private activateBuffer(buffer: WebGLRenderBuffer, width:number, height:number): void {
+        private activateBuffer(buffer: WebGLRenderBuffer, width: number, height: number): void {
 
             buffer.rootRenderTarget.activate();
 
