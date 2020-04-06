@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="800,600">
   <controller name="ctrlState" pages="0,normal,1,wrong,2,right" selected="0"/>
-  <controller name="ctrlType" pages="0,normal,1,fouce" selected="1"/>
+  <controller name="ctrlType" pages="0,normal,1,focus" selected="1"/>
   <displayList>
     <loader id="n0_hilr" name="n0" xy="0,0" size="800,600" url="ui://av6agj0gfqdk2t" fill="scaleFree">
       <gearDisplay controller="ctrlType" pages="0"/>
       <gearIcon controller="ctrlState" pages="0,1,2" values="ui://av6agj0gfqdk2t|ui://av6agj0gfqdk2x|ui://av6agj0gfqdk2v"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <loader id="n2_fqdk" name="n2" xy="0,0" size="800,600" url="ui://av6agj0gfqdk2t" fill="scaleFree">
+    <loader id="n2_fqdk" name="n2" xy="0,0" size="800,600" url="ui://av6agj0gfqdk2u" fill="scaleFree">
       <gearDisplay controller="ctrlType" pages="1"/>
-      <gearIcon controller="ctrlState" pages="0,1,2" values="ui://av6agj0gfqdk2t|ui://av6agj0gfqdk2y|ui://av6agj0gfqdk2w"/>
+      <gearIcon controller="ctrlState" pages="0,1,2" values="ui://av6agj0gfqdk2u|ui://av6agj0gfqdk2y|ui://av6agj0gfqdk2w"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
     <text id="n1_hilr" name="title" xy="18,16" size="761,570" fontSize="60" align="center" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="1111dsfsdf sdfddddddddddddddddddddddddddddd">
