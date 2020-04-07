@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080">
+  <controller name="ctrlVoiceType" pages="1,play,0,none,2,pause" selected="0"/>
+  <controller name="ctrlIsDevelop" pages="0,false,1,true" selected="0"/>
+  <displayList>
+    <loader id="n34_gx7z" name="ladBG" xy="0,0" size="1920,1080" url="ui://ce9jx9xtnhj614" fill="scaleFree">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <image id="n35_gx7z" name="imgBar" src="nhj615" fileName="img/img_jm_pt_dbl.png" xy="0,0" size="1920,56">
+      <relation target="" sidePair="width-width,top-top"/>
+    </image>
+    <text id="n36_gx7z" name="tfTitle" xy="12,13" size="194,31" fontSize="24" color="#333333" vAlign="middle" vars="true" autoSize="none" text="拼图关卡"/>
+    <graph id="n37_gx7z" name="gphPos" xy="107,111" size="1706,940" type="rect" fillColor="#ff6666cc">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </graph>
+    <component id="n11_nuye" name="comPlayView" src="cdz3cyifa" fileName="com/ComPlayView.xml" xy="0,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n30_nuye" name="btnClose" src="l7sp23" fileName="btn/btnScale.xml" xy="1852,6" size="48,48" visible="false">
+      <relation target="n11_nuye" sidePair="right-right,top-top"/>
+      <Button icon="ui://ce9jx9xtojgccyifd"/>
+    </component>
+    <image id="n38_gx7z" name="n38" src="nhj611" fileName="img/img_jm_gjk_3.png" xy="107,111" size="1706,940">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <component id="n39_gx7z" name="comEditorStage" src="nuyecyif9" fileName="com/ComEditorStage.xml" xy="107,111" size="1706,940">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <graph id="n40_gx7z" name="gphEditCanvas" xy="0,0" size="1920,1080" lineSize="0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <text id="n41_gx7z" name="n41" xy="102,72" size="84,28" visible="false" fontSize="24" color="#333333" text="倒计时:"/>
+    <text id="n42_gx7z" name="tfTime" xy="190,68" size="71,31" visible="false" fontSize="24" color="#333333" align="center" vAlign="middle" autoSize="none" text="60"/>
+    <list id="n43_gx7z" name="lstStart" xy="1551,67" size="299,42" touchable="false" layout="row" selectionMode="none" overflow="scroll" colGap="15" defaultItem="ui://ce9jx9xtl7sp25" align="center" vAlign="middle">
+      <relation target="n37_gx7z" sidePair="right-right,top-top"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n44_gx7z" name="n44" src="nhj61" fileName="img/img_jm_pt_ym.png" xy="107,1011">
+      <relation target="n37_gx7z" sidePair="left-left,bottom-bottom"/>
+    </image>
+    <text id="n45_gx7z" name="tfPageInfo" xy="113,1017" size="78,31" fontSize="24" color="#333333" align="center" vAlign="middle" vars="true" autoSize="none" text="{curPage=1}/{pageNum = 20}">
+      <relation target="n44_gx7z" sidePair="left-left,bottom-bottom"/>
+    </text>
+    <image id="n47_gx7z" name="n47" src="nhj616" fileName="img/img_jm_pt_msk.png" xy="565,150" size="789,66" group="n49_gx7z"/>
+    <text id="n48_gx7z" name="tfDescribe" xy="601,169" size="709,31" group="n49_gx7z" fontSize="24" color="#ffffff" vAlign="middle" autoSize="none" text="这里是关卡描述"/>
+    <group id="n49_gx7z" name="n49" xy="565,150" size="789,66" visible="false" advanced="true">
+      <relation target="n37_gx7z" sidePair="center-center,top-top"/>
+    </group>
+    <component id="n46_gx7z" name="btnVoice" src="l7sp23" fileName="btn/btnScale.xml" xy="460,143" size="80,80" visible="false">
+      <gearIcon controller="ctrlVoiceType" pages="0,2" values="|ui://ce9jx9xtnhj6p" default="ui://ce9jx9xtnhj6k"/>
+      <relation target="n37_gx7z" sidePair="center-center,top-top"/>
+      <Button icon="ui://ce9jx9xtnhj6k"/>
+    </component>
+    <component id="n50_gx7z" name="btnUndo" src="l7sp23" fileName="btn/btnScale.xml" xy="1749,883" size="58,62">
+      <relation target="n37_gx7z" sidePair="right-right,bottom-bottom"/>
+      <Button icon="ui://ce9jx9xtnhj6l"/>
+    </component>
+    <component id="n51_gx7z" name="btnMerge" src="l7sp23" fileName="btn/btnScale.xml" xy="1749,963" size="58,62">
+      <relation target="n37_gx7z" sidePair="right-right,bottom-bottom"/>
+      <Button icon="ui://ce9jx9xtnhj6n"/>
+    </component>
+    <graph id="n54_ojgc" name="n54" xy="244,8" size="298,46" group="n58_sco7" type="rect" lineSize="0" fillColor="#ffffffcc"/>
+    <text id="n53_ojgc" name="tfConfig" xy="244,8" size="298,46" group="n58_sco7" input="true" prompt="这里输入配置信息" fontSize="25" vAlign="middle" autoSize="none" text=""/>
+    <component id="n57_sco7" name="btnSetConfig" src="l7sp23" fileName="btn/btnScale.xml" xy="569,13" size="128,40" group="n58_sco7">
+      <Button title="加载配置" icon="ui://ce9jx9xtnhj6w"/>
+    </component>
+    <group id="n58_sco7" name="config" xy="244,8" size="453,46" advanced="true">
+      <gearDisplay controller="ctrlIsDevelop" pages="1"/>
+    </group>
+  </displayList>
+</component>

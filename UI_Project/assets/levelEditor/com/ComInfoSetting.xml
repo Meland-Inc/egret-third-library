@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="260,942">
+  <displayList>
+    <text id="n0_ns4o" name="n0" xy="20,20" size="154,33" fontSize="20" color="#333333" vAlign="middle" autoSize="none" text="关卡玩法描述"/>
+    <image id="n9_l7sp" name="imgDescribeBG" src="nhj611" fileName="img/img_jm_gjk_3.png" xy="20,75" size="220,120"/>
+    <text id="n1_ns4o" name="tfDescribe" xy="26,85" size="209,104" input="true" prompt="你好这里是关卡玩法描述" fontSize="20" color="#333333" autoSize="none" text="小朋友你是否有很多问号"/>
+    <text id="n2_ns4o" name="n2" xy="20,215" size="220,26" fontSize="20" color="#333333" autoSize="none" text="录音文件"/>
+    <text id="n15_b4lc" name="tfVoice" xy="20,261" size="220,26" fontSize="20" color="#333333" autoSize="none" text="暂无音乐文件"/>
+    <component id="n11_l7sp" name="btnVoice" src="l7sp23" fileName="btn/btnScale.xml" xy="20,307" size="220,40">
+      <Button title="上传录音文件" titleColor="#333333" icon="ui://ce9jx9xtnhj6y"/>
+    </component>
+    <text id="n12_l7sp" name="n12" xy="20,367" size="220,26" fontSize="20" color="#333333" autoSize="none" text="关卡限时"/>
+    <image id="n13_l7sp" name="imgTimeBG" src="nhj611" fileName="img/img_jm_gjk_3.png" xy="20,413" size="220,40"/>
+    <text id="n14_l7sp" name="tfTime" xy="20,411" size="220,40" input="true" keyboardType="4" fontSize="20" color="#333333" align="center" vAlign="middle" autoSize="none" text="60">
+      <relation target="n13_l7sp" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+</component>

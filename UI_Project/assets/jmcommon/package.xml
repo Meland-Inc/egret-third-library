@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="av6agj0g" jpegQuality="80" compressPNG="true">
+  <resources>
+    <component id="sco7g" name="WinPlayLevel.xml" path="/win/" exported="true"/>
+    <image id="sco7h" name="img_jm_pt_bgk.png" path="/img/" scale="9grid" scale9grid="20,12,40,24"/>
+    <image id="sco7i" name="img_jm_pt_dbl.png" path="/img/" scale="9grid" scale9grid="10,14,20,28"/>
+    <component id="sco7j" name="ComPlayView.xml" path="/com/"/>
+    <component id="sco7k" name="btnScale.xml" path="/btn/"/>
+    <image id="sco7l" name="btn_cm_gb.png" path="/img/"/>
+    <image id="sco7m" name="img_jm_gjk_3.png" path="/img/" scale="9grid" scale9grid="15,15,30,30"/>
+    <component id="sco7n" name="ComEditorStage.xml" path="/com/"/>
+    <component id="sco7o" name="btnStart.xml" path="/btn/"/>
+    <image id="sco7p" name="img_jm_xx.png" path="/img/"/>
+    <image id="sco7q" name="img_jm_xx_1.png" path="/img/"/>
+    <image id="sco7r" name="img_jm_pt_ym.png" path="/img/"/>
+    <image id="sco7s" name="img_jm_pt_msk.png" path="/img/" scale="9grid" scale9grid="66,17,89,78"/>
+    <image id="sco7t" name="icon_jm_pt_bf.png" path="/img/"/>
+    <image id="sco7u" name="icon_jm_pt_zt.png" path="/img/"/>
+    <image id="sco7x" name="img_jm_cbl.png" path="/img/"/>
+    <image id="sco715" name="跳过关卡.png" path="/img/"/>
+    <image id="sco716" name="wrong.png" path="/img/"/>
+    <image id="sco717" name="tipsnext.png" path="/img/"/>
+    <image id="sco718" name="right.png" path="/img/"/>
+    <image id="sco719" name="next.png" path="/img/"/>
+    <image id="sco71a" name="jindutiao2.png" path="/img/"/>
+    <image id="sco71b" name="jindutiao1.png" path="/img/"/>
+    <image id="alb71c" name="skip.png" path="/img/"/>
+    <image id="alb71d" name="replay.png" path="/img/"/>
+    <image id="alb71e" name="OK.png" path="/img/"/>
+    <image id="alb71g" name="skip2.png" path="/img/"/>
+    <image id="alb71h" name="replay2.png" path="/img/"/>
+    <image id="alb71i" name="OK2.png" path="/img/"/>
+    <image id="alb71j" name="next2.png" path="/img/"/>
+    <image id="alb71k" name="icon_jm_pt_zt2.png" path="/img/"/>
+    <image id="alb71l" name="icon_jm_pt_bf2.png" path="/img/"/>
+    <image id="alb71o" name="预览图带标记.png" path="/img/"/>
+    <image id="alb71p" name="tips.png" path="/img/"/>
+    <image id="alb71q" name="jindu2.png" path="/img/"/>
+    <image id="alb71r" name="jindu1.png" path="/img/" scale="9grid" scale9grid="132,25,264,50"/>
+    <image id="alb71s" name="back.png" path="/img/"/>
+    <component id="hwlx1t" name="ComNumberInput.xml" path="/com/" exported="true"/>
+    <image id="hwlx1u" name="img_jm_num0.png" path="/img/"/>
+    <image id="hwlx1v" name="img_jm_num1.png" path="/img/"/>
+    <image id="hwlx1w" name="img_jm_num2.png" path="/img/"/>
+    <image id="hwlx1x" name="img_jm_num3.png" path="/img/"/>
+    <image id="hwlx1y" name="img_jm_num4.png" path="/img/"/>
+    <image id="hwlx1z" name="img_jm_num5.png" path="/img/"/>
+    <image id="hwlx20" name="img_jm_num6.png" path="/img/"/>
+    <image id="hwlx21" name="img_jm_num7.png" path="/img/"/>
+    <image id="hwlx22" name="img_jm_num8.png" path="/img/"/>
+    <image id="hwlx23" name="img_jm_num9.png" path="/img/"/>
+    <image id="hwlx24" name="img_jm_numdel.png" path="/img/"/>
+    <image id="hwlx25" name="img_keybord_bg.png" path="/img/"/>
+    <image id="bmxe26" name="white_bg.png" path="/img/" scale="9grid" scale9grid="61,63,32,40"/>
+    <image id="bmxe27" name="bg1.jpg" path="/img/" scale="tile"/>
+    <image id="bmxe28" name="tip_bg.png" path="/img/"/>
+    <image id="bmxe29" name="sound_on.png" path="/img/"/>
+    <image id="bmxe2a" name="sound_off.png" path="/img/"/>
+    <image id="bmxe2b" name="skip_tip.png" path="/img/"/>
+    <image id="bmxe2c" name="skip_bt.png" path="/img/"/>
+    <image id="bmxe2d" name="right_bt.png" path="/img/"/>
+    <image id="bmxe2e" name="replay_bt.png" path="/img/"/>
+    <image id="bmxe2f" name="close_bt.png" path="/img/"/>
+    <image id="bmxe2g" name="bt_bg.png" path="/img/"/>
+    <image id="bmxe2h" name="参考图.jpg" path="/img/"/>
+    <image id="bmxe2i" name="neikuang.png" path="/img/" scale="9grid" scale9grid="111,142,331,342"/>
+    <image id="bmxe2j" name="bg.png" path="/img/" scale="tile" scale9grid="46,36,92,72"/>
+    <image id="bmxe2l" name="waikuang.png" path="/img/" scale="9grid" scale9grid="188,210,351,353"/>
+    <image id="bmxe2m" name="neikuang_1.png" path="/img/" scale="9grid" scale9grid="188,255,331,308"/>
+    <component id="wmmv28" name="JMCommonToast.xml" path="/comBaseCommon/" exported="true"/>
+    <image id="wmmv29" name="img_cm_tck_2.png" path="/imgBaseCommon/" scale="9grid" scale9grid="240,11,20,22"/>
+    <component id="wmmv2a" name="JMCommonAlert.xml" path="/comBaseCommon/" exported="true"/>
+    <image id="wmmv2b" name="img_cm_tkc_1.png" path="/imgBaseCommon/" scale="9grid" scale9grid="8,8,44,44"/>
+    <image id="wmmv2c" name="img_cm_top_3.png" path="/imgBaseCommon/" scale="9grid" scale9grid="20,14,40,28"/>
+    <component id="wmmv2d" name="btnFix.xml" path="/comBaseCommon/" exported="true"/>
+    <image id="wmmv2e" name="btn_cm_1_red.png" path="/imgBaseCommon/"/>
+    <image id="wmmv2f" name="btn_cm_blue.png" path="/imgBaseCommon/" scale="9grid" scale9grid="30,11,60,22"/>
+    <image id="wmmv2g" name="btn_cm_red.png" path="/imgBaseCommon/" scale="9grid" scale9grid="30,11,60,22"/>
+    <image id="wmmv2h" name="btn_cm_gb.png" path="/imgBaseCommon/"/>
+    <component id="wmmv2i" name="JMCommonWarn.xml" path="/comBaseCommon/" exported="true"/>
+    <image id="wmmv2j" name="icon_cm_caveat.png" path="/imgBaseCommon/"/>
+    <component id="wmmv2k" name="JMCommonModal.xml" path="/comBaseCommon/" exported="true"/>
+    <image id="wmmv2l" name="img_cm_zzdt.png" path="/imgBaseCommon/" scale="9grid" scale9grid="10,10,20,20"/>
+  </resources>
+  <publish name="jmcommon" path="..\..\egret-planet\resource\jimmyAssets\fairyGui"/>
+</packageDescription>

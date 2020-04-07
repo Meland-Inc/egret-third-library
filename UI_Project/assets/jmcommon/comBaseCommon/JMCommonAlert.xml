@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" designImageAlpha="0">
+  <displayList>
+    <image id="n27_ornt" name="imgBg" src="wmmv2b" fileName="comBaseCommon/img_cm_tkc_1.png" xy="772,416" size="376,248" group="n26_jn1p"/>
+    <image id="n28_ornt" name="imgBgTop" src="wmmv2c" fileName="comBaseCommon/img_cm_top_3.png" xy="772,416" size="376,56" group="n26_jn1p"/>
+    <graph id="n19_jn1p" name="dragArea" xy="772,416" size="376,56" group="n26_jn1p" alpha="0" type="rect"/>
+    <text id="n21_jn1p" name="tfTitle" xy="793,430" size="53,28" group="n26_jn1p" fontSize="24" color="#333333" align="center" vAlign="middle" ubb="true" text="确认"/>
+    <text id="n22_jn1p" name="tfContent" xy="801,474" size="317,108" group="n26_jn1p" fontSize="24" color="#333333" align="center" vAlign="middle" ubb="true" autoSize="none" singleLine="true" text="确认提交答案吗？"/>
+    <component id="n23_jn1p" name="btnConfirm" src="wmmv2d" fileName="comBaseCommon/btnFix.xml" xy="978,590" size="120,44" group="n26_jn1p">
+      <Button title="确定" icon="ui://av6agj0gwmmv2f"/>
+    </component>
+    <component id="n24_jn1p" name="btnCancel" src="wmmv2d" fileName="comBaseCommon/btnFix.xml" xy="821,588" size="120,44" group="n26_jn1p">
+      <Button title="取消" icon="ui://av6agj0gwmmv2g"/>
+    </component>
+    <component id="n20_jn1p" name="btnClose" src="wmmv2d" fileName="comBaseCommon/btnFix.xml" xy="1092,420" size="48,48" group="n26_jn1p">
+      <Button icon="ui://av6agj0gwmmv2h"/>
+    </component>
+    <group id="n26_jn1p" name="root" xy="772,416" size="376,248" advanced="true" collapsed="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

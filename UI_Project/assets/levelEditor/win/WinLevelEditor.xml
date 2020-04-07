@@ -1,28 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1920,1080">
+<component size="1920,1080" designImage="ui://thvmj7vonhj64cyijq" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlRecordHint" pages="0,none,1,left,2,right,3,all" selected="0"/>
+  <controller name="ctrlShowType" pages="0,none,1,puzzle" selected="1"/>
   <displayList>
-    <component id="n0_6bth" name="comBg" src="qncgcyiji" fileName="com/comBg.xml" pkg="te1gxawo" xy="0,0" size="1920,1080">
+    <image id="n16_mock" name="imgBg" src="nhj612" fileName="img/img_jm_gq_bg.png" xy="0,0" size="1920,1080">
       <relation target="" sidePair="width-width,height-height"/>
-    </component>
-    <text id="n1_6bth" name="tfLevelType" xy="17,75" size="77,22" fontSize="18" text="关卡类型"/>
-    <component id="n2_6bth" name="cbLevelType" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="109,65">
-      <ComboBox title="关卡类型" visibleItemCount="10">
-        <item title="拼图关卡" value="puzzle"/>
-      </ComboBox>
-    </component>
-    <text id="n3_6bth" name="tfConfigData" xy="373,75" size="77,22" fontSize="18" text="配置数据"/>
-    <component id="n4_6bth" name="cbLevelConfigData" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="474,65">
-      <ComboBox title="配置数据" visibleItemCount="10"/>
-    </component>
-    <component id="n5_6bth" name="btnImport" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="701,63" size="120,44" visible="false">
-      <Button title="导入" icon="ui://te1gxawooiqdcyih1"/>
-    </component>
-    <component id="n6_6bth" name="btnSave" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="855,63" size="120,44" visible="false">
-      <Button title="保存" icon="ui://te1gxawooiqdcyih1"/>
-    </component>
-    <component id="n7_oxv8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1871,0" size="48,48">
+    </image>
+    <image id="n15_mock" name="imgTitleBg" src="nhj6x" fileName="img/img_jm_dbl.png" xy="0,0" size="1920,56">
+      <relation target="" sidePair="width-width"/>
+    </image>
+    <text id="n8_nhj6" name="tfTitle" xy="19,15" size="125,28" fontSize="24" color="#333333" text="关卡编辑器"/>
+    <component id="n7_oxv8" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1855,5" size="48,48">
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://te1gxawooiqdcyih2"/>
     </component>
+    <image id="n9_nhj6" name="n9" src="nhj6y" fileName="img/img_jm_fl.png" xy="0,54" size="1920,84">
+      <relation target="" sidePair="rightext-right"/>
+    </image>
+    <text id="n1_6bth" name="tfLevelType" xy="16,83" size="85,24" fontSize="20" color="#333333" text="关卡类型"/>
+    <component id="n2_6bth" name="cbLevelType" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="122,77" size="216,40">
+      <ComboBox title="..." visibleItemCount="10">
+        <item title="..." value="none"/>
+        <item title="拼图关卡" value="puzzle"/>
+      </ComboBox>
+    </component>
+    <text id="n3_6bth" name="tfConfigData" xy="367,84" size="85,24" fontSize="20" color="#333333" text="配置数据"/>
+    <component id="n4_6bth" name="cbLevelConfigData" src="pz1ncyiix" fileName="comboBox/combox1/ComboBox1.xml" pkg="te1gxawo" xy="470,76" size="219,40">
+      <ComboBox title="..." visibleItemCount="10"/>
+    </component>
+    <component id="n5_6bth" name="btnImport" src="nhj617" fileName="btn/btnSaveImport.xml" xy="1600,57" group="n12_nhj6">
+      <Button title="导入" icon="ui://ce9jx9xtnhj66"/>
+    </component>
+    <component id="n6_6bth" name="btnSave" src="nhj617" fileName="btn/btnSaveImport.xml" xy="1759,57" group="n12_nhj6">
+      <Button title="保存" icon="ui://ce9jx9xtnhj65"/>
+    </component>
+    <image id="n13_mock" name="n13" src="nhj613" fileName="img/img_jm_line.png" xy="1600,54" size="1,84" group="n12_nhj6"/>
+    <image id="n14_mock" name="n14" src="nhj613" fileName="img/img_jm_line.png" xy="1759,54" size="1,84" group="n12_nhj6"/>
+    <group id="n12_nhj6" name="grpImportSave" xy="1600,54" size="320,84" advanced="true">
+      <relation target="" sidePair="right-right"/>
+    </group>
+    <component id="n27_nci3" name="comPictureLibrary" src="ns4ocyif0" fileName="com/ComPictureLibrary.xml" xy="1694,137" size="226,942">
+      <gearDisplay controller="ctrlShowType" pages="1"/>
+      <relation target="" sidePair="right-right,bottomext-bottom"/>
+    </component>
+    <component id="n28_nci3" name="comEditorComposite" src="l7sp1z" fileName="com/ComEditorComposite.xml" xy="89,136" size="260,943" controller="ctrlFold,0,ctrlShowContainer,0">
+      <gearDisplay controller="ctrlShowType" pages="1"/>
+      <relation target="" sidePair="left-left,bottomext-bottom"/>
+    </component>
+    <component id="n29_nci3" name="comEditorView" src="ns4ocyiez" fileName="com/ComEditorView.xml" xy="404,222" size="1280,720">
+      <gearDisplay controller="ctrlShowType" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n30_nci3" name="comEditorBoxContainer" src="u3xqcyif7" fileName="com/ComEditorBoxContainer.xml" xy="402,222" size="1280,720">
+      <gearDisplay controller="ctrlShowType" pages="1"/>
+      <relation target="n29_nci3" sidePair="left-left,top-top"/>
+    </component>
+    <component id="n31_nci3" name="btnDel" src="l7sp23" fileName="btn/btnScale.xml" xy="1077,433" size="58,62">
+      <gearDisplay controller="ctrlShowType" pages="1"/>
+      <Button icon="ui://ce9jx9xtnhj6o"/>
+    </component>
+    <image id="n32_nci3" name="imgBG" src="nhj6y" fileName="img/img_jm_fl.png" xy="1,136" size="90,943">
+      <gearDisplay controller="ctrlShowType" pages="1"/>
+      <relation target="" sidePair="left-left,bottomext-bottom"/>
+    </image>
+    <list id="n33_nci3" name="lstTools" xy="1,136" size="90,942" layout="flow_vt" overflow="scroll" defaultItem="ui://ce9jx9xtl7sp1u">
+      <gearDisplay controller="ctrlShowType" pages="1"/>
+      <relation target="" sidePair="left-left,bottomext-bottom"/>
+      <item name="setting"/>
+      <item title="工具箱" icon="ui://ce9jx9xtnhj6h" name="tools"/>
+    </list>
+    <component id="n34_nci3" name="btnUnDo" src="l7sp26" fileName="btn/btnDo.xml" xy="914,957">
+      <gearDisplay controller="ctrlShowType" pages="1"/>
+      <gearIcon controller="ctrlRecordHint" pages="1,3" values="ui://ce9jx9xtnhj6i|ui://ce9jx9xtnhj6i" default="ui://ce9jx9xtnhj6j"/>
+      <relation target="n29_nci3" sidePair="left-left,top-bottom"/>
+      <Button icon="ui://ce9jx9xtnhj6j"/>
+    </component>
+    <component id="n35_nci3" name="btnReDo" src="l7sp26" fileName="btn/btnDo.xml" xy="1062,957">
+      <gearDisplay controller="ctrlShowType" pages="1"/>
+      <gearIcon controller="ctrlRecordHint" pages="2,3" values="ui://ce9jx9xtnhj6q|ui://ce9jx9xtnhj6q" default="ui://ce9jx9xtnhj6r"/>
+      <relation target="n29_nci3" sidePair="right-right,top-bottom"/>
+      <Button title="前进" icon="ui://ce9jx9xtnhj6r"/>
+    </component>
+    <image id="n36_nci3" name="n36" src="nhj613" fileName="img/img_jm_line.png" xy="1061,957">
+      <gearDisplay controller="ctrlShowType" pages="1"/>
+      <relation target="n34_nci3" sidePair="left-right,top-top"/>
+    </image>
   </displayList>
 </component>

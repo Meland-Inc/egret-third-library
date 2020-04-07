@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="30,30">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <component id="n11_z1hj" name="btnEdit" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="0,0" size="30,30">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button icon="ui://t573fj5bfvb25z"/>
+    </component>
+  </displayList>
+</component>

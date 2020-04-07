@@ -31,6 +31,12 @@
         color="purple500"
         @click="importExternal"
       >导入external配置</mu-button>
+      <mu-button
+        v-loading="isImportJimmyLoading"
+        data-mu-loading-size="24"
+        color="green500"
+        @click="importJimmy"
+      >导入Jimmy配置</mu-button>
     </div>
     <div class="button-wrapper">
       <mu-button full-width color="red" @click="oneForAll">One·for·All</mu-button>
@@ -49,7 +55,8 @@ export default {
       isImportAsyncLoading: false,
       isImportIndieLoading: false,
       isImportMapDataLoading: false,
-      isImportExternalLoading: false
+      isImportExternalLoading: false,
+      isImportJimmyLoading: false
     };
   },
   watch: {},
@@ -114,6 +121,18 @@ export default {
         Global.hideRegionLoading();
       }
     },
+    async importJimmy() {
+      this.isImportJimmyLoading = true;
+      Global.showRegionLoading();
+      try {
+        await mdAsset.importJimmy();
+        this.isImportJimmyLoading = false;
+        Global.hideRegionLoading();
+      } catch (error) {
+        this.isImportJimmyLoading = false;
+        Global.hideRegionLoading();
+      }
+    },
     async oneForAll() {
       Global.showLoading();
       try {
@@ -122,6 +141,7 @@ export default {
         await this.importIndie();
         await this.importMapData();
         await this.importExternal();
+        await this.importJimmy();
         Global.dialog("One·for·All Success");
         Global.hideLoading();
       } catch (error) {
