@@ -16,6 +16,7 @@ const mapDataResSuffix = 'resource/mapData.res.json';
 const asyncResSuffix = 'resource/async.res.json';
 const indieResSuffix = 'resource/indie.res.json';
 const externalResSuffix = 'resource/external.json';
+const jimmyResSuffix = 'resource/jimmy.res.json';
 
 //resource里的文件
 const externalSfx = "external";
@@ -283,6 +284,9 @@ async function mergeSingleVersion(newVersion, oldVersion, isRelease) {
 
             //indie.res.json
             await resFileHandle(indieResSuffix, newVersion, svnRlsPath, svnPatchPath);
+
+            //jimmy.res.json
+            await resFileHandle(jimmyResSuffix, newVersion, svnRlsPath, svnPatchPath);
             console.log(`--> merge success version v0s-v${newVersion}s`);
         } else {
             // //default.thm.json
@@ -303,6 +307,9 @@ async function mergeSingleVersion(newVersion, oldVersion, isRelease) {
 
             //indie.res.json
             await resFileHandle(indieResSuffix, newVersion, svnRlsPath, svnPatchPath, oldVersion, oldSvnRlsPath);
+
+            //jimmy.res.json
+            await resFileHandle(jimmyResSuffix, newVersion, svnRlsPath, svnPatchPath, oldVersion, oldSvnRlsPath);
             console.log(`--> merge success version v${oldVersion}s-v${newVersion}s`);
         }
     } catch (error) {
