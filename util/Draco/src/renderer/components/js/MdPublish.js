@@ -589,9 +589,12 @@ async function mergeFileInVersion(oldFileSuffix, newFileSuffix, svnRlsPath, svnP
 async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, oldVersion, oldVersionPath) {
     let useNew = false;
     let projNewVersionPath = Global.projPath + releaseSuffix + newVersion;
+
     let newResContent = await fsExc.readFile(projNewVersionPath + '/' + resFilePath);
     let newResObj = JSON.parse(newResContent);
-    if (oldVersion) {
+    //旧的配置有可能不存在
+    let oldExist = await fsExc.exists(oldVersionPath + '/' + oldResPath);
+    if (oldVersion && oldExist) {
         let oldResPath = addVersionToPath(resFilePath, oldVersion);
         let resEqual = await mergeFileInVersion(oldResPath, resFilePath, releasePath, patchPath, oldVersion, newVersion, oldVersionPath);
         if (!resEqual) {
