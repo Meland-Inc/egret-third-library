@@ -592,91 +592,95 @@ async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, ol
 
     let newResContent = await fsExc.readFile(projNewVersionPath + '/' + resFilePath);
     let newResObj = JSON.parse(newResContent);
-    //旧的配置有可能不存在
-    let oldExist = await fsExc.exists(oldVersionPath + '/' + oldResPath);
-    if (oldVersion && oldExist) {
+    if (oldVersion) {
         let oldResPath = addVersionToPath(resFilePath, oldVersion);
-        let resEqual = await mergeFileInVersion(oldResPath, resFilePath, releasePath, patchPath, oldVersion, newVersion, oldVersionPath);
-        if (!resEqual) {
-            let oldResContent = await fsExc.readFile(oldVersionPath + '/' + oldResPath);
-            let oldResObj = JSON.parse(oldResContent);
+        let oldExist = await fsExc.exists(oldVersionPath + '/' + oldResPath);
+        //旧的配置不存在的时候,用最新的
+        if (!oldExist) {
+            useNew = true;
+        } else {
+            let resEqual = await mergeFileInVersion(oldResPath, resFilePath, releasePath, patchPath, oldVersion, newVersion, oldVersionPath);
+            if (!resEqual) {
+                let oldResContent = await fsExc.readFile(oldVersionPath + '/' + oldResPath);
+                let oldResObj = JSON.parse(oldResContent);
 
-            for (const newResIterator of newResObj.resources) {
-                let newPath = 'resource/' + newResIterator.url;
+                for (const newResIterator of newResObj.resources) {
+                    let newPath = 'resource/' + newResIterator.url;
 
-                let oldPath;
-                let oldResIteratorUrl;
-                for (const oldResIterator of oldResObj.resources) {
-                    if (oldResIterator.name == newResIterator.name) {
-                        oldPath = 'resource/' + oldResIterator.url;
-                        oldResIteratorUrl = oldResIterator.url;
-                        break;
-                    }
-                }
-
-                let configEqual = false;
-                let resFileEqual = false;
-                //处理纹理集配置内索引的图片地址
-                if (newResIterator.type == 'sheet') {
-                    //是图集,比较图集配置文件中的图片是否相同
-                    // let newConfigPath = projNewVersionPath + '/' + newPath;
-                    // let newConfigContent = await fsExc.readFile(newConfigPath);
-
-                    let newConfigContent = await fsExc.readFile(projNewVersionPath + '/' + newPath);
-                    let newConfigObj = JSON.parse(newConfigContent);
-                    let newFilePath = `resource/${fsExc.dirname(newResIterator.url)}/${newConfigObj.file}`;
-
-                    let oldFilePath = '';
-                    let oldConfigObj
-                    if (oldPath) {
-                        //存在旧的 给旧路径赋值
-                        let oldConfigPath = oldVersionPath + '/' + oldPath;
-                        let oldConfigContent = await fsExc.readFile(oldConfigPath);
-                        oldConfigObj = JSON.parse(oldConfigContent);
-                        oldFilePath = `resource/${fsExc.dirname(newResIterator.url)}/${oldConfigObj.file}`;
-                    } else {
-                        oldFilePath = `resource/${fsExc.dirname(newResIterator.url)}/${newConfigObj.file}`;
+                    let oldPath;
+                    let oldResIteratorUrl;
+                    for (const oldResIterator of oldResObj.resources) {
+                        if (oldResIterator.name == newResIterator.name) {
+                            oldPath = 'resource/' + oldResIterator.url;
+                            oldResIteratorUrl = oldResIterator.url;
+                            break;
+                        }
                     }
 
-                    //判断图集是否相同
-                    resFileEqual = await mergeFileInVersion(oldFilePath, newFilePath, releasePath, patchPath, oldVersion, newVersion, oldVersionPath);
-                    if (resFileEqual && oldConfigObj) {
-                        let oldFrameStr = JSON.stringify(oldConfigObj.frames);
-                        oldFrameStr = oldFrameStr.replace(/\s+/g, '');
+                    let configEqual = false;
+                    let resFileEqual = false;
+                    //处理纹理集配置内索引的图片地址
+                    if (newResIterator.type == 'sheet') {
+                        //是图集,比较图集配置文件中的图片是否相同
+                        // let newConfigPath = projNewVersionPath + '/' + newPath;
+                        // let newConfigContent = await fsExc.readFile(newConfigPath);
 
-                        let newFrameStr = JSON.stringify(newConfigObj.frames);
-                        newFrameStr = newFrameStr.replace(/\s+/g, '');
+                        let newConfigContent = await fsExc.readFile(projNewVersionPath + '/' + newPath);
+                        let newConfigObj = JSON.parse(newConfigContent);
+                        let newFilePath = `resource/${fsExc.dirname(newResIterator.url)}/${newConfigObj.file}`;
 
-                        if (oldFrameStr === newFrameStr) {
-                            configEqual = true;
-                            console.log(`${newConfigObj.file} frames equal`);
+                        let oldFilePath = '';
+                        let oldConfigObj
+                        if (oldPath) {
+                            //存在旧的 给旧路径赋值
+                            let oldConfigPath = oldVersionPath + '/' + oldPath;
+                            let oldConfigContent = await fsExc.readFile(oldConfigPath);
+                            oldConfigObj = JSON.parse(oldConfigContent);
+                            oldFilePath = `resource/${fsExc.dirname(newResIterator.url)}/${oldConfigObj.file}`;
                         } else {
-                            //不相等的话,创建对应的文件夹
-                            await fsExc.makeDir(patchPath + '/' + fsExc.dirname(oldFilePath));
-                            await fsExc.makeDir(releasePath + '/' + fsExc.dirname(oldFilePath));
-                            console.log(`${newConfigObj.file} frames not equal`);
+                            oldFilePath = `resource/${fsExc.dirname(newResIterator.url)}/${newConfigObj.file}`;
                         }
 
+                        //判断图集是否相同
+                        resFileEqual = await mergeFileInVersion(oldFilePath, newFilePath, releasePath, patchPath, oldVersion, newVersion, oldVersionPath);
+                        if (resFileEqual && oldConfigObj) {
+                            let oldFrameStr = JSON.stringify(oldConfigObj.frames);
+                            oldFrameStr = oldFrameStr.replace(/\s+/g, '');
+
+                            let newFrameStr = JSON.stringify(newConfigObj.frames);
+                            newFrameStr = newFrameStr.replace(/\s+/g, '');
+
+                            if (oldFrameStr === newFrameStr) {
+                                configEqual = true;
+                                console.log(`${newConfigObj.file} frames equal`);
+                            } else {
+                                //不相等的话,创建对应的文件夹
+                                await fsExc.makeDir(patchPath + '/' + fsExc.dirname(oldFilePath));
+                                await fsExc.makeDir(releasePath + '/' + fsExc.dirname(oldFilePath));
+                                console.log(`${newConfigObj.file} frames not equal`);
+                            }
+
+                        }
+
+                        //图集配置处理
+                        await sheetConfigHandle(configEqual, resFileEqual, releasePath, patchPath, oldPath, newPath, oldVersion, newVersion, newResIterator.url, oldVersionPath);
+                    }
+                    //不是图集,直接比较
+                    else {
+                        configEqual = true;
+                        resFileEqual = await mergeFileInVersion(oldPath, newPath, releasePath, patchPath, oldVersion, newVersion, oldVersionPath);
                     }
 
-                    //图集配置处理
-                    await sheetConfigHandle(configEqual, resFileEqual, releasePath, patchPath, oldPath, newPath, oldVersion, newVersion, newResIterator.url, oldVersionPath);
+                    //修改图集配置中的版本号
+                    if (configEqual && resFileEqual) {
+                        newResIterator.url = oldResIteratorUrl;
+                    } else {
+                        newResIterator.url = addVersionToPath(newResIterator.url, newVersion);
+                    }
                 }
-                //不是图集,直接比较
-                else {
-                    configEqual = true;
-                    resFileEqual = await mergeFileInVersion(oldPath, newPath, releasePath, patchPath, oldVersion, newVersion, oldVersionPath);
-                }
-
-                //修改图集配置中的版本号
-                if (configEqual && resFileEqual) {
-                    newResIterator.url = oldResIteratorUrl;
-                } else {
-                    newResIterator.url = addVersionToPath(newResIterator.url, newVersion);
-                }
+            } else {
+                useNew = true;
             }
-        } else {
-            useNew = true;
         }
     } else {
         useNew = true;
