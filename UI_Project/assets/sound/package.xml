@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="fknoioov" jpegQuality="80" compressPNG="true">
+<packageDescription id="fknoioov">
   <resources>
     <sound id="tqc911" name="buttonTouch.wav" path="/" exported="true"/>
     <sound id="tqc912" name="close.wav" path="/" exported="true"/>
+    <sound id="l3l213" name="JimmyClick.mp3" path="/" exported="true"/>
   </resources>
-  <publish name="sound" path="..\..\egret-planet\resource\assets\fairySound"/>
+  <publish name="sound" path="..\..\egret-planet\resource\assets\fairySound" packageCount="2"/>
 </packageDescription>

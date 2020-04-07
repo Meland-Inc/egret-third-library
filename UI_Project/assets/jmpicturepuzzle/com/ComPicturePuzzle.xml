@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1700,1200" opaque="false">
+  <displayList>
+    <loader id="n40_xr0j" name="loaderBG" xy="468,175" size="759,755" align="center" vAlign="middle" fill="scaleFree" playing="false"/>
+    <component id="n41_pic2" name="btnRollLeft" src="sco7k" fileName="btn/btnScale.xml" pkg="av6agj0g" xy="679,1038" controller="button,0">
+      <Button icon="ui://av6agj0galb71s"/>
+    </component>
+    <component id="n42_pic2" name="btnRollRight" src="sco7k" fileName="btn/btnScale.xml" pkg="av6agj0g" xy="957,1050" controller="button,0">
+      <Button icon="ui://av6agj0gbmxe2c"/>
+    </component>
+    <loader id="n43_yevn" name="loaderPass" xy="480,232" size="759,755" align="center" vAlign="middle" fill="scaleFree" playing="false"/>
+    <component id="n44_bpgn" name="btnRollOver" src="sco7k" fileName="btn/btnScale.xml" pkg="av6agj0g" xy="1160,1041" controller="button,0">
+      <Button icon="ui://av6agj0gbmxe2c"/>
+    </component>
+  </displayList>
+</component>

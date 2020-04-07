@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="kvblsqzc">
+  <resources>
+    <component id="hilw0" name="ComBalance.xml" path="/com/" exported="true"/>
+    <component id="hilw9" name="ComTip.xml" path="/com/" exported="true"/>
+    <image id="j5tqb" name="bg_blue.png" path="/img/" exported="true" scale="tile"/>
+    <image id="j5tqa" name="neikuang_blue.png" path="/img/" exported="true" scale="9grid" scale9grid="67,125,6,16"/>
+    <component id="hvmoc" name="ComBG.xml" path="/com/"/>
+    <component id="fqdkd" name="ComContainer.xml" path="/com/" exported="true"/>
+  </resources>
+  <publish name="jmBalance" path="..\..\egret-planet\resource\jimmyAssets\dynamicMission\jmBalance" packageCount="2"/>
+</packageDescription>

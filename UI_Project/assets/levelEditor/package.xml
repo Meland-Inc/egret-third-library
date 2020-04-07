@@ -65,12 +65,12 @@
     <component id="l7sp23" name="btnScale.xml" path="/btn/"/>
     <component id="l7sp25" name="btnStart.xml" path="/btn/"/>
     <component id="l7sp26" name="btnDo.xml" path="/btn/"/>
-    <component id="nuyecyif8" name="WinPlayLevel.xml" path="/win/" exported="true"/>
+    <component id="nuyecyif8" name="WinPlayLevel.xml" path="/win/"/>
     <component id="nuyecyif9" name="ComEditorStage.xml" path="/com/"/>
     <component id="cdz3cyifa" name="ComPlayView.xml" path="/com/"/>
     <component id="ojgccyifb" name="btnScaleNoEffect.xml" path="/btn/"/>
     <component id="ojgccyifc" name="btnFixClickArea.xml" path="/btn/"/>
     <image id="ojgccyifd" name="btn_cm_gb.png" path="/img/"/>
   </resources>
-  <publish name="levelEditor" path="..\..\egret-planet\resource\jimmyAssets\fairyGui"/>
+  <publish name="levelEditor" path="..\..\egret-planet\resource\jimmyAssets\jmFairyGui"/>
 </packageDescription>
