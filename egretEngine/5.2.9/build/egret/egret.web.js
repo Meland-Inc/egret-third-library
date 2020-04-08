@@ -4433,22 +4433,31 @@ var egret;
                     canvas.style.top = top + (boundingClientHeight - displayHeight) / 2 + "px";
                     canvas.style.left = (boundingClientWidth - displayWidth) / 2 + "px";
                 }
-                var scalex = displayWidth / stageWidth, scaley = displayHeight / stageHeight;
-                var canvasScaleX = scalex * egret.sys.DisplayList.$canvasScaleFactor;
-                var canvasScaleY = scaley * egret.sys.DisplayList.$canvasScaleFactor;
+                var displayScalex = displayWidth / stageWidth, diplayScaley = displayHeight / stageHeight;
+                //不要让渲染分辨率大于stage  但是缩小分辨率的时候 可以适应低分辨率渲染节省性能 xy需要同比例缩小
+                var realScaleX = displayScalex;
+                var realScaleY = diplayScaley;
+                var maxScale = displayScalex > diplayScaley ? displayScalex : diplayScaley; //最大缩放值
+                //只有大于舞台设计分辨率才按舞台设计分辨率
+                if (maxScale > 1) {
+                    realScaleX = displayScalex / maxScale;
+                    realScaleY = diplayScaley / maxScale;
+                }
+                var canvasScaleX = realScaleX * egret.sys.DisplayList.$canvasScaleFactor;
+                var canvasScaleY = realScaleY * egret.sys.DisplayList.$canvasScaleFactor;
                 if (egret.Capabilities.renderMode == "canvas") {
                     canvasScaleX = Math.ceil(canvasScaleX);
                     canvasScaleY = Math.ceil(canvasScaleY);
                 }
                 var m = egret.Matrix.create();
                 m.identity();
-                m.scale(scalex / canvasScaleX, scaley / canvasScaleY);
+                m.scale(displayScalex / canvasScaleX, diplayScaley / canvasScaleY);
                 m.rotate(rotation * Math.PI / 180);
                 var transform = "matrix(" + m.a + "," + m.b + "," + m.c + "," + m.d + "," + m.tx + "," + m.ty + ")";
                 egret.Matrix.release(m);
                 canvas.style[egret.web.getPrefixStyleName("transform")] = transform;
                 egret.sys.DisplayList.$setCanvasScale(canvasScaleX, canvasScaleY);
-                this.webTouchHandler.updateScaleMode(scalex, scaley, rotation);
+                this.webTouchHandler.updateScaleMode(displayScalex, diplayScaley, rotation);
                 this.webInput.$updateSize();
                 this.player.updateStageSize(stageWidth, stageHeight); //不要在这个方法后面修改属性
                 // todo
