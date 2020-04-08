@@ -864,8 +864,8 @@ namespace egret.web {
             if (width <= 0 || height <= 0 || !width || !height || node.drawData.length == 0) {
                 return;
             }
-            let canvasScaleX = sys.DisplayList.$canvasScaleX;
-            let canvasScaleY = sys.DisplayList.$canvasScaleY;
+            let canvasScaleX = sys.DisplayList.$canvasScaleX * 2;
+            let canvasScaleY = sys.DisplayList.$canvasScaleY * 2;
             let maxTextureSize = buffer.context.$maxTextureSize;
             if (width * canvasScaleX > maxTextureSize) {
                 canvasScaleX *= maxTextureSize / (width * canvasScaleX);
@@ -928,7 +928,8 @@ namespace egret.web {
 
             let textureWidth = node.$textureWidth;
             let textureHeight = node.$textureHeight;
-            buffer.context.drawTexture(node.$texture, 0, 0, textureWidth * 2, textureHeight * 2, 0, 0, textureWidth / canvasScaleX, textureHeight / canvasScaleY, textureWidth * 2, textureHeight * 2);
+            // buffer.context.drawTexture(node.$texture, 0, 0, textureWidth * 4, textureHeight * 4, 0, 0, textureWidth / canvasScaleX, textureHeight / canvasScaleY, textureWidth * 4, textureHeight * 4);
+            buffer.context.drawTexture(node.$texture, 0, 0, textureWidth, textureHeight, 0, 0, textureWidth / canvasScaleX, textureHeight / canvasScaleY, textureWidth, textureHeight);
 
             if (x || y) {
                 if (node.dirtyRender) {
