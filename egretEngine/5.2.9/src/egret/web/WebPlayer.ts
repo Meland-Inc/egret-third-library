@@ -158,7 +158,7 @@ namespace egret.web {
          */
         public stage: Stage;
 
-        private webTouchHandler: WebTouchHandler;
+        public webTouchHandler: WebTouchHandler;
         private player: egret.sys.Player;
         private webInput: egret.web.HTMLInput;
 

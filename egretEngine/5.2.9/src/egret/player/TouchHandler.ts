@@ -38,6 +38,7 @@ namespace egret.sys {
         private maxTouches: number = 0;
         private useTouchesCount: number = 0;
 
+        public touchRecorder: any = null;
         /**
          * @private
          */
@@ -73,6 +74,7 @@ namespace egret.sys {
          * @param button 鼠标左中右键
          */
         public onTouchBegin(x: number, y: number, touchPointID: number, button: number): void {
+            this.touchRecorder && this.touchRecorder.onTouchBegin(x, y, touchPointID, button);
             if (this.useTouchesCount >= this.maxTouches) {
                 return;
             }
@@ -128,6 +130,7 @@ namespace egret.sys {
          * @param touchPointID 分配给触摸点的唯一标识号
          */
         public onTouchEnd(x: number, y: number, touchPointID: number, button: number): void {
+            this.touchRecorder && this.touchRecorder.onTouchEnd(x, y, touchPointID, button);
             if (this.touchDownTarget[touchPointID] == null) {
                 return;
             }

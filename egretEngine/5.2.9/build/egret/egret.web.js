@@ -7849,8 +7849,8 @@ var egret;
                 if (width <= 0 || height <= 0 || !width || !height || node.drawData.length == 0) {
                     return;
                 }
-                var canvasScaleX = egret.sys.DisplayList.$canvasScaleX;
-                var canvasScaleY = egret.sys.DisplayList.$canvasScaleY;
+                var canvasScaleX = egret.sys.DisplayList.$canvasScaleX * 2;
+                var canvasScaleY = egret.sys.DisplayList.$canvasScaleY * 2;
                 var maxTextureSize = buffer.context.$maxTextureSize;
                 if (width * canvasScaleX > maxTextureSize) {
                     canvasScaleX *= maxTextureSize / (width * canvasScaleX);
@@ -7908,7 +7908,8 @@ var egret;
                 }
                 var textureWidth = node.$textureWidth;
                 var textureHeight = node.$textureHeight;
-                buffer.context.drawTexture(node.$texture, 0, 0, textureWidth * 2, textureHeight * 2, 0, 0, textureWidth / canvasScaleX, textureHeight / canvasScaleY, textureWidth * 2, textureHeight * 2);
+                // buffer.context.drawTexture(node.$texture, 0, 0, textureWidth * 4, textureHeight * 4, 0, 0, textureWidth / canvasScaleX, textureHeight / canvasScaleY, textureWidth * 4, textureHeight * 4);
+                buffer.context.drawTexture(node.$texture, 0, 0, textureWidth, textureHeight, 0, 0, textureWidth / canvasScaleX, textureHeight / canvasScaleY, textureWidth, textureHeight);
                 if (x || y) {
                     if (node.dirtyRender) {
                         this.canvasRenderBuffer.context.setTransform(canvasScaleX, 0, 0, canvasScaleY, 0, 0);

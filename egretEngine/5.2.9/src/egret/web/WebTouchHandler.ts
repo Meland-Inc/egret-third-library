@@ -51,7 +51,7 @@ namespace egret.web {
         /**
          * @private
          */
-        private touch: egret.sys.TouchHandler;
+        public touch: egret.sys.TouchHandler;
         /**
          * @private
          * 已经处理过mouseMove事件 一帧只处理一次mouseMove事件  实践发现 鼠标移动时 按住按键  会在一帧触发很多次mouseMove影响性能
