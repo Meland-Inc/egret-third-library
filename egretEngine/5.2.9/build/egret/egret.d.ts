@@ -9544,6 +9544,7 @@ declare namespace egret.sys {
     class TouchHandler extends HashObject {
         private maxTouches;
         private useTouchesCount;
+        touchRecorder: any;
         /**
          * @private
          */

@@ -14549,6 +14549,7 @@ var egret;
                 var _this = _super.call(this) || this;
                 _this.maxTouches = 0;
                 _this.useTouchesCount = 0;
+                _this.touchRecorder = null;
                 /**
                  * @private
                  */
@@ -14580,6 +14581,7 @@ var egret;
              * @param button 鼠标左中右键
              */
             TouchHandler.prototype.onTouchBegin = function (x, y, touchPointID, button) {
+                this.touchRecorder && this.touchRecorder.onTouchBegin(x, y, touchPointID, button);
                 if (this.useTouchesCount >= this.maxTouches) {
                     return;
                 }
@@ -14620,6 +14622,7 @@ var egret;
              * @param touchPointID 分配给触摸点的唯一标识号
              */
             TouchHandler.prototype.onTouchEnd = function (x, y, touchPointID, button) {
+                this.touchRecorder && this.touchRecorder.onTouchEnd(x, y, touchPointID, button);
                 if (this.touchDownTarget[touchPointID] == null) {
                     return;
                 }
