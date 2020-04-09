@@ -1093,7 +1093,7 @@ export async function writeVersionInfo() {
     let nativeConfig = JSON.parse(nativeConfigContent);
     nativeConfig.environName = curEnviron.name;
     if (curEnviron.name == ModelMgr.versionModel.eEnviron.release) {
-        nativeConfig.patchUrl = `${curEnviron.host}${curEnviron.cdnWinPatchPath}`;
+        nativeConfig.patchUrl = `${curEnviron.host}/${curEnviron.cdnWinPatchPath}`;
         nativeConfig.policyUrl = `${curEnviron.host}/`;
     } else {
         nativeConfig.patchUrl = `${curEnviron.host}${curEnviron.scpWinPatchPath}`;
