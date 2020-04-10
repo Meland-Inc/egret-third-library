@@ -106,6 +106,7 @@ namespace egret.sys {
          * @param touchPointID 分配给触摸点的唯一标识号
          */
         public onTouchMove(x: number, y: number, touchPointID: number, button: number): void {
+            this.touchRecorder && this.touchRecorder.onTouchMove(x, y, touchPointID, button);
             if (this.touchDownTarget[touchPointID] == null) {
                 return;
             }

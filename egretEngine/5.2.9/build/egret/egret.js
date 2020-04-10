@@ -14602,6 +14602,7 @@ var egret;
              * @param touchPointID 分配给触摸点的唯一标识号
              */
             TouchHandler.prototype.onTouchMove = function (x, y, touchPointID, button) {
+                this.touchRecorder && this.touchRecorder.onTouchMove(x, y, touchPointID, button);
                 if (this.touchDownTarget[touchPointID] == null) {
                     return;
                 }
