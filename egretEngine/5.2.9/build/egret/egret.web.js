@@ -2554,8 +2554,8 @@ var egret;
                 if (!this.canvas) {
                     return;
                 }
-                this.$scaleX = egret.sys.DisplayList.$canvasScaleX;
-                this.$scaleY = egret.sys.DisplayList.$canvasScaleY;
+                this.$scaleX = egret.sys.DisplayList.$canvasScaleX / egret.sys.DisplayList.$canvasScaleFactor;
+                this.$scaleY = egret.sys.DisplayList.$canvasScaleY / egret.sys.DisplayList.$canvasScaleFactor;
                 this.StageDelegateDiv.style.left = this.canvas.style.left;
                 this.StageDelegateDiv.style.top = this.canvas.style.top;
                 var transformKey = egret.web.getPrefixStyleName("transform");
