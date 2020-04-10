@@ -72,7 +72,7 @@ export default class ServerUpdate {
 
         logger.log(`update`, `检测到服务器版本更新,开始更新版本${this._remoteVersion}`);
         //更新
-        loading.showLoading("正在更新服务端游戏包");
+        loading.showLoading("正在更新服务端程序包");
         let deleteDir = `${this._packagePath}server`;
         //清除要保存的文件夹
         await util.deleteFolderRecursive(deleteDir);
