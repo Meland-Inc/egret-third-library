@@ -96,10 +96,10 @@ export async function uploadVersionFile() {
 
     if (curEnviron.cdnEnable) {
         await uploadCdnVersionFile();
-        if (curEnviron.cdnWinPatchPath) {
+        if (curEnviron.cdnPatchEnable && curEnviron.cdnWinPatchPath) {
             await uploadCdnPatchZip(curEnviron.cdnWinPatchPath);
         }
-        if (curEnviron.cdnMacPatchPath) {
+        if (curEnviron.cdnPatchEnable && curEnviron.cdnMacPatchPath) {
             await uploadCdnPatchZip(curEnviron.cdnMacPatchPath);
         }
     }
