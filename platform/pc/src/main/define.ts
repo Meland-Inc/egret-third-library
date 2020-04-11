@@ -17,6 +17,7 @@ export namespace define {
     export enum eLessonRouter {
         createMap = "createMap",
         banner = "banner",
+        game = "game",
     }
 
     /** 用户类型枚举，教师端，学生端，机构端 */

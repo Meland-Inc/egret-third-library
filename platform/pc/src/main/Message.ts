@@ -125,12 +125,14 @@ class Message {
     /** 从游戏模式进入 */
     private startNativeGame() {
         logger.log('update', `从游戏模式进入`);
-
-        //初始化参数
-        let queryObject = { fakeGameMode: "lessons", nativeMode: define.eNativeMode.game };
-
-        //本地服务器初始化
-        message.init();
+        let urlValue = config.urlValue;
+        //伪协议启动参数
+        logger.log('platform', `初始化平台数据`, urlValue);
+        let argsValue = urlValue.slice(urlValue.indexOf("?") + 1);
+        let argsObj = querystring.parse(argsValue);
+        let queryObject: querystring.ParsedUrlQuery = {};
+        queryObject = Object.assign(queryObject, argsObj);
+        queryObject["nativeMode"] = define.eNativeMode.game + "";
 
         let queryValue: string = querystring.stringify(queryObject);
 

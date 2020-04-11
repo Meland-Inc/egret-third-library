@@ -265,11 +265,15 @@ async function initNative() {
     lessonRouter = lessonRouter.slice(0, lessonRouter.indexOf("?") - 1);
     config.setLessonRouter(lessonRouter as define.eLessonRouter);
 
+    logger.log('test', `touter: ${config.lessonRouter}`);
+
     //创造地图模式
     if (config.lessonRouter === define.eLessonRouter.createMap) {
       config.setNativeMode(define.eNativeMode.createMap);
     } else if (config.lessonRouter === define.eLessonRouter.banner) {
       config.setNativeMode(define.eNativeMode.banner);
+    } else if (config.lessonRouter === define.eLessonRouter.game) {
+      config.setNativeMode(define.eNativeMode.game);
     } else {
       config.setNativeMode(define.eNativeMode.platform);
     }

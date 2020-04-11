@@ -80,7 +80,7 @@ export default class ClientUpdate {
             this._gameVersion = +gameVersion;
             return this._curVersion === this._gameVersion;
         } catch (error) {
-            let content = "获取游戏版本号错误!";
+            let content = "获取客户端版本号错误!";
             logger.error(`renderer`, content);
             alert(content);
             return true;
@@ -93,7 +93,7 @@ export default class ClientUpdate {
             this._updateCallback = updateCallback;
             this._updateCbArgs = updateCbArgs;
 
-            loading.showLoading("正在下载客户端游戏包");
+            loading.showLoading("正在下载客户端程序包");
             this.downloadPackage();
         } catch (error) {
             throw error;
@@ -199,7 +199,7 @@ export default class ClientUpdate {
     /** 下载单个补丁包 */
     private installSinglePatch() {
         try {
-            loading.showLoading("正在更新客户端游戏包");
+            loading.showLoading("正在更新客户端程序包");
             this._download.downloadFile(this._patchUrl, this._clientPackagePath, `patch_v${this._curVersion}s_v${this._curVersion + 1}s.zip`, this.downloadFileCallback.bind(this));
         } catch (error) {
             throw error;
