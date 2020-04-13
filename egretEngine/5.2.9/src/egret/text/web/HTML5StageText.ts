@@ -593,8 +593,8 @@ namespace egret.web {
                 return;
             }
 
-            this.$scaleX = egret.sys.DisplayList.$canvasScaleX / sys.DisplayList.$canvasScaleFactor;
-            this.$scaleY = egret.sys.DisplayList.$canvasScaleY / sys.DisplayList.$canvasScaleFactor;
+            this.$scaleX = egret.sys.DisplayList.$canvasScaleX;
+            this.$scaleY = egret.sys.DisplayList.$canvasScaleY;
 
             this.StageDelegateDiv.style.left = this.canvas.style.left;
             this.StageDelegateDiv.style.top = this.canvas.style.top;
