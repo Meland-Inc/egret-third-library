@@ -290,7 +290,7 @@ function uglify(sourceFile) {
     }
     options.mangle.properties.reserved = reservedCell.concat();
 
-    if (evnStr && evnStr[1] != "beta") {
+    if (evnStr && evnStr[1] != "release") {
         // if (true) {
         options.mangle = false;
         options.toplevel = false;
