@@ -12,8 +12,8 @@
     <component id="n39_gx7z" name="comEditorStage" src="sco7n" fileName="com/ComEditorStage.xml" xy="174,237" size="1572,744">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
-    <loader id="n34_gx7z" name="ladBG" xy="0,0" size="1920,1080" touchable="false" url="ui://av6agj0gbmxe27" fill="scaleFree">
-      <gearIcon controller="ctrlJmType" pages="4" values="ui://kvblsqzcj5tqb" default="ui://av6agj0gbmxe27"/>
+    <loader id="n34_gx7z" name="ladBG" xy="0,0" size="1920,1080" touchable="false" url="ui://av6agj0gk45f3m" fill="scaleFree">
+      <gearIcon controller="ctrlJmType" pages="4,5" values="ui://kvblsqzcj5tqb|ui://av6agj0gk45f3m" default="ui://av6agj0gbmxe27"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
     <image id="n35_gx7z" name="imgBar" src="hwlx25" fileName="img/img_keybord_bg.png" xy="0,0" size="1920,56" visible="false">
@@ -31,6 +31,7 @@
     </graph>
     <text id="n45_gx7z" name="tfPageInfo" xy="0,1461" size="188,66" visible="false" fontSize="40" color="#333333" align="center" vAlign="middle" vars="true" autoSize="none" text="{curPage=1}/{pageNum = 20}"/>
     <image id="n47_gx7z" name="imgDesBg" src="bmxe28" fileName="img/tip_bg.png" xy="117,128" size="1291,95">
+      <gearDisplay controller="ctrlJmType" pages="0,1,2,3,4"/>
       <relation target="n37_gx7z" sidePair="left-left,top-top"/>
     </image>
     <text id="n48_gx7z" name="tfDescribe" xy="280,156" size="1925,44" fontSize="40" color="#333333" vAlign="middle" autoClearText="true" text="这里是关卡描述这里是关卡这里是关卡描述这里是关卡这里是关卡描述这里是关卡这里是关卡描述这里是关卡">
@@ -38,6 +39,13 @@
     </text>
     <graph id="n71_sco7" name="gphDesMask" xy="273,144" size="1106,66" type="rect">
       <relation target="n47_gx7z" sidePair="center-center,middle-middle"/>
+    </graph>
+    <image id="n95_fhtd" name="imgExaminationTitle" src="fhtd3q" fileName="img/标题.png" xy="757,8" size="404,111" aspect="true">
+      <gearDisplay controller="ctrlJmType" pages="5"/>
+      <relation target="" sidePair="center-center"/>
+    </image>
+    <graph id="n96_fhtd" name="pghDesBg" xy="117,128" size="1291,95" type="rect" lineSize="8" lineColor="#fffbbd31" fillColor="#00ffffff" corner="47">
+      <gearDisplay controller="ctrlJmType" pages="5"/>
     </graph>
     <image id="n84_bmxe" name="btnBG_1" src="bmxe2g" fileName="img/bt_bg.png" xy="1710,308" group="n87_bmxe">
       <relation target="" sidePair="right-right,bottom-bottom"/>
@@ -48,32 +56,44 @@
     <image id="n86_bmxe" name="btnBG_3" src="bmxe2g" fileName="img/bt_bg.png" xy="1710,555" group="n87_bmxe">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </image>
-    <group id="n87_bmxe" name="btnBG" xy="1710,308" size="210,681"/>
-    <component id="n46_gx7z" name="btnPlayVoice" src="sco7k" fileName="btn/btnScale.xml" xy="127,57" size="170,143" controller="button,0">
+    <group id="n87_bmxe" name="btnBG" xy="1710,308" size="210,681" advanced="true">
+      <gearDisplay controller="ctrlJmType" pages="0,1,2,3,4"/>
+    </group>
+    <component id="n46_gx7z" name="btnPlayVoice" src="sco7k" fileName="btn/btnScale.xml" xy="100,47" size="199,143" aspect="true" controller="button,0">
       <gearDisplay controller="ctrlVoiceType" pages="1"/>
+      <gearXY controller="ctrlJmType" pages="5" values="100,47" default="127,57"/>
+      <gearSize controller="ctrlJmType" pages="5" values="199,143,1,1" default="170,143,1,1"/>
+      <gearIcon controller="ctrlJmType" pages="5" values="ui://av6agj0gfhtd3n" default="ui://av6agj0gbmxe2a"/>
       <relation target="n37_gx7z" sidePair="left-left,top-top"/>
-      <Button icon="ui://av6agj0gbmxe2a"/>
+      <Button icon="ui://av6agj0gfhtd3n"/>
     </component>
-    <component id="n76_alb7" name="btnPauseVoice" src="sco7k" fileName="btn/btnScale.xml" xy="127,57" size="170,143" controller="button,0">
+    <component id="n76_alb7" name="btnPauseVoice" src="sco7k" fileName="btn/btnScale.xml" xy="100,47" size="199,143" aspect="true" controller="button,0">
       <gearDisplay controller="ctrlVoiceType" pages="2"/>
+      <gearXY controller="ctrlJmType" pages="5" values="100,47" default="127,57"/>
+      <gearSize controller="ctrlJmType" pages="5" values="199,143,1,1" default="170,143,1,1"/>
+      <gearIcon controller="ctrlJmType" pages="5" values="ui://av6agj0gfhtd3o" default="ui://av6agj0gbmxe29"/>
       <relation target="n37_gx7z" sidePair="left-left,top-top"/>
-      <Button icon="ui://av6agj0gbmxe29"/>
+      <Button icon="ui://av6agj0gfhtd3o"/>
     </component>
     <component id="n50_gx7z" name="btnUndo" src="sco7k" fileName="btn/btnScale.xml" xy="1667,528" size="221,225" controller="button,0">
+      <gearIcon controller="ctrlJmType" pages="5" values="ui://av6agj0gfhtd3r" default="ui://av6agj0gbmxe2e"/>
       <relation target="n37_gx7z" sidePair="right-right,bottom-bottom"/>
-      <Button icon="ui://av6agj0gbmxe2e"/>
+      <Button icon="ui://av6agj0gfhtd3r"/>
     </component>
     <component id="n51_gx7z" name="btnMerge" src="sco7k" fileName="btn/btnScale.xml" xy="1667,776" size="221,225" controller="button,0">
+      <gearIcon controller="ctrlJmType" pages="5" values="ui://av6agj0gfhtd3p" default="ui://av6agj0gbmxe2d"/>
       <relation target="n37_gx7z" sidePair="right-right,bottom-bottom"/>
-      <Button icon="ui://av6agj0gbmxe2d"/>
+      <Button icon="ui://av6agj0gfhtd3p"/>
     </component>
     <component id="n59_sco7" name="btnSkipLevel" src="sco7k" fileName="btn/btnScale.xml" xy="1667,281" size="221,225" controller="button,0">
+      <gearDisplay controller="ctrlJmType" pages="0,1,2,3,4"/>
       <relation target="n37_gx7z" sidePair="right-right,bottom-bottom"/>
       <Button icon="ui://av6agj0gbmxe2c"/>
     </component>
     <component id="n30_nuye" name="btnClose" src="sco7k" fileName="btn/btnScale.xml" xy="1756,43" size="127,130" controller="button,0">
+      <gearIcon controller="ctrlJmType" pages="5" values="ui://av6agj0gfhtd3s" default="ui://av6agj0gbmxe2f"/>
       <relation target="n35_gx7z" sidePair="right-right,top-top"/>
-      <Button icon="ui://av6agj0gbmxe2f"/>
+      <Button icon="ui://av6agj0gfhtd3s"/>
     </component>
     <graph id="n61_sco7" name="ladImg" xy="0,-1" size="1920,1080" alpha="0.2" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
       <gearDisplay controller="ctrlTemGameType" pages="1,2"/>
