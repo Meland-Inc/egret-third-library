@@ -226,19 +226,23 @@ namespace egret.web {
             let displayScalex = displayWidth / stageWidth,
                 diplayScaley = displayHeight / stageHeight;
 
-            //不要让渲染分辨率大于stage  但是缩小分辨率的时候 可以适应低分辨率渲染节省性能 xy需要同比例缩小
-            let realScaleX = displayScalex;
-            let realScaleY = diplayScaley;
+            //用mac台式实测 displayScalex不是实际像素分辨率 只为了拿到xy的舞台比例 实际像素影响canvasScaleFactor 在上层解决
+            // //不要让渲染分辨率大于stage  但是缩小分辨率的时候 可以适应低分辨率渲染节省性能 xy需要同比例缩小
+            // let realScaleX = displayScalex;
+            // let realScaleY = diplayScaley;
 
-            let maxScale = displayScalex > diplayScaley ? displayScalex : diplayScaley;//最大缩放值
-            //只有大于舞台设计分辨率才按舞台设计分辨率
-            if (maxScale > 1) {
-                realScaleX = displayScalex / maxScale;
-                realScaleY = diplayScaley / maxScale;
-            }
+            // let maxScale = displayScalex > diplayScaley ? displayScalex : diplayScaley;//最大缩放值
+            // //只有大于舞台设计分辨率才按舞台设计分辨率
+            // if (maxScale > 1) {
+            //     realScaleX = displayScalex / maxScale;
+            //     realScaleY = diplayScaley / maxScale;
+            // }
 
-            let canvasScaleX = realScaleX * sys.DisplayList.$canvasScaleFactor * sys.DisplayList.canvasExternalScale;
-            let canvasScaleY = realScaleY * sys.DisplayList.$canvasScaleFactor * sys.DisplayList.canvasExternalScale;
+            // let canvasScaleX = realScaleX * sys.DisplayList.$canvasScaleFactor * sys.DisplayList.canvasExternalScale;
+            // let canvasScaleY = realScaleY * sys.DisplayList.$canvasScaleFactor * sys.DisplayList.canvasExternalScale;
+
+            let canvasScaleX = displayScalex * sys.DisplayList.$canvasScaleFactor * sys.DisplayList.canvasExternalScale;
+            let canvasScaleY = diplayScaley * sys.DisplayList.$canvasScaleFactor * sys.DisplayList.canvasExternalScale;
             if (egret.Capabilities.renderMode == "canvas") {
                 canvasScaleX = Math.ceil(canvasScaleX);
                 canvasScaleY = Math.ceil(canvasScaleY);

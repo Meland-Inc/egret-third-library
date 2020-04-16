@@ -3657,6 +3657,11 @@ var egret;
                     else {
                         canvasScaleFactor = window.devicePixelRatio;
                     }
+                    //如果实际分辨率大于设计分辨率时按照设计分辨率 复杂游戏如果随着屏幕分辨率自动适配原生分辨率会导致性能低
+                    //实际小的话原生也跟随降下来节省性能
+                    if (canvasScaleFactor > 1) {
+                        canvasScaleFactor = 1;
+                    }
                     egret.sys.DisplayList.$canvasScaleFactor = canvasScaleFactor;
                     var ticker = egret.ticker;
                     startTicker(ticker);
@@ -3715,6 +3720,11 @@ var egret;
                         context.oBackingStorePixelRatio ||
                         context.backingStorePixelRatio || 1;
                     canvasScaleFactor = (window.devicePixelRatio || 1) / backingStore;
+                }
+                //如果实际分辨率大于设计分辨率时按照设计分辨率 复杂游戏如果随着屏幕分辨率自动适配原生分辨率会导致性能低
+                //实际小的话原生也跟随降下来节省性能
+                if (canvasScaleFactor > 1) {
+                    canvasScaleFactor = 1;
                 }
                 egret.sys.DisplayList.$canvasScaleFactor = canvasScaleFactor;
                 var ticker_1 = egret.ticker;
@@ -4434,17 +4444,20 @@ var egret;
                     canvas.style.left = (boundingClientWidth - displayWidth) / 2 + "px";
                 }
                 var displayScalex = displayWidth / stageWidth, diplayScaley = displayHeight / stageHeight;
-                //不要让渲染分辨率大于stage  但是缩小分辨率的时候 可以适应低分辨率渲染节省性能 xy需要同比例缩小
-                var realScaleX = displayScalex;
-                var realScaleY = diplayScaley;
-                var maxScale = displayScalex > diplayScaley ? displayScalex : diplayScaley; //最大缩放值
-                //只有大于舞台设计分辨率才按舞台设计分辨率
-                if (maxScale > 1) {
-                    realScaleX = displayScalex / maxScale;
-                    realScaleY = diplayScaley / maxScale;
-                }
-                var canvasScaleX = realScaleX * egret.sys.DisplayList.$canvasScaleFactor * egret.sys.DisplayList.canvasExternalScale;
-                var canvasScaleY = realScaleY * egret.sys.DisplayList.$canvasScaleFactor * egret.sys.DisplayList.canvasExternalScale;
+                //用mac台式实测 displayScalex不是实际像素分辨率 只为了拿到xy的舞台比例 实际像素影响canvasScaleFactor 在上层解决
+                // //不要让渲染分辨率大于stage  但是缩小分辨率的时候 可以适应低分辨率渲染节省性能 xy需要同比例缩小
+                // let realScaleX = displayScalex;
+                // let realScaleY = diplayScaley;
+                // let maxScale = displayScalex > diplayScaley ? displayScalex : diplayScaley;//最大缩放值
+                // //只有大于舞台设计分辨率才按舞台设计分辨率
+                // if (maxScale > 1) {
+                //     realScaleX = displayScalex / maxScale;
+                //     realScaleY = diplayScaley / maxScale;
+                // }
+                // let canvasScaleX = realScaleX * sys.DisplayList.$canvasScaleFactor * sys.DisplayList.canvasExternalScale;
+                // let canvasScaleY = realScaleY * sys.DisplayList.$canvasScaleFactor * sys.DisplayList.canvasExternalScale;
+                var canvasScaleX = displayScalex * egret.sys.DisplayList.$canvasScaleFactor * egret.sys.DisplayList.canvasExternalScale;
+                var canvasScaleY = diplayScaley * egret.sys.DisplayList.$canvasScaleFactor * egret.sys.DisplayList.canvasExternalScale;
                 if (egret.Capabilities.renderMode == "canvas") {
                     canvasScaleX = Math.ceil(canvasScaleX);
                     canvasScaleY = Math.ceil(canvasScaleY);
