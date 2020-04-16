@@ -8762,7 +8762,7 @@ declare namespace egret.sys {
          */
         changeSurfaceSize(): void;
         static $canvasScaleFactor: number;
-        static _canvasExternalScale: number;
+        private static _canvasExternalScale;
         /**
          * @private
          */

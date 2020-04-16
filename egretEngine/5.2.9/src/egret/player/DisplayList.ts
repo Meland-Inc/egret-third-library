@@ -184,7 +184,7 @@ namespace egret.sys {
         }
 
         public static $canvasScaleFactor: number = 1;
-        public static _canvasExternalScale: number = 1;//外部 游戏侧需要的额外缩放 和canvasScaleFactor独立开使用
+        private static _canvasExternalScale: number = 1;//外部 游戏侧需要的额外缩放 和canvasScaleFactor独立开使用
 
         /**
          * @private
