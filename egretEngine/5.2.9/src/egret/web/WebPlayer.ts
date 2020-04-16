@@ -237,8 +237,8 @@ namespace egret.web {
                 realScaleY = diplayScaley / maxScale;
             }
 
-            let canvasScaleX = realScaleX * sys.DisplayList.$canvasScaleFactor;
-            let canvasScaleY = realScaleY * sys.DisplayList.$canvasScaleFactor;
+            let canvasScaleX = realScaleX * sys.DisplayList.$canvasScaleFactor * sys.DisplayList.canvasExternalScale;
+            let canvasScaleY = realScaleY * sys.DisplayList.$canvasScaleFactor * sys.DisplayList.canvasExternalScale;
             if (egret.Capabilities.renderMode == "canvas") {
                 canvasScaleX = Math.ceil(canvasScaleX);
                 canvasScaleY = Math.ceil(canvasScaleY);

@@ -8762,15 +8762,22 @@ declare namespace egret.sys {
          */
         changeSurfaceSize(): void;
         static $canvasScaleFactor: number;
+        static _canvasExternalScale: number;
         /**
          * @private
          */
         static $canvasScaleX: number;
         static $canvasScaleY: number;
+        static readonly canvasExternalScale: number;
         /**
          * @private
          */
         static $setCanvasScale(x: number, y: number): void;
+        /**
+         * 外部设置canvas渲染的额外缩放值
+         * @param scale
+         */
+        static setCanvasExternalScale(scale: number): void;
     }
 }
 declare namespace egret {
