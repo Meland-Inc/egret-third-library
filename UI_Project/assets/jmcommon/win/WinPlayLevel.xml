@@ -30,6 +30,9 @@
       <relation target="" sidePair="width-width,height-height"/>
     </graph>
     <text id="n45_gx7z" name="tfPageInfo" xy="0,1461" size="188,66" visible="false" fontSize="40" color="#333333" align="center" vAlign="middle" vars="true" autoSize="none" text="{curPage=1}/{pageNum = 20}"/>
+    <graph id="n96_fhtd" name="pghDesBg" xy="117,128" size="1291,95" type="rect" lineSize="8" lineColor="#fffbbd31" corner="47">
+      <gearDisplay controller="ctrlJmType" pages="5"/>
+    </graph>
     <image id="n47_gx7z" name="imgDesBg" src="bmxe28" fileName="img/tip_bg.png" xy="117,128" size="1291,95">
       <gearDisplay controller="ctrlJmType" pages="0,1,2,3,4"/>
       <relation target="n37_gx7z" sidePair="left-left,top-top"/>
@@ -44,9 +47,6 @@
       <gearDisplay controller="ctrlJmType" pages="5"/>
       <relation target="" sidePair="center-center"/>
     </image>
-    <graph id="n96_fhtd" name="pghDesBg" xy="117,128" size="1291,95" type="rect" lineSize="8" lineColor="#fffbbd31" fillColor="#00ffffff" corner="47">
-      <gearDisplay controller="ctrlJmType" pages="5"/>
-    </graph>
     <image id="n84_bmxe" name="btnBG_1" src="bmxe2g" fileName="img/bt_bg.png" xy="1710,308" group="n87_bmxe">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </image>
