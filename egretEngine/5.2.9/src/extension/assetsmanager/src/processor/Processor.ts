@@ -98,8 +98,13 @@ module RES.processor {
                 resolve(texture);
             }
 
-            let onError = () => {
-                let e = new ResourceManagerError(1001, resource.url);
+            let onError = (evt: egret.IOErrorEvent) => {
+                let status = evt.data || 0;
+                let errorCode = 1001;
+                if ([404, 478].indexOf(status) != -1) {
+                    errorCode = 1003;
+                }
+                let e = new ResourceManagerError(errorCode, resource.url);
                 reject(e);
             }
             loader.addEventListener(egret.Event.COMPLETE, onSuccess, this);

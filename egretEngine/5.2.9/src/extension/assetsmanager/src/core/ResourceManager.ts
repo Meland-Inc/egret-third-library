@@ -98,8 +98,9 @@ module RES {
 
 
         static errorMessage = {
-            1001: '文件加载失败:{0}',
+            1001: '文件加载失败,连接超时:{0}',
             1002: "ResourceManager 初始化失败：配置文件加载失败",
+            1003: '文件加载失败,资源不存在:{0}',
             2001: "{0}解析失败,不支持指定解析类型:\'{1}\'，请编写自定义 Processor ，更多内容请参见 https://github.com/egret-labs/resourcemanager/blob/master/docs/README.md#processor",
             2002: "Analyzer 相关API 在 ResourceManager 中不再支持，请编写自定义 Processor ，更多内容请参见 https://github.com/egret-labs/resourcemanager/blob/master/docs/README.md#processor",
             2003: "{0}解析失败,错误原因:{1}",
