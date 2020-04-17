@@ -254,12 +254,12 @@ namespace egret.web {
                 let ioError = (xhr.status >= 400 || xhr.status == 0);
                 let url = this._url;
                 let self = this;
-                window.setTimeout(function (): void {
+                window.setTimeout(() => {
                     if (ioError) {//请求错误
                         if (DEBUG && !self.hasEventListener(IOErrorEvent.IO_ERROR)) {
                             $error(1011, url);
                         }
-                        self.dispatchEventWith(IOErrorEvent.IO_ERROR);
+                        self.dispatchEventWith(IOErrorEvent.IO_ERROR, false, xhr.status);
                     }
                     else {
                         self.dispatchEventWith(Event.COMPLETE);
@@ -287,12 +287,12 @@ namespace egret.web {
             let xhr = this._xhr;
             let url = this._url;
             let ioError = (xhr.status >= 400);
-            window.setTimeout(function (): void {
+            window.setTimeout(() => {
                 if (ioError) {//请求错误
                     if (DEBUG && !self.hasEventListener(IOErrorEvent.IO_ERROR)) {
                         $error(1011, url);
                     }
-                    self.dispatchEventWith(IOErrorEvent.IO_ERROR);
+                    self.dispatchEventWith(IOErrorEvent.IO_ERROR, false, xhr.status);
                 }
                 else {
                     self.dispatchEventWith(Event.COMPLETE);
@@ -306,11 +306,11 @@ namespace egret.web {
         private onerror(): void {
             let url = this._url;
             let self = this;
-            window.setTimeout(function (): void {
+            window.setTimeout(() => {
                 if (DEBUG && !self.hasEventListener(IOErrorEvent.IO_ERROR)) {
                     $error(1011, url);
                 }
-                self.dispatchEventWith(IOErrorEvent.IO_ERROR);
+                self.dispatchEventWith(IOErrorEvent.IO_ERROR, false, this._xhr && this._xhr.status);
             }, 0);
         }
     }
