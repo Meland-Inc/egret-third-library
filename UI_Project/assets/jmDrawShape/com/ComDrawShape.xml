@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1700,1200" opaque="false">
+  <controller name="ctrlDir" pages="0,h,1,v" selected="0"/>
+  <displayList>
+    <loader id="n0_10gxz" name="loaderBG" xy="401,304" size="808,436"/>
+    <loader id="n1_10gxz" name="loaderQuestion" xy="303,224" size="808,436" fill="scaleFree"/>
+    <graph id="n2_10gxz" name="shapePoint" xy="489,345" pivot="0.5,0.5" anchor="true" size="50,50" type="eclipse" lineSize="0"/>
+    <loader id="n3_pk49" name="loaderRange" xy="218,210" size="808,436" fill="scaleFree"/>
+  </displayList>
+</component>

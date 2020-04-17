@@ -64,7 +64,13 @@ namespace egret.web {
 
             //绘制显示对象
             webglBuffer.transform(matrix.a, matrix.b, matrix.c, matrix.d, 0, 0);
-            this.drawDisplayObject(displayObject, webglBuffer, matrix.tx, matrix.ty, true);
+            //如果有滤镜 又开启了cacheAsBitmap要渲染滤镜
+            if (displayObject.$filters && displayObject.$filters.length > 0 && displayObject.$displayList) {
+                this.drawWithFilter(displayObject, webglBuffer, matrix.tx, matrix.ty, true);
+            }
+            else {
+                this.drawDisplayObject(displayObject, webglBuffer, matrix.tx, matrix.ty, true);
+            }
             webglBufferContext.$drawWebGL();
             let drawCall = webglBuffer.$drawCalls;
             webglBuffer.onRenderFinish();
@@ -211,14 +217,22 @@ namespace egret.web {
             return drawCalls;
         }
 
+        //加入 isStage 使图片的cacheAsBitmap能够将滤镜也渲染进去 该种情况下极大的减少滤镜开销 modify by xiangqian
         /**
          * @private
          */
-        private drawWithFilter(displayObject: DisplayObject, buffer: WebGLRenderBuffer, offsetX: number, offsetY: number): number {
+        private drawWithFilter(displayObject: DisplayObject, buffer: WebGLRenderBuffer, offsetX: number, offsetY: number, isStage?: boolean): number {
             let drawCalls = 0;
             if (displayObject.$children && displayObject.$children.length == 0 && (!displayObject.$renderNode || displayObject.$renderNode.$getRenderCount() == 0)) {
                 return drawCalls;
             }
+
+            //如果是cacheAsBitmap模式  要么脏了重渲render会有滤镜  要么没脏直接用的图中的滤镜效果 怎么样都可以直接跳过这次滤镜
+            if (displayObject.$displayList && !isStage) {
+                drawCalls += this.drawDisplayObject(displayObject, buffer, offsetX, offsetY, isStage);
+                return drawCalls;
+            }
+
             let filters = displayObject.$filters;
             let hasBlendMode = (displayObject.$blendMode !== 0);
             let compositeOp: string;
@@ -268,7 +282,7 @@ namespace egret.web {
                         drawCalls += this.drawWithScrollRect(displayObject, buffer, offsetX, offsetY);
                     }
                     else {
-                        drawCalls += this.drawDisplayObject(displayObject, buffer, offsetX, offsetY);
+                        drawCalls += this.drawDisplayObject(displayObject, buffer, offsetX, offsetY, isStage);
                     }
 
                     buffer.context.$filter = null;
@@ -293,7 +307,7 @@ namespace egret.web {
                 drawCalls += this.drawWithScrollRect(displayObject, displayBuffer, -displayBoundsX, -displayBoundsY);
             }
             else {
-                drawCalls += this.drawDisplayObject(displayObject, displayBuffer, -displayBoundsX, -displayBoundsY);
+                drawCalls += this.drawDisplayObject(displayObject, displayBuffer, -displayBoundsX, -displayBoundsY, isStage);
             }
 
             displayBuffer.context.popBuffer();
