@@ -42,27 +42,27 @@ namespace egret.web {
          * @private
          * 使用 load() 方法加载成功的 BitmapData 图像数据。
          */
-        public data:BitmapData = null;
+        public data: BitmapData = null;
 
         /**
          * @private
          * 当从其他站点加载一个图片时，指定是否启用跨域资源共享(CORS)，默认值为null。
          * 可以设置为"anonymous","use-credentials"或null,设置为其他值将等同于"anonymous"。
          */
-        private _crossOrigin:string = null;
+        private _crossOrigin: string = null;
 
         /**
          * @private
          * 标记crossOrigin有没有被设置过,设置过之后使用设置的属性
          */
-        private _hasCrossOriginSet:boolean = false;
+        private _hasCrossOriginSet: boolean = false;
 
-        public set crossOrigin(value:string) {
+        public set crossOrigin(value: string) {
             this._hasCrossOriginSet = true;
             this._crossOrigin = value;
         }
 
-        public get crossOrigin():string {
+        public get crossOrigin(): string {
             return this._crossOrigin;
         }
 
@@ -70,29 +70,29 @@ namespace egret.web {
          * @private
          * 指定是否启用跨域资源共享,如果ImageLoader实例有设置过crossOrigin属性将使用设置的属性
          */
-        public static crossOrigin:string = null;
+        public static crossOrigin: string = null;
 
         /**
          * @private
          */
-        private currentImage:HTMLImageElement = null;
+        private currentImage: HTMLImageElement = null;
 
         /**
          * @private
          */
-        private currentURL:string;
+        private currentURL: string;
 
         /**
          * @private
          */
-        private request:WebHttpRequest = null;
+        private request: WebHttpRequest = null;
 
         /**
          * @private
          * 启动一次图像加载。注意：若之前已经调用过加载请求，重新调用 load() 将终止先前的请求，并开始新的加载。
          * @param url 要加载的图像文件的地址。
          */
-        public load(url:string):void {
+        public load(url: string): void {
             if (Html5Capatibility._canUseBlob
                 && url.indexOf("wxLocalResource:") != 0//微信专用不能使用 blob
                 && url.indexOf("data:") != 0
@@ -119,8 +119,8 @@ namespace egret.web {
         /**
          * @private
          */
-        private onBlobLoaded(event:egret.Event):void {
-            let blob:Blob = this.request.response;
+        private onBlobLoaded(event: egret.Event): void {
+            let blob: Blob = this.request.response;
             this.request = undefined;
             this.loadImage(winURL.createObjectURL(blob));
         }
@@ -128,7 +128,7 @@ namespace egret.web {
         /**
          * @private
          */
-        private onBlobError(event:egret.Event):void {
+        private onBlobError(event: egret.Event): void {
             this.dispatchIOError(this.currentURL);
             this.request = undefined;
         }
@@ -136,17 +136,17 @@ namespace egret.web {
         /**
          * @private
          */
-        private loadImage(src:string):void {
+        private loadImage(src: string): void {
             let image = new Image();
             this.data = null;
             this.currentImage = image;
-            if(this._hasCrossOriginSet) {
+            if (this._hasCrossOriginSet) {
                 if (this._crossOrigin) {
                     image.crossOrigin = this._crossOrigin;
                 }
             }
             else {
-                if(WebImageLoader.crossOrigin) {
+                if (WebImageLoader.crossOrigin) {
                     image.crossOrigin = WebImageLoader.crossOrigin;
                 }
             }
@@ -163,14 +163,14 @@ namespace egret.web {
         /**
          * @private
          */
-        private onImageComplete(event):void {
+        private onImageComplete(event): void {
             let image = this.getImage(event);
             if (!image) {
                 return;
             }
             this.data = new egret.BitmapData(image);
             let self = this;
-            window.setTimeout(function ():void {
+            window.setTimeout(function (): void {
                 self.dispatchEventWith(Event.COMPLETE);
             }, 0);
         }
@@ -178,7 +178,7 @@ namespace egret.web {
         /**
          * @private
          */
-        private onLoadError(event):void {
+        private onLoadError(event): void {
             let image = this.getImage(event);
             if (!image) {
                 return;
@@ -186,12 +186,16 @@ namespace egret.web {
             this.dispatchIOError(image.src);
         }
 
-        private dispatchIOError(url:string):void {
+        private dispatchIOError(url: string): void {
             let self = this;
-            window.setTimeout(function ():void {
+            window.setTimeout(function (): void {
                 if (DEBUG && !self.hasEventListener(IOErrorEvent.IO_ERROR)) {
                     $error(1011, url);
                 }
+                //由于html img标签加载图片失败的时候,判断不了是网络还是图片不存在导致的加载失败,所以这里不返回错误码
+                //RES.getResAsync的时候会从资源配置查找,只有配置存在的时候才会加载,否则在上层报错
+                //RES.getResByUrl的时候会在上层判断文件是否存在
+                //所以不返回错误码的时候统一按照超时处理
                 self.dispatchEventWith(IOErrorEvent.IO_ERROR);
             }, 0);
         }
@@ -199,14 +203,14 @@ namespace egret.web {
         /**
          * @private
          */
-        private getImage(event:any):HTMLImageElement {
-            let image:HTMLImageElement = event.target;
-            let url:string = image.src;
+        private getImage(event: any): HTMLImageElement {
+            let image: HTMLImageElement = event.target;
+            let url: string = image.src;
             if (url.indexOf("blob:") == 0) {
                 try {
                     winURL.revokeObjectURL(image.src);
                 }
-                catch(e) {
+                catch (e) {
                     egret.$warn(1037);
                 }
             }

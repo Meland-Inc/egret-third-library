@@ -1778,7 +1778,7 @@ var egret;
                             if (true && !self_3.hasEventListener(egret.IOErrorEvent.IO_ERROR)) {
                                 egret.$error(1011, url_1);
                             }
-                            self_3.dispatchEventWith(egret.IOErrorEvent.IO_ERROR);
+                            self_3.dispatchEventWith(egret.IOErrorEvent.IO_ERROR, false, xhr.status);
                         }
                         else {
                             self_3.dispatchEventWith(egret.Event.COMPLETE);
@@ -1807,7 +1807,7 @@ var egret;
                         if (true && !self.hasEventListener(egret.IOErrorEvent.IO_ERROR)) {
                             egret.$error(1011, url);
                         }
-                        self.dispatchEventWith(egret.IOErrorEvent.IO_ERROR);
+                        self.dispatchEventWith(egret.IOErrorEvent.IO_ERROR, false, xhr.status);
                     }
                     else {
                         self.dispatchEventWith(egret.Event.COMPLETE);
@@ -1818,13 +1818,14 @@ var egret;
              * @private
              */
             WebHttpRequest.prototype.onerror = function () {
+                var _this = this;
                 var url = this._url;
                 var self = this;
                 window.setTimeout(function () {
                     if (true && !self.hasEventListener(egret.IOErrorEvent.IO_ERROR)) {
                         egret.$error(1011, url);
                     }
-                    self.dispatchEventWith(egret.IOErrorEvent.IO_ERROR);
+                    self.dispatchEventWith(egret.IOErrorEvent.IO_ERROR, false, _this._xhr && _this._xhr.status);
                 }, 0);
             };
             return WebHttpRequest;
@@ -2011,7 +2012,11 @@ var egret;
                     if (true && !self.hasEventListener(egret.IOErrorEvent.IO_ERROR)) {
                         egret.$error(1011, url);
                     }
-                    self.dispatchEventWith(egret.IOErrorEvent.IO_ERROR);
+                    //由于html img标签加载图片失败的时候,判断不了是网络还是图片不存在导致的加载失败,所以这里不返回错误码
+                    //RES.getResAsync的时候会从资源配置查找,只有配置存在的时候才会加载,否则在上层报错
+                    //RES.getResByUrl的时候会在上层判断文件是否存在
+                    //所以不返回错误码的时候统一按照超时处理
+                    self.dispatchEventWith(egret.IOErrorEvent.IO_ERROR, false);
                 }, 0);
             };
             /**

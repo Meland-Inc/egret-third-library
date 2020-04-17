@@ -87,19 +87,28 @@ module RES.processor {
     export function map(type: string, processor: Processor) {
         _map[type] = processor;
     }
+
+    /** 文件不存在 */
+    const errorCodeFileNotFound: number = 404;
+    /** 镜像回源失败 */
+    const errorCodeMirrorBackSource: number = 478
     /**
     * @internal
     */
     function promisify(loader: egret.ImageLoader | egret.HttpRequest | egret.Sound, resource: ResourceInfo): Promise<any> {
-
         return new Promise((resolve, reject) => {
             let onSuccess = () => {
                 let texture = loader['data'] ? loader['data'] : loader['response'];
                 resolve(texture);
             }
 
-            let onError = () => {
-                let e = new ResourceManagerError(1001, resource.url);
+            let onError = (evt: egret.IOErrorEvent) => {
+                let status = evt.data || 0;
+                let errorCode = 1001;
+                if ([errorCodeFileNotFound, errorCodeMirrorBackSource].indexOf(status) >= 0) {
+                    errorCode = 1003;
+                }
+                let e = new ResourceManagerError(errorCode, resource.url);
                 reject(e);
             }
             loader.addEventListener(egret.Event.COMPLETE, onSuccess, this);
