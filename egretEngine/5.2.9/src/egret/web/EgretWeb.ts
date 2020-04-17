@@ -90,6 +90,11 @@ namespace egret.web {
                 else {
                     canvasScaleFactor = window.devicePixelRatio;
                 }
+                //如果实际分辨率大于设计分辨率时按照设计分辨率 复杂游戏如果随着屏幕分辨率自动适配原生分辨率会导致性能低
+                //实际小的话原生也跟随降下来节省性能
+                if (canvasScaleFactor > 1) {
+                    canvasScaleFactor = 1;
+                }
                 sys.DisplayList.$canvasScaleFactor = canvasScaleFactor;
 
                 let ticker = egret.ticker;
@@ -152,6 +157,11 @@ namespace egret.web {
                     context.oBackingStorePixelRatio ||
                     context.backingStorePixelRatio || 1;
                 canvasScaleFactor = (window.devicePixelRatio || 1) / backingStore;
+            }
+            //如果实际分辨率大于设计分辨率时按照设计分辨率 复杂游戏如果随着屏幕分辨率自动适配原生分辨率会导致性能低
+            //实际小的话原生也跟随降下来节省性能
+            if (canvasScaleFactor > 1) {
+                canvasScaleFactor = 1;
             }
             sys.DisplayList.$canvasScaleFactor = canvasScaleFactor;
 

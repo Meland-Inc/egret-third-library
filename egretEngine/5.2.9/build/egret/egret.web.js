@@ -3657,6 +3657,11 @@ var egret;
                     else {
                         canvasScaleFactor = window.devicePixelRatio;
                     }
+                    //如果实际分辨率大于设计分辨率时按照设计分辨率 复杂游戏如果随着屏幕分辨率自动适配原生分辨率会导致性能低
+                    //实际小的话原生也跟随降下来节省性能
+                    if (canvasScaleFactor > 1) {
+                        canvasScaleFactor = 1;
+                    }
                     egret.sys.DisplayList.$canvasScaleFactor = canvasScaleFactor;
                     var ticker = egret.ticker;
                     startTicker(ticker);
@@ -3715,6 +3720,11 @@ var egret;
                         context.oBackingStorePixelRatio ||
                         context.backingStorePixelRatio || 1;
                     canvasScaleFactor = (window.devicePixelRatio || 1) / backingStore;
+                }
+                //如果实际分辨率大于设计分辨率时按照设计分辨率 复杂游戏如果随着屏幕分辨率自动适配原生分辨率会导致性能低
+                //实际小的话原生也跟随降下来节省性能
+                if (canvasScaleFactor > 1) {
+                    canvasScaleFactor = 1;
                 }
                 egret.sys.DisplayList.$canvasScaleFactor = canvasScaleFactor;
                 var ticker_1 = egret.ticker;
@@ -4433,22 +4443,34 @@ var egret;
                     canvas.style.top = top + (boundingClientHeight - displayHeight) / 2 + "px";
                     canvas.style.left = (boundingClientWidth - displayWidth) / 2 + "px";
                 }
-                var scalex = displayWidth / stageWidth, scaley = displayHeight / stageHeight;
-                var canvasScaleX = scalex * egret.sys.DisplayList.$canvasScaleFactor;
-                var canvasScaleY = scaley * egret.sys.DisplayList.$canvasScaleFactor;
+                var displayScalex = displayWidth / stageWidth, diplayScaley = displayHeight / stageHeight;
+                //用mac台式实测 displayScalex不是实际像素分辨率 只为了拿到xy的舞台比例 实际像素影响canvasScaleFactor 在上层解决
+                // //不要让渲染分辨率大于stage  但是缩小分辨率的时候 可以适应低分辨率渲染节省性能 xy需要同比例缩小
+                // let realScaleX = displayScalex;
+                // let realScaleY = diplayScaley;
+                // let maxScale = displayScalex > diplayScaley ? displayScalex : diplayScaley;//最大缩放值
+                // //只有大于舞台设计分辨率才按舞台设计分辨率
+                // if (maxScale > 1) {
+                //     realScaleX = displayScalex / maxScale;
+                //     realScaleY = diplayScaley / maxScale;
+                // }
+                // let canvasScaleX = realScaleX * sys.DisplayList.$canvasScaleFactor * sys.DisplayList.canvasExternalScale;
+                // let canvasScaleY = realScaleY * sys.DisplayList.$canvasScaleFactor * sys.DisplayList.canvasExternalScale;
+                var canvasScaleX = displayScalex * egret.sys.DisplayList.$canvasScaleFactor * egret.sys.DisplayList.canvasExternalScale;
+                var canvasScaleY = diplayScaley * egret.sys.DisplayList.$canvasScaleFactor * egret.sys.DisplayList.canvasExternalScale;
                 if (egret.Capabilities.renderMode == "canvas") {
                     canvasScaleX = Math.ceil(canvasScaleX);
                     canvasScaleY = Math.ceil(canvasScaleY);
                 }
                 var m = egret.Matrix.create();
                 m.identity();
-                m.scale(scalex / canvasScaleX, scaley / canvasScaleY);
+                m.scale(displayScalex / canvasScaleX, diplayScaley / canvasScaleY);
                 m.rotate(rotation * Math.PI / 180);
                 var transform = "matrix(" + m.a + "," + m.b + "," + m.c + "," + m.d + "," + m.tx + "," + m.ty + ")";
                 egret.Matrix.release(m);
                 canvas.style[egret.web.getPrefixStyleName("transform")] = transform;
                 egret.sys.DisplayList.$setCanvasScale(canvasScaleX, canvasScaleY);
-                this.webTouchHandler.updateScaleMode(scalex, scaley, rotation);
+                this.webTouchHandler.updateScaleMode(displayScalex, diplayScaley, rotation);
                 this.webInput.$updateSize();
                 this.player.updateStageSize(stageWidth, stageHeight); //不要在这个方法后面修改属性
                 // todo
@@ -7863,6 +7885,12 @@ var egret;
                 }
                 var canvasScaleX = egret.sys.DisplayList.$canvasScaleX * 2;
                 var canvasScaleY = egret.sys.DisplayList.$canvasScaleY * 2;
+                //TODO:测试无效 虽然会有变化 但是由于总renderBuff缩放 导致这里的不生效 感觉也依附总renderBuff的话也说的过去 要实现需要不依赖 需要更好的解决方案 这里思路备份
+                // // 当外部缩放了renderBuff后 需要还原成固定text的buff 为了文本buff不要被外部缩放影响 因为这个太影响效果
+                // if (sys.DisplayList.canvasExternalScale < 1) {
+                //     canvasScaleX /= sys.DisplayList.canvasExternalScale;
+                //     canvasScaleY /= sys.DisplayList.canvasExternalScale;
+                // }
                 var maxTextureSize = buffer.context.$maxTextureSize;
                 if (width * canvasScaleX > maxTextureSize) {
                     canvasScaleX *= maxTextureSize / (width * canvasScaleX);
