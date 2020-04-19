@@ -32,6 +32,8 @@ declare module fairygui {
         private _gears;
         private _displayObject;
         private _dragBounds;
+        private _groupOffsetX;
+        private _groupOffsetY;
         sourceWidth: number;
         sourceHeight: number;
         initWidth: number;
@@ -60,6 +62,10 @@ declare module fairygui {
         name: string;
         x: number;
         y: number;
+        readonly groupOffsetX: number;
+        readonly groupOffsetY: number;
+        /**设置从group统一改变的自己坐标偏移 单次偏移值 */
+        groupSetXYOffset(dx: number, dy: number): void;
         setXY(xv: number, yv: number): void;
         xMin: number;
         yMin: number;

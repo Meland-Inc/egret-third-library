@@ -37,6 +37,9 @@ var fairygui;
             _this._focusable = false;
             _this._pixelSnapping = false;
             _this._disposed = false;
+            //通过父group统一给自己额外加的坐标偏移总值
+            _this._groupOffsetX = 0;
+            _this._groupOffsetY = 0;
             _this.sourceWidth = 0;
             _this.sourceHeight = 0;
             _this.initWidth = 0;
@@ -95,6 +98,36 @@ var fairygui;
             enumerable: true,
             configurable: true
         });
+        Object.defineProperty(GObject.prototype, "groupOffsetX", {
+            get: function () {
+                return this._groupOffsetX;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(GObject.prototype, "groupOffsetY", {
+            get: function () {
+                return this._groupOffsetY;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        /**设置从group统一改变的自己坐标偏移 单次偏移值 */
+        GObject.prototype.groupSetXYOffset = function (dx, dy) {
+            //计算被组给施加的偏移
+            this._groupOffsetX += dx; //算累加值 可能多次偏移
+            this._groupOffsetY += dy;
+            //设置真实坐标
+            this.setXY(this.x + dx, this.y + dy);
+            //需要将所有的控制器控制的位置状态全部相应更新 适应适配多分辨率情况
+            //TODO:但是从代码分析还是无法解决多次分辨率变化的情况 引擎自己同样有这个问题  这里能解决至少适配各种机型分辨率的问题
+            if (!this._underConstruct && !this._gearLocked) {
+                var gear = this._gears[1]; //和系统的setXY中的this.updateGear(1)一致 代表GearXY 没有枚举
+                if (gear != null && gear.controller != null) {
+                    gear.updateFromRelations(dx, dy); //直接使用updateFromRelations 组位置改变可以看做是整个关联修改
+                }
+            }
+        };
         GObject.prototype.setXY = function (xv, yv) {
             if (this._x != xv || this._y != yv) {
                 var dx = xv - this._x;
@@ -8559,7 +8592,7 @@ var fairygui;
             for (i = 0; i < cnt; i++) {
                 child = this._parent.getChildAt(i);
                 if (child.group == this) {
-                    child.setXY(child.x + dx, child.y + dy);
+                    child.groupSetXYOffset(dx, dy);
                 }
             }
             this._updating &= 2;

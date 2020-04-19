@@ -37,6 +37,10 @@ module fairygui {
         private _displayObject: egret.DisplayObject;
         private _dragBounds: egret.Rectangle;
 
+        //通过父group统一给自己额外加的坐标偏移总值
+        private _groupOffsetX: number = 0;
+        private _groupOffsetY: number = 0;
+
         public sourceWidth: number = 0;
         public sourceHeight: number = 0;
         public initWidth: number = 0;
@@ -102,6 +106,32 @@ module fairygui {
 
         public set y(value: number) {
             this.setXY(this._x, value);
+        }
+
+        public get groupOffsetX(): number {
+            return this._groupOffsetX;
+        }
+        public get groupOffsetY(): number {
+            return this._groupOffsetY;
+        }
+
+        /**设置从group统一改变的自己坐标偏移 单次偏移值 */
+        public groupSetXYOffset(dx: number, dy: number) {
+            //计算被组给施加的偏移
+            this._groupOffsetX += dx;//算累加值 可能多次偏移
+            this._groupOffsetY += dy;
+
+            //设置真实坐标
+            this.setXY(this.x + dx, this.y + dy);
+
+            //需要将所有的控制器控制的位置状态全部相应更新 适应适配多分辨率情况
+            //TODO:但是从代码分析还是无法解决多次分辨率变化的情况 引擎自己同样有这个问题  这里能解决至少适配各种机型分辨率的问题
+            if (!this._underConstruct && !this._gearLocked) {
+                var gear: GearBase = this._gears[1];//和系统的setXY中的this.updateGear(1)一致 代表GearXY 没有枚举
+                if (gear != null && gear.controller != null) {
+                    gear.updateFromRelations(dx, dy);//直接使用updateFromRelations 组位置改变可以看做是整个关联修改
+                }
+            }
         }
 
         public setXY(xv: number, yv: number): void {
