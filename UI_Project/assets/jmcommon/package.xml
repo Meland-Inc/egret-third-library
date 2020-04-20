@@ -104,6 +104,10 @@
     <image id="fhtd3q" name="标题.png" path="/img/"/>
     <image id="fhtd3r" name="更新·.png" path="/img/"/>
     <image id="fhtd3s" name="叉.png" path="/img/"/>
+    <image id="vjd03t" name="跳转小按钮.png" path="/img/"/>
+    <image id="vjd03u" name="对话框.png" path="/img/" scale="9grid" scale9grid="97,34,194,68"/>
+    <image id="vjd03v" name="叉叉.png" path="/img/"/>
+    <image id="vjd03w" name="跳过.png" path="/img/"/>
   </resources>
   <publish name="jmcommon" path="..\..\egret-planet\resource\jimmyAssets\jmFairyGui" packageCount="2"/>
 </packageDescription>
