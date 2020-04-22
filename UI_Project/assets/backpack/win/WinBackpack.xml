@@ -16,7 +16,7 @@
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://te1gxawooiqdcyih2"/>
     </component>
-    <text id="n22_e8s1" name="tfShortcutTitle" xy="715,786" size="105,26" group="n33_ibv1" fontSize="20" color="#333333" align="center" text="背包快捷栏"/>
+    <text id="n22_e8s1" name="tfShortcutTitle" xy="715,786" size="105,24" group="n33_ibv1" fontSize="20" color="#333333" align="center" text="背包快捷栏"/>
     <image id="n19_e8s1" name="imgShortcutBg" src="oiqdcyih4" fileName="img/img_cm_1.png" pkg="te1gxawo" xy="698,819" size="1130,120" group="n33_ibv1"/>
     <list id="n20_e8s1" name="lstShortcut" xy="718,829" size="880,100" group="n33_ibv1" layout="row" scroll="horizontal" colGap="10" defaultItem="ui://48p8y12ae8s1j">
       <item/>
@@ -35,18 +35,17 @@
       <gearDisplay controller="ctrlOperateType" pages="0"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <list id="n10_oiqd" name="lstEquipItem" xy="91,156" size="102,651" group="n31_ibv1" overflow="scroll" lineGap="10" defaultItem="ui://48p8y12aoiqdh">
+    <list id="n10_oiqd" name="lstEquipItem" xy="91,157" size="102,545" group="n31_ibv1" overflow="scroll" lineGap="10" defaultItem="ui://48p8y12aoiqdh">
       <item icon="ui://48p8y12ay8ju4"/>
       <item icon="ui://48p8y12ay8ju6"/>
       <item icon="ui://48p8y12ay8ju2"/>
       <item icon="ui://48p8y12ay8ju5"/>
       <item icon="ui://48p8y12ay8ju3"/>
-      <item icon="ui://48p8y12ay8ju7"/>
     </list>
-    <image id="n11_bzo2" name="imgNameBg" src="y8ju8" fileName="img/img_bac_1.png" xy="208,156" group="n31_ibv1"/>
-    <text id="n12_bzo2" name="tfRoleName" xy="208,174" size="484,24" group="n31_ibv1" fontSize="20" color="#333333" align="center" autoSize="none" text="千与千寻千寻哦"/>
-    <component id="n13_tvlf" name="comAvatarCtnr" src="tvlfcyih7" fileName="com/ComEmpty.xml" pkg="te1gxawo" xy="437,785" group="n31_ibv1" scale="2.5,2.5"/>
-    <group id="n31_ibv1" name="grpAvatar" xy="91,156" size="601,651" advanced="true">
+    <image id="n11_bzo2" name="imgNameBg" src="y8ju8" fileName="img/img_bac_1.png" xy="208,157" group="n31_ibv1"/>
+    <text id="n12_bzo2" name="tfRoleName" xy="208,175" size="484,24" group="n31_ibv1" fontSize="20" color="#333333" align="center" autoSize="none" text="千与千寻千寻哦"/>
+    <component id="n13_tvlf" name="comAvatarCtnr" src="tvlfcyih7" fileName="com/ComEmpty.xml" pkg="te1gxawo" xy="437,786" group="n31_ibv1" scale="2.5,2.5"/>
+    <group id="n31_ibv1" name="grpAvatar" xy="91,157" size="601,649" advanced="true">
       <gearDisplay controller="ctrlOperateType" pages="0"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
@@ -65,7 +64,7 @@
     <group id="n34_emzb" name="grpInpSearch" xy="1597,126" size="210,39" advanced="true">
       <relation target="n15_tvlf" sidePair="top-top,right-right"/>
     </group>
-    <text id="n14_tvlf" name="tfNum" xy="714,135" size="84,26" fontSize="20" color="#333333" align="center" vars="true" text="背包 [{num=10}]">
+    <text id="n14_tvlf" name="tfNum" xy="714,135" size="95,24" fontSize="20" color="#333333" align="center" vars="true" text="背包 [{num=10}]">
       <relation target="n15_tvlf" sidePair="left-left,top-top"/>
     </text>
     <list id="n16_tvlf" name="lstBagType" xy="936,123" size="655,48" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="128" colGap="13" defaultItem="ui://48p8y12atvlfi">
