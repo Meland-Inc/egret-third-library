@@ -13,9 +13,8 @@
     <image id="sco7r" name="img_jm_pt_ym.png" path="/img/"/>
     <image id="sco7s" name="img_jm_pt_msk.png" path="/img/" scale="9grid" scale9grid="66,17,89,78"/>
     <image id="sco7x" name="img_jm_cbl.png" path="/img/"/>
-    <image id="sco715" name="跳过关卡.png" path="/img/"/>
+    <image id="sco715" name="skipLevel.png" path="/img/"/>
     <image id="sco717" name="tipsnext.png" path="/img/"/>
-    <image id="alb71o" name="预览图带标记.png" path="/img/"/>
     <image id="alb71p" name="tips.png" path="/img/"/>
     <image id="alb71s" name="back.png" path="/img/" exported="true"/>
     <component id="hwlx1t" name="ComNumberInput.xml" path="/com/" exported="true"/>
@@ -42,7 +41,6 @@
     <image id="bmxe2e" name="replay_bt.png" path="/img/"/>
     <image id="bmxe2f" name="close_bt.png" path="/img/"/>
     <image id="bmxe2g" name="bt_bg.png" path="/img/"/>
-    <image id="bmxe2h" name="参考图.jpg" path="/img/"/>
     <image id="bmxe2i" name="neikuang.png" path="/img/" scale="9grid" scale9grid="67,125,6,16"/>
     <image id="bmxe2j" name="bg.png" path="/img/" scale="tile" scale9grid="46,36,92,72"/>
     <image id="bmxe2l" name="waikuang.png" path="/img/" scale="9grid" scale9grid="145,209,3,8"/>
@@ -61,20 +59,20 @@
     <image id="wmmv2j" name="icon_cm_caveat.png" path="/imgBaseCommon/"/>
     <component id="wmmv2k" name="JMCommonModal.xml" path="/comBaseCommon/" exported="true"/>
     <image id="wmmv2l" name="img_cm_zzdt.png" path="/imgBaseCommon/" scale="9grid" scale9grid="10,10,20,20"/>
-    <image id="hilw2n" name="确认跳过.png" path="/img/"/>
+    <image id="hilw2n" name="confirmSkip.png" path="/img/"/>
     <image id="hilw2o" name="retry.png" path="/img/"/>
     <image id="hilw2p" name="pop.png" path="/img/"/>
     <image id="j5tq2q" name="bg灰色.png" path="/img/" scale="tile"/>
     <image id="hwlx3" name="img_count_answerframe.png" path="/img/" scale="9grid" scale9grid="69,26,138,52"/>
     <component id="hilr2r" name="ComInput.xml" path="/com/" exported="true"/>
     <component id="fqdk2s" name="btnNumber.xml" path="/btn/" exported="true"/>
-    <image id="fqdk2t" name="黄框框.png" path="/img/" scale="9grid" scale9grid="20,15,240,70"/>
-    <image id="fqdk2u" name="黄框框-1.png" path="/img/" scale="9grid" scale9grid="20,15,240,70"/>
-    <image id="fqdk2v" name="绿框框.png" path="/img/" scale="9grid" scale9grid="20,15,240,70"/>
-    <image id="fqdk2w" name="绿框框-1.png" path="/img/" scale="9grid" scale9grid="20,15,240,70"/>
-    <image id="fqdk2x" name="红框框.png" path="/img/" scale="9grid" scale9grid="20,15,240,70"/>
-    <image id="fqdk2y" name="红框框-1.png" path="/img/" scale="9grid" scale9grid="20,15,240,70"/>
-    <image id="fqdk2z" name="托底.png" path="/img/" scale="9grid" scale9grid="375,42,750,84"/>
+    <image id="fqdk2t" name="yellowFrame.png" path="/img/" scale="9grid" scale9grid="20,15,240,70"/>
+    <image id="fqdk2u" name="yellowFrame_1.png" path="/img/" scale="9grid" scale9grid="20,15,240,70"/>
+    <image id="fqdk2v" name="greenFrame.png" path="/img/" scale="9grid" scale9grid="20,15,240,70"/>
+    <image id="fqdk2w" name="greenFrame_1.png" path="/img/" scale="9grid" scale9grid="20,15,240,70"/>
+    <image id="fqdk2x" name="redFrame.png" path="/img/" scale="9grid" scale9grid="20,15,240,70"/>
+    <image id="fqdk2y" name="redFrame_1.png" path="/img/" scale="9grid" scale9grid="20,15,240,70"/>
+    <image id="fqdk2z" name="calculatorBG.png" path="/img/" scale="9grid" scale9grid="375,42,750,84"/>
     <image id="fqdk30" name="11_1.png" path="/img/"/>
     <image id="fqdk31" name="11_0.png" path="/img/"/>
     <image id="fqdk32" name="09_1.png" path="/img/"/>
@@ -98,12 +96,16 @@
     <image id="fqdk3k" name="00_1.png" path="/img/"/>
     <image id="fqdk3l" name="00_0.png" path="/img/"/>
     <image id="k45f3m" name="bg_ceping.png" path="/img/" scale="tile"/>
-    <image id="fhtd3n" name="通知关.png" path="/img/"/>
-    <image id="fhtd3o" name="通知.png" path="/img/"/>
-    <image id="fhtd3p" name="确定.png" path="/img/"/>
-    <image id="fhtd3q" name="标题.png" path="/img/"/>
-    <image id="fhtd3r" name="更新·.png" path="/img/"/>
-    <image id="fhtd3s" name="叉.png" path="/img/"/>
+    <image id="fhtd3n" name="voiceClose.png" path="/img/"/>
+    <image id="fhtd3o" name="voiceOpen.png" path="/img/"/>
+    <image id="fhtd3p" name="confirm.png" path="/img/"/>
+    <image id="fhtd3q" name="examTitle.png" path="/img/"/>
+    <image id="fhtd3r" name="update.png" path="/img/"/>
+    <image id="fhtd3s" name="close.png" path="/img/"/>
+    <image id="vjd03w" name="skiptButton.png" path="/img/"/>
+    <image id="vjd03t" name="smallSkipButton.png" path="/img/"/>
+    <image id="vjd03u" name="configBG.png" path="/img/"/>
+    <image id="vjd03v" name="examCLose.png" path="/img/"/>
   </resources>
   <publish name="jmcommon" path="..\..\egret-planet\resource\jimmyAssets\jmFairyGui" packageCount="2"/>
 </packageDescription>
