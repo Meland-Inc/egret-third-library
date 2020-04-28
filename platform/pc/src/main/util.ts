@@ -10,6 +10,7 @@ import http from 'http';
 import https from 'https';
 import fs from 'fs';
 import querystring from 'querystring';
+import FormData from 'form-data';
 
 import { logger } from './logger';
 import config from './Config';
@@ -212,11 +213,47 @@ export namespace util {
 
     /** 拷贝日志到上传目录 */
     export function copyLog2UploadDir() {
-        const logPath: string = `${config.rootPath}/dist/log`;
         const uploadPath: string = `${config.rootPath}/dist/uploadLog`;
-        const logDir = fs.readdirSync(logPath);
-        for (const iterator of logDir) {
-            fs.copyFileSync(`${logPath}/${iterator}`, `${uploadPath}/${iterator}`);
+
+        //删除旧的日志文件
+        let uploadDir = fs.readdirSync(uploadPath);
+        for (const iterator of uploadDir) {
+            try {
+                fs.unlinkSync(`${uploadPath}/${iterator}`);
+                logger.log("log", `delete log file ${uploadPath}/${iterator} success`);
+            } catch (error) {
+                logger.error('log', `delete log file ${uploadPath}/${iterator} error`, error);
+            }
         }
+
+        const logPath: string = `${config.rootPath}/dist/log`;
+        const logDir = fs.readdirSync(logPath);
+        let date: Date = new Date();
+        let dateFormate: string = `${date.getFullYear()}-${date.getMonth()}-${date.getDay()}_${date.getHours()}-${date.getMinutes()}-${date.getSeconds()}`;
+        let gid: string = "";
+
+        //拷贝新的日志文件到上传目录
+        for (const fileName of logDir) {
+            let newFileName: string = `${gid}_${dateFormate}_${fileName}`;
+            fs.copyFileSync(`${logPath}/${fileName}`, `${uploadPath}/${newFileName}`);
+        }
+    }
+
+    /** 上传日志文件 */
+    export function uploadLogFile(url: string, fileName: string, filePath: string) {
+        let form = new FormData();
+        form.append('name', fileName);
+        form.append('type', "file");
+        form.append('myfile', fs.createReadStream(filePath));
+
+        form.submit(url, (err: Error, res: http.IncomingMessage) => {
+            if (err) {
+                logger.error('log', `postFile err`, err);
+            }
+            if (res) {
+                logger.log('log', `postFile res`, res.statusCode, res.statusMessage);
+            }
+            res.resume();
+        });
     }
 }

@@ -132,6 +132,9 @@ async function createWindow() {
   logger.init();
   logger.log('main', `收到参数1: ${JSON.stringify(process.argv)}`);
 
+  logger.uploadLog();
+  logger.log('main', `开始上传日志`);
+
   //初始化全局配置
   util.initGlobalConfig();
 

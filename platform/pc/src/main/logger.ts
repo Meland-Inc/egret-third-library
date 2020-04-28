@@ -8,6 +8,7 @@
 import fs from 'fs';
 import config from './Config';
 import message from './Message';
+import { util } from './util';
 
 export namespace logger {
     let processLogContent: string;
@@ -88,5 +89,14 @@ export namespace logger {
         let month = date.getMonth() + 1;
         let format = `${date.getFullYear()}-${month}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
         return format;
+    }
+
+    /** 上传日志 */
+    export function uploadLog() {
+        let logDir = fs.readdirSync(config.uploadLogDir);
+        for (const fileName of logDir) {
+            let filePath = `${config.uploadLogDir}/${fileName}`
+            util.uploadLogFile(`${config.uploadLogHost}/nativeLogs`, fileName, filePath);
+        }
     }
 }
