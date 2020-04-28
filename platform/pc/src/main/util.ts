@@ -209,4 +209,14 @@ export namespace util {
         let content = JSON.stringify(nativeCnf, null, 4);
         fs.writeFileSync(config.nativeCnfPath, content);
     }
+
+    /** 拷贝日志到上传目录 */
+    export function copyLog2UploadDir() {
+        const logPath: string = `${config.rootPath}/dist/log`;
+        const uploadPath: string = `${config.rootPath}/dist/uploadLog`;
+        const logDir = fs.readdirSync(logPath);
+        for (const iterator of logDir) {
+            fs.copyFileSync(`${logPath}/${iterator}`, `${uploadPath}/${iterator}`);
+        }
+    }
 }

@@ -211,7 +211,9 @@ async function onClose(e: Event) {
   app.exit();		//exit()直接关闭客户端，不会执行quit();
 }
 
+/** 监听窗口关闭时的方法 */
 async function onClosed() {
+  util.copyLog2UploadDir();
   mainWindow = null;
   config.setMainWindow(null);
   await server.closeGameServer();
