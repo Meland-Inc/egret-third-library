@@ -24,6 +24,7 @@ class Message {
         'CHECK_UPDATE_COMPLETE': this.onCheckUpdateComplete.bind(this),  //检查更新
         'MAP_TEMPLATE_ENTER': this.onMapTemplateEnter.bind(this),   //启动地图模板游戏服务器
         'MAP_TEMPLATE_ROOM_CREATE': this.onMapTemplateRoomCreate.bind(this),   //启动地图模板房间游戏服务器
+        'SEND_PLAYER_ID': this.onSendPlayerId.bind(this),   //发送玩家id
         'SET_NATIVE_POLICY_VERSION': this.onSetNativePolicyVersion.bind(this),   //设置native版本号
     }
 
@@ -182,6 +183,11 @@ class Message {
         config.setGameArgs(gameArgs);
 
         server.createNativeServer(define.eGameServerMode.mapTemplateRoom);
+    }
+
+    /** 收到发送过来的玩家id */
+    private onSendPlayerId(playerId: string) {
+        config.setPlayerId(playerId);
     }
 
     private onSetNativePolicyVersion(nativeVersion: number) {

@@ -336,6 +336,15 @@ class Config {
     public setGameArgs(value: string) {
         this._gameArgs = value;
     }
+
+    private _playerId: string;
+    /** 玩家游戏id */
+    public get playerId(): string {
+        return this._playerId;
+    }
+    public setPlayerId(value: string) {
+        this._playerId = value;
+    }
 }
 
 let config = new Config();

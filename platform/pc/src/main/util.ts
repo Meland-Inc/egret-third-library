@@ -218,23 +218,19 @@ export namespace util {
         //删除旧的日志文件
         let uploadDir = fs.readdirSync(uploadPath);
         for (const iterator of uploadDir) {
-            try {
-                fs.unlinkSync(`${uploadPath}/${iterator}`);
-                logger.log("log", `delete log file ${uploadPath}/${iterator} success`);
-            } catch (error) {
-                logger.error('log', `delete log file ${uploadPath}/${iterator} error`, error);
-            }
+            fs.unlinkSync(`${uploadPath}/${iterator}`);
         }
 
         const logPath: string = `${config.rootPath}/dist/log`;
         const logDir = fs.readdirSync(logPath);
         let date: Date = new Date();
-        let dateFormate: string = `${date.getFullYear()}-${date.getMonth()}-${date.getDay()}_${date.getHours()}-${date.getMinutes()}-${date.getSeconds()}`;
-        let gid: string = "";
+        let dateFormat: string = `${date.getFullYear()}-${date.getMonth()}-${date.getDay()}_${date.getHours()}-${date.getMinutes()}-${date.getSeconds()}`;
+        let actId: string = config.bellActId || "";
+        let playerId: string = config.playerId || "";
 
         //拷贝新的日志文件到上传目录
         for (const fileName of logDir) {
-            let newFileName: string = `${gid}_${dateFormate}_${fileName}`;
+            let newFileName: string = `date-${dateFormat}_actId-${actId}_playerId-${playerId}_${fileName}`;
             fs.copyFileSync(`${logPath}/${fileName}`, `${uploadPath}/${newFileName}`);
         }
     }
