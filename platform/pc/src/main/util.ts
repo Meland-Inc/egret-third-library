@@ -3,7 +3,7 @@
  * @desc main用的工具类
  * @date 2020-02-18 11:43:24 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-04-29 17:34:49
+ * @Last Modified time: 2020-04-29 17:36:11
  */
 import { session } from 'electron';
 import { exec, ChildProcess } from 'child_process';
@@ -218,8 +218,15 @@ export namespace util {
 
         //删除旧的日志文件
         let uploadDir = fs.readdirSync(uploadPath);
-        for (const iterator of uploadDir) {
-            fs.unlinkSync(`${uploadPath}/${iterator}`);
+        if (uploadDir) {
+            for (const iterator of uploadDir) {
+                try {
+                    fs.unlinkSync(`${uploadPath}/${iterator}`);
+                    logger.log("log", `delete log file ${uploadPath}/${iterator} success`);
+                } catch (error) {
+                    logger.error('log', `delete log file ${uploadPath}/${iterator} error`, error);
+                }
+            }
         }
 
         const logPath: string = `${config.rootPath}/dist/log`;
