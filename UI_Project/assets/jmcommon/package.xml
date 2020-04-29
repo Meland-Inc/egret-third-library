@@ -62,7 +62,7 @@
     <image id="hilw2n" name="confirmSkip.png" path="/img/"/>
     <image id="hilw2o" name="retry.png" path="/img/"/>
     <image id="hilw2p" name="pop.png" path="/img/"/>
-    <image id="j5tq2q" name="bg灰色.png" path="/img/" scale="tile"/>
+    <image id="j5tq2q" name="grayBG.png" path="/img/" scale="tile"/>
     <image id="hwlx3" name="img_count_answerframe.png" path="/img/" scale="9grid" scale9grid="69,26,138,52"/>
     <component id="hilr2r" name="ComInput.xml" path="/com/" exported="true"/>
     <component id="fqdk2s" name="btnNumber.xml" path="/btn/" exported="true"/>
@@ -106,6 +106,30 @@
     <image id="vjd03t" name="smallSkipButton.png" path="/img/"/>
     <image id="vjd03u" name="configBG.png" path="/img/"/>
     <image id="vjd03v" name="examCLose.png" path="/img/"/>
+    <image id="w8fs3x" name="submit.png" path="/img/"/>
+    <image id="w8fs3y" name="specialExamTitle.png" path="/img/"/>
+    <image id="pgeq42" name="next.png" path="/img/"/>
+    <image id="nlpi43" name="rate.png" path="/img/"/>
+    <image id="nlpi44" name="rateBG.png" path="/img/"/>
+    <image id="nlpi45" name="getReport.png" path="/img/"/>
+    <image id="nlpi46" name="specialExamSuccessBG.png" path="/img/"/>
+    <image id="nlpi47" name="blueClose.png" path="/img/"/>
+    <image id="nlpi48" name="net.png" path="/img/"/>
+    <font id="nlpi49" name="JmFont.fnt" path="/win/" exported="true"/>
+    <image id="nlpi4a" name="4.png" path="/img/"/>
+    <image id="nlpi4b" name="3.png" path="/img/"/>
+    <image id="nlpi4c" name="2.png" path="/img/"/>
+    <image id="nlpi4d" name="1.png" path="/img/"/>
+    <image id="nlpi4e" name="pie.png" path="/img/"/>
+    <image id="nlpi4g" name="9.png" path="/img/"/>
+    <image id="nlpi4h" name="8.png" path="/img/"/>
+    <image id="nlpi4i" name="7.png" path="/img/"/>
+    <image id="nlpi4j" name="6.png" path="/img/"/>
+    <image id="nlpi4k" name="5.png" path="/img/"/>
+    <image id="nlpi4m" name="0.png" path="/img/"/>
+    <image id="nlpi4n" name="voiceBg.png" path="/img/"/>
+    <image id="pgeq3z" name="trumpet1.png" path="/img/"/>
+    <image id="pgeq40" name="trumpet2.png" path="/img/"/>
   </resources>
   <publish name="jmcommon" path="..\..\egret-planet\resource\jimmyAssets\jmFairyGui" packageCount="2"/>
 </packageDescription>
