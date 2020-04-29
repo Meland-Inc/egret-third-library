@@ -3,7 +3,7 @@
  * @desc 主进程消息处理类
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-26 00:44:44
+ * @Last Modified time: 2020-04-29 17:28:37
  */
 import { ipcMain, IpcMainEvent } from 'electron';
 import querystring from 'querystring';
@@ -24,6 +24,7 @@ class Message {
         'CHECK_UPDATE_COMPLETE': this.onCheckUpdateComplete.bind(this),  //检查更新
         'MAP_TEMPLATE_ENTER': this.onMapTemplateEnter.bind(this),   //启动地图模板游戏服务器
         'MAP_TEMPLATE_ROOM_CREATE': this.onMapTemplateRoomCreate.bind(this),   //启动地图模板房间游戏服务器
+        'SEND_PLAYER_ID': this.onSendPlayerId.bind(this),   //发送玩家id
         'SET_NATIVE_POLICY_VERSION': this.onSetNativePolicyVersion.bind(this),   //设置native版本号
     }
 
@@ -184,6 +185,11 @@ class Message {
         server.createNativeServer(define.eGameServerMode.mapTemplateRoom);
     }
 
+    /** 收到发送过来的玩家id */
+    private onSendPlayerId(playerId: string) {
+        config.setPlayerId(playerId);
+    }
+
     private onSetNativePolicyVersion(nativeVersion: number) {
         this._nativeUpdate.checkUpdate(nativeVersion);
     }
@@ -192,13 +198,13 @@ class Message {
     public sendMsgToClient(msgId: string, ...args: any[]) {
         let data = [msgId, args];
         let content = JSON.stringify(data);
-        config.mainWindow.webContents.executeJavaScript(`
+        let code = `
             if(window.frames && window.frames.length > 0) {
                 window.frames[0].postMessage({'key':'nativeMsg', 'value':\'${content}\'},'*');
             } else if(window){
                 window.postMessage({'key':'nativeMsg', 'value':\'${content}\'},'*');
-            }
-        `);
+            }`;
+        util.executeJavaScript(code);
     }
 }
 

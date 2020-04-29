@@ -3,11 +3,12 @@
  * @desc main用的logger类
  * @date 2020-02-13 14:54:34 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-26 17:59:45
+ * @Last Modified time: 2020-04-29 17:30:02
  */
 import fs from 'fs';
 import config from './Config';
 import message from './Message';
+import { util } from './util';
 
 export namespace logger {
     let processLogContent: string;
@@ -39,18 +40,16 @@ export namespace logger {
     /** 打印日志 */
     export function log(tag: string, msg: string, ...args: any[]) {
         let content = formateMsg(tag, msg, ...args);
-        if (config.mainWindow && config.mainWindow.isEnabled && config.mainWindow.webContents) {
-            config.mainWindow.webContents.executeJavaScript(`console.log(\'${content}\');`);
-        }
+        let code: string = `console.log(\'${content}\');`
+        util.executeJavaScript(code, false);
         webContentsLog(tag, msg, ...args);
     }
 
     /** 打印错误 */
     export function error(tag: string, msg: string, ...args: any[]) {
         let content = formateMsg(tag, msg, ...args);
-        if (config.mainWindow && config.mainWindow.isEnabled && config.mainWindow.webContents) {
-            config.mainWindow.webContents.executeJavaScript(`console.error(\'${content}\');`);
-        }
+        let code: string = `console.error(\'${content}\');`
+        util.executeJavaScript(code, false);
         if (!config.isPackaged) {
             message.sendIpcMsg("ERROR_REPORT", msg);
         }
@@ -60,18 +59,16 @@ export namespace logger {
     /** 打印警告 */
     export function warn(tag: string, msg: string, ...args: any[]) {
         let content = formateMsg(tag, msg, ...args);
-        if (config.mainWindow && config.mainWindow.isEnabled && config.mainWindow.webContents) {
-            config.mainWindow.webContents.executeJavaScript(`console.warn(\'${content}\');`);
-        }
+        let code: string = `console.warn(\'${content}\');`
+        util.executeJavaScript(code, false);
         webContentsLog(tag, msg, ...args);
     }
 
     /** 打印信息 */
     export function info(tag: string, msg: string, ...args: any[]) {
         let content = formateMsg(tag, msg, ...args);
-        if (config.mainWindow && config.mainWindow.isEnabled && config.mainWindow.webContents) {
-            config.mainWindow.webContents.executeJavaScript(`console.info(\'${content}\');`);
-        }
+        let code: string = `console.info(\'${content}\');`
+        util.executeJavaScript(code, false);
         webContentsLog(tag, msg, ...args);
     }
 
@@ -88,5 +85,14 @@ export namespace logger {
         let month = date.getMonth() + 1;
         let format = `${date.getFullYear()}-${month}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
         return format;
+    }
+
+    /** 上传日志 */
+    export function uploadLog() {
+        let logDir = fs.readdirSync(config.uploadLogDir);
+        for (const fileName of logDir) {
+            let filePath = `${config.uploadLogDir}/${fileName}`
+            util.uploadLogFile(`${config.uploadLogHost}/nativeLogs`, fileName, filePath);
+        }
     }
 }

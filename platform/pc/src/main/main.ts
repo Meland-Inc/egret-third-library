@@ -3,10 +3,10 @@
  * @desc main主程序文件
  * @date 2020-02-18 11:42:51 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-26 20:47:19
+ * @Last Modified time: 2020-04-29 17:37:49
  */
 // Modules to control application life and create native browser window
-import { app, globalShortcut, BrowserWindow, Menu, shell, dialog, session, Referrer, BrowserWindowConstructorOptions } from 'electron';
+import { app, globalShortcut, BrowserWindow, Menu, shell, dialog } from 'electron';
 import * as fs from 'fs';
 import * as process from 'process';
 import * as os from 'os';
@@ -132,6 +132,11 @@ async function createWindow() {
   logger.init();
   logger.log('main', `收到参数1: ${JSON.stringify(process.argv)}`);
 
+  //只有打包后的要上传日志
+  if (config.isPackaged) {
+    logger.uploadLog();
+  }
+
   //初始化全局配置
   util.initGlobalConfig();
 
@@ -164,6 +169,7 @@ function initMainWindow() {
     mainWindow.webContents.openDevTools()
   }
 
+  mainWindow.on('close', onClose);
   mainWindow.on('closed', onClosed);
   mainWindow.webContents.on('crashed', onCrashed);
   mainWindow.webContents.on('new-window', onNewWindow);
@@ -191,11 +197,33 @@ function onCrashed() {
   }
 }
 
-/** 监听窗口关闭 */
+/** 监听窗口关闭前 */
+async function onClose(e: Event) {
+  e.preventDefault();		//阻止默认行为，一定要有
+  let index = dialog.showMessageBoxSync(mainWindow, {
+    type: 'info',
+    title: 'Information',
+    defaultId: 0,
+    message: '确定要关闭吗？',
+    buttons: ['取消', '关闭']
+  });
+
+  //最小化
+  if (index == 0) {
+    return;
+  }
+
+  app.exit();		//exit()直接关闭客户端，不会执行quit();
+}
+
+/** 监听窗口关闭时的方法 */
 async function onClosed() {
-  mainWindow = null;
-  config.setMainWindow(null);
-  await server.closeGameServer();
+  util.copyLog2UploadDir()
+    .finally(async () => {
+      mainWindow = null;
+      config.setMainWindow(null);
+      await server.closeGameServer();
+    });
 }
 
 /** 拦截new-window事件，起到拦截window.open的作用 */
@@ -206,53 +234,6 @@ async function onNewWindow(event: Event, url: string) {
   logger.log('electron', `new-window: ${url}`);
   await mainWindow.loadURL(url);
 }
-
-// /** 拦截will-navigate事件，起到拦截window.location.href = xxx的作用 */
-// async function onWillNavigate(event: Event, url: string) {
-//   logger.log('electron', `will-navigate url: ${url}`);
-//   const newURL = new URL(url);
-//   const hash = newURL.hash;
-//   //江哥写的特殊处理平台locationBuilder的代码
-//   const searchParams = (new URL(`https://bai.com${hash.slice(1)}`)).searchParams;
-
-//   const tokenField = "webviewToken";
-//   if (newURL.searchParams.has(tokenField)
-//     || searchParams.has(tokenField)
-//   ) {
-//     return;
-//   }
-
-//   logger.log('platform', `config.environName`, config.environName);
-
-//   // 阻止创建默认窗口
-//   event.preventDefault();
-
-//   if (config.bellToken) {
-//     newURL.searchParams.set(tokenField, config.bellToken);
-//   } else {
-//     if (config.environName) {
-//       logger.log('token', '浏览器参数内不存在token, 查找cookie看是否有参数')
-//       let cookies = await session.defaultSession.cookies.get({});
-//       let domain: string;
-//       if (config.environName === define.eEnvironName.ready) {
-//         domain = config.readyTokenDomain;
-//       } else {
-//         domain = config.releaseTokenDomain;
-//       }
-
-//       let cookie = cookies.find(value => value.name === "token" && value.domain === domain);
-//       if (cookie) {
-//         let token = cookie.value;
-//         logger.log('token', `cookie内存在token:${token}`);
-//         config.setBellToken(token);
-//         newURL.searchParams.set(tokenField, token);
-//       }
-//     }
-//   }
-
-//   logger.log('electron', `will-navigate newURL: ${newURL}`);
-//   await mainWindow.loadURL(newURL.toString());
-// }
 
 /** native初始化 */
 async function initNative() {
