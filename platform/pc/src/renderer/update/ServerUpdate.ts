@@ -3,10 +3,10 @@
  * @desc 游戏服务器端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-25 18:43:48
+ * @Last Modified time: 2020-04-29 23:24:18
  */
 import fs from 'fs';
-import admzip from "adm-zip";
+import StreamZip from "node-stream-zip";
 
 import { define } from '../define';
 import * as loading from '../loading';
@@ -98,28 +98,41 @@ export default class ServerUpdate {
         }
 
         if (result === "finished") {
-            let content = `开始解压文件:${filename}`;
-            logger.log(`update`, content);
             // 通知完成
-            try {
-                let zip = new admzip(this._packagePath + filename);
-                zip.extractAllTo(this._packagePath, true);
-                let content = `解压文件:${filename}成功`;
-                logger.log('update', content);
-                config.setVersionConfigValue("serverPackageVersion", this._remoteVersion);
-            } catch (error) {
-                let content = `解压文件:${filename}错误,开始重新下载`;
-                logger.error(`update`, content, error);
-
-                this.downloadPackage();
-            }
-            fs.unlink(this._packagePath + filename, (err) => {
-                if (err) {
-                    throw err;
-                }
-                logger.log(`update`, '文件:' + filename + '删除成功！');
+            loading.setLoadingProgress(0);
+            loading.showLoading("正在解压游戏端程序包");
+            loading.gradualProgress();
+            let content = `开始解压文件:${filename}`;
+            logger.log('update', content);
+            const streamZip = new StreamZip({
+                file: this._packagePath + filename,
+                storeEntries: true
             });
-            this.executeUpdateCallback();
+            streamZip.on('ready', () => {
+                streamZip.extract(null, this._packagePath, (err: Error) => {
+                    if (err) {
+                        streamZip.close();
+
+                        let content = `解压文件:${filename}错误,开始重新下载`;
+                        logger.error(`update`, content, err);
+
+                        this.downloadPackage();
+                        return;
+                    }
+                    let content = `解压文件:${filename}成功`;
+                    logger.log('update', content);
+                    config.setVersionConfigValue("serverPackageVersion", this._remoteVersion);
+                    streamZip.close();
+
+                    fs.unlink(this._packagePath + filename, (err) => {
+                        if (err) {
+                            throw err;
+                        }
+                        logger.log(`update`, '文件:' + filename + '删除成功！');
+                    });
+                    this.executeUpdateCallback();
+                });
+            });
             return;
         }
 
