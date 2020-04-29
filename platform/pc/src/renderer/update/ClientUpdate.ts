@@ -3,7 +3,7 @@
  * @desc 游戏客户端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-04-29 23:34:15
+ * @Last Modified time: 2020-04-30 00:01:19
  */
 import fs from 'fs';
 import StreamZip from "node-stream-zip";
@@ -49,9 +49,8 @@ export default class ClientUpdate {
     private _isDownloadPackage: boolean;
     /** 检查是否最新版本 */
     public async checkLatestVersion() {
-        //从客户端index文件中获取当前游戏版本号
         let globalConfig = config.globalConfig;
-        let gameVersion = config.getVersionConfigValue("clientPackageVersion")
+        let gameVersion = config.getVersionConfigValue(define.eVersionCfgFiled.clientPackageVersion)
         if (!gameVersion) {
             gameVersion = 0;
         }
@@ -183,7 +182,7 @@ export default class ClientUpdate {
                             this._curVersion = this._curVersion + 1;
                         }
                         if (this._curVersion >= this._gameVersion) {
-                            config.setVersionConfigValue("clientPackageVersion", this._curVersion);
+                            config.setVersionConfigValue(define.eVersionCfgFiled.clientPackageVersion, this._curVersion);
                             this.executeUpdateCallback();
                         } else {
                             this.installSinglePatch()

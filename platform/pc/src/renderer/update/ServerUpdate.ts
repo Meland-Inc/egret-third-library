@@ -3,7 +3,7 @@
  * @desc 游戏服务器端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-04-29 23:24:18
+ * @Last Modified time: 2020-04-30 00:01:29
  */
 import fs from 'fs';
 import StreamZip from "node-stream-zip";
@@ -44,7 +44,7 @@ export default class ServerUpdate {
         this.initVersionInfo();
 
         //获取本地游戏版本
-        this._localVersion = config.getVersionConfigValue("serverPackageVersion");
+        this._localVersion = config.getVersionConfigValue(define.eVersionCfgFiled.serverPackageVersion);
         if (!this._localVersion) {
             this._localVersion = 0;
         }
@@ -121,7 +121,7 @@ export default class ServerUpdate {
                     }
                     let content = `解压文件:${filename}成功`;
                     logger.log('update', content);
-                    config.setVersionConfigValue("serverPackageVersion", this._remoteVersion);
+                    config.setVersionConfigValue(define.eVersionCfgFiled.serverPackageVersion, this._remoteVersion);
                     streamZip.close();
 
                     fs.unlink(this._packagePath + filename, (err) => {
