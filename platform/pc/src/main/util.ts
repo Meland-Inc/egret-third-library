@@ -3,7 +3,7 @@
  * @desc main用的工具类
  * @date 2020-02-18 11:43:24 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-26 00:42:34
+ * @Last Modified time: 2020-04-29 17:34:49
  */
 import { session } from 'electron';
 import { exec, ChildProcess } from 'child_process';
@@ -263,4 +263,17 @@ export namespace util {
         }
         return null;
     };
+
+    /** 执行渲染层js代码 */
+    export function executeJavaScript(code: string, showError: boolean = true) {
+        try {
+            if (config.mainWindow && config.mainWindow.isEnabled && config.mainWindow.webContents) {
+                config.mainWindow.webContents.executeJavaScript(code);
+            }
+        } catch (error) {
+            if (showError) {
+                logger.error('util', `执行js代码[ ${code} ]错误`, error);
+            }
+        }
+    }
 }

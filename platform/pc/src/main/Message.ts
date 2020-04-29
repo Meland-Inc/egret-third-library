@@ -3,7 +3,7 @@
  * @desc 主进程消息处理类
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-26 00:44:44
+ * @Last Modified time: 2020-04-29 17:28:37
  */
 import { ipcMain, IpcMainEvent } from 'electron';
 import querystring from 'querystring';
@@ -198,13 +198,13 @@ class Message {
     public sendMsgToClient(msgId: string, ...args: any[]) {
         let data = [msgId, args];
         let content = JSON.stringify(data);
-        config.mainWindow.webContents.executeJavaScript(`
+        let code = `
             if(window.frames && window.frames.length > 0) {
                 window.frames[0].postMessage({'key':'nativeMsg', 'value':\'${content}\'},'*');
             } else if(window){
                 window.postMessage({'key':'nativeMsg', 'value':\'${content}\'},'*');
-            }
-        `);
+            }`;
+        util.executeJavaScript(code);
     }
 }
 
