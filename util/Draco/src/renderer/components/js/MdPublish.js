@@ -923,7 +923,8 @@ export async function uploadClientPackage() {
         await zipClientPackage(environ, policyNum, releaseName, zipPath);
 
         let fileKey = `${releaseName}.zip`
-        CdnUtil.checkUploaderFile(zipPath, fileKey, `clientPackages/${environ.name}`, () => {
+        //cdn上传路径写为ready,因为ready和release用的是同一个包
+        CdnUtil.checkUploaderFile(zipPath, fileKey, `clientPackages/ready`, () => {
             console.log(`${environ.name}上传${fileKey}完毕,版本号:${gameVersion}`);
             resolve();
         });
