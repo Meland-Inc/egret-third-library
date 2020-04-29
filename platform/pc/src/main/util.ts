@@ -5,6 +5,7 @@
  * @Last Modified by: 雪糕
  * @Last Modified time: 2020-03-26 00:42:34
  */
+import { session } from 'electron';
 import { exec, ChildProcess } from 'child_process';
 import http from 'http';
 import https from 'https';
@@ -212,7 +213,7 @@ export namespace util {
     }
 
     /** 拷贝日志到上传目录 */
-    export function copyLog2UploadDir() {
+    export async function copyLog2UploadDir() {
         const uploadPath: string = `${config.rootPath}/dist/uploadLog`;
 
         //删除旧的日志文件
@@ -225,12 +226,12 @@ export namespace util {
         const logDir = fs.readdirSync(logPath);
         let date: Date = new Date();
         let dateFormat: string = `${date.getFullYear()}-${date.getMonth()}-${date.getDay()}_${date.getHours()}-${date.getMinutes()}-${date.getSeconds()}`;
-        let actId: string = config.bellActId || "";
+        let userid: string = await getCookie("userid") || config.bellActId || "";
         let playerId: string = config.playerId || "";
 
         //拷贝新的日志文件到上传目录
         for (const fileName of logDir) {
-            let newFileName: string = `date-${dateFormat}_actId-${actId}_playerId-${playerId}_${fileName}`;
+            let newFileName: string = `date-${dateFormat}_actId-${userid}_playerId-${playerId}_${fileName}`;
             fs.copyFileSync(`${logPath}/${fileName}`, `${uploadPath}/${newFileName}`);
         }
     }
@@ -252,4 +253,14 @@ export namespace util {
             res.resume();
         });
     }
+
+    /** 读取指定cookies */
+    export async function getCookie(name: string) {
+        let cookies = await session.defaultSession.cookies.get({});
+        let cookie = cookies.find(value => value.name === name);
+        if (cookie) {
+            return cookie.value;
+        }
+        return null;
+    };
 }

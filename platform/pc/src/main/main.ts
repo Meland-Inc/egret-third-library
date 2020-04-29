@@ -132,8 +132,10 @@ async function createWindow() {
   logger.init();
   logger.log('main', `收到参数1: ${JSON.stringify(process.argv)}`);
 
-  logger.uploadLog();
-  logger.log('main', `开始上传日志`);
+  //只有打包后的要上传日志
+  if (config.isPackaged) {
+    logger.uploadLog();
+  }
 
   //初始化全局配置
   util.initGlobalConfig();
@@ -216,7 +218,7 @@ async function onClose(e: Event) {
 
 /** 监听窗口关闭时的方法 */
 async function onClosed() {
-  util.copyLog2UploadDir();
+  await util.copyLog2UploadDir();
   mainWindow = null;
   config.setMainWindow(null);
   await server.closeGameServer();
