@@ -3,7 +3,7 @@
  * @desc 处理loading逻辑文件
  * @date 2020-02-13 14:55:57 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-04-29 21:27:14
+ * @Last Modified time: 2020-04-29 23:31:00
  */
 let loadingGroup = document.getElementById('loadingGroup') as HTMLDivElement;
 let loadingTip = document.getElementById('loadingTip') as HTMLDivElement;
@@ -33,7 +33,7 @@ export function gradualProgress() {
         return;
     }
 
-    timeoutId = window.setTimeout(gradualProgress, 100);
+    timeoutId = window.setTimeout(gradualProgress, 300);
 }
 
 function clearTimeout() {

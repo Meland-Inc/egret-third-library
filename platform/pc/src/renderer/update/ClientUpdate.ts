@@ -3,7 +3,7 @@
  * @desc 游戏客户端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-04-29 23:14:58
+ * @Last Modified time: 2020-04-29 23:34:15
  */
 import fs from 'fs';
 import StreamZip from "node-stream-zip";
@@ -136,8 +136,10 @@ export default class ClientUpdate {
                 let each = 100 / this._patchCount;
                 loading.setLoadingProgress(percentage / 100 * each + (this._curVersion - this._startVersion) * each);
             }
+            return;
         }
-        else if (arg === "finished") {
+
+        if (arg === "finished") {
             // 通知完成
             loading.setLoadingProgress(0);
             loading.showLoading("正在解压客户端程序包");
@@ -189,7 +191,10 @@ export default class ClientUpdate {
                     });
                 });
             });
-        } else if (arg == "404") {
+            return;
+        }
+
+        if (arg == "404") {
             let content = `下载文件:${filename}错误, 文件不存在!`;
             logger.error(`update`, content);
             alert(content);
@@ -200,6 +205,7 @@ export default class ClientUpdate {
             } else {
                 this.executeUpdateCallback();
             }
+            return;
         }
     }
 
