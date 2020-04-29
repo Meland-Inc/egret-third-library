@@ -120,7 +120,10 @@ export async function publishProject() {
         if (ModelMgr.versionModel.curEnviron.codeVersionEnable) {
             indexContent = indexContent.replace("//window.trunkName", `window.trunkName="${ModelMgr.versionModel.curEnviron.trunkName}"`);
             indexContent = indexContent.replace("//window.environName", `window.environName="${ModelMgr.versionModel.curEnviron.name}"`);
-            indexContent = indexContent.replace("window.gameVersion = ''", `window.gameVersion="_v${releaseVersion}"`);
+            //alpha以外的分支要添加游戏版本号信息到html
+            if (ModelMgr.versionModel.curEnviron.name !== ModelMgr.versionModel.eEnviron.alpha) {
+                indexContent = indexContent.replace("window.gameVersion = ''", `window.gameVersion="_v${releaseVersion}"`);
+            }
             await fsExc.writeFile(indexPath, indexContent);
         }
 
