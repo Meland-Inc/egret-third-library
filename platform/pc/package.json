@@ -90,9 +90,9 @@
     },
     "dependencies": {
         "electron-updater": "^4.2.5",
-	"form-data": "^3.0.0",
-	"fs-extra": "^9.0.0",
-	"node-stream-zip": "^1.9.2",
+        "form-data": "^3.0.0",
+        "fs-extra": "^9.0.0",
+        "node-stream-zip": "^1.9.2",
         "raven-js": "^3.27.2",
         "request": "^2.88.0",
         "tree-kill": "^1.2.2"
@@ -110,5 +110,5 @@
         "webpack-cli": "^3.3.11",
         "webpack-dev-server": "^3.10.3"
     },
-    "version": "0.0.14"
+    "version": "0.0.15"
 }
