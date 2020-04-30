@@ -37,14 +37,24 @@ app.on('activate', onAppActivate);
 function onAppReady() {
   createWindow();
 
-  //检测杀game进程
-  let cmdStr: string;
+  //开启native时检测杀game进程
+  let cmdGameStr: string;
   if (os.platform() === "win32") {
-    cmdStr = "taskkill /im game.exe /f";
+    cmdGameStr = "taskkill /im game.exe /f";
   } else {
-    cmdStr = `pkill game`;
+    cmdGameStr = `pkill game`;
   }
-  util.runCmd(cmdStr, null, `关闭游戏服务器成功`, "");
+  util.runCmd(cmdGameStr, null, `关闭游戏服务器成功`, "");
+
+  //开启native时检测杀ngrok进程
+  let cmdNgrokStr: string;
+  if (os.platform() === "win32") {
+    cmdNgrokStr = "taskkill /im ngrok.exe /f";
+  } else {
+    cmdNgrokStr = `pkill ngrok`;
+  }
+  util.runCmd(cmdNgrokStr, null, `关闭ngrok进程成功`, "");
+
 
   let shortCut = "";
   if (process.platform === 'darwin') {
@@ -202,18 +212,23 @@ async function onClose(e: Event) {
   e.preventDefault();		//阻止默认行为，一定要有
   let index = dialog.showMessageBoxSync(mainWindow, {
     type: 'info',
-    title: 'Information',
-    defaultId: 0,
-    message: '确定要关闭吗？',
-    buttons: ['取消', '关闭']
+    title: '提示',
+    defaultId: 1,
+    message: '确定要关闭吗？\n(如果在创作地图记得要先点击退出按钮保存哦！)',
+    buttons: ['关闭', '取消'],
+    cancelId: 1,
   });
 
-  //最小化
-  if (index == 0) {
+  //取消
+  if (index !== 0) {
     return;
   }
 
-  app.exit();		//exit()直接关闭客户端，不会执行quit();
+  //关闭native前,先检测关闭游戏服务器
+  server.closeGameServer()
+    .finally(() => {
+      app.exit();		//exit()直接关闭客户端，不会执行quit();
+    });
 }
 
 /** 监听窗口关闭时的方法 */
@@ -222,7 +237,6 @@ async function onClosed() {
     .finally(async () => {
       mainWindow = null;
       config.setMainWindow(null);
-      await server.closeGameServer();
     });
 }
 
