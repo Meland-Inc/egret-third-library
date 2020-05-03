@@ -300,15 +300,11 @@ class Message {
     }
 
     private setConfigData2LocalStorage() {
-        if (config.nativeLoginResponse) {
-            localStorage.setItem('nativeLoginResponse', JSON.stringify(config.nativeLoginResponse));
-        } else {
+        if (!config.nativeLoginResponse) {
             localStorage.removeItem('nativeLoginResponse');
         }
 
-        if (config.nativeGameServer) {
-            localStorage.setItem('nativeGameServer', JSON.stringify(config.nativeGameServer));
-        } else {
+        if (!config.nativeGameServer) {
             localStorage.removeItem('nativeGameServer');
         }
     }

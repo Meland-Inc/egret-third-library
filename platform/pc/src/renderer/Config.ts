@@ -83,6 +83,7 @@ class Config {
     }
     public setNativeLoginResponse(value: any) {
         this._nativeLoginResponse = value;
+        localStorage.setItem('nativeLoginResponse', JSON.stringify(this._nativeLoginResponse));
     }
 
     private _nativeGameServer: string;
@@ -92,6 +93,7 @@ class Config {
     }
     public setNativeGameServer(value: string) {
         this._nativeGameServer = value;
+        localStorage.setItem('nativeGameServer', JSON.stringify(this._nativeGameServer));
     }
 
     private _isPackaged: boolean;
