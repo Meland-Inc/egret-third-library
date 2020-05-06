@@ -3,11 +3,13 @@
  * @desc 渲染进程消息处理文件
  * @date 2020-02-26 15:31:07
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-26 18:02:38
+ * @Last Modified time: 2020-04-30 00:02:57
  */
 import { ipcRenderer, IpcRendererEvent } from "electron";
 import querystring from "querystring";
 import fs from "fs";
+import fse from "fs-extra";
+
 import path from "path";
 
 import config from './Config';
@@ -98,7 +100,11 @@ class Message {
             serverDirect = true;
         } else {
             let dir = fs.readdirSync(serverPackageDir);
-            if (dir.length < 2) {
+            let zipIndex: number = dir.findIndex(value => value.search(/.*.zip/) >= 0);
+            let serverVersion: number = config.getVersionConfigValue(define.eVersionCfgFiled.serverPackageVersion);
+            //不存在服务端版本号,或者当文件数量小于2,或者有release压缩包(zip包不完整,导致解压失败),要重新下载新的包
+            if (!serverVersion || zipIndex >= 0 || dir.length < 2) {
+                fse.emptyDirSync(serverPackageDir);
                 serverDirect = true;
             }
         }
@@ -112,7 +118,11 @@ class Message {
         } else {
             let dir = fs.readdirSync(clientPackageDir);
             logger.log(`net`, `dir length:${dir.length}`);
-            if (dir.length < 2) {
+            let zipIndex: number = dir.findIndex(value => value.search(/release_v.*s.zip/) >= 0);
+            let clientVersion: number = config.getVersionConfigValue(define.eVersionCfgFiled.clientPackageVersion);
+            //不存在客户端版本号,或者当文件数量小于2,或者有release压缩包(zip包不完整,导致解压失败),要重新下载新的包
+            if (!clientVersion || zipIndex >= 0 || dir.length < 2) {
+                fse.emptyDirSync(clientPackageDir);
                 clientDirect = true;
             }
         }
@@ -153,7 +163,7 @@ class Message {
     /** 直接下载最新服务端包 */
     private directDownloadServer(callback: Function, ...args: any[]) {
         try {
-            config.setVersionConfigValue("serverPackageVersion", 0);
+            config.setVersionConfigValue(define.eVersionCfgFiled.serverPackageVersion, 0);
             this._serverUpdate.checkUpdate(callback, ...args);
         } catch (error) {
             let content = `native下载服务端出错,点击重试`;

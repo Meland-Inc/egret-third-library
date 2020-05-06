@@ -120,7 +120,10 @@ export async function publishProject() {
         if (ModelMgr.versionModel.curEnviron.codeVersionEnable) {
             indexContent = indexContent.replace("//window.trunkName", `window.trunkName="${ModelMgr.versionModel.curEnviron.trunkName}"`);
             indexContent = indexContent.replace("//window.environName", `window.environName="${ModelMgr.versionModel.curEnviron.name}"`);
-            indexContent = indexContent.replace("window.gameVersion = ''", `window.gameVersion="_v${releaseVersion}"`);
+            //alpha以外的分支要添加游戏版本号信息到html
+            if (ModelMgr.versionModel.curEnviron.name !== ModelMgr.versionModel.eEnviron.alpha) {
+                indexContent = indexContent.replace("window.gameVersion = ''", `window.gameVersion="_v${releaseVersion}"`);
+            }
             await fsExc.writeFile(indexPath, indexContent);
         }
 
@@ -920,7 +923,8 @@ export async function uploadClientPackage() {
         await zipClientPackage(environ, policyNum, releaseName, zipPath);
 
         let fileKey = `${releaseName}.zip`
-        CdnUtil.checkUploaderFile(zipPath, fileKey, `clientPackages/${environ.name}`, () => {
+        //cdn上传路径写为ready,因为ready和release用的是同一个包
+        CdnUtil.checkUploaderFile(zipPath, fileKey, `clientPackages/ready`, () => {
             console.log(`${environ.name}上传${fileKey}完毕,版本号:${gameVersion}`);
             resolve();
         });
