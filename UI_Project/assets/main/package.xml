@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="oyity675" jpegQuality="80" compressPNG="true">
+<packageDescription id="oyity675">
   <resources>
     <image id="a1nd1" name="img_main_xdt_1.png" path="/img/" scale="9grid" scale9grid="24,24,48,48"/>
     <image id="a1nd2" name="img_maon_rw_1.png" path="/img/" scale="9grid" scale9grid="23,7,46,14"/>
@@ -506,6 +506,7 @@
     <image id="fn8f4e1" name="img_main_jzd.png" path="/img/"/>
     <component id="fn8fcyijz" name="btnIde.xml" path="/btn/" exported="true"/>
     <image id="fn8f4e2" name="img_main_jzd.png" path="/btn/"/>
+    <image id="p8fzwcyim1" name="icon_mainV_xsgl.png" path="/img/"/>
   </resources>
   <publish name="main"/>
 </packageDescription>
