@@ -84,6 +84,8 @@ class Server {
 
                     logger.log('net', 'native上课客户端登录本地游戏服务器', gameServer);
 
+                    message.sendIpcMsg('SAVE_NATIVE_GAME_SERVER', gameServer);
+
                     //游戏地图
                     if (config.gameServerMode === define.eGameServerMode.gameMap) {
                         message.sendMsgToClient('nativeSignIn', gameServer);
