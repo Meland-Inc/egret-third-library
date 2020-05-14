@@ -63,7 +63,7 @@ async function uploadSourceMap() {
         prefix = `~/web/beta/js`;
     }
     if (environ == ModelMgr.versionModel.eEnviron.ready) {
-        environ == ModelMgr.versionModel.eEnviron.release;
+        environ = ModelMgr.versionModel.eEnviron.release;
     }
     if (environ == ModelMgr.versionModel.eEnviron.beta || environ == ModelMgr.versionModel.eEnviron.release) {
         console.log("--> a上传sourcemap：", environ, version, prefix);
