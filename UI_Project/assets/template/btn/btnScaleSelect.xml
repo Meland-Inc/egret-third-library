@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="129,40" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <loader id="n0_sz33" name="icon" xy="0,0" pivot="0.5,0.5" size="129,40" touchable="false" fill="scaleFree">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <text id="n1_obf0" name="title" xy="0,0" pivot="0.5,0.5" size="129,40" font="Microsoft YaHei" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" text="">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button mode="Radio" sound="ui://fknoioovtqc911"/>
+</component>

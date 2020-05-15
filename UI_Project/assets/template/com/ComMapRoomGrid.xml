@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="429,178" designImage="ui://0axy98cgk9m364" designImageOffsetX="-74" designImageOffsetY="-244" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlSelect" pages="0,0,1,1" selected="1"/>
+  <displayList>
+    <image id="n48_k9m3" name="n48" src="k9m36a" fileName="img/img_mt_mapbg1.png" xy="5,0" size="422,178"/>
+    <loader id="n42_v8nf" name="loaderMap" xy="17,16" size="163,148" fill="scaleFree"/>
+    <image id="n51_pw6y" name="n51" src="pw6y9r" fileName="img/img_mt_maptempframe.png" xy="6,6">
+      <relation target="n42_v8nf" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n45_k9m3" name="n45" src="k9m365" fileName="img/img_mt_kuang.png" xy="0,0" size="429,178">
+      <gearDisplay controller="ctrlSelect" pages="1"/>
+    </image>
+    <text id="n38_v8nf" name="txtName" xy="191,26" size="210,34" fontSize="26" color="#716f7a" vAlign="middle" autoSize="none" bold="true" text="模板名"/>
+    <text id="n39_v8nf" name="txtAuthor" xy="240,95" size="115,28" fontSize="18" color="#716f7a" vAlign="middle" autoSize="none" bold="true" text="房主"/>
+    <text id="n40_v8nf" name="txtCount" xy="280,125" size="82,28" fontSize="18" color="#716f7a" vAlign="middle" autoSize="none" bold="true" text="次数"/>
+    <component id="n44_v8nf" name="btnMapDetail" src="tbm25y" fileName="btn/btnScale.xml" xy="47,38" size="100,100">
+      <gearDisplay controller="ctrlSelect" pages="1"/>
+      <Button title="地图详情" icon="ui://0axy98cgk9m366"/>
+    </component>
+    <image id="n46_k9m3" name="n46" src="k9m367" fileName="img/icon_mt_jiaru.png" xy="365,100"/>
+    <component id="n43_v8nf" name="btnJoinIn" src="tbm25y" fileName="btn/btnScale.xml" xy="381,108" size="30,30">
+      <Button icon="ui://0axy98cgk9m369"/>
+    </component>
+    <text id="n49_k9m3" name="n49" xy="192,95" size="56,28" fontSize="18" color="#716f7a" vAlign="middle" autoSize="none" bold="true" text="房主:"/>
+    <text id="n50_k9m3" name="n50" xy="191,125" size="98,28" fontSize="18" color="#716f7a" vAlign="middle" autoSize="none" bold="true" text="房间人数:"/>
+  </displayList>
+</component>

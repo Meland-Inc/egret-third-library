@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" designImage="ui://0axy98cggu5v8z" designImageAlpha="15" designImageLayer="1">
+  <controller name="ctrlRightDetail" pages="2,empty,0,edit,1,lobby" selected="0"/>
+  <controller name="ctrlViewStatus" pages="0,allList,1,selfList,2,create,3,publish,4,detail" selected="0">
+    <action type="change_page" fromPage="" toPage="0" objectId="n16_pz1n" controller="ctrlListType" targetPage="7"/>
+    <action type="change_page" fromPage="" toPage="1" objectId="n16_pz1n" controller="ctrlListType" targetPage="0"/>
+  </controller>
+  <displayList>
+    <image id="n53_gu5v" name="n53" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="174,163" size="1584,885">
+      <relation target="" sidePair="top-top,bottomext-bottom"/>
+      <relation target="" sidePair="center-center"/>
+    </image>
+    <list id="n50_v8nf" name="lstMapGrid" xy="243,183" size="1445,857" layout="flow_hz" overflow="scroll" lineGap="16" colGap="31" lineItemCount="5" defaultItem="ui://0axy98cgv8nf4z" autoClearItems="true">
+      <relation target="" sidePair="bottomext-bottom,center-center"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n51_gu5v" name="n51" src="tbm25p" fileName="img/icon_mt_titlebg2.png" xy="174,99" size="193,55" group="n54_vrsj">
+      <relation target="" sidePair="left-left,top-top"/>
+    </image>
+    <text id="n52_gu5v" name="n52" xy="190,108" size="141,39" group="n54_vrsj" fontSize="24" color="#ffffff" vAlign="middle" autoSize="none" bold="true" text="收藏的地图">
+      <relation target="n51_gu5v" sidePair=""/>
+    </text>
+    <group id="n54_vrsj" name="n54" xy="174,99" size="193,55" advanced="true">
+      <relation target="n53_gu5v" sidePair="left-left"/>
+    </group>
+  </displayList>
+</component>

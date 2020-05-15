@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1449,473" designImage="ui://0axy98cgtbm25m" designImageOffsetX="-285" designImageOffsetY="-185" designImageAlpha="9" designImageLayer="1">
+  <controller name="ctrlBig" pages="0,big,1,small" selected="0"/>
+  <displayList>
+    <list id="n41_v8nf" name="lstGrid" xy="0,96" size="1459,336" layout="row" overflow="hidden" colGap="40" defaultItem="ui://0axy98cgv8nf50" autoClearItems="true">
+      <gearDisplay controller="ctrlBig" pages="0"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n43_tbm2" name="btnMore" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1369,439" size="70,25">
+      <Button titleFontSize="30" icon="ui://0axy98cgtbm25n"/>
+    </component>
+    <image id="n45_tbm2" name="n45" src="tbm25p" fileName="img/icon_mt_titlebg2.png" xy="2,10" size="177,58"/>
+    <text id="n38_v8nf" name="txtTitle" xy="16,17" size="138,48" fontSize="26" color="#ffffff" vAlign="middle" autoSize="none" bold="true" italic="true" text="官方推荐">
+      <relation target="n45_tbm2" sidePair="left-left,top-top"/>
+    </text>
+  </displayList>
+</component>

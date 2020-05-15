@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="8,200" overflow="hidden" extention="ScrollBar">
+<component size="8,231" overflow="hidden" extention="ScrollBar">
   <displayList>
-    <graph id="n1_qouo" name="bar" xy="0,0" size="8,200" hideByEditor="true">
+    <loader id="n1_qouo" name="bar" xy="-1,0" size="10,231" url="ui://0axy98cgvrsj9k" fill="scaleFree">
       <relation target="" sidePair="height-height"/>
-    </graph>
+    </loader>
     <component id="n2_qouo" name="grip" src="qb974u" fileName="pbr/Pbr1_grip.xml" xy="0,20"/>
   </displayList>
   <ScrollBar/>
