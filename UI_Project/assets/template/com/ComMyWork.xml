@@ -14,9 +14,9 @@
       <relation target="n69_gu5v" sidePair="left-left,bottom-top"/>
       <Button title="组件" titleFontSize="24" icon="ui://0axy98cggu5v9f" controller="ctrlPage" page="1"/>
     </component>
-    <component id="n67_mzsu" name="comMyMap" src="mzsu7c" fileName="win/ComMyWorkMap.xml" xy="177,167" size="1565,869">
+    <component id="n67_mzsu" name="comMyMap" src="mzsu7c" fileName="com/ComMyWorkMap.xml" xy="177,167" size="1608,869">
       <gearDisplay controller="ctrlPage" pages="0"/>
-      <relation target="n69_gu5v" sidePair="bottomext-bottom,center-center"/>
+      <relation target="n69_gu5v" sidePair="bottomext-bottom,left-left"/>
     </component>
     <component id="n71_pt17" name="btnRoomCodeEnter" src="k9m36d" fileName="btn/btnFix.xml" xy="1609,117">
       <relation target="n69_gu5v" sidePair="right-right,bottom-top"/>

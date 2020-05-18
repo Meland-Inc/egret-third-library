@@ -5,7 +5,7 @@
     <loader id="n0_sz33" name="icon" xy="0,0" pivot="0.5,0.5" size="129,40" touchable="false" fill="scaleFree">
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <text id="n1_obf0" name="title" xy="0,0" pivot="0.5,0.5" size="129,40" font="Microsoft YaHei" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" text="">
+    <text id="n1_obf0" name="title" xy="0,0" pivot="0.5,0.5" size="129,40" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" singleLine="true" text="">
       <relation target="" sidePair="center-center,middle-middle"/>
       <relation target="" sidePair="width-width,height-height"/>
     </text>

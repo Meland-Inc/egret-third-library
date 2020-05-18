@@ -13,7 +13,7 @@
       <Button titleFontSize="30" icon="ui://0axy98cgtbm25n"/>
     </component>
     <image id="n45_tbm2" name="n45" src="tbm25p" fileName="img/icon_mt_titlebg2.png" xy="2,10" size="177,58"/>
-    <text id="n38_v8nf" name="txtTitle" xy="16,17" size="138,48" fontSize="26" color="#ffffff" vAlign="middle" autoSize="none" bold="true" italic="true" text="官方推荐">
+    <text id="n38_v8nf" name="txtTitle" xy="16,17" size="138,48" fontSize="26" color="#ffffff" vAlign="middle" autoSize="none" italic="true" text="官方推荐">
       <relation target="n45_tbm2" sidePair="left-left,top-top"/>
     </text>
   </displayList>

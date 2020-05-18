@@ -15,11 +15,11 @@
     <component id="n38_v8nf" name="btnReturn" src="tbm25y" fileName="btn/btnScale.xml" xy="32,25" size="105,40">
       <Button title="   返 回" icon="ui://0axy98cgmzsu6h" page="0"/>
     </component>
-    <text id="n45_v8nf" name="n45" xy="164,25" size="184,44" fontSize="34" color="#716f7a" autoSize="none" bold="true" text="官方推荐">
+    <text id="n45_v8nf" name="n45" xy="164,25" size="184,44" fontSize="34" color="#716f7a" autoSize="none" text="官方推荐">
       <gearText controller="ctrlType" pages="1,2,3,4,5,6,7,8,9" values="邀请赛|最新|最热|教程|故事|休闲|我发布的|作业|内部" default="官方推荐"/>
     </text>
     <image id="n54_mzsu" name="imgSearchInputBg" src="oiqdcyigx" fileName="img/img_cm_ssk.png" pkg="te1gxawo" xy="1419,104" size="324,47" group="n57_mzsu"/>
-    <text id="n55_mzsu" name="inpSearch" xy="1473,113" size="271,29" group="n57_mzsu" input="true" prompt="[color=#999999]搜索所有作品[/color]" fontSize="24" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text=""/>
+    <text id="n55_mzsu" name="inpSearch" xy="1473,113" size="271,29" group="n57_mzsu" customData="[color=#999999]搜索所有type作品[/color]" input="true" prompt="[color=#999999]搜索所有作品[/color]" fontSize="24" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text=""/>
     <image id="n56_mzsu" name="n56" src="rujpcyijl" fileName="img/icon_cm_ss.png" pkg="te1gxawo" xy="1427,106" size="42,42" group="n57_mzsu"/>
     <group id="n57_mzsu" name="grpSearchInput" xy="1419,104" size="325,47" advanced="true">
       <relation target="n53_mzsu" sidePair="top-top,right-right"/>

@@ -7,11 +7,11 @@
     <image id="n36_v8nf" name="imgHeaderBg" src="tbm25r" fileName="img/img_mt_bgtitle.png" xy="0,0" size="1920,90" group="n109_yfas">
       <relation target="" sidePair="width-width,top-top"/>
     </image>
-    <text id="n45_v8nf" name="n45" xy="168,26" size="152,44" group="n109_yfas" fontSize="32" color="#716f7a" autoSize="none" bold="true" text="地图详情"/>
+    <text id="n45_v8nf" name="n45" xy="168,26" size="152,44" group="n109_yfas" fontSize="32" color="#716f7a" autoSize="none" text="地图详情"/>
     <component id="n38_v8nf" name="btnReturn" src="tbm25y" fileName="btn/btnScale.xml" xy="35,24" size="101,42" group="n109_yfas">
       <Button title="  返回" icon="ui://0axy98cgmzsu6h" page="0"/>
     </component>
-    <group id="n109_yfas" name="grpMain" xy="0,0" size="1920,1080" collapsed="true"/>
+    <group id="n109_yfas" name="grpMain" xy="0,0" size="1920,1080"/>
     <image id="n107_yfas" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="168,121" size="1037,925" group="n85_azcq">
       <relation target="" sidePair="left-left,top-top"/>
       <relation target="" sidePair="bottomext-bottom"/>
@@ -32,11 +32,11 @@
     <image id="n101_yfas" name="n101" src="yfas7i" fileName="img/icon_mt_pink.png" xy="551,327" size="147,38" group="n69_azcq"/>
     <image id="n67_azcq" name="imgSubscribeNum" src="yfas7h" fileName="img/icon_mt_numsubscribed.png" xy="553,329" group="n69_azcq"/>
     <text id="n68_azcq" name="tfSubscribeNum" xy="594,329" size="85,34" group="n69_azcq" fontSize="26" color="#999999" vAlign="middle" autoSize="none" singleLine="true" text="999"/>
-    <group id="n69_azcq" name="grpNumSubscribed" xy="551,327" size="147,38" group="n85_azcq" advanced="true" collapsed="true"/>
+    <group id="n69_azcq" name="grpNumSubscribed" xy="551,327" size="147,38" group="n85_azcq" advanced="true"/>
     <image id="n100_yfas" name="n100" src="yfas7g" fileName="img/icon_mt_yellowbg.png" xy="550,369" group="n92_azcq"/>
     <image id="n90_azcq" name="imgSubscribeNum" src="tbm25h" fileName="img/icon_mt_play.png" xy="551,372" group="n92_azcq"/>
     <text id="n91_azcq" name="tfNumPlay" xy="593,371" size="87,34" group="n92_azcq" fontSize="26" color="#333333" vAlign="middle" autoSize="none" singleLine="true" text="999"/>
-    <group id="n92_azcq" name="grpNumPlay" xy="550,369" size="148,38" group="n85_azcq" advanced="true" collapsed="true"/>
+    <group id="n92_azcq" name="grpNumPlay" xy="550,369" size="148,38" group="n85_azcq" advanced="true"/>
     <image id="n127_vrsj" name="n127" src="vrsj9l" fileName="img/img_mt_xuxian3.png" xy="260,455" group="n85_azcq"/>
     <image id="n99_yfas" name="n99" src="yfas7f" fileName="img/img_mt_mapbgfm.png" xy="256,191" size="277,214" group="n103_yfas">
       <relation target="n81_azcq" sidePair="width-width,height-height"/>
@@ -50,8 +50,8 @@
     <image id="n102_yfas" name="n102" src="yfas7j" fileName="img/img_mt_detailauthor.png" xy="552,241" size="270,74" group="n104_yfas"/>
     <text id="n82_azcq" name="tfUpdateTime" xy="576,288" size="218,24" group="n104_yfas" fontSize="18" color="#939393" vAlign="middle" vars="true" autoSize="none" text="最后更新时间：{year=0}.{month=0}.{day=0}"/>
     <image id="n63_azcq" name="imgAuthor" src="yfas7k" fileName="img/icon_mt_author.png" xy="571,250" group="n104_yfas"/>
-    <text id="n64_azcq" name="tfCreater" xy="606,246" size="190,36" group="n104_yfas" fontSize="26" color="#7a7259" vAlign="middle" vars="true" autoSize="none" bold="true" text="作者"/>
-    <text id="n66_azcq" name="tfMapName" xy="553,186" size="352,41" group="n104_yfas" fontSize="26" color="#7a7259" vAlign="middle" autoSize="none" bold="true" singleLine="true" text="千与千寻七个字"/>
+    <text id="n64_azcq" name="tfCreater" xy="606,246" size="190,36" group="n104_yfas" fontSize="26" color="#7a7259" vAlign="middle" vars="true" autoSize="none" text="作者"/>
+    <text id="n66_azcq" name="tfMapName" xy="553,186" size="352,41" group="n104_yfas" fontSize="26" color="#7a7259" vAlign="middle" autoSize="none" singleLine="true" text="千与千寻七个字"/>
     <image id="n105_yfas" name="n105" src="yfas7l" fileName="img/img_mt_xuxian1.png" xy="550,228" group="n104_yfas"/>
     <group id="n104_yfas" name="grpAuthor" xy="550,186" size="355,129" group="n85_azcq"/>
     <component id="n71_azcq" name="btnCopy" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="915,327" size="90,82" group="n110_yfas">
@@ -66,9 +66,9 @@
     <group id="n110_yfas" name="grpEditBtn" xy="915,327" size="200,82" group="n85_azcq"/>
     <image id="n114_yfas" name="n114" src="yfas7q" fileName="img/img_mt_detailtextgb.png" xy="251,540" size="867,184" group="n113_yfas"/>
     <image id="n112_yfas" name="n112" src="yfas7p" fileName="img/icon_mt_detailtitle.png" xy="320,511" size="166,55" group="n113_yfas"/>
-    <text id="n87_azcq" name="tf" xy="333,526" size="135,30" group="n113_yfas" fontSize="24" color="#716f7a" align="center" vAlign="middle" autoSize="none" bold="true" text="地图描述"/>
+    <text id="n87_azcq" name="tf" xy="333,526" size="135,30" group="n113_yfas" fontSize="24" color="#716f7a" align="center" vAlign="middle" autoSize="none" text="地图描述"/>
     <component id="n122_yfas" name="txtScroll" src="yfas7x" fileName="com/ComTextScroll.xml" xy="281,570" size="806,130" group="n113_yfas"/>
-    <group id="n113_yfas" name="grpMapDescribe" xy="251,511" size="867,213" group="n85_azcq" collapsed="true"/>
+    <group id="n113_yfas" name="grpMapDescribe" xy="251,511" size="867,213" group="n85_azcq"/>
     <group id="n85_azcq" name="grpInfo" xy="168,121" size="1037,925" group="n126_vrsj" advanced="true"/>
     <image id="n108_yfas" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="1293,124" size="468,925" group="n111_yfas">
       <relation target="n111_yfas" sidePair="height-height,width-width"/>

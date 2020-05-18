@@ -10,7 +10,7 @@
       <gearDisplay controller="button" pages="1,3"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <text id="n2_mzsu" name="title" xy="61,0" size="118,48" fontSize="26" vAlign="middle" autoSize="none" bold="true" singleLine="true" text="">
+    <text id="n2_mzsu" name="title" xy="61,0" size="118,48" fontSize="26" color="#4eaed1" align="center" vAlign="middle" autoSize="none" singleLine="true" text="">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
   </displayList>

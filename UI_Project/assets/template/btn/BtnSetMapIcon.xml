@@ -13,7 +13,7 @@
     <image id="n2_er8n" name="n2" src="mzsu71" fileName="img/img_mt_bg_fm.png" xy="0,235" size="288,46">
       <relation target="" sidePair="width-width,bottom-bottom"/>
     </image>
-    <text id="n3_er8n" name="tf" xy="87,243" size="112,30" fontSize="24" color="#ffffff" align="center" vAlign="middle" bold="true" text="封面设置">
+    <text id="n3_er8n" name="tf" xy="87,242" size="105,31" fontSize="24" color="#ffffff" align="center" vAlign="middle" text="封面设置">
       <relation target="n2_er8n" sidePair="center-center,middle-middle"/>
     </text>
   </displayList>

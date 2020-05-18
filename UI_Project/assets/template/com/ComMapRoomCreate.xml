@@ -30,18 +30,18 @@
     <image id="n66_yfas" name="n66" src="yfas8i" fileName="img/icon_mt_xuxian2.png" xy="855,366" group="n65_yfas"/>
     <image id="n67_yfas" name="n67" src="yfas8j" fileName="img/img_mt_roomnum.png" xy="849,396" group="n65_yfas"/>
     <image id="n73_yfas" name="n73" src="mzsu76" fileName="img/img_mt_kuang_01.png" xy="874,289" size="486,47" group="n65_yfas"/>
-    <text id="n63_yfas" name="tfMapNameTitle" xy="890,217" size="146,40" group="n65_yfas" fontSize="32" color="#4db6ff" align="center" vAlign="middle" leading="0" autoSize="none" bold="true" text="地图名字"/>
+    <text id="n63_yfas" name="tfMapNameTitle" xy="890,217" size="146,40" group="n65_yfas" fontSize="32" color="#4db6ff" align="center" vAlign="middle" leading="0" autoSize="none" text="地图名字"/>
     <component id="n68_yfas" name="btnIsOpen" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="944,442" size="69,37" group="n65_yfas">
       <Button checked="true" icon="ui://0axy98cgpw6y9o" selectedIcon="ui://0axy98cgpw6y9p"/>
     </component>
     <image id="n75_gu5v" name="n75" src="gu5v8t" fileName="img/img_mt_inputframe.png" xy="1175,442" group="n65_yfas"/>
     <text id="n69_yfas" name="inputNum" xy="1173,441" size="169,44" group="n65_yfas" input="true" keyboardType="4" fontSize="26" align="center" vAlign="middle" autoSize="none" text="12"/>
-    <text id="n70_yfas" name="n70" xy="906,409" size="168,30" group="n65_yfas" fontSize="22" color="#4a2a7f" autoSize="none" bold="true" text="房间是否公开"/>
-    <text id="n71_yfas" name="n71" xy="1185,409" size="165,30" group="n65_yfas" fontSize="22" color="#2a347f" autoSize="none" bold="true" text="房间最大人数"/>
+    <text id="n70_yfas" name="n70" xy="906,409" size="168,30" group="n65_yfas" fontSize="22" color="#4a2a7f" autoSize="none" text="房间是否公开"/>
+    <text id="n71_yfas" name="n71" xy="1185,409" size="165,30" group="n65_yfas" fontSize="22" color="#2a347f" autoSize="none" text="房间最大人数"/>
     <component id="n72_yfas" name="btnCreate" src="tbm25y" fileName="btn/btnScale.xml" xy="1280,889" size="104,53" group="n65_yfas">
       <Button title="创建" icon="ui://0axy98cgyfas8k"/>
     </component>
-    <text id="n74_yfas" name="tfMapName" xy="883,296" size="464,33" group="n65_yfas" fontSize="24" color="#494948" align="center" vAlign="middle" autoSize="none" bold="true" text="郭世宏的世界"/>
+    <text id="n74_yfas" name="tfMapName" xy="883,296" size="464,33" group="n65_yfas" fontSize="24" color="#494948" align="center" vAlign="middle" autoSize="none" text="郭世宏的世界"/>
     <group id="n65_yfas" name="grpSet" xy="849,206" size="537,736" group="n76_h1sr"/>
     <group id="n76_h1sr" name="n76" xy="533,206" size="853,736" advanced="true">
       <relation target="" sidePair="center-center,top-top"/>

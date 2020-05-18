@@ -38,7 +38,7 @@
     <image id="n63_k9m3" name="n63" src="tbm25p" fileName="img/icon_mt_titlebg2.png" xy="53,133">
       <relation target="n65_k9m3" sidePair="left-left,bottom-top"/>
     </image>
-    <text id="n60_v8nf" name="n60" xy="68,143" size="145,39" fontSize="26" color="#ffffff" vAlign="middle" autoSize="none" bold="true" italic="true" text="全部房间">
+    <text id="n60_v8nf" name="n60" xy="68,143" size="145,39" fontSize="26" color="#ffffff" vAlign="middle" autoSize="none" italic="true" text="全部房间">
       <relation target="n63_k9m3" sidePair="middle-middle,left-left"/>
     </text>
     <component id="n64_k9m3" name="btnRefresh" src="tbm25y" fileName="btn/btnScale.xml" xy="1750,148" size="108,41">

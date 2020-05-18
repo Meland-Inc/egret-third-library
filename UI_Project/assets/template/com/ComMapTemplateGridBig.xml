@@ -18,12 +18,12 @@
     <image id="n54_tbm2" name="n54" src="tbm25k" fileName="img/img_mt_select.png" xy="0,0" size="332,333">
       <gearDisplay controller="ctrlSelect" pages="1"/>
     </image>
-    <text id="n47_tbm2" name="txtName" xy="17,1" size="296,42" font="Microsoft YaHei" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="模板名"/>
-    <text id="n48_tbm2" name="txtAuthor" xy="62,215" size="210,47" font="Microsoft YaHei" fontSize="20" color="#716f7a" align="center" vAlign="middle" autoSize="none" bold="true" text="作者"/>
-    <text id="n49_tbm2" name="txtCount" xy="98,271" size="86,47" font="Microsoft YaHei" fontSize="22" color="#716f7a" vAlign="middle" autoSize="none" text="1234">
+    <text id="n47_tbm2" name="txtName" xy="17,1" size="296,42" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="模板名"/>
+    <text id="n48_tbm2" name="txtAuthor" xy="62,215" size="210,47" fontSize="20" color="#716f7a" align="center" vAlign="middle" autoSize="none" text="作者"/>
+    <text id="n49_tbm2" name="txtCount" xy="98,271" size="86,47" fontSize="22" color="#716f7a" vAlign="middle" autoSize="none" text="1234">
       <relation target="n52_tbm2" sidePair="middle-middle,left-right"/>
     </text>
-    <text id="n50_tbm2" name="txtFavourable" xy="238,271" size="80,47" font="Microsoft YaHei" fontSize="22" color="#716f7a" vAlign="middle" autoSize="none" text="94%">
+    <text id="n50_tbm2" name="txtFavourable" xy="238,271" size="80,47" fontSize="22" color="#716f7a" vAlign="middle" autoSize="none" text="94%">
       <relation target="n51_tbm2" sidePair="middle-middle,left-right"/>
     </text>
     <image id="n51_tbm2" name="n51" src="tbm25i" fileName="img/icon_mt_zan.png" xy="197,273" size="34,37"/>
