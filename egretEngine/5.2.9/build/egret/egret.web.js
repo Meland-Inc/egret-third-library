@@ -2016,7 +2016,7 @@ var egret;
                     //RES.getResAsync的时候会从资源配置查找,只有配置存在的时候才会加载,否则在上层报错
                     //RES.getResByUrl的时候会在上层判断文件是否存在
                     //所以不返回错误码的时候统一按照超时处理
-                    self.dispatchEventWith(egret.IOErrorEvent.IO_ERROR, false);
+                    self.dispatchEventWith(egret.IOErrorEvent.IO_ERROR);
                 }, 0);
             };
             /**
@@ -2664,12 +2664,12 @@ var egret;
                     }
                 };
                 inputElement.onkeydown = function () {
-                    if (self._stageText.$textfield.isIDETip) {
-                        if ([13, 38, 40].indexOf(event.which) >= 0) {
-                            event.returnValue = false;
-                        }
-                    }
                     if (self._stageText) {
+                        if (self._stageText.$textfield.isIDETip) {
+                            if ([13, 38, 40].indexOf(event.which) >= 0) {
+                                event.returnValue = false;
+                            }
+                        }
                         self._stageText._onKeyPress();
                     }
                 };
