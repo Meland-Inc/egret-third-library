@@ -16,7 +16,7 @@
     <image id="sco715" name="skipLevel.png" path="/img/"/>
     <image id="sco717" name="tipsnext.png" path="/img/"/>
     <image id="alb71p" name="tips.png" path="/img/"/>
-    <image id="alb71s" name="back.png" path="/img/" exported="true"/>
+    <image id="alb71s" name="back.png" path="/img/"/>
     <component id="hwlx1t" name="ComNumberInput.xml" path="/com/" exported="true"/>
     <image id="hwlx1u" name="img_jm_num0.png" path="/img/"/>
     <image id="hwlx1v" name="img_jm_num1.png" path="/img/"/>
@@ -130,6 +130,8 @@
     <image id="nlpi4n" name="voiceBg.png" path="/img/"/>
     <image id="pgeq3z" name="trumpet1.png" path="/img/"/>
     <image id="pgeq40" name="trumpet2.png" path="/img/"/>
+    <component id="wle94o" name="ComSubmitLoading.xml" path="/com/" exported="true"/>
+    <image id="wle94p" name="img_cm_load.png" path="/img/"/>
   </resources>
   <publish name="jmcommon" path="..\..\egret-planet\resource\jimmyAssets\jmFairyGui" packageCount="2"/>
 </packageDescription>
