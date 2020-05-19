@@ -42,34 +42,34 @@ export async function applyPolicyNum(policyNum, versionName, channel) {
         .digest('hex');
 
 
-    await apply47PolicyNum(policyNum, versionName, channel, time, due, token);
+    // await apply47PolicyNum(policyNum, versionName, channel, time, due, token);
     await applyWkPolicyNum(policyNum, versionName, channel, time, due, token);
 }
 
-function apply47PolicyNum(policyNum, versionName, channel, time, due, token) {
-    return new Promise((resolve, reject) => {
-        let policyQueryServerOld = '47.107.73.43:10001';
-        let oldUrl = new URL('http://' + policyQueryServerOld + '/setVersion', window.location);
-        oldUrl.searchParams.append('versionName', versionName);
-        oldUrl.searchParams.append('channel', channel);
-        oldUrl.searchParams.append('time', time);
-        oldUrl.searchParams.append('due', due);
-        oldUrl.searchParams.append('token', token);
-        oldUrl.searchParams.append('version', policyNum);
-        let oldRequest = new XMLHttpRequest();
-        oldRequest.open("GET", oldUrl);
-        oldRequest.onreadystatechange = () => {
-            if (oldRequest.readyState !== 4) return;
-            if (oldRequest.status === 200) {
-                console.log(`47: ${oldRequest.responseText}`);
-                resolve(oldRequest.responseText);
-            } else {
-                reject("应用版本号错误!");
-            }
-        }
-        oldRequest.send(null);
-    });
-}
+// function apply47PolicyNum(policyNum, versionName, channel, time, due, token) {
+//     return new Promise((resolve, reject) => {
+//         let policyQueryServerOld = '47.107.73.43:10001';
+//         let oldUrl = new URL('http://' + policyQueryServerOld + '/setVersion', window.location);
+//         oldUrl.searchParams.append('versionName', versionName);
+//         oldUrl.searchParams.append('channel', channel);
+//         oldUrl.searchParams.append('time', time);
+//         oldUrl.searchParams.append('due', due);
+//         oldUrl.searchParams.append('token', token);
+//         oldUrl.searchParams.append('version', policyNum);
+//         let oldRequest = new XMLHttpRequest();
+//         oldRequest.open("GET", oldUrl);
+//         oldRequest.onreadystatechange = () => {
+//             if (oldRequest.readyState !== 4) return;
+//             if (oldRequest.status === 200) {
+//                 console.log(`47: ${oldRequest.responseText}`);
+//                 resolve(oldRequest.responseText);
+//             } else {
+//                 reject("应用版本号错误!");
+//             }
+//         }
+//         oldRequest.send(null);
+//     });
+// }
 
 function applyWkPolicyNum(policyNum, versionName, channel, time, due, token) {
     return new Promise((resolve, reject) => {

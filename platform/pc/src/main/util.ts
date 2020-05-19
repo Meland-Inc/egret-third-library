@@ -3,13 +3,15 @@
  * @desc main用的工具类
  * @date 2020-02-18 11:43:24 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-26 00:42:34
+ * @Last Modified time: 2020-04-29 17:36:11
  */
+import { session } from 'electron';
 import { exec, ChildProcess } from 'child_process';
 import http from 'http';
 import https from 'https';
 import fs from 'fs';
 import querystring from 'querystring';
+import FormData from 'form-data';
 
 import { logger } from './logger';
 import config from './Config';
@@ -210,56 +212,75 @@ export namespace util {
         fs.writeFileSync(config.nativeCnfPath, content);
     }
 
-    // /** 获取指定版本号 */
-    // export async function getPolicyNum(versionName: string) {
-    //     let value = await getPolicyInfo(versionName);
-    //     let data = JSON.parse(value);
-    //     let policyNum = 0;
-    //     if (data.Code === 0) {
-    //         policyNum = +data.Data.Version;
-    //     }
-    //     return policyNum;
-    // }
+    /** 拷贝日志到上传目录 */
+    export async function copyLog2UploadDir() {
+        const uploadPath: string = `${config.rootPath}/dist/uploadLog`;
 
-    // /** 获取指定策略信息 */
-    // export function getPolicyInfo(versionName: string): Promise<string> {
-    //     return new Promise((resolve, reject) => {
-    //         let time = Math.floor(new Date().getTime() / 1000);
-    //         let due = 1800;
-    //         let token = "*";
-    //         let channel = "bian_game"
+        //删除旧的日志文件
+        let uploadDir = fs.readdirSync(uploadPath);
+        if (uploadDir) {
+            for (const iterator of uploadDir) {
+                try {
+                    fs.unlinkSync(`${uploadPath}/${iterator}`);
+                    logger.log("log", `delete log file ${uploadPath}/${iterator} success`);
+                } catch (error) {
+                    logger.error('log', `delete log file ${uploadPath}/${iterator} error`, error);
+                }
+            }
+        }
 
-    //         let newURL = new URL('http://policy-server.wkcoding.com/getVersion');
-    //         // let data = {
-    //         //     versionName: versionName,
-    //         //     channel: channel,
-    //         //     time: time.toString(),
-    //         //     due: due.toString(),
-    //         //     token: token
-    //         // }
-    //         newURL.searchParams.set("versionName", versionName)
-    //         newURL.searchParams.set("channel", channel)
-    //         newURL.searchParams.set("time", time.toString())
-    //         newURL.searchParams.set("due", due.toString())
-    //         newURL.searchParams.set("token", token)
-    //         util.requestGetHttp(newURL.toString(), null, null, null, null
-    //             , (body: any) => {
-    //                 if (body.code !== 4) {
-    //                     return;
-    //                 }
+        const logPath: string = `${config.rootPath}/dist/log`;
+        const logDir = fs.readdirSync(logPath);
+        let date: Date = new Date();
+        let dateFormat: string = `${date.getFullYear()}-${date.getMonth()}-${date.getDay()}_${date.getHours()}-${date.getMinutes()}-${date.getSeconds()}`;
+        let userid: string = await getCookie("userid") || config.bellActId || "";
+        let playerId: string = config.playerId || "";
 
-    //                 logger.log(`body`, `getPolicyInfo body:${body}`);
-    //                 if (body.code === 200) {
-    //                     console.log(body.data);
-    //                     resolve(body.data);
-    //                 } else {
-    //                     reject("获取版本号错误!");
-    //                 }
-    //             }
-    //             , () => {
-    //                 logger.error('net', `获取版本号错误!`);
-    //             }
-    //         );
-    //     });
-    // }
+        //拷贝新的日志文件到上传目录
+        for (const fileName of logDir) {
+            let newFileName: string = `date-${dateFormat}_actId-${userid}_playerId-${playerId}_${fileName}`;
+            fs.copyFileSync(`${logPath}/${fileName}`, `${uploadPath}/${newFileName}`);
+        }
+    }
+
+    /** 上传日志文件 */
+    export function uploadLogFile(url: string, fileName: string, filePath: string) {
+        let form = new FormData();
+        form.append('name', fileName);
+        form.append('type', "file");
+        form.append('myfile', fs.createReadStream(filePath));
+
+        form.submit(url, (err: Error, res: http.IncomingMessage) => {
+            if (err) {
+                logger.error('log', `postFile err`, err);
+            }
+            if (res) {
+                logger.log('log', `postFile res`, res.statusCode, res.statusMessage);
+            }
+            res.resume();
+        });
+    }
+
+    /** 读取指定cookies */
+    export async function getCookie(name: string) {
+        let cookies = await session.defaultSession.cookies.get({});
+        let cookie = cookies.find(value => value.name === name);
+        if (cookie) {
+            return cookie.value;
+        }
+        return null;
+    };
+
+    /** 执行渲染层js代码 */
+    export function executeJavaScript(code: string, showError: boolean = true) {
+        try {
+            if (config.mainWindow && config.mainWindow.isEnabled && config.mainWindow.webContents) {
+                config.mainWindow.webContents.executeJavaScript(code);
+            }
+        } catch (error) {
+            if (showError) {
+                logger.error('util', `执行js代码[ ${code} ]错误`, error);
+            }
+        }
+    }
 }

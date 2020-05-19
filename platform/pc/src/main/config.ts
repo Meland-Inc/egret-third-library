@@ -111,6 +111,12 @@ class Config {
     /** 前台日志路径 */
     public ipcMainLogPath = `${this.rootPath}/dist/log/ipcMain.log`;
 
+    /** 上传日志地址 */
+    public uploadLogHost = `http://clientlog.wkcoding.com`
+
+    /** 本地待上传日志地址 */
+    public uploadLogDir = `${this.rootPath}/dist/uploadLog`
+
     /** 正式环境用tokenDomain */
     public releaseTokenDomain = `.bellcode.com`;
 
@@ -329,6 +335,15 @@ class Config {
     }
     public setGameArgs(value: string) {
         this._gameArgs = value;
+    }
+
+    private _playerId: string;
+    /** 玩家游戏id */
+    public get playerId(): string {
+        return this._playerId;
+    }
+    public setPlayerId(value: string) {
+        this._playerId = value;
     }
 }
 
