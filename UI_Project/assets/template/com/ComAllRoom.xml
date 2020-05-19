@@ -10,7 +10,7 @@
       <relation target="" sidePair="top-top,bottomext-bottom"/>
       <relation target="" sidePair="center-center"/>
     </image>
-    <component id="n61_v8nf" name="btnRoomCodeEnter" src="k9m36d" fileName="btn/btnFix.xml" xy="262,153">
+    <component id="n61_v8nf" name="btnRoomCodeEnter" src="k9m36d" fileName="btn/btnFix.xml" xy="1715,156">
       <gearDisplay controller="ctrlViewStatus" pages="0"/>
       <relation target="n65_k9m3" sidePair="left-left,bottom-top"/>
       <Button title="房间码加入" titleFontSize="20" icon="ui://0axy98cgk9m36b"/>
@@ -41,7 +41,7 @@
     <text id="n60_v8nf" name="n60" xy="68,143" size="145,39" fontSize="26" color="#ffffff" vAlign="middle" autoSize="none" italic="true" text="全部房间">
       <relation target="n63_k9m3" sidePair="middle-middle,left-left"/>
     </text>
-    <component id="n64_k9m3" name="btnRefresh" src="tbm25y" fileName="btn/btnScale.xml" xy="1750,148" size="108,41">
+    <component id="n64_k9m3" name="btnRefresh" src="tbm25y" fileName="btn/btnScale.xml" xy="255,149" size="108,41">
       <gearDisplay controller="ctrlViewStatus" pages="0"/>
       <relation target="n65_k9m3" sidePair="right-right,bottom-top"/>
       <Button title="换一批" titleFontSize="22" icon="ui://0axy98cgk9m36c"/>

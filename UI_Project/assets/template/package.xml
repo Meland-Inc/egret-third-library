@@ -94,7 +94,7 @@
     <image id="k9m367" name="icon_mt_jiaru.png" path="/img/"/>
     <image id="k9m369" name="icon_mt_inroom.png" path="/img/"/>
     <image id="k9m36a" name="img_mt_mapbg1.png" path="/img/" scale="9grid" scale9grid="42,42,84,84"/>
-    <image id="k9m36b" name="icon_mt_yellow2.png" path="/img/" scale="9grid" scale9grid="36,16,72,3"/>
+    <image id="k9m36b" name="icon_mt_yellow2.png" path="/img/" scale="9grid" scale9grid="36,18,72,4"/>
     <image id="k9m36c" name="icon_mt_z.png" path="/img/"/>
     <component id="k9m36d" name="btnFix.xml" path="/btn/"/>
     <image id="k9m36e" name="icon_mt_key.png" path="/img/"/>
@@ -186,7 +186,7 @@
     <image id="gu5v8x" name="icon_mt_editmap.png" path="/img/"/>
     <image id="gu5v8z" name="08.收藏的地图界面效果图.jpg" path="/img/"/>
     <image id="gu5v90" name="img_mt_gengduo_bg.png" path="/img/" scale="9grid" scale9grid="25,27,79,123"/>
-    <image id="gu5v91" name="icon_mt_xuxian5.png" path="/img/"/>
+    <image id="gu5v91" name="icon_mt_xuxian5.png" path="/img/" scale="tile"/>
     <image id="gu5v92" name="img_mt_editmapframe.png" path="/img/" scale="9grid" scale9grid="32,34,224,271"/>
     <image id="gu5v93" name="icon_mt_dtmz_dibu.png" path="/img/" scale="9grid" scale9grid="69,14,138,28"/>
     <image id="gu5v94" name="img_mt_dtmz_bg.png" path="/img/" scale="9grid" scale9grid="29,31,222,260"/>
@@ -216,6 +216,24 @@
     <component id="dvog9u" name="btnScaleSelect.xml" path="/btn/"/>
     <component id="dvog9v" name="btnTextSelect.xml" path="/btn/"/>
     <image id="dvog9w" name="icon_mt_noroom.png" path="/img/"/>
+    <image id="qdan9x" name="icon_mt_roomblue.png" path="/img/" scale="9grid" scale9grid="43,25,86,4"/>
+    <image id="qdan9y" name="icon_mt_roomclose.png" path="/img/"/>
+    <image id="qdan9z" name="1589780886788_C060F376-22AD-4fc9-B0EB-C944B64E5276.png" path="/img/"/>
+    <component id="qdana0" name="ComMapTemplateIconSelect.xml" path="/com/"/>
+    <image id="qdana1" name="12.封面设置界面效果图.jpg" path="/img/"/>
+    <component id="qdana2" name="BtnMapIconBig.xml" path="/btn/"/>
+    <image id="qdana3" name="img_mt_seticonbg.png" path="/img/" scale="9grid" scale9grid="88,223,176,446"/>
+    <image id="qdana4" name="icon_mt_seticonblue.png" path="/img/" scale="9grid" scale9grid="26,14,52,28"/>
+    <image id="qdana5" name="icon_mt_seticongrey.png" path="/img/" scale="9grid" scale9grid="43,25,86,6"/>
+    <image id="qdana6" name="icon_mt_seticonpink.png" path="/img/" scale="9grid" scale9grid="26,14,52,28"/>
+    <image id="qdana7" name="img_mt_editgridhover.png" path="/img/"/>
+    <image id="qdana8" name="icon_mt_editgrids1.png" path="/img/"/>
+    <image id="qdana9" name="icon_mt_editgrids2.png" path="/img/"/>
+    <image id="qdanaa" name="icon_mt_editgridnone.png" path="/img/"/>
+    <component id="qdanab" name="btnScaleFunction.xml" path="/btn/"/>
+    <image id="qdanad" name="img_mt_mapbg4.png" path="/img/" scale="9grid" scale9grid="70,15,140,30"/>
+    <component id="r5jsae" name="ComMapTemplateDetailInfo.xml" path="/com/"/>
+    <image id="r5jsaf" name="img_mt_roomhover.png" path="/img/" scale="9grid" scale9grid="108,45,216,90"/>
   </resources>
   <publish name="template"/>
 </packageDescription>

@@ -54,23 +54,26 @@
     <image id="n60_tbm2" name="n60" src="tbm25u" fileName="img/icon_mt_jiange.png" xy="380,20" group="n45_azcq"/>
     <image id="n61_tbm2" name="n61" src="tbm25u" fileName="img/icon_mt_jiange.png" xy="560,20" group="n45_azcq"/>
     <image id="n62_tbm2" name="n62" src="tbm25u" fileName="img/icon_mt_jiange.png" xy="739,20" group="n45_azcq"/>
-    <group id="n45_azcq" name="groupTitle" xy="0,0" size="1920,91"/>
-    <component id="n49_azcq" name="comMapPanel" src="v8nf51" fileName="com/ComMapTemplatePanel.xml" xy="0,0" hideByEditor="true">
+    <group id="n45_azcq" name="groupTitle" xy="0,0" size="1920,91" collapsed="true"/>
+    <component id="n49_azcq" name="comMapPanel" src="v8nf51" fileName="com/ComMapTemplatePanel.xml" xy="0,0" hideByEditor="true" visible="false">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
-    <component id="n52_azcq" name="comMapCreate" src="v8nf55" fileName="com/ComMapTemplateCreate.xml" xy="0,0" hideByEditor="true">
+    <component id="n52_azcq" name="comMapCreate" src="v8nf55" fileName="com/ComMapTemplateCreate.xml" xy="0,0" hideByEditor="true" visible="false">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
-    <component id="n56_azcq" name="comMapDetail" src="azcq5d" fileName="com/ComMapTemplateDetail.xml" xy="0,0" hideByEditor="true">
+    <component id="n56_azcq" name="comMapDetail" src="azcq5d" fileName="com/ComMapTemplateDetail.xml" xy="0,0" hideByEditor="true" visible="false">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
-    <component id="n51_azcq" name="comRoomCreate" src="v8nf52" fileName="com/ComMapRoomCreate.xml" xy="0,0" hideByEditor="true">
+    <component id="n51_azcq" name="comRoomCreate" src="v8nf52" fileName="com/ComMapRoomCreate.xml" xy="0,0" hideByEditor="true" visible="false">
       <relation target="" sidePair="height-height,width-width"/>
     </component>
-    <component id="n55_azcq" name="comMapSetting" src="gu5v9h" fileName="com/ComMapTemplateSetting.xml" xy="0,0" hideByEditor="true">
+    <component id="n55_azcq" name="comMapSetting" src="gu5v9h" fileName="com/ComMapTemplateSetting.xml" xy="0,0" hideByEditor="true" visible="false">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
-    <component id="n54_azcq" name="comMapPublish" src="v8nf57" fileName="com/ComMapTemplatePublish.xml" xy="0,0" hideByEditor="true">
+    <component id="n54_azcq" name="comMapPublish" src="v8nf57" fileName="com/ComMapTemplatePublish.xml" xy="0,0" hideByEditor="true" visible="false">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <component id="n64_qdan" name="comSelectIcon" src="qdana0" fileName="com/ComMapTemplateIconSelect.xml" xy="0,0" hideByEditor="true" visible="false">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
   </displayList>

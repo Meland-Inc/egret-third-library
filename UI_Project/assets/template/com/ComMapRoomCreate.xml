@@ -15,16 +15,16 @@
     <component id="n50_yfas" name="btnReturn" src="tbm25y" fileName="btn/btnScale.xml" xy="35,24" size="101,42" group="n51_yfas">
       <Button title="  返回" icon="ui://0axy98cgmzsu6h" page="0"/>
     </component>
-    <group id="n51_yfas" name="grpMain" xy="0,0" size="1920,1080"/>
+    <group id="n51_yfas" name="grpMain" xy="0,0" size="1920,1080" collapsed="true"/>
     <image id="n53_yfas" name="n53" src="yfas7f" fileName="img/img_mt_mapbgfm.png" xy="533,206" size="297,292" group="n57_yfas">
       <relation target="n54_yfas" sidePair="width-width,height-height"/>
       <relation target="n54_yfas" sidePair="left-left,top-top"/>
     </image>
-    <loader id="n54_yfas" name="ladMap" xy="537,210" size="290,284" group="n57_yfas" fill="scaleFree"/>
+    <loader id="n54_yfas" name="ladMap" xy="537,210" size="290,284" group="n57_yfas" fill="scaleMatchWidth"/>
     <image id="n56_yfas" name="n56" src="yfas7r" fileName="img/img_mt_mapbgframe.png" xy="533,206" size="298,292" group="n57_yfas">
       <relation target="n54_yfas" sidePair="width-width,height-height"/>
     </image>
-    <group id="n57_yfas" name="grpPic" xy="533,206" size="298,292" group="n76_h1sr" collapsed="true"/>
+    <group id="n57_yfas" name="grpPic" xy="533,206" size="298,292" group="n76_h1sr"/>
     <image id="n61_yfas" name="n61" src="yfas8h" fileName="img/img_mt_roomtitlebg.png" xy="851,206" size="535,143" group="n65_yfas"/>
     <image id="n59_yfas" name="n59" src="mzsu6w" fileName="img/img_mt_dtmzi_bg.png" xy="872,206" group="n65_yfas"/>
     <image id="n66_yfas" name="n66" src="yfas8i" fileName="img/icon_mt_xuxian2.png" xy="855,366" group="n65_yfas"/>

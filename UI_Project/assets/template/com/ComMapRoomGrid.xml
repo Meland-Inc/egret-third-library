@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="429,178" designImage="ui://0axy98cgk9m364" designImageOffsetX="-74" designImageOffsetY="-244" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlSelect" pages="0,0,1,1" selected="0"/>
+  <controller name="ctrlSelect" pages="0,0,1,1,2,2" selected="0"/>
   <displayList>
     <image id="n48_k9m3" name="n48" src="k9m36a" fileName="img/img_mt_mapbg1.png" xy="5,0" size="422,178"/>
-    <loader id="n42_v8nf" name="loaderMap" xy="17,16" size="163,148" fill="scaleFree"/>
+    <loader id="n42_v8nf" name="loaderMap" xy="17,16" size="163,148" fill="scaleMatchWidth"/>
     <image id="n51_pw6y" name="n51" src="pw6y9r" fileName="img/img_mt_maptempframe.png" xy="6,6">
       <relation target="n42_v8nf" sidePair="center-center,middle-middle"/>
     </image>
@@ -23,5 +23,8 @@
     </component>
     <text id="n49_k9m3" name="n49" xy="192,95" size="56,28" fontSize="18" color="#716f7a" vAlign="middle" autoSize="none" text="房主:"/>
     <text id="n50_k9m3" name="n50" xy="191,125" size="98,28" fontSize="18" color="#716f7a" vAlign="middle" autoSize="none" text="房间人数:"/>
+    <image id="n52_r5js" name="n52" src="r5jsaf" fileName="img/img_mt_roomhover.png" xy="-1,-1">
+      <gearDisplay controller="ctrlSelect" pages="2"/>
+    </image>
   </displayList>
 </component>

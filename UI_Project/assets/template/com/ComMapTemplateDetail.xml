@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://0axy98cgyfas87" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlInfo" pages="0,short,1,all" selected="0"/>
   <displayList>
     <graph id="n106_yfas" name="n106" xy="0,0" size="1920,1080" group="n109_yfas" type="rect" fillColor="#fff7f6f2">
       <relation target="" sidePair="width-width,height-height"/>
@@ -11,81 +12,27 @@
     <component id="n38_v8nf" name="btnReturn" src="tbm25y" fileName="btn/btnScale.xml" xy="35,24" size="101,42" group="n109_yfas">
       <Button title="  返回" icon="ui://0axy98cgmzsu6h" page="0"/>
     </component>
-    <group id="n109_yfas" name="grpMain" xy="0,0" size="1920,1080"/>
-    <image id="n107_yfas" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="168,121" size="1037,925" group="n85_azcq">
+    <group id="n109_yfas" name="grpMain" xy="0,0" size="1920,1080" collapsed="true"/>
+    <image id="n133_r5js" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="166,116" size="1038,938" group="n126_vrsj">
       <relation target="" sidePair="left-left,top-top"/>
       <relation target="" sidePair="bottomext-bottom"/>
     </image>
-    <image id="n116_yfas" name="n116" src="yfas7s" fileName="img/img_mt_detaillikebg.png" xy="965,192" size="152,69" group="n95_azcq"/>
-    <component id="n125_yfas" name="pbarLike" src="yfas8c" fileName="btn/ProbarLike.xml" xy="965,225" size="153,37" group="n95_azcq">
-      <ProgressBar value="59" max="102"/>
-    </component>
-    <text id="n97_azcq" name="txtNumLike" xy="977,201" size="59,21" group="n95_azcq" fontSize="14" color="#494948" vAlign="middle" autoSize="none" singleLine="true" text="999"/>
-    <text id="n94_azcq" name="txtNumUnlike" xy="1055,201" size="52,20" group="n95_azcq" fontSize="14" color="#494948" align="right" vAlign="middle" autoSize="none" singleLine="true" text="999"/>
-    <component id="n119_yfas" name="btnUnlike" src="tbm25y" fileName="btn/btnScale.xml" xy="1079,226" size="36,36" group="n95_azcq">
-      <Button icon="ui://0axy98cgyfas7v"/>
-    </component>
-    <component id="n120_yfas" name="btnLike" src="tbm25y" fileName="btn/btnScale.xml" xy="966,226" size="36,36" group="n95_azcq">
-      <Button icon="ui://0axy98cgyfas7w"/>
-    </component>
-    <group id="n95_azcq" name="grpLike" xy="965,192" size="153,70" group="n85_azcq" advanced="true" collapsed="true"/>
-    <image id="n101_yfas" name="n101" src="yfas7i" fileName="img/icon_mt_pink.png" xy="551,327" size="147,38" group="n69_azcq"/>
-    <image id="n67_azcq" name="imgSubscribeNum" src="yfas7h" fileName="img/icon_mt_numsubscribed.png" xy="553,329" group="n69_azcq"/>
-    <text id="n68_azcq" name="tfSubscribeNum" xy="594,329" size="85,34" group="n69_azcq" fontSize="26" color="#999999" vAlign="middle" autoSize="none" singleLine="true" text="999"/>
-    <group id="n69_azcq" name="grpNumSubscribed" xy="551,327" size="147,38" group="n85_azcq" advanced="true"/>
-    <image id="n100_yfas" name="n100" src="yfas7g" fileName="img/icon_mt_yellowbg.png" xy="550,369" group="n92_azcq"/>
-    <image id="n90_azcq" name="imgSubscribeNum" src="tbm25h" fileName="img/icon_mt_play.png" xy="551,372" group="n92_azcq"/>
-    <text id="n91_azcq" name="tfNumPlay" xy="593,371" size="87,34" group="n92_azcq" fontSize="26" color="#333333" vAlign="middle" autoSize="none" singleLine="true" text="999"/>
-    <group id="n92_azcq" name="grpNumPlay" xy="550,369" size="148,38" group="n85_azcq" advanced="true"/>
-    <image id="n127_vrsj" name="n127" src="vrsj9l" fileName="img/img_mt_xuxian3.png" xy="260,455" group="n85_azcq"/>
-    <image id="n99_yfas" name="n99" src="yfas7f" fileName="img/img_mt_mapbgfm.png" xy="256,191" size="277,214" group="n103_yfas">
-      <relation target="n81_azcq" sidePair="width-width,height-height"/>
-      <relation target="n81_azcq" sidePair="left-left,top-top"/>
-    </image>
-    <component id="n81_azcq" name="ladMap" src="pz1n3t" fileName="com/ComAutoClipLad.xml" xy="260,195" size="270,208" group="n103_yfas"/>
-    <image id="n115_yfas" name="n115" src="yfas7r" fileName="img/img_mt_mapbgframe.png" xy="256,191" size="278,216" group="n103_yfas">
-      <relation target="n81_azcq" sidePair="width-width,height-height"/>
-    </image>
-    <group id="n103_yfas" name="grpPic" xy="256,191" size="278,216" group="n85_azcq"/>
-    <image id="n102_yfas" name="n102" src="yfas7j" fileName="img/img_mt_detailauthor.png" xy="552,241" size="270,74" group="n104_yfas"/>
-    <text id="n82_azcq" name="tfUpdateTime" xy="576,288" size="218,24" group="n104_yfas" fontSize="18" color="#939393" vAlign="middle" vars="true" autoSize="none" text="最后更新时间：{year=0}.{month=0}.{day=0}"/>
-    <image id="n63_azcq" name="imgAuthor" src="yfas7k" fileName="img/icon_mt_author.png" xy="571,250" group="n104_yfas"/>
-    <text id="n64_azcq" name="tfCreater" xy="606,246" size="190,36" group="n104_yfas" fontSize="26" color="#7a7259" vAlign="middle" vars="true" autoSize="none" text="作者"/>
-    <text id="n66_azcq" name="tfMapName" xy="553,186" size="352,41" group="n104_yfas" fontSize="26" color="#7a7259" vAlign="middle" autoSize="none" singleLine="true" text="千与千寻七个字"/>
-    <image id="n105_yfas" name="n105" src="yfas7l" fileName="img/img_mt_xuxian1.png" xy="550,228" group="n104_yfas"/>
-    <group id="n104_yfas" name="grpAuthor" xy="550,186" size="355,129" group="n85_azcq"/>
-    <component id="n71_azcq" name="btnCopy" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="915,327" size="90,82" group="n110_yfas">
-      <Button titleFontSize="24" icon="ui://0axy98cgyfas8b"/>
-    </component>
-    <component id="n72_azcq" name="btnSubscribe" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1025,327" size="90,82" group="n110_yfas">
-      <Button titleFontSize="24" icon="ui://0axy98cgyfas88"/>
-    </component>
-    <component id="n73_azcq" name="btnUnsubscribe" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1025,327" size="90,82" group="n110_yfas">
-      <Button titleFontSize="24" icon="ui://0axy98cgyfas8a"/>
-    </component>
-    <group id="n110_yfas" name="grpEditBtn" xy="915,327" size="200,82" group="n85_azcq"/>
-    <image id="n114_yfas" name="n114" src="yfas7q" fileName="img/img_mt_detailtextgb.png" xy="251,540" size="867,184" group="n113_yfas"/>
-    <image id="n112_yfas" name="n112" src="yfas7p" fileName="img/icon_mt_detailtitle.png" xy="320,511" size="166,55" group="n113_yfas"/>
-    <text id="n87_azcq" name="tf" xy="333,526" size="135,30" group="n113_yfas" fontSize="24" color="#716f7a" align="center" vAlign="middle" autoSize="none" text="地图描述"/>
-    <component id="n122_yfas" name="txtScroll" src="yfas7x" fileName="com/ComTextScroll.xml" xy="281,570" size="806,130" group="n113_yfas"/>
-    <group id="n113_yfas" name="grpMapDescribe" xy="251,511" size="867,213" group="n85_azcq"/>
-    <group id="n85_azcq" name="grpInfo" xy="168,121" size="1037,925" group="n126_vrsj" advanced="true"/>
-    <image id="n108_yfas" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="1293,124" size="468,925" group="n111_yfas">
+    <image id="n108_yfas" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="1292,124" size="468,925" group="n111_yfas">
       <relation target="n111_yfas" sidePair="height-height,width-width"/>
     </image>
-    <image id="n123_yfas" name="n123" src="yfas85" fileName="img/img_mt_detail_t_bg.png" xy="1293,121" size="468,50" group="n111_yfas"/>
-    <component id="n70_azcq" name="btnCreateRoom" src="tbm25y" fileName="btn/btnScale.xml" xy="1335,982" size="173,55" group="n111_yfas">
+    <image id="n123_yfas" name="n123" src="yfas85" fileName="img/img_mt_detail_t_bg.png" xy="1292,121" size="468,50" group="n111_yfas"/>
+    <component id="n70_azcq" name="btnCreateRoom" src="tbm25y" fileName="btn/btnScale.xml" xy="1334,982" size="173,55" group="n111_yfas">
       <relation target="n111_yfas" sidePair="bottom-bottom"/>
       <Button title="创建房间" titleColor="#ffffff" titleFontSize="24" icon="ui://0axy98cgyfas86"/>
     </component>
-    <component id="n86_azcq" name="btnQuickJoinin" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1539,981" size="172,56" group="n111_yfas">
+    <component id="n86_azcq" name="btnQuickJoinin" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1538,981" size="172,56" group="n111_yfas">
       <relation target="n111_yfas" sidePair="bottom-bottom"/>
       <Button title="快速加入" titleFontSize="24" icon="ui://0axy98cgyfas89"/>
     </component>
-    <image id="n128_dvog" name="imgNoRoom" src="dvog9w" fileName="img/icon_mt_noroom.png" xy="1314,193" group="n111_yfas">
+    <image id="n128_dvog" name="imgNoRoom" src="dvog9w" fileName="img/icon_mt_noroom.png" xy="1313,193" group="n111_yfas">
       <relation target="n74_azcq" sidePair="center-center,top-top"/>
     </image>
-    <list id="n74_azcq" name="lstRoom" xy="1313,190" size="426,765" group="n111_yfas" selectionMode="none" overflow="scroll" scrollBarFlags="6" scrollBar="visible" lineGap="6" defaultItem="ui://0axy98cgra2b41" autoClearItems="true">
+    <list id="n74_azcq" name="lstRoom" xy="1312,190" size="426,765" group="n111_yfas" selectionMode="none" overflow="scroll" scrollBarFlags="6" scrollBar="visible" lineGap="6" defaultItem="ui://0axy98cgra2b41" autoClearItems="true">
       <relation target="" sidePair="bottomext-bottom"/>
       <item/>
       <item/>
@@ -94,11 +41,15 @@
       <item/>
       <item/>
     </list>
-    <text id="n124_yfas" name="n124" xy="1456,132" size="135,31" group="n111_yfas" fontSize="24" color="#1d3187" autoSize="none" bold="true" text="&lt;房间列表>"/>
-    <group id="n111_yfas" name="grpRoom" xy="1293,121" size="468,928" group="n126_vrsj" advanced="true">
+    <text id="n124_yfas" name="n124" xy="1455,132" size="135,31" group="n111_yfas" fontSize="24" color="#1d3187" autoSize="none" bold="true" text="&lt;房间列表>"/>
+    <group id="n111_yfas" name="grpRoom" xy="1292,121" size="468,928" group="n126_vrsj" advanced="true" collapsed="true">
       <relation target="" sidePair="bottomext-bottom"/>
     </group>
-    <group id="n126_vrsj" name="n126" xy="168,121" size="1593,928" advanced="true">
+    <component id="n132_r5js" name="comScroll" src="r5jsae" fileName="com/ComMapTemplateDetailInfo.xml" xy="165,121" size="1034,918" group="n126_vrsj">
+      <relation target="" sidePair="left-left,top-top"/>
+      <relation target="" sidePair="bottomext-bottom"/>
+    </component>
+    <group id="n126_vrsj" name="n126" xy="165,116" size="1595,939" advanced="true">
       <relation target="" sidePair="center-center"/>
     </group>
   </displayList>

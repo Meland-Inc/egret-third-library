@@ -59,42 +59,29 @@
       <relation target="n50_v8nf" sidePair="left-left,top-top"/>
       <relation target="n50_v8nf" sidePair="width-width,height-height"/>
     </image>
-    <text id="n58_v8nf" name="tfManorGenerateType" xy="890,554" size="243,37" group="n85_nav8" fontSize="26" color="#008ccd" vAlign="middle" autoSize="none" text="领地生成方式">
-      <relation target="n59_v8nf" sidePair="bottom-top,left-left"/>
-    </text>
+    <text id="n58_v8nf" name="tfManorGenerateType" xy="890,554" size="243,37" group="n85_nav8" fontSize="26" color="#008ccd" vAlign="middle" autoSize="none" text="领地生成方式"/>
     <component id="n59_v8nf" name="cbSelectManorType" src="mzsu6t" fileName="btn/CombCreateType.xml" xy="869,592" size="492,48" group="n85_nav8">
-      <relation target="n68_mzsu" sidePair="center-center"/>
       <ComboBox title="回字形" icon="ui://0axy98cgmzsu6p" titleColor="#4eaed1" visibleItemCount="6">
         <item title="回字形" value="palindrome"/>
         <item title="横向排列" value="horizontal"/>
         <item title="纵向排列" value="vertical"/>
       </ComboBox>
     </component>
-    <text id="n60_v8nf" name="tfManorGenerateGap" xy="890,695" size="268,34" group="n85_nav8" fontSize="26" color="#00389f" vAlign="middle" autoSize="none" text="领地生成间隔">
-      <relation target="n61_v8nf" sidePair="bottom-top,left-center"/>
-    </text>
+    <text id="n60_v8nf" name="tfManorGenerateGap" xy="890,695" size="268,34" group="n85_nav8" fontSize="26" color="#00389f" vAlign="middle" autoSize="none" text="领地生成间隔"/>
     <component id="n61_v8nf" name="cbManorGap" src="mzsu6v" fileName="btn/CombBlankType.xml" xy="871,732" size="487,49" group="n85_nav8">
-      <relation target="n68_mzsu" sidePair="center-center"/>
       <ComboBox title="0(领地相接)" titleColor="#4a89d7" visibleItemCount="10">
         <item title="0(领地相接)" value="0"/>
         <item title="10(部分可见)" value="10"/>
         <item title="30(完全不可见)" value="30"/>
       </ComboBox>
     </component>
-    <image id="n73_mzsu" name="n73" src="mzsu72" fileName="img/icon_mt_point2.png" xy="874,705" group="n85_nav8">
-      <relation target="n60_v8nf" sidePair="top-top,right-left"/>
-    </image>
-    <image id="n74_mzsu" name="n74" src="mzsu72" fileName="img/icon_mt_point2.png" xy="1068,705" group="n85_nav8">
-      <relation target="n73_mzsu" sidePair="right-right,top-top"/>
-    </image>
-    <image id="n75_mzsu" name="n75" src="mzsu73" fileName="img/icon_mt_pointblue.png" xy="874,565" group="n85_nav8">
-      <relation target="n58_v8nf" sidePair="top-top,right-left"/>
-    </image>
-    <image id="n76_mzsu" name="n76" src="mzsu73" fileName="img/icon_mt_pointblue.png" xy="1068,565" group="n85_nav8">
-      <relation target="n75_mzsu" sidePair="right-right,top-top"/>
-    </image>
+    <image id="n73_mzsu" name="n73" src="mzsu72" fileName="img/icon_mt_point2.png" xy="874,705" group="n85_nav8"/>
+    <image id="n74_mzsu" name="n74" src="mzsu72" fileName="img/icon_mt_point2.png" xy="1068,705" group="n85_nav8"/>
+    <image id="n75_mzsu" name="n75" src="mzsu73" fileName="img/icon_mt_pointblue.png" xy="874,565" group="n85_nav8"/>
+    <image id="n76_mzsu" name="n76" src="mzsu73" fileName="img/icon_mt_pointblue.png" xy="1068,565" group="n85_nav8"/>
     <group id="n85_nav8" name="n85" xy="869,554" size="492,227" group="n63_v8nf" advanced="true">
       <gearDisplay controller="ctrlManor" pages="1"/>
+      <relation target="n56_v8nf" sidePair="left-left,top-top"/>
     </group>
     <group id="n63_v8nf" name="n63" xy="528,209" size="853,758" advanced="true">
       <relation target="" sidePair="center-center,top-top"/>
