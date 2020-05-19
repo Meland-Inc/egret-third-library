@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="130,58">
+  <controller name="ctrlType" pages="0,lock,1,unLock" selected="0"/>
+  <controller name="ctrlLeft" pages="1,leftLock,2,leftUnLock,0,leftNone" selected="0"/>
+  <controller name="ctrlRight" pages="1,rightLock,3,rightUnLock,0,rightNone" selected="0"/>
+  <displayList>
+    <graph id="n11_e45x" name="gphRight" xy="91,29" size="39,4" type="rect" lineSize="0" fillColor="#ff626262">
+      <gearDisplay controller="ctrlRight" pages="1,3"/>
+      <gearColor controller="ctrlRight" pages="1" values="#626262" default="#eb6100"/>
+    </graph>
+    <graph id="n12_e45x" name="gphLeft" xy="0,29" size="39,4" type="rect" lineSize="0" fillColor="#ff626262">
+      <gearDisplay controller="ctrlLeft" pages="1,2,3,4,5"/>
+      <gearColor controller="ctrlLeft" pages="1" values="#626262" default="#eb6100"/>
+    </graph>
+    <graph id="n10_e45x" name="gphLockBG" xy="38,4" size="54,54" type="eclipse" lineSize="4" lineColor="#ff626262">
+      <gearDisplay controller="ctrlType" pages="0"/>
+    </graph>
+    <graph id="n13_e45x" name="gphUnLockBG" xy="38,4" size="54,54" type="eclipse" lineSize="4" lineColor="#ffeb6100" fillColor="#ffe60012">
+      <gearDisplay controller="ctrlType" pages="1"/>
+    </graph>
+    <text id="n14_9r5x" name="tfLevel" xy="22,20" size="86,25" fontSize="16" color="#7c7a83" align="center" vAlign="middle" vars="true" autoSize="none" text="Lv.{level=10}">
+      <gearColor controller="ctrlType" pages="0" values="#7c7a83,#000000" default="#ffffff,#000000"/>
+    </text>
+  </displayList>
+</component>

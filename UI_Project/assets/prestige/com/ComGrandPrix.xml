@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="413,611">
+  <displayList>
+    <image id="n3_e45x" name="imgBGLeft" src="e45xh" fileName="img/img_9.png" xy="0,0" size="413,611"/>
+    <image id="n4_e45x" name="imgGrandPrixBG" src="e45x9" fileName="img/img_17.png" xy="18,17"/>
+    <loader id="n7_e45x" name="ladGrandPrix" xy="34,32" size="346,470" align="center" vAlign="middle"/>
+    <text id="n8_e45x" name="tfPrixDes" xy="80,486" pivot="0.5,0.5" size="253,21" fontSize="17" color="#ffffff" align="center" vAlign="middle" strokeColor="#b57212" strokeSize="2" text="法老层专属套装+法老层攻略教程"/>
+    <text id="n14_e45x" name="tfPrixTip" xy="54,555" pivot="0.5,0.5" size="303,20" fontSize="16" color="#714423" align="center" vAlign="middle" vars="true" text="出版探索攻略教程并达到{level=4}级探索等级解锁"/>
+  </displayList>
+</component>

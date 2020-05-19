@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" designImage="ui://cqcxan63e45xn" designImageAlpha="100" bgColor="#fe9e3b">
+  <displayList>
+    <image id="n1_e45x" name="imgBG" src="e45xj" fileName="img/prestige_img_7.png" xy="258,120" size="1396,905" group="n32_9r5x"/>
+    <image id="n0_e45x" name="imgBGTop" src="e45xm" fileName="img/prestige_img_4.png" xy="253,83" group="n32_9r5x"/>
+    <component id="n2_e45x" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1573,69" size="57,57" group="n32_9r5x">
+      <Button icon="ui://cqcxan63e45xc"/>
+    </component>
+    <image id="n12_e45x" name="imgTitleBG" src="e45xg" fileName="img/prestige_img_10.png" xy="307,66" size="149,62" group="n32_9r5x">
+      <relation target="n13_e45x" sidePair="rightext-right"/>
+    </image>
+    <text id="n13_e45x" name="tfTitle" xy="336,81" size="89,32" group="n32_9r5x" fontSize="28" color="#ffffff" align="center" vAlign="middle" text="法老城"/>
+    <component id="n3_e45x" name="comGrandPrix" src="e45xo" fileName="com/ComGrandPrix.xml" xy="308,228" group="n32_9r5x"/>
+    <component id="n9_e45x" name="comLevelAndProgress" src="e45xp" fileName="com/ComLevelAndProgress.xml" xy="732,223" group="n32_9r5x"/>
+    <component id="n31_e45x" name="comRewardPanel" src="e45x13" fileName="com/ComRewardPanel.xml" xy="732,312" group="n32_9r5x"/>
+    <component id="n15_e45x" name="btnBuy" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="867,892" size="188,67" group="n32_9r5x">
+      <Button title="获取课程" titleColor="#ffffff" titleFontSize="29" icon="ui://cqcxan63e45x11"/>
+    </component>
+    <component id="n33_swf4" name="btnUpgrade" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1181,892" size="188,67" group="n32_9r5x">
+      <Button title="解锁奖励" titleColor="#ffffff" titleFontSize="29" icon="ui://cqcxan63e45x11"/>
+    </component>
+    <component id="n34_swf4" name="comReceiveRewardHint" src="swf41v" fileName="com/ComReceiveRewardHint.xml" xy="711,391" group="n32_9r5x" visible="false"/>
+    <group id="n32_9r5x" name="n32" xy="253,66" size="1413,959" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

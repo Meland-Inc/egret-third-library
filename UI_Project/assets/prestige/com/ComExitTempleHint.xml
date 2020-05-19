@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080">
+  <displayList>
+    <loader id="n10_rkex" name="ladBG" xy="711,391" size="498,297" group="n16_rkex" url="ui://cqcxan63rkex1p"/>
+    <text id="n11_rkex" name="tfTitle" xy="760,407" pivot="0.5,0.5" size="399,29" group="n16_rkex" fontSize="25" color="#ffffff" align="center" autoSize="none" text="传送提示"/>
+    <text id="n12_rkex" name="tfContent" xy="713,448" size="495,157" group="n16_rkex" fontSize="25" color="#4d21b5" align="center" vAlign="middle" autoSize="none" text="时间回溯将重置这个异世界，一切将重新开始，确定回溯吗？"/>
+    <component id="n13_rkex" name="btnCancel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="779,626" size="122,46" group="n16_rkex">
+      <Button title="取消" titleFontSize="21" icon="ui://cqcxan63rkex1n"/>
+    </component>
+    <component id="n14_rkex" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1018,626" size="122,46" group="n16_rkex">
+      <Button title="确定" titleFontSize="21" icon="ui://cqcxan63rkex1m"/>
+    </component>
+    <component id="n18_su8i" name="btnClose" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1161,401" size="38,38" group="n16_rkex">
+      <Button icon="ui://cqcxan63e45xc"/>
+    </component>
+    <group id="n16_rkex" name="n16" xy="711,391" size="498,297" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>
