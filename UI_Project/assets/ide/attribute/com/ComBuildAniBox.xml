@@ -25,7 +25,7 @@
       <relation target="n49_xba6" sidePair="left-right"/>
       <relation target="n59_mlr1" sidePair="bottomext-bottom"/>
     </image>
-    <text id="n26_izy9" name="textAniName" xy="88,16" size="141,28" group="n60_mlr1" input="true" prompt="动画名" maxLength="16" fontSize="18" vAlign="middle" autoSize="none" singleLine="true" text="一二三四五六七">
+    <text id="n26_izy9" name="textAniName" xy="88,16" size="141,28" group="n60_mlr1" input="true" prompt="动画名" maxLength="16" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" text="一二三四五六七">
       <relation target="n48_xba6" sidePair="right-left"/>
       <relation target="n59_mlr1" sidePair="middle-middle"/>
     </text>
