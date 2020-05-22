@@ -5,7 +5,7 @@
   <controller name="ctrlTemGameType" pages="0,none,1,success,2,fail,3,over" selected="1"/>
   <controller name="ctrlStartL" pages="0,,1,,2,,3," selected="0"/>
   <controller name="ctrlJmType" pages="0,soduku,1,pickphoto,2,classify,3,count,4,balance,5,examination,6,specialExam" selected="6"/>
-  <controller name="ctrlIsLast" pages="0,false,1,true" selected="1"/>
+  <controller name="ctrlIsLast" pages="0,false,1,true" selected="0"/>
   <displayList>
     <graph id="n38_gx7z" name="imgStageBG" xy="0,0" size="1920,1080" type="rect" lineSize="0" lineColor="#ffffffff">
       <relation target="" sidePair="width-width,height-height"/>
@@ -167,7 +167,7 @@
     <image id="n106_nlpi" name="n106" src="nlpi46" fileName="img/specialExamSuccessBG.png" xy="437,224" group="n105_knqv"/>
     <component id="n63_sco7" name="btnNext" src="sco7k" fileName="btn/btnScale.xml" xy="707,647" size="500,110" group="n105_knqv" controller="button,0">
       <gearIcon controller="ctrlIsLast" pages="0,1" values="ui://av6agj0gnlpi48|ui://av6agj0gnlpi45"/>
-      <Button icon="ui://av6agj0gnlpi45"/>
+      <Button icon="ui://av6agj0gnlpi48"/>
     </component>
     <component id="n107_nlpi" name="btnNoSubmit" src="sco7k" fileName="btn/btnScale.xml" xy="1363,188" size="120,120" group="n105_knqv">
       <relation target="n106_nlpi" sidePair="right-right,top-top"/>
@@ -181,8 +181,11 @@
       <gearDisplay controller="ctrlTemGameType" pages="1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <group id="n112_nlpi" name="n112" xy="437,188" size="1046,703" advanced="true">
+    <group id="n112_nlpi" name="specialExamSuccess" xy="437,188" size="1046,703" advanced="true">
       <gearDisplay controller="ctrlJmType" pages="6"/>
     </group>
+    <component id="n113_wle9" name="comSubmitLoading" src="wle94o" fileName="com/ComSubmitLoading.xml" xy="0,0" visible="false">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
   </displayList>
 </component>
