@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="332,336" overflow="hidden" designImage="ui://0axy98cgtbm25m" designImageOffsetX="-283" designImageOffsetY="-281" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlSelect" pages="0,0,1,1,2,2" selected="2"/>
+  <displayList>
+    <image id="n43_tbm2" name="n43" src="tbm25f" fileName="img/img_mt_mapbg2.png" xy="0,26" size="332,309" color="#f7f6f2">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n44_tbm2" name="n44" src="tbm25g" fileName="img/img_mt_mapbg3.png" xy="0,43" size="331,173"/>
+    <loader id="n46_tbm2" name="loaderMap" xy="0,43" size="332,173" align="center" vAlign="middle" fill="scaleMatchWidth"/>
+    <image id="n60_qdan" name="n60" src="qdanad" fileName="img/img_mt_mapbg4.png" xy="1,216" size="330,119" color="#f7f6f2"/>
+    <image id="n45_tbm2" name="n45" src="tbm25e" fileName="img/icon_mt_titlebg.png" xy="0,0" size="332,43">
+      <relation target="" sidePair="width-width,top-top"/>
+    </image>
+    <text id="n47_tbm2" name="txtName" xy="17,1" size="296,42" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="模板名"/>
+    <text id="n48_tbm2" name="txtAuthor" xy="62,215" size="210,47" fontSize="20" color="#716f7a" align="center" vAlign="middle" autoSize="none" text="作者"/>
+    <text id="n49_tbm2" name="txtCount" xy="98,271" size="86,47" fontSize="22" color="#716f7a" vAlign="middle" autoSize="none" text="1234">
+      <relation target="n52_tbm2" sidePair="middle-middle,left-right"/>
+    </text>
+    <image id="n54_tbm2" name="n54" src="tbm25k" fileName="img/img_mt_select.png" xy="0,0" size="332,333">
+      <gearDisplay controller="ctrlSelect" pages="1"/>
+    </image>
+    <text id="n50_tbm2" name="txtFavourable" xy="238,271" size="80,47" fontSize="22" color="#716f7a" vAlign="middle" autoSize="none" text="94%">
+      <relation target="n51_tbm2" sidePair="middle-middle,left-right"/>
+    </text>
+    <image id="n51_tbm2" name="n51" src="tbm25i" fileName="img/icon_mt_zan.png" xy="197,273" size="34,37"/>
+    <image id="n52_tbm2" name="n52" src="tbm25h" fileName="img/icon_mt_play.png" xy="57,273" size="34,37"/>
+    <image id="n53_tbm2" name="n53" src="tbm25j" fileName="img/icon_mt_line.png" xy="0,260" size="332,4">
+      <relation target="" sidePair="width-width,left-left"/>
+      <relation target="n48_tbm2" sidePair="top-bottom,center-center"/>
+    </image>
+    <component id="n55_tbm2" name="btnMapDetail" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="61,94" size="214,64">
+      <gearDisplay controller="ctrlSelect" pages="1"/>
+      <Button title="地图详情" titleFontSize="30" icon="ui://0axy98cgtbm25l"/>
+    </component>
+    <image id="n61_r5js" name="n61" src="qdana7" fileName="img/img_mt_editgridhover.png" xy="0,0" size="331,336">
+      <gearDisplay controller="ctrlSelect" pages="2"/>
+    </image>
+  </displayList>
+</component>

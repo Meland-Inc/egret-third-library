@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1536,862" overflow="scroll" scrollBarRes="ui://0axy98cgqb974t," designImage="ui://0axy98cgmzsu6f" designImageOffsetX="-250" designImageOffsetY="-179" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlType" pages="0,recommend,1,race,2,new,3,hot,4,lesson,5,story,6,leisure,7,my,8,homework,9,internal" selected="0"/>
+  <displayList>
+    <list id="n58_mzsu" name="lstMapGrid" xy="4,4" size="1439,1739" layout="flow_hz" lineGap="16" colGap="29" lineItemCount="5" defaultItem="ui://0axy98cgv8nf4z" autoClearItems="true">
+      <relation target="" sidePair="left-left,top-top"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n60_mzsu" name="n60" src="mzsu79" fileName="img/img_mt_fy_bg.png" xy="493,1756" size="476,33" group="n63_dvog">
+      <relation target="n59_mzsu" sidePair="width-width,center-center"/>
+    </image>
+    <list id="n59_mzsu" name="lstPageBtn" xy="539,1761" size="383,24" group="n63_dvog" layout="row" overflow="hidden" colGap="10" defaultItem="ui://0axy98cgmzsu78" align="center" vAlign="middle">
+      <relation target="n63_dvog" sidePair="middle-middle,center-center"/>
+      <item title="1"/>
+      <item title="2"/>
+      <item title="3"/>
+      <item title="4"/>
+      <item title="5"/>
+      <item title="..."/>
+      <item title="15"/>
+    </list>
+    <component id="n61_mzsu" name="btnNextPage" src="tbm25y" fileName="btn/btnScale.xml" xy="935,1762" size="20,20" group="n63_dvog">
+      <relation target="n59_mzsu" sidePair="middle-middle,left-right"/>
+      <Button icon="ui://0axy98cgmzsu7a"/>
+    </component>
+    <component id="n62_mzsu" name="btnPrePage" src="tbm25y" fileName="btn/btnScale.xml" xy="507,1763" size="20,20" group="n63_dvog">
+      <relation target="n59_mzsu" sidePair="middle-middle,right-left"/>
+      <Button icon="ui://0axy98cgmzsu7b"/>
+    </component>
+    <group id="n63_dvog" name="grpPageBtn" xy="493,1756" size="476,33" advanced="true">
+      <relation target="n58_mzsu" sidePair="top-bottom,center-center"/>
+    </group>
+  </displayList>
+</component>

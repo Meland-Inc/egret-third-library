@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="418,134" designImage="ui://0axy98cgyfas7d" designImageOffsetX="-1312" designImageOffsetY="-199" designImageAlpha="0" designImageLayer="1">
+  <displayList>
+    <image id="n6_yfas" name="n6" src="yfas81" fileName="img/img_mt_detail_fjb_bg.png" xy="0,0" size="417,134"/>
+    <image id="n7_yfas" name="n7" src="yfas82" fileName="img/img_mt_detail_fj_bg.png" xy="14,17" size="259,36"/>
+    <text id="n1_ssks" name="tfName" xy="50,18" size="190,34" fontSize="26" color="#348fff" vAlign="middle" vars="true" autoSize="none" text="房间 ({num=1})"/>
+    <component id="n4_ssks" name="btnEnterMap" src="tbm25y" fileName="btn/btnScale.xml" xy="301,13" size="106,106">
+      <Button title="加入" titleColor="#ffffff" titleFontSize="28" icon="ui://0axy98cgyfas84"/>
+    </component>
+    <component id="n5_yfas" name="pbarNum" src="yfas80" fileName="btn/ProbarRoomMember.xml" xy="12,104">
+      <ProgressBar value="1" max="12"/>
+    </component>
+    <text id="n8_yfas" name="txtAuthor" xy="37,62" size="181,29" fontSize="22" color="#65aaff" vAlign="middle" vars="true" autoSize="none" text="房主"/>
+    <image id="n9_yfas" name="n9" src="yfas83" fileName="img/icon_mt_detail_roommember.png" xy="14,69"/>
+    <text id="n10_yfas" name="txtNum" xy="229,99" size="80,21" fontSize="12" color="#545cff" vAlign="middle" vars="true" autoSize="none" text="人数 {num=-1}/{max=-1}"/>
+  </displayList>
+</component>

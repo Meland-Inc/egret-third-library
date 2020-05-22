@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1607,878" overflow="scroll" scrollBarRes="ui://0axy98cgqb974t," designImage="ui://0axy98cggu5v9e" designImageOffsetX="-170" designImageOffsetY="-169" designImageAlpha="67" designImageLayer="1">
+  <controller name="ctrlRightDetail" pages="2,empty,0,edit,1,lobby" selected="0"/>
+  <controller name="ctrlViewStatus" pages="0,allList,1,selfList,2,create,3,publish,4,detail" selected="0">
+    <action type="change_page" fromPage="" toPage="0" objectId="n16_pz1n" controller="ctrlListType" targetPage="7"/>
+    <action type="change_page" fromPage="" toPage="1" objectId="n16_pz1n" controller="ctrlListType" targetPage="0"/>
+  </controller>
+  <displayList>
+    <image id="n67_gu5v" name="n67" src="tbm25p" fileName="img/icon_mt_titlebg2.png" xy="64,15" size="160,54">
+      <relation target="n60_v8nf" sidePair="top-top,left-left"/>
+    </image>
+    <image id="n68_gu5v" name="n68" src="tbm25p" fileName="img/icon_mt_titlebg2.png" xy="71,786" size="196,54">
+      <relation target="n65_v8nf" sidePair="top-top,left-left"/>
+    </image>
+    <text id="n60_v8nf" name="n60" xy="79,17" size="186,52" fontSize="24" color="#ffffff" vAlign="middle" autoSize="none" text="我创建的">
+      <relation target="n67_gu5v" sidePair="left-left,middle-middle"/>
+    </text>
+    <list id="n62_v8nf" name="lstMapMine" xy="58,81" size="1509,685" layout="flow_hz" lineGap="14" colGap="12" lineItemCount="5" defaultItem="ui://0axy98cgv8nf5a" autoClearItems="true">
+      <relation target="n60_v8nf" sidePair="top-bottom,left-left"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n65_v8nf" name="n65" xy="82,789" size="186,52" fontSize="24" color="#ffffff" vAlign="middle" autoSize="none" text="分享给我的">
+      <relation target="n62_v8nf" sidePair="top-bottom,left-left"/>
+    </text>
+    <list id="n66_v8nf" name="lstMapShare" xy="58,879" size="1508,697" layout="flow_hz" lineGap="14" colGap="12" lineItemCount="5" defaultItem="ui://0axy98cgv8nf5a" autoClearItems="true">
+      <relation target="n65_v8nf" sidePair="top-bottom"/>
+      <relation target="n62_v8nf" sidePair="left-left"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

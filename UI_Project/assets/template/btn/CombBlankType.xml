@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="271,48" extention="ComboBox">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_mzsu" name="n0" src="mzsu6u" fileName="img/img_mt_kuang_02.png" xy="0,0" size="273,48">
+      <gearDisplay controller="button" pages="0,2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_mzsu" name="n1" src="mzsu6u" fileName="img/img_mt_kuang_02.png" xy="0,0" size="273,48">
+      <gearDisplay controller="button" pages="1,3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n2_mzsu" name="title" xy="39,0" size="192,48" fontSize="26" color="#4a89d7" align="center" vAlign="middle" autoSize="none" singleLine="true" text="标题">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <relation target="" sidePair="width-width"/>
+    </text>
+  </displayList>
+  <ComboBox dropdown="ui://0axy98cggu5v9c"/>
+</component>

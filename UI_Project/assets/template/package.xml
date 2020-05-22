@@ -23,7 +23,7 @@
     <component id="ra2b3x" name="WinMapTemplateIconSelect.xml" path="/win/" exported="true"/>
     <component id="ra2b3y" name="comMapTemplateLobby.xml" path="/com/"/>
     <component id="ra2b3z" name="spCreateRoom.xml" path="/sprite/"/>
-    <component id="ra2b41" name="comRoom.xml" path="/com/"/>
+    <component id="ra2b41" name="ComMapTemplateRoomGrid.xml" path="/com/"/>
     <component id="ra2b42" name="ComCreateTemplate.xml" path="/com/"/>
     <component id="hgj749" name="ScrollBar1_grip.xml" path="/slider/"/>
     <component id="hgj74a" name="ScrollBar1.xml" path="/slider/" exported="true"/>
@@ -46,6 +46,194 @@
     <component id="qb974t" name="Pbr1.xml" path="/pbr/" exported="true"/>
     <component id="qb974u" name="Pbr1_grip.xml" path="/pbr/"/>
     <component id="azjx4v" name="labNameInput.xml" path="/com/"/>
+    <component id="v8nf4w" name="WinMapTemplateNew.xml" path="/win/" exported="true"/>
+    <component id="v8nf4x" name="ComAllRoom.xml" path="/com/"/>
+    <component id="v8nf4y" name="ComMapTemplateListSmall.xml" path="/com/"/>
+    <component id="v8nf4z" name="ComMapTemplateGrid.xml" path="/com/"/>
+    <component id="v8nf50" name="ComMapTemplateGridBig.xml" path="/com/"/>
+    <component id="v8nf51" name="ComMapTemplatePanel.xml" path="/com/"/>
+    <component id="v8nf52" name="ComMapRoomCreate.xml" path="/com/"/>
+    <component id="v8nf53" name="ComAllMap.xml" path="/com/"/>
+    <component id="v8nf54" name="ComMapRoomGrid.xml" path="/com/"/>
+    <component id="v8nf55" name="ComMapTemplateCreate.xml" path="/com/"/>
+    <component id="v8nf56" name="ComMapBaseTemplateGrid.xml" path="/com/"/>
+    <component id="v8nf57" name="ComMapTemplatePublish.xml" path="/com/"/>
+    <component id="v8nf58" name="WinMapTemplateTitlePage.xml" path="/win/" exported="true"/>
+    <component id="v8nf59" name="ComMyWork.xml" path="/com/"/>
+    <component id="v8nf5a" name="ComMapTemplateEditGrid.xml" path="/com/"/>
+    <component id="azcq5b" name="ComMapTemplateCollect.xml" path="/com/"/>
+    <component id="azcq5d" name="ComMapTemplateDetail.xml" path="/com/"/>
+    <image id="tbm25e" name="icon_mt_titlebg.png" path="/img/"/>
+    <image id="tbm25f" name="img_mt_mapbg2.png" path="/img/" scale="9grid" scale9grid="21,19,235,278"/>
+    <image id="tbm25g" name="img_mt_mapbg3.png" path="/img/"/>
+    <image id="tbm25h" name="icon_mt_play.png" path="/img/"/>
+    <image id="tbm25i" name="icon_mt_zan.png" path="/img/"/>
+    <image id="tbm25j" name="icon_mt_line.png" path="/img/"/>
+    <image id="tbm25k" name="img_mt_select.png" path="/img/" scale="9grid" scale9grid="35,31,70,62"/>
+    <image id="tbm25l" name="icon_mt_btndetail.png" path="/img/"/>
+    <image id="tbm25m" name="lALPBFuNZrgCKRPNBDjNB38_1919_1080.png" path="/img/"/>
+    <image id="tbm25n" name="icon_mt_more.png" path="/img/"/>
+    <image id="tbm25o" name="icon_mt_titlebg1.png" path="/img/"/>
+    <image id="tbm25p" name="icon_mt_titlebg2.png" path="/img/"/>
+    <component id="tbm25q" name="ComMapTemplateListBig.xml" path="/com/"/>
+    <image id="tbm25r" name="img_mt_bgtitle.png" path="/img/" scale="tile"/>
+    <image id="tbm25t" name="icon_mt_close.png" path="/img/"/>
+    <image id="tbm25u" name="icon_mt_jiange.png" path="/img/"/>
+    <image id="tbm25v" name="icon_mt_yellow.png" path="/img/"/>
+    <image id="tbm25w" name="icon_mt_blue.png" path="/img/"/>
+    <image id="tbm25x" name="icon_mt_createmap.png" path="/img/"/>
+    <component id="tbm25y" name="btnScale.xml" path="/btn/"/>
+    <component id="tbm25z" name="btnText.xml" path="/btn/"/>
+    <image id="tbm260" name="icon_mt_btntag.png" path="/img/"/>
+    <image id="tbm261" name="icon_mt_btntag1.png" path="/img/"/>
+    <component id="tbm262" name="rbtnFixNoScale.xml" path="/btn/"/>
+    <component id="tbm263" name="ComMapTemplateGroup.xml" path="/com/"/>
+    <image id="k9m364" name="房间列表界面.jpg" path="/img/"/>
+    <image id="k9m365" name="img_mt_kuang.png" path="/img/" scale="9grid" scale9grid="38,37,76,74"/>
+    <image id="k9m366" name="icon_mt_xq.png" path="/img/"/>
+    <image id="k9m367" name="icon_mt_jiaru.png" path="/img/"/>
+    <image id="k9m369" name="icon_mt_inroom.png" path="/img/"/>
+    <image id="k9m36a" name="img_mt_mapbg1.png" path="/img/" scale="9grid" scale9grid="42,42,84,84"/>
+    <image id="k9m36b" name="icon_mt_yellow2.png" path="/img/" scale="9grid" scale9grid="36,18,72,4"/>
+    <image id="k9m36c" name="icon_mt_z.png" path="/img/"/>
+    <component id="k9m36d" name="btnFix.xml" path="/btn/"/>
+    <image id="k9m36e" name="icon_mt_key.png" path="/img/"/>
+    <image id="mzsu6f" name="官方推荐界面效果图.jpg" path="/img/"/>
+    <image id="mzsu6h" name="icon_mt_fanhui.png" path="/img/"/>
+    <component id="mzsu6i" name="ComMapTemplatePanelScroll.xml" path="/com/"/>
+    <image id="mzsu6j" name="创建地图界面改效果图.jpg" path="/img/"/>
+    <image id="mzsu6k" name="img_mt_createbg.png" path="/img/" scale="9grid" scale9grid="13,56,28,611"/>
+    <image id="mzsu6l" name="img_mt_bg_danlan.png" path="/img/"/>
+    <image id="mzsu6m" name="img_mt_bg_01.png" path="/img/" scale="9grid" scale9grid="20,20,40,40"/>
+    <image id="mzsu6o" name="img_mt_createbg_top.png" path="/img/"/>
+    <image id="mzsu6p" name="icon_mt_xialabutton.png" path="/img/"/>
+    <image id="mzsu6q" name="img_mt_kuang_03.png" path="/img/" scale="9grid" scale9grid="19,11,406,24"/>
+    <component id="mzsu6r" name="CombCreateType_item.xml" path="/btn/"/>
+    <component id="mzsu6s" name="CombCreateType_popup.xml" path="/btn/"/>
+    <component id="mzsu6t" name="CombCreateType.xml" path="/btn/" exported="true"/>
+    <image id="mzsu6u" name="img_mt_kuang_02.png" path="/img/" scale="9grid" scale9grid="34,11,394,24"/>
+    <component id="mzsu6v" name="CombBlankType.xml" path="/btn/" exported="true"/>
+    <image id="mzsu6w" name="img_mt_dtmzi_bg.png" path="/img/"/>
+    <image id="mzsu6x" name="img_mt_xuxian.png" path="/img/"/>
+    <image id="mzsu6y" name="icon_mt_syb.png" path="/img/"/>
+    <image id="mzsu6z" name="icon_mt_cjdt.png" path="/img/"/>
+    <image id="mzsu70" name="icon_mt_jr.png" path="/img/"/>
+    <image id="mzsu71" name="img_mt_bg_fm.png" path="/img/" scale="9grid" scale9grid="21,13,42,26"/>
+    <image id="mzsu72" name="icon_mt_point2.png" path="/img/"/>
+    <image id="mzsu73" name="icon_mt_pointblue.png" path="/img/"/>
+    <component id="mzsu74" name="BtnSetMapIcon.xml" path="/btn/"/>
+    <image id="mzsu76" name="img_mt_kuang_01.png" path="/img/" scale="9grid" scale9grid="20,12,40,24"/>
+    <image id="mzsu77" name="icon_mt_fy_01.png" path="/img/"/>
+    <component id="mzsu78" name="BtnPage.xml" path="/btn/"/>
+    <image id="mzsu79" name="img_mt_fy_bg.png" path="/img/" scale="9grid" scale9grid="81,7,162,14"/>
+    <image id="mzsu7a" name="icon_mt_fy_02.png" path="/img/"/>
+    <image id="mzsu7b" name="icon_mt_fy_03.png" path="/img/"/>
+    <component id="mzsu7c" name="ComMyWorkMap.xml" path="/com/"/>
+    <image id="yfas7d" name="地图详情切图标注.jpg" path="/img/"/>
+    <image id="yfas7f" name="img_mt_mapbgfm.png" path="/img/" scale="9grid" scale9grid="13,14,47,26"/>
+    <image id="yfas7g" name="icon_mt_yellowbg.png" path="/img/"/>
+    <image id="yfas7h" name="icon_mt_numsubscribed.png" path="/img/"/>
+    <image id="yfas7i" name="icon_mt_pink.png" path="/img/"/>
+    <image id="yfas7j" name="img_mt_detailauthor.png" path="/img/" scale="9grid" scale9grid="17,19,34,38"/>
+    <image id="yfas7k" name="icon_mt_author.png" path="/img/"/>
+    <image id="yfas7l" name="img_mt_xuxian1.png" path="/img/"/>
+    <image id="yfas7m" name="icon_mt_btnblue.png" path="/img/" scale="9grid" scale9grid="34,13,68,26"/>
+    <image id="yfas7n" name="icon_mt_btnyellow.png" path="/img/" scale="9grid" scale9grid="34,13,68,26"/>
+    <image id="yfas7o" name="icon_mt_btngreen.png" path="/img/" scale="9grid" scale9grid="34,13,68,26"/>
+    <image id="yfas7p" name="icon_mt_detailtitle.png" path="/img/" scale9grid="43,23,86,10"/>
+    <image id="yfas7q" name="img_mt_detailtextgb.png" path="/img/" scale="9grid" scale9grid="34,35,68,70"/>
+    <image id="yfas7r" name="img_mt_mapbgframe.png" path="/img/" scale="9grid" scale9grid="15,19,30,31"/>
+    <image id="yfas7s" name="img_mt_detaillikebg.png" path="/img/" scale="9grid" scale9grid="24,18,100,36"/>
+    <image id="yfas7t" name="icon_mt_detailunlike.png" path="/img/" scale="9grid" scale9grid="38,20,76,1"/>
+    <image id="yfas7u" name="icon_mt_detail_like.png" path="/img/" scale="9grid" scale9grid="21,18,47,1"/>
+    <image id="yfas7v" name="icon_mt_unlike.png" path="/img/"/>
+    <image id="yfas7w" name="icon_mt_like.png" path="/img/"/>
+    <component id="yfas7x" name="ComTextScroll.xml" path="/com/"/>
+    <image id="yfas7y" name="img_mt_detailprobar_scale.png" path="/img/"/>
+    <image id="yfas7z" name="img_mt_detailprobar_bg.png" path="/img/"/>
+    <component id="yfas80" name="ProbarRoomMember.xml" path="/btn/"/>
+    <image id="yfas81" name="img_mt_detail_fjb_bg.png" path="/img/" scale="9grid" scale9grid="19,15,38,30"/>
+    <image id="yfas82" name="img_mt_detail_fj_bg.png" path="/img/" scale="9grid" scale9grid="36,9,204,18"/>
+    <image id="yfas83" name="icon_mt_detail_roommember.png" path="/img/"/>
+    <image id="yfas84" name="icon_mt_detail_joinroom.png" path="/img/"/>
+    <image id="yfas85" name="img_mt_detail_t_bg.png" path="/img/" scale="9grid" scale9grid="14,13,43,26"/>
+    <image id="yfas86" name="icon_mt_detail_createroom.png" path="/img/" scale="9grid" scale9grid="35,23,168,12"/>
+    <image id="yfas87" name="地图详情切图标注(1).jpg" path="/img/"/>
+    <image id="yfas88" name="icon_mt_detail_subscribed.png" path="/img/"/>
+    <image id="yfas89" name="icon_mt_detailquick.png" path="/img/" scale="9grid" scale9grid="28,21,112,14"/>
+    <image id="yfas8a" name="icon_mt_detail_cancel.png" path="/img/"/>
+    <image id="yfas8b" name="icon_mt_detail_copy.png" path="/img/"/>
+    <component id="yfas8c" name="ProbarLike.xml" path="/btn/"/>
+    <image id="yfas8d" name="创建地图界面1效果图.jpg" path="/img/"/>
+    <image id="yfas8e" name="icon_mt_xiayibu.png" path="/img/"/>
+    <image id="yfas8f" name="icon_mt_xzmb.png" path="/img/"/>
+    <image id="yfas8g" name="开设房间界面改效果图.jpg" path="/img/"/>
+    <image id="yfas8h" name="img_mt_roomtitlebg.png" path="/img/" scale="9grid" scale9grid="16,36,32,72"/>
+    <image id="yfas8i" name="icon_mt_xuxian2.png" path="/img/"/>
+    <image id="yfas8j" name="img_mt_roomnum.png" path="/img/"/>
+    <image id="yfas8k" name="icon_mt_roombtn.png" path="/img/"/>
+    <component id="c6ye8l" name="comRoom.xml" path="/com/"/>
+    <image id="c6ye8m" name="发布地图界面改效果图.jpg" path="/img/"/>
+    <image id="c6ye8n" name="img_mt_publishbg1.png" path="/img/" scale="9grid" scale9grid="26,19,52,38"/>
+    <image id="c6ye8o" name="img_mt_publishbg4.png" path="/img/" scale="9grid" scale9grid="23,24,46,48"/>
+    <component id="c6ye8p" name="CombMapType.xml" path="/btn/" exported="true"/>
+    <image id="c6ye8q" name="img_mt_xiala1.png" path="/img/"/>
+    <image id="c6ye8r" name="icon_mt_publishbtn.png" path="/img/"/>
+    <image id="c6ye8s" name="icon_mt_publishtop_bg.png" path="/img/"/>
+    <image id="gu5v8t" name="img_mt_inputframe.png" path="/img/"/>
+    <image id="gu5v8u" name="06.我创建的界面效果图.jpg" path="/img/"/>
+    <image id="gu5v8w" name="icon_mt_editshow.png" path="/img/"/>
+    <image id="gu5v8x" name="icon_mt_editmap.png" path="/img/"/>
+    <image id="gu5v8z" name="08.收藏的地图界面效果图.jpg" path="/img/"/>
+    <image id="gu5v90" name="img_mt_gengduo_bg.png" path="/img/" scale="9grid" scale9grid="25,27,79,123"/>
+    <image id="gu5v91" name="icon_mt_xuxian5.png" path="/img/" scale="tile"/>
+    <image id="gu5v92" name="img_mt_editmapframe.png" path="/img/" scale="9grid" scale9grid="32,34,224,271"/>
+    <image id="gu5v93" name="icon_mt_dtmz_dibu.png" path="/img/" scale="9grid" scale9grid="69,14,138,28"/>
+    <image id="gu5v94" name="img_mt_dtmz_bg.png" path="/img/" scale="9grid" scale9grid="29,31,222,260"/>
+    <image id="gu5v96" name="icon_mt_diqiu.png" path="/img/"/>
+    <image id="gu5v98" name="icon_mt_cjdttxt.png" path="/img/"/>
+    <image id="gu5v99" name="img_mt_xialakuang2.png" path="/img/" scale="9grid" scale9grid="122,12,244,24"/>
+    <image id="gu5v9a" name="img_mt_xialakuang1.png" path="/img/" scale="9grid" scale9grid="122,12,244,24"/>
+    <component id="gu5v9b" name="CombBlankType_item.xml" path="/btn/"/>
+    <component id="gu5v9c" name="CombBlankType_popup.xml" path="/btn/"/>
+    <image id="gu5v9d" name="icon_mt_xialaxuxianfgx.png" path="/img/" scale="tile"/>
+    <image id="gu5v9e" name="06.我创建的界面效果图(1).jpg" path="/img/"/>
+    <image id="gu5v9f" name="icon_mt_myzujian.png" path="/img/"/>
+    <image id="gu5v9g" name="icon_mt_myditu.png" path="/img/" scale="9grid" scale9grid="23,10,46,20"/>
+    <component id="gu5v9h" name="ComMapTemplateSetting.xml" path="/com/"/>
+    <image id="pt179i" name="icon_mt_publsihbg_03.png" path="/img/" scale="9grid" scale9grid="29,20,58,40"/>
+    <image id="pt179j" name="发布地图界面改效果图(1).jpg" path="/img/"/>
+    <image id="vrsj9k" name="img_mt_slider.png" path="/img/" scale="9grid" scale9grid="4,13,5,17"/>
+    <image id="vrsj9l" name="img_mt_xuxian3.png" path="/img/"/>
+    <image id="vrsj9m" name="11.创建地图界面改效果图.jpg" path="/img/"/>
+    <image id="vrsj9n" name="10.发布地图界面改效果图.jpg" path="/img/"/>
+    <image id="pw6y9o" name="icon_mt_btnguan.png" path="/img/"/>
+    <image id="pw6y9p" name="icon_mt_btnkai.png" path="/img/"/>
+    <component id="pw6y9q" name="btnScaleCreate.xml" path="/btn/"/>
+    <image id="pw6y9r" name="img_mt_maptempframe.png" path="/img/"/>
+    <image id="dvog9s" name="icon_mt_blueselect.png" path="/img/"/>
+    <image id="dvog9t" name="icon_mt_yellowselect.png" path="/img/"/>
+    <component id="dvog9u" name="btnScaleSelect.xml" path="/btn/"/>
+    <component id="dvog9v" name="btnTextSelect.xml" path="/btn/"/>
+    <image id="dvog9w" name="icon_mt_noroom.png" path="/img/"/>
+    <image id="qdan9x" name="icon_mt_roomblue.png" path="/img/" scale="9grid" scale9grid="43,25,86,4"/>
+    <image id="qdan9y" name="icon_mt_roomclose.png" path="/img/"/>
+    <image id="qdan9z" name="1589780886788_C060F376-22AD-4fc9-B0EB-C944B64E5276.png" path="/img/"/>
+    <component id="qdana0" name="ComMapTemplateIconSelect.xml" path="/com/"/>
+    <image id="qdana1" name="12.封面设置界面效果图.jpg" path="/img/"/>
+    <component id="qdana2" name="BtnMapIconBig.xml" path="/btn/"/>
+    <image id="qdana3" name="img_mt_seticonbg.png" path="/img/" scale="9grid" scale9grid="88,223,176,446"/>
+    <image id="qdana4" name="icon_mt_seticonblue.png" path="/img/" scale="9grid" scale9grid="26,14,52,28"/>
+    <image id="qdana5" name="icon_mt_seticongrey.png" path="/img/" scale="9grid" scale9grid="43,25,86,6"/>
+    <image id="qdana6" name="icon_mt_seticonpink.png" path="/img/" scale="9grid" scale9grid="26,14,52,28"/>
+    <image id="qdana7" name="img_mt_editgridhover.png" path="/img/"/>
+    <image id="qdana8" name="icon_mt_editgrids1.png" path="/img/"/>
+    <image id="qdana9" name="icon_mt_editgrids2.png" path="/img/"/>
+    <image id="qdanaa" name="icon_mt_editgridnone.png" path="/img/"/>
+    <component id="qdanab" name="btnScaleFunction.xml" path="/btn/"/>
+    <image id="qdanad" name="img_mt_mapbg4.png" path="/img/" scale="9grid" scale9grid="70,15,140,30"/>
+    <component id="r5jsae" name="ComMapTemplateDetailInfo.xml" path="/com/"/>
+    <image id="r5jsaf" name="img_mt_roomhover.png" path="/img/" scale="9grid" scale9grid="108,45,216,90"/>
   </resources>
   <publish name="template"/>
 </packageDescription>
