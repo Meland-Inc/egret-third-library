@@ -111,7 +111,7 @@
     <image id="pgeq42" name="next.png" path="/img/"/>
     <image id="nlpi43" name="rate.png" path="/img/"/>
     <image id="nlpi44" name="rateBG.png" path="/img/"/>
-    <image id="nlpi45" name="getReport.png" path="/img/"/>
+    <image id="nlpi45" name="getReport.png" path="/img/" scale="9grid" scale9grid="91,28,283,56"/>
     <image id="nlpi46" name="specialExamSuccessBG.png" path="/img/"/>
     <image id="nlpi47" name="blueClose.png" path="/img/"/>
     <image id="nlpi48" name="net.png" path="/img/"/>
@@ -132,6 +132,11 @@
     <image id="pgeq40" name="trumpet2.png" path="/img/"/>
     <component id="wle94o" name="ComSubmitLoading.xml" path="/com/" exported="true"/>
     <image id="wle94p" name="img_cm_load.png" path="/img/"/>
+    <image id="766c4p" name="neikuang2.png" path="/img/" scale="9grid" scale9grid="64,63,74,68"/>
+    <image id="766c4q" name="waikuang2.png" path="/img/" scale="9grid" scale9grid="151,151,51,56"/>
+    <image id="766c4r" name="btn_sub.png" path="/img/"/>
+    <image id="766c4t" name="btn_next.png" path="/img/"/>
+    <image id="wry861" name="btn_moreThink.png" path="/img/"/>
   </resources>
   <publish name="jmcommon" path="..\..\egret-planet\resource\jimmyAssets\jmFairyGui" packageCount="2"/>
 </packageDescription>
