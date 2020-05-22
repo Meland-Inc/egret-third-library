@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="108,108" extention="Button">
   <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
-  <controller name="ctrlBGColor" pages="0,normalDeep,1,normalLight,2,superDeep,3,superLight" selected="0"/>
-  <controller name="ctrlType" pages="0,lock,1,unLock,2,get" selected="0"/>
+  <controller name="ctrlBGColor" pages="0,normalDeep,1,normalLight,2,superDeep,3,superLight" selected="3"/>
+  <controller name="ctrlType" pages="0,lock,1,unLock,2,get" selected="2"/>
+  <controller name="ctrlIsShowUnLockDes" pages="0,hide,1,show" selected="0"/>
   <displayList>
-    <loader id="n3_e45x" name="ladBG" xy="0,0" size="108,108" url="ui://cqcxan63e45xs">
+    <loader id="n3_e45x" name="ladBG" xy="0,0" size="108,108" url="ui://cqcxan63e45xw">
       <gearIcon controller="ctrlBGColor" pages="0,1,2" values="ui://cqcxan63e45xs|ui://cqcxan63e45xv|ui://cqcxan63e45xr" default="ui://cqcxan63e45xw"/>
     </loader>
     <loader id="n9_e45x" name="ladIcon" xy="11,13" size="85,82" align="center" vAlign="middle" fill="scale"/>
     <loader id="n5_e45x" name="ladLock" xy="67,9" size="32,33" url="ui://cqcxan63e45xt" autoSize="true">
       <gearDisplay controller="ctrlType" pages="0"/>
     </loader>
-    <loader id="n7_e45x" name="ladGet" xy="0,29" size="108,50" url="ui://cqcxan63e45x10">
+    <loader id="n7_e45x" name="ladGet" xy="0,29" size="108,50" url="ui://cqcxan63e45xq" align="center" vAlign="middle">
       <gearDisplay controller="ctrlType" pages="2"/>
       <gearIcon controller="ctrlBGColor" pages="0,1,2,3" values="ui://cqcxan63e45x10|ui://cqcxan63e45x10|ui://cqcxan63e45xq|ui://cqcxan63e45xq"/>
     </loader>
     <text id="n10_9r5x" name="tfNum" xy="69,71" size="29,29" fontSize="18" align="center" vAlign="middle" autoSize="none" text="1"/>
+    <image id="n11_o9zc" name="imgDesBG" src="o9zc25" fileName="img/prestige_img_37.png" xy="5,86">
+      <gearDisplay controller="ctrlIsShowUnLockDes" pages="1"/>
+    </image>
+    <text id="n12_o9zc" name="tfUnLockDes" xy="7,85" size="95,22" fontSize="18" align="center" autoSize="shrink" autoClearText="true" text="9.9元解锁&#xA;">
+      <gearDisplay controller="ctrlIsShowUnLockDes" pages="1"/>
+    </text>
   </displayList>
   <Button/>
 </component>

@@ -65,11 +65,11 @@
     </component>
     <component id="n32_fbu3" name="btnExitExplore" src="psruh" fileName="com/btnMainMenu.xml" xy="1802,13" group="n24_11584">
       <gearDisplay controller="ctrlEnterWay" pages="10"/>
-      <Button title="退出" icon="ui://oyity675axawwcyim2"/>
+      <Button title="星球之门" icon="ui://oyity675axawwcyim2"/>
     </component>
     <component id="n33_fbu3" name="btnReplay" src="psruh" fileName="com/btnMainMenu.xml" xy="1667,13" group="n24_11584" customData="top">
       <gearDisplay controller="ctrlEnterWay" pages="10"/>
-      <Button title="邀请好友" icon="ui://oyity675axawwcyim3"/>
+      <Button title="时间回溯" icon="ui://oyity675axawwcyim3"/>
     </component>
     <group id="n24_11584" name="grpEditMenu" xy="1667,13" size="245,112" customData="top" advanced="true">
       <gearDisplay controller="ctrlViewMode" pages="1"/>

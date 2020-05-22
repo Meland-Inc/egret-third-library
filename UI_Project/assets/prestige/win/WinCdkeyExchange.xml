@@ -1,48 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://cqcxan63knqv8" designImageAlpha="100">
   <displayList>
-    <image id="n0_knqv" name="imgBG" src="knqv0" fileName="img/bg_1.png" xy="596,353" size="728,374" group="n57_knqv"/>
-    <image id="n1_knqv" name="imgShape1" src="knqv3" fileName="img/shape_1.png" xy="626,377" group="n57_knqv"/>
-    <text id="n3_knqv" name="tfTitle" xy="905,369" size="113,30" group="n57_knqv" fontSize="26" color="#ffffff" leading="0" bold="true" text="兑换课程"/>
-    <text id="n6_knqv" name="n6" xy="803,425" size="313,20" group="n57_knqv" font="zihun100hao-fangfangxianfengti" fontSize="16" color="#b9bcbe" leading="0" text="请输入在有赞商城购买课程时的12位兑换码"/>
-    <image id="n7_knqv" name="imgShape2" src="knqv2" fileName="img/shape_2.png" xy="948,451" group="n57_knqv"/>
-    <image id="n13_knqv" name="imgCodeBg1" src="knqv1" fileName="img/bg_2.png" xy="625,525" group="n19_knqv"/>
-    <image id="n30_knqv" name="imgCodeBg2" src="knqv1" fileName="img/bg_2.png" xy="677,525" group="n19_knqv"/>
-    <image id="n31_knqv" name="imgCodeBg1" src="knqv1" fileName="img/bg_2.png" xy="730,525" group="n19_knqv"/>
-    <image id="n32_knqv" name="imgCodeBg2" src="knqv1" fileName="img/bg_2.png" xy="782,525" group="n19_knqv"/>
-    <image id="n33_knqv" name="imgCodeBg1" src="knqv1" fileName="img/bg_2.png" xy="858,525" group="n19_knqv"/>
-    <image id="n34_knqv" name="imgCodeBg2" src="knqv1" fileName="img/bg_2.png" xy="910,525" group="n19_knqv"/>
-    <image id="n35_knqv" name="imgCodeBg1" src="knqv1" fileName="img/bg_2.png" xy="963,525" group="n19_knqv"/>
-    <image id="n36_knqv" name="imgCodeBg2" src="knqv1" fileName="img/bg_2.png" xy="1015,525" group="n19_knqv"/>
-    <image id="n37_knqv" name="imgCodeBg1" src="knqv1" fileName="img/bg_2.png" xy="1090,525" group="n19_knqv"/>
-    <image id="n38_knqv" name="imgCodeBg2" src="knqv1" fileName="img/bg_2.png" xy="1142,525" group="n19_knqv"/>
-    <image id="n39_knqv" name="imgCodeBg1" src="knqv1" fileName="img/bg_2.png" xy="1195,525" group="n19_knqv"/>
-    <image id="n40_knqv" name="imgCodeBg2" src="knqv1" fileName="img/bg_2.png" xy="1247,525" group="n19_knqv"/>
-    <group id="n19_knqv" name="grpCodeBg" xy="625,525" size="670,48" group="n57_knqv" advanced="true"/>
-    <text id="n21_knqv" name="inpCode0" xy="625,528" size="48,48" group="n27_knqv" fontSize="34" color="#2d5db1" align="center" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="6"/>
-    <text id="n41_knqv" name="inpCode1" xy="677,528" size="48,48" group="n27_knqv" fontSize="34" color="#2d5db1" align="center" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="6"/>
-    <text id="n42_knqv" name="inpCode2" xy="730,528" size="48,48" group="n27_knqv" fontSize="34" color="#2d5db1" align="center" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="6"/>
-    <text id="n43_knqv" name="inpCode3" xy="782,528" size="48,48" group="n27_knqv" fontSize="34" color="#2d5db1" align="center" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="6"/>
-    <text id="n46_knqv" name="inpCode4" xy="858,528" size="48,48" group="n27_knqv" fontSize="34" color="#2d5db1" align="center" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="6"/>
-    <text id="n47_knqv" name="inpCode5" xy="910,528" size="48,48" group="n27_knqv" fontSize="34" color="#2d5db1" align="center" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="6"/>
-    <text id="n48_knqv" name="inpCode6" xy="963,528" size="48,48" group="n27_knqv" fontSize="34" color="#2d5db1" align="center" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="6"/>
-    <text id="n49_knqv" name="inpCode7" xy="1015,528" size="48,48" group="n27_knqv" fontSize="34" color="#2d5db1" align="center" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="6"/>
-    <text id="n50_knqv" name="inpCode8" xy="1090,528" size="48,48" group="n27_knqv" fontSize="34" color="#2d5db1" align="center" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="6"/>
-    <text id="n51_knqv" name="inpCode9" xy="1142,528" size="48,48" group="n27_knqv" fontSize="34" color="#2d5db1" align="center" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="6"/>
-    <text id="n52_knqv" name="inpCode10" xy="1195,528" size="48,48" group="n27_knqv" fontSize="34" color="#2d5db1" align="center" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="6"/>
-    <text id="n53_knqv" name="inpCode11" xy="1247,528" size="48,48" group="n27_knqv" fontSize="34" color="#2d5db1" align="center" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="6"/>
-    <group id="n27_knqv" name="grpCode" xy="625,527" size="670,48" group="n57_knqv" advanced="true"/>
-    <component id="n5_knqv" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1013,669" size="122,46" group="n57_knqv">
+    <image id="n0_knqv" name="imgBG" src="knqv0" fileName="img/prestige_bg_1.png" xy="595,353" size="728,374" group="n57_knqv"/>
+    <image id="n1_knqv" name="imgShape1" src="knqv3" fileName="img/prestige_shape_1.png" xy="625,377" group="n57_knqv"/>
+    <text id="n3_knqv" name="tfTitle" xy="904,369" size="113,30" group="n57_knqv" fontSize="26" color="#ffffff" leading="0" bold="true" text="兑换课程"/>
+    <text id="n6_knqv" name="n6" xy="802,425" size="313,20" group="n57_knqv" font="zihun100hao-fangfangxianfengti" fontSize="16" color="#b9bcbe" leading="0" text="请输入在有赞商城购买课程时的12位兑换码"/>
+    <image id="n7_knqv" name="imgShape2" src="knqv2" fileName="img/prestige_shape_2.png" xy="947,451" group="n57_knqv"/>
+    <image id="n13_knqv" name="imgCodeBg1" src="knqv1" fileName="img/prestige_bg_2.png" xy="624,525" group="n19_knqv"/>
+    <image id="n30_knqv" name="imgCodeBg2" src="knqv1" fileName="img/prestige_bg_2.png" xy="676,525" group="n19_knqv"/>
+    <image id="n31_knqv" name="imgCodeBg1" src="knqv1" fileName="img/prestige_bg_2.png" xy="729,525" group="n19_knqv"/>
+    <image id="n32_knqv" name="imgCodeBg2" src="knqv1" fileName="img/prestige_bg_2.png" xy="781,525" group="n19_knqv"/>
+    <image id="n33_knqv" name="imgCodeBg1" src="knqv1" fileName="img/prestige_bg_2.png" xy="857,525" group="n19_knqv"/>
+    <image id="n34_knqv" name="imgCodeBg2" src="knqv1" fileName="img/prestige_bg_2.png" xy="909,525" group="n19_knqv"/>
+    <image id="n35_knqv" name="imgCodeBg1" src="knqv1" fileName="img/prestige_bg_2.png" xy="962,525" group="n19_knqv"/>
+    <image id="n36_knqv" name="imgCodeBg2" src="knqv1" fileName="img/prestige_bg_2.png" xy="1014,525" group="n19_knqv"/>
+    <image id="n37_knqv" name="imgCodeBg1" src="knqv1" fileName="img/prestige_bg_2.png" xy="1089,525" group="n19_knqv"/>
+    <image id="n38_knqv" name="imgCodeBg2" src="knqv1" fileName="img/prestige_bg_2.png" xy="1141,525" group="n19_knqv"/>
+    <image id="n39_knqv" name="imgCodeBg1" src="knqv1" fileName="img/prestige_bg_2.png" xy="1194,525" group="n19_knqv"/>
+    <image id="n40_knqv" name="imgCodeBg2" src="knqv1" fileName="img/prestige_bg_2.png" xy="1246,525" group="n19_knqv"/>
+    <group id="n19_knqv" name="grpCodeBg" xy="624,525" size="670,48" group="n57_knqv" advanced="true"/>
+    <text id="n21_knqv" name="inpCode0" xy="624,528" size="48,48" group="n27_knqv" fontSize="34" color="#2d5db1" align="center" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="6"/>
+    <text id="n41_knqv" name="inpCode1" xy="676,528" size="48,48" group="n27_knqv" fontSize="34" color="#2d5db1" align="center" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="6"/>
+    <text id="n42_knqv" name="inpCode2" xy="729,528" size="48,48" group="n27_knqv" fontSize="34" color="#2d5db1" align="center" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="6"/>
+    <text id="n43_knqv" name="inpCode3" xy="781,528" size="48,48" group="n27_knqv" fontSize="34" color="#2d5db1" align="center" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="6"/>
+    <text id="n46_knqv" name="inpCode4" xy="857,528" size="48,48" group="n27_knqv" fontSize="34" color="#2d5db1" align="center" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="6"/>
+    <text id="n47_knqv" name="inpCode5" xy="909,528" size="48,48" group="n27_knqv" fontSize="34" color="#2d5db1" align="center" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="6"/>
+    <text id="n48_knqv" name="inpCode6" xy="962,528" size="48,48" group="n27_knqv" fontSize="34" color="#2d5db1" align="center" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="6"/>
+    <text id="n49_knqv" name="inpCode7" xy="1014,528" size="48,48" group="n27_knqv" fontSize="34" color="#2d5db1" align="center" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="6"/>
+    <text id="n50_knqv" name="inpCode8" xy="1089,528" size="48,48" group="n27_knqv" fontSize="34" color="#2d5db1" align="center" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="6"/>
+    <text id="n51_knqv" name="inpCode9" xy="1141,528" size="48,48" group="n27_knqv" fontSize="34" color="#2d5db1" align="center" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="6"/>
+    <text id="n52_knqv" name="inpCode10" xy="1194,528" size="48,48" group="n27_knqv" fontSize="34" color="#2d5db1" align="center" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="6"/>
+    <text id="n53_knqv" name="inpCode11" xy="1246,528" size="48,48" group="n27_knqv" fontSize="34" color="#2d5db1" align="center" vAlign="middle" leading="0" autoSize="none" singleLine="true" text="6"/>
+    <group id="n27_knqv" name="grpCode" xy="624,527" size="670,48" group="n57_knqv" advanced="true"/>
+    <component id="n5_knqv" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1012,669" size="122,46" group="n57_knqv">
       <Button title="确定" titleFontSize="22" icon="ui://cqcxan63knqv4"/>
     </component>
-    <component id="n4_knqv" name="btnCancel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="785,669" size="122,46" group="n57_knqv">
+    <component id="n4_knqv" name="btnCancel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="784,669" size="122,46" group="n57_knqv">
       <Button title="取消" titleFontSize="22" icon="ui://cqcxan63knqv5"/>
     </component>
-    <text id="n59_knqv" name="n59" xy="912,621" size="100,23" group="n57_knqv" fontSize="19" color="#5f9df5" leading="0" text="点我去看看"/>
-    <graph id="n60_knqv" name="n60" xy="910,643" size="100,1" group="n57_knqv" type="rect" lineSize="0" fillColor="#ff5f9df5"/>
-    <image id="n61_knqv" name="n61" src="knqv6" fileName="img/img_1.png" xy="608,655" group="n57_knqv"/>
-    <component id="n63_pd87" name="btnOpenUrl" src="ilo1cyidi" fileName="btn/btnScaleNoEffect.xml" pkg="te1gxawo" xy="910,619" size="103,27" group="n57_knqv"/>
-    <group id="n57_knqv" name="root" xy="596,353" size="728,374" advanced="true">
+    <text id="n59_knqv" name="n59" xy="911,621" size="100,23" group="n57_knqv" fontSize="19" color="#5f9df5" leading="0" text="点我去看看"/>
+    <graph id="n60_knqv" name="n60" xy="909,643" size="100,1" group="n57_knqv" type="rect" lineSize="0" fillColor="#ff5f9df5"/>
+    <image id="n61_knqv" name="n61" src="knqv6" fileName="img/prestige_img_1.png" xy="607,655" group="n57_knqv"/>
+    <component id="n63_pd87" name="btnOpenUrl" src="ilo1cyidi" fileName="btn/btnScaleNoEffect.xml" pkg="te1gxawo" xy="909,619" size="103,27" group="n57_knqv"/>
+    <text id="n64_ddsk" name="tfInput" xy="598,487" size="727,128" group="n57_knqv" alpha="0" input="true" fontSize="0" autoSize="none" autoClearText="true" text=""/>
+    <group id="n57_knqv" name="root" xy="595,353" size="730,374" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>

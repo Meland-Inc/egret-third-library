@@ -41,8 +41,6 @@
     <image id="e45x11" name="prestige_img_26.png" path="/img/" scale="9grid" scale9grid="47,17,94,34"/>
     <component id="e45x12" name="ComSuperReward.xml" path="/com/"/>
     <component id="e45x13" name="ComRewardPanel.xml" path="/com/"/>
-    <image id="9r5x14" name="gphNormalLstMask.png" path="/"/>
-    <image id="9r5x15" name="gphSuperLstMask.png" path="/"/>
     <component id="9r5x1b" name="ComScroll.xml" path="/com/"/>
     <image id="rkex1d" name="prestige_img_27.png" path="/img/"/>
     <image id="rkex1e" name="prestige_img_28.png" path="/img/"/>
@@ -61,6 +59,16 @@
     <component id="rkex1t" name="ComReplayTempleHint.xml" path="/com/" exported="true"/>
     <image id="rkex1u" name="prestige_dungeons_img_11.png" path="/img/"/>
     <component id="swf41v" name="ComReceiveRewardHint.xml" path="/com/" exported="true"/>
+    <component id="9x0t1w" name="ComShowGrandPrix.xml" path="/com/" exported="true"/>
+    <image id="9x0t1x" name="prestige_img_35.png" path="/img/"/>
+    <image id="9x0t1y" name="prestige_img_34.png" path="/img/"/>
+    <image id="9x0t1z" name="prestige_img_33.png" path="/img/"/>
+    <image id="9x0t20" name="prestige_img_32.png" path="/img/"/>
+    <image id="9x0t21" name="prestige_img_31.png" path="/img/"/>
+    <image id="9x0t22" name="prestige_img_30.png" path="/img/"/>
+    <image id="9x0t23" name="prestige_img_29.png" path="/img/"/>
+    <image id="9x0t24" name="prestige_img_36.png" path="/img/"/>
+    <image id="o9zc25" name="prestige_img_37.png" path="/img/"/>
   </resources>
   <publish name="prestige"/>
 </packageDescription>
