@@ -2,9 +2,9 @@
 <component size="1920,1080" designImage="ui://av6agj0gbmxe2h" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlVoiceType" pages="1,play,0,none,2,pause" selected="0"/>
   <controller name="ctrlIsDevelop" pages="0,false,1,true" selected="0"/>
-  <controller name="ctrlTemGameType" pages="0,none,1,success,2,fail,3,over" selected="0"/>
+  <controller name="ctrlTemGameType" pages="0,none,1,success,2,fail,3,over" selected="1"/>
   <controller name="ctrlStartL" pages="0,,1,,2,,3," selected="0"/>
-  <controller name="ctrlJmType" pages="0,soduku,1,pickphoto,2,classify,3,count,4,balance,5,examination,6,specialExam,7,noCloseSpecialExam" selected="5"/>
+  <controller name="ctrlJmType" pages="0,soduku,1,pickphoto,2,classify,3,count,4,balance,5,examination,6,specialExam,7,noCloseSpecialExam" selected="6"/>
   <controller name="ctrlIsLast" pages="0,false,1,true" selected="0"/>
   <displayList>
     <graph id="n38_gx7z" name="imgStageBG" xy="0,0" size="1920,1080" type="rect" lineSize="0" lineColor="#ffffffff">
@@ -103,7 +103,7 @@
       <gearDisplay controller="ctrlJmType" pages="0,1,2,3,4,5,6"/>
       <gearIcon controller="ctrlJmType" pages="5" values="ui://av6agj0gfhtd3s" default="ui://av6agj0gbmxe2f"/>
       <relation target="n35_gx7z" sidePair="right-right,top-top"/>
-      <Button icon="ui://av6agj0gfhtd3s"/>
+      <Button icon="ui://av6agj0gbmxe2f"/>
     </component>
     <graph id="n61_sco7" name="ladImg" xy="0,-1" size="1920,1080" alpha="0.2" touchable="false" type="rect" lineSize="0" fillColor="#ff000000">
       <gearDisplay controller="ctrlTemGameType" pages="1,2"/>
@@ -178,11 +178,11 @@
     <image id="n109_nlpi" name="imgSuccessRate" src="nlpi43" fileName="img/rate.png" xy="613,507" group="n105_knqv"/>
     <graph id="n111_nlpi" name="gphSuccessRateMask" xy="613,504" size="705,82" group="n105_knqv" type="rect" lineSize="0"/>
     <text id="n110_nlpi" name="tfPageInfo" xy="555,335" size="810,98" group="n105_knqv" font="ui://av6agj0gnlpi49" fontSize="18" align="center" letterSpacing="30" autoSize="none" text="1/"/>
-    <component id="n63_sco7" name="btnNext" src="sco7k" fileName="btn/btnScale.xml" xy="576,649" size="330,102" group="n105_knqv" controller="button,0">
+    <component id="n63_sco7" name="btnNext" src="sco7k" fileName="btn/btnScale.xml" xy="1019,649" size="330,102" group="n105_knqv" controller="button,0">
       <gearIcon controller="ctrlIsLast" pages="0,1" values="ui://av6agj0g766c4t|ui://av6agj0g766c4r"/>
       <Button icon="ui://av6agj0g766c4t"/>
     </component>
-    <component id="n107_nlpi" name="btnNoSubmit" src="sco7k" fileName="btn/btnScale.xml" xy="1019,649" size="330,102" group="n105_knqv">
+    <component id="n107_nlpi" name="btnNoSubmit" src="sco7k" fileName="btn/btnScale.xml" xy="576,649" size="330,102" group="n105_knqv">
       <relation target="n106_nlpi" sidePair="right-right,top-top"/>
       <Button icon="ui://av6agj0gwry861"/>
     </component>
