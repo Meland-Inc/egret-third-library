@@ -3,10 +3,10 @@
  * @desc 游戏客户端包更新类
  * @date 2020-02-13 14:56:09 
  * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-25 18:43:40
+ * @Last Modified time: 2020-04-30 00:01:19
  */
 import fs from 'fs';
-import admzip from "adm-zip";
+import StreamZip from "node-stream-zip";
 
 import { define } from '../define';
 import * as loading from '../loading';
@@ -49,9 +49,8 @@ export default class ClientUpdate {
     private _isDownloadPackage: boolean;
     /** 检查是否最新版本 */
     public async checkLatestVersion() {
-        //从客户端index文件中获取当前游戏版本号
         let globalConfig = config.globalConfig;
-        let gameVersion = config.getVersionConfigValue("clientPackageVersion")
+        let gameVersion = config.getVersionConfigValue(define.eVersionCfgFiled.clientPackageVersion)
         if (!gameVersion) {
             gameVersion = 0;
         }
@@ -136,45 +135,65 @@ export default class ClientUpdate {
                 let each = 100 / this._patchCount;
                 loading.setLoadingProgress(percentage / 100 * each + (this._curVersion - this._startVersion) * each);
             }
+            return;
         }
-        else if (arg === "finished") {
+
+        if (arg === "finished") {
             // 通知完成
+            loading.setLoadingProgress(0);
+            loading.showLoading("正在解压客户端程序包");
+            loading.gradualProgress();
             let content = `开始解压文件:${filename}`;
             logger.log('update', content);
-            try {
-                let zip = new admzip(this._clientPackagePath + filename);
-                zip.extractAllTo(this._clientPackagePath, true);
-                let content = `解压文件:${filename}成功`;
-                logger.log('update', content);
-            } catch (error) {
-                let content = `解压文件:${filename}错误`
-                logger.error(`update`, content, error);
-                alert(content);
-                this.executeUpdateCallback();
-            }
-            fs.unlink(this._clientPackagePath + filename, (err) => {
-                if (err) {
-                    throw err;
-                }
-                logger.log(`update`, '文件:' + filename + '删除成功！');
-
-                //如果是下载整包状态,直接赋值当前版本为最新游戏版本
-                if (this._isDownloadPackage) {
-                    this._isDownloadPackage = false;
-                    this._curVersion = this._gameVersion;
-                }
-
-                if (this._curVersion < this._gameVersion) {
-                    this._curVersion = this._curVersion + 1;
-                }
-                if (this._curVersion >= this._gameVersion) {
-                    config.setVersionConfigValue("clientPackageVersion", this._curVersion);
-                    this.executeUpdateCallback();
-                } else {
-                    this.installSinglePatch()
-                }
+            const streamZip = new StreamZip({
+                file: this._clientPackagePath + filename,
+                storeEntries: true
             });
-        } else if (arg == "404") {
+            streamZip.on('ready', () => {
+                streamZip.extract(null, this._clientPackagePath, (err: Error) => {
+                    if (err) {
+                        streamZip.close();
+
+                        let content = `解压文件:${filename}错误`
+                        logger.error(`update`, content, err);
+                        alert(content);
+                        this.executeUpdateCallback();
+                        return;
+                    }
+                    let content = `解压文件:${filename}成功`;
+                    logger.log('update', content);
+                    streamZip.close();
+
+                    fs.unlink(this._clientPackagePath + filename, (err) => {
+                        if (err) {
+                            let content = `删除文件:${filename}错误`
+                            logger.error(`update`, content, err);
+                        } else {
+                            logger.log(`update`, '文件:' + filename + '删除成功！');
+                        }
+
+                        //如果是下载整包状态,直接赋值当前版本为最新游戏版本
+                        if (this._isDownloadPackage) {
+                            this._isDownloadPackage = false;
+                            this._curVersion = this._gameVersion;
+                        }
+
+                        if (this._curVersion < this._gameVersion) {
+                            this._curVersion = this._curVersion + 1;
+                        }
+                        if (this._curVersion >= this._gameVersion) {
+                            config.setVersionConfigValue(define.eVersionCfgFiled.clientPackageVersion, this._curVersion);
+                            this.executeUpdateCallback();
+                        } else {
+                            this.installSinglePatch()
+                        }
+                    });
+                });
+            });
+            return;
+        }
+
+        if (arg == "404") {
             let content = `下载文件:${filename}错误, 文件不存在!`;
             logger.error(`update`, content);
             alert(content);
@@ -185,6 +204,7 @@ export default class ClientUpdate {
             } else {
                 this.executeUpdateCallback();
             }
+            return;
         }
     }
 

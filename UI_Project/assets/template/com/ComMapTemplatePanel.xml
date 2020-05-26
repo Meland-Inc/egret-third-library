@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" designImage="ui://0axy98cgmzsu6f" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlType" pages="0,recommend,1,race,2,new,3,hot,4,lesson,5,story,6,leisure,7,my,8,homework,9,internal" selected="0"/>
+  <displayList>
+    <graph id="n52_mzsu" name="n52" xy="0,0" size="1920,1080" type="rect" fillColor="#fff7f6f2">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <image id="n53_mzsu" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="175,161" size="1569,891">
+      <relation target="" sidePair="center-center,top-top"/>
+      <relation target="" sidePair="bottomext-bottom"/>
+    </image>
+    <image id="n36_v8nf" name="imgHeaderBg" src="tbm25r" fileName="img/img_mt_bgtitle.png" xy="0,0" size="1920,91">
+      <relation target="" sidePair="top-top,width-width"/>
+    </image>
+    <component id="n38_v8nf" name="btnReturn" src="tbm25y" fileName="btn/btnScale.xml" xy="32,25" size="105,40">
+      <Button title="   返 回" icon="ui://0axy98cgmzsu6h" page="0"/>
+    </component>
+    <text id="n45_v8nf" name="n45" xy="164,25" size="184,44" fontSize="34" color="#716f7a" autoSize="none" text="官方推荐">
+      <gearText controller="ctrlType" pages="1,2,3,4,5,6,7,8,9" values="邀请赛|最新|最热|教程|故事|休闲|我发布的|作业|内部" default="官方推荐"/>
+    </text>
+    <image id="n54_mzsu" name="imgSearchInputBg" src="oiqdcyigx" fileName="img/img_cm_ssk.png" pkg="te1gxawo" xy="1419,104" size="324,47" group="n57_mzsu"/>
+    <text id="n55_mzsu" name="inpSearch" xy="1473,113" size="271,29" group="n57_mzsu" customData="[color=#999999]搜索所有type作品[/color]" input="true" prompt="[color=#999999]搜索所有作品[/color]" fontSize="24" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text=""/>
+    <image id="n56_mzsu" name="n56" src="rujpcyijl" fileName="img/icon_cm_ss.png" pkg="te1gxawo" xy="1427,106" size="42,42" group="n57_mzsu"/>
+    <group id="n57_mzsu" name="grpSearchInput" xy="1419,104" size="325,47" advanced="true">
+      <relation target="n53_mzsu" sidePair="top-top,right-right"/>
+    </group>
+    <component id="n58_mzsu" name="comScroll" src="mzsu6i" fileName="com/ComMapTemplatePanelScroll.xml" xy="238,184" size="1542,862">
+      <relation target="n53_mzsu" sidePair="center-center,height-height"/>
+    </component>
+  </displayList>
+</component>
