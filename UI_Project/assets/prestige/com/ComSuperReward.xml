@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="130,247">
+  <controller name="ctrlBGColor" pages="2,superDeep,3,superLight,4,none" selected="0"/>
+  <displayList>
+    <graph id="n0_e45x" name="gphBG" xy="0,0" size="130,247" type="rect" lineSize="0" fillColor="#ffff8a3d">
+      <gearDisplay controller="ctrlBGColor" pages="0,1,2,3"/>
+      <gearColor controller="ctrlBGColor" pages="2,3" values="#ff8a3d|#fe9e3b" default="#ffffff"/>
+    </graph>
+    <list id="n4_e45x" name="lstReward" xy="10,10" size="109,227" lineGap="10" defaultItem="ui://cqcxan63e45xy" align="center" vAlign="middle">
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="498,297">
+  <controller name="ctrlType" pages="0,congratulation,1,backFull,2,baseLock,3,superPayAndLock,4,superNotPayAndLock" selected="3"/>
+  <displayList>
+    <loader id="n0_swf4" name="ladBG" xy="0,0" size="498,297" group="n7_swf4" url="ui://cqcxan63rkex1p"/>
+    <text id="n1_swf4" name="tfTitle" xy="49,16" pivot="0.5,0.5" size="399,29" group="n7_swf4" fontSize="25" color="#ffffff" align="center" autoSize="none" text="尚未解锁">
+      <gearText controller="ctrlType" pages="0,1,2,3,4" values="恭喜获得|确认|尚未解锁|尚未解锁|尚未解锁"/>
+    </text>
+    <text id="n2_swf4" name="tfContent" xy="2,57" size="495,157" group="n7_swf4" fontSize="25" color="#315aad" align="center" vAlign="middle" autoSize="none" text="背包已满，请清理后领取">
+      <gearDisplay controller="ctrlType" pages="1"/>
+    </text>
+    <list id="n8_swf4" name="lstReward" xy="7,95" size="484,112" group="n7_swf4" layout="row" lineGap="10" colGap="10" defaultItem="ui://cqcxan63e45xy" align="center" vAlign="middle">
+      <gearDisplay controller="ctrlType" pages="0,2,3,4"/>
+      <gearXY controller="ctrlType" pages="0" values="7,79" default="7,95"/>
+      <item/>
+    </list>
+    <text id="n9_swf4" name="tfHInt" xy="118,65" size="265,22" group="n7_swf4" fontSize="18" color="#315aad" align="center" vars="true" autoSize="none" text="购买课程并达到{level=3}级可解锁">
+      <gearDisplay controller="ctrlType" pages="2,3,4"/>
+      <gearText controller="ctrlType" pages="3,4" values="购买课程并达到{level=3}级可解锁|购买课程并达到{level=3}级可解锁" default="达到{level=3}级可解锁"/>
+    </text>
+    <component id="n4_swf4" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="188,235" pivot="0.5,0.5" size="122,46" group="n7_swf4">
+      <gearText controller="ctrlType" pages="0,1,2,3" values="确定|确定|确定|确定" default="获取课程"/>
+      <gearIcon controller="ctrlType" pages="4" values="ui://cqcxan639x0t24" default="ui://cqcxan63rkex1m"/>
+      <Button title="确定" titleFontSize="21" icon="ui://cqcxan63rkex1m"/>
+    </component>
+    <component id="n5_swf4" name="btnClose" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="450,10" size="38,38" group="n7_swf4">
+      <Button icon="ui://cqcxan63e45xc"/>
+    </component>
+    <group id="n7_swf4" name="n7" xy="0,0" size="498,297"/>
+  </displayList>
+</component>

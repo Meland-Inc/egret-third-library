@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080">
+  <controller name="ctrlType" pages="0,payAndUnLock,3,payAndLock,1,noPay" selected="1"/>
+  <displayList>
+    <image id="n1_9x0t" name="imgNoPayBG" src="9x0t1y" fileName="img/prestige_img_34.png" xy="648,91">
+      <gearDisplay controller="ctrlType" pages="3,1"/>
+    </image>
+    <image id="n2_9x0t" name="imgPayBG" src="9x0t1x" fileName="img/prestige_img_35.png" xy="699,206">
+      <gearDisplay controller="ctrlType" pages="0"/>
+    </image>
+    <loader id="n0_9x0t" name="ladGrandPrix" xy="699,143" size="520,690" align="center" vAlign="middle">
+      <gearXY controller="ctrlType" pages="0" values="699,195" default="699,143"/>
+    </loader>
+    <component id="n3_9x0t" name="btnGet" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="861,859" size="188,67" grayed="true">
+      <gearDisplay controller="ctrlType" pages="3,1"/>
+      <gearLook controller="ctrlType" pages="3,1" values="1,0,1,1|1,0,0,1" default="1,0,0,1"/>
+      <Button title="获取课程" icon="ui://cqcxan639x0t1z"/>
+    </component>
+    <text id="n4_9x0t" name="tfTip" xy="862,792" size="196,22" fontSize="18" color="#ffffff" vars="true" strokeColor="#b57212" strokeSize="2" text="购买课程并达到{level=4}级解锁">
+      <gearDisplay controller="ctrlType" pages="3,1"/>
+    </text>
+    <image id="n5_9x0t" name="imgCongration" src="9x0t22" fileName="img/prestige_img_30.png" xy="863,829">
+      <gearDisplay controller="ctrlType" pages="0"/>
+    </image>
+  </displayList>
+</component>

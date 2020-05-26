@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="691,160">
+  <displayList>
+    <image id="n9_e45x" name="imgLevelBG" src="e45xd" fileName="img/img_13.png" xy="0,4"/>
+    <text id="n10_e45x" name="tfLevelDes" xy="17,20" pivot="0.5,0.5" size="105,29" fontSize="25" color="#726d4f" align="center" vAlign="middle" text="探索等级"/>
+    <text id="n11_e45x" name="tfLevel" xy="19,83" pivot="0.5,0.5" size="100,46" fontSize="42" color="#726d4f" align="center" vAlign="middle" vars="true" text="Lv.{level=2}"/>
+    <image id="n17_e45x" name="imgProgressBG" src="e45xf" fileName="img/img_11.png" xy="155,0"/>
+    <image id="n16_e45x" name="imgProgress" src="e45xl" fileName="img/img_5.png" xy="155,0"/>
+    <graph id="n18_e45x" name="gphProgressMask" xy="155,0" size="536,30" type="rect" lineSize="0" lineColor="#00000000">
+      <relation target="n16_e45x" sidePair="left-left,top-top,rightext-right,bottomext-bottom"/>
+    </graph>
+    <text id="n19_e45x" name="tfProgress" xy="316,37" pivot="0.5,0.5" size="213,21" fontSize="17" color="#714423" align="center" vars="true" text="{des=法老城探索点数}:{cur=200}/{total=400}"/>
+  </displayList>
+</component>
