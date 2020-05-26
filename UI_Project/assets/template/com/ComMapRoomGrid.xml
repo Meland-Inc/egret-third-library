@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="429,178" designImage="ui://0axy98cgk9m364" designImageOffsetX="-74" designImageOffsetY="-244" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlSelect" pages="0,0,1,1,2,2" selected="0"/>
+  <controller name="ctrlServer" pages="0,native,1,center" selected="0"/>
   <displayList>
     <image id="n48_k9m3" name="n48" src="k9m36a" fileName="img/img_mt_mapbg1.png" xy="5,0" size="422,178"/>
     <loader id="n42_v8nf" name="loaderMap" xy="17,16" size="163,148" fill="scaleMatchWidth"/>
@@ -26,5 +27,17 @@
     <image id="n52_r5js" name="n52" src="r5jsaf" fileName="img/img_mt_roomhover.png" xy="-1,-1">
       <gearDisplay controller="ctrlSelect" pages="2"/>
     </image>
+    <image id="n53_fxqd" name="n53" src="fxqdah" fileName="img/icon_mt_roomnative.png" xy="192,69">
+      <gearDisplay controller="ctrlServer" pages="0"/>
+    </image>
+    <text id="n54_fxqd" name="txtNative" xy="214,62" size="115,28" fontSize="18" color="#1d3187" vAlign="middle" autoSize="none" text="本地服务器">
+      <gearDisplay controller="ctrlServer" pages="0"/>
+    </text>
+    <image id="n55_fxqd" name="n55" src="fxqdag" fileName="img/icon_mt_roomcenter.png" xy="195,66">
+      <gearDisplay controller="ctrlServer" pages="1"/>
+    </image>
+    <text id="n56_fxqd" name="txtCenter" xy="214,62" size="115,28" fontSize="18" color="#1d3187" vAlign="middle" autoSize="none" text="中心服务器">
+      <gearDisplay controller="ctrlServer" pages="1"/>
+    </text>
   </displayList>
 </component>

@@ -234,6 +234,8 @@
     <image id="qdanad" name="img_mt_mapbg4.png" path="/img/" scale="9grid" scale9grid="70,15,140,30"/>
     <component id="r5jsae" name="ComMapTemplateDetailInfo.xml" path="/com/"/>
     <image id="r5jsaf" name="img_mt_roomhover.png" path="/img/" scale="9grid" scale9grid="108,45,216,90"/>
+    <image id="fxqdag" name="icon_mt_roomcenter.png" path="/img/"/>
+    <image id="fxqdah" name="icon_mt_roomnative.png" path="/img/"/>
   </resources>
   <publish name="template"/>
 </packageDescription>

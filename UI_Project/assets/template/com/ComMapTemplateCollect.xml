@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1920,1080" designImage="ui://0axy98cggu5v8z" designImageAlpha="15" designImageLayer="1">
+<component size="1920,1080" designImage="ui://0axy98cggu5v8z" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlRightDetail" pages="2,empty,0,edit,1,lobby" selected="0"/>
   <controller name="ctrlViewStatus" pages="0,allList,1,selfList,2,create,3,publish,4,detail" selected="0">
     <action type="change_page" fromPage="" toPage="0" objectId="n16_pz1n" controller="ctrlListType" targetPage="7"/>
@@ -10,17 +10,9 @@
       <relation target="" sidePair="top-top,bottomext-bottom"/>
       <relation target="" sidePair="center-center"/>
     </image>
-    <list id="n50_v8nf" name="lstMapGrid" xy="243,183" size="1551,857" layout="flow_hz" overflow="scroll" scrollBarRes="ui://0axy98cgqb974t," lineGap="16" colGap="31" lineItemCount="5" defaultItem="ui://0axy98cgv8nf4z" autoClearItems="true">
+    <list id="n50_v8nf" name="lstMapGrid" xy="243,184" size="1551,860" layout="flow_hz" overflow="scroll" scrollBarRes="ui://0axy98cgqb974t," lineGap="16" colGap="31" lineItemCount="5" defaultItem="ui://0axy98cgv8nf4z" autoClearItems="true">
       <relation target="" sidePair="bottomext-bottom"/>
       <relation target="n53_gu5v" sidePair="left-left"/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
       <item/>
       <item/>
       <item/>

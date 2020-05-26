@@ -29,7 +29,7 @@
       <Button icon="ui://0axy98cgtbm25t"/>
     </component>
     <component id="n38_v8nf" name="btnCreateMap" src="pw6y9q" fileName="btn/btnScaleCreate.xml" xy="24,10" size="128,58" group="n45_azcq">
-      <Button title="创建地图       " icon="ui://0axy98cgtbm25x"/>
+      <Button title="创建地图" icon="ui://0axy98cgtbm25x"/>
     </component>
     <component id="n39_v8nf" name="btnAllMap" src="dvog9v" fileName="btn/btnTextSelect.xml" xy="230,12" size="140,58" group="n45_azcq">
       <Button checked="true" title="地图中心" titleFontSize="24" controller="ctrlPanel" page="0"/>
@@ -54,7 +54,7 @@
     <image id="n60_tbm2" name="n60" src="tbm25u" fileName="img/icon_mt_jiange.png" xy="380,20" group="n45_azcq"/>
     <image id="n61_tbm2" name="n61" src="tbm25u" fileName="img/icon_mt_jiange.png" xy="560,20" group="n45_azcq"/>
     <image id="n62_tbm2" name="n62" src="tbm25u" fileName="img/icon_mt_jiange.png" xy="739,20" group="n45_azcq"/>
-    <group id="n45_azcq" name="groupTitle" xy="0,0" size="1920,91" collapsed="true"/>
+    <group id="n45_azcq" name="groupTitle" xy="0,0" size="1920,91"/>
     <component id="n49_azcq" name="comMapPanel" src="v8nf51" fileName="com/ComMapTemplatePanel.xml" xy="0,0" hideByEditor="true" visible="false">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
