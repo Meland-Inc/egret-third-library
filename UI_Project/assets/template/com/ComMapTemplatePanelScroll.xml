@@ -36,7 +36,7 @@
       <relation target="n59_mzsu" sidePair="width-width,center-center"/>
     </image>
     <list id="n59_mzsu" name="lstPageBtn" xy="539,1761" size="383,24" group="n63_dvog" layout="row" overflow="hidden" colGap="10" defaultItem="ui://0axy98cgmzsu78" align="center" vAlign="middle">
-      <relation target="n63_dvog" sidePair="middle-middle,center-center"/>
+      <relation target="n58_mzsu" sidePair="top-bottom,center-center"/>
       <item title="1"/>
       <item title="2"/>
       <item title="3"/>
@@ -53,8 +53,6 @@
       <relation target="n59_mzsu" sidePair="middle-middle,right-left"/>
       <Button icon="ui://0axy98cgmzsu7b"/>
     </component>
-    <group id="n63_dvog" name="grpPageBtn" xy="493,1756" size="476,33" advanced="true">
-      <relation target="n58_mzsu" sidePair="top-bottom,center-center"/>
-    </group>
+    <group id="n63_dvog" name="grpPageBtn" xy="493,1756" size="476,33" advanced="true"/>
   </displayList>
 </component>
