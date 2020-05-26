@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="213,13" extention="ProgressBar" designImageAlpha="0">
+  <displayList>
+    <image id="n0_yfas" name="n0" src="yfas7z" fileName="img/img_mt_detailprobar_bg.png" xy="0,0" size="213,13">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_yfas" name="bar" src="yfas7y" fileName="img/img_mt_detailprobar_scale.png" xy="0,0" size="213,13"/>
+  </displayList>
+  <ProgressBar titleType="valueAndmax"/>
+</component>

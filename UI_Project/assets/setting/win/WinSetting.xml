@@ -23,47 +23,47 @@
     <group id="n94_o89o" name="grpTabs" xy="759,157" size="384,48" group="n154_o5a3" advanced="true" layout="hz" colGap="12">
       <gearDisplay controller="ctrlGameMode" pages="0"/>
     </group>
-    <text id="n114_o89o" name="tfSoundVolume" xy="487,317" size="45,24" group="n122_o89o" fontSize="20" color="#333333" vAlign="middle" text="音量"/>
-    <component id="n120_o89o" name="sldSoundVolume" src="j70wcyii0" fileName="sld/sldCommonYellow.xml" pkg="te1gxawo" xy="651,321" size="725,20" group="n122_o89o">
+    <text id="n114_o89o" name="tfSoundVolume" xy="487,258" size="45,24" group="n122_o89o" fontSize="20" color="#333333" vAlign="middle" text="音量"/>
+    <component id="n120_o89o" name="sldSoundVolume" src="j70wcyii0" fileName="sld/sldCommonYellow.xml" pkg="te1gxawo" xy="651,262" size="725,20" group="n122_o89o">
       <Slider value="50" max="100"/>
     </component>
-    <group id="n122_o89o" name="grpSoundVolume" xy="487,317" size="889,26" group="n30_o8k6"/>
-    <component id="n115_o89o" name="btnBgm" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="648,377" size="78,42" group="n116_o89o">
+    <group id="n122_o89o" name="grpSoundVolume" xy="487,258" size="889,26" group="n30_o8k6"/>
+    <component id="n115_o89o" name="btnBgm" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="648,318" size="78,42" group="n116_o89o">
       <Button icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
     </component>
-    <text id="n121_o89o" name="tfMusic" xy="487,386" size="45,24" group="n116_o89o" fontSize="20" color="#333333" vAlign="middle" text="音乐"/>
-    <group id="n116_o89o" name="grpBgm" xy="487,377" size="239,42" group="n30_o8k6"/>
-    <component id="n158_j70w" name="btnSoundEffect" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1201,376" size="78,42" group="n119_o89o">
+    <text id="n121_o89o" name="tfMusic" xy="487,327" size="45,24" group="n116_o89o" fontSize="20" color="#333333" vAlign="middle" text="音乐"/>
+    <group id="n116_o89o" name="grpBgm" xy="487,318" size="239,42" group="n30_o8k6"/>
+    <component id="n158_j70w" name="btnSoundEffect" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1201,317" size="78,42" group="n119_o89o">
       <Button icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
     </component>
-    <text id="n117_o89o" name="tfMusicEffect" xy="1039,385" size="45,24" group="n119_o89o" fontSize="20" color="#333333" vAlign="middle" text="音效"/>
-    <group id="n119_o89o" name="grpMusicEffect" xy="1039,376" size="240,42" group="n30_o8k6"/>
-    <text id="n95_o89o" name="tfPathFinding" xy="487,463" size="85,24" group="n105_o89o" fontSize="20" color="#333333" vAlign="middle" text="点击寻路"/>
-    <component id="n159_j70w" name="btnPathFinding" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="648,454" size="78,42" group="n105_o89o">
+    <text id="n117_o89o" name="tfMusicEffect" xy="1039,326" size="45,24" group="n119_o89o" fontSize="20" color="#333333" vAlign="middle" text="音效"/>
+    <group id="n119_o89o" name="grpMusicEffect" xy="1039,317" size="240,42" group="n30_o8k6"/>
+    <text id="n95_o89o" name="tfPathFinding" xy="487,404" size="85,24" group="n105_o89o" fontSize="20" color="#333333" vAlign="middle" text="点击寻路"/>
+    <component id="n159_j70w" name="btnPathFinding" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="648,395" size="78,42" group="n105_o89o">
       <Button icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
     </component>
-    <group id="n105_o89o" name="grpPathFinding" xy="487,458" size="323,42" group="n30_o8k6"/>
-    <text id="n160_j70w" name="tfFPS" xy="1039,463" size="85,24" group="n142_r6hf" fontSize="20" color="#333333" vAlign="middle" text="显示帧率"/>
-    <component id="n161_j70w" name="btnShowFPS" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1201,453" size="78,42" group="n142_r6hf">
+    <group id="n105_o89o" name="grpPathFinding" xy="487,399" size="323,42" group="n30_o8k6"/>
+    <text id="n160_j70w" name="tfFPS" xy="1039,404" size="85,24" group="n142_r6hf" fontSize="20" color="#333333" vAlign="middle" text="显示帧率"/>
+    <component id="n161_j70w" name="btnShowFPS" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1201,394" size="78,42" group="n142_r6hf">
       <Button icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
     </component>
-    <group id="n142_r6hf" name="grpFPS" xy="1039,453" size="240,42" group="n30_o8k6" advanced="true"/>
-    <text id="n144_q29o" name="tfWindWalk" xy="1039,628" size="65,24" group="n146_q29o" visible="false" fontSize="20" color="#333333" vAlign="middle" text="疾风步"/>
-    <component id="n162_j70w" name="btnEnableWindWalk" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1201,620" size="78,42" group="n146_q29o" visible="false">
+    <group id="n142_r6hf" name="grpFPS" xy="1039,394" size="240,42" group="n30_o8k6" advanced="true"/>
+    <text id="n144_q29o" name="tfWindWalk" xy="1039,541" size="65,24" group="n146_q29o" visible="false" fontSize="20" color="#333333" vAlign="middle" text="疾风步"/>
+    <component id="n162_j70w" name="btnEnableWindWalk" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1201,533" size="78,42" group="n146_q29o" visible="false">
       <Button icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
     </component>
-    <group id="n146_q29o" name="grpWindWalk" xy="1039,620" size="240,42" group="n30_o8k6"/>
-    <text id="n97_o89o" name="tfQuality" xy="487,539" size="85,24" group="n180_w0xi" fontSize="20" color="#333333" vAlign="middle" text="画面质量"/>
-    <component id="n177_w0xi" name="comSelectQuality" src="w0xi7" fileName="com/comSelectQuality.xml" xy="651,535" group="n180_w0xi"/>
-    <group id="n180_w0xi" name="grpQuality" xy="487,535" size="336,128" group="n30_o8k6"/>
-    <text id="n164_j70w" name="tfOperation" xy="1039,539" size="85,24" group="n181_w0xi" fontSize="20" color="#333333" vAlign="middle" text="操作方式"/>
-    <component id="n113_o89o" name="comSelectOperation" src="l61l2" fileName="com/comSelectOperation.xml" xy="1202,535" group="n181_w0xi"/>
-    <group id="n181_w0xi" name="grpOperation" xy="1039,535" size="335,128" group="n30_o8k6" visible="false" advanced="true"/>
+    <group id="n146_q29o" name="grpWindWalk" xy="1039,533" size="240,42" group="n30_o8k6"/>
+    <text id="n97_o89o" name="tfQuality" xy="487,480" size="85,24" group="n180_w0xi" fontSize="20" color="#333333" vAlign="middle" text="画面质量"/>
+    <component id="n177_w0xi" name="comSelectQuality" src="w0xi7" fileName="com/comSelectQuality.xml" xy="651,476" group="n180_w0xi"/>
+    <group id="n180_w0xi" name="grpQuality" xy="487,476" size="336,128" group="n30_o8k6"/>
+    <text id="n164_j70w" name="tfOperation" xy="1039,480" size="85,24" group="n181_w0xi" fontSize="20" color="#333333" vAlign="middle" text="操作方式"/>
+    <component id="n113_o89o" name="comSelectOperation" src="l61l2" fileName="com/comSelectOperation.xml" xy="1202,476" group="n181_w0xi"/>
+    <group id="n181_w0xi" name="grpOperation" xy="1039,476" size="335,128" group="n30_o8k6" visible="false" advanced="true"/>
     <component id="n42_o8k6" name="btnVconsole" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1118,743" size="120,44" group="n30_o8k6" visible="false">
       <Button title="开启vconsole" titleFontSize="20" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <text id="n149_jd08" name="tfServerIdTitle" xy="487,253" size="97,24" group="n30_o8k6" fontSize="20" color="#333333" vAlign="middle" vars="true" text="服务器ID: "/>
-    <text id="n152_qh6c" name="tfGameServerHost" xy="588,253" size="82,24" group="n30_o8k6" input="true" fontSize="20" color="#333333" vAlign="middle" text="xxxxxxx"/>
+    <text id="n149_jd08" name="tfServerIdTitle" xy="487,757" size="104,24" group="n30_o8k6" fontSize="20" color="#333333" vAlign="middle" vars="true" text="服务器ID: "/>
+    <text id="n152_qh6c" name="tfGameServerHost" xy="588,757" size="82,24" group="n30_o8k6" input="true" fontSize="20" color="#333333" vAlign="middle" text="xxxxxxx"/>
     <component id="n29_o8k6" name="btnOpenLog" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="576,823" size="120,44" group="n176_hxjz">
       <Button title="查看日志" titleFontSize="20" icon="ui://te1gxawooiqdcyih1"/>
     </component>
@@ -86,16 +86,16 @@
       <Button title="获取角色ID" titleFontSize="20" icon="ui://te1gxawoeggjcyihf"/>
     </component>
     <group id="n176_hxjz" name="n176" xy="576,823" size="912,46" group="n30_o8k6"/>
-    <text id="n182_ggj7" name="tfRoomCodeTitle" xy="1037,253" size="85,27" group="n184_ggj7" fontSize="20" vAlign="middle" text="房间码：&#xA;"/>
-    <text id="n183_ggj7" name="tfRoomCode" xy="1126,253" size="65,24" group="n184_ggj7" fontSize="20" vAlign="middle" singleLine="true" text="999999">
+    <text id="n182_ggj7" name="tfRoomCodeTitle" xy="487,719" size="77,27" group="n184_ggj7" fontSize="20" vAlign="middle" text="房间码：&#xA;"/>
+    <text id="n183_ggj7" name="tfRoomCode" xy="576,719" size="77,24" group="n184_ggj7" fontSize="20" vAlign="middle" singleLine="true" text="999999">
       <relation target="n182_ggj7" sidePair="left-right"/>
     </text>
-    <component id="n185_ggj7" name="btnRoomCodeMax" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1208,258" size="24,16" group="n184_ggj7">
+    <component id="n185_ggj7" name="btnRoomCodeMax" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="658,724" size="24,16" group="n184_ggj7">
       <relation target="n183_ggj7" sidePair="left-right"/>
       <Button icon="ui://te1gxawoggj7cyijo"/>
     </component>
-    <group id="n184_ggj7" name="grpRoomCode" xy="1037,253" size="195,27" group="n30_o8k6" advanced="true"/>
-    <group id="n30_o8k6" name="system" xy="487,253" size="1001,616" group="n154_o5a3" advanced="true">
+    <group id="n184_ggj7" name="grpRoomCode" xy="487,719" size="195,27" group="n30_o8k6" advanced="true"/>
+    <group id="n30_o8k6" name="system" xy="487,258" size="1001,611" group="n154_o5a3" advanced="true">
       <gearDisplay controller="conSetting" pages="0"/>
     </group>
     <component id="n66_o31t" name="cbManorName" src="l61l3" fileName="com/comManorList.xml" xy="651,315" size="254,40" group="n71_o31t">
@@ -121,7 +121,7 @@
     <loader id="n168_sh0c" name="n168" xy="844,395" size="141,40" group="n71_o31t" url="ui://te1gxawoeggjcyihr" fill="scaleFree"/>
     <text id="n127_xljy" name="tfSelectManorBuyRow" xy="651,395" pivot="0.5,0.5" size="140,40" group="n71_o31t" input="true" keyboardType="4" fontSize="20" color="#333333" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="1920"/>
     <text id="n128_xljy" name="tfSelectManorBuyCol" xy="844,395" pivot="0.5,0.5" size="140,40" group="n71_o31t" input="true" keyboardType="4" fontSize="20" color="#333333" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="1080"/>
-    <text id="n129_xljy" name="n129" xy="810,403" size="18,24" group="n71_o31t" fontSize="20" color="#333333" vAlign="middle" text="X"/>
+    <text id="n129_xljy" name="n129" xy="810,403" size="19,24" group="n71_o31t" fontSize="20" color="#333333" vAlign="middle" text="X"/>
     <text id="n136_tb0j" name="tfCurManorID" xy="925,241" size="72,26" group="n71_o31t" fontSize="20" color="#990066" vAlign="middle" autoSize="none" autoClearText="true" text="11"/>
     <component id="n133_xljy" name="btnUpdateSize" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1025,394" size="120,44" group="n71_o31t">
       <Button title="更新" icon="ui://te1gxawooiqdcyih1"/>

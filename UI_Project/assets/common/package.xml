@@ -5,7 +5,6 @@
     <image id="qn8o8" name="img_main_chatbubble_1.png" path="/old/newImg/" exported="true" scale="9grid" scale9grid="25,10,50,20"/>
     <image id="qn8o9" name="img_main_chatbubble_2.png" path="/old/newImg/" exported="true"/>
     <component id="qn8oa" name="CommonModal.xml" path="/com/" exported="true"/>
-    <component id="qn8ob" name="CommonBubbleText.xml" path="/old/com/" exported="true"/>
     <component id="qn8od" name="btnCommon.xml" path="/old/btn/" exported="true"/>
     <component id="cnpnf" name="CommonToast.xml" path="/com/" exported="true"/>
     <component id="hxf8g" name="CommonAlert.xml" path="/com/" exported="true"/>
@@ -656,6 +655,9 @@
     <image id="rknvcyik2" name="img_cm_yxz.png" path="/img/" exported="true" favorite="true"/>
     <image id="rknvcyik3" name="img_cm_yxz_1.png" path="/img/" exported="true"/>
     <component id="nci3cyijz" name="SaveLevelDataAlert.xml" path="/com/" exported="true"/>
+    <image id="o9zccyik5" name="icon_dialog_11.png" path="/img/" exported="true"/>
+    <component id="lgy9cyik6" name="CommonBubbleText.xml" path="/com/" exported="true"/>
+    <image id="lgy9cyik7" name="icon_dialog_12.png" path="/img/" exported="true" scale="9grid" scale9grid="30,30,272,131"/>
   </resources>
   <publish name="common">
     <atlas name="默认" index="0"/>

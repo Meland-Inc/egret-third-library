@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="350,133" opaque="false" designImage="ui://i25v0ebkhxqgb" designImageOffsetX="-637" designImageOffsetY="-210" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlOperateType" pages="0,use,1,select,2,unloadEquip" selected="2"/>
+<component size="350,135" opaque="false" designImage="ui://i25v0ebkhxqgb" designImageOffsetX="-637" designImageOffsetY="-210" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlOperateType" pages="0,use,1,select,2,unloadEquip" selected="0"/>
   <displayList>
-    <image id="n2_grbn" name="tipsBg" src="gyoucyiiy" fileName="img/img_cm_xxk.png" pkg="te1gxawo" xy="0,0" size="226,133">
+    <image id="n2_grbn" name="tipsBg" src="gyoucyiiy" fileName="img/img_cm_xxk.png" pkg="te1gxawo" xy="0,0" size="226,135">
       <relation target="" sidePair="height-height"/>
     </image>
     <loader id="n30_grbn" name="ladIcon" xy="10,10" pivot="0.5,0.5" size="64,64" url="ui://te1gxawooiqdcyigz" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
     <loader id="n41_els8" name="quality" xy="12,12" pivot="0.5,0.5" size="60,60" group="n43_els8" url="ui://ruc22gntnl0r3b" align="center" vAlign="middle" fill="scaleNoBorder"/>
     <loader id="n42_els8" name="icon" xy="12,12" pivot="0.5,0.5" size="60,60" group="n43_els8" align="center" vAlign="middle" fill="scale"/>
     <group id="n43_els8" name="grpItemIcon" xy="12,12" size="60,60" advanced="true"/>
-    <text id="n9_grbn" name="tfName" xy="80,16" size="140,20" fontSize="16" color="#ffffff" vAlign="middle" autoSize="height" bold="true" text="name"/>
-    <text id="n44_d8az" name="tfDesc" xy="12,83" size="200,18" fontSize="14" color="#ffffff" autoSize="none" text=""/>
+    <text id="n9_grbn" name="tfName" xy="80,16" size="140,23" fontSize="16" color="#ffffff" vAlign="middle" autoSize="height" text="name"/>
+    <text id="n44_d8az" name="tfDesc" xy="12,83" size="200,20" fontSize="14" color="#ffffff" autoSize="height" text=""/>
     <component id="n21_grbn" name="btnUse" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="231,3" size="120,44">
       <gearDisplay controller="ctrlOperateType" pages="0,2"/>
       <gearText controller="ctrlOperateType" pages="2" values="脱下" default="使用"/>
-      <Button title="脱下" titleColor="#ffffff" titleFontSize="20" icon="ui://te1gxawooiqdcyih3"/>
+      <Button title="使用" titleColor="#ffffff" titleFontSize="20" icon="ui://te1gxawooiqdcyih3"/>
     </component>
     <component id="n45_r5nm" name="btnSelect" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="231,3" size="120,44">
       <gearDisplay controller="ctrlOperateType" pages="1"/>
       <Button title="选择" titleColor="#ffffff" titleFontSize="20" icon="ui://te1gxawooiqdcyih3"/>
     </component>
-    <text id="n46_hl7y" name="tfType" xy="80,39" size="85,18" fontSize="14" color="#f0eedc" vAlign="middle" autoSize="height" text="道具"/>
-    <text id="n47_hl7y" name="tfTexture" xy="12,107" size="200,18" fontSize="14" color="#f0eedc" align="right" vAlign="middle" vars="true" autoSize="none" text="纹理：{tex=texture}">
+    <text id="n46_hl7y" name="tfType" xy="80,39" size="85,20" fontSize="14" color="#f0eedc" vAlign="middle" autoSize="height" text="道具"/>
+    <text id="n47_hl7y" name="tfTexture" xy="12,109" size="200,18" fontSize="14" color="#f0eedc" align="right" vAlign="middle" vars="true" autoSize="none" text="纹理：{tex=texture}">
       <relation target="n44_d8az" sidePair="top-bottom"/>
     </text>
   </displayList>

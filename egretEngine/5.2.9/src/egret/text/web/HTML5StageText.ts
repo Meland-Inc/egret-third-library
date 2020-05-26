@@ -731,12 +731,12 @@ namespace egret.web {
             }
 
             inputElement.onkeydown = function () {
-                if (self._stageText.$textfield.isIDETip) {
-                    if ([13, 38, 40].indexOf((event as KeyboardEvent).which) >= 0) {
-                        (event as KeyboardEvent).returnValue = false;
-                    }
-                }
                 if (self._stageText) {
+                    if (self._stageText.$textfield.isIDETip) {
+                        if ([13, 38, 40].indexOf((event as KeyboardEvent).which) >= 0) {
+                            (event as KeyboardEvent).returnValue = false;
+                        }
+                    }
                     self._stageText._onKeyPress();
                 }
             }
