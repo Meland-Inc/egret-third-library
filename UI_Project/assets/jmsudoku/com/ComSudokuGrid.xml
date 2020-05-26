@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="250,250">
-  <controller name="ctrlNumber" pages="0,0,1,1,2,2,3,3,4,4,5,101" selected="0"/>
+  <controller name="ctrlNumber" pages="0,0,1,1,2,2,3,3,4,4,5,101" selected="1"/>
   <controller name="ctrlType" pages="0,blank,1,number" selected="0"/>
   <displayList>
-    <image id="n1_erox" name="imgnum1" src="erox0" fileName="img/icon_jmsudoku_number1.png" xy="0,0" size="250,250">
+    <loader id="n1_erox" name="imgnum1" xy="0,0" size="250,250" align="center" vAlign="middle" fill="scale">
       <gearDisplay controller="ctrlNumber" pages="1"/>
       <relation target="" sidePair="width-width,height-height"/>
-    </image>
-    <image id="n2_erox" name="imgnum2" src="erox1" fileName="img/icon_jmsudoku_number2.png" xy="0,0" size="250,250">
+    </loader>
+    <loader id="n2_erox" name="imgnum2" xy="0,0" size="250,250" align="center" vAlign="middle" fill="scale">
       <gearDisplay controller="ctrlNumber" pages="2"/>
       <relation target="" sidePair="width-width,height-height"/>
-    </image>
-    <image id="n3_erox" name="imgnum3" src="erox2" fileName="img/icon_jmsudoku_number3.png" xy="0,0" size="250,250">
+    </loader>
+    <loader id="n3_erox" name="imgnum3" xy="0,0" size="250,250" align="center" vAlign="middle" fill="scale">
       <gearDisplay controller="ctrlNumber" pages="3"/>
       <relation target="" sidePair="width-width,height-height"/>
-    </image>
-    <image id="n4_erox" name="imgnum4" src="erox3" fileName="img/icon_jmsudoku_number4.png" xy="0,0" size="250,250">
+    </loader>
+    <loader id="n4_erox" name="imgnum4" xy="0,0" size="250,250" align="center" vAlign="middle" fill="scale">
       <gearDisplay controller="ctrlNumber" pages="4"/>
       <relation target="" sidePair="width-width,height-height"/>
-    </image>
-    <image id="n8_kag9" name="imgnum101" src="kag98" fileName="img/icon_jmsudoku_number101.png" xy="0,0" size="250,250">
+    </loader>
+    <loader id="n8_kag9" name="imgnum101" xy="0,0" size="250,250" align="center" vAlign="middle" fill="scale">
       <gearDisplay controller="ctrlNumber" pages="5"/>
       <relation target="" sidePair="height-height,width-width"/>
-    </image>
+    </loader>
     <component id="n5_erox" name="btnGrid" src="erox6" fileName="btnDrag.xml" xy="0,0" size="250,250">
       <relation target="" sidePair="height-height,width-width"/>
       <relation target="" sidePair="left-left,top-top"/>
