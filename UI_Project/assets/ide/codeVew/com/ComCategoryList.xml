@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1920,1080" opaque="false" designImage="ui://thvmj7vos45w0" designImageAlpha="70" adaptationTest="FitSize">
+<component size="1920,1080" opaque="false" designImage="ui://thvmj7vos45w0" designImageAlpha="70">
   <displayList>
     <component id="n27_hoex" name="comCodeblocksPool" src="s45w1v" fileName="codeVew/com/CodeblockPool.xml" xy="1174,0" size="630,1082" blend="none" controller="ctrlGameModel,1">
       <relation target="" sidePair="right-right,bottomext-bottom"/>
@@ -20,6 +20,7 @@
       <item title="函数" icon="ui://ti9jag5ts45w7" name="diyfunction" selectedIcon="ui://ti9jag5ts45w8" controllers="c1,8"/>
       <item title="界面" icon="ui://ti9jag5tf0vfwcyijq" name="userInterface" selectedIcon="ui://ti9jag5tf0vfwcyijr" controllers="c1,10"/>
       <item title="自定义" icon="ui://ti9jag5ts45wl" name="custom" selectedIcon="ui://ti9jag5ts45wm" controllers="c1,9"/>
+      <item title="内部" icon="ui://ti9jag5tf0vfwcyijq" name="internal"/>
     </list>
     <component id="n29_8tz6" name="btnAction" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="1815,980" size="96,96">
       <relation target="" sidePair="right-right,bottom-bottom"/>
