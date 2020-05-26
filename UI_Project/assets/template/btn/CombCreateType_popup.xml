@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="150,200">
+  <displayList>
+    <image id="n2_gu5v" name="n2" src="gu5v9a" fileName="img/img_mt_xialakuang1.png" xy="0,3" size="150,193">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <list id="n3_gu5v" name="list" xy="0,0" size="150,191" overflow="scroll" defaultItem="ui://0axy98cgmzsu6r">
+      <relation target="" sidePair="width-width"/>
+      <item title="选项1"/>
+      <item title="选项2"/>
+      <item title="选项3"/>
+      <item title="选项4"/>
+      <item title="选项5"/>
+    </list>
+  </displayList>
+</component>

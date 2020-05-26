@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" designImage="ui://0axy98cgyfas8d" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlStep" pages="0,0,1,1" selected="0"/>
+  <controller name="ctrlManor" pages="0,0,1,1" selected="0"/>
+  <displayList>
+    <graph id="n77_yfas" name="n77" xy="0,0" size="1920,1080" group="n83_yfas" type="rect" fillColor="#fff7f6f2">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <image id="n80_yfas" name="imgHeaderBg" src="tbm25r" fileName="img/img_mt_bgtitle.png" xy="0,0" size="1920,90" group="n83_yfas">
+      <relation target="" sidePair="width-width,top-top"/>
+    </image>
+    <text id="n81_yfas" name="n81" xy="168,26" size="152,44" group="n83_yfas" fontSize="32" color="#716f7a" autoSize="none" text="创建地图"/>
+    <component id="n82_yfas" name="btnReturn" src="tbm25y" fileName="btn/btnScale.xml" xy="35,24" size="101,42" group="n83_yfas">
+      <Button title="  返回" icon="ui://0axy98cgmzsu6h" page="0"/>
+    </component>
+    <group id="n83_yfas" name="grpMain" xy="0,0" size="1920,1080"/>
+    <image id="n85_vrsj" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="169,171" size="1584,895" group="n49_v8nf">
+      <relation target="" sidePair="bottomext-bottom,top-top"/>
+    </image>
+    <image id="n84_yfas" name="n84" src="yfas8f" fileName="img/icon_mt_xzmb.png" xy="167,100" size="213,52" group="n49_v8nf">
+      <relation target="" sidePair="left-left,top-top"/>
+    </image>
+    <text id="n46_v8nf" name="n46" xy="185,107" size="189,42" group="n49_v8nf" fontSize="24" color="#ffffff" vAlign="middle" autoSize="none" text="选择一个模板">
+      <relation target="n84_yfas" sidePair="middle-middle,left-left"/>
+    </text>
+    <component id="n47_v8nf" name="btnNext" src="tbm25y" fileName="btn/btnScale.xml" xy="1576,971" size="142,50" group="n49_v8nf">
+      <relation target="n85_vrsj" sidePair="bottom-bottom,right-right"/>
+      <Button title="下一步" titleFontSize="26" icon="ui://0axy98cgyfas8e" page="0"/>
+    </component>
+    <list id="n48_v8nf" name="lstTemplate" xy="218,235" size="1484,677" group="n49_v8nf" layout="flow_hz" overflow="scroll" lineGap="36" colGap="6" defaultItem="ui://0axy98cgv8nf56" autoClearItems="true">
+      <relation target="n85_vrsj" sidePair="top-top,bottomext-bottom"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n49_v8nf" name="n49" xy="167,100" size="1586,966" advanced="true">
+      <gearDisplay controller="ctrlStep" pages="0"/>
+    </group>
+    <image id="n78_yfas" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="399,123" size="1121,897" group="n63_v8nf">
+      <relation target="n63_v8nf" sidePair="bottomext-bottom"/>
+    </image>
+    <image id="n68_mzsu" name="n68" src="mzsu6m" fileName="img/img_mt_bg_01.png" xy="847,191" size="534,645" group="n63_v8nf"/>
+    <image id="n67_mzsu" name="n67" src="mzsu6l" fileName="img/img_mt_bg_danlan.png" xy="847,195" size="534,276" group="n63_v8nf"/>
+    <image id="n70_mzsu" name="n70" src="mzsu6o" fileName="img/img_mt_createbg_top.png" xy="847,187" size="534,137" group="n63_v8nf">
+      <relation target="n68_mzsu" sidePair="width-width,top-top"/>
+    </image>
+    <image id="n71_mzsu" name="n71" src="mzsu6w" fileName="img/img_mt_dtmzi_bg.png" xy="874,187" size="172,55" group="n63_v8nf">
+      <relation target="n70_mzsu" sidePair="left-left,top-top"/>
+    </image>
+    <component id="n50_v8nf" name="btnSelectMapIcon" src="mzsu74" fileName="btn/BtnSetMapIcon.xml" xy="533,189" size="290,285" group="n63_v8nf"/>
+    <text id="n51_v8nf" name="tfMapNameTitle" xy="887,196" size="146,40" group="n63_v8nf" fontSize="32" color="#4db6ff" align="center" vAlign="middle" leading="0" autoSize="none" text="地图名字">
+      <relation target="n71_mzsu" sidePair="top-top,center-center"/>
+    </text>
+    <image id="n72_mzsu" name="n72" src="mzsu6x" fileName="img/img_mt_xuxian.png" xy="846,392" size="534,4" group="n63_v8nf">
+      <relation target="n68_mzsu" sidePair="top-top,width-width"/>
+    </image>
+    <component id="n52_v8nf" name="comNameInput" src="dv1icyiim" fileName="com/ComInput.xml" pkg="te1gxawo" xy="874,255" size="484,48" group="n63_v8nf">
+      <relation target="n70_mzsu" sidePair="top-top,center-center"/>
+      <Label icon="ui://0axy98cgmzsu76"/>
+    </component>
+    <text id="n54_v8nf" name="tfIsCanEdit" xy="872,343" size="201,37" group="n63_v8nf" fontSize="28" color="#0079cd" vAlign="middle" leading="0" text="编辑器是否可用">
+      <relation target="n68_mzsu" sidePair="left-left"/>
+    </text>
+    <component id="n55_v8nf" name="btnIsCanEdit" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1283,339" size="69,37" group="n63_v8nf">
+      <relation target="n54_v8nf" sidePair="top-top"/>
+      <relation target="n68_mzsu" sidePair="right-right"/>
+      <Button checked="true" icon="ui://0axy98cgpw6y9o" selectedIcon="ui://0axy98cgpw6y9p"/>
+    </component>
+    <text id="n56_v8nf" name="tfIsManorCheckPoint" xy="871,415" size="173,37" group="n63_v8nf" fontSize="28" color="#0079cd" vAlign="middle" text="是否领地关卡">
+      <relation target="n68_mzsu" sidePair="left-left"/>
+    </text>
+    <component id="n57_v8nf" name="btnIsManorCheckPoint" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1283,417" size="69,37" group="n63_v8nf">
+      <relation target="n56_v8nf" sidePair="top-top"/>
+      <relation target="n68_mzsu" sidePair="right-right"/>
+      <Button icon="ui://0axy98cgpw6y9o" selectedIcon="ui://0axy98cgpw6y9p" controller="ctrlManor" page="1"/>
+    </component>
+    <component id="n64_v8nf" name="btnPre" src="tbm25y" fileName="btn/btnScale.xml" xy="940,890" size="140,54" group="n63_v8nf">
+      <Button title="  上一步" titleFontSize="24" icon="ui://0axy98cgmzsu6y" page="0"/>
+    </component>
+    <component id="n65_v8nf" name="btnCreate" src="tbm25y" fileName="btn/btnScale.xml" xy="1094,890" size="133,54" group="n63_v8nf">
+      <Button title="创建地图" titleFontSize="24" icon="ui://0axy98cgmzsu6z" page="0"/>
+    </component>
+    <component id="n66_v8nf" name="btnCreateEnter" src="tbm25y" fileName="btn/btnScale.xml" xy="1238,890" size="142,54" group="n63_v8nf">
+      <Button title="创建进入" titleFontSize="24" icon="ui://0axy98cgmzsu70" page="0"/>
+    </component>
+    <image id="n86_pw6y" name="n86" src="yfas7r" fileName="img/img_mt_mapbgframe.png" xy="528,184" size="298,292" group="n63_v8nf">
+      <relation target="n50_v8nf" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n58_v8nf" name="tfManorGenerateType" xy="890,531" size="243,37" group="n87_nav8" fontSize="26" color="#008ccd" vAlign="middle" autoSize="none" text="领地生成方式"/>
+    <component id="n59_v8nf" name="cbSelectManorType" src="mzsu6t" fileName="btn/CombCreateType.xml" xy="869,569" size="492,48" group="n87_nav8">
+      <ComboBox title="回字形" icon="ui://0axy98cgmzsu6p" titleColor="#4eaed1" visibleItemCount="6">
+        <item title="回字形" value="palindrome"/>
+        <item title="横向排列" value="horizontal"/>
+        <item title="纵向排列" value="vertical"/>
+      </ComboBox>
+    </component>
+    <text id="n60_v8nf" name="tfManorGenerateGap" xy="890,672" size="268,34" group="n87_nav8" fontSize="26" color="#00389f" vAlign="middle" autoSize="none" text="领地生成间隔"/>
+    <component id="n61_v8nf" name="cbManorGap" src="mzsu6v" fileName="btn/CombBlankType.xml" xy="871,709" size="487,49" group="n87_nav8">
+      <ComboBox title="0(领地相接)" titleColor="#4a89d7" visibleItemCount="10">
+        <item title="0(领地相接)" value="0"/>
+        <item title="10(部分可见)" value="10"/>
+        <item title="30(完全不可见)" value="30"/>
+      </ComboBox>
+    </component>
+    <image id="n73_mzsu" name="n73" src="mzsu72" fileName="img/icon_mt_point2.png" xy="874,682" size="11,12" group="n87_nav8"/>
+    <image id="n74_mzsu" name="n74" src="mzsu72" fileName="img/icon_mt_point2.png" xy="1068,682" size="11,12" group="n87_nav8"/>
+    <image id="n75_mzsu" name="n75" src="mzsu73" fileName="img/icon_mt_pointblue.png" xy="874,542" size="11,12" group="n87_nav8"/>
+    <image id="n76_mzsu" name="n76" src="mzsu73" fileName="img/icon_mt_pointblue.png" xy="1068,542" size="11,12" group="n87_nav8"/>
+    <group id="n87_nav8" name="n87" xy="869,531" size="492,227" group="n63_v8nf" advanced="true">
+      <gearDisplay controller="ctrlManor" pages="1"/>
+      <relation target="n56_v8nf" sidePair="left-left,top-top"/>
+    </group>
+    <group id="n63_v8nf" name="n63" xy="399,123" size="1121,897" advanced="true">
+      <gearDisplay controller="ctrlStep" pages="1"/>
+      <relation target="" sidePair="center-center,top-top"/>
+      <relation target="" sidePair="bottomext-bottom"/>
+    </group>
+  </displayList>
+</component>

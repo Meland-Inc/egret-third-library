@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="202,201" extention="Button" designImage="ui://0axy98cgqdana1" designImageOffsetX="-821" designImageOffsetY="-208">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <image id="n6_qdan" name="imgBG" src="a16n4m" fileName="img/img_stencil_fm_7.png" xy="2,2" size="198,195"/>
+    <component id="n7_qdan" name="icon" src="pz1n3t" fileName="com/ComAutoClipLad.xml" xy="2,2" size="198,195"/>
+    <loader id="n8_qdan" name="lad" xy="0,0" size="202,199" url="ui://0axy98cgiv93b" fill="scaleFree">
+      <gearDisplay controller="button" pages="1"/>
+    </loader>
+    <image id="n5_qdan" name="n5" src="yfas7r" fileName="img/img_mt_mapbgframe.png" xy="-1,-1" size="204,202"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

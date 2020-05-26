@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1920,1080" designImage="ui://thvmj7vokujx4cyijc" designImageLayer="1">
+<component size="1920,1080" designImageAlpha="100" designImageLayer="1">
   <displayList>
     <component id="n0_kujx" name="comBg" src="qncgcyiji" fileName="com/comBg.xml" pkg="te1gxawo" xy="660,267" size="596,368" group="n8_kujx"/>
-    <component id="n6_kujx" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1199,271" size="48,48" group="n8_kujx">
-      <Button icon="ui://te1gxawooiqdcyih2"/>
+    <component id="n6_kujx" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1209,274" size="36,36" group="n8_kujx">
+      <Button icon="ui://0axy98cgqdan9y"/>
     </component>
-    <text id="n1_kujx" name="tfTitle" xy="691,280" size="77,28" group="n8_kujx" fontSize="24" color="#333333" vAlign="middle" text="房间码"/>
+    <text id="n1_kujx" name="tfTitle" xy="691,280" size="77,31" group="n8_kujx" fontSize="24" color="#333333" vAlign="middle" text="房间码"/>
     <text id="n2_kujx" name="tfTips" xy="740,375" size="148,28" group="n8_kujx" fontSize="20" color="#333333" vAlign="middle" autoSize="none" text="请输入房间密码"/>
     <image id="n9_kujx" name="imgCodeBg1" src="fv5t2r" fileName="img/img_map_xz.png" pkg="makcczvj" xy="740,423" group="n16_kujx"/>
     <image id="n11_kujx" name="imgCodeBg2" src="fv5t2r" fileName="img/img_map_xz.png" pkg="makcczvj" xy="816,423" group="n16_kujx"/>
@@ -14,8 +14,8 @@
     <image id="n14_kujx" name="imgCodeBg5" src="fv5t2r" fileName="img/img_map_xz.png" pkg="makcczvj" xy="1044,423" group="n16_kujx"/>
     <image id="n15_kujx" name="imgCodeBg6" src="fv5t2r" fileName="img/img_map_xz.png" pkg="makcczvj" xy="1120,423" group="n16_kujx"/>
     <group id="n16_kujx" name="grpCodeBg" xy="740,423" size="436,56" group="n8_kujx" advanced="true" collapsed="true" layout="hz" colGap="20"/>
-    <component id="n4_kujx" name="btnConfirm" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="808,550" size="300,43" group="n8_kujx">
-      <Button title="确定" titleFontSize="24" icon="ui://te1gxawooiqdcyih1"/>
+    <component id="n4_kujx" name="btnConfirm" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="864,550" size="190,52" group="n8_kujx">
+      <Button title="确定" titleFontSize="24" icon="ui://0axy98cgqdan9x"/>
     </component>
     <text id="n21_kujx" name="inpCode0" xy="740,423" size="56,56" group="n22_kujx" fontSize="20" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" text=""/>
     <text id="n10_kujx" name="inpCode1" xy="816,423" size="56,56" group="n22_kujx" fontSize="20" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" text=""/>

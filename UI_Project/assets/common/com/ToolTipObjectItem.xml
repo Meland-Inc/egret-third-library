@@ -11,7 +11,7 @@
     <text id="n26_lbex" name="tfType" xy="80,43" size="85,20" fontSize="14" color="#f0eedc" vAlign="middle" autoSize="height" text="生物">
       <gearText controller="ctrlType" pages="0,1,2,3" values="生物|地图物件|道具|自定义"/>
     </text>
-    <text id="n28_lbex" name="tfDesc" xy="15,128" size="190,23" fontSize="16" color="#ffffff" leading="5" autoSize="height" bold="true" text="我是物品描述">
+    <text id="n28_lbex" name="tfDesc" xy="15,128" size="190,23" fontSize="16" color="#ffffff" leading="5" autoSize="height" text="我是物品描述">
       <relation target="n40_g6m3" sidePair="top-bottom"/>
     </text>
     <text id="n35_hl7y" name="tfTexture" xy="15,156" size="201,18" fontSize="14" color="#f0eedc" align="right" vAlign="middle" vars="true" autoSize="none" text="纹理：{tex=texture}">

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" designImage="ui://0axy98cgk9m364" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlRightDetail" pages="2,empty,0,edit,1,lobby" selected="0"/>
+  <controller name="ctrlViewStatus" pages="0,allList,1,selfList,2,create,3,publish,4,detail" selected="0">
+    <action type="change_page" fromPage="" toPage="0" objectId="n16_pz1n" controller="ctrlListType" targetPage="7"/>
+    <action type="change_page" fromPage="" toPage="1" objectId="n16_pz1n" controller="ctrlListType" targetPage="0"/>
+  </controller>
+  <displayList>
+    <image id="n65_k9m3" name="n65" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="49,221" size="1829,859">
+      <relation target="" sidePair="top-top,bottomext-bottom"/>
+      <relation target="" sidePair="center-center"/>
+    </image>
+    <component id="n61_v8nf" name="btnRoomCodeEnter" src="k9m36d" fileName="btn/btnFix.xml" xy="1715,156">
+      <gearDisplay controller="ctrlViewStatus" pages="0"/>
+      <relation target="n65_k9m3" sidePair="left-left,bottom-top"/>
+      <Button title="房间码加入" titleFontSize="20" icon="ui://0axy98cgk9m36b"/>
+    </component>
+    <list id="n62_v8nf" name="lstRoom" xy="72,243" size="1804,819" layout="flow_hz" overflow="hidden" lineGap="20" colGap="14" defaultItem="ui://0axy98cgv8nf54" autoClearItems="true">
+      <relation target="n65_k9m3" sidePair="bottomext-bottom,center-center"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n63_k9m3" name="n63" src="tbm25p" fileName="img/icon_mt_titlebg2.png" xy="53,133">
+      <relation target="n65_k9m3" sidePair="left-left,bottom-top"/>
+    </image>
+    <text id="n60_v8nf" name="n60" xy="68,143" size="145,39" fontSize="26" color="#ffffff" vAlign="middle" autoSize="none" italic="true" text="全部房间">
+      <relation target="n63_k9m3" sidePair="middle-middle,left-left"/>
+    </text>
+    <component id="n64_k9m3" name="btnRefresh" src="tbm25y" fileName="btn/btnScale.xml" xy="255,149" size="108,41">
+      <gearDisplay controller="ctrlViewStatus" pages="0"/>
+      <relation target="n65_k9m3" sidePair="right-right,bottom-top"/>
+      <Button title="换一批" titleFontSize="22" icon="ui://0axy98cgk9m36c"/>
+    </component>
+  </displayList>
+</component>

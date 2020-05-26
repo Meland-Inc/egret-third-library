@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1450,388" designImage="ui://0axy98cgtbm25m" designImageOffsetX="-283" designImageOffsetY="-663" designImageAlpha="45" designImageLayer="1">
+  <displayList>
+    <image id="n44_tbm2" name="n44" src="tbm25o" fileName="img/icon_mt_titlebg1.png" xy="6,2" size="128,40"/>
+    <list id="n40_v8nf" name="lstGrid" xy="10,68" size="1433,275" layout="row" overflow="hidden" colGap="28" defaultItem="ui://0axy98cgv8nf4z" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n43_tbm2" name="btnMore" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1373,357" size="66,24">
+      <Button titleFontSize="30" icon="ui://0axy98cgtbm25n"/>
+    </component>
+    <text id="n38_v8nf" name="txtTitle" xy="12,6" size="88,33" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" italic="true" text="邀请赛">
+      <relation target="n44_tbm2" sidePair="left-left,top-top"/>
+    </text>
+  </displayList>
+</component>
