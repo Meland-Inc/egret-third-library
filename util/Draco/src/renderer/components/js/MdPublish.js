@@ -648,6 +648,8 @@ async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, ol
                             oldFilePath = `resource/${fsExc.dirname(newResIterator.url)}/${newConfigObj.file}`;
                         }
 
+                        //图片文件的旧版本号
+                        let oldFileVersion = oldVersion;
                         //判断图集是否相同
                         resFileEqual = await mergeFileInVersion(oldFilePath, newFilePath, releasePath, patchPath, oldVersion, newVersion, oldVersionPath);
                         if (resFileEqual && oldConfigObj) {
@@ -665,12 +667,17 @@ async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, ol
                                 await fsExc.makeDir(patchPath + '/' + fsExc.dirname(oldFilePath));
                                 await fsExc.makeDir(releasePath + '/' + fsExc.dirname(oldFilePath));
                                 console.log(`${newConfigObj.file} frames not equal`);
+
+                                let dotIndex = oldConfigObj.file.lastIndexOf(".");
+                                let fileName = oldConfigObj.file.slice(0, dotIndex);    //去除后缀名
+                                let versionIndex = fileName.lastIndexOf("_v") + 2;  //获取_v的位置,拿到版本号具体位置
+                                oldFileVersion = fileName.slice(versionIndex);   //获取图片文件的旧版本号
                             }
 
                         }
 
                         //图集配置处理
-                        await sheetConfigHandle(configEqual, resFileEqual, releasePath, patchPath, oldPath, newPath, oldVersion, newVersion, newResIterator.url, oldVersionPath);
+                        await sheetConfigHandle(configEqual, resFileEqual, releasePath, patchPath, oldPath, newPath, oldFileVersion, newVersion, newResIterator.url, oldVersionPath);
                     }
                     //不是图集,直接比较
                     else {
