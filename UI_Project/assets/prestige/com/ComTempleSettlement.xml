@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080">
-  <controller name="ctrlIsFirst" pages="0,true,1,false" selected="0"/>
+  <controller name="ctrlIsFirst" pages="0,true,1,false" selected="1"/>
   <displayList>
     <image id="n0_rkex" name="imgBG" src="rkex1j" fileName="img/prestige_dungeons_img_9.png" xy="710,309" group="n9_rkex"/>
     <image id="n1_rkex" name="imgExplorePointBG" src="rkex1k" fileName="img/prestige_dungeons_img_8.png" xy="897,463" group="n9_rkex">
@@ -9,10 +9,10 @@
     <component id="n5_rkex" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="975,655" size="109,43" group="n9_rkex">
       <Button title="完成挑战" titleFontSize="21" icon="ui://cqcxan63rkex1h"/>
     </component>
-    <text id="n6_rkex" name="tf" xy="887,604" pivot="0.5,0.5" size="145,29" group="n9_rkex" fontSize="25" color="#4d2e12" text="表现的真棒!">
-      <gearXY controller="ctrlIsFirst" pages="0" values="887,604" default="840,488"/>
+    <text id="n6_rkex" name="tf" xy="887,542" pivot="0.5,0.5" size="145,29" group="n9_rkex" fontSize="25" color="#4d2e12" text="表现的真棒!">
+      <gearXY controller="ctrlIsFirst" pages="0,1" values="887,604|887,542"/>
     </text>
-    <text id="n8_rkex" name="tfExplorePoint" xy="914,508" pivot="0.5,0.5" size="89,38" group="n9_rkex" fontSize="34" color="#ffffff" align="center" vAlign="middle" text="1000">
+    <text id="n8_rkex" name="tfExplorePoint" xy="916,508" pivot="0.5,0.5" size="85,38" group="n9_rkex" fontSize="34" color="#ffffff" align="center" vAlign="middle" text="1000">
       <gearDisplay controller="ctrlIsFirst" pages="0"/>
       <relation target="n1_rkex" sidePair="center-center,middle-middle"/>
     </text>
