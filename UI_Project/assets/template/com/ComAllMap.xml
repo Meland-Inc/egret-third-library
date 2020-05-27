@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://0axy98cgtbm25m" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlPage" pages="0,recommend,1,race,2,new,3,hot,5,lesson,6,story,7,leisure,8,my,9,homework,10,internal" selected="0"/>
-  <controller name="ctrlSearch" pages="0,nosearch,1,search" selected="0"/>
+  <controller name="ctrlSearch" pages="0,nosearch,1,search" selected="1"/>
   <displayList>
-    <image id="n49_v8nf" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="203,165" size="1513,918">
-      <gearDisplay controller="ctrlSearch" pages="1"/>
-      <relation target="" sidePair="height-height"/>
-      <relation target="" sidePair="center-center,top-top"/>
+    <image id="n74_l1zw" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="234,164" size="1550,918">
+      <relation target="n76_l1zw" sidePair="center-center"/>
+      <relation target="" sidePair="top-top,bottomext-bottom"/>
     </image>
     <image id="n68_dvog" name="imgSearchInputBg" src="oiqdcyigx" fileName="img/img_cm_ssk.png" pkg="te1gxawo" xy="1391,103" size="324,47" group="n71_dvog"/>
     <text id="n69_dvog" name="inpSearch" xy="1445,112" size="271,29" group="n71_dvog" input="true" prompt="[color=#999999]搜索所有作品[/color]" fontSize="24" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text=""/>
     <image id="n70_dvog" name="n70" src="rujpcyijl" fileName="img/icon_cm_ss.png" pkg="te1gxawo" xy="1399,105" size="42,42" group="n71_dvog"/>
-    <group id="n71_dvog" name="grpSearchInput" xy="1391,103" size="325,47" advanced="true" collapsed="true">
-      <relation target="n49_v8nf" sidePair="right-right,bottom-top"/>
-    </group>
+    <group id="n71_dvog" name="grpSearchInput" xy="1391,103" size="325,47" advanced="true"/>
     <component id="n63_tbm2" name="btnRecommend" src="tbm262" fileName="btn/rbtnFixNoScale.xml" xy="0,307" size="143,54" group="n44_v8nf">
       <Button checked="true" title="官方推荐" titleFontSize="22" icon="ui://0axy98cgtbm260" selectedIcon="ui://0axy98cgtbm261" controller="ctrlPage" page="0"/>
     </component>
@@ -54,11 +51,6 @@
       <Button title="内部" titleColor="#666666" titleFontSize="22" icon="ui://0axy98cgtbm260" selectedIcon="ui://0axy98cgtbm261" controller="ctrlPage" page="10"/>
     </component>
     <group id="n44_v8nf" name="grpBtnAllType" xy="0,307" size="143,441" group="n72_nav8" advanced="true" collapsed="true"/>
-    <image id="n74_l1zw" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="234,164" size="1550,918" group="n72_nav8">
-      <gearDisplay controller="ctrlSearch" pages="0"/>
-      <relation target="n76_l1zw" sidePair="center-center"/>
-      <relation target="" sidePair="top-top"/>
-    </image>
     <list id="n50_v8nf" name="lstTemplate" xy="282,166" size="1541,916" group="n72_nav8" layout="flow_hz" overflow="scroll" scrollBarFlags="4" margin="17,0,0,0" scrollBarMargin="0,0,0,3" scrollBarRes="ui://0axy98cgqb974t," ptrRes="ui://0axy98cgp5r74d,ui://0axy98cgp5r74d" lineGap="6" colGap="10" defaultItem="ui://0axy98cgtbm263" autoClearItems="true">
       <relation target="" sidePair="bottomext-bottom"/>
       <relation target="n74_l1zw" sidePair="left-left"/>
@@ -73,12 +65,11 @@
       <relation target="" sidePair="rightext-right"/>
       <relation target="n44_v8nf" sidePair="left-right"/>
     </graph>
-    <group id="n72_nav8" name="n72" xy="0,164" size="1921,918" advanced="true">
+    <group id="n72_nav8" name="n72" xy="0,166" size="1921,916" advanced="true">
       <gearDisplay controller="ctrlSearch" pages="0"/>
     </group>
-    <component id="n73_nav8" name="comScroll" src="mzsu6i" fileName="com/ComMapTemplatePanelScroll.xml" xy="242,199" size="1492,862">
+    <component id="n73_nav8" name="comScroll" src="mzsu6i" fileName="com/ComMapTemplatePanelScroll.xml" xy="289,198" size="1533,862">
       <gearDisplay controller="ctrlSearch" pages="1"/>
-      <relation target="n49_v8nf" sidePair="bottomext-bottom,left-left"/>
     </component>
   </displayList>
 </component>
