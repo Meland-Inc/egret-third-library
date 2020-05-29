@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://i25v0ebkfzlu3y" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlType" pages="3,unknow,1,showText,2,question,0,selection" selected="2"/>
+  <controller name="ctrlType" pages="3,unknow,1,showText,2,question,0,selection" selected="3"/>
   <displayList>
-    <list id="n2_j5jv" name="lstSelection" xy="953,740" size="499,137" layout="flow_hz" overflow="scroll" lineGap="10" colGap="20" defaultItem="ui://nyy10939qylxd" align="right" vAlign="bottom">
+    <list id="n2_j5jv" name="lstSelection" xy="953,728" size="499,137" layout="flow_hz" overflow="scroll" lineGap="10" colGap="20" defaultItem="ui://nyy10939qylxd" align="right" vAlign="bottom">
       <gearDisplay controller="ctrlType" pages="0"/>
       <relation target="n24_qylx" sidePair="bottom-bottom,right-right"/>
       <item/>
