@@ -63,7 +63,8 @@ class Server {
                 config.setGameServerInited(true);
 
                 logger.log('net', '收到游戏服务器启动完毕消息');
-                config.setGameServerLocalIp(args.localIp as string);
+                // config.setGameServerLocalIp(args.localIp as string);
+                config.setGameServerLocalIp(config.localIp as string);      //本地IP暂时先用127.0.0.1 保证本机切换网络不会出现问题, 其他人全用内网穿透后的ip
                 config.setGameServerLocalPort(args.localPort as string);
                 config.setGameServerNatUrl(args.natUrl as string);
                 config.setGameServerNatPort(args.natPort as string);

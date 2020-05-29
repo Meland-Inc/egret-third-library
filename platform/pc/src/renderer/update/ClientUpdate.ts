@@ -140,9 +140,11 @@ export default class ClientUpdate {
 
         if (arg === "finished") {
             // 通知完成
-            loading.setLoadingProgress(0);
-            loading.showLoading("正在解压客户端程序包");
-            loading.gradualProgress();
+            if (this._isDownloadPackage) {
+                loading.setLoadingProgress(0);
+                loading.showLoading("正在解压客户端程序包");
+                loading.gradualProgress();
+            }
             let content = `开始解压文件:${filename}`;
             logger.log('update', content);
             const streamZip = new StreamZip({
