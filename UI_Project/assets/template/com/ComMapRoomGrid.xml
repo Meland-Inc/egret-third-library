@@ -4,7 +4,7 @@
   <controller name="ctrlServer" pages="0,native,1,center" selected="0"/>
   <displayList>
     <image id="n48_k9m3" name="n48" src="k9m36a" fileName="img/img_mt_mapbg1.png" xy="5,0" size="422,178"/>
-    <loader id="n42_v8nf" name="loaderMap" xy="17,16" size="163,148" fill="scaleMatchWidth"/>
+    <component id="n42_v8nf" name="loaderMap" src="pz1n3t" fileName="com/ComAutoClipLad.xml" xy="17,16" size="163,148"/>
     <image id="n51_pw6y" name="n51" src="pw6y9r" fileName="img/img_mt_maptempframe.png" xy="6,6">
       <relation target="n42_v8nf" sidePair="center-center,middle-middle"/>
     </image>

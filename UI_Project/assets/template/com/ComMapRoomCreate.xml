@@ -20,7 +20,7 @@
       <relation target="n54_yfas" sidePair="width-width,height-height"/>
       <relation target="n54_yfas" sidePair="left-left,top-top"/>
     </image>
-    <loader id="n54_yfas" name="ladMap" xy="537,210" size="290,284" group="n57_yfas" fill="scaleMatchWidth"/>
+    <component id="n54_yfas" name="ladMap" src="pz1n3t" fileName="com/ComAutoClipLad.xml" xy="537,210" size="290,284" group="n57_yfas"/>
     <image id="n56_yfas" name="n56" src="yfas7r" fileName="img/img_mt_mapbgframe.png" xy="533,206" size="298,292" group="n57_yfas">
       <relation target="n54_yfas" sidePair="width-width,height-height"/>
     </image>
