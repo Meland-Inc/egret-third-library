@@ -243,8 +243,8 @@ class ${name}Cell {`
 
     let funcContent = `
 
-    public static is(data: Object): boolean {
-        if(!data){
+    public static is(data: unknown): boolean {
+        if (!data) {
             return false;
         }
         if (`
@@ -318,18 +318,18 @@ class ${name}Cell {`
                     type = "boolean[][]";
                     break;
                 case "null":
-                    type = "any";
+                    type = "unknown";
                     break;
 
                 default:
                     let content = `${name} 表里有未知类型:${types[i]} -- 字段名: ${descs[i]}`;
                     alert(content);
                     throw content;
-                    type = "any";
+                    type = "unknown";
                     break;
             }
         } else {
-            type = "any";
+            type = "unknown";
         }
 
         if (attr != "null") {
