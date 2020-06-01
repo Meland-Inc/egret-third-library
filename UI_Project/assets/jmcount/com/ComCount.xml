@@ -2,9 +2,6 @@
 <component size="1700,1200" opaque="false">
   <displayList>
     <loader id="n40_xr0j" name="loaderBG" xy="490,255" size="786,601" align="center" vAlign="middle" fill="scaleFree"/>
-    <component id="n43_hwlx" name="comNumberInput" src="hwlx1t" fileName="com/ComNumberInput.xml" pkg="av6agj0g" xy="101,1036" size="1497,150">
-      <relation target="" sidePair="center-center"/>
-    </component>
     <component id="n44_hwlx" name="comCountAnswer1" src="hwlx2" fileName="com/ComCountAnswer.xml" xy="89,888"/>
     <component id="n45_hwlx" name="comCountAnswer2" src="hwlx2" fileName="com/ComCountAnswer.xml" xy="440,885"/>
     <component id="n46_hwlx" name="comCountAnswer3" src="hwlx2" fileName="com/ComCountAnswer.xml" xy="796,883"/>

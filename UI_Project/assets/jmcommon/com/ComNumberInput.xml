@@ -4,7 +4,7 @@
   <controller name="ctrlInputType" pages="0,normal,1,withPoint" selected="0"/>
   <controller name="c1" pages="0,,1," selected="0"/>
   <displayList>
-    <image id="n11_hwlx" name="n11" src="fqdk2z" fileName="img/托底.png" xy="0,0"/>
+    <image id="n11_hwlx" name="n11" src="fqdk2z" fileName="img/calculatorBG.png" xy="0,0"/>
     <component id="n0_hwlx" name="btnNum0" src="fqdk2s" fileName="btn/btnNumber.xml" xy="14,23" size="128,129" controller="button,0">
       <Button icon="ui://av6agj0gfqdk3l" selectedIcon="ui://av6agj0gfqdk3k"/>
     </component>
