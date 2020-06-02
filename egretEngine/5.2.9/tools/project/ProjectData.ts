@@ -17,6 +17,8 @@ export type Package_JSON = {
 
     typings: string | null;
 
+    project: string;
+
 }
 
 export type PACKAGE_JSON_MODULE = {
