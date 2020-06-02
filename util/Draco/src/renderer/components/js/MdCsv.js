@@ -163,70 +163,47 @@ export async function oneForAll() {
 }
 
 function createTable(name) {
-    let content =
-        "/**\r\n" +
-        " * @author 雪糕\r\n" +
-        " * @desc " +
-        name +
-        "表\r\n" +
-        " *\r\n" +
-        " */\r\n" +
-        "class " +
-        name +
-        "Table {\r\n" +
-        "	private _cells: " +
-        name +
-        "Cell[];\r\n" +
-        "\r\n" +
-        "	//单例-----------\r\n" +
-        "	private static _instance: " +
-        name +
-        "Table;\r\n" +
-        "	public static get instance(): " +
-        name +
-        "Table {\r\n" +
-        "		if (!this._instance) {\r\n" +
-        "			this._instance = new " +
-        name +
-        "Table();\r\n" +
-        "		}\r\n" +
-        "		return this._instance;\r\n" +
-        "	}\r\n" +
-        "\r\n" +
-        "	public constructor() {\r\n" +
-        "	}\r\n" +
-        "\r\n" +
-        "	/** 解析数据 */\r\n" +
-        "	public analysis(data: any[]): void {\r\n" +
-        "		this._cells = data;\r\n" +
-        "	}\r\n" +
-        "\r\n" +
-        "\tpublic getCellById(id: number): " +
-        name +
-        "Cell {\r\n" +
-        "\t\tlet cell = this.tryCellById(id);\r\n" +
-        "\t\tif (!cell) {\r\n" +
-        "\t\t\tLogger.error(LOG_TAG.Config, '" +
-        name +
-        "Table id: ' + id + ' is null');\r\n" +
-        "\t\t}\r\n" +
-        "\t\treturn cell;\r\n" +
-        "\t}\r\n" +
-        "\r\n" +
-        "\tpublic tryCellById(id: number): " +
-        name +
-        "Cell {\r\n" +
-        "\t\tfor (let i: number = 0; i < this._cells.length; i++) {\r\n" +
-        "\t\t\tlet cell: " +
-        name +
-        "Cell = this._cells[i];\r\n" +
-        "\t\t\tif (cell.id === id) {\r\n" +
-        "\t\t\t\treturn cell;\r\n" +
-        "\t\t\t}\r\n" +
-        "\t\t}\r\n" +
-        "\t\treturn null;\r\n" +
-        "\t}\r\n" +
-        "}\r\n";
+    let content = `
+/**
+ * @author 雪糕"
+ * @desc ${name}表
+ *
+ */
+class ${name}Table {
+    private _cells: ${name}Cell[];
+
+    //单例-----------
+    private static _instance: ${name}Table;
+    public static get instance(): ${name}Table {
+        if (!this._instance) {
+            this._instance = new ${name}Table();
+        }
+        return this._instance;
+    }
+        
+    /** 解析数据 */
+    public analysis(data: ${name}Cell[]): void {
+        this._cells = data;
+    }
+    
+    public getCellById(id: number): ${name}Cell {
+        const cell = this.tryCellById(id);
+        if (!cell) {
+            Logger.error(LOG_TAG.Config, '${name}Table id: ' + id + ' is null');
+        }
+        return cell;
+    }
+    
+    public tryCellById(id: number): ${name}Cell {
+        for (let i: number = 0; i < this._cells.length; i++) {
+            const cell: ${name}Cell = this._cells[i];
+            if (cell.id === id) {
+                return cell;
+            }
+        }
+        return null;
+    }
+}`
     return content;
 }
 
@@ -250,7 +227,6 @@ class ${name}Cell {`
         if (`
 
     let endContent = `
-
 }`;
     let centerContent = "";
     let rows = data.split("\r\n");
@@ -325,8 +301,6 @@ class ${name}Cell {`
                     let content = `${name} 表里有未知类型:${types[i]} -- 字段名: ${descs[i]}`;
                     alert(content);
                     throw content;
-                    type = "unknown";
-                    break;
             }
         } else {
             type = "unknown";
@@ -339,16 +313,16 @@ class ${name}Cell {`
     public ${attr}: ${type};`;
 
             if (i == 0) {
-                funcContent += `data.hasOwnProperty("${attr}")
-            `
+                funcContent += `data.hasOwnProperty("${attr}")`
             } else {
-                funcContent += `&& data.hasOwnProperty("${attr}")
-            `
+                funcContent += `
+            && data.hasOwnProperty("${attr}")`
             }
         }
     }
 
-    funcContent += `){
+    funcContent += `
+        ) {
             return true;
         }
         return false;
