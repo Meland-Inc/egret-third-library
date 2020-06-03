@@ -63,7 +63,8 @@ export namespace util {
             host: host,
             path: path,
             method: 'GET',
-            headers
+            headers,
+            rejectUnauthorized: false
         };
         if (port) {
             options['port'] = port;
@@ -136,7 +137,8 @@ export namespace util {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
                 'Content-Length': content.length
-            }
+            },
+            rejectUnauthorized: false
         }
         if (port) {
             options['port'] = port;
