@@ -220,7 +220,8 @@ class ${name}Cell {`
 
     let funcContent = `
 
-    public static is(data: Record<string, unknown>): boolean {
+    public static is(tData: unknown): boolean {
+        const data = tData as Record<string, unknown>;
         if (!data) {
             return false;
         }
