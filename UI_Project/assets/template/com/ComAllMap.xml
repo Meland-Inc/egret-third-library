@@ -68,8 +68,10 @@
     <group id="n72_nav8" name="n72" xy="0,166" size="1916,916" advanced="true">
       <gearDisplay controller="ctrlSearch" pages="0"/>
     </group>
-    <component id="n73_nav8" name="comScroll" src="mzsu6i" fileName="com/ComMapTemplatePanelScroll.xml" xy="289,198" size="1533,862">
+    <component id="n73_nav8" name="comScroll" src="mzsu6i" fileName="com/ComMapTemplatePanelScroll.xml" xy="286,173" size="1536,881">
       <gearDisplay controller="ctrlSearch" pages="1"/>
+      <relation target="n74_l1zw" sidePair="left-left"/>
+      <relation target="" sidePair="bottomext-bottom"/>
     </component>
   </displayList>
 </component>
