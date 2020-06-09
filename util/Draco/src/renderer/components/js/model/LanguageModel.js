@@ -10,10 +10,10 @@ export class LanguageModel {
 
     languageList = [
         {
-            name: this.eLanguage.default, csvPath: "/settings/config/csv-beta", UITextPath: "/settings/UItext/UIText_zh"
+            name: this.eLanguage.default, csvPath: "/versionRes/trunk/settings/config/csv", UITextPath: "/versionRes/trunk/settings/UItext/UIText_zh"
         },
         {
-            name: this.eLanguage.en, csvPath: "/settings/config/csv_en", UITextPath: "/settings/UItext/UItext_en"
+            name: this.eLanguage.en, csvPath: "/versionRes/trunk/settings/config/csv_en", UITextPath: "/versionRes/trunk/settings/UItext/UItext_en"
         }
     ];
 

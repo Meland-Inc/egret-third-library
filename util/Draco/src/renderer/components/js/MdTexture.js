@@ -21,10 +21,10 @@ const material_csv = '/EntityMaterial.csv';
 const object_state_csv = '/ObjectState.csv';
 
 const copy_in_suffix_arr = [
-    '/settings/resource/mapcell',
-    '/settings/resource/material',
-    '/settings/resource/object',
-    '/settings/resource/object_varia'
+    '/versionRes/trunk/settings/resource/mapcell',
+    '/versionRes/trunk/settings/resource/material',
+    '/versionRes/trunk/settings/resource/object',
+    '/versionRes/trunk/settings/resource/object_varia'
 ];
 
 const itemIconSfx = "itemIcon";
@@ -284,16 +284,16 @@ export async function packerTexture() {
                     // inputs.push(Global.svnPath + multi_output_suffix_path);
                     // break;
                     case itemIconSfx:
-                        inputs.push(Global.svnPath + '/settings/resource/item_icon');
+                        inputs.push(Global.svnPath + '/versionRes/trunk/settings/resource/item_icon');
                         break;
                     // case materialSfx:
-                    //     inputs.push(Global.svnPath + '/settings/resource/material');
+                    //     inputs.push(Global.svnPath + '/versionRes/trunk/settings/resource/material');
                     //     break;
                     case objectDecorateSfx:
-                        inputs.push(Global.svnPath + '/settings/resource/objectDecorate');
+                        inputs.push(Global.svnPath + '/versionRes/trunk/settings/resource/objectDecorate');
                         break;
                     case avatarIconSfx:
-                        inputs.push(Global.svnPath + '/settings/resource/other_icon/avatar_icon');
+                        inputs.push(Global.svnPath + '/versionRes/trunk/settings/resource/other_icon/avatar_icon');
                         break;
                     default:
                         break;
@@ -341,7 +341,7 @@ export async function copyTextureOut() {
                     //multi 超多格物品裁剪后的纹理
                     inputPath = Global.svnArtPath + multi_output_suffix_path;
                 } else {
-                    inputPath = `${Global.svnPath}/settings/resource/${iterator}`;;
+                    inputPath = `${Global.svnPath}/versionRes/trunk/settings/resource/${iterator}`;;
                 }
                 outputPath = textureOutPath;
             }
