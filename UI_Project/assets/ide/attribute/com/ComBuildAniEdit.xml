@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="430,1080" designImageOffsetX="-1635">
-  <controller name="ctrlCombine" pages="0,normal,1,combine,2,split,3,editNone" selected="3"/>
+  <controller name="ctrlCombine" pages="0,normal,1,combine,2,split,3,editNone" selected="0"/>
   <displayList>
     <image id="n69_xba6" name="n69" src="xba67o" fileName="ideCommon/img/img_ide_cm_7.png" xy="0,0" size="430,1080">
       <relation target="" sidePair="width-width,height-height"/>
@@ -9,10 +9,12 @@
       <relation target="" sidePair="width-width,height-height"/>
     </image>
     <component id="n71_xba6" name="btnAniSelect" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="22,1029" size="120,40">
+      <gearDisplay controller="ctrlCombine" pages="0"/>
       <relation target="n53_fidk" sidePair="top-bottom"/>
       <Button title="添加动画"/>
     </component>
     <component id="n73_xba6" name="btnCombine" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="152,1029" size="120,40">
+      <gearDisplay controller="ctrlCombine" pages="0"/>
       <relation target="n53_fidk" sidePair="top-bottom"/>
       <Button title="组合动画" titleColor="#333333"/>
     </component>
@@ -31,13 +33,14 @@
       <relation target="" sidePair="bottom-bottom,right-right"/>
       <Button title="组合" titleColor="#ffffff" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <component id="n78_xba6" name="btnExitCombine" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="306,1032" size="110,40">
+    <component id="n78_xba6" name="btnExitCombine" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="179,1032" size="110,40">
       <gearDisplay controller="ctrlCombine" pages="1,2,3"/>
       <gearXY controller="ctrlCombine" pages="3" values="306,1032" default="179,1032"/>
       <relation target="" sidePair="bottom-bottom,right-right"/>
       <Button title="取消" titleColor="#ffffff" icon="ui://te1gxawoeggjcyihf"/>
     </component>
     <component id="n80_ivy5" name="btnSplit" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="286,1029" size="120,40">
+      <gearDisplay controller="ctrlCombine" pages="0"/>
       <relation target="n53_fidk" sidePair="top-bottom"/>
       <Button title="拆分动画" titleColor="#333333"/>
     </component>
