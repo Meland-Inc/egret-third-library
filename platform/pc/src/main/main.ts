@@ -30,9 +30,11 @@ let mainWindow: BrowserWindow;
 //监听app事件
 app.on('ready', onAppReady);
 app.on('second-instance', onAppSecondInstance);
-app.on('open-url', onAppOpenUrl);
 app.on('window-all-closed', onAppWindowAllClosed);
 app.on('activate', onAppActivate);
+app.on('will-finish-launching', () => {
+  app.on('open-url', onAppOpenUrl);
+});
 
 function onAppReady() {
   createWindow();
@@ -76,12 +78,17 @@ function onAppSecondInstance(event: Event, argv: string[], workingDirectory: str
 
 /** 当打开url时 */
 function onAppOpenUrl(event: Event, url: string) {
+  event.preventDefault();
+  logger.log('main', `open-url, event`, url);
   onGotTheLock(url);
 }
 
 /** 拦截第二个实例 */
 async function onGotTheLock(url: string) {
   logger.log('electron', `运行第二个实例`);
+  /** 设置url参数 */
+  config.setUrlValue(url);
+
   if (mainWindow) {
     if (mainWindow.isMinimized()) {
       mainWindow.restore();
@@ -93,8 +100,6 @@ async function onGotTheLock(url: string) {
     // 关闭之前的服务器
     await server.closeGameServer();
 
-    /** 设置url参数 */
-    config.setUrlValue(url);
     await initNative();
   }
 }
@@ -133,14 +138,14 @@ async function createWindow() {
   mainWindow.webContents.userAgent = userAgent;
 
   /** 设置url参数 */
-  config.setUrlValue(process.argv[process.argv.length - 1]);
+  if (os.platform() === "win32") {
+    config.setUrlValue(process.argv.splice(app.isPackaged ? 1 : 2).join(""));
+  }
+
+  logger.log('main', `收到参数1: ${JSON.stringify(process.argv)}`);
 
   /** 初始化消息处理类 */
   message.init();
-
-  //日志初始化
-  logger.init();
-  logger.log('main', `收到参数1: ${JSON.stringify(process.argv)}`);
 
   //只有打包后的要上传日志
   if (config.isPackaged) {
@@ -252,15 +257,15 @@ async function onNewWindow(event: Event, url: string) {
 /** native初始化 */
 async function initNative() {
   logger.log('net', `urlValue: ${config.urlValue}`);
-  if (config.urlValue.indexOf(config.constPseudoProtocol) === -1) {
+  if (!config.urlValue || config.urlValue.indexOf(config.constPseudoProtocol) < 0) {
     config.setNativeMode(define.eNativeMode.website);
   } else {
     //设置路由
-    let lessonRouter = config.urlValue.replace(config.constPseudoProtocol, '');
-    lessonRouter = lessonRouter.slice(0, lessonRouter.indexOf("?") - 1);
+    const urlObj = new URL(config.urlValue);
+    const lessonRouter = urlObj.hostname;
     config.setLessonRouter(lessonRouter as define.eLessonRouter);
 
-    logger.log('test', `touter: ${config.lessonRouter}`);
+    logger.log('test', `router: ${config.lessonRouter}`);
 
     //创造地图模式
     if (config.lessonRouter === define.eLessonRouter.createMap) {
