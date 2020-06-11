@@ -1,24 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImageAlpha="70">
-  <controller name="ctrlLoadingType" pages="0,commit,1,wait,4,loadMission" selected="2"/>
+  <controller name="ctrlLoadingType" pages="0,commit,1,wait,5,cancelWait,4,loadMission" selected="0"/>
   <displayList>
-    <graph id="n1_q8x4" name="n1" xy="810,415" size="300,250" group="n8_wle9" type="rect" lineSize="0" corner="20"/>
-    <text id="n6_wle9" name="tf" xy="900,610" pivot="0.5,0.5" size="125,29" group="n8_wle9" fontSize="25" align="center" text="结算中...">
-      <gearText controller="ctrlLoadingType" pages="1" values="网络情况差，请稍候..." default="结算中..."/>
+    <graph id="n15_nxno" name="n15" xy="0,0" size="1920,1080" alpha="0.3" type="rect" lineSize="0" fillColor="#ff000000">
+      <gearDisplay controller="ctrlLoadingType" pages="0,1,5"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <graph id="n14_nxno" name="gphGps" xy="479,282" size="961,515" group="n8_wle9"/>
+    <text id="n6_wle9" name="tfComitTip" xy="911,606" pivot="0.5,0.5" size="114,32" group="n8_wle9" font="FZZhunYuan-M02S" fontSize="25" color="#ffffff" align="center" letterSpacing="1" bold="true" text="结算中...">
+      <gearText controller="ctrlLoadingType" pages="1,5" values="网络情况差，请稍候...|网络情况差，请稍候..." default="结算中..."/>
     </text>
-    <image id="n5_qxzj" name="n5" src="wle94p" fileName="img/img_cm_load.png" xy="904,468" pivot="0.5,0.5" size="112,112" group="n8_wle9"/>
-    <group id="n8_wle9" name="n8" xy="810,415" size="300,250" advanced="true">
-      <gearDisplay controller="ctrlLoadingType" pages="0,1"/>
+    <image id="n5_qxzj" name="n5" src="nxno63" fileName="img/loading_32.png" xy="859,388" pivot="0.5,0.5" group="n8_wle9" aspect="true"/>
+    <component id="n13_nxno" name="btnCancelWait" src="sco7k" fileName="btn/btnScale.xml" xy="892,663" size="136,69" group="n8_wle9">
+      <gearDisplay controller="ctrlLoadingType" pages="5"/>
+      <Button icon="ui://av6agj0gnxno62" controller="ctrlLoadingType" page="5"/>
+    </component>
+    <group id="n8_wle9" name="comint" xy="479,282" size="961,515" advanced="true">
+      <gearDisplay controller="ctrlLoadingType" pages="0,1,5"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
     <graph id="n9_ftpe" name="n9" xy="776,514" size="367,52" group="n12_ftpe" type="rect" lineSize="0" corner="20"/>
-    <text id="n10_ftpe" name="tf" xy="798,525" pivot="0.5,0.5" size="323,29" group="n12_ftpe" fontSize="25" align="center" text="题目加载中，请稍后再试..."/>
+    <text id="n10_ftpe" name="tf" xy="795,525" pivot="0.5,0.5" size="329,29" group="n12_ftpe" fontSize="25" align="center" bold="true" text="题目加载中，请稍后再试..."/>
     <group id="n12_ftpe" name="n12" xy="776,514" size="367,52" advanced="true">
       <gearDisplay controller="ctrlLoadingType" pages="4"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>
   <transition name="t0" autoPlay="true" autoPlayRepeat="-1">
-    <item time="0" type="Rotation" target="n5_qxzj" tween="true" startValue="0" endValue="360" duration="23" ease="Linear"/>
+    <item time="0" type="Rotation" target="n5_qxzj" value="0"/>
+    <item time="3" type="Rotation" target="n5_qxzj" value="45"/>
+    <item time="6" type="Rotation" target="n5_qxzj" value="90"/>
+    <item time="9" type="Rotation" target="n5_qxzj" value="135"/>
+    <item time="12" type="Rotation" target="n5_qxzj" value="180"/>
+    <item time="15" type="Rotation" target="n5_qxzj" value="225"/>
+    <item time="18" type="Rotation" target="n5_qxzj" value="270"/>
+    <item time="21" type="Rotation" target="n5_qxzj" value="315"/>
+    <item time="24" type="Rotation" target="n5_qxzj" value="360"/>
   </transition>
 </component>

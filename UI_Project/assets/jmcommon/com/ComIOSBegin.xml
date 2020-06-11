@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" designImageAlpha="70">
+  <displayList>
+    <graph id="n15_nxno" name="n15" xy="0,0" size="1920,1080" alpha="0.3" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n16_nxno" name="n16" src="sco7k" fileName="btn/btnScale.xml" xy="872,452" size="175,175">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button icon="ui://av6agj0gnxno64"/>
+    </component>
+  </displayList>
+  <transition name="t0" autoPlay="true" autoPlayRepeat="-1"/>
+</component>
