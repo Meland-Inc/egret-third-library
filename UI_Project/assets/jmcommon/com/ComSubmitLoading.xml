@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImageAlpha="70">
-  <controller name="ctrlLoadingType" pages="0,commit,1,wait,5,cancelWait,4,loadMission" selected="0"/>
+  <controller name="ctrlLoadingType" pages="0,commit,1,wait,5,cancelWait,4,loadMission" selected="3"/>
   <displayList>
-    <graph id="n15_nxno" name="n15" xy="0,0" size="1920,1080" alpha="0.3" type="rect" lineSize="0" fillColor="#ff000000">
-      <gearDisplay controller="ctrlLoadingType" pages="0,1,5"/>
+    <graph id="n15_nxno" name="n15" xy="0,0" size="1920,1080" alpha="0" type="rect" lineSize="0" fillColor="#ff000000">
+      <gearLook controller="ctrlLoadingType" pages="4" values="0,0,0,1" default="0.3,0,0,1"/>
       <relation target="" sidePair="width-width,height-height"/>
     </graph>
     <graph id="n14_nxno" name="gphGps" xy="479,282" size="961,515" group="n8_wle9"/>
-    <text id="n6_wle9" name="tfComitTip" xy="911,606" pivot="0.5,0.5" size="114,32" group="n8_wle9" font="FZZhunYuan-M02S" fontSize="25" color="#ffffff" align="center" letterSpacing="1" bold="true" text="结算中...">
+    <text id="n6_wle9" name="tfComitTip" xy="910,606" pivot="0.5,0.5" size="115,32" group="n8_wle9" font="FZZhunYuan-M02S" fontSize="25" color="#ffffff" align="center" letterSpacing="1" bold="true" text="结算中...">
       <gearText controller="ctrlLoadingType" pages="1,5" values="网络情况差，请稍候...|网络情况差，请稍候..." default="结算中..."/>
     </text>
     <image id="n5_qxzj" name="n5" src="nxno63" fileName="img/loading_32.png" xy="859,388" pivot="0.5,0.5" group="n8_wle9" aspect="true"/>
