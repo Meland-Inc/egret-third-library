@@ -243,6 +243,8 @@ export namespace util {
             let newFileName: string = `date-${dateFormat}_actId-${userid}_playerId-${playerId}_${fileName}`;
             fs.copyFileSync(`${logPath}/${fileName}`, `${uploadPath}/${newFileName}`);
         }
+
+        logger.clear();
     }
 
     /** 上传日志文件 */

@@ -11,20 +11,19 @@ import message from './Message';
 import { util } from './util';
 
 export namespace logger {
-    let processLogContent: string;
-    let webContentsLogContent: string;
+    let processLogContent: string = '';
+    let webContentsLogContent: string = '';
 
-    export function init() {
-        processLogContent = '';
-        webContentsLogContent = '';
-
+    export function clear() {
+        fs.writeFileSync(config.ipcMainLogPath, '');
         fs.writeFileSync(`${config.rootPath}/dist/log/ipcRenderer.log`, '');
     }
 
     /** 打印log到后台进程日志中 */
     export function processLog(tag: string, msg: string, ...args: any[]) {
         let content = formateMsg(tag, msg, ...args);
-        content = content.replace(/\\n/g, '\r\n')
+        content = content.replace(/\\n/g, '\r\n');
+
         processLogContent += content + '\r\n';
         fs.writeFileSync(config.processLogPath, processLogContent);
     }
@@ -32,7 +31,8 @@ export namespace logger {
     /** 打印web端log到本地日志文件中 */
     export function webContentsLog(tag: string, msg: string, ...args: any[]) {
         let content = formateMsg(tag, msg, ...args);
-        content = content.replace(/\\n/g, '\r\n')
+        content = content.replace(/\\n/g, '\r\n');
+
         webContentsLogContent += content + '\r\n';
         fs.writeFileSync(config.ipcMainLogPath, webContentsLogContent);
     }
