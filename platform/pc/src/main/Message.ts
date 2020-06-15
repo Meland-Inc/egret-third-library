@@ -1,17 +1,18 @@
-/**
- * @author 雪糕
- * @desc 主进程消息处理类
- * @date 2020-02-26 15:31:07
- * @Last Modified by: 雪糕
- * @Last Modified time: 2020-04-29 17:28:37
+/** 
+ * @Author 雪糕
+ * @Description 主进程消息处理类
+ * @Date 2020-02-26 15:31:07
+ * @FilePath \pc\src\main\Message.ts
  */
 import { ipcMain, IpcMainEvent } from 'electron';
 import querystring from 'querystring';
 
+import { CommonDefine } from '../common/CommonDefine';
+import commonConfig from '../common/CommonConfig';
+
 import { logger } from './logger';
 import { util } from './util';
-import { define } from './define';
-import config from './Config';
+import mainModel from './MainModel';
 import platform from './Platform';
 import server from './Server';
 import NativeUpdate from './NativeUpdate';
@@ -30,18 +31,18 @@ class Message {
 
     /** 发送主进程消息 */
     public sendIpcMsg(msgId: string, ...args: any[]) {
-        if (!config.mainWindow) {
+        if (!mainModel.mainWindow) {
             logger.error('main', `发送主进程消息失败:${msgId} config.mainWindow不存在 args`, ...args);
             return;
         }
 
-        if (!config.mainWindow.webContents) {
+        if (!mainModel.mainWindow.webContents) {
             logger.error('main', `发送主进程消息失败:${msgId} config.mainWindow.webContents不存在 args`, ...args);
             return;
         }
 
         logger.log('main', `发送主进程消息:${msgId} args`, ...args);
-        config.mainWindow.webContents.send('MAIN_PROCESS_MESSAGE', msgId, ...args);
+        mainModel.mainWindow.webContents.send('MAIN_PROCESS_MESSAGE', msgId, ...args);
     }
 
     /** 初始化 */
@@ -74,28 +75,28 @@ class Message {
     private async onCheckUpdateComplete() {
         util.initNativeCnf();
 
-        logger.log('config', `nativeMode:${config.nativeMode}`);
-        if (config.nativeMode === define.eNativeMode.banner) {
+        logger.log('config', `nativeMode:${mainModel.nativeMode}`);
+        if (mainModel.nativeMode === CommonDefine.eNativeMode.banner) {
             this.startBanner();
             return;
         }
 
-        if (config.nativeMode === define.eNativeMode.createMap) {
+        if (mainModel.nativeMode === CommonDefine.eNativeMode.createMap) {
             await this.startCreateMap();
             return;
         }
 
-        if (config.nativeMode === define.eNativeMode.game) {
+        if (mainModel.nativeMode === CommonDefine.eNativeMode.game) {
             this.startNativeGame();
             return
         }
 
-        if (config.nativeMode === define.eNativeMode.website) {
+        if (mainModel.nativeMode === CommonDefine.eNativeMode.website) {
             this.startNativeWebsite();
             return;
         }
 
-        if (config.nativeMode === define.eNativeMode.platform) {
+        if (mainModel.nativeMode === CommonDefine.eNativeMode.platform) {
             await this.startNativePlatform();
             return;
         }
@@ -103,8 +104,8 @@ class Message {
 
     /** 从banner模式进入 */
     private startBanner() {
-        let queryValue: string = config.urlValue.slice(config.urlValue.indexOf("?") + 1);
-        queryValue += `&nativeMode=${define.eNativeMode.banner}`;
+        let queryValue: string = mainModel.urlValue.slice(mainModel.urlValue.indexOf("?") + 1);
+        queryValue += `&nativeMode=${CommonDefine.eNativeMode.banner}`;
         logger.log('update', `从banner模式进入`);
         this.sendIpcMsg('START_NATIVE_CLIENT', queryValue);
     }
@@ -116,7 +117,7 @@ class Message {
         //初始化参数
         // Object.assign(queryObject, platform.queryObject);
         // queryObject['fakeUserType'] = config.userType;
-        queryObject['nativeMode'] = define.eNativeMode.createMap.toString();
+        queryObject['nativeMode'] = CommonDefine.eNativeMode.createMap.toString();
         let queryValue: string = querystring.stringify(queryObject);
 
         logger.log('update', `从创造地图模式进入`);
@@ -126,14 +127,14 @@ class Message {
     /** 从游戏模式进入 */
     private startNativeGame() {
         logger.log('update', `从游戏模式进入`);
-        let urlValue = config.urlValue;
+        let urlValue = mainModel.urlValue;
         //伪协议启动参数
         logger.log('platform', `初始化平台数据`, urlValue);
         let argsValue = urlValue.slice(urlValue.indexOf("?") + 1);
         let argsObj = querystring.parse(argsValue);
         let queryObject: querystring.ParsedUrlQuery = {};
         queryObject = Object.assign(queryObject, argsObj);
-        queryObject["nativeMode"] = define.eNativeMode.game + "";
+        queryObject["nativeMode"] = CommonDefine.eNativeMode.game + "";
 
         let queryValue: string = querystring.stringify(queryObject);
 
@@ -154,13 +155,13 @@ class Message {
         //平台初始化
         let queryObject: querystring.ParsedUrlQuery = await platform.init();
         //初始化参数
-        config.setChannel(config.constChannelLesson);
-        queryObject['gameChannel'] = config.constChannelLesson;
-        queryObject['fakeUserType'] = config.userType.toString();
-        queryObject['nativeMode'] = define.eNativeMode.platform.toString();
+        mainModel.setChannel(commonConfig.constChannelLesson);
+        queryObject['gameChannel'] = commonConfig.constChannelLesson;
+        queryObject['fakeUserType'] = mainModel.userType.toString();
+        queryObject['nativeMode'] = CommonDefine.eNativeMode.platform.toString();
 
         //非学生端 或者单人单服务器 本地服务器初始化
-        if (config.userType != define.eUserType.student || config.standAlone) {
+        if (mainModel.userType != CommonDefine.eUserType.student || mainModel.standAlone) {
             server.init();
         }
 
@@ -172,22 +173,22 @@ class Message {
     /** 收到地图模板游戏服务器 */
     private onMapTemplateEnter(gid: string, gameArgs: string) {
         util.writeServerCnfValue('gid', gid);
-        config.setGameArgs(gameArgs);
+        mainModel.setGameArgs(gameArgs);
 
-        server.createNativeServer(define.eGameServerMode.mapTemplate);
+        server.createNativeServer(CommonDefine.eGameServerMode.mapTemplate);
     }
 
     /** 收到地图模板房间游戏服务器 */
     private onMapTemplateRoomCreate(gid: string, gameArgs: string) {
         util.writeServerCnfValue('gid', gid);
-        config.setGameArgs(gameArgs);
+        mainModel.setGameArgs(gameArgs);
 
-        server.createNativeServer(define.eGameServerMode.mapTemplateRoom);
+        server.createNativeServer(CommonDefine.eGameServerMode.mapTemplateRoom);
     }
 
     /** 收到发送过来的玩家id */
     private onSendPlayerId(playerId: string) {
-        config.setPlayerId(playerId);
+        mainModel.setPlayerId(playerId);
     }
 
     private onSetNativePolicyVersion(nativeVersion: number) {

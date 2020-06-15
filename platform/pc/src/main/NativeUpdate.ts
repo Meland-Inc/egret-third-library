@@ -1,15 +1,16 @@
-/**
- * @author 雪糕 
- * @desc native包更新类
- * @date 2020-03-25 17:36:41 
- * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-26 00:44:08
+/** 
+ * @Author 雪糕
+ * @Description native包更新类
+ * @Date 2020-03-25 17:36:41
+ * @FilePath \pc\src\main\NativeUpdate.ts
  */
 import os from 'os';
 import { autoUpdater } from 'electron-updater';
+
+import commonConfig from '../common/CommonConfig';
+
 import { logger } from './logger';
 import message from './Message';
-import config from './Config';
 
 export default class NativeUpdate {
     public checkUpdate(nativePolicyVersion: number) {
@@ -49,7 +50,7 @@ export default class NativeUpdate {
     }
 
     private async setFeedURL(nativePolicyVersion: number) {
-        let environName = config.environName;
+        let environName = commonConfig.environName;
         let isWin = os.platform() === "win32";
         let pkgPlatform = isWin ? "win" : "mac";
         let feedURL = `http://bg-stage.wkcoding.com/native/${environName}/${nativePolicyVersion}/${pkgPlatform}`;

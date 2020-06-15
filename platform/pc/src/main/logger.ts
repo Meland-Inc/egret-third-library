@@ -1,12 +1,11 @@
-/**
- * @author 雪糕 
- * @desc main用的logger类
- * @date 2020-02-13 14:54:34 
- * @Last Modified by: 雪糕
- * @Last Modified time: 2020-04-29 17:30:02
+/** 
+ * @Author 雪糕
+ * @Description main用的logger类
+ * @Date 2020-02-13 14:54:34
+ * @FilePath \pc\src\main\logger.ts
  */
+import commonConfig from '../common/CommonConfig';
 import fs from 'fs';
-import config from './Config';
 import message from './Message';
 import { util } from './util';
 
@@ -15,8 +14,8 @@ export namespace logger {
     let webContentsLogContent: string = '';
 
     export function clear() {
-        fs.writeFileSync(config.ipcMainLogPath, '');
-        fs.writeFileSync(`${config.rootPath}/dist/log/ipcRenderer.log`, '');
+        fs.writeFileSync(commonConfig.ipcMainLogPath, '');
+        fs.writeFileSync(commonConfig.ipcRendererLogPath, '');
     }
 
     /** 打印log到后台进程日志中 */
@@ -25,7 +24,7 @@ export namespace logger {
         content = content.replace(/\\n/g, '\r\n');
 
         processLogContent += content + '\r\n';
-        fs.writeFileSync(config.processLogPath, processLogContent);
+        fs.writeFileSync(commonConfig.processLogPath, processLogContent);
     }
 
     /** 打印web端log到本地日志文件中 */
@@ -34,7 +33,7 @@ export namespace logger {
         content = content.replace(/\\n/g, '\r\n');
 
         webContentsLogContent += content + '\r\n';
-        fs.writeFileSync(config.ipcMainLogPath, webContentsLogContent);
+        fs.writeFileSync(commonConfig.ipcMainLogPath, webContentsLogContent);
     }
 
     /** 打印日志 */
@@ -50,7 +49,7 @@ export namespace logger {
         let content = formateMsg(tag, msg, ...args);
         let code: string = `console.error(\'${content}\');`
         util.executeJavaScript(code, false);
-        if (!config.isPackaged) {
+        if (!commonConfig.isPackaged) {
             message.sendIpcMsg("ERROR_REPORT", msg);
         }
         webContentsLog(tag, msg, ...args);
@@ -89,10 +88,10 @@ export namespace logger {
 
     /** 上传日志 */
     export function uploadLog() {
-        let logDir = fs.readdirSync(config.uploadLogDir);
+        let logDir = fs.readdirSync(commonConfig.uploadLogDir);
         for (const fileName of logDir) {
-            let filePath = `${config.uploadLogDir}/${fileName}`
-            util.uploadLogFile(`${config.uploadLogHost}/nativeLogs`, fileName, filePath);
+            let filePath = `${commonConfig.uploadLogDir}/${fileName}`;
+            util.uploadLogFile(`${commonConfig.uploadLogUrl}`, fileName, filePath);
         }
     }
 }

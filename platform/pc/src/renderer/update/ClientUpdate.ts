@@ -1,18 +1,19 @@
-/**
- * @author 雪糕 
- * @desc 游戏客户端包更新类
- * @date 2020-02-13 14:56:09 
- * @Last Modified by: 雪糕
- * @Last Modified time: 2020-04-30 00:01:19
+/** 
+ * @Author 雪糕
+ * @Description 游戏客户端包更新类
+ * @Date 2020-02-13 14:56:09
+ * @FilePath \pc\src\renderer\update\ClientUpdate.ts
  */
 import fs from 'fs';
 import StreamZip from "node-stream-zip";
 
-import { define } from '../define';
+import { CommonDefine } from '../../common/CommonDefine';
+import commonConfig from '../../common/CommonConfig';
+
 import * as loading from '../loading';
 import * as logger from '../logger';
 import * as util from '../util';
-import config from '../Config';
+import rendererModel from '../RendererModel';
 import StreamDownload from './StreamDownload';
 
 
@@ -28,7 +29,7 @@ export default class ClientUpdate {
     /** 最新游戏版本 */
     private _gameVersion: number = 0;
     /** 客户端包路径 */
-    private _clientPackagePath: string = `${config.clientPackagePath}/`;
+    private _clientPackagePath: string = `${commonConfig.clientPackagePath}/`;
     /** 补丁包数量 */
     private _patchCount: number = 0;
     /** 下载器 */
@@ -49,14 +50,14 @@ export default class ClientUpdate {
     private _isDownloadPackage: boolean;
     /** 检查是否最新版本 */
     public async checkLatestVersion() {
-        let globalConfig = config.globalConfig;
-        let gameVersion = config.getVersionConfigValue(define.eVersionCfgFiled.clientPackageVersion)
+        let globalConfig = commonConfig.globalConfig;
+        let gameVersion = rendererModel.getVersionConfigValue(CommonDefine.eVersionCfgFiled.clientPackageVersion)
         if (!gameVersion) {
             gameVersion = 0;
         }
 
         this._curVersion = this._startVersion = +gameVersion;
-        this._patchUrl = `${config.protocol}//${globalConfig.patchUrl}`;
+        this._patchUrl = `${commonConfig.protocol}//${globalConfig.patchUrl}`;
         let policyUrl = globalConfig.policyUrl;
         let policyArr = policyUrl.split("/");
         this._policyHost = policyArr[0];
@@ -66,9 +67,9 @@ export default class ClientUpdate {
             this._policyPath = policyUrl.replace(`${this._policyHost}`, "");
         }
 
-        let policyNum = await util.getClientPackagePolicyNum(config.environName);
+        let policyNum = await util.getClientPackagePolicyNum(commonConfig.environName);
         if (policyNum === null) {
-            let content = `获取策略版本号错误!, environName:${config.environName}`;
+            let content = `获取策略版本号错误!, environName:${commonConfig.environName}`;
             logger.error(`renderer`, content);
             alert(content);
             return true;
@@ -184,7 +185,7 @@ export default class ClientUpdate {
                             this._curVersion = this._curVersion + 1;
                         }
                         if (this._curVersion >= this._gameVersion) {
-                            config.setVersionConfigValue(define.eVersionCfgFiled.clientPackageVersion, this._curVersion);
+                            rendererModel.setVersionConfigValue(CommonDefine.eVersionCfgFiled.clientPackageVersion, this._curVersion);
                             this.executeUpdateCallback();
                         } else {
                             this.installSinglePatch()
@@ -235,12 +236,12 @@ export default class ClientUpdate {
         this._patchCount = 1;
         this._isDownloadPackage = true;
         //release环境, 用的ready的包, 去ready下载
-        let environName = config.environName;
-        if (environName === define.eEnvironName.release) {
-            environName = define.eEnvironName.ready;
+        let environName = commonConfig.environName;
+        if (environName === CommonDefine.eEnvironName.release) {
+            environName = CommonDefine.eEnvironName.ready;
         }
 
-        let fileDir = `${config.cdnHost}/clientPackages/${environName}`;
+        let fileDir = `${commonConfig.cdnHost}/clientPackages/${environName}`;
         let saveDir = this._clientPackagePath;
         let fileName = `release_v${this._gameVersion}s.zip`;
         //下载文件

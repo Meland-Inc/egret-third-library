@@ -1,23 +1,25 @@
-/**
- * @author 雪糕 
- * @desc 游戏服务器端包更新类
- * @date 2020-02-13 14:56:09 
- * @Last Modified by: 雪糕
- * @Last Modified time: 2020-04-30 00:01:29
+/** 
+ * @Author 雪糕
+ * @Description 游戏服务器端包更新类
+ * @Date 2020-02-13 14:56:09
+ * @FilePath \pc\src\renderer\update\ServerUpdate.ts
  */
 import fs from 'fs';
 import StreamZip from "node-stream-zip";
 
-import { define } from '../define';
+import { CommonDefine } from '../../common/CommonDefine';
+import commonConfig from '../../common/CommonConfig';
+
+
 import * as loading from '../loading';
 import * as logger from '../logger';
 import * as util from '../util';
-import config from '../Config';
+import rendererModel from '../RendererModel';
 import StreamDownload from './StreamDownload';
 
 export default class ServerUpdate {
     /** 服务端包存放目录 */
-    private _packagePath: string = `${config.packagePath}/`;
+    private _packagePath: string = `${commonConfig.packagePath}/`;
     /** 下载器 */
     private _download: StreamDownload = new StreamDownload();
 
@@ -27,7 +29,7 @@ export default class ServerUpdate {
     private _updateCbArgs: any;
 
     /** 分支环境 */
-    private _environName: define.eEnvironName;
+    private _environName: CommonDefine.eEnvironName;
 
     /** 本地版本 */
     private _localVersion: number;
@@ -36,7 +38,7 @@ export default class ServerUpdate {
     private _remoteVersion: number;
 
     private initVersionInfo() {
-        this._environName = config.environName;
+        this._environName = commonConfig.environName;
     }
 
     /** 检查是否最新版本 */
@@ -44,7 +46,7 @@ export default class ServerUpdate {
         this.initVersionInfo();
 
         //获取本地游戏版本
-        this._localVersion = config.getVersionConfigValue(define.eVersionCfgFiled.serverPackageVersion);
+        this._localVersion = rendererModel.getVersionConfigValue(CommonDefine.eVersionCfgFiled.serverPackageVersion);
         if (!this._localVersion) {
             this._localVersion = 0;
         }
@@ -83,7 +85,7 @@ export default class ServerUpdate {
     /** 下载服务端包 */
     private downloadPackage() {
         //release环境, 用的ready的包, 去ready下载
-        let fileDir = `${config.cdnHost}/serverPackages/${this._environName}`;
+        let fileDir = `${commonConfig.cdnHost}/serverPackages/${this._environName}`;
         let saveDir = this._packagePath;
         let fileName = `${util.getServerPackageFileName()}_v${this._remoteVersion}.zip`;
         this._download.downloadFile(fileDir, saveDir, fileName, this.downloadFileCallback.bind(this));
@@ -121,7 +123,7 @@ export default class ServerUpdate {
                     }
                     let content = `解压文件:${filename}成功`;
                     logger.log('update', content);
-                    config.setVersionConfigValue(define.eVersionCfgFiled.serverPackageVersion, this._remoteVersion);
+                    rendererModel.setVersionConfigValue(CommonDefine.eVersionCfgFiled.serverPackageVersion, this._remoteVersion);
                     streamZip.close();
 
                     fs.unlink(this._packagePath + filename, (err) => {

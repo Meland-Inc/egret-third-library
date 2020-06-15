@@ -1,16 +1,15 @@
-/**
- * @author 雪糕
- * @desc 平台相关的逻辑
- * @date 2020-02-19 11:22:49
- * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-23 15:12:16
+/** 
+ * @Author 雪糕
+ * @Description 平台相关的逻辑
+ * @Date 2020-02-19 11:22:49
+ * @FilePath \pc\src\main\Platform.ts
  */
 import querystring from 'querystring';
 
 import { logger } from './logger';
 import { util } from './util';
 import message from './Message';
-import config from "./Config";
+import mainModel from "./MainModel";
 
 enum eQueryArgsField {
     'temporary_token' = 'temporary_token',
@@ -47,7 +46,7 @@ class Platform {
     ]
 
     public async init() {
-        let urlValue = config.urlValue;
+        let urlValue = mainModel.urlValue;
         //伪协议启动参数
         logger.log('platform', `初始化平台数据`, urlValue);
         let argsValue = urlValue.slice(urlValue.indexOf("?") + 1);
@@ -73,28 +72,28 @@ class Platform {
 
             switch (field) {
                 case eQueryArgsField.temporary_token:
-                    config.setBellTempToken(strValue);
+                    mainModel.setBellTempToken(strValue);
                     break;
                 case eQueryArgsField.class_id:
-                    config.setClassId(+strValue);
+                    mainModel.setClassId(+strValue);
                     break;
                 case eQueryArgsField.bell_origin:
-                    config.setBellApiOrigin(strValue);
+                    mainModel.setBellApiOrigin(strValue);
                     break;
                 case eQueryArgsField.package_id:
-                    config.setBellPackageId(strValue);
+                    mainModel.setBellPackageId(strValue);
                     break;
                 case eQueryArgsField.lesson_id:
-                    config.setBellLessonId(strValue);
+                    mainModel.setBellLessonId(strValue);
                     break;
                 case eQueryArgsField.back_url:
-                    config.setBellBackUrl(strValue);
+                    mainModel.setBellBackUrl(strValue);
                     break;
                 case eQueryArgsField.act_id:
-                    config.setBellActId(strValue);
+                    mainModel.setBellActId(strValue);
                     break;
                 case eQueryArgsField.stand_alone:
-                    config.setStandAlone(!!strValue);
+                    mainModel.setStandAlone(!!strValue);
                     break;
                 default:
                     break;
@@ -144,13 +143,13 @@ class Platform {
             }
 
             //不是单人单服模式,并且有穿透服务器地址
-            if (!config.standAlone && key === eQueryArgsField.internet_network) {
+            if (!mainModel.standAlone && key === eQueryArgsField.internet_network) {
                 queryObject[eQueryArgsField.gameServer] = `${value}`;
                 continue;
             }
 
             //不是单人单服模式,不存在服务器地址,并且有本地服务器地址
-            if (!config.standAlone && key === eQueryArgsField.local_network && !queryObject[eQueryArgsField.gameServer]) {
+            if (!mainModel.standAlone && key === eQueryArgsField.local_network && !queryObject[eQueryArgsField.gameServer]) {
                 queryObject[eQueryArgsField.gameServer] = `${value}`;
                 continue;
             }
@@ -178,23 +177,23 @@ class Platform {
 
     /** 登陆贝尔平台 */
     private login(): Promise<string> {
-        let data = { temporary_token: config.bellTempToken };
-        if (config.bellToken) {
-            data["token"] = config.bellToken;
+        let data = { temporary_token: mainModel.bellTempToken };
+        if (mainModel.bellToken) {
+            data["token"] = mainModel.bellToken;
         }
-        logger.log('net', `请求登录贝尔平台, bellApiOrigin: ${config.bellApiOrigin}, bellTempToken:${config.bellTempToken}`);
+        logger.log('net', `请求登录贝尔平台, bellApiOrigin: ${mainModel.bellApiOrigin}, bellTempToken:${mainModel.bellTempToken}`);
         return new Promise((resolve, reject) => {
-            util.requestPostHttps(config.bellApiOrigin, null, '/common/member/login-by-temporary-token', data, null
+            util.requestPostHttps(mainModel.bellApiOrigin, null, '/common/member/login-by-temporary-token', data, null
                 , (body: any) => {
                     logger.log('net', `登陆贝尔平台返回body`, body);
                     if (body.code === 200) {
                         if (body.data.token) {
-                            config.setBellToken(body.data.token);
+                            mainModel.setBellToken(body.data.token);
                         }
                         this.getMemberInfo(() => {
-                            resolve(config.bellToken as string)
+                            resolve(mainModel.bellToken as string)
                         }, (err: any) => { reject(err) });
-                        logger.log('net', `登陆贝尔平台成功, token:${config.bellToken}`);
+                        logger.log('net', `登陆贝尔平台成功, token:${mainModel.bellToken}`);
                     } else {
                         reject(body.msg)
                         logger.error('net', `登陆贝尔平台失败`, body.msg);
@@ -243,15 +242,15 @@ class Platform {
     }` */
     /** 获取用户信息 */
     private getMemberInfo(successFunc: Function, errorFunc: Function) {
-        let data = { token: config.bellToken };
+        let data = { token: mainModel.bellToken };
         let headers = { "X-Bellcode-Referer": "bellplanet" }
         logger.log('net', `请求获取贝尔平台用户信息`);
-        util.requestGetHttps(config.bellApiOrigin, null, '/common/member/init', data, headers
+        util.requestGetHttps(mainModel.bellApiOrigin, null, '/common/member/init', data, headers
             , (body: any) => {
                 if (body.code === 200) {
-                    config.setUserType(+body.data.user_info.usertype);
-                    config.setRealName(body.data.user_info.real_name);
-                    config.setNickName(body.data.user_info.nickname);
+                    mainModel.setUserType(+body.data.user_info.usertype);
+                    mainModel.setRealName(body.data.user_info.real_name);
+                    mainModel.setNickName(body.data.user_info.nickname);
 
                     util.writeServerCnfValue("userId", body.data.user_info.userid + "");
                     util.writeServerCnfValue("schoolId", body.data.user_info.school.id + "");
@@ -274,24 +273,24 @@ class Platform {
 
     /** 老师上报ip */
     public teacherUploadIp() {
-        let data = { token: config.bellToken, class_id: config.classId };
+        let data = { token: mainModel.bellToken, class_id: mainModel.classId };
 
         //公网连接方式
-        if (config.gameServerNatUrl && config.gameServerNatPort) {
-            data['internet_network'] = `${config.gameServerNatUrl}:${config.gameServerNatPort}`;
+        if (mainModel.gameServerNatUrl && mainModel.gameServerNatPort) {
+            data['internet_network'] = `${mainModel.gameServerNatUrl}:${mainModel.gameServerNatPort}`;
         } else {
             data['internet_network'] = ``;
         }
 
         //局域网连接方式
-        if (config.gameServerLocalIp && config.gameServerLocalPort) {
-            data['local_network'] = `${config.gameServerLocalIp}:${config.gameServerLocalPort}`;
+        if (mainModel.gameServerLocalIp && mainModel.gameServerLocalPort) {
+            data['local_network'] = `${mainModel.gameServerLocalIp}:${mainModel.gameServerLocalPort}`;
         } else {
             data['local_network'] = ``;
         }
 
         logger.log('net', `请求上报老师ip`);
-        util.requestPostHttps(config.bellApiOrigin, null, '/teacher/bellplanet-origins.put', data, null
+        util.requestPostHttps(mainModel.bellApiOrigin, null, '/teacher/bellplanet-origins.put', data, null
             , (body: any) => {
                 if (body.code === 200) {
                     logger.log('net', `上报老师ip成功`);
