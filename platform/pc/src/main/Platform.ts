@@ -6,6 +6,8 @@
  */
 import querystring from 'querystring';
 
+import MsgId from '../common/MsgId';
+
 import { logger } from './logger';
 import { util } from './util';
 import message from './Message';
@@ -168,7 +170,7 @@ class Platform {
         queryObject[eQueryArgsField.token] = token;
 
         if (queryObject[eQueryArgsField.gameServer]) {
-            message.sendIpcMsg('SAVE_NATIVE_GAME_SERVER', queryObject[eQueryArgsField.gameServer]);
+            message.sendIpcMsg(MsgId.SAVE_NATIVE_GAME_SERVER, queryObject[eQueryArgsField.gameServer]);
         }
 
         logger.log('platform', 'queryObject', queryObject);
@@ -256,7 +258,7 @@ class Platform {
                     util.writeServerCnfValue("schoolId", body.data.user_info.school.id + "");
                     util.writeServerCnfValue("nickName", body.data.user_info.nickname + "");
 
-                    message.sendIpcMsg('SAVE_NATIVE_LOGIN_RESPONSE', body);
+                    message.sendIpcMsg(MsgId.SAVE_NATIVE_LOGIN_RESPONSE, body);
                     logger.log('net', `获取贝尔平台用户信息成功`);
                     successFunc();
                 } else {

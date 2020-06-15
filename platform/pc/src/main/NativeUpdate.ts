@@ -8,6 +8,7 @@ import os from 'os';
 import { autoUpdater } from 'electron-updater';
 
 import commonConfig from '../common/CommonConfig';
+import MsgId from '../common/MsgId';
 
 import { logger } from './logger';
 import message from './Message';
@@ -28,7 +29,7 @@ export default class NativeUpdate {
 
         autoUpdater.on('update-available', (info) => {
             logger.log('update', `检测到新版本，开始下载……`, info);
-            message.sendIpcMsg("SHOW_LOADING", "正在更新native包");
+            message.sendIpcMsg(MsgId.SHOW_LOADING, "正在更新native包");
         });
 
         autoUpdater.on('update-not-available', (info) => {
@@ -38,7 +39,7 @@ export default class NativeUpdate {
 
         // 更新下载进度事件
         autoUpdater.on('download-progress', (progressObj) => {
-            message.sendIpcMsg("SET_LOADING_PROGRESS", progressObj.percent);
+            message.sendIpcMsg(MsgId.SET_LOADING_PROGRESS, progressObj.percent);
         });
 
         autoUpdater.on('update-downloaded', (event, releaseNotes, releaseName, releaseDate, updateUrl, quitAndUpdate) => {
@@ -59,6 +60,6 @@ export default class NativeUpdate {
     }
 
     private checkUpdateComplete() {
-        message.sendIpcMsg("CHECK_PACKAGE_UPDATE");
+        message.sendIpcMsg(MsgId.CHECK_PACKAGE_UPDATE);
     }
 }

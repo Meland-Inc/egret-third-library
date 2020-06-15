@@ -4,8 +4,11 @@
  * @Date 2020-02-13 14:54:34
  * @FilePath \pc\src\main\logger.ts
  */
-import commonConfig from '../common/CommonConfig';
 import fs from 'fs';
+
+import commonConfig from '../common/CommonConfig';
+import MsgId from '../common/MsgId';
+
 import message from './Message';
 import { util } from './util';
 
@@ -50,7 +53,7 @@ export namespace logger {
         let code: string = `console.error(\'${content}\');`
         util.executeJavaScript(code, false);
         if (!commonConfig.isPackaged) {
-            message.sendIpcMsg("ERROR_REPORT", msg);
+            message.sendIpcMsg(MsgId.ERROR_REPORT, msg);
         }
         webContentsLog(tag, msg, ...args);
     }

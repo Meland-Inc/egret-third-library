@@ -9,6 +9,8 @@ import querystring from 'querystring';
 
 import { CommonDefine } from '../common/CommonDefine';
 import commonConfig from '../common/CommonConfig';
+import MsgId from '../common/MsgId';
+import IpcChannel from '../common/IpcChannel';
 
 import { logger } from './logger';
 import { util } from './util';
@@ -18,19 +20,23 @@ import server from './Server';
 import NativeUpdate from './NativeUpdate';
 
 class Message {
-    private _nativeUpdate = new NativeUpdate();
+    private _nativeUpdate: NativeUpdate;
 
-    //消息对应方法集合
-    public msgMap = {
-        'CHECK_UPDATE_COMPLETE': this.onCheckUpdateComplete.bind(this),  //检查更新
-        'MAP_TEMPLATE_ENTER': this.onMapTemplateEnter.bind(this),   //启动地图模板游戏服务器
-        'MAP_TEMPLATE_ROOM_CREATE': this.onMapTemplateRoomCreate.bind(this),   //启动地图模板房间游戏服务器
-        'SEND_PLAYER_ID': this.onSendPlayerId.bind(this),   //发送玩家id
-        'SET_NATIVE_POLICY_VERSION': this.onSetNativePolicyVersion.bind(this),   //设置native版本号
+    /** 消息对应方法集合 */
+    public msgMap: Map<string, () => void>;
+
+    public constructor() {
+        this._nativeUpdate = new NativeUpdate();
+        this.msgMap = new Map<string, () => void>();
+        this.msgMap[MsgId.CHECK_UPDATE_COMPLETE] = this.onCheckUpdateComplete.bind(this);
+        this.msgMap[MsgId.MAP_TEMPLATE_ENTER] = this.onMapTemplateEnter.bind(this);
+        this.msgMap[MsgId.MAP_TEMPLATE_ROOM_CREATE] = this.onMapTemplateRoomCreate.bind(this);
+        this.msgMap[MsgId.SEND_PLAYER_ID] = this.onSendPlayerId.bind(this);
+        this.msgMap[MsgId.SET_NATIVE_POLICY_VERSION] = this.onSetNativePolicyVersion.bind(this);
     }
 
     /** 发送主进程消息 */
-    public sendIpcMsg(msgId: string, ...args: any[]) {
+    public sendIpcMsg(msgId: string, ...args: unknown[]) {
         if (!mainModel.mainWindow) {
             logger.error('main', `发送主进程消息失败:${msgId} config.mainWindow不存在 args`, ...args);
             return;
@@ -42,7 +48,7 @@ class Message {
         }
 
         logger.log('main', `发送主进程消息:${msgId} args`, ...args);
-        mainModel.mainWindow.webContents.send('MAIN_PROCESS_MESSAGE', msgId, ...args);
+        mainModel.mainWindow.webContents.send(IpcChannel.MAIN_PROCESS_MESSAGE, msgId, ...args);
     }
 
     /** 初始化 */
@@ -50,13 +56,13 @@ class Message {
         logger.log('main', `初始化主进程监听消息`);
 
         //监听渲染进程消息
-        ipcMain.on('RENDERER_PROCESS_MESSAGE', (evt: IpcMainEvent, msgId: string, ...args: any[]) => {
+        ipcMain.on(IpcChannel.RENDERER_PROCESS_MESSAGE, (evt: IpcMainEvent, msgId: string, ...args: unknown[]) => {
             logger.log('main', `收到渲染进程消息:${msgId} args`, ...args);
             this.applyIpcMsg(msgId, ...args);
         });
 
         //监听 客户端消息 应用 或者 转发给渲染进程
-        ipcMain.on('CLIENT_PROCESS_MESSAGE', (evt: IpcMainEvent, msgId: string, ...args: any[]) => {
+        ipcMain.on(IpcChannel.CLIENT_PROCESS_MESSAGE, (evt: IpcMainEvent, msgId: string, ...args: unknown[]) => {
             logger.log('main', `收到客户端消息:${msgId} args`, ...args);
             this.applyIpcMsg(msgId, ...args);    //应用
             // sendIpcMsg(msgId, ...args);     //转发
@@ -107,7 +113,7 @@ class Message {
         let queryValue: string = mainModel.urlValue.slice(mainModel.urlValue.indexOf("?") + 1);
         queryValue += `&nativeMode=${CommonDefine.eNativeMode.banner}`;
         logger.log('update', `从banner模式进入`);
-        this.sendIpcMsg('START_NATIVE_CLIENT', queryValue);
+        this.sendIpcMsg(MsgId.START_NATIVE_CLIENT, queryValue);
     }
 
     /** 从创造地图模式进入 */
@@ -121,7 +127,7 @@ class Message {
         let queryValue: string = querystring.stringify(queryObject);
 
         logger.log('update', `从创造地图模式进入`);
-        this.sendIpcMsg('START_NATIVE_CLIENT', queryValue);
+        this.sendIpcMsg(MsgId.START_NATIVE_CLIENT, queryValue);
     }
 
     /** 从游戏模式进入 */
@@ -138,14 +144,14 @@ class Message {
 
         let queryValue: string = querystring.stringify(queryObject);
 
-        this.sendIpcMsg('START_NATIVE_CLIENT', queryValue);
+        this.sendIpcMsg(MsgId.START_NATIVE_CLIENT, queryValue);
     }
 
     /** 官网地址进入 */
     private startNativeWebsite() {
         logger.log('update', `从官网地址进入`);
 
-        this.sendIpcMsg('START_NATIVE_WEBSITE');
+        this.sendIpcMsg(MsgId.START_NATIVE_WEBSITE);
     }
 
     /** 从平台进入 */
@@ -167,7 +173,7 @@ class Message {
 
         logger.log(`test`, `queryObject`, queryObject);
 
-        this.sendIpcMsg('START_NATIVE_PLATFORM', queryObject);
+        this.sendIpcMsg(MsgId.START_NATIVE_PLATFORM, queryObject);
     }
 
     /** 收到地图模板游戏服务器 */

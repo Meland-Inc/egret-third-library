@@ -14,6 +14,7 @@ import { AddressInfo } from 'net';
 
 import { CommonDefine } from '../common/CommonDefine';
 import commonConfig from '../common/CommonConfig';
+import MsgId from '../common/MsgId';
 
 import { util } from './util';
 import { logger } from './logger';
@@ -86,7 +87,7 @@ class Server {
 
                     logger.log('net', 'native上课客户端登录本地游戏服务器', gameServer);
 
-                    message.sendIpcMsg('SAVE_NATIVE_GAME_SERVER', gameServer);
+                    message.sendIpcMsg(MsgId.SAVE_NATIVE_GAME_SERVER, gameServer);
 
                     //游戏地图
                     if (mainModel.gameServerMode === CommonDefine.eGameServerMode.gameMap) {

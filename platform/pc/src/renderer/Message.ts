@@ -12,6 +12,8 @@ import path from "path";
 
 import { CommonDefine } from '../common/CommonDefine';
 import commonConfig from '../common/CommonConfig';
+import MsgId from '../common/MsgId';
+import IpcChannel from '../common/IpcChannel';
 
 import rendererModel from './RendererModel';
 import * as util from './util';
@@ -23,42 +25,48 @@ import errorReport from "./ErrorReport";
 
 class Message {
     //消息对应方法集合
-    private msgMap = {
-        'SAVE_NATIVE_LOGIN_RESPONSE': this.onSaveNativeLoginResponse.bind(this),    //保存native平台登陆信息
-        'SAVE_NATIVE_GAME_SERVER': this.onSaveNativeGameServer.bind(this),     //设置native服务器内网ip和端口
-        'START_NATIVE_CLIENT': this.onStartNativeClient.bind(this),  //从客户端进入
-        'START_NATIVE_WEBSITE': this.onStartNativeWebsite.bind(this),  //开始官网地址进入
-        'START_NATIVE_PLATFORM': this.onStartNativePlatform.bind(this),  //开始平台进入
-        'SEND_MSG_TO_CLIENT': this.onSendMsgToClient.bind(this), //发送消息到客户端
-        'SHOW_LOADING': this.onShowLoading.bind(this),//显示loading
-        'HIDE_LOADING': this.onHideLoading.bind(this),//隐藏loading
-        'SET_LOADING_PROGRESS': this.onSetLoadingProgress.bind(this),//设置loading进度
-        'CHECK_PACKAGE_UPDATE': this.checkPackageUpdate.bind(this),//检查游戏包更新
-        'GET_NATIVE_POLICY_VERSION': this.onGetNativePolicyVersion.bind(this),//获取native策略版本号
-        'ERROR_REPORT': this.onErrorReport.bind(this),//错误上报
+    private msgMap: Map<string, () => void>;
+
+    private _clientUpdate: ClientUpdate;
+    private _serverUpdate: ServerUpdate;
+
+    public constructor() {
+        this._clientUpdate = new ClientUpdate();
+        this._serverUpdate = new ServerUpdate();
+
+        this.msgMap = new Map<string, () => void>();
+        this.msgMap[MsgId.SAVE_NATIVE_LOGIN_RESPONSE] = this.onSaveNativeLoginResponse.bind(this);
+        this.msgMap[MsgId.SAVE_NATIVE_GAME_SERVER] = this.onSaveNativeGameServer.bind(this);
+        this.msgMap[MsgId.START_NATIVE_CLIENT] = this.onStartNativeClient.bind(this);
+        this.msgMap[MsgId.START_NATIVE_WEBSITE] = this.onStartNativeWebsite.bind(this);
+        this.msgMap[MsgId.START_NATIVE_PLATFORM] = this.onStartNativePlatform.bind(this);
+        this.msgMap[MsgId.SEND_MSG_TO_CLIENT] = this.onSendMsgToClient.bind(this);
+        this.msgMap[MsgId.SHOW_LOADING] = this.onShowLoading.bind(this);
+        this.msgMap[MsgId.HIDE_LOADING] = this.onHideLoading.bind(this);
+        this.msgMap[MsgId.SET_LOADING_PROGRESS] = this.onSetLoadingProgress.bind(this);
+        this.msgMap[MsgId.CHECK_PACKAGE_UPDATE] = this.checkPackageUpdate.bind(this);
+        this.msgMap[MsgId.GET_NATIVE_POLICY_VERSION] = this.onGetNativePolicyVersion.bind(this);
+        this.msgMap[MsgId.ERROR_REPORT] = this.onErrorReport.bind(this);
     }
 
-    private _clientUpdate = new ClientUpdate();
-    private _serverUpdate = new ServerUpdate();
-
     /** 发送渲染进程消息 */
-    public sendIpcMsg(msgId: string, ...args: any[]) {
+    public sendIpcMsg(msgId: string, ...args: unknown[]) {
         logger.log('renderer', `发送渲染进程消息:${msgId} args`, ...args);
-        ipcRenderer.send('RENDERER_PROCESS_MESSAGE', msgId, ...args);
+        ipcRenderer.send(IpcChannel.RENDERER_PROCESS_MESSAGE, msgId, ...args);
     }
 
     /** 初始化 */
     public init() {
         logger.log('renderer', `初始化渲染进程监听消息`);
         //监听主进程消息
-        ipcRenderer.on('MAIN_PROCESS_MESSAGE', (evt: IpcRendererEvent, msgId: string, ...args: any[]) => {
+        ipcRenderer.on(IpcChannel.MAIN_PROCESS_MESSAGE, (evt: IpcRendererEvent, msgId: string, ...args: unknown[]) => {
             logger.log('renderer', `收到主进程消息:${msgId} args`, ...args);
             this.applyIpcMsg(msgId, ...args);
         });
     }
 
     /** 应用主进程消息 */
-    private applyIpcMsg(msgId: string, ...args: any[]) {
+    private applyIpcMsg(msgId: string, ...args: unknown[]) {
         let func = this.msgMap[msgId];
         if (func) {
             func(...args);
@@ -66,7 +74,7 @@ class Message {
     }
 
     /** 保存native平台登陆信息 */
-    private onSaveNativeLoginResponse(body: any) {
+    private onSaveNativeLoginResponse(body: unknown) {
         rendererModel.setNativeLoginResponse(body);
     }
 
@@ -78,7 +86,7 @@ class Message {
     /** 收到获取native策略号消息 */
     private async onGetNativePolicyVersion() {
         let nativePolicyVersion: number = await util.getNativePolicyNum(commonConfig.environName);
-        this.sendIpcMsg("SET_NATIVE_POLICY_VERSION", nativePolicyVersion);
+        this.sendIpcMsg(MsgId.SET_NATIVE_POLICY_VERSION, nativePolicyVersion);
     }
 
     /** 收到错误上报 */

@@ -12,6 +12,7 @@ import * as os from 'os';
 
 import { CommonDefine } from '../common/CommonDefine';
 import commonConfig from '../common/CommonConfig';
+import MsgId from '../common/MsgId';
 
 import { logger } from './logger';
 import { util } from './util';
@@ -282,11 +283,11 @@ async function initNative() {
   logger.log('env', `app.isPackaged:`, commonConfig.isPackaged);
   //打包后的包才要检查更新
   if (commonConfig.isPackaged) {
-    message.sendIpcMsg("GET_NATIVE_POLICY_VERSION");
+    message.sendIpcMsg(MsgId.GET_NATIVE_POLICY_VERSION);
   }
   //没打包的直接检查游戏包更新
   else {
-    message.sendIpcMsg("CHECK_PACKAGE_UPDATE");
+    message.sendIpcMsg(MsgId.CHECK_PACKAGE_UPDATE);
   }
 }
 
