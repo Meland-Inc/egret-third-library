@@ -51,7 +51,7 @@ export default class ClientUpdate {
     /** 检查是否最新版本 */
     public async checkLatestVersion() {
         let globalConfig = commonConfig.globalConfig;
-        let gameVersion = rendererModel.getVersionConfigValue(CommonDefine.eVersionCfgFiled.clientPackageVersion)
+        let gameVersion = rendererModel.getPackageVersion(CommonDefine.ePackageType.client)
         if (!gameVersion) {
             gameVersion = 0;
         }
@@ -185,7 +185,7 @@ export default class ClientUpdate {
                             this._curVersion = this._curVersion + 1;
                         }
                         if (this._curVersion >= this._gameVersion) {
-                            rendererModel.setVersionConfigValue(CommonDefine.eVersionCfgFiled.clientPackageVersion, this._curVersion);
+                            rendererModel.setPackageVersion(CommonDefine.ePackageType.client, commonConfig.environName, this._curVersion);
                             this.executeUpdateCallback();
                         } else {
                             this.installSinglePatch()

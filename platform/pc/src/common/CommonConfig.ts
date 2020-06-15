@@ -66,12 +66,12 @@ class CommonConfig {
 
     /** 客户端包路径 */
     public get clientPackagePath(): string {
-        return `${this.packagePath}/client`;
+        return `${this.packagePath}/client/${this._environName}`;
     }
 
     /** 服务端包路径 */
     public get serverPackagePath(): string {
-        return `${this.packagePath}/server`;
+        return `${this.packagePath}/server/${this._environName}`;
     }
 
     /** 全局配置路径 */

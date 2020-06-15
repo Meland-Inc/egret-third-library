@@ -12,10 +12,10 @@ export namespace CommonDefine {
         release = "release",
     }
 
-    /** 版本配置属性名 */
-    export enum eVersionCfgFiled {
-        clientPackageVersion = "clientPackageVersion",
-        serverPackageVersion = "serverPackageVersion",
+    /** 游戏包类型枚举 */
+    export enum ePackageType {
+        client = "client",
+        server = "server",
     }
 
     /** 路由枚举 */

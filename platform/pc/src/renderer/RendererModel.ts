@@ -2,16 +2,30 @@
  * @Author 雪糕
  * @Description 渲染进程的数据
  * @Date 2020-02-13 14:54:50
- * @FilePath \pc\src\renderer\Config.ts
+ * @FilePath \pc\src\renderer\RendererModel.ts
  */
 import fs from 'fs';
 
 import * as logger from './logger';
 import commonConfig from '../common/CommonConfig';
+import { CommonDefine } from '../common/CommonDefine';
+
+interface IVersionConfig {
+    client: {
+        beta: number,
+        ready: number,
+        release: number
+    },
+    server: {
+        beta: number,
+        ready: number,
+        release: number
+    }
+}
 
 class RendererModel {
     /** 版本配置 */
-    private _versionConfig: any;
+    private _versionConfig: IVersionConfig;
 
     private _nativeLoginResponse: any;
     /** native平台登陆信息 */
@@ -36,24 +50,36 @@ class RendererModel {
     public init() {
         logger.log('renderer', `初始化RendererModel`);
         if (fs.existsSync(commonConfig.versionConfigPath)) {
-            let data = fs.readFileSync(commonConfig.versionConfigPath, 'utf-8');
+            let data: string = fs.readFileSync(commonConfig.versionConfigPath, 'utf-8');
             this._versionConfig = JSON.parse(data);
-        } else {
-            this._versionConfig = {};
+            return;
         }
+
+        this._versionConfig = {
+            client: {
+                beta: 0,
+                ready: 0,
+                release: 0
+            },
+            server: {
+                beta: 0,
+                ready: 0,
+                release: 0
+            }
+        };
     }
 
     /** 获取版本配置值 */
-    public getVersionConfigValue(key: string) {
-        return this._versionConfig[key];
+    public getPackageVersion(packageType: CommonDefine.ePackageType, environ: CommonDefine.eEnvironName = commonConfig.environName) {
+        return this._versionConfig[packageType][environ];
     }
 
     /** 设置版本配置值 */
-    public setVersionConfigValue(key: string, value: string | number) {
-        this._versionConfig[key] = value;
+    public setPackageVersion(packageType: CommonDefine.ePackageType, environ: CommonDefine.eEnvironName, value: string | number) {
+        this._versionConfig[packageType][environ] = +value;
         fs.writeFileSync(commonConfig.versionConfigPath, JSON.stringify(this._versionConfig, null, 4), "utf-8");
 
-        logger.log('renderer', `设置VersionConfigValue`, key, value);
+        logger.log('renderer', `设置VersionConfigValue packageType:${packageType} environ:${environ} value:${value}`);
     }
 }
 

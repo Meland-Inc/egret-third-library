@@ -19,7 +19,7 @@ import StreamDownload from './StreamDownload';
 
 export default class ServerUpdate {
     /** 服务端包存放目录 */
-    private _packagePath: string = `${commonConfig.packagePath}/`;
+    private _packagePath: string = `${commonConfig.serverPackagePath}/`;
     /** 下载器 */
     private _download: StreamDownload = new StreamDownload();
 
@@ -46,7 +46,7 @@ export default class ServerUpdate {
         this.initVersionInfo();
 
         //获取本地游戏版本
-        this._localVersion = rendererModel.getVersionConfigValue(CommonDefine.eVersionCfgFiled.serverPackageVersion);
+        this._localVersion = rendererModel.getPackageVersion(CommonDefine.ePackageType.server);
         if (!this._localVersion) {
             this._localVersion = 0;
         }
@@ -75,10 +75,10 @@ export default class ServerUpdate {
         logger.log(`update`, `检测到服务器版本更新,开始更新版本${this._remoteVersion}`);
         //更新
         loading.showLoading("正在更新服务端程序包");
-        let deleteDir = `${this._packagePath}server`;
+        let deleteDir = this._packagePath;
         //清除要保存的文件夹
-        await util.deleteFolderRecursive(deleteDir);
 
+        await util.deleteFolderRecursive(deleteDir);
         this.downloadPackage()
     }
 
@@ -111,7 +111,7 @@ export default class ServerUpdate {
                 storeEntries: true
             });
             streamZip.on('ready', () => {
-                streamZip.extract(null, this._packagePath, (err: Error) => {
+                streamZip.extract('server/', this._packagePath, (err: Error) => {
                     if (err) {
                         streamZip.close();
 
@@ -123,7 +123,7 @@ export default class ServerUpdate {
                     }
                     let content = `解压文件:${filename}成功`;
                     logger.log('update', content);
-                    rendererModel.setVersionConfigValue(CommonDefine.eVersionCfgFiled.serverPackageVersion, this._remoteVersion);
+                    rendererModel.setPackageVersion(CommonDefine.ePackageType.server, commonConfig.environName, this._remoteVersion);
                     streamZip.close();
 
                     fs.unlink(this._packagePath + filename, (err) => {
