@@ -41,12 +41,12 @@
           color="orange500"
           @click="onMergeServerPackage"
         >更新上传服务端包</mu-button>
-        <mu-button
+        <!-- <mu-button
           v-loading="isUploadClientPackageLoading"
           data-mu-loading-size="24"
           color="orange500"
           @click="onUploadClientPackage"
-        >上传客户端包</mu-button>
+        >上传客户端包</mu-button>-->
       </div>
     </mu-container>
     <mu-divider />
@@ -126,7 +126,7 @@ export default {
       nativeVersion: null,
       isUpdateServerPackageLoading: false,
       isMergeServerPackageLoading: false,
-      isUploadClientPackageLoading: false,
+      // isUploadClientPackageLoading: false,
       isClearPackageDirLoading: false,
       isWriteVersionInfoLoading: false,
       isPublishWinLoading: false,
@@ -209,24 +209,24 @@ export default {
         Global.hideRegionLoading();
       }
     },
-    async onUploadClientPackage() {
-      if (!ModelMgr.versionModel.publisher) {
-        Global.snack("请输入发布者", null, false);
-        return;
-      }
+    // async onUploadClientPackage() {
+    //   if (!ModelMgr.versionModel.publisher) {
+    //     Global.snack("请输入发布者", null, false);
+    //     return;
+    //   }
 
-      this.isUploadClientPackageLoading = true;
-      Global.showRegionLoading();
-      try {
-        await ModelMgr.ftpModel.initQiniuOption();
-        await mdPublish.uploadClientPackage();
-        this.isUploadClientPackageLoading = false;
-        Global.hideRegionLoading();
-      } catch (error) {
-        this.isUploadClientPackageLoading = false;
-        Global.hideRegionLoading();
-      }
-    },
+    //   this.isUploadClientPackageLoading = true;
+    //   Global.showRegionLoading();
+    //   try {
+    //     await ModelMgr.ftpModel.initQiniuOption();
+    //     await mdFtp.uploadClientPackage();
+    //     this.isUploadClientPackageLoading = false;
+    //     Global.hideRegionLoading();
+    //   } catch (error) {
+    //     this.isUploadClientPackageLoading = false;
+    //     Global.hideRegionLoading();
+    //   }
+    // },
     // async onClearPackageDir() {
     //   if (!ModelMgr.versionModel.publisher) {
     //     Global.snack("请输入发布者", null, false);
@@ -372,10 +372,10 @@ export default {
           ModelMgr.ftpModel.initQiniuOption.bind(ModelMgr.ftpModel)
         );
         promiseList.push(mdPublish.mergeServerPackage);
-        promiseList.push(
-          ModelMgr.ftpModel.initQiniuOption.bind(ModelMgr.ftpModel)
-        );
-        promiseList.push(mdPublish.uploadClientPackage);
+        // promiseList.push(
+        //   ModelMgr.ftpModel.initQiniuOption.bind(ModelMgr.ftpModel)
+        // );
+        // promiseList.push(mdFtp.uploadClientPackage);
 
         await Global.executePromiseList(promiseList);
 

@@ -86,11 +86,9 @@ export async function uploadVersionFile() {
     let curEnviron = ModelMgr.versionModel.curEnviron;
     if (curEnviron.scpEnable) {
         await uploadScpVersionFile();
-        if (curEnviron.scpMacPatchPath) {
-            await uploadScpPatchZip(curEnviron.scpMacPatchPath);
-        }
-        if (curEnviron.scpWinPatchPath) {
-            await uploadScpPatchZip(curEnviron.scpWinPatchPath);
+        if (curEnviron.scpPatchPath) {
+            let zipName = ModelMgr.versionModel.needPatch ? getPatchName() : "release.zip";
+            await uploadScpNativeZip(curEnviron.scpPatchPath, zipName);
         }
     }
 
@@ -283,7 +281,7 @@ async function uploadScpPolicyFile() {
     Global.toast('上传策略文件成功');
 }
 
-async function scpFile(path) {
+async function scpFile(path, host, user, password, targetPath) {
     return new Promise((resolve, reject) => {
         let client = new scp2.Client();
         client.on("transfer", (buffer, uploaded, total) => {
@@ -295,10 +293,10 @@ async function scpFile(path) {
         scp2.scp(
             path,
             {
-                host: environ.host,
-                user: environ.user,
-                password: environ.password,
-                path: environ.scpRootPath + environ.scpPath
+                host: host || environ.host,
+                user: user || environ.user,
+                password: password || environ.password,
+                path: targetPath || (environ.scpRootPath + environ.scpPath)
             },
             client,
             (err) => {
@@ -313,56 +311,18 @@ async function scpFile(path) {
     });
 }
 
-async function uploadScpPatchZip(scpPatchPath) {
-    return new Promise((resolve, reject) => {
-        let client = new Client();
-        let environ = ModelMgr.versionModel.curEnviron;
-        if (!scpPatchPath) {
-            reject();
-            console.log("没有配置补丁zip scp上传路径");
-        }
-        client
-            .on("ready", () => {
-                console.log("Client :: ready");
-                let cmdCopyPatch =
-                    "cp -rvf " +
-                    environ.scpRootPath + environ.scpPath + "/" + getPatchName() + " " +
-                    environ.scpRootPath + scpPatchPath + "/" + getPatchName();
+/** 上传Native用的游戏压缩包 */
+async function uploadScpNativeZip(scpNativeZipPath, zipName) {
+    let environ = ModelMgr.versionModel.curEnviron;
+    let zipPath = `${Global.svnPublishPath}${environ.zipPath}/`;
+    let webZipPath = zipPath + zipName;
+    let isExists = await fsExc.exists(webZipPath);
 
-                console.log("cmd --> " + cmdCopyPatch);
-
-                client.exec(
-                    cmdCopyPatch,
-                    {},
-                    (err, stream) => {
-                        if (err) throw err;
-                        stream
-                            .on("close", (code, signal) => {
-                                client.end();
-                                if (code != 0) {
-                                    reject();
-                                    console.log("复制补丁失败", code);
-                                    return;
-                                }
-
-                                console.log("复制补丁成功");
-                                resolve();
-                            })
-                            .on("data", (data) => {
-                                // console.log("STDOUT: " + data);
-                            })
-                            .stderr.on("data", (data) => {
-                                console.log("STDERR: " + data);
-                            });
-                    }
-                );
-            })
-            .connect({
-                host: environ.host,
-                user: environ.user,
-                password: environ.password
-            });
-    })
+    if (!isExists) {
+        Global.snack(`不存在文件${webZipPath}`);
+        return;
+    }
+    await scpFile(webZipPath, environ.patchHost, environ.patchUser, environ.patchPassword, scpNativeZipPath);
 }
 
 async function uploadCdnPatchZip(cdnPatchPath) {
@@ -687,4 +647,79 @@ export async function applyNativePolicyNum() {
 
 function getNewNativePolicyNum() {
     return ModelMgr.versionModel.nativePolicyNum + 1;
+}
+
+/** 上传客户端包 */
+export async function uploadClientPackage() {
+    return new Promise(async (resolve, reject) => {
+        let policyInfo = await ModelMgr.versionModel.getCurPolicyInfo();
+        let data = JSON.parse(policyInfo);
+        console.log(`start zip`);
+        if (data.Code != 0) {
+            console.log(`policy num is null`);
+            console.log(data.Message);
+            reject();
+            return;
+        }
+
+        let policyNum = data.Data.Version;
+        let environ = ModelMgr.versionModel.curEnviron;
+        let gameVersion = await ModelMgr.versionModel.getGameVersion(environ, policyNum);
+        let releaseName = `release_v${gameVersion}s`;
+        let zipPath = `${Global.svnPublishPath}${environ.zipPath}/${releaseName}.zip`;
+
+        await zipClientPackage(environ, policyNum, releaseName, zipPath);
+        resolve();
+
+        let fileKey = `${releaseName}.zip`;
+        if (environ.cdnEnable) {
+            //cdn上传路径写为ready,因为ready和release用的是同一个包
+            CdnUtil.checkUploaderFile(zipPath, fileKey, `clientPackages/ready`, () => {
+                console.log(`${environ.name}上传${fileKey}完毕,版本号:${gameVersion}`);
+                resolve();
+            });
+        }
+
+        if (environ.scpReleasePath) {
+            await uploadScpNativeZip(environ.scpReleasePath, fileKey);
+        }
+    })
+}
+
+function zipClientPackage(environ, policyNum, releaseName, zipPath) {
+    return new Promise(async (resolve, reject) => {
+        let releasePath = `${Global.svnPublishPath}${environ.localPath}/${releaseName}/`;
+
+        //判断policy文件
+        let policyPath = `${Global.svnPublishPath}${environ.localPolicyPath}/policyFile_v${policyNum}.json`
+        if (!(await fsExc.exists(policyPath))) {
+            console.log(`本地不存在最新策略文件:${policyPath}`);
+            return;
+        }
+
+        let indexPath = Global.rawResourcePath + "/nativeIndex.html";
+        let policyData = fs.readFileSync(policyPath);
+        let indexData = fs.readFileSync(indexPath);
+        let output = fs.createWriteStream(zipPath);
+        let archive = archiver("zip");
+        archive.pipe(output);
+        archive.directory(releasePath, ``);
+        archive.append(policyData, {
+            name: "policyFile.json"
+        });
+        archive.append(indexData, {
+            name: "index.html"
+        });
+
+        archive.on("error", (err) => {
+            console.error(`压缩${zipPath}失败`, err);
+            reject();
+        });
+        output.on("close", () => {
+            console.log(`压缩${zipPath}成功`);
+            resolve();
+        });
+
+        archive.finalize();
+    });
 }
