@@ -99,7 +99,6 @@ class Message {
     /** 检查游戏包更新 */
     private async checkPackageUpdate() {
         logger.log('update', `开始检查更新`);
-        logger.log('config', `全局配置`, commonConfig.globalConfig);
 
         //服务器包所在目录
         let serverPackageDir = `${commonConfig.serverPackagePath}`;

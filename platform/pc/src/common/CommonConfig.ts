@@ -34,6 +34,24 @@ class CommonConfig {
     /** ready环境用tokenDomain */
     public readonly readyTokenDomain = `.wkcoding.com`;
 
+    public readonly versionCfg = {
+        "beta": {
+            patchUrl: "192.168.1.82/native/beta/patch",
+            packageUrl: "192.168.1.82/native/beta/release",
+            policyUrl: "planet.wkcoding.com/web/beta/"
+        },
+        "ready": {
+            patchUrl: "bg-stage.wkcoding.com//win",
+            packageUrl: "bg-stage.wkcoding.com/clientPackages/ready",
+            policyUrl: "bg-stage.wkcoding.com/readyTest"
+        },
+        "release": {
+            patchUrl: "bg-stage.wkcoding.com//win",
+            packageUrl: "bg-stage.wkcoding.com/clientPackages/ready",
+            policyUrl: "bg-stage.wkcoding.com/"
+        },
+    }
+
     /** 上课模式渠道常量 */
     public constChannelLesson = 'bian_lesson';
 
@@ -41,11 +59,11 @@ class CommonConfig {
     public constPseudoProtocol = 'bellplanet://';
 
 
-    /** 全局配置 */
-    private _globalConfig: any;
-    public get globalConfig(): any {
-        return this._globalConfig;
-    }
+    // /** 全局配置 */
+    // private _globalConfig: any;
+    // public get globalConfig(): any {
+    //     return this._globalConfig;
+    // }
 
     /** 程序根路径 */
     public _rootPath: string;
@@ -136,8 +154,8 @@ class CommonConfig {
         }
 
         let data = fs.readFileSync(this.globalConfigPath, 'utf-8');
-        this._globalConfig = JSON.parse(data);
-        this._environName = this._globalConfig.environName;
+        const globalConfig = JSON.parse(data);
+        this._environName = globalConfig.environName;
     }
 }
 
