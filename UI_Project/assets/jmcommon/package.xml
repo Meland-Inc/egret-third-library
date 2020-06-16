@@ -137,6 +137,10 @@
     <image id="766c4r" name="btn_sub.png" path="/img/"/>
     <image id="766c4t" name="btn_next.png" path="/img/"/>
     <image id="wry861" name="btn_moreThink.png" path="/img/"/>
+    <image id="nxno62" name="loadingCancel.png" path="/img/"/>
+    <image id="nxno63" name="loading_32.png" path="/img/"/>
+    <image id="nxno64" name="iOSBegin.png" path="/img/"/>
+    <component id="nxno65" name="ComIOSBegin.xml" path="/com/" exported="true"/>
   </resources>
   <publish name="jmcommon" path="..\..\egret-planet\resource\jimmyAssets\jmFairyGui" packageCount="2"/>
 </packageDescription>
