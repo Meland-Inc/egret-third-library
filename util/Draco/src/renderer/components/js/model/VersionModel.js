@@ -25,7 +25,7 @@ export class VersionModel {
             patchHost: "192.168.1.82", patchUser: "bell", patchPassword: "bell", nativePackageEnable: true,
             zipPath: "/beta/zip", scpRootPath: "/web", scpPath: "/web/beta", localPath: "/beta/web", localPolicyPath: "/beta/policy", serverPackagePath: "/beta/server_packages",
             updateGitEnable: true, gitBranch: "trunk/beta", trunkName: "beta", cdnRoot: "",
-            scpPatchPath: "/Users/bell/Documents/ftp/beta/patch", scpReleasePath: "/Users/bell/Documents/ftp/beta/release",
+            scpPatchPath: "/Library/WebServer/Documents/native/beta/patch", scpReleasePath: "/Library/WebServer/Documents/native/beta/release",
             publishEnable: true, mergeVersionEnable: true, compressPicEnable: false, zipFileEnable: true, policyEnable: true, scpEnable: true, cdnEnable: false,
             pushGitEnable: true, publishDescEnable: false, codeVersionEnable: true, gitTagEnable: false, zipUploadGameEnable: false, nativeEnable: true
         },

@@ -669,7 +669,6 @@ export async function uploadClientPackage() {
         let zipPath = `${Global.svnPublishPath}${environ.zipPath}/${releaseName}.zip`;
 
         await zipClientPackage(environ, policyNum, releaseName, zipPath);
-        resolve();
 
         let fileKey = `${releaseName}.zip`;
         if (environ.cdnEnable) {
@@ -682,6 +681,7 @@ export async function uploadClientPackage() {
 
         if (environ.scpReleasePath) {
             await uploadScpNativeZip(environ.scpReleasePath, fileKey);
+            resolve();
         }
     })
 }
