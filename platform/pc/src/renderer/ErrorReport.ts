@@ -1,13 +1,12 @@
-/*
- * @Author: xiangqian 
- * @Date: 2019-11-08 21:11:09 
- * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-26 18:06:00
+/** 
+ * @Author 雪糕
+ * @Description 错误上报
+ * @Date 2019-11-08 21:11:09
+ * @FilePath \pc\src\renderer\ErrorReport.ts
  */
-
 import Raven from 'raven-js'
-import config from './Config';
-import { define } from './define';
+import commonConfig from '../common/CommonConfig';
+import { CommonDefine } from '../common/CommonDefine';
 
 /**错误上报 */
 class ErrorReport {
@@ -19,7 +18,7 @@ class ErrorReport {
             return;
         }
 
-        if (config.environName === define.eEnvironName.release) {
+        if (commonConfig.environName === CommonDefine.eEnvironName.release) {
             this._enable = true;
             this._raven = Raven;
             this._raven.config('https://e9ff496745ec4611842d0b2fe66b167e@sentry.io/1272774').install();
@@ -33,7 +32,7 @@ class ErrorReport {
             // raven.setTagsContext({
             //     version: codeVersion
             // });
-            Raven.setEnvironment(config.environName);
+            Raven.setEnvironment(commonConfig.environName);
             // raven.setUserContext({
             //     email: 'matt@example.com',
             //     id: '123'

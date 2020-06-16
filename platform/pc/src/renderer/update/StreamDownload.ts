@@ -1,9 +1,8 @@
-/**
- * @author 雪糕 
- * @desc 下载类
- * @date 2020-02-25 10:50:36 
- * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-21 20:48:33
+/** 
+ * @Author 雪糕
+ * @Description 下载类
+ * @Date 2020-02-25 10:50:36
+ * @FilePath \pc\src\renderer\update\StreamDownload.ts
  */
 import fs from 'fs';
 import request from 'request';

@@ -1,9 +1,8 @@
-/**
- * @author 雪糕 
- * @desc main用的工具类
- * @date 2020-02-18 11:43:24 
- * @Last Modified by: 雪糕
- * @Last Modified time: 2020-04-29 17:36:11
+/** 
+ * @Author 雪糕
+ * @Description 主进程的工具类
+ * @Date 2020-02-18 11:43:24
+ * @FilePath \pc\src\main\util.ts
  */
 import { session } from 'electron';
 import { exec, ChildProcess } from 'child_process';
@@ -13,8 +12,10 @@ import fs from 'fs';
 import querystring from 'querystring';
 import FormData from 'form-data';
 
+import commonConfig from '../common/CommonConfig';
+
 import { logger } from './logger';
-import config from './Config';
+import mainModel from './MainModel';
 
 export namespace util {
     let nativeCnf: any;
@@ -195,28 +196,20 @@ export namespace util {
     /** 初始化服务端native配置 */
     export function initNativeCnf() {
         logger.log('net', `初始化native本地服务器配置`);
-        let nativeCnfContent = fs.readFileSync(config.nativeCnfPath, "utf-8");
+        let nativeCnfContent = fs.readFileSync(commonConfig.nativeCnfPath, "utf-8");
         nativeCnf = JSON.parse(nativeCnfContent);
-    }
-
-    /** 初始化全局配置 */
-    export function initGlobalConfig() {
-        let globalConfigContent = fs.readFileSync(config.globalConfigPath, "utf-8");
-        let globalConfig = JSON.parse(globalConfigContent);
-
-        config.setEnvironName(globalConfig.environName);
     }
 
     /** 写入服务端配置文件 */
     export function writeServerCnfValue(key: string, value: number | string) {
         nativeCnf[key] = value;
         let content = JSON.stringify(nativeCnf, null, 4);
-        fs.writeFileSync(config.nativeCnfPath, content);
+        fs.writeFileSync(commonConfig.nativeCnfPath, content);
     }
 
     /** 拷贝日志到上传目录 */
     export async function copyLog2UploadDir() {
-        const uploadPath: string = `${config.rootPath}/dist/uploadLog`;
+        const uploadPath: string = `${commonConfig.rootPath}/dist/uploadLog`;
 
         //删除旧的日志文件
         let uploadDir = fs.readdirSync(uploadPath);
@@ -231,12 +224,12 @@ export namespace util {
             }
         }
 
-        const logPath: string = `${config.rootPath}/dist/log`;
+        const logPath: string = `${commonConfig.rootPath}/dist/log`;
         const logDir = fs.readdirSync(logPath);
         let date: Date = new Date();
         let dateFormat: string = `${date.getFullYear()}-${date.getMonth()}-${date.getDay()}_${date.getHours()}-${date.getMinutes()}-${date.getSeconds()}`;
-        let userid: string = await getCookie("userid") || config.bellActId || "";
-        let playerId: string = config.playerId || "";
+        let userid: string = await getCookie("userid") || mainModel.bellActId || "";
+        let playerId: string = mainModel.playerId || "";
 
         //拷贝新的日志文件到上传目录
         for (const fileName of logDir) {
@@ -278,8 +271,8 @@ export namespace util {
     /** 执行渲染层js代码 */
     export function executeJavaScript(code: string, showError: boolean = true) {
         try {
-            if (config.mainWindow && config.mainWindow.isEnabled && config.mainWindow.webContents) {
-                config.mainWindow.webContents.executeJavaScript(code);
+            if (mainModel.mainWindow && mainModel.mainWindow.isEnabled && mainModel.mainWindow.webContents) {
+                mainModel.mainWindow.webContents.executeJavaScript(code);
             }
         } catch (error) {
             if (showError) {

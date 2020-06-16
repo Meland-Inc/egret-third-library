@@ -1,9 +1,8 @@
-/**
- * @author 雪糕 
- * @desc main主程序文件
- * @date 2020-02-18 11:42:51 
- * @Last Modified by: 雪糕
- * @Last Modified time: 2020-04-29 17:37:49
+/** 
+ * @Author 雪糕
+ * @Description main主程序文件
+ * @Date 2020-02-18 11:42:51
+ * @FilePath \pc\src\main\main.ts
  */
 // Modules to control application life and create native browser window
 import { app, globalShortcut, BrowserWindow, Menu, shell, dialog } from 'electron';
@@ -11,13 +10,15 @@ import * as fs from 'fs';
 import * as process from 'process';
 import * as os from 'os';
 
+import { CommonDefine } from '../common/CommonDefine';
+import commonConfig from '../common/CommonConfig';
+import MsgId from '../common/MsgId';
 
-import { define } from './define';
 import { logger } from './logger';
-import config from './Config';
+import { util } from './util';
+import mainModel from './MainModel';
 import server from './Server';
 import message from './Message';
-import { util } from './util';
 
 //限制只启用一个程序
 const gotTheLock = app.requestSingleInstanceLock();
@@ -87,7 +88,7 @@ function onAppOpenUrl(event: Event, url: string) {
 async function onGotTheLock(url: string) {
   logger.log('electron', `运行第二个实例`);
   /** 设置url参数 */
-  config.setUrlValue(url);
+  mainModel.setUrlValue(url);
 
   if (mainWindow) {
     if (mainWindow.isMinimized()) {
@@ -128,7 +129,7 @@ async function createWindow() {
     }
   });
 
-  config.setMainWindow(mainWindow);
+  mainModel.setMainWindow(mainWindow);
 
   //创建游戏包目录
   packageMkDir();
@@ -139,7 +140,7 @@ async function createWindow() {
 
   /** 设置url参数 */
   if (os.platform() === "win32") {
-    config.setUrlValue(process.argv.splice(app.isPackaged ? 1 : 2).join(""));
+    mainModel.setUrlValue(process.argv.splice(app.isPackaged ? 1 : 2).join(""));
   }
 
   logger.log('main', `收到参数1: ${JSON.stringify(process.argv)}`);
@@ -148,12 +149,9 @@ async function createWindow() {
   message.init();
 
   //只有打包后的要上传日志
-  if (config.isPackaged) {
+  if (commonConfig.isPackaged) {
     logger.uploadLog();
   }
-
-  //初始化全局配置
-  util.initGlobalConfig();
 
   await initNative();
 
@@ -164,16 +162,16 @@ async function createWindow() {
 /** 创建游戏包目录 */
 function packageMkDir() {
   // 判断创建文件
-  if (!fs.existsSync(`${config.packagePath}`)) {
-    fs.mkdirSync(`${config.packagePath}`)
+  if (!fs.existsSync(`${commonConfig.packagePath}`)) {
+    fs.mkdirSync(`${commonConfig.packagePath}`)
   }
 
-  if (!fs.existsSync(`${config.clientPackagePath}`)) {
-    fs.mkdirSync(`${config.clientPackagePath}`)
+  if (!fs.existsSync(`${commonConfig.clientPackagePath}`)) {
+    fs.mkdirSync(`${commonConfig.clientPackagePath}`)
   }
 
-  if (!fs.existsSync(`${config.serverPackagePath}`)) {
-    fs.mkdirSync(`${config.serverPackagePath}`)
+  if (!fs.existsSync(`${commonConfig.serverPackagePath}`)) {
+    fs.mkdirSync(`${commonConfig.serverPackagePath}`)
   }
 }
 
@@ -188,7 +186,6 @@ function initMainWindow() {
   mainWindow.on('closed', onClosed);
   mainWindow.webContents.on('crashed', onCrashed);
   mainWindow.webContents.on('new-window', onNewWindow);
-  // mainWindow.webContents.on('will-navigate', onWillNavigate);
 
   //设置菜单
   // const menu = Menu.buildFromTemplate(template);
@@ -241,7 +238,7 @@ async function onClosed() {
   util.copyLog2UploadDir()
     .finally(async () => {
       mainWindow = null;
-      config.setMainWindow(null);
+      mainModel.setMainWindow(null);
     });
 }
 
@@ -256,42 +253,41 @@ async function onNewWindow(event: Event, url: string) {
 
 /** native初始化 */
 async function initNative() {
-  logger.log('net', `urlValue: ${config.urlValue}`);
-  if (!config.urlValue || config.urlValue.indexOf(config.constPseudoProtocol) < 0) {
-    config.setNativeMode(define.eNativeMode.website);
+  logger.log('net', `urlValue: ${mainModel.urlValue}`);
+  if (!mainModel.urlValue || mainModel.urlValue.indexOf(commonConfig.constPseudoProtocol) < 0) {
+    mainModel.setNativeMode(CommonDefine.eNativeMode.website);
   } else {
     //设置路由
-    const urlObj = new URL(config.urlValue);
+    const urlObj = new URL(mainModel.urlValue);
     const lessonRouter = urlObj.hostname;
-    config.setLessonRouter(lessonRouter as define.eLessonRouter);
+    mainModel.setLessonRouter(lessonRouter as CommonDefine.eLessonRouter);
 
-    logger.log('test', `router: ${config.lessonRouter}`);
+    logger.log('test', `router: ${mainModel.lessonRouter}`);
 
     //创造地图模式
-    if (config.lessonRouter === define.eLessonRouter.createMap) {
-      config.setNativeMode(define.eNativeMode.createMap);
-    } else if (config.lessonRouter === define.eLessonRouter.banner) {
-      config.setNativeMode(define.eNativeMode.banner);
-    } else if (config.lessonRouter === define.eLessonRouter.game) {
-      config.setNativeMode(define.eNativeMode.game);
+    if (mainModel.lessonRouter === CommonDefine.eLessonRouter.createMap) {
+      mainModel.setNativeMode(CommonDefine.eNativeMode.createMap);
+    } else if (mainModel.lessonRouter === CommonDefine.eLessonRouter.banner) {
+      mainModel.setNativeMode(CommonDefine.eNativeMode.banner);
+    } else if (mainModel.lessonRouter === CommonDefine.eLessonRouter.game) {
+      mainModel.setNativeMode(CommonDefine.eNativeMode.game);
     } else {
-      config.setNativeMode(define.eNativeMode.platform);
+      mainModel.setNativeMode(CommonDefine.eNativeMode.platform);
     }
   }
 
 
   await mainWindow.loadFile(`./dist/renderer.html`);
 
-  logger.log('net', `config.urlValue`, config.urlValue);
-  logger.log('env', `app.isPackaged:`, app.isPackaged);
-  config.setIsPackaged(app.isPackaged);
+  logger.log('net', `config.urlValue`, mainModel.urlValue);
+  logger.log('env', `app.isPackaged:`, commonConfig.isPackaged);
   //打包后的包才要检查更新
-  if (app.isPackaged) {
-    message.sendIpcMsg("GET_NATIVE_POLICY_VERSION");
+  if (commonConfig.isPackaged) {
+    message.sendIpcMsg(MsgId.GET_NATIVE_POLICY_VERSION);
   }
   //没打包的直接检查游戏包更新
   else {
-    message.sendIpcMsg("CHECK_PACKAGE_UPDATE");
+    message.sendIpcMsg(MsgId.CHECK_PACKAGE_UPDATE);
   }
 }
 
@@ -372,6 +368,6 @@ function saveProcessLog() {
       title: `后台进程日志另存为`,
       filters: [{ name: "process.log", extensions: ["log"] }]
     });
-  let content = fs.readFileSync(config.processLogPath, 'utf-8');
+  let content = fs.readFileSync(commonConfig.processLogPath, 'utf-8');
   fs.writeFileSync(path, content, 'utf-8');
 }

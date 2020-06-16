@@ -1,20 +1,22 @@
-/**
- * @author 雪糕
- * @desc 渲染进程消息处理文件
- * @date 2020-02-26 15:31:07
- * @Last Modified by: 雪糕
- * @Last Modified time: 2020-04-30 00:02:57
+/** 
+ * @Author 雪糕
+ * @Description 渲染进程消息处理文件
+ * @Date 2020-02-26 15:31:07
+ * @FilePath \pc\src\renderer\Message.ts
  */
 import { ipcRenderer, IpcRendererEvent } from "electron";
 import querystring from "querystring";
 import fs from "fs";
 import fse from "fs-extra";
-
 import path from "path";
 
-import config from './Config';
+import { CommonDefine } from '../common/CommonDefine';
+import commonConfig from '../common/CommonConfig';
+import MsgId from '../common/MsgId';
+import IpcChannel from '../common/IpcChannel';
+
+import rendererModel from './RendererModel';
 import * as util from './util';
-import { define } from './define';
 import * as logger from './logger';
 import * as loading from './loading';
 import ClientUpdate from './update/ClientUpdate';
@@ -23,42 +25,48 @@ import errorReport from "./ErrorReport";
 
 class Message {
     //消息对应方法集合
-    private msgMap = {
-        'SAVE_NATIVE_LOGIN_RESPONSE': this.onSaveNativeLoginResponse.bind(this),    //保存native平台登陆信息
-        'SAVE_NATIVE_GAME_SERVER': this.onSaveNativeGameServer.bind(this),     //设置native服务器内网ip和端口
-        'START_NATIVE_CLIENT': this.onStartNativeClient.bind(this),  //从客户端进入
-        'START_NATIVE_WEBSITE': this.onStartNativeWebsite.bind(this),  //开始官网地址进入
-        'START_NATIVE_PLATFORM': this.onStartNativePlatform.bind(this),  //开始平台进入
-        'SEND_MSG_TO_CLIENT': this.onSendMsgToClient.bind(this), //发送消息到客户端
-        'SHOW_LOADING': this.onShowLoading.bind(this),//显示loading
-        'HIDE_LOADING': this.onHideLoading.bind(this),//隐藏loading
-        'SET_LOADING_PROGRESS': this.onSetLoadingProgress.bind(this),//设置loading进度
-        'CHECK_PACKAGE_UPDATE': this.checkPackageUpdate.bind(this),//检查游戏包更新
-        'GET_NATIVE_POLICY_VERSION': this.onGetNativePolicyVersion.bind(this),//获取native策略版本号
-        'ERROR_REPORT': this.onErrorReport.bind(this),//错误上报
+    private msgMap: Map<string, () => void>;
+
+    private _clientUpdate: ClientUpdate;
+    private _serverUpdate: ServerUpdate;
+
+    public constructor() {
+        this._clientUpdate = new ClientUpdate();
+        this._serverUpdate = new ServerUpdate();
+
+        this.msgMap = new Map<string, () => void>();
+        this.msgMap[MsgId.SAVE_NATIVE_LOGIN_RESPONSE] = this.onSaveNativeLoginResponse.bind(this);
+        this.msgMap[MsgId.SAVE_NATIVE_GAME_SERVER] = this.onSaveNativeGameServer.bind(this);
+        this.msgMap[MsgId.START_NATIVE_CLIENT] = this.onStartNativeClient.bind(this);
+        this.msgMap[MsgId.START_NATIVE_WEBSITE] = this.onStartNativeWebsite.bind(this);
+        this.msgMap[MsgId.START_NATIVE_PLATFORM] = this.onStartNativePlatform.bind(this);
+        this.msgMap[MsgId.SEND_MSG_TO_CLIENT] = this.onSendMsgToClient.bind(this);
+        this.msgMap[MsgId.SHOW_LOADING] = this.onShowLoading.bind(this);
+        this.msgMap[MsgId.HIDE_LOADING] = this.onHideLoading.bind(this);
+        this.msgMap[MsgId.SET_LOADING_PROGRESS] = this.onSetLoadingProgress.bind(this);
+        this.msgMap[MsgId.CHECK_PACKAGE_UPDATE] = this.checkPackageUpdate.bind(this);
+        this.msgMap[MsgId.GET_NATIVE_POLICY_VERSION] = this.onGetNativePolicyVersion.bind(this);
+        this.msgMap[MsgId.ERROR_REPORT] = this.onErrorReport.bind(this);
     }
 
-    private _clientUpdate = new ClientUpdate();
-    private _serverUpdate = new ServerUpdate();
-
     /** 发送渲染进程消息 */
-    public sendIpcMsg(msgId: string, ...args: any[]) {
+    public sendIpcMsg(msgId: string, ...args: unknown[]) {
         logger.log('renderer', `发送渲染进程消息:${msgId} args`, ...args);
-        ipcRenderer.send('RENDERER_PROCESS_MESSAGE', msgId, ...args);
+        ipcRenderer.send(IpcChannel.RENDERER_PROCESS_MESSAGE, msgId, ...args);
     }
 
     /** 初始化 */
     public init() {
         logger.log('renderer', `初始化渲染进程监听消息`);
         //监听主进程消息
-        ipcRenderer.on('MAIN_PROCESS_MESSAGE', (evt: IpcRendererEvent, msgId: string, ...args: any[]) => {
+        ipcRenderer.on(IpcChannel.MAIN_PROCESS_MESSAGE, (evt: IpcRendererEvent, msgId: string, ...args: unknown[]) => {
             logger.log('renderer', `收到主进程消息:${msgId} args`, ...args);
             this.applyIpcMsg(msgId, ...args);
         });
     }
 
     /** 应用主进程消息 */
-    private applyIpcMsg(msgId: string, ...args: any[]) {
+    private applyIpcMsg(msgId: string, ...args: unknown[]) {
         let func = this.msgMap[msgId];
         if (func) {
             func(...args);
@@ -66,19 +74,19 @@ class Message {
     }
 
     /** 保存native平台登陆信息 */
-    private onSaveNativeLoginResponse(body: any) {
-        config.setNativeLoginResponse(body);
+    private onSaveNativeLoginResponse(body: unknown) {
+        rendererModel.setNativeLoginResponse(body);
     }
 
     /** 保存native游戏服务器 */
     private onSaveNativeGameServer(gameServer: string) {
-        config.setNativeGameServer(gameServer);
+        rendererModel.setNativeGameServer(gameServer);
     }
 
     /** 收到获取native策略号消息 */
     private async onGetNativePolicyVersion() {
-        let nativePolicyVersion: number = await util.getNativePolicyNum(config.environName);
-        this.sendIpcMsg("SET_NATIVE_POLICY_VERSION", nativePolicyVersion);
+        let nativePolicyVersion: number = await util.getNativePolicyNum(commonConfig.environName);
+        this.sendIpcMsg(MsgId.SET_NATIVE_POLICY_VERSION, nativePolicyVersion);
     }
 
     /** 收到错误上报 */
@@ -90,10 +98,10 @@ class Message {
     /** 检查游戏包更新 */
     private async checkPackageUpdate() {
         logger.log('update', `开始检查更新`);
-        logger.log('config', `全局配置`, config.globalConfig);
+        logger.log('config', `全局配置`, commonConfig.globalConfig);
 
         //服务器包所在目录
-        let serverPackageDir = `${config.serverPackagePath}`;
+        let serverPackageDir = `${commonConfig.serverPackagePath}`;
         let serverDirect = false;
         let serverExists = fs.existsSync(serverPackageDir);
         if (!serverExists) {
@@ -101,7 +109,7 @@ class Message {
         } else {
             let dir = fs.readdirSync(serverPackageDir);
             let zipIndex: number = dir.findIndex(value => value.search(/.*.zip/) >= 0);
-            let serverVersion: number = config.getVersionConfigValue(define.eVersionCfgFiled.serverPackageVersion);
+            let serverVersion: number = rendererModel.getVersionConfigValue(CommonDefine.eVersionCfgFiled.serverPackageVersion);
             //不存在服务端版本号,或者当文件数量小于2,或者有release压缩包(zip包不完整,导致解压失败),要重新下载新的包
             if (!serverVersion || zipIndex >= 0 || dir.length < 2) {
                 fse.emptyDirSync(serverPackageDir);
@@ -110,7 +118,7 @@ class Message {
         }
 
         //客户端包所在目录
-        let clientPackageDir = config.clientPackagePath;
+        let clientPackageDir = commonConfig.clientPackagePath;
         let clientDirect = false;
         let clientExists = fs.existsSync(clientPackageDir);
         if (!clientExists) {
@@ -119,7 +127,7 @@ class Message {
             let dir = fs.readdirSync(clientPackageDir);
             logger.log(`net`, `dir length:${dir.length}`);
             let zipIndex: number = dir.findIndex(value => value.search(/release_v.*s.zip/) >= 0);
-            let clientVersion: number = config.getVersionConfigValue(define.eVersionCfgFiled.clientPackageVersion);
+            let clientVersion: number = rendererModel.getVersionConfigValue(CommonDefine.eVersionCfgFiled.clientPackageVersion);
             //不存在客户端版本号,或者当文件数量小于2,或者有release压缩包(zip包不完整,导致解压失败),要重新下载新的包
             if (!clientVersion || zipIndex >= 0 || dir.length < 2) {
                 fse.emptyDirSync(clientPackageDir);
@@ -163,7 +171,7 @@ class Message {
     /** 直接下载最新服务端包 */
     private directDownloadServer(callback: Function, ...args: any[]) {
         try {
-            config.setVersionConfigValue(define.eVersionCfgFiled.serverPackageVersion, 0);
+            rendererModel.setVersionConfigValue(CommonDefine.eVersionCfgFiled.serverPackageVersion, 0);
             this._serverUpdate.checkUpdate(callback, ...args);
         } catch (error) {
             let content = `native下载服务端出错,点击重试`;
@@ -220,7 +228,7 @@ class Message {
     /** 从客户端进入 */
     private onStartNativeClient(queryValue: string) {
         this.setConfigData2LocalStorage();
-        let url = `${config.clientPackagePath}/index.html?${queryValue}`;
+        let url = `${commonConfig.clientPackagePath}/index.html?${queryValue}`;
         url = path.join(url);
         location.href = url;
     }
@@ -229,10 +237,10 @@ class Message {
     private onStartNativeWebsite() {
         this.setConfigData2LocalStorage();
 
-        if (config.environName === define.eEnvironName.release) {
-            location.href = config.bellcodeUrl;
+        if (commonConfig.environName === CommonDefine.eEnvironName.release) {
+            location.href = commonConfig.bellcodeUrl;
         } else {
-            location.href = config.demoBellCodeUrl;
+            location.href = commonConfig.demoBellCodeUrl;
         }
     }
 
@@ -262,7 +270,7 @@ class Message {
         }
 
         logger.log("platform", `start native platform queryObject`, queryObject);
-        let iframeUrl = new URL(`file://${config.clientPackagePath}/index.html`);
+        let iframeUrl = new URL(`file://${commonConfig.clientPackagePath}/index.html`);
         for (const key in queryObject) {
             if (queryObject.hasOwnProperty(key)) {
                 const value = queryObject[key];
@@ -289,10 +297,10 @@ class Message {
         let platformValue = querystring.stringify(platformObject);
         //获取官网链接
         let bellPlatformDomain: string;
-        if (config.environName === define.eEnvironName.release) {
-            bellPlatformDomain = config.bellcodeUrl;
+        if (commonConfig.environName === CommonDefine.eEnvironName.release) {
+            bellPlatformDomain = commonConfig.bellcodeUrl;
         } else {
-            bellPlatformDomain = config.demoBellCodeUrl;
+            bellPlatformDomain = commonConfig.demoBellCodeUrl;
         }
 
         logger.log('url', `${bellPlatformDomain}/#/bell-planet?${platformValue}`);
@@ -300,11 +308,11 @@ class Message {
     }
 
     private setConfigData2LocalStorage() {
-        if (!config.nativeLoginResponse) {
+        if (!rendererModel.nativeLoginResponse) {
             localStorage.removeItem('nativeLoginResponse');
         }
 
-        if (!config.nativeGameServer) {
+        if (!rendererModel.nativeGameServer) {
             localStorage.removeItem('nativeGameServer');
         }
     }

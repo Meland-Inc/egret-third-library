@@ -1,9 +1,8 @@
-/**
- * @author 雪糕 
- * @desc renderer用的logger类
- * @date 2020-02-13 14:54:24 
- * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-26 17:25:27
+/** 
+ * @Author 雪糕
+ * @Description renderer用的logger类
+ * @Date 2020-02-13 14:54:24
+ * @FilePath \pc\src\renderer\logger.ts
  */
 import fs from 'fs';
 import { remote } from 'electron';

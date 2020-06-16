@@ -1,15 +1,17 @@
-/**
- * @author 雪糕 
- * @desc native包更新类
- * @date 2020-03-25 17:36:41 
- * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-26 00:44:08
+/** 
+ * @Author 雪糕
+ * @Description native包更新类
+ * @Date 2020-03-25 17:36:41
+ * @FilePath \pc\src\main\NativeUpdate.ts
  */
 import os from 'os';
 import { autoUpdater } from 'electron-updater';
+
+import commonConfig from '../common/CommonConfig';
+import MsgId from '../common/MsgId';
+
 import { logger } from './logger';
 import message from './Message';
-import config from './Config';
 
 export default class NativeUpdate {
     public checkUpdate(nativePolicyVersion: number) {
@@ -27,7 +29,7 @@ export default class NativeUpdate {
 
         autoUpdater.on('update-available', (info) => {
             logger.log('update', `检测到新版本，开始下载……`, info);
-            message.sendIpcMsg("SHOW_LOADING", "正在更新native包");
+            message.sendIpcMsg(MsgId.SHOW_LOADING, "正在更新native包");
         });
 
         autoUpdater.on('update-not-available', (info) => {
@@ -37,7 +39,7 @@ export default class NativeUpdate {
 
         // 更新下载进度事件
         autoUpdater.on('download-progress', (progressObj) => {
-            message.sendIpcMsg("SET_LOADING_PROGRESS", progressObj.percent);
+            message.sendIpcMsg(MsgId.SET_LOADING_PROGRESS, progressObj.percent);
         });
 
         autoUpdater.on('update-downloaded', (event, releaseNotes, releaseName, releaseDate, updateUrl, quitAndUpdate) => {
@@ -49,7 +51,7 @@ export default class NativeUpdate {
     }
 
     private async setFeedURL(nativePolicyVersion: number) {
-        let environName = config.environName;
+        let environName = commonConfig.environName;
         let isWin = os.platform() === "win32";
         let pkgPlatform = isWin ? "win" : "mac";
         let feedURL = `http://bg-stage.wkcoding.com/native/${environName}/${nativePolicyVersion}/${pkgPlatform}`;
@@ -58,6 +60,6 @@ export default class NativeUpdate {
     }
 
     private checkUpdateComplete() {
-        message.sendIpcMsg("CHECK_PACKAGE_UPDATE");
+        message.sendIpcMsg(MsgId.CHECK_PACKAGE_UPDATE);
     }
 }

@@ -1,16 +1,21 @@
 /**
- * @author 雪糕 
- * @desc 全局定义
- * @date 2020-03-21 14:52:44 
- * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-23 20:12:28
+ * @Author 雪糕
+ * @Description 通用定义
+ * @Date 2020-06-15 14:31:53
+ * @FilePath \pc\src\common\Define.ts
  */
-export namespace define {
+export namespace CommonDefine {
     /** 分支枚举 */
     export enum eEnvironName {
         beta = "beta",
         ready = "ready",
         release = "release",
+    }
+
+    /** 版本配置属性名 */
+    export enum eVersionCfgFiled {
+        clientPackageVersion = "clientPackageVersion",
+        serverPackageVersion = "serverPackageVersion",
     }
 
     /** 路由枚举 */

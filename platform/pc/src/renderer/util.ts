@@ -1,9 +1,8 @@
-/**
- * @author 雪糕 
- * @desc 工具类
- * @date 2020-02-28 19:56:39 
- * @Last Modified by: 雪糕
- * @Last Modified time: 2020-03-26 00:26:00
+/** 
+ * @Author 雪糕
+ * @Description 渲染进程工具类
+ * @Date 2020-02-28 19:56:39
+ * @FilePath \pc\src\renderer\util.ts
  */
 import fs from 'fs';
 import path from 'path';
