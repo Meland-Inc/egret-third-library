@@ -55,4 +55,13 @@ export default class MsgId {
 
     /** 错误上报 */
     public static readonly ERROR_REPORT: string = "ERROR_REPORT";
+
+    /** native登录 */
+    public static readonly nativeSignIn: string = "nativeSignIn";
+
+    /** 模板地图 */
+    public static readonly enterMapTemplate: string = "enterMapTemplate";
+
+    /** 模板地图房间 */
+    public static readonly enterMapTemplateRoom: string = "enterMapTemplateRoom";
 }
