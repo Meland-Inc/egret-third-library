@@ -35,6 +35,9 @@ export default class MsgId {
     /** 开始平台进入 */
     public static readonly START_NATIVE_PLATFORM: string = "START_NATIVE_PLATFORM";
 
+    /** 跳转到指定url进入 */
+    public static readonly START_NATIVE_URL: string = "START_NATIVE_URL";
+
     /** 发送消息到客户端 */
     public static readonly SEND_MSG_TO_CLIENT: string = "SEND_MSG_TO_CLIENT";
 

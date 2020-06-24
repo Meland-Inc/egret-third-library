@@ -97,6 +97,11 @@ class Message {
             return
         }
 
+        if (mainModel.nativeMode === CommonDefine.eNativeMode.url) {
+            this.startUrl();
+            return
+        }
+
         if (mainModel.nativeMode === CommonDefine.eNativeMode.website) {
             this.startNativeWebsite();
             return;
@@ -146,6 +151,23 @@ class Message {
         let queryValue: string = querystring.stringify(queryObject);
 
         this.sendIpcMsg(MsgId.START_NATIVE_CLIENT, queryValue);
+    }
+
+    /** 跳转到指定url */
+    private async startUrl() {
+        logger.log('update', `从指定url进入`);
+        let urlValue: string = mainModel.urlValue.slice(mainModel.urlValue.indexOf("?") + 1);
+        let queryObject = querystring.parse(urlValue);
+        let targetUrlValue: string = queryObject["url"] as string;
+        if (!targetUrlValue) return;
+        logger.log('update', `跳转到指定url`, targetUrlValue);
+        logger.log('update', `queryObject: `, queryObject);
+        const temporaryToken: string = queryObject["temporary_token"] as string;
+        if (temporaryToken) {
+            await platform.init();
+        }
+
+        this.sendIpcMsg(MsgId.START_NATIVE_URL, targetUrlValue);
     }
 
     /** 官网地址进入 */

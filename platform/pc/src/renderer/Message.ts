@@ -40,6 +40,7 @@ class Message {
         this.msgMap[MsgId.START_NATIVE_CLIENT] = this.onStartNativeClient.bind(this);
         this.msgMap[MsgId.START_NATIVE_WEBSITE] = this.onStartNativeWebsite.bind(this);
         this.msgMap[MsgId.START_NATIVE_PLATFORM] = this.onStartNativePlatform.bind(this);
+        this.msgMap[MsgId.START_NATIVE_URL] = this.onStartNativeUrl.bind(this);
         this.msgMap[MsgId.SEND_MSG_TO_CLIENT] = this.onSendMsgToClient.bind(this);
         this.msgMap[MsgId.SHOW_LOADING] = this.onShowLoading.bind(this);
         this.msgMap[MsgId.HIDE_LOADING] = this.onHideLoading.bind(this);
@@ -227,15 +228,21 @@ class Message {
 
     /** 从客户端进入 */
     private onStartNativeClient(queryValue: string) {
-        this.setConfigData2LocalStorage();
+        this.checkClearLocalStorage();
         let url = `${commonConfig.clientPackagePath}/index.html?${queryValue}`;
         url = path.join(url);
         location.href = url;
     }
 
+    /** 跳转到指定url */
+    private onStartNativeUrl(url: string) {
+        this.checkClearLocalStorage();
+        location.href = url;
+    }
+
     /** 从官网地址进入 */
     private onStartNativeWebsite() {
-        this.setConfigData2LocalStorage();
+        this.checkClearLocalStorage();
 
         if (commonConfig.environName === CommonDefine.eEnvironName.release) {
             location.href = commonConfig.bellcodeUrl;
@@ -246,7 +253,7 @@ class Message {
 
     /** 从官网平台进入 */
     private onStartNativePlatform(queryObject: querystring.ParsedUrlQuery) {
-        this.setConfigData2LocalStorage();
+        this.checkClearLocalStorage();
 
         let webviewToken: string
         let queryObjectWebviewToken = queryObject['webviewToken'];
@@ -307,7 +314,8 @@ class Message {
         location.href = `${bellPlatformDomain}/#/bell-planet?${platformValue}`;
     }
 
-    private setConfigData2LocalStorage() {
+    /** 检查删除本地存储 */
+    private checkClearLocalStorage() {
         if (!rendererModel.nativeLoginResponse) {
             localStorage.removeItem('nativeLoginResponse');
         }
