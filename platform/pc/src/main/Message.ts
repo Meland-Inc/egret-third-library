@@ -118,14 +118,15 @@ class Message {
 
     /** 从创造地图模式进入 */
     private async startCreateMap() {
-        //平台初始化
-        let queryObject = await platform.init();
-        //初始化参数
-        // Object.assign(queryObject, platform.queryObject);
-        // queryObject['fakeUserType'] = config.userType;
+        let urlValue: string = mainModel.urlValue.slice(mainModel.urlValue.indexOf("?") + 1);
+        let queryObject = querystring.parse(urlValue);
+        //有banner参数,要从平台初始化
+        if (queryObject["banner"]) {
+            queryObject = await platform.init();
+        }
         queryObject['nativeMode'] = CommonDefine.eNativeMode.createMap.toString();
-        let queryValue: string = querystring.stringify(queryObject);
 
+        let queryValue: string = querystring.stringify(queryObject);
         logger.log('update', `从创造地图模式进入`);
         this.sendIpcMsg(MsgId.START_NATIVE_CLIENT, queryValue);
     }
