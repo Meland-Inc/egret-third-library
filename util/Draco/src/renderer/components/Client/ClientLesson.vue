@@ -45,6 +45,7 @@ export default {
       Global.showRegionLoading();
       try {
         await mdFtp.applyLessonPolicyNum(this.isTest);
+        Global.toast(`应用平台版本号成功`);
         this.isApplyPolicyNumLoading = false;
         Global.hideRegionLoading();
       } catch (error) {

@@ -906,7 +906,7 @@ export function mergeServerPackage() {
 
         let packageDir = await fsExc.readDir(serverPackage);
         await checkUploadServerPackages(packageDir, () => {
-            console.log(`比较服务器包并上传完毕`);
+            Global.toast(`比较服务器包并上传完毕`);
             resolve();
         })
     });
