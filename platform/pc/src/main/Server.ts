@@ -91,15 +91,15 @@ class Server {
 
                     //游戏地图
                     if (mainModel.gameServerMode === CommonDefine.eGameServerMode.gameMap) {
-                        message.sendMsgToClient('nativeSignIn', gameServer);
+                        message.sendMsgToClient(MsgId.nativeSignIn, gameServer);
                     }
                     //模板地图
                     else if (mainModel.gameServerMode === CommonDefine.eGameServerMode.mapTemplate) {
-                        message.sendMsgToClient('enterMapTemplate', gameServer);
+                        message.sendMsgToClient(MsgId.enterMapTemplate, gameServer);
                     }
                     //模板地图房间
                     else if (mainModel.gameServerMode === CommonDefine.eGameServerMode.mapTemplateRoom) {
-                        message.sendMsgToClient('enterMapTemplateRoom', gameServer);
+                        message.sendMsgToClient(MsgId.enterMapTemplateRoom, gameServer);
                     } else {
                         //reserve
                     }
