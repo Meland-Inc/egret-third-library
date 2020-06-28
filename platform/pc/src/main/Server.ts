@@ -41,6 +41,43 @@ class Server {
         let nativeServer = http.createServer();
         mainModel.setNativeServer(nativeServer);
         mainModel.nativeServer.listen(0);
+
+        mainModel.nativeServer.on('request', (req, res) => {
+            let urlObj = url.parse(req.url, true);
+            let args = urlObj.query;
+            let pathname = urlObj.pathname;
+            logger.log('net', `收到游戏服务器消息 pathname:${pathname} args`, args);
+            if (pathname === CommonDefine.eNativeServerPathname.serverState) {
+                if (mainModel.gameServerInited) {
+                    logger.log('net', '判断游戏服务器已经启动了,不用操作');
+                    res.end();
+                    return;
+                }
+                mainModel.setGameServerInited(true);
+
+                //初始化游戏服务器参数
+                this.initGameServerArgs(args);
+
+                //检查上报老师Ip
+                this.checkTeacherUploadIp();
+
+                //关闭服务器推送            
+                this.sendReceiveStart();
+
+                res.end();
+                return;
+            }
+
+            if (pathname === CommonDefine.eNativeServerPathname.serverLog) {
+                logger.log('net', `收到服务器日志上报 lv:${args.lv}, msg`, args.msg);
+                res.end();
+                return;
+            }
+
+            // res.end('hello world !');
+            res.end();
+        });
+
         mainModel.nativeServer.on('listening', async () => {
             mainModel.setNativeServerPort((mainModel.nativeServer.address() as AddressInfo).port);
             logger.log('net', '创建native服务器成功,端口号', mainModel.nativeServerPort);
@@ -50,80 +87,70 @@ class Server {
 
             await this.createGameServer(gameServerMode);
         });
+    }
 
-        mainModel.nativeServer.on('request', (req, res) => {
-            let urlObj = url.parse(req.url, true);
-            let args = urlObj.query;
-            let pathname = urlObj.pathname;
-            logger.log('net', `收到游戏服务器消息 pathname:${pathname} args`, args);
-            if (pathname === "/serverState") {
-                if (mainModel.gameServerInited) {
-                    logger.log('net', '判断游戏服务器已经启动了,不用操作');
-                    res.end();
-                    return;
-                }
-                mainModel.setGameServerInited(true);
 
-                logger.log('net', '收到游戏服务器启动完毕消息');
-                // config.setGameServerLocalIp(args.localIp as string);
-                mainModel.setGameServerLocalIp(commonConfig.localIp as string);      //本地IP暂时先用127.0.0.1 保证本机切换网络不会出现问题, 其他人全用内网穿透后的ip
-                mainModel.setGameServerLocalPort(args.localPort as string);
-                mainModel.setGameServerNatUrl(args.natUrl as string);
-                mainModel.setGameServerNatPort(args.natPort as string);
-                logger.log('net', `gameServer --> localIp:${mainModel.gameServerLocalIp} localPort:${mainModel.gameServerLocalPort} natUrl:${mainModel.gameServerNatUrl} natPort:${mainModel.gameServerNatPort}`);
+    /** 初始化游戏服务器参数 */
+    private initGameServerArgs(args) {
+        logger.log('net', '收到游戏服务器启动完毕消息');
+        // config.setGameServerLocalIp(args.localIp as string);
+        mainModel.setGameServerLocalIp(commonConfig.localIp as string);      //本地IP暂时先用127.0.0.1 保证本机切换网络不会出现问题, 其他人全用内网穿透后的ip
+        mainModel.setGameServerLocalPort(args.localPort as string);
+        mainModel.setGameServerNatUrl(args.natUrl as string);
+        mainModel.setGameServerNatPort(args.natPort as string);
+        logger.log('net', `gameServer --> localIp:${mainModel.gameServerLocalIp} localPort:${mainModel.gameServerLocalPort} natUrl:${mainModel.gameServerNatUrl} natPort:${mainModel.gameServerNatPort}`);
 
-                if (mainModel.gameServerLocalIp && mainModel.gameServerLocalPort) {
-                    let gameServer: string = `${mainModel.gameServerLocalIp}:${mainModel.gameServerLocalPort}`;
-                    let hasParam: boolean = false;
-                    if (args.canedit && args.canedit === "true") {
-                        gameServer += `?canedit=${args.canedit}`;
-                        hasParam = true;
-                    }
-
-                    if (args.rw && args.rw != "0") {
-                        let sign = hasParam ? `&` : `?`;
-                        gameServer += `${sign}rw=${args.rw}`;
-                    }
-
-                    logger.log('net', 'native上课客户端登录本地游戏服务器', gameServer);
-
-                    message.sendIpcMsg(MsgId.SAVE_NATIVE_GAME_SERVER, gameServer);
-
-                    //游戏地图
-                    if (mainModel.gameServerMode === CommonDefine.eGameServerMode.gameMap) {
-                        message.sendMsgToClient(MsgId.nativeSignIn, gameServer);
-                    }
-                    //模板地图
-                    else if (mainModel.gameServerMode === CommonDefine.eGameServerMode.mapTemplate) {
-                        message.sendMsgToClient(MsgId.enterMapTemplate, gameServer);
-                    }
-                    //模板地图房间
-                    else if (mainModel.gameServerMode === CommonDefine.eGameServerMode.mapTemplateRoom) {
-                        message.sendMsgToClient(MsgId.enterMapTemplateRoom, gameServer);
-                    } else {
-                        //reserve
-                    }
-                }
-
-                //上课渠道 并且是老师端,并且不是备课的时候,要上报本地ip
-                if (mainModel.channel === commonConfig.constChannelLesson
-                    && mainModel.userType != CommonDefine.eUserType.student
-                    && mainModel.classId) {
-                    platform.teacherUploadIp();
-                }
-
-                //关闭服务器推送
-                let path = `/native?controlType=receiveStart`;
-                util.requestGetHttp(mainModel.gameServerLocalIp, mainModel.gameServerLocalPort, path, null, null, () => {
-                    logger.log('net', `关闭游戏服务器启动推送成功`)
-                }, () => {
-                    logger.error('net', `关闭游戏服务器启动推送错误`)
-                });
+        if (mainModel.gameServerLocalIp && mainModel.gameServerLocalPort) {
+            let gameServer: string = `${mainModel.gameServerLocalIp}:${mainModel.gameServerLocalPort}`;
+            let hasParam: boolean = false;
+            if (args.canedit && args.canedit === "true") {
+                gameServer += `?canedit=${args.canedit}`;
+                hasParam = true;
             }
 
-            // res.end('hello world !');
-            res.end();
-        })
+            if (args.rw && args.rw != "0") {
+                let sign = hasParam ? `&` : `?`;
+                gameServer += `${sign}rw=${args.rw}`;
+            }
+
+            logger.log('net', 'native上课客户端登录本地游戏服务器', gameServer);
+
+            message.sendIpcMsg(MsgId.SAVE_NATIVE_GAME_SERVER, gameServer);
+
+            //游戏地图
+            if (mainModel.gameServerMode === CommonDefine.eGameServerMode.gameMap) {
+                message.sendMsgToClient(MsgId.nativeSignIn, gameServer);
+            }
+            //模板地图
+            else if (mainModel.gameServerMode === CommonDefine.eGameServerMode.mapTemplate) {
+                message.sendMsgToClient(MsgId.enterMapTemplate, gameServer);
+            }
+            //模板地图房间
+            else if (mainModel.gameServerMode === CommonDefine.eGameServerMode.mapTemplateRoom) {
+                message.sendMsgToClient(MsgId.enterMapTemplateRoom, gameServer);
+            } else {
+                //reserve
+            }
+        }
+    }
+
+    //上课渠道 并且是老师端,并且不是备课的时候,要上报本地ip
+    private checkTeacherUploadIp(): void {
+        if (mainModel.channel === commonConfig.constChannelLesson
+            && mainModel.userType != CommonDefine.eUserType.student
+            && mainModel.classId) {
+            platform.teacherUploadIp();
+        }
+    }
+
+    //关闭服务器推送
+    private sendReceiveStart(): void {
+        let path = `/native?controlType=receiveStart`;
+        util.requestGetHttp(mainModel.gameServerLocalIp, mainModel.gameServerLocalPort, path, null, null, () => {
+            logger.log('net', `关闭游戏服务器启动推送成功`)
+        }, () => {
+            logger.error('net', `关闭游戏服务器启动推送错误`)
+        });
     }
 
     /** 关闭native服务器 */
