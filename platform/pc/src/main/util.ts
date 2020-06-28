@@ -255,6 +255,7 @@ export namespace util {
                 logger.log('log', `postFile res`, res.statusCode, res.statusMessage);
             }
             res.resume();
+            logger.log('log', `上传日志完毕url:${url} fileName:${fileName} filePath:${filePath}`);
         });
     }
 

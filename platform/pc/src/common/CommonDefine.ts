@@ -52,4 +52,11 @@ export namespace CommonDefine {
         mapTemplateRoom = 6, //c端地图模板房间模式
         banner = 7, //banner模式
     }
+
+    /** native服务器的路径枚举 */
+    export enum eNativeServerPathname {
+        serverState = "/serverState",       //服务器状态
+        serverLog = "/serverLog",           //服务器上报日志
+
+    }
 }
