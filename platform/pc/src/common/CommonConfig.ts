@@ -34,36 +34,11 @@ class CommonConfig {
     /** ready环境用tokenDomain */
     public readonly readyTokenDomain = `.wkcoding.com`;
 
-    public readonly versionCfg = {
-        "beta": {
-            patchUrl: "192.168.1.82/native/beta/patch",
-            packageUrl: "192.168.1.82/native/beta/release",
-            policyUrl: "planet.wkcoding.com/web/beta/"
-        },
-        "ready": {
-            patchUrl: "bg-stage.wkcoding.com//win",
-            packageUrl: "bg-stage.wkcoding.com/clientPackages/ready",
-            policyUrl: "bg-stage.wkcoding.com/readyTest"
-        },
-        "release": {
-            patchUrl: "bg-stage.wkcoding.com//win",
-            packageUrl: "bg-stage.wkcoding.com/clientPackages/ready",
-            policyUrl: "bg-stage.wkcoding.com/"
-        },
-    }
-
     /** 上课模式渠道常量 */
     public constChannelLesson = 'bian_lesson';
 
     /** 上课伪协议头 */
     public constPseudoProtocol = 'bellplanet://';
-
-
-    // /** 全局配置 */
-    // private _globalConfig: any;
-    // public get globalConfig(): any {
-    //     return this._globalConfig;
-    // }
 
     /** 程序根路径 */
     public _rootPath: string;
@@ -139,6 +114,24 @@ class CommonConfig {
         return this._isPackaged;
     }
 
+    private _patchUrl: string;
+    /** 客户端补丁包地址 */
+    public get patchUrl(): string {
+        return this._patchUrl;
+    }
+
+    private _policyUrl: string;
+    /** 客户端策略文件地址 */
+    public get policyUrl(): string {
+        return this._policyUrl;
+    }
+
+    private _packageUrl: string;
+    /** 客户端游戏包地址 */
+    public get packageUrl(): string {
+        return this._packageUrl;
+    }
+
     public constructor() {
         const commonApp: App = app || remote.app;
         this._rootPath = commonApp.getAppPath();
@@ -156,6 +149,9 @@ class CommonConfig {
         let data = fs.readFileSync(this.globalConfigPath, 'utf-8');
         const globalConfig = JSON.parse(data);
         this._environName = globalConfig.environName;
+        this._patchUrl = globalConfig.patchUrl;
+        this._packageUrl = globalConfig.packageUrl;
+        this._policyUrl = globalConfig.policyUrl;
     }
 }
 

@@ -51,10 +51,9 @@ export default class ClientUpdate {
 
         this._curVersion = this._startVersion = +gameVersion;
 
-        const versionCfg: { patchUrl: string, packageUrl: string, policyUrl: string } = commonConfig.versionCfg[commonConfig.environName];
-        this._patchUrl = `${commonConfig.protocol}//${versionCfg.patchUrl}`;
+        this._patchUrl = `${commonConfig.protocol}//${commonConfig.patchUrl}`;
 
-        const { policyHost, policyPath } = this.getPolicyInfo(versionCfg.policyUrl);
+        const { policyHost, policyPath } = this.getPolicyInfo(commonConfig.policyUrl);
 
         const curGameVersion = await this.getClientGameVersion(commonConfig.environName, policyHost, policyPath);
         if (!curGameVersion) return true;
@@ -243,10 +242,9 @@ export default class ClientUpdate {
             environName = CommonDefine.eEnvironName.release;
         }
 
-        const curVersionCfg: { patchUrl: string, packageUrl: string, policyUrl: string } = commonConfig.versionCfg[environName];
-        const { policyHost, policyPath } = this.getPolicyInfo(curVersionCfg.policyUrl);
+        const { policyHost, policyPath } = this.getPolicyInfo(commonConfig.policyUrl);
         const gameVersion = await this.getClientGameVersion(environName, policyHost, policyPath);
-        const fileDir = `${commonConfig.protocol}//${curVersionCfg.packageUrl}`;
+        const fileDir = `${commonConfig.protocol}//${commonConfig.packageUrl}`;
         const saveDir = this._clientPackagePath;
         const fileName = `release_v${gameVersion}s.zip`;
         //下载文件
