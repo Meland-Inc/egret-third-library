@@ -168,11 +168,13 @@ class Message {
         logger.log('update', `跳转到指定url`, targetUrlValue);
         logger.log('update', `queryObject: `, queryObject);
         const temporaryToken: string = queryObject["temporary_token"] as string;
+        const newUrl = new URL(targetUrlValue);
         if (temporaryToken) {
             await platform.init();
+            newUrl.searchParams.set("webviewToken", mainModel.bellToken);
         }
 
-        this.sendIpcMsg(MsgId.START_NATIVE_URL, targetUrlValue);
+        this.sendIpcMsg(MsgId.START_NATIVE_URL, newUrl.toString());
     }
 
     /** 官网地址进入 */
