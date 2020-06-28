@@ -111,6 +111,11 @@ class Message {
             await this.startNativePlatform();
             return;
         }
+
+        if (mainModel.nativeMode === CommonDefine.eNativeMode.prestigeMap) {
+            this.enterPrestigeMap();
+            return;
+        }
     }
 
     /** 从banner模式进入 */
@@ -197,6 +202,20 @@ class Message {
         logger.log(`test`, `queryObject`, queryObject);
 
         this.sendIpcMsg(MsgId.START_NATIVE_PLATFORM, queryObject);
+    }
+
+    /** 进入神庙模板地图 */
+    private enterPrestigeMap() {
+        logger.log('update', `从神庙模板地图模式进入`);
+        let urlValue = mainModel.urlValue;
+        let argsValue = urlValue.slice(urlValue.indexOf("?") + 1);
+        let argsObj = querystring.parse(argsValue);
+        let queryObject: querystring.ParsedUrlQuery = {};
+        queryObject = Object.assign(queryObject, argsObj);
+        queryObject["nativeMode"] = CommonDefine.eNativeMode.prestigeMap + "";
+
+        let queryValue: string = querystring.stringify(queryObject);
+        this.sendIpcMsg(MsgId.START_NATIVE_CLIENT, queryValue);
     }
 
     /** 收到地图模板游戏服务器 */

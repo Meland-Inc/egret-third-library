@@ -24,6 +24,7 @@ export namespace CommonDefine {
         banner = "banner",      //banner
         game = "game",          //游戏模式
         url = "url",            //跳转到指定url
+        enterPrestigeMap = "enterPrestigeMap",  //进入神庙地图模板
     }
 
     /** 用户类型枚举，教师端，学生端，机构端 */
@@ -53,6 +54,7 @@ export namespace CommonDefine {
         mapTemplateRoom = 6, //c端地图模板房间模式
         banner = 7, //banner模式
         url = 8, //跳转指定url模式
+        prestigeMap = 9, //神庙地图模板
     }
 
     /** native服务器的路径枚举 */

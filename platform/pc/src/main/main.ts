@@ -308,6 +308,12 @@ function initNativeMode(router: CommonDefine.eLessonRouter): void {
     return;
   }
 
+  //进入指定地图模板
+  if (router === CommonDefine.eLessonRouter.enterPrestigeMap) {
+    mainModel.setNativeMode(CommonDefine.eNativeMode.prestigeMap);
+    return;
+  }
+
   mainModel.setNativeMode(CommonDefine.eNativeMode.platform);
 }
 
