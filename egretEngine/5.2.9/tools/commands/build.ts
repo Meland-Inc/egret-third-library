@@ -24,7 +24,7 @@ class Build implements egret.Command {
                 globals.exit(1120);
                 return 0;
             }
-            if (FileUtil.exists(project.projectData.getFilePath("tsconfig.json"))) {
+            if (packageJson.project != "egret" && FileUtil.exists(project.projectData.getFilePath("tsconfig.json"))) {
                 this.buildLib(packageJson);
                 return 0;
             }
