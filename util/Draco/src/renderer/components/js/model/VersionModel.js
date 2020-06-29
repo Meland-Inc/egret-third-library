@@ -22,7 +22,7 @@ export class VersionModel {
         },
         {
             name: this.eEnviron.beta, host: "47.107.73.43", user: "ftpadmin", password: "unclemiao",
-            patchHost: "192.168.1.82", patchUser: "bell", patchPassword: "bell", nativePackageEnable: true,
+            patchHost: "127.0.0.1", patchUser: "bell", patchPassword: "bell", nativePackageEnable: true,
             zipPath: "/beta/zip", scpRootPath: "/web", scpPath: "/web/beta", localPath: "/beta/web", localPolicyPath: "/beta/policy", serverPackagePath: "/beta/server_packages",
             updateGitEnable: true, gitBranch: "trunk/beta", trunkName: "beta", cdnRoot: "",
             scpPatchPath: "/Library/WebServer/Documents/native/beta/patch", scpReleasePath: "/Library/WebServer/Documents/native/beta/release",
