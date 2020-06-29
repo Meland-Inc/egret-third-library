@@ -673,7 +673,7 @@ export async function uploadClientPackage() {
         let fileKey = `${releaseName}.zip`;
         if (environ.cdnEnable) {
             //cdn上传路径写为ready,因为ready和release用的是同一个包
-            CdnUtil.checkUploaderFile(zipPath, fileKey, `clientPackages/ready`, () => {
+            CdnUtil.checkUploaderFile(zipPath, fileKey, ModelMgr.versionModel.clientPackagePath, () => {
                 console.log(`${environ.name}上传${fileKey}完毕,版本号:${gameVersion}`);
                 resolve();
             });

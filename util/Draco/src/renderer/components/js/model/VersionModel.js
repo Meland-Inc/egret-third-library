@@ -57,6 +57,9 @@ export class VersionModel {
 
     releaseSuffix = '/bin-release/web/';
 
+    /** 客户端包存放相对路径 */
+    clientPackagePath = "clientPackages/ready";
+
     oldVersionList;
     releaseList;
     patchList;
