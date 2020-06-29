@@ -52,7 +52,10 @@ class RendererModel {
         if (fs.existsSync(commonConfig.versionConfigPath)) {
             let data: string = fs.readFileSync(commonConfig.versionConfigPath, 'utf-8');
             this._versionConfig = JSON.parse(data);
-            return;
+            //新数据格式,return
+            if (this._versionConfig.client && this._versionConfig.server) {
+                return;
+            }
         }
 
         this._versionConfig = {
