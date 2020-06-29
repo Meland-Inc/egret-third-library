@@ -41,72 +41,74 @@
           color="orange500"
           @click="onMergeServerPackage"
         >更新上传服务端包</mu-button>
-        <mu-button
+        <!-- <mu-button
           v-loading="isUploadClientPackageLoading"
           data-mu-loading-size="24"
           color="orange500"
           @click="onUploadClientPackage"
-        >上传客户端包</mu-button>
+        >上传客户端包</mu-button>-->
       </div>
     </mu-container>
-    <mu-divider />
+    <!-- <mu-divider />
     <mu-container>
       <div class="button-wrapper">
         <mu-button full-width color="red" @click="oneKeyUpload">一键上传游戏包</mu-button>
       </div>
-    </mu-container>
-    <mu-divider />
-    <mu-container>
-      <div class="button-wrapper" id="package">
-        <!-- <mu-button
+    </mu-container>-->
+    <mu-container v-show="showPackageNative">
+      <mu-divider />
+      <mu-container>
+        <div class="button-wrapper" id="package">
+          <!-- <mu-button
           v-loading="isClearPackageDirLoading"
           data-mu-loading-size="24"
           color="cyan500"
           @click="onClearPackageDir"
-        >清空游戏包目录</mu-button>-->
-        <mu-text-field
-          class="text-publisher"
-          @change="updateNativeVersionText"
-          v-model="nativeVersion"
-          :error-text="nativeVersionText"
-        />
-        <mu-button
-          v-loading="isWriteVersionInfoLoading"
-          data-mu-loading-size="24"
-          color="blue500"
-          @click="onWriteVersionInfo"
-        >写入版本信息</mu-button>
-        <mu-button
-          v-loading="isPublishWinLoading"
-          data-mu-loading-size="24"
-          color="blue500"
-          @click="onPublishWin"
-        >发布windows包</mu-button>
-        <mu-button
-          v-loading="isPublishMacLoading"
-          data-mu-loading-size="24"
-          color="purple500"
-          @click="onPublishMac"
-        >发布mac包</mu-button>
-        <mu-button
-          v-loading="isUploadNativeLoading"
-          data-mu-loading-size="24"
-          color="green500"
-          @click="onUploadNative"
-        >上传native包</mu-button>
-        <mu-button
-          v-loading="isApplyNativePolicyNumLoading"
-          data-mu-loading-size="24"
-          color="green500"
-          @click="applyNativePolicyNum"
-        >应用native策略号</mu-button>
-      </div>
-    </mu-container>
-    <mu-divider />
-    <mu-container>
-      <div class="button-wrapper">
-        <mu-button full-width color="red" @click="oneKeyPackage">一键打包native</mu-button>
-      </div>
+          >清空游戏包目录</mu-button>-->
+          <mu-text-field
+            class="text-publisher"
+            @change="updateNativeVersionText"
+            v-model="nativeVersion"
+            :error-text="nativeVersionText"
+          />
+          <mu-button
+            v-loading="isWriteVersionInfoLoading"
+            data-mu-loading-size="24"
+            color="blue500"
+            @click="onWriteVersionInfo"
+          >写入版本信息</mu-button>
+          <mu-button
+            v-loading="isPublishWinLoading"
+            data-mu-loading-size="24"
+            color="blue500"
+            @click="onPublishWin"
+          >发布windows包</mu-button>
+          <mu-button
+            v-loading="isPublishMacLoading"
+            data-mu-loading-size="24"
+            color="purple500"
+            @click="onPublishMac"
+          >发布mac包</mu-button>
+          <mu-button
+            v-loading="isUploadNativeLoading"
+            data-mu-loading-size="24"
+            color="green500"
+            @click="onUploadNative"
+          >上传native包</mu-button>
+          <mu-button
+            v-loading="isApplyNativePolicyNumLoading"
+            data-mu-loading-size="24"
+            color="green500"
+            @click="applyNativePolicyNum"
+          >应用native策略号</mu-button>
+        </div>
+      </mu-container>
+      <mu-divider />
+      <mu-container>
+        <div class="button-wrapper">
+          <mu-button full-width color="red" @click="oneKeyPackage">一键打包native</mu-button>
+        </div>
+      </mu-container>
     </mu-container>
   </div>
 </template>
@@ -126,7 +128,7 @@ export default {
       nativeVersion: null,
       isUpdateServerPackageLoading: false,
       isMergeServerPackageLoading: false,
-      isUploadClientPackageLoading: false,
+      // isUploadClientPackageLoading: false,
       isClearPackageDirLoading: false,
       isWriteVersionInfoLoading: false,
       isPublishWinLoading: false,
@@ -136,7 +138,9 @@ export default {
 
       publishErrorText: null,
       nativeVersionText: null,
-      versionDescErrorText: null
+      versionDescErrorText: null,
+
+      showPackageNative: false
     };
   },
   watch: {},
@@ -164,14 +168,18 @@ export default {
     async environChange() {
       let versionModel = ModelMgr.versionModel;
       versionModel.setCurEnviron(this.curEnviron);
-      this.releaseShow = this.curEnviron.name === versionModel.eEnviron.release;
-      this.readyShow = this.curEnviron.name === versionModel.eEnviron.ready;
+      // this.releaseShow = this.curEnviron.name === versionModel.eEnviron.release;
+      // this.readyShow = this.curEnviron.name === versionModel.eEnviron.ready;
+      this.showPackageNative =
+        this.curEnviron.name === versionModel.eEnviron.release;
 
       this.publisher = null;
       this.updatePublishText();
 
-      await ModelMgr.versionModel.initNativePolicyNum();
-      this.nativeVersion = ModelMgr.versionModel.nativeVersion;
+      if (this.showPackageNative) {
+        await ModelMgr.versionModel.initNativePolicyNum();
+        this.nativeVersion = ModelMgr.versionModel.nativeVersion;
+      }
     },
     // async onUpdateServerPackage() {
     //   if (!ModelMgr.versionModel.publisher) {
@@ -209,24 +217,24 @@ export default {
         Global.hideRegionLoading();
       }
     },
-    async onUploadClientPackage() {
-      if (!ModelMgr.versionModel.publisher) {
-        Global.snack("请输入发布者", null, false);
-        return;
-      }
+    // async onUploadClientPackage() {
+    //   if (!ModelMgr.versionModel.publisher) {
+    //     Global.snack("请输入发布者", null, false);
+    //     return;
+    //   }
 
-      this.isUploadClientPackageLoading = true;
-      Global.showRegionLoading();
-      try {
-        await ModelMgr.ftpModel.initQiniuOption();
-        await mdPublish.uploadClientPackage();
-        this.isUploadClientPackageLoading = false;
-        Global.hideRegionLoading();
-      } catch (error) {
-        this.isUploadClientPackageLoading = false;
-        Global.hideRegionLoading();
-      }
-    },
+    //   this.isUploadClientPackageLoading = true;
+    //   Global.showRegionLoading();
+    //   try {
+    //     await ModelMgr.ftpModel.initQiniuOption();
+    //     await mdFtp.uploadClientPackage();
+    //     this.isUploadClientPackageLoading = false;
+    //     Global.hideRegionLoading();
+    //   } catch (error) {
+    //     this.isUploadClientPackageLoading = false;
+    //     Global.hideRegionLoading();
+    //   }
+    // },
     // async onClearPackageDir() {
     //   if (!ModelMgr.versionModel.publisher) {
     //     Global.snack("请输入发布者", null, false);
@@ -372,10 +380,10 @@ export default {
           ModelMgr.ftpModel.initQiniuOption.bind(ModelMgr.ftpModel)
         );
         promiseList.push(mdPublish.mergeServerPackage);
-        promiseList.push(
-          ModelMgr.ftpModel.initQiniuOption.bind(ModelMgr.ftpModel)
-        );
-        promiseList.push(mdPublish.uploadClientPackage);
+        // promiseList.push(
+        //   ModelMgr.ftpModel.initQiniuOption.bind(ModelMgr.ftpModel)
+        // );
+        // promiseList.push(mdFtp.uploadClientPackage);
 
         await Global.executePromiseList(promiseList);
 
@@ -427,12 +435,14 @@ export default {
   async mounted() {
     let versionModel = ModelMgr.versionModel;
     this.curEnviron = versionModel.curEnviron = versionModel.environList.find(
-      value => value.name === versionModel.eEnviron.ready
+      value => value.name === versionModel.eEnviron.beta
     );
-    this.environList = versionModel.environList.filter(
-      value =>
-        value.name === versionModel.eEnviron.ready ||
-        value.name === versionModel.eEnviron.release
+    this.environList = versionModel.environList.filter(value =>
+      [
+        versionModel.eEnviron.beta,
+        versionModel.eEnviron.ready,
+        versionModel.eEnviron.release
+      ].includes(value.name)
     );
     this.environChange();
     this.nativeVersion = versionModel.nativeVersion;

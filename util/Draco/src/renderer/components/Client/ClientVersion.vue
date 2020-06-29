@@ -141,6 +141,13 @@
             color="orange500"
             @click="onUploadVersionFile"
           >上传游戏版本</mu-button>
+          <mu-button
+            v-show="this.curEnviron&&this.curEnviron.nativePackageEnable"
+            v-loading="isUploadClientPackageLoading"
+            data-mu-loading-size="24"
+            color="cyan500"
+            @click="onUploadClientPackage"
+          >上传Native用程序包</mu-button>
         </div>
         <mu-container v-show="curEnviron&&curEnviron.scpEnable">
           <mu-flex class="flex-wrapper" align-items="center">
@@ -372,6 +379,8 @@ export default {
       isPullGitLoading: false,
       isGitTagLoading: false,
       isZipUploadGameLoading: false,
+
+      isUploadClientPackageLoading: false,
 
       isPublishNativeLoading: false,
       isUploadNativeLoading: false,
@@ -830,6 +839,25 @@ export default {
         Global.hideRegionLoading();
       }
     },
+
+    async onUploadClientPackage() {
+      if (!ModelMgr.versionModel.publisher) {
+        Global.snack("请输入发布者", null, false);
+        return;
+      }
+
+      this.isUploadClientPackageLoading = true;
+      Global.showRegionLoading();
+      try {
+        await ModelMgr.ftpModel.initQiniuOption();
+        await mdFtp.uploadClientPackage();
+        this.isUploadClientPackageLoading = false;
+        Global.hideRegionLoading();
+      } catch (error) {
+        this.isUploadClientPackageLoading = false;
+        Global.hideRegionLoading();
+      }
+    },
     // async onPublishNative() {
     //   if (!ModelMgr.versionModel.publisher) {
     //     Global.snack("请输入发布者", null, false);
@@ -923,6 +951,14 @@ export default {
           promiseList.push(mdFtp.zipVersion);
         }
         promiseList.push(mdFtp.uploadVersionFile);
+
+        //上传native用游戏包
+        if (this.curEnviron.nativePackageEnable) {
+          promiseList.push(
+            ModelMgr.ftpModel.initQiniuOption.bind(ModelMgr.ftpModel)
+          );
+          promiseList.push(mdFtp.uploadClientPackage);
+        }
 
         if (this.curEnviron.policyEnable) {
           promiseList.push(mdFtp.createPolicyFile);

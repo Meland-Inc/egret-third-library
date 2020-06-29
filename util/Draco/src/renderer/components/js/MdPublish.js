@@ -906,77 +906,9 @@ export function mergeServerPackage() {
 
         let packageDir = await fsExc.readDir(serverPackage);
         await checkUploadServerPackages(packageDir, () => {
-            console.log(`比较服务器包并上传完毕`);
+            Global.toast(`比较服务器包并上传完毕`);
             resolve();
         })
-    });
-}
-
-/** 上传客户端包 */
-export async function uploadClientPackage() {
-    return new Promise(async (resolve, reject) => {
-        let policyInfo = await ModelMgr.versionModel.getCurPolicyInfo();
-        let data = JSON.parse(policyInfo);
-        console.log(`start zip`);
-        if (data.Code != 0) {
-            console.log(`policy num is null`);
-            console.log(data.Message);
-            reject();
-            return;
-        }
-
-        let policyNum = data.Data.Version;
-        let environ = ModelMgr.versionModel.curEnviron;
-        let gameVersion = await ModelMgr.versionModel.getGameVersion(environ, policyNum);
-        let releaseName = `release_v${gameVersion}s`;
-        let zipPath = `${Global.svnPublishPath}${environ.zipPath}/${releaseName}.zip`;
-
-        await zipClientPackage(environ, policyNum, releaseName, zipPath);
-
-        let fileKey = `${releaseName}.zip`
-        //cdn上传路径写为ready,因为ready和release用的是同一个包
-        CdnUtil.checkUploaderFile(zipPath, fileKey, `clientPackages/ready`, () => {
-            console.log(`${environ.name}上传${fileKey}完毕,版本号:${gameVersion}`);
-            resolve();
-        });
-    })
-}
-
-function zipClientPackage(environ, policyNum, releaseName, zipPath) {
-    return new Promise(async (resolve, reject) => {
-        let releasePath = `${Global.svnPublishPath}${environ.localPath}/${releaseName}/`;
-
-        //判断policy文件
-        let policyPath = `${Global.svnPublishPath}${environ.localPolicyPath}/policyFile_v${policyNum}.json`
-        if (!(await fsExc.exists(policyPath))) {
-            console.log(`本地不存在最新策略文件:${policyPath}`);
-            return;
-        }
-
-        let indexPath = Global.rawResourcePath + "/nativeIndex.html";
-        let policyData = fs.readFileSync(policyPath);
-        let indexData = fs.readFileSync(indexPath);
-        let output = fs.createWriteStream(zipPath);
-        let archive = archiver("zip");
-        archive.pipe(output);
-        archive.directory(releasePath, ``);
-        archive.append(policyData, {
-            name: "policyFile.json"
-        });
-        archive.append(indexData, {
-            name: "index.html"
-        });
-
-        archive.on("error", (err) => {
-            console.error(`压缩${zipPath}失败`, err);
-            reject();
-        });
-        output.on("close", () => {
-            console.log(`压缩${zipPath}成功`);
-            resolve();
-        });
-
-        archive.finalize();
     });
 }
 

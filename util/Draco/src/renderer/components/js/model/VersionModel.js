@@ -22,24 +22,25 @@ export class VersionModel {
         },
         {
             name: this.eEnviron.beta, host: "47.107.73.43", user: "ftpadmin", password: "unclemiao",
+            patchHost: "192.168.1.82", patchUser: "bell", patchPassword: "bell", nativePackageEnable: true,
             zipPath: "/beta/zip", scpRootPath: "/web", scpPath: "/web/beta", localPath: "/beta/web", localPolicyPath: "/beta/policy", serverPackagePath: "/beta/server_packages",
             updateGitEnable: true, gitBranch: "trunk/beta", trunkName: "beta", cdnRoot: "",
-            scpWinPatchPath: "/native/win/beta/patch", scpMacPatchPath: "/native/mac/beta/patch",
+            scpPatchPath: "/Library/WebServer/Documents/native/beta/patch", scpReleasePath: "/Library/WebServer/Documents/native/beta/release",
             publishEnable: true, mergeVersionEnable: true, compressPicEnable: false, zipFileEnable: true, policyEnable: true, scpEnable: true, cdnEnable: false,
             pushGitEnable: true, publishDescEnable: false, codeVersionEnable: true, gitTagEnable: false, zipUploadGameEnable: false, nativeEnable: true
         },
         {
             name: this.eEnviron.ready, host: "47.107.73.43", user: "ftpadmin", password: "unclemiao",
-            zipPath: "/ready/zip", scpRootPath: "/web", scpPath: "/web/ready", localPath: "/ready/web", localPolicyPath: "/ready/policy", serverPackagePath: "/ready/server_packages",
+            zipPath: "/release/zip", scpRootPath: "/web", scpPath: "/web/ready", localPath: "/ready/web", localPolicyPath: "/ready/policy", serverPackagePath: "/ready/server_packages",
             updateGitEnable: true, gitBranch: "trunk/release", trunkName: "release", cdnRoot: "readyTest",
-            scpWinPatchPath: "/native/win/release/patch", scpMacPatchPath: "/native/mac/release/patch",
             cdnPatchEnable: true, cdnWinPatchPath: "/win", cdnMacPatchPath: "/mac",
             publishEnable: true, mergeVersionEnable: true, compressPicEnable: false, zipFileEnable: true, policyEnable: true, scpEnable: true, cdnEnable: true,
             pushGitEnable: true, publishDescEnable: false, codeVersionEnable: true, gitTagEnable: true, zipUploadGameEnable: false, nativeEnable: true
         },
         {
             name: this.eEnviron.release, host: "bg-stage.wkcoding.com", user: "ftpadmin", password: "unclemiao",
-            zipPath: "/ready/zip", scpRootPath: "", scpPath: "", localPath: "/ready/web", localPolicyPath: "/release/policy", serverPackagePath: "/release/server_packages",
+            nativePackageEnable: true,
+            zipPath: "/release/zip", scpRootPath: "", scpPath: "", localPath: "/ready/web", localPolicyPath: "/release/policy", serverPackagePath: "/release/server_packages",
             updateGitEnable: false, gitBranch: "", trunkName: "", cdnRoot: "",
             cdnWinPatchPath: "/win", cdnMacPatchPath: "/mac",
             publishEnable: false, mergeVersionEnable: true, compressPicEnable: false, zipFileEnable: false, policyEnable: true, scpEnable: false, cdnEnable: true,
@@ -55,6 +56,9 @@ export class VersionModel {
     ];
 
     releaseSuffix = '/bin-release/web/';
+
+    /** 客户端包存放相对路径 */
+    clientPackagePath = "clientPackages/ready";
 
     oldVersionList;
     releaseList;
