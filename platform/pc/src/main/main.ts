@@ -284,37 +284,31 @@ async function initNative() {
 
 /** 根据路由初始化native模式 */
 function initNativeMode(router: CommonDefine.eLessonRouter): void {
-  //创造地图模式
-  if (router === CommonDefine.eLessonRouter.createMap) {
-    mainModel.setNativeMode(CommonDefine.eNativeMode.createMap);
-    return;
+  switch (router) {
+    //创造地图模式
+    case CommonDefine.eLessonRouter.createMap:
+      mainModel.setNativeMode(CommonDefine.eNativeMode.createMap);
+      break;
+    //banner模式
+    case CommonDefine.eLessonRouter.banner:
+      mainModel.setNativeMode(CommonDefine.eNativeMode.banner);
+      break;
+    //游戏模式
+    case CommonDefine.eLessonRouter.game:
+      mainModel.setNativeMode(CommonDefine.eNativeMode.game);
+      break;
+    //指定url模式
+    case CommonDefine.eLessonRouter.url:
+      mainModel.setNativeMode(CommonDefine.eNativeMode.url);
+      break;
+    //进入指定地图模板
+    case CommonDefine.eLessonRouter.enterPrestigeMap:
+      mainModel.setNativeMode(CommonDefine.eNativeMode.prestigeMap);
+      break;
+    default:
+      mainModel.setNativeMode(CommonDefine.eNativeMode.platform);
+      break;
   }
-
-  //banner模式
-  if (router === CommonDefine.eLessonRouter.banner) {
-    mainModel.setNativeMode(CommonDefine.eNativeMode.banner);
-    return;
-  }
-
-  //游戏模式
-  if (router === CommonDefine.eLessonRouter.game) {
-    mainModel.setNativeMode(CommonDefine.eNativeMode.game);
-    return;
-  }
-
-  //指定url模式
-  if (router === CommonDefine.eLessonRouter.url) {
-    mainModel.setNativeMode(CommonDefine.eNativeMode.url);
-    return;
-  }
-
-  //进入指定地图模板
-  if (router === CommonDefine.eLessonRouter.enterPrestigeMap) {
-    mainModel.setNativeMode(CommonDefine.eNativeMode.prestigeMap);
-    return;
-  }
-
-  mainModel.setNativeMode(CommonDefine.eNativeMode.platform);
 }
 
 // In this file you can include the rest of your app's specific main process
