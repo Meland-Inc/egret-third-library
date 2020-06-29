@@ -238,13 +238,17 @@ export default class ClientUpdate {
         this._isDownloadPackage = true;
         //ready环境, 用的release的包, 去release下载
         let environName = commonConfig.environName;
+        let policyUrl: string = commonConfig.policyUrl;
+        let packageUrl: string = commonConfig.packageUrl;
         if (environName === CommonDefine.eEnvironName.ready) {
             environName = CommonDefine.eEnvironName.release;
+            policyUrl = commonConfig.releasePolicyUrl;
+            packageUrl = commonConfig.releasePackageUrl;
         }
 
-        const { policyHost, policyPath } = this.getPolicyInfo(commonConfig.policyUrl);
+        const { policyHost, policyPath } = this.getPolicyInfo(policyUrl);
         const gameVersion = await this.getClientGameVersion(environName, policyHost, policyPath);
-        const fileDir = `${commonConfig.protocol}//${commonConfig.packageUrl}`;
+        const fileDir = `${commonConfig.protocol}//${packageUrl}`;
         const saveDir = this._clientPackagePath;
         const fileName = `release_v${gameVersion}s.zip`;
         //下载文件

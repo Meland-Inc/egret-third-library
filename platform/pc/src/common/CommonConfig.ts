@@ -40,6 +40,12 @@ class CommonConfig {
     /** 上课伪协议头 */
     public constPseudoProtocol = 'bellplanet://';
 
+    /** release环境客户端游戏包的地址 */
+    public releasePackageUrl: string = "bg-stage.wkcoding.com/clientPackages/ready";
+
+    /** release环境客户端策略文件的地址 */
+    public releasePolicyUrl: string = "bg-stage.wkcoding.com/";
+
     /** 程序根路径 */
     public _rootPath: string;
     public get rootPath() {
