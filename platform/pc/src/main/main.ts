@@ -264,18 +264,9 @@ async function initNative() {
 
     logger.log('test', `router: ${mainModel.lessonRouter}`);
 
-    //创造地图模式
-    if (mainModel.lessonRouter === CommonDefine.eLessonRouter.createMap) {
-      mainModel.setNativeMode(CommonDefine.eNativeMode.createMap);
-    } else if (mainModel.lessonRouter === CommonDefine.eLessonRouter.banner) {
-      mainModel.setNativeMode(CommonDefine.eNativeMode.banner);
-    } else if (mainModel.lessonRouter === CommonDefine.eLessonRouter.game) {
-      mainModel.setNativeMode(CommonDefine.eNativeMode.game);
-    } else {
-      mainModel.setNativeMode(CommonDefine.eNativeMode.platform);
-    }
+    //根据路由初始化native模式
+    initNativeMode(mainModel.lessonRouter);
   }
-
 
   await mainWindow.loadFile(`./dist/renderer.html`);
 
@@ -288,6 +279,35 @@ async function initNative() {
   //没打包的直接检查游戏包更新
   else {
     message.sendIpcMsg(MsgId.CHECK_PACKAGE_UPDATE);
+  }
+}
+
+/** 根据路由初始化native模式 */
+function initNativeMode(router: CommonDefine.eLessonRouter): void {
+  switch (router) {
+    //创造地图模式
+    case CommonDefine.eLessonRouter.createMap:
+      mainModel.setNativeMode(CommonDefine.eNativeMode.createMap);
+      break;
+    //banner模式
+    case CommonDefine.eLessonRouter.banner:
+      mainModel.setNativeMode(CommonDefine.eNativeMode.banner);
+      break;
+    //游戏模式
+    case CommonDefine.eLessonRouter.game:
+      mainModel.setNativeMode(CommonDefine.eNativeMode.game);
+      break;
+    //指定url模式
+    case CommonDefine.eLessonRouter.url:
+      mainModel.setNativeMode(CommonDefine.eNativeMode.url);
+      break;
+    //进入指定地图模板
+    case CommonDefine.eLessonRouter.enterPrestigeMap:
+      mainModel.setNativeMode(CommonDefine.eNativeMode.prestigeMap);
+      break;
+    default:
+      mainModel.setNativeMode(CommonDefine.eNativeMode.platform);
+      break;
   }
 }
 

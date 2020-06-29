@@ -97,6 +97,11 @@ class Message {
             return
         }
 
+        if (mainModel.nativeMode === CommonDefine.eNativeMode.url) {
+            this.startUrl();
+            return
+        }
+
         if (mainModel.nativeMode === CommonDefine.eNativeMode.website) {
             this.startNativeWebsite();
             return;
@@ -104,6 +109,11 @@ class Message {
 
         if (mainModel.nativeMode === CommonDefine.eNativeMode.platform) {
             await this.startNativePlatform();
+            return;
+        }
+
+        if (mainModel.nativeMode === CommonDefine.eNativeMode.prestigeMap) {
+            this.enterPrestigeMap();
             return;
         }
     }
@@ -118,14 +128,15 @@ class Message {
 
     /** 从创造地图模式进入 */
     private async startCreateMap() {
-        //平台初始化
-        let queryObject = await platform.init();
-        //初始化参数
-        // Object.assign(queryObject, platform.queryObject);
-        // queryObject['fakeUserType'] = config.userType;
+        let urlValue: string = mainModel.urlValue.slice(mainModel.urlValue.indexOf("?") + 1);
+        let queryObject = querystring.parse(urlValue);
+        //有banner参数,要从平台初始化
+        if (queryObject["banner"]) {
+            queryObject = await platform.init();
+        }
         queryObject['nativeMode'] = CommonDefine.eNativeMode.createMap.toString();
-        let queryValue: string = querystring.stringify(queryObject);
 
+        let queryValue: string = querystring.stringify(queryObject);
         logger.log('update', `从创造地图模式进入`);
         this.sendIpcMsg(MsgId.START_NATIVE_CLIENT, queryValue);
     }
@@ -145,6 +156,25 @@ class Message {
         let queryValue: string = querystring.stringify(queryObject);
 
         this.sendIpcMsg(MsgId.START_NATIVE_CLIENT, queryValue);
+    }
+
+    /** 跳转到指定url */
+    private async startUrl() {
+        logger.log('update', `从指定url进入`);
+        let urlValue: string = mainModel.urlValue.slice(mainModel.urlValue.indexOf("?") + 1);
+        let queryObject = querystring.parse(urlValue);
+        let targetUrlValue: string = queryObject["url"] as string;
+        if (!targetUrlValue) return;
+        logger.log('update', `跳转到指定url`, targetUrlValue);
+        logger.log('update', `queryObject: `, queryObject);
+        const temporaryToken: string = queryObject["temporary_token"] as string;
+        const newUrl = new URL(targetUrlValue);
+        if (temporaryToken) {
+            await platform.init();
+            newUrl.searchParams.set("webviewToken", mainModel.bellToken);
+        }
+
+        this.sendIpcMsg(MsgId.START_NATIVE_URL, newUrl.toString());
     }
 
     /** 官网地址进入 */
@@ -174,6 +204,20 @@ class Message {
         logger.log(`test`, `queryObject`, queryObject);
 
         this.sendIpcMsg(MsgId.START_NATIVE_PLATFORM, queryObject);
+    }
+
+    /** 进入神庙模板地图 */
+    private enterPrestigeMap() {
+        logger.log('update', `从神庙模板地图模式进入`);
+        let urlValue = mainModel.urlValue;
+        let argsValue = urlValue.slice(urlValue.indexOf("?") + 1);
+        let argsObj = querystring.parse(argsValue);
+        let queryObject: querystring.ParsedUrlQuery = {};
+        queryObject = Object.assign(queryObject, argsObj);
+        queryObject["nativeMode"] = CommonDefine.eNativeMode.prestigeMap + "";
+
+        let queryValue: string = querystring.stringify(queryObject);
+        this.sendIpcMsg(MsgId.START_NATIVE_CLIENT, queryValue);
     }
 
     /** 收到地图模板游戏服务器 */

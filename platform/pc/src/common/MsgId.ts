@@ -35,6 +35,9 @@ export default class MsgId {
     /** 开始平台进入 */
     public static readonly START_NATIVE_PLATFORM: string = "START_NATIVE_PLATFORM";
 
+    /** 跳转到指定url进入 */
+    public static readonly START_NATIVE_URL: string = "START_NATIVE_URL";
+
     /** 发送消息到客户端 */
     public static readonly SEND_MSG_TO_CLIENT: string = "SEND_MSG_TO_CLIENT";
 
@@ -56,12 +59,14 @@ export default class MsgId {
     /** 错误上报 */
     public static readonly ERROR_REPORT: string = "ERROR_REPORT";
 
-    /** native登录 */
+    /** native登录游戏 */
     public static readonly nativeSignIn: string = "nativeSignIn";
 
-    /** 模板地图 */
+    /** 进入模板地图 */
     public static readonly enterMapTemplate: string = "enterMapTemplate";
 
-    /** 模板地图房间 */
+    /** 进入模板地图房间 */
     public static readonly enterMapTemplateRoom: string = "enterMapTemplateRoom";
+
+
 }
