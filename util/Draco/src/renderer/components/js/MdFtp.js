@@ -662,9 +662,8 @@ export async function uploadClientPackage() {
         //     return;
         // }
 
-        // let policyNum = data.Data.Version;
-        // let environ = ModelMgr.versionModel.curEnviron;
-        // let gameVersion = await ModelMgr.versionModel.getGameVersion(environ, policyNum);
+        let policyNum = ModelMgr.versionModel.policyNum;
+        let environ = ModelMgr.versionModel.curEnviron;
         const gameVersion = ModelMgr.versionModel.releaseVersion;
 
         let releaseName = `release_v${gameVersion}s`;
