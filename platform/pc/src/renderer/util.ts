@@ -174,7 +174,7 @@ export function getServerPackageFileName() {
 }
 
 /** 遍历删除指定文件夹 */
-export async function deleteFolderRecursive(folderPath: string) {
+export async function deleteFolderRecursive(folderPath: string, rmRootDir?: boolean) {
     let files = [];
     //判断给定的路径是否存在
     if (fs.existsSync(folderPath)) {
@@ -190,7 +190,9 @@ export async function deleteFolderRecursive(folderPath: string) {
             }
         }
         //清除文件夹
-        fs.rmdirSync(folderPath);
+        if (rmRootDir) {
+            fs.rmdirSync(folderPath);
+        }
     } else {
         console.log("给定的路径不存在，请给出正确的路径", folderPath);
     }

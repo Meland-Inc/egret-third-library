@@ -40,50 +40,51 @@ export default class ClientUpdate {
     /** 更新后回调参数 */
     private _updateCbArgs: any[];
 
-    /** 策略文件host */
-    private _policyHost: string = "";
-
-    /** 策略文件相对host路径 */
-    private _policyPath: string = "";
-
     /** 是否是下载整包 */
     private _isDownloadPackage: boolean;
     /** 检查是否最新版本 */
     public async checkLatestVersion() {
-        let globalConfig = commonConfig.globalConfig;
-        let gameVersion = rendererModel.getVersionConfigValue(CommonDefine.eVersionCfgFiled.clientPackageVersion)
+        let gameVersion = rendererModel.getPackageVersion(CommonDefine.ePackageType.client)
         if (!gameVersion) {
             gameVersion = 0;
         }
 
         this._curVersion = this._startVersion = +gameVersion;
-        this._patchUrl = `${commonConfig.protocol}//${globalConfig.patchUrl}`;
-        let policyUrl = globalConfig.policyUrl;
-        let policyArr = policyUrl.split("/");
-        this._policyHost = policyArr[0];
-        if (!policyArr[1] || policyArr[1] === "") {
-            this._policyPath = "";
-        } else {
-            this._policyPath = policyUrl.replace(`${this._policyHost}`, "");
-        }
 
-        let policyNum = await util.getClientPackagePolicyNum(commonConfig.environName);
+        this._patchUrl = `${commonConfig.protocol}//${commonConfig.patchUrl}`;
+
+        const { policyHost, policyPath } = this.getPolicyInfo(commonConfig.policyUrl);
+
+        const curGameVersion = await this.getClientGameVersion(commonConfig.environName, policyHost, policyPath);
+        if (!curGameVersion) return true;
+
+        this._gameVersion = curGameVersion;
+        //发现当前版本比游戏版本大,用最新的游戏版本
+        if (this._curVersion > this._gameVersion) {
+            this._curVersion = this._gameVersion;
+            rendererModel.setPackageVersion(CommonDefine.ePackageType.client, commonConfig.environName, this._curVersion);
+        }
+        return this._curVersion === this._gameVersion;
+    }
+
+    /** 获取客户端游戏版本号 */
+    private async getClientGameVersion(environName: string, policyHost: string, policyPath: string): Promise<number> {
+        let policyNum = await util.getClientPackagePolicyNum(environName);
         if (policyNum === null) {
-            let content = `获取策略版本号错误!, environName:${commonConfig.environName}`;
+            let content = `获取策略版本号错误!, environName:${environName}`;
             logger.error(`renderer`, content);
             alert(content);
-            return true;
+            return 0;
         }
 
         try {
-            let gameVersion = await util.tryGetClientGameVersion(this._policyHost, this._policyPath, policyNum);
-            this._gameVersion = +gameVersion;
-            return this._curVersion === this._gameVersion;
+            let gameVersion = await util.tryGetClientGameVersion(policyHost, policyPath, policyNum);
+            return +gameVersion;
         } catch (error) {
             let content = "获取客户端版本号错误!";
             logger.error(`renderer`, content);
             alert(content);
-            return true;
+            return 0;
         }
     }
 
@@ -185,7 +186,7 @@ export default class ClientUpdate {
                             this._curVersion = this._curVersion + 1;
                         }
                         if (this._curVersion >= this._gameVersion) {
-                            rendererModel.setVersionConfigValue(CommonDefine.eVersionCfgFiled.clientPackageVersion, this._curVersion);
+                            rendererModel.setPackageVersion(CommonDefine.ePackageType.client, commonConfig.environName, this._curVersion);
                             this.executeUpdateCallback();
                         } else {
                             this.installSinglePatch()
@@ -235,15 +236,21 @@ export default class ClientUpdate {
         await this.checkLatestVersion();
         this._patchCount = 1;
         this._isDownloadPackage = true;
-        //release环境, 用的ready的包, 去ready下载
+        //ready环境, 用的release的包, 去release下载
         let environName = commonConfig.environName;
-        if (environName === CommonDefine.eEnvironName.release) {
-            environName = CommonDefine.eEnvironName.ready;
+        let policyUrl: string = commonConfig.policyUrl;
+        let packageUrl: string = commonConfig.packageUrl;
+        if (environName === CommonDefine.eEnvironName.ready) {
+            environName = CommonDefine.eEnvironName.release;
+            policyUrl = commonConfig.releasePolicyUrl;
+            packageUrl = commonConfig.releasePackageUrl;
         }
 
-        let fileDir = `${commonConfig.cdnHost}/clientPackages/${environName}`;
-        let saveDir = this._clientPackagePath;
-        let fileName = `release_v${this._gameVersion}s.zip`;
+        const { policyHost, policyPath } = this.getPolicyInfo(policyUrl);
+        const gameVersion = await this.getClientGameVersion(environName, policyHost, policyPath);
+        const fileDir = `${commonConfig.protocol}//${packageUrl}`;
+        const saveDir = this._clientPackagePath;
+        const fileName = `release_v${gameVersion}s.zip`;
         //下载文件
         this._download.downloadFile(fileDir, saveDir, fileName, this.downloadFileCallback.bind(this));
     }
@@ -254,5 +261,17 @@ export default class ClientUpdate {
         if (this._updateCallback) {
             this._updateCallback(...this._updateCbArgs);
         }
+    }
+
+    /** 获取策略信息 */
+    private getPolicyInfo(policyUrl: string): { policyHost: string, policyPath: string } {
+        let policyArr = policyUrl.split("/");
+        const policyHost: string = policyArr[0];
+        let policyPath: string = "";
+        if (policyArr[1] && policyArr[1] !== "") {
+            policyPath = policyUrl.replace(policyHost, "");
+        }
+
+        return { policyHost: policyHost, policyPath: policyPath };
     }
 }

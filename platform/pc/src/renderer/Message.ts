@@ -99,7 +99,6 @@ class Message {
     /** 检查游戏包更新 */
     private async checkPackageUpdate() {
         logger.log('update', `开始检查更新`);
-        logger.log('config', `全局配置`, commonConfig.globalConfig);
 
         //服务器包所在目录
         let serverPackageDir = `${commonConfig.serverPackagePath}`;
@@ -110,7 +109,7 @@ class Message {
         } else {
             let dir = fs.readdirSync(serverPackageDir);
             let zipIndex: number = dir.findIndex(value => value.search(/.*.zip/) >= 0);
-            let serverVersion: number = rendererModel.getVersionConfigValue(CommonDefine.eVersionCfgFiled.serverPackageVersion);
+            let serverVersion: number = rendererModel.getPackageVersion(CommonDefine.ePackageType.server);
             //不存在服务端版本号,或者当文件数量小于2,或者有release压缩包(zip包不完整,导致解压失败),要重新下载新的包
             if (!serverVersion || zipIndex >= 0 || dir.length < 2) {
                 fse.emptyDirSync(serverPackageDir);
@@ -128,7 +127,7 @@ class Message {
             let dir = fs.readdirSync(clientPackageDir);
             logger.log(`net`, `dir length:${dir.length}`);
             let zipIndex: number = dir.findIndex(value => value.search(/release_v.*s.zip/) >= 0);
-            let clientVersion: number = rendererModel.getVersionConfigValue(CommonDefine.eVersionCfgFiled.clientPackageVersion);
+            let clientVersion: number = rendererModel.getPackageVersion(CommonDefine.ePackageType.client);
             //不存在客户端版本号,或者当文件数量小于2,或者有release压缩包(zip包不完整,导致解压失败),要重新下载新的包
             if (!clientVersion || zipIndex >= 0 || dir.length < 2) {
                 fse.emptyDirSync(clientPackageDir);
@@ -172,7 +171,7 @@ class Message {
     /** 直接下载最新服务端包 */
     private directDownloadServer(callback: Function, ...args: any[]) {
         try {
-            rendererModel.setVersionConfigValue(CommonDefine.eVersionCfgFiled.serverPackageVersion, 0);
+            rendererModel.setPackageVersion(CommonDefine.ePackageType.server, commonConfig.environName, 0);
             this._serverUpdate.checkUpdate(callback, ...args);
         } catch (error) {
             let content = `native下载服务端出错,点击重试`;
