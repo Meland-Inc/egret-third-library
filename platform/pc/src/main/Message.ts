@@ -25,13 +25,18 @@ class Message {
     /** 消息对应方法集合 */
     public msgMap: Map<string, () => void>;
 
+    /** 缓存要发送给客户端的消息 */
+    private _cacheClientMsgArr: { msgId: string, args: any[] }[];
+
     public constructor() {
         this._nativeUpdate = new NativeUpdate();
         this.msgMap = new Map<string, () => void>();
+        this._cacheClientMsgArr = [];
         this.msgMap[MsgId.CHECK_UPDATE_COMPLETE] = this.onCheckUpdateComplete.bind(this);
         this.msgMap[MsgId.MAP_TEMPLATE_ENTER] = this.onMapTemplateEnter.bind(this);
         this.msgMap[MsgId.MAP_TEMPLATE_ROOM_CREATE] = this.onMapTemplateRoomCreate.bind(this);
         this.msgMap[MsgId.SEND_PLAYER_ID] = this.onSendPlayerId.bind(this);
+        this.msgMap[MsgId.BELLPLANET_CLIENT_READY] = this.onBellplanetReady.bind(this);
         this.msgMap[MsgId.SET_NATIVE_POLICY_VERSION] = this.onSetNativePolicyVersion.bind(this);
     }
 
@@ -241,12 +246,28 @@ class Message {
         mainModel.setPlayerId(playerId);
     }
 
+    /** 收到小贝星球准备完毕 */
+    private onBellplanetReady() {
+        mainModel.setBellplanetReady(true);
+        this.executeCacheClientMsgArr();
+    }
+
     private onSetNativePolicyVersion(nativeVersion: number) {
         this._nativeUpdate.checkUpdate(nativeVersion);
     }
 
     /** 发送消息到客户端 */
-    public sendMsgToClient(msgId: string, ...args: any[]) {
+    public sendClientMsg(msgId: string, ...args: any[]) {
+        if (!mainModel.bellplanetReady) {
+            this._cacheClientMsgArr.push({ msgId: msgId, args: args });
+            return;
+        }
+
+        this.executeClientMsg(msgId, ...args);
+    }
+
+    /** 执行发送到客户端消息 */
+    private executeClientMsg(msgId: string, ...args: any[]) {
         let data = [msgId, args];
         let content = JSON.stringify(data);
         let code = `
@@ -256,6 +277,17 @@ class Message {
                 window.postMessage({'key':'nativeMsg', 'value':\'${content}\'},'*');
             }`;
         util.executeJavaScript(code);
+    }
+
+    /** 执行缓存的客户端消息 */
+    private executeCacheClientMsgArr() {
+        if (!this._cacheClientMsgArr) return;
+        if (this._cacheClientMsgArr.length === 0) return;
+        for (const iterator of this._cacheClientMsgArr) {
+            this.executeClientMsg(iterator.msgId, ...iterator.args);
+        }
+
+        this._cacheClientMsgArr.length = 0;
     }
 }
 

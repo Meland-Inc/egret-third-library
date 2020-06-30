@@ -262,6 +262,15 @@ class MainModel {
     public setPlayerId(value: string) {
         this._playerId = value;
     }
+
+    private _bellplanetReady: boolean;
+    /** 小贝星球准备完毕 */
+    public get bellplanetReady(): boolean {
+        return this._bellplanetReady;
+    }
+    public setBellplanetReady(value: boolean): void {
+        this._bellplanetReady = value;
+    }
 }
 
 let mainModel = new MainModel();

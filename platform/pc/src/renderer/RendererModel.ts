@@ -35,6 +35,7 @@ class RendererModel {
     public setNativeLoginResponse(value: any) {
         this._nativeLoginResponse = value;
         localStorage.setItem('nativeLoginResponse', JSON.stringify(this._nativeLoginResponse));
+        logger.log('model', `设置nativeLoginResponse`);
     }
 
     private _nativeGameServer: string;
@@ -45,6 +46,7 @@ class RendererModel {
     public setNativeGameServer(value: string) {
         this._nativeGameServer = value;
         localStorage.setItem('nativeGameServer', JSON.stringify(this._nativeGameServer));
+        logger.log('model', `设置nativeGameServer`, this._nativeGameServer);
     }
 
     public init() {

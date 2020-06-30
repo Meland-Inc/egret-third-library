@@ -17,6 +17,9 @@ export default class MsgId {
     /** 发送玩家id */
     public static readonly SEND_PLAYER_ID: string = "SEND_PLAYER_ID";
 
+    /** 小贝星球准备完毕 */
+    public static readonly BELLPLANET_CLIENT_READY: string = "BELLPLANET_CLIENT_READY";
+
     /** 设置native策略版本号 */
     public static readonly SET_NATIVE_POLICY_VERSION: string = "SET_NATIVE_POLICY_VERSION";
 
@@ -39,7 +42,7 @@ export default class MsgId {
     public static readonly START_NATIVE_URL: string = "START_NATIVE_URL";
 
     /** 发送消息到客户端 */
-    public static readonly SEND_MSG_TO_CLIENT: string = "SEND_MSG_TO_CLIENT";
+    public static readonly SEND_CLIENT_MSG: string = "SEND_CLIENT_MSG";
 
     /** 显示loading */
     public static readonly SHOW_LOADING: string = "SHOW_LOADING";
