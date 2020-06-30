@@ -119,15 +119,15 @@ class Server {
 
             //游戏地图
             if (mainModel.gameServerMode === CommonDefine.eGameServerMode.gameMap) {
-                message.sendMsgToClient(MsgId.nativeSignIn, gameServer);
+                message.sendClientMsg(MsgId.nativeSignIn, gameServer);
             }
             //模板地图
             else if (mainModel.gameServerMode === CommonDefine.eGameServerMode.mapTemplate) {
-                message.sendMsgToClient(MsgId.enterMapTemplate, gameServer);
+                message.sendClientMsg(MsgId.enterMapTemplate, gameServer);
             }
             //模板地图房间
             else if (mainModel.gameServerMode === CommonDefine.eGameServerMode.mapTemplateRoom) {
-                message.sendMsgToClient(MsgId.enterMapTemplateRoom, gameServer);
+                message.sendClientMsg(MsgId.enterMapTemplateRoom, gameServer);
             } else {
                 //reserve
             }
@@ -235,7 +235,7 @@ class Server {
                     this.tryRunGameServerCmd(cmd);
                     this._tryGameServerCount++;
                 } else {
-                    message.sendMsgToClient("gameServerStartupFail");
+                    message.sendClientMsg("gameServerStartupFail");
                 }
             }, 3000);
         }
