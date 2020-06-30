@@ -141,13 +141,6 @@
             color="orange500"
             @click="onUploadVersionFile"
           >上传游戏版本</mu-button>
-          <mu-button
-            v-show="this.curEnviron&&this.curEnviron.nativePackageEnable"
-            v-loading="isUploadClientPackageLoading"
-            data-mu-loading-size="24"
-            color="cyan500"
-            @click="onUploadClientPackage"
-          >上传Native用程序包</mu-button>
         </div>
         <mu-container v-show="curEnviron&&curEnviron.scpEnable">
           <mu-flex class="flex-wrapper" align-items="center">
@@ -182,6 +175,13 @@
             color="blue500"
             @click="onModifyPolicyFile"
           >修改策略文件</mu-button>
+          <mu-button
+            v-show="this.curEnviron&&this.curEnviron.nativePackageEnable"
+            v-loading="isUploadClientPackageLoading"
+            data-mu-loading-size="24"
+            color="cyan500"
+            @click="onUploadClientPackage"
+          >上传Native用程序包</mu-button>
           <mu-button
             v-loading="isUploadPolicyLoading"
             data-mu-loading-size="24"
@@ -952,17 +952,16 @@ export default {
         }
         promiseList.push(mdFtp.uploadVersionFile);
 
-        //上传native用游戏包
-        if (this.curEnviron.nativePackageEnable) {
-          promiseList.push(
-            ModelMgr.ftpModel.initQiniuOption.bind(ModelMgr.ftpModel)
-          );
-          promiseList.push(mdFtp.uploadClientPackage);
-        }
-
         if (this.curEnviron.policyEnable) {
           promiseList.push(mdFtp.createPolicyFile);
           promiseList.push(mdFtp.modifyPolicyFile);
+          //上传native用游戏包
+          if (this.curEnviron.nativePackageEnable) {
+            promiseList.push(
+              ModelMgr.ftpModel.initQiniuOption.bind(ModelMgr.ftpModel)
+            );
+            promiseList.push(mdFtp.uploadClientPackage);
+          }
           promiseList.push(mdFtp.uploadPolicyFile);
           promiseList.push(mdFtp.applyPolicyNum);
         }
