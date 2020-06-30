@@ -652,19 +652,21 @@ function getNewNativePolicyNum() {
 /** 上传客户端包 */
 export async function uploadClientPackage() {
     return new Promise(async (resolve, reject) => {
-        let policyInfo = await ModelMgr.versionModel.getCurPolicyInfo();
-        let data = JSON.parse(policyInfo);
-        console.log(`start zip`);
-        if (data.Code != 0) {
-            console.log(`policy num is null`);
-            console.log(data.Message);
-            reject();
-            return;
-        }
+        // let policyInfo = await ModelMgr.versionModel.getCurPolicyInfo();
+        // let data = JSON.parse(policyInfo);
+        // console.log(`start zip`);
+        // if (data.Code != 0) {
+        //     console.log(`policy num is null`);
+        //     console.log(data.Message);
+        //     reject();
+        //     return;
+        // }
 
-        let policyNum = data.Data.Version;
-        let environ = ModelMgr.versionModel.curEnviron;
-        let gameVersion = await ModelMgr.versionModel.getGameVersion(environ, policyNum);
+        // let policyNum = data.Data.Version;
+        // let environ = ModelMgr.versionModel.curEnviron;
+        // let gameVersion = await ModelMgr.versionModel.getGameVersion(environ, policyNum);
+        const gameVersion = ModelMgr.versionModel.releaseVersion;
+
         let releaseName = `release_v${gameVersion}s`;
         let zipPath = `${Global.svnPublishPath}${environ.zipPath}/${releaseName}.zip`;
 
