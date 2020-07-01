@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" opaque="false" designImage="ui://thvmj7voen7j4cyij9" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlStatus" pages="2,none,1,clone,0,elem" selected="2">
+  <controller name="ctrlStatus" pages="2,none,1,clone,0,elem,6,res" selected="3">
     <action type="change_page" fromPage="" toPage="2" objectId="n32_g61s" controller="ctrlStatus" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n32_g61s" controller="ctrlStatus" targetPage="1"/>
+    <action type="change_page" fromPage="" toPage="6" objectId="n32_g61s" controller="ctrlStatus" targetPage="4"/>
   </controller>
   <displayList>
     <component id="n1_s45w" name="codeBlockContainer" src="s45w19" fileName="codeVew/com/CodeblockContainer.xml" xy="955,-1" size="852,1082" group="n16_en7j">
@@ -58,7 +59,7 @@
       <Button icon="ui://oyity675cnxcwcyilz"/>
     </component>
     <component id="n32_g61s" name="comEmptyClone" src="hl7ywcyijw" fileName="ideCommon/com/comEmptyCloneEntity.xml" xy="1719,0" controller="ctrlStatus,1">
-      <gearDisplay controller="ctrlStatus" pages="2,1"/>
+      <gearDisplay controller="ctrlStatus" pages="2,1,6"/>
       <relation target="" sidePair="height-height,right-right"/>
     </component>
   </displayList>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="ti9jag5t" jpegQuality="80" compressPNG="true">
+<packageDescription id="ti9jag5t">
   <resources>
     <image id="s45w0" name="img_ide_cm_1.png" path="/ideCommon/img/" scale="9grid" scale9grid="2,2,36,36"/>
     <image id="s45w1" name="img_ide_cm_2.png" path="/ideCommon/img/" scale="9grid" scale9grid="13,13,26,26"/>
@@ -487,7 +487,6 @@
     <component id="cgkqwcyild" name="btnAttributeTag.xml" path="/attribute/btn/"/>
     <image id="cgkqwcyile" name="img_att_tab_1.png" path="/attribute/img/"/>
     <image id="cgkqwcyilf" name="img_att_tab_2.png" path="/attribute/img/"/>
-    <component id="drx0wcyilg" name="ComBuildAttrB(1).xml" path="/attribute/com/ComBuildAttrB/" exported="true"/>
     <component id="rx8ewcyilh" name="ComSoundAttr.xml" path="/attribute/com/"/>
     <component id="rx8ewcyili" name="ComSoundAttrItem.xml" path="/attribute/com/"/>
     <image id="rx8ewcyilj" name="icon_att_bf_1.png" path="/attribute/img/"/>
