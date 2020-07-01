@@ -5,6 +5,7 @@
  * @FilePath \pc\src\main\Platform.ts
  */
 import querystring from 'querystring';
+import http from 'http';
 
 import MsgId from '../common/MsgId';
 
@@ -186,8 +187,10 @@ class Platform {
         logger.log('net', `请求登录贝尔平台, bellApiOrigin: ${mainModel.bellApiOrigin}, bellTempToken:${mainModel.bellTempToken}`);
         return new Promise((resolve, reject) => {
             util.requestPostHttps(mainModel.bellApiOrigin, null, '/common/member/login-by-temporary-token', data, null
-                , (body: any) => {
+                , (body: any, response: http.IncomingMessage) => {
                     logger.log('net', `登陆贝尔平台返回body`, body);
+                    message.sendIpcMsg(MsgId.SAVE_NATIVE_HEADER_SET_COOKIE, response.headers["set-cookie"]);
+
                     if (body.code === 200) {
                         if (body.data.token) {
                             mainModel.setBellToken(body.data.token);

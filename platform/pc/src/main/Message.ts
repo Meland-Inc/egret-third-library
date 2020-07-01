@@ -179,7 +179,7 @@ class Message {
             newUrl.searchParams.set("webviewToken", mainModel.bellToken);
         }
 
-        this.sendIpcMsg(MsgId.START_NATIVE_URL, newUrl.toString());
+        this.sendIpcMsg(MsgId.START_NATIVE_URL, newUrl);
     }
 
     /** 官网地址进入 */

@@ -9,6 +9,7 @@ import querystring from "querystring";
 import fs from "fs";
 import fse from "fs-extra";
 import path from "path";
+import tough from 'tough-cookie';
 
 import { CommonDefine } from '../common/CommonDefine';
 import commonConfig from '../common/CommonConfig';
@@ -37,6 +38,7 @@ class Message {
         this.msgMap = new Map<string, () => void>();
         this.msgMap[MsgId.SAVE_NATIVE_LOGIN_RESPONSE] = this.onSaveNativeLoginResponse.bind(this);
         this.msgMap[MsgId.SAVE_NATIVE_GAME_SERVER] = this.onSaveNativeGameServer.bind(this);
+        this.msgMap[MsgId.SAVE_NATIVE_HEADER_SET_COOKIE] = this.onSaveNativeHeaderSetCookie.bind(this);
         this.msgMap[MsgId.START_NATIVE_CLIENT] = this.onStartNativeClient.bind(this);
         this.msgMap[MsgId.START_NATIVE_WEBSITE] = this.onStartNativeWebsite.bind(this);
         this.msgMap[MsgId.START_NATIVE_PLATFORM] = this.onStartNativePlatform.bind(this);
@@ -82,6 +84,11 @@ class Message {
     /** 保存native游戏服务器 */
     private onSaveNativeGameServer(gameServer: string) {
         rendererModel.setNativeGameServer(gameServer);
+    }
+
+    /** 保存客户端获取的set-cookie */
+    private onSaveNativeHeaderSetCookie(headerSetCookie: string[]): void {
+        rendererModel.setHeaderSetCookie(headerSetCookie);
     }
 
     /** 收到获取native策略号消息 */
@@ -235,10 +242,12 @@ class Message {
     }
 
     /** 跳转到指定url */
-    private onStartNativeUrl(url: string) {
+    private onStartNativeUrl(url: URL) {
         this.checkClearLocalStorage();
         this.listenClientMsg();
-        location.href = url;
+
+        this.applySetCookie(url.origin);
+        location.href = url.toString();
     }
 
     /** 从官网地址进入 */
@@ -274,7 +283,7 @@ class Message {
             } else {
                 webviewToken = queryObjectToken;
             }
-            queryObject["webviewToken"] = webviewToken
+            queryObject["webviewToken"] = webviewToken;
         } else {
             //reserve
         }
@@ -314,7 +323,19 @@ class Message {
         }
 
         logger.log('url', `${bellPlatformDomain}/#/bell-planet?${platformValue}`);
+        this.applySetCookie(bellPlatformDomain);
         location.href = `${bellPlatformDomain}/#/bell-planet?${platformValue}`;
+    }
+
+    /** 应用set-cookie */
+    private applySetCookie(url: string) {
+        if (rendererModel.headerSetCookie) {
+            for (const iterator of rendererModel.headerSetCookie) {
+                const cookie = tough.Cookie.parse(iterator);
+                logger.log('net', `cookie: `, JSON.stringify(cookie));
+                util.setCookie(url, cookie.key, cookie.value, (cookie.expires as Date).getTime(), cookie.domain);
+            }
+        }
     }
 
     /** 检查删除本地存储 */

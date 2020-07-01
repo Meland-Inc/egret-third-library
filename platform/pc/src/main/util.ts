@@ -164,7 +164,7 @@ export namespace util {
                 if (successFunc) {
                     if (!!body) {
                         try {
-                            successFunc(JSON.parse(body));
+                            successFunc(JSON.parse(body), response);
                         } catch (error) {
                             logger.error('net', `http isHttps:${isHttps} error, body`, body);
                         }
