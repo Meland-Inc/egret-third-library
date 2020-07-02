@@ -41,7 +41,7 @@ class Message {
         this.msgMap[MsgId.START_NATIVE_WEBSITE] = this.onStartNativeWebsite.bind(this);
         this.msgMap[MsgId.START_NATIVE_PLATFORM] = this.onStartNativePlatform.bind(this);
         this.msgMap[MsgId.START_NATIVE_URL] = this.onStartNativeUrl.bind(this);
-        this.msgMap[MsgId.SEND_MSG_TO_CLIENT] = this.onSendMsgToClient.bind(this);
+        this.msgMap[MsgId.SEND_CLIENT_MSG] = this.onSendClientMsg.bind(this);
         this.msgMap[MsgId.SHOW_LOADING] = this.onShowLoading.bind(this);
         this.msgMap[MsgId.HIDE_LOADING] = this.onHideLoading.bind(this);
         this.msgMap[MsgId.SET_LOADING_PROGRESS] = this.onSetLoadingProgress.bind(this);
@@ -228,6 +228,7 @@ class Message {
     /** 从客户端进入 */
     private onStartNativeClient(queryValue: string) {
         this.checkClearLocalStorage();
+        this.listenClientMsg();
         let url = `${commonConfig.clientPackagePath}/index.html?${queryValue}`;
         url = path.join(url);
         location.href = url;
@@ -236,12 +237,14 @@ class Message {
     /** 跳转到指定url */
     private onStartNativeUrl(url: string) {
         this.checkClearLocalStorage();
+        this.listenClientMsg();
         location.href = url;
     }
 
     /** 从官网地址进入 */
     private onStartNativeWebsite() {
         this.checkClearLocalStorage();
+        this.listenClientMsg();
 
         if (commonConfig.environName === CommonDefine.eEnvironName.release) {
             location.href = commonConfig.bellcodeUrl;
@@ -253,6 +256,7 @@ class Message {
     /** 从官网平台进入 */
     private onStartNativePlatform(queryObject: querystring.ParsedUrlQuery) {
         this.checkClearLocalStorage();
+        this.listenClientMsg();
 
         let webviewToken: string
         let queryObjectWebviewToken = queryObject['webviewToken'];
@@ -324,9 +328,34 @@ class Message {
         }
     }
 
-    /** 收到游戏服务器启动完毕 */
-    private onSendMsgToClient(msgId: string, ...args: any[]) {
-        this.sendMsgToClient(msgId, ...args);
+    /** 发送消息到客户端 */
+    private onSendClientMsg(msgId: string, ...args: any[]) {
+        const iframeElement = window.document.getElementById("planet-iframe") as HTMLIFrameElement;
+        if (iframeElement) {
+            iframeElement.contentWindow.postMessage({ 'key': 'nativeMsg', 'value': `${[msgId, args]} ` }, '* ');
+            return;
+        }
+
+        if (window) {
+            window.postMessage({ 'key': 'nativeMsg', 'value': `${[msgId, args]} ` }, '* ');
+            return;
+        }
+    }
+
+    private listenClientMsg() {
+        if (!window) return;
+
+        logger.log("message", `尝试监听客户端消息`);
+        window.onload = () => {
+            logger.log("message", `window loaded 监听客户端消息`);
+            window.addEventListener("message", this.onListenClientMsg);
+        }
+    }
+
+    private onListenClientMsg(evt: MessageEvent) {
+        const { key, value } = evt.data;
+        logger.log("message", `收到客户端消息`, key, value);
+        ipcRenderer.send(IpcChannel.CLIENT_PROCESS_MESSAGE, key, ...value);
     }
 
     private onShowLoading(value: string) {
@@ -339,19 +368,6 @@ class Message {
 
     private onSetLoadingProgress(value: number) {
         loading.setLoadingProgress(value);
-    }
-
-    /** 发送消息到客户端 */
-    private sendMsgToClient(msgId: string, ...args: any[]) {
-        if (window.frames && window.frames.length > 0) {
-            window.frames[0].postMessage({ 'key': 'nativeMsg', 'value': `${[msgId, args]} ` }, '* ');
-            return;
-        }
-
-        if (window) {
-            window.postMessage({ 'key': 'nativeMsg', 'value': `${[msgId, args]} ` }, '* ');
-            return;
-        }
     }
 }
 

@@ -261,12 +261,17 @@ export namespace util {
 
     /** 读取指定cookies */
     export async function getCookie(name: string) {
-        let cookies = await session.defaultSession.cookies.get({});
-        let cookie = cookies.find(value => value.name === name);
-        if (cookie) {
+        try {
+            let cookies = await session.defaultSession.cookies.get({});
+            if (!cookies) return null;
+            let cookie = cookies.find(value => value.name === name);
+            if (!cookie) return null;
+
             return cookie.value;
+        } catch (error) {
+            console.log(error);
+            return null;
         }
-        return null;
     };
 
     /** 执行渲染层js代码 */
