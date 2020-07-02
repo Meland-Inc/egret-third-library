@@ -253,6 +253,8 @@ async function onNewWindow(event: Event, url: string) {
 
 /** native初始化 */
 async function initNative() {
+  mainModel.setBellplanetReady(false);
+
   logger.log('net', `urlValue: ${mainModel.urlValue}`);
   if (!mainModel.urlValue || mainModel.urlValue.indexOf(commonConfig.constPseudoProtocol) < 0) {
     mainModel.setNativeMode(CommonDefine.eNativeMode.website);
