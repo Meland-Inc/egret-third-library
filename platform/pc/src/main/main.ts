@@ -123,7 +123,7 @@ async function createWindow() {
     width: 1600,
     height: 900,
     webPreferences: {
-      // preload: `${config.rootPath}/dist/renderer/renderer.js`,
+      preload: `${commonConfig.rootPath}/dist/renderer-bundle.js`,
       nodeIntegration: true,
       webSecurity: false
     }
@@ -268,7 +268,7 @@ async function initNative() {
     initNativeMode(mainModel.lessonRouter);
   }
 
-  await mainWindow.loadFile(`./dist/renderer.html`);
+  await mainWindow.loadFile(`${commonConfig.rootPath}/dist/renderer.html`);
 
   logger.log('net', `config.urlValue`, mainModel.urlValue);
   logger.log('env', `app.isPackaged:`, commonConfig.isPackaged);
