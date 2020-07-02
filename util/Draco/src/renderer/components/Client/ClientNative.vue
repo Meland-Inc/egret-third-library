@@ -85,7 +85,7 @@
             @click="onPublishWin"
           >发布win包</mu-button>
           <mu-button
-            v-loading="isUploadNativeLoading"
+            v-loading="isUploadNativeWinLoading"
             data-mu-loading-size="24"
             color="green500"
             @click="onUploadNativeExe"
@@ -98,10 +98,10 @@
             @click="onPublishMac"
           >发布mac包</mu-button>
           <mu-button
-            v-loading="isUploadNativeLoading"
+            v-loading="isUploadNativeMacLoading"
             data-mu-loading-size="24"
             color="green500"
-            @click="onUploadNativeExe"
+            @click="onUploadNativeMac"
           >上传native包Mac</mu-button>
           <br />
           <mu-button
@@ -149,7 +149,8 @@ export default {
       isWriteVersionInfoLoading: false,
       isPublishWinLoading: false,
       isPublishMacLoading: false,
-      isUploadNativeLoading: false,
+      isUploadNativeWinLoading: false,
+      isUploadNativeMacLoading: false,
       isGetNativeVersionLoading: false,
       isApplyNativePolicyNumLoading: false,
 
@@ -185,8 +186,6 @@ export default {
     async environChange() {
       let versionModel = ModelMgr.versionModel;
       versionModel.setCurEnviron(this.curEnviron);
-      // this.releaseShow = this.curEnviron.name === versionModel.eEnviron.release;
-      // this.readyShow = this.curEnviron.name === versionModel.eEnviron.ready;
       this.showPackageNative =
         this.curEnviron.name === versionModel.eEnviron.release;
 
@@ -349,28 +348,48 @@ export default {
         return;
       }
 
-      this.isUploadNativeLoading = true;
+      this.isUploadNativeWinLoading = true;
       Global.showRegionLoading();
       try {
         await ModelMgr.ftpModel.initQiniuOption();
         await mdFtp.uploadNativeExe();
-        await mdFtp.uploadNativeDmg();
-        this.isUploadNativeLoading = false;
+        this.isUploadNativeWinLoading = false;
         Global.hideRegionLoading();
       } catch (error) {
-        this.isUploadNativeLoading = false;
+        this.isUploadNativeWinLoading = false;
+        Global.hideRegionLoading();
+      }
+    },
+    async onUploadNativeMac() {
+      if (!ModelMgr.versionModel.publisher) {
+        Global.snack("请输入发布者", null, false);
+        return;
+      }
+
+      if (this.checkNativeVersion()) {
+        Global.snack("请填入新的native版本号!", null, false);
+        return;
+      }
+
+      this.isUploadNativeMacLoading = true;
+      Global.showRegionLoading();
+      try {
+        await ModelMgr.ftpModel.initQiniuOption();
+        await mdFtp.uploadNativeDmg();
+        this.isUploadNativeMacLoading = false;
+        Global.hideRegionLoading();
+      } catch (error) {
+        this.isUploadNativeMacLoading = false;
         Global.hideRegionLoading();
       }
     },
     async getNativeVersion() {
-      // let environName = this.curEnviron.name;
-      //以ready为准
-      let policyNum = await ExternalUtil.getNativePolicyNum(
-        ModelMgr.versionModel.eEnviron.ready
-      );
+      //以release为准
+      let environName = ModelMgr.versionModel.eEnviron.release;
+      let policyNum = await ExternalUtil.getNativePolicyNum(environName);
 
       const nativeVersion = await ExternalUtil.getNativeVersion(
-        ModelMgr.versionModel.eEnviron.ready,
+        environName,
         policyNum
       );
 
