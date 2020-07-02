@@ -365,14 +365,14 @@ export class VersionModel {
 
         this._nativePolicyNum = value;
 
-        let platform = os.platform() === 'win32' ? "win" : "mac";
+        // let platform = os.platform() === 'win32' ? "win" : "mac";
         //线上的native版本号
         let policyNum = await ExternalUtil.getNativePolicyNum(environName);
-        this.originNativeVersion = await ExternalUtil.getNativeVersion(environName, policyNum, platform);
+        this.originNativeVersion = await ExternalUtil.getNativeVersion(environName, policyNum);
 
         //以ready的native版本号为准
         let readyPolicyNum = await ExternalUtil.getNativePolicyNum(this.eEnviron.ready);
-        this.nativeVersion = await ExternalUtil.getNativeVersion(this.eEnviron.ready, readyPolicyNum, platform);
+        this.nativeVersion = await ExternalUtil.getNativeVersion(this.eEnviron.ready, readyPolicyNum);
         console.log(`nativeVersion:${this.nativeVersion}`);
     }
 
