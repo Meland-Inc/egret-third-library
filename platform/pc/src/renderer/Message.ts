@@ -4,7 +4,7 @@
  * @Date 2020-02-26 15:31:07
  * @FilePath \pc\src\renderer\Message.ts
  */
-import { ipcRenderer, IpcRendererEvent } from "electron";
+import { ipcRenderer, IpcRendererEvent, remote } from "electron";
 import querystring from "querystring";
 import fs from "fs";
 import fse from "fs-extra";
@@ -235,38 +235,31 @@ class Message {
     /** 从客户端进入 */
     private onStartNativeClient(queryValue: string) {
         this.checkClearLocalStorage();
-        this.listenClientMsg();
         let url = `${commonConfig.clientPackagePath}/index.html?${queryValue}`;
         url = path.join(url);
-        location.href = url;
+        this.loadRendererURL(url);
     }
 
     /** 跳转到指定url */
     private onStartNativeUrl(url: string) {
         this.checkClearLocalStorage();
-        this.listenClientMsg();
 
         const urlObj: URL = new URL(url);
         this.applySetCookie(urlObj.origin);
-        location.href = url;
+        this.loadRendererURL(url);
     }
 
     /** 从官网地址进入 */
     private onStartNativeWebsite() {
         this.checkClearLocalStorage();
-        this.listenClientMsg();
 
-        if (commonConfig.environName === CommonDefine.eEnvironName.release) {
-            location.href = commonConfig.bellcodeUrl;
-        } else {
-            location.href = commonConfig.demoBellCodeUrl;
-        }
+        const url = commonConfig.environName === CommonDefine.eEnvironName.release ? commonConfig.bellcodeUrl : commonConfig.demoBellCodeUrl;
+        this.loadRendererURL(url);
     }
 
     /** 从官网平台进入 */
     private onStartNativePlatform(queryObject: querystring.ParsedUrlQuery) {
         this.checkClearLocalStorage();
-        this.listenClientMsg();
 
         let webviewToken: string
         let queryObjectWebviewToken = queryObject['webviewToken'];
@@ -323,9 +316,34 @@ class Message {
             bellPlatformDomain = commonConfig.demoBellCodeUrl;
         }
 
-        logger.log('url', `${bellPlatformDomain}/#/bell-planet?${platformValue}`);
         this.applySetCookie(bellPlatformDomain);
-        location.href = `${bellPlatformDomain}/#/bell-planet?${platformValue}`;
+        const url = `${bellPlatformDomain}/#/bell-planet?${platformValue}`;
+        logger.log('url', url);
+        this.loadRendererURL(url);
+    }
+
+    /** 加载渲染URL */
+    private async loadRendererURL(tUrl: string | URL) {
+        this.listenClientMsg();
+
+        let url: string;
+        if (tUrl instanceof URL) {
+            url = tUrl.toString();
+        } else {
+            url = tUrl;
+        }
+        location.href = url;
+    }
+
+    /** 监听客户端消息 */
+    private listenClientMsg() {
+        if (!window) return;
+
+        logger.log("message", `尝试监听客户端消息`);
+        window.onload = () => {
+            logger.log("message", `window loaded 监听客户端消息`);
+            window.addEventListener("message", this.onListenClientMsg);
+        }
     }
 
     /** 应用set-cookie */
@@ -354,23 +372,13 @@ class Message {
     private onSendClientMsg(msgId: string, ...args: any[]) {
         const iframeElement = window.document.getElementById("planet-iframe") as HTMLIFrameElement;
         if (iframeElement) {
-            iframeElement.contentWindow.postMessage({ 'key': 'nativeMsg', 'value': `${[msgId, args]} ` }, '* ');
+            iframeElement.contentWindow.postMessage({ 'key': 'nativeMsg', 'value': JSON.stringify([msgId, args]) }, '*');
             return;
         }
 
         if (window) {
-            window.postMessage({ 'key': 'nativeMsg', 'value': `${[msgId, args]} ` }, '* ');
+            window.postMessage({ 'key': 'nativeMsg', 'value': JSON.stringify([msgId, args]) }, '*');
             return;
-        }
-    }
-
-    private listenClientMsg() {
-        if (!window) return;
-
-        logger.log("message", `尝试监听客户端消息`);
-        window.onload = () => {
-            logger.log("message", `window loaded 监听客户端消息`);
-            window.addEventListener("message", this.onListenClientMsg);
         }
     }
 

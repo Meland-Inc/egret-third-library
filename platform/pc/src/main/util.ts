@@ -251,6 +251,11 @@ export namespace util {
             if (err) {
                 logger.error('log', `postFile err`, err);
             }
+            if (!res) {
+                logger.error('log', `res err`);
+                return;
+            }
+
             if (res) {
                 logger.log('log', `postFile res`, res.statusCode, res.statusMessage);
             }
