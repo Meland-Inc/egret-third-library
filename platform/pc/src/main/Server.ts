@@ -199,7 +199,7 @@ class Server {
             }
         }
 
-        logger.log('net', '创建游戏服务器');
+        logger.log('net', '创建游戏服务器 mode', mode);
         mainModel.setGameServerMode(mode);
         let cmd: string;
         if (os.platform() === "win32") {
