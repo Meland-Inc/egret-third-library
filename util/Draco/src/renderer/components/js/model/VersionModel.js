@@ -370,9 +370,9 @@ export class VersionModel {
         let policyNum = await ExternalUtil.getNativePolicyNum(environName);
         this.originNativeVersion = await ExternalUtil.getNativeVersion(environName, policyNum);
 
-        //以ready的native版本号为准
-        let readyPolicyNum = await ExternalUtil.getNativePolicyNum(this.eEnviron.ready);
-        this.nativeVersion = await ExternalUtil.getNativeVersion(this.eEnviron.ready, readyPolicyNum);
+        //以release的native版本号为准
+        let readyPolicyNum = await ExternalUtil.getNativePolicyNum(this.eEnviron.release);
+        this.nativeVersion = await ExternalUtil.getNativeVersion(this.eEnviron.release, readyPolicyNum);
         console.log(`nativeVersion:${this.nativeVersion}`);
     }
 
