@@ -242,12 +242,13 @@ class Message {
     }
 
     /** 跳转到指定url */
-    private onStartNativeUrl(url: URL) {
+    private onStartNativeUrl(url: string) {
         this.checkClearLocalStorage();
         this.listenClientMsg();
 
-        this.applySetCookie(url.origin);
-        location.href = url.toString();
+        const urlObj: URL = new URL(url);
+        this.applySetCookie(urlObj.origin);
+        location.href = url;
     }
 
     /** 从官网地址进入 */
