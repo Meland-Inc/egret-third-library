@@ -1,6 +1,7 @@
 import * as http from 'http';
 import * as crypto from 'crypto';
 import { Global } from './Global';
+import { ModelMgr } from './model/ModelMgr';
 
 export function getPolicyInfo(versionName) {
     return new Promise((resolve, reject) => {
@@ -127,7 +128,7 @@ export async function getNativePolicyNum(environName) {
     return policyNum;
 }
 
-export function getNativeVersion(environName, policyNum, platform) {
+export function getNativeVersion(environName, policyNum) {
     return new Promise((resolve, reject) => {
         // let options = {
         //     host: Global.cdnUrl, // 请求地址 域名，google.com等.. 
@@ -137,7 +138,7 @@ export function getNativeVersion(environName, policyNum, platform) {
         //         'Content-Type': 'application/json'
         //     }
         // };
-        let url = `${Global.cdnUrl}/native/${environName}/${policyNum}/${platform}/policyFile.json`
+        let url = `${Global.cdnUrl}/native/${environName}/${policyNum}/win/policyFile.json`
         console.log("getNativeVersion", url);
         http.get(url, (response) => {
             if (response.statusCode != 200) {
