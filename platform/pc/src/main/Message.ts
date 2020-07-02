@@ -266,28 +266,22 @@ class Message {
         this.executeClientMsg(msgId, ...args);
     }
 
-    /** 执行发送到客户端消息 */
-    private executeClientMsg(msgId: string, ...args: any[]) {
-        let data = [msgId, args];
-        let content = JSON.stringify(data);
-        let code = `
-            if(window.frames && window.frames.length > 0) {
-                window.frames[0].postMessage({'key':'nativeMsg', 'value':\'${content}\'},'*');
-            } else if(window){
-                window.postMessage({'key':'nativeMsg', 'value':\'${content}\'},'*');
-            }`;
-        util.executeJavaScript(code);
-    }
-
     /** 执行缓存的客户端消息 */
     private executeCacheClientMsgArr() {
         if (!this._cacheClientMsgArr) return;
         if (this._cacheClientMsgArr.length === 0) return;
+        logger.log('message', '执行客户端缓存的消息');
         for (const iterator of this._cacheClientMsgArr) {
             this.executeClientMsg(iterator.msgId, ...iterator.args);
         }
 
         this._cacheClientMsgArr.length = 0;
+    }
+
+    /** 执行发送到客户端消息 */
+    private executeClientMsg(msgId: string, ...args: any[]) {
+        logger.log('message', `发送消息到客户端 key:${msgId} value`, ...args);
+        this.sendIpcMsg(MsgId.SEND_CLIENT_MSG, msgId, ...args);
     }
 }
 

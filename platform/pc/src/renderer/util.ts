@@ -4,6 +4,7 @@
  * @Date 2020-02-28 19:56:39
  * @FilePath \pc\src\renderer\util.ts
  */
+import { remote } from 'electron';
 import fs from 'fs';
 import path from 'path';
 import os from 'os';
@@ -196,4 +197,17 @@ export async function deleteFolderRecursive(folderPath: string, rmRootDir?: bool
     } else {
         console.log("给定的路径不存在，请给出正确的路径", folderPath);
     }
+}
+
+/** 设置cookies */
+export async function setCookie(url: string, name: string, value: string, expirationDate: number, domain: string) {
+    logger.log("cookie", `开始设置cookie url:${url} name:${name} value:${value}`);
+    const cookie = { url: url, name: name, value: value, expirationDate: expirationDate, domain: domain };
+    await remote.session.defaultSession.cookies.set(cookie)
+        .then(() => {
+            logger.log("cookie", `设置cookie成功 url:${url} name:${name} value:${value}`);
+        })
+        .catch((reason) => {
+            logger.error("cookie", "setCookie error", reason);
+        })
 }

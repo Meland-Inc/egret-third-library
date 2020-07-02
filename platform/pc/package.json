@@ -94,10 +94,12 @@
         "node-stream-zip": "^1.9.2",
         "raven-js": "^3.27.2",
         "request": "^2.88.0",
+        "tough-cookie": "^4.0.0",
         "tree-kill": "^1.2.2"
     },
     "devDependencies": {
         "@types/fs-extra": "^8.1.0",
+        "@types/tough-cookie": "^4.0.0",
         "cross-env": "^7.0.2",
         "electron": "^7.1.7",
         "electron-builder": "^21.2.0",

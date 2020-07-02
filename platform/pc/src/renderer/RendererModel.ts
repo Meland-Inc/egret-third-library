@@ -86,6 +86,14 @@ class RendererModel {
 
         logger.log('renderer', `设置VersionConfigValue packageType:${packageType} environ:${environ} value:${value}`);
     }
+
+    private _headerSetCookie: string[];
+    public get headerSetCookie(): string[] {
+        return this._headerSetCookie;
+    }
+    public setHeaderSetCookie(value: string[]): void {
+        this._headerSetCookie = value;
+    }
 }
 
 let rendererModel = new RendererModel();

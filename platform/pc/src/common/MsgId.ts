@@ -29,6 +29,9 @@ export default class MsgId {
     /** 设置native服务器内网ip和端口 */
     public static readonly SAVE_NATIVE_GAME_SERVER: string = "SAVE_NATIVE_GAME_SERVER";
 
+    /** 存储客户端获取的set-cookie */
+    public static readonly SAVE_NATIVE_HEADER_SET_COOKIE: string = "SAVE_NATIVE_HEADER_SET_COOKIE";
+
     /** 从客户端进入 */
     public static readonly START_NATIVE_CLIENT: string = "START_NATIVE_CLIENT";
 

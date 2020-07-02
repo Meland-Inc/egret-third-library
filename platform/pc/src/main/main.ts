@@ -123,7 +123,7 @@ async function createWindow() {
     width: 1600,
     height: 900,
     webPreferences: {
-      // preload: `${config.rootPath}/dist/renderer/renderer.js`,
+      preload: `${commonConfig.rootPath}/dist/renderer-bundle.js`,
       nodeIntegration: true,
       webSecurity: false
     }
@@ -253,6 +253,8 @@ async function onNewWindow(event: Event, url: string) {
 
 /** native初始化 */
 async function initNative() {
+  mainModel.setBellplanetReady(false);
+
   logger.log('net', `urlValue: ${mainModel.urlValue}`);
   if (!mainModel.urlValue || mainModel.urlValue.indexOf(commonConfig.constPseudoProtocol) < 0) {
     mainModel.setNativeMode(CommonDefine.eNativeMode.website);
@@ -268,7 +270,7 @@ async function initNative() {
     initNativeMode(mainModel.lessonRouter);
   }
 
-  await mainWindow.loadFile(`./dist/renderer.html`);
+  await mainWindow.loadFile(`${commonConfig.rootPath}/dist/renderer.html`);
 
   logger.log('net', `config.urlValue`, mainModel.urlValue);
   logger.log('env', `app.isPackaged:`, commonConfig.isPackaged);

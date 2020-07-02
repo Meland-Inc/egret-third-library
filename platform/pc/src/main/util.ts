@@ -164,7 +164,7 @@ export namespace util {
                 if (successFunc) {
                     if (!!body) {
                         try {
-                            successFunc(JSON.parse(body));
+                            successFunc(JSON.parse(body), response);
                         } catch (error) {
                             logger.error('net', `http isHttps:${isHttps} error, body`, body);
                         }
@@ -251,6 +251,11 @@ export namespace util {
             if (err) {
                 logger.error('log', `postFile err`, err);
             }
+            if (!res) {
+                logger.error('log', `res err`);
+                return;
+            }
+
             if (res) {
                 logger.log('log', `postFile res`, res.statusCode, res.statusMessage);
             }

@@ -4,11 +4,12 @@
  * @Date 2020-02-26 15:31:07
  * @FilePath \pc\src\renderer\Message.ts
  */
-import { ipcRenderer, IpcRendererEvent } from "electron";
+import { ipcRenderer, IpcRendererEvent, remote } from "electron";
 import querystring from "querystring";
 import fs from "fs";
 import fse from "fs-extra";
 import path from "path";
+import tough from 'tough-cookie';
 
 import { CommonDefine } from '../common/CommonDefine';
 import commonConfig from '../common/CommonConfig';
@@ -37,6 +38,7 @@ class Message {
         this.msgMap = new Map<string, () => void>();
         this.msgMap[MsgId.SAVE_NATIVE_LOGIN_RESPONSE] = this.onSaveNativeLoginResponse.bind(this);
         this.msgMap[MsgId.SAVE_NATIVE_GAME_SERVER] = this.onSaveNativeGameServer.bind(this);
+        this.msgMap[MsgId.SAVE_NATIVE_HEADER_SET_COOKIE] = this.onSaveNativeHeaderSetCookie.bind(this);
         this.msgMap[MsgId.START_NATIVE_CLIENT] = this.onStartNativeClient.bind(this);
         this.msgMap[MsgId.START_NATIVE_WEBSITE] = this.onStartNativeWebsite.bind(this);
         this.msgMap[MsgId.START_NATIVE_PLATFORM] = this.onStartNativePlatform.bind(this);
@@ -82,6 +84,11 @@ class Message {
     /** 保存native游戏服务器 */
     private onSaveNativeGameServer(gameServer: string) {
         rendererModel.setNativeGameServer(gameServer);
+    }
+
+    /** 保存客户端获取的set-cookie */
+    private onSaveNativeHeaderSetCookie(headerSetCookie: string[]): void {
+        rendererModel.setHeaderSetCookie(headerSetCookie);
     }
 
     /** 收到获取native策略号消息 */
@@ -228,35 +235,31 @@ class Message {
     /** 从客户端进入 */
     private onStartNativeClient(queryValue: string) {
         this.checkClearLocalStorage();
-        this.listenClientMsg();
         let url = `${commonConfig.clientPackagePath}/index.html?${queryValue}`;
         url = path.join(url);
-        location.href = url;
+        this.loadRendererURL(url);
     }
 
     /** 跳转到指定url */
     private onStartNativeUrl(url: string) {
         this.checkClearLocalStorage();
-        this.listenClientMsg();
-        location.href = url;
+
+        const urlObj: URL = new URL(url);
+        this.applySetCookie(urlObj.origin);
+        this.loadRendererURL(url);
     }
 
     /** 从官网地址进入 */
     private onStartNativeWebsite() {
         this.checkClearLocalStorage();
-        this.listenClientMsg();
 
-        if (commonConfig.environName === CommonDefine.eEnvironName.release) {
-            location.href = commonConfig.bellcodeUrl;
-        } else {
-            location.href = commonConfig.demoBellCodeUrl;
-        }
+        const url = commonConfig.environName === CommonDefine.eEnvironName.release ? commonConfig.bellcodeUrl : commonConfig.demoBellCodeUrl;
+        this.loadRendererURL(url);
     }
 
     /** 从官网平台进入 */
     private onStartNativePlatform(queryObject: querystring.ParsedUrlQuery) {
         this.checkClearLocalStorage();
-        this.listenClientMsg();
 
         let webviewToken: string
         let queryObjectWebviewToken = queryObject['webviewToken'];
@@ -274,7 +277,7 @@ class Message {
             } else {
                 webviewToken = queryObjectToken;
             }
-            queryObject["webviewToken"] = webviewToken
+            queryObject["webviewToken"] = webviewToken;
         } else {
             //reserve
         }
@@ -313,8 +316,45 @@ class Message {
             bellPlatformDomain = commonConfig.demoBellCodeUrl;
         }
 
-        logger.log('url', `${bellPlatformDomain}/#/bell-planet?${platformValue}`);
-        location.href = `${bellPlatformDomain}/#/bell-planet?${platformValue}`;
+        this.applySetCookie(bellPlatformDomain);
+        const url = `${bellPlatformDomain}/#/bell-planet?${platformValue}`;
+        logger.log('url', url);
+        this.loadRendererURL(url);
+    }
+
+    /** 加载渲染URL */
+    private async loadRendererURL(tUrl: string | URL) {
+        this.listenClientMsg();
+
+        let url: string;
+        if (tUrl instanceof URL) {
+            url = tUrl.toString();
+        } else {
+            url = tUrl;
+        }
+        location.href = url;
+    }
+
+    /** 监听客户端消息 */
+    private listenClientMsg() {
+        if (!window) return;
+
+        logger.log("message", `尝试监听客户端消息`);
+        window.onload = () => {
+            logger.log("message", `window loaded 监听客户端消息`);
+            window.addEventListener("message", this.onListenClientMsg);
+        }
+    }
+
+    /** 应用set-cookie */
+    private applySetCookie(url: string) {
+        if (rendererModel.headerSetCookie) {
+            for (const iterator of rendererModel.headerSetCookie) {
+                const cookie = tough.Cookie.parse(iterator);
+                logger.log('net', `cookie: `, JSON.stringify(cookie));
+                util.setCookie(url, cookie.key, cookie.value, (cookie.expires as Date).getTime(), cookie.domain);
+            }
+        }
     }
 
     /** 检查删除本地存储 */
@@ -332,23 +372,13 @@ class Message {
     private onSendClientMsg(msgId: string, ...args: any[]) {
         const iframeElement = window.document.getElementById("planet-iframe") as HTMLIFrameElement;
         if (iframeElement) {
-            iframeElement.contentWindow.postMessage({ 'key': 'nativeMsg', 'value': `${[msgId, args]} ` }, '* ');
+            iframeElement.contentWindow.postMessage({ 'key': 'nativeMsg', 'value': JSON.stringify([msgId, args]) }, '*');
             return;
         }
 
         if (window) {
-            window.postMessage({ 'key': 'nativeMsg', 'value': `${[msgId, args]} ` }, '* ');
+            window.postMessage({ 'key': 'nativeMsg', 'value': JSON.stringify([msgId, args]) }, '*');
             return;
-        }
-    }
-
-    private listenClientMsg() {
-        if (!window) return;
-
-        logger.log("message", `尝试监听客户端消息`);
-        window.onload = () => {
-            logger.log("message", `window loaded 监听客户端消息`);
-            window.addEventListener("message", this.onListenClientMsg);
         }
     }
 
