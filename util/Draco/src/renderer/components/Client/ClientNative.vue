@@ -71,44 +71,59 @@
             v-model="nativeVersion"
             :error-text="nativeVersionText"
           />
-          <mu-button
+          <br />
+          <!-- <mu-button
             v-loading="isWriteVersionInfoLoading"
             data-mu-loading-size="24"
             color="blue500"
             @click="onWriteVersionInfo"
-          >写入版本信息</mu-button>
+          >写入版本信息</mu-button>-->
           <mu-button
             v-loading="isPublishWinLoading"
             data-mu-loading-size="24"
             color="blue500"
             @click="onPublishWin"
-          >发布windows包</mu-button>
+          >发布win包</mu-button>
+          <mu-button
+            v-loading="isUploadNativeLoading"
+            data-mu-loading-size="24"
+            color="green500"
+            @click="onUploadNativeExe"
+          >上传native包win</mu-button>
+          <br />
           <mu-button
             v-loading="isPublishMacLoading"
             data-mu-loading-size="24"
-            color="purple500"
+            color="blue500"
             @click="onPublishMac"
           >发布mac包</mu-button>
           <mu-button
             v-loading="isUploadNativeLoading"
             data-mu-loading-size="24"
             color="green500"
-            @click="onUploadNative"
-          >上传native包</mu-button>
+            @click="onUploadNativeExe"
+          >上传native包Mac</mu-button>
+          <br />
+          <mu-button
+            v-loading="isGetNativeVersionLoading"
+            data-mu-loading-size="24"
+            color="purple500"
+            @click="getNativeVersion"
+          >当前版本号</mu-button>
           <mu-button
             v-loading="isApplyNativePolicyNumLoading"
             data-mu-loading-size="24"
-            color="green500"
+            color="red"
             @click="applyNativePolicyNum"
-          >应用native策略号</mu-button>
+          >应用版本号</mu-button>
         </div>
       </mu-container>
       <mu-divider />
-      <mu-container>
+      <!-- <mu-container>
         <div class="button-wrapper">
           <mu-button full-width color="red" @click="oneKeyPackage">一键打包native</mu-button>
         </div>
-      </mu-container>
+      </mu-container>-->
     </mu-container>
   </div>
 </template>
@@ -117,6 +132,7 @@ import { ModelMgr } from "../js/model/ModelMgr.js";
 import * as mdPublish from "../js/MdPublish.js";
 import { Global } from "../js/Global.js";
 import * as mdFtp from "../js/MdFtp.js";
+import * as ExternalUtil from "../js/ExternalUtil";
 
 export default {
   data() {
@@ -134,6 +150,7 @@ export default {
       isPublishWinLoading: false,
       isPublishMacLoading: false,
       isUploadNativeLoading: false,
+      isGetNativeVersionLoading: false,
       isApplyNativePolicyNumLoading: false,
 
       publishErrorText: null,
@@ -253,28 +270,28 @@ export default {
     //     Global.hideRegionLoading();
     //   }
     // },
-    async onWriteVersionInfo() {
-      if (!ModelMgr.versionModel.publisher) {
-        Global.snack("请输入发布者", null, false);
-        return;
-      }
+    // async onWriteVersionInfo() {
+    //   if (!ModelMgr.versionModel.publisher) {
+    //     Global.snack("请输入发布者", null, false);
+    //     return;
+    //   }
 
-      if (this.checkNativeVersion()) {
-        Global.snack("请填入新的native版本号!", null, false);
-        return;
-      }
+    //   if (this.checkNativeVersion()) {
+    //     Global.snack("请填入新的native版本号!", null, false);
+    //     return;
+    //   }
 
-      this.isWriteVersionInfoLoading = true;
-      Global.showRegionLoading();
-      try {
-        await mdPublish.writeVersionInfo();
-        this.isWriteVersionInfoLoading = false;
-        Global.hideRegionLoading();
-      } catch (error) {
-        this.isPublishWinLoading = false;
-        Global.hideRegionLoading();
-      }
-    },
+    //   this.isWriteVersionInfoLoading = true;
+    //   Global.showRegionLoading();
+    //   try {
+    //     await mdPublish.writeVersionInfo();
+    //     this.isWriteVersionInfoLoading = false;
+    //     Global.hideRegionLoading();
+    //   } catch (error) {
+    //     this.isPublishWinLoading = false;
+    //     Global.hideRegionLoading();
+    //   }
+    // },
     async onPublishWin() {
       if (!ModelMgr.versionModel.publisher) {
         Global.snack("请输入发布者", null, false);
@@ -289,6 +306,7 @@ export default {
       this.isPublishWinLoading = true;
       Global.showRegionLoading();
       try {
+        await mdPublish.writeVersionInfo();
         await mdPublish.publishWin();
         this.isPublishWinLoading = false;
         Global.hideRegionLoading();
@@ -311,6 +329,7 @@ export default {
       this.isPublishMacLoading = true;
       Global.showRegionLoading();
       try {
+        await mdPublish.writeVersionInfo();
         await mdPublish.publishMac();
         this.isPublishMacLoading = false;
         Global.hideRegionLoading();
@@ -319,7 +338,7 @@ export default {
         Global.hideRegionLoading();
       }
     },
-    async onUploadNative() {
+    async onUploadNativeExe() {
       if (!ModelMgr.versionModel.publisher) {
         Global.snack("请输入发布者", null, false);
         return;
@@ -342,6 +361,20 @@ export default {
         this.isUploadNativeLoading = false;
         Global.hideRegionLoading();
       }
+    },
+    async getNativeVersion() {
+      // let environName = this.curEnviron.name;
+      //以ready为准
+      let policyNum = await ExternalUtil.getNativePolicyNum(
+        ModelMgr.versionModel.eEnviron.ready
+      );
+
+      const nativeVersion = await ExternalUtil.getNativeVersion(
+        ModelMgr.versionModel.eEnviron.ready,
+        policyNum
+      );
+
+      Global.toast(`当前Native版本号:${nativeVersion}`);
     },
     async applyNativePolicyNum() {
       if (!ModelMgr.versionModel.publisher) {
