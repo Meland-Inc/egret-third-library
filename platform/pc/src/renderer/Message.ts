@@ -330,8 +330,9 @@ class Message {
 
     /** 发送消息到客户端 */
     private onSendClientMsg(msgId: string, ...args: any[]) {
-        if (window.frames && window.frames.length > 0) {
-            window.frames[0].postMessage({ 'key': 'nativeMsg', 'value': `${[msgId, args]} ` }, '* ');
+        const iframeElement = window.document.getElementById("planet-iframe") as HTMLIFrameElement;
+        if (iframeElement) {
+            iframeElement.contentWindow.postMessage({ 'key': 'nativeMsg', 'value': `${[msgId, args]} ` }, '* ');
             return;
         }
 
