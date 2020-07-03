@@ -9,6 +9,7 @@ import { app, globalShortcut, BrowserWindow, Menu, shell, dialog } from 'electro
 import * as fs from 'fs';
 import * as process from 'process';
 import * as os from 'os';
+import fse from 'fs-extra';
 
 import { CommonDefine } from '../common/CommonDefine';
 import commonConfig from '../common/CommonConfig';
@@ -162,16 +163,16 @@ async function createWindow() {
 /** 创建游戏包目录 */
 function packageMkDir() {
   // 判断创建文件
-  if (!fs.existsSync(`${commonConfig.packagePath}`)) {
-    fs.mkdirSync(`${commonConfig.packagePath}`)
+  if (!fs.existsSync(commonConfig.packagePath)) {
+    fse.ensureDirSync(commonConfig.packagePath);
   }
 
-  if (!fs.existsSync(`${commonConfig.clientPackagePath}`)) {
-    fs.mkdirSync(`${commonConfig.clientPackagePath}`)
+  if (!fs.existsSync(commonConfig.clientPackagePath)) {
+    fse.ensureDirSync(commonConfig.clientPackagePath);
   }
 
-  if (!fs.existsSync(`${commonConfig.serverPackagePath}`)) {
-    fs.mkdirSync(`${commonConfig.serverPackagePath}`)
+  if (!fs.existsSync(commonConfig.serverPackagePath)) {
+    fse.ensureDirSync(commonConfig.serverPackagePath);
   }
 }
 
