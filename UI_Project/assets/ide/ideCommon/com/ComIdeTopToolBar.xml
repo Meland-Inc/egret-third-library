@@ -2,7 +2,7 @@
 <component size="1495,56" designImage="ui://thvmj7vo80ab4" designImageOffsetX="-300" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlFuncSelect" pages="3,none,0,xyCoordinate,1,rcCoordinate,2,hideLine" selected="0"/>
   <controller name="ctrlCode" pages="0,true,1,false" selected="0"/>
-  <controller name="ctrlTerrainType" pages="0,normal,1,refreshPoint,2,notManorFlag" selected="2"/>
+  <controller name="ctrlTerrainType" pages="0,normal,1,refreshPoint,2,notManorFlag,3,bornPoint" selected="3"/>
   <displayList>
     <image id="n0_cw9m" name="imgBg" src="xba67m" fileName="ideCommon/img/img_ide_cm_6.png" xy="0,0" size="1495,56">
       <relation target="" sidePair="width-width"/>
@@ -56,6 +56,10 @@
     <component id="n26_r52c" name="btnSetRefreshPoint" src="dyk9b6" fileName="ideCommon/btn/tBtnIdeTopToolBar.xml" xy="1022,2">
       <relation target="" sidePair="right-right"/>
       <Button title="刷新点" icon="ui://ti9jag5tu5ngwcyilz" selectedIcon="ui://ti9jag5tu5ngwcyim0" controller="ctrlTerrainType" page="1"/>
+    </component>
+    <component id="n27_9enf" name="btnSetBornPoint" src="dyk9b6" fileName="ideCommon/btn/tBtnIdeTopToolBar.xml" xy="964,2">
+      <relation target="" sidePair="right-right"/>
+      <Button checked="true" title="出生点" icon="ui://ti9jag5tu5ngwcyilz" selectedIcon="ui://ti9jag5tu5ngwcyim0" controller="ctrlTerrainType" page="3"/>
     </component>
   </displayList>
 </component>
