@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="430,1080" opaque="false" designImage="ui://thvmj7vowose4cyijf" designImageOffsetX="-1490">
   <controller name="ctrlState" exported="true" pages="1,open,0,fold" selected="0"/>
-  <controller name="ctrlMode" exported="true" pages="0,brush,1,shovel,2,replace,3,select" selected="3"/>
+  <controller name="ctrlMode" exported="true" pages="0,brush,1,shovel,2,replace,3,select" selected="0"/>
   <controller name="ctrlBp" pages="0,showBp,3,showShovel,2,showSelect,1,hide" selected="0"/>
-  <controller name="ctrlTerrainType" pages="0,normal,1,refreshPoint,3,notManorFlag" selected="2"/>
+  <controller name="ctrlTerrainType" pages="0,normal,1,refreshPoint,3,notManorFlag,4,bornPoint" selected="3"/>
   <displayList>
     <graph id="n19_n83g" name="n19" xy="0,0" size="430,1082" visible="false" alpha="0" touchable="false" type="rect">
       <gearXY controller="ctrlState" pages="1,0" values="0,0|0,0"/>
@@ -33,9 +33,9 @@
       <item title="替换" icon="ui://ti9jag5tv00l9h" name="replace" controllers="ctrlLocation,1"/>
       <item title="选择" icon="ui://ti9jag5tv00l9j" name="select" controllers="ctrlLocation,2"/>
     </list>
-    <text id="n31_v00l" name="tfTitle" xy="20,17" size="123,24" group="n17_jm8l" fontSize="20" color="#333333" align="center" vAlign="middle" text="不可插旗区域">
+    <text id="n31_v00l" name="tfTitle" xy="20,17" size="65,24" group="n17_jm8l" fontSize="20" color="#333333" align="center" vAlign="middle" text="出生点">
       <gearDisplay controller="ctrlState" pages="1"/>
-      <gearText controller="ctrlTerrainType" pages="1,3" values="刷新点|不可插旗区域" default="地形编辑"/>
+      <gearText controller="ctrlTerrainType" pages="1,3,4" values="刷新点|不可插旗区域|出生点" default="地形编辑"/>
     </text>
     <component id="n3_7slt" name="btnFold" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="377,2" size="48,48" group="n23_m5hn">
       <gearDisplay controller="ctrlState" pages="1"/>
