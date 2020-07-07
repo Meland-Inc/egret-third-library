@@ -322,6 +322,61 @@ function uglify(sourceFile) {
     return code;
 }
 exports.uglify = uglify;
+/**
+ * 处理主工程的闭包 防止全局变量污染问题 返回处理好的新文本
+ * @param {*} sourceFile 字符串 代码
+ * @param {*} mainNamespace 字符串 游戏命名空间
+ */
+function closure(sourceFile, mainNamespace) {
+    if (!mainNamespace) {
+        return sourceFile;
+    }
+
+    //加上闭包和放出Main入口函数给引擎使用
+    let result = sourceFile;
+    let sourceMapContext = null;
+    let sourceMapFlag = `\n//#`;
+    let sourceMapSplits = result.split(sourceMapFlag);
+    if (sourceMapSplits.length > 1) {//有这种注释的时候
+        result = sourceMapSplits[0];
+        sourceMapContext = '' + sourceMapFlag;
+        //后面的拼在一起
+        for (let i = 1; i < sourceMapSplits.length; i++) {
+            sourceMapContext += sourceMapSplits[i];
+        }
+    }
+
+    result = `var ${mainNamespace} = {};(function(){${result}window.Main=Main;})();`;//加上window.Main=Main是加上入口 引擎入口需要使用
+
+    //给各个类补充命名空间才能提供反射功能
+    //__reflect(GuiComponent.prototype, "GuiComponent"); 
+    //根据__reflect分割 但是需要匹配后面是(的时候  并且分割符不包括前后判断字符
+    let reflectRegex = /__reflect(?=\((?!function))/;//(?!function)是为了不要匹配到一种特殊的结构__reflect(function
+    let splits = result.split(reflectRegex);
+    if (splits.length <= 1) {
+        return sourceFile;
+    }
+
+    result = "";
+    for (let i = 0; i < splits.length; i++) {
+        let word = splits[i];
+        if (i <= splits.length - 2) {//只有包含倒数第二个之前的片段才需要拼接一个类
+            let classTypeRegex = /(?<=\().*?(?=\.prototype)/;//从后面反射拿到类名 __reflect(GuiComponent.prototype, "GuiComponent"); 
+            let classType = splits[i + 1].match(classTypeRegex)[0];
+            result += `${word}${mainNamespace}.${classType}=${classType};__reflect`;
+        }
+        else {
+            result += word;
+        }
+    }
+
+    if (sourceMapContext) {
+        result += sourceMapContext;
+    }
+
+    return result;
+}
+exports.closure = closure;
 function minify(sourceFile, output) {
     var defines = {
         DEBUG: false,
