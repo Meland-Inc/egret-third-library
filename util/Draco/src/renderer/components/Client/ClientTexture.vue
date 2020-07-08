@@ -9,6 +9,12 @@
           @click="updateSvn"
         >更新svn文件</mu-button>
         <mu-button
+          v-loading="isCheckTextureRepeat"
+          data-mu-loading-size="24"
+          color="pink500"
+          @click="checkTextureRepeat"
+        >检测资源重名</mu-button>
+        <mu-button
           v-loading="isClearTextureLoading"
           data-mu-loading-size="24"
           color="orange500"
@@ -111,6 +117,7 @@ export default {
     return {
       // isUpdateGitLoading: false,
       isUpdateSvnLoading: false,
+      isCheckTextureRepeat: false,
       isCopyTextureInLoading: false,
       isClearTextureLoading: false,
       isClipTextureLoading: false,
@@ -165,6 +172,15 @@ export default {
         this.isUpdateSvnLoading = false;
         Global.hideRegionLoading();
       }
+    },
+    async checkTextureRepeat() {
+      this.isCheckTextureRepeat = true;
+      Global.showRegionLoading();
+
+      await mdTexture.checkTextureRepeat().finally(() => {
+        this.isCheckTextureRepeat = false;
+        Global.hideRegionLoading();
+      });
     },
     async clearTexture() {
       this.isClearTextureLoading = true;
@@ -254,6 +270,7 @@ export default {
       Global.showLoading();
       let promiseList = [];
       promiseList.push(this.updateSvn);
+      promiseList.push(this.checkTextureRepeat);
       promiseList.push(this.clearTexture);
       promiseList.push(this.copyTextureIn);
       promiseList.push(this.clipTexture);
@@ -262,25 +279,16 @@ export default {
       promiseList.push(this.importDefault);
       promiseList.push(this.importAsync);
 
-      // for (const iterator of promiseList) {
-      //   let success = true;
-      //   let error = "";
-      //   await iterator().catch(reason => {
-      //     success = false;
-      //     error = reason;
-      //     Global.snack(reason);
-      //   });
-
-      //   if (!success) {
-      //     Global.hideLoading();
-      //     Global.snack("One·for·All Error", error);
-      //     return;
-      //   }
-      // }
-      await Global.executePromiseList(promiseList);
-
-      Global.hideLoading();
-      Global.dialog("One·for·All Success");
+      Global.executePromiseList(promiseList)
+        .then(() => {
+          Global.dialog("One·for·All Success");
+        })
+        .catch(() => {
+          Global.snack("One·for·All Error", null, false);
+        })
+        .finally(() => {
+          Global.hideLoading();
+        });
     }
   },
   mounted() {}

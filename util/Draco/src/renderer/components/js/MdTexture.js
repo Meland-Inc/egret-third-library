@@ -87,6 +87,38 @@ export async function updateSvn() {
     await spawnExc.svnUpdate(Global.svnResPath, "更新svn资源文件成功", "更新svn资源文件错误");
 }
 
+/** 检测资源是否重复 */
+export async function checkTextureRepeat() {
+    let textureMap = {};
+    await loopCheckTextureRepeat(textureMap, Global.svnResPath)
+        .then(() => {
+            Global.toast('检测纹理完毕');
+        })
+        .catch((reason) => {
+            Global.snack(reason);
+        });
+}
+
+async function loopCheckTextureRepeat(textureMap, path, textureName) {
+    const isDir = await fsExc.isDirectory(path);
+    if (isDir) {
+        let targetDir = await fsExc.readDir(path);
+        for (const element of targetDir) {
+            const targetPath = `${path}/${element}`;
+            await loopCheckTextureRepeat(textureMap, targetPath, element);
+        }
+        return;
+    }
+
+    if (!textureName) return;
+
+    if (textureMap[textureName]) {
+        throw `纹理重复: ${textureName}`;
+    }
+
+    textureMap[textureName] = true;
+}
+
 /**
  * 清空纹理
  */
