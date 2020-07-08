@@ -28,14 +28,15 @@ const copy_in_suffix_arr = [
 ];
 
 const itemIconSfx = "itemIcon";
+const avatarIconSfx = "avatarIcon";
 const groundSfx = "ground";
-const surfaceSfx = "surface"
 const floorSfx = "floor";
+const surfaceSfx = "surface"
 // const materialSfx = "material";
 const objectSfx = "object";
 const objectDecorateSfx = "objectDecorate";
 const multiPictureSfx = "multiPicture";
-const avatarIconSfx = "avatarIcon";
+const AnimationSfx = "Animation";
 
 const sheetSfxArr = [
     itemIconSfx,
@@ -66,11 +67,11 @@ const objectType = {
     ObjectTypeSurface: 17
 }
 
-var _checkBoxValues = [itemIconSfx, avatarIconSfx, groundSfx, floorSfx, objectSfx, objectDecorateSfx, multiPictureSfx];
+var _checkBoxValues = [itemIconSfx, avatarIconSfx, groundSfx, floorSfx, objectSfx, objectDecorateSfx, multiPictureSfx, AnimationSfx];
 export function getCheckBoxValues() { return _checkBoxValues; }
 export function setCheckBoxValues(value) { _checkBoxValues = value; }
 
-var _checkBoxData = [itemIconSfx, avatarIconSfx, groundSfx, floorSfx, objectSfx, objectDecorateSfx, multiPictureSfx];
+var _checkBoxData = [itemIconSfx, avatarIconSfx, groundSfx, floorSfx, objectSfx, objectDecorateSfx, multiPictureSfx, AnimationSfx];
 export function getCheckBoxData() { return _checkBoxData; }
 export function setCheckBoxData(value) { _checkBoxData = value; }
 
@@ -320,7 +321,7 @@ export async function copyTextureOut() {
     try {
         for (const iterator of _checkBoxData) {
             console.log(`iterator:${iterator}`);
-            let sheetOutputPath = Global.projPath + project_sheet_suffix_path;
+            let needDelPath = Global.projPath + project_sheet_suffix_path;       //需要删除的路径
             let textureOutPath = `${Global.projPath}/resource/assets/texture/map/${iterator}`;
             if ((_sheetMode || sheetSfxArr.indexOf(iterator) != -1)
                 && iterator != multiPictureSfx) {
@@ -328,9 +329,9 @@ export async function copyTextureOut() {
                 inputPath = Global.svnArtPath + sheet_suffix_path;
                 if (iterator == avatarIconSfx) {
                     //如果是头像 放到注册纹理集中
-                    outputPath = sheetOutputPath = Global.projPath + '/resource/assets/preload/regSheet';
+                    outputPath = needDelPath = Global.projPath + '/resource/assets/preload/regSheet';
                 } else {
-                    outputPath = sheetOutputPath;
+                    outputPath = needDelPath;
                 }
             } else {
                 //纹理
@@ -343,17 +344,28 @@ export async function copyTextureOut() {
                 } else {
                     inputPath = `${Global.svnPath}/versionRes/trunk/settings/resource/${iterator}`;;
                 }
-                outputPath = textureOutPath;
+
+                if (iterator === AnimationSfx) {
+                    outputPath = needDelPath = `${Global.projPath}/resource/async`;
+                } else {
+                    outputPath = textureOutPath;
+                }
             }
 
             //删除纹理
-            let targetPa = await fsExc.readDir(sheetOutputPath);
-            for (const element of targetPa) {
-                if (element.indexOf(iterator + "-") != -1
-                    && (element.indexOf(".png") != -1
-                        || element.indexOf(".json") != -1)
-                ) {
-                    await fsExc.delFile(sheetOutputPath + "/" + element);
+            if (needDelPath) {
+                if (iterator === AnimationSfx) {
+                    fsExc.delFiles(needDelPath);
+                } else {
+                    let targetPa = await fsExc.readDir(needDelPath);
+                    for (const element of targetPa) {
+                        if (element.indexOf(iterator + "-") != -1
+                            && (element.indexOf(".png") != -1
+                                || element.indexOf(".json") != -1)
+                        ) {
+                            await fsExc.delFile(needDelPath + "/" + element);
+                        }
+                    }
                 }
             }
 
@@ -373,8 +385,15 @@ export async function copyTextureOut() {
             } else {
                 let fromPa = await fsExc.readDir(inputPath);
                 for (const element of fromPa) {
-                    await fsExc.makeDir(outputPath);
-                    await fsExc.copyFile(inputPath + "/" + element, outputPath);
+                    const elementInputPath = `${inputPath}/${element}`;
+                    let elementOutPath = outputPath;
+                    let elementOutputDir = elementOutPath;
+                    if (iterator === AnimationSfx) {
+                        elementOutPath = outputPath + `/${element}/`;
+                        elementOutputDir = elementOutPath.substring(0, elementOutPath.lastIndexOf("/"));
+                    }
+                    await fsExc.makeDir(elementOutputDir);
+                    await fsExc.copyFile(elementInputPath, elementOutPath, true);
                 }
             }
         }
