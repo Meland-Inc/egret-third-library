@@ -44,6 +44,12 @@
           color="red500"
           @click="importDefault"
         >导入default配置</mu-button>
+        <mu-button
+          v-loading="isImportAsyncLoading"
+          data-mu-loading-size="24"
+          color="red500"
+          @click="importAsync"
+        >导入async配置</mu-button>
       </div>
       <div class="button-wrapper">
         <mu-button full-width color="red500" @click="oneForAll">One·for·All</mu-button>
@@ -111,6 +117,7 @@ export default {
       isPackerTextureLoading: false,
       isCopyTextureOutLoading: false,
       isImportDefaultLoading: false,
+      isImportAsyncLoading: false,
 
       sheetMode: mdTexture.getSheetMode(),
       checkBoxValues: mdTexture.getCheckBoxValues(),
@@ -231,6 +238,18 @@ export default {
         Global.hideRegionLoading();
       }
     },
+    async importAsync() {
+      this.isImportAsyncLoading = true;
+      Global.showRegionLoading();
+      try {
+        await mdAsset.importAsync();
+        this.isImportAsyncLoading = false;
+        Global.hideRegionLoading();
+      } catch (error) {
+        this.isImportAsyncLoading = false;
+        Global.hideRegionLoading();
+      }
+    },
     async oneForAll() {
       Global.showLoading();
       let promiseList = [];
@@ -241,6 +260,7 @@ export default {
       promiseList.push(this.packerTexture);
       promiseList.push(this.copyTextureOut);
       promiseList.push(this.importDefault);
+      promiseList.push(this.importAsync);
 
       // for (const iterator of promiseList) {
       //   let success = true;
