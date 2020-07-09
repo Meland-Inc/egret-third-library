@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="48p8y12a" jpegQuality="80" compressPNG="true">
+<packageDescription id="48p8y12a">
   <resources>
     <component id="y8ju0" name="WinBackpack.xml" path="/win/" exported="true"/>
     <image id="y8ju1" name="icon_bac_bb.png" path="/img/"/>
@@ -22,7 +22,6 @@
     <sound id="gyou41" name="close.wav" path="/old/"/>
     <sound id="gyou42" name="rbtnItem.wav" path="/old/"/>
     <component id="gyou43" name="ComStatus.xml" path="/old/win/"/>
-    <component id="gyou44" name="WinBagSplit.xml" path="/old/win/"/>
     <component id="gyou45" name="WinGameBag.xml" path="/old/win/"/>
     <component id="gyou46" name="WinLessonBag.xml" path="/old/win/"/>
     <component id="gyou47" name="WinRepair.xml" path="/old/win/"/>
@@ -141,6 +140,21 @@
     <image id="gyou7c" name="切图提示1.png" path="/old/backpack/"/>
     <image id="gyou7d" name="切图提示3.png" path="/old/backpack/"/>
     <image id="gyou7e" name="背包效果图11.png" path="/old/backpack/"/>
+    <component id="ftyz7f" name="WinBagSplit.xml" path="/win/" exported="true"/>
+    <image id="ftyz7g" name="btn_chaifen_yuandian.png" path="/img/split/"/>
+    <image id="ftyz7h" name="标注.jpg" path="/img/split/"/>
+    <image id="ftyz7i" name="效果图.jpg" path="/img/split/"/>
+    <image id="ftyz7j" name="bg_chaifen_01.png" path="/img/split/"/>
+    <image id="ftyz7k" name="bg_chaifen_02.png" path="/img/split/" scale="9grid" scale9grid="16,11,32,22"/>
+    <image id="ftyz7l" name="bg_chaifen_tiao1.png" path="/img/split/" scale="9grid" scale9grid="20,2,40,4"/>
+    <image id="ftyz7m" name="bg_chaifen_tiao2.png" path="/img/split/" scale="9grid" scale9grid="20,2,40,4"/>
+    <image id="ftyz7n" name="bg_chaifen_white.png" path="/img/split/" scale="9grid" scale9grid="35,28,70,56"/>
+    <image id="ftyz7o" name="btn_chaifen_close.png" path="/img/split/"/>
+    <image id="ftyz7p" name="btn_chaifen_left.png" path="/img/split/"/>
+    <image id="ftyz7q" name="btn_chaifen_right.png" path="/img/split/"/>
+    <font id="ftyz7r" name="fangfang.ttf" path="/" renderMode="" samplePointSize="16"/>
+    <component id="ftyz7s" name="Slider2_grip.xml" path="/com/"/>
+    <component id="ftyz7t" name="Slider2.xml" path="/com/"/>
   </resources>
   <publish name="backpack"/>
 </packageDescription>

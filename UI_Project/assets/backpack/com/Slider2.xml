@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="81,26" extention="Slider">
+  <displayList>
+    <image id="n0_ftyz" name="n0" src="ftyz7m" fileName="img/split/bg_chaifen_tiao2.png" xy="0,7" size="81,11">
+      <relation target="" sidePair="width-width"/>
+    </image>
+    <image id="n1_ftyz" name="bar" src="ftyz7l" fileName="img/split/bg_chaifen_tiao1.png" xy="0,7" size="81,11"/>
+    <component id="n3_ftyz" name="grip" src="ftyz7s" fileName="com/Slider2_grip.xml" xy="68,0">
+      <relation target="n1_ftyz" sidePair="right-right"/>
+    </component>
+  </displayList>
+  <Slider titleType="value" wholeNumbers="true"/>
+</component>
