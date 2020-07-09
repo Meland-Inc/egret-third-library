@@ -236,9 +236,9 @@
     <image id="r5jsaf" name="img_mt_roomhover.png" path="/img/" scale="9grid" scale9grid="108,45,216,90"/>
     <image id="fxqdag" name="icon_mt_roomcenter.png" path="/img/"/>
     <image id="fxqdah" name="icon_mt_roomnative.png" path="/img/"/>
-    <image id="n62rai" name="bg_mt_loading.png" path="/img/loading/"/>
+    <image id="n62rai" name="bg_mt_loading.png" path="/img/loading/" scale="9grid" scale9grid="31,29,62,58"/>
     <image id="n62raj" name="btn_mt_cancel.png" path="/img/loading/"/>
-    <image id="n62rak" name="img_mt_bg1.png" path="/img/loading/"/>
+    <image id="n62rak" name="img_mt_bg1.png" path="/img/loading/" scale="9grid" scale9grid="11,10,22,20"/>
     <image id="n62ral" name="img_mt_loading.png" path="/img/loading/" scale="tile"/>
     <component id="n62ram" name="ComLoading.xml" path="/com/" exported="true"/>
   </resources>
