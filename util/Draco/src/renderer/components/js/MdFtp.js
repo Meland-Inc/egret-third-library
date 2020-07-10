@@ -664,7 +664,12 @@ export async function uploadClientPackage() {
 
         let policyNum = ModelMgr.versionModel.policyNum;
         let environ = ModelMgr.versionModel.curEnviron;
-        const gameVersion = ModelMgr.versionModel.releaseVersion;
+        let gameVersion = ModelMgr.versionModel.releaseVersion;
+        //当前环境为release时,上传最新的ready版本客户端整包
+        if (environ.name === ModelMgr.versionModel.eEnviron.release) {
+            gameVersion = await ModelMgr.versionModel.getEnvironGameVersion(ModelMgr.versionModel.eEnviron.ready);
+        }
+        console.log("上传的gameVersion: ", gameVersion);
 
         let releaseName = `release_v${gameVersion}s`;
         let zipPath = `${Global.svnPublishPath}${environ.zipPath}/${releaseName}.zip`;
