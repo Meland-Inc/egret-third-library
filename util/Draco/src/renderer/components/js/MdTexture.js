@@ -3,6 +3,7 @@ import * as tableExc from './TableExecute.js';
 import * as jimpExc from './JimpExecute';
 import * as spawnExc from "./SpawnExecute.js";
 import * as fsExc from "./FsExecute.js";
+import * as util from "./Util.js";
 
 const input_suffix_path = '/TextureInput/texture';
 const ground_output_suffix_path = '/TextureOutput/ground';
@@ -89,34 +90,13 @@ export async function updateSvn() {
 
 /** 检测资源是否重复 */
 export async function checkTextureRepeat() {
-    let textureMap = {};
-    await loopCheckTextureRepeat(textureMap, Global.svnResPath)
-        .then(() => {
+    util.checkFileRepeat(Global.svnResPath,
+        () => {
             Global.toast('检测纹理完毕');
-        })
-        .catch((reason) => {
+        },
+        (reason) => {
             Global.snack(reason);
         });
-}
-
-async function loopCheckTextureRepeat(textureMap, path, textureName) {
-    const isDir = await fsExc.isDirectory(path);
-    if (isDir) {
-        let targetDir = await fsExc.readDir(path);
-        for (const element of targetDir) {
-            const targetPath = `${path}/${element}`;
-            await loopCheckTextureRepeat(textureMap, targetPath, element);
-        }
-        return;
-    }
-
-    if (!textureName) return;
-
-    if (textureMap[textureName]) {
-        throw `纹理重复: ${textureName}`;
-    }
-
-    textureMap[textureName] = true;
 }
 
 /**
