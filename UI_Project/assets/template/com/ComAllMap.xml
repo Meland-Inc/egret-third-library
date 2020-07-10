@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://0axy98cgtbm25m" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlPage" pages="0,recommend,2,new,3,hot,1,race,5,lesson,6,story,7,leisure,8,my,9,homework,10,internal" selected="0"/>
+  <controller name="ctrlPage" pages="0,recommend,2,new,3,hot,1,race,11,preRace,5,lesson,6,story,7,leisure,8,my,9,homework,10,internal" selected="1"/>
   <controller name="ctrlSearch" pages="0,nosearch,1,search" selected="0"/>
   <displayList>
     <image id="n74_l1zw" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="229,164" size="1550,918">
@@ -8,15 +8,15 @@
       <relation target="" sidePair="top-top,bottomext-bottom"/>
     </image>
     <image id="n68_dvog" name="imgSearchInputBg" src="oiqdcyigx" fileName="img/img_cm_ssk.png" pkg="te1gxawo" xy="1391,103" size="324,47" group="n71_dvog"/>
-    <text id="n69_dvog" name="inpSearch" xy="1445,112" size="271,29" group="n71_dvog" input="true" prompt="[color=#999999]搜索所有作品[/color]" fontSize="24" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text=""/>
+    <text id="n69_dvog" name="inpSearch" xy="1445,112" size="271,29" group="n71_dvog" fontSize="24" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="" input="true" prompt="[color=#999999]搜索所有作品[/color]"/>
     <image id="n70_dvog" name="n70" src="rujpcyijl" fileName="img/icon_cm_ss.png" pkg="te1gxawo" xy="1399,105" size="42,42" group="n71_dvog"/>
     <group id="n71_dvog" name="grpSearchInput" xy="1391,103" size="325,47" advanced="true"/>
-    <component id="n63_tbm2" name="btnRecommend" src="tbm262" fileName="btn/rbtnFixNoScale.xml" xy="0,307" size="143,54" group="n44_v8nf">
-      <Button checked="true" title="官方推荐" titleFontSize="22" icon="ui://0axy98cgtbm260" selectedIcon="ui://0axy98cgtbm261" controller="ctrlPage" page="0"/>
+    <component id="n63_tbm2" name="btnRecommend" src="tbm262" fileName="btn/rbtnFixNoScale.xml" xy="0,307" size="107,41" group="n44_v8nf">
+      <Button title="官方推荐" titleFontSize="22" icon="ui://0axy98cgtbm260" selectedIcon="ui://0axy98cgtbm261" controller="ctrlPage" page="0"/>
     </component>
-    <component id="n57_v8nf" name="btnNew" src="tbm262" fileName="btn/rbtnFixNoScale.xml" xy="0,363" size="107,41" group="n44_v8nf">
+    <component id="n57_v8nf" name="btnNew" src="tbm262" fileName="btn/rbtnFixNoScale.xml" xy="0,350" size="143,54" group="n44_v8nf">
       <relation target="n63_tbm2" sidePair="top-bottom"/>
-      <Button title="最新" titleColor="#666666" titleFontSize="22" icon="ui://0axy98cgtbm260" selectedIcon="ui://0axy98cgtbm261" controller="ctrlPage" page="2"/>
+      <Button checked="true" title="最新" titleColor="#666666" titleFontSize="22" icon="ui://0axy98cgtbm260" selectedIcon="ui://0axy98cgtbm261" controller="ctrlPage" page="2"/>
     </component>
     <component id="n58_v8nf" name="btnHot" src="tbm262" fileName="btn/rbtnFixNoScale.xml" xy="0,406" size="107,41" group="n44_v8nf">
       <relation target="n57_v8nf" sidePair="top-bottom"/>
@@ -26,31 +26,35 @@
       <relation target="n58_v8nf" sidePair="top-bottom"/>
       <Button title="邀请赛" titleColor="#666666" titleFontSize="22" icon="ui://0axy98cgtbm260" selectedIcon="ui://0axy98cgtbm261" controller="ctrlPage" page="1"/>
     </component>
-    <component id="n41_v8nf" name="btnTutorial" src="tbm262" fileName="btn/rbtnFixNoScale.xml" xy="0,492" size="107,41" group="n44_v8nf">
+    <component id="n77_f2yg" name="btnPreRace" src="tbm262" fileName="btn/rbtnFixNoScale.xml" xy="0,492" size="107,41" group="n44_v8nf">
       <relation target="n38_v8nf" sidePair="top-bottom"/>
+      <Button title="往届赛事" titleColor="#666666" titleFontSize="22" icon="ui://0axy98cgtbm260" selectedIcon="ui://0axy98cgtbm261" controller="ctrlPage" page="11"/>
+    </component>
+    <component id="n41_v8nf" name="btnTutorial" src="tbm262" fileName="btn/rbtnFixNoScale.xml" xy="0,535" size="107,41" group="n44_v8nf">
+      <relation target="n77_f2yg" sidePair="top-bottom"/>
       <Button title="教程" titleColor="#666666" titleFontSize="22" icon="ui://0axy98cgtbm260" selectedIcon="ui://0axy98cgtbm261" controller="ctrlPage" page="5"/>
     </component>
-    <component id="n39_v8nf" name="btnStory" src="tbm262" fileName="btn/rbtnFixNoScale.xml" xy="0,535" size="107,41" group="n44_v8nf">
+    <component id="n39_v8nf" name="btnStory" src="tbm262" fileName="btn/rbtnFixNoScale.xml" xy="0,578" size="107,41" group="n44_v8nf">
       <relation target="n41_v8nf" sidePair="top-bottom"/>
       <Button title="故事" titleColor="#666666" titleFontSize="22" icon="ui://0axy98cgtbm260" selectedIcon="ui://0axy98cgtbm261" controller="ctrlPage" page="6"/>
     </component>
-    <component id="n40_v8nf" name="btnLeisure" src="tbm262" fileName="btn/rbtnFixNoScale.xml" xy="0,578" size="107,41" group="n44_v8nf">
+    <component id="n40_v8nf" name="btnLeisure" src="tbm262" fileName="btn/rbtnFixNoScale.xml" xy="0,621" size="107,41" group="n44_v8nf">
       <relation target="n39_v8nf" sidePair="top-bottom"/>
       <Button title="休闲" titleColor="#666666" titleFontSize="22" icon="ui://0axy98cgtbm260" selectedIcon="ui://0axy98cgtbm261" controller="ctrlPage" page="7"/>
     </component>
-    <component id="n36_v8nf" name="btnPublished" src="tbm262" fileName="btn/rbtnFixNoScale.xml" xy="0,621" size="107,41" group="n44_v8nf">
+    <component id="n36_v8nf" name="btnPublished" src="tbm262" fileName="btn/rbtnFixNoScale.xml" xy="0,664" size="107,41" group="n44_v8nf">
       <relation target="n40_v8nf" sidePair="top-bottom"/>
       <Button title="我发布的" titleColor="#666666" titleFontSize="22" icon="ui://0axy98cgtbm260" selectedIcon="ui://0axy98cgtbm261" controller="ctrlPage" page="8"/>
     </component>
-    <component id="n42_v8nf" name="btnLesson" src="tbm262" fileName="btn/rbtnFixNoScale.xml" xy="0,664" size="107,41" group="n44_v8nf">
+    <component id="n42_v8nf" name="btnLesson" src="tbm262" fileName="btn/rbtnFixNoScale.xml" xy="0,707" size="107,41" group="n44_v8nf">
       <relation target="n36_v8nf" sidePair="top-bottom"/>
       <Button title="作业" titleColor="#666666" titleFontSize="22" icon="ui://0axy98cgtbm260" selectedIcon="ui://0axy98cgtbm261" controller="ctrlPage" page="9"/>
     </component>
-    <component id="n43_v8nf" name="btnInternal" src="tbm262" fileName="btn/rbtnFixNoScale.xml" xy="0,707" size="107,41" group="n44_v8nf">
+    <component id="n43_v8nf" name="btnInternal" src="tbm262" fileName="btn/rbtnFixNoScale.xml" xy="0,750" size="107,41" group="n44_v8nf">
       <relation target="n42_v8nf" sidePair="top-bottom"/>
       <Button title="内部" titleColor="#666666" titleFontSize="22" icon="ui://0axy98cgtbm260" selectedIcon="ui://0axy98cgtbm261" controller="ctrlPage" page="10"/>
     </component>
-    <group id="n44_v8nf" name="grpBtnAllType" xy="0,307" size="143,441" group="n72_nav8" advanced="true"/>
+    <group id="n44_v8nf" name="grpBtnAllType" xy="0,307" size="143,484" group="n72_nav8" advanced="true"/>
     <list id="n50_v8nf" name="lstTemplate" xy="277,166" size="1541,916" group="n72_nav8" layout="flow_hz" overflow="scroll" scrollBarFlags="4" margin="17,0,0,0" scrollBarMargin="0,0,0,3" scrollBarRes="ui://0axy98cgqb974t," ptrRes="ui://0axy98cgp5r74d,ui://0axy98cgp5r74d" lineGap="6" colGap="10" defaultItem="ui://0axy98cgtbm263" autoClearItems="true">
       <relation target="" sidePair="bottomext-bottom"/>
       <relation target="n74_l1zw" sidePair="left-left"/>
