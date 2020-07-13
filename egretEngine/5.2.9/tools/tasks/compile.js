@@ -127,8 +127,6 @@ var UglifyPlugin = /** @class */ (function () {
                         }
                         return code;
                     }));
-                    //加上闭包环境并将类加入命名空间用于反射 utils.js.closure()
-                    jscode = utils.closure(jscode, 'bellPlanet');
                     pluginContext.createFile(matcher.target, new Buffer(jscode));
                 }
                 return [2 /*return*/];
