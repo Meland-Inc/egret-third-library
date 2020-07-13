@@ -3,6 +3,7 @@ import * as tableExc from './TableExecute.js';
 import * as jimpExc from './JimpExecute';
 import * as spawnExc from "./SpawnExecute.js";
 import * as fsExc from "./FsExecute.js";
+import * as util from "./Util.js";
 
 const input_suffix_path = '/TextureInput/texture';
 const ground_output_suffix_path = '/TextureOutput/ground';
@@ -85,6 +86,17 @@ export function setSheetMode(value) { _sheetMode = value; }
 export async function updateSvn() {
     await spawnExc.svnUpdate(Global.svnCsvPath, "更新svn配置成功", "更新svn配置错误");
     await spawnExc.svnUpdate(Global.svnResPath, "更新svn资源文件成功", "更新svn资源文件错误");
+}
+
+/** 检测资源是否重复 */
+export async function checkTextureRepeat() {
+    util.checkFileRepeat(Global.svnResPath,
+        () => {
+            Global.toast('检测纹理完毕');
+        },
+        (reason) => {
+            Global.snack(reason);
+        });
 }
 
 /**
