@@ -204,7 +204,11 @@ function onCrashed() {
   };
   let index = dialog.showMessageBoxSync(mainWindow, options)
   if (index === 0) {
-    mainWindow.reload();
+    //重载以前,先检测关闭游戏服务器
+    server.closeGameServer()
+      .finally(() => {
+        mainWindow.reload();
+      });
   } else {
     app.quit();
   }
