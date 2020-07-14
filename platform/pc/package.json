@@ -70,6 +70,7 @@
             "menuCategory": true,
             "allowElevation": true,
             "allowToChangeInstallationDirectory": false,
+            "deleteAppDataOnUninstall": true,
             "createDesktopShortcut": true,
             "runAfterFinish": false,
             "installerIcon": "./icon/icon.ico",
