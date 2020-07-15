@@ -44,9 +44,17 @@ export default class ClientUpdate {
     private _isDownloadPackage: boolean;
     /** 检查是否最新版本 */
     public async checkLatestVersion() {
-        let gameVersion = rendererModel.getPackageVersion(CommonDefine.ePackageType.client)
+        let gameVersion = rendererModel.getPackageVersion(CommonDefine.ePackageType.client);
         if (!gameVersion) {
             gameVersion = 0;
+        } else {
+            const indexFilePath = `${commonConfig.clientPackagePath}/index_v${gameVersion}.html`;
+            const indexFileExist = fs.existsSync(indexFilePath);
+            //不存在对应游戏版本号的文件,通过文件列表获取最大游戏版本
+            if (!indexFileExist) {
+                gameVersion = this.getGameVersionByIndexFileList();
+            }
+            logger.log('update', `indexFile gameVersion: ${gameVersion}`);
         }
 
         this._curVersion = this._startVersion = +gameVersion;
@@ -65,6 +73,23 @@ export default class ClientUpdate {
             rendererModel.setPackageVersion(CommonDefine.ePackageType.client, commonConfig.environName, this._curVersion);
         }
         return this._curVersion === this._gameVersion;
+    }
+
+    /** 通过游戏index文件列表获取当前最大游戏版本号 */
+    private getGameVersionByIndexFileList(): number {
+        let gameVersion: number = 0;
+        const fileDir = fs.readdirSync(commonConfig.clientPackagePath);
+        for (const iterator of fileDir) {
+            const index = iterator.search(/index_v[0-9]*.html/)
+            if (index >= 0) {
+                const version = +iterator.replace(/[a-zA-Z_.]/g, "");
+                if (gameVersion < version) {
+                    gameVersion = version;
+                }
+            }
+        }
+
+        return gameVersion;
     }
 
     /** 获取客户端游戏版本号 */
