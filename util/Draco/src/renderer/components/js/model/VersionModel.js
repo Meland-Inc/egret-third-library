@@ -40,9 +40,10 @@ export class VersionModel {
         {
             name: this.eEnviron.release, host: "bg-stage.wkcoding.com", user: "ftpadmin", password: "unclemiao",
             nativePackageEnable: true,
-            zipPath: "/release/zip", scpRootPath: "", scpPath: "", localPath: "/ready/web", localPolicyPath: "/release/policy", serverPackagePath: "/release/server_packages",
+            zipPath: "/release/zip", scpRootPath: "", scpPath: "", localPath: "/release/web", localPolicyPath: "/release/policy", serverPackagePath: "/release/server_packages",
             updateGitEnable: false, gitBranch: "", trunkName: "", cdnRoot: "",
             cdnWinPatchPath: "/win", cdnMacPatchPath: "/mac",
+            copyFileEnable: true,
             publishEnable: false, mergeVersionEnable: true, compressPicEnable: false, zipFileEnable: false, policyEnable: true, scpEnable: false, cdnEnable: true,
             pushGitEnable: false, publishDescEnable: false, codeVersionEnable: false, gitTagEnable: false, zipUploadGameEnable: false, nativeEnable: false
         },

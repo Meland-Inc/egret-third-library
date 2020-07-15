@@ -82,6 +82,21 @@ export async function zipVersion() {
     }
 }
 
+export async function copyVersion() {
+    const readyEnviron = ModelMgr.versionModel.environList.find(value => value.name === ModelMgr.versionModel.eEnviron.ready);
+    const releaseEnviron = ModelMgr.versionModel.environList.find(value => value.name === ModelMgr.versionModel.eEnviron.release);
+    const readyGameVersion = await ModelMgr.versionModel.getEnvironGameVersion(ModelMgr.versionModel.eEnviron.ready);
+    const readyFilePath = `${Global.svnPublishPath}${readyEnviron.localPath}/release_v${readyGameVersion}s/`;
+    const releaseFilePath = `${Global.svnPublishPath}${releaseEnviron.localPath}/release_v${readyGameVersion}s/`;
+    await fsExc.copyFile(readyFilePath, releaseFilePath, true);
+
+    let indexPath = `${releaseFilePath}/index_v${readyGameVersion}.html`;
+    let indexContent = await fsExc.readFile(indexPath);
+    indexContent = indexContent.replace(`window.environName="ready"`, `window.environName="release"`);
+    await fsExc.writeFile(indexPath, indexContent);
+    Global.toast('拷贝版本成功');
+}
+
 export async function uploadVersionFile() {
     let curEnviron = ModelMgr.versionModel.curEnviron;
     if (curEnviron.scpEnable) {
