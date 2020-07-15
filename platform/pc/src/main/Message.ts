@@ -242,8 +242,9 @@ class Message {
     }
 
     /** 收到发送过来的玩家id */
-    private onSendPlayerId(playerId: string) {
+    private onSendPlayerId(playerId: string, playerName: string) {
         mainModel.setPlayerId(playerId);
+        mainModel.setPlayerName(playerName);
     }
 
     /** 收到小贝星球准备完毕 */

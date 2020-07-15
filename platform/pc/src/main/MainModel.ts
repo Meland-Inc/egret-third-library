@@ -263,6 +263,15 @@ class MainModel {
         this._playerId = value;
     }
 
+    private _playerName: string;
+    /** 玩家游戏名称 */
+    public get playerName(): string {
+        return this._playerName;
+    }
+    public setPlayerName(value: string) {
+        this._playerName = value;
+    }
+
     private _bellplanetReady: boolean;
     /** 小贝星球准备完毕 */
     public get bellplanetReady(): boolean {
