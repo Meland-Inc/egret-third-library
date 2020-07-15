@@ -299,19 +299,20 @@ function uglify(sourceFile) {
     }
     options.mangle.properties.reserved = reservedCell.concat();
 
-    if (evnStr && evnStr[1] != "release") {
-        // if (true) {
-        options.mangle = false;
-        options.toplevel = false;
-        options = {
-            compress: {
-                global_defs: {
-                    DEBUG: false,
-                    RELEASE: true
-                }
-            }, output: { beautify: false }
-        }
-    }
+    //现在不混淆版本加入闭包会有严重问题 暂时全部混淆保证使用
+    // if (evnStr && evnStr[1] != "release") {
+    //     // if (true) {
+    //     options.mangle = false;
+    //     options.toplevel = false;
+    //     options = {
+    //         compress: {
+    //             global_defs: {
+    //                 DEBUG: false,
+    //                 RELEASE: true
+    //             }
+    //         }, output: { beautify: false }
+    //     }
+    // }
     //继承的类名没替换，目前没影响
     // __reflect(hq.prototype, "MapGrid", ["IPoolInstance"]);
     // __reflect(SX.prototype, "MapElemSelectView", ["IPoolInstance"]),
