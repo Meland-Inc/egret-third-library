@@ -151,7 +151,7 @@ async function createWindow() {
 
   //只有打包后的要上传日志
   if (commonConfig.isPackaged) {
-    logger.uploadLog();
+    util.uploadLogFileList();
   }
 
   await initNative();
