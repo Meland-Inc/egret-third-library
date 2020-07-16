@@ -88,13 +88,4 @@ export namespace logger {
         let format = `${date.getFullYear()}-${month}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
         return format;
     }
-
-    /** 上传日志 */
-    export function uploadLog() {
-        let logDir = fs.readdirSync(commonConfig.uploadLogDir);
-        for (const fileName of logDir) {
-            let filePath = `${commonConfig.uploadLogDir}/${fileName}`;
-            util.uploadLogFile(`${commonConfig.uploadLogUrl}`, fileName, filePath);
-        }
-    }
 }

@@ -216,29 +216,33 @@ class Server {
             `${commonConfig.serverPackagePath}/game`,
             `${commonConfig.serverPackagePath}/ngrok`
         ]);
-        // let gameServerProcess: ChildProcess = await util.runCmd(cmd, `${config.serverPackagePath}/`, "创建游戏服务器成功", "创建游戏服务器失败");
-        // config.setGameServerProcess(gameServerProcess);
         this._tryGameServerCount = 0;
         this.tryRunGameServerCmd(cmd);
     }
 
     /** 尝试创建游戏服务器,创建失败后,重试 */
     private async tryRunGameServerCmd(cmd: string) {
-        try {
-            let gameServerProcess: ChildProcess = await util.runCmd(cmd, `${commonConfig.serverPackagePath}/`, "创建游戏服务器成功", "创建游戏服务器失败");
-            mainModel.setGameServerProcess(gameServerProcess);
-        } catch (error) {
-            //3次重试 3秒后重试
-            setTimeout(() => {
-                if (this._tryGameServerCount < 3) {
-                    logger.error(`server`, `gameServer启动失败, 尝试重启`, error);
-                    this.tryRunGameServerCmd(cmd);
-                    this._tryGameServerCount++;
-                } else {
-                    message.sendClientMsg("gameServerStartupFail");
-                }
-            }, 3000);
-        }
+        await util.runCmd(cmd, `${commonConfig.serverPackagePath}/`, "创建游戏服务器成功", "创建游戏服务器失败")
+            .then((gameServerProcess) => {
+                mainModel.setGameServerProcess(gameServerProcess);
+            })
+            .catch((reason) => {
+                //3次重试 3秒后重试
+                setTimeout(async () => {
+                    if (this._tryGameServerCount < 3) {
+                        logger.error(`server`, `gameServer启动失败, 尝试重启`, reason);
+                        this.tryRunGameServerCmd(cmd);
+                        this._tryGameServerCount++;
+                    } else {
+                        logger.error(`server`, `gameServer启动失败, 超过重试次数`, reason);
+                        message.sendClientMsg("gameServerStartupFail");
+                        await util.copyLog2UploadDir()
+                            .then(() => {
+                                util.uploadLogFileList();
+                            });
+                    }
+                }, 3000);
+            });
     }
 
     /** 关闭游戏服务器 */

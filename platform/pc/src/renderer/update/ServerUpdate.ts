@@ -102,7 +102,7 @@ export default class ServerUpdate {
         if (result === "finished") {
             // 通知完成
             loading.setLoadingProgress(0);
-            loading.showLoading("正在解压游戏端程序包");
+            loading.showLoading("正在解压服务端程序包");
             loading.gradualProgress();
             let content = `开始解压文件:${filename}`;
             logger.log('update', content);

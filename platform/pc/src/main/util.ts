@@ -30,7 +30,11 @@ export namespace util {
                         logger.error('cmd', errorMsg, error);
                     }
                     reject(error);
+                    return;
                 }
+
+                logger.log('cmd', successMsg);
+                resolve(process);
             });
 
             process.stdout.on("data", data => {
@@ -39,9 +43,6 @@ export namespace util {
             process.stderr.on("data", data => {
                 logger.processLog('cmd', 'stderr', data);
             });
-
-            logger.log('cmd', successMsg);
-            resolve(process);
         });
     }
 
@@ -210,7 +211,7 @@ export namespace util {
     /** 拷贝日志到上传目录 */
     export async function copyLog2UploadDir() {
         const uploadPath: string = `${commonConfig.rootPath}/dist/uploadLog`;
-
+        logger.log('log', `开始拷贝日志文件`);
         //删除旧的日志文件
         let uploadDir = fs.readdirSync(uploadPath);
         if (uploadDir) {
@@ -227,21 +228,46 @@ export namespace util {
         const logPath: string = `${commonConfig.rootPath}/dist/log`;
         const logDir = fs.readdirSync(logPath);
         let date: Date = new Date();
-        let dateFormat: string = `${date.getFullYear()}-${date.getMonth()}-${date.getDay()}_${date.getHours()}-${date.getMinutes()}-${date.getSeconds()}`;
-        let userid: string = await getCookie("userid") || mainModel.bellActId || "";
+        let dateFormat: string = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDay()}_${date.getHours()}-${date.getMinutes()}`;
+        let actId: string = await getCookie("userid") || mainModel.bellActId || "";
+        let realName: string = mainModel.realName || "";
         let playerId: string = mainModel.playerId || "";
+        const playerName: string = mainModel.playerName || "";
 
         //拷贝新的日志文件到上传目录
         for (const fileName of logDir) {
-            let newFileName: string = `date-${dateFormat}_actId-${userid}_playerId-${playerId}_${fileName}`;
+            let newFileName: string = `${dateFormat}`;
+            if (realName) {
+                newFileName += `_realName-${realName}`;
+            }
+            if (playerName) {
+                newFileName += `_playerName-${playerName}`;
+            }
+            if (actId) {
+                newFileName += `_actId-${actId}`;
+            }
+            if (playerId) {
+                newFileName += `_playerId-${playerId}`;
+            }
+            newFileName += `_${fileName}`;
             fs.copyFileSync(`${logPath}/${fileName}`, `${uploadPath}/${newFileName}`);
         }
 
         logger.clear();
     }
 
+    /** 上传日志文件列表 */
+    export function uploadLogFileList() {
+        logger.log('log', `开始上传日志文件列表`);
+        let logDir = fs.readdirSync(commonConfig.uploadLogDir);
+        for (const fileName of logDir) {
+            let filePath = `${commonConfig.uploadLogDir}/${fileName}`;
+            uploadLogFile(`${commonConfig.uploadLogUrl}`, fileName, filePath);
+        }
+    }
+
     /** 上传日志文件 */
-    export function uploadLogFile(url: string, fileName: string, filePath: string) {
+    function uploadLogFile(url: string, fileName: string, filePath: string) {
         let form = new FormData();
         form.append('name', fileName);
         form.append('type', "file");

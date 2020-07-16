@@ -35,6 +35,7 @@ class Message {
         this.msgMap[MsgId.CHECK_UPDATE_COMPLETE] = this.onCheckUpdateComplete.bind(this);
         this.msgMap[MsgId.MAP_TEMPLATE_ENTER] = this.onMapTemplateEnter.bind(this);
         this.msgMap[MsgId.MAP_TEMPLATE_ROOM_CREATE] = this.onMapTemplateRoomCreate.bind(this);
+        this.msgMap[MsgId.MAP_TEMPLATE_ENTER_ERROR] = this.onMapTemplateEnterError.bind(this);
         this.msgMap[MsgId.SEND_PLAYER_ID] = this.onSendPlayerId.bind(this);
         this.msgMap[MsgId.BELLPLANET_CLIENT_READY] = this.onBellplanetReady.bind(this);
         this.msgMap[MsgId.SET_NATIVE_POLICY_VERSION] = this.onSetNativePolicyVersion.bind(this);
@@ -241,9 +242,18 @@ class Message {
         server.createNativeServer(CommonDefine.eGameServerMode.mapTemplateRoom);
     }
 
+    /** 收到进入地图模板房间失败 */
+    private async onMapTemplateEnterError() {
+        await util.copyLog2UploadDir()
+            .then(() => {
+                util.uploadLogFileList();
+            });
+    }
+
     /** 收到发送过来的玩家id */
-    private onSendPlayerId(playerId: string) {
+    private onSendPlayerId(playerId: string, playerName: string) {
         mainModel.setPlayerId(playerId);
+        mainModel.setPlayerName(playerName);
     }
 
     /** 收到小贝星球准备完毕 */

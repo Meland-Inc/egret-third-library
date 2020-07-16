@@ -14,6 +14,9 @@ export default class MsgId {
     /** 启动地图模板房间游戏服务器 */
     public static readonly MAP_TEMPLATE_ROOM_CREATE: string = "MAP_TEMPLATE_ROOM_CREATE";
 
+    /** 进入地图模板失败 */
+    public static readonly MAP_TEMPLATE_ENTER_ERROR: string = "MAP_TEMPLATE_ENTER_ERROR";
+
     /** 发送玩家id */
     public static readonly SEND_PLAYER_ID: string = "SEND_PLAYER_ID";
 
