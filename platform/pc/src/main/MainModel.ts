@@ -8,6 +8,7 @@ import { BrowserWindow } from 'electron';
 import { Server } from 'net';
 import { ChildProcess } from 'child_process';
 
+import commonConfig from '../common/CommonConfig';
 import { CommonDefine } from '../common/CommonDefine';
 import { logger } from './logger';
 class MainModel {
@@ -218,6 +219,10 @@ class MainModel {
     }
     public setFakeProtoURL(tValue: URL): void {
         this._fakeProtoURL = tValue;
+        const environName: CommonDefine.eEnvironName = this._fakeProtoURL.searchParams.get(CommonDefine.eFakeProtoParamField.environName) as CommonDefine.eEnvironName;
+        if (environName) {
+            commonConfig.writeEnvironName(environName);
+        }
     }
 
     private _mainWindow: BrowserWindow;

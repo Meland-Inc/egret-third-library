@@ -114,6 +114,14 @@ class Main {
 
   //创建游戏浏览窗口
   private async createWindow(): Promise<void> {
+    //优先设置url参数, 因为参数里带有当前环境参数
+    if (os.platform() === "win32") {
+      const url = process.argv.splice(app.isPackaged ? 1 : 2).join("");
+      if (url) {
+        mainModel.setFakeProtoURL(new URL(url));
+      }
+    }
+
     const mainWindow = new BrowserWindow({
       width: 1600,
       height: 900,
@@ -132,13 +140,6 @@ class Main {
     const userAgent = mainModel.mainWindow.webContents.userAgent + " BellCodeIpadWebView BellplanetNative";
     mainModel.mainWindow.webContents.userAgent = userAgent;
 
-    /** 设置url参数 */
-    if (os.platform() === "win32") {
-      const url = process.argv.splice(app.isPackaged ? 1 : 2).join("");
-      if (url) {
-        mainModel.setFakeProtoURL(new URL(url));
-      }
-    }
 
     logger.log('main', `收到参数1: ${JSON.stringify(process.argv)}`);
 

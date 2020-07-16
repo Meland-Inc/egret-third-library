@@ -179,14 +179,24 @@ class CommonConfig {
 
         const data = FileUtil.readFileSync(this.globalConfigPath, 'utf-8', false);
         if (data) {
-            const globalConfig:IGlobalConfig = JSON.parse(data);
+            const globalConfig: IGlobalConfig = JSON.parse(data);
             this._environName = globalConfig.environName;
-            this._patchUrl = globalConfig.patchUrl;
-            this._packageUrl = globalConfig.packageUrl;
-            this._policyUrl = globalConfig.policyUrl;
+            const globalConfigInfo = CommonDefine.globalConfigMap[this._environName];
+            this._patchUrl = globalConfigInfo.patchUrl;
+            this._packageUrl = globalConfigInfo.packageUrl;
+            this._policyUrl = globalConfigInfo.policyUrl;
         } else {
             logger.error("file", `读取GlobalConfig全局配置错误`);
         }
+    }
+
+    public writeEnvironName(environName: string): void {
+        let data = FileUtil.readFileSync(commonConfig.globalConfigPath, 'utf-8');
+        const globalConfig = JSON.parse(data);
+        if (globalConfig.environName === environName) return;
+
+        globalConfig.environName = environName;
+        FileUtil.writeFileSync(commonConfig.globalConfigPath, JSON.stringify(globalConfig));
     }
 }
 
