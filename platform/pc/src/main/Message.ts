@@ -98,6 +98,7 @@ class Message {
         this.executeClientMsg(tMsgId, ...tArgs);
     }
 
+
     /** 收到小贝星球准备完毕 */
     private onBellplanetReady(): void {
         mainModel.setBellplanetReady(true);

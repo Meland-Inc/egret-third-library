@@ -4,7 +4,6 @@
  * @Date 2020-02-19 11:22:49
  * @FilePath \pc\src\main\Platform.ts
  */
-import querystring from 'querystring';
 import http from 'http';
 
 import MsgId from '../common/MsgId';
@@ -74,55 +73,39 @@ class Platform {
         eQueryArgsField.gid
     ]
 
-    public async init(): Promise<querystring.ParsedUrlQuery> {
-        const urlValue = mainModel.fakeProtoURL;
+    public async init(): Promise<URLSearchParams> {
         //伪协议启动参数
-        logger.log('platform', `初始化平台数据`, urlValue);
-        const argsValue = urlValue.searchParams.toString();
-        //解析参数
-        const argsObj = querystring.parse(argsValue);
-
-        const queryObject: querystring.ParsedUrlQuery = {};
-
-        logger.log('platform', 'argsObj', argsObj);
+        logger.log('platform', `初始化平台数据`, mainModel.fakeProtoURL);
+        const searchParams: URLSearchParams = mainModel.fakeProtoURL.searchParams;
 
         //解析参数给native用的config
         for (const field of this._configFields) {
-            const value = argsObj[field];
-            let strValue: string;
-            if (value) {
-                if (Array.isArray(value)) {
-                    strValue = value[0];
-                } else {
-                    strValue = value as string;
-                }
-            }
-
+            const value = searchParams.get(field);
 
             switch (field) {
                 case eQueryArgsField.temporary_token:
-                    mainModel.setBellTempToken(strValue);
+                    mainModel.setBellTempToken(value);
                     break;
                 case eQueryArgsField.class_id:
-                    mainModel.setClassId(+strValue);
+                    mainModel.setClassId(+value);
                     break;
                 case eQueryArgsField.bell_origin:
-                    mainModel.setBellApiOrigin(strValue);
+                    mainModel.setBellApiOrigin(value);
                     break;
                 case eQueryArgsField.package_id:
-                    mainModel.setBellPackageId(strValue);
+                    mainModel.setBellPackageId(value);
                     break;
                 case eQueryArgsField.lesson_id:
-                    mainModel.setBellLessonId(strValue);
+                    mainModel.setBellLessonId(value);
                     break;
                 case eQueryArgsField.back_url:
-                    mainModel.setBellBackUrl(strValue);
+                    mainModel.setBellBackUrl(value);
                     break;
                 case eQueryArgsField.act_id:
-                    mainModel.setBellActId(strValue);
+                    mainModel.setBellActId(value);
                     break;
                 case eQueryArgsField.stand_alone:
-                    mainModel.setStandAlone(!!strValue);
+                    mainModel.setStandAlone(!!value);
                     break;
                 default:
                     break;
@@ -131,40 +114,26 @@ class Platform {
 
         //解析参数给本地服务器的配置
         for (const field of this._serverCnfFields) {
-            const value = argsObj[field];
-            let strValue: string = "";
-            if (value) {
-                if (Array.isArray(value)) {
-                    strValue = value[0];
-                } else {
-                    strValue = value as string;
-                }
-            }
+            const value = searchParams.get(field);
 
             switch (field) {
                 case eQueryArgsField.class_id:
-                    util.writeServerCnfValue("classId", strValue);
+                    util.writeServerCnfValue("classId", value);
                     break;
                 case eQueryArgsField.lesson_id:
-                    util.writeServerCnfValue("lessonId", strValue);
+                    util.writeServerCnfValue("lessonId", value);
                     break;
                 case eQueryArgsField.gid:
-                    util.writeServerCnfValue("gid", strValue);
+                    util.writeServerCnfValue("gid", value);
                     break;
                 default:
                     break;
             }
         }
 
+        const newSearchParams: URLSearchParams = new URLSearchParams();
         //解析参数,传入给返回数据
-        for (const key in argsObj) {
-            let value: string;
-            if (Array.isArray(argsObj[key])) {
-                value = argsObj[key][0];
-            } else {
-                value = argsObj[key] as string;
-            }
-
+        for (const [key, value] of searchParams) {
             //过滤以下几个字段
             if (key === eQueryArgsField.temporary_token
                 || key === eQueryArgsField.bell_origin
@@ -175,35 +144,35 @@ class Platform {
 
             //不是单人单服模式,并且有穿透服务器地址
             if (!mainModel.standAlone && key === eQueryArgsField.internet_network) {
-                queryObject[eQueryArgsField.gameServer] = `${value}`;
+                newSearchParams.set(eQueryArgsField.gameServer, value);
                 continue;
             }
 
             //不是单人单服模式,不存在服务器地址,并且有本地服务器地址
-            if (!mainModel.standAlone && key === eQueryArgsField.local_network && !queryObject[eQueryArgsField.gameServer]) {
-                queryObject[eQueryArgsField.gameServer] = `${value}`;
+            if (!mainModel.standAlone && key === eQueryArgsField.local_network && !newSearchParams.has(eQueryArgsField.gameServer)) {
+                newSearchParams.set(eQueryArgsField.gameServer, value);
                 continue;
             }
 
             if (key === eQueryArgsField.back_url) {
-                queryObject[key] = encodeURIComponent(value);
+                newSearchParams.set(eQueryArgsField.back_url, encodeURIComponent(value));
                 continue;
             }
 
-            queryObject[key] = `${value}`;
+            newSearchParams.set(key, value);
         }
 
-        logger.log('platform', 'queryObject', queryObject);
+        logger.log('platform', 'newSearchParams', newSearchParams.toString());
 
         const token = await this.login();
-        queryObject[eQueryArgsField.token] = token;
+        newSearchParams.set(eQueryArgsField.token, token);
 
-        if (queryObject[eQueryArgsField.gameServer]) {
-            message.sendIpcMsg(MsgId.SAVE_NATIVE_GAME_SERVER, queryObject[eQueryArgsField.gameServer]);
+        const gameServer = newSearchParams.get(eQueryArgsField.gameServer);
+        if (gameServer) {
+            message.sendIpcMsg(MsgId.SAVE_NATIVE_GAME_SERVER, gameServer);
         }
 
-        logger.log('platform', 'queryObject', queryObject);
-        return queryObject;
+        return newSearchParams;
     }
 
     /** 登陆贝尔平台 */
