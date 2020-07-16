@@ -81,8 +81,10 @@ class Main {
   /** 当打开url时 */
   private onAppOpenUrl(tEvent: Event, tUrl: string): void {
     tEvent.preventDefault();
-    if (!this._mainWindow) {
-      mainModel.setUrlValue(tUrl);
+    if (!mainModel.mainWindow) {
+      if (tUrl) {
+        mainModel.setFakeProtoURL(new URL(tUrl));
+      }
       return;
     }
     this.showSecondInstanceAlert();
@@ -95,7 +97,7 @@ class Main {
       message: '小贝星球星球正在运行中!',
       buttons: ['确定'],
     };
-    dialog.showMessageBoxSync(this._mainWindow, options);
+    dialog.showMessageBoxSync(mainModel.mainWindow, options);
   }
 
   private onAppWindowAllClosed(): void {
@@ -132,7 +134,10 @@ class Main {
 
     /** 设置url参数 */
     if (os.platform() === "win32") {
-      mainModel.setUrlValue(process.argv.splice(app.isPackaged ? 1 : 2).join(""));
+      const url = process.argv.splice(app.isPackaged ? 1 : 2).join("");
+      if (url) {
+        mainModel.setFakeProtoURL(new URL(url));
+      }
     }
 
     logger.log('main', `收到参数1: ${JSON.stringify(process.argv)}`);
@@ -160,6 +165,7 @@ class Main {
     mainModel.mainWindow.webContents.on('new-window', this.onNewWindow);
 
     //设置菜单
+
     const template = [
       // {
       //   label: '窗口',

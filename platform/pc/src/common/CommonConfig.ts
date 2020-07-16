@@ -63,7 +63,7 @@ class CommonConfig {
     public readonly constChannelLesson = 'bian_lesson';
 
     /** 上课伪协议头 */
-    public readonly constPseudoProtocol = 'bellplanet://';
+    public readonly constPseudoProtocol = 'bellplanet:';
 
     /** release环境客户端游戏包的地址 */
     public readonly releasePackageUrl: string = "bg-stage.wkcoding.com/clientPackages/ready";

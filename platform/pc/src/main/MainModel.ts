@@ -211,13 +211,13 @@ class MainModel {
         this._gameServerMode = tValue;
     }
 
-    private _urlValue: string;
-    /** 伪协议里url带的参数 */
-    public get urlValue(): string {
-        return this._urlValue;
+    private _fakeProtoURL: URL;
+    /** 伪协议里url对象 */
+    public get fakeProtoURL(): URL {
+        return this._fakeProtoURL;
     }
-    public setUrlValue(tValue: string): void {
-        this._urlValue = decodeURIComponent(tValue);
+    public setFakeProtoURL(tValue: URL): void {
+        this._fakeProtoURL = tValue;
     }
 
     private _mainWindow: BrowserWindow;

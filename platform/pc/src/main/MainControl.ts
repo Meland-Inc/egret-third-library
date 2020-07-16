@@ -58,7 +58,7 @@ class MainControl {
     private async checkUpdate(): Promise<void> {
         await mainModel.mainWindow.loadFile(`${commonConfig.rootPath}/dist/renderer.html`);
 
-        logger.log('net', `config.urlValue`, mainModel.urlValue);
+        logger.log('net', `config.urlValue`, mainModel.fakeProtoURL);
         logger.log('env', `app.isPackaged:`, commonConfig.isPackaged);
 
         //打包后的包才要检查更新
@@ -110,7 +110,7 @@ class MainControl {
         message.sendIpcMsg(MsgId.CLEAR_RENDERER_MODEL_DATA);
         mainModel.setBellplanetReady(false);
 
-        logger.log('net', `urlValue: ${mainModel.urlValue}`);
+        logger.log('net', `urlValue: ${mainModel.fakeProtoURL}`);
 
         util.initNativeCnf();
         await this.initNativeMode();
@@ -119,16 +119,15 @@ class MainControl {
     /** 根据路由初始化native模式 */
     private async initNativeMode(): Promise<void> {
         //不存在伪协议,指定网址模式
-        if (!mainModel.urlValue || mainModel.urlValue.indexOf(commonConfig.constPseudoProtocol) < 0) {
+        if (!mainModel.fakeProtoURL || mainModel.fakeProtoURL.protocol.indexOf(commonConfig.constPseudoProtocol) < 0) {
             mainModel.setNativeMode(CommonDefine.eNativeMode.website);
             this.startNativeWebsite();
             return;
         }
 
         //设置路由
-        const urlObj = new URL(mainModel.urlValue);
-        const lessonRouter = urlObj.hostname as CommonDefine.eLessonRouter;
-        mainModel.setLessonRouter(lessonRouter);
+        const lessonRouter = mainModel.fakeProtoURL.hostname;
+        mainModel.setLessonRouter(lessonRouter as CommonDefine.eLessonRouter);
         logger.log('test', `router: ${mainModel.lessonRouter}`);
 
         switch (mainModel.lessonRouter) {
@@ -168,15 +167,15 @@ class MainControl {
 
     /** 从banner模式进入 */
     private startBanner(): void {
-        let queryValue: string = mainModel.urlValue.slice(mainModel.urlValue.indexOf("?") + 1);
-        queryValue += `&nativeMode=${CommonDefine.eNativeMode.banner}`;
+        const searchParams: URLSearchParams = mainModel.fakeProtoURL.searchParams;
+        searchParams.set("nativeMode", `${CommonDefine.eNativeMode.banner}`);
         logger.log('update', `从banner模式进入`);
-        message.sendIpcMsg(MsgId.START_NATIVE_CLIENT, queryValue);
+        message.sendIpcMsg(MsgId.START_NATIVE_CLIENT, searchParams.toString());
     }
 
     /** 从创造地图模式进入 */
     private async startCreateMap(): Promise<void> {
-        const urlValue: string = mainModel.urlValue.slice(mainModel.urlValue.indexOf("?") + 1);
+        const urlValue: string = mainModel.fakeProtoURL.searchParams.toString();
         let queryObject = querystring.parse(urlValue);
         //有banner参数,要从平台初始化
         if (queryObject["banner"]) {
@@ -192,10 +191,9 @@ class MainControl {
     /** 从游戏模式进入 */
     private startNativeGame(): void {
         logger.log('update', `从游戏模式进入`);
-        const urlValue = mainModel.urlValue;
         //伪协议启动参数
-        logger.log('platform', `初始化平台数据`, urlValue);
-        const argsValue = urlValue.slice(urlValue.indexOf("?") + 1);
+        const argsValue = mainModel.fakeProtoURL.searchParams.toString();
+        logger.log('platform', `初始化平台数据`, argsValue);
         const argsObj = querystring.parse(argsValue);
         let queryObject: querystring.ParsedUrlQuery = {};
         queryObject = Object.assign(queryObject, argsObj);
@@ -209,7 +207,7 @@ class MainControl {
     /** 跳转到指定url */
     private async startUrl(): Promise<void> {
         logger.log('update', `从指定url进入`);
-        const urlValue: string = mainModel.urlValue.slice(mainModel.urlValue.indexOf("?") + 1);
+        const urlValue: string = mainModel.fakeProtoURL.searchParams.toString();
         const queryObject = querystring.parse(urlValue);
         const targetUrlValue: string = queryObject["url"] as string;
         if (!targetUrlValue) return;
@@ -257,8 +255,8 @@ class MainControl {
     /** 进入神庙模板地图 */
     private enterPrestigeMap(): void {
         logger.log('update', `从神庙模板地图模式进入`);
-        const urlValue = mainModel.urlValue;
-        const argsValue = urlValue.slice(urlValue.indexOf("?") + 1);
+        const urlValue = mainModel.fakeProtoURL.searchParams.toString();
+        const argsValue = urlValue.toString();
         const argsObj = querystring.parse(argsValue);
         let queryObject: querystring.ParsedUrlQuery = {};
         queryObject = Object.assign(queryObject, argsObj);

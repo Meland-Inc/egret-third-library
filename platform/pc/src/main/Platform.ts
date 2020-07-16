@@ -75,10 +75,10 @@ class Platform {
     ]
 
     public async init(): Promise<querystring.ParsedUrlQuery> {
-        const urlValue = mainModel.urlValue;
+        const urlValue = mainModel.fakeProtoURL;
         //伪协议启动参数
         logger.log('platform', `初始化平台数据`, urlValue);
-        const argsValue = urlValue.slice(urlValue.indexOf("?") + 1);
+        const argsValue = urlValue.searchParams.toString();
         //解析参数
         const argsObj = querystring.parse(argsValue);
 
