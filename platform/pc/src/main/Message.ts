@@ -243,8 +243,8 @@ class Message {
     }
 
     /** 收到进入地图模板房间失败 */
-    private onMapTemplateEnterError() {
-        util.copyLog2UploadDir()
+    private async onMapTemplateEnterError() {
+        await util.copyLog2UploadDir()
             .then(() => {
                 util.uploadLogFileList();
             });

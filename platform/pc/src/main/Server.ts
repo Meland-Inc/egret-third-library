@@ -221,14 +221,14 @@ class Server {
     }
 
     /** 尝试创建游戏服务器,创建失败后,重试 */
-    private tryRunGameServerCmd(cmd: string) {
-        util.runCmd(cmd, `${commonConfig.serverPackagePath}/`, "创建游戏服务器成功", "创建游戏服务器失败")
+    private async tryRunGameServerCmd(cmd: string) {
+        await util.runCmd(cmd, `${commonConfig.serverPackagePath}/`, "创建游戏服务器成功", "创建游戏服务器失败")
             .then((gameServerProcess) => {
                 mainModel.setGameServerProcess(gameServerProcess);
             })
             .catch((reason) => {
                 //3次重试 3秒后重试
-                setTimeout(() => {
+                setTimeout(async () => {
                     if (this._tryGameServerCount < 3) {
                         logger.error(`server`, `gameServer启动失败, 尝试重启`, reason);
                         this.tryRunGameServerCmd(cmd);
@@ -236,15 +236,13 @@ class Server {
                     } else {
                         logger.error(`server`, `gameServer启动失败, 超过重试次数`, reason);
                         message.sendClientMsg("gameServerStartupFail");
-                        util.copyLog2UploadDir()
+                        await util.copyLog2UploadDir()
                             .then(() => {
                                 util.uploadLogFileList();
                             });
                     }
                 }, 3000);
             });
-
-
     }
 
     /** 关闭游戏服务器 */
