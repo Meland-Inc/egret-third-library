@@ -287,7 +287,7 @@ async function scpFile(path, host, user, password, targetPath) {
         let total;
         let uploaded;
         client.on("transfer", (tBuffer, tUploaded, tTotal) => {
-            uploaded = tUploaded + 1;
+            uploaded = tUploaded;
             total = tTotal;
             console.log(`scp --> ${path} --> ${uploaded}/${total}`);
         });
@@ -304,6 +304,8 @@ async function scpFile(path, host, user, password, targetPath) {
             },
             client
             , (err) => {
+                //最终上传完毕后,把已上传的数量+1
+                uploaded++;
                 if (err || (uploaded !== total)) {
                     reject();
                     Global.snack(`上传错误, uploaded:${uploaded} total:${total}`, err);
