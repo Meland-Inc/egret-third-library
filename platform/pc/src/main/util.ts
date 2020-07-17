@@ -30,11 +30,8 @@ export namespace util {
                         logger.error('cmd', errorMsg, error);
                     }
                     reject(error);
-                    return;
                 }
 
-                logger.log('cmd', successMsg);
-                resolve(process);
             });
 
             process.stdout.on("data", data => {
@@ -43,6 +40,10 @@ export namespace util {
             process.stderr.on("data", data => {
                 logger.processLog('cmd', 'stderr', data);
             });
+
+            //先暂时改回原来的代码,暂时修复native上课问题
+            logger.log('cmd', successMsg);
+            resolve(process);
         });
     }
 
