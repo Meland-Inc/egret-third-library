@@ -284,8 +284,12 @@ async function uploadScpPolicyFile() {
 async function scpFile(path, host, user, password, targetPath) {
     return new Promise((resolve, reject) => {
         let client = new scp2.Client();
-        client.on("transfer", (buffer, uploaded, total) => {
-            console.log(`scp --> ${path} --> ${uploaded + 1}/${total}`);
+        let total;
+        let uploaded;
+        client.on("transfer", (tBuffer, tUploaded, tTotal) => {
+            uploaded = tUploaded;
+            total = tTotal;
+            console.log(`scp --> ${path} --> ${uploaded}/${total}`);
         });
 
         let environ = ModelMgr.versionModel.curEnviron;
@@ -298,13 +302,16 @@ async function scpFile(path, host, user, password, targetPath) {
                 password: password || environ.password,
                 path: targetPath || (environ.scpRootPath + environ.scpPath)
             },
-            client,
-            (err) => {
-                if (err) {
+            client
+            , (err) => {
+                //最终上传完毕后,把已上传的数量+1
+                uploaded++;
+                if (err || (uploaded !== total)) {
                     reject();
-                    Global.snack("上传错误", err);
+                    Global.snack(`上传错误, uploaded:${uploaded} total:${total}`, err);
                 } else {
                     resolve();
+                    Global.toast("上传完毕");
                 }
             }
         );
