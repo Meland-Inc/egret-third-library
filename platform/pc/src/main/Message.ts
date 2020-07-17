@@ -36,6 +36,7 @@ class Message {
         this.msgMap[MsgId.MAP_TEMPLATE_ENTER] = this.onMapTemplateEnter.bind(this);
         this.msgMap[MsgId.MAP_TEMPLATE_ROOM_CREATE] = this.onMapTemplateRoomCreate.bind(this);
         this.msgMap[MsgId.MAP_TEMPLATE_ENTER_ERROR] = this.onMapTemplateEnterError.bind(this);
+        this.msgMap[MsgId.SWITCH_FULL_SCREEN] = this.onSwitchFullScreen.bind(this);
         this.msgMap[MsgId.SEND_PLAYER_ID] = this.onSendPlayerId.bind(this);
         this.msgMap[MsgId.BELLPLANET_CLIENT_READY] = this.onBellplanetReady.bind(this);
         this.msgMap[MsgId.SET_NATIVE_POLICY_VERSION] = this.onSetNativePolicyVersion.bind(this);
@@ -248,6 +249,12 @@ class Message {
             .then(() => {
                 util.uploadLogFileList();
             });
+    }
+
+    /** 切换全屏显示 */
+    private onSwitchFullScreen(isFullScreen: boolean) {
+        commonConfig.writeFullScreen(isFullScreen);
+        mainModel.mainWindow.setFullScreen(isFullScreen);
     }
 
     /** 收到发送过来的玩家id */

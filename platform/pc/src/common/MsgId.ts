@@ -17,6 +17,9 @@ export default class MsgId {
     /** 进入地图模板失败 */
     public static readonly MAP_TEMPLATE_ENTER_ERROR: string = "MAP_TEMPLATE_ENTER_ERROR";
 
+    /** 切换全屏显示 */
+    public static readonly SWITCH_FULL_SCREEN: string = "SWITCH_FULL_SCREEN";
+
     /** 发送玩家id */
     public static readonly SEND_PLAYER_ID: string = "SEND_PLAYER_ID";
 

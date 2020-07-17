@@ -131,6 +131,7 @@ async function createWindow() {
   });
 
   mainModel.setMainWindow(mainWindow);
+  mainWindow.setFullScreen(commonConfig.isFullScreen);
 
   //创建游戏包目录
   packageMkDir();
