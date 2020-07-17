@@ -164,14 +164,14 @@ class CommonConfig {
         this._patchUrl = globalConfig.patchUrl;
         this._packageUrl = globalConfig.packageUrl;
         this._policyUrl = globalConfig.policyUrl;
-        this._isFullScreen = globalConfig.fullScreen;
+        this._isFullScreen = !!globalConfig.fullScreen;
     }
 
     /** 写入全屏信息 */
     public writeFullScreen(isFullScreen: boolean): void {
         let data = fs.readFileSync(commonConfig.globalConfigPath, 'utf-8');
         const globalConfig: IGlobalConfig = JSON.parse(data);
-        if (globalConfig.fullScreen === isFullScreen) return;
+        if (!!globalConfig.fullScreen === isFullScreen) return;
 
         this._isFullScreen = isFullScreen;
         globalConfig.fullScreen = isFullScreen;

@@ -80,5 +80,8 @@ export default class MsgId {
     /** 进入模板地图房间 */
     public static readonly enterMapTemplateRoom: string = "enterMapTemplateRoom";
 
+    /** 通知客户端native是否全屏 */
+    public static readonly nativeIsFullScreen: string = "nativeIsFullScreen";
+
 
 }

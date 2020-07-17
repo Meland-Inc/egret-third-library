@@ -132,6 +132,7 @@ async function createWindow() {
 
   mainModel.setMainWindow(mainWindow);
   mainWindow.setFullScreen(commonConfig.isFullScreen);
+  message.sendClientMsg(MsgId.nativeIsFullScreen, commonConfig.isFullScreen);
 
   //创建游戏包目录
   packageMkDir();
