@@ -223,8 +223,13 @@ class Server {
     /** 尝试创建游戏服务器,创建失败后,重试 */
     private async tryRunGameServerCmd(cmd: string) {
         await util.runCmd(cmd, `${commonConfig.serverPackagePath}/`, "创建游戏服务器成功", "创建游戏服务器失败")
-            .then((gameServerProcess) => {
+            .then(async (gameServerProcess) => {
                 mainModel.setGameServerProcess(gameServerProcess);
+                //先全部日志上报
+                await util.copyLog2UploadDir()
+                    .then(() => {
+                        util.uploadLogFileList();
+                    });
             })
             .catch((reason) => {
                 //3次重试 3秒后重试
