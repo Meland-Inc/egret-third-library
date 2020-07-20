@@ -282,6 +282,10 @@ function uglify(sourceFile) {
         sourceCode = closure(sourceCode, mainNamespace);
     }
 
+    if (!needConfuse) {
+        return sourceCode;
+    }
+
     //白名单
     let mangle = {};
     if (mainNamespace || needConfuse) {//只要走闭包或者混淆就需要有白名单
