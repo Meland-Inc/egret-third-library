@@ -365,7 +365,7 @@ function uglify(sourceFile) {
     //将上面闭包添加的结构也需要同名混淆 工具没有混淆 需要手动 并且替换成混淆短单词后需要补全空格 否则sourceMap会失效
     //eg: bellPlanet.GuiWindow= D,
     if (mainNamespace) {
-        let namespaceRe = /bellPlanet\.(\w*)\s*=\s*(\w*),/g;
+        let namespaceRe = /bellPlanet\.([\$\w]*)\s*=\s*([\$\w]*),/g;
         while (r = namespaceRe.exec(code)) {
             let newWord = r[0].replace('.' + r[1], '.' + r[2]);//前面要加上点 否则bellPlanet里面的单词可能会被替换成r[2]单词
             let spaceCount = r[1].length - r[2].length;
