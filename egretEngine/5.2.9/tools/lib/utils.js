@@ -258,69 +258,98 @@ function escape(s) {
 //对main.js进行混淆
 //属性名混淆的定制处理，在propmangle里
 function uglify(sourceFile) {
-    //将js文件合并成一个文件处理
-    let mergedCode = "";
-    for (let a in sourceFile) {
-        mergedCode += sourceFile[a];
+    //闭包命名空间 如果为空 下面就不会走闭包
+    //改这个变量的具体值需要将下面namespaceRe中的一并修改 下面没有直接用字符串引用是因为要加太多反译符 不好理解和维护
+    let mainNamespace = 'bellPlanet';
+
+    let sourceCode = sourceFile;
+
+    //闭包需要将多js文件合并成一个文件处理
+    if (mainNamespace && typeof sourceFile != 'string') {
+        sourceCode = "";
+        for (let a in sourceFile) {
+            sourceCode += sourceFile[a];
+        }
     }
 
-    let mainNamespace = 'bellPlanet';//改这个变量需要将下面namespaceRe中的一并修改 下面没有直接用字符串引用是因为要加太多反译符 不好理解和维护
-    mergedCode = closure(mergedCode, mainNamespace);
-
+    //确实是否需要混淆needConfuse
     var envReg = /.trunkName = eTrunkName.([^,;]+)/;
-    var evnStr = envReg.exec(mergedCode);
-    var options = {
-        mangle: {
+    var evnStr = envReg.exec(sourceCode);
+    let needConfuse = !!(!evnStr || evnStr[1] == "release");
+
+    //加闭包
+    if (mainNamespace) {
+        sourceCode = closure(sourceCode, mainNamespace);
+    }
+
+    //白名单
+    let mangle = {};
+    if (mainNamespace || needConfuse) {//只要走闭包或者混淆就需要有白名单
+        //符号白名单
+        //类名混淆时，各种配置表***Table，由于是资源读出的，需要保留
+        //还有比如Main是引擎的引用等，需要手动添加进reserved
+        let symbolReserved = [mainNamespace, 'Main', 'Bian', '__reflect', 'WebSocketWorker', 'wsWorker', 'Asset',
+            'AchievementTable', 'ArchFormulaTable', 'ArchFuelCntrTable', 'ArchFuelTable', 'ArchProductionTable', 'ArchPromptTable', 'ArchStateAcceptTable', 'ArchStateSendTable', 'ArchStorageTable', 'AvatarTable', 'BuffTable', 'ChatTable', 'ClassroomModeLessonTable', 'ClassroomModeTutorialTable', 'CodeblockLibTable', 'CodeblocksetTable', 'CodeblockTable', 'CodetipsTable', 'ConditionTable', 'CreatTypeTable', 'DescribeTable', 'DrawBoardColorTable', 'DropTable', 'EntityBuildObjectTable', 'EntityFunctionTable', 'EntityMaterialTable', 'EntitySoundTable', 'EntityTable', 'EntityVariaTable', 'EquipmentRandTable', 'EquipmentTable', 'GamePlatformTable', 'GameValueTable', 'HelpTable', 'HitBubbleTable', 'InitializationResurrectionTable', 'ItemArgumentTable', 'ItemEatableTable', 'ItemTable', 'LanguageTable', 'MailTemplateTable', 'MapCellTable', 'MapTable', 'MonsterAttributeTable', 'MonsterTable', 'NetworkConfigTable', 'NoviceManualTable', 'NoviceNodeTable', 'NoviceStepTable', 'NPCTable', 'NPCtalkTable', 'ObjectAnimationTable', 'ObjectInfoTable', 'ObjectStateTable', 'outputPaoMaDengTable', 'PlayerAreaBuyTable', 'QuotaTable', 'ResourcePointTable', 'ResSoundTable', 'RewardTable', 'RobotCodeblockTable', 'RobotLvTable', 'RobotSkinTable', 'RobotTable', 'RoleLvTable', 'RoleTable', 'SceneTable', 'SignInTable', 'SkillTable', 'TaskTable', 'WeakGuideTable', 'WeatherTable', 'WorksListCoverPatternTable', 'XinShouhelpTable',
+        ];
+
+        //属性白名单
+        //hasOwnProperty使用字符串反射属性，不能混淆，***cell中最常见这个
+        let propertiesReserved = [];
+        let reflectReg = /.hasOwnProperty\("([^"]+)"\)/g;
+        var r = null;
+        while (r = reflectReg.exec(sourceCode)) {
+            propertiesReserved.push(r[1]);
+        }
+
+        mangle = {
             properties: {
-                reserved: [],
+                reserved: propertiesReserved,
                 keep_quoted: true,
             },
-            //类名混淆时，各种配置表***Table，由于是资源读出的，需要保留
-            //还有比如Main是引擎的引用等，需要手动添加进reserved
-            reserved: [mainNamespace, 'Main', 'Bian', '__reflect', 'WebSocketWorker', 'wsWorker', 'Asset',
-                'AchievementTable', 'ArchFormulaTable', 'ArchFuelCntrTable', 'ArchFuelTable', 'ArchProductionTable', 'ArchPromptTable', 'ArchStateAcceptTable', 'ArchStateSendTable', 'ArchStorageTable', 'AvatarTable', 'BuffTable', 'ChatTable', 'ClassroomModeLessonTable', 'ClassroomModeTutorialTable', 'CodeblockLibTable', 'CodeblocksetTable', 'CodeblockTable', 'CodetipsTable', 'ConditionTable', 'CreatTypeTable', 'DescribeTable', 'DrawBoardColorTable', 'DropTable', 'EntityBuildObjectTable', 'EntityFunctionTable', 'EntityMaterialTable', 'EntitySoundTable', 'EntityTable', 'EntityVariaTable', 'EquipmentRandTable', 'EquipmentTable', 'GamePlatformTable', 'GameValueTable', 'HelpTable', 'HitBubbleTable', 'InitializationResurrectionTable', 'ItemArgumentTable', 'ItemEatableTable', 'ItemTable', 'LanguageTable', 'MailTemplateTable', 'MapCellTable', 'MapTable', 'MonsterAttributeTable', 'MonsterTable', 'NetworkConfigTable', 'NoviceManualTable', 'NoviceNodeTable', 'NoviceStepTable', 'NPCTable', 'NPCtalkTable', 'ObjectAnimationTable', 'ObjectInfoTable', 'ObjectStateTable', 'outputPaoMaDengTable', 'PlayerAreaBuyTable', 'QuotaTable', 'ResourcePointTable', 'ResSoundTable', 'RewardTable', 'RobotCodeblockTable', 'RobotLvTable', 'RobotSkinTable', 'RobotTable', 'RoleLvTable', 'RoleTable', 'SceneTable', 'SignInTable', 'SkillTable', 'TaskTable', 'WeakGuideTable', 'WeatherTable', 'WorksListCoverPatternTable', 'XinShouhelpTable',
-            ],
-        },
-        sourceMap: {
-            filename: "main.js",
-            url: "main.js.map",
-            includeSources: true,
-        },
-        toplevel: true,
-        ie8: true,
-        warnings: true,
-    };
-    //hasOwnProperty使用字符串反射属性，不能混淆，***cell中最常见这个
-    var reflectReg = /.hasOwnProperty\("([^"]+)"\)/g;
-    let reservedCell = [];
-    var r = null;
-    while (r = reflectReg.exec(mergedCode)) {
-        reservedCell.push(r[1]);
-    }
-    options.mangle.properties.reserved = reservedCell.concat();
 
-    //现在不混淆版本加入闭包会有严重问题 暂时全部混淆保证使用
-    // if (evnStr && evnStr[1] != "release") {
-    //     // if (true) {
-    //     options.mangle = false;
-    //     options.toplevel = false;
-    //     options = {
-    //         compress: {
-    //             global_defs: {
-    //                 DEBUG: false,
-    //                 RELEASE: true
-    //             }
-    //         }, output: { beautify: false }
-    //     }
-    // }
+            reserved: symbolReserved
+        }
+    }
+
+    let options = {};
+    //需要混淆
+    if (needConfuse) {
+        options = {
+            mangle: mangle,
+            sourceMap: {
+                filename: "main.js",
+                url: "main.js.map",
+                includeSources: true,
+            },
+            toplevel: true,
+            ie8: true,
+            warnings: true,
+        };
+    }
+    else {//不混淆
+        options = {
+            mangle: mangle,
+            compress: {
+                global_defs: {
+                    DEBUG: false,
+                    RELEASE: true
+                }
+            },
+            output: {
+                beautify: false
+            }
+        }
+    }
+
     //继承的类名没替换，目前没影响
     // __reflect(hq.prototype, "MapGrid", ["IPoolInstance"]);
     // __reflect(SX.prototype, "MapElemSelectView", ["IPoolInstance"]),
     // __reflect(FQ.prototype, "MapTerrainStruct", ["IPoolInstance"]),
     // __reflect(s3.prototype, "DebugPlatform", ["Platform"]),
     // __reflect(h3.prototype, "PlayerIdleStatus", ["IPlayerAnimUpdateStatus"]);
-    var result = UglifyJS2.minify(mergedCode, options);
+    var result = UglifyJS2.minify(sourceCode, options);
     var code = result.code;
+
     //unlify混淆类名后，__reflect保留了原有的className，反射时会有问题，需要一起替换，这里可能存在遗漏
     var filterRe = /__reflect\(([^",]+).prototype,"([^"]+)"\)/g;
     while (r = filterRe.exec(code)) {
@@ -328,18 +357,22 @@ function uglify(sourceFile) {
             code = code.replace(r[0], `__reflect\(${r[1]}.prototype,"${r[1]}")${' '.repeat(r[2].length - r[1].length)}`)
         }
     }
+
     //将上面闭包添加的结构也需要同名混淆 工具没有混淆 需要手动 并且替换成混淆短单词后需要补全空格 否则sourceMap会失效
     //eg: bellPlanet.GuiWindow= D,
-    let namespaceRe = /bellPlanet\.(\w*)\s*=\s*(\w*),/g;
-    while (r = namespaceRe.exec(code)) {
-        let newWord = r[0].replace('.' + r[1], '.' + r[2]);//前面要加上点 否则bellPlanet里面的单词可能会被替换成r[2]单词
-        let spaceCount = r[1].length - r[2].length;
-        if (spaceCount > 0) {
-            newWord += ' '.repeat(spaceCount);
-        }
+    if (mainNamespace) {
+        let namespaceRe = /bellPlanet\.(\w*)\s*=\s*(\w*),/g;
+        while (r = namespaceRe.exec(code)) {
+            let newWord = r[0].replace('.' + r[1], '.' + r[2]);//前面要加上点 否则bellPlanet里面的单词可能会被替换成r[2]单词
+            let spaceCount = r[1].length - r[2].length;
+            if (spaceCount > 0) {
+                newWord += ' '.repeat(spaceCount);
+            }
 
-        code = code.replace(r[0], newWord);
+            code = code.replace(r[0], newWord);
+        }
     }
+
     file.save("main.js.map", result.map);
     return code;
 }
