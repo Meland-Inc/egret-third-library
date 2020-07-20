@@ -66,9 +66,11 @@ async function uploadSourceMap() {
         environ = ModelMgr.versionModel.eEnviron.release;
     }
     if (environ == ModelMgr.versionModel.eEnviron.beta || environ == ModelMgr.versionModel.eEnviron.release) {
-        console.log("--> a上传sourcemap：", environ, version, prefix);
-        let cmdStr = `sentry-cli releases -o bellcode -p bellplanet files bellplanet_${environ}_${version} upload-sourcemaps main.js.map  --url-prefix "${prefix}" --log-level=error`
-        await spawnExc.runCmd(cmdStr, Global.projPath, null, 'sourcemap上传sentry错误');
+        if (environ == ModelMgr.versionModel.eEnviron.release) {
+            console.log("--> a上传sourcemap：", environ, version, prefix);
+            let cmdStr = `sentry-cli releases -o bellcode -p bellplanet files bellplanet_${environ}_${version} upload-sourcemaps main.js.map  --url-prefix "${prefix}" --log-level=error`
+            await spawnExc.runCmd(cmdStr, Global.projPath, null, 'sourcemap上传sentry错误');
+        }
         cmdStr = `sentry-cli releases -o bellcode -p bellplanet files bellplanet_${environ}_${version} upload-sourcemaps --ext js './bin-release/web/${version}/js/'  --url-prefix "${prefix}" --log-level=error`
         await spawnExc.runCmd(cmdStr, Global.projPath, null, ' js上传sentry错误');
     }
