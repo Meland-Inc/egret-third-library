@@ -4,12 +4,10 @@
  * @Date 2020-02-18 11:42:29
  * @FilePath \pc\src\main\Server.ts
  */
-import fs from 'fs';
 import os from 'os';
 import treeKill from 'tree-kill';
 import http from 'http';
 import url from 'url';
-import { ChildProcess } from 'child_process';
 import { AddressInfo } from 'net';
 
 import { CommonDefine } from '../common/CommonDefine';
@@ -21,6 +19,7 @@ import { logger } from './logger';
 import mainModel from './MainModel';
 import platform from './Platform';
 import message from './Message';
+import FileUtil from '../common/FileUtil';
 
 class Server {
     private _tryGameServerCount: number;
@@ -91,7 +90,7 @@ class Server {
 
 
     /** 初始化游戏服务器参数 */
-    private initGameServerArgs(args) {
+    private initGameServerArgs(args: Record<string, unknown>) {
         logger.log('net', '收到游戏服务器启动完毕消息');
         // config.setGameServerLocalIp(args.localIp as string);
         mainModel.setGameServerLocalIp(commonConfig.localIp as string);      //本地IP暂时先用127.0.0.1 保证本机切换网络不会出现问题, 其他人全用内网穿透后的ip
@@ -178,7 +177,7 @@ class Server {
         return new Promise((resolve, reject) => {
             for (let path of paths) {
                 //0o100 --> fs.constants.S_IXUSR
-                fs.chmod(path, 0o100, (err) => {
+                FileUtil.chmod(path, 0o100, (err) => {
                     if (err) {
                         reject(err);
                     }

@@ -4,17 +4,20 @@
  * @Date 2020-02-13 14:54:24
  * @FilePath \pc\src\renderer\logger.ts
  */
-import fs from 'fs';
 import { remote } from 'electron';
 import errorReport from './ErrorReport';
+import FileUtil from '../common/FileUtil';
 
-let rendererLogContent: string = fs.readFileSync(`${remote.app.getAppPath()}/dist/log/ipcRenderer.log`, 'utf-8');
+let rendererLogContent: string;
 /** 打印log到后台进程日志中 */
 export function rendererLog(tag: string, msg: string, ...args: any[]) {
     let content = formateMsg(tag, msg, ...args);
-    content = content.replace(/\\n/g, '\r\n')
+    content = content.replace(/\\n/g, '\r\n');
+    if (rendererLogContent === undefined) {
+        rendererLogContent = FileUtil.readFileSync(`${remote.app.getAppPath()}/dist/log/ipcRenderer.log`, 'utf-8', false);
+    }
     rendererLogContent += content + '\r\n';
-    fs.writeFileSync(`${remote.app.getAppPath()}/dist/log/ipcRenderer.log`, rendererLogContent);
+    FileUtil.writeFileSync(`${remote.app.getAppPath()}/dist/log/ipcRenderer.log`, rendererLogContent, null, false);
 }
 
 export function log(tag: string, msg: string, ...args: any[]) {

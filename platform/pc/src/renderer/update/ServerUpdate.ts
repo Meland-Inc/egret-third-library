@@ -4,7 +4,6 @@
  * @Date 2020-02-13 14:56:09
  * @FilePath \pc\src\renderer\update\ServerUpdate.ts
  */
-import fs from 'fs';
 import StreamZip from "node-stream-zip";
 
 import { CommonDefine } from '../../common/CommonDefine';
@@ -16,6 +15,7 @@ import * as logger from '../logger';
 import * as util from '../util';
 import rendererModel from '../RendererModel';
 import StreamDownload from './StreamDownload';
+import FileUtil from '../../common/FileUtil';
 
 export default class ServerUpdate {
     /** 服务端包存放目录 */
@@ -75,10 +75,8 @@ export default class ServerUpdate {
         logger.log(`update`, `检测到服务器版本更新,开始更新版本${this._remoteVersion}`);
         //更新
         loading.showLoading("正在更新服务端程序包");
-        let deleteDir = this._packagePath;
         //清除要保存的文件夹
-
-        await util.deleteFolderRecursive(deleteDir);
+        FileUtil.emptyDirSync(this._packagePath);
         this.downloadPackage()
     }
 
@@ -127,12 +125,7 @@ export default class ServerUpdate {
                     rendererModel.setPackageVersion(CommonDefine.ePackageType.server, commonConfig.environName, this._remoteVersion);
                     streamZip.close();
 
-                    fs.unlink(this._packagePath + filename, (err) => {
-                        if (err) {
-                            throw err;
-                        }
-                        logger.log(`update`, '文件:' + filename + '删除成功！');
-                    });
+                    FileUtil.unlinkSync(this._packagePath + filename);
                     this.executeUpdateCallback();
                 });
             });

@@ -4,21 +4,20 @@
  * @Date 2020-02-13 14:54:34
  * @FilePath \pc\src\main\logger.ts
  */
-import fs from 'fs';
-
 import commonConfig from '../common/CommonConfig';
 import MsgId from '../common/MsgId';
 
 import message from './Message';
 import { CommonDefine } from '../common/CommonDefine';
+import FileUtil from '../common/FileUtil';
 
 export namespace logger {
     let processLogContent: string = '';
     let webContentsLogContent: string = '';
 
     export function clear() {
-        fs.writeFileSync(commonConfig.ipcMainLogPath, '');
-        fs.writeFileSync(commonConfig.ipcRendererLogPath, '');
+        FileUtil.writeFileSync(commonConfig.ipcMainLogPath, '', null, false);
+        FileUtil.writeFileSync(commonConfig.ipcRendererLogPath, '', null, false);
     }
 
     /** 打印log到后台进程日志中 */
@@ -27,7 +26,7 @@ export namespace logger {
         content = content.replace(/\\n/g, '\r\n');
 
         processLogContent += content + '\r\n';
-        fs.writeFileSync(commonConfig.processLogPath, processLogContent);
+        FileUtil.writeFileSync(commonConfig.processLogPath, processLogContent, null, false);
     }
 
     /** 打印web端log到本地日志文件中 */
@@ -36,7 +35,7 @@ export namespace logger {
         content = content.replace(/\\n/g, '\r\n');
 
         webContentsLogContent += content + '\r\n';
-        fs.writeFileSync(commonConfig.ipcMainLogPath, webContentsLogContent);
+        FileUtil.writeFileSync(commonConfig.ipcMainLogPath, webContentsLogContent, null, false);
     }
 
     /** 打印日志 */

@@ -6,7 +6,6 @@
  */
 // Modules to control application life and create native browser window
 import { app, globalShortcut, BrowserWindow, Menu, shell, dialog } from 'electron';
-import * as fs from 'fs';
 import * as process from 'process';
 import * as os from 'os';
 import fse from 'fs-extra';
@@ -20,6 +19,7 @@ import { util } from './util';
 import mainModel from './MainModel';
 import server from './Server';
 import message from './Message';
+import FileUtil from '../common/FileUtil';
 
 //限制只启用一个程序
 const gotTheLock = app.requestSingleInstanceLock();
@@ -163,16 +163,16 @@ async function createWindow() {
 /** 创建游戏包目录 */
 function packageMkDir() {
   // 判断创建文件
-  if (!fs.existsSync(commonConfig.packagePath)) {
-    fse.ensureDirSync(commonConfig.packagePath);
+  if (!FileUtil.existsSync(commonConfig.packagePath)) {
+    FileUtil.ensureDirSync(commonConfig.packagePath);
   }
 
-  if (!fs.existsSync(commonConfig.clientPackagePath)) {
-    fse.ensureDirSync(commonConfig.clientPackagePath);
+  if (!FileUtil.existsSync(commonConfig.clientPackagePath)) {
+    FileUtil.ensureDirSync(commonConfig.clientPackagePath);
   }
 
-  if (!fs.existsSync(commonConfig.serverPackagePath)) {
-    fse.ensureDirSync(commonConfig.serverPackagePath);
+  if (!FileUtil.existsSync(commonConfig.serverPackagePath)) {
+    FileUtil.ensureDirSync(commonConfig.serverPackagePath);
   }
 }
 
@@ -402,6 +402,6 @@ function saveProcessLog() {
       title: `后台进程日志另存为`,
       filters: [{ name: "process.log", extensions: ["log"] }]
     });
-  let content = fs.readFileSync(commonConfig.processLogPath, 'utf-8');
-  fs.writeFileSync(path, content, 'utf-8');
+  let content = FileUtil.readFileSync(commonConfig.processLogPath, 'utf-8');
+  FileUtil.writeFileSync(path, content, 'utf-8');
 }
