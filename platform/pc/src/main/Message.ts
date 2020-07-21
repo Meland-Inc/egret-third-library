@@ -4,7 +4,7 @@
  * @Date 2020-02-26 15:31:07
  * @FilePath \pc\src\main\Message.ts
  */
-import { ipcMain, IpcMainEvent } from 'electron';
+import { ipcMain, IpcMainEvent, app } from 'electron';
 import querystring from 'querystring';
 
 import { CommonDefine } from '../common/CommonDefine';
@@ -37,6 +37,7 @@ class Message {
         this.msgMap[MsgId.MAP_TEMPLATE_ROOM_CREATE] = this.onMapTemplateRoomCreate.bind(this);
         this.msgMap[MsgId.MAP_TEMPLATE_ENTER_ERROR] = this.onMapTemplateEnterError.bind(this);
         this.msgMap[MsgId.SWITCH_FULL_SCREEN] = this.onSwitchFullScreen.bind(this);
+        this.msgMap[MsgId.QUIT_NATIVE] = this.onQuitNative.bind(this);
         this.msgMap[MsgId.SEND_PLAYER_ID] = this.onSendPlayerId.bind(this);
         this.msgMap[MsgId.BELLPLANET_CLIENT_READY] = this.onBellplanetReady.bind(this);
         this.msgMap[MsgId.SET_NATIVE_POLICY_VERSION] = this.onSetNativePolicyVersion.bind(this);
@@ -254,6 +255,11 @@ class Message {
     /** 切换全屏显示 */
     private onSwitchFullScreen(isFullScreen: boolean) {
         mainModel.mainWindow.setFullScreen(isFullScreen);
+    }
+
+    /** 退出Native */
+    private onQuitNative() {
+        app.quit();
     }
 
     /** 收到发送过来的玩家id */
