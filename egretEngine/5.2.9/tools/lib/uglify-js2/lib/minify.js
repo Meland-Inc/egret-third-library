@@ -5,17 +5,17 @@ if (typeof Buffer == "undefined") {
     to_ascii = atob;
     to_base64 = btoa;
 } else if (typeof Buffer.alloc == "undefined") {
-    to_ascii = function(b64) {
+    to_ascii = function (b64) {
         return new Buffer(b64, "base64").toString();
     };
-    to_base64 = function(str) {
+    to_base64 = function (str) {
         return new Buffer(str).toString("base64");
     };
 } else {
-    to_ascii = function(b64) {
+    to_ascii = function (b64) {
         return Buffer.from(b64, "base64").toString();
     };
-    to_base64 = function(str) {
+    to_base64 = function (str) {
         return Buffer.from(str).toString("base64");
     };
 }
@@ -46,7 +46,7 @@ function parse_source_map(content) {
 
 function set_shorthand(name, options, keys) {
     if (options[name]) {
-        keys.forEach(function(key) {
+        keys.forEach(function (key) {
             if (options[key]) {
                 if (typeof options[key] != "object") options[key] = {};
                 if (!(name in options[key])) options[key][name] = options[name];
@@ -69,7 +69,7 @@ function to_json(cache) {
         props: cache.props.toObject()
     };
 }
-
+var mangleMap = {};
 function minify(files, options) {
     try {
         options = defaults(options, {
@@ -94,9 +94,9 @@ function minify(files, options) {
         if (options.rename === undefined) {
             options.rename = options.compress && options.mangle;
         }
-        set_shorthand("ie8", options, [ "compress", "mangle", "output" ]);
-        set_shorthand("keep_fnames", options, [ "compress", "mangle" ]);
-        set_shorthand("toplevel", options, [ "compress", "mangle" ]);
+        set_shorthand("ie8", options, ["compress", "mangle", "output"]);
+        set_shorthand("keep_fnames", options, ["compress", "mangle"]);
+        set_shorthand("toplevel", options, ["compress", "mangle"]);
         var quoted_props;
         if (options.mangle) {
             options.mangle = defaults(options.mangle, {
@@ -134,7 +134,7 @@ function minify(files, options) {
             }, true);
         }
         var warnings = [];
-        if (options.warnings) AST_Node.log_function(function(warning) {
+        if (options.warnings) AST_Node.log_function(function (warning) {
             warnings.push(warning);
         }, options.warnings == "verbose");
         if (timings) timings.parse = Date.now();
@@ -143,7 +143,7 @@ function minify(files, options) {
             toplevel = files;
         } else {
             if (typeof files == "string") {
-                files = [ files ];
+                files = [files];
             }
             options.parse = options.parse || {};
             options.parse.toplevel = null;
@@ -170,7 +170,7 @@ function minify(files, options) {
         if (quoted_props) {
             reserve_quoted_keys(toplevel, quoted_props);
         }
-        [ "enclose", "wrap" ].forEach(function(action) {
+        ["enclose", "wrap"].forEach(function (action) {
             var option = options[action];
             if (!option) return;
             var orig = toplevel.print_to_string().slice(0, -1);
@@ -257,6 +257,7 @@ function minify(files, options) {
         if (warnings.length) {
             result.warnings = warnings;
         }
+        result.mangleMap = mangleMap;
         return result;
     } catch (ex) {
         return { error: ex };

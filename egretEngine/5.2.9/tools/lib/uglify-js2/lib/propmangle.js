@@ -460,6 +460,7 @@ function mangle_properties(ast, options) {
             } while (!can_mangle(mangled));
             cache.set(name, mangled);
         }
+        mangleMap[name] = mangled;
         return mangled;
     }
 

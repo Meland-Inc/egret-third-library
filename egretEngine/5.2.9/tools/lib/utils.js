@@ -292,7 +292,7 @@ function uglify(sourceFile) {
         //符号白名单
         //类名混淆时，各种配置表***Table，由于是资源读出的，需要保留
         //还有比如Main是引擎的引用等，需要手动添加进reserved
-        let symbolReserved = [mainNamespace, 'Main', 'Bian', '__reflect', 'WebSocketWorker', 'wsWorker', 'Asset',
+        let symbolReserved = [mainNamespace, 'Main', "GameConsole", 'Bian', '__reflect', 'WebSocketWorker', 'wsWorker', 'Asset',
             'AchievementTable', 'ArchFormulaTable', 'ArchFuelCntrTable', 'ArchFuelTable', 'ArchProductionTable', 'ArchPromptTable', 'ArchStateAcceptTable', 'ArchStateSendTable', 'ArchStorageTable', 'AvatarTable', 'BuffTable', 'ChatTable', 'ClassroomModeLessonTable', 'ClassroomModeTutorialTable', 'CodeblockLibTable', 'CodeblocksetTable', 'CodeblockTable', 'CodetipsTable', 'ConditionTable', 'CreatTypeTable', 'DescribeTable', 'DrawBoardColorTable', 'DropTable', 'EntityBuildObjectTable', 'EntityFunctionTable', 'EntityMaterialTable', 'EntitySoundTable', 'EntityTable', 'EntityVariaTable', 'EquipmentRandTable', 'EquipmentTable', 'GamePlatformTable', 'GameValueTable', 'HelpTable', 'HitBubbleTable', 'InitializationResurrectionTable', 'ItemArgumentTable', 'ItemEatableTable', 'ItemTable', 'LanguageTable', 'MailTemplateTable', 'MapCellTable', 'MapTable', 'MonsterAttributeTable', 'MonsterTable', 'NetworkConfigTable', 'NoviceManualTable', 'NoviceNodeTable', 'NoviceStepTable', 'NPCTable', 'NPCtalkTable', 'ObjectAnimationTable', 'ObjectInfoTable', 'ObjectStateTable', 'outputPaoMaDengTable', 'PlayerAreaBuyTable', 'QuotaTable', 'ResourcePointTable', 'ResSoundTable', 'RewardTable', 'RobotCodeblockTable', 'RobotLvTable', 'RobotSkinTable', 'RobotTable', 'RoleLvTable', 'RoleTable', 'SceneTable', 'SignInTable', 'SkillTable', 'TaskTable', 'WeakGuideTable', 'WeatherTable', 'WorksListCoverPatternTable', 'XinShouhelpTable',
         ];
 
@@ -376,7 +376,7 @@ function uglify(sourceFile) {
             code = code.replace(r[0], newWord);
         }
     }
-
+    file.save(`${egret.args.releaseDir}/mangleMap.json`, JSON.stringify(result.mangleMap));
     file.save("main.js.map", result.map);
     return code;
 }
