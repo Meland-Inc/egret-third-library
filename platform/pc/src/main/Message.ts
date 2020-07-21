@@ -253,7 +253,6 @@ class Message {
 
     /** 切换全屏显示 */
     private onSwitchFullScreen(isFullScreen: boolean) {
-        commonConfig.writeFullScreen(isFullScreen);
         mainModel.mainWindow.setFullScreen(isFullScreen);
     }
 

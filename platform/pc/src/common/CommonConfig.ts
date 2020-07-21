@@ -138,12 +138,6 @@ class CommonConfig {
         return this._packageUrl;
     }
 
-    private _isFullScreen: boolean;
-    /** 是否全屏 */
-    public get isFullScreen(): boolean {
-        return this._isFullScreen;
-    }
-
     public constructor() {
         const commonApp: App = app || remote.app;
         this._rootPath = commonApp.getAppPath();
@@ -164,24 +158,11 @@ class CommonConfig {
         this._patchUrl = globalConfig.patchUrl;
         this._packageUrl = globalConfig.packageUrl;
         this._policyUrl = globalConfig.policyUrl;
-        this._isFullScreen = !!globalConfig.fullScreen;
-    }
-
-    /** 写入全屏信息 */
-    public writeFullScreen(isFullScreen: boolean): void {
-        let data = fs.readFileSync(commonConfig.globalConfigPath, 'utf-8');
-        const globalConfig: IGlobalConfig = JSON.parse(data);
-        if (!!globalConfig.fullScreen === isFullScreen) return;
-
-        this._isFullScreen = isFullScreen;
-        globalConfig.fullScreen = isFullScreen;
-        fs.writeFileSync(commonConfig.globalConfigPath, JSON.stringify(globalConfig));
     }
 }
 
 interface IGlobalConfig {
     environName: CommonDefine.eEnvironName;
-    fullScreen: boolean;
     patchUrl: string,
     packageUrl: string,
     policyUrl: string
