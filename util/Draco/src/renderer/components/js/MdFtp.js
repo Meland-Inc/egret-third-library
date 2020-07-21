@@ -103,6 +103,15 @@ export async function uploadVersionFile() {
     }
 }
 
+export async function uploadMangleMapFile() {
+    let curEnviron = ModelMgr.versionModel.curEnviron;
+    if (curEnviron.scpEnable) {
+        if (curEnviron.mangleMapScpPath) {
+            await uploadScpMangleMap();
+        }
+    }
+}
+
 export function uploadCdnVersionFile() {
     return new Promise(async (resolve, reject) => {
         await ModelMgr.ftpModel.initQiniuOption();
@@ -330,6 +339,20 @@ async function uploadScpNativeZip(scpNativeZipPath, zipName) {
         return;
     }
     await scpFile(webZipPath, environ.patchHost, environ.patchUser, environ.patchPassword, scpNativeZipPath);
+}
+
+/** 上传mangleMap.json文件 */
+async function uploadScpMangleMap() {
+    let environ = ModelMgr.versionModel.curEnviron;
+    let jsonPath = `${Global.projPath}/bin-release/web/${ModelMgr.versionModel.newVersion}/mangleMap.json`;
+    let targetPath = `${environ.scpRootPath}${environ.mangleMapScpPath}/mangleMap_v${ModelMgr.versionModel.newVersion}s.json`;
+
+    let isExists = await fsExc.exists(jsonPath);
+    if (!isExists) {
+        console.log(`暂无文件:${jsonPath}`);
+        return;
+    }
+    await scpFile(jsonPath, environ.host, environ.user, environ.password, targetPath);
 }
 
 async function uploadCdnPatchZip(cdnPatchPath) {

@@ -15,7 +15,7 @@ export class VersionModel {
     environList = [
         {
             name: this.eEnviron.alpha, host: "47.107.73.43", user: "ftpadmin", password: "unclemiao",
-            zipPath: "/alpha/zip", scpRootPath: "/web", scpPath: "/web/alpha", localPath: "/alpha/web", localPolicyPath: "/alpha/policy", serverPackagePath: "/alpha/server_packages",
+            zipPath: "/alpha/zip", scpRootPath: "/web", scpPath: "/web/alpha", localPath: "/alpha/web", localPolicyPath: "/alpha/policy", serverPackagePath: "/alpha/server_packages", mangleMapScpPath: "/mangleMap/alpha",
             updateGitEnable: false, gitBranch: "", trunkName: "alpha", cdnRoot: "",
             publishEnable: true, mergeVersionEnable: false, compressPicEnable: false, zipFileEnable: true, policyEnable: false, scpEnable: true, cdnEnable: false,
             pushGitEnable: false, publishDescEnable: true, codeVersionEnable: true, gitTagEnable: false, zipUploadGameEnable: false, nativeEnable: false
@@ -23,7 +23,7 @@ export class VersionModel {
         {
             name: this.eEnviron.beta, host: "47.107.73.43", user: "ftpadmin", password: "unclemiao",
             patchHost: "127.0.0.1", patchUser: "bell", patchPassword: "bell", nativePackageEnable: true,
-            zipPath: "/beta/zip", scpRootPath: "/web", scpPath: "/web/beta", localPath: "/beta/web", localPolicyPath: "/beta/policy", serverPackagePath: "/beta/server_packages",
+            zipPath: "/beta/zip", scpRootPath: "/web", scpPath: "/web/beta", localPath: "/beta/web", localPolicyPath: "/beta/policy", serverPackagePath: "/beta/server_packages", mangleMapScpPath: "/mangleMap/beta",
             updateGitEnable: true, gitBranch: "trunk/beta", trunkName: "beta", cdnRoot: "",
             scpPatchPath: "/Library/WebServer/Documents/native/beta/patch", scpReleasePath: "/Library/WebServer/Documents/native/beta/release",
             publishEnable: true, mergeVersionEnable: true, compressPicEnable: false, zipFileEnable: true, policyEnable: true, scpEnable: true, cdnEnable: false,
@@ -31,7 +31,7 @@ export class VersionModel {
         },
         {
             name: this.eEnviron.ready, host: "47.107.73.43", user: "ftpadmin", password: "unclemiao",
-            zipPath: "/release/zip", scpRootPath: "/web", scpPath: "/web/ready", localPath: "/ready/web", localPolicyPath: "/ready/policy", serverPackagePath: "/ready/server_packages",
+            zipPath: "/release/zip", scpRootPath: "/web", scpPath: "/web/ready", localPath: "/ready/web", localPolicyPath: "/ready/policy", serverPackagePath: "/ready/server_packages", mangleMapScpPath: "/mangleMap/ready",
             updateGitEnable: true, gitBranch: "trunk/release", trunkName: "release", cdnRoot: "readyTest",
             cdnPatchEnable: true, cdnWinPatchPath: "/win", cdnMacPatchPath: "/mac",
             publishEnable: true, mergeVersionEnable: true, compressPicEnable: false, zipFileEnable: true, policyEnable: true, scpEnable: true, cdnEnable: true,

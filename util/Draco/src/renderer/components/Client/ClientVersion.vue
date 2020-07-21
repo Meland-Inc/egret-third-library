@@ -141,6 +141,12 @@
             color="orange500"
             @click="onUploadVersionFile"
           >上传游戏版本</mu-button>
+          <mu-button
+            v-loading="isUploadMangleMapFileLoading"
+            data-mu-loading-size="24"
+            color="blue500"
+            @click="onUploadMangleMapFile"
+          >上传混淆映射文件</mu-button>
         </div>
         <mu-container v-show="curEnviron&&curEnviron.scpEnable">
           <mu-flex class="flex-wrapper" align-items="center">
@@ -369,6 +375,7 @@ export default {
 
       isZipVersionLoading: false,
       isUploadVersionLoading: false,
+      isUploadMangleMapFileLoading: false,
 
       isCreatePolicyFileLoading: false,
       isModifyPolicyNumLoading: false,
@@ -703,6 +710,25 @@ export default {
         Global.hideRegionLoading();
       }
     },
+    async onUploadMangleMapFile(showDialog = true) {
+      if (!ModelMgr.versionModel.publisher) {
+        Global.snack("请输入发布者", null, false);
+        return;
+      }
+      this.isUploadMangleMapFileLoading = true;
+      Global.showRegionLoading();
+      try {
+        await mdFtp.uploadMangleMapFile();
+        this.isUploadMangleMapFileLoading = false;
+        Global.hideRegionLoading();
+        if (showDialog) {
+          Global.dialog("上传混淆映射文件成功");
+        }
+      } catch (error) {
+        this.isUploadMangleMapFileLoading = false;
+        Global.hideRegionLoading();
+      }
+    },
     async onCreatePolicyFile() {
       if (!ModelMgr.versionModel.publisher) {
         Global.snack("请输入发布者", null, false);
@@ -951,6 +977,7 @@ export default {
           promiseList.push(mdFtp.zipVersion);
         }
         promiseList.push(mdFtp.uploadVersionFile);
+        promiseList.push(mdFtp.uploadMangleMapFile);
 
         if (this.curEnviron.policyEnable) {
           promiseList.push(mdFtp.createPolicyFile);
