@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="ei6yz0u6" jpegQuality="80" compressPNG="true">
+<packageDescription id="ei6yz0u6">
   <resources>
     <component id="qncg0" name="WinTileMapPreview.xml" path="/mapPreview/win/" exported="true"/>
     <component id="qncg1" name="ladMapCtnr.xml" path="/mapPreview/com/"/>
@@ -9,6 +9,7 @@
     <image id="h6ef5" name="img_mapP_ta.png" path="/mapPreview/img/"/>
     <image id="h6ef6" name="img_mapP_me.png" path="/mapPreview/img/"/>
     <component id="h6ef7" name="comPlayerIcon.xml" path="/mapPreview/com/" exported="true"/>
+    <image id="kdkf8" name="img_red.png" path="/mapPreview/img/" scale="9grid" scale9grid="7,7,14,14" duplicatePadding="true"/>
   </resources>
   <publish name="other"/>
 </packageDescription>

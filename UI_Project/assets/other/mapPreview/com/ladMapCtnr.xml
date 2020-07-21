@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="568,268" overflow="hidden" extention="Label">
   <displayList>
-    <graph id="n0_owm7" name="gphMap" xy="0,0" size="568,268" type="rect" lineSize="0"/>
+    <graph id="n0_owm7" name="gphMap" xy="0,0" size="568,268" type="rect" lineSize="0">
+      <relation target="" sidePair="width-width"/>
+    </graph>
+    <graph id="n6_d9s4" name="gphTriangle" xy="0,0" size="100,100">
+      <relation target="n0_owm7" sidePair="left-left,top-top"/>
+    </graph>
+    <image id="n1_kdkf" name="left" src="kdkf8" fileName="mapPreview/img/img_red.png" xy="0,0" size="0,268" alpha="0.5">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <image id="n3_kdkf" name="top" src="kdkf8" fileName="mapPreview/img/img_red.png" xy="0,0" size="568,0" alpha="0.5">
+      <relation target="" sidePair="rightext-right"/>
+    </image>
+    <image id="n2_kdkf" name="right" src="kdkf8" fileName="mapPreview/img/img_red.png" xy="568,0" size="0,268" alpha="0.5">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <image id="n4_kdkf" name="bottom" src="kdkf8" fileName="mapPreview/img/img_red.png" xy="0,268" size="568,0" alpha="0.5">
+      <relation target="" sidePair="width-width"/>
+    </image>
   </displayList>
 </component>

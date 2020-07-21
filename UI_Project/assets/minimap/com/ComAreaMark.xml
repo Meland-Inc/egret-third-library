@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="30,30" pivot="0.5,0.5" anchor="true" extention="Button">
-  <controller name="ctrlStatus" pages="0,normal,1,selected,2,showTips" selected="2"/>
+  <controller name="ctrlStatus" pages="0,normal,1,selected,2,showTips" selected="0"/>
+  <controller name="ctrlSelf" pages="0,other,1,self" selected="0"/>
   <displayList>
     <image id="n1_p85h" name="tfBg" src="fv5th" fileName="old/img/img_map_3.png" xy="-6,-27" size="44,26" group="n8_jphw">
       <relation target="n0_p85h" sidePair="width-width"/>
       <relation target="" sidePair="center-center"/>
     </image>
-    <text id="n0_p85h" name="title" xy="-6,-27" size="42,20" group="n8_jphw" fontSize="16" color="#ffffff" align="center" vAlign="bottom" singleLine="true" text="mark">
+    <text id="n0_p85h" name="title" xy="-6,-27" size="40,24" group="n8_jphw" fontSize="16" color="#ffffff" align="center" vAlign="bottom" singleLine="true" text="mark">
       <relation target="" sidePair="center-center"/>
     </text>
-    <group id="n8_jphw" name="grpTitle" xy="-6,-27" size="43,26" advanced="true" collapsed="true">
+    <group id="n8_jphw" name="grpTitle" xy="-6,-27" size="44,26" advanced="true">
       <gearDisplay controller="ctrlStatus" pages="1,2"/>
     </group>
-    <loader id="n2_p85h" name="icon" xy="-3,-2" size="36,34" filter="color" filterData="0.00,0.00,0.00,0.00" url="ui://makcczvjfv5t2k" align="center" vAlign="middle" fill="scale" shrinkOnly="true" autoSize="true">
+    <loader id="n2_p85h" name="icon" xy="-3,-2" size="36,34" filter="color" filterData="0,0,0,0" url="ui://makcczvjfv5t2k" align="center" vAlign="middle" fill="scale" shrinkOnly="true" autoSize="true">
       <gearIcon controller="ctrlStatus" pages="0,1,2" values="ui://makcczvjfv5t2k|ui://makcczvjfv5t2j|ui://makcczvjfv5t2k"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
