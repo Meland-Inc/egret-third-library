@@ -105,6 +105,9 @@ export async function copyVersion() {
     let indexContent = await fsExc.readFile(indexPath);
     indexContent = indexContent.replace(`window.environName="ready"`, `window.environName="release"`);
     await fsExc.writeFile(indexPath, indexContent);
+
+    await ModelMgr.versionModel.initVersionList();
+
     Global.toast('拷贝版本成功');
 }
 
