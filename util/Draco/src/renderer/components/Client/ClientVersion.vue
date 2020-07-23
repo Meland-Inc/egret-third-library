@@ -136,6 +136,13 @@
             v-show="curEnviron&&curEnviron.zipFileEnable"
           >压缩游戏版本</mu-button>
           <mu-button
+            v-loading="isCopyVersionLoading"
+            data-mu-loading-size="24"
+            color="pink500"
+            @click="onCopyVersion"
+            v-show="curEnviron&&curEnviron.copyFileEnable"
+          >拷贝ready版本到release</mu-button>
+          <mu-button
             v-loading="isUploadVersionLoading"
             data-mu-loading-size="24"
             color="orange500"
@@ -368,6 +375,7 @@ export default {
       isCopyCompressPicLoading: false,
 
       isZipVersionLoading: false,
+      isCopyVersionLoading: false,
       isUploadVersionLoading: false,
 
       isCreatePolicyFileLoading: false,
@@ -683,6 +691,19 @@ export default {
         Global.hideRegionLoading();
       }
     },
+    async onCopyVersion() {
+      if (!ModelMgr.versionModel.publisher) {
+        Global.snack("请输入发布者", null, false);
+        return;
+      }
+
+      this.isCopyVersionLoading = true;
+      Global.showRegionLoading();
+      mdFtp.copyVersion().finally(() => {
+        this.isCopyVersionLoading = false;
+        Global.hideRegionLoading();
+      });
+    },
     async onUploadVersionFile(showDialog = true) {
       if (!ModelMgr.versionModel.publisher) {
         Global.snack("请输入发布者", null, false);
@@ -950,6 +971,11 @@ export default {
         if (this.curEnviron.zipFileEnable) {
           promiseList.push(mdFtp.zipVersion);
         }
+
+        if (this.curEnviron.copyFileEnable) {
+          promiseList.push(mdFtp.copyVersion);
+        }
+
         promiseList.push(mdFtp.uploadVersionFile);
 
         if (this.curEnviron.policyEnable) {
