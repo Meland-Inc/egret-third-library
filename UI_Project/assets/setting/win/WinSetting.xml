@@ -65,28 +65,31 @@
     </component>
     <text id="n149_jd08" name="tfServerIdTitle" xy="487,757" size="96,26" group="n30_o8k6" fontSize="20" color="#333333" vAlign="middle" vars="true" text="服务器ID: "/>
     <text id="n152_qh6c" name="tfGameServerHost" xy="588,757" size="68,26" group="n30_o8k6" input="true" fontSize="20" color="#333333" vAlign="middle" text="xxxxxxx"/>
-    <component id="n29_o8k6" name="btnOpenLog" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="576,823" size="120,44" group="n176_hxjz">
+    <component id="n29_o8k6" name="btnOpenLog" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="400,825" size="120,44" group="n176_hxjz">
       <Button title="查看日志" titleFontSize="20" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <component id="n64_epn8" name="btnUploadLog" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="736,823" size="120,44" group="n176_hxjz">
+    <component id="n64_epn8" name="btnUploadLog" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="540,825" size="120,44" group="n176_hxjz">
       <Button title="上传日志" titleFontSize="20" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <component id="n143_vxor" name="btnPlayerUnStuck" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="896,825" size="120,44" group="n176_hxjz">
+    <component id="n143_vxor" name="btnPlayerUnStuck" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="680,827" size="120,44" group="n176_hxjz">
       <Button title="一键脱离" titleFontSize="20" icon="ui://te1gxawooiqdcyih3"/>
     </component>
-    <component id="n28_o8k6" name="btnLogout" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1056,825" size="120,44" group="n176_hxjz">
+    <component id="n28_o8k6" name="btnLogout" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="820,825" size="120,44" group="n176_hxjz">
       <Button title="退出登陆" titleFontSize="20" icon="ui://te1gxawoeggjcyihf"/>
     </component>
-    <component id="n151_f5wz" name="btnResetAll" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1056,824" size="120,44" group="n176_hxjz">
+    <component id="n151_f5wz" name="btnResetAll" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="960,825" size="120,44" group="n176_hxjz">
       <Button title="重置所有" titleColor="#ffffff" titleFontSize="20" icon="ui://te1gxawoeggjcyihf"/>
     </component>
-    <component id="n175_hxjz" name="btnManorRestore" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1216,824" size="120,44" group="n176_hxjz">
+    <component id="n175_hxjz" name="btnManorRestore" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1100,825" size="120,44" group="n176_hxjz">
       <Button title="重置领地" titleFontSize="20" icon="ui://te1gxawoeggjcyihf"/>
     </component>
-    <component id="n188_ojgc" name="btnGetRoleID" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1368,824" size="120,44" group="n176_hxjz">
+    <component id="n188_ojgc" name="btnGetRoleID" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1240,825" size="120,44" group="n176_hxjz">
       <Button title="获取角色ID" titleFontSize="20" icon="ui://te1gxawoeggjcyihf"/>
     </component>
-    <group id="n176_hxjz" name="n176" xy="576,823" size="912,46" group="n30_o8k6"/>
+    <component id="n192_n231" name="btnQuitNative" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1380,825" size="120,44" group="n176_hxjz">
+      <Button title="退出" titleFontSize="20" icon="ui://te1gxawoeggjcyihf"/>
+    </component>
+    <group id="n176_hxjz" name="n176" xy="400,825" size="1100,46" group="n30_o8k6"/>
     <text id="n182_ggj7" name="tfRoomCodeTitle" xy="487,719" size="85,29" group="n184_ggj7" fontSize="20" vAlign="middle" text="房间码：&#xA;"/>
     <text id="n183_ggj7" name="tfRoomCode" xy="576,719" size="65,26" group="n184_ggj7" fontSize="20" vAlign="middle" singleLine="true" text="999999">
       <relation target="n182_ggj7" sidePair="left-right"/>
@@ -103,7 +106,7 @@
     <group id="n191_fb7x" name="grpWindow" xy="487,533" size="239,42" group="n30_o8k6" advanced="true">
       <gearDisplay controller="ctrlNative" pages="0"/>
     </group>
-    <group id="n30_o8k6" name="system" xy="487,258" size="1001,611" group="n154_o5a3" advanced="true">
+    <group id="n30_o8k6" name="system" xy="400,258" size="1100,613" group="n154_o5a3" advanced="true">
       <gearDisplay controller="conSetting" pages="0"/>
     </group>
     <component id="n66_o31t" name="cbManorName" src="l61l3" fileName="com/comManorList.xml" xy="651,315" size="254,40" group="n71_o31t">
