@@ -88,6 +88,17 @@ export async function copyVersion() {
     const readyGameVersion = await ModelMgr.versionModel.getEnvironGameVersion(ModelMgr.versionModel.eEnviron.ready);
     const readyFilePath = `${Global.svnPublishPath}${readyEnviron.localPath}/release_v${readyGameVersion}s/`;
     const releaseFilePath = `${Global.svnPublishPath}${releaseEnviron.localPath}/release_v${readyGameVersion}s/`;
+    const readyExists = await fsExc.exists(readyFilePath);
+    if (!readyExists) {
+        Global.snack(`本地不存在ready版本 path:${readyFilePath}`);
+        return;
+    }
+
+    const exists = await fsExc.exists(releaseFilePath);
+    if (exists) {
+        await fsExc.delFolder(releaseFilePath);
+    }
+
     await fsExc.copyFile(readyFilePath, releaseFilePath, true);
 
     let indexPath = `${releaseFilePath}/index_v${readyGameVersion}.html`;
