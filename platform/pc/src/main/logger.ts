@@ -10,7 +10,6 @@ import commonConfig from '../common/CommonConfig';
 import MsgId from '../common/MsgId';
 
 import message from './Message';
-import { util } from './util';
 
 export namespace logger {
     let processLogContent: string = '';
@@ -41,17 +40,11 @@ export namespace logger {
 
     /** 打印日志 */
     export function log(tag: string, msg: string, ...args: any[]) {
-        let content = formateMsg(tag, msg, ...args);
-        let code: string = `console.log(\'${content}\');`
-        util.executeJavaScript(code, false);
         webContentsLog(tag, msg, ...args);
     }
 
     /** 打印错误 */
     export function error(tag: string, msg: string, ...args: any[]) {
-        let content = formateMsg(tag, msg, ...args);
-        let code: string = `console.error(\'${content}\');`
-        util.executeJavaScript(code, false);
         if (!commonConfig.isPackaged) {
             message.sendIpcMsg(MsgId.ERROR_REPORT, msg);
         }
@@ -60,17 +53,11 @@ export namespace logger {
 
     /** 打印警告 */
     export function warn(tag: string, msg: string, ...args: any[]) {
-        let content = formateMsg(tag, msg, ...args);
-        let code: string = `console.warn(\'${content}\');`
-        util.executeJavaScript(code, false);
         webContentsLog(tag, msg, ...args);
     }
 
     /** 打印信息 */
     export function info(tag: string, msg: string, ...args: any[]) {
-        let content = formateMsg(tag, msg, ...args);
-        let code: string = `console.info(\'${content}\');`
-        util.executeJavaScript(code, false);
         webContentsLog(tag, msg, ...args);
     }
 
