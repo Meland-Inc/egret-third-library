@@ -359,6 +359,7 @@ function uglify(sourceFile) {
     while (r = filterRe.exec(code)) {
         if (r[1].length < 10 && r[2].length < 50) {
             code = code.replace(r[0], `__reflect\(${r[1]}.prototype,"${r[1]}")${' '.repeat(r[2].length - r[1].length)}`)
+            result.mangleMap[r[2]] = r[1];//混淆后这里又改了一次,就根据改的来
         }
     }
 

@@ -69,7 +69,7 @@ function to_json(cache) {
         props: cache.props.toObject()
     };
 }
-var mangleMap = {};
+
 function minify(files, options) {
     try {
         options = defaults(options, {
@@ -170,6 +170,9 @@ function minify(files, options) {
         if (quoted_props) {
             reserve_quoted_keys(toplevel, quoted_props);
         }
+        var mangleMap = {};
+        var renameMap = {};
+
         ["enclose", "wrap"].forEach(function (action) {
             var option = options[action];
             if (!option) return;
@@ -180,7 +183,7 @@ function minify(files, options) {
         if (timings) timings.rename = Date.now();
         if (options.rename) {
             toplevel.figure_out_scope(options.mangle);
-            toplevel.expand_names(options.mangle);
+            toplevel.expand_names(options.mangle, renameMap);
         }
         if (timings) timings.compress = Date.now();
         if (options.compress) toplevel = new Compressor(options.compress).compress(toplevel);
@@ -189,11 +192,11 @@ function minify(files, options) {
         if (timings) timings.mangle = Date.now();
         if (options.mangle) {
             toplevel.compute_char_frequency(options.mangle);
-            toplevel.mangle_names(options.mangle);
+            toplevel.mangle_names(options.mangle, mangleMap, renameMap);
         }
         if (timings) timings.properties = Date.now();
         if (options.mangle && options.mangle.properties) {
-            toplevel = mangle_properties(toplevel, options.mangle.properties);
+            toplevel = mangle_properties(toplevel, options.mangle.properties, mangleMap);
         }
         if (timings) timings.output = Date.now();
         var result = {};

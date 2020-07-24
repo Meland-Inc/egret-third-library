@@ -348,7 +348,7 @@ function addStrings(node, add) {
     }));
 }
 
-function mangle_properties(ast, options) {
+function mangle_properties(ast, options, mangleMap) {
     options = defaults(options, {
         builtins: false,
         cache: null,
