@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="600,491">
+  <controller name="ctrlLogin" pages="0,qr,1,account" selected="1"/>
+  <displayList>
+    <image id="n3_mlau" name="imgSigninBG" src="k3wpcyiiz" fileName="img/img_cm_cbd.png" pkg="te1gxawo" xy="0,0" size="600,491"/>
+    <component id="n12_mlau" name="btnReturn" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="507,14" size="64,64">
+      <relation target="n3_mlau" sidePair="right-right,top-top"/>
+      <Button icon="ui://te1gxawooiqdcyih2"/>
+    </component>
+    <component id="n15_mlau" name="btnQR" src="j70wcyihy" fileName="btn/rbtnCommonTopTab.xml" pkg="te1gxawo" xy="3,-48" group="n18_mlau">
+      <Button title="扫码登录" controller="ctrlLogin" page="0"/>
+    </component>
+    <component id="n16_mlau" name="btnAccount" src="j70wcyihy" fileName="btn/rbtnCommonTopTab.xml" pkg="te1gxawo" xy="135,-48" group="n18_mlau">
+      <Button checked="true" title="账号登录" controller="ctrlLogin" page="1"/>
+    </component>
+    <group id="n18_mlau" name="grpTabs" xy="3,-48" size="252,48" advanced="true" layout="hz" colGap="12"/>
+    <component id="n11_mlau" name="btnSignin" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="30,380" size="540,72" group="n19_mlau">
+      <relation target="n3_mlau" sidePair="center-center,bottom-bottom"/>
+      <Button title="登录" titleColor="#ffffff" titleFontSize="42" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <image id="n8_mlau" name="n8" src="ntkm5" fileName="img/img_log_user.png" xy="57,124" size="50,50" group="n19_mlau">
+      <relation target="n4_mlau" sidePair="left-left,middle-middle"/>
+    </image>
+    <image id="n9_mlau" name="n9" src="ntkm4" fileName="img/img_log_pas.png" xy="57,216" size="50,50" group="n19_mlau">
+      <relation target="n7_mlau" sidePair="left-left,middle-middle"/>
+    </image>
+    <component id="n4_mlau" name="tfAccount" src="tcg1s" fileName="com/ComLoginInput.xml" xy="31,116" group="n19_mlau">
+      <relation target="n3_mlau" sidePair="center-center,top-top"/>
+    </component>
+    <text id="n5_mlau" name="tfErrorInSignin" xy="31,291" size="222,39" group="n19_mlau" visible="false" font="方正准圆简体" fontSize="30" color="#ff676d" vAlign="middle" bold="true" text="账号或密码错误">
+      <relation target="n3_mlau" sidePair="left-left,top-top"/>
+    </text>
+    <component id="n7_mlau" name="tfPassword" src="pnmu4g" fileName="com/ComLoginPassword.xml" xy="31,209" group="n19_mlau">
+      <relation target="n3_mlau" sidePair="center-center,top-top"/>
+    </component>
+    <group id="n19_mlau" name="gtpAccount" xy="30,116" size="541,336" advanced="true">
+      <gearDisplay controller="ctrlLogin" pages="1"/>
+    </group>
+    <loader id="n27_mlau" name="ladQR" xy="150,50" size="300,300" group="n29_mlau" align="center" vAlign="middle" fill="scaleMatchWidth">
+      <gearDisplay controller="ctrlLogin" pages="0"/>
+    </loader>
+    <component id="n28_mlau" name="btnRefresh" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="30,380" size="540,72" group="n29_mlau">
+      <Button title="刷新二维码" titleColor="#ffffff" titleFontSize="42" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <group id="n29_mlau" name="n29" xy="30,50" size="540,402"/>
+  </displayList>
+</component>

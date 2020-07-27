@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1920,1080" designImage="ui://7daqie1jpnmu4h" adaptationTest="FitSize">
+<component size="1920,1080" designImage="ui://7daqie1jpnmu4h">
   <controller name="c1" pages="0,wait,1,normal" selected="1"/>
   <controller name="c2" pages="0,,1," selected="0"/>
   <controller name="ctrlRegister" pages="0,normal,1,mail" selected="0"/>
@@ -66,7 +66,7 @@
       <relation target="n104_tcg1" sidePair="top-top,right-right"/>
       <Button title="普通注册" titleColor="#7dcd4a" titleFontSize="30" controller="ctrlRegister" page="0"/>
     </component>
-    <group id="n123_tcg1" name="loginGroup" xy="4000,256" size="600,567" advanced="true">
+    <group id="n123_tcg1" name="loginGroup" xy="4000,256" size="600,567" advanced="true" collapsed="true">
       <gearDisplay controller="c1" pages="1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
@@ -95,7 +95,7 @@
       <Button title="注册" titleColor="#ffffff" titleFontSize="42" icon="ui://te1gxawooiqdcyih3"/>
     </component>
     <component id="n174_tcg1" name="btnSignin" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="4031,623" size="540,72" group="n137_tcg1">
-      <gearXY controller="ctrlAllowRegister" pages="1" values="4031,673" default="4031,623"/>
+      <gearXY controller="ctrlAllowRegister" pages="0,1" values="4031,623|4031,673"/>
       <relation target="n124_tcg1" sidePair="bottom-bottom,center-center"/>
       <Button title="登录" titleColor="#ffffff" titleFontSize="42" icon="ui://te1gxawooiqdcyih1"/>
     </component>
@@ -142,18 +142,24 @@
       <gearDisplay controller="c1" pages="1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <component id="n189_t3kc" name="btnAccountLogin" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1026,890" size="300,88" group="n160_tcg1">
-      <gearXY controller="ctrlAllowRegister" pages="0,1" values="1026,890|796,890"/>
+    <component id="n199_mlau" name="comPlatform" src="mlau4m" fileName="com/ComPlatformLogin.xml" xy="4000,256"/>
+    <component id="n194_a544" name="fixPos" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="835,890" size="300,88" group="n160_tcg1" hideByEditor="true" visible="false">
       <Button title="账号登陆" titleColor="#ffffff" titleFontSize="36" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <component id="n190_t3kc" name="btnVisitorLogin" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="566,890" size="300,88" group="n160_tcg1">
+    <component id="n190_t3kc" name="btnVisitorLogin" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="390,890" size="300,88" group="n197_mlau">
       <gearDisplay controller="ctrlAllowRegister" pages="0"/>
       <Button title="快速登录" titleColor="#ffffff" titleFontSize="36" icon="ui://te1gxawoeggjcyihf"/>
     </component>
-    <component id="n194_a544" name="fixPos" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1026,890" size="300,88" group="n160_tcg1" hideByEditor="true" visible="false">
-      <Button title="账号登陆" titleColor="#ffffff" titleFontSize="36" icon="ui://te1gxawooiqdcyih1"/>
+    <component id="n189_t3kc" name="btnPlatformLogin" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="810,890" size="300,88" group="n197_mlau">
+      <gearXY controller="ctrlAllowRegister" pages="0,1" values="810,890|1159,890"/>
+      <Button title="账号登录" titleColor="#ffffff" titleFontSize="36" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <group id="n160_tcg1" name="selectModeGroup" xy="566,890" size="760,88" advanced="true">
+    <component id="n195_mlau" name="btnAccountLogin" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1230,890" size="300,88" group="n197_mlau">
+      <gearXY controller="ctrlAllowRegister" pages="0,1" values="1230,890|739,890"/>
+      <Button title="内部登录" titleColor="#ffffff" titleFontSize="36" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <group id="n197_mlau" name="n197" xy="390,890" size="1140,88" group="n160_tcg1"/>
+    <group id="n160_tcg1" name="selectModeGroup" xy="390,890" size="1140,88" advanced="true">
       <gearDisplay controller="c1" pages="1"/>
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </group>
@@ -206,10 +212,16 @@
     <item time="0" type="XY" target="n137_tcg1" tween="true" startValue="660,-" endValue="2332,-" duration="12" ease="Linear"/>
     <item time="0" type="XY" target="n151_tcg1" tween="true" startValue="660,-" endValue="2332,-" duration="12" ease="Linear"/>
     <item time="0" type="XY" target="n160_tcg1" value="-2000,-"/>
-    <item time="6" type="XY" target="n160_tcg1" tween="true" startValue="-2000,-" endValue="593,-" duration="12" ease="Back.Out"/>
+    <item time="0" type="XY" target="n199_mlau" value="4000,256"/>
+    <item time="6" type="XY" target="n160_tcg1" tween="true" startValue="-2000,-" endValue="402,-" duration="12" ease="Back.Out"/>
     <item time="18" type="Alpha" target="n160_tcg1" value="1"/>
+    <item time="18" type="XY" target="n199_mlau" tween="true" startValue="4000,256" ease="Linear"/>
   </transition>
   <transition name="wait" autoPlay="true" autoPlayRepeat="-1">
     <item time="0" type="Rotation" target="n161_tcg1" tween="true" startValue="0" endValue="360" duration="23" ease="Linear"/>
+  </transition>
+  <transition name="toPlatform">
+    <item time="0" type="XY" target="n160_tcg1" tween="true" startValue="442.5,890" endValue="-2000,890" duration="12"/>
+    <item time="0" type="XY" target="n199_mlau" tween="true" startValue="4000,256" endValue="660,256" duration="12"/>
   </transition>
 </component>
