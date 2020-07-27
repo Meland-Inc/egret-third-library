@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://thvmj7vofv5tcyiio" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlPosType" pages="0,scene,1,natural" selected="1"/>
+  <controller name="ctrlPosType" pages="0,scene,1,natural" selected="0"/>
   <controller name="ctrlPlayerName" pages="0,hide,1,show" selected="1"/>
   <displayList>
     <loader id="n100_ebc0" name="ladBg" xy="0,0" size="1920,1080" fill="scaleFree">
@@ -68,18 +68,18 @@
       <relation target="n113_d9s4" sidePair="rightext-right"/>
       <Button checked="true" icon="ui://makcczvjfv5t2o" controller="ctrlPlayerName" page="1"/>
     </component>
-    <text id="n113_d9s4" name="tfShowPlayerName" xy="26,956" size="164,29" group="n114_d9s4" fontSize="20" color="#ffffff" align="center" vAlign="middle" vars="true" text="玩家名称（显示）">
-      <gearText controller="ctrlPlayerName" pages="0" values="玩家名称（隐藏）" default="玩家名称（显示）"/>
+    <text id="n113_d9s4" name="tfShowPlayerName" xy="26,956" size="164,29" group="n114_d9s4" fontSize="20" color="#ffffff" align="center" vAlign="middle" vars="true" text="角色名称（显示）">
+      <gearText controller="ctrlPlayerName" pages="0,1" values="角色名称（隐藏）|角色名称（显示）"/>
     </text>
     <group id="n114_d9s4" name="playerNameGroup" xy="23,948" size="171,40" advanced="true">
       <relation target="" sidePair="bottom-bottom"/>
     </group>
     <component id="n97_sod9" name="btnChangePosType" src="oliri6s" fileName="old/btn/tbtnScale.xml" pkg="te1gxawo" xy="21,1014" size="277,40" group="n28_11e02">
       <relation target="n99_sod9" sidePair="rightext-right"/>
-      <Button checked="true" icon="ui://makcczvjfv5t2o" controller="ctrlPosType" page="1"/>
+      <Button icon="ui://makcczvjfv5t2o" controller="ctrlPosType" page="1"/>
     </component>
     <image id="n98_sod9" name="imgPosIcon" src="fv5t2n" fileName="img/icon_map_zb.png" xy="23,1002" group="n28_11e02"/>
-    <text id="n99_sod9" name="tfPos" xy="64,1022" size="192,29" group="n28_11e02" fontSize="20" color="#ffffff" align="center" vAlign="middle" vars="true" text="自然坐标  ({x=999} , {y=999})">
+    <text id="n99_sod9" name="tfPos" xy="64,1022" size="192,29" group="n28_11e02" fontSize="20" color="#ffffff" align="center" vAlign="middle" vars="true" text="场景坐标  ({row=999} , {col=999})">
       <gearText controller="ctrlPosType" pages="0,1" values="场景坐标  ({row=999} , {col=999})|自然坐标  ({x=999} , {y=999})"/>
     </text>
     <group id="n28_11e02" name="posGroup" xy="21,1002" size="277,52" advanced="true">
