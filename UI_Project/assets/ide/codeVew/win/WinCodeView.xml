@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" opaque="false" designImage="ui://thvmj7voen7j4cyij9" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlStatus" pages="2,none,1,clone,0,elem,6,res" selected="3">
+  <controller name="ctrlStatus" pages="2,none,1,clone,0,elem,6,res" selected="0">
     <action type="change_page" fromPage="" toPage="2" objectId="n32_g61s" controller="ctrlStatus" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n32_g61s" controller="ctrlStatus" targetPage="1"/>
     <action type="change_page" fromPage="" toPage="6" objectId="n32_g61s" controller="ctrlStatus" targetPage="4"/>
@@ -35,7 +35,7 @@
     </component>
     <image id="n36_jcqo" name="imgQuillBG" src="umtscyiik" fileName="img/img_cm_zzdt.png" pkg="te1gxawo" xy="956,0" size="963,1080" group="n16_en7j">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
-      <relation target="n1_s45w" sidePair="left-left,top-top"/>
+      <relation target="n1_s45w" sidePair="top-top,leftext-left"/>
     </image>
     <component id="n34_n82e" name="comQuillInput" src="n82ewcyil3" fileName="codeVew/com/ComQuillInput.xml" xy="1116,352" size="672,375" group="n16_en7j">
       <relation target="n1_s45w" sidePair="center-center,middle-middle"/>
@@ -47,7 +47,7 @@
     <group id="n16_en7j" name="root" xy="0,-1" size="1923,1085" advanced="true">
       <gearDisplay controller="ctrlStatus" pages="0"/>
     </group>
-    <component id="n4_lctb" name="btnExit" src="fn8fcyijz" fileName="btn/btnIde.xml" pkg="oyity675" xy="841,981">
+    <component id="n4_lctb" name="btnExit" src="fn8fcyijz" fileName="btn/btnIde.xml" pkg="oyity675" xy="1605,981">
       <gearDisplay controller="ctrlStatus" pages="0"/>
       <gearXY controller="ctrlStatus" pages="2,1" values="1605,981|1605,981" default="841,981"/>
       <relation target="n1_s45w" sidePair="bottom-bottom,right-left"/>
