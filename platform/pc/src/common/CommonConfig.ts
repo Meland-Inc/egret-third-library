@@ -153,12 +153,19 @@ class CommonConfig {
         }
 
         let data = fs.readFileSync(this.globalConfigPath, 'utf-8');
-        const globalConfig = JSON.parse(data);
+        const globalConfig: IGlobalConfig = JSON.parse(data);
         this._environName = globalConfig.environName;
         this._patchUrl = globalConfig.patchUrl;
         this._packageUrl = globalConfig.packageUrl;
         this._policyUrl = globalConfig.policyUrl;
     }
+}
+
+interface IGlobalConfig {
+    environName: CommonDefine.eEnvironName;
+    patchUrl: string,
+    packageUrl: string,
+    policyUrl: string
 }
 
 let commonConfig: CommonConfig = new CommonConfig();

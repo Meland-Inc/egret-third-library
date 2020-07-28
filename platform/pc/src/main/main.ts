@@ -313,6 +313,7 @@ function initNativeMode(router: CommonDefine.eLessonRouter): void {
       mainModel.setNativeMode(CommonDefine.eNativeMode.prestigeMap);
       break;
     default:
+      mainWindow.setFullScreen(false);
       mainModel.setNativeMode(CommonDefine.eNativeMode.platform);
       break;
   }
