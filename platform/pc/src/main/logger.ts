@@ -10,6 +10,7 @@ import commonConfig from '../common/CommonConfig';
 import MsgId from '../common/MsgId';
 
 import message from './Message';
+import { CommonDefine } from '../common/CommonDefine';
 
 export namespace logger {
     let processLogContent: string = '';
@@ -40,11 +41,13 @@ export namespace logger {
 
     /** 打印日志 */
     export function log(tag: string, msg: string, ...args: any[]) {
+        message.sendIpcMsgNoLog(MsgId.sendMainLogToRenderer, CommonDefine.eLogType.log, tag, msg, ...args);
         webContentsLog(tag, msg, ...args);
     }
 
     /** 打印错误 */
     export function error(tag: string, msg: string, ...args: any[]) {
+        message.sendIpcMsgNoLog(MsgId.sendMainLogToRenderer, CommonDefine.eLogType.error, tag, msg, ...args);
         if (!commonConfig.isPackaged) {
             message.sendIpcMsg(MsgId.ERROR_REPORT, msg);
         }
@@ -53,11 +56,13 @@ export namespace logger {
 
     /** 打印警告 */
     export function warn(tag: string, msg: string, ...args: any[]) {
+        message.sendIpcMsgNoLog(MsgId.sendMainLogToRenderer, CommonDefine.eLogType.warn, tag, msg, ...args);
         webContentsLog(tag, msg, ...args);
     }
 
     /** 打印信息 */
     export function info(tag: string, msg: string, ...args: any[]) {
+        message.sendIpcMsgNoLog(MsgId.sendMainLogToRenderer, CommonDefine.eLogType.info, tag, msg, ...args);
         webContentsLog(tag, msg, ...args);
     }
 

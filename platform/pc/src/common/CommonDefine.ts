@@ -2,7 +2,7 @@
  * @Author 雪糕
  * @Description 通用定义
  * @Date 2020-06-15 14:31:53
- * @FilePath \pc\src\common\Define.ts
+ * @FilePath \pc\src\common\CommonDefine.ts
  */
 export namespace CommonDefine {
     /** 分支枚举 */
@@ -61,6 +61,13 @@ export namespace CommonDefine {
     export enum eNativeServerPathname {
         serverState = "/serverState",       //服务器状态
         serverLog = "/serverLog",           //服务器上报日志
+    }
 
+    /** log类型 */
+    export enum eLogType {
+        log = 1,
+        error = 2,
+        warn = 3,
+        info = 4
     }
 }
