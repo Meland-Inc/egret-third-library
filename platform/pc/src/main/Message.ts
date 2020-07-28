@@ -56,9 +56,9 @@ class Message {
     /** 通过webContents发送消息 */
     private webContentsSendMsg(showLog: boolean, msgId: string, ...args: unknown[]): void {
         if (!mainModel.mainWindow) return;
-        if (mainModel.mainWindow.isDestroyed) return;
+        if (mainModel.mainWindow.isDestroyed()) return;
         if (!mainModel.mainWindow.webContents) return;
-        if (mainModel.mainWindow.webContents.isDestroyed) return;
+        if (mainModel.mainWindow.webContents.isDestroyed()) return;
 
         if (showLog) {
             logger.log('main', `发送主进程消息:${msgId} args`, ...args);
