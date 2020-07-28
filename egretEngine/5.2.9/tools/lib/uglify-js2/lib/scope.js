@@ -64,12 +64,12 @@ SymbolDef.prototype = {
     unmangleable: function (options) {
         return this.global && !options.toplevel
             || this.undeclared
-            || !options.eval && this.scope.pinned()
+            // || !options.eval && this.scope.pinned()
             || options.keep_fnames
             && (this.orig[0] instanceof AST_SymbolLambda
                 || this.orig[0] instanceof AST_SymbolDefun);
     },
-    mangle: function (options) {
+    mangle: function (options, mangleMap, renameMap) {
         var cache = options.cache && options.cache.props;
         if (this.global && cache && cache.has(this.name)) {
             this.mangled_name = cache.get(this.name);
@@ -78,7 +78,7 @@ SymbolDef.prototype = {
             if (def = this.redefined()) {
                 this.mangled_name = def.mangled_name || def.name;
             } else {
-                this.mangled_name = next_mangled_name(this.scope, options, this);
+                this.mangled_name = next_mangled_name(this.scope, options, this, mangleMap, renameMap);
             }
             if (this.global && cache) {
                 cache.set(this.name, this.mangled_name);
@@ -329,7 +329,7 @@ function names_in_use(scope, options) {
     return names;
 }
 
-function next_mangled_name(scope, options, def) {
+function next_mangled_name(scope, options, def, mangleMap, renameMap) {
     var in_use = names_in_use(scope, options);
     var holes = scope.cname_holes;
     var names = Object.create(null);
@@ -351,6 +351,12 @@ function next_mangled_name(scope, options, def) {
         if (names[name]) continue;
         holes.splice(i, 1);
         scope.names_in_use[name] = true;
+        if (renameMap[def.name]) {
+            var oriName = renameMap[def.name]
+            if (!mangleMap[oriName]) {
+                mangleMap[oriName] = name;
+            }
+        }
         return name;
     }
     while (true) {
@@ -360,6 +366,12 @@ function next_mangled_name(scope, options, def) {
         holes.push(scope.cname);
     }
     scope.names_in_use[name] = true;
+    if (renameMap[def.name]) {
+        var oriName = renameMap[def.name]
+        if (!mangleMap[oriName]) {
+            mangleMap[oriName] = name;
+        }
+    }
     return name;
 }
 
@@ -398,7 +410,7 @@ function _default_mangler_options(options) {
     return options;
 }
 
-AST_Toplevel.DEFMETHOD("mangle_names", function (options) {
+AST_Toplevel.DEFMETHOD("mangle_names", function (options, mangleMap, renameMap) {
     options = _default_mangler_options(options);
 
     // We only need to mangle declaration nodes.  Special logic wired
@@ -460,7 +472,7 @@ AST_Toplevel.DEFMETHOD("mangle_names", function (options) {
     function mangle(def) {
         if (options.reserved.has[def.name]) return;
         if (def.name.match(/Table$/)) return;
-        def.mangle(options);
+        def.mangle(options, mangleMap, renameMap);
     }
 
     function defer_redef(def, node) {
@@ -502,7 +514,7 @@ AST_Toplevel.DEFMETHOD("find_colliding_names", function (options) {
     }
 });
 
-AST_Toplevel.DEFMETHOD("expand_names", function (options) {
+AST_Toplevel.DEFMETHOD("expand_names", function (options, renameMap) {
     base54.reset();
     base54.sort();
     options = _default_mangler_options(options);
@@ -530,6 +542,7 @@ AST_Toplevel.DEFMETHOD("expand_names", function (options) {
         var redef = def.redefined();
         var name = redef ? redef.rename || redef.name : next_name();
         def.rename = name;
+        renameMap[name] = def.name;
         def.orig.forEach(function (sym) {
             sym.name = name;
         });
