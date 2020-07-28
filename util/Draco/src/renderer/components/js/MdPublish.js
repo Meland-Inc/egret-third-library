@@ -105,7 +105,7 @@ export async function publishProject() {
                 //reserve
             }
             if (regCodeVersion) {
-                configContent = configContent.replace(regCodeVersion, `public static ${codeVersionName} = "${ModelMgr.versionModel.releaseVersion}";`);
+                configContent = configContent.replace(regCodeVersion, `public static ${codeVersionName}: string = "${ModelMgr.versionModel.releaseVersion}";`);
             }
 
             let regTrunkName = /public static trunkName: eTrunkName = .*?;/;
