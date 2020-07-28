@@ -44,18 +44,26 @@ class Message {
     }
 
     /** 发送主进程消息 */
-    public sendIpcMsg(msgId: string, ...args: unknown[]) {
-        if (!mainModel.mainWindow) {
-            logger.error('main', `发送主进程消息失败:${msgId} config.mainWindow不存在 args`, ...args);
-            return;
+    public sendIpcMsg(msgId: string, ...args: unknown[]): void {
+        this.webContentsSendMsg(true, msgId, ...args);
+    }
+
+    /** 发送主进程消息, 不打印log信息*/
+    public sendIpcMsgNoLog(msgId: string, ...args: unknown[]): void {
+        this.webContentsSendMsg(false, msgId, ...args);
+    }
+
+    /** 通过webContents发送消息 */
+    private webContentsSendMsg(showLog: boolean, msgId: string, ...args: unknown[]): void {
+        if (!mainModel.mainWindow) return;
+        if (mainModel.mainWindow.isDestroyed) return;
+        if (!mainModel.mainWindow.webContents) return;
+        if (mainModel.mainWindow.webContents.isDestroyed) return;
+
+        if (showLog) {
+            logger.log('main', `发送主进程消息:${msgId} args`, ...args);
         }
 
-        if (!mainModel.mainWindow.webContents) {
-            logger.error('main', `发送主进程消息失败:${msgId} config.mainWindow.webContents不存在 args`, ...args);
-            return;
-        }
-
-        logger.log('main', `发送主进程消息:${msgId} args`, ...args);
         mainModel.mainWindow.webContents.send(IpcChannel.MAIN_PROCESS_MESSAGE, msgId, ...args);
     }
 

@@ -83,5 +83,6 @@ export default class MsgId {
     /** 进入模板地图房间 */
     public static readonly enterMapTemplateRoom: string = "enterMapTemplateRoom";
 
-
+    /** 发送主进程log到渲染进程 */
+    public static readonly sendMainLogToRenderer: string = "sendMainLogToRenderer";
 }

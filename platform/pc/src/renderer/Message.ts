@@ -50,6 +50,7 @@ class Message {
         this.msgMap[MsgId.CHECK_PACKAGE_UPDATE] = this.checkPackageUpdate.bind(this);
         this.msgMap[MsgId.GET_NATIVE_POLICY_VERSION] = this.onGetNativePolicyVersion.bind(this);
         this.msgMap[MsgId.ERROR_REPORT] = this.onErrorReport.bind(this);
+        this.msgMap[MsgId.sendMainLogToRenderer] = this.onSendMainLogToRenderer.bind(this);
     }
 
     /** 发送渲染进程消息 */
@@ -101,6 +102,26 @@ class Message {
     private onErrorReport(content: string) {
         logger.log('errorReport', `收到错误上报:${content}`);
         errorReport.error(content);
+    }
+
+    private onSendMainLogToRenderer(logType: CommonDefine.eLogType, tag: string, msg: string, ...args: any[]) {
+        switch (logType) {
+            case CommonDefine.eLogType.log:
+                logger.log(tag, msg, ...args);
+                break;
+            case CommonDefine.eLogType.error:
+                logger.error(tag, msg, ...args);
+                break;
+            case CommonDefine.eLogType.warn:
+                logger.warn(tag, msg, ...args);
+                break;
+            case CommonDefine.eLogType.info:
+                logger.info(tag, msg, ...args);
+                break;
+            default:
+                logger.log(tag, msg, ...args);
+                break;
+        }
     }
 
     /** 检查游戏包更新 */
