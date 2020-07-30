@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="79,67" extention="Button" designImageAlpha="0" designImageLayer="1">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <controller name="ctrlOrientation" exported="true" pages="0,right,1,left" selected="0"/>
+  <controller name="ctrlType" pages="0,running,1,stop" selected="0"/>
+  <displayList>
+    <image id="n0_fn8f" name="imgBg" src="puqxwcyim9" fileName="codeVew/img/bg.png" xy="39,33" pivot="0.5,0.5" anchor="true">
+      <gearLook controller="ctrlOrientation" pages="1" values="1,180,0,0" default="1,0,0,0"/>
+    </image>
+    <loader id="n2_fn8f" name="icon" xy="0,0" pivot="0.5,0.5" size="79,67" url="ui://ti9jag5tpuqxwcyim6" align="center" vAlign="middle" playing="false">
+      <gearSize controller="button" pages="0,1" values="79,67,1,1|79,67,0.9,0.9"/>
+      <gearIcon controller="ctrlType" pages="0,1" values="ui://ti9jag5tpuqxwcyim6|ui://ti9jag5tpuqxwcyim5"/>
+    </loader>
+  </displayList>
+  <Button/>
+</component>
