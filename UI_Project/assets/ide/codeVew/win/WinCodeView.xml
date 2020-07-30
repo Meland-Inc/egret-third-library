@@ -39,7 +39,7 @@
     </component>
     <image id="n36_jcqo" name="imgQuillBG" src="umtscyiik" fileName="img/img_cm_zzdt.png" pkg="te1gxawo" xy="956,0" size="963,1080" group="n16_en7j">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
-      <relation target="n1_s45w" sidePair="left-left,top-top"/>
+      <relation target="n1_s45w" sidePair="top-top,leftext-left"/>
     </image>
     <component id="n34_n82e" name="comQuillInput" src="n82ewcyil3" fileName="codeVew/com/ComQuillInput.xml" xy="1116,352" size="672,375" group="n16_en7j">
       <relation target="n1_s45w" sidePair="center-center,middle-middle"/>

@@ -14,6 +14,12 @@
           color="orange500"
           @click="onUploadVersionFile"
         >上传游戏版本</mu-button>
+        <mu-button
+          v-loading="isUploadMangleMapFileLoading"
+          data-mu-loading-size="24"
+          color="blue500"
+          @click="onUploadMangleMapFile"
+        >上传混淆映射文件</mu-button>
         <mu-divider></mu-divider>
         <mu-button
           v-loading="isCreatePolicyFileLoading"
@@ -128,6 +134,7 @@ export default {
     return {
       isZipVersionLoading: false,
       isUploadVersionLoading: false,
+      isUploadMangleMapFileLoading: false,
       isCreatePolicyFileLoading: false,
       isModifyPolicyNumLoading: false,
       isUploadPolicyLoading: false,
@@ -229,6 +236,21 @@ export default {
         Global.hideRegionLoading();
       }
     },
+    async onUploadMangleMapFile(showDialog = true) {
+      this.isUploadMangleMapFileLoading = true;
+      Global.showRegionLoading();
+      try {
+        await mdFtp.uploadMangleMapFile();
+        this.isUploadMangleMapFileLoading = false;
+        Global.hideRegionLoading();
+        if (showDialog) {
+          Global.dialog("上传混淆映射文件成功");
+        }
+      } catch (error) {
+        this.isUploadMangleMapFileLoading = false;
+        Global.hideRegionLoading();
+      }
+    },
     async onCreatePolicyFile() {
       this.isCreatePolicyFileLoading = true;
       Global.showRegionLoading();
@@ -298,6 +320,7 @@ export default {
       try {
         await this.onZipVersion();
         await this.onUploadVersionFile(false);
+        await this.onUploadMangleMapFile(false);
         await this.onCreatePolicyFile();
         await this.onModifyPolicyFile();
         await this.onUploadPolicyFile();

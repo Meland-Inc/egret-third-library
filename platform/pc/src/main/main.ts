@@ -217,6 +217,12 @@ function onCrashed() {
 /** 监听窗口关闭前 */
 async function onClose(e: Event) {
   e.preventDefault();		//阻止默认行为，一定要有
+  //如果安装native更新包,不用提示,直接退出
+  if (mainModel.isQuitAndInstall) {
+    app.exit();
+    return;
+  }
+
   let index = dialog.showMessageBoxSync(mainWindow, {
     type: 'info',
     title: '提示',
@@ -313,6 +319,7 @@ function initNativeMode(router: CommonDefine.eLessonRouter): void {
       mainModel.setNativeMode(CommonDefine.eNativeMode.prestigeMap);
       break;
     default:
+      mainWindow.setFullScreen(false);
       mainModel.setNativeMode(CommonDefine.eNativeMode.platform);
       break;
   }

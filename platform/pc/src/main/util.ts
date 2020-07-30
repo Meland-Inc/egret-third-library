@@ -305,17 +305,4 @@ export namespace util {
             return null;
         }
     };
-
-    /** 执行渲染层js代码 */
-    export function executeJavaScript(code: string, showError: boolean = true) {
-        try {
-            if (mainModel.mainWindow && mainModel.mainWindow.isEnabled && mainModel.mainWindow.webContents) {
-                mainModel.mainWindow.webContents.executeJavaScript(code);
-            }
-        } catch (error) {
-            if (showError) {
-                logger.error('util', `执行js代码[ ${code} ]错误`, error);
-            }
-        }
-    }
 }

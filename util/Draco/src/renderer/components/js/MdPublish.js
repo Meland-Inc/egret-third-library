@@ -96,16 +96,16 @@ export async function publishProject() {
             let codeVersionName;
             let regCodeVersion;
             if (ModelMgr.versionModel.curEnviron.name === ModelMgr.versionModel.eEnviron.beta) {
-                regCodeVersion = /public static betaCodeVersion = ".*?";/;
+                regCodeVersion = /public static betaCodeVersion: string = ".*?";/;
                 codeVersionName = "betaCodeVersion";
             } else if (ModelMgr.versionModel.curEnviron.name === ModelMgr.versionModel.eEnviron.ready) {
-                regCodeVersion = /public static releaseCodeVersion = ".*?";/;
+                regCodeVersion = /public static releaseCodeVersion: string = ".*?";/;
                 codeVersionName = "releaseCodeVersion";
             } else {
                 //reserve
             }
             if (regCodeVersion) {
-                configContent = configContent.replace(regCodeVersion, `public static ${codeVersionName} = "${ModelMgr.versionModel.releaseVersion}";`);
+                configContent = configContent.replace(regCodeVersion, `public static ${codeVersionName}: string = "${ModelMgr.versionModel.releaseVersion}";`);
             }
 
             let regTrunkName = /public static trunkName: eTrunkName = .*?;/;

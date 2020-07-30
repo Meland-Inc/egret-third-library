@@ -348,7 +348,7 @@ function addStrings(node, add) {
     }));
 }
 
-function mangle_properties(ast, options) {
+function mangle_properties(ast, options, mangleMap) {
     options = defaults(options, {
         builtins: false,
         cache: null,
@@ -460,6 +460,7 @@ function mangle_properties(ast, options) {
             } while (!can_mangle(mangled));
             cache.set(name, mangled);
         }
+        mangleMap[name] = mangled;
         return mangled;
     }
 
