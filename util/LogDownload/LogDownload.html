@@ -55,6 +55,7 @@
                     // jqXHR.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
                 },
                 success: function (data) {
+                    fileArry = [];
                     $(data).find("a").each(function () {
                         let fileDetail = {};
                         fileDetail.fileName = unescape($(this).attr("href"));
