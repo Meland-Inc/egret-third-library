@@ -63,14 +63,22 @@
                         fileDetail.fileName = unescape($(this).attr("href"));
                         // fileDetail.fileName = unescape($(this).attr("href").slice(12));
                         if (fileDetail.fileName) {
-                            fileDetail.playerName = fileDetail.fileName.slice(0, fileDetail.fileName.indexOf('_'));
-                            let startIndex = fileDetail.fileName.lastIndexOf('_');
-                            let endIndex = fileDetail.fileName.indexOf('.');
-                            let valueTimeInfoArr = fileDetail.fileName.slice(startIndex + 1, endIndex).split('-');
-                            let time = new Date();
-                            time.setFullYear(+valueTimeInfoArr[0], +valueTimeInfoArr[1] - 1, +valueTimeInfoArr[2]);
-                            time.setHours(0, 0, 0);
-                            fileDetail.time = time;
+                            //旧time =${date.getFullYear()}-${month}-${date.getDate()}-${hour}:${minutes}:${date.getSeconds()}
+                            //新time =${date.getFullYear()}-${month}-${date.getDate()}_${hour}:${minutes}:${date.getSeconds()}
+                            // playerID + "_" + svrSnode + "_" + channelID + "_" + time + ".txt"
+                            let reg = new RegExp(`(.*)_(.*)_(.*)_(.*)[-|_](.*)\.txt`, 'g');
+                            let execArr = reg.exec(fileDetail.fileName);
+                            if (execArr) {
+                                fileDetail.playerName = execArr[1];
+                                let dateReg = new RegExp(`(.*)-(.*)-(.*)`, 'g');
+                                let dateArr = dateReg.exec(execArr[4]);
+                                if (dateArr) {
+                                    let time = new Date();
+                                    time.setFullYear(+dateArr[1], +dateArr[2] - 1, +dateArr[3]);
+                                    time.setHours(0, 0, 0);
+                                    fileDetail.time = time;
+                                }
+                            }
                             fileArry.push(fileDetail);
                         }
                     });
