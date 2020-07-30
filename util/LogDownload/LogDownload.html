@@ -143,16 +143,33 @@
         function download() {
             if (selectField.length > 0) {
                 var zip = new JSZip();
-                selectField.forEach((element, index) => {
-                    $.get(url + encodeURI(element.fileName)).success(function (content) {
-                        zip.file(unescape(element.fileName), content);
-                        if (index == selectField.length - 1) {
-                            zip.generateAsync({ type: "blob" }).then(function (content) {
-                                saveAs(content, search.value + '_' + timeRange.value + ".zip");
-                            });
-                        }
-                    });
-                });
+                let getFile = (fileInfo, index) => {
+                    $.get(url + encodeURI(fileInfo.fileName))
+                        .success(function (content) {
+                            zip.file(unescape(fileInfo.fileName), content);
+                            if (index == selectField.length - 1) {
+                                zip.generateAsync({ type: "blob" })
+                                    .then(function (content) {
+                                        saveAs(content, search.value + '_' + timeRange.value + ".zip");
+                                    })
+                                    .catch((data) => {
+                                        console.error(data);
+                                    })
+                            } else {
+                                getNextFile();
+                            }
+                        })
+                }
+                var fieldNum = selectField.length;
+                var curGetFile = 0;
+                let getNextFile = () => {
+                    if (curGetFile < fieldNum) {
+                        const fileInfo = selectField[curGetFile];
+                        getFile(fileInfo, curGetFile);
+                        curGetFile++;
+                    }
+                }
+                getNextFile();
             } else {
                 logView.innerHTML = '暂无可下载内容';
             }
