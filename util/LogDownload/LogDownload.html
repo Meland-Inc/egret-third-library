@@ -18,6 +18,7 @@
     <button id="download" type="button">Click Download!</button>
     <input id="search" placeholder="player name" />
     <input id="timeRange" placeholder="选择日期范围" />
+    <button id="find" type="button">搜索</button>
 
     <fieldset class="layui-elem-field">
         <legend>控制台</legend>
@@ -30,9 +31,10 @@
         let search = document.getElementById('search');
         let timeRange = document.getElementById('timeRange');
         let logView = document.getElementById('logView');
+        let findBtn = document.getElementById('find');
         let selectField = [];
 
-        search.onchange = findFile;
+        findBtn.onclick = findFile;
         btn.onclick = download;
         let fileArry = [];
 
@@ -78,7 +80,6 @@
         laydate.render({
             elem: '#timeRange'
             , range: true
-            , done: findFile
         });
 
         async function findFile(data) {
