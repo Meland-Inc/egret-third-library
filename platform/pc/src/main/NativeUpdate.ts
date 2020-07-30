@@ -12,6 +12,7 @@ import MsgId from '../common/MsgId';
 
 import { logger } from './logger';
 import message from './Message';
+import mainModel from './MainModel';
 
 export default class NativeUpdate {
     public checkUpdate(nativePolicyVersion: number) {
@@ -44,6 +45,7 @@ export default class NativeUpdate {
 
         autoUpdater.on('update-downloaded', (event, releaseNotes, releaseName, releaseDate, updateUrl, quitAndUpdate) => {
             logger.log('update', `下载完成,开始安装更新包`);
+            mainModel.setIsQuitAndInstall(true);
             autoUpdater.quitAndInstall();
         });
 

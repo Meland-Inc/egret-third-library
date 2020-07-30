@@ -280,6 +280,15 @@ class MainModel {
     public setBellplanetReady(value: boolean): void {
         this._bellplanetReady = value;
     }
+
+    private _isQuitAndInstall: boolean;
+    /** 是否安装native更新,调用退出native */
+    public get isQuitAndInstall(): boolean {
+        return this._isQuitAndInstall;
+    }
+    public setIsQuitAndInstall(value: boolean): void {
+        this._isQuitAndInstall = value;
+    }
 }
 
 let mainModel = new MainModel();
