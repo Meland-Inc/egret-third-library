@@ -658,6 +658,10 @@ export async function uploadNativeDmg() {
     let cdnRoot = `native/${environName}/${newNativePolicyNum}/${platform}`
     await tryUploadNativePkg(pkgPath, pkgName, cdnRoot);
 
+    let pkgZipName = `bellplanet-${nativeVersion}-mac.zip`;
+    let pkgZipPath = `${Global.pcProjectPath}/app/${pkgName}`;
+    await tryUploadNativePkg(pkgZipPath, pkgZipName, cdnRoot);
+
     let ymlName = `latest-mac.yml`;
     let ymlPath = `${Global.pcProjectPath}/app/${ymlName}`;
     await tryUploadNativePkg(ymlPath, ymlName, cdnRoot);
