@@ -44,7 +44,7 @@ export default class MsgId {
     /** 从客户端进入 */
     public static readonly START_NATIVE_CLIENT: string = "START_NATIVE_CLIENT";
 
-    /** 开始官网地址进入 */
+    /** 开始指定网址进入 */
     public static readonly START_NATIVE_WEBSITE: string = "START_NATIVE_WEBSITE";
 
     /** 开始平台进入 */
