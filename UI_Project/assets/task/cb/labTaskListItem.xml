@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="177,53" extention="Button" designImage="ui://2ctbbueld3lu71" designImageOffsetX="-599" designImageOffsetY="-388" designImageAlpha="0" designImageLayer="1">
+  <controller name="button" pages="2,up,3,down" selected="1"/>
+  <displayList>
+    <loader id="n3_edjp" name="icon" xy="0,3" size="174,50" url="ui://2ctbbueld3lu6p"/>
+    <loader id="n2_d3lu" name="imgArrow" xy="121,19" size="20,17" url="ui://2ctbbueld3lu6v" autoSize="true">
+      <gearIcon controller="button" pages="2" values="ui://2ctbbueld3lu6x" default="ui://2ctbbueld3lu6v"/>
+    </loader>
+    <text id="n1_d3lu" name="title" xy="8,3" size="113,50" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" singleLine="true" text="任务追踪"/>
+    <image id="n5_edjp" name="imgListBg" src="d3lu6h" fileName="img/taskPanel/bg_rwjm_08.png" xy="0,53" size="174,0">
+      <gearDisplay controller="button" pages="3"/>
+      <relation target="n6_edjp" sidePair="bottomext-bottom"/>
+    </image>
+    <list id="n6_edjp" name="lst" xy="12,53" size="150,0" margin="20,20,0,0" lineGap="15" defaultItem="ui://2ctbbueld3lu77" align="center" vAlign="middle" autoClearItems="true">
+      <gearDisplay controller="button" pages="3"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+  <Button mode="Radio"/>
+  <relation target="n5_edjp" sidePair="bottomext-bottom"/>
+</component>

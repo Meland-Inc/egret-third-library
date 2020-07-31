@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="122,64" designImage="ui://2ctbbueld3lu6y" designImageOffsetX="-825" designImageOffsetY="-501" designImageAlpha="0" designImageLayer="1">
+  <displayList>
+    <image id="n5_d3lu" name="n5" src="d3lu6j" fileName="img/taskPanel/bg_rwjm_10.png" xy="36,10"/>
+    <image id="n1_d3lu" name="n1" src="d3lu6i" fileName="img/taskPanel/bg_rwjm_09.png" xy="0,0"/>
+    <text id="n3_d3lu" name="tfProgress" xy="64,14" size="38,34" fontSize="24" color="#41c64a" align="center" vAlign="middle" vars="true" text="{cur=5}/{total=5}"/>
+    <loader id="n4_d3lu" name="icon" xy="5,6" size="52,52" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <image id="n2_d3lu" name="imgCompleted" src="d3lu6s" fileName="img/taskPanel/icon_rwjm_duihao.png" xy="3,4"/>
+  </displayList>
+</component>

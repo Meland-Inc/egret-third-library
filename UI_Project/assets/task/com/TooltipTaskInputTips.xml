@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="240,104">
+  <displayList>
+    <image id="n0_nk89" name="imgBg" src="jrwa7j" fileName="img/trace/bg_zzrw_03.png" xy="0,1" size="240,104">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <graph id="n3_fs09" name="gphTextBg" xy="0,0" size="240,0" visible="false" alpha="0.5" type="rect" lineSize="0" lineColor="#ff6699ff" fillColor="#ff6699ff"/>
+    <text id="n2_nk89" name="tfTips" xy="14,15" size="211,79" fontSize="18" leading="5" autoSize="height" text="test1&#xA;test2&#xA;test3"/>
+  </displayList>
+  <relation target="n2_nk89" sidePair="bottomext-bottom"/>
+</component>
