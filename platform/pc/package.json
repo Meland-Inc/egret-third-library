@@ -89,11 +89,11 @@
         ]
     },
     "dependencies": {
+        "@sentry/node": "5.20.1",
         "electron-updater": "^4.2.5",
         "form-data": "^3.0.0",
         "fs-extra": "^9.0.0",
         "node-stream-zip": "^1.9.2",
-        "raven-js": "^3.27.2",
         "request": "^2.88.0",
         "tough-cookie": "^4.0.0",
         "tree-kill": "^1.2.2"
