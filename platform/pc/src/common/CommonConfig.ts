@@ -2,7 +2,7 @@
  * @Author 雪糕
  * @Description 通用配置
  * @Date 2020-06-15 14:28:20
- * @FilePath \pc\src\common\Config.ts
+ * @FilePath \pc\src\common\CommonConfig.ts
  */
 
 import fs from 'fs';
@@ -25,6 +25,30 @@ class CommonConfig {
     /** demo */
     public readonly demoBellCodeUrl = "https://democm.wkcoding.com/";
 
+    /** release账号服务器 */
+    public readonly releaseAccountServer: string = "account.wkcoding.com";
+
+    /** ready账号服务器 */
+    public readonly readyAccountServer: string = "ready-account.wkcoding.com";
+
+    /** release服务器列表服务器 */
+    public readonly releaseServerListServer: string = "server-list.wkcoding.com";
+
+    /** ready服务器列表服务器 */
+    public readonly readyServerListServer: string = "ready-server-list.wkcoding.com";
+
+    /** release上传日志服务器 */
+    public readonly releaseUploadLogServer: string = "clientlog.wkcoding.com";
+
+    /** ready上传日志服务器 */
+    public readonly readyUploadLogServer: string = "ready-clientlog.wkcoding.com";
+
+    /** release平台接口地址 */
+    public readonly releaseBellApiOrigin: string = "api.bellcode.com";
+
+    /** ready平台地址接口 */
+    public readonly readyBellApiOrigin: string = "demoapi.wkcoding.com";
+
     /** 上传日志地址 */
     public readonly uploadLogUrl = `http://clientlog.wkcoding.com/nativeLogs`;
 
@@ -35,16 +59,16 @@ class CommonConfig {
     public readonly readyTokenDomain = `.wkcoding.com`;
 
     /** 上课模式渠道常量 */
-    public constChannelLesson = 'bian_lesson';
+    public readonly constChannelLesson = 'bian_lesson';
 
     /** 上课伪协议头 */
-    public constPseudoProtocol = 'bellplanet://';
+    public readonly constPseudoProtocol = 'bellplanet://';
 
     /** release环境客户端游戏包的地址 */
-    public releasePackageUrl: string = "bg-stage.wkcoding.com/clientPackages/ready";
+    public readonly releasePackageUrl: string = "bg-stage.wkcoding.com/clientPackages/ready";
 
     /** release环境客户端策略文件的地址 */
-    public releasePolicyUrl: string = "bg-stage.wkcoding.com/";
+    public readonly releasePolicyUrl: string = "bg-stage.wkcoding.com/";
 
     /** 程序根路径 */
     public _rootPath: string;

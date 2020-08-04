@@ -47,7 +47,7 @@ export namespace CommonDefine {
     /** native模式 */
     export enum eNativeMode {
         game = 1,    //c端游戏模式
-        website = 2,  //官网进入
+        website = 2,  //指定网址进入
         platform = 3, //b端平台上课模式(入口从平台进) 
         createMap = 4, //c端创造地图模式
         mapTemplate = 5, //c端地图模板模式

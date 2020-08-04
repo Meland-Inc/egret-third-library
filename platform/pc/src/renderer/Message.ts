@@ -270,11 +270,26 @@ class Message {
         this.loadRendererURL(url);
     }
 
-    /** 从官网地址进入 */
+    /** 从指定网址进入 */
     private onStartNativeWebsite() {
         this.checkClearLocalStorage();
 
-        const url = commonConfig.environName === CommonDefine.eEnvironName.release ? commonConfig.bellcodeUrl : commonConfig.demoBellCodeUrl;
+        // const url = commonConfig.environName === CommonDefine.eEnvironName.release ? commonConfig.bellcodeUrl : commonConfig.demoBellCodeUrl;
+        const url = new URL(`${commonConfig.clientPackagePath}/index.html`);
+        url.searchParams.set("fakeGameMode", "lessons");
+
+        if (commonConfig.environName === CommonDefine.eEnvironName.release) {
+            url.searchParams.set("accountServer", commonConfig.releaseAccountServer);
+            url.searchParams.set("serverListServer", commonConfig.releaseServerListServer);
+            url.searchParams.set("uploadLogServer", commonConfig.releaseUploadLogServer);
+            url.searchParams.set("bellApiOrigin", commonConfig.releaseBellApiOrigin);
+        } else {
+            url.searchParams.set("accountServer", commonConfig.readyAccountServer);
+            url.searchParams.set("serverListServer", commonConfig.readyServerListServer);
+            url.searchParams.set("uploadLogServer", commonConfig.readyUploadLogServer);
+            url.searchParams.set("bellApiOrigin", commonConfig.readyBellApiOrigin);
+        }
+
         this.loadRendererURL(url);
     }
 

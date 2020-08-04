@@ -193,9 +193,9 @@ class Message {
         this.sendIpcMsg(MsgId.START_NATIVE_URL, newUrl.toString());
     }
 
-    /** 官网地址进入 */
+    /** 指定网址进入 */
     private startNativeWebsite() {
-        logger.log('update', `从官网地址进入`);
+        logger.log('update', `从指定网址进入`);
 
         this.sendIpcMsg(MsgId.START_NATIVE_WEBSITE);
     }
