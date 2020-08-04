@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="471,356" designImage="ui://thvmj7voqtcl4cyik0" designImageOffsetX="-725" designImageOffsetY="-362">
+  <controller name="ctrlLogin" pages="0,qr,1,account" selected="0"/>
+  <controller name="ctrlQR" pages="0,normal,1,timeout" selected="1"/>
+  <displayList>
+    <image id="n3_mlau" name="imgSigninBG" src="qtcl4p" fileName="img/bg_pingtai_03.png" xy="0,0" size="471,356"/>
+    <component id="n12_mlau" name="btnReturn" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="420,10" size="35,35">
+      <relation target="n3_mlau" sidePair="right-right,top-top"/>
+      <Button icon="ui://7daqie1jqtcl4w"/>
+    </component>
+    <component id="n15_mlau" name="btnQR" src="qtcl4n" fileName="btn/rBtnLoginType.xml" xy="98,31">
+      <Button checked="true" title="扫码登录" controller="ctrlLogin" page="0"/>
+    </component>
+    <component id="n16_mlau" name="btnAccount" src="qtcl4n" fileName="btn/rBtnLoginType.xml" xy="251,31">
+      <Button title="账号登录" controller="ctrlLogin" page="1"/>
+    </component>
+    <component id="n11_mlau" name="btnSignin" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="153,284" size="166,50" group="n19_mlau">
+      <relation target="n3_mlau" sidePair="center-center,bottom-bottom"/>
+      <Button title="登录" titleColor="#ffffff" titleFontSize="24" icon="ui://7daqie1jqtcl4o"/>
+    </component>
+    <component id="n4_mlau" name="tfAccount" src="tcg1s" fileName="com/ComLoginInput.xml" xy="55,127" size="334,16" group="n19_mlau">
+      <relation target="n3_mlau" sidePair="center-center,top-top"/>
+      <Label prompt="[color=#b2b2b2]请输入你的账号[/color]"/>
+    </component>
+    <text id="n5_mlau" name="tfErrorInSignin" xy="51,238" size="124,23" group="n19_mlau" visible="false" font="方正准圆简体" fontSize="16" color="#ff676d" vAlign="middle" bold="true" text="账号或密码错误">
+      <relation target="n3_mlau" sidePair="left-left,top-top"/>
+    </text>
+    <component id="n7_mlau" name="tfPassword" src="pnmu4g" fileName="com/ComLoginPassword.xml" xy="55,181" size="334,16" group="n19_mlau">
+      <relation target="n3_mlau" sidePair="center-center,top-top"/>
+      <Label prompt="[color=#b2b2b2]密码[/color]"/>
+    </component>
+    <text id="n31_b4s7" name="n31" xy="85,87" size="283,23" group="n19_mlau" fontSize="16" color="#6d6d6d" text="*若还没有账号,请用微信扫一扫登录哦~"/>
+    <group id="n19_mlau" name="gtpAccount" xy="51,87" size="338,247" advanced="true">
+      <gearDisplay controller="ctrlLogin" pages="1"/>
+    </group>
+    <image id="n32_b4s7" name="n32" src="qtcl4s" fileName="img/bg_saoma_03.png" xy="163,92" group="n29_mlau"/>
+    <loader id="n27_mlau" name="ladQR" xy="167,96" size="138,138" group="n29_mlau" align="center" vAlign="middle" fill="scaleMatchWidth">
+      <gearDisplay controller="ctrlLogin" pages="0"/>
+    </loader>
+    <text id="n33_b4s7" name="n33" xy="137,252" size="197,23" group="n35_b4s7" fontSize="16" color="#6d6d6d" text="使用微信扫一扫登录或注册"/>
+    <text id="n34_b4s7" name="n34" xy="73,289" size="327,29" group="n35_b4s7" fontSize="22" color="#fb325e" text="如果没有微信,快让爸爸妈妈帮忙~"/>
+    <group id="n35_b4s7" name="grpNormal" xy="73,252" size="327,66" group="n29_mlau" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlQR" pages="0"/>
+    </group>
+    <component id="n36_b4s7" name="btnRefresh" src="b4s757" fileName="btn/btnRefresh.xml" xy="174,283" size="121,50" group="n38_b4s7"/>
+    <text id="n37_b4s7" name="n37" xy="174,243" size="126,26" group="n38_b4s7" fontSize="20" color="#6d6d6d" text="二维码已过期"/>
+    <group id="n38_b4s7" name="grpTimeout" xy="174,243" size="126,90" group="n29_mlau" advanced="true">
+      <gearDisplay controller="ctrlQR" pages="1"/>
+    </group>
+    <group id="n29_mlau" name="grpQR" xy="73,92" size="327,241" advanced="true">
+      <gearDisplay controller="ctrlLogin" pages="0"/>
+    </group>
+  </displayList>
+</component>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="404,336" designImage="ui://thvmj7voqtcl4cyik3" designImageOffsetX="-758" designImageOffsetY="-467">
+  <displayList>
+    <image id="n0_b4s7" name="imgSigninBG" src="qtcl4p" fileName="img/bg_pingtai_03.png" xy="0,0" size="404,336"/>
+    <component id="n1_b4s7" name="btnReturn" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="350,19" size="35,35">
+      <relation target="n0_b4s7" sidePair="right-right,top-top"/>
+      <Button icon="ui://7daqie1jqtcl4w"/>
+    </component>
+    <component id="n21_b4s7" name="btnSignin" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="24,251" size="356,50">
+      <Button title="注册并登陆" titleColor="#ffffff" titleFontSize="24" icon="ui://7daqie1jqtcl4o"/>
+    </component>
+    <component id="n24_b4s7" name="tfAccount" src="tcg1s" fileName="com/ComLoginInput.xml" xy="22,87" size="361,45">
+      <Label prompt="[color=#b2b2b2]请输入你的账号[/color]"/>
+    </component>
+    <component id="n26_b4s7" name="tfPassword" src="pnmu4g" fileName="com/ComLoginPassword.xml" xy="21,148" size="361,45">
+      <Label prompt="[color=#b2b2b2]密码[/color]"/>
+    </component>
+    <text id="n29_b4s7" name="n29" xy="23,24" size="102,31" fontSize="24" color="#333333" text="账号注册"/>
+  </displayList>
+</component>

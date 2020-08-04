@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="48p8y12a">
+<packageDescription id="48p8y12a" jpegQuality="80" compressPNG="true">
   <resources>
     <component id="y8ju0" name="WinBackpack.xml" path="/win/" exported="true"/>
     <image id="y8ju1" name="icon_bac_bb.png" path="/img/"/>
@@ -152,7 +152,6 @@
     <image id="ftyz7o" name="btn_chaifen_close.png" path="/img/split/"/>
     <image id="ftyz7p" name="btn_chaifen_left.png" path="/img/split/"/>
     <image id="ftyz7q" name="btn_chaifen_right.png" path="/img/split/"/>
-    <font id="ftyz7r" name="fangfang.ttf" path="/" renderMode="" samplePointSize="16"/>
     <component id="ftyz7s" name="Slider2_grip.xml" path="/com/"/>
     <component id="ftyz7t" name="Slider2.xml" path="/com/"/>
   </resources>
