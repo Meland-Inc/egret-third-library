@@ -4,7 +4,6 @@
   <controller name="ctrlShowType" pages="0,scratch,1,python" selected="0"/>
   <controller name="ctrlRecordHint" pages="0,none,1,left,2,right,3,all" selected="0"/>
   <controller name="ctrlStyle" pages="0,black,1,blue" selected="0"/>
-  <controller name="ctrlWindowState" pages="0,toMaximize,1,toNormalize" selected="0"/>
   <displayList>
     <image id="n42_gg8m" name="imgBG" src="s45w0" fileName="ideCommon/img/img_ide_cm_1.png" xy="0,0" size="846,1082">
       <relation target="n9_j7co" sidePair="left-left,rightext-right"/>
@@ -112,11 +111,5 @@
       <gearDisplay controller="ctrlShowType" pages="1"/>
       <relation target="n40_czor" sidePair="left-right,top-top"/>
     </group>
-    <component id="n61_uxq0" name="btnChangeState" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="777,5" size="48,48">
-      <gearDisplay controller="ctrlShowType" pages="0,1"/>
-      <gearIcon controller="ctrlWindowState" pages="0,1" values="ui://ti9jag5tzgght81|ui://ti9jag5tzgght82"/>
-      <relation target="n9_j7co" sidePair="right-right,top-top"/>
-      <Button icon="ui://ti9jag5tzgght81"/>
-    </component>
   </displayList>
 </component>
