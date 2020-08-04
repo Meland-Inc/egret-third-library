@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="177,53" extention="Button" designImage="ui://2ctbbueld3lu71" designImageOffsetX="-599" designImageOffsetY="-388" designImageAlpha="0" designImageLayer="1">
-  <controller name="button" pages="2,up,3,down" selected="1"/>
+  <controller name="button" pages="2,up,3,down" selected="0"/>
+  <controller name="ctrlIsNone" pages="0,yes,1,no" selected="0"/>
   <displayList>
     <loader id="n3_edjp" name="icon" xy="0,3" size="174,50" url="ui://2ctbbueld3lu6p"/>
-    <loader id="n2_d3lu" name="imgArrow" xy="121,19" size="20,17" url="ui://2ctbbueld3lu6v" autoSize="true">
+    <loader id="n2_d3lu" name="imgArrow" xy="121,19" size="20,17" url="ui://2ctbbueld3lu6x" autoSize="true">
+      <gearDisplay controller="ctrlIsNone" pages="1"/>
       <gearIcon controller="button" pages="2" values="ui://2ctbbueld3lu6x" default="ui://2ctbbueld3lu6v"/>
     </loader>
     <text id="n1_d3lu" name="title" xy="8,3" size="113,50" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" singleLine="true" text="任务追踪"/>
+    <text id="n10_n8dq" name="tfIsNone" xy="100,13" size="64,29" fontSize="20" color="#ffffff" align="center" vAlign="middle" singleLine="true" text="（无）">
+      <gearDisplay controller="ctrlIsNone" pages="0"/>
+    </text>
     <image id="n5_edjp" name="imgListBg" src="d3lu6h" fileName="img/taskPanel/bg_rwjm_08.png" xy="0,53" size="174,0">
       <gearDisplay controller="button" pages="3"/>
       <relation target="n6_edjp" sidePair="bottomext-bottom"/>

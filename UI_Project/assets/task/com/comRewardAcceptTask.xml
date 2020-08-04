@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="107,60" designImage="ui://2ctbbuel9ejv5" designImageOffsetX="-686" designImageOffsetY="-535" designImageAlpha="0">
+  <controller name="ctrlTextColor" pages="0,acceptColor,1,submitColor" selected="1"/>
+  <displayList>
+    <loader id="n0_k8ed" name="icon" xy="0,0" size="72,60" align="center" vAlign="middle" fill="scaleMatchHeight"/>
+    <text id="n3_k8ed" name="tfNum" xy="73,26" size="34,34" fontSize="24" color="#ffffff" align="center" vAlign="bottom" vars="true" text="X{num=5}">
+      <gearColor controller="ctrlTextColor" pages="1" values="#ffffff,#000000" default="#716f7a,#000000"/>
+    </text>
+  </displayList>
+  <relation target="n3_k8ed" sidePair="rightext-right"/>
+</component>

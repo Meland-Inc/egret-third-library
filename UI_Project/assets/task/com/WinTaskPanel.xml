@@ -1,42 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://2ctbbueld3lu6y" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlTrace" pages="0,trace,1,cancel" selected="0"/>
-  <controller name="ctrlIsEmpty" pages="0,no,1,yes" selected="0"/>
+  <controller name="ctrlDetailStatus" pages="1,noSelect,0,empty,2,normal" selected="2"/>
   <displayList>
-    <image id="n3_d3lu" name="n3" src="d3lu6b" fileName="img/taskPanel/bg_rwjm_02.png" xy="563,301" size="781,490" group="n14_d3lu"/>
-    <image id="n0_d3lu" name="n0" src="d3lu6a" fileName="img/taskPanel/bg_rwjm_01.png" xy="563,301" size="781,48" group="n14_d3lu"/>
-    <text id="n8_d3lu" name="tfTitle" xy="887,305" size="142,42" group="n14_d3lu" fontSize="30" color="#716f7a" align="center" vAlign="middle" autoSize="none" text="任务"/>
-    <image id="n5_d3lu" name="n5" src="d3lu6u" fileName="img/taskPanel/img_rwjm_lingxing.png" xy="858,322" group="n14_d3lu"/>
-    <image id="n7_d3lu" name="n7" src="d3lu6u" fileName="img/taskPanel/img_rwjm_lingxing.png" xy="1038,322" group="n14_d3lu"/>
-    <component id="n4_d3lu" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1304,294" size="53,53" group="n14_d3lu">
+    <image id="n3_d3lu" name="n3" src="d3lu6b" fileName="img/taskPanel/bg_rwjm_02.png" xy="563,270" size="781,546" group="n14_d3lu"/>
+    <image id="n0_d3lu" name="n0" src="d3lu6a" fileName="img/taskPanel/bg_rwjm_01.png" xy="563,270" size="781,48" group="n14_d3lu"/>
+    <text id="n8_d3lu" name="tfTitle" xy="887,274" size="142,42" group="n14_d3lu" fontSize="30" color="#716f7a" align="center" vAlign="middle" autoSize="none" text="任务"/>
+    <image id="n5_d3lu" name="n5" src="d3lu6u" fileName="img/taskPanel/img_rwjm_lingxing.png" xy="858,291" group="n14_d3lu"/>
+    <image id="n7_d3lu" name="n7" src="d3lu6u" fileName="img/taskPanel/img_rwjm_lingxing.png" xy="1038,291" group="n14_d3lu"/>
+    <component id="n4_d3lu" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1304,263" size="53,53" group="n14_d3lu">
       <Button icon="ui://2ctbbueld3lu6k"/>
     </component>
-    <image id="n12_d3lu" name="imgTaskListBg" src="d3lu6c" fileName="img/taskPanel/bg_rwjm_03.png" xy="587,373" size="194,394" group="n14_d3lu"/>
-    <list id="n25_jrwa" name="lstTask" xy="598,383" size="177,362" group="n14_d3lu" overflow="scroll" margin="5,0,0,0" lineGap="14" defaultItem="ui://2ctbbueledjp7c">
+    <image id="n12_d3lu" name="imgTaskListBg" src="d3lu6c" fileName="img/taskPanel/bg_rwjm_03.png" xy="587,342" size="194,394" group="n14_d3lu"/>
+    <list id="n25_jrwa" name="lstTask" xy="598,352" size="177,362" group="n14_d3lu" selectionMode="multipleSingleClick" overflow="scroll" margin="5,0,0,0" lineGap="14" defaultItem="ui://2ctbbueledjp7c" scrollItemToViewOnClick="false">
       <item title="任务追踪" icon="ui://2ctbbueld3lu6p"/>
       <item title="已完成" icon="ui://2ctbbueld3lu6q"/>
       <item title="进行中" icon="ui://2ctbbueld3lu6n"/>
     </list>
-    <image id="n13_d3lu" name="imgDetalBg" src="d3lu6c" fileName="img/taskPanel/bg_rwjm_03.png" xy="802,374" size="519,335" group="n14_d3lu"/>
-    <group id="n14_d3lu" name="grpBg" xy="563,294" size="794,497" group="n24_edjp"/>
-    <component id="n15_d3lu" name="comDetailPanel" src="jrwa7d" fileName="com/comDetailPanel.xml" xy="824,382" group="n24_edjp">
-      <gearDisplay controller="ctrlIsEmpty" pages="0"/>
+    <image id="n13_d3lu" name="imgDetalBg" src="d3lu6c" fileName="img/taskPanel/bg_rwjm_03.png" xy="802,343" size="519,392" group="n14_d3lu"/>
+    <group id="n14_d3lu" name="grpBg" xy="563,263" size="794,553" group="n24_edjp"/>
+    <component id="n15_d3lu" name="comDetailPanel" src="jrwa7d" fileName="com/comDetailPanel.xml" xy="824,351" group="n24_edjp">
+      <gearDisplay controller="ctrlDetailStatus" pages="2"/>
     </component>
-    <image id="n30_hvp7" name="imgNoTaskTips" src="d3lu6d" fileName="img/taskPanel/bg_rwjm_04.png" xy="959,514" group="n32_hvp7"/>
-    <text id="n31_hvp7" name="tfNotaskTips" xy="966,528" size="193,24" group="n32_hvp7" fontSize="16" color="#716f7a" align="center" vAlign="middle" autoSize="none" text="暂时没有任务哦"/>
-    <group id="n32_hvp7" name="grpNoTaskTips" xy="959,514" size="206,51" group="n24_edjp" advanced="true">
-      <gearDisplay controller="ctrlIsEmpty" pages="1"/>
+    <image id="n30_hvp7" name="imgNoTaskTips" src="d3lu6d" fileName="img/taskPanel/bg_rwjm_04.png" xy="959,505" group="n32_hvp7"/>
+    <text id="n31_hvp7" name="tfNotaskTips" xy="966,519" size="193,24" group="n32_hvp7" fontSize="16" color="#716f7a" align="center" vAlign="middle" autoSize="none" text="暂时没有任务哦">
+      <gearText controller="ctrlDetailStatus" pages="1" values="暂无选中任务哦" default="暂时没有任务哦"/>
+    </text>
+    <group id="n32_hvp7" name="grpNoTaskTips" xy="959,505" size="206,51" group="n24_edjp" advanced="true">
+      <gearDisplay controller="ctrlDetailStatus" pages="1,0"/>
     </group>
-    <component id="n33_fs09" name="btTraceOrNot" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="983,722" size="163,44" group="n24_edjp">
-      <gearDisplay controller="ctrlIsEmpty" pages="0"/>
-      <gearText controller="ctrlTrace" pages="0" values="追踪任务" default="取消追踪"/>
-      <Button title="追踪任务" titleFontSize="20" icon="ui://2ctbbueld3lu6l"/>
-    </component>
-    <component id="n27_jrwa" name="btnLessonPlan" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1159,722" size="163,44" group="n24_edjp">
-      <gearDisplay controller="ctrlIsEmpty" pages="0"/>
+    <component id="n27_jrwa" name="btnLessonPlan" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1159,754" size="163,44" group="n24_edjp">
+      <gearDisplay controller="ctrlDetailStatus" pages="2"/>
       <Button title="指引教案" titleFontSize="20" icon="ui://2ctbbueld3lu6m"/>
     </component>
-    <group id="n24_edjp" name="root" xy="563,294" size="794,497" advanced="true">
+    <component id="n34_jog6" name="btTraceOrNot" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="983,754" size="163,44" group="n24_edjp">
+      <gearDisplay controller="ctrlDetailStatus" pages="2"/>
+      <gearText controller="ctrlTrace" pages="1" values="取消追踪" default="追踪任务"/>
+      <Button title="追踪任务" titleFontSize="20" icon="ui://2ctbbueld3lu6l"/>
+    </component>
+    <group id="n24_edjp" name="root" xy="563,263" size="794,553" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>

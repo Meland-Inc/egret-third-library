@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1920,1080" opaque="false" designImage="ui://2ctbbuel9ejva" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlStatus" pages="0,accept,1,submit" selected="0"/>
+<component size="1920,1080" opaque="false" designImage="ui://2ctbbuel9ejv5" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlStatus" pages="0,accept,1,submit" selected="1"/>
   <displayList>
     <image id="n1_k8ed" name="imgContentBg" src="9ejv7" fileName="img/recieve/bg_jrw_02.png" xy="637,479" size="683,183" group="n11_k8ed"/>
-    <loader id="n8_k8ed" name="imgBg" xy="719,590" size="532,31" group="n11_k8ed" url="ui://2ctbbuel9ejv8" fill="scaleFree">
+    <loader id="n8_k8ed" name="imgBg" xy="719,590" size="532,31" group="n11_k8ed" url="ui://2ctbbuel9ejv2" fill="scaleFree">
       <gearIcon controller="ctrlStatus" pages="1" values="ui://2ctbbuel9ejv2" default="ui://2ctbbuel9ejv8"/>
     </loader>
-    <text id="n4_k8ed" name="tfReward" xy="742,557" size="170,56" group="n11_k8ed" fontSize="42" color="#f9f9f9" vAlign="middle" vars="true" italic="true" strokeColor="#716f7a" strokeSize="3" text="任务奖励">
+    <text id="n4_k8ed" name="tfReward" xy="742,557" size="170,56" group="n11_k8ed" fontSize="42" color="#f9f9f9" vAlign="middle" vars="true" italic="true" strokeColor="#ffb843" strokeSize="3" text="任务奖励">
       <gearColor controller="ctrlStatus" pages="1" values="#f9f9f9,#ffb843" default="#f9f9f9,#716f7a"/>
     </text>
-    <list id="n6_k8ed" name="lstReward" xy="965,561" size="287,60" group="n11_k8ed" layout="row" overflow="hidden" colGap="35" defaultItem="ui://2ctbbuelk8ede" autoClearItems="true">
+    <list id="n6_k8ed" name="lstReward" xy="965,561" size="287,60" group="n11_k8ed" layout="row" overflow="hidden" colGap="35" defaultItem="ui://2ctbbuelxzjnf" autoClearItems="true">
       <item/>
       <item/>
     </list>
     <group id="n11_k8ed" name="grpContent" xy="637,479" size="683,183" advanced="true">
       <relation target="" sidePair="center-center"/>
     </group>
-    <image id="n2_k8ed" name="imgTiteBg" src="9ejv6" fileName="img/recieve/bg_jrw_01.png" xy="596,426" size="520,99" group="n9_k8ed"/>
-    <text id="n3_k8ed" name="tfTaskName" xy="603,445" size="497,56" group="n9_k8ed" fontSize="42" color="#304a6f" align="center" vAlign="middle" vars="true" autoSize="none" italic="true" text="接到任务：{taskName=采集麦子}">
+    <loader id="n2_k8ed" name="imgTiteBg" xy="596,426" size="520,99" group="n9_k8ed" url="ui://2ctbbuel9ejv0" fill="scaleFree">
+      <gearIcon controller="ctrlStatus" pages="1" values="ui://2ctbbuel9ejv0" default="ui://2ctbbuel9ejv6"/>
+    </loader>
+    <text id="n3_k8ed" name="tfTaskName" xy="603,445" size="497,56" group="n9_k8ed" fontSize="42" color="#304a6f" align="center" vAlign="middle" vars="true" autoSize="none" italic="true" text="完成任务：{taskName=采集麦子}">
       <gearText controller="ctrlStatus" pages="1" values="完成任务：{taskName=采集麦子}" default="接到任务：{taskName=采集麦子}"/>
     </text>
     <group id="n9_k8ed" name="grpTitle" xy="596,426" size="520,99" advanced="true">

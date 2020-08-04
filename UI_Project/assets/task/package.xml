@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="2ctbbuel">
   <resources>
-    <image id="9ejv0" name="bg_wrw_01.png" path="/img/finish/"/>
+    <image id="9ejv0" name="bg_wrw_01.png" path="/img/finish/" scale="9grid" scale9grid="47,24,40,48"/>
     <image id="9ejv1" name="bg_wrw_02.png" path="/img/finish/"/>
     <image id="9ejv2" name="bg_wrw_03.png" path="/img/finish/" scale="9grid" scale9grid="27,7,54,14"/>
     <image id="9ejv3" name="img_wrw_duihao.png" path="/img/finish/"/>
@@ -15,8 +15,8 @@
     <image id="9ejvb" name="效果图.png" path="/img/recieve/"/>
     <component id="9ejvc" name="WinAcceptSubmitTask.xml" path="/com/" exported="true"/>
     <font id="k8edd" name="fangfang.ttf" path="/" renderMode="" samplePointSize="16"/>
-    <component id="k8ede" name="comRewardSmall.xml" path="/com/"/>
-    <component id="xzjnf" name="comReward.xml" path="/com/"/>
+    <component id="k8ede" name="comRewardDetailTips.xml" path="/com/"/>
+    <component id="xzjnf" name="comRewardAcceptTask.xml" path="/com/"/>
     <component id="d3lu69" name="WinTaskPanel.xml" path="/com/" exported="true"/>
     <image id="d3lu6a" name="bg_rwjm_01.png" path="/img/taskPanel/" scale="9grid" scale9grid="32,12,64,24"/>
     <image id="d3lu6b" name="bg_rwjm_02.png" path="/img/taskPanel/" scale="9grid" scale9grid="32,33,64,66"/>
@@ -27,7 +27,7 @@
     <image id="d3lu6g" name="bg_rwjm_07.png" path="/img/taskPanel/"/>
     <image id="d3lu6h" name="bg_rwjm_08.png" path="/img/taskPanel/" scale="9grid" scale9grid="43,30,86,128"/>
     <image id="d3lu6i" name="bg_rwjm_09.png" path="/img/taskPanel/"/>
-    <image id="d3lu6j" name="bg_rwjm_10.png" path="/img/taskPanel/"/>
+    <image id="d3lu6j" name="bg_rwjm_10.png" path="/img/taskPanel/" scale="9grid" scale9grid="21,10,42,20"/>
     <image id="d3lu6k" name="btn_rwjm_close.png" path="/img/taskPanel/"/>
     <image id="d3lu6l" name="btn_rwjm_f.png" path="/img/taskPanel/"/>
     <image id="d3lu6m" name="btn_rwjm_h.png" path="/img/taskPanel/"/>
@@ -71,6 +71,8 @@
     <component id="jrwa7o" name="comTaskTraceItem.xml" path="/com/"/>
     <component id="nk897p" name="ToolTipTaskDetail.xml" path="/com/" exported="true"/>
     <component id="nk897q" name="TooltipTaskInputTips.xml" path="/com/" exported="true"/>
+    <image id="n8dq7r" name="bg_rwjm_11.png" path="/img/taskPanel/"/>
+    <image id="n8dq7s" name="icon_rwjm_ty.png" path="/img/taskPanel/"/>
   </resources>
   <publish name=""/>
 </packageDescription>

@@ -101,7 +101,9 @@
     <component id="n14_psru" name="comTask" src="psruk" fileName="com/ComMainTask.xml" xy="0,277">
       <gearDisplay controller="ctrlViewMode" pages="0"/>
     </component>
-    <component id="n34_ej7r" name="comTaskTrace" src="jrwa7n" fileName="com/ComTaskTrace.xml" pkg="2ctbbuel" xy="0,277"/>
+    <component id="n34_ej7r" name="comTaskTrace" src="jrwa7n" fileName="com/ComTaskTrace.xml" pkg="2ctbbuel" xy="10,501">
+      <relation target="n14_psru" sidePair="top-bottom"/>
+    </component>
     <component id="n26_evs4" name="comBuildShortCut" src="qu7tt7j" fileName="ideCommon/com/ComBuildShortCutB.xml" pkg="ti9jag5t" xy="331,40" visible="false" touchable="false" customData="bottom" controller="ctrlState,11">
       <relation target="" sidePair="center-center"/>
     </component>
