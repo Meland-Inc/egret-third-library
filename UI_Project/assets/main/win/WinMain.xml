@@ -2,8 +2,8 @@
 <component size="1920,1080" opaque="false" designImage="ui://thvmj7voqr0m4cyij5" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlUserStatus" pages="0,student,1,teacher,2,fakeStudent,3,fakeTeacher" selected="0"/>
   <controller name="ctrlGodView" pages="0,false,1,true" selected="0"/>
-  <controller name="ctrlEnterWay" pages="0,share,1,editSelf,2,editOther,3,roomPlayCanEdit,4,roomPlayCanNotEdit,8,banner,10,explore" selected="6"/>
-  <controller name="ctrlViewMode" pages="0,world,1,mapTemplate" selected="1"/>
+  <controller name="ctrlEnterWay" pages="0,share,1,editSelf,2,editOther,3,roomPlayCanEdit,4,roomPlayCanNotEdit,8,banner,10,explore" selected="0"/>
+  <controller name="ctrlViewMode" pages="0,world,1,mapTemplate" selected="0"/>
   <controller name="ctrlLeftTopView" pages="0,show,1,hide" selected="0"/>
   <controller name="ctrlChatMode" pages="1,show,2,hide" selected="0"/>
   <displayList>
@@ -100,6 +100,9 @@
     </group>
     <component id="n14_psru" name="comTask" src="psruk" fileName="com/ComMainTask.xml" xy="0,277">
       <gearDisplay controller="ctrlViewMode" pages="0"/>
+    </component>
+    <component id="n34_ej7r" name="comTaskTrace" src="jrwa7n" fileName="com/ComTaskTrace.xml" pkg="2ctbbuel" xy="10,501">
+      <relation target="n14_psru" sidePair="top-bottom"/>
     </component>
     <component id="n26_evs4" name="comBuildShortCut" src="qu7tt7j" fileName="ideCommon/com/ComBuildShortCutB.xml" pkg="ti9jag5t" xy="331,40" visible="false" touchable="false" customData="bottom" controller="ctrlState,11">
       <relation target="" sidePair="center-center"/>

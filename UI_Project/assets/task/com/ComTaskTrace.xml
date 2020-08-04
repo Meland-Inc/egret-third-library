@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="240,300" overflow="hidden" opaque="false" designImage="ui://2ctbbueljrwa7f" designImageOffsetY="-331" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlStatus" pages="0,show,1,hide" selected="0"/>
+  <displayList>
+    <component id="n1_jrwa" name="btnShowHide" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="3,4" size="42,42">
+      <gearIcon controller="ctrlStatus" pages="0" values="ui://2ctbbueljrwa7k" default="ui://2ctbbueljrwa7e"/>
+      <Button titleColor="#ffffff" icon="ui://2ctbbueljrwa7k" controller="ctrlStatus" page="1"/>
+    </component>
+    <component id="n3_jrwa" name="btnOpenTask" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="51,2" size="125,43">
+      <Button title="任务" titleColor="#ffffff" icon="ui://2ctbbueljrwa7h"/>
+    </component>
+    <image id="n4_s3zt" name="imgBg" src="jrwa7i" fileName="img/trace/bg_zzrw_02.png" xy="2,52" size="238,248" group="n7_ej7r">
+      <relation target="n5_s3zt" sidePair="bottomext-bottom"/>
+    </image>
+    <list id="n5_s3zt" name="lst" xy="12,60" size="223,235" group="n7_ej7r" overflow="scroll" lineGap="5" defaultItem="ui://2ctbbueljrwa7o">
+      <item/>
+      <item/>
+    </list>
+    <group id="n7_ej7r" name="grpContent" xy="2,52" size="238,248" advanced="true">
+      <gearXY controller="ctrlStatus" pages="0,1" values="2,52|-240,52" tween="true"/>
+    </group>
+  </displayList>
+  <relation target="n5_s3zt" sidePair="bottomext-bottom"/>
+</component>

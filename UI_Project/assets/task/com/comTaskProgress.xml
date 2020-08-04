@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="477,140" overflow="hidden" designImage="ui://2ctbbueld3lu6y" designImageOffsetX="-825" designImageOffsetY="-452" designImageAlpha="0" designImageLayer="1">
+  <displayList>
+    <image id="n0_d3lu" name="n0" src="d3lu6w" fileName="img/taskPanel/img_rwjm_top.png" xy="0,0"/>
+    <text id="n4_d3lu" name="tfTitle" xy="157,5" size="162,26" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="任务进度"/>
+    <list id="n5_d3lu" name="lst" xy="0,48" size="475,68" layout="row" overflow="scroll" scroll="horizontal" colGap="55" defaultItem="ui://2ctbbueld3lu74">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>
