@@ -121,6 +121,7 @@ export default class ServerUpdate {
                         this.downloadPackage();
                         return;
                     }
+                    loading.setLoadingProgress(100);
                     let content = `解压文件:${filename}成功`;
                     logger.log('update', content);
                     rendererModel.setPackageVersion(CommonDefine.ePackageType.server, commonConfig.environName, this._remoteVersion);
@@ -158,7 +159,7 @@ export default class ServerUpdate {
 
     /** 执行更新后回调 */
     private executeUpdateCallback() {
-        loading.hideLoading();
+        loading.hideLoadingProgress();
         if (this._updateCallback) {
             this._updateCallback(...this._updateCbArgs);
         }

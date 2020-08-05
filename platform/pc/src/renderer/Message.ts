@@ -429,7 +429,7 @@ class Message {
     }
 
     private onHideLoading() {
-        loading.hideLoading();
+        loading.hideLoadingProgress();
     }
 
     private onSetLoadingProgress(value: number) {
