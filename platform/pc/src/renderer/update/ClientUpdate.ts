@@ -189,6 +189,7 @@ export default class ClientUpdate {
                         this.executeUpdateCallback();
                         return;
                     }
+                    loading.setLoadingProgress(100);
                     let content = `解压文件:${filename}成功`;
                     logger.log('update', content);
                     streamZip.close();
@@ -282,7 +283,7 @@ export default class ClientUpdate {
 
     /** 执行更新后回调 */
     private executeUpdateCallback() {
-        loading.hideLoading();
+        loading.hideLoadingProgress();
         if (this._updateCallback) {
             this._updateCallback(...this._updateCbArgs);
         }
