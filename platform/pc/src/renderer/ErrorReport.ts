@@ -34,14 +34,14 @@ class ErrorReport {
             //     }
             //     return event;
             // };
-            Sentry.init({
-                //这个不加的话会弹出‘进程崩溃了’的对话框，一点就关闭整个游戏了，暂时保留原先交互，如果后面需要弹出崩溃提示就把这个注释
-                onFatalError: (error: Error) => { console.error(error) },//不打印出来 捕获到错误不会显示到控制台
-                dsn: 'https://f41cf26eae5d445db9b4a775f88b3ff7@o121360.ingest.sentry.io/5377167',
-                // release: `bellplanet_${commonConfig.environName}_${codeVersion}`,
-                environment: commonConfig.environName,
-                // beforeSend: beforeSend,
-            });
+            // Sentry.init({
+            //     //这个不加的话会弹出‘进程崩溃了’的对话框，一点就关闭整个游戏了，暂时保留原先交互，如果后面需要弹出崩溃提示就把这个注释
+            //     onFatalError: (error: Error) => { console.error(error) },//不打印出来 捕获到错误不会显示到控制台
+            //     dsn: 'https://f41cf26eae5d445db9b4a775f88b3ff7@o121360.ingest.sentry.io/5377167',
+            //     // release: `bellplanet_${commonConfig.environName}_${codeVersion}`,
+            //     environment: commonConfig.environName,
+            //     // beforeSend: beforeSend,
+            // });
             // Sentry.setTag('version', codeVersion);
 
             //这里上报的不会有堆栈信息 而且会拦截掉上报系统自己捕获的 先屏蔽掉
