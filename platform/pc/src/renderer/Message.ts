@@ -256,7 +256,7 @@ class Message {
     /** 从客户端进入 */
     private onStartNativeClient(queryValue: string) {
         this.checkClearLocalStorage();
-        let url = `${commonConfig.clientPackagePath}/index.html?${queryValue}`;
+        let url = `file://${commonConfig.clientPackagePath}/index.html?${queryValue}`;
         url = path.join(url);
         this.loadRendererURL(url);
     }
@@ -275,7 +275,7 @@ class Message {
         this.checkClearLocalStorage();
 
         // const url = commonConfig.environName === CommonDefine.eEnvironName.release ? commonConfig.bellcodeUrl : commonConfig.demoBellCodeUrl;
-        const url = new URL(`${commonConfig.clientPackagePath}/index.html`);
+        const url = new URL(`file://${commonConfig.clientPackagePath}/index.html`);
         url.searchParams.set("fakeGameMode", "lessons");
 
         if (commonConfig.environName === CommonDefine.eEnvironName.release) {
