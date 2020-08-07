@@ -11,7 +11,7 @@
     <text id="n2_jrwa" name="title" xy="6,5" size="211,26" fontSize="18" color="#ffffff" align="center" vAlign="middle" vars="true" autoSize="none" singleLine="true" text="{name=任务五个字}（进行中）">
       <gearText controller="ctrlStatus" pages="0,1" values="{name=任务五个字}（进行中）|{name=任务五个字}（已完成）" default="{name=任务五个字}（已交付）"/>
     </text>
-    <text id="n6_s3zt" name="tfDesc" xy="9,37" size="210,42" fontSize="14" color="#73717a" vAlign="middle" leading="5" ubb="true" autoSize="height" text="这是任务描述，不超十二字&#xA;这是任务描述，不超十二字"/>
+    <text id="n6_s3zt" name="tfDesc" xy="6,37" size="217,42" fontSize="14" color="#73717a" vAlign="middle" leading="5" ubb="true" autoSize="height" text="这是任务描述，不超十二字&#xA;这是任务描述，不超十二字"/>
   </displayList>
   <Button/>
   <relation target="n6_s3zt" sidePair="bottomext-bottom"/>
