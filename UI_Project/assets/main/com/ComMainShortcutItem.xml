@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="83,83" extention="Button" designImage="ui://thvmj7voa1nd1" designImageOffsetX="-553" designImageOffsetY="-987" designImageAlpha="0" designImageLayer="1">
   <controller name="button" pages="0,up,1,down" selected="0"/>
-  <controller name="ctrlStatus" pages="0,normal,1,equip" selected="0"/>
+  <controller name="ctrlStatus" pages="0,normal,1,equip,3,broken" selected="1"/>
   <displayList>
     <loader id="n0_psru" name="ladBg" xy="0,0" size="83,83" url="ui://oyity675a1ndf">
       <gearIcon controller="button" pages="1" values="ui://oyity675a1ndg" default="ui://oyity675a1ndf"/>
     </loader>
     <text id="n2_psru" name="tfTitle" xy="4,2" size="19,24" visible="false" fontSize="18" autoSize="none" text="1"/>
     <loader id="n4_psru" name="icon" xy="11,11" size="60,60" group="n5_foy4" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
-    <group id="n5_foy4" name="grpItemIcon" xy="11,11" size="60,60" advanced="true" collapsed="true"/>
+    <group id="n5_foy4" name="grpItemIcon" xy="11,11" size="60,60" advanced="true"/>
     <image id="n6_8q28" name="imgNumBg" src="oiqdcyigy" fileName="img/img_cm_szk.png" pkg="te1gxawo" xy="53,63"/>
     <text id="n7_8q28" name="num" xy="53,63" size="29,19" fontSize="14" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="23"/>
-    <image id="n8_c025" name="imgEquipStatus" src="y8juc" fileName="img/img_bac_pzk_4.png" pkg="48p8y12a" xy="0,0">
+    <image id="n9_lt7w" name="n9" src="lt7wwcyim4" fileName="img/repaire/img_zhuangbei_02.png" xy="6,67" size="70,11" group="n11_lt7w"/>
+    <graph id="n10_lt7w" name="gphDurability" xy="8,69" size="66,7" group="n11_lt7w" type="rect" lineSize="0" fillColor="#ff5ae424" corner="7"/>
+    <group id="n11_lt7w" name="grpDurability" xy="6,67" size="70,11" visible="false" advanced="true">
+      <gearDisplay controller="ctrlStatus" pages="0,1"/>
+    </group>
+    <image id="n12_lt7w" name="n12" src="lt7wwcyim5" fileName="img/repaire/icon_zhuangbei_01.png" xy="3,26">
+      <gearDisplay controller="ctrlStatus" pages="3"/>
+    </image>
+    <image id="n8_c025" name="imgEquipStatus" src="y8juc" fileName="img/img_bac_pzk_4.png" pkg="48p8y12a" xy="1,0">
       <gearDisplay controller="ctrlStatus" pages="1"/>
     </image>
   </displayList>
