@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="100,100" extention="Button">
-  <controller name="button" pages="0,up,1,down" selected="1"/>
-  <controller name="ctrlStatus" pages="0,normal,1,equip" selected="1"/>
+<component size="100,100" extention="Button" designImageAlpha="0">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <controller name="ctrlStatus" pages="0,normal,1,equip,2,broken" selected="2"/>
   <displayList>
     <image id="n0_e8s1" name="imgBg" src="oiqdcyigz" fileName="img/img_cm_wpx_1.png" pkg="te1gxawo" xy="0,0"/>
     <loader id="n4_e8s1" name="icon" xy="18,18" size="64,64" group="n5_n173" fill="scale" shrinkOnly="true"/>
@@ -14,6 +14,14 @@
     <image id="n1_e8s1" name="imgSelect" src="oiqdcyih0" fileName="img/img_cm_wpx_2.png" pkg="te1gxawo" xy="0,0">
       <gearDisplay controller="button" pages="1"/>
     </image>
+    <image id="n7_lt7w" name="n7" src="lt7w80" fileName="img/repaire/icon_zhuangbei_01.png" xy="11,32">
+      <gearDisplay controller="ctrlStatus" pages="2"/>
+    </image>
+    <image id="n9_lt7w" name="n9" src="lt7w84" fileName="img/repaire/img_zhuangbei_02.png" xy="5,83" group="n11_lt7w"/>
+    <graph id="n12_lt7w" name="gphDurability" xy="7,85" size="86,7" group="n11_lt7w" type="rect" lineSize="0" fillColor="#ff5ae424" corner="7"/>
+    <group id="n11_lt7w" name="grpDurability" xy="5,83" size="90,11" visible="false" advanced="true">
+      <gearDisplay controller="ctrlStatus" pages="0,1"/>
+    </group>
   </displayList>
   <Button mode="Radio"/>
 </component>

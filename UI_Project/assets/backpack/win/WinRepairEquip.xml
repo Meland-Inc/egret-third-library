@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" designImage="ui://48p8y12alt7w88" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlStatus" pages="0,repair,1,equip" selected="0"/>
+  <displayList>
+    <image id="n2_lt7w" name="imgBg" src="lt7w7w" fileName="img/repaire/bg_zhuangbei_02.png" xy="791,337" size="337,406" group="n11_lt7w"/>
+    <text id="n4_lt7w" name="tfTitle" xy="863,346" size="194,34" group="n11_lt7w" fontSize="24" color="#918773" align="center" autoSize="none" text="装备维修"/>
+    <image id="n6_lt7w" name="imgIconBg" src="lt7w7x" fileName="img/repaire/bg_zhuangbei_03.png" xy="911,394" group="n11_lt7w"/>
+    <component id="n13_lt7w" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1101,321" size="47,47" group="n11_lt7w">
+      <Button icon="ui://48p8y12alt7w82"/>
+    </component>
+    <loader id="n7_lt7w" name="ladRepairIcon" xy="915,399" size="87,87" group="n11_lt7w" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <image id="n8_lt7w" name="imgBroken" src="lt7w81" fileName="img/repaire/icon_zhuangbei_02.png" xy="921,425" group="n11_lt7w">
+      <gearDisplay controller="ctrlStatus" pages="0"/>
+    </image>
+    <image id="n9_lt7w" name="n9" src="lt7w89" fileName="img/repaire/bg_zhuangbei_01.png" xy="812,495" group="n11_lt7w"/>
+    <list id="n12_lt7w" name="lstRepairMat" xy="823,525" size="273,123" group="n11_lt7w" layout="flow_hz" overflow="scroll" lineGap="10" colGap="15" defaultItem="ui://48p8y12alt7w8a" align="center" vAlign="middle" autoClearItems="true">
+      <item/>
+    </list>
+    <component id="n10_lt7w" name="btnRepair" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="882,669" size="161,51" group="n11_lt7w">
+      <gearDisplay controller="ctrlStatus" pages="0"/>
+      <Button title="修理" icon="ui://48p8y12alt7w7y"/>
+    </component>
+    <component id="n14_lt7w" name="btnEquip" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="882,669" size="161,51" group="n11_lt7w">
+      <gearDisplay controller="ctrlStatus" pages="1"/>
+      <Button title="装备" icon="ui://48p8y12alt7w7y"/>
+    </component>
+    <group id="n11_lt7w" name="root" xy="791,321" size="357,422" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>
