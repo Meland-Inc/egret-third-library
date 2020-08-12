@@ -285,6 +285,10 @@ async function initNative() {
 
   logger.log('net', `config.urlValue`, mainModel.urlValue);
   logger.log('env', `app.isPackaged:`, commonConfig.isPackaged);
+
+  /** 清除渲染层数据 */
+  message.sendIpcMsg(MsgId.CLEAR_RENDERER_MODEL_DATA);
+
   //打包后的包才要检查更新
   if (commonConfig.isPackaged) {
     message.sendIpcMsg(MsgId.GET_NATIVE_POLICY_VERSION);
