@@ -30,13 +30,15 @@ export default class FileUtil {
     }
 
     /** 写入文件 */
-    public static writeFileSync(path: fse.PathLike | number, data: any, options?: fse.WriteFileOptions | string | null, logError: boolean = true): void {
+    public static writeFileSync(path: fse.PathLike | number, data: any, options?: fse.WriteFileOptions | string | null, logError: boolean = true): boolean {
         try {
             fse.writeFileSync(path, data, options);
+            return true;
         } catch (error) {
             if (logError) {
                 this.logError("file", `writeFileSync: ${path} error`, error);
             }
+            return false;
         }
     }
 
@@ -53,20 +55,24 @@ export default class FileUtil {
     }
 
     /** 清空指定目录 */
-    public static emptyDirSync(path: string): void {
+    public static emptyDirSync(path: string): boolean {
         try {
             fse.emptyDirSync(path);
+            return true;
         } catch (error) {
             this.logError("file", `statSync: ${path} error`, error);
+            return false;
         }
     }
 
     /** 删除指定文件 */
-    public static unlinkSync(path: string | Buffer): void {
+    public static unlinkSync(path: string | Buffer): boolean {
         try {
             fse.unlinkSync(path);
+            return true;
         } catch (error) {
             this.logError("file", `unlinkSync: ${path} error`, error);
+            return false;
         }
     }
 
@@ -110,33 +116,39 @@ export default class FileUtil {
     }
 
     /** 拷贝文件 */
-    public static copyFileSync(src: fse.PathLike, dest: fse.PathLike, flags?: number): void {
+    public static copyFileSync(src: fse.PathLike, dest: fse.PathLike, flags?: number): boolean {
         try {
             fse.copyFileSync(src, dest, flags);
+            return true;
         } catch (error) {
             this.logError("file", `copyFileSync: src: ${src} dest: ${dest} error`, error);
+            return false;
         }
     }
 
     /** 确保目录存在 */
-    public static ensureDirSync(path: string, options?: fse.EnsureOptions | number): void {
+    public static ensureDirSync(path: string, options?: fse.EnsureOptions | number): boolean {
         try {
             fse.ensureDirSync(path, options);
+            return true;
         } catch (error) {
             this.logError("file", `ensureDirSync: ${path} error`, error);
+            return false;
         }
     }
 
     /** 修改文件权限 */
-    public static chmod(path: string | Buffer, mode: string | number, callback: fse.NoParamCallback): void {
+    public static chmod(path: string | Buffer, mode: string | number, callback: fse.NoParamCallback): boolean {
         try {
             fse.chmod(path, mode, callback);
+            return true;
         } catch (error) {
             this.logError("file", `chmod: ${path} error`, error);
+            return false;
         }
     }
 
-    private static logError(tag: string, msg: string, ...args: any[]) {
+    private static logError(tag: string, msg: string, ...args: any[]): void {
         if (logger) {
             logger.error(tag, msg, ...args);
             return;
