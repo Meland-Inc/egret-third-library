@@ -274,21 +274,25 @@ export namespace util {
         form.append('type', "file");
         form.append('myfile', fs.createReadStream(filePath));
 
-        form.submit(url, (err: Error, res: http.IncomingMessage) => {
-            if (err) {
-                logger.error('log', `postFile err`, err);
-            }
-            if (!res) {
-                logger.error('log', `res err`);
-                return;
-            }
+        try {
+            form.submit(url, (err: Error, res: http.IncomingMessage) => {
+                if (err) {
+                    logger.error('log', `postFile err`, err);
+                }
+                if (!res) {
+                    logger.error('log', `res err`);
+                    return;
+                }
 
-            if (res) {
-                logger.log('log', `postFile res`, res.statusCode, res.statusMessage);
-            }
-            res.resume();
-            logger.log('log', `上传日志完毕url:${url} fileName:${fileName} filePath:${filePath}`);
-        });
+                if (res) {
+                    logger.log('log', `postFile res`, res.statusCode, res.statusMessage);
+                }
+                res.resume();
+                logger.log('log', `上传日志完毕url:${url} fileName:${fileName} filePath:${filePath}`);
+            });
+        } catch (error) {
+            logger.error('log', `上传日志错误`, error);
+        }
     }
 
     /** 读取指定cookies */
