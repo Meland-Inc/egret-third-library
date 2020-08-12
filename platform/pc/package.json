@@ -4,6 +4,8 @@
     "description": "让孩子快乐的学习编程创造",
     "main": "./dist/main-bundle.js",
     "scripts": {
+        "fixFile": "eslint --fix",
+        "fix": "eslint --fix . --ext .ts",
         "start": "yarn build:dev && electron .",
         "build:dev": "cross-env NODE_ENV=development webpack --config build/webpack.config.js",
         "build:prod": "cross-env NODE_ENV=production webpack --config build/webpack.config.js",
@@ -107,10 +109,13 @@
     "devDependencies": {
         "@types/fs-extra": "^8.1.0",
         "@types/tough-cookie": "^4.0.0",
+        "@typescript-eslint/eslint-plugin": "^3.9.0",
+        "@typescript-eslint/parser": "^3.9.0",
         "cross-env": "^7.0.2",
         "electron": "^7.1.7",
         "electron-builder": "^21.2.0",
         "electron-notarize": "^1.0.0",
+        "eslint": "^7.6.0",
         "html-webpack-plugin": "^3.2.0",
         "npm-run-all": "^4.1.5",
         "ts-loader": "^6.2.1",
