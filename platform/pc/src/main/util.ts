@@ -24,7 +24,7 @@ export namespace util {
     export function runCmd(cmd: string, cwd: string, successMsg: string, errorMsg: string): Promise<ChildProcess> {
         return new Promise((resolve, reject) => {
             logger.log('cmd', `cmd --> command:${cmd} cwd:${cwd}`);
-            let process = exec(cmd, { cwd: cwd }, (error) => {
+            const process = exec(cmd, { cwd: cwd }, (error) => {
                 if (error) {
                     if (errorMsg) {
                         logger.error('cmd', errorMsg, error);
@@ -59,10 +59,10 @@ export namespace util {
 
     /** 发送get请求 */
     function requestGet(isHttps: boolean, host: string, port: string, path: string, data: any, headers: any, successFunc: Function, errorFunc: Function) {
-        let content = data ? `${querystring.stringify(data)}` : "";
+        const content = data ? `${querystring.stringify(data)}` : "";
         logger.log('net', `http isHttps:${isHttps} post data`, content);
         path = content ? `${path}?${content}` : path;
-        let options = {
+        const options = {
             host: host,
             path: path,
             method: 'GET',
@@ -80,8 +80,8 @@ export namespace util {
             }
         }
 
-        let transportLib = isHttps ? https : http;
-        let request = transportLib.request(options, (response) => {
+        const transportLib = isHttps ? https : http;
+        const request = transportLib.request(options, (response) => {
             response.setEncoding('utf8');
 
             let body = "";
@@ -91,7 +91,7 @@ export namespace util {
 
             response.on('end', () => {
                 if (successFunc) {
-                    if (!!body) {
+                    if (body) {
                         successFunc(JSON.parse(body));
                     } else {
                         successFunc();
@@ -103,7 +103,7 @@ export namespace util {
                 if (errorFunc) {
                     errorFunc(e);
                 }
-                logger.error('net', `get方式 http返回错误`, e)
+                logger.error('net', `get方式 http返回错误`, e);
             });
         });
 
@@ -111,7 +111,7 @@ export namespace util {
             if (errorFunc) {
                 errorFunc(e);
             }
-            logger.error('net', `get方式 发送http请求错误`, e.message)
+            logger.error('net', `get方式 发送http请求错误`, e.message);
         });
 
         request.write(content);
@@ -130,10 +130,10 @@ export namespace util {
 
     /** 发送post请求 */
     function requestPost(isHttps: boolean, host: string, port: string, path: string, data: any, headers: any, successFunc: Function, errorFunc: Function) {
-        let content = data ? querystring.stringify(data) : "";
+        const content = data ? querystring.stringify(data) : "";
         logger.log('net', `http isHttps:${isHttps} post data`, content);
 
-        let options = {
+        const options = {
             host: host,
             path: path,
             method: 'POST',
@@ -142,7 +142,7 @@ export namespace util {
                 'Content-Length': content.length
             },
             rejectUnauthorized: false
-        }
+        };
         if (port) {
             options['port'] = port;
         }
@@ -153,8 +153,8 @@ export namespace util {
             }
         }
 
-        let transportLib = isHttps ? https : http;
-        let request = transportLib.request(options, (response) => {
+        const transportLib = isHttps ? https : http;
+        const request = transportLib.request(options, (response) => {
             response.setEncoding('utf8');
 
             let body = "";
@@ -164,7 +164,7 @@ export namespace util {
 
             response.on('end', () => {
                 if (successFunc) {
-                    if (!!body) {
+                    if (body) {
                         try {
                             successFunc(JSON.parse(body), response);
                         } catch (error) {
@@ -180,7 +180,7 @@ export namespace util {
                 if (errorFunc) {
                     errorFunc(e);
                 }
-                logger.error('net', `post方式 http返回错误`, e)
+                logger.error('net', `post方式 http返回错误`, e);
             });
         });
 
@@ -188,7 +188,7 @@ export namespace util {
             if (errorFunc) {
                 errorFunc();
             }
-            logger.error('net', `post方式 发送http请求错误`, e.message)
+            logger.error('net', `post方式 发送http请求错误`, e.message);
         });
 
         request.write(content);
@@ -198,7 +198,7 @@ export namespace util {
     /** 初始化服务端native配置 */
     export function initNativeCnf() {
         logger.log('net', `初始化native本地服务器配置`);
-        let nativeCnfContent = FileUtil.readFileSync(commonConfig.nativeCnfPath, "utf-8");
+        const nativeCnfContent = FileUtil.readFileSync(commonConfig.nativeCnfPath, "utf-8");
         if (nativeCnfContent) {
             nativeCnf = JSON.parse(nativeCnfContent);
         } else {
@@ -209,7 +209,7 @@ export namespace util {
     /** 写入服务端配置文件 */
     export function writeServerCnfValue(key: string, value: number | string) {
         nativeCnf[key] = value;
-        let content = JSON.stringify(nativeCnf, null, 4);
+        const content = JSON.stringify(nativeCnf, null, 4);
         FileUtil.writeFileSync(commonConfig.nativeCnfPath, content);
     }
 
@@ -218,7 +218,7 @@ export namespace util {
         const uploadPath: string = `${commonConfig.rootPath}/dist/uploadLog`;
         logger.log('log', `开始拷贝日志文件`);
         //删除旧的日志文件
-        let uploadDir = FileUtil.readdirSync(uploadPath, null, false);
+        const uploadDir = FileUtil.readdirSync(uploadPath, null, false);
         if (uploadDir) {
             for (const iterator of uploadDir) {
                 try {
@@ -232,11 +232,11 @@ export namespace util {
 
         const logPath: string = `${commonConfig.rootPath}/dist/log`;
         const logDir = FileUtil.readdirSync(logPath, null, false);
-        let date: Date = new Date();
-        let dateFormat: string = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDay()}_${date.getHours()}-${date.getMinutes()}`;
-        let actId: string = await getCookie("userid") || mainModel.bellActId || "";
-        let realName: string = mainModel.realName || "";
-        let playerId: string = mainModel.playerId || "";
+        const date: Date = new Date();
+        const dateFormat: string = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDay()}_${date.getHours()}-${date.getMinutes()}`;
+        const actId: string = await getCookie("userid") || mainModel.bellActId || "";
+        const realName: string = mainModel.realName || "";
+        const playerId: string = mainModel.playerId || "";
         const playerName: string = mainModel.playerName || "";
 
         //拷贝新的日志文件到上传目录
@@ -264,16 +264,16 @@ export namespace util {
     /** 上传日志文件列表 */
     export function uploadLogFileList() {
         logger.log('log', `开始上传日志文件列表`);
-        let logDir = FileUtil.readdirSync(commonConfig.uploadLogDir, null, false);
+        const logDir = FileUtil.readdirSync(commonConfig.uploadLogDir, null, false);
         for (const fileName of logDir) {
-            let filePath = `${commonConfig.uploadLogDir}/${fileName}`;
+            const filePath = `${commonConfig.uploadLogDir}/${fileName}`;
             uploadLogFile(`${commonConfig.uploadLogUrl}`, fileName, filePath);
         }
     }
 
     /** 上传日志文件 */
     function uploadLogFile(url: string, fileName: string, filePath: string) {
-        let form = new FormData();
+        const form = new FormData();
         form.append('name', fileName);
         form.append('type', "file");
         const readStream = FileUtil.createReadStream(filePath);
@@ -307,9 +307,9 @@ export namespace util {
     /** 读取指定cookies */
     export async function getCookie(name: string) {
         try {
-            let cookies = await session.defaultSession.cookies.get({});
+            const cookies = await session.defaultSession.cookies.get({});
             if (!cookies) return null;
-            let cookie = cookies.find(value => value.name === name);
+            const cookie = cookies.find(value => value.name === name);
             if (!cookie) return null;
 
             return cookie.value;
@@ -317,5 +317,5 @@ export namespace util {
             console.log(error);
             return null;
         }
-    };
+    }
 }

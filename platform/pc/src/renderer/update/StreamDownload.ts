@@ -21,7 +21,7 @@ export default class StreamDownload {
         const percentage = (received * 100) / total;
         // 用回调显示到界面上
         this.downloadCallback && this.downloadCallback('progress', "", percentage);
-    };
+    }
 
     // 下载过程
     /**
@@ -33,7 +33,7 @@ export default class StreamDownload {
      */
     downloadFile(fileDir, saveDir, filename, callback) {
         try {
-            logger.log(`update`, `开始下载文件`, fileDir, filename, saveDir)
+            logger.log(`update`, `开始下载文件`, fileDir, filename, saveDir);
             this.downloadCallback = callback; // 注册回调函数
             this.fileUrl = fileDir + "/" + filename;
 
@@ -69,12 +69,12 @@ export default class StreamDownload {
 
             req.on('end', () => {
                 this.fileStream && this.fileStream.end();
-                logger.log(`update`, `下载已完成，等待处理`, filename)
+                logger.log(`update`, `下载已完成，等待处理`, filename);
                 // TODO: 检查文件，部署文件，删除文件
                 setTimeout(() => {
                     this.downloadCallback && this.downloadCallback('finished', filename, 100);
                     this.downloadCallback = null;
-                }, 500)
+                }, 500);
             });
 
             req.on('error', (e) => {
@@ -82,13 +82,13 @@ export default class StreamDownload {
                 this.downloadCallback = null;
             });
 
-            let filePath = path.join(saveDir, filename);
+            const filePath = path.join(saveDir, filename);
             this.fileStream = FileUtil.createWriteStream(filePath);
             if (this.fileStream) {
                 req.pipe(this.fileStream);
             }
         } catch (error) {
-            throw error
+            throw error;
         }
     }
 }

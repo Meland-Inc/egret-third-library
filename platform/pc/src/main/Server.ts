@@ -37,14 +37,14 @@ class Server {
         }
 
         logger.log('net', '开始创建native服务器');
-        let nativeServer = http.createServer();
+        const nativeServer = http.createServer();
         mainModel.setNativeServer(nativeServer);
         mainModel.nativeServer.listen(0);
 
         mainModel.nativeServer.on('request', (req, res) => {
-            let urlObj = url.parse(req.url, true);
-            let args = urlObj.query;
-            let pathname = urlObj.pathname;
+            const urlObj = url.parse(req.url, true);
+            const args = urlObj.query;
+            const pathname = urlObj.pathname;
             logger.log('net', `收到游戏服务器消息 pathname:${pathname} args`, args);
             if (pathname === CommonDefine.eNativeServerPathname.serverState) {
                 if (mainModel.gameServerInited) {
@@ -108,7 +108,7 @@ class Server {
             }
 
             if (args.rw && args.rw != "0") {
-                let sign = hasParam ? `&` : `?`;
+                const sign = hasParam ? `&` : `?`;
                 gameServer += `${sign}rw=${args.rw}`;
             }
 
@@ -144,11 +144,11 @@ class Server {
 
     //关闭服务器推送
     private sendReceiveStart(): void {
-        let path = `/native?controlType=receiveStart`;
+        const path = `/native?controlType=receiveStart`;
         util.requestGetHttp(mainModel.gameServerLocalIp, mainModel.gameServerLocalPort, path, null, null, () => {
-            logger.log('net', `关闭游戏服务器启动推送成功`)
+            logger.log('net', `关闭游戏服务器启动推送成功`);
         }, () => {
-            logger.error('net', `关闭游戏服务器启动推送错误`)
+            logger.error('net', `关闭游戏服务器启动推送错误`);
         });
     }
 
@@ -169,13 +169,13 @@ class Server {
                 mainModel.setNativeServer(null);
                 resolve();
             });
-        })
+        });
     }
 
     // 设置游戏运行权限
     private assignGameXPermission(paths: string[]) {
         return new Promise((resolve, reject) => {
-            for (let path of paths) {
+            for (const path of paths) {
                 //0o100 --> fs.constants.S_IXUSR
                 FileUtil.chmod(path, 0o100, (err) => {
                     if (err) {
@@ -184,7 +184,7 @@ class Server {
                 });
             }
             resolve();
-        })
+        });
     }
 
     /** 创建游戏服务器 */
@@ -259,25 +259,25 @@ class Server {
                 treeKill(mainModel.gameServerProcess.pid, 15, (error) => {
                     // treeKill(config.gameServerProcess.pid, (error) => {
                     if (error) {
-                        logger.error('net', `kill 关闭游戏服务器错误`, error)
+                        logger.error('net', `kill 关闭游戏服务器错误`, error);
                         reject(error);
                         return;
                     }
-                    logger.log('net', `kill 关闭游戏服务器成功`)
+                    logger.log('net', `kill 关闭游戏服务器成功`);
                     mainModel.setGameServerProcess(null);
                     resolve();
                 });
                 return;
             }
 
-            let path = `/native?controlType=closeServer`
+            const path = `/native?controlType=closeServer`;
             util.requestGetHttp(mainModel.gameServerLocalIp, mainModel.gameServerLocalPort, path, null, null, () => {
-                logger.log('net', `关闭游戏服务器成功`)
+                logger.log('net', `关闭游戏服务器成功`);
                 mainModel.setGameServerInited(false);
                 mainModel.setGameServerProcess(null);
                 resolve();
             }, () => {
-                logger.error('net', `关闭游戏服务器错误`)
+                logger.error('net', `关闭游戏服务器错误`);
                 mainModel.setGameServerInited(false);
                 reject();
             });
@@ -285,5 +285,5 @@ class Server {
     }
 }
 
-let server = new Server();
+const server = new Server();
 export default server;

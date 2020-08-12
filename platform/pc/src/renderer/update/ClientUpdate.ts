@@ -80,7 +80,7 @@ export default class ClientUpdate {
         let gameVersion: number = 0;
         const fileDir = FileUtil.readdirSync(commonConfig.clientPackagePath);
         for (const iterator of fileDir) {
-            const index = iterator.search(/index_v[0-9]*.html/)
+            const index = iterator.search(/index_v[0-9]*.html/);
             if (index >= 0) {
                 const version = +iterator.replace(/[a-zA-Z_.]/g, "");
                 if (gameVersion < version) {
@@ -94,19 +94,19 @@ export default class ClientUpdate {
 
     /** 获取客户端游戏版本号 */
     private async getClientGameVersion(environName: string, policyHost: string, policyPath: string): Promise<number> {
-        let policyNum = await util.getClientPackagePolicyNum(environName);
+        const policyNum = await util.getClientPackagePolicyNum(environName);
         if (policyNum === null) {
-            let content = `获取策略版本号错误!, environName:${environName}`;
+            const content = `获取策略版本号错误!, environName:${environName}`;
             logger.error(`renderer`, content);
             alert(content);
             return 0;
         }
 
         try {
-            let gameVersion = await util.tryGetClientGameVersion(policyHost, policyPath, policyNum);
+            const gameVersion = await util.tryGetClientGameVersion(policyHost, policyPath, policyNum);
             return +gameVersion;
         } catch (error) {
-            let content = "获取客户端版本号错误!";
+            const content = "获取客户端版本号错误!";
             logger.error(`renderer`, content);
             alert(content);
             return 0;
@@ -159,7 +159,7 @@ export default class ClientUpdate {
             if (this._allInOne) {
                 loading.setLoadingProgress(percentage);
             } else {
-                let each = 100 / this._patchCount;
+                const each = 100 / this._patchCount;
                 loading.setLoadingProgress(percentage / 100 * each + (this._curVersion - this._startVersion) * each);
             }
             return;
@@ -172,7 +172,7 @@ export default class ClientUpdate {
                 loading.showLoading("正在解压客户端程序包");
                 loading.gradualProgress();
             }
-            let content = `开始解压文件:${filename}`;
+            const content = `开始解压文件:${filename}`;
             logger.log('update', content);
             const streamZip = new StreamZip({
                 file: this._clientPackagePath + filename,
@@ -183,14 +183,14 @@ export default class ClientUpdate {
                     if (err) {
                         streamZip.close();
 
-                        let content = `解压文件:${filename}错误`
+                        const content = `解压文件:${filename}错误`;
                         logger.error(`update`, content, err);
                         alert(content);
                         this.executeUpdateCallback();
                         return;
                     }
                     loading.setLoadingProgress(100);
-                    let content = `解压文件:${filename}成功`;
+                    const content = `解压文件:${filename}成功`;
                     logger.log('update', content);
                     streamZip.close();
                     FileUtil.unlinkSync(this._clientPackagePath + filename);
@@ -207,7 +207,7 @@ export default class ClientUpdate {
                         rendererModel.setPackageVersion(CommonDefine.ePackageType.client, commonConfig.environName, this._curVersion);
                         this.executeUpdateCallback();
                     } else {
-                        this.installSinglePatch()
+                        this.installSinglePatch();
                     }
                 });
             });
@@ -215,7 +215,7 @@ export default class ClientUpdate {
         }
 
         if (arg == "404") {
-            let content = `下载文件:${filename}错误, 文件不存在!`;
+            const content = `下载文件:${filename}错误, 文件不存在!`;
             logger.error(`update`, content);
             alert(content);
 
@@ -225,7 +225,7 @@ export default class ClientUpdate {
             } else {
                 this.executeUpdateCallback();
             }
-            return;
+            
         }
     }
 
@@ -282,7 +282,7 @@ export default class ClientUpdate {
 
     /** 获取策略信息 */
     private getPolicyInfo(policyUrl: string): { policyHost: string, policyPath: string } {
-        let policyArr = policyUrl.split("/");
+        const policyArr = policyUrl.split("/");
         const policyHost: string = policyArr[0];
         let policyPath: string = "";
         if (policyArr[1] && policyArr[1] !== "") {

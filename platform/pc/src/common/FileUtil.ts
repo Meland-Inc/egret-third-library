@@ -156,7 +156,7 @@ export default class FileUtil {
 
         if (rendererLogger) {
             rendererLogger.error(tag, msg, ...args);
-            return;
+            
         }
     }
 }

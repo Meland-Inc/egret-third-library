@@ -70,7 +70,7 @@ class Message {
 
     /** 应用主进程消息 */
     private applyIpcMsg(msgId: string, ...args: unknown[]) {
-        let func = this.msgMap[msgId];
+        const func = this.msgMap[msgId];
         if (func) {
             func(...args);
         }
@@ -98,7 +98,7 @@ class Message {
 
     /** 收到获取native策略号消息 */
     private async onGetNativePolicyVersion() {
-        let nativePolicyVersion: number = await util.getNativePolicyNum(commonConfig.environName);
+        const nativePolicyVersion: number = await util.getNativePolicyNum(commonConfig.environName);
         this.sendIpcMsg(MsgId.SET_NATIVE_POLICY_VERSION, nativePolicyVersion);
     }
 
@@ -133,15 +133,15 @@ class Message {
         logger.log('update', `开始检查更新`);
 
         //服务器包所在目录
-        let serverPackageDir = `${commonConfig.serverPackagePath}`;
+        const serverPackageDir = `${commonConfig.serverPackagePath}`;
         let serverDirect = false;
-        let serverExists = FileUtil.existsSync(serverPackageDir);
+        const serverExists = FileUtil.existsSync(serverPackageDir);
         if (!serverExists) {
             serverDirect = true;
         } else {
-            let dir = FileUtil.readdirSync(serverPackageDir);
-            let zipIndex: number = dir.findIndex(value => value.search(/.*.zip/) >= 0);
-            let serverVersion: number = rendererModel.getPackageVersion(CommonDefine.ePackageType.server);
+            const dir = FileUtil.readdirSync(serverPackageDir);
+            const zipIndex: number = dir.findIndex(value => value.search(/.*.zip/) >= 0);
+            const serverVersion: number = rendererModel.getPackageVersion(CommonDefine.ePackageType.server);
             //不存在服务端版本号,或者当文件数量小于2,或者有release压缩包(zip包不完整,导致解压失败),要重新下载新的包
             if (!serverVersion || zipIndex >= 0 || dir.length < 2) {
                 FileUtil.emptyDirSync(serverPackageDir);
@@ -150,16 +150,16 @@ class Message {
         }
 
         //客户端包所在目录
-        let clientPackageDir = commonConfig.clientPackagePath;
+        const clientPackageDir = commonConfig.clientPackagePath;
         let clientDirect = false;
-        let clientExists = FileUtil.existsSync(clientPackageDir);
+        const clientExists = FileUtil.existsSync(clientPackageDir);
         if (!clientExists) {
             clientDirect = true;
         } else {
-            let dir = FileUtil.readdirSync(clientPackageDir);
+            const dir = FileUtil.readdirSync(clientPackageDir);
             logger.log(`net`, `dir length:${dir.length}`);
-            let zipIndex: number = dir.findIndex(value => value.search(/release_v.*s.zip/) >= 0);
-            let clientVersion: number = rendererModel.getPackageVersion(CommonDefine.ePackageType.client);
+            const zipIndex: number = dir.findIndex(value => value.search(/release_v.*s.zip/) >= 0);
+            const clientVersion: number = rendererModel.getPackageVersion(CommonDefine.ePackageType.client);
             //不存在客户端版本号,或者当文件数量小于2,或者有release压缩包(zip包不完整,导致解压失败),要重新下载新的包
             if (!clientVersion || zipIndex >= 0 || dir.length < 2) {
                 FileUtil.emptyDirSync(clientPackageDir);
@@ -168,15 +168,15 @@ class Message {
         }
 
         if (serverDirect || clientDirect) {
-            let serverUpdateFunc = serverDirect ? this.directDownloadServer.bind(this) : this.checkServerUpdate.bind(this);
-            let clientUpdateFunc = clientDirect ? this.directDownloadClient.bind(this) : this.checkClientUpdate.bind(this);
+            const serverUpdateFunc = serverDirect ? this.directDownloadServer.bind(this) : this.checkServerUpdate.bind(this);
+            const clientUpdateFunc = clientDirect ? this.directDownloadClient.bind(this) : this.checkClientUpdate.bind(this);
             serverUpdateFunc(clientUpdateFunc, this.checkUpdateComplete.bind(this));
             logger.log(`net`, `直接下载最新包`);
             return;
         }
 
-        let isServerLatestVersion = await this._serverUpdate.checkLatestVersion();
-        let isClientLatestVersion = await this._clientUpdate.checkLatestVersion();
+        const isServerLatestVersion = await this._serverUpdate.checkLatestVersion();
+        const isClientLatestVersion = await this._clientUpdate.checkLatestVersion();
         //两个版本都一致
         if (isServerLatestVersion && isClientLatestVersion) {
             logger.log(`net`, `检查更新完毕,客户端,服务端版本都是最新`);
@@ -206,7 +206,7 @@ class Message {
             rendererModel.setPackageVersion(CommonDefine.ePackageType.server, commonConfig.environName, 0);
             this._serverUpdate.checkUpdate(callback, ...args);
         } catch (error) {
-            let content = `native下载服务端出错,点击重试`;
+            const content = `native下载服务端出错,点击重试`;
             logger.error(`update`, content, error);
             alert(content + error);
             this.directDownloadServer(callback, ...args);
@@ -218,7 +218,7 @@ class Message {
         try {
             this._clientUpdate.directDownload(callback, ...args);
         } catch (error) {
-            let content = `native下载客户端出错,点击重试`;
+            const content = `native下载客户端出错,点击重试`;
             logger.error(`update`, content, error);
             alert(content + error);
             this.directDownloadClient(callback, ...args);
@@ -230,7 +230,7 @@ class Message {
         try {
             this._clientUpdate.checkUpdate(callback, ...args);
         } catch (error) {
-            let content = `native更新客户端报错`
+            const content = `native更新客户端报错`;
             logger.error(`update`, content, error);
             alert(content);
 
@@ -243,7 +243,7 @@ class Message {
         try {
             this._serverUpdate.checkUpdate(callback, ...args);
         } catch (error) {
-            let content = `native更新服务端报错`
+            const content = `native更新服务端报错`;
             logger.error(`update`, content, error);
             alert(content);
 
@@ -301,9 +301,9 @@ class Message {
     private onStartNativePlatform(queryObject: querystring.ParsedUrlQuery) {
         this.checkClearLocalStorage();
 
-        let webviewToken: string
-        let queryObjectWebviewToken = queryObject['webviewToken'];
-        let queryObjectToken = queryObject['token'];
+        let webviewToken: string;
+        const queryObjectWebviewToken = queryObject['webviewToken'];
+        const queryObjectToken = queryObject['token'];
         if (queryObjectWebviewToken) {
             if (Array.isArray(queryObjectWebviewToken)) {
                 webviewToken = queryObjectWebviewToken[0];
@@ -323,7 +323,7 @@ class Message {
         }
 
         logger.log("platform", `start native platform queryObject`, queryObject);
-        let iframeUrl = new URL(`file://${commonConfig.clientPackagePath}/index.html`);
+        const iframeUrl = new URL(`file://${commonConfig.clientPackagePath}/index.html`);
         for (const key in queryObject) {
             if (queryObject.hasOwnProperty(key)) {
                 const value = queryObject[key];
@@ -334,7 +334,7 @@ class Message {
                 }
             }
         }
-        let platformObject = {
+        const platformObject = {
             class_id: queryObject["class_id"],
             package_id: queryObject["package_id"],
             lesson_id: queryObject["lesson_id"],
@@ -342,12 +342,12 @@ class Message {
             webviewToken: webviewToken,
             back_url: queryObject["back_url"],
             iframeSrc: iframeUrl.toString()
-        }
+        };
 
         logger.log('platform', `platformObject:`, platformObject);
         logger.rendererLog('platform', `platformObject:`, platformObject);
         logger.rendererLog('platform', `iframeSrc:`, iframeUrl.toString());
-        let platformValue = querystring.stringify(platformObject);
+        const platformValue = querystring.stringify(platformObject);
         //获取官网链接
         let bellPlatformDomain: string;
         if (commonConfig.environName === CommonDefine.eEnvironName.release) {
@@ -383,7 +383,7 @@ class Message {
         window.onload = () => {
             logger.log("message", `window loaded 监听客户端消息`);
             window.addEventListener("message", this.onListenClientMsg);
-        }
+        };
     }
 
     /** 应用set-cookie */
@@ -418,7 +418,7 @@ class Message {
 
         if (window) {
             window.postMessage({ 'key': 'nativeMsg', 'value': JSON.stringify([msgId, args]) }, '*');
-            return;
+            
         }
     }
 
@@ -441,5 +441,5 @@ class Message {
     }
 }
 
-let message = new Message();
+const message = new Message();
 export default message;

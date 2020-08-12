@@ -13,12 +13,12 @@ import * as logger from './logger';
 export async function tryGetPolicyInfo(versionName: string): Promise<string> {
     return new Promise(async resolve => {
         try {
-            let policyInfo = await getPolicyInfo(versionName);
+            const policyInfo = await getPolicyInfo(versionName);
             resolve(policyInfo);
         } catch (error) {
             logger.error(`policy`, `尝试获取策略号${versionName}失败,3秒后重试`);
             setTimeout(async () => {
-                let policyInfo = await tryGetPolicyInfo(versionName);
+                const policyInfo = await tryGetPolicyInfo(versionName);
                 resolve(policyInfo);
             }, 3000);
         }
@@ -28,13 +28,13 @@ export async function tryGetPolicyInfo(versionName: string): Promise<string> {
 /** 获取指定策略信息 */
 function getPolicyInfo(versionName: string): Promise<string> {
     return new Promise((resolve, reject) => {
-        let time = Math.floor(new Date().getTime() / 1000);
-        let due = 1800;
-        let token = "*";
-        let channel = "bian_game"
+        const time = Math.floor(new Date().getTime() / 1000);
+        const due = 1800;
+        const token = "*";
+        const channel = "bian_game";
 
-        let policyQueryServer = 'policy-server.wkcoding.com';
-        let url = new URL('http://' + policyQueryServer + '/getVersion', window.location.href);
+        const policyQueryServer = 'policy-server.wkcoding.com';
+        const url = new URL('http://' + policyQueryServer + '/getVersion', window.location.href);
         url.searchParams.append('versionName', versionName);
         url.searchParams.append('channel', channel);
         url.searchParams.append('time', time.toString());
@@ -43,7 +43,7 @@ function getPolicyInfo(versionName: string): Promise<string> {
 
         logger.log("policy", `getPolicyInfo url:${url}`);
 
-        let request = new XMLHttpRequest();
+        const request = new XMLHttpRequest();
         request.open("GET", url.toString());
         request.onreadystatechange = () => {
             if (request.readyState !== 4) {
@@ -55,7 +55,7 @@ function getPolicyInfo(versionName: string): Promise<string> {
             } else {
                 reject("获取版本号错误!");
             }
-        }
+        };
         request.send(null);
     });
 }
@@ -64,12 +64,12 @@ function getPolicyInfo(versionName: string): Promise<string> {
 export function tryGetClientGameVersion(policyHost: string, policyPath: string, policyNum: number) {
     return new Promise(async resolve => {
         try {
-            let policyInfo = await getClientGameVersion(policyHost, policyPath, policyNum);
+            const policyInfo = await getClientGameVersion(policyHost, policyPath, policyNum);
             resolve(policyInfo);
         } catch (error) {
             logger.error(`policy`, `尝试获取游戏版本号失败,3秒后重试, policyHost:${policyHost} policyPath:${policyPath} policyNum:${policyNum}`);
             setTimeout(async () => {
-                let policyInfo = await tryGetClientGameVersion(policyHost, policyPath, policyNum);
+                const policyInfo = await tryGetClientGameVersion(policyHost, policyPath, policyNum);
                 resolve(policyInfo);
             }, 3000);
         }
@@ -79,7 +79,7 @@ export function tryGetClientGameVersion(policyHost: string, policyPath: string, 
 /** 获取客户端游戏版本 */
 function getClientGameVersion(policyHost: string, policyPath: string, policyNum: number) {
     return new Promise((resolve, reject) => {
-        let options = {
+        const options = {
             host: policyHost, // 请求地址 域名，google.com等.. 
             // port: 10001,
             path: `${policyPath}/policyFile_v${policyNum}.json`, // 具体路径eg:/upload
@@ -99,24 +99,24 @@ function getClientGameVersion(policyHost: string, policyPath: string, policyNum:
                 resData += data;
             });
             response.on("end", () => {
-                let obj = JSON.parse(resData);
-                let gameVersion = obj.normalVersion;
-                logger.log(`renderer`, `游戏版本号:${gameVersion}`)
+                const obj = JSON.parse(resData);
+                const gameVersion = obj.normalVersion;
+                logger.log(`renderer`, `游戏版本号:${gameVersion}`);
 
-                resolve(gameVersion)
+                resolve(gameVersion);
             });
             response.on("error", (err) => {
                 console.error(`load policy file error policyNum:${policyNum} statusCode:${response.statusCode} option:${options.host}${options.path}`, err);
                 reject();
             });
-        })
-    })
+        });
+    });
 }
 
 /** 获取客户端包策略版本 */
 export async function getClientPackagePolicyNum(environName: string): Promise<number> {
-    let value = await tryGetPolicyInfo(environName);
-    let data = JSON.parse(value);
+    const value = await tryGetPolicyInfo(environName);
+    const data = JSON.parse(value);
     let policyNum = 0;
     if (data.Code === 0) {
         policyNum = +data.Data.Version;
@@ -128,10 +128,10 @@ export async function getClientPackagePolicyNum(environName: string): Promise<nu
 
 /** 获取服务器包策略版本号 */
 export async function getServerPackagePolicyNum(environName: string) {
-    let fileName = getServerPackageFileName();
-    let versionName = `${environName}_serverPackage_${fileName}`;
-    let value = await tryGetPolicyInfo(versionName);
-    let data = JSON.parse(value);
+    const fileName = getServerPackageFileName();
+    const versionName = `${environName}_serverPackage_${fileName}`;
+    const value = await tryGetPolicyInfo(versionName);
+    const data = JSON.parse(value);
     let policyNum = 0;
     if (data.Code === 0) {
         policyNum = +data.Data.Version;
@@ -142,9 +142,9 @@ export async function getServerPackagePolicyNum(environName: string) {
 
 /** 获取native策略版本号 */
 export async function getNativePolicyNum(environName: string) {
-    let versionName = `${environName}_native`;
-    let value = await tryGetPolicyInfo(versionName);
-    let data = JSON.parse(value);
+    const versionName = `${environName}_native`;
+    const value = await tryGetPolicyInfo(versionName);
+    const data = JSON.parse(value);
     let policyNum = 0;
     if (data.Code === 0) {
         policyNum = +data.Data.Version;
@@ -157,9 +157,9 @@ export async function getNativePolicyNum(environName: string) {
 export function getServerPackageFileName() {
     let platform = "windows";
     if (os.platform() === "win32") {
-        platform = "windows"
+        platform = "windows";
     } else {
-        platform = "mac"
+        platform = "mac";
     }
 
     let arch = "amd64";
@@ -182,5 +182,5 @@ export async function setCookie(url: string, name: string, value: string, expira
         })
         .catch((reason) => {
             logger.error("cookie", "setCookie error", reason);
-        })
+        });
 }
