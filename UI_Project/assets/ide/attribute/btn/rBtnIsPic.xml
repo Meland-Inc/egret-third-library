@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="18,18" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <loader id="n0_sz33" name="icon" xy="0,0" pivot="0.5,0.5" size="18,18" url="ui://ti9jag5tjo99wcyimv" align="center" vAlign="middle" autoSize="true">
+      <gearIcon controller="button" pages="1" values="ui://ti9jag5tjo99wcyimw" default="ui://ti9jag5tjo99wcyimv"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <image id="n2_jo99" name="n2" src="jo99wcyimx" fileName="attribute/img/icon_spsx_01.png" xy="3,2">
+      <gearDisplay controller="button" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+  </displayList>
+  <Button mode="Radio"/>
+  <relation target="n0_sz33" sidePair="width-width,height-height"/>
+</component>
