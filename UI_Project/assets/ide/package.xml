@@ -515,6 +515,28 @@
     <image id="puqxwcyim9" name="bg.png" path="/codeVew/img/"/>
     <component id="puqxwcyima" name="ComCodeblockBtn.xml" path="/codeVew/com/"/>
     <component id="puqxwcyimb" name="btnRunStop.xml" path="/codeVew/btn/"/>
+    <component id="nt6kwcyimc" name="ComRankList.xml" path="/ranklist/" exported="true"/>
+    <image id="nt6kwcyime" name="bg_phb_01.png" path="/ranklist/img/" scale="9grid" scale9grid="25,26,50,52"/>
+    <image id="nt6kwcyimf" name="bg_phb_02.png" path="/ranklist/img/"/>
+    <image id="nt6kwcyimg" name="bg_phb_03.png" path="/ranklist/img/"/>
+    <image id="nt6kwcyimh" name="bg_phb_04.png" path="/ranklist/img/"/>
+    <image id="nt6kwcyimi" name="bg_phb_05.png" path="/ranklist/img/"/>
+    <image id="nt6kwcyimj" name="icon_phb_01.png" path="/ranklist/img/"/>
+    <image id="nt6kwcyimk" name="icon_phb_02.png" path="/ranklist/img/"/>
+    <image id="nt6kwcyiml" name="icon_phb_03.png" path="/ranklist/img/" scale="9grid" scale9grid="3,31,6,62"/>
+    <image id="nt6kwcyimm" name="icon_phb_04.png" path="/ranklist/img/" scale="9grid" scale9grid="3,15,6,79"/>
+    <image id="nt6kwcyimn" name="img_phb_01.png" path="/ranklist/img/"/>
+    <image id="nt6kwcyimo" name="img_phb_02.png" path="/ranklist/img/" scale="9grid" scale9grid="30,19,60,10"/>
+    <image id="nt6kwcyimp" name="img_phb_03.png" path="/ranklist/img/"/>
+    <image id="nt6kwcyimq" name="img_phb_04.png" path="/ranklist/img/"/>
+    <image id="nt6kwcyimr" name="img_phb_05.png" path="/ranklist/img/"/>
+    <image id="nt6kwcyims" name="img_phb_06.png" path="/ranklist/img/" scale="9grid" scale9grid="27,19,54,8"/>
+    <component id="nt6kwcyimv" name="comRankListItem.xml" path="/ranklist/com/"/>
+    <component id="nt6kwcyimw" name="btnShowHideRankList.xml" path="/ranklist/com/"/>
+    <component id="nt6kwcyimz" name="rankScrollBar_grip.xml" path="/ranklist/"/>
+    <component id="nt6kwcyin0" name="rankScrollBar.xml" path="/ranklist/" exported="true"/>
+    <component id="nt6kwcyin1" name="WinEntityRankList.xml" path="/ranklist/" exported="true"/>
+    <component id="nt6kwcyin2" name="comAWRankList.xml" path="/ranklist/com/" exported="true"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>

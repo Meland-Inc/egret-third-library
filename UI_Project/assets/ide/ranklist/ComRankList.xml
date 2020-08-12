@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="336,249" designImage="ui://ti9jag5tnt6kwcyimt" designImageOffsetX="-332" designImageOffsetY="-197" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlShowHide" pages="1,hide,0,show" selected="0"/>
+  <displayList>
+    <image id="n8_nt6k" name="imgBg" src="nt6kwcyime" fileName="ranklist/img/bg_phb_01.png" xy="0,0" size="336,249">
+      <gearDisplay controller="ctrlShowHide" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n6_nt6k" name="btnShowHide" src="nt6kwcyimw" fileName="ranklist/com/btnShowHideRankList.xml" xy="0,0" touchable="false">
+      <Button controller="ctrlShowHide" page="0"/>
+    </component>
+    <list id="n4_nt6k" name="lstRank" xy="15,45" size="306,204" layout="flow_hz" overflow="scroll" scrollBarFlags="4" margin="5,7,0,0" scrollBarRes="ui://ti9jag5tnt6kwcyin0," lineGap="4" defaultItem="ui://ti9jag5tnt6kwcyimv" align="center">
+      <gearDisplay controller="ctrlShowHide" pages="0"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+  <relation target="n4_nt6k" sidePair="bottomext-bottom"/>
+</component>
