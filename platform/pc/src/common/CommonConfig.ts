@@ -5,9 +5,10 @@
  * @FilePath \pc\src\common\CommonConfig.ts
  */
 
-import fs from 'fs';
 import { app, remote, App } from 'electron';
 import { CommonDefine } from './CommonDefine';
+import FileUtil from "./FileUtil";
+import { logger } from '../main/logger';
 
 class CommonConfig {
     /** 本机IP */
@@ -172,16 +173,20 @@ class CommonConfig {
     }
 
     private initGlobalConfig(): void {
-        if (!fs.existsSync(this.globalConfigPath)) {
+        if (!FileUtil.existsSync(this.globalConfigPath)) {
             return;
         }
 
-        let data = fs.readFileSync(this.globalConfigPath, 'utf-8');
-        const globalConfig: IGlobalConfig = JSON.parse(data);
-        this._environName = globalConfig.environName;
-        this._patchUrl = globalConfig.patchUrl;
-        this._packageUrl = globalConfig.packageUrl;
-        this._policyUrl = globalConfig.policyUrl;
+        let data = FileUtil.readFileSync(this.globalConfigPath, 'utf-8', false);
+        if (data) {
+            const globalConfig:IGlobalConfig = JSON.parse(data);
+            this._environName = globalConfig.environName;
+            this._patchUrl = globalConfig.patchUrl;
+            this._packageUrl = globalConfig.packageUrl;
+            this._policyUrl = globalConfig.policyUrl;
+        } else {
+            logger.error("file", `读取GlobalConfig全局配置错误`);
+        }
     }
 }
 

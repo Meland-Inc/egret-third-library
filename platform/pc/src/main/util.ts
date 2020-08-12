@@ -8,7 +8,6 @@ import { session } from 'electron';
 import { exec, ChildProcess } from 'child_process';
 import http from 'http';
 import https from 'https';
-import fs from 'fs';
 import querystring from 'querystring';
 import FormData from 'form-data';
 
@@ -16,6 +15,7 @@ import commonConfig from '../common/CommonConfig';
 
 import { logger } from './logger';
 import mainModel from './MainModel';
+import FileUtil from '../common/FileUtil';
 
 export namespace util {
     let nativeCnf: any;
@@ -198,15 +198,19 @@ export namespace util {
     /** 初始化服务端native配置 */
     export function initNativeCnf() {
         logger.log('net', `初始化native本地服务器配置`);
-        let nativeCnfContent = fs.readFileSync(commonConfig.nativeCnfPath, "utf-8");
-        nativeCnf = JSON.parse(nativeCnfContent);
+        let nativeCnfContent = FileUtil.readFileSync(commonConfig.nativeCnfPath, "utf-8");
+        if (nativeCnfContent) {
+            nativeCnf = JSON.parse(nativeCnfContent);
+        } else {
+            logger.error("file", "初始化native本地服务器配置错误");
+        }
     }
 
     /** 写入服务端配置文件 */
     export function writeServerCnfValue(key: string, value: number | string) {
         nativeCnf[key] = value;
         let content = JSON.stringify(nativeCnf, null, 4);
-        fs.writeFileSync(commonConfig.nativeCnfPath, content);
+        FileUtil.writeFileSync(commonConfig.nativeCnfPath, content);
     }
 
     /** 拷贝日志到上传目录 */
@@ -214,11 +218,11 @@ export namespace util {
         const uploadPath: string = `${commonConfig.rootPath}/dist/uploadLog`;
         logger.log('log', `开始拷贝日志文件`);
         //删除旧的日志文件
-        let uploadDir = fs.readdirSync(uploadPath);
+        let uploadDir = FileUtil.readdirSync(uploadPath, null, false);
         if (uploadDir) {
             for (const iterator of uploadDir) {
                 try {
-                    fs.unlinkSync(`${uploadPath}/${iterator}`);
+                    FileUtil.unlinkSync(`${uploadPath}/${iterator}`);
                     logger.log("log", `delete log file ${uploadPath}/${iterator} success`);
                 } catch (error) {
                     logger.error('log', `delete log file ${uploadPath}/${iterator} error`, error);
@@ -227,7 +231,7 @@ export namespace util {
         }
 
         const logPath: string = `${commonConfig.rootPath}/dist/log`;
-        const logDir = fs.readdirSync(logPath);
+        const logDir = FileUtil.readdirSync(logPath, null, false);
         let date: Date = new Date();
         let dateFormat: string = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDay()}_${date.getHours()}-${date.getMinutes()}`;
         let actId: string = await getCookie("userid") || mainModel.bellActId || "";
@@ -251,7 +255,7 @@ export namespace util {
                 newFileName += `_playerId-${playerId}`;
             }
             newFileName += `_${fileName}`;
-            fs.copyFileSync(`${logPath}/${fileName}`, `${uploadPath}/${newFileName}`);
+            FileUtil.copyFileSync(`${logPath}/${fileName}`, `${uploadPath}/${newFileName}`);
         }
 
         logger.clear();
@@ -260,7 +264,7 @@ export namespace util {
     /** 上传日志文件列表 */
     export function uploadLogFileList() {
         logger.log('log', `开始上传日志文件列表`);
-        let logDir = fs.readdirSync(commonConfig.uploadLogDir);
+        let logDir = FileUtil.readdirSync(commonConfig.uploadLogDir, null, false);
         for (const fileName of logDir) {
             let filePath = `${commonConfig.uploadLogDir}/${fileName}`;
             uploadLogFile(`${commonConfig.uploadLogUrl}`, fileName, filePath);
@@ -272,7 +276,12 @@ export namespace util {
         let form = new FormData();
         form.append('name', fileName);
         form.append('type', "file");
-        form.append('myfile', fs.createReadStream(filePath));
+        const readStream = FileUtil.createReadStream(filePath);
+        if (readStream) {
+            form.append('myfile', readStream);
+        } else {
+            logger.error('file', `读取文件失败: ${filePath}`);
+        }
 
         try {
             form.submit(url, (err: Error, res: http.IncomingMessage) => {

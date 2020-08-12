@@ -4,7 +4,6 @@
  * @Date 2020-02-13 14:56:09
  * @FilePath \pc\src\renderer\update\ClientUpdate.ts
  */
-import fs from 'fs';
 import StreamZip from "node-stream-zip";
 
 import { CommonDefine } from '../../common/CommonDefine';
@@ -15,6 +14,7 @@ import * as logger from '../logger';
 import * as util from '../util';
 import rendererModel from '../RendererModel';
 import StreamDownload from './StreamDownload';
+import FileUtil from '../../common/FileUtil';
 
 
 export default class ClientUpdate {
@@ -49,7 +49,7 @@ export default class ClientUpdate {
             gameVersion = 0;
         } else {
             const indexFilePath = `${commonConfig.clientPackagePath}/index_v${gameVersion}.html`;
-            const indexFileExist = fs.existsSync(indexFilePath);
+            const indexFileExist = FileUtil.existsSync(indexFilePath);
             //不存在对应游戏版本号的文件,通过文件列表获取最大游戏版本
             if (!indexFileExist) {
                 gameVersion = this.getGameVersionByIndexFileList();
@@ -78,7 +78,7 @@ export default class ClientUpdate {
     /** 通过游戏index文件列表获取当前最大游戏版本号 */
     private getGameVersionByIndexFileList(): number {
         let gameVersion: number = 0;
-        const fileDir = fs.readdirSync(commonConfig.clientPackagePath);
+        const fileDir = FileUtil.readdirSync(commonConfig.clientPackagePath);
         for (const iterator of fileDir) {
             const index = iterator.search(/index_v[0-9]*.html/)
             if (index >= 0) {
@@ -193,31 +193,22 @@ export default class ClientUpdate {
                     let content = `解压文件:${filename}成功`;
                     logger.log('update', content);
                     streamZip.close();
+                    FileUtil.unlinkSync(this._clientPackagePath + filename);
+                    //如果是下载整包状态,直接赋值当前版本为最新游戏版本
+                    if (this._isDownloadPackage) {
+                        this._isDownloadPackage = false;
+                        this._curVersion = this._gameVersion;
+                    }
 
-                    fs.unlink(this._clientPackagePath + filename, (err) => {
-                        if (err) {
-                            let content = `删除文件:${filename}错误`
-                            logger.error(`update`, content, err);
-                        } else {
-                            logger.log(`update`, '文件:' + filename + '删除成功！');
-                        }
-
-                        //如果是下载整包状态,直接赋值当前版本为最新游戏版本
-                        if (this._isDownloadPackage) {
-                            this._isDownloadPackage = false;
-                            this._curVersion = this._gameVersion;
-                        }
-
-                        if (this._curVersion < this._gameVersion) {
-                            this._curVersion = this._curVersion + 1;
-                        }
-                        if (this._curVersion >= this._gameVersion) {
-                            rendererModel.setPackageVersion(CommonDefine.ePackageType.client, commonConfig.environName, this._curVersion);
-                            this.executeUpdateCallback();
-                        } else {
-                            this.installSinglePatch()
-                        }
-                    });
+                    if (this._curVersion < this._gameVersion) {
+                        this._curVersion = this._curVersion + 1;
+                    }
+                    if (this._curVersion >= this._gameVersion) {
+                        rendererModel.setPackageVersion(CommonDefine.ePackageType.client, commonConfig.environName, this._curVersion);
+                        this.executeUpdateCallback();
+                    } else {
+                        this.installSinglePatch()
+                    }
                 });
             });
             return;

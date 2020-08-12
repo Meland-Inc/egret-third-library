@@ -5,8 +5,6 @@
  * @FilePath \pc\src\renderer\util.ts
  */
 import { remote } from 'electron';
-import fs from 'fs';
-import path from 'path';
 import os from 'os';
 import http from "http";
 import * as logger from './logger';
@@ -172,31 +170,6 @@ export function getServerPackageFileName() {
     }
 
     return `${platform}_${arch}`;
-}
-
-/** 遍历删除指定文件夹 */
-export async function deleteFolderRecursive(folderPath: string, rmRootDir?: boolean) {
-    let files = [];
-    //判断给定的路径是否存在
-    if (fs.existsSync(folderPath)) {
-        //返回文件和子目录的数组
-        files = fs.readdirSync(folderPath);
-        for (const file of files) {
-            let curPath = path.join(folderPath, file);
-            //fs.statSync同步读取文件夹文件，如果是文件夹，在重复触发函数
-            if (fs.statSync(curPath).isDirectory()) {
-                await deleteFolderRecursive(curPath);
-            } else {
-                fs.unlinkSync(curPath);
-            }
-        }
-        //清除文件夹
-        if (rmRootDir) {
-            fs.rmdirSync(folderPath);
-        }
-    } else {
-        console.log("给定的路径不存在，请给出正确的路径", folderPath);
-    }
 }
 
 /** 设置cookies */

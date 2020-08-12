@@ -4,10 +4,8 @@
  * @Date 2020-02-26 15:31:07
  * @FilePath \pc\src\renderer\Message.ts
  */
-import { ipcRenderer, IpcRendererEvent, remote } from "electron";
+import { ipcRenderer, IpcRendererEvent } from "electron";
 import querystring from "querystring";
-import fs from "fs";
-import fse from "fs-extra";
 import path from "path";
 import tough from 'tough-cookie';
 
@@ -23,6 +21,7 @@ import * as loading from './loading';
 import ClientUpdate from './update/ClientUpdate';
 import ServerUpdate from './update/ServerUpdate';
 import errorReport from "./ErrorReport";
+import FileUtil from "../common/FileUtil";
 
 class Message {
     //消息对应方法集合
@@ -131,16 +130,16 @@ class Message {
         //服务器包所在目录
         let serverPackageDir = `${commonConfig.serverPackagePath}`;
         let serverDirect = false;
-        let serverExists = fs.existsSync(serverPackageDir);
+        let serverExists = FileUtil.existsSync(serverPackageDir);
         if (!serverExists) {
             serverDirect = true;
         } else {
-            let dir = fs.readdirSync(serverPackageDir);
+            let dir = FileUtil.readdirSync(serverPackageDir);
             let zipIndex: number = dir.findIndex(value => value.search(/.*.zip/) >= 0);
             let serverVersion: number = rendererModel.getPackageVersion(CommonDefine.ePackageType.server);
             //不存在服务端版本号,或者当文件数量小于2,或者有release压缩包(zip包不完整,导致解压失败),要重新下载新的包
             if (!serverVersion || zipIndex >= 0 || dir.length < 2) {
-                fse.emptyDirSync(serverPackageDir);
+                FileUtil.emptyDirSync(serverPackageDir);
                 serverDirect = true;
             }
         }
@@ -148,17 +147,17 @@ class Message {
         //客户端包所在目录
         let clientPackageDir = commonConfig.clientPackagePath;
         let clientDirect = false;
-        let clientExists = fs.existsSync(clientPackageDir);
+        let clientExists = FileUtil.existsSync(clientPackageDir);
         if (!clientExists) {
             clientDirect = true;
         } else {
-            let dir = fs.readdirSync(clientPackageDir);
+            let dir = FileUtil.readdirSync(clientPackageDir);
             logger.log(`net`, `dir length:${dir.length}`);
             let zipIndex: number = dir.findIndex(value => value.search(/release_v.*s.zip/) >= 0);
             let clientVersion: number = rendererModel.getPackageVersion(CommonDefine.ePackageType.client);
             //不存在客户端版本号,或者当文件数量小于2,或者有release压缩包(zip包不完整,导致解压失败),要重新下载新的包
             if (!clientVersion || zipIndex >= 0 || dir.length < 2) {
-                fse.emptyDirSync(clientPackageDir);
+                FileUtil.emptyDirSync(clientPackageDir);
                 clientDirect = true;
             }
         }
@@ -437,5 +436,5 @@ class Message {
     }
 }
 
-let message = new Message();;
+let message = new Message();
 export default message;

@@ -4,11 +4,11 @@
  * @Date 2020-02-25 10:50:36
  * @FilePath \pc\src\renderer\update\StreamDownload.ts
  */
-import fs from 'fs';
 import request from 'request';
 import path from 'path';
 
 import * as logger from '../logger';
+import FileUtil from '../../common/FileUtil';
 
 export default class StreamDownload {
     // 声明下载过程回调函数
@@ -83,9 +83,10 @@ export default class StreamDownload {
             });
 
             let filePath = path.join(saveDir, filename);
-            this.fileStream = fs.createWriteStream(filePath);
-            req.pipe(this.fileStream);
-
+            this.fileStream = FileUtil.createWriteStream(filePath);
+            if (this.fileStream) {
+                req.pipe(this.fileStream);
+            }
         } catch (error) {
             throw error
         }
