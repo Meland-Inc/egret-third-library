@@ -1,0 +1,11 @@
+# don't ever lint folder
+node_modules
+bin-debug
+bint-release
+.vscode
+libs
+mixLibs
+scripts
+pluginSrc
+*.d.ts
+src/module/codeBlock
