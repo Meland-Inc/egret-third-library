@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="336,45" extention="Button" designImageAlpha="0">
+  <controller name="button" pages="2,up,3,down" selected="0"/>
+  <displayList>
+    <loader id="n2_nt6k" name="ladBg" xy="0,0" size="336,45" url="ui://ti9jag5tnt6kwcyims" fill="scaleFree">
+      <gearIcon controller="button" pages="3" values="ui://ti9jag5tnt6kwcyimo" default="ui://ti9jag5tnt6kwcyims"/>
+    </loader>
+    <loader id="n0_nt6k" name="icon" xy="306,13" size="15,18" url="ui://ti9jag5tnt6kwcyimj">
+      <gearIcon controller="button" pages="2" values="ui://ti9jag5tnt6kwcyimj" default="ui://ti9jag5tnt6kwcyimk"/>
+    </loader>
+    <text id="n1_nt6k" name="title" xy="51,3" size="232,34" fontSize="21" color="#6b6b6b" align="center" vAlign="middle" autoSize="none" singleLine="true" text="排行榜"/>
+  </displayList>
+  <Button mode="Check"/>
+</component>
