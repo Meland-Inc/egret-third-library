@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="320,280" designImage="ui://oyity675gen82n" designImageAlpha="0">
   <displayList>
-    <image id="n9_uvgl" name="n9" src="gen86o" fileName="img_UI3/img_main_yidonglunpanwaiyuan_toumingdu80%_17.png" xy="16,119" group="n7_pus6"/>
-    <loader id="n8_uvgl" name="n8" xy="23,128" size="143,143" group="n7_pus6" url="ui://oyity675gen86m"/>
-    <component id="n6_rdy4" name="btnRocker" src="gen8bq" fileName="btn/btnCommon.xml" xy="65,170" size="60,60" group="n7_pus6">
+    <image id="n9_uvgl" name="n9" src="gen86o" fileName="old/img_UI3/img_main_yidonglunpanwaiyuan_toumingdu80%_17.png" xy="81,61" group="n7_pus6"/>
+    <loader id="n8_uvgl" name="n8" xy="88,70" size="143,143" group="n7_pus6" url="ui://oyity675gen86m"/>
+    <component id="n6_rdy4" name="btnRocker" src="gen8bq" fileName="old/btn/btnCommon.xml" xy="130,112" size="60,60" group="n7_pus6">
       <Button icon="ui://oyity675gen86n"/>
     </component>
-    <group id="n7_pus6" name="grpRocker" xy="16,119" size="157,158" advanced="true" collapsed="true"/>
+    <group id="n7_pus6" name="grpRocker" xy="81,61" size="157,158" advanced="true"/>
   </displayList>
 </component>
