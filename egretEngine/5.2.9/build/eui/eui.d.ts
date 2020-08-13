@@ -34,7 +34,7 @@ declare namespace eui.sys {
          * @private
          * 验证失效的属性
          */
-        private validateProperties();
+        private validateProperties;
         /**
          * @private
          */
@@ -56,7 +56,7 @@ declare namespace eui.sys {
          * @private
          * 测量尺寸
          */
-        private validateSize();
+        private validateSize;
         /**
          * @private
          */
@@ -74,7 +74,7 @@ declare namespace eui.sys {
          * @private
          * 重新布局
          */
-        private validateDisplayList();
+        private validateDisplayList;
         /**
          * @private
          */
@@ -88,17 +88,17 @@ declare namespace eui.sys {
          * @private
          * 添加事件监听
          */
-        private attachListeners();
+        private attachListeners;
         /**
          * @private
          * 执行属性应用
          */
-        private doPhasedInstantiationCallBack(event?);
+        private doPhasedInstantiationCallBack;
         /**
          * @private
          *
          */
-        private doPhasedInstantiation();
+        private doPhasedInstantiation;
         /**
          * @private
          * 使大于等于指定组件层级的元素立即应用属性
@@ -328,7 +328,7 @@ declare namespace eui.sys {
          * @private
          * 应用当前的视图状态。子类覆盖此方法在视图状态发生改变时执行相应更新操作。
          */
-        private commitCurrentState();
+        private commitCurrentState;
         /**
          * @private
          * 返回是否含有指定名称的视图状态
@@ -339,7 +339,7 @@ declare namespace eui.sys {
          * @private
          * 初始化所有视图状态
          */
-        private initializeStates(stage);
+        private initializeStates;
     }
     /**
      * @private
@@ -1103,7 +1103,7 @@ declare namespace eui.sys {
         invalidateDisplayListFlag = 26,
         layoutWidthExplicitlySet = 27,
         layoutHeightExplicitlySet = 28,
-        initialized = 29,
+        initialized = 29
     }
     /**
      * @private
@@ -1120,7 +1120,7 @@ declare namespace eui.sys {
          * @private
          * UIComponentImpl 定义的所有变量请不要添加任何初始值，必须统一在此处初始化。
          */
-        private initializeUIValues();
+        private initializeUIValues;
         /**
          * @private
          * 子类覆盖此方法可以执行一些初始化子项操作。此方法仅在组件第一次添加到舞台时回调一次。
@@ -1167,7 +1167,7 @@ declare namespace eui.sys {
          * @private
          * 检查属性失效标记并应用
          */
-        private checkInvalidateFlag(event?);
+        private checkInvalidateFlag;
         /**
          * @private
          * 距父级容器离左边距离
@@ -1233,7 +1233,7 @@ declare namespace eui.sys {
          * @private
          * 立即验证自身的尺寸。
          */
-        private validateSizeNow();
+        private validateSizeNow;
         /**
          * @private
          * 组件高度,默认值为NaN,设置为NaN将使用组件的measure()方法自动计算尺寸
@@ -1277,7 +1277,7 @@ declare namespace eui.sys {
          * 设置组件的宽高。此方法不同于直接设置width,height属性，
          * 不会影响显式标记尺寸属性
          */
-        private setActualSize(w, h);
+        private setActualSize;
         /**
          * @private
          */
@@ -1332,7 +1332,7 @@ declare namespace eui.sys {
          * @private
          * 测量组件尺寸，返回尺寸是否发生变化
          */
-        private measureSizes();
+        private measureSizes;
         /**
          * @private
          * 标记需要验证显示列表
@@ -1347,7 +1347,7 @@ declare namespace eui.sys {
          * @private
          * 更新最终的组件宽高
          */
-        private updateFinalSize();
+        private updateFinalSize;
         /**
          * @private
          * 立即应用组件及其子项的所有属性
@@ -1380,13 +1380,13 @@ declare namespace eui.sys {
          *
          * @returns
          */
-        private getPreferredUWidth();
+        private getPreferredUWidth;
         /**
          * @private
          *
          * @returns
          */
-        private getPreferredUHeight();
+        private getPreferredUHeight;
         /**
          * @private
          * 获取组件的首选尺寸,常用于父级的measure()方法中
@@ -1397,11 +1397,11 @@ declare namespace eui.sys {
         /**
          * @private
          */
-        private applyMatrix(bounds, w, h);
+        private applyMatrix;
         /**
          * @private
          */
-        private getAnchorMatrix();
+        private getAnchorMatrix;
     }
     /**
      * @private
@@ -1590,7 +1590,7 @@ declare namespace eui {
          *
          * @returns
          */
-        private updateScrollRect();
+        private updateScrollRect;
         /**
          * The number of layout element in this container.
          *
@@ -2056,7 +2056,7 @@ declare namespace eui.sys {
         skinNameExplicitlySet = 5,
         explicitTouchChildren = 6,
         explicitTouchEnabled = 7,
-        skin = 8,
+        skin = 8
     }
 }
 declare namespace eui {
@@ -2152,7 +2152,7 @@ declare namespace eui {
          * @param clazz
          * @param url
          */
-        private onExmlLoaded(clazz, url);
+        private onExmlLoaded;
         /**
          * The instance of the skin class for this component instance.
          * @version Egret 2.4
@@ -2755,7 +2755,7 @@ declare namespace eui {
          * @private
          * 是否使用虚拟布局标记改变
          */
-        private onUseVirtualLayoutChanged(event?);
+        private onUseVirtualLayoutChanged;
         /**
          * @inheritDoc
          *
@@ -2784,13 +2784,13 @@ declare namespace eui {
          * @private
          * 释放指定索引处的项呈示器
          */
-        private freeRendererByIndex(index);
+        private freeRendererByIndex;
         /**
          * @private
          *
          * @param renderer
          */
-        private doFreeRenderer(renderer);
+        private doFreeRenderer;
         /**
          * @inheritDoc
          *
@@ -2803,17 +2803,17 @@ declare namespace eui {
          * @private
          * 为指定索引创建虚拟的项呈示器
          */
-        private createVirtualRenderer(item);
+        private createVirtualRenderer;
         /**
          * @private
          * 根据rendererClass创建一个Renderer,并添加到显示列表
          */
-        private createOneRenderer(rendererClass);
+        private createOneRenderer;
         /**
          * @private
          * 设置项呈示器的默认皮肤
          */
-        private setItemRenderSkinName(renderer, skinName);
+        private setItemRenderSkinName;
         /**
          * @private
          */
@@ -2856,7 +2856,7 @@ declare namespace eui {
          * @private
          * 移除数据源监听
          */
-        private removeDataProviderListener();
+        private removeDataProviderListener;
         /**
          * Called when contents within the dataProvider changes.  We will catch certain
          * events and update our children based on that.
@@ -2883,12 +2883,12 @@ declare namespace eui {
          * @private
          * 数据源添加项目事件处理
          */
-        private itemAddedHandler(items, index);
+        private itemAddedHandler;
         /**
          * @private
          * 数据源移除项目事件处理
          */
-        private itemRemovedHandler(items, location);
+        private itemRemovedHandler;
         /**
          * Adds the item for the specified dataProvider item to this DataGroup.
          *
@@ -2949,17 +2949,17 @@ declare namespace eui {
          * @private
          * 更新当前所有项的索引
          */
-        private resetRenderersIndices();
+        private resetRenderersIndices;
         /**
          * @private
          * 数据源更新或替换项目事件处理
          */
-        private itemUpdatedHandler(item, location);
+        private itemUpdatedHandler;
         /**
          * @private
          * 调整指定项呈示器的索引值
          */
-        private resetRendererItemIndex(index);
+        private resetRendererItemIndex;
         /**
          * The item renderer to use for data items.
          * The class must implement the IItemRenderer interface.
@@ -3024,7 +3024,7 @@ declare namespace eui {
          * @private
          * 为特定的数据项返回项呈示器的工厂实例
          */
-        private itemToRendererClass(item);
+        private itemToRendererClass;
         /**
          * @inheritDoc
          *
@@ -3061,17 +3061,17 @@ declare namespace eui {
          * @private
          * 确保测量过默认条目大小。
          */
-        private ensureTypicalLayoutElement();
+        private ensureTypicalLayoutElement;
         /**
          * @private
          * 测量项呈示器默认尺寸
          */
-        private measureRendererSize();
+        private measureRendererSize;
         /**
          * @private
          * 设置项目默认大小
          */
-        private setTypicalLayoutRect(rect);
+        private setTypicalLayoutRect;
         /**
          * @private
          * 索引到项呈示器的转换数组
@@ -3081,12 +3081,12 @@ declare namespace eui {
          * @private
          * 移除所有项呈示器
          */
-        private removeAllRenderers();
+        private removeAllRenderers;
         /**
          * @private
          * 为数据项创建项呈示器
          */
-        private createRenderers();
+        private createRenderers;
         /**
          * Updates the renderer for reuse.
          * This method first prepares the item
@@ -3351,7 +3351,7 @@ declare namespace eui {
          * @private
          * 舞台上触摸弹起事件
          */
-        private onStageTouchEnd(event);
+        private onStageTouchEnd;
         /**
          * @inheritDoc
          *
@@ -3402,7 +3402,7 @@ declare namespace eui.sys {
         valueChanged = 6,
         snapInterval = 7,
         snapIntervalChanged = 8,
-        explicitSnapInterval = 9,
+        explicitSnapInterval = 9
     }
 }
 declare namespace eui {
@@ -3607,7 +3607,7 @@ declare namespace eui {
          * @private
          * 修正size到最接近snapInterval的整数倍
          */
-        private nearestValidSize(size);
+        private nearestValidSize;
         /**
          * Returns the sum of the minimum with an integer multiple of <code>interval</code> that's
          * closest to <code>value</code>, unless <code>value</code> is closer to the maximum limit,
@@ -4053,7 +4053,7 @@ declare namespace eui.sys {
         /**
          * @private
          */
-        touchCancle = 8,
+        touchCancle = 8
     }
 }
 declare namespace eui {
@@ -4589,7 +4589,7 @@ declare namespace eui {
          * @private
          * 触摸在舞台上结束
          */
-        private stage_touchEndHandler(event);
+        private stage_touchEndHandler;
     }
 }
 declare namespace eui {
@@ -4705,7 +4705,7 @@ declare namespace eui {
          *
          * @param event
          */
-        private onViewportResize(event?);
+        private onViewportResize;
         /**
          * Properties of viewport changed.
          * @param event
@@ -4754,7 +4754,7 @@ declare namespace eui {
         slideDuration = 6,
         pendingValue = 7,
         slideToValue = 8,
-        liveDragging = 9,
+        liveDragging = 9
     }
     /**
      * The SliderBase class lets users select a value by moving a slider thumb between
@@ -4988,7 +4988,7 @@ declare namespace eui {
          * @private
          * 滑块或轨道尺寸改变事件
          */
-        private onTrackOrThumbResize(event);
+        private onTrackOrThumbResize;
         /**
          * Handle touch-begin events on the scroll thumb. Records the touch begin point in clickOffset.
          *
@@ -5014,7 +5014,7 @@ declare namespace eui {
          * @private
          * 舞台上触摸移动事件
          */
-        private onStageTouchMove(event);
+        private onStageTouchMove;
         /**
          * Capture touch-move events anywhere on or off the stage.
          * @param newValue new value
@@ -5057,12 +5057,12 @@ declare namespace eui {
          * @private
          * 当在组件上按下时记录被按下的子显示对象
          */
-        private onTouchBegin(event);
+        private onTouchBegin;
         /**
          * @private
          * 当结束时，若不是在 touchDownTarget 上弹起，而是另外的子显示对象上弹起时，额外抛出一个触摸单击事件。
          */
-        private stageTouchEndHandler(event);
+        private stageTouchEndHandler;
         /**
          * @private
          * 动画播放更新数值
@@ -5072,12 +5072,12 @@ declare namespace eui {
          * @private
          * 动画播放完毕
          */
-        private animationEndHandler(animation);
+        private animationEndHandler;
         /**
          * @private
          * 停止播放动画
          */
-        private stopAnimation();
+        private stopAnimation;
         /**
          * Handle touch-begin events for the slider track. We
          * calculate the value based on the new position and then
@@ -5210,150 +5210,150 @@ declare namespace eui.sys {
          * @private
          * 编译指定的XML对象为CpClass对象。
          */
-        private parseClass(xmlData, className);
+        private parseClass;
         /**
          * @private
          * 开始编译
          */
-        private startCompile();
+        private startCompile;
         /**
          * @private
          * 添加必须的id
          */
-        private addIds(items);
+        private addIds;
         /**
          * @private
          * 是否为内部类。
          */
-        private isInnerClass(node);
+        private isInnerClass;
         /**
          * @private
          * 检测指定节点的属性是否含有视图状态
          */
-        private containsState(node);
+        private containsState;
         /**
          * @private
          * 为指定节点创建id属性
          */
-        private createIdForNode(node);
+        private createIdForNode;
         /**
          * @private
          * 获取节点ID
          */
-        private getNodeId(node);
+        private getNodeId;
         /**
          * @private
          * 为指定节点创建变量
          */
-        private createVarForNode(node);
+        private createVarForNode;
         /**
          * @private
          * 为指定节点创建初始化函数,返回函数名引用
          */
-        private createFuncForNode(node);
+        private createFuncForNode;
         /**
          * @private
          * 检查目标类名是否是基本数据类型
          */
-        private isBasicTypeData(className);
+        private isBasicTypeData;
         /**
          * @private
          * 为指定基本数据类型节点实例化,返回实例化后的值。
          */
-        private createBasicTypeForNode(node);
+        private createBasicTypeForNode;
         /**
          * @private
          * 将节点属性赋值语句添加到代码块
          */
-        private addAttributesToCodeBlock(cb, varName, node);
+        private addAttributesToCodeBlock;
         /**
          * @private
          * 初始化子项
          */
-        private initlizeChildNode(node, cb, varName);
+        private initlizeChildNode;
         /**
          * @private
          * 解析内部类节点，并返回类名。
          */
-        private parseInnerClass(node);
+        private parseInnerClass;
         /**
          * @private
          * 添加多个子节点到指定的属性
          */
-        private addChildrenToProp(children, type, prop, cb, varName, errorInfo, propList, node);
+        private addChildrenToProp;
         /**
          * @private
          * 指定节点是否是属性节点
          */
-        private isProperty(node);
+        private isProperty;
         /**
          * @private
          * 是否是普通赋值的key
          */
-        private isNormalKey(key);
+        private isNormalKey;
         /**
          * @private
          * 格式化key
          */
-        private formatKey(key, value);
+        private formatKey;
         /**
          * @private
          * 格式化值
          */
-        private formatValue(key, value, node);
+        private formatValue;
         /**
          * @private
          * 格式化字符串
          */
-        private formatString(value);
-        private formatBinding(key, value, node);
-        private parseTemplates(value);
+        private formatString;
+        private formatBinding;
+        private parseTemplates;
         /**
          * @private
          /**
          * 转换HTML实体字符为普通字符
          */
-        private unescapeHTMLEntity(str);
+        private unescapeHTMLEntity;
         /**
          * @private
          * 创建构造函数
          */
-        private createConstructFunc();
+        private createConstructFunc;
         /**
          * @private
          * 是否含有includeIn和excludeFrom属性
          */
-        private isStateNode(node);
+        private isStateNode;
         /**
          * @private
          * 获取视图状态名称列表
          */
-        private getStateNames();
+        private getStateNames;
         /**
          * @private
          * 解析视图状态代码
          */
-        private createStates(parentNode);
+        private createStates;
         /**
          * @private
          * 检查指定的ID是否创建了类成员变量，若没创建则为其创建。
          */
-        private checkIdForState(node);
+        private checkIdForState;
         /**
          * @private
          * 通过视图状态名称获取对应的视图状态
          */
-        private getStateByName(name, node);
+        private getStateByName;
         /**
          * @private
          * 寻找节点的临近节点ID和位置
          */
-        private findNearNodeId(node);
+        private findNearNodeId;
         /**
          * @private
          * 获取节点的完整类名，包括模块名
          */
-        private getClassNameOfNode(node);
+        private getClassNameOfNode;
     }
 }
 declare namespace eui {
@@ -6065,7 +6065,7 @@ declare namespace eui {
          *
          * @returns
          */
-        private getThumbRange();
+        private getThumbRange;
         /**
          * @inheritDoc
          *
@@ -6121,7 +6121,7 @@ declare namespace eui {
          *
          * @param event
          */
-        private onLoadFinish(event);
+        private onLoadFinish;
     }
 }
 declare namespace eui {
@@ -6255,7 +6255,7 @@ declare namespace eui {
          * @private
          * 解析source
          */
-        private parseSource();
+        private parseSource;
         $measureContentBounds(bounds: egret.Rectangle): void;
         /**
          * @private
@@ -6711,7 +6711,7 @@ declare namespace eui {
          * @private
          * 舞台上触摸弹起事件
          */
-        private onStageTouchEnd(event);
+        private onStageTouchEnd;
         /**
          * @inheritDoc
          *
@@ -7316,7 +7316,7 @@ declare namespace eui {
          * @private
          * 计算当前的选中项列表
          */
-        private calculateSelectedIndices(index);
+        private calculateSelectedIndices;
         /**
          * @inheritDoc
          *
@@ -7377,7 +7377,7 @@ declare namespace eui {
          * @private
          * 在窗体上按下时前置窗口
          */
-        private onWindowTouchBegin(event);
+        private onWindowTouchBegin;
         /**
          * write-only property,This property is Usually invoked in resolving an EXML for adding multiple children quickly.
          *
@@ -7799,7 +7799,7 @@ declare namespace eui {
          * @private
          * 动画播放更新数值
          */
-        private animationUpdateHandler(animation);
+        private animationUpdateHandler;
         /**
          * @private
          */
@@ -7828,7 +7828,7 @@ declare namespace eui {
          * @private
          * thumb的位置或尺寸发生改变
          */
-        private onThumbResize(event);
+        private onThumbResize;
         /**
          * @inheritDoc
          *
@@ -8026,7 +8026,7 @@ declare namespace eui {
          * @private
          * 添此单选按钮加到组
          */
-        private addToGroup();
+        private addToGroup;
     }
 }
 declare namespace eui {
@@ -8249,17 +8249,17 @@ declare namespace eui {
          * @private
          * 改变选中项
          */
-        private changeSelection(index, fireChange?);
+        private changeSelection;
         /**
          * @private
          * 单选按钮添加到显示列表
          */
-        private addedHandler(event);
+        private addedHandler;
         /**
          * @private
          * 单选按钮从显示列表移除
          */
-        private removedHandler(event);
+        private removedHandler;
     }
 }
 declare namespace eui {
@@ -8684,13 +8684,13 @@ declare namespace eui {
          * @private
          * 安装并初始化视域组件
          */
-        private installViewport();
+        private installViewport;
         /**
          * @private
          * 卸载视域组件
          */
-        private uninstallViewport();
-        private onViewPortRemove(event);
+        private uninstallViewport;
+        private onViewPortRemove;
         /**
          * @inheritDoc
          *
@@ -8703,22 +8703,22 @@ declare namespace eui {
          * @private
          * @param event
          */
-        private onTouchBeginCapture(event);
+        private onTouchBeginCapture;
         /**
          * @private
          * @param event
          */
-        private onTouchEndCapture(event);
+        private onTouchEndCapture;
         /**
          * @private
          * @param event
          */
-        private onTouchTapCapture(event);
+        private onTouchTapCapture;
         /**
          * @private
          * 检查当前滚动策略，若有一个方向可以滚动，返回true。
          */
-        private checkScrollPolicy();
+        private checkScrollPolicy;
         /**
          * @private
          * 记录按下的对象，touchCancle时使用
@@ -8730,70 +8730,70 @@ declare namespace eui {
          *
          * @param event
          */
-        private onTouchBegin(event);
+        private onTouchBegin;
         /**
          * @private
          *
          * @param event
          */
-        private onTouchMove(event);
+        private onTouchMove;
         /**
          * @private
          * @param event
          */
-        private onTouchCancel(event);
+        private onTouchCancel;
         /**
          * @private
          * @param event
          */
-        private dispatchBubbleEvent(event);
+        private dispatchBubbleEvent;
         /**
          * @private
          * @param event
          */
-        private dispatchCancelEvent(event);
+        private dispatchCancelEvent;
         /**
          * @private
          * @param event
          */
-        private onTouchEnd(event);
+        private onTouchEnd;
         /**
          * @private
          */
-        private onRemoveListeners();
+        private onRemoveListeners;
         /**
          * @private
          *
          * @param scrollPos
          */
-        private horizontalUpdateHandler(scrollPos);
+        private horizontalUpdateHandler;
         /**
          * @private
          *
          * @param scrollPos
          */
-        private verticalUpdateHandler(scrollPos);
+        private verticalUpdateHandler;
         /**
          * @private
          *
          */
-        private horizontalEndHandler();
+        private horizontalEndHandler;
         /**
          * @private
          *
          */
-        private verticalEndHanlder();
+        private verticalEndHanlder;
         /**
          * @private
          *
          */
-        private onChangeEnd();
+        private onChangeEnd;
         /**
          * @private
          *
          * @param event
          */
-        private onAutoHideTimer(event);
+        private onAutoHideTimer;
         /**
          * @inheritDoc
          *
@@ -9033,7 +9033,7 @@ declare namespace eui {
          *
          * @param event
          */
-        private onAddedToStage(event?);
+        private onAddedToStage;
         /**
          * @private
          */
@@ -9181,12 +9181,12 @@ declare namespace eui {
          * @private
          * 触摸点击的选中项改变
          */
-        private onIndexChanged(event);
+        private onIndexChanged;
         /**
          * @private
          * ViewStack选中项发生改变
          */
-        private onViewStackIndexChange(event);
+        private onViewStackIndexChange;
     }
 }
 declare namespace eui.sys {
@@ -9202,7 +9202,7 @@ declare namespace eui.sys {
         maxHeight = 5,
         text = 6,
         restrict = 7,
-        inputType = 8,
+        inputType = 8
     }
 }
 declare namespace eui {
@@ -9275,12 +9275,12 @@ declare namespace eui {
          * @platform Web,Native
          */
         /**
-         * @copy eui.EditableText#prompt
-         *
-         * @version Egret 2.5.7
-         * @version eui 1.0
-         * @platform Web,Native
-         */
+        * @copy eui.EditableText#prompt
+        *
+        * @version Egret 2.5.7
+        * @version eui 1.0
+        * @platform Web,Native
+        */
         prompt: string;
         /**
          * @copy egret.TextField#displayAsPassword
@@ -9290,12 +9290,12 @@ declare namespace eui {
          * @platform Web,Native
          */
         /**
-         * @copy egret.TextField#displayAsPassword
-         *
-         * @version Egret 2.5.7
-         * @version eui 1.0
-         * @platform Web,Native
-         */
+        * @copy egret.TextField#displayAsPassword
+        *
+        * @version Egret 2.5.7
+        * @version eui 1.0
+        * @platform Web,Native
+        */
         displayAsPassword: boolean;
         /**
          * @copy egret.TextField#inputType
@@ -9305,12 +9305,12 @@ declare namespace eui {
          * @platform Web,Native
          */
         /**
-         * @copy egret.TextField#inputType
-         *
-         * @version Egret 3.1.6
-         * @version eui 1.0
-         * @platform Web,Native
-         */
+        * @copy egret.TextField#inputType
+        *
+        * @version Egret 3.1.6
+        * @version eui 1.0
+        * @platform Web,Native
+        */
         inputType: string;
         /**
          * @copy egret.TextField#textColor
@@ -9320,12 +9320,12 @@ declare namespace eui {
          * @platform Web,Native
          */
         /**
-         * @copy egret.TextField#textColor
-         *
-         * @version Egret 2.5.7
-         * @version eui 1.0
-         * @platform Web,Native
-         */
+        * @copy egret.TextField#textColor
+        *
+        * @version Egret 2.5.7
+        * @version eui 1.0
+        * @platform Web,Native
+        */
         textColor: number;
         /**
          * @copy egret.TextField#maxChars
@@ -9335,12 +9335,12 @@ declare namespace eui {
          * @platform Web,Native
          */
         /**
-         * @copy egret.TextField#maxChars
-         *
-         * @version Egret 2.5.7
-         * @version eui 1.0
-         * @platform Web,Native
-         */
+        * @copy egret.TextField#maxChars
+        *
+        * @version Egret 2.5.7
+        * @version eui 1.0
+        * @platform Web,Native
+        */
         maxChars: number;
         /**
          * @inheritDoc
@@ -9350,12 +9350,12 @@ declare namespace eui {
          * @platform Web,Native
          */
         /**
-         * @inheritDoc
-         *
-         * @version Egret 2.5.7
-         * @version eui 1.0
-         * @platform Web,Native
-         */
+        * @inheritDoc
+        *
+        * @version Egret 2.5.7
+        * @version eui 1.0
+        * @platform Web,Native
+        */
         maxWidth: number;
         /**
          * @inheritDoc
@@ -9365,12 +9365,12 @@ declare namespace eui {
          * @platform Web,Native
          */
         /**
-         * @inheritDoc
-         *
-         * @version Egret 2.5.7
-         * @version eui 1.0
-         * @platform Web,Native
-         */
+        * @inheritDoc
+        *
+        * @version Egret 2.5.7
+        * @version eui 1.0
+        * @platform Web,Native
+        */
         maxHeight: number;
         /**
          * @copy egret.TextField#text
@@ -9380,12 +9380,12 @@ declare namespace eui {
          * @platform Web,Native
          */
         /**
-         * @copy egret.TextField#text
-         *
-         * @version Egret 2.5.7
-         * @version eui 1.0
-         * @platform Web,Native
-         */
+        * @copy egret.TextField#text
+        *
+        * @version Egret 2.5.7
+        * @version eui 1.0
+        * @platform Web,Native
+        */
         text: string;
         /**
          * @copy egret.TextField#restrict
@@ -9395,12 +9395,12 @@ declare namespace eui {
          * @platform Web,Native
          */
         /**
-         * @copy egret.TextField#restrict
-         *
-         * @version Egret 2.5.7
-         * @version eui 1.0
-         * @platform Web,Native
-         */
+        * @copy egret.TextField#restrict
+        *
+        * @version Egret 2.5.7
+        * @version eui 1.0
+        * @platform Web,Native
+        */
         restrict: string;
         /**
          * @private
@@ -9410,12 +9410,12 @@ declare namespace eui {
          * @private
          * 焦点移入
          */
-        private focusInHandler(event);
+        private focusInHandler;
         /**
          * @private
          * 焦点移出
          */
-        private focusOutHandler(event);
+        private focusOutHandler;
         /**
          * @inheritDoc
          *
@@ -9443,11 +9443,11 @@ declare namespace eui {
         /**
          * @private
          */
-        private textDisplayAdded();
+        private textDisplayAdded;
         /**
          * @private
          */
-        private textDisplayRemoved();
+        private textDisplayRemoved;
     }
 }
 declare namespace eui {
@@ -9572,17 +9572,17 @@ declare namespace eui {
          * @private
          * 添加到舞台
          */
-        private onAddToStage(event?);
+        private onAddToStage;
         /**
          * @private
          * 从舞台移除
          */
-        private onRemoveFromStage(event);
+        private onRemoveFromStage;
         /**
          * @private
          * 舞台尺寸改变
          */
-        private onResize(event?);
+        private onResize;
     }
 }
 declare namespace eui {
@@ -9684,7 +9684,7 @@ declare namespace eui {
          *
          * @returns
          */
-        private getThumbRange();
+        private getThumbRange;
         /**
          * @inheritDoc
          *
@@ -9824,7 +9824,7 @@ declare namespace eui {
          * @private
          * 设置选中项索引
          */
-        private setSelectedIndex(value);
+        private setSelectedIndex;
         /**
          * @private
          * 一个子项被添加到容器内，此方法不仅在操作addChild()时会被回调，在操作setChildIndex()或swapChildren时也会回调。
@@ -9850,14 +9850,14 @@ declare namespace eui {
          *
          * @param newIndex
          */
-        private commitSelection(newIndex);
+        private commitSelection;
         /**
          * @private
          *
          * @param child
          * @param visible
          */
-        private showOrHide(child, visible);
+        private showOrHide;
         /**
          * number of children
          *
@@ -9961,7 +9961,7 @@ declare namespace eui.sys {
          * @private
          * 开始播放动画
          */
-        private start();
+        private start;
         /**
          * @private
          * 停止播放动画
@@ -9971,7 +9971,7 @@ declare namespace eui.sys {
          * @private
          * 计算当前值并返回动画是否结束
          */
-        private doInterval(currentTime);
+        private doInterval;
     }
 }
 declare namespace eui {
@@ -10061,7 +10061,7 @@ declare namespace eui {
          * @private
          * 检查属性是否可以绑定。若还未绑定，尝试添加绑定事件。若是只读或只写属性，返回false。
          */
-        private static checkBindable(host, property);
+        private static checkBindable;
         /**
          * Constructor.
          * Not for public use. This method is called only from the <code>watch()</code> method.
@@ -10180,15 +10180,15 @@ declare namespace eui {
          *
          * @returns
          */
-        private getHostPropertyValue();
+        private getHostPropertyValue;
         /**
          * @private
          */
-        private wrapHandler(event);
+        private wrapHandler;
         /**
          * @private
          */
-        private onPropertyChange(property);
+        private onPropertyChange;
     }
 }
 declare namespace eui {
@@ -10518,7 +10518,7 @@ declare namespace eui {
          * @private
          * 抛出事件
          */
-        private dispatchCoEvent(kind, location?, oldLocation?, items?, oldItems?);
+        private dispatchCoEvent;
     }
 }
 declare namespace eui.sys {
@@ -10528,7 +10528,7 @@ declare namespace eui.sys {
     const enum EditableTextKeys {
         promptText = 0,
         textColorUser = 1,
-        asPassword = 2,
+        asPassword = 2
     }
 }
 declare namespace eui {
@@ -10660,7 +10660,7 @@ declare namespace eui {
         /**
          * @private
          */
-        private onfocusOut();
+        private onfocusOut;
         /**
          * @private
          */
@@ -10668,19 +10668,19 @@ declare namespace eui {
         /**
          * @private
          */
-        private onTouchBegin();
+        private onTouchBegin;
         /**
          * @private
          */
-        private onTouchCancle();
+        private onTouchCancle;
         /**
          * @private
          */
-        private onfocusIn();
+        private onfocusIn;
         /**
          * @private
          */
-        private showPromptText();
+        private showPromptText;
         /**
          * @private
          */
@@ -11080,23 +11080,23 @@ declare namespace eui.sys {
          * @param timeStamp
          * @returns
          */
-        private onTick(timeStamp);
+        private onTick;
         /**
          * @private
          *
          * @param animation
          */
-        private finishScrolling(animation?);
+        private finishScrolling;
         /**
          * @private
          * 缓动到水平滚动位置
          */
-        private throwTo(hspTo, duration?);
+        private throwTo;
         /**
          * @private
          * 更新水平滚动位置
          */
-        private onScrollingUpdate(animation);
+        private onScrollingUpdate;
     }
 }
 declare namespace eui {
@@ -11567,14 +11567,14 @@ declare namespace eui {
          *
          * @param url
          */
-        private load(url);
+        private load;
         /**
          * @private
          *
          * @param str
          */
-        private onConfigLoaded(str);
-        private onLoaded(classes?, urls?);
+        private onConfigLoaded;
+        private onLoaded;
         /**
          * @private
          */
@@ -11583,7 +11583,7 @@ declare namespace eui {
          * @private
          *
          */
-        private handleDelayList();
+        private handleDelayList;
         /**
          * @private
          */
@@ -11617,7 +11617,7 @@ declare namespace eui {
         /**
          * @private
          */
-        private findSkinName(prototype);
+        private findSkinName;
         /**
          * Map a default skin for the specified host component.
          * @param hostComponentKey the name of host component, such as "eui.Button".
@@ -12857,7 +12857,7 @@ declare namespace eui {
         /**
          * 解析source
          */
-        private $parseFont();
+        private $parseFont;
         $setFontData(value: egret.BitmapFont, font?: string): boolean;
         /**
          * @private
@@ -14221,7 +14221,7 @@ declare namespace eui {
          * @private
          * 标记目标容器的尺寸和显示列表失效
          */
-        private invalidateTargetLayout();
+        private invalidateTargetLayout;
         /**
          * @inheritDoc
          *
@@ -14234,7 +14234,7 @@ declare namespace eui {
          * @private
          * 计算行和列的尺寸及数量
          */
-        private calculateRowAndColumn(explicitWidth, explicitHeight);
+        private calculateRowAndColumn;
         /**
          * @private
          * 缓存的最大子对象宽度
@@ -14249,12 +14249,12 @@ declare namespace eui {
          * @private
          * 更新最大子对象尺寸
          */
-        private updateMaxElementSize();
+        private updateMaxElementSize;
         /**
          * @private
          * 更新虚拟布局的最大子对象尺寸
          */
-        private doUpdateMaxElementSize(startIndex, endIndex);
+        private doUpdateMaxElementSize;
         /**
          * @inheritDoc
          *
@@ -14290,7 +14290,7 @@ declare namespace eui {
          * @private
          * 获取视图中第一个和最后一个元素的索引,返回是否发生改变
          */
-        private getIndexInView();
+        private getIndexInView;
         /**
          * @inheritDoc
          *
@@ -14303,12 +14303,12 @@ declare namespace eui {
          * @private
          * 为单个元素布局
          */
-        private sizeAndPositionElement(element, cellX, cellY, cellWidth, cellHeight);
+        private sizeAndPositionElement;
         /**
          * @private
          * 为两端对齐调整间隔或格子尺寸
          */
-        private adjustForJustify(width, height);
+        private adjustForJustify;
     }
 }
 declare namespace eui {
@@ -14608,7 +14608,7 @@ declare namespace eui.sys {
          * @private
          * 添加在相对对象之后
          */
-        AFTER = 3,
+        AFTER = 3
     }
 }
 declare namespace eui {
@@ -14922,12 +14922,12 @@ declare namespace eui {
          * @private
          * 设置属性值
          */
-        private setPropertyValue(obj, name, value, valueForType);
+        private setPropertyValue;
         /**
          * @private
          * 转成Boolean值
          */
-        private toBoolean(value);
+        private toBoolean;
     }
 }
 declare namespace eui {
@@ -15026,12 +15026,12 @@ declare namespace eui {
          * @private
          * 设置属性值
          */
-        private setPropertyValue(obj, name, value, valueForType);
+        private setPropertyValue;
         /**
          * @private
          * 转成Boolean值
          */
-        private toBoolean(value);
+        private toBoolean;
     }
 }
 declare namespace eui.sys {

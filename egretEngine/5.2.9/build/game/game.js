@@ -1,13 +1,19 @@
 var __reflect = (this && this.__reflect) || function (p, c, t) {
     p.__class__ = c, t ? t.push(c) : t = [c], p.__types__ = p.__types__ ? t.concat(p.__types__) : t;
 };
-var __extends = this && this.__extends || function __extends(t, e) { 
- function r() { 
- this.constructor = t;
-}
-for (var i in e) e.hasOwnProperty(i) && (t[i] = e[i]);
-r.prototype = e.prototype, t.prototype = new r();
-};
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    }
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 //////////////////////////////////////////////////////////////////////////////////////
 //
 //  Copyright (c) 2014-present, Egret Technology.
@@ -54,7 +60,7 @@ var egret;
      * @includeExample extension/game/net/URLLoaderDataFormat.ts
      * @language zh_CN
      */
-    var URLLoaderDataFormat = (function () {
+    var URLLoaderDataFormat = /** @class */ (function () {
         function URLLoaderDataFormat() {
         }
         /**
@@ -162,7 +168,7 @@ var egret;
      * @platform Web,Native
      * @private
      */
-    var FrameLabel = (function (_super) {
+    var FrameLabel = /** @class */ (function (_super) {
         __extends(FrameLabel, _super);
         /**
          * @version Egret 2.4
@@ -289,7 +295,7 @@ var egret;
      * @version Egret 2.4
      * @platform Web,Native
      */
-    var MovieClipData = (function (_super) {
+    var MovieClipData = /** @class */ (function (_super) {
         __extends(MovieClipData, _super);
         /**
          * 创建一个 egret.MovieClipData 对象
@@ -568,7 +574,7 @@ var egret;
      * @version Egret 2.4
      * @platform Web,Native
      */
-    var MovieClipDataFactory = (function (_super) {
+    var MovieClipDataFactory = /** @class */ (function (_super) {
         __extends(MovieClipDataFactory, _super);
         /**
          * 创建一个 egret.MovieClipDataFactory 对象
@@ -750,7 +756,7 @@ var egret;
      * @platform Web,Native
      * @language zh_CN
      */
-    var MovieClipEvent = (function (_super) {
+    var MovieClipEvent = /** @class */ (function (_super) {
         __extends(MovieClipEvent, _super);
         /**
          * TextEvent create an object that contains information about movieClip events.
@@ -870,7 +876,7 @@ var egret;
     /**
      * @private
      */
-    var ScrollEase = (function () {
+    var ScrollEase = /** @class */ (function () {
         /**
          * @version Egret 2.4
          * @platform Web,Native
@@ -931,7 +937,7 @@ var egret;
     /**
      * @private
      */
-    var ScrollTween = (function (_super) {
+    var ScrollTween = /** @class */ (function (_super) {
         __extends(ScrollTween, _super);
         /**
          * 创建一个 egret.ScrollTween 对象
@@ -1525,7 +1531,7 @@ var egret;
      * @includeExample extension/game/display/ScrollView.ts
      * @language zh_CN
      */
-    var ScrollView = (function (_super) {
+    var ScrollView = /** @class */ (function (_super) {
         __extends(ScrollView, _super);
         /**
          * Create a egret.ScrollView objects
@@ -2500,7 +2506,7 @@ var egret;
      * @version Egret 2.4
      * @platform Web,Native
      */
-    var ScrollViewProperties = (function () {
+    var ScrollViewProperties = /** @class */ (function () {
         function ScrollViewProperties() {
             /**
              * @private
@@ -2638,7 +2644,7 @@ var egret;
      * @includeExample extension/game/net/URLLoader.ts
      * @language zh_CN
      */
-    var URLLoader = (function (_super) {
+    var URLLoader = /** @class */ (function (_super) {
         __extends(URLLoader, _super);
         /**
          * Create an egret.URLLoader object
@@ -2916,7 +2922,7 @@ var egret;
      * @includeExample extension/game/display/MovieClip.ts
      * @language zh_CN
      */
-    var MovieClip = (function (_super) {
+    var MovieClip = /** @class */ (function (_super) {
         __extends(MovieClip, _super);
         //Construct Function
         /**
@@ -3688,7 +3694,7 @@ var egret;
      * @includeExample extension/game/net/URLRequest.ts
      * @language zh_CN
      */
-    var URLRequest = (function (_super) {
+    var URLRequest = /** @class */ (function (_super) {
         __extends(URLRequest, _super);
         /**
          * Create an egret.URLRequest object
@@ -3833,7 +3839,7 @@ var egret;
      * @includeExample extension/game/net/URLRequestHeader.ts
      * @language zh_CN
      */
-    var URLRequestHeader = (function () {
+    var URLRequestHeader = /** @class */ (function () {
         /**
          * Create an egret.URLRequestHeader object
          * @version Egret 2.4
@@ -3929,7 +3935,7 @@ var egret;
      * @includeExample extension/game/net/URLRequestMethod.ts
      * @language zh_CN
      */
-    var URLRequestMethod = (function () {
+    var URLRequestMethod = /** @class */ (function () {
         function URLRequestMethod() {
         }
         /**
@@ -4011,7 +4017,7 @@ var egret;
      * @includeExample extension/game/net/URLVariables.ts
      * @language zh_CN
      */
-    var URLVariables = (function (_super) {
+    var URLVariables = /** @class */ (function (_super) {
         __extends(URLVariables, _super);
         /**
          * Create an egret.URLVariable object
@@ -4183,7 +4189,7 @@ var egret;
      * @includeExample extension/game/player/Ticker.ts
      * @language zh_CN
      */
-    var Ticker = (function (_super) {
+    var Ticker = /** @class */ (function (_super) {
         __extends(Ticker, _super);
         /**
          * @deprecated
@@ -4338,7 +4344,7 @@ var egret;
      * @version Egret 2.4
      * @platform Web,Native
      */
-    var MainContext = (function (_super) {
+    var MainContext = /** @class */ (function (_super) {
         __extends(MainContext, _super);
         /**
          * @version Egret 2.4
@@ -4475,7 +4481,7 @@ var egret;
      * @private
      * @language zh_CN
      */
-    var Recycler = (function (_super) {
+    var Recycler = /** @class */ (function (_super) {
         __extends(Recycler, _super);
         /**
          * Create an egret.Recycler object
