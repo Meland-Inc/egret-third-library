@@ -76,7 +76,9 @@ export async function zipVersion() {
     }
 
     try {
+        console.log(`开始压缩release版本, zipPath:${zipPath}, zipName:${zipName}`);
         await zipProject(filePath, zipPath, zipName);
+        console.log('压缩release版本完毕')
     } catch (error) {
         Global.snack(`压缩zip失败`, err);
     }
@@ -86,6 +88,14 @@ export async function copyVersion() {
     const readyEnviron = ModelMgr.versionModel.environList.find(value => value.name === ModelMgr.versionModel.eEnviron.ready);
     const releaseEnviron = ModelMgr.versionModel.environList.find(value => value.name === ModelMgr.versionModel.eEnviron.release);
     const readyGameVersion = await ModelMgr.versionModel.getEnvironGameVersion(ModelMgr.versionModel.eEnviron.ready);
+    await copyReleaseFile(readyEnviron, releaseEnviron, readyGameVersion);
+    await ModelMgr.versionModel.initVersionList();
+
+    Global.toast('拷贝版本成功');
+}
+
+/** 拷贝整包散文件 */
+async function copyReleaseFile(readyEnviron, releaseEnviron, readyGameVersion) {
     const readyFilePath = `${Global.svnPublishPath}${readyEnviron.localPath}/release_v${readyGameVersion}s/`;
     const releaseFilePath = `${Global.svnPublishPath}${releaseEnviron.localPath}/release_v${readyGameVersion}s/`;
     const readyExists = await fsExc.exists(readyFilePath);
@@ -96,19 +106,21 @@ export async function copyVersion() {
 
     const exists = await fsExc.exists(releaseFilePath);
     if (exists) {
+        console.log(`存在相同release版本,开始删除:${releaseFilePath}`);
         await fsExc.delFolder(releaseFilePath);
+        console.log(`删除完毕:${releaseFilePath}`);
     }
 
+    console.log(`开始拷贝 from:${readyFilePath} to:${releaseFilePath}`);
     await fsExc.copyFile(readyFilePath, releaseFilePath, true);
+    console.log(`拷贝完毕`);
 
     let indexPath = `${releaseFilePath}/index_v${readyGameVersion}.html`;
+    console.log(`修改index文件:${indexPath}`);
     let indexContent = await fsExc.readFile(indexPath);
     indexContent = indexContent.replace(`window.environName="ready"`, `window.environName="release"`);
     await fsExc.writeFile(indexPath, indexContent);
-
-    await ModelMgr.versionModel.initVersionList();
-
-    Global.toast('拷贝版本成功');
+    console.log(`修改index文件完毕`);
 }
 
 export async function uploadVersionFile() {
