@@ -245,7 +245,7 @@
     <image id="hckx78" name="img_att_dh_2.png" path="/attribute/img/"/>
     <image id="hckx79" name="img_att_dh_3.png" path="/attribute/img/"/>
     <image id="hckx7a" name="img_att_dh_4.png" path="/attribute/img/" scale="9grid" scale9grid="5,5,50,50"/>
-    <image id="hckx7b" name="img_att_dh_5.png" path="/attribute/img/"/>
+    <image id="hckx7b" name="img_att_dh_5.png" path="/attribute/img/" scale="9grid" scale9grid="5,5,10,10"/>
     <image id="xba67c" name="btn_ide_cm_blue.png" path="/ideCommon/img/"/>
     <image id="xba67d" name="btn_ide_cm_gray.png" path="/ideCommon/img/" scale="9grid" scale9grid="30,10,60,20"/>
     <image id="xba67e" name="btn_ide_cm_red.png" path="/ideCommon/img/"/>
@@ -537,6 +537,22 @@
     <component id="nt6kwcyin0" name="rankScrollBar.xml" path="/ranklist/" exported="true"/>
     <component id="nt6kwcyin1" name="WinEntityRankList.xml" path="/ranklist/" exported="true"/>
     <component id="nt6kwcyin2" name="comAWRankList.xml" path="/ranklist/com/" exported="true"/>
+    <component id="wj5lwcyimc" name="comAWVideo.xml" path="/attribute/widgets/" exported="true"/>
+    <component id="eny0wcyimd" name="comAWQuestion.xml" path="/attribute/widgets/" exported="true"/>
+    <component id="eny0wcyime" name="ComQuestionItem.xml" path="/attribute/widgets/" exported="true"/>
+    <component id="eny0wcyimf" name="comOptionItem.xml" path="/attribute/widgets/"/>
+    <image id="jo99wcyims" name="bg_spsx_01.png" path="/attribute/img/" scale="9grid" scale9grid="16,8,32,16"/>
+    <image id="jo99wcyimt" name="img_spsx_02.png" path="/attribute/img/"/>
+    <image id="jo99wcyimu" name="img_spsx_01.png" path="/attribute/img/" scale="9grid" scale9grid="98,4,196,8"/>
+    <image id="jo99wcyimv" name="icon_spsx_03.png" path="/attribute/img/"/>
+    <image id="jo99wcyimw" name="icon_spsx_02.png" path="/attribute/img/"/>
+    <image id="jo99wcyimx" name="icon_spsx_01.png" path="/attribute/img/"/>
+    <image id="jo99wcyimy" name="btn_spsx_03.png" path="/attribute/img/"/>
+    <image id="jo99wcyimz" name="btn_spsx_02.png" path="/attribute/img/"/>
+    <image id="jo99wcyin0" name="btn_spsx_01.png" path="/attribute/img/"/>
+    <image id="jo99wcyin1" name="bg_spsx_02.png" path="/attribute/img/" scale="9grid" scale9grid="20,7,30,24"/>
+    <component id="jo99wcyin2" name="rBtnIsPic.xml" path="/attribute/btn/"/>
+    <component id="rjjhwcyin3" name="barCm3.xml" path="/attribute/com/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>

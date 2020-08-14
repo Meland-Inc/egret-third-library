@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="430,50">
+  <displayList>
+    <list id="n2_eny0" name="lstQuestion" xy="0,0" size="430,0" defaultItem="ui://ti9jag5teny0wcyime"/>
+    <component id="n0_eny0" name="btnAdd" src="ilo1cyidi" fileName="btn/btnScaleNoEffect.xml" pkg="te1gxawo" xy="287,0" size="50,50">
+      <relation target="n2_eny0" sidePair="top-bottom"/>
+      <Button icon="ui://ti9jag5thckx6n"/>
+    </component>
+    <component id="n1_eny0" name="btnDel" src="ilo1cyidi" fileName="btn/btnScaleNoEffect.xml" pkg="te1gxawo" xy="94,0" size="50,50">
+      <relation target="n2_eny0" sidePair="top-bottom"/>
+      <Button icon="ui://ti9jag5thckx6n"/>
+    </component>
+  </displayList>
+  <relation target="n2_eny0" sidePair="bottomext-bottom"/>
+</component>
