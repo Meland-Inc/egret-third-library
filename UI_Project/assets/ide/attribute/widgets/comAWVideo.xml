@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="410,361">
+<component size="410,430">
   <displayList>
     <graph id="n20_jo99" name="gphHeight" xy="0,0" size="411,267" visible="false" touchable="false"/>
-    <text id="n0_wj5l" name="tfMode" xy="9,14" size="82,22" fontSize="18" text="触发方式:"/>
-    <text id="n2_wj5l" name="tfWindowType" xy="9,66" size="82,22" fontSize="18" text="展示模式:"/>
-    <text id="n1_wj5l" name="tfPermission" xy="9,118" size="82,22" fontSize="18" text="触发权限:"/>
-    <text id="n3_wj5l" name="tfVideo" xy="9,170" size="82,22" fontSize="18" text="视频来源:"/>
+    <text id="n0_wj5l" name="tfMode" xy="0,14" size="82,22" fontSize="18" color="#333333" text="触发方式:"/>
+    <text id="n2_wj5l" name="tfWindowType" xy="0,66" size="82,22" fontSize="18" color="#333333" text="展示模式:"/>
+    <text id="n1_wj5l" name="tfPermission" xy="0,118" size="82,22" fontSize="18" color="#333333" text="触发权限:"/>
+    <text id="n3_wj5l" name="tfVideo" xy="0,170" size="82,22" fontSize="18" color="#333333" text="视频来源:"/>
     <component id="n6_wj5l" name="cbMode" src="grwpb3" fileName="attribute/widgets/ComboBox1.xml" xy="148,6" size="252,37">
       <ComboBox visibleItemCount="10" direction="down">
         <item title="点击"/>
@@ -23,12 +23,12 @@
         <item title="老师"/>
       </ComboBox>
     </component>
+    <image id="n16_jo99" name="n16" src="jo99wcyims" fileName="attribute/img/bg_spsx_01.png" xy="0,207" size="340,36" group="n17_jo99"/>
+    <text id="n9_wj5l" name="tfUrl" xy="7,214" size="323,22" group="n17_jo99" input="true" prompt="http://" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" text=""/>
+    <group id="n17_jo99" name="url" xy="0,207" size="340,36"/>
     <component id="n10_wj5l" name="btnUpload" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="335,207" size="65,36">
       <Button title="浏览" titleColor="#828282" icon="ui://ti9jag5tjo99wcyin0"/>
     </component>
-    <image id="n16_jo99" name="n16" src="jo99wcyims" fileName="attribute/img/bg_spsx_01.png" xy="9,207" size="331,36" group="n17_jo99"/>
-    <text id="n9_wj5l" name="tfUrl" xy="16,214" size="314,22" group="n17_jo99" input="true" prompt="http://" fontSize="18" vAlign="middle" autoSize="none" singleLine="true" text=""/>
-    <group id="n17_jo99" name="url" xy="9,207" size="331,36"/>
     <list id="n21_jo99" name="lstQuestion" xy="0,267" size="410,0" defaultItem="ui://ti9jag5teny0wcyime">
       <relation target="n20_jo99" sidePair="top-bottom"/>
     </list>

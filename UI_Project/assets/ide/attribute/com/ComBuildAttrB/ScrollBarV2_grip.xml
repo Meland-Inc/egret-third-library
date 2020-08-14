@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="8,6" extention="Button">
-  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="3"/>
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
   <displayList>
-    <image id="n0_qouo" name="n0" src="9fb8ac" fileName="imgB/img_cm_gdt_1.png" xy="1,0" size="6,6">
+    <graph id="n0_qouo" name="n0" xy="1,0" size="6,6" type="rect" lineColor="#ff666666" fillColor="#ff666666" corner="1">
       <relation target="" sidePair="width-width,height-height"/>
-    </image>
+    </graph>
   </displayList>
   <Button/>
 </component>
