@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1122,808">
+  <displayList>
+    <image id="n0_jo99" name="bg" src="jo99j" fileName="teachPlan/img/bg_spck_04.png" xy="0,0" size="1122,808"/>
+    <list id="n5_jo99" name="lstOption" xy="61,563" size="1000,117" layout="row" colGap="65" defaultItem="ui://82tadhh2jo99n">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n8_jo99" name="btnContinuePlay" src="jo99p" fileName="teachPlan/btn/btnContinuePlay.xml" xy="452,725"/>
+    <image id="n1_jo99" name="questionBg" src="jo99l" fileName="teachPlan/img/bg_spck_02.png" xy="67,33" size="987,504"/>
+    <text id="n3_jo99" name="tfTitle" xy="70,35" size="980,500" fontSize="60" align="center" vAlign="middle" autoSize="shrink" text="11"/>
+    <graph id="n12_pw2s" name="gphTitle" xy="70,35" size="980,500" type="rect" lineSize="0" fillColor="#00ffffff">
+      <relation target="n3_jo99" sidePair="width-width,height-height,left-left,top-top"/>
+    </graph>
+  </displayList>
+</component>

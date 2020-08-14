@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="291,233">
+  <displayList>
+    <text id="n1_b8xa" name="tfRank" xy="0,16" size="110,26" group="n9_b8xa" fontSize="18" color="#333333" vAlign="middle" text="排行榜名称："/>
+    <text id="n6_b8xa" name="tfRankNum" xy="0,77" size="92,26" group="n9_b8xa" fontSize="18" color="#333333" vAlign="middle" text="排行数量："/>
+    <text id="n7_b8xa" name="tfRankType" xy="1,138" size="92,26" group="n9_b8xa" fontSize="18" color="#333333" vAlign="middle" text="排序方式："/>
+    <text id="n8_b8xa" name="tfRankTarget" xy="0,199" size="92,26" group="n9_b8xa" fontSize="18" color="#333333" vAlign="middle" text="排序标的："/>
+    <group id="n9_b8xa" name="n9" xy="0,16" size="110,209" advanced="true" layout="vt" lineGap="35" excludeInvisibles="true"/>
+    <component id="n0_b8xa" name="comRankName" src="dv1icyiim" fileName="com/ComInput.xml" pkg="te1gxawo" xy="116,10" size="175,40" group="n10_b8xa">
+      <Label title="排行榜" titleFontSize="19"/>
+    </component>
+    <component id="n2_b8xa" name="cbRankNum" src="grwpb3" fileName="attribute/widgets/ComboBox1.xml" xy="116,73" size="173,37" group="n10_b8xa">
+      <ComboBox title="5" visibleItemCount="5" direction="down" autoClearItems="true">
+        <item title="5" value="5"/>
+        <item title="4" value="4"/>
+        <item title="3" value="3"/>
+        <item title="2" value="2"/>
+        <item title="1" value="1"/>
+      </ComboBox>
+    </component>
+    <component id="n3_b8xa" name="cbRankOrder" src="grwpb3" fileName="attribute/widgets/ComboBox1.xml" xy="116,133" size="173,37" group="n10_b8xa">
+      <ComboBox title="倒叙" visibleItemCount="10" direction="down">
+        <item title="正序" value="forward"/>
+        <item title="倒序" value="back"/>
+      </ComboBox>
+    </component>
+    <component id="n4_b8xa" name="cbRankTarget" src="grwpb3" fileName="attribute/widgets/ComboBox1.xml" xy="116,193" size="173,40" group="n10_b8xa">
+      <ComboBox title="name" visibleItemCount="5" direction="down" autoClearItems="true">
+        <item title="1"/>
+        <item title="2"/>
+        <item title="3"/>
+        <item title="4"/>
+        <item title="5"/>
+      </ComboBox>
+    </component>
+    <group id="n10_b8xa" name="n10" xy="116,10" size="175,223" advanced="true" layout="vt" lineGap="23" excludeInvisibles="true"/>
+  </displayList>
+</component>

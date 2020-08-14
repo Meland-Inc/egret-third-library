@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="202,112" extention="Button">
+  <controller name="ctrlAnswerType" pages="0,none,1,right,2,error" selected="0"/>
+  <displayList>
+    <image id="n1_jo99" name="n1" src="jo99k" fileName="teachPlan/img/bg_spck_03.png" xy="0,0"/>
+    <text id="n0_jo99" name="title" xy="16,18" size="170,79" fontSize="25" align="center" vAlign="middle" autoSize="shrink" text=""/>
+    <image id="n2_jo99" name="n2" src="jo99f" fileName="teachPlan/img/icon_spck_03.png" xy="146,52">
+      <gearDisplay controller="ctrlAnswerType" pages="1"/>
+    </image>
+    <image id="n3_jo99" name="n3" src="jo99e" fileName="teachPlan/img/icon_spck_04.png" xy="146,52">
+      <gearDisplay controller="ctrlAnswerType" pages="2"/>
+    </image>
+  </displayList>
+  <Button/>
+</component>
