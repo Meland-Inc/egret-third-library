@@ -63,7 +63,7 @@
     <component id="v8nf5a" name="ComMapTemplateEditGrid.xml" path="/com/"/>
     <component id="azcq5b" name="ComMapTemplateCollect.xml" path="/com/"/>
     <component id="azcq5d" name="ComMapTemplateDetail.xml" path="/com/"/>
-    <image id="tbm25e" name="icon_mt_titlebg.png" path="/img/"/>
+    <image id="tbm25e" name="icon_mt_titlebg.png" path="/img/" scale="9grid" scale9grid="79,13,158,13"/>
     <image id="tbm25f" name="img_mt_mapbg2.png" path="/img/" scale="9grid" scale9grid="21,19,235,278"/>
     <image id="tbm25g" name="img_mt_mapbg3.png" path="/img/"/>
     <image id="tbm25h" name="icon_mt_play.png" path="/img/"/>
@@ -226,7 +226,7 @@
     <image id="qdana4" name="icon_mt_seticonblue.png" path="/img/" scale="9grid" scale9grid="26,14,52,28"/>
     <image id="qdana5" name="icon_mt_seticongrey.png" path="/img/" scale="9grid" scale9grid="43,25,86,6"/>
     <image id="qdana6" name="icon_mt_seticonpink.png" path="/img/" scale="9grid" scale9grid="26,14,52,28"/>
-    <image id="qdana7" name="img_mt_editgridhover.png" path="/img/"/>
+    <image id="qdana7" name="img_mt_editgridhover.png" path="/img/" scale="9grid" scale9grid="71,84,142,168"/>
     <image id="qdana8" name="icon_mt_editgrids1.png" path="/img/"/>
     <image id="qdana9" name="icon_mt_editgrids2.png" path="/img/"/>
     <image id="qdanaa" name="icon_mt_editgridnone.png" path="/img/"/>
