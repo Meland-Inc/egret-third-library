@@ -95,6 +95,11 @@ class RendererModel {
     public setHeaderSetCookie(value: string[]): void {
         this._headerSetCookie = value;
     }
+
+    public clearData(): void {
+        this.setNativeGameServer(null);
+        this.setHeaderSetCookie(null);
+    }
 }
 
 let rendererModel = new RendererModel();

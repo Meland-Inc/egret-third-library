@@ -32,6 +32,9 @@ export default class MsgId {
     /** 设置native策略版本号 */
     public static readonly SET_NATIVE_POLICY_VERSION: string = "SET_NATIVE_POLICY_VERSION";
 
+    /** 清除渲染数据 */
+    public static readonly CLEAR_RENDERER_MODEL_DATA: string = "CLEAR_RENDERER_MODEL_DATA";
+
     /** 保存native平台登陆信息 */
     public static readonly SAVE_NATIVE_LOGIN_RESPONSE: string = "SAVE_NATIVE_LOGIN_RESPONSE";
 

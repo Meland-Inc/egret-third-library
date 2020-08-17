@@ -6,7 +6,6 @@
  */
 import { ipcRenderer, IpcRendererEvent } from "electron";
 import querystring from "querystring";
-import path from "path";
 import tough from 'tough-cookie';
 
 import { CommonDefine } from '../common/CommonDefine';
@@ -35,6 +34,7 @@ class Message {
         this._serverUpdate = new ServerUpdate();
 
         this.msgMap = new Map<string, () => void>();
+        this.msgMap[MsgId.CLEAR_RENDERER_MODEL_DATA] = this.onClearRendererModelData.bind(this);
         this.msgMap[MsgId.SAVE_NATIVE_LOGIN_RESPONSE] = this.onSaveNativeLoginResponse.bind(this);
         this.msgMap[MsgId.SAVE_NATIVE_GAME_SERVER] = this.onSaveNativeGameServer.bind(this);
         this.msgMap[MsgId.SAVE_NATIVE_HEADER_SET_COOKIE] = this.onSaveNativeHeaderSetCookie.bind(this);
@@ -74,6 +74,11 @@ class Message {
         if (func) {
             func(...args);
         }
+    }
+
+    /** 清楚渲染进程数据 */
+    private onClearRendererModelData(): void {
+        rendererModel.clearData();
     }
 
     /** 保存native平台登陆信息 */
@@ -255,8 +260,8 @@ class Message {
     /** 从客户端进入 */
     private onStartNativeClient(queryValue: string) {
         this.checkClearLocalStorage();
-        let url = `file://${commonConfig.clientPackagePath}/index.html?${queryValue}`;
-        url = path.join(url);
+        const url = new URL(`file://${commonConfig.clientPackagePath}/index.html?${queryValue}`);
+        this.applySetCookie(url.origin);
         this.loadRendererURL(url);
     }
 
