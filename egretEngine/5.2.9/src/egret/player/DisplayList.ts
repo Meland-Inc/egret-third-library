@@ -208,7 +208,7 @@ namespace egret.sys {
         }
 
         /**
-         * 外部设置canvas渲染的额外缩放值
+         * 外部设置canvas渲染的额外缩放值 如果超过屏幕像素原生分辨率了也只会放大到原生分辨率 否则是浪费
          * @param scale 
          */
         public static setCanvasExternalScale(scale: number) {
