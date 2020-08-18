@@ -48,7 +48,7 @@
       <relation target="" sidePair="right-right"/>
       <Button title="兑换课程" icon="ui://oyity675p8fzwcyim1"/>
     </component>
-    <group id="n23_11584" name="grpMenu" xy="1552,13" size="360,113" customData="top" advanced="true">
+    <group id="n23_11584" name="grpMenu" xy="1552,13" size="360,113" customData="top" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlViewMode" pages="0"/>
     </group>
     <component id="n30_bix1" name="btnBannerTemplate" src="psruh" fileName="com/btnMainMenu.xml" xy="1802,13" group="n24_11584" customData="top">
@@ -71,11 +71,11 @@
       <gearDisplay controller="ctrlEnterWay" pages="10"/>
       <Button title="时间回溯" icon="ui://oyity675axawwcyim3"/>
     </component>
-    <group id="n24_11584" name="grpEditMenu" xy="1667,13" size="245,112" customData="top" advanced="true">
+    <group id="n24_11584" name="grpEditMenu" xy="1667,13" size="245,112" customData="top" advanced="true" collapsed="true">
       <gearDisplay controller="ctrlViewMode" pages="1"/>
       <relation target="" sidePair="right-right"/>
     </group>
-    <component id="n9_psru" name="btnIde" src="fn8fcyijz" fileName="btn/btnIde.xml" xy="1804,979" size="116,110" customData="right">
+    <component id="n9_psru" name="btnIde" src="fn8fcyijz" fileName="btn/btnIde.xml" xy="1804,979" size="116,110" customData="right" controller="ctrlOrientation,0">
       <gearDisplay controller="ctrlGodView" pages="0"/>
       <relation target="" sidePair="bottom-bottom,right-right"/>
       <Button icon="ui://oyity675cnxcwcyim0"/>
@@ -95,14 +95,14 @@
     <component id="n12_psru" name="btnHideLeftTop" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="272,105" size="74,74" group="n15_n173">
       <Button icon="ui://oyity675a1ndb" controller="ctrlLeftTopView" page="1"/>
     </component>
-    <group id="n15_n173" name="grpLeftTop" xy="0,0" size="346,262" customData="left" advanced="true">
+    <group id="n15_n173" name="grpLeftTop" xy="0,0" size="346,262" customData="left" advanced="true" collapsed="true">
       <gearXY controller="ctrlLeftTopView" pages="0,1" values="0,0|-346,0" tween="true"/>
     </group>
-    <component id="n14_psru" name="comTask" src="psruk" fileName="com/ComMainTask.xml" xy="0,277">
+    <component id="n14_psru" name="comTask" src="psruk" fileName="com/ComMainTask.xml" xy="0,277" hideByEditor="true">
       <gearDisplay controller="ctrlViewMode" pages="0"/>
     </component>
-    <component id="n34_ej7r" name="comTaskTrace" src="jrwa7n" fileName="com/ComTaskTrace.xml" pkg="2ctbbuel" xy="10,501">
-      <relation target="n14_psru" sidePair="top-bottom"/>
+    <component id="n34_ej7r" name="comTaskTrace" src="jrwa7n" fileName="com/ComTaskTrace.xml" pkg="2ctbbuel" xy="0,275">
+      <relation target="" sidePair="left-left,top-top"/>
     </component>
     <component id="n26_evs4" name="comBuildShortCut" src="qu7tt7j" fileName="ideCommon/com/ComBuildShortCutB.xml" pkg="ti9jag5t" xy="331,40" visible="false" touchable="false" customData="bottom" controller="ctrlState,11">
       <relation target="" sidePair="center-center"/>
@@ -112,6 +112,9 @@
       <gearDisplay controller="ctrlViewMode" pages="1"/>
       <relation target="" sidePair="right-right"/>
       <Button title="获取数据" titleFontSize="18" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <component id="n36_ho6v" name="comMainRocker" src="gen8bp" fileName="old/win/ComMainRocker.xml" xy="2,579">
+      <relation target="" sidePair="left-left,bottom-bottom"/>
     </component>
   </displayList>
   <transition name="showAnim">
