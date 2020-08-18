@@ -74,7 +74,7 @@ class Main {
   // 当运行第二个实例时,将会聚焦到mainWindow这个窗口
   private onAppSecondInstance(tEvent: Event, tArgv: string[], tWorkingDirectory: string): void {
     if (process.platform === 'win32') {
-      this.onGotTheLock(tArgv[tArgv.length - 1]);
+      this.showSecondInstanceAlert();
     }
   }
 
@@ -83,6 +83,16 @@ class Main {
     tEvent.preventDefault();
     logger.log('main', `open-url, event`, tUrl);
     this.onGotTheLock(tUrl);
+  }
+
+  private showSecondInstanceAlert(): void {
+    const options = {
+      type: 'warning',
+      title: '提示',
+      message: '小贝星球星球正在运行中!',
+      buttons: ['确定'],
+    };
+    dialog.showMessageBoxSync(this._mainWindow, options);
   }
 
   /** 拦截第二个实例 */
