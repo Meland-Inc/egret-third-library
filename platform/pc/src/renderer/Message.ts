@@ -20,7 +20,7 @@ import * as logger from './logger';
 import * as loading from './loading';
 import ClientUpdate from './update/ClientUpdate';
 import ServerUpdate from './update/ServerUpdate';
-import errorReport from "./ErrorReport";
+import errorReportRenderer from "./ErrorReportRenderer";
 import FileUtil from "../common/FileUtil";
 
 class Message {
@@ -100,7 +100,7 @@ class Message {
     /** 收到错误上报 */
     private onErrorReport(content: string) {
         logger.log('errorReport', `收到错误上报:${content}`);
-        errorReport.error(content);
+        errorReportRenderer.error(content);
     }
 
     private onSendMainLogToRenderer(logType: CommonDefine.eLogType, tag: string, msg: string, ...args: any[]) {

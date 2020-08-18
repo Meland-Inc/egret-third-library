@@ -97,7 +97,7 @@
         ]
     },
     "dependencies": {
-        "@sentry/node": "5.20.1",
+        "@sentry/electron": "^2.0.0",
         "electron-updater": "^4.2.5",
         "form-data": "^3.0.0",
         "fs-extra": "^9.0.0",

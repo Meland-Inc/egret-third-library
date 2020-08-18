@@ -7,7 +7,7 @@
 import * as logger from './logger';
 import message from './Message';
 import rendererModel from './RendererModel';
-import errorReport from './ErrorReport';
+import errorReportRenderer from './ErrorReportRenderer';
 
 /** 初始化 */
 logger.log('renderer', `初始化渲染进程主逻辑`);
@@ -22,5 +22,5 @@ function init() {
     message.init();
 
     //错误上报初始化
-    errorReport.init();
+    errorReportRenderer.init();
 }
