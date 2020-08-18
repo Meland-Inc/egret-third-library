@@ -1,3 +1,9 @@
+/**
+ * @Author 雪糕
+ * @Description 
+ * @Date 2020-03-01 09:41:42
+ * @FilePath \Draco\src\renderer\components\js\CdnUtil.js
+ */
 import { ModelMgr } from "./model/ModelMgr";
 import * as fs from 'fs';
 import * as qiniu from "qiniu";
@@ -56,6 +62,16 @@ export function checkUploaderFile(filePath, fileKey, cdnRoot, successFunc) {
 
 /** 上传单个文件 */
 export function uploaderFile(filePath, fileKey, cdnRoot, successFunc, failFunc) {
+    //测试代码,误删
+    // const exist = fsExc.exists(filePath);
+    // if (exist) {
+    //     console.log(`cdn --> upload ${fileKey} success`);
+    //     successFunc();
+    // } else {
+    //     console.error(`cdn --> upload ${fileKey} error`);
+    //     failFunc();
+    // }
+    // return;
     let formUploader = new qiniu.form_up.FormUploader(ModelMgr.ftpModel.qiniuConfig);
     let uploadToken = ModelMgr.ftpModel.uploadToken;
     if (cdnRoot) {

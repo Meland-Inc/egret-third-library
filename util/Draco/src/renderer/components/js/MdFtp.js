@@ -88,7 +88,9 @@ export async function copyVersion() {
     const readyEnviron = ModelMgr.versionModel.environList.find(value => value.name === ModelMgr.versionModel.eEnviron.ready);
     const releaseEnviron = ModelMgr.versionModel.environList.find(value => value.name === ModelMgr.versionModel.eEnviron.release);
     const readyGameVersion = await ModelMgr.versionModel.getEnvironGameVersion(ModelMgr.versionModel.eEnviron.ready);
+    const releaseGameVersion = await ModelMgr.versionModel.getEnvironGameVersion(ModelMgr.versionModel.eEnviron.release);
     await copyReleaseFile(readyEnviron, releaseEnviron, readyGameVersion);
+    await copyPatchFile(readyEnviron, releaseEnviron, readyGameVersion, releaseGameVersion);
     await ModelMgr.versionModel.initVersionList();
 
     Global.toast('拷贝版本成功');
@@ -116,6 +118,43 @@ async function copyReleaseFile(readyEnviron, releaseEnviron, readyGameVersion) {
     console.log(`拷贝完毕`);
 
     let indexPath = `${releaseFilePath}/index_v${readyGameVersion}.html`;
+    modifyIndexFile(indexPath);
+}
+
+/** 拷贝补丁包散文件 */
+async function copyPatchFile(readyEnviron, releaseEnviron, readyGameVersion, releaseGameVersion) {
+    console.log(`拷贝补丁包 readyGameVersion:${readyGameVersion} releaseGameVersion:${releaseGameVersion}`);
+    if (releaseGameVersion === readyGameVersion) {
+        return;
+    }
+
+    let releasePath = `${Global.svnPublishPath}${releaseEnviron.localPath}`;
+    let readyPath = `${Global.svnPublishPath}${readyEnviron.localPath}`;
+    let curGameVersion = releaseGameVersion;
+    let hasPatch = false;
+    for (let i = +releaseGameVersion + 1; i <= readyGameVersion; i++) {
+        let patchVersion = `patch_v${curGameVersion}s-v${i}s`;
+        let readyPatchPath = `${readyPath}/${patchVersion}/`;
+        let patchExist = await fsExc.exists(readyPatchPath);
+        if (!patchExist) {
+            console.log(`补丁包不存在:${readyPatchPath}`);
+            continue;
+        }
+
+        const releasePatchPath = `${releasePath}/${patchVersion}/`;
+
+        hasPatch = true;
+        console.log(`开始拷贝 from:${readyPatchPath} to:${releasePatchPath}`);
+        await fsExc.copyFile(readyPatchPath, releasePatchPath, true);
+        console.log(`拷贝完毕`);
+
+        let indexPath = `${releasePatchPath}/index_v${i}.html`;
+        modifyIndexFile(indexPath);
+        curGameVersion = i;
+    }
+}
+
+async function modifyIndexFile(indexPath) {
     console.log(`修改index文件:${indexPath}`);
     let indexContent = await fsExc.readFile(indexPath);
     indexContent = indexContent.replace(`window.environName="ready"`, `window.environName="release"`);
@@ -156,6 +195,7 @@ export async function uploadMangleMapFile() {
 export function uploadCdnVersionFile() {
     return new Promise(async (resolve, reject) => {
         await ModelMgr.ftpModel.initQiniuOption();
+        //ready
         if (ModelMgr.versionModel.curEnviron.scpEnable && ModelMgr.versionModel.curEnviron.cdnEnable) {
             let patchPath = `${Global.svnPublishPath}${ModelMgr.versionModel.curEnviron.localPath}/${ModelMgr.versionModel.uploadVersion}/`;
             await uploadCdnSingleVersionFile(patchPath, ModelMgr.versionModel.curEnviron.cdnRoot);
@@ -170,14 +210,14 @@ export function uploadCdnVersionFile() {
             return;
         }
 
+        //release
         let releaseEnviron = ModelMgr.versionModel.environList.find(value => value.name === ModelMgr.versionModel.eEnviron.release);
-        let readyEnviron = ModelMgr.versionModel.environList.find(value => value.name === ModelMgr.versionModel.eEnviron.ready);
-        let readyPath = `${Global.svnPublishPath}${readyEnviron.localPath}`;
+        let releasePath = `${Global.svnPublishPath}${releaseEnviron.localPath}`;
         let curGameVersion = releaseGameVersion;
         let hasPatch = false;
         for (let i = +releaseGameVersion + 1; i <= readyGameVersion; i++) {
             let patchVersion = `patch_v${curGameVersion}s-v${i}s`;
-            let patchPath = `${readyPath}/${patchVersion}/`;
+            let patchPath = `${releasePath}/${patchVersion}/`;
             let patchExist = await fsExc.exists(patchPath);
             if (!patchExist) {
                 continue;
@@ -190,7 +230,7 @@ export function uploadCdnVersionFile() {
 
         //没有patch包,传整包
         if (!hasPatch) {
-            let releasePath = `${readyPath}/release_v${readyGameVersion}s`;
+            let releasePath = `${releasePath}/release_v${readyGameVersion}s`;
             await uploadCdnSingleVersionFile(releasePath, releaseEnviron.cdnRoot);
         }
         resolve();
