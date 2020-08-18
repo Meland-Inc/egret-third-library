@@ -15,11 +15,11 @@ let common_config = {
                     /node_modules/,
                     path.resolve(__dirname, "src/ui")
                 ]
-            }
+            },
         ]
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.js']
+        extensions: ['.tsx', '.ts', '.js', '.json']
     },
 };
 
