@@ -223,6 +223,13 @@
     <component id="p1hp65" name="CodeComment.xml" path="/codeBlock/" exported="true"/>
     <component id="nci366" name="EditLevel.xml" path="/codeBlock/" exported="true"/>
     <component id="d3lu68" name="ComTaskDetailPanel.xml" path="/codeBlock/"/>
+    <component id="io1m69" name="comJuniorArg.xml" path="/codeBlock/" exported="true"/>
+    <image id="io1m6a" name="icon_junior_left_bottom.png" path="/img/"/>
+    <image id="io1m6b" name="icon_junior_left_top.png" path="/img/"/>
+    <image id="io1m6c" name="icon_junior_right_bottom.png" path="/img/"/>
+    <image id="io1m6d" name="icon_junior_right_top.png" path="/img/"/>
+    <image id="io1m6e" name="icon_junior_wait.png" path="/img/"/>
+    <component id="io1m6f" name="comTaskDetailArgs.xml" path="/codeBlock/" exported="true"/>
   </resources>
   <publish name="code"/>
 </packageDescription>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<component size="68,30">
+  <controller name="button" pages="" selected="-1"/>
+  <displayList>
+    <text id="n12_x1y5" name="tfDetail" xy="0,2" size="39,26" fontSize="18" color="#ffffff" align="center" vAlign="middle" text="详情"/>
+    <image id="n13_ej7r" name="n13" src="s45wy" fileName="img/icon_code_wt_2.png" xy="40,1"/>
+  </displayList>
+  <relation target="n12_x1y5" sidePair="rightext-right"/>
+</component>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="48,49">
+  <controller name="ctrlIcon" pages="5,start,0,wait,1,leftTop,2,rightTop,3,leftBottom,4,rightBottom" selected="1"/>
+  <displayList>
+    <loader id="n1_io1m" name="icon" xy="0,0" size="48,49" url="ui://t573fj5bio1m6e" align="center" vAlign="middle" fill="scale" shrinkOnly="true">
+      <gearIcon controller="ctrlIcon" pages="5,1,2,3,4" values="|ui://t573fj5bio1m6b|ui://t573fj5bio1m6d|ui://t573fj5bio1m6a|ui://t573fj5bio1m6c" default="ui://t573fj5bio1m6e"/>
+    </loader>
+  </displayList>
+</component>
