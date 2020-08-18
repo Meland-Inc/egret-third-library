@@ -1,4 +1,5 @@
-<template>
+
+<!--<template>
     <div>
         <mu-button label="创建模块" class="demo-snackbar-button" @click="showModuleDialog" primary/>
         <mu-button label="创建窗体" class="demo-snackbar-button" @click="showWindowDialog" primary/>
@@ -188,3 +189,4 @@ export default {
   margin-bottom: 16px;
 }
 </style>
+-->
