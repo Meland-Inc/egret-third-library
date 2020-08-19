@@ -1,16 +1,22 @@
 var __reflect = (this && this.__reflect) || function (p, c, t) {
     p.__class__ = c, t ? t.push(c) : t = [c], p.__types__ = p.__types__ ? t.concat(p.__types__) : t;
 };
-var __extends = this && this.__extends || function __extends(t, e) { 
- function r() { 
- this.constructor = t;
-}
-for (var i in e) e.hasOwnProperty(i) && (t[i] = e[i]);
-r.prototype = e.prototype, t.prototype = new r();
-};
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    }
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var fairygui;
 (function (fairygui) {
-    var GObject = (function (_super) {
+    var GObject = /** @class */ (function (_super) {
         __extends(GObject, _super);
         function GObject() {
             var _this = _super.call(this) || this;
@@ -1366,7 +1372,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var UBBParser = (function () {
+    var UBBParser = /** @class */ (function () {
         function UBBParser() {
             this._readPos = 0;
             this.smallFontSize = 12;
@@ -1449,7 +1455,8 @@ var fairygui;
             var pos2;
             var result = "";
             while ((pos2 = this._text.indexOf("[", pos1)) != -1) {
-                if (this._text.charCodeAt(pos2 - 1) == 92) {
+                if (this._text.charCodeAt(pos2 - 1) == 92) //\
+                 {
                     result += this._text.substring(pos1, pos2 - 1);
                     result += "[";
                     pos1 = pos2 + 1;
@@ -1475,7 +1482,8 @@ var fairygui;
             var func;
             var result = "";
             while ((pos2 = this._text.indexOf("[", pos1)) != -1) {
-                if (pos2 > 0 && this._text.charCodeAt(pos2 - 1) == 92) {
+                if (pos2 > 0 && this._text.charCodeAt(pos2 - 1) == 92) //\
+                 {
                     result += this._text.substring(pos1, pos2 - 1);
                     result += "[";
                     pos1 = pos2 + 1;
@@ -1522,7 +1530,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GearBase = (function () {
+    var GearBase = /** @class */ (function () {
         function GearBase(owner) {
             this._owner = owner;
         }
@@ -1601,7 +1609,7 @@ var fairygui;
     }());
     fairygui.GearBase = GearBase;
     __reflect(GearBase.prototype, "fairygui.GearBase");
-    var GearTweenConfig = (function () {
+    var GearTweenConfig = /** @class */ (function () {
         function GearTweenConfig() {
             this.tween = true;
             this.easeType = fairygui.EaseType.QuadOut;
@@ -1821,7 +1829,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var ControllerAction = (function () {
+    var ControllerAction = /** @class */ (function () {
         function ControllerAction() {
         }
         ControllerAction.createAction = function (type) {
@@ -1863,7 +1871,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GComponent = (function (_super) {
+    var GComponent = /** @class */ (function (_super) {
         __extends(GComponent, _super);
         function GComponent() {
             var _this = _super.call(this) || this;
@@ -2053,7 +2061,7 @@ var fairygui;
             var oldIndex = this._children.indexOf(child);
             if (oldIndex == -1)
                 throw "Not a child of this container";
-            if (child.sortingOrder != 0)
+            if (child.sortingOrder != 0) //no effect
                 return;
             var cnt = this._children.length;
             if (this._sortingChildCount > 0) {
@@ -2066,7 +2074,7 @@ var fairygui;
             var oldIndex = this._children.indexOf(child);
             if (oldIndex == -1)
                 throw "Not a child of this container";
-            if (child.sortingOrder != 0)
+            if (child.sortingOrder != 0) //no effect
                 return oldIndex;
             var cnt = this._children.length;
             if (this._sortingChildCount > 0) {
@@ -2620,9 +2628,9 @@ var fairygui;
                         }
                         else {
                             prev = this._children[i - 1];
-                            if (yValue < prev.y + prev.actualHeight / 2)
+                            if (yValue < prev.y + prev.actualHeight / 2) //top half part
                                 yValue = prev.y;
-                            else
+                            else //bottom half part
                                 yValue = obj.y;
                             break;
                         }
@@ -2643,9 +2651,9 @@ var fairygui;
                         }
                         else {
                             prev = this._children[i - 1];
-                            if (xValue < prev.x + prev.actualWidth / 2)
+                            if (xValue < prev.x + prev.actualWidth / 2) //top half part
                                 xValue = prev.x;
-                            else
+                            else //bottom half part
                                 xValue = obj.x;
                             break;
                         }
@@ -2874,7 +2882,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GObjectPool = (function () {
+    var GObjectPool = /** @class */ (function () {
         function GObjectPool() {
             this._count = 0;
             this._pool = {};
@@ -2927,7 +2935,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GTextField = (function (_super) {
+    var GTextField = /** @class */ (function (_super) {
         __extends(GTextField, _super);
         function GTextField() {
             var _this = _super.call(this) || this;
@@ -3368,7 +3376,7 @@ var fairygui;
                     wordEnd = 0;
                     continue;
                 }
-                if (cc >= 65 && cc <= 90 || cc >= 97 && cc <= 122) {
+                if (cc >= 65 && cc <= 90 || cc >= 97 && cc <= 122) { //a-z,A-Z
                     if (wordChars == 0)
                         wordStart = lineWidth;
                     wordChars++;
@@ -3407,10 +3415,10 @@ var fairygui;
                     line = LineInfo.borrow();
                     line.height = lineHeight;
                     line.textHeight = lineTextHeight;
-                    if (lineBuffer.length == 0) {
+                    if (lineBuffer.length == 0) { //the line cannt fit even a char
                         line.text = ch;
                     }
-                    else if (wordChars > 0 && wordEnd > 0) {
+                    else if (wordChars > 0 && wordEnd > 0) { //if word had broken, move it to new line
                         lineBuffer += ch;
                         var len = lineBuffer.length - wordChars;
                         line.text = fairygui.ToolSet.trimRight(lineBuffer.substr(0, len));
@@ -3567,7 +3575,8 @@ var fairygui;
             var value;
             var result = "";
             while ((pos2 = template.indexOf("{", pos1)) != -1) {
-                if (pos2 > 0 && template.charCodeAt(pos2 - 1) == 92) {
+                if (pos2 > 0 && template.charCodeAt(pos2 - 1) == 92) //\
+                 {
                     result += template.substring(pos1, pos2 - 1);
                     result += "{";
                     pos1 = pos2 + 1;
@@ -3670,7 +3679,7 @@ var fairygui;
                 this._textField.strokeColor = buffer.readColor();
                 this.stroke = buffer.readFloat() + 1;
             }
-            if (buffer.readBool())
+            if (buffer.readBool()) //shadow
                 buffer.skip(12);
             if (buffer.readBool())
                 this._templateVars = {};
@@ -3691,7 +3700,7 @@ var fairygui;
     }(fairygui.GObject));
     fairygui.GTextField = GTextField;
     __reflect(GTextField.prototype, "fairygui.GTextField");
-    var LineInfo = (function () {
+    var LineInfo = /** @class */ (function () {
         function LineInfo() {
             this.width = 0;
             this.height = 0;
@@ -3730,7 +3739,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var PackageItem = (function () {
+    var PackageItem = /** @class */ (function () {
         function PackageItem() {
             this.width = 0;
             this.height = 0;
@@ -3753,7 +3762,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var BMGlyph = (function () {
+    var BMGlyph = /** @class */ (function () {
         function BMGlyph() {
             this.x = 0;
             this.y = 0;
@@ -3772,7 +3781,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var DragEvent = (function (_super) {
+    var DragEvent = /** @class */ (function (_super) {
         __extends(DragEvent, _super);
         function DragEvent(type, stageX, stageY, touchPointID) {
             if (stageX === void 0) { stageX = 0; }
@@ -3801,7 +3810,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var DropEvent = (function (_super) {
+    var DropEvent = /** @class */ (function (_super) {
         __extends(DropEvent, _super);
         function DropEvent(type, source) {
             if (source === void 0) { source = null; }
@@ -3817,7 +3826,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var ItemEvent = (function (_super) {
+    var ItemEvent = /** @class */ (function (_super) {
         __extends(ItemEvent, _super);
         function ItemEvent(type, itemObject, stageX, stageY) {
             if (itemObject === void 0) { itemObject = null; }
@@ -3837,7 +3846,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var StateChangeEvent = (function (_super) {
+    var StateChangeEvent = /** @class */ (function (_super) {
         __extends(StateChangeEvent, _super);
         function StateChangeEvent(type) {
             return _super.call(this, type, false) || this;
@@ -3850,7 +3859,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var Controller = (function (_super) {
+    var Controller = /** @class */ (function (_super) {
         __extends(Controller, _super);
         function Controller() {
             var _this = _super.call(this) || this;
@@ -4098,7 +4107,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var ToolSet = (function () {
+    var ToolSet = /** @class */ (function () {
         function ToolSet() {
         }
         ToolSet.getFileName = function (source) {
@@ -4240,7 +4249,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var ColorMatrix = (function () {
+    var ColorMatrix = /** @class */ (function () {
         function ColorMatrix() {
             this.matrix = new Array(ColorMatrix.LENGTH);
             this.reset();
@@ -4404,7 +4413,7 @@ var fairygui;
 // EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 var fairygui;
 (function (fairygui) {
-    var EaseManager = (function () {
+    var EaseManager = /** @class */ (function () {
         function EaseManager() {
         }
         EaseManager.evaluate = function (easeType, time, duration, overshootOrAmplitude, period) {
@@ -4542,7 +4551,7 @@ var fairygui;
     }());
     fairygui.EaseManager = EaseManager;
     __reflect(EaseManager.prototype, "fairygui.EaseManager");
-    var Bounce = (function () {
+    var Bounce = /** @class */ (function () {
         function Bounce() {
         }
         Bounce.easeIn = function (time, duration) {
@@ -4572,7 +4581,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var EaseType = (function () {
+    var EaseType = /** @class */ (function () {
         function EaseType() {
         }
         EaseType.Linear = 0;
@@ -4614,7 +4623,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GTween = (function () {
+    var GTween = /** @class */ (function () {
         function GTween() {
         }
         GTween.to = function (start, end, duration) {
@@ -4658,7 +4667,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GTweener = (function () {
+    var GTweener = /** @class */ (function () {
         function GTweener() {
             this._startValue = new fairygui.TweenValue();
             this._endValue = new fairygui.TweenValue();
@@ -4946,7 +4955,8 @@ var fairygui;
                 dt *= this._timeScale;
             if (dt == 0)
                 return;
-            if (this._ended != 0) {
+            if (this._ended != 0) //Maybe completed by seek
+             {
                 this.callCompleteCallback();
                 this._killed = true;
                 return;
@@ -4962,7 +4972,8 @@ var fairygui;
         };
         GTweener.prototype.update = function () {
             this._ended = 0;
-            if (this._valueSize == 0) {
+            if (this._valueSize == 0) //DelayedCall
+             {
                 if (this._elapsedTime >= this._delay + this._duration)
                     this._ended = 1;
                 return;
@@ -5095,7 +5106,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var TweenManager = (function () {
+    var TweenManager = /** @class */ (function () {
         function TweenManager() {
         }
         TweenManager.createTween = function () {
@@ -5194,7 +5205,8 @@ var fairygui;
                 }
             }
             if (freePosStart >= 0) {
-                if (TweenManager._totalActiveTweens != cnt) {
+                if (TweenManager._totalActiveTweens != cnt) //new tweens added
+                 {
                     var j = cnt;
                     cnt = TweenManager._totalActiveTweens - cnt;
                     for (i = 0; i < cnt; i++)
@@ -5216,7 +5228,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var TweenValue = (function () {
+    var TweenValue = /** @class */ (function () {
         function TweenValue() {
             this.x = this.y = this.z = this.w = 0;
         }
@@ -5275,7 +5287,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var PlayTransitionAction = (function (_super) {
+    var PlayTransitionAction = /** @class */ (function (_super) {
         __extends(PlayTransitionAction, _super);
         function PlayTransitionAction() {
             var _this = _super.call(this) || this;
@@ -5314,7 +5326,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GearSize = (function (_super) {
+    var GearSize = /** @class */ (function (_super) {
         __extends(GearSize, _super);
         function GearSize(owner) {
             return _super.call(this, owner) || this;
@@ -5415,7 +5427,7 @@ var fairygui;
     }(fairygui.GearBase));
     fairygui.GearSize = GearSize;
     __reflect(GearSize.prototype, "fairygui.GearSize");
-    var GearSizeValue = (function () {
+    var GearSizeValue = /** @class */ (function () {
         function GearSizeValue(width, height, scaleX, scaleY) {
             if (width === void 0) { width = 0; }
             if (height === void 0) { height = 0; }
@@ -5432,7 +5444,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GearXY = (function (_super) {
+    var GearXY = /** @class */ (function (_super) {
         __extends(GearXY, _super);
         function GearXY(owner) {
             return _super.call(this, owner) || this;
@@ -5523,7 +5535,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GearText = (function (_super) {
+    var GearText = /** @class */ (function (_super) {
         __extends(GearText, _super);
         function GearText(owner) {
             return _super.call(this, owner) || this;
@@ -5557,7 +5569,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GearIcon = (function (_super) {
+    var GearIcon = /** @class */ (function (_super) {
         __extends(GearIcon, _super);
         function GearIcon(owner) {
             return _super.call(this, owner) || this;
@@ -5591,7 +5603,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GearAnimation = (function (_super) {
+    var GearAnimation = /** @class */ (function (_super) {
         __extends(GearAnimation, _super);
         function GearAnimation(owner) {
             return _super.call(this, owner) || this;
@@ -5633,7 +5645,7 @@ var fairygui;
     }(fairygui.GearBase));
     fairygui.GearAnimation = GearAnimation;
     __reflect(GearAnimation.prototype, "fairygui.GearAnimation");
-    var GearAnimationValue = (function () {
+    var GearAnimationValue = /** @class */ (function () {
         function GearAnimationValue(playing, frame) {
             if (playing === void 0) { playing = true; }
             if (frame === void 0) { frame = 0; }
@@ -5646,7 +5658,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GearColor = (function (_super) {
+    var GearColor = /** @class */ (function (_super) {
         __extends(GearColor, _super);
         function GearColor(owner) {
             return _super.call(this, owner) || this;
@@ -5693,7 +5705,7 @@ var fairygui;
     }(fairygui.GearBase));
     fairygui.GearColor = GearColor;
     __reflect(GearColor.prototype, "fairygui.GearColor");
-    var GearColorValue = (function () {
+    var GearColorValue = /** @class */ (function () {
         function GearColorValue(color, strokeColor) {
             if (color === void 0) { color = 0; }
             if (strokeColor === void 0) { strokeColor = 0; }
@@ -5706,7 +5718,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GearDisplay = (function (_super) {
+    var GearDisplay = /** @class */ (function (_super) {
         __extends(GearDisplay, _super);
         function GearDisplay(owner) {
             var _this = _super.call(this, owner) || this;
@@ -5749,7 +5761,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GearLook = (function (_super) {
+    var GearLook = /** @class */ (function (_super) {
         __extends(GearLook, _super);
         function GearLook(owner) {
             return _super.call(this, owner) || this;
@@ -5843,7 +5855,7 @@ var fairygui;
     }(fairygui.GearBase));
     fairygui.GearLook = GearLook;
     __reflect(GearLook.prototype, "fairygui.GearLook");
-    var GearLookValue = (function () {
+    var GearLookValue = /** @class */ (function () {
         function GearLookValue(alpha, rotation, grayed, touchable) {
             if (alpha === void 0) { alpha = 0; }
             if (rotation === void 0) { rotation = 0; }
@@ -5860,7 +5872,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var ChangePageAction = (function (_super) {
+    var ChangePageAction = /** @class */ (function (_super) {
         __extends(ChangePageAction, _super);
         function ChangePageAction() {
             return _super.call(this) || this;
@@ -5897,7 +5909,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var Transition = (function () {
+    var Transition = /** @class */ (function () {
         function Transition(owner) {
             this._ownerBaseX = 0;
             this._ownerBaseY = 0;
@@ -5990,7 +6002,8 @@ var fairygui;
                     if (trans == this)
                         trans = null;
                     if (trans != null) {
-                        if (item.value.playTimes == 0) {
+                        if (item.value.playTimes == 0) //stop
+                         {
                             var j;
                             for (j = i - 1; j >= 0; j--) {
                                 var item2 = this._items[j];
@@ -6061,7 +6074,8 @@ var fairygui;
             if (item.tweener != null) {
                 item.tweener.kill(setToComplete);
                 item.tweener = null;
-                if (item.type == TransitionActionType.Shake && !setToComplete) {
+                if (item.type == TransitionActionType.Shake && !setToComplete) //震动必须归位，否则下次就越震越远了。
+                 {
                     item.target._gearLocked = true;
                     item.target.setXY(item.target.x - item.value.lastOffsetX, item.target.y - item.value.lastOffsetY);
                     item.target._gearLocked = false;
@@ -6532,7 +6546,8 @@ var fairygui;
         };
         Transition.prototype.onTweenStart = function (tweener) {
             var item = tweener.target;
-            if (item.type == TransitionActionType.XY || item.type == TransitionActionType.Size) {
+            if (item.type == TransitionActionType.XY || item.type == TransitionActionType.Size) //位置和大小要到start才最终确认起始值
+             {
                 var startValue;
                 var endValue;
                 if (this._reversed) {
@@ -6608,7 +6623,7 @@ var fairygui;
             var item = tweener.target;
             item.tweener = null;
             this._totalTasks--;
-            if (tweener.allCompleted)
+            if (tweener.allCompleted) //当整体播放结束时间在这个tween的中间时不应该调用结尾钩子
                 this.callHook(item, true);
             this.checkAllComplete();
         };
@@ -6879,7 +6894,7 @@ var fairygui;
     }());
     fairygui.Transition = Transition;
     __reflect(Transition.prototype, "fairygui.Transition");
-    var TransitionActionType = (function () {
+    var TransitionActionType = /** @class */ (function () {
         function TransitionActionType() {
         }
         TransitionActionType.XY = 0;
@@ -6902,7 +6917,7 @@ var fairygui;
         return TransitionActionType;
     }());
     __reflect(TransitionActionType.prototype, "TransitionActionType");
-    var TransitionItem = (function () {
+    var TransitionItem = /** @class */ (function () {
         function TransitionItem(type) {
             this.type = type;
             switch (type) {
@@ -6941,7 +6956,7 @@ var fairygui;
         return TransitionItem;
     }());
     __reflect(TransitionItem.prototype, "TransitionItem");
-    var TweenConfig = (function () {
+    var TweenConfig = /** @class */ (function () {
         function TweenConfig() {
             this.duration = 0;
             this.repeat = 0;
@@ -6953,43 +6968,43 @@ var fairygui;
         return TweenConfig;
     }());
     __reflect(TweenConfig.prototype, "TweenConfig");
-    var TValue_Visible = (function () {
+    var TValue_Visible = /** @class */ (function () {
         function TValue_Visible() {
         }
         return TValue_Visible;
     }());
     __reflect(TValue_Visible.prototype, "TValue_Visible");
-    var TValue_Animation = (function () {
+    var TValue_Animation = /** @class */ (function () {
         function TValue_Animation() {
         }
         return TValue_Animation;
     }());
     __reflect(TValue_Animation.prototype, "TValue_Animation");
-    var TValue_Sound = (function () {
+    var TValue_Sound = /** @class */ (function () {
         function TValue_Sound() {
         }
         return TValue_Sound;
     }());
     __reflect(TValue_Sound.prototype, "TValue_Sound");
-    var TValue_Transition = (function () {
+    var TValue_Transition = /** @class */ (function () {
         function TValue_Transition() {
         }
         return TValue_Transition;
     }());
     __reflect(TValue_Transition.prototype, "TValue_Transition");
-    var TValue_Shake = (function () {
+    var TValue_Shake = /** @class */ (function () {
         function TValue_Shake() {
         }
         return TValue_Shake;
     }());
     __reflect(TValue_Shake.prototype, "TValue_Shake");
-    var TValue_Text = (function () {
+    var TValue_Text = /** @class */ (function () {
         function TValue_Text() {
         }
         return TValue_Text;
     }());
     __reflect(TValue_Text.prototype, "TValue_Text");
-    var TValue = (function () {
+    var TValue = /** @class */ (function () {
         function TValue() {
             this.f1 = this.f2 = this.f3 = this.f4 = 0;
             this.b1 = this.b2 = true;
@@ -7000,7 +7015,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var Frame = (function () {
+    var Frame = /** @class */ (function () {
         function Frame() {
             this.addDelay = 0;
         }
@@ -7011,7 +7026,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var MovieClip = (function (_super) {
+    var MovieClip = /** @class */ (function (_super) {
         __extends(MovieClip, _super);
         function MovieClip() {
             var _this = _super.call(this) || this;
@@ -7159,7 +7174,8 @@ var fairygui;
                         this._repeatedCount++;
                     }
                 }
-                if (this._frame == beginFrame && this._reversed == beginReversed) {
+                if (this._frame == beginFrame && this._reversed == beginReversed) //走了一轮了
+                 {
                     var roundTime = backupTime - timeInMiniseconds; //这就是一轮需要的时间
                     timeInMiniseconds -= Math.floor(timeInMiniseconds / roundTime) * roundTime; //跳过
                 }
@@ -7227,12 +7243,14 @@ var fairygui;
                     this._repeatedCount++;
                 }
             }
-            if (this._status == 1) {
+            if (this._status == 1) //new loop
+             {
                 this._frame = this._start;
                 this._frameElapsed = 0;
                 this._status = 0;
             }
-            else if (this._status == 2) {
+            else if (this._status == 2) //ending
+             {
                 this._frame = this._endAt;
                 this._frameElapsed = 0;
                 this._status = 3; //ended
@@ -7290,7 +7308,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var UIContainer = (function (_super) {
+    var UIContainer = /** @class */ (function (_super) {
         __extends(UIContainer, _super);
         function UIContainer() {
             var _this = _super.call(this) || this;
@@ -7325,7 +7343,7 @@ var fairygui;
         UIContainer.prototype.$hitTest = function (stageX, stageY) {
             var ret = _super.prototype.$hitTest.call(this, stageX, stageY);
             if (ret == this) {
-                if (!this.touchEnabled || this._hitArea == null)
+                if (!this.touchEnabled || this._hitArea == null) //穿透
                     return null;
             }
             else if (ret == null && this.touchEnabled && this.visible && this._hitArea != null) {
@@ -7347,7 +7365,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GButton = (function (_super) {
+    var GButton = /** @class */ (function (_super) {
         __extends(GButton, _super);
         function GButton() {
             var _this = _super.call(this) || this;
@@ -7807,7 +7825,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GComboBox = (function (_super) {
+    var GComboBox = /** @class */ (function (_super) {
         __extends(GComboBox, _super);
         function GComboBox() {
             var _this = _super.call(this) || this;
@@ -8197,7 +8215,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GGraph = (function (_super) {
+    var GGraph = /** @class */ (function (_super) {
         __extends(GGraph, _super);
         function GGraph() {
             var _this = _super.call(this) || this;
@@ -8390,7 +8408,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GGroup = (function (_super) {
+    var GGroup = /** @class */ (function (_super) {
         __extends(GGroup, _super);
         function GGroup() {
             var _this = _super.call(this) || this;
@@ -8638,7 +8656,8 @@ var fairygui;
                     child.setSize(nw, child._rawHeight + dh, true);
                     remainSize -= child.width;
                     if (last == i) {
-                        if (remainSize >= 1) {
+                        if (remainSize >= 1) //可能由于有些元件有宽度限制，导致无法铺满
+                         {
                             for (j = 0; j <= i; j++) {
                                 child = this._parent.getChildAt(j);
                                 if (child.group != this)
@@ -8679,7 +8698,8 @@ var fairygui;
                     child.setSize(child._rawWidth + dw, nh, true);
                     remainSize -= child.height;
                     if (last == i) {
-                        if (remainSize >= 1) {
+                        if (remainSize >= 1) //可能由于有些元件有宽度限制，导致无法铺满
+                         {
                             for (j = 0; j <= i; j++) {
                                 child = this._parent.getChildAt(j);
                                 if (child.group != this)
@@ -8742,7 +8762,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GImage = (function (_super) {
+    var GImage = /** @class */ (function (_super) {
         __extends(GImage, _super);
         function GImage() {
             var _this = _super.call(this) || this;
@@ -9014,7 +9034,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GLabel = (function (_super) {
+    var GLabel = /** @class */ (function (_super) {
         __extends(GLabel, _super);
         function GLabel() {
             return _super.call(this) || this;
@@ -9176,7 +9196,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GList = (function (_super) {
+    var GList = /** @class */ (function (_super) {
         __extends(GList, _super);
         function GList() {
             var _this = _super.call(this) || this;
@@ -9656,7 +9676,7 @@ var fairygui;
             if (index == -1)
                 return;
             switch (dir) {
-                case 1://up
+                case 1: //up
                     if (this._layout == fairygui.ListLayoutType.SingleColumn || this._layout == fairygui.ListLayoutType.FlowVertical) {
                         index--;
                         if (index >= 0) {
@@ -9685,7 +9705,7 @@ var fairygui;
                         }
                     }
                     break;
-                case 3://right
+                case 3: //right
                     if (this._layout == fairygui.ListLayoutType.SingleRow || this._layout == fairygui.ListLayoutType.FlowHorizontal || this._layout == fairygui.ListLayoutType.Pagination) {
                         index++;
                         if (index < this._children.length) {
@@ -9715,7 +9735,7 @@ var fairygui;
                         }
                     }
                     break;
-                case 5://down
+                case 5: //down
                     if (this._layout == fairygui.ListLayoutType.SingleColumn || this._layout == fairygui.ListLayoutType.FlowVertical) {
                         index++;
                         if (index < this._children.length) {
@@ -9745,7 +9765,7 @@ var fairygui;
                         }
                     }
                     break;
-                case 7://left
+                case 7: //left
                     if (this._layout == fairygui.ListLayoutType.SingleRow || this._layout == fairygui.ListLayoutType.FlowHorizontal || this._layout == fairygui.ListLayoutType.Pagination) {
                         index--;
                         if (index >= 0) {
@@ -10208,7 +10228,8 @@ var fairygui;
                             this._curLineItemCount = 1;
                     }
                 }
-                else {
+                else //pagination
+                 {
                     if (this._columnCount > 0)
                         this._curLineItemCount = this._columnCount;
                     else {
@@ -10527,7 +10548,7 @@ var fairygui;
                 }
                 ii.updateFlag = this.itemInfoVer;
                 ii.obj.setXY(curX, curY);
-                if (curIndex == newFirstIndex)
+                if (curIndex == newFirstIndex) //要显示多一条才不会穿帮
                     max += ii.height;
                 curX += ii.width + this._columnGap;
                 if (curIndex % this._curLineItemCount == this._curLineItemCount - 1) {
@@ -10553,7 +10574,7 @@ var fairygui;
             }
             if (deltaSize != 0 || firstItemDeltaSize != 0)
                 this._scrollPane.changeContentSizeOnScrolling(0, deltaSize, 0, firstItemDeltaSize);
-            if (curIndex > 0 && this.numChildren > 0 && this._container.y <= 0 && this.getChildAt(0).y > -this._container.y)
+            if (curIndex > 0 && this.numChildren > 0 && this._container.y <= 0 && this.getChildAt(0).y > -this._container.y) //最后一页没填满！
                 return true;
             else
                 return false;
@@ -10662,7 +10683,7 @@ var fairygui;
                 }
                 ii.updateFlag = this.itemInfoVer;
                 ii.obj.setXY(curX, curY);
-                if (curIndex == newFirstIndex)
+                if (curIndex == newFirstIndex) //要显示多一条才不会穿帮
                     max += ii.width;
                 curY += ii.height + this._lineGap;
                 if (curIndex % this._curLineItemCount == this._curLineItemCount - 1) {
@@ -10688,7 +10709,7 @@ var fairygui;
             }
             if (deltaSize != 0 || firstItemDeltaSize != 0)
                 this._scrollPane.changeContentSizeOnScrolling(deltaSize, 0, firstItemDeltaSize, 0);
-            if (curIndex > 0 && this.numChildren > 0 && this._container.x <= 0 && this.getChildAt(0).x > -this._container.x)
+            if (curIndex > 0 && this.numChildren > 0 && this._container.x <= 0 && this.getChildAt(0).x > -this._container.x) //最后一页没填满！
                 return true;
             else
                 return false;
@@ -11078,7 +11099,8 @@ var fairygui;
                     ch = Math.ceil(maxHeight);
                 }
             }
-            else {
+            else //pagination
+             {
                 var eachHeight;
                 if (this._autoResizeItem && this._lineCount > 0)
                     eachHeight = Math.floor((viewHeight - (this._lineCount - 1) * this._lineGap) / this._lineCount);
@@ -11142,7 +11164,8 @@ var fairygui;
                             j = 0;
                             k++;
                             if (this._lineCount != 0 && k >= this._lineCount
-                                || this._lineCount == 0 && curY + child.height > viewHeight && maxWidth != 0) {
+                                || this._lineCount == 0 && curY + child.height > viewHeight && maxWidth != 0) //new page
+                             {
                                 page++;
                                 curY = 0;
                                 k = 0;
@@ -11257,7 +11280,7 @@ var fairygui;
     }(fairygui.GComponent));
     fairygui.GList = GList;
     __reflect(GList.prototype, "fairygui.GList");
-    var ItemInfo = (function () {
+    var ItemInfo = /** @class */ (function () {
         function ItemInfo() {
             this.width = 0;
             this.height = 0;
@@ -11270,7 +11293,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var UISprite = (function (_super) {
+    var UISprite = /** @class */ (function (_super) {
         __extends(UISprite, _super);
         function UISprite() {
             var _this = _super.call(this) || this;
@@ -11298,7 +11321,7 @@ var fairygui;
         UISprite.prototype.$hitTest = function (stageX, stageY) {
             var ret = _super.prototype.$hitTest.call(this, stageX, stageY);
             if (ret == this) {
-                if (!this.touchEnabled || this._hitArea == null)
+                if (!this.touchEnabled || this._hitArea == null) //穿透
                     return null;
             }
             else if (ret == null && this.touchEnabled && this._hitArea != null) {
@@ -11317,7 +11340,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GLoader = (function (_super) {
+    var GLoader = /** @class */ (function (_super) {
         __extends(GLoader, _super);
         function GLoader() {
             var _this = _super.call(this) || this;
@@ -11790,7 +11813,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GMovieClip = (function (_super) {
+    var GMovieClip = /** @class */ (function (_super) {
         __extends(GMovieClip, _super);
         function GMovieClip() {
             return _super.call(this) || this;
@@ -11894,7 +11917,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GProgressBar = (function (_super) {
+    var GProgressBar = /** @class */ (function (_super) {
         __extends(GProgressBar, _super);
         function GProgressBar() {
             var _this = _super.call(this) || this;
@@ -12051,7 +12074,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var BitmapFont = (function () {
+    var BitmapFont = /** @class */ (function () {
         function BitmapFont() {
             this.size = 0;
             this.glyphs = {};
@@ -12063,7 +12086,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GRichTextField = (function (_super) {
+    var GRichTextField = /** @class */ (function (_super) {
         __extends(GRichTextField, _super);
         function GRichTextField() {
             var _this = _super.call(this) || this;
@@ -12097,7 +12120,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GRoot = (function (_super) {
+    var GRoot = /** @class */ (function (_super) {
         __extends(GRoot, _super);
         function GRoot() {
             var _this = _super.call(this) || this;
@@ -12509,7 +12532,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var Margin = (function () {
+    var Margin = /** @class */ (function () {
         function Margin() {
             this.left = 0;
             this.right = 0;
@@ -12529,7 +12552,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GTimers = (function () {
+    var GTimers = /** @class */ (function () {
         function GTimers() {
             this._enumI = 0;
             this._enumCount = 0;
@@ -12634,7 +12657,7 @@ var fairygui;
     }());
     fairygui.GTimers = GTimers;
     __reflect(GTimers.prototype, "fairygui.GTimers");
-    var TimerItem = (function () {
+    var TimerItem = /** @class */ (function () {
         function TimerItem() {
             this.delay = 0;
             this.counter = 0;
@@ -12668,7 +12691,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GScrollBar = (function (_super) {
+    var GScrollBar = /** @class */ (function (_super) {
         __extends(GScrollBar, _super);
         function GScrollBar() {
             var _this = _super.call(this) || this;
@@ -12804,7 +12827,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GSlider = (function (_super) {
+    var GSlider = /** @class */ (function (_super) {
         __extends(GSlider, _super);
         function GSlider() {
             var _this = _super.call(this) || this;
@@ -13020,7 +13043,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GTextInput = (function (_super) {
+    var GTextInput = /** @class */ (function (_super) {
         __extends(GTextInput, _super);
         function GTextInput() {
             var _this = _super.call(this) || this;
@@ -13156,7 +13179,7 @@ var fairygui;
             if (iv != 0)
                 this._textField.maxChars = iv;
             iv = buffer.readInt();
-            if (iv != 0) {
+            if (iv != 0) { //keyboardType
             }
             if (buffer.readBool())
                 this.password = true;
@@ -13196,7 +13219,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var PageOption = (function () {
+    var PageOption = /** @class */ (function () {
         function PageOption() {
         }
         Object.defineProperty(PageOption.prototype, "controller", {
@@ -13252,7 +13275,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var PopupMenu = (function () {
+    var PopupMenu = /** @class */ (function () {
         function PopupMenu(resourceURL) {
             if (resourceURL === void 0) { resourceURL = null; }
             if (!resourceURL) {
@@ -13423,7 +13446,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var RelationItem = (function () {
+    var RelationItem = /** @class */ (function () {
         function RelationItem(owner) {
             this._owner = owner;
             this._defs = new Array();
@@ -13968,7 +13991,7 @@ var fairygui;
     }());
     fairygui.RelationItem = RelationItem;
     __reflect(RelationItem.prototype, "fairygui.RelationItem");
-    var RelationDef = (function () {
+    var RelationDef = /** @class */ (function () {
         function RelationDef() {
         }
         RelationDef.prototype.copyFrom = function (source) {
@@ -13983,7 +14006,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var Relations = (function () {
+    var Relations = /** @class */ (function () {
         function Relations(owner) {
             this._owner = owner;
             this._items = new Array();
@@ -14123,7 +14146,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var ScrollPane = (function (_super) {
+    var ScrollPane = /** @class */ (function (_super) {
         __extends(ScrollPane, _super);
         function ScrollPane(owner) {
             var _this = _super.call(this) || this;
@@ -14960,7 +14983,8 @@ var fairygui;
             }
             this.refresh2();
             this.dispatchEventWith(ScrollPane.SCROLL, false);
-            if (this._needRefresh) {
+            if (this._needRefresh) //在onScroll事件里开发者可能修改位置，这里再刷新一次，避免闪烁
+             {
                 this._needRefresh = false;
                 fairygui.GTimers.inst.remove(this.refresh, this);
                 this.refresh2();
@@ -15049,7 +15073,7 @@ var fairygui;
                 return;
             if (!this._touchEffect)
                 return;
-            if (ScrollPane.draggingPane != null && ScrollPane.draggingPane != this || fairygui.GObject.draggingObject != null)
+            if (ScrollPane.draggingPane != null && ScrollPane.draggingPane != this || fairygui.GObject.draggingObject != null) //已经有其他拖动
                 return;
             var pt = this._owner.globalToLocal(evt.stageX, evt.stageY, ScrollPane.sHelperPoint);
             var sensitivity = fairygui.UIConfig.touchScrollSensitivity;
@@ -15062,9 +15086,10 @@ var fairygui;
                     diff = Math.abs(this._beginTouchPos.y - pt.y);
                     if (diff < sensitivity)
                         return;
-                    if ((ScrollPane._gestureFlag & 2) != 0) {
+                    if ((ScrollPane._gestureFlag & 2) != 0) //已经有水平方向的手势在监测，那么我们用严格的方式检查是不是按垂直方向移动，避免冲突
+                     {
                         diff2 = Math.abs(this._beginTouchPos.x - pt.x);
-                        if (diff < diff2)
+                        if (diff < diff2) //不通过则不允许滚动了
                             return;
                     }
                 }
@@ -15150,7 +15175,8 @@ var fairygui;
             if (deltaTime != 0) {
                 var frameRate = this._owner.displayObject.stage.frameRate;
                 var elapsed = deltaTime * frameRate - 1;
-                if (elapsed > 1) {
+                if (elapsed > 1) //速度衰减
+                 {
                     var factor = Math.pow(0.833, elapsed);
                     this._velocity.x = this._velocity.x * factor;
                     this._velocity.y = this._velocity.y * factor;
@@ -15431,17 +15457,19 @@ var fairygui;
                 var testPageSize = Math.min(this._pageSize[axis], this._contentSize[axis] - (page + 1) * this._pageSize[axis]);
                 var delta = -pos - page * this._pageSize[axis];
                 //页面吸附策略
-                if (Math.abs(change) > this._pageSize[axis]) {
+                if (Math.abs(change) > this._pageSize[axis]) //如果滚动距离超过1页,则需要超过页面的一半，才能到更下一页
+                 {
                     if (delta > testPageSize * 0.5)
                         page++;
                 }
-                else {
+                else //否则只需要页面的1/3，当然，需要考虑到左移和右移的情况
+                 {
                     if (delta > testPageSize * (change < 0 ? 0.3 : 0.7))
                         page++;
                 }
                 //重新计算终点
                 pos = -page * this._pageSize[axis];
-                if (pos < -this._overlapSize[axis])
+                if (pos < -this._overlapSize[axis]) //最后一页未必有pageSize那么大
                     pos = -this._overlapSize[axis];
             }
             //惯性滚动模式下，会增加判断尽量不要滚动超过一页
@@ -15522,7 +15550,8 @@ var fairygui;
             this._tweenDuration[axis] = newDuration;
         };
         ScrollPane.prototype.killTween = function () {
-            if (this._tweening == 1) {
+            if (this._tweening == 1) //取消类型为1的tween需立刻设置到终点
+             {
                 this._container.x = this._tweenStart.x + this._tweenChange.x;
                 this._container.y = this._tweenStart.y + this._tweenChange.y;
                 this.dispatchEventWith(ScrollPane.SCROLL);
@@ -15629,14 +15658,16 @@ var fairygui;
                 }
                 if (this._tweening == 2 && this._bouncebackEffect) {
                     if (newValue > 20 + threshold1 && this._tweenChange[axis] > 0
-                        || newValue > threshold1 && this._tweenChange[axis] == 0) {
+                        || newValue > threshold1 && this._tweenChange[axis] == 0) //开始回弹
+                     {
                         this._tweenTime[axis] = 0;
                         this._tweenDuration[axis] = ScrollPane.TWEEN_TIME_DEFAULT;
                         this._tweenChange[axis] = -newValue + threshold1;
                         this._tweenStart[axis] = newValue;
                     }
                     else if (newValue < threshold2 - 20 && this._tweenChange[axis] < 0
-                        || newValue < threshold2 && this._tweenChange[axis] == 0) {
+                        || newValue < threshold2 && this._tweenChange[axis] == 0) //开始回弹
+                     {
                         this._tweenTime[axis] = 0;
                         this._tweenDuration[axis] = ScrollPane.TWEEN_TIME_DEFAULT;
                         this._tweenChange[axis] = threshold2 - newValue;
@@ -15680,7 +15711,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var UIConfig = (function () {
+    var UIConfig = /** @class */ (function () {
         function UIConfig() {
         }
         //Default font name
@@ -15717,7 +15748,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var UIObjectFactory = (function () {
+    var UIObjectFactory = /** @class */ (function () {
         function UIObjectFactory() {
         }
         UIObjectFactory.setPackageItemExtension = function (url, type) {
@@ -15791,7 +15822,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var UIPackage = (function () {
+    var UIPackage = /** @class */ (function () {
         function UIPackage() {
             this._items = new Array();
             this._itemsById = {};
@@ -16281,7 +16312,7 @@ var fairygui;
     }());
     fairygui.UIPackage = UIPackage;
     __reflect(UIPackage.prototype, "fairygui.UIPackage");
-    var AtlasSprite = (function () {
+    var AtlasSprite = /** @class */ (function () {
         function AtlasSprite() {
             this.rect = new egret.Rectangle();
         }
@@ -16291,7 +16322,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var Window = (function (_super) {
+    var Window = /** @class */ (function (_super) {
         __extends(Window, _super);
         function Window() {
             var _this = _super.call(this) || this;
@@ -16563,7 +16594,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var DragDropManager = (function () {
+    var DragDropManager = /** @class */ (function () {
         function DragDropManager() {
             this._agent = new fairygui.GLoader();
             this._agent.draggable = true;
@@ -16617,7 +16648,7 @@ var fairygui;
             }
         };
         DragDropManager.prototype.__dragEnd = function (evt) {
-            if (this._agent.parent == null)
+            if (this._agent.parent == null) //cancelled
                 return;
             fairygui.GRoot.inst.removeChild(this._agent);
             var sourceData = this._sourceData;
@@ -16640,7 +16671,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var AsyncOperation = (function () {
+    var AsyncOperation = /** @class */ (function () {
         function AsyncOperation() {
             this._itemList = new Array();
             this._objectPool = new Array();
@@ -16712,7 +16743,7 @@ var fairygui;
                 }
                 else {
                     di = new DisplayListItem(null, type);
-                    if (type == fairygui.ObjectType.List)
+                    if (type == fairygui.ObjectType.List) //list
                         di.listItemCount = this.collectListChildren(buffer);
                 }
                 this._itemList.push(di);
@@ -16780,7 +16811,7 @@ var fairygui;
                     this._objectPool.push(obj);
                     if (di.type == fairygui.ObjectType.List && di.listItemCount > 0) {
                         poolStart = this._objectPool.length - di.listItemCount - 1;
-                        for (k = 0; k < di.listItemCount; k++)
+                        for (k = 0; k < di.listItemCount; k++) //把他们都放到pool里，这样GList在创建时就不需要创建对象了
                             obj.itemPool.returnObject(this._objectPool[k + poolStart]);
                         this._objectPool.splice(poolStart, di.listItemCount);
                     }
@@ -16800,7 +16831,7 @@ var fairygui;
     }());
     fairygui.AsyncOperation = AsyncOperation;
     __reflect(AsyncOperation.prototype, "fairygui.AsyncOperation");
-    var DisplayListItem = (function () {
+    var DisplayListItem = /** @class */ (function () {
         function DisplayListItem(packageItem, type) {
             this.packageItem = packageItem;
             this.type = type;
@@ -16811,7 +16842,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var TranslationHelper = (function () {
+    var TranslationHelper = /** @class */ (function () {
         function TranslationHelper() {
         }
         TranslationHelper.loadFromXML = function (source) {
@@ -16874,7 +16905,8 @@ var fairygui;
                 for (j = 0; j < gearCnt; j++) {
                     nextPos = buffer.readShort();
                     nextPos += buffer.position;
-                    if (buffer.readByte() == 6) {
+                    if (buffer.readByte() == 6) //gearText
+                     {
                         buffer.skip(2); //controller
                         valueCnt = buffer.readShort();
                         for (k = 0; k < valueCnt; k++) {
@@ -16981,7 +17013,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var GraphicsHelper = (function () {
+    var GraphicsHelper = /** @class */ (function () {
         function GraphicsHelper() {
         }
         GraphicsHelper.fillImage = function (method, amount, origin, clockwise, graphics, width, height) {
@@ -17157,7 +17189,7 @@ var fairygui;
 })(fairygui || (fairygui = {}));
 var fairygui;
 (function (fairygui) {
-    var ByteBuffer = (function (_super) {
+    var ByteBuffer = /** @class */ (function (_super) {
         __extends(ByteBuffer, _super);
         function ByteBuffer(buffer, bufferExtSize) {
             var _this = _super.call(this, buffer, bufferExtSize) || this;
@@ -17173,7 +17205,7 @@ var fairygui;
         };
         ByteBuffer.prototype.readS = function () {
             var index = this.readUnsignedShort();
-            if (index == 65534)
+            if (index == 65534) //null
                 return null;
             else if (index == 65533)
                 return "";
