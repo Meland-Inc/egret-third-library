@@ -17,14 +17,108 @@ import platform from './Platform';
 import commonConfig from '../common/CommonConfig';
 import server from './Server';
 import NativeUpdate from './NativeUpdate';
+import FileUtil from '../common/FileUtil';
 class MainControl {
     private _nativeUpdate: NativeUpdate;
 
     /** 初始化 */
-    public init(): void {
+    public async init(): Promise<void> {
         this._nativeUpdate = new NativeUpdate();
 
         this.addIpcListener();
+
+        //创建游戏包目录
+        this.packageMkDir();
+
+        //只有打包后的要上传日志
+        if (commonConfig.isPackaged) {
+            util.uploadLogFileList();
+        }
+
+        await this.initNative();
+    }
+
+    /** 创建游戏包目录 */
+    private packageMkDir(): void {
+        // 判断创建文件
+        if (!FileUtil.existsSync(commonConfig.packagePath)) {
+            FileUtil.ensureDirSync(commonConfig.packagePath);
+        }
+
+        if (!FileUtil.existsSync(commonConfig.clientPackagePath)) {
+            FileUtil.ensureDirSync(commonConfig.clientPackagePath);
+        }
+
+        if (!FileUtil.existsSync(commonConfig.serverPackagePath)) {
+            FileUtil.ensureDirSync(commonConfig.serverPackagePath);
+        }
+    }
+
+    /** native初始化 */
+    public async initNative(): Promise<void> {
+        mainModel.setBellplanetReady(false);
+
+        logger.log('net', `urlValue: ${mainModel.urlValue}`);
+        if (!mainModel.urlValue || mainModel.urlValue.indexOf(commonConfig.constPseudoProtocol) < 0) {
+            mainModel.setNativeMode(CommonDefine.eNativeMode.website);
+        } else {
+            //设置路由
+            const urlObj = new URL(mainModel.urlValue);
+            const lessonRouter = urlObj.hostname;
+            mainModel.setLessonRouter(lessonRouter as CommonDefine.eLessonRouter);
+
+            logger.log('test', `router: ${mainModel.lessonRouter}`);
+
+            //根据路由初始化native模式
+            this.initNativeMode(mainModel.lessonRouter);
+        }
+
+        await mainModel.mainWindow.loadFile(`${commonConfig.rootPath}/dist/renderer.html`);
+
+        logger.log('net', `config.urlValue`, mainModel.urlValue);
+        logger.log('env', `app.isPackaged:`, commonConfig.isPackaged);
+
+        /** 清除渲染层数据 */
+        message.sendIpcMsg(MsgId.CLEAR_RENDERER_MODEL_DATA);
+
+        //打包后的包才要检查更新
+        if (commonConfig.isPackaged) {
+            message.sendIpcMsg(MsgId.GET_NATIVE_POLICY_VERSION);
+        }
+        //没打包的直接检查游戏包更新
+        else {
+            message.sendIpcMsg(MsgId.CHECK_PACKAGE_UPDATE);
+        }
+    }
+
+    /** 根据路由初始化native模式 */
+    private initNativeMode(tRouter: CommonDefine.eLessonRouter): void {
+        switch (tRouter) {
+            //创造地图模式
+            case CommonDefine.eLessonRouter.createMap:
+                mainModel.setNativeMode(CommonDefine.eNativeMode.createMap);
+                break;
+            //banner模式
+            case CommonDefine.eLessonRouter.banner:
+                mainModel.setNativeMode(CommonDefine.eNativeMode.banner);
+                break;
+            //游戏模式
+            case CommonDefine.eLessonRouter.game:
+                mainModel.setNativeMode(CommonDefine.eNativeMode.game);
+                break;
+            //指定url模式
+            case CommonDefine.eLessonRouter.url:
+                mainModel.setNativeMode(CommonDefine.eNativeMode.url);
+                break;
+            //进入指定地图模板
+            case CommonDefine.eLessonRouter.enterPrestigeMap:
+                mainModel.setNativeMode(CommonDefine.eNativeMode.prestigeMap);
+                break;
+            default:
+                mainModel.mainWindow.setFullScreen(false);
+                mainModel.setNativeMode(CommonDefine.eNativeMode.platform);
+                break;
+        }
     }
 
     public dispose(): void {

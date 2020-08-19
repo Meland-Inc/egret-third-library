@@ -9,9 +9,7 @@ import { app, globalShortcut, BrowserWindow, Menu, shell, dialog, webContents } 
 import * as process from 'process';
 import * as os from 'os';
 
-import { CommonDefine } from '../common/CommonDefine';
 import commonConfig from '../common/CommonConfig';
-import MsgId from '../common/MsgId';
 
 import { logger } from './logger';
 import { util } from './util';
@@ -29,8 +27,6 @@ if (!gotTheLock) {
 }
 
 class Main {
-  private _mainWindow: BrowserWindow;
-
   public init(): void {
     //监听app事件
     app.on('ready', this.onAppReady.bind(this));
@@ -41,7 +37,6 @@ class Main {
       app.on('open-url', this.onAppOpenUrl.bind(this));
     });
   }
-
 
   private onAppReady(): void {
     this.createWindow();
@@ -72,7 +67,7 @@ class Main {
       shortCut = 'Ctrl+Shift+I';
     }
     globalShortcut.register(shortCut, () => {
-      this._mainWindow.webContents.openDevTools();
+      mainModel.mainWindow.webContents.openDevTools();
     });
   }
 
@@ -96,18 +91,18 @@ class Main {
     /** 设置url参数 */
     mainModel.setUrlValue(tUrl);
 
-    if (this._mainWindow) {
-      if (this._mainWindow.isMinimized()) {
-        this._mainWindow.restore();
+    if (mainModel.mainWindow) {
+      if (mainModel.mainWindow.isMinimized()) {
+        mainModel.mainWindow.restore();
       }
-      this._mainWindow.focus();
-      this._mainWindow.show();
+      mainModel.mainWindow.focus();
+      mainModel.mainWindow.show();
       logger.log('electron', `显示当前主窗口`);
 
       // 关闭之前的服务器
       await server.closeGameServer();
 
-      await this.initNative();
+      await mainControl.initNative();
     }
   }
 
@@ -120,12 +115,12 @@ class Main {
   private onAppActivate(): void {
     // On macOS it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
-    if (this._mainWindow === null) this.createWindow();
+    if (mainModel.mainWindow === null) this.createWindow();
   }
 
   //创建游戏浏览窗口
   private async createWindow(): Promise<void> {
-    this._mainWindow = new BrowserWindow({
+    const mainWindow = new BrowserWindow({
       width: 1600,
       height: 900,
       webPreferences: {
@@ -137,14 +132,11 @@ class Main {
 
     //错误上报初始化
     errorReportMain.init();
-    mainModel.setMainWindow(this._mainWindow);
-
-    //创建游戏包目录
-    this.packageMkDir();
+    mainModel.setMainWindow(mainWindow);
 
     //添加ua
-    const userAgent = this._mainWindow.webContents.userAgent + " BellCodeIpadWebView BellplanetNative";
-    this._mainWindow.webContents.userAgent = userAgent;
+    const userAgent = mainModel.mainWindow.webContents.userAgent + " BellCodeIpadWebView BellplanetNative";
+    mainModel.mainWindow.webContents.userAgent = userAgent;
 
     /** 设置url参数 */
     if (os.platform() === "win32") {
@@ -157,46 +149,23 @@ class Main {
     message.init();
 
     //初始化主进程控制逻辑
-    mainControl.init();
-
-    //只有打包后的要上传日志
-    if (commonConfig.isPackaged) {
-      util.uploadLogFileList();
-    }
-
-    await this.initNative();
+    await mainControl.init();
 
     //初始化MainWindow
     this.initMainWindow();
-  }
-
-  /** 创建游戏包目录 */
-  private packageMkDir(): void {
-    // 判断创建文件
-    if (!FileUtil.existsSync(commonConfig.packagePath)) {
-      FileUtil.ensureDirSync(commonConfig.packagePath);
-    }
-
-    if (!FileUtil.existsSync(commonConfig.clientPackagePath)) {
-      FileUtil.ensureDirSync(commonConfig.clientPackagePath);
-    }
-
-    if (!FileUtil.existsSync(commonConfig.serverPackagePath)) {
-      FileUtil.ensureDirSync(commonConfig.serverPackagePath);
-    }
   }
 
   /** 初始化MainWindow */
   private initMainWindow(): void {
     // Open the DevTools.
     if (!app.isPackaged) {
-      this._mainWindow.webContents.openDevTools();
+      mainModel.mainWindow.webContents.openDevTools();
     }
 
-    this._mainWindow.on('close', this.onClose);
-    this._mainWindow.on('closed', this.onClosed);
-    this._mainWindow.webContents.on('crashed', this.onCrashed);
-    this._mainWindow.webContents.on('new-window', this.onNewWindow);
+    mainModel.mainWindow.on('close', this.onClose);
+    mainModel.mainWindow.on('closed', this.onClosed);
+    mainModel.mainWindow.webContents.on('crashed', this.onCrashed);
+    mainModel.mainWindow.webContents.on('new-window', this.onNewWindow);
 
     //设置菜单
     const template = [
@@ -279,12 +248,12 @@ class Main {
       message: '这个进程已经崩溃.',
       buttons: ['重载', '退出'],
     };
-    const index = dialog.showMessageBoxSync(this._mainWindow, options);
+    const index = dialog.showMessageBoxSync(mainModel.mainWindow, options);
     if (index === 0) {
       //重载以前,先检测关闭游戏服务器
       server.closeGameServer()
         .finally(() => {
-          this._mainWindow.reload();
+          mainModel.mainWindow.reload();
         });
     } else {
       app.quit();
@@ -300,7 +269,7 @@ class Main {
       return;
     }
 
-    const index = dialog.showMessageBoxSync(this._mainWindow, {
+    const index = dialog.showMessageBoxSync(mainModel.mainWindow, {
       type: 'info',
       title: '提示',
       defaultId: 1,
@@ -325,7 +294,6 @@ class Main {
   private onClosed(): void {
     util.copyLog2UploadDir()
       .finally((): void => {
-        this._mainWindow = null;
         mainModel.setMainWindow(null);
       });
   }
@@ -336,79 +304,11 @@ class Main {
     tEvent.preventDefault();
 
     logger.log('electron', `new-window: ${tUrl}`);
-    await this._mainWindow.loadURL(tUrl);
-  }
-
-  /** native初始化 */
-  private async initNative(): Promise<void> {
-    mainModel.setBellplanetReady(false);
-
-    logger.log('net', `urlValue: ${mainModel.urlValue}`);
-    if (!mainModel.urlValue || mainModel.urlValue.indexOf(commonConfig.constPseudoProtocol) < 0) {
-      mainModel.setNativeMode(CommonDefine.eNativeMode.website);
-    } else {
-      //设置路由
-      const urlObj = new URL(mainModel.urlValue);
-      const lessonRouter = urlObj.hostname;
-      mainModel.setLessonRouter(lessonRouter as CommonDefine.eLessonRouter);
-
-      logger.log('test', `router: ${mainModel.lessonRouter}`);
-
-      //根据路由初始化native模式
-      this.initNativeMode(mainModel.lessonRouter);
-    }
-
-    await this._mainWindow.loadFile(`${commonConfig.rootPath}/dist/renderer.html`);
-
-    logger.log('net', `config.urlValue`, mainModel.urlValue);
-    logger.log('env', `app.isPackaged:`, commonConfig.isPackaged);
-
-    /** 清除渲染层数据 */
-    message.sendIpcMsg(MsgId.CLEAR_RENDERER_MODEL_DATA);
-
-    //打包后的包才要检查更新
-    if (commonConfig.isPackaged) {
-      message.sendIpcMsg(MsgId.GET_NATIVE_POLICY_VERSION);
-    }
-    //没打包的直接检查游戏包更新
-    else {
-      message.sendIpcMsg(MsgId.CHECK_PACKAGE_UPDATE);
-    }
-  }
-
-  /** 根据路由初始化native模式 */
-  private initNativeMode(tRouter: CommonDefine.eLessonRouter): void {
-    switch (tRouter) {
-      //创造地图模式
-      case CommonDefine.eLessonRouter.createMap:
-        mainModel.setNativeMode(CommonDefine.eNativeMode.createMap);
-        break;
-      //banner模式
-      case CommonDefine.eLessonRouter.banner:
-        mainModel.setNativeMode(CommonDefine.eNativeMode.banner);
-        break;
-      //游戏模式
-      case CommonDefine.eLessonRouter.game:
-        mainModel.setNativeMode(CommonDefine.eNativeMode.game);
-        break;
-      //指定url模式
-      case CommonDefine.eLessonRouter.url:
-        mainModel.setNativeMode(CommonDefine.eNativeMode.url);
-        break;
-      //进入指定地图模板
-      case CommonDefine.eLessonRouter.enterPrestigeMap:
-        mainModel.setNativeMode(CommonDefine.eNativeMode.prestigeMap);
-        break;
-      default:
-        this._mainWindow.setFullScreen(false);
-        mainModel.setNativeMode(CommonDefine.eNativeMode.platform);
-        break;
-    }
+    await mainModel.mainWindow.loadURL(tUrl);
   }
 
   // In this file you can include the rest of your app's specific main process
   // code. You can also put them in separate files and require them here.
-
 
   //保存日志文件方法
   private saveProcessLog(): void {
