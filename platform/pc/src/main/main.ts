@@ -20,6 +20,7 @@ import server from './Server';
 import message from './Message';
 import FileUtil from '../common/FileUtil';
 import errorReportMain from "./ErrorReportMain";
+import mainControl from './MainControl';
 
 //限制只启用一个程序
 const gotTheLock = app.requestSingleInstanceLock();
@@ -152,8 +153,11 @@ class Main {
 
     logger.log('main', `收到参数1: ${JSON.stringify(process.argv)}`);
 
-    /** 初始化消息处理类 */
+    //初始化消息处理类
     message.init();
+
+    //初始化主进程控制逻辑
+    mainControl.init();
 
     //只有打包后的要上传日志
     if (commonConfig.isPackaged) {
