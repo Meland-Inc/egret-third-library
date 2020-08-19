@@ -87,7 +87,7 @@ class Message {
 
     /** 应用渲染进程消息 */
     private applyIpcMsg(msgId: string, ...args: any[]) {
-        let func = this.msgMap[msgId];
+        const func = this.msgMap[msgId];
         if (func) {
             func(...args);
         }
@@ -110,12 +110,12 @@ class Message {
 
         if (mainModel.nativeMode === CommonDefine.eNativeMode.game) {
             this.startNativeGame();
-            return
+            return;
         }
 
         if (mainModel.nativeMode === CommonDefine.eNativeMode.url) {
             this.startUrl();
-            return
+            return;
         }
 
         if (mainModel.nativeMode === CommonDefine.eNativeMode.website) {
@@ -130,7 +130,7 @@ class Message {
 
         if (mainModel.nativeMode === CommonDefine.eNativeMode.prestigeMap) {
             this.enterPrestigeMap();
-            return;
+            
         }
     }
 
@@ -144,7 +144,7 @@ class Message {
 
     /** 从创造地图模式进入 */
     private async startCreateMap() {
-        let urlValue: string = mainModel.urlValue.slice(mainModel.urlValue.indexOf("?") + 1);
+        const urlValue: string = mainModel.urlValue.slice(mainModel.urlValue.indexOf("?") + 1);
         let queryObject = querystring.parse(urlValue);
         //有banner参数,要从平台初始化
         if (queryObject["banner"]) {
@@ -152,7 +152,7 @@ class Message {
         }
         queryObject['nativeMode'] = CommonDefine.eNativeMode.createMap.toString();
 
-        let queryValue: string = querystring.stringify(queryObject);
+        const queryValue: string = querystring.stringify(queryObject);
         logger.log('update', `从创造地图模式进入`);
         this.sendIpcMsg(MsgId.START_NATIVE_CLIENT, queryValue);
     }
@@ -160,16 +160,16 @@ class Message {
     /** 从游戏模式进入 */
     private startNativeGame() {
         logger.log('update', `从游戏模式进入`);
-        let urlValue = mainModel.urlValue;
+        const urlValue = mainModel.urlValue;
         //伪协议启动参数
         logger.log('platform', `初始化平台数据`, urlValue);
-        let argsValue = urlValue.slice(urlValue.indexOf("?") + 1);
-        let argsObj = querystring.parse(argsValue);
+        const argsValue = urlValue.slice(urlValue.indexOf("?") + 1);
+        const argsObj = querystring.parse(argsValue);
         let queryObject: querystring.ParsedUrlQuery = {};
         queryObject = Object.assign(queryObject, argsObj);
         queryObject["nativeMode"] = CommonDefine.eNativeMode.game + "";
 
-        let queryValue: string = querystring.stringify(queryObject);
+        const queryValue: string = querystring.stringify(queryObject);
 
         this.sendIpcMsg(MsgId.START_NATIVE_CLIENT, queryValue);
     }
@@ -177,9 +177,9 @@ class Message {
     /** 跳转到指定url */
     private async startUrl() {
         logger.log('update', `从指定url进入`);
-        let urlValue: string = mainModel.urlValue.slice(mainModel.urlValue.indexOf("?") + 1);
-        let queryObject = querystring.parse(urlValue);
-        let targetUrlValue: string = queryObject["url"] as string;
+        const urlValue: string = mainModel.urlValue.slice(mainModel.urlValue.indexOf("?") + 1);
+        const queryObject = querystring.parse(urlValue);
+        const targetUrlValue: string = queryObject["url"] as string;
         if (!targetUrlValue) return;
         logger.log('update', `跳转到指定url`, targetUrlValue);
         logger.log('update', `queryObject: `, queryObject);
@@ -205,7 +205,7 @@ class Message {
         logger.log('update', `从平台进入`);
 
         //平台初始化
-        let queryObject: querystring.ParsedUrlQuery = await platform.init();
+        const queryObject: querystring.ParsedUrlQuery = await platform.init();
         //初始化参数
         mainModel.setChannel(commonConfig.constChannelLesson);
         queryObject['gameChannel'] = commonConfig.constChannelLesson;
@@ -225,14 +225,14 @@ class Message {
     /** 进入神庙模板地图 */
     private enterPrestigeMap() {
         logger.log('update', `从神庙模板地图模式进入`);
-        let urlValue = mainModel.urlValue;
-        let argsValue = urlValue.slice(urlValue.indexOf("?") + 1);
-        let argsObj = querystring.parse(argsValue);
+        const urlValue = mainModel.urlValue;
+        const argsValue = urlValue.slice(urlValue.indexOf("?") + 1);
+        const argsObj = querystring.parse(argsValue);
         let queryObject: querystring.ParsedUrlQuery = {};
         queryObject = Object.assign(queryObject, argsObj);
         queryObject["nativeMode"] = CommonDefine.eNativeMode.prestigeMap + "";
 
-        let queryValue: string = querystring.stringify(queryObject);
+        const queryValue: string = querystring.stringify(queryObject);
         this.sendIpcMsg(MsgId.START_NATIVE_CLIENT, queryValue);
     }
 
@@ -315,5 +315,5 @@ class Message {
     }
 }
 
-let message = new Message();
+const message = new Message();
 export default message;

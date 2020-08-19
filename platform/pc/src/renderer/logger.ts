@@ -21,13 +21,13 @@ export function rendererLog(tag: string, msg: string, ...args: any[]) {
 }
 
 export function log(tag: string, msg: string, ...args: any[]) {
-    let content = formateMsg(tag, msg, ...args);
+    const content = formateMsg(tag, msg, ...args);
     console.log(content);
     rendererLog(tag, msg, ...args);
 }
 
 export function error(tag: string, msg: string, ...args: any[]) {
-    let content = formateMsg(tag, msg, ...args);
+    const content = formateMsg(tag, msg, ...args);
     console.error(content);
     if (remote.app.isPackaged) {
         errorReportRenderer.error(msg);
@@ -35,25 +35,25 @@ export function error(tag: string, msg: string, ...args: any[]) {
 }
 
 export function warn(tag: string, msg: string, ...args: any[]) {
-    let content = formateMsg(tag, msg, ...args);
+    const content = formateMsg(tag, msg, ...args);
     console.warn(content);
 }
 
 export function info(tag: string, msg: string, ...args: any[]) {
-    let content = formateMsg(tag, msg, ...args);
+    const content = formateMsg(tag, msg, ...args);
     console.info(content);
 }
 
 function formateMsg(tag: string, msg: string, ...args: any[]) {
-    let date = formatDate(new Date());
-    let argStr = args && args.length > 0 ? `:${JSON.stringify(args)}` : "";
-    let content = `[native][${tag}]${date}\t${msg}${argStr}`;
-    return content
+    const date = formatDate(new Date());
+    const argStr = args && args.length > 0 ? `:${JSON.stringify(args)}` : "";
+    const content = `[native][${tag}]${date}\t${msg}${argStr}`;
+    return content;
 }
 
 function formatDate(date: Date) {
-    let month = date.getMonth() + 1;
-    let format = `${date.getFullYear()}-${month}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+    const month = date.getMonth() + 1;
+    const format = `${date.getFullYear()}-${month}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
     return format;
 }
 

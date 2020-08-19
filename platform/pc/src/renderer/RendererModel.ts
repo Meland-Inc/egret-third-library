@@ -51,7 +51,7 @@ class RendererModel {
     public init() {
         logger.log('renderer', `初始化RendererModel`);
         if (FileUtil.existsSync(commonConfig.versionConfigPath)) {
-            let data: string = FileUtil.readFileSync(commonConfig.versionConfigPath, 'utf-8');
+            const data: string = FileUtil.readFileSync(commonConfig.versionConfigPath, 'utf-8');
             if (data) {
                 this._versionConfig = JSON.parse(data);
                 //新数据格式,return
@@ -102,5 +102,5 @@ class RendererModel {
     }
 }
 
-let rendererModel = new RendererModel();
+const rendererModel = new RendererModel();
 export default rendererModel;

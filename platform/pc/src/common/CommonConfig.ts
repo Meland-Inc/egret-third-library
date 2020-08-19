@@ -177,7 +177,7 @@ class CommonConfig {
             return;
         }
 
-        let data = FileUtil.readFileSync(this.globalConfigPath, 'utf-8', false);
+        const data = FileUtil.readFileSync(this.globalConfigPath, 'utf-8', false);
         if (data) {
             const globalConfig:IGlobalConfig = JSON.parse(data);
             this._environName = globalConfig.environName;
@@ -197,5 +197,5 @@ interface IGlobalConfig {
     policyUrl: string
 }
 
-let commonConfig: CommonConfig = new CommonConfig();
+const commonConfig: CommonConfig = new CommonConfig();
 export default commonConfig;

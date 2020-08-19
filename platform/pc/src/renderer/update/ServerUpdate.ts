@@ -77,15 +77,15 @@ export default class ServerUpdate {
         loading.showLoading("正在更新服务端程序包");
         //清除要保存的文件夹
         FileUtil.emptyDirSync(this._packagePath);
-        this.downloadPackage()
+        this.downloadPackage();
     }
 
     /** 下载服务端包 */
     private downloadPackage() {
         //release环境, 用的ready的包, 去ready下载
-        let fileDir = `${commonConfig.cdnHost}/serverPackages/${this._environName}`;
-        let saveDir = this._packagePath;
-        let fileName = `${util.getServerPackageFileName()}_v${this._remoteVersion}.zip`;
+        const fileDir = `${commonConfig.cdnHost}/serverPackages/${this._environName}`;
+        const saveDir = this._packagePath;
+        const fileName = `${util.getServerPackageFileName()}_v${this._remoteVersion}.zip`;
         this._download.downloadFile(fileDir, saveDir, fileName, this.downloadFileCallback.bind(this));
     }
 
@@ -102,7 +102,7 @@ export default class ServerUpdate {
             loading.setLoadingProgress(0);
             loading.showLoading("正在解压服务端程序包");
             loading.gradualProgress();
-            let content = `开始解压文件:${filename}`;
+            const content = `开始解压文件:${filename}`;
             logger.log('update', content);
             const streamZip = new StreamZip({
                 file: this._packagePath + filename,
@@ -113,14 +113,14 @@ export default class ServerUpdate {
                     if (err) {
                         streamZip.close();
 
-                        let content = `解压文件:${filename}错误,开始重新下载`;
+                        const content = `解压文件:${filename}错误,开始重新下载`;
                         logger.error(`update`, content, err);
 
                         this.downloadPackage();
                         return;
                     }
                     loading.setLoadingProgress(100);
-                    let content = `解压文件:${filename}成功`;
+                    const content = `解压文件:${filename}成功`;
                     logger.log('update', content);
                     rendererModel.setPackageVersion(CommonDefine.ePackageType.server, commonConfig.environName, this._remoteVersion);
                     streamZip.close();
@@ -133,7 +133,7 @@ export default class ServerUpdate {
         }
 
         if (result == "404") {
-            let content = `下载文件:${filename}错误, 文件不存在!`;
+            const content = `下载文件:${filename}错误, 文件不存在!`;
             logger.error(`update`, content);
             alert(content);
 
@@ -142,11 +142,11 @@ export default class ServerUpdate {
         }
 
         if (result == "error") {
-            let content = `下载文件:${filename}出错, ${errorMsg}`;
+            const content = `下载文件:${filename}出错, ${errorMsg}`;
             logger.error(`update`, content);
             alert(content);
             this.downloadPackage();
-            return;
+            
         }
     }
 

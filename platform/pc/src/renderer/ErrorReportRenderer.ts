@@ -94,5 +94,5 @@ class ErrorReportRenderer {
     // }
 }
 
-let errorReportRenderer = new ErrorReportRenderer();
+const errorReportRenderer = new ErrorReportRenderer();
 export default errorReportRenderer;

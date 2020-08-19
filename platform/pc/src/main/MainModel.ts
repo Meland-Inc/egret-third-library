@@ -291,5 +291,5 @@ class MainModel {
     }
 }
 
-let mainModel = new MainModel();
+const mainModel = new MainModel();
 export default mainModel;

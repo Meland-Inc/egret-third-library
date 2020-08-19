@@ -53,10 +53,10 @@ export default class NativeUpdate {
     }
 
     private async setFeedURL(nativePolicyVersion: number) {
-        let environName = commonConfig.environName;
-        let isWin = os.platform() === "win32";
-        let pkgPlatform = isWin ? "win" : "mac";
-        let feedURL = `http://bg-stage.wkcoding.com/native/${environName}/${nativePolicyVersion}/${pkgPlatform}`;
+        const environName = commonConfig.environName;
+        const isWin = os.platform() === "win32";
+        const pkgPlatform = isWin ? "win" : "mac";
+        const feedURL = `http://bg-stage.wkcoding.com/native/${environName}/${nativePolicyVersion}/${pkgPlatform}`;
         logger.log(`update`, `feedURL:${feedURL}`);
         autoUpdater.setFeedURL(feedURL);
     }

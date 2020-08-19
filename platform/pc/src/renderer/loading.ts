@@ -54,7 +54,7 @@ export function hideLoadingProgress() {
 
 export function setLoadingProgress(value: number) {
     progressValue = value;
-    updateLoadingProgress()
+    updateLoadingProgress();
 }
 
 export function gradualProgress() {

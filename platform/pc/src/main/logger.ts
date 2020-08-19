@@ -67,16 +67,16 @@ export namespace logger {
 
     /** 格式化消息 */
     export function formateMsg(tag: string, msg: string, ...args: any[]) {
-        let date = formatDate(new Date());
-        let argStr = args && args.length > 0 ? `:${JSON.stringify(args)}` : "";
-        let content = `[native][${tag}]${date}\t${msg}${argStr}`;
-        return content
+        const date = formatDate(new Date());
+        const argStr = args && args.length > 0 ? `:${JSON.stringify(args)}` : "";
+        const content = `[native][${tag}]${date}\t${msg}${argStr}`;
+        return content;
     }
 
     /** 格式化时间 */
     export function formatDate(date: Date) {
-        let month = date.getMonth() + 1;
-        let format = `${date.getFullYear()}-${month}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+        const month = date.getMonth() + 1;
+        const format = `${date.getFullYear()}-${month}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
         return format;
     }
 }

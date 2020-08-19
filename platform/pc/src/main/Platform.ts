@@ -49,20 +49,20 @@ class Platform {
     ]
 
     public async init() {
-        let urlValue = mainModel.urlValue;
+        const urlValue = mainModel.urlValue;
         //伪协议启动参数
         logger.log('platform', `初始化平台数据`, urlValue);
-        let argsValue = urlValue.slice(urlValue.indexOf("?") + 1);
+        const argsValue = urlValue.slice(urlValue.indexOf("?") + 1);
         //解析参数
-        let argsObj = querystring.parse(argsValue);
+        const argsObj = querystring.parse(argsValue);
 
-        let queryObject: querystring.ParsedUrlQuery = {};
+        const queryObject: querystring.ParsedUrlQuery = {};
 
         logger.log('platform', 'argsObj', argsObj);
 
         //解析参数给native用的config
         for (const field of this._configFields) {
-            let value = argsObj[field];
+            const value = argsObj[field];
             let strValue: string;
             if (value) {
                 if (Array.isArray(value)) {
@@ -105,7 +105,7 @@ class Platform {
 
         //解析参数给本地服务器的配置
         for (const field of this._serverCnfFields) {
-            let value = argsObj[field];
+            const value = argsObj[field];
             let strValue: string = "";
             if (value) {
                 if (Array.isArray(value)) {
@@ -167,7 +167,7 @@ class Platform {
 
         logger.log('platform', 'queryObject', queryObject);
 
-        let token = await this.login();
+        const token = await this.login();
         queryObject[eQueryArgsField.token] = token;
 
         if (queryObject[eQueryArgsField.gameServer]) {
@@ -180,7 +180,7 @@ class Platform {
 
     /** 登陆贝尔平台 */
     private login(): Promise<string> {
-        let data = { temporary_token: mainModel.bellTempToken };
+        const data = { temporary_token: mainModel.bellTempToken };
         if (mainModel.bellToken) {
             data["token"] = mainModel.bellToken;
         }
@@ -196,20 +196,20 @@ class Platform {
                             mainModel.setBellToken(body.data.token);
                         }
                         this.getMemberInfo(() => {
-                            resolve(mainModel.bellToken as string)
-                        }, (err: any) => { reject(err) });
+                            resolve(mainModel.bellToken as string);
+                        }, (err: any) => { reject(err); });
                         logger.log('net', `登陆贝尔平台成功, token:${mainModel.bellToken}`);
                     } else {
-                        reject(body.msg)
+                        reject(body.msg);
                         logger.error('net', `登陆贝尔平台失败`, body.msg);
                     }
                 }
                 , (e: any) => {
-                    reject(e)
+                    reject(e);
                     logger.error('net', `登陆贝尔平台失败`, e);
                 }
             );
-        })
+        });
     }
 
     /* let memberInfo = `{
@@ -247,8 +247,8 @@ class Platform {
     }` */
     /** 获取用户信息 */
     private getMemberInfo(successFunc: Function, errorFunc: Function) {
-        let data = { token: mainModel.bellToken };
-        let headers = { "X-Bellcode-Referer": "bellplanet" }
+        const data = { token: mainModel.bellToken };
+        const headers = { "X-Bellcode-Referer": "bellplanet" };
         logger.log('net', `请求获取贝尔平台用户信息`);
         util.requestGetHttps(mainModel.bellApiOrigin, null, '/common/member/init', data, headers
             , (body: any) => {
@@ -278,7 +278,7 @@ class Platform {
 
     /** 老师上报ip */
     public teacherUploadIp() {
-        let data = { token: mainModel.bellToken, class_id: mainModel.classId };
+        const data = { token: mainModel.bellToken, class_id: mainModel.classId };
 
         //公网连接方式
         if (mainModel.gameServerNatUrl && mainModel.gameServerNatPort) {
@@ -310,5 +310,5 @@ class Platform {
     }
 }
 
-let platform = new Platform();
+const platform = new Platform();
 export default platform;
