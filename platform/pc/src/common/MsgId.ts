@@ -5,7 +5,7 @@
  * @FilePath \pc\src\common\MsgId.ts
  */
 export default class MsgId {
-    /** 检查更新 */
+    /** 检查更新完毕 */
     public static readonly CHECK_UPDATE_COMPLETE: string = "CHECK_UPDATE_COMPLETE";
 
     /** 启动地图模板游戏服务器 */
@@ -29,8 +29,8 @@ export default class MsgId {
     /** 小贝星球准备完毕 */
     public static readonly BELLPLANET_CLIENT_READY: string = "BELLPLANET_CLIENT_READY";
 
-    /** 设置native策略版本号 */
-    public static readonly SET_NATIVE_POLICY_VERSION: string = "SET_NATIVE_POLICY_VERSION";
+    /** 检查Native更新 */
+    public static readonly checkNativeUpdate: string = "checkNativeUpdate";
 
     /** 清除渲染数据 */
     public static readonly CLEAR_RENDERER_MODEL_DATA: string = "CLEAR_RENDERER_MODEL_DATA";

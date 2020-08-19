@@ -35,7 +35,7 @@ class MainControl {
             util.uploadLogFileList();
         }
 
-        await this.initNative();
+        await this.checkUpdate();
     }
 
     /** 创建游戏包目录 */
@@ -54,32 +54,12 @@ class MainControl {
         }
     }
 
-    /** native初始化 */
-    public async initNative(): Promise<void> {
-        mainModel.setBellplanetReady(false);
-
-        logger.log('net', `urlValue: ${mainModel.urlValue}`);
-        if (!mainModel.urlValue || mainModel.urlValue.indexOf(commonConfig.constPseudoProtocol) < 0) {
-            mainModel.setNativeMode(CommonDefine.eNativeMode.website);
-        } else {
-            //设置路由
-            const urlObj = new URL(mainModel.urlValue);
-            const lessonRouter = urlObj.hostname;
-            mainModel.setLessonRouter(lessonRouter as CommonDefine.eLessonRouter);
-
-            logger.log('test', `router: ${mainModel.lessonRouter}`);
-
-            //根据路由初始化native模式
-            this.initNativeMode(mainModel.lessonRouter);
-        }
-
+    /** 检查更新 */
+    private async checkUpdate(): Promise<void> {
         await mainModel.mainWindow.loadFile(`${commonConfig.rootPath}/dist/renderer.html`);
 
         logger.log('net', `config.urlValue`, mainModel.urlValue);
         logger.log('env', `app.isPackaged:`, commonConfig.isPackaged);
-
-        /** 清除渲染层数据 */
-        message.sendIpcMsg(MsgId.CLEAR_RENDERER_MODEL_DATA);
 
         //打包后的包才要检查更新
         if (commonConfig.isPackaged) {
@@ -88,36 +68,6 @@ class MainControl {
         //没打包的直接检查游戏包更新
         else {
             message.sendIpcMsg(MsgId.CHECK_PACKAGE_UPDATE);
-        }
-    }
-
-    /** 根据路由初始化native模式 */
-    private initNativeMode(tRouter: CommonDefine.eLessonRouter): void {
-        switch (tRouter) {
-            //创造地图模式
-            case CommonDefine.eLessonRouter.createMap:
-                mainModel.setNativeMode(CommonDefine.eNativeMode.createMap);
-                break;
-            //banner模式
-            case CommonDefine.eLessonRouter.banner:
-                mainModel.setNativeMode(CommonDefine.eNativeMode.banner);
-                break;
-            //游戏模式
-            case CommonDefine.eLessonRouter.game:
-                mainModel.setNativeMode(CommonDefine.eNativeMode.game);
-                break;
-            //指定url模式
-            case CommonDefine.eLessonRouter.url:
-                mainModel.setNativeMode(CommonDefine.eNativeMode.url);
-                break;
-            //进入指定地图模板
-            case CommonDefine.eLessonRouter.enterPrestigeMap:
-                mainModel.setNativeMode(CommonDefine.eNativeMode.prestigeMap);
-                break;
-            default:
-                mainModel.mainWindow.setFullScreen(false);
-                mainModel.setNativeMode(CommonDefine.eNativeMode.platform);
-                break;
         }
     }
 
@@ -134,7 +84,7 @@ class MainControl {
         message.addIpcListener(MsgId.SWITCH_FULL_SCREEN, this.onSwitchFullScreen.bind(this));
         message.addIpcListener(MsgId.QUIT_NATIVE, this.onQuitNative.bind(this));
         message.addIpcListener(MsgId.SEND_PLAYER_ID, this.onSendPlayerId.bind(this));
-        message.addIpcListener(MsgId.SET_NATIVE_POLICY_VERSION, this.onSetNativePolicyVersion.bind(this));
+        message.addIpcListener(MsgId.checkNativeUpdate, this.onCheckNativeUpdate.bind(this));
     }
 
     /** 移除ipc监听消息 */
@@ -146,46 +96,73 @@ class MainControl {
         message.removeIpcListener(MsgId.SWITCH_FULL_SCREEN);
         message.removeIpcListener(MsgId.QUIT_NATIVE);
         message.removeIpcListener(MsgId.SEND_PLAYER_ID);
-        message.removeIpcListener(MsgId.SET_NATIVE_POLICY_VERSION);
+        message.removeIpcListener(MsgId.checkNativeUpdate);
     }
 
     /** 检查更新完毕 */
     private async onCheckUpdateComplete(): Promise<void> {
+        await this.initNative();
+    }
+
+    /** native初始化 */
+    public async initNative(): Promise<void> {
+        /** 清除渲染层数据 */
+        message.sendIpcMsg(MsgId.CLEAR_RENDERER_MODEL_DATA);
+        mainModel.setBellplanetReady(false);
+
+        logger.log('net', `urlValue: ${mainModel.urlValue}`);
+
         util.initNativeCnf();
+        await this.initNativeMode();
+    }
 
-        logger.log('config', `nativeMode:${mainModel.nativeMode}`);
-        if (mainModel.nativeMode === CommonDefine.eNativeMode.banner) {
-            this.startBanner();
-            return;
-        }
-
-        if (mainModel.nativeMode === CommonDefine.eNativeMode.createMap) {
-            await this.startCreateMap();
-            return;
-        }
-
-        if (mainModel.nativeMode === CommonDefine.eNativeMode.game) {
-            this.startNativeGame();
-            return;
-        }
-
-        if (mainModel.nativeMode === CommonDefine.eNativeMode.url) {
-            this.startUrl();
-            return;
-        }
-
-        if (mainModel.nativeMode === CommonDefine.eNativeMode.website) {
+    /** 根据路由初始化native模式 */
+    private async initNativeMode(): Promise<void> {
+        //不存在伪协议,指定网址模式
+        if (!mainModel.urlValue || mainModel.urlValue.indexOf(commonConfig.constPseudoProtocol) < 0) {
+            mainModel.setNativeMode(CommonDefine.eNativeMode.website);
             this.startNativeWebsite();
             return;
         }
 
-        if (mainModel.nativeMode === CommonDefine.eNativeMode.platform) {
-            await this.startNativePlatform();
-            return;
-        }
+        //设置路由
+        const urlObj = new URL(mainModel.urlValue);
+        const lessonRouter = urlObj.hostname as CommonDefine.eLessonRouter;
+        mainModel.setLessonRouter(lessonRouter);
+        logger.log('test', `router: ${mainModel.lessonRouter}`);
 
-        if (mainModel.nativeMode === CommonDefine.eNativeMode.prestigeMap) {
-            this.enterPrestigeMap();
+        switch (mainModel.lessonRouter) {
+            //创造地图模式
+            case CommonDefine.eLessonRouter.createMap:
+                mainModel.setNativeMode(CommonDefine.eNativeMode.createMap);
+                await this.startCreateMap();
+                break;
+            //banner模式
+            case CommonDefine.eLessonRouter.banner:
+                mainModel.setNativeMode(CommonDefine.eNativeMode.banner);
+                this.startBanner();
+                break;
+            //游戏模式
+            case CommonDefine.eLessonRouter.game:
+                mainModel.setNativeMode(CommonDefine.eNativeMode.game);
+                this.startNativeGame();
+                break;
+            //指定url模式
+            case CommonDefine.eLessonRouter.url:
+                mainModel.setNativeMode(CommonDefine.eNativeMode.url);
+                this.startUrl();
+                break;
+            //神庙模式
+            case CommonDefine.eLessonRouter.enterPrestigeMap:
+                mainModel.setNativeMode(CommonDefine.eNativeMode.prestigeMap);
+                this.enterPrestigeMap();
+                break;
+            //平台上课模式
+            default:
+                mainModel.mainWindow.setFullScreen(false);
+                mainModel.setNativeMode(CommonDefine.eNativeMode.platform);
+                await this.startNativePlatform();
+                break;
         }
     }
 
@@ -331,7 +308,8 @@ class MainControl {
         mainModel.setPlayerName(tPlayerName);
     }
 
-    private onSetNativePolicyVersion(tNativeVersion: number): void {
+    /** 检查native更新 */
+    private onCheckNativeUpdate(tNativeVersion: number): void {
         this._nativeUpdate.checkUpdate(tNativeVersion);
     }
 }

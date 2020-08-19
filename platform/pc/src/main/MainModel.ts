@@ -9,6 +9,7 @@ import { Server } from 'net';
 import { ChildProcess } from 'child_process';
 
 import { CommonDefine } from '../common/CommonDefine';
+import { logger } from './logger';
 class MainModel {
 
     /** native服务器端口 */
@@ -198,6 +199,7 @@ class MainModel {
     }
     public setNativeMode(tValue: CommonDefine.eNativeMode): void {
         this._nativeMode = tValue;
+        logger.log('config', `nativeMode:${this.nativeMode}`);
     }
 
     /** 游戏服务器模式 */
