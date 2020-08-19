@@ -20,6 +20,7 @@ import mainModel from './MainModel';
 import server from './Server';
 import message from './Message';
 import FileUtil from '../common/FileUtil';
+import errorReportMain from "./ErrorReportMain";
 
 //限制只启用一个程序
 const gotTheLock = app.requestSingleInstanceLock();
@@ -129,6 +130,9 @@ async function createWindow() {
       webSecurity: false
     }
   });
+
+  //错误上报初始化
+  errorReportMain.init();
 
   mainModel.setMainWindow(mainWindow);
 

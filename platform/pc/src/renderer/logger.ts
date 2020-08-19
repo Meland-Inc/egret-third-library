@@ -5,7 +5,7 @@
  * @FilePath \pc\src\renderer\logger.ts
  */
 import { remote } from 'electron';
-import errorReport from './ErrorReport';
+import errorReportRenderer from './ErrorReportRenderer';
 import FileUtil from '../common/FileUtil';
 
 let rendererLogContent: string;
@@ -30,7 +30,7 @@ export function error(tag: string, msg: string, ...args: any[]) {
     let content = formateMsg(tag, msg, ...args);
     console.error(content);
     if (remote.app.isPackaged) {
-        errorReport.error(msg);
+        errorReportRenderer.error(msg);
     }
 }
 

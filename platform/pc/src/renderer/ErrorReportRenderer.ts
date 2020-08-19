@@ -1,15 +1,15 @@
 /** 
  * @Author 雪糕
- * @Description 错误上报
+ * @Description 渲染层错误上报 也是主要错误上报类
  * @Date 2019-11-08 21:11:09
- * @FilePath \pc\src\renderer\ErrorReport.ts
+ * @FilePath \pc\src\renderer\ErrorReportRenderer.ts
  */
-import * as Sentry from '@sentry/node';
+import * as Sentry from '@sentry/electron/dist/renderer';
 import commonConfig from '../common/CommonConfig';
 import { CommonDefine } from '../common/CommonDefine';
 
 /**错误上报 */
-class ErrorReport {
+class ErrorReportRenderer {
     private _enable: boolean;
 
     public init() {
@@ -25,23 +25,33 @@ class ErrorReport {
         if (commonConfig.environName === CommonDefine.eEnvironName.release) {
             this._enable = true;
 
-            // const beforeSend = (event, hint) => {
-            //     //如果是报UnhandledRejection 下面情况下堆栈信息什么都没有 对目前解决错误没有任何帮助 先不报 promise reject即使有reason也会走这里
-            //     if (event['exception'] && event['exception']['values'] && event['exception']['values'][0] && event['exception']['values'][0]['type'] === 'UnhandledRejection') {
-            //         if (!hint.originalException || hint.originalException === 'undefined') {
-            //             return null;
-            //         }
-            //     }
-            //     return event;
-            // };
-            // Sentry.init({
-            //     //这个不加的话会弹出‘进程崩溃了’的对话框，一点就关闭整个游戏了，暂时保留原先交互，如果后面需要弹出崩溃提示就把这个注释
-            //     onFatalError: (error: Error) => { console.error(error) },//不打印出来 捕获到错误不会显示到控制台
-            //     dsn: 'https://f41cf26eae5d445db9b4a775f88b3ff7@o121360.ingest.sentry.io/5377167',
-            //     // release: `bellplanet_${commonConfig.environName}_${codeVersion}`,
-            //     environment: commonConfig.environName,
-            //     // beforeSend: beforeSend,
-            // });
+            const beforeSend = (event, hint) => {
+                if (event['exception'] && event['exception']['values'] && event['exception']['values'][0] && event['exception']['values'][0]['stacktrace']) {
+                    const frames: unknown[] = event['exception']['values'][0]['stacktrace']['frames'];
+                    if (!frames || frames.length <= 0) {
+                        return event;
+                    }
+
+                    const filename: string = frames[0]['filename'];
+                    if (!filename) {
+                        return event;
+                    }
+
+                    //如果是加载的游戏代码报错 堆栈是从file大头的 通过这个区分是不是游戏js报错 游戏报错这里不上报 让游戏自己上报
+                    if (filename.substr(0, 5) == 'file:') {
+                        return null;
+                    }
+
+                    return event;
+                }
+            };
+            Sentry.init({
+                dsn: 'https://680b16f3edf0447da3ff0dc0d67b0604@o121360.ingest.sentry.io/5395564',
+                // release: `bellplanet_${commonConfig.environName}_${codeVersion}`,
+                environment: commonConfig.environName,
+                beforeSend: beforeSend,
+            });
+            Sentry.setTag('progress', 'renderer');
             // Sentry.setTag('version', codeVersion);
 
             //这里上报的不会有堆栈信息 而且会拦截掉上报系统自己捕获的 先屏蔽掉
@@ -84,5 +94,5 @@ class ErrorReport {
     // }
 }
 
-let errorReport = new ErrorReport();
-export default errorReport;
+let errorReportRenderer = new ErrorReportRenderer();
+export default errorReportRenderer;
