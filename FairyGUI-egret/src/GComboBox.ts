@@ -378,6 +378,7 @@ public get titleColor(): number {
                 this.text = this._items[this._selectedIndex];
             else
                 this.text = "";
+            this.updateSelectionController();
             this.dispatchEvent(new StateChangeEvent(StateChangeEvent.CHANGED));
         }
 
