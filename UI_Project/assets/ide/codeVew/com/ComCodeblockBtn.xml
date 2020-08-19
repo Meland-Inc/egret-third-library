@@ -22,17 +22,17 @@
       <gearXY controller="ctrlWindowState" pages="0,1" values="0,980|0,955"/>
       <Button icon="ui://oyity675cnxcwcyilz"/>
     </component>
-    <component id="n1_puqx" name="btnReset" src="puqxwcyim4" fileName="codeVew/btn/btnCodeRun.xml" xy="37,914" size="79,67" group="n8_puqx">
-      <gearXY controller="ctrlWindowState" pages="0,1" values="37,914|0,889"/>
+    <component id="n1_puqx" name="btnReset" src="puqxwcyim4" fileName="codeVew/btn/btnCodeRun.xml" xy="37,915" size="79,67" group="n8_puqx">
+      <gearXY controller="ctrlWindowState" pages="0,1" values="37,915|0,889"/>
       <Button icon="ui://ti9jag5tpuqxwcyim8"/>
     </component>
-    <component id="n2_puqx" name="btnStart" src="puqxwcyim4" fileName="codeVew/btn/btnCodeRun.xml" xy="37,780" size="79,67" group="n8_puqx">
-      <gearXY controller="ctrlWindowState" pages="0,1" values="37,780|0,755"/>
+    <component id="n2_puqx" name="btnStart" src="puqxwcyim4" fileName="codeVew/btn/btnCodeRun.xml" xy="37,783" size="79,67" group="n8_puqx">
+      <gearXY controller="ctrlWindowState" pages="0,1" values="37,783|0,755"/>
       <Button icon="ui://ti9jag5tpuqxwcyim7"/>
     </component>
-    <component id="n3_puqx" name="btnStop" src="puqxwcyimb" fileName="codeVew/btn/btnRunStop.xml" xy="37,847" size="79,67" group="n8_puqx">
-      <gearXY controller="ctrlWindowState" pages="0,1" values="37,847|0,822"/>
+    <component id="n3_puqx" name="btnStop" src="puqxwcyimb" fileName="codeVew/btn/btnRunStop.xml" xy="37,849" size="79,67" group="n8_puqx">
+      <gearXY controller="ctrlWindowState" pages="0,1" values="37,849|0,822"/>
     </component>
-    <group id="n8_puqx" name="grpIDE" xy="0,780" size="116,300" advanced="true"/>
+    <group id="n8_puqx" name="grpIDE" xy="0,783" size="116,297" advanced="true"/>
   </displayList>
 </component>
