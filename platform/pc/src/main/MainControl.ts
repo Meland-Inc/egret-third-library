@@ -85,6 +85,7 @@ class MainControl {
         message.addIpcListener(MsgId.QUIT_NATIVE, this.onQuitNative.bind(this));
         message.addIpcListener(MsgId.SEND_PLAYER_ID, this.onSendPlayerId.bind(this));
         message.addIpcListener(MsgId.checkNativeUpdate, this.onCheckNativeUpdate.bind(this));
+        message.addIpcListener(MsgId.openFakeProtoInNative, this.onOpenFakeProtoInNative.bind(this));
     }
 
     /** 移除ipc监听消息 */
@@ -97,6 +98,7 @@ class MainControl {
         message.removeIpcListener(MsgId.QUIT_NATIVE);
         message.removeIpcListener(MsgId.SEND_PLAYER_ID);
         message.removeIpcListener(MsgId.checkNativeUpdate);
+        message.removeIpcListener(MsgId.openFakeProtoInNative);
     }
 
     /** 检查更新完毕 */
@@ -311,6 +313,12 @@ class MainControl {
     /** 检查native更新 */
     private onCheckNativeUpdate(tNativeVersion: number): void {
         this._nativeUpdate.checkUpdate(tNativeVersion);
+    }
+
+    /** 在native里面打开伪协议时 */
+    private onOpenFakeProtoInNative(tUrl: string): void {
+        mainModel.setUrlValue(tUrl);
+        this.initNative();
     }
 }
 
