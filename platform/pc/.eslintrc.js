@@ -799,7 +799,7 @@ module.exports = {
         'no-unused-vars': 0,
 
         // 禁止在变量被定义之前使用它
-        'no-use-before-define': 2,
+        'no-use-before-define': 0,
 
         // 禁止不必要的 call 和 apply
         'no-useless-call': 2,

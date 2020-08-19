@@ -4,34 +4,34 @@
  * @Date 2020-02-13 14:55:57
  * @FilePath \pc\src\renderer\loading.ts
  */
-function getLogoImg() {
+function getLogoImg(): HTMLDivElement {
     return document.getElementById('logoImg') as HTMLDivElement;
 }
 
-function getLoadingCtnr() {
+function getLoadingCtnr(): HTMLDivElement {
     return document.getElementById('loadingCtnr') as HTMLDivElement;
 }
 
-function getLoadingGroup() {
+function getLoadingGroup(): HTMLDivElement {
     return document.getElementById('loadingGroup') as HTMLDivElement;
 }
 
-function getLoadingTip() {
+function getLoadingTip(): HTMLDivElement {
     return document.getElementById('loadingTip') as HTMLDivElement;
 }
 
-function getLoadingBar() {
+function getLoadingBar(): HTMLProgressElement {
     return document.getElementById('loadingBar') as HTMLProgressElement;
 }
 
-function getLoadingBarText() {
+function getLoadingBarText(): HTMLProgressElement {
     return document.getElementById('loadingBarText') as HTMLProgressElement;
 }
 
 let timeoutId: number;
 let progressValue: number;
 /** 显示loading界面 */
-export function showLoading(value: string) {
+export function showLoading(tValue: string): void {
     clearTimeout();
     const logoImg = getLogoImg();
     const loadingCtnr = getLoadingCtnr();
@@ -40,11 +40,11 @@ export function showLoading(value: string) {
     logoImg.hidden = true;
     loadingGroup.hidden = false;
     loadingCtnr.hidden = false;
-    loadingTip.textContent = value;
+    loadingTip.textContent = tValue;
 }
 
 /** 隐藏loading条 */
-export function hideLoadingProgress() {
+export function hideLoadingProgress(): void {
     clearTimeout();
     const loadingGroup = getLoadingGroup();
     const loadingTip = getLoadingTip();
@@ -52,12 +52,12 @@ export function hideLoadingProgress() {
     loadingTip.textContent = "";
 }
 
-export function setLoadingProgress(value: number) {
-    progressValue = value;
+export function setLoadingProgress(tValue: number): void {
+    progressValue = tValue;
     updateLoadingProgress();
 }
 
-export function gradualProgress() {
+export function gradualProgress(): void {
     progressValue += 0.1;
     updateLoadingProgress();
     clearTimeout();
@@ -75,7 +75,7 @@ function updateLoadingProgress(): void {
     loadingBarText.innerText = `${Math.round(progressValue)}%`;
 }
 
-function clearTimeout() {
+function clearTimeout(): void {
     if (timeoutId) {
         window.clearTimeout(timeoutId);
         timeoutId = null;

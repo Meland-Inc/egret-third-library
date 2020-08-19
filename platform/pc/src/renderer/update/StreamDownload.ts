@@ -6,89 +6,82 @@
  */
 import request from 'request';
 import path from 'path';
+import * as fse from 'fs-extra';
 
 import * as logger from '../logger';
 import FileUtil from '../../common/FileUtil';
 
 export default class StreamDownload {
     // 声明下载过程回调函数
-    downloadCallback = null;
-    fileUrl = null;
-    fileStream = null;
+    private _downloadCallback: (...tParam: unknown[]) => void = null;
+    private _fileUrl: string = null;
+    private _fileStream: fse.WriteStream = null;
 
     // 下载进度
-    showProgress(received, total) {
-        const percentage = (received * 100) / total;
+    private showProgress(tReceived: number, tTotal: number): void {
+        const percentage = (tReceived * 100) / tTotal;
         // 用回调显示到界面上
-        this.downloadCallback && this.downloadCallback('progress', "", percentage);
+        this._downloadCallback && this._downloadCallback('progress', "", percentage);
     }
 
     // 下载过程
     /**
      * 
-     * @param fileDir 下载文件的目录
-     * @param saveDir 下载后存放的目录
-     * @param filename 下载文件的名称
-     * @param callback 下载完成的回调方法
+     * @param tFileDir 下载文件的目录
+     * @param tSaveDir 下载后存放的目录
+     * @param tFilename 下载文件的名称
+     * @param tCallback 下载完成的回调方法
      */
-    downloadFile(fileDir, saveDir, filename, callback) {
-        try {
-            logger.log(`update`, `开始下载文件`, fileDir, filename, saveDir);
-            this.downloadCallback = callback; // 注册回调函数
-            this.fileUrl = fileDir + "/" + filename;
+    public downloadFile(tFileDir: string, tSaveDir: string, tFilename: string, tCallback: () => void): void {
 
-            let receivedBytes = 0;
-            let totalBytes = 1;
-            let req = null;
-            try {
-                req = request({
-                    method: 'GET',
-                    uri: this.fileUrl
-                });
-            } catch (error) {
-                throw error;
+        logger.log(`update`, `开始下载文件`, tFileDir, tFilename, tSaveDir);
+        this._downloadCallback = tCallback; // 注册回调函数
+        this._fileUrl = tFileDir + "/" + tFilename;
+
+        let receivedBytes = 0;
+        let totalBytes = 1;
+        const req = request({
+            method: 'GET',
+            uri: this._fileUrl
+        });
+
+        req.on('response', (tData: { statusCode: number, headers: Record<string, unknown> }) => {
+            // 更新总文件字节大小
+            if (tData.statusCode == 404) {
+                logger.error(`update`, `下载patch包路径找不到文件`, this._fileUrl);
+                this._downloadCallback('404', tFilename, 100);
+                this._downloadCallback = null;
+            } else {
+                totalBytes = parseInt(tData.headers['content-length'] as string, 10);
             }
+        });
 
+        req.on('data', (tChunk: { length: number }) => {
+            // 更新下载的文件块字节大小
+            receivedBytes += tChunk.length;
+            this.showProgress(receivedBytes, totalBytes);
+        });
 
-            req.on('response', (data) => {
-                // 更新总文件字节大小
-                if (data.statusCode == 404) {
-                    logger.error(`update`, `下载patch包路径找不到文件`, this.fileUrl);
-                    this.downloadCallback('404', filename, 100);
-                    this.downloadCallback = null;
-                } else {
-                    totalBytes = parseInt(data.headers['content-length'], 10);
-                }
-            });
+        req.on('end', () => {
+            this._fileStream && this._fileStream.end();
+            logger.log(`update`, `下载已完成，等待处理`, tFilename);
+            // TODO: 检查文件，部署文件，删除文件
+            setTimeout(() => {
+                this._downloadCallback && this._downloadCallback('finished', tFilename, 100);
+                this._downloadCallback = null;
+            }, 500);
+        });
 
-            req.on('data', (chunk) => {
-                // 更新下载的文件块字节大小
-                receivedBytes += chunk.length;
-                this.showProgress(receivedBytes, totalBytes);
-            });
+        req.on('error', (tError: { message: string }) => {
+            this._downloadCallback && this._downloadCallback('error', tFilename, 100, tError.message);
+            this._downloadCallback = null;
+        });
 
-            req.on('end', () => {
-                this.fileStream && this.fileStream.end();
-                logger.log(`update`, `下载已完成，等待处理`, filename);
-                // TODO: 检查文件，部署文件，删除文件
-                setTimeout(() => {
-                    this.downloadCallback && this.downloadCallback('finished', filename, 100);
-                    this.downloadCallback = null;
-                }, 500);
-            });
-
-            req.on('error', (e) => {
-                this.downloadCallback && this.downloadCallback('error', filename, 100, e.message);
-                this.downloadCallback = null;
-            });
-
-            const filePath = path.join(saveDir, filename);
-            this.fileStream = FileUtil.createWriteStream(filePath);
-            if (this.fileStream) {
-                req.pipe(this.fileStream);
-            }
-        } catch (error) {
-            throw error;
+        const filePath = path.join(tSaveDir, tFilename);
+        this._fileStream = FileUtil.createWriteStream(filePath);
+        if (this._fileStream) {
+            req.pipe(this._fileStream);
         }
+
     }
 }

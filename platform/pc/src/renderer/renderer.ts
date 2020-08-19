@@ -14,7 +14,7 @@ logger.log('renderer', `初始化渲染进程主逻辑`);
 
 init();
 
-function init() {
+function init(): void {
     //初始化配置
     rendererModel.init();
 

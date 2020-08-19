@@ -16,8 +16,8 @@ class MainModel {
     public get nativeServerPort(): number {
         return this._nativeServerPort;
     }
-    public setNativeServerPort(value: number) {
-        this._nativeServerPort = value;
+    public setNativeServerPort(tValue: number): void {
+        this._nativeServerPort = tValue;
     }
 
     /** 游戏服务器内网ip */
@@ -25,8 +25,8 @@ class MainModel {
     public get gameServerLocalIp(): string {
         return this._gameServerLocalIp;
     }
-    public setGameServerLocalIp(value: string) {
-        this._gameServerLocalIp = value;
+    public setGameServerLocalIp(tValue: string): void {
+        this._gameServerLocalIp = tValue;
     }
 
     /** 游戏服务器内网端口 */
@@ -34,8 +34,8 @@ class MainModel {
     public get gameServerLocalPort(): string {
         return this._gameServerLocalPort;
     }
-    public setGameServerLocalPort(value: string) {
-        this._gameServerLocalPort = value;
+    public setGameServerLocalPort(tValue: string): void {
+        this._gameServerLocalPort = tValue;
     }
 
     /** 游戏服务器公网ip */
@@ -43,17 +43,17 @@ class MainModel {
     public get gameServerNatUrl(): string {
         return this._gameServerNatUrl;
     }
-    public setGameServerNatUrl(value: string) {
-        this._gameServerNatUrl = value;
+    public setGameServerNatUrl(tValue: string): void {
+        this._gameServerNatUrl = tValue;
     }
 
     /** 游戏服务器公网端口 */
     private _gameServerNatPort: string;
-    public get gameServerNatPort() {
+    public get gameServerNatPort(): string {
         return this._gameServerNatPort;
     }
-    public setGameServerNatPort(value: string) {
-        this._gameServerNatPort = value;
+    public setGameServerNatPort(tValue: string): void {
+        this._gameServerNatPort = tValue;
     }
 
     /** 游戏服务器是否初始化 */
@@ -61,8 +61,8 @@ class MainModel {
     public get gameServerInited(): boolean {
         return this._gameServerInited;
     }
-    public setGameServerInited(value: boolean) {
-        this._gameServerInited = value;
+    public setGameServerInited(tValue: boolean): void {
+        this._gameServerInited = tValue;
     }
 
     /** 渠道号,默认bian_game,从平台那边获取的时候再赋值 */
@@ -70,8 +70,8 @@ class MainModel {
     public get channel(): string {
         return this._channel;
     }
-    public setChannel(value: string) {
-        this._channel = value;
+    public setChannel(tValue: string): void {
+        this._channel = tValue;
     }
 
     /** 登陆bell平台用的临时token */
@@ -79,8 +79,8 @@ class MainModel {
     public get bellTempToken(): string {
         return this._bellTempToken;
     }
-    public setBellTempToken(value: string) {
-        this._bellTempToken = value;
+    public setBellTempToken(tValue: string): void {
+        this._bellTempToken = tValue;
     }
 
     /** bell平台用的正式token */
@@ -88,8 +88,8 @@ class MainModel {
     public get bellToken(): string {
         return this._bellToken;
     }
-    public setBellToken(value: string) {
-        this._bellToken = value;
+    public setBellToken(tValue: string): void {
+        this._bellToken = tValue;
     }
 
     /** bell平台通信地址 */
@@ -97,8 +97,8 @@ class MainModel {
     public get bellApiOrigin(): string {
         return this._bellApiOrigin;
     }
-    public setBellApiOrigin(value: string) {
-        return this._bellApiOrigin = value;
+    public setBellApiOrigin(tValue: string): void {
+        this._bellApiOrigin = tValue;
     }
 
     /** bell平台回传给的参数 */
@@ -106,8 +106,8 @@ class MainModel {
     public get bellPackageId(): string {
         return this._bellPackageId;
     }
-    public setBellPackageId(value: string) {
-        this._bellPackageId = value;
+    public setBellPackageId(tValue: string): void {
+        this._bellPackageId = tValue;
     }
 
     /** bell平台回传给的参数 */
@@ -115,8 +115,8 @@ class MainModel {
     public get bellLessonId(): string {
         return this._bellLessonId;
     }
-    public setBellLessonId(value: string) {
-        this._bellLessonId = value;
+    public setBellLessonId(tValue: string): void {
+        this._bellLessonId = tValue;
     }
 
     /** bell平台回传给的参数 */
@@ -124,8 +124,8 @@ class MainModel {
     public get bellActId(): string {
         return this._bellActId;
     }
-    public setBellActId(value: string) {
-        this._bellActId = value;
+    public setBellActId(tValue: string): void {
+        this._bellActId = tValue;
     }
 
     /** bell平台回传给的url */
@@ -133,8 +133,8 @@ class MainModel {
     public get bellBackUrl(): string {
         return this._bellBackUrl;
     }
-    public setBellBackUrl(value: string) {
-        this._bellBackUrl = value;
+    public setBellBackUrl(tValue: string): void {
+        this._bellBackUrl = tValue;
     }
 
     /** 班级id */
@@ -142,8 +142,8 @@ class MainModel {
     public get classId(): number {
         return this._classId;
     }
-    public setClassId(value: number) {
-        this._classId = value;
+    public setClassId(tValue: number): void {
+        this._classId = tValue;
     }
 
     /** 用户类型 */
@@ -151,8 +151,8 @@ class MainModel {
     public get userType(): CommonDefine.eUserType {
         return this._userType;
     }
-    public setUserType(value: CommonDefine.eUserType) {
-        this._userType = value;
+    public setUserType(tValue: CommonDefine.eUserType): void {
+        this._userType = tValue;
     }
 
     /** 用户名称 */
@@ -160,8 +160,8 @@ class MainModel {
     public get realName(): string {
         return this._realName;
     }
-    public setRealName(value: string) {
-        this._realName = value;
+    public setRealName(tValue: string): void {
+        this._realName = tValue;
     }
 
     /** 用户昵称 */
@@ -169,8 +169,8 @@ class MainModel {
     public get nickName(): string {
         return this._nickName;
     }
-    public setNickName(value: string) {
-        this._nickName = value;
+    public setNickName(tValue: string): void {
+        this._nickName = tValue;
     }
 
     /** 学生单人开服务器 */
@@ -178,8 +178,8 @@ class MainModel {
     public get standAlone(): boolean {
         return this._standAlone;
     }
-    public setStandAlone(value: boolean) {
-        this._standAlone = value;
+    public setStandAlone(tValue: boolean): void {
+        this._standAlone = tValue;
     }
 
     /** 上课伪协议 路由*/
@@ -187,8 +187,8 @@ class MainModel {
     public get lessonRouter(): CommonDefine.eLessonRouter {
         return this._lessonRouter;
     }
-    public setLessonRouter(value: CommonDefine.eLessonRouter) {
-        this._lessonRouter = value;
+    public setLessonRouter(tValue: CommonDefine.eLessonRouter): void {
+        this._lessonRouter = tValue;
     }
 
     /** native模式 */
@@ -196,8 +196,8 @@ class MainModel {
     public get nativeMode(): CommonDefine.eNativeMode {
         return this._nativeMode;
     }
-    public setNativeMode(value: CommonDefine.eNativeMode) {
-        this._nativeMode = value;
+    public setNativeMode(tValue: CommonDefine.eNativeMode): void {
+        this._nativeMode = tValue;
     }
 
     /** 游戏服务器模式 */
@@ -205,8 +205,8 @@ class MainModel {
     public get gameServerMode(): CommonDefine.eGameServerMode {
         return this._gameServerMode;
     }
-    public setGameServerMode(value: CommonDefine.eGameServerMode) {
-        this._gameServerMode = value;
+    public setGameServerMode(tValue: CommonDefine.eGameServerMode): void {
+        this._gameServerMode = tValue;
     }
 
     private _urlValue: string;
@@ -214,8 +214,8 @@ class MainModel {
     public get urlValue(): string {
         return this._urlValue;
     }
-    public setUrlValue(value: string) {
-        this._urlValue = decodeURIComponent(value);
+    public setUrlValue(tValue: string): void {
+        this._urlValue = decodeURIComponent(tValue);
     }
 
     private _mainWindow: BrowserWindow;
@@ -223,8 +223,8 @@ class MainModel {
     public get mainWindow(): BrowserWindow {
         return this._mainWindow;
     }
-    public setMainWindow(value: BrowserWindow) {
-        this._mainWindow = value;
+    public setMainWindow(tValue: BrowserWindow): void {
+        this._mainWindow = tValue;
     }
 
     private _nativeServer: Server;
@@ -232,8 +232,8 @@ class MainModel {
         return this._nativeServer;
     }
     /** native服务器 */
-    public setNativeServer(value: Server) {
-        this._nativeServer = value;
+    public setNativeServer(tValue: Server): void {
+        this._nativeServer = tValue;
     }
 
     private _gameServerProcess: ChildProcess;
@@ -241,8 +241,8 @@ class MainModel {
     public get gameServerProcess(): ChildProcess {
         return this._gameServerProcess;
     }
-    public setGameServerProcess(value: ChildProcess) {
-        this._gameServerProcess = value;
+    public setGameServerProcess(tValue: ChildProcess): void {
+        this._gameServerProcess = tValue;
     }
 
     private _gameArgs: string;
@@ -250,8 +250,8 @@ class MainModel {
     public get gameArgs(): string {
         return this._gameArgs;
     }
-    public setGameArgs(value: string) {
-        this._gameArgs = value;
+    public setGameArgs(tValue: string): void {
+        this._gameArgs = tValue;
     }
 
     private _playerId: string;
@@ -259,8 +259,8 @@ class MainModel {
     public get playerId(): string {
         return this._playerId;
     }
-    public setPlayerId(value: string) {
-        this._playerId = value;
+    public setPlayerId(tValue: string): void {
+        this._playerId = tValue;
     }
 
     private _playerName: string;
@@ -268,8 +268,8 @@ class MainModel {
     public get playerName(): string {
         return this._playerName;
     }
-    public setPlayerName(value: string) {
-        this._playerName = value;
+    public setPlayerName(tValue: string): void {
+        this._playerName = tValue;
     }
 
     private _bellplanetReady: boolean;
@@ -277,8 +277,8 @@ class MainModel {
     public get bellplanetReady(): boolean {
         return this._bellplanetReady;
     }
-    public setBellplanetReady(value: boolean): void {
-        this._bellplanetReady = value;
+    public setBellplanetReady(tValue: boolean): void {
+        this._bellplanetReady = tValue;
     }
 
     private _isQuitAndInstall: boolean;
@@ -286,8 +286,8 @@ class MainModel {
     public get isQuitAndInstall(): boolean {
         return this._isQuitAndInstall;
     }
-    public setIsQuitAndInstall(value: boolean): void {
-        this._isQuitAndInstall = value;
+    public setIsQuitAndInstall(tValue: boolean): void {
+        this._isQuitAndInstall = tValue;
     }
 }
 

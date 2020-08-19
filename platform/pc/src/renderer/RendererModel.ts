@@ -26,13 +26,13 @@ class RendererModel {
     /** 版本配置 */
     private _versionConfig: IVersionConfig;
 
-    private _nativeLoginResponse: any;
+    private _nativeLoginResponse: unknown;
     /** native平台登陆信息 */
-    public get nativeLoginResponse(): any {
+    public get nativeLoginResponse(): unknown {
         return this._nativeLoginResponse;
     }
-    public setNativeLoginResponse(value: any) {
-        this._nativeLoginResponse = value;
+    public setNativeLoginResponse(tValue: unknown): void {
+        this._nativeLoginResponse = tValue;
         localStorage.setItem('nativeLoginResponse', JSON.stringify(this._nativeLoginResponse));
         logger.log('model', `设置nativeLoginResponse`);
     }
@@ -42,13 +42,13 @@ class RendererModel {
     public get nativeGameServer(): string {
         return this._nativeGameServer;
     }
-    public setNativeGameServer(value: string) {
-        this._nativeGameServer = value;
+    public setNativeGameServer(tValue: string): void {
+        this._nativeGameServer = tValue;
         localStorage.setItem('nativeGameServer', JSON.stringify(this._nativeGameServer));
         logger.log('model', `设置nativeGameServer`, this._nativeGameServer);
     }
 
-    public init() {
+    public init(): void {
         logger.log('renderer', `初始化RendererModel`);
         if (FileUtil.existsSync(commonConfig.versionConfigPath)) {
             const data: string = FileUtil.readFileSync(commonConfig.versionConfigPath, 'utf-8');
@@ -76,24 +76,24 @@ class RendererModel {
     }
 
     /** 获取版本配置值 */
-    public getPackageVersion(packageType: CommonDefine.ePackageType, environ: CommonDefine.eEnvironName = commonConfig.environName) {
-        return this._versionConfig[packageType][environ];
+    public getPackageVersion(tPackageType: CommonDefine.ePackageType, tEnviron: CommonDefine.eEnvironName = commonConfig.environName): number {
+        return this._versionConfig[tPackageType][tEnviron];
     }
 
     /** 设置版本配置值 */
-    public setPackageVersion(packageType: CommonDefine.ePackageType, environ: CommonDefine.eEnvironName, value: string | number) {
-        this._versionConfig[packageType][environ] = +value;
+    public setPackageVersion(tPackageType: CommonDefine.ePackageType, tEnviron: CommonDefine.eEnvironName, tValue: string | number): void {
+        this._versionConfig[tPackageType][tEnviron] = +tValue;
         FileUtil.writeFileSync(commonConfig.versionConfigPath, JSON.stringify(this._versionConfig, null, 4), "utf-8");
 
-        logger.log('renderer', `设置VersionConfigValue packageType:${packageType} environ:${environ} value:${value}`);
+        logger.log('renderer', `设置VersionConfigValue packageType:${tPackageType} environ:${tEnviron} value:${tValue}`);
     }
 
     private _headerSetCookie: string[];
     public get headerSetCookie(): string[] {
         return this._headerSetCookie;
     }
-    public setHeaderSetCookie(value: string[]): void {
-        this._headerSetCookie = value;
+    public setHeaderSetCookie(tValue: string[]): void {
+        this._headerSetCookie = tValue;
     }
 
     public clearData(): void {

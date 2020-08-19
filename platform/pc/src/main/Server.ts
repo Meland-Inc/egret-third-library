@@ -9,6 +9,7 @@ import treeKill from 'tree-kill';
 import http from 'http';
 import url from 'url';
 import { AddressInfo } from 'net';
+import { ChildProcess } from 'child_process';
 
 import { CommonDefine } from '../common/CommonDefine';
 import commonConfig from '../common/CommonConfig';
@@ -24,13 +25,13 @@ import FileUtil from '../common/FileUtil';
 class Server {
     private _tryGameServerCount: number;
 
-    public async init() {
+    public async init(): Promise<void> {
         mainModel.setGameArgs("");
         await this.createNativeServer(CommonDefine.eGameServerMode.gameMap);
     }
 
     /** 创建native服务器 */
-    public async createNativeServer(gameServerMode: CommonDefine.eGameServerMode) {
+    public async createNativeServer(tGameServerMode: CommonDefine.eGameServerMode): Promise<void> {
         if (mainModel.nativeServer) {
             logger.log('net', `关闭旧的native服务器`);
             await this.closeNativeServer();
@@ -41,15 +42,15 @@ class Server {
         mainModel.setNativeServer(nativeServer);
         mainModel.nativeServer.listen(0);
 
-        mainModel.nativeServer.on('request', (req, res) => {
-            const urlObj = url.parse(req.url, true);
+        mainModel.nativeServer.on('request', (tReq: { url: string }, tRes: { end: () => void }) => {
+            const urlObj = url.parse(tReq.url, true);
             const args = urlObj.query;
             const pathname = urlObj.pathname;
             logger.log('net', `收到游戏服务器消息 pathname:${pathname} args`, args);
             if (pathname === CommonDefine.eNativeServerPathname.serverState) {
                 if (mainModel.gameServerInited) {
                     logger.log('net', '判断游戏服务器已经启动了,不用操作');
-                    res.end();
+                    tRes.end();
                     return;
                 }
                 mainModel.setGameServerInited(true);
@@ -63,18 +64,18 @@ class Server {
                 //关闭服务器推送            
                 this.sendReceiveStart();
 
-                res.end();
+                tRes.end();
                 return;
             }
 
             if (pathname === CommonDefine.eNativeServerPathname.serverLog) {
                 logger.log('net', `收到服务器日志上报 lv:${args.lv}, msg`, args.msg);
-                res.end();
+                tRes.end();
                 return;
             }
 
             // res.end('hello world !');
-            res.end();
+            tRes.end();
         });
 
         mainModel.nativeServer.on('listening', async () => {
@@ -84,32 +85,32 @@ class Server {
             util.writeServerCnfValue('channel', mainModel.channel);
             util.writeServerCnfValue("nativePort", mainModel.nativeServerPort + "");
 
-            await this.createGameServer(gameServerMode);
+            await this.createGameServer(tGameServerMode);
         });
     }
 
 
     /** 初始化游戏服务器参数 */
-    private initGameServerArgs(args: Record<string, unknown>) {
+    private initGameServerArgs(tArgs: Record<string, unknown>): void {
         logger.log('net', '收到游戏服务器启动完毕消息');
         // config.setGameServerLocalIp(args.localIp as string);
         mainModel.setGameServerLocalIp(commonConfig.localIp as string);      //本地IP暂时先用127.0.0.1 保证本机切换网络不会出现问题, 其他人全用内网穿透后的ip
-        mainModel.setGameServerLocalPort(args.localPort as string);
-        mainModel.setGameServerNatUrl(args.natUrl as string);
-        mainModel.setGameServerNatPort(args.natPort as string);
+        mainModel.setGameServerLocalPort(tArgs.localPort as string);
+        mainModel.setGameServerNatUrl(tArgs.natUrl as string);
+        mainModel.setGameServerNatPort(tArgs.natPort as string);
         logger.log('net', `gameServer --> localIp:${mainModel.gameServerLocalIp} localPort:${mainModel.gameServerLocalPort} natUrl:${mainModel.gameServerNatUrl} natPort:${mainModel.gameServerNatPort}`);
 
         if (mainModel.gameServerLocalIp && mainModel.gameServerLocalPort) {
             let gameServer: string = `${mainModel.gameServerLocalIp}:${mainModel.gameServerLocalPort}`;
             let hasParam: boolean = false;
-            if (args.canedit && args.canedit === "true") {
-                gameServer += `?canedit=${args.canedit}`;
+            if (tArgs.canedit && tArgs.canedit === "true") {
+                gameServer += `?canedit=${tArgs.canedit}`;
                 hasParam = true;
             }
 
-            if (args.rw && args.rw != "0") {
+            if (tArgs.rw && tArgs.rw != "0") {
                 const sign = hasParam ? `&` : `?`;
-                gameServer += `${sign}rw=${args.rw}`;
+                gameServer += `${sign}rw=${tArgs.rw}`;
             }
 
             logger.log('net', 'native上课客户端登录本地游戏服务器', gameServer);
@@ -153,42 +154,42 @@ class Server {
     }
 
     /** 关闭native服务器 */
-    public closeNativeServer() {
-        return new Promise((resolve, reject) => {
+    public closeNativeServer(): Promise<void> {
+        return new Promise((tResolve: () => void, tReject: () => void) => {
             if (!mainModel.nativeServer) {
-                resolve();
+                tResolve();
                 return;
             }
 
-            mainModel.nativeServer.close((err) => {
-                if (err) {
-                    logger.error('net', `关闭native服务器失败`, err);
+            mainModel.nativeServer.close((tErr: unknown) => {
+                if (tErr) {
+                    logger.error('net', `关闭native服务器失败`, tErr);
                 } else {
                     logger.log('net', `关闭native服务器成功`);
                 }
                 mainModel.setNativeServer(null);
-                resolve();
+                tResolve();
             });
         });
     }
 
     // 设置游戏运行权限
-    private assignGameXPermission(paths: string[]) {
-        return new Promise((resolve, reject) => {
-            for (const path of paths) {
+    private assignGameXPermission(tPaths: string[]): Promise<unknown> {
+        return new Promise((tResolve: () => void, tReject: (...tParam: unknown[]) => void) => {
+            for (const path of tPaths) {
                 //0o100 --> fs.constants.S_IXUSR
-                FileUtil.chmod(path, 0o100, (err) => {
-                    if (err) {
-                        reject(err);
+                FileUtil.chmod(path, 0o100, (tErr: unknown) => {
+                    if (tErr) {
+                        tReject(tErr);
                     }
                 });
             }
-            resolve();
+            tResolve();
         });
     }
 
     /** 创建游戏服务器 */
-    private async createGameServer(mode: CommonDefine.eGameServerMode) {
+    private async createGameServer(tMode: CommonDefine.eGameServerMode): Promise<void> {
         if (mainModel.gameServerProcess) {
             logger.log('net', `关闭旧的游戏服务器`);
             try {
@@ -198,8 +199,8 @@ class Server {
             }
         }
 
-        logger.log('net', '创建游戏服务器 mode', mode);
-        mainModel.setGameServerMode(mode);
+        logger.log('net', '创建游戏服务器 mode', tMode);
+        mainModel.setGameServerMode(tMode);
         let cmd: string;
         if (os.platform() === "win32") {
             cmd = `game`;
@@ -220,20 +221,20 @@ class Server {
     }
 
     /** 尝试创建游戏服务器,创建失败后,重试 */
-    private async tryRunGameServerCmd(cmd: string) {
-        await util.runCmd(cmd, `${commonConfig.serverPackagePath}/`, "创建游戏服务器成功", "创建游戏服务器失败")
-            .then(async (gameServerProcess) => {
-                mainModel.setGameServerProcess(gameServerProcess);
+    private async tryRunGameServerCmd(tCmd: string): Promise<void> {
+        await util.runCmd(tCmd, `${commonConfig.serverPackagePath}/`, "创建游戏服务器成功", "创建游戏服务器失败")
+            .then((tGameServerProcess: ChildProcess) => {
+                mainModel.setGameServerProcess(tGameServerProcess);
             })
-            .catch((reason) => {
+            .catch((tReason: string) => {
                 //3次重试 3秒后重试
                 setTimeout(async () => {
                     if (this._tryGameServerCount < 3) {
-                        logger.error(`server`, `gameServer启动失败, 尝试重启`, reason);
-                        this.tryRunGameServerCmd(cmd);
+                        logger.error(`server`, `gameServer启动失败, 尝试重启`, tReason);
+                        this.tryRunGameServerCmd(tCmd);
                         this._tryGameServerCount++;
                     } else {
-                        logger.error(`server`, `gameServer启动失败, 超过重试次数`, reason);
+                        logger.error(`server`, `gameServer启动失败, 超过重试次数`, tReason);
                         message.sendClientMsg("gameServerStartupFail");
                         await util.copyLog2UploadDir()
                             .then(() => {
@@ -245,10 +246,10 @@ class Server {
     }
 
     /** 关闭游戏服务器 */
-    public closeGameServer() {
-        return new Promise((resolve, reject) => {
+    public closeGameServer(): Promise<void> {
+        return new Promise((tResolve: () => void, tReject: (...tParam: unknown[]) => void) => {
             if (!mainModel.gameServerProcess) {
-                resolve();
+                tResolve();
                 return;
             }
 
@@ -256,16 +257,16 @@ class Server {
                 // let cmdStr = "taskkill /im game.exe /f";
                 // util.runCmd(cmdStr, null, `关闭游戏服务器成功`, "关闭游戏服务器错误");
                 logger.log('net', `关闭游戏服务器`);
-                treeKill(mainModel.gameServerProcess.pid, 15, (error) => {
+                treeKill(mainModel.gameServerProcess.pid, 15, (tError: unknown) => {
                     // treeKill(config.gameServerProcess.pid, (error) => {
-                    if (error) {
-                        logger.error('net', `kill 关闭游戏服务器错误`, error);
-                        reject(error);
+                    if (tError) {
+                        logger.error('net', `kill 关闭游戏服务器错误`, tError);
+                        tReject(tError);
                         return;
                     }
                     logger.log('net', `kill 关闭游戏服务器成功`);
                     mainModel.setGameServerProcess(null);
-                    resolve();
+                    tResolve();
                 });
                 return;
             }
@@ -275,11 +276,11 @@ class Server {
                 logger.log('net', `关闭游戏服务器成功`);
                 mainModel.setGameServerInited(false);
                 mainModel.setGameServerProcess(null);
-                resolve();
-            }, () => {
+                tResolve();
+            }, (tError: unknown) => {
                 logger.error('net', `关闭游戏服务器错误`);
                 mainModel.setGameServerInited(false);
-                reject();
+                tReject(tError);
             });
         });
     }

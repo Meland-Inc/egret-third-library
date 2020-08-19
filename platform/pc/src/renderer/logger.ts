@@ -10,8 +10,8 @@ import FileUtil from '../common/FileUtil';
 
 let rendererLogContent: string;
 /** 打印log到后台进程日志中 */
-export function rendererLog(tag: string, msg: string, ...args: any[]) {
-    let content = formateMsg(tag, msg, ...args);
+export function rendererLog(tTag: string, tMsg: string, ...tArgs: unknown[]): void {
+    let content = formateMsg(tTag, tMsg, ...tArgs);
     content = content.replace(/\\n/g, '\r\n');
     if (rendererLogContent === undefined) {
         rendererLogContent = FileUtil.readFileSync(`${remote.app.getAppPath()}/dist/log/ipcRenderer.log`, 'utf-8', false);
@@ -20,40 +20,44 @@ export function rendererLog(tag: string, msg: string, ...args: any[]) {
     FileUtil.writeFileSync(`${remote.app.getAppPath()}/dist/log/ipcRenderer.log`, rendererLogContent, null, false);
 }
 
-export function log(tag: string, msg: string, ...args: any[]) {
-    const content = formateMsg(tag, msg, ...args);
+export function log(tTag: string, tMsg: string, ...tArgs: unknown[]): void {
+    const content = formateMsg(tTag, tMsg, ...tArgs);
+    // eslint-disable-next-line no-console
     console.log(content);
-    rendererLog(tag, msg, ...args);
+    rendererLog(tTag, tMsg, ...tArgs);
 }
 
-export function error(tag: string, msg: string, ...args: any[]) {
-    const content = formateMsg(tag, msg, ...args);
+export function error(tTag: string, tMsg: string, ...tArgs: unknown[]): void {
+    const content = formateMsg(tTag, tMsg, ...tArgs);
+    // eslint-disable-next-line no-console
     console.error(content);
     if (remote.app.isPackaged) {
-        errorReportRenderer.error(msg);
+        errorReportRenderer.error(tMsg);
     }
 }
 
-export function warn(tag: string, msg: string, ...args: any[]) {
-    const content = formateMsg(tag, msg, ...args);
+export function warn(tTag: string, tMsg: string, ...tArgs: unknown[]): void {
+    const content = formateMsg(tTag, tMsg, ...tArgs);
+    // eslint-disable-next-line no-console
     console.warn(content);
 }
 
-export function info(tag: string, msg: string, ...args: any[]) {
-    const content = formateMsg(tag, msg, ...args);
+export function info(tTag: string, tMsg: string, ...tArgs: unknown[]): void {
+    const content = formateMsg(tTag, tMsg, ...tArgs);
+    // eslint-disable-next-line no-console
     console.info(content);
 }
 
-function formateMsg(tag: string, msg: string, ...args: any[]) {
+function formateMsg(tTag: string, tMsg: string, ...tArgs: unknown[]): string {
     const date = formatDate(new Date());
-    const argStr = args && args.length > 0 ? `:${JSON.stringify(args)}` : "";
-    const content = `[native][${tag}]${date}\t${msg}${argStr}`;
+    const argStr = tArgs && tArgs.length > 0 ? `:${JSON.stringify(tArgs)}` : "";
+    const content = `[native][${tTag}]${date}\t${tMsg}${argStr}`;
     return content;
 }
 
-function formatDate(date: Date) {
-    const month = date.getMonth() + 1;
-    const format = `${date.getFullYear()}-${month}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+function formatDate(tDate: Date): string {
+    const month = tDate.getMonth() + 1;
+    const format = `${tDate.getFullYear()}-${month}-${tDate.getDate()} ${tDate.getHours()}:${tDate.getMinutes()}:${tDate.getSeconds()}`;
     return format;
 }
 

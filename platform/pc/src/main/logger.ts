@@ -15,14 +15,14 @@ export namespace logger {
     let processLogContent: string = '';
     let webContentsLogContent: string = '';
 
-    export function clear() {
+    export function clear(): void {
         FileUtil.writeFileSync(commonConfig.ipcMainLogPath, '', null, false);
         FileUtil.writeFileSync(commonConfig.ipcRendererLogPath, '', null, false);
     }
 
     /** 打印log到后台进程日志中 */
-    export function processLog(tag: string, msg: string, ...args: any[]) {
-        let content = formateMsg(tag, msg, ...args);
+    export function processLog(tTag: string, tMsg: string, ...tArgs: unknown[]): void {
+        let content = formateMsg(tTag, tMsg, ...tArgs);
         content = content.replace(/\\n/g, '\r\n');
 
         processLogContent += content + '\r\n';
@@ -30,8 +30,8 @@ export namespace logger {
     }
 
     /** 打印web端log到本地日志文件中 */
-    export function webContentsLog(tag: string, msg: string, ...args: any[]) {
-        let content = formateMsg(tag, msg, ...args);
+    export function webContentsLog(tTag: string, tMsg: string, ...tArgs: unknown[]): void {
+        let content = formateMsg(tTag, tMsg, ...tArgs);
         content = content.replace(/\\n/g, '\r\n');
 
         webContentsLogContent += content + '\r\n';
@@ -39,44 +39,44 @@ export namespace logger {
     }
 
     /** 打印日志 */
-    export function log(tag: string, msg: string, ...args: any[]) {
-        message.sendIpcMsgNoLog(MsgId.sendMainLogToRenderer, CommonDefine.eLogType.log, tag, msg, ...args);
-        webContentsLog(tag, msg, ...args);
+    export function log(tTag: string, tMsg: string, ...tArgs: unknown[]): void {
+        message.sendIpcMsgNoLog(MsgId.sendMainLogToRenderer, CommonDefine.eLogType.log, tTag, tMsg, ...tArgs);
+        webContentsLog(tTag, tMsg, ...tArgs);
     }
 
     /** 打印错误 */
-    export function error(tag: string, msg: string, ...args: any[]) {
-        message.sendIpcMsgNoLog(MsgId.sendMainLogToRenderer, CommonDefine.eLogType.error, tag, msg, ...args);
+    export function error(tTag: string, tMsg: string, ...tArgs: unknown[]): void {
+        message.sendIpcMsgNoLog(MsgId.sendMainLogToRenderer, CommonDefine.eLogType.error, tTag, tMsg, ...tArgs);
         if (!commonConfig.isPackaged) {
-            message.sendIpcMsg(MsgId.ERROR_REPORT, msg);
+            message.sendIpcMsg(MsgId.ERROR_REPORT, tMsg);
         }
-        webContentsLog(tag, msg, ...args);
+        webContentsLog(tTag, tMsg, ...tArgs);
     }
 
     /** 打印警告 */
-    export function warn(tag: string, msg: string, ...args: any[]) {
-        message.sendIpcMsgNoLog(MsgId.sendMainLogToRenderer, CommonDefine.eLogType.warn, tag, msg, ...args);
-        webContentsLog(tag, msg, ...args);
+    export function warn(tTag: string, tMsg: string, ...tArgs: unknown[]): void {
+        message.sendIpcMsgNoLog(MsgId.sendMainLogToRenderer, CommonDefine.eLogType.warn, tTag, tMsg, ...tArgs);
+        webContentsLog(tTag, tMsg, ...tArgs);
     }
 
     /** 打印信息 */
-    export function info(tag: string, msg: string, ...args: any[]) {
-        message.sendIpcMsgNoLog(MsgId.sendMainLogToRenderer, CommonDefine.eLogType.info, tag, msg, ...args);
-        webContentsLog(tag, msg, ...args);
+    export function info(tTag: string, tMsg: string, ...tArgs: unknown[]): void {
+        message.sendIpcMsgNoLog(MsgId.sendMainLogToRenderer, CommonDefine.eLogType.info, tTag, tMsg, ...tArgs);
+        webContentsLog(tTag, tMsg, ...tArgs);
     }
 
     /** 格式化消息 */
-    export function formateMsg(tag: string, msg: string, ...args: any[]) {
+    export function formateMsg(tTag: string, tMsg: string, ...tArgs: unknown[]): string {
         const date = formatDate(new Date());
-        const argStr = args && args.length > 0 ? `:${JSON.stringify(args)}` : "";
-        const content = `[native][${tag}]${date}\t${msg}${argStr}`;
+        const argStr = tArgs && tArgs.length > 0 ? `:${JSON.stringify(tArgs)}` : "";
+        const content = `[native][${tTag}]${date}\t${tMsg}${argStr}`;
         return content;
     }
 
     /** 格式化时间 */
-    export function formatDate(date: Date) {
-        const month = date.getMonth() + 1;
-        const format = `${date.getFullYear()}-${month}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+    export function formatDate(tDate: Date): string {
+        const month = tDate.getMonth() + 1;
+        const format = `${tDate.getFullYear()}-${month}-${tDate.getDate()} ${tDate.getHours()}:${tDate.getMinutes()}:${tDate.getSeconds()}`;
         return format;
     }
 }

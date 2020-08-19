@@ -24,9 +24,9 @@ export default class ServerUpdate {
     private _download: StreamDownload = new StreamDownload();
 
     /** 更新后回调 */
-    private _updateCallback: Function;
+    private _updateCallback: (...tParam: unknown[]) => void;
     /** 更新后回调参数 */
-    private _updateCbArgs: any;
+    private _updateCbArgs: unknown[];
 
     /** 分支环境 */
     private _environName: CommonDefine.eEnvironName;
@@ -37,12 +37,12 @@ export default class ServerUpdate {
     /** 远程版本 */
     private _remoteVersion: number;
 
-    private initVersionInfo() {
+    private initVersionInfo(): void {
         this._environName = commonConfig.environName;
     }
 
     /** 检查是否最新版本 */
-    public async checkLatestVersion() {
+    public async checkLatestVersion(): Promise<boolean> {
         this.initVersionInfo();
 
         //获取本地游戏版本
@@ -56,9 +56,9 @@ export default class ServerUpdate {
     }
 
     /** 检查更新 */
-    public async checkUpdate(updateCallback: Function, ...updateCbArgs: any[]) {
-        this._updateCallback = updateCallback;
-        this._updateCbArgs = updateCbArgs;
+    public async checkUpdate(tUpdateCallback: (...tParam: unknown[]) => void, ...tUpdateCbArgs: unknown[]): Promise<void> {
+        this._updateCallback = tUpdateCallback;
+        this._updateCbArgs = tUpdateCbArgs;
         let isLatestVersion: boolean;
         if (this._remoteVersion) {
             isLatestVersion = this._localVersion === this._remoteVersion;
@@ -81,7 +81,7 @@ export default class ServerUpdate {
     }
 
     /** 下载服务端包 */
-    private downloadPackage() {
+    private downloadPackage(): void {
         //release环境, 用的ready的包, 去ready下载
         const fileDir = `${commonConfig.cdnHost}/serverPackages/${this._environName}`;
         const saveDir = this._packagePath;
@@ -90,50 +90,50 @@ export default class ServerUpdate {
     }
 
     /** 下载文件回调 */
-    private downloadFileCallback(result: string, filename: string, percentage: number, errorMsg: string) {
-        if (result === "progress") {
+    private downloadFileCallback(tResult: string, tFilename: string, tPercentage: number, tErrorMsg: string): void {
+        if (tResult === "progress") {
             // 显示进度
-            loading.setLoadingProgress(percentage);
+            loading.setLoadingProgress(tPercentage);
             return;
         }
 
-        if (result === "finished") {
+        if (tResult === "finished") {
             // 通知完成
             loading.setLoadingProgress(0);
             loading.showLoading("正在解压服务端程序包");
             loading.gradualProgress();
-            const content = `开始解压文件:${filename}`;
+            const content = `开始解压文件:${tFilename}`;
             logger.log('update', content);
             const streamZip = new StreamZip({
-                file: this._packagePath + filename,
+                file: this._packagePath + tFilename,
                 storeEntries: true
             });
             streamZip.on('ready', () => {
-                streamZip.extract('server/', this._packagePath, (err: Error) => {
-                    if (err) {
+                streamZip.extract('server/', this._packagePath, (tErr: Error) => {
+                    if (tErr) {
                         streamZip.close();
 
-                        const content = `解压文件:${filename}错误,开始重新下载`;
-                        logger.error(`update`, content, err);
+                        const errorContent = `解压文件:${tFilename}错误,开始重新下载`;
+                        logger.error(`update`, errorContent, tErr);
 
                         this.downloadPackage();
                         return;
                     }
                     loading.setLoadingProgress(100);
-                    const content = `解压文件:${filename}成功`;
-                    logger.log('update', content);
+                    const successContent = `解压文件:${tFilename}成功`;
+                    logger.log('update', successContent);
                     rendererModel.setPackageVersion(CommonDefine.ePackageType.server, commonConfig.environName, this._remoteVersion);
                     streamZip.close();
 
-                    FileUtil.unlinkSync(this._packagePath + filename);
+                    FileUtil.unlinkSync(this._packagePath + tFilename);
                     this.executeUpdateCallback();
                 });
             });
             return;
         }
 
-        if (result == "404") {
-            const content = `下载文件:${filename}错误, 文件不存在!`;
+        if (tResult == "404") {
+            const content = `下载文件:${tFilename}错误, 文件不存在!`;
             logger.error(`update`, content);
             alert(content);
 
@@ -141,17 +141,17 @@ export default class ServerUpdate {
             return;
         }
 
-        if (result == "error") {
-            const content = `下载文件:${filename}出错, ${errorMsg}`;
+        if (tResult == "error") {
+            const content = `下载文件:${tFilename}出错, ${tErrorMsg}`;
             logger.error(`update`, content);
             alert(content);
             this.downloadPackage();
-            
+
         }
     }
 
     /** 执行更新后回调 */
-    private executeUpdateCallback() {
+    private executeUpdateCallback(): void {
         loading.hideLoadingProgress();
         if (this._updateCallback) {
             this._updateCallback(...this._updateCbArgs);
