@@ -36,14 +36,14 @@ export default class ClientUpdate {
     private _download: StreamDownload = new StreamDownload();
 
     /** 更新后回调 */
-    private _updateCallback: Function;
+    private _updateCallback: (...tParam: unknown[]) => void;
     /** 更新后回调参数 */
-    private _updateCbArgs: any[];
+    private _updateCbArgs: unknown[];
 
     /** 是否是下载整包 */
     private _isDownloadPackage: boolean;
     /** 检查是否最新版本 */
-    public async checkLatestVersion() {
+    public async checkLatestVersion(): Promise<boolean> {
         let gameVersion = rendererModel.getPackageVersion(CommonDefine.ePackageType.client);
         if (!gameVersion) {
             gameVersion = 0;
@@ -93,17 +93,17 @@ export default class ClientUpdate {
     }
 
     /** 获取客户端游戏版本号 */
-    private async getClientGameVersion(environName: string, policyHost: string, policyPath: string): Promise<number> {
-        const policyNum = await util.getClientPackagePolicyNum(environName);
+    private async getClientGameVersion(tEnvironName: string, tPolicyHost: string, tPolicyPath: string): Promise<number> {
+        const policyNum = await util.getClientPackagePolicyNum(tEnvironName);
         if (policyNum === null) {
-            const content = `获取策略版本号错误!, environName:${environName}`;
+            const content = `获取策略版本号错误!, environName:${tEnvironName}`;
             logger.error(`renderer`, content);
             alert(content);
             return 0;
         }
 
         try {
-            const gameVersion = await util.tryGetClientGameVersion(policyHost, policyPath, policyNum);
+            const gameVersion = await util.tryGetClientGameVersion(tPolicyHost, tPolicyPath, policyNum);
             return +gameVersion;
         } catch (error) {
             const content = "获取客户端版本号错误!";
@@ -114,86 +114,78 @@ export default class ClientUpdate {
     }
 
     /** 直接下载最新版本 */
-    public directDownload(updateCallback: Function, ...updateCbArgs: any[]) {
-        try {
-            this._updateCallback = updateCallback;
-            this._updateCbArgs = updateCbArgs;
+    public directDownload(tUpdateCallback: (...tParam: unknown[]) => void, ...tUpdateCbArgs: unknown[]): void {
+        this._updateCallback = tUpdateCallback;
+        this._updateCbArgs = tUpdateCbArgs;
 
-            loading.showLoading("正在下载客户端程序包");
-            this.downloadPackage();
-        } catch (error) {
-            throw error;
-        }
+        loading.showLoading("正在下载客户端程序包");
+        this.downloadPackage();
     }
 
     /** 检查更新 */
-    async checkUpdate(updateCallback: Function, ...updateCbArgs: any[]) {
-        try {
-            this._updateCallback = updateCallback;
-            this._updateCbArgs = updateCbArgs;
-            let isLatestVersion: boolean;
-            if (this._gameVersion) {
-                isLatestVersion = this._curVersion === this._gameVersion;
-            } else {
-                isLatestVersion = await this.checkLatestVersion();
-            }
-
-            if (isLatestVersion) {
-                logger.log(`update`, `检测到客户端版本一致,跳过更新`);
-                this.executeUpdateCallback();
-                return;
-            }
-
-            logger.log(`update`, `检测到客户端版本不一致,开始更新`);
-            this._patchCount = this._gameVersion - this._startVersion;
-            this.installSinglePatch();
-        } catch (error) {
-            throw error;
+    public async checkUpdate(tUpdateCallback: (...tParam: unknown[]) => void, ...tUpdateCbArgs: unknown[]): Promise<void> {
+        this._updateCallback = tUpdateCallback;
+        this._updateCbArgs = tUpdateCbArgs;
+        let isLatestVersion: boolean;
+        if (this._gameVersion) {
+            isLatestVersion = this._curVersion === this._gameVersion;
+        } else {
+            isLatestVersion = await this.checkLatestVersion();
         }
+
+        if (isLatestVersion) {
+            logger.log(`update`, `检测到客户端版本一致,跳过更新`);
+            this.executeUpdateCallback();
+            return;
+        }
+
+        logger.log(`update`, `检测到客户端版本不一致,开始更新`);
+        this._patchCount = this._gameVersion - this._startVersion;
+        this.installSinglePatch();
     }
 
     /** 下载文件回调 */
-    private downloadFileCallback(arg: string, filename: string, percentage: number) {
-        if (arg === "progress") {
+    private downloadFileCallback(tArg: string, tFilename: string, tPercentage: number): void {
+        if (tArg === "progress") {
             // 显示进度
             if (this._allInOne) {
-                loading.setLoadingProgress(percentage);
+                loading.setLoadingProgress(tPercentage);
             } else {
                 const each = 100 / this._patchCount;
-                loading.setLoadingProgress(percentage / 100 * each + (this._curVersion - this._startVersion) * each);
+                loading.setLoadingProgress(tPercentage / 100 * each + (this._curVersion - this._startVersion) * each);
             }
             return;
         }
 
-        if (arg === "finished") {
+        if (tArg === "finished") {
             // 通知完成
             if (this._isDownloadPackage) {
                 loading.setLoadingProgress(0);
                 loading.showLoading("正在解压客户端程序包");
                 loading.gradualProgress();
             }
-            const content = `开始解压文件:${filename}`;
+            const content = `开始解压文件:${tFilename}`;
             logger.log('update', content);
             const streamZip = new StreamZip({
-                file: this._clientPackagePath + filename,
+                file: this._clientPackagePath + tFilename,
                 storeEntries: true
             });
             streamZip.on('ready', () => {
-                streamZip.extract(null, this._clientPackagePath, (err: Error) => {
-                    if (err) {
+                streamZip.extract(null, this._clientPackagePath, (tErr: Error) => {
+                    if (tErr) {
                         streamZip.close();
 
-                        const content = `解压文件:${filename}错误`;
-                        logger.error(`update`, content, err);
-                        alert(content);
+                        const errorContent = `解压文件:${tFilename}错误`;
+                        logger.error(`update`, errorContent, tErr);
+                        alert(errorContent);
                         this.executeUpdateCallback();
                         return;
                     }
                     loading.setLoadingProgress(100);
-                    const content = `解压文件:${filename}成功`;
-                    logger.log('update', content);
+                    const successContent = `解压文件:${tFilename}成功`;
+                    logger.log('update', successContent);
                     streamZip.close();
-                    FileUtil.unlinkSync(this._clientPackagePath + filename);
+                    FileUtil.unlinkSync(this._clientPackagePath + tFilename);
                     //如果是下载整包状态,直接赋值当前版本为最新游戏版本
                     if (this._isDownloadPackage) {
                         this._isDownloadPackage = false;
@@ -214,8 +206,8 @@ export default class ClientUpdate {
             return;
         }
 
-        if (arg == "404") {
-            const content = `下载文件:${filename}错误, 文件不存在!`;
+        if (tArg == "404") {
+            const content = `下载文件:${tFilename}错误, 文件不存在!`;
             logger.error(`update`, content);
             alert(content);
 
@@ -225,7 +217,7 @@ export default class ClientUpdate {
             } else {
                 this.executeUpdateCallback();
             }
-            
+
         }
     }
 
@@ -238,18 +230,14 @@ export default class ClientUpdate {
     // }
 
     /** 下载单个补丁包 */
-    private installSinglePatch() {
-        try {
-            loading.showLoading("正在更新客户端程序包");
-            this._download.downloadFile(this._patchUrl, this._clientPackagePath, `patch_v${this._curVersion}s_v${this._curVersion + 1}s.zip`, this.downloadFileCallback.bind(this));
-        } catch (error) {
-            throw error;
-        }
+    private installSinglePatch(): void {
+        loading.showLoading("正在更新客户端程序包");
+        this._download.downloadFile(this._patchUrl, this._clientPackagePath, `patch_v${this._curVersion}s_v${this._curVersion + 1}s.zip`, this.downloadFileCallback.bind(this));
     }
 
 
     /** 下载整包 */
-    private async downloadPackage() {
+    private async downloadPackage(): Promise<void> {
         await this.checkLatestVersion();
         this._patchCount = 1;
         this._isDownloadPackage = true;
@@ -273,7 +261,7 @@ export default class ClientUpdate {
     }
 
     /** 执行更新后回调 */
-    private executeUpdateCallback() {
+    private executeUpdateCallback(): void {
         loading.hideLoadingProgress();
         if (this._updateCallback) {
             this._updateCallback(...this._updateCbArgs);
@@ -281,12 +269,12 @@ export default class ClientUpdate {
     }
 
     /** 获取策略信息 */
-    private getPolicyInfo(policyUrl: string): { policyHost: string, policyPath: string } {
-        const policyArr = policyUrl.split("/");
+    private getPolicyInfo(tPolicyUrl: string): { policyHost: string, policyPath: string } {
+        const policyArr = tPolicyUrl.split("/");
         const policyHost: string = policyArr[0];
         let policyPath: string = "";
         if (policyArr[1] && policyArr[1] !== "") {
-            policyPath = policyUrl.replace(policyHost, "");
+            policyPath = tPolicyUrl.replace(policyHost, "");
         }
 
         return { policyHost: policyHost, policyPath: policyPath };

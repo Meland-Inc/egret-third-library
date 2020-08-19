@@ -12,7 +12,7 @@ import { CommonDefine } from '../common/CommonDefine';
 class ErrorReportRenderer {
     private _enable: boolean;
 
-    public init() {
+    public init(): void {
         if (this._enable != undefined) {
             return;
         }
@@ -25,16 +25,16 @@ class ErrorReportRenderer {
         if (commonConfig.environName === CommonDefine.eEnvironName.release) {
             this._enable = true;
 
-            const beforeSend = (event, hint) => {
-                if (event['exception'] && event['exception']['values'] && event['exception']['values'][0] && event['exception']['values'][0]['stacktrace']) {
-                    const frames: unknown[] = event['exception']['values'][0]['stacktrace']['frames'];
+            const beforeSend = (tEvent: Sentry.Event, tHint: unknown): unknown => {
+                if (tEvent['exception'] && tEvent['exception']['values'] && tEvent['exception']['values'][0] && tEvent['exception']['values'][0]['stacktrace']) {
+                    const frames: unknown[] = tEvent['exception']['values'][0]['stacktrace']['frames'];
                     if (!frames || frames.length <= 0) {
-                        return event;
+                        return tEvent;
                     }
 
                     const filename: string = frames[0]['filename'];
                     if (!filename) {
-                        return event;
+                        return tEvent;
                     }
 
                     //如果是加载的游戏代码报错 堆栈是从file大头的 通过这个区分是不是游戏js报错 游戏报错这里不上报 让游戏自己上报
@@ -42,7 +42,7 @@ class ErrorReportRenderer {
                         return null;
                     }
 
-                    return event;
+                    return tEvent;
                 }
             };
             Sentry.init({
@@ -80,9 +80,9 @@ class ErrorReportRenderer {
     }
 
     /**主动报错 */
-    public error(info: string) {
+    public error(tInfo: string): void {
         if (this._enable) {
-            Sentry.captureException(new Error(info));
+            Sentry.captureException(new Error(tInfo));
         }
     }
 

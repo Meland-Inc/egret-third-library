@@ -12,7 +12,7 @@ import { CommonDefine } from '../common/CommonDefine';
 class ErrorReportMain {
     private _enable: boolean;
 
-    public init() {
+    public init(): void {
         if (this._enable != undefined) {
             return;
         }

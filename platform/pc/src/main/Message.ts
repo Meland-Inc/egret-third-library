@@ -23,78 +23,78 @@ class Message {
     private _nativeUpdate: NativeUpdate;
 
     /** 消息对应方法集合 */
-    public msgMap: Map<string, () => void>;
+    private _msgMap: Map<string, () => void>;
 
     /** 缓存要发送给客户端的消息 */
-    private _cacheClientMsgArr: { msgId: string, args: any[] }[];
+    private _cacheClientMsgArr: { msgId: string, args: unknown[] }[];
 
     public constructor() {
         this._nativeUpdate = new NativeUpdate();
-        this.msgMap = new Map<string, () => void>();
+        this._msgMap = new Map<string, () => void>();
         this._cacheClientMsgArr = [];
-        this.msgMap[MsgId.CHECK_UPDATE_COMPLETE] = this.onCheckUpdateComplete.bind(this);
-        this.msgMap[MsgId.MAP_TEMPLATE_ENTER] = this.onMapTemplateEnter.bind(this);
-        this.msgMap[MsgId.MAP_TEMPLATE_ROOM_CREATE] = this.onMapTemplateRoomCreate.bind(this);
-        this.msgMap[MsgId.MAP_TEMPLATE_ENTER_ERROR] = this.onMapTemplateEnterError.bind(this);
-        this.msgMap[MsgId.SWITCH_FULL_SCREEN] = this.onSwitchFullScreen.bind(this);
-        this.msgMap[MsgId.QUIT_NATIVE] = this.onQuitNative.bind(this);
-        this.msgMap[MsgId.SEND_PLAYER_ID] = this.onSendPlayerId.bind(this);
-        this.msgMap[MsgId.BELLPLANET_CLIENT_READY] = this.onBellplanetReady.bind(this);
-        this.msgMap[MsgId.SET_NATIVE_POLICY_VERSION] = this.onSetNativePolicyVersion.bind(this);
+        this._msgMap[MsgId.CHECK_UPDATE_COMPLETE] = this.onCheckUpdateComplete.bind(this);
+        this._msgMap[MsgId.MAP_TEMPLATE_ENTER] = this.onMapTemplateEnter.bind(this);
+        this._msgMap[MsgId.MAP_TEMPLATE_ROOM_CREATE] = this.onMapTemplateRoomCreate.bind(this);
+        this._msgMap[MsgId.MAP_TEMPLATE_ENTER_ERROR] = this.onMapTemplateEnterError.bind(this);
+        this._msgMap[MsgId.SWITCH_FULL_SCREEN] = this.onSwitchFullScreen.bind(this);
+        this._msgMap[MsgId.QUIT_NATIVE] = this.onQuitNative.bind(this);
+        this._msgMap[MsgId.SEND_PLAYER_ID] = this.onSendPlayerId.bind(this);
+        this._msgMap[MsgId.BELLPLANET_CLIENT_READY] = this.onBellplanetReady.bind(this);
+        this._msgMap[MsgId.SET_NATIVE_POLICY_VERSION] = this.onSetNativePolicyVersion.bind(this);
     }
 
     /** 发送主进程消息 */
-    public sendIpcMsg(msgId: string, ...args: unknown[]): void {
-        this.webContentsSendMsg(true, msgId, ...args);
+    public sendIpcMsg(tMsgId: string, ...tArgs: unknown[]): void {
+        this.webContentsSendMsg(true, tMsgId, ...tArgs);
     }
 
     /** 发送主进程消息, 不打印log信息*/
-    public sendIpcMsgNoLog(msgId: string, ...args: unknown[]): void {
-        this.webContentsSendMsg(false, msgId, ...args);
+    public sendIpcMsgNoLog(tMsgId: string, ...tArgs: unknown[]): void {
+        this.webContentsSendMsg(false, tMsgId, ...tArgs);
     }
 
     /** 通过webContents发送消息 */
-    private webContentsSendMsg(showLog: boolean, msgId: string, ...args: unknown[]): void {
+    private webContentsSendMsg(tShowLog: boolean, tMsgId: string, ...tArgs: unknown[]): void {
         if (!mainModel.mainWindow) return;
         if (mainModel.mainWindow.isDestroyed()) return;
         if (!mainModel.mainWindow.webContents) return;
         if (mainModel.mainWindow.webContents.isDestroyed()) return;
 
-        if (showLog) {
-            logger.log('main', `发送主进程消息:${msgId} args`, ...args);
+        if (tShowLog) {
+            logger.log('main', `发送主进程消息:${tMsgId} args`, ...tArgs);
         }
 
-        mainModel.mainWindow.webContents.send(IpcChannel.MAIN_PROCESS_MESSAGE, msgId, ...args);
+        mainModel.mainWindow.webContents.send(IpcChannel.MAIN_PROCESS_MESSAGE, tMsgId, ...tArgs);
     }
 
     /** 初始化 */
-    public init() {
+    public init(): void {
         logger.log('main', `初始化主进程监听消息`);
 
         //监听渲染进程消息
-        ipcMain.on(IpcChannel.RENDERER_PROCESS_MESSAGE, (evt: IpcMainEvent, msgId: string, ...args: unknown[]) => {
-            logger.log('main', `收到渲染进程消息:${msgId} args`, ...args);
-            this.applyIpcMsg(msgId, ...args);
+        ipcMain.on(IpcChannel.RENDERER_PROCESS_MESSAGE, (tEvt: IpcMainEvent, tMsgId: string, ...tArgs: unknown[]) => {
+            logger.log('main', `收到渲染进程消息:${tMsgId} args`, ...tArgs);
+            this.applyIpcMsg(tMsgId, ...tArgs);
         });
 
         //监听 客户端消息 应用 或者 转发给渲染进程
-        ipcMain.on(IpcChannel.CLIENT_PROCESS_MESSAGE, (evt: IpcMainEvent, msgId: string, ...args: unknown[]) => {
-            logger.log('main', `收到客户端消息:${msgId} args`, ...args);
-            this.applyIpcMsg(msgId, ...args);    //应用
+        ipcMain.on(IpcChannel.CLIENT_PROCESS_MESSAGE, (tEvt: IpcMainEvent, tMsgId: string, ...tArgs: unknown[]) => {
+            logger.log('main', `收到客户端消息:${tMsgId} args`, ...tArgs);
+            this.applyIpcMsg(tMsgId, ...tArgs);    //应用
             // sendIpcMsg(msgId, ...args);     //转发
         });
     }
 
     /** 应用渲染进程消息 */
-    private applyIpcMsg(msgId: string, ...args: any[]) {
-        const func = this.msgMap[msgId];
+    private applyIpcMsg(tMsgId: string, ...tArgs: unknown[]): void {
+        const func = this._msgMap[tMsgId];
         if (func) {
-            func(...args);
+            func(...tArgs);
         }
     }
 
     /** 检查更新完毕 */
-    private async onCheckUpdateComplete() {
+    private async onCheckUpdateComplete(): Promise<void> {
         util.initNativeCnf();
 
         logger.log('config', `nativeMode:${mainModel.nativeMode}`);
@@ -130,12 +130,12 @@ class Message {
 
         if (mainModel.nativeMode === CommonDefine.eNativeMode.prestigeMap) {
             this.enterPrestigeMap();
-            
+
         }
     }
 
     /** 从banner模式进入 */
-    private startBanner() {
+    private startBanner(): void {
         let queryValue: string = mainModel.urlValue.slice(mainModel.urlValue.indexOf("?") + 1);
         queryValue += `&nativeMode=${CommonDefine.eNativeMode.banner}`;
         logger.log('update', `从banner模式进入`);
@@ -143,7 +143,7 @@ class Message {
     }
 
     /** 从创造地图模式进入 */
-    private async startCreateMap() {
+    private async startCreateMap(): Promise<void> {
         const urlValue: string = mainModel.urlValue.slice(mainModel.urlValue.indexOf("?") + 1);
         let queryObject = querystring.parse(urlValue);
         //有banner参数,要从平台初始化
@@ -158,7 +158,7 @@ class Message {
     }
 
     /** 从游戏模式进入 */
-    private startNativeGame() {
+    private startNativeGame(): void {
         logger.log('update', `从游戏模式进入`);
         const urlValue = mainModel.urlValue;
         //伪协议启动参数
@@ -175,7 +175,7 @@ class Message {
     }
 
     /** 跳转到指定url */
-    private async startUrl() {
+    private async startUrl(): Promise<void> {
         logger.log('update', `从指定url进入`);
         const urlValue: string = mainModel.urlValue.slice(mainModel.urlValue.indexOf("?") + 1);
         const queryObject = querystring.parse(urlValue);
@@ -194,14 +194,14 @@ class Message {
     }
 
     /** 指定网址进入 */
-    private startNativeWebsite() {
+    private startNativeWebsite(): void {
         logger.log('update', `从指定网址进入`);
 
         this.sendIpcMsg(MsgId.START_NATIVE_WEBSITE);
     }
 
     /** 从平台进入 */
-    private async startNativePlatform() {
+    private async startNativePlatform(): Promise<void> {
         logger.log('update', `从平台进入`);
 
         //平台初始化
@@ -223,7 +223,7 @@ class Message {
     }
 
     /** 进入神庙模板地图 */
-    private enterPrestigeMap() {
+    private enterPrestigeMap(): void {
         logger.log('update', `从神庙模板地图模式进入`);
         const urlValue = mainModel.urlValue;
         const argsValue = urlValue.slice(urlValue.indexOf("?") + 1);
@@ -237,23 +237,23 @@ class Message {
     }
 
     /** 收到地图模板游戏服务器 */
-    private onMapTemplateEnter(gid: string, gameArgs: string) {
-        util.writeServerCnfValue('gid', gid);
-        mainModel.setGameArgs(gameArgs);
+    private onMapTemplateEnter(tAid: string, tAameArgs: string): void {
+        util.writeServerCnfValue('gid', tAid);
+        mainModel.setGameArgs(tAameArgs);
 
         server.createNativeServer(CommonDefine.eGameServerMode.mapTemplate);
     }
 
     /** 收到地图模板房间游戏服务器 */
-    private onMapTemplateRoomCreate(gid: string, gameArgs: string) {
-        util.writeServerCnfValue('gid', gid);
-        mainModel.setGameArgs(gameArgs);
+    private onMapTemplateRoomCreate(tGid: string, tGameArgs: string): void {
+        util.writeServerCnfValue('gid', tGid);
+        mainModel.setGameArgs(tGameArgs);
 
         server.createNativeServer(CommonDefine.eGameServerMode.mapTemplateRoom);
     }
 
     /** 收到进入地图模板房间失败 */
-    private async onMapTemplateEnterError() {
+    private async onMapTemplateEnterError(): Promise<void> {
         await util.copyLog2UploadDir()
             .then(() => {
                 util.uploadLogFileList();
@@ -261,43 +261,43 @@ class Message {
     }
 
     /** 切换全屏显示 */
-    private onSwitchFullScreen(isFullScreen: boolean) {
-        mainModel.mainWindow.setFullScreen(isFullScreen);
+    private onSwitchFullScreen(tIsFullScreen: boolean): void {
+        mainModel.mainWindow.setFullScreen(tIsFullScreen);
     }
 
     /** 退出Native */
-    private onQuitNative() {
+    private onQuitNative(): void {
         app.quit();
     }
 
     /** 收到发送过来的玩家id */
-    private onSendPlayerId(playerId: string, playerName: string) {
-        mainModel.setPlayerId(playerId);
-        mainModel.setPlayerName(playerName);
+    private onSendPlayerId(tPlayerId: string, tPlayerName: string): void {
+        mainModel.setPlayerId(tPlayerId);
+        mainModel.setPlayerName(tPlayerName);
     }
 
     /** 收到小贝星球准备完毕 */
-    private onBellplanetReady() {
+    private onBellplanetReady(): void {
         mainModel.setBellplanetReady(true);
         this.executeCacheClientMsgArr();
     }
 
-    private onSetNativePolicyVersion(nativeVersion: number) {
-        this._nativeUpdate.checkUpdate(nativeVersion);
+    private onSetNativePolicyVersion(tNativeVersion: number): void {
+        this._nativeUpdate.checkUpdate(tNativeVersion);
     }
 
     /** 发送消息到客户端 */
-    public sendClientMsg(msgId: string, ...args: any[]) {
+    public sendClientMsg(tMsgId: string, ...tArgs: unknown[]): void {
         if (!mainModel.bellplanetReady) {
-            this._cacheClientMsgArr.push({ msgId: msgId, args: args });
+            this._cacheClientMsgArr.push({ msgId: tMsgId, args: tArgs });
             return;
         }
 
-        this.executeClientMsg(msgId, ...args);
+        this.executeClientMsg(tMsgId, ...tArgs);
     }
 
     /** 执行缓存的客户端消息 */
-    private executeCacheClientMsgArr() {
+    private executeCacheClientMsgArr(): void {
         if (!this._cacheClientMsgArr) return;
         if (this._cacheClientMsgArr.length === 0) return;
         logger.log('message', '执行客户端缓存的消息');
@@ -309,9 +309,9 @@ class Message {
     }
 
     /** 执行发送到客户端消息 */
-    private executeClientMsg(msgId: string, ...args: any[]) {
-        logger.log('message', `发送消息到客户端 key:${msgId} value`, ...args);
-        this.sendIpcMsg(MsgId.SEND_CLIENT_MSG, msgId, ...args);
+    private executeClientMsg(tMsgId: string, ...tArgs: unknown[]): void {
+        logger.log('message', `发送消息到客户端 key:${tMsgId} value`, ...tArgs);
+        this.sendIpcMsg(MsgId.SEND_CLIENT_MSG, tMsgId, ...tArgs);
     }
 }
 

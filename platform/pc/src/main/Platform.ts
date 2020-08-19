@@ -13,6 +13,7 @@ import { logger } from './logger';
 import { util } from './util';
 import message from './Message';
 import mainModel from "./MainModel";
+import { CommonDefine } from '../common/CommonDefine';
 
 enum eQueryArgsField {
     'temporary_token' = 'temporary_token',
@@ -30,8 +31,33 @@ enum eQueryArgsField {
     'token' = 'token'
 }
 
+/** 获取临时token返回数据结构 */
+interface IRspTemporaryToken {
+    code: number,
+    data: {
+        token: string
+    },
+    msg: string
+}
+
+interface IRspMemberInfo {
+    code: number,
+    data: {
+        user_info: {
+            usertype: CommonDefine.eUserType,
+            real_name: string,
+            nickname: string,
+            userid: number,
+            school: {
+                id: number
+            }
+        }
+    },
+    msg: string
+}
+
 class Platform {
-    private readonly _configFields = [
+    private readonly _configFields: string[] = [
         eQueryArgsField.temporary_token,
         eQueryArgsField.class_id,
         eQueryArgsField.bell_origin,
@@ -42,13 +68,13 @@ class Platform {
         eQueryArgsField.stand_alone,
     ]
 
-    private readonly _serverCnfFields = [
+    private readonly _serverCnfFields: string[] = [
         eQueryArgsField.class_id,
         eQueryArgsField.lesson_id,
         eQueryArgsField.gid
     ]
 
-    public async init() {
+    public async init(): Promise<querystring.ParsedUrlQuery> {
         const urlValue = mainModel.urlValue;
         //伪协议启动参数
         logger.log('platform', `初始化平台数据`, urlValue);
@@ -125,6 +151,8 @@ class Platform {
                 case eQueryArgsField.gid:
                     util.writeServerCnfValue("gid", strValue);
                     break;
+                default:
+                    break;
             }
         }
 
@@ -185,28 +213,28 @@ class Platform {
             data["token"] = mainModel.bellToken;
         }
         logger.log('net', `请求登录贝尔平台, bellApiOrigin: ${mainModel.bellApiOrigin}, bellTempToken:${mainModel.bellTempToken}`);
-        return new Promise((resolve, reject) => {
+        return new Promise((tResolve: (tValue: string) => void, tReject: (tValue: unknown) => void) => {
             util.requestPostHttps(mainModel.bellApiOrigin, null, '/common/member/login-by-temporary-token', data, null
-                , (body: any, response: http.IncomingMessage) => {
-                    logger.log('net', `登陆贝尔平台返回body`, body);
-                    message.sendIpcMsg(MsgId.SAVE_NATIVE_HEADER_SET_COOKIE, response.headers["set-cookie"]);
+                , (tBody: IRspTemporaryToken, tResponse: http.IncomingMessage) => {
+                    logger.log('net', `登陆贝尔平台返回body`, tBody);
+                    message.sendIpcMsg(MsgId.SAVE_NATIVE_HEADER_SET_COOKIE, tResponse.headers["set-cookie"]);
 
-                    if (body.code === 200) {
-                        if (body.data.token) {
-                            mainModel.setBellToken(body.data.token);
+                    if (tBody.code === 200) {
+                        if ((tBody.data).token) {
+                            mainModel.setBellToken(tBody.data.token);
                         }
                         this.getMemberInfo(() => {
-                            resolve(mainModel.bellToken as string);
-                        }, (err: any) => { reject(err); });
+                            tResolve(mainModel.bellToken as string);
+                        }, (tErr: unknown) => { tReject(tErr); });
                         logger.log('net', `登陆贝尔平台成功, token:${mainModel.bellToken}`);
                     } else {
-                        reject(body.msg);
-                        logger.error('net', `登陆贝尔平台失败`, body.msg);
+                        tReject(tBody.msg);
+                        logger.error('net', `登陆贝尔平台失败`, tBody.msg);
                     }
                 }
-                , (e: any) => {
-                    reject(e);
-                    logger.error('net', `登陆贝尔平台失败`, e);
+                , (tError: unknown) => {
+                    tReject(tError);
+                    logger.error('net', `登陆贝尔平台失败`, tError);
                 }
             );
         });
@@ -246,38 +274,38 @@ class Platform {
         "sys_info": { "lan": "cn" }
     }` */
     /** 获取用户信息 */
-    private getMemberInfo(successFunc: Function, errorFunc: Function) {
+    private getMemberInfo(tSuccessFunc: () => void, tErrorFunc: (...tParam: unknown[]) => void): void {
         const data = { token: mainModel.bellToken };
         const headers = { "X-Bellcode-Referer": "bellplanet" };
         logger.log('net', `请求获取贝尔平台用户信息`);
         util.requestGetHttps(mainModel.bellApiOrigin, null, '/common/member/init', data, headers
-            , (body: any) => {
-                if (body.code === 200) {
-                    mainModel.setUserType(+body.data.user_info.usertype);
-                    mainModel.setRealName(body.data.user_info.real_name);
-                    mainModel.setNickName(body.data.user_info.nickname);
+            , (tBody: IRspMemberInfo) => {
+                if (tBody.code === 200) {
+                    mainModel.setUserType(+tBody.data.user_info.usertype);
+                    mainModel.setRealName(tBody.data.user_info.real_name);
+                    mainModel.setNickName(tBody.data.user_info.nickname);
 
-                    util.writeServerCnfValue("userId", body.data.user_info.userid + "");
-                    util.writeServerCnfValue("schoolId", body.data.user_info.school.id + "");
-                    util.writeServerCnfValue("nickName", body.data.user_info.nickname + "");
+                    util.writeServerCnfValue("userId", tBody.data.user_info.userid + "");
+                    util.writeServerCnfValue("schoolId", tBody.data.user_info.school.id + "");
+                    util.writeServerCnfValue("nickName", tBody.data.user_info.nickname + "");
 
-                    message.sendIpcMsg(MsgId.SAVE_NATIVE_LOGIN_RESPONSE, body);
+                    message.sendIpcMsg(MsgId.SAVE_NATIVE_LOGIN_RESPONSE, tBody);
                     logger.log('net', `获取贝尔平台用户信息成功`);
-                    successFunc();
+                    tSuccessFunc();
                 } else {
-                    errorFunc();
-                    logger.error('net', `获取贝尔平台用户信息失败`, body.msg);
+                    tErrorFunc();
+                    logger.error('net', `获取贝尔平台用户信息失败`, tBody.msg);
                 }
             }
             , () => {
-                errorFunc();
+                tErrorFunc();
                 logger.error('net', `获取贝尔平台用户信息失败`);
             }
         );
     }
 
     /** 老师上报ip */
-    public teacherUploadIp() {
+    public teacherUploadIp(): void {
         const data = { token: mainModel.bellToken, class_id: mainModel.classId };
 
         //公网连接方式
@@ -296,8 +324,8 @@ class Platform {
 
         logger.log('net', `请求上报老师ip`);
         util.requestPostHttps(mainModel.bellApiOrigin, null, '/teacher/bellplanet-origins.put', data, null
-            , (body: any) => {
-                if (body.code === 200) {
+            , (tBody: { code: number }) => {
+                if (tBody.code === 200) {
                     logger.log('net', `上报老师ip成功`);
                 } else {
                     logger.error('net', `上报老师ip失败`);

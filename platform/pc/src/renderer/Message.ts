@@ -24,7 +24,7 @@ import FileUtil from "../common/FileUtil";
 
 class Message {
     //消息对应方法集合
-    private msgMap: Map<string, () => void>;
+    private _msgMap: Map<string, () => void>;
 
     private _clientUpdate: ClientUpdate;
     private _serverUpdate: ServerUpdate;
@@ -33,46 +33,46 @@ class Message {
         this._clientUpdate = new ClientUpdate();
         this._serverUpdate = new ServerUpdate();
 
-        this.msgMap = new Map<string, () => void>();
-        this.msgMap[MsgId.CLEAR_RENDERER_MODEL_DATA] = this.onClearRendererModelData.bind(this);
-        this.msgMap[MsgId.SAVE_NATIVE_LOGIN_RESPONSE] = this.onSaveNativeLoginResponse.bind(this);
-        this.msgMap[MsgId.SAVE_NATIVE_GAME_SERVER] = this.onSaveNativeGameServer.bind(this);
-        this.msgMap[MsgId.SAVE_NATIVE_HEADER_SET_COOKIE] = this.onSaveNativeHeaderSetCookie.bind(this);
-        this.msgMap[MsgId.START_NATIVE_CLIENT] = this.onStartNativeClient.bind(this);
-        this.msgMap[MsgId.START_NATIVE_WEBSITE] = this.onStartNativeWebsite.bind(this);
-        this.msgMap[MsgId.START_NATIVE_PLATFORM] = this.onStartNativePlatform.bind(this);
-        this.msgMap[MsgId.START_NATIVE_URL] = this.onStartNativeUrl.bind(this);
-        this.msgMap[MsgId.SEND_CLIENT_MSG] = this.onSendClientMsg.bind(this);
-        this.msgMap[MsgId.SHOW_LOADING] = this.onShowLoading.bind(this);
-        this.msgMap[MsgId.HIDE_LOADING] = this.onHideLoading.bind(this);
-        this.msgMap[MsgId.SET_LOADING_PROGRESS] = this.onSetLoadingProgress.bind(this);
-        this.msgMap[MsgId.CHECK_PACKAGE_UPDATE] = this.checkPackageUpdate.bind(this);
-        this.msgMap[MsgId.GET_NATIVE_POLICY_VERSION] = this.onGetNativePolicyVersion.bind(this);
-        this.msgMap[MsgId.ERROR_REPORT] = this.onErrorReport.bind(this);
-        this.msgMap[MsgId.sendMainLogToRenderer] = this.onSendMainLogToRenderer.bind(this);
+        this._msgMap = new Map<string, () => void>();
+        this._msgMap[MsgId.CLEAR_RENDERER_MODEL_DATA] = this.onClearRendererModelData.bind(this);
+        this._msgMap[MsgId.SAVE_NATIVE_LOGIN_RESPONSE] = this.onSaveNativeLoginResponse.bind(this);
+        this._msgMap[MsgId.SAVE_NATIVE_GAME_SERVER] = this.onSaveNativeGameServer.bind(this);
+        this._msgMap[MsgId.SAVE_NATIVE_HEADER_SET_COOKIE] = this.onSaveNativeHeaderSetCookie.bind(this);
+        this._msgMap[MsgId.START_NATIVE_CLIENT] = this.onStartNativeClient.bind(this);
+        this._msgMap[MsgId.START_NATIVE_WEBSITE] = this.onStartNativeWebsite.bind(this);
+        this._msgMap[MsgId.START_NATIVE_PLATFORM] = this.onStartNativePlatform.bind(this);
+        this._msgMap[MsgId.START_NATIVE_URL] = this.onStartNativeUrl.bind(this);
+        this._msgMap[MsgId.SEND_CLIENT_MSG] = this.onSendClientMsg.bind(this);
+        this._msgMap[MsgId.SHOW_LOADING] = this.onShowLoading.bind(this);
+        this._msgMap[MsgId.HIDE_LOADING] = this.onHideLoading.bind(this);
+        this._msgMap[MsgId.SET_LOADING_PROGRESS] = this.onSetLoadingProgress.bind(this);
+        this._msgMap[MsgId.CHECK_PACKAGE_UPDATE] = this.checkPackageUpdate.bind(this);
+        this._msgMap[MsgId.GET_NATIVE_POLICY_VERSION] = this.onGetNativePolicyVersion.bind(this);
+        this._msgMap[MsgId.ERROR_REPORT] = this.onErrorReport.bind(this);
+        this._msgMap[MsgId.sendMainLogToRenderer] = this.onSendMainLogToRenderer.bind(this);
     }
 
     /** 发送渲染进程消息 */
-    public sendIpcMsg(msgId: string, ...args: unknown[]) {
-        logger.log('renderer', `发送渲染进程消息:${msgId} args`, ...args);
-        ipcRenderer.send(IpcChannel.RENDERER_PROCESS_MESSAGE, msgId, ...args);
+    public sendIpcMsg(tMsgId: string, ...tArgs: unknown[]): void {
+        logger.log('renderer', `发送渲染进程消息:${tMsgId} args`, ...tArgs);
+        ipcRenderer.send(IpcChannel.RENDERER_PROCESS_MESSAGE, tMsgId, ...tArgs);
     }
 
     /** 初始化 */
-    public init() {
+    public init(): void {
         logger.log('renderer', `初始化渲染进程监听消息`);
         //监听主进程消息
-        ipcRenderer.on(IpcChannel.MAIN_PROCESS_MESSAGE, (evt: IpcRendererEvent, msgId: string, ...args: unknown[]) => {
-            logger.log('renderer', `收到主进程消息:${msgId} args`, ...args);
-            this.applyIpcMsg(msgId, ...args);
+        ipcRenderer.on(IpcChannel.MAIN_PROCESS_MESSAGE, (tEvt: IpcRendererEvent, tMsgId: string, ...tArgs: unknown[]) => {
+            logger.log('renderer', `收到主进程消息:${tMsgId} args`, ...tArgs);
+            this.applyIpcMsg(tMsgId, ...tArgs);
         });
     }
 
     /** 应用主进程消息 */
-    private applyIpcMsg(msgId: string, ...args: unknown[]) {
-        const func = this.msgMap[msgId];
+    private applyIpcMsg(tMsgId: string, ...tArgs: unknown[]): void {
+        const func = this._msgMap[tMsgId];
         if (func) {
-            func(...args);
+            func(...tArgs);
         }
     }
 
@@ -82,54 +82,54 @@ class Message {
     }
 
     /** 保存native平台登陆信息 */
-    private onSaveNativeLoginResponse(body: unknown) {
-        rendererModel.setNativeLoginResponse(body);
+    private onSaveNativeLoginResponse(tBody: unknown): void {
+        rendererModel.setNativeLoginResponse(tBody);
     }
 
     /** 保存native游戏服务器 */
-    private onSaveNativeGameServer(gameServer: string) {
-        rendererModel.setNativeGameServer(gameServer);
+    private onSaveNativeGameServer(tGameServer: string): void {
+        rendererModel.setNativeGameServer(tGameServer);
     }
 
     /** 保存客户端获取的set-cookie */
-    private onSaveNativeHeaderSetCookie(headerSetCookie: string[]): void {
-        rendererModel.setHeaderSetCookie(headerSetCookie);
+    private onSaveNativeHeaderSetCookie(tHeaderSetCookie: string[]): void {
+        rendererModel.setHeaderSetCookie(tHeaderSetCookie);
     }
 
     /** 收到获取native策略号消息 */
-    private async onGetNativePolicyVersion() {
+    private async onGetNativePolicyVersion(): Promise<void> {
         const nativePolicyVersion: number = await util.getNativePolicyNum(commonConfig.environName);
         this.sendIpcMsg(MsgId.SET_NATIVE_POLICY_VERSION, nativePolicyVersion);
     }
 
     /** 收到错误上报 */
-    private onErrorReport(content: string) {
-        logger.log('errorReport', `收到错误上报:${content}`);
-        errorReportRenderer.error(content);
+    private onErrorReport(tContent: string): void {
+        logger.log('errorReport', `收到错误上报:${tContent}`);
+        errorReportRenderer.error(tContent);
     }
 
-    private onSendMainLogToRenderer(logType: CommonDefine.eLogType, tag: string, msg: string, ...args: any[]) {
-        switch (logType) {
+    private onSendMainLogToRenderer(tLogType: CommonDefine.eLogType, tTag: string, tMsg: string, ...tArgs: unknown[]): void {
+        switch (tLogType) {
             case CommonDefine.eLogType.log:
-                logger.log(tag, msg, ...args);
+                logger.log(tTag, tMsg, ...tArgs);
                 break;
             case CommonDefine.eLogType.error:
-                logger.error(tag, msg, ...args);
+                logger.error(tTag, tMsg, ...tArgs);
                 break;
             case CommonDefine.eLogType.warn:
-                logger.warn(tag, msg, ...args);
+                logger.warn(tTag, tMsg, ...tArgs);
                 break;
             case CommonDefine.eLogType.info:
-                logger.info(tag, msg, ...args);
+                logger.info(tTag, tMsg, ...tArgs);
                 break;
             default:
-                logger.log(tag, msg, ...args);
+                logger.log(tTag, tMsg, ...tArgs);
                 break;
         }
     }
 
     /** 检查游戏包更新 */
-    private async checkPackageUpdate() {
+    private async checkPackageUpdate(): Promise<void> {
         logger.log('update', `开始检查更新`);
 
         //服务器包所在目录
@@ -140,7 +140,7 @@ class Message {
             serverDirect = true;
         } else {
             const dir = FileUtil.readdirSync(serverPackageDir);
-            const zipIndex: number = dir.findIndex(value => value.search(/.*.zip/) >= 0);
+            const zipIndex: number = dir.findIndex((tValue: string) => tValue.search(/.*.zip/) >= 0);
             const serverVersion: number = rendererModel.getPackageVersion(CommonDefine.ePackageType.server);
             //不存在服务端版本号,或者当文件数量小于2,或者有release压缩包(zip包不完整,导致解压失败),要重新下载新的包
             if (!serverVersion || zipIndex >= 0 || dir.length < 2) {
@@ -158,7 +158,7 @@ class Message {
         } else {
             const dir = FileUtil.readdirSync(clientPackageDir);
             logger.log(`net`, `dir length:${dir.length}`);
-            const zipIndex: number = dir.findIndex(value => value.search(/release_v.*s.zip/) >= 0);
+            const zipIndex: number = dir.findIndex((tValue: string) => tValue.search(/release_v.*s.zip/) >= 0);
             const clientVersion: number = rendererModel.getPackageVersion(CommonDefine.ePackageType.client);
             //不存在客户端版本号,或者当文件数量小于2,或者有release压缩包(zip包不完整,导致解压失败),要重新下载新的包
             if (!clientVersion || zipIndex >= 0 || dir.length < 2) {
@@ -201,81 +201,81 @@ class Message {
     }
 
     /** 直接下载最新服务端包 */
-    private directDownloadServer(callback: Function, ...args: any[]) {
+    private directDownloadServer(tCallback: (...tArgs: unknown[]) => void, ...tArgs: unknown[]): void {
         try {
             rendererModel.setPackageVersion(CommonDefine.ePackageType.server, commonConfig.environName, 0);
-            this._serverUpdate.checkUpdate(callback, ...args);
+            this._serverUpdate.checkUpdate(tCallback, ...tArgs);
         } catch (error) {
             const content = `native下载服务端出错,点击重试`;
             logger.error(`update`, content, error);
             alert(content + error);
-            this.directDownloadServer(callback, ...args);
+            this.directDownloadServer(tCallback, ...tArgs);
         }
     }
 
     /** 直接下载最新的客户端包 */
-    private directDownloadClient(callback: Function, ...args: any[]) {
+    private directDownloadClient(tCallback: (...tArgs: unknown[]) => void, ...tArgs: unknown[]): void {
         try {
-            this._clientUpdate.directDownload(callback, ...args);
+            this._clientUpdate.directDownload(tCallback, ...tArgs);
         } catch (error) {
             const content = `native下载客户端出错,点击重试`;
             logger.error(`update`, content, error);
             alert(content + error);
-            this.directDownloadClient(callback, ...args);
+            this.directDownloadClient(tCallback, ...tArgs);
         }
     }
 
     /** 检查客户端包更新 */
-    private checkClientUpdate(callback: Function, ...args: any[]) {
+    private checkClientUpdate(tCallback: (...tArgs: unknown[]) => void, ...tArgs: unknown[]): void {
         try {
-            this._clientUpdate.checkUpdate(callback, ...args);
+            this._clientUpdate.checkUpdate(tCallback, ...tArgs);
         } catch (error) {
             const content = `native更新客户端报错`;
             logger.error(`update`, content, error);
             alert(content);
 
-            callback(...args);
+            tCallback(...tArgs);
         }
     }
 
     /** 检查服务端包更新 */
-    private checkServerUpdate(callback: Function, ...args: any[]) {
+    private checkServerUpdate(tCallback: (...tArgs: unknown[]) => void, ...tArgs: unknown[]): void {
         try {
-            this._serverUpdate.checkUpdate(callback, ...args);
+            this._serverUpdate.checkUpdate(tCallback, ...tArgs);
         } catch (error) {
             const content = `native更新服务端报错`;
             logger.error(`update`, content, error);
             alert(content);
 
-            callback(...args);
+            tCallback(...tArgs);
         }
     }
 
     /** 检查更新完毕 */
-    private checkUpdateComplete() {
+    private checkUpdateComplete(): void {
         logger.log('update', `检查更新完毕`);
         this.sendIpcMsg(`CHECK_UPDATE_COMPLETE`);
     }
 
     /** 从客户端进入 */
-    private onStartNativeClient(queryValue: string) {
+    private onStartNativeClient(tQueryValue: string): void {
         this.checkClearLocalStorage();
-        const url = new URL(`file://${commonConfig.clientPackagePath}/index.html?${queryValue}`);
+        const url = new URL(`file://${commonConfig.clientPackagePath}/index.html?${tQueryValue}`);
         this.applySetCookie(url.origin);
         this.loadRendererURL(url);
     }
 
     /** 跳转到指定url */
-    private onStartNativeUrl(url: string) {
+    private onStartNativeUrl(tUrl: string): void {
         this.checkClearLocalStorage();
 
-        const urlObj: URL = new URL(url);
+        const urlObj: URL = new URL(tUrl);
         this.applySetCookie(urlObj.origin);
-        this.loadRendererURL(url);
+        this.loadRendererURL(tUrl);
     }
 
     /** 从指定网址进入 */
-    private onStartNativeWebsite() {
+    private onStartNativeWebsite(): void {
         this.checkClearLocalStorage();
 
         // const url = commonConfig.environName === CommonDefine.eEnvironName.release ? commonConfig.bellcodeUrl : commonConfig.demoBellCodeUrl;
@@ -298,12 +298,12 @@ class Message {
     }
 
     /** 从官网平台进入 */
-    private onStartNativePlatform(queryObject: querystring.ParsedUrlQuery) {
+    private onStartNativePlatform(tQueryObject: querystring.ParsedUrlQuery): void {
         this.checkClearLocalStorage();
 
         let webviewToken: string;
-        const queryObjectWebviewToken = queryObject['webviewToken'];
-        const queryObjectToken = queryObject['token'];
+        const queryObjectWebviewToken = tQueryObject['webviewToken'];
+        const queryObjectToken = tQueryObject['token'];
         if (queryObjectWebviewToken) {
             if (Array.isArray(queryObjectWebviewToken)) {
                 webviewToken = queryObjectWebviewToken[0];
@@ -317,16 +317,16 @@ class Message {
             } else {
                 webviewToken = queryObjectToken;
             }
-            queryObject["webviewToken"] = webviewToken;
+            tQueryObject["webviewToken"] = webviewToken;
         } else {
             //reserve
         }
 
-        logger.log("platform", `start native platform queryObject`, queryObject);
+        logger.log("platform", `start native platform queryObject`, tQueryObject);
         const iframeUrl = new URL(`file://${commonConfig.clientPackagePath}/index.html`);
-        for (const key in queryObject) {
-            if (queryObject.hasOwnProperty(key)) {
-                const value = queryObject[key];
+        for (const key in tQueryObject) {
+            if (tQueryObject.hasOwnProperty(key)) {
+                const value = tQueryObject[key];
                 if (Array.isArray(value)) {
                     iframeUrl.searchParams.set(key, value[0]);
                 } else {
@@ -335,12 +335,12 @@ class Message {
             }
         }
         const platformObject = {
-            class_id: queryObject["class_id"],
-            package_id: queryObject["package_id"],
-            lesson_id: queryObject["lesson_id"],
-            act_id: queryObject["act_id"],
+            class_id: tQueryObject["class_id"],
+            package_id: tQueryObject["package_id"],
+            lesson_id: tQueryObject["lesson_id"],
+            act_id: tQueryObject["act_id"],
             webviewToken: webviewToken,
-            back_url: queryObject["back_url"],
+            back_url: tQueryObject["back_url"],
             iframeSrc: iframeUrl.toString()
         };
 
@@ -363,7 +363,7 @@ class Message {
     }
 
     /** 加载渲染URL */
-    private async loadRendererURL(tUrl: string | URL) {
+    private loadRendererURL(tUrl: string | URL): void {
         this.listenClientMsg();
 
         let url: string;
@@ -376,29 +376,29 @@ class Message {
     }
 
     /** 监听客户端消息 */
-    private listenClientMsg() {
+    private listenClientMsg(): void {
         if (!window) return;
 
         logger.log("message", `尝试监听客户端消息`);
-        window.onload = () => {
+        window.onload = (): void => {
             logger.log("message", `window loaded 监听客户端消息`);
             window.addEventListener("message", this.onListenClientMsg);
         };
     }
 
     /** 应用set-cookie */
-    private applySetCookie(url: string) {
+    private applySetCookie(tUrl: string): void {
         if (rendererModel.headerSetCookie) {
             for (const iterator of rendererModel.headerSetCookie) {
                 const cookie = tough.Cookie.parse(iterator);
                 logger.log('net', `cookie: `, JSON.stringify(cookie));
-                util.setCookie(url, cookie.key, cookie.value, (cookie.expires as Date).getTime(), cookie.domain);
+                util.setCookie(tUrl, cookie.key, cookie.value, (cookie.expires as Date).getTime(), cookie.domain);
             }
         }
     }
 
     /** 检查删除本地存储 */
-    private checkClearLocalStorage() {
+    private checkClearLocalStorage(): void {
         if (!rendererModel.nativeLoginResponse) {
             localStorage.removeItem('nativeLoginResponse');
         }
@@ -409,35 +409,35 @@ class Message {
     }
 
     /** 发送消息到客户端 */
-    private onSendClientMsg(msgId: string, ...args: any[]) {
+    private onSendClientMsg(tMsgId: string, ...tArgs: unknown[]): void {
         const iframeElement = window.document.getElementById("planet-iframe") as HTMLIFrameElement;
         if (iframeElement) {
-            iframeElement.contentWindow.postMessage({ 'key': 'nativeMsg', 'value': JSON.stringify([msgId, args]) }, '*');
+            iframeElement.contentWindow.postMessage({ 'key': 'nativeMsg', 'value': JSON.stringify([tMsgId, tArgs]) }, '*');
             return;
         }
 
         if (window) {
-            window.postMessage({ 'key': 'nativeMsg', 'value': JSON.stringify([msgId, args]) }, '*');
-            
+            window.postMessage({ 'key': 'nativeMsg', 'value': JSON.stringify([tMsgId, tArgs]) }, '*');
+
         }
     }
 
-    private onListenClientMsg(evt: MessageEvent) {
-        const { key, value } = evt.data;
+    private onListenClientMsg(tEvt: MessageEvent): void {
+        const { key, value } = tEvt.data;
         logger.log("message", `收到客户端消息`, key, value);
         ipcRenderer.send(IpcChannel.CLIENT_PROCESS_MESSAGE, key, ...value);
     }
 
-    private onShowLoading(value: string) {
-        loading.showLoading(value);
+    private onShowLoading(tValue: string): void {
+        loading.showLoading(tValue);
     }
 
-    private onHideLoading() {
+    private onHideLoading(): void {
         loading.hideLoadingProgress();
     }
 
-    private onSetLoadingProgress(value: number) {
-        loading.setLoadingProgress(value);
+    private onSetLoadingProgress(tValue: number): void {
+        loading.setLoadingProgress(tValue);
     }
 }
 
