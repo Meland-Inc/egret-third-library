@@ -81,8 +81,11 @@ class Main {
   /** 当打开url时 */
   private onAppOpenUrl(tEvent: Event, tUrl: string): void {
     tEvent.preventDefault();
-    logger.log('main', `open-url, event`, tUrl);
-    this.onGotTheLock(tUrl);
+    if (!this._mainWindow) {
+      mainModel.setUrlValue(tUrl);
+      return;
+    }
+    this.showSecondInstanceAlert();
   }
 
   private showSecondInstanceAlert(): void {
@@ -93,27 +96,6 @@ class Main {
       buttons: ['确定'],
     };
     dialog.showMessageBoxSync(this._mainWindow, options);
-  }
-
-  /** 拦截第二个实例 */
-  private async onGotTheLock(tUrl: string): Promise<void> {
-    logger.log('electron', `运行第二个实例`);
-    /** 设置url参数 */
-    mainModel.setUrlValue(tUrl);
-
-    if (mainModel.mainWindow) {
-      if (mainModel.mainWindow.isMinimized()) {
-        mainModel.mainWindow.restore();
-      }
-      mainModel.mainWindow.focus();
-      mainModel.mainWindow.show();
-      logger.log('electron', `显示当前主窗口`);
-
-      // 关闭之前的服务器
-      await server.closeGameServer();
-
-      await mainControl.initNative();
-    }
   }
 
   private onAppWindowAllClosed(): void {
