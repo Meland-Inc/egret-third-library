@@ -8,6 +8,7 @@ import { BrowserWindow } from 'electron';
 import { Server } from 'net';
 import { ChildProcess } from 'child_process';
 
+import commonConfig from '../common/CommonConfig';
 import { CommonDefine } from '../common/CommonDefine';
 import { logger } from './logger';
 class MainModel {
@@ -211,13 +212,17 @@ class MainModel {
         this._gameServerMode = tValue;
     }
 
-    private _urlValue: string;
-    /** 伪协议里url带的参数 */
-    public get urlValue(): string {
-        return this._urlValue;
+    private _fakeProtoURL: URL;
+    /** 伪协议里url对象 */
+    public get fakeProtoURL(): URL {
+        return this._fakeProtoURL;
     }
-    public setUrlValue(tValue: string): void {
-        this._urlValue = decodeURIComponent(tValue);
+    public setFakeProtoURL(tValue: URL): void {
+        this._fakeProtoURL = tValue;
+        const environName: CommonDefine.eEnvironName = this._fakeProtoURL.searchParams.get(CommonDefine.eFakeProtoParamField.environName) as CommonDefine.eEnvironName;
+        if (environName) {
+            commonConfig.writeEnvironName(environName);
+        }
     }
 
     private _mainWindow: BrowserWindow;

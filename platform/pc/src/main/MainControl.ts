@@ -58,7 +58,7 @@ class MainControl {
     private async checkUpdate(): Promise<void> {
         await mainModel.mainWindow.loadFile(`${commonConfig.rootPath}/dist/renderer.html`);
 
-        logger.log('net', `config.urlValue`, mainModel.urlValue);
+        logger.log('net', `config.urlValue`, mainModel.fakeProtoURL);
         logger.log('env', `app.isPackaged:`, commonConfig.isPackaged);
 
         //打包后的包才要检查更新
@@ -112,7 +112,7 @@ class MainControl {
         message.sendIpcMsg(MsgId.CLEAR_RENDERER_MODEL_DATA);
         mainModel.setBellplanetReady(false);
 
-        logger.log('net', `urlValue: ${mainModel.urlValue}`);
+        logger.log('net', `urlValue: ${mainModel.fakeProtoURL}`);
 
         util.initNativeCnf();
         await this.initNativeMode();
@@ -121,16 +121,15 @@ class MainControl {
     /** 根据路由初始化native模式 */
     private async initNativeMode(): Promise<void> {
         //不存在伪协议,指定网址模式
-        if (!mainModel.urlValue || mainModel.urlValue.indexOf(commonConfig.constPseudoProtocol) < 0) {
+        if (!mainModel.fakeProtoURL || mainModel.fakeProtoURL.protocol.indexOf(commonConfig.constPseudoProtocol) < 0) {
             mainModel.setNativeMode(CommonDefine.eNativeMode.website);
             this.startNativeWebsite();
             return;
         }
 
         //设置路由
-        const urlObj = new URL(mainModel.urlValue);
-        const lessonRouter = urlObj.hostname as CommonDefine.eLessonRouter;
-        mainModel.setLessonRouter(lessonRouter);
+        const lessonRouter = mainModel.fakeProtoURL.hostname;
+        mainModel.setLessonRouter(lessonRouter as CommonDefine.eLessonRouter);
         logger.log('test', `router: ${mainModel.lessonRouter}`);
 
         switch (mainModel.lessonRouter) {
@@ -170,61 +169,47 @@ class MainControl {
 
     /** 从banner模式进入 */
     private startBanner(): void {
-        let queryValue: string = mainModel.urlValue.slice(mainModel.urlValue.indexOf("?") + 1);
-        queryValue += `&nativeMode=${CommonDefine.eNativeMode.banner}`;
-        logger.log('update', `从banner模式进入`);
-        message.sendIpcMsg(MsgId.START_NATIVE_CLIENT, queryValue);
+        const searchParams: URLSearchParams = mainModel.fakeProtoURL.searchParams;
+        searchParams.set("nativeMode", `${CommonDefine.eNativeMode.banner}`);
+        logger.log('update', `从banner模式进入 searchParams`, searchParams);
+        message.sendIpcMsg(MsgId.START_NATIVE_CLIENT, searchParams.toString());
     }
 
     /** 从创造地图模式进入 */
     private async startCreateMap(): Promise<void> {
-        const urlValue: string = mainModel.urlValue.slice(mainModel.urlValue.indexOf("?") + 1);
-        let queryObject = querystring.parse(urlValue);
+        let searchParams: URLSearchParams = mainModel.fakeProtoURL.searchParams;
         //有banner参数,要从平台初始化
-        if (queryObject["banner"]) {
-            queryObject = await platform.init();
+        if (searchParams.has("banner")) {
+            searchParams = await platform.init();
         }
-        queryObject['nativeMode'] = CommonDefine.eNativeMode.createMap.toString();
-
-        const queryValue: string = querystring.stringify(queryObject);
-        logger.log('update', `从创造地图模式进入`);
-        message.sendIpcMsg(MsgId.START_NATIVE_CLIENT, queryValue);
+        searchParams.set('nativeMode', CommonDefine.eNativeMode.createMap.toString());
+        logger.log('update', `从创造地图模式进入 searchParams`, searchParams);
+        message.sendIpcMsg(MsgId.START_NATIVE_CLIENT, searchParams.toString());
     }
 
     /** 从游戏模式进入 */
     private startNativeGame(): void {
-        logger.log('update', `从游戏模式进入`);
-        const urlValue = mainModel.urlValue;
-        //伪协议启动参数
-        logger.log('platform', `初始化平台数据`, urlValue);
-        const argsValue = urlValue.slice(urlValue.indexOf("?") + 1);
-        const argsObj = querystring.parse(argsValue);
-        let queryObject: querystring.ParsedUrlQuery = {};
-        queryObject = Object.assign(queryObject, argsObj);
-        queryObject["nativeMode"] = CommonDefine.eNativeMode.game + "";
-
-        const queryValue: string = querystring.stringify(queryObject);
-
-        message.sendIpcMsg(MsgId.START_NATIVE_CLIENT, queryValue);
+        const searchParams: URLSearchParams = mainModel.fakeProtoURL.searchParams;
+        searchParams.set('nativeMode', CommonDefine.eNativeMode.game.toString());
+        logger.log('update', `从游戏模式进入 searchParams`, searchParams);
+        message.sendIpcMsg(MsgId.START_NATIVE_CLIENT, searchParams.toString());
     }
 
     /** 跳转到指定url */
     private async startUrl(): Promise<void> {
-        logger.log('update', `从指定url进入`);
-        const urlValue: string = mainModel.urlValue.slice(mainModel.urlValue.indexOf("?") + 1);
-        const queryObject = querystring.parse(urlValue);
-        const targetUrlValue: string = queryObject["url"] as string;
+        const searchParams: URLSearchParams = mainModel.fakeProtoURL.searchParams;
+        logger.log('update', `从指定url进入 searchParams`, searchParams);
+        const targetUrlValue: string = searchParams.get('url');
         if (!targetUrlValue) return;
         logger.log('update', `跳转到指定url`, targetUrlValue);
-        logger.log('update', `queryObject: `, queryObject);
-        const temporaryToken: string = queryObject["temporary_token"] as string;
-        const newUrl = new URL(targetUrlValue);
+        const temporaryToken: string = searchParams.get('temporary_token');
+        const targetUrl = new URL(targetUrlValue);
         if (temporaryToken) {
             await platform.init();
-            newUrl.searchParams.set("webviewToken", mainModel.bellToken);
+            targetUrl.searchParams.set("webviewToken", mainModel.bellToken);
         }
 
-        message.sendIpcMsg(MsgId.START_NATIVE_URL, newUrl.toString());
+        message.sendIpcMsg(MsgId.START_NATIVE_URL, targetUrl.toString());
     }
 
     /** 指定网址进入 */
@@ -236,38 +221,30 @@ class MainControl {
 
     /** 从平台进入 */
     private async startNativePlatform(): Promise<void> {
-        logger.log('update', `从平台进入`);
-
         //平台初始化
-        const queryObject: querystring.ParsedUrlQuery = await platform.init();
+        const searchParams: URLSearchParams = await platform.init();
         //初始化参数
         mainModel.setChannel(commonConfig.constChannelLesson);
-        queryObject['gameChannel'] = commonConfig.constChannelLesson;
-        queryObject['fakeUserType'] = mainModel.userType.toString();
-        queryObject['nativeMode'] = CommonDefine.eNativeMode.platform.toString();
+        searchParams.set('gameChannel', commonConfig.constChannelLesson);
+        searchParams.set('fakeUserType', mainModel.userType.toString());
+        searchParams.set('nativeMode', CommonDefine.eNativeMode.platform.toString());
 
         //非学生端 或者单人单服务器 本地服务器初始化
         if (mainModel.userType != CommonDefine.eUserType.student || mainModel.standAlone) {
             server.init();
         }
 
-        logger.log(`test`, `queryObject`, queryObject);
-
-        message.sendIpcMsg(MsgId.START_NATIVE_PLATFORM, queryObject);
+        logger.log('update', `从平台进入 searchParams`, searchParams.toString());
+        message.sendIpcMsg(MsgId.START_NATIVE_PLATFORM, searchParams.toString());
     }
 
     /** 进入神庙模板地图 */
     private enterPrestigeMap(): void {
-        logger.log('update', `从神庙模板地图模式进入`);
-        const urlValue = mainModel.urlValue;
-        const argsValue = urlValue.slice(urlValue.indexOf("?") + 1);
-        const argsObj = querystring.parse(argsValue);
-        let queryObject: querystring.ParsedUrlQuery = {};
-        queryObject = Object.assign(queryObject, argsObj);
-        queryObject["nativeMode"] = CommonDefine.eNativeMode.prestigeMap + "";
+        const searchParams: URLSearchParams = mainModel.fakeProtoURL.searchParams;
+        searchParams.set('nativeMode', CommonDefine.eNativeMode.prestigeMap.toString());
 
-        const queryValue: string = querystring.stringify(queryObject);
-        message.sendIpcMsg(MsgId.START_NATIVE_CLIENT, queryValue);
+        logger.log('update', `从神庙模板地图模式进入 searchParams`, searchParams);
+        message.sendIpcMsg(MsgId.START_NATIVE_CLIENT, searchParams.toString());
     }
 
     /** 收到地图模板游戏服务器 */

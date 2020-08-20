@@ -5,7 +5,6 @@
  * @FilePath \pc\src\renderer\Message.ts
  */
 import { ipcRenderer, IpcRendererEvent } from "electron";
-import querystring from "querystring";
 import tough from 'tough-cookie';
 
 import { CommonDefine } from '../common/CommonDefine';
@@ -298,56 +297,19 @@ class Message {
     }
 
     /** 从官网平台进入 */
-    private onStartNativePlatform(tQueryObject: querystring.ParsedUrlQuery): void {
+    private onStartNativePlatform(tSearchParamsValue: string): void {
+        const searchParams = new URLSearchParams(tSearchParamsValue);
         this.checkClearLocalStorage();
 
-        let webviewToken: string;
-        const queryObjectWebviewToken = tQueryObject['webviewToken'];
-        const queryObjectToken = tQueryObject['token'];
-        if (queryObjectWebviewToken) {
-            if (Array.isArray(queryObjectWebviewToken)) {
-                webviewToken = queryObjectWebviewToken[0];
-            } else {
-                webviewToken = queryObjectWebviewToken;
-            }
-        }
-        else if (queryObjectToken) {
-            if (Array.isArray(queryObjectToken)) {
-                webviewToken = queryObjectToken[0];
-            } else {
-                webviewToken = queryObjectToken;
-            }
-            tQueryObject["webviewToken"] = webviewToken;
-        } else {
-            //reserve
-        }
+        logger.log('platform', `onStartNativePlatform searchParams`, searchParams.toString());
 
-        logger.log("platform", `start native platform queryObject`, tQueryObject);
+        logger.log("platform", `start native platform searchParams`, searchParams);
         const iframeUrl = new URL(`file://${commonConfig.clientPackagePath}/index.html`);
-        for (const key in tQueryObject) {
-            if (tQueryObject.hasOwnProperty(key)) {
-                const value = tQueryObject[key];
-                if (Array.isArray(value)) {
-                    iframeUrl.searchParams.set(key, value[0]);
-                } else {
-                    iframeUrl.searchParams.set(key, value);
-                }
-            }
+        for (const [key, value] of searchParams) {
+            iframeUrl.searchParams.set(key, value);
         }
-        const platformObject = {
-            class_id: tQueryObject["class_id"],
-            package_id: tQueryObject["package_id"],
-            lesson_id: tQueryObject["lesson_id"],
-            act_id: tQueryObject["act_id"],
-            webviewToken: webviewToken,
-            back_url: tQueryObject["back_url"],
-            iframeSrc: iframeUrl.toString()
-        };
 
-        logger.log('platform', `platformObject:`, platformObject);
-        logger.rendererLog('platform', `platformObject:`, platformObject);
         logger.rendererLog('platform', `iframeSrc:`, iframeUrl.toString());
-        const platformValue = querystring.stringify(platformObject);
         //获取官网链接
         let bellPlatformDomain: string;
         if (commonConfig.environName === CommonDefine.eEnvironName.release) {
@@ -356,10 +318,32 @@ class Message {
             bellPlatformDomain = commonConfig.demoBellCodeUrl;
         }
 
+        const webviewToken: string = this.getWebviewToken(searchParams);
+        searchParams.set('webviewToken', webviewToken);
+
         this.applySetCookie(bellPlatformDomain);
-        const url = `${bellPlatformDomain}/#/bell-planet?${platformValue}`;
-        logger.log('url', url);
-        this.loadRendererURL(url);
+        const newSearchParams = new URLSearchParams();
+        newSearchParams.set("class_id", searchParams.get("class_id"));
+        newSearchParams.set("package_id", searchParams.get("package_id"));
+        newSearchParams.set("lesson_id", searchParams.get("lesson_id"));
+        newSearchParams.set("act_id", searchParams.get("act_id"));
+        newSearchParams.set("webviewToken", webviewToken);
+        newSearchParams.set("back_url", searchParams.get("back_url"));
+        newSearchParams.set("iframeSrc", iframeUrl.toString());
+
+        const newURL = `${bellPlatformDomain}/#/bell-planet?${newSearchParams.toString()}`;
+        logger.log('platform', `newURL`, newURL);
+
+        this.loadRendererURL(newURL);
+    }
+
+    private getWebviewToken(tSearchParams: URLSearchParams): string {
+        const queryObjectWebviewToken: string = tSearchParams.get('webviewToken');
+        const queryObjectToken: string = tSearchParams.get('token');
+        if (queryObjectWebviewToken) return queryObjectWebviewToken;
+        if (queryObjectToken) return queryObjectToken;
+
+        return null;
     }
 
     /** 加载渲染URL */
