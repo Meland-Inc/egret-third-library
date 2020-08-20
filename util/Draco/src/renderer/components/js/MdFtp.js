@@ -131,7 +131,6 @@ async function copyPatchFile(readyEnviron, releaseEnviron, readyGameVersion, rel
     let releasePath = `${Global.svnPublishPath}${releaseEnviron.localPath}`;
     let readyPath = `${Global.svnPublishPath}${readyEnviron.localPath}`;
     let curGameVersion = releaseGameVersion;
-    let hasPatch = false;
     for (let i = +releaseGameVersion + 1; i <= readyGameVersion; i++) {
         let patchVersion = `patch_v${curGameVersion}s-v${i}s`;
         let readyPatchPath = `${readyPath}/${patchVersion}/`;
@@ -143,7 +142,6 @@ async function copyPatchFile(readyEnviron, releaseEnviron, readyGameVersion, rel
 
         const releasePatchPath = `${releasePath}/${patchVersion}/`;
 
-        hasPatch = true;
         console.log(`开始拷贝 from:${readyPatchPath} to:${releasePatchPath}`);
         await fsExc.copyFile(readyPatchPath, releasePatchPath, true);
         console.log(`拷贝完毕`);
