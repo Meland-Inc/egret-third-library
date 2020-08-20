@@ -116,7 +116,7 @@ class Main {
   private async createWindow(): Promise<void> {
     //优先设置url参数, 因为参数里带有当前环境参数
     if (os.platform() === "win32") {
-      const url = process.argv.splice(app.isPackaged ? 1 : 2).join("");
+      const url = process.argv.concat().splice(app.isPackaged ? 1 : 2).join("");
       if (url) {
         mainModel.setFakeProtoURL(new URL(url));
       }
