@@ -44,7 +44,7 @@ export class VersionModel {
             updateGitEnable: false, gitBranch: "", trunkName: "", cdnRoot: "",
             cdnWinPatchPath: "/win", cdnMacPatchPath: "/mac",
             copyFileEnable: true,
-            publishEnable: false, mergeVersionEnable: true, compressPicEnable: false, zipFileEnable: false, policyEnable: true, scpEnable: false, cdnEnable: true,
+            publishEnable: false, mergeVersionEnable: true, compressPicEnable: false, zipFileEnable: true, policyEnable: true, scpEnable: false, cdnEnable: true,
             pushGitEnable: false, publishDescEnable: false, codeVersionEnable: false, gitTagEnable: false, zipUploadGameEnable: false, nativeEnable: false
         },
     ];

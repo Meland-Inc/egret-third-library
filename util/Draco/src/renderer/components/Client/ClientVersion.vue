@@ -129,19 +129,19 @@
       <mu-container>
         <div class="button-wrapper">
           <mu-button
-            v-loading="isZipVersionLoading"
-            data-mu-loading-size="24"
-            color="pink500"
-            @click="onZipVersion"
-            v-show="curEnviron&&curEnviron.zipFileEnable"
-          >压缩游戏版本</mu-button>
-          <mu-button
             v-loading="isCopyVersionLoading"
             data-mu-loading-size="24"
             color="pink500"
             @click="onCopyVersion"
             v-show="curEnviron&&curEnviron.copyFileEnable"
           >拷贝ready版本到release</mu-button>
+          <mu-button
+            v-loading="isZipVersionLoading"
+            data-mu-loading-size="24"
+            color="pink500"
+            @click="onZipVersion"
+            v-show="curEnviron&&curEnviron.zipFileEnable"
+          >压缩游戏版本</mu-button>
           <mu-button
             v-loading="isUploadVersionLoading"
             data-mu-loading-size="24"
@@ -434,47 +434,47 @@ export default {
       versionDesc: null,
 
       publishErrorText: null,
-      versionDescErrorText: null
+      versionDescErrorText: null,
     };
   },
   watch: {
-    releaseVersion: val => {
+    releaseVersion: (val) => {
       ModelMgr.versionModel.setReleaseVersion(val);
       ModelMgr.versionModel.setNewVersion(val);
     },
-    oldVersion: val => {
+    oldVersion: (val) => {
       ModelMgr.versionModel.setOldVersion(val);
     },
-    needCover: val => {
+    needCover: (val) => {
       ModelMgr.versionModel.setNeedCover(val);
     },
-    needCompress: val => {
+    needCompress: (val) => {
       ModelMgr.versionModel.setNeedCompress(val);
     },
-    needPatch: value => {
+    needPatch: (value) => {
       ModelMgr.versionModel.setNeedPatch(value);
     },
-    uploadVersion: value => {
+    uploadVersion: (value) => {
       ModelMgr.versionModel.setUploadVersion(value);
     },
-    policyNum: value => {
+    policyNum: (value) => {
       ModelMgr.versionModel.setPolicyNum(value);
     },
-    whiteVersion: value => {
+    whiteVersion: (value) => {
       ModelMgr.versionModel.setWhiteVersion(value);
     },
-    normalVersion: value => {
+    normalVersion: (value) => {
       ModelMgr.versionModel.setNormalVersion(value);
     },
-    displayVersion: value => {
+    displayVersion: (value) => {
       ModelMgr.versionModel.setDisplayVersion(value);
     },
-    versionType: val => {
+    versionType: (val) => {
       ModelMgr.versionModel.setVersionType(val);
     },
-    channel: value => {
+    channel: (value) => {
       ModelMgr.versionModel.setChannel(value);
-    }
+    },
   },
   methods: {
     async onTestClick() {
@@ -601,14 +601,14 @@ export default {
 
       await mdCompress
         .compressFile()
-        .then(value => {
+        .then((value) => {
           this.isCompressPicLoading = false;
           Global.hideRegionLoading();
           if (showDialog) {
             Global.dialog("压缩成功");
           }
         })
-        .catch(reason => {
+        .catch((reason) => {
           this.isCompressPicLoading = false;
           Global.hideRegionLoading();
         });
@@ -645,14 +645,14 @@ export default {
 
       await mdPublish
         .copyPictures()
-        .then(value => {
+        .then((value) => {
           this.isCopyCompressPicLoading = false;
           Global.hideRegionLoading();
           if (showDialog) {
             Global.dialog("拷贝压缩图片成功");
           }
         })
-        .catch(reason => {
+        .catch((reason) => {
           this.isCopyCompressPicLoading = false;
           Global.hideRegionLoading();
         });
@@ -668,7 +668,7 @@ export default {
 
       await mdPublish
         .mergeVersion()
-        .then(async value => {
+        .then(async (value) => {
           await this.refreshVersionList();
           this.isMergeVersionLoading = false;
           Global.hideRegionLoading();
@@ -676,7 +676,7 @@ export default {
             Global.dialog("比较新旧成功");
           }
         })
-        .catch(reason => {
+        .catch((reason) => {
           this.isMergeVersionLoading = false;
           Global.hideRegionLoading();
         });
@@ -994,12 +994,12 @@ export default {
           promiseList.push(this.refreshVersionList);
         }
 
-        if (this.curEnviron.zipFileEnable) {
-          promiseList.push(mdFtp.zipVersion);
-        }
-
         if (this.curEnviron.copyFileEnable) {
           promiseList.push(mdFtp.copyVersion);
+        }
+
+        if (this.curEnviron.zipFileEnable) {
+          promiseList.push(mdFtp.zipVersion);
         }
 
         promiseList.push(mdFtp.uploadVersionFile);
@@ -1073,12 +1073,12 @@ export default {
     async refreshChannelList() {
       this.channelList = ModelMgr.versionModel.channelList;
       this.channel = ModelMgr.versionModel.channel;
-    }
+    },
   },
   async mounted() {
     ModelMgr.versionModel.initEnviron();
     this.environList = ModelMgr.versionModel.environList.filter(
-      value => Global.mode.environNames.indexOf(value.name) != -1
+      (value) => Global.mode.environNames.indexOf(value.name) != -1
     );
     this.curEnviron = ModelMgr.versionModel.curEnviron;
     this.environChange();
@@ -1086,7 +1086,7 @@ export default {
     ipcRenderer.on("client_one_click", (event, msg) => {
       this.oneClickContent = "只需要点一下就够了,蠢货!";
     });
-  }
+  },
 };
 </script>
 <style lang="less">
