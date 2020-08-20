@@ -88,4 +88,7 @@ export default class MsgId {
 
     /** 发送主进程log到渲染进程 */
     public static readonly sendMainLogToRenderer: string = "sendMainLogToRenderer";
+
+    /** 在native里面打开伪协议 */
+    public static readonly openFakeProtoInNative: string = "openFakeProtoInNative";
 }
