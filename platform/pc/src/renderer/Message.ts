@@ -99,7 +99,7 @@ class Message {
     /** 收到获取native策略号消息 */
     private async onGetNativePolicyVersion(): Promise<void> {
         const nativePolicyVersion: number = await util.getNativePolicyNum(commonConfig.environName);
-        this.sendIpcMsg(MsgId.SET_NATIVE_POLICY_VERSION, nativePolicyVersion);
+        this.sendIpcMsg(MsgId.checkNativeUpdate, nativePolicyVersion);
     }
 
     /** 收到错误上报 */
@@ -254,7 +254,7 @@ class Message {
     /** 检查更新完毕 */
     private checkUpdateComplete(): void {
         logger.log('update', `检查更新完毕`);
-        this.sendIpcMsg(`CHECK_UPDATE_COMPLETE`);
+        this.sendIpcMsg(MsgId.CHECK_UPDATE_COMPLETE);
     }
 
     /** 从客户端进入 */
