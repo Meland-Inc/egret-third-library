@@ -155,7 +155,7 @@ class Platform {
             }
 
             if (key === eQueryArgsField.back_url) {
-                newSearchParams.set(eQueryArgsField.back_url, encodeURIComponent(value));
+                newSearchParams.set(eQueryArgsField.back_url, value);
                 continue;
             }
 
