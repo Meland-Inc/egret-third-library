@@ -294,7 +294,7 @@ class MainControl {
 
     /** 在native里面打开伪协议时 */
     private onOpenFakeProtoInNative(tUrl: string): void {
-        mainModel.setUrlValue(tUrl);
+        mainModel.setFakeProtoURL(new URL(tUrl));
         this.initNative();
     }
 }
