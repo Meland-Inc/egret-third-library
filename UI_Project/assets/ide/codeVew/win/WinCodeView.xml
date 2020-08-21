@@ -10,6 +10,10 @@
       <gearDisplay controller="ctrlStatus" pages="0"/>
       <relation target="" sidePair="bottomext-bottom,rightext-right"/>
     </component>
+    <component id="n38_ijui" name="comCodeblockPageBar" src="zscmwcyinc" fileName="codeVew/com/ComCodeblockPageBar.xml" xy="955,0" size="852,56">
+      <gearDisplay controller="ctrlStatus" pages="0"/>
+      <relation target="n1_s45w" sidePair="width-width,left-left"/>
+    </component>
     <component id="n37_puqx" name="comCodeblockBtn" src="puqxwcyima" fileName="codeVew/com/ComCodeblockBtn.xml" xy="0,0">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
@@ -51,6 +55,13 @@
     <group id="n16_en7j" name="root" xy="0,-2" size="1923,1085" advanced="true">
       <gearDisplay controller="ctrlStatus" pages="0"/>
     </group>
+    <component id="n39_ijui" name="comCodeblockPageBtnEditMenus" src="ijuiwcyink" fileName="codeVew/com/ComCodeblockPageBtnEditMenus.xml" xy="1371,502">
+      <gearDisplay controller="ctrlStatus" pages="0"/>
+    </component>
+    <component id="n40_ijui" name="comCodeblockPageLabel" src="ijuiwcying" fileName="codeVew/com/ComCodeblockPageLabel.xml" xy="1266,432">
+      <gearDisplay controller="ctrlStatus" pages="0"/>
+      <relation target="n1_s45w" sidePair="center-center,middle-middle"/>
+    </component>
     <component id="n32_g61s" name="comEmptyClone" src="hl7ywcyijw" fileName="ideCommon/com/comEmptyCloneEntity.xml" xy="1719,0" controller="ctrlStatus,1">
       <gearDisplay controller="ctrlStatus" pages="2,1,6"/>
       <relation target="" sidePair="height-height,right-right"/>
