@@ -113,9 +113,7 @@ class Server {
                 gameServer += `${sign}rw=${tArgs.rw}`;
             }
 
-            logger.log('net', 'native上课客户端登录本地游戏服务器', gameServer);
-
-            message.sendIpcMsg(MsgId.SAVE_NATIVE_GAME_SERVER, gameServer);
+            logger.log('net', `mainModel.gameServerMode:${mainModel.gameServerMode}, 登录本地游戏服务器`, gameServer);
 
             //游戏地图
             if (mainModel.gameServerMode === CommonDefine.eGameServerMode.gameMap) {
@@ -128,7 +126,8 @@ class Server {
             //模板地图房间
             else if (mainModel.gameServerMode === CommonDefine.eGameServerMode.mapTemplateRoom) {
                 message.sendClientMsg(MsgId.enterMapTemplateRoom, gameServer);
-            } else {
+            }
+            else {
                 //reserve
             }
         }

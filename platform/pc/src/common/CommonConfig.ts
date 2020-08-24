@@ -24,7 +24,7 @@ class CommonConfig {
     public readonly bellcodeUrl = "https://www.bellcode.com";
 
     /** demo */
-    public readonly demoBellCodeUrl = "https://democm.wkcoding.com/";
+    public readonly demoBellCodeUrl = "https://democm.wkcoding.com";
 
     /** release账号服务器 */
     public readonly releaseAccountServer: string = "account.wkcoding.com";
