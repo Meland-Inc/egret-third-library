@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="410,450">
+  <controller name="ctrlIsImg" pages="1,no,0,yes" selected="0"/>
+  <displayList>
+    <image id="n15_jo99" name="tfShowTimeBG" src="jo99wcyims" fileName="attribute/img/bg_spsx_01.png" xy="0,56" size="394,62"/>
+    <text id="n4_eny0" name="tfQuestion" xy="6,65" size="378,44" fontSize="18" color="#333333" autoSize="none" text="" input="true"/>
+    <text id="n5_eny0" name="tfName" xy="0,9" size="54,35" fontSize="25" color="#333333" vAlign="middle" vars="true" text="题目"/>
+    <component id="n7_eny0" name="btnIsPic" src="jo99wcyin2" fileName="attribute/btn/rBtnIsPic.xml" xy="0,131">
+      <Button controller="ctrlIsImg" page="0"/>
+    </component>
+    <text id="n8_eny0" name="n8" xy="28,134" size="74,26" fontSize="18" color="#333333" vAlign="middle" text="图片题目"/>
+    <component id="n9_eny0" name="btnUpload" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="330,127" size="65,36">
+      <gearDisplay controller="ctrlIsImg" pages="0"/>
+      <Button title="浏览" titleColor="#828282" icon="ui://ti9jag5tjo99wcyin0"/>
+    </component>
+    <list id="n11_eny0" name="lstOption" xy="0,172" size="410,204" defaultItem="ui://ti9jag5teny0wcyimf">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n12_eny0" name="n12" xy="0,394" size="74,26" fontSize="18" color="#333333" vAlign="middle" text="正确选项"/>
+    <component id="n13_eny0" name="cbOption" src="grwpb3" fileName="attribute/widgets/ComboBox1.xml" xy="86,386" size="121,37">
+      <ComboBox visibleItemCount="4" direction="down">
+        <item title="点击"/>
+      </ComboBox>
+    </component>
+    <text id="n16_qx84" name="tfScore" xy="229,393" size="74,26" fontSize="18" color="#333333" vAlign="middle" text="积分分值"/>
+    <component id="n17_qx84" name="comInpScore" src="dv1icyiim" fileName="com/ComInput.xml" pkg="te1gxawo" xy="312,383" size="82,40">
+      <Label titleFontSize="19"/>
+    </component>
+  </displayList>
+</component>
