@@ -152,9 +152,13 @@ class Message {
             const dir = FileUtil.readdirSync(clientPackageDir);
             logger.log(`net`, `dir length:${dir.length}`);
             const zipIndex: number = dir.findIndex((tValue: string) => tValue.search(/release_v.*s.zip/) >= 0);
-            const clientVersion: number = rendererModel.getPackageVersion(CommonDefine.ePackageType.client);
-            //不存在客户端版本号,或者当文件数量小于2,或者有release压缩包(zip包不完整,导致解压失败),要重新下载新的包
-            if (!clientVersion || zipIndex >= 0 || dir.length < 2) {
+            const localClientVersion: number = rendererModel.getPackageVersion(CommonDefine.ePackageType.client);   //本地客户端版本号
+            const remoteClientVersion: number = await this._clientUpdate.getCurClientGameVersion(); //线上客户端版本号
+            //不存在客户端版本号,或者当文件数量小于2,或者有release压缩包(zip包不完整,导致解压失败),要重新下载新的包, 或者版本号大于10
+            if (!localClientVersion
+                || zipIndex >= 0
+                || dir.length < 2
+                || (remoteClientVersion && remoteClientVersion - localClientVersion > 10)) {
                 FileUtil.emptyDirSync(clientPackageDir);
                 clientDirect = true;
             }
