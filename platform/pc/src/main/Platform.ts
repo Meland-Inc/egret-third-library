@@ -169,7 +169,7 @@ class Platform {
 
         const gameServer = newSearchParams.get(eQueryArgsField.gameServer);
         if (gameServer) {
-            message.sendIpcMsg(MsgId.SAVE_NATIVE_GAME_SERVER, gameServer);
+            message.sendClientMsg(MsgId.nativeSignIn, gameServer);
         }
 
         return newSearchParams;
@@ -186,7 +186,11 @@ class Platform {
             util.requestPostHttps(mainModel.bellApiOrigin, null, '/common/member/login-by-temporary-token', data, null
                 , (tBody: IRspTemporaryToken, tResponse: http.IncomingMessage) => {
                     logger.log('net', `登陆贝尔平台返回body`, tBody);
-                    message.sendIpcMsg(MsgId.SAVE_NATIVE_HEADER_SET_COOKIE, tResponse.headers["set-cookie"]);
+                    if (tResponse && tResponse.headers) {
+                        message.sendIpcMsg(MsgId.SAVE_NATIVE_HEADER_SET_COOKIE, tResponse.headers["set-cookie"]);
+                    } else {
+                        logger.error('new', `login-by-temporary-token response headers is null`);
+                    }
 
                     if (tBody.code === 200) {
                         if ((tBody.data).token) {

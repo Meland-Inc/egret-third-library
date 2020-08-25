@@ -35,7 +35,6 @@ class Message {
         this._msgMap = new Map<string, () => void>();
         this._msgMap[MsgId.CLEAR_RENDERER_MODEL_DATA] = this.onClearRendererModelData.bind(this);
         this._msgMap[MsgId.SAVE_NATIVE_LOGIN_RESPONSE] = this.onSaveNativeLoginResponse.bind(this);
-        this._msgMap[MsgId.SAVE_NATIVE_GAME_SERVER] = this.onSaveNativeGameServer.bind(this);
         this._msgMap[MsgId.SAVE_NATIVE_HEADER_SET_COOKIE] = this.onSaveNativeHeaderSetCookie.bind(this);
         this._msgMap[MsgId.START_NATIVE_CLIENT] = this.onStartNativeClient.bind(this);
         this._msgMap[MsgId.START_NATIVE_WEBSITE] = this.onStartNativeWebsite.bind(this);
@@ -83,11 +82,6 @@ class Message {
     /** 保存native平台登陆信息 */
     private onSaveNativeLoginResponse(tBody: unknown): void {
         rendererModel.setNativeLoginResponse(tBody);
-    }
-
-    /** 保存native游戏服务器 */
-    private onSaveNativeGameServer(tGameServer: string): void {
-        rendererModel.setNativeGameServer(tGameServer);
     }
 
     /** 保存客户端获取的set-cookie */
@@ -322,16 +316,18 @@ class Message {
         searchParams.set('webviewToken', webviewToken);
 
         this.applySetCookie(bellPlatformDomain);
-        const newSearchParams = new URLSearchParams();
-        newSearchParams.set("class_id", searchParams.get("class_id"));
-        newSearchParams.set("package_id", searchParams.get("package_id"));
-        newSearchParams.set("lesson_id", searchParams.get("lesson_id"));
-        newSearchParams.set("act_id", searchParams.get("act_id"));
-        newSearchParams.set("webviewToken", webviewToken);
-        newSearchParams.set("back_url", searchParams.get("back_url"));
-        newSearchParams.set("iframeSrc", iframeUrl.toString());
 
-        const newURL = `${bellPlatformDomain}/#/bell-planet?${newSearchParams.toString()}`;
+        const newURL = new URL(`${bellPlatformDomain}/#/bell-planet`);
+        const class_id = searchParams.get("class_id");
+        if (class_id) {
+            newURL.searchParams.set("class_id", searchParams.get("class_id"));
+        }
+        newURL.searchParams.set("package_id", searchParams.get("package_id"));
+        newURL.searchParams.set("lesson_id", searchParams.get("lesson_id"));
+        newURL.searchParams.set("act_id", searchParams.get("act_id"));
+        newURL.searchParams.set("webviewToken", webviewToken);
+        newURL.searchParams.set("iframeSrc", iframeUrl.toString());
+        newURL.searchParams.set("back_url", searchParams.get("back_url"));
         logger.log('platform', `newURL`, newURL);
 
         this.loadRendererURL(newURL);
@@ -356,7 +352,7 @@ class Message {
         } else {
             url = tUrl;
         }
-        location.href = url;
+        window.location.href = url;
     }
 
     /** 监听客户端消息 */
@@ -385,10 +381,6 @@ class Message {
     private checkClearLocalStorage(): void {
         if (!rendererModel.nativeLoginResponse) {
             localStorage.removeItem('nativeLoginResponse');
-        }
-
-        if (!rendererModel.nativeGameServer) {
-            localStorage.removeItem('nativeGameServer');
         }
     }
 
