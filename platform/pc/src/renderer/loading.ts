@@ -53,13 +53,18 @@ export function hideLoadingProgress(): void {
 }
 
 export function setLoadingProgress(tValue: number): void {
-    progressValue = tValue;
+    if (tValue > 100) {
+        progressValue = 100;
+    } else {
+        progressValue = tValue;
+    }
     updateLoadingProgress();
 }
 
 export function gradualProgress(): void {
-    progressValue += 0.1;
-    updateLoadingProgress();
+    const newProgressValue: number = progressValue + 0.1;
+    setLoadingProgress(newProgressValue);
+
     clearTimeout();
     if (progressValue === 100) {
         return;
