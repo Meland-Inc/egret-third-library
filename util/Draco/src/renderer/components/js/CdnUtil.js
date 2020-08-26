@@ -62,13 +62,13 @@ export function checkUploaderFile(filePath, fileKey, cdnRoot, successFunc) {
 
 /** 上传单个文件 */
 export function uploaderFile(filePath, fileKey, cdnRoot, successFunc, failFunc) {
-    //测试代码,误删
+    // //测试代码,误删
     // const exist = fsExc.exists(filePath);
     // if (exist) {
-    //     console.log(`cdn --> upload ${fileKey} success`);
+    //     console.log(`test cdn --> upload ${filePath} ${fileKey} success`);
     //     successFunc();
     // } else {
-    //     console.error(`cdn --> upload ${fileKey} error`);
+    //     console.error(`test cdn --> upload ${filePath} ${fileKey} error`);
     //     failFunc();
     // }
     // return;
