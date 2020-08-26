@@ -4,7 +4,7 @@
  * @Date 2019-11-08 21:11:09
  * @FilePath \pc\src\renderer\ErrorReportRenderer.ts
  */
-import * as Sentry from '@sentry/electron/dist/renderer';
+import * as Sentry from '@sentry/browser';// '@sentry/electron/dist/renderer';
 import commonConfig from '../common/CommonConfig';
 import { CommonDefine } from '../common/CommonDefine';
 
@@ -38,7 +38,8 @@ class ErrorReportRenderer {
                     }
 
                     //如果是加载的游戏代码报错 堆栈是从file大头的 通过这个区分是不是游戏js报错 游戏报错这里不上报 让游戏自己上报
-                    if (filename.substr(0, 5) == 'file:') {
+                    const head = filename.substr(0, 4);
+                    if (head == 'file' || head == 'http') {
                         return null;
                     }
 
@@ -46,7 +47,7 @@ class ErrorReportRenderer {
                 }
             };
             Sentry.init({
-                dsn: 'https://680b16f3edf0447da3ff0dc0d67b0604@o121360.ingest.sentry.io/5395564',
+                dsn: 'https://e35a5f6e40da455cacd0292a5076831d@o121360.ingest.sentry.io/5398292',
                 // release: `bellplanet_${commonConfig.environName}_${codeVersion}`,
                 environment: commonConfig.environName,
                 beforeSend: beforeSend,

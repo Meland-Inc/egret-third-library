@@ -34,7 +34,7 @@ class ErrorReportMain {
             //     return event;
             // };
             Sentry.init({
-                dsn: 'https://680b16f3edf0447da3ff0dc0d67b0604@o121360.ingest.sentry.io/5395564',
+                dsn: 'https://e35a5f6e40da455cacd0292a5076831d@o121360.ingest.sentry.io/5398292',
                 // release: `bellplanet_${commonConfig.environName}_${codeVersion}`,
                 environment: commonConfig.environName,
                 // beforeSend: beforeSend,

@@ -553,6 +553,35 @@
     <image id="jo99wcyin1" name="bg_spsx_02.png" path="/attribute/img/" scale="9grid" scale9grid="20,7,30,24"/>
     <component id="jo99wcyin2" name="rBtnIsPic.xml" path="/attribute/btn/"/>
     <component id="rjjhwcyin3" name="barCm3.xml" path="/attribute/com/"/>
+    <component id="lwarwcyin4" name="comAWChoiceQuestion.xml" path="/attribute/widgets/" exported="true"/>
+    <component id="lwarwcyin5" name="comQuestionAction.xml" path="/attribute/com/"/>
+    <image id="lwarwcyin6" name="btn_spsx_04.png" path="/attribute/img/"/>
+    <image id="lwarwcyin7" name="btn_spsx_05.png" path="/attribute/img/"/>
+    <component id="qx84wcyin8" name="ComChoiceQuestionItem.xml" path="/attribute/widgets/" exported="true"/>
+    <component id="mbqdwcyin9" name="WinChoiceQuestion.xml" path="/choiceQuestion/win/" exported="true"/>
+    <image id="mbqdwcyina" name="bg_spxzt_01.png" path="/choiceQuestion/img/"/>
+    <image id="mbqdwcyinb" name="bg_spxzt_02.png" path="/choiceQuestion/img/"/>
+    <image id="mbqdwcyinc" name="bg_spxzt_03.png" path="/choiceQuestion/img/" scale="9grid" scale9grid="59,57,73,57"/>
+    <image id="mbqdwcyind" name="bg_spxzt_04.png" path="/choiceQuestion/img/" scale="9grid" scale9grid="36,27,72,54"/>
+    <image id="mbqdwcyine" name="btn_spxzt_01.png" path="/choiceQuestion/img/"/>
+    <image id="mbqdwcyinf" name="icon_spxzt_01.png" path="/choiceQuestion/img/"/>
+    <image id="mbqdwcying" name="icon_spxzt_02.png" path="/choiceQuestion/img/"/>
+    <image id="mbqdwcyinh" name="icon_spxzt_03.png" path="/choiceQuestion/img/"/>
+    <image id="mbqdwcyini" name="img_spxzt_01.png" path="/choiceQuestion/img/"/>
+    <image id="mbqdwcyinj" name="img_spxzt_02.png" path="/choiceQuestion/img/"/>
+    <image id="mbqdwcyink" name="img_spxzt_03.png" path="/choiceQuestion/img/"/>
+    <image id="mbqdwcyinl" name="img_spxzt_04.png" path="/choiceQuestion/img/" scale="9grid" scale9grid="58,21,46,42"/>
+    <image id="mbqdwcyinp" name="icon_zhuangbei_03.png" path="/choiceQuestion/img/"/>
+    <component id="mbqdwcyinr" name="btnChoiceQuestionOption.xml" path="/choiceQuestion/btn/"/>
+    <component id="mbqdwcyins" name="spImgArrowLeft.xml" path="/choiceQuestion/img/"/>
+    <image id="mbqdwcyint" name="bg_hdjf_01.png" path="/choiceQuestion/img/"/>
+    <image id="mbqdwcyinu" name="bg_hdjf_02.png" path="/choiceQuestion/img/"/>
+    <image id="mbqdwcyinv" name="btn_hdjf_01.png" path="/choiceQuestion/img/"/>
+    <image id="mbqdwcyinw" name="btn_hdjf_02.png" path="/choiceQuestion/img/"/>
+    <image id="mbqdwcyinx" name="icon_hdjf_01.png" path="/choiceQuestion/img/"/>
+    <image id="mbqdwcyiny" name="icon_hdjf_02.png" path="/choiceQuestion/img/"/>
+    <image id="mbqdwcyinz" name="img_hdjf_01.png" path="/choiceQuestion/img/"/>
+    <image id="chj2wcyio2" name="bg_chaifen_white.png" path="/choiceQuestion/img/" scale="9grid" scale9grid="35,28,70,56"/>
     <image id="zscmwcyin4" name="img_fenye_01.png" path="/codeVew/img/codeblockPage/" scale="9grid" scale9grid="34,0,68,1"/>
     <image id="zscmwcyin5" name="icon_fenye_01.png" path="/codeVew/img/codeblockPage/"/>
     <image id="zscmwcyin6" name="btn_fenye_03.png" path="/codeVew/img/codeblockPage/"/>

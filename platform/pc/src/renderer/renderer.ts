@@ -22,5 +22,5 @@ function init(): void {
     message.init();
 
     //错误上报初始化
-    // errorReportRenderer.init();
+    errorReportRenderer.init();
 }

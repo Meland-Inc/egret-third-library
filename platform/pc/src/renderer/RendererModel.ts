@@ -37,17 +37,6 @@ class RendererModel {
         logger.log('model', `设置nativeLoginResponse`);
     }
 
-    private _nativeGameServer: string;
-    /** 游戏服务器内网ip */
-    public get nativeGameServer(): string {
-        return this._nativeGameServer;
-    }
-    public setNativeGameServer(tValue: string): void {
-        this._nativeGameServer = tValue;
-        localStorage.setItem('nativeGameServer', JSON.stringify(this._nativeGameServer));
-        logger.log('model', `设置nativeGameServer`, this._nativeGameServer);
-    }
-
     public init(): void {
         logger.log('renderer', `初始化RendererModel`);
         if (FileUtil.existsSync(commonConfig.versionConfigPath)) {
@@ -97,7 +86,6 @@ class RendererModel {
     }
 
     public clearData(): void {
-        this.setNativeGameServer(null);
         this.setHeaderSetCookie(null);
     }
 }

@@ -128,6 +128,7 @@ class Main {
       webPreferences: {
         preload: `${commonConfig.rootPath}/dist/renderer-bundle.js`,
         nodeIntegration: true,
+        nodeIntegrationInSubFrames: true,
         webSecurity: false
       }
     });

@@ -61,9 +61,7 @@ export default class ClientUpdate {
 
         this._patchUrl = `${commonConfig.protocol}//${commonConfig.patchUrl}`;
 
-        const { policyHost, policyPath } = this.getPolicyInfo(commonConfig.policyUrl);
-
-        const curGameVersion = await this.getClientGameVersion(commonConfig.environName, policyHost, policyPath);
+        const curGameVersion = await this.getClientGameVersion(commonConfig.environName, commonConfig.policyUrl);
         if (!curGameVersion) return true;
 
         this._gameVersion = curGameVersion;
@@ -92,9 +90,18 @@ export default class ClientUpdate {
         return gameVersion;
     }
 
+    /** 获取当前环境客户端游戏版本号 */
+    public async getCurClientGameVersion(): Promise<number> {
+        const environName = commonConfig.environName;
+        const policyUrl: string = commonConfig.policyUrl;
+        const result = await this.getClientGameVersion(environName, policyUrl);
+        return result;
+    }
+
     /** 获取客户端游戏版本号 */
-    private async getClientGameVersion(tEnvironName: string, tPolicyHost: string, tPolicyPath: string): Promise<number> {
+    private async getClientGameVersion(tEnvironName: string, tPolicyUrl: string): Promise<number> {
         const policyNum = await util.getClientPackagePolicyNum(tEnvironName);
+        const { policyHost, policyPath } = this.getPolicyInfo(tPolicyUrl);
         if (policyNum === null) {
             const content = `获取策略版本号错误!, environName:${tEnvironName}`;
             logger.error(`renderer`, content);
@@ -103,7 +110,7 @@ export default class ClientUpdate {
         }
 
         try {
-            const gameVersion = await util.tryGetClientGameVersion(tPolicyHost, tPolicyPath, policyNum);
+            const gameVersion = await util.tryGetClientGameVersion(policyHost, policyPath, policyNum);
             return +gameVersion;
         } catch (error) {
             const content = "获取客户端版本号错误!";
@@ -251,8 +258,7 @@ export default class ClientUpdate {
             packageUrl = commonConfig.releasePackageUrl;
         }
 
-        const { policyHost, policyPath } = this.getPolicyInfo(policyUrl);
-        const gameVersion = await this.getClientGameVersion(environName, policyHost, policyPath);
+        const gameVersion = await this.getClientGameVersion(environName, policyUrl);
         const fileDir = `${commonConfig.protocol}//${packageUrl}`;
         const saveDir = this._clientPackagePath;
         const fileName = `release_v${gameVersion}s.zip`;

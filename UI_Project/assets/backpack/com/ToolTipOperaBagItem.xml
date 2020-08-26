@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="361,249" opaque="false" designImage="ui://48p8y12alt7w88" designImageOffsetX="-829" designImageOffsetY="197" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlOperateType" pages="1,select,0,use,5,loadEquip,2,unloadEquip,3,repair,4,none" selected="4"/>
+<component size="361,180" opaque="false" designImage="ui://48p8y12alt7w88" designImageOffsetX="-829" designImageOffsetY="197" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlOperateType" pages="1,select,0,use,5,loadEquip,2,unloadEquip,3,repair,6,split,4,none" selected="5"/>
   <displayList>
-    <image id="n2_grbn" name="tipsBg" src="lt7w7w" fileName="img/repaire/bg_zhuangbei_02.png" xy="1,0" size="234,249">
+    <image id="n2_grbn" name="tipsBg" src="lt7w7w" fileName="img/repaire/bg_zhuangbei_02.png" xy="1,0" size="234,180">
       <relation target="" sidePair="height-height"/>
     </image>
     <graph id="n56_lt7w" name="gphSizeObj" xy="236,0" size="124,99" visible="false" lineSize="0">
@@ -12,11 +12,11 @@
     <loader id="n42_els8" name="icon" xy="20,20" size="79,79" group="n43_els8" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
     <group id="n43_els8" name="grpItemIcon" xy="12,11" size="96,97" advanced="true"/>
     <text id="n9_grbn" name="tfName" xy="109,9" size="115,29" fontSize="20" color="#eba000" align="right" vAlign="middle" autoSize="none" text="测试技能"/>
-    <text id="n44_d8az" name="tfDesc" xy="12,192" size="200,25" fontSize="17" color="#99907d" autoSize="height" text="测试技能">
-      <gearXY controller="ctrlOperateType" pages="1,0,5,2,3,4" values="12,123|12,123|12,192|12,192|12,192|12,123"/>
+    <text id="n44_d8az" name="tfDesc" xy="12,123" size="200,25" fontSize="17" color="#99907d" autoSize="height" text="测试技能">
+      <gearXY controller="ctrlOperateType" pages="1,0,5,2,3,6,4" values="12,123|12,123|12,192|12,192|12,192|12,123|12,123"/>
     </text>
     <text id="n46_hl7y" name="tfType" xy="137,37" size="88,25" fontSize="17" color="#99907d" align="right" vAlign="middle" autoSize="none" bold="true" text="剑"/>
-    <text id="n47_hl7y" name="tfTexture" xy="12,223" size="200,18" fontSize="14" color="#99907d" align="right" vAlign="middle" vars="true" autoSize="none" text="纹理：{tex=texture}">
+    <text id="n47_hl7y" name="tfTexture" xy="12,154" size="200,18" fontSize="14" color="#99907d" align="right" vAlign="middle" vars="true" autoSize="none" text="纹理：{tex=texture}">
       <relation target="n44_d8az" sidePair="top-bottom"/>
     </text>
     <component id="n21_grbn" name="btnUse" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="241,3" size="115,53">
@@ -31,12 +31,12 @@
     <component id="n50_lt7w" name="btnRepair" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="241,3" size="115,53">
       <gearDisplay controller="ctrlOperateType" pages="3"/>
       <gearText controller="ctrlOperateType" pages="2,3" values="修理|修理" default="使用"/>
-      <Button title="修理" titleColor="#8e6100" titleFontSize="26" icon="ui://48p8y12alt7w7z"/>
-    </component>
-    <component id="n48_ftyz" name="btnSplit" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="241,66" size="115,53">
-      <gearDisplay controller="ctrlOperateType" pages="0"/>
-      <gearText controller="ctrlOperateType" pages="0,2" values="拆分|拆分" default="使用"/>
       <Button title="使用" titleColor="#8e6100" titleFontSize="26" icon="ui://48p8y12alt7w7z"/>
+    </component>
+    <component id="n48_ftyz" name="btnSplit" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="241,3" size="115,53">
+      <gearDisplay controller="ctrlOperateType" pages="0,6"/>
+      <gearXY controller="ctrlOperateType" pages="6" values="241,3" default="241,66"/>
+      <Button title="拆分" titleColor="#8e6100" titleFontSize="26" icon="ui://48p8y12alt7w7z"/>
     </component>
     <text id="n51_lt7w" name="tfAttack" xy="12,114" size="68,26" group="n55_lt7w" fontSize="18" color="#99907d" ubb="true" vars="true" text="攻击  [color=#e74100]{attack=60}"/>
     <text id="n52_lt7w" name="tfDurability" xy="12,149" size="111,26" group="n55_lt7w" fontSize="18" color="#99907d" ubb="true" vars="true" text="耐久  [color=#1b50bb]{cur=60} / {total=100}"/>
