@@ -2,7 +2,6 @@ import { Global } from "../Global";
 import * as fsExc from "../FsExecute";
 import * as ExternalUtil from "../ExternalUtil";
 import * as http from 'http';
-import os from 'os';
 
 export class VersionModel {
     eEnviron = {
@@ -31,9 +30,9 @@ export class VersionModel {
         },
         {
             name: this.eEnviron.ready, host: "47.107.73.43", user: "ftpadmin", password: "unclemiao",
-            zipPath: "/release/zip", scpRootPath: "/web", scpPath: "/web/ready", localPath: "/ready/web", localPolicyPath: "/ready/policy", serverPackagePath: "/ready/server_packages", mangleMapScpPath: "/mangleMap/ready",
+            zipPath: "/ready/zip", scpRootPath: "/web", scpPath: "/web/ready", localPath: "/ready/web", localPolicyPath: "/ready/policy", serverPackagePath: "/ready/server_packages", mangleMapScpPath: "/mangleMap/ready",
             updateGitEnable: true, gitBranch: "trunk/release", trunkName: "release", cdnRoot: "readyTest",
-            cdnPatchEnable: true, cdnWinPatchPath: "/win", cdnMacPatchPath: "/mac",
+            cdnPatchEnable: true, cdnWinPatchPath: "/ready/win", cdnMacPatchPath: "/ready/mac",
             publishEnable: true, mergeVersionEnable: true, compressPicEnable: false, zipFileEnable: true, policyEnable: true, scpEnable: true, cdnEnable: true,
             pushGitEnable: true, publishDescEnable: false, codeVersionEnable: true, gitTagEnable: true, zipUploadGameEnable: false, nativeEnable: true
         },
@@ -42,7 +41,7 @@ export class VersionModel {
             nativePackageEnable: true,
             zipPath: "/release/zip", scpRootPath: "", scpPath: "", localPath: "/release/web", localPolicyPath: "/release/policy", serverPackagePath: "/release/server_packages",
             updateGitEnable: false, gitBranch: "", trunkName: "", cdnRoot: "",
-            cdnWinPatchPath: "/win", cdnMacPatchPath: "/mac",
+            cdnPatchEnable: true, cdnWinPatchPath: "/win", cdnMacPatchPath: "/mac",
             copyFileEnable: true,
             publishEnable: false, mergeVersionEnable: true, compressPicEnable: false, zipFileEnable: true, policyEnable: true, scpEnable: false, cdnEnable: true,
             pushGitEnable: false, publishDescEnable: false, codeVersionEnable: false, gitTagEnable: false, zipUploadGameEnable: false, nativeEnable: false
@@ -366,7 +365,6 @@ export class VersionModel {
 
         this._nativePolicyNum = value;
 
-        // let platform = os.platform() === 'win32' ? "win" : "mac";
         //线上的native版本号
         let policyNum = await ExternalUtil.getNativePolicyNum(environName);
         this.originNativeVersion = await ExternalUtil.getNativeVersion(environName, policyNum);

@@ -57,12 +57,19 @@ export const serverList = [
 // export function getNormalVersion() { return normalVersion; }
 // export function setNormalVersion(value) { normalVersion = value; }
 
-function getPatchName() {
-    return `patch_v${ModelMgr.versionModel.oldVersion}s_v${ModelMgr.versionModel.newVersion}s.zip`;
+function getPatchName(oldVersion = ModelMgr.versionModel.oldVersion, newVersion = ModelMgr.versionModel.newVersion) {
+    return `patch_v${oldVersion}s_v${newVersion}s.zip`;
 }
 
 export async function zipVersion() {
     let environ = ModelMgr.versionModel.curEnviron;
+    //release特殊处理
+    if (environ.name === ModelMgr.versionModel.eEnviron.release) {
+        zipReleasePatchFile();
+        return;
+    }
+
+
     let zipPath = `${Global.svnPublishPath}${environ.zipPath}/`;
     await fsExc.makeDir(zipPath);
     let filePath;
@@ -81,6 +88,32 @@ export async function zipVersion() {
         console.log('压缩release版本完毕')
     } catch (error) {
         Global.snack(`压缩zip失败`, err);
+    }
+}
+
+/** 压缩release用补丁包散文件 */
+async function zipReleasePatchFile() {
+    let environ = ModelMgr.versionModel.curEnviron;
+    let releasePath = `${Global.svnPublishPath}${environ.localPath}`;
+    const readyGameVersion = await ModelMgr.versionModel.getEnvironGameVersion(ModelMgr.versionModel.eEnviron.ready);
+    const releaseGameVersion = await ModelMgr.versionModel.getEnvironGameVersion(ModelMgr.versionModel.eEnviron.release);
+    let curGameVersion = releaseGameVersion;
+    for (let i = +releaseGameVersion + 1; i <= readyGameVersion; i++) {
+        let patchVersion = `patch_v${curGameVersion}s-v${i}s`;
+        let releasePatchPath = `${releasePath}/${patchVersion}/`;
+        let patchExist = await fsExc.exists(releasePatchPath);
+        if (!patchExist) {
+            console.log(`补丁包不存在:${releasePatchPath}`);
+            continue;
+        }
+        const zipPath = `${Global.svnPublishPath}${environ.zipPath}/`;
+        const zipName = getPatchName(curGameVersion, i);
+
+        console.log(`开始压缩release版本, zipPath:${zipPath}, zipName:${zipName}`);
+        await zipProject(releasePatchPath, zipPath, zipName);
+        console.log('压缩release版本完毕')
+
+        curGameVersion = i;
     }
 }
 
@@ -370,6 +403,15 @@ async function uploadScpPolicyFile() {
 }
 
 async function scpFile(path, host, user, password, targetPath) {
+    // //测试代码,误删
+    // const exist = fsExc.exists(path);
+    // if (exist) {
+    //     console.log(`test scp --> upload ${path} success`);
+    // } else {
+    //     console.error(`test scp --> upload ${path} error`);
+    // }
+    // return;
+
     return new Promise((resolve, reject) => {
         let client = new scp2.Client();
         let total;
@@ -435,44 +477,49 @@ async function uploadScpMangleMap() {
 }
 
 async function uploadCdnPatchZip(cdnPatchPath) {
+    let curEnviron = ModelMgr.versionModel.curEnviron;
+    if (curEnviron.name === ModelMgr.versionModel.eEnviron.ready) {
+        await uploadReadyCdnPatchZip(curEnviron, cdnPatchPath);
+        return;
+    }
+
+    //release
+    await uploadReleaseCdnPatchZip(curEnviron, cdnPatchPath);
+}
+
+async function uploadReadyCdnPatchZip(environ, cdnPatchPath) {
+    const patchName = getPatchName();
+    await uploadSingleVersionCdnPatchZip(environ, cdnPatchPath, patchName);
+}
+
+async function uploadReleaseCdnPatchZip(environ, cdnPatchPath) {
+    const readyGameVersion = await ModelMgr.versionModel.getEnvironGameVersion(ModelMgr.versionModel.eEnviron.ready);
+    const releaseGameVersion = await ModelMgr.versionModel.getEnvironGameVersion(ModelMgr.versionModel.eEnviron.release);
+    let curGameVersion = releaseGameVersion;
+    for (let i = +releaseGameVersion + 1; i <= readyGameVersion; i++) {
+        const patchName = getPatchName(curGameVersion, i);
+        console.log(`开始上传补丁包,  zipName:${patchName}`);
+        await uploadSingleVersionCdnPatchZip(environ, cdnPatchPath, patchName);
+        console.log('压缩补丁包完毕')
+
+        curGameVersion = i;
+    }
+}
+
+/** 上传单个native用补丁zip包到cdn */
+async function uploadSingleVersionCdnPatchZip(environ, cdnPatchPath, patchName) {
     return new Promise(async (resolve, reject) => {
         if (!cdnPatchPath) {
             reject();
             console.log("没有配置补丁zip cdn上传路径");
         }
         await ModelMgr.ftpModel.initQiniuOption();
-        let releaseEnviron = ModelMgr.versionModel.environList.find(value => value.name === ModelMgr.versionModel.eEnviron.release);
-        let readyEnviron = ModelMgr.versionModel.environList.find(value => value.name === ModelMgr.versionModel.eEnviron.ready);
-        let readyPath = `${Global.svnPublishPath}${readyEnviron.zipPath}`;
-        let patchPath = `${readyPath}/${getPatchName()}`;
+        let releasePath = `${Global.svnPublishPath}${environ.zipPath}`;
+        let patchPath = `${releasePath}/${patchName}`;
         let patchExist = await fsExc.exists(patchPath);
         if (patchExist) {
-            let fileKey = `${cdnPatchPath}/${getPatchName()}`;
-            CdnUtil.checkUploaderFile(patchPath, fileKey, releaseEnviron.cdnRoot, resolve);
-            // let formUploader = new qiniu.form_up.FormUploader(ModelMgr.ftpModel.qiniuConfig);
-            // let uploadToken = ModelMgr.ftpModel.uploadToken;
-            // let readerStream = fs.createReadStream(patchPath);
-            // let putExtra = new qiniu.form_up.PutExtra();
-            // formUploader.putStream(uploadToken, fileKey, readerStream, putExtra, (rspErr, rspBody, rspInfo) => {
-            //     if (rspErr) {
-            //         //单个文件失败
-            //         console.error(rspErr);
-            //         console.error(`cdn --> upload ${fileKey} error`);
-            //         reject();
-            //         return;
-            //     }
-
-            //     //200:成功 614:文件重复
-            //     if (rspInfo.statusCode != 200 && rspInfo.statusCode != 614) {
-            //         console.log(rspInfo.statusCode);
-            //         console.log(rspBody);
-            //         reject();
-            //         return;
-            //     }
-
-            //     console.log(`cdn --> upload ${fileKey} success`);
-            //     resolve();
-            // });
+            let fileKey = `${cdnPatchPath}/${patchName}`;
+            CdnUtil.checkUploaderFile(patchPath, fileKey, environ.cdnRoot, resolve);
         }
 
         resolve();
