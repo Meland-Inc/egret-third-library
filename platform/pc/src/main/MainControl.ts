@@ -294,8 +294,13 @@ class MainControl {
 
     /** 在native里面打开伪协议时 */
     private onOpenFakeProtoInNative(tUrl: string): void {
-        mainModel.setFakeProtoURL(new URL(tUrl));
-        this.initNative();
+        try {
+            const url = new URL(tUrl);
+            mainModel.setFakeProtoURL(url);
+            this.initNative();
+        } catch (error) {
+            logger.log('update', `onOpenFakeProtoInNative error`, error);
+        }
     }
 }
 
