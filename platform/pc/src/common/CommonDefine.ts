@@ -82,7 +82,7 @@ export namespace CommonDefine {
             "policyUrl": "planet.wkcoding.com/web/beta/"
         },
         "ready": {
-            "patchUrl": "bg-stage.wkcoding.com//win",
+            "patchUrl": "bg-stage.wkcoding.com/readyTest//ready/win",
             "packageUrl": "bg-stage.wkcoding.com/clientPackages/ready",
             "policyUrl": "bg-stage.wkcoding.com/readyTest"
         },
