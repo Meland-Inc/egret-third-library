@@ -83,7 +83,12 @@ class Main {
     tEvent.preventDefault();
     if (!mainModel.mainWindow) {
       if (tUrl) {
-        mainModel.setFakeProtoURL(new URL(tUrl));
+        try {
+          const url = new URL(tUrl);
+          mainModel.setFakeProtoURL(url);
+        } catch{
+
+        }
       }
       return;
     }
@@ -115,10 +120,18 @@ class Main {
   //创建游戏浏览窗口
   private async createWindow(): Promise<void> {
     //优先设置url参数, 因为参数里带有当前环境参数
+    logger.log('main', `收到参数: ${JSON.stringify(process.argv)}`);
+    //优先设置url参数, 因为参数里带有当前环境参数
     if (os.platform() === "win32") {
-      const url = process.argv.concat().splice(app.isPackaged ? 1 : 2).join("");
-      if (url) {
-        mainModel.setFakeProtoURL(new URL(url));
+      const urlValue = process.argv.concat().splice(app.isPackaged ? 1 : 2).join("");
+      if (urlValue && urlValue !== "--updated") {
+        logger.log('main', `setFakeProtoUrl value: ${urlValue}`);
+        try {
+          const url = new URL(urlValue);
+          mainModel.setFakeProtoURL(url);
+        } catch (error) {
+          logger.error('main', `setFakeProtoUrl error: ${urlValue}`);
+        }
       }
     }
 
