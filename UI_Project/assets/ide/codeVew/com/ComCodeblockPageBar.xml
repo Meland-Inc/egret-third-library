@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="800,56">
-  <controller name="ctrlType" pages="0,none,1,normal,2,full" selected="2"/>
+  <controller name="ctrlType" pages="0,none,1,normal,2,full" selected="1"/>
   <displayList>
     <graph id="n6_ijui" name="bgWhite" xy="0,0" size="800,56" type="rect" lineSize="0">
       <gearDisplay controller="ctrlType" pages="1,2"/>
@@ -10,7 +10,7 @@
       <gearDisplay controller="ctrlType" pages="1,2"/>
       <relation target="" sidePair="width-width"/>
     </image>
-    <list id="n0_zscm" name="lstPage" xy="5,0" size="701,56" layout="row" overflow="scroll" scroll="horizontal" colGap="5" defaultItem="ui://ti9jag5tzscmwcyind" autoItemSize="false" autoClearItems="true" scrollItemToViewOnClick="false">
+    <list id="n0_zscm" name="lstPage" xy="0,0" size="701,56" layout="row" overflow="scroll" scroll="horizontal" defaultItem="ui://ti9jag5tzscmwcyind" autoItemSize="false" autoClearItems="true" scrollItemToViewOnClick="false">
       <gearDisplay controller="ctrlType" pages="1,2"/>
       <item/>
       <item/>

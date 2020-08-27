@@ -1,35 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="105,56" restrictSize="105,0,0,0" overflow="hidden" extention="Button">
+<component size="109,56" restrictSize="109,0,0,0" overflow="hidden" extention="Button">
   <controller name="button" pages="2,up,3,down" selected="0"/>
-  <controller name="ctrlType" pages="0,normal,3,hide,1,ban,2,create" selected="3"/>
+  <controller name="ctrlType" pages="0,normal,3,hide,1,ban,2,create" selected="2"/>
   <displayList>
-    <image id="n0_zscm" name="normalBG" src="zscmwcyinb" fileName="codeVew/img/codeblockPage/bg_fenye_01.png" xy="0,25" size="105,50">
-      <gearDisplay controller="ctrlType" pages="0,3,1"/>
-      <gearXY controller="button" pages="2" values="0,25" default="0,6"/>
+    <image id="n0_zscm" name="normalBG" src="zscmwcyinb" fileName="codeVew/img/codeblockPage/bg_fenye_01.png" xy="2,25" size="105,50">
+      <gearDisplay controller="ctrlType" pages="0"/>
+      <gearXY controller="button" pages="2,3" values="2,25|2,6"/>
       <relation target="" sidePair="width-width"/>
     </image>
-    <image id="n9_c0cb" name="createBG" src="zscmwcyin9" fileName="codeVew/img/codeblockPage/bg_fenye_03.png" xy="0,25">
+    <image id="n9_c0cb" name="createBG" src="zscmwcyin9" fileName="codeVew/img/codeblockPage/bg_fenye_03.png" xy="2,25">
       <gearDisplay controller="ctrlType" pages="2"/>
     </image>
-    <image id="n1_zscm" name="hideBG" src="zscmwcyina" fileName="codeVew/img/codeblockPage/bg_fenye_02.png" xy="0,25" size="105,50">
-      <gearDisplay controller="ctrlType" pages="3"/>
+    <image id="n1_zscm" name="hideBG" src="zscmwcyina" fileName="codeVew/img/codeblockPage/bg_fenye_02.png" xy="2,25" size="105,50">
+      <gearDisplay controller="ctrlType" pages="3,1"/>
+      <gearXY controller="button" pages="2,3" values="2,25|2,6"/>
       <relation target="" sidePair="width-width"/>
     </image>
-    <image id="n3_zscm" name="n3" src="zscmwcyin5" fileName="codeVew/img/codeblockPage/icon_fenye_01.png" xy="40,29">
+    <image id="n3_zscm" name="n3" src="zscmwcyin5" fileName="codeVew/img/codeblockPage/icon_fenye_01.png" xy="42,29">
       <gearDisplay controller="ctrlType" pages="1"/>
-      <gearXY controller="button" pages="2,3" values="40,29|40,19"/>
+      <gearXY controller="button" pages="2,3" values="42,29|42,19"/>
       <relation target="" sidePair="center-center"/>
     </image>
-    <image id="n6_zscm" name="n6" src="zscmwcyin4" fileName="codeVew/img/codeblockPage/img_fenye_01.png" xy="0,54" size="105,2">
+    <image id="n6_zscm" name="n6" src="zscmwcyin4" fileName="codeVew/img/codeblockPage/img_fenye_01.png" xy="0,54" size="109,2">
       <gearDisplay controller="button" pages="2"/>
       <relation target="" sidePair="width-width"/>
     </image>
-    <text id="n7_zscm" name="title" xy="13,30" size="77,22" fontSize="18" align="center" vAlign="middle" singleLine="true" autoClearText="true" text="测试测试">
+    <text id="n7_zscm" name="title" xy="15,28" size="77,22" fontSize="18" align="center" vAlign="middle" singleLine="true" autoClearText="true" text="测试测试">
       <gearDisplay controller="ctrlType" pages="0,3,1"/>
-      <gearXY controller="button" pages="2,3" values="13,30|13,21"/>
+      <gearXY controller="button" pages="2,3" values="15,28|16,18"/>
       <relation target="" sidePair="center-center"/>
     </text>
-    <image id="n8_ijui" name="n8" src="ijuiwcyine" fileName="codeVew/img/codeblockPage/icon_fenye_02.png" xy="45,33">
+    <image id="n8_ijui" name="n8" src="ijuiwcyine" fileName="codeVew/img/codeblockPage/icon_fenye_02.png" xy="47,33">
       <gearDisplay controller="ctrlType" pages="2"/>
     </image>
   </displayList>
