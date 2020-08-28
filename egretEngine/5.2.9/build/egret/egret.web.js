@@ -1,13 +1,19 @@
 var __reflect = (this && this.__reflect) || function (p, c, t) {
     p.__class__ = c, t ? t.push(c) : t = [c], p.__types__ = p.__types__ ? t.concat(p.__types__) : t;
 };
-var __extends = this && this.__extends || function __extends(t, e) { 
- function r() { 
- this.constructor = t;
-}
-for (var i in e) e.hasOwnProperty(i) && (t[i] = e[i]);
-r.prototype = e.prototype, t.prototype = new r();
-};
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    }
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 //////////////////////////////////////////////////////////////////////////////////////
 //
 //  Copyright (c) 2014-present, Egret Technology.
@@ -101,7 +107,7 @@ var egret;
         /**
          * @private
          */
-        var WebExternalInterface = (function () {
+        var WebExternalInterface = /** @class */ (function () {
             function WebExternalInterface() {
             }
             /**
@@ -135,7 +141,7 @@ var egret;
         /**
          * @private
          */
-        var NativeExternalInterface = (function () {
+        var NativeExternalInterface = /** @class */ (function () {
             function NativeExternalInterface() {
             }
             NativeExternalInterface.call = function (functionName, value) {
@@ -181,7 +187,7 @@ var egret;
         /**
          * @private
          */
-        var WebViewExternalInterface = (function () {
+        var WebViewExternalInterface = /** @class */ (function () {
             function WebViewExternalInterface() {
             }
             WebViewExternalInterface.call = function (functionName, value) {
@@ -245,7 +251,7 @@ var egret;
          * @private
          * @inheritDoc
          */
-        var HtmlSound = (function (_super) {
+        var HtmlSound = /** @class */ (function (_super) {
             __extends(HtmlSound, _super);
             /**
              * @private
@@ -283,7 +289,7 @@ var egret;
                 audio.addEventListener("canplaythrough", onAudioLoaded);
                 audio.addEventListener("error", onAudioError);
                 var ua = navigator.userAgent.toLowerCase();
-                if (ua.indexOf("firefox") >= 0) {
+                if (ua.indexOf("firefox") >= 0) { //火狐兼容
                     audio.autoplay = !0;
                     audio.muted = true;
                 }
@@ -300,7 +306,7 @@ var egret;
                 function onAudioLoaded() {
                     HtmlSound.$recycle(this.url, audio);
                     removeListeners();
-                    if (ua.indexOf("firefox") >= 0) {
+                    if (ua.indexOf("firefox") >= 0) { //火狐兼容
                         audio.pause();
                         audio.muted = false;
                     }
@@ -454,7 +460,7 @@ var egret;
          * @private
          * @inheritDoc
          */
-        var HtmlSoundChannel = (function (_super) {
+        var HtmlSoundChannel = /** @class */ (function (_super) {
             __extends(HtmlSoundChannel, _super);
             /**
              * @private
@@ -624,7 +630,7 @@ var egret;
         /**
          * @private
          */
-        var WebAudioDecode = (function () {
+        var WebAudioDecode = /** @class */ (function () {
             function WebAudioDecode() {
             }
             /**
@@ -672,7 +678,7 @@ var egret;
          * @private
          * @inheritDoc
          */
-        var WebAudioSound = (function (_super) {
+        var WebAudioSound = /** @class */ (function (_super) {
             __extends(WebAudioSound, _super);
             /**
              * @private
@@ -828,7 +834,7 @@ var egret;
          * @private
          * @inheritDoc
          */
-        var WebAudioSoundChannel = (function (_super) {
+        var WebAudioSoundChannel = /** @class */ (function (_super) {
             __extends(WebAudioSoundChannel, _super);
             /**
              * @private
@@ -1003,7 +1009,7 @@ var egret;
          * @private
          * @inheritDoc
          */
-        var WebVideo = (function (_super) {
+        var WebVideo = /** @class */ (function (_super) {
             __extends(WebVideo, _super);
             /**
              * @inheritDoc
@@ -1483,7 +1489,7 @@ var egret;
              */
             WebVideo.prototype.$setHeight = function (value) {
                 this.heightSet = value;
-                if (this.paused) {
+                if (this.paused) { // 在暂停和播放结束后，修改视频大小时，没有重绘导致的bug
                     var self_1 = this;
                     this.$renderDirty = true;
                     window.setTimeout(function () {
@@ -1498,7 +1504,7 @@ var egret;
              */
             WebVideo.prototype.$setWidth = function (value) {
                 this.widthSet = value;
-                if (this.paused) {
+                if (this.paused) { // 在暂停和播放结束后，修改视频大小时，没有重绘导致的bug
                     var self_2 = this;
                     this.$renderDirty = true;
                     window.setTimeout(function () {
@@ -1572,7 +1578,7 @@ var egret;
         /**
          * @private
          */
-        var WebHttpRequest = (function (_super) {
+        var WebHttpRequest = /** @class */ (function (_super) {
             __extends(WebHttpRequest, _super);
             /**
              * @private
@@ -1769,12 +1775,12 @@ var egret;
              */
             WebHttpRequest.prototype.onReadyStateChange = function () {
                 var xhr = this._xhr;
-                if (xhr.readyState == 4) {
+                if (xhr.readyState == 4) { // 4 = "loaded"
                     var ioError_1 = (xhr.status >= 400 || xhr.status == 0);
                     var url_1 = this._url;
                     var self_3 = this;
                     window.setTimeout(function () {
-                        if (ioError_1) {
+                        if (ioError_1) { //请求错误
                             if (true && !self_3.hasEventListener(egret.IOErrorEvent.IO_ERROR)) {
                                 egret.$error(1011, url_1);
                             }
@@ -1803,7 +1809,7 @@ var egret;
                 var url = this._url;
                 var ioError = (xhr.status >= 400);
                 window.setTimeout(function () {
-                    if (ioError) {
+                    if (ioError) { //请求错误
                         if (true && !self.hasEventListener(egret.IOErrorEvent.IO_ERROR)) {
                             egret.$error(1011, url);
                         }
@@ -1872,7 +1878,7 @@ var egret;
          * @private
          * ImageLoader 类可用于加载图像（JPG、PNG 或 GIF）文件。使用 load() 方法来启动加载。被加载的图像对象数据将存储在 ImageLoader.data 属性上 。
          */
-        var WebImageLoader = (function (_super) {
+        var WebImageLoader = /** @class */ (function (_super) {
             __extends(WebImageLoader, _super);
             function WebImageLoader() {
                 var _this = _super !== null && _super.apply(this, arguments) || this;
@@ -1923,7 +1929,7 @@ var egret;
                     && url.indexOf("wxLocalResource:") != 0 //微信专用不能使用 blob
                     && url.indexOf("data:") != 0
                     && url.indexOf("http:") != 0
-                    && url.indexOf("https:") != 0) {
+                    && url.indexOf("https:") != 0) { //如果是base64编码或跨域访问的图片，直接使用Image.src解析。
                     var request = this.request;
                     if (!request) {
                         request = this.request = new egret.web.WebHttpRequest();
@@ -2090,7 +2096,7 @@ var egret;
          * @extends egret.StageText
          * @private
          */
-        var HTML5StageText = (function (_super) {
+        var HTML5StageText = /** @class */ (function (_super) {
             __extends(HTML5StageText, _super);
             /**
              * @private
@@ -2507,7 +2513,7 @@ var egret;
         /**
          * @private
          */
-        var HTMLInput = (function () {
+        var HTMLInput = /** @class */ (function () {
             function HTMLInput() {
                 /**
                  * @private
@@ -2949,7 +2955,7 @@ var egret;
          * @private
          * Canvas2D渲染缓冲
          */
-        var CanvasRenderBuffer = (function () {
+        var CanvasRenderBuffer = /** @class */ (function () {
             function CanvasRenderBuffer(width, height, root) {
                 this.surface = createCanvas(width, height);
                 this.context = this.surface.getContext("2d");
@@ -3084,7 +3090,7 @@ var egret;
         /**
          * @private
          */
-        var WebTouchHandler = (function (_super) {
+        var WebTouchHandler = /** @class */ (function (_super) {
             __extends(WebTouchHandler, _super);
             /**
              * @private
@@ -3100,7 +3106,7 @@ var egret;
                     _this._curButton = event.button;
                 };
                 _this.onMouseMove = function (event) {
-                    if (event.buttons == 0) {
+                    if (event.buttons == 0) { //在外面松开按键
                         _this.onTouchEnd(event);
                     }
                     else {
@@ -3415,7 +3421,7 @@ var egret;
         /**
          * @private
          */
-        var AudioType = (function () {
+        var AudioType = /** @class */ (function () {
             function AudioType() {
             }
             /**
@@ -3434,7 +3440,7 @@ var egret;
          * html5兼容性配置
          * @private
          */
-        var Html5Capatibility = (function (_super) {
+        var Html5Capatibility = /** @class */ (function (_super) {
             __extends(Html5Capatibility, _super);
             /**
              * @private
@@ -3470,12 +3476,12 @@ var egret;
                     checkAudioType = true;
                     Html5Capatibility.setAudioType(AudioType.HTML5_AUDIO);
                 }
-                if (ua.indexOf("android") >= 0) {
+                if (ua.indexOf("android") >= 0) { //android
                     if (checkAudioType && canUseWebAudio) {
                         Html5Capatibility.setAudioType(AudioType.WEB_AUDIO);
                     }
                 }
-                else if (ua.indexOf("iphone") >= 0 || ua.indexOf("ipad") >= 0 || ua.indexOf("ipod") >= 0) {
+                else if (ua.indexOf("iphone") >= 0 || ua.indexOf("ipad") >= 0 || ua.indexOf("ipod") >= 0) { //ios
                     if (Html5Capatibility.getIOSVersion() >= 7) {
                         Html5Capatibility._canUseBlob = true;
                         if (checkAudioType && canUseWebAudio) {
@@ -3487,7 +3493,7 @@ var egret;
                 if (!winURL) {
                     Html5Capatibility._canUseBlob = false;
                 }
-                if (ua.indexOf("egretnative") >= 0) {
+                if (ua.indexOf("egretnative") >= 0) { // Egret Native
                     Html5Capatibility.setAudioType(AudioType.HTML5_AUDIO);
                     Html5Capatibility._canUseBlob = true;
                 }
@@ -3640,7 +3646,7 @@ var egret;
             if (ua.indexOf("egretnative") >= 0 && ua.indexOf("egretwebview") == -1) {
                 egret.Capabilities["runtimeType" + ""] = egret.RuntimeType.RUNTIME2;
             }
-            if (ua.indexOf("egretnative") >= 0 && egret.nativeRender) {
+            if (ua.indexOf("egretnative") >= 0 && egret.nativeRender) { // Egret Native
                 egret_native.addModuleCallback(function () {
                     web.Html5Capatibility.$init();
                     // WebGL上下文参数自定义
@@ -3661,11 +3667,6 @@ var egret;
                     }
                     else {
                         canvasScaleFactor = window.devicePixelRatio;
-                    }
-                    //如果实际分辨率大于设计分辨率时按照设计分辨率 复杂游戏如果随着屏幕分辨率自动适配原生分辨率会导致性能低
-                    //实际小的话原生也跟随降下来节省性能
-                    if (canvasScaleFactor > 1) {
-                        canvasScaleFactor = 1;
                     }
                     egret.sys.DisplayList.$canvasScaleFactor = canvasScaleFactor;
                     var ticker = egret.ticker;
@@ -3725,11 +3726,6 @@ var egret;
                         context.oBackingStorePixelRatio ||
                         context.backingStorePixelRatio || 1;
                     canvasScaleFactor = (window.devicePixelRatio || 1) / backingStore;
-                }
-                //如果实际分辨率大于设计分辨率时按照设计分辨率 复杂游戏如果随着屏幕分辨率自动适配原生分辨率会导致性能低
-                //实际小的话原生也跟随降下来节省性能
-                if (canvasScaleFactor > 1) {
-                    canvasScaleFactor = 1;
                 }
                 egret.sys.DisplayList.$canvasScaleFactor = canvasScaleFactor;
                 var ticker_1 = egret.ticker;
@@ -3852,7 +3848,7 @@ var egret;
         /**
          * @private
          */
-        var WebCapability = (function () {
+        var WebCapability = /** @class */ (function () {
             function WebCapability() {
             }
             /**
@@ -3877,6 +3873,10 @@ var egret;
                 else {
                     if (ua.indexOf("windows nt") != -1) {
                         capabilities["os" + ""] = "Windows PC";
+                    }
+                    else if (navigator.platform == "MacIntel" && navigator.maxTouchPoints > 1) { //ios 13 Request Desktop Website
+                        capabilities["os" + ""] = "iOS";
+                        capabilities["isMobile" + ""] = true;
                     }
                     else if (ua.indexOf("mac os") != -1) {
                         capabilities["os" + ""] = "Mac OS";
@@ -3967,7 +3967,7 @@ var egret;
         /**
          * @private
          */
-        var WebFps = (function () {
+        var WebFps = /** @class */ (function () {
             function WebFps(stage, showFPS, showLog, logFilter, styles) {
                 this.showPanle = true;
                 this.fpsHeight = 0;
@@ -4296,7 +4296,7 @@ var egret;
         /**
          * @private
          */
-        var WebPlayer = (function (_super) {
+        var WebPlayer = /** @class */ (function (_super) {
             __extends(WebPlayer, _super);
             function WebPlayer(container, options) {
                 var _this = _super.call(this) || this;
@@ -4433,7 +4433,7 @@ var egret;
                 }
                 var rotation = 0;
                 if (shouldRotate) {
-                    if (orientation == egret.OrientationMode.LANDSCAPE) {
+                    if (orientation == egret.OrientationMode.LANDSCAPE) { //
                         rotation = 90;
                         canvas.style.top = top + (boundingClientHeight - displayWidth) / 2 + "px";
                         canvas.style.left = (boundingClientWidth + displayHeight) / 2 + "px";
@@ -4449,39 +4449,42 @@ var egret;
                     canvas.style.left = (boundingClientWidth - displayWidth) / 2 + "px";
                 }
                 var displayScalex = displayWidth / stageWidth, diplayScaley = displayHeight / stageHeight;
-                //用mac台式实测 displayScalex不是实际像素分辨率 只为了拿到xy的舞台比例 实际像素影响canvasScaleFactor 在上层解决
-                // //不要让渲染分辨率大于stage  但是缩小分辨率的时候 可以适应低分辨率渲染节省性能 xy需要同比例缩小
-                // let realScaleX = displayScalex;
-                // let realScaleY = diplayScaley;
-                // let maxScale = displayScalex > diplayScaley ? displayScalex : diplayScaley;//最大缩放值
-                // //只有大于舞台设计分辨率才按舞台设计分辨率
-                // if (maxScale > 1) {
-                //     realScaleX = displayScalex / maxScale;
-                //     realScaleY = diplayScaley / maxScale;
-                // }
-                // let canvasScaleX = realScaleX * sys.DisplayList.$canvasScaleFactor * sys.DisplayList.canvasExternalScale;
-                // let canvasScaleY = realScaleY * sys.DisplayList.$canvasScaleFactor * sys.DisplayList.canvasExternalScale;
-                var canvasScaleX = displayScalex * egret.sys.DisplayList.$canvasScaleFactor * egret.sys.DisplayList.canvasExternalScale;
-                var canvasScaleY = diplayScaley * egret.sys.DisplayList.$canvasScaleFactor * egret.sys.DisplayList.canvasExternalScale;
+                var realScaleX = displayScalex * egret.sys.DisplayList.$canvasScaleFactor; //最终实际缩放
+                var realScaleY = diplayScaley * egret.sys.DisplayList.$canvasScaleFactor;
+                //将xy原始渲染缩放控制在1以内  不大于舞台设计分辨率 但是缩小分辨率的时候 可以适应低分辨率渲染节省性能 xy需要同比例缩小
+                var originalMaxScale = realScaleX > realScaleY ? realScaleX : realScaleY; //原始渲染最大缩放值
+                if (originalMaxScale > 1) {
+                    realScaleX = realScaleX / originalMaxScale;
+                    realScaleY = realScaleY / originalMaxScale;
+                }
+                //加上外部控制缩放后 也不能超过原始渲染缩放 超过了屏幕原生分辨后没有意义
+                realScaleX *= egret.sys.DisplayList.canvasExternalScale;
+                realScaleY *= egret.sys.DisplayList.canvasExternalScale;
+                var externalMaxScale = realScaleX > realScaleY ? realScaleX : realScaleY; //外部控制后的最大缩放值
+                if (externalMaxScale > originalMaxScale) {
+                    var scale = originalMaxScale / externalMaxScale;
+                    realScaleX *= scale;
+                    realScaleY *= scale;
+                }
                 if (egret.Capabilities.renderMode == "canvas") {
-                    canvasScaleX = Math.ceil(canvasScaleX);
-                    canvasScaleY = Math.ceil(canvasScaleY);
+                    realScaleY = Math.ceil(realScaleY);
+                    realScaleY = Math.ceil(realScaleY);
                 }
                 var m = egret.Matrix.create();
                 m.identity();
-                m.scale(displayScalex / canvasScaleX, diplayScaley / canvasScaleY);
+                m.scale(displayScalex / realScaleY, diplayScaley / realScaleY);
                 m.rotate(rotation * Math.PI / 180);
                 var transform = "matrix(" + m.a + "," + m.b + "," + m.c + "," + m.d + "," + m.tx + "," + m.ty + ")";
                 egret.Matrix.release(m);
                 canvas.style[egret.web.getPrefixStyleName("transform")] = transform;
-                egret.sys.DisplayList.$setCanvasScale(canvasScaleX, canvasScaleY);
+                egret.sys.DisplayList.$setCanvasScale(realScaleY, realScaleY);
                 this.webTouchHandler.updateScaleMode(displayScalex, diplayScaley, rotation);
                 this.webInput.$updateSize();
                 this.player.updateStageSize(stageWidth, stageHeight); //不要在这个方法后面修改属性
                 // todo
                 if (egret.nativeRender) {
-                    canvas.width = stageWidth * canvasScaleX;
-                    canvas.height = stageHeight * canvasScaleY;
+                    canvas.width = stageWidth * realScaleY;
+                    canvas.height = stageHeight * realScaleY;
                 }
             };
             WebPlayer.prototype.setContentSize = function (width, height) {
@@ -4700,7 +4703,7 @@ var egret;
          * @private
          * XML节点基类
          */
-        var XMLNode = (function () {
+        var XMLNode = /** @class */ (function () {
             /**
              * @private
              */
@@ -4716,7 +4719,7 @@ var egret;
          * @private
          * XML节点对象
          */
-        var XML = (function (_super) {
+        var XML = /** @class */ (function (_super) {
             __extends(XML, _super);
             /**
              * @private
@@ -4747,7 +4750,7 @@ var egret;
          * @private
          * XML文本节点
          */
-        var XMLText = (function (_super) {
+        var XMLText = /** @class */ (function (_super) {
             __extends(XMLText, _super);
             /**
              * @private
@@ -4831,7 +4834,7 @@ var egret;
         /**
          * @private
          */
-        var WebDeviceOrientation = (function (_super) {
+        var WebDeviceOrientation = /** @class */ (function (_super) {
             __extends(WebDeviceOrientation, _super);
             function WebDeviceOrientation() {
                 var _this = _super !== null && _super.apply(this, arguments) || this;
@@ -4875,7 +4878,7 @@ var egret;
         /**
          * @private
          */
-        var WebGeolocation = (function (_super) {
+        var WebGeolocation = /** @class */ (function (_super) {
             __extends(WebGeolocation, _super);
             /**
              * @private
@@ -4950,7 +4953,7 @@ var egret;
         /**
          * @private
          */
-        var WebMotion = (function (_super) {
+        var WebMotion = /** @class */ (function (_super) {
             __extends(WebMotion, _super);
             function WebMotion() {
                 var _this = _super !== null && _super.apply(this, arguments) || this;
@@ -5124,7 +5127,7 @@ var egret;
          * 绘制指令管理器
          * 用来维护drawData数组
          */
-        var WebGLDrawCmdManager = (function () {
+        var WebGLDrawCmdManager = /** @class */ (function () {
             function WebGLDrawCmdManager() {
                 /**
                  * 用于缓存绘制命令的数组
@@ -5382,7 +5385,7 @@ var egret;
          * 顶点数组管理对象
          * 用来维护顶点数组
          */
-        var WebGLVertexArrayObject = (function () {
+        var WebGLVertexArrayObject = /** @class */ (function () {
             function WebGLVertexArrayObject() {
                 this.size = 2000;
                 this.vertexMaxSize = this.size * 4;
@@ -5677,7 +5680,7 @@ var egret;
          * WebGLRenderTarget
          * A WebGL render target with a frame buffer and texture
          */
-        var WebGLRenderTarget = (function (_super) {
+        var WebGLRenderTarget = /** @class */ (function (_super) {
             __extends(WebGLRenderTarget, _super);
             function WebGLRenderTarget(gl, width, height) {
                 var _this = _super.call(this) || this;
@@ -5832,7 +5835,7 @@ var egret;
          * WebGL上下文对象，提供简单的绘图接口
          * 抽象出此类，以实现共用一个context
          */
-        var WebGLRenderContext = (function () {
+        var WebGLRenderContext = /** @class */ (function () {
             function WebGLRenderContext(width, height) {
                 this.glID = null;
                 this.projectionX = NaN;
@@ -6089,7 +6092,7 @@ var egret;
                     if (bitmapData.format == "image") {
                         bitmapData.webGLTexture = this.createTexture(bitmapData.source);
                     }
-                    else if (bitmapData.format == "pvr") {
+                    else if (bitmapData.format == "pvr") { //todo 需要支持其他格式
                         bitmapData.webGLTexture = this.createTextureFromCompressedData(bitmapData.source.pvrtcData, bitmapData.width, bitmapData.height, bitmapData.source.mipmapsCount, bitmapData.source.format);
                     }
                     if (bitmapData.$deleteSource && bitmapData.webGLTexture) {
@@ -6699,7 +6702,7 @@ var egret;
          * @private
          * WebGL渲染缓存
          */
-        var WebGLRenderBuffer = (function (_super) {
+        var WebGLRenderBuffer = /** @class */ (function (_super) {
             __extends(WebGLRenderBuffer, _super);
             function WebGLRenderBuffer(width, height, root) {
                 var _this = _super.call(this) || this;
@@ -7099,7 +7102,7 @@ var egret;
          * @private
          * WebGL渲染器
          */
-        var WebGLRenderer = (function () {
+        var WebGLRenderer = /** @class */ (function () {
             function WebGLRenderer() {
                 this._tempResultPos = new egret.Point(); //临时计算坐标使用 防止gc
                 this.nestLevel = 0; //渲染的嵌套层次，0表示在调用堆栈的最外层。
@@ -7546,7 +7549,7 @@ var egret;
                 var m = buffer.globalMatrix;
                 var context = buffer.context;
                 var scissor = false;
-                if (buffer.$hasScissor || m.b != 0 || m.c != 0) {
+                if (buffer.$hasScissor || m.b != 0 || m.c != 0) { // 有旋转的情况下不能使用scissor
                     buffer.context.pushMask(scrollRect.x + offsetX, scrollRect.y + offsetY, scrollRect.width, scrollRect.height);
                 }
                 else {
@@ -8141,7 +8144,7 @@ var egret;
         /**
          * @private
          */
-        var EgretWebGLAttribute = (function () {
+        var EgretWebGLAttribute = /** @class */ (function () {
             function EgretWebGLAttribute(gl, program, attributeData) {
                 this.gl = gl;
                 this.name = attributeData.name;
@@ -8273,7 +8276,7 @@ var egret;
         /**
          * @private
          */
-        var EgretWebGLProgram = (function () {
+        var EgretWebGLProgram = /** @class */ (function () {
             function EgretWebGLProgram(gl, vertSource, fragSource) {
                 this.vshaderSource = vertSource;
                 this.fshaderSource = fragSource;
@@ -8338,11 +8341,11 @@ var egret;
         /**
          * @private
          */
-        var EgretWebGLUniform = (function () {
+        var EgretWebGLUniform = /** @class */ (function () {
             function EgretWebGLUniform(gl, program, uniformData) {
                 this.gl = gl;
                 var tName = uniformData.name;
-                if (tName.substring(tName.length - 3) == '[0]') {
+                if (tName.substring(tName.length - 3) == '[0]') { //如果是数组 名字key抛掉后面的[0]和代码中的对应
                     this._name = tName.substring(0, tName.length - 3);
                     this._isArray = true;
                 }
@@ -8629,7 +8632,7 @@ var egret;
         /**
          * @private
          */
-        var EgretShaderLib = (function () {
+        var EgretShaderLib = /** @class */ (function () {
             function EgretShaderLib() {
             }
             EgretShaderLib.blur_frag = "precision mediump float;\r\nuniform vec2 blur;\r\nuniform sampler2D uSampler;\r\nvarying vec2 vTextureCoord;\r\nuniform vec2 uTextureSize;\r\nvoid main()\r\n{\r\n    const int sampleRadius = 5;\r\n    const int samples = sampleRadius * 2 + 1;\r\n    vec2 blurUv = blur / uTextureSize;\r\n    vec4 color = vec4(0, 0, 0, 0);\r\n    vec2 uv = vec2(0.0, 0.0);\r\n    blurUv /= float(sampleRadius);\r\n\r\n    for (int i = -sampleRadius; i <= sampleRadius; i++) {\r\n        uv.x = vTextureCoord.x + float(i) * blurUv.x;\r\n        uv.y = vTextureCoord.y + float(i) * blurUv.y;\r\n        color += texture2D(uSampler, uv);\r\n    }\r\n\r\n    color /= float(samples);\r\n    gl_FragColor = color;\r\n}";

@@ -253,7 +253,7 @@ declare namespace egret {
          * @param resName
          * @returns
          */
-        private getTextureByResName(resName);
+        private getTextureByResName;
         /**
          * @private
          *
@@ -277,33 +277,33 @@ declare namespace egret {
          *
          * @param framesData
          */
-        private fillFramesData(framesData);
+        private fillFramesData;
         /**
          * @private
          *
          * @param frameLabelsData
          */
-        private fillFrameLabelsData(frameLabelsData);
+        private fillFrameLabelsData;
         /**
          * @private
          *
          * @param frameEventsData
          */
-        private fillFrameEventsData(frameEventsData);
-        /**
-         * @version Egret 2.4
-         * @platform Web,Native
-         */
+        private fillFrameEventsData;
         /**
          * MovieClip数据源
          */
+        /**
+        * @version Egret 2.4
+        * @platform Web,Native
+        */
         mcData: MovieClipData;
         /**
          * @private
          *
          * @param value
          */
-        private setMCData(value);
+        private setMCData;
     }
 }
 declare namespace egret {
@@ -361,7 +361,7 @@ declare namespace egret {
          * @param cache
          * @returns
          */
-        private findFromCache(movieClipName, cache);
+        private findFromCache;
         /**
          * @private
          *
@@ -369,7 +369,7 @@ declare namespace egret {
          * @param movieClip
          * @param cache
          */
-        private fillData(movieClipName, movieClip, cache);
+        private fillData;
         /**
          * MovieClip数据集
          * @version Egret 2.4
@@ -391,7 +391,7 @@ declare namespace egret {
          *
          * @param value
          */
-        private setTexture(value);
+        private setTexture;
     }
 }
 declare namespace egret {
@@ -639,7 +639,7 @@ declare namespace egret {
          * @param delta
          * @param paused
          */
-        private static tick(timeStamp, paused?);
+        private static tick;
         private static _lastTime;
         /**
          * @private
@@ -647,7 +647,7 @@ declare namespace egret {
          * @param tween
          * @param value
          */
-        private static _register(tween, value);
+        private static _register;
         /**
          * 创建一个 egret.ScrollTween 对象
          * @private
@@ -662,7 +662,7 @@ declare namespace egret {
          * @param props
          * @param pluginData
          */
-        private initialize(target, props, pluginData);
+        private initialize;
         /**
          * @private
          *
@@ -670,7 +670,7 @@ declare namespace egret {
          * @param actionsMode
          * @returns
          */
-        private setPosition(value, actionsMode?);
+        private setPosition;
         /**
          * @private
          *
@@ -678,14 +678,14 @@ declare namespace egret {
          * @param endPos
          * @param includeStart
          */
-        private _runActions(startPos, endPos, includeStart?);
+        private _runActions;
         /**
          * @private
          *
          * @param step
          * @param ratio
          */
-        private _updateTargetProps(step, ratio);
+        private _updateTargetProps;
         /**
          * Whether setting is paused
          * @param value {boolean} Whether to pause
@@ -709,28 +709,28 @@ declare namespace egret {
          * @param props
          * @returns
          */
-        private _cloneProps(props);
+        private _cloneProps;
         /**
          * @private
          *
          * @param o
          * @returns
          */
-        private _addStep(o);
+        private _addStep;
         /**
          * @private
          *
          * @param o
          * @returns
          */
-        private _appendQueueProps(o);
+        private _appendQueueProps;
         /**
          * @private
          *
          * @param o
          * @returns
          */
-        private _addAction(o);
+        private _addAction;
         /**
          * Modify the property of the specified display object to a specified value
          * @param props {Object} Property set of an object
@@ -972,7 +972,7 @@ declare namespace egret {
          * @param top
          * @param left
          */
-        private _validatePosition(top?, left?);
+        private _validatePosition;
         /**
          * @private
          * @inheritDoc
@@ -1002,7 +1002,7 @@ declare namespace egret {
          * @param viewLength
          * @returns
          */
-        private __checkScrollPolicy(policy, contentLength, viewLength);
+        private __checkScrollPolicy;
         /**
          * @private
          *
@@ -1042,19 +1042,19 @@ declare namespace egret {
          * @param event
          * @returns
          */
-        private _onTouchEndCapture(event);
+        private _onTouchEndCapture;
         /**
          * @private
          *
          */
-        private _onTouchBeginTimer();
+        private _onTouchBeginTimer;
         /**
          * @private
          *
          * @param event
          * @returns
          */
-        private dispatchPropagationEvent(event);
+        private dispatchPropagationEvent;
         /**
          * @private
          *
@@ -1082,21 +1082,21 @@ declare namespace egret {
          * @param e
          * @returns
          */
-        private _logTouchEvent(e);
+        private _logTouchEvent;
         /**
          * @private
          *
          * @param e
          * @returns
          */
-        private _getPointChange(e);
+        private _getPointChange;
         /**
          * @private
          *
          * @param e
          * @returns
          */
-        private _calcVelocitys(e);
+        private _calcVelocitys;
         /**
          * @private
          *
@@ -1147,13 +1147,13 @@ declare namespace egret {
          * @private
          *
          */
-        private _moveAfterTouchEnd();
+        private _moveAfterTouchEnd;
         /**
          * @private
          *
          * @param tw
          */
-        private onTweenFinished(tw);
+        private onTweenFinished;
         /**
          * @private
          *
@@ -1212,20 +1212,20 @@ declare namespace egret {
          * @param maxPos
          * @returns
          */
-        private getAnimationDatas(pixelsPerMS, curPos, maxPos);
+        private getAnimationDatas;
         /**
          * @private
          *
          * @param event
          * @returns
          */
-        private cloneTouchEvent(event);
+        private cloneTouchEvent;
         /**
          * @private
          *
          * @returns
          */
-        private throwNotSupportedError();
+        private throwNotSupportedError;
         /**
          * @deprecated
          * @inheritDoc
@@ -1467,19 +1467,19 @@ declare namespace egret {
          * @language zh_CN
          */
         load(request: URLRequest): void;
-        private getResponseType(dataFormat);
+        private getResponseType;
         /**
          * @private
          *
          * @param loader
          */
-        private loadSound(loader);
+        private loadSound;
         /**
          * @private
          *
          * @param loader
          */
-        private loadTexture(loader);
+        private loadTexture;
         /**
          * @private
          */
@@ -1624,7 +1624,7 @@ declare namespace egret {
          * @private
          *
          */
-        private _initFrame();
+        private _initFrame;
         /**
          * @private
          */
@@ -1652,20 +1652,20 @@ declare namespace egret {
          * @param ignoreCase {boolean} 是否忽略大小写，可选参数，默认false
          * @returns {egret.FrameLabel} FrameLabel对象
          */
-        private getFrameLabelByName(labelName, ignoreCase?);
+        private getFrameLabelByName;
         /**
          * @private
          * 根据帧标签，设置开始和结束的帧数
          * @param labelName {string} 帧标签名
          */
-        private getFrameStartEnd(labelName);
+        private getFrameStartEnd;
         /**
          * @private
          * 返回指定序号的帧的FrameLabel对象
          * @param frame {number} 帧序号
          * @returns {egret.FrameLabel} FrameLabel对象
          */
-        private getFrameLabelByFrame(frame);
+        private getFrameLabelByFrame;
         /**
          * @private
          * 返回指定序号的帧对应的FrameLabel对象，如果当前帧没有标签，则返回前面最近的有标签的帧的FrameLabel对象
@@ -1673,7 +1673,7 @@ declare namespace egret {
          * @param frame {number} 帧序号
          * @returns {egret.FrameLabel} FrameLabel对象
          */
-        private getFrameLabelForFrame(frame);
+        private getFrameLabelForFrame;
         /**
          * 继续播放当前动画
          * @param playTimes {number} 播放次数。 参数为整数，可选参数，>=1：设定播放次数，<0：循环播放，默认值 0：不改变播放次数(MovieClip初始播放次数设置为1)，
@@ -1719,7 +1719,7 @@ declare namespace egret {
          *
          * @param frame
          */
-        private gotoFrame(frame);
+        private gotoFrame;
         /**
          * @private
          */
@@ -1730,17 +1730,17 @@ declare namespace egret {
          * @param advancedTime
          * @returns
          */
-        private advanceTime(timeStamp);
+        private advanceTime;
         /**
          * @private
          *
          */
-        private advanceFrame();
+        private advanceFrame;
         /**
          * @private
          *
          */
-        private constructFrame();
+        private constructFrame;
         /**
          * @private
          *
@@ -1750,7 +1750,7 @@ declare namespace egret {
          * @private
          *
          */
-        private handlePendingEvent();
+        private handlePendingEvent;
         /**
          * MovieClip 实例中帧的总数
          * @version Egret 2.4
@@ -1788,31 +1788,31 @@ declare namespace egret {
          */
         readonly isPlaying: boolean;
         /**
-         * @version Egret 2.4
-         * @platform Web,Native
-         */
-        /**
          * MovieClip数据源
          */
+        /**
+        * @version Egret 2.4
+        * @platform Web,Native
+        */
         movieClipData: MovieClipData;
         /**
          * @private
          *
          * @param value
          */
-        private setMovieClipData(value);
+        private setMovieClipData;
         /**
          * @private
          *
          * @param value
          */
-        private setPlayTimes(value);
+        private setPlayTimes;
         /**
          * @private
          *
          * @param value
          */
-        private setIsStopped(value);
+        private setIsStopped;
     }
 }
 declare namespace egret {
@@ -2111,14 +2111,14 @@ declare namespace egret {
          * @param key
          * @param value
          */
-        private encodeValue(key, value);
+        private encodeValue;
         /**
          * @private
          *
          * @param key
          * @param value
          */
-        private encodeArray(key, value);
+        private encodeArray;
     }
 }
 declare namespace egret {
@@ -2146,7 +2146,7 @@ declare namespace egret {
         private _callIndex;
         private _callList;
         private _lastTime;
-        private update(timeStamp);
+        private update;
         private callBackList;
         /**
          * 注册帧回调事件，同一函数的重复监听会被忽略。推荐使用 egret.startTick 替代此方法。
@@ -2426,7 +2426,7 @@ declare namespace egret {
      * @includeExample extension/game/utils/setInterval.ts
      * @language zh_CN
      */
-    function setInterval<Z>(listener: (this: Z, ...arg) => void, thisObject: Z, delay: number, ...args: any[]): number;
+    function setInterval<Z>(listener: (this: Z, ...arg: any[]) => void, thisObject: Z, delay: number, ...args: any[]): number;
     /**
      * Clear function to run after a specified delay.
      * @param key {number} Index that egret.setInterval returns
@@ -2470,7 +2470,7 @@ declare namespace egret {
      * @includeExample extension/game/utils/setTimeout.ts
      * @language zh_CN
      */
-    function setTimeout<Z>(listener: (this: Z, ...arg) => void, thisObject: Z, delay: number, ...args: any[]): number;
+    function setTimeout<Z>(listener: (this: Z, ...arg: any[]) => void, thisObject: Z, delay: number, ...args: any[]): number;
     /**
      * Function run after the specified delay is cleared.
      * @param key {number} Index that egret.setTimeout returns

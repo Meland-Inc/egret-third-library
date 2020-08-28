@@ -1,13 +1,19 @@
 var __reflect = (this && this.__reflect) || function (p, c, t) {
     p.__class__ = c, t ? t.push(c) : t = [c], p.__types__ = p.__types__ ? t.concat(p.__types__) : t;
 };
-var __extends = this && this.__extends || function __extends(t, e) { 
- function r() { 
- this.constructor = t;
-}
-for (var i in e) e.hasOwnProperty(i) && (t[i] = e[i]);
-r.prototype = e.prototype, t.prototype = new r();
-};
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    }
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 //////////////////////////////////////////////////////////////////////////////////////
 //
 //  Copyright (c) 2014-present, Egret Technology.
@@ -44,7 +50,7 @@ var eui;
          * @private
          * 失效验证管理器
          */
-        var Validator = (function (_super) {
+        var Validator = /** @class */ (function (_super) {
             __extends(Validator, _super);
             /**
              * @private
@@ -315,7 +321,7 @@ var eui;
          * @private
          * 显示列表嵌套深度排序队列
          */
-        var DepthQueue = (function () {
+        var DepthQueue = /** @class */ (function () {
             function DepthQueue() {
                 /**
                  * 深度队列
@@ -498,7 +504,7 @@ var eui;
          * @private
          * 列表项
          */
-        var DepthBin = (function () {
+        var DepthBin = /** @class */ (function () {
             function DepthBin() {
                 this.map = {};
                 this.items = [];
@@ -723,7 +729,7 @@ var eui;
      * @platform Web,Native
      * @language zh_CN
      */
-    var State = (function (_super) {
+    var State = /** @class */ (function (_super) {
         __extends(State, _super);
         /**
          * Constructor.
@@ -798,7 +804,7 @@ var eui;
         /**
          * @private
          */
-        var StateClient = (function () {
+        var StateClient = /** @class */ (function () {
             function StateClient() {
             }
             Object.defineProperty(StateClient.prototype, "states", {
@@ -912,7 +918,7 @@ var eui;
         /**
          * @private
          */
-        var StateValues = (function () {
+        var StateValues = /** @class */ (function () {
             function StateValues() {
                 /**
                  * @private
@@ -1018,7 +1024,7 @@ var eui;
          * EUI 显示对象基类模板。仅作为 UIComponent 的默认实现，为egret.sys.implemenetUIComponenet()方法提供代码模板。
          * 注意：在此类里不允许直接使用super关键字访问父类方法。一律使用this.$super属性访问。
          */
-        var UIComponentImpl = (function (_super) {
+        var UIComponentImpl = /** @class */ (function (_super) {
             __extends(UIComponentImpl, _super);
             /**
              * @private
@@ -1999,7 +2005,7 @@ var eui;
                     this.invalidateDisplayList();
                 };
             }
-            if (true) {
+            if (true) { //用于调试时查看布局尺寸的便利属性，发行版时移除。
                 Object.defineProperty(prototype, "preferredWidth", {
                     get: function () {
                         var bounds = egret.$TempRectangle;
@@ -2185,7 +2191,7 @@ var eui;
      * @platform Web,Native
      * @language zh_CN
      */
-    var Group = (function (_super) {
+    var Group = /** @class */ (function (_super) {
         __extends(Group, _super);
         /**
          * Constructor.
@@ -2943,7 +2949,7 @@ var eui;
      * @platform Web,Native
      * @language zh_CN
      */
-    var Component = (function (_super) {
+    var Component = /** @class */ (function (_super) {
         __extends(Component, _super);
         /**
          * Constructor.
@@ -3765,7 +3771,7 @@ var eui;
      * @platform Web,Native
      * @language zh_CN
      */
-    var DataGroup = (function (_super) {
+    var DataGroup = /** @class */ (function (_super) {
         __extends(DataGroup, _super);
         /**
          * Constructor.
@@ -3968,7 +3974,7 @@ var eui;
          * @platform Web,Native
          */
         DataGroup.prototype.invalidateSize = function () {
-            if (!this.$DataGroup[4 /* createNewRendererFlag */]) {
+            if (!this.$DataGroup[4 /* createNewRendererFlag */]) { //虚拟布局时创建子项不需要重新验证
                 _super.prototype.invalidateSize.call(this);
             }
         };
@@ -4843,7 +4849,7 @@ var eui;
      * @includeExample extension/eui/components/ButtonExample.ts
      * @language zh_CN
      */
-    var Button = (function (_super) {
+    var Button = /** @class */ (function (_super) {
         __extends(Button, _super);
         /**
          * Constructor.
@@ -5144,7 +5150,7 @@ var eui;
      * @includeExample extension/eui/components/supportClasses/RangeExample.ts
      * @language zh_CN
      */
-    var Range = (function (_super) {
+    var Range = /** @class */ (function (_super) {
         __extends(Range, _super);
         /**
          * Constructor.
@@ -5634,7 +5640,7 @@ var eui;
      * @platform Web,Native
      * @language zh_CN
      */
-    var LayoutBase = (function (_super) {
+    var LayoutBase = /** @class */ (function (_super) {
         __extends(LayoutBase, _super);
         /**
          * Constructor.
@@ -6009,7 +6015,7 @@ var eui;
      * @platform Web,Native
      * @language zh_CN
      */
-    var ListBase = (function (_super) {
+    var ListBase = /** @class */ (function (_super) {
         __extends(ListBase, _super);
         /**
          * Constructor.
@@ -6835,7 +6841,7 @@ var eui;
      * @platform Web,Native
      * @language zh_CN
      */
-    var ScrollBarBase = (function (_super) {
+    var ScrollBarBase = /** @class */ (function (_super) {
         __extends(ScrollBarBase, _super);
         /**
          * Constructor.
@@ -7055,7 +7061,7 @@ var eui;
      * @platform Web,Native
      * @language zh_CN
      */
-    var SliderBase = (function (_super) {
+    var SliderBase = /** @class */ (function (_super) {
         __extends(SliderBase, _super);
         /**
          * Constructor
@@ -7595,7 +7601,7 @@ var eui;
         /**
          * @private
          */
-        var EXMLParser = (function () {
+        var EXMLParser = /** @class */ (function () {
             /**
              * @private
              */
@@ -7844,7 +7850,7 @@ var eui;
                                 this.skinParts.push(id);
                             }
                             this.createVarForNode(node);
-                            if (this.isStateNode(node))
+                            if (this.isStateNode(node)) //检查节点是否只存在于一个状态里，需要单独实例化
                                 this.stateIds.push(id);
                         }
                         else {
@@ -8058,7 +8064,7 @@ var eui;
                     if (!value) {
                         continue;
                     }
-                    if (this.currentClass.getVariableByName(value)) {
+                    if (this.currentClass.getVariableByName(value)) { //赋的值对象是一个id
                         var THIS = "this.";
                         var id = attributes.id;
                         var codeLine = THIS + id + " = t;";
@@ -9142,7 +9148,7 @@ var eui;
      * @includeExample  extension/eui/components/ToggleButtonExample.ts
      * @language zh_CN
      */
-    var ToggleButton = (function (_super) {
+    var ToggleButton = /** @class */ (function (_super) {
         __extends(ToggleButton, _super);
         function ToggleButton() {
             var _this = _super !== null && _super.apply(this, arguments) || this;
@@ -9285,7 +9291,7 @@ var eui;
      * @platform Web,Native
      * @language zh_CN
      */
-    var LinearLayoutBase = (function (_super) {
+    var LinearLayoutBase = /** @class */ (function (_super) {
         __extends(LinearLayoutBase, _super);
         function LinearLayoutBase() {
             var _this = _super !== null && _super.apply(this, arguments) || this;
@@ -10025,7 +10031,7 @@ var eui;
         /**
          * @private
          */
-        var ChildInfo = (function () {
+        var ChildInfo = /** @class */ (function () {
             function ChildInfo() {
                 /**
                  * @private
@@ -10106,7 +10112,7 @@ var eui;
      * @platform Web,Native
      * @language zh_CN
      */
-    var HSlider = (function (_super) {
+    var HSlider = /** @class */ (function (_super) {
         __extends(HSlider, _super);
         /**
          * Constructor.
@@ -10235,7 +10241,7 @@ var eui;
      * @includeExample extension/eui/components/supportClasses/DefaultAssetAdapterExample.ts
      * @language zh_CN
      */
-    var DefaultAssetAdapter = (function () {
+    var DefaultAssetAdapter = /** @class */ (function () {
         function DefaultAssetAdapter() {
         }
         /**
@@ -10362,7 +10368,7 @@ var eui;
      * @includeExample  extension/eui/components/ImageExample.ts
      * @language zh_CN
      */
-    var Image = (function (_super) {
+    var Image = /** @class */ (function (_super) {
         __extends(Image, _super);
         /**
          * Constructor.
@@ -10830,7 +10836,7 @@ var eui;
      * @includeExample  extension/eui/components/ItemRendererExample.ts
      * @language zh_CN
      */
-    var ItemRenderer = (function (_super) {
+    var ItemRenderer = /** @class */ (function (_super) {
         __extends(ItemRenderer, _super);
         /**
          * Constructor.
@@ -11122,7 +11128,7 @@ var eui;
      * @includeExample  extension/eui/components/LabelExample.ts
      * @language zh_CN
      */
-    var Label = (function (_super) {
+    var Label = /** @class */ (function (_super) {
         __extends(Label, _super);
         /**
          * Constructor.
@@ -11650,7 +11656,7 @@ var eui;
      * @includeExample  extension/eui/components/ListExample.ts
      * @language zh_CN
      */
-    var List = (function (_super) {
+    var List = /** @class */ (function (_super) {
         __extends(List, _super);
         function List() {
             var _this = _super !== null && _super.apply(this, arguments) || this;
@@ -12097,7 +12103,7 @@ var eui;
      * @includeExample  extension/eui/components/PanelExample.ts
      * @language zh_CN
      */
-    var Panel = (function (_super) {
+    var Panel = /** @class */ (function (_super) {
         __extends(Panel, _super);
         /**
          * Constructor.
@@ -12458,7 +12464,7 @@ var eui;
      * @includeExample  extension/eui/components/ProgressBarExample.ts
      * @language zh_CN
      */
-    var ProgressBar = (function (_super) {
+    var ProgressBar = /** @class */ (function (_super) {
         __extends(ProgressBar, _super);
         /**
          * Constructor.
@@ -12883,7 +12889,7 @@ var eui;
      * @includeExample  extension/eui/components/RadioButtonExample.ts
      * @language zh_CN
      */
-    var RadioButton = (function (_super) {
+    var RadioButton = /** @class */ (function (_super) {
         __extends(RadioButton, _super);
         /**
          * Constructor.
@@ -13242,7 +13248,7 @@ var eui;
      * @includeExample  extension/eui/components/RadioButtonGroupExample.ts
      * @language zh_CN
      */
-    var RadioButtonGroup = (function (_super) {
+    var RadioButtonGroup = /** @class */ (function (_super) {
         __extends(RadioButtonGroup, _super);
         /**
          * Constructor.
@@ -13649,7 +13655,7 @@ var eui;
      * @platform Web,Native
      * @language zh_CN
      */
-    var Rect = (function (_super) {
+    var Rect = /** @class */ (function (_super) {
         __extends(Rect, _super);
         function Rect(width, height, fillColor) {
             var _this = _super.call(this) || this;
@@ -14007,7 +14013,7 @@ var eui;
      * @includeExample  extension/eui/components/ScrollerExample.ts
      * @language zh_CN
      */
-    var Scroller = (function (_super) {
+    var Scroller = /** @class */ (function (_super) {
         __extends(Scroller, _super);
         /**
          * Constructor.
@@ -14869,7 +14875,7 @@ var eui;
      * @includeExample  extension/eui/components/SkinExample.ts
      * @language zh_CN
      */
-    var Skin = (function (_super) {
+    var Skin = /** @class */ (function (_super) {
         __extends(Skin, _super);
         function Skin() {
             var _this = _super !== null && _super.apply(this, arguments) || this;
@@ -15157,7 +15163,7 @@ var eui;
      * @includeExample  extension/eui/components/TabBarExample.ts
      * @language zh_CN
      */
-    var TabBar = (function (_super) {
+    var TabBar = /** @class */ (function (_super) {
         __extends(TabBar, _super);
         /**
          * Constructor.
@@ -15266,7 +15272,7 @@ var eui;
      * @includeExample  extension/eui/components/TextInputExample.ts
      * @language zh_CN
      */
-    var TextInput = (function (_super) {
+    var TextInput = /** @class */ (function (_super) {
         __extends(TextInput, _super);
         function TextInput() {
             var _this = _super.call(this) || this;
@@ -15760,7 +15766,7 @@ var eui;
      * @includeExample extension/eui/components/CheckboxExample.ts
      * @language zh_CN
      */
-    var CheckBox = (function (_super) {
+    var CheckBox = /** @class */ (function (_super) {
         __extends(CheckBox, _super);
         /**
          * Constructor.
@@ -15832,7 +15838,7 @@ var eui;
      * @includeExample  extension/eui/components/ToggleSwitchExample.ts
      * @language zh_CN
      */
-    var ToggleSwitch = (function (_super) {
+    var ToggleSwitch = /** @class */ (function (_super) {
         __extends(ToggleSwitch, _super);
         /**
          * Constructor.
@@ -15905,7 +15911,7 @@ var eui;
      * @platform Web,Native
      * @language zh_CN
      */
-    var UILayer = (function (_super) {
+    var UILayer = /** @class */ (function (_super) {
         __extends(UILayer, _super);
         /**
          * Constructor.
@@ -16013,7 +16019,7 @@ var eui;
      * @includeExample  extension/eui/components/VScrollBarExample.ts
      * @language zh_CN
      */
-    var VScrollBar = (function (_super) {
+    var VScrollBar = /** @class */ (function (_super) {
         __extends(VScrollBar, _super);
         function VScrollBar() {
             return _super !== null && _super.apply(this, arguments) || this;
@@ -16129,7 +16135,7 @@ var eui;
      * @includeExample  extension/eui/components/VSliderExample.ts
      * @language zh_CN
      */
-    var VSlider = (function (_super) {
+    var VSlider = /** @class */ (function (_super) {
         __extends(VSlider, _super);
         /**
          * Constructor.
@@ -16269,7 +16275,7 @@ var eui;
      * @includeExample  extension/eui/components/ViewStackExample.ts
      * @language zh_CN
      */
-    var ViewStack = (function (_super) {
+    var ViewStack = /** @class */ (function (_super) {
         __extends(ViewStack, _super);
         /**
          * Constructor.
@@ -16602,7 +16608,7 @@ var eui;
          * @private
          * 数值缓动工具类
          */
-        var Animation = (function () {
+        var Animation = /** @class */ (function () {
             /**
              * @private
              */
@@ -16754,7 +16760,7 @@ var eui;
      * @platform Web,Native
      * @language zh_CN
      */
-    var DefaultThemeAdapter = (function () {
+    var DefaultThemeAdapter = /** @class */ (function () {
         function DefaultThemeAdapter() {
         }
         /**
@@ -16872,7 +16878,7 @@ var eui;
      * @includeExample extension/eui/binding/WatcherExample.ts
      * @language zh_CN
      */
-    var Watcher = (function () {
+    var Watcher = /** @class */ (function () {
         /**
          * Constructor.
          * Not for public use. This method is called only from the <code>watch()</code> method.
@@ -17215,7 +17221,7 @@ var eui;
      * @includeExample extension/eui/binding/BindingExample.ts
      * @language zh_CN
      */
-    var Binding = (function () {
+    var Binding = /** @class */ (function () {
         function Binding() {
         }
         /**
@@ -17375,7 +17381,7 @@ var eui;
      * @includeExample extension/eui/collections/ArrayCollectionExample.ts
      * @language zh_CN
      */
-    var ArrayCollection = (function (_super) {
+    var ArrayCollection = /** @class */ (function (_super) {
         __extends(ArrayCollection, _super);
         /**
          * Constructor. <p/>
@@ -17715,7 +17721,7 @@ var eui;
      * @platform Web,Native
      * @language zh_CN
      */
-    var EditableText = (function (_super) {
+    var EditableText = /** @class */ (function (_super) {
         __extends(EditableText, _super);
         /**
          * Constructor.
@@ -18273,7 +18279,7 @@ var eui;
          * 内部将会启动一个计时器定时根据当前位置计算出速度值，并缓存下来最后4个值。当停止滚动时，再调用finish()方法，
          * 将立即停止记录位移，并将计算出的最终结果存储到 Thrown.scrollTo 和 Thrown.duration 属性上。
          */
-        var TouchScroll = (function () {
+        var TouchScroll = /** @class */ (function () {
             /**
              * @private
              * 创建一个 TouchScroll 实例
@@ -18577,7 +18583,7 @@ var eui;
      * @includeExample  extension/eui/core/DirectionExample.ts
      * @language zh_CN
      */
-    var Direction = (function () {
+    var Direction = /** @class */ (function () {
         function Direction() {
         }
         /**
@@ -18835,7 +18841,7 @@ var eui;
      * @includeExample  extension/eui/core/ScrollPolicyExample.ts
      * @language zh_CN
      */
-    var ScrollPolicy = (function () {
+    var ScrollPolicy = /** @class */ (function () {
         function ScrollPolicy() {
         }
         /**
@@ -18937,7 +18943,7 @@ var eui;
      * @includeExample  extension/eui/core/ThemeExample.ts
      * @language zh_CN
      */
-    var Theme = (function (_super) {
+    var Theme = /** @class */ (function (_super) {
         __extends(Theme, _super);
         /**
          * Create an instance of Theme
@@ -19035,10 +19041,12 @@ var eui;
             if (!data.exmls || data.exmls.length == 0) {
                 this.onLoaded();
             }
+            //gjs
             else if (data.exmls[0]['gjs']) {
                 data.exmls.forEach(function (exml) { return EXML.$parseURLContentAsJs(exml.path, exml.gjs, exml.className); });
                 this.onLoaded();
             }
+            // In release version, exml content is packaged in the theme file
             else if (data.exmls[0]['content']) {
                 data.exmls.forEach(function (exml) { return EXML.$parseURLContent(exml.path, exml.content); });
                 this.onLoaded();
@@ -19211,7 +19219,7 @@ var eui;
      * @includeExample  extension/eui/events/CollectionEventExample.ts
      * @language zh_CN
      */
-    var CollectionEvent = (function (_super) {
+    var CollectionEvent = /** @class */ (function (_super) {
         __extends(CollectionEvent, _super);
         /**
          * Constructor.
@@ -19427,7 +19435,7 @@ var eui;
      * @platform Web,Native
      * @language zh_CN
      */
-    var CollectionEventKind = (function () {
+    var CollectionEventKind = /** @class */ (function () {
         function CollectionEventKind() {
         }
         /**
@@ -19576,7 +19584,7 @@ var eui;
      * @includeExample  extension/eui/events/ItemTapEventExample.ts
      * @language zh_CN
      */
-    var ItemTapEvent = (function (_super) {
+    var ItemTapEvent = /** @class */ (function (_super) {
         __extends(ItemTapEvent, _super);
         function ItemTapEvent() {
             var _this = _super !== null && _super.apply(this, arguments) || this;
@@ -19745,7 +19753,7 @@ var eui;
      * @includeExample  extension/eui/events/PropertyEventExample.ts
      * @language zh_CN
      */
-    var PropertyEvent = (function (_super) {
+    var PropertyEvent = /** @class */ (function (_super) {
         __extends(PropertyEvent, _super);
         /**
          * Constructor.
@@ -19840,7 +19848,7 @@ var eui;
     /**
      * @private
      */
-    var ScrollerThrowEvent = (function (_super) {
+    var ScrollerThrowEvent = /** @class */ (function (_super) {
         __extends(ScrollerThrowEvent, _super);
         /**
          * 动画信息，可调节或修改
@@ -19907,7 +19915,7 @@ var eui;
      * @includeExample  extension/eui/events/UIEventExample.ts
      * @language zh_CN
      */
-    var UIEvent = (function (_super) {
+    var UIEvent = /** @class */ (function (_super) {
         __extends(UIEvent, _super);
         /**
          * Constructor.
@@ -20095,7 +20103,7 @@ var eui;
          * @private
          * 代码生成工具基类
          */
-        var CodeBase = (function () {
+        var CodeBase = /** @class */ (function () {
             function CodeBase() {
                 /**
                  * @private
@@ -20130,7 +20138,7 @@ var eui;
         /**
          * @private
          */
-        var EXClass = (function (_super) {
+        var EXClass = /** @class */ (function (_super) {
             __extends(EXClass, _super);
             function EXClass() {
                 var _this = _super !== null && _super.apply(this, arguments) || this;
@@ -20293,7 +20301,7 @@ var eui;
         /**
          * @private
          */
-        var EXCodeBlock = (function (_super) {
+        var EXCodeBlock = /** @class */ (function (_super) {
             __extends(EXCodeBlock, _super);
             function EXCodeBlock() {
                 var _this = _super !== null && _super.apply(this, arguments) || this;
@@ -20431,7 +20439,7 @@ var eui;
         /**
          * @private
          */
-        var EXFunction = (function (_super) {
+        var EXFunction = /** @class */ (function (_super) {
             __extends(EXFunction, _super);
             function EXFunction() {
                 var _this = _super !== null && _super.apply(this, arguments) || this;
@@ -20494,7 +20502,7 @@ var eui;
         /**
          * @private
          */
-        var EXVariable = (function (_super) {
+        var EXVariable = /** @class */ (function (_super) {
             __extends(EXVariable, _super);
             /**
              * @private
@@ -20524,7 +20532,7 @@ var eui;
         /**
          * @private
          */
-        var EXState = (function (_super) {
+        var EXState = /** @class */ (function (_super) {
             __extends(EXState, _super);
             /**
              * @private
@@ -20599,7 +20607,7 @@ var eui;
         /**
          * @private
          */
-        var EXAddItems = (function (_super) {
+        var EXAddItems = /** @class */ (function (_super) {
             __extends(EXAddItems, _super);
             /**
              * @private
@@ -20628,7 +20636,7 @@ var eui;
         /**
          * @private
          */
-        var EXSetProperty = (function (_super) {
+        var EXSetProperty = /** @class */ (function (_super) {
             __extends(EXSetProperty, _super);
             /**
              * @private
@@ -20655,7 +20663,7 @@ var eui;
         /**
          * @private
          */
-        var EXSetStateProperty = (function (_super) {
+        var EXSetStateProperty = /** @class */ (function (_super) {
             __extends(EXSetStateProperty, _super);
             /**
              * @private
@@ -20692,7 +20700,7 @@ var eui;
         /**
          * @private
          */
-        var EXBinding = (function (_super) {
+        var EXBinding = /** @class */ (function (_super) {
             __extends(EXBinding, _super);
             /**
              * @private
@@ -20768,7 +20776,7 @@ var eui;
      * @platform Web,Native
      * @language zh_CN
      */
-    var BitmapLabel = (function (_super) {
+    var BitmapLabel = /** @class */ (function (_super) {
         __extends(BitmapLabel, _super);
         function BitmapLabel(text) {
             var _this = _super.call(this) || this;
@@ -21370,7 +21378,7 @@ var eui;
         /**
          * @private
          */
-        var EXMLConfig = (function () {
+        var EXMLConfig = /** @class */ (function () {
             function EXMLConfig() {
             }
             /**
@@ -21756,7 +21764,7 @@ var eui;
      * @includeExample  extension/eui/layout/BasicLayoutExample.ts
      * @language zh_CN
      */
-    var BasicLayout = (function (_super) {
+    var BasicLayout = /** @class */ (function (_super) {
         __extends(BasicLayout, _super);
         /**
          * Constructor.
@@ -22020,7 +22028,7 @@ var eui;
      * @includeExample  extension/eui/layout/ColumnAlignExample.ts
      * @language zh_CN
      */
-    var ColumnAlign = (function () {
+    var ColumnAlign = /** @class */ (function () {
         function ColumnAlign() {
         }
         /**
@@ -22130,7 +22138,7 @@ var eui;
      * @includeExample  extension/eui/layout/HorizontalLayoutExample.ts
      * @language zh_CN
      */
-    var HorizontalLayout = (function (_super) {
+    var HorizontalLayout = /** @class */ (function (_super) {
         __extends(HorizontalLayout, _super);
         function HorizontalLayout() {
             return _super !== null && _super.apply(this, arguments) || this;
@@ -22653,7 +22661,7 @@ var eui;
      * @includeExample  extension/eui/layout/JustifyAlignExample.ts
      * @language zh_CN
      */
-    var JustifyAlign = (function () {
+    var JustifyAlign = /** @class */ (function () {
         function JustifyAlign() {
         }
         /**
@@ -22751,7 +22759,7 @@ var eui;
      * @includeExample  extension/eui/layout/RowAlignExample.ts
      * @language zh_CN
      */
-    var RowAlign = (function () {
+    var RowAlign = /** @class */ (function () {
         function RowAlign() {
         }
         /**
@@ -22864,7 +22872,7 @@ var eui;
      * @includeExample  extension/eui/layout/TileLayoutExample.ts
      * @language zh_CN
      */
-    var TileLayout = (function (_super) {
+    var TileLayout = /** @class */ (function (_super) {
         __extends(TileLayout, _super);
         /**
          * Constructor.
@@ -24111,7 +24119,7 @@ var eui;
      * @includeExample  extension/eui/layout/TileOrientationExample.ts
      * @language zh_CN
      */
-    var TileOrientation = (function () {
+    var TileOrientation = /** @class */ (function () {
         function TileOrientation() {
         }
         /**
@@ -24204,7 +24212,7 @@ var eui;
      * @includeExample  extension/eui/layout/VerticalLayoutExample.ts
      * @language zh_CN
      */
-    var VerticalLayout = (function (_super) {
+    var VerticalLayout = /** @class */ (function (_super) {
         __extends(VerticalLayout, _super);
         function VerticalLayout() {
             return _super !== null && _super.apply(this, arguments) || this;
@@ -24760,7 +24768,7 @@ var eui;
      * @platform Web,Native
      * @language zh_CN
      */
-    var HScrollBar = (function (_super) {
+    var HScrollBar = /** @class */ (function (_super) {
         __extends(HScrollBar, _super);
         function HScrollBar() {
             return _super !== null && _super.apply(this, arguments) || this;
@@ -24868,7 +24876,7 @@ var eui;
      * @platform Web,Native
      * @language zh_CN
      */
-    var AddItems = (function () {
+    var AddItems = /** @class */ (function () {
         /**
          * Constructor.
          * @version Egret 2.4
@@ -25029,7 +25037,7 @@ var eui;
      * @platform Web,Native
      * @language zh_CN
      */
-    var SetProperty = (function () {
+    var SetProperty = /** @class */ (function () {
         /**
          * Constructor.
          *
@@ -25164,7 +25172,7 @@ var eui;
      * @platform Web,Native
      * @language zh_CN
      */
-    var SetStateProperty = (function () {
+    var SetStateProperty = /** @class */ (function () {
         /**
          * Constructor.
          *
@@ -25301,7 +25309,7 @@ var eui;
         /**
          * @private
          */
-        var MatrixUtil = (function () {
+        var MatrixUtil = /** @class */ (function () {
             function MatrixUtil() {
             }
             /**
