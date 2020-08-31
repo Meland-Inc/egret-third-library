@@ -201,9 +201,10 @@ class MainControl {
         logger.log('update', `从指定url进入 searchParams`, searchParams);
         const targetUrlValue: string = searchParams.get('url');
         if (!targetUrlValue) return;
-        logger.log('update', `跳转到指定url`, targetUrlValue);
+        logger.log('update', `跳转到指定targetUrlValue`, targetUrlValue);
         const temporaryToken: string = searchParams.get('temporary_token');
-        const targetUrl = new URL(targetUrlValue);
+        const targetUrl = new URL(decodeURIComponent(targetUrlValue));
+        logger.log('update', `跳转到指定targetUrl`, targetUrl);
         if (temporaryToken) {
             await platform.init();
             targetUrl.searchParams.set("webviewToken", mainModel.bellToken);
