@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="340,342" overflow="hidden" designImage="ui://0axy98cgtbm25m" designImageOffsetX="-283" designImageOffsetY="-281" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlSelect" pages="0,0,1,1,2,2" selected="0"/>
+  <controller name="ctrlSelect" pages="0,0,1,1,2,2" selected="1"/>
   <controller name="ctrlNone" pages="0,hide,1,show" selected="0"/>
+  <controller name="ctrlMode" pages="0,normal,1,lessonCenter" selected="1"/>
   <displayList>
     <image id="n62_l1zw" name="n62" src="yfas7f" fileName="img/img_mt_mapbgfm.png" xy="4,3" size="331,333" group="n65_l1zw"/>
     <image id="n63_l1zw" name="n63" src="yfas7r" fileName="img/img_mt_mapbgframe.png" xy="4,3" size="332,336" group="n65_l1zw"/>
@@ -40,7 +41,8 @@
     </image>
     <component id="n55_tbm2" name="btnMapDetail" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="63,97" size="214,64" group="n66_l1zw">
       <gearDisplay controller="ctrlSelect" pages="1"/>
-      <Button title="地图详情" titleFontSize="30" icon="ui://0axy98cgtbm25l"/>
+      <gearText controller="ctrlMode" pages="1" values="课程详情" default="地图详情"/>
+      <Button title="课程详情" titleFontSize="30" icon="ui://0axy98cgtbm25l"/>
     </component>
     <image id="n61_r5js" name="n61" src="qdana7" fileName="img/img_mt_editgridhover.png" xy="0,0" size="340,342" group="n66_l1zw">
       <gearDisplay controller="ctrlSelect" pages="2"/>

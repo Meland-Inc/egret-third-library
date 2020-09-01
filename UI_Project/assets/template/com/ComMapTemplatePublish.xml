@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://0axy98cgvrsj9n" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlMode" pages="0,normal,1,lessonCenter" selected="1"/>
   <displayList>
     <graph id="n77_c6ye" name="n77" xy="0,0" size="1920,1080" group="n82_c6ye" type="rect" fillColor="#fff7f6f2">
       <relation target="" sidePair="width-width,height-height"/>
@@ -10,7 +11,9 @@
     <image id="n79_c6ye" name="imgHeaderBg" src="tbm25r" fileName="img/img_mt_bgtitle.png" xy="0,0" size="1920,90" group="n82_c6ye">
       <relation target="" sidePair="width-width,top-top"/>
     </image>
-    <text id="n80_c6ye" name="n80" xy="168,26" size="152,44" group="n82_c6ye" fontSize="32" color="#716f7a" autoSize="none" bold="true" text="发布地图"/>
+    <text id="n80_c6ye" name="n80" xy="168,26" size="152,44" group="n82_c6ye" fontSize="32" color="#716f7a" autoSize="none" bold="true" text="发布课程">
+      <gearText controller="ctrlMode" pages="1" values="发布课程" default="发布地图"/>
+    </text>
     <component id="n81_c6ye" name="btnReturn" src="tbm25y" fileName="btn/btnScale.xml" xy="35,24" size="101,42" group="n82_c6ye">
       <Button title="  返回" icon="ui://0axy98cgmzsu6h"/>
     </component>
@@ -26,7 +29,9 @@
     <image id="n89_c6ye" name="n89" src="mzsu6w" fileName="img/img_mt_dtmzi_bg.png" xy="770,157" group="n93_c6ye"/>
     <image id="n94_c6ye" name="n94" src="c6ye8o" fileName="img/img_mt_publishbg4.png" xy="743,755" size="750,91" group="n93_c6ye"/>
     <image id="n98_pt17" name="n98" src="pt179i" fileName="img/icon_mt_publsihbg_03.png" xy="933,354" size="532,349" group="n93_c6ye"/>
-    <text id="n90_c6ye" name="tfMapNameTitle" xy="785,166" size="146,40" group="n93_c6ye" fontSize="32" color="#4db6ff" align="center" vAlign="middle" leading="0" autoSize="none" text="地图名字"/>
+    <text id="n90_c6ye" name="tfMapNameTitle" xy="785,166" size="146,44" group="n93_c6ye" fontSize="32" color="#4db6ff" align="center" vAlign="middle" leading="0" autoSize="none" text="课程名字">
+      <gearText controller="ctrlMode" pages="1" values="课程名字" default="地图名字"/>
+    </text>
     <text id="n72_v8nf" name="comDescribeInput" xy="943,361" size="515,335" group="n93_c6ye" fontSize="24" autoSize="none" autoClearText="true" text="这是一个地图说明" input="true" maxLength="500"/>
     <component id="n73_v8nf" name="cbMapTemplateType" src="c6ye8p" fileName="btn/CombMapType.xml" xy="924,778" size="263,50" group="n93_c6ye">
       <ComboBox title="无" visibleItemCount="10">

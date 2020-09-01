@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://0axy98cgtbm25m" designImageAlpha="0" designImageLayer="1" bgColor="#f7f6f2">
-  <controller name="ctrlPanel" pages="0,allmap,1,allroom,2,mymap,3,mycollect,7,mappublish" selected="0"/>
-  <controller name="ctrlMode" pages="0,normal,1,lessonCenter" selected="0">
-    <action type="change_page" fromPage="" toPage="0" objectId="n48_azcq" controller="ctrlMode" targetPage="0"/>
-    <action type="change_page" fromPage="" toPage="1" objectId="n48_azcq" controller="ctrlMode" targetPage="1"/>
-    <action type="change_page" fromPage="" toPage="0" objectId="n50_azcq" controller="ctrlMode" targetPage="0"/>
-    <action type="change_page" fromPage="" toPage="1" objectId="n50_azcq" controller="ctrlMode" targetPage="1"/>
-  </controller>
+  <controller name="ctrlPanel" pages="0,allmap,1,allroom,2,mymap,3,mycollect,7,mappublish" selected="3"/>
+  <controller name="ctrlMode" pages="0,normal,1,lessonCenter" selected="1"/>
   <displayList>
     <graph id="n63_tbm2" name="n63" xy="0,0" size="1920,1080" type="rect" fillColor="#fff7f6f2">
       <relation target="" sidePair="width-width,height-height"/>
@@ -19,7 +14,7 @@
       <gearDisplay controller="ctrlPanel" pages="1"/>
       <relation target="" sidePair="width-width,height-height"/>
     </component>
-    <component id="n48_azcq" name="comMyMap" src="v8nf59" fileName="com/ComMyWork.xml" xy="0,0" controller="ctrlMode,0">
+    <component id="n48_azcq" name="comMyMap" src="v8nf59" fileName="com/ComMyWork.xml" xy="0,0">
       <gearDisplay controller="ctrlPanel" pages="2"/>
       <relation target="" sidePair="width-width,height-height"/>
     </component>
@@ -31,18 +26,16 @@
       <relation target="" sidePair="width-width"/>
     </image>
     <component id="n37_v8nf" name="btnClose" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1856,14" size="48,48" group="n45_azcq">
-      <gearDisplay controller="ctrlMode" pages="0"/>
       <relation target="" sidePair="right-right,top-top"/>
       <Button icon="ui://0axy98cgtbm25t"/>
     </component>
     <component id="n38_v8nf" name="btnCreateMap" src="pw6y9q" fileName="btn/btnScaleCreate.xml" xy="24,10" size="128,58" group="n45_azcq">
-      <gearText controller="ctrlMode" pages="1" values="创建课程" default="创建地图"/>
       <Button title="创建地图" icon="ui://0axy98cgtbm25x"/>
     </component>
-    <component id="n39_v8nf" name="btnAllMap" src="dvog9v" fileName="btn/btnTextSelect.xml" xy="231,12" size="140,58" group="n45_azcq">
+    <component id="n39_v8nf" name="btnAllMap" src="dvog9v" fileName="btn/btnTextSelect.xml" xy="401,12" size="140,58" group="n45_azcq">
       <gearXY controller="ctrlMode" pages="0,1" values="231,12|401,12"/>
       <gearText controller="ctrlMode" pages="1" values="课程中心" default="地图中心"/>
-      <Button checked="true" title="地图中心" titleFontSize="24" controller="ctrlPanel" page="0"/>
+      <Button title="课程中心" titleFontSize="24" controller="ctrlPanel" page="0"/>
     </component>
     <component id="n40_v8nf" name="btnAllComponent" src="dvog9v" fileName="btn/btnTextSelect.xml" xy="580,12" size="140,58" group="n45_azcq" touchable="false">
       <gearDisplay controller="ctrlMode" pages="0"/>
@@ -59,7 +52,7 @@
     <component id="n43_v8nf" name="btnMyCollect" src="dvog9u" fileName="btn/btnScaleSelect.xml" xy="1354,16" size="120,48" group="n45_azcq">
       <gearDisplay controller="ctrlMode" pages="0"/>
       <relation target="" sidePair="top-top,right-right"/>
-      <Button title="我的收藏" titleColor="#ffffff" titleFontSize="20" icon="ui://0axy98cgtbm25v" selectedIcon="ui://0axy98cgdvog9t" controller="ctrlPanel" page="3"/>
+      <Button checked="true" title="我的收藏" titleColor="#ffffff" titleFontSize="20" icon="ui://0axy98cgtbm25v" selectedIcon="ui://0axy98cgdvog9t" controller="ctrlPanel" page="3"/>
     </component>
     <component id="n44_v8nf" name="btnMyMap" src="dvog9u" fileName="btn/btnScaleSelect.xml" xy="1482,16" size="121,46" group="n45_azcq">
       <gearDisplay controller="ctrlMode" pages="0"/>
@@ -72,7 +65,7 @@
     </component>
     <component id="n66_pplw" name="btnMyLessonCollect" src="dvog9v" fileName="btn/btnTextSelect.xml" xy="580,12" size="140,58" group="n45_azcq">
       <gearDisplay controller="ctrlMode" pages="1"/>
-      <Button title="我的收藏" titleFontSize="24" controller="ctrlPanel" page="3"/>
+      <Button checked="true" title="我的收藏" titleFontSize="24" controller="ctrlPanel" page="3"/>
     </component>
     <image id="n60_tbm2" name="n60" src="tbm25u" fileName="img/icon_mt_jiange.png" xy="380,20" group="n45_azcq"/>
     <image id="n61_tbm2" name="n61" src="tbm25u" fileName="img/icon_mt_jiange.png" xy="560,20" group="n45_azcq"/>
@@ -80,5 +73,26 @@
       <gearDisplay controller="ctrlMode" pages="0"/>
     </image>
     <group id="n45_azcq" name="groupTitle" xy="0,0" size="1920,91"/>
+    <component id="n49_azcq" name="comMapPanel" src="v8nf51" fileName="com/ComMapTemplatePanel.xml" xy="0,0" visible="false">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <component id="n52_azcq" name="comMapCreate" src="v8nf55" fileName="com/ComMapTemplateCreate.xml" xy="0,0" visible="false">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <component id="n56_azcq" name="comMapDetail" src="azcq5d" fileName="com/ComMapTemplateDetail.xml" xy="0,0" visible="false">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <component id="n51_azcq" name="comRoomCreate" src="v8nf52" fileName="com/ComMapRoomCreate.xml" xy="0,0" visible="false">
+      <relation target="" sidePair="height-height,width-width"/>
+    </component>
+    <component id="n55_azcq" name="comMapSetting" src="gu5v9h" fileName="com/ComMapTemplateSetting.xml" xy="0,0" visible="false">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <component id="n54_azcq" name="comMapPublish" src="v8nf57" fileName="com/ComMapTemplatePublish.xml" xy="0,0" visible="false">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <component id="n64_qdan" name="comSelectIcon" src="qdana0" fileName="com/ComMapTemplateIconSelect.xml" xy="0,0" visible="false">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
   </displayList>
 </component>

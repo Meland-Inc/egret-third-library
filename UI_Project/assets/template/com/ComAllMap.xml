@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://0axy98cgtbm25m" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlSearch" pages="0,nosearch,1,search" selected="0"/>
+  <controller name="ctrlMode" pages="0,normal,1,lessonCenter" selected="0"/>
   <displayList>
     <image id="n74_l1zw" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="229,164" size="1550,918">
       <relation target="n76_l1zw" sidePair="center-center"/>
@@ -10,7 +11,7 @@
     <text id="n69_dvog" name="inpSearch" xy="1445,112" size="271,29" group="n71_dvog" fontSize="24" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="" input="true" prompt="[color=#999999]搜索所有作品[/color]"/>
     <image id="n70_dvog" name="n70" src="rujpcyijl" fileName="img/icon_cm_ss.png" pkg="te1gxawo" xy="1399,105" size="42,42" group="n71_dvog"/>
     <group id="n71_dvog" name="grpSearchInput" xy="1391,103" size="325,47" advanced="true"/>
-    <list id="n79_peex" name="lstTypeTag" xy="0,307" size="178,528" group="n72_nav8" layout="flow_hz" overflow="scroll" lineGap="2" defaultItem="ui://0axy98cgtbm262">
+    <list id="n79_peex" name="lstTypeTag" xy="0,307" size="178,758" group="n72_nav8" layout="flow_hz" lineGap="2" defaultItem="ui://0axy98cgtbm262" autoClearItems="true">
       <item title="官方推荐"/>
       <item title="最新"/>
       <item title="最热"/>
