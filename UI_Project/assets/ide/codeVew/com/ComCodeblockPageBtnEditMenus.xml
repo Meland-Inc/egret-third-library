@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="130,80">
+  <displayList>
+    <image id="n0_ijui" name="n0" src="f08kwcyilc" fileName="codeVew/img/img_codeV_xzk_1.png" xy="0,0" size="130,80"/>
+    <component id="n1_ijui" name="btnDel" src="f08kwcyilb" fileName="codeVew/btn/btnCodeBlockOperate.xml" xy="0,40" size="130,40" customData="delete">
+      <Button title="删除" titleFontSize="20" icon="ui://te1gxawooiqdcyih1"/>
+    </component>
+    <component id="n2_ijui" name="btnRename" src="f08kwcyilb" fileName="codeVew/btn/btnCodeBlockOperate.xml" xy="0,0">
+      <Button title="重命名"/>
+    </component>
+  </displayList>
+</component>

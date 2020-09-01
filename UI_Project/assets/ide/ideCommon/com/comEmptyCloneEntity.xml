@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="201,1080" designImageAlpha="25">
-  <controller name="ctrlStatus" exported="true" pages="0,none,1,clone,4,res" selected="2"/>
+  <controller name="ctrlStatus" exported="true" pages="0,none,1,clone,4,res,7,cannotEdit" selected="3"/>
   <displayList>
     <image id="n0_hl7y" name="imgEmptyBg" src="xba67o" fileName="ideCommon/img/img_ide_cm_7.png" xy="0,0" size="201,1080">
       <relation target="" sidePair="height-height"/>
@@ -19,10 +19,16 @@
       <gearDisplay controller="ctrlStatus" pages="1"/>
       <relation target="" sidePair="middle-middle"/>
     </group>
-    <image id="n7_rv0b" name="imgEmpty" src="zgght84" fileName="ideCommon/img/img_ide_cm_blank.png" xy="40,407" group="n10_rv0b"/>
-    <text id="n8_rv0b" name="tfResDes" xy="4,529" size="193,24" group="n10_rv0b" fontSize="20" color="#999999" align="center" vAlign="middle" autoSize="height" text="该物件为刷新物件"/>
-    <group id="n10_rv0b" name="grpRes" xy="4,407" size="193,146" advanced="true">
+    <image id="n7_rv0b" name="imgEmpty" src="zgght84" fileName="ideCommon/img/img_ide_cm_blank.png" xy="40,408" group="n10_rv0b"/>
+    <text id="n8_rv0b" name="tfResDes" xy="4,530" size="193,24" group="n10_rv0b" fontSize="20" color="#999999" align="center" vAlign="middle" autoSize="height" text="该物件为刷新物件"/>
+    <group id="n10_rv0b" name="grpRes" xy="4,408" size="193,146" advanced="true">
       <gearDisplay controller="ctrlStatus" pages="4"/>
+      <relation target="" sidePair="middle-middle"/>
+    </group>
+    <image id="n11_b2pp" name="imgEmpty" src="zgght84" fileName="ideCommon/img/img_ide_cm_blank.png" xy="40,373" group="n13_b2pp"/>
+    <text id="n12_b2pp" name="tfResDes" xy="4,495" size="193,24" group="n13_b2pp" fontSize="20" color="#999999" align="center" vAlign="middle" autoSize="height" text="无法编辑"/>
+    <group id="n13_b2pp" name="grpCannotEdit" xy="4,373" size="193,146" advanced="true">
+      <gearDisplay controller="ctrlStatus" pages="7"/>
       <relation target="" sidePair="middle-middle"/>
     </group>
   </displayList>
