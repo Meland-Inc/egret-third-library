@@ -13,27 +13,25 @@
       <gearDisplay controller="ctrlShowType" pages="0"/>
       <relation target="" sidePair="bottomext-bottom,rightext-right"/>
     </component>
-    <image id="n31_hbwi" name="imgBtnBG" src="zgght8f" fileName="codeVew/img/img_codeV_k.png" xy="651,1000" size="174,48" group="n33_czor">
+    <image id="n31_hbwi" name="imgBtnBG" src="zgght8f" fileName="codeVew/img/img_codeV_k.png" xy="715,1000" size="117,48" group="n33_czor">
       <gearDisplay controller="ctrlShowType" pages="0"/>
     </image>
-    <image id="n63_kujx" name="imgBtnBG2" src="zgght8g" fileName="codeVew/img/img_codeV_x.png" xy="708,1004" group="n33_czor">
+    <image id="n63_kujx" name="imgBtnBG2" src="zgght8g" fileName="codeVew/img/img_codeV_x.png" xy="715,1004" group="n33_czor" visible="false"/>
+    <image id="n32_czor" name="imgBtnBG3" src="zgght8g" fileName="codeVew/img/img_codeV_x.png" xy="774,1004" group="n33_czor">
       <gearDisplay controller="ctrlShowType" pages="0"/>
     </image>
-    <image id="n32_czor" name="imgBtnBG3" src="zgght8g" fileName="codeVew/img/img_codeV_x.png" xy="767,1004" group="n33_czor">
-      <gearDisplay controller="ctrlShowType" pages="0"/>
-    </image>
-    <component id="n62_kujx" name="btnRestartCode" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="658,1000" size="48,48" group="n33_czor">
+    <component id="n62_kujx" name="btnRestartCode" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="665,1000" size="48,48" group="n33_czor" visible="false">
       <Button icon="ui://ti9jag5tqzjnwcyikx"/>
     </component>
-    <component id="n21_8tz6" name="btnUndo" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="713,1000" size="48,48" group="n33_czor">
+    <component id="n21_8tz6" name="btnUndo" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="720,1000" size="48,48" group="n33_czor">
       <gearIcon controller="ctrlRecordHint" pages="0,1,2,3" values="ui://ti9jag5tzgght80|ui://ti9jag5tzgght7z|ui://ti9jag5tzgght80|ui://ti9jag5tzgght7z"/>
       <Button icon="ui://ti9jag5tzgght80"/>
     </component>
-    <component id="n22_8tz6" name="btnRedo" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="775,1000" size="48,48" group="n33_czor">
+    <component id="n22_8tz6" name="btnRedo" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="782,1000" size="48,48" group="n33_czor">
       <gearIcon controller="ctrlRecordHint" pages="0,1,2,3" values="ui://ti9jag5tzgght7y|ui://ti9jag5tzgght7y|ui://ti9jag5tzgght7x|ui://ti9jag5tzgght7x"/>
       <Button icon="ui://ti9jag5tzgght7y"/>
     </component>
-    <group id="n33_czor" name="grpOperate" xy="651,1000" size="174,48" advanced="true">
+    <group id="n33_czor" name="grpOperate" xy="665,1000" size="167,48" advanced="true">
       <relation target="n9_j7co" sidePair="right-right,bottom-bottom"/>
     </group>
     <component id="n34_czor" name="btnReset" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="777,842" size="48,48">
