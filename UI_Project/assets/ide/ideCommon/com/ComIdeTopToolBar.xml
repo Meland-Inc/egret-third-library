@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1495,56" designImage="ui://thvmj7vo80ab4" designImageOffsetX="-300" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlFuncSelect" pages="3,none,0,xyCoordinate,1,rcCoordinate,2,hideLine" selected="0"/>
+  <controller name="ctrlFuncSelect" pages="3,none,0,xyCoordinate,1,rcCoordinate,2,hideLine" selected="3"/>
   <controller name="ctrlCode" pages="0,true,1,false" selected="0"/>
   <controller name="ctrlTerrainType" pages="0,normal,1,refreshPoint,2,notManorFlag,3,bornPoint" selected="3"/>
   <displayList>
@@ -12,9 +12,9 @@
     </component>
     <component id="n13_dyk9" name="btnHideLine" src="dyk9b6" fileName="ideCommon/btn/tBtnIdeTopToolBar.xml" xy="1178,2">
       <relation target="" sidePair="right-right"/>
-      <Button title="隐藏线" icon="ui://ti9jag5t80ab8h" selectedIcon="ui://ti9jag5ten7jwcyijs" controller="ctrlFuncSelect" page="2"/>
+      <Button checked="true" title="隐藏线" icon="ui://ti9jag5t80ab8h" selectedIcon="ui://ti9jag5ten7jwcyijs" controller="ctrlFuncSelect" page="2"/>
     </component>
-    <component id="n17_dyk9" name="btnRestartCode" src="en7jwcyijv" fileName="ideCommon/btn/BtnIdeTopToolBar.xml" xy="1282,2">
+    <component id="n17_dyk9" name="btnRestartCode" src="f9zawcyio4" fileName="ideCommon/btn/btnRestartCode.xml" xy="1282,2">
       <relation target="" sidePair="right-right"/>
       <Button title="重新运行" icon="ui://ti9jag5tamogt8j"/>
     </component>
@@ -60,6 +60,9 @@
     <component id="n27_9enf" name="btnSetBornPoint" src="dyk9b6" fileName="ideCommon/btn/tBtnIdeTopToolBar.xml" xy="964,2">
       <relation target="" sidePair="right-right"/>
       <Button checked="true" title="出生点" icon="ui://ti9jag5tu5ngwcyilz" selectedIcon="ui://ti9jag5tu5ngwcyim0" controller="ctrlTerrainType" page="3"/>
+    </component>
+    <component id="n28_f9za" name="btnCodeStop" src="f9zawcyio3" fileName="ideCommon/btn/btnCodeRunStop.xml" xy="909,2">
+      <relation target="" sidePair="right-right"/>
     </component>
   </displayList>
 </component>

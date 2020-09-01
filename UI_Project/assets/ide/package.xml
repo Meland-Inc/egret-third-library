@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="ti9jag5t">
+<packageDescription id="ti9jag5t" hasFavorites="true">
   <resources>
     <image id="s45w0" name="img_ide_cm_1.png" path="/ideCommon/img/" scale="9grid" scale9grid="5,8,27,22"/>
     <image id="s45w1" name="img_ide_cm_2.png" path="/ideCommon/img/" scale="9grid" scale9grid="13,13,26,26"/>
@@ -345,7 +345,7 @@
     <component id="h5krb1" name="BtnEntityInfoSelect.xml" path="/create/btn/" exported="true"/>
     <component id="cjfpb3" name="BtnEntitySelectB.xml" path="/create/btn/" exported="true"/>
     <component id="r0y9t7i" name="WinBuildIdeB.xml" path="/ideCommon/win/" exported="true"/>
-    <component id="dyk9b4" name="ComIdeTopToolBar.xml" path="/ideCommon/com/"/>
+    <component id="dyk9b4" name="ComIdeTopToolBar.xml" path="/ideCommon/com/" favorite="true"/>
     <component id="dyk9b6" name="tBtnIdeTopToolBar.xml" path="/ideCommon/btn/"/>
     <component id="dyk9b7" name="BtnBuildMode.xml" path="/ideCommon/btn/"/>
     <component id="qu7tt7j" name="ComBuildShortCutB.xml" path="/ideCommon/com/" exported="true"/>
@@ -598,6 +598,10 @@
     <image id="ijuiwcyini" name="icon_bqy_01.png" path="/codeVew/img/codeblockPage/"/>
     <image id="ijuiwcyinj" name="icon_bqy_03.png" path="/codeVew/img/codeblockPage/" scale="9grid" scale9grid="50,9,100,18"/>
     <component id="ijuiwcyink" name="ComCodeblockPageBtnEditMenus.xml" path="/codeVew/com/"/>
+    <component id="f9zawcyio3" name="btnCodeRunStop.xml" path="/ideCommon/btn/"/>
+    <component id="f9zawcyio4" name="btnRestartCode.xml" path="/ideCommon/btn/"/>
+    <image id="lwk9wcyio5" name="icon_lingdid_02.png" path="/create/img/"/>
+    <image id="lwk9wcyio6" name="icon_lingdid_01.png" path="/create/img/" scale="9grid" scale9grid="11,12,15,11"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>
