@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="114,40" extention="Button">
+<component size="107,41" extention="Button">
   <controller name="button" pages="0,up,1,down" selected="0"/>
   <displayList>
-    <loader id="n0_sz33" name="icon" xy="0,0" pivot="0.5,0.5" size="114,40" url="ui://te1gxawoot9si2a" autoSize="true">
+    <loader id="n0_sz33" name="icon" xy="0,0" pivot="0.5,0.5" size="107,41" url="ui://0axy98cgtbm260" autoSize="true">
+      <gearIcon controller="button" pages="0" values="ui://0axy98cgtbm260" default="ui://0axy98cgtbm261"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
-    <text id="n1_obf0" name="title" xy="7,6" pivot="0.5,0.5" size="100,27" fontSize="20" color="#666666" align="center" vAlign="middle" autoSize="none" singleLine="true" text="文本">
+    <text id="n1_obf0" name="title" xy="7,6" pivot="0.5,0.5" size="93,28" fontSize="20" color="#666666" align="center" vAlign="middle" autoSize="none" singleLine="true" text="文本">
       <gearColor controller="button" pages="0,1" values="#666666,#000000|#ffffff,#000000"/>
-      <relation target="" sidePair="center-center,middle-middle"/>
-      <relation target="" sidePair="width-width,height-height"/>
+      <relation target="" sidePair="center-center,middle-middle,width-width,height-height"/>
     </text>
   </displayList>
   <Button mode="Radio"/>

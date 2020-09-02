@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://0axy98cggu5v9e" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlPage" pages="0,map,1,component" selected="0"/>
+  <controller name="ctrlMode" exported="true" pages="0,normal,1,lessonCenter" selected="1"/>
   <displayList>
     <component id="n63_v8nf" name="btnMap" src="tbm25y" fileName="btn/btnScale.xml" xy="167,112" size="92,40">
+      <gearDisplay controller="ctrlMode" pages="0"/>
       <relation target="n69_gu5v" sidePair="left-left,bottom-top"/>
       <Button title="地图" titleFontSize="24" icon="ui://0axy98cggu5v9g" controller="ctrlPage" page="0"/>
     </component>
     <image id="n69_gu5v" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="171,164" size="1585,888">
-      <relation target="" sidePair="center-center,top-top"/>
-      <relation target="" sidePair="bottomext-bottom"/>
+      <relation target="" sidePair="center-center,top-top,bottomext-bottom"/>
     </image>
     <component id="n64_v8nf" name="btnComponent" src="tbm25y" fileName="btn/btnScale.xml" xy="258,112" size="92,40">
+      <gearDisplay controller="ctrlMode" pages="0"/>
       <relation target="n69_gu5v" sidePair="left-left,bottom-top"/>
       <Button title="组件" titleFontSize="24" icon="ui://0axy98cggu5v9f" controller="ctrlPage" page="1"/>
     </component>
@@ -19,6 +21,7 @@
       <relation target="n69_gu5v" sidePair="bottomext-bottom,left-left"/>
     </component>
     <component id="n71_pt17" name="btnRoomCodeEnter" src="k9m36d" fileName="btn/btnFix.xml" xy="1609,117">
+      <gearDisplay controller="ctrlMode" pages="0"/>
       <relation target="n69_gu5v" sidePair="right-right,bottom-top"/>
       <Button title="房间码加入" titleFontSize="20" icon="ui://0axy98cgk9m36b"/>
     </component>

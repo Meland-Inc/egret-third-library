@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="292,340" designImage="ui://0axy98cggu5v8u" designImageOffsetX="-221" designImageOffsetY="-222" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlEditMode" pages="0,mynopublish,1,mypublish,2,share,3,shareNoOpen" selected="3"/>
+  <controller name="ctrlEditMode" pages="0,mynopublish,1,mypublish,2,share,3,shareNoOpen" selected="0"/>
   <controller name="ctrlSelect" pages="0,0,1,1,2,2" selected="1"/>
   <controller name="ctrlEdit" pages="0,0,1,1" selected="0"/>
-  <controller name="ctrlCreate" pages="0,create,1,edit,2,none" selected="1"/>
+  <controller name="ctrlCreate" pages="0,create,1,edit,2,none" selected="0"/>
   <controller name="ctrlStatus" pages="0,null,1,updatable,2,publish" selected="0"/>
+  <controller name="ctrlMode" pages="0,normal,1,lessonCenter" selected="0"/>
   <displayList>
     <image id="n69_gu5v" name="n69" src="gu5v94" fileName="img/img_mt_dtmz_bg.png" xy="2,2" size="288,336" group="n70_gu5v">
       <relation target="" sidePair="width-width,height-height"/>
@@ -23,36 +24,40 @@
     </component>
     <component id="n52_v8nf" name="btnMapEdit" src="tbm25y" fileName="btn/btnScale.xml" xy="37,126" size="219,71" group="n70_gu5v">
       <gearDisplay controller="ctrlSelect" pages="1"/>
+      <gearText controller="ctrlMode" pages="1" values="编辑课程" default="编辑地图"/>
       <Button title="编辑地图" titleFontSize="26" icon="ui://0axy98cggu5v8x"/>
     </component>
-    <image id="n54_gu5v" name="n54" src="gu5v90" fileName="img/img_mt_gengduo_bg.png" xy="91,47" size="182,93" group="n49_v8nf">
+    <image id="n54_gu5v" name="n54" src="gu5v90" fileName="img/img_mt_gengduo_bg.png" xy="91,47" size="182,230" group="n49_v8nf">
       <gearSize controller="ctrlEditMode" pages="0,1,2,3" values="182,230,1,1|182,278,1,1|182,138,1,1|182,93,1,1"/>
     </image>
-    <component id="n44_v8nf" name="btnMapSet" src="qdanab" fileName="btn/btnScaleFunction.xml" xy="147,55" size="180,46" group="n49_v8nf">
+    <component id="n44_v8nf" name="btnMapSet" src="qdanab" fileName="btn/btnScaleFunction.xml" xy="91,46" size="180,46" group="n49_v8nf">
       <gearDisplay controller="ctrlEditMode" pages="0,1"/>
       <gearXY controller="ctrlEditMode" pages="0,1,3" values="91,46|91,46|147,55" default="145,53"/>
+      <gearText controller="ctrlMode" pages="1" values="配置课程" default="配置地图"/>
       <Button title="配置地图" titleColor="#a3a3a3" titleFontSize="24"/>
     </component>
     <image id="n59_gu5v" name="n59" src="gu5v91" fileName="img/icon_mt_xuxian5.png" xy="92,89" size="180,4" group="n49_v8nf">
       <gearDisplay controller="ctrlEditMode" pages="0,1,2,3,4"/>
     </image>
-    <component id="n55_gu5v" name="btnMapCopy" src="qdanab" fileName="btn/btnScaleFunction.xml" xy="93,48" size="180,46" group="n49_v8nf">
+    <component id="n55_gu5v" name="btnMapCopy" src="qdanab" fileName="btn/btnScaleFunction.xml" xy="91,92" size="180,46" group="n49_v8nf">
       <gearDisplay controller="ctrlEditMode" pages="0,1,2"/>
       <gearXY controller="ctrlEditMode" pages="0,1,2,3" values="91,92|91,92|91,46|93,48"/>
+      <gearText controller="ctrlMode" pages="1" values="复制课程" default="复制地图"/>
       <Button title="复制地图" titleColor="#a3a3a3" titleFontSize="24"/>
     </component>
     <image id="n60_gu5v" name="n60" src="gu5v91" fileName="img/icon_mt_xuxian5.png" xy="92,136" size="180,4" group="n49_v8nf">
       <gearDisplay controller="ctrlEditMode" pages="0,1,2"/>
     </image>
-    <component id="n56_gu5v" name="btnMapDel" src="qdanab" fileName="btn/btnScaleFunction.xml" xy="152,84" size="180,46" group="n49_v8nf">
+    <component id="n56_gu5v" name="btnMapDel" src="qdanab" fileName="btn/btnScaleFunction.xml" xy="91,138" size="180,46" group="n49_v8nf">
       <gearDisplay controller="ctrlEditMode" pages="0"/>
       <gearXY controller="ctrlEditMode" pages="0,1,3" values="91,138|268,99|152,84" default="150,82"/>
+      <gearText controller="ctrlMode" pages="1" values="删除课程" default="删除地图"/>
       <Button title="删除地图" titleColor="#a3a3a3" titleFontSize="24"/>
     </component>
     <image id="n61_gu5v" name="n61" src="gu5v91" fileName="img/icon_mt_xuxian5.png" xy="92,182" size="180,4" group="n49_v8nf">
       <gearDisplay controller="ctrlEditMode" pages="0,1"/>
     </image>
-    <component id="n57_gu5v" name="btnRoomCreate" src="qdanab" fileName="btn/btnScaleFunction.xml" xy="93,48" size="180,46" group="n49_v8nf">
+    <component id="n57_gu5v" name="btnRoomCreate" src="qdanab" fileName="btn/btnScaleFunction.xml" xy="91,184" size="180,46" group="n49_v8nf">
       <gearDisplay controller="ctrlEditMode" pages="0,1,2,3"/>
       <gearXY controller="ctrlEditMode" pages="0,1,2,3" values="91,184|91,184|91,92|93,48"/>
       <Button title="创建房间" titleColor="#a3a3a3" titleFontSize="24"/>
@@ -60,22 +65,25 @@
     <image id="n62_gu5v" name="n62" src="gu5v91" fileName="img/icon_mt_xuxian5.png" xy="92,228" size="180,4" group="n49_v8nf">
       <gearDisplay controller="ctrlEditMode" pages="0,1"/>
     </image>
-    <component id="n58_gu5v" name="btnMapPublish" src="qdanab" fileName="btn/btnScaleFunction.xml" xy="152,84" size="180,46" group="n49_v8nf">
+    <component id="n58_gu5v" name="btnMapPublish" src="qdanab" fileName="btn/btnScaleFunction.xml" xy="91,230" size="180,46" group="n49_v8nf">
       <gearDisplay controller="ctrlEditMode" pages="0"/>
       <gearXY controller="ctrlEditMode" pages="0,1,3" values="91,230|251,223|152,84" default="150,82"/>
+      <gearText controller="ctrlMode" pages="1" values="发布课程" default="发布地图"/>
       <Button title="发布地图" titleColor="#a3a3a3" titleFontSize="24"/>
     </component>
-    <component id="n63_gu5v" name="btnMapRemove" src="qdanab" fileName="btn/btnScaleFunction.xml" xy="152,84" size="180,46" group="n49_v8nf">
+    <component id="n63_gu5v" name="btnMapRemove" src="qdanab" fileName="btn/btnScaleFunction.xml" xy="146,186" size="180,46" group="n49_v8nf">
       <gearDisplay controller="ctrlEditMode" pages="1"/>
       <gearXY controller="ctrlEditMode" pages="0,1,3" values="146,186|91,138|152,84" default="150,82"/>
+      <gearText controller="ctrlMode" pages="1" values="下架课程" default="下架地图"/>
       <Button title="下架地图" titleColor="#a3a3a3" titleFontSize="24"/>
     </component>
-    <component id="n64_gu5v" name="btnMapDetail" src="qdanab" fileName="btn/btnScaleFunction.xml" xy="93,94" size="180,46" group="n49_v8nf">
+    <component id="n64_gu5v" name="btnMapDetail" src="qdanab" fileName="btn/btnScaleFunction.xml" xy="146,186" size="180,46" group="n49_v8nf">
       <gearDisplay controller="ctrlEditMode" pages="1,2,3,4,5"/>
       <gearXY controller="ctrlEditMode" pages="0,1,2,3" values="146,186|91,230|91,138|93,94"/>
+      <gearText controller="ctrlMode" pages="1" values="课程详情" default="地图详情"/>
       <Button title="地图详情" titleColor="#a3a3a3" titleFontSize="24"/>
     </component>
-    <component id="n65_gu5v" name="btnUpdatePublish" src="qdanab" fileName="btn/btnScaleFunction.xml" xy="152,84" size="180,46" group="n49_v8nf">
+    <component id="n65_gu5v" name="btnUpdatePublish" src="qdanab" fileName="btn/btnScaleFunction.xml" xy="146,186" size="180,46" group="n49_v8nf">
       <gearDisplay controller="ctrlEditMode" pages="1"/>
       <gearXY controller="ctrlEditMode" pages="0,1,3" values="146,186|91,276|152,84" default="150,82"/>
       <Button title="更新发布" titleColor="#a3a3a3" titleFontSize="24"/>
@@ -83,7 +91,7 @@
     <image id="n66_gu5v" name="n66" src="gu5v91" fileName="img/icon_mt_xuxian5.png" xy="92,275" size="181,4" group="n49_v8nf">
       <gearDisplay controller="ctrlEditMode" pages="1"/>
     </image>
-    <group id="n49_v8nf" name="grpEditBtn" xy="91,47" size="241,232" group="n70_gu5v" advanced="true">
+    <group id="n49_v8nf" name="grpEditBtn" xy="91,46" size="235,233" group="n70_gu5v" advanced="true">
       <gearDisplay controller="ctrlEdit" pages="1"/>
     </group>
     <image id="n78_qdan" name="n78" src="qdana8" fileName="img/icon_mt_editgrids1.png" xy="17,2" size="105,40" group="n80_qdan"/>
@@ -102,13 +110,15 @@
     <image id="n67_gu5v" name="n67" src="gu5v92" fileName="img/img_mt_editmapframe.png" xy="0,0" size="292,340" group="n70_gu5v">
       <gearDisplay controller="ctrlSelect" pages="1"/>
     </image>
-    <group id="n70_gu5v" name="n70" xy="0,0" size="332,340" advanced="true">
+    <group id="n70_gu5v" name="n70" xy="0,0" size="326,340" advanced="true">
       <gearDisplay controller="ctrlCreate" pages="1"/>
     </group>
     <image id="n73_gu5v" name="n73" src="yfas7f" fileName="img/img_mt_mapbgfm.png" xy="2,2" size="286,333" group="n75_gu5v"/>
     <image id="n74_gu5v" name="n74" src="yfas7r" fileName="img/img_mt_mapbgframe.png" xy="2,2" size="287,336" group="n75_gu5v"/>
     <image id="n71_gu5v" name="n71" src="gu5v96" fileName="img/icon_mt_diqiu.png" xy="103,82" size="86,86" group="n75_gu5v"/>
-    <image id="n72_gu5v" name="n72" src="gu5v98" fileName="img/icon_mt_cjdttxt.png" xy="91,182" size="109,25" group="n75_gu5v"/>
+    <text id="n72_gu5v" name="n72" xy="51,182" size="189,34" group="n75_gu5v" fontSize="24" color="#716f7a" align="center" vAlign="middle" autoSize="none" text="创建地图">
+      <gearText controller="ctrlMode" pages="1" values="创建课程" default="创建地图"/>
+    </text>
     <group id="n75_gu5v" name="n75" xy="2,2" size="287,336" advanced="true">
       <gearDisplay controller="ctrlCreate" pages="0"/>
     </group>
