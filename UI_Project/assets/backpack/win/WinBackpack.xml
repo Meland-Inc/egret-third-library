@@ -16,7 +16,7 @@
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://te1gxawooiqdcyih2"/>
     </component>
-    <text id="n22_e8s1" name="tfShortcutTitle" xy="715,786" size="105,24" group="n33_ibv1" fontSize="20" color="#333333" align="center" text="背包快捷栏"/>
+    <text id="n22_e8s1" name="tfShortcutTitle" xy="715,786" size="104,29" group="n33_ibv1" fontSize="20" color="#333333" align="center" text="背包快捷栏"/>
     <image id="n19_e8s1" name="imgShortcutBg" src="oiqdcyih4" fileName="img/img_cm_1.png" pkg="te1gxawo" xy="698,819" size="1130,120" group="n33_ibv1"/>
     <list id="n20_e8s1" name="lstShortcut" xy="718,829" size="880,100" group="n33_ibv1" layout="row" scroll="horizontal" colGap="10" defaultItem="ui://48p8y12ae8s1j">
       <item/>
@@ -35,7 +35,7 @@
       <gearDisplay controller="ctrlOperateType" pages="0"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <list id="n10_oiqd" name="lstEquipItem" xy="91,157" size="102,545" group="n31_ibv1" overflow="scroll" lineGap="10" defaultItem="ui://48p8y12aoiqdh">
+    <list id="n10_oiqd" name="lstEquipItem" xy="91,157" size="102,545" group="n31_ibv1" lineGap="10" defaultItem="ui://48p8y12aoiqdh">
       <item icon="ui://48p8y12ay8ju4"/>
       <item icon="ui://48p8y12ay8ju6"/>
       <item icon="ui://48p8y12ay8ju2"/>
@@ -60,18 +60,18 @@
     </image>
     <image id="n26_vkix" name="imgSearchBg" src="oiqdcyigx" fileName="img/img_cm_ssk.png" pkg="te1gxawo" xy="1597,126" size="210,38" group="n34_emzb"/>
     <image id="n36_x2wv" name="n36" src="rujpcyijl" fileName="img/icon_cm_ss.png" pkg="te1gxawo" xy="1602,130" size="32,32" group="n34_emzb"/>
-    <text id="n25_vkix" name="tfSearch" xy="1637,127" size="167,38" group="n34_emzb" input="true" prompt="[color=#999999]请输入搜索内容[/color]" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" text=""/>
+    <text id="n25_vkix" name="tfSearch" xy="1637,127" size="167,38" group="n34_emzb" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" text="" input="true" prompt="[color=#999999]请输入搜索内容[/color]"/>
     <group id="n34_emzb" name="grpInpSearch" xy="1597,126" size="210,39" advanced="true">
       <relation target="n15_tvlf" sidePair="top-top,right-right"/>
     </group>
-    <text id="n14_tvlf" name="tfNum" xy="714,135" size="95,24" fontSize="20" color="#333333" align="center" vars="true" text="背包 [{num=10}]">
+    <text id="n14_tvlf" name="tfNum" xy="714,135" size="83,29" fontSize="20" color="#333333" align="center" vars="true" text="背包 [{num=10}]">
       <relation target="n15_tvlf" sidePair="left-left,top-top"/>
     </text>
     <list id="n16_tvlf" name="lstBagType" xy="936,123" size="655,48" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="128" colGap="13" defaultItem="ui://48p8y12atvlfi">
       <relation target="n15_tvlf" sidePair="left-left,top-top"/>
       <item/>
     </list>
-    <list id="n17_e8s1" name="lstBagItem" xy="717,192" size="1094,539" layout="flow_hz" overflow="scroll" lineGap="10" colGap="10" defaultItem="ui://48p8y12ae8s1j" autoClearItems="true">
+    <list id="n17_e8s1" name="lstBagItem" xy="717,192" size="1094,552" layout="flow_hz" overflow="scroll" lineGap="5" colGap="10" defaultItem="ui://48p8y12ae8s1j" autoClearItems="true">
       <relation target="n15_tvlf" sidePair="left-left,top-top,width-width"/>
       <relation target="n18_e8s1" sidePair="height-height"/>
       <item/>
