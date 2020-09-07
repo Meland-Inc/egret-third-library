@@ -26,6 +26,9 @@
     <group id="n9_j5jv" name="grpAnswer" xy="954,826" size="412,39" group="n24_qylx" advanced="true">
       <gearDisplay controller="ctrlType" pages="2"/>
     </group>
+        <component id="n3_j5jv" name="btnClose" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1455,874" size="73,71" group="n24_qylx">
+      <Button icon="ui://nyy10939o9zci"/>
+    </component>
     <component id="n10_qlcu" name="btnSubmit" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1362,820" size="106,51" group="n24_qylx">
       <gearDisplay controller="ctrlType" pages="2"/>
       <Button title="提交" titleColor="#ffffff" titleFontSize="18" icon="ui://nyy10939o9zcl"/>
