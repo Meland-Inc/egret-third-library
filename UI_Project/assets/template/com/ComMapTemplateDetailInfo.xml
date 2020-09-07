@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1039,983" overflow="scroll" scrollBarRes="ui://0axy98cgqb974t," designImage="ui://0axy98cgyfas87" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlInfo" pages="0,short,1,all" selected="0"/>
-  <controller name="ctrlMode" exported="true" pages="0,normal,1,lessonCenter" selected="0"/>
+  <controller name="ctrlMode" exported="true" pages="0,normal,1,lessonCenter" selected="1"/>
   <displayList>
     <image id="n116_yfas" name="n116" src="yfas7s" fileName="img/img_mt_detaillikebg.png" xy="797,71" size="152,69" group="n95_azcq"/>
     <component id="n125_yfas" name="pbarLike" src="yfas8c" fileName="btn/ProbarLike.xml" xy="797,104" size="153,37" group="n95_azcq">
@@ -42,10 +42,12 @@
     <group id="n104_yfas" name="grpAuthor" xy="382,65" size="355,129"/>
     <component id="n71_azcq" name="btnCopy" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="747,206" size="90,82" group="n110_yfas">
       <gearText controller="ctrlMode" default=""/>
-      <Button titleFontSize="24" icon="ui://0axy98cgyfas8b"/>
+      <gearIcon controller="ctrlMode" pages="1" values="ui://0axy98cgsqy0bc" default="ui://0axy98cgyfas8b"/>
+      <Button titleFontSize="24" icon="ui://0axy98cgsqy0bc"/>
     </component>
     <component id="n72_azcq" name="btnSubscribe" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="857,206" size="90,82" group="n110_yfas">
-      <Button titleFontSize="24" icon="ui://0axy98cgyfas88"/>
+      <gearIcon controller="ctrlMode" pages="1" values="ui://0axy98cgsqy0bb" default="ui://0axy98cgyfas88"/>
+      <Button titleFontSize="24" icon="ui://0axy98cgsqy0bb"/>
     </component>
     <component id="n73_azcq" name="btnUnsubscribe" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="857,206" size="90,82" group="n110_yfas">
       <Button titleFontSize="24" icon="ui://0axy98cgyfas8a"/>
@@ -55,7 +57,7 @@
       <gearSize controller="ctrlInfo" pages="0,1" values="867,184,1,1|867,482,1,1"/>
     </image>
     <image id="n112_yfas" name="n112" src="yfas7p" fileName="img/icon_mt_detailtitle.png" xy="152,390" size="166,55" group="n113_yfas"/>
-    <text id="n87_azcq" name="tf" xy="165,405" size="135,34" group="n113_yfas" fontSize="24" color="#716f7a" align="center" vAlign="middle" autoSize="none" text="地图描述">
+    <text id="n87_azcq" name="tf" xy="165,405" size="135,34" group="n113_yfas" fontSize="24" color="#716f7a" align="center" vAlign="middle" autoSize="none" text="课程描述">
       <gearText controller="ctrlMode" pages="1" values="课程描述" default="地图描述"/>
     </text>
     <component id="n122_yfas" name="txtScroll" src="yfas7x" fileName="com/ComTextScroll.xml" xy="113,449" size="819,134" group="n113_yfas">

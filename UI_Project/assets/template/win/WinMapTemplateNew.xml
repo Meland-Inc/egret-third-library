@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://0axy98cgtbm25m" designImageAlpha="0" designImageLayer="1" bgColor="#f7f6f2">
-  <controller name="ctrlPanel" pages="0,allmap,1,allroom,2,mymap,3,mycollect,7,mappublish" selected="0"/>
+  <controller name="ctrlPanel" pages="0,allmap,1,allroom,2,mymap,3,mycollect,7,mappublish" selected="2"/>
   <controller name="ctrlMode" pages="0,normal,1,lessonCenter" selected="0">
     <action type="change_page" fromPage="" toPage="0" objectId="n48_azcq" controller="ctrlMode" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n48_azcq" controller="ctrlMode" targetPage="1"/>
     <action type="change_page" fromPage="" toPage="0" objectId="n50_azcq" controller="ctrlMode" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n50_azcq" controller="ctrlMode" targetPage="1"/>
+    <action type="change_page" fromPage="" toPage="1" controller="ctrlPanel" targetPage="2"/>
   </controller>
   <displayList>
     <graph id="n63_tbm2" name="n63" xy="0,0" size="1920,1080" type="rect" fillColor="#fff7f6f2">
@@ -42,7 +43,7 @@
     <component id="n39_v8nf" name="btnAllMap" src="dvog9v" fileName="btn/btnTextSelect.xml" xy="231,12" size="140,58" group="n45_azcq">
       <gearXY controller="ctrlMode" pages="0,1" values="231,12|401,12"/>
       <gearText controller="ctrlMode" pages="1" values="课程中心" default="地图中心"/>
-      <Button checked="true" title="地图中心" titleFontSize="24" controller="ctrlPanel" page="0"/>
+      <Button title="地图中心" titleFontSize="24" controller="ctrlPanel" page="0"/>
     </component>
     <component id="n40_v8nf" name="btnAllComponent" src="dvog9v" fileName="btn/btnTextSelect.xml" xy="580,12" size="140,58" group="n45_azcq" touchable="false">
       <gearDisplay controller="ctrlMode" pages="0"/>
@@ -64,11 +65,11 @@
     <component id="n44_v8nf" name="btnMyMap" src="dvog9u" fileName="btn/btnScaleSelect.xml" xy="1482,16" size="121,46" group="n45_azcq">
       <gearDisplay controller="ctrlMode" pages="0"/>
       <relation target="" sidePair="top-top,right-right"/>
-      <Button title="我的创作" icon="ui://0axy98cgtbm25w" selectedIcon="ui://0axy98cgdvog9s" controller="ctrlPanel" page="2"/>
+      <Button checked="true" title="我的创作" icon="ui://0axy98cgtbm25w" selectedIcon="ui://0axy98cgdvog9s" controller="ctrlPanel" page="2"/>
     </component>
     <component id="n65_pplw" name="btnMyLesson" src="dvog9v" fileName="btn/btnTextSelect.xml" xy="231,12" size="140,58" group="n45_azcq">
       <gearDisplay controller="ctrlMode" pages="1"/>
-      <Button title="我的课程" titleFontSize="24" controller="ctrlPanel" page="2"/>
+      <Button checked="true" title="我的课程" titleFontSize="24" controller="ctrlPanel" page="2"/>
     </component>
     <component id="n66_pplw" name="btnMyLessonCollect" src="dvog9v" fileName="btn/btnTextSelect.xml" xy="580,12" size="140,58" group="n45_azcq">
       <gearDisplay controller="ctrlMode" pages="1"/>
