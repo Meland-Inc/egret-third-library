@@ -255,6 +255,18 @@
     <component id="pplway" name="comLessonCenterTemplateItem.xml" path="/com/"/>
     <component id="pplwaz" name="WinLessonTemplate.xml" path="/win/" exported="true"/>
     <component id="pplwb0" name="WinLessonMapTemplate.xml" path="/win/" exported="true"/>
+    <image id="sqy0b1" name="bg_kkk_02.png" path="/img/lessonCenter/" scale="9grid" scale9grid="31,35,62,70"/>
+    <image id="sqy0b2" name="bg_kkk_01.png" path="/img/lessonCenter/"/>
+    <image id="sqy0b3" name="bg_kkk_02(1).png" path="/img/lessonCenter/"/>
+    <image id="sqy0b4" name="bg_kkk_03.png" path="/img/lessonCenter/"/>
+    <image id="sqy0b5" name="icon_kkk_01.png" path="/img/lessonCenter/"/>
+    <image id="sqy0b6" name="icon_kkk_02.png" path="/img/lessonCenter/" scale="9grid" scale9grid="35,12,70,24"/>
+    <image id="sqy0b7" name="icon_kkk_03.png" path="/img/lessonCenter/"/>
+    <image id="sqy0b8" name="img_kkk_01.png" path="/img/lessonCenter/"/>
+    <image id="sqy0b9" name="img_kkk_02.png" path="/img/lessonCenter/"/>
+    <image id="sqy0ba" name="标注(1).png" path="/img/lessonCenter/"/>
+    <image id="sqy0bb" name="icon_mt_detail_subscribed1.png" path="/img/lessonCenter/"/>
+    <image id="sqy0bc" name="icon_mt_detail_copy1.png" path="/img/lessonCenter/"/>
   </resources>
   <publish name="template"/>
 </packageDescription>

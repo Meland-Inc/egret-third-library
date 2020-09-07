@@ -43,7 +43,7 @@
       <gearColor controller="ctrlMode" pages="1" values="#d28800,#000000" default="#4db6ff,#000000"/>
       <gearText controller="ctrlMode" pages="1" values="课程名字" default="地图名字"/>
     </text>
-    <text id="n72_v8nf" name="comDescribeInput" xy="943,361" size="515,335" group="n93_c6ye" fontSize="24" autoSize="none" autoClearText="true" text="这是一个地图说明" input="true" maxLength="500"/>
+    <text id="n72_v8nf" name="comDescribeInput" xy="943,361" size="515,335" group="n93_c6ye" fontSize="24" autoSize="none" autoClearText="true" text="这是一个地图说明" input="true" maxLength="250"/>
     <component id="n73_v8nf" name="cbMapTemplateType" src="c6ye8p" fileName="btn/CombMapType.xml" xy="924,778" size="263,50" group="n93_c6ye">
       <gearDisplay controller="ctrlMode" pages="0"/>
       <ComboBox title="无" visibleItemCount="10">
