@@ -268,6 +268,13 @@
           <mu-divider />
           <div class="button-wrapper">
             <mu-button
+              v-show="this.curEnviron&&this.curEnviron.svnTagEnable"
+              v-loading="isSvnAssetTagLoading"
+              data-mu-loading-size="24"
+              color="cyan500"
+              @click="svnAssetTag"
+            >SVN打Tag</mu-button>
+            <mu-button
               v-loading="isCommitGitLoading"
               data-mu-loading-size="24"
               color="pink500"
@@ -390,6 +397,7 @@ export default {
       isUploadPolicyLoading: false,
       isApplyPolicyNumLoading: false,
 
+      isSvnAssetTagLoading: false,
       isCommitGitLoading: false,
       isPullGitLoading: false,
       isGitTagLoading: false,
@@ -834,6 +842,23 @@ export default {
     async onCheckGameVerison() {
       let gameVersion = await ModelMgr.versionModel.getEnvironGameVersion();
       Global.toast(`游戏版本:${gameVersion}`);
+    },
+    async svnAssetTag() {
+      if (!ModelMgr.versionModel.publisher) {
+        Global.snack("请输入发布者", null, false);
+        return;
+      }
+
+      this.isSvnAssetTagLoading = true;
+      Global.showRegionLoading();
+      try {
+        await mdFtp.svnAssetTag();
+        this.isSvnAssetTagLoading = false;
+        Global.hideRegionLoading();
+      } catch (error) {
+        this.isSvnAssetTagLoading = false;
+        Global.hideRegionLoading();
+      }
     },
     async commitGit() {
       if (!ModelMgr.versionModel.publisher) {

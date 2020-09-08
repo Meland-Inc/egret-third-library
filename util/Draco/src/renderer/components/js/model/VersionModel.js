@@ -34,7 +34,8 @@ export class VersionModel {
             updateGitEnable: true, gitBranch: "trunk/release", trunkName: "release", cdnRoot: "readyTest",
             cdnPatchEnable: true, cdnWinPatchPath: "/ready/win", cdnMacPatchPath: "/ready/mac",
             publishEnable: true, mergeVersionEnable: true, compressPicEnable: false, zipFileEnable: true, policyEnable: true, scpEnable: true, cdnEnable: true,
-            pushGitEnable: true, publishDescEnable: false, codeVersionEnable: true, gitTagEnable: true, zipUploadGameEnable: false, nativeEnable: true
+            pushGitEnable: true, publishDescEnable: false, codeVersionEnable: true, gitTagEnable: true, zipUploadGameEnable: false, nativeEnable: true,
+            svnTagEnable: true,
         },
         {
             name: this.eEnviron.release, host: "bg-stage.wkcoding.com", user: "ftpadmin", password: "unclemiao",

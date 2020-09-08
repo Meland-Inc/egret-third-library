@@ -85,7 +85,9 @@ export function runCmd(cmd, cwd, successMsg, errorMsg) {
         console.log(`cmd --> cmd:${cmd} cwd:${cwd}`);
         let process = exec(cmd, { cwd: cwd }, (error) => {
             if (error) {
-                Global.snack(errorMsg, error, false);
+                if (errorMsg) {
+                    Global.snack(errorMsg, error, false);
+                }
                 reject(process);
             } else {
                 if (successMsg) {
@@ -100,6 +102,30 @@ export function runCmd(cmd, cwd, successMsg, errorMsg) {
         });
         process.stderr.on("data", data => {
             console.log("stderr: " + data);
+        });
+    });
+}
+
+/**
+ * 执行cmd命令拿到返回信息
+ * @returns {Promise<string>}
+  */
+export function runCmdGetInfo(cmd, cwd) {
+    return new Promise((resolve, reject) => {
+        console.log(`cmd get info --> cmd:${cmd} cwd:${cwd}`);
+        let process = exec(cmd, { cwd: cwd }, (error) => {
+            if (error) {
+                reject(error);
+            }
+        });
+
+        process.stdout.on("data", data => {
+            console.log("stdout: " + data);
+            resolve(data)
+        });
+        process.stderr.on("data", data => {
+            console.log("stderr: " + data);
+            resolve(data)
         });
     });
 }
