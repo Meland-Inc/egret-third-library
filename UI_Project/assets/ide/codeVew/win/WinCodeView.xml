@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" opaque="false" designImage="ui://thvmj7voen7j4cyij9" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlStatus" pages="2,none,1,clone,0,elem,6,res,8,cannotEdit" selected="1">
+  <controller name="ctrlStatus" pages="2,none,1,clone,0,elem,6,res,8,cannotEdit" selected="0">
     <action type="change_page" fromPage="" toPage="2" objectId="n32_g61s" controller="ctrlStatus" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n32_g61s" controller="ctrlStatus" targetPage="1"/>
     <action type="change_page" fromPage="" toPage="6" objectId="n32_g61s" controller="ctrlStatus" targetPage="4"/>

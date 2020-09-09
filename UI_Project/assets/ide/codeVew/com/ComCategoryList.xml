@@ -22,5 +22,9 @@
       <item title="自定义" icon="ui://ti9jag5ts45wl" name="custom" selectedIcon="ui://ti9jag5ts45wm" controllers="c1,9"/>
       <item title="内部" icon="ui://ti9jag5tf0vfwcyijq" name="internal"/>
     </list>
+    <component id="n29_ntd7" name="comCodeblockCanUseConfig" src="g9ldwcyio7" fileName="codeVew/com/ComCodeblockCanUseConfig.xml" xy="762,0">
+      <relation target="" sidePair="bottomext-bottom"/>
+      <relation target="n27_hoex" sidePair="right-left"/>
+    </component>
   </displayList>
 </component>

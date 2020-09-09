@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="410,1080">
+  <displayList>
+    <image id="n0_g9ld" name="bg" src="g9ldwcyioa" fileName="codeVew/img/canUseConfig/bg_dmkmb_01.png" xy="0,0" size="410,1080">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_g9ld" name="bg2" src="g9ldwcyio9" fileName="codeVew/img/canUseConfig/bg_dmkmb_02.png" xy="13,63" size="384,985">
+      <relation target="" sidePair="bottom-bottom,rightext-right"/>
+    </image>
+    <text id="n2_g9ld" name="tfTitle" xy="13,21" size="145,24" fontSize="20" text="可用代码块配置"/>
+    <component id="n3_g9ld" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="354,16" size="33,33">
+      <Button icon="ui://ti9jag5tg9ldwcyio8"/>
+    </component>
+    <component id="n6_ntd7" name="comContainer" src="ou8ewcyiob" fileName="codeVew/com/ComCanUseConfigContainer.xml" xy="14,69" size="383,972">
+      <relation target="n1_g9ld" sidePair="width-width,height-height"/>
+    </component>
+  </displayList>
+</component>
