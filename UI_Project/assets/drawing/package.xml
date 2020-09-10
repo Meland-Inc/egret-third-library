@@ -91,6 +91,54 @@
     <component id="pve961" name="btnSelect.xml" path="/btn/"/>
     <component id="pve962" name="ComFlipTypeSelect.xml" path="/com/"/>
     <component id="pve963" name="ComShapeTypeSelect.xml" path="/com/"/>
+    <component id="jwow64" name="btn.xml" path="/blackboard/btn/"/>
+    <image id="jwow65" name="img_heiban_03.png" path="/blackboard/img/"/>
+    <image id="jwow66" name="img_heiban_02.png" path="/blackboard/img/"/>
+    <component id="jwow67" name="comColor.xml" path="/blackboard/btn/"/>
+    <component id="jwow68" name="btnToolItem.xml" path="/blackboard/btn/"/>
+    <image id="jwow69" name="icon_heiban_09.png" path="/blackboard/img/"/>
+    <image id="jwow6a" name="icon_heiban_14.png" path="/blackboard/img/"/>
+    <image id="jwow6b" name="icon_heiban_08.png" path="/blackboard/img/"/>
+    <image id="jwow6c" name="icon_heiban_10.png" path="/blackboard/img/"/>
+    <image id="jwow6d" name="icon_heiban_11.png" path="/blackboard/img/"/>
+    <image id="jwow6e" name="icon_heiban_12.png" path="/blackboard/img/"/>
+    <image id="jwow6f" name="icon_heiban_13.png" path="/blackboard/img/"/>
+    <image id="jwow6g" name="icon_heiban_01-2.png" path="/blackboard/img/"/>
+    <image id="jwow6h" name="icon_heiban_01-3.png" path="/blackboard/img/"/>
+    <image id="jwow6i" name="icon_heiban_01-4.png" path="/blackboard/img/"/>
+    <image id="jwow6j" name="icon_heiban_01-5.png" path="/blackboard/img/"/>
+    <image id="jwow6k" name="icon_heiban_01-6.png" path="/blackboard/img/"/>
+    <image id="jwow6l" name="icon_heiban_01-1.png" path="/blackboard/img/"/>
+    <component id="jwow6m" name="comSize.xml" path="/blackboard/btn/"/>
+    <image id="jwow6n" name="5-pts.png" path="/blackboard/img/"/>
+    <image id="jwow6o" name="25-pts.png" path="/blackboard/img/"/>
+    <image id="jwow6p" name="50-pts.png" path="/blackboard/img/"/>
+    <image id="jwow6q" name="icon_heiban_02.png" path="/blackboard/img/"/>
+    <component id="jwow6r" name="comTool.xml" path="/blackboard/btn/"/>
+    <image id="jwow6s" name="icon_heiban_05.png" path="/blackboard/img/"/>
+    <image id="jwow6t" name="icon_heiban_06.png" path="/blackboard/img/"/>
+    <image id="jwow6u" name="icon_heiban_04.png" path="/blackboard/img/"/>
+    <image id="jwow6v" name="icon_heiban_07.png" path="/blackboard/img/"/>
+    <component id="jwow6w" name="btnTool-bak.xml" path="/blackboard/btn/"/>
+    <image id="jwow6x" name="img_heiban_01.png" path="/blackboard/img/"/>
+    <image id="jwow6y" name="img_hieban_04.png" path="/blackboard/img/"/>
+    <image id="jwow6z" name="img_hieban_05.png" path="/blackboard/img/"/>
+    <image id="jwow70" name="标注.jpg" path="/blackboard/img/"/>
+    <image id="jwow71" name="效果图.jpg" path="/blackboard/img/"/>
+    <image id="jwow72" name="10-pts.png" path="/blackboard/img/"/>
+    <image id="jwow73" name="bg_heiban_01.png" path="/blackboard/img/" scale="9grid" scale9grid="480,263,960,526"/>
+    <image id="jwow74" name="btn_heiban_01.png" path="/blackboard/img/"/>
+    <image id="jwow75" name="btn_heiban_02.png" path="/blackboard/img/"/>
+    <image id="jwow76" name="btn_heiban_03.png" path="/blackboard/img/"/>
+    <image id="jwow77" name="btn_heiban_04.png" path="/blackboard/img/"/>
+    <image id="jwow78" name="btn_heiban_05.png" path="/blackboard/img/"/>
+    <image id="jwow79" name="icon_heiban_01.png" path="/blackboard/img/"/>
+    <image id="jwow7a" name="icon_heiban_02-1.png" path="/blackboard/img/"/>
+    <image id="jwow7b" name="icon_heiban_03.png" path="/blackboard/img/"/>
+    <image id="jwow7c" name="icon_heiban_03-1.png" path="/blackboard/img/"/>
+    <image id="jwow7d" name="img_heiban_02-1.png" path="/blackboard/img/"/>
+    <component id="jwow7e" name="WinUIBlackboard.xml" path="/blackboard/" exported="true"/>
+    <image id="jwow7f" name="btn_rwjm_close.png" path="/blackboard/img/"/>
   </resources>
   <publish name="drawing"/>
 </packageDescription>
