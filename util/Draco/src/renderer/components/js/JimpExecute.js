@@ -848,8 +848,8 @@ export function jimp2dPng(id, area, texture, input_path, output_path) {
             .then(async originImage => {
                 let imageWidth = originImage.bitmap.width;
                 let imageHeight = originImage.bitmap.height;
-                let tileWidth = 70;
-                let tileHeight = 50;
+                let tileWidth = 60;
+                let tileHeight = 60;
 
                 let rowLen = area.length;
                 let colLen = area[0].length;
