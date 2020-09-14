@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="130,30">
-  <controller name="color" pages="0,DeepBlue,1,LightBlue,2,LightRed,3,DeepRed,4,Purple,5,Green,6,Pink,7,Carnation,8,LightYellow,9,DeepYellow,10,PinkRed" selected="0"/>
-  <controller name="ctrlHint" pages="0,none,1,xy,2,entity,3,question,4,class,5,level" selected="5"/>
+<component size="94,30">
+  <controller name="color" pages="0,DeepBlue,1,LightBlue,2,LightRed,3,DeepRed,4,Purple,5,Green,6,Pink,7,Carnation,8,LightYellow,9,DeepYellow,10,PinkRed" selected="10"/>
+  <controller name="ctrlHint" pages="0,none,1,xy,2,entity,3,question,4,class,5,level,6,talk" selected="6"/>
   <displayList>
-    <loader id="n9_j1n2" name="curentNotUsed" xy="0,0" size="130,30" visible="false" touchable="false" url="ui://t573fj5bs45w1i" align="center" vAlign="middle" fill="scaleFree">
+    <loader id="n9_j1n2" name="curentNotUsed" xy="0,0" size="94,30" visible="false" touchable="false" url="ui://t573fj5bs45w1i" align="center" vAlign="middle" fill="scaleFree">
       <gearIcon controller="color" pages="0,1,2,3,4,5,6,7,8,9" values="ui://t573fj5bs45w1i|ui://t573fj5bi6xe1r|ui://t573fj5bi6xe1s|ui://t573fj5bi6xe1t|ui://t573fj5bi6xe1u|ui://t573fj5bi6xe1v|ui://t573fj5bi6xe1w|ui://t573fj5bi6xe1x|ui://rnqj1l77w7botlh|ui://t573fj5bi6xe1p" default="ui://t573fj5bs45w1i"/>
       <relation target="" sidePair="rightext-right"/>
     </loader>
-    <loader id="n12_g8bk" name="currentUsed" xy="0,0" size="130,30" url="ui://t573fj5bs45w18" fill="scaleFree">
+    <loader id="n12_g8bk" name="currentUsed" xy="0,0" size="94,30" url="ui://t573fj5bs45w18" fill="scaleFree">
       <relation target="" sidePair="rightext-right"/>
     </loader>
-    <text id="n10_qq8d" name="n10" xy="39,3" size="78,22" fontSize="18" color="#ffffff" vAlign="middle" text="关卡组件">
+    <text id="n10_qq8d" name="n10" xy="39,3" size="41,22" fontSize="18" color="#ffffff" vAlign="middle" text="对话">
       <gearXY controller="ctrlHint" pages="5" values="39,3" default="39,3"/>
-      <gearText controller="ctrlHint" pages="0,1,2,4,5" values="|坐标|实体|类别|关卡组件" default="问题"/>
+      <gearText controller="ctrlHint" pages="0,1,2,4,5,6" values="|坐标|实体|类别|关卡组件|对话" default="问题"/>
     </text>
-    <loader id="n11_qq8d" name="n11" xy="6,1" size="28,28" url="ui://t573fj5bs45wu" align="center" vAlign="middle">
-      <gearDisplay controller="ctrlHint" pages="1,2,3,4,5"/>
-      <gearIcon controller="ctrlHint" pages="1,2,3,4,5" values="ui://t573fj5bs45w11|ui://t573fj5bs45ww|ui://t573fj5bs45wy|ui://t573fj5bs45wu|ui://t573fj5bs45wu" default="ui://t573fj5bi6xe1z"/>
+    <loader id="n11_qq8d" name="n11" xy="6,1" size="28,28" url="ui://t573fj5bs45wy" align="center" vAlign="middle">
+      <gearDisplay controller="ctrlHint" pages="1,2,3,4,5,6"/>
+      <gearIcon controller="ctrlHint" pages="1,2,3,4,5,6" values="ui://t573fj5bs45w11|ui://t573fj5bs45ww|ui://t573fj5bs45wy|ui://t573fj5bs45wu|ui://t573fj5bs45wu|ui://t573fj5bs45wy" default="ui://t573fj5bi6xe1z"/>
     </loader>
   </displayList>
   <relation target="n10_qq8d" sidePair="rightext-right"/>
