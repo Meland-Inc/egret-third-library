@@ -22,7 +22,9 @@ import mainControl from './MainControl';
 
 //限制只启用一个程序
 const gotTheLock = app.requestSingleInstanceLock();
+let isSecondInstance: boolean = false;
 if (!gotTheLock) {
+  isSecondInstance = true;
   app.quit();
 }
 
@@ -50,16 +52,6 @@ class Main {
     }
     util.runCmd(cmdGameStr, null, `关闭游戏服务器成功`, "");
 
-    //开启native时检测杀ngrok进程
-    let cmdNgrokStr: string;
-    if (os.platform() === "win32") {
-      cmdNgrokStr = "taskkill /im ngrok.exe /f";
-    } else {
-      cmdNgrokStr = `pkill ngrok`;
-    }
-    util.runCmd(cmdNgrokStr, null, `关闭ngrok进程成功`, "");
-
-
     let shortCut = "";
     if (process.platform === 'darwin') {
       shortCut = 'Alt+Command+I';
@@ -86,7 +78,7 @@ class Main {
         try {
           const url = new URL(tUrl);
           mainModel.setFakeProtoURL(url);
-        } catch{
+        } catch {
 
         }
       }
@@ -335,5 +327,12 @@ class Main {
   }
 }
 
-const main = new Main();
-main.init();
+//初始化方法
+function init(): void {
+  if (isSecondInstance) return;
+  const main = new Main();
+  main.init();
+}
+
+//初始化
+init();
