@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://0axy98cgyfas8d" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlStep" pages="2,0,0,1,1,2" selected="2"/>
+  <controller name="ctrlStep" pages="2,0,0,1,1,2" selected="0"/>
   <controller name="ctrlManor" pages="0,0,1,1" selected="0"/>
   <controller name="ctrlMapType" pages="0,rectangle,1,rhomb" selected="0"/>
   <displayList>
@@ -15,13 +15,14 @@
       <Button title="  返回" icon="ui://0axy98cgmzsu6h"/>
     </component>
     <group id="n83_yfas" name="grpMain" xy="0,0" size="1920,1080"/>
-    <image id="n85_vrsj" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="169,171" size="1584,895" group="n49_v8nf">
+    <image id="n85_vrsj" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="169,171" size="1584,895">
       <relation target="" sidePair="bottomext-bottom,top-top"/>
     </image>
-    <image id="n84_yfas" name="n84" src="yfas8f" fileName="img/icon_mt_xzmb.png" xy="167,100" size="213,52" group="n49_v8nf">
+    <image id="n84_yfas" name="n84" src="yfas8f" fileName="img/icon_mt_xzmb.png" xy="167,100" size="213,52">
       <relation target="" sidePair="left-left,top-top"/>
     </image>
-    <text id="n46_v8nf" name="n46" xy="185,107" size="189,42" group="n49_v8nf" fontSize="24" color="#ffffff" vAlign="middle" autoSize="none" text="选择一个模板">
+    <text id="n46_v8nf" name="n46" xy="169,107" size="173,42" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="选择地图类型">
+      <gearText controller="ctrlStep" pages="2,1" values="选择地图类型|配置模板" default="选择一个模板"/>
       <relation target="n84_yfas" sidePair="middle-middle,left-left"/>
     </text>
     <list id="n48_v8nf" name="lstTemplate" xy="218,235" size="1484,677" group="n49_v8nf" layout="flow_hz" overflow="scroll" lineGap="36" colGap="6" defaultItem="ui://0axy98cgv8nf56" autoClearItems="true">
@@ -41,7 +42,7 @@
       <item/>
       <item/>
     </list>
-    <group id="n49_v8nf" name="n49" xy="167,100" size="1586,966" advanced="true">
+    <group id="n49_v8nf" name="n49" xy="218,235" size="1484,677" advanced="true">
       <gearDisplay controller="ctrlStep" pages="0"/>
     </group>
     <image id="n78_yfas" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="399,123" size="1121,898" group="n63_v8nf">
@@ -119,13 +120,13 @@
       <gearDisplay controller="ctrlStep" pages="1"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <component id="n88_jntw" name="n88" src="oliri6q" fileName="btn/rbtnScale.xml" pkg="te1gxawo" xy="140,230" size="335,293">
+    <component id="n88_jntw" name="n88" src="sh3oap" fileName="btn/btnMapType.xml" xy="230,230">
       <gearDisplay controller="ctrlStep" pages="2"/>
-      <Button checked="true" title="正" titleFontSize="138" selectedIcon="ui://0axy98cgn62rak" controller="ctrlMapType" page="0"/>
+      <Button checked="true" titleFontSize="138" selectedIcon="ui://0axy98cgn62rak" controller="ctrlMapType" page="0"/>
     </component>
-    <component id="n90_jntw" name="n90" src="oliri6q" fileName="btn/rbtnScale.xml" pkg="te1gxawo" xy="632,230" size="335,293">
+    <component id="n90_jntw" name="n90" src="sh3oap" fileName="btn/btnMapType.xml" xy="622,230" controller="ctrlType,1">
       <gearDisplay controller="ctrlStep" pages="2"/>
-      <Button title="菱" titleFontSize="138" selectedIcon="ui://0axy98cgn62rak" controller="ctrlMapType" page="1"/>
+      <Button titleFontSize="138" selectedIcon="ui://0axy98cgn62rak" controller="ctrlMapType" page="1"/>
     </component>
     <component id="n64_v8nf" name="btnPre1" src="tbm25y" fileName="btn/btnScale.xml" xy="1377,971" size="140,54">
       <gearDisplay controller="ctrlStep" pages="0"/>
