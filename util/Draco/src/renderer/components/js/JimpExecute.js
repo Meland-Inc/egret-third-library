@@ -856,7 +856,7 @@ export function jimp2dPng(id, area, texture, input_path, output_path) {
 
                 for (let row = 0; row <= rowLen - 1; row++) {
                     for (let col = 0; col <= colLen - 1; col++) {
-                        let topImageHigh = imageHeight - colLen * tileHeight;
+                        let topImageHigh = imageHeight - rowLen * tileHeight;
                         let topDistance = row === 0 ? 0 : topImageHigh;
 
                         let deviationX = 1;     //x轴偏差值
