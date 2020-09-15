@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" opaque="false" designImage="ui://thvmj7voen7j4cyij9" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlStatus" pages="2,none,1,clone,0,elem,6,res,8,cannotEdit" selected="1">
+  <controller name="ctrlStatus" pages="2,none,1,clone,0,elem,6,res,8,cannotEdit" selected="2">
     <action type="change_page" fromPage="" toPage="2" objectId="n32_g61s" controller="ctrlStatus" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n32_g61s" controller="ctrlStatus" targetPage="1"/>
     <action type="change_page" fromPage="" toPage="6" objectId="n32_g61s" controller="ctrlStatus" targetPage="4"/>
@@ -42,18 +42,18 @@
       <relation target="" sidePair="bottomext-bottom,rightext-right"/>
       <relation target="n1_s45w" sidePair="left-left,top-top"/>
     </component>
-    <image id="n36_jcqo" name="imgQuillBG" src="umtscyiik" fileName="img/img_cm_zzdt.png" pkg="te1gxawo" xy="956,-1" size="963,1080" group="n16_en7j">
+    <image id="n36_jcqo" name="imgQuillBG" src="umtscyiik" fileName="img/img_cm_zzdt.png" pkg="te1gxawo" xy="956,-14" size="963,1127" group="n16_en7j">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
       <relation target="n1_s45w" sidePair="top-top,leftext-left"/>
     </image>
     <component id="n34_n82e" name="comQuillInput" src="n82ewcyil3" fileName="codeVew/com/ComQuillInput.xml" xy="1116,351" size="672,375" group="n16_en7j">
       <relation target="n1_s45w" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n35_fkya" name="comFuncNameInput" src="fkyawcyild" fileName="codeVew/com/ComFuncNameInput.xml" xy="953,1" size="966,1082" group="n16_en7j" visible="false">
+    <component id="n35_fkya" name="comFuncNameInput" src="fkyawcyild" fileName="codeVew/com/ComFuncNameInput.xml" xy="954,1" size="966,1082" group="n16_en7j" visible="false">
       <relation target="" sidePair="bottomext-bottom,rightext-right"/>
       <relation target="n1_s45w" sidePair="left-left,top-top"/>
     </component>
-    <group id="n16_en7j" name="root" xy="0,-2" size="1923,1085" advanced="true">
+    <group id="n16_en7j" name="root" xy="0,-14" size="1923,1127" advanced="true">
       <gearDisplay controller="ctrlStatus" pages="0"/>
     </group>
     <component id="n39_ijui" name="comCodeblockPageBtnEditMenus" src="ijuiwcyink" fileName="codeVew/com/ComCodeblockPageBtnEditMenus.xml" xy="1371,502">

@@ -602,6 +602,11 @@
     <component id="f9zawcyio4" name="btnRestartCode.xml" path="/ideCommon/btn/"/>
     <image id="lwk9wcyio5" name="icon_lingdid_02.png" path="/create/img/"/>
     <image id="lwk9wcyio6" name="icon_lingdid_01.png" path="/create/img/" scale="9grid" scale9grid="11,12,15,11"/>
+    <component id="g9ldwcyio7" name="ComCodeblockCanUseConfig.xml" path="/codeVew/com/"/>
+    <image id="g9ldwcyio8" name="icon_dmkmb_01.png" path="/codeVew/img/canUseConfig/"/>
+    <image id="g9ldwcyio9" name="bg_dmkmb_02.png" path="/codeVew/img/canUseConfig/" scale="9grid" scale9grid="34,34,68,68"/>
+    <image id="g9ldwcyioa" name="bg_dmkmb_01.png" path="/codeVew/img/canUseConfig/" scale="9grid" scale9grid="32,43,64,86"/>
+    <component id="ou8ewcyiob" name="ComCanUseConfigContainer.xml" path="/codeVew/com/"/>
     <component id="j3bfwcyio7" name="comAWUIBlackboard.xml" path="/attribute/widgets/" exported="true"/>
   </resources>
   <publish name="ide"/>
