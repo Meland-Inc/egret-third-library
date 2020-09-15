@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://i25v0ebkbatc58" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlLeft" pages="0,drawing,1,layer" selected="0"/>
-  <controller name="ctrlTool" pages="0,pen,1,none,2,isometric" selected="1"/>
+  <controller name="ctrlTool" pages="0,pen,1,none,2,isometric" selected="0"/>
   <controller name="ctrlIsBlackboard" pages="1,yes,0,no" selected="0"/>
   <controller name="ctrlMode" pages="0,create,1,editAnim" selected="0"/>
   <controller name="ctrlBlackboardTool" pages="0,none,1,tool,2,color,3,size" selected="0"/>
   <displayList>
-    <image id="n62_jwow" name="n62" src="jwow73" fileName="img/blackboard/img/bg_heiban_01.png" xy="0,0" size="1920,1080">
+    <graph id="n82_lut6" name="gphBlackboardBg" xy="5,5" size="1914,1073" type="rect" lineSize="0" fillColor="#ff8ed6ba">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <image id="n62_jwow" name="n62" src="lut67i" fileName="blackboard/img/bg_heiban_03.png" xy="0,0" size="1920,1080">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
     <graph id="n1_batc" name="gphBg" xy="0,0" size="1920,1080" group="n61_jwow" type="rect" lineSize="0">
@@ -120,40 +123,40 @@
     <group id="n59_jwow" name="gphNormalTopUI" xy="465,9" size="1445,750" advanced="true">
       <gearDisplay controller="ctrlIsBlackboard" pages="0"/>
     </group>
-    <image id="n63_jwow" name="n63" src="jwow6z" fileName="img/blackboard/img/img_hieban_05.png" xy="80,58" size="140,138" group="n73_jwow"/>
-    <image id="n64_jwow" name="n64" src="jwow6x" fileName="img/blackboard/img/img_heiban_01.png" xy="83,59" size="86,83" group="n73_jwow"/>
-    <component id="n65_jwow" name="comTool" src="jwow6r" fileName="img/blackboard/btn/comTool.xml" xy="149,58" group="n73_jwow">
+    <image id="n63_jwow" name="n63" src="jwow6z" fileName="blackboard/img/img_hieban_05.png" xy="79,58" size="140,138" group="n73_jwow"/>
+    <image id="n64_jwow" name="n64" src="jwow6x" fileName="blackboard/img/img_heiban_01.png" xy="82,59" size="86,83" group="n73_jwow"/>
+    <component id="n65_jwow" name="comTool" src="jwow6r" fileName="blackboard/btn/comTool.xml" xy="148,58" group="n73_jwow">
       <Button controller="ctrlBlackboardTool" page="1"/>
     </component>
-    <component id="n66_jwow" name="comColor" src="jwow67" fileName="img/blackboard/btn/comColor.xml" xy="140,91" group="n73_jwow">
+    <component id="n66_jwow" name="comColor" src="jwow67" fileName="blackboard/btn/comColor.xml" xy="139,91" group="n73_jwow">
       <Button controller="ctrlBlackboardTool" page="2"/>
     </component>
-    <component id="n67_jwow" name="comSize" src="jwow6m" fileName="img/blackboard/btn/comSize.xml" xy="118,114" group="n73_jwow">
-      <Button controller="ctrlBlackboardTool" page="3"/>
+    <component id="n67_jwow" name="comSize" src="jwow6m" fileName="blackboard/btn/comSize.xml" xy="117,114" group="n73_jwow">
+      <Button checked="true" controller="ctrlBlackboardTool" page="3"/>
     </component>
-    <component id="n78_jwow" name="btnCloseBlackboard" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1850,9" size="53,53" group="n73_jwow">
+    <component id="n78_jwow" name="btnCloseBlackboard" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1849,9" size="53,53" group="n73_jwow">
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://a0pj43bjjwow7f"/>
     </component>
-    <component id="n68_jwow" name="btnBlackboardDel" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1718,90" size="114,90" group="n76_jwow">
+    <component id="n68_jwow" name="btnBlackboardDel" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1717,90" size="114,90" group="n76_jwow">
       <Button icon="ui://a0pj43bjjwow74"/>
     </component>
-    <component id="n69_jwow" name="btnBlackboarPre" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1718,188" size="114,90" group="n76_jwow">
+    <component id="n69_jwow" name="btnBlackboarPre" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1717,188" size="114,90" group="n76_jwow">
       <Button icon="ui://a0pj43bjjwow75"/>
     </component>
-    <component id="n70_jwow" name="btnBlackboarNext" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1718,286" size="114,90" group="n76_jwow">
+    <component id="n70_jwow" name="btnBlackboarNext" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1717,286" size="114,90" group="n76_jwow">
       <Button icon="ui://a0pj43bjjwow76"/>
     </component>
-    <component id="n71_jwow" name="btnBlackboarImport" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1718,384" size="114,90" group="n76_jwow">
+    <component id="n71_jwow" name="btnBlackboarImport" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1717,384" size="114,90" group="n76_jwow">
       <Button icon="ui://a0pj43bjjwow77"/>
     </component>
-    <component id="n72_jwow" name="btnBlackboarSave" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1718,482" size="114,90" group="n76_jwow">
+    <component id="n72_jwow" name="btnBlackboarSave" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1717,482" size="114,90" group="n76_jwow">
       <Button icon="ui://a0pj43bjjwow78"/>
     </component>
-    <group id="n76_jwow" name="grpRightMenu" xy="1718,90" size="114,482" group="n73_jwow" advanced="true">
+    <group id="n76_jwow" name="grpRightMenu" xy="1717,90" size="114,482" group="n73_jwow" advanced="true">
       <relation target="" sidePair="right-right"/>
     </group>
-    <group id="n73_jwow" name="gphBlackboardTopUI" xy="80,9" size="1823,563" advanced="true">
+    <group id="n73_jwow" name="gphBlackboardTopUI" xy="79,9" size="1823,563" advanced="true">
       <gearDisplay controller="ctrlIsBlackboard" pages="1"/>
     </group>
     <graph id="n74_jwow" name="gphSizeCtrlLeftTop" xy="-1,0" size="82,58" lineSize="0" fillColor="#ffff0000">

@@ -123,10 +123,7 @@
     <image id="jwow6x" name="img_heiban_01.png" path="/blackboard/img/"/>
     <image id="jwow6y" name="img_hieban_04.png" path="/blackboard/img/"/>
     <image id="jwow6z" name="img_hieban_05.png" path="/blackboard/img/"/>
-    <image id="jwow70" name="标注.jpg" path="/blackboard/img/"/>
-    <image id="jwow71" name="效果图.jpg" path="/blackboard/img/"/>
     <image id="jwow72" name="10-pts.png" path="/blackboard/img/"/>
-    <image id="jwow73" name="bg_heiban_01.png" path="/blackboard/img/" scale="9grid" scale9grid="480,263,960,526"/>
     <image id="jwow74" name="btn_heiban_01.png" path="/blackboard/img/"/>
     <image id="jwow75" name="btn_heiban_02.png" path="/blackboard/img/"/>
     <image id="jwow76" name="btn_heiban_03.png" path="/blackboard/img/"/>
@@ -139,6 +136,8 @@
     <image id="jwow7d" name="img_heiban_02-1.png" path="/blackboard/img/"/>
     <component id="jwow7e" name="WinUIBlackboard.xml" path="/blackboard/" exported="true"/>
     <image id="jwow7f" name="btn_rwjm_close.png" path="/blackboard/img/"/>
+    <image id="lut67g" name="icon_heiban_01-full.png" path="/blackboard/img/"/>
+    <image id="lut67i" name="bg_heiban_03.png" path="/blackboard/img/" scale="9grid" scale9grid="402,128,59,258"/>
   </resources>
   <publish name="drawing"/>
 </packageDescription>

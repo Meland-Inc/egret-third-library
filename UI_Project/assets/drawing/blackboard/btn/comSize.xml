@@ -26,9 +26,9 @@
       <gearDisplay controller="button" pages="3,4"/>
       <Button icon="ui://a0pj43bjjwow6p" controller="ctrlSize" page="3"/>
     </component>
-    <graph id="n12_lfns" name="gphSize" xy="-5,56" pivot="0.5,0.5" anchor="true" size="5,5" touchable="false" type="eclipse">
+    <graph id="n12_lfns" name="gphSize" xy="-5,56" pivot="0.5,0.5" anchor="true" size="9,9" touchable="false" type="eclipse" lineSize="2">
       <gearXY controller="button" pages="2,3,4" values="-7,51|-5,56|-5,56"/>
-      <gearSize controller="ctrlSize" pages="0,1,2,3" values="5,5,1,1|10,10,1,1|25,25,1,1|40,40,1,1"/>
+      <gearSize controller="ctrlSize" pages="0,1,2,3" values="9,9,1,1|14,14,1,1|29,29,1,1|45,45,1,1"/>
     </graph>
   </displayList>
   <Button mode="Check"/>
