@@ -20,14 +20,6 @@ import FileUtil from '../common/FileUtil';
 import errorReportMain from "./ErrorReportMain";
 import mainControl from './MainControl';
 
-//限制只启用一个程序
-const gotTheLock = app.requestSingleInstanceLock();
-let isSecondInstance: boolean = false;
-if (!gotTheLock) {
-  isSecondInstance = true;
-  app.quit();
-}
-
 class Main {
   public init(): void {
     //监听app事件
@@ -329,7 +321,13 @@ class Main {
 
 //初始化方法
 function init(): void {
-  if (isSecondInstance) return;
+  //限制只启用一个程序
+  const gotTheLock = app.requestSingleInstanceLock();
+  if (!gotTheLock) {
+    app.quit();
+    return;
+  }
+
   const main = new Main();
   main.init();
 }
