@@ -20,12 +20,6 @@ import FileUtil from '../common/FileUtil';
 import errorReportMain from "./ErrorReportMain";
 import mainControl from './MainControl';
 
-//限制只启用一个程序
-const gotTheLock = app.requestSingleInstanceLock();
-if (!gotTheLock) {
-  app.quit();
-}
-
 class Main {
   public init(): void {
     //监听app事件
@@ -49,16 +43,6 @@ class Main {
       cmdGameStr = `pkill game`;
     }
     util.runCmd(cmdGameStr, null, `关闭游戏服务器成功`, "");
-
-    //开启native时检测杀ngrok进程
-    let cmdNgrokStr: string;
-    if (os.platform() === "win32") {
-      cmdNgrokStr = "taskkill /im ngrok.exe /f";
-    } else {
-      cmdNgrokStr = `pkill ngrok`;
-    }
-    util.runCmd(cmdNgrokStr, null, `关闭ngrok进程成功`, "");
-
 
     let shortCut = "";
     if (process.platform === 'darwin') {
@@ -86,7 +70,7 @@ class Main {
         try {
           const url = new URL(tUrl);
           mainModel.setFakeProtoURL(url);
-        } catch{
+        } catch {
 
         }
       }
@@ -335,5 +319,18 @@ class Main {
   }
 }
 
-const main = new Main();
-main.init();
+//初始化方法
+function init(): void {
+  //限制只启用一个程序
+  const gotTheLock = app.requestSingleInstanceLock();
+  if (!gotTheLock) {
+    app.quit();
+    return;
+  }
+
+  const main = new Main();
+  main.init();
+}
+
+//初始化
+init();
