@@ -465,7 +465,41 @@ export async function jimpCell(type, cell, texture, input_path, output_path) {
         } else if (cell.isMultiPicture) {
             await jimpMultiPng(cell.id, iterator, input_path, output_path);
         } else {
-            await jimpPng2(cell.id, area, iterator, input_path, output_path);
+            await jimpPng(cell.id, area, iterator, input_path, output_path);
+        }
+    }
+}
+
+export async function jimp2dCell(type, cell, texture, input_path, output_path) {
+    for (const iterator of texture) {
+        let area = cell.area;
+        if (type == 2) {
+            let rowCount = cell.shape[0];
+            let colCount = cell.shape[1];
+            area = [];
+            for (let i = 0; i < rowCount; i++) {
+                area[i] = [];
+                for (let j = 0; j < colCount; j++) {
+                    if (cell.area[i] != undefined
+                        && cell.area[i][j] != undefined) {
+                        area[i][j] = cell.area[i][j];
+                    } else {
+                        area[i][j] = cell.shape[2];
+                    }
+                }
+            }
+        }
+
+        let texturePath = input_path + "/" + iterator + ".png";
+        if (!(await fsExc.exists(texturePath))) {
+            console.error(`配置错误:${cell.id} 文件不存在:${iterator}.png`);
+            continue;
+        }
+
+        if (area.length == 1 && area[0].length == 1) {
+            await fsExc.copyFile(texturePath, output_path);
+        } else {
+            await jimp2dPng(cell.id, area, iterator, input_path, output_path);
         }
     }
 }
@@ -537,7 +571,7 @@ export function jimpMultiPng(id, texture, input_path, output_path) {
     });
 }
 
-export function jimpPng2(id, area, texture, input_path, output_path) {
+export function jimpPng(id, area, texture, input_path, output_path) {
     return new Promise(async (resolve, reject) => {
         let filePath = input_path + "/" + texture + ".png";
 
@@ -546,8 +580,8 @@ export function jimpPng2(id, area, texture, input_path, output_path) {
             .then(async originImage => {
                 let imageWidth = originImage.bitmap.width;
                 let imageHeight = originImage.bitmap.height;
-                let tileWidth = 120;
-                let tileHeight = 60;
+                let tileWidth = Global.rhombTileWidth;
+                let tileHeight = Global.rhombTileHeight;
                 let halfTileWidth = tileWidth / 2;
                 let halfTileHeight = tileHeight / 2;
 
@@ -791,6 +825,56 @@ export function jimpPng2(id, area, texture, input_path, output_path) {
                                 for (let x = startX; x <= endX; x++) {
                                     getSetPixel(originImage, newImage, x, y, cutImgX, cutImgY, diamondSY, topDistance, gapY);
                                 }
+                            }
+                        }
+
+                        await newImage.write(output_path + "/" + texture + "_" + row + "_" + col + ".png");
+                    }
+                }
+                resolve();
+            }).catch(error => {
+                Global.snack(`裁剪纹理错误 id:${id}`, error);
+                resolve();
+            });
+    });
+}
+
+export function jimp2dPng(id, area, texture, input_path, output_path) {
+    return new Promise(async (resolve, reject) => {
+        let filePath = input_path + "/" + texture + ".png";
+
+        jimp
+            .read(filePath)
+            .then(async originImage => {
+                let imageWidth = originImage.bitmap.width;
+                let imageHeight = originImage.bitmap.height;
+                let tileWidth = Global.rectTileWidth;
+                let tileHeight = Global.rectTileHeight;
+
+                let rowLen = area.length;
+                let colLen = area[0].length;
+
+                for (let row = 0; row <= rowLen - 1; row++) {
+                    for (let col = 0; col <= colLen - 1; col++) {
+                        let topImageHigh = imageHeight - rowLen * tileHeight;
+                        let topDistance = row === 0 ? 0 : topImageHigh;
+
+                        let deviationX = 1;     //x轴偏差值
+                        let deviationY = 1;     //y轴偏差值
+
+                        let newImageHeight = row === 0 ? topImageHigh + tileHeight + deviationY : tileHeight + deviationY;
+                        let newImageWidth = col === colLen - 1 ? imageWidth - (colLen - 1) * tileWidth + deviationX : tileWidth + deviationX;
+                        let newImage = new jimp(newImageWidth, newImageHeight);
+                        let cutImgX = col * tileWidth;             //完整图片中,当前图片所在的起点X
+                        let cutImgY = topDistance + row * tileHeight;          //完整图片中,当前图片所在的起点Y
+
+                        //      _______
+                        //      |__|__|
+                        //      |__|__|
+                        //      |__|__|
+                        for (let y = 0; y <= newImageHeight; y++) {
+                            for (let x = 0; x <= newImageWidth; x++) {
+                                getSetPixel(originImage, newImage, x, y, cutImgX, cutImgY);
                             }
                         }
 

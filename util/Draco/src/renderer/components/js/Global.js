@@ -9,6 +9,11 @@ export class Global {
     static clientPath = localStorage.getItem('client_client_path');
     static author = localStorage.getItem("client_author");
 
+    static rhombTileWidth = 120;
+    static rhombTileHeight = 60;
+    static rectTileWidth = 60;
+    static rectTileHeight = 60;
+
     static eMode = {
         develop: "develop",
         product: "product",

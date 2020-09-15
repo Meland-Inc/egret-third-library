@@ -12,6 +12,10 @@ const floor_output_suffix_path = '/TextureOutput/floor';
 const object_output_suffix_path = '/TextureOutput/object';
 const multi_output_suffix_path = '/TextureOutput/multi';
 
+const ground_2d_output_suffix_path = '/TextureOutput/ground2d';
+const floor_2d_output_suffix_path = '/TextureOutput/floor2d';
+const object_2d_output_suffix_path = '/TextureOutput/object2d';
+
 const sheet_suffix_path = '/TextureSheet';
 const project_sheet_suffix_path = '/resource/assets/preload/sheet';
 
@@ -32,19 +36,21 @@ const itemIconSfx = "itemIcon";
 const avatarIconSfx = "avatarIcon";
 const groundSfx = "ground";
 const floorSfx = "floor";
-const surfaceSfx = "surface"
+// const surfaceSfx = "surface"
 // const materialSfx = "material";
 const objectSfx = "object";
 const objectDecorateSfx = "objectDecorate";
 const multiPictureSfx = "multiPicture";
 const AnimationSfx = "Animation";
+const ground2dSfx = "ground2d";
+const object2dSfx = "object2d";
 
 const sheetSfxArr = [
     itemIconSfx,
     avatarIconSfx,
     groundSfx,
-    surfaceSfx,
-    floorSfx
+    floorSfx,
+    ground2dSfx
 ];
 
 const objectType = {
@@ -68,11 +74,11 @@ const objectType = {
     ObjectTypeSurface: 17
 }
 
-var _checkBoxValues = [itemIconSfx, avatarIconSfx, groundSfx, floorSfx, objectSfx, objectDecorateSfx, multiPictureSfx, AnimationSfx];
+var _checkBoxValues = [itemIconSfx, avatarIconSfx, groundSfx, floorSfx, objectSfx, objectDecorateSfx, multiPictureSfx, AnimationSfx, ground2dSfx, object2dSfx];
 export function getCheckBoxValues() { return _checkBoxValues; }
 export function setCheckBoxValues(value) { _checkBoxValues = value; }
 
-var _checkBoxData = [itemIconSfx, avatarIconSfx, groundSfx, floorSfx, objectSfx, objectDecorateSfx, multiPictureSfx, AnimationSfx];
+var _checkBoxData = [itemIconSfx, avatarIconSfx, groundSfx, floorSfx, objectSfx, objectDecorateSfx, multiPictureSfx, AnimationSfx, ground2dSfx, object2dSfx];
 export function getCheckBoxData() { return _checkBoxData; }
 export function setCheckBoxData(value) { _checkBoxData = value; }
 
@@ -103,7 +109,7 @@ export async function checkTextureRepeat() {
  * 清空纹理
  */
 export async function clearTexture() {
-    if (_checkBoxData.indexOf(objectSfx) == -1) {
+    if (!checkHasObject()) {
         return;
     }
 
@@ -126,7 +132,7 @@ export async function clearTexture() {
  * 拷入纹理
  */
 export async function copyTextureIn() {
-    if (_checkBoxData.indexOf(objectSfx) == -1) {
+    if (!checkHasObject()) {
         return;
     }
 
@@ -159,7 +165,7 @@ export async function copyTextureIn() {
  * 裁剪纹理
  */
 export async function clipTexture() {
-    if (_checkBoxData.indexOf(objectSfx) == -1) {
+    if (!checkHasObject()) {
         return;
     }
 
@@ -210,10 +216,29 @@ export async function clipTexture() {
             return outPath;
         }
 
+        let get2dOutPath = (iterator) => {
+            let outPath;
+
+            if (iterator.type === objectType.ObjectTypeGround) {
+                outPath = Global.svnArtPath + ground_2d_output_suffix_path;
+            } else if (iterator.type === objectType.ObjectTypeFloor) {
+                outPath = Global.svnArtPath + floor_2d_output_suffix_path;
+            } else {
+                outPath = Global.svnArtPath + object_2d_output_suffix_path;
+            }
+
+            return outPath;
+        }
+
         console.log('--> start clip entity texture');
         for (const iterator of Global.entityCells) {
             let outPath = getOutPath(iterator)
             await jimpExc.jimpCell(1, iterator, iterator.texture, input_path, outPath);
+
+            if (iterator.rectTexture) {
+                let outPath2d = get2dOutPath(iterator);
+                await jimpExc.jimp2dCell(1, iterator, iterator.rectTexture, input_path, outPath2d);
+            }
         }
         console.log('--> start clip object texture');
         for (const iterator of Global.objectCells) {
@@ -271,6 +296,17 @@ export async function clipTexture() {
     }
 }
 
+function checkHasObject() {
+    if (_checkBoxData.indexOf(objectSfx) == -1
+        && _checkBoxData.indexOf(groundSfx) == -1
+        && _checkBoxData.indexOf(object2dSfx) == -1
+        && _checkBoxData.indexOf(ground2dSfx) == -1) {
+        return false;
+    }
+
+    return true;
+}
+
 /**
  * 打包纹理
  */
@@ -307,6 +343,12 @@ export async function packerTexture() {
                         break;
                     case avatarIconSfx:
                         inputs.push(Global.svnPath + '/versionRes/trunk/settings/resource/other_icon/avatar_icon');
+                        break;
+                    case ground2dSfx:
+                        inputs.push(Global.svnArtPath + ground_2d_output_suffix_path);
+                        break;
+                    case object2dSfx:
+                        inputs.push(Global.svnArtPath + object_2d_output_suffix_path);
                         break;
                     default:
                         break;
@@ -353,8 +395,11 @@ export async function copyTextureOut() {
                 } else if (iterator == multiPictureSfx) {
                     //multi 超多格物品裁剪后的纹理
                     inputPath = Global.svnArtPath + multi_output_suffix_path;
+                } else if (iterator === object2dSfx) {
+                    //object 2d 用裁剪后的单个纹理
+                    inputPath = Global.svnArtPath + object_2d_output_suffix_path;
                 } else {
-                    inputPath = `${Global.svnPath}/versionRes/trunk/settings/resource/${iterator}`;;
+                    inputPath = `${Global.svnPath}/versionRes/trunk/settings/resource/${iterator}`;
                 }
 
                 if (iterator === AnimationSfx) {
