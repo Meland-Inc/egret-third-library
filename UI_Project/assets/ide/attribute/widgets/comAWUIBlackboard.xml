@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="400,120">
+  <displayList>
+    <text id="n0_i6f4" name="tfMode" xy="0,8" size="92,26" fontSize="18" color="#333333" text="操作权限："/>
+    <component id="n1_i6f4" name="cbAccess" src="grwpb3" fileName="attribute/widgets/ComboBox1.xml" xy="148,0" size="252,37">
+      <ComboBox title="所有人" visibleItemCount="10" direction="down">
+        <item title="所有人" value="0"/>
+        <item title="老师" value="1"/>
+      </ComboBox>
+    </component>
+    <text id="n2_i6f4" name="tfMode" xy="0,71" size="79,26" fontSize="18" color="#333333" text="触发方式:"/>
+    <component id="n3_i6f4" name="cbTriggerMode" src="grwpb3" fileName="attribute/widgets/ComboBox1.xml" xy="148,63" size="252,37">
+      <ComboBox title="点击" visibleItemCount="10" direction="down">
+        <item title="点击"/>
+      </ComboBox>
+    </component>
+  </displayList>
+</component>
