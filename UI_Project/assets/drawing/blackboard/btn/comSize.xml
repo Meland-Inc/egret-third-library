@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="307,152" opaque="false" extention="Button">
+  <controller name="button" pages="2,up,3,down,4,over" selected="1">
+    <action type="change_page" fromPage="" toPage="2" objectId="n3_j3bf" controller="button" targetPage="2"/>
+    <action type="change_page" fromPage="" toPage="3" objectId="n3_j3bf" controller="button" targetPage="3"/>
+    <action type="change_page" fromPage="" toPage="4" objectId="n3_j3bf" controller="button" targetPage="4"/>
+  </controller>
+  <controller name="ctrlSize" pages="0,px-5,1,px-10,2,px-25,3,px-50" selected="0">
+    <remark page="0" value="px-xx"/>
+  </controller>
+  <displayList>
+    <component id="n3_j3bf" name="btn" src="jwow64" fileName="blackboard/btn/btn.xml" xy="0,0" rotation="60"/>
+    <component id="n8_lfns" name="n8" src="jwow68" fileName="blackboard/btn/btnToolItem.xml" xy="1,83" pivot="0.5,0.5">
+      <gearDisplay controller="button" pages="3,4"/>
+      <Button checked="true" icon="ui://a0pj43bjjwow6n" controller="ctrlSize" page="0"/>
+    </component>
+    <component id="n9_lfns" name="n9" src="jwow68" fileName="blackboard/btn/btnToolItem.xml" xy="80,83" pivot="0.5,0.5">
+      <gearDisplay controller="button" pages="3,4"/>
+      <Button icon="ui://a0pj43bjjwow72" controller="ctrlSize" page="1"/>
+    </component>
+    <component id="n10_lfns" name="n10" src="jwow68" fileName="blackboard/btn/btnToolItem.xml" xy="159,83" pivot="0.5,0.5">
+      <gearDisplay controller="button" pages="3,4"/>
+      <Button icon="ui://a0pj43bjjwow6o" controller="ctrlSize" page="2"/>
+    </component>
+    <component id="n11_lfns" name="n11" src="jwow68" fileName="blackboard/btn/btnToolItem.xml" xy="238,83" pivot="0.5,0.5">
+      <gearDisplay controller="button" pages="3,4"/>
+      <Button icon="ui://a0pj43bjjwow6p" controller="ctrlSize" page="3"/>
+    </component>
+    <graph id="n12_lfns" name="gphSize" xy="-5,56" pivot="0.5,0.5" anchor="true" size="9,9" touchable="false" type="eclipse" lineSize="2">
+      <gearXY controller="button" pages="2,3,4" values="-7,51|-5,56|-5,56"/>
+      <gearSize controller="ctrlSize" pages="0,1,2,3" values="9,9,1,1|14,14,1,1|29,29,1,1|45,45,1,1"/>
+    </graph>
+  </displayList>
+  <Button mode="Check"/>
+</component>
