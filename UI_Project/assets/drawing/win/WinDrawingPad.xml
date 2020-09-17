@@ -2,7 +2,7 @@
 <component size="1920,1080" designImage="ui://i25v0ebkbatc58" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlLeft" pages="0,drawing,1,layer" selected="0"/>
   <controller name="ctrlTool" pages="0,pen,1,none,2,isometric" selected="0"/>
-  <controller name="ctrlIsBlackboard" pages="1,yes,0,no" selected="0"/>
+  <controller name="ctrlIsBlackboard" pages="0,no,1,yes" selected="0"/>
   <controller name="ctrlMode" pages="0,create,1,editAnim" selected="0"/>
   <controller name="ctrlBlackboardTool" pages="0,none,1,tool,2,color,3,size" selected="0"/>
   <displayList>
@@ -50,7 +50,7 @@
       <item title="翻转" icon="ui://a0pj43bjq8ax5y" name="FLIP" selectedIcon="ui://a0pj43bjq8ax5x"/>
     </list>
     <image id="n8_batc" name="imgInpNameBg" src="eggjcyihu" fileName="img/img_cm_srk_3.png" pkg="te1gxawo" xy="47,894" size="374,65" group="n17_batc"/>
-    <text id="n9_batc" name="inpCanvasName" xy="67,895" size="351,65" group="n17_batc" customData="新素材" fontSize="24" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="" input="true">
+    <text id="n9_batc" name="inpCanvasName" xy="67,895" size="351,65" group="n17_batc" customData="新素材" input="true" fontSize="24" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="">
       <gearLook controller="ctrlMode" pages="0" values="1,0,0,1" default="0.6,0,0,1"/>
       <relation target="n8_batc" sidePair="width-width,height-height"/>
     </text>
@@ -70,7 +70,7 @@
     <component id="n38_gup1" name="comPenSetting" src="qiln2s" fileName="com/ComPenSetting.xml" xy="30,272" size="410,562" group="n14_batc">
       <gearDisplay controller="ctrlTool" pages="0,1,2"/>
     </component>
-    <text id="n53_giuq" name="n53" xy="208,57" size="52,34" group="n14_batc" fontSize="24" color="#333333" align="center" vAlign="middle" text="画图"/>
+    <text id="n53_giuq" name="n53" xy="208,57" size="53,28" group="n14_batc" fontSize="24" color="#333333" align="center" vAlign="middle" text="画图"/>
     <image id="n55_q8ax" name="n55" src="qhbb5h" fileName="img/img_dra_line_1.png" xy="31,260" size="408,2" group="n14_batc"/>
     <component id="n56_pve9" name="comShapeTypeSelect" src="pve963" fileName="com/ComShapeTypeSelect.xml" xy="157,172" group="n14_batc" visible="false"/>
     <component id="n57_eb91" name="comFlipTypeSelect" src="pve962" fileName="com/ComFlipTypeSelect.xml" xy="206,176" group="n14_batc" visible="false"/>
@@ -78,17 +78,17 @@
     <group id="n61_jwow" name="gphNormalMain" xy="0,0" size="1920,1080" advanced="true">
       <gearDisplay controller="ctrlIsBlackboard" pages="0"/>
     </group>
-    <graph id="n21_ljuf" name="gphDrawingBotBoard" xy="82,58" size="1757,936" alpha="0.3" fillColor="#ff66cc33">
+    <graph id="n21_ljuf" name="gphDrawingBotBoard" xy="463,41" size="1424,925" alpha="0.3" fillColor="#ff66cc33">
       <relation target="n19_ljuf" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
     </graph>
-    <graph id="n22_ljuf" name="gphDrawingMidBoard" xy="82,58" size="1757,936" alpha="0.6" fillColor="#ff66cc33">
+    <graph id="n22_ljuf" name="gphDrawingMidBoard" xy="463,41" size="1424,925" alpha="0.6" fillColor="#ff66cc33">
       <relation target="n19_ljuf" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
     </graph>
-    <graph id="n19_ljuf" name="gphDrawingTopBoard" xy="82,58" size="1757,936" type="rect" lineSize="0" fillColor="#00ffffff">
+    <graph id="n19_ljuf" name="gphDrawingTopBoard" xy="463,41" size="1424,925" type="rect" lineSize="0" fillColor="#00ffffff">
       <relation target="n74_jwow" sidePair="topext-bottom,leftext-right"/>
       <relation target="n75_jwow" sidePair="rightext-left,bottomext-top"/>
     </graph>
-    <component id="n36_gup1" name="comDrawSelectBoxContainer" src="qiln1o" fileName="com/ComDrawSelectBoxContainer.xml" xy="82,58" size="1757,936">
+    <component id="n36_gup1" name="comDrawSelectBoxContainer" src="qiln1o" fileName="com/ComDrawSelectBoxContainer.xml" xy="463,41" size="1424,925">
       <relation target="n19_ljuf" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
     </component>
     <list id="n16_batc" name="lstOperateBtn" xy="1777,96" size="72,283" group="n59_jwow" lineGap="30" defaultItem="ui://a0pj43bjqiln14">
@@ -132,7 +132,7 @@
       <Button controller="ctrlBlackboardTool" page="2"/>
     </component>
     <component id="n67_jwow" name="comSize" src="jwow6m" fileName="blackboard/btn/comSize.xml" xy="117,114" group="n73_jwow">
-      <Button checked="true" controller="ctrlBlackboardTool" page="3"/>
+      <Button controller="ctrlBlackboardTool" page="3"/>
     </component>
     <component id="n78_jwow" name="btnCloseBlackboard" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1849,9" size="53,53" group="n73_jwow">
       <relation target="" sidePair="right-right"/>
@@ -159,11 +159,11 @@
     <group id="n73_jwow" name="gphBlackboardTopUI" xy="79,9" size="1823,563" advanced="true">
       <gearDisplay controller="ctrlIsBlackboard" pages="1"/>
     </group>
-    <graph id="n74_jwow" name="gphSizeCtrlLeftTop" xy="-1,0" size="82,58" lineSize="0" fillColor="#ffff0000">
-      <gearSize controller="ctrlIsBlackboard" pages="1,0" values="82,58,1,1|463,41,1,1"/>
+    <graph id="n74_jwow" name="gphSizeCtrlLeftTop" xy="-1,0" size="463,41" lineSize="0" fillColor="#ffff0000">
+      <gearSize controller="ctrlIsBlackboard" pages="0,1" values="463,41,1,1|82,58,1,1"/>
     </graph>
-    <graph id="n75_jwow" name="gphSizeCtrlRightDown" xy="1839,994" pivot="1,1" size="81,86" lineSize="0" fillColor="#ffff0000">
-      <gearSize controller="ctrlIsBlackboard" pages="1,0" values="81,86,1,1|33,114,1,1"/>
+    <graph id="n75_jwow" name="gphSizeCtrlRightDown" xy="1887,966" pivot="1,1" size="33,114" lineSize="0" fillColor="#ffff0000">
+      <gearSize controller="ctrlIsBlackboard" pages="0,1" values="33,114,1,1|81,86,1,1"/>
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </graph>
   </displayList>
