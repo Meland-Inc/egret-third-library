@@ -8,7 +8,7 @@
     <remark page="7" value="noClose"/>
     <remark page="8" value="noClose"/>
   </controller>
-  <controller name="ctrlIsLast" pages="0,false,1,true" selected="1"/>
+  <controller name="ctrlIsLast" pages="0,false,1,true" selected="0"/>
   <displayList>
     <graph id="n38_gx7z" name="imgStageBG" xy="0,0" size="1920,1080" type="rect" lineSize="0" lineColor="#ffffffff">
       <relation target="" sidePair="width-width,height-height"/>
@@ -154,8 +154,8 @@
       <relation target="n70_sco7" sidePair="middle-middle,left-left"/>
     </loader>
     <group id="n88_bmxe" name="btnStart" xy="1483,48" size="418,70" visible="false" advanced="true"/>
-    <loader id="n90_bmxe" name="ladBgMask" xy="0,0" size="1920,1080" visible="false" url="ui://av6agj0gbmxe2l" fill="scaleFree">
-      <gearIcon controller="ctrlJmType" pages="7" values="ui://av6agj0g766c4q" default="ui://av6agj0gbmxe2l"/>
+    <loader id="n90_bmxe" name="ladBgMask" xy="0,0" size="1920,1080" visible="false" url="ui://av6agj0g766c4q" fill="scaleFree">
+      <gearIcon controller="ctrlJmType" pages="7,8" values="ui://av6agj0g766c4q|ui://av6agj0g766c4q" default="ui://av6agj0gbmxe2l"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
     <image id="n93_hilw" name="n93" src="hilw2p" fileName="img/pop.png" xy="1408,143" group="n94_hilw">
@@ -182,7 +182,7 @@
     <text id="n110_nlpi" name="tfPageInfo" xy="555,335" size="810,98" group="n105_knqv" font="ui://av6agj0gnlpi49" fontSize="18" align="center" letterSpacing="30" autoSize="none" text="1/"/>
     <component id="n63_sco7" name="btnNext" src="sco7k" fileName="btn/btnScale.xml" xy="1019,649" size="330,102" group="n105_knqv" controller="button,0">
       <gearIcon controller="ctrlIsLast" pages="0,1" values="ui://av6agj0g766c4t|ui://av6agj0g766c4r"/>
-      <Button icon="ui://av6agj0g766c4r"/>
+      <Button icon="ui://av6agj0g766c4t"/>
     </component>
     <component id="n107_nlpi" name="btnNoSubmit" src="sco7k" fileName="btn/btnScale.xml" xy="576,649" size="330,102" group="n105_knqv">
       <relation target="n106_nlpi" sidePair="right-right,top-top"/>
