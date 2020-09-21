@@ -2,13 +2,13 @@
 <component size="1920,1080" designImage="ui://av6agj0gbmxe2h" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlVoiceType" pages="1,play,0,none,2,pause" selected="0"/>
   <controller name="ctrlIsDevelop" pages="0,false,1,true" selected="0"/>
-  <controller name="ctrlTemGameType" pages="0,none,1,success,2,fail,3,over" selected="0"/>
+  <controller name="ctrlTemGameType" pages="0,none,1,success,2,fail,3,over" selected="1"/>
   <controller name="ctrlStartL" pages="0,,1,,2,,3," selected="0"/>
-  <controller name="ctrlJmType" pages="0,soduku,1,pickphoto,2,classify,3,count,4,balance,5,examination,6,specialExam,7,noCloseSpecialExam,8,stageCapabilityExam" selected="8">
+  <controller name="ctrlJmType" pages="0,soduku,1,pickphoto,2,classify,3,count,4,balance,5,examination,6,specialExam,7,noCloseSpecialExam,8,stageCapabilityExam" selected="7">
     <remark page="7" value="noClose"/>
     <remark page="8" value="noClose"/>
   </controller>
-  <controller name="ctrlIsLast" pages="0,false,1,true" selected="1"/>
+  <controller name="ctrlIsLast" pages="0,false,1,true" selected="0"/>
   <displayList>
     <graph id="n38_gx7z" name="imgStageBG" xy="0,0" size="1920,1080" type="rect" lineSize="0" lineColor="#ffffffff">
       <relation target="" sidePair="width-width,height-height"/>
@@ -16,15 +16,15 @@
     <component id="n39_gx7z" name="comEditorStage" src="sco7n" fileName="com/ComEditorStage.xml" xy="174,237" size="1572,744">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
-    <loader id="n34_gx7z" name="ladBG" xy="0,0" size="1920,1080" touchable="false" url="ui://av6agj0gbmxe27" fill="scaleFree">
-      <gearIcon controller="ctrlJmType" pages="4,5,6,7" values="ui://kvblsqzcj5tqb|ui://av6agj0gk45f3m|ui://av6agj0gk45f3m|ui://av6agj0gk45f3m" default="ui://av6agj0gbmxe27"/>
+    <loader id="n34_gx7z" name="ladBG" xy="0,0" size="1920,1080" touchable="false" url="ui://av6agj0gk45f3m" fill="scaleFree">
+      <gearIcon controller="ctrlJmType" pages="4,5,6,7,8" values="ui://kvblsqzcj5tqb|ui://av6agj0gk45f3m|ui://av6agj0gk45f3m|ui://av6agj0gk45f3m|ui://av6agj0gk45f3m" default="ui://av6agj0gbmxe27"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
     <image id="n35_gx7z" name="imgBar" src="hwlx25" fileName="img/img_keybord_bg.png" xy="0,0" size="1920,56" visible="false">
       <relation target="" sidePair="width-width,top-top"/>
     </image>
-    <loader id="n37_gx7z" name="gphPos" xy="82,84" size="1757,921" touchable="false" url="ui://av6agj0gbmxe2i" fill="scaleFree">
-      <gearIcon controller="ctrlJmType" pages="4,7" values="ui://kvblsqzcj5tqa|ui://av6agj0g766c4p" default="ui://av6agj0gbmxe2i"/>
+    <loader id="n37_gx7z" name="gphPos" xy="82,84" size="1757,921" touchable="false" url="ui://av6agj0g766c4p" fill="scaleFree">
+      <gearIcon controller="ctrlJmType" pages="4,7,8" values="ui://kvblsqzcj5tqa|ui://av6agj0g766c4p|ui://av6agj0g766c4p" default="ui://av6agj0gbmxe2i"/>
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </loader>
     <graph id="n54_ojgc" name="n54" xy="266,1004" size="393,57" group="n58_sco7" type="rect" lineSize="0" fillColor="#ffffffcc"/>
@@ -63,7 +63,7 @@
       <gearDisplay controller="ctrlJmType" pages="5"/>
       <relation target="" sidePair="center-center"/>
     </loader>
-    <loader id="n104_w8fs" name="imgSpecialExamTitle" xy="652,5" size="615,142" aspect="true" touchable="false" url="ui://av6agj0gm17166" align="center" vAlign="bottom" fill="scaleFree">
+    <loader id="n104_w8fs" name="imgSpecialExamTitle" xy="652,5" size="615,142" aspect="true" touchable="false" url="ui://av6agj0gw8fs3y" align="center" vAlign="bottom" fill="scaleFree">
       <gearDisplay controller="ctrlJmType" pages="6,7,8"/>
       <gearIcon controller="ctrlJmType" pages="8" values="ui://av6agj0gm17166" default="ui://av6agj0gw8fs3y"/>
       <relation target="" sidePair="center-center"/>
@@ -98,6 +98,7 @@
       <gearSize controller="ctrlJmType" pages="0,1,2,3,4,5,6" values="202,221,1,1|202,221,1,1|202,221,1,1|202,221,1,1|202,221,1,1|199,143,1,1|199,143,1,1" default="199,143,1,1"/>
       <gearIcon controller="ctrlJmType" pages="0,1,2,3,4,5,6,7" values="ui://av6agj0gpgeq40|ui://av6agj0gpgeq40|ui://av6agj0gpgeq40|ui://av6agj0gpgeq40|ui://av6agj0gpgeq40|ui://av6agj0gfhtd3n|ui://av6agj0gfhtd3n|ui://av6agj0gfhtd3n" default=""/>
       <relation target="n37_gx7z" sidePair="left-left,top-top"/>
+      <Button icon="ui://av6agj0gfhtd3n"/>
     </component>
     <component id="n50_gx7z" name="btnUndo" src="sco7k" fileName="btn/btnScale.xml" xy="1666,528" size="221,225" controller="button,0">
       <gearIcon controller="ctrlJmType" pages="5,6,7,8" values="ui://av6agj0gfhtd3r|ui://av6agj0gfhtd3r|ui://av6agj0gfhtd3r|ui://av6agj0gfhtd3r" default="ui://av6agj0gbmxe2e"/>
@@ -154,27 +155,30 @@
       <relation target="n70_sco7" sidePair="middle-middle,left-left"/>
     </loader>
     <group id="n88_bmxe" name="btnStart" xy="1483,48" size="418,70" visible="false" advanced="true"/>
-    <loader id="n90_bmxe" name="ladBgMask" xy="0,0" size="1920,1080" visible="false" url="ui://av6agj0gbmxe2l" fill="scaleFree">
-      <gearIcon controller="ctrlJmType" pages="7" values="ui://av6agj0g766c4q" default="ui://av6agj0gbmxe2l"/>
+    <loader id="n90_bmxe" name="ladBgMask" xy="0,0" size="1920,1080" visible="false" url="ui://av6agj0g766c4q" fill="scaleFree">
+      <gearIcon controller="ctrlJmType" pages="7,8" values="ui://av6agj0g766c4q|ui://av6agj0g766c4q" default="ui://av6agj0gbmxe2l"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
     <image id="n93_hilw" name="n93" src="hilw2p" fileName="img/pop.png" xy="1408,143" group="n94_hilw">
       <gearDisplay controller="ctrlJmType" pages="0,1,2,3,4"/>
     </image>
     <image id="n97_vjd0" name="n97" src="vjd03u" fileName="img/configBG.png" xy="1421,151" size="362,127" group="n94_hilw">
-      <gearDisplay controller="ctrlJmType" pages="5,6,7"/>
+      <gearDisplay controller="ctrlJmType" pages="5,6,7,8"/>
     </image>
     <component id="n91_hilw" name="btnNoSkip" src="sco7k" fileName="btn/btnScale.xml" xy="1455,172" size="141,72" group="n94_hilw">
       <gearIcon controller="ctrlJmType" pages="5,6,7" values="ui://av6agj0gvjd03v|ui://av6agj0gvjd03v|ui://av6agj0gvjd03v" default="ui://av6agj0ghilw2n"/>
-      <Button icon="ui://av6agj0ghilw2n"/>
+      <Button icon="ui://av6agj0gvjd03v"/>
     </component>
     <component id="n92_hilw" name="btnSkip" src="sco7k" fileName="btn/btnScale.xml" xy="1606,171" size="142,73" group="n94_hilw">
       <gearIcon controller="ctrlJmType" pages="5,6,7" values="ui://av6agj0gvjd03t|ui://av6agj0gvjd03t|ui://av6agj0gvjd03t" default="ui://av6agj0ghilw2o"/>
-      <Button icon="ui://av6agj0ghilw2o"/>
+      <Button icon="ui://av6agj0gvjd03t"/>
     </component>
     <group id="n94_hilw" name="grpSecondConfirmSkip" xy="1408,143" size="389,135" advanced="true">
       <relation target="n59_sco7" sidePair="center-center,bottom-bottom"/>
     </group>
+    <component id="n113_wle9" name="comSubmitLoading" src="wle94o" fileName="com/ComSubmitLoading.xml" xy="0,0" size="1920,1080" visible="false">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
     <image id="n106_nlpi" name="n106" src="nlpi46" fileName="img/specialExamSuccessBG.png" xy="440,226" group="n105_knqv"/>
     <image id="n108_nlpi" name="imgSuccessRateBg" src="nlpi44" fileName="img/rateBG.png" xy="614,507" group="n105_knqv"/>
     <image id="n109_nlpi" name="imgSuccessRate" src="nlpi43" fileName="img/rate.png" xy="613,507" group="n105_knqv"/>
@@ -182,7 +186,7 @@
     <text id="n110_nlpi" name="tfPageInfo" xy="555,335" size="810,98" group="n105_knqv" font="ui://av6agj0gnlpi49" fontSize="18" align="center" letterSpacing="30" autoSize="none" text="1/"/>
     <component id="n63_sco7" name="btnNext" src="sco7k" fileName="btn/btnScale.xml" xy="1019,649" size="330,102" group="n105_knqv" controller="button,0">
       <gearIcon controller="ctrlIsLast" pages="0,1" values="ui://av6agj0g766c4t|ui://av6agj0g766c4r"/>
-      <Button icon="ui://av6agj0g766c4r"/>
+      <Button icon="ui://av6agj0g766c4t"/>
     </component>
     <component id="n107_nlpi" name="btnNoSubmit" src="sco7k" fileName="btn/btnScale.xml" xy="576,649" size="330,102" group="n105_knqv">
       <relation target="n106_nlpi" sidePair="right-right,top-top"/>
@@ -193,11 +197,8 @@
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
     <group id="n112_nlpi" name="specialExamSuccess" xy="440,226" size="1040,667" advanced="true">
-      <gearDisplay controller="ctrlJmType" pages="6,7"/>
+      <gearDisplay controller="ctrlJmType" pages="6,7,8"/>
     </group>
-    <component id="n113_wle9" name="comSubmitLoading" src="wle94o" fileName="com/ComSubmitLoading.xml" xy="0,0" size="1920,1080" visible="false">
-      <relation target="" sidePair="width-width,height-height"/>
-    </component>
     <component id="n119_nxno" name="comIOSBegin" src="nxno65" fileName="com/ComIOSBegin.xml" xy="0,0" visible="false">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
