@@ -218,7 +218,6 @@ export async function clipTexture() {
 
         let get2dOutPath = (iterator) => {
             let outPath;
-
             if (iterator.type === objectType.ObjectTypeGround) {
                 outPath = Global.svnArtPath + ground_2d_output_suffix_path;
             } else if (iterator.type === objectType.ObjectTypeFloor) {
@@ -240,10 +239,16 @@ export async function clipTexture() {
                 await jimpExc.jimp2dCell(1, iterator, iterator.rectTexture, input_path, outPath2d);
             }
         }
+        console.log('-->  clip entity texture complete');
+
         console.log('--> start clip object texture');
         for (const iterator of Global.objectCells) {
             let outPath = getOutPath(iterator)
             await jimpExc.jimpCell(1, iterator, iterator.texture, input_path, outPath);
+            if (iterator.rectTexture) {
+                let outPath2d = get2dOutPath(iterator);
+                await jimpExc.jimp2dCell(1, iterator, iterator.rectTexture, input_path, outPath2d);
+            }
         }
         console.log('--> clip object texture complete');
 
