@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="393,183" overflow="hidden" extention="Button" designImage="ui://ti9jag5t11tcewcyiom" designImageOffsetX="-391" designImageOffsetY="-830" designImageAlpha="0" designImageLayer="1">
+  <controller name="button" pages="2,up,3,down" selected="0"/>
+  <displayList>
+    <image id="n4_11tce" name="n4" src="11tcewcyioz" fileName="lessonCenter/img/bg_jiaoxuezujian_06.png" xy="0,0" size="393,183"/>
+    <image id="n3_11tce" name="n3" src="11tcewcyioy" fileName="lessonCenter/img/bg_jiaoxuezujian_05.png" xy="8,9" size="268,164"/>
+    <image id="n7_11tce" name="n7" src="11tcewcyioy" fileName="lessonCenter/img/bg_jiaoxuezujian_05.png" xy="286,60" size="98,113"/>
+    <image id="n8_11tce" name="n8" src="11tcewcyiox" fileName="lessonCenter/img/bg_jiaoxuezujian_04.png" xy="286,9"/>
+    <text id="n9_11tce" name="title" xy="289,20" size="92,26" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="视频播放器"/>
+    <text id="n10_11tce" name="tfDesc" xy="291,65" size="89,104" fontSize="16" color="#7c7c7c" autoSize="none" text="可配置编辑的"/>
+    <loader id="n11_11tce" name="icon" xy="10,11" size="264,160" touchable="false" align="center" vAlign="middle" fill="scale" color="#7c7c7c"/>
+    <image id="n12_o572" name="imgSelect" src="80ab9e" fileName="ideCommon/img/img_ide_wpk_3.png" xy="0,0" size="393,183">
+      <gearDisplay controller="button" pages="3"/>
+    </image>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

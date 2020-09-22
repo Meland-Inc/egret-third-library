@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" opaque="false">
+  <controller name="ctrlAreaList" pages="1,show,0,hide" selected="0"/>
+  <displayList>
+    <component id="n5_oyuj" name="comListArea" src="oyuj13564vc" fileName="lessonCenter/comAreaList.xml" xy="0,0">
+      <relation target="" sidePair="height-height"/>
+    </component>
+    <component id="n4_11tce" name="comNoteArea" src="11tcewcyios" fileName="lessonCenter/comNoteArea.xml" xy="299,900" size="1617,180">
+      <relation target="" sidePair="bottom-bottom,rightext-right"/>
+      <relation target="n5_oyuj" sidePair="leftext-right"/>
+    </component>
+  </displayList>
+  <transition name="transHide"/>
+</component>
