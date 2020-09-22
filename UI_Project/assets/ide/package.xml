@@ -610,6 +610,37 @@
     <component id="j3bfwcyio7" name="comAWUIBlackboard.xml" path="/attribute/widgets/" exported="true"/>
     <image id="jbydwcyioc" name="n7.png" path="/codeVew/img/"/>
     <image id="jbydwcyiod" name="img_build_ok_16.png" path="/codeVew/img/"/>
+    <component id="sh3owcyio7" name="WinLessonCenterPPT.xml" path="/lessonCenter/" exported="true"/>
+    <image id="11tcewcyioc" name="bg_quyuliebiao_01.png" path="/lessonCenter/img/"/>
+    <image id="11tcewcyiod" name="bg_quyuliebiao_02.png" path="/lessonCenter/img/"/>
+    <image id="11tcewcyioe" name="bg_quyuliebiao_03.png" path="/lessonCenter/img/"/>
+    <image id="11tcewcyiof" name="bg_quyuliebiao_04.png" path="/lessonCenter/img/"/>
+    <image id="11tcewcyiog" name="bg_quyuliebiao_05.png" path="/lessonCenter/img/"/>
+    <image id="11tcewcyioh" name="bg_quyuliebiao_06.png" path="/lessonCenter/img/"/>
+    <image id="11tcewcyioi" name="icon_quyuliebiao_04.png" path="/lessonCenter/img/"/>
+    <image id="11tcewcyioj" name="icon_quyulieibao_01.png" path="/lessonCenter/img/"/>
+    <image id="11tcewcyiok" name="icon_quyulieibao_02.png" path="/lessonCenter/img/"/>
+    <image id="11tcewcyiol" name="icon_quyulieibao_03.png" path="/lessonCenter/img/"/>
+    <image id="11tcewcyiom" name="标注.png" path="/lessonCenter/img/"/>
+    <image id="11tcewcyion" name="bg_beizhuqu_01.png" path="/lessonCenter/img/"/>
+    <image id="11tcewcyioo" name="bg_beizhuqu_02.png" path="/lessonCenter/img/" scale="9grid" scale9grid="39,39,78,78"/>
+    <image id="11tcewcyiop" name="icon_beizhuqu_01.png" path="/lessonCenter/img/"/>
+    <image id="11tcewcyioq" name="备注.png" path="/lessonCenter/img/"/>
+    <component id="11tcewcyior" name="btnShowHideNoteArea.xml" path="/lessonCenter/btn/"/>
+    <component id="11tcewcyios" name="comNoteArea.xml" path="/lessonCenter/"/>
+    <component id="11tcewcyiot" name="BtnLessonComponent.xml" path="/ideCommon/btn/"/>
+    <image id="11tcewcyiou" name="bg_jiaoxuezujian_01.png" path="/lessonCenter/img/"/>
+    <image id="11tcewcyiov" name="bg_jiaoxuezujian_02.png" path="/lessonCenter/img/"/>
+    <image id="11tcewcyiow" name="bg_jiaoxuezujian_03.png" path="/lessonCenter/img/"/>
+    <image id="11tcewcyiox" name="bg_jiaoxuezujian_04.png" path="/lessonCenter/img/" scale="9grid" scale9grid="24,11,48,22"/>
+    <image id="11tcewcyioy" name="bg_jiaoxuezujian_05.png" path="/lessonCenter/img/" scale="9grid" scale9grid="22,16,44,32"/>
+    <image id="11tcewcyioz" name="bg_jiaoxuezujian_06.png" path="/lessonCenter/img/" scale="9grid" scale9grid="19,14,38,28"/>
+    <image id="11tcewcyip0" name="效果图.png" path="/lessonCenter/img/"/>
+    <component id="11tcewcyip2" name="ComLessonCreate.xml" path="/create/com/"/>
+    <component id="o57213564vb" name="ComLessonBuildCreate.xml" path="/create/com/"/>
+    <component id="oyuj13564vc" name="comAreaList.xml" path="/lessonCenter/"/>
+    <component id="oyuj13564vd" name="btnShowHideListArea.xml" path="/lessonCenter/btn/"/>
+    <component id="oyuj13564ve" name="btnLessonCptTag.xml" path="/attribute/btn/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>
