@@ -12,6 +12,8 @@ import * as qiniu from "qiniu";
 import * as ExternalUtil from "./ExternalUtil";
 import * as spawnExc from "./SpawnExecute.js";
 import * as CdnUtil from "./CdnUtil.js";
+import * as Util from "./Util.js";
+import { util } from 'chai';
 
 export const serverList = [
     { name: "long", host: "47.107.73.43", user: "ftpadmin", password: "unclemiao", path: "/web/feature/long" },
@@ -645,6 +647,40 @@ export async function applyLessonPolicyNum(isTest) {
 
 export function checkPolicyNum() {
     return ExternalUtil.getPolicyInfo(ModelMgr.versionModel.curEnviron.name);
+}
+
+/**svn资源配置打tag */
+export async function svnAssetTag() {
+    if (!ModelMgr.versionModel.curEnviron.svnTagEnable) {
+        return;
+    }
+
+    //获取出svn的远程连接
+    let svnInfo = await spawnExc.runCmdGetInfo('svn info', Global.svnPath);
+    // let reg = /(?<=URL:[\s]*)[\S]*(?=\s)/;//es5不能用正则后行断言
+    let reg = /URL:[\s]*([\S]*)\s/;
+    let svnSearchRes = reg.exec(svnInfo);
+    if (!svnSearchRes || svnSearchRes.length != 2) {
+        Global.snack('svn打Tag获取远程连接失败', null, false);
+        return;
+    }
+
+    let svnUrl = svnSearchRes[1];
+    let versionInfo = `version_${ModelMgr.versionModel.curEnviron.name}_${ModelMgr.versionModel.releaseVersion}`;
+    let tagCmd = `svn cp -m \"${versionInfo}\" ${svnUrl}/versionRes/trunk ${svnUrl}/versionRes/tags/${versionInfo}`;
+
+    let tagSuccess = false;
+    while (!tagSuccess) {
+        await spawnExc.runCmd(tagCmd, Global.svnPath, null, null).then((info) => {
+            tagSuccess = true;
+            console.log(`Svn打Tag成功`);
+        }).catch((info) => {
+            console.log(`Svn打Tag失败 重新尝试`);
+        });
+        if (!tagSuccess) {
+            await Util.waitTime(1000);
+        }
+    }
 }
 
 export async function commitGit() {
