@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://0axy98cgyfas8d" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlStep" pages="2,0,0,1,1,2" selected="0"/>
+  <controller name="ctrlStep" pages="2,0,0,1,1,2" selected="2"/>
   <controller name="ctrlManor" pages="0,0,1,1" selected="0"/>
   <controller name="ctrlMapType" pages="0,rectangle,1,rhomb" selected="0"/>
   <displayList>
@@ -21,7 +21,7 @@
     <image id="n84_yfas" name="n84" src="yfas8f" fileName="img/icon_mt_xzmb.png" xy="167,100" size="213,52">
       <relation target="" sidePair="left-left,top-top"/>
     </image>
-    <text id="n46_v8nf" name="n46" xy="169,107" size="173,42" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="选择地图类型">
+    <text id="n46_v8nf" name="n46" xy="169,107" size="173,42" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="配置模板">
       <gearText controller="ctrlStep" pages="2,1" values="选择地图类型|配置模板" default="选择一个模板"/>
       <relation target="n84_yfas" sidePair="middle-middle,left-left"/>
     </text>
@@ -89,6 +89,10 @@
     <component id="n66_v8nf" name="btnCreateEnter" src="tbm25y" fileName="btn/btnScale.xml" xy="1238,890" size="142,54" group="n63_v8nf">
       <Button title="创建进入" titleFontSize="24" icon="ui://0axy98cgmzsu70"/>
     </component>
+    <component id="n91_jntw" name="btnPre2" src="tbm25y" fileName="btn/btnScale.xml" xy="940,890" size="140,54" group="n63_v8nf">
+      <gearDisplay controller="ctrlStep" pages="1"/>
+      <Button title="  上一步" titleFontSize="24" icon="ui://0axy98cgmzsu6y" controller="ctrlStep" page="0"/>
+    </component>
     <image id="n86_pw6y" name="n86" src="yfas7r" fileName="img/img_mt_mapbgframe.png" xy="528,184" size="298,292" group="n63_v8nf">
       <relation target="n50_v8nf" sidePair="width-width,height-height"/>
     </image>
@@ -132,12 +136,6 @@
       <gearDisplay controller="ctrlStep" pages="0"/>
       <relation target="n85_vrsj" sidePair="right-right,bottom-bottom"/>
       <Button title="  上一步" titleFontSize="24" icon="ui://0axy98cgmzsu6y" controller="ctrlStep" page="2"/>
-    </component>
-    <component id="n91_jntw" name="btnPre2" src="tbm25y" fileName="btn/btnScale.xml" xy="940,890" size="140,54">
-      <gearDisplay controller="ctrlStep" pages="1"/>
-      <relation target="n85_vrsj" sidePair="right-right,bottom-bottom"/>
-      <relation target="n65_v8nf" sidePair="right-right,bottom-bottom"/>
-      <Button title="  上一步" titleFontSize="24" icon="ui://0axy98cgmzsu6y" controller="ctrlStep" page="0"/>
     </component>
     <component id="n92_jntw" name="btnNext0" src="tbm25y" fileName="btn/btnScale.xml" xy="1576,971" size="142,50">
       <gearDisplay controller="ctrlStep" pages="2"/>
