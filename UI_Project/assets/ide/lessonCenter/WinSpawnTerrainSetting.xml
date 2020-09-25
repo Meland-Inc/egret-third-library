@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" opaque="false" designImage="ui://ti9jag5thvnv13564vq" designImageOffsetX="-286" designImageOffsetY="-428" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlType" pages="0,terrain,1,plant" selected="0"/>
+  <displayList>
+    <graph id="n16_hvnv" name="dragArea" xy="791,431" size="338,54" group="n15_hvnv"/>
+    <image id="n1_hvnv" name="imgBg" src="chj2wcyio2" fileName="choiceQuestion/img/bg_chaifen_white.png" xy="790,429" pivot="0,1" size="339,222" group="n15_hvnv"/>
+    <image id="n0_hvnv" name="imgTitleBg" src="hvnv13564vm" fileName="lessonCenter/img/bg_meihua_01.png" xy="790,429" size="339,56" group="n15_hvnv"/>
+    <text id="n2_hvnv" name="n2" xy="815,441" size="288,34" group="n15_hvnv" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="一键美化工具"/>
+    <text id="n3_hvnv" name="n3" xy="815,499" size="124,34" group="n15_hvnv" fontSize="24" align="center" text="场景主题："/>
+    <component id="n4_hvnv" name="cbTerrainType" src="grwpb3" fileName="attribute/widgets/ComboBox1.xml" xy="936,495" size="166,40" group="n15_hvnv">
+      <ComboBox title="森林" titleColor="#7a7a7a" visibleItemCount="10"/>
+    </component>
+    <image id="n7_hvnv" name="n7" src="jo99wcyimx" fileName="attribute/img/icon_spsx_01.png" xy="869,570" size="12,14" group="n15_hvnv"/>
+    <component id="n8_hvnv" name="n8" src="oliri6q" fileName="btn/rbtnScale.xml" pkg="te1gxawo" xy="862,549" size="18,18" group="n15_hvnv">
+      <Button icon="ui://ti9jag5tjo99wcyimv" selectedIcon="ui://ti9jag5thvnv13564vs" controller="ctrlType" page="0"/>
+    </component>
+    <component id="n12_hvnv" name="btnSpawn" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="898,587" size="122,46" group="n15_hvnv">
+      <Button title="随机生成" icon="ui://ti9jag5thvnv13564vn"/>
+    </component>
+    <component id="n13_hvnv" name="n13" src="hvnv13564vt" fileName="lessonCenter/btn/rBtnSpawnTerrainType.xml" xy="863,543" size="127,29" group="n15_hvnv">
+      <Button controller="ctrlType" page="0"/>
+    </component>
+    <component id="n14_hvnv" name="n14" src="hvnv13564vt" fileName="lessonCenter/btn/rBtnSpawnTerrainType.xml" xy="989,543" size="127,29" group="n15_hvnv">
+      <Button title="植被" controller="ctrlType" page="1"/>
+    </component>
+    <group id="n15_hvnv" name="root" xy="790,429" size="339,222" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

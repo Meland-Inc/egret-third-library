@@ -5,9 +5,13 @@
     <component id="n5_oyuj" name="comListArea" src="oyuj13564vc" fileName="lessonCenter/comAreaList.xml" xy="0,0">
       <relation target="" sidePair="height-height"/>
     </component>
-    <component id="n4_11tce" name="comNoteArea" src="11tcewcyios" fileName="lessonCenter/comNoteArea.xml" xy="299,900" size="1617,180">
+    <component id="n4_11tce" name="comNoteArea" src="11tcewcyios" fileName="lessonCenter/comNoteArea.xml" xy="305,900" size="1611,180" controller="ctrlShowHide,1">
       <relation target="" sidePair="bottom-bottom,rightext-right"/>
       <relation target="n5_oyuj" sidePair="leftext-right"/>
+    </component>
+    <component id="n6_hvnv" name="comCreate" src="qtgz13564vh" fileName="lessonCenter/btn/comCreateAreaScene.xml" xy="307,530" visible="false">
+      <relation target="" sidePair="bottom-bottom"/>
+      <relation target="n5_oyuj" sidePair="left-right"/>
     </component>
   </displayList>
   <transition name="transHide"/>

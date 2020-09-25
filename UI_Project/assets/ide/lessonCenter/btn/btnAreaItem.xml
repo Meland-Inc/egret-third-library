@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="280,150" extention="Button" designImage="ui://ti9jag5t11tcewcyiom" designImageOffsetX="287" designImageOffsetY="-816" designImageAlpha="0">
+  <controller name="button" pages="2,up,3,down,4,over" selected="0"/>
+  <controller name="ctrlType" pages="0,normal,1,add,2,setting" selected="0"/>
+  <displayList>
+    <image id="n1_fie1" name="imgBg" src="11tcewcyiog" fileName="lessonCenter/img/bg_quyuliebiao_05.png" xy="1,4"/>
+    <loader id="n7_fie1" name="icon" xy="3,32" size="274,115">
+      <gearDisplay controller="ctrlType" pages="0,2"/>
+    </loader>
+    <image id="n2_fie1" name="imgTitleBg" src="11tcewcyiod" fileName="lessonCenter/img/bg_quyuliebiao_02.png" xy="1,33" size="278,29" scale="1,-1">
+      <gearDisplay controller="ctrlType" pages="0,2"/>
+    </image>
+    <text id="n4_fie1" name="title" xy="1,3" size="278,29" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="title">
+      <gearDisplay controller="ctrlType" pages="0,2"/>
+    </text>
+    <text id="n5_fie1" name="tfAdd" xy="52,64" size="175,26" fontSize="18" color="#666666" align="center" vAlign="middle" autoSize="none" text="添加场景">
+      <gearDisplay controller="ctrlType" pages="1"/>
+    </text>
+    <component id="n8_fie1" name="btnSetting" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="253,8" size="21,21" visible="false">
+      <gearDisplay controller="ctrlType" pages="0,2"/>
+      <Button icon="ui://ti9jag5t11tcewcyioj" controller="ctrlType" page="2"/>
+    </component>
+    <image id="n27_qtgz" name="n27" src="qtgz13564vj" fileName="lessonCenter/img/img_mt_gengduo_bg.png" xy="141,34" size="134,99" group="n41_qtgz"/>
+    <component id="n28_qtgz" name="btnRename" src="qtgz13564vk" fileName="lessonCenter/btn/btnScaleFunction.xml" xy="143,35" group="n41_qtgz">
+      <Button title="场景重命名" titleColor="#a3a3a3" titleFontSize="18" controller="ctrlType" page="0"/>
+    </component>
+    <image id="n29_qtgz" name="n29" src="qtgz13564vl" fileName="lessonCenter/img/icon_mt_xuxian5.png" xy="142,64" size="131,4" group="n41_qtgz"/>
+    <component id="n30_qtgz" name="btnEditTpPoint" src="qtgz13564vk" fileName="lessonCenter/btn/btnScaleFunction.xml" xy="143,68" group="n41_qtgz">
+      <Button title="传送点编辑" titleColor="#a3a3a3" titleFontSize="18" controller="ctrlType" page="0"/>
+    </component>
+    <image id="n31_qtgz" name="n31" src="qtgz13564vl" fileName="lessonCenter/img/icon_mt_xuxian5.png" xy="142,97" size="131,4" group="n41_qtgz"/>
+    <component id="n32_qtgz" name="btnDelArea" src="qtgz13564vk" fileName="lessonCenter/btn/btnScaleFunction.xml" xy="143,101" group="n41_qtgz">
+      <Button title="删除场景" titleColor="#a3a3a3" titleFontSize="18" controller="ctrlType" page="0"/>
+    </component>
+    <group id="n41_qtgz" name="grpSetting" xy="141,34" size="134,99" advanced="true">
+      <gearDisplay controller="ctrlType" pages="2"/>
+    </group>
+    <image id="n3_fie1" name="imgSelect" src="11tcewcyiof" fileName="lessonCenter/img/bg_quyuliebiao_04.png" xy="0,2" size="280,148" group="n6_fie1">
+      <gearDisplay controller="button" pages="3"/>
+    </image>
+    <group id="n6_fie1" name="grpSelect" xy="0,2" size="280,148" advanced="true">
+      <gearDisplay controller="ctrlType" pages="0,2"/>
+    </group>
+  </displayList>
+  <Button mode="Radio"/>
+</component>
