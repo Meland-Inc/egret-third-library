@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="127,29" extention="Button">
+  <controller name="button" pages="2,up,3,down" selected="0"/>
+  <displayList>
+    <component id="n0_hvnv" name="n0" src="oliri6q" fileName="btn/rbtnScale.xml" pkg="te1gxawo" xy="0,6" size="18,18">
+      <Button icon="ui://ti9jag5tjo99wcyimv" selectedIcon="ui://ti9jag5thvnv13564vs"/>
+    </component>
+    <text id="n1_hvnv" name="title" xy="26,0" size="101,29" fontSize="20" autoSize="none" text="地形"/>
+    <image id="n2_hvnv" name="n2" src="jo99wcyimv" fileName="attribute/img/icon_spsx_03.png" xy="0,6"/>
+    <image id="n4_hvnv" name="n4" src="jo99wcyimw" fileName="attribute/img/icon_spsx_02.png" xy="0,6">
+      <gearDisplay controller="button" pages="3"/>
+    </image>
+    <image id="n5_hvnv" name="n5" src="jo99wcyimx" fileName="attribute/img/icon_spsx_01.png" xy="3,8">
+      <gearDisplay controller="button" pages="3"/>
+    </image>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="0,1079">
-  <controller name="ctrlAreaList" pages="1,show,0,hide" selected="1"/>
+<component size="306,1079">
+  <controller name="ctrlAreaList" pages="1,show,0,hide" selected="0"/>
   <displayList>
-    <component id="n5_oyuj" name="n5" src="oyuj13564vd" fileName="lessonCenter/btn/btnShowHideListArea.xml" xy="-1,487">
+    <component id="n5_oyuj" name="n5" src="oyuj13564vd" fileName="lessonCenter/btn/btnShowHideListArea.xml" xy="305,487">
       <relation target="" sidePair="middle-middle"/>
-      <relation target="n0_11tce" sidePair="left-right"/>
-      <Button checked="true" controller="ctrlAreaList" page="0"/>
+      <relation target="n10_fie1" sidePair="left-right"/>
+      <Button controller="ctrlAreaList" page="0"/>
     </component>
-    <image id="n0_11tce" name="bg" src="xba67o" fileName="ideCommon/img/img_ide_cm_7.png" xy="-300,0" size="300,1079">
-      <gearXY controller="ctrlAreaList" pages="0" values="-300,0" default="0,0" tween="true"/>
+    <image id="n0_11tce" name="bg" src="xba67o" fileName="ideCommon/img/img_ide_cm_7.png" xy="0,0" size="306,1079" group="n10_fie1">
       <relation target="" sidePair="height-height"/>
     </image>
+    <list id="n6_fie1" name="lstAreaList" xy="12,64" size="282,1001" group="n10_fie1" overflow="scroll" lineGap="4" defaultItem="ui://ti9jag5tqtgz13564vf">
+      <relation target="n0_11tce" sidePair="left-left"/>
+      <relation target="" sidePair="height-height"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n8_fie1" name="n8" src="11tcewcyioc" fileName="lessonCenter/img/bg_quyuliebiao_01.png" xy="0,0" group="n10_fie1"/>
+    <text id="n9_fie1" name="n9" xy="57,10" size="191,34" group="n10_fie1" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="5c1e流程"/>
+    <group id="n10_fie1" name="root" xy="0,0" size="306,1079" advanced="true">
+      <gearXY controller="ctrlAreaList" pages="0" values="-306,0" default="0,0" tween="true"/>
+    </group>
   </displayList>
-  <relation target="n0_11tce" sidePair="rightext-right"/>
+  <relation target="n10_fie1" sidePair="rightext-right"/>
 </component>

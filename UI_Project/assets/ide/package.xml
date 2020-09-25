@@ -596,7 +596,7 @@
     <component id="ijuiwcying" name="ComCodeblockPageLabel.xml" path="/codeVew/com/"/>
     <image id="ijuiwcyinh" name="icon_bqy_02.png" path="/codeVew/img/codeblockPage/"/>
     <image id="ijuiwcyini" name="icon_bqy_01.png" path="/codeVew/img/codeblockPage/"/>
-    <image id="ijuiwcyinj" name="icon_bqy_03.png" path="/codeVew/img/codeblockPage/" scale="9grid" scale9grid="50,9,100,18"/>
+    <image id="ijuiwcyinj" name="icon_bqy_03.png" path="/codeVew/img/codeblockPage/" scale="9grid" scale9grid="15,9,167,18"/>
     <component id="ijuiwcyink" name="ComCodeblockPageBtnEditMenus.xml" path="/codeVew/com/"/>
     <component id="f9zawcyio3" name="btnCodeRunStop.xml" path="/ideCommon/btn/"/>
     <component id="f9zawcyio4" name="btnRestartCode.xml" path="/ideCommon/btn/"/>
@@ -616,7 +616,7 @@
     <image id="11tcewcyioe" name="bg_quyuliebiao_03.png" path="/lessonCenter/img/"/>
     <image id="11tcewcyiof" name="bg_quyuliebiao_04.png" path="/lessonCenter/img/"/>
     <image id="11tcewcyiog" name="bg_quyuliebiao_05.png" path="/lessonCenter/img/"/>
-    <image id="11tcewcyioh" name="bg_quyuliebiao_06.png" path="/lessonCenter/img/"/>
+    <image id="11tcewcyioh" name="bg_quyuliebiao_06.png" path="/lessonCenter/img/" scale="9grid" scale9grid="22,16,44,32"/>
     <image id="11tcewcyioi" name="icon_quyuliebiao_04.png" path="/lessonCenter/img/"/>
     <image id="11tcewcyioj" name="icon_quyulieibao_01.png" path="/lessonCenter/img/"/>
     <image id="11tcewcyiok" name="icon_quyulieibao_02.png" path="/lessonCenter/img/"/>
@@ -641,6 +641,21 @@
     <component id="oyuj13564vc" name="comAreaList.xml" path="/lessonCenter/"/>
     <component id="oyuj13564vd" name="btnShowHideListArea.xml" path="/lessonCenter/btn/"/>
     <component id="oyuj13564ve" name="btnLessonCptTag.xml" path="/attribute/btn/"/>
+    <component id="qtgz13564vf" name="btnAreaItem.xml" path="/lessonCenter/btn/"/>
+    <component id="qtgz13564vg" name="btnOption.xml" path="/lessonCenter/btn/"/>
+    <component id="qtgz13564vh" name="comCreateAreaScene.xml" path="/lessonCenter/com/"/>
+    <component id="qtgz13564vi" name="comLocInput.xml" path="/lessonCenter/com/"/>
+    <image id="qtgz13564vj" name="img_mt_gengduo_bg.png" path="/lessonCenter/img/" scale="9grid" scale9grid="25,27,79,123"/>
+    <component id="qtgz13564vk" name="btnScaleFunction.xml" path="/lessonCenter/btn/"/>
+    <image id="qtgz13564vl" name="icon_mt_xuxian5.png" path="/lessonCenter/img/" scale="tile"/>
+    <image id="hvnv13564vm" name="bg_meihua_01.png" path="/lessonCenter/img/"/>
+    <image id="hvnv13564vn" name="btn_meihua_01.png" path="/lessonCenter/img/"/>
+    <image id="hvnv13564vo" name="icon_meihua_01.png" path="/lessonCenter/img/"/>
+    <image id="hvnv13564vp" name="icon_meihua_02.png" path="/lessonCenter/img/"/>
+    <image id="hvnv13564vq" name="标注(1).png" path="/lessonCenter/img/"/>
+    <component id="hvnv13564vr" name="WinSpawnTerrainSetting.xml" path="/lessonCenter/" exported="true"/>
+    <component id="hvnv13564vs" name="spArrow.xml" path="/lessonCenter/com/"/>
+    <component id="hvnv13564vt" name="rBtnSpawnTerrainType.xml" path="/lessonCenter/btn/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>

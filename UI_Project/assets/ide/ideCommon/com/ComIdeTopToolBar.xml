@@ -64,5 +64,9 @@
     <component id="n28_f9za" name="btnCodeStop" src="f9zawcyio3" fileName="ideCommon/btn/btnCodeRunStop.xml" xy="909,2">
       <relation target="" sidePair="right-right"/>
     </component>
+    <component id="n29_hvnv" name="btnSpawnTerrain" src="dyk9b6" fileName="ideCommon/btn/tBtnIdeTopToolBar.xml" xy="854,2">
+      <relation target="" sidePair="right-right"/>
+      <Button title="一键美化" icon="ui://ti9jag5thvnv13564vo"/>
+    </component>
   </displayList>
 </component>
