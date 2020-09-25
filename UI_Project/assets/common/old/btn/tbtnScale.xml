@@ -5,9 +5,8 @@
     <loader id="n0_sz33" name="icon" xy="0,0" pivot="0.5,0.5" size="114,40" url="ui://te1gxawoot9si2a" fill="scaleFree">
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <text id="n1_obf0" name="title" xy="6,3" pivot="0.5,0.5" size="100,32" fontSize="20" color="#599c11" align="center" vAlign="middle" autoSize="none" bold="true" singleLine="true" text="">
-      <relation target="" sidePair="center-center,middle-middle"/>
-      <relation target="" sidePair="width-width,height-height"/>
+    <text id="n1_obf0" name="title" xy="6,4" pivot="0.5,0.5" size="100,32" fontSize="20" color="#599c11" align="center" vAlign="middle" autoSize="none" singleLine="true" text="">
+      <relation target="" sidePair="center-center,middle-middle,width-width,height-height"/>
     </text>
   </displayList>
   <Button mode="Check"/>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" designImage="ui://0axy98cgpplwau" designImageOffsetX="366" designImageOffsetY="42" designImageAlpha="0" designImageLayer="1">
+  <displayList>
+    <graph id="n77_yfas" name="n77" xy="0,0" size="1920,1080" group="n83_yfas" type="rect" fillColor="#fff7f6f2">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <image id="n80_yfas" name="imgHeaderBg" src="tbm25r" fileName="img/img_mt_bgtitle.png" xy="0,0" size="1920,90" group="n83_yfas">
+      <relation target="" sidePair="width-width,top-top"/>
+    </image>
+    <text id="n81_yfas" name="n81" xy="168,26" size="152,44" group="n83_yfas" fontSize="32" color="#716f7a" autoSize="none" text="创建课程"/>
+    <component id="n82_yfas" name="btnReturn" src="tbm25y" fileName="btn/btnScale.xml" xy="35,24" size="101,42" group="n83_yfas">
+      <Button title="  返回" icon="ui://0axy98cgmzsu6h"/>
+    </component>
+    <group id="n83_yfas" name="grpMain" xy="0,0" size="1920,1080"/>
+    <image id="n78_yfas" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="399,123" size="1121,897" group="n63_v8nf">
+      <relation target="n63_v8nf" sidePair="bottomext-bottom"/>
+    </image>
+    <loader id="n68_mzsu" name="n68" xy="847,191" size="534,645" group="n63_v8nf" url="ui://0axy98cgpplwap" fill="scaleFree"/>
+    <image id="n92_pplw" name="imgBg0" src="pplwao" fileName="img/lessonCenter/bg_ccdt_02.png" xy="847,187" size="534,188" group="n63_v8nf"/>
+    <loader id="n70_mzsu" name="n70" xy="847,187" size="534,137" group="n63_v8nf" url="ui://0axy98cgpplwan">
+      <relation target="n68_mzsu" sidePair="width-width,top-top"/>
+    </loader>
+    <loader id="n71_mzsu" name="n71" xy="874,187" size="172,55" group="n63_v8nf" url="ui://0axy98cgpplwaq">
+      <relation target="n70_mzsu" sidePair="left-left,top-top"/>
+    </loader>
+    <text id="n93_pplw" name="tfLessonTemplateTitle" xy="1069,331" size="103,35" group="n96_pplw" fontSize="25" color="#d28800" align="center" vAlign="middle" text="课程模板"/>
+    <image id="n94_pplw" name="n94" src="pplwat" fileName="img/lessonCenter/icon_ccdt_01.png" xy="1051,344" group="n96_pplw"/>
+    <image id="n95_pplw" name="n95" src="pplwat" fileName="img/lessonCenter/icon_ccdt_01.png" xy="1178,344" group="n96_pplw"/>
+    <group id="n96_pplw" name="grpLessonTitle" xy="1051,331" size="137,35" group="n63_v8nf" advanced="true"/>
+    <component id="n50_v8nf" name="btnSelectMapIcon" src="mzsu74" fileName="btn/BtnSetMapIcon.xml" xy="533,189" size="290,285" group="n63_v8nf"/>
+    <text id="n51_v8nf" name="tfMapNameTitle" xy="887,196" size="146,44" group="n63_v8nf" fontSize="32" color="#ffb733" align="center" vAlign="middle" leading="0" autoSize="none" text="课程名字">
+      <relation target="n71_mzsu" sidePair="top-top,center-center"/>
+    </text>
+    <component id="n52_v8nf" name="comNameInput" src="dv1icyiim" fileName="com/ComInput.xml" pkg="te1gxawo" xy="874,255" size="484,48" group="n63_v8nf">
+      <relation target="n70_mzsu" sidePair="top-top,center-center"/>
+      <Label icon="ui://0axy98cgpplwar"/>
+    </component>
+    <component id="n64_v8nf" name="btnPre" src="tbm25y" fileName="btn/btnScale.xml" xy="1083,885" size="140,54" group="n63_v8nf">
+      <Button title="  上一步" titleFontSize="24" icon="ui://0axy98cgmzsu6y"/>
+    </component>
+    <component id="n66_v8nf" name="btnCreateEnter" src="tbm25y" fileName="btn/btnScale.xml" xy="1239,885" size="142,54" group="n63_v8nf">
+      <Button title="创建进入" titleFontSize="24" icon="ui://0axy98cgmzsu70"/>
+    </component>
+    <image id="n86_pw6y" name="n86" src="yfas7r" fileName="img/img_mt_mapbgframe.png" xy="528,184" size="298,292" group="n63_v8nf">
+      <relation target="n50_v8nf" sidePair="width-width,height-height"/>
+    </image>
+    <list id="n97_pplw" name="lstTemplate" xy="871,398" size="489,400" group="n63_v8nf" layout="flow_hz" overflow="scroll" margin="5,0,0,0" lineGap="13" defaultItem="ui://0axy98cgpplway">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n63_v8nf" name="n63" xy="399,123" size="1121,897" advanced="true">
+      <relation target="" sidePair="center-center,top-top,bottomext-bottom"/>
+    </group>
+  </displayList>
+</component>

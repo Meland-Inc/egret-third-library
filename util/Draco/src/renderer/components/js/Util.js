@@ -18,6 +18,15 @@ export async function checkFileRepeat(path, successFunc, failFunc) {
         });
 }
 
+/**等待时间 ms */
+export function waitTime(time) {
+    return new Promise((res, rej) => {
+        setTimeout(() => {
+            res();
+        }, time);
+    });
+}
+
 async function loopCheckFileRepeat(fileMap, path, fileName) {
     const isDir = await fsExc.isDirectory(path);
     if (isDir) {

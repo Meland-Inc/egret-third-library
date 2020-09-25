@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="0,1079">
+  <controller name="ctrlAreaList" pages="1,show,0,hide" selected="1"/>
+  <displayList>
+    <component id="n5_oyuj" name="n5" src="oyuj13564vd" fileName="lessonCenter/btn/btnShowHideListArea.xml" xy="-1,487">
+      <relation target="" sidePair="middle-middle"/>
+      <relation target="n0_11tce" sidePair="left-right"/>
+      <Button checked="true" controller="ctrlAreaList" page="0"/>
+    </component>
+    <image id="n0_11tce" name="bg" src="xba67o" fileName="ideCommon/img/img_ide_cm_7.png" xy="-300,0" size="300,1079">
+      <gearXY controller="ctrlAreaList" pages="0" values="-300,0" default="0,0" tween="true"/>
+      <relation target="" sidePair="height-height"/>
+    </image>
+  </displayList>
+  <relation target="n0_11tce" sidePair="rightext-right"/>
+</component>

@@ -26,4 +26,7 @@
       <relation target="" sidePair="bottom-bottom"/>
     </group>
   </displayList>
+  <transition name="transPPTAdapte">
+    <item time="0" type="XY" target="n12_8weq" tween="true" startValue="0,920" endValue="300,-" duration="6"/>
+  </transition>
 </component>

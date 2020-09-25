@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="38,105" extention="Button">
+  <controller name="button" pages="2,up,3,down" selected="0"/>
+  <displayList>
+    <image id="n1_11tce" name="n1" src="11tcewcyion" fileName="lessonCenter/img/bg_beizhuqu_01.png" xy="38,0" rotation="90"/>
+    <image id="n0_11tce" name="n0" src="11tcewcyiop" fileName="lessonCenter/img/icon_beizhuqu_01.png" xy="11,12" pivot="0.5,0.5" rotation="90">
+      <gearSize controller="button" pages="3" values="15,18,1,-1" default="15,18,1,1"/>
+    </image>
+    <text id="n3_11tce" name="n3" xy="8,35" size="21,56" fontSize="18" color="#716f7a" align="center" vAlign="middle" autoSize="none" text="收起">
+      <gearText controller="button" pages="3" values="展开" default="收起"/>
+    </text>
+  </displayList>
+  <Button mode="Check"/>
+</component>

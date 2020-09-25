@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1595,180" opaque="false">
+  <controller name="ctrlShowHide" pages="1,show,0,hide" selected="0"/>
+  <displayList>
+    <loader id="n4_11tce" name="bg" xy="0,0" size="1595,180" url="ui://ti9jag5t11tcewcyioo" fill="scaleFree">
+      <gearXY controller="ctrlShowHide" pages="1,0" values="0,0|0,180" tween="true"/>
+      <relation target="" sidePair="rightext-right"/>
+    </loader>
+    <component id="n7_11tce" name="n7" src="11tcewcyior" fileName="lessonCenter/btn/btnShowHideNoteArea.xml" xy="0,-37">
+      <gearXY controller="ctrlShowHide" pages="1,0" values="0,-37|0,143" tween="true"/>
+      <Button controller="ctrlShowHide" page="0"/>
+    </component>
+  </displayList>
+</component>

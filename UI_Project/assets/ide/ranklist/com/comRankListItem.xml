@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="281,54" designImage="ui://ti9jag5tnt6kwcyimt" designImageOffsetX="-348" designImageOffsetY="-422" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlRank" pages="0,first,1,second,2,third,3,other" selected="3"/>
+  <controller name="ctrlRank" pages="0,first,1,second,2,third,3,other" selected="0"/>
   <displayList>
-    <loader id="n0_nt6k" name="imgBg" xy="0,4" size="281,50" url="ui://ti9jag5tnt6kwcyimn" fill="scaleFree">
+    <loader id="n0_nt6k" name="imgBg" xy="0,0" size="281,54" url="ui://ti9jag5tnt6kwcyimp" fill="scaleFree">
       <gearXY controller="ctrlRank" pages="3" values="0,4" default="0,0"/>
       <gearSize controller="ctrlRank" pages="3" values="281,50,1,1" default="281,54,1,1"/>
       <gearIcon controller="ctrlRank" pages="1,2,3" values="ui://ti9jag5tnt6kwcyimq|ui://ti9jag5tnt6kwcyimr|ui://ti9jag5tnt6kwcyimn" default="ui://ti9jag5tnt6kwcyimp"/>
     </loader>
-    <text id="n1_nt6k" name="tfName" xy="99,12" size="117,32" fontSize="22" color="#6b6b6b" vAlign="middle" autoSize="none" singleLine="true" text="bellcode">
+    <text id="n1_nt6k" name="tfName" xy="99,13" size="117,31" fontSize="18" color="#c18d00" vAlign="middle" autoSize="none" singleLine="true" text="bellcode">
       <gearColor controller="ctrlRank" pages="1,2,3" values="#83a7bb,#000000|#b16139,#000000|#6b6b6b,#000000" default="#c18d00,#000000"/>
     </text>
-    <text id="n2_nt6k" name="tfScore" xy="217,13" size="52,31" fontSize="22" color="#6b6b6b" align="right" vAlign="middle" singleLine="true" text="9999">
+    <text id="n2_nt6k" name="tfScore" xy="217,13" size="52,31" fontSize="22" color="#c18d00" align="right" vAlign="middle" singleLine="true" text="9999">
       <gearColor controller="ctrlRank" pages="1,2,3" values="#83a7bb,#000000|#b16139,#000000|#6b6b6b,#000000" default="#c18d00,#000000"/>
     </text>
     <loader id="n6_nt6k" name="ladIcon" xy="60,14" size="32,32" fill="scale" shrinkOnly="true"/>
-    <loader id="n3_nt6k" name="ladIconFg" xy="59,13" size="34,34" url="ui://ti9jag5tnt6kwcyimi" fill="scale" shrinkOnly="true">
+    <loader id="n3_nt6k" name="ladIconFg" xy="59,13" size="34,34" url="ui://ti9jag5tnt6kwcyimf" fill="scale" shrinkOnly="true">
       <gearIcon controller="ctrlRank" pages="1,2,3" values="ui://ti9jag5tnt6kwcyimg|ui://ti9jag5tnt6kwcyimh|ui://ti9jag5tnt6kwcyimi" default="ui://ti9jag5tnt6kwcyimf"/>
     </loader>
     <text id="n5_nt6k" name="tfRankNum" xy="22,12" size="16,31" fontSize="22" color="#6b6b6b" align="center" vAlign="middle" text="4">

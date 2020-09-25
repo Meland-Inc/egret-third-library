@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="430,1080" opaque="false" designImage="ui://thvmj7vocgkq4cyijg" designImageOffsetX="-1490" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlState" pages="0,none,1,elem,2,clone,3,res" selected="1">
+  <controller name="ctrlState" pages="0,none,1,elem,2,clone,3,res" selected="2">
     <action type="change_page" fromPage="" toPage="0" objectId="n68_hl7y" controller="ctrlStatus" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="2" objectId="n68_hl7y" controller="ctrlStatus" targetPage="1"/>
     <action type="change_page" fromPage="" toPage="3" objectId="n68_hl7y" controller="ctrlStatus" targetPage="4"/>
   </controller>
   <controller name="ctrlAttributeTag" pages="0,basic,4,func,1,anim,2,falling,3,sound" selected="0"/>
-  <controller name="ctrlAnim" pages="0,editAnim,1,addAnim,2,none" selected="0"/>
+  <controller name="ctrlAnim" pages="0,editAnim,1,addAnim,2,none" selected="2"/>
   <displayList>
     <image id="n32_py50" name="imgBg" src="xba67l" fileName="ideCommon/img/img_ide_cm_5.png" xy="0,0" size="430,1080" group="n67_en7j">
       <relation target="" sidePair="height-height"/>
@@ -26,9 +26,9 @@
       <item title="声音"/>
     </list>
     <image id="n55_grwp" name="imgTitleBg" src="xba67m" fileName="ideCommon/img/img_ide_cm_6.png" xy="0,0" size="430,56" group="n67_en7j"/>
-    <text id="n54_k2vs" name="tfTitle" xy="20,17" size="85,24" group="n67_en7j" fontSize="20" color="#333333" align="center" vAlign="middle" text="属性编辑"/>
+    <text id="n54_k2vs" name="tfTitle" xy="20,17" size="84,29" group="n67_en7j" fontSize="20" color="#333333" align="center" vAlign="middle" text="属性编辑"/>
     <image id="n56_grwp" name="imgNameBg" src="xba67m" fileName="ideCommon/img/img_ide_cm_6.png" xy="165,66" size="252,40" group="n58_grwp"/>
-    <text id="n33_py50" name="tfAttrName" xy="184,75" size="229,24" group="n58_grwp" input="true" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="蘑菇蓝莓"/>
+    <text id="n33_py50" name="tfAttrName" xy="184,75" size="229,24" group="n58_grwp" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="蘑菇蓝莓" input="true"/>
     <group id="n58_grwp" name="grpName" xy="165,66" size="253,41" group="n67_en7j" visible="false" advanced="true">
       <gearDisplay controller="ctrlState" pages="1"/>
     </group>
@@ -55,12 +55,12 @@
       <relation target="" sidePair="right-right,height-height"/>
     </image>
     <image id="n59_oebl" name="imgEmpty" src="zgght84" fileName="ideCommon/img/img_ide_cm_blank.png" xy="269,407" group="n61_oebl"/>
-    <text id="n60_oebl" name="tfEmpty" xy="233,529" size="193,24" group="n61_oebl" fontSize="20" color="#999999" align="center" vAlign="middle" autoSize="height" text="暂无选择"/>
+    <text id="n60_oebl" name="tfEmpty" xy="233,529" size="193,29" group="n61_oebl" fontSize="20" color="#999999" align="center" vAlign="middle" autoSize="height" text="暂无选择"/>
     <group id="n61_oebl" name="grpEmpty" xy="233,407" size="194,146" advanced="true">
       <gearDisplay controller="ctrlState" pages="0"/>
       <relation target="" sidePair="middle-middle"/>
     </group>
-    <text id="n62_oebl" name="tfCloneTips" xy="231,387" size="198,47" group="n65_oebl" fontSize="20" color="#999999" align="center" vAlign="middle" vars="true" autoSize="height" text="这是【{parent=entity}】的克隆体"/>
+    <text id="n62_oebl" name="tfCloneTips" xy="231,387" size="198,56" group="n65_oebl" fontSize="20" color="#999999" align="center" vAlign="middle" vars="true" autoSize="height" text="这是【{parent=entity}】的克隆体"/>
     <component id="n64_oebl" name="btnEditParent" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="271,447" size="120,44" group="n65_oebl">
       <relation target="n62_oebl" sidePair="top-bottom"/>
       <Button title="编辑原物件" titleFontSize="20" icon="ui://te1gxawooiqdcyih1"/>
@@ -69,8 +69,8 @@
       <gearDisplay controller="ctrlState" pages="2"/>
       <relation target="" sidePair="middle-middle"/>
     </group>
-    <component id="n52_jm8l" name="btnRun" src="fn8fcyijz" fileName="btn/btnIde.xml" pkg="oyity675" xy="-115,980">
-      <gearXY controller="ctrlState" pages="0,2,3" values="115,979|115,980|115,980" default="-115,980"/>
+    <component id="n52_jm8l" name="btnRun" src="fn8fcyijz" fileName="btn/btnIde.xml" pkg="oyity675" xy="115,980">
+      <gearXY controller="ctrlState" pages="0,2,3" values="115,980|115,980|115,980" default="-115,980"/>
       <relation target="" sidePair="bottom-bottom"/>
       <Button icon="ui://oyity675cnxcwcyilz"/>
     </component>

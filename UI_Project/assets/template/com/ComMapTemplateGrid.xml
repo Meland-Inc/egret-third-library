@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="264,274" overflow="hidden" designImage="ui://0axy98cgtbm25m" designImageOffsetX="-294" designImageOffsetY="-734" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlSelect" pages="0,0,1,1,2,2" selected="0"/>
+  <controller name="ctrlSelect" pages="0,0,1,1,2,2" selected="1"/>
   <controller name="ctrlNone" pages="0,hide,1,show" selected="0"/>
+  <controller name="ctrlMode" pages="0,normal,1,lessonCenter" selected="1"/>
   <displayList>
     <image id="n54_l1zw" name="n54" src="yfas7f" fileName="img/img_mt_mapbgfm.png" xy="0,0" size="263,274" group="n57_l1zw"/>
     <image id="n55_l1zw" name="n55" src="yfas7r" fileName="img/img_mt_mapbgframe.png" xy="0,0" size="264,273" group="n57_l1zw"/>
@@ -13,13 +14,11 @@
       <relation target="" sidePair="width-width,height-height"/>
     </image>
     <image id="n45_tbm2" name="n45" src="tbm25g" fileName="img/img_mt_mapbg3.png" xy="0,31" size="264,155" group="n58_l1zw">
-      <relation target="" sidePair="width-width,top-top"/>
-      <relation target="" sidePair="height-height"/>
+      <relation target="" sidePair="width-width,top-top,height-height"/>
     </image>
     <loader id="n42_v8nf" name="loaderMap" xy="1,31" size="262,156" group="n58_l1zw" align="center" vAlign="middle" fill="scaleMatchWidth"/>
     <image id="n59_wnwo" name="imgMask" src="tbm25g" fileName="img/img_mt_mapbg3.png" xy="0,30" size="264,155" group="n58_l1zw" visible="false">
-      <relation target="" sidePair="topext-top,bottomext-bottom"/>
-      <relation target="" sidePair="width-width"/>
+      <relation target="" sidePair="topext-top,bottomext-bottom,width-width"/>
     </image>
     <image id="n52_qdan" name="n52" src="qdanad" fileName="img/img_mt_mapbg4.png" xy="0,186" size="264,86" group="n58_l1zw" color="#f7f6f2"/>
     <image id="n51_qdan" name="n51" src="qdanad" fileName="img/img_mt_mapbg4.png" xy="264,31" size="264,30" group="n58_l1zw" rotation="180" color="#f7f6f2"/>
@@ -43,7 +42,8 @@
     </image>
     <component id="n50_tbm2" name="btnMapDetail" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="40,76" size="192,62" group="n58_l1zw">
       <gearDisplay controller="ctrlSelect" pages="1"/>
-      <Button title="地图详情" titleFontSize="30" icon="ui://0axy98cgtbm25l"/>
+      <gearText controller="ctrlMode" pages="1" values="课程详情" default="地图详情"/>
+      <Button title="课程详情" titleFontSize="30" icon="ui://0axy98cgtbm25l"/>
     </component>
     <image id="n53_r5js" name="n53" src="qdana7" fileName="img/img_mt_editgridhover.png" xy="0,0" size="264,273" group="n58_l1zw">
       <gearDisplay controller="ctrlSelect" pages="2"/>

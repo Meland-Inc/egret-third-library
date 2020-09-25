@@ -5,10 +5,10 @@
     <action type="change_page" fromPage="" toPage="0" objectId="n16_pz1n" controller="ctrlListType" targetPage="7"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n16_pz1n" controller="ctrlListType" targetPage="0"/>
   </controller>
+  <controller name="ctrlMode" exported="true" pages="0,normal,1,lessonCenter" selected="1"/>
   <displayList>
     <image id="n53_gu5v" name="n53" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="174,163" size="1584,885">
-      <relation target="" sidePair="top-top,bottomext-bottom"/>
-      <relation target="" sidePair="center-center"/>
+      <relation target="" sidePair="top-top,bottomext-bottom,center-center"/>
     </image>
     <list id="n50_v8nf" name="lstMapGrid" xy="243,184" size="1551,860" layout="flow_hz" overflow="scroll" scrollBarRes="ui://0axy98cgqb974t," lineGap="16" colGap="31" lineItemCount="5" defaultItem="ui://0axy98cgv8nf4z" autoClearItems="true">
       <relation target="" sidePair="bottomext-bottom"/>
@@ -29,7 +29,8 @@
     <image id="n51_gu5v" name="n51" src="tbm25p" fileName="img/icon_mt_titlebg2.png" xy="174,99" size="193,55" group="n54_vrsj">
       <relation target="" sidePair="left-left,top-top"/>
     </image>
-    <text id="n52_gu5v" name="n52" xy="190,108" size="141,39" group="n54_vrsj" fontSize="24" color="#ffffff" vAlign="middle" autoSize="none" text="收藏的地图">
+    <text id="n52_gu5v" name="n52" xy="190,108" size="141,39" group="n54_vrsj" fontSize="24" color="#ffffff" vAlign="middle" autoSize="none" text="收藏的课程">
+      <gearText controller="ctrlMode" pages="1" values="收藏的课程" default="收藏的地图"/>
       <relation target="n51_gu5v" sidePair=""/>
     </text>
     <group id="n54_vrsj" name="n54" xy="174,99" size="193,55" advanced="true">

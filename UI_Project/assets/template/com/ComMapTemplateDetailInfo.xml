@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1039,983" overflow="scroll" scrollBarRes="ui://0axy98cgqb974t," designImage="ui://0axy98cgyfas87" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlInfo" pages="0,short,1,all" selected="1"/>
+  <controller name="ctrlInfo" pages="0,short,1,all" selected="0"/>
+  <controller name="ctrlMode" exported="true" pages="0,normal,1,lessonCenter" selected="1"/>
   <displayList>
     <image id="n116_yfas" name="n116" src="yfas7s" fileName="img/img_mt_detaillikebg.png" xy="797,71" size="152,69" group="n95_azcq"/>
     <component id="n125_yfas" name="pbarLike" src="yfas8c" fileName="btn/ProbarLike.xml" xy="797,104" size="153,37" group="n95_azcq">
@@ -14,51 +15,55 @@
     <component id="n120_yfas" name="btnLike" src="tbm25y" fileName="btn/btnScale.xml" xy="798,105" size="36,36" group="n95_azcq">
       <Button icon="ui://0axy98cgyfas7w"/>
     </component>
-    <group id="n95_azcq" name="grpLike" xy="797,71" size="153,70" advanced="true" collapsed="true"/>
+    <group id="n95_azcq" name="grpLike" xy="797,71" size="153,70" advanced="true"/>
     <image id="n101_yfas" name="n101" src="yfas7i" fileName="img/icon_mt_pink.png" xy="383,206" size="147,38" group="n69_azcq"/>
     <image id="n67_azcq" name="imgSubscribeNum" src="yfas7h" fileName="img/icon_mt_numsubscribed.png" xy="385,208" group="n69_azcq"/>
     <text id="n68_azcq" name="tfSubscribeNum" xy="426,208" size="85,34" group="n69_azcq" fontSize="26" color="#999999" vAlign="middle" autoSize="none" singleLine="true" text="999"/>
-    <group id="n69_azcq" name="grpNumSubscribed" xy="383,206" size="147,38" advanced="true" collapsed="true"/>
+    <group id="n69_azcq" name="grpNumSubscribed" xy="383,206" size="147,38" advanced="true"/>
     <image id="n100_yfas" name="n100" src="yfas7g" fileName="img/icon_mt_yellowbg.png" xy="382,248" group="n92_azcq"/>
     <image id="n90_azcq" name="imgSubscribeNum" src="tbm25h" fileName="img/icon_mt_play.png" xy="383,251" group="n92_azcq"/>
     <text id="n91_azcq" name="tfNumPlay" xy="425,250" size="87,34" group="n92_azcq" fontSize="26" color="#333333" vAlign="middle" autoSize="none" singleLine="true" text="999"/>
-    <group id="n92_azcq" name="grpNumPlay" xy="382,248" size="148,38" advanced="true" collapsed="true"/>
+    <group id="n92_azcq" name="grpNumPlay" xy="382,248" size="148,38" advanced="true"/>
     <image id="n127_vrsj" name="n127" src="vrsj9l" fileName="img/img_mt_xuxian3.png" xy="92,334"/>
     <image id="n99_yfas" name="n99" src="yfas7f" fileName="img/img_mt_mapbgfm.png" xy="88,70" size="277,214" group="n103_yfas">
-      <relation target="n81_azcq" sidePair="width-width,height-height"/>
-      <relation target="n81_azcq" sidePair="left-left,top-top"/>
+      <relation target="n81_azcq" sidePair="width-width,height-height,left-left,top-top"/>
     </image>
     <component id="n81_azcq" name="ladMap" src="pz1n3t" fileName="com/ComAutoClipLad.xml" xy="92,74" size="270,208" group="n103_yfas"/>
     <image id="n115_yfas" name="n115" src="yfas7r" fileName="img/img_mt_mapbgframe.png" xy="88,70" size="278,216" group="n103_yfas">
       <relation target="n81_azcq" sidePair="width-width,height-height"/>
     </image>
-    <group id="n103_yfas" name="grpPic" xy="88,70" size="278,216" collapsed="true"/>
+    <group id="n103_yfas" name="grpPic" xy="88,70" size="278,216"/>
     <image id="n102_yfas" name="n102" src="yfas7j" fileName="img/img_mt_detailauthor.png" xy="384,120" size="270,74" group="n104_yfas"/>
     <text id="n82_azcq" name="tfUpdateTime" xy="408,167" size="218,24" group="n104_yfas" fontSize="18" color="#939393" vAlign="middle" vars="true" autoSize="none" text="最后更新时间：{year=0}.{month=0}.{day=0}"/>
     <image id="n63_azcq" name="imgAuthor" src="yfas7k" fileName="img/icon_mt_author.png" xy="403,129" group="n104_yfas"/>
     <text id="n64_azcq" name="tfCreater" xy="438,125" size="190,36" group="n104_yfas" fontSize="26" color="#7a7259" vAlign="middle" vars="true" autoSize="none" text="作者"/>
     <text id="n66_azcq" name="tfMapName" xy="385,65" size="352,41" group="n104_yfas" fontSize="26" color="#7a7259" vAlign="middle" autoSize="none" singleLine="true" text="千与千寻七个字"/>
     <image id="n105_yfas" name="n105" src="yfas7l" fileName="img/img_mt_xuxian1.png" xy="382,107" group="n104_yfas"/>
-    <group id="n104_yfas" name="grpAuthor" xy="382,65" size="355,129" collapsed="true"/>
+    <group id="n104_yfas" name="grpAuthor" xy="382,65" size="355,129"/>
     <component id="n71_azcq" name="btnCopy" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="747,206" size="90,82" group="n110_yfas">
-      <Button titleFontSize="24" icon="ui://0axy98cgyfas8b"/>
+      <gearText controller="ctrlMode" default=""/>
+      <gearIcon controller="ctrlMode" pages="1" values="ui://0axy98cgsqy0bc" default="ui://0axy98cgyfas8b"/>
+      <Button titleFontSize="24" icon="ui://0axy98cgsqy0bc"/>
     </component>
     <component id="n72_azcq" name="btnSubscribe" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="857,206" size="90,82" group="n110_yfas">
-      <Button titleFontSize="24" icon="ui://0axy98cgyfas88"/>
+      <gearIcon controller="ctrlMode" pages="1" values="ui://0axy98cgsqy0bb" default="ui://0axy98cgyfas88"/>
+      <Button titleFontSize="24" icon="ui://0axy98cgsqy0bb"/>
     </component>
     <component id="n73_azcq" name="btnUnsubscribe" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="857,206" size="90,82" group="n110_yfas">
       <Button titleFontSize="24" icon="ui://0axy98cgyfas8a"/>
     </component>
-    <group id="n110_yfas" name="grpEditBtn" xy="747,206" size="200,82" collapsed="true"/>
-    <image id="n114_yfas" name="n114" src="yfas7q" fileName="img/img_mt_detailtextgb.png" xy="83,419" size="867,482" group="n113_yfas">
+    <group id="n110_yfas" name="grpEditBtn" xy="747,206" size="200,82"/>
+    <image id="n114_yfas" name="n114" src="yfas7q" fileName="img/img_mt_detailtextgb.png" xy="83,419" size="867,184" group="n113_yfas">
       <gearSize controller="ctrlInfo" pages="0,1" values="867,184,1,1|867,482,1,1"/>
     </image>
     <image id="n112_yfas" name="n112" src="yfas7p" fileName="img/icon_mt_detailtitle.png" xy="152,390" size="166,55" group="n113_yfas"/>
-    <text id="n87_azcq" name="tf" xy="165,405" size="135,31" group="n113_yfas" fontSize="24" color="#716f7a" align="center" vAlign="middle" autoSize="none" text="地图描述"/>
-    <component id="n122_yfas" name="txtScroll" src="yfas7x" fileName="com/ComTextScroll.xml" xy="113,449" size="819,432" group="n113_yfas">
+    <text id="n87_azcq" name="tf" xy="165,405" size="135,34" group="n113_yfas" fontSize="24" color="#716f7a" align="center" vAlign="middle" autoSize="none" text="课程描述">
+      <gearText controller="ctrlMode" pages="1" values="课程描述" default="地图描述"/>
+    </text>
+    <component id="n122_yfas" name="txtScroll" src="yfas7x" fileName="com/ComTextScroll.xml" xy="113,449" size="819,134" group="n113_yfas">
       <relation target="n114_yfas" sidePair="height-height"/>
     </component>
-    <component id="n130_r5js" name="n130" src="tbm25z" fileName="btn/btnText.xml" xy="100,895" size="84,39" group="n113_yfas">
+    <component id="n130_r5js" name="n130" src="tbm25z" fileName="btn/btnText.xml" xy="100,597" size="84,39" group="n113_yfas">
       <gearDisplay controller="ctrlInfo" pages="1"/>
       <relation target="n114_yfas" sidePair="top-bottom,left-left"/>
       <Button title="收起" titleColor="#4d70a5" controller="ctrlInfo" page="0"/>
@@ -67,6 +72,6 @@
       <gearDisplay controller="ctrlInfo" pages="0"/>
       <Button title="显示全部" titleColor="#4d70a5" controller="ctrlInfo" page="1"/>
     </component>
-    <group id="n113_yfas" name="grpMapDescribe" xy="83,390" size="867,545"/>
+    <group id="n113_yfas" name="grpMapDescribe" xy="83,390" size="867,246"/>
   </displayList>
 </component>

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://0axy98cgyfas8d" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlStep" pages="0,0,1,1" selected="0"/>
+  <controller name="ctrlStep" pages="2,0,0,1,1,2" selected="2"/>
   <controller name="ctrlManor" pages="0,0,1,1" selected="0"/>
+  <controller name="ctrlMapType" pages="0,rectangle,1,rhomb" selected="0"/>
   <displayList>
     <graph id="n77_yfas" name="n77" xy="0,0" size="1920,1080" group="n83_yfas" type="rect" fillColor="#fff7f6f2">
       <relation target="" sidePair="width-width,height-height"/>
@@ -11,22 +12,19 @@
     </image>
     <text id="n81_yfas" name="n81" xy="168,26" size="152,44" group="n83_yfas" fontSize="32" color="#716f7a" autoSize="none" text="创建地图"/>
     <component id="n82_yfas" name="btnReturn" src="tbm25y" fileName="btn/btnScale.xml" xy="35,24" size="101,42" group="n83_yfas">
-      <Button title="  返回" icon="ui://0axy98cgmzsu6h" page="0"/>
+      <Button title="  返回" icon="ui://0axy98cgmzsu6h"/>
     </component>
     <group id="n83_yfas" name="grpMain" xy="0,0" size="1920,1080"/>
-    <image id="n85_vrsj" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="169,171" size="1584,895" group="n49_v8nf">
+    <image id="n85_vrsj" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="169,171" size="1584,895">
       <relation target="" sidePair="bottomext-bottom,top-top"/>
     </image>
-    <image id="n84_yfas" name="n84" src="yfas8f" fileName="img/icon_mt_xzmb.png" xy="167,100" size="213,52" group="n49_v8nf">
+    <image id="n84_yfas" name="n84" src="yfas8f" fileName="img/icon_mt_xzmb.png" xy="167,100" size="213,52">
       <relation target="" sidePair="left-left,top-top"/>
     </image>
-    <text id="n46_v8nf" name="n46" xy="185,107" size="189,42" group="n49_v8nf" fontSize="24" color="#ffffff" vAlign="middle" autoSize="none" text="选择一个模板">
+    <text id="n46_v8nf" name="n46" xy="169,107" size="173,42" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="配置模板">
+      <gearText controller="ctrlStep" pages="2,1" values="选择地图类型|配置模板" default="选择一个模板"/>
       <relation target="n84_yfas" sidePair="middle-middle,left-left"/>
     </text>
-    <component id="n47_v8nf" name="btnNext" src="tbm25y" fileName="btn/btnScale.xml" xy="1576,971" size="142,50" group="n49_v8nf">
-      <relation target="n85_vrsj" sidePair="bottom-bottom,right-right"/>
-      <Button title="下一步" titleFontSize="26" icon="ui://0axy98cgyfas8e" page="0"/>
-    </component>
     <list id="n48_v8nf" name="lstTemplate" xy="218,235" size="1484,677" group="n49_v8nf" layout="flow_hz" overflow="scroll" lineGap="36" colGap="6" defaultItem="ui://0axy98cgv8nf56" autoClearItems="true">
       <relation target="n85_vrsj" sidePair="top-top,bottomext-bottom"/>
       <item/>
@@ -44,10 +42,10 @@
       <item/>
       <item/>
     </list>
-    <group id="n49_v8nf" name="n49" xy="167,100" size="1586,966" advanced="true">
+    <group id="n49_v8nf" name="n49" xy="218,235" size="1484,677" advanced="true">
       <gearDisplay controller="ctrlStep" pages="0"/>
     </group>
-    <image id="n78_yfas" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="399,123" size="1121,897" group="n63_v8nf">
+    <image id="n78_yfas" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="399,123" size="1121,898" group="n63_v8nf">
       <relation target="n63_v8nf" sidePair="bottomext-bottom"/>
     </image>
     <image id="n68_mzsu" name="n68" src="mzsu6m" fileName="img/img_mt_bg_01.png" xy="847,191" size="534,645" group="n63_v8nf"/>
@@ -69,7 +67,7 @@
       <relation target="n70_mzsu" sidePair="top-top,center-center"/>
       <Label icon="ui://0axy98cgmzsu76"/>
     </component>
-    <text id="n54_v8nf" name="tfIsCanEdit" xy="872,343" size="201,37" group="n63_v8nf" fontSize="28" color="#0079cd" vAlign="middle" leading="0" text="编辑器是否可用">
+    <text id="n54_v8nf" name="tfIsCanEdit" xy="872,343" size="200,39" group="n63_v8nf" fontSize="28" color="#0079cd" vAlign="middle" leading="0" text="编辑器是否可用">
       <relation target="n68_mzsu" sidePair="left-left"/>
     </text>
     <component id="n55_v8nf" name="btnIsCanEdit" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1283,339" size="69,37" group="n63_v8nf">
@@ -77,7 +75,7 @@
       <relation target="n68_mzsu" sidePair="right-right"/>
       <Button checked="true" icon="ui://0axy98cgpw6y9o" selectedIcon="ui://0axy98cgpw6y9p"/>
     </component>
-    <text id="n56_v8nf" name="tfIsManorCheckPoint" xy="871,415" size="173,37" group="n63_v8nf" fontSize="28" color="#0079cd" vAlign="middle" text="是否领地关卡">
+    <text id="n56_v8nf" name="tfIsManorCheckPoint" xy="871,415" size="172,39" group="n63_v8nf" fontSize="28" color="#0079cd" vAlign="middle" text="是否领地关卡">
       <relation target="n68_mzsu" sidePair="left-left"/>
     </text>
     <component id="n57_v8nf" name="btnIsManorCheckPoint" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1283,417" size="69,37" group="n63_v8nf">
@@ -85,14 +83,15 @@
       <relation target="n68_mzsu" sidePair="right-right"/>
       <Button icon="ui://0axy98cgpw6y9o" selectedIcon="ui://0axy98cgpw6y9p" controller="ctrlManor" page="1"/>
     </component>
-    <component id="n64_v8nf" name="btnPre" src="tbm25y" fileName="btn/btnScale.xml" xy="940,890" size="140,54" group="n63_v8nf">
-      <Button title="  上一步" titleFontSize="24" icon="ui://0axy98cgmzsu6y" page="0"/>
-    </component>
     <component id="n65_v8nf" name="btnCreate" src="tbm25y" fileName="btn/btnScale.xml" xy="1094,890" size="133,54" group="n63_v8nf">
-      <Button title="创建地图" titleFontSize="24" icon="ui://0axy98cgmzsu6z" page="0"/>
+      <Button title="创建地图" titleFontSize="24" icon="ui://0axy98cgmzsu6z"/>
     </component>
     <component id="n66_v8nf" name="btnCreateEnter" src="tbm25y" fileName="btn/btnScale.xml" xy="1238,890" size="142,54" group="n63_v8nf">
-      <Button title="创建进入" titleFontSize="24" icon="ui://0axy98cgmzsu70" page="0"/>
+      <Button title="创建进入" titleFontSize="24" icon="ui://0axy98cgmzsu70"/>
+    </component>
+    <component id="n91_jntw" name="btnPre2" src="tbm25y" fileName="btn/btnScale.xml" xy="940,890" size="140,54" group="n63_v8nf">
+      <gearDisplay controller="ctrlStep" pages="1"/>
+      <Button title="  上一步" titleFontSize="24" icon="ui://0axy98cgmzsu6y" controller="ctrlStep" page="0"/>
     </component>
     <image id="n86_pw6y" name="n86" src="yfas7r" fileName="img/img_mt_mapbgframe.png" xy="528,184" size="298,292" group="n63_v8nf">
       <relation target="n50_v8nf" sidePair="width-width,height-height"/>
@@ -121,10 +120,32 @@
       <gearDisplay controller="ctrlManor" pages="1"/>
       <relation target="n56_v8nf" sidePair="left-left,top-top"/>
     </group>
-    <group id="n63_v8nf" name="n63" xy="399,123" size="1121,897" advanced="true">
+    <group id="n63_v8nf" name="n63" xy="399,123" size="1121,898" advanced="true">
       <gearDisplay controller="ctrlStep" pages="1"/>
-      <relation target="" sidePair="center-center,top-top"/>
-      <relation target="" sidePair="bottomext-bottom"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
     </group>
+    <component id="n88_jntw" name="n88" src="sh3oap" fileName="btn/btnMapType.xml" xy="230,230">
+      <gearDisplay controller="ctrlStep" pages="2"/>
+      <Button checked="true" titleFontSize="138" selectedIcon="ui://0axy98cgn62rak" controller="ctrlMapType" page="0"/>
+    </component>
+    <component id="n90_jntw" name="n90" src="sh3oap" fileName="btn/btnMapType.xml" xy="622,230" controller="ctrlType,1">
+      <gearDisplay controller="ctrlStep" pages="2"/>
+      <Button titleFontSize="138" selectedIcon="ui://0axy98cgn62rak" controller="ctrlMapType" page="1"/>
+    </component>
+    <component id="n64_v8nf" name="btnPre1" src="tbm25y" fileName="btn/btnScale.xml" xy="1377,971" size="140,54">
+      <gearDisplay controller="ctrlStep" pages="0"/>
+      <relation target="n85_vrsj" sidePair="right-right,bottom-bottom"/>
+      <Button title="  上一步" titleFontSize="24" icon="ui://0axy98cgmzsu6y" controller="ctrlStep" page="2"/>
+    </component>
+    <component id="n92_jntw" name="btnNext0" src="tbm25y" fileName="btn/btnScale.xml" xy="1576,971" size="142,50">
+      <gearDisplay controller="ctrlStep" pages="2"/>
+      <relation target="n85_vrsj" sidePair="bottom-bottom,right-right"/>
+      <Button title="下一步" titleFontSize="26" icon="ui://0axy98cgyfas8e" controller="ctrlStep" page="0"/>
+    </component>
+    <component id="n47_v8nf" name="btnNext1" src="tbm25y" fileName="btn/btnScale.xml" xy="1576,971" size="142,50">
+      <gearDisplay controller="ctrlStep" pages="0"/>
+      <relation target="n85_vrsj" sidePair="bottom-bottom,right-right"/>
+      <Button title="下一步" titleFontSize="26" icon="ui://0axy98cgyfas8e" controller="ctrlStep" page="1"/>
+    </component>
   </displayList>
 </component>
