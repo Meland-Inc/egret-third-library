@@ -14,7 +14,7 @@
       <gearIcon controller="color" pages="0,1,2,3,4,5,7,8,9,11" values="ui://t573fj5bi6xe2a|ui://t573fj5bi6xe29|ui://t573fj5bi6xe29|ui://t573fj5bi6xe2b|ui://t573fj5bi6xe2b|ui://t573fj5bi6xe2c|ui://t573fj5bi6xe29|ui://t573fj5bi6xe2c|ui://rnqj1l77w7botlb|ui://t573fj5bfvb260" default="ui://t573fj5bi6xe2a"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <component id="n1_flp7" name="container" src="i6xe2d" fileName="com/Container.xml" xy="42,10" size="50,30" restrictSize="0,0,30,0"/>
+    <component id="n1_flp7" name="container" src="i6xe2d" fileName="com/Container.xml" xy="42,0" size="50,50" restrictSize="0,0,50,0"/>
   </displayList>
   <relation target="n1_flp7" sidePair="width-width,height-height"/>
 </component>
