@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://thvmj7voqtcl4cyijx">
-  <controller name="ctrlState" pages="3,select,0,platform,1,account,2,register,4,loading" selected="4"/>
+  <controller name="ctrlState" pages="3,select,0,platform,1,account,2,register,4,loading" selected="0"/>
   <controller name="ctrlDevelop" pages="0,true,1,false" selected="0"/>
   <displayList>
     <loader id="n103_tcg1" name="imgBG" xy="0,0" size="1920,1080" fill="scaleFree">
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
+    <component id="n202_lmnh" name="comDragonBones" src="j21fi3z" fileName="old/com/ComEmpty.xml" pkg="te1gxawo" xy="0,0"/>
     <component id="n199_mlau" name="comPlatformLogin" src="mlau4m" fileName="com/ComPlatformLogin.xml" xy="724,364">
       <gearDisplay controller="ctrlState" pages="0"/>
       <relation target="" sidePair="center-center,middle-middle"/>
