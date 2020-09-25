@@ -859,7 +859,7 @@ export function jimp2dPng(id, area, texture, input_path, output_path) {
                         let topImageHigh = imageHeight - rowLen * tileHeight;
                         let topDistance = row === 0 ? 0 : topImageHigh;
 
-                        let deviationX = 1;     //x轴偏差值
+                        let deviationX = col === colLen - 1 ? 0 : 1;     //x轴偏差值    最边上的图不用添加偏移值
                         let deviationY = 1;     //y轴偏差值
 
                         let newImageHeight = row === 0 ? topImageHigh + tileHeight + deviationY : tileHeight + deviationY;
