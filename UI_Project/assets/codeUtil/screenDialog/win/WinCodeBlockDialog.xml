@@ -10,9 +10,7 @@
       <item/>
       <item/>
     </list>
-    <component id="n0_j5jv" name="btnBg" src="ilo1cyidi" fileName="btn/btnScaleNoEffect.xml" pkg="te1gxawo" xy="364,872" size="1192,193" group="n24_qylx">
-      <Button icon="ui://nyy10939w79tm"/>
-    </component>
+    <loader id="n0_j5jv" name="btnBg" xy="364,872" size="1192,190" group="n24_qylx" url="ui://nyy10939w79tm" fill="scaleFree"/>
     <image id="n27_pz1g" name="n27" src="oiqdcyigz" fileName="img/img_cm_wpx_1.png" pkg="te1gxawo" xy="458,910" group="n21_u5yf"/>
     <loader id="n20_u5yf" name="ladIcon" xy="458,910" size="100,100" group="n21_u5yf" aspect="true" touchable="false" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
     <group id="n21_u5yf" name="grpIcon" xy="458,910" size="100,100" group="n24_qylx" advanced="true"/>
@@ -22,11 +20,11 @@
       <Label titleColor="#666666" titleFontSize="20"/>
     </component>
     <image id="n17_fzlu" name="imgInputBg" src="o9zck" fileName="screenDialog/img/icon_dialog_13.png" xy="954,826" size="412,39" group="n9_j5jv"/>
-    <text id="n6_j5jv" name="inpAnswer" xy="968,828" size="378,37" group="n9_j5jv" fontSize="20" color="#333333" vAlign="middle" autoSize="none" singleLine="true" text="" input="true" prompt="[size=24]输入答案[/size]"/>
+    <text id="n6_j5jv" name="inpAnswer" xy="968,828" size="378,37" group="n9_j5jv" input="true" prompt="[size=24]输入答案[/size]" fontSize="20" color="#333333" vAlign="middle" autoSize="none" singleLine="true" text=""/>
     <group id="n9_j5jv" name="grpAnswer" xy="954,826" size="412,39" group="n24_qylx" advanced="true">
       <gearDisplay controller="ctrlType" pages="2"/>
     </group>
-        <component id="n3_j5jv" name="btnClose" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1455,874" size="73,71" group="n24_qylx">
+    <component id="n3_j5jv" name="btnClose" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1455,874" size="73,71" group="n24_qylx">
       <Button icon="ui://nyy10939o9zci"/>
     </component>
     <component id="n10_qlcu" name="btnSubmit" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1362,820" size="106,51" group="n24_qylx">
