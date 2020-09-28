@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="280,150" extention="Button" designImage="ui://ti9jag5t11tcewcyiom" designImageOffsetX="287" designImageOffsetY="-816" designImageAlpha="0">
   <controller name="button" pages="2,up,3,down,4,over" selected="0"/>
-  <controller name="ctrlType" pages="0,normal,1,add,2,setting" selected="0"/>
+  <controller name="ctrlType" pages="0,normal,1,add,2,setting" selected="2"/>
   <displayList>
     <image id="n1_fie1" name="imgBg" src="11tcewcyiog" fileName="lessonCenter/img/bg_quyuliebiao_05.png" xy="1,4"/>
     <loader id="n7_fie1" name="icon" xy="3,32" size="274,115">
@@ -22,7 +22,7 @@
     </component>
     <image id="n27_qtgz" name="n27" src="qtgz13564vj" fileName="lessonCenter/img/img_mt_gengduo_bg.png" xy="141,34" size="134,99" group="n41_qtgz"/>
     <component id="n28_qtgz" name="btnRename" src="qtgz13564vk" fileName="lessonCenter/btn/btnScaleFunction.xml" xy="143,35" group="n41_qtgz">
-      <Button title="场景重命名" titleColor="#a3a3a3" titleFontSize="18" controller="ctrlType" page="0"/>
+      <Button title="场景编辑" titleColor="#a3a3a3" titleFontSize="18" controller="ctrlType" page="0"/>
     </component>
     <image id="n29_qtgz" name="n29" src="qtgz13564vl" fileName="lessonCenter/img/icon_mt_xuxian5.png" xy="142,64" size="131,4" group="n41_qtgz"/>
     <component id="n30_qtgz" name="btnEditTpPoint" src="qtgz13564vk" fileName="lessonCenter/btn/btnScaleFunction.xml" xy="143,68" group="n41_qtgz">

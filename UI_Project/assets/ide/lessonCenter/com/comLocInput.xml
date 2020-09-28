@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="316,36" extention="Label" designImage="ui://ti9jag5t11tcewcyiom" designImageOffsetX="-861" designImageOffsetY="-603" designImageAlpha="0">
+<component size="318,36" extention="Label" designImage="ui://ti9jag5t11tcewcyiom" designImageOffsetX="-861" designImageOffsetY="-603" designImageAlpha="0">
   <displayList>
     <text id="n1_fie1" name="title" xy="0,0" size="128,34" fontSize="24" color="#353535" align="center" vAlign="middle" autoSize="none" text="区域起点："/>
-    <component id="n0_fie1" name="btnSelectLoc" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="121,0" size="36,36">
+    <component id="n0_fie1" name="btnSelectLoc" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="112,0" size="36,36">
       <Button icon="ui://ti9jag5t11tcewcyiok"/>
     </component>
-    <image id="n9_fie1" name="n9" src="ijuiwcyinj" fileName="codeVew/img/codeblockPage/icon_bqy_03.png" xy="188,0" size="45,36"/>
-    <image id="n8_fie1" name="n8" src="ijuiwcyinj" fileName="codeVew/img/codeblockPage/icon_bqy_03.png" xy="270,0" size="45,36"/>
-    <text id="n2_fie1" name="tfR" xy="158,1" size="28,34" fontSize="24" color="#353535" align="center" vAlign="middle" text="R:"/>
-    <text id="n3_fie1" name="tfC" xy="238,1" size="32,34" fontSize="24" color="#353535" align="center" vAlign="middle" autoSize="none" text="C:"/>
-    <text id="n6_fie1" name="inpR" xy="185,1" size="50,34" fontSize="20" color="#353535" align="center" vAlign="middle" autoSize="none" singleLine="true" text="" input="true" maxLength="5"/>
+    <image id="n9_fie1" name="n9" src="ijuiwcyinj" fileName="codeVew/img/codeblockPage/icon_bqy_03.png" xy="180,0" size="52,36"/>
+    <image id="n8_fie1" name="n8" src="ijuiwcyinj" fileName="codeVew/img/codeblockPage/icon_bqy_03.png" xy="266,0" size="52,36"/>
+    <text id="n2_fie1" name="tfR" xy="149,1" size="28,34" fontSize="24" color="#353535" align="center" vAlign="middle" text="R:"/>
+    <text id="n3_fie1" name="tfC" xy="234,1" size="32,34" fontSize="24" color="#353535" align="center" vAlign="middle" autoSize="none" text="C:"/>
+    <text id="n6_fie1" name="inpR" xy="180,1" size="52,34" fontSize="20" color="#353535" align="center" vAlign="middle" autoSize="none" singleLine="true" text="" input="true" maxLength="5"/>
     <text id="n7_fie1" name="inpC" xy="266,1" size="50,34" fontSize="20" color="#353535" align="center" vAlign="middle" autoSize="none" singleLine="true" text="" input="true" maxLength="5"/>
   </displayList>
 </component>

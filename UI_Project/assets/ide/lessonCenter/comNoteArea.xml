@@ -10,11 +10,12 @@
       <gearXY controller="ctrlShowHide" pages="1,0" values="0,-37|0,143" tween="true"/>
       <Button controller="ctrlShowHide" page="0"/>
     </component>
-    <text id="n10_hvnv" name="tfNote" xy="26,23" size="1542,140" fontSize="20" color="#a9a9a9" align="center" vAlign="middle" ubb="true" autoSize="none" text="">
+    <component id="n10_hvnv" name="labNote" src="m2sg13564vu" fileName="lessonCenter/com/labTextVScroll.xml" xy="7,23" size="1580,140">
       <relation target="" sidePair="width-width,height-height"/>
       <relation target="n4_11tce" sidePair="top-top"/>
-    </text>
-    <text id="n8_fie1" name="title" xy="26,23" size="1542,140" alpha="0" touchable="false" fontSize="20" color="#a9a9a9" align="center" vAlign="middle" ubb="true" autoSize="none" text="" input="true" prompt="备注区">
+      <Label titleColor="#a9a9a9" titleFontSize="20"/>
+    </component>
+    <text id="n8_fie1" name="title" xy="7,23" size="1580,140" alpha="0" touchable="false" fontSize="20" color="#a9a9a9" align="center" ubb="true" autoSize="none" text="" input="true" prompt="备注区" maxLength="1024">
       <relation target="" sidePair="width-width,height-height"/>
       <relation target="n4_11tce" sidePair="top-top"/>
     </text>

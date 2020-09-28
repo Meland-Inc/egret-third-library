@@ -21,7 +21,7 @@
       <item/>
     </list>
     <image id="n8_fie1" name="n8" src="11tcewcyioc" fileName="lessonCenter/img/bg_quyuliebiao_01.png" xy="0,0" group="n10_fie1"/>
-    <text id="n9_fie1" name="n9" xy="57,10" size="191,34" group="n10_fie1" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="5c1e流程"/>
+    <text id="n9_fie1" name="tfTemplateName" xy="0,10" size="305,34" group="n10_fie1" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="name"/>
     <group id="n10_fie1" name="root" xy="0,0" size="306,1079" advanced="true">
       <gearXY controller="ctrlAreaList" pages="0" values="-306,0" default="0,0" tween="true"/>
     </group>
