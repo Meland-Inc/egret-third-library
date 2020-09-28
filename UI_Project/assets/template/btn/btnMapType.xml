@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="340,340" extention="Button">
-  <controller name="ctrlType" exported="true" pages="0,rect,1,rhom" selected="0"/>
-  <controller name="button" pages="2,up,3,down" selected="0"/>
+  <controller name="ctrlType" exported="true" pages="0,rect,1,rhom" selected="1"/>
+  <controller name="button" pages="2,up,3,down" selected="1"/>
   <displayList>
     <image id="n4_sh3o" name="bg" src="yfas7f" fileName="img/img_mt_mapbgfm.png" xy="0,0" size="340,340"/>
-    <loader id="n0_sh3o" name="n0" xy="0,0" size="340,340" url="ui://0axy98cgsh3oao" align="center" vAlign="middle" fill="scale" shrinkOnly="true">
+    <loader id="n0_sh3o" name="n0" xy="0,0" size="340,340" url="ui://0axy98cgsh3oan" align="center" vAlign="middle" fill="scale" shrinkOnly="true">
       <gearIcon controller="ctrlType" pages="0,1" values="ui://0axy98cgsh3oao|ui://0axy98cgsh3oan"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
     <image id="n1_sh3o" name="n1" src="tbm25e" fileName="img/icon_mt_titlebg.png" xy="0,340" size="340,48" scale="1,-1">
       <relation target="" sidePair="width-width,top-top"/>
     </image>
-    <text id="n2_sh3o" name="n2" xy="35,292" size="269,48" fontSize="28" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="正视角">
-      <gearText controller="ctrlType" pages="0" values="正视角" default="俯视角"/>
+    <text id="n2_sh3o" name="n2" xy="35,292" size="269,48" fontSize="28" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="斜视角">
+      <gearText controller="ctrlType" pages="0,1" values="正视角|斜视角"/>
     </text>
     <image id="n3_sh3o" name="n3" src="n62rak" fileName="img/loading/img_mt_bg1.png" xy="0,0" size="340,340">
       <gearDisplay controller="button" pages="3"/>

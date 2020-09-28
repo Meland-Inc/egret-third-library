@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://0axy98cgpplwau" designImageOffsetX="366" designImageOffsetY="42" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlStep" pages="0,step1,1,step2" selected="0"/>
+  <controller name="ctrlMapType" pages="0,rectangle,1,rhomb" selected="0"/>
   <displayList>
     <graph id="n77_yfas" name="n77" xy="0,0" size="1920,1080" group="n83_yfas" type="rect" fillColor="#fff7f6f2">
       <relation target="" sidePair="width-width,height-height"/>
@@ -36,7 +38,7 @@
       <Label icon="ui://0axy98cgpplwar"/>
     </component>
     <component id="n64_v8nf" name="btnPre" src="tbm25y" fileName="btn/btnScale.xml" xy="1083,885" size="140,54" group="n63_v8nf">
-      <Button title="  上一步" titleFontSize="24" icon="ui://0axy98cgmzsu6y"/>
+      <Button title="  上一步" titleFontSize="24" icon="ui://0axy98cgmzsu6y" controller="ctrlStep" page="0"/>
     </component>
     <component id="n66_v8nf" name="btnCreateEnter" src="tbm25y" fileName="btn/btnScale.xml" xy="1239,885" size="142,54" group="n63_v8nf">
       <Button title="创建进入" titleFontSize="24" icon="ui://0axy98cgmzsu70"/>
@@ -50,8 +52,31 @@
       <item/>
       <item/>
     </list>
-    <group id="n63_v8nf" name="n63" xy="399,123" size="1121,897" advanced="true">
+    <group id="n63_v8nf" name="ctrlStep2" xy="399,123" size="1121,897" advanced="true">
+      <gearDisplay controller="ctrlStep" pages="1"/>
       <relation target="" sidePair="center-center,top-top,bottomext-bottom"/>
+    </group>
+    <image id="n98_m2sg" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="171,171" size="1584,895" group="n101_m2sg">
+      <relation target="" sidePair="bottomext-bottom,top-top"/>
+    </image>
+    <image id="n99_m2sg" name="n99" src="yfas8f" fileName="img/icon_mt_xzmb.png" xy="169,100" size="213,52" group="n101_m2sg">
+      <relation target="" sidePair="left-left,top-top"/>
+    </image>
+    <text id="n100_m2sg" name="n100" xy="169,107" size="173,42" group="n101_m2sg" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="选择地图类型">
+      <relation target="n99_m2sg" sidePair="middle-middle,left-left"/>
+    </text>
+    <component id="n102_m2sg" name="n102" src="sh3oap" fileName="btn/btnMapType.xml" xy="230,230" group="n101_m2sg">
+      <Button checked="true" titleFontSize="138" selectedIcon="ui://0axy98cgn62rak" controller="ctrlMapType" page="0"/>
+    </component>
+    <component id="n103_m2sg" name="n103" src="sh3oap" fileName="btn/btnMapType.xml" xy="622,230" group="n101_m2sg" controller="ctrlType,1">
+      <Button titleFontSize="138" selectedIcon="ui://0axy98cgn62rak" controller="ctrlMapType" page="1"/>
+    </component>
+    <component id="n104_m2sg" name="btnNext0" src="tbm25y" fileName="btn/btnScale.xml" xy="1576,971" size="142,50" group="n101_m2sg">
+      <relation target="n98_m2sg" sidePair="right-right,bottom-bottom"/>
+      <Button title="下一步" titleFontSize="26" icon="ui://0axy98cgyfas8e" controller="ctrlStep" page="1"/>
+    </component>
+    <group id="n101_m2sg" name="ctrlStep1" xy="169,100" size="1586,966" advanced="true">
+      <gearDisplay controller="ctrlStep" pages="0"/>
     </group>
   </displayList>
 </component>
