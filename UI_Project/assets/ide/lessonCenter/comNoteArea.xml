@@ -2,6 +2,10 @@
 <component size="1595,180" opaque="false" extention="Label">
   <controller name="ctrlShowHide" exported="true" pages="1,show,0,hide" selected="0"/>
   <displayList>
+    <text id="n8_fie1" name="title" xy="7,23" size="1580,140" fontSize="20" color="#a9a9a9" align="center" autoSize="none" text="备注区" input="true" prompt="备注区" maxLength="1024">
+      <relation target="" sidePair="width-width,center-center"/>
+      <relation target="n4_11tce" sidePair="top-top"/>
+    </text>
     <loader id="n4_11tce" name="bg" xy="0,0" size="1595,180" url="ui://ti9jag5t11tcewcyioo" fill="scaleFree">
       <gearXY controller="ctrlShowHide" pages="1,0" values="0,0|0,180" tween="true"/>
       <relation target="" sidePair="rightext-right"/>
@@ -15,9 +19,5 @@
       <relation target="n4_11tce" sidePair="top-top"/>
       <Label titleColor="#a9a9a9" titleFontSize="20"/>
     </component>
-    <text id="n8_fie1" name="title" xy="7,23" size="1580,140" alpha="0" touchable="false" fontSize="20" color="#a9a9a9" align="center" ubb="true" autoSize="none" text="" input="true" prompt="备注区" maxLength="1024">
-      <relation target="" sidePair="width-width,height-height"/>
-      <relation target="n4_11tce" sidePair="top-top"/>
-    </text>
   </displayList>
 </component>
