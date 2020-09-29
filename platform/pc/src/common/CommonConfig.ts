@@ -38,6 +38,9 @@ class CommonConfig {
     /** ready服务器列表服务器 */
     public readonly readyServerListServer: string = "ready-server-list.wkcoding.com";
 
+    /** beta服务器列表地址 */
+    public readonly betaServerListServer: string = "server-list-beta.wkcoding.com";
+
     /** release上传日志服务器 */
     public readonly releaseUploadLogServer: string = "clientlog.wkcoding.com";
 

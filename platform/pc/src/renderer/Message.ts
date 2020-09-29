@@ -279,16 +279,31 @@ class Message {
         const url = new URL(`file://${commonConfig.clientPackagePath}/index.html`);
         url.searchParams.set("fakeGameMode", "lessons");
 
-        if (commonConfig.environName === CommonDefine.eEnvironName.release) {
-            url.searchParams.set("accountServer", commonConfig.releaseAccountServer);
-            url.searchParams.set("serverListServer", commonConfig.releaseServerListServer);
-            url.searchParams.set("uploadLogServer", commonConfig.releaseUploadLogServer);
-            url.searchParams.set("bellApiOrigin", commonConfig.releaseBellApiOrigin);
-        } else {
-            url.searchParams.set("accountServer", commonConfig.readyAccountServer);
-            url.searchParams.set("serverListServer", commonConfig.readyServerListServer);
-            url.searchParams.set("uploadLogServer", commonConfig.readyUploadLogServer);
-            url.searchParams.set("bellApiOrigin", commonConfig.readyBellApiOrigin);
+        switch (commonConfig.environName) {
+            case CommonDefine.eEnvironName.beta:
+                url.searchParams.set("accountServer", commonConfig.readyAccountServer);
+                url.searchParams.set("serverListServer", commonConfig.betaServerListServer);
+                url.searchParams.set("uploadLogServer", commonConfig.readyUploadLogServer);
+                url.searchParams.set("bellApiOrigin", commonConfig.readyBellApiOrigin);
+                break;
+            case CommonDefine.eEnvironName.ready:
+                url.searchParams.set("accountServer", commonConfig.readyAccountServer);
+                url.searchParams.set("serverListServer", commonConfig.readyServerListServer);
+                url.searchParams.set("uploadLogServer", commonConfig.readyUploadLogServer);
+                url.searchParams.set("bellApiOrigin", commonConfig.readyBellApiOrigin);
+                break;
+            case CommonDefine.eEnvironName.release:
+                url.searchParams.set("accountServer", commonConfig.releaseAccountServer);
+                url.searchParams.set("serverListServer", commonConfig.releaseServerListServer);
+                url.searchParams.set("uploadLogServer", commonConfig.releaseUploadLogServer);
+                url.searchParams.set("bellApiOrigin", commonConfig.releaseBellApiOrigin);
+                break;
+            default:
+                url.searchParams.set("accountServer", commonConfig.releaseAccountServer);
+                url.searchParams.set("serverListServer", commonConfig.releaseServerListServer);
+                url.searchParams.set("uploadLogServer", commonConfig.releaseUploadLogServer);
+                url.searchParams.set("bellApiOrigin", commonConfig.releaseBellApiOrigin);
+                break;
         }
 
         this.loadRendererURL(url);
