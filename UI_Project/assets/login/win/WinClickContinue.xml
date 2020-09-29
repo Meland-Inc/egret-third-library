@@ -2,10 +2,9 @@
 <component size="1920,1080" designImage="ui://thvmj7voqtcl4cyik5" adaptationTest="FitSize">
   <controller name="status" pages="0,,1,full ,2,close" selected="0"/>
   <displayList>
-    <loader id="n34_dll3" name="imgBG" xy="0,0" size="1920,1080" fill="scaleFree">
+    <loader id="n34_dll3" name="imgBG" xy="0,0" size="1920,1080" visible="false" fill="scaleFree">
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <component id="n62_lmnh" name="comDragonBones" src="j21fi3z" fileName="old/com/ComEmpty.xml" pkg="te1gxawo" xy="0,0"/>
     <component id="n38_dll3" name="btnAgreement" src="dll318" fileName="btn/btnSelect.xml" xy="574,925" group="n41_dll3">
       <Button checked="true"/>
     </component>
