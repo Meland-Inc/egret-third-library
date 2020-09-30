@@ -3,7 +3,7 @@
   <controller name="ctrlShowHide" exported="true" pages="1,show,0,hide" selected="0"/>
   <displayList>
     <text id="n8_fie1" name="title" xy="7,23" size="1580,140" fontSize="20" color="#a9a9a9" align="center" autoSize="none" text="备注区" input="true" prompt="备注区" maxLength="1024">
-      <relation target="" sidePair="width-width,center-center"/>
+      <relation target="" sidePair="height-height,center-center"/>
       <relation target="n4_11tce" sidePair="top-top"/>
     </text>
     <loader id="n4_11tce" name="bg" xy="0,0" size="1595,180" url="ui://ti9jag5t11tcewcyioo" fill="scaleFree">

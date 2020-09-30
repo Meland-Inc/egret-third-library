@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="339,330" opaque="false" designImage="ui://ti9jag5t11tcewcyiom" designImageOffsetX="-424" designImageOffsetY="-180" designImageAlpha="0" designImageLayer="1" remark="编辑场景">
-  <controller name="ctrlStep" pages="1,create,0,advanced,2,selectTpPoint,3,rename" selected="1"/>
+  <controller name="ctrlStep" pages="1,create,0,advanced,2,selectTpPoint,3,rename" selected="0"/>
+  <controller name="ctrlTitle" pages="0,create,1,edit,2,selectTpPoint" selected="2"/>
   <displayList>
-    <image id="n11_fie1" name="imgBg" src="chj2wcyio2" fileName="choiceQuestion/img/bg_chaifen_white.png" xy="0,0" pivot="0,1" size="339,330">
+    <image id="n11_fie1" name="imgBg" src="chj2wcyio2" fileName="choiceQuestion/img/bg_chaifen_white.png" xy="0,108" pivot="0,1" size="339,222">
       <gearSize controller="ctrlStep" pages="0" values="339,330,1,1" default="339,222,1,1"/>
     </image>
-    <image id="n0_fie1" name="imgTitleBg" src="11tcewcyioe" fileName="lessonCenter/img/bg_quyuliebiao_03.png" xy="0,0" size="339,56">
+    <image id="n0_fie1" name="imgTitleBg" src="11tcewcyioe" fileName="lessonCenter/img/bg_quyuliebiao_03.png" xy="0,108" size="339,56">
       <relation target="n11_fie1" sidePair="top-top"/>
     </image>
-    <text id="n1_fie1" name="tfTitle" xy="59,10" size="220,39" fontSize="28" color="#353535" align="center" vAlign="middle" autoSize="none" text="">
-      <gearText controller="ctrlStep" pages="0,2,3" values="|选择传送点|编辑场景" default="新建场景"/>
+    <text id="n1_fie1" name="tfTitle" xy="59,118" size="220,39" fontSize="28" color="#353535" align="center" vAlign="middle" autoSize="none" text="选择传送点">
+      <gearText controller="ctrlTitle" pages="1,2" values="编辑场景|选择传送点" default="新建场景"/>
       <relation target="n11_fie1" sidePair="top-top"/>
     </text>
-    <text id="n3_fie1" name="tfName" xy="8,63" size="137,39" group="n15_fie1" fontSize="24" color="#353535" align="center" vAlign="middle" autoSize="none" text="场景名称："/>
-    <image id="n4_fie1" name="imgNameInputBg" src="ijuiwcyinj" fileName="codeVew/img/codeblockPage/icon_bqy_03.png" xy="134,64" size="187,36" group="n15_fie1"/>
-    <text id="n18_fie1" name="inpAreaName" xy="136,65" size="178,34" group="n15_fie1" customData="新场景" fontSize="20" color="#353535" align="center" vAlign="middle" autoSize="none" singleLine="true" text="" input="true" prompt="[color=#666666]新场景[/color]" maxLength="8"/>
-    <group id="n15_fie1" name="grpNameInput" xy="8,63" size="313,39" advanced="true">
+    <text id="n3_fie1" name="tfName" xy="8,171" size="137,39" group="n15_fie1" fontSize="24" color="#353535" align="center" vAlign="middle" autoSize="none" text="场景名称："/>
+    <image id="n4_fie1" name="imgNameInputBg" src="ijuiwcyinj" fileName="codeVew/img/codeblockPage/icon_bqy_03.png" xy="134,172" size="187,36" group="n15_fie1"/>
+    <text id="n18_fie1" name="inpAreaName" xy="136,173" size="178,34" group="n15_fie1" customData="新场景" fontSize="20" color="#353535" align="center" vAlign="middle" autoSize="none" singleLine="true" text="" input="true" prompt="[color=#666666]新场景[/color]" maxLength="8"/>
+    <group id="n15_fie1" name="grpNameInput" xy="8,171" size="313,39" advanced="true">
       <gearDisplay controller="ctrlStep" pages="1,0,3"/>
-      <gearXY controller="ctrlStep" pages="1,0,2,3" values="8,63|8,63|8,63|8,63"/>
+      <gearXY controller="ctrlStep" pages="1,0,2,3" values="8,171|8,171|8,171|8,171"/>
       <relation target="n11_fie1" sidePair="top-top"/>
     </group>
     <image id="n14_fie1" name="areaInputBg" src="11tcewcyioh" fileName="lessonCenter/img/bg_quyuliebiao_06.png" xy="9,108" size="320,109" group="n16_fie1"/>
@@ -28,7 +29,7 @@
     <group id="n16_fie1" name="grpAreaInput" xy="9,108" size="320,109" advanced="true">
       <gearDisplay controller="ctrlStep" pages="0"/>
     </group>
-    <component id="n17_fie1" name="comTpInput" src="qtgz13564vi" fileName="lessonCenter/com/comLocInput.xml" xy="0,80">
+    <component id="n17_fie1" name="comTpInput" src="qtgz13564vi" fileName="lessonCenter/com/comLocInput.xml" xy="0,188">
       <gearDisplay controller="ctrlStep" pages="2"/>
       <relation target="n11_fie1" sidePair="top-top"/>
       <Label title="传送点："/>
@@ -36,7 +37,7 @@
     <component id="n6_fie1" name="btnOption" src="qtgz13564vg" fileName="lessonCenter/btn/btnOption.xml" xy="133,222">
       <gearDisplay controller="ctrlStep" pages="1,0,3"/>
       <relation target="n11_fie1" sidePair="bottom-bottom"/>
-      <Button checked="true" controller="ctrlStep" page="0"/>
+      <Button controller="ctrlStep" page="0"/>
     </component>
     <component id="n7_fie1" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="31,257" size="122,46">
       <gearDisplay controller="ctrlStep" pages=""/>
