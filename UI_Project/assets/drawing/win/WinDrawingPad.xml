@@ -78,17 +78,17 @@
     <group id="n61_jwow" name="gphNormalMain" xy="0,0" size="1920,1080" advanced="true">
       <gearDisplay controller="ctrlIsBlackboard" pages="0"/>
     </group>
-    <graph id="n21_ljuf" name="gphDrawingBotBoard" xy="463,41" size="1424,925" alpha="0.3" fillColor="#ff66cc33">
+    <graph id="n21_ljuf" name="gphDrawingBotBoard" xy="463,41" size="1424,917" alpha="0.3" fillColor="#ff66cc33">
       <relation target="n19_ljuf" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
     </graph>
-    <graph id="n22_ljuf" name="gphDrawingMidBoard" xy="463,41" size="1424,925" alpha="0.6" fillColor="#ff66cc33">
+    <graph id="n22_ljuf" name="gphDrawingMidBoard" xy="463,41" size="1424,917" alpha="0.6" fillColor="#ff66cc33">
       <relation target="n19_ljuf" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
     </graph>
-    <graph id="n19_ljuf" name="gphDrawingTopBoard" xy="463,41" size="1424,925" type="rect" lineSize="0" fillColor="#00ffffff">
+    <graph id="n19_ljuf" name="gphDrawingTopBoard" xy="463,41" size="1424,917" type="rect" lineSize="0" fillColor="#00ffffff">
       <relation target="n74_jwow" sidePair="topext-bottom,leftext-right"/>
       <relation target="n75_jwow" sidePair="rightext-left,bottomext-top"/>
     </graph>
-    <component id="n36_gup1" name="comDrawSelectBoxContainer" src="qiln1o" fileName="com/ComDrawSelectBoxContainer.xml" xy="463,41" size="1424,925">
+    <component id="n36_gup1" name="comDrawSelectBoxContainer" src="qiln1o" fileName="com/ComDrawSelectBoxContainer.xml" xy="463,41" size="1424,917">
       <relation target="n19_ljuf" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
     </component>
     <list id="n16_batc" name="lstOperateBtn" xy="1777,96" size="72,283" group="n59_jwow" lineGap="30" defaultItem="ui://a0pj43bjqiln14">
@@ -162,8 +162,8 @@
     <graph id="n74_jwow" name="gphSizeCtrlLeftTop" xy="-1,0" size="463,41" lineSize="0" fillColor="#ffff0000">
       <gearSize controller="ctrlIsBlackboard" pages="0,1" values="463,41,1,1|82,58,1,1"/>
     </graph>
-    <graph id="n75_jwow" name="gphSizeCtrlRightDown" xy="1887,966" pivot="1,1" size="33,114" lineSize="0" fillColor="#ffff0000">
-      <gearSize controller="ctrlIsBlackboard" pages="0,1" values="33,114,1,1|81,86,1,1"/>
+    <graph id="n75_jwow" name="gphSizeCtrlRightDown" xy="1887,958" pivot="1,1" size="33,122" lineSize="0" fillColor="#ffff0000">
+      <gearSize controller="ctrlIsBlackboard" pages="0,1" values="33,122,1,1|81,86,1,1"/>
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </graph>
   </displayList>
