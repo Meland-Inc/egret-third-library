@@ -6,7 +6,7 @@
       <gearSize controller="button" pages="1" values="96,96,0.9,0.9" default="96,96,1,1"/>
       <relation target="" sidePair="center-center"/>
     </loader>
-    <text id="n1_psru" name="title" xy="0,81" size="110,31" font="FZZhunYuan-M02S" fontSize="24" color="#ffffff" align="center" vAlign="bottom" autoSize="none" strokeColor="#5c4016" strokeSize="3" text="返回"/>
+    <text id="n1_psru" name="title" xy="0,81" size="110,34" fontSize="24" color="#ffffff" align="center" vAlign="bottom" autoSize="none" strokeColor="#5c4016" strokeSize="3" text="返回"/>
   </displayList>
   <Button/>
 </component>
