@@ -13,4 +13,9 @@ namespace egret {
     export function setPerf(tValue: ePerfType): void {
         $curPerf = tValue;
     }
+
+    /**刷新渲染尺寸 一般不需要*/
+    export function refreshRenderSize(): void {
+        lifecycle.stage.$screen.updateScreenSize();
+    }
 }

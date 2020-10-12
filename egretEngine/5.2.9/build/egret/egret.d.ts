@@ -13983,6 +13983,8 @@ declare namespace egret {
     let $curPerf: ePerfType;
     /**设置性能 */
     function setPerf(tValue: ePerfType): void;
+    /**刷新渲染尺寸 一般不需要*/
+    function refreshRenderSize(): void;
 }
 declare namespace egret {
     /**

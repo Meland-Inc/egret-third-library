@@ -13089,7 +13089,6 @@ var egret;
                     scale = 0.1;
                 }
                 this._canvasExternalScale = scale;
-                egret.lifecycle.stage.$screen.updateScreenSize();
             };
             DisplayList.$canvasScaleFactor = 1;
             DisplayList._canvasExternalScale = 1; //外部 游戏侧需要的额外缩放 和canvasScaleFactor独立开使用
@@ -23418,6 +23417,11 @@ var egret;
         egret.$curPerf = tValue;
     }
     egret.setPerf = setPerf;
+    /**刷新渲染尺寸 一般不需要*/
+    function refreshRenderSize() {
+        egret.lifecycle.stage.$screen.updateScreenSize();
+    }
+    egret.refreshRenderSize = refreshRenderSize;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
