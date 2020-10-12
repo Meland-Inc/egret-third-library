@@ -10,6 +10,17 @@
     <image id="h6ef6" name="img_mapP_me.png" path="/mapPreview/img/"/>
     <component id="h6ef7" name="comPlayerIcon.xml" path="/mapPreview/com/" exported="true"/>
     <image id="kdkf8" name="img_red.png" path="/mapPreview/img/" scale="9grid" scale9grid="7,7,14,14" duplicatePadding="true"/>
+    <component id="n3n79" name="comCircleTPLoading.xml" path="/tpLoading/" exported="true"/>
+    <image id="n3n7a" name="新建项目.png" path="/tpLoading/" scale="9grid" scale9grid="576,282,150,147"/>
+    <image id="n3n7b" name="新建项目 (1).png" path="/tpLoading/" scale="9grid" scale9grid="610,330,60,60"/>
+    <image id="n3n7c" name="新建项目 (2).png" path="/tpLoading/" scale="9grid" scale9grid="450,450,100,100"/>
+    <image id="n3n7d" name="新建项目 (3).png" path="/tpLoading/" scale="9grid" scale9grid="800,800,400,400"/>
+    <image id="n3n7e" name="新建项目 (4).png" path="/tpLoading/" scale="9grid" scale9grid="400,400,200,200"/>
+    <image id="n3n7f" name="新建项目 (5).png" path="/tpLoading/" scale="9grid" scale9grid="180,180,640,640"/>
+    <image id="n3n7g" name="新建项目 (6).png" path="/tpLoading/" scale="9grid" scale9grid="460,40,1000,1000"/>
+    <image id="n3n7h" name="新建项目 (7).png" path="/tpLoading/" scale="9grid" scale9grid="10,10,1060,1060" duplicatePadding="true"/>
+    <image id="n3n7i" name="imgBlack.png" path="/" duplicatePadding="true"/>
+    <component id="n3n7j" name="comBlackAlphaTPLoading.xml" path="/tpLoading/" exported="true"/>
   </resources>
   <publish name="other"/>
 </packageDescription>
