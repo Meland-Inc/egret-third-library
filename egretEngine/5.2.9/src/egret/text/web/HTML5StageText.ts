@@ -104,6 +104,10 @@ namespace egret.web {
          * 
          */
         private _initElement(): void {
+          this.fixElementPos();
+        }
+
+        public fixElementPos():void{
             let point = this.$textfield.localToGlobal(0, 0);
             let x = point.x;
             let y = point.y;
@@ -644,7 +648,7 @@ namespace egret.web {
                 this.canvas.addEventListener("click", function (e) {
                     if (self._needShow) {
                         self._needShow = false;
-
+                        self._stageText.fixElementPos();//在滚动容器中有可能输入文本框和egret的现实对象位置不一致，在显示的时候在调整一次文本框的位置，确保输入框和显示对象位置一致
                         self._stageText._onClickHandler(e);
 
                         self.show();

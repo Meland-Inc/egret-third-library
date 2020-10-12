@@ -20804,6 +20804,15 @@ var egret;
             }
         };
         /**
+         * @desc 输入文本请求失焦
+         * @author mangit
+         */
+        TextField.prototype.setFocusOut = function () {
+            if (this.type == egret.TextFieldType.INPUT && this.$stage) {
+                this.inputUtils.stageText.$hide();
+            }
+        };
+        /**
          * @private
          *
          */

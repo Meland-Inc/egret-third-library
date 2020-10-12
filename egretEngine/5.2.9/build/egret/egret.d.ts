@@ -12832,6 +12832,11 @@ declare namespace egret {
          */
         setFocus(): void;
         /**
+         * @desc 输入文本请求失焦
+         * @author mangit
+         */
+        setFocusOut(): void;
+        /**
          * @private
          *
          */
