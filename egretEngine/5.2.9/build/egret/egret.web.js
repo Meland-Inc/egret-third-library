@@ -4470,7 +4470,8 @@ var egret;
                     realScaleX *= scale;
                     realScaleY *= scale;
                 }
-                if (egret.Capabilities.renderMode == "canvas") {
+                //高性能档位取整 解决横竖线条变出变细问题
+                if (egret.$curPerf <= egret.ePerfType.high || egret.Capabilities.renderMode == "canvas") {
                     realScaleY = Math.ceil(realScaleY);
                     realScaleY = Math.ceil(realScaleY);
                 }
@@ -7161,6 +7162,11 @@ var egret;
              * 绘制一个显示对象
              */
             WebGLRenderer.prototype.drawDisplayObject = function (displayObject, buffer, offsetX, offsetY, isStage) {
+                if (egret.$curPerf <= egret.ePerfType.high) {
+                    //取整 否则坐标为小数横竖线条会变出变细
+                    offsetX = Math.round(offsetX);
+                    offsetY = Math.round(offsetY);
+                }
                 var drawCalls = 0;
                 var node;
                 var displayList = displayObject.$displayList;

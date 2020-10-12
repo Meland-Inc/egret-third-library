@@ -23402,6 +23402,23 @@ var egret;
     egret.ByteArray = ByteArray;
     __reflect(ByteArray.prototype, "egret.ByteArray");
 })(egret || (egret = {}));
+var egret;
+(function (egret) {
+    /**性能档位 */
+    var ePerfType;
+    (function (ePerfType) {
+        ePerfType[ePerfType["high"] = 1] = "high";
+        ePerfType[ePerfType["medium"] = 2] = "medium";
+        ePerfType[ePerfType["low"] = 3] = "low";
+    })(ePerfType = egret.ePerfType || (egret.ePerfType = {}));
+    /**外部不要使用 */
+    egret.$curPerf = ePerfType.medium;
+    /**设置性能 */
+    function setPerf(tValue) {
+        egret.$curPerf = tValue;
+    }
+    egret.setPerf = setPerf;
+})(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //
 //  Copyright (c) 2014-present, Egret Technology.

@@ -246,7 +246,8 @@ namespace egret.web {
                 realScaleY *= scale;
             }
 
-            if (egret.Capabilities.renderMode == "canvas") {
+            //高性能档位取整 解决横竖线条变出变细问题
+            if (egret.$curPerf <= egret.ePerfType.high || egret.Capabilities.renderMode == "canvas") {
                 realScaleY = Math.ceil(realScaleY);
                 realScaleY = Math.ceil(realScaleY);
             }
