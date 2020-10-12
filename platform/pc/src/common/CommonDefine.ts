@@ -62,6 +62,7 @@ export namespace CommonDefine {
         serverState = "/serverState",       //服务器状态
         serverLog = "/serverLog",           //服务器上报日志
     }
+
     /** log类型 */
     export enum eLogType {
         log = 1,
@@ -73,23 +74,5 @@ export namespace CommonDefine {
     /** 伪协议参数名称 */
     export enum eFakeProtoParamField {
         environName = "environName"
-    }
-
-    export const globalConfigMap = {
-        "beta": {
-            "patchUrl": "192.168.1.211/native/beta/patch",
-            "packageUrl": "192.168.1.211/native/beta/release",
-            "policyUrl": "planet.wkcoding.com/web/beta/"
-        },
-        "ready": {
-            "patchUrl": "bg-stage.wkcoding.com/readyTest//ready/win",
-            "packageUrl": "bg-stage.wkcoding.com/clientPackages/ready",
-            "policyUrl": "bg-stage.wkcoding.com/readyTest"
-        },
-        "release": {
-            "patchUrl": "bg-stage.wkcoding.com//win",
-            "packageUrl": "bg-stage.wkcoding.com/clientPackages/ready",
-            "policyUrl": "bg-stage.wkcoding.com/"
-        }
     }
 }

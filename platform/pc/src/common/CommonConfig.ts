@@ -12,61 +12,22 @@ import { logger } from '../main/logger';
 
 class CommonConfig {
     /** 本机IP */
-    public readonly localIp = "127.0.0.1";
+    public readonly localIp: string = "127.0.0.1";
 
     /** native用请求头 */
-    public readonly protocol = "http:";
+    public readonly protocol: string = "http:";
 
     /** cdn域名地址 */
-    public readonly cdnHost = "http://bg-stage.wkcoding.com";
-
-    /** 官网地址 */
-    public readonly bellcodeUrl = "https://www.bellcode.com";
-
-    /** demo */
-    public readonly demoBellCodeUrl = "https://democm.wkcoding.com";
-
-    /** release账号服务器 */
-    public readonly releaseAccountServer: string = "account.wkcoding.com";
-
-    /** ready账号服务器 */
-    public readonly readyAccountServer: string = "ready-account.wkcoding.com";
-
-    /** release服务器列表服务器 */
-    public readonly releaseServerListServer: string = "server-list.wkcoding.com";
-
-    /** ready服务器列表服务器 */
-    public readonly readyServerListServer: string = "ready-server-list.wkcoding.com";
-
-    /** beta服务器列表地址 */
-    public readonly betaServerListServer: string = "server-list-beta.wkcoding.com";
-
-    /** release上传日志服务器 */
-    public readonly releaseUploadLogServer: string = "clientlog.wkcoding.com";
-
-    /** ready上传日志服务器 */
-    public readonly readyUploadLogServer: string = "ready-clientlog.wkcoding.com";
-
-    /** release平台接口地址 */
-    public readonly releaseBellApiOrigin: string = "api.bellcode.com";
-
-    /** ready平台地址接口 */
-    public readonly readyBellApiOrigin: string = "demoapi.wkcoding.com";
+    public readonly cdnHost: string = "http://bg-stage.wkcoding.com";
 
     /** 上传日志地址 */
-    public readonly uploadLogUrl = `http://clientlog.wkcoding.com/nativeLogs`;
-
-    /** 正式环境用tokenDomain */
-    public readonly releaseTokenDomain = `.bellcode.com`;
-
-    /** ready环境用tokenDomain */
-    public readonly readyTokenDomain = `.wkcoding.com`;
+    public readonly uploadLogUrl: string = `http://clientlog.wkcoding.com/nativeLogs`;
 
     /** 上课模式渠道常量 */
-    public readonly constChannelLesson = 'bian_lesson';
+    public readonly constChannelLesson: string = 'bian_lesson';
 
     /** 上课伪协议头 */
-    public readonly constPseudoProtocol = 'bellplanet:';
+    public readonly constPseudoProtocol: string = 'bellplanet:';
 
     /** release环境客户端游戏包的地址 */
     public readonly releasePackageUrl: string = "bg-stage.wkcoding.com/clientPackages/ready";
@@ -76,7 +37,7 @@ class CommonConfig {
 
     /** 程序根路径 */
     public _rootPath: string;
-    public get rootPath() {
+    public get rootPath(): string {
         return this._rootPath;
     }
 
@@ -148,22 +109,55 @@ class CommonConfig {
         return this._isPackaged;
     }
 
-    private _patchUrl: string;
-    /** 客户端补丁包地址 */
-    public get patchUrl(): string {
-        return this._patchUrl;
+    /** 环境配置集合 */
+    private createEnvironMap(): Map<CommonDefine.eEnvironName, IEnviron> {
+        const environConfigMap: Map<CommonDefine.eEnvironName, IEnviron> = new Map();
+        environConfigMap.set(CommonDefine.eEnvironName.beta,
+            {
+                environName: CommonDefine.eEnvironName.beta,
+                accountServer: "ready-account.wkcoding.com",
+                serverListServer: "server-list-beta.wkcoding.com",
+                uploadLogServer: "ready-clientlog.wkcoding.com",
+                bellApiOrigin: "demoapi.wkcoding.com",
+                bellcodeDomain: "https://democm.wkcoding.com",
+                policyUrl: "planet.wkcoding.com/web/beta/",
+                patchUrl: "192.168.1.211/native/beta/patch",
+                packageUrl: "192.168.1.211/native/beta/release",
+            });
+
+        environConfigMap.set(CommonDefine.eEnvironName.ready,
+            {
+                environName: CommonDefine.eEnvironName.ready,
+                accountServer: "ready-account.wkcoding.com",
+                serverListServer: "ready-server-list.wkcoding.com",
+                uploadLogServer: "ready-clientlog.wkcoding.com",
+                bellApiOrigin: "demoapi.wkcoding.com",
+                bellcodeDomain: "https://democm.wkcoding.com",
+                policyUrl: "bg-stage.wkcoding.com/readyTest",
+                patchUrl: "bg-stage.wkcoding.com/readyTest//ready/win",
+                packageUrl: "bg-stage.wkcoding.com/clientPackages/ready",
+            });
+
+        environConfigMap.set(CommonDefine.eEnvironName.release,
+            {
+                environName: CommonDefine.eEnvironName.release,
+                accountServer: "account.wkcoding.com",
+                serverListServer: "server-list.wkcoding.com",
+                uploadLogServer: "clientlog.wkcoding.com",
+                bellApiOrigin: "api.bellcode.com",
+                bellcodeDomain: "https://www.bellcode.com",
+                patchUrl: "bg-stage.wkcoding.com//win",
+                packageUrl: "bg-stage.wkcoding.com/clientPackages/ready",
+                policyUrl: "bg-stage.wkcoding.com/",
+            });
+
+        return environConfigMap;
     }
 
-    private _policyUrl: string;
-    /** 客户端策略文件地址 */
-    public get policyUrl(): string {
-        return this._policyUrl;
-    }
-
-    private _packageUrl: string;
-    /** 客户端游戏包地址 */
-    public get packageUrl(): string {
-        return this._packageUrl;
+    private _environ: IEnviron;
+    /** 环境配置 */
+    public get environ(): IEnviron {
+        return this._environ;
     }
 
     public constructor() {
@@ -175,6 +169,7 @@ class CommonConfig {
         this.initGlobalConfig();
     }
 
+    /** 初始化全局配置 */
     private initGlobalConfig(): void {
         if (!FileUtil.existsSync(this.globalConfigPath)) {
             return;
@@ -182,32 +177,43 @@ class CommonConfig {
 
         const data = FileUtil.readFileSync(this.globalConfigPath, 'utf-8', false);
         if (data) {
-            const globalConfig: IGlobalConfig = JSON.parse(data);
-            this._environName = globalConfig.environName;
-            const globalConfigInfo = CommonDefine.globalConfigMap[this._environName];
-            this._patchUrl = globalConfigInfo.patchUrl;
-            this._packageUrl = globalConfigInfo.packageUrl;
-            this._policyUrl = globalConfigInfo.policyUrl;
+            const globalConfig: IEnviron = JSON.parse(data);
+            this.initEnviron(globalConfig.environName);
         } else {
             logger.error("file", `读取GlobalConfig全局配置错误`);
         }
     }
 
-    public writeEnvironName(environName: string): void {
-        let data = FileUtil.readFileSync(commonConfig.globalConfigPath, 'utf-8');
+    /** 写入环境名称 */
+    public writeEnvironName(tEnvironName: string): void {
+        const data = FileUtil.readFileSync(commonConfig.globalConfigPath, 'utf-8');
         const globalConfig = JSON.parse(data);
-        if (globalConfig.environName === environName) return;
+        if (globalConfig.environName === tEnvironName) return;
 
-        globalConfig.environName = environName;
+        globalConfig.environName = tEnvironName;
         FileUtil.writeFileSync(commonConfig.globalConfigPath, JSON.stringify(globalConfig));
+        this.initEnviron(globalConfig.environName);
+    }
+
+    /** 初始化环境相关配置 */
+    private initEnviron(tEnvironName: CommonDefine.eEnvironName): void {
+        this._environName = tEnvironName;
+        const environMap: Map<CommonDefine.eEnvironName, IEnviron> = this.createEnvironMap();
+        this._environ = environMap.get(this._environName);
     }
 }
 
-interface IGlobalConfig {
+/** 环境配置接口 */
+interface IEnviron {
     environName: CommonDefine.eEnvironName;
-    patchUrl: string,
-    packageUrl: string,
-    policyUrl: string
+    accountServer: string,      //账号服务器
+    serverListServer: string,   //服务器列表服务器
+    uploadLogServer: string,    //上传日志服务器
+    bellApiOrigin: string,      //平台接口地址
+    bellcodeDomain: string,        //官网地址
+    policyUrl: string,          //客户端策略文件地址
+    patchUrl: string,           //客户端补丁包地址
+    packageUrl: string,         //客户端游戏包地址
 }
 
 const commonConfig: CommonConfig = new CommonConfig();
