@@ -2164,6 +2164,9 @@ var egret;
              *
              */
             HTML5StageText.prototype._initElement = function () {
+                this.fixElementPos();
+            };
+            HTML5StageText.prototype.fixElementPos = function () {
                 var point = this.$textfield.localToGlobal(0, 0);
                 var x = point.x;
                 var y = point.y;
@@ -2601,6 +2604,7 @@ var egret;
                     this.canvas.addEventListener("click", function (e) {
                         if (self._needShow) {
                             self._needShow = false;
+                            self._stageText.fixElementPos();
                             self._stageText._onClickHandler(e);
                             self.show();
                         }
