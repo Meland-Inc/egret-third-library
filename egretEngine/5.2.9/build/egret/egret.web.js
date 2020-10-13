@@ -2604,7 +2604,7 @@ var egret;
                     this.canvas.addEventListener("click", function (e) {
                         if (self._needShow) {
                             self._needShow = false;
-                            self._stageText.fixElementPos();
+                            self._stageText.fixElementPos(); //在滚动容器中有可能输入文本框和egret的现实对象位置不一致，在显示的时候在调整一次文本框的位置，确保输入框和显示对象位置一致
                             self._stageText._onClickHandler(e);
                             self.show();
                         }
@@ -7213,6 +7213,10 @@ var egret;
                 }
                 var children = displayObject.$children;
                 if (children) {
+                    if (displayObject.sortableChildren && displayObject.$sortDirty) {
+                        //绘制排序
+                        displayObject.sortChildren();
+                    }
                     var length_4 = children.length;
                     for (var i = 0; i < length_4; i++) {
                         var child = children[i];
