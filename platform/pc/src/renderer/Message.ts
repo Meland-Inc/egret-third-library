@@ -205,6 +205,7 @@ class Message {
         } catch (error) {
             const content = `native下载服务端出错,点击重试`;
             logger.error(`update`, content, error);
+            // eslint-disable-next-line no-alert
             alert(content + error);
             this.directDownloadServer(tCallback, ...tArgs);
         }
@@ -217,6 +218,7 @@ class Message {
         } catch (error) {
             const content = `native下载客户端出错,点击重试`;
             logger.error(`update`, content, error);
+            // eslint-disable-next-line no-alert
             alert(content + error);
             this.directDownloadClient(tCallback, ...tArgs);
         }
@@ -229,6 +231,7 @@ class Message {
         } catch (error) {
             const content = `native更新客户端报错`;
             logger.error(`update`, content, error);
+            // eslint-disable-next-line no-alert
             alert(content);
 
             tCallback(...tArgs);
@@ -242,6 +245,7 @@ class Message {
         } catch (error) {
             const content = `native更新服务端报错`;
             logger.error(`update`, content, error);
+            // eslint-disable-next-line no-alert
             alert(content);
 
             tCallback(...tArgs);
@@ -275,21 +279,12 @@ class Message {
     private onStartNativeWebsite(): void {
         this.checkClearLocalStorage();
 
-        // const url = commonConfig.environName === CommonDefine.eEnvironName.release ? commonConfig.bellcodeUrl : commonConfig.demoBellCodeUrl;
         const url = new URL(`file://${commonConfig.clientPackagePath}/index.html`);
         url.searchParams.set("fakeGameMode", "lessons");
-
-        if (commonConfig.environName === CommonDefine.eEnvironName.release) {
-            url.searchParams.set("accountServer", commonConfig.releaseAccountServer);
-            url.searchParams.set("serverListServer", commonConfig.releaseServerListServer);
-            url.searchParams.set("uploadLogServer", commonConfig.releaseUploadLogServer);
-            url.searchParams.set("bellApiOrigin", commonConfig.releaseBellApiOrigin);
-        } else {
-            url.searchParams.set("accountServer", commonConfig.readyAccountServer);
-            url.searchParams.set("serverListServer", commonConfig.readyServerListServer);
-            url.searchParams.set("uploadLogServer", commonConfig.readyUploadLogServer);
-            url.searchParams.set("bellApiOrigin", commonConfig.readyBellApiOrigin);
-        }
+        url.searchParams.set("accountServer", commonConfig.environ.accountServer);
+        url.searchParams.set("serverListServer", commonConfig.environ.serverListServer);
+        url.searchParams.set("uploadLogServer", commonConfig.environ.uploadLogServer);
+        url.searchParams.set("bellApiOrigin", commonConfig.environ.bellApiOrigin);
 
         this.loadRendererURL(url);
     }
@@ -309,12 +304,7 @@ class Message {
 
         logger.rendererLog('platform', `iframeSrc:`, iframeUrl.toString());
         //获取官网链接
-        let bellPlatformDomain: string;
-        if (commonConfig.environName === CommonDefine.eEnvironName.release) {
-            bellPlatformDomain = commonConfig.bellcodeUrl;
-        } else {
-            bellPlatformDomain = commonConfig.demoBellCodeUrl;
-        }
+        const bellPlatformDomain: string = commonConfig.environ.bellcodeDomain;
 
         const webviewToken: string = this.getWebviewToken(searchParams);
         searchParams.set('webviewToken', webviewToken);

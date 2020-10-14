@@ -135,6 +135,7 @@ export default class ServerUpdate {
         if (tResult == "404") {
             const content = `下载文件:${tFilename}错误, 文件不存在!`;
             logger.error(`update`, content);
+            // eslint-disable-next-line no-alert
             alert(content);
 
             this.executeUpdateCallback();
@@ -144,6 +145,7 @@ export default class ServerUpdate {
         if (tResult == "error") {
             const content = `下载文件:${tFilename}出错, ${tErrorMsg}`;
             logger.error(`update`, content);
+            // eslint-disable-next-line no-alert
             alert(content);
             this.downloadPackage();
 
