@@ -918,9 +918,10 @@ namespace egret.web {
                 return;
             }
 
-            if (canvasScaleX != 1 || canvasScaleY != 1) {
-                this.canvasRenderBuffer.context.setTransform(canvasScaleX, 0, 0, canvasScaleY, 0, 0);
-            }
+            //dirtyRender为false也会执行,导致显示很多文本时内存一直增长
+            // if (canvasScaleX != 1 || canvasScaleY != 1) {
+            //     this.canvasRenderBuffer.context.setTransform(canvasScaleX, 0, 0, canvasScaleY, 0, 0);
+            // }
 
             if (x || y) {
                 if (node.dirtyRender) {
