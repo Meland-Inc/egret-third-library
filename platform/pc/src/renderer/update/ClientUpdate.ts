@@ -59,9 +59,9 @@ export default class ClientUpdate {
 
         this._curVersion = this._startVersion = +gameVersion;
 
-        this._patchUrl = `${commonConfig.protocol}//${commonConfig.patchUrl}`;
+        this._patchUrl = `${commonConfig.protocol}//${commonConfig.environ.patchUrl}`;
 
-        const curGameVersion = await this.getClientGameVersion(commonConfig.environName, commonConfig.policyUrl);
+        const curGameVersion = await this.getClientGameVersion(commonConfig.environName, commonConfig.environ.policyUrl);
         if (!curGameVersion) return true;
 
         this._gameVersion = curGameVersion;
@@ -93,7 +93,7 @@ export default class ClientUpdate {
     /** 获取当前环境客户端游戏版本号 */
     public async getCurClientGameVersion(): Promise<number> {
         const environName = commonConfig.environName;
-        const policyUrl: string = commonConfig.policyUrl;
+        const policyUrl: string = commonConfig.environ.policyUrl;
         const result = await this.getClientGameVersion(environName, policyUrl);
         return result;
     }
@@ -105,6 +105,7 @@ export default class ClientUpdate {
         if (policyNum === null) {
             const content = `获取策略版本号错误!, environName:${tEnvironName}`;
             logger.error(`renderer`, content);
+            // eslint-disable-next-line no-alert
             alert(content);
             return 0;
         }
@@ -115,6 +116,7 @@ export default class ClientUpdate {
         } catch (error) {
             const content = "获取客户端版本号错误!";
             logger.error(`renderer`, content);
+            // eslint-disable-next-line no-alert
             alert(content);
             return 0;
         }
@@ -184,6 +186,7 @@ export default class ClientUpdate {
 
                         const errorContent = `解压文件:${tFilename}错误`;
                         logger.error(`update`, errorContent, tErr);
+                        // eslint-disable-next-line no-alert
                         alert(errorContent);
                         this.executeUpdateCallback();
                         return;
@@ -216,6 +219,7 @@ export default class ClientUpdate {
         if (tArg == "404") {
             const content = `下载文件:${tFilename}错误, 文件不存在!`;
             logger.error(`update`, content);
+            // eslint-disable-next-line no-alert
             alert(content);
 
             //一次性下载不到，就一个一个来
@@ -250,8 +254,8 @@ export default class ClientUpdate {
         this._isDownloadPackage = true;
         //ready环境, 用的release的包, 去release下载
         let environName = commonConfig.environName;
-        let policyUrl: string = commonConfig.policyUrl;
-        let packageUrl: string = commonConfig.packageUrl;
+        let policyUrl: string = commonConfig.environ.policyUrl;
+        let packageUrl: string = commonConfig.environ.packageUrl;
         if (environName === CommonDefine.eEnvironName.ready) {
             environName = CommonDefine.eEnvironName.release;
             policyUrl = commonConfig.releasePolicyUrl;

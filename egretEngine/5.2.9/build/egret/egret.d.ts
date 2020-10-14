@@ -1292,6 +1292,47 @@ declare namespace egret {
          * @platform Web,Native
          */
         willTrigger(type: string): boolean;
+        /**
+         * @private
+         * inspired by pixi.js
+         */
+        $sortDirty: boolean;
+        sortChildren(): void;
+        /**
+         * @private
+         */
+        private _zIndex;
+        /**
+         * the z-order (front-to-back order) of the object
+         * @version Egret 5.2.24
+         * @platform Web,Native
+         * @language en_US
+         */
+        /**
+         * 设置对象的 Z 轴顺序（前后顺序）
+         * @version Egret 5.2.24
+         * @platform Web,Native
+         * @language zh_CN
+         */
+        zIndex: number;
+        /**
+         * @private
+         * inspired by pixi.js
+         */
+        $lastSortedIndex: number;
+        /**
+         * Allow objects to use zIndex sorting
+         * @version Egret 5.2.24
+         * @platform Web,Native
+         * @language en_US
+         */
+        /**
+         * 允许对象使用 zIndex 排序
+         * @version Egret 5.2.24
+         * @platform Web,Native
+         * @language zh_CN
+         */
+        sortableChildren: boolean;
     }
     /**
      * 系统固定标签
@@ -2969,6 +3010,8 @@ declare namespace egret {
          * @private
          */
         $hitTest(stageX: number, stageY: number): DisplayObject;
+        private _sortChildrenFunc;
+        sortChildren(): void;
     }
 }
 declare namespace egret {
@@ -12831,6 +12874,11 @@ declare namespace egret {
          * @language zh_CN
          */
         setFocus(): void;
+        /**
+         * @desc 输入文本请求失焦
+         * @author mangit
+         */
+        setFocusOut(): void;
         /**
          * @private
          *

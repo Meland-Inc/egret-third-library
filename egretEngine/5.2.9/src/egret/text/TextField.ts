@@ -1646,6 +1646,16 @@ namespace egret {
         }
 
         /**
+         * @desc 输入文本请求失焦
+         * @author mangit
+         */
+        public setFocusOut():void {
+            if (this.type == egret.TextFieldType.INPUT && this.$stage) {
+                this.inputUtils.stageText.$hide();
+            }
+        }
+
+        /**
          * @private
          *
          */
