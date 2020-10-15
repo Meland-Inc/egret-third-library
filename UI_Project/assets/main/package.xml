@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="oyity675">
+<packageDescription id="oyity675" jpegQuality="80" compressPNG="true">
   <resources>
     <image id="a1nd1" name="img_main_xdt_1.png" path="/img/" scale="9grid" scale9grid="24,24,48,48"/>
     <image id="a1nd2" name="img_maon_rw_1.png" path="/img/" scale="9grid" scale9grid="23,7,46,14"/>
@@ -513,6 +513,7 @@
     <image id="w79twcyim2" name="icon_dialog_15.png" path="/img/" scale="9grid" scale9grid="35,10,70,20"/>
     <image id="pbxdwcyim4" name="icon_mainV_sp.png" path="/img/"/>
     <image id="pbxdwcyim5" name="icon_mainV_sp2.png" path="/img/"/>
+    <component id="pqylwcyim4" name="WinMainMovieCamera.xml" path="/win/" exported="true"/>
   </resources>
   <publish name="main"/>
 </packageDescription>
