@@ -128,6 +128,10 @@ export default class ClientUpdate {
         this._updateCbArgs = tUpdateCbArgs;
 
         loading.showLoading("正在下载客户端程序包");
+        //创建目录
+        if (!FileUtil.existsSync(commonConfig.clientPackagePath)) {
+            FileUtil.ensureDirSync(commonConfig.clientPackagePath);
+        }
         this.downloadPackage();
     }
 

@@ -27,31 +27,12 @@ class MainControl {
 
         this.addIpcListener();
 
-        //创建游戏包目录
-        this.packageMkDir();
-
         //只有打包后的要上传日志
         if (commonConfig.isPackaged) {
             util.uploadLogFileList();
         }
 
         await this.checkUpdate();
-    }
-
-    /** 创建游戏包目录 */
-    private packageMkDir(): void {
-        // 判断创建文件
-        if (!FileUtil.existsSync(commonConfig.packagePath)) {
-            FileUtil.ensureDirSync(commonConfig.packagePath);
-        }
-
-        if (!FileUtil.existsSync(commonConfig.clientPackagePath)) {
-            FileUtil.ensureDirSync(commonConfig.clientPackagePath);
-        }
-
-        if (!FileUtil.existsSync(commonConfig.serverPackagePath)) {
-            FileUtil.ensureDirSync(commonConfig.serverPackagePath);
-        }
     }
 
     /** 检查更新 */
