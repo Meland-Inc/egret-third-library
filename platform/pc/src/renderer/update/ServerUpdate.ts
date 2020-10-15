@@ -75,6 +75,10 @@ export default class ServerUpdate {
         logger.log(`update`, `检测到服务器版本更新,开始更新版本${this._remoteVersion}`);
         //更新
         loading.showLoading("正在更新服务端程序包");
+        //创建目录
+        if (!FileUtil.existsSync(this._packagePath)) {
+            FileUtil.ensureDirSync(this._packagePath);
+        }
         //清除要保存的文件夹
         FileUtil.emptyDirSync(this._packagePath);
         this.downloadPackage();
