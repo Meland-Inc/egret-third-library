@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="735,400" overflow="scroll" scrollBarFlags="132" scrollBarRes="ui://0axy98cgqb974t," designImage="ui://0axy98cgorknbj" designImageOffsetX="-870" designImageOffsetY="-364" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlDevelop" exported="true" pages="0,no,1,yes" selected="1"/>
+  <controller name="ctrlLessonPlanUpload" pages="0,none,1,uploading,2,loaded" selected="2"/>
+  <controller name="ctrlManorLevel" pages="0,no,1,yes" selected="1"/>
+  <displayList>
+    <image id="n105_orkn" name="imgOptionBg" src="orknbf" fileName="img/lessonCenter/bg_mt_03.png" xy="100,0" size="533,460">
+      <gearSize controller="ctrlDevelop" pages="0,1" values="533,320,1,1|533,460,1,1"/>
+      <relation target="n138_orkn" sidePair="bottomext-bottom"/>
+    </image>
+    <text id="n111_orkn" name="tfEditorCanUse" xy="113,18" size="178,35" fontSize="25" color="#ff8f23" align="center" vAlign="middle" leading="0" text="编辑器是否可用"/>
+    <component id="n112_orkn" name="tBtnEditorCanUse" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="552,17" size="69,37">
+      <Button icon="ui://0axy98cgorknbu" selectedIcon="ui://0axy98cgorknbv"/>
+    </component>
+    <text id="n121_orkn" name="tfSingleServer" xy="114,66" size="153,35" group="n128_orkn" fontSize="25" color="#ff8f23" align="center" vAlign="middle" leading="0" text="是否单人单服"/>
+    <component id="n122_orkn" name="tBtnSingleServer" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="553,65" size="69,37" group="n128_orkn">
+      <Button icon="ui://0axy98cgorknbu" selectedIcon="ui://0axy98cgorknbv"/>
+    </component>
+    <text id="n123_orkn" name="tfManorLevel" xy="114,114" size="153,35" group="n128_orkn" fontSize="25" color="#ff8f23" align="center" vAlign="middle" leading="0" text="是否领地关卡"/>
+    <component id="n124_orkn" name="tBtnManorLevel" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="553,113" size="69,37" group="n128_orkn">
+      <Button checked="true" icon="ui://0axy98cgorknbu" selectedIcon="ui://0axy98cgorknbv" controller="ctrlManorLevel" page="1"/>
+    </component>
+    <graph id="n138_orkn" name="grpSizeCtrl" xy="114,151" size="100,293" group="n128_orkn" touchable="false" lineSize="0">
+      <gearSize controller="ctrlManorLevel" pages="1" values="100,293,1,1" default="100,45,1,1"/>
+    </graph>
+    <text id="n129_orkn" name="tfManorGenerateType" xy="134,211" size="243,37" group="n137_orkn" fontSize="26" color="#008ccd" vAlign="middle" autoSize="none" text="领地生成方式"/>
+    <component id="n130_orkn" name="cbManorType" src="mzsu6t" fileName="btn/CombCreateType.xml" xy="113,249" size="492,48" group="n137_orkn">
+      <ComboBox title="回字形" icon="ui://0axy98cgmzsu6p" titleColor="#4eaed1" visibleItemCount="6">
+        <item title="回字形" value="palindrome"/>
+        <item title="横向排列" value="horizontal"/>
+        <item title="纵向排列" value="vertical"/>
+      </ComboBox>
+    </component>
+    <text id="n131_orkn" name="tfManorGenerateGap" xy="134,311" size="268,34" group="n137_orkn" fontSize="26" color="#00389f" vAlign="middle" autoSize="none" text="领地生成间隔"/>
+    <component id="n132_orkn" name="cbManorGap" src="mzsu6v" fileName="btn/CombBlankType.xml" xy="115,348" size="487,49" group="n137_orkn">
+      <ComboBox title="0(领地相接)" titleColor="#4a89d7" visibleItemCount="10">
+        <item title="0(领地相接)" value="0"/>
+        <item title="10(部分可见)" value="10"/>
+        <item title="30(完全不可见)" value="30"/>
+      </ComboBox>
+    </component>
+    <image id="n133_orkn" name="n133" src="mzsu72" fileName="img/icon_mt_point2.png" xy="118,321" size="11,12" group="n137_orkn"/>
+    <image id="n134_orkn" name="n134" src="mzsu72" fileName="img/icon_mt_point2.png" xy="312,321" size="11,12" group="n137_orkn"/>
+    <image id="n135_orkn" name="n135" src="mzsu73" fileName="img/icon_mt_pointblue.png" xy="118,222" size="11,12" group="n137_orkn"/>
+    <image id="n136_orkn" name="n136" src="mzsu73" fileName="img/icon_mt_pointblue.png" xy="312,222" size="11,12" group="n137_orkn"/>
+    <group id="n137_orkn" name="grpManorConfig" xy="113,211" size="492,186" group="n128_orkn" advanced="true">
+      <gearDisplay controller="ctrlManorLevel" pages="1"/>
+    </group>
+    <text id="n125_orkn" name="tfTemplateTag" xy="114,161" size="103,35" group="n128_orkn" fontSize="25" color="#ff8f23" align="center" vAlign="middle" leading="0" text="模板标签"/>
+    <component id="n127_orkn" name="cbLessonTag" src="orknbz" fileName="comLesson/ComboBox1.xml" xy="498,159" group="n128_orkn">
+      <ComboBox title="关闭" titleColor="#a75104" visibleItemCount="10">
+        <item title="关闭" value="close"/>
+        <item title="默认" value="default"/>
+        <item title="星球杯" value="planetRace"/>
+        <item title="故事" value="story"/>
+        <item title="休闲" value="leisure"/>
+        <item title="教程" value="tutorial"/>
+        <item title="作业" value="homework"/>
+      </ComboBox>
+    </component>
+    <group id="n128_orkn" name="grpDevelopConfig" xy="113,65" size="509,379" advanced="true">
+      <gearDisplay controller="ctrlDevelop" pages="1"/>
+    </group>
+    <image id="n106_orkn" name="imgUploadBg" src="orknbf" fileName="img/lessonCenter/bg_mt_03.png" xy="100,471" size="533,71" group="n119_orkn"/>
+    <text id="n113_orkn" name="tfLessonPlan" xy="114,489" size="103,35" group="n119_orkn" fontSize="25" color="#ff8f23" align="center" vAlign="middle" leading="0" text="课程教案"/>
+    <text id="n126_orkn" name="tfLessonPlanFileName" xy="243,485" size="273,39" group="n119_orkn" fontSize="28" color="#712500" align="center" vAlign="middle" ubb="true" autoSize="none" text="__________">
+      <gearDisplay controller="ctrlLessonPlanUpload" pages="0,2"/>
+      <gearText controller="ctrlLessonPlanUpload" pages="0,2" values="暂无教案|__________" default="xxx.pdf"/>
+    </text>
+    <image id="n115_orkn" name="imgUploadProgressBg" src="orknbq" fileName="img/lessonCenter/icon_mt_03.png" xy="241,500" size="280,13" group="n119_orkn">
+      <gearDisplay controller="ctrlLessonPlanUpload" pages="1"/>
+    </image>
+    <image id="n116_orkn" name="imgUploadingBar" src="orknbr" fileName="img/lessonCenter/icon_mt_04.png" xy="244,503" size="229,7" group="n119_orkn">
+      <gearDisplay controller="ctrlLessonPlanUpload" pages="1"/>
+    </image>
+    <component id="n114_orkn" name="btnUploadLessonPlan" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="553,492" size="65,28" group="n119_orkn">
+      <gearDisplay controller="ctrlLessonPlanUpload" pages="0,2"/>
+      <Button title="上传" titleFontSize="18" icon="ui://0axy98cgorknbl"/>
+    </component>
+    <component id="n117_orkn" name="btnCancelUpload" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="527,497" size="19,18" group="n119_orkn">
+      <gearDisplay controller="ctrlLessonPlanUpload" pages="1,2"/>
+      <Button icon="ui://0axy98cgorknbo" controller="ctrlLessonPlanUpload" page="0"/>
+    </component>
+    <group id="n119_orkn" name="grpUpload" xy="100,471" size="533,71" advanced="true">
+      <relation target="n105_orkn" sidePair="top-bottom"/>
+    </group>
+    <text id="n71_v8nf" name="tfDescTitle" xy="114,545" size="100,34" group="n120_orkn" fontSize="24" color="#a65200" vAlign="middle" text="课程简介"/>
+    <text id="n72_v8nf" name="inpDesc" xy="108,588" size="517,93" group="n120_orkn" fontSize="24" autoSize="none" autoClearText="true" text="这是一个地图说明" input="true" maxLength="250">
+      <relation target="n107_orkn" sidePair="bottomext-bottom"/>
+    </text>
+    <loader id="n107_orkn" name="ladDescBg" xy="100,584" size="533,100" group="n120_orkn" url="ui://0axy98cgorknbf" fill="scaleFree">
+      <relation target="n139_orkn" sidePair="bottomext-bottom"/>
+    </loader>
+    <text id="n139_orkn" name="tfDesc" xy="108,588" size="517,34" group="n120_orkn" fontSize="24" autoSize="height" autoClearText="true" text="这是一个地图说明"/>
+    <group id="n120_orkn" name="grpDesc" xy="100,545" size="533,139" advanced="true">
+      <relation target="n119_orkn" sidePair="top-bottom"/>
+    </group>
+  </displayList>
+</component>

@@ -12,7 +12,7 @@
     <image id="n80_yfas" name="imgHeaderBg" src="tbm25r" fileName="img/img_mt_bgtitle.png" xy="0,0" size="1920,90" group="n83_yfas">
       <relation target="" sidePair="width-width,top-top"/>
     </image>
-    <text id="n81_yfas" name="n81" xy="168,26" size="152,44" group="n83_yfas" fontSize="32" color="#716f7a" autoSize="none" text="配置地图"/>
+    <text id="n81_yfas" name="n81" xy="168,26" size="152,44" group="n83_yfas" fontSize="32" color="#716f7a" autoSize="none" text="配置课程"/>
     <component id="n82_yfas" name="btnReturn" src="tbm25y" fileName="btn/btnScale.xml" xy="35,24" size="101,42" group="n83_yfas">
       <Button title="  返回" icon="ui://0axy98cgmzsu6h"/>
     </component>

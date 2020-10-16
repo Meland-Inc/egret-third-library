@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" designImage="ui://0axy98cgorknbi" designImageAlpha="3" designImageLayer="1">
+  <controller name="ctrlIsPublish" pages="1,no,0,yes" selected="0">
+    <action type="change_page" fromPage="" toPage="1" controller="ctrlOpenSource" targetPage="0"/>
+  </controller>
+  <controller name="ctrlOpenSource" pages="0,no,1,yes" selected="1"/>
+  <displayList>
+    <graph id="n77_c6ye" name="imgMainBg" xy="0,0" size="1920,1080" group="n82_c6ye" type="rect" fillColor="#fff7f6f2">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <image id="n78_c6ye" name="imgContentBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="416,123" size="1129,888" group="n82_c6ye">
+      <relation target="" sidePair="center-center,top-top,bottomext-bottom"/>
+    </image>
+    <image id="n79_c6ye" name="imgHeaderBg" src="tbm25r" fileName="img/img_mt_bgtitle.png" xy="0,0" size="1920,90" group="n82_c6ye">
+      <relation target="" sidePair="width-width,top-top"/>
+    </image>
+    <text id="n80_c6ye" name="tfTitle" xy="168,26" size="152,44" group="n82_c6ye" fontSize="32" color="#716f7a" autoSize="none" bold="true" text="发布课程"/>
+    <component id="n81_c6ye" name="btnReturn" src="tbm25y" fileName="btn/btnScale.xml" xy="35,24" size="101,42" group="n82_c6ye">
+      <Button title="  返回" icon="ui://0axy98cgmzsu6h"/>
+    </component>
+    <group id="n82_c6ye" name="grpMain" xy="0,0" size="1920,1080"/>
+    <component id="n99_nav8" name="btnSelectMapIcon" src="mzsu74" fileName="btn/BtnSetMapIcon.xml" xy="445,209" size="290,285" group="n86_c6ye"/>
+    <image id="n100_nav8" name="n100" src="yfas7r" fileName="img/img_mt_mapbgframe.png" xy="440,207" size="300,288" group="n86_c6ye">
+      <relation target="n99_nav8" sidePair="left-left,top-top,width-width,height-height"/>
+    </image>
+    <group id="n86_c6ye" name="grpCover" xy="440,207" size="300,288" group="n93_c6ye"/>
+    <image id="n87_c6ye" name="imgBg" src="orknbe" fileName="img/lessonCenter/bg_mt_02.png" xy="761,206" size="749,577" group="n93_c6ye"/>
+    <loader id="n97_c6ye" name="imgTitle" xy="761,207" size="749,153" group="n93_c6ye" url="ui://0axy98cgorknbd" fill="scaleFree"/>
+    <image id="n89_c6ye" name="n89" src="pplwaq" fileName="img/lessonCenter/bg_ccdt_04.png" xy="788,207" size="172,59" group="n93_c6ye"/>
+    <text id="n90_c6ye" name="tfMapNameTitle" xy="800,215" size="146,44" group="n93_c6ye" fontSize="32" color="#feb534" align="center" vAlign="middle" leading="0" autoSize="none" text="课程名字"/>
+    <component id="n101_nav8" name="comNameInput" src="dv1icyiim" fileName="com/ComInput.xml" pkg="te1gxawo" xy="789,283" size="692,48" group="n93_c6ye">
+      <Label icon="ui://0axy98cgpplwar"/>
+    </component>
+    <component id="n105_orkn" name="comPublishConfig" src="orknbw" fileName="comLesson/ComLessonPublishConfig.xml" xy="770,367" size="735,400" group="n93_c6ye" controller="ctrlDevelop,1"/>
+    <image id="n108_orkn" name="imgPublishOptionBg" src="orknbh" fileName="img/lessonCenter/bg_mt_05.png" xy="761,803" size="750,93" group="n93_c6ye"/>
+    <text id="n109_orkn" name="tfIsOpen" xy="784,828" size="190,41" group="n93_c6ye" fontSize="30" color="#404f91" vAlign="middle" text="课程是否公开:"/>
+    <component id="n110_orkn" name="tBtnIsPublish" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="993,832" size="69,37" group="n93_c6ye">
+      <relation target="n109_orkn" sidePair="left-right"/>
+      <Button icon="ui://0axy98cgorknbu" selectedIcon="ui://0axy98cgorknbv" controller="ctrlIsPublish" page="0"/>
+    </component>
+    <component id="n96_c6ye" name="btnPublish" src="tbm25y" fileName="btn/btnScale.xml" xy="1409,921" size="104,51" group="n93_c6ye">
+      <Button title="发布" titleFontSize="24" icon="ui://0axy98cgc6ye8r"/>
+    </component>
+    <text id="n74_v8nf" name="tfIsOpenSource" xy="1269,828" size="130,41" group="n111_orkn" fontSize="30" color="#404f91" vAlign="middle" text="是否开源:"/>
+    <component id="n75_v8nf" name="tBtnIsOpenSource" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1418,832" size="69,37" group="n111_orkn">
+      <relation target="n74_v8nf" sidePair="left-right"/>
+      <Button checked="true" icon="ui://0axy98cgorknbu" selectedIcon="ui://0axy98cgorknbv" controller="ctrlOpenSource" page="1"/>
+    </component>
+    <group id="n111_orkn" name="grpOpenSource" xy="1269,828" size="218,41" group="n93_c6ye" advanced="true">
+      <gearDisplay controller="ctrlIsPublish" pages="0"/>
+    </group>
+    <group id="n93_c6ye" name="grpContent" xy="440,206" size="1073,766" advanced="true">
+      <relation target="" sidePair="center-center,top-top"/>
+    </group>
+  </displayList>
+</component>
