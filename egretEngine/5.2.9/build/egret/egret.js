@@ -13089,7 +13089,6 @@ var egret;
                     scale = 0.1;
                 }
                 this._canvasExternalScale = scale;
-                egret.lifecycle.stage.$screen.updateScreenSize();
             };
             DisplayList.$canvasScaleFactor = 1;
             DisplayList._canvasExternalScale = 1; //外部 游戏侧需要的额外缩放 和canvasScaleFactor独立开使用
@@ -23401,6 +23400,28 @@ var egret;
     }());
     egret.ByteArray = ByteArray;
     __reflect(ByteArray.prototype, "egret.ByteArray");
+})(egret || (egret = {}));
+var egret;
+(function (egret) {
+    /**性能档位 */
+    var ePerfType;
+    (function (ePerfType) {
+        ePerfType[ePerfType["high"] = 1] = "high";
+        ePerfType[ePerfType["medium"] = 2] = "medium";
+        ePerfType[ePerfType["low"] = 3] = "low";
+    })(ePerfType = egret.ePerfType || (egret.ePerfType = {}));
+    /**外部不要使用 */
+    egret.$curPerf = ePerfType.medium;
+    /**设置性能 */
+    function setPerf(tValue) {
+        egret.$curPerf = tValue;
+    }
+    egret.setPerf = setPerf;
+    /**刷新渲染尺寸 一般不需要*/
+    function refreshRenderSize() {
+        egret.lifecycle.stage.$screen.updateScreenSize();
+    }
+    egret.refreshRenderSize = refreshRenderSize;
 })(egret || (egret = {}));
 //////////////////////////////////////////////////////////////////////////////////////
 //

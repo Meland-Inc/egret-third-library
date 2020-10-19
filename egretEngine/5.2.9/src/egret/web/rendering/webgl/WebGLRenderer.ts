@@ -100,6 +100,11 @@ namespace egret.web {
          * 绘制一个显示对象
          */
         private drawDisplayObject(displayObject: DisplayObject, buffer: WebGLRenderBuffer, offsetX: number, offsetY: number, isStage?: boolean): number {
+            if (egret.$curPerf <= egret.ePerfType.high) {
+                //取整 否则坐标为小数横竖线条会变出变细
+                offsetX = Math.round(offsetX);
+                offsetY = Math.round(offsetY);
+            }
             let drawCalls = 0;
             let node: sys.RenderNode;
             let displayList = displayObject.$displayList;

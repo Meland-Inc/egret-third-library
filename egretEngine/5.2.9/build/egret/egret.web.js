@@ -4470,24 +4470,25 @@ var egret;
                     realScaleX *= scale;
                     realScaleY *= scale;
                 }
-                if (egret.Capabilities.renderMode == "canvas") {
-                    realScaleY = Math.ceil(realScaleY);
+                //高性能档位取整 解决横竖线条变出变细问题
+                if (egret.$curPerf <= egret.ePerfType.high || egret.Capabilities.renderMode == "canvas") {
+                    realScaleX = Math.ceil(realScaleX);
                     realScaleY = Math.ceil(realScaleY);
                 }
                 var m = egret.Matrix.create();
                 m.identity();
-                m.scale(displayScalex / realScaleY, diplayScaley / realScaleY);
+                m.scale(displayScalex / realScaleX, diplayScaley / realScaleY);
                 m.rotate(rotation * Math.PI / 180);
                 var transform = "matrix(" + m.a + "," + m.b + "," + m.c + "," + m.d + "," + m.tx + "," + m.ty + ")";
                 egret.Matrix.release(m);
                 canvas.style[egret.web.getPrefixStyleName("transform")] = transform;
-                egret.sys.DisplayList.$setCanvasScale(realScaleY, realScaleY);
+                egret.sys.DisplayList.$setCanvasScale(realScaleX, realScaleY);
                 this.webTouchHandler.updateScaleMode(displayScalex, diplayScaley, rotation);
                 this.webInput.$updateSize();
                 this.player.updateStageSize(stageWidth, stageHeight); //不要在这个方法后面修改属性
                 // todo
                 if (egret.nativeRender) {
-                    canvas.width = stageWidth * realScaleY;
+                    canvas.width = stageWidth * realScaleX;
                     canvas.height = stageHeight * realScaleY;
                 }
             };
@@ -7161,6 +7162,11 @@ var egret;
              * 绘制一个显示对象
              */
             WebGLRenderer.prototype.drawDisplayObject = function (displayObject, buffer, offsetX, offsetY, isStage) {
+                if (egret.$curPerf <= egret.ePerfType.high) {
+                    //取整 否则坐标为小数横竖线条会变出变细
+                    offsetX = Math.round(offsetX);
+                    offsetY = Math.round(offsetY);
+                }
                 var drawCalls = 0;
                 var node;
                 var displayList = displayObject.$displayList;

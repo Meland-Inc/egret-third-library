@@ -13973,6 +13973,20 @@ declare namespace egret {
     }
 }
 declare namespace egret {
+    /**性能档位 */
+    enum ePerfType {
+        high = 1,
+        medium = 2,
+        low = 3
+    }
+    /**外部不要使用 */
+    let $curPerf: ePerfType;
+    /**设置性能 */
+    function setPerf(tValue: ePerfType): void;
+    /**刷新渲染尺寸 一般不需要*/
+    function refreshRenderSize(): void;
+}
+declare namespace egret {
     /**
      * The Stage class represents the main drawing area.The Stage object is not globally accessible. You need to access
      * it through the stage property of a DisplayObject instance.<br/>

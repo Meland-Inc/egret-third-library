@@ -220,7 +220,6 @@ namespace egret.sys {
             }
 
             this._canvasExternalScale = scale;
-            lifecycle.stage.$screen.updateScreenSize();
         }
     }
 }
