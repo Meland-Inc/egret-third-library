@@ -19,7 +19,8 @@
     <image id="jo99m" name="bg_spck_01.png" path="/teachPlan/img/" scale="9grid" scale9grid="38,33,76,66"/>
     <component id="jo99n" name="btnOption.xml" path="/teachPlan/btn/"/>
     <component id="jo99p" name="btnContinuePlay.xml" path="/teachPlan/btn/"/>
-    <component id="ulbxq" name="ComLadContainer.xml" path="/teachPlan/com/"/>
+    <component id="ulbxq" name="ComLadContainer.xml" path="/teachPlan/com/" exported="true"/>
+    <image id="mdgnr" name="failloading.png" path="/teachPlan/img/"/>
   </resources>
   <publish name="business"/>
 </packageDescription>
