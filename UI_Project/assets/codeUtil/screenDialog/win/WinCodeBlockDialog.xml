@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://i25v0ebkfzlu3y" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlType" pages="3,unknow,1,showText,2,question,0,selection" selected="0"/>
+  <controller name="ctrlType" pages="3,unknow,1,showText,2,question,0,selection" selected="3"/>
   <displayList>
     <list id="n2_j5jv" name="lstSelection" xy="953,728" size="499,137" layout="flow_hz" overflow="scroll" lineGap="10" colGap="20" defaultItem="ui://nyy10939qylxd" align="right" vAlign="bottom">
       <gearDisplay controller="ctrlType" pages="0"/>
@@ -39,6 +39,12 @@
     <component id="n25_vn3s" name="btnForceClose" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1768,15" size="136,53">
       <relation target="" sidePair="right-right,top-top"/>
       <Button title="强制关闭" titleColor="#ffffff" titleFontSize="20" icon="ui://te1gxawoqylxcyijf" sound="ui://nyy10939vn3sj"/>
+    </component>
+    <graph id="n31_lkrg" name="gphLadContainer" xy="334,104" size="1252,637" type="rect" lineSize="0" fillColor="#00ffffff">
+      <relation target="n29_lkrg" sidePair="width-width,height-height,center-center,middle-middle"/>
+    </graph>
+    <component id="n29_lkrg" name="comLadContainer" src="ulbxq" fileName="teachPlan/com/ComLadContainer.xml" pkg="82tadhh2" xy="334,104">
+      <relation target="" sidePair="center-center,middle-middle"/>
     </component>
   </displayList>
   <transition name="imgDownEffect"/>
