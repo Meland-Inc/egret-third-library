@@ -11,9 +11,9 @@
     <component id="h6ef7" name="comPlayerIcon.xml" path="/mapPreview/com/" exported="true"/>
     <image id="kdkf8" name="img_red.png" path="/mapPreview/img/" scale="9grid" scale9grid="7,7,14,14" duplicatePadding="true"/>
     <component id="n3n79" name="ComCircleTPLoading.xml" path="/tpLoading/" exported="true"/>
-    <image id="n3n7h" name="img_circle.png" path="/tpLoading/" scale="9grid" scale9grid="10,10,1060,1060" duplicatePadding="true"/>
     <image id="n3n7i" name="imgBlack.png" path="/tpLoading/" duplicatePadding="true"/>
     <component id="n3n7j" name="ComBlackAlphaTPLoading.xml" path="/tpLoading/" exported="true"/>
+    <image id="bueyo" name="img_black_circle.png" path="/tpLoading/" scale="9grid" scale9grid="9,9,110,110" duplicatePadding="true"/>
   </resources>
   <publish name="other"/>
 </packageDescription>

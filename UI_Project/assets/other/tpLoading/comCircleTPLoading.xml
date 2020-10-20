@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080">
   <displayList>
-    <image id="n15_n3n7" name="imgCircle" src="n3n7h" fileName="tpLoading/新建项目 (7).png" xy="0,-420" pivot="0.5,0.5" size="1920,1920" aspect="true">
+    <image id="n15_n3n7" name="imgCircle" src="bueyo" fileName="tpLoading/新建项目 (10).png" xy="0,-420" pivot="0.5,0.5" size="1920,1920" aspect="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <image id="n17_n3n7" name="imgLeft" src="n3n7i" fileName="imgEdge.png" xy="0,-420" size="5,1920">
+    <image id="n17_n3n7" name="imgLeft" src="n3n7i" fileName="tpLoading/imgBlack.png" xy="0,-420" size="5,1920">
       <relation target="" sidePair="height-height"/>
       <relation target="n15_n3n7" sidePair="rightext-left"/>
     </image>
-    <image id="n18_n3n7" name="imgTop" src="n3n7i" fileName="imgEdge.png" xy="0,-420" size="1920,5">
+    <image id="n18_n3n7" name="imgTop" src="n3n7i" fileName="tpLoading/imgBlack.png" xy="0,-420" size="1920,5">
       <relation target="" sidePair="width-width"/>
       <relation target="n15_n3n7" sidePair="bottomext-top"/>
     </image>
-    <image id="n19_n3n7" name="imgBottom" src="n3n7i" fileName="imgEdge.png" xy="0,1495" size="1921,5">
+    <image id="n19_n3n7" name="imgBottom" src="n3n7i" fileName="tpLoading/imgBlack.png" xy="0,1495" size="1921,5">
       <relation target="" sidePair="width-width,bottomext-bottom"/>
       <relation target="n15_n3n7" sidePair="topext-bottom"/>
     </image>
-    <image id="n20_n3n7" name="imgRight" src="n3n7i" fileName="imgEdge.png" xy="1915,-420" size="5,1920">
+    <image id="n20_n3n7" name="imgRight" src="n3n7i" fileName="tpLoading/imgBlack.png" xy="1915,-420" size="5,1920">
       <relation target="" sidePair="height-height,rightext-right"/>
       <relation target="n15_n3n7" sidePair="leftext-right"/>
     </image>
