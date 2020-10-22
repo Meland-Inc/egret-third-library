@@ -298,7 +298,10 @@ function uglify(sourceFile) {
 
         //属性白名单
         //hasOwnProperty使用字符串反射属性，不能混淆，***cell中最常见这个
-        let propertiesReserved = [];
+        let propertiesReserved = [
+            //tween等方法中对象属性传入给引擎使用的 对象名需要加入白名单
+            'onChange', 'onChangeObj', 'loop'
+        ];
         let reflectReg = /.hasOwnProperty\("([^"]+)"\)/g;
         var r = null;
         while (r = reflectReg.exec(sourceCode)) {
