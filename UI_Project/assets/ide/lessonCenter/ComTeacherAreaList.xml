@@ -2,7 +2,7 @@
 <component size="250,595">
   <controller name="ctrlAreaList" pages="1,show,0,hide" selected="0"/>
   <displayList>
-    <component id="n12_pbxd" name="n5" src="pbxd13564w3" fileName="lessonCenter/btn/btnTeacherShowHideListArea.xml" xy="249,245">
+    <component id="n12_pbxd" name="n5" src="pbxd13564w3" fileName="lessonCenter/btn/btnTeacherShowHideListArea.xml" xy="250,245">
       <relation target="" sidePair="middle-middle"/>
       <relation target="n10_fie1" sidePair="left-right"/>
       <Button controller="ctrlAreaList" page="0"/>
