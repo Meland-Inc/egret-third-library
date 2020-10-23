@@ -614,8 +614,8 @@
     <image id="11tcewcyioc" name="bg_quyuliebiao_01.png" path="/lessonCenter/img/"/>
     <image id="11tcewcyiod" name="bg_quyuliebiao_02.png" path="/lessonCenter/img/"/>
     <image id="11tcewcyioe" name="bg_quyuliebiao_03.png" path="/lessonCenter/img/"/>
-    <image id="11tcewcyiof" name="bg_quyuliebiao_04.png" path="/lessonCenter/img/"/>
-    <image id="11tcewcyiog" name="bg_quyuliebiao_05.png" path="/lessonCenter/img/"/>
+    <image id="11tcewcyiof" name="bg_quyuliebiao_04.png" path="/lessonCenter/img/" scale="9grid" scale9grid="18,16,247,118"/>
+    <image id="11tcewcyiog" name="bg_quyuliebiao_05.png" path="/lessonCenter/img/" scale="9grid" scale9grid="19,28,230,86"/>
     <image id="11tcewcyioh" name="bg_quyuliebiao_06.png" path="/lessonCenter/img/" scale="9grid" scale9grid="22,16,44,32"/>
     <image id="11tcewcyioi" name="icon_quyuliebiao_04.png" path="/lessonCenter/img/"/>
     <image id="11tcewcyioj" name="icon_quyulieibao_01.png" path="/lessonCenter/img/"/>
@@ -657,6 +657,57 @@
     <component id="hvnv13564vs" name="spArrow.xml" path="/lessonCenter/com/"/>
     <component id="hvnv13564vt" name="rBtnSpawnTerrainType.xml" path="/lessonCenter/btn/"/>
     <component id="m2sg13564vu" name="labTextVScroll.xml" path="/lessonCenter/com/"/>
+    <component id="bljg13564vv" name="btnShowHideArealtem.xml" path="/lessonCenter/btn/"/>
+    <component id="bljg13564vw" name="btnAreaProcessItem.xml" path="/lessonCenter/btn/"/>
+    <component id="pbxd13564vx" name="ComTeacherAreaList.xml" path="/lessonCenter/" exported="true"/>
+    <image id="pbxd13564vy" name="icon_jiantou.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564vz" name="icon_jiantou_2.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564w0" name="icon_jiantou_3.png" path="/lessonCenter/img/"/>
+    <component id="pbxd13564w1" name="btnTeacherAreaItem.xml" path="/lessonCenter/btn/"/>
+    <component id="pbxd13564w2" name="btnTeacherShowHideArealtem.xml" path="/lessonCenter/btn/"/>
+    <component id="pbxd13564w3" name="btnTeacherShowHideListArea.xml" path="/lessonCenter/btn/"/>
+    <image id="pbxd13564w4" name="btn_transfer_1.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564w5" name="btn_transfer_2.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564w6" name="btn_transfer_3.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564w7" name="btn_transfer_4.png" path="/lessonCenter/img/"/>
+    <component id="pbxd13564w8" name="btnTeacherAreaProcessItem.xml" path="/lessonCenter/btn/"/>
+    <image id="pbxd13564w9" name="bg_floor_1.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564wa" name="bg_floor_2.png" path="/lessonCenter/img/" scale="9grid" scale9grid="14,17,199,38"/>
+    <image id="pbxd13564wb" name="bg_floor_3.png" path="/lessonCenter/img/" scale="9grid" scale9grid="57,106,116,196"/>
+    <image id="pbxd13564wc" name="bg_floor_4.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564wd" name="biaoshi_1.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564we" name="biaoshi_10.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564wf" name="biaoshi_2.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564wg" name="biaoshi_3.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564wh" name="biaoshi_4.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564wi" name="biaoshi_5.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564wj" name="biaoshi_6.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564wk" name="biaoshi_7.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564wl" name="biaoshi_8.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564wm" name="biaoshi_9.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564wn" name="diban_1.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564wo" name="diban_10.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564wp" name="diban_11.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564wq" name="diban_2.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564wr" name="diban_3.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564ws" name="diban_4.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564wt" name="diban_5.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564wu" name="diban_6.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564wv" name="diban_7.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564ww" name="diban_8.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564wx" name="diban_9.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564wy" name="bg_frame_1.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564wz" name="icon_jiantou_4.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564x0" name="icon_jiantou_5.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564x1" name="bg_floor_5.png" path="/lessonCenter/img/" scale="9grid" scale9grid="61,52,122,304"/>
+    <image id="pbxd13564x2" name="bg_floor_6.png" path="/lessonCenter/img/" scale="9grid" scale9grid="61,12,122,12"/>
+    <image id="pbxd13564x3" name="bg_floor_7.png" path="/lessonCenter/img/" scale="9grid" scale9grid="61,43,122,50"/>
+    <image id="pbxd13564x4" name="bg_floor_8.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564x5" name="icon_add_01.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564x6" name="btn_transfer_5.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564x7" name="btn_transfer_6.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564x8" name="icon_jiantou_6.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564x9" name="icon_jiantou_7.png" path="/lessonCenter/img/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>

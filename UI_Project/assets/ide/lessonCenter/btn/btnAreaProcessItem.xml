@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="272,65" extention="Button" designImage="ui://ti9jag5t11tcewcyiom" designImageOffsetX="287" designImageOffsetY="-816" designImageAlpha="0">
+  <controller name="button" pages="2,up,3,down,4,over" selected="1"/>
+  <controller name="ctrlPointType" pages="0,point1,1,point2,2,point3,3,point4,4,point5,5,point6,6,point7,7,point8,8,point9,9,point10" selected="3"/>
+  <displayList>
+    <image id="n58_pbxd" name="bgImg" src="pbxd13564x4" fileName="lessonCenter/img/bg_floor_8.png" xy="46,8"/>
+    <text id="n54_bljg" name="contentText" xy="84,11" size="134,42" fontSize="16" color="#ee7249" vAlign="middle" leading="0" autoSize="none" text="点击xx回答他的问题">
+      <gearColor controller="button" pages="3" values="#ee7249,#d78423" default="#747474,#d78423"/>
+    </text>
+    <loader id="n59_pbxd" name="arrowsImg" xy="228,25" size="8,14" url="ui://ti9jag5tpbxd13564x9" autoSize="true">
+      <gearIcon controller="button" pages="3" values="ui://ti9jag5tpbxd13564x9" default="ui://ti9jag5tpbxd13564x8"/>
+    </loader>
+    <loader id="n55_pbxd" name="iconImg" xy="14,1" size="118,153" scale="0.5,0.5" url="ui://ti9jag5tpbxd13564wh" autoSize="true">
+      <gearIcon controller="ctrlPointType" pages="1,2,3,4,5,6,7,8,9" values="ui://ti9jag5tpbxd13564wf|ui://ti9jag5tpbxd13564wg|ui://ti9jag5tpbxd13564wh|ui://ti9jag5tpbxd13564wi|ui://ti9jag5tpbxd13564wj|ui://ti9jag5tpbxd13564wk|ui://ti9jag5tpbxd13564wl|ui://ti9jag5tpbxd13564wm|ui://ti9jag5tpbxd13564we" default="ui://ti9jag5tpbxd13564wd"/>
+    </loader>
+  </displayList>
+  <Button mode="Radio"/>
+</component>
