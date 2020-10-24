@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="250,595">
+<component size="251,595">
   <controller name="ctrlAreaList" pages="1,show,0,hide" selected="0"/>
   <displayList>
-    <component id="n12_pbxd" name="n5" src="pbxd13564w3" fileName="lessonCenter/btn/btnTeacherShowHideListArea.xml" xy="250,245">
+    <component id="n12_pbxd" name="n5" src="pbxd13564w3" fileName="lessonCenter/btn/btnTeacherShowHideListArea.xml" xy="251,245">
       <relation target="" sidePair="middle-middle"/>
       <relation target="n10_fie1" sidePair="left-right"/>
       <Button controller="ctrlAreaList" page="0"/>
     </component>
-    <image id="n13_pbxd" name="bg" src="pbxd13564w9" fileName="lessonCenter/img/bg_floor_1.png" xy="0,0" group="n10_fie1"/>
+    <image id="n13_pbxd" name="bg" src="pbxd13564w9" fileName="lessonCenter/img/bg_floor_1.png" xy="0,0" size="251,595" group="n10_fie1"/>
     <list id="n6_fie1" name="lstAreaList" xy="0,7" size="250,580" group="n10_fie1" overflow="scroll" scrollBarFlags="4" scrollBarRes="ui://ti9jag5tso8vt7r," lineGap="4" defaultItem="ui://ti9jag5tpbxd13564w1" scrollItemToViewOnClick="false">
       <relation target="" sidePair="height-height"/>
       <item/>
       <item/>
     </list>
-    <group id="n10_fie1" name="root" xy="0,0" size="250,595" advanced="true">
+    <group id="n10_fie1" name="root" xy="0,0" size="251,595" advanced="true">
       <gearXY controller="ctrlAreaList" pages="1,0" values="0,0|-250,0" tween="true"/>
     </group>
   </displayList>
