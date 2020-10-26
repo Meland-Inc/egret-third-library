@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="230,71" extention="Button" designImage="ui://ti9jag5t11tcewcyiom" designImageOffsetX="287" designImageOffsetY="-816" designImageAlpha="0">
-  <controller name="button" pages="2,up,3,down,4,over" selected="1"/>
+  <controller name="button" pages="2,up,3,down,4,over" selected="0"/>
   <controller name="ctrlPointType" pages="1,point1,2,point2,3,point3,4,point4,5,point5,6,point6,7,point7,8,point8,9,point9,10,point10" selected="0"/>
-  <controller name="ctrlFloorType" pages="0,none,1,point1,12,point2,13,point3,14,point4,15,point5,16,point6,17,point7,18,point8,19,point9,20,point10" selected="0"/>
+  <controller name="ctrlFloorType" pages="0,none,1,point1,12,point2,13,point3,14,point4,15,point5,16,point6,17,point7,18,point8,19,point9,20,point10" selected="1"/>
   <displayList>
-    <loader id="n55_pbxd" name="floorImg" xy="37,11" size="181,51" url="ui://ti9jag5tpbxd13564wp" shrinkOnly="true" autoSize="true">
+    <loader id="n55_pbxd" name="floorImg" xy="37,11" size="183,53" url="ui://ti9jag5tpbxd13564wn" shrinkOnly="true" autoSize="true">
       <gearIcon controller="ctrlFloorType" pages="0,12,13,14,15,16,17,18,19,20" values="ui://ti9jag5tpbxd13564wp|ui://ti9jag5tpbxd13564wq|ui://ti9jag5tpbxd13564wr|ui://ti9jag5tpbxd13564ws|ui://ti9jag5tpbxd13564wt|ui://ti9jag5tpbxd13564wu|ui://ti9jag5tpbxd13564wv|ui://ti9jag5tpbxd13564ww|ui://ti9jag5tpbxd13564wx|ui://ti9jag5tpbxd13564wo" default="ui://ti9jag5tpbxd13564wn"/>
     </loader>
     <loader id="n57_pbxd" name="iconImg" xy="14,4" size="43,59" url="ui://ti9jag5tpbxd13564wd" autoSize="true">
       <gearIcon controller="ctrlPointType" pages="2,3,4,5,6,7,8,9,10" values="ui://ti9jag5tpbxd13564wf|ui://ti9jag5tpbxd13564wg|ui://ti9jag5tpbxd13564wh|ui://ti9jag5tpbxd13564wi|ui://ti9jag5tpbxd13564wj|ui://ti9jag5tpbxd13564wk|ui://ti9jag5tpbxd13564wl|ui://ti9jag5tpbxd13564wm|ui://ti9jag5tpbxd13564we" default="ui://ti9jag5tpbxd13564wd"/>
     </loader>
-    <text id="n54_bljg" name="contentText" xy="72,13" size="111,49" fontSize="16" color="#ffffff" vAlign="middle" leading="1" autoSize="none" strokeColor="#7c6e47" text="点击xx回答他的问题">
+    <text id="n54_bljg" name="contentText" xy="72,18" size="111,38" fontSize="16" color="#ffffff" vAlign="middle" leading="1" autoSize="none" strokeColor="#d78423" text="点击xx回答他的问题的">
       <gearColor controller="ctrlFloorType" pages="1,12,13,14,15,16,17,18,19,20" values="#ffffff,#d78423|#ffffff,#bf3e3a|#ffffff,#bf6729|#ffffff,#3aa26f|#ffffff,#4da6bf|#ffffff,#5490cd|#ffffff,#736ad0|#ffffff,#a161cf|#ffffff,#d46b81|#ffffff,#838383" default="#ffffff,#7c6e47"/>
     </text>
     <image id="n58_pbxd" name="imgSelect" src="pbxd13564wy" fileName="lessonCenter/img/bg_frame_1.png" xy="13,2">
