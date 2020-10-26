@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="250,70" extention="Button" designImage="ui://ti9jag5t11tcewcyiom" designImageOffsetX="287" designImageOffsetY="-816" designImageAlpha="0">
+  <controller name="button" pages="2,up,3,down,4,over" selected="0"/>
+  <controller name="ctrlListShow" pages="0,hide,1,show" selected="0"/>
+  <controller name="ctrlType" pages="0,single,1,team" selected="0"/>
+  <displayList>
+    <loader id="n57_pbxd" name="imgBg" xy="10,4" size="230,61" touchable="false" url="ui://ti9jag5tpbxd13564wa" fill="scaleFree">
+      <gearIcon controller="button" pages="3" values="ui://ti9jag5tpbxd13564wb" default="ui://ti9jag5tpbxd13564wa"/>
+      <relation target="n47_bljg" sidePair="bottomext-bottom"/>
+    </loader>
+    <text id="n4_fie1" name="title" xy="12,16" size="227,34" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" strokeColor="#6d6141" text="title">
+      <gearXY controller="ctrlListShow" pages="0" values="12,16" default="12,7"/>
+      <gearColor controller="button" pages="2" values="#ffffff,#6d6141" default="#ffffff,#e48509"/>
+    </text>
+    <component id="n58_pbxd" name="btnShowHide" src="pbxd13564w2" fileName="lessonCenter/btn/btnTeacherShowHideArealtem.xml" xy="12,17" size="229,34" group="n52_bljg"/>
+    <group id="n52_bljg" name="grpShowHide" xy="12,17" size="229,34" advanced="true">
+      <gearXY controller="ctrlListShow" pages="0" values="12,17" default="12,7"/>
+    </group>
+    <list id="n47_bljg" name="processPointList" xy="10,53" size="230,0" layout="flow_hz" selectionMode="none" overflow="hidden" defaultItem="ui://ti9jag5tpbxd13564w8">
+      <gearDisplay controller="ctrlListShow" pages="1"/>
+      <gearXY controller="ctrlListShow" pages="0" values="10,53" default="10,116"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n46_bljg" name="btnTransfer" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="75,49" size="101,62" group="n59_pbxd">
+      <gearDisplay controller="ctrlType" pages="0,1"/>
+      <gearXY controller="ctrlType" pages="0" values="75,49" default="20,49"/>
+      <gearIcon controller="button" pages="2" values="ui://ti9jag5tpbxd13564w5" default="ui://ti9jag5tpbxd13564w4"/>
+      <Button icon="ui://ti9jag5tpbxd13564w5"/>
+    </component>
+    <component id="n54_pbxd" name="btnAllTransfer" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="131,49" size="101,62" group="n59_pbxd">
+      <gearDisplay controller="ctrlType" pages="1"/>
+      <gearIcon controller="button" pages="2,3" values="ui://ti9jag5tpbxd13564w7|ui://ti9jag5tpbxd13564w6" default="ui://ti9jag5tpbxd13564w4"/>
+      <Button icon="ui://ti9jag5tpbxd13564w7"/>
+    </component>
+    <group id="n59_pbxd" name="grpTransfer" xy="75,49" size="157,62" advanced="true">
+      <gearDisplay controller="ctrlListShow" pages="1"/>
+    </group>
+  </displayList>
+  <Button mode="Radio"/>
+  <relation target="n57_pbxd" sidePair="bottomext-bottom"/>
+</component>
