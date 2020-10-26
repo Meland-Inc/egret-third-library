@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="t573fj5b">
+<packageDescription id="t573fj5b" jpegQuality="80" compressPNG="true">
   <resources>
     <image id="s45w0" name="img_code_hs_3.png" path="/img/" scale="9grid" scale9grid="43,13,38,26"/>
     <image id="s45w1" name="img_code_jc_2.png" path="/img/" scale="9grid" scale9grid="23,10,16,20"/>
@@ -230,6 +230,9 @@
     <image id="io1m6d" name="icon_junior_right_top.png" path="/img/"/>
     <image id="io1m6e" name="icon_junior_wait.png" path="/img/"/>
     <component id="io1m6f" name="comTaskDetailArgs.xml" path="/codeBlock/" exported="true"/>
+    <component id="uqqe6g" name="CodeBlockArgStruct.xml" path="/codeBlock/codeBlockArg/" exported="true"/>
+    <image id="uqqe6h" name="icon_code_bubble_1.png" path="/img/"/>
+    <image id="n4k86i" name="icon_code_bubble_2.png" path="/img/"/>
   </resources>
   <publish name="code"/>
 </packageDescription>

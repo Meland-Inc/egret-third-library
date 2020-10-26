@@ -18,9 +18,9 @@
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
     <component id="n1_flp7" name="container" src="i6xe2d" fileName="com/Container.xml" xy="19,0" size="46,44" restrictSize="0,0,44,44"/>
-    <loader id="n4_kt4s" name="btnHint" xy="6,3" size="38,38" url="ui://t573fj5bs45wx">
+    <loader id="n4_kt4s" name="btnHint" xy="6,3" size="38,38" url="ui://t573fj5bn4k86i">
       <gearDisplay controller="ctrlValueType" pages="0,2,3,4,5,6,7,8,9,10,11"/>
-      <gearIcon controller="ctrlValueType" pages="1,0,2,3,4,5,6,7,8,9,10,11" values="|ui://t573fj5bs45wz|ui://t573fj5bs45wv|ui://t573fj5bs45wr|ui://t573fj5bs45wx|ui://t573fj5bs45w10|ui://t573fj5bs45wt|ui://t573fj5bs45wn|ui://t573fj5bs45wo|ui://t573fj5bs45wp|ui://t573fj5bs45wq|ui://t573fj5bs45wx"/>
+      <gearIcon controller="ctrlValueType" pages="1,0,2,3,4,5,6,7,8,9,10,11" values="|ui://t573fj5bs45wz|ui://t573fj5bs45wv|ui://t573fj5bs45wr|ui://t573fj5bs45wx|ui://t573fj5bs45w10|ui://t573fj5bs45wt|ui://t573fj5bs45wn|ui://t573fj5bs45wo|ui://t573fj5bs45wp|ui://t573fj5bs45wq|ui://t573fj5bn4k86i"/>
       <relation target="n3_yrfu" sidePair="left-left"/>
     </loader>
   </displayList>

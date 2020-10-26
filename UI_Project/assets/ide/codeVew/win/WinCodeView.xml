@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" opaque="false" designImage="ui://thvmj7voen7j4cyij9" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlStatus" pages="2,none,1,clone,0,elem,6,res,8,cannotEdit" selected="2">
+  <controller name="ctrlStatus" pages="2,none,1,clone,0,elem,6,res,8,cannotEdit" selected="4">
     <action type="change_page" fromPage="" toPage="2" objectId="n32_g61s" controller="ctrlStatus" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n32_g61s" controller="ctrlStatus" targetPage="1"/>
     <action type="change_page" fromPage="" toPage="6" objectId="n32_g61s" controller="ctrlStatus" targetPage="4"/>
@@ -15,7 +15,7 @@
       <gearDisplay controller="ctrlStatus" pages="0"/>
       <relation target="n1_s45w" sidePair="width-width,left-left"/>
     </component>
-    <component id="n37_puqx" name="comCodeblockBtn" src="puqxwcyima" fileName="codeVew/com/ComCodeblockBtn.xml" xy="0,0">
+    <component id="n37_puqx" name="comCodeblockBtn" src="puqxwcyima" fileName="codeVew/com/ComCodeblockBtn.xml" xy="0,0" controller="ctrlStatus,0">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
     <component id="n3_s45w" name="comCategoryList" src="s45w1u" fileName="codeVew/com/ComCategoryList.xml" xy="0,-1" size="1920,1080" group="n16_en7j">
@@ -49,6 +49,7 @@
     <component id="n34_n82e" name="comQuillInput" src="n82ewcyil3" fileName="codeVew/com/ComQuillInput.xml" xy="1116,351" size="672,375" group="n16_en7j">
       <relation target="n1_s45w" sidePair="center-center,middle-middle"/>
     </component>
+    <component id="n41_uqqe" name="comOperateBubbleEditor" src="uqqewcyioe" fileName="codeVew/com/ComOperateBubbleEditor.xml" xy="1300,351" group="n16_en7j"/>
     <component id="n35_fkya" name="comFuncNameInput" src="fkyawcyild" fileName="codeVew/com/ComFuncNameInput.xml" xy="954,1" size="966,1082" group="n16_en7j" visible="false">
       <relation target="" sidePair="bottomext-bottom,rightext-right"/>
       <relation target="n1_s45w" sidePair="left-left,top-top"/>
@@ -63,7 +64,7 @@
       <gearDisplay controller="ctrlStatus" pages="0"/>
       <relation target="n1_s45w" sidePair="center-center,middle-middle"/>
     </component>
-    <component id="n32_g61s" name="comEmptyClone" src="hl7ywcyijw" fileName="ideCommon/com/comEmptyCloneEntity.xml" xy="1719,0" controller="ctrlStatus,1">
+    <component id="n32_g61s" name="comEmptyClone" src="hl7ywcyijw" fileName="ideCommon/com/comEmptyCloneEntity.xml" xy="1719,0" controller="ctrlStatus,7">
       <gearDisplay controller="ctrlStatus" pages="2,1,6,8"/>
       <relation target="" sidePair="height-height,right-right"/>
     </component>

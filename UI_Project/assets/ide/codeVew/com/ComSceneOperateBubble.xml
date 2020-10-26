@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="130,228" pivot="0.5,0.5" opaque="false" designImage="ui://thvmj7voh7ca4cyik8" designImageOffsetX="-330" designImageOffsetY="-63" designImageAlpha="0">
+  <controller name="ctrlDir" exported="true" pages="0,left,1,center,2,right" selected="0"/>
+  <controller name="ctrlType" exported="true" pages="0,get,1,give,2,exchange" selected="0"/>
+  <controller name="ctrlArrow" pages="0,normal,1,large" selected="0"/>
+  <displayList>
+    <loader id="n17_lj25" name="ladBg" xy="0,66" pivot="0.5,0.5" size="130,121" url="ui://ti9jag5tlj25wcyip7" align="center" vAlign="middle" fill="scaleFree">
+      <gearXY controller="ctrlType" pages="0,1,2" values="0,66|0,66|0,66"/>
+      <gearSize controller="ctrlType" pages="0,1,2" values="130,121,1,1|130,121,1,1|255,121,1,1"/>
+    </loader>
+    <loader id="n27_lj25" name="ladLeft" xy="36,170" size="82,56" group="n31_8u9j" url="ui://ti9jag5tlj25wcyipf" autoSize="true">
+      <gearDisplay controller="ctrlDir" pages="0"/>
+      <gearXY controller="ctrlType" pages="0,1,2" values="36,170|37,170|149,171"/>
+      <gearSize controller="ctrlDir" pages="0,1,2" values="82,56,1,1|136,86,1,1|82,56,-1,1"/>
+      <gearIcon controller="ctrlArrow" pages="0" values="ui://ti9jag5tlj25wcyipf" default="ui://ti9jag5tlj25wcyipb"/>
+    </loader>
+    <loader id="n18_lj25" name="ladCenter" xy="42,169" size="35,58" group="n31_8u9j" url="ui://ti9jag5tlj25wcyip8">
+      <gearDisplay controller="ctrlDir" pages="1"/>
+      <gearXY controller="ctrlType" pages="0,1,2" values="42,169|42,169|110,170"/>
+    </loader>
+    <loader id="n25_lj25" name="ladRight" xy="91,170" size="82,56" group="n31_8u9j" url="ui://ti9jag5tlj25wcyipf" autoSize="true">
+      <gearDisplay controller="ctrlDir" pages="2"/>
+      <gearXY controller="ctrlArrow" pages="0,1" values="91,170|91,171"/>
+      <gearSize controller="ctrlDir" pages="0,1,2" values="82,56,1,1|136,86,1,1|82,56,-1,1"/>
+      <gearIcon controller="ctrlArrow" pages="0" values="ui://ti9jag5tlj25wcyipf" default="ui://ti9jag5tlj25wcyipb"/>
+    </loader>
+    <group id="n31_8u9j" name="grpArrow" xy="36,169" size="137,58" advanced="true" collapsed="true"/>
+    <loader id="n2_qrzb" name="ladIcon" xy="35,0" pivot="0.5,0.5" size="59,62" url="ui://ti9jag5tqrzbwcyior" autoSize="true">
+      <gearXY controller="ctrlType" pages="0,1,2" values="35,0|35,0|98,0"/>
+      <gearIcon controller="ctrlType" pages="0,1,2" values="ui://ti9jag5tqrzbwcyior|ui://ti9jag5tqrzbwcyioq|ui://ti9jag5tqrzbwcyios"/>
+    </loader>
+    <component id="n24_lj25" name="labGetItem" src="8u9jwcyipg" fileName="codeVew/com/ComOperateBubbleItemIcon.xml" xy="32,80" group="n5_qrzb"/>
+    <text id="n3_qrzb" name="tfGetNum" xy="44,143" size="40,40" group="n5_qrzb" fontSize="32" align="center" autoSize="none" bold="true" autoClearText="true" text="99"/>
+    <group id="n5_qrzb" name="grpGet" xy="32,80" size="64,103" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlType" pages="0"/>
+    </group>
+    <component id="n33_8u9j" name="labGiveItem" src="8u9jwcyipg" fileName="codeVew/com/ComOperateBubbleItemIcon.xml" xy="32,80" size="64,64" group="n8_qrzb"/>
+    <text id="n6_qrzb" name="tfGiveNum" xy="44,143" size="40,40" group="n8_qrzb" fontSize="32" align="center" autoSize="none" bold="true" autoClearText="true" text="99"/>
+    <group id="n8_qrzb" name="grpGive" xy="32,80" size="64,103" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlType" pages="1"/>
+    </group>
+    <component id="n34_8u9j" name="labExchangeItem1" src="8u9jwcyipg" fileName="codeVew/com/ComOperateBubbleItemIcon.xml" xy="36,80" size="64,64" group="n11_qrzb"/>
+    <text id="n9_qrzb" name="tfExchangeNum1" xy="48,144" size="40,40" group="n11_qrzb" fontSize="32" align="center" autoSize="none" bold="true" autoClearText="true" text="99"/>
+    <loader id="n14_qrzb" name="ladExchangeIcon" xy="112,106" size="30,30" group="n11_qrzb" url="ui://ti9jag5tqrzbwcyiop"/>
+    <component id="n35_8u9j" name="labExchangeItem2" src="8u9jwcyipg" fileName="codeVew/com/ComOperateBubbleItemIcon.xml" xy="155,80" size="64,64" group="n11_qrzb"/>
+    <text id="n12_qrzb" name="tfExchangeNum2" xy="167,144" size="40,40" group="n11_qrzb" fontSize="32" align="center" autoSize="none" bold="true" autoClearText="true" text="99"/>
+    <group id="n11_qrzb" name="grpExchange" xy="36,80" size="183,104" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlType" pages="2"/>
+    </group>
+    <image id="n30_n4k8" name="imgDisable" src="qrzbwcyioo" fileName="codeVew/img/operateBubble/icon_qipao_04.png" xy="32,144" hideByEditor="true">
+      <gearXY controller="ctrlType" pages="0,1,2" values="32,144|32,144|94,144"/>
+    </image>
+  </displayList>
+  <relation target="n17_lj25" sidePair="width-width"/>
+</component>
