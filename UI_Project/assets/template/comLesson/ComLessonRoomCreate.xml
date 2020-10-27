@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://0axy98cgorknbk" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlIsManor" pages="0,no,1,yes" selected="1"/>
+  <controller name="ctrlIsManor" pages="0,no,1,yes" selected="0"/>
+  <controller name="ctrlDevelop" pages="1,no,0,yes" selected="1"/>
   <displayList>
     <graph id="n46_yfas" name="n46" xy="0,0" size="1920,1080" group="n51_yfas" type="rect" fillColor="#fff7f6f2">
       <relation target="" sidePair="width-width,height-height"/>
@@ -39,12 +40,12 @@
     <component id="n72_yfas" name="btnCreate" src="tbm25y" fileName="btn/btnScale.xml" xy="1282,889" size="104,53" group="n65_yfas">
       <Button title="创建" icon="ui://0axy98cgyfas8k"/>
     </component>
-    <image id="n79_orkn" name="imgBg2" src="orknbh" fileName="img/lessonCenter/bg_mt_05.png" xy="851,461" size="535,277" group="n92_orkn">
+    <image id="n79_orkn" name="imgBg2" src="orknbh" fileName="img/lessonCenter/bg_mt_05.png" xy="851,461" size="535,62" group="n92_orkn">
       <gearSize controller="ctrlIsManor" pages="1" values="535,277,1,1" default="535,62,1,1"/>
     </image>
     <text id="n80_orkn" name="tfIsManorLevel" xy="875,471" size="182,41" group="n92_orkn" fontSize="30" color="#a65200" align="center" vAlign="middle" text="是否领地关卡"/>
     <component id="n82_orkn" name="tBtnManorLevel" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1296,475" size="69,37" group="n92_orkn">
-      <Button checked="true" icon="ui://0axy98cgpw6y9o" selectedIcon="ui://0axy98cgpw6y9p" controller="ctrlIsManor" page="1"/>
+      <Button icon="ui://0axy98cgpw6y9o" selectedIcon="ui://0axy98cgpw6y9p" controller="ctrlIsManor" page="1"/>
     </component>
     <text id="n83_orkn" name="tfManorGenerateType" xy="892,534" size="243,37" group="n91_orkn" fontSize="26" color="#008ccd" vAlign="middle" autoSize="none" text="领地生成方式"/>
     <component id="n84_orkn" name="cbManorType" src="mzsu6t" fileName="btn/CombCreateType.xml" xy="871,572" size="492,48" group="n91_orkn">
@@ -69,7 +70,9 @@
     <group id="n91_orkn" name="grpManorConfig" xy="871,534" size="492,186" group="n92_orkn" advanced="true">
       <gearDisplay controller="ctrlIsManor" pages="1"/>
     </group>
-    <group id="n92_orkn" name="grpManor" xy="851,461" size="535,277" group="n65_yfas" advanced="true"/>
+    <group id="n92_orkn" name="grpManor" xy="851,461" size="535,259" group="n65_yfas" advanced="true">
+      <gearDisplay controller="ctrlDevelop" pages="0"/>
+    </group>
     <group id="n65_yfas" name="grpSet" xy="850,206" size="536,736" group="n76_h1sr"/>
     <group id="n76_h1sr" name="n76" xy="532,206" size="854,736" advanced="true">
       <relation target="" sidePair="center-center,top-top"/>

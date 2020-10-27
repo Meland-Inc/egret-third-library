@@ -52,7 +52,7 @@
     <component id="v8nf57" name="ComMapTemplatePublish.xml" path="/com/"/>
     <component id="v8nf58" name="WinMapTemplateTitlePage.xml" path="/win/" exported="true"/>
     <component id="v8nf59" name="ComMyWork.xml" path="/com/"/>
-    <component id="v8nf5a" name="ComMapTemplateEditGrid.xml" path="/com/"/>
+    <component id="v8nf5a" name="ComMapTemplateEditGrid.xml" path="/com/" exported="true"/>
     <component id="azcq5b" name="ComMapTemplateCollect.xml" path="/com/"/>
     <component id="azcq5d" name="ComMapTemplateDetail.xml" path="/com/"/>
     <image id="tbm25e" name="icon_mt_titlebg.png" path="/img/" scale="9grid" scale9grid="79,13,158,13"/>
@@ -285,6 +285,7 @@
     <component id="orknbz" name="ComboBox1.xml" path="/comLesson/" exported="true"/>
     <component id="orknc2" name="comCreateLessonRoom.xml" path="/comLesson/"/>
     <component id="orknc3" name="ComLessonRoomCreate.xml" path="/comLesson/" exported="true"/>
+    <component id="uu9lc7" name="ComLessonEditGrid.xml" path="/comLesson/" exported="true"/>
   </resources>
   <publish name="template"/>
 </packageDescription>
