@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="369,463" designImage="ui://thvmj7vouqqe4cyik7" designImageOffsetX="-156" designImageOffsetY="-184">
+  <controller name="ctrlType" pages="0,get,1,give,2,exchange" selected="0">
+    <action type="change_page" fromPage="" toPage="0" objectId="n49_qrzb" controller="ctrlType" targetPage="0"/>
+    <action type="change_page" fromPage="" toPage="1" objectId="n49_qrzb" controller="ctrlType" targetPage="1"/>
+    <action type="change_page" fromPage="" toPage="2" objectId="n49_qrzb" controller="ctrlType" targetPage="2"/>
+  </controller>
+  <controller name="ctrlDir" pages="0,left,1,center,2,right" selected="0">
+    <action type="change_page" fromPage="" toPage="0" objectId="n49_qrzb" controller="ctrlDir" targetPage="0"/>
+    <action type="change_page" fromPage="" toPage="1" objectId="n49_qrzb" controller="ctrlDir" targetPage="1"/>
+    <action type="change_page" fromPage="" toPage="2" objectId="n49_qrzb" controller="ctrlDir" targetPage="2"/>
+  </controller>
+  <displayList>
+    <image id="n45_qrzb" name="n45" src="mbqdwcyinc" fileName="choiceQuestion/img/bg_spxzt_03.png" xy="0,0" size="370,464" hideByEditor="true"/>
+    <image id="n0_uqqe" name="n0" src="uqqewcyiof" fileName="codeVew/img/operateBubble/bg_qipao_01.png" xy="13,179" size="341,222"/>
+    <text id="n15_uqqe" name="n15" xy="128,11" size="105,30" fontSize="24" align="center" vAlign="middle" bold="true" text="气泡类型"/>
+    <list id="n10_uqqe" name="n10" xy="14,55" size="257,37" layout="row" overflow="scroll" colGap="5" selectionController="ctrlType">
+      <item url="ui://ti9jag5tuqqewcyion" title="获取" name="btnGet" selectedTitle="获取"/>
+      <item url="ui://ti9jag5tuqqewcyion" title="给予" name="btnGive" selectedTitle="给予"/>
+      <item url="ui://ti9jag5tuqqewcyion" title="交换" name="btnExchagne"/>
+    </list>
+    <image id="n51_qrzb" name="n51" src="ijuiwcyinj" fileName="codeVew/img/codeblockPage/icon_bqy_03.png" xy="69,102" size="46,28" group="n18_uqqe"/>
+    <text id="n4_uqqe" name="n4" xy="10,106" size="54,27" group="n18_uqqe" fontSize="20" color="#353535" bold="true" text="获得:"/>
+    <text id="n5_uqqe" name="n5" xy="118,106" size="26,27" group="n18_uqqe" fontSize="20" color="#353535" bold="true" text="个"/>
+    <text id="n6_uqqe" name="tfGetNum" xy="69,106" size="46,27" group="n18_uqqe" input="true" maxLength="2" restrict="0-9" keyboardType="4" fontSize="20" color="#353535" align="center" autoSize="none" bold="true" text="99"/>
+    <component id="n26_uqqe" name="comGetItem" src="qrzbwcyip6" fileName="codeVew/btn/btnOperateBubbleItem.xml" xy="191,102" group="n18_uqqe" controller="ctrlType,0"/>
+    <group id="n18_uqqe" name="grpGet" xy="10,102" size="346,32" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlType" pages="0"/>
+    </group>
+    <image id="n52_qrzb" name="n52" src="ijuiwcyinj" fileName="codeVew/img/codeblockPage/icon_bqy_03.png" xy="69,102" size="46,28" group="n25_uqqe"/>
+    <text id="n19_uqqe" name="n19" xy="10,106" size="54,27" group="n25_uqqe" fontSize="20" color="#353535" bold="true" text="获得:"/>
+    <text id="n20_uqqe" name="n20" xy="118,106" size="26,27" group="n25_uqqe" fontSize="20" color="#353535" bold="true" text="个"/>
+    <text id="n23_uqqe" name="tfGiveNum" xy="69,106" size="46,27" group="n25_uqqe" input="true" maxLength="2" restrict="0-9" keyboardType="4" fontSize="20" color="#353535" align="center" autoSize="none" bold="true" text=""/>
+    <component id="n50_qrzb" name="comGiveItem" src="qrzbwcyip6" fileName="codeVew/btn/btnOperateBubbleItem.xml" xy="191,102" group="n25_uqqe" controller="ctrlType,1"/>
+    <group id="n25_uqqe" name="grpGive" xy="10,102" size="346,32" advanced="true" collapsed="true">
+      <gearDisplay controller="ctrlType" pages="1"/>
+    </group>
+    <image id="n53_qrzb" name="n53" src="ijuiwcyinj" fileName="codeVew/img/codeblockPage/icon_bqy_03.png" xy="10,102" size="40,28" group="n33_uqqe"/>
+    <image id="n54_qrzb" name="n54" src="ijuiwcyinj" fileName="codeVew/img/codeblockPage/icon_bqy_03.png" xy="202,102" size="40,28" group="n33_uqqe"/>
+    <text id="n31_uqqe" name="tfExchangeNum1" xy="10,106" size="40,27" group="n33_uqqe" input="true" maxLength="2" restrict="0-9" keyboardType="4" fontSize="20" color="#353535" align="center" autoSize="none" bold="true" autoClearText="true" text="1"/>
+    <text id="n44_uqqe" name="tfExchangeNum2" xy="202,106" size="40,27" group="n33_uqqe" input="true" maxLength="2" restrict="0-9" keyboardType="4" fontSize="20" color="#353535" align="center" vars="true" autoSize="none" bold="true" autoClearText="true" text="1"/>
+    <component id="n34_uqqe" name="comExchangeItem1" src="qrzbwcyip6" fileName="codeVew/btn/btnOperateBubbleItem.xml" xy="53,102" size="112,29" group="n33_uqqe" controller="ctrlType,2"/>
+    <text id="n35_uqqe" name="n35" xy="169,106" size="30,30" group="n33_uqqe" fontSize="24" align="center" bold="true" text="换"/>
+    <component id="n43_uqqe" name="comExchangeItem2" src="qrzbwcyip6" fileName="codeVew/btn/btnOperateBubbleItem.xml" xy="245,103" size="112,29" group="n33_uqqe" controller="ctrlType,2"/>
+    <group id="n33_uqqe" name="grpExchange" xy="10,102" size="348,34" advanced="true">
+      <gearDisplay controller="ctrlType" pages="2"/>
+    </group>
+    <text id="n13_uqqe" name="n13" xy="10,144" size="96,27" fontSize="20" color="#353535" bold="true" text="生成位置:"/>
+    <component id="n16_uqqe" name="btnConfirm" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="123,409" size="122,46">
+      <Button title="确定" icon="ui://ti9jag5tijuiwcyinh"/>
+    </component>
+    <list id="n46_qrzb" name="n46" xy="13,179" size="340,37" layout="row" overflow="scroll" defaultItem="ui://ti9jag5tqrzbwcyip2" selectionController="ctrlDir">
+      <item title="左" icon="ui://ti9jag5tqrzbwcyiox" name="left" selectedIcon="ui://ti9jag5tqrzbwcyiow" selectedTitle="左"/>
+      <item title="中" name="center" selectedTitle="中"/>
+      <item title="右" icon="ui://ti9jag5tqrzbwcyip3" name="right" selectedIcon="ui://ti9jag5tqrzbwcyip4" selectedTitle="右"/>
+    </list>
+    <image id="n47_qrzb" name="n47" src="qrzbwcyip0" fileName="codeVew/img/operateBubble/icon_qipao_17.png" xy="124,183"/>
+    <image id="n48_qrzb" name="n48" src="qrzbwcyip0" fileName="codeVew/img/operateBubble/icon_qipao_17.png" xy="245,183"/>
+    <component id="n49_qrzb" name="comSceneOperateBubble" src="qrzbwcyip5" fileName="codeVew/com/ComSceneOperateBubble.xml" xy="118,198" size="130,228" scale="0.8,0.8" controller="ctrlDir,0,ctrlType,0">
+      <gearXY controller="ctrlType" pages="0,1,2" values="118,198|118,198|119,198"/>
+    </component>
+  </displayList>
+</component>
