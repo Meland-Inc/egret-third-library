@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="369,463" designImage="ui://thvmj7vouqqe4cyik7" designImageOffsetX="-156" designImageOffsetY="-184">
-  <controller name="ctrlType" pages="0,get,1,give,2,exchange" selected="2">
+  <controller name="ctrlType" pages="0,get,1,give,2,exchange" selected="0">
     <action type="change_page" fromPage="" toPage="0" objectId="n49_qrzb" controller="ctrlType" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n49_qrzb" controller="ctrlType" targetPage="1"/>
     <action type="change_page" fromPage="" toPage="2" objectId="n49_qrzb" controller="ctrlType" targetPage="2"/>
@@ -56,8 +56,8 @@
     </list>
     <image id="n47_qrzb" name="n47" src="qrzbwcyip0" fileName="codeVew/img/operateBubble/icon_qipao_17.png" xy="124,183"/>
     <image id="n48_qrzb" name="n48" src="qrzbwcyip0" fileName="codeVew/img/operateBubble/icon_qipao_17.png" xy="245,183"/>
-    <component id="n49_qrzb" name="comSceneOperateBubble" src="qrzbwcyip5" fileName="codeVew/com/ComSceneOperateBubble.xml" xy="57,198" size="255,228" scale="0.8,0.8" controller="ctrlDir,0,ctrlType,2">
-      <gearXY controller="ctrlType" pages="0,1,2" values="56,198|56,198|57,198"/>
+    <component id="n49_qrzb" name="comSceneOperateBubble" src="qrzbwcyip5" fileName="codeVew/com/ComSceneOperateBubble.xml" xy="118,198" size="130,228" scale="0.8,0.8" controller="ctrlDir,0,ctrlType,0">
+      <gearXY controller="ctrlType" pages="0,1,2" values="118,198|118,198|119,198"/>
     </component>
   </displayList>
 </component>
