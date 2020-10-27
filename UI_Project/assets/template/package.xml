@@ -6,25 +6,19 @@
     <image id="iv93d" name="img_stencil_dt_6.png" path="/img/" scale="9grid" scale9grid="32,25,64,50"/>
     <image id="iv93e" name="img_stencil_fm_1.png" path="/img/" scale="9grid" scale9grid="38,7,76,14"/>
     <image id="iv93r" name="img_stencil_c_1.png" path="/img/"/>
-    <component id="8qqi3d" name="WinMapTemplate.xml" path="/win/" exported="true"/>
     <image id="8qqi3e" name="icon_mapt_dz_1.png" path="/img/"/>
     <image id="8qqi3f" name="icon_mapt_dz_2.png" path="/img/"/>
     <image id="8qqi3g" name="icon_mapt_map_2.png" path="/img/"/>
     <image id="8qqi3h" name="icon_mapt_sc_1.png" path="/img/"/>
     <image id="8qqi3i" name="icon_mapt_sc_2.png" path="/img/"/>
     <component id="8qqi3m" name="btnViewStatus.xml" path="/btn/"/>
-    <component id="pz1n3n" name="ComMapTemplateList.xml" path="/com/"/>
     <component id="pz1n3q" name="BtnMapTemplateItem.xml" path="/btn/"/>
-    <component id="pz1n3r" name="comTemplateSelector.xml" path="/com/"/>
     <component id="pz1n3t" name="ComAutoClipLad.xml" path="/com/" exported="true"/>
     <image id="pz1n3u" name="img_mapT_cjtd.png" path="/img/"/>
-    <component id="pz1n3v" name="ComEditTemplate.xml" path="/com/"/>
     <image id="pz1n3w" name="icon_mapT_bj.png" path="/img/" scale="tile"/>
     <component id="ra2b3x" name="WinMapTemplateIconSelect.xml" path="/win/" exported="true"/>
-    <component id="ra2b3y" name="comMapTemplateLobby.xml" path="/com/"/>
     <component id="ra2b3z" name="spCreateRoom.xml" path="/sprite/"/>
     <component id="ra2b41" name="ComMapTemplateRoomGrid.xml" path="/com/"/>
-    <component id="ra2b42" name="ComCreateTemplate.xml" path="/com/"/>
     <component id="hgj749" name="ScrollBar1_grip.xml" path="/slider/"/>
     <component id="hgj74a" name="ScrollBar1.xml" path="/slider/" exported="true"/>
     <component id="hgj74b" name="ScrollBar2_grip.xml" path="/slider/"/>
@@ -39,8 +33,6 @@
     <component id="ggj78" name="WinRoomCode.xml" path="/win/" exported="true"/>
     <image id="upwh4l" name="img_mapT_bg_1.png" path="/img/"/>
     <image id="a16n4m" name="img_stencil_fm_7.png" path="/img/"/>
-    <component id="a16n4o" name="ComPublishTemplate.xml" path="/com/"/>
-    <component id="nibs4p" name="ComTemplateDetail.xml" path="/com/"/>
     <component id="nibs4q" name="btnType.xml" path="/btn/"/>
     <component id="nibs4r" name="btnShowHotRecent.xml" path="/btn/"/>
     <component id="qb974t" name="Pbr1.xml" path="/pbr/" exported="true"/>
@@ -60,7 +52,7 @@
     <component id="v8nf57" name="ComMapTemplatePublish.xml" path="/com/"/>
     <component id="v8nf58" name="WinMapTemplateTitlePage.xml" path="/win/" exported="true"/>
     <component id="v8nf59" name="ComMyWork.xml" path="/com/"/>
-    <component id="v8nf5a" name="ComMapTemplateEditGrid.xml" path="/com/"/>
+    <component id="v8nf5a" name="ComMapTemplateEditGrid.xml" path="/com/" exported="true"/>
     <component id="azcq5b" name="ComMapTemplateCollect.xml" path="/com/"/>
     <component id="azcq5d" name="ComMapTemplateDetail.xml" path="/com/"/>
     <image id="tbm25e" name="icon_mt_titlebg.png" path="/img/" scale="9grid" scale9grid="79,13,158,13"/>
@@ -172,7 +164,6 @@
     <image id="yfas8i" name="icon_mt_xuxian2.png" path="/img/"/>
     <image id="yfas8j" name="img_mt_roomnum.png" path="/img/"/>
     <image id="yfas8k" name="icon_mt_roombtn.png" path="/img/"/>
-    <component id="c6ye8l" name="comRoom.xml" path="/com/"/>
     <image id="c6ye8m" name="发布地图界面改效果图.jpg" path="/img/"/>
     <image id="c6ye8n" name="img_mt_publishbg1.png" path="/img/" scale="9grid" scale9grid="26,19,52,38"/>
     <image id="c6ye8o" name="img_mt_publishbg4.png" path="/img/" scale="9grid" scale9grid="23,24,46,48"/>
@@ -244,20 +235,19 @@
     <image id="pplwan" name="bg_ccdt_01.png" path="/img/lessonCenter/"/>
     <image id="pplwao" name="bg_ccdt_02.png" path="/img/lessonCenter/" scale="9grid" scale9grid="19,53,38,106"/>
     <image id="pplwap" name="bg_ccdt_03.png" path="/img/lessonCenter/" scale="9grid" scale9grid="28,31,56,62"/>
-    <image id="pplwaq" name="bg_ccdt_04.png" path="/img/lessonCenter/"/>
+    <image id="pplwaq" name="bg_ccdt_04.png" path="/img/lessonCenter/" scale="9grid" scale9grid="43,13,86,26"/>
     <image id="pplwar" name="btn_ccdt_01.png" path="/img/lessonCenter/" scale="9grid" scale9grid="38,18,76,36"/>
     <image id="pplwas" name="btn_ccdt_02.png" path="/img/lessonCenter/" scale="9grid" scale9grid="33,18,66,36"/>
     <image id="pplwat" name="icon_ccdt_01.png" path="/img/lessonCenter/"/>
     <image id="pplwau" name="标注.png" path="/img/lessonCenter/"/>
     <image id="pplwav" name="创建课程.jpg" path="/img/lessonCenter/"/>
     <image id="pplwaw" name="我的课程.jpg" path="/img/lessonCenter/"/>
-    <component id="pplwax" name="ComLessonCreate.xml" path="/com/" exported="true"/>
+    <component id="pplwax" name="ComLessonCreate.xml" path="/comLesson/" exported="true"/>
     <component id="pplway" name="comLessonCenterTemplateItem.xml" path="/com/"/>
     <component id="pplwaz" name="WinLessonTemplate.xml" path="/win/" exported="true"/>
     <component id="pplwb0" name="WinLessonMapTemplate.xml" path="/win/" exported="true"/>
     <image id="sqy0b1" name="bg_kkk_02.png" path="/img/lessonCenter/" scale="9grid" scale9grid="31,35,62,70"/>
     <image id="sqy0b2" name="bg_kkk_01.png" path="/img/lessonCenter/"/>
-    <image id="sqy0b3" name="bg_kkk_02(1).png" path="/img/lessonCenter/"/>
     <image id="sqy0b4" name="bg_kkk_03.png" path="/img/lessonCenter/"/>
     <image id="sqy0b5" name="icon_kkk_01.png" path="/img/lessonCenter/"/>
     <image id="sqy0b6" name="icon_kkk_02.png" path="/img/lessonCenter/" scale="9grid" scale9grid="35,12,70,24"/>
@@ -270,6 +260,32 @@
     <image id="sh3oan" name="img_cjsj_01.png" path="/img/"/>
     <image id="sh3oao" name="img_cjsj_02.png" path="/img/"/>
     <component id="sh3oap" name="btnMapType.xml" path="/btn/"/>
+    <image id="orknbd" name="bg_mt_01.png" path="/img/lessonCenter/"/>
+    <image id="orknbe" name="bg_mt_02.png" path="/img/lessonCenter/" scale="9grid" scale9grid="30,32,60,64"/>
+    <image id="orknbf" name="bg_mt_03.png" path="/img/lessonCenter/" scale="9grid" scale9grid="32,23,64,46"/>
+    <image id="orknbg" name="bg_mt_04.png" path="/img/lessonCenter/"/>
+    <image id="orknbh" name="bg_mt_05.png" path="/img/lessonCenter/" scale="9grid" scale9grid="28,15,56,30"/>
+    <image id="orknbi" name="biaozhu.jpg" path="/img/lessonCenter/"/>
+    <image id="orknbj" name="biaozhu2.jpg" path="/img/lessonCenter/"/>
+    <image id="orknbk" name="biaozhu3.jpg" path="/img/lessonCenter/"/>
+    <image id="orknbl" name="btn_mt_01.png" path="/img/lessonCenter/"/>
+    <image id="orknbm" name="btn_mt_02.png" path="/img/lessonCenter/"/>
+    <image id="orknbn" name="btn_mt_03.png" path="/img/lessonCenter/" scale="9grid" scale9grid="30,10,60,20"/>
+    <image id="orknbo" name="icon_mt_01.png" path="/img/lessonCenter/"/>
+    <image id="orknbp" name="icon_mt_02.png" path="/img/lessonCenter/"/>
+    <image id="orknbq" name="icon_mt_03.png" path="/img/lessonCenter/" scale="9grid" scale9grid="22,3,44,6"/>
+    <image id="orknbr" name="icon_mt_04.png" path="/img/lessonCenter/" scale="9grid" scale9grid="4,1,57,6"/>
+    <image id="orknbs" name="icon_mt_05.png" path="/img/lessonCenter/"/>
+    <component id="orknbt" name="ComLessonPublish.xml" path="/comLesson/" exported="true"/>
+    <image id="orknbu" name="btn_mt_04.png" path="/img/lessonCenter/"/>
+    <image id="orknbv" name="btn_mt_05.png" path="/img/lessonCenter/"/>
+    <component id="orknbw" name="ComLessonPublishConfig.xml" path="/comLesson/" exported="true"/>
+    <component id="orknbx" name="ComboBox1_item.xml" path="/comLesson/"/>
+    <component id="orknby" name="ComboBox1_popup.xml" path="/comLesson/"/>
+    <component id="orknbz" name="ComboBox1.xml" path="/comLesson/" exported="true"/>
+    <component id="orknc2" name="comCreateLessonRoom.xml" path="/comLesson/"/>
+    <component id="orknc3" name="ComLessonRoomCreate.xml" path="/comLesson/" exported="true"/>
+    <component id="uu9lc7" name="ComLessonEditGrid.xml" path="/comLesson/" exported="true"/>
   </resources>
   <publish name="template"/>
 </packageDescription>

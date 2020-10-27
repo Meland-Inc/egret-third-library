@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="150,200">
+  <displayList>
+    <image id="n0_orkn" name="n0" src="orknbn" fileName="img/lessonCenter/btn_mt_03.png" xy="0,1" size="150,199">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <list id="n1_orkn" name="list" xy="0,1" size="150,199" overflow="scroll" defaultItem="ui://0axy98cgorknbx">
+      <relation target="" sidePair="width-width"/>
+    </list>
+  </displayList>
+  <relation target="n1_orkn" sidePair="height-height"/>
+</component>
