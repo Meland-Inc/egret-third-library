@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="64,67">
+  <controller name="ctrlType" exported="true" pages="0,get,1,give,2,exchange" selected="2">
+    <action type="play_transition" fromPage="" toPage="0" transition="transGet" repeat="-1" stopOnExit="true"/>
+    <action type="play_transition" fromPage="" toPage="1" transition="transGive" repeat="-1" stopOnExit="true"/>
+    <action type="play_transition" fromPage="" toPage="2" transition="transExchange" repeat="-1" stopOnExit="true"/>
+  </controller>
+  <displayList>
+    <image id="n4_rkx8" name="imgGetItem" src="rkx8wcyipm" fileName="codeVew/img/operateBubble/shoushi05.png" xy="0,0" group="n8_rkx8">
+      <gearDisplay controller="ctrlType" pages="0"/>
+      <gearXY controller="ctrlType" pages="0,1,2" values="5,21|5,0|0,0"/>
+    </image>
+    <image id="n0_rkx8" name="imgGetRock" src="rkx8wcyipi" fileName="codeVew/img/operateBubble/shoushi01.png" xy="7,12" group="n8_rkx8">
+      <gearDisplay controller="ctrlType" pages="0"/>
+    </image>
+    <image id="n1_rkx8" name="imgGetPaper" src="rkx8wcyipj" fileName="codeVew/img/operateBubble/shoushi02.png" xy="0,0" group="n8_rkx8">
+      <gearDisplay controller="ctrlType" pages="0"/>
+    </image>
+    <group id="n8_rkx8" name="grpGet" xy="0,0" size="49,53"/>
+    <image id="n2_rkx8" name="imgGiveRock" src="rkx8wcyipk" fileName="codeVew/img/operateBubble/shoushi03.png" xy="6,17" group="n9_rkx8">
+      <gearDisplay controller="ctrlType" pages="1"/>
+    </image>
+    <image id="n3_rkx8" name="imgGivePaper" src="rkx8wcyipl" fileName="codeVew/img/operateBubble/shoushi04.png" xy="2,13" group="n9_rkx8">
+      <gearDisplay controller="ctrlType" pages="1"/>
+    </image>
+    <image id="n7_rkx8" name="imgGiveItem" src="rkx8wcyipm" fileName="codeVew/img/operateBubble/shoushi05.png" xy="7,10" group="n9_rkx8">
+      <gearDisplay controller="ctrlType" pages="1"/>
+    </image>
+    <group id="n9_rkx8" name="grpGive" xy="2,10" size="45,57"/>
+    <image id="n11_rkx8" name="imgExchangeItem1" src="rkx8wcyipm" fileName="codeVew/img/operateBubble/shoushi05.png" xy="0,30" group="n12_rkx8" scale="0.8,0.8">
+      <gearDisplay controller="ctrlType" pages="2"/>
+    </image>
+    <image id="n10_rkx8" name="imgExchangeItem2" src="rkx8wcyipm" fileName="codeVew/img/operateBubble/shoushi05.png" xy="35,5" group="n12_rkx8" scale="0.8,0.8">
+      <gearDisplay controller="ctrlType" pages="2"/>
+      <gearXY controller="ctrlType" pages="0,1,2" values="5,21|5,0|35,5"/>
+    </image>
+    <image id="n5_rkx8" name="imgArrow1" src="rkx8wcyipn" fileName="codeVew/img/operateBubble/shoushi06.png" xy="2,5" group="n12_rkx8">
+      <gearDisplay controller="ctrlType" pages="2"/>
+    </image>
+    <image id="n6_rkx8" name="imgArrow2" src="rkx8wcyipo" fileName="codeVew/img/operateBubble/shoushi07.png" xy="33,45" group="n12_rkx8">
+      <gearDisplay controller="ctrlType" pages="2"/>
+    </image>
+    <group id="n12_rkx8" name="grpExchange" xy="0,5" size="68,69"/>
+  </displayList>
+  <transition name="transGet" autoPlay="true" autoPlayRepeat="-1">
+    <item time="0" type="Alpha" target="n4_rkx8" tween="true" startValue="0" endValue="1" duration="6"/>
+    <item time="0" type="Visible" target="n0_rkx8" value="false"/>
+    <item time="0" type="Visible" target="n1_rkx8" value="true"/>
+    <item time="0" type="XY" target="n4_rkx8" tween="true" startValue="5,40" endValue="5,20" duration="12"/>
+    <item time="6" type="Alpha" target="n4_rkx8" tween="true" startValue="1"/>
+    <item time="10" type="Visible" target="n0_rkx8" value="true"/>
+    <item time="10" type="Visible" target="n1_rkx8" value="false"/>
+    <item time="12" type="XY" target="n4_rkx8" tween="true" startValue="5,20"/>
+    <item time="18" type="Visible" target="n0_rkx8" value="true"/>
+  </transition>
+  <transition name="transGive" autoPlay="true" autoPlayRepeat="-1">
+    <item time="0" type="Visible" target="n2_rkx8" value="true"/>
+    <item time="0" type="Visible" target="n3_rkx8" value="false"/>
+    <item time="0" type="Visible" target="n7_rkx8" value="false"/>
+    <item time="0" type="XY" target="n2_rkx8" tween="true" startValue="6,17" endValue="11,22" duration="9"/>
+    <item time="0" type="XY" target="n7_rkx8" value="7,10"/>
+    <item time="6" type="Visible" target="n7_rkx8" value="true"/>
+    <item time="9" type="Alpha" target="n7_rkx8" tween="true" startValue="1" endValue="0" duration="9"/>
+    <item time="9" type="Visible" target="n2_rkx8" value="false"/>
+    <item time="9" type="Visible" target="n3_rkx8" value="true"/>
+    <item time="9" type="XY" target="n7_rkx8" tween="true" startValue="7,10" endValue="-3,-16" duration="9"/>
+    <item time="12" type="Visible" target="n2_rkx8" value="false"/>
+  </transition>
+  <transition name="transExchange" autoPlay="true" autoPlayRepeat="-1">
+    <item time="0" type="XY" target="n10_rkx8" tween="true" startValue="35,5" endValue="0,30" duration="18" ease="Back.InOut"/>
+    <item time="0" type="XY" target="n11_rkx8" tween="true" startValue="0,30" endValue="35,5" duration="18" ease="Back.InOut"/>
+    <item time="24" type="XY" target="n10_rkx8" value="0,30"/>
+    <item time="24" type="XY" target="n11_rkx8" value="35,5"/>
+  </transition>
+</component>

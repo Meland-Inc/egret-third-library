@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="te1gxawo">
+<packageDescription id="te1gxawo" jpegQuality="80" compressPNG="true">
   <resources>
     <component id="qn8o0" name="WinConfirm.xml" path="/old/win/" exported="true"/>
     <image id="qn8o8" name="img_main_chatbubble_1.png" path="/old/newImg/" exported="true" scale="9grid" scale9grid="25,10,50,20"/>
@@ -455,10 +455,10 @@
     <image id="shu1cyieh" name="img_cm_bjtb_2_1.png" path="/old/imgB/" exported="true"/>
     <image id="shu1cyiei" name="img_cm_stk_sn_1.png" path="/old/imgB/" exported="true"/>
     <image id="n762cyiem" name="icon_cm_ca_1.png" path="/old/imgB/" exported="true"/>
-    <image id="n762cyien" name="icon_cm_ca_2.png" path="/old/imgB/" exported="true"/>
+    <image id="n762cyien" name="icon_cm_ca_2.png" path="/img/" exported="true"/>
     <image id="n762cyieo" name="img_cm_jak_1_1.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="18,11,136,16"/>
     <image id="n762cyiep" name="img_cm_jak_1_2.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="15,9,131,18"/>
-    <component id="n762cyieq" name="WinCursor.xml" path="/old/win/" exported="true"/>
+    <component id="n762cyieq" name="WinCursor.xml" path="/win/" exported="true"/>
     <component id="dbgdcyiej" name="CommonForceTip.xml" path="/old/com/" exported="true"/>
     <image id="dbgdcyier" name="icon_cm_qbs_1.png" path="/old/img_UI3/" exported="true"/>
     <image id="dbgdcyies" name="icon_cm_qbs_2.png" path="/old/img_UI3/" exported="true"/>
@@ -469,7 +469,7 @@
     <image id="n15scyiex" name="btn_cm_zy_1.png" path="/old/imgB/" exported="true"/>
     <image id="n15scyiey" name="btn_cm_zy_2.png" path="/old/imgB/" exported="true"/>
     <image id="fs03cyiez" name="icon_cm_xsgl_11.png" path="/old/imgB/" exported="true"/>
-    <image id="loxgcyif0" name="icon_cm_ca_3.png" path="/old/imgB/" exported="true"/>
+    <image id="loxgcyif0" name="icon_cm_ca_3.png" path="/img/" exported="true"/>
     <image id="s3a3cyif1" name="img_cm_bc_1.png" path="/old/img_UI3/" exported="true"/>
     <image id="s3a3cyif2" name="img_cm_jdt_1.png" path="/old/img_UI3/" exported="true" scale="9grid" scale9grid="10,1,20,3"/>
     <image id="s3a3cyif3" name="img_cm_jdt_2.png" path="/old/img_UI3/" exported="true" scale="9grid" scale9grid="10,1,20,3"/>
@@ -659,6 +659,7 @@
     <component id="lgy9cyik6" name="CommonBubbleText.xml" path="/com/" exported="true"/>
     <image id="lgy9cyik7" name="icon_dialog_12.png" path="/img/" exported="true" scale="9grid" scale9grid="30,30,272,131"/>
     <image id="ftyz7n" name="bg_chaifen_white.png" path="/img/" exported="true" scale="9grid" scale9grid="35,28,70,56"/>
+    <component id="oabxcyik8" name="ComCursorDelete.xml" path="/win/" exported="true"/>
   </resources>
   <publish name="common">
     <atlas name="默认" index="0"/>
