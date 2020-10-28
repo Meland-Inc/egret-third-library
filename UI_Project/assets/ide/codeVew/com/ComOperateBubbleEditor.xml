@@ -56,7 +56,7 @@
     </list>
     <image id="n47_qrzb" name="n47" src="qrzbwcyip0" fileName="codeVew/img/operateBubble/icon_qipao_17.png" xy="124,183"/>
     <image id="n48_qrzb" name="n48" src="qrzbwcyip0" fileName="codeVew/img/operateBubble/icon_qipao_17.png" xy="245,183"/>
-    <component id="n49_qrzb" name="comSceneOperateBubble" src="qrzbwcyip5" fileName="codeVew/com/ComSceneOperateBubble.xml" xy="118,198" size="130,228" scale="0.8,0.8" controller="ctrlDir,0,ctrlType,0">
+    <component id="n49_qrzb" name="comSceneOperateBubble" src="qrzbwcyip5" fileName="codeVew/com/ComSceneOperateBubble.xml" xy="118,198" size="255,228" scale="0.8,0.8" controller="ctrlDir,0,ctrlType,0,ctrlCursor,1">
       <gearXY controller="ctrlType" pages="0,1,2" values="118,198|118,198|119,198"/>
     </component>
   </displayList>
