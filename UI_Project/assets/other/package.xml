@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="ei6yz0u6" jpegQuality="80" compressPNG="true">
+<packageDescription id="ei6yz0u6">
   <resources>
     <component id="qncg0" name="WinTileMapPreview.xml" path="/mapPreview/win/" exported="true"/>
     <component id="qncg1" name="ladMapCtnr.xml" path="/mapPreview/com/"/>
@@ -16,6 +16,14 @@
     <image id="bueyo" name="img_black_circle.png" path="/tpLoading/" scale="9grid" scale9grid="9,9,110,110" duplicatePadding="true"/>
     <component id="11ax79" name="ComSceneOperateMask.xml" path="/" exported="true"/>
     <component id="kahfp" name="ComAreaResetLoading.xml" path="/tpLoading/" exported="true"/>
+    <component id="jyi10" name="ComCloudMistTpLoading.xml" path="/cloudTpLoading/" exported="true"/>
+    <image id="ofl17a" name="y1.png" path="/cloudTpLoading/"/>
+    <image id="ofl17b" name="y2.png" path="/cloudTpLoading/"/>
+    <image id="ofl17c" name="y3.png" path="/cloudTpLoading/"/>
+    <image id="ofl17d" name="yun1.png" path="/cloudTpLoading/"/>
+    <image id="ofl17e" name="yun3.png" path="/cloudTpLoading/"/>
+    <image id="ofl17f" name="yun4.png" path="/cloudTpLoading/"/>
+    <image id="ofl17g" name="yun5.png" path="/cloudTpLoading/"/>
   </resources>
   <publish name="other"/>
 </packageDescription>
