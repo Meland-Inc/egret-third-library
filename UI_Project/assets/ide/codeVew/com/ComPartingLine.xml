@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="333,24" extention="Label">
-  <controller name="c1" pages="8,event,0,control,1,prop,2,function,3,move,4,detect,5,operator,6,variable,7,diyfunction,9,userInterface,10,custom,11,internal" selected="10"/>
+  <controller name="c1" pages="8,event,0,control,1,prop,2,function,3,move,4,detect,5,operator,6,variable,7,diyfunction,9,userInterface,10,custom,12,movie,11,internal" selected="11"/>
   <displayList>
-    <text id="n1_puoe" name="title" xy="27,1" size="71,24" fontSize="20" color="#333333" vAlign="middle" text="自定义">
-      <gearText controller="c1" pages="8,0,1,2,3,4,5,6,7,9,10,11" values="事件|控制|实体|功能|运动|检测|运算|变量|函数|界面|自定义|内部"/>
+    <text id="n1_puoe" name="title" xy="27,1" size="46,26" fontSize="20" color="#333333" vAlign="middle" text="电影">
+      <gearText controller="c1" pages="8,0,1,2,3,4,5,6,7,9,10,12,11" values="事件|控制|实体|功能|运动|检测|运算|变量|函数|界面|自定义|电影|内部"/>
       <relation target="" sidePair="left-left"/>
     </text>
   </displayList>
