@@ -4,6 +4,7 @@
   <displayList>
     <list id="n2_j5jv" name="lstSelection" xy="589,0" size="499,137" layout="flow_hz" overflow="scroll" lineGap="10" colGap="20" defaultItem="ui://nyy10939qylxd" align="right" vAlign="bottom">
       <gearDisplay controller="ctrlType" pages="0"/>
+      <relation target="" sidePair="bottom-bottom"/>
       <item/>
       <item/>
       <item/>
@@ -30,7 +31,6 @@
   <transition name="transNextPage">
     <item time="0" type="Visible" target="n28_g0i1" value="true"/>
     <item time="0" type="XY" target="n28_g0i1" tween="true" startValue="-,307" endValue="-,310" duration="9" ease="Sine.InOut" repeat="-1" yoyo="true"/>
-    <item time="9" type="XY" target="n28_g0i1" value="-,310"/>
   </transition>
   <transition name="t1"/>
 </component>
