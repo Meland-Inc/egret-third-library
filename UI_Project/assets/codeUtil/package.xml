@@ -12,6 +12,8 @@
     <image id="o9zck" name="icon_dialog_13.png" path="/screenDialog/img/" exported="true" scale="9grid" scale9grid="58,10,116,20"/>
     <image id="o9zcl" name="icon_dialog_14.png" path="/screenDialog/img/" exported="true" scale="9grid" scale9grid="20,10,40,20"/>
     <image id="w79tm" name="icon_dialog_16.png" path="/screenDialog/img/" scale="9grid" scale9grid="129,64,26,76"/>
+    <component id="eqdln" name="WinCodeBlockDialogNew.xml" path="/screenDialog/win/" exported="true"/>
+    <component id="eqdlp" name="ComCodeBlockDialog.xml" path="/screenDialog/win/" exported="true"/>
   </resources>
   <publish name="codeUtil"/>
 </packageDescription>
