@@ -6,8 +6,8 @@
     <image id="n0_11tce" name="n0" src="11tcewcyiop" fileName="lessonCenter/img/icon_beizhuqu_01.png" xy="19,11" pivot="0.5,0.5" scale="1,-1">
       <gearSize controller="button" pages="3" values="15,18,1,-1" default="15,18,1,1"/>
     </image>
-    <text id="n3_11tce" name="n3" xy="45,6" size="39,26" fontSize="18" color="#716f7a" align="center" vAlign="middle" text="展开">
-      <gearText controller="button" pages="3" values="展开" default="收起"/>
+    <text id="n3_11tce" name="title" xy="33,6" size="72,26" fontSize="18" color="#716f7a" align="center" vAlign="middle" autoSize="none" text="备注区">
+      <gearText controller="button" pages="3" values="备注区" default="收起"/>
     </text>
   </displayList>
   <Button mode="Check"/>
