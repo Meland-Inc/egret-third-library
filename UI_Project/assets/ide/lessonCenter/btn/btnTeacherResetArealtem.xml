@@ -1,27 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="45,45" extention="Button">
-  <controller name="button" exported="true" pages="2,normal,3,hover" selected="0">
+  <controller name="button" exported="true" pages="2,normal,3,reset" selected="1">
     <action type="play_transition" fromPage="2" toPage="3" transition="resetEffect" repeat="-1" stopOnExit="true"/>
     <action type="play_transition" fromPage="3" toPage="2" transition="finishEffect"/>
   </controller>
-  <controller name="ctrlSelect" exported="true" pages="0,hide,1,show" selected="1"/>
+  <controller name="ctrlSelect" exported="true" pages="0,hide,1,show" selected="0"/>
   <displayList>
-    <loader id="n3_kahf" name="iconImg" xy="12,11" pivot="0.5,0.5" size="22,22" url="ui://ti9jag5tkahf13564xh" autoSize="true">
+    <loader id="n3_kahf" name="iconImg" xy="12,11" pivot="0.5,0.5" size="22,22" url="ui://ti9jag5tkahf13564xg" autoSize="true">
       <gearIcon controller="ctrlSelect" pages="1" values="ui://ti9jag5tkahf13564xh" default="ui://ti9jag5tkahf13564xg"/>
     </loader>
-    <loader id="n4_kahf" name="tickImg" xy="30,27" size="17,12" alpha="0" url="ui://ti9jag5tkahf13564xi" autoSize="true">
+    <loader id="n4_kahf" name="tickImg" xy="30,27" size="17,12" alpha="0" url="ui://ti9jag5tkahf13564xk" autoSize="true">
       <gearIcon controller="ctrlSelect" pages="1" values="ui://ti9jag5tkahf13564xi" default="ui://ti9jag5tkahf13564xk"/>
     </loader>
   </displayList>
   <Button mode="Radio"/>
   <transition name="resetEffect">
     <item time="0" type="Rotation" target="n3_kahf" tween="true" startValue="0" endValue="360" duration="24" ease="Linear" repeat="-1"/>
-    <item time="24" type="Rotation" target="n3_kahf" value="360"/>
   </transition>
   <transition name="finishEffect">
     <item time="0" type="Alpha" target="n4_kahf" tween="true" startValue="0" endValue="1" duration="6" ease="Linear"/>
     <item time="6" type="Alpha" target="n4_kahf" tween="true" startValue="1" endValue="1" duration="12" ease="Linear"/>
     <item time="18" type="Alpha" target="n4_kahf" tween="true" startValue="1" endValue="0" duration="4" ease="Linear"/>
-    <item time="22" type="Alpha" target="n4_kahf" value="0"/>
   </transition>
 </component>

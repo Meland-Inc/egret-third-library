@@ -6,9 +6,9 @@
   </controller>
   <controller name="ctrlListShow" pages="0,hide,1,show" selected="1"/>
   <controller name="ctrlType" pages="0,single,1,team" selected="1"/>
-  <controller name="ctrlAreaReset" pages="0,false,1,ture" selected="0">
-    <action type="change_page" fromPage="0" toPage="1" objectId="n65_kahf" controller="button" targetPage="3"/>
-    <action type="change_page" fromPage="1" toPage="0" objectId="n65_kahf" controller="button" targetPage="2"/>
+  <controller name="ctrlAreaReset" pages="0,false,1,true" selected="0">
+    <action type="change_page" fromPage="" toPage="1" objectId="n65_kahf" controller="button" targetPage="3"/>
+    <action type="change_page" fromPage="" toPage="0" objectId="n65_kahf" controller="button" targetPage="2"/>
   </controller>
   <displayList>
     <loader id="n57_pbxd" name="imgBg" xy="10,4" size="237,135" touchable="false" url="ui://ti9jag5tkahf13564xc" fill="scaleFree">
@@ -23,11 +23,11 @@
       <gearDisplay controller="ctrlListShow" pages="1"/>
       <gearIcon controller="button" pages="2" values="ui://ti9jag5tkahf13564xj" default="ui://ti9jag5tkahf13564xe"/>
     </loader>
-    <text id="n4_fie1" name="title" xy="12,12" size="227,42" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="新场景">
+    <text id="n4_fie1" name="title" xy="10,9" size="227,42" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="新场景">
       <gearColor controller="button" pages="2" values="#6e6d78,#6d6141" default="#ffffff,#e48509"/>
     </text>
-    <component id="n58_pbxd" name="btnShowHide" src="pbxd13564w2" fileName="lessonCenter/btn/btnTeacherShowHideArealtem.xml" xy="61,12" size="185,34" group="n52_bljg"/>
-    <group id="n52_bljg" name="grpShowHide" xy="61,12" size="185,34" advanced="true"/>
+    <component id="n58_pbxd" name="btnShowHide" src="pbxd13564w2" fileName="lessonCenter/btn/btnTeacherShowHideArealtem.xml" xy="75,13" size="160,34" group="n52_bljg"/>
+    <group id="n52_bljg" name="grpShowHide" xy="75,13" size="160,34" advanced="true"/>
     <list id="n47_bljg" name="processPointList" xy="10,137" size="230,0" layout="flow_hz" selectionMode="none" overflow="hidden" defaultItem="ui://ti9jag5tpbxd13564w8">
       <gearDisplay controller="ctrlListShow" pages="1"/>
       <gearXY controller="ctrlListShow" pages="0,1" values="10,53|10,137"/>
@@ -37,19 +37,19 @@
       <item/>
       <item/>
     </list>
-    <component id="n46_bljg" name="btnTransfer" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="23,70" size="96,51" group="n59_pbxd">
+    <component id="n46_bljg" name="btnTransfer" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="26,69" size="96,51" group="n59_pbxd">
       <gearDisplay controller="ctrlType" pages="0,1"/>
-      <gearXY controller="ctrlType" pages="0,1" values="82,68|23,70"/>
+      <gearXY controller="ctrlType" pages="0,1" values="82,69|26,69"/>
       <Button icon="ui://ti9jag5tpbxd13564w4"/>
     </component>
-    <component id="n54_pbxd" name="btnAllTransfer" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="141,70" size="96,51" group="n59_pbxd">
+    <component id="n54_pbxd" name="btnAllTransfer" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="134,69" size="96,51" group="n59_pbxd">
       <gearDisplay controller="ctrlType" pages="1"/>
       <Button icon="ui://ti9jag5tpbxd13564w5"/>
     </component>
-    <group id="n59_pbxd" name="grpTransfer" xy="23,70" size="214,51" advanced="true">
+    <group id="n59_pbxd" name="grpTransfer" xy="26,69" size="204,51" advanced="true">
       <gearDisplay controller="ctrlListShow" pages="1"/>
     </group>
-    <component id="n65_kahf" name="btnReset" src="kahf13564xa" fileName="lessonCenter/btn/btnTeacherResetArealtem.xml" xy="12,7"/>
+    <component id="n65_kahf" name="btnReset" src="kahf13564xa" fileName="lessonCenter/btn/btnTeacherResetArealtem.xml" xy="17,7"/>
   </displayList>
   <Button mode="Radio"/>
   <relation target="n57_pbxd" sidePair="bottomext-bottom"/>
