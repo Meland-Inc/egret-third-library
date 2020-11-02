@@ -668,12 +668,8 @@
     <component id="pbxd13564w3" name="btnTeacherShowHideListArea.xml" path="/lessonCenter/btn/"/>
     <image id="pbxd13564w4" name="btn_transfer_1.png" path="/lessonCenter/img/"/>
     <image id="pbxd13564w5" name="btn_transfer_2.png" path="/lessonCenter/img/"/>
-    <image id="pbxd13564w6" name="btn_transfer_3.png" path="/lessonCenter/img/"/>
-    <image id="pbxd13564w7" name="btn_transfer_4.png" path="/lessonCenter/img/"/>
     <component id="pbxd13564w8" name="btnTeacherAreaProcessItem.xml" path="/lessonCenter/btn/"/>
     <image id="pbxd13564w9" name="bg_floor_1.png" path="/lessonCenter/img/" scale="9grid" scale9grid="12,14,24,28"/>
-    <image id="pbxd13564wa" name="bg_floor_2.png" path="/lessonCenter/img/" scale="9grid" scale9grid="14,17,199,38"/>
-    <image id="pbxd13564wb" name="bg_floor_3.png" path="/lessonCenter/img/" scale="9grid" scale9grid="15,22,200,384"/>
     <image id="pbxd13564wc" name="bg_floor_4.png" path="/lessonCenter/img/" scale="9grid" scale9grid="6,7,12,14"/>
     <image id="pbxd13564wd" name="biaoshi_1.png" path="/lessonCenter/img/" scale9grid="10,14,20,28"/>
     <image id="pbxd13564we" name="biaoshi_10.png" path="/lessonCenter/img/"/>
@@ -686,16 +682,6 @@
     <image id="pbxd13564wl" name="biaoshi_8.png" path="/lessonCenter/img/"/>
     <image id="pbxd13564wm" name="biaoshi_9.png" path="/lessonCenter/img/"/>
     <image id="pbxd13564wn" name="diban_1.png" path="/lessonCenter/img/"/>
-    <image id="pbxd13564wo" name="diban_10.png" path="/lessonCenter/img/"/>
-    <image id="pbxd13564wp" name="diban_11.png" path="/lessonCenter/img/"/>
-    <image id="pbxd13564wq" name="diban_2.png" path="/lessonCenter/img/"/>
-    <image id="pbxd13564wr" name="diban_3.png" path="/lessonCenter/img/"/>
-    <image id="pbxd13564ws" name="diban_4.png" path="/lessonCenter/img/"/>
-    <image id="pbxd13564wt" name="diban_5.png" path="/lessonCenter/img/"/>
-    <image id="pbxd13564wu" name="diban_6.png" path="/lessonCenter/img/"/>
-    <image id="pbxd13564wv" name="diban_7.png" path="/lessonCenter/img/"/>
-    <image id="pbxd13564ww" name="diban_8.png" path="/lessonCenter/img/"/>
-    <image id="pbxd13564wx" name="diban_9.png" path="/lessonCenter/img/"/>
     <image id="pbxd13564wy" name="bg_frame_1.png" path="/lessonCenter/img/"/>
     <image id="pbxd13564wz" name="icon_jiantou_4.png" path="/lessonCenter/img/"/>
     <image id="pbxd13564x0" name="icon_jiantou_5.png" path="/lessonCenter/img/"/>
@@ -744,6 +730,17 @@
     <image id="rkx8wcyipm" name="shoushi05.png" path="/codeVew/img/operateBubble/"/>
     <image id="rkx8wcyipn" name="shoushi06.png" path="/codeVew/img/operateBubble/"/>
     <image id="rkx8wcyipo" name="shoushi07.png" path="/codeVew/img/operateBubble/"/>
+    <component id="kahf13564xa" name="btnTeacherResetArealtem.xml" path="/lessonCenter/btn/"/>
+    <image id="kahf13564xb" name="bg_biaotilan_0.png" path="/lessonCenter/img/" scale="9grid" scale9grid="16,11,32,22"/>
+    <image id="kahf13564xc" name="bg_biaotilan_1.png" path="/lessonCenter/img/" scale="9grid" scale9grid="16,11,32,22"/>
+    <image id="kahf13564xd" name="bg_biaotilan_3.png" path="/lessonCenter/img/" scale="9grid" scale9grid="16,11,32,22"/>
+    <image id="kahf13564xe" name="bg_biaotilan_4.png" path="/lessonCenter/img/" scale="9grid" scale9grid="16,11,32,22"/>
+    <image id="kahf13564xf" name="上课模板效果图.png" path="/lessonCenter/img/"/>
+    <image id="kahf13564xg" name="icon_chongzhi.png" path="/lessonCenter/img/"/>
+    <image id="kahf13564xh" name="icon_chongzhi_1.png" path="/lessonCenter/img/"/>
+    <image id="kahf13564xi" name="icon_gou.png" path="/lessonCenter/img/"/>
+    <image id="kahf13564xj" name="bg_biaotilan_5.png" path="/lessonCenter/img/" scale="9grid" scale9grid="16,11,32,22"/>
+    <image id="kahf13564xk" name="icon_gou_1.png" path="/lessonCenter/img/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>
