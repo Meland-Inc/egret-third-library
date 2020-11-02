@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="55,98" extention="Button">
+<component size="43,53" extention="Button">
   <controller name="button" pages="2,up,3,down" selected="0"/>
   <displayList>
-    <image id="n4_pbxd" name="n4" src="pbxd13564wc" fileName="lessonCenter/img/bg_floor_4.png" xy="0,0" size="55,98"/>
-    <image id="n5_pbxd" name="n5" src="pbxd13564vy" fileName="lessonCenter/img/icon_jiantou.png" xy="7,21" pivot="0.5,0.5">
+    <image id="n4_pbxd" name="n4" src="pbxd13564wc" fileName="lessonCenter/img/bg_floor_4.png" xy="0,0" size="43,53"/>
+    <image id="n5_pbxd" name="n5" src="pbxd13564vy" fileName="lessonCenter/img/icon_jiantou.png" xy="8,11" pivot="0.5,0.5">
       <gearLook controller="button" pages="3" values="1,180,0,0" default="1,0,0,0"/>
     </image>
   </displayList>

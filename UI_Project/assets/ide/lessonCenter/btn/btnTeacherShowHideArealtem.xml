@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="229,34" extention="Button">
-  <controller name="button" pages="2,up,3,down" selected="1"/>
+<component size="185,36" extention="Button">
+  <controller name="button" pages="2,up,3,down" selected="0"/>
   <controller name="ctrlSelect" pages="0,hide,1,show" selected="0"/>
   <displayList>
-    <image id="n1_pbxd" name="n1" src="pbxd13564vz" fileName="lessonCenter/img/icon_jiantou_2.png" xy="196,9" pivot="0.5,0.5" rotation="180">
+    <image id="n1_pbxd" name="n1" src="pbxd13564vz" fileName="lessonCenter/img/icon_jiantou_2.png" xy="148,10" pivot="0.5,0.5">
       <gearDisplay controller="ctrlSelect" pages="0"/>
       <gearLook controller="button" pages="3" values="1,180,0,0" default="1,0,0,0"/>
     </image>
-    <image id="n2_pbxd" name="n2" src="pbxd13564w0" fileName="lessonCenter/img/icon_jiantou_3.png" xy="195,7" pivot="0.5,0.5">
+    <image id="n2_pbxd" name="n2" src="pbxd13564w0" fileName="lessonCenter/img/icon_jiantou_3.png" xy="148,10" pivot="0.5,0.5">
       <gearDisplay controller="ctrlSelect" pages="1"/>
-      <gearLook controller="button" pages="2" values="1,180,0,0" default="1,0,0,0"/>
+      <gearLook controller="button" pages="2,3" values="1,0,0,0|1,180,0,0"/>
     </image>
   </displayList>
   <Button mode="Radio"/>
