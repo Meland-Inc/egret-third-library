@@ -117,7 +117,7 @@ class CommonConfig {
                 environName: CommonDefine.eEnvironName.beta,
                 accountServer: "47.107.73.43:3220",
                 serverListServer: "server-list-beta.wkcoding.com",
-                uploadLogServer: "ready-clientlog.wkcoding.com",
+                uploadLogServer: "beta-clientlog.wkcoding.com",
                 bellApiOrigin: "api.codingmonkey.com.cn",
                 bellcodeDomain: "http://www.codingmonkey.com.cn",
                 policyUrl: "planet.wkcoding.com/web/beta/",
