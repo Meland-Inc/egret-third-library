@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1785,26" designImage="ui://thvmj7vo110fe4cyik9" designImageOffsetX="-11" designImageOffsetY="-1044">
+  <displayList>
+    <image id="n1_sn4a" name="n1" src="110fewcyiqv" fileName="timeline/img/img_code_dy_9.png" xy="302,8" size="1180,10">
+      <relation target="" sidePair="width-width"/>
+    </image>
+    <component id="n0_sn4a" name="btnLeft" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="284,-2" size="30,30">
+      <relation target="" sidePair="left-left"/>
+      <Button icon="ui://ti9jag5t110fewcyiq5"/>
+    </component>
+    <component id="n3_iyxw" name="btnRight" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1469,-2" size="30,30">
+      <relation target="" sidePair="left-left"/>
+      <Button icon="ui://ti9jag5t110fewcyiq5"/>
+    </component>
+  </displayList>
+</component>

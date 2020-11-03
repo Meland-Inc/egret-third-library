@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="12,368" extention="ScrollBar" designImage="ui://thvmj7vo110fe4cyik9" designImageOffsetX="-1779" designImageOffsetY="-630">
+  <displayList>
+    <graph id="n2_sn4a" name="bar" xy="0,0" size="12,368">
+      <relation target="" sidePair="height-height"/>
+    </graph>
+    <component id="n0_sn4a" name="grip" src="ilo1cyidi" fileName="btn/btnScaleNoEffect.xml" pkg="te1gxawo" xy="0,20" size="12,44">
+      <Button icon="ui://ti9jag5t110fewcyiqu"/>
+    </component>
+  </displayList>
+  <ScrollBar/>
+</component>
