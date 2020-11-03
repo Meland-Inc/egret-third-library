@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="568,268" overflow="hidden" extention="Label">
   <displayList>
-    <graph id="n0_owm7" name="gphMap" xy="0,0" size="568,268" type="rect" lineSize="0">
+    <component id="n0_owm7" name="comMap" src="j21fi3z" fileName="old/com/ComEmpty.xml" pkg="te1gxawo" xy="0,0" size="568,268">
       <relation target="" sidePair="width-width"/>
-    </graph>
+    </component>
     <graph id="n6_d9s4" name="gphTriangle" xy="0,0" size="100,100">
       <relation target="n0_owm7" sidePair="left-left,top-top"/>
     </graph>
