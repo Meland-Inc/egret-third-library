@@ -1,91 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" opaque="false" designImage="ui://thvmj7voqr0m4cyij5" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlUserStatus" pages="0,student,1,teacher,2,fakeStudent,3,fakeTeacher" selected="0"/>
-  <controller name="ctrlGodView" pages="0,false,1,true" selected="0"/>
-  <controller name="ctrlEnterWay" pages="0,share,1,editSelf,3,roomPlay,8,banner,10,explore" selected="0"/>
-  <controller name="ctrlViewMode" pages="0,world,1,mapTemplate" selected="0"/>
+  <controller name="ctrlGodView" pages="0,false,1,true" selected="0">
+    <action type="change_page" fromPage="" toPage="0" objectId="n41_o2yv" controller="ctrlGodView" targetPage="0"/>
+    <action type="change_page" fromPage="" toPage="1" objectId="n41_o2yv" controller="ctrlGodView" targetPage="1"/>
+  </controller>
+  <controller name="ctrlMenuType" pages="0,lesson,1,mapTemplate,11,banner" selected="0"/>
   <controller name="ctrlMinimap" pages="0,show,1,hide" selected="0"/>
-  <controller name="ctrlLeftTopView" pages="0,show,1,hide" selected="0"/>
-  <controller name="ctrlChatMode" pages="1,show,2,hide" selected="0"/>
-  <controller name="ctrlLockScreen" pages="0,false,1,true" selected="0"/>
   <controller name="ctrlAreaList" pages="0,hide,1,show" selected="0"/>
   <displayList>
-    <component id="n17_swki" name="btnChangeViewMode" src="psruh" fileName="com/btnMainMenu.xml" xy="1559,13" group="n23_11584">
-      <gearDisplay controller="ctrlUserStatus" pages="1,3"/>
-      <gearXY controller="ctrlUserStatus" pages="0,1,2,3" values="1559,13|1427,13|1427,13|1302,13"/>
-      <gearText controller="ctrlGodView" pages="0,1" values="查看模式|演示模式"/>
-      <gearIcon controller="ctrlGodView" pages="1" values="ui://oyity675ocgc4e0" default="ui://oyity675lmgfq"/>
+    <component id="n41_o2yv" name="comLessonMenu" src="o2yvwcyim7" fileName="win/comLessonMenue.xml" xy="935,13" controller="ctrlUserStatus,3">
+      <gearDisplay controller="ctrlMenuType" pages="0"/>
       <relation target="" sidePair="right-right"/>
-      <Button title="查看模式" icon="ui://oyity675lmgfq"/>
     </component>
-    <component id="n4_psru" name="btnTeachPlan" src="psruh" fileName="com/btnMainMenu.xml" xy="1677,13" group="n23_11584" customData="top">
-      <gearDisplay controller="ctrlUserStatus" pages=""/>
-      <gearXY controller="ctrlUserStatus" pages="0,1,2,3" values="1677,13|1552,13|1552,13|1427,13"/>
+    <component id="n42_o2yv" name="comMapTemplateMenu" src="o2yvwcyima" fileName="win/comMaptemplateMenu.xml" xy="1666,13" controller="ctrlEnterWay,1">
+      <gearDisplay controller="ctrlMenuType" pages="1"/>
       <relation target="" sidePair="right-right"/>
-      <Button title="教案" icon="ui://oyity675a1nd6"/>
     </component>
-    <component id="n3_psru" name="btnUpload" src="psruh" fileName="com/btnMainMenu.xml" xy="1802,13" group="n23_11584" customData="top">
-      <gearXY controller="ctrlUserStatus" pages="0,1,2,3" values="1802,13|1677,13|1677,13|1552,13"/>
+    <component id="n43_o2yv" name="comBannerMenu" src="o2yvwcyimb" fileName="win/comBannerMenu.xml" xy="1802,13">
+      <gearDisplay controller="ctrlMenuType" pages="11"/>
       <relation target="" sidePair="right-right"/>
-      <Button title="提交" icon="ui://oyity675a1ndd"/>
     </component>
-    <component id="n2_psru" name="btnShowStudentMgr" src="psruh" fileName="com/btnMainMenu.xml" xy="1677,14" group="n23_11584" customData="top">
-      <gearDisplay controller="ctrlUserStatus" pages="1,3"/>
-      <gearXY controller="ctrlUserStatus" pages="0,1,2,3" values="1677,14|1802,14|1677,14|1677,14"/>
-      <relation target="" sidePair="right-right"/>
-      <Button title="学生管理" icon="ui://oyity675a1nde"/>
-    </component>
-    <component id="n1_psru" name="btnTemplate" src="psruh" fileName="com/btnMainMenu.xml" xy="1802,13" group="n23_11584" customData="top">
-      <gearDisplay controller="ctrlUserStatus" pages="2,3"/>
-      <relation target="" sidePair="right-right"/>
-      <Button title="模板创作" icon="ui://oyity675a1nd8"/>
-    </component>
-    <component id="n29_kpw9" name="btnManorRestore" src="psruh" fileName="com/btnMainMenu.xml" xy="1552,13" group="n23_11584" visible="false">
-      <gearXY controller="ctrlUserStatus" pages="0,1,2,3" values="1552,13|1177,13|1302,13|927,13"/>
-      <relation target="" sidePair="right-right"/>
-      <Button title="重置领地" icon="ui://oyity675kpw94dz"/>
-    </component>
-    <component id="n31_p8fz" name="btnCdkeyExchange" src="psruh" fileName="com/btnMainMenu.xml" xy="1552,13" group="n23_11584">
-      <gearDisplay controller="ctrlUserStatus" pages="2,3"/>
-      <gearXY controller="ctrlUserStatus" pages="0,1,2,3" values="1552,13|1302,13|1427,13|1177,13"/>
-      <relation target="" sidePair="right-right"/>
-      <Button title="兑换课程" icon="ui://oyity675p8fzwcyim1"/>
-    </component>
-    <component id="n39_uu9l" name="btnLockScreenMode" src="psruh" fileName="com/btnMainMenu.xml" xy="1552,13" group="n23_11584" visible="false">
-      <gearDisplay controller="ctrlUserStatus" pages="1,3"/>
-      <gearXY controller="ctrlUserStatus" pages="0,1,2,3" values="1552,13|1302,13|1302,13|1052,13"/>
-      <gearText controller="ctrlLockScreen" pages="0,1" values="锁屏|解锁"/>
-      <gearIcon controller="ctrlLockScreen" pages="0,1" values="ui://oyity675pbxdwcyim4|ui://oyity675pbxdwcyim5"/>
-      <relation target="" sidePair="right-right"/>
-      <Button title="锁屏" icon="ui://oyity675pbxdwcyim4"/>
-    </component>
-    <group id="n23_11584" name="grpMenu" xy="1552,13" size="360,113" customData="top" advanced="true">
-      <gearDisplay controller="ctrlViewMode" pages="0"/>
-    </group>
-    <component id="n30_bix1" name="btnBannerTemplate" src="psruh" fileName="com/btnMainMenu.xml" xy="1802,13" group="n24_11584" customData="top">
-      <gearDisplay controller="ctrlEnterWay" pages="8"/>
-      <Button title="模板创作" icon="ui://oyity675a1nd8"/>
-    </component>
-    <component id="n19_11584" name="btnBack" src="psruh" fileName="com/btnMainMenu.xml" xy="1802,13" group="n24_11584">
-      <gearDisplay controller="ctrlEnterWay" pages="1,2,3,4"/>
-      <Button title="退出" icon="ui://oyity675xh734dq"/>
-    </component>
-    <component id="n22_11584" name="btnInvite" src="psruh" fileName="com/btnMainMenu.xml" xy="1667,13" group="n24_11584" customData="top">
-      <gearDisplay controller="ctrlEnterWay" pages="1"/>
-      <Button title="邀请好友" icon="ui://oyity675xh734dp"/>
-    </component>
-    <component id="n32_fbu3" name="btnExitExplore" src="psruh" fileName="com/btnMainMenu.xml" xy="1802,13" group="n24_11584">
-      <gearDisplay controller="ctrlEnterWay" pages="10"/>
-      <Button title="星球之门" icon="ui://oyity675axawwcyim2"/>
-    </component>
-    <component id="n33_fbu3" name="btnReplay" src="psruh" fileName="com/btnMainMenu.xml" xy="1667,13" group="n24_11584" customData="top">
-      <gearDisplay controller="ctrlEnterWay" pages="10"/>
-      <Button title="时间回溯" icon="ui://oyity675axawwcyim3"/>
-    </component>
-    <group id="n24_11584" name="grpEditMenu" xy="1667,13" size="245,112" customData="top" advanced="true">
-      <gearDisplay controller="ctrlViewMode" pages="1"/>
-      <relation target="" sidePair="right-right"/>
-    </group>
     <component id="n9_psru" name="btnIde" src="fn8fcyijz" fileName="btn/btnIde.xml" xy="1804,979" size="116,110" customData="right" controller="ctrlOrientation,0">
       <gearDisplay controller="ctrlGodView" pages="0"/>
       <relation target="" sidePair="bottom-bottom,right-right"/>
@@ -107,10 +41,10 @@
       <Button icon="ui://oyity675a1ndb" controller="ctrlMinimap" page="1"/>
     </component>
     <group id="n15_n173" name="grpLeftTop" xy="0,0" size="346,262" customData="left" advanced="true">
-      <gearXY controller="ctrlLeftTopView" pages="0,1" values="0,0|-346,0" tween="true"/>
+      <gearXY controller="ctrlMinimap" pages="1" values="-349,0" default="0,0" tween="true"/>
     </group>
     <component id="n14_psru" name="comTask" src="psruk" fileName="com/ComMainTask.xml" xy="0,277">
-      <gearDisplay controller="ctrlViewMode" pages="0"/>
+      <gearDisplay controller="ctrlMenuType" pages="0"/>
     </component>
     <component id="n34_ej7r" name="comTaskTrace" src="jrwa7n" fileName="com/ComTaskTrace.xml" pkg="2ctbbuel" xy="0,275">
       <relation target="" sidePair="left-left,top-top"/>
@@ -120,7 +54,7 @@
     </component>
     <component id="n28_y6w6" name="comExperience" src="gen8d3" fileName="com/ComExperience.xml" xy="0,878"/>
     <component id="n29_ur6k" name="btnGetResult" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1819,370" size="100,38" visible="false">
-      <gearDisplay controller="ctrlViewMode" pages="1"/>
+      <gearDisplay controller="ctrlMenuType" pages="1"/>
       <relation target="" sidePair="right-right"/>
       <Button title="获取数据" titleFontSize="18" icon="ui://te1gxawooiqdcyih1"/>
     </component>
@@ -132,20 +66,20 @@
     </component>
   </displayList>
   <transition name="showAnim">
+    <item time="0" type="Alpha" target="n34_ej7r" tween="true" startValue="0" endValue="1" duration="12"/>
     <item time="0" type="XY" target="n13_psru" tween="true" startValue="-,1080" endValue="-,987" duration="12"/>
     <item time="0" type="XY" target="n14_psru" tween="true" startValue="-266,-" endValue="0,-" duration="12"/>
     <item time="0" type="XY" target="n15_n173" tween="true" startValue="-,-278.75" endValue="-,0" duration="12"/>
-    <item time="0" type="XY" target="n23_11584" tween="true" startValue="-,-115" endValue="-,13" duration="12"/>
-    <item time="0" type="XY" target="n24_11584" tween="true" startValue="-,-121.4" endValue="1667,13" duration="12"/>
     <item time="0" type="XY" target="n27_qr0m" tween="true" startValue="-,-265.5" endValue="12,12" duration="12"/>
+    <item time="0" type="XY" target="n41_o2yv" tween="true" startValue="-,-119" endValue="935,13" duration="12"/>
+    <item time="0" type="XY" target="n42_o2yv" tween="true" startValue="-,-122" endValue="-,13" duration="12"/>
+    <item time="0" type="XY" target="n43_o2yv" tween="true" startValue="-,-125" endValue="1802,13" duration="12"/>
     <item time="0" type="XY" target="n9_psru" tween="true" startValue="1920,-" endValue="1804,979" duration="12"/>
   </transition>
   <transition name="hideAnim">
     <item time="0" type="XY" target="n13_psru" tween="true" startValue="554,987" endValue="-,1080" duration="12"/>
     <item time="0" type="XY" target="n14_psru" tween="true" startValue="0,277" endValue="-267,-" duration="12"/>
     <item time="0" type="XY" target="n15_n173" tween="true" startValue="0,0" endValue="-346,-" duration="12"/>
-    <item time="0" type="XY" target="n23_11584" tween="true" startValue="-,13" endValue="-,-113.67" duration="12"/>
-    <item time="0" type="XY" target="n24_11584" tween="true" startValue="1667,13" endValue="-,-118.35" duration="12"/>
     <item time="0" type="XY" target="n9_psru" tween="true" startValue="1804,979" endValue="1920,-" duration="12"/>
   </transition>
 </component>
