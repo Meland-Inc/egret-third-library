@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="110,112" opaque="false" designImage="ui://thvmj7voqr0m4cyij5" designImageAlpha="0" designImageLayer="1">
+  <displayList>
+    <component id="n2_o2yv" name="btnBannerTemplate" src="psruh" fileName="com/btnMainMenu.xml" xy="0,0" customData="top">
+      <Button title="模板创作" icon="ui://oyity675a1nd8"/>
+    </component>
+  </displayList>
+  <transition name="showAnim"/>
+  <transition name="hideAnim"/>
+</component>
