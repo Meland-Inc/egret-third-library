@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="478,362">
+  <controller name="ctrlSize" pages="0,small,1,normal,2,big" selected="0"/>
+  <controller name="ctrlWindowType" pages="0,normal,1,fullScreen" selected="0"/>
+  <displayList>
+    <loader id="n1_sdu8" name="ladBg" xy="0,0" size="478,362" aspect="true" visible="false" url="ui://ei6yz0u6kxse7k" fill="scaleFree" autoSize="true" clearOnPublish="true">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <component id="n2_sdu8" name="comContent" src="g57v7c" fileName="sceneDisplay/com/comContent.xml" xy="32,88" size="414,234">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <graph id="n7_9nyx" name="gphMask" xy="32,88" size="414,234" visible="false" type="rect" lineSize="0" fillColor="#ff000000" corner="8">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n3_sdu8" name="btnToFullScreen" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="362,37" size="49,37">
+      <gearDisplay controller="ctrlWindowType" pages="0"/>
+      <relation target="" sidePair="right-right,top-top"/>
+      <Button icon="ui://ei6yz0u6kxse7h" controller="ctrlWindowType" page="1"/>
+    </component>
+    <component id="n4_j563" name="btnToNormal" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="361,37" size="50,37">
+      <gearDisplay controller="ctrlWindowType" pages="1"/>
+      <relation target="n3_sdu8" sidePair="center-center,middle-middle"/>
+      <Button icon="ui://ei6yz0u6kxse7g" controller="ctrlWindowType" page="0"/>
+    </component>
+    <component id="n6_o9dk" name="btnStart" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="191,158" size="94,94">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button icon="ui://ei6yz0u6kxse7f"/>
+    </component>
+    <component id="n10_kxse" name="btnReStart" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="191,158" size="94,94">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button icon="ui://ei6yz0u6kxse7i"/>
+    </component>
+  </displayList>
+</component>
