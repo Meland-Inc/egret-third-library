@@ -268,11 +268,6 @@ export async function clipTexture() {
 
         console.log('--> start clip objectState texture');
         for (const iterator of Global.objectStateCells) {
-            if (iterator.texture == "") {
-                //没有动画资源,跳过
-                continue;
-            }
-
             let cell = Global.entityCells.find(value => value.id === iterator.objectId);
 
             if (!cell) {
@@ -284,14 +279,23 @@ export async function clipTexture() {
             if (!cell) {
                 cell = Global.materialCells.find(value => value.id === iterator.objectId);
             }
+
             if (!cell) {
                 // console.error(`找不到配置${iterator.objectId}`);
                 //TODO:以后要添加生物的判断
                 continue;
             }
 
-            let outPath = getOutPath(cell)
-            await jimpExc.jimpCell(3, cell, [iterator.texture], input_path, outPath);
+            if (iterator.texture) {
+                let outPath = getOutPath(cell)
+                await jimpExc.jimpCell(3, cell, [iterator.texture], input_path, outPath);
+            }
+
+            if (iterator.rectTexture) {
+                let outPath2d = get2dOutPath(cell);
+                await jimpExc.jimp2dCell(1, cell, [iterator.rectTexture], input_path, outPath2d);
+
+            }
         }
         console.log('--> clip material objectState complete');
 
