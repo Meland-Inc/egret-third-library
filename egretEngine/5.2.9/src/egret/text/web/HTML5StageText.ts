@@ -209,6 +209,7 @@ namespace egret.web {
          * 
          */
         private onBlurHandler(): void {
+            //TOUCH_BEGIN直接调用setFocus时，inputElement会触发一次失焦。在这里重新聚焦。
             if (this.htmlInput._needShow) {
                 this.inputElement.focus();
             } else {
