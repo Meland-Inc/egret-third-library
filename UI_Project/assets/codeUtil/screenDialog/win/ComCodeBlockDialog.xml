@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1192,352">
-  <controller name="ctrlType" exported="true" pages="3,unknow,1,showText,2,question,0,selection" selected="0"/>
+  <controller name="ctrlType" exported="true" pages="3,unknow,1,showText,2,question,0,selection" selected="2"/>
   <displayList>
     <list id="n2_j5jv" name="lstSelection" xy="589,0" size="499,137" layout="flow_hz" overflow="scroll" lineGap="10" colGap="20" defaultItem="ui://nyy10939qylxd" align="right" vAlign="bottom">
       <gearDisplay controller="ctrlType" pages="0"/>
@@ -18,8 +18,9 @@
     <text id="n14_fzlu" name="tfTitle" xy="102,114" size="157,31" group="n29_eqdl" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" singleLine="true" text=""/>
     <group id="n29_eqdl" name="grpTitle" xy="76,98" size="210,64"/>
     <text id="n18_fzlu" name="tfContent" xy="206,174" size="900,125" fontSize="20" color="#666666" vAlign="middle" autoSize="none" text=""/>
-    <image id="n17_fzlu" name="imgInputBg" src="o9zck" fileName="screenDialog/img/icon_dialog_13.png" xy="590,98" size="412,39" group="n9_j5jv"/>
-    <text id="n6_j5jv" name="inpAnswer" xy="604,100" size="378,37" group="n9_j5jv" fontSize="20" color="#333333" vAlign="middle" autoSize="none" singleLine="true" text="" input="true" prompt="[size=24]输入答案[/size]"/>
+    <component id="n31_twn2" name="inpAnswer" src="twn2cyik9" fileName="com/ComMobileInput.xml" pkg="te1gxawo" xy="590,98" size="412,39" group="n9_j5jv">
+      <Label icon="ui://nyy10939o9zck" prompt="[size=24]输入答案[/size]"/>
+    </component>
     <component id="n10_qlcu" name="btnSubmit" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="998,92" size="106,51" group="n9_j5jv">
       <Button title="提交" titleColor="#ffffff" titleFontSize="18" icon="ui://nyy10939o9zcl"/>
     </component>

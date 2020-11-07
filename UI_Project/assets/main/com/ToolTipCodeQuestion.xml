@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="582,163" designImage="ui://oyity675gen858" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlType" pages="3,unknow,1,showText,2,question,0,selection" selected="3"/>
+  <controller name="ctrlType" pages="3,unknow,1,showText,2,question,0,selection" selected="2"/>
   <displayList>
-    <loader id="n0_j5jv" name="bg" xy="0,0" size="339,272" group="n11_qlcu" url="ui://te1gxawolgy9cyik7" fill="scaleFree">
+    <loader id="n0_j5jv" name="bg" xy="0,-85" size="367,261" group="n11_qlcu" url="ui://te1gxawolgy9cyik7" fill="scaleFree">
       <gearXY controller="ctrlType" pages="3,1,0" values="0,-1|0,-1|0,0" default="0,-85"/>
       <gearSize controller="ctrlType" pages="3,1,2,0" values="582,165,1,1|582,165,1,1|367,261,1,1|339,272,1,1"/>
       <relation target="n11_qlcu" sidePair="left-left,top-top"/>
     </loader>
-    <component id="n18_fzlu" name="labContent" src="gen854" fileName="old/lab/labVScroll.xml" xy="22,28" size="294,115" group="n11_qlcu">
+    <component id="n18_fzlu" name="labContent" src="gen854" fileName="old/lab/labVScroll.xml" xy="22,-65" size="325,179" group="n11_qlcu">
       <gearXY controller="ctrlType" pages="3,1,0" values="21,20|21,20|22,28" default="22,-65"/>
       <gearSize controller="ctrlType" pages="2,0" values="325,179,1,1|294,115,1,1" default="540,122,1,1"/>
       <Label titleColor="#333333" titleFontSize="24"/>
@@ -15,45 +15,44 @@
     <component id="n10_qlcu" name="btnSubmit" src="gen82t" fileName="old/btn/btnFixClickArea.xml" xy="254,117" size="106,55" group="n9_j5jv">
       <Button title="提 交" titleColor="#ffffff" titleFontSize="18" icon="ui://nyy10939o9zcl"/>
     </component>
-    <image id="n27_pzqf" name="n27" src="o9zck" fileName="screenDialog/img/icon_dialog_13.png" pkg="nyy10939" xy="20,125" group="n9_j5jv"/>
-    <text id="n6_j5jv" name="inpAnswer" xy="38,130" size="194,32" group="n9_j5jv" input="true" prompt="[size=24]输入答案[/size]" fontSize="24" color="#999999" vAlign="middle" autoSize="none" singleLine="true" text="">
-      <relation target="n27_pzqf" sidePair="width-width,height-height,left-left,top-top"/>
-    </text>
+    <component id="n47_twn2" name="inpAnswer" src="twn2cyik9" fileName="com/ComMobileInput.xml" pkg="te1gxawo" xy="20,125" size="232,39" group="n9_j5jv">
+      <Label titleColor="#999999" icon="ui://nyy10939o9zck" prompt="[size=24]输入答案[/size]"/>
+    </component>
     <group id="n9_j5jv" name="grpAnswer" xy="20,117" size="340,55" group="n11_qlcu" advanced="true">
       <gearDisplay controller="ctrlType" pages="2"/>
     </group>
-    <image id="n29_pzqf" name="imgArrow1" src="w79twcyim1" fileName="img/icon_dialog_10.png" xy="155,262" group="n46_pzqf" visible="false">
+    <image id="n29_pzqf" name="imgArrow1" src="w79twcyim1" fileName="img/icon_dialog_10.png" xy="167,166" group="n46_pzqf" visible="false">
       <gearXY controller="ctrlType" pages="3,1,2,0" values="277,154|277,154|167,166|155,262"/>
     </image>
-    <image id="n38_pzqf" name="imgArrow3" src="w79twcyim1" fileName="img/icon_dialog_10.png" xy="329,155" group="n46_pzqf" visible="false" rotation="270">
+    <image id="n38_pzqf" name="imgArrow3" src="w79twcyim1" fileName="img/icon_dialog_10.png" xy="356,55" group="n46_pzqf" visible="false" rotation="270">
       <gearXY controller="ctrlType" pages="3,1,2,0" values="572,97|572,97|356,55|329,155"/>
     </image>
-    <image id="n39_pzqf" name="imgArrow4" src="w79twcyim1" fileName="img/icon_dialog_10.png" xy="10,127" group="n46_pzqf" visible="false" rotation="90">
+    <image id="n39_pzqf" name="imgArrow4" src="w79twcyim1" fileName="img/icon_dialog_10.png" xy="10,37" group="n46_pzqf" visible="false" rotation="90">
       <gearXY controller="ctrlType" pages="3,1,2,0" values="10,70|10,69|10,37|10,127"/>
     </image>
-    <image id="n40_pzqf" name="imgArrow6" src="w79twcyim1" fileName="img/icon_dialog_10.png" xy="329,249" group="n46_pzqf" visible="false" rotation="270">
+    <image id="n40_pzqf" name="imgArrow6" src="w79twcyim1" fileName="img/icon_dialog_10.png" xy="356,141" group="n46_pzqf" visible="false" rotation="270">
       <gearXY controller="ctrlType" pages="3,1,2,0" values="572,136|572,137|356,141|329,249"/>
     </image>
-    <image id="n41_pzqf" name="imgArrow2" src="w79twcyim1" fileName="img/icon_dialog_10.png" xy="181,11" group="n46_pzqf" visible="false" rotation="180">
+    <image id="n41_pzqf" name="imgArrow2" src="w79twcyim1" fileName="img/icon_dialog_10.png" xy="192,-74" group="n46_pzqf" visible="false" rotation="180">
       <gearXY controller="ctrlType" pages="3,1,2,0" values="305,10|303,10|192,-74|181,11"/>
     </image>
-    <image id="n43_pzqf" name="imgArrow7" src="w79twcyim1" fileName="img/icon_dialog_10.png" xy="10,34" group="n46_pzqf" visible="false" rotation="90">
+    <image id="n43_pzqf" name="imgArrow7" src="w79twcyim1" fileName="img/icon_dialog_10.png" xy="10,-53" group="n46_pzqf" visible="false" rotation="90">
       <gearXY controller="ctrlType" pages="3,1,2,0" values="10,29|10,32|10,-53|10,34"/>
     </image>
-    <image id="n44_pzqf" name="imgArrow5" src="w79twcyim1" fileName="img/icon_dialog_10.png" xy="329,65" group="n46_pzqf" visible="false" rotation="270">
+    <image id="n44_pzqf" name="imgArrow5" src="w79twcyim1" fileName="img/icon_dialog_10.png" xy="356,-27" group="n46_pzqf" visible="false" rotation="270">
       <gearXY controller="ctrlType" pages="3,1,2,0" values="572,58|572,57|356,-27|329,65"/>
     </image>
-    <image id="n45_pzqf" name="imgArrow8" src="w79twcyim1" fileName="img/icon_dialog_10.png" xy="10,217" group="n46_pzqf" visible="false" rotation="90">
+    <image id="n45_pzqf" name="imgArrow8" src="w79twcyim1" fileName="img/icon_dialog_10.png" xy="10,121" group="n46_pzqf" visible="false" rotation="90">
       <gearXY controller="ctrlType" pages="3,1,2,0" values="10,111|10,106|10,121|10,217"/>
     </image>
-    <group id="n46_pzqf" name="n46" xy="10,11" size="347,271" group="n11_qlcu"/>
-    <group id="n11_qlcu" name="root" xy="0,0" size="360,282" advanced="true">
+    <group id="n46_pzqf" name="n46" xy="10,-74" size="374,260" group="n11_qlcu"/>
+    <group id="n11_qlcu" name="root" xy="0,-85" size="384,271" advanced="true">
       <relation target="" sidePair="left-left,top-top"/>
     </group>
     <image id="n28_pzqf" name="imgDown" src="o9zcj" fileName="screenDialog/img/icon_dialog_4.png" pkg="nyy10939" xy="282,150" size="16,11">
       <gearDisplay controller="ctrlType" pages="1"/>
     </image>
-    <list id="n2_j5jv" name="lstSelection" xy="14,148" size="307,111" layout="flow_hz" overflow="scroll" lineGap="20" colGap="24" defaultItem="ui://oyity675gen84x" align="right" vAlign="bottom">
+    <list id="n2_j5jv" name="lstSelection" xy="28,52" size="307,111" layout="flow_hz" overflow="scroll" lineGap="20" colGap="24" defaultItem="ui://oyity675gen84x" align="right" vAlign="bottom">
       <gearDisplay controller="ctrlType" pages="0"/>
       <relation target="n0_j5jv" sidePair="center-center,bottom-bottom"/>
       <item/>
