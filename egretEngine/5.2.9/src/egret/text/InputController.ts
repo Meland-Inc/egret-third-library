@@ -193,7 +193,7 @@ namespace egret {
             this.$onFocus();
         }
 
-        $onFocus(): void {
+        $onFocus(active: boolean = false): void {
             let self = this;
             if (!this._text.visible) {
                 return;
@@ -213,7 +213,7 @@ namespace egret {
             }
 
             //强制更新输入框位置
-            this.stageText.$show();
+            this.stageText.$show(active);
         }
 
         //未点中文本

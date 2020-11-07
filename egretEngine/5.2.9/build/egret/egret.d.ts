@@ -11942,7 +11942,7 @@ declare namespace egret {
         private blurHandler;
         private tempStage;
         private onMouseDownHandler;
-        $onFocus(): void;
+        $onFocus(active?: boolean): void;
         private onStageDownHandler;
         /**
          * @private
@@ -12017,7 +12017,7 @@ declare namespace egret {
          * @private
          *
          */
-        $show(): void;
+        $show(active?: boolean): void;
         /**
          * @private
          *

@@ -2204,7 +2204,8 @@ var egret;
              * @private
              *
              */
-            HTML5StageText.prototype.$show = function () {
+            HTML5StageText.prototype.$show = function (active) {
+                if (active === void 0) { active = true; }
                 if (!this.htmlInput.isCurrentStageText(this)) {
                     this.inputElement = this.htmlInput.getInputElement(this);
                     this.inputElement.autocomplete = 'off';
@@ -2224,16 +2225,44 @@ var egret;
                 //标记当前文本被选中
                 this._isNeedShow = true;
                 this._initElement();
+                if (active) {
+                    this.activeShowKeyboard();
+                }
+            };
+            HTML5StageText.prototype.activeShowKeyboard = function () {
+                if (this.htmlInput._needShow) {
+                    if (this._isNeedShow) {
+                        this._isNeedShow = false;
+                        this.executeShow();
+                        this.dispatchEvent(new egret.Event("focus"));
+                    }
+                    else if (this.$textfield.isIDEMode) {
+                        this.dispatchEvent(new egret.Event("focus"));
+                    }
+                    this.htmlInput.show();
+                }
+                else {
+                    if (this.htmlInput._inputElement) {
+                        this.htmlInput.clearInputElement();
+                        this.htmlInput._inputElement.blur();
+                        this.htmlInput._inputElement = null;
+                    }
+                }
             };
             /**
              * @private
              *
              */
             HTML5StageText.prototype.onBlurHandler = function () {
-                this.inputElement.autocomplete = 'off';
-                this.inputElement.readOnly = "readonly";
-                this.htmlInput.clearInputElement();
-                window.scrollTo(0, 0);
+                if (this.htmlInput._needShow) {
+                    this.inputElement.focus();
+                }
+                else {
+                    this.inputElement.autocomplete = 'off';
+                    this.inputElement.readOnly = "readonly";
+                    this.htmlInput.clearInputElement();
+                    window.scrollTo(0, 0);
+                }
             };
             /**
              * @private
