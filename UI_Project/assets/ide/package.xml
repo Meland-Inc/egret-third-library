@@ -742,6 +742,12 @@
     <image id="kahf13564xj" name="bg_biaotilan_5.png" path="/lessonCenter/img/" scale="9grid" scale9grid="16,11,32,22"/>
     <image id="kahf13564xk" name="icon_gou_1.png" path="/lessonCenter/img/"/>
     <image id="twn213564xa" name="img_code_font.png" path="/codeVew/oldImg/"/>
+    <component id="rv7w13564xl" name="ComBuildPreviewMobile.xml" path="/ideCommon/com/" exported="true"/>
+    <image id="rv7w13564xm" name="btn_build_cancel.png" path="/ideCommon/img/"/>
+    <image id="rv7w13564xn" name="btn_build_confirm.png" path="/ideCommon/img/"/>
+    <image id="rv7w13564xo" name="btn_build_delete.png" path="/ideCommon/img/"/>
+    <image id="rv7w13564xp" name="btn_build_move.png" path="/ideCommon/img/"/>
+    <image id="rv7w13564xq" name="btn_build_rotate.png" path="/ideCommon/img/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>
