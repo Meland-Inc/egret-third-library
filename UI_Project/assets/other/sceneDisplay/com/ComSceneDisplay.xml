@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="971,807">
+<component size="720,572">
   <controller name="ctrlSize" pages="0,small,1,normal,2,big" selected="0"/>
   <controller name="ctrlWindowType" pages="0,normal,1,fullScreen" selected="0"/>
   <displayList>
-    <loader id="n1_sdu8" name="ladBg" xy="0,0" size="971,807" aspect="true" visible="false" url="ui://ei6yz0u6sdu87b" fill="scaleFree" clearOnPublish="true">
+    <loader id="n1_sdu8" name="ladBg" xy="0,0" size="720,572" aspect="true" visible="false" url="ui://ei6yz0u6pgnz7m" fill="scaleFree" clearOnPublish="true">
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <component id="n2_sdu8" name="comContent" src="g57v7c" fileName="sceneDisplay/com/comContent.xml" xy="49,132" size="873,618">
+    <component id="n2_sdu8" name="comContent" src="g57v7c" fileName="sceneDisplay/com/comContent.xml" xy="48,171" size="624,351">
       <relation target="" sidePair="width-width,height-height,left-left,top-top"/>
     </component>
-    <graph id="n7_9nyx" name="gphMask" xy="49,132" size="873,618" visible="false" type="rect" lineSize="0" fillColor="#ff000000" corner="8">
+    <graph id="n7_9nyx" name="gphMask" xy="49,170" size="623,354" visible="false" type="rect" lineSize="0" fillColor="#ff000000" corner="10">
       <relation target="" sidePair="width-width,height-height,left-left,top-top"/>
     </graph>
-    <component id="n3_sdu8" name="btnToFullScreen" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="827,77" size="57,43">
+    <component id="n3_sdu8" name="btnToFullScreen" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="572,125" size="57,43">
       <gearDisplay controller="ctrlWindowType" pages="0"/>
       <relation target="" sidePair="right-right,top-top"/>
       <Button icon="ui://ei6yz0u6kxse7h" controller="ctrlWindowType" page="1"/>
     </component>
-    <component id="n4_j563" name="btnToNormal" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="826,77" size="58,43">
+    <component id="n4_j563" name="btnToNormal" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="571,125" size="58,43">
       <gearDisplay controller="ctrlWindowType" pages="1"/>
       <relation target="n3_sdu8" sidePair="center-center,middle-middle"/>
       <Button icon="ui://ei6yz0u6kxse7g" controller="ctrlWindowType" page="0"/>
     </component>
-    <component id="n6_o9dk" name="btnStart" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="420,375" size="131,132">
+    <component id="n6_o9dk" name="btnStart" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="294,279" size="131,132">
       <relation target="" sidePair="center-center,middle-middle"/>
       <Button icon="ui://ei6yz0u6kxse7f"/>
     </component>
-    <component id="n10_kxse" name="btnReStart" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="420,375" size="131,132">
+    <component id="n10_kxse" name="btnReStart" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="294,279" size="131,132">
       <relation target="" sidePair="center-center,middle-middle"/>
       <Button icon="ui://ei6yz0u6kxse7i"/>
     </component>

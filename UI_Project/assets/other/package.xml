@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="ei6yz0u6">
+<packageDescription id="ei6yz0u6" hasFavorites="true">
   <resources>
     <component id="qncg0" name="WinTileMapPreview.xml" path="/mapPreview/win/" exported="true"/>
     <component id="qncg1" name="ladMapCtnr.xml" path="/mapPreview/com/"/>
@@ -15,16 +15,20 @@
     <component id="n3n7j" name="ComBlackAlphaTPLoading.xml" path="/tpLoading/" exported="true"/>
     <image id="bueyo" name="img_black_circle.png" path="/tpLoading/" scale="9grid" scale9grid="9,9,110,110" duplicatePadding="true"/>
     <component id="11ax79" name="ComSceneOperateMask.xml" path="/" exported="true"/>
-    <component id="sdu87a" name="ComSceneDisplay.xml" path="/sceneDisplay/com/" exported="true"/>
-    <image id="sdu87b" name="dianshi_12_1_01.png" path="/sceneDisplay/img/" scale="9grid" scale9grid="309,274,87,11"/>
+    <component id="sdu87a" name="ComSceneDisplay.xml" path="/sceneDisplay/com/"/>
     <component id="g57v7c" name="comContent.xml" path="/sceneDisplay/com/"/>
     <image id="kxse7f" name="12-03.png" path="/sceneDisplay/img/"/>
     <image id="kxse7g" name="12-02.png" path="/sceneDisplay/img/"/>
     <image id="kxse7h" name="12-01.png" path="/sceneDisplay/img/"/>
     <image id="kxse7i" name="12-04.png" path="/sceneDisplay/img/"/>
-    <component id="kxse7j" name="ComMediumSceneDisplay.xml" path="/sceneDisplay/com/" exported="true"/>
-    <image id="kxse7k" name="dianshi_8_1_01.png" path="/sceneDisplay/img/"/>
+    <component id="kxse7j" name="ComMediumSceneDisplay.xml" path="/sceneDisplay/com/" exported="true" favorite="true"/>
     <component id="kahfp" name="ComAreaResetLoading.xml" path="/tpLoading/" exported="true"/>
+    <image id="pgnz7m" name="dianshi_12_1_01_ui.png" path="/sceneDisplay/img/" scale="9grid" scale9grid="354,313,10,10"/>
+    <image id="pgnz7n" name="dianshi_8_1_01_ui.png" path="/sceneDisplay/img/" scale="9grid" scale9grid="234,209,10,5"/>
+    <image id="pgnz7o" name="dianshi_4_1_01_ui.png" path="/sceneDisplay/img/" scale="9grid" scale9grid="115,105,10,3"/>
+    <component id="pgnz7p" name="ComSmallSceneDisplay.xml" path="/sceneDisplay/com/" exported="true"/>
+    <image id="pgnz7q" name="dianshi_8_1_04_ui.png" path="/sceneDisplay/com/"/>
+    <image id="pgnz7r" name="dianshi_4_1_04_ui.png" path="/sceneDisplay/com/"/>
   </resources>
   <publish name="other"/>
 </packageDescription>
