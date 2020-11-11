@@ -662,6 +662,9 @@
     <component id="oabxcyik8" name="ComCursorDelete.xml" path="/win/" exported="true"/>
     <component id="twn2cyik9" name="ComMobileInput.xml" path="/com/" exported="true"/>
     <component id="twn2cyika" name="WinMobileInput.xml" path="/win/" exported="true"/>
+    <component id="rtvd8" name="MouseEffectComboBoxItem.xml" path="/comboBox/mouseEffectComboBox/"/>
+    <component id="rtvd9" name="MouseEffectComboBoxPopup.xml" path="/comboBox/mouseEffectComboBox/"/>
+    <component id="rtvda" name="MouseEffectComboBox.xml" path="/comboBox/mouseEffectComboBox/" exported="true"/>
   </resources>
   <publish name="common">
     <atlas name="默认" index="0"/>
