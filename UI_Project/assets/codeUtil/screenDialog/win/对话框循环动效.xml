@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1279,468" opaque="false" designImageLayer="1">
+  <controller name="ctrlType" exported="true" pages="3,unknow,1,showText,2,question,0,selection" selected="0"/>
+  <displayList>
+    <loader id="n1_oij0" name="btnBg" xy="644,307" pivot="0.5,0.5" anchor="true" size="1016,308" group="n17_oij0" url="ui://nyy10939l24br" fill="scaleFree"/>
+    <image id="n2_oij0" name="n2" src="l24bs" fileName="screenDialog/img/DuiHuaKuang_img_02.png" xy="282,200" pivot="0.5,0.5" anchor="true" size="111,63" group="n17_oij0"/>
+    <image id="n3_oij0" name="n3" src="l24bt" fileName="screenDialog/img/DuiHuaKuang_img_03.png" xy="30,272" pivot="0.5,0.5" anchor="true" size="60,47" group="n17_oij0"/>
+    <image id="n4_oij0" name="n4" src="l24bu" fileName="screenDialog/img/DuiHuaKuang_img_04.png" xy="131,251" pivot="0.5,0.5" anchor="true" group="n17_oij0"/>
+    <image id="n5_oij0" name="n5" src="l24bv" fileName="screenDialog/img/DuiHuaKuang_img_05.png" xy="150,348" pivot="0.5,0.5" anchor="true" group="n17_oij0"/>
+    <image id="n7_oij0" name="n7" src="l24bw" fileName="screenDialog/img/DuiHuaKuang_img_06.png" xy="1099,260" pivot="0.5,0.5" anchor="true" group="n17_oij0"/>
+    <image id="n8_oij0" name="n8" src="l24bx" fileName="screenDialog/img/DuiHuaKuang_img_07.png" xy="1087,363" pivot="0.5,0.5" anchor="true" group="n17_oij0"/>
+    <image id="n9_oij0" name="n9" src="l24by" fileName="screenDialog/img/DuiHuaKuang_img_08.png" xy="1222,374" pivot="0.5,0.5" anchor="true" group="n17_oij0"/>
+    <image id="n14_oij0" name="imgNextPageArrow" src="l24b14" fileName="screenDialog/img/DuiHuaKuang_img_11.png" xy="626,411"/>
+    <image id="n6_oij0" name="n6" src="l24bz" fileName="screenDialog/img/DuiHuaKuang_img_09.png" xy="107,149" group="n30_l24b"/>
+    <group id="n17_oij0" name="bg" xy="0,153" size="1265,308"/>
+    <group id="n28_l24b" name="grpAnswer" xy="614,89" size="514,51" advanced="true">
+      <gearDisplay controller="ctrlType" pages="2"/>
+    </group>
+    <list id="n25_l24b" name="lstSelection" xy="636,5" size="499,137" layout="flow_hz" overflow="scroll" lineGap="10" colGap="20" defaultItem="ui://nyy10939qylxd" align="right" vAlign="bottom">
+      <gearDisplay controller="ctrlType" pages="0"/>
+      <relation target="" sidePair="bottom-bottom"/>
+    </list>
+    <group id="n30_l24b" name="grpTitle" xy="107,149" size="174,92" advanced="true"/>
+    <component id="n11_oij0" name="btnClose" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1107,216" pivot="0.5,0.182" anchor="true" size="78,74">
+      <gearDisplay controller="ctrlType" pages="3,2,0"/>
+      <Button icon="ui://nyy10939l24b11"/>
+    </component>
+    <group id="n29_l24b" name="grpIcon" xy="134,233" size="155,155" advanced="true"/>
+    <image id="n10_oij0" name="n10" src="l24b10" fileName="screenDialog/img/DuiHuaKuang_img_10.png" xy="134,233" group="n29_l24b"/>
+    <loader id="n18_l24b" name="ladIcon" xy="162,262" size="100,100" group="n29_l24b" aspect="true" touchable="false" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <component id="n26_l24b" name="inpAnswer" src="twn2cyik9" fileName="com/ComMobileInput.xml" pkg="te1gxawo" xy="614,95" size="412,39" group="n28_l24b">
+      <Label icon="ui://nyy10939o9zck" prompt="[size=24]输入答案[/size]"/>
+    </component>
+    <component id="n27_l24b" name="btnSubmit" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1022,89" size="106,51" group="n28_l24b">
+      <Button title="提交" titleColor="#ffffff" titleFontSize="18" icon="ui://nyy10939o9zcl"/>
+    </component>
+    <text id="n20_l24b" name="tfContent" xy="308,222" size="744,179" fontSize="20" color="#666666" vAlign="middle" autoSize="none" text=""/>
+    <text id="n19_l24b" name="tfTitle" xy="107,165" size="168,76" group="n30_l24b" rotation="-8" fontSize="30" color="#ffffff" align="center" vAlign="middle" autoSize="none" singleLine="true" text="name"/>
+    <image id="n12_oij0" name="n12" src="l24b12" fileName="screenDialog/img/确认按钮.png" xy="874,387" pivot="0.5,0.5" anchor="true" size="147,65" visible="false"/>
+    <image id="n13_oij0" name="n13" src="l24b13" fileName="screenDialog/img/取消按钮.png" xy="955,352" visible="false"/>
+  </displayList>
+  <transition name="对话框待机动效" autoPlay="true">
+    <item time="0" type="Rotation" target="n11_oij0" value="0"/>
+    <item time="0" type="Rotation" target="n5_oij0" tween="true" startValue="0" endValue="6" duration="36" ease="Linear" repeat="-1" yoyo="true"/>
+    <item time="0" type="Scale" target="n4_oij0" tween="true" startValue="1,1" endValue="1.1,1.1" duration="36" ease="Quad.InOut" repeat="-1" yoyo="true"/>
+    <item time="0" type="Scale" target="n9_oij0" tween="true" startValue="1,1" endValue="0.88,1.21" duration="36" ease="Quad.InOut" repeat="-1" yoyo="true"/>
+    <item time="0" type="XY" target="n12_oij0" tween="true" startValue="875,388" endValue="867,388" duration="12" ease="Sine.InOut" repeat="-1" yoyo="true"/>
+    <item time="0" type="XY" target="n14_oij0" tween="true" startValue="626,411.5" endValue="626,421.5" duration="12" ease="Quad.InOut" repeat="-1" yoyo="true"/>
+    <item time="0" type="XY" target="n5_oij0" tween="true" startValue="150,348" endValue="166,346" duration="36" ease="Quad.InOut" repeat="-1" yoyo="true"/>
+    <item time="0" type="XY" target="n8_oij0" tween="true" startValue="1087,363" endValue="1107,363" duration="36" ease="Quad.InOut" repeat="-1" yoyo="true"/>
+    <item time="0" type="XY" target="n9_oij0" tween="true" startValue="1222,374" endValue="1217,387" duration="36" ease="Quad.InOut" repeat="-1" yoyo="true"/>
+    <item time="3" type="Rotation" target="n8_oij0" tween="true" startValue="0" endValue="-45" duration="36" ease="Quad.InOut" repeat="-1" yoyo="true"/>
+    <item time="3" type="Scale" target="n7_oij0" tween="true" startValue="1,1" endValue="0.91,0.95" duration="36" ease="Quad.InOut" repeat="-1" yoyo="true"/>
+    <item time="3" type="Size" target="n2_oij0" tween="true" startValue="111,63" endValue="85,47" duration="36" ease="Cubic.InOut" repeat="-1" yoyo="true"/>
+    <item time="3" type="Size" target="n3_oij0" tween="true" startValue="60,47" endValue="65.318,53.918" duration="36" ease="Quad.InOut" repeat="-1" yoyo="true"/>
+    <item time="3" type="XY" target="n3_oij0" tween="true" startValue="30,272" endValue="20,279" duration="36" ease="Quad.InOut" repeat="-1" yoyo="true"/>
+    <item time="6" type="Size" target="n1_oij0" tween="true" startValue="1016,308" endValue="1000,316" duration="36" ease="Linear" repeat="-1" yoyo="true"/>
+    <item time="24" type="Rotation" target="n11_oij0" tween="true" startValue="0" endValue="-15" duration="1"/>
+    <item time="25" type="Rotation" target="n11_oij0" tween="true" startValue="-15" endValue="0" duration="1"/>
+    <item time="26" type="Rotation" target="n11_oij0" tween="true" startValue="0" endValue="15" duration="1"/>
+    <item time="27" type="Rotation" target="n11_oij0" tween="true" startValue="15" endValue="0" duration="1"/>
+    <item time="28" type="Rotation" target="n11_oij0" tween="true" startValue="0" endValue="-10" duration="1"/>
+    <item time="29" type="Rotation" target="n11_oij0" tween="true" startValue="-10" endValue="0" duration="1"/>
+    <item time="30" type="Rotation" target="n11_oij0" tween="true" startValue="0" endValue="10" duration="1"/>
+    <item time="31" type="Rotation" target="n11_oij0" tween="true" startValue="10" endValue="0" duration="1"/>
+    <item time="32" type="Rotation" target="n11_oij0" tween="true" startValue="0" endValue="-5" duration="1"/>
+    <item time="33" type="Rotation" target="n11_oij0" tween="true" startValue="-5" endValue="0" duration="1"/>
+    <item time="34" type="Rotation" target="n11_oij0" tween="true" startValue="0" endValue="5" duration="1"/>
+    <item time="35" type="Rotation" target="n11_oij0" tween="true" startValue="5" endValue="0" duration="1"/>
+    <item time="73" type="Rotation" target="n11_oij0" tween="true" startValue="0" endValue="-15" duration="1"/>
+    <item time="74" type="Rotation" target="n11_oij0" tween="true" startValue="-15" endValue="0" duration="1"/>
+    <item time="75" type="Rotation" target="n11_oij0" tween="true" startValue="0" endValue="15" duration="1"/>
+    <item time="76" type="Rotation" target="n11_oij0" tween="true" startValue="15" endValue="0" duration="1"/>
+    <item time="77" type="Rotation" target="n11_oij0" tween="true" startValue="0" endValue="-10" duration="1"/>
+    <item time="78" type="Rotation" target="n11_oij0" tween="true" startValue="-10" endValue="0" duration="1"/>
+    <item time="79" type="Rotation" target="n11_oij0" tween="true" startValue="0" endValue="10" duration="1"/>
+    <item time="80" type="Rotation" target="n11_oij0" tween="true" startValue="10" endValue="0" duration="1"/>
+    <item time="81" type="Rotation" target="n11_oij0" tween="true" startValue="0" endValue="-5" duration="1"/>
+    <item time="82" type="Rotation" target="n11_oij0" tween="true" startValue="-5" endValue="0" duration="1"/>
+    <item time="83" type="Rotation" target="n11_oij0" tween="true" startValue="0" endValue="5" duration="1"/>
+    <item time="84" type="Rotation" target="n11_oij0" tween="true" startValue="5" endValue="0" duration="1"/>
+    <item time="84" type="Scale" target="n12_oij0" tween="true" startValue="1,1" endValue="0.2,0.2" duration="3" ease="Sine.Out"/>
+    <item time="87" type="Scale" target="n12_oij0" tween="true" startValue="0.2,0.2" endValue="1,1" duration="3" ease="Sine.Out"/>
+    <item time="126" type="Rotation" target="n11_oij0" tween="true" startValue="0" endValue="-15" duration="1"/>
+    <item time="127" type="Rotation" target="n11_oij0" tween="true" startValue="-15" endValue="0" duration="1"/>
+    <item time="128" type="Rotation" target="n11_oij0" tween="true" startValue="0" endValue="15" duration="1"/>
+    <item time="129" type="Rotation" target="n11_oij0" tween="true" startValue="15" endValue="0" duration="1"/>
+    <item time="130" type="Rotation" target="n11_oij0" tween="true" startValue="0" endValue="-10" duration="1"/>
+    <item time="131" type="Rotation" target="n11_oij0" tween="true" startValue="-10" endValue="0" duration="1"/>
+    <item time="132" type="Rotation" target="n11_oij0" tween="true" startValue="0" endValue="10" duration="1"/>
+    <item time="133" type="Rotation" target="n11_oij0" tween="true" startValue="10" endValue="0" duration="1"/>
+    <item time="134" type="Rotation" target="n11_oij0" tween="true" startValue="0" endValue="-5" duration="1"/>
+    <item time="135" type="Rotation" target="n11_oij0" tween="true" startValue="-5" endValue="0" duration="1"/>
+    <item time="136" type="Rotation" target="n11_oij0" tween="true" startValue="0" endValue="5" duration="1"/>
+    <item time="137" type="Rotation" target="n11_oij0" tween="true" startValue="5" endValue="0" duration="1"/>
+    <item time="177" type="Rotation" target="n11_oij0" tween="true" startValue="0" endValue="-15" duration="1"/>
+    <item time="178" type="Rotation" target="n11_oij0" tween="true" startValue="-15" endValue="0" duration="1"/>
+    <item time="179" type="Rotation" target="n11_oij0" tween="true" startValue="0" endValue="15" duration="1"/>
+    <item time="180" type="Rotation" target="n11_oij0" tween="true" startValue="15" endValue="0" duration="1"/>
+    <item time="181" type="Rotation" target="n11_oij0" tween="true" startValue="0" endValue="-10" duration="1"/>
+    <item time="182" type="Rotation" target="n11_oij0" tween="true" startValue="-10" endValue="0" duration="1"/>
+    <item time="183" type="Rotation" target="n11_oij0" tween="true" startValue="0" endValue="10" duration="1"/>
+    <item time="184" type="Rotation" target="n11_oij0" tween="true" startValue="10" endValue="0" duration="1"/>
+    <item time="185" type="Rotation" target="n11_oij0" tween="true" startValue="0" endValue="-5" duration="1"/>
+    <item time="186" type="Rotation" target="n11_oij0" tween="true" startValue="-5" endValue="0" duration="1"/>
+    <item time="187" type="Rotation" target="n11_oij0" tween="true" startValue="0" endValue="5" duration="1"/>
+    <item time="188" type="Rotation" target="n11_oij0" tween="true" startValue="5" endValue="0" duration="1"/>
+  </transition>
+</component>

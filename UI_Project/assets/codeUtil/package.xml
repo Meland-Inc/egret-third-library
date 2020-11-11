@@ -14,6 +14,21 @@
     <image id="w79tm" name="icon_dialog_16.png" path="/screenDialog/img/" scale="9grid" scale9grid="129,64,26,76"/>
     <component id="eqdln" name="WinCodeBlockDialogNew.xml" path="/screenDialog/win/" exported="true"/>
     <component id="eqdlp" name="ComCodeBlockDialog.xml" path="/screenDialog/win/" exported="true"/>
+    <component id="l24bq" name="对话框循环动效.xml" path="/screenDialog/win/"/>
+    <image id="l24br" name="DuiHuaKuang_img_01.png" path="/screenDialog/img/"/>
+    <image id="l24bs" name="DuiHuaKuang_img_02.png" path="/screenDialog/img/"/>
+    <image id="l24bt" name="DuiHuaKuang_img_03.png" path="/screenDialog/img/"/>
+    <image id="l24bu" name="DuiHuaKuang_img_04.png" path="/screenDialog/img/"/>
+    <image id="l24bv" name="DuiHuaKuang_img_05.png" path="/screenDialog/img/"/>
+    <image id="l24bw" name="DuiHuaKuang_img_06.png" path="/screenDialog/img/"/>
+    <image id="l24bx" name="DuiHuaKuang_img_07.png" path="/screenDialog/img/"/>
+    <image id="l24by" name="DuiHuaKuang_img_08.png" path="/screenDialog/img/"/>
+    <image id="l24bz" name="DuiHuaKuang_img_09.png" path="/screenDialog/img/"/>
+    <image id="l24b10" name="DuiHuaKuang_img_10.png" path="/screenDialog/img/"/>
+    <image id="l24b11" name="DuiHuaKuang_btn_01.png" path="/screenDialog/img/"/>
+    <image id="l24b12" name="确认按钮.png" path="/screenDialog/img/"/>
+    <image id="l24b13" name="取消按钮.png" path="/screenDialog/img/"/>
+    <image id="l24b14" name="DuiHuaKuang_img_11.png" path="/screenDialog/img/"/>
   </resources>
   <publish name="codeUtil"/>
 </packageDescription>
