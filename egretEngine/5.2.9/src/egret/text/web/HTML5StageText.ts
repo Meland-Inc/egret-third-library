@@ -65,7 +65,7 @@ namespace egret.web {
         /**
          * @private
          */
-        private _isNeedShow: boolean = false;
+        public _isNeedShow: boolean = false;
         /**
          * @private
          */
@@ -155,7 +155,7 @@ namespace egret.web {
          * @private
          * 
          */
-        $show(): void {
+        $show(active: boolean = true): void {
             if (!this.htmlInput.isCurrentStageText(this)) {
                 this.inputElement = this.htmlInput.getInputElement(this);
                 this.inputElement.autocomplete = 'off';
@@ -178,6 +178,30 @@ namespace egret.web {
             this._isNeedShow = true;
 
             this._initElement();
+
+            if (active) {
+                this.activeShowKeyboard();
+            }
+        }
+
+    	activeShowKeyboard(): void {
+            if (this.htmlInput._needShow) {
+                if (this._isNeedShow) {
+                    this._isNeedShow = false;
+                    this.executeShow();
+                    this.dispatchEvent(new egret.Event("focus"));
+                } else if (this.$textfield.isIDEMode) {
+                    this.dispatchEvent(new egret.Event("focus"));
+                }
+                this.htmlInput.show();
+            }
+            else {
+                if (this.htmlInput._inputElement) {
+                    this.htmlInput.clearInputElement();
+                    this.htmlInput._inputElement.blur();
+                    this.htmlInput._inputElement = null;
+                }
+            }
         }
 
         /**
@@ -185,10 +209,15 @@ namespace egret.web {
          * 
          */
         private onBlurHandler(): void {
-            this.inputElement.autocomplete = 'off';
-            this.inputElement.readOnly = "readonly";
-            this.htmlInput.clearInputElement();
-            window.scrollTo(0, 0);
+            //TOUCH_BEGIN直接调用setFocus时，inputElement会触发一次失焦。在这里重新聚焦。
+            if (this.htmlInput._needShow) {
+                this.inputElement.focus();
+            } else {
+                this.inputElement.autocomplete = 'off';
+                this.inputElement.readOnly = "readonly";
+                this.htmlInput.clearInputElement();
+                window.scrollTo(0, 0);
+            }
         }
 
         /**
@@ -536,7 +565,7 @@ namespace egret.web {
         /**
          * @private
          */
-        private _inputElement: any;
+        public _inputElement: any;
         /**
          * @private
          */

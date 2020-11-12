@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="ei6yz0u6" hasFavorites="true">
+<packageDescription id="ei6yz0u6">
   <resources>
     <component id="qncg0" name="WinTileMapPreview.xml" path="/mapPreview/win/" exported="true"/>
     <component id="qncg1" name="ladMapCtnr.xml" path="/mapPreview/com/"/>
@@ -29,6 +29,14 @@
     <component id="pgnz7p" name="ComSmallSceneDisplay.xml" path="/sceneDisplay/com/" exported="true"/>
     <image id="pgnz7q" name="dianshi_8_1_04_ui.png" path="/sceneDisplay/com/"/>
     <image id="pgnz7r" name="dianshi_4_1_04_ui.png" path="/sceneDisplay/com/"/>
+    <component id="jyi10" name="ComCloudMistTpLoading.xml" path="/cloudTpLoading/" exported="true"/>
+    <image id="kew81" name="y1.png" path="/cloudTpLoading/"/>
+    <image id="kew82" name="y2.png" path="/cloudTpLoading/"/>
+    <image id="kew83" name="y3.png" path="/cloudTpLoading/"/>
+    <image id="kew86" name="yun1.png" path="/cloudTpLoading/"/>
+    <image id="kew85" name="yun3.png" path="/cloudTpLoading/"/>
+    <image id="kew88" name="yun4.png" path="/cloudTpLoading/"/>
+    <image id="kew87" name="yun5.png" path="/cloudTpLoading/"/>
   </resources>
   <publish name="other"/>
 </packageDescription>
