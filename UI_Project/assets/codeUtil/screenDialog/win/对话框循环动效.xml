@@ -11,7 +11,7 @@
     <image id="n8_oij0" name="n8" src="l24bx" fileName="screenDialog/img/DuiHuaKuang_img_07.png" xy="1087,363" pivot="0.5,0.5" anchor="true" group="n17_oij0"/>
     <image id="n9_oij0" name="n9" src="l24by" fileName="screenDialog/img/DuiHuaKuang_img_08.png" xy="1222,374" pivot="0.5,0.5" anchor="true" group="n17_oij0"/>
     <image id="n14_oij0" name="imgNextPageArrow" src="l24b14" fileName="screenDialog/img/DuiHuaKuang_img_11.png" xy="626,411"/>
-    <image id="n6_oij0" name="n6" src="l24bz" fileName="screenDialog/img/DuiHuaKuang_img_09.png" xy="107,149" group="n30_l24b"/>
+    <image id="n6_oij0" name="n6" src="l24bz" fileName="screenDialog/img/DuiHuaKuang_img_09.png" xy="59,139" group="n30_l24b"/>
     <group id="n17_oij0" name="bg" xy="0,153" size="1265,308"/>
     <group id="n28_l24b" name="grpAnswer" xy="614,89" size="514,51" advanced="true">
       <gearDisplay controller="ctrlType" pages="2"/>
@@ -20,7 +20,7 @@
       <gearDisplay controller="ctrlType" pages="0"/>
       <relation target="" sidePair="bottom-bottom"/>
     </list>
-    <group id="n30_l24b" name="grpTitle" xy="107,149" size="174,92" advanced="true"/>
+    <group id="n30_l24b" name="grpTitle" xy="59,139" size="298,100" advanced="true"/>
     <component id="n11_oij0" name="btnClose" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1107,216" pivot="0.5,0.182" anchor="true" size="78,74">
       <gearDisplay controller="ctrlType" pages="3,2,0"/>
       <Button icon="ui://nyy10939l24b11"/>
@@ -35,7 +35,7 @@
       <Button title="提交" titleColor="#ffffff" titleFontSize="18" icon="ui://nyy10939o9zcl"/>
     </component>
     <text id="n20_l24b" name="tfContent" xy="308,222" size="744,179" fontSize="20" color="#666666" vAlign="middle" autoSize="none" text=""/>
-    <text id="n19_l24b" name="tfTitle" xy="107,165" size="168,76" group="n30_l24b" rotation="-8" fontSize="30" color="#ffffff" align="center" vAlign="middle" autoSize="none" singleLine="true" text="name"/>
+    <text id="n19_l24b" name="tfTitle" xy="74,163" size="265,76" group="n30_l24b" rotation="-6" fontSize="34" color="#ffffff" align="center" vAlign="middle" autoSize="none" singleLine="true" text="最多显示六个字"/>
     <image id="n12_oij0" name="n12" src="l24b12" fileName="screenDialog/img/确认按钮.png" xy="874,387" pivot="0.5,0.5" anchor="true" size="147,65" visible="false"/>
     <image id="n13_oij0" name="n13" src="l24b13" fileName="screenDialog/img/取消按钮.png" xy="955,352" visible="false"/>
   </displayList>
