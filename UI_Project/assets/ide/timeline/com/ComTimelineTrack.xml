@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1763,44" designImage="ui://thvmj7vo110fe4cyik9" designImageOffsetX="-9" designImageOffsetY="-1000">
+<component size="1763,44" designImage="ui://thvmj7vo110fe4cyik9" designImageOffsetX="-9" designImageOffsetY="-1000" designImageAlpha="0">
   <displayList>
     <image id="n0_110fe" name="n0" src="110fewcyiqp" fileName="timeline/img/img_code_dy_3.png" xy="0,0" size="148,44"/>
     <image id="n3_110fe" name="n3" src="110fewcyiqq" fileName="timeline/img/img_code_dy_4.png" xy="148,0" size="1615,44">
       <relation target="" sidePair="width-width"/>
     </image>
     <text id="n1_110fe" name="tfName" xy="0,0" size="148,44" fontSize="20" color="#bfc2cc" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="&quot;声音1&quot;"/>
-    <component id="n4_iyxw" name="container" src="tvlfcyih7" fileName="com/ComEmpty.xml" pkg="te1gxawo" xy="148,0" size="1615,44"/>
+    <component id="n4_iyxw" name="comCtnr" src="j5gc13564xt" fileName="timeline/com/ComTimelineCtnr.xml" xy="148,0" size="1615,44">
+      <relation target="" sidePair="width-width"/>
+    </component>
   </displayList>
 </component>

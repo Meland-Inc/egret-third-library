@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1800,585" designImage="ui://thvmj7vo110fe4cyik9" designImageOffsetY="-496" designImageAlpha="0">
   <displayList>
-    <image id="n0_110fe" name="n0" src="110fewcyiqs" fileName="timeline/img/img_code_dy_6.png" xy="0,44" size="1800,540">
+    <image id="n0_110fe" name="n5" src="110fewcyiqs" fileName="timeline/img/img_code_dy_6.png" xy="0,44" size="1800,540">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
     <image id="n6_110fe" name="n6" src="110fewcyiqt" fileName="timeline/img/img_code_dy_7.png" xy="6,39" size="150,55"/>
-    <image id="n4_110fe" name="n4" src="110fewcyiqy" fileName="timeline/img/img_code_dy_29.png" xy="5,92" size="1766,486">
+    <image id="n4_110fe" name="n7" src="110fewcyiqy" fileName="timeline/img/img_code_dy_29.png" xy="5,92" size="1768,486">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
     <component id="n7_110fe" name="comCutAnime" src="110fewcyiqz" fileName="timeline/com/ComTimelineCutAnime.xml" xy="4,0"/>
     <component id="n9_110fe" name="btnPlay" src="110fewcyir0" fileName="timeline/com/BtnTimelinePlay.xml" xy="898,52">
       <relation target="" sidePair="center-center"/>
     </component>
-    <list id="n10_110fe" name="comLstItem" xy="10,134" size="1780,368" layout="flow_hz" overflow="scroll" scrollBarFlags="4" scrollBarRes="ui://ti9jag5tsn4a13564xd," defaultItem="ui://ti9jag5t110fewcyiqx" autoClearItems="true">
+    <list id="n10_110fe" name="comLstTrack" xy="10,134" size="1775,368" layout="flow_hz" overflow="scroll" scroll="both" scrollBarFlags="128" scrollBarMargin="0,0,12,0" scrollBarRes="ui://ti9jag5tsn4a13564xd," defaultItem="ui://ti9jag5t110fewcyiqx" autoClearItems="true">
       <relation target="" sidePair="width-width,height-height"/>
       <item/>
       <item/>
@@ -20,27 +20,11 @@
       <item/>
       <item/>
       <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
     </list>
-    <list id="n11_sn4a" name="comLstRuler" xy="137,89" size="1635,45" layout="row" overflow="hidden" scroll="horizontal" defaultItem="ui://ti9jag5t110fewcyir1" autoClearItems="true">
+    <component id="n19_to0d" name="comMoveCtnr" src="j5gc13564xt" fileName="timeline/com/ComTimelineCtnr.xml" xy="158,135" size="1615,368" touchable="false">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <list id="n11_sn4a" name="comLstRuler" xy="120,89" size="1653,45" layout="row" overflow="hidden" scroll="horizontal" colGap="-38" defaultItem="ui://ti9jag5t110fewcyir1" autoClearItems="true">
       <relation target="" sidePair="width-width,height-height"/>
       <item/>
       <item/>
@@ -65,7 +49,7 @@
       <item/>
       <item/>
     </list>
-    <component id="n12_sn4a" name="btnAddTimeline" src="sn4a13564xa" fileName="timeline/com/BtnAddTimeline.xml" xy="11,503" size="1763,44">
+    <component id="n12_sn4a" name="btnAddTimeline" src="sn4a13564xa" fileName="timeline/com/BtnAddTimeline.xml" xy="156,503" size="1615,44">
       <relation target="" sidePair="width-width,bottom-bottom"/>
     </component>
     <text id="n13_sn4a" name="tfName" xy="6,69" size="150,29" fontSize="20" color="#ffffff" align="center" autoSize="none" autoClearText="true" text="&quot;猫捉老鼠&quot;"/>

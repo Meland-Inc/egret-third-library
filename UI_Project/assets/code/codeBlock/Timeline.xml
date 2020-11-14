@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="64,44">
+  <controller name="ctrlEnable" pages="0,true,1,false" selected="0"/>
   <displayList>
     <loader id="n1_nlmf" name="ladBG" xy="0,0" size="64,44" url="ui://t573fj5bnlmf6o" fill="scaleFree">
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <loader id="n5_nlmf" name="loaderDrag" xy="0,0" size="64,44" hideByEditor="true">
+    <loader id="n5_nlmf" name="loaderDrag" xy="0,0" size="64,44">
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
     <component id="n3_nlmf" name="container" src="i6xe2d" fileName="com/Container.xml" xy="9,0" size="46,44" restrictSize="0,0,44,44"/>
     <loader id="n2_nlmf" name="btnHint" xy="7,6" size="31,31" url="ui://t573fj5bnlmf6m" align="center" vAlign="middle">
       <relation target="" sidePair="left-left"/>
+    </loader>
+    <loader id="n7_j2cr" name="n7" xy="0,0" size="64,44" touchable="false" url="ui://ti9jag5t110fewcyiq1" align="center" vAlign="middle">
+      <gearDisplay controller="ctrlEnable" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
     </loader>
   </displayList>
   <relation target="n3_nlmf" sidePair="width-width,height-height"/>

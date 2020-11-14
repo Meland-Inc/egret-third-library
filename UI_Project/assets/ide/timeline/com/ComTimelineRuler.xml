@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="96,45" designImage="ui://thvmj7vo110fe4cyik9" designImageOffsetX="-138" designImageOffsetY="-587">
+<component size="135,45" designImage="ui://thvmj7vo110fe4cyik9" designImageOffsetX="-156" designImageOffsetY="-587">
   <displayList>
-    <image id="n0_capr" name="n0" src="110fewcyiqi" fileName="timeline/img/img_code_dy_22.png" xy="18,24"/>
-    <image id="n1_capr" name="n1" src="110fewcyiqj" fileName="timeline/img/img_code_dy_23.png" xy="37,36"/>
-    <image id="n3_capr" name="n3" src="110fewcyiqj" fileName="timeline/img/img_code_dy_23.png" xy="56,36"/>
-    <image id="n4_capr" name="n4" src="110fewcyiqj" fileName="timeline/img/img_code_dy_23.png" xy="75,36"/>
-    <image id="n5_capr" name="n5" src="110fewcyiqj" fileName="timeline/img/img_code_dy_23.png" xy="94,36"/>
-    <text id="n6_capr" name="tfName" xy="-21,0" size="80,26" fontSize="18" align="center" autoSize="none" text="0s"/>
+    <text id="n6_capr" name="tfName" xy="38,13" pivot="0.5,0.5" anchor="true" size="76,26" fontSize="18" align="center" autoSize="none" text="0s">
+      <relation target="n0_capr" sidePair="left-left"/>
+    </text>
+    <image id="n0_capr" name="n0" src="110fewcyiqi" fileName="timeline/img/img_code_dy_22.png" xy="38,24" size="2,21" group="n8_iyxw"/>
+    <image id="n1_capr" name="n1" src="110fewcyiqj" fileName="timeline/img/img_code_dy_23.png" xy="57,36" size="2,9" group="n8_iyxw"/>
+    <image id="n3_capr" name="n3" src="110fewcyiqj" fileName="timeline/img/img_code_dy_23.png" xy="76,36" size="2,9" group="n8_iyxw"/>
+    <image id="n4_capr" name="n4" src="110fewcyiqj" fileName="timeline/img/img_code_dy_23.png" xy="95,36" size="2,9" group="n8_iyxw"/>
+    <image id="n5_capr" name="n5" src="110fewcyiqj" fileName="timeline/img/img_code_dy_23.png" xy="114,36" size="2,9" group="n8_iyxw"/>
+    <image id="n9_iyxw" name="n9" src="110fewcyiqj" fileName="timeline/img/img_code_dy_23.png" xy="133,36" size="2,9" group="n8_iyxw" alpha="0"/>
+    <group id="n8_iyxw" name="grpDegree" xy="38,24" size="97,21" advanced="true" layout="hz" colGap="17" excludeInvisibles="true"/>
   </displayList>
+  <relation target="n8_iyxw" sidePair="width-width"/>
 </component>
