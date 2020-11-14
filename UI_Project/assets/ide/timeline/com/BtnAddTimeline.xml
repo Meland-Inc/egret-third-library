@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1763,44" pivot="0.5,0.5" extention="Button">
+<component size="1615,44" extention="Button">
   <displayList>
-    <image id="n0_sn4a" name="n0" src="110fewcyipu" fileName="timeline/img/icon_code_dy_10.png" xy="897,11" group="n2_sn4a"/>
-    <text id="n1_sn4a" name="n1" xy="923,7" size="84,29" group="n2_sn4a" fontSize="20" color="#ffffff" text="添加轨迹"/>
-    <group id="n2_sn4a" name="grpBtn" xy="897,7" size="110,29" advanced="true">
+    <image id="n0_sn4a" name="n0" src="110fewcyipu" fileName="timeline/img/icon_code_dy_10.png" xy="752,11">
       <relation target="" sidePair="center-center"/>
-    </group>
+    </image>
+    <text id="n1_sn4a" name="n1" xy="778,7" pivot="0.5,0.5" size="84,29" fontSize="20" color="#ffffff" align="center" vAlign="middle" text="添加轨迹">
+      <relation target="" sidePair="center-center"/>
+    </text>
   </displayList>
   <Button downEffect="scale" downEffectValue=".95"/>
 </component>

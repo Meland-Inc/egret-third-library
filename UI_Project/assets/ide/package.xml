@@ -668,8 +668,12 @@
     <component id="pbxd13564w3" name="btnTeacherShowHideListArea.xml" path="/lessonCenter/btn/"/>
     <image id="pbxd13564w4" name="btn_transfer_1.png" path="/lessonCenter/img/"/>
     <image id="pbxd13564w5" name="btn_transfer_2.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564w6" name="btn_transfer_3.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564w7" name="btn_transfer_4.png" path="/lessonCenter/img/"/>
     <component id="pbxd13564w8" name="btnTeacherAreaProcessItem.xml" path="/lessonCenter/btn/"/>
     <image id="pbxd13564w9" name="bg_floor_1.png" path="/lessonCenter/img/" scale="9grid" scale9grid="12,14,24,28"/>
+    <image id="pbxd13564wa" name="bg_floor_2.png" path="/lessonCenter/img/" scale="9grid" scale9grid="14,17,199,38"/>
+    <image id="pbxd13564wb" name="bg_floor_3.png" path="/lessonCenter/img/" scale="9grid" scale9grid="15,22,200,384"/>
     <image id="pbxd13564wc" name="bg_floor_4.png" path="/lessonCenter/img/" scale="9grid" scale9grid="6,7,12,14"/>
     <image id="pbxd13564wd" name="biaoshi_1.png" path="/lessonCenter/img/" scale9grid="10,14,20,28"/>
     <image id="pbxd13564we" name="biaoshi_10.png" path="/lessonCenter/img/"/>
@@ -682,6 +686,16 @@
     <image id="pbxd13564wl" name="biaoshi_8.png" path="/lessonCenter/img/"/>
     <image id="pbxd13564wm" name="biaoshi_9.png" path="/lessonCenter/img/"/>
     <image id="pbxd13564wn" name="diban_1.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564wo" name="diban_10.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564wp" name="diban_11.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564wq" name="diban_2.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564wr" name="diban_3.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564ws" name="diban_4.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564wt" name="diban_5.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564wu" name="diban_6.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564wv" name="diban_7.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564ww" name="diban_8.png" path="/lessonCenter/img/"/>
+    <image id="pbxd13564wx" name="diban_9.png" path="/lessonCenter/img/"/>
     <image id="pbxd13564wy" name="bg_frame_1.png" path="/lessonCenter/img/"/>
     <image id="pbxd13564wz" name="icon_jiantou_4.png" path="/lessonCenter/img/"/>
     <image id="pbxd13564x0" name="icon_jiantou_5.png" path="/lessonCenter/img/"/>
@@ -730,17 +744,6 @@
     <image id="rkx8wcyipm" name="shoushi05.png" path="/codeVew/img/operateBubble/"/>
     <image id="rkx8wcyipn" name="shoushi06.png" path="/codeVew/img/operateBubble/"/>
     <image id="rkx8wcyipo" name="shoushi07.png" path="/codeVew/img/operateBubble/"/>
-    <component id="kahf13564xa" name="btnTeacherResetArealtem.xml" path="/lessonCenter/btn/"/>
-    <image id="kahf13564xb" name="bg_biaotilan_0.png" path="/lessonCenter/img/" scale="9grid" scale9grid="16,11,32,22"/>
-    <image id="kahf13564xc" name="bg_biaotilan_1.png" path="/lessonCenter/img/" scale="9grid" scale9grid="16,11,32,22"/>
-    <image id="kahf13564xd" name="bg_biaotilan_3.png" path="/lessonCenter/img/" scale="9grid" scale9grid="16,11,32,22"/>
-    <image id="kahf13564xe" name="bg_biaotilan_4.png" path="/lessonCenter/img/" scale="9grid" scale9grid="16,11,32,22"/>
-    <image id="kahf13564xf" name="上课模板效果图.png" path="/lessonCenter/img/"/>
-    <image id="kahf13564xg" name="icon_chongzhi.png" path="/lessonCenter/img/"/>
-    <image id="kahf13564xh" name="icon_chongzhi_1.png" path="/lessonCenter/img/"/>
-    <image id="kahf13564xi" name="icon_gou.png" path="/lessonCenter/img/"/>
-    <image id="kahf13564xj" name="bg_biaotilan_5.png" path="/lessonCenter/img/" scale="9grid" scale9grid="16,11,32,22"/>
-    <image id="kahf13564xk" name="icon_gou_1.png" path="/lessonCenter/img/"/>
     <image id="110fewcyipp" name="icon_codeV_dy_1.png" path="/codeVew/img/"/>
     <image id="110fewcyipq" name="icon_codeV_dy_1_1.png" path="/codeVew/img/"/>
     <image id="110fewcyipr" name="img_code_dy_1.png" path="/codeVew/img/" scale9grid="0,14,5,28"/>
@@ -750,7 +753,7 @@
     <image id="110fewcyipy" name="icon_code_dy_4.png" path="/timeline/img/"/>
     <image id="110fewcyipz" name="icon_code_dy_5.png" path="/timeline/img/"/>
     <image id="110fewcyiq0" name="icon_code_dy_6.png" path="/timeline/img/"/>
-    <image id="110fewcyiq1" name="icon_code_dy_7.png" path="/timeline/img/"/>
+    <image id="110fewcyiq1" name="icon_code_dy_7.png" path="/timeline/img/" exported="true"/>
     <image id="110fewcyiq2" name="icon_code_dy_8.png" path="/timeline/img/"/>
     <image id="110fewcyiq3" name="icon_code_dy_9.png" path="/timeline/img/"/>
     <image id="110fewcyiq4" name="img_code_dy_1.png" path="/timeline/img/"/>
@@ -760,9 +763,9 @@
     <image id="110fewcyiqa" name="img_code_dy_15.png" path="/timeline/img/" scale="9grid" scale9grid="16,9,32,18"/>
     <image id="110fewcyiqb" name="img_code_dy_16.png" path="/timeline/img/"/>
     <image id="110fewcyiqc" name="img_code_dy_17.png" path="/timeline/img/"/>
-    <image id="110fewcyiqd" name="img_code_dy_18.png" path="/timeline/img/"/>
-    <image id="110fewcyiqe" name="img_code_dy_19.png" path="/timeline/img/"/>
-    <image id="110fewcyiqf" name="img_code_dy_2.png" path="/timeline/img/"/>
+    <image id="110fewcyiqd" name="img_code_dy_18.png" path="/timeline/img/" scale="9grid" scale9grid="16,10,32,20"/>
+    <image id="110fewcyiqe" name="img_code_dy_19.png" path="/timeline/img/" scale="9grid" scale9grid="17,12,34,24"/>
+    <image id="110fewcyiqf" name="img_code_dy_2.png" path="/timeline/img/" scale="9grid" scale9grid="16,11,32,22"/>
     <image id="110fewcyiqg" name="img_code_dy_20.png" path="/timeline/img/"/>
     <image id="110fewcyiqh" name="img_code_dy_21.png" path="/timeline/img/"/>
     <image id="110fewcyiqi" name="img_code_dy_22.png" path="/timeline/img/"/>
@@ -775,20 +778,36 @@
     <image id="110fewcyiqp" name="img_code_dy_3.png" path="/timeline/img/" scale="9grid" scale9grid="16,11,32,22"/>
     <image id="110fewcyiqq" name="img_code_dy_4.png" path="/timeline/img/" scale="9grid" scale9grid="16,14,32,19"/>
     <image id="110fewcyiqr" name="img_code_dy_5.png" path="/timeline/img/"/>
-    <image id="110fewcyiqs" name="img_code_dy_6.png" path="/timeline/img/"/>
+    <image id="110fewcyiqs" name="img_code_dy_6.png" path="/timeline/img/" scale="9grid" scale9grid="16,11,32,22"/>
     <image id="110fewcyiqt" name="img_code_dy_7.png" path="/timeline/img/" scale="9grid" scale9grid="16,14,32,19"/>
     <image id="110fewcyiqu" name="img_code_dy_8.png" path="/timeline/img/" scale="9grid" scale9grid="3,11,6,22"/>
     <image id="110fewcyiqv" name="img_code_dy_9.png" path="/timeline/img/" scale="9grid" scale9grid="15,2,32,4"/>
-    <component id="110fewcyiqw" name="ComTimelineEditor.xml" path="/timeline/com/"/>
-    <component id="110fewcyiqx" name="ComTimelineItem.xml" path="/timeline/com/"/>
-    <image id="110fewcyiqy" name="img_code_dy_29.png" path="/timeline/img/"/>
+    <component id="110fewcyiqw" name="ComTimelineEditor.xml" path="/timeline/com/" exported="true"/>
+    <component id="110fewcyiqx" name="ComTimelineTrack.xml" path="/timeline/com/" exported="true"/>
+    <image id="110fewcyiqy" name="img_code_dy_29.png" path="/timeline/img/" scale="9grid" scale9grid="16,11,32,22"/>
     <component id="110fewcyiqz" name="ComTimelineCutAnime.xml" path="/timeline/com/"/>
     <component id="110fewcyir0" name="BtnTimelinePlay.xml" path="/timeline/com/"/>
-    <component id="110fewcyir1" name="ComTimelineRuler.xml" path="/timeline/com/"/>
+    <component id="110fewcyir1" name="ComTimelineRuler.xml" path="/timeline/com/" exported="true"/>
     <component id="sn4a13564xa" name="BtnAddTimeline.xml" path="/timeline/com/"/>
     <component id="sn4a13564xb" name="ComTimelinePlayline.xml" path="/timeline/com/"/>
     <component id="sn4a13564xc" name="ComTimelineFlipControl.xml" path="/timeline/com/"/>
     <component id="sn4a13564xd" name="ComTimelineScrollBar.xml" path="/timeline/com/"/>
+    <component id="iyxw13564xe" name="ComTimelineTrackCode.xml" path="/timeline/com/" exported="true"/>
+    <component id="ntcg13564xf" name="ComTimelineTrackCodePreview.xml" path="/timeline/com/" exported="true"/>
+    <component id="j2cr13564xg" name="btnTeacherResetArealtem.xml" path="/lessonCenter/btn/"/>
+    <image id="j2cr13564xh" name="bg_biaotilan_0.png" path="/lessonCenter/img/"/>
+    <image id="j2cr13564xi" name="bg_biaotilan_1.png" path="/lessonCenter/img/"/>
+    <image id="j2cr13564xj" name="bg_biaotilan_3.png" path="/lessonCenter/img/"/>
+    <image id="j2cr13564xk" name="bg_biaotilan_4.png" path="/lessonCenter/img/"/>
+    <image id="j2cr13564xl" name="bg_biaotilan_5.png" path="/lessonCenter/img/"/>
+    <image id="j2cr13564xm" name="icon_chongzhi.png" path="/lessonCenter/img/"/>
+    <image id="j2cr13564xn" name="icon_chongzhi_1.png" path="/lessonCenter/img/"/>
+    <image id="j2cr13564xo" name="icon_gou.png" path="/lessonCenter/img/"/>
+    <image id="j2cr13564xp" name="icon_gou_1.png" path="/lessonCenter/img/"/>
+    <image id="j2cr13564xq" name="上课模板效果图.png" path="/lessonCenter/img/"/>
+    <component id="goe213564xr" name="ToolTipTimelineMenu.xml" path="/timeline/com/" exported="true"/>
+    <component id="goe213564xs" name="BtnTimelineMenu.xml" path="/timeline/com/"/>
+    <component id="j5gc13564xt" name="ComTimelineCtnr.xml" path="/timeline/com/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>
