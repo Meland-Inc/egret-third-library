@@ -12,7 +12,7 @@
     <component id="n9_110fe" name="btnPlay" src="110fewcyir0" fileName="timeline/com/BtnTimelinePlay.xml" xy="898,52">
       <relation target="" sidePair="center-center"/>
     </component>
-    <list id="n10_110fe" name="comLstTrack" xy="10,134" size="1780,368" layout="flow_hz" overflow="scroll" scroll="both" scrollBarFlags="128" scrollBarMargin="0,0,12,0" scrollBarRes="ui://ti9jag5tsn4a13564xd," defaultItem="ui://ti9jag5t110fewcyiqx" autoClearItems="true">
+    <list id="n10_110fe" name="comLstTrack" xy="10,134" size="1775,368" layout="flow_hz" overflow="scroll" scroll="both" scrollBarFlags="128" scrollBarMargin="0,0,12,0" scrollBarRes="ui://ti9jag5tsn4a13564xd," defaultItem="ui://ti9jag5t110fewcyiqx" autoClearItems="true">
       <relation target="" sidePair="width-width,height-height"/>
       <item/>
       <item/>
@@ -21,7 +21,7 @@
       <item/>
       <item/>
     </list>
-    <component id="n19_to0d" name="comMoveCtnr" src="j5gc13564xt" fileName="timeline/com/ComTimelineCtnr.xml" xy="157,134" size="1616,368" touchable="false">
+    <component id="n19_to0d" name="comMoveCtnr" src="j5gc13564xt" fileName="timeline/com/ComTimelineCtnr.xml" xy="158,135" size="1615,368" touchable="false">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
     <list id="n11_sn4a" name="comLstRuler" xy="120,89" size="1653,45" layout="row" overflow="hidden" scroll="horizontal" colGap="-38" defaultItem="ui://ti9jag5t110fewcyir1" autoClearItems="true">

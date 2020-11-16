@@ -7,8 +7,7 @@
     </image>
     <text id="n1_110fe" name="tfName" xy="0,0" size="148,44" fontSize="20" color="#bfc2cc" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="&quot;声音1&quot;"/>
     <component id="n4_iyxw" name="comCtnr" src="j5gc13564xt" fileName="timeline/com/ComTimelineCtnr.xml" xy="148,0" size="1615,44">
-      <relation target="" sidePair=""/>
+      <relation target="" sidePair="width-width"/>
     </component>
   </displayList>
-  <relation target="n4_iyxw" sidePair="rightext-right"/>
 </component>
