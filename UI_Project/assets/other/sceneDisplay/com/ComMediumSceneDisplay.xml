@@ -3,24 +3,25 @@
   <controller name="ctrlSize" pages="0,small,1,normal,2,big" selected="0"/>
   <controller name="ctrlWindowType" pages="0,normal,1,fullScreen" selected="0"/>
   <displayList>
-    <loader id="n1_sdu8" name="ladBg" xy="0,0" size="480,383" aspect="true" visible="false" url="ui://ei6yz0u6pgnz7n" fill="scaleFree" autoSize="true" clearOnPublish="true">
+    <graph id="n12_cehf" name="gphBlackBg" xy="0,0" size="480,383" alpha="0.5" touchable="false" type="rect" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <loader id="n1_sdu8" name="ladBg" xy="0,0" size="480,383" aspect="true" visible="false" touchable="false" url="ui://ei6yz0u6pgnz7n" fill="scaleFree" autoSize="true" clearOnPublish="true">
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
+    <graph id="n13_lo2s" name="gphWhiteBg" xy="40,125" size="396,214" touchable="false" type="rect" lineSize="0">
+      <relation target="" sidePair="width-width,height-height,left-left,top-top"/>
+    </graph>
     <component id="n2_sdu8" name="comContent" src="g57v7c" fileName="sceneDisplay/com/comContent.xml" xy="30,114" size="418,237">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
-    <graph id="n7_9nyx" name="gphMask" xy="32,115" size="415,234" visible="false" type="rect" lineSize="0" fillColor="#ff000000" corner="8">
+    <graph id="n7_9nyx" name="gphMask" xy="32,115" size="415,234" alpha="0" touchable="false" type="rect" lineSize="0" fillColor="#ff000000" corner="8">
       <relation target="" sidePair="width-width,height-height"/>
     </graph>
-    <component id="n3_sdu8" name="btnToFullScreen" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="366,73" size="49,37">
-      <gearDisplay controller="ctrlWindowType" pages="0"/>
-      <relation target="" sidePair="right-right,top-top"/>
-      <Button icon="ui://ei6yz0u6kxse7h" controller="ctrlWindowType" page="1"/>
-    </component>
-    <component id="n4_j563" name="btnToNormal" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="365,73" size="50,37">
+    <component id="n4_j563" name="btnToNormal" src="lmfb7y" fileName="sceneDisplay/btn/btnExitFullSceneMedium.xml" xy="374,70">
       <gearDisplay controller="ctrlWindowType" pages="1"/>
-      <relation target="n3_sdu8" sidePair="center-center,middle-middle"/>
-      <Button icon="ui://ei6yz0u6kxse7g" controller="ctrlWindowType" page="0"/>
+      <relation target="" sidePair="right-right,top-top"/>
+      <Button icon="ui://ei6yz0u6lmfb7v" controller="ctrlWindowType" page="0"/>
     </component>
     <component id="n6_o9dk" name="btnStart" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="193,184" size="94,94">
       <relation target="" sidePair="center-center,middle-middle"/>
@@ -30,9 +31,10 @@
       <relation target="" sidePair="center-center,middle-middle"/>
       <Button icon="ui://ei6yz0u6kxse7i"/>
     </component>
-    <component id="n11_gp0k" name="btnClose" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="445,359" size="35,24">
-      <relation target="" sidePair="right-right,bottom-bottom"/>
-      <Button icon="ui://ei6yz0u6kxse7h"/>
+    <component id="n11_gp0k" name="btnClose" src="lmfb81" fileName="sceneDisplay/btn/btnExitMedium.xml" xy="374,70">
+      <gearDisplay controller="ctrlWindowType" pages="0"/>
+      <relation target="" sidePair="right-right,top-top"/>
+      <Button icon="ui://ei6yz0u6lmfb7t"/>
     </component>
   </displayList>
 </component>
