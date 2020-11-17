@@ -238,6 +238,8 @@
     <image id="nlmf6m" name="icon_code_dy_3.png" path="/img/"/>
     <image id="nlmf6n" name="img_code_dy_1.png" path="/img/" scale="9grid" scale9grid="21,11,19,22"/>
     <image id="nlmf6o" name="img_code_dy_2.png" path="/img/" scale="9grid" scale9grid="16,11,32,22"/>
+    <component id="umpe6p" name="CodeBlockMovie.xml" path="/codeBlock/" exported="true"/>
+    <image id="umpe6q" name="btn_code_dy_1.png" path="/img/"/>
   </resources>
   <publish name="code"/>
 </packageDescription>
