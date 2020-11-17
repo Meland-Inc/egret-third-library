@@ -783,7 +783,7 @@
     <image id="110fewcyiqu" name="img_code_dy_8.png" path="/timeline/img/" scale="9grid" scale9grid="3,11,6,22"/>
     <image id="110fewcyiqv" name="img_code_dy_9.png" path="/timeline/img/" scale="9grid" scale9grid="15,2,32,4"/>
     <component id="110fewcyiqw" name="ComTimelineEditor.xml" path="/timeline/com/" exported="true"/>
-    <component id="110fewcyiqx" name="ComTimelineTrack.xml" path="/timeline/com/" exported="true"/>
+    <component id="110fewcyiqx" name="ComTimelineTrackCtnr.xml" path="/timeline/com/" exported="true"/>
     <image id="110fewcyiqy" name="img_code_dy_29.png" path="/timeline/img/" scale="9grid" scale9grid="16,11,32,22"/>
     <component id="110fewcyiqz" name="ComTimelineCutAnime.xml" path="/timeline/com/"/>
     <component id="110fewcyir0" name="BtnTimelinePlay.xml" path="/timeline/com/"/>
@@ -808,6 +808,8 @@
     <component id="goe213564xr" name="ToolTipTimelineMenu.xml" path="/timeline/com/" exported="true"/>
     <component id="goe213564xs" name="BtnTimelineMenu.xml" path="/timeline/com/"/>
     <component id="j5gc13564xt" name="ComTimelineCtnr.xml" path="/timeline/com/"/>
+    <component id="kljh13564xu" name="ComTimelineLstTrack.xml" path="/timeline/com/"/>
+    <component id="kljh13564xv" name="ComTimelineTrackTitle.xml" path="/timeline/com/" exported="true"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>
