@@ -805,11 +805,12 @@
     <image id="j2cr13564xo" name="icon_gou.png" path="/lessonCenter/img/"/>
     <image id="j2cr13564xp" name="icon_gou_1.png" path="/lessonCenter/img/"/>
     <image id="j2cr13564xq" name="上课模板效果图.png" path="/lessonCenter/img/"/>
-    <component id="goe213564xr" name="ToolTipTimelineMenu.xml" path="/timeline/com/" exported="true"/>
+    <component id="goe213564xr" name="ToolTipTimelineTrackMenu.xml" path="/timeline/com/" exported="true"/>
     <component id="goe213564xs" name="BtnTimelineMenu.xml" path="/timeline/com/"/>
     <component id="j5gc13564xt" name="ComTimelineCtnr.xml" path="/timeline/com/"/>
     <component id="kljh13564xu" name="ComTimelineLstTrack.xml" path="/timeline/com/"/>
     <component id="kljh13564xv" name="ComTimelineTrackTitle.xml" path="/timeline/com/" exported="true"/>
+    <component id="79xr13564xw" name="ToolTipTimelineCodeMenu.xml" path="/timeline/com/" exported="true"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>
