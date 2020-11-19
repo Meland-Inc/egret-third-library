@@ -1,52 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1920,1080" designImage="ui://i25v0ebkfzlu3y" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlType" pages="3,unknow,1,showText,2,question,0,selection" selected="0"/>
+<component size="1920,1080" designImage="ui://dt3gsgf3rbr24" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlType" pages="3,normal,1,top,2,yell" selected="0">
+    <remark page="0" value="普通"/>
+    <remark page="1" value="顶部"/>
+    <remark page="2" value="大喊"/>
+  </controller>
+  <controller name="ctrlDialogType" pages="0,unknow,1,showText,2,question,3,selection" selected="0">
+    <action type="change_page" fromPage="" toPage="0" objectId="n2_j5jv" controller="ctrlType" targetPage="3"/>
+    <action type="change_page" fromPage="" toPage="1" objectId="n2_j5jv" controller="ctrlType" targetPage="1"/>
+    <action type="change_page" fromPage="" toPage="2" objectId="n2_j5jv" controller="ctrlType" targetPage="2"/>
+    <action type="change_page" fromPage="" toPage="3" objectId="n2_j5jv" controller="ctrlType" targetPage="0"/>
+  </controller>
   <displayList>
-    <list id="n2_j5jv" name="lstSelection" xy="953,728" size="499,137" layout="flow_hz" overflow="scroll" lineGap="10" colGap="20" defaultItem="ui://nyy10939qylxd" align="right" vAlign="bottom">
-      <gearDisplay controller="ctrlType" pages="0"/>
-      <relation target="n24_qylx" sidePair="bottom-bottom,right-right"/>
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-    </list>
-    <loader id="n0_j5jv" name="btnBg" xy="364,872" size="1192,190" group="n24_qylx" url="ui://nyy10939w79tm" fill="scaleFree"/>
-    <image id="n27_pz1g" name="n27" src="oiqdcyigz" fileName="img/img_cm_wpx_1.png" pkg="te1gxawo" xy="458,910" group="n21_u5yf"/>
-    <loader id="n20_u5yf" name="ladIcon" xy="458,910" size="100,100" group="n21_u5yf" aspect="true" touchable="false" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
-    <group id="n21_u5yf" name="grpIcon" xy="458,910" size="100,100" group="n24_qylx" advanced="true"/>
-    <image id="n13_fzlu" name="imgTitleBg" src="o9zcg" fileName="screenDialog/img/icon_dialog_1.png" xy="440,826" size="210,64" group="n24_qylx"/>
-    <text id="n14_fzlu" name="tfTitle" xy="466,842" size="157,31" group="n24_qylx" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" singleLine="true" text=""/>
-    <text id="n18_fzlu" name="tfContent" xy="570,902" size="900,125" group="n24_qylx" fontSize="20" color="#666666" vAlign="middle" autoSize="none" text=""/>
-    <image id="n17_fzlu" name="imgInputBg" src="o9zck" fileName="screenDialog/img/icon_dialog_13.png" xy="954,826" size="412,39" group="n9_j5jv"/>
-    <text id="n6_j5jv" name="inpAnswer" xy="968,828" size="378,37" group="n9_j5jv" fontSize="20" color="#333333" vAlign="middle" autoSize="none" singleLine="true" text="" input="true" prompt="[size=24]输入答案[/size]"/>
-    <group id="n9_j5jv" name="grpAnswer" xy="954,826" size="412,39" group="n24_qylx" advanced="true">
-      <gearDisplay controller="ctrlType" pages="2"/>
-    </group>
-    <component id="n3_j5jv" name="btnClose" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1455,874" size="73,71" group="n24_qylx">
-      <Button icon="ui://nyy10939o9zci"/>
-    </component>
-    <component id="n10_qlcu" name="btnSubmit" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1362,820" size="106,51" group="n24_qylx">
-      <gearDisplay controller="ctrlType" pages="2"/>
-      <Button title="提交" titleColor="#ffffff" titleFontSize="18" icon="ui://nyy10939o9zcl"/>
-    </component>
-    <image id="n28_g0i1" name="imgDown" src="o9zcj" fileName="screenDialog/img/icon_dialog_4.png" xy="1435,1035" group="n24_qylx"/>
-    <graph id="n26_pz1g" name="n26" xy="428,1066" size="1016,14" group="n24_qylx" visible="false"/>
-    <group id="n24_qylx" name="root" xy="364,820" size="1192,260" advanced="true">
-      <relation target="" sidePair="center-center,bottom-bottom"/>
-    </group>
     <component id="n25_vn3s" name="btnForceClose" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1768,15" size="136,53">
       <relation target="" sidePair="right-right,top-top"/>
       <Button title="强制关闭" titleColor="#ffffff" titleFontSize="20" icon="ui://te1gxawoqylxcyijf" sound="ui://nyy10939vn3sj"/>
     </component>
-    <graph id="n31_lkrg" name="gphLadContainer" xy="334,104" size="1252,637" touchable="false" type="rect" lineSize="0" fillColor="#00ffffff">
+    <graph id="n31_lkrg" name="gphLadContainer" xy="504,99" size="911,493" touchable="false" type="rect" lineSize="0" fillColor="#00ffffff">
+      <gearDisplay controller="ctrlType" pages="3,2"/>
       <relation target="n29_lkrg" sidePair="width-width,height-height,center-center,middle-middle"/>
     </graph>
-    <graph id="n32_uu9l" name="gphImgSizePosInfo" xy="334,104" size="1252,634" visible="false" touchable="false" fillColor="#ff000000">
+    <image id="n32_uu9l" name="imgBg" src="cdnd1b" fileName="screenDialog/img/img_dialog_bg.png" xy="487,85" size="945,527" visible="false">
+      <gearDisplay controller="ctrlType" pages="3,2"/>
       <relation target="" sidePair="center-center,middle-middle"/>
-    </graph>
-    <component id="n29_lkrg" name="comLadContainer" src="ulbxq" fileName="teachPlan/com/ComLadContainer.xml" pkg="82tadhh2" xy="334,104">
+    </image>
+    <component id="n29_lkrg" name="comLadContainer" src="ulbxq" fileName="teachPlan/com/ComLadContainer.xml" pkg="82tadhh2" xy="504,102" size="911,493">
+      <gearDisplay controller="ctrlType" pages="3,2"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
+    <component id="n2_j5jv" name="comDialogNormal" src="l24bq" fileName="screenDialog/com/comDialogNormal.xml" xy="320,612" controller="ctrlType,0">
+      <gearDisplay controller="ctrlType" pages="3,2"/>
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </component>
+    <component id="n42_cdnd" name="comDialogTop" src="cdnd1c" fileName="screenDialog/com/comDialogTop.xml" xy="452,50">
+      <gearDisplay controller="ctrlType" pages="1"/>
+      <relation target="" sidePair="center-center"/>
+    </component>
   </displayList>
-  <transition name="imgDownEffect"/>
 </component>
