@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="50,50">
+<component size="50,50" opaque="false">
   <displayList>
-    <image id="n0_rbr2" name="n0" src="cdnd1f" fileName="切片/下一句按钮.png" xy="25,39" pivot="0.5,1" anchor="true"/>
+    <image id="n0_rbr2" name="n0" src="cdnd1f" fileName="screenDialog/img/img_dialog_next.png" xy="25,39" pivot="0.5,1" anchor="true"/>
   </displayList>
   <transition name="idle" autoPlay="true" autoPlayRepeat="-1">
     <item time="0" type="Scale" target="n0_rbr2" value="1,1"/>
