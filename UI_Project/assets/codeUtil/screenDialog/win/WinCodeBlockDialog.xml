@@ -5,7 +5,7 @@
     <remark page="1" value="顶部"/>
     <remark page="2" value="大喊"/>
   </controller>
-  <controller name="ctrlDialogType" pages="0,unknow,1,showText,2,question,3,selection" selected="0">
+  <controller name="ctrlDialogType" pages="0,unknow,1,showText,2,question,3,selection" selected="3">
     <action type="change_page" fromPage="" toPage="0" objectId="n2_j5jv" controller="ctrlType" targetPage="3"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n2_j5jv" controller="ctrlType" targetPage="1"/>
     <action type="change_page" fromPage="" toPage="2" objectId="n2_j5jv" controller="ctrlType" targetPage="2"/>
@@ -16,15 +16,11 @@
       <relation target="" sidePair="right-right,top-top"/>
       <Button title="强制关闭" titleColor="#ffffff" titleFontSize="20" icon="ui://te1gxawoqylxcyijf" sound="ui://nyy10939vn3sj"/>
     </component>
-    <graph id="n31_lkrg" name="gphLadContainer" xy="504,99" size="911,493" touchable="false" type="rect" lineSize="0" fillColor="#00ffffff">
+    <graph id="n31_lkrg" name="gphLadContainer" xy="394,24" size="1130,635" touchable="false" type="rect" lineSize="0" fillColor="#00ffffff">
       <gearDisplay controller="ctrlType" pages="3,2"/>
       <relation target="n29_lkrg" sidePair="width-width,height-height,center-center,middle-middle"/>
     </graph>
-    <image id="n32_uu9l" name="imgBg" src="cdnd1b" fileName="screenDialog/img/img_dialog_bg.png" xy="487,85" size="945,527" visible="false">
-      <gearDisplay controller="ctrlType" pages="3,2"/>
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </image>
-    <component id="n29_lkrg" name="comLadContainer" src="ulbxq" fileName="teachPlan/com/ComLadContainer.xml" pkg="82tadhh2" xy="504,102" size="911,493">
+    <component id="n29_lkrg" name="comLadContainer" src="ulbxq" fileName="teachPlan/com/ComLadContainer.xml" pkg="82tadhh2" xy="395,27" size="1130,635" aspect="true">
       <gearDisplay controller="ctrlType" pages="3,2"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>

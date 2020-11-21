@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="273,63" extention="Button">
-  <controller name="button" pages="2,up,3,down" selected="1">
+<component size="273,68" extention="Button">
+  <controller name="button" pages="2,up,3,down" selected="0">
     <action type="play_transition" fromPage="" toPage="3" transition="click"/>
   </controller>
   <displayList>
@@ -20,5 +20,8 @@
   <transition name="idle">
     <item time="0" type="Scale" target="n2_rbr2" value="1,1"/>
     <item time="0" type="XY" target="n2_rbr2" tween="true" startValue="136,31" endValue="136,36" duration="24" ease="Linear" repeat="-1" yoyo="true"/>
+  </transition>
+  <transition name="reset">
+    <item time="0" type="XY" target="n2_rbr2" value="136,31"/>
   </transition>
 </component>
