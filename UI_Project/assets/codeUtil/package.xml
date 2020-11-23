@@ -40,6 +40,7 @@
     <image id="i0651p" name="btn_dialog_blue.png" path="/screenDialog/img/"/>
     <component id="i0651x" name="comInput.xml" path="/screenDialog/com/"/>
     <image id="eezl1y" name="btn_dialog_red.png" path="/screenDialog/img/"/>
+    <image id="bsmw21" name="bg_dialog_black.png" path="/screenDialog/img/" scale="9grid" scale9grid="25,25,50,50"/>
   </resources>
   <publish name="codeUtil"/>
 </packageDescription>
