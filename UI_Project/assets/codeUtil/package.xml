@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="nyy10939">
   <resources>
-    <component id="qylxc" name="WinCodeBlockDialog.xml" path="/screenDialog/win/" exported="true"/>
+    <component id="qylxc" name="WinCodeBlockDialogOld.xml" path="/screenDialog/win/" exported="true"/>
     <component id="qylxd" name="btnSelection.xml" path="/screenDialog/btn/"/>
     <image id="qylxe" name="img_screenD_1.png" path="/screenDialog/img/" scale="9grid" scale9grid="20,11,40,22"/>
     <image id="qylxf" name="img_screenD_2.png" path="/screenDialog/img/" scale="9grid" scale9grid="71,42,142,102"/>
@@ -12,8 +12,36 @@
     <image id="o9zck" name="icon_dialog_13.png" path="/screenDialog/img/" exported="true" scale="9grid" scale9grid="58,10,116,20"/>
     <image id="o9zcl" name="icon_dialog_14.png" path="/screenDialog/img/" exported="true" scale="9grid" scale9grid="20,10,40,20"/>
     <image id="w79tm" name="icon_dialog_16.png" path="/screenDialog/img/" scale="9grid" scale9grid="129,64,26,76"/>
-    <component id="eqdln" name="WinCodeBlockDialogNew.xml" path="/screenDialog/win/" exported="true"/>
+    <component id="eqdln" name="WinCodeBlockDialog.xml" path="/screenDialog/win/" exported="true"/>
     <component id="eqdlp" name="ComCodeBlockDialog.xml" path="/screenDialog/win/" exported="true"/>
+    <component id="l24bq" name="comDialogNormal.xml" path="/screenDialog/com/"/>
+    <image id="l24br" name="DuiHuaKuang_img_01.png" path="/screenDialog/img/"/>
+    <image id="l24bs" name="DuiHuaKuang_img_02.png" path="/screenDialog/img/"/>
+    <image id="l24bt" name="DuiHuaKuang_img_03.png" path="/screenDialog/img/"/>
+    <image id="l24bu" name="DuiHuaKuang_img_04.png" path="/screenDialog/img/"/>
+    <image id="l24bv" name="DuiHuaKuang_img_05.png" path="/screenDialog/img/"/>
+    <image id="l24bw" name="DuiHuaKuang_img_06.png" path="/screenDialog/img/"/>
+    <image id="l24bx" name="DuiHuaKuang_img_07.png" path="/screenDialog/img/"/>
+    <image id="l24by" name="DuiHuaKuang_img_08.png" path="/screenDialog/img/"/>
+    <image id="l24bz" name="DuiHuaKuang_img_09.png" path="/screenDialog/img/"/>
+    <image id="l24b10" name="DuiHuaKuang_img_10.png" path="/screenDialog/img/"/>
+    <image id="l24b11" name="DuiHuaKuang_btn_01.png" path="/screenDialog/img/"/>
+    <image id="l24b12" name="确认按钮.png" path="/screenDialog/img/"/>
+    <image id="l24b13" name="取消按钮.png" path="/screenDialog/img/"/>
+    <image id="l24b14" name="DuiHuaKuang_img_11.png" path="/screenDialog/img/"/>
+    <component id="cdnd15" name="btnOption.xml" path="/screenDialog/btn/"/>
+    <image id="cdnd16" name="DuiHuaKuang_btn_1.png" path="/screenDialog/img/"/>
+    <component id="cdnd17" name="spOption.xml" path="/screenDialog/btn/"/>
+    <image id="cdnd1b" name="img_dialog_bg.png" path="/screenDialog/img/" scale="9grid" scale9grid="25,25,50,50" duplicatePadding="true"/>
+    <component id="cdnd1c" name="comDialogTop.xml" path="/screenDialog/com/"/>
+    <image id="cdnd1d" name="GongGao_img_1.png" path="/screenDialog/img/" scale="9grid" scale9grid="426,147,172,100"/>
+    <component id="cdnd1e" name="comNextArrow.xml" path="/screenDialog/com/"/>
+    <image id="cdnd1f" name="img_dialog_next.png" path="/screenDialog/img/"/>
+    <image id="i0651n" name="bg_dialog_input.png" path="/screenDialog/img/"/>
+    <component id="i0651o" name="btnSubmit.xml" path="/screenDialog/btn/"/>
+    <image id="i0651p" name="btn_dialog_blue.png" path="/screenDialog/img/"/>
+    <component id="i0651x" name="comInput.xml" path="/screenDialog/com/"/>
+    <image id="eezl1y" name="btn_dialog_red.png" path="/screenDialog/img/"/>
   </resources>
   <publish name="codeUtil"/>
 </packageDescription>

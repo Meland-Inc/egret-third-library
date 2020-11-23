@@ -8,9 +8,11 @@
     </loader>
     <image id="n2_lkrg" name="n2" src="umtscyiih" fileName="img/img_cm_load.png" pkg="te1gxawo" xy="626,318" pivot="0.5,0.5" anchor="true">
       <gearDisplay controller="ctrlType" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
     </image>
     <image id="n3_lkrg" name="n3" src="mdgnr" fileName="teachPlan/img/failloading.png" xy="426,144">
       <gearDisplay controller="ctrlType" pages="2"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
     </image>
   </displayList>
   <transition name="t0" autoPlay="true" autoPlayRepeat="-1">

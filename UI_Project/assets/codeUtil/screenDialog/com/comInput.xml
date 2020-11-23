@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="360,108" extention="Label">
+  <controller name="ctrlIsInputting" pages="0,false,1,true" selected="0"/>
+  <displayList>
+    <image id="n3_i065" name="imgBg" src="i0651n" fileName="screenDialog/输入收.png" xy="0,0"/>
+    <text id="n2_dv1i" name="title" xy="56,27" size="251,53" fontSize="20" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="" input="true">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+</component>
