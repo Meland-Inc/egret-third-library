@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="172,40" extention="ComboBox">
+  <controller name="button" pages="2,up,3,down" selected="0"/>
+  <displayList>
+    <loader id="n9_l24b" name="icon" xy="0,0" size="172,40" url="ui://te1gxawoeggjcyihr"/>
+    <loader id="n7_rtvd" name="imgArrow" xy="148,14" size="16,10" url="ui://te1gxawoc1h7cyii4">
+      <gearIcon controller="button" pages="3" values="ui://te1gxawoc1h7cyii5" default="ui://te1gxawoc1h7cyii4"/>
+    </loader>
+    <text id="n6_rtvd" name="title" xy="18,8" size="32,29" fontSize="20" color="#333333" align="center" vAlign="middle" letterSpacing="-1" singleLine="true" text="title"/>
+  </displayList>
+  <ComboBox dropdown="ui://te1gxawortvd9"/>
+</component>

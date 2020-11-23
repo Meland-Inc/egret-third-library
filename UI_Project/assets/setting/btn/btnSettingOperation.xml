@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="172,40" pivot="0.5,0.5" extention="Button" designImage="ui://thvmj7vomquw11" designImageOffsetX="-652" designImageOffsetY="-585" designImageLayer="1">
+<component size="172,40" pivot="0.5,0.5" extention="Button" designImage="ui://thvmj7vomquw11" designImageOffsetX="-652" designImageOffsetY="-585" designImageAlpha="0" designImageLayer="1">
   <controller name="button" pages="6,up,8,over" selected="0">
     <action type="play_transition" fromPage="0" toPage="1" transition="t0"/>
   </controller>
-  <controller name="ctrlIsOpen" pages="0,false,1,true" selected="0"/>
-  <controller name="ctrlArrowShow" pages="0,false,1,true" selected="0"/>
+  <controller name="ctrlIsOpen" pages="0,false,1,true" selected="1"/>
+  <controller name="ctrlArrowShow" pages="0,false,1,true" selected="1"/>
   <displayList>
     <loader id="n0_sz33" name="icon" xy="0,0" pivot="0.5,0.5" size="172,40">
       <gearIcon controller="button" pages="6,8" values="|ui://te1gxawoeggjcyihq"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
-    <text id="n1_obf0" name="title" xy="18,8" size="97,24" fontSize="20" color="#333333" align="center" vAlign="middle" letterSpacing="-1" singleLine="true" text="WASD操作"/>
-    <loader id="n2_w22p" name="n2" xy="148,16" size="16,10" url="ui://te1gxawoc1h7cyii4">
+    <text id="n1_obf0" name="title" xy="18,8" size="100,29" fontSize="20" color="#333333" align="center" vAlign="middle" letterSpacing="-1" singleLine="true" text="WASD操作"/>
+    <loader id="n2_w22p" name="n2" xy="148,16" size="16,10" url="ui://te1gxawoc1h7cyii5">
       <gearDisplay controller="ctrlArrowShow" pages="1"/>
       <gearIcon controller="ctrlIsOpen" pages="1" values="ui://te1gxawoc1h7cyii5" default="ui://te1gxawoc1h7cyii4"/>
     </loader>
