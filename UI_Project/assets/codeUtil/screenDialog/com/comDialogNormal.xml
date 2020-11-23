@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1279,468" opaque="false" designImageLayer="1">
-  <controller name="ctrlType" exported="true" pages="3,unknow,1,showText,2,question,0,selection" selected="0">
+  <controller name="ctrlType" exported="true" pages="3,unknow,1,showText,2,question,0,selection" selected="2">
     <action type="play_transition" fromPage="" toPage="0" transition="optionIdle"/>
   </controller>
   <displayList>
@@ -14,12 +14,9 @@
     <image id="n9_oij0" name="n9" src="l24by" fileName="screenDialog/img/DuiHuaKuang_img_08.png" xy="1222,374" pivot="0.5,0.5" anchor="true" group="n17_oij0"/>
     <image id="n6_oij0" name="n6" src="l24bz" fileName="screenDialog/img/DuiHuaKuang_img_09.png" xy="59,139" group="n30_l24b"/>
     <group id="n17_oij0" name="bg" xy="0,153" size="1265,308" group="n38_i065"/>
-    <list id="n25_l24b" name="lstSelection" xy="569,42" size="633,165" group="n38_i065" layout="flow_hz" overflow="scroll" lineGap="9" colGap="46" defaultItem="ui://nyy10939cdnd15" vAlign="bottom" autoClearItems="true">
+    <list id="n25_l24b" name="lstSelection" xy="569,42" size="592,165" group="n38_i065" layout="flow_hz" overflow="scroll" lineGap="9" colGap="46" defaultItem="ui://nyy10939cdnd15" align="right" vAlign="bottom" autoClearItems="true">
       <gearDisplay controller="ctrlType" pages="0"/>
       <relation target="" sidePair="bottom-bottom"/>
-      <item/>
-      <item/>
-      <item/>
       <item/>
     </list>
     <group id="n30_l24b" name="grpTitle" xy="59,139" size="298,100" group="n38_i065" advanced="true"/>
@@ -31,12 +28,13 @@
       <Button title="提交" icon="ui://nyy10939i0651p"/>
     </component>
     <component id="n37_i065" name="inpAnswer" src="i0651x" fileName="screenDialog/com/comInput.xml" xy="606,124" size="360,108" group="n28_l24b">
-      <Label prompt="[size=24]输入答案[/size]" maxLength="200"/>
+      <Label titleFontSize="35" prompt="[size=24]输入答案[/size]" maxLength="200"/>
     </component>
     <group id="n28_l24b" name="grpAnswer" xy="606,124" size="516,108" group="n38_i065" advanced="true">
       <gearDisplay controller="ctrlType" pages="2"/>
     </group>
     <component id="n42_eezl" name="btnClose" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1094,217" pivot="0.5,0.225" size="80,81" group="n38_i065">
+      <gearDisplay controller="ctrlType" pages="3,2,0"/>
       <Button icon="ui://nyy10939l24b11"/>
     </component>
     <component id="n14_oij0" name="comNextArrow" src="cdnd1e" fileName="screenDialog/com/comNextArrow.xml" xy="614,411" group="n38_i065"/>
