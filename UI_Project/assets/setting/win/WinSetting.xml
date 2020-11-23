@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://wfb6iq6ex2wv8" designImageAlpha="100">
   <controller name="conSetting" pages="0,system,4,manor,5,robotCode" selected="0"/>
-  <controller name="ctrlGameMode" pages="0,game,1,lessons" selected="0"/>
-  <controller name="ctrlNative" pages="0,true,1,false" selected="0"/>
+  <controller name="ctrlGameMode" pages="0,game,1,lessons" selected="1"/>
   <displayList>
     <image id="n166_tcst" name="imgBG" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="381,192" size="1140,696" group="n154_o5a3"/>
     <image id="n92_cxfq" name="comBg" src="eggjcyiho" fileName="img/img_cm_top_1.png" pkg="te1gxawo" xy="381,148" size="1140,58" group="n154_o5a3"/>
-    <image id="n153_l61l" name="n153" src="oiqdcyih5" fileName="img/img_cm_2.png" pkg="te1gxawo" xy="401,148" size="188,71" group="n154_o5a3"/>
-    <image id="n155_nj77" name="n155" src="eggjcyihg" fileName="img/icon_cm_set.png" pkg="te1gxawo" xy="424,154" group="n154_o5a3"/>
-    <text id="n156_j70w" name="n156" xy="466,162" size="52,34" group="n154_o5a3" fontSize="24" color="#333333" vAlign="middle" text="设置"/>
+    <image id="n153_l61l" name="imgTitleBg" src="oiqdcyih5" fileName="img/img_cm_2.png" pkg="te1gxawo" xy="401,148" size="188,71" group="n154_o5a3"/>
+    <image id="n155_nj77" name="imgTitleIcon" src="eggjcyihg" fileName="img/icon_cm_set.png" pkg="te1gxawo" xy="424,154" group="n154_o5a3"/>
+    <text id="n156_j70w" name="tfTitle" xy="466,162" size="52,34" group="n154_o5a3" fontSize="24" color="#333333" vAlign="middle" text="设置"/>
     <component id="n8_rw7f" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1454,154" size="48,48" group="n154_o5a3">
       <Button icon="ui://te1gxawooiqdcyih2" sound="ui://fknoioovtqc912"/>
     </component>
@@ -49,28 +48,16 @@
       <Button icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
     </component>
     <group id="n142_r6hf" name="grpFPS" xy="1039,395" size="240,42" group="n30_o8k6" advanced="true"/>
-    <text id="n144_q29o" name="tfWindWalk" xy="1039,567" size="64,29" group="n146_q29o" fontSize="20" color="#333333" vAlign="middle" text="疾风步"/>
-    <component id="n162_j70w" name="btnEnableWindWalk" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1201,559" size="78,42" group="n146_q29o">
+    <text id="n144_q29o" name="tfWindWalk" xy="1039,649" size="64,29" group="n146_q29o" fontSize="20" color="#333333" vAlign="middle" text="疾风步"/>
+    <component id="n162_j70w" name="btnEnableWindWalk" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1201,641" size="78,42" group="n146_q29o">
       <Button icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
     </component>
-    <group id="n146_q29o" name="grpWindWalk" xy="1039,559" size="240,42" group="n30_o8k6" visible="false" advanced="true"/>
-    <text id="n97_o89o" name="tfQuality" xy="487,481" size="84,29" group="n180_w0xi" fontSize="20" color="#333333" vAlign="middle" text="画面质量"/>
-    <component id="n204_l24b" name="cbImageQuality" src="rtvda" fileName="comboBox/mouseEffectComboBox/MouseEffectComboBox.xml" pkg="te1gxawo" xy="651,477" group="n180_w0xi">
-      <ComboBox title="自动" visibleItemCount="10">
-        <item title="自动" value="auto"/>
-        <item title="低" value="low"/>
-        <item title="中" value="middle"/>
-        <item title="高" value="high"/>
-      </ComboBox>
-    </component>
-    <group id="n180_w0xi" name="grpQuality" xy="487,477" size="336,40" group="n30_o8k6"/>
-    <text id="n189_fb7x" name="tfWindow" xy="1039,486" size="64,29" group="n191_fb7x" fontSize="20" color="#333333" vAlign="middle" text="窗口化"/>
-    <component id="n190_fb7x" name="btnWindow" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1200,477" size="78,42" group="n191_fb7x">
+    <group id="n146_q29o" name="grpWindWalk" xy="1039,641" size="240,42" group="n30_o8k6" visible="false" advanced="true"/>
+    <text id="n189_fb7x" name="tfWindow" xy="1039,568" size="64,29" group="n191_fb7x" fontSize="20" color="#333333" vAlign="middle" text="窗口化"/>
+    <component id="n190_fb7x" name="btnWindow" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1200,559" size="78,42" group="n191_fb7x">
       <Button icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
     </component>
-    <group id="n191_fb7x" name="grpWindow" xy="1039,477" size="239,42" group="n30_o8k6" advanced="true">
-      <gearDisplay controller="ctrlNative" pages="0"/>
-    </group>
+    <group id="n191_fb7x" name="grpWindow" xy="1039,559" size="239,42" group="n30_o8k6" advanced="true"/>
     <component id="n42_o8k6" name="btnVconsole" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1118,743" size="120,44" group="n30_o8k6" visible="false">
       <Button title="开启vconsole" titleFontSize="20" icon="ui://te1gxawooiqdcyih1"/>
     </component>
@@ -110,6 +97,16 @@
       <Button icon="ui://te1gxawoggj7cyijo"/>
     </component>
     <group id="n184_ggj7" name="grpRoomCode" xy="487,719" size="195,27" group="n30_o8k6" advanced="true"/>
+    <text id="n97_o89o" name="tfQuality" xy="487,481" size="84,29" group="n180_w0xi" fontSize="20" color="#333333" vAlign="middle" text="画面质量"/>
+    <component id="n204_l24b" name="cbImageQuality" src="rtvda" fileName="comboBox/mouseEffectComboBox/MouseEffectComboBox.xml" pkg="te1gxawo" xy="651,477" group="n180_w0xi">
+      <ComboBox title="自动" visibleItemCount="10">
+        <item title="自动" value="auto"/>
+        <item title="低" value="low"/>
+        <item title="中" value="middle"/>
+        <item title="高" value="high"/>
+      </ComboBox>
+    </component>
+    <group id="n180_w0xi" name="grpQuality" xy="487,477" size="336,40" group="n30_o8k6"/>
     <component id="n199_l24b" name="cbCameraMode" src="rtvda" fileName="comboBox/mouseEffectComboBox/MouseEffectComboBox.xml" pkg="te1gxawo" xy="651,557" group="n207_l24b">
       <ComboBox title="自动" visibleItemCount="10">
         <item title="自动" value="auto"/>
@@ -128,6 +125,11 @@
     </component>
     <text id="n203_l24b" name="tfOperateMode" xy="487,640" size="84,29" group="n206_l24b" fontSize="20" color="#333333" vAlign="middle" text="操作模式"/>
     <group id="n206_l24b" name="grpOperateMode" xy="487,637" size="336,40" group="n30_o8k6"/>
+    <text id="n212_bsmw" name="tfWindWalk" xy="1039,485" size="84,29" group="n214_bsmw" fontSize="20" color="#333333" vAlign="middle" text="摇杆移动"/>
+    <component id="n213_bsmw" name="btnRocker" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="1201,477" size="78,42" group="n214_bsmw">
+      <Button icon="ui://te1gxawoeggjcyihd" selectedIcon="ui://te1gxawoeggjcyihe"/>
+    </component>
+    <group id="n214_bsmw" name="grpRockerMove" xy="1039,477" size="240,42" group="n30_o8k6" advanced="true"/>
     <group id="n30_o8k6" name="system" xy="400,258" size="1100,613" group="n154_o5a3" advanced="true">
       <gearDisplay controller="conSetting" pages="0"/>
     </group>
