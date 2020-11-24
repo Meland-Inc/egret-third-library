@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="60,30">
-  <controller name="color" pages="0,DeepBlue,1,LightBlue,2,LightRed,3,DeepRed,4,Purple,5,Green,6,Pink,7,Carnation,8,LightYellow,9,DeepYellow,10,PinkRed" selected="7"/>
-  <controller name="isText" pages="1,false,0,true" selected="1"/>
+  <controller name="color" pages="0,DeepBlue,1,LightBlue,2,LightRed,3,DeepRed,4,Purple,5,Green,6,Pink,7,Carnation,8,LightYellow,9,DeepYellow,10,PinkRed,22,Grey" selected="0"/>
+  <controller name="isText" pages="1,false,0,true" selected="0"/>
   <displayList>
     <image id="n1_t2ui" name="n1" src="s45w19" fileName="img/img_code_cm_2_1.png" xy="0,0" color="#b2b2b2">
       <gearDisplay controller="isText" pages="1"/>
       <relation target="" sidePair="width-width"/>
     </image>
-    <loader id="n2_cnx5" name="n2" xy="-3,-3" size="66,36" url="ui://t573fj5bs45wg" fill="scaleFree">
+    <loader id="n2_cnx5" name="n2" xy="-3,-3" size="66,36" url="ui://t573fj5bs45wd" fill="scaleFree">
       <gearDisplay controller="isText" pages="0"/>
       <gearIcon controller="color" pages="0,1,2,4,5,6,7,8,9,10" values="ui://t573fj5bs45wd|ui://t573fj5bs45wc|ui://t573fj5bs45we|ui://t573fj5bs45w9|ui://t573fj5bs45wf|ui://t573fj5bs45wb|ui://t573fj5bs45wg|ui://t573fj5bs45w8|ui://t573fj5bt1ls5k|ui://t573fj5brn1a5v" default="ui://t573fj5bs45wa"/>
       <relation target="" sidePair="width-width,height-height"/>
