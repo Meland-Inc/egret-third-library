@@ -4,10 +4,10 @@
     <loader id="n0_iyxw" name="n0" xy="0,0" size="200,44" url="ui://ti9jag5t110fewcyiqf" fill="scaleFree">
       <relation target="" sidePair="width-width"/>
     </loader>
-    <text id="n1_iyxw" name="tfName" xy="63,15" size="84,29" fontSize="20" color="#ffffff" text="镜头缩放">
+    <text id="n1_iyxw" name="tfName" xy="63,15" size="84,29" fontSize="20" color="#ffffff" autoClearText="true" text="镜头缩放">
       <relation target="" sidePair="center-center"/>
     </text>
-    <text id="n2_iyxw" name="tfDesc" xy="147,20" size="53,24" fontSize="16" color="#d2dde2" autoSize="none" text="&quot;啦啦啦&quot;.mp3">
+    <text id="n2_iyxw" name="tfDesc" xy="147,20" size="53,24" fontSize="16" color="#d2dde2" autoSize="none" autoClearText="true" text="&quot;啦啦啦&quot;.mp3">
       <relation target="" sidePair="width-width"/>
       <relation target="n1_iyxw" sidePair="leftext-right"/>
     </text>

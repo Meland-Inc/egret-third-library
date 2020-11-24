@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1615,44" designImage="ui://thvmj7vo110fe4cyik9" designImageOffsetX="-9" designImageOffsetY="-1000" designImageAlpha="0">
+<component size="1615,116" designImage="ui://thvmj7vo110fe4cyik9" designImageOffsetX="-155" designImageOffsetY="-673" designImageAlpha="0">
+  <controller name="ctrlType" pages="0,normal,1,edit" selected="1"/>
   <displayList>
-    <image id="n3_110fe" name="n3" src="110fewcyiqq" fileName="timeline/img/img_code_dy_4.png" xy="0,0" size="1615,44">
+    <loader id="n3_110fe" name="n3" xy="0,0" size="1615,44" url="ui://ti9jag5t110fewcyiqq" fill="scaleFree">
       <relation target="" sidePair="width-width"/>
-    </image>
-    <component id="n4_iyxw" name="comCtnr" src="j5gc13564xt" fileName="timeline/com/ComTimelineCtnr.xml" xy="0,0" size="1615,44">
+    </loader>
+    <component id="n4_y8iq" name="comCodeCtnr" src="j5gc13564xt" fileName="timeline/com/ComTimelineCtnr.xml" xy="0,0" size="1615,44">
+      <relation target="" sidePair="width-width"/>
+    </component>
+    <component id="n5_y8iq" name="comAttrCtnr" src="j5gc13564xt" fileName="timeline/com/ComTimelineCtnr.xml" xy="0,44" size="1615,72" touchable="false">
+      <gearSize controller="ctrlType" pages="0" values="1615,0,1,1" default="1615,72,1,1"/>
       <relation target="" sidePair="width-width"/>
     </component>
   </displayList>
+  <relation target="n5_y8iq" sidePair="bottomext-bottom"/>
 </component>

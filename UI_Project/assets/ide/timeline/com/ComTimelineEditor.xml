@@ -1,23 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1847,584" designImage="ui://thvmj7vo110fe4cyik9" designImageOffsetY="-496" designImageAlpha="0">
+<component size="1840,590" designImage="ui://thvmj7vo110fe4cyik9" designImageOffsetY="-496" designImageAlpha="0">
   <displayList>
-    <image id="n0_110fe" name="n5" src="110fewcyiqs" fileName="timeline/img/img_code_dy_6.png" xy="0,40" size="1847,544">
+    <image id="n0_110fe" name="n5" src="110fewcyiqs" fileName="timeline/img/img_code_dy_6.png" xy="0,45" size="1840,545">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n6_110fe" name="n6" src="110fewcyiqt" fileName="timeline/img/img_code_dy_7.png" xy="10,40" size="202,55"/>
-    <image id="n4_110fe" name="n7" src="110fewcyiqy" fileName="timeline/img/img_code_dy_29.png" xy="10,94" size="1827,490">
+    <image id="n6_110fe" name="n6" src="110fewcyiqt" fileName="timeline/img/img_code_dy_7.png" xy="5,40" size="202,60"/>
+    <image id="n4_110fe" name="n7" src="110fewcyiqy" fileName="timeline/img/img_code_dy_29.png" xy="5,100" size="1830,485">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n25_rvxx" name="n25" src="idwf13564xy" fileName="timeline/img/img_code_dy_31.png" xy="10,555" size="1805,26">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
     <component id="n7_110fe" name="comCutAnime" src="110fewcyiqz" fileName="timeline/com/ComTimelineCutAnime.xml" xy="10,0"/>
-    <component id="n9_110fe" name="btnPlay" src="110fewcyir0" fileName="timeline/com/BtnTimelinePlay.xml" xy="898,52">
+    <text id="n13_sn4a" name="tfName" xy="5,74" size="202,29" fontSize="20" color="#ffffff" align="center" autoSize="none" autoClearText="true" text="&quot;猫捉老鼠&quot;" input="true"/>
+    <component id="n9_110fe" name="btnPlay" src="110fewcyir0" fileName="timeline/com/BtnTimelinePlay.xml" xy="898,57">
       <relation target="" sidePair="center-center"/>
     </component>
-    <component id="n23_kljh" name="comLstTrack" src="kljh13564xu" fileName="timeline/com/ComTimelineLstTrack.xml" xy="15,138" size="1817,368"/>
-    <component id="n19_to0d" name="comMoveCtnr" src="j5gc13564xt" fileName="timeline/com/ComTimelineCtnr.xml" xy="212,138" size="1615,368" touchable="false">
+    <component id="n23_kljh" name="comLstTrack" src="kljh13564xu" fileName="timeline/com/ComTimelineLstTrack.xml" xy="10,143" size="1802,368"/>
+    <component id="n19_to0d" name="comMoveCodeCtnr" src="j5gc13564xt" fileName="timeline/com/ComTimelineCtnr.xml" xy="212,143" size="1600,368" touchable="false">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
-    <list id="n11_sn4a" name="comLstRuler" xy="179,92" size="1640,45" layout="row" overflow="hidden" scroll="horizontal" colGap="-38" defaultItem="ui://ti9jag5t110fewcyir1" autoClearItems="true">
+    <list id="n11_sn4a" name="comLstRuler" xy="212,98" size="1600,45" touchable="false" layout="row" overflow="scroll" scroll="horizontal" defaultItem="ui://ti9jag5t110fewcyir1" autoClearItems="true">
       <relation target="" sidePair="width-width,height-height"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
       <item/>
       <item/>
       <item/>
@@ -41,16 +56,18 @@
       <item/>
       <item/>
     </list>
-    <component id="n12_sn4a" name="btnAddTimeline" src="sn4a13564xa" fileName="timeline/com/BtnAddTimeline.xml" xy="156,503" size="1615,44">
+    <component id="n26_ne3y" name="comMovePlayCtnr" src="j5gc13564xt" fileName="timeline/com/ComTimelineCtnr.xml" xy="212,98" size="1600,45">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <component id="n12_sn4a" name="btnAddTimeline" src="sn4a13564xa" fileName="timeline/com/BtnAddTimeline.xml" xy="10,510" size="1805,45">
       <relation target="" sidePair="width-width,bottom-bottom"/>
     </component>
-    <text id="n13_sn4a" name="tfName" xy="11,69" size="202,29" fontSize="20" color="#ffffff" align="center" autoSize="none" autoClearText="true" text="&quot;猫捉老鼠&quot;" input="true"/>
-    <component id="n17_sn4a" name="comFlipControl" src="sn4a13564xc" fileName="timeline/com/ComTimelineFlipControl.xml" xy="0,548" size="1837,26">
+    <component id="n17_sn4a" name="comFlipControl" src="sn4a13564xc" fileName="timeline/com/ComTimelineFlipControl.xml" xy="10,555" size="1805,26">
       <relation target="" sidePair="width-width,bottom-bottom"/>
     </component>
-    <component id="n16_sn4a" name="comPlayline" src="sn4a13564xb" fileName="timeline/com/ComTimelinePlayline.xml" xy="1291,113" size="12,435">
+    <component id="n16_sn4a" name="comPlayline" src="sn4a13564xb" fileName="timeline/com/ComTimelinePlayline.xml" xy="1291,118" size="12,435">
       <relation target="" sidePair="height-height"/>
     </component>
-    <image id="n24_79xr" name="imgDisable" src="110fewcyiq1" fileName="timeline/img/icon_code_dy_7.png" xy="15,566" pivot="0.5,0.5" anchor="true" visible="false"/>
+    <image id="n24_79xr" name="imgDisable" src="110fewcyiq1" fileName="timeline/img/icon_code_dy_7.png" xy="15,571" pivot="0.5,0.5" anchor="true" visible="false"/>
   </displayList>
 </component>

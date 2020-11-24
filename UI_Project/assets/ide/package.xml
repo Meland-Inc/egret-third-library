@@ -807,10 +807,12 @@
     <image id="j2cr13564xq" name="上课模板效果图.png" path="/lessonCenter/img/"/>
     <component id="goe213564xr" name="ToolTipTimelineTrackMenu.xml" path="/timeline/com/" exported="true"/>
     <component id="goe213564xs" name="BtnTimelineMenu.xml" path="/timeline/com/"/>
-    <component id="j5gc13564xt" name="ComTimelineCtnr.xml" path="/timeline/com/"/>
+    <component id="j5gc13564xt" name="ComTimelineCtnr.xml" path="/timeline/com/" exported="true"/>
     <component id="kljh13564xu" name="ComTimelineLstTrack.xml" path="/timeline/com/"/>
     <component id="kljh13564xv" name="ComTimelineTrackTitle.xml" path="/timeline/com/" exported="true"/>
     <component id="79xr13564xw" name="ToolTipTimelineCodeMenu.xml" path="/timeline/com/" exported="true"/>
+    <image id="idwf13564xx" name="img_code_dy_30.png" path="/timeline/img/" scale="9grid" scale9grid="16,11,32,22"/>
+    <image id="idwf13564xy" name="img_code_dy_31.png" path="/timeline/img/" scale="9grid" scale9grid="16,6,32,12"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>

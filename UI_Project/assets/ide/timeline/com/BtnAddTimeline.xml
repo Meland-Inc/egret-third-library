@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1615,44" extention="Button">
+<component size="1805,45" pivot="0.5,0.5" extention="Button">
+  <controller name="button" pages="2,up,3,down" selected="1"/>
   <displayList>
-    <image id="n0_sn4a" name="n0" src="110fewcyipu" fileName="timeline/img/icon_code_dy_10.png" xy="752,11">
+    <image id="n2_idwf" name="n2" src="idwf13564xx" fileName="timeline/img/img_code_dy_30.png" xy="0,0" size="1805,45">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n0_sn4a" name="n0" src="110fewcyipu" fileName="timeline/img/icon_code_dy_10.png" xy="846,12" pivot="0.5,0.5" size="21,21" scale="0.95,0.95">
+      <gearSize controller="button" pages="3" values="21,21,0.95,0.95" default="21,21,1,1"/>
       <relation target="" sidePair="center-center"/>
     </image>
-    <text id="n1_sn4a" name="n1" xy="778,7" pivot="0.5,0.5" size="84,29" fontSize="20" color="#ffffff" align="center" vAlign="middle" text="添加轨迹">
+    <text id="n1_sn4a" name="n1" xy="872,8" pivot="0.5,0.5" size="84,29" scale="0.95,0.95" fontSize="20" color="#ffffff" align="center" vAlign="middle" text="添加轨迹">
+      <gearSize controller="button" pages="3" values="84,29,0.95,0.95" default="84,29,1,1"/>
       <relation target="" sidePair="center-center"/>
     </text>
   </displayList>
-  <Button downEffect="scale" downEffectValue=".95"/>
+  <Button/>
 </component>
