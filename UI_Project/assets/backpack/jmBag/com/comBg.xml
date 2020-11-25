@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1170,816" designImage="ui://6wzrw7y2l46ww" designImageOffsetX="-373" designImageOffsetY="-149" designImageLayer="1">
+  <displayList>
+    <component id="n0_l46w" name="imgBg" src="e7m0bu" fileName="temp/img/comBagBg.xml" xy="591,418" pivot="0.5,0.5" anchor="true" size="1116,756" aspect="true"/>
+    <image id="n1_l46w" name="n1" src="i0659k" fileName="temp/背包背景装饰1.png" xy="1072,103" pivot="0.5,0.5" anchor="true"/>
+    <image id="n2_l46w" name="n2" src="i0659l" fileName="temp/背包背景装饰2.png" xy="1113,156" pivot="0.5,0.5" anchor="true" size="72,56"/>
+    <image id="n3_l46w" name="n3" src="i0659m" fileName="temp/背包背景装饰3.png" xy="69,719" pivot="0.5,0.5" anchor="true" size="72,56"/>
+    <component id="n4_i065" name="comTitle" src="i0659n" fileName="temp/标题.xml" xy="343,-5"/>
+  </displayList>
+  <transition name="idle">
+    <item time="0" type="Scale" target="n0_l46w" tween="true" startValue="1,1" endValue="1.01,1" duration="24" ease="Linear" repeat="-1" yoyo="true"/>
+    <item time="0" type="Scale" target="n1_l46w" tween="true" startValue="1,1" endValue="1.1,1.1" duration="36" repeat="-1" yoyo="true"/>
+    <item time="0" type="Size" target="n3_l46w" tween="true" startValue="72,56" endValue="68,62" duration="24" repeat="-1" yoyo="true"/>
+    <item time="0" type="XY" target="n3_l46w" tween="true" startValue="69,719" endValue="78,714" duration="24" ease="Linear" repeat="-1" yoyo="true"/>
+    <item time="6" type="Size" target="n2_l46w" tween="true" startValue="72,56" endValue="86,64" duration="24" repeat="-1" yoyo="true"/>
+  </transition>
+</component>

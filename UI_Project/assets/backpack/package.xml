@@ -169,6 +169,62 @@
     <component id="lt7w8a" name="comRepairMat.xml" path="/com/"/>
     <image id="lt7w8b" name="bg_zhuangbei_04.png" path="/img/repaire/"/>
     <image id="lt7w8c" name="btn_zhuangbei_03.png" path="/img/repaire/"/>
+    <component id="i0659b" name="comBag.xml" path="/jmBag/com/"/>
+    <image id="i0659d" name="img_bag_roleBg.png" path="/jmBag/img/" scale="9grid" scale9grid="22,21,44,42"/>
+    <image id="i0659f" name="img_bag_equipBg.png" path="/jmBag/img/"/>
+    <image id="i0659h" name="img_bag_nameBg.png" path="/jmBag/img/"/>
+    <component id="i0659i" name="comBg.xml" path="/jmBag/com/"/>
+    <image id="i0659k" name="img_bag_bubble1.png" path="/jmBag/img/"/>
+    <image id="i0659l" name="img_bag_bubble2.png" path="/jmBag/img/"/>
+    <image id="i0659m" name="img_bag_bubble3.png" path="/jmBag/img/"/>
+    <component id="i0659n" name="comBagTitle.xml" path="/jmBag/com/"/>
+    <image id="i0659o" name="img_bag_bubble4.png" path="/jmBag/img/"/>
+    <image id="i0659p" name="img_bag_bubble5.png" path="/jmBag/img/"/>
+    <image id="i0659q" name="img_bag_bubble6.png" path="/jmBag/img/"/>
+    <image id="i0659r" name="img_bag_bubble7.png" path="/jmBag/img/"/>
+    <image id="i0659s" name="img_bag_title.png" path="/jmBag/img/"/>
+    <image id="i0659u" name="img_bag_itemBg.png" path="/jmBag/img/"/>
+    <image id="i0659v" name="img_bag_lstBg.png" path="/jmBag/img/" scale="9grid" scale9grid="53,28,106,56"/>
+    <component id="i0659w" name="JmBagItem.xml" path="/jmBag/btn/"/>
+    <image id="i0659x" name="icon_bag_default.png" path="/jmBag/img/"/>
+    <image id="i0659y" name="img_bag_selected.png" path="/jmBag/img/"/>
+    <component id="i0659z" name="btnRoleInfo.xml" path="/jmBag/btn/"/>
+    <image id="i065a0" name="btn_bag_roleInfo.png" path="/jmBag/img/"/>
+    <image id="i065a1" name="img_bag_text.png" path="/jmBag/img/"/>
+    <component id="i065a2" name="btnCommon.xml" path="/jmBag/btn/"/>
+    <image id="i065a3" name="img_bag_inputBg.png" path="/jmBag/img/" scale="9grid" scale9grid="75,16,150,32"/>
+    <image id="i065a4" name="img_bag_search.png" path="/jmBag/img/"/>
+    <image id="i065a5" name="img_bag_line.png" path="/jmBag/img/"/>
+    <image id="i065a7" name="btn_bag_tagSelected(1).png" path="/jmBag/img/"/>
+    <image id="i065a8" name="btn_bag_bg.png" path="/jmBag/img/"/>
+    <image id="i065a9" name="效果图展开.png" path="/jmBag/effect/"/>
+    <image id="i065aa" name="icon_bag_pant.png" path="/jmBag/img/"/>
+    <image id="i065ab" name="icon_bag_hat.png" path="/jmBag/img/"/>
+    <image id="i065ac" name="icon_bag_hand.png" path="/jmBag/img/"/>
+    <image id="i065ad" name="icon_bag_shoe.png" path="/jmBag/img/"/>
+    <image id="i065ae" name="icon_bag_coat.png" path="/jmBag/img/"/>
+    <component id="eezlaf" name="ScrollBar1.xml" path="/jmBag/scroll/"/>
+    <image id="eezlag" name="img_bag_sliderBg.png" path="/jmBag/scroll/" scale="9grid" scale9grid="2,28,4,56"/>
+    <component id="eezlah" name="ScrollBar1_grip.xml" path="/jmBag/scroll/"/>
+    <image id="eezlai" name="btn_bag_slider.png" path="/jmBag/scroll/"/>
+    <component id="eezlaj" name="JmBagShortcutItem.xml" path="/jmBag/btn/" exported="true"/>
+    <image id="eezlak" name="img_bag_shortcutBg.png" path="/jmBag/img/"/>
+    <image id="eezlam" name="img_bag_shortcutSelected.png" path="/jmBag/img/"/>
+    <component id="eezlan" name="btnBagTagBak.xml" path="/jmBag/btn/"/>
+    <image id="eezlao" name="btn_bag_tagSelected.png" path="/jmBag/img/" scale="9grid" scale9grid="37,29,44,12"/>
+    <image id="eezlap" name="btn_bag_tagBg.png" path="/jmBag/img/" scale="9grid" scale9grid="36,29,46,11"/>
+    <image id="eezlar" name="btn_bag_blue.png" path="/jmBag/img/"/>
+    <image id="eezlas" name="btn_bag_close.png" path="/jmBag/img/"/>
+    <component id="e7m0br" name="comBagBox.xml" path="/jmBag/com/"/>
+    <component id="e7m0bs" name="WinSelectFallingObj.xml" path="/win/" exported="true"/>
+    <component id="e7m0bt" name="btnBagTag.xml" path="/jmBag/btn/"/>
+    <component id="e7m0bu" name="comBagBg.xml" path="/jmBag/com/"/>
+    <image id="e7m0bv" name="bg_bag_1.png" path="/jmBag/img/" duplicatePadding="true"/>
+    <image id="e7m0bw" name="bg_bag_2.png" path="/jmBag/img/" duplicatePadding="true"/>
+    <image id="e7m0bx" name="bg_bag_5.png" path="/jmBag/img/" duplicatePadding="true"/>
+    <image id="e7m0by" name="bg_bag_3.png" path="/jmBag/img/" duplicatePadding="true"/>
+    <image id="e7m0bz" name="bg_bag_4.png" path="/jmBag/img/" scale="9grid" scale9grid="12,12,24,24"/>
+    <component id="e7m0c2" name="WinBackpackNew.xml" path="/jmBag/win/" exported="true"/>
   </resources>
   <publish name="backpack"/>
 </packageDescription>
