@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="27,31" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0">
+    <action type="play_transition" fromPage="" toPage="2" transition="hover"/>
+    <action type="play_transition" fromPage="" toPage="0" transition="idle"/>
+    <action type="play_transition" fromPage="" toPage="1" transition="in"/>
+  </controller>
+  <displayList>
+    <image id="n0_qrx3" name="n0" src="eezlai" fileName="切片/滑动按钮.png" xy="13,15" pivot="0.5,0.5" anchor="true" size="27,31">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+  </displayList>
+  <Button/>
+  <transition name="hover">
+    <item time="0" type="Scale" target="n0_qrx3" tween="true" startValue="1,1" endValue="1.2,1.2" duration="6" ease="Back.Out"/>
+  </transition>
+  <transition name="idle">
+    <item time="0" type="Scale" target="n0_qrx3" value="1,1"/>
+  </transition>
+  <transition name="in">
+    <item time="0" type="Scale" target="n0_qrx3" tween="true" startValue="1.2,1.2" endValue="0.8,0.8" duration="6"/>
+  </transition>
+</component>

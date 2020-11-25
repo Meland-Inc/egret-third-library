@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" designImage="ui://thvmj7voy8jug" designImageAlpha="0" designImageLayer="1">
+  <displayList>
+    <graph id="n35_j2h8" name="gphBg" xy="0,0" size="1920,1080" alpha="0.5" type="rect" lineSize="0" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <image id="n8_oiqd" name="imgTopBg" src="oiqdcyigw" fileName="img/img_cm_7.png" pkg="te1gxawo" xy="0,0" size="1920,56">
+      <relation target="" sidePair="width-width"/>
+    </image>
+    <component id="n30_8qqi" name="labTitle" src="8qqicyiha" fileName="com/LabWinTitle.xml" pkg="te1gxawo" xy="21,0">
+      <Label title="选择物品" icon="ui://48p8y12ay8ju1"/>
+    </component>
+    <component id="n9_oiqd" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1859,8" size="48,48">
+      <relation target="" sidePair="right-right"/>
+      <Button icon="ui://te1gxawooiqdcyih2"/>
+    </component>
+    <image id="n18_e8s1" name="imgListBg" src="oiqdcyih4" fileName="img/img_cm_1.png" pkg="te1gxawo" xy="118,167" size="1678,826">
+      <relation target="n15_tvlf" sidePair="left-left,top-top,width-width"/>
+    </image>
+    <image id="n15_tvlf" name="imgListTitleBg" src="oiqdcyih6" fileName="img/img_cm_3.png" pkg="te1gxawo" xy="118,115" size="1679,58">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n26_vkix" name="imgSearchBg" src="oiqdcyigx" fileName="img/img_cm_ssk.png" pkg="te1gxawo" xy="1567,126" size="210,38" group="n34_emzb"/>
+    <image id="n36_x2wv" name="n36" src="rujpcyijl" fileName="img/icon_cm_ss.png" pkg="te1gxawo" xy="1572,130" size="32,32" group="n34_emzb"/>
+    <text id="n25_vkix" name="tfSearch" xy="1607,127" size="167,38" group="n34_emzb" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" text="" input="true" prompt="[color=#999999]请输入搜索内容[/color]"/>
+    <group id="n34_emzb" name="grpInpSearch" xy="1567,126" size="210,39" advanced="true">
+      <relation target="n15_tvlf" sidePair="top-top,right-right"/>
+    </group>
+    <text id="n14_tvlf" name="tfNum" xy="135,135" size="83,29" fontSize="20" color="#333333" align="center" vars="true" text="背包 [{num=10}]">
+      <relation target="n15_tvlf" sidePair="left-left,top-top"/>
+    </text>
+    <list id="n16_tvlf" name="lstBagType" xy="357,123" size="655,48" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="128" colGap="13" defaultItem="ui://48p8y12atvlfi">
+      <relation target="n15_tvlf" sidePair="left-left,top-top"/>
+      <item/>
+    </list>
+    <list id="n17_e8s1" name="lstBagItem" xy="138,192" size="1643,788" layout="flow_hz" overflow="scroll" lineGap="5" colGap="10" defaultItem="ui://48p8y12ae8s1j" autoClearItems="true">
+      <relation target="n15_tvlf" sidePair="left-left,top-top,width-width"/>
+      <relation target="n18_e8s1" sidePair="height-height"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>
