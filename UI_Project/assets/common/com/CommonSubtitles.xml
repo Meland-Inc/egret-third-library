@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" opaque="false">
+  <displayList>
+    <image id="n2_e7m0" name="imgBg" src="e7m0cyikd" fileName="img/color/img_cm_black.png" xy="0,0" size="1920,1080" alpha="0.5">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n0_e7m0" name="tfSubtitles" xy="230,310" size="1459,460" fontSize="30" align="center" vAlign="middle" autoSize="none" text="subtitles">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+</component>

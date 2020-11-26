@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1279,468" opaque="false" designImageLayer="1">
-  <controller name="ctrlType" exported="true" pages="3,unknow,1,showText,2,question,0,selection" selected="2">
+  <controller name="ctrlType" exported="true" pages="3,unknow,1,showText,2,question,0,selection" selected="0">
     <action type="play_transition" fromPage="" toPage="0" transition="optionIdle"/>
   </controller>
   <displayList>
@@ -109,10 +109,10 @@
     <item time="0" type="Shake" value="20,0.5"/>
   </transition>
   <transition name="in">
-    <item time="0" type="Alpha" tween="true" startValue="0" endValue="1" duration="12"/>
+    <item time="0" type="Alpha" tween="true" startValue="0" endValue="1" duration="6"/>
   </transition>
   <transition name="out">
-    <item time="0" type="Alpha" tween="true" startValue="1" endValue="0" duration="12"/>
+    <item time="0" type="Alpha" tween="true" startValue="1" endValue="0" duration="6"/>
   </transition>
   <transition name="change">
     <item time="0" type="Pivot" value="0.5,0.5"/>
