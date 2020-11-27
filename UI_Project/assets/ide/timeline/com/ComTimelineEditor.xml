@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1840,590" designImage="ui://thvmj7vo110fe4cyik9" designImageOffsetY="-496" designImageAlpha="0">
+<component size="1840,595" designImage="ui://thvmj7vo110fe4cyik9" designImageOffsetY="-496" designImageAlpha="0">
   <displayList>
-    <image id="n0_110fe" name="n5" src="110fewcyiqs" fileName="timeline/img/img_code_dy_6.png" xy="0,45" size="1840,545">
+    <image id="n0_110fe" name="n5" src="110fewcyiqs" fileName="timeline/img/img_code_dy_6.png" xy="0,45" size="1840,550">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n4_110fe" name="n7" src="110fewcyiqy" fileName="timeline/img/img_code_dy_29.png" xy="5,100" size="1830,485">
+    <image id="n4_110fe" name="n7" src="110fewcyiqy" fileName="timeline/img/img_code_dy_29.png" xy="5,100" size="1830,490">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
     <loader id="n6_110fe" name="ladFold" xy="5,40" size="207,103" url="ui://ti9jag5t110fewcyiqt" fill="scaleFree"/>
     <graph id="n27_vos8" name="dragArea" xy="208,45" size="1631,55" alpha="0" type="rect"/>
-    <image id="n25_rvxx" name="n25" src="idwf13564xy" fileName="timeline/img/img_code_dy_31.png" xy="10,555" size="1805,26">
+    <image id="n25_rvxx" name="n25" src="idwf13564xy" fileName="timeline/img/img_code_dy_31.png" xy="10,560" size="1805,26">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
     <component id="n7_110fe" name="comCutAnime" src="110fewcyiqz" fileName="timeline/com/ComTimelineCutAnime.xml" xy="7,0"/>
@@ -17,11 +17,11 @@
     <component id="n9_110fe" name="btnPlay" src="110fewcyir0" fileName="timeline/com/BtnTimelinePlay.xml" xy="898,57">
       <relation target="" sidePair="center-center"/>
     </component>
-    <component id="n23_kljh" name="comLstTrack" src="kljh13564xu" fileName="timeline/com/ComTimelineLstTrack.xml" xy="10,143" size="1802,368"/>
-    <component id="n19_to0d" name="comMoveCodeCtnr" src="j5gc13564xt" fileName="timeline/com/ComTimelineCtnr.xml" xy="212,143" size="1600,368" touchable="false">
+    <component id="n23_kljh" name="comLstTrack" src="kljh13564xu" fileName="timeline/com/ComTimelineLstTrack.xml" xy="10,148" size="1802,368"/>
+    <component id="n19_to0d" name="comMoveCodeCtnr" src="j5gc13564xt" fileName="timeline/com/ComTimelineCtnr.xml" xy="212,148" size="1600,368" touchable="false">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
-    <list id="n11_sn4a" name="comLstRuler" xy="212,98" size="1600,45" touchable="false" layout="row" overflow="scroll" scroll="horizontal" defaultItem="ui://ti9jag5t110fewcyir1" autoClearItems="true">
+    <list id="n11_sn4a" name="comLstRuler" xy="212,103" size="1600,45" touchable="false" layout="row" overflow="scroll" scroll="horizontal" defaultItem="ui://ti9jag5t110fewcyir1" autoClearItems="true">
       <relation target="" sidePair="width-width,height-height"/>
       <item/>
       <item/>
@@ -57,13 +57,13 @@
       <item/>
       <item/>
     </list>
-    <component id="n26_ne3y" name="comMovePlayCtnr" src="j5gc13564xt" fileName="timeline/com/ComTimelineCtnr.xml" xy="212,118" size="1600,25">
+    <component id="n26_ne3y" name="comMovePlayCtnr" src="j5gc13564xt" fileName="timeline/com/ComTimelineCtnr.xml" xy="212,123" size="1600,25">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
-    <component id="n12_sn4a" name="btnAddTimeline" src="sn4a13564xa" fileName="timeline/com/BtnAddTimeline.xml" xy="10,510" size="1805,45">
+    <component id="n12_sn4a" name="btnAddTimeline" src="sn4a13564xa" fileName="timeline/com/BtnAddTimeline.xml" xy="10,517" size="1805,45">
       <relation target="" sidePair="width-width,bottom-bottom"/>
     </component>
-    <component id="n17_sn4a" name="comFlipControl" src="sn4a13564xc" fileName="timeline/com/ComTimelineFlipControl.xml" xy="10,555" size="1805,26">
+    <component id="n17_sn4a" name="comFlipControl" src="sn4a13564xc" fileName="timeline/com/ComTimelineFlipControl.xml" xy="10,560" size="1805,26">
       <relation target="" sidePair="width-width,bottom-bottom"/>
     </component>
     <component id="n16_sn4a" name="comPlayline" src="sn4a13564xb" fileName="timeline/com/ComTimelinePlayline.xml" xy="1291,118" size="24,435">
