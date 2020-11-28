@@ -2,12 +2,19 @@
 <component size="100,50" opaque="false">
   <controller name="color" pages="0,DeepBlue,1,LightBlue,2,LightRed,3,DeepRed,4,Purple,5,Green,6,Pink,7,Carnation,8,LightYellow,9,DeepYellow,10,PinkRed,19,Grey,11,Customize" selected="11"/>
   <controller name="isAlone" pages="1,false,0,true" selected="0"/>
+  <controller name="ctrlIsTimeline" pages="0,false,1,true" selected="1"/>
   <displayList>
-    <loader id="n2_h5gv" name="lagBG" xy="31,0" size="69,50" url="ui://t573fj5bl1a26s" fill="scaleFree">
+    <loader id="n2_h5gv" name="lagBG" xy="0,0" size="100,57" url="ui://t573fj5bs3gj6u" fill="scaleFree">
       <gearDisplay controller="isAlone" pages="1"/>
-      <gearXY controller="color" pages="19" values="31,0" default="0,0"/>
-      <gearSize controller="color" pages="0,19,11" values="100,57,1,1|69,50,1,1|100,50,1,1" default="100,57,1,1"/>
-      <gearIcon controller="color" pages="0,1,2,3,4,5,6,7,8,9,10,19,11" values="ui://t573fj5bt1ls5h|ui://t573fj5bs45w3|ui://t573fj5bt1ls5l|ui://t573fj5bt1ls5d|ui://t573fj5bs45w1k|ui://t573fj5bs45wj|ui://t573fj5bt1ls5g|ui://t573fj5bt1ls5o|ui://t573fj5bs45w12|ui://t573fj5bs45w15|ui://t573fj5bf0vf5u|ui://t573fj5bl1a26s|ui://t573fj5bfvb260"/>
+      <gearXY controller="color" pages="19" values="0,0" default="0,0"/>
+      <gearSize controller="color" pages="0,19,11" values="100,57,1,1|100,57,1,1|100,50,1,1" default="100,57,1,1"/>
+      <gearIcon controller="color" pages="0,1,2,3,4,5,6,7,8,9,10,19,11" values="ui://t573fj5bt1ls5h|ui://t573fj5bs45w3|ui://t573fj5bt1ls5l|ui://t573fj5bt1ls5d|ui://t573fj5bs45w1k|ui://t573fj5bs45wj|ui://t573fj5bt1ls5g|ui://t573fj5bt1ls5o|ui://t573fj5bs45w12|ui://t573fj5bs45w15|ui://t573fj5bf0vf5u|ui://t573fj5bs3gj6u|ui://t573fj5bfvb260"/>
+      <gearDisplay2 controller="ctrlIsTimeline" pages="0" condition="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <loader id="n4_s3gj" name="labTimelineBG" xy="31,0" size="69,50" url="ui://t573fj5bl1a26s" fill="scaleFree">
+      <gearDisplay controller="isAlone" pages="1"/>
+      <gearDisplay2 controller="ctrlIsTimeline" pages="1" condition="0"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
     <loader id="n3_yrfu" name="lagAloneBG" xy="0,0" size="100,71" url="ui://t573fj5bi6xe2a" fill="scaleFree">
