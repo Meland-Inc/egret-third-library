@@ -127,18 +127,18 @@
     <image id="gen83g" name="img_main_kuaisujianzao_toumingdu_42.png" path="/old/img_UI3/"/>
     <image id="gen83h" name="img_main_kuaisujianzao_toumingdu20%_41.png" path="/old/img_UI3/"/>
     <image id="gen83i" name="icon_main_kuaisujianzao_yidong_43.png" path="/old/img_UI3/"/>
-    <component id="gen83j" name="ComMainGameLeftTopUICtnr.xml" path="/old/com/" exported="true"/>
+    <component id="gen83j" name="ComMainGameLeftTopUICtnr.xml" path="/old/com/"/>
     <image id="gen83k" name="icon_main_shezhi_67.png" path="/old/img_UI3/"/>
     <image id="gen83l" name="icon_main_xinxiang_67.png" path="/old/img_UI3/"/>
     <image id="gen83m" name="icon_main_suoxiaoi_69.png" path="/old/img_UI3/"/>
     <image id="gen83n" name="icon_main_map_66.png" path="/old/img_UI3/"/>
     <image id="gen83o" name="icon_main_hongdian_68.png" path="/old/img_UI3/"/>
-    <component id="gen83p" name="ComSmallMap.xml" path="/old/win/" exported="true"/>
+    <component id="gen83p" name="ComSmallMap.xml" path="/old/win/"/>
     <image id="gen83q" name="img_main_zhezhao_71.png" path="/old/img_UI3/" scale="9grid" scale9grid="25,25,50,50"/>
     <image id="gen83r" name="img_main_zhezhao_71-1.png" path="/old/img_UI3/" scale="9grid" scale9grid="40,40,80,80"/>
     <image id="gen83s" name="img_main_qingtian_14.png" path="/old/img_UI3/"/>
     <image id="gen83t" name="效果图2.png" path="/old/main/"/>
-    <component id="gen83u" name="ComMainLessonLeftTopUICtnr.xml" path="/old/com/" exported="true"/>
+    <component id="gen83u" name="ComMainLessonLeftTopUICtnr.xml" path="/old/com/"/>
     <image id="gen83v" name="icon_main_dt_1.png" path="/old/imgB/"/>
     <component id="gen83w" name="spriteSummonBot.xml" path="/old/sprite/"/>
     <image id="gen83x" name="btn_main_zh_1.png" path="/old/img_UI3/"/>
@@ -152,14 +152,14 @@
     <image id="gen845" name="btn_main_zsj_2.png" path="/old/imgB/"/>
     <image id="gen846" name="btn_main_zsj_1.png" path="/old/imgB/"/>
     <image id="gen847" name="学生端—主界面按钮2.png" path="/old/main/"/>
-    <component id="gen848" name="ComMainGameShortcuts.xml" path="/old/com/" exported="true"/>
+    <component id="gen848" name="ComMainGameShortcuts.xml" path="/old/com/"/>
     <image id="gen849" name="img_main_beibaodise_13.png" path="/old/img_UI3/"/>
     <image id="gen84a" name="btn_main_beibaozhankai_4 .png" path="/old/img_UI3/"/>
     <image id="gen84b" name="btn_main_beibao_12.png" path="/old/img_UI3/"/>
     <image id="gen84c" name="btn_main_beibaozhankaianniu_4 _1.png" path="/old/img_UI3/"/>
     <image id="gen84d" name="btn_main_beibaoshouqianniu_3_1.png" path="/old/img_UI3/"/>
     <image id="gen84e" name="1.png" path="/old/main/B端效果图/"/>
-    <component id="gen84f" name="ComMainLessonShortcutsOld.xml" path="/old/com/" exported="true"/>
+    <component id="gen84f" name="ComMainLessonShortcutsOld.xml" path="/old/com/"/>
     <image id="gen84g" name="btn_main_dl_1.png" path="/old/imgB/"/>
     <image id="gen84h" name="btn_main_dl_2.png" path="/old/imgB/"/>
     <image id="gen84i" name="btn_main_dl_4.png" path="/old/imgB/"/>
@@ -171,7 +171,7 @@
     <image id="gen84o" name="icon_main_yingcang_23.png" path="/old/img_UI3/"/>
     <image id="gen84p" name="btn_main_cebianlanzhankai 20_1.png" path="/old/img_UI3/"/>
     <image id="gen84q" name="btn_main_cebianlananniu 19_1.png" path="/old/img_UI3/"/>
-    <component id="gen84r" name="ComMainLessonShortcuts.xml" path="/old/com/" exported="true"/>
+    <component id="gen84r" name="ComMainLessonShortcuts.xml" path="/old/com/"/>
     <image id="gen84s" name="img_main_kjld_1.png" path="/old/imgB/" scale="9grid" scale9grid="21,17,42,34"/>
     <image id="gen84t" name="img_main_kjld_2.png" path="/old/imgB/"/>
     <image id="gen84u" name="btn_cm_tj_1.png" path="/old/imgB/" exported="true"/>
@@ -406,27 +406,27 @@
     <component id="gen8b7" name="ToolTipTaskTargetItem.xml" path="/old/ToolTip/" exported="true"/>
     <image id="gen8b8" name="img_cm_tips_1.png" path="/old/newImg/" exported="true" scale="9grid" scale9grid="19,16,10,14"/>
     <image id="gen8b9" name="img_cm_item_6.png" path="/old/newImg/" exported="true" scale="9grid" scale9grid="18,18,36,36"/>
-    <component id="gen8ba" name="ComMainUserInfo.xml" path="/old/win/" exported="true"/>
+    <component id="gen8ba" name="ComMainUserInfo.xml" path="/old/win/"/>
     <image id="gen8bb" name="效果图1.png" path="/old/main/"/>
-    <component id="gen8bc" name="WinMainItemField.xml" path="/old/win/" exported="true"/>
-    <component id="gen8bd" name="ComMainJoystick.xml" path="/old/win/" exported="true"/>
-    <component id="gen8be" name="ComMainMenuOld.xml" path="/old/win/" exported="true"/>
+    <component id="gen8bc" name="WinMainItemField.xml" path="/old/win/"/>
+    <component id="gen8bd" name="ComMainJoystick.xml" path="/old/win/"/>
+    <component id="gen8be" name="ComMainMenuOld.xml" path="/old/win/"/>
     <image id="gen8bf" name="icon_mail_2.png" path="/old/img/" exported="true"/>
     <image id="gen8bg" name="主界面.png" path="/old/main/"/>
     <component id="gen8bh" name="WinMainNpcInfo.xml" path="/old/win/" exported="true"/>
-    <component id="gen8bi" name="ComMainEnemyInfo.xml" path="/old/win/" exported="true"/>
+    <component id="gen8bi" name="ComMainEnemyInfo.xml" path="/old/win/"/>
     <component id="gen8bj" name="WinMainPickUpTips.xml" path="/old/win/" exported="true"/>
     <image id="gen8bk" name="mainDesign.png" path="/old/img/"/>
-    <component id="gen8bl" name="WinMainContainer（deprecated).xml" path="/old/win/" exported="true"/>
-    <component id="gen8bm" name="ComMainQuickBuild.xml" path="/old/win/" exported="true"/>
+    <component id="gen8bl" name="WinMainContainer（deprecated).xml" path="/old/win/"/>
+    <component id="gen8bm" name="ComMainQuickBuild.xml" path="/old/win/"/>
     <component id="gen8bn" name="LabBuildingCountdown.xml" path="/old/com/" exported="true"/>
     <image id="gen8bo" name="主界面_快速建造效果图(1).png" path="/old/main/"/>
     <component id="gen8bp" name="ComMainRocker.xml" path="/old/win/" exported="true"/>
     <component id="gen8bq" name="btnCommon.xml" path="/old/btn/" exported="true"/>
-    <component id="gen8br" name="ComMainChatViewOld.xml" path="/old/win/" exported="true"/>
-    <component id="gen8bs" name="ComTaskTrace.xml" path="/old/win/" exported="true"/>
-    <component id="gen8bt" name="ComStatus.xml" path="/old/win/" exported="true"/>
-    <component id="gen8bu" name="ComMainStorage.xml" path="/old/win/" exported="true"/>
+    <component id="gen8br" name="ComMainChatViewOld.xml" path="/old/win/"/>
+    <component id="gen8bs" name="ComTaskTrace.xml" path="/old/win/"/>
+    <component id="gen8bt" name="ComStatus.xml" path="/old/win/"/>
+    <component id="gen8bu" name="ComMainStorage.xml" path="/old/win/"/>
     <image id="gen8bv" name="btn_code_lk_2.png" path="/old/B-PlatformImg/" exported="true"/>
     <component id="gen8bw" name="ComMainBuildShortCut.xml" path="/com/" exported="true"/>
     <component id="gen8bx" name="BtnBuildShortCut.xml" path="/old/btn/" exported="true"/>
@@ -436,7 +436,7 @@
     <image id="gen8c1" name="btn_ide_zm_2.png" path="/old/img_UI3/b/ide/" exported="true" scale="9grid" scale9grid="7,28,26,15"/>
     <image id="gen8c2" name="btn_ide_zm_3.png" path="/old/img_UI3/b/ide/" exported="true" scale="9grid" scale9grid="8,28,24,15"/>
     <image id="gen8c3" name="ied_操作优化.png" path="/old/ide/b/"/>
-    <component id="gen8c4" name="WinStudentMgr.xml" path="/old/win/" exported="true"/>
+    <component id="gen8c4" name="WinStudentMgr.xml" path="/old/win/"/>
     <image id="gen8c5" name="img_cm_dk_2.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="21,26,42,52"/>
     <component id="gen8c6" name="ComStudentTagButton.xml" path="/old/com/"/>
     <image id="gen8c7" name="img_cm_xsgl_10_1.png" path="/old/imgB/" exported="true"/>
@@ -474,19 +474,19 @@
     <component id="gen8d3" name="ComExperience.xml" path="/com/"/>
     <component id="gen8d4" name="ComMainTemperature.xml" path="/old/win/"/>
     <component id="gen8d5" name="WinMainFriendInfo.xml" path="/old/win/"/>
-    <component id="gen8d6" name="ComMainTaskTrace.xml" path="/old/win/" exported="true"/>
+    <component id="gen8d6" name="ComMainTaskTrace.xml" path="/old/win/"/>
     <component id="gen8d7" name="WinMainRevive.xml" path="/old/win/" exported="true"/>
     <image id="gen8d8" name="bg_cm_3.png" path="/old/newImg/" exported="true" scale="9grid" scale9grid="22,42,44,24"/>
     <image id="gen8d9" name="img_cm_pattern2.png" path="/old/newImg/" exported="true" scale="tile" smoothing="false"/>
     <component id="gen8da" name="btnScale.xml" path="/old/btn/" exported="true"/>
     <image id="gen8db" name="btn_cm_yellow1.png" path="/old/newImg/" exported="true" scale="9grid" scale9grid="12,8,14,22"/>
     <component id="gen8dc" name="ComMainInfo.xml" path="/old/win/"/>
-    <component id="gen8dd" name="ComStorage.xml" path="/old/win/" exported="true"/>
+    <component id="gen8dd" name="ComStorage.xml" path="/old/win/"/>
     <image id="gen8de" name="2.png" path="/old/main/B端效果图/"/>
-    <component id="gen8df" name="WinGameMain.xml" path="/old/win/" exported="true"/>
-    <component id="gen8dg" name="WinLessonMain.xml" path="/old/win/" exported="true"/>
+    <component id="gen8df" name="WinGameMain.xml" path="/old/win/"/>
+    <component id="gen8dg" name="WinLessonMain.xml" path="/old/win/"/>
     <component id="gen8dh" name="btnIde.xml" path="/old/btn/" exported="true"/>
-    <component id="gen8di" name="WinTileMainOld.xml" path="/old/win/" exported="true"/>
+    <component id="gen8di" name="WinTileMainOld.xml" path="/old/win/"/>
     <component id="11584dl" name="WinChatSmall.xml" path="/win/" exported="true"/>
     <image id="11584dn" name="img_mianV_ltk.png" path="/img/" scale="9grid" scale9grid="20,20,40,40"/>
     <image id="xh734dp" name="icon_mainV_yqhy.png" path="/img/"/>
@@ -514,10 +514,13 @@
     <image id="pbxdwcyim4" name="icon_mainV_sp.png" path="/img/"/>
     <image id="pbxdwcyim5" name="icon_mainV_sp2.png" path="/img/"/>
     <component id="pqylwcyim4" name="WinMainMovieCamera.xml" path="/win/" exported="true"/>
-    <component id="o2yvwcyim7" name="comLessonMenue.xml" path="/win/" exported="true"/>
+    <component id="o2yvwcyim7" name="comLessonMenue.xml" path="/com/" exported="true"/>
     <component id="o2yvwcyim8" name="WinMain.xml" path="/win/" exported="true"/>
-    <component id="o2yvwcyima" name="comMaptemplateMenu.xml" path="/win/" exported="true"/>
-    <component id="o2yvwcyimb" name="comBannerMenu.xml" path="/win/" exported="true"/>
+    <component id="o2yvwcyima" name="comMaptemplateMenu.xml" path="/com/" exported="true"/>
+    <component id="o2yvwcyimb" name="comBannerMenu.xml" path="/com/" exported="true"/>
+    <component id="ljm0wcyime" name="comLessonMenueOld.xml" path="/com/" exported="true"/>
+    <component id="ljm0wcyimf" name="btnMainMenuGodView.xml" path="/com/" exported="true"/>
+    <component id="ljm0wcyimg" name="btnMainMenuLockScreen.xml" path="/com/" exported="true"/>
   </resources>
   <publish name="main"/>
 </packageDescription>
