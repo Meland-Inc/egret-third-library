@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1600,44" designImage="ui://thvmj7vo110fe4cyik9" designImageOffsetX="-155" designImageOffsetY="-673" designImageAlpha="0">
-  <controller name="ctrlType" pages="0,normal,1,edit" selected="0"/>
+<component size="1600,116" designImage="ui://thvmj7vo110fe4cyik9" designImageOffsetX="-155" designImageOffsetY="-673" designImageAlpha="0">
+  <controller name="ctrlType" pages="0,normal,1,edit" selected="1"/>
   <displayList>
-    <loader id="n3_110fe" name="n3" xy="0,0" size="1600,48" url="ui://ti9jag5t110fewcyiqq" fill="scaleFree">
+    <loader id="n3_110fe" name="n3" xy="0,0" size="1600,44" url="ui://ti9jag5t110fewcyiqq" fill="scaleFree">
+      <gearSize controller="ctrlType" pages="1" values="1600,44,1,1" default="1600,48,1,1"/>
       <relation target="" sidePair="width-width"/>
     </loader>
     <component id="n4_y8iq" name="comCodeCtnr" src="j5gc13564xt" fileName="timeline/com/ComTimelineCtnr.xml" xy="0,0" size="1600,44">
@@ -11,7 +12,7 @@
     <image id="n6_dvd0" name="imgArrow" src="l1a26r" fileName="timeline/img/img_code_dy_13.png" xy="10,57" pivot="0.5,0.5" anchor="true" size="20,18" aspect="true">
       <gearDisplay controller="ctrlType" pages="1"/>
     </image>
-    <component id="n5_y8iq" name="comAttrCtnr" src="j5gc13564xt" fileName="timeline/com/ComTimelineCtnr.xml" xy="0,44" size="1600,0">
+    <component id="n5_y8iq" name="comAttrCtnr" src="j5gc13564xt" fileName="timeline/com/ComTimelineCtnr.xml" xy="0,44" size="1600,72">
       <gearSize controller="ctrlType" pages="0" values="1600,0,1,1" default="1600,72,1,1"/>
       <relation target="" sidePair="width-width"/>
     </component>

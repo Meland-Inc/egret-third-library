@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="46,44">
+  <displayList>
+    <image id="n0_nc80" name="n0" src="110fewcyiqr" fileName="timeline/img/img_code_dy_5.png" xy="0,6" size="46,32">
+      <relation target="" sidePair="rightext-right"/>
+    </image>
+    <text id="n1_nc80" name="tfName" xy="2,12" size="10,24" fontSize="16" color="#383737" vAlign="bottom" text=""/>
+    <loader id="n2_nc80" name="ladIcon" xy="12,6" size="32,32" fill="scale">
+      <relation target="n1_nc80" sidePair="left-right"/>
+    </loader>
+  </displayList>
+  <relation target="n1_nc80" sidePair="width-width"/>
+</component>
