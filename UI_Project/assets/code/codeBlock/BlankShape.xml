@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="95,30">
-  <controller name="color" pages="0,DeepBlue,1,LightBlue,2,LightRed,3,DeepRed,4,Purple,5,Green,6,Pink,7,Carnation,8,LightYellow,9,DeepYellow,10,PinkRed,20,Grey" selected="11"/>
+  <controller name="color" pages="0,DeepBlue,1,LightBlue,2,LightRed,3,DeepRed,4,Purple,5,Green,6,Pink,7,Carnation,8,LightYellow,9,DeepYellow,10,PinkRed,20,Grey" selected="0"/>
   <controller name="ctrlHint" pages="0,none,1,xy,2,entity,3,question,4,class,5,level,6,talk,7,bubble,8,,9,,10,movie" selected="10"/>
   <displayList>
-    <loader id="n9_j1n2" name="curentNotUsed" xy="0,0" size="95,30" visible="false" touchable="false" url="ui://rnqj1l77w7botlh" align="center" vAlign="middle" fill="scaleFree">
+    <loader id="n9_j1n2" name="curentNotUsed" xy="0,0" size="95,30" visible="false" touchable="false" url="ui://t573fj5bs45w1i" align="center" vAlign="middle" fill="scaleFree">
       <gearIcon controller="color" pages="0,1,2,3,4,5,6,7,8,9,20" values="ui://t573fj5bs45w1i|ui://t573fj5bi6xe1r|ui://t573fj5bi6xe1s|ui://t573fj5bi6xe1t|ui://t573fj5bi6xe1u|ui://t573fj5bi6xe1v|ui://t573fj5bi6xe1w|ui://t573fj5bi6xe1x|ui://rnqj1l77w7botlh|ui://t573fj5bi6xe1p|ui://rnqj1l77w7botlh" default="ui://t573fj5bs45w1i"/>
       <relation target="" sidePair="rightext-right"/>
     </loader>
     <loader id="n12_g8bk" name="currentUsed" xy="0,0" size="95,30" url="ui://t573fj5bs45w18" fill="scaleFree">
       <relation target="" sidePair="rightext-right"/>
     </loader>
-    <text id="n10_qq8d" name="n10" xy="39,3" size="42,22" fontSize="18" color="#ffffff" vAlign="middle" text="问题">
+    <text id="n10_qq8d" name="n10" xy="39,3" size="41,22" fontSize="18" color="#ffffff" vAlign="middle" text="电影">
       <gearXY controller="ctrlHint" pages="5" values="39,3" default="39,3"/>
-      <gearText controller="ctrlHint" pages="0,1,2,4,5,6,7,8" values="|坐标|实体|类别|关卡组件|对话|气泡|电影" default="问题"/>
+      <gearText controller="ctrlHint" pages="0,1,2,4,5,6,7,8,10" values="|坐标|实体|类别|关卡组件|对话|气泡|电影|电影" default="问题"/>
     </text>
     <loader id="n11_qq8d" name="n11" xy="6,1" size="28,28" url="ui://t573fj5bnlmf6l" align="center" vAlign="middle">
       <gearDisplay controller="ctrlHint" pages="1,2,3,4,5,6,7,10"/>
