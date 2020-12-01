@@ -776,7 +776,7 @@
     <image id="110fewcyiqo" name="img_code_dy_28.png" path="/timeline/img/"/>
     <image id="110fewcyiqp" name="img_code_dy_3.png" path="/timeline/img/" scale="9grid" scale9grid="16,11,32,22"/>
     <image id="110fewcyiqq" name="img_code_dy_4.png" path="/timeline/img/" scale="9grid" scale9grid="16,14,32,19"/>
-    <image id="110fewcyiqr" name="img_code_dy_5.png" path="/timeline/img/"/>
+    <image id="110fewcyiqr" name="img_code_dy_5.png" path="/timeline/img/" scale="9grid" scale9grid="16,8,32,16"/>
     <image id="110fewcyiqs" name="img_code_dy_6.png" path="/timeline/img/" scale="9grid" scale9grid="16,11,32,22"/>
     <image id="110fewcyiqt" name="img_code_dy_7.png" path="/timeline/img/" scale="9grid" scale9grid="16,14,32,19"/>
     <image id="110fewcyiqu" name="img_code_dy_8.png" path="/timeline/img/" scale="9grid" scale9grid="3,11,6,22"/>
@@ -815,6 +815,10 @@
     <component id="vos813564xz" name="WinTimelineEditor.xml" path="/timeline/" exported="true"/>
     <component id="vos813564y0" name="BtnTimelineFold.xml" path="/timeline/com/"/>
     <image id="l1a26r" name="img_code_dy_13.png" path="/timeline/img/"/>
+    <image id="nc8013564y2" name="img_code_dy_32.png" path="/timeline/img/" scale="9grid" scale9grid="9,8,18,15"/>
+    <component id="nc8013564y4" name="ComTimelineArgEntity.xml" path="/timeline/com/ComTimelineArg/" exported="true"/>
+    <component id="nc8013564y5" name="ComTimelineArgPos.xml" path="/timeline/com/ComTimelineArg/" exported="true"/>
+    <component id="nc8013564y6" name="ComTimelineArgText.xml" path="/timeline/com/ComTimelineArg/" exported="true"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>
