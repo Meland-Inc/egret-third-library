@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1279,468" opaque="false" designImageLayer="1">
+  <controller name="ctrlType" exported="true" pages="3,unknow,1,showText,2,question,0,selection" selected="0">
+    <action type="play_transition" fromPage="" toPage="0" transition="optionIdle"/>
+  </controller>
+  <displayList>
+    <loader id="n1_oij0" name="btnBg" xy="644,307" pivot="0.5,0.5" anchor="true" size="1016,308" group="n17_oij0" url="ui://nyy10939l24br" fill="scaleFree"/>
+    <image id="n2_oij0" name="n2" src="l24bs" fileName="screenDialog/img/DuiHuaKuang_img_02.png" xy="282,200" pivot="0.5,0.5" anchor="true" size="111,63" group="n17_oij0"/>
+    <image id="n3_oij0" name="n3" src="l24bt" fileName="screenDialog/img/DuiHuaKuang_img_03.png" xy="30,272" pivot="0.5,0.5" anchor="true" size="60,47" group="n17_oij0"/>
+    <image id="n4_oij0" name="n4" src="l24bu" fileName="screenDialog/img/DuiHuaKuang_img_04.png" xy="131,251" pivot="0.5,0.5" anchor="true" group="n17_oij0"/>
+    <image id="n5_oij0" name="n5" src="l24bv" fileName="screenDialog/img/DuiHuaKuang_img_05.png" xy="150,348" pivot="0.5,0.5" anchor="true" group="n17_oij0"/>
+    <image id="n7_oij0" name="n7" src="l24bw" fileName="screenDialog/img/DuiHuaKuang_img_06.png" xy="1099,260" pivot="0.5,0.5" anchor="true" group="n17_oij0"/>
+    <image id="n8_oij0" name="n8" src="l24bx" fileName="screenDialog/img/DuiHuaKuang_img_07.png" xy="1087,363" pivot="0.5,0.5" anchor="true" group="n17_oij0"/>
+    <image id="n9_oij0" name="n9" src="l24by" fileName="screenDialog/img/DuiHuaKuang_img_08.png" xy="1222,374" pivot="0.5,0.5" anchor="true" group="n17_oij0"/>
+    <image id="n6_oij0" name="n6" src="l24bz" fileName="screenDialog/img/DuiHuaKuang_img_09.png" xy="59,139" group="n30_l24b"/>
+    <group id="n17_oij0" name="bg" xy="0,153" size="1265,308" group="n38_i065"/>
+    <group id="n30_l24b" name="grpTitle" xy="59,139" size="298,100" group="n38_i065" advanced="true"/>
+    <group id="n29_l24b" name="grpIcon" xy="114,239" size="155,155" group="n38_i065" advanced="true"/>
+    <image id="n10_oij0" name="n10" src="l24b10" fileName="screenDialog/img/DuiHuaKuang_img_10.png" xy="114,239" group="n29_l24b"/>
+    <loader id="n18_l24b" name="ladIcon" xy="140,264" size="104,104" group="n29_l24b" aspect="true" touchable="false" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
+    <text id="n20_l24b" name="tfContent" xy="285,243" pivot="0.5,0.5" size="808,169" group="n38_i065" fontSize="40" vAlign="middle" autoSize="none" text="一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十"/>
+    <text id="n19_l24b" name="tfTitle" xy="74,163" size="265,76" group="n30_l24b" rotation="-6" fontSize="34" color="#ffffff" align="center" vAlign="middle" autoSize="none" singleLine="true" text="最多显示六个字"/>
+    <group id="n38_i065" name="root" xy="0,139" size="1265,322" advanced="true"/>
+  </displayList>
+  <transition name="idle" autoPlay="true">
+    <item time="0" type="Rotation" target="n5_oij0" tween="true" startValue="0" endValue="6" duration="36" ease="Linear" repeat="-1" yoyo="true"/>
+    <item time="0" type="Scale" target="n4_oij0" tween="true" startValue="1,1" endValue="1.1,1.1" duration="36" ease="Quad.InOut" repeat="-1" yoyo="true"/>
+    <item time="0" type="Scale" target="n9_oij0" tween="true" startValue="1,1" endValue="0.88,1.21" duration="36" ease="Quad.InOut" repeat="-1" yoyo="true"/>
+    <item time="0" type="XY" target="n5_oij0" tween="true" startValue="150,348" endValue="166,346" duration="36" ease="Quad.InOut" repeat="-1" yoyo="true"/>
+    <item time="0" type="XY" target="n8_oij0" tween="true" startValue="1087,363" endValue="1107,363" duration="36" ease="Quad.InOut" repeat="-1" yoyo="true"/>
+    <item time="0" type="XY" target="n9_oij0" tween="true" startValue="1222,374" endValue="1217,387" duration="36" ease="Quad.InOut" repeat="-1" yoyo="true"/>
+    <item time="3" type="Rotation" target="n8_oij0" tween="true" startValue="0" endValue="-45" duration="36" ease="Quad.InOut" repeat="-1" yoyo="true"/>
+    <item time="3" type="Scale" target="n7_oij0" tween="true" startValue="1,1" endValue="0.91,0.95" duration="36" ease="Quad.InOut" repeat="-1" yoyo="true"/>
+    <item time="3" type="Size" target="n2_oij0" tween="true" startValue="111,63" endValue="85,47" duration="36" ease="Cubic.InOut" repeat="-1" yoyo="true"/>
+    <item time="3" type="Size" target="n3_oij0" tween="true" startValue="60,47" endValue="65.318,53.918" duration="36" ease="Quad.InOut" repeat="-1" yoyo="true"/>
+    <item time="3" type="XY" target="n3_oij0" tween="true" startValue="30,272" endValue="20,279" duration="36" ease="Quad.InOut" repeat="-1" yoyo="true"/>
+    <item time="6" type="Size" target="n1_oij0" tween="true" startValue="1016,308" endValue="1000,316" duration="36" ease="Linear" repeat="-1" yoyo="true"/>
+  </transition>
+  <transition name="shake">
+    <item time="0" type="Alpha" value="1"/>
+    <item time="0" type="Shake" value="20,0.5"/>
+  </transition>
+  <transition name="in">
+    <item time="0" type="Alpha" tween="true" startValue="0" endValue="1" duration="6"/>
+  </transition>
+  <transition name="out">
+    <item time="0" type="Alpha" tween="true" startValue="1" endValue="0" duration="6"/>
+  </transition>
+  <transition name="change">
+    <item time="0" type="Pivot" value="0.5,0.5"/>
+    <item time="0" type="Scale" tween="true" startValue="1,1" endValue="0.95,0.95" duration="6" ease="Quad.In" repeat="1" yoyo="true"/>
+  </transition>
+</component>
