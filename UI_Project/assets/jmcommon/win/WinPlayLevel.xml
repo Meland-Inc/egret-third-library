@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1920,1080" designImage="ui://av6agj0gbmxe2h" designImageAlpha="0" designImageLayer="1">
+<component size="1920,1080" overflow="hidden" designImage="ui://av6agj0gbmxe2h" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlVoiceType" pages="1,play,0,none,2,pause" selected="0"/>
   <controller name="ctrlIsDevelop" pages="0,false,1,true" selected="0"/>
-  <controller name="ctrlTemGameType" pages="0,none,1,success,2,fail,3,over" selected="1"/>
+  <controller name="ctrlTemGameType" pages="0,none,1,success,2,fail,3,over" selected="0"/>
   <controller name="ctrlStartL" pages="0,,1,,2,,3," selected="0"/>
-  <controller name="ctrlJmType" pages="0,soduku,1,pickphoto,2,classify,3,count,4,balance,5,examination,6,specialExam,7,noCloseSpecialExam,8,stageCapabilityExam" selected="7">
+  <controller name="ctrlJmType" pages="0,soduku,1,pickphoto,2,classify,3,count,4,balance,5,examination,6,specialExam,7,noCloseSpecialExam,8,stageCapabilityExam" selected="0">
     <remark page="7" value="noClose"/>
     <remark page="8" value="noClose"/>
   </controller>
@@ -16,14 +16,14 @@
     <component id="n39_gx7z" name="comEditorStage" src="sco7n" fileName="com/ComEditorStage.xml" xy="174,237" size="1572,744">
       <relation target="" sidePair="width-width,height-height"/>
     </component>
-    <loader id="n34_gx7z" name="ladBG" xy="0,0" size="1920,1080" touchable="false" url="ui://av6agj0gk45f3m" fill="scaleFree">
+    <loader id="n34_gx7z" name="ladBG" xy="0,0" size="1920,1080" touchable="false" url="ui://av6agj0gbmxe27" fill="scaleFree">
       <gearIcon controller="ctrlJmType" pages="4,5,6,7,8" values="ui://kvblsqzcj5tqb|ui://av6agj0gk45f3m|ui://av6agj0gk45f3m|ui://av6agj0gk45f3m|ui://av6agj0gk45f3m" default="ui://av6agj0gbmxe27"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
     <image id="n35_gx7z" name="imgBar" src="hwlx25" fileName="img/img_keybord_bg.png" xy="0,0" size="1920,56" visible="false">
       <relation target="" sidePair="width-width,top-top"/>
     </image>
-    <loader id="n37_gx7z" name="gphPos" xy="82,84" size="1757,921" touchable="false" url="ui://av6agj0g766c4p" fill="scaleFree">
+    <loader id="n37_gx7z" name="gphPos" xy="82,84" size="1757,921" touchable="false" url="ui://av6agj0gbmxe2i" fill="scaleFree">
       <gearIcon controller="ctrlJmType" pages="4,7,8" values="ui://kvblsqzcj5tqa|ui://av6agj0g766c4p|ui://av6agj0g766c4p" default="ui://av6agj0gbmxe2i"/>
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
     </loader>
@@ -84,36 +84,36 @@
       <gearDisplay controller="ctrlVoiceType" pages="2"/>
       <relation target="n37_gx7z" sidePair="left-left,top-top"/>
     </graph>
-    <component id="n115_766c" name="btnPlayVoice" src="sco7k" fileName="btn/btnScale.xml" xy="99,47" size="199,143" controller="button,0">
+    <component id="n115_766c" name="btnPlayVoice" src="sco7k" fileName="btn/btnScale.xml" xy="112,3" size="202,221" controller="button,0">
       <gearDisplay controller="ctrlVoiceType" pages="1"/>
       <gearXY controller="ctrlJmType" pages="0,1,2,3,4,5,6,7" values="112,3|112,3|112,3|112,3|112,3|99,47|99,47|99,47" default="99,47"/>
       <gearSize controller="ctrlJmType" pages="0,1,2,3,4,5,6" values="202,221,1,1|202,221,1,1|202,221,1,1|202,221,1,1|202,221,1,1|199,143,1,1|199,143,1,1" default="199,143,1,1"/>
       <gearIcon controller="ctrlJmType" pages="0,1,2,3,4,5,6,7,8" values="ui://av6agj0gpgeq40|ui://av6agj0gpgeq40|ui://av6agj0gpgeq40|ui://av6agj0gpgeq40|ui://av6agj0gpgeq40|ui://av6agj0gfhtd3n|ui://av6agj0gfhtd3n|ui://av6agj0gfhtd3n|ui://av6agj0gfhtd3n"/>
       <relation target="n37_gx7z" sidePair="left-left,top-top"/>
-      <Button icon="ui://av6agj0gfhtd3n"/>
+      <Button icon="ui://av6agj0gpgeq40"/>
     </component>
-    <component id="n76_alb7" name="btnPauseVoice" src="sco7k" fileName="btn/btnScale.xml" xy="99,47" size="199,143" visible="false" controller="button,0">
+    <component id="n76_alb7" name="btnPauseVoice" src="sco7k" fileName="btn/btnScale.xml" xy="112,3" size="202,221" visible="false" controller="button,0">
       <gearDisplay controller="ctrlVoiceType" pages="2"/>
       <gearXY controller="ctrlJmType" pages="0,1,2,3,4,5,6" values="112,3|112,3|112,3|112,3|112,3|99,47|99,47" default="99,47"/>
       <gearSize controller="ctrlJmType" pages="0,1,2,3,4,5,6" values="202,221,1,1|202,221,1,1|202,221,1,1|202,221,1,1|202,221,1,1|199,143,1,1|199,143,1,1" default="199,143,1,1"/>
       <gearIcon controller="ctrlJmType" pages="0,1,2,3,4,5,6,7" values="ui://av6agj0gpgeq40|ui://av6agj0gpgeq40|ui://av6agj0gpgeq40|ui://av6agj0gpgeq40|ui://av6agj0gpgeq40|ui://av6agj0gfhtd3n|ui://av6agj0gfhtd3n|ui://av6agj0gfhtd3n" default=""/>
       <relation target="n37_gx7z" sidePair="left-left,top-top"/>
-      <Button icon="ui://av6agj0gfhtd3n"/>
+      <Button icon="ui://av6agj0gpgeq40"/>
     </component>
     <component id="n50_gx7z" name="btnUndo" src="sco7k" fileName="btn/btnScale.xml" xy="1666,528" size="221,225" controller="button,0">
       <gearIcon controller="ctrlJmType" pages="5,6,7,8" values="ui://av6agj0gfhtd3r|ui://av6agj0gfhtd3r|ui://av6agj0gfhtd3r|ui://av6agj0gfhtd3r" default="ui://av6agj0gbmxe2e"/>
       <relation target="n37_gx7z" sidePair="right-right,bottom-bottom"/>
-      <Button icon="ui://av6agj0gfhtd3r"/>
+      <Button icon="ui://av6agj0gbmxe2e"/>
     </component>
     <component id="n51_gx7z" name="btnMerge" src="sco7k" fileName="btn/btnScale.xml" xy="1666,776" size="221,225" controller="button,0">
       <gearIcon controller="ctrlJmType" pages="5,6,7,8" values="ui://av6agj0gfhtd3p|ui://av6agj0gfhtd3p|ui://av6agj0gfhtd3p|ui://av6agj0gfhtd3p" default="ui://av6agj0gbmxe2d"/>
       <relation target="n37_gx7z" sidePair="right-right,bottom-bottom"/>
-      <Button icon="ui://av6agj0gfhtd3p"/>
+      <Button icon="ui://av6agj0gbmxe2d"/>
     </component>
     <component id="n59_sco7" name="btnSkipLevel" src="sco7k" fileName="btn/btnScale.xml" xy="1666,281" size="221,225" controller="button,0">
       <gearIcon controller="ctrlJmType" pages="5,6,7,8" values="ui://av6agj0gvjd03w|ui://av6agj0gvjd03w|ui://av6agj0gvjd03w|ui://av6agj0gvjd03w" default="ui://av6agj0gbmxe2c"/>
       <relation target="n37_gx7z" sidePair="right-right,bottom-bottom"/>
-      <Button icon="ui://av6agj0gvjd03w"/>
+      <Button icon="ui://av6agj0gbmxe2c"/>
     </component>
     <component id="n30_nuye" name="btnClose" src="sco7k" fileName="btn/btnScale.xml" xy="1756,43" size="127,130" controller="button,0">
       <gearDisplay controller="ctrlJmType" pages="0,1,2,3,4,5,6"/>
@@ -155,7 +155,7 @@
       <relation target="n70_sco7" sidePair="middle-middle,left-left"/>
     </loader>
     <group id="n88_bmxe" name="btnStart" xy="1483,48" size="418,70" visible="false" advanced="true"/>
-    <loader id="n90_bmxe" name="ladBgMask" xy="0,0" size="1920,1080" visible="false" url="ui://av6agj0g766c4q" fill="scaleFree">
+    <loader id="n90_bmxe" name="ladBgMask" xy="0,0" size="1920,1080" visible="false" url="ui://av6agj0gbmxe2l" fill="scaleFree">
       <gearIcon controller="ctrlJmType" pages="7,8" values="ui://av6agj0g766c4q|ui://av6agj0g766c4q" default="ui://av6agj0gbmxe2l"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
@@ -167,11 +167,11 @@
     </image>
     <component id="n91_hilw" name="btnNoSkip" src="sco7k" fileName="btn/btnScale.xml" xy="1455,172" size="141,72" group="n94_hilw">
       <gearIcon controller="ctrlJmType" pages="5,6,7" values="ui://av6agj0gvjd03v|ui://av6agj0gvjd03v|ui://av6agj0gvjd03v" default="ui://av6agj0ghilw2n"/>
-      <Button icon="ui://av6agj0gvjd03v"/>
+      <Button icon="ui://av6agj0ghilw2n"/>
     </component>
     <component id="n92_hilw" name="btnSkip" src="sco7k" fileName="btn/btnScale.xml" xy="1606,171" size="142,73" group="n94_hilw">
       <gearIcon controller="ctrlJmType" pages="5,6,7" values="ui://av6agj0gvjd03t|ui://av6agj0gvjd03t|ui://av6agj0gvjd03t" default="ui://av6agj0ghilw2o"/>
-      <Button icon="ui://av6agj0gvjd03t"/>
+      <Button icon="ui://av6agj0ghilw2o"/>
     </component>
     <group id="n94_hilw" name="grpSecondConfirmSkip" xy="1408,143" size="389,135" advanced="true">
       <relation target="n59_sco7" sidePair="center-center,bottom-bottom"/>

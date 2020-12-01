@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="oyity675" jpegQuality="80" compressPNG="true">
+<packageDescription id="oyity675">
   <resources>
     <image id="a1nd1" name="img_main_xdt_1.png" path="/img/" scale="9grid" scale9grid="24,24,48,48"/>
     <image id="a1nd2" name="img_maon_rw_1.png" path="/img/" scale="9grid" scale9grid="23,7,46,14"/>
@@ -27,7 +27,7 @@
     <component id="psruo" name="spBagBtn.xml" path="/sprite/"/>
     <image id="lmgfp" name="icon_mainV_zjsj.png" path="/img/"/>
     <image id="lmgfq" name="icon_mainV_zysj.png" path="/img/"/>
-    <component id="gen8r" name="WinMain.xml" path="/win/" exported="true"/>
+    <component id="gen8r" name="WinMainOld.xml" path="/win/" exported="true"/>
     <component id="gen8s" name="btnAttack.xml" path="/old/btn/"/>
     <image id="gen8t" name="icon_main_caozuianniu_dikuang_53.png" path="/old/img_UI3/"/>
     <image id="gen8u" name="icon_main_caozuianniu_quantou_51.png" path="/old/img_UI3/"/>
@@ -514,6 +514,10 @@
     <image id="pbxdwcyim4" name="icon_mainV_sp.png" path="/img/"/>
     <image id="pbxdwcyim5" name="icon_mainV_sp2.png" path="/img/"/>
     <component id="pqylwcyim4" name="WinMainMovieCamera.xml" path="/win/" exported="true"/>
+    <component id="o2yvwcyim7" name="comLessonMenue.xml" path="/win/" exported="true"/>
+    <component id="o2yvwcyim8" name="WinMain.xml" path="/win/" exported="true"/>
+    <component id="o2yvwcyima" name="comMaptemplateMenu.xml" path="/win/" exported="true"/>
+    <component id="o2yvwcyimb" name="comBannerMenu.xml" path="/win/" exported="true"/>
   </resources>
   <publish name="main"/>
 </packageDescription>

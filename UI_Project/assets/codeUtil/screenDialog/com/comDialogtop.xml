@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1016,372">
+  <displayList>
+    <image id="n1_rbr2" name="n1" src="cdnd1d" fileName="screenDialog/img/GongGao_img_1.png" xy="508,186" pivot="0.5,0.5" anchor="true" size="1016,372"/>
+    <text id="n4_cdnd" name="tfContent" xy="104,94" size="808,180" fontSize="48" color="#fdd342" align="center" vAlign="middle" autoSize="none" text="鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~鸭冲~">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n2_rbr2" name="comNextArrow" src="cdnd1e" fileName="screenDialog/com/comNextArrow.xml" xy="483,305"/>
+  </displayList>
+  <transition name="in">
+    <item time="0" type="Alpha" target="n1_rbr2" tween="true" startValue="0" endValue="1" duration="12"/>
+    <item time="0" type="Alpha" target="n2_rbr2" tween="true" startValue="0" endValue="1" duration="24"/>
+    <item time="0" type="Alpha" target="n4_cdnd" value="1"/>
+    <item time="0" type="Size" target="n1_rbr2" tween="true" startValue="0,372" endValue="1016,372" duration="24" ease="Back.Out"/>
+    <item time="0" type="Visible" target="n4_cdnd" value="false"/>
+    <item time="24" type="Visible" target="n4_cdnd" label="end" value="true"/>
+  </transition>
+  <transition name="out">
+    <item time="0" type="Alpha" target="n4_cdnd" tween="true" startValue="1" endValue="0" duration="6"/>
+    <item time="0" type="Size" target="n1_rbr2" tween="true" startValue="1016,372" endValue="0,372" duration="18" ease="Back.In"/>
+    <item time="12" type="Alpha" target="n1_rbr2" tween="true" startValue="1" endValue="0" duration="6"/>
+    <item time="12" type="Alpha" target="n2_rbr2" tween="true" startValue="1" endValue="0" duration="6"/>
+  </transition>
+</component>

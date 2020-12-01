@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1252,637" overflow="hidden" scroll="both">
-  <controller name="ctrlType" pages="0,normal,1,loading,2,loadError" selected="0"/>
+  <controller name="ctrlType" pages="0,normal,1,loading,2,loadError" selected="1"/>
   <displayList>
     <loader id="n0_ulbx" name="imgLad" xy="0,0" size="1252,637" align="center" vAlign="middle" fill="scale">
       <gearDisplay controller="ctrlType" pages="0"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <image id="n2_lkrg" name="n2" src="umtscyiih" fileName="img/img_cm_load.png" pkg="te1gxawo" xy="626,318" pivot="0.5,0.5" anchor="true">
+    <image id="n2_lkrg" name="n2" src="umtscyiih" fileName="img/img_cm_load.png" pkg="te1gxawo" xy="570,262" pivot="0.5,0.5">
       <gearDisplay controller="ctrlType" pages="1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
     </image>
     <image id="n3_lkrg" name="n3" src="mdgnr" fileName="teachPlan/img/failloading.png" xy="426,144">
       <gearDisplay controller="ctrlType" pages="2"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
     </image>
   </displayList>
   <transition name="t0" autoPlay="true" autoPlayRepeat="-1">

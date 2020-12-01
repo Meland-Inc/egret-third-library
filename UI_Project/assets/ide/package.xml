@@ -132,7 +132,7 @@
     <component id="lctb3y" name="btnOtion.xml" path="/codeVew/oldBtn/"/>
     <image id="lctb3z" name="btn_code_3.png" path="/codeVew/oldImg/" scale="9grid" scale9grid="12,12,24,24"/>
     <image id="lctb40" name="btn_code_2.png" path="/codeVew/oldImg/" scale="9grid" scale9grid="12,12,24,24"/>
-    <component id="lctb41" name="ComCodeCalculator.xml" path="/codeVew/oldCom/"/>
+    <component id="lctb41" name="ComCodeCalculator.xml" path="/codeVew/oldCom/" exported="true"/>
     <image id="lctb42" name="img_code_2.png" path="/codeVew/oldImg/" scale="9grid" scale9grid="20,20,40,40"/>
     <image id="lctb43" name="img_code_4.png" path="/codeVew/oldImg/" scale="9grid" scale9grid="12,16,21,20"/>
     <image id="lctb44" name="btn_code_a4.png" path="/codeVew/oldImg/"/>
@@ -736,6 +736,7 @@
     <component id="lj25wcyipd" name="Component2.xml" path="/codeVew/img/operateBubble/"/>
     <image id="lj25wcyipf" name="icon_qipao_22.png" path="/codeVew/img/operateBubble/"/>
     <component id="8u9jwcyipg" name="ComOperateBubbleItemIcon.xml" path="/codeVew/com/"/>
+    <component id="vi48wcyioe" name="comAWSceneDisplay.xml" path="/attribute/widgets/" exported="true"/>
     <component id="rkx8wcyiph" name="ComOperateBubbleCursor.xml" path="/codeVew/com/"/>
     <image id="rkx8wcyipi" name="shoushi01.png" path="/codeVew/img/operateBubble/"/>
     <image id="rkx8wcyipj" name="shoushi02.png" path="/codeVew/img/operateBubble/"/>
@@ -793,17 +794,17 @@
     <component id="sn4a13564xd" name="ComTimelineScrollBar.xml" path="/timeline/com/"/>
     <component id="iyxw13564xe" name="ComTimelineTrackCode.xml" path="/timeline/com/" exported="true"/>
     <component id="ntcg13564xf" name="ComTimelineTrackCodePreview.xml" path="/timeline/com/" exported="true"/>
-    <component id="j2cr13564xg" name="btnTeacherResetArealtem.xml" path="/lessonCenter/btn/"/>
-    <image id="j2cr13564xh" name="bg_biaotilan_0.png" path="/lessonCenter/img/"/>
-    <image id="j2cr13564xi" name="bg_biaotilan_1.png" path="/lessonCenter/img/"/>
-    <image id="j2cr13564xj" name="bg_biaotilan_3.png" path="/lessonCenter/img/"/>
-    <image id="j2cr13564xk" name="bg_biaotilan_4.png" path="/lessonCenter/img/"/>
-    <image id="j2cr13564xl" name="bg_biaotilan_5.png" path="/lessonCenter/img/"/>
-    <image id="j2cr13564xm" name="icon_chongzhi.png" path="/lessonCenter/img/"/>
-    <image id="j2cr13564xn" name="icon_chongzhi_1.png" path="/lessonCenter/img/"/>
-    <image id="j2cr13564xo" name="icon_gou.png" path="/lessonCenter/img/"/>
-    <image id="j2cr13564xp" name="icon_gou_1.png" path="/lessonCenter/img/"/>
-    <image id="j2cr13564xq" name="上课模板效果图.png" path="/lessonCenter/img/"/>
+    <component id="kahf13564xa" name="btnTeacherResetArealtem.xml" path="/lessonCenter/btn/"/>
+    <image id="kahf13564xb" name="bg_biaotilan_0.png" path="/lessonCenter/img/" scale="9grid" scale9grid="16,11,32,22"/>
+    <image id="kahf13564xc" name="bg_biaotilan_1.png" path="/lessonCenter/img/" scale="9grid" scale9grid="16,11,32,22"/>
+    <image id="kahf13564xd" name="bg_biaotilan_3.png" path="/lessonCenter/img/" scale="9grid" scale9grid="16,11,32,22"/>
+    <image id="kahf13564xe" name="bg_biaotilan_4.png" path="/lessonCenter/img/" scale="9grid" scale9grid="16,11,32,22"/>
+    <image id="kahf13564xf" name="上课模板效果图.png" path="/lessonCenter/img/"/>
+    <image id="kahf13564xg" name="icon_chongzhi.png" path="/lessonCenter/img/"/>
+    <image id="kahf13564xh" name="icon_chongzhi_1.png" path="/lessonCenter/img/"/>
+    <image id="kahf13564xi" name="icon_gou.png" path="/lessonCenter/img/"/>
+    <image id="kahf13564xj" name="bg_biaotilan_5.png" path="/lessonCenter/img/" scale="9grid" scale9grid="16,11,32,22"/>
+    <image id="kahf13564xk" name="icon_gou_1.png" path="/lessonCenter/img/"/>
     <component id="goe213564xr" name="ToolTipTimelineTrackMenu.xml" path="/timeline/com/" exported="true"/>
     <component id="goe213564xs" name="BtnTimelineMenu.xml" path="/timeline/com/"/>
     <component id="j5gc13564xt" name="ComTimelineCtnr.xml" path="/timeline/com/" exported="true"/>
@@ -819,6 +820,13 @@
     <component id="nc8013564y4" name="ComTimelineArgEntity.xml" path="/timeline/com/ComTimelineArg/" exported="true"/>
     <component id="nc8013564y5" name="ComTimelineArgPos.xml" path="/timeline/com/ComTimelineArg/" exported="true"/>
     <component id="nc8013564y6" name="ComTimelineArgText.xml" path="/timeline/com/ComTimelineArg/" exported="true"/>
+    <image id="twn213564xa" name="img_code_font.png" path="/codeVew/oldImg/"/>
+    <component id="rv7w13564xl" name="ComBuildPreviewMobile.xml" path="/ideCommon/com/" exported="true"/>
+    <image id="rv7w13564xm" name="btn_build_cancel.png" path="/ideCommon/img/"/>
+    <image id="rv7w13564xn" name="btn_build_confirm.png" path="/ideCommon/img/"/>
+    <image id="rv7w13564xo" name="btn_build_delete.png" path="/ideCommon/img/"/>
+    <image id="rv7w13564xp" name="btn_build_move.png" path="/ideCommon/img/"/>
+    <image id="rv7w13564xq" name="btn_build_rotate.png" path="/ideCommon/img/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>

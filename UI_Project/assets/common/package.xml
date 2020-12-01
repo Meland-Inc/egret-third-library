@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="te1gxawo" jpegQuality="80" compressPNG="true">
+<packageDescription id="te1gxawo">
   <resources>
     <component id="qn8o0" name="WinConfirm.xml" path="/old/win/" exported="true"/>
     <image id="qn8o8" name="img_main_chatbubble_1.png" path="/old/newImg/" exported="true" scale="9grid" scale9grid="25,10,50,20"/>
@@ -129,7 +129,6 @@
     <image id="gpm0i43" name="icon_main_thirst.png" path="/old/newImg/" exported="true"/>
     <component id="gpm0i4g" name="btnFix.xml" path="/btn/" exported="true"/>
     <component id="gpm0i4h" name="btnScale.xml" path="/btn/" exported="true"/>
-    <image id="pgixi4i" name="bg_game1.png" path="/old/newImg/" exported="true"/>
     <image id="pgixi4j" name="btn_cm_add.png" path="/old/newImg/" exported="true"/>
     <image id="pgixi4k" name="btn_cm_circle_1.png" path="/old/newImg/" exported="true"/>
     <image id="pgixi4l" name="btn_cm_gray_1.png" path="/old/newImg/" exported="true"/>
@@ -446,7 +445,6 @@
     <image id="ui82cyie8" name="img_cm_dtgj_5.png" path="/old/imgB/" exported="true"/>
     <image id="ui82cyie9" name="img_cm_dtgj_7.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="22,4,44,8"/>
     <image id="ui82cyiea" name="img_cm_dtgj_6.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="22,4,44,8"/>
-    <image id="ui82cyieb" name="img_cm_dtgj_2.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="142,67,284,134"/>
     <image id="jq63cyiec" name="img_cm_jak_1.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="19,20,131,142"/>
     <image id="v3m6cyied" name="btn_cm_tj_1.png" path="/old/imgB/" exported="true"/>
     <image id="v3m6cyiee" name="img_cm_kjan_1.png" path="/old/imgB/" exported="true"/>
@@ -530,7 +528,6 @@
     <image id="7sltcyigl" name="img_cm_zzs.png" path="/old/imgB/" exported="true"/>
     <image id="fe8jcyigm" name="img_cm_ztj_2.png" path="/old/imgB/" exported="true"/>
     <image id="fe8jcyign" name="img_cm_ztj_1.png" path="/old/imgB/" exported="true"/>
-    <image id="rtqqcyigo" name="img_cm_xsgl_sd.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="54,11,108,22"/>
     <component id="p7l0cyigp" name="comInput.xml" path="/old/com/" exported="true"/>
     <image id="wp52cyigp" name="img_cm_lk_3.png" path="/old/imgB/" exported="true"/>
     <image id="wp52cyigq" name="img_cm_dk_3.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="23,24,46,48"/>
@@ -660,6 +657,13 @@
     <image id="lgy9cyik7" name="icon_dialog_12.png" path="/img/" exported="true" scale="9grid" scale9grid="30,30,272,131"/>
     <image id="ftyz7n" name="bg_chaifen_white.png" path="/img/" exported="true" scale="9grid" scale9grid="35,28,70,56"/>
     <component id="oabxcyik8" name="ComCursorDelete.xml" path="/win/" exported="true"/>
+    <component id="twn2cyik9" name="ComMobileInput.xml" path="/com/" exported="true"/>
+    <component id="twn2cyika" name="WinMobileInput.xml" path="/win/" exported="true"/>
+    <component id="rtvd8" name="MouseEffectComboBoxItem.xml" path="/comboBox/mouseEffectComboBox/"/>
+    <component id="rtvd9" name="MouseEffectComboBoxPopup.xml" path="/comboBox/mouseEffectComboBox/"/>
+    <component id="rtvda" name="MouseEffectComboBox.xml" path="/comboBox/mouseEffectComboBox/" exported="true"/>
+    <component id="e7m0cyikb" name="CommonSubtitles.xml" path="/com/" exported="true"/>
+    <image id="e7m0cyikd" name="img_cm_black.png" path="/img/color/" scale="9grid" scale9grid="2,2,4,4"/>
   </resources>
   <publish name="common">
     <atlas name="默认" index="0"/>

@@ -25,7 +25,7 @@
       <relation target="n49_xba6" sidePair="left-right"/>
       <relation target="n59_mlr1" sidePair="bottomext-bottom"/>
     </image>
-    <text id="n26_izy9" name="textAniName" xy="88,16" size="141,28" group="n60_mlr1" input="true" prompt="动画名" maxLength="16" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" text="一二三四五六七">
+    <text id="n26_izy9" name="textAniName" xy="88,16" size="141,28" group="n60_mlr1" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" text="一二三四五六七" input="true" prompt="动画名" maxLength="16">
       <relation target="n48_xba6" sidePair="right-left"/>
       <relation target="n59_mlr1" sidePair="middle-middle"/>
     </text>
@@ -43,9 +43,8 @@
       <gearXY controller="ctrlCombine" pages="0,1" values="30,6|91,6"/>
       <relation target="n59_mlr1" sidePair="middle-middle"/>
     </image>
-    <graph id="n21_fidk" name="icon" xy="36,12" pivot="0.5,0.5" size="36,36" group="n60_mlr1" type="rect" lineSize="2" fillColor="#ff999999">
-      <relation target="n48_xba6" sidePair="center-center,middle-middle"/>
-      <relation target="n48_xba6" sidePair="width-width,height-height"/>
+    <graph id="n21_fidk" name="icon" xy="36,12" pivot="0.5,0.5" size="36,36" group="n60_mlr1" lineSize="2" fillColor="#00000000">
+      <relation target="n48_xba6" sidePair="center-center,middle-middle,width-width,height-height"/>
     </graph>
     <component id="n55_oiot" name="btnCopy" src="oiot7u" fileName="attribute/btn/btnCommon.xml" xy="289,16" size="28,28" group="n60_mlr1">
       <gearDisplay controller="ctrlSelect" pages="1,2"/>
