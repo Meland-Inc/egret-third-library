@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="985,113" opaque="false" designImage="ui://thvmj7voqr0m4cyij5" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlUserStatus" exported="true" pages="0,student,1,teacher,2,fakeStudent,3,fakeTeacher" selected="2"/>
-  <controller name="ctrlLockScreen" pages="0,false,1,true" selected="0"/>
-  <controller name="ctrlGodView" exported="true" pages="0,false,1,true" selected="0"/>
+  <controller name="ctrlUserStatus" exported="true" pages="0,student,1,teacher,2,fakeStudent,3,fakeTeacher" selected="3"/>
+  <controller name="ctrlLockScreen" pages="0,false,1,true" selected="1"/>
+  <controller name="ctrlGodView" exported="true" pages="0,false,1,true" selected="1"/>
   <displayList>
-    <component id="n17_swki" name="btnChangeViewMode" src="psruh" fileName="com/btnMainMenu.xml" xy="492,13">
+    <component id="n17_swki" name="btnChangeViewMode" src="psruh" fileName="com/btnMainMenu.xml" xy="375,0">
       <gearDisplay controller="ctrlUserStatus" pages="1,3"/>
       <gearXY controller="ctrlUserStatus" pages="0,1,2,3" values="624,13|492,0|492,13|375,0"/>
       <gearText controller="ctrlGodView" pages="0" values="查看模式" default="演示模式"/>
       <gearIcon controller="ctrlGodView" pages="0" values="ui://oyity675lmgfq" default="ui://oyity675ocgc4e0"/>
       <relation target="" sidePair="right-right"/>
-      <Button title="查看模式" icon="ui://oyity675lmgfq"/>
+      <Button title="演示模式" icon="ui://oyity675ocgc4e0"/>
     </component>
-    <component id="n4_psru" name="btnTeachPlan" src="psruh" fileName="com/btnMainMenu.xml" xy="617,0" customData="top">
+    <component id="n4_psru" name="btnTeachPlan" src="psruh" fileName="com/btnMainMenu.xml" xy="500,0" customData="top">
       <gearDisplay controller="ctrlUserStatus" pages=""/>
       <gearXY controller="ctrlUserStatus" pages="0,1,2,3" values="742,0|617,0|617,0|500,0"/>
       <relation target="" sidePair="right-right"/>
       <Button title="教案" icon="ui://oyity675a1nd6"/>
     </component>
-    <component id="n3_psru" name="btnUpload" src="psruh" fileName="com/btnMainMenu.xml" xy="742,0" customData="top">
-      <gearXY controller="ctrlUserStatus" pages="0,1,2,3" values="867,0|742,0|742,0|625,0"/>
+    <component id="n3_psru" name="btnUpload" src="psruh" fileName="com/btnMainMenu.xml" xy="624,0" customData="top">
+      <gearXY controller="ctrlUserStatus" pages="0,1,2,3" values="867,0|742,0|742,0|624,0"/>
       <relation target="" sidePair="right-right"/>
       <Button title="提交" icon="ui://oyity675a1ndd"/>
     </component>
-    <component id="n2_psru" name="btnShowStudentMgr" src="psruh" fileName="com/btnMainMenu.xml" xy="742,14" customData="top">
+    <component id="n2_psru" name="btnShowStudentMgr" src="psruh" fileName="com/btnMainMenu.xml" xy="750,1" customData="top">
       <gearDisplay controller="ctrlUserStatus" pages="1,3"/>
       <gearXY controller="ctrlUserStatus" pages="0,1,2,3" values="742,14|867,1|742,14|750,1"/>
       <relation target="" sidePair="right-right"/>
@@ -34,24 +34,24 @@
       <relation target="" sidePair="right-right"/>
       <Button title="模板创作" icon="ui://oyity675a1nd8"/>
     </component>
-    <component id="n29_kpw9" name="btnManorRestore" src="psruh" fileName="com/btnMainMenu.xml" xy="367,0" visible="false">
+    <component id="n29_kpw9" name="btnManorRestore" src="psruh" fileName="com/btnMainMenu.xml" xy="0,0" visible="false">
       <gearXY controller="ctrlUserStatus" pages="0,1,2,3" values="617,0|242,0|367,0|0,0"/>
       <relation target="" sidePair="right-right"/>
       <Button title="重置领地" icon="ui://oyity675kpw94dz"/>
     </component>
-    <component id="n31_p8fz" name="btnCdkeyExchange" src="psruh" fileName="com/btnMainMenu.xml" xy="492,0">
+    <component id="n31_p8fz" name="btnCdkeyExchange" src="psruh" fileName="com/btnMainMenu.xml" xy="250,0">
       <gearDisplay controller="ctrlUserStatus" pages="2,3"/>
       <gearXY controller="ctrlUserStatus" pages="0,1,2,3" values="617,13|367,0|492,0|250,0"/>
       <relation target="" sidePair="right-right"/>
       <Button title="兑换课程" icon="ui://oyity675p8fzwcyim1"/>
     </component>
-    <component id="n39_uu9l" name="btnLockScreenMode" src="psruh" fileName="com/btnMainMenu.xml" xy="367,13" visible="false">
+    <component id="n39_uu9l" name="btnLockScreenMode" src="psruh" fileName="com/btnMainMenu.xml" xy="125,0" visible="false">
       <gearDisplay controller="ctrlUserStatus" pages="1,3"/>
       <gearXY controller="ctrlUserStatus" pages="0,1,2,3" values="617,13|367,0|367,13|125,0"/>
       <gearText controller="ctrlLockScreen" pages="1" values="解锁" default="锁屏"/>
       <gearIcon controller="ctrlLockScreen" pages="1" values="ui://oyity675pbxdwcyim5" default="ui://oyity675pbxdwcyim4"/>
       <relation target="" sidePair="right-right"/>
-      <Button title="锁屏" icon="ui://oyity675pbxdwcyim4"/>
+      <Button title="解锁" icon="ui://oyity675pbxdwcyim5"/>
     </component>
   </displayList>
   <transition name="showAnim"/>

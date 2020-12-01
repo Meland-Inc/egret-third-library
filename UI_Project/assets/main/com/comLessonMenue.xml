@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="985,113" opaque="false" designImage="ui://thvmj7voqr0m4cyij5" designImageAlpha="0" designImageLayer="1">
+  <displayList>
+    <list id="n40_ljm0" name="lstMenu" xy="1,0" size="984,114" layout="flow_hz" colGap="15" defaultItem="ui://oyity675psruh" align="right" foldInvisibleItems="true">
+      <item title="课程兑换" icon="ui://oyity675p8fzwcyim1" name="btnCdkeyExchange"/>
+      <item title="重置领地" icon="ui://oyity675kpw94dz" name="btnManorRestore"/>
+      <item url="ui://oyity675ljm0wcyimg" title="锁屏" icon="ui://oyity675pbxdwcyim4" name="btnLockScreenMode"/>
+      <item url="ui://oyity675ljm0wcyimf" title="查看模式" icon="ui://oyity675lmgfq" name="btnChangeViewMode"/>
+      <item title="指引" icon="ui://oyity675a1nd6" name="btnTeachPlan"/>
+      <item title="下课" icon="ui://oyity675a1ndd" name="btnClassOver"/>
+      <item title="学生管理" icon="ui://oyity675a1nde" name="btnShowStudentMgr"/>
+    </list>
+  </displayList>
+  <transition name="showAnim"/>
+  <transition name="hideAnim"/>
+</component>
