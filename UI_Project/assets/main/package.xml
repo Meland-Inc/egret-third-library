@@ -505,7 +505,7 @@
     <image id="cnxcwcyim0" name="icon_main_jz_1.png" path="/img/" exported="true"/>
     <image id="fn8f4e1" name="img_main_jzd.png" path="/img/"/>
     <component id="fn8fcyijz" name="btnIde.xml" path="/btn/" exported="true"/>
-    <image id="fn8f4e2" name="img_main_jzd.png" path="/btn/"/>
+    <image id="fn8f4e2" name="img_main_jzd1.png" path="/img/"/>
     <image id="p8fzwcyim1" name="icon_mainV_xsgl.png" path="/img/"/>
     <image id="axawwcyim2" name="icon_mainV_xqzm.png" path="/img/"/>
     <image id="axawwcyim3" name="icon_mainV_replay.png" path="/img/"/>
@@ -521,6 +521,13 @@
     <component id="ljm0wcyime" name="comLessonMenueOld.xml" path="/com/" exported="true"/>
     <component id="ljm0wcyimf" name="btnMainMenuGodView.xml" path="/com/" exported="true"/>
     <component id="ljm0wcyimg" name="btnMainMenuLockScreen.xml" path="/com/" exported="true"/>
+    <component id="q0aswcyimh" name="btnMainShortcut.xml" path="/btn/"/>
+    <image id="q0aswcyimi" name="img_bag_shortcutBg.png" path="/img/"/>
+    <image id="q0aswcyimj" name="img_bag_shortcutSelected.png" path="/img/"/>
+    <image id="q0aswcyimk" name="img_zhuangbei_02.png" path="/img/"/>
+    <image id="q0aswcyiml" name="img_bac_pzk_4.png" path="/img/"/>
+    <image id="q0aswcyimm" name="icon_zhuangbei_03.png" path="/img/"/>
+    <image id="q0aswcyimn" name="icon_zhuangbei_01.png" path="/img/"/>
   </resources>
   <publish name="main"/>
 </packageDescription>

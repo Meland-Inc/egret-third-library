@@ -13,7 +13,7 @@
     <image id="y8ju9" name="img_bac_pzk_1.png" path="/img/"/>
     <image id="y8jua" name="img_bac_pzk_2.png" path="/img/"/>
     <image id="y8jub" name="img_bac_pzk_3.png" path="/img/"/>
-    <image id="y8juc" name="img_bac_pzk_4.png" path="/img/" exported="true"/>
+    <image id="y8juc" name="img_bac_pzk_4.png" path="/img/"/>
     <component id="oiqdh" name="EquipItem.xml" path="/com/"/>
     <component id="tvlfi" name="btnBagType.xml" path="/btn/" exported="true"/>
     <component id="e8s1j" name="BagItem.xml" path="/com/"/>
@@ -158,11 +158,11 @@
     <image id="lt7w7x" name="bg_zhuangbei_03.png" path="/img/repaire/"/>
     <image id="lt7w7y" name="btn_zhuangbei_01.png" path="/img/repaire/"/>
     <image id="lt7w7z" name="btn_zhuangbei_02.png" path="/img/repaire/"/>
-    <image id="lt7w80" name="icon_zhuangbei_01.png" path="/img/repaire/" exported="true"/>
+    <image id="lt7w80" name="icon_zhuangbei_01.png" path="/img/repaire/"/>
     <image id="lt7w81" name="icon_zhuangbei_02.png" path="/img/repaire/"/>
     <image id="lt7w82" name="icon_zhuangbei_03.png" path="/img/repaire/"/>
     <image id="lt7w83" name="img_zhuangbei_01.png" path="/img/repaire/"/>
-    <image id="lt7w84" name="img_zhuangbei_02.png" path="/img/repaire/" exported="true"/>
+    <image id="lt7w84" name="img_zhuangbei_02.png" path="/img/repaire/"/>
     <image id="lt7w85" name="img_zhuangbei_04.png" path="/img/repaire/" scale="9grid" scale9grid="21,1,42,2"/>
     <image id="lt7w86" name="img_zhuangbei_05.png" path="/img/repaire/"/>
     <image id="lt7w89" name="bg_zhuangbei_01.png" path="/img/repaire/"/>
@@ -207,7 +207,7 @@
     <image id="eezlag" name="img_bag_sliderBg.png" path="/jmBag/scroll/" scale="9grid" scale9grid="2,28,4,56"/>
     <component id="eezlah" name="ScrollBar1_grip.xml" path="/jmBag/scroll/"/>
     <image id="eezlai" name="btn_bag_slider.png" path="/jmBag/scroll/"/>
-    <component id="eezlaj" name="JmBagShortcutItem.xml" path="/jmBag/btn/" exported="true"/>
+    <component id="eezlaj" name="JmBagShortcutItem.xml" path="/jmBag/btn/"/>
     <image id="eezlak" name="img_bag_shortcutBg.png" path="/jmBag/img/"/>
     <image id="eezlam" name="img_bag_shortcutSelected.png" path="/jmBag/img/"/>
     <component id="eezlan" name="btnBagTagBak.xml" path="/jmBag/btn/"/>
