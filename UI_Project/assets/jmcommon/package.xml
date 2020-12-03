@@ -142,6 +142,10 @@
     <image id="nxno64" name="iOSBegin.png" path="/img/"/>
     <component id="nxno65" name="ComIOSBegin.xml" path="/com/" exported="true"/>
     <image id="m17166" name="stageCapabilityExam.png" path="/img/"/>
+    <component id="ua1r67" name="ComJmLoading.xml" path="/com/" exported="true"/>
+    <image id="ua1r6c" name="jimmyLogo.png" path="/img/"/>
+    <image id="ua1r6f" name="img_mt_bg1.png" path="/img/loading/" scale="9grid" scale9grid="11,10,22,20"/>
+    <image id="ua1r6g" name="img_mt_loading.png" path="/img/loading/" scale="tile"/>
   </resources>
   <publish name="jmcommon" path="..\..\egret-planet\resource\jimmyAssets\jmFairyGui" packageCount="2"/>
 </packageDescription>
