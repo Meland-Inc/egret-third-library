@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="87,104" pivot="0.5,1" anchor="true">
+<component size="87,104" pivot="0.5,1" anchor="true" opaque="false">
   <controller name="ctrlState" pages="0,select,1,display" selected="0"/>
   <controller name="ctrlMapGridType" pages="0,rhomb,1,rectangle" selected="0"/>
   <displayList>
@@ -10,12 +10,12 @@
     <image id="n3_k3cq" name="bgImage" src="lctb6f" fileName="codeVew/oldImg/icon_code_tck_8.png" xy="0,1" pivot="0,1" size="87,30">
       <relation target="n2_cfaf" sidePair="width-width,height-height"/>
     </image>
-    <component id="n1_cfaf" name="n1" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="13,40" size="64,64">
+    <component id="n1_cfaf" name="n1" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="13,40" size="64,64" touchable="false">
       <gearDisplay controller="ctrlState" pages="0"/>
       <relation target="n3_k3cq" sidePair="center-center"/>
       <Button icon="ui://ti9jag5tps3owcyijn"/>
     </component>
-    <component id="n4_ps3o" name="n4" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="12,40" size="64,64">
+    <component id="n4_ps3o" name="n4" src="q8x4n" fileName="btn/btnFixNoEffect.xml" pkg="te1gxawo" xy="12,40" size="64,64" touchable="false">
       <gearDisplay controller="ctrlState" pages="1"/>
       <relation target="n3_k3cq" sidePair="center-center"/>
       <Button icon="ui://ti9jag5tps3owcyijo"/>
