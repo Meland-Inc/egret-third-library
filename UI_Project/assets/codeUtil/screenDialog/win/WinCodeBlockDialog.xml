@@ -12,13 +12,13 @@
     <action type="change_page" fromPage="" toPage="3" objectId="n2_j5jv" controller="ctrlType" targetPage="0"/>
   </controller>
   <displayList>
-    <image id="n45_bsmw" name="imgBg" src="bsmw21" fileName="screenDialog/img/bg_dialog_black1.png" xy="0,0" size="1920,1080" alpha="0.4">
+    <image id="n45_bsmw" name="imgBg" src="bsmw21" fileName="screenDialog/img/bg_dialog_black.png" xy="1,0" size="1920,1080" alpha="0.4">
       <gearDisplay controller="ctrlType" pages="3,2"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
     <component id="n25_vn3s" name="btnForceClose" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1768,15" size="136,53">
       <relation target="" sidePair="right-right,top-top"/>
-      <Button title="强制关闭" titleColor="#ffffff" titleFontSize="20" icon="ui://te1gxawoqylxcyijf" sound="ui://nyy10939vn3sj"/>
+      <Button title="强制关闭" titleColor="#ffffff" titleFontSize="20" icon="ui://te1gxawoqylxcyijf" sound="ui://fknoioovh3k014" volume="100"/>
     </component>
     <graph id="n31_lkrg" name="gphLadContainer" xy="394,24" size="1130,635" touchable="false" type="rect" lineSize="0" fillColor="#00ffffff">
       <gearDisplay controller="ctrlType" pages="3,2"/>

@@ -2,7 +2,7 @@
 <component size="1170,816" designImage="ui://48p8y12ai065a9" designImageOffsetX="-373" designImageOffsetY="-149" designImageAlpha="0">
   <controller name="ctrlRoleInfo" pages="1,hide,0,show" selected="0"/>
   <displayList>
-    <image id="n87_i065" name="imgBg" src="i0659d" fileName="jmBag/img_bag_roleBg.png" xy="21,181" size="417,474" group="n92_i065"/>
+    <image id="n87_i065" name="imgBg" src="i0659d" fileName="jmBag/img/img_bag_roleBg.png" xy="21,181" size="417,474" group="n92_i065"/>
     <list id="n88_i065" name="lstEquipItem" xy="48,209" size="82,421" group="n92_i065" lineGap="5" defaultItem="ui://48p8y12aoiqdh">
       <item icon="ui://48p8y12ai065ab"/>
       <item icon="ui://48p8y12ai065ae"/>
@@ -13,12 +13,12 @@
     <component id="n89_i065" name="comAvatarCtnr" src="tvlfcyih7" fileName="com/ComEmpty.xml" pkg="te1gxawo" xy="270,598" size="0,0" group="n92_i065" scale="2,2">
       <gearDisplay controller="ctrlRoleInfo" pages="0"/>
     </component>
-    <image id="n90_i065" name="titleBg" src="i0659h" fileName="jmBag/img_bag_nameBg.png" xy="157,206" group="n92_i065"/>
+    <image id="n90_i065" name="titleBg" src="i0659h" fileName="jmBag/img/img_bag_nameBg.png" xy="157,206" group="n92_i065"/>
     <text id="n91_i065" name="tfRoleName" xy="191,217" size="172,44" group="n92_i065" fontSize="32" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="支持五个字"/>
     <group id="n92_i065" name="grpAvatar" xy="21,181" size="417,474" advanced="true">
       <gearXY controller="ctrlRoleInfo" pages="0" values="-169,181" default="21,181" tween="true" duration=".25"/>
     </group>
-    <component id="n4_l46w" name="comBg" src="i0659i" fileName="jmBag/comBg.xml" xy="3,0" size="1170,816" group="n85_i065"/>
+    <component id="n4_l46w" name="comBg" src="i0659i" fileName="jmBag/com/comBg.xml" xy="3,0" size="1170,816" group="n85_i065"/>
     <list id="n93_i065" name="lstShortcut" xy="226,147" size="880,92" group="n85_i065" layout="flow_hz" colGap="6" defaultItem="ui://48p8y12aeezlaj">
       <item/>
       <item/>
@@ -29,7 +29,7 @@
       <item/>
       <item/>
     </list>
-    <image id="n16_l46w" name="imgListBg" src="i0659v" fileName="jmBag/img_bag_lstBg.png" xy="226,243" size="854,455" group="n85_i065"/>
+    <image id="n16_l46w" name="imgListBg" src="i0659v" fileName="jmBag/img/img_bag_lstBg.png" xy="226,243" size="854,455" group="n85_i065"/>
     <list id="n68_qrx3" name="lstBagItem" xy="232,249" size="875,443" group="n85_i065" layout="flow_hz" overflow="scroll" scrollBarFlags="64" scrollBarRes="ui://48p8y12aeezlaf," lineGap="10" colGap="5" defaultItem="ui://48p8y12ai0659w">
       <item/>
       <item/>
@@ -93,13 +93,15 @@
       <item/>
       <item/>
     </list>
-    <component id="n80_vjvo" name="btnRoleInfo" src="i0659z" fileName="jmBag/btnRoleInfo.xml" xy="103,137" size="115,97" group="n85_i065"/>
-    <component id="n96_eezl" name="btnClose" src="i065a2" fileName="jmBag/btnCommon.xml" xy="1064,67" size="48,47" group="n85_i065">
-      <Button icon="ui://48p8y12aeezlas"/>
+    <component id="n80_vjvo" name="btnRoleInfo" src="i0659z" fileName="jmBag/btn/btnRoleInfo.xml" xy="103,137" size="115,97" group="n85_i065">
+      <Button sound="ui://fknoioovh3k014" volume="100"/>
     </component>
-    <image id="n20_l46w" name="imgSearchBg" src="i065a3" fileName="jmBag/img_bag_inputBg.png" xy="441,711" size="301,67" group="n84_i065"/>
-    <image id="n21_l46w" name="imgSearch" src="i065a4" fileName="jmBag/img_bag_search.png" xy="461,731" size="32,32" group="n84_i065"/>
-    <image id="n22_l46w" name="imgSearUnderline" src="i065a5" fileName="jmBag/img_bag_line.png" xy="502,763" size="215,4" group="n84_i065"/>
+    <component id="n96_eezl" name="btnClose" src="i065a2" fileName="jmBag/btn/btnCommon.xml" xy="1064,67" size="48,47" group="n85_i065">
+      <Button icon="ui://48p8y12aeezlas" sound="ui://fknoioovh3k014" volume="100"/>
+    </component>
+    <image id="n20_l46w" name="imgSearchBg" src="i065a3" fileName="jmBag/img/img_bag_inputBg.png" xy="441,711" size="301,67" group="n84_i065"/>
+    <image id="n21_l46w" name="imgSearch" src="i065a4" fileName="jmBag/img/img_bag_search.png" xy="461,731" size="32,32" group="n84_i065"/>
+    <image id="n22_l46w" name="imgSearUnderline" src="i065a5" fileName="jmBag/img/img_bag_line.png" xy="502,763" size="215,4" group="n84_i065"/>
     <text id="n72_qrx3" name="tfSearch" xy="502,721" size="215,46" group="n84_i065" fontSize="34" color="#6b4a2f" vAlign="middle" autoSize="none" singleLine="true" text="" input="true" prompt="[color=#AFAFC1]搜索[/color]" maxLength="20"/>
     <group id="n84_i065" name="grpSearch" xy="441,711" size="301,67" group="n85_i065"/>
     <list id="n86_i065" name="lstTag" xy="55,231" size="138,458" group="n85_i065" layout="flow_hz" lineGap="13" defaultItem="ui://48p8y12ae7m0bt" align="right" vAlign="bottom">
@@ -110,8 +112,8 @@
       <item title="装饰" name="decoration"/>
       <item title="其他" name="other"/>
     </list>
-    <component id="n94_i065" name="btnArrange" src="i065a2" fileName="jmBag/btnCommon.xml" xy="881,713" size="147,65" group="n85_i065">
-      <Button title="整理" icon="ui://48p8y12aeezlar"/>
+    <component id="n94_i065" name="btnArrange" src="i065a2" fileName="jmBag/btn/btnCommon.xml" xy="881,713" size="147,65" group="n85_i065">
+      <Button title="整理" icon="ui://48p8y12aeezlar" sound="ui://fknoioovh3k014" volume="100"/>
     </component>
     <group id="n85_i065" name="root" xy="3,0" size="1170,816" advanced="true">
       <gearXY controller="ctrlRoleInfo" pages="0" values="183,0" default="3,0" tween="true" duration=".25"/>
