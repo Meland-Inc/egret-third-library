@@ -4,9 +4,11 @@
     <action type="play_transition" fromPage="" toPage="3" transition="click"/>
   </controller>
   <displayList>
-    <component id="n2_rbr2" name="title" src="cdnd17" fileName="screenDialog/btn/spOption.xml" xy="136,31" pivot="0.5,0.5" anchor="true" touchable="false"/>
+    <component id="n2_rbr2" name="title" src="cdnd17" fileName="screenDialog/btn/spOption.xml" xy="136,31" pivot="0.5,0.5" anchor="true" touchable="false">
+      <Button sound="ui://fknoioovh3k014" volume="100"/>
+    </component>
   </displayList>
-  <Button/>
+  <Button sound="ui://fknoioovh3k014"/>
   <transition name="hover-in">
     <item time="0" type="Scale" target="n2_rbr2" tween="true" startValue="1,1" endValue="0.9,0.9" duration="6"/>
   </transition>

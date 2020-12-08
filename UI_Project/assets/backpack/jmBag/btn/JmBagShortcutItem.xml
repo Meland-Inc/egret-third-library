@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="80,80" extention="Button">
-  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="1">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0">
     <action type="play_transition" fromPage="0" toPage="2" transition="u-o"/>
     <action type="play_transition" fromPage="2" toPage="3" transition="o-s"/>
     <action type="play_transition" fromPage="1" toPage="0" transition="d-u"/>
@@ -33,7 +33,7 @@
       <gearDisplay controller="ctrlStatus" pages="2"/>
     </image>
   </displayList>
-  <Button mode="Radio"/>
+  <Button mode="Radio" sound="ui://fknoioovh3k014"/>
   <transition name="u-o">
     <item time="0" type="Scale" target="n1_qrx3" value="1,1"/>
   </transition>
