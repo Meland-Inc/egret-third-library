@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="95,45" designImage="ui://thvmj7vo110fe4cyik9" designImageOffsetX="-156" designImageOffsetY="-587">
+  <controller name="ctrlText" pages="0,show,1,hide" selected="0"/>
   <displayList>
-    <text id="n6_capr" name="tfName" xy="0,13" pivot="0.5,0.5" anchor="true" size="100,26" fontSize="18" color="#9b9fab" align="center" autoSize="none" text="5.25min">
+    <text id="n6_capr" name="tfName" xy="0,18" pivot="0.5,0.5" anchor="true" size="100,26" fontSize="18" color="#9b9fab" align="center" autoSize="none" bold="true" text="5.25min">
       <relation target="n0_capr" sidePair="left-left"/>
     </text>
-    <image id="n0_capr" name="n0" src="110fewcyiqi" fileName="timeline/img/img_code_dy_22.png" xy="0,24" size="2,21" group="n8_iyxw"/>
-    <image id="n1_capr" name="n1" src="110fewcyiqj" fileName="timeline/img/img_code_dy_23.png" xy="19,36" size="2,9" group="n8_iyxw"/>
-    <image id="n3_capr" name="n3" src="110fewcyiqj" fileName="timeline/img/img_code_dy_23.png" xy="38,36" size="2,9" group="n8_iyxw"/>
-    <image id="n4_capr" name="n4" src="110fewcyiqj" fileName="timeline/img/img_code_dy_23.png" xy="57,36" size="2,9" group="n8_iyxw"/>
-    <image id="n5_capr" name="n5" src="110fewcyiqj" fileName="timeline/img/img_code_dy_23.png" xy="76,36" size="2,9" group="n8_iyxw"/>
-    <image id="n9_iyxw" name="n9" src="110fewcyiqj" fileName="timeline/img/img_code_dy_23.png" xy="95,36" size="2,9" group="n8_iyxw" alpha="0"/>
-    <group id="n8_iyxw" name="grpDegree" xy="0,24" size="97,21" advanced="true" layout="hz" colGap="17" excludeInvisibles="true"/>
+    <image id="n0_capr" name="n0" src="110fewcyiqi" fileName="timeline/img/img_code_dy_22.png" xy="0,31" size="2,14" group="n8_iyxw">
+      <gearXY controller="ctrlText" pages="0,1" values="0,31|0,36"/>
+      <gearSize controller="ctrlText" pages="0,1" values="2,14,1,1|2,9,1,1"/>
+    </image>
+    <image id="n1_capr" name="n1" src="110fewcyiqj" fileName="timeline/img/img_code_dy_23.png" xy="19,38" size="2,7" group="n8_iyxw"/>
+    <image id="n3_capr" name="n3" src="110fewcyiqj" fileName="timeline/img/img_code_dy_23.png" xy="38,38" size="2,7" group="n8_iyxw"/>
+    <image id="n4_capr" name="n4" src="110fewcyiqj" fileName="timeline/img/img_code_dy_23.png" xy="57,38" size="2,7" group="n8_iyxw"/>
+    <image id="n5_capr" name="n5" src="110fewcyiqj" fileName="timeline/img/img_code_dy_23.png" xy="76,38" size="2,7" group="n8_iyxw"/>
+    <image id="n9_iyxw" name="n9" src="110fewcyiqj" fileName="timeline/img/img_code_dy_23.png" xy="95,38" size="2,7" group="n8_iyxw" alpha="0"/>
+    <group id="n8_iyxw" name="grpDegree" xy="0,31" size="97,14" advanced="true" layout="hz" colGap="17" excludeInvisibles="true"/>
   </displayList>
   <relation target="n8_iyxw" sidePair="width-width"/>
 </component>
