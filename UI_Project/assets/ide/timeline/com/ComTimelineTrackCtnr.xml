@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1600,46" overflow="hidden" designImage="ui://thvmj7vo110fe4cyik9" designImageOffsetX="-155" designImageOffsetY="-673" designImageAlpha="0">
-  <controller name="ctrlType" pages="0,normal,1,edit" selected="0"/>
+  <controller name="ctrlType" pages="0,normal,1,edit" selected="1"/>
   <displayList>
     <loader id="n3_110fe" name="n3" xy="0,0" size="1600,46" url="ui://ti9jag5t110fewcyiqq" fill="scaleFree">
-      <gearSize controller="ctrlType" pages="0,1" values="1600,46,1,1|1600,44,1,1"/>
+      <gearSize controller="ctrlType" pages="0,1" values="1600,46,1,1|1600,46,1,1"/>
       <relation target="" sidePair="width-width"/>
     </loader>
-    <component id="n4_y8iq" name="comCodeCtnr" src="j5gc13564xt" fileName="timeline/com/ComTimelineCtnr.xml" xy="0,0" size="1600,44">
+    <component id="n4_y8iq" name="comCodeCtnr" src="j5gc13564xt" fileName="timeline/com/ComTimelineCtnr.xml" xy="0,0" size="1600,46">
+      <relation target="" sidePair="width-width"/>
+    </component>
+    <component id="n5_y8iq" name="comAttrCtnr" src="p3v813564y7" fileName="timeline/com/ComTimelineAttrCtnr.xml" xy="0,48" size="1600,0">
       <relation target="" sidePair="width-width"/>
     </component>
     <image id="n6_dvd0" name="imgArrow" src="l1a26r" fileName="timeline/img/img_code_dy_13.png" xy="10,57" pivot="0.5,0.5" anchor="true" size="20,18" aspect="true">
@@ -15,15 +18,12 @@
     <loader id="n7_dvd0" name="ladClose" xy="0,75" size="24,24" url="ui://ti9jag5t110fewcyiq2">
       <gearDisplay controller="ctrlType" pages="1"/>
     </loader>
-    <component id="n5_y8iq" name="comAttrCtnr" src="j5gc13564xt" fileName="timeline/com/ComTimelineCtnr.xml" xy="0,48" size="1600,0">
-      <relation target="" sidePair="width-width"/>
-    </component>
   </displayList>
   <relation target="n5_y8iq" sidePair="bottomext-bottom"/>
   <transition name="transEdit">
-    <item time="0" type="Size" target="n5_y8iq" tween="true" startValue="1600,0" endValue="1600,72" duration="9"/>
+    <item time="0" type="Size" target="n5_y8iq" tween="true" startValue="1600,0" endValue="1600,72" duration="6"/>
   </transition>
   <transition name="transNormal">
-    <item time="0" type="Size" target="n5_y8iq" tween="true" startValue="1600,72" endValue="1600,0" duration="10"/>
+    <item time="0" type="Size" target="n5_y8iq" tween="true" startValue="1600,72" endValue="1600,0" duration="6"/>
   </transition>
 </component>
