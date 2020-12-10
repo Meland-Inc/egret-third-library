@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="200,46" overflow="hidden">
+  <controller name="ctrlSelected" pages="2,false,0,true" selected="1"/>
   <displayList>
     <loader id="n0_iyxw" name="ladBg" xy="0,0" size="200,46" url="ui://ti9jag5t110fewcyiqf" fill="scaleFree">
       <relation target="" sidePair="width-width"/>
@@ -17,5 +18,9 @@
     <graph id="n4_j5gc" name="graphRightScale" xy="190,0" size="10,46" type="rect" lineSize="0" fillColor="#00ffffff">
       <relation target="" sidePair="right-right"/>
     </graph>
+    <image id="n10_kp6i" name="n10" src="kp6i13564y8" fileName="timeline/img/img_code_dy_33.png" xy="0,0" size="200,46">
+      <gearDisplay controller="ctrlSelected" pages="0"/>
+      <relation target="" sidePair="width-width"/>
+    </image>
   </displayList>
 </component>
