@@ -8,7 +8,7 @@
     <text id="n5_f6uq" name="tfLoadingTips" xy="790,666" size="340,32" group="n10_x4vi" fontSize="22" color="#0f4cb3" align="center" vAlign="middle" autoSize="none" text="加载中..."/>
     <text id="n9_x4vi" name="tfPercent" xy="933,717" size="53,28" group="n10_x4vi" fontSize="24" color="#0f4cb3" align="center" vAlign="middle" vars="true" text="{percent=30}%"/>
     <image id="n14_ua1r" name="imgPercentBG" src="ua1r6f" fileName="img/loading/img_mt_bg1.png" xy="749,757" size="422,40" group="n10_x4vi"/>
-    <image id="n15_ua1r" name="imgPercent" src="ua1r6g" fileName="img/loading/img_mt_loading.png" xy="752,765" size="415,25" group="n10_x4vi"/>
+    <image id="n15_ua1r" name="imgPercent" src="ua1r6g" fileName="img/loading/img_mt_loading.png" xy="755,765" size="415,25" group="n10_x4vi"/>
     <group id="n10_x4vi" name="root" xy="557,283" size="806,514" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
