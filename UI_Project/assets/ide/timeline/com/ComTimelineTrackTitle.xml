@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="202,44" designImage="ui://thvmj7vo110fe4cyik9" designImageOffsetX="-9" designImageOffsetY="-1000" designImageAlpha="0">
+  <displayList>
+    <image id="n0_110fe" name="n0" src="110fewcyiqp" fileName="timeline/img/img_code_dy_3.png" xy="0,0" size="202,44"/>
+    <text id="n1_110fe" name="tfName" xy="0,0" size="202,44" fontSize="20" color="#bfc2cc" align="center" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="&quot;声音1&quot;" input="true" maxLength="7"/>
+    <component id="n2_vos8" name="comAttrCtnr" src="j5gc13564xt" fileName="timeline/com/ComTimelineCtnr.xml" xy="0,44" size="202,0" touchable="false">
+      <relation target="" sidePair="width-width"/>
+    </component>
+  </displayList>
+  <relation target="n2_vos8" sidePair="bottomext-bottom"/>
+  <transition name="transEdit">
+    <item time="0" type="Size" target="n2_vos8" tween="true" startValue="202,0" endValue="-,72" duration="6"/>
+  </transition>
+  <transition name="transNormal">
+    <item time="0" type="Size" target="n2_vos8" tween="true" startValue="202,72" endValue="202,0" duration="6"/>
+  </transition>
+</component>

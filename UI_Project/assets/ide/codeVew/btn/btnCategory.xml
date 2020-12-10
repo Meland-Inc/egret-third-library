@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="115,56" extention="Button">
-  <controller name="button" pages="0,up,1,down" selected="0"/>
-  <controller name="c1" exported="true" pages="0,event,1,control,2,prop,3,function,4,move,5,detect,6,operator,7,variable,8,diyfunction,10,userInterface,9,custom" selected="1"/>
+  <controller name="button" pages="0,up,1,down" selected="1"/>
+  <controller name="c1" exported="true" pages="0,event,1,control,2,prop,3,function,4,move,5,detect,6,operator,7,variable,8,diyfunction,10,userInterface,11,movie,9,custom" selected="10"/>
   <controller name="ctrlOver" pages="2,up,4,over" selected="0"/>
   <displayList>
     <loader id="n7_vlmw" name="overBG" xy="0,0" size="115,56" touchable="false" url="ui://ti9jag5tvlmwwcyila">
       <gearDisplay controller="ctrlOver" pages="4"/>
     </loader>
-    <loader id="n6_hbwi" name="bg" xy="115,56" pivot="1,1" anchor="true" size="4,56" touchable="false" url="ui://ti9jag5ts45wv" fill="scaleFree">
+    <loader id="n6_hbwi" name="bg" xy="115,56" pivot="1,1" anchor="true" size="115,56" touchable="false" url="ui://ti9jag5t110fewcyipr" fill="scaleFree">
       <gearSize controller="button" pages="0,1" values="4,56,1,1|115,56,1,1" ease="Linear" duration="0.05"/>
-      <gearIcon controller="c1" pages="0,1,2,3,4,5,6,7,8,10,9" values="ui://ti9jag5ts45wx|ui://ti9jag5ts45wv|ui://ti9jag5ts45wz|ui://ti9jag5ts45wp|ui://ti9jag5ts45w11|ui://ti9jag5ts45wt|ui://ti9jag5ts45w13|ui://ti9jag5ts45wn|ui://ti9jag5ts45wr|ui://ti9jag5tf0vfwcyijt|ui://ti9jag5ts45w15"/>
+      <gearIcon controller="c1" pages="0,1,2,3,4,5,6,7,8,10,11,9" values="ui://ti9jag5ts45wx|ui://ti9jag5ts45wv|ui://ti9jag5ts45wz|ui://ti9jag5ts45wp|ui://ti9jag5ts45w11|ui://ti9jag5ts45wt|ui://ti9jag5ts45w13|ui://ti9jag5ts45wn|ui://ti9jag5ts45wr|ui://ti9jag5tf0vfwcyijt|ui://ti9jag5t110fewcyipr|ui://ti9jag5ts45w15"/>
     </loader>
-    <loader id="n0_hoex" name="icon" xy="7,12" size="32,32" touchable="false" url="ui://ti9jag5ts45w4" align="center" vAlign="middle">
-      <gearIcon controller="button" pages="0" values="ui://ti9jag5ts45w4" default="ui://ti9jag5ts45w2c"/>
+    <loader id="n0_hoex" name="icon" xy="7,12" size="32,32" touchable="false" url="ui://ti9jag5ts45w2c" align="center" vAlign="middle">
+      <gearIcon controller="button" pages="0" values="ui://ti9jag5t110fewcyipq" default="ui://ti9jag5ts45w2c"/>
     </loader>
-    <text id="n1_hbwi" name="title" xy="36,17" size="74,24" fontSize="20" color="#333333" align="center" vAlign="middle" autoSize="none" text="自定义">
+    <text id="n1_hbwi" name="title" xy="36,17" size="74,24" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="自定义">
       <gearColor controller="button" pages="0,1" values="#333333,#000000|#ffffff,#000000"/>
     </text>
   </displayList>

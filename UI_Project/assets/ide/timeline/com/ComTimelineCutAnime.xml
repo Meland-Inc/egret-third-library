@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="202,21" designImage="ui://thvmj7vo110fe4cyik9" designImageOffsetX="-5" designImageOffsetY="-496">
+  <displayList>
+    <image id="n0_110fe" name="n0" src="110fewcyiqc" fileName="timeline/img/img_code_dy_17.png" xy="0,20" pivot="0.07,0" scale="1,-1" rotation="-10"/>
+    <image id="n1_110fe" name="n1" src="110fewcyiqc" fileName="timeline/img/img_code_dy_17.png" xy="0,19"/>
+  </displayList>
+  <transition name="transPlay">
+    <item time="0" type="Rotation" target="n0_110fe" tween="true" startValue="-10" endValue="-25" duration="3"/>
+    <item time="3" type="Rotation" target="n0_110fe" tween="true" startValue="-25" endValue="0" duration="4" ease="Back.InOut"/>
+  </transition>
+  <transition name="transStop">
+    <item time="0" type="Rotation" target="n0_110fe" tween="true" startValue="0" endValue="-10" duration="7" ease="Back.InOut"/>
+  </transition>
+</component>
