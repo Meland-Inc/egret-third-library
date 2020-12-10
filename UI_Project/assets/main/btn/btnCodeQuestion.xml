@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="141,39" pivot="0.5,0.5" extention="Button" designImageLayer="1">
-  <controller name="button" pages="0,up,1,down" selected="1"/>
+  <controller name="button" pages="0,up,1,down" selected="0"/>
   <displayList>
     <image id="n2_rvlj" name="bg" src="w79twcyim2" fileName="img/icon_dialog_15.png" xy="0,0"/>
     <text id="n1_j5jv" name="title" xy="16,4" pivot="0.5,0.5" size="105,31" fontSize="18" align="center" vAlign="middle" autoSize="none" singleLine="true" text="selection"/>
   </displayList>
-  <Button downEffect="scale" downEffectValue="0.90"/>
+  <Button sound="ui://fknoioovh3k014" downEffect="scale" downEffectValue=".9"/>
 </component>

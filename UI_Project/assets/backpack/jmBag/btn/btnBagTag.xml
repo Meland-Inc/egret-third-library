@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="100,62" extention="Button">
-  <controller name="button" pages="2,up,3,down,4,over,5,selectedOver" selected="3"/>
+  <controller name="button" pages="2,up,3,down,4,over,5,selectedOver" selected="0"/>
   <displayList>
-    <loader id="n0_wl3m" name="icon" xy="40,32" pivot="0.5,0.5" anchor="true" size="100,62" group="n3_e7m0" alpha="0" touchable="false" url="ui://48p8y12aeezlap" align="center" vAlign="middle">
+    <loader id="n0_wl3m" name="icon" xy="50,31" pivot="0.5,0.5" anchor="true" size="100,62" group="n3_e7m0" touchable="false" url="ui://48p8y12aeezlap" align="center" vAlign="middle">
       <gearLook controller="button" pages="3,5" values="0,0,0,0|0,0,0,0" default="1,0,0,0"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
-    <loader id="n1_wl3m" name="select" xy="40,31" pivot="0.5,0.5" anchor="true" size="100,62" group="n3_e7m0" scale="1.1,1.1" touchable="false" url="ui://48p8y12aeezlao" align="center" vAlign="middle">
+    <loader id="n1_wl3m" name="select" xy="50,30" pivot="0.5,0.5" anchor="true" size="100,62" group="n3_e7m0" alpha="0" touchable="false" url="ui://48p8y12aeezlao" align="center" vAlign="middle">
       <gearSize controller="button" pages="3,5" values="100,62,1.1,1.1|100,62,1.1,1.1" default="100,62,1,1" tween="true" duration=".2"/>
       <gearLook controller="button" pages="3,5" values="1,0,0,0|1,0,0,0" default="0,0,0,0"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
-    <text id="n2_wl3m" name="title" xy="40,32" pivot="0.5,0.5" anchor="true" size="60,39" group="n3_e7m0" fontSize="28" color="#ffffff" align="center" vAlign="middle" text="全部">
+    <text id="n2_wl3m" name="title" xy="50,31" pivot="0.5,0.5" anchor="true" size="60,39" group="n3_e7m0" fontSize="28" color="#afafc1" align="center" vAlign="middle" text="全部">
       <gearColor controller="button" pages="3,5" values="#ffffff,#000000|#ffffff,#000000" default="#afafc1,#000000"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <group id="n3_e7m0" name="root" xy="-10,0" size="100,63" advanced="true">
+    <group id="n3_e7m0" name="root" xy="0,-1" size="100,63" advanced="true">
       <gearXY controller="button" pages="2,4,5" values="0,-1|-10,-1|-10,0" default="0,0" tween="true"/>
     </group>
   </displayList>
-  <Button mode="Radio"/>
+  <Button mode="Radio" sound="ui://fknoioovh3k014"/>
   <customProperty target="select" propertyId="1"/>
 </component>
