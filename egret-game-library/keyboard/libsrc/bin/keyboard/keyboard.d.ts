@@ -109,15 +109,21 @@ declare class KeyBoard extends egret.EventDispatcher {
     static keyArrow: string;
     static DownArrow: string;
     static RightArrow: string;
+    static shieldingHotKey: string[];
     private keyValue;
     constructor();
-    private init();
-    private handlekeydown(e);
-    private handlekeyup(e);
-    private checkInput(key);
-    private removeByKey(key);
+    private init;
+    private handlekeydown;
+    private handlekeyup;
+    private checkInput;
+    private removeByKey;
     /**
      * 判断data字符串数组中是否包含某个字符串
      */
     isContain(data: any, keyCode: any): boolean;
+    private checkShieldingHotKey;
+    /**
+     * 设置屏蔽浏览器的热键
+     */
+    static setShieldingHotKey(tKeyList: string[]): void;
 }

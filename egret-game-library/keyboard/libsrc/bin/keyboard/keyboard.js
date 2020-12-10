@@ -1,14 +1,20 @@
 var __reflect = (this && this.__reflect) || function (p, c, t) {
     p.__class__ = c, t ? t.push(c) : t = [c], p.__types__ = p.__types__ ? t.concat(p.__types__) : t;
 };
-var __extends = this && this.__extends || function __extends(t, e) { 
- function r() { 
- this.constructor = t;
-}
-for (var i in e) e.hasOwnProperty(i) && (t[i] = e[i]);
-r.prototype = e.prototype, t.prototype = new r();
-};
-var KeyBoard = (function (_super) {
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    }
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var KeyBoard = /** @class */ (function (_super) {
     __extends(KeyBoard, _super);
     function KeyBoard() {
         var _this = _super.call(this) || this;
@@ -128,17 +134,18 @@ var KeyBoard = (function (_super) {
                 //console.log(self.inputs.length)
                 self.dispatchEventWith(KeyBoard.onkeydown, true, self.inputs, true);
             }
+            if (self.checkShieldingHotKey(e)) {
+                return false;
+            }
         };
         document.onkeyup = function (event) {
             var e = event || window.event || arguments.callee.caller.arguments[0];
             self.handlekeyup(e);
-            if (self.inputs.length > 0) {
-                self.dispatchEventWith(KeyBoard.onkeyup, true, self.inputs, true);
-            }
+            self.dispatchEventWith(KeyBoard.onkeyup, true, self.inputs, true);
         };
-        document.onmousedown = function (event) {
-            self.inputs = [];
-        };
+        // document.onmousedown = function (event) {
+        // 	self.inputs = [];
+        // }
     };
     //处理键盘按下对应keycode
     KeyBoard.prototype.handlekeydown = function (e) {
@@ -187,6 +194,27 @@ var KeyBoard = (function (_super) {
             }
         }
         return isContain;
+    };
+    //检测屏蔽热键
+    KeyBoard.prototype.checkShieldingHotKey = function (e) {
+        var key = "";
+        for (var item in this.keyValue) {
+            if (parseInt(item) == e.keyCode) {
+                key = this.keyValue[item];
+            }
+        }
+        for (var i = 0; i < KeyBoard.shieldingHotKey.length; i++) {
+            if (KeyBoard.shieldingHotKey[i] == key) {
+                return true;
+            }
+        }
+        return false;
+    };
+    /**
+     * 设置屏蔽浏览器的热键
+     */
+    KeyBoard.setShieldingHotKey = function (tKeyList) {
+        KeyBoard.shieldingHotKey = tKeyList;
     };
     /**
      * 同一时刻按下多个键：则返回多个键的字符串数组。
@@ -303,6 +331,7 @@ var KeyBoard = (function (_super) {
     KeyBoard.keyArrow = "left";
     KeyBoard.DownArrow = "down";
     KeyBoard.RightArrow = "right";
+    KeyBoard.shieldingHotKey = [];
     return KeyBoard;
 }(egret.EventDispatcher));
 __reflect(KeyBoard.prototype, "KeyBoard");
