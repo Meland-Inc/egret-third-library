@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://0axy98cgtbm25m" designImageAlpha="0" designImageLayer="1" bgColor="#f7f6f2">
   <controller name="ctrlPanel" pages="0,allmap,1,allroom,2,mymap,3,mycollect,7,mappublish" selected="2"/>
-  <controller name="ctrlMode" pages="0,normal,1,lessonCenter" selected="0">
+  <controller name="ctrlMode" pages="0,normal,1,lessonCenter" selected="1">
     <action type="change_page" fromPage="" toPage="0" objectId="n48_azcq" controller="ctrlMode" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n48_azcq" controller="ctrlMode" targetPage="1"/>
     <action type="change_page" fromPage="" toPage="0" objectId="n50_azcq" controller="ctrlMode" targetPage="0"/>
@@ -38,12 +38,12 @@
     </component>
     <component id="n38_v8nf" name="btnCreateMap" src="pw6y9q" fileName="btn/btnScaleCreate.xml" xy="24,10" size="128,58" group="n45_azcq">
       <gearText controller="ctrlMode" pages="1" values="创建课程" default="创建地图"/>
-      <Button title="创建地图" icon="ui://0axy98cgtbm25x"/>
+      <Button title="创建课程" icon="ui://0axy98cgtbm25x"/>
     </component>
-    <component id="n39_v8nf" name="btnAllMap" src="dvog9v" fileName="btn/btnTextSelect.xml" xy="231,12" size="140,58" group="n45_azcq">
+    <component id="n39_v8nf" name="btnAllMap" src="dvog9v" fileName="btn/btnTextSelect.xml" xy="401,12" size="140,58" group="n45_azcq">
       <gearXY controller="ctrlMode" pages="0,1" values="231,12|401,12"/>
       <gearText controller="ctrlMode" pages="1" values="课程中心" default="地图中心"/>
-      <Button title="地图中心" titleFontSize="24" controller="ctrlPanel" page="0"/>
+      <Button title="课程中心" titleFontSize="24" controller="ctrlPanel" page="0"/>
     </component>
     <component id="n40_v8nf" name="btnAllComponent" src="dvog9v" fileName="btn/btnTextSelect.xml" xy="580,12" size="140,58" group="n45_azcq" touchable="false">
       <gearDisplay controller="ctrlMode" pages="0"/>
@@ -80,6 +80,11 @@
     <image id="n62_tbm2" name="n62" src="tbm25u" fileName="img/icon_mt_jiange.png" xy="739,20" group="n45_azcq">
       <gearDisplay controller="ctrlMode" pages="0"/>
     </image>
+    <component id="n67_wy71" name="btnLogout" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1765,13" size="130,51" group="n45_azcq">
+      <gearDisplay controller="ctrlMode" pages="1"/>
+      <relation target="" sidePair="right-right"/>
+      <Button title="退出登录" titleFontSize="22" icon="ui://0axy98cgwy71c8"/>
+    </component>
     <group id="n45_azcq" name="groupTitle" xy="0,0" size="1920,91"/>
   </displayList>
 </component>
