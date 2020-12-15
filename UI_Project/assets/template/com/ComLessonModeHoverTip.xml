@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="76,53">
+  <displayList>
+    <image id="n5_kqno" name="n5" src="kqnocc" fileName="img/icon_hint_frame.png" xy="5,0" size="68,53">
+      <relation target="n1_mzsu" sidePair="width-width"/>
+    </image>
+    <text id="n1_mzsu" name="title" xy="20,13" size="37,29" fontSize="20" color="#936844" vAlign="middle" singleLine="true" text="test"/>
+  </displayList>
+  <relation target="n1_mzsu" sidePair="width-width,height-height"/>
+</component>
