@@ -268,8 +268,8 @@
     <image id="orknbi" name="biaozhu.jpg" path="/img/lessonCenter/"/>
     <image id="orknbj" name="biaozhu2.jpg" path="/img/lessonCenter/"/>
     <image id="orknbk" name="biaozhu3.jpg" path="/img/lessonCenter/"/>
-    <image id="orknbl" name="btn_mt_01.png" path="/img/lessonCenter/"/>
-    <image id="orknbm" name="btn_mt_02.png" path="/img/lessonCenter/"/>
+    <image id="orknbl" name="btn_mt_01.png" path="/img/lessonCenter/" scale="9grid" scale9grid="16,9,32,12"/>
+    <image id="orknbm" name="btn_mt_02.png" path="/img/lessonCenter/" scale="9grid" scale9grid="15,10,90,20"/>
     <image id="orknbn" name="btn_mt_03.png" path="/img/lessonCenter/" scale="9grid" scale9grid="30,10,60,20"/>
     <image id="orknbo" name="icon_mt_01.png" path="/img/lessonCenter/"/>
     <image id="orknbp" name="icon_mt_02.png" path="/img/lessonCenter/"/>
@@ -286,7 +286,13 @@
     <component id="orknc2" name="comCreateLessonRoom.xml" path="/comLesson/"/>
     <component id="orknc3" name="ComLessonRoomCreate.xml" path="/comLesson/" exported="true"/>
     <component id="uu9lc7" name="ComLessonEditGrid.xml" path="/comLesson/" exported="true"/>
-    <image id="wy71c8" name="img_xuanfu_04.png" path="/img/lessonCenter/"/>
+    <component id="kqnoc9" name="ComLessonModeSetting.xml" path="/com/" exported="true"/>
+    <image id="kqnoca" name="9AD3DF95-2CC3-40ac-9F79-4DFAA9F84AFA.png" path="/img/"/>
+    <image id="kqnocb" name="AAC777A1-F588-49b8-B3D8-6C33B9A9121E.png" path="/img/"/>
+    <image id="kqnocc" name="icon_hint_frame.png" path="/img/" scale="9grid" scale9grid="19,21,17,10"/>
+    <image id="kqnocd" name="icon_hint_img.png" path="/img/"/>
+    <component id="kqnocg" name="ComLessonModeHoverTip.xml" path="/com/" exported="true"/>
+    <image id="kqnoch" name="img_xuanfu_04.png" path="/img/lessonCenter/"/>
   </resources>
   <publish name="template"/>
 </packageDescription>
