@@ -7,7 +7,7 @@
     <image id="n21_i6od" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="250,96" size="1460,890" group="n15_pi8y"/>
     <image id="n3_pi8y" name="imgTitleBg" src="oiqdcyih5" fileName="img/img_cm_2.png" pkg="te1gxawo" xy="222,97" group="n15_pi8y"/>
     <text id="n4_pi8y" name="tfTitle" xy="227,108" size="178,38" group="n15_pi8y" fontSize="24" color="#333333" align="center" vAlign="middle" autoSize="none" text="声音素材库"/>
-    <list id="n7_pi8y" name="lstTag" xy="520,104" size="526,48" group="n15_pi8y" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="128" colGap="13" defaultItem="ui://48p8y12atvlfi" selectionController="ctrlTag">
+    <list id="n7_pi8y" name="lstTag" xy="520,104" size="526,48" group="n15_pi8y" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="128" colGap="13" defaultItem="ui://ti9jag5ttvlfi" selectionController="ctrlTag">
       <item title="全部"/>
       <item title="音效"/>
       <item title="音乐"/>
