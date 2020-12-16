@@ -13,10 +13,10 @@
       <Label titleColor="#333333" titleFontSize="24"/>
     </component>
     <component id="n10_qlcu" name="btnSubmit" src="gen82t" fileName="old/btn/btnFixClickArea.xml" xy="254,117" size="106,55" group="n9_j5jv">
-      <Button title="提 交" titleColor="#ffffff" titleFontSize="18" icon="ui://nyy10939o9zcl" sound="ui://fknoioovh3k014"/>
+      <Button title="提 交" titleColor="#ffffff" titleFontSize="18" icon="ui://oyity675o9zcl" sound="ui://fknoioovh3k014"/>
     </component>
     <component id="n47_twn2" name="inpAnswer" src="twn2cyik9" fileName="com/ComMobileInput.xml" pkg="te1gxawo" xy="20,125" size="232,39" group="n9_j5jv">
-      <Label titleColor="#999999" icon="ui://nyy10939o9zck" prompt="[size=24]输入答案[/size]"/>
+      <Label titleColor="#999999" icon="ui://oyity675o9zck" prompt="[size=24]输入答案[/size]"/>
     </component>
     <group id="n9_j5jv" name="grpAnswer" xy="20,117" size="340,55" group="n11_qlcu" advanced="true">
       <gearDisplay controller="ctrlType" pages="2"/>
@@ -49,7 +49,7 @@
     <group id="n11_qlcu" name="root" xy="0,-74" size="582,260" advanced="true">
       <relation target="" sidePair="left-left,top-top"/>
     </group>
-    <image id="n28_pzqf" name="imgDown" src="o9zcj" fileName="screenDialog/img/icon_dialog_4.png" pkg="nyy10939" xy="282,150" size="16,11">
+    <image id="n28_pzqf" name="imgDown" src="o9zcj" fileName="screenDialog/img/icon_dialog_4.png" xy="282,150" size="16,11">
       <gearDisplay controller="ctrlType" pages="1"/>
     </image>
     <list id="n2_j5jv" name="lstSelection" xy="135,40" size="307,111" layout="flow_hz" overflow="scroll" lineGap="20" colGap="24" defaultItem="ui://oyity675gen84x" align="right" vAlign="bottom">
