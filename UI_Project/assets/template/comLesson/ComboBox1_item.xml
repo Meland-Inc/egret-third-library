@@ -2,7 +2,9 @@
 <component size="123,40" extention="Button">
   <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
   <displayList>
-    <text id="n2_orkn" name="title" xy="9,5" size="79,29" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" singleLine="true" text="item"/>
+    <text id="n2_orkn" name="title" xy="9,5" size="79,29" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" singleLine="true" text="item">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
   </displayList>
   <Button mode="Radio"/>
 </component>
