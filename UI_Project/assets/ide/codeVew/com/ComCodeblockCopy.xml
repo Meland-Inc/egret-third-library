@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="130,200" opaque="false">
+<component size="130,120" opaque="false">
   <controller name="copyType" pages="0,copy,1,paste" selected="0"/>
-  <controller name="ctrlPermission" pages="0,normal,1,developer" selected="0"/>
+  <controller name="ctrlPermission" pages="0,normal,1,developer,3,timelineConfig" selected="2"/>
   <displayList>
-    <image id="n8_f08k" name="n8" src="f08kwcyilc" fileName="codeVew/img/img_codeV_xzk_1.png" xy="0,0" size="130,160">
-      <gearSize controller="ctrlPermission" pages="0,1" values="130,160,1,1|130,200,1,1"/>
+    <image id="n8_f08k" name="n8" src="f08kwcyilc" fileName="codeVew/img/img_codeV_xzk_1.png" xy="0,0" size="130,80">
+      <gearSize controller="ctrlPermission" pages="0,1,3" values="130,160,1,1|130,200,1,1|130,80,1,1"/>
     </image>
     <component id="n2_ezty" name="btnCopy" src="f08kwcyilb" fileName="codeVew/btn/btnCodeBlockOperate.xml" xy="0,40" size="130,40" customData="delete">
       <gearDisplay controller="copyType" pages="0"/>
@@ -18,7 +18,7 @@
       <gearDisplay controller="copyType" pages="1"/>
       <Button title="复制全部" titleColor="#000000" titleFontSize="20" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <component id="n5_fgo2" name="btnCleanAll" src="f08kwcyilb" fileName="codeVew/btn/btnCodeBlockOperate.xml" xy="0,160" size="130,40" customData="delete">
+    <component id="n5_fgo2" name="btnCleanAll" src="f08kwcyilb" fileName="codeVew/btn/btnCodeBlockOperate.xml" xy="0,80" size="130,40" customData="delete">
       <gearDisplay controller="copyType" pages="1"/>
       <relation target="" sidePair="bottom-bottom"/>
       <Button title="删除全部" titleColor="#000000" titleFontSize="20" icon="ui://te1gxawooiqdcyih1"/>
@@ -28,6 +28,7 @@
       <Button title="复制并粘贴"/>
     </component>
     <component id="n9_f08k" name="btnComment" src="f08kwcyilb" fileName="codeVew/btn/btnCodeBlockOperate.xml" xy="0,120" size="130,40" customData="delete">
+      <gearDisplay controller="ctrlPermission" pages="0,1"/>
       <Button title="注释" titleColor="#000000" titleFontSize="20"/>
     </component>
     <component id="n10_g9ld" name="btnConfig" src="f08kwcyilb" fileName="codeVew/btn/btnCodeBlockOperate.xml" xy="0,160">
@@ -35,6 +36,7 @@
       <Button title="代码块配置"/>
     </component>
     <component id="n11_h3k0" name="btnCopyAllTab" src="f08kwcyilb" fileName="codeVew/btn/btnCodeBlockOperate.xml" xy="0,80" size="130,40" customData="delete">
+      <gearDisplay controller="ctrlPermission" pages="0,1"/>
       <Button title="复制全部标签" titleColor="#000000" titleFontSize="20"/>
     </component>
   </displayList>
