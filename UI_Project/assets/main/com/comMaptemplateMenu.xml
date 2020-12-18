@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="245,112" opaque="false" designImage="ui://thvmj7voqr0m4cyij5" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlEnterWay" exported="true" pages="0,none,1,edit,3,room,10,explore" selected="3"/>
+  <controller name="ctrlEnterWay" exported="true" pages="0,none,1,edit,3,room,10,explore" selected="1"/>
   <displayList>
     <component id="n19_11584" name="btnBack" src="psruh" fileName="com/btnMainMenu.xml" xy="135,0">
-      <gearDisplay controller="ctrlEnterWay" pages="1,2,3,4"/>
+      <gearDisplay controller="ctrlEnterWay" pages="0,1,3"/>
       <Button title="退出" icon="ui://oyity675xh734dq"/>
     </component>
     <component id="n22_11584" name="btnInvite" src="psruh" fileName="com/btnMainMenu.xml" xy="0,0" customData="top">
