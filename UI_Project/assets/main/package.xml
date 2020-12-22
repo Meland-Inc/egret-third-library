@@ -532,6 +532,15 @@
     <image id="o9zcl" name="icon_dialog_14.png" path="/img/" scale="9grid" scale9grid="20,10,40,20"/>
     <image id="o9zch" name="icon_dialog_2.png" path="/img/" scale="9grid" scale9grid="38,20,40,13"/>
     <image id="o9zcj" name="icon_dialog_4.png" path="/img/"/>
+    <component id="by1swcyin1" name="btnCodeRunStop.xml" path="/btn/temp/"/>
+    <image id="by1swcyin2" name="img_cre_xz_1.png" path="/btn/temp/"/>
+    <image id="by1swcyin3" name="icon_lingdid_01.png" path="/btn/temp/" scale="9grid" scale9grid="11,12,15,11"/>
+    <image id="by1swcyin4" name="icon_lingdid_02.png" path="/btn/temp/"/>
+    <component id="by1swcyin5" name="btnResetCode.xml" path="/btn/temp/"/>
+    <component id="by1swcyin6" name="btnRestartCode.xml" path="/btn/temp/"/>
+    <image id="by1swcyin7" name="icon_cre_cxyx.png" path="/btn/temp/"/>
+    <image id="by1swcyin8" name="img_reset_start.png" path="/btn/temp/"/>
+    <component id="um8pwcyin9" name="TooltipIdeEntrance.xml" path="/tooltip/" exported="true"/>
   </resources>
   <publish name="main"/>
 </packageDescription>
