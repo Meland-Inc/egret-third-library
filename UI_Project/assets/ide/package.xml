@@ -599,7 +599,7 @@
     <image id="ijuiwcyinj" name="icon_bqy_03.png" path="/codeVew/img/codeblockPage/" scale="9grid" scale9grid="15,9,167,18"/>
     <component id="ijuiwcyink" name="ComCodeblockPageBtnEditMenus.xml" path="/codeVew/com/"/>
     <component id="f9zawcyio3" name="btnCodeRunStop.xml" path="/ideCommon/btn/"/>
-    <component id="f9zawcyio4" name="btnRestartCode.xml" path="/ideCommon/btn/"/>
+    <component id="f9zawcyio4" name="btnResetCode.xml" path="/ideCommon/btn/"/>
     <image id="lwk9wcyio5" name="icon_lingdid_02.png" path="/create/img/"/>
     <image id="lwk9wcyio6" name="icon_lingdid_01.png" path="/create/img/" scale="9grid" scale9grid="11,12,15,11"/>
     <component id="g9ldwcyio7" name="ComCodeblockCanUseConfig.xml" path="/codeVew/com/"/>
@@ -830,6 +830,8 @@
     <component id="p3v813564y7" name="ComTimelineAttrCtnr.xml" path="/timeline/com/" exported="true"/>
     <image id="kp6i13564y8" name="img_code_dy_33.png" path="/timeline/img/" scale="9grid" scale9grid="12,10,24,20"/>
     <component id="tvlfi" name="btnBagType.xml" path="/attribute/btn/"/>
+    <image id="by1s13564y9" name="img_reset_start.png" path="/ideCommon/img/"/>
+    <component id="by1s13564yb" name="btnRestartCode.xml" path="/ideCommon/btn/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>
