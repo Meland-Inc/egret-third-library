@@ -119,7 +119,7 @@ export async function publishProject() {
         await spawnExc.runCmd(cmdStr, Global.projPath, null, '发布当前项目错误');
 
         //压缩并且上传最新傻瓜模式客户端
-        if (ModelMgr.versionModel.curEnviron.name === ModelMgr.versionModel.eEnviron.release) {
+        if (ModelMgr.versionModel.curEnviron.name === ModelMgr.versionModel.eEnviron.ready) {
             try {
                 const projPath = `${Global.projPath}/bin-release/web/${releaseVersion}`;
                 //更新傻瓜模式客户端
