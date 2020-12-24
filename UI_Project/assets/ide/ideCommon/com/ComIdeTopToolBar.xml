@@ -44,7 +44,6 @@
     </component>
     <component id="n17_dyk9" name="btnResetCode" src="f9zawcyio4" fileName="ideCommon/btn/btnResetCode.xml" xy="1225,2" group="n34_by1s">
       <relation target="" sidePair="right-right"/>
-      <Button icon="ui://ti9jag5tamogt8j"/>
     </component>
     <component id="n14_dyk9" name="btnEntity" src="dyk9b6" fileName="ideCommon/btn/tBtnIdeTopToolBar.xml" xy="1335,2" group="n34_by1s">
       <relation target="" sidePair="right-right"/>
@@ -83,7 +82,7 @@
     </component>
     <component id="n35_by1s" name="btnRestartCode" src="by1s13564yb" fileName="ideCommon/btn/btnRestartCode.xml" xy="1170,2" group="n34_by1s">
       <relation target="" sidePair="right-right"/>
-      <Button title="重启" icon="ui://ti9jag5tby1s13564y9"/>
+      <Button title="地图重新运行"/>
     </component>
     <group id="n34_by1s" name="grpMenu" xy="785,2" size="657,52"/>
   </displayList>

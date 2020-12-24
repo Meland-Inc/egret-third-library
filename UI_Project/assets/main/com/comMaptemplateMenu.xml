@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1000,114" opaque="false" designImage="ui://thvmj7voqr0m4cyij5" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlEnterWay" exported="true" pages="0,none,1,edit,3,room,10,explore" selected="1"/>
+  <controller name="ctrlEnterWay" exported="true" pages="0,none,1,edit,3,room,10,explore" selected="0"/>
   <displayList>
     <list id="n37_by1s" name="lstMenu" xy="0,0" size="1000,114" layout="flow_hz" colGap="15" defaultItem="ui://oyity675psruh" align="right" foldInvisibleItems="true">
-      <item url="ui://oyity675by1swcyin6" icon="ui://oyity675by1swcyin8" name="btnRestartCode"/>
-      <item url="ui://oyity675by1swcyin5" icon="ui://oyity675by1swcyin7" name="btnResetCode"/>
-      <item url="ui://oyity675by1swcyin1" name="btnStopCode"/>
+      <item title="重运行" icon="ui://oyity675ctb9wcyinb" name="btnRestartCode"/>
       <item title="邀请好友" icon="ui://oyity675xh734dp" name="btnInvite"/>
       <item title="退出" icon="ui://oyity675xh734dq" name="btnBack"/>
       <item title="时间回溯" icon="ui://oyity675axawwcyim3" name="btnReplay"/>
