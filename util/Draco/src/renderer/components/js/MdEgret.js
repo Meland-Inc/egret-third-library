@@ -81,11 +81,13 @@ export async function updateFoolSVN() {
         try {
             const clientExists = await fsExc.exists(Global.foolClientPath);
             if (!clientExists) {
-                Global.toast(`请先下拉foolClient到 ${Global.svnPath} 文件下。`);
-                return
+                await fsExc.makeDir(Global.foolClientPath);
+                await spawnExc.svnCheckout(Global.foolClientSVNUrl, Global.foolClientPath, "", "checkout客户端错误");
+                Global.toast('checkout客户端成功');
+            } else {
+                await spawnExc.svnUpdate(Global.foolClientPath, "", "更新客户端错误");
+                Global.toast('更新客户端成功');
             }
-            await spawnExc.svnUpdate(Global.foolClientPath, "", "更新傻瓜模式客户端错误");
-            Global.toast('更新客户端成功');
             //解压客户端zip
             const foolExists = await fsExc.exists(Global.foolProjectPath);
             if (foolExists) {

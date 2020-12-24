@@ -123,7 +123,17 @@ export async function publishProject() {
             try {
                 const projPath = `${Global.projPath}/bin-release/web/${releaseVersion}`;
                 //更新傻瓜模式客户端
-                await spawnExc.svnUpdate(Global.foolClientPath, "", "更新傻瓜模式客户端错误");
+
+                const clientExists = await fsExc.exists(Global.foolClientPath);
+                if (!clientExists) {
+                    await fsExc.makeDir(Global.foolClientPath);
+                    await spawnExc.svnCheckout(Global.foolClientSVNUrl, Global.foolClientPath, "", "checkout客户端错误");
+                    Global.toast('checkout客户端成功');
+                } else {
+                    await spawnExc.svnUpdate(Global.foolClientPath, "", "更新客户端错误");
+                    Global.toast('更新客户端成功');
+                }
+                
                 const foolExists = await fsExc.exists(Global.foolClientZip);
                 if (foolExists) {
                     await fsExc.delFile(Global.foolClientZip);

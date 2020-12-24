@@ -119,6 +119,33 @@ export function svnUpdate(path, successMsg, errorMsg) {
     });
 }
 
+export function svnCheckout(svnPath, targetPath, successMsg, errorMsg) {
+    return new Promise((resolve, reject) => {
+        console.log(`svn checkout  --> ${svnPath} to ${targetPath}`);
+        let process = spawn("svn", ["checkout", svnPath, targetPath], { cwd: targetPath });
+        process.stdout.on("data", data => {
+            console.log("stdout: " + data);
+        });
+        process.stderr.on("data", data => {
+            console.log("stderr: " + data);
+        });
+
+        process.on("exit", code => {
+            if (code == 0) {
+                if (successMsg) {
+                    Global.toast(successMsg);
+                }
+                resolve();
+            } else {
+                if (errorMsg) {
+                    Global.snack(errorMsg, code, false);
+                }
+                reject();
+            }
+        });
+    });
+}
+
 export function gitPull(path, successMsg, errorMsg) {
     return new Promise((resolve, reject) => {
         console.log(`git pull --> ${path}`);

@@ -140,11 +140,11 @@ export class Global {
     static get cdnUrl() {
         return "http://bg-stage.wkcoding.com";
     }
-
+    
     static get foolClientPath() {
         return Global.svnPath + '/foolClient';
     }
-
+    
     static get foolProjectPath() {
         return Global.svnPath + '/foolClient/html';
     }
@@ -156,8 +156,13 @@ export class Global {
     static get foolClientZip() {
         return Global.svnPath + '/foolClient/zip/client.zip';
     }
+
     static get foolClientUrl() {
         return "http://localhost/?fakeGameMode=lessons&register=1&developMode=1";
+    }
+
+    static get foolClientSVNUrl() {
+        return "http://svn.it.wkcoding.com:13690/bellplanet/foolClient";
     }
     static entityCells = [];
     static objectCells = [];
