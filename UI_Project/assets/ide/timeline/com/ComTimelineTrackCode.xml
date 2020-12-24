@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="200,46" overflow="hidden">
-  <controller name="ctrlSelected" pages="2,false,0,true" selected="1"/>
+  <controller name="ctrlSelected" pages="2,false,0,true" selected="0"/>
   <displayList>
     <loader id="n0_iyxw" name="ladBg" xy="0,0" size="200,46" url="ui://ti9jag5t110fewcyiqf" fill="scaleFree">
       <relation target="" sidePair="width-width"/>
@@ -14,8 +14,8 @@
     <list id="n9_l4fq" name="rightArgCtnr" xy="150,0" size="10,46" layout="row" colGap="5" vAlign="bottom">
       <relation target="n1_iyxw" sidePair="left-right"/>
     </list>
-    <graph id="n3_j5gc" name="graphLeftScale" xy="0,0" size="10,46" type="rect" lineSize="0" fillColor="#00ffffff"/>
-    <graph id="n4_j5gc" name="graphRightScale" xy="190,0" size="10,46" type="rect" lineSize="0" fillColor="#00ffffff">
+    <graph id="n3_j5gc" name="graphInnerLeftDrag" xy="0,0" size="10,46" type="rect" lineSize="0" fillColor="#00ffffff"/>
+    <graph id="n4_j5gc" name="graphInnerRightDrag" xy="190,0" size="10,46" type="rect" lineSize="0" fillColor="#00ffffff">
       <relation target="" sidePair="right-right"/>
     </graph>
     <image id="n10_kp6i" name="n10" src="kp6i13564y8" fileName="timeline/img/img_code_dy_33.png" xy="0,0" size="200,46">
