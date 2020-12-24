@@ -46,14 +46,14 @@ export class Global {
             name: "develop", title: "开发模式", icon: "airplanemode_active",
             protoEnable: true, csvEnable: true, textureEnable: true, mapDataEnable: false, assetEnable: true,
             egretEnable: false, versionEnable: true, lessonEnable: false, appEnable: false, nativeEnable: false,
-            textureGitEnable: false,
+            textureGitEnable: false, foolEnable: false,
             environNames: [ModelMgr.versionModel.eEnviron.alpha]
         },
         {
             name: "product", title: "产品模式", icon: "drive_eta",
             protoEnable: false, csvEnable: true, textureEnable: true, mapDataEnable: false, assetEnable: false,
             egretEnable: true, versionEnable: false, lessonEnable: false, appEnable: false, nativeEnable: true,
-            textureGitEnable: true,
+            textureGitEnable: true, foolEnable: false,
             environNames: [ModelMgr.versionModel.eEnviron.alpha]
 
         },
@@ -61,8 +61,15 @@ export class Global {
             name: "publish", title: "发布模式", icon: "accessible",
             protoEnable: false, csvEnable: false, textureEnable: false, mapDataEnable: false, assetEnable: false,
             egretEnable: false, versionEnable: true, lessonEnable: true, appEnable: true, nativeEnable: true,
-            textureGitEnable: false,
+            textureGitEnable: false, foolEnable: false,
             environNames: [ModelMgr.versionModel.eEnviron.beta, ModelMgr.versionModel.eEnviron.ready, ModelMgr.versionModel.eEnviron.release]
+        },
+        {
+            name: "fool", title: "傻瓜模式", icon: "accessibility",
+            protoEnable: false, csvEnable: false, textureEnable: false, mapDataEnable: false, assetEnable: false,
+            egretEnable: false, versionEnable: false, lessonEnable: false, appEnable: false, nativeEnable: false,
+            textureGitEnable: false, foolEnable: true,
+            environNames: [ModelMgr.versionModel.eEnviron.alpha]
         }
     ]
 
@@ -134,6 +141,24 @@ export class Global {
         return "http://bg-stage.wkcoding.com";
     }
 
+    static get foolClientPath() {
+        return Global.svnPath + '/foolClient';
+    }
+
+    static get foolProjectPath() {
+        return Global.svnPath + '/foolClient/html';
+    }
+
+    static get foolClientZipPath() {
+        return Global.svnPath + '/foolClient/zip';
+    }
+
+    static get foolClientZip() {
+        return Global.svnPath + '/foolClient/zip/client.zip';
+    }
+    static get foolClientUrl() {
+        return "http://localhost/?fakeGameMode=lessons&register=1&developMode=1";
+    }
     static entityCells = [];
     static objectCells = [];
     static variaCells = [];

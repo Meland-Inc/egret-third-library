@@ -8,6 +8,7 @@ import * as ExternalUtil from './ExternalUtil.js';
 import * as CdnUtil from './CdnUtil.js';
 import * as admzip from 'adm-zip';
 import * as archiver from "archiver";
+import * as mdFtp from "./MdFtp.js";
 
 const releaseSuffix = '/bin-release/web/';
 const thmFileSuffix = 'resource/default.thm.json';
@@ -116,6 +117,25 @@ export async function publishProject() {
 
         let cmdStr = 'egret publish --version ' + releaseVersion;
         await spawnExc.runCmd(cmdStr, Global.projPath, null, '发布当前项目错误');
+
+        //压缩并且上传最新傻瓜模式客户端
+        if (ModelMgr.versionModel.curEnviron.name === ModelMgr.versionModel.eEnviron.release) {
+            try {
+                const projPath = `${Global.projPath}/bin-release/web/${releaseVersion}`;
+                //更新傻瓜模式客户端
+                await spawnExc.svnUpdate(Global.foolClientPath, "", "更新傻瓜模式客户端错误");
+                const foolExists = await fsExc.exists(Global.foolClientZip);
+                if (foolExists) {
+                    await fsExc.delFile(Global.foolClientZip);
+                }
+                await mdFtp.zipProject(projPath, Global.foolClientZipPath + "/", "client.zip");
+                await spawnExc.svnAdd(Global.foolClientZipPath, "", "傻瓜模式客户端SVN Add 失败");
+                await spawnExc.svnCommit(Global.foolClientZipPath, `版本：${releaseVersion}上传`, "傻瓜模式客户端SVN版本：${releaseVersion}上传", "傻瓜模式客户端SVN Commit 失败");
+            } catch (e) {
+                console.log("--> 傻瓜模式客户端上传失败", e);
+            }
+        }
+
         ModelMgr.versionModel.setNewVersion(releaseVersion);
         try {
             await uploadSourceMap();

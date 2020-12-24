@@ -1,6 +1,6 @@
 import { Global } from "./Global.js";
 import * as spawnExc from "./SpawnExecute.js";
-
+import * as fsExc from './FsExecute';
 var excProcess;
 
 export async function updateGit() {
@@ -64,4 +64,38 @@ export async function pushGit() {
     } catch (error) {
         Global.snack('推送git错误', error);
     }
+}
+
+export async function egretFoolRun() {
+    let cmdStr = "start nginx";
+    await spawnExc.runCmd(cmdStr, Global.foolClientPath, null, '运行游戏错误');
+}
+
+export async function egretFoolStop() {
+    let cmdStr = "nginx -s stop";
+    await spawnExc.runCmd(cmdStr, Global.foolClientPath, null, '停止游戏错误');
+}
+
+export async function updateFoolSVN() {
+    return new Promise(async (resolve, reject) => {
+        try {
+            const clientExists = await fsExc.exists(Global.foolClientPath);
+            if (!clientExists) {
+                Global.toast(`请先下拉foolClient到 ${Global.svnPath} 文件下。`);
+                return
+            }
+            await spawnExc.svnUpdate(Global.foolClientPath, "", "更新傻瓜模式客户端错误");
+            Global.toast('更新客户端成功');
+            //解压客户端zip
+            const foolExists = await fsExc.exists(Global.foolProjectPath);
+            if (foolExists) {
+                await fsExc.delFolder(Global.foolProjectPath);
+            }
+            fsExc.unzipFile(Global.foolClientZip, Global.foolProjectPath);
+            resolve();
+        } catch (error) {
+            Global.snack('更新客户端失败', error);
+            reject();
+        }
+    });
 }
