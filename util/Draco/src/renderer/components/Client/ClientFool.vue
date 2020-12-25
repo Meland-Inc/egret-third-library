@@ -1,5 +1,14 @@
 <template>
   <mu-container>
+    <mu-select label="服务器类型"  @change="serverChange" filterable v-model="serverConfig" label-float full-width>
+      <mu-option
+        v-for="value, index in serverConfigList"
+        :key="value.name"
+        :label="value.name"
+        :value="value"
+      ></mu-option>
+    </mu-select>
+
     <div class="button-wrapper">
       <mu-button
         v-loading="isCsvLoading"
@@ -19,6 +28,12 @@
         color="blue500"
         @click="updateAsset"
       >更新配置</mu-button>
+      <mu-button
+        v-loading="isServerLoading"
+        data-mu-loading-size="24"
+        color="blue500"
+        @click="updateServer"
+      >重启本地服</mu-button>
     </div>
     <div class="button-wrapper">
       <mu-button full-width color="red" @click="oneForAll">One·for·All</mu-button>
@@ -30,6 +45,7 @@
 import * as mdCsv from "../js/MdCsv.js";
 import * as mdTexture from "../js/MdTexture.js";
 import * as mdAsset from "../js/MdAsset.js";
+import * as mdEgret from "../js/MdEgret.js";
 import { Global } from "../js/Global.js";
 import { ModelMgr } from "../js/model/ModelMgr";
 
@@ -39,6 +55,9 @@ export default {
       isCsvLoading: false,
       isTextureLoading: false,
       isAssetLoading: false,
+      isServerLoading: false,
+      serverConfig:ModelMgr.versionModel.serverConfig,
+      serverConfigList: ModelMgr.versionModel.serverConfigList,
     };
   },
   watch: {},
@@ -97,22 +116,39 @@ export default {
         Global.hideRegionLoading();
       }
     },
-
+    async updateServer() {
+      this.isServerLoading = true;
+      Global.showRegionLoading();
+      try {
+        await mdEgret.updateServer(this.serverConfig);
+        this.isServerLoading = false;
+        Global.hideRegionLoading();
+      } catch (error) {
+        this.isServerLoading = false;
+        Global.hideRegionLoading();
+      }
+    },
     async oneForAll() {
       Global.showLoading();
       try {
         await this.updateCsv();
         await this.updateTexture();
         await this.updateAsset();
+        await this.updateServer();
         Global.hideLoading();
         Global.toast("One·for·All Success");
       } catch (error) {
         Global.hideLoading();
         Global.snack("One·for·All Error", error);
       }
-    }
+    },
+    serverChange() {
+      ModelMgr.versionModel.setServerConfig(this.serverConfig);
+    },
   },
   mounted() {
-  }
+    this.serverConfig = ModelMgr.versionModel.serverConfig || ModelMgr.versionModel.serverConfigList[0];
+  },
+  
 };
 </script>

@@ -157,8 +157,16 @@ export class Global {
         return Global.svnPath + '/foolClient/zip/client.zip';
     }
 
+    static get foolServerPath() {
+        return Global.svnPath + '/foolClient/server';
+    }
+
+    static get foolCsvConfigPath() {
+        return Global.svnPath + '/versionRes/trunk/settings/config/xlsx/server_data/config.data';
+    }
+
     static get foolClientUrl() {
-        return "http://localhost/?fakeGameMode=lessons&register=1&developMode=1";
+        return "http://localhost/?fakeGameMode=lessons&register=1&developMode=1&gameServer=127.0.0.1:3211";
     }
 
     static get foolClientSVNUrl() {

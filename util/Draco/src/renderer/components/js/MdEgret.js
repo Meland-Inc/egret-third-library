@@ -101,3 +101,25 @@ export async function updateFoolSVN() {
         }
     });
 }
+
+export async function updateServer(config) {
+    return new Promise(async (resolve, reject) => {
+        try {
+            const configPath = `${Global.foolServerPath}/config/config.data`;
+            const configExists = await fsExc.exists(configPath);
+            if (configExists) {
+                console.log(`删除服务器配置`);
+                await fsExc.delFile(configPath);
+                console.log(`删除服务器配置成功`);
+            }
+            await fsExc.copyFile(Global.foolCsvConfigPath, `${Global.foolServerPath}/config`, true);
+
+            let cmdStr = `start bian_game.exe -gid=${config.gid} -edit=1 `;
+            spawnExc.runCmd(cmdStr, Global.foolServerPath, null, '服务器错误');
+            resolve();
+        } catch (error) {
+            Global.snack('更新客户端失败', error);
+            reject();
+        }
+    });
+}
