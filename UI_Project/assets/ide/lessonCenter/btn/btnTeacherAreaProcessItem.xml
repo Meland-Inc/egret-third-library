@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="230,71" extention="Button" designImage="ui://ti9jag5t11tcewcyiom" designImageOffsetX="287" designImageOffsetY="-816" designImageAlpha="0">
-  <controller name="button" pages="2,up,3,down,4,over" selected="1"/>
+<component size="233,71" extention="Button" designImage="ui://ti9jag5t11tcewcyiom" designImageOffsetX="287" designImageOffsetY="-816" designImageAlpha="0">
+  <controller name="button" pages="2,up,3,down,4,over" selected="0"/>
   <controller name="ctrlPointType" pages="1,point1,2,point2,3,point3,4,point4,5,point5,6,point6,7,point7,8,point8,9,point9,10,point10" selected="0"/>
   <displayList>
     <loader id="n55_pbxd" name="floorImg" xy="16,18" size="204,44" url="ui://ti9jag5tpbxd13564wn" shrinkOnly="true" autoSize="true"/>
