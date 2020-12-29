@@ -56,8 +56,8 @@ export default {
       isTextureLoading: false,
       isAssetLoading: false,
       isServerLoading: false,
-      serverConfig:ModelMgr.versionModel.serverConfig,
-      serverConfigList: ModelMgr.versionModel.serverConfigList,
+      serverConfig:ModelMgr.serverModel.serverConfig,
+      serverConfigList: ModelMgr.serverModel.serverConfigList,
     };
   },
   watch: {},
@@ -143,11 +143,11 @@ export default {
       }
     },
     serverChange() {
-      ModelMgr.versionModel.setServerConfig(this.serverConfig);
+      ModelMgr.serverModel.setServerConfig(this.serverConfig);
     },
   },
   mounted() {
-    this.serverConfig = ModelMgr.versionModel.serverConfig || ModelMgr.versionModel.serverConfigList[0];
+    this.serverConfig = ModelMgr.serverModel.serverConfig || ModelMgr.serverModel.serverConfigList[0];
   },
   
 };
