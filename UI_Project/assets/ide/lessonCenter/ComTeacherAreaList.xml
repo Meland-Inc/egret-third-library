@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="2,487" designImage="ui://ti9jag5tkahf13564xf" designImageOffsetY="-282" designImageAlpha="0" designImageLayer="1">
+<component size="0,487" designImage="ui://ti9jag5tkahf13564xf" designImageOffsetY="-282" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlAreaList" pages="0,hide,1,show" selected="0"/>
   <displayList>
-    <component id="n12_pbxd" name="n5" src="pbxd13564w3" fileName="lessonCenter/btn/btnTeacherShowHideListArea.xml" xy="0,215" size="33,49">
+    <component id="n12_pbxd" name="n5" src="pbxd13564w3" fileName="lessonCenter/btn/btnTeacherShowHideListArea.xml" xy="-2,215" size="33,49">
       <relation target="" sidePair="middle-middle"/>
       <relation target="n10_fie1" sidePair="left-right"/>
       <Button checked="true" controller="ctrlAreaList" page="0"/>
     </component>
-    <image id="n13_pbxd" name="bg" src="pbxd13564w9" fileName="lessonCenter/img/bg_floor_1.png" xy="-261,0" size="261,487" group="n10_fie1"/>
-    <list id="n6_fie1" name="lstAreaList" xy="-261,7" size="250,472" group="n10_fie1" overflow="scroll" scrollBarFlags="4" scrollBarRes="ui://ti9jag5tso8vt7r," lineGap="4" defaultItem="ui://ti9jag5tpbxd13564w1" scrollItemToViewOnClick="false">
+    <image id="n13_pbxd" name="bg" src="pbxd13564w9" fileName="lessonCenter/img/bg_floor_1.png" xy="-302,0" size="300,487" group="n10_fie1"/>
+    <list id="n6_fie1" name="lstAreaList" xy="-302,7" size="300,472" group="n10_fie1" overflow="scroll" scrollBarFlags="4" scrollBarRes="ui://ti9jag5tso8vt7r," lineGap="4" defaultItem="ui://ti9jag5tpbxd13564w1" scrollItemToViewOnClick="false">
       <relation target="" sidePair="height-height"/>
       <item/>
       <item/>
     </list>
-    <group id="n10_fie1" name="root" xy="-261,0" size="261,487" advanced="true">
-      <gearXY controller="ctrlAreaList" pages="0,1" values="-261,0|0,0" tween="true"/>
+    <group id="n10_fie1" name="root" xy="-302,0" size="300,487" advanced="true">
+      <gearXY controller="ctrlAreaList" pages="0,1" values="-302,0|0,0" tween="true"/>
     </group>
   </displayList>
   <relation target="n10_fie1" sidePair="rightext-right"/>
