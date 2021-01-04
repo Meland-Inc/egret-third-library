@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="48,49">
-  <controller name="ctrlIcon" pages="5,start,0,wait,1,leftTop,2,rightTop,3,leftBottom,4,rightBottom" selected="1"/>
+<component size="50,70">
+  <controller name="ctrlIcon" pages="5,start,0,wait,1,leftTop,2,rightTop,3,leftBottom,4,rightBottom,7,20008,8,20009,9,20010,10,20011,11,20012,12,20013,13,20014" selected="12"/>
   <displayList>
-    <loader id="n1_io1m" name="icon" xy="0,0" size="48,49" url="ui://t573fj5bio1m6e" align="center" vAlign="middle" fill="scale" shrinkOnly="true">
-      <gearIcon controller="ctrlIcon" pages="5,1,2,3,4" values="|ui://t573fj5bio1m6b|ui://t573fj5bio1m6d|ui://t573fj5bio1m6a|ui://t573fj5bio1m6c" default="ui://t573fj5bio1m6e"/>
+    <loader id="n1_io1m" name="icon" xy="1,12" size="48,48" url="ui://t573fj5b8thx73" align="center" vAlign="middle" fill="scale" shrinkOnly="true">
+      <gearIcon controller="ctrlIcon" pages="5,0,1,2,3,4,7,8,9,10,11,12,13" values="|ui://t573fj5beepg72|ui://t573fj5bio1m6b|ui://t573fj5bio1m6d|ui://t573fj5bio1m6a|ui://t573fj5bio1m6c|ui://t573fj5beepg6z|ui://t573fj5beepg6y|ui://t573fj5beepg6x|ui://t573fj5beepg70|ui://t573fj5beepg71|ui://t573fj5beepg71|ui://t573fj5b8thx73"/>
     </loader>
   </displayList>
 </component>
