@@ -7,6 +7,12 @@
         <h3 class="warn-text">更新配置和资源前,请先更新GIT文件</h3>
         <component is="ClientEgret"></component>
       </mu-alert>
+
+      <mu-alert color="warning" v-show="foolEnable">
+        <mu-icon left value="warning"></mu-icon>
+        <h3 class="warn-text">更新配置和资源前,请先更新客户端</h3>
+        <component is="ClientFoolEgret"></component>
+      </mu-alert>
     </div>
     <div class="content">
       <div class="alert-demo-wrapper">
@@ -94,6 +100,12 @@
             <mu-list-item-title>Native</mu-list-item-title>
           </mu-list-item>
 
+           <mu-list-item button :ripple="false" value="ClientFool" v-show="foolEnable">
+            <mu-list-item-action>
+              <mu-icon slot="left" value="computer" />
+            </mu-list-item-action>
+            <mu-list-item-title>Client</mu-list-item-title>
+          </mu-list-item>
           <!-- <mu-list-item button :ripple="false" value="ClientApp" v-show="appEnable">
             <mu-list-item-action>
               <mu-icon slot="left" value="weekend" />
@@ -247,6 +259,7 @@ export default {
       lessonEnable: false,
       nativeEnable: false,
       appEnable: false,
+      foolEnable: false,
 
       appTitle: ""
     };
@@ -361,6 +374,7 @@ export default {
       this.lessonEnable = mode.lessonEnable;
       this.nativeEnable = mode.nativeEnable;
       this.appEnable = mode.appEnable;
+      this.foolEnable = mode.foolEnable;
       this.appTitle = mode.title;
 
       let viewName = "";
@@ -379,6 +393,12 @@ export default {
       }
       this.activeList = viewName;
       this.currentView = viewName;
+      //傻瓜模式工程路径设置
+      if (mode.foolEnable) {
+        Global.projPath = Global.foolProjectPath;
+      } else {
+        Global.projPath = localStorage.getItem('client_project_path');
+      }
     }
   },
   components: {
@@ -391,11 +411,13 @@ export default {
     ClientEgret: require("./Client/ClientEgret"),
     ClientVersion: require("./Client/ClientVersion"),
     ClientLesson: require("./Client/ClientLesson"),
-    ClientNative: require("./Client/ClientNative")
+    ClientNative: require("./Client/ClientNative"),
     // ClientApp: require("./Client/ClientApp")
     // ClientFtp: require("./Client/ClientFtp")
     // ClientModule: require("./backup/ClientModule"),
     // ClientTest: require("./backup/ClientTest")
+    ClientFoolEgret: require("./Client/ClientFoolEgret"),
+    ClientFool: require("./Client/ClientFool"),
   },
   async mounted() {
     ipcRenderer.on("client_show_toast", (event, msg) => {

@@ -528,7 +528,7 @@ async function uploadSingleVersionCdnPatchZip(environ, cdnPatchPath, patchName) 
     });
 }
 
-function zipProject(fromPath, toPath, zipName) {
+export async function zipProject(fromPath, toPath, zipName) {
     return new Promise((resolve, reject) => {
         let output = fs.createWriteStream(toPath + zipName);
         let archive = archiver("zip");

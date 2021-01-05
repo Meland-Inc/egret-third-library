@@ -8,7 +8,7 @@
           </mu-list-item-content>
         </mu-list-item>
 
-        <mu-list-item>
+        <mu-list-item v-show="gitVisible">
           <mu-list-item-content>
             <mu-text-field
               class="text-setting"
@@ -22,7 +22,7 @@
           </mu-list-item-action>
         </mu-list-item>
 
-        <mu-list-item>
+        <mu-list-item v-show="gitVisible">
           <mu-list-item-content>
             <mu-text-field
               class="text-setting"
@@ -50,7 +50,7 @@
           </mu-list-item-action>
         </mu-list-item>
 
-        <mu-list-item>
+        <mu-list-item v-show="gitVisible">
           <mu-list-item-content>
             <mu-text-field
               class="text-setting"
@@ -89,6 +89,7 @@
 <<script>
 const ipcRenderer = require('electron').ipcRenderer;
 const remote = require('electron').remote;
+import { Global } from "../js/Global.js";
 
 export default {
     data () {
@@ -98,6 +99,7 @@ export default {
             client_proto_path:"",
             client_svn_path:"",
             client_client_path:"",
+            gitVisible: true,
         }
     },
     methods: {
@@ -178,6 +180,8 @@ export default {
                 this.client_client_path = path[0];
             }
         });
+
+        this.gitVisible = !Global.mode.foolEnable;
     }
 }
 </script>

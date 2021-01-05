@@ -240,6 +240,10 @@ export class VersionModel {
     }
 
     async initPolicyObj() {
+        let exist = await fsExc.exists(Global.rawResourcePath + "/policyFile.json");
+        if (!exist) {
+            return;
+        }
         let content = await fsExc.readFile(
             Global.rawResourcePath + "/policyFile.json"
         );
