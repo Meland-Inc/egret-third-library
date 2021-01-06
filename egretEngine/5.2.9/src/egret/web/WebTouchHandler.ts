@@ -33,7 +33,7 @@ namespace egret.web {
      * @private
      */
     export class WebTouchHandler extends HashObject {
-        private _curButton:number;
+        private _curButton: number;
         /**
          * @private
          */
@@ -97,6 +97,7 @@ namespace egret.web {
         private addMouseListener(): void {
             this.canvas.addEventListener("mousedown", this.onTouchBegin);
             this.canvas.addEventListener("mousemove", this.onMouseMove);
+            this.canvas.addEventListener("customMousemove", this.onCustomMouseMove);
             this.canvas.addEventListener("mouseup", this.onTouchEnd);
         }
 
@@ -165,6 +166,13 @@ namespace egret.web {
             }
         }
 
+        private onCustomMouseMove = (event: MouseEvent) => {
+            if (!this.dealMouseMoveEvent) {
+                this.dealMouseMoveEvent = true;
+                this.onTouchMove(event);
+            }
+        }
+
         /**
          * @private
          */
@@ -180,7 +188,7 @@ namespace egret.web {
         private onTouchEnd = (event: any): void => {
             let location = this.getLocation(event);
             this.touch.onTouchEnd(location.x, location.y, event.identifier, event.button);
-            if(this._curButton){
+            if (this._curButton) {
                 this._curButton = undefined;
             }
         }
