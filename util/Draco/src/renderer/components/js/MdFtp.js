@@ -831,18 +831,18 @@ export async function applyNativePolicyNum() {
     let environName = ModelMgr.versionModel.curEnviron.name;
     await ExternalUtil.applyNativePolicyNum(newNativePolicyNum, environName);
 
-    let commitCmdStr = `git commit -a -m "${ModelMgr.versionModel.publisher} 发布${ModelMgr.versionModel.curEnviron.name} native包 策略版本号:${newNativePolicyNum}"`;
-    await spawnExc.runCmd(commitCmdStr, Global.clientPath, null, '提交文件错误');
-    console.log(`提交文件成功`);
+    // let commitCmdStr = `git commit -a -m "${ModelMgr.versionModel.publisher} 发布${ModelMgr.versionModel.curEnviron.name} native包 策略版本号:${newNativePolicyNum}"`;
+    // await spawnExc.runCmd(commitCmdStr, Global.clientPath, null, '提交文件错误');
+    // console.log(`提交文件成功`);
 
-    let pushCmdStr = `git push`;
-    await spawnExc.runCmd(pushCmdStr, Global.clientPath, null, '推送分支错误');
+    // let pushCmdStr = `git push`;
+    // await spawnExc.runCmd(pushCmdStr, Global.clientPath, null, '推送分支错误');
 
     ModelMgr.versionModel.originNativeVersion = ModelMgr.versionModel.nativeVersion;
 }
 
 function getNewNativePolicyNum() {
-    return ModelMgr.versionModel.nativePolicyNum + 1;
+    return ModelMgr.versionModel.nativePolicyNum;
 }
 
 /** 上传客户端包 */
