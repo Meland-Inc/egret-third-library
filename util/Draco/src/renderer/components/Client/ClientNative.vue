@@ -214,7 +214,8 @@ export default {
       if (this.showPackageNative) {
         await ModelMgr.versionModel.initNativePolicyNum();
         this.nativeVersion = ModelMgr.versionModel.nativeVersion;
-        this.policyVersion = ModelMgr.versionModel.nativePolicyNum;
+        this.policyVersion = ModelMgr.versionModel.nativePolicyNum + 1;
+        ModelMgr.versionModel.setNativePolicyNum(this.policyVersion);
       }
     },
     // async onUpdateServerPackage() {
@@ -503,6 +504,7 @@ export default {
         Global.snack("One·for·All Error:", error, false);
       }
     },
+    initData() {},
   },
   async mounted() {
     let versionModel = ModelMgr.versionModel;
@@ -517,8 +519,6 @@ export default {
       ].includes(value.name)
     );
     this.environChange();
-    this.nativeVersion = versionModel.nativeVersion;
-    this.policyversion = ModelMgr.versionModel.nativePolicyNum + 1;
   },
 };
 </script>
