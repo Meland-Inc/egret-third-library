@@ -316,6 +316,9 @@ function uglify(sourceFile) {
 
             reserved: symbolReserved
         }
+
+        const pbUnMangleContent = file.read(`${egret.args.projectDir}src/protocol/noMangle.txt`);
+        UglifyJS2.filterNoMangleProp(pbUnMangleContent && pbUnMangleContent.split(','));
     }
 
     let options = {};
