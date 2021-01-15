@@ -1,3 +1,10 @@
+## 编译生成
+需要按照标准tsc编译执行
+* tsc -p '包含tsconfig.json的文件夹库工程目录'
+* ->生成了.d.ts和.js
+* uglifyjs xx.js -o xx.min.js -m --ie8
+* ->生成了.min.js
+
 Egret Game Library
 ==================
 
