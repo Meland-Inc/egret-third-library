@@ -1,4 +1,9 @@
 class KeyBoard extends egret.EventDispatcher {
+	private static _curInstance: KeyBoard;//当前实例 代码本来就是设计成只有一个生效 在window回调覆写会把老的覆写掉
+	private _isActive: boolean;//是否窗口激活的
+	private _pauseCB: () => void;//为了bind this后remove是同一个
+	private _resumeCB: () => void;
+
 	private inputs = [];
 	/**
 	 * 同一时刻按下多个键：则返回多个键的字符串数组。
@@ -236,9 +241,57 @@ class KeyBoard extends egret.EventDispatcher {
 	public constructor() {
 		super();
 
+		this._resumeCB = this.resume.bind(this);
+		this._pauseCB = this.pause.bind(this);
+
+		window.addEventListener("focus", this._resumeCB, false);
+		window.addEventListener("blur", this._pauseCB, false);
+
 		this.init();
 	}
+
+	/**系统自动调用 外部不调用 */
+	public $dispose() {
+		window.removeEventListener("focus", this._resumeCB, false);
+		window.removeEventListener("blur", this._pauseCB, false);
+	}
+
+	private resume(): void {
+		if (this._isActive) {
+			return;
+		}
+
+		this._isActive = true;
+
+		this.freeAllKey();//在游戏获取焦点后所有按键释放  为了体验和功能性 不在失焦时释放 在再次聚焦时释放 方案提供方 杜少爷
+	}
+
+	private pause(): void {
+		if (!this._isActive) {
+			return;
+		}
+
+		this._isActive = false;
+	}
+
+	/**释放所有按键 */
+	private freeAllKey(): void {
+		if (this.inputs.length <= 0) {
+			return;
+		}
+
+		this.inputs = [];
+		this.dispatchEventWith(KeyBoard.onkeyup, true, this.inputs, true);
+	}
+
 	private init() {
+		if (KeyBoard._curInstance) {
+			KeyBoard._curInstance.$dispose();
+			KeyBoard._curInstance = null;
+		}
+
+		KeyBoard._curInstance = this;
+
 		var self = this;
 		document.onkeydown = function (event) {
 			var e = event || window.event || arguments.callee.caller.arguments[0];
