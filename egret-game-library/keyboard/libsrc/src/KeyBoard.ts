@@ -316,18 +316,26 @@ class KeyBoard extends egret.EventDispatcher {
 	}
 	//处理键盘按下对应keycode
 	private handlekeydown(e) {
-		for (var item in this.keyValue) {
-			if (parseInt(item) == e.keyCode) {
-				this.checkInput(this.keyValue[item]);
-			}
+		// for (var item in this.keyValue) {
+		// 	if (parseInt(item) == e.keyCode) {
+		// 		this.checkInput(this.keyValue[item]);
+		// 	}
+		// }
+		const strKeyCode: string = '' + e.keyCode;
+		if (strKeyCode in this.keyValue) {
+			this.checkInput(this.keyValue[strKeyCode]);
 		}
 	}
 	//处理键盘抬起对应keycode
 	private handlekeyup(e) {
-		for (var item in this.keyValue) {
-			if (parseInt(item) == e.keyCode) {
-				this.removeByKey(this.keyValue[item]);
-			}
+		// for (var item in this.keyValue) {
+		// 	if (parseInt(item) == e.keyCode) {
+		// 		this.removeByKey(this.keyValue[item]);
+		// 	}
+		// }
+		const strKeyCode: string = '' + e.keyCode;
+		if (strKeyCode in this.keyValue) {
+			this.removeByKey(this.keyValue[strKeyCode]);
 		}
 	}
 	//通过key添加
