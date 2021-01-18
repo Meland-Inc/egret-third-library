@@ -1,13 +1,10 @@
-var __reflect = (this && this.__reflect) || function (p, c, t) {
-    p.__class__ = c, t ? t.push(c) : t = [c], p.__types__ = p.__types__ ? t.concat(p.__types__) : t;
-};
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
             function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
-    }
+    };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -122,10 +119,45 @@ var KeyBoard = /** @class */ (function (_super) {
             "96": KeyBoard.Num_0,
             "110": KeyBoard.Num_dot
         };
+        _this._resumeCB = _this.resume.bind(_this);
+        _this._pauseCB = _this.pause.bind(_this);
+        window.addEventListener("focus", _this._resumeCB, false);
+        window.addEventListener("blur", _this._pauseCB, false);
         _this.init();
         return _this;
     }
+    /**系统自动调用 外部不调用 */
+    KeyBoard.prototype.$dispose = function () {
+        window.removeEventListener("focus", this._resumeCB, false);
+        window.removeEventListener("blur", this._pauseCB, false);
+    };
+    KeyBoard.prototype.resume = function () {
+        if (this._isActive) {
+            return;
+        }
+        this._isActive = true;
+        this.freeAllKey(); //在游戏获取焦点后所有按键释放  为了体验和功能性 不在失焦时释放 在再次聚焦时释放 方案提供方 杜少爷
+    };
+    KeyBoard.prototype.pause = function () {
+        if (!this._isActive) {
+            return;
+        }
+        this._isActive = false;
+    };
+    /**释放所有按键 */
+    KeyBoard.prototype.freeAllKey = function () {
+        if (this.inputs.length <= 0) {
+            return;
+        }
+        this.inputs = [];
+        this.dispatchEventWith(KeyBoard.onkeyup, true, this.inputs, true);
+    };
     KeyBoard.prototype.init = function () {
+        if (KeyBoard._curInstance) {
+            KeyBoard._curInstance.$dispose();
+            KeyBoard._curInstance = null;
+        }
+        KeyBoard._curInstance = this;
         var self = this;
         document.onkeydown = function (event) {
             var e = event || window.event || arguments.callee.caller.arguments[0];
@@ -149,18 +181,26 @@ var KeyBoard = /** @class */ (function (_super) {
     };
     //处理键盘按下对应keycode
     KeyBoard.prototype.handlekeydown = function (e) {
-        for (var item in this.keyValue) {
-            if (parseInt(item) == e.keyCode) {
-                this.checkInput(this.keyValue[item]);
-            }
+        // for (var item in this.keyValue) {
+        // 	if (parseInt(item) == e.keyCode) {
+        // 		this.checkInput(this.keyValue[item]);
+        // 	}
+        // }
+        var strKeyCode = '' + e.keyCode;
+        if (strKeyCode in this.keyValue) {
+            this.checkInput(this.keyValue[strKeyCode]);
         }
     };
     //处理键盘抬起对应keycode
     KeyBoard.prototype.handlekeyup = function (e) {
-        for (var item in this.keyValue) {
-            if (parseInt(item) == e.keyCode) {
-                this.removeByKey(this.keyValue[item]);
-            }
+        // for (var item in this.keyValue) {
+        // 	if (parseInt(item) == e.keyCode) {
+        // 		this.removeByKey(this.keyValue[item]);
+        // 	}
+        // }
+        var strKeyCode = '' + e.keyCode;
+        if (strKeyCode in this.keyValue) {
+            this.removeByKey(this.keyValue[strKeyCode]);
         }
     };
     //通过key添加
@@ -334,4 +374,3 @@ var KeyBoard = /** @class */ (function (_super) {
     KeyBoard.shieldingHotKey = [];
     return KeyBoard;
 }(egret.EventDispatcher));
-__reflect(KeyBoard.prototype, "KeyBoard");

@@ -1,4 +1,8 @@
 declare class KeyBoard extends egret.EventDispatcher {
+    private static _curInstance;
+    private _isActive;
+    private _pauseCB;
+    private _resumeCB;
     private inputs;
     /**
      * 同一时刻按下多个键：则返回多个键的字符串数组。
@@ -112,6 +116,12 @@ declare class KeyBoard extends egret.EventDispatcher {
     static shieldingHotKey: string[];
     private keyValue;
     constructor();
+    /**系统自动调用 外部不调用 */
+    $dispose(): void;
+    private resume;
+    private pause;
+    /**释放所有按键 */
+    private freeAllKey;
     private init;
     private handlekeydown;
     private handlekeyup;
