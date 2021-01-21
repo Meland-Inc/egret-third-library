@@ -457,7 +457,7 @@
     <image id="n762cyieo" name="img_cm_jak_1_1.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="18,11,136,16"/>
     <image id="n762cyiep" name="img_cm_jak_1_2.png" path="/old/imgB/" exported="true" scale="9grid" scale9grid="15,9,131,18"/>
     <component id="n762cyieq" name="WinCursor.xml" path="/win/" exported="true"/>
-    <component id="dbgdcyiej" name="CommonForceTip.xml" path="/old/com/" exported="true"/>
+    <component id="dbgdcyiej" name="CommonForceTip.xml" path="/com/" exported="true"/>
     <image id="dbgdcyier" name="icon_cm_qbs_1.png" path="/old/img_UI3/" exported="true"/>
     <image id="dbgdcyies" name="icon_cm_qbs_2.png" path="/old/img_UI3/" exported="true"/>
     <image id="dbgdcyiet" name="icon_cm_qbs_3.png" path="/old/img_UI3/" exported="true"/>
@@ -664,6 +664,14 @@
     <component id="rtvda" name="MouseEffectComboBox.xml" path="/comboBox/mouseEffectComboBox/" exported="true"/>
     <component id="e7m0cyikb" name="CommonSubtitles.xml" path="/com/" exported="true"/>
     <image id="e7m0cyikd" name="img_cm_black.png" path="/img/color/" scale="9grid" scale9grid="2,2,4,4"/>
+    <image id="x3wvcyike" name="yellow.png" path="/img/hardware/"/>
+    <image id="x3wvcyikf" name="white.png" path="/img/hardware/"/>
+    <image id="x3wvcyikg" name="red.png" path="/img/hardware/"/>
+    <image id="x3wvcyikh" name="purple.png" path="/img/hardware/"/>
+    <image id="x3wvcyiki" name="green.png" path="/img/hardware/"/>
+    <image id="x3wvcyikj" name="brown.png" path="/img/hardware/"/>
+    <image id="x3wvcyikk" name="blue.png" path="/img/hardware/"/>
+    <image id="x3wvcyikl" name="black.png" path="/img/hardware/"/>
   </resources>
   <publish name="common">
     <atlas name="默认" index="0"/>

@@ -244,6 +244,13 @@
     <image id="l1a26t" name="icon_code_dy_4.png" path="/timelineImg/"/>
     <image id="s3gj6u" name="img_code_dy_30.png" path="/img/" scale="9grid" scale9grid="41,14,38,28"/>
     <image id="d20n6v" name="img_code_dy_31.png" path="/img/" scale="9grid" scale9grid="18,9,29,18"/>
+    <image id="eepg6x" name="hardwareLeft.png" path="/img/hardware/"/>
+    <image id="eepg6y" name="hardwareDown.png" path="/img/hardware/"/>
+    <image id="eepg6z" name="hardwareUp.png" path="/img/hardware/"/>
+    <image id="eepg70" name="hardwareRight.png" path="/img/hardware/"/>
+    <image id="eepg71" name="cycle.png" path="/img/hardware/"/>
+    <image id="eepg72" name="wait.png" path="/img/hardware/"/>
+    <image id="8thx73" name="end.png" path="/img/hardware/"/>
   </resources>
   <publish name="code"/>
 </packageDescription>
