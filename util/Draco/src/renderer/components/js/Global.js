@@ -11,8 +11,8 @@ export class Global {
 
     static rhombTileWidth = 120;
     static rhombTileHeight = 60;
-    static rectTileWidth = 60;
-    static rectTileHeight = 60;
+    static rectTileWidth = 120;
+    static rectTileHeight = 120;
 
     static eMode = {
         develop: "develop",
