@@ -2254,6 +2254,7 @@ var egret;
              *
              */
             HTML5StageText.prototype.onBlurHandler = function () {
+                //TOUCH_BEGIN直接调用setFocus时，inputElement会触发一次失焦。在这里重新聚焦。
                 if (this.htmlInput._needShow) {
                     this.inputElement.focus();
                 }
@@ -3149,6 +3150,12 @@ var egret;
                         }
                     }
                 };
+                _this.onCustomMouseMove = function (event) {
+                    if (!_this.dealMouseMoveEvent) {
+                        _this.dealMouseMoveEvent = true;
+                        _this.onTouchMove(event);
+                    }
+                };
                 /**
                  * @private
                  */
@@ -3221,6 +3228,7 @@ var egret;
             WebTouchHandler.prototype.addMouseListener = function () {
                 this.canvas.addEventListener("mousedown", this.onTouchBegin);
                 this.canvas.addEventListener("mousemove", this.onMouseMove);
+                this.canvas.addEventListener("customMousemove", this.onCustomMouseMove);
                 this.canvas.addEventListener("mouseup", this.onTouchEnd);
             };
             /**
