@@ -833,7 +833,7 @@ export function jimpPng(id, area, texture, input_path, output_path) {
                 }
                 resolve();
             }).catch(error => {
-                Global.snack(`裁剪纹理错误 id:${id}`, error);
+                Global.snack(`裁剪纹理错误 id:${id}, texture:${texture}`, error);
                 resolve();
             });
     });
@@ -883,9 +883,11 @@ export function jimp2dPng(id, area, texture, input_path, output_path) {
                 }
                 resolve();
             }).catch(error => {
-                Global.snack(`裁剪纹理错误 id:${id}`, error);
+                Global.snack(`裁剪纹理错误 id:${id}, texture:${texture}`, error);
                 resolve();
-            });
+            }).finally(() => {
+                resolve();
+            })
     });
 }
 
