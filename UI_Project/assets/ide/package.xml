@@ -485,25 +485,25 @@
     <image id="f08kwcyilc" name="img_codeV_xzk_1.png" path="/codeVew/img/" scale="9grid" scale9grid="4,4,32,32"/>
     <component id="ow41wcyilb" name="ComBuildAttrB.xml" path="/attribute/com/ComBuildAttrB/" exported="true"/>
     <component id="cgkqwcyild" name="btnAttributeTag.xml" path="/attribute/btn/"/>
-    <image id="cgkqwcyile" name="img_att_tab_1.png" path="/attribute/img/"/>
-    <image id="cgkqwcyilf" name="img_att_tab_2.png" path="/attribute/img/"/>
-    <component id="rx8ewcyilh" name="ComSoundAttr.xml" path="/attribute/com/"/>
-    <component id="rx8ewcyili" name="ComSoundAttrItem.xml" path="/attribute/com/"/>
+    <image id="cgkqwcyile" name="img_att_tab_1.png" path="/attribute/img/" scale="9grid" scale9grid="25,11,50,22"/>
+    <image id="cgkqwcyilf" name="img_att_tab_2.png" path="/attribute/img/" scale="9grid" scale9grid="25,11,50,22"/>
+    <component id="rx8ewcyilh" name="ComSoundAttr.xml" path="/codeVew/soundList/noUse/"/>
+    <component id="rx8ewcyili" name="ComSoundAttrItem.xml" path="/codeVew/soundList/noUse/"/>
     <image id="rx8ewcyilj" name="icon_att_bf_1.png" path="/attribute/img/"/>
     <image id="rx8ewcyilk" name="icon_att_bf_2.png" path="/attribute/img/"/>
     <image id="rx8ewcyill" name="icon_att_yy_1.png" path="/attribute/img/"/>
     <image id="rx8ewcyilm" name="icon_att_yy_2.png" path="/attribute/img/"/>
     <image id="rx8ewcyiln" name="icon_att_zt_1.png" path="/attribute/img/"/>
     <image id="rx8ewcyilo" name="icon_att_zt_2.png" path="/attribute/img/"/>
-    <component id="pi8ywcyilp" name="WinSoundList.xml" path="/attribute/win/" exported="true"/>
-    <component id="pi8ywcyilr" name="ComSoundListItem.xml" path="/attribute/com/"/>
+    <component id="pi8ywcyilp" name="WinSoundList.xml" path="/codeVew/soundList/" exported="true"/>
+    <component id="pi8ywcyilr" name="ComSoundListItem.xml" path="/codeVew/soundList/"/>
     <image id="pi8ywcyils" name="img_att_sy_1.png" path="/attribute/img/" scale="9grid" scale9grid="10,10,20,20"/>
     <image id="pi8ywcyilt" name="img_att_sy_2.png" path="/attribute/img/" scale="9grid" scale9grid="10,10,20,20"/>
     <image id="pi8ywcyilu" name="img_att_sy_3.png" path="/attribute/img/" scale="9grid" scale9grid="10,10,20,20"/>
     <image id="pi8ywcyilv" name="img_att_sy_4.png" path="/attribute/img/" scale="9grid" scale9grid="15,15,30,30"/>
     <image id="pi8ywcyilw" name="img_att_sy_line.png" path="/attribute/img/"/>
-    <component id="pi8ywcyilx" name="btnSoundPlay.xml" path="/attribute/btn/"/>
-    <component id="r7bbwcyily" name="btnSoundPlaySmall.xml" path="/attribute/btn/"/>
+    <component id="pi8ywcyilx" name="btnSoundPlay.xml" path="/codeVew/soundList/"/>
+    <component id="r7bbwcyily" name="btnSoundPlaySmall.xml" path="/codeVew/soundList/"/>
     <component id="fkyawcyild" name="ComFuncNameInput.xml" path="/codeVew/com/"/>
     <image id="u5ngwcyilz" name="icon_cre_ldkg.png" path="/create/img/"/>
     <image id="u5ngwcyim0" name="icon_cre_ldkg2.png" path="/create/img/"/>
