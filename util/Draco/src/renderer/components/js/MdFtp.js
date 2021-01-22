@@ -752,7 +752,7 @@ export async function zipUploadGame() {
 
 export async function uploadNativeExe() {
     let environName = ModelMgr.versionModel.curEnviron.name;
-    let newNativePolicyNum = getNewNativePolicyNum();
+    let newNativePolicyNum = ModelMgr.versionModel.nativePolicyNum;
     let nativeVersion = ModelMgr.versionModel.nativeVersion;
     let pkgName = `bellplanet Setup ${nativeVersion}.exe`
     let pkgPath = `${Global.pcProjectPath}/app/${pkgName}`;
@@ -781,7 +781,7 @@ export async function uploadNativeExe() {
 
 export async function uploadNativeDmg() {
     let environName = ModelMgr.versionModel.curEnviron.name;
-    let newNativePolicyNum = getNewNativePolicyNum();
+    let newNativePolicyNum = ModelMgr.versionModel.nativePolicyNum;
     let nativeVersion = ModelMgr.versionModel.nativeVersion;
     let pkgName = `bellplanet-${nativeVersion}.dmg`;
     let pkgPath = `${Global.pcProjectPath}/app/${pkgName}`;
@@ -827,22 +827,18 @@ function tryUploadNativePkg(pkgPath, pkgName, cdnRoot) {
 }
 
 export async function applyNativePolicyNum() {
-    let newNativePolicyNum = getNewNativePolicyNum();
+    let newNativePolicyNum = ModelMgr.versionModel.nativePolicyNum;
     let environName = ModelMgr.versionModel.curEnviron.name;
     await ExternalUtil.applyNativePolicyNum(newNativePolicyNum, environName);
 
-    let commitCmdStr = `git commit -a -m "${ModelMgr.versionModel.publisher} 发布${ModelMgr.versionModel.curEnviron.name} native包 策略版本号:${newNativePolicyNum}"`;
-    await spawnExc.runCmd(commitCmdStr, Global.clientPath, null, '提交文件错误');
-    console.log(`提交文件成功`);
+    // let commitCmdStr = `git commit -a -m "${ModelMgr.versionModel.publisher} 发布${ModelMgr.versionModel.curEnviron.name} native包 策略版本号:${newNativePolicyNum}"`;
+    // await spawnExc.runCmd(commitCmdStr, Global.clientPath, null, '提交文件错误');
+    // console.log(`提交文件成功`);
 
-    let pushCmdStr = `git push`;
-    await spawnExc.runCmd(pushCmdStr, Global.clientPath, null, '推送分支错误');
+    // let pushCmdStr = `git push`;
+    // await spawnExc.runCmd(pushCmdStr, Global.clientPath, null, '推送分支错误');
 
     ModelMgr.versionModel.originNativeVersion = ModelMgr.versionModel.nativeVersion;
-}
-
-function getNewNativePolicyNum() {
-    return ModelMgr.versionModel.nativePolicyNum + 1;
 }
 
 /** 上传客户端包 */

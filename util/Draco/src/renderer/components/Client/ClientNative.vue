@@ -11,7 +11,7 @@
           full-width
         >
           <mu-option
-            v-for="value,index in environList"
+            v-for="(value, index) in environList"
             :key="value.name"
             :label="value.name"
             :value="value"
@@ -40,7 +40,8 @@
           data-mu-loading-size="24"
           color="orange500"
           @click="onMergeServerPackage"
-        >更新上传服务端包</mu-button>
+          >更新上传服务端包</mu-button
+        >
         <!-- <mu-button
           v-loading="isUploadClientPackageLoading"
           data-mu-loading-size="24"
@@ -67,6 +68,12 @@
           >清空游戏包目录</mu-button>-->
           <mu-text-field
             class="text-publisher"
+            @change="updatePolicyVersionText"
+            v-model="policyVersion"
+            :error-text="policyVersionText"
+          />
+          <mu-text-field
+            class="text-publisher"
             @change="updateNativeVersionText"
             v-model="nativeVersion"
             :error-text="nativeVersionText"
@@ -83,39 +90,45 @@
             data-mu-loading-size="24"
             color="blue500"
             @click="onPublishWin"
-          >发布win包</mu-button>
+            >发布win包</mu-button
+          >
           <mu-button
             v-loading="isUploadNativeWinLoading"
             data-mu-loading-size="24"
             color="green500"
             @click="onUploadNativeExe"
-          >上传native包win</mu-button>
+            >上传native包win</mu-button
+          >
           <br />
           <mu-button
             v-loading="isPublishMacLoading"
             data-mu-loading-size="24"
             color="blue500"
             @click="onPublishMac"
-          >发布mac包</mu-button>
+            >发布mac包</mu-button
+          >
           <mu-button
             v-loading="isUploadNativeMacLoading"
             data-mu-loading-size="24"
             color="green500"
             @click="onUploadNativeMac"
-          >上传native包Mac</mu-button>
+            >上传native包Mac</mu-button
+          >
           <br />
           <mu-button
             v-loading="isGetNativeVersionLoading"
             data-mu-loading-size="24"
             color="purple500"
             @click="getNativeVersion"
-          >当前版本号</mu-button>
+            >当前版本号</mu-button
+          >
           <mu-button
             v-loading="isApplyNativePolicyNumLoading"
             data-mu-loading-size="24"
             color="red"
             @click="applyNativePolicyNum"
-          >应用版本号</mu-button>
+            >应用版本号</mu-button
+          >
         </div>
       </mu-container>
       <mu-divider />
@@ -141,6 +154,7 @@ export default {
       environList: [],
 
       publisher: null,
+      policyVersion: null,
       nativeVersion: null,
       isUpdateServerPackageLoading: false,
       isMergeServerPackageLoading: false,
@@ -155,10 +169,11 @@ export default {
       isApplyNativePolicyNumLoading: false,
 
       publishErrorText: null,
+      policyVersionText: null,
       nativeVersionText: null,
       versionDescErrorText: null,
 
-      showPackageNative: false
+      showPackageNative: false,
     };
   },
   watch: {},
@@ -166,6 +181,10 @@ export default {
     updatePublishText() {
       this.publishErrorText = this.publisher ? null : "请输入发布者";
       ModelMgr.versionModel.publisher = this.publisher;
+    },
+    updatePolicyVersionText() {
+      this.policyVersionText = this.policyVersion ? null : "请输入策略号";
+      ModelMgr.versionModel.setNativePolicyNum(this.policyVersion);
     },
     updateNativeVersionText() {
       this.nativeVersionText = this.nativeVersion ? null : "请输入版本号";
@@ -195,6 +214,8 @@ export default {
       if (this.showPackageNative) {
         await ModelMgr.versionModel.initNativePolicyNum();
         this.nativeVersion = ModelMgr.versionModel.nativeVersion;
+        this.policyVersion = ModelMgr.versionModel.nativePolicyNum + 1;
+        ModelMgr.versionModel.setNativePolicyNum(this.policyVersion);
       }
     },
     // async onUpdateServerPackage() {
@@ -482,23 +503,23 @@ export default {
         Global.hideLoading();
         Global.snack("One·for·All Error:", error, false);
       }
-    }
+    },
+    initData() {},
   },
   async mounted() {
     let versionModel = ModelMgr.versionModel;
     this.curEnviron = versionModel.curEnviron = versionModel.environList.find(
-      value => value.name === versionModel.eEnviron.beta
+      (value) => value.name === versionModel.eEnviron.beta
     );
-    this.environList = versionModel.environList.filter(value =>
+    this.environList = versionModel.environList.filter((value) =>
       [
         versionModel.eEnviron.beta,
         versionModel.eEnviron.ready,
-        versionModel.eEnviron.release
+        versionModel.eEnviron.release,
       ].includes(value.name)
     );
     this.environChange();
-    this.nativeVersion = versionModel.nativeVersion;
-  }
+  },
 };
 </script>
 <style lang="less">
