@@ -103,9 +103,9 @@ async function analyticTs(content) {
     }
     try {
         await fsExc.writeFile(Global.projPath + "/src/protocol/noMangle.txt", Array.from(nameArr));
-        console.log('解析ts成功');
+        Global.toast('生成不混淆参数文件成功');
     } catch (error) {
-        console.error('解析ts错误', error);
+        Global.toast('生成不混淆参数文件失败', error);
     }
 }
 
