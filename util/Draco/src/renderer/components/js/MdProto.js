@@ -94,11 +94,11 @@ export async function modifyTs() {
 
 /**解析内容获取不需要混淆的内容 */
 async function analyticTs(content) {
-    const reg = /enum (\w+)|(\w+) = |public (static)? (\w+)/g;
+    const reg = /enum (\w+)|(\w+) = |public (static)? (\w+)|class (\w+)/g;
     let result = null;
     let nameArr = new Set();
     while ((result = reg.exec(content)) != null) {
-        const name = result[1] || result[2] || result[4];
+        const name = result[1] || result[2] || result[4] || result[5];
         name && nameArr.add(name);
     }
     try {
