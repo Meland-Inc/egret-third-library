@@ -20,7 +20,7 @@
     <input id="timeRange" placeholder="选择日期范围" />
     <button id="find" type="button">搜索</button>
 
-    <fieldset class="layui-elem-field">
+    <fieldset class=" layui-elem-field">
         <legend>控制台</legend>
         <div id='logView' class="layui-field-box">
         </div>
@@ -36,11 +36,9 @@
 
         findBtn.onclick = findFile;
         btn.onclick = download;
-        let fileArry = [];
+        let fileArr = [];
 
         let url = 'http://47.103.29.74/clientlogs/';
-        // url: "../../../game/serverList/",
-        // url: "/serverList/",
 
         // $(document).ready(() => {
         //     getFile();
@@ -57,15 +55,11 @@
                     // jqXHR.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
                 },
                 success: function (data) {
-                    fileArry = [];
+                    fileArr = [];
                     $(data).find("a").each(function () {
                         let fileDetail = {};
                         fileDetail.fileName = unescape($(this).attr("href"));
-                        // fileDetail.fileName = unescape($(this).attr("href").slice(12));
                         if (fileDetail.fileName) {
-                            //旧time =${date.getFullYear()}-${month}-${date.getDate()}-${hour}:${minutes}:${date.getSeconds()}
-                            //新time =${date.getFullYear()}-${month}-${date.getDate()}_${hour}:${minutes}:${date.getSeconds()}
-                            // playerID + "_" + svrSnode + "_" + channelID + "_" + time + ".txt"
                             let reg = new RegExp(`(.*)_(.*)_(.*)_(.*)[-|_](.*)\.txt`, 'g');
                             let execArr = reg.exec(fileDetail.fileName);
                             if (execArr) {
@@ -79,7 +73,7 @@
                                     fileDetail.time = time;
                                 }
                             }
-                            fileArry.push(fileDetail);
+                            fileArr.push(fileDetail);
                         }
                     });
                 }
@@ -107,7 +101,7 @@
                 endDate.setFullYear(+timeInfoArr[3], +timeInfoArr[4] - 1, +timeInfoArr[5] + 1);
                 endDate.setHours(0, 0, 0);
             }
-            selectField = fileArry.filter(value => {
+            selectField = fileArr.filter(value => {
                 if (!search.value) {
                     if (startDate && endDate) {
                         if (value.time >= startDate && value.time <= endDate) {
@@ -139,6 +133,7 @@
                 logView.innerHTML += unescape(value.fileName) + '</br >';
             });
         }
+
         /**下载*/
         function download() {
             if (selectField.length > 0) {
@@ -174,19 +169,20 @@
                 logView.innerHTML = '暂无可下载内容';
             }
         }
+
         /**搜索*/
         function fuzzysearch(needle, haystack) {
-            var hlen = haystack.length;
-            var nlen = needle.length;
-            if (nlen > hlen) {
+            var hLen = haystack.length;
+            var nLen = needle.length;
+            if (nLen > hLen) {
                 return false;
             }
-            if (nlen === hlen) {
+            if (nLen === hLen) {
                 return needle === haystack;
             }
-            outer: for (var i = 0, j = 0; i < nlen; i++) {
+            outer: for (var i = 0, j = 0; i < nLen; i++) {
                 var nch = needle.charCodeAt(i);
-                while (j < hlen) {
+                while (j < hLen) {
                     if (haystack.charCodeAt(j++) === nch) {
                         continue outer;
                     }
