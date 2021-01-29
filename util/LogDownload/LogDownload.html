@@ -16,7 +16,11 @@
     <script type="text/javascript" src="laydate/laydate.js"></script>
 
     <button id="download" type="button">Click Download!</button>
-    <input id="search" placeholder="player name" />
+    <input type="checkbox" id="isAutoCheckbox">
+    <input id="playerNameInput" placeholder="player name" />
+    <input id="playerIdInput" placeholder="player id" />
+    <input id="playerActIdInput" placeholder="player actId" />
+    <input id="showNameSearch" placeholder="show text" />
     <input id="timeRange" placeholder="选择日期范围" />
     <button id="find" type="button">搜索</button>
 
@@ -28,57 +32,70 @@
 
     <script type='module'>
         let btn = document.getElementById('download');
-        let search = document.getElementById('search');
+        let playerNameInput = document.getElementById('playerNameInput');
+        let playerIdInput = document.getElementById('playerIdInput');
+        let playerActIdInput = document.getElementById('playerActIdInput');
+        let showNameSearch = document.getElementById('showNameSearch');
         let timeRange = document.getElementById('timeRange');
         let logView = document.getElementById('logView');
         let findBtn = document.getElementById('find');
+        let isAutoCheckbox = document.getElementById('isAutoCheckbox');
         let selectField = [];
 
         findBtn.onclick = findFile;
         btn.onclick = download;
+        isAutoCheckbox.onclick = getFile;
         let fileArr = [];
 
-        let url = 'http://47.103.29.74/clientlogs/';
+        let url = 'http://47.103.29.74/';
+        let clientUrl = url + 'clientlogs/';
+        let nativeLogUrl = url + 'native_logs/';
 
-        // $(document).ready(() => {
-        //     getFile();
-        // });
+        $(document).ready(() => {
+            getFile();
+        });
 
         function getFile() {
-            return $.ajax({
+            $.ajaxSettings.async = false;
+            const isAuto = isAutoCheckbox.checked;
+
+            findFiles(clientUrl, isAuto);
+
+            $.ajaxSettings.async = true;
+            fileArr.sort((a, b) => b.time - a.time);
+            findFile();
+        }
+
+        function findFiles(tUrl, tIsAuto) {
+            $.ajax({
                 // url: "/serverList/",
                 headers: {
                     // Authorization: 'Basic YmVsbGNvZGU6ZDNuSDh5ZERESw=='
                 },
-                url: url,
+                url: tUrl,
                 beforeSend: function (jqXHR, options) {
                     // jqXHR.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
                 },
                 success: function (data) {
                     fileArr = [];
                     $(data).find("a").each(function () {
-                        let fileDetail = {};
-                        fileDetail.fileName = unescape($(this).attr("href"));
-                        if (fileDetail.fileName) {
-                            let reg = new RegExp(`(.*)_(.*)_(.*)_(.*)[-|_](.*)\.txt`, 'g');
-                            let execArr = reg.exec(fileDetail.fileName);
-                            if (execArr) {
-                                fileDetail.playerName = execArr[1];
-                                let dateReg = new RegExp(`(.*)-(.*)-(.*)`, 'g');
-                                let dateArr = dateReg.exec(execArr[4]);
-                                if (dateArr) {
-                                    let time = new Date();
-                                    time.setFullYear(+dateArr[1], +dateArr[2] - 1, +dateArr[3]);
-                                    time.setHours(0, 0, 0);
-                                    fileDetail.time = time;
-                                }
-                            }
-                            fileArr.push(fileDetail);
+                        const fileName = unescape($(this).attr("href"));
+                        if (/summary/g.test(fileName)) {
+                            $.get(tUrl + fileName)
+                                .success(function (content) {
+                                    const fileDetail = JSON.parse(content);
+                                    if (!fileDetail.isAuto == !tIsAuto) {
+                                        fileDetail.time = new Date(fileDetail.time);
+                                        fileDetail.showName = `${fileDetail.playerName}/${fileDetail.time.toLocaleString()}      ${fileDetail.describe.slice(0, 50)}`;
+                                        fileArr.push(fileDetail);
+                                    }
+                                })
                         }
                     });
                 }
             });
         }
+
         laydate.render({
             elem: '#timeRange'
             , range: true
