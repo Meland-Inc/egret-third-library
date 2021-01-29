@@ -188,30 +188,69 @@
         function download() {
             if (selectField.length > 0) {
                 var zip = new JSZip();
+                let isNativeSaveAll = false;
+                let isWebSaveAll = false;
+
+                let checkIsEnd = (tIndex) => {
+                    if (!isNativeSaveAll || !isWebSaveAll) return;
+                    if (tIndex == selectField.length - 1) {
+                        zip.generateAsync({ type: "blob" })
+                            .then(function (content) {
+                                saveAs(content, playerNameInput.value + '_' + timeRange.value + ".zip");
+                            })
+                            .catch((data) => {
+                                console.error(data);
+                            })
+                    } else {
+                        curGetFile++;
+                        getNextFile();
+                    }
+                }
+
                 let getFile = (fileInfo, index) => {
-                    $.get(url + encodeURI(fileInfo.fileName))
-                        .success(function (content) {
-                            zip.file(unescape(fileInfo.fileName), content);
-                            if (index == selectField.length - 1) {
-                                zip.generateAsync({ type: "blob" })
-                                    .then(function (content) {
-                                        saveAs(content, search.value + '_' + timeRange.value + ".zip");
-                                    })
-                                    .catch((data) => {
-                                        console.error(data);
-                                    })
-                            } else {
-                                getNextFile();
-                            }
+                    const folder = zip.folder(`${fileInfo.showName.replace(/\//g, '_')}_${new Date().getTime()}`);
+                    const deferred = [];
+                    fileInfo.clientLog && deferred.push(folder.file(`webLog.log`, fileInfo.clientLog));
+                    fileInfo.describe && deferred.push(folder.file(`describe.txt`, fileInfo.describe));
+                    if (fileInfo.cloudServerAppIdArr && fileInfo.cloudServerAppIdArr.length) {
+                        deferred.push(folder.file(`cloudServerAppId.txt`, JSON.stringify(fileInfo.cloudServerAppIdArr)));
+                    }
+                    if (fileInfo.image && fileInfo.image.length) {
+                        fileInfo.image.forEach((tImg, tIndex) => {
+                            deferred.push(folder.file(`${tIndex}.png`, tImg.replace(/^data:image[^;]*;base64,/, ""), { base64: true }));
                         })
+                    }
+                    //native的相关日志
+                    if (fileInfo.nativeLogNameArr && fileInfo.nativeLogNameArr.length) {
+                        fileInfo.nativeLogNameArr.forEach((tNativeLogName, nativeLogNameArrIndex) => {
+                            const nativeDeferred = [];
+                            $.get(nativeLogUrl + tNativeLogName)
+                                .success(function (content) {
+                                    nativeDeferred.push(folder.file(tNativeLogName, content))
+                                    if (nativeLogNameArrIndex == fileInfo.nativeLogNameArr.length - 1) {
+                                        $.when.apply($, nativeDeferred).then(() => {
+                                            isNativeSaveAll = true;
+                                            checkIsEnd(index);
+                                        });
+                                    }
+                                })
+                        })
+                    } else {
+                        isNativeSaveAll = true;
+                    }
+                    $.when.apply($, deferred).then(() => {
+                        isWebSaveAll = true;
+                        checkIsEnd(index);
+                    });
                 }
                 var fieldNum = selectField.length;
-                var curGetFile = 0;
+                let curGetFile = 0;
                 let getNextFile = () => {
-                    if (curGetFile < fieldNum) {
+                    if (curGetFile <= fieldNum) {
+                        isNativeSaveAll = false;
+                        isWebSaveAll = false;
                         const fileInfo = selectField[curGetFile];
                         getFile(fileInfo, curGetFile);
-                        curGetFile++;
                     }
                 }
                 getNextFile();
