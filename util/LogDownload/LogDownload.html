@@ -42,6 +42,11 @@
         let isAutoCheckbox = document.getElementById('isAutoCheckbox');
         let selectField = [];
 
+        playerNameInput.onkeydown = enterSearch;
+        playerIdInput.onkeydown = enterSearch;
+        playerActIdInput.onkeydown = enterSearch;
+        showNameSearch.onkeydown = enterSearch;
+
         findBtn.onclick = findFile;
         btn.onclick = download;
         isAutoCheckbox.onclick = getFile;
@@ -101,13 +106,41 @@
             , range: true
         });
 
-        async function findFile(data) {
-            await getFile();
-
-            if (typeof (data) == 'string') {
-                timeRange.value = data;
+        function enterSearch() {
+            var event = window.event || arguments.callee.caller.arguments[0];
+            if (event.keyCode == 13) {
+                findFile();
             }
-            selectField = [];
+        }
+
+        async function findFile() {
+            selectField = fileArr;
+            selectField = checkPlayerName(selectField);
+            selectField = checkPlayerId(selectField);
+            selectField = checkTime(selectField);
+            selectField = checkActId(selectField);
+            selectField = checkShowName(selectField);
+
+            showFiles(selectField);
+        }
+
+        function checkPlayerName(tFileArr) {
+            const searchPlayerName = playerNameInput.value;
+            if (!searchPlayerName) return tFileArr;
+            return tFileArr.filter((tFile) => {
+                return fuzzysearch(searchPlayerName, unescape(tFile.playerName));
+            })
+        }
+
+        function checkPlayerId(tFileArr) {
+            const searchPlayerId = playerIdInput.value;
+            if (!searchPlayerId) return tFileArr;
+            return tFileArr.filter((tFile) => {
+                return fuzzysearch(searchPlayerId, unescape(tFile.playerID));
+            })
+        }
+
+        function checkTime(tFileArr) {
             let timeInfoArr = timeRange.value.split('-');
             let startDate, endDate;
             if (timeInfoArr.length == 6) {
@@ -118,36 +151,36 @@
                 endDate.setFullYear(+timeInfoArr[3], +timeInfoArr[4] - 1, +timeInfoArr[5] + 1);
                 endDate.setHours(0, 0, 0);
             }
-            selectField = fileArr.filter(value => {
-                if (!search.value) {
-                    if (startDate && endDate) {
-                        if (value.time >= startDate && value.time <= endDate) {
-                            return true;
-                        } else {
-                            return false;
-                        }
-                    } else {
-                        return false;
-                    }
-                } else {
-                    if (fuzzysearch(search.value, unescape(value.playerName))) {
-                        if (startDate && endDate) {
-                            if (value.time >= startDate && value.time <= endDate) {
-                                return true;
-                            } else {
-                                return false;
-                            }
-                        } else {
-                            return true;
-                        }
-                    } else {
-                        return false;
-                    }
-                }
-            });
+            if (!startDate) return tFileArr;
+            return tFileArr.filter((tFile) => {
+                return value.time.getTime() >= startDate && value.time.getTime() <= endDate;
+            })
+        }
+
+        function checkActId(tFileArr) {
+            const searchPlayerActId = playerActIdInput.value;
+            if (!searchPlayerActId) return tFileArr;
+            return tFileArr.filter((tFile) => {
+                return fuzzysearch(searchPlayerActId, unescape(tFile.actId));
+            })
+        }
+
+        function checkShowName(tFileArr) {
+            const searchShowName = showNameSearch.value;
+            if (!searchShowName) return tFileArr;
+            return tFileArr.filter((tFile) => {
+                return fuzzysearch(searchShowName, unescape(tFile.showName));
+            })
+        }
+
+        function updateFiles(tFile) {
+            logView.innerHTML += `${tFile.showName}` + '</br >';
+        }
+
+        function showFiles(tFiles) {
             logView.innerHTML = '';
-            selectField.forEach(value => {
-                logView.innerHTML += unescape(value.fileName) + '</br >';
+            tFiles.forEach(tFile => {
+                updateFiles(tFile);
             });
         }
 
