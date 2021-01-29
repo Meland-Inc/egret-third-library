@@ -34,11 +34,14 @@
       <Button icon="ui://oyity675qr0m4ds" controller="ctrlMinimap" page="0"/>
     </component>
     <component id="n10_psru" name="comSmallMap" src="psrui" fileName="com/ComSmallMap.xml" xy="0,0" group="n15_n173"/>
-    <component id="n11_psru" name="btnSetting" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="272,186" size="74,74" group="n15_n173">
+    <component id="n11_psru" name="btnSetting" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="272,179" size="74,74" group="n15_n173">
       <Button icon="ui://oyity675a1ndc"/>
     </component>
-    <component id="n12_psru" name="btnHideLeftTop" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="272,105" size="74,74" group="n15_n173">
+    <component id="n12_psru" name="btnHideLeftTop" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="272,95" size="74,74" group="n15_n173">
       <Button icon="ui://oyity675a1ndb" controller="ctrlMinimap" page="1"/>
+    </component>
+    <component id="n44_gxc7" name="btnUploadLog" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="272,11" size="74,74" group="n15_n173">
+      <Button icon="ui://oyity675gxc7wcyinc"/>
     </component>
     <group id="n15_n173" name="grpLeftTop" xy="0,0" size="346,262" customData="left" advanced="true">
       <gearXY controller="ctrlMinimap" pages="1" values="-349,0" default="0,0" tween="true"/>

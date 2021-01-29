@@ -14,7 +14,7 @@
     <image id="n14_rknv" name="n14" src="to3m9" fileName="img/img_cm_yxz_1.png" xy="16,19">
       <gearDisplay controller="button" pages="0,2"/>
     </image>
-    <text id="n15_rknv" name="time" xy="425,12" size="232,29" fontSize="18" color="#333333" align="right" vAlign="middle" letterSpacing="3" autoSize="none" text="2020/3/17   9:11:54">
+    <text id="n15_rknv" name="time" xy="425,12" size="232,29" visible="false" fontSize="18" color="#333333" align="right" vAlign="middle" letterSpacing="3" autoSize="none" text="2020/3/17   9:11:54">
       <relation target="" sidePair="right-right"/>
     </text>
   </displayList>
