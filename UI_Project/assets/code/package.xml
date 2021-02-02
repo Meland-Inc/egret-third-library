@@ -254,6 +254,14 @@
     <image id="sjwq6w" name="icon_code_sy_2.png" path="/img/"/>
     <image id="sjwq6x" name="icon_code_sy_1.png" path="/img/"/>
     <component id="f1wf74" name="SoundLibraryMessageArgShape.xml" path="/codeBlock/" exported="true"/>
+    <component id="jeh775" name="SurroundMessageArgShape.xml" path="/codeBlock/" exported="true"/>
+    <image id="jeh776" name="icon_junior_cycle.png" path="/img/"/>
+    <component id="jeh777" name="ForkableStartJunior.xml" path="/codeBlock/" exported="true"/>
+    <component id="vnsa78" name="spLeft.xml" path="/img/sprite/"/>
+    <component id="vnsa79" name="spRight.xml" path="/img/sprite/"/>
+    <image id="vnsa7a" name="icon_code_JR_09.png" path="/img/JRCode/"/>
+    <image id="vnsa7b" name="icon_code_JR_10.png" path="/img/JRCode/"/>
+    <image id="vnsa7c" name="icon_code_JR_11.png" path="/img/JRCode/"/>
   </resources>
   <publish name="code"/>
 </packageDescription>

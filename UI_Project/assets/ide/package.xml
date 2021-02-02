@@ -837,6 +837,28 @@
     <component id="aqs713564y9" name="ComTimelineTrackCodeDegreeDrag.xml" path="/timeline/com/" exported="true"/>
     <component id="aqs713564ya" name="ComTimelineCodeCtnr.xml" path="/timeline/com/"/>
     <component id="dk7h13564yb" name="ToolTipTimelineCodePaste.xml" path="/timeline/com/" exported="true"/>
+    <component id="jeh7cyikm" name="ComItemIcon.xml" path="/ideCommon/com/" exported="true"/>
+    <component id="vnsa13564ye" name="TooltipSelectSurroundRect.xml" path="/ideCommon/com/" exported="true"/>
+    <component id="vnsa13564yf" name="comRhombSurroundItem.xml" path="/ideCommon/com/"/>
+    <image id="vnsa13564yh" name="img_blue_selected.png" path="/ideCommon/img/"/>
+    <image id="vnsa13564yi" name="icon_code_JR_08.png" path="/ideCommon/img/"/>
+    <image id="vnsa13564yj" name="img_code_JR_01.png" path="/ideCommon/img/" scale="9grid" scale9grid="25,22,22,15"/>
+    <image id="vnsa13564yk" name="img_code_JR_02.png" path="/ideCommon/img/" duplicatePadding="true"/>
+    <image id="vnsa13564yl" name="btn_code_JR_01.png" path="/ideCommon/img/"/>
+    <image id="vnsa13564ym" name="btn_code_JR_02.png" path="/ideCommon/img/"/>
+    <image id="vnsa13564yn" name="btn_code_JR_03.png" path="/ideCommon/img/"/>
+    <image id="vnsa13564yo" name="btn_code_JR_04.png" path="/ideCommon/img/"/>
+    <image id="vnsa13564yp" name="icon_code_JR_01.png" path="/ideCommon/img/"/>
+    <image id="vnsa13564yq" name="icon_code_JR_02.png" path="/ideCommon/img/"/>
+    <image id="vnsa13564yr" name="icon_code_JR_03.png" path="/ideCommon/img/"/>
+    <image id="vnsa13564ys" name="icon_code_JR_04.png" path="/ideCommon/img/"/>
+    <image id="vnsa13564yt" name="icon_code_JR_05.png" path="/ideCommon/img/"/>
+    <image id="vnsa13564yu" name="icon_code_JR_06.png" path="/ideCommon/img/"/>
+    <image id="vnsa13564yv" name="icon_code_JR_07.png" path="/ideCommon/img/"/>
+    <component id="vnsa13564yw" name="comRectSurroundItem.xml" path="/ideCommon/com/"/>
+    <component id="vnsa13564yy" name="comSelectRectSurround.xml" path="/ideCommon/com/" exported="true"/>
+    <component id="vnsa13564z0" name="comSelectRhombSurround.xml" path="/ideCommon/com/" exported="true"/>
+    <component id="vnsa13564z1" name="TooltipSelectSurroundRhomb.xml" path="/ideCommon/com/" exported="true"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>
