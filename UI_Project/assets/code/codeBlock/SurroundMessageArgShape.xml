@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="80,70">
+  <controller name="ctrlSelect" pages="0,up,1,rightUp,2,right,3,rightDown,4,down,5,leftDown,6,left,7,leftUp,8,center" selected="3">
+    <action type="change_page" fromPage="" toPage="" objectId="n2_vnsa" controller="ctrlSelect" targetPage="~1"/>
+    <action type="change_page" fromPage="" toPage="" objectId="n3_vnsa" controller="ctrlSelect" targetPage="~1"/>
+  </controller>
+  <controller name="ctrlMapType" pages="0,rect,1,rhomb" selected="1"/>
+  <displayList>
+    <component id="n2_vnsa" name="comRectSurround" src="vnsa13564yy" fileName="ideCommon/com/comSelectRectSurround.xml" pkg="ti9jag5t" xy="13,7" scale="0.4,0.4" touchable="false">
+      <gearDisplay controller="ctrlMapType" pages="0"/>
+    </component>
+    <component id="n3_vnsa" name="comRhombSurround" src="vnsa13564z0" fileName="ideCommon/com/comSelectRhombSurround.xml" pkg="ti9jag5t" xy="0,7" scale="0.4,0.4" touchable="false">
+      <gearDisplay controller="ctrlMapType" pages="1"/>
+    </component>
+  </displayList>
+</component>

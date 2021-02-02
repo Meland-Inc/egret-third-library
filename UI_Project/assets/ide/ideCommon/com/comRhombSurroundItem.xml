@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="52,39" extention="Button" bgColor="#0033ff">
+  <controller name="button" pages="2,up,3,down" selected="1"/>
+  <displayList>
+    <loader id="n3_vnsa" name="n3" xy="0,0" size="52,39" url="ui://ti9jag5tvnsa13564yo">
+      <gearIcon controller="button" pages="3" values="ui://ti9jag5tvnsa13564yo" default="ui://ti9jag5tvnsa13564yn"/>
+    </loader>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

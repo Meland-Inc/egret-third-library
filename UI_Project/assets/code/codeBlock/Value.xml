@@ -2,7 +2,7 @@
 <component size="80,44">
   <controller name="color" pages="0,DeepBlue,1,LightBlue,2,LightRed,3,DeepRed,4,Purple,5,Green,6,Pink,7,Carnation,8,LightYellow,9,DeepYellow,10,PinkRed,11,Grey" selected="0"/>
   <controller name="isAlone" pages="1,false,0,true" selected="0"/>
-  <controller name="ctrlValueType" pages="1,none,0,interactive,2,entity,3,output,4,question,5,xy,6,class,7,publicVar,8,privateVar,9,publicList,10,privateList,11,bubble,12,movie,13,sound" selected="13"/>
+  <controller name="ctrlValueType" pages="1,none,0,interactive,2,entity,3,output,4,question,5,xy,6,class,7,publicVar,8,privateVar,9,publicList,10,privateList,11,bubble,12,movie,13,sound,15,location" selected="13"/>
   <displayList>
     <loader id="n2_emrm" name="ladBG" xy="0,0" size="80,44" url="ui://t573fj5bt1ls5i" fill="scaleFree">
       <gearDisplay controller="isAlone" pages="1"/>
@@ -19,8 +19,8 @@
     </loader>
     <component id="n1_flp7" name="container" src="i6xe2d" fileName="com/Container.xml" xy="19,0" size="46,44" restrictSize="0,0,44,44"/>
     <loader id="n4_kt4s" name="btnHint" xy="6,3" size="38,38" url="ui://t573fj5bsjwq6x" align="center" vAlign="middle">
-      <gearDisplay controller="ctrlValueType" pages="0,2,3,4,5,6,7,8,9,10,11,12,13"/>
-      <gearIcon controller="ctrlValueType" pages="1,0,2,3,4,5,6,7,8,9,10,11,12,13" values="|ui://t573fj5bs45wz|ui://t573fj5bs45wv|ui://t573fj5bs45wr|ui://t573fj5bs45wx|ui://t573fj5bs45w10|ui://t573fj5bs45wt|ui://t573fj5bs45wn|ui://t573fj5bs45wo|ui://t573fj5bs45wp|ui://t573fj5bs45wq|ui://t573fj5bn4k86i|ui://t573fj5bnlmf6l|ui://t573fj5bsjwq6x"/>
+      <gearDisplay controller="ctrlValueType" pages="0,2,3,4,5,6,7,8,9,10,11,12,13,15"/>
+      <gearIcon controller="ctrlValueType" pages="1,0,2,3,4,5,6,7,8,9,10,11,12,13" values="|ui://t573fj5bs45wz|ui://t573fj5bs45wv|ui://t573fj5bs45wr|ui://t573fj5bs45wx|ui://t573fj5bs45w10|ui://t573fj5bs45wt|ui://t573fj5bs45wn|ui://t573fj5bs45wo|ui://t573fj5bs45wp|ui://t573fj5bs45wq|ui://t573fj5bn4k86i|ui://t573fj5bnlmf6l|ui://t573fj5bsjwq6x" default="ui://t573fj5bsjwq6x"/>
       <relation target="n3_yrfu" sidePair="left-left"/>
     </loader>
   </displayList>
