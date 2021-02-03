@@ -7,13 +7,11 @@ import * as util from "./Util.js";
 
 const input_suffix_path = '/TextureInput/texture';
 const ground_output_suffix_path = '/TextureOutput/ground';
-const surface_output_suffix_path = '/TextureOutput/surface';
 const floor_output_suffix_path = '/TextureOutput/floor';
 const object_output_suffix_path = '/TextureOutput/object';
 const multi_output_suffix_path = '/TextureOutput/multi';
 
 const ground_2d_output_suffix_path = '/TextureOutput/ground2d';
-const floor_2d_output_suffix_path = '/TextureOutput/floor2d';
 const object_2d_output_suffix_path = '/TextureOutput/object2d';
 
 const sheet_suffix_path = '/TextureSheet';
@@ -36,8 +34,6 @@ const itemIconSfx = "itemIcon";
 const avatarIconSfx = "avatarIcon";
 const groundSfx = "ground";
 const floorSfx = "floor";
-// const surfaceSfx = "surface"
-// const materialSfx = "material";
 const objectSfx = "object";
 const objectDecorateSfx = "objectDecorate";
 const multiPictureSfx = "multiPicture";
@@ -48,9 +44,6 @@ const object2dSfx = "object2d";
 const sheetSfxArr = [
     itemIconSfx,
     avatarIconSfx,
-    groundSfx,
-    floorSfx,
-    ground2dSfx
 ];
 
 const objectType = {
@@ -117,11 +110,15 @@ export async function clearTexture() {
     let objPath = Global.svnArtPath + object_output_suffix_path;
     let groundPath = Global.svnArtPath + ground_output_suffix_path;
     let floorPath = Global.svnArtPath + floor_output_suffix_path;
+    const obj2dPath = Global.svnArtPath + object_2d_output_suffix_path;
+    const ground2dPath = Global.svnArtPath + ground_2d_output_suffix_path;
     try {
         await fsExc.delFiles(inputPath);
         await fsExc.delFiles(objPath);
         await fsExc.delFiles(groundPath);
         await fsExc.delFiles(floorPath);
+        await fsExc.delFiles(obj2dPath);
+        await fsExc.delFiles(ground2dPath);
         Global.toast('清空纹理成功');
     } catch (error) {
         Global.snack('清空纹理错误', error);
@@ -202,13 +199,13 @@ export async function clipTexture() {
 
             if (iterator.isMultiPicture) {
                 outPath = Global.svnArtPath + multi_output_suffix_path;
-            } else if (iterator.type === objectType.ObjectTypeGround) {
-                outPath = Global.svnArtPath + ground_output_suffix_path;
+                // } else if (iterator.type === objectType.ObjectTypeGround) {
+                //     outPath = Global.svnArtPath + ground_output_suffix_path;
                 // FIXME: 现在地表太多没用的资源了, 暂时先不打成图集
                 // } else if (iterator.type === objectType.ObjectTypeSurface) {
                 //     outPath = Global.svnArtPath + surface_output_suffix_path;
-            } else if (iterator.type === objectType.ObjectTypeFloor) {
-                outPath = Global.svnArtPath + floor_output_suffix_path;
+                // } else if (iterator.type === objectType.ObjectTypeFloor) {
+                //     outPath = Global.svnArtPath + floor_output_suffix_path;
             } else {
                 outPath = Global.svnArtPath + object_output_suffix_path;
             }
@@ -218,13 +215,13 @@ export async function clipTexture() {
 
         let get2dOutPath = (iterator) => {
             let outPath;
-            if (iterator.type === objectType.ObjectTypeGround) {
-                outPath = Global.svnArtPath + ground_2d_output_suffix_path;
-            } else if (iterator.type === objectType.ObjectTypeFloor) {
-                outPath = Global.svnArtPath + floor_2d_output_suffix_path;
-            } else {
-                outPath = Global.svnArtPath + object_2d_output_suffix_path;
-            }
+            // if (iterator.type === objectType.ObjectTypeGround) {
+            //     outPath = Global.svnArtPath + ground_2d_output_suffix_path;
+            // } else if (iterator.type === objectType.ObjectTypeFloor) {
+            //     outPath = Global.svnArtPath + floor_2d_output_suffix_path;
+            // } else {
+            outPath = Global.svnArtPath + object_2d_output_suffix_path;
+            // }
 
             return outPath;
         }
@@ -397,18 +394,31 @@ export async function copyTextureOut() {
                     outputPath = needDelPath;
                 }
             } else {
-                //纹理
-                if (iterator == objectSfx) {
-                    //object 用裁剪后的单个纹理
-                    inputPath = Global.svnArtPath + object_output_suffix_path;
-                } else if (iterator == multiPictureSfx) {
-                    //multi 超多格物品裁剪后的纹理
-                    inputPath = Global.svnArtPath + multi_output_suffix_path;
-                } else if (iterator === object2dSfx) {
-                    //object 2d 用裁剪后的单个纹理
-                    inputPath = Global.svnArtPath + object_2d_output_suffix_path;
-                } else {
-                    inputPath = `${Global.svnPath}/versionRes/trunk/settings/resource/${iterator}`;
+                switch (iterator) {
+                    case objectSfx:
+                        //object 用裁剪后的单个纹理
+                        inputPath = Global.svnArtPath + object_output_suffix_path;
+                        break;
+                    case multiPictureSfx:
+                        //multi 超多格物品裁剪后的纹理
+                        inputPath = Global.svnArtPath + multi_output_suffix_path;
+                        break;
+                    case groundSfx:
+                        inputPath = Global.svnArtPath + ground_output_suffix_path;
+                        break;
+                    case floorSfx:
+                        inputPath = Global.svnArtPath + floor_output_suffix_path;
+                        break;
+                    case object2dSfx:
+                        //object 2d 用裁剪后的单个纹理
+                        inputPath = Global.svnArtPath + object_2d_output_suffix_path;
+                        break;
+                    case ground2dSfx:
+                        inputPath = Global.svnArtPath + ground_2d_output_suffix_path;
+                        break;
+                    default:
+                        inputPath = `${Global.svnPath}/versionRes/trunk/settings/resource/${iterator}`;
+                        break;
                 }
 
                 if (iterator === AnimationSfx) {
