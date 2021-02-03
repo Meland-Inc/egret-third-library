@@ -199,13 +199,13 @@ export async function clipTexture() {
 
             if (iterator.isMultiPicture) {
                 outPath = Global.svnArtPath + multi_output_suffix_path;
-                // } else if (iterator.type === objectType.ObjectTypeGround) {
-                //     outPath = Global.svnArtPath + ground_output_suffix_path;
+            } else if (iterator.type === objectType.ObjectTypeGround) {
+                outPath = Global.svnArtPath + ground_output_suffix_path;
                 // FIXME: 现在地表太多没用的资源了, 暂时先不打成图集
                 // } else if (iterator.type === objectType.ObjectTypeSurface) {
                 //     outPath = Global.svnArtPath + surface_output_suffix_path;
-                // } else if (iterator.type === objectType.ObjectTypeFloor) {
-                //     outPath = Global.svnArtPath + floor_output_suffix_path;
+            } else if (iterator.type === objectType.ObjectTypeFloor) {
+                outPath = Global.svnArtPath + floor_output_suffix_path;
             } else {
                 outPath = Global.svnArtPath + object_output_suffix_path;
             }
@@ -215,13 +215,13 @@ export async function clipTexture() {
 
         let get2dOutPath = (iterator) => {
             let outPath;
-            // if (iterator.type === objectType.ObjectTypeGround) {
-            //     outPath = Global.svnArtPath + ground_2d_output_suffix_path;
-            // } else if (iterator.type === objectType.ObjectTypeFloor) {
-            //     outPath = Global.svnArtPath + floor_2d_output_suffix_path;
-            // } else {
-            outPath = Global.svnArtPath + object_2d_output_suffix_path;
-            // }
+            if (iterator.type === objectType.ObjectTypeGround) {
+                outPath = Global.svnArtPath + ground_2d_output_suffix_path;
+                // } else if (iterator.type === objectType.ObjectTypeFloor) {
+                //     outPath = Global.svnArtPath + floor_2d_output_suffix_path;
+            } else {
+                outPath = Global.svnArtPath + object_2d_output_suffix_path;
+            }
 
             return outPath;
         }
