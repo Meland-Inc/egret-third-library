@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="500,44">
+  <controller name="ctrlResult" pages="0,success,1,faild,2,timeout" selected="2"/>
+  <displayList>
+    <image id="n0_lj75" name="n0" src="umtscyiii" fileName="img/img_cm_tck_2.png" pkg="te1gxawo" xy="0,0"/>
+    <loader id="n2_lj75" name="ladIcon" xy="167,10" size="24,24" url="ui://0axy98cglj75ck" autoSize="true">
+      <gearIcon controller="ctrlResult" pages="0,1,2" values="ui://0axy98cglj75cl|ui://0axy98cglj75ck|ui://0axy98cglj75ck"/>
+      <relation target="n3_lj75" sidePair="left-left"/>
+    </loader>
+    <text id="n3_lj75" name="n3" xy="214,9" size="71,25" fontSize="17" color="#ffffff" align="center" vAlign="middle" strokeColor="#333333" text="保存超时">
+      <gearText controller="ctrlResult" pages="0,1,2" values="保存成功！|保存失败！|保存超时"/>
+      <relation target="" sidePair="center-center"/>
+    </text>
+  </displayList>
+  <transition name="transIn">
+    <item time="0" type="Alpha" tween="true" startValue="0" endValue="1" duration="24"/>
+    <item time="48" type="Alpha" tween="true" startValue="1" endValue="0" duration="24"/>
+  </transition>
+</component>
