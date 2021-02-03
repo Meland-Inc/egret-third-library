@@ -75,7 +75,7 @@
           </mu-col>
           <mu-col span="12">
             <mu-text-field
-              placeholder="(itemIcon,avatarIcon,ground,floor此选项无效,永远都是图集模式)"
+              placeholder="(itemIcon,avatarIcon此选项无效,永远都是图集模式)"
               :disabled="true"
               :solo="true"
               full-width

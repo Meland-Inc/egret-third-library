@@ -2,7 +2,7 @@ import { ipcRenderer } from 'electron';
 import { ModelMgr } from "./model/ModelMgr";
 
 export class Global {
-    static currentVersion = "1.9.9 beta2";
+    static currentVersion = "1.9.9 beta3";
     static projPath = localStorage.getItem('client_project_path');
     static protoPath = localStorage.getItem('client_proto_path');
     static svnPath = localStorage.getItem('client_svn_path');
@@ -140,11 +140,11 @@ export class Global {
     static get cdnUrl() {
         return "http://bg-stage.wkcoding.com";
     }
-    
+
     static get foolClientPath() {
         return Global.svnPath + '/foolClient';
     }
-    
+
     static get foolProjectPath() {
         return Global.svnPath + '/foolClient/html';
     }
