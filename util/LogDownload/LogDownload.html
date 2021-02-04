@@ -116,6 +116,7 @@
 
         let url = 'http://47.103.29.74/';
         let clientUrl = url + 'clientlogs/';
+        let summaryUrl = url + 'summary/';
         let nativeLogUrl = url + 'native_logs/';
 
         $(document).ready(() => {
@@ -126,7 +127,7 @@
             $.ajaxSettings.async = false;
             const isAuto = isAutoCheckbox.checked;
 
-            findFiles(clientUrl, isAuto);
+            findFiles(summaryUrl, isAuto);
 
             $.ajaxSettings.async = true;
             fileArr.sort((a, b) => b.time - a.time);
