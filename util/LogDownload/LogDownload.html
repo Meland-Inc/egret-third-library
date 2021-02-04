@@ -23,6 +23,9 @@
             <input class="layui-input" name="id" id="playerNameInput" placeholder="player name">
         </div>
         <div class="layui-inline">
+            <input class="layui-input" name="id" id="realNameInput" placeholder="real name">
+        </div>
+        <div class="layui-inline">
             <input class="layui-input" name="id" id="playerIdInput" placeholder="player id">
         </div>
         <div class="layui-inline">
@@ -50,6 +53,8 @@
     </fieldset>
 
     <script type='module'>
+        let fileArr = [];
+
         layui.use('table', function () {
             //方法级渲染
             layui.table.render({
@@ -62,7 +67,24 @@
                 ]]
                 , id: 'layuiTable'
                 , page: true
-                , height: 310
+                , height: 480
+                , done: function (res, curPage, count) {
+                    const startIndex = fileArr.findIndex((file) => file.id == res.data[0].id);
+                    $.ajaxSettings.async = false;
+                    let isChange = false;
+                    for (let index = 0; index < res.data.length; index++) {
+                        const fileDetail = res.data[index];
+                        if (fileDetail.describe) continue;
+                        $.get(fileDetail.fileUrl)
+                            .success(function (content) {
+                                isChange = true;
+                                const fullInfo = JSON.parse(content);
+                                fileArr[startIndex + index] = { ...fullInfo, ...fileDetail };
+                            })
+                    }
+                    isChange && showFiles(fileArr, curPage);
+                    $.ajaxSettings.async = true;
+                }
             });
         });
 
@@ -83,6 +105,7 @@
         let selectField = [];
 
         playerNameInput.onkeydown = enterSearch;
+        realNameInput.onkeydown = enterSearch;
         playerIdInput.onkeydown = enterSearch;
         playerActIdInput.onkeydown = enterSearch;
         showNameSearch.onkeydown = enterSearch;
@@ -90,14 +113,13 @@
         findBtn.onclick = findFile;
         btn.onclick = download;
         isAutoCheckbox.onclick = getFile;
-        let fileArr = [];
 
         let url = 'http://47.103.29.74/';
         let clientUrl = url + 'clientlogs/';
         let nativeLogUrl = url + 'native_logs/';
 
         $(document).ready(() => {
-            getFile();
+            setTimeout(() => getFile(), 200);//这里延时是因为 layui.table.render 要点时间
         });
 
         function getFile() {
@@ -124,18 +146,23 @@
                 success: function (data) {
                     fileArr = [];
                     $(data).find("a").each(function () {
-                        const fileName = unescape($(this).attr("href"));
-                        if (/summary/g.test(fileName)) {
-                            $.get(tUrl + fileName)
-                                .success(function (content) {
-                                    const fileDetail = JSON.parse(content);
-                                    if (!fileDetail.isAuto == !tIsAuto) {
-                                        fileDetail.time = new Date(fileDetail.time);
-                                        fileDetail.showTime = fileDetail.time.toLocaleString();
-                                        fileDetail.showName = `${fileDetail.playerName}_${fileDetail.time.toLocaleString()}_${fileDetail.describe}`;
-                                        fileArr.push(fileDetail);
-                                    }
-                                })
+                        const fileName = decodeURI($(this).attr("href"));
+                        let reg = /(\d+-\d+-\d+_\d+-\d+)_(\d+)(_realName-([^_]+))*(_playerName-([^_]+))*(_actId-([^_]+))*(_playerId-([^_]+))*(_uploadTime-([^_]+))*.*_summary\.log/g;
+                        let execArr = reg.exec(fileName);
+                        let i = 0;
+                        if (execArr && !!execArr[12] == !tIsAuto) {
+                            const fileDetail = {};
+                            fileDetail.id = i++;
+                            fileDetail.fileUrl = tUrl + fileName;
+                            fileDetail.time = new Date(+execArr[2]);
+                            fileDetail.showTime = fileDetail.time.toLocaleString();
+                            fileDetail.realName = execArr[4];
+                            fileDetail.playerName = execArr[6];
+                            fileDetail.actId = execArr[8];
+                            fileDetail.playerId = execArr[10];
+                            fileDetail.uploadTime = execArr[12];
+                            fileDetail.showName = `${fileDetail.playerName}_${fileDetail.time.toLocaleString()}`;
+                            fileArr.push(fileDetail);
                         }
                     });
                 }
@@ -152,6 +179,7 @@
         async function findFile() {
             selectField = fileArr;
             selectField = checkPlayerName(selectField);
+            selectField = checkRealName(selectField);
             selectField = checkPlayerId(selectField);
             selectField = checkTime(selectField);
             selectField = checkActId(selectField);
@@ -165,6 +193,14 @@
             if (!searchPlayerName) return tFileArr;
             return tFileArr.filter((tFile) => {
                 return fuzzysearch(searchPlayerName, unescape(tFile.playerName));
+            })
+        }
+
+        function checkRealName(tFileArr) {
+            const searchRealName = realNameInput.value;
+            if (!searchRealName) return tFileArr;
+            return tFileArr.filter((tFile) => {
+                return fuzzysearch(searchRealName, unescape(tFile.playerName));
             })
         }
 
@@ -209,10 +245,13 @@
             })
         }
 
-        function showFiles(tFiles) {
+        function showFiles(tFiles, tPage = 1) {
             layui.use('table', function () {
                 layui.table.reload('layuiTable', {
                     data: tFiles
+                    , page: {
+                        curr: tPage //重新从第 1 页开始
+                    }
                 }, 'data');
             })
         }
@@ -226,9 +265,10 @@
                 var zip = new JSZip();
                 let isNativeSaveAll = false;
                 let isWebSaveAll = false;
+                let isClientLogSave = false;
 
                 let checkIsEnd = (tIndex) => {
-                    if (!isNativeSaveAll || !isWebSaveAll) return;
+                    if (!isNativeSaveAll || !isWebSaveAll || !isClientLogSave) return;
                     if (tIndex == downloadFiles.length - 1) {
                         zip.generateAsync({ type: "blob" })
                             .then(function (content) {
@@ -244,40 +284,57 @@
                 }
 
                 let getFile = (fileInfo, index) => {
-                    const folder = zip.folder(`${fileInfo.showName.replace(/\//g, '_')}_${new Date().getTime()}`);
-                    const deferred = [];
-                    fileInfo.clientLog && deferred.push(folder.file(`webLog.log`, fileInfo.clientLog));
-                    fileInfo.describe && deferred.push(folder.file(`describe.txt`, fileInfo.describe));
-                    if (fileInfo.cloudServerAppIdArr && fileInfo.cloudServerAppIdArr.length) {
-                        deferred.push(folder.file(`cloudServerAppId.txt`, JSON.stringify(fileInfo.cloudServerAppIdArr)));
-                    }
-                    if (fileInfo.image && fileInfo.image.length) {
-                        fileInfo.image.forEach((tImg, tIndex) => {
-                            deferred.push(folder.file(`${tIndex}.png`, tImg.replace(/^data:image[^;]*;base64,/, ""), { base64: true }));
-                        })
-                    }
-                    //native的相关日志
-                    if (fileInfo.nativeLogNameArr && fileInfo.nativeLogNameArr.length) {
-                        fileInfo.nativeLogNameArr.forEach((tNativeLogName, nativeLogNameArrIndex) => {
-                            const nativeDeferred = [];
-                            $.get(nativeLogUrl + tNativeLogName)
-                                .success(function (content) {
-                                    nativeDeferred.push(folder.file(tNativeLogName, content))
-                                    if (nativeLogNameArrIndex == fileInfo.nativeLogNameArr.length - 1) {
-                                        $.when.apply($, nativeDeferred).then(() => {
-                                            isNativeSaveAll = true;
+                    $.get(fileInfo.fileUrl)
+                        .success(function (content) {
+
+                            const fullInfo = JSON.parse(content);
+                            const deferred = [];
+                            const folder = zip.folder(`${fileInfo.showName.replace(/\//g, '_')}_${new Date().getTime()}`);
+
+                            if (fullInfo.clientLog) {
+                                $.get(clientUrl + fullInfo.clientLog)
+                                    .success(function (clientContent) {
+                                        const webLogSave = [];
+                                        webLogSave.push(folder.file(`webLog.log`, clientContent))
+                                        $.when.apply($, webLogSave).then(() => {
+                                            isClientLogSave = true;
                                             checkIsEnd(index);
                                         });
-                                    }
+                                    })
+                            }
+
+                            fullInfo.describe && deferred.push(folder.file(`describe.txt`, fullInfo.describe));
+                            if (fullInfo.cloudServerAppIdArr && fullInfo.cloudServerAppIdArr.length) {
+                                deferred.push(folder.file(`cloudServerAppId.txt`, JSON.stringify(fullInfo.cloudServerAppIdArr)));
+                            }
+                            if (fullInfo.image && fullInfo.image.length) {
+                                fullInfo.image.forEach((tImg, tIndex) => {
+                                    deferred.push(folder.file(`${tIndex}.png`, tImg.replace(/^data:image[^;]*;base64,/, ""), { base64: true }));
                                 })
+                            }
+                            //native的相关日志
+                            if (fullInfo.nativeLogNameArr && fullInfo.nativeLogNameArr.length) {
+                                fullInfo.nativeLogNameArr.forEach((tNativeLogName, nativeLogNameArrIndex) => {
+                                    const nativeDeferred = [];
+                                    $.get(nativeLogUrl + tNativeLogName)
+                                        .success(function (nativeLogContent) {
+                                            nativeDeferred.push(folder.file(tNativeLogName, nativeLogContent))
+                                            if (nativeLogNameArrIndex == fullInfo.nativeLogNameArr.length - 1) {
+                                                $.when.apply($, nativeDeferred).then(() => {
+                                                    isNativeSaveAll = true;
+                                                    checkIsEnd(index);
+                                                });
+                                            }
+                                        })
+                                })
+                            } else {
+                                isNativeSaveAll = true;
+                            }
+                            $.when.apply($, deferred).then(() => {
+                                isWebSaveAll = true;
+                                checkIsEnd(index);
+                            });
                         })
-                    } else {
-                        isNativeSaveAll = true;
-                    }
-                    $.when.apply($, deferred).then(() => {
-                        isWebSaveAll = true;
-                        checkIsEnd(index);
-                    });
                 }
                 var fieldNum = downloadFiles.length;
                 let curGetFile = 0;
@@ -285,6 +342,7 @@
                     if (curGetFile <= fieldNum) {
                         isNativeSaveAll = false;
                         isWebSaveAll = false;
+                        isClientLogSave = false;
                         const fileInfo = downloadFiles[curGetFile];
                         getFile(fileInfo, curGetFile);
                     }
