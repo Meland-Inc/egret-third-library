@@ -672,6 +672,17 @@
     <image id="x3wvcyikj" name="brown.png" path="/img/hardware/" exported="true"/>
     <image id="x3wvcyikk" name="blue.png" path="/img/hardware/" exported="true"/>
     <image id="x3wvcyikl" name="black.png" path="/img/hardware/" exported="true"/>
+    <image id="lj75cyikm" name="img_cm_textBubble_cloud1.png" path="/img/textBubble/" scale="tile" duplicatePadding="true"/>
+    <image id="lj75cyikn" name="img_cm_textBubble_cloud2.png" path="/img/textBubble/" duplicatePadding="true"/>
+    <image id="lj75cyiko" name="img_cm_textBubble_cloud3.png" path="/img/textBubble/" scale="tile"/>
+    <image id="lj75cyikp" name="img_cm_textBubble_cloud4.png" path="/img/textBubble/"/>
+    <image id="lj75cyikq" name="img_cm_textBubble_yell1.png" path="/img/textBubble/" scale="tile" duplicatePadding="true"/>
+    <image id="lj75cyikr" name="img_cm_textBubble_yell2.png" path="/img/textBubble/" scale="tile" duplicatePadding="true"/>
+    <image id="lj75cyiks" name="img_cm_textBubbleCenter.png" path="/img/textBubble/" scale="9grid" scale9grid="14,14,28,28" duplicatePadding="true"/>
+    <component id="lj75cyikt" name="ComTextBubbleYell.xml" path="/com/" exported="true"/>
+    <image id="lj75cyiku" name="img_cm_textbubble_yell3.png" path="/img/textBubble/" duplicatePadding="true"/>
+    <component id="lj75cyikv" name="ComTextBubbleCloud.xml" path="/com/" exported="true"/>
+    <image id="lj75cyikx" name="img_cm_textBubble_cloud5.png" path="/img/textBubble/" scale="tile" duplicatePadding="true"/>
   </resources>
   <publish name="common">
     <atlas name="默认" index="0"/>
