@@ -146,11 +146,11 @@
                 },
                 success: function (data) {
                     fileArr = [];
+                    let i = 0;
                     $(data).find("a").each(function () {
-                        const fileName = decodeURI($(this).attr("href"));
                         let reg = /(\d+-\d+-\d+_\d+-\d+)_(\d+)(_realName-([^_]+))*(_playerName-([^_]+))*(_actId-([^_]+))*(_playerId-([^_]+))*(_uploadTime-([^_]+))*.*_summary\.log/g;
+                        const fileName = decodeURI($(this).attr("href"));
                         let execArr = reg.exec(fileName);
-                        let i = 0;
                         if (execArr && !!execArr[12] == !tIsAuto) {
                             const fileDetail = {};
                             fileDetail.id = i++;
@@ -226,7 +226,7 @@
             }
             if (!startDate) return tFileArr;
             return tFileArr.filter((tFile) => {
-                return value.time.getTime() >= startDate && value.time.getTime() <= endDate;
+                return tFile.time.getTime() >= startDate && tFile.time.getTime() <= endDate;
             })
         }
 
