@@ -8,7 +8,7 @@
     <image id="n15_go7e" name="imgBG1" src="qilnx" fileName="img/img_dra_dh_5.png" xy="0,0" size="100,92">
       <relation target="" sidePair="left-left,height-height"/>
     </image>
-    <list id="n10_d1ba" name="lstFrame" xy="98,0" size="1054,100" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="4" scrollBarRes=",ui://te1gxawoqylxcyijc" colGap="2" defaultItem="ui://a0pj43bjqilnz" autoItemSize="false">
+    <list id="n10_d1ba" name="lstFrame" xy="98,0" size="1054,100" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="4" scrollBarRes=",ui://te1gxawoqylxcyijc" colGap="2" defaultItem="ui://a0pj43bjqilnz" autoItemSize="false" autoClearItems="true">
       <relation target="" sidePair="width-width,height-height"/>
       <item/>
       <item/>
@@ -78,6 +78,6 @@
       <relation target="" sidePair="right-right"/>
       <Button icon="ui://a0pj43bjqilnf"/>
     </component>
-    <group id="n8_d1ba" name="btn" xy="1150,0" size="273,92" advanced="true" collapsed="true"/>
+    <group id="n8_d1ba" name="btn" xy="1150,0" size="273,92" advanced="true"/>
   </displayList>
 </component>
