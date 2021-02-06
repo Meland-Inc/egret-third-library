@@ -83,7 +83,7 @@
                                 fileArr[startIndex + index] = { ...fullInfo, ...fileDetail };
                             })
                     }
-                    isChange && showFiles(fileArr, curPage);
+                    isChange && showFiles(curPage);
                     $.ajaxSettings.async = true;
                 }
             });
@@ -111,7 +111,7 @@
         playerActIdInput.onkeydown = enterSearch;
         showNameSearch.onkeydown = enterSearch;
 
-        findBtn.onclick = findFile;
+        findBtn.onclick = showFiles;
         btn.onclick = download;
         isAutoCheckbox.onclick = getFile;
 
@@ -132,7 +132,7 @@
 
             $.ajaxSettings.async = true;
             fileArr.sort((a, b) => b.time - a.time);
-            findFile();
+            showFiles();
         }
 
         function findFiles(tUrl, tIsAuto) {
@@ -174,20 +174,19 @@
         function enterSearch() {
             var event = window.event || arguments.callee.caller.arguments[0];
             if (event.keyCode == 13) {
-                findFile();
+                showFiles();
             }
         }
 
-        async function findFile() {
-            selectField = fileArr;
+        function filtrateFile() {
+            let selectField = fileArr;
             selectField = checkPlayerName(selectField);
             selectField = checkRealName(selectField);
             selectField = checkPlayerId(selectField);
             selectField = checkTime(selectField);
             selectField = checkActId(selectField);
             selectField = checkShowName(selectField);
-
-            showFiles(selectField);
+            return selectField;
         }
 
         function checkPlayerName(tFileArr) {
@@ -247,10 +246,11 @@
             })
         }
 
-        function showFiles(tFiles, tPage = 1) {
+        function showFiles(tPage = 1) {
+            let showFiles = filtrateFile();
             layui.use('table', function () {
                 layui.table.reload('layuiTable', {
-                    data: tFiles
+                    data: showFiles
                     , page: {
                         curr: tPage //重新从第 1 页开始
                     }
