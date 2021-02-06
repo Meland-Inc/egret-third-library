@@ -664,14 +664,14 @@
     <component id="rtvda" name="MouseEffectComboBox.xml" path="/comboBox/mouseEffectComboBox/" exported="true"/>
     <component id="e7m0cyikb" name="CommonSubtitles.xml" path="/com/" exported="true"/>
     <image id="e7m0cyikd" name="img_cm_black.png" path="/img/color/" scale="9grid" scale9grid="2,2,4,4"/>
-    <image id="x3wvcyike" name="yellow.png" path="/img/hardware/"/>
-    <image id="x3wvcyikf" name="white.png" path="/img/hardware/"/>
-    <image id="x3wvcyikg" name="red.png" path="/img/hardware/"/>
-    <image id="x3wvcyikh" name="purple.png" path="/img/hardware/"/>
-    <image id="x3wvcyiki" name="green.png" path="/img/hardware/"/>
-    <image id="x3wvcyikj" name="brown.png" path="/img/hardware/"/>
-    <image id="x3wvcyikk" name="blue.png" path="/img/hardware/"/>
-    <image id="x3wvcyikl" name="black.png" path="/img/hardware/"/>
+    <image id="x3wvcyike" name="yellow.png" path="/img/hardware/" exported="true"/>
+    <image id="x3wvcyikf" name="white.png" path="/img/hardware/" exported="true"/>
+    <image id="x3wvcyikg" name="red.png" path="/img/hardware/" exported="true"/>
+    <image id="x3wvcyikh" name="purple.png" path="/img/hardware/" exported="true"/>
+    <image id="x3wvcyiki" name="green.png" path="/img/hardware/" exported="true"/>
+    <image id="x3wvcyikj" name="brown.png" path="/img/hardware/" exported="true"/>
+    <image id="x3wvcyikk" name="blue.png" path="/img/hardware/" exported="true"/>
+    <image id="x3wvcyikl" name="black.png" path="/img/hardware/" exported="true"/>
   </resources>
   <publish name="common">
     <atlas name="默认" index="0"/>
