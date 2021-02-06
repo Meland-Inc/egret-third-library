@@ -69,7 +69,6 @@
                 , page: true
                 , height: 480
                 , done: function (res, curPage, count) {
-                    const startIndex = fileArr.findIndex((file) => file.id == res.data[0].id);
                     $.ajaxSettings.async = false;
                     let isChange = false;
                     for (let index = 0; index < res.data.length; index++) {
@@ -80,7 +79,8 @@
                                 isChange = true;
                                 const fullInfo = JSON.parse(content);
                                 fullInfo.isFull = true;
-                                fileArr[startIndex + index] = { ...fullInfo, ...fileDetail };
+                                const oriIndex = fileArr.findIndex((file) => file.id == fileDetail.id);
+                                fileArr[oriIndex] = { ...fullInfo, ...fileDetail };
                             })
                     }
                     isChange && showFiles(curPage);
