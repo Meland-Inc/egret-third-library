@@ -74,11 +74,12 @@
                     let isChange = false;
                     for (let index = 0; index < res.data.length; index++) {
                         const fileDetail = res.data[index];
-                        if (fileDetail.describe) continue;
+                        if (fileDetail.isFull) continue;
                         $.get(fileDetail.fileUrl)
                             .success(function (content) {
                                 isChange = true;
                                 const fullInfo = JSON.parse(content);
+                                fullInfo.isFull = true;
                                 fileArr[startIndex + index] = { ...fullInfo, ...fileDetail };
                             })
                     }
