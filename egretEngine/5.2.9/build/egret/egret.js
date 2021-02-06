@@ -7129,6 +7129,7 @@ var egret;
                 var gl = bitmapData.glContext;
                 if (gl) {
                     gl.deleteTexture(bitmapData);
+                    egret.webglTextureNum--;
                 }
             }
         };
@@ -23404,6 +23405,8 @@ var egret;
 })(egret || (egret = {}));
 var egret;
 (function (egret) {
+    /**当前webgl的纹理数量 */
+    egret.webglTextureNum = 0;
     /**性能档位 */
     var ePerfType;
     (function (ePerfType) {

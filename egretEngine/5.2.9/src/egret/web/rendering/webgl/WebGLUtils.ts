@@ -87,6 +87,7 @@ namespace egret {
                 let gl = bitmapData.glContext;
                 if (gl) {
                     gl.deleteTexture(bitmapData);
+                    webglTextureNum--;
                 }
             }
         }
