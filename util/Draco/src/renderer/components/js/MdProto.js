@@ -85,9 +85,27 @@ export async function modifyTs() {
 
     try {
         await fsExc.writeFile(msgPath, content);
+        await analyticTs(content);
         Global.toast('修改ts文件成功');
     } catch (error) {
         Global.toast('修改ts文件错误', error);
+    }
+}
+
+/**解析内容获取不需要混淆的内容 */
+async function analyticTs(content) {
+    const reg = /enum (\w+)|(\w+) = |public (static)? (\w+)|class (\w+)/g;
+    let result = null;
+    let nameArr = new Set();
+    while ((result = reg.exec(content)) != null) {
+        const name = result[1] || result[2] || result[4] || result[5];
+        name && nameArr.add(name);
+    }
+    try {
+        await fsExc.writeFile(Global.projPath + "/src/protocol/noMangle.txt", Array.from(nameArr));
+        Global.toast('生成不混淆参数文件成功');
+    } catch (error) {
+        Global.toast('生成不混淆参数文件失败', error);
     }
 }
 

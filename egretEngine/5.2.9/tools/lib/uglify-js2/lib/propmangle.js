@@ -286,6 +286,14 @@ var bellplanetProp = ["animName",
     "WAIT_TIME_KEY", "waitEvent", "waitNum", "waitPlayComplete", "waitStep", "waitTime", "WaitTime", "walk", "walkable", "walkData", "walkDataArray", "walkDataCpt", "walkDirStr", "walkEnable", "walkHighGap", "wallBarrier", "wallConfigId", "wallDataMap", "wallEntity", "wallId", "wallIdMap", "walls", "wallTemplateId", "wanted", "wantEnterGodView", "wantHideWidget", "wantLeaveGodView", "warningCpt", "warnMsg", "wbCpt", "wbTip", "WeakGuideComClickTips", "WeakGuideMgr", "WeakGuideStep", "weakGuideStepMap", "weapon", "weaponCell", "weaponData", "weaponID", "Weather", "WEATHER_SYSTEM_TIME", "WEATHER_TYPE", "WeatherAnim", "WeatherAnimManager", "weatherCell", "WeatherContainer", "weatherMc", "WeatherMgrAddMask", "WeatherMgrHideMask", "WeatherMgrRemoveMask",
     "WeatherMgrShowMask", "weatherSystem", "weatherSystemHandler", "weatherVO", "WebGLLoader", "WEBSOCKET_EVENT", "websocketClose", "WebSocketInfo", "WebSocketMgr", "webSocketName", "webSocketSnode", "WebView", "WHOLE", "widget", "widgetDataList", "widgetLimitHide", "widthBlockNum", "widthIndex", "widthM", "widthNew", "widthToProjection", "win", "winBag", "WinBuildIde", "WIND", "windowContainer", "windowDepth", "winDrawingPad", "WinGameBag", "WinIslandSubmitAssetView", "WinLessonBag", "WinMapLookB", "winName", "wins", "winTemp", "without", "wood", "WORKBENCH_ENTITY_TYPE_LIST", "WORKBENCH_STATE_TIMER", "workbenchCell", "workbenchCells", "WorkbenchComponentAction", "WorkbenchComponentCancelAction", "workbenchCpt", "workbenchCptList", "workbenchData", "WorkbenchGetAction", "workbenchItems", "workbenchName", "workBenchName",
     "WorkbenchSetPromptAction", "workBenchTypeToEntityType", "workbenchUpdate", "workbenchUsePix", "workbenchVO", "WorkbenchVO", "workerPath", "x3", "x4", "xCount", "xHalf", "xIndex", "xIsInt", "xLen", "xNew", "xOffset", "xPos", "xSecond", "xTurnedPX", "xUint", "y3", "y4", "YaHei", "yCount", "YELLOW", "yHalf", "yIndex", "yIsInt", "yLen", "yNew", "yPos", "ySecond", "yTurnedPX", "yUint", "ZBitmap", "zh", "zip", "ZMovieClip", "ZNM", "zone", "zorder", "ZPoolBitmap",]
+
+exports.filterNoMangleProp = filterNoMangleProp;
+/**过滤掉不混淆的参数 */
+function filterNoMangleProp(noMangleProp) {
+    if (!noMangleProp) return;
+    bellplanetProp = bellplanetProp.filter(prop => !noMangleProp.includes(prop));
+}
+
 function find_builtins(reserved) {
     // NaN will be included due to Number.NaN
     [
