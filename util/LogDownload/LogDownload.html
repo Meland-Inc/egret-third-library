@@ -274,7 +274,9 @@
                     if (tIndex == downloadFiles.length - 1) {
                         zip.generateAsync({ type: "blob" })
                             .then(function (content) {
-                                saveAs(content, playerNameInput.value + '_' + timeRange.value + ".zip");
+                                const date = new Date();
+                                const downLoadTime = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}_${date.getHours()}-${date.getMinutes()}`;
+                                saveAs(content, downLoadTime + ".zip");
                             })
                             .catch((data) => {
                                 console.error(data);
