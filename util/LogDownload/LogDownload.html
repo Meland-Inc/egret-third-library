@@ -265,12 +265,8 @@
 
             if (downloadFiles.length > 0) {
                 var zip = new JSZip();
-                let isNativeSaveAll = false;
-                let isWebSaveAll = false;
-                let isClientLogSave = false;
 
                 let checkIsEnd = (tIndex) => {
-                    if (!isNativeSaveAll || !isWebSaveAll || !isClientLogSave) return;
                     if (tIndex == downloadFiles.length - 1) {
                         zip.generateAsync({ type: "blob" })
                             .then(function (content) {
@@ -296,15 +292,11 @@
                             const folder = zip.folder(`${fileInfo.showName.replace(/\//g, '_')}_${new Date().getTime()}`);
 
                             if (fullInfo.clientLog) {
-                                $.get(clientUrl + fullInfo.clientLog)
+                                deferred.push($.get(clientUrl + fullInfo.clientLog)
                                     .success(function (clientContent) {
-                                        const webLogSave = [];
-                                        webLogSave.push(folder.file(`webLog.log`, clientContent))
-                                        $.when.apply($, webLogSave).then(() => {
-                                            isClientLogSave = true;
-                                            checkIsEnd(index);
-                                        });
+                                        deferred.push(folder.file(`webLog.log`, clientContent))
                                     })
+                                )
                             }
 
                             fullInfo.describe && deferred.push(folder.file(`describe.txt`, fullInfo.describe));
@@ -319,34 +311,23 @@
                             //native的相关日志
                             if (fullInfo.nativeLogNameArr && fullInfo.nativeLogNameArr.length) {
                                 fullInfo.nativeLogNameArr.forEach((tNativeLogName, nativeLogNameArrIndex) => {
-                                    const nativeDeferred = [];
-                                    $.get(nativeLogUrl + tNativeLogName)
+                                    deferred.push($.get(nativeLogUrl + tNativeLogName)
                                         .success(function (nativeLogContent) {
-                                            nativeDeferred.push(folder.file(tNativeLogName, nativeLogContent))
-                                            if (nativeLogNameArrIndex == fullInfo.nativeLogNameArr.length - 1) {
-                                                $.when.apply($, nativeDeferred).then(() => {
-                                                    isNativeSaveAll = true;
-                                                    checkIsEnd(index);
-                                                });
-                                            }
+                                            deferred.push(folder.file(tNativeLogName, nativeLogContent))
                                         })
+                                    )
                                 })
-                            } else {
-                                isNativeSaveAll = true;
                             }
-                            $.when.apply($, deferred).then(() => {
-                                isWebSaveAll = true;
+
+                            Promise.all(deferred).then(() => {
                                 checkIsEnd(index);
-                            });
+                            })
                         })
                 }
                 var fieldNum = downloadFiles.length;
                 let curGetFile = 0;
                 let getNextFile = () => {
                     if (curGetFile <= fieldNum) {
-                        isNativeSaveAll = false;
-                        isWebSaveAll = false;
-                        isClientLogSave = false;
                         const fileInfo = downloadFiles[curGetFile];
                         getFile(fileInfo, curGetFile);
                     }
