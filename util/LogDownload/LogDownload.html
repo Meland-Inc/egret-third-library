@@ -270,6 +270,7 @@
                     if (tIndex == downloadFiles.length - 1) {
                         zip.generateAsync({ type: "blob" })
                             .then(function (content) {
+                                logView.innerHTML = '压缩并下载';
                                 const date = new Date();
                                 const downLoadTime = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}_${date.getHours()}-${date.getMinutes()}`;
                                 saveAs(content, downLoadTime + ".zip");
@@ -288,6 +289,7 @@
                         .success(function (content) {
 
                             const fullInfo = JSON.parse(content);
+                            logView.innerHTML = `写入    ${fileInfo.showName}`;
                             const deferred = [];
                             const folder = zip.folder(`${fileInfo.showName.replace(/\//g, '_')}_${new Date().getTime()}`);
 
@@ -319,7 +321,7 @@
                                 })
                             }
 
-                            Promise.all(deferred).then(() => {
+                            Promise.all(deferred).finally(() => {
                                 checkIsEnd(index);
                             })
                         })
