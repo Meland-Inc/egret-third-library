@@ -268,12 +268,13 @@
 
                 let checkIsEnd = (tIndex) => {
                     if (tIndex == downloadFiles.length - 1) {
+                        logView.innerHTML = '压缩并下载';
                         zip.generateAsync({ type: "blob" })
                             .then(function (content) {
-                                logView.innerHTML = '压缩并下载';
                                 const date = new Date();
                                 const downLoadTime = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}_${date.getHours()}-${date.getMinutes()}`;
                                 saveAs(content, downLoadTime + ".zip");
+                                logView.innerHTML = '';
                             })
                             .catch((data) => {
                                 console.error(data);
@@ -293,13 +294,37 @@
                             const deferred = [];
                             const folder = zip.folder(`${fileInfo.showName.replace(/\//g, '_')}_${new Date().getTime()}`);
 
+                            const webLogDeferred = [];
+                            const uploadedLogContentArr = [];
+                            let clientContent = '';
+                            if (fullInfo.uploadedName && fullInfo.uploadedName.length) {
+                                fullInfo.uploadedName.forEach((tClientUploadedLogName, tNameIndex) => {
+                                    webLogDeferred.push($.get(clientUrl + tClientUploadedLogName)
+                                        .success(function (uploadedLogContent) {
+                                            uploadedLogContentArr[tNameIndex] = uploadedLogContent;
+                                        })
+                                    )
+                                })
+                            }
                             if (fullInfo.clientLog) {
-                                deferred.push($.get(clientUrl + fullInfo.clientLog)
-                                    .success(function (clientContent) {
-                                        deferred.push(folder.file(`webLog.log`, clientContent))
+                                webLogDeferred.push($.get(clientUrl + fullInfo.clientLog)
+                                    .success(function (tClientContent) {
+                                        clientContent = tClientContent;
                                     })
                                 )
                             }
+
+                            deferred.push(Promise.all(webLogDeferred)
+                                .finally(() => {
+                                                let webLog = '';
+                                                for (const content of uploadedLogContentArr) {
+                                                    webLog += content;
+                                                }
+                                                webLog += clientContent;
+                                                deferred.push(folder.file(`webLog.log`, webLog))
+                                    deferred.push(folder.file(`webLog222.log`, clientContent))
+                                    })
+                            )
 
                             fullInfo.describe && deferred.push(folder.file(`describe.txt`, fullInfo.describe));
                             if (fullInfo.cloudServerAppIdArr && fullInfo.cloudServerAppIdArr.length) {
