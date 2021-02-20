@@ -271,8 +271,11 @@
                         logView.innerHTML = '压缩并下载';
                         zip.generateAsync({ type: "blob" })
                             .then(function (content) {
+                                let downLoadTime = downloadFiles[0].showName;
+                                if (tIndex) {
                                 const date = new Date();
-                                const downLoadTime = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}_${date.getHours()}-${date.getMinutes()}`;
+                                    downLoadTime = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}_${date.getHours()}-${date.getMinutes()}`;
+                                }
                                 saveAs(content, downLoadTime + ".zip");
                                 logView.innerHTML = '';
                             })
