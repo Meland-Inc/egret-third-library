@@ -1,56 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="430,1080" designImageOffsetX="-1635">
   <controller name="ctrlCombine" pages="0,normal,1,combine,2,split,3,editNone" selected="0"/>
+  <controller name="ctrlType" pages="0,normal,1,creature" selected="1"/>
   <displayList>
     <image id="n69_xba6" name="n69" src="xba67o" fileName="ideCommon/img/img_ide_cm_7.png" xy="0,0" size="430,1080">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n74_xba6" name="n74" src="hckx77" fileName="attribute/img/img_att_dh_1.png" xy="12,15" size="408,999">
-      <relation target="" sidePair="width-width,height-height"/>
+    <image id="n74_xba6" name="n74" src="hckx77" fileName="attribute/img/img_att_dh_1.png" xy="12,35" size="408,662">
+      <relation target="" sidePair="width-width"/>
+      <relation target="n89_jz24" sidePair="bottomext-top"/>
     </image>
-    <component id="n71_xba6" name="btnAniSelect" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="22,1029" size="120,40">
+    <text id="n83_izvl" name="textAni" xy="15,6" size="40,26" fontSize="18" text="动画"/>
+    <component id="n71_xba6" name="btnAniSelect" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="22,709" size="120,40">
       <gearDisplay controller="ctrlCombine" pages="0"/>
       <relation target="n53_fidk" sidePair="top-bottom"/>
       <Button title="添加动画"/>
     </component>
-    <component id="n73_xba6" name="btnCombine" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="152,1029" size="120,40">
+    <component id="n73_xba6" name="btnCombine" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="152,709" size="120,40">
       <gearDisplay controller="ctrlCombine" pages="0"/>
       <relation target="n53_fidk" sidePair="top-bottom"/>
       <Button title="组合动画" titleColor="#333333"/>
     </component>
-    <component id="n75_xba6" name="btnSave" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="306,1032" size="110,40" visible="false">
+    <component id="n75_xba6" name="btnSave" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="306,706" size="110,40" visible="false">
       <gearDisplay controller="ctrlCombine" pages="0"/>
-      <relation target="" sidePair="right-right,bottom-bottom"/>
+      <relation target="n53_fidk" sidePair="top-bottom"/>
       <Button title="保存" titleColor="#ffffff" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <component id="n76_xba6" name="btnExit" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="308,1032" size="110,40" visible="false">
+    <component id="n76_xba6" name="btnExit" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="308,706" size="110,40" visible="false">
       <gearDisplay controller="ctrlCombine" pages="0"/>
-      <relation target="" sidePair="right-right,bottom-bottom"/>
+      <relation target="n53_fidk" sidePair="top-bottom"/>
       <Button title="返回" titleColor="#ffffff" icon="ui://te1gxawoeggjcyihf"/>
     </component>
-    <component id="n77_xba6" name="btnConfirmCombine" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="306,1032" size="110,40">
+    <component id="n77_xba6" name="btnConfirmCombine" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="306,706" size="110,40">
       <gearDisplay controller="ctrlCombine" pages="1"/>
-      <relation target="" sidePair="bottom-bottom,right-right"/>
+      <relation target="n53_fidk" sidePair="top-bottom"/>
       <Button title="组合" titleColor="#ffffff" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <component id="n78_xba6" name="btnExitCombine" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="179,1032" size="110,40">
+    <component id="n78_xba6" name="btnExitCombine" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="179,706" size="110,40">
       <gearDisplay controller="ctrlCombine" pages="1,2,3"/>
-      <gearXY controller="ctrlCombine" pages="3" values="306,1032" default="179,1032"/>
-      <relation target="" sidePair="bottom-bottom,right-right"/>
+      <gearXY controller="ctrlCombine" pages="0,3" values="179,706|306,706" default="179,706"/>
+      <relation target="n53_fidk" sidePair="top-bottom"/>
       <Button title="取消" titleColor="#ffffff" icon="ui://te1gxawoeggjcyihf"/>
     </component>
-    <component id="n80_ivy5" name="btnSplit" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="286,1029" size="120,40">
+    <component id="n80_ivy5" name="btnSplit" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="286,709" size="120,40">
       <gearDisplay controller="ctrlCombine" pages="0"/>
       <relation target="n53_fidk" sidePair="top-bottom"/>
       <Button title="拆分动画" titleColor="#333333"/>
     </component>
-    <component id="n81_ivy5" name="btnConfirmSplit" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="306,1032" size="110,40">
+    <component id="n81_ivy5" name="btnConfirmSplit" src="xba67q" fileName="attribute/btn/btnScale.xml" xy="306,706" size="110,40">
       <gearDisplay controller="ctrlCombine" pages="2"/>
-      <relation target="" sidePair="bottom-bottom,right-right"/>
+      <relation target="n53_fidk" sidePair="top-bottom"/>
       <Button title="拆分" titleColor="#ffffff" icon="ui://te1gxawooiqdcyih1"/>
     </component>
-    <component id="n53_fidk" name="scrollAni" src="hckx6j" fileName="attribute/com/comBuildAniScroll.xml" xy="12,10" size="408,999">
-      <relation target="n74_xba6" sidePair="bottomext-bottom,width-width"/>
+    <component id="n53_fidk" name="scrollAni" src="hckx6j" fileName="attribute/com/comBuildAniScroll.xml" xy="12,39" size="408,650">
+      <relation target="n74_xba6" sidePair="width-width,bottomext-bottom"/>
     </component>
+    <loader id="n89_jz24" name="sizeFit" xy="12,756" size="408,297">
+      <gearSize controller="ctrlType" pages="0,1" values="408,0,1,1|408,297,1,1"/>
+      <relation target="" sidePair="bottom-bottom"/>
+    </loader>
+    <text id="n84_izvl" name="textFaceAni" xy="16,756" size="40,26" group="n87_izvl" fontSize="18" autoSize="none" text="表情">
+      <relation target="" sidePair=""/>
+    </text>
+    <image id="n85_izvl" name="n85" src="hckx77" fileName="attribute/img/img_att_dh_1.png" xy="12,782" size="408,271" group="n87_izvl"/>
+    <component id="n86_izvl" name="scrollFaceAni" src="izvl13564ye" fileName="attribute/com/comBuildFaceAniScroll.xml" xy="12,787" size="408,257" group="n87_izvl"/>
+    <group id="n87_izvl" name="faceGroup" xy="12,756" size="408,297" advanced="true">
+      <gearDisplay controller="ctrlType" pages="1"/>
+      <relation target="" sidePair="bottom-bottom"/>
+    </group>
   </displayList>
 </component>
