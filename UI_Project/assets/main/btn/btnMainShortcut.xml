@@ -15,16 +15,16 @@
       <gearDisplay controller="button" pages="1,3"/>
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
-    <image id="n11_eezl" name="n11" src="q0aswcyimk" fileName="img/img_zhuangbei_02.png" xy="5,61" size="70,11" group="n13_eezl"/>
-    <graph id="n12_eezl" name="gphDurability" xy="7,63" size="66,7" group="n13_eezl" type="rect" lineSize="0" fillColor="#ff5ae424" corner="7"/>
-    <group id="n13_eezl" name="grpDurability" xy="5,61" size="70,11" visible="false" advanced="true">
-      <gearDisplay controller="ctrlStatus" pages="0,1"/>
-    </group>
     <loader id="n1_qrx3" name="icon" xy="40,40" pivot="0.5,0.5" anchor="true" size="64,64" group="n4_eezl" touchable="false" align="center" vAlign="middle" fill="scale" shrinkOnly="true">
       <relation target="" sidePair=""/>
       <relation target="n2_qrx3" sidePair="center-center,middle-middle"/>
     </loader>
     <group id="n4_eezl" name="grpItemIcon" xy="8,8" size="64,64" advanced="true"/>
+    <image id="n11_eezl" name="n11" src="q0aswcyimk" fileName="img/img_zhuangbei_02.png" xy="5,61" size="70,11" group="n13_eezl"/>
+    <graph id="n12_eezl" name="gphDurability" xy="7,63" size="66,7" group="n13_eezl" type="rect" lineSize="0" fillColor="#ff5ae424" corner="7"/>
+    <group id="n13_eezl" name="grpDurability" xy="5,61" size="70,11" visible="false" advanced="true">
+      <gearDisplay controller="ctrlStatus" pages="0,1"/>
+    </group>
     <image id="n8_eezl" name="imgEquipStatus" src="q0aswcyiml" fileName="img/img_bac_pzk_4.png" xy="6,8">
       <gearDisplay controller="ctrlStatus" pages="1"/>
     </image>
