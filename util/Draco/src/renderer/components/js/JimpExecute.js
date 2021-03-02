@@ -643,8 +643,8 @@ export function jimpPng(id, area, texture, input_path, output_path) {
                         // hasBottomLeft = false;
                         // hasBottomRight = false;
 
-                        let deviationX = -1;     //x轴偏差值
-                        let deviationY = 0;     //y轴偏差值
+                        let deviationX = Global.rhombDeviationX;     //x轴偏差值
+                        let deviationY = Global.rhombDeviationY;     //y轴偏差值
 
                         let newImage = new jimp(tileWidth, topDistance + tileHeight + bottomDistance + gapY + deviationY);
                         let cutImgX = (rowLen - 1 - row + col) * halfTileWidth;             //完整图片中,当前图片所在的起点X
@@ -833,7 +833,7 @@ export function jimpPng(id, area, texture, input_path, output_path) {
                 }
                 resolve();
             }).catch(error => {
-                Global.snack(`裁剪纹理错误 id:${id}`, error);
+                Global.snack(`裁剪纹理错误 id:${id}, texture:${texture}`, error);
                 resolve();
             });
     });
@@ -859,8 +859,8 @@ export function jimp2dPng(id, area, texture, input_path, output_path) {
                         let topImageHigh = imageHeight - rowLen * tileHeight;
                         let topDistance = row === 0 ? 0 : topImageHigh;
 
-                        let deviationX = col === colLen - 1 ? 0 : 1;     //x轴偏差值    最边上的图不用添加偏移值
-                        let deviationY = 1;     //y轴偏差值
+                        let deviationX = col === colLen - 1 ? 0 : Global.rectDeviationX;     //x轴偏差值    最边上的图不用添加偏移值
+                        let deviationY = Global.rectDeviationY;     //y轴偏差值
 
                         let newImageHeight = row === 0 ? topImageHigh + tileHeight + deviationY : tileHeight + deviationY;
                         let newImageWidth = col === colLen - 1 ? imageWidth - (colLen - 1) * tileWidth + deviationX : tileWidth + deviationX;
@@ -883,9 +883,11 @@ export function jimp2dPng(id, area, texture, input_path, output_path) {
                 }
                 resolve();
             }).catch(error => {
-                Global.snack(`裁剪纹理错误 id:${id}`, error);
+                Global.snack(`裁剪纹理错误 id:${id}, texture:${texture}`, error);
                 resolve();
-            });
+            }).finally(() => {
+                resolve();
+            })
     });
 }
 
