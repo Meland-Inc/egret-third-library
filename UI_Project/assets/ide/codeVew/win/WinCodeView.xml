@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" opaque="false" designImage="ui://thvmj7voen7j4cyij9" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlStatus" pages="2,none,1,clone,0,elem,6,res,8,cannotEdit" selected="0">
+  <controller name="ctrlStatus" pages="2,none,1,clone,0,elem,6,res,8,cannotEdit" selected="2">
     <action type="change_page" fromPage="" toPage="2" objectId="n32_g61s" controller="ctrlStatus" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n32_g61s" controller="ctrlStatus" targetPage="1"/>
     <action type="change_page" fromPage="" toPage="6" objectId="n32_g61s" controller="ctrlStatus" targetPage="4"/>
@@ -24,7 +24,7 @@
     <component id="n5_lctb" name="comCodeBlockExclusiveChoiceList" src="lctb3w" fileName="codeVew/oldCom/ComCodeBlockExclusiveChoiceList.xml" xy="1443,0" size="362,1080" group="n16_en7j">
       <relation target="" sidePair="right-right,height-height"/>
     </component>
-    <component id="n6_lctb" name="comCalculator" src="lctb41" fileName="codeVew/oldCom/ComCodeCalculator.xml" xy="1393,0" group="n16_en7j">
+    <component id="n6_lctb" name="comCalculator" src="lctb41" fileName="codeVew/com/ComCodeCalculator.xml" xy="1393,0" group="n16_en7j">
       <relation target="" sidePair="right-right,top-top"/>
     </component>
     <component id="n7_lctb" name="mask" src="lctb4z" fileName="codeVew/oldCom/RunningState.xml" xy="956,0" size="967,1080" group="n16_en7j">

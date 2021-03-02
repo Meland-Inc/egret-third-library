@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="147,66" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over" selected="0">
+    <action type="play_transition" fromPage="0" toPage="2" transition="u-o"/>
+    <action type="play_transition" fromPage="2" toPage="0" transition="o-u"/>
+    <action type="play_transition" fromPage="2" toPage="1" transition="o-d"/>
+    <action type="play_transition" fromPage="1" toPage="2" transition="d-o"/>
+    <action type="play_transition" fromPage="0" toPage="1" transition="u-d"/>
+    <action type="play_transition" fromPage="1" toPage="0" transition="d-u"/>
+  </controller>
+  <displayList>
+    <image id="n0_im7o" name="n0" src="fke6wcyipw" fileName="com/mobileInput/img_input_confirmBG.png" xy="73,33" pivot="0.5,0.5" anchor="true"/>
+    <loader id="n2_im7o" name="icon" xy="73,32" pivot="0.5,0.5" anchor="true" size="38,41" url="ui://ti9jag5tfke6wcyipx" align="center" vAlign="middle"/>
+  </displayList>
+  <Button/>
+  <transition name="u-o">
+    <item time="0" type="Scale" target="n0_im7o" tween="true" startValue="1,1" endValue="1.1,1.1" duration="6"/>
+    <item time="0" type="Scale" target="n2_im7o" tween="true" startValue="1,1" endValue="1.1,1.1" duration="6"/>
+  </transition>
+  <transition name="o-u">
+    <item time="0" type="Scale" target="n0_im7o" tween="true" startValue="1.1,1.1" endValue="1,1" duration="6"/>
+    <item time="0" type="Scale" target="n2_im7o" tween="true" startValue="1.1,1.1" endValue="1,1" duration="6"/>
+  </transition>
+  <transition name="o-d">
+    <item time="0" type="Scale" target="n0_im7o" tween="true" startValue="1.1,1.1" endValue="0.8,0.8" duration="3" ease="Back.Out"/>
+    <item time="0" type="Scale" target="n2_im7o" tween="true" startValue="1.1,1.1" endValue="0.8,0.8" duration="3" ease="Back.Out"/>
+  </transition>
+  <transition name="d-o">
+    <item time="0" type="Scale" target="n0_im7o" tween="true" startValue="0.8,0.8" endValue="1.1,1.1" duration="6" ease="Back.Out"/>
+    <item time="0" type="Scale" target="n2_im7o" tween="true" startValue="0.8,0.8" endValue="1.1,1.1" duration="6" ease="Back.Out"/>
+  </transition>
+  <transition name="u-d">
+    <item time="0" type="Scale" target="n0_im7o" tween="true" startValue="1,1" endValue="0.8,0.8" duration="3" ease="Back.Out"/>
+    <item time="0" type="Scale" target="n2_im7o" tween="true" startValue="1,1" endValue="0.8,0.8" duration="3"/>
+  </transition>
+  <transition name="d-u">
+    <item time="0" type="Scale" target="n0_im7o" tween="true" startValue="0.8,0.8" endValue="1,1" duration="3" ease="Back.Out"/>
+    <item time="0" type="Scale" target="n2_im7o" tween="true" startValue="0.8,0.8" endValue="1,1" duration="3"/>
+  </transition>
+</component>
