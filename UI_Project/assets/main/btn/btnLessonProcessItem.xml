@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="35,35" extention="Button" designImage="ui://ti9jag5t11tcewcyiom" designImageOffsetX="287" designImageOffsetY="-816" designImageAlpha="0">
+  <controller name="button" pages="2,up,3,down,4,over" selected="0"/>
+  <displayList>
+    <image id="n60_ii42" name="imgBg" src="ii42wcyini" fileName="lesson/btn_main_lcgl_4.png" xy="0,1"/>
+    <text id="n61_ii42" name="title" xy="2,4" size="30,29" fontSize="20" color="#c78742" align="center" autoSize="none" text="1"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

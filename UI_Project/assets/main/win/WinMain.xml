@@ -5,8 +5,8 @@
     <action type="change_page" fromPage="" toPage="1" objectId="n41_o2yv" controller="ctrlGodView" targetPage="1"/>
   </controller>
   <controller name="ctrlMenuType" pages="0,lesson,1,mapTemplate,11,banner" selected="0"/>
-  <controller name="ctrlMinimap" pages="0,show,1,hide" selected="0"/>
-  <controller name="ctrlAreaList" pages="0,hide,1,show" selected="0"/>
+  <controller name="ctrlMinimap" pages="0,show,1,hide" selected="1"/>
+  <controller name="ctrlAreaList" pages="0,hide,1,show" selected="1"/>
   <displayList>
     <component id="n41_o2yv" name="comLessonMenu" src="o2yvwcyim7" fileName="com/comLessonMenue.xml" xy="935,13">
       <gearDisplay controller="ctrlMenuType" pages="0"/>
@@ -33,17 +33,17 @@
       <gearDisplay controller="ctrlMinimap" pages="1"/>
       <Button icon="ui://oyity675qr0m4ds" controller="ctrlMinimap" page="0"/>
     </component>
-    <component id="n10_psru" name="comSmallMap" src="psrui" fileName="com/ComSmallMap.xml" xy="0,0" group="n15_n173"/>
-    <component id="n11_psru" name="btnSetting" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="272,179" size="74,74" group="n15_n173">
+    <component id="n10_psru" name="comSmallMap" src="psrui" fileName="com/ComSmallMap.xml" xy="-349,0" group="n15_n173"/>
+    <component id="n11_psru" name="btnSetting" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="-77,179" size="74,74" group="n15_n173">
       <Button icon="ui://oyity675a1ndc"/>
     </component>
-    <component id="n12_psru" name="btnHideLeftTop" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="272,95" size="74,74" group="n15_n173">
+    <component id="n12_psru" name="btnHideLeftTop" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="-77,95" size="74,74" group="n15_n173">
       <Button icon="ui://oyity675a1ndb" controller="ctrlMinimap" page="1"/>
     </component>
-    <component id="n44_gxc7" name="btnUploadLog" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="272,11" size="74,74" group="n15_n173">
+    <component id="n44_gxc7" name="btnUploadLog" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="-77,11" size="74,74" group="n15_n173">
       <Button icon="ui://oyity675gxc7wcyinc"/>
     </component>
-    <group id="n15_n173" name="grpLeftTop" xy="0,0" size="346,262" customData="left" advanced="true">
+    <group id="n15_n173" name="grpLeftTop" xy="-349,0" size="346,262" customData="left" advanced="true">
       <gearXY controller="ctrlMinimap" pages="1" values="-349,0" default="0,0" tween="true"/>
     </group>
     <component id="n14_psru" name="comTask" src="psruk" fileName="com/ComMainTask.xml" xy="0,277">
@@ -64,7 +64,7 @@
     <component id="n36_ho6v" name="comMainRocker" src="gen8bp" fileName="old/win/ComMainRocker.xml" xy="2,579">
       <relation target="" sidePair="left-left,bottom-bottom"/>
     </component>
-    <component id="n40_uu9l" name="comTeacherAreaList" src="pbxd13564vx" fileName="lessonCenter/ComTeacherAreaList.xml" pkg="ti9jag5t" xy="0,284">
+    <component id="n45_eu2f" name="comLessonManagerList" src="ii42wcyind" fileName="com/ComLessonManagerList.xml" xy="1563,168" controller="ctrlVisible,1">
       <gearDisplay controller="ctrlAreaList" pages="1"/>
     </component>
   </displayList>
