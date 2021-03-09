@@ -68,5 +68,10 @@
       <gearDisplay controller="ctrlStatus" pages="2,1,6,8"/>
       <relation target="" sidePair="height-height,right-right"/>
     </component>
+    <component id="n42_n4ib" name="btnQuickCodeExit" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="770,499" size="61,82">
+      <gearDisplay controller="ctrlStatus" pages="0"/>
+      <relation target="" sidePair="middle-middle"/>
+      <Button icon="ui://ti9jag5tn4ib13564z9"/>
+    </component>
   </displayList>
 </component>
