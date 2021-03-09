@@ -1,4 +1,8 @@
 {
+	"atlasSetting":{
+		"paging":true,
+		"sizeOption":"pot"
+	},
 	"binaryFormat":true,
 	"codeGeneration":{
 		"classNamePrefix":"UI_",
@@ -12,5 +16,5 @@
 	"compressDesc":true,
 	"fileExtension":"fui",
 	"packageCount":2,
-	"path":"..\\..\\egret-planet\\resource\\assets\\fairyGui"
+	"path":"..\\..\\egret-planet-\\resource\\assets\\fairyGui"
 }

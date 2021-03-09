@@ -5,7 +5,15 @@
   <controller name="ctrlRecordHint" pages="0,none,1,left,2,right,3,all" selected="0"/>
   <controller name="ctrlStyle" pages="0,black,1,blue" selected="0"/>
   <displayList>
-    <image id="n42_gg8m" name="imgBG" src="s45w0" fileName="ideCommon/img/img_ide_cm_1.png" xy="0,-2" size="846,1084">
+    <image id="n42_gg8m" name="imgBGNoUse" src="s45w0" fileName="ideCommon/img/img_ide_cm_1.png" xy="0,-2" size="846,1084">
+      <relation target="n9_j7co" sidePair="left-left,rightext-right"/>
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <image id="n66_cy0p" name="n64" src="vd1613564z7" fileName="codeVew/img/newQuickCode/img_code_ksbm_2.png" xy="0,-2" size="846,1084">
+      <relation target="n9_j7co" sidePair="left-left,rightext-right"/>
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <image id="n65_jke6" name="n65" src="cy0p13564z8" fileName="codeVew/img/newQuickCode/img_code_ksbm_6.png" xy="0,-2" size="846,1084">
       <relation target="n9_j7co" sidePair="left-left,rightext-right"/>
       <relation target="" sidePair="height-height"/>
     </image>
@@ -91,7 +99,7 @@
       <relation target="n40_czor" sidePair="center-center,middle-middle"/>
     </text>
     <group id="n46_dx4v" name="n46" xy="339,12" size="180,28" visible="false" advanced="true"/>
-    <component id="n59_iaoi" name="n59" src="oliri6p" fileName="btn/rbtnFix.xml" pkg="te1gxawo" xy="542,20" size="50,30" group="n54_iaoi">
+    <component id="n59_iaoi" name="n59" src="oliri6p" fileName="btn/rbtnFix.xml" pkg="te1gxawo" xy="542,20" size="110,41" group="n54_iaoi">
       <gearIcon controller="ctrlStyle" default="ui://rnqj1l77iaoitkt"/>
       <Button checked="true" icon="ui://rnqj1l77iaoitkt" selectedIcon="ui://rnqj1l77iaoitkt" controller="ctrlStyle" page="0"/>
     </component>
