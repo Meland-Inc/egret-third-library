@@ -1,16 +1,25 @@
 {
-	"buttonClickSound":"",
-	"colorScheme":["常规黑色 #333333","白色 #ffffff"],
-	"font":"经典圆体简",
-	"fontAdjustment":false,
-	"fontScheme":["默认字体"],
-	"fontSize":18,
-	"fontSizeScheme":["20 20"],
-	"scrollBars":{
-		"defaultDisplay":"visible",
-		"horizontal":"",
-		"vertical":""
-	},
-	"textColor":"#000000",
-	"tipsRes":""
+  "font": "ui://im15ab9ok8edd",
+  "fontSize": 18,
+  "textColor": "#000000",
+  "fontAdjustment": false,
+  "colorScheme": [
+    "常规黑色 #333333",
+    "白色 #ffffff"
+  ],
+  "fontSizeScheme": [
+    "20 20"
+  ],
+  "fontScheme": [
+    "默认字体"
+  ],
+  "scrollBars": {
+    "horizontal": "",
+    "vertical": "",
+    "defaultDisplay": "visible"
+  },
+  "tipsRes": "",
+  "buttonClickSound": "",
+  "pivot": "default",
+  "fileName": "Common"
 }

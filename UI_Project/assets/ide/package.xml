@@ -868,6 +868,37 @@
     <image id="fke6wcyipw" name="img_input_confirmBG.png" path="/codeVew/img/"/>
     <image id="fke6wcyipx" name="img_input_confirm.png" path="/codeVew/img/"/>
     <component id="fke6wcyipy" name="btnMobileInputConfirm.xml" path="/codeVew/btn/"/>
+    <image id="a1wt13564z2" name="test.png" path="/lessonCenter/img/" scale="tile" scale9grid="10,10,20,20"/>
+    <image id="a1wt13564z3" name="btn_ide_gqbj_1.png" path="/lessonCenter/lessonLevel/img/" scale="9grid" scale9grid="20,20,7,9"/>
+    <image id="a1wt13564z4" name="btn_ide_gqbj_2.png" path="/lessonCenter/lessonLevel/img/" scale="9grid" scale9grid="18,19,11,10"/>
+    <image id="a1wt13564z5" name="btn_ide_gqbj_3.png" path="/lessonCenter/lessonLevel/img/" scale="9grid" scale9grid="7,7,14,14"/>
+    <image id="a1wt13564z6" name="btn_ide_gqbj_4.png" path="/lessonCenter/lessonLevel/img/" scale="9grid" scale9grid="7,7,14,14"/>
+    <image id="a1wt13564z7" name="btn_ide_gqbj_5.png" path="/lessonCenter/lessonLevel/img/" scale="9grid" scale9grid="7,7,14,14"/>
+    <image id="a1wt13564z8" name="btn_ide_gqbj_6.png" path="/lessonCenter/lessonLevel/img/"/>
+    <image id="a1wt13564z9" name="btn_ide_gqbj_7.png" path="/lessonCenter/lessonLevel/img/"/>
+    <image id="a1wt13564za" name="icon_ide_gqbj_1.png" path="/lessonCenter/lessonLevel/img/"/>
+    <image id="a1wt13564zb" name="icon_ide_gqbj_2.png" path="/lessonCenter/lessonLevel/img/"/>
+    <image id="a1wt13564zc" name="icon_ide_gqbj_3.png" path="/lessonCenter/lessonLevel/img/"/>
+    <image id="a1wt13564zd" name="icon_ide_gqbj_4.png" path="/lessonCenter/lessonLevel/img/"/>
+    <image id="a1wt13564ze" name="img_ide_gqbj_1.png" path="/lessonCenter/lessonLevel/img/" scale="9grid" scale9grid="41,43,20,17"/>
+    <image id="a1wt13564zf" name="img_ide_gqbj_2.png" path="/lessonCenter/lessonLevel/img/" scale="9grid" scale9grid="21,21,19,17"/>
+    <image id="a1wt13564zg" name="img_ide_gqbj_3.png" path="/lessonCenter/lessonLevel/img/" scale="9grid" scale9grid="9,9,18,18"/>
+    <image id="a1wt13564zh" name="img_ide_gqbj_4.png" path="/lessonCenter/lessonLevel/img/" scale="9grid" scale9grid="7,7,14,14"/>
+    <image id="a1wt13564zi" name="img_ide_gqbj_5.png" path="/lessonCenter/lessonLevel/img/" scale="9grid" scale9grid="7,7,14,14"/>
+    <image id="a1wt13564zj" name="img_ide_gqbj_6.png" path="/lessonCenter/lessonLevel/img/" scale="9grid" scale9grid="11,11,22,22"/>
+    <image id="a1wt13564zk" name="img_ide_gqbj_7.png" path="/lessonCenter/lessonLevel/img/" scale="9grid" scale9grid="10,10,20,20"/>
+    <image id="a1wt13564zl" name="img_ide_gqbj_8.png" path="/lessonCenter/lessonLevel/img/" scale="9grid" scale9grid="7,7,14,14"/>
+    <image id="a1wt13564zm" name="img_ide_gqbj_9.png" path="/lessonCenter/lessonLevel/img/" scale="9grid" scale9grid="7,7,14,14"/>
+    <component id="a1wt13564zn" name="ComLessonLevelCreate.xml" path="/lessonCenter/lessonLevel/" exported="true"/>
+    <image id="oqix13564zo" name="效果图2.png" path="/lessonCenter/lessonLevel/img/"/>
+    <image id="oqix13564zp" name="说明图.png" path="/lessonCenter/lessonLevel/img/"/>
+    <image id="oqix13564zq" name="效果图1.png" path="/lessonCenter/lessonLevel/img/"/>
+    <component id="oqix13564zr" name="ComLessonLevelTpPointEdit.xml" path="/lessonCenter/lessonLevel/" exported="true"/>
+    <component id="oqix13564zs" name="ComLessonLevelCodeEntity.xml" path="/lessonCenter/lessonLevel/" exported="true"/>
+    <component id="oqix13564zt" name="tBtnTeacherOnly.xml" path="/lessonCenter/btn/"/>
+    <component id="oqix13564zu" name="btnAdd.xml" path="/lessonCenter/lessonLevel/"/>
+    <component id="oqix13564zv" name="ComLessonLevelCodeEntityItem.xml" path="/lessonCenter/lessonLevel/"/>
+    <component id="ck9f13564zw" name="comCreateAreaScene(1).xml" path="/lessonCenter/com/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>

@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="200,40" extention="ComboBox" designImageAlpha="100">
+<component size="208,43" extention="ComboBox" designImage="ui://ti9jag5toqix13564zp" designImageOffsetX="-222" designImageOffsetY="-234" designImageAlpha="0" designImageLayer="1">
   <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
   <displayList>
-    <image id="n0_grwp" name="n0" src="eggjcyihr" fileName="img/img_cm_xlk_3.png" pkg="te1gxawo" xy="0,0" size="200,40">
+    <loader id="n0_grwp" name="bg" xy="0,0" size="208,43" url="ui://ti9jag5ta1wt13564zj" fill="scaleFree">
       <relation target="" sidePair="width-width,height-height"/>
-    </image>
-    <text id="n2_grwp" name="title" xy="10,0" size="176,40" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" text="item">
-      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <text id="n2_grwp" name="title" xy="16,5" size="44,29" fontSize="20" color="#9696a6" align="center" vAlign="middle" singleLine="true" text="剧情">
+      <relation target="" sidePair="middle-middle"/>
     </text>
-    <image id="n3_qq0e" name="imgDown" src="c1h7cyii4" fileName="img/icon_xl_1.png" pkg="te1gxawo" xy="175,14">
-      <gearDisplay controller="button" pages="0,2,3"/>
-      <relation target="" sidePair="right-right"/>
-    </image>
-    <image id="n4_qq0e" name="imgUp" src="c1h7cyii5" fileName="img/icon_xl_2.png" pkg="te1gxawo" xy="175,14">
-      <gearDisplay controller="button" pages="1"/>
-      <relation target="" sidePair="right-right"/>
+    <image id="n6_oqix" name="n6" src="a1wt13564zd" fileName="lessonCenter/lessonLevel/img/icon_ide_gqbj_4.png" xy="169,13" pivot="0.5,0.5">
+      <gearSize controller="button" pages="1" values="26,16,1,-1" default="26,16,1,1"/>
+      <relation target="" sidePair="middle-middle,right-right"/>
     </image>
   </displayList>
   <ComboBox dropdown="ui://ti9jag5tgrwpb2"/>
+  <customProperty target="bg" propertyId="1"/>
 </component>
