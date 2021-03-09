@@ -52,7 +52,7 @@
     </component>
     <component id="n39_kvic" name="comCodeEntity" src="oqix13564zs" fileName="lessonCenter/lessonLevel/ComLessonLevelCodeEntity.xml" xy="16,344" size="361,135">
       <gearDisplay controller="ctrlLevelMode" pages="1"/>
-      <relation target="n20_oqix" sidePair="topext-bottom"/>
+      <relation target="n20_oqix" sidePair="top-bottom"/>
     </component>
     <component id="n38_oqix" name="tBtnTeacherOnly" src="oqix13564zt" fileName="lessonCenter/btn/tBtnTeacherOnly.xml" xy="65,480">
       <relation target="" sidePair="bottom-bottom"/>
