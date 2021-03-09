@@ -15,7 +15,7 @@
     <text id="n3_oqix" name="tfTitle" xy="97,12" size="203,35" fontSize="25" color="#916844" align="center" vAlign="middle" autoSize="none" text="课程关卡编辑"/>
     <text id="n4_oqix" name="tfSceneName" xy="32,74" size="114,34" group="n32_oqix" fontSize="24" color="#6b4a2f" align="center" vAlign="middle" text="场景名称："/>
     <image id="n7_oqix" name="n7" src="a1wt13564zj" fileName="lessonCenter/lessonLevel/img/img_ide_gqbj_6.png" xy="154,69" size="208,43" group="n32_oqix"/>
-    <text id="n8_oqix" name="inpAreaName" xy="162,74" size="192,34" group="n32_oqix" customData="新场景" fontSize="20" color="#353535" align="center" vAlign="middle" autoSize="none" singleLine="true" text="" input="true" prompt="[color=#cccccd]“请输入场景名称”[/color]" maxLength="8"/>
+    <text id="n8_oqix" name="inpAreaName" xy="162,74" size="192,34" group="n32_oqix" customData="新场景" fontSize="20" color="#7a7a7a" align="center" vAlign="middle" autoSize="none" singleLine="true" text="" input="true" prompt="[color=#cccccd]“请输入场景名称”[/color]" maxLength="8"/>
     <group id="n32_oqix" name="grpNameInput" xy="32,69" size="330,43"/>
     <text id="n10_oqix" name="tfSceneMode" xy="32,128" size="114,34" group="n33_oqix" fontSize="24" color="#6b4a2f" align="center" vAlign="middle" text="场景模式："/>
     <component id="n9_oqix" name="cbLevelMode" src="grwpb3" fileName="attribute/widgets/ComboBox1.xml" xy="154,124" group="n33_oqix">
@@ -33,7 +33,7 @@
     <group id="n34_oqix" name="grpTerrainType" xy="32,177" size="330,43"/>
     <text id="n28_oqix" name="tfAreaRadius" xy="31,240" size="114,34" group="n31_oqix" fontSize="24" color="#6b4a2f" align="center" vAlign="middle" text="场景半径："/>
     <image id="n29_oqix" name="n29" src="a1wt13564zj" fileName="lessonCenter/lessonLevel/img/img_ide_gqbj_6.png" xy="154,237" size="146,43" group="n31_oqix"/>
-    <text id="n30_oqix" name="inpSceneRadius" xy="162,242" size="129,34" group="n31_oqix" customData="新场景" fontSize="20" color="#353535" align="center" vAlign="middle" autoSize="none" singleLine="true" text="0" input="true" maxLength="8"/>
+    <text id="n30_oqix" name="inpSceneRadius" xy="162,242" size="129,34" group="n31_oqix" customData="新场景" fontSize="20" color="#7a7a7a" align="center" vAlign="middle" autoSize="none" singleLine="true" text="0" input="true" maxLength="8"/>
     <text id="n37_oqix" name="tfGrid" xy="307,240" size="28,34" group="n31_oqix" fontSize="24" color="#6b4a2f" align="center" vAlign="middle" text="格"/>
     <group id="n31_oqix" name="grpAreaRadius" xy="31,237" size="304,43" advanced="true">
       <gearDisplay controller="ctrlStep" pages="0"/>
@@ -50,8 +50,9 @@
       <gearXY controller="ctrlStep" pages="0" values="153,294" default="153,354"/>
       <Button title="高级选项" titleColor="#ffffff" titleFontSize="16" icon="ui://ti9jag5ta1wt13564z6" selectedTitle="普通选项" selectedIcon="ui://ti9jag5ta1wt13564z6" controller="ctrlStep" page="1"/>
     </component>
-    <component id="n39_kvic" name="comCodeEntity" src="oqix13564zs" fileName="lessonCenter/lessonLevel/ComLessonLevelCodeEntity.xml" xy="16,344">
+    <component id="n39_kvic" name="comCodeEntity" src="oqix13564zs" fileName="lessonCenter/lessonLevel/ComLessonLevelCodeEntity.xml" xy="16,344" size="361,135">
       <gearDisplay controller="ctrlLevelMode" pages="1"/>
+      <relation target="n20_oqix" sidePair="topext-bottom"/>
     </component>
     <component id="n38_oqix" name="tBtnTeacherOnly" src="oqix13564zt" fileName="lessonCenter/btn/tBtnTeacherOnly.xml" xy="65,480">
       <relation target="" sidePair="bottom-bottom"/>
