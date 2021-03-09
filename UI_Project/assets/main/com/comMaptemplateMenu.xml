@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1000,114" opaque="false" designImage="ui://thvmj7voqr0m4cyij5" designImageAlpha="0" designImageLayer="1">
+<component size="1920,1080" opaque="false" designImage="ui://oyity675vbj6wcyinz" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlEnterWay" exported="true" pages="0,none,1,edit,3,room,10,explore" selected="0"/>
   <displayList>
-    <list id="n37_by1s" name="lstMenu" xy="0,0" size="1000,114" layout="flow_hz" colGap="15" defaultItem="ui://oyity675psruh" align="right" foldInvisibleItems="true">
-      <item title="重运行" icon="ui://oyity675ctb9wcyinb" name="btnRestartCode"/>
-      <item title="邀请好友" icon="ui://oyity675xh734dp" name="btnInvite"/>
-      <item title="退出" icon="ui://oyity675xh734dq" name="btnBack"/>
-      <item title="时间回溯" icon="ui://oyity675axawwcyim3" name="btnReplay"/>
-      <item title="星球之门" icon="ui://oyity675axawwcyim2" name="btnExitExplore"/>
+    <list id="n37_by1s" name="lstMenu" xy="8,9" size="627,66" layout="flow_hz" defaultItem="ui://oyity675vbj6wcyioe" foldInvisibleItems="true">
+      <relation target="" sidePair="left-left"/>
+      <item title="退出" icon="ui://oyity675vbj6wcyio7" name="btnBack"/>
+      <item title="星球之门" icon="ui://oyity675vbj6wcyio7" name="btnExitExplore"/>
+      <item title="重运行" icon="ui://oyity675vbj6wcyioh" name="btnRestartCode"/>
+      <item title="时间回溯" icon="ui://oyity675vbj6wcyioh" name="btnReplay"/>
+      <item title="邀请好友" icon="ui://oyity675vbj6wcyioj" name="btnInvite"/>
+      <item title="设置" icon="ui://oyity675vbj6wcyio6" name="btnSetting"/>
+      <item title="bug" icon="ui://oyity675vbj6wcyio4" name="btnUploadLog"/>
+      <item title="小地图" icon="ui://oyity675vbj6wcyiol" name="btnSmallMap"/>
     </list>
+    <component id="n38_vbj6" name="btnLessonMgr" src="psruh" fileName="com/btnMainMenu.xml" xy="4,554" size="110,107">
+      <relation target="" sidePair="left-left"/>
+      <Button title=" " icon="ui://oyity675vbj6wcyio1"/>
+    </component>
   </displayList>
   <transition name="showAnim"/>
   <transition name="hideAnim"/>
