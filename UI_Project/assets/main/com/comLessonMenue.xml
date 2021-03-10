@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="985,114" opaque="false" designImage="ui://thvmj7voqr0m4cyij5" designImageAlpha="0" designImageLayer="1">
+<component size="1920,1080" opaque="false" designImage="ui://oyity675vbj6wcyinz" designImageAlpha="0" designImageLayer="1">
   <displayList>
-    <list id="n40_ljm0" name="lstMenu" xy="1,0" size="984,114" layout="flow_hz" colGap="15" defaultItem="ui://oyity675psruh" align="right" foldInvisibleItems="true">
-      <item title="课程兑换" icon="ui://oyity675p8fzwcyim1" name="btnCdkeyExchange"/>
-      <item title="重置领地" icon="ui://oyity675kpw94dz" name="btnManorRestore"/>
-      <item url="ui://oyity675ljm0wcyimg" title="锁屏" icon="ui://oyity675pbxdwcyim4" name="btnLockScreenMode"/>
-      <item url="ui://oyity675ljm0wcyimf" title="查看模式" icon="ui://oyity675lmgfq" name="btnChangeViewMode"/>
-      <item title="指引" icon="ui://oyity675a1nd6" name="btnTeachPlan"/>
-      <item title="下课" icon="ui://oyity675a1ndd" name="btnClassOver"/>
-      <item title="学生管理" icon="ui://oyity675a1nde" name="btnShowStudentMgr"/>
+    <list id="n40_ljm0" name="lstMenu" xy="8,9" size="680,66" layout="flow_hz" defaultItem="ui://oyity675vbj6wcyioe" foldInvisibleItems="true">
+      <relation target="" sidePair="left-left"/>
+      <item title="下课" icon="ui://oyity675vbj6wcyio7" name="btnClassOver"/>
+      <item title="重置领地" icon="ui://oyity675vbj6wcyioi" name="btnManorRestore"/>
+      <item title="锁屏中" icon="ui://oyity675vbj6wcyio5" name="btnLockScreenMode"/>
+      <item title="查看中" icon="ui://oyity675vbj6wcyiog" name="btnChangeViewMode"/>
+      <item title="设置" icon="ui://oyity675vbj6wcyio6" name="btnSetting"/>
+      <item title="bug" icon="ui://oyity675vbj6wcyio4" name="btnUploadLog"/>
+      <item title="小地图" icon="ui://oyity675vbj6wcyiol" name="btnSmallMap"/>
     </list>
+    <component id="n41_vbj6" name="btnShowStudentMgr" src="psruh" fileName="com/btnMainMenu.xml" xy="0,428">
+      <relation target="" sidePair="left-left"/>
+      <Button title=" " icon="ui://oyity675vbj6wcyio2"/>
+    </component>
+    <component id="n42_vbj6" name="btnLessonMgr" src="psruh" fileName="com/btnMainMenu.xml" xy="4,554" size="110,107">
+      <relation target="" sidePair="left-left"/>
+      <Button title=" " icon="ui://oyity675vbj6wcyio1"/>
+    </component>
+    <component id="n43_vbj6" name="btnTeachPlan" src="psruh" fileName="com/btnMainMenu.xml" xy="0,299">
+      <relation target="" sidePair="left-left"/>
+      <Button title=" " icon="ui://oyity675vbj6wcyiof"/>
+    </component>
   </displayList>
   <transition name="showAnim"/>
   <transition name="hideAnim"/>

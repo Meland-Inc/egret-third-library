@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" opaque="false" designImage="ui://thvmj7vos45w0" designImageAlpha="70">
   <displayList>
-    <component id="n27_hoex" name="comCodeblocksPool" src="s45w1v" fileName="codeVew/com/CodeblockPool.xml" xy="1174,-1" size="630,1082" blend="none" controller="ctrlGameModel,1">
+    <component id="n27_hoex" name="comCodeblocksPool" src="s45w1v" fileName="codeVew/com/CodeblockPool.xml" xy="1174,-1" size="630,1082" blend="none">
       <relation target="" sidePair="right-right,bottomext-bottom"/>
     </component>
-    <loader id="n28_8tz6" name="imgListBG" xy="1795,-6" size="133,1099" url="ui://ti9jag5ts45w2" fill="scaleFree">
+    <loader id="n28_8tz6" name="ladListBG" xy="1795,-6" size="133,1099" url="ui://ti9jag5ts45w2" fill="scaleFree">
       <relation target="" sidePair="bottomext-bottom,right-right"/>
     </loader>
     <list id="n25_hoex" name="lstCategory" xy="1805,2" size="115,992" defaultItem="ui://ti9jag5ts45w22" align="center">
@@ -26,6 +26,10 @@
     <component id="n29_ntd7" name="comCodeblockCanUseConfig" src="g9ldwcyio7" fileName="codeVew/com/ComCodeblockCanUseConfig.xml" xy="766,0" visible="false">
       <relation target="" sidePair="bottomext-bottom"/>
       <relation target="n27_hoex" sidePair="right-left"/>
+    </component>
+    <component id="n30_n4ib" name="btnQuickCodeExit" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1141,499" size="61,82">
+      <relation target="" sidePair="middle-middle"/>
+      <Button icon="ui://ti9jag5tn4ib13564z9"/>
     </component>
   </displayList>
 </component>

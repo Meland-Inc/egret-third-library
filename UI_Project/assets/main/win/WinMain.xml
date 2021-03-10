@@ -1,24 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1920,1080" opaque="false" designImage="ui://thvmj7voqr0m4cyij5" designImageAlpha="0" designImageLayer="1">
+<component size="1920,1080" opaque="false" designImage="ui://oyity675vbj6wcyinz" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlGodView" pages="0,false,1,true" selected="0">
     <action type="change_page" fromPage="" toPage="0" objectId="n41_o2yv" controller="ctrlGodView" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n41_o2yv" controller="ctrlGodView" targetPage="1"/>
   </controller>
-  <controller name="ctrlMenuType" pages="0,lesson,1,mapTemplate,11,banner" selected="0"/>
+  <controller name="ctrlMenuType" pages="0,lesson,1,mapTemplate,11,banner" selected="2"/>
   <controller name="ctrlMinimap" pages="0,show,1,hide" selected="0"/>
-  <controller name="ctrlAreaList" pages="0,hide,1,show" selected="0"/>
+  <controller name="ctrlAreaList" pages="0,hide,1,show" selected="1"/>
   <displayList>
-    <component id="n41_o2yv" name="comLessonMenu" src="o2yvwcyim7" fileName="com/comLessonMenue.xml" xy="935,13">
+    <component id="n14_psru" name="comTask" src="psruk" fileName="com/ComMainTask.xml" xy="0,277">
       <gearDisplay controller="ctrlMenuType" pages="0"/>
-      <relation target="" sidePair="right-right"/>
     </component>
-    <component id="n42_o2yv" name="comMapTemplateMenu" src="o2yvwcyima" fileName="com/comMaptemplateMenu.xml" xy="920,13" controller="ctrlEnterWay,1">
+    <component id="n34_ej7r" name="comTaskTrace" src="jrwa7n" fileName="com/ComTaskTrace.xml" pkg="2ctbbuel" xy="0,275">
+      <relation target="" sidePair="left-left,top-top"/>
+    </component>
+    <component id="n41_o2yv" name="comLessonMenu" src="o2yvwcyim7" fileName="com/comLessonMenue.xml" xy="0,0">
+      <gearDisplay controller="ctrlMenuType" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <component id="n42_o2yv" name="comMapTemplateMenu" src="o2yvwcyima" fileName="com/comMaptemplateMenu.xml" xy="0,0" controller="ctrlEnterWay,1">
       <gearDisplay controller="ctrlMenuType" pages="1"/>
-      <relation target="" sidePair="right-right"/>
+      <relation target="" sidePair="width-width,height-height"/>
     </component>
-    <component id="n43_o2yv" name="comBannerMenu" src="o2yvwcyimb" fileName="com/comBannerMenu.xml" xy="1802,13">
+    <component id="n43_o2yv" name="comBannerMenu" src="o2yvwcyimb" fileName="com/comBannerMenu.xml" xy="0,0">
       <gearDisplay controller="ctrlMenuType" pages="11"/>
-      <relation target="" sidePair="right-right"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <component id="n51_vbj6" name="btnBannerTemplate" src="psruh" fileName="com/btnMainMenu.xml" xy="1545,11" customData="top">
+      <gearDisplay controller="ctrlMenuType" pages="11"/>
+      <relation target="n15_n173" sidePair="right-right,top-top"/>
+      <Button title="模板创作" icon="ui://oyity675a1nd8"/>
     </component>
     <component id="n9_psru" name="btnIde" src="fn8fcyijz" fileName="btn/btnIde.xml" xy="1804,980" customData="right" controller="ctrlOrientation,0">
       <gearDisplay controller="ctrlGodView" pages="0"/>
@@ -29,29 +40,11 @@
       <gearDisplay controller="ctrlGodView" pages="0"/>
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </component>
-    <component id="n27_qr0m" name="btnShowLeftTopView" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="12,12" size="96,96">
-      <gearDisplay controller="ctrlMinimap" pages="1"/>
-      <Button icon="ui://oyity675qr0m4ds" controller="ctrlMinimap" page="0"/>
-    </component>
-    <component id="n10_psru" name="comSmallMap" src="psrui" fileName="com/ComSmallMap.xml" xy="0,0" group="n15_n173"/>
-    <component id="n11_psru" name="btnSetting" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="272,179" size="74,74" group="n15_n173">
-      <Button icon="ui://oyity675a1ndc"/>
-    </component>
-    <component id="n12_psru" name="btnHideLeftTop" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="272,95" size="74,74" group="n15_n173">
-      <Button icon="ui://oyity675a1ndb" controller="ctrlMinimap" page="1"/>
-    </component>
-    <component id="n44_gxc7" name="btnUploadLog" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="272,11" size="74,74" group="n15_n173">
-      <Button icon="ui://oyity675gxc7wcyinc"/>
-    </component>
-    <group id="n15_n173" name="grpLeftTop" xy="0,0" size="346,262" customData="left" advanced="true">
-      <gearXY controller="ctrlMinimap" pages="1" values="-349,0" default="0,0" tween="true"/>
+    <component id="n10_psru" name="comSmallMap" src="psrui" fileName="com/ComSmallMap.xml" xy="1655,6" group="n15_n173"/>
+    <group id="n15_n173" name="grpRightTop" xy="1655,6" size="262,262" advanced="true">
+      <gearXY controller="ctrlMinimap" pages="0,1" values="1655,6|1920,6" tween="true"/>
+      <relation target="" sidePair="right-right"/>
     </group>
-    <component id="n14_psru" name="comTask" src="psruk" fileName="com/ComMainTask.xml" xy="0,277">
-      <gearDisplay controller="ctrlMenuType" pages="0"/>
-    </component>
-    <component id="n34_ej7r" name="comTaskTrace" src="jrwa7n" fileName="com/ComTaskTrace.xml" pkg="2ctbbuel" xy="0,275">
-      <relation target="" sidePair="left-left,top-top"/>
-    </component>
     <component id="n26_evs4" name="comBuildShortCut" src="qu7tt7j" fileName="ideCommon/com/ComBuildShortCutB.xml" pkg="ti9jag5t" xy="331,40" visible="false" touchable="false" customData="bottom" controller="ctrlState,11">
       <relation target="" sidePair="center-center"/>
     </component>
@@ -61,11 +54,12 @@
       <relation target="" sidePair="right-right"/>
       <Button title="获取数据" titleFontSize="18" icon="ui://te1gxawooiqdcyih1"/>
     </component>
+    <component id="n45_eu2f" name="comLessonManagerList" src="ii42wcyind" fileName="com/ComLessonManagerList.xml" xy="8,156">
+      <gearDisplay controller="ctrlAreaList" pages="1"/>
+      <relation target="" sidePair="left-left"/>
+    </component>
     <component id="n36_ho6v" name="comMainRocker" src="gen8bp" fileName="old/win/ComMainRocker.xml" xy="2,579">
       <relation target="" sidePair="left-left,bottom-bottom"/>
-    </component>
-    <component id="n40_uu9l" name="comTeacherAreaList" src="pbxd13564vx" fileName="lessonCenter/ComTeacherAreaList.xml" pkg="ti9jag5t" xy="0,284">
-      <gearDisplay controller="ctrlAreaList" pages="1"/>
     </component>
   </displayList>
   <transition name="showAnim">
@@ -73,16 +67,16 @@
     <item time="0" type="XY" target="n13_psru" tween="true" startValue="-,1080" endValue="-,987" duration="12"/>
     <item time="0" type="XY" target="n14_psru" tween="true" startValue="-266,-" endValue="0,-" duration="12"/>
     <item time="0" type="XY" target="n15_n173" tween="true" startValue="-,-278.75" endValue="-,0" duration="12"/>
-    <item time="0" type="XY" target="n27_qr0m" tween="true" startValue="-,-265.5" endValue="12,12" duration="12"/>
-    <item time="0" type="XY" target="n41_o2yv" tween="true" startValue="-,-119" endValue="935,13" duration="12"/>
+    <item time="0" type="XY" target="n41_o2yv" tween="true" startValue="-,-119" endValue="0,0" duration="12"/>
     <item time="0" type="XY" target="n42_o2yv" tween="true" startValue="-,-122" endValue="-,13" duration="12"/>
-    <item time="0" type="XY" target="n43_o2yv" tween="true" startValue="-,-125" endValue="1802,13" duration="12"/>
+    <item time="0" type="XY" target="n43_o2yv" tween="true" startValue="-,-125" endValue="0,0" duration="12"/>
+    <item time="0" type="XY" target="n45_eu2f" tween="true" startValue="-366,156" endValue="8,156" duration="12"/>
     <item time="0" type="XY" target="n9_psru" tween="true" startValue="1920,-" endValue="1804,979" duration="12"/>
   </transition>
   <transition name="hideAnim">
     <item time="0" type="XY" target="n13_psru" tween="true" startValue="554,987" endValue="-,1080" duration="12"/>
     <item time="0" type="XY" target="n14_psru" tween="true" startValue="0,277" endValue="-267,-" duration="12"/>
-    <item time="0" type="XY" target="n15_n173" tween="true" startValue="0,0" endValue="-346,-" duration="12"/>
+    <item time="0" type="XY" target="n15_n173" tween="true" startValue="1655,0" endValue="1655,-279" duration="12"/>
     <item time="0" type="XY" target="n9_psru" tween="true" startValue="1804,979" endValue="1920,-" duration="12"/>
   </transition>
 </component>

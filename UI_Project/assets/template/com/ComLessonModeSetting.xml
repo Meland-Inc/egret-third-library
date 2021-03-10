@@ -90,5 +90,10 @@
       </ComboBox>
     </component>
     <group id="n217_kqno" name="grpTeacherMode" xy="14,176" size="258,33"/>
+    <text id="n258_jwyw" name="tfSceneUnlock" xy="342,442" size="112,26" group="n260_jwyw" fontSize="18" color="#ff8f22" vAlign="middle" text="解锁场景开关"/>
+    <component id="n259_jwyw" name="btnSceneUnlock" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="459,437" size="68,36" group="n260_jwyw">
+      <Button icon="ui://0axy98cgorknbu" selectedIcon="ui://0axy98cgorknbv"/>
+    </component>
+    <group id="n260_jwyw" name="grpSceneUnlock" xy="342,437" size="185,36" advanced="true"/>
   </displayList>
 </component>

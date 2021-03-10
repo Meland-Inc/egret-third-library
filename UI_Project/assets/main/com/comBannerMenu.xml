@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="110,112" opaque="false" designImage="ui://thvmj7voqr0m4cyij5" designImageAlpha="0" designImageLayer="1">
+<component size="1920,1080" opaque="false" designImage="ui://oyity675vbj6wcyinz" designImageAlpha="0" designImageLayer="1">
   <displayList>
-    <component id="n2_o2yv" name="btnBannerTemplate" src="psruh" fileName="com/btnMainMenu.xml" xy="0,0" customData="top">
-      <Button title="模板创作" icon="ui://oyity675a1nd8"/>
-    </component>
+    <list id="n3_vbj6" name="lstMenu" xy="8,8" size="242,66" layout="flow_hz" defaultItem="ui://oyity675vbj6wcyioe" foldInvisibleItems="true">
+      <relation target="" sidePair="left-left"/>
+      <item title="设置" icon="ui://oyity675vbj6wcyio6" name="btnSetting"/>
+      <item title="bug" icon="ui://oyity675vbj6wcyio4" name="btnUploadLog"/>
+      <item title="小地图" icon="ui://oyity675vbj6wcyiol" name="btnSmallMap"/>
+    </list>
   </displayList>
   <transition name="showAnim"/>
   <transition name="hideAnim"/>
