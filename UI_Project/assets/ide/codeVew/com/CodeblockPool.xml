@@ -10,10 +10,6 @@
       <gearDisplay controller="ctrlCodeModel" pages="3"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <component id="n5_t09y" name="normalPool" src="s45w1x" fileName="codeVew/com/VerticalScrollComponent.xml" xy="31,38" size="338,515">
-      <gearXY controller="ctrlCodeModel" pages="3" values="31,38" default="7,8"/>
-      <gearSize controller="ctrlCodeModel" pages="3" values="338,515,1,1" default="372,566,1,1"/>
-      <relation target="" sidePair="height-height,width-width"/>
-    </component>
+    <component id="n5_t09y" name="normalPool" src="s45w1x" fileName="codeVew/com/VerticalScrollComponent.xml" xy="31,38" size="372,566"/>
   </displayList>
 </component>

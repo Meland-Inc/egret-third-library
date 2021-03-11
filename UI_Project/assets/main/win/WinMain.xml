@@ -4,9 +4,9 @@
     <action type="change_page" fromPage="" toPage="0" objectId="n41_o2yv" controller="ctrlGodView" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n41_o2yv" controller="ctrlGodView" targetPage="1"/>
   </controller>
-  <controller name="ctrlMenuType" pages="0,lesson,1,mapTemplate,11,banner" selected="2"/>
+  <controller name="ctrlMenuType" pages="0,lesson,1,mapTemplate,11,banner" selected="0"/>
   <controller name="ctrlMinimap" pages="0,show,1,hide" selected="0"/>
-  <controller name="ctrlAreaList" pages="0,hide,1,show" selected="1"/>
+  <controller name="ctrlAreaList" pages="0,hide,1,show" selected="0"/>
   <displayList>
     <component id="n14_psru" name="comTask" src="psruk" fileName="com/ComMainTask.xml" xy="0,277">
       <gearDisplay controller="ctrlMenuType" pages="0"/>
