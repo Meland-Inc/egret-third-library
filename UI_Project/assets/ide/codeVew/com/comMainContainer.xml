@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="400,400" overflow="scroll" scroll="both" scrollBarFlags="68" scrollBar="visible" scrollBarRes="ui://te1gxawodt2pcyij7,ui://te1gxawokkwxcyijk" bgColorEnabled="true">
   <displayList>
+    <image id="n6_bsbr" name="n6" src="cy0p13564z8" fileName="codeVew/img/newQuickCode/img_code_ksbm_6.png" xy="0,0" size="800,1600">
+      <relation target="n0_j7co" sidePair="width-width,height-height"/>
+    </image>
     <component id="n0_j7co" name="freeCtnr" src="s45w1b" fileName="codeVew/com/FreeContainer.xml" xy="0,0" size="800,1600">
       <relation target="" sidePair="width-width%,height-height%"/>
     </component>
