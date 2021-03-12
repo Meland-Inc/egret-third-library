@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="348,247" designImage="ui://oyity675ii42wcyint" designImageOffsetX="-1565" designImageOffsetY="-162" designImageAlpha="0" designImageLayer="1">
+<component size="356,808" designImage="ui://oyity675vbj6wcyinz" designImageOffsetY="-136" designImageLayer="1">
   <displayList>
-    <image id="n14_ii42" name="bg" src="ii42wcyino" fileName="lesson/img_main_lcgl_2.png" xy="2,26" size="344,208" group="n10_fie1">
+    <image id="n14_ii42" name="bg" src="ii42wcyino" fileName="lesson/img_main_lcgl_2.png" xy="2,26" size="344,765" group="n10_fie1">
       <relation target="n6_fie1" sidePair="bottomext-bottom"/>
     </image>
     <image id="n15_ii42" name="titleBg" src="ii42wcyinn" fileName="lesson/img_main_lcgl_1.png" xy="30,0" group="n10_fie1"/>
     <text id="n16_ii42" name="title" xy="115,17" size="124,42" group="n10_fie1" fontSize="30" color="#ffffff" text="流程管理"/>
-    <component id="n18_ii42" name="btnClose" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="100,148" size="138,55" group="n10_fie1">
+    <component id="n18_ii42" name="btnClose" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="100,705" size="138,55" group="n10_fie1">
       <relation target="n14_ii42" sidePair="bottom-bottom"/>
       <Button title="关闭" titleFontSize="24" icon="ui://oyity675ii42wcyinf"/>
     </component>
-    <list id="n6_fie1" name="lstAreaList" xy="22,90" size="314,0" group="n10_fie1" overflow="scroll" scrollBarFlags="4" scrollBarRes="ui://ti9jag5tso8vt7r," lineGap="6" defaultItem="ui://oyity675ii42wcyine" align="center" scrollItemToViewOnClick="false">
+    <list id="n6_fie1" name="lstAreaList" xy="21,86" size="314,561" group="n10_fie1" overflow="scroll" scrollBarFlags="4" scrollBarRes="ui://ti9jag5tso8vt7r," lineGap="6" defaultItem="ui://oyity675ii42wcyine" align="center" scrollItemToViewOnClick="false">
       <relation target="" sidePair="height-height"/>
       <item/>
       <item/>
     </list>
-    <group id="n10_fie1" name="root" xy="2,0" size="344,234" advanced="true"/>
+    <group id="n10_fie1" name="root" xy="2,0" size="344,791" advanced="true"/>
   </displayList>
 </component>
