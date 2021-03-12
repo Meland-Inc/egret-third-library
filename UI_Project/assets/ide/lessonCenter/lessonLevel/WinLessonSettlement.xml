@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" designImage="ui://ti9jag5td6fn1356500" designImageAlpha="0" designImageLayer="1">
+  <displayList>
+    <image id="n0_d6fn" name="imgSettlement" src="d6fn13564zy" fileName="lessonCenter/lessonLevel/img/img_lessonSettlement.png" xy="750,265" group="n11_d6fn"/>
+    <text id="n1_d6fn" name="tfGoodJob" xy="875,547" size="170,42" group="n11_d6fn" fontSize="30" color="#95b2e6" text="表现得真棒！"/>
+    <component id="n4_d6fn" name="btnStayScene" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="805,643" size="139,55" group="n11_d6fn">
+      <Button title="留在场景" titleFontSize="24" icon="ui://ti9jag5td6fn1356501"/>
+    </component>
+    <component id="n6_d6fn" name="btnFinishLesson" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="977,643" size="139,55" group="n11_d6fn">
+      <Button title="完成课程" titleFontSize="24" icon="ui://ti9jag5td6fn1356502"/>
+    </component>
+    <group id="n11_d6fn" name="root" xy="750,265" size="420,485" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+  <transition name="transShow">
+    <item time="0" type="Pivot" value="0.5,0.5"/>
+    <item time="0" type="Scale" tween="true" startValue="0.5,0.5" endValue="1,1" duration="12" ease="Back.Out"/>
+  </transition>
+</component>
