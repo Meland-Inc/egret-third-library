@@ -890,9 +890,6 @@
     <image id="a1wt13564zl" name="img_ide_gqbj_8.png" path="/lessonCenter/lessonLevel/img/" scale="9grid" scale9grid="7,7,14,14"/>
     <image id="a1wt13564zm" name="img_ide_gqbj_9.png" path="/lessonCenter/lessonLevel/img/" scale="9grid" scale9grid="7,7,14,14"/>
     <component id="a1wt13564zn" name="ComLessonLevelCreate.xml" path="/lessonCenter/lessonLevel/" exported="true"/>
-    <image id="oqix13564zo" name="效果图2.png" path="/lessonCenter/lessonLevel/img/"/>
-    <image id="oqix13564zp" name="说明图.png" path="/lessonCenter/lessonLevel/img/"/>
-    <image id="oqix13564zq" name="效果图1.png" path="/lessonCenter/lessonLevel/img/"/>
     <component id="oqix13564zr" name="ComLessonLevelTpPointEdit.xml" path="/lessonCenter/lessonLevel/" exported="true"/>
     <component id="oqix13564zs" name="ComLessonLevelCodeEntity.xml" path="/lessonCenter/lessonLevel/" exported="true"/>
     <component id="oqix13564zt" name="tBtnTeacherOnly.xml" path="/lessonCenter/btn/"/>
@@ -907,6 +904,10 @@
     <image id="cy0p13564z8" name="img_code_ksbm_6.png" path="/codeVew/img/newQuickCode/" scale="tile" duplicatePadding="true" disableTrim="true"/>
     <image id="n4ib13564z9" name="btn_code_ksbm_4.png" path="/codeVew/img/newQuickCode/"/>
     <image id="ubmn13564zx" name="btn_code_ksbm_5.png" path="/codeVew/img/newQuickCode/"/>
+    <component id="d6fn13564zx" name="WinLessonSettlement.xml" path="/lessonCenter/lessonLevel/" exported="true"/>
+    <image id="d6fn13564zy" name="img_lessonSettlement.png" path="/lessonCenter/lessonLevel/img/"/>
+    <image id="d6fn1356501" name="btn_lesson_orange.png" path="/lessonCenter/lessonLevel/img/"/>
+    <image id="d6fn1356502" name="btn_lesson_yellow.png" path="/lessonCenter/lessonLevel/img/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>
