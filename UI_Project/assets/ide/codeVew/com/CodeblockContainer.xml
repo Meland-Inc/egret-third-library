@@ -5,7 +5,7 @@
   <controller name="ctrlRecordHint" pages="0,none,1,left,2,right,3,all" selected="0"/>
   <controller name="ctrlStyle" pages="0,black,1,blue" selected="0"/>
   <displayList>
-    <image id="n67_bsbr" name="n64" src="vd1613564z7" fileName="codeVew/img/newQuickCode/img_code_ksbm_2.png" xy="0,0" size="847,1080">
+    <image id="n67_bsbr" name="n64" src="vd1613564z7" fileName="codeVew/img/newQuickCode/img_code_ksbm_2.png" xy="-1,-5" size="848,1093">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
     <component id="n9_j7co" name="mainContainer" src="s45w1a" fileName="codeVew/com/comMainContainer.xml" xy="0,0" size="849,1080">
@@ -33,17 +33,17 @@
     <group id="n33_czor" name="grpOperate" xy="557,1000" size="167,48" advanced="true">
       <relation target="n9_j7co" sidePair="right-right,bottom-bottom"/>
     </group>
-    <component id="n34_czor" name="btnReset" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="724,967" size="101,26">
+    <component id="n34_czor" name="btnReset" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="790,959" size="35,34">
       <gearDisplay controller="ctrlShowType" pages="0"/>
       <relation target="n9_j7co" sidePair="right-right,bottom-bottom"/>
       <Button icon="ui://ti9jag5tzgght7v"/>
     </component>
-    <component id="n35_czor" name="btnZoomIn" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="724,1017" size="101,26">
+    <component id="n35_czor" name="btnZoomIn" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="790,1009" size="35,34">
       <gearDisplay controller="ctrlShowType" pages="0"/>
       <relation target="n9_j7co" sidePair="right-right,bottom-bottom"/>
       <Button icon="ui://ti9jag5tzgght7w"/>
     </component>
-    <component id="n36_czor" name="btnZoomOut" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="724,916" size="101,26">
+    <component id="n36_czor" name="btnZoomOut" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="790,908" size="35,34">
       <gearDisplay controller="ctrlShowType" pages="0"/>
       <relation target="n9_j7co" sidePair="right-right,bottom-bottom"/>
       <Button icon="ui://ti9jag5tzgght7u"/>
