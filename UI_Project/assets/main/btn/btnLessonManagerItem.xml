@@ -1,27 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="300,65" extention="Button" designImage="ui://oyity675ii42wcyint" designImageOffsetX="-1588" designImageOffsetY="-318" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlType" pages="2,normal,3,choose,4,lock" selected="1"/>
-  <controller name="ctrlFlag" pages="0,finish,1,pos,2,lock,3,unlock" selected="0"/>
-  <controller name="ctrlListShow" pages="0,true,1,false" selected="1"/>
+<component size="300,124" pivot="0.5,0.5" extention="Button" designImage="ui://oyity675ii42wcyint" designImageOffsetX="-1588" designImageOffsetY="-318" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlListShow" pages="0,true,1,false" selected="0"/>
   <displayList>
-    <image id="n73_ii42" name="expandBg" src="ii42wcyinp" fileName="lesson/img_main_lcgl_3.png" xy="18,47" size="268,19">
+    <image id="n73_ii42" name="expandBg" src="ii42wcyinp" fileName="lesson/img_main_lcgl_3.png" xy="18,47" size="268,78">
       <gearDisplay controller="ctrlListShow" pages="0"/>
       <relation target="n47_bljg" sidePair="bottomext-bottom"/>
     </image>
-    <loader id="n74_eu2f" name="imgBg" xy="7,4" size="288,54" url="ui://oyity675ii42wcyins" fill="scaleFree">
-      <gearIcon controller="ctrlType" pages="2,3" values="ui://oyity675ii42wcyinr|ui://oyity675ii42wcyins" default="ui://oyity675ii42wcyinq"/>
-    </loader>
-    <text id="n4_fie1" name="title" xy="22,17" size="82,36" fontSize="26" color="#936844" text="新场景">
-      <gearColor controller="ctrlType" pages="2,3,4" values="#936844,#6d6141|#936844,#e48509|#c9b4a2,#e48509"/>
-    </text>
-    <text id="n75_vbj6" name="tips" xy="101,27" size="88,26" fontSize="18" color="#d49e55" text="(特有场景)">
-      <gearColor controller="ctrlType" pages="2,3,4" values="#d49e55,#000000|#d49e55,#e48509|#c9b4a2,#e48509"/>
-      <relation target="n4_fie1" sidePair="left-right"/>
-    </text>
-    <loader id="n67_ii42" name="imgFlag" xy="242,11" size="42,42" url="ui://oyity675ii42wcyinj" autoSize="true">
-      <gearIcon controller="ctrlFlag" pages="0,1,3" values="ui://oyity675ii42wcyinj|ui://oyity675ii42wcyink|ui://oyity675ii42wcyinl" default="ui://oyity675ii42wcyinm"/>
-    </loader>
-    <list id="n47_bljg" name="processList" xy="17,59" size="245,0" layout="flow_hz" selectionMode="none" overflow="hidden" lineGap="8" colGap="16" defaultItem="ui://oyity675ii42wcyinu">
+    <component id="n85_vbj6" name="btnSelect" src="vbj6wcyioo" fileName="btn/btnLessonSelect.xml" xy="0,1"/>
+    <list id="n47_bljg" name="processList" xy="33,118" size="245,0" layout="flow_hz" selectionMode="none" overflow="hidden" lineGap="8" colGap="16" defaultItem="ui://oyity675ii42wcyinu">
       <gearDisplay controller="ctrlListShow" pages="0"/>
       <gearXY controller="ctrlListShow" pages="0,1" values="33,118|17,59"/>
       <item/>
@@ -43,6 +29,6 @@
       <gearDisplay controller="ctrlListShow" pages="0"/>
     </group>
   </displayList>
-  <Button mode="Radio"/>
+  <Button/>
   <relation target="n47_bljg" sidePair="bottomext-bottom"/>
 </component>

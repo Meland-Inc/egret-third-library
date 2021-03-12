@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" opaque="false" designImage="ui://oyity675vbj6wcyinz" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlAreaList" pages="0,show,1,hide" selected="0"/>
+  <displayList>
+    <component id="n41_vbj6" name="btnShowStudentMgr" src="psruh" fileName="com/btnMainMenu.xml" xy="6,413" size="112,119">
+      <relation target="" sidePair="left-left"/>
+      <Button title=" " icon="ui://oyity675vbj6wcyio2"/>
+    </component>
+    <component id="n42_vbj6" name="btnLessonMgr" src="psruh" fileName="com/btnMainMenu.xml" xy="6,548" size="110,119">
+      <relation target="" sidePair="left-left"/>
+      <Button title=" " icon="ui://oyity675vbj6wcyio1"/>
+    </component>
+    <component id="n43_vbj6" name="btnTeachPlan" src="psruh" fileName="com/btnMainMenu.xml" xy="8,282" size="109,119">
+      <relation target="" sidePair="left-left"/>
+      <Button title=" " icon="ui://oyity675vbj6wcyiof"/>
+    </component>
+    <component id="n44_vbj6" name="comLessonManagerList" src="ii42wcyind" fileName="com/ComLessonManagerList.xml" xy="8,156">
+      <gearDisplay controller="ctrlAreaList" pages="0"/>
+      <relation target="" sidePair="left-left"/>
+    </component>
+  </displayList>
+  <transition name="showAnim"/>
+  <transition name="hideAnim"/>
+</component>
