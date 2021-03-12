@@ -564,7 +564,6 @@
     <component id="vbj6wcyinx" name="btnLesson.xml" path="/btn/"/>
     <image id="vbj6wcyiny" name="icon_main_lcgl_5.png" path="/lesson/"/>
     <image id="vbj6wcyinz" name="1111.png" path="/imgNew/"/>
-    <image id="vbj6wcyio0" name="btn_main_a_ksbm.png" path="/imgNew/"/>
     <image id="vbj6wcyio1" name="btn_main_a_lcgl.png" path="/imgNew/"/>
     <image id="vbj6wcyio2" name="btn_main_a_xsgl.png" path="/imgNew/"/>
     <image id="vbj6wcyio3" name="btn_main_bb.png" path="/imgNew/"/>
@@ -586,6 +585,14 @@
     <image id="vbj6wcyioj" name="btn_main_b_hyyq.png" path="/imgNew/"/>
     <image id="vbj6wcyiok" name="img_main_4.png" path="/imgNew/"/>
     <image id="vbj6wcyiol" name="btn_main_b_dt.png" path="/imgNew/"/>
+    <component id="vbj6wcyioo" name="btnLessonSelect.xml" path="/btn/"/>
+    <component id="vbj6wcyioq" name="WinMainLesson.xml" path="/win/" exported="true"/>
+    <image id="vbj6wcyior" name="img_main_6.png" path="/imgNew/"/>
+    <image id="vbj6wcyios" name="img_main_7.png" path="/imgNew/"/>
+    <image id="vbj6wcyiot" name="img_main_8.png" path="/imgNew/"/>
+    <image id="vbj6wcyiou" name="img_main_9.png" path="/imgNew/"/>
+    <component id="vbj6wcyiov" name="btnLeftMenu.xml" path="/com/"/>
+    <image id="vbj6wcyiow" name="img_main_choose.png" path="/imgNew/" scale="9grid" scale9grid="31,24,20,10"/>
   </resources>
   <publish name="main"/>
 </packageDescription>

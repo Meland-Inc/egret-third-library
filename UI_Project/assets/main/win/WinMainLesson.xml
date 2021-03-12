@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" opaque="false" designImage="ui://oyity675vbj6wcyinz" designImageLayer="1">
+  <controller name="ctrlAreaList" pages="0,show,1,hide" selected="0"/>
+  <displayList>
+    <list id="n45_vbj6" name="lstMenu" xy="0,540" pivot="0,0.5" anchor="true" size="110,346" layout="flow_vt" defaultItem="ui://oyity675vbj6wcyiov" vAlign="middle" foldInvisibleItems="true">
+      <relation target="" sidePair="middle-middle"/>
+      <item title="提示" icon="ui://oyity675vbj6wcyiof" name="btnTeachPlan"/>
+      <item title="学生管理" icon="ui://oyity675vbj6wcyio2" name="btnShowStudentMgr"/>
+      <item title="课程管理" icon="ui://oyity675vbj6wcyio1" name="btnLessonMgr"/>
+    </list>
+    <component id="n44_vbj6" name="comLessonManagerList" src="ii42wcyind" fileName="com/ComLessonManagerList.xml" xy="-2,541" pivot="0,0.5" anchor="true" size="348,808">
+      <gearDisplay controller="ctrlAreaList" pages="0"/>
+      <relation target="" sidePair="middle-middle"/>
+    </component>
+  </displayList>
+  <transition name="showAnim"/>
+  <transition name="hideAnim"/>
+</component>
