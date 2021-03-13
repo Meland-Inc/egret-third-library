@@ -37,7 +37,7 @@
     <component id="n218_kqno" name="btnView" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="459,174" size="68,36" group="n220_kqno">
       <Button icon="ui://0axy98cgorknbu" selectedIcon="ui://0axy98cgorknbv"/>
     </component>
-    <text id="n219_kqno" name="tfView" xy="301,180" size="153,26" group="n220_kqno" fontSize="18" color="#ff8f22" vAlign="middle" text="演示/查看模式开关"/>
+    <text id="n219_kqno" name="tfView" xy="301,180" size="159,26" group="n220_kqno" fontSize="18" color="#ff8f22" vAlign="middle" text="演示/查看模式开关"/>
     <group id="n220_kqno" name="grpViewMode" xy="301,174" size="226,36"/>
     <component id="n221_kqno" name="btnPlan" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="667,177" size="68,36" group="n223_kqno">
       <Button icon="ui://0axy98cgorknbu" selectedIcon="ui://0axy98cgorknbv"/>
@@ -95,5 +95,10 @@
       <Button icon="ui://0axy98cgorknbu" selectedIcon="ui://0axy98cgorknbv"/>
     </component>
     <group id="n260_jwyw" name="grpSceneUnlock" xy="342,437" size="185,36" advanced="true"/>
+    <text id="n261_jpsa" name="tfMapEntrace" xy="550,442" size="112,26" group="n263_jpsa" fontSize="18" color="#ff8f22" vAlign="middle" text="地图功能开关"/>
+    <component id="n262_jpsa" name="btnMapEntrace" src="oliri6r" fileName="btn/tbtnFix.xml" pkg="te1gxawo" xy="667,437" size="68,36" group="n263_jpsa">
+      <Button icon="ui://0axy98cgorknbu" selectedIcon="ui://0axy98cgorknbv"/>
+    </component>
+    <group id="n263_jpsa" name="grpMapEntrace" xy="550,437" size="185,36" advanced="true"/>
   </displayList>
 </component>
