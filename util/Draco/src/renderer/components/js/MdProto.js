@@ -94,7 +94,7 @@ export async function modifyTs() {
 
 /**解析内容获取不需要混淆的内容 */
 async function analyticTs(content) {
-    const reg = /enum (\w+)|(\w+) = |public (static)? (\w+)|class (\w+)/g;
+    const reg = /enum (\w+)|(\w+) = |public (static )?(\w+)|class (\w+)/g;
     let result = null;
     let nameArr = new Set();
     while ((result = reg.exec(content)) != null) {
