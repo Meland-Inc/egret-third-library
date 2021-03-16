@@ -8,7 +8,7 @@
     <action type="play_transition" fromPage="" toPage="2" transition="over" stopOnExit="true"/>
   </controller>
   <displayList>
-    <component id="n81_vbj6" name="btnSelect" src="ilo1cyidi" fileName="btn/btnScaleNoEffect.xml" pkg="te1gxawo" xy="7,4" size="288,50">
+    <component id="n81_vbj6" name="btnSelect" src="ilo1cyidi" fileName="btn/btnScaleNoEffect.xml" pkg="te1gxawo" xy="7,4" pivot="0.5,0.5" size="288,50" touchable="false">
       <gearIcon controller="ctrlType" pages="3,4" values="ui://oyity675vbj6wcyiow|ui://oyity675ii42wcyinq" default="ui://oyity675ii42wcyinr"/>
       <Button icon="ui://oyity675ii42wcyinr"/>
     </component>
@@ -25,13 +25,13 @@
   </displayList>
   <Button/>
   <transition name="up">
-    <item time="0" type="Scale" value="1,1"/>
-    <item time="3" type="Scale" value="1,1"/>
+    <item time="0" type="Scale" target="n81_vbj6" value="1,1"/>
+    <item time="3" type="Scale" target="n81_vbj6" value="1,1"/>
   </transition>
   <transition name="down">
-    <item time="0" type="Scale" tween="true" startValue="1,1" endValue="0.95,0.95" duration="3"/>
+    <item time="0" type="Scale" target="n81_vbj6" tween="true" startValue="1,1" endValue="0.95,0.95" duration="3"/>
   </transition>
   <transition name="over">
-    <item time="0" type="Scale" tween="true" startValue="1,1" endValue="1.05,1.05" duration="3"/>
+    <item time="0" type="Scale" target="n81_vbj6" tween="true" startValue="1,1" endValue="1.05,1.05" duration="3"/>
   </transition>
 </component>
