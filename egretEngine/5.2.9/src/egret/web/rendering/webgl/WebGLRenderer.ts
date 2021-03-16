@@ -259,8 +259,8 @@ namespace egret.web {
             let displayBoundsHeight: number
             if (isCameraFilter) {
                 let cameraPos: Point = displayObject.globalToLocal(0, 0, this._tempResultPos);
-                displayBoundsX = cameraPos.x;
-                displayBoundsY = cameraPos.y;
+                displayBoundsX = Math.round(cameraPos.x);
+                displayBoundsY = Math.round(cameraPos.y);
                 let m: Matrix = displayObject.$getConcatenatedMatrix();
                 displayBoundsWidth = displayObject.$stage.$stageWidth / m.a;
                 displayBoundsHeight = displayObject.$stage.$stageHeight / m.d;
