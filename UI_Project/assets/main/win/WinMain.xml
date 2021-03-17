@@ -4,7 +4,7 @@
     <action type="change_page" fromPage="" toPage="0" objectId="n41_o2yv" controller="ctrlGodView" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n41_o2yv" controller="ctrlGodView" targetPage="1"/>
   </controller>
-  <controller name="ctrlMenuType" pages="0,lesson,1,mapTemplate,11,banner" selected="0"/>
+  <controller name="ctrlMenuType" pages="0,lesson,1,mapTemplate,11,banner" selected="2"/>
   <controller name="ctrlMinimap" pages="0,show,1,hide" selected="0"/>
   <displayList>
     <component id="n14_psru" name="comTask" src="psruk" fileName="com/ComMainTask.xml" xy="0,277">
@@ -24,9 +24,9 @@
       <gearDisplay controller="ctrlMenuType" pages="11"/>
       <relation target="" sidePair="left-left,top-top"/>
     </component>
-    <component id="n51_vbj6" name="btnBannerTemplate" src="psruh" fileName="com/btnMainMenu.xml" xy="1545,11" customData="top">
+    <component id="n51_vbj6" name="btnBannerTemplate" src="psruh" fileName="com/btnMainMenu.xml" xy="1549,11" customData="top">
       <gearDisplay controller="ctrlMenuType" pages="11"/>
-      <relation target="n15_n173" sidePair="right-right,top-top"/>
+      <relation target="n10_psru" sidePair="right-left,top-top"/>
       <Button title="模板创作" icon="ui://oyity675a1nd8"/>
     </component>
     <component id="n9_psru" name="btnIde" src="fn8fcyijz" fileName="btn/btnIde.xml" xy="1804,980" customData="right" controller="ctrlOrientation,0">
@@ -38,11 +38,10 @@
       <gearDisplay controller="ctrlGodView" pages="0"/>
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </component>
-    <component id="n10_psru" name="comSmallMap" src="psrui" fileName="com/ComSmallMap.xml" xy="1655,6" group="n15_n173"/>
-    <group id="n15_n173" name="grpRightTop" xy="1655,6" size="262,262" advanced="true">
-      <gearXY controller="ctrlMinimap" pages="0,1" values="1655,6|1920,6" tween="true"/>
+    <component id="n10_psru" name="comSmallMap" src="psrui" fileName="com/ComSmallMap.xml" xy="1654,6" size="266,262">
+      <gearSize controller="ctrlMinimap" pages="1" values="0,262,1,1" default="266,262,1,1" tween="true"/>
       <relation target="" sidePair="right-right"/>
-    </group>
+    </component>
     <component id="n26_evs4" name="comBuildShortCut" src="qu7tt7j" fileName="ideCommon/com/ComBuildShortCutB.xml" pkg="ti9jag5t" xy="331,40" visible="false" touchable="false" customData="bottom" controller="ctrlState,11">
       <relation target="" sidePair="center-center"/>
     </component>
@@ -57,10 +56,11 @@
     </component>
   </displayList>
   <transition name="showAnim">
+    <item time="0" type="Alpha" target="n10_psru" tween="true" startValue="0" endValue="1" duration="12"/>
     <item time="0" type="Alpha" target="n34_ej7r" tween="true" startValue="0" endValue="1" duration="12"/>
+    <item time="0" type="Alpha" target="n51_vbj6" tween="true" startValue="0" endValue="1" duration="12"/>
     <item time="0" type="XY" target="n13_psru" tween="true" startValue="-,1080" endValue="-,987" duration="12"/>
     <item time="0" type="XY" target="n14_psru" tween="true" startValue="-266,-" endValue="0,-" duration="12"/>
-    <item time="0" type="XY" target="n15_n173" tween="true" startValue="-,-278.75" endValue="-,0" duration="12"/>
     <item time="0" type="XY" target="n41_o2yv" tween="true" startValue="-,-119" endValue="0,0" duration="12"/>
     <item time="0" type="XY" target="n42_o2yv" tween="true" startValue="-,-122" endValue="-,0" duration="12"/>
     <item time="0" type="XY" target="n43_o2yv" tween="true" startValue="-,-125" endValue="0,0" duration="12"/>
@@ -69,7 +69,6 @@
   <transition name="hideAnim">
     <item time="0" type="XY" target="n13_psru" tween="true" startValue="554,987" endValue="-,1080" duration="12"/>
     <item time="0" type="XY" target="n14_psru" tween="true" startValue="0,277" endValue="-267,-" duration="12"/>
-    <item time="0" type="XY" target="n15_n173" tween="true" startValue="1655,0" endValue="1655,-279" duration="12"/>
     <item time="0" type="XY" target="n9_psru" tween="true" startValue="1804,979" endValue="1920,-" duration="12"/>
   </transition>
 </component>
