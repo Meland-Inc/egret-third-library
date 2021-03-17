@@ -1,4 +1,7 @@
 namespace egret {
+    /**当前webgl的纹理数量 */
+    export let webglTextureNum: number = 0;
+
     /**性能档位 */
     export enum ePerfType {
         high = 1,

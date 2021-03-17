@@ -13973,6 +13973,8 @@ declare namespace egret {
     }
 }
 declare namespace egret {
+    /**当前webgl的纹理数量 */
+    let webglTextureNum: number;
     /**性能档位 */
     enum ePerfType {
         high = 1,

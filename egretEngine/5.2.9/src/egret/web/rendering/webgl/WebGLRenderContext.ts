@@ -370,6 +370,7 @@ namespace egret.web {
                 return;
             }
 
+            webglTextureNum++;
             texture.glContext = gl;
 
             gl.bindTexture(gl.TEXTURE_2D, texture);
