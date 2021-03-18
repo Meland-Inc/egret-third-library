@@ -4,6 +4,7 @@ import { ModelMgr } from "./model/ModelMgr";
 export class Global {
     static currentVersion = "1.9.9 beta5";
     static projPath = localStorage.getItem('client_project_path');
+    static projEnginePath = localStorage.getItem('client_engine_path');
     static protoPath = localStorage.getItem('client_proto_path');
     static svnPath = localStorage.getItem('client_svn_path');
     static clientPath = localStorage.getItem('client_client_path');
@@ -259,6 +260,12 @@ export class Global {
 ipcRenderer.on('selected_client_project_path', (event, path) => {
     if (path) {
         Global.projPath = path[0];
+    }
+});
+
+ipcRenderer.on('selected_client_engine_path', (event, path) => {
+    if (path) {
+        Global.projEnginePath = path[0];
     }
 });
 

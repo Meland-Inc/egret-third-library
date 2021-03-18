@@ -54,6 +54,16 @@ exports.init = (mainWindow) => {
         })
     })
 
+    ipcMain.on('open_client_engine_path', (event) => {
+        dialog.showOpenDialog({
+            properties: ['openFile', 'openDirectory']
+        }, (files) => {
+            if (files) {
+                event.sender.send('selected_client_engine_path', files);
+            }
+        })
+    })
+
     ipcMain.on('open_client_proto_path', (event) => {
         dialog.showOpenDialog({
             properties: ['openFile', 'openDirectory']
