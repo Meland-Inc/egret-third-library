@@ -37,10 +37,12 @@ export async function updateGit() {
     try {
         let clearCmdStr = `git clean -df`;
         await spawnExc.runCmd(clearCmdStr, Global.projPath, null, '清除文件错误');
+        await spawnExc.runCmd(clearCmdStr, Global.projEnginePath, null, '清除Engine文件错误');
         await spawnExc.runCmd(clearCmdStr, Global.clientPath, null, '清除Client代码错误');
 
         let storeCmdStr = `git checkout -- .`;
         await spawnExc.runCmd(storeCmdStr, Global.projPath, null, '还原分支错误');
+        await spawnExc.runCmd(storeCmdStr, Global.projEnginePath, null, '还原Engine分支错误');
         await spawnExc.runCmd(storeCmdStr, Global.clientPath, null, '还原Client代码错误');
 
         let switchCmdStr = `git checkout ${gitBranch}`;
@@ -48,6 +50,7 @@ export async function updateGit() {
 
         let pullCmdStr = `git pull`;
         await spawnExc.runCmd(pullCmdStr, Global.projPath, null, '拉取分支错误');
+        await spawnExc.runCmd(pullCmdStr, Global.projEnginePath, null, '拉取Engine分支错误');
         await spawnExc.runCmd(pullCmdStr, Global.clientPath, null, '拉取Client代码错误');
 
         Global.toast('更新git成功');
@@ -133,7 +136,7 @@ export async function publishProject() {
                     await spawnExc.svnUpdate(Global.foolClientPath, "", "更新客户端错误");
                     Global.toast('更新客户端成功');
                 }
-                
+
                 const foolExists = await fsExc.exists(Global.foolClientZip);
                 if (foolExists) {
                     await fsExc.delFile(Global.foolClientZip);

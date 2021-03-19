@@ -26,6 +26,20 @@
           <mu-list-item-content>
             <mu-text-field
               class="text-setting"
+              label="设置项目引擎git目录"
+              v-model="client_engine_path"
+              label-float
+            />
+          </mu-list-item-content>
+          <mu-list-item-action>
+            <mu-button color="pink500" @click="onProjectEngliePathClick">选择</mu-button>
+          </mu-list-item-action>
+        </mu-list-item>
+
+        <mu-list-item v-show="gitVisible">
+          <mu-list-item-content>
+            <mu-text-field
+              class="text-setting"
               label="设置协议git目录"
               v-model="client_proto_path"
               label-float
@@ -96,6 +110,7 @@ export default {
         return {
             client_author:"",
             client_project_path: "",
+            client_engine_path: "",
             client_proto_path:"",
             client_svn_path:"",
             client_client_path:"",
@@ -105,6 +120,9 @@ export default {
     methods: {
         onProjectPathClick () {
             ipcRenderer.send('open_client_project_path');
+        },
+        onProjectEngliePathClick () {
+            ipcRenderer.send('open_client_engine_path');
         },
         onProtoPathClick () {
             ipcRenderer.send('open_client_proto_path');
@@ -127,6 +145,11 @@ export default {
                 localStorage.setItem("client_project_path", val);
             }
         },
+        client_engine_path: (val, oldVal) => {
+            if (val != oldVal) {
+                localStorage.setItem("client_engine_path", val);
+            }
+        },
         client_proto_path: (val, oldVal) => {
             if (val != oldVal) {
                 localStorage.setItem("client_proto_path", val);
@@ -146,12 +169,14 @@ export default {
     mounted () {
         this.client_author = localStorage.getItem("client_author");
         this.client_project_path = localStorage.getItem("client_project_path");
+        this.client_engine_path = localStorage.getItem("client_engine_path");
         this.client_proto_path = localStorage.getItem("client_proto_path");
         this.client_svn_path = localStorage.getItem("client_svn_path");
         this.client_client_path = localStorage.getItem("client_client_path");
 
         ipcRenderer.removeAllListeners([
             'selected_client_project_path', 
+            'selected_client_engine_path', 
             'selected_client_proto_path', 
             'selected_client_svn_path', 
             'selected_client_client_path',
@@ -160,6 +185,12 @@ export default {
         ipcRenderer.on('selected_client_project_path', (event, path) => {
             if(path){
                 this.client_project_path = path[0];
+            }
+        }),
+
+        ipcRenderer.on('selected_client_engine_path', (event, path) => {
+            if(path){
+                this.client_engine_path = path[0];
             }
         }),
 
