@@ -14,14 +14,14 @@
       <item title="自定义"/>
     </list>
     <image id="n17_i6od" name="imgSearchInputBg" src="oiqdcyigx" fileName="img/img_cm_ssk.png" pkg="te1gxawo" xy="1383,92" size="257,37" group="n20_i6od"/>
-    <text id="n18_i6od" name="inpSearch" xy="1449,99" size="179,26" group="n20_i6od" input="true" prompt="[color=#999999]请输入搜索内容[/color]" fontSize="20" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text=""/>
+    <text id="n18_i6od" name="inpSearch" xy="1449,99" size="179,26" group="n20_i6od" fontSize="20" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="" input="true" prompt="[color=#999999]请输入搜索内容[/color]"/>
     <image id="n19_i6od" name="n19" src="rujpcyijl" fileName="img/icon_cm_ss.png" pkg="te1gxawo" xy="1414,96" size="32,32" group="n20_i6od"/>
     <group id="n20_i6od" name="grpSearchInput" xy="1382,92" size="258,37" group="n15_pi8y" advanced="true"/>
     <component id="n5_pi8y" name="btnClose" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1650,91" size="48,48" group="n15_pi8y">
       <Button icon="ui://te1gxawooiqdcyih2"/>
     </component>
     <image id="n23_i6od" name="imgLstBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="280,160" size="1400,780" group="n15_pi8y"/>
-    <list id="n9_pi8y" name="lstSound" xy="300,181" size="1373,742" group="n15_pi8y" layout="flow_hz" selectionMode="multipleSingleClick" overflow="scroll" scrollBarRes="ui://te1gxawo9c90cyij6," lineGap="10" colGap="10" defaultItem="ui://ti9jag5tpi8ywcyilr">
+    <list id="n9_pi8y" name="lstSound" xy="300,181" size="1373,742" group="n15_pi8y" layout="flow_hz" overflow="scroll" scrollBarRes="ui://te1gxawo9c90cyij6," lineGap="10" colGap="10" defaultItem="ui://ti9jag5tpi8ywcyilr">
       <gearSize controller="ctrlSelected" pages="1,0" values="1373,742,1,1|1373,487,1,1"/>
       <item/>
       <item/>
