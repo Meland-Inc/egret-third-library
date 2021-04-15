@@ -15,7 +15,7 @@
     <text id="n3_oqix" name="tfTitle" xy="97,12" size="203,35" fontSize="25" color="#916844" align="center" vAlign="middle" autoSize="none" text="课程关卡编辑"/>
     <text id="n4_oqix" name="tfSceneName" xy="32,74" size="114,34" group="n32_oqix" fontSize="24" color="#6b4a2f" align="center" vAlign="middle" text="场景名称："/>
     <image id="n7_oqix" name="n7" src="a1wt13564zj" fileName="lessonCenter/lessonLevel/img/img_ide_gqbj_6.png" xy="154,69" size="208,43" group="n32_oqix"/>
-    <text id="n8_oqix" name="inpAreaName" xy="175,74" size="162,34" group="n32_oqix" customData="新场景" fontSize="20" color="#7a7a7a" vAlign="middle" autoSize="none" singleLine="true" text="" input="true" prompt="[color=#cccccd]“请输入场景名称”[/color]" maxLength="8"/>
+    <text id="n8_oqix" name="inpAreaName" xy="175,74" size="162,34" group="n32_oqix" customData="新场景" fontSize="20" color="#7a7a7a" vAlign="middle" autoSize="none" singleLine="true" text="" input="true" prompt="[color=#cccccd]“请输入场景名称”[/color]" maxLength="10"/>
     <group id="n32_oqix" name="grpNameInput" xy="32,69" size="330,43"/>
     <text id="n10_oqix" name="tfSceneMode" xy="32,128" size="114,34" group="n33_oqix" fontSize="24" color="#6b4a2f" align="center" vAlign="middle" text="场景模式："/>
     <component id="n9_oqix" name="cbLevelMode" src="grwpb3" fileName="attribute/widgets/ComboBox1.xml" xy="154,124" group="n33_oqix">
