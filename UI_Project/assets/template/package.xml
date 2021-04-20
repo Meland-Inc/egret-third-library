@@ -38,7 +38,7 @@
     <component id="qb974t" name="Pbr1.xml" path="/pbr/" exported="true"/>
     <component id="qb974u" name="Pbr1_grip.xml" path="/pbr/"/>
     <component id="azjx4v" name="labNameInput.xml" path="/com/"/>
-    <component id="v8nf4w" name="WinMapTemplateNew.xml" path="/win/" exported="true"/>
+    <component id="v8nf4w" name="WinMapTemplate.xml" path="/win/" exported="true"/>
     <component id="v8nf4x" name="ComAllRoom.xml" path="/com/"/>
     <component id="v8nf4y" name="ComMapTemplateListSmall.xml" path="/com/"/>
     <component id="v8nf4z" name="ComMapTemplateGrid.xml" path="/com/"/>
@@ -244,8 +244,8 @@
     <image id="pplwaw" name="我的课程.jpg" path="/img/lessonCenter/"/>
     <component id="pplwax" name="ComLessonCreate.xml" path="/comLesson/" exported="true"/>
     <component id="pplway" name="comLessonCenterTemplateItem.xml" path="/com/"/>
-    <component id="pplwaz" name="WinLessonTemplate.xml" path="/win/" exported="true"/>
-    <component id="pplwb0" name="WinLessonMapTemplate.xml" path="/win/" exported="true"/>
+    <component id="pplwaz" name="WinLessonTemplate_back.xml" path="/win/" exported="true"/>
+    <component id="pplwb0" name="WinLessonMapTemplate_back.xml" path="/win/" exported="true"/>
     <image id="sqy0b1" name="bg_kkk_02.png" path="/img/lessonCenter/" scale="9grid" scale9grid="31,35,62,70"/>
     <image id="sqy0b2" name="bg_kkk_01.png" path="/img/lessonCenter/"/>
     <image id="sqy0b4" name="bg_kkk_03.png" path="/img/lessonCenter/"/>
@@ -297,6 +297,7 @@
     <component id="lj75cj" name="TooltipSaveMapTemplate.xml" path="/tooltip/" exported="true"/>
     <image id="lj75ck" name="icon01.png" path="/img/"/>
     <image id="lj75cl" name="icon02.png" path="/img/"/>
+    <component id="xgf5cm" name="WinLessonTemplate.xml" path="/win/" exported="true"/>
   </resources>
   <publish name="template"/>
 </packageDescription>
