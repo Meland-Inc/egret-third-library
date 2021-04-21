@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://0axy98cgtbm25m" designImageAlpha="0" designImageLayer="1" bgColor="#f7f6f2">
-  <controller name="ctrlPanel" pages="0,allmap,1,allroom,2,mymap,3,mycollect,7,mappublish" selected="0"/>
+  <controller name="ctrlPanel" pages="0,allmap,2,mymap,3,mycollect,7,mappublish" selected="0"/>
   <displayList>
     <graph id="n63_tbm2" name="n63" xy="0,0" size="1920,1080" type="rect" fillColor="#fff7f6f2">
       <relation target="" sidePair="width-width,height-height"/>
     </graph>
     <component id="n46_azcq" name="comAllMap" src="v8nf53" fileName="com/ComAllMap.xml" xy="0,0">
       <gearDisplay controller="ctrlPanel" pages="0"/>
-      <relation target="" sidePair="width-width,height-height"/>
-    </component>
-    <component id="n47_azcq" name="comAllRoom" src="v8nf4x" fileName="com/ComAllRoom.xml" xy="0,0">
-      <gearDisplay controller="ctrlPanel" pages="1"/>
       <relation target="" sidePair="width-width,height-height"/>
     </component>
     <component id="n48_azcq" name="comMyMap" src="v8nf59" fileName="com/ComMyWork.xml" xy="0,0" controller="ctrlMode,1">
