@@ -4,16 +4,16 @@
     <action type="change_page" fromPage="" toPage="0" objectId="n41_o2yv" controller="ctrlGodView" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n41_o2yv" controller="ctrlGodView" targetPage="1"/>
   </controller>
-  <controller name="ctrlMenuType" pages="0,lesson,1,mapTemplate,11,banner" selected="1"/>
+  <controller name="ctrlMenuType" pages="0,lesson,1,mapTemplate,11,banner" selected="0"/>
   <controller name="ctrlMinimap" pages="0,show,1,hide" selected="0"/>
-  <controller name="ctrlShowCodeDialog" pages="0,hide,1,show" selected="1"/>
+  <controller name="ctrlViewStatus" pages="0,normal,1,quickCode,8,codeDialog" selected="0"/>
   <displayList>
     <component id="n14_psru" name="comTask" src="psruk" fileName="com/ComMainTask.xml" xy="0,277">
       <gearDisplay controller="ctrlMenuType" pages="0"/>
-      <gearDisplay2 controller="ctrlShowCodeDialog" pages="0" condition="0"/>
+      <gearDisplay2 controller="ctrlViewStatus" pages="0" condition="0"/>
     </component>
     <component id="n34_ej7r" name="comTaskTrace" src="jrwa7n" fileName="com/ComTaskTrace.xml" pkg="2ctbbuel" xy="0,275">
-      <gearDisplay controller="ctrlShowCodeDialog" pages="0"/>
+      <gearDisplay controller="ctrlViewStatus" pages="0"/>
       <relation target="" sidePair="left-left,top-top"/>
     </component>
     <component id="n41_o2yv" name="comLessonMenu" src="o2yvwcyim7" fileName="com/comLessonMenue.xml" xy="0,0">
@@ -29,40 +29,41 @@
     </component>
     <component id="n51_vbj6" name="btnBannerTemplate" src="psruh" fileName="com/btnMainMenu.xml" xy="1549,11" customData="top">
       <gearDisplay controller="ctrlMenuType" pages="11"/>
-      <gearDisplay2 controller="ctrlShowCodeDialog" pages="0" condition="0"/>
+      <gearDisplay2 controller="ctrlViewStatus" pages="0" condition="0"/>
       <relation target="n10_psru" sidePair="right-left,top-top"/>
       <Button title="模板创作" icon="ui://oyity675a1nd8"/>
     </component>
     <component id="n9_psru" name="btnIde" src="fn8fcyijz" fileName="btn/btnIde.xml" xy="1804,980" customData="right" controller="ctrlOrientation,0">
       <gearDisplay controller="ctrlGodView" pages="0"/>
+      <gearDisplay2 controller="ctrlViewStatus" pages="0,8" condition="0"/>
       <relation target="" sidePair="bottom-bottom,right-right"/>
       <Button icon="ui://oyity675cnxcwcyim0"/>
     </component>
     <component id="n13_psru" name="comMainBagShortcut" src="psrum" fileName="com/ComMainBagShortcut.xml" xy="554,987" size="811,93" customData="bottom">
       <gearDisplay controller="ctrlGodView" pages="0"/>
-      <gearDisplay2 controller="ctrlShowCodeDialog" pages="0" condition="0"/>
+      <gearDisplay2 controller="ctrlViewStatus" pages="0" condition="0"/>
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </component>
     <component id="n10_psru" name="comSmallMap" src="psrui" fileName="com/ComSmallMap.xml" xy="1654,6" size="266,262">
-      <gearDisplay controller="ctrlShowCodeDialog" pages="0"/>
+      <gearDisplay controller="ctrlViewStatus" pages="0"/>
       <gearSize controller="ctrlMinimap" pages="1" values="0,262,1,1" default="266,262,1,1" tween="true"/>
       <relation target="" sidePair="right-right"/>
     </component>
     <component id="n26_evs4" name="comBuildShortCut" src="qu7tt7j" fileName="ideCommon/com/ComBuildShortCutB.xml" pkg="ti9jag5t" xy="331,40" visible="false" touchable="false" customData="bottom" controller="ctrlState,11">
-      <gearDisplay controller="ctrlShowCodeDialog" pages="0"/>
+      <gearDisplay controller="ctrlViewStatus" pages="0"/>
       <relation target="" sidePair="center-center"/>
     </component>
     <component id="n28_y6w6" name="comExperience" src="gen8d3" fileName="com/ComExperience.xml" xy="0,878">
-      <gearDisplay controller="ctrlShowCodeDialog" pages="0"/>
+      <gearDisplay controller="ctrlViewStatus" pages="0"/>
     </component>
     <component id="n29_ur6k" name="btnGetResult" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="1819,370" size="100,38" visible="false">
       <gearDisplay controller="ctrlMenuType" pages="1"/>
-      <gearDisplay2 controller="ctrlShowCodeDialog" pages="0" condition="0"/>
+      <gearDisplay2 controller="ctrlViewStatus" pages="0" condition="0"/>
       <relation target="" sidePair="right-right"/>
       <Button title="获取数据" titleFontSize="18" icon="ui://te1gxawooiqdcyih1"/>
     </component>
     <component id="n36_ho6v" name="comMainRocker" src="gen8bp" fileName="old/win/ComMainRocker.xml" xy="2,618">
-      <gearDisplay controller="ctrlShowCodeDialog" pages="0"/>
+      <gearDisplay controller="ctrlViewStatus" pages="0"/>
       <relation target="" sidePair="left-left,bottom-bottom"/>
     </component>
   </displayList>
