@@ -40,7 +40,7 @@
     <component id="azjx4v" name="labNameInput.xml" path="/com/"/>
     <component id="v8nf4w" name="WinMapTemplate.xml" path="/win/" exported="true"/>
     <component id="v8nf4x" name="ComAllRoom.xml" path="/com/"/>
-    <component id="v8nf4y" name="ComMapTemplateListSmall.xml" path="/com/"/>
+    <component id="v8nf4y" name="ComMapTemplateListSmall.xml" path="/com/" exported="true"/>
     <component id="v8nf4z" name="ComMapTemplateGrid.xml" path="/com/"/>
     <component id="v8nf50" name="ComMapTemplateGridBig.xml" path="/com/"/>
     <component id="v8nf51" name="ComMapTemplatePanel.xml" path="/com/"/>
@@ -67,7 +67,7 @@
     <image id="tbm25n" name="icon_mt_more.png" path="/img/"/>
     <image id="tbm25o" name="icon_mt_titlebg1.png" path="/img/"/>
     <image id="tbm25p" name="icon_mt_titlebg2.png" path="/img/"/>
-    <component id="tbm25q" name="ComMapTemplateListBig.xml" path="/com/"/>
+    <component id="tbm25q" name="ComMapTemplateListBig.xml" path="/com/" exported="true"/>
     <image id="tbm25r" name="img_mt_bgtitle.png" path="/img/" scale="tile"/>
     <image id="tbm25t" name="icon_mt_close.png" path="/img/"/>
     <image id="tbm25u" name="icon_mt_jiange.png" path="/img/"/>
@@ -79,7 +79,6 @@
     <image id="tbm260" name="icon_mt_btntag.png" path="/img/"/>
     <image id="tbm261" name="icon_mt_btntag1.png" path="/img/"/>
     <component id="tbm262" name="rbtnFixNoScale.xml" path="/btn/"/>
-    <component id="tbm263" name="ComMapTemplateGroup.xml" path="/com/"/>
     <image id="k9m364" name="房间列表界面.jpg" path="/img/"/>
     <image id="k9m365" name="img_mt_kuang.png" path="/img/" scale="9grid" scale9grid="38,37,76,74"/>
     <image id="k9m366" name="icon_mt_xq.png" path="/img/"/>
@@ -298,6 +297,7 @@
     <image id="lj75ck" name="icon01.png" path="/img/"/>
     <image id="lj75cl" name="icon02.png" path="/img/"/>
     <component id="xgf5cm" name="WinLessonTemplate.xml" path="/win/" exported="true"/>
+    <component id="en2gcn" name="ComMapTemplateListMine.xml" path="/com/" exported="true"/>
   </resources>
   <publish name="template"/>
 </packageDescription>
