@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="400,400" overflow="scroll" scrollBarFlags="4" scrollBarRes="ui://te1gxawoqylxcyija,">
   <displayList>
-    <component id="n1_uvm5" name="comVarCreateInlet" src="s45w1y" fileName="codeVew/com/ComVarCreateInlet.xml" xy="8,-93" size="271,34"/>
-    <component id="n2_p7oo" name="comListCreateInlet" src="s45w21" fileName="codeVew/com/ComListCreateInlet.xml" xy="8,90"/>
+    <component id="n1_uvm5" name="comVarCreateInlet" src="s45w1y" fileName="codeVew/com/ComVarCreateInlet.xml" xy="8,-93" size="386,34">
+      <relation target="" sidePair="width-width"/>
+    </component>
+    <component id="n2_p7oo" name="comListCreateInlet" src="s45w21" fileName="codeVew/com/ComListCreateInlet.xml" xy="8,90" size="386,40">
+      <relation target="" sidePair="width-width"/>
+    </component>
   </displayList>
 </component>
