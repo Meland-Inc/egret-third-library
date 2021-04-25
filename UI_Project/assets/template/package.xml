@@ -296,10 +296,9 @@
     <image id="lj75cl" name="icon02.png" path="/img/"/>
     <component id="xgf5cm" name="WinLessonTemplate.xml" path="/win/" exported="true"/>
     <component id="en2gcn" name="ComMapTemplateListMine.xml" path="/com/" exported="true"/>
-    <component id="en2gco" name="ComMyLesson.xml" path="/com/"/>
+    <component id="en2gco" name="ComMyTemplate.xml" path="/com/"/>
     <component id="en2gcq" name="ComBtnCreate.xml" path="/com/" exported="true"/>
     <component id="en2gcr" name="ComMapTemplateGirdEmpty.xml" path="/com/" exported="true"/>
-    <component id="yr55ct" name="ComMyMap.xml" path="/com/"/>
   </resources>
   <publish name="template"/>
 </packageDescription>

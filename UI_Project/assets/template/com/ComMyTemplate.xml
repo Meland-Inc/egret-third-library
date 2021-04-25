@@ -20,7 +20,7 @@
     <component id="n71_pt17" name="btnRoomCodeEnter" src="k9m36d" fileName="btn/btnFix.xml" xy="1607,117" group="n77_yr55">
       <Button title="房间码加入" titleFontSize="20" icon="ui://0axy98cgk9m36b"/>
     </component>
-    <list id="n74_en2g" name="lstTemplate" xy="236,248" size="1551,780" group="n77_yr55" layout="flow_hz" overflow="scroll" scrollBarMargin="0,0,0,50" scrollBarRes="ui://0axy98cgqb974t," lineGap="14" colGap="12" lineItemCount="5" defaultItem="ui://0axy98cguu9lc7" autoClearItems="true">
+    <list id="n74_en2g" name="lstTemplate" xy="236,248" size="1542,780" group="n77_yr55" layout="flow_hz" overflow="scroll" scrollBarMargin="0,0,0,50" scrollBarRes="ui://0axy98cgqb974t," lineGap="14" colGap="12" lineItemCount="5" defaultItem="ui://0axy98cguu9lc7" autoClearItems="true">
       <relation target="" sidePair="bottomext-bottom"/>
       <item/>
       <item/>
@@ -29,7 +29,7 @@
       <item/>
       <item/>
     </list>
-    <group id="n77_yr55" name="root" xy="165,112" size="1622,940" advanced="true">
+    <group id="n77_yr55" name="root" xy="165,112" size="1613,940" advanced="true">
       <relation target="" sidePair="center-center"/>
     </group>
   </displayList>
