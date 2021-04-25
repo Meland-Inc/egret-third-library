@@ -51,7 +51,6 @@
     <component id="v8nf56" name="ComMapBaseTemplateGrid.xml" path="/com/"/>
     <component id="v8nf57" name="ComMapTemplatePublish.xml" path="/com/"/>
     <component id="v8nf58" name="WinMapTemplateTitlePage.xml" path="/win/" exported="true"/>
-    <component id="v8nf59" name="ComMyWork.xml" path="/com/"/>
     <component id="v8nf5a" name="ComMapTemplateEditGrid.xml" path="/com/" exported="true"/>
     <component id="azcq5b" name="ComMapTemplateCollect.xml" path="/com/"/>
     <component id="azcq5d" name="ComMapTemplateDetail.xml" path="/com/"/>
@@ -119,7 +118,6 @@
     <image id="mzsu79" name="img_mt_fy_bg.png" path="/img/" scale="9grid" scale9grid="81,7,162,14"/>
     <image id="mzsu7a" name="icon_mt_fy_02.png" path="/img/"/>
     <image id="mzsu7b" name="icon_mt_fy_03.png" path="/img/"/>
-    <component id="mzsu7c" name="ComMyWorkMap.xml" path="/com/"/>
     <image id="yfas7d" name="地图详情切图标注.jpg" path="/img/"/>
     <image id="yfas7f" name="img_mt_mapbgfm.png" path="/img/" scale="9grid" scale9grid="13,14,47,26"/>
     <image id="yfas7g" name="icon_mt_yellowbg.png" path="/img/"/>
@@ -188,7 +186,7 @@
     <component id="gu5v9c" name="CombBlankType_popup.xml" path="/btn/"/>
     <image id="gu5v9d" name="icon_mt_xialaxuxianfgx.png" path="/img/" scale="tile"/>
     <image id="gu5v9e" name="06.我创建的界面效果图(1).jpg" path="/img/"/>
-    <image id="gu5v9f" name="icon_mt_myzujian.png" path="/img/"/>
+    <image id="gu5v9f" name="icon_mt_myzujian.png" path="/img/" scale="9grid" scale9grid="22,9,44,18"/>
     <image id="gu5v9g" name="icon_mt_myditu.png" path="/img/" scale="9grid" scale9grid="23,10,46,20"/>
     <component id="gu5v9h" name="ComMapTemplateSetting.xml" path="/com/"/>
     <image id="pt179i" name="icon_mt_publsihbg_03.png" path="/img/" scale="9grid" scale9grid="29,20,58,40"/>
@@ -298,6 +296,10 @@
     <image id="lj75cl" name="icon02.png" path="/img/"/>
     <component id="xgf5cm" name="WinLessonTemplate.xml" path="/win/" exported="true"/>
     <component id="en2gcn" name="ComMapTemplateListMine.xml" path="/com/" exported="true"/>
+    <component id="en2gco" name="ComMyLesson.xml" path="/com/"/>
+    <component id="en2gcq" name="ComBtnCreate.xml" path="/com/" exported="true"/>
+    <component id="en2gcr" name="ComMapTemplateGirdEmpty.xml" path="/com/" exported="true"/>
+    <component id="yr55ct" name="ComMyMap.xml" path="/com/"/>
   </resources>
   <publish name="template"/>
 </packageDescription>
