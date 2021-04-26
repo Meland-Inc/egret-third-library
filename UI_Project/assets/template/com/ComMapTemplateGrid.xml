@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="264,274" overflow="hidden" designImage="ui://0axy98cgtbm25m" designImageOffsetX="-294" designImageOffsetY="-734" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlSelect" pages="0,0,1,1,2,2" selected="1"/>
+  <controller name="ctrlSelect" pages="0,0,1,1,2,2" selected="0"/>
   <controller name="ctrlNone" pages="0,hide,1,show" selected="0"/>
-  <controller name="ctrlMode" pages="0,normal,1,lessonCenter" selected="1"/>
+  <controller name="ctrlMode" pages="0,map,1,lesson" selected="0"/>
   <displayList>
     <image id="n54_l1zw" name="n54" src="yfas7f" fileName="img/img_mt_mapbgfm.png" xy="0,0" size="263,274" group="n57_l1zw"/>
     <image id="n55_l1zw" name="n55" src="yfas7r" fileName="img/img_mt_mapbgframe.png" xy="0,0" size="264,273" group="n57_l1zw"/>
@@ -10,30 +10,17 @@
     <group id="n57_l1zw" name="n57" xy="0,0" size="264,274" advanced="true">
       <gearDisplay controller="ctrlNone" pages="1"/>
     </group>
-    <image id="n44_tbm2" name="n44" src="tbm25f" fileName="img/img_mt_mapbg2.png" xy="1,1" size="262,271" group="n58_l1zw" color="#f7f6f2">
+    <image id="n44_tbm2" name="n44" src="tbm25f" fileName="img/img_mt_mapbg2.png" xy="1,1" size="262,271" group="n58_l1zw">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n45_tbm2" name="n45" src="tbm25g" fileName="img/img_mt_mapbg3.png" xy="0,31" size="264,155" group="n58_l1zw">
+    <image id="n45_tbm2" name="n45" src="tbm25g" fileName="img/img_mt_mapbg3.png" xy="2,31" size="260,155" group="n58_l1zw">
       <relation target="" sidePair="width-width,top-top,height-height"/>
     </image>
-    <loader id="n42_v8nf" name="loaderMap" xy="1,31" size="262,156" group="n58_l1zw" align="center" vAlign="middle" fill="scaleMatchWidth"/>
-    <image id="n59_wnwo" name="imgMask" src="tbm25g" fileName="img/img_mt_mapbg3.png" xy="0,30" size="264,155" group="n58_l1zw" visible="false">
-      <relation target="" sidePair="topext-top,bottomext-bottom,width-width"/>
-    </image>
-    <image id="n52_qdan" name="n52" src="qdanad" fileName="img/img_mt_mapbg4.png" xy="0,186" size="264,86" group="n58_l1zw" color="#f7f6f2"/>
-    <image id="n51_qdan" name="n51" src="qdanad" fileName="img/img_mt_mapbg4.png" xy="264,31" size="264,30" group="n58_l1zw" rotation="180" color="#f7f6f2"/>
+    <loader id="n42_v8nf" name="loaderMap" xy="2,31" size="260,155" group="n58_l1zw" align="center" vAlign="middle" fill="scaleNoBorder"/>
     <image id="n49_tbm2" name="n49" src="tbm25k" fileName="img/img_mt_select.png" xy="0,0" size="265,275" group="n58_l1zw">
       <gearDisplay controller="ctrlSelect" pages="1"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <text id="n38_v8nf" name="txtName" xy="11,3" size="241,28" group="n58_l1zw" fontSize="16" color="#716f7a" align="center" vAlign="middle" autoSize="none" text="模板名"/>
-    <text id="n39_v8nf" name="txtAuthor" xy="47,184" size="169,32" group="n58_l1zw" fontSize="16" color="#716f7a" align="center" vAlign="middle" autoSize="none" text="作者"/>
-    <text id="n40_v8nf" name="txtCount" xy="72,227" size="67,34" group="n58_l1zw" fontSize="18" color="#716f7a" vAlign="middle" autoSize="none" text="1234">
-      <relation target="n47_tbm2" sidePair="middle-middle,left-right"/>
-    </text>
-    <text id="n41_v8nf" name="txtFavourable" xy="191,225" size="80,38" group="n58_l1zw" fontSize="16" color="#716f7a" vAlign="middle" autoSize="none" text="94%">
-      <relation target="n46_tbm2" sidePair="middle-middle,left-right"/>
-    </text>
     <image id="n46_tbm2" name="n46" src="tbm25i" fileName="img/icon_mt_zan.png" xy="158,228" size="26,26" group="n58_l1zw"/>
     <image id="n47_tbm2" name="n47" src="tbm25h" fileName="img/icon_mt_play.png" xy="41,227" size="26,26" group="n58_l1zw" aspect="true"/>
     <image id="n48_tbm2" name="n48" src="tbm25j" fileName="img/icon_mt_line.png" xy="4,214" size="263,3" group="n58_l1zw">
@@ -43,12 +30,20 @@
     <component id="n50_tbm2" name="btnMapDetail" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="40,76" size="192,62" group="n58_l1zw">
       <gearDisplay controller="ctrlSelect" pages="1"/>
       <gearText controller="ctrlMode" pages="1" values="课程详情" default="地图详情"/>
-      <Button title="课程详情" titleFontSize="30" icon="ui://0axy98cgtbm25l"/>
+      <Button title="地图详情" titleFontSize="30" icon="ui://0axy98cgtbm25l"/>
     </component>
     <image id="n53_r5js" name="n53" src="qdana7" fileName="img/img_mt_editgridhover.png" xy="0,0" size="264,273" group="n58_l1zw">
       <gearDisplay controller="ctrlSelect" pages="2"/>
     </image>
-    <group id="n58_l1zw" name="n58" xy="0,0" size="528,275" advanced="true">
+    <text id="n38_v8nf" name="txtName" xy="11,3" size="241,28" group="n58_l1zw" fontSize="16" color="#716f7a" align="center" vAlign="middle" autoSize="none" text="模板名"/>
+    <text id="n39_v8nf" name="txtAuthor" xy="47,184" size="169,32" group="n58_l1zw" fontSize="16" color="#716f7a" align="center" vAlign="middle" autoSize="none" text="作者"/>
+    <text id="n40_v8nf" name="txtCount" xy="72,227" size="67,34" group="n58_l1zw" fontSize="18" color="#716f7a" vAlign="middle" autoSize="none" text="1234">
+      <relation target="n47_tbm2" sidePair="middle-middle,left-right"/>
+    </text>
+    <text id="n41_v8nf" name="txtFavourable" xy="191,225" size="80,38" group="n58_l1zw" fontSize="16" color="#716f7a" vAlign="middle" autoSize="none" text="94%">
+      <relation target="n46_tbm2" sidePair="middle-middle,left-right"/>
+    </text>
+    <group id="n58_l1zw" name="n58" xy="0,0" size="271,275" advanced="true">
       <gearDisplay controller="ctrlNone" pages="0"/>
     </group>
   </displayList>
