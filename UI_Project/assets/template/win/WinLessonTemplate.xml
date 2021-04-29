@@ -26,14 +26,6 @@
     <component id="n39_v8nf" name="btnAllMap" src="dvog9v" fileName="btn/btnTextSelect.xml" xy="401,12" size="140,58" group="n45_azcq">
       <Button title="课程中心" titleFontSize="24" controller="ctrlPanel" page="0"/>
     </component>
-    <component id="n43_v8nf" name="btnMyCollect" src="dvog9u" fileName="btn/btnScaleSelect.xml" xy="1354,16" size="120,48" group="n45_azcq">
-      <relation target="" sidePair="top-top,right-right"/>
-      <Button title="我的收藏" titleColor="#ffffff" titleFontSize="20" icon="ui://0axy98cgtbm25v" selectedIcon="ui://0axy98cgdvog9t" controller="ctrlPanel" page="3"/>
-    </component>
-    <component id="n44_v8nf" name="btnMyMap" src="dvog9u" fileName="btn/btnScaleSelect.xml" xy="1482,16" size="121,46" group="n45_azcq">
-      <relation target="" sidePair="top-top,right-right"/>
-      <Button checked="true" title="我的创作" icon="ui://0axy98cgtbm25w" selectedIcon="ui://0axy98cgdvog9s" controller="ctrlPanel" page="2"/>
-    </component>
     <component id="n65_pplw" name="btnMyLesson" src="dvog9v" fileName="btn/btnTextSelect.xml" xy="231,12" size="140,58" group="n45_azcq">
       <Button checked="true" title="我的课程" titleFontSize="24" controller="ctrlPanel" page="2"/>
     </component>

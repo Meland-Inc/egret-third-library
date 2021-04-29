@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="264,274" overflow="hidden" designImage="ui://0axy98cgtbm25m" designImageOffsetX="-294" designImageOffsetY="-734" designImageAlpha="0" designImageLayer="1">
+<component size="264,274" designImage="ui://0axy98cgtbm25m" designImageOffsetX="-294" designImageOffsetY="-734" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlSelect" pages="0,0,1,1,2,2" selected="0"/>
   <controller name="ctrlNone" pages="0,hide,1,show" selected="0"/>
   <controller name="ctrlMode" pages="0,map,1,lesson" selected="0"/>

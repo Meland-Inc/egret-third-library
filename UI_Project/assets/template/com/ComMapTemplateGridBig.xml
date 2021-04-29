@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="340,342" overflow="hidden" designImage="ui://0axy98cgtbm25m" designImageOffsetX="-283" designImageOffsetY="-281" designImageAlpha="0" designImageLayer="1" bgColor="#eeede9">
-  <controller name="ctrlSelect" pages="0,0,1,1,2,2" selected="1"/>
+<component size="340,342" designImage="ui://0axy98cgtbm25m" designImageOffsetX="-283" designImageOffsetY="-281" designImageAlpha="0" designImageLayer="1" bgColor="#eeede9">
+  <controller name="ctrlSelect" pages="0,0,1,1,2,2" selected="0"/>
   <controller name="ctrlNone" pages="0,hide,1,show" selected="0"/>
   <controller name="ctrlMode" pages="0,normal,1,lessonCenter" selected="0"/>
   <displayList>

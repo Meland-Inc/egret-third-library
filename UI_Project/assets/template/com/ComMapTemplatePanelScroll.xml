@@ -2,7 +2,7 @@
 <component size="1536,862" scrollBarRes="ui://0axy98cgqb974t," designImage="ui://0axy98cgmzsu6f" designImageOffsetX="-250" designImageOffsetY="-179" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlType" pages="0,recommend,1,race,2,new,3,hot,4,lesson,5,story,6,leisure,7,my,8,homework,9,internal" selected="0"/>
   <displayList>
-    <list id="n58_mzsu" name="lstMapGrid" xy="4,4" size="1439,807" layout="flow_hz" overflow="scroll" lineGap="16" colGap="29" lineItemCount="5" defaultItem="ui://0axy98cgv8nf4z" autoClearItems="true">
+    <list id="n58_mzsu" name="lstMapGrid" xy="4,4" size="1463,807" layout="flow_hz" overflow="scroll" scrollBarRes="ui://0axy98cgqb974t," lineGap="16" colGap="29" lineItemCount="5" defaultItem="ui://0axy98cgv8nf4z" autoClearItems="true">
       <relation target="" sidePair="left-left,top-top"/>
       <item/>
       <item/>
