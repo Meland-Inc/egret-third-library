@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://0axy98cgyfas87" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlInfo" pages="0,short,1,all" selected="0"/>
-  <controller name="ctrlMode" pages="0,normal,1,lessonCenter" selected="1">
+  <controller name="ctrlMode" pages="0,map,1,lesson" selected="0">
     <action type="change_page" fromPage="" toPage="0" objectId="n132_r5js" controller="ctrlMode" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n132_r5js" controller="ctrlMode" targetPage="1"/>
   </controller>
@@ -12,7 +12,7 @@
     <image id="n36_v8nf" name="imgHeaderBg" src="tbm25r" fileName="img/img_mt_bgtitle.png" xy="0,0" size="1920,90" group="n109_yfas">
       <relation target="" sidePair="width-width,top-top"/>
     </image>
-    <text id="n45_v8nf" name="n45" xy="168,26" size="152,44" group="n109_yfas" fontSize="32" color="#716f7a" autoSize="none" text="课程详情">
+    <text id="n45_v8nf" name="n45" xy="168,26" size="152,44" group="n109_yfas" fontSize="32" color="#716f7a" autoSize="none" text="地图详情">
       <gearText controller="ctrlMode" pages="1" values="课程详情" default="地图详情"/>
     </text>
     <component id="n38_v8nf" name="btnReturn" src="tbm25y" fileName="btn/btnScale.xml" xy="35,24" size="101,42" group="n109_yfas">

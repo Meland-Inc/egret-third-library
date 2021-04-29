@@ -38,9 +38,9 @@
     <component id="qb974t" name="Pbr1.xml" path="/pbr/" exported="true"/>
     <component id="qb974u" name="Pbr1_grip.xml" path="/pbr/"/>
     <component id="azjx4v" name="labNameInput.xml" path="/com/"/>
-    <component id="v8nf4w" name="WinMapTemplateNew.xml" path="/win/" exported="true"/>
+    <component id="v8nf4w" name="WinMapTemplate.xml" path="/win/" exported="true"/>
     <component id="v8nf4x" name="ComAllRoom.xml" path="/com/"/>
-    <component id="v8nf4y" name="ComMapTemplateListSmall.xml" path="/com/"/>
+    <component id="v8nf4y" name="ComMapTemplateListSmall.xml" path="/com/" exported="true"/>
     <component id="v8nf4z" name="ComMapTemplateGrid.xml" path="/com/"/>
     <component id="v8nf50" name="ComMapTemplateGridBig.xml" path="/com/"/>
     <component id="v8nf51" name="ComMapTemplatePanel.xml" path="/com/"/>
@@ -51,7 +51,6 @@
     <component id="v8nf56" name="ComMapBaseTemplateGrid.xml" path="/com/"/>
     <component id="v8nf57" name="ComMapTemplatePublish.xml" path="/com/"/>
     <component id="v8nf58" name="WinMapTemplateTitlePage.xml" path="/win/" exported="true"/>
-    <component id="v8nf59" name="ComMyWork.xml" path="/com/"/>
     <component id="v8nf5a" name="ComMapTemplateEditGrid.xml" path="/com/" exported="true"/>
     <component id="azcq5b" name="ComMapTemplateCollect.xml" path="/com/"/>
     <component id="azcq5d" name="ComMapTemplateDetail.xml" path="/com/"/>
@@ -67,7 +66,7 @@
     <image id="tbm25n" name="icon_mt_more.png" path="/img/"/>
     <image id="tbm25o" name="icon_mt_titlebg1.png" path="/img/"/>
     <image id="tbm25p" name="icon_mt_titlebg2.png" path="/img/"/>
-    <component id="tbm25q" name="ComMapTemplateListBig.xml" path="/com/"/>
+    <component id="tbm25q" name="ComMapTemplateListBig.xml" path="/com/" exported="true"/>
     <image id="tbm25r" name="img_mt_bgtitle.png" path="/img/" scale="tile"/>
     <image id="tbm25t" name="icon_mt_close.png" path="/img/"/>
     <image id="tbm25u" name="icon_mt_jiange.png" path="/img/"/>
@@ -79,7 +78,6 @@
     <image id="tbm260" name="icon_mt_btntag.png" path="/img/"/>
     <image id="tbm261" name="icon_mt_btntag1.png" path="/img/"/>
     <component id="tbm262" name="rbtnFixNoScale.xml" path="/btn/"/>
-    <component id="tbm263" name="ComMapTemplateGroup.xml" path="/com/"/>
     <image id="k9m364" name="房间列表界面.jpg" path="/img/"/>
     <image id="k9m365" name="img_mt_kuang.png" path="/img/" scale="9grid" scale9grid="38,37,76,74"/>
     <image id="k9m366" name="icon_mt_xq.png" path="/img/"/>
@@ -120,7 +118,6 @@
     <image id="mzsu79" name="img_mt_fy_bg.png" path="/img/" scale="9grid" scale9grid="81,7,162,14"/>
     <image id="mzsu7a" name="icon_mt_fy_02.png" path="/img/"/>
     <image id="mzsu7b" name="icon_mt_fy_03.png" path="/img/"/>
-    <component id="mzsu7c" name="ComMyWorkMap.xml" path="/com/"/>
     <image id="yfas7d" name="地图详情切图标注.jpg" path="/img/"/>
     <image id="yfas7f" name="img_mt_mapbgfm.png" path="/img/" scale="9grid" scale9grid="13,14,47,26"/>
     <image id="yfas7g" name="icon_mt_yellowbg.png" path="/img/"/>
@@ -189,7 +186,7 @@
     <component id="gu5v9c" name="CombBlankType_popup.xml" path="/btn/"/>
     <image id="gu5v9d" name="icon_mt_xialaxuxianfgx.png" path="/img/" scale="tile"/>
     <image id="gu5v9e" name="06.我创建的界面效果图(1).jpg" path="/img/"/>
-    <image id="gu5v9f" name="icon_mt_myzujian.png" path="/img/"/>
+    <image id="gu5v9f" name="icon_mt_myzujian.png" path="/img/" scale="9grid" scale9grid="22,9,44,18"/>
     <image id="gu5v9g" name="icon_mt_myditu.png" path="/img/" scale="9grid" scale9grid="23,10,46,20"/>
     <component id="gu5v9h" name="ComMapTemplateSetting.xml" path="/com/"/>
     <image id="pt179i" name="icon_mt_publsihbg_03.png" path="/img/" scale="9grid" scale9grid="29,20,58,40"/>
@@ -244,8 +241,8 @@
     <image id="pplwaw" name="我的课程.jpg" path="/img/lessonCenter/"/>
     <component id="pplwax" name="ComLessonCreate.xml" path="/comLesson/" exported="true"/>
     <component id="pplway" name="comLessonCenterTemplateItem.xml" path="/com/"/>
-    <component id="pplwaz" name="WinLessonTemplate.xml" path="/win/" exported="true"/>
-    <component id="pplwb0" name="WinLessonMapTemplate.xml" path="/win/" exported="true"/>
+    <component id="pplwaz" name="WinLessonTemplate_back.xml" path="/win/" exported="true"/>
+    <component id="pplwb0" name="WinLessonMapTemplate_back.xml" path="/win/" exported="true"/>
     <image id="sqy0b1" name="bg_kkk_02.png" path="/img/lessonCenter/" scale="9grid" scale9grid="31,35,62,70"/>
     <image id="sqy0b2" name="bg_kkk_01.png" path="/img/lessonCenter/"/>
     <image id="sqy0b4" name="bg_kkk_03.png" path="/img/lessonCenter/"/>
@@ -297,6 +294,11 @@
     <component id="lj75cj" name="TooltipSaveMapTemplate.xml" path="/tooltip/" exported="true"/>
     <image id="lj75ck" name="icon01.png" path="/img/"/>
     <image id="lj75cl" name="icon02.png" path="/img/"/>
+    <component id="xgf5cm" name="WinLessonTemplate.xml" path="/win/" exported="true"/>
+    <component id="en2gcn" name="ComMapTemplateListMine.xml" path="/com/" exported="true"/>
+    <component id="en2gco" name="ComMyTemplate.xml" path="/com/"/>
+    <component id="en2gcq" name="ComBtnCreate.xml" path="/com/" exported="true"/>
+    <component id="en2gcr" name="ComMapTemplateGirdEmpty.xml" path="/com/" exported="true"/>
   </resources>
   <publish name="template"/>
 </packageDescription>

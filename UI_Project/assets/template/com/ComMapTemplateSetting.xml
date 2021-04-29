@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://0axy98cgvrsj9m" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlManor" pages="0,0,1,1" selected="0"/>
-  <controller name="ctrlMode" pages="0,normal,1,lessonCenter" selected="1"/>
+  <controller name="ctrlMode" pages="0,map,1,lesson" selected="0"/>
   <displayList>
     <graph id="n77_yfas" name="n77" xy="0,0" size="1920,1080" group="n83_yfas" type="rect" fillColor="#fff7f6f2">
       <relation target="" sidePair="width-width,height-height"/>
@@ -12,28 +12,30 @@
     <image id="n80_yfas" name="imgHeaderBg" src="tbm25r" fileName="img/img_mt_bgtitle.png" xy="0,0" size="1920,90" group="n83_yfas">
       <relation target="" sidePair="width-width,top-top"/>
     </image>
-    <text id="n81_yfas" name="n81" xy="168,26" size="152,44" group="n83_yfas" fontSize="32" color="#716f7a" autoSize="none" text="配置课程"/>
+    <text id="n81_yfas" name="n81" xy="168,26" size="152,44" group="n83_yfas" fontSize="32" color="#716f7a" autoSize="none" text="配置地图">
+      <gearText controller="ctrlMode" pages="0" values="配置地图" default="配置课程"/>
+    </text>
     <component id="n82_yfas" name="btnReturn" src="tbm25y" fileName="btn/btnScale.xml" xy="35,24" size="101,42" group="n83_yfas">
       <Button title="  返回" icon="ui://0axy98cgmzsu6h"/>
     </component>
     <group id="n83_yfas" name="grpMain" xy="0,0" size="1920,1080"/>
-    <loader id="n68_mzsu" name="n68" xy="847,214" size="534,645" group="n63_v8nf" url="ui://0axy98cgpplwap" fill="scaleFree">
+    <loader id="n68_mzsu" name="n68" xy="847,214" size="534,645" group="n63_v8nf" url="ui://0axy98cgmzsu6m" fill="scaleFree">
       <gearIcon controller="ctrlMode" pages="1" values="ui://0axy98cgpplwap" default="ui://0axy98cgmzsu6m"/>
     </loader>
-    <loader id="n67_mzsu" name="n67" xy="847,218" size="534,211" group="n63_v8nf" url="ui://0axy98cgpplwao" fill="scaleFree">
+    <loader id="n67_mzsu" name="n67" xy="847,218" size="534,276" group="n63_v8nf" url="ui://0axy98cgmzsu6l" fill="scaleFree">
       <gearSize controller="ctrlMode" pages="1" values="534,211,1,1" default="534,276,1,1"/>
       <gearIcon controller="ctrlMode" pages="1" values="ui://0axy98cgpplwao" default="ui://0axy98cgmzsu6l"/>
     </loader>
-    <loader id="n70_mzsu" name="n70" xy="847,210" size="534,137" group="n63_v8nf" url="ui://0axy98cgpplwan" fill="scaleFree">
+    <loader id="n70_mzsu" name="n70" xy="847,210" size="534,137" group="n63_v8nf" url="ui://0axy98cgmzsu6o" fill="scaleFree">
       <gearIcon controller="ctrlMode" pages="1" values="ui://0axy98cgpplwan" default="ui://0axy98cgmzsu6o"/>
       <relation target="n68_mzsu" sidePair="width-width,top-top"/>
     </loader>
-    <loader id="n71_mzsu" name="n71" xy="874,210" size="172,55" group="n63_v8nf" url="ui://0axy98cgpplwaq">
+    <loader id="n71_mzsu" name="n71" xy="874,210" size="172,55" group="n63_v8nf" url="ui://0axy98cgmzsu6w">
       <gearIcon controller="ctrlMode" pages="1" values="ui://0axy98cgpplwaq" default="ui://0axy98cgmzsu6w"/>
       <relation target="n70_mzsu" sidePair="left-left,top-top"/>
     </loader>
     <component id="n50_v8nf" name="btnSelectMapIcon" src="mzsu74" fileName="btn/BtnSetMapIcon.xml" xy="533,211" size="290,285" group="n63_v8nf"/>
-    <text id="n51_v8nf" name="tfMapNameTitle" xy="887,219" size="146,44" group="n63_v8nf" fontSize="32" color="#d28800" align="center" vAlign="middle" leading="0" autoSize="none" text="课程名字">
+    <text id="n51_v8nf" name="tfMapNameTitle" xy="887,219" size="146,44" group="n63_v8nf" fontSize="32" color="#4db6ff" align="center" vAlign="middle" leading="0" autoSize="none" text="地图名字">
       <gearColor controller="ctrlMode" pages="1" values="#d28800,#000000" default="#4db6ff,#000000"/>
       <gearText controller="ctrlMode" pages="1" values="课程名字" default="地图名字"/>
       <relation target="n71_mzsu" sidePair="top-top,center-center"/>
@@ -45,9 +47,9 @@
     <component id="n52_v8nf" name="comNameInput" src="dv1icyiim" fileName="com/ComInput.xml" pkg="te1gxawo" xy="874,278" size="484,48" group="n63_v8nf">
       <gearIcon controller="ctrlMode" pages="1" values="ui://0axy98cgpplwar" default="ui://0axy98cgmzsu76"/>
       <relation target="n70_mzsu" sidePair="top-top,center-center"/>
-      <Label icon="ui://0axy98cgpplwar"/>
+      <Label icon="ui://0axy98cgmzsu76"/>
     </component>
-    <text id="n54_v8nf" name="tfIsCanEdit" xy="872,366" size="200,39" group="n63_v8nf" fontSize="28" color="#d28800" vAlign="middle" leading="0" text="编辑器是否可用">
+    <text id="n54_v8nf" name="tfIsCanEdit" xy="872,366" size="200,39" group="n63_v8nf" fontSize="28" color="#0079cd" vAlign="middle" leading="0" text="编辑器是否可用">
       <gearColor controller="ctrlMode" pages="1" values="#d28800,#000000" default="#0079cd,#000000"/>
       <relation target="n68_mzsu" sidePair="left-left"/>
     </text>

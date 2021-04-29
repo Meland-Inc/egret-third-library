@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" designImage="ui://0axy98cgtbm25m" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlSearch" pages="0,nosearch,1,search" selected="0"/>
-  <controller name="ctrlMode" pages="0,normal,1,lessonCenter" selected="0"/>
   <displayList>
     <image id="n74_l1zw" name="imgBg" src="8qqicyihc" fileName="img/img_cm_bottom_1.png" pkg="te1gxawo" xy="229,164" size="1550,918">
       <relation target="n76_l1zw" sidePair="center-center"/>
@@ -25,7 +24,7 @@
       <item title="作业"/>
       <item title="内部"/>
     </list>
-    <list id="n50_v8nf" name="lstTemplate" xy="277,166" size="1541,916" group="n72_nav8" layout="flow_hz" overflow="scroll" scrollBarFlags="4" margin="17,0,0,0" scrollBarMargin="0,0,0,3" scrollBarRes="ui://0axy98cgqb974t," ptrRes="ui://0axy98cgp5r74d,ui://0axy98cgp5r74d" lineGap="6" colGap="10" defaultItem="ui://0axy98cgtbm263" autoClearItems="true">
+    <list id="n50_v8nf" name="lstTemplate" xy="277,166" size="1541,916" group="n72_nav8" layout="flow_hz" overflow="scroll" scrollBarFlags="4" margin="17,0,0,0" scrollBarMargin="0,0,0,3" scrollBarRes="ui://0axy98cgqb974t," ptrRes="ui://0axy98cgp5r74d,ui://0axy98cgp5r74d" lineGap="6" colGap="10" defaultItem="ui://0axy98cgtbm25q" autoClearItems="true">
       <relation target="" sidePair="bottomext-bottom"/>
       <relation target="n74_l1zw" sidePair="left-left"/>
       <item/>
