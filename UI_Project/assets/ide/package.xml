@@ -544,7 +544,7 @@
     <image id="jo99wcyims" name="bg_spsx_01.png" path="/attribute/img/" scale="9grid" scale9grid="16,8,32,16"/>
     <image id="jo99wcyimt" name="img_spsx_02.png" path="/attribute/img/"/>
     <image id="jo99wcyimu" name="img_spsx_01.png" path="/attribute/img/" scale="9grid" scale9grid="98,4,196,8"/>
-    <image id="jo99wcyimv" name="icon_spsx_03.png" path="/attribute/img/"/>
+    <image id="jo99wcyimv" name="icon_spsx_03.png" path="/attribute/img/" scale="9grid" scale9grid="4,4,8,8"/>
     <image id="jo99wcyimw" name="icon_spsx_02.png" path="/attribute/img/"/>
     <image id="jo99wcyimx" name="icon_spsx_01.png" path="/attribute/img/"/>
     <image id="jo99wcyimy" name="btn_spsx_03.png" path="/attribute/img/"/>
@@ -910,6 +910,13 @@
     <image id="d6fn1356502" name="btn_lesson_yellow.png" path="/lessonCenter/lessonLevel/img/"/>
     <image id="ldsv1356503" name="ide_icon_code_default.png" path="/codeVew/img/"/>
     <image id="ldsv1356505" name="ide_icon_code_hover.png" path="/codeVew/img/"/>
+    <image id="i2821356507" name="choose.png" path="/attribute/img/"/>
+    <image id="i2821356508" name="selected.png" path="/attribute/img/"/>
+    <component id="i2821356509" name="btnQuestionMode.xml" path="/attribute/btn/"/>
+    <image id="i282135650a" name="textbox.png" path="/attribute/img/" scale="9grid" scale9grid="92,14,184,28"/>
+    <image id="i282135650b" name="button.png" path="/attribute/img/"/>
+    <image id="i282135650c" name="pressed.png" path="/attribute/img/"/>
+    <component id="i282135650d" name="btnUploadSound.xml" path="/attribute/btn/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>
