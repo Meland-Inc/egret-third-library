@@ -917,6 +917,29 @@
     <image id="i282135650b" name="button.png" path="/attribute/img/"/>
     <image id="i282135650c" name="pressed.png" path="/attribute/img/"/>
     <component id="i282135650d" name="btnUploadSound.xml" path="/attribute/btn/"/>
+    <component id="iw3v1356507" name="ComFinishView.xml" path="/choiceQuestion/win/"/>
+    <image id="ko5v1356508" name="arrow left none.png" path="/choiceQuestion/img/"/>
+    <image id="ko5v1356509" name="arrow left.png" path="/choiceQuestion/img/"/>
+    <image id="ko5v135650a" name="arrow right none.png" path="/choiceQuestion/img/"/>
+    <image id="ko5v135650b" name="arrow right.png" path="/choiceQuestion/img/"/>
+    <image id="ko5v135650c" name="cancel.png" path="/choiceQuestion/img/"/>
+    <image id="ko5v135650d" name="close.png" path="/choiceQuestion/img/"/>
+    <image id="ko5v135650e" name="down.png" path="/choiceQuestion/img/"/>
+    <image id="ko5v135650f" name="fork.png" path="/choiceQuestion/img/"/>
+    <image id="ko5v135650g" name="left.png" path="/choiceQuestion/img/"/>
+    <image id="ko5v135650h" name="right.png" path="/choiceQuestion/img/"/>
+    <image id="ko5v135650i" name="title bar.png" path="/choiceQuestion/img/"/>
+    <image id="ko5v135650j" name="top.png" path="/choiceQuestion/img/"/>
+    <image id="ko5v135650k" name="voice.png" path="/choiceQuestion/img/"/>
+    <component id="ko5v135650l" name="btnAnswerResult.xml" path="/choiceQuestion/btn/"/>
+    <image id="ko5v135650n" name="btn_bag_slider.png" path="/choiceQuestion/scroll_sameInBackpack/"/>
+    <image id="ko5v135650o" name="img_bag_sliderBg.png" path="/choiceQuestion/scroll_sameInBackpack/"/>
+    <component id="ko5v135650p" name="ScrollBar1.xml" path="/choiceQuestion/scroll_sameInBackpack/"/>
+    <component id="ko5v135650q" name="ScrollBar1_grip.xml" path="/choiceQuestion/scroll_sameInBackpack/"/>
+    <component id="ko5v135650r" name="ComBG.xml" path="/choiceQuestion/win/"/>
+    <component id="h0s0135650s" name="btnChoiceQuestionOptionOld.xml" path="/choiceQuestion/btn/"/>
+    <component id="h0s0135650w" name="btnNext.xml" path="/choiceQuestion/btn/"/>
+    <component id="h0s0135650x" name="btnPre.xml" path="/choiceQuestion/btn/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>

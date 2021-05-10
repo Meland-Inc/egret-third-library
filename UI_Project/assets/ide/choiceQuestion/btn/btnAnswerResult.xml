@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="68,68" extention="Button">
+  <controller name="ctrlType" pages="0,right,1,wrong" selected="1"/>
+  <displayList>
+    <graph id="n3_ko5v" name="n3" xy="0,0" size="68,68" type="rect" lineSize="0" fillColor="#ffef7756" corner="10">
+      <gearColor controller="ctrlType" pages="1" values="#ef7756" default="#53d9a7"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <text id="n5_ko5v" name="title" xy="-1,-1" size="68,68" fontSize="40" color="#ffffff" align="center" vAlign="middle" autoSize="none" italic="true" text="t6">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button/>
+</component>
