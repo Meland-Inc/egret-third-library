@@ -4,10 +4,10 @@
     <action type="play_transition" fromPage="" toPage="1" transition="show"/>
   </controller>
   <displayList>
-    <image id="n0_jo99" name="bg" src="jo99j" fileName="teachPlan/img/bg_spck_04.png" xy="0,0" size="1388,882">
+    <image id="n0_jo99" name="bg" src="jo99j" fileName="teachPlan/img/bg_spck_04.png" xy="0,0" size="1388,882" color="#dee4ea">
       <gearSize controller="ctrlType" pages="0" values="1388,882,1,1" default="1388,1000,1,1" tween="true" ease="Linear"/>
     </image>
-    <list id="n5_jo99" name="lstOption" xy="201,703" size="985,139" layout="flow_hz" lineGap="25" colGap="35" lineItemCount="2" defaultItem="ui://ti9jag5tmbqdwcyinr">
+    <list id="n5_jo99" name="lstOption" xy="169,703" size="1050,139" layout="flow_hz" lineGap="25" colGap="100" lineItemCount="2" defaultItem="ui://ti9jag5tmbqdwcyinr">
       <item/>
       <item/>
       <item/>

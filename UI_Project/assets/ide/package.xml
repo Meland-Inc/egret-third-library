@@ -572,7 +572,7 @@
     <image id="mbqdwcyink" name="img_spxzt_03.png" path="/choiceQuestion/img/"/>
     <image id="mbqdwcyinl" name="img_spxzt_04.png" path="/choiceQuestion/img/" scale="9grid" scale9grid="58,21,46,42"/>
     <image id="mbqdwcyinp" name="icon_zhuangbei_03.png" path="/choiceQuestion/img/"/>
-    <component id="mbqdwcyinr" name="btnChoiceQuestionOption.xml" path="/choiceQuestion/btn/"/>
+    <component id="mbqdwcyinr" name="btnChoiceQuestionOption.xml" path="/choiceQuestion/btn/" exported="true"/>
     <component id="mbqdwcyins" name="spImgArrowLeft.xml" path="/choiceQuestion/img/"/>
     <image id="mbqdwcyint" name="bg_hdjf_01.png" path="/choiceQuestion/img/"/>
     <image id="mbqdwcyinu" name="bg_hdjf_02.png" path="/choiceQuestion/img/"/>

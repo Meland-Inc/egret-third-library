@@ -1,61 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1920,1080" designImage="ui://ti9jag5tmbqdwcyio0" designImageOffsetX="627" designImageOffsetY="270" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlStatus" pages="0,answer,1,review,2,score" selected="0"/>
+<component size="1920,1080" opaque="false" designImage="ui://ti9jag5tmbqdwcyio0" designImageOffsetX="627" designImageOffsetY="270" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlStatus" pages="0,answer,1,review,2,score" selected="1"/>
   <displayList>
-    <component id="n47_ko5v" name="comBG" src="ko5v135650r" fileName="choiceQuestion/win/ComBG.xml" xy="364,108" group="n38_x8ci"/>
-    <text id="n10_mbqd" name="tfProgress" xy="896,145" size="128,54" group="n38_x8ci" fontSize="40" color="#716f79" align="center" vAlign="middle" vars="true" autoSize="none" text="{cur=1}/{total=3}"/>
-    <component id="n8_mbqd" name="btnClose" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1459,126" size="90,90" group="n38_x8ci">
+    <component id="n47_ko5v" name="comBG" src="ko5v135650r" fileName="choiceQuestion/win/ComBG.xml" xy="364,151" group="n38_x8ci"/>
+    <text id="n10_mbqd" name="tfProgress" xy="896,178" size="128,54" group="n38_x8ci" fontSize="40" color="#716f79" align="center" vAlign="middle" vars="true" autoSize="none" text="{cur=1}/{total=3}"/>
+    <component id="n8_mbqd" name="btnClose" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1459,169" size="90,90" group="n38_x8ci">
       <gearDisplay controller="ctrlStatus" pages="1"/>
       <Button icon="ui://ti9jag5tko5v135650d"/>
     </component>
-    <component id="n12_mbqd" name="btnOption1" src="mbqdwcyinr" fileName="choiceQuestion/btn/btnChoiceQuestionOption.xml" xy="472,700" group="n16_mbqd" customData="0" controller="ctrlStatus,1"/>
-    <component id="n13_mbqd" name="btnOption2" src="mbqdwcyinr" fileName="choiceQuestion/btn/btnChoiceQuestionOption.xml" xy="977,700" group="n16_mbqd" customData="1" controller="ctrlStatus,0">
+    <component id="n12_mbqd" name="btnOption1" src="mbqdwcyinr" fileName="choiceQuestion/btn/btnChoiceQuestionOption.xml" xy="472,743" group="n16_mbqd" customData="0" controller="ctrlStatus,1"/>
+    <component id="n13_mbqd" name="btnOption2" src="mbqdwcyinr" fileName="choiceQuestion/btn/btnChoiceQuestionOption.xml" xy="977,743" group="n16_mbqd" customData="1" controller="ctrlStatus,0">
       <Button title="选项2"/>
     </component>
-    <component id="n14_mbqd" name="btnOption3" src="mbqdwcyinr" fileName="choiceQuestion/btn/btnChoiceQuestionOption.xml" xy="472,777" group="n16_mbqd" customData="2" controller="ctrlStatus,2">
+    <component id="n14_mbqd" name="btnOption3" src="mbqdwcyinr" fileName="choiceQuestion/btn/btnChoiceQuestionOption.xml" xy="472,820" group="n16_mbqd" customData="2" controller="ctrlStatus,2">
       <Button title="选项3"/>
     </component>
-    <component id="n15_mbqd" name="btnOption4" src="mbqdwcyinr" fileName="choiceQuestion/btn/btnChoiceQuestionOption.xml" xy="977,777" group="n16_mbqd" customData="3" controller="ctrlStatus,0">
+    <component id="n15_mbqd" name="btnOption4" src="mbqdwcyinr" fileName="choiceQuestion/btn/btnChoiceQuestionOption.xml" xy="977,820" group="n16_mbqd" customData="3" controller="ctrlStatus,0">
       <Button title="选项4"/>
     </component>
-    <group id="n16_mbqd" name="grpOption" xy="472,700" size="975,139" group="n38_x8ci"/>
-    <component id="n19_mbqd" name="btnTurnPre" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="836,154" size="42,42" group="n38_x8ci">
+    <group id="n16_mbqd" name="grpOption" xy="472,743" size="975,139" group="n38_x8ci"/>
+    <component id="n19_mbqd" name="btnTurnPre" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="836,187" size="42,42" group="n38_x8ci">
       <gearDisplay controller="ctrlStatus" pages="1"/>
       <Button icon="ui://ti9jag5tko5v1356509"/>
     </component>
-    <component id="n20_mbqd" name="btnTurnNext" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1045,154" size="42,42" group="n38_x8ci">
+    <component id="n20_mbqd" name="btnTurnNext" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1045,187" size="42,42" group="n38_x8ci">
       <gearDisplay controller="ctrlStatus" pages="1"/>
       <Button icon="ui://ti9jag5tko5v135650b"/>
     </component>
-    <component id="n46_ko5v" name="btnSound" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="410,142" size="90,90" group="n38_x8ci">
+    <component id="n46_ko5v" name="btnSound" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="410,179" size="90,90" group="n38_x8ci">
       <Button icon="ui://ti9jag5tko5v135650k"/>
     </component>
-    <group id="n38_x8ci" name="grpBg" xy="364,108" size="1191,776" group="n39_eiqy" advanced="true">
+    <group id="n38_x8ci" name="grpBg" xy="364,151" size="1191,776" group="n39_eiqy" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <graph id="n55_h0s0" name="gphRightPos" xy="1102,911" size="220,60" group="n53_h0s0" touchable="false" lineSize="0"/>
-    <graph id="n56_h0s0" name="gphLeftPos" xy="597,911" size="220,60" group="n53_h0s0" lineSize="0"/>
-    <component id="n49_h0s0" name="btnNext" src="h0s0135650w" fileName="choiceQuestion/btn/btnNext.xml" xy="1102,911" group="n53_h0s0"/>
-    <component id="n50_h0s0" name="btnPre" src="h0s0135650x" fileName="choiceQuestion/btn/btnPre.xml" xy="597,911" group="n53_h0s0">
+    <graph id="n55_h0s0" name="gphRightPos" xy="1102,954" size="220,60" group="n53_h0s0" touchable="false" lineSize="0"/>
+    <graph id="n56_h0s0" name="gphLeftPos" xy="597,954" size="220,60" group="n53_h0s0" lineSize="0"/>
+    <component id="n49_h0s0" name="btnNext" src="h0s0135650w" fileName="choiceQuestion/btn/btnNext.xml" xy="1102,954" group="n53_h0s0"/>
+    <component id="n50_h0s0" name="btnPre" src="h0s0135650x" fileName="choiceQuestion/btn/btnPre.xml" xy="597,954" group="n53_h0s0">
       <Button title="上一题"/>
     </component>
-    <component id="n51_h0s0" name="btnOver" src="h0s0135650w" fileName="choiceQuestion/btn/btnNext.xml" xy="1102,911" group="n53_h0s0">
+    <component id="n51_h0s0" name="btnOver" src="h0s0135650w" fileName="choiceQuestion/btn/btnNext.xml" xy="1102,954" group="n53_h0s0">
       <Button title="完成"/>
     </component>
-    <group id="n53_h0s0" name="n53" xy="597,911" size="725,60" group="n39_eiqy" advanced="true">
+    <group id="n53_h0s0" name="n53" xy="597,954" size="725,60" group="n39_eiqy" advanced="true">
       <gearDisplay controller="ctrlStatus" pages="0"/>
       <relation target="" sidePair="center-center"/>
     </group>
-    <component id="n1_mbqd" name="tbtnContentBg" src="oliri6s" fileName="old/btn/tbtnScale.xml" pkg="te1gxawo" xy="469,211" size="982,473" group="n39_eiqy">
+    <component id="n1_mbqd" name="tbtnContentBg" src="oliri6s" fileName="old/btn/tbtnScale.xml" pkg="te1gxawo" xy="469,254" size="982,473" group="n39_eiqy">
       <Button icon="ui://ti9jag5tmbqdwcyind"/>
     </component>
-    <loader id="n17_mbqd" name="ladImgQuestion" xy="480,222" size="956,445" group="n39_eiqy" touchable="false" align="center" vAlign="middle" fill="scale">
+    <loader id="n17_mbqd" name="ladImgQuestion" xy="480,265" size="956,445" group="n39_eiqy" touchable="false" align="center" vAlign="middle" fill="scale">
       <relation target="n1_mbqd" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
     </loader>
-    <text id="n11_mbqd" name="tfQuestion" xy="480,222" size="956,445" group="n39_eiqy" fontSize="60" color="#716f79" align="center" vAlign="middle" autoSize="none" text="test">
+    <text id="n11_mbqd" name="tfQuestion" xy="480,265" size="956,445" group="n39_eiqy" fontSize="60" color="#716f79" align="center" vAlign="middle" autoSize="none" text="test">
       <relation target="n1_mbqd" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
     </text>
-    <group id="n39_eiqy" name="n39" xy="364,108" size="1191,863" advanced="true">
+    <group id="n39_eiqy" name="n39" xy="364,151" size="1191,863" advanced="true">
       <gearDisplay controller="ctrlStatus" pages="0,1"/>
       <gearXY controller="ctrlStatus" pages="0" values="364,108" default="364,151"/>
     </group>
