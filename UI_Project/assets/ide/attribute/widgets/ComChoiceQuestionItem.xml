@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="410,450">
+<component size="410,450" designImage="ui://ti9jag5ti2821356506" designImageOffsetX="-1524" designImageOffsetY="-449" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlIsImg" pages="1,no,0,yes" selected="0"/>
   <displayList>
-    <image id="n15_jo99" name="tfShowTimeBG" src="jo99wcyims" fileName="attribute/img/bg_spsx_01.png" xy="0,56" size="394,62"/>
-    <text id="n4_eny0" name="tfQuestion" xy="6,65" size="378,44" fontSize="18" color="#333333" autoSize="none" text="" input="true"/>
+    <image id="n15_jo99" name="tfShowTimeBG" src="i282135650a" fileName="attribute/img/textbox.png" xy="0,56" size="394,62"/>
+    <component id="n24_i282" name="btnUploadAudio" src="i282135650d" fileName="attribute/btn/btnUploadSound.xml" xy="261,56" size="133,62"/>
+    <text id="n4_eny0" name="tfQuestion" xy="6,65" size="253,44" fontSize="18" color="#333333" autoSize="none" text="" input="true"/>
     <text id="n5_eny0" name="tfName" xy="0,9" size="54,35" fontSize="25" color="#333333" vAlign="middle" vars="true" text="题目"/>
     <component id="n7_eny0" name="btnIsPic" src="jo99wcyin2" fileName="attribute/btn/rBtnIsPic.xml" xy="0,131">
       <Button controller="ctrlIsImg" page="0"/>

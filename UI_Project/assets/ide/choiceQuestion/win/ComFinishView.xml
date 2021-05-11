@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" opaque="false">
+  <displayList>
+    <component id="n27_ko5v" name="comBG" src="ko5v135650r" fileName="choiceQuestion/win/ComBG.xml" xy="364,152" group="n26_ko5v"/>
+    <image id="n18_ko5v" name="imgTitleBG" src="ko5v135650i" fileName="choiceQuestion/img/title bar.png" xy="721,176" group="n20_ko5v"/>
+    <text id="n19_ko5v" name="tfTitle" xy="721,176" size="477,109" group="n20_ko5v" fontSize="40" color="#ffffff" align="center" vAlign="middle" letterSpacing="5" autoSize="none" text="测试报告"/>
+    <group id="n20_ko5v" name="title" xy="721,176" size="477,109" group="n26_ko5v"/>
+    <component id="n17_ko5v" name="btnClose" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1459,168" size="90,90" group="n26_ko5v">
+      <Button icon="ui://ti9jag5tko5v135650d"/>
+    </component>
+    <text id="n1_eiqy" name="tfRightTitle" xy="533,343" size="134,66" group="n26_ko5v" fontSize="50" color="#414141" text="答对："/>
+    <text id="n5_eiqy" name="tfRight" xy="701,343" size="124,66" group="n26_ko5v" fontSize="50" color="#ffad54" text="6/10"/>
+    <text id="n2_eiqy" name="tfTimeTitle" xy="1016,341" size="134,66" group="n26_ko5v" fontSize="50" color="#414141" text="用时："/>
+    <text id="n7_eiqy" name="tfTime" xy="1189,342" size="244,66" group="n26_ko5v" fontSize="50" color="#ffad54" text="00：05：21"/>
+    <text id="n3_eiqy" name="tfWrongTitle" xy="533,486" size="134,66" group="n26_ko5v" fontSize="50" color="#414141" text="答错："/>
+    <text id="n6_eiqy" name="tfWrong" xy="703,485" size="124,66" group="n26_ko5v" fontSize="50" color="#ffad54" text="6/10"/>
+    <text id="n4_eiqy" name="tfScoreTitle" xy="1016,486" size="134,66" group="n26_ko5v" fontSize="50" color="#414141" text="分数："/>
+    <text id="n8_eiqy" name="tfScore" xy="1189,426" size="70,142" group="n26_ko5v" fontSize="110" color="#ffad54" vAlign="middle" leading="0" autoSize="none" italic="true" text="0"/>
+    <text id="n10_eiqy" name="tfScoreSuf" xy="1267,486" size="103,66" group="n26_ko5v" fontSize="50" color="#ffad54" autoSize="none" text="分">
+      <relation target="n8_eiqy" sidePair="left-right"/>
+    </text>
+    <graph id="n24_ko5v" name="n24" xy="447,610" size="1026,286" group="n26_ko5v" type="rect" lineSize="0" fillColor="#fff3f3f3" corner="30"/>
+    <list id="n9_eiqy" name="lstAnswerResult" xy="510,650" size="906,230" group="n26_ko5v" layout="flow_hz" overflow="scroll" scrollBarFlags="4" scrollBarRes="ui://ti9jag5tko5v135650p," lineGap="40" colGap="45" lineItemCount="8" defaultItem="ui://ti9jag5tko5v135650l" autoClearItems="true">
+      <relation target="n24_ko5v" sidePair="left-left,top-top"/>
+      <item title="1"/>
+      <item title="2"/>
+      <item title="3"/>
+      <item title="4"/>
+      <item title="5"/>
+      <item title="6"/>
+      <item title="7"/>
+      <item title="8"/>
+      <item title="9"/>
+      <item title="10"/>
+      <item title="11"/>
+      <item title="12"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n26_ko5v" name="n26" xy="364,152" size="1191,776" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

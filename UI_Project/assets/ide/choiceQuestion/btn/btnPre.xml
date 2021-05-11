@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="220,60" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <graph id="n3_h0s0" name="n3" xy="0,0" size="220,60" type="rect" lineSize="0" fillColor="#ff94b1e6" corner="20"/>
+    <text id="n1_obf0" name="title" xy="0,-1" pivot="0.5,0.5" size="220,60" fontSize="30" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="下一题">
+      <gearSize controller="button" pages="0,1" values="220,60,1,1|267,27,0.9,0.9"/>
+    </text>
+  </displayList>
+  <Button sound="ui://fknoioovtqc911"/>
+</component>
