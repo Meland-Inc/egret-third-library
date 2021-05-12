@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="470,62" extention="Button" designImage="ui://ti9jag5tmbqdwcyinq" designImageOffsetX="-407" designImageOffsetY="-769" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlStatus" exported="true" pages="0,normal,1,right,2,wrong,3,selected" selected="3"/>
+  <controller name="ctrlStatus" exported="true" pages="0,normal,1,right,2,wrong,3,selected" selected="0"/>
   <displayList>
-    <graph id="n7_h0s0" name="n7" xy="0,0" size="470,62" type="rect" lineSize="4" lineColor="#fff7ab8f" corner="50">
+    <graph id="n7_h0s0" name="n7" xy="0,0" size="470,62" type="rect" lineSize="4" lineColor="#fff7ab8f" fillColor="#fff1f5f8" corner="50">
       <gearDisplay controller="ctrlStatus" pages="3"/>
     </graph>
-    <graph id="n5_h0s0" name="n5" xy="0,0" size="470,62" type="rect" lineSize="0" corner="40">
+    <graph id="n5_h0s0" name="n5" xy="0,0" size="470,62" type="rect" lineSize="0" fillColor="#fff1f5f8" corner="40">
       <gearDisplay controller="ctrlStatus" pages="0,1,2"/>
-      <gearColor controller="ctrlStatus" pages="0,1,2,3" values="#ffffff|#ceffcf|#ffc8d4|#ffffff"/>
+      <gearColor controller="ctrlStatus" pages="0,1,2,3" values="#f1f5f8|#ceffcf|#ffc8d4|#ffffff"/>
     </graph>
     <text id="n2_mbqd" name="title" xy="0,-1" size="470,62" fontSize="35" color="#8e8fa7" align="center" vAlign="middle" autoSize="none" text="选项1">
       <gearColor controller="ctrlStatus" pages="1,2" values="#4bbf4d,#000000|#ff6262,#000000" default="#8e8fa7,#000000"/>
