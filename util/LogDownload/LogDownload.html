@@ -273,7 +273,7 @@
                             .then(function (content) {
                                 let downLoadTime = downloadFiles[0].showName;
                                 if (tIndex) {
-                                const date = new Date();
+                                    const date = new Date();
                                     downLoadTime = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}_${date.getHours()}-${date.getMinutes()}`;
                                 }
                                 saveAs(content, downLoadTime + ".zip");
@@ -319,14 +319,13 @@
 
                             deferred.push(Promise.all(webLogDeferred)
                                 .finally(() => {
-                                                let webLog = '';
-                                                for (const content of uploadedLogContentArr) {
-                                                    webLog += content;
-                                                }
-                                                webLog += clientContent;
-                                                deferred.push(folder.file(`webLog.log`, webLog))
-                                    deferred.push(folder.file(`webLog222.log`, clientContent))
-                                    })
+                                    let webLog = '';
+                                    for (const content of uploadedLogContentArr) {
+                                        webLog += content;
+                                    }
+                                    webLog += clientContent;
+                                    deferred.push(folder.file(`webLog.log`, webLog))
+                                })
                             )
 
                             fullInfo.describe && deferred.push(folder.file(`describe.txt`, fullInfo.describe));
@@ -338,15 +337,36 @@
                                     deferred.push(folder.file(`${tIndex}.png`, tImg.replace(/^data:image[^;]*;base64,/, ""), { base64: true }));
                                 })
                             }
+                            const nativeLogDeferred = [];
+                            const logContentArr = [];
                             //native的相关日志
                             if (fullInfo.nativeLogNameArr && fullInfo.nativeLogNameArr.length) {
                                 fullInfo.nativeLogNameArr.forEach((tNativeLogName, nativeLogNameArrIndex) => {
-                                    deferred.push($.get(nativeLogUrl + tNativeLogName)
-                                        .success(function (nativeLogContent) {
-                                            deferred.push(folder.file(tNativeLogName, nativeLogContent))
-                                        })
-                                    )
+                                    tNativeLogName.forEach((tFileName, tFileIndex) => {
+                                        nativeLogDeferred.push($.get(nativeLogUrl + tFileName)
+                                            .success(function (tFileContent) {
+                                                const contentArr = logContentArr[nativeLogNameArrIndex];
+                                                if (!content) {
+                                                    contentArr = [];
+                                                    logContentArr[nativeLogNameArrIndex] = contentArr;
+                                                }
+                                                contentArr[tFileIndex] = tFileContent;
+                                            })
+                                        )
+                                    });
                                 })
+                                deferred.push(Promise.all(nativeLogDeferred)
+                                    .finally(() => {
+                                        fullInfo.nativeLogNameArr.forEach((tNativeLogName, nativeLogNameArrIndex) => {
+                                            let log = '';
+                                            for (const content of logContentArr[nativeLogNameArrIndex]) {
+                                                log += content;
+                                            }
+                                            const filename = /.*_(.*)\.log/g.exec(tNativeLogName)[1];
+                                            deferred.push(folder.file(`${filename}.log`, log))
+                                        })
+                                    })
+                                )
                             }
 
                             Promise.all(deferred).finally(() => {
