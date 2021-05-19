@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="410,204" designImage="ui://ti9jag5ti2821356506" designImageOffsetX="-1520" designImageOffsetY="-260" designImageAlpha="0">
-  <controller name="ctrlAddDelAction" pages="0,add,1,delAdd" selected="0"/>
-  <controller name="ctrlAddDelQuestion" pages="0,add,1,delAdd" selected="1"/>
+  <controller name="ctrlAddDelAction" pages="0,add,1,delAdd" selected="1"/>
+  <controller name="ctrlAddDelQuestion" pages="0,add,1,delAdd" selected="0"/>
   <controller name="ctrlMode" pages="0,train,1,test" selected="0">
     <remark page="0" value="练习"/>
     <remark page="1" value="考试"/>
   </controller>
   <displayList>
-    <text id="n2_wj5l" name="tfQuestionAction" xy="0,15" size="141,26" fontSize="18" color="#333333" text="答题完毕的行为："/>
+    <text id="n2_wj5l" name="tfQuestionAction" xy="0,15" size="138,26" fontSize="18" color="#333333" text="答题完毕的行为："/>
     <list id="n27_lwar" name="lstQuestionAction" xy="1,15" size="312,40" margin="40,0,0,0" lineGap="15" defaultItem="ui://ti9jag5tlwarwcyin5" autoClearItems="true"/>
-    <component id="n28_lwar" name="btnAddAction" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="323,8" size="32,31">
-      <gearXY controller="ctrlAddDelAction" pages="0,1" values="323,8|368,79"/>
+    <component id="n28_lwar" name="btnAddAction" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="368,20" size="32,31">
+      <gearXY controller="ctrlAddDelAction" pages="0,1" values="323,8|368,20"/>
       <relation target="n27_lwar" sidePair="top-bottom"/>
       <Button icon="ui://ti9jag5tlwarwcyin7"/>
     </component>
@@ -31,7 +31,7 @@
     <list id="n21_jo99" name="lstQuestion" xy="0,111" size="410,0" defaultItem="ui://ti9jag5tqx84wcyin8">
       <relation target="n27_lwar" sidePair="top-bottom"/>
     </list>
-    <component id="n22_jo99" name="btnAddQuestion" src="ilo1cyidi" fileName="btn/btnScaleNoEffect.xml" pkg="te1gxawo" xy="209,142" size="194,56">
+    <component id="n22_jo99" name="btnAddQuestion" src="ilo1cyidi" fileName="btn/btnScaleNoEffect.xml" pkg="te1gxawo" xy="108,142" size="194,56">
       <gearXY controller="ctrlAddDelQuestion" pages="0,1" values="108,142|209,142"/>
       <relation target="n21_jo99" sidePair="top-bottom"/>
       <Button icon="ui://ti9jag5tjo99wcyimz"/>
