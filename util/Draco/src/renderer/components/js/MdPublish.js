@@ -63,20 +63,13 @@ async function uploadSourceMap() {
     let environ = ModelMgr.versionModel.curEnviron.name;
     let version = ModelMgr.versionModel.releaseVersion;
     let prefix = `~/js/`;
-    if (environ == ModelMgr.versionModel.eEnviron.beta) {
-        prefix = `~/web/beta/js`;
-    }
-    if (environ == ModelMgr.versionModel.eEnviron.ready) {
-        environ = ModelMgr.versionModel.eEnviron.release;
-    }
-    if (environ == ModelMgr.versionModel.eEnviron.beta || environ == ModelMgr.versionModel.eEnviron.release) {
-        let cmdStr = '';
-        if (environ == ModelMgr.versionModel.eEnviron.release) {
-            console.log("--> a上传sourcemap：", environ, version, prefix);
-            cmdStr = `sentry-cli releases -o bellcode -p bellplanet files bellplanet_${environ}_${version} upload-sourcemaps main.js.map  --url-prefix "${prefix}" --log-level=error`
-            await spawnExc.runCmd(cmdStr, Global.projPath, null, 'sourcemap上传sentry错误');
-        }
-        cmdStr = `sentry-cli releases -o bellcode -p bellplanet files bellplanet_${environ}_${version} upload-sourcemaps --ext js './bin-release/web/${version}/js/'  --url-prefix "${prefix}" --log-level=error`
+
+    if (environ == ModelMgr.versionModel.eEnviron.release) {
+        console.log("--> a上传sourcemap：", environ, version, prefix);
+        let cmdStr = `sentry-cli releases -o bellcode -p bellplanet files bellplanet_${environ}_${version} upload-sourcemaps main.js.map  --url-prefix "${prefix}" --log-level=error`;
+        await spawnExc.runCmd(cmdStr, Global.projPath, null, 'sourcemap上传sentry错误');
+
+        cmdStr = `sentry-cli releases -o bellcode -p bellplanet files bellplanet_${environ}_${version} upload-sourcemaps --ext js "./bin-release/web/${version}/js/" --ignore-file .sentryignore --url-prefix "${prefix}" --log-level=error`;
         await spawnExc.runCmd(cmdStr, Global.projPath, null, ' js上传sentry错误');
     }
 }
@@ -143,7 +136,7 @@ export async function publishProject() {
                 }
                 await mdFtp.zipProject(projPath, Global.foolClientZipPath + "/", "client.zip");
                 await spawnExc.svnAdd(Global.foolClientZipPath, "", "傻瓜模式客户端SVN Add 失败");
-                await spawnExc.svnCommit(Global.foolClientZipPath, `版本：${releaseVersion}上传`, "傻瓜模式客户端SVN版本：${releaseVersion}上传", "傻瓜模式客户端SVN Commit 失败");
+                await spawnExc.svnCommit(Global.foolClientZipPath, `版本：${releaseVersion}上传`, `傻瓜模式客户端SVN版本：${releaseVersion}上传`, "傻瓜模式客户端SVN Commit 失败");
             } catch (e) {
                 console.log("--> 傻瓜模式客户端上传失败", e);
             }
