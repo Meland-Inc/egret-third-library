@@ -30,6 +30,11 @@ const assets_suffix_path = '/resource/assets';
 const async_suffix_path = '/resource/async';
 const indie_suffix_path = '/resource/indie';
 
+const sentryOrganizationName = 'bellcode';//sentry cli中的组织名
+const sentryProjectName = 'bellplanet';//sentry 上传cli中的工程名 类似工程key
+const bugsnagApiKey = '6d2db6c2817194ef016837e5877cb6ef';//bugsnag的工程key
+const gamePackageScrFileName = 'main';//游戏源文件的打包文件的关键文件名
+
 const assetSfxValues = [assetsSfx, asyncSfx, indieSfx, externalSfx];
 
 export async function updateGit() {
@@ -59,19 +64,87 @@ export async function updateGit() {
     }
 }
 
+/**处理错误上报的sourceMap和版本管理 */
 async function uploadSourceMap() {
     let environ = ModelMgr.versionModel.curEnviron.name;
+
     let version = await ModelMgr.versionModel.getEnvironGameVersion(ModelMgr.versionModel.eEnviron.ready);//上传最新ready版本的sourcemap
-    let prefix = `~/js/`;
+    let prefix = `/js/`;//错误上报源码管理的相对路径
 
+
+    //release发版
+    await processSourceMapRelease(environ, version, prefix);
+
+    //上传sourcemap
     if (environ == ModelMgr.versionModel.eEnviron.release) {
-        console.log("--> a上传sourcemap：", environ, version, prefix);
-        let cmdStr = `sentry-cli releases -o bellcode -p bellplanet files bellplanet_${environ}_${version} upload-sourcemaps "./bin-release/web/${version}/main.js.map"  --url-prefix "${prefix}" --log-level=error`;
-        await spawnExc.runCmd(cmdStr, Global.projPath, null, 'sourcemap上传sentry错误');
-
-        cmdStr = `sentry-cli releases -o bellcode -p bellplanet files bellplanet_${environ}_${version} upload-sourcemaps --ext js "./bin-release/web/${version}/js/" --ignore-file .sentryignore --url-prefix "${prefix}" --log-level=error`;
-        await spawnExc.runCmd(cmdStr, Global.projPath, null, ' js上传sentry错误');
+        await processSourceMapUnload(environ, version, prefix);
     }
+}
+
+/**处理错误上报的release版本发布管理部分 */
+async function processSourceMapRelease(environ, version, prefix) {
+    console.log('start error reporter release', environ, version, prefix);
+
+    let cmdStr = '';
+    //sentry
+    const jsDirPath = path.join(Global.projPath, `/bin-release/web/${version}/js/`);//用绝对路径 否则window上不好调试
+    cmdStr = `sentry-cli releases -o ${sentryOrganizationName} -p ${sentryProjectName} files bellplanet_${environ}_${version} upload-sourcemaps --ext js ${jsDirPath} --ignore-file .sentryignore --url-prefix "~${prefix}" --log-level=error`
+    await spawnExc.runCmd(cmdStr, Global.projPath, null, ' sentry release fail!');
+    console.log('sentry release successful');
+
+    //bugsnag
+    cmdStr = `npx bugsnag-build-reporter -k ${bugsnagApiKey} -v ${version}`;
+    await spawnExc.runCmd(cmdStr, Global.projPath, null, ' bugsnag release fail!');
+    console.log('bugsnag release successful');
+
+    console.log('end error reporter release ,all successful');
+}
+
+/**处理错误上报sourceMap上传功能  */
+async function processSourceMapUnload(environ, version, prefix) {
+    console.log('start error reporter sourcemap unload', environ, version, prefix);
+
+    const proPublishRoot = `${Global.projPath}/bin-release/web/${version}`;
+    const jsPath = `${proPublishRoot}/js/`;
+    if (!fs.existsSync(jsPath)) {
+        Global.snack(`上传sourceMap 不存在白鹭release发版js路径 检查是否白鹭发版失败 path=${jsPath}`, null, false);
+        return;
+    }
+
+    const files = fs.readdirSync(jsPath)
+    if (!files || files.length <= 0) {
+        Global.snack(`上传sourceMap 白鹭release文件夹js代码块文件夹为空 path=${jsPath}`, null, false);
+        return;
+    }
+
+    let srcFile;
+    for (const f of files) {
+        if (f.includes(`${gamePackageScrFileName}.min`)) {//main.min_2dbcdcb.js
+            srcFile = f;
+        }
+    }
+
+    if (!srcFile) {
+        Global.snack(`上传sourceMap 白鹭发版release目录中找不到主js文件=${gamePackageScrFileName}, dir path=${jsPath}`, null, false);
+        return;
+    }
+
+    console.info(`processSourceMapUnload find main file=${srcFile}`);
+
+    const sourcemapFullFile = `${proPublishRoot}/${gamePackageScrFileName}.js.map`;//全路径
+
+    let cmdStr = '';
+    //sentry
+    cmdStr = `sentry-cli releases -o ${sentryOrganizationName} -p ${sentryProjectName} files bellplanet_${environ}_${version} upload-sourcemaps ${sourcemapFullFile}  --url-prefix "~${prefix}" --log-level=error`;
+    await spawnExc.runCmd(cmdStr, Global.projPath, null, 'sentry sourcemap unload fail!');
+    console.log('sentry sourcemap unload successful');
+
+    //bugsnag
+    cmdStr = `npx bugsnag-source-maps upload-browser --api-key ${bugsnagApiKey} --app-version ${version} --bundle-url */js/${srcFile} --source-map ${sourcemapFullFile} --bundle ${jsPath}${srcFile} --overwrite`;
+    await spawnExc.runCmd(cmdStr, Global.projPath, null, 'bugsnag sourcemap unload fail!');
+    console.log('bugsnag sourcemap unload successful');
+
+    console.log('end error reporter sourcemap unload ,all successful');
 }
 
 /** 发布项目 */
