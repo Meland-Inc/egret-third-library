@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="955,1080" opaque="false">
+  <controller name="ctrlShowType" pages="0,show,1,hide" selected="1"/>
+  <displayList>
+    <component id="n10_jke6" name="btnRun" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="0,963" size="81,87" group="n17_jz0o">
+      <Button icon="ui://ti9jag5tvd1613564z4"/>
+    </component>
+    <component id="n12_jke6" name="btnCodeReset" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="0,963" size="81,87" group="n17_jz0o">
+      <Button icon="ui://ti9jag5tvd1613564z5"/>
+    </component>
+    <group id="n17_jz0o" name="grpBtnRun" xy="0,963" size="81,87" advanced="true">
+      <gearDisplay controller="ctrlShowType" pages="0"/>
+      <relation target="" sidePair="bottom-bottom"/>
+    </group>
+    <image id="n16_rezr" name="imgBtnShowQuickCodeBG" src="ubmn13564zx" fileName="codeVew/img/newQuickCode/btn_code_ksbm_5.png" xy="855,481">
+      <gearDisplay controller="ctrlShowType" pages="1"/>
+      <relation target="" sidePair="middle-middle,right-right"/>
+    </image>
+    <component id="n15_jke6" name="btnShowQuickCode" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="865,494" size="90,90">
+      <gearDisplay controller="ctrlShowType" pages="1"/>
+      <relation target="" sidePair="middle-middle,right-right"/>
+      <Button icon="ui://ti9jag5tvd1613564z6"/>
+    </component>
+  </displayList>
+</component>
