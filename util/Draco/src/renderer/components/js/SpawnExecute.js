@@ -61,7 +61,7 @@ export function svnUpdate(path, successMsg, errorMsg) {
  * add svn路径中所有文件
  * @returns {Promise<string>}
   */
- export function svnAdd(path, successMsg, errorMsg) {
+export function svnAdd(path, successMsg, errorMsg) {
     return new Promise((resolve, reject) => {
         console.log(` svn add . --no-ignore --force --> ${path}`);
         let process = spawn("svn", ["add", ".", "--no-ignore", "--force"], { cwd: path });
@@ -92,10 +92,10 @@ export function svnUpdate(path, successMsg, errorMsg) {
  * Commit svn路径中所有文件
  * @returns {Promise<string>}
   */
- export function svnCommit(path, msg, successMsg, errorMsg) {
+export function svnCommit(path, msg, fileName, successMsg, errorMsg) {
     return new Promise((resolve, reject) => {
         console.log(` svn commit -m "" * --> ${path}`);
-        let process = spawn("svn", ["commit", "-m", msg, "*"], { cwd: path });
+        let process = spawn("svn", ["commit", "-m", msg, fileName], { cwd: path });
         process.stdout.on("data", data => {
             console.log("stdout: " + data);
         });
