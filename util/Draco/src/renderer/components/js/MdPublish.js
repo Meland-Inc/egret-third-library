@@ -136,7 +136,7 @@ export async function publishProject() {
                 }
                 await mdFtp.zipProject(projPath, Global.foolClientZipPath + "/", "client.zip");
                 await spawnExc.svnAdd(Global.foolClientZipPath, "", "傻瓜模式客户端SVN Add 失败");
-                await spawnExc.svnCommit(Global.foolClientZipPath, `版本：${releaseVersion}上传`, `傻瓜模式客户端SVN版本：${releaseVersion}上传`, "傻瓜模式客户端SVN Commit 失败");
+                await spawnExc.svnCommit(Global.foolClientZipPath, "client.zip", `版本：${releaseVersion}上传`, `傻瓜模式客户端SVN版本：${releaseVersion}上传`, "傻瓜模式客户端SVN Commit 失败");
             } catch (e) {
                 console.log("--> 傻瓜模式客户端上传失败", e);
             }
