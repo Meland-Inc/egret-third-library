@@ -723,7 +723,7 @@ export default {
       this.isUploadSourceMap = true;
       Global.showRegionLoading();
       try {
-        await mdPublish.uploadSourceMaps();
+        await mdPublish.uploadVersionSourceMap();
         this.isUploadSourceMap = false;
         Global.hideRegionLoading();
         if (showDialog) {
@@ -1048,7 +1048,7 @@ export default {
         }
 
         if (this.curEnviron.uploadSourceMapEnable) {
-          promiseList.push(mdPublish.uploadSourceMaps);
+          promiseList.push(mdPublish.uploadVersionSourceMap);
         }
 
         if (this.curEnviron.copyFileEnable) {

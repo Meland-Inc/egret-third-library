@@ -1099,7 +1099,7 @@ export async function publishMac() {
     console.log(`打包mac成功`);
 }
 /** 上传SourceMaps */
-export async function uploadSourceMaps() {
+export async function uploadVersionSourceMap() {
     try {
         await uploadSourceMap();
     } catch (e) {
