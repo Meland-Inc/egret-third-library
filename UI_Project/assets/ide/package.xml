@@ -942,6 +942,20 @@
     <component id="h0s0135650x" name="btnPre.xml" path="/choiceQuestion/btn/"/>
     <component id="jz0o135650y" name="ComQuickCodeblockBtn.xml" path="/codeVew/com/"/>
     <component id="jz0o135650z" name="ComCodeblockBtn_back.xml" path="/codeVew/com/"/>
+    <component id="qkmb1356510" name="comRestartEffect.xml" path="/codingEffect/com/" exported="true"/>
+    <image id="qkmb1356511" name="img_rerun_circle.png" path="/codingEffect/img/"/>
+    <image id="qkmb1356513" name="img_rerun_effect_arrow.png" path="/codingEffect/img/"/>
+    <image id="qkmb1356514" name="img_codeEffect_bg.png" path="/codingEffect/img/"/>
+    <image id="qkmb1356518" name="img_editing_effect_1.png" path="/codingEffect/img/"/>
+    <image id="qkmb1356519" name="img_editing_effect_2.png" path="/codingEffect/img/"/>
+    <component id="qkmb135651a" name="comEditingEffect.xml" path="/codingEffect/com/" exported="true"/>
+    <image id="qkmb135651b" name="img_coding_effect_event.png" path="/codingEffect/img/"/>
+    <image id="qkmb135651c" name="img_coding_effect_fun.png" path="/codingEffect/img/"/>
+    <component id="qkmb135651d" name="comCodingEffect.xml" path="/codingEffect/com/" exported="true"/>
+    <component id="qkmb135651f" name="comRunningEffect.xml" path="/codingEffect/com/"/>
+    <movieclip id="qkmb135651g" name="codeRunning.jta" path="/codingEffect/img/"/>
+    <component id="qkmb135651j" name="comCodingStatus.xml" path="/codingEffect/com/" exported="true"/>
+    <image id="qkmb0" name="img_code_running.png" path="/codeVew/img/newQuickCode/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="88,70" pivot="0.5,0" anchor="true">
+  <controller name="ctrlStatus" pages="3,none,0,coding,1,editing,2,restart" selected="3"/>
+  <displayList>
+    <component id="n0_qkmb" name="comCoding" src="qkmb135651d" fileName="codeVew/img/codingEffect/comCodingEffect.xml" xy="0,0">
+      <gearDisplay controller="ctrlStatus" pages="0"/>
+    </component>
+    <component id="n1_qkmb" name="comEditing" src="qkmb135651a" fileName="codeVew/img/codingEffect/comEditingEffect.xml" xy="0,0">
+      <gearDisplay controller="ctrlStatus" pages="1"/>
+    </component>
+    <component id="n2_qkmb" name="comRestart" src="qkmb1356510" fileName="codeVew/img/codingEffect/comRestartEffect.xml" xy="0,0">
+      <gearDisplay controller="ctrlStatus" pages="2"/>
+    </component>
+  </displayList>
+  <transition name="restart">
+    <item time="0" type="Transition" target="n2_qkmb" value="idle"/>
+  </transition>
+</component>

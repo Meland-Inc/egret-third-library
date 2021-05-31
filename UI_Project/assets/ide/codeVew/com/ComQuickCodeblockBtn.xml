@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="955,1080" opaque="false">
-  <controller name="ctrlShowType" pages="0,show,1,hide" selected="1"/>
+  <controller name="ctrlShowType" pages="0,show,1,hide" selected="0"/>
+  <controller name="ctrlRunStatus" pages="0,normal,1,running" selected="1">
+    <action type="play_transition" fromPage="0" toPage="1" transition="btnResetGrey"/>
+    <action type="play_transition" fromPage="1" toPage="0" transition="btnRunGrey"/>
+  </controller>
   <displayList>
-    <component id="n10_jke6" name="btnRun" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="0,963" size="81,87" group="n17_jz0o">
-      <Button icon="ui://ti9jag5tvd1613564z4"/>
+    <component id="n21_qkmb" name="runingMask" src="qkmb135651f" fileName="codeVew/img/codingEffect/comRunningEffect.xml" xy="0,0" size="955,1080">
+      <gearDisplay controller="ctrlRunStatus" pages="1"/>
+      <gearDisplay2 controller="ctrlShowType" pages="0" condition="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
     </component>
-    <component id="n12_jke6" name="btnCodeReset" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="0,963" size="81,87" group="n17_jz0o">
-      <Button icon="ui://ti9jag5tvd1613564z5"/>
+    <component id="n12_jke6" name="btnCodeReset" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="10,963" size="81,87" group="n17_jz0o">
+      <gearDisplay controller="ctrlRunStatus" pages="1"/>
+      <Button icon="ui://ti9jag5tvd1613564z5" controller="ctrlRunStatus" page="0"/>
     </component>
-    <group id="n17_jz0o" name="grpBtnRun" xy="0,963" size="81,87" advanced="true">
+    <component id="n10_jke6" name="btnRun" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="10,963" size="81,87" group="n17_jz0o">
+      <gearDisplay controller="ctrlRunStatus" pages="0"/>
+      <Button icon="ui://ti9jag5tvd1613564z4" controller="ctrlRunStatus" page="1"/>
+    </component>
+    <component id="n19_qkmb" name="btnTouchMask" src="tvlfcyih7" fileName="com/ComEmpty.xml" pkg="te1gxawo" xy="10,963" size="81,87" group="n17_jz0o" visible="false"/>
+    <group id="n17_jz0o" name="grpBtnRun" xy="10,963" size="81,87" advanced="true">
       <gearDisplay controller="ctrlShowType" pages="0"/>
       <relation target="" sidePair="bottom-bottom"/>
     </group>
@@ -22,4 +34,16 @@
       <Button icon="ui://ti9jag5tvd1613564z6"/>
     </component>
   </displayList>
+  <transition name="btnResetGrey">
+    <item time="0" type="ColorFilter" target="n12_jke6" value="0,0,-1,0"/>
+    <item time="0" type="Visible" target="n19_qkmb" value="true"/>
+    <item time="24" type="ColorFilter" target="n12_jke6" value="0,0,0,0"/>
+    <item time="24" type="Visible" target="n19_qkmb" value="false"/>
+  </transition>
+  <transition name="btnRunGrey">
+    <item time="0" type="ColorFilter" target="n10_jke6" value="0,0,-1,0"/>
+    <item time="0" type="Visible" target="n19_qkmb" value="true"/>
+    <item time="24" type="ColorFilter" target="n10_jke6" value="0,0,0,0"/>
+    <item time="24" type="Visible" target="n19_qkmb" value="false"/>
+  </transition>
 </component>
