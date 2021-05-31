@@ -17,7 +17,7 @@ export class VersionModel {
             zipPath: "/alpha/zip", scpRootPath: "/web", scpPath: "/web/alpha", localPath: "/alpha/web", localPolicyPath: "/alpha/policy", serverPackagePath: "/alpha/server_packages", mangleMapScpPath: "/mangleMap/alpha",
             updateGitEnable: false, gitBranch: "", trunkName: "alpha", cdnRoot: "",
             publishEnable: true, mergeVersionEnable: false, compressPicEnable: false, zipFileEnable: true, policyEnable: false, scpEnable: true, cdnEnable: false,
-            pushGitEnable: false, publishDescEnable: true, codeVersionEnable: true, gitTagEnable: false, zipUploadGameEnable: false, nativeEnable: false
+            pushGitEnable: false, publishDescEnable: true, codeVersionEnable: true, gitTagEnable: false, zipUploadGameEnable: false, nativeEnable: false, uploadSourceMapEnable: false,
         },
         {
             name: this.eEnviron.beta, host: "47.107.73.43", user: "ftpadmin", password: "unclemiao",
@@ -26,7 +26,7 @@ export class VersionModel {
             updateGitEnable: true, gitBranch: "trunk/beta", trunkName: "beta", cdnRoot: "",
             scpPatchPath: "/Library/WebServer/Documents/native/beta/patch", scpReleasePath: "/Library/WebServer/Documents/native/beta/release",
             publishEnable: true, mergeVersionEnable: true, compressPicEnable: false, zipFileEnable: true, policyEnable: true, scpEnable: true, cdnEnable: false,
-            pushGitEnable: true, publishDescEnable: false, codeVersionEnable: true, gitTagEnable: false, zipUploadGameEnable: false, nativeEnable: true
+            pushGitEnable: true, publishDescEnable: false, codeVersionEnable: true, gitTagEnable: false, zipUploadGameEnable: false, nativeEnable: true, uploadSourceMapEnable: false,
         },
         {
             name: this.eEnviron.ready, host: "47.107.73.43", user: "ftpadmin", password: "unclemiao",
@@ -35,7 +35,7 @@ export class VersionModel {
             cdnPatchEnable: true, cdnWinPatchPath: "/ready/win", cdnMacPatchPath: "/ready/mac",
             publishEnable: true, mergeVersionEnable: true, compressPicEnable: false, zipFileEnable: true, policyEnable: true, scpEnable: true, cdnEnable: true,
             pushGitEnable: true, publishDescEnable: false, codeVersionEnable: true, gitTagEnable: true, zipUploadGameEnable: false, nativeEnable: true,
-            svnTagEnable: true,
+            svnTagEnable: true, uploadSourceMapEnable: false,
         },
         {
             name: this.eEnviron.release, host: "bg-stage.wkcoding.com", user: "ftpadmin", password: "unclemiao",
@@ -45,7 +45,7 @@ export class VersionModel {
             cdnPatchEnable: true, cdnWinPatchPath: "/win", cdnMacPatchPath: "/mac",
             copyFileEnable: true,
             publishEnable: false, mergeVersionEnable: true, compressPicEnable: false, zipFileEnable: true, policyEnable: true, scpEnable: false, cdnEnable: true,
-            pushGitEnable: false, publishDescEnable: false, codeVersionEnable: false, gitTagEnable: false, zipUploadGameEnable: false, nativeEnable: false
+            pushGitEnable: false, publishDescEnable: false, codeVersionEnable: false, gitTagEnable: false, zipUploadGameEnable: false, nativeEnable: false, uploadSourceMapEnable: true,
         },
     ];
 

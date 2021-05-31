@@ -143,11 +143,7 @@ export async function publishProject() {
         }
 
         ModelMgr.versionModel.setNewVersion(releaseVersion);
-        try {
-            await uploadSourceMap();
-        } catch (e) {
-            console.log("--> a上传sourcemap失败", e);
-        }
+
         let indexPath = `${Global.projPath}/bin-release/web/${releaseVersion}/index.html`;
         let indexContent = await fsExc.readFile(indexPath);
         if (ModelMgr.versionModel.curEnviron.codeVersionEnable) {
@@ -1101,4 +1097,12 @@ export async function publishMac() {
     console.log(`开始打包mac包`);
     await spawnExc.runCmd(cmdStr, Global.pcProjectPath, null, "打包mac包错误");
     console.log(`打包mac成功`);
+}
+/** 上传SourceMaps */
+export async function uploadSourceMaps() {
+    try {
+        await uploadSourceMap();
+    } catch (e) {
+        console.log("--> a上传sourcemap失败", e);
+    }
 }

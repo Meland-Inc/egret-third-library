@@ -129,6 +129,13 @@
       <mu-container>
         <div class="button-wrapper">
           <mu-button
+            v-loading="isUploadSourceMap"
+            data-mu-loading-size="24"
+            color="pink500"
+            @click="onUploadSourceMap"
+            v-show="curEnviron&&curEnviron.uploadSourceMapEnable"
+          >上传SourceMap</mu-button>
+          <mu-button
             v-loading="isCopyVersionLoading"
             data-mu-loading-size="24"
             color="pink500"
@@ -389,6 +396,7 @@ export default {
 
       isZipVersionLoading: false,
       isCopyVersionLoading: false,
+      isUploadSourceMap:false,
       isUploadVersionLoading: false,
       isUploadMangleMapFileLoading: false,
 
@@ -706,6 +714,26 @@ export default {
         Global.hideRegionLoading();
       }
     },
+    async onUploadSourceMap() {
+      if (!ModelMgr.versionModel.publisher) {
+        Global.snack("请输入发布者", null, false);
+        return;
+      }
+
+      this.isUploadSourceMap = true;
+      Global.showRegionLoading();
+      try {
+        await mdPublish.uploadSourceMaps();
+        this.isUploadSourceMap = false;
+        Global.hideRegionLoading();
+        if (showDialog) {
+          Global.dialog("上传SourceMap文件成功");
+        }
+      } catch (error) {
+        this.isUploadSourceMap = false;
+        Global.hideRegionLoading();
+      }
+    },
     async onCopyVersion() {
       if (!ModelMgr.versionModel.publisher) {
         Global.snack("请输入发布者", null, false);
@@ -1017,6 +1045,10 @@ export default {
 
           //比较完项目后要刷新版本列表
           promiseList.push(this.refreshVersionList);
+        }
+
+        if (this.curEnviron.uploadSourceMapEnable) {
+          promiseList.push(mdPublish.uploadSourceMaps);
         }
 
         if (this.curEnviron.copyFileEnable) {
