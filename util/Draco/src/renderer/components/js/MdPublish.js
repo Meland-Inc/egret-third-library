@@ -66,7 +66,7 @@ async function uploadSourceMap() {
 
     if (environ == ModelMgr.versionModel.eEnviron.release) {
         console.log("--> a上传sourcemap：", environ, version, prefix);
-        let cmdStr = `sentry-cli releases -o bellcode -p bellplanet files bellplanet_${environ}_${version} upload-sourcemaps main.js.map  --url-prefix "${prefix}" --log-level=error`;
+        let cmdStr = `sentry-cli releases -o bellcode -p bellplanet files bellplanet_${environ}_${version} upload-sourcemaps "./bin-release/web/${version}/main.js.map"  --url-prefix "${prefix}" --log-level=error`;
         await spawnExc.runCmd(cmdStr, Global.projPath, null, 'sourcemap上传sentry错误');
 
         cmdStr = `sentry-cli releases -o bellcode -p bellplanet files bellplanet_${environ}_${version} upload-sourcemaps --ext js "./bin-release/web/${version}/js/" --ignore-file .sentryignore --url-prefix "${prefix}" --log-level=error`;
@@ -113,6 +113,14 @@ export async function publishProject() {
 
         let cmdStr = 'egret publish --version ' + releaseVersion;
         await spawnExc.runCmd(cmdStr, Global.projPath, null, '发布当前项目错误');
+        //拷贝main.js.map到发布版本路径
+        try {
+            const mainFilePath = `${Global.projPath}/main.js.map`
+            const targetPath = `${Global.projPath}/bin-release/web/${releaseVersion}/main.js.map`;
+            await copyFile(mainFilePath, targetPath);
+        } catch (e) {
+            console.log("--> 拷贝main.js.map失败", e);
+        };
 
         //压缩并且上传最新傻瓜模式客户端
         if (ModelMgr.versionModel.curEnviron.name === ModelMgr.versionModel.eEnviron.ready) {
