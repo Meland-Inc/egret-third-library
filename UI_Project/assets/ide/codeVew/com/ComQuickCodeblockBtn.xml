@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="955,1080" opaque="false">
   <controller name="ctrlShowType" pages="0,show,1,hide" selected="0"/>
-  <controller name="ctrlRunStatus" pages="0,normal,1,running" selected="1">
+  <controller name="ctrlRunStatus" pages="0,normal,1,running" selected="0">
     <action type="play_transition" fromPage="0" toPage="1" transition="btnResetGrey"/>
     <action type="play_transition" fromPage="1" toPage="0" transition="btnRunGrey"/>
   </controller>
   <displayList>
-    <component id="n21_qkmb" name="runingMask" src="qkmb135651f" fileName="codeVew/img/codingEffect/comRunningEffect.xml" xy="0,0" size="955,1080">
+    <component id="n21_qkmb" name="runingMask" src="qkmb135651f" fileName="codingEffect/com/comRunningEffect.xml" xy="0,0" size="955,1080">
       <gearDisplay controller="ctrlRunStatus" pages="1"/>
       <gearDisplay2 controller="ctrlShowType" pages="0" condition="0"/>
       <relation target="" sidePair="width-width,height-height"/>
@@ -34,13 +34,13 @@
       <Button icon="ui://ti9jag5tvd1613564z6"/>
     </component>
   </displayList>
-  <transition name="btnResetGrey">
+  <transition name="btnResetGrey" options="2">
     <item time="0" type="ColorFilter" target="n12_jke6" value="0,0,-1,0"/>
     <item time="0" type="Visible" target="n19_qkmb" value="true"/>
     <item time="24" type="ColorFilter" target="n12_jke6" value="0,0,0,0"/>
     <item time="24" type="Visible" target="n19_qkmb" value="false"/>
   </transition>
-  <transition name="btnRunGrey">
+  <transition name="btnRunGrey" options="2">
     <item time="0" type="ColorFilter" target="n10_jke6" value="0,0,-1,0"/>
     <item time="0" type="Visible" target="n19_qkmb" value="true"/>
     <item time="24" type="ColorFilter" target="n10_jke6" value="0,0,0,0"/>
