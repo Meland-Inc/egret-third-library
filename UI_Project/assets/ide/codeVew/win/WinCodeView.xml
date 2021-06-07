@@ -6,6 +6,7 @@
     <action type="change_page" fromPage="" toPage="6" objectId="n32_g61s" controller="ctrlStatus" targetPage="4"/>
     <action type="change_page" fromPage="" toPage="8" objectId="n32_g61s" controller="ctrlStatus" targetPage="7"/>
   </controller>
+  <controller name="ctrlCodeMode" pages="0,ide,1,quick" selected="1"/>
   <displayList>
     <component id="n1_s45w" name="codeBlockContainer" src="s45w19" fileName="codeVew/com/CodeblockContainer.xml" xy="955,0" size="852,1080">
       <gearDisplay controller="ctrlStatus" pages="0"/>
@@ -16,7 +17,13 @@
       <relation target="n1_s45w" sidePair="width-width,left-left"/>
     </component>
     <component id="n37_puqx" name="comCodeblockBtn" src="puqxwcyima" fileName="codeVew/com/ComCodeblockBtn.xml" xy="0,0" controller="ctrlStatus,0">
+      <gearDisplay controller="ctrlCodeMode" pages="0"/>
       <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <component id="n42_jz0o" name="comQuickCodeblockBtn" src="jz0o135650y" fileName="codeVew/com/ComQuickCodeblockBtn.xml" xy="955,0" size="965,1080">
+      <gearDisplay controller="ctrlCodeMode" pages="1"/>
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+      <relation target="n1_s45w" sidePair="leftext-left"/>
     </component>
     <component id="n3_s45w" name="comCategoryList" src="s45w1u" fileName="codeVew/com/ComCategoryList.xml" xy="0,-1" size="1920,1080" group="n16_en7j">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>

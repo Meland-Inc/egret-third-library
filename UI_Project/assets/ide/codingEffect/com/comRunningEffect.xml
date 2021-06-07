@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="800,600">
+  <displayList>
+    <image id="n6_ovou" name="imgBg" src="ovou135651p" fileName="codingEffect/img/img_ide_runingBg.png" xy="0,0" size="800,600" alpha="0.5">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n3_ovou" name="n3" src="ovou135651n" fileName="codingEffect/com/comRunning.xml" xy="333,242">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>
