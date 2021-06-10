@@ -48,6 +48,7 @@
         </div>
     </fieldset>
 
+    <script type="text/javascript" src="config.js"></script>
     <script type="text/javascript" src="summaryDetail.js"></script>
     <script type="text/javascript" src="download.js"></script>
     <script type='module'>
@@ -57,13 +58,9 @@
         }
         setDownloadProgressCB(refreshLog);
 
-        const host = 'http://logs.wkcoding.com';
-        const downloadHost = 'http://47.103.29.74';
-        let refreshUrl = `${host}/refresh`;
-        summaryInfoUrl = `${host}/summary`;
-        downloadLogUrl = `${downloadHost}/`;
-        clientUrl = downloadLogUrl + 'clientlogs/';
-        nativeLogUrl = downloadLogUrl + 'native_logs/';
+        summaryInfoUrl = getConfigUrl('release', 'summaryHost', 'summaryPath');
+        clientUrl = getConfigUrl('release', 'downloadHost', 'clientLogPath');
+        nativeLogUrl = getConfigUrl('release', 'downloadHost', 'nativeLogPath');
     </script>
 
 </body>

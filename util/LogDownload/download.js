@@ -8,7 +8,6 @@ function addScript(url, tAttributes) {
 addScript('jszip.js');
 addScript('FileSaver.js');
 let progressCb;
-let downloadLogUrl;
 let clientUrl;
 let nativeLogUrl;
 let downLoadBtn = document.getElementById('download');
