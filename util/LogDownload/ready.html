@@ -48,8 +48,8 @@
         </div>
     </fieldset>
 
-    <script type="text/javascript" src="download.js"></script>
     <script type="text/javascript" src="summaryDetail.js"></script>
+    <script type="text/javascript" src="download.js"></script>
     <script type='module'>
         let logView = document.getElementById('logView');
         function refreshLog(tContent) {
@@ -57,14 +57,13 @@
         }
         setDownloadProgressCB(refreshLog);
 
-        // const host = 'http://logs.wkcoding.com';
-        const host = 'http://192.168.1.111:10003';
-        const downloadHost = 'http://192.168.1.111:10003';
+        const host = 'http://ready-logs.wkcoding.com';
+        const downloadHost = 'http://47.103.29.74';
         let refreshUrl = `${host}/refresh`;
         summaryInfoUrl = `${host}/summary`;
-        downloadLogUrl = `${downloadHost}/file/`;
-        clientUrl = downloadLogUrl + 'clientlogs/';
-        nativeLogUrl = downloadLogUrl + 'native_logs/';
+        downloadLogUrl = `${downloadHost}/`;
+        clientUrl = downloadLogUrl + 'testclientlogs/';
+        nativeLogUrl = downloadLogUrl + 'testNativeLogs/';
     </script>
 
 </body>
