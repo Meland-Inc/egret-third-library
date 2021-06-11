@@ -61,7 +61,7 @@ export async function updateGit() {
 
 async function uploadSourceMap() {
     let environ = ModelMgr.versionModel.curEnviron.name;
-    let version = ModelMgr.versionModel.releaseVersion;
+    let version = await ModelMgr.versionModel.getEnvironGameVersion(ModelMgr.versionModel.eEnviron.ready);//上传最新ready版本的sourcemap
     let prefix = `~/js/`;
 
     if (environ == ModelMgr.versionModel.eEnviron.release) {

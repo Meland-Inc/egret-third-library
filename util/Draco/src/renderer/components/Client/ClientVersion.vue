@@ -517,8 +517,7 @@ export default {
     },
     async environChange() {
       ModelMgr.versionModel.setCurEnviron(this.curEnviron);
-      this.editCdnUrlEnable =
-        this.curEnviron.name === ModelMgr.versionModel.eEnviron.release;
+      this.editCdnUrlEnable = this.curEnviron.name === ModelMgr.versionModel.eEnviron.release;
       this.needPatch = ModelMgr.versionModel.needPatch;
 
       this.cdnUrl = ModelMgr.versionModel.cdnUrl;
