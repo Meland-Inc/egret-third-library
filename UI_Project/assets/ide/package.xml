@@ -905,7 +905,6 @@
     <image id="n4ib13564z9" name="btn_code_ksbm_4.png" path="/codeVew/img/newQuickCode/"/>
     <image id="ubmn13564zx" name="btn_code_ksbm_5.png" path="/codeVew/img/newQuickCode/"/>
     <component id="d6fn13564zx" name="WinLessonSettlement.xml" path="/lessonCenter/lessonLevel/" exported="true"/>
-    <image id="d6fn13564zy" name="img_lessonSettlement.png" path="/lessonCenter/lessonLevel/img/"/>
     <image id="d6fn1356501" name="btn_lesson_orange.png" path="/lessonCenter/lessonLevel/img/"/>
     <image id="d6fn1356502" name="btn_lesson_yellow.png" path="/lessonCenter/lessonLevel/img/"/>
     <image id="ldsv1356503" name="ide_icon_code_default.png" path="/codeVew/img/"/>
@@ -960,6 +959,17 @@
     <image id="ovou135651l" name="img_ide_running2.png" path="/codingEffect/img/"/>
     <component id="ovou135651n" name="comRunning.xml" path="/codingEffect/com/"/>
     <image id="ovou135651p" name="img_ide_runingBg.png" path="/codingEffect/img/" scale="9grid" scale9grid="2,2,4,4"/>
+    <component id="l54j135650z" name="btnSettlement.xml" path="/lessonCenter/btn/"/>
+    <image id="l54j1356510" name="btn_ide_settlement_1.png" path="/lessonCenter/lessonLevel/img/" scale="9grid" scale9grid="15,15,6,4"/>
+    <image id="l54j1356511" name="btn_ide_settlement_2.png" path="/lessonCenter/lessonLevel/img/" scale="9grid" scale9grid="14,14,8,7"/>
+    <image id="l54j1356512" name="btn_ide_settlement_3.png" path="/lessonCenter/lessonLevel/img/" scale="9grid" scale9grid="13,15,8,4"/>
+    <image id="l54j1356513" name="img_qqxz.png" path="/lessonCenter/lessonLevel/img/"/>
+    <image id="l54j1356514" name="img_tggk.png" path="/lessonCenter/lessonLevel/img/"/>
+    <image id="l54j1356515" name="img_wcgk.png" path="/lessonCenter/lessonLevel/img/"/>
+    <image id="l54j1356516" name="img_xyg.png" path="/lessonCenter/lessonLevel/img/"/>
+    <image id="l54j1356517" name="img_zjxs.png" path="/lessonCenter/lessonLevel/img/"/>
+    <image id="l54j1356518" name="img_zlyc.png" path="/lessonCenter/lessonLevel/img/"/>
+    <component id="f61g135651b" name="ComLessonSettlementBtn.xml" path="/lessonCenter/lessonLevel/" exported="true"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>
