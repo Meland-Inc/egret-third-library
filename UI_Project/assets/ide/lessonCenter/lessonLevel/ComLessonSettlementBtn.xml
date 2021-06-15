@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1000,100" designImage="ui://ti9jag5tf61g1356519" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlType" pages="0,teacherWin,1,teacherLose,2,studentWin,3,studentLose" selected="3"/>
+  <controller name="ctrlSceneType" pages="0,all,1,teacher" selected="1"/>
+  <displayList>
+    <component id="n17_l54j" name="btnFinishLesson" src="l54j135650z" fileName="lessonCenter/btn/btnSettlement.xml" xy="660,11" size="242,85" controller="floorColor,0">
+      <gearDisplay controller="ctrlType" pages="2"/>
+      <Button icon="ui://ti9jag5tl54j1356515"/>
+    </component>
+    <component id="n18_l54j" name="btnReset" src="l54j135650z" fileName="lessonCenter/btn/btnSettlement.xml" xy="380,10" size="242,85" controller="floorColor,1">
+      <gearDisplay controller="ctrlType" pages="0,1,2,3"/>
+      <gearXY controller="ctrlType" pages="3" values="380,10" default="98,10"/>
+      <Button icon="ui://ti9jag5tl54j1356518"/>
+    </component>
+    <component id="n20_l54j" name="btnNext" src="l54j135650z" fileName="lessonCenter/btn/btnSettlement.xml" xy="660,11" size="242,85" controller="floorColor,0">
+      <gearDisplay controller="ctrlType" pages="0"/>
+      <Button icon="ui://ti9jag5tl54j1356516"/>
+    </component>
+    <component id="n23_l54j" name="btnTransferAll" src="l54j135650z" fileName="lessonCenter/btn/btnSettlement.xml" xy="380,11" size="242,85" controller="floorColor,2">
+      <gearDisplay controller="ctrlType" pages="0,1"/>
+      <gearDisplay2 controller="ctrlSceneType" pages="0" condition="0"/>
+      <Button icon="ui://ti9jag5tl54j1356517"/>
+    </component>
+    <component id="n22_l54j" name="btnJump" src="l54j135650z" fileName="lessonCenter/btn/btnSettlement.xml" xy="660,11" size="242,85" controller="floorColor,0">
+      <gearDisplay controller="ctrlType" pages="1"/>
+      <Button icon="ui://ti9jag5tl54j1356514"/>
+    </component>
+  </displayList>
+  <transition name="transShow">
+    <item time="0" type="Pivot" value="0.5,0.5"/>
+    <item time="0" type="Scale" tween="true" startValue="0.5,0.5" endValue="1,1" duration="12" ease="Back.Out"/>
+  </transition>
+</component>
