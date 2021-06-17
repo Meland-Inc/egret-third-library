@@ -17,13 +17,16 @@ downLoadBtn.onclick = downloadLog;
 function downloadLog() {
     const tableStatus = layui.table.checkStatus('layuiTable');
     const downloadFiles = tableStatus && tableStatus.data && tableStatus.data.length ? tableStatus.data : [];
+    downLoadBySummaryUrlArr(downloadFiles);
+}
 
+function downLoadBySummaryUrlArr(downloadFiles) {
     if (downloadFiles.length > 0) {
         var zip = new JSZip();
 
         let checkIsEnd = (tIndex) => {
             if (tIndex == downloadFiles.length - 1) {
-                refreshProgress('压缩并下载');
+                refreshProgress('开始压缩');
                 zip.generateAsync({ type: "blob" })
                     .then(function (content) {
                         let downLoadTime = getFileName(downloadFiles[0]);
@@ -32,7 +35,7 @@ function downloadLog() {
                             downLoadTime = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}_${date.getHours()}-${date.getMinutes()}`;
                         }
                         saveAs(content, downLoadTime + ".zip");
-                        refreshProgress('');
+                        refreshProgress(`下载   ${downLoadTime + ".zip"}`);
                     })
                     .catch((data) => {
                         console.error(data);
