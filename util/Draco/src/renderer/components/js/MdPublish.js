@@ -155,9 +155,10 @@ export async function publishProject() {
         return;
     }
 
-    // if (ModelMgr.versionModel.needCover) {
-    //     await checkClearRelease(releaseVersion);
-    // }
+    //发布前清理老的同名文件夹
+    await checkClearRelease(releaseVersion).catch((error) => {
+        Global.snack(`删除release文件夹出错 version=${releaseVersion} error=${error}`);
+    });
 
     try {
         if (ModelMgr.versionModel.curEnviron.codeVersionEnable) {
