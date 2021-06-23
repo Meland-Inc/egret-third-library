@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080">
+  <controller name="ctrlViewStatus" pages="0,checking,1,connecting,2,saving" selected="0">
+    <action type="play_transition" fromPage="" toPage="0" transition="transChecking"/>
+    <action type="play_transition" fromPage="" toPage="1" transition="transConnecting"/>
+    <action type="play_transition" fromPage="" toPage="2" transition="transSaving"/>
+  </controller>
+  <displayList>
+    <graph id="n1_n62r" name="bg" xy="0,0" size="1920,1080" alpha="0.5" type="rect" fillColor="#ff000000">
+      <relation target="" sidePair="rightext-right,bottomext-bottom"/>
+    </graph>
+    <image id="n2_n62r" name="n2" src="n62rai" fileName="img/loading/bg_mt_loading.png" xy="686,428" size="548,222" group="n10_x4vi"/>
+    <text id="n5_f6uq" name="tfLoadingTips" xy="790,462" size="340,32" group="n12_gda9" fontSize="22" color="#0f4cb3" align="center" vAlign="middle" autoSize="none" text="尝试连接其他星球..."/>
+    <image id="n11_ftyz" name="n11" src="n62rak" fileName="img/loading/img_mt_bg1.png" xy="723,521" size="422,40" group="n12_gda9"/>
+    <image id="n7_x4vi" name="imgPercent" src="n62ral" fileName="img/loading/img_mt_loading.png" xy="729,529" size="415,25" group="n12_gda9"/>
+    <text id="n9_x4vi" name="tfPercent" xy="1148,520" size="48,34" group="n12_gda9" fontSize="24" color="#0f4cb3" align="center" vAlign="middle" vars="true" text="{percent=30}%"/>
+    <group id="n12_gda9" name="grpLoading" xy="723,462" size="473,99" group="n10_x4vi" advanced="true">
+      <gearDisplay controller="ctrlViewStatus" pages="1"/>
+    </group>
+    <text id="n14_gda9" name="tfChecking" xy="729,483" size="461,113" group="n10_x4vi" fontSize="22" color="#0f4cb3" align="center" vAlign="middle" autoSize="none" text="正在检查服务器可用性...">
+      <gearDisplay controller="ctrlViewStatus" pages="0,2"/>
+      <gearText controller="ctrlViewStatus" pages="0,2" values="正在检查服务器可用性...|该地图数据存储中，请稍后进入" default="检查服务器可用性..."/>
+    </text>
+    <component id="n8_x4vi" name="btnCancel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="920,589" size="79,38" group="n10_x4vi">
+      <gearDisplay controller="ctrlViewStatus" pages="0,1"/>
+      <Button title="取消" titleFontSize="20" icon="ui://0axy98cgn62raj"/>
+    </component>
+    <component id="n15_gda9" name="btnConfirmSave" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="920,589" size="79,38" group="n10_x4vi">
+      <gearDisplay controller="ctrlViewStatus" pages="2"/>
+      <Button title="确定" titleFontSize="20" icon="ui://0axy98cgn62raj"/>
+    </component>
+    <group id="n10_x4vi" name="root" xy="686,428" size="548,222" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+  <transition name="transChecking">
+    <item time="0" type="Alpha" target="n1_n62r" value="0"/>
+    <item time="0" type="Visible" target="n10_x4vi" value="false"/>
+    <item time="6" type="Alpha" target="n1_n62r" value="0.5"/>
+    <item time="6" type="Visible" target="n10_x4vi" value="true"/>
+  </transition>
+  <transition name="transConnecting">
+    <item time="0" type="Alpha" target="n1_n62r" value="0.5"/>
+    <item time="0" type="Visible" target="n10_x4vi" value="true"/>
+  </transition>
+  <transition name="transSaving">
+    <item time="0" type="Alpha" target="n1_n62r" value="0.5"/>
+    <item time="0" type="Visible" target="n10_x4vi" value="true"/>
+  </transition>
+</component>
