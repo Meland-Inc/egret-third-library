@@ -17,9 +17,9 @@
     <group id="n12_gda9" name="grpLoading" xy="723,462" size="473,99" group="n10_x4vi" advanced="true">
       <gearDisplay controller="ctrlViewStatus" pages="1"/>
     </group>
-    <text id="n14_gda9" name="tfChecking" xy="729,483" size="461,113" group="n10_x4vi" fontSize="22" color="#0f4cb3" align="center" vAlign="middle" autoSize="none" text="检查服务器可用性...">
+    <text id="n14_gda9" name="tfChecking" xy="729,483" size="461,113" group="n10_x4vi" fontSize="22" color="#0f4cb3" align="center" vAlign="middle" autoSize="none" text="正在检查服务器可用性...">
       <gearDisplay controller="ctrlViewStatus" pages="0,2"/>
-      <gearText controller="ctrlViewStatus" pages="2" values="该地图数据存储中，请稍后进入" default="检查服务器可用性..."/>
+      <gearText controller="ctrlViewStatus" pages="0,2" values="正在检查服务器可用性...|该地图数据存储中，请稍后进入" default="检查服务器可用性..."/>
     </text>
     <component id="n8_x4vi" name="btnCancel" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="920,589" size="79,38" group="n10_x4vi">
       <gearDisplay controller="ctrlViewStatus" pages="0,1"/>
