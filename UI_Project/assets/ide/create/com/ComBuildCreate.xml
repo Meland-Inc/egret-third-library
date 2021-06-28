@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="430,1080" designImage="ui://thvmj7vo80ab3" designImageOffsetX="-1491" designImageAlpha="0">
   <controller name="ctrlState" exported="true" pages="1,open,0,fold" selected="0"/>
-  <controller name="ctrlOpenType" alias="打开类型" pages="1,inLesson,0,makeLesson,2,pptMakeLesson" selected="1">
+  <controller name="ctrlOpenType" alias="打开类型" pages="1,inLesson,0,makeLesson,2,pptMakeLesson" selected="2">
     <remark page="0" value="在上课"/>
     <remark page="1" value="普通做课"/>
     <remark page="2" value="ppt模式做课"/>
   </controller>
-  <controller name="ctrlMatType" pages="0,basic,1,pptMode" selected="1"/>
+  <controller name="ctrlMatType" pages="0,basic,1,pptMode" selected="0"/>
   <displayList>
     <graph id="n19_n83g" name="n19" xy="0,0" size="430,1080" visible="false" alpha="0" touchable="false" type="rect">
       <gearXY controller="ctrlState" pages="1,0" values="0,0|0,0"/>
@@ -110,13 +110,8 @@
       <Button icon="ui://ti9jag5t80ab8y" controller="ctrlState" page="0"/>
     </component>
     <component id="n30_z1vv" name="btnTemplateCenter" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="285,65" size="136,40" group="n16_jm8l">
-      <gearDisplay controller="ctrlOpenType" pages="0"/>
+      <gearDisplay controller="ctrlOpenType" pages="0,2"/>
       <Button title="组件中心" titleFontSize="20" icon="ui://ti9jag5t80ab8t"/>
-    </component>
-    <component id="n31_o572" name="btnlessonCenterCpt" src="oliri6s" fileName="old/btn/tbtnScale.xml" pkg="te1gxawo" xy="285,65" size="136,40" group="n16_jm8l">
-      <gearDisplay controller="ctrlOpenType" pages="2"/>
-      <gearText controller="ctrlMatType" pages="0,1" values="课程素材|普通素材"/>
-      <Button title="普通素材" titleColor="#ffffff" titleFontSize="20" icon="ui://ti9jag5t80ab8t" controller="ctrlMatType" page="0"/>
     </component>
     <list id="n33_o572" name="lstLessonCptTag" xy="9,118" size="413,45" group="n16_jm8l" layout="row" colGap="9" defaultItem="ui://ti9jag5toyuj13564ve">
       <gearDisplay controller="ctrlMatType" pages="1"/>
@@ -143,6 +138,14 @@
       <item/>
       <item/>
     </list>
+    <component id="n36_ebao" name="btnlessonCenterCpt" src="qzjnwcyikv" fileName="create/btn/BtnEntityTemplate.xml" xy="3,6" group="n16_jm8l">
+      <gearDisplay controller="ctrlOpenType" pages="2"/>
+      <Button title="课程素材库" controller="ctrlMatType" page="1"/>
+    </component>
+    <component id="n37_ebao" name="btnlessonCenterCpt" src="qzjnwcyikv" fileName="create/btn/BtnEntityTemplate.xml" xy="123,6" group="n16_jm8l">
+      <gearDisplay controller="ctrlOpenType" pages="2"/>
+      <Button checked="true" title="普通素材库" controller="ctrlMatType" page="0"/>
+    </component>
     <group id="n16_jm8l" name="grpOpen" xy="0,0" size="430,1079" advanced="true">
       <gearDisplay controller="ctrlState" pages="1"/>
     </group>
