@@ -953,7 +953,7 @@
     <component id="qkmb135651d" name="comCodingEffect.xml" path="/codingEffect/com/" exported="true"/>
     <component id="qkmb135651f" name="comRunningEffect.xml" path="/codingEffect/com/"/>
     <movieclip id="qkmb135651g" name="codeRunning.jta" path="/codingEffect/img/"/>
-    <component id="qkmb135651j" name="comCodingStatus.xml" path="/codingEffect/com/" exported="true"/>
+    <component id="qkmb135651j" name="comCodingStatusback.xml" path="/codingEffect/com/" exported="true"/>
     <image id="qkmb0" name="img_code_running.png" path="/codeVew/img/newQuickCode/"/>
     <image id="ovou135651k" name="img_ide_running1.png" path="/codingEffect/img/"/>
     <image id="ovou135651l" name="img_ide_running2.png" path="/codingEffect/img/"/>
@@ -970,6 +970,8 @@
     <image id="l54j1356517" name="img_zjxs.png" path="/lessonCenter/lessonLevel/img/"/>
     <image id="l54j1356518" name="img_zlyc.png" path="/lessonCenter/lessonLevel/img/"/>
     <component id="f61g135651b" name="ComLessonSettlementBtn.xml" path="/lessonCenter/lessonLevel/" exported="true"/>
+    <component id="72tx135651q" name="comQuickCodingEffect.xml" path="/codingEffect/com/" exported="true"/>
+    <component id="72tx135651r" name="comCodingStatus.xml" path="/codingEffect/com/" exported="true"/>
   </resources>
-  <publish name="ide" path="..\..\egret-planet\resource\assets\fairyGui" packageCount="2"/>
+  <publish name="ide"/>
 </packageDescription>
