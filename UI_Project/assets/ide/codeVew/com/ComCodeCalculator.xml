@@ -2,7 +2,7 @@
 <component size="288,286" designImage="ui://i25v0ebktcu23g" designImageOffsetX="-620" designImageOffsetY="-15">
   <displayList>
     <image id="n16_fke6" name="imgBg" src="fke6wcyipp" fileName="codeVew/img/img_input_bg.png" xy="0,0"/>
-    <component id="n29_fke6" name="btnConfirm" src="fke6wcyipy" fileName="codeVew/btn/btnMobileInputConfirm.xml" xy="71,210"/>
+    <component id="n29_fke6" name="btnConfirm" src="fke6wcyipy" fileName="codeVew/btn/btnMobileInputConfirm.xml" xy="111,218"/>
     <component id="n17_fke6" name="btnNum1" src="fke6wcyipq" fileName="codeVew/btn/btnMobileInput.xml" xy="29,24">
       <Button title="1"/>
     </component>
@@ -33,11 +33,14 @@
     <component id="n26_fke6" name="btnNum9" src="fke6wcyipq" fileName="codeVew/btn/btnMobileInput.xml" xy="185,116">
       <Button title="9"/>
     </component>
+    <component id="n30_mqvv" name="btnNumDot" src="mqvv135651q" fileName="codeVew/btn/btnMobileDotInput.xml" xy="185,162">
+      <Button title="."/>
+    </component>
     <component id="n27_fke6" name="btnMinus" src="fke6wcyipq" fileName="codeVew/btn/btnMobileInput.xml" xy="29,162">
       <relation target="n25_fke6" sidePair="left-right"/>
       <Button title="-"/>
     </component>
-    <component id="n28_fke6" name="btnDelete" src="fke6wcyipq" fileName="codeVew/btn/btnMobileInput.xml" xy="185,162">
+    <component id="n28_fke6" name="btnDelete" src="fke6wcyipq" fileName="codeVew/btn/btnMobileInput.xml" xy="31,220">
       <Button title=" " icon="ui://ti9jag5tfke6wcyipv"/>
     </component>
   </displayList>

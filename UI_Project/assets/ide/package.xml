@@ -608,7 +608,6 @@
     <image id="g9ldwcyioa" name="bg_dmkmb_01.png" path="/codeVew/img/canUseConfig/" scale="9grid" scale9grid="32,43,64,86"/>
     <component id="ou8ewcyiob" name="ComCanUseConfigContainer.xml" path="/codeVew/com/"/>
     <component id="j3bfwcyio7" name="comAWUIBlackboard.xml" path="/attribute/widgets/" exported="true"/>
-    <image id="jbydwcyioc" name="n7.png" path="/codeVew/img/"/>
     <image id="jbydwcyiod" name="img_build_ok_16.png" path="/codeVew/img/"/>
     <component id="sh3owcyio7" name="WinLessonCenterPPT.xml" path="/lessonCenter/" exported="true"/>
     <image id="11tcewcyioc" name="bg_quyuliebiao_01.png" path="/lessonCenter/img/"/>
@@ -866,7 +865,6 @@
     <image id="fke6wcyipr" name="btn_input_bg.png" path="/codeVew/img/" scale="9grid" scale9grid="22,17,27,4"/>
     <image id="fke6wcyipv" name="img_input_del.png" path="/codeVew/img/"/>
     <image id="fke6wcyipw" name="img_input_confirmBG.png" path="/codeVew/img/"/>
-    <image id="fke6wcyipx" name="img_input_confirm.png" path="/codeVew/img/"/>
     <component id="fke6wcyipy" name="btnMobileInputConfirm.xml" path="/codeVew/btn/"/>
     <image id="a1wt13564z2" name="test.png" path="/lessonCenter/img/" scale="tile" scale9grid="10,10,20,20"/>
     <image id="a1wt13564z3" name="btn_ide_gqbj_1.png" path="/lessonCenter/lessonLevel/img/" scale="9grid" scale9grid="20,20,7,9"/>
@@ -972,6 +970,7 @@
     <component id="f61g135651b" name="ComLessonSettlementBtn.xml" path="/lessonCenter/lessonLevel/" exported="true"/>
     <component id="72tx135651q" name="comQuickCodingEffect.xml" path="/codingEffect/com/" exported="true"/>
     <component id="72tx135651r" name="comCodingStatus.xml" path="/codingEffect/com/" exported="true"/>
+    <component id="mqvv135651q" name="btnMobileDotInput.xml" path="/codeVew/btn/"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>
