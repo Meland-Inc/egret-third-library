@@ -1,31 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="88,70" pivot="0.5,0" anchor="true" overflow="hidden">
-  <controller name="ctrlStatus" pages="3,none,0,coding,4,quickCoding,1,editing,2,restart" selected="4">
+  <controller name="ctrlStatus" pages="3,none,0,coding,4,quickCoding,1,editing,2,restart" selected="0">
     <action type="play_transition" fromPage="" toPage="0" transition="coding" repeat="-1" stopOnExit="true"/>
     <action type="play_transition" fromPage="" toPage="4" transition="quickCoding" stopOnExit="true"/>
     <action type="play_transition" fromPage="" toPage="1" transition="editing" repeat="-1" stopOnExit="true"/>
     <action type="play_transition" fromPage="" toPage="2" transition="restart" stopOnExit="true"/>
   </controller>
   <displayList>
-    <image id="n6_72tx" name="imgBg" src="qkmb1356514" fileName="codingEffect/img/img_codeEffect_bg.png" xy="0,0"/>
+    <image id="n6_72tx" name="imgBgCoding" src="qkmb1356514" fileName="codingEffect/img/img_codeEffect_bg.png" xy="0,0" group="n10_72tx"/>
     <image id="n4_72tx" name="imgCodeblock1" src="qkmb135651b" fileName="codingEffect/img/img_coding_effect_event.png" xy="17,7" group="n10_72tx"/>
     <image id="n5_72tx" name="imgCodeblock2" src="qkmb135651c" fileName="codingEffect/img/img_coding_effect_fun.png" xy="53,45" group="n10_72tx"/>
-    <group id="n10_72tx" name="grpCoding" xy="17,7" size="88,60" advanced="true">
+    <group id="n10_72tx" name="grpCoding" xy="0,0" size="105,70" advanced="true">
       <gearDisplay controller="ctrlStatus" pages="0,4"/>
     </group>
+    <image id="n16_ei0v" name="imgBgEditing" src="qkmb1356514" fileName="codingEffect/img/img_codeEffect_bg.png" xy="0,0" group="n11_72tx"/>
     <image id="n8_72tx" name="imgEditing1" src="qkmb1356519" fileName="codingEffect/img/img_editing_effect_2.png" xy="42,33" pivot="0.5,0.5" group="n11_72tx"/>
     <image id="n9_72tx" name="imgEditing2" src="qkmb1356518" fileName="codingEffect/img/img_editing_effect_1.png" xy="15,13" pivot="0.842,0.165" group="n11_72tx"/>
-    <group id="n11_72tx" name="grpEditing" xy="15,13" size="51,45" advanced="true">
+    <group id="n11_72tx" name="grpEditing" xy="0,0" size="88,70" advanced="true">
       <gearDisplay controller="ctrlStatus" pages="1"/>
     </group>
+    <image id="n15_ei0v" name="imgBgRestart" src="qkmb1356514" fileName="codingEffect/img/img_codeEffect_bg.png" xy="0,0" group="n14_72tx"/>
     <image id="n12_72tx" name="imgRestart1" src="qkmb1356511" fileName="codingEffect/img/img_rerun_circle.png" xy="25,16" pivot="0.5,0.5" group="n14_72tx"/>
     <image id="n13_72tx" name="imgRestart2" src="qkmb1356513" fileName="codingEffect/img/img_rerun_effect_arrow.png" xy="46,36" pivot="0.45,0.5" anchor="true" group="n14_72tx"/>
-    <group id="n14_72tx" name="grpRestart" xy="25,16" size="40,40" advanced="true">
+    <group id="n14_72tx" name="grpRestart" xy="0,0" size="88,70" advanced="true">
       <gearDisplay controller="ctrlStatus" pages="2"/>
     </group>
   </displayList>
   <transition name="coding" autoPlayRepeat="-1">
-    <item time="0" type="Alpha" value="1"/>
+    <item time="0" type="Alpha" target="n10_72tx" value="1"/>
     <item time="0" type="XY" target="n4_72tx" tween="true" startValue="-56,18" endValue="9,15" duration="24" ease="Sine.Out"/>
     <item time="0" type="XY" target="n5_72tx" value="94,30"/>
     <item time="18" type="XY" target="n5_72tx" tween="true" startValue="94,30" endValue="24,41" duration="24" ease="Sine.Out"/>
@@ -33,18 +35,17 @@
     <item time="66" type="XY" target="n5_72tx" value="23,36"/>
   </transition>
   <transition name="quickCoding">
-    <item time="0" type="Alpha" tween="true" startValue="0" endValue="1" duration="6"/>
+    <item time="0" type="Alpha" target="n10_72tx" tween="true" startValue="0" endValue="1" duration="6"/>
     <item time="0" type="XY" target="n4_72tx" value="-56,18"/>
     <item time="0" type="XY" target="n5_72tx" value="94,30"/>
     <item time="6" type="XY" target="n4_72tx" tween="true" startValue="-56,18" endValue="9,15" duration="24" ease="Sine.Out"/>
     <item time="6" type="XY" target="n5_72tx" value="94,30"/>
     <item time="24" type="XY" target="n5_72tx" tween="true" startValue="94,30" endValue="24,41" duration="25" ease="Sine.Out"/>
     <item time="49" type="XY" target="n5_72tx" tween="true" startValue="24,41" endValue="23,36" duration="5" ease="Circ.In"/>
-    <item time="72" type="Alpha" tween="true" startValue="1" endValue="0" duration="6"/>
+    <item time="72" type="Alpha" target="n10_72tx" tween="true" startValue="1" endValue="0" duration="6"/>
     <item time="72" type="XY" target="n5_72tx" value="23,36"/>
   </transition>
   <transition name="editing" autoPlayRepeat="-1">
-    <item time="0" type="Alpha" value="1"/>
     <item time="0" type="Rotation" target="n8_72tx" tween="true" startValue="0" endValue="360" duration="54" ease="Linear"/>
     <item time="0" type="Rotation" target="n9_72tx" tween="true" startValue="0" endValue="11.77" duration="9" ease="Linear"/>
     <item time="9" type="Rotation" target="n9_72tx" tween="true" startValue="11.77" endValue="0" duration="9" ease="Linear"/>
@@ -52,13 +53,13 @@
     <item time="36" type="Rotation" target="n9_72tx" tween="true" startValue="11.7" endValue="0" duration="9" ease="Linear"/>
   </transition>
   <transition name="restart">
-    <item time="0" type="Alpha" value="1"/>
+    <item time="0" type="Alpha" target="n14_72tx" value="1"/>
     <item time="0" type="Rotation" target="n12_72tx" tween="true" startValue="0" endValue="720" duration="24"/>
     <item time="0" type="Scale" target="n13_72tx" value="1,1"/>
     <item time="24" type="Scale" target="n13_72tx" tween="true" startValue="1,1" endValue="0.7,0.7" duration="4"/>
     <item time="28" type="Scale" target="n13_72tx" tween="true" startValue="0.7,0.7" endValue="1.4,1.4" duration="4"/>
     <item time="32" type="Scale" target="n13_72tx" tween="true" startValue="1.4,1.4" endValue="1,1" duration="4"/>
-    <item time="48" type="Alpha" tween="true" startValue="1" endValue="0" duration="12" label2="finish"/>
+    <item time="48" type="Alpha" target="n14_72tx" tween="true" startValue="1" endValue="0" duration="11" label2="finish"/>
     <item time="48" type="Scale" target="n13_72tx" value="1,1"/>
   </transition>
 </component>
