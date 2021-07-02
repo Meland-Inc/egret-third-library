@@ -14,11 +14,8 @@
     <text id="n7_eiqy" name="tfTime" xy="1189,342" size="244,66" group="n26_ko5v" fontSize="50" color="#ffad54" text="00：05：21"/>
     <text id="n3_eiqy" name="tfWrongTitle" xy="533,486" size="134,66" group="n26_ko5v" fontSize="50" color="#414141" text="答错："/>
     <text id="n6_eiqy" name="tfWrong" xy="703,485" size="124,66" group="n26_ko5v" fontSize="50" color="#ffad54" text="6/10"/>
-    <text id="n4_eiqy" name="tfScoreTitle" xy="1016,486" size="134,66" group="n26_ko5v" fontSize="50" color="#414141" text="分数："/>
-    <text id="n8_eiqy" name="tfScore" xy="1189,426" size="70,142" group="n26_ko5v" fontSize="110" color="#ffad54" vAlign="middle" leading="0" autoSize="none" italic="true" text="0"/>
-    <text id="n10_eiqy" name="tfScoreSuf" xy="1267,486" size="103,66" group="n26_ko5v" fontSize="50" color="#ffad54" autoSize="none" text="分">
-      <relation target="n8_eiqy" sidePair="left-right"/>
-    </text>
+    <text id="n4_eiqy" name="tfScoreTitle" xy="1016,486" size="184,66" group="n26_ko5v" fontSize="50" color="#414141" text="正确率："/>
+    <text id="n8_eiqy" name="tfScore" xy="1210,426" size="70,142" group="n26_ko5v" fontSize="110" color="#ffad54" vAlign="middle" leading="0" autoSize="none" italic="true" text="0"/>
     <graph id="n24_ko5v" name="n24" xy="447,610" size="1026,286" group="n26_ko5v" type="rect" lineSize="0" fillColor="#fff3f3f3" corner="30"/>
     <list id="n9_eiqy" name="lstAnswerResult" xy="510,650" size="906,230" group="n26_ko5v" layout="flow_hz" overflow="scroll" scrollBarFlags="4" scrollBarRes="ui://ti9jag5tko5v135650p," lineGap="40" colGap="45" lineItemCount="8" defaultItem="ui://ti9jag5tko5v135650l" autoClearItems="true">
       <relation target="n24_ko5v" sidePair="left-left,top-top"/>
