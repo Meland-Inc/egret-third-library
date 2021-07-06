@@ -972,6 +972,8 @@
     <component id="72tx135651q" name="comQuickCodingEffect.xml" path="/codingEffect/com/" exported="true"/>
     <component id="72tx135651r" name="comCodingStatus.xml" path="/codingEffect/com/" exported="true"/>
     <component id="mqvv135651q" name="btnMobileDotInput.xml" path="/codeVew/btn/"/>
+    <image id="c3ib135651u" name="multiple.png" path="/choiceQuestion/img/"/>
+    <image id="c3ib135651v" name="single.png" path="/choiceQuestion/img/"/>
     <image id="vafx135651t" name="img_att_dk.png" path="/attribute/img/" scale="9grid" scale9grid="7,7,14,14"/>
     <image id="vafx135651u" name="btn_right_up.png" path="/attribute/img/"/>
     <image id="vafx135651v" name="btn_right_down.png" path="/attribute/img/"/>
@@ -983,5 +985,5 @@
     <component id="vafx1356525" name="ComboBox2.xml" path="/attribute/com/combox/"/>
     <image id="c8zy1356527" name="img_att_dk_filled.png" path="/attribute/img/" scale="9grid" scale9grid="6,7,12,14"/>
   </resources>
-  <publish name="ide" path="..\..\egret-planet\resource\assets\fairyGui" packageCount="2"/>
+  <publish name="ide"/>
 </packageDescription>

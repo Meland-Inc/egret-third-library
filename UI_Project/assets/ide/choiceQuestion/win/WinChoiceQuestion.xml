@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" opaque="false" designImage="ui://ti9jag5tmbqdwcyio0" designImageOffsetX="627" designImageOffsetY="270" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlStatus" pages="0,answer,1,review,2,score" selected="0"/>
+  <controller name="ctrlQuestionType" pages="0,single,1,multiple" selected="0"/>
   <displayList>
     <component id="n47_ko5v" name="comBG" src="ko5v135650r" fileName="choiceQuestion/win/ComBG.xml" xy="364,108" group="n38_x8ci"/>
-    <text id="n10_mbqd" name="tfProgress" xy="896,135" size="128,54" group="n38_x8ci" fontSize="40" color="#716f79" align="center" vAlign="middle" vars="true" autoSize="none" text="{cur=1}/{total=3}"/>
+    <loader id="n57_c3ib" name="ladQuestionType" xy="958,137" size="136,55" group="n38_x8ci" url="ui://ti9jag5tc3ib135651v">
+      <gearIcon controller="ctrlQuestionType" pages="0,1" values="ui://ti9jag5tc3ib135651v|ui://ti9jag5tc3ib135651u"/>
+    </loader>
+    <text id="n10_mbqd" name="tfProgress" xy="826,135" size="128,54" group="n38_x8ci" fontSize="40" color="#716f79" align="center" vAlign="middle" vars="true" autoSize="none" text="{cur=1}/{total=3}"/>
     <component id="n8_mbqd" name="btnClose" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1459,126" size="90,90" group="n38_x8ci">
       <gearDisplay controller="ctrlStatus" pages="1"/>
       <Button icon="ui://ti9jag5tko5v135650d"/>
@@ -19,16 +23,16 @@
       <Button title="选项4"/>
     </component>
     <group id="n16_mbqd" name="grpOption" xy="472,700" size="975,139" group="n38_x8ci"/>
-    <component id="n19_mbqd" name="btnTurnPre" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="836,144" size="42,42" group="n38_x8ci">
+    <component id="n46_ko5v" name="btnSound" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="410,136" size="90,90" group="n38_x8ci">
+      <Button icon="ui://ti9jag5tko5v135650k"/>
+    </component>
+    <component id="n19_mbqd" name="btnTurnPre" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="766,144" size="42,42" group="n38_x8ci">
       <gearDisplay controller="ctrlStatus" pages="1"/>
       <Button icon="ui://ti9jag5tko5v1356509"/>
     </component>
-    <component id="n20_mbqd" name="btnTurnNext" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1045,144" size="42,42" group="n38_x8ci">
+    <component id="n20_mbqd" name="btnTurnNext" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="1111,144" size="42,42" group="n38_x8ci">
       <gearDisplay controller="ctrlStatus" pages="1"/>
       <Button icon="ui://ti9jag5tko5v135650b"/>
-    </component>
-    <component id="n46_ko5v" name="btnSound" src="jg6rcyiau" fileName="btn/btnFixClickArea.xml" pkg="te1gxawo" xy="410,136" size="90,90" group="n38_x8ci">
-      <Button icon="ui://ti9jag5tko5v135650k"/>
     </component>
     <group id="n38_x8ci" name="grpBg" xy="364,108" size="1191,776" group="n39_eiqy" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
@@ -39,8 +43,14 @@
     <component id="n50_h0s0" name="btnPre" src="h0s0135650x" fileName="choiceQuestion/btn/btnPre.xml" xy="597,911" group="n53_h0s0">
       <Button title="上一题"/>
     </component>
-    <component id="n51_h0s0" name="btnOver" src="h0s0135650w" fileName="choiceQuestion/btn/btnNext.xml" xy="1102,911" group="n53_h0s0">
+    <component id="n58_c3ib" name="btnOver" src="h0s0135650w" fileName="choiceQuestion/btn/btnNext.xml" xy="1102,911" group="n53_h0s0">
       <Button title="完成"/>
+    </component>
+    <component id="n51_h0s0" name="btnSkip" src="h0s0135650w" fileName="choiceQuestion/btn/btnNext.xml" xy="1102,911" group="n53_h0s0">
+      <Button title="跳过"/>
+    </component>
+    <component id="n59_c3ib" name="btnSubmit" src="h0s0135650w" fileName="choiceQuestion/btn/btnNext.xml" xy="1102,911" group="n53_h0s0">
+      <Button title="提交"/>
     </component>
     <group id="n53_h0s0" name="n53" xy="597,911" size="725,60" group="n39_eiqy" advanced="true">
       <gearDisplay controller="ctrlStatus" pages="0"/>
