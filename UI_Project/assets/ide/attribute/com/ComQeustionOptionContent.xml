@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="394,323" opaque="false" designImage="ui://ti9jag5tc8zy1356528" designImageOffsetX="-1524" designImageOffsetY="-569" designImageAlpha="0" designImageLayer="1">
+<component size="394,282" opaque="false" designImage="ui://ti9jag5tc8zy1356528" designImageOffsetX="-1524" designImageOffsetY="-569" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlScoreType" pages="0,question,1,option" selected="0">
     <remark page="0" value="按整个题目"/>
     <remark page="1" value="按选项"/>
@@ -10,6 +10,7 @@
     <action type="change_page" fromPage="" toPage="" objectId="n3_vafx" controller="ctrlScoreType" targetPage="~1"/>
   </controller>
   <controller name="ctrlShowHideScoreType" pages="0,hide,1,show" selected="0"/>
+  <controller name="ctrlScoreTypeSwitch" exported="true" pages="0,open,1,close" selected="1"/>
   <displayList>
     <component id="n0_vafx" name="labOption1" src="eny0wcyimf" fileName="attribute/widgets/comOptionItem.xml" xy="0,46" group="n6_vafx">
       <Label title="选项1"/>
@@ -24,7 +25,8 @@
       <Label title="选项4"/>
     </component>
     <group id="n6_vafx" name="n6" xy="0,46" size="394,277" visible="false" advanced="true"/>
-    <list id="n16_c8zy" name="lstOption" xy="1,41" size="393,277" overflow="scroll" lineGap="7" defaultItem="ui://ti9jag5teny0wcyimf">
+    <list id="n16_c8zy" name="lstOption" xy="1,0" size="393,277" overflow="scroll" lineGap="7" defaultItem="ui://ti9jag5teny0wcyimf">
+      <gearXY controller="ctrlScoreTypeSwitch" pages="1" values="1,0" default="1,41"/>
       <item/>
       <item/>
       <item/>
@@ -46,7 +48,9 @@
     <group id="n14_fz20" name="grpQuestionScore" xy="103,1" size="97,29" group="n15_fz20" advanced="true">
       <gearDisplay controller="ctrlScoreType" pages="0"/>
     </group>
-    <group id="n15_fz20" name="grpScoreType" xy="1,1" size="199,56" advanced="true"/>
+    <group id="n15_fz20" name="grpScoreType" xy="1,1" size="199,56" advanced="true">
+      <gearDisplay controller="ctrlScoreTypeSwitch" pages="0"/>
+    </group>
   </displayList>
-  <relation target="n16_c8zy" sidePair=""/>
+  <relation target="n16_c8zy" sidePair="bottomext-bottom"/>
 </component>
