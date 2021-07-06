@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="394,64" extention="Label" designImage="ui://ti9jag5tvafx135651s" designImageOffsetX="-1524" designImageOffsetY="-646" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlScoreType" exported="true" pages="0,question,1,option" selected="0"/>
+  <controller name="ctrlScoreType" exported="true" pages="0,question,1,option" selected="1"/>
   <displayList>
     <text id="n0_eny0" name="title" xy="2,0" size="48,25" fontSize="17" vAlign="middle" vars="true" text="选项{index=1}"/>
     <image id="n2_jo99" name="n2" src="vafx135651t" fileName="attribute/img/img_att_dk.png" xy="2,32" size="164,31" group="n4_vafx"/>
-    <text id="n1_eny0" name="inpContent" xy="7,35" size="154,26" group="n4_vafx" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" text="" input="true"/>
+    <text id="n1_eny0" name="inpContent" xy="7,35" size="154,26" group="n4_vafx" fontSize="18" color="#333333" vAlign="middle" autoSize="none" singleLine="true" text="" input="true" maxLength="200"/>
     <group id="n4_vafx" name="grpDesc" xy="2,32" size="164,31"/>
     <component id="n12_vafx" name="tBtnIsRight" src="vafx135651w" fileName="attribute/btn/btnOptionRight.xml" xy="181,32"/>
     <text id="n13_vafx" name="tfScore" xy="288,35" size="33,22" group="n16_vafx" fontSize="15" vAlign="middle" vars="true" text="积分"/>
     <image id="n11_vafx" name="imgScoreBg" src="vafx135651t" fileName="attribute/img/img_att_dk.png" xy="326,32" size="65,29" group="n16_vafx"/>
-    <text id="n14_vafx" name="inpScore" xy="329,34" size="59,26" group="n16_vafx" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" text="" input="true" maxLength="9"/>
+    <text id="n14_vafx" name="inpScore" xy="329,34" size="59,26" group="n16_vafx" fontSize="18" color="#333333" align="center" vAlign="middle" autoSize="none" singleLine="true" text="" input="true" maxLength="10" restrict="0-9"/>
     <group id="n16_vafx" name="grpScore" xy="288,32" size="103,29" advanced="true">
       <gearDisplay controller="ctrlScoreType" pages="1"/>
     </group>
