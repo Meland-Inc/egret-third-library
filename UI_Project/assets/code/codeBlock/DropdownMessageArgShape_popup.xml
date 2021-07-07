@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="80,188" restrictSize="80,0,0,0">
   <controller name="ctrlDirection" exported="true" pages="0,down,1,up" selected="0"/>
-  <controller name="ctrlIsJR" pages="0,false,1,true" selected="1"/>
+  <controller name="ctrlIsJR" pages="0,false,1,true" selected="0"/>
   <displayList>
     <image id="n0_ilo1" name="n0" src="s45w1f" fileName="img/img_code_cm_8.png" xy="0,0" size="80,188" group="n6_g1w6">
       <gearDisplay controller="ctrlDirection" pages="0"/>
@@ -26,7 +26,7 @@
     <group id="n7_g1w6" name="n7" xy="-10,0" size="100,195" advanced="true">
       <gearDisplay controller="ctrlIsJR" pages="1"/>
     </group>
-    <list id="n1_ilo1" name="list" xy="4,13" size="72,171" layout="flow_hz" overflow="scroll" colGap="10" lineItemCount="1" defaultItem="ui://t573fj5bi6xe3i" align="center">
+    <list id="n1_ilo1" name="list" xy="4,13" size="72,171" layout="flow_hz" overflow="scroll" scrollBarRes="ui://t573fj5bysmv7n," colGap="10" lineItemCount="1" defaultItem="ui://t573fj5bi6xe3i" align="center">
       <gearXY controller="ctrlDirection" pages="0,1" values="4,13|4,5"/>
       <relation target="" sidePair="width-width"/>
       <item title="1"/>
