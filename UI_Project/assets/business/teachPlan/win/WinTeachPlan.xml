@@ -2,10 +2,10 @@
 <component size="1920,1080" designImageAlpha="97">
   <controller name="ctrlBarType" pages="0,show,1,hide" selected="0"/>
   <displayList>
-    <graph id="n0_qvmf" name="imgBG" xy="0,10" size="1920,1070" hideByEditor="true" type="rect" fillColor="#ff000000">
+    <graph id="n0_qvmf" name="imgBG" xy="0,10" size="1920,1070" type="rect" fillColor="#ff000000">
       <relation target="" sidePair="width-width,height-height"/>
     </graph>
-    <graph id="n15_n762" name="ladTemporary" xy="-58,-50" size="2019,1177" locked="true" type="rect" fillColor="#ff000000">
+    <graph id="n15_n762" name="ladTemporary" xy="-58,-50" size="2019,1177" type="rect" fillColor="#ff000000">
       <gearDisplay controller="ctrlBarType" pages="1"/>
       <relation target="" sidePair="width-width,height-height"/>
     </graph>
@@ -35,6 +35,10 @@
       <gearDisplay controller="ctrlBarType" pages="0,2"/>
       <relation target="" sidePair="top-top,right-right"/>
       <Button icon="ui://te1gxawoc1h7cyihz"/>
+    </component>
+    <component id="n16_pcug" name="comVideoSelect" src="pcugcyiky" fileName="com/ComVideoSelectDPI.xml" pkg="te1gxawo" xy="1471,7">
+      <gearDisplay controller="ctrlBarType" pages="0"/>
+      <relation target="" sidePair="right-right,top-top"/>
     </component>
     <graph id="n8_fp4h" name="sign" xy="0,57" size="1920,1023" lineSize="0" lineColor="#00000000" fillColor="#ff000000" corner="00">
       <relation target="" sidePair="width-width,bottomext-bottom"/>
