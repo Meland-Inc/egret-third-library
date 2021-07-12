@@ -20,9 +20,7 @@
     <image id="n1_jo99" name="questionBg" src="jo99l" fileName="teachPlan/img/bg_spck_02.png" xy="66,35" size="1254,640" aspect="true"/>
     <graph id="n15_ulbx" name="gphWhiteBg" xy="0,0" size="100,100" touchable="false" type="rect" lineSize="0"/>
     <text id="n3_jo99" name="tfTitle" xy="70,35" size="1254,640" fontSize="60" align="center" vAlign="middle" autoSize="shrink" text="11"/>
-    <graph id="n12_pw2s" name="gphTitle" xy="70,35" size="1254,640" type="rect" lineSize="0" fillColor="#00ffffff">
-      <relation target="n3_jo99" sidePair="width-width,height-height,left-left,top-top"/>
-    </graph>
+    <graph id="n12_pw2s" name="gphTitle" xy="-285,-117" size="1920,1080" type="rect" lineSize="0" fillColor="#00ffffff"/>
     <component id="n14_ulbx" name="comLadContainer" src="ulbxq" fileName="teachPlan/com/ComLadContainer.xml" xy="67,36" size="1252,637"/>
   </displayList>
   <relation target="n0_jo99" sidePair="bottomext-bottom"/>

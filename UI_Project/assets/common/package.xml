@@ -683,6 +683,10 @@
     <image id="lj75cyiku" name="img_cm_textbubble_yell3.png" path="/img/textBubble/" duplicatePadding="true"/>
     <component id="lj75cyikv" name="ComTextBubbleCloud.xml" path="/com/" exported="true"/>
     <image id="lj75cyikx" name="img_cm_textBubble_cloud5.png" path="/img/textBubble/" scale="tile" duplicatePadding="true"/>
+    <component id="pcugcyiky" name="ComVideoSelectDPI.xml" path="/com/" exported="true"/>
+    <image id="pcugcyikz" name="img_video_arrow.png" path="/img/" exported="true"/>
+    <image id="pcugcyil0" name="img_video_frame.png" path="/img/" exported="true" scale="9grid" scale9grid="13,13,16,14"/>
+    <component id="pcugcyil2" name="btnVideoDPIText.xml" path="/btn/" exported="true"/>
   </resources>
   <publish name="common">
     <atlas name="默认" index="0"/>

@@ -8,7 +8,7 @@
       <gearDisplay controller="ctrlState" pages="0,1"/>
       <relation target="" sidePair="width-width,height-height"/>
     </graph>
-    <text id="n14_i4ys" name="tfLoading" xy="851,559" size="221,40" group="n15_jo99" fontSize="36" color="#333333" text="加载中。。。">
+    <text id="n14_i4ys" name="tfLoading" xy="851,559" size="220,49" group="n15_jo99" fontSize="36" color="#333333" text="加载中。。。">
       <gearDisplay controller="ctrlState" pages="0"/>
       <relation target="n0_qvmf" sidePair="center-center,middle-middle"/>
     </text>
@@ -22,7 +22,7 @@
       <relation target="" sidePair="right-right,top-top"/>
       <Button icon="ui://te1gxawooiqdcyih2"/>
     </component>
-    <component id="n5_qvmf" name="btnToNormal" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1795,10" size="42,42" group="n15_jo99">
+    <component id="n5_qvmf" name="btnToNormal" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1795,7" size="42,42" group="n15_jo99">
       <relation target="" sidePair="right-right,top-top"/>
       <Button icon="ui://te1gxawoc1h7cyii1"/>
     </component>
@@ -34,6 +34,9 @@
       <relation target="" sidePair="width-width,bottomext-bottom"/>
       <relation target="n11_id84" sidePair="top-bottom"/>
     </graph>
+    <component id="n20_pcug" name="comVideoSelect" src="pcugcyiky" fileName="com/ComVideoSelectDPI.xml" pkg="te1gxawo" xy="1472,7" group="n15_jo99">
+      <relation target="" sidePair="right-right,top-top"/>
+    </component>
     <group id="n15_jo99" name="groupMain" xy="-2,0" size="1924,1081" advanced="true">
       <gearDisplay controller="ctrlType" pages="0"/>
     </group>
