@@ -112,9 +112,9 @@ function initLayTable() {
             }
             , cols: [[
                 { checkbox: true, fixed: true }
-                , { field: 'playerName', title: '用户名' }
-                , { field: 'realName', title: '真实姓名' }
-                , { field: 'playerId', title: 'playerId' }
+                , { field: 'playerName', title: '角色名' }
+                , { field: 'realName', title: '平台名' }
+                , { field: 'playerId', title: '角色id' }
                 , { field: 'actId', title: 'actId' }
                 , { field: 'showTime', title: '日期' }
                 , { field: 'describe', title: '问题描述' }
@@ -149,14 +149,14 @@ function refreshFiles() {
         layui.table.reload('layuiTable', {
             url: summaryInfoUrl
             , where: { //请求参数（注意：这里面的参数可任意定义，并非下面固定的格式）
-                match: showNameSearch.value || '',
+                match: showNameSearch.value.trim() || '',
                 isAuto: +isAutoBtn.value,
                 startTime: startDate && startDate.getTime() || 0,
                 endTime: endDate && endDate.getTime() || 0,
-                playerName: playerNameInput.value || '',
-                realName: realNameInput.value || '',
-                actId: playerActIdInput.value || '',
-                playerId: playerIdInput.value || '',
+                playerName: playerNameInput.value.trim() || '',
+                realName: realNameInput.value.trim() || '',
+                actId: playerActIdInput.value.trim() || '',
+                playerId: playerIdInput.value.trim() || '',
             }
         });
     })

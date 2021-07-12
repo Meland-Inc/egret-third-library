@@ -91,7 +91,7 @@ function refreshFiles() {
 
 
     const url = new URL(httpUrl);
-    idInput.value && url.searchParams.append('id', idInput.value);
+    idInput.value && url.searchParams.append('id', idInput.value.trim());
     startDate && url.searchParams.append('time_start', startDate);
     endDate && url.searchParams.append('time_end', endDate);
     $.get(url.toString()

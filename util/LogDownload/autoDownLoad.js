@@ -50,10 +50,10 @@ function getSummaryInfo(summaryUrl, fileName) {
                 downloadBySummaryInfo(summaryInfo);
                 console.error(summaryInfo)
             } else {
-                window.refreshLog(`获取summary数据失败, 日志名${url}`);
+                window.refreshLog(`获取summary数据失败, 日志名${fileName}`);
             }
         }).error(() => {
-            window.refreshLog(`获取summary数据失败, 日志名${url}`);
+            window.refreshLog(`获取summary数据失败, 日志名${fileName}`);
         })
 }
 
