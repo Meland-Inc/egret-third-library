@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="410,522">
+<component size="395,580" designImage="ui://ti9jag5tc8zy1356528" designImageOffsetX="-1525" designImageOffsetY="-322" designImageAlpha="0">
   <displayList>
     <text id="n0_eny0" name="n0" xy="0,9" size="85,26" fontSize="18" color="#333333" vAlign="middle" text="插入问题:"/>
     <text id="n1_eny0" name="n1" xy="0,96" size="85,26" fontSize="18" color="#333333" vAlign="middle" text="插入时间:"/>
@@ -15,17 +15,6 @@
     <component id="n9_eny0" name="btnUpload" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="330,207" size="65,36">
       <Button title="浏览" titleColor="#828282" icon="ui://ti9jag5tjo99wcyin0"/>
     </component>
-    <list id="n11_eny0" name="lstOption" xy="0,252" size="410,204" defaultItem="ui://ti9jag5teny0wcyimf">
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-    </list>
-    <text id="n12_eny0" name="n12" xy="0,474" size="74,26" fontSize="18" color="#333333" vAlign="middle" text="正确选项"/>
-    <component id="n13_eny0" name="cbOption" src="grwpb3" fileName="attribute/widgets/ComboBox1.xml" xy="86,466" size="121,37">
-      <ComboBox visibleItemCount="4" direction="down">
-        <item title="点击"/>
-      </ComboBox>
-    </component>
+    <component id="n24_fz20" name="comOptionContent" src="vafx135651x" fileName="attribute/com/ComQeustionOptionContent.xml" xy="0,257" size="394,282" controller="ctrlScoreTypeSwitch,1"/>
   </displayList>
 </component>

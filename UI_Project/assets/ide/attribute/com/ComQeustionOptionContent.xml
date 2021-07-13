@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="394,323" opaque="false" designImage="ui://ti9jag5tc8zy1356528" designImageOffsetX="-1524" designImageOffsetY="-569" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlScoreType" pages="0,question,1,option" selected="0">
+    <remark page="0" value="按整个题目"/>
+    <remark page="1" value="按选项"/>
+    <action type="change_page" fromPage="" toPage="" controller="ctrlShowHideScoreType" targetPage="0"/>
+    <action type="change_page" fromPage="" toPage="" objectId="n0_vafx" controller="ctrlScoreType" targetPage="~1"/>
+    <action type="change_page" fromPage="" toPage="" objectId="n1_vafx" controller="ctrlScoreType" targetPage="~1"/>
+    <action type="change_page" fromPage="" toPage="" objectId="n2_vafx" controller="ctrlScoreType" targetPage="~1"/>
+    <action type="change_page" fromPage="" toPage="" objectId="n3_vafx" controller="ctrlScoreType" targetPage="~1"/>
+  </controller>
+  <controller name="ctrlShowHideScoreType" pages="0,hide,1,show" selected="0"/>
+  <controller name="ctrlScoreTypeSwitch" exported="true" pages="0,open,1,close" selected="0"/>
+  <displayList>
+    <component id="n0_vafx" name="labOption1" src="eny0wcyimf" fileName="attribute/widgets/comOptionItem.xml" xy="0,46" group="n6_vafx">
+      <Label title="选项1"/>
+    </component>
+    <component id="n1_vafx" name="labOption2" src="eny0wcyimf" fileName="attribute/widgets/comOptionItem.xml" xy="0,117" group="n6_vafx">
+      <Label title="选项2"/>
+    </component>
+    <component id="n2_vafx" name="labOption3" src="eny0wcyimf" fileName="attribute/widgets/comOptionItem.xml" xy="0,188" group="n6_vafx">
+      <Label title="选项3"/>
+    </component>
+    <component id="n3_vafx" name="labOption4" src="eny0wcyimf" fileName="attribute/widgets/comOptionItem.xml" xy="0,259" group="n6_vafx">
+      <Label title="选项4"/>
+    </component>
+    <group id="n6_vafx" name="n6" xy="0,46" size="394,277" visible="false" advanced="true"/>
+    <list id="n16_c8zy" name="lstOption" xy="1,41" size="393,277" overflow="scroll" lineGap="7" defaultItem="ui://ti9jag5teny0wcyimf">
+      <gearXY controller="ctrlScoreTypeSwitch" pages="1" values="1,0" default="1,41"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n7_vafx" name="imgScoreBg" src="oliri6s" fileName="old/btn/tbtnScale.xml" pkg="te1gxawo" xy="1,1" size="104,29" group="n15_fz20">
+      <gearText controller="ctrlScoreType" pages="1" values="选项积分" default="题目积分"/>
+      <Button title="题目积分" titleColor="#000000" titleFontSize="15" icon="ui://ti9jag5tc8zy1356527" controller="ctrlShowHideScoreType" page="1"/>
+    </component>
+    <image id="n8_vafx" name="img_arrow" src="vafx1356522" fileName="attribute/img/img_arrow.png" xy="84,11" pivot="0.5,0.5" group="n15_fz20">
+      <gearLook controller="ctrlShowHideScoreType" pages="1" values="1,-90,0,0" default="1,0,0,0"/>
+    </image>
+    <component id="n13_vafx" name="tBtnScoreType" src="oliri6s" fileName="old/btn/tbtnScale.xml" pkg="te1gxawo" xy="1,28" size="104,29" group="n15_fz20">
+      <gearDisplay controller="ctrlShowHideScoreType" pages="1"/>
+      <Button checked="true" title="题目积分" titleColor="#000000" titleFontSize="15" icon="ui://ti9jag5tc8zy1356527" selectedTitle="选项积分" controller="ctrlScoreType" page="0"/>
+    </component>
+    <image id="n10_vafx" name="imgQuestionScoreBg" src="c8zy1356527" fileName="attribute/img/img_att_dk_filled.png" xy="103,1" size="97,29" group="n14_fz20"/>
+    <text id="n11_vafx" name="inpQuestionScore" xy="110,3" size="84,26" group="n14_fz20" fontSize="15" align="center" vAlign="middle" autoSize="none" singleLine="true" text="" input="true" maxLength="10" restrict="0-9"/>
+    <group id="n14_fz20" name="grpQuestionScore" xy="103,1" size="97,29" group="n15_fz20" advanced="true">
+      <gearDisplay controller="ctrlScoreType" pages="0"/>
+    </group>
+    <group id="n15_fz20" name="grpScoreType" xy="1,1" size="199,56" advanced="true">
+      <gearDisplay controller="ctrlScoreTypeSwitch" pages="0"/>
+    </group>
+  </displayList>
+  <relation target="n16_c8zy" sidePair="bottomext-bottom"/>
+</component>

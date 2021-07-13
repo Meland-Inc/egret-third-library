@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="410,450" designImage="ui://ti9jag5ti2821356506" designImageOffsetX="-1524" designImageOffsetY="-449" designImageAlpha="0" designImageLayer="1">
+<component size="395,499" designImage="ui://ti9jag5tvafx135651s" designImageOffsetX="-1523" designImageOffsetY="-402" designImageAlpha="0" designImageLayer="1">
   <controller name="ctrlIsImg" pages="1,no,0,yes" selected="0"/>
   <displayList>
     <image id="n15_jo99" name="tfShowTimeBG" src="i282135650a" fileName="attribute/img/textbox.png" xy="0,56" size="394,62"/>
@@ -14,21 +14,6 @@
       <gearDisplay controller="ctrlIsImg" pages="0"/>
       <Button title="浏览" titleColor="#828282" icon="ui://ti9jag5tjo99wcyin0"/>
     </component>
-    <list id="n11_eny0" name="lstOption" xy="0,172" size="410,204" defaultItem="ui://ti9jag5teny0wcyimf">
-      <item/>
-      <item/>
-      <item/>
-      <item/>
-    </list>
-    <text id="n12_eny0" name="n12" xy="0,394" size="74,26" fontSize="18" color="#333333" vAlign="middle" text="正确选项"/>
-    <component id="n13_eny0" name="cbOption" src="grwpb3" fileName="attribute/widgets/ComboBox1.xml" xy="86,386" size="121,37">
-      <ComboBox visibleItemCount="4" direction="down">
-        <item title="点击"/>
-      </ComboBox>
-    </component>
-    <text id="n16_qx84" name="tfScore" xy="229,393" size="74,26" fontSize="18" color="#333333" vAlign="middle" text="积分分值"/>
-    <component id="n17_qx84" name="comInpScore" src="dv1icyiim" fileName="com/ComInput.xml" pkg="te1gxawo" xy="312,383" size="82,40">
-      <Label titleFontSize="19"/>
-    </component>
+    <component id="n25_fz20" name="comOptionContent" src="vafx135651x" fileName="attribute/com/ComQeustionOptionContent.xml" xy="0,176"/>
   </displayList>
 </component>

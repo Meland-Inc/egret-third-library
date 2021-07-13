@@ -227,7 +227,7 @@
     <image id="hckx6q" name="img_att_szl_3.png" path="/attribute/img/"/>
     <image id="hckx6r" name="img_att_szl_4.png" path="/attribute/img/"/>
     <image id="hckx6s" name="img_att_wb_1.png" path="/attribute/img/" scale="9grid" scale9grid="5,5,50,30"/>
-    <image id="hckx6t" name="img_att_wb_1_1.png" path="/attribute/img/"/>
+    <image id="hckx6t" name="img_att_wb_1_1.png" path="/attribute/img/" scale="9grid" scale9grid="15,10,30,20"/>
     <image id="hckx6u" name="img_att_wp_1.png" path="/attribute/img/" scale="9grid" scale9grid="6,6,48,48"/>
     <image id="hckx6v" name="img_att_wp_2.png" path="/attribute/img/" scale="9grid" scale9grid="15,7,30,14"/>
     <image id="hckx6w" name="img_att_xz_1.png" path="/attribute/img/" scale="9grid" scale9grid="11,10,22,20"/>
@@ -865,6 +865,7 @@
     <image id="fke6wcyipr" name="btn_input_bg.png" path="/codeVew/img/" scale="9grid" scale9grid="22,17,27,4"/>
     <image id="fke6wcyipv" name="img_input_del.png" path="/codeVew/img/"/>
     <image id="fke6wcyipw" name="img_input_confirmBG.png" path="/codeVew/img/"/>
+    <image id="fke6wcyipx" name="img_input_confirm.png" path="/codeVew/img/"/>
     <component id="fke6wcyipy" name="btnMobileInputConfirm.xml" path="/codeVew/btn/"/>
     <image id="a1wt13564z2" name="test.png" path="/lessonCenter/img/" scale="tile" scale9grid="10,10,20,20"/>
     <image id="a1wt13564z3" name="btn_ide_gqbj_1.png" path="/lessonCenter/lessonLevel/img/" scale="9grid" scale9grid="20,20,7,9"/>
@@ -971,7 +972,18 @@
     <component id="72tx135651q" name="comQuickCodingEffect.xml" path="/codingEffect/com/" exported="true"/>
     <component id="72tx135651r" name="comCodingStatus.xml" path="/codingEffect/com/" exported="true"/>
     <component id="mqvv135651q" name="btnMobileDotInput.xml" path="/codeVew/btn/"/>
-    <component id="fz20135651s" name="btnMobileDotInput.xml" path="/codeVew/com/"/>
+    <image id="c3ib135651u" name="multiple.png" path="/choiceQuestion/img/"/>
+    <image id="c3ib135651v" name="single.png" path="/choiceQuestion/img/"/>
+    <image id="vafx135651t" name="img_att_dk.png" path="/attribute/img/" scale="9grid" scale9grid="7,7,14,14"/>
+    <image id="vafx135651u" name="btn_right_up.png" path="/attribute/img/"/>
+    <image id="vafx135651v" name="btn_right_down.png" path="/attribute/img/"/>
+    <component id="vafx135651w" name="btnOptionRight.xml" path="/attribute/btn/"/>
+    <component id="vafx135651x" name="ComQeustionOptionContent.xml" path="/attribute/com/"/>
+    <image id="vafx1356522" name="img_arrow.png" path="/attribute/img/"/>
+    <component id="vafx1356523" name="ComboBox2_item.xml" path="/attribute/com/combox/"/>
+    <component id="vafx1356524" name="ComboBox2_popup.xml" path="/attribute/com/combox/"/>
+    <component id="vafx1356525" name="ComboBox2.xml" path="/attribute/com/combox/"/>
+    <image id="c8zy1356527" name="img_att_dk_filled.png" path="/attribute/img/" scale="9grid" scale9grid="6,7,12,14"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>
