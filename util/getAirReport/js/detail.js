@@ -24,6 +24,8 @@ findBtn.onclick = refreshFiles;
 
 function init() {
     initLayDate();
+    const url = new URL(location.href);
+    initData(url.searchParams.get('start'), url.searchParams.get('id'), url.searchParams.get('end'));
 }
 
 function initLayDate() {
@@ -42,11 +44,19 @@ function initLayTable(tData) {
             elem: '#layuiTable'
             , data: tData
             , cols: [[
-                { checkbox: true, fixed: true }
-                , { field: 'Sid', title: 'Sid', width: '5%' }
+                , { field: 'Name', title: '课程名称', width: 200 }
                 , { title: '报告', toolbar: '#barDemo', width: 70 }
-                , { field: 'Report', title: 'Report' }
-                , { field: 'Time', title: 'Time', width: '10%' }
+                , {
+                    field: 'Report', title: 'Report', templet: function (d) {
+                        if (!d.detail) return '';
+                        let result = '';
+                        for (const iterator of d.detail) {
+                            result += `<span onclick=showImg(${JSON.stringify(iterator.img)})>` + iterator.desc + '</span>' + '&nbsp'.repeat(10);
+                        }
+                        return result;
+                    }
+                }
+                , { field: 'Time', title: '时间', width: '11%' }
             ]]
             , id: 'layuiTable'
             , limit: tData.length
@@ -81,19 +91,28 @@ function refreshFiles() {
         for (let index = 3; index < 6; index++) {
             endDate += timeInfoArr[index].trim();
         }
-        // startDate = new Date();
-        // startDate.setFullYear(+timeInfoArr[0], +timeInfoArr[1] - 1, +timeInfoArr[2] - 1);
-        // startDate.setHours(23, 59, 59);
-        // endDate = new Date();
-        // endDate.setFullYear(+timeInfoArr[3], +timeInfoArr[4] - 1, +timeInfoArr[5] + 1);
-        // endDate.setHours(0, 0, 0);
     }
-
 
     const url = new URL(httpUrl);
     idInput.value && url.searchParams.append('id', idInput.value.trim());
     startDate && url.searchParams.append('time_start', startDate);
     endDate && url.searchParams.append('time_end', endDate);
+    refreshDataByUrl(url);
+}
+
+function initData(tStartTime, tId, tEndTime) {
+    const url = new URL(httpUrl);
+    tId && url.searchParams.append('id', tId);
+
+    const startTime = tStartTime || tEndTime;
+    const endTime = tEndTime || tStartTime;
+
+    startTime && url.searchParams.append('time_start', startTime);
+    endTime && url.searchParams.append('time_end', endTime);
+    refreshDataByUrl(url);
+}
+
+function refreshDataByUrl(url) {
     $.get(url.toString()
         , (tContent) => {
             let data;
@@ -103,12 +122,78 @@ function refreshFiles() {
                 data = [];
             }
             for (const iterator of data) {
-                const a = document.createElement("a");
-                a.href = iterator.AirReport;
-                iterator.AirReport = a;
+                const year = iterator.Time.substr(0, 4) + '年/';
+                const month = iterator.Time.substr(4, 2) + '月/';
+                const day = iterator.Time.substr(6, 2) + '日/';
+                const hour = iterator.Time.substr(8, 2) + ':';
+                const minute = iterator.Time.substr(10);
+                iterator.Time = year + month + day + hour + minute;
             }
-            initLayTable(data);
+            initReport(data);
         }).error(() => {
             console.error('获取数据失败');
         })
+}
+
+function initReport(tData) {
+    const promiseArr = [];
+    for (const iterator of tData) {
+        promiseArr.push(setReportPromise(iterator));
+    }
+
+    Promise.all(promiseArr).finally(() => {
+        initLayTable(tData);
+    })
+}
+
+function setReportPromise(iterator) {
+    return new Promise((resolve, reject) => {
+        const url = iterator.AirReport;
+        const urlHead = url.match(/(.*)log\.html/)[1];
+
+        $.get(url
+            , (tContent) => {
+                const data = JSON.parse(tContent.match(/data = (.*);/)[1]);
+                const detail = [];
+                if (data && data.steps) {
+
+                    let index = 1;
+                    for (const step of data.steps) {
+                        if (step.traceback) {
+                            let imgArr = [];
+                            for (const arg of step.code.args) {
+                                if (arg.image) {
+                                    imgArr.push(urlHead + arg.image);
+                                }
+                            }
+                            step.screen && imgArr.push(urlHead + step.screen.src);
+                            detail.push({ desc: `Step ${index}:${step.desc || step.assert}`, img: imgArr });
+                        }
+                        index++;
+                    }
+                }
+                iterator.detail = detail;
+                resolve();
+            }).error(() => {
+                resolve();
+            })
+    })
+}
+
+
+function showImg(tData) {
+    const imgArr = getImgArr(tData);
+    layer.tab({
+        area: ['100%', '100%'],
+        tab: imgArr,
+    });
+}
+
+function getImgArr(tData) {
+    let result = [];
+    for (let index = 0; index < tData.length; index++) {
+        const element = tData[index];
+        result.push({ content: `<img src="${element}" >`, title: index });
+    }
+    return result;
 }
