@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1388,882" scroll="both">
-  <controller name="ctrlType" pages="0,normal,1,next,3,submit,4,skip" selected="0">
+<component size="1388,1000" scroll="both">
+  <controller name="ctrlType" pages="0,normal,1,next,3,submit,4,skip" selected="3">
     <action type="play_transition" fromPage="0" toPage="1" transition="show"/>
   </controller>
   <displayList>
-    <image id="n0_jo99" name="bg" src="jo99j" fileName="teachPlan/img/bg_spck_04.png" xy="0,0" size="1388,882" color="#dee4ea">
+    <image id="n0_jo99" name="bg" src="jo99j" fileName="teachPlan/img/bg_spck_04.png" xy="0,0" size="1388,1000" color="#dee4ea">
       <gearSize controller="ctrlType" pages="0" values="1388,882,1,1" default="1388,1000,1,1" tween="true" ease="Linear"/>
     </image>
+    <graph id="n12_pw2s" name="gphTitle" xy="67,36" size="1252,637" type="rect" lineSize="0" fillColor="#00ffffff"/>
     <list id="n5_jo99" name="lstOption" xy="169,703" size="1050,139" layout="flow_hz" lineGap="25" colGap="100" lineItemCount="2" defaultItem="ui://ti9jag5tmbqdwcyinr">
       <item/>
       <item/>
@@ -14,21 +15,20 @@
       <item/>
     </list>
     <image id="n1_jo99" name="questionBg" src="jo99l" fileName="teachPlan/img/bg_spck_02.png" xy="66,35" size="1254,640" aspect="true"/>
-    <graph id="n15_ulbx" name="gphWhiteBg" xy="0,0" size="100,100" touchable="false" type="rect" lineSize="0"/>
-    <text id="n3_jo99" name="tfTitle" xy="70,35" size="1254,640" fontSize="60" align="center" vAlign="middle" autoSize="shrink" text="11"/>
-    <graph id="n12_pw2s" name="gphTitle" xy="70,33" size="1253,642" type="rect" lineSize="0" fillColor="#00ffffff"/>
-    <component id="n14_ulbx" name="comLadContainer" src="ulbxq" fileName="teachPlan/com/ComLadContainer.xml" xy="67,36" size="1252,637"/>
-    <component id="n8_jo99" name="btnContinuePlay" src="jo99p" fileName="teachPlan/btn/btnContinuePlay.xml" xy="455,785">
+    <component id="n8_jo99" name="btnContinuePlay" src="jo99p" fileName="teachPlan/btn/btnContinuePlay.xml" xy="448,903">
       <gearDisplay controller="ctrlType" pages="1,4"/>
-      <gearXY controller="ctrlType" pages="0,1" values="455,785|585,785" default="455,785"/>
+      <gearXY controller="ctrlType" pages="0,1,3,4" values="585,903|585,903|455,903|448,903"/>
       <relation target="" sidePair="bottom-bottom"/>
     </component>
-    <component id="n18_y62i" name="btnSubmit" src="y62is" fileName="teachPlan/btn/btnSubmit.xml" xy="713,785">
+    <component id="n18_y62i" name="btnSubmit" src="y62is" fileName="teachPlan/btn/btnSubmit.xml" xy="713,903">
       <gearDisplay controller="ctrlType" pages="3,4"/>
-      <gearXY controller="ctrlType" pages="0,1,3" values="713,785|713,785|584,785" default="713,785"/>
+      <gearXY controller="ctrlType" pages="0,1,3,4" values="713,903|713,903|584,903|713,903"/>
       <relation target="" sidePair="bottom-bottom"/>
       <Button title="提交"/>
     </component>
+    <graph id="n15_ulbx" name="gphWhiteBg" xy="0,0" size="100,100" type="rect" lineSize="0"/>
+    <component id="n14_ulbx" name="comLadContainer" src="ulbxq" fileName="teachPlan/com/ComLadContainer.xml" xy="67,36" size="1252,637"/>
+    <text id="n3_jo99" name="tfTitle" xy="70,35" size="1254,640" fontSize="60" align="center" vAlign="middle" autoSize="shrink" text="11"/>
   </displayList>
   <relation target="n0_jo99" sidePair="bottomext-bottom"/>
   <transition name="show">
