@@ -28,7 +28,7 @@
     <image id="n8_eezl" name="imgEquipStatus" src="q0aswcyiml" fileName="img/img_bac_pzk_4.png" xy="6,8">
       <gearDisplay controller="ctrlStatus" pages="1"/>
     </image>
-    <text id="n9_eezl" name="num" xy="42,44" size="36,34" fontSize="24" color="#6b4a2f" align="center" vAlign="middle" leading="4" autoSize="none" strokeColor="#ffffff" strokeSize="3" text="23"/>
+    <text id="n9_eezl" name="num" xy="8,44" size="67,34" fontSize="24" color="#6b4a2f" align="right" vAlign="middle" leading="4" autoSize="none" strokeColor="#ffffff" strokeSize="3" text="10"/>
     <image id="n10_eezl" name="n10" src="q0aswcyimn" fileName="img/icon_zhuangbei_01.png" xy="1,22">
       <gearDisplay controller="ctrlStatus" pages="2"/>
     </image>
