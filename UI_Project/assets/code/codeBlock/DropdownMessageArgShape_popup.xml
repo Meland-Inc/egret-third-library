@@ -1,33 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="80,188" restrictSize="80,0,0,0">
-  <controller name="ctrlDirection" exported="true" pages="0,down,1,up" selected="0"/>
-  <controller name="ctrlIsJR" pages="0,false,1,true" selected="0"/>
+<component size="80,175" restrictSize="80,0,0,0">
+  <controller name="ctrlDirection" pages="0,down,1,up" selected="1"/>
   <displayList>
-    <image id="n0_ilo1" name="n0" src="s45w1f" fileName="img/img_code_cm_8.png" xy="0,0" size="80,188" group="n6_g1w6">
+    <image id="n10_pxff" name="n10" src="s45w1f" fileName="img/img_code_cm_8.png" xy="0,2" size="80,173">
       <gearDisplay controller="ctrlDirection" pages="0"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n3_h5bu" name="n3" src="g8bk53" fileName="img/img_code_cm_8_1.png" xy="0,0" pivot="0.5,0.5" size="80,188" group="n6_g1w6">
+    <image id="n11_pxff" name="n11" src="g8bk53" fileName="img/img_code_cm_8_1.png" xy="0,0" size="80,173">
       <gearDisplay controller="ctrlDirection" pages="1"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <group id="n6_g1w6" name="n6" xy="0,0" size="80,188" advanced="true">
-      <gearDisplay controller="ctrlIsJR" pages="0"/>
-    </group>
-    <image id="n4_g1w6" name="imgBg" src="vnsa13564yj" fileName="ideCommon/img/img_code_JR_01.png" pkg="ti9jag5t" xy="-10,15" size="100,181" group="n7_g1w6">
-      <gearXY controller="ctrlDirection" pages="0" values="-10,15" default="-10,0"/>
-      <relation target="" sidePair="width-width,height-height"/>
-    </image>
-    <image id="n5_g1w6" name="imgArrow" src="vnsa13564yk" fileName="ideCommon/img/img_code_JR_02.png" pkg="ti9jag5t" xy="27,0" size="26,17" group="n7_g1w6">
-      <gearXY controller="ctrlDirection" pages="0,1" values="27,0|53,188"/>
-      <gearLook controller="ctrlDirection" pages="1" values="1,180,0,0" default="1,0,0,0"/>
-      <relation target="" sidePair="center-center"/>
-    </image>
-    <group id="n7_g1w6" name="n7" xy="-10,0" size="100,195" advanced="true">
-      <gearDisplay controller="ctrlIsJR" pages="1"/>
-    </group>
-    <list id="n1_ilo1" name="list" xy="4,13" size="72,171" layout="flow_hz" overflow="scroll" scrollBarRes="ui://t573fj5bysmv7n," colGap="10" lineItemCount="1" defaultItem="ui://t573fj5bi6xe3i" align="center">
-      <gearXY controller="ctrlDirection" pages="0,1" values="4,13|4,5"/>
+    <list id="n1_ilo1" name="list" xy="2,2" size="76,161" layout="flow_hz" overflow="scroll" scrollBarFlags="4" scrollBarRes="ui://t573fj5bysmv7n," colGap="10" lineItemCount="1" defaultItem="ui://t573fj5bi6xe3i" align="center">
+      <gearXY controller="ctrlDirection" pages="0,1" values="2,12|2,2"/>
       <relation target="" sidePair="width-width"/>
       <item title="1"/>
       <item title="2"/>
