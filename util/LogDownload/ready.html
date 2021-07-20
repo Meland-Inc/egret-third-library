@@ -26,11 +26,11 @@
         </div>
         <div class="layui-inline">
             <input class="layui-input" name="id" id="playerIdInput" placeholder="player id"
-                oninput="value=value.replace(/[^\d]/g,'')">
+                oninput="value=value.replace(/[^\d]/g,''); if(value.length>19) value=value.slice(0,19)">
         </div>
         <div class="layui-inline">
             <input class="layui-input" name="id" id="playerActIdInput" placeholder="player actId"
-                oninput="value=value.replace(/[^\d]/g,'')">
+                oninput="value=value.replace(/[^\d]/g,''); if(value.length>19) value=value.slice(0,19)">
         </div>
         <div class="layui-inline">
             <input class="layui-input" name="id" id="showNameSearch" placeholder="show text">
