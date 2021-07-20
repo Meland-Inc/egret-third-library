@@ -75,8 +75,8 @@
         };
         window.onload = () => {
             let logView = document.getElementById('logView');
-            function refreshLog(tContent) {
-                logView.innerHTML = tContent;
+            function refreshLog(tContent, tDetail = "") {
+                logView.innerHTML = `<span style="color:#ed1941;">${tContent}</span>` + `<span style="color:#2468a2;">${tDetail}</span>`;
             }
             setDownloadProgressCB(refreshLog);
 

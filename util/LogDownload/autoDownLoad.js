@@ -2,8 +2,8 @@ let btnDownLoad = document.getElementById('download');
 btnDownLoad.onclick = getClipboard;
 
 let logView = document.getElementById('logView');
-function refreshLog(tContent) {
-    logView.innerHTML = tContent;
+function refreshLog(tContent, tDetail = "") {
+    logView.innerHTML = `<span style="color:#ed1941;">${tContent}</span>` + `<span style="color:#2468a2;">${tDetail}</span>`;
 }
 
 function downloadByBase64(tBase64Str) {
@@ -21,7 +21,7 @@ function downloadByBase64(tBase64Str) {
     if (!summaryUrl) {
         window.refreshLog(`${enviornment}日志上报环境暂不支持`);
     } else {
-        window.refreshLog(`获取summary信息 环境：${enviornment}, 日志名：${url}`);
+        window.refreshLog(`正在获取summary信息  `, `环境：${enviornment}, 日志名：${url}`);
         getSummaryInfo(summaryUrl, url)
     }
 }
@@ -31,7 +31,7 @@ function getClipboard() {
 
         window.navigator["clipboard"].readText()
             .then((tText) => {
-                window.refreshLog(`获取到粘贴板数据：${tText}`);
+                window.refreshLog(`获取到粘贴板数据`, `数据：${tText}`);
                 downloadByBase64(tText);
             })
             .catch(() => {
@@ -50,10 +50,10 @@ function getSummaryInfo(summaryUrl, fileName) {
                 downloadBySummaryInfo(summaryInfo);
                 console.error(summaryInfo)
             } else {
-                window.refreshLog(`获取summary数据失败, 日志名${fileName}`);
+                window.refreshLog(`获取summary数据失败 `, `   日志名：${fileName}`);
             }
         }).error(() => {
-            window.refreshLog(`获取summary数据失败, 日志名${fileName}`);
+            window.refreshLog(`获取summary数据失败  `, `   日志名：${fileName}`);
         })
 }
 
