@@ -617,15 +617,21 @@ async function copyKtxFile(filePath, targetPath, version) {
  * @param {*} filePath 
  * @param {*} targetPath 
  * @param {*} version 
+ * @param {*} isAddToName 版本号追加到文件名字后面
  */
-function copyFile(filePath, targetPath, version, isKtx) {
+function copyFile(filePath, targetPath, version, isAddToName) {
     return new Promise((resolve, reject) => {
         try {
             if (version) {
                 let targetPathArr = targetPath.split("/");
                 let fileName = targetPathArr[targetPathArr.length - 1];
                 if (fileName.indexOf("_v" + version) == -1) {
-                    targetPath = addVersionToPath(targetPath, version, isKtx);
+                    if (isAddToName) {
+                        targetPath = addVersionToPathName(targetPath, version);
+                    } else {
+                        targetPath = addVersionToPath(targetPath, version);
+                    }
+
                 } else {
                     console.log(`--> targetPath:${targetPath} fileName:${fileName}`);
                 }
@@ -661,36 +667,43 @@ function copyFile(filePath, targetPath, version, isKtx) {
 }
 
 //添加版本号到路径
-function addVersionToPath(targetPath, version, isKtx) {
+function addVersionToPath(targetPath, version) {
     let returnPath = targetPath;
     if (version) {
-        if (!isKtx) {
-            // 示例：
-            //      default.res.json  -> default.res_v999.json
-            //      Ball_It01_tex.png -> Ball_It01_tex_v999.png
-            let targetPathArr = targetPath.split('.');
-            let suffix = targetPathArr[targetPathArr.length - 1];
-            let prefix = '';
-            for (let i = 0; i < targetPathArr.length; i++) {
-                const element = targetPathArr[i];
-                if (i < targetPathArr.length - 2) {
-                    prefix += element + '.';
-                } else if (i < targetPathArr.length - 1) {
-                    prefix += element;
-                } else {
-                    //reserve
-                }
+        // 示例：
+        //      default.res.json  -> default.res_v999.json
+        //      Ball_It01_tex.png -> Ball_It01_tex_v999.png
+        let targetPathArr = targetPath.split('.');
+        let suffix = targetPathArr[targetPathArr.length - 1];
+        let prefix = '';
+        for (let i = 0; i < targetPathArr.length; i++) {
+            const element = targetPathArr[i];
+            if (i < targetPathArr.length - 2) {
+                prefix += element + '.';
+            } else if (i < targetPathArr.length - 1) {
+                prefix += element;
+            } else {
+                //reserve
             }
-            returnPath = prefix + '_v' + version + '.' + suffix;
-        } else {
-            // 示例： arch_atlas0.s3tc.ktx.zip -> arch_atlas0_v999.s3tc.ktx.zip
-            let targetPathArr = targetPath.split('.');
-            if (targetPathArr.length < 2) {
-                throw new Error('路径错误 targetPath：' + targetPath);
-            }
-            returnPath = targetPathArr[0] + '_v' + version + '.' + targetPathArr.slice(1).join('.');
         }
+        returnPath = prefix + '_v' + version + '.' + suffix;
 
+    }
+
+    return returnPath;
+}
+
+
+//添加版本号到路径名称处
+function addVersionToPathName(targetPath, version) {
+    let returnPath = targetPath;
+    if (version) {
+        // 示例： arch_atlas0.s3tc.ktx.zip -> arch_atlas0_v999.s3tc.ktx.zip
+        let targetPathArr = targetPath.split('.');
+        if (targetPathArr.length < 2) {
+            throw new Error('路径错误 targetPath：' + targetPath);
+        }
+        returnPath = targetPathArr[0] + '_v' + version + '.' + targetPathArr.slice(1).join('.');
     }
 
     return returnPath;
