@@ -746,7 +746,10 @@ async function ktxImgHandle(resFileEqual, oldPath, newPath, releasePath, patchPa
         for (let suff of ktxSuffs) {
             //示例newKtxPath:"resource/assets/xxx.ktx.zip"
             let newKtxPath = newPath.replace(pngSuff, suff);
-            let oldKtxPath = oldPath.replace(pngSuff, suff);
+            let oldKtxPath = oldPath;
+            if (oldPath){
+                oldKtxPath = oldPath.replace(pngSuff, suff);
+            }
             await mergeFileInVersion(oldKtxPath, newKtxPath, releasePath, patchPath, oldVersion, newVersion, oldVersionPath, ktxVersion);
         }
     }
