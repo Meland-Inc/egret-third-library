@@ -522,7 +522,7 @@ async function folderCopyFile(fromPath, targetPath, version) {
  * @param {*} targetPath 目标路径
  * @param {*} newVersion 版本号
  */
-async function copyFileCheckDir(fileName, targetPath, newVersion) {
+async function copyFileCheckDir(fileName, targetPath, newVersion, ktxVersion) {
     let projNewVersionPath = Global.projPath + releaseSuffix + newVersion;
     let fileNameArr = fileName.split('/');
     let checkPath = '';
@@ -547,8 +547,7 @@ async function copyFileCheckDir(fileName, targetPath, newVersion) {
     //     await fsExc.makeDir(folder);
     // }
 
-    await copyFile(projNewVersionPath + '/' + fileName, targetPath + '/' + fileName, newVersion);
-    await copyKtxFile(projNewVersionPath + '/' + fileName, targetPath + '/' + fileName, newVersion);
+    await copyFile(projNewVersionPath + '/' + fileName, targetPath + '/' + fileName, newVersion, ktxVersion);
 }
 
 /**
@@ -596,22 +595,6 @@ export async function checkClearVersion(version) {
     }
 }
 
-async function copyKtxFile(filePath, targetPath, version) {
-
-    if (path.extname(filePath) == pngSuff) {
-        for (let suff of ktxSuffs) {
-            let ktxPath = filePath.replace(pngSuff, suff);
-            let isExist = await fsExc.exists(ktxPath);
-            if (isExist) {
-                let ktxTargetPath = targetPath.replace(pngSuff, suff);
-                await copyFile(ktxPath, ktxTargetPath, version, true)
-            }
-        }
-    }
-
-}
-
-
 /**
  * 拷贝文件,如果带有版本号,会把拷贝的文件名添加版本号
  * @param {*} filePath 
@@ -619,15 +602,17 @@ async function copyKtxFile(filePath, targetPath, version) {
  * @param {*} version 
  * @param {*} isAddToName 版本号追加到文件名字后面
  */
-function copyFile(filePath, targetPath, version, isAddToName) {
+function copyFile(filePath, targetPath, version, ktxVersion) {
     return new Promise((resolve, reject) => {
         try {
             if (version) {
                 let targetPathArr = targetPath.split("/");
                 let fileName = targetPathArr[targetPathArr.length - 1];
                 if (fileName.indexOf("_v" + version) == -1) {
-                    if (isAddToName) {
-                        targetPath = addVersionToPathName(targetPath, version);
+                    // ktx文件添加版本号
+                    if (/\.ktx\.zip/.test(targetPath)) {
+                        // ktx 的版本号，必须与png的版本号一致，这里不能用 version（这个代表当前发布版本）
+                        targetPath = addVersionToPathName(targetPath, ktxVersion);
                     } else {
                         targetPath = addVersionToPath(targetPath, version);
                     }
@@ -710,7 +695,7 @@ function addVersionToPathName(targetPath, version) {
 }
 
 //根据两个版本比较文件
-async function mergeFileInVersion(oldFileSuffix, newFileSuffix, svnRlsPath, svnPatchPath, oldVersion, newVersion, oldSvnRlsPath) {
+async function mergeFileInVersion(oldFileSuffix, newFileSuffix, svnRlsPath, svnPatchPath, oldVersion, newVersion, oldSvnRlsPath, ktxVersion) {
     let projNewVersionPath = Global.projPath + releaseSuffix + newVersion;
     let newFileExist = await fsExc.exists(projNewVersionPath + '/' + newFileSuffix);
     let oldFileExist = await fsExc.exists(oldSvnRlsPath + '/' + oldFileSuffix);
@@ -734,16 +719,37 @@ async function mergeFileInVersion(oldFileSuffix, newFileSuffix, svnRlsPath, svnP
             //相等,拷贝旧的文件到新目录
             await fsExc.makeDir(svnRlsPath + '/' + fsExc.dirname(oldFileSuffix));
             await copyFile(oldSvnRlsPath + '/' + oldFileSuffix, svnRlsPath + '/' + oldFileSuffix);
-            await copyKtxFile(oldSvnRlsPath + '/' + oldFileSuffix, svnRlsPath + '/' + oldFileSuffix);
 
         }
     } else {
         if (svnRlsPath) {
-            await copyFileCheckDir(newFileSuffix, svnRlsPath, newVersion);
+            await copyFileCheckDir(newFileSuffix, svnRlsPath, newVersion, ktxVersion);
         }
-        await copyFileCheckDir(newFileSuffix, svnPatchPath, newVersion);
+        await copyFileCheckDir(newFileSuffix, svnPatchPath, newVersion, ktxVersion);
     }
     return fileEqual;
+}
+
+async function ktxImgHandle(resFileEqual, oldPath, newPath, releasePath, patchPath, oldVersion, newVersion, oldVersionPath) {
+    // 针对KTX图片进行对比与拷贝
+    // 示例newPath:"resource/assets/xxx.png"
+    if (path.extname(newPath) == pngSuff) {
+        let ktxVersion = newVersion;
+        // 如果png相等，那么使用旧的png版本号,否则使用新png版本号，新版本号也就是当前打包游戏版本号
+        if (resFileEqual) {
+            let versionResult = /_v(\d+)\./.exec(oldPath);
+            if (versionResult) {
+                ktxVersion = versionResult[1];
+            }
+        }
+
+        for (let suff of ktxSuffs) {
+            //示例newKtxPath:"resource/assets/xxx.ktx.zip"
+            let newKtxPath = newPath.replace(pngSuff, suff);
+            let oldKtxPath = oldPath.replace(pngSuff, suff);
+            await mergeFileInVersion(oldKtxPath, newKtxPath, releasePath, patchPath, oldVersion, newVersion, oldVersionPath, ktxVersion);
+        }
+    }
 }
 
 //根据res配置文件,添加版本号到文件和配置中
@@ -806,6 +812,8 @@ async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, ol
                         let oldFileVersion = oldVersion;
                         //判断图集是否相同
                         resFileEqual = await mergeFileInVersion(oldFilePath, newFilePath, releasePath, patchPath, oldVersion, newVersion, oldVersionPath);
+                        //图集相关ktx处理
+                        await ktxImgHandle(resFileEqual, oldFilePath, newFilePath, releasePath, patchPath, oldVersion, newVersion, oldVersionPath);
                         if (resFileEqual && oldConfigObj) {
                             let oldFrameStr = JSON.stringify(oldConfigObj.frames);
                             oldFrameStr = oldFrameStr.replace(/\s+/g, '');
@@ -837,6 +845,7 @@ async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, ol
                     else {
                         configEqual = true;
                         resFileEqual = await mergeFileInVersion(oldPath, newPath, releasePath, patchPath, oldVersion, newVersion, oldVersionPath);
+                        await ktxImgHandle(resFileEqual, oldPath, newPath, releasePath, patchPath, oldVersion, newVersion, oldVersionPath);
                     }
 
                     //修改图集配置中的版本号
@@ -906,7 +915,6 @@ async function sheetConfigHandle(configEqual, resFileEqual, releasePath, patchPa
     if (configEqual) {
         if (releasePath) {
             await copyFile(oldVersionPath + '/' + oldPath, releasePath + '/' + oldPath);
-            await copyKtxFile(oldVersionPath + '/' + oldPath, releasePath + '/' + oldPath);
         }
     }
     //不相等
@@ -914,12 +922,10 @@ async function sheetConfigHandle(configEqual, resFileEqual, releasePath, patchPa
         //release
         if (releasePath) {
             await copyFile(projNewVersionPath + '/' + newPath, releasePath + '/' + newPath, newVersion);
-            await copyKtxFile(projNewVersionPath + '/' + newPath, releasePath + '/' + newPath, newVersion);
         }
 
         //patch
         await copyFile(projNewVersionPath + '/' + newPath, patchPath + '/' + newPath, newVersion);
-        await copyKtxFile(projNewVersionPath + '/' + newPath, patchPath + '/' + newPath, newVersion);
 
         let fileContentVersion = resFileEqual ? oldVersion : newVersion;
         //修改图集配置文件
