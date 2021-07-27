@@ -30,10 +30,10 @@ const assets_suffix_path = '/resource/assets';
 const async_suffix_path = '/resource/async';
 const indie_suffix_path = '/resource/indie';
 
-const sentryOrganizationName = 'bellcode';//sentry cli中的组织名
-const sentryProjectName = 'bellplanet';//sentry 上传cli中的工程名 类似工程key
-const bugsnagApiKey = '6d2db6c2817194ef016837e5877cb6ef';//bugsnag的工程key
-const gamePackageScrFileName = 'main';//游戏源文件的打包文件的关键文件名
+const sentryOrganizationName = 'bellcode'; //sentry cli中的组织名
+const sentryProjectName = 'bellplanet'; //sentry 上传cli中的工程名 类似工程key
+const bugsnagApiKey = '6d2db6c2817194ef016837e5877cb6ef'; //bugsnag的工程key
+const gamePackageScrFileName = 'main'; //游戏源文件的打包文件的关键文件名
 
 const assetSfxValues = [assetsSfx, asyncSfx, indieSfx, externalSfx];
 const pngSuff = '.png';
@@ -70,8 +70,8 @@ export async function updateGit() {
 async function uploadSourceMap() {
     let environ = ModelMgr.versionModel.curEnviron.name;
 
-    let version = await ModelMgr.versionModel.getEnvironGameVersion(ModelMgr.versionModel.eEnviron.ready);//上传最新ready版本的sourcemap
-    let prefix = `/js/`;//错误上报源码管理的相对路径
+    let version = await ModelMgr.versionModel.getEnvironGameVersion(ModelMgr.versionModel.eEnviron.ready); //上传最新ready版本的sourcemap
+    let prefix = `/js/`; //错误上报源码管理的相对路径
 
 
     //release发版
@@ -89,7 +89,7 @@ async function processSourceMapRelease(environ, version, prefix) {
 
     let cmdStr = '';
     //sentry
-    const jsDirPath = path.join(Global.projPath, `/bin-release/web/${version}/js/`);//用绝对路径 否则window上不好调试
+    const jsDirPath = path.join(Global.projPath, `/bin-release/web/${version}/js/`); //用绝对路径 否则window上不好调试
     cmdStr = `sentry-cli releases -o ${sentryOrganizationName} -p ${sentryProjectName} files bellplanet_${environ}_${version} upload-sourcemaps --ext js ${jsDirPath} --ignore-file .sentryignore --url-prefix "~${prefix}" --log-level=error`
     await spawnExc.runCmd(cmdStr, Global.projPath, null, ' sentry release fail!');
     console.log('sentry release successful');
@@ -121,7 +121,7 @@ async function processSourceMapUnload(environ, version, prefix) {
 
     let srcFile;
     for (const f of files) {
-        if (f.includes(`${gamePackageScrFileName}.min`)) {//main.min_2dbcdcb.js
+        if (f.includes(`${gamePackageScrFileName}.min`)) { //main.min_2dbcdcb.js
             srcFile = f;
         }
     }
@@ -133,7 +133,7 @@ async function processSourceMapUnload(environ, version, prefix) {
 
     console.info(`processSourceMapUnload find main file=${srcFile}`);
 
-    const sourcemapFullFile = `${proPublishRoot}/${gamePackageScrFileName}.js.map`;//全路径
+    const sourcemapFullFile = `${proPublishRoot}/${gamePackageScrFileName}.js.map`; //全路径
 
     let cmdStr = '';
     //sentry
@@ -267,8 +267,8 @@ export async function mergeVersion() {
         return;
     }
     let oldVersion = ModelMgr.versionModel.oldVersion;
-    if (oldVersion
-        && parseInt(oldVersion) >= parseInt(newVersion)) {
+    if (oldVersion &&
+        parseInt(oldVersion) >= parseInt(newVersion)) {
         Global.snack('新版本号应该比旧版本号大');
         return;
     }
@@ -695,7 +695,7 @@ function addVersionToPathName(targetPath, version) {
 }
 
 //根据两个版本比较文件
-async function mergeFileInVersion(oldFileSuffix, newFileSuffix, svnRlsPath, svnPatchPath, oldVersion, newVersion, oldSvnRlsPath, ktxVersion) {
+async function mergeFileInVersion(oldFileSuffix, newFileSuffix, svnRlsPath, svnPatchPath, oldVersion, newVersion, oldSvnRlsPath, ktxVersion, isCopyToOld) {
     let projNewVersionPath = Global.projPath + releaseSuffix + newVersion;
     let newFileExist = await fsExc.exists(projNewVersionPath + '/' + newFileSuffix);
     let oldFileExist = await fsExc.exists(oldSvnRlsPath + '/' + oldFileSuffix);
@@ -722,20 +722,33 @@ async function mergeFileInVersion(oldFileSuffix, newFileSuffix, svnRlsPath, svnP
 
         }
     } else {
-        if (svnRlsPath) {
-            await copyFileCheckDir(newFileSuffix, svnRlsPath, newVersion, ktxVersion);
+        // 当ktx新旧不相等的时候（新存在、旧不存在），如果png要使用旧的，那么需要把新的拷贝到旧的目录
+        if (isCopyToOld) {
+            let projNewVersionPath = Global.projPath + releaseSuffix + newVersion
+            if (svnRlsPath) {
+                await fsExc.makeDir(svnRlsPath + '/' + fsExc.dirname(oldFileSuffix));
+                await copyFile(projNewVersionPath + '/' + newFileSuffix, svnRlsPath + '/' + oldFileSuffix);
+            }
+            await fsExc.makeDir(svnPatchPath + '/' + fsExc.dirname(oldFileSuffix));
+            await copyFile(projNewVersionPath + '/' + newFileSuffix, svnPatchPath + '/' + oldFileSuffix);
+        } else {
+            if (svnRlsPath) {
+                await copyFileCheckDir(newFileSuffix, svnRlsPath, newVersion, ktxVersion);
+            }
+            await copyFileCheckDir(newFileSuffix, svnPatchPath, newVersion, ktxVersion);
         }
-        await copyFileCheckDir(newFileSuffix, svnPatchPath, newVersion, ktxVersion);
+
     }
     return fileEqual;
 }
+
 
 async function ktxImgHandle(resFileEqual, oldPath, newPath, releasePath, patchPath, oldVersion, newVersion, oldVersionPath) {
     // 针对KTX图片进行对比与拷贝
     // 示例newPath:"resource/assets/xxx.png"
     if (path.extname(newPath) == pngSuff) {
         let ktxVersion = newVersion;
-        // 如果png相等，那么使用旧的png版本号,否则使用新png版本号，新版本号也就是当前打包游戏版本号
+        // 如果png相等，那么不仅要使用旧的png版本号，还要使用旧png的目录。否则使用新png版本号，新版本号也就是当前打包游戏版本号
         if (resFileEqual) {
             let versionResult = /_v(\d+)\./.exec(oldPath);
             if (versionResult) {
@@ -747,10 +760,10 @@ async function ktxImgHandle(resFileEqual, oldPath, newPath, releasePath, patchPa
             //示例newKtxPath:"resource/assets/xxx.ktx.zip"
             let newKtxPath = newPath.replace(pngSuff, suff);
             let oldKtxPath = oldPath;
-            if (oldPath){
+            if (oldPath) {
                 oldKtxPath = oldPath.replace(pngSuff, suff);
             }
-            await mergeFileInVersion(oldKtxPath, newKtxPath, releasePath, patchPath, oldVersion, newVersion, oldVersionPath, ktxVersion);
+            await mergeFileInVersion(oldKtxPath, newKtxPath, releasePath, patchPath, oldVersion, newVersion, oldVersionPath, ktxVersion, resFileEqual);
         }
     }
 }
@@ -834,9 +847,9 @@ async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, ol
                                 console.log(`${newConfigObj.file} frames not equal`);
 
                                 let dotIndex = oldConfigObj.file.lastIndexOf(".");
-                                let fileName = oldConfigObj.file.slice(0, dotIndex);    //去除后缀名
-                                let versionIndex = fileName.lastIndexOf("_v") + 2;  //获取_v的位置,拿到版本号具体位置
-                                oldFileVersion = fileName.slice(versionIndex);   //获取图片文件的旧版本号
+                                let fileName = oldConfigObj.file.slice(0, dotIndex); //去除后缀名
+                                let versionIndex = fileName.lastIndexOf("_v") + 2; //获取_v的位置,拿到版本号具体位置
+                                oldFileVersion = fileName.slice(versionIndex); //获取图片文件的旧版本号
                             }
 
                         }
@@ -1066,7 +1079,7 @@ export async function clearPackageDir() {
 
 /** 比较服务端包版本 */
 export function mergeServerPackage() {
-    return new Promise(async (resolve, reject) => {
+    return new Promise(async(resolve, reject) => {
         let environ = ModelMgr.versionModel.curEnviron;
         let serverPackage = `${Global.svnPath}/server/native_${environ.name}`;
 
@@ -1128,7 +1141,7 @@ async function checkUploadServerPackages(packageDir, successFunc) {
 
     let fileKey = `${fileName}_v${newPolicyNum}.zip`;
     console.log(`${environ.name} 开始上传 ${fileKey}`);
-    CdnUtil.checkUploaderFile(curServerPackagePath, fileKey, `serverPackages/${environ.name}`, async () => {
+    CdnUtil.checkUploaderFile(curServerPackagePath, fileKey, `serverPackages/${environ.name}`, async() => {
         await ExternalUtil.applyServerPackagePolicyNum(newPolicyNum, environ.name, fileName);
         console.log(`${environ.name}上传${fileKey}完毕,版本号:${newPolicyNum}`);
         await checkUploadServerPackages(packageDir, successFunc);
