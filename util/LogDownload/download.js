@@ -110,6 +110,40 @@ function downLoadBySummaryUrlArr(downloadFiles) {
                 )
             }
 
+            const webAdditionDeferred = [];
+            const webAdditionContentArr = [];
+            if (fileInfo.webAddition && fileInfo.webAddition.length) {
+                fileInfo.webAddition.forEach((tAdditonLogName, tNameIndex) => {
+                    webAdditionDeferred.push(getContentPromise(clientUrl + tAdditonLogName, webAdditionContentArr, tNameIndex));
+                })
+                deferred.push(Promise.all(webAdditionDeferred)
+                    .finally(() => {
+                        fileInfo.webAddition.forEach((tFileName, tIndex) => {
+                            let log = webAdditionContentArr[tIndex];
+                            const filename = /key-(.*)\.log/g.exec(tFileName)[1];
+                            deferred.push(folder.file(`webAddition/${filename}.log`, log))
+                        })
+                    })
+                )
+            }
+
+            const nativeAdditionDeferred = [];
+            const nativeAdditionContentArr = [];
+            if (fileInfo.nativeAddition && fileInfo.nativeAddition.length) {
+                fileInfo.nativeAddition.forEach((tAdditonLogName, tNameIndex) => {
+                    nativeAdditionDeferred.push(getContentPromise(nativeLogUrl + tAdditonLogName, nativeAdditionContentArr, tNameIndex));
+                })
+                deferred.push(Promise.all(nativeAdditionDeferred)
+                    .finally(() => {
+                        fileInfo.nativeAddition.forEach((tFileName, tIndex) => {
+                            let log = nativeAdditionContentArr[tIndex];
+                            const filename = /key-(.*)\.log/g.exec(tFileName)[1];
+                            deferred.push(folder.file(`nativeAddition/${filename}.log`, log))
+                        })
+                    })
+                )
+            }
+
             Promise.all(deferred).finally(() => {
                 checkIsEnd(index);
             })
