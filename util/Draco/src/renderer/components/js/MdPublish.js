@@ -37,7 +37,7 @@ const gamePackageScrFileName = 'main'; //游戏源文件的打包文件的关键
 
 const assetSfxValues = [assetsSfx, asyncSfx, indieSfx, externalSfx];
 const pngSuff = '.png';
-const ktxSuffs = ['.ktx.zip', '.s3tc.ktx.zip', '.pvr.ktx.zip'];
+const ktxSuffs = ['.ktx.bin', '.s3tc.ktx.bin', '.pvr.ktx.bin'];
 
 export async function updateGit() {
     let gitBranch = ModelMgr.versionModel.curEnviron.gitBranch;
@@ -610,7 +610,7 @@ function copyFile(filePath, targetPath, version, ktxVersion) {
                 let fileName = targetPathArr[targetPathArr.length - 1];
                 if (fileName.indexOf("_v" + version) == -1) {
                     // ktx文件添加版本号
-                    if (/\.ktx\.zip/.test(targetPath)) {
+                    if (/\.ktx\.bin/.test(targetPath)) {
                         // ktx 的版本号，必须与png的版本号一致，这里不能用 version（这个代表当前发布版本）
                         targetPath = addVersionToPathName(targetPath, ktxVersion);
                     } else {
@@ -683,7 +683,7 @@ function addVersionToPath(targetPath, version) {
 function addVersionToPathName(targetPath, version) {
     let returnPath = targetPath;
     if (version) {
-        // 示例： arch_atlas0.s3tc.ktx.zip -> arch_atlas0_v999.s3tc.ktx.zip
+        // 示例： arch_atlas0.s3tc.ktx.bin -> arch_atlas0_v999.s3tc.ktx.bin
         let targetPathArr = targetPath.split('.');
         if (targetPathArr.length < 2) {
             throw new Error('路径错误 targetPath：' + targetPath);
@@ -757,7 +757,7 @@ async function ktxImgHandle(resFileEqual, oldPath, newPath, releasePath, patchPa
         }
 
         for (let suff of ktxSuffs) {
-            //示例newKtxPath:"resource/assets/xxx.ktx.zip"
+            //示例newKtxPath:"resource/assets/xxx.ktx.bin"
             let newKtxPath = newPath.replace(pngSuff, suff);
             let oldKtxPath = oldPath;
             if (oldPath) {
