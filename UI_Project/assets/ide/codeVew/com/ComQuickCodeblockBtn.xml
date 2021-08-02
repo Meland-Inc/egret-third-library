@@ -17,7 +17,7 @@
     </component>
     <component id="n10_jke6" name="btnRun" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="10,963" size="81,87" group="n17_jz0o">
       <gearDisplay controller="ctrlRunStatus" pages="0"/>
-      <Button icon="ui://ti9jag5tvd1613564z4" controller="ctrlRunStatus" page="1"/>
+      <Button icon="ui://ti9jag5tvd1613564z4"/>
     </component>
     <component id="n19_qkmb" name="btnTouchMask" src="tvlfcyih7" fileName="com/ComEmpty.xml" pkg="te1gxawo" xy="10,963" size="81,87" group="n17_jz0o" visible="false"/>
     <group id="n17_jz0o" name="grpBtnRun" xy="10,963" size="81,87" advanced="true">
