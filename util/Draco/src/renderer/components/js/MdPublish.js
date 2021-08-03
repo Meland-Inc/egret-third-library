@@ -18,6 +18,8 @@ const asyncResSuffix = 'resource/async.res.json';
 const indieResSuffix = 'resource/indie.res.json';
 const externalResSuffix = 'resource/external.json';
 const jimmyResSuffix = 'resource/jimmy.res.json';
+const ktxSingleCfgImgSuffix = 'resource/assets/ktx/singleImgCfg.json';
+const ktxResName = 'singleImgCfg_json'
 
 //resource里的文件
 const externalSfx = "external";
@@ -412,20 +414,24 @@ async function mergeSingleVersion(newVersion, oldVersion, isRelease) {
             //external.json
             await externalHandle(externalResSuffix, newVersion, svnRlsPath, svnPatchPath, oldVersion, oldSvnRlsPath);
 
+            let ktcResData = await resKtxLoad(ktxSingleCfgImgSuffix, newVersion);
+
             //default.res.json
-            await resFileHandle(defaultResSuffix, newVersion, svnRlsPath, svnPatchPath, oldVersion, oldSvnRlsPath);
+            await resFileHandle(defaultResSuffix, newVersion, svnRlsPath, svnPatchPath, oldVersion, oldSvnRlsPath, ktcResData);
 
             //mapData.res.json
             await resFileHandle(mapDataResSuffix, newVersion, svnRlsPath, svnPatchPath, oldVersion, oldSvnRlsPath);
 
             //async.res.json
-            await resFileHandle(asyncResSuffix, newVersion, svnRlsPath, svnPatchPath, oldVersion, oldSvnRlsPath);
+            await resFileHandle(asyncResSuffix, newVersion, svnRlsPath, svnPatchPath, oldVersion, oldSvnRlsPath, ktcResData);
 
             //indie.res.json
-            await resFileHandle(indieResSuffix, newVersion, svnRlsPath, svnPatchPath, oldVersion, oldSvnRlsPath);
+            await resFileHandle(indieResSuffix, newVersion, svnRlsPath, svnPatchPath, oldVersion, oldSvnRlsPath, ktcResData);
 
             //jimmy.res.json
-            await resFileHandle(jimmyResSuffix, newVersion, svnRlsPath, svnPatchPath, oldVersion, oldSvnRlsPath);
+            await resFileHandle(jimmyResSuffix, newVersion, svnRlsPath, svnPatchPath, oldVersion, oldSvnRlsPath, ktcResData);
+
+            await resKtxHandle(ktxSingleCfgImgSuffix, newVersion, svnRlsPath, svnPatchPath, ktcResData);
             console.log(`--> merge success version v${oldVersion}s-v${newVersion}s`);
         }
     } catch (error) {
@@ -768,8 +774,52 @@ async function ktxImgHandle(resFileEqual, oldPath, newPath, releasePath, patchPa
     }
 }
 
+async function resKtxLoad(resFilePath, newVersion) {
+    let projNewVersionPath = Global.projPath + releaseSuffix + newVersion;
+    let newKtxCfgResContent = await fsExc.readFile(projNewVersionPath + '/' + resFilePath);
+    let newKtxCfgResObj = JSON.parse(newKtxCfgResContent);
+    console.log("resKtxLoad:" + newKtxCfgResContent)
+    return {
+        isChange: false,
+        newKtxCfgResObj: newKtxCfgResObj
+    };
+}
+
+async function resKtxHandle(resFilePath, newVersion, releasePath, patchPath, ktcResData) {
+    // let defaultResUrl = addVersionToPath(defaultResSuffix, newVersion);
+    // let releaseDefaultResPath = releasePath + '/' + defaultResUrl;
+    // let patchDefaultResPath = patchPath + '/' + defaultResUrl;
+    // let releaseDefaultResContent = await fsExc.readFile(releaseDefaultResPath);
+    // let releaseDefaultResObj = JSON.parse(releaseDefaultResContent);
+    // for (const releaseDefaultResIterator of releaseDefaultResObj.resources) {
+    //     if (releaseDefaultResIterator.name == ktxResName) {
+    //         releaseDefaultResIterator.url = addVersionToPath(releaseDefaultResIterator.url, newVersion);
+    //         break;
+    //     }
+    // }
+
+    // releaseDefaultResContent = JSON.stringify(releaseDefaultResObj);
+    // await fsExc.writeFile(releaseDefaultResPath, releaseDefaultResContent);
+    // await fsExc.writeFile(patchDefaultResPath, releaseDefaultResContent);
+
+
+    let ktxResUrl = addVersionToPath(resFilePath, newVersion);
+    let newKtxCfgResContent = JSON.stringify(ktcResData.newKtxCfgResObj);
+
+    if (releasePath) {
+        let releasektxResPath = releasePath + '/' + ktxResUrl;
+        await fsExc.makeDir(path.dirname(releasektxResPath));
+        await fsExc.writeFile(releasektxResPath, newKtxCfgResContent);
+    }
+
+    let patchktxResPath = patchPath + '/' + ktxResUrl;
+    await fsExc.makeDir(path.dirname(patchktxResPath));
+    await fsExc.writeFile(patchktxResPath, newKtxCfgResContent);
+
+}
+
 //根据res配置文件,添加版本号到文件和配置中
-async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, oldVersion, oldVersionPath) {
+async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, oldVersion, oldVersionPath, ktcResData) {
     let useNew = false;
     let projNewVersionPath = Global.projPath + releaseSuffix + newVersion;
 
@@ -856,6 +906,9 @@ async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, ol
 
                         //图集配置处理
                         await sheetConfigHandle(configEqual, resFileEqual, releasePath, patchPath, oldPath, newPath, oldFileVersion, newVersion, newResIterator.url, oldVersionPath);
+                    } else if (newResIterator.name == ktxResName) { // ktx配置独立处理
+                        configEqual = true;
+                        resFileEqual = false;
                     }
                     //不是图集,直接比较
                     else {
@@ -866,6 +919,20 @@ async function resFileHandle(resFilePath, newVersion, releasePath, patchPath, ol
 
                     //修改图集配置中的版本号
                     if (configEqual && resFileEqual) {
+                        // 使用旧的url，对应的ktx的配置singleImgCfg也要同步修改
+                        if (ktcResData && ktcResData.newKtxCfgResObj) {
+                            let newKtxCfgResObj = ktcResData.newKtxCfgResObj;
+                            // 获取新url
+                            let newKtxCfgResKey = newResIterator.url.replace('.png', '_png');
+                            // 若存在
+                            if (newKtxCfgResObj && newKtxCfgResObj[newKtxCfgResKey]) {
+                                ktcResData.isChange = true;
+                                let ktxCfgData = newKtxCfgResObj[newKtxCfgResKey];
+                                let oldKtxCfgResKey = oldResIteratorUrl.replace(/(_v\d+)?\.png$/, '_png');
+                                delete newKtxCfgResObj[newKtxCfgResKey];
+                                newKtxCfgResObj[oldKtxCfgResKey] = ktxCfgData;
+                            }
+                        }
                         newResIterator.url = oldResIteratorUrl;
                     } else {
                         newResIterator.url = addVersionToPath(newResIterator.url, newVersion);
