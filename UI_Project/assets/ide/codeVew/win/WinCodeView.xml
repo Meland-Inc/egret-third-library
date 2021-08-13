@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" opaque="false" designImage="ui://thvmj7voen7j4cyij9" designImageAlpha="0" designImageLayer="1">
-  <controller name="ctrlStatus" pages="2,none,1,clone,0,elem,6,res,8,cannotEdit" selected="2">
+  <controller name="ctrlStatus" pages="2,none,1,clone,0,elem,6,res,8,cannotEdit,10,noEntity" selected="2">
     <action type="change_page" fromPage="" toPage="2" objectId="n32_g61s" controller="ctrlStatus" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n32_g61s" controller="ctrlStatus" targetPage="1"/>
     <action type="change_page" fromPage="" toPage="6" objectId="n32_g61s" controller="ctrlStatus" targetPage="4"/>
     <action type="change_page" fromPage="" toPage="8" objectId="n32_g61s" controller="ctrlStatus" targetPage="7"/>
+    <action type="change_page" fromPage="" toPage="10" objectId="n32_g61s" controller="ctrlStatus" targetPage="9"/>
   </controller>
   <controller name="ctrlCodeMode" pages="0,ide,1,quick" selected="1"/>
   <displayList>
@@ -24,6 +25,10 @@
       <gearDisplay controller="ctrlCodeMode" pages="1"/>
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
       <relation target="n1_s45w" sidePair="leftext-left"/>
+    </component>
+    <component id="n43_9mqc" name="comMultiQuickCodePageBar" src="u1c41356529" fileName="codeVew/com/ComMultiQuickCodePageBar.xml" xy="955,-1" size="852,50">
+      <gearDisplay controller="ctrlStatus" pages="0"/>
+      <relation target="n1_s45w" sidePair="width-width,left-left"/>
     </component>
     <component id="n3_s45w" name="comCategoryList" src="s45w1u" fileName="codeVew/com/ComCategoryList.xml" xy="0,-1" size="1920,1080" group="n16_en7j">
       <relation target="" sidePair="rightext-right,bottomext-bottom"/>
@@ -72,7 +77,7 @@
       <relation target="n1_s45w" sidePair="center-center,middle-middle"/>
     </component>
     <component id="n32_g61s" name="comEmptyClone" src="hl7ywcyijw" fileName="ideCommon/com/comEmptyCloneEntity.xml" xy="1719,0" controller="ctrlStatus,7">
-      <gearDisplay controller="ctrlStatus" pages="2,1,6,8"/>
+      <gearDisplay controller="ctrlStatus" pages="2,1,6,8,10"/>
       <relation target="" sidePair="height-height,right-right"/>
     </component>
   </displayList>

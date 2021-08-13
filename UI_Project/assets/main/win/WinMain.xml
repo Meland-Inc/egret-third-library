@@ -6,7 +6,7 @@
   </controller>
   <controller name="ctrlMenuType" pages="0,lesson,1,mapTemplate,11,banner" selected="0"/>
   <controller name="ctrlMinimap" pages="0,show,1,hide" selected="0"/>
-  <controller name="ctrlViewStatus" pages="0,normal,1,quickCode,8,codeDialog" selected="0"/>
+  <controller name="ctrlViewStatus" pages="0,normal,1,quickCode,8,codeDialog" selected="1"/>
   <displayList>
     <component id="n14_psru" name="comTask" src="psruk" fileName="com/ComMainTask.xml" xy="0,277">
       <gearDisplay controller="ctrlMenuType" pages="0"/>
@@ -39,9 +39,10 @@
       <relation target="" sidePair="bottom-bottom,right-right"/>
       <Button icon="ui://oyity675cnxcwcyim0"/>
     </component>
-    <component id="n13_psru" name="comMainBagShortcut" src="psrum" fileName="com/ComMainBagShortcut.xml" xy="554,987" size="811,93" customData="bottom">
+    <component id="n13_psru" name="comMainBagShortcut" src="psrum" fileName="com/ComMainBagShortcut.xml" xy="308,987" size="811,93" customData="bottom">
       <gearDisplay controller="ctrlGodView" pages="0"/>
-      <gearDisplay2 controller="ctrlViewStatus" pages="0" condition="0"/>
+      <gearXY controller="ctrlViewStatus" pages="1" values="308,987" default="554,987"/>
+      <gearDisplay2 controller="ctrlViewStatus" pages="0,1" condition="0"/>
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </component>
     <component id="n10_psru" name="comSmallMap" src="psrui" fileName="com/ComSmallMap.xml" xy="1654,6" size="266,262">

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="700,50" overflow="scroll" opaque="false" scroll="horizontal" mask="n12_wl0r">
+  <controller name="ctrlType" pages="0,none,1,normal" selected="1"/>
+  <displayList>
+    <graph id="n12_wl0r" name="imgMask" xy="0,0" size="700,85" type="rect" lineSize="0" fillColor="#fff9f9f9" corner="20"/>
+    <graph id="n6_ijui" name="bgWhite" xy="0,0" size="700,50" type="rect" lineSize="0" fillColor="#ffe7e7e7">
+      <gearDisplay controller="ctrlType" pages="1,2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <list id="n0_zscm" name="lstPage" xy="0,0" size="700,50" layout="row" overflow="scroll" scroll="horizontal" defaultItem="ui://ti9jag5t8u6g135652b" autoItemSize="false" autoClearItems="true" scrollItemToViewOnClick="false">
+      <gearDisplay controller="ctrlType" pages="1,2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>
