@@ -4,9 +4,9 @@
     <action type="change_page" fromPage="" toPage="0" objectId="n41_o2yv" controller="ctrlGodView" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n41_o2yv" controller="ctrlGodView" targetPage="1"/>
   </controller>
-  <controller name="ctrlMenuType" pages="0,lesson,1,mapTemplate,11,banner" selected="0"/>
   <controller name="ctrlMinimap" pages="0,show,1,hide" selected="0"/>
-  <controller name="ctrlViewStatus" pages="0,normal,1,quickCode,8,codeDialog" selected="1"/>
+  <controller name="ctrlViewStatus" pages="0,normal,1,quickCode,8,codeDialog" selected="0"/>
+  <controller name="ctrlMenuType" pages="0,lesson,1,mapTemplate,2,banner" selected="0"/>
   <displayList>
     <component id="n14_psru" name="comTask" src="psruk" fileName="com/ComMainTask.xml" xy="0,277">
       <gearDisplay controller="ctrlMenuType" pages="0"/>
@@ -16,19 +16,8 @@
       <gearDisplay controller="ctrlViewStatus" pages="0"/>
       <relation target="" sidePair="left-left,top-top"/>
     </component>
-    <component id="n41_o2yv" name="comLessonMenu" src="o2yvwcyim7" fileName="com/comLessonMenue.xml" xy="0,0">
-      <gearDisplay controller="ctrlMenuType" pages="0"/>
-    </component>
-    <component id="n42_o2yv" name="comMapTemplateMenu" src="o2yvwcyima" fileName="com/comMaptemplateMenu.xml" xy="0,0" controller="ctrlEnterWay,1">
-      <gearDisplay controller="ctrlMenuType" pages="1"/>
-      <relation target="" sidePair="left-left,top-top"/>
-    </component>
-    <component id="n43_o2yv" name="comBannerMenu" src="o2yvwcyimb" fileName="com/comBannerMenu.xml" xy="0,0">
-      <gearDisplay controller="ctrlMenuType" pages="11"/>
-      <relation target="" sidePair="left-left,top-top"/>
-    </component>
     <component id="n51_vbj6" name="btnBannerTemplate" src="psruh" fileName="com/btnMainMenu.xml" xy="1549,11" customData="top">
-      <gearDisplay controller="ctrlMenuType" pages="11"/>
+      <gearDisplay controller="ctrlMenuType" pages="2"/>
       <gearDisplay2 controller="ctrlViewStatus" pages="0" condition="0"/>
       <relation target="n10_psru" sidePair="right-left,top-top"/>
       <Button title="模板创作" icon="ui://oyity675a1nd8"/>
@@ -39,9 +28,9 @@
       <relation target="" sidePair="bottom-bottom,right-right"/>
       <Button icon="ui://oyity675cnxcwcyim0"/>
     </component>
-    <component id="n13_psru" name="comMainBagShortcut" src="psrum" fileName="com/ComMainBagShortcut.xml" xy="308,987" size="811,93" customData="bottom">
+    <component id="n13_psru" name="comMainBagShortcut" src="psrum" fileName="com/ComMainBagShortcut.xml" xy="554,987" size="811,93" customData="bottom">
       <gearDisplay controller="ctrlGodView" pages="0"/>
-      <gearXY controller="ctrlViewStatus" pages="1" values="308,987" default="554,987"/>
+      <gearXY controller="ctrlViewStatus" pages="0,1" values="554,987|308,987" default="554,987"/>
       <gearDisplay2 controller="ctrlViewStatus" pages="0,1" condition="0"/>
       <relation target="" sidePair="center-center,bottom-bottom"/>
     </component>
@@ -74,9 +63,6 @@
     <item time="0" type="Alpha" target="n51_vbj6" tween="true" startValue="0" endValue="1" duration="12"/>
     <item time="0" type="XY" target="n13_psru" tween="true" startValue="-,1080" endValue="-,987" duration="12"/>
     <item time="0" type="XY" target="n14_psru" tween="true" startValue="-266,-" endValue="0,-" duration="12"/>
-    <item time="0" type="XY" target="n41_o2yv" tween="true" startValue="-,-119" endValue="0,0" duration="12"/>
-    <item time="0" type="XY" target="n42_o2yv" tween="true" startValue="-,-122" endValue="-,0" duration="12"/>
-    <item time="0" type="XY" target="n43_o2yv" tween="true" startValue="-,-125" endValue="0,0" duration="12"/>
     <item time="0" type="XY" target="n9_psru" tween="true" startValue="1920,-" endValue="1804,979" duration="12"/>
   </transition>
   <transition name="hideAnim">
