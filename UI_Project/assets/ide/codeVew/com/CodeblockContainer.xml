@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="847,1080" overflow="hidden" opaque="false" scroll="both" scrollBarRes="ui://rnqj1l77j7co5v,ui://rnqj1l77j7co5x" designImage="ui://thvmj7vozgghcyiiv" designImageOffsetX="-956" designImageAlpha="0">
+<component size="847,1080" overflow="hidden" opaque="false" scroll="both" scrollBarRes="ui://rnqj1l77j7co5v,ui://rnqj1l77j7co5x" mask="n71_wl0r" designImage="ui://thvmj7vozgghcyiiv" designImageOffsetX="-956" designImageAlpha="0">
   <controller name="codeType" pages="0,robot,1,entity" selected="0"/>
   <controller name="ctrlShowType" pages="0,scratch,1,python" selected="0"/>
   <controller name="ctrlRecordHint" pages="0,none,1,left,2,right,3,all" selected="0"/>
@@ -8,6 +8,9 @@
     <image id="n67_bsbr" name="n64" src="vd1613564z7" fileName="codeVew/img/newQuickCode/img_code_ksbm_2.png" xy="-1,-5" size="848,1093">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
+    <graph id="n71_wl0r" name="imgMask" xy="0,0" size="847,1133" type="rect" lineSize="0" fillColor="#fff9f9f9" corner="20">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
     <component id="n9_j7co" name="mainContainer" src="s45w1a" fileName="codeVew/com/comMainContainer.xml" xy="0,0" size="849,1080">
       <gearDisplay controller="ctrlShowType" pages="0"/>
       <relation target="" sidePair="bottomext-bottom,rightext-right"/>
@@ -33,21 +36,22 @@
     <group id="n33_czor" name="grpOperate" xy="557,1000" size="167,48" advanced="true">
       <relation target="n9_j7co" sidePair="right-right,bottom-bottom"/>
     </group>
-    <component id="n34_czor" name="btnReset" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="790,959" size="35,34">
+    <component id="n34_czor" name="btnReset" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="790,959" size="35,34" group="n70_wl0r">
       <gearDisplay controller="ctrlShowType" pages="0"/>
-      <relation target="n9_j7co" sidePair="right-right,bottom-bottom"/>
+      <relation target="n9_j7co" sidePair="right-right"/>
       <Button icon="ui://ti9jag5tzgght7v"/>
     </component>
-    <component id="n35_czor" name="btnZoomIn" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="790,1009" size="35,34">
+    <component id="n35_czor" name="btnZoomIn" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="790,1009" size="35,34" group="n70_wl0r">
       <gearDisplay controller="ctrlShowType" pages="0"/>
-      <relation target="n9_j7co" sidePair="right-right,bottom-bottom"/>
+      <relation target="n9_j7co" sidePair="right-right"/>
       <Button icon="ui://ti9jag5tzgght7w"/>
     </component>
-    <component id="n36_czor" name="btnZoomOut" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="790,908" size="35,34">
+    <component id="n36_czor" name="btnZoomOut" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="790,908" size="35,34" group="n70_wl0r">
       <gearDisplay controller="ctrlShowType" pages="0"/>
-      <relation target="n9_j7co" sidePair="right-right,bottom-bottom"/>
+      <relation target="n9_j7co" sidePair="right-right"/>
       <Button icon="ui://ti9jag5tzgght7u"/>
     </component>
+    <group id="n70_wl0r" name="grpScale" xy="790,908" size="35,135" advanced="true"/>
     <image id="n24_8tz6" name="imgCopy" src="s45w1m" fileName="codeVew/oldImg/img_code_a2.png" xy="553,935" visible="false">
       <relation target="" sidePair="bottom-bottom,right-right"/>
     </image>
@@ -94,7 +98,7 @@
       <gearIcon controller="ctrlStyle" default="ui://rnqj1l77iaoitkt"/>
       <Button checked="true" icon="ui://rnqj1l77iaoitkt" selectedIcon="ui://rnqj1l77iaoitkt" controller="ctrlStyle" page="0"/>
     </component>
-    <component id="n60_iaoi" name="n60" src="oliri6p" fileName="btn/rbtnFix.xml" pkg="te1gxawo" xy="566,20" size="50,30" group="n54_iaoi">
+    <component id="n60_iaoi" name="n60" src="oliri6p" fileName="btn/rbtnFix.xml" pkg="te1gxawo" xy="566,20" size="114,40" group="n54_iaoi">
       <gearIcon controller="ctrlStyle" default="ui://rnqj1l77iaoitks"/>
       <Button icon="ui://rnqj1l77iaoitks" selectedIcon="ui://rnqj1l77iaoitks" controller="ctrlStyle" page="1"/>
     </component>
@@ -104,7 +108,7 @@
     <image id="n58_iaoi" name="n58" pkg="rnqj1l77" src="iaoitku" fileName="newImg2/img_code_py_2-1.png" xy="541,20" group="n54_iaoi">
       <gearDisplay controller="ctrlStyle" pages="0"/>
     </image>
-    <group id="n54_iaoi" name="n54" xy="541,19" size="124,101" advanced="true">
+    <group id="n54_iaoi" name="n54" xy="541,19" size="139,101" advanced="true">
       <gearDisplay controller="ctrlShowType" pages="1"/>
       <relation target="n40_czor" sidePair="left-right,top-top"/>
     </group>

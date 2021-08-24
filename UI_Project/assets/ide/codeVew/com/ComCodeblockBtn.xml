@@ -10,7 +10,7 @@
     <action type="change_page" fromPage="" toPage="0" objectId="n6_puqx" controller="ctrlOrientation" targetPage="0"/>
     <action type="change_page" fromPage="" toPage="1" objectId="n6_puqx" controller="ctrlOrientation" targetPage="1"/>
   </controller>
-  <controller name="ctrlStatus" exported="true" pages="0,none,1,clone,2,elem,3,res" selected="2"/>
+  <controller name="ctrlStatus" exported="true" pages="0,none,1,clone,2,elem,3,res,11,cannotEdit,12,noEntity" selected="3"/>
   <controller name="ctrlShowType" pages="0,show,1,hide" selected="0"/>
   <displayList>
     <component id="n0_puqx" name="btnChangeState" src="gpm0i4g" fileName="btn/btnFix.xml" pkg="te1gxawo" xy="1732,5" size="48,48">

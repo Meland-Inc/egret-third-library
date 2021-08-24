@@ -984,6 +984,17 @@
     <component id="vafx1356524" name="ComboBox2_popup.xml" path="/attribute/com/combox/"/>
     <component id="vafx1356525" name="ComboBox2.xml" path="/attribute/com/combox/"/>
     <image id="c8zy1356527" name="img_att_dk_filled.png" path="/attribute/img/" scale="9grid" scale9grid="6,7,12,14"/>
+    <image id="u1c41356528" name="img_code_entities_tab_selectBG.png" path="/codeVew/img/newQuickCode/" scale="9grid" scale9grid="45,12,90,24"/>
+    <component id="u1c41356529" name="ComMultiQuickCodePageBar.xml" path="/codeVew/com/"/>
+    <image id="u1c4135652a" name="img_code_dragExtend.png" path="/codeVew/img/newQuickCode/"/>
+    <component id="8u6g135652b" name="btnEntitySelectPage.xml" path="/codeVew/btn/"/>
+    <component id="ixd1135652c" name="ComMultiPageContainer.xml" path="/codeVew/com/"/>
+    <image id="ixd1135652d" name="img_ide_startBg.png" path="/codeVew/img/newQuickCode/" scale="9grid" scale9grid="47,77,31,34"/>
+    <image id="ixd1135652e" name="img_code_multiPoolBG.png" path="/codeVew/img/newQuickCode/"/>
+    <image id="wl0r135652f" name="img_code_noEntity.png" path="/codeVew/img/newQuickCode/"/>
+    <image id="ufhs135652j" name="img_ide_startBg1.png" path="/codeVew/img/newQuickCode/" scale="9grid" scale9grid="45,79,39,32"/>
+    <movieclip id="ufhs135652k" name="codeRunning.jta" path="/codeVew/img/newQuickCode/"/>
+    <image id="ufhs135652l" name="img_code_zz1.png" path="/codeVew/img/" scale="9grid" scale9grid="161,30,64,20"/>
   </resources>
   <publish name="ide"/>
 </packageDescription>

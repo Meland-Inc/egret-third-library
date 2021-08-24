@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" opaque="false" designImage="ui://oyity675vbj6wcyinz" designImageAlpha="0" designImageLayer="1">
+  <controller name="ctrlMenuType" pages="0,lesson,1,mapTemplate,11,banner" selected="1"/>
+  <displayList>
+    <component id="n41_o2yv" name="comLessonMenu" src="o2yvwcyim7" fileName="com/comLessonMenue.xml" xy="0,0">
+      <gearDisplay controller="ctrlMenuType" pages="0"/>
+    </component>
+    <component id="n42_o2yv" name="comMapTemplateMenu" src="o2yvwcyima" fileName="com/comMaptemplateMenu.xml" xy="0,0" controller="ctrlEnterWay,1">
+      <gearDisplay controller="ctrlMenuType" pages="1"/>
+      <relation target="" sidePair="left-left,top-top"/>
+    </component>
+    <component id="n43_o2yv" name="comBannerMenu" src="o2yvwcyimb" fileName="com/comBannerMenu.xml" xy="0,0">
+      <gearDisplay controller="ctrlMenuType" pages="11"/>
+      <relation target="" sidePair="left-left,top-top"/>
+    </component>
+  </displayList>
+  <transition name="showAnim">
+    <item time="0" type="XY" target="n41_o2yv" tween="true" startValue="-,-119" endValue="0,0" duration="12"/>
+    <item time="0" type="XY" target="n42_o2yv" tween="true" startValue="-,-122" endValue="-,0" duration="12"/>
+    <item time="0" type="XY" target="n43_o2yv" tween="true" startValue="-,-125" endValue="0,0" duration="12"/>
+  </transition>
+  <transition name="hideAnim"/>
+</component>

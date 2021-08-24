@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="375,587">
-  <controller name="ctrlCodeModel" exported="true" pages="2,normal,3,newQuickCode" selected="1"/>
+  <controller name="ctrlCodeModel" exported="true" pages="2,normal,3,newQuickCode,4,multiQuickCode" selected="2"/>
   <displayList>
     <loader id="n10_dib9" name="imgBG" xy="0,0" size="375,587" url="ui://ti9jag5ts45w1" fill="scaleFree">
       <gearDisplay controller="ctrlCodeModel" pages="2"/>
@@ -10,6 +10,19 @@
       <gearDisplay controller="ctrlCodeModel" pages="3"/>
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
+    <graph id="n13_ixd1" name="n13" xy="0,0" size="375,649" group="n15_ixd1" type="rect" lineSize="0" fillColor="#fff3f3f3" corner="30">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <image id="n12_ixd1" name="n12" src="ixd1135652e" fileName="codeVew/img/newQuickCode/img_code_multiPoolBG.png" xy="146,-27" group="n15_ixd1">
+      <relation target="" sidePair="center-center"/>
+    </image>
+    <component id="n14_ixd1" name="btnDrag" src="gpm0i4h" fileName="btn/btnScale.xml" pkg="te1gxawo" xy="170,-20" size="35,42" group="n15_ixd1">
+      <relation target="" sidePair="center-center"/>
+      <Button icon="ui://ti9jag5tu1c4135652a"/>
+    </component>
+    <group id="n15_ixd1" name="multiQuickCodeBg" xy="0,-27" size="375,676" advanced="true">
+      <gearDisplay controller="ctrlCodeModel" pages="4"/>
+    </group>
     <component id="n5_t09y" name="normalPool" src="s45w1x" fileName="codeVew/com/VerticalScrollComponent.xml" xy="31,38" size="372,566"/>
   </displayList>
 </component>
