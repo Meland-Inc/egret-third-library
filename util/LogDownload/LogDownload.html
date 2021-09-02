@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="layui/css/layui.css" media="all">
     <title>日志查询下载</title>
 </head>
 
@@ -14,15 +15,33 @@
     <script type="text/javascript" src="FileSaver.js"></script>
     <script type="text/javascript" src="jszip.js"></script>
     <script type="text/javascript" src="laydate/laydate.js"></script>
+    <script src="layui/layui.js" charset="utf-8"></script>
 
-    <button id="download" type="button">Click Download!</button>
-    <input type="checkbox" id="isAutoCheckbox">
-    <input id="playerNameInput" placeholder="player name" />
-    <input id="playerIdInput" placeholder="player id" />
-    <input id="playerActIdInput" placeholder="player actId" />
-    <input id="showNameSearch" placeholder="show text" />
-    <input id="timeRange" placeholder="选择日期范围" />
-    <button id="find" type="button">搜索</button>
+    <div class="demoTable">
+        <button class="layui-btn" id="download">Click Download!</button>
+        <div class="layui-inline">
+            <input class="layui-input" name="id" id="playerNameInput" placeholder="player name">
+        </div>
+        <div class="layui-inline">
+            <input class="layui-input" name="id" id="playerIdInput" placeholder="player id">
+        </div>
+        <div class="layui-inline">
+            <input class="layui-input" name="id" id="playerActIdInput" placeholder="player actId">
+        </div>
+        <div class="layui-inline">
+            <input class="layui-input" name="id" id="showNameSearch" placeholder="show text">
+        </div>
+        <input id="timeRange" placeholder="选择日期范围" />
+
+        <button class="layui-btn" id="find">搜索</button>
+
+        <div class="layui-inline">
+            是否自动上传
+            <input type="checkbox" id="isAutoCheckbox">
+        </div>
+    </div>
+
+    <table class="layui-hide" id="layuiTable" lay-filter="user"></table>
 
     <fieldset class=" layui-elem-field">
         <legend>控制台</legend>
@@ -31,6 +50,27 @@
     </fieldset>
 
     <script type='module'>
+        layui.use('table', function () {
+            //方法级渲染
+            layui.table.render({
+                elem: '#layuiTable'
+                , cols: [[
+                    { checkbox: true, fixed: true }
+                    , { field: 'playerName', title: '用户名' }
+                    , { field: 'showTime', title: '日期' }
+                    , { field: 'describe', title: '问题描述' }
+                ]]
+                , id: 'layuiTable'
+                , page: true
+                , height: 310
+            });
+        });
+
+        laydate.render({
+            elem: '#timeRange'
+            , range: true
+        });
+
         let btn = document.getElementById('download');
         let playerNameInput = document.getElementById('playerNameInput');
         let playerIdInput = document.getElementById('playerIdInput');
@@ -91,7 +131,8 @@
                                     const fileDetail = JSON.parse(content);
                                     if (!fileDetail.isAuto == !tIsAuto) {
                                         fileDetail.time = new Date(fileDetail.time);
-                                        fileDetail.showName = `${fileDetail.playerName}/${fileDetail.time.toLocaleString()}      ${fileDetail.describe.slice(0, 50)}`;
+                                        fileDetail.showTime = fileDetail.time.toLocaleString();
+                                        fileDetail.showName = `${fileDetail.playerName}_${fileDetail.time.toLocaleString()}_${fileDetail.describe}`;
                                         fileArr.push(fileDetail);
                                     }
                                 })
@@ -100,11 +141,6 @@
                 }
             });
         }
-
-        laydate.render({
-            elem: '#timeRange'
-            , range: true
-        });
 
         function enterSearch() {
             var event = window.event || arguments.callee.caller.arguments[0];
@@ -173,27 +209,27 @@
             })
         }
 
-        function updateFiles(tFile) {
-            logView.innerHTML += `${tFile.showName}` + '</br >';
-        }
-
         function showFiles(tFiles) {
-            logView.innerHTML = '';
-            tFiles.forEach(tFile => {
-                updateFiles(tFile);
-            });
+            layui.use('table', function () {
+                layui.table.reload('layuiTable', {
+                    data: tFiles
+                }, 'data');
+            })
         }
 
         /**下载*/
         function download() {
-            if (selectField.length > 0) {
+            const tableStatus = layui.table.checkStatus('layuiTable');
+            const downloadFiles = tableStatus && tableStatus.data && tableStatus.data.length ? tableStatus.data : selectField;
+
+            if (downloadFiles.length > 0) {
                 var zip = new JSZip();
                 let isNativeSaveAll = false;
                 let isWebSaveAll = false;
 
                 let checkIsEnd = (tIndex) => {
                     if (!isNativeSaveAll || !isWebSaveAll) return;
-                    if (tIndex == selectField.length - 1) {
+                    if (tIndex == downloadFiles.length - 1) {
                         zip.generateAsync({ type: "blob" })
                             .then(function (content) {
                                 saveAs(content, playerNameInput.value + '_' + timeRange.value + ".zip");
@@ -243,13 +279,13 @@
                         checkIsEnd(index);
                     });
                 }
-                var fieldNum = selectField.length;
+                var fieldNum = downloadFiles.length;
                 let curGetFile = 0;
                 let getNextFile = () => {
                     if (curGetFile <= fieldNum) {
                         isNativeSaveAll = false;
                         isWebSaveAll = false;
-                        const fileInfo = selectField[curGetFile];
+                        const fileInfo = downloadFiles[curGetFile];
                         getFile(fileInfo, curGetFile);
                     }
                 }
