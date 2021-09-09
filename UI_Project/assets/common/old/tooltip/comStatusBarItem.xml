@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<component size="121,25">
-  <displayList>
-    <loader id="n2_oyy0" name="ladIcon" xy="2,3" size="20,20" align="center" vAlign="middle" fill="scale" shrinkOnly="true"/>
-    <text id="n6_oyy0" name="tfDetail" xy="25,2" size="92,19" fontSize="14" color="#ffffff" align="center" vAlign="middle" vars="true" singleLine="true" text="{statusName=饥渴度} {curValue=99}/{maxValue=999}"/>
-  </displayList>
-  <relation target="n6_oyy0" sidePair="rightext-right"/>
-</component>

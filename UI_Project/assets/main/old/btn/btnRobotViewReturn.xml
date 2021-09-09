@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<component size="140,45" extention="Button">
-  <controller name="button" pages="0,up,1,down" selected="0"/>
-  <displayList>
-    <image id="n6_rdy4" name="n6" src="gen818" fileName="newImg/btn_cm_orange.png" xy="0,0" pivot="0.5,0.5" anchor="true" size="138,44"/>
-    <text id="n8_xles" name="n8" xy="0,0" pivot="0.5,0.5" anchor="true" size="117,22" fontSize="16" color="#ffffff" vAlign="middle" text="退出机器人视角"/>
-  </displayList>
-  <Button downEffect="scale" downEffectValue="0.90"/>
-</component>

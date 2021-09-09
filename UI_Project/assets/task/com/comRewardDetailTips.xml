@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<component size="82,60">
-  <displayList>
-    <loader id="n0_k8ed" name="icon" xy="0,0" size="60,60" align="center" vAlign="bottom" fill="scale" shrinkOnly="true"/>
-    <text id="n3_k8ed" name="tfNum" xy="62,36" size="20,21" fontSize="14" align="center" vAlign="middle" vars="true" text="X{num=5}"/>
-  </displayList>
-  <relation target="n3_k8ed" sidePair="rightext-right"/>
-</component>

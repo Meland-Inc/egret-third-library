@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<component size="50,70">
-  <controller name="ctrlIcon" pages="5,start,0,wait,1,leftTop,2,rightTop,3,leftBottom,4,rightBottom,7,20008,8,20009,9,20010,10,20011,11,20012,12,20013,13,20014,29,20015,28,20016,27,20017,26,20018,35,20019,34,20020,31,20021,17,20022,15,20023,16,20024,36,20025,37,20026,38,20027,39,20028,40,40017,41,40018,42,40019" selected="29"/>
-  <displayList>
-    <loader id="n1_io1m" name="icon" xy="1,12" size="48,48" url="ui://t573fj5bvnsa7c" align="center" vAlign="middle" fill="scale" shrinkOnly="true">
-      <gearIcon controller="ctrlIcon" pages="5,0,1,2,3,4,7,8,9,10,11,12,13,29,28,27,26,35,34,17,15,16,36,37,38,39,40,41,42" values="|ui://t573fj5beepg72|ui://t573fj5bio1m6b|ui://t573fj5bio1m6d|ui://t573fj5bio1m6a|ui://t573fj5bio1m6c|ui://t573fj5beepg6z|ui://t573fj5beepg6y|ui://t573fj5beepg6x|ui://t573fj5beepg70|ui://t573fj5beepg71|ui://t573fj5beepg71|ui://t573fj5b8thx73|ui://t573fj5beepg6z|ui://t573fj5beepg6y|ui://t573fj5bvnsa78|ui://t573fj5bvnsa79|ui://t573fj5bjeh776|ui://t573fj5bjeh776|ui://t573fj5bvnsa7b|ui://t573fj5bvnsa7a|ui://t573fj5bvnsa7c|ui://t573fj5bg1w67i|ui://t573fj5bg1w67h|ui://t573fj5bg1w67f|ui://t573fj5bg1w67g|ui://t573fj5bvnsa7b|ui://t573fj5bvnsa7a|ui://t573fj5bvnsa7c" default="ui://t573fj5b8thx73"/>
-    </loader>
-  </displayList>
-</component>
